@@ -1,4 +1,4 @@
-The caching will tar all the cached directories and dependencies and store them securely in Amazon S3. Note that if you store files which are downloaded from a CDN / cloud storage you might not see any improvement, as downloading it from the Bitrise Build Cache storage will probably take about the same time as downloading it from it's canonical CDN / cloud storage location. However Bitrise Caching still might help if you have reliability issues with the resource's, or dependency's canonical download location.
+The caching will tar all the cached directories and dependencies and store them securely in Amazon S3. Note that if you store files which are downloaded from a CDN / cloud storage you might not see any improvement, as downloading it from the Bitrise Build Cache storage will probably take about the same time as downloading it from its canonical CDN / cloud storage location. However Bitrise Caching still might help if you have reliability issues with the resource's, or dependency's canonical download location.
 
 ## Setup
 
@@ -15,9 +15,9 @@ The `Cache:Push` step can be the very last step in the Workflow. The only thing 
 
 The Build Cache feature is split into two parts, the `Build Cache API` and the `Steps`.
 
-The `Build Cache API` is actually a really simple API, with only one responsibility: you can request a download or an upload URL from the API. Of course it also makes it sure that you have the required access rights to the resource (Build Cache Archive), but other than that it's only responsibility is providing the secure - time limited and expiring - download and upload URLs. It does not process the files.
+The `Build Cache API` is actually a really simple API, with only one responsibility: you can request a download or an upload URL from the API. Of course it also makes sure that you have the required access rights to the resource (Build Cache Archive), but other than that its only responsibility is providing the secure - time limited and expiring - download and upload URLs. It does not process the files.
 
-The `Steps` are the place where the "magic" happens. The whole logic of comparing caches to see if there was any relevant change and creating the cache archives is done by the Steps. This also means that you can write your own Steps and implement your own comparison and compression logic. The step just have to use the Build Cache API to get download and upload URLs, there's no restriction on the cache file format or on its content.
+The `Steps` are the place where the "magic" happens. The whole logic of comparing caches to see if there was any relevant change and creating the cache archives is done by the Steps. This also means that you can write your own Steps and implement your own comparison and compression logic. The step just has to use the Build Cache API to get download and upload URLs, there's no restriction on the cache file format or on its content.
 
 !!! note "Advanced notes"
     * You can create your own Cache steps
