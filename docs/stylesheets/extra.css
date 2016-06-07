@@ -1,0 +1,21 @@
+.admonition a {
+  color: white !important;
+  font-weight: bold !important;
+}
+
+nav span.section {
+  padding-top: 15px !important;
+  padding-bottom: 5px !important;
+  padding-left: 10px !important;
+  color: rgba(0,0,0,.3) !important;
+}
+
+nav li ul {
+  margin-left: 0px !important;
+}
+
+nav li ul li a {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  font-weight: 500 !important;
+}

@@ -1,0 +1,23 @@
+After you've selected adding a new app, you will find yourself on the `Create app` page. Check the [add a new app](doc:add-a-new-app) tutorial for instructions about getting to this page.
+
+Bitrise will give you options to connect any kind of git repository to it. `GitHub` and `Bitbucket` are supported out of the box. If you've already authorized Bitrise with your GitHub for example, you will see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
+
+!!! note "Connect any git repository to Bitrise"
+    You can connect any private or public git repository to Bitrise. We will automatically create an SSH key that you can use to setup the connection with your provider.
+
+![Screenshot](https://www.filepicker.io/api/file/i7O8ZTjdSJSlDay3m5bE)
+
+If you haven't authorized Bitrise against the provider hosting your repository, it will ask for permission.
+
+![Screenshot](https://www.filepicker.io/api/file/QcX5L3QwSZ2mg7CfPBEq)
+
+It will then list your repositories as above. If you'd like to connect git repository hosted by other than GitHub or Bitbucket, select the `Other / Manual` tab.
+
+![Screenshot](https://www.filepicker.io/api/file/RHMT25oeSg6aVMbL5iZ6)
+
+You will have to add the git url of the repository you would like to connect.
+
+!!! warning "Use SSH URLs for private repositories"
+    Please note, that if you are connecting a private repository, Bitrise will try to clone it through SSH, so it's necessary to provide an SSH URL to your repository here.
+
+Bitrise will add an SSH key to your repository at a later step. Read more about how to add SSH keys automatically, or manually at [SSH keys](doc:setting-up-ssh-keys).

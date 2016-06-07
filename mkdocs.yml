@@ -1,0 +1,40 @@
+site_name: Bitrise DevCenter
+theme: material
+repo_name: 'GitHub'
+repo_url: 'https://github.com/bitrise-io/devcenter'
+
+pages:
+- Bitrise DevCenter: index.md
+- Getting Started:
+    - What is Bitrise?: getting-started/index.md
+    - Builds & Workflows: getting-started/builds-and-workflows.md
+- Infrastructure:
+    - Virtual Machines: infrastructure/virtual-machines.md
+    - Available Stacks: infrastructure/available-stacks.md
+- Signing up:
+    - Signing up with GitHub: signing-up/signing-up-with-github.md
+    - Signing up with Bitbucket: signing-up/signing-up-with-bitbucket.md
+    - Signing up with email: signing-up/signing-up-with-email.md
+    - Trial after signing up: signing-up/trial-after-signing-up.md
+- Adding a new app:
+    - Adding a new app: adding-a-new-app/adding-a-new-app.md
+    - Connecting a repository: adding-a-new-app/connecting-a-repository.md
+    - Setting up SSH keys: adding-a-new-app/setting-up-ssh-keys.md
+    - Setting up configuration: adding-a-new-app/setting-up-configuration.md
+
+markdown_extensions:
+  - codehilite(css_class=code)
+  - admonition
+  - toc:
+      permalink: '⚓'
+
+extra:
+  palette:
+    primary: 'deep purple'
+    accent: 'deep purple'
+    extra:
+  logo: 'img/logo.svg'
+  font:
+    text: 'Roboto'
+    code: 'Source Code Pro'
+extra_css: ['stylesheets/extra.css']
