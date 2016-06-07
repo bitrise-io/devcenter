@@ -19,3 +19,7 @@ nav li ul li a {
   padding-bottom: 5px !important;
   font-weight: 500 !important;
 }
+
+.article .wrapper {
+  padding-top: 77px !important;
+}
