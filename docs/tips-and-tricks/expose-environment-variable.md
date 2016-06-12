@@ -31,6 +31,17 @@ envman add --key MY_RELEASE_NOTE --valuefile ./some/file/path
 *You can read more about how `envman` can
 be used on it's [GitHub page](https://github.com/bitrise-io/envman/).*
 
+!!! warning "Env Var value size limit"
+    Environment Variable values set through `envman` are limited to 10KB by default.
+    This is done in order to prevent issues with common tools.
+    Different tools have different environment size constraints,
+    e.g. `Bash` will start to fail on OS X once the environments set
+    exceed ~120KB (**in total, not a single variable!**).
+
+    For larger data you should use files or other solutions,
+    and use environment variables to point to the file / to the
+    ID or location of where the data is stored.
+
 Once the environment variable is exposed you can use it like
 any other environment variable. In `bash` you can reference
 the previous example environment as: `$MY_RELEASE_NOTE`.
