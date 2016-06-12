@@ -1,0 +1,60 @@
+format_version: 1.2.0
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+description: |
+  Official guides: http://www.mkdocs.org
+
+workflows:
+  setup:
+    steps:
+    - script@1.1.0:
+        deps:
+          brew:
+          - name: python
+          apt_get:
+          - name: python-pip
+          - name: python-dev
+          - name: build-essential
+        inputs:
+        - content: |
+            #!/bin/bash
+            set -ex
+
+            # pip install --upgrade pip
+            # pip install --upgrade virtualenv
+
+            pip install mkdocs && mkdocs --version
+            pip install mkdocs-material
+
+  deploy-to-github-pages:
+    steps:
+    - script:
+        description: |
+          Note: mkdocs builds into `./site/`
+
+          Official GitHub Pages deploy guide: https://help.github.com/articles/creating-project-pages-manually/
+
+          *You can find infos about how to initialize the required `gh-pages` branch
+          in the official guide.*
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+
+            rm -rf ./site
+            REPO_URL=$(git remote get-url origin)
+            git clone --branch gh-pages "$REPO_URL" ./site
+
+            mkdocs build --clean
+            cd site/
+            git add .
+            git commit -m 'deploy'
+            git push origin gh-pages
+  up:
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+            mkdocs serve
