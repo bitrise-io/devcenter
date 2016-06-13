@@ -57,7 +57,7 @@ Both our `Xcode Archive` and `Xcode Analyze` steps include two related inputs,
 The value you provide for these inputs will be passed to `xcodebuild`
 as `CODE_SIGN_IDENTITY` and `PROVISIONING_PROFILE`.
 
-**Now, the important bit: what can make your life much easier** (especially if you generate an iOS app with
+**Now, the important bit, that can make your life much easier** (especially if you generate an iOS app with
 multiple, different code signing configuration (e.g. if you want to generate both an Ad-Hoc and
 an App Store signed `ipa`)):
 
