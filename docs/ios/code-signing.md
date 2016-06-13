@@ -17,7 +17,7 @@ select the ones which match the following points:
 
 * For the **Release** configuration it'll search for a Distribution Identity/Certificate
 * For the **Debug** configuration it'll search for a Development Identity/Certificate
-* The Provisioning Profile have to match with the **team ID** and with the **bundle ID** you did set
+* The Provisioning Profile has to match with the **team ID** and with the **bundle ID** you set
   in your Xcode project settings.
 
 This means that even if you have a Distribution Identity/Certificate available in the system,
@@ -31,8 +31,8 @@ Code Sign error: No code signing identities found: No valid signing identities (
 This means that to be able to Archive your project you have to provide both a Certificate (`.p12` Identity file)
 and a Provisioning Profile which matches:
 
-* the type of the configuration you did set in your Xcode project settings under the **Code Signing** section (Distribution or Development)
-* the Provisioning Profile have to match both the *bundle ID* __and__ the *team ID* set in the Xcode project settings
+* the type of the configuration you set in your Xcode project settings under the **Code Signing** section (Distribution or Development)
+* the Provisioning Profile has to match both the *bundle ID* __and__ the *team ID* set in the Xcode project settings
 * and **the two files have to be compatible with each other** (you
 can check this on the [Apple Developer Portal](https://developer.apple.com/account/ios/certificate) - select a Provisioning Profile,
 click **Edit**, there you can see the Certificates which are allowed to use that specific Provisioning Profile)
@@ -57,11 +57,11 @@ Both our `Xcode Archive` and `Xcode Analyze` steps include two related inputs,
 The value you provide for these inputs will be passed to `xcodebuild`
 as `CODE_SIGN_IDENTITY` and `PROVISIONING_PROFILE`.
 
-**Now, the important bit, what can make your life much easier** (especially if you generate an iOS app with
-multiple, different code signing configuration (e.g. you want to generate both an Ad-Hoc and
+**Now, the important bit: what can make your life much easier** (especially if you generate an iOS app with
+multiple, different code signing configuration (e.g. if you want to generate both an Ad-Hoc and
 an App Store signed `ipa`)):
 
-!!! note "Setting a specific Identity will make Xcode to ignore other search parameters!"
+!!! note "Setting a specific Identity will make Xcode ignore other search parameters!"
     If you set the Identity to `iPhone Distribution` Xcode will search for a matching Provisioning
     Profile which fulfills all the other criteria (team ID and bundle ID),
     while **if you provide the full ID of the Identity** like `iPhone Distribution: My Company`
