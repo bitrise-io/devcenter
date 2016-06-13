@@ -41,6 +41,10 @@ There can be multiple Certificates/Identities and Provisioning Profiles installe
 the only thing what matters for Xcode when it tries to sign the app is to find a Certificate/Identity and
 Provisioning Profile pair which fulfills all the requirements listed above.
 
+!!! note "How to export your iOS Code Signing files"
+    If you need help with exporting your iOS Code Signing files, you can find
+    a step-by-step guide with screenshots [on our old DevCenter](https://bitrise.readme.io/docs/provprofile-cert-export).
+
 
 ## How to make the process easier, more manageable?
 
