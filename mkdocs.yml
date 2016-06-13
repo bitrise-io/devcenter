@@ -32,6 +32,8 @@ pages:
   - Caching Cocoapods: caching/caching-cocoapods.md
   - Caching Gradle: caching/caching-gradle.md
   - Caching Ruby GEMs: caching/caching-ruby-gems.md
+- iOS:
+  - Code Signing: ios/code-signing.md
 - Tips & Tricks:
   - Attach any file as an Artifact to the Build: tips-and-tricks/attach-any-file-to-build.md
   - Expose an Environment Variable and use it in another Step: tips-and-tricks/expose-environment-variable.md
