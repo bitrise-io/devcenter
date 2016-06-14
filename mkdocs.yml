@@ -40,6 +40,7 @@ pages:
   - Expose an Environment Variable and use it in another Step: tips-and-tricks/expose-environment-variable.md
   - Don't mark the Build as failed if a given step would fail (ignore the error of the Step): tips-and-tricks/dont-mark-build-failed-if-step-fails.md
   - Enable/Disable a step (optionally, based on a condition): tips-and-tricks/disable-a-step-by-condition.md
+  - "Xcode Archive: export options": tips-and-tricks/xcodebuild-export-options.md
 
 markdown_extensions:
   - codehilite(css_class=code)
