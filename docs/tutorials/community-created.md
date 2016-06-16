@@ -5,19 +5,40 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 
 ## English
 
+### iOS
+
+* [Let's automate Swift builds with Bitrise](https://medium.com/@erkekin/lets-automate-swift-builds-with-bitrise-47225d547c98)
+* [The Road to Bitrise](http://blog.prolificinteractive.com/2016/04/20/the-road-to-bitrise/) - *switching from Jenkins*
+* [Bitrise and Carthage - a simple guide about how to use Carthage on Bitrise](http://blog.ricardopereira.eu/2015/07/10/EN-bitrise-and-carthage/)
+
+### Android
+
+* [How to automate Android build process on Bitrise CI (part 1)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-71ae3a94362e)
+* [How to automate Android build process on Bitrise CI (part 2)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-part-2-b3f8124c29ee)
+
+### Xamarin
+
+* [Xamarin project setup on Bitrise.io](https://www.youtube.com/watch?v=ChX0TQzOd8c) - *youtube video*
 * [Xamarin Continuous Integration with Bitrise.io](http://codingwithcookie.com/2016/05/xamarin-continuous-integration-with-bitrise-io/) - *Xamarin project setup guide with Code Signing notes*
 * [(Xamarin) Continuous Integration and Deployment with Bitrise](http://blog.cayas.de/continuous-integration-and-deployment-with-bitrise) - *getting started guide*
-* [The Road to Bitrise](http://blog.prolificinteractive.com/2016/04/20/the-road-to-bitrise/) - *switching from Jenkins*
-* [How to automate Android build process on Bitrise CI (part 1)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-71ae3a94362e#.t0i91z6pj)
-* [How to automate Android build process on Bitrise CI (part 2)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-part-2-b3f8124c29ee#.xzhrr5jvb)
-* [How to send commit changes by email once CI build passes?](https://medium.com/@hesam.kamalan/how-to-send-commit-changes-by-email-once-ci-build-passes-dee13c67c195#.2243833r3)
-* [Bitrise and Carthage - a simple guide about how to use Carthage on Bitrise](http://blog.ricardopereira.eu/2015/07/10/EN-bitrise-and-carthage/)
-* [Continuous integration made easy with Bitrise](https://blog.alltheflow.com/continuous-integration-made-easy-with-bitrise/) - *intro to Step development*
-* [Snowflake: React Native app Continuous Integration with Bitrise.io](https://github.com/bartonhammond/snowflake/#continuous-integration) - *detailed setup guide with youtube videos*
-* [How to build Cordova-based Android project on bitrise.io](http://vgaidarji.github.io/blog/2016/02/27/how-to-build-cordova-based-android-project-on-bitrise-io/)
-* [Continuous happiness for Mac](https://blog.alltheflow.com/continuous-happiness-for-mac/) - *build your Mac projects on Bitrise*
-* [Xamarin project setup on Bitrise.io](https://www.youtube.com/watch?v=ChX0TQzOd8c) - *youtube video*
 * [Motz Codes Live: Continuous Integration & Deployment for Xamarin with Bitrise](https://www.youtube.com/watch?v=1UeNajpjIXY) - *youtube video, detailed guide*
+
+### React Native
+
+* [Snowflake: React Native app Continuous Integration with Bitrise.io](https://github.com/bartonhammond/snowflake/#continuous-integration) - *detailed setup guide with youtube videos*
+
+### Cordova
+
+* [How to build Cordova-based Android project on bitrise.io](http://vgaidarji.github.io/blog/2016/02/27/how-to-build-cordova-based-android-project-on-bitrise-io/)
+
+### macOS app
+
+* [Continuous happiness for Mac](https://blog.alltheflow.com/continuous-happiness-for-mac/) - *build your Mac projects on Bitrise*
+
+### Other
+
+* [How to send commit changes by email once CI build passes?](https://medium.com/@hesam.kamalan/how-to-send-commit-changes-by-email-once-ci-build-passes-dee13c67c195)
+* [Continuous integration made easy with Bitrise](https://blog.alltheflow.com/continuous-integration-made-easy-with-bitrise/) - *intro to Step development*
 
 
 ## Japanese
