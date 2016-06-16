@@ -1,5 +1,7 @@
-*If you write a tutorial or blog post about Bitrise feel free to [add it to this list yourself]()
+*If you write a tutorial or blog post about Bitrise feel free to
+[add it to this list yourself](https://github.com/bitrise-io/devcenter/edit/master/docs/tutorials/community-created.md)
 or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
+
 
 ## English
 
@@ -16,6 +18,7 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 * [Continuous happiness for Mac](https://blog.alltheflow.com/continuous-happiness-for-mac/) - *build your Mac projects on Bitrise*
 * [Xamarin project setup on Bitrise.io](https://www.youtube.com/watch?v=ChX0TQzOd8c) - *youtube video*
 * [Motz Codes Live: Continuous Integration & Deployment for Xamarin with Bitrise](https://www.youtube.com/watch?v=1UeNajpjIXY) - *youtube video, detailed guide*
+
 
 ## Japanese
 
