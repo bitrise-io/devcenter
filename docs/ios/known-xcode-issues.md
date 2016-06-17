@@ -29,18 +29,34 @@ Related links & reports:
 * [Assertion Failure: UI Testing Failure - Failed to receive completion for ...](https://forums.developer.apple.com/thread/15209)
 * [Assertion Failure: UI Testing Failure - Failed to receive completion for XCDeviceEvent: page 12 usage 64 duration 0.01s within 10.0s](https://forums.developer.apple.com/thread/31311)
 * [UI Testing Failure - Failed to perform AX action for monitoring the event loop](https://forums.developer.apple.com/thread/31312)
+* [UI Testing Failure due to failed AX Action](https://forums.developer.apple.com/thread/4472)
+
 
 ### Possible solutions
 
-* Try another Xcode version.
 * Try another Simulator device (e.g. instead of running the test in "iPhone 6"
   try it with "iPhone 6s Plus")
+* Others reported that if you add a delay after `app.launch()` it can
+  leave enough time for Xcode / the iOS Simulator to initialize the Accessibility labels,
+  so that UI Tests can properly find the elements by the Accessibility labels.
+* [Use the Async testing APIs](http://stackoverflow.com/questions/32002330/ios-9-ui-testing-test-fails-because-target-control-isnt-available-yet)
+* As reported [in this StackOverflow answer](http://stackoverflow.com/a/37866825/974381) &
+  [in this Apple dev forum discussion](https://forums.developer.apple.com/thread/4472)
+  a possible workaround can be to **not to store `XCUIApplication()` in a variable**, instead
+  reference / use it directly. E.g. instead of:
+  ```
+  let app = XCUIApplication()
+  ...
+  app.launch()
+  ```
+  do: `XCUIApplication().launch()`
 * Some users had success with splitting the tests into multiple Schemes,
   and running those separately, with separate Test steps.
-  * A great article about splitting tests into multiple Schemes: [http://artsy.github.io/blog/2016/04/06/Testing-Schemes](http://artsy.github.io/blog/2016/04/06/Testing-Schemes)
-* Others reported that if you add a delay after `app.launch()` it can leave enough time for Xcode / the iOS Simulator to initialize the Accessibility labels, so that UI Tests can properly find the elements by the Accessibility labels.
-* [Use the Async testing APIs](http://stackoverflow.com/questions/32002330/ios-9-ui-testing-test-fails-because-target-control-isnt-available-yet)
+  * A great article about splitting tests into multiple Schemes:
+    [http://artsy.github.io/blog/2016/04/06/Testing-Schemes](http://artsy.github.io/blog/2016/04/06/Testing-Schemes)
 * [Sometimes it's related to a code which makes Xcode to misbehave](https://github.com/fastlane/fastlane/issues/3874#issuecomment-219991408)
+* Try another Xcode version.
+
 
 ## Flaky UI tests, UI test cases failing randomly
 
