@@ -17,7 +17,7 @@ using the [SSH key](/adding-a-new-app/setting-up-ssh-keys) you set up.
 After successful validation Bitrise will scan your repository and give you a default workflow
 
 
-### Skipping the scanner - full manual configuration
+## Skipping the scanner - full manual configuration
 
 If for some reason you want to skip the scanner, you can choose
 the **Configure manually without project scanning** option,
