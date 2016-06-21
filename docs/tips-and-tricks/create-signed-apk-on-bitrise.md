@@ -99,27 +99,15 @@ Bitrise will upload your file and assign an environment variable (`BITRISEIO_AND
 
 ### Download your keystore from Generic File Storage:
 
-The easiest way to download your keystore (*or any file you uploaded to generic file storage*) is to use a [script-step](https://github.com/bitrise-io/steps-script):
+The easiest way to download your keystore (*or any file you uploaded to generic file storage*) is to use a [file-downloader] step(https://github.com/bitrise-steplib/steps-file-downloader):
 
 ```
 ...
-- script:
+- file-downloader:
     inputs:
-    - content: |
-        #!/bin/bash
-        set -ex
-
-        # specify local download path (native android)
-        file_local_path="$HOME/keystores/my_keystore.jks"
-        # Xamarin android:
-        #file_local_path="/keystores/my_keystore.jks"
-
-        # download the file
-        wget -O "$file_local_path" "$BITRISEIO_ANDROID_KEYSTORE_URL"
-        echo "file downloaded to: $file_local_path"
-
-        # OPTIONALLY: export the file's local path, to be able to use it in subsequent steps as an input value
-        envman add --key BITRISEIO_ANDROID_KEYSTORE_PTH --value "$file_local_path"
+    - source: $BITRISEIO_ANDROID_KEYSTORE_URL
+    - destination: "$HOME/keystores/my_keystore.jks" #native android
+#    - destination: "/keystores/my_keystore.jks" #Xamarin android
 ...
 ```
 
