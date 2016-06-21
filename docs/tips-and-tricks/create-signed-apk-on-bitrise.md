@@ -53,12 +53,14 @@ android {
         config {
             keyAlias 'MyAndroidKey'
             keyPassword '***'
-			storeFile file("$System.env.HOME/keystores/my_keystore.jks")
+            storeFile file(System.getenv("HOME") + "/keystores/my_keystore.jks")
             storePassword '***'
         }
     }
 ...
 ```
+
+> You can use System.getenv("ENV_KEY") to access environment variables from a gradle file.
 
 __Working with Xamarin Studio :__ 
 
