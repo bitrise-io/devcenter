@@ -131,6 +131,19 @@ A quick summary:
 * If the previous steps did not help, you should check the whole discussion and suggested solutions at: [https://github.com/bitrise-io/bitrise.io/issues/5](https://github.com/bitrise-io/bitrise.io/issues/5)
 
 
+## `Segmentation fault`
+
+The error is:
+
+```
+clang: error: unable to execute command: Segmentation fault: 11
+```
+
+This is usually due to Xcode version mismatch - that you use a different Xcode on your Mac than the one you use on [bitrise.io](https://www.bitrise.io). Commonly occurs with Xcode 7.2 (if you have the Xcode 7.2 stack selected on bitrise.io), if you're already on a newer version of Xcode locally on your Mac.
+
+The solution is simple, just make sure that you use the same Xcode version everywhere.
+
+
 ## Issues which occur with the Xcode Command Line Tools (`xcodebuild`), but not with Xcode.app
 
 * [xcodebuild hangs when a test causes EXC_BAD_ACCESS kernel exception](https://openradar.appspot.com/24222858)
