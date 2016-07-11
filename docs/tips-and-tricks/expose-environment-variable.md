@@ -8,7 +8,7 @@ you just have to use [envman](https://github.com/bitrise-io/envman/) if you want
 A very simple example might be:
 
 ```
-envman --add MY_RELEASE_NOTE --value "This is the release note"
+envman add --key MY_RELEASE_NOTE --value "This is the release note"
 ```
 
 You can call `envman` in any Step, including a script step,
