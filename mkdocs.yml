@@ -43,6 +43,7 @@ pages:
   - Don't mark the Build as failed if a given step would fail (ignore the error of the Step): tips-and-tricks/dont-mark-build-failed-if-step-fails.md
   - Enable/Disable a step (optionally, based on a condition): tips-and-tricks/disable-a-step-by-condition.md
   - "Xcode Archive: export options": tips-and-tricks/xcodebuild-export-options.md
+  - "Install Any Additional Tool": tips-and-tricks/install-additional-tools.md
 
 markdown_extensions:
   - codehilite(css_class=code)
