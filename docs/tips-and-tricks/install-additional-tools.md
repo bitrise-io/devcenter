@@ -51,18 +51,18 @@ your own Mac / Linux, in your Terminal / Command Line!
 
 #### `brew` on macOS
 
-E.g. to install `awscli` with a script step, on macOS, using `brew`:
+E.g. to install `cmake` with a script step, on macOS, using `brew`:
 
 ```
 #!/bin/bash
 set -ex
-brew install awscli
+brew install cmake
 ```
 
 Actually, the whole Script content could be as short as:
 
 ```
-brew install awscli
+brew install cmake
 ```
 
 Which is exactly how you would use `brew` on your Mac, but you'll most likely
@@ -72,12 +72,12 @@ example is a more future proof Bash script template.
 
 #### `apt-get` on Linux
 
-E.g. to install `awscli` with a script step, on Linux, using `apt-get`:
+E.g. to install `cmake` with a script step, on Linux, using `apt-get`:
 
 ```
 #!/bin/bash
 set -ex
-sudo apt-get install -y awscli
+sudo apt-get install -y cmake
 ```
 
 !!! note "Don't forget the `-y` flag for `apt-get`!"
@@ -102,15 +102,15 @@ will check if that tool is installed, and will install it for you if required.
     or you need a version of the tool which is not available in the dependency manager.
     In those cases you should simply install the tool inside the Script, as described above. 
 
-An example, installing `awscli` with either `apt-get` (where `apt-get` is available),
+An example, installing `cmake` with either `apt-get` (where `apt-get` is available),
 or with `brew` (on macOS):
 
 ```
 deps:
   brew:
-  - name: awscli
+  - name: cmake
   apt_get:
-  - name: awscli
+  - name: cmake
 ```
 
 A minimal `bitrise.yml` for demonstration:
@@ -125,14 +125,14 @@ workflows:
     - script:
         deps:
           brew:
-          - name: awscli
+          - name: cmake
           apt_get:
-          - name: awscli
+          - name: cmake
         inputs:
           - content: |-
               #!/bin/bash
               set -ex
-              which awscli
+              which cmake
 ```
 
 
