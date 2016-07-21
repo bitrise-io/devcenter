@@ -5,7 +5,7 @@ Just add a `Script` step to your Workflow, and either write your script there, o
 _Passwordless `sudo` is enabled on all of our build virtual machines, so you can freely use `sudo` if you need it._
 
 Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib).
-You can find a template and more information about how you can create your own Step at: https://github.com/bitrise-steplib/step-template
+You can find a template and more information about how you can create your own Step at: [https://github.com/bitrise-steplib/step-template](https://github.com/bitrise-steplib/step-template)
 
 ## Step by step setup
 
