@@ -153,8 +153,11 @@ The solution is simple, just make sure that you use the same Xcode version every
 
 This is a rare issue, caused by running a **non shared Scheme**.
 
-`xcodebuild` can only work with **shared Schemes**. If you try to run
-a command on a non shared Scheme it usually manifests in a "scheme not found"
+`xcodebuild` can only work with **shared Schemes** and user schemes (auto created by Xcode.app).
+`xcodebuild`, unlike Xcode.app, __does not__ auto create user schemes, it can only work with
+__shared schemes__ and already existing user schemes (Xcode.app creates the user scheme when you open
+the project in Xcode.app __on the specific Mac machine the first time__, for schemes which are not marked as shared).
+If you try to run a command on a missing / non shared Scheme it usually manifests in a "scheme not found"
 error, but we saw projects where it resulted in `xcodebuild` hanging, instead
 of an error message.
 
