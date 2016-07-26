@@ -52,8 +52,8 @@ Related links & reports:
   do: `XCUIApplication().launch()`
 * Some users had success with splitting the tests into multiple Schemes,
   and running those separately, with separate Test steps.
-  * A great article about splitting tests into multiple Schemes:
-    [http://artsy.github.io/blog/2016/04/06/Testing-Schemes](http://artsy.github.io/blog/2016/04/06/Testing-Schemes)
+    * A great article about splitting tests into multiple Schemes:
+      [http://artsy.github.io/blog/2016/04/06/Testing-Schemes](http://artsy.github.io/blog/2016/04/06/Testing-Schemes)
 * [Sometimes it's related to a code which makes Xcode to misbehave](https://github.com/fastlane/fastlane/issues/3874#issuecomment-219991408)
 * Try another Xcode version.
 
@@ -147,10 +147,10 @@ The solution is simple, just make sure that you use the same Xcode version every
 ## Issues which occur with the Xcode Command Line Tools (`xcodebuild`), but not with Xcode.app
 
 * [xcodebuild hangs when a test causes EXC_BAD_ACCESS kernel exception](https://openradar.appspot.com/24222858)
-  * Note: this can happen only on specific iOS Simulators / iOS versions too, e.g. if the app only crashes on iOS 8, but not on iOS 9
+    * Note: this can happen only on specific iOS Simulators / iOS versions too, e.g. if the app only crashes on iOS 8, but not on iOS 9
 * `xcodebuild .. test` hangs at the end of the tests if the output of `xcodebuild ..` is piped / redirected in any way. This means that `xcodebuild .. test .. | xcpretty` or even `tee` can be used to reproduce this issue.
-  * Affected Xcode versions: so far it seems to be an `Xcode 8 beta` issue.
-  * Related [radar](http://openradar.appspot.com/26872644) and [xcpretty](https://github.com/supermarin/xcpretty/issues/227) issues.
+    * Affected Xcode versions: so far it seems to be an `Xcode 8 beta` issue.
+    * Related [radar](http://openradar.appspot.com/26872644) and [xcpretty](https://github.com/supermarin/xcpretty/issues/227) issues.
 
 #### Every/Any Xcode command hangs
 
