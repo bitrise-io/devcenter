@@ -148,6 +148,9 @@ The solution is simple, just make sure that you use the same Xcode version every
 
 * [xcodebuild hangs when a test causes EXC_BAD_ACCESS kernel exception](https://openradar.appspot.com/24222858)
   * Note: this can happen only on specific iOS Simulators / iOS versions too, e.g. if the app only crashes on iOS 8, but not on iOS 9
+* `xcodebuild .. test` hangs at the end of the tests if the output of `xcodebuild ..` is piped / redirected in any way. This means that `xcodebuild .. test .. | xcpretty` or even `tee` can be used to reproduce this issue.
+  * Affected Xcode versions: so far it seems to be an `Xcode 8 beta` issue.
+  * Related [radar](http://openradar.appspot.com/26872644) and [xcpretty](https://github.com/supermarin/xcpretty/issues/227) issues.
 
 #### Every/Any Xcode command hangs
 
