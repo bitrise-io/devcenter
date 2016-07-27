@@ -46,6 +46,9 @@ configuration (`bitrise.yml`).
 In your Terminal / Command Line go to (`cd`) the root directory
 of _your repository_, and make sure your `bitrise.yml` is at this location.
 
+
+## Run your builds
+
 The only thing left to do is to actually run a build:
 
 ```
