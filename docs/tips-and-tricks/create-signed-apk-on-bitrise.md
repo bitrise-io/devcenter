@@ -85,7 +85,7 @@ __Working with Xamarin Studio :__
 
 You __can NOT use environment variables__ in keystore path, the path has to be relative to the android project's folder or __you can use an__ absolute path. To use the same path on your local machine and bitrise, it might be a good idea to put your keystore into your repository __but don't forget to .gitignore it!__
 
-### Upload your keytsore to bitrise:
+### Upload your keystore to bitrise:
 
 - Open your app on [bitrise.io](https://www.bitrise.io)
 - Go to __Workflow__ tab
@@ -121,7 +121,7 @@ Advantage of this solution is that you __don't have to set code signing in your 
 During the archive no signing/only debug signing will be performed.  
 You should place the `sign-apk` step __after__ the step which generates your APK.
 
-To use this step, you have to upload your keystore to bitrise (see: *Upload your keytsore to bitrise*), but you do not have to download it (`sign-apk` step can work with remote file paths (URLs) too)
+To use this step, you have to upload your keystore to bitrise (see: *Upload your keystore to bitrise*), but you do not have to download it (`sign-apk` step can work with remote file paths (URLs) too)
 
 When you upload your keystore to bitrise's Generic File Storage, it will export:
 
