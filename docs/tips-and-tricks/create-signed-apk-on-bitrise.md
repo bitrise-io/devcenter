@@ -50,7 +50,7 @@ You can eliminate this problem by using __environment variables__ in keystore pa
 ```
 android {
     signingConfigs {
-        config {
+        release {
             keyAlias 'MyAndroidKey'
             keyPassword '***'
             storeFile file(System.getenv("HOME") + "/keystores/my_keystore.jks")
@@ -67,11 +67,11 @@ Using environment variable as keyPassword and storePassword, your build.gradle f
 ```
 android {
     signingConfigs {
-        config {
-            keyAlias 'MyAndroidKey'
-            keyPassword System.getenv("KEYSTORE_PASSWORD")
+        release {
+            keyAlias System.getenv("BITRISEIO_ANDROID_KEYSTORE_ALIAS")
+            keyPassword System.getenv("BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD")
             storeFile file(System.getenv("HOME") + "/keystores/my_keystore.jks")
-            storePassword System.getenv("STORE_PASSWORD")
+            storePassword System.getenv("BITRISEIO_ANDROID_KEYSTORE_PASSWORD")
         }
     }
 ...
