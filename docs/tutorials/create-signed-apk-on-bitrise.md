@@ -1,5 +1,3 @@
-# Create signed apk on bitrise.io
-
 __In general there are two options to create a signed apk with bitrise:__
 
 1. The first option is: __specify code sign configuration in your Gradle configuration__
