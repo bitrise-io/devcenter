@@ -20,7 +20,7 @@ Signing config is stored in you app's `build.gradle` file and looks something li
 ```
 android {
     signingConfigs {
-        config {
+        release {
             keyAlias 'MyAndroidKey'
             keyPassword '***'
             storeFile file("/path/to/my/keystore.jks")
