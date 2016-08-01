@@ -62,7 +62,7 @@ android {
 
 > You can use System.getenv("ENV_KEY") to access environment variables anywhere in the gradle config file.
 
-Using environment variable as keyPassword and storePassword, your build.gradle file may looks like:
+Using environment variable as keyPassword and storePassword, your build.gradle file may looks like (_this examples uses the env vars you get when you upload your keystore to [bitrise.io](https://www.bitrise.io) in the Workflow Editor, under the Code signing & Files section_):
 
 ```
 android {
