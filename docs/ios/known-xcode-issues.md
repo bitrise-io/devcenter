@@ -158,7 +158,7 @@ Note: this can happen only on specific iOS Simulators / iOS versions too, e.g. i
 if the output of `xcodebuild ..` is piped / redirected in any way.
 This means that `xcodebuild .. test .. | xcpretty` or even `tee` can be used to reproduce this issue.
 
-* __Affected Xcode versions__: so far it seems to be an `Xcode 8 beta` issue.
+* __Affected Xcode versions__: so far it seems to be an `Xcode 8 beta` only issue, and it was fixed in `Xcode 8 beta 4`.
 * Related [radar](http://openradar.appspot.com/26872644) and [xcpretty](https://github.com/supermarin/xcpretty/issues/227) issues.
 * Workaround: use a `Script` step instead of the Xcode Test step,
   and copy paste the `xcodebuild` command from the hanging Xcode Test step's log, without `| xcpretty` etc.
