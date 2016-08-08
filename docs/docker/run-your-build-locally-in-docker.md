@@ -9,7 +9,7 @@ For this example we'll use [this Bitrise Android sample project](https://github.
 
 !!! warning "Large images ahead"
     The official Bitrise Docker images are quite large, due to the fact that it includes
-    a wide variety of preinstalled tools. You'll need at least 15-20 GB free disk!
+    a wide variety of preinstalled tools. You'll need at __least__ 20-25 GB free disk space!
 
 If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli)
 you should try that first. You don't have to master the CLI,
