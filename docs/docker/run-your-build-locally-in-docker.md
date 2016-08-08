@@ -22,7 +22,7 @@ Open your Terminal / Command Line, and download the docker image you want to use
 In general, if your project is an Android project but you don't use the Android NDK,
 to preserve precious disk space you should use the
 [bitriseio/docker-android](https://hub.docker.com/r/bitriseio/docker-android/) docker image.
-You can use other official Bitrise docker images [on our Docker Hub page](https://hub.docker.com/u/bitriseio/).
+You can find other official Bitrise docker images [on our Docker Hub page](https://hub.docker.com/u/bitriseio/).
 For this example we'll use the `bitriseio/docker-android` one.
 
 Downloading docker images from the [Docker Hub](https://hub.docker.com) is quite easy:
