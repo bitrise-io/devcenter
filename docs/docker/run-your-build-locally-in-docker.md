@@ -64,16 +64,16 @@ container at the path `/bitrise/src`.
 
 The `--env CI=false` flag sets the environment variable `CI` to `false` - this will
 make Bitrise CLI to skip certain steps which only make sense to run in a Continuous Integration
-environment. A basic example is the Git Clone step - you already have your code, so
-no need to git clone it again inside the docker container (that's also why we
-shared it as a `--volume`).
+environment. An example is the `Git Clone` step - you already have your code, so there's
+no need to git clone it again inside the docker container (that's why we
+shared the code directory as a `--volume`).
 
-The `--rm` flag tells docker to discard the container immedately at the end of the `docker run`
-session. This means that if you run the command again, the only thing which will
+The `--rm` flag tells docker to discard the container after the `docker run`
+command finishes. This means that if you run the command again, the only thing which will
 persist between the `docker run ..` commands are the files stored at the shared `--volume`
 (in your repository's directory). Every other file which is generated into a temp
 or any other location will be discarded / won't be kept. If you want to
 debug the container after a failed build feel free to remove the `--rm` flag,
 and check out a Docker tutorial about how you can connect to an existing
-docker container - simply running the command again will not use the same container,
-but will create a new one!
+docker container - _Note: simply running the command again **will not** use the same container,
+but **will create a new one**_!
