@@ -16,6 +16,19 @@ you should try that first. You don't have to master the CLI,
 if you know what `bitrise run WORKFLOW` does, that should be enough for this tutorial.
 
 
+## TL;DR;
+
+If you're familiar with `docker` and the `bitrise` CLI:
+
+1. Install [docker](https://www.docker.com/)
+2. Make sure you have your `bitrise.yml` in your repository (you don't have to commit it, but the file have to exist in your repository's root directory)
+3. `cd` into your repository's directory on your Mac/Linux
+4. `docker pull bitriseio/docker-android:latest`
+5. `docker run --env CI=false --volume "$(pwd):/bitrise/src" --rm bitriseio/docker-android:latest bitrise run WORKFLOW`
+
+_Keep reading if you want to read more details and notes about the process and commands!_
+
+
 ## Getting started
 
 Open your Terminal / Command Line, and download the docker image you want to use.
