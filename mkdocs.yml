@@ -38,6 +38,9 @@ pages:
 - iOS:
   - Code Signing: ios/code-signing.md
   - List of known Xcode issues: ios/known-xcode-issues.md
+- Docker:
+  - How to run your build locally in Docker: docker/run-your-build-locally-in-docker.md
+  - How we build our images: docker/how-we-build-our-images.md
 - Tips & Tricks:
   - Attach any file as an Artifact to the Build: tips-and-tricks/attach-any-file-to-build.md
   - Expose an Environment Variable and use it in another Step: tips-and-tricks/expose-environment-variable.md
