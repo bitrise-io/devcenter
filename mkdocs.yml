@@ -8,6 +8,7 @@ pages:
 - Getting Started:
   - What is Bitrise?: getting-started/index.md
   - Builds & Workflows: getting-started/builds-and-workflows.md
+  - Code Security: getting-started/code-security.md
 - Infrastructure:
   - Virtual Machines: infrastructure/virtual-machines.md
   - Available Stacks: infrastructure/available-stacks.md
