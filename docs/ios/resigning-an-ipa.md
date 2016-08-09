@@ -52,7 +52,7 @@ workflows:
     - deploy-to-bitrise-io@1.2.4: {}
   appstore:
     steps:
-    - git::https://github.com/bitrise-steplib/steps-resign-ipa.git@master:
+    - resign-ipa@1.0.0:
         inputs:
         - distribution_type: AppStore
         - itunes_connect_team_id: $ITUNES_CONNECT_TEAM_ID
