@@ -37,6 +37,8 @@ pages:
   - Caching Ruby GEMs: caching/caching-ruby-gems.md
 - iOS:
   - Code Signing: ios/code-signing.md
+  - Uploading certificates: ios/uploading-certificates.md
+  - Resigning an IPA: ios/resigning-an-ipa.md
   - List of known Xcode issues: ios/known-xcode-issues.md
 - Docker:
   - How to run your build locally in Docker: docker/run-your-build-locally-in-docker.md
