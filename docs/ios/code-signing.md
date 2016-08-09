@@ -3,14 +3,14 @@
 iOS apps require code signing for every action/output which generates an app (`.ipa`) meant to
 run on a physical iOS device.
 
-When you create & export an Archive (`.ipa`) of your app Xcode will sign it automatically,
+When you create and export an Archive (`.ipa`) of your app Xcode will sign it automatically,
 based on the **Code Signing** settings you have in your Xcode project. There are, however,
 a couple of things you have to know about how Xcode selects the code signing
 files (unless you set a specific Identity and/or Provisioning Profile).
 
 If you have a Code Signing configuration in your Xcode project like this one:
 
-![Recommended iOS Code Signing configuration in Xcode](/img/recommended-ios-code-signing-settings.png)
+![Recommended iOS Code Signing configuration in Xcode](/img/ios/recommended-ios-code-signing-settings.png)
 
 where you don't set a specific Identity and Provisioning Profile, Xcode will
 select the ones which match the following points:
@@ -71,7 +71,7 @@ an App Store signed `ipa`)):
     while **if you provide the full ID of the Identity** like `iPhone Distribution: My Company`
     Xcode will **ignore** everything else and will use that specific Identity (if it can
     find it in the system)!
-    
+
 This means that even if the Provisioning Profile has a different *team ID* set, just by
 specifying the Identity's full ID, Xcode will pick the Provisioning Profile
 which is compatible with the Identity, it won't check the *team ID* parameter!
@@ -106,4 +106,4 @@ compatible with the Identity you set. But if you'd need to control exactly
 which Provisioning Profile should be used for a given step, you can use
 the `Force code signing with Provisioning Profile` input of the steps.
 *This can be useful if you want to use multiple Distribution Provisioning Profiles
-in a single build, **e.g. to create both an Ad-Hoc and an App Store signed app.*** 
+in a single build, **e.g. to create both an Ad-Hoc and an App Store signed app.***
