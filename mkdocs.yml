@@ -36,6 +36,8 @@ pages:
   - Caching Cocoapods: caching/caching-cocoapods.md
   - Caching Gradle: caching/caching-gradle.md
   - Caching Ruby GEMs: caching/caching-ruby-gems.md
+- CLI:
+  - Why you should use the Steplib: cli/why-you-should-use-the-steplib.md
 - iOS:
   - Code Signing: ios/code-signing.md
   - Uploading certificates: ios/uploading-certificates.md
