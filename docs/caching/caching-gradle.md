@@ -1,12 +1,18 @@
 1. Put the `Cache:Pull` step after the Git Clone
 2. Put the `Cache:Push` step to the very end of the Workflow
 3. Select the `Cache:Push` step and specify the following paths for caching (Cache Paths input):
-> ```$HOME/.gradle```
->>  ```./.gradle```
+
+   ```
+   $HOME/.gradle
+   ./.gradle
+   ```
 4. Select the `Cache:Push` step and specify the following paths for update-check ignore (Ignore Paths from change check input):
-> ```$HOME/.gradle/caches/*.lock```
->> ```./.gradle/*.lock```
->>> ```./.gradle/*.bin```
+   
+   ```
+   $HOME/.gradle/caches/*.lock
+   ./.gradle/*.lock
+   ./.gradle/*.bin
+   ```
 
 ## Example workflow
 ```yml
