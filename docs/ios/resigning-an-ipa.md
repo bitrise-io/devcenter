@@ -50,7 +50,10 @@ workflows:
         - plist_path: $INFO_PLIST_PATH
     - xcode-archive@1.8.5: {}
     - deploy-to-bitrise-io@1.2.4: {}
+
   appstore:
+    before_run:
+    - primary
     steps:
     - resign-ipa@1.0.0:
         inputs:
@@ -62,6 +65,4 @@ workflows:
         - itunescon_user: $ITUNES_CONNECT_USER
         - password: $ITUNES_CONNECT_PASSWORD
         - app_id: $ITUNES_CONNECT_APP_ID
-    before_run:
-    - primary
 ```
