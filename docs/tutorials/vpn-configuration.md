@@ -35,7 +35,7 @@ configuration (`bitrise.yml` / Workflow).
 
 ```bash
 #!/usr/bin/env bash
-
+set -e
 
 echo "WAN IP"
 # This prints the servers Internet IP adress to the log, useful for debugging 
@@ -87,13 +87,13 @@ mkdir $temp_dir
 
 # IPsec config file, se examples at https://wiki.strongswan.org/projects/strongswan/wiki/IKEv1Examples and https://wiki.strongswan.org/projects/strongswan/wiki/IKEv2Examples
 echo "Downloading ipsec.conf..."
-curl https://www.example.com/ipsec.conf.template
+wget https://www.example.com/ipsec.conf.template -O $temp_dir/ipsec.conf.template
 # IPsec credentials file, see documentation at https://wiki.strongswan.org/projects/strongswan/wiki/IpsecSecrets
 echo "Downloading ipsec.secrets..."
-curl https://www.example.com/ipsec.secrets.template
+wget https://www.example.com/ipsec.secrets.template -O $temp_dir/ipsec.secrets.template
 # In some cases you might need to download the certificate, or certificate chain, of your other VPN endpoint
 echo "Downloading server.crt..."
-curl https://www.example.com/server.crt -o $temp_dir/server.crt
+wget https://www.example.com/server.crt -O $temp_dir/server.crt
 
 echo "Rendering config templates"
 render_template $temp_dir/ipsec.conf.template > $temp_dir/ipsec.conf
