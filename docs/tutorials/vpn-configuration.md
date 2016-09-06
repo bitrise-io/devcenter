@@ -17,8 +17,8 @@ you have to connect to the VPN __before__ the `Git Clone` step, but in general
 you can configure & connect to the VPN anywhere in your Workflow, __before__ you'd use the
 connection.
 
-You can choose other VPN tools, not just the one shown here, this is just one example setup
-which is works on [bitrise.io](https://www.bitrise.io).
+_You can choose other VPN tools, not just the one shown here ([strongswan](https://www.strongswan.org)),
+this is just one example setup which works on [bitrise.io](https://www.bitrise.io)._
 
 __One important note__: when you choose your VPN tool and do the setup/configuration,
 you have to be careful to __not to restart / abort__ existing SSH sessions!
@@ -38,7 +38,7 @@ configuration (`bitrise.yml` / Workflow).
 set -e
 
 echo "WAN IP"
-# This prints the servers Internet IP adress to the log, useful for debugging 
+# This prints the servers Internet IP adress to the log, useful for debugging
 curl http://httpbin.org/ip
 
 case "$OSTYPE" in
