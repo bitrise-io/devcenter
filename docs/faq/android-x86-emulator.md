@@ -6,6 +6,8 @@ hardware virtualization bit required for running the Android x86 emulator.
 
 If you know about any solution, [please contact us](https://www.bitrise.io/contact)!
 
-For now, the best workaround seems to be [Oracle's Ravello](https://www.ravellosystems.com/).
+For now, the best workaround seems to be [Oracle's Ravello](https://www.ravellosystems.com/)
+if you need a full emulator (with UI),
+or [robolectric](http://robolectric.org/) for unit tests.
 
 If you know about any other, [feel free to contact us](https://www.bitrise.io/contact)!
