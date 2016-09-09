@@ -1,4 +1,4 @@
-## How iOS code signing works
+## How iOS code signing works (Xcode 7 & Xcode 8 manual code signing mode)
 
 iOS apps require code signing for every action/output which generates an app (`.ipa`) meant to
 run on a physical iOS device.
@@ -46,9 +46,46 @@ Provisioning Profile pair which fulfills all the requirements listed above.
     a step-by-step guide with screenshots [on our old DevCenter](https://bitrise.readme.io/docs/provprofile-cert-export).
 
 
-## How to make the process easier, more manageable?
+## How to make the process easier, more manageable? (Xcode 7 & Xcode 8 manual code signing mode)
 
-There's an important "trick" which can make your code signing process much easier:
+### Using Export Options (available for Xcode 7+ and Xcode Archive step v1.9.1+)
+
+Since the `1.9.1` version of the `Xcode Archive` step you can set Xcode "export options"
+directly through the step!
+
+The thing you have to know about Xcode's Export Options or how archiving works
+when you do it from `Xcode.app` on your Mac:
+
+1. When you click "Archive" in Xcode first it creates an Xcode "archive" file (directory),
+   and __it signs the archive with the code signing files set in your Xcode project settings__!
+1. Then, when the Xcode "Organizer" window appears and you click "Export..." and
+   select an "export method" (App Store, Ad Hoc, Enterprise or Development Deployment)
+   __Xcode does re-sign__ the archive with the final code signing files appropriate for the
+   export method you selected.
+
+This means that if you want to do the same on any Mac (e.g. on [bitrise.io](https://www.bitrise.io) virtual machines)
+__you'll need the code signing files for the final app/IPA__ (e.g. App Store or Ad Hoc distribution certificate and provisioning profile)
+__and additionally the code signing files used for the initial signing__ (usually Development certificate and provisioning profile)!
+
+To do the same on [bitrise.io](https://www.bitrise.io) all you have to do is:
+
+1. Upload all the certificates and provisioning profiles, including the ones required for the initial
+   code signing (usually your Development certificate and provisioning profile for the project).
+1. Open the Workflow Editor on [bitrise.io](https://www.bitrise.io), select the `Xcode Archive` step,
+   and make sure its version is at least `1.9.1`
+1. Go to the step's `Select method for export` input, and set it to the "export method" you want to use,
+   just like you would in Xcode's Organizer.
+   _Note: you can add more than one `Xcode Archive` step to your workflow, if you want to create
+   e.g. both an Ad Hoc and an App Store signed app/IPA in the same build/workflow!_
+1. Click `Save` in the Workflow Editor
+
+That's all. Run a new build and you're done ;)
+
+
+### Full manual / full control
+
+There's an important "trick" which can make your code signing process much easier
+(if you don't or can't use the Xcode 7+ Export Options - as described in the previous section):
 Xcode (Xcode's Command Line Tool, `xcodebuild`) has a command line parameter to
 override the Identity and Provisioning Profile configurations set in Xcode project settings!
 
