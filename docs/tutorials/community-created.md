@@ -21,6 +21,7 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 * [jfarrell.net](https://jfarrell.net) tutorial series
     * [Welcome to Bitrise](https://jfarrell.net/2016/09/05/welcome-to-bitrise/)
     * [Getting Started with Bitrise](https://jfarrell.net/2016/09/06/getting-started-with-bitrise/)
+    * [Understanding Workflows](https://jfarrell.net/2016/09/11/understanding-workflows/)
 * [Xamarin project setup on Bitrise.io](https://www.youtube.com/watch?v=ChX0TQzOd8c) - *youtube video*
 * [Xamarin Continuous Integration with Bitrise.io](http://codingwithcookie.com/2016/05/xamarin-continuous-integration-with-bitrise-io/) - *Xamarin project setup guide with Code Signing notes*
 * [(Xamarin) Continuous Integration and Deployment with Bitrise](http://blog.cayas.de/continuous-integration-and-deployment-with-bitrise) - *getting started guide*
