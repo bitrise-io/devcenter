@@ -13,6 +13,7 @@ However Bitrise Caching still might help if you have reliability issues with the
     but if you don't start a build on that specific branch for more than 7 days then the related cache
     will be removed, and your next build will run like the first time, when there was no cache for that branch yet.
 
+
 ## Setup
 
 All you need to get started is adding two Steps to your Workflow:
@@ -30,6 +31,16 @@ The `Cache:Push` step can be the very last step in the Workflow.
 The only thing you have to care about is that it should be after the step(s) which update the cached paths.
 For example in case of `CocoaPods` you should put the `Cache:Push` step anywhere after the `CocoaPods` install,
 because that's the step which generates, or updates the directory (`./Pods`) which is cached.
+
+
+## Downloading and deleting caches
+
+You can download and delete caches, for every branch which generated a cache,
+on the `Settings` tab of the app, under the `Manage Build Caches` section.
+
+!!! note
+    You can see the size of the caches and the last time a given cache was used in the popup.
+
 
 ## Technical notes
 
@@ -50,10 +61,37 @@ The step just has to use the Build Cache API to get download and upload URLs, th
     * You can create your own Cache steps
     * You can create and use your own Build Cache server and API
 
-## Downloading and deleting caches
 
-You can download and delete caches, for every branch which generated a cache,
-on the `Settings` tab of the app, under the `Manage Build Caches` section.
+### The cache might or might not be available
 
-!!! note
-    You can see the size of the caches and the last time a given cache was used in the popup.
+You should write your code in a way that it won't fail if the cache can't be accessed.
+
+### The cache is downloaded over the internet
+
+Which means that if you store files which are downloaded from a CDN / cloud storage you might not see
+any speed improvement,
+as downloading it from the Bitrise Build Cache storage will probably take about the same time as
+downloading it from it's canonical CDN / cloud storage location.
+
+One important note: storing a dependency in Bitrise Build Cache might help if you have **reliability**
+issues with the resource's / dependency's canonical download location.
+Popular tools / dependencies might get rate limited ([example: PhantomJS](https://github.com/Medium/phantomjs/issues/501)).
+If that's the case, storing the dependency in Bitrise Build Cache might help.
+It might not improve the build time but **it definitely can improve the reliability**.
+
+### The cache is stored as one archive file
+
+So if you have multiple paths you want to cache and any
+of the paths gets updated __it'll update the whole cache archive__,
+including all the paths you cache.
+
+
+### If a build runs on a new branch the first time it'll get the main/default Branch's cache.
+
+The first build on a non primary/default branch, to speed up things,
+can access (read-only) the primary branch's cache.
+
+__If it pushes back to the cache that won't modify the main/default Branch's cache__,
+that will be stored for the new branch directly,
+and the next time a build runs on this branch it'll use that cache.
+
