@@ -10,7 +10,7 @@ To do this:
 A YAML configuration example of the step & input:
 
 ```
-    - deploy-to-bitrise-io@1.2.3:
+    - deploy-to-bitrise-io:
         inputs:
         - deploy_path: "/var/log/system.log"
 ```
@@ -20,4 +20,28 @@ to your build - you'll see it at the top of the Build's page.
 
 !!! note "By default the **Deploy to Bitrise.io** will always run"
     By default the `Deploy to Bitrise.io` will always run,
-    even if a previous step fails, so you can deploy failed step/tool logs too.
+    even if a previous step fails, __so you can deploy failed step/tool logs too.__
+
+
+## Deploy a directory
+
+The `Deploy to Bitrise.io` step accepts both file and directory path as its input,
+but by default __it does not deploy files recursively__, from sub directories
+if you specify a directory as it's `deploy_path` input.
+
+If you want to do that and deploy the whole directory with every sub directory
+and the files in the sub directories, you have to enable the "Compress" option of the step.
+
+In this mode the step will compress (zip) the whole directory, and deploy
+the compressed file, instead of deploying files one by one.
+
+An example configuration:
+
+```
+    - deploy-to-bitrise-io:
+        inputs:
+        - deploy_path: /deploy/this/directory/recursively
+        - is_compress: 'true'
+```
+
+_Note: as every input's, `is_compress`'s value have to be a string, that's why `true` is surrounded with quotes._
