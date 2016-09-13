@@ -41,6 +41,7 @@ pages:
   - Code Signing: ios/code-signing.md
   - Uploading certificates: ios/uploading-certificates.md
   - Resigning an IPA: ios/resigning-an-ipa.md
+  - Frequent iOS issues: ios/frequent-ios-issues.md
   - List of known Xcode issues: ios/known-xcode-issues.md
 - Docker:
   - How to run your build locally in Docker: docker/run-your-build-locally-in-docker.md
