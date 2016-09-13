@@ -297,3 +297,56 @@ In your project's directory run: `xcodebuild -workspace ./path/to/workspace/file
 instead of a workspace file: `xcodebuild -project ./path/to/project/file -list`.
 There should be no duplicated Scheme in the printed list.
 You can run this command on your Mac and on bitrise.io too (just add it to a Script step), and ideally you should see the same list.
+
+
+## System dialog blocks the tests to run
+
+```
+2016-09-08 07:30:34.535 XCTRunner[6174:22447] Running tests...\
+07:30:35.399 XCTRunner[6174:22454] _XCT_testBundleReadyWithProtocolVersion:minimumVersion: reply received\
+07:30:35.403 XCTRunner[6174:22453] _IDE_startExecutingTestPlanWithProtocolVersion:16\
+2016-09-08 07:30:46.670 XCTRunner[6174:22447] Failed to background test runner within 10.0s.\
+** TEST FAILED **\
+\
+}
+```
+
+_(reported by a Bitrise user)_
+
+> So to put it simply my problem was my UI Tests were failing.
+
+The steps leading to the failure were the following:
+
+1. Unit tests run and pass. However a few of the unit tests are FBSnapshotTestCase tests
+   which are kind of UI Tests but are still kept in the unit test bundle.
+   They launch the app and compare screens with reference images of the screen.
+2. When a FBSnapshot TestCase is run it launches the app and launches
+   a system alert dialog asking the user for permission for push notifications
+   (this is just something that's done in the AppDelegate in my app every fresh install).
+3. When the UITests start the permissions dialog is still visible and overlaying the screen. 
+4. The application tries to access some XCUIElements but fails because of the overlaying permissions dialog and eventually fails  
+
+I resolved this by adding a check in the AppDelegate
+(where we fire the permissions dialog) if we are running in unit test mode
+and only asking for permissions when not running unit tests:
+
+```
+let unitTestMode = NSProcessInfo.processInfo().environment["XCTestConfigurationFilePath"] != nil
+if !unitTestMode {
+// IMPORTANT: Only ask permission for push notifications (or any notifications) when not running unit tests.
+// The reason for doing this is that it's causing a build failure when the CI runs unit and UI tests.
+// The build failure happens like this: 
+// 1. FBSnapshotTestCase unit tests run and open the application
+// 2. The application asks user for the permission to enable push notifications
+// 3. FBSnapshotTestCase finish but the permissions dialog is still visible
+// 4. UITests start with the permissions dialog overlaying the screen
+// 5. UITest doesn't know what the hell is going on and eventually fails because the dialog is blocking everything
+
+// 6.  BUILD FAILURE 
+
+askForNotificationPermission()
+}
+```
+
+> This is probably a pretty big edge case but just wanted to report this to you if someone might encounter this problem sometime.
+> Hopefully this will come to use to someone.
