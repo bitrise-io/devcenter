@@ -1,6 +1,10 @@
-For this example we'll attach the OS X `system.log` to the Build as an Artifact, but this works for any file, even for ones that you generate during the build, you just have to replace the example path we use (`/var/log/system.log`) with the path you want to deploy. You can of course use Environment Variables in the path too, like `$HOME/`.
+For this example we'll attach the OS X `system.log` to the Build as an Artifact,
+but this works for any file, even for ones that you generate during the build,
+you just have to replace the example path we use (`/var/log/system.log`) with the path you want to deploy.
+You can of course use Environment Variables in the path too, like `$HOME/`.
 
-*Deployed Artifacts appear on the Build's page, in the Artifacts & Apps section, and anyone who has access to the Build page can download it from there.*
+_Deployed Artifacts appear on the Build's page, in the Artifacts & Apps section,
+and anyone who has access to the Build page can download it from there._
 
 To do this:
 
@@ -44,4 +48,11 @@ An example configuration:
         - is_compress: 'true'
 ```
 
-_Note: as every input's, `is_compress`'s value have to be a string, that's why `true` is surrounded with quotes._
+_Note: as every input's, `is_compress`'s value have to be a __string__, that's why `true` is surrounded with quotes._
+
+!!! note "Using more than one `Deploy to Bitrise.io` step"
+    You can use as many `Deploy to Bitrise.io` steps as you want to,
+    even in a single build / workflow.
+    Alternatively of course you can move all the files you want to deploy
+    into a single directory, and deploy that directory with the step,
+    it's up to you to decide which solution works best for you.
