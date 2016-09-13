@@ -301,6 +301,10 @@ You can run this command on your Mac and on bitrise.io too (just add it to a Scr
 
 ## System dialog blocks the tests to run
 
+_(huge thanks to [@AronI](https://github.com/AronI) who reported this issue and the solution)_
+
+Error:
+
 ```
 2016-09-08 07:30:34.535 XCTRunner[6174:22447] Running tests...\
 07:30:35.399 XCTRunner[6174:22454] _XCT_testBundleReadyWithProtocolVersion:minimumVersion: reply received\
@@ -311,7 +315,7 @@ You can run this command on your Mac and on bitrise.io too (just add it to a Scr
 }
 ```
 
-_(reported by a Bitrise user)_
+Solution:
 
 > So to put it simply my problem was my UI Tests were failing.
 
