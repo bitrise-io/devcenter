@@ -19,69 +19,11 @@ The Stack indicates the virtual machine version that we will use to run your bui
 | Pre-Booted | If a Stack is available as pre-booted, and there's enough pre-booted machines with that Stack configuration, your build can start right away, without waiting for the build environment to boot. In case there's no more available pre-booted machine with that Stack configuration, your build will start on an `On-Demand` configuration. |
 | On-Demand | If a Stack is available as on-demand configuration and there's no (available) pre-booted configuration for the Stack, our system will have to create a virtual machine for your selected configuration when your build starts. This means that your build will be in `preparing environment` state while the related Virtual Machine is created & booted. For an OS X configuration the boot process usually takes about 1-2 minutes - we're working on improving this. *The prepare time (of course) is not counted into the build time, it won't affect how long your build can run.* |
 
-## Available stacks
+## What's preinstalled
 
-### OS X
+Every time we create or update a Stack we create a "System Report" for it too.
+The System Reports include the list of preinstalled tools and their version on the stack.
+The System Report scripts are also open source, so if you want to run it yourself,
+or you want to add another tool / system check, feel free to send us a pull request!
 
-### Xcode 7.3, on OS X 10.11
-
-*Current stack status: `Stable`*.
-
-`Xcode 7.3.1`, installed on OS X 10.11 (El Capitan).
-
-*You can find the repository we use to set this environment up at:* [https://github.com/bitrise-io/osx-box-bootstrap](https://github.com/bitrise-io/osx-box-bootstrap).
-
-*You can find the System Report (pre-installed tool versions list) of this stack at:* [https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xcode-7.3.log](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xcode-7.3.log)
-
-### Xcode 7.2, on OS X 10.11
-
-`Xcode 7.2.1` installed on OS X 10.11.2
-
-*Current stack status: `LTS`*.
-
-*You can find the repository we use to set this environment up at:* [https://github.com/bitrise-io/osx-box-bootstrap](https://github.com/bitrise-io/osx-box-bootstrap).
-
-*You can find the System Report (pre-installed tool versions list) of this stack at:* [https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xcode-7.2.log](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xcode-7.2.log)
-
-### Xcode 6.4, on OS X 10.11
-
-*Current stack status: `LTS`*.
-
-*You can find the repository we use to set this environment up at:* [https://github.com/bitrise-io/osx-box-bootstrap](https://github.com/bitrise-io/osx-box-bootstrap).
-
-*You can find the System Report (pre-installed tool versions list) of this stack at:* [https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xcode-6.4.log](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xcode-6.4.log)
-
-### Xamarin Stable with Xcode 7.3, on OS X 10.11
-
-Pretty much the same as `Xcode 7.3, on OS X 10.11`, with the latest Xamarin Stable channel and additional, pre-installed Xamarin tools.
-
-*You can find the repository we use to set this environment up at:* [https://github.com/bitrise-io/osx-box-bootstrap](https://github.com/bitrise-io/osx-box-bootstrap).
-
-*You can find the System Report (pre-installed tool versions list) of this stack at:* [https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xamarin-stable.log](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xamarin-stable.log)
-
-### Xamarin Beta with Xcode 7.3, on OS X 10.11
-
-Pretty much the same as `Xcode 7.3, on OS X 10.11`, with the latest Xamarin Beta channel and additional, pre-installed Xamarin tools.
-
-*You can find the repository we use to set this environment up at:* [https://github.com/bitrise-io/osx-box-bootstrap](https://github.com/bitrise-io/osx-box-bootstrap).
-
-*You can find the System Report (pre-installed tool versions list) of this stack at:* [https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xamarin-beta.log](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xamarin-beta.log)
-
-### Xamarin Alpha with Xcode 7.3, on OS X 10.11
-
-Pretty much the same as `Xcode 7.3, on OS X 10.11`, with the latest Xamarin Alpha channel and additional, pre-installed Xamarin tools.
-
-*You can find the repository we use to set this environment up at:* [https://github.com/bitrise-io/osx-box-bootstrap](https://github.com/bitrise-io/osx-box-bootstrap).
-
-*You can find the System Report (pre-installed tool versions list) of this stack at:* [https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xamarin-alpha.log](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xamarin-alpha.log)
-
-### Linux
-
-### Docker based setup, with pre-cached base and Android Docker images
-
-*Current stack status: `Stable`*.
-
-You can find the Android specific docs at [Android guides](doc:android-beta).
-The environment is described at [Android/Docker environment & what's pre-installed](doc:android-environment-whats-pre-installed).
-
-*You can find the System Report (pre-installed tool versions list) of this stack at:* [https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/docker-based-android-setup.log](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/docker-based-android-setup.log)
+You can find every available stack's System Report on GitHub: [https://github.com/bitrise-io/bitrise.io/tree/master/system_reports](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports)
