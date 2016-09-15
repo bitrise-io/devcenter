@@ -57,6 +57,8 @@ pages:
 - Frequently Asked Questions (FAQ):
   - Android x86 Emulator: faq/android-x86-emulator.md
   - How to generate an SSH key pair: faq/how-to-generate-ssh-keypair.md
+- Tools:
+  - Bitrise Tools: tools/bitrise-tools.md
 
 markdown_extensions:
   - codehilite(css_class=code)
