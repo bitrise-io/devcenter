@@ -42,13 +42,19 @@ If you still can't see the desired Scheme,
 try to look into your `.gitignore` file and check if you are ignoring the config files of your Xcode project.
 
 
-## `ld: library not found for -lPods-...`
+## CocoaPods (missing) dependency issue
 
 ### Error:
 
 ```
 ld: library not found for -lPods-...
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
+```
+
+OR:
+
+```
+no such module '...'
 ```
 
 ### Solution:
