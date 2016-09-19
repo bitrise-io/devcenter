@@ -135,6 +135,37 @@ workflows:
               which cmake
 ```
 
+An advanced tip: if you want to declare a dependency which might be available from
+another source (not through the package manager), then you might also want to declare the
+related `binary name`. If that matches the package name (like in case of `cmake`) this is
+completely optional, but in case the package does not match the binary name you can
+declare it with `bin_name`. An example is AWS CLI, where the package name in both
+package managers is `awscli`, but the binary itself is `aws`.
+
+A minimal `bitrise.yml` for demonstration:
+
+```
+format_version: 1.3.0
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test:
+    steps:
+    - script:
+        deps:
+          brew:
+          - name: awscli
+            bin_name: aws
+          apt_get:
+          - name: awscli
+            bin_name: aws
+        inputs:
+          - content: |-
+              #!/bin/bash
+              set -ex
+              which aws
+```
+
 
 ## Conditional execution
 
