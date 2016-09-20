@@ -64,11 +64,11 @@ for every code push, but for nothing else (e.g. not for pull requests).
 A `trigger_map` is a _list of filters_, and the `workflow` the given
 filters should select in case of a matching trigger.
 
-__Every filter item have to include at least one condition!__
+__Every filter item has to include at least one condition!__
 
 This means that you can't have an item which only specifies the `workflow`,
 at least one filter (`push_branch` / `pull_request_source_branch` / `pull_request_target_branch`)
-have to be specified!
+has to be specified!
 
 ### The available filters:
 
@@ -113,13 +113,13 @@ item. This would effectively mean that the workflow should be selected
 if the event is a Code Push and a Pull Request event __at the same time__.
 This is simply not possible, source code hosting services send separate
 webhooks for Pull Request (pre-merge state) and for Code Push events.
-_A single webhook even will never be Code Push and Pull Request at the same time._
+_A single webhook event will never be Code Push and Pull Request at the same time._
 
 
 ## How to build only a single branch
 
 If you want to build only a single branch, for every code push, but for nothing else (no push to
-any other branch should trigger a build, nor any pull request), then
+any other branch should trigger a build, nor any pull requests), then
 all you have to do is to specify a `trigger_map` which does not map anything else
 to any workflow, only the branch you want to build.
 
@@ -169,7 +169,7 @@ and the workflow `primary` for every code push on `feature/` branches,
 and __will not start a build for anything else__.
 
 
-## A very simple two workflow CI/CD setup
+## A very simple, two-workflow CI/CD setup
 
 A base CI/CD setup involves two workflows: one for integration tests,
 and one for distribution.
@@ -206,10 +206,10 @@ one for the code push and one for the pull request!
 
 An important note: although it might seem like both builds are the same,
 it might not be! The code push event/build builds the code
-of the branch, without any merging etc. It builds the exact same state of the code
+of the branch, without any merging, etc. It builds the exact same state of the code
 what you have when you checkout that branch.
 The Pull Request build on the other hand builds a "pre-merged" state of the code,
-which is expected to be the state of the code __after__ you merge the pull request.
+which is expected to be the state of the code __after__ you merged the pull request.
 
 Whether you want to build both or just one of these in case of a pull request
 is up to you and depends on your project's requirements, but with `bitrise`
