@@ -183,7 +183,15 @@ as simple as `xcodebuild -list`.
 
 ## Build hangs
 
-It might also not Xcode related, but might be caused by something in your
+### Simulator reset
+
+As reported [here](https://github.com/bitrise-io/steps-xcode-test/issues/57#event-796203051),
+if you do a simulator reset during the build, e.g. with a pre-action
+Build Phase Script `xcrun simctl erase all`, it can cause Xcode / the Simulator to hang.
+
+### Other
+
+It might also not be Xcode related, but might be caused by something in your
 project when it runs in an Xcode step (Xcode Test, Xcode Archive, ...).
 For example if you have a Run Phase Script in your Xcode project, that will
 run during Xcode build/test/archive, and that script hangs for some reason
