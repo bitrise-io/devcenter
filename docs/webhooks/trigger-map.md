@@ -119,7 +119,7 @@ _A single webhook event will never be Code Push and Pull Request at the same tim
 ## How to build only a single branch
 
 If you want to build only a single branch, for every code push, but for nothing else (no push to
-any other branch should trigger a build, nor any pull requests), then
+any other branch should trigger a build, nor any pull request), then
 all you have to do is to specify a `trigger_map` which does not map anything else
 to any workflow, only the branch you want to build.
 
