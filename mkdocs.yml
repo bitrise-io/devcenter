@@ -32,6 +32,7 @@ pages:
 - Webhooks:
   - Adding webhooks: webhooks/index.md
   - Adding a GitHub webhook: webhooks/adding-a-github-webhook.md
+  - "Control what to build when, with the Trigger Map": webhooks/trigger-map.md
 - Caching:
   - About caching: caching/about-caching.md
   - Caching Cocoapods: caching/caching-cocoapods.md
