@@ -10,4 +10,7 @@ For now, the best workaround seems to be [Oracle's Ravello](https://www.ravellos
 if you need a full emulator (with UI),
 or [robolectric](http://robolectric.org/) for unit tests.
 
+Another alternative might be to use a service like [AWS Device Farm](https://aws.amazon.com/device-farm/),
+where you can run the tests on real devices instead of in an emulator.
+
 If you know about any other, [feel free to contact us](https://www.bitrise.io/contact)!
