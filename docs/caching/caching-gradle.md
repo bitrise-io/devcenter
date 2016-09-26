@@ -1,26 +1,21 @@
 1. Put the `Cache:Pull` step after the Git Clone
 2. Put the `Cache:Push` step to the very end of the Workflow
 3. Select the `Cache:Push` step and specify the following paths for caching (Cache Paths input):
-
-   ```
-   $HOME/.gradle
-   ./.gradle
-   ```
+   <pre><code>$HOME/.gradle
+./.gradle</code></pre>
 4. Select the `Cache:Push` step and specify the following paths for update-check ignore (Ignore Paths from change check input):
-   
-   ```
-   $HOME/.gradle/caches/*.lock
-   ./.gradle/*.lock
-   ./.gradle/*.bin
-   ```
+   <pre><code>$HOME/.gradle/caches/*.lock
+./.gradle/*.lock
+./.gradle/*.bin</code></pre>
 
 ## Example workflow
+
 ```yml
 example:
   steps:
-  - git-clone@3.2.0: {}
+  - git-clone: {}
   - cache-pull: {}
-  - gradle-runner@1.3.1:
+  - gradle-runner:
       inputs:
       - gradle_file: "$BITRISE_PROJECT_PATH"
       - gradle_task: "$GRADLE_TASK"

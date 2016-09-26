@@ -37,6 +37,7 @@ pages:
   - About caching: caching/about-caching.md
   - Caching Cocoapods: caching/caching-cocoapods.md
   - Caching Gradle: caching/caching-gradle.md
+  - Caching Maven: caching/caching-maven.md
   - Caching Ruby GEMs: caching/caching-ruby-gems.md
 - iOS:
   - Code Signing: ios/code-signing.md
