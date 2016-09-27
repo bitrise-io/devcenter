@@ -1,4 +1,4 @@
-format_version: 1.2.0
+format_version: 1.3.0
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 
 description: |
@@ -10,7 +10,10 @@ workflows:
     - script@1.1.0:
         deps:
           brew:
+          # install the python brew package if pip bin is not available
+          # pip is available in brew through the pythong package
           - name: python
+            bin_name: pip
           apt_get:
           - name: python-pip
           - name: python-dev
