@@ -74,7 +74,7 @@ __Create an `android-licenses` directory in the root directory of your git repos
 and copy the license files into this directory__,
 then in your Workflow copy the licenses to the right location using a `Script` step.
 
-Add the `Script` step right after the `Git Clone` step (that's when your code is available
+__Add the `Script` step right after the `Git Clone` step__ (that's when your code is available
 on the build virtual machine), with the content:
 
 ```
