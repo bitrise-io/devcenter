@@ -45,6 +45,8 @@ pages:
   - Resigning an IPA: ios/resigning-an-ipa.md
   - Frequent iOS issues: ios/frequent-ios-issues.md
   - List of known Xcode issues: ios/known-xcode-issues.md
+- Android:
+  - Frequent Android issues: android/frequent-android-issues.md
 - Docker:
   - How to run your build locally in Docker: docker/run-your-build-locally-in-docker.md
   # - How we build our images: docker/how-we-build-our-images.md
