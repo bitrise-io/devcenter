@@ -50,7 +50,7 @@ by one, but having all three in the script covers most of the cases related to t
     so if the error is related to an outdated package, the workaround
     we describe here can be removed from your build after that weekend's update.
 
-### Alternative solution for license error
+### Alternative solution for the license error
 
 An alternative solution for the `You have not accepted the license agreements of the following SDK components`
 error, as printed in the log:
