@@ -92,7 +92,7 @@ into the system's Android SDK Home path under `licenses` directory.
 
 ## Install an additional Android package
 
-An Android package (e.g. a build tool version) is not preinstalled / missing?
+An Android package (e.g. a build tool version) is not preinstalled or missing?
 No problem at all, the solution is quite simple!
 
 Just add a `Script` step to your Workflow (can be the very first step)
