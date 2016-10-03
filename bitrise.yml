@@ -45,15 +45,15 @@ workflows:
         - content: |-
             #!/bin/bash
             set -ex
-
             rm -rf ./site
             REPO_URL=$(git remote get-url origin)
             git clone --branch gh-pages "$REPO_URL" ./site
-
             mkdocs build --clean
             cd site/
+            git config --global user.email "letsconnect@bitrise.io"
+            git config --global user.name "Bitrise Bot"
             git add .
-            git commit -m 'deploy - [skip ci] for gh-pages'
+            git commit -m 'deploy - [skip ci] for gh-pages branch'
             git push origin gh-pages
   up:
     steps:
