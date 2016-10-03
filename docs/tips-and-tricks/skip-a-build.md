@@ -28,3 +28,29 @@ either rebase that commit (e.g. just change its commit message), or push another
     Git allows to create and push empty commits, so if you'd decide that you
     still want to build a skipped build you can do `git commit --allow-empty -m "I decided to run this"`
     on the related branch and push the commit.
+
+## Pull Requests
+
+Skip CI works for Pull Requests too, but a little bit differently, due to how Pull Requests are
+handled on the git source code hosting services.
+
+In short, what you have to know is that Pull Requests are virtual/temporary "commits" / "branches".
+In case of GitHub there's actually a pull request related branch, which, if you know
+its name, you can `git clone` like any other branch in your repository, but it's hidden in the
+git branch lists. This branch is also removed / made unaccessible after you close the pull request.
+Other services like Bitbucket doesn't even create this branch, the pull request is just
+a virtual data but can't be `git clone`d directly.
+
+!!! note "What's the commit message of a Pull Request?"
+    In any case this means that __the Pull Request itself__ is treated as a (virtual) commit,
+    where __the commit message is the title + description of the Pull Request__ and
+    not the commit(s) of the pull request!
+
+This means that, __if you want to skip a pull request__, you have to include the Skip CI
+pattern __in the Pull Request's title or description__, and not in the commit's message!
+
+__Once you decide to not to skip the Pull Request / more commits in the pull request__
+you can simply remove the
+Skip CI pattern from the Pull Request's title or description, which should automatically
+trigger a new build with the latest commit, and all future commits of the pull request
+will be built too (unless you add a Skip CI pattern again).
