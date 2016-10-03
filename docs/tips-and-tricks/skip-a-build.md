@@ -35,11 +35,11 @@ Skip CI works for Pull Requests too, but a little bit differently, due to how Pu
 handled on the git source code hosting services.
 
 In short, what you have to know is that Pull Requests are virtual/temporary "commits" / "branches".
-In case of GitHub there's actually a pull request related branch, which, if you know
-its name, you can `git clone` like any other branch in your repository, but it's hidden in the
-git branch lists. This branch is also removed / made unaccessible after you close the pull request.
-Other services like Bitbucket doesn't even create this branch, the pull request is just
-a virtual data but can't be `git clone`d directly.
+In case of GitHub there's actually a pull request related "virtual branch" (ref), which, if you know
+its name, you can `fetch` through `git` (if you add the related `refs/` to your git `fetch` config).
+This "branch" (ref) is also removed / made unaccessible after you close the pull request.
+Other services like Bitbucket doesn't even create this virtual branch / ref, the pull request is just
+a virtual data but can't be accessed through `git` directly.
 
 !!! note "What's the commit message of a Pull Request?"
     In any case this means that __the Pull Request itself__ is treated as a (virtual) commit,
