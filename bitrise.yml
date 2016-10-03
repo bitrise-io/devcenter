@@ -53,7 +53,7 @@ workflows:
             mkdocs build --clean
             cd site/
             git add .
-            git commit -m 'deploy'
+            git commit -m 'deploy - [skip ci] for gh-pages'
             git push origin gh-pages
   up:
     steps:
