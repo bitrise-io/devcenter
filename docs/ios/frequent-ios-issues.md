@@ -69,6 +69,81 @@ then check your App's other environments - the project file path might be overwr
 or you might have specified a Project Path for the related Xcode step directly.
 
 
+## Fastlane Export Issue
+
+_This section was contributed by [@kwoylie](https://github.com/kwoylie),
+and applies if you have a `Gemfile` in your repository and you use
+the `fastlane` step which uses the `Gemfile` automatically if present._
+
+`Gemfile` content was:
+
+```
+gem "fastlane", "1.104.0"
+gem "gym", "1.10.0"
+gem "badge", "0.5.0"
+gem "CFPropertyList","2.3.3"
+gem "sqlite3", "1.3.11"
+```
+
+I have been battling issues with Fastlane just not letting me export to an enterprise build on
+bitrise cloud service. But it works perfectly fine on my colleagues and my machine.
+
+I had disabled xcpretty on Fastlane and got the following error from gym:
+
+```
+$/usr/bin/xcrun /usr/local/lib/ruby/gems/2.3.0/gems/gym-1.10.0/lib/assets/wrap_xcodebuild/xcbuild-safe.sh -exportArchive -exportOptionsPlist '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_config20161003-2206-1f0vw3k.plist' -archivePath /Users/vagrant/Library/Developer/Xcode/Archives/2016-10-03/App\ 2016-10-03\ 05.57.17.xcarchive -exportPath '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_output20161003-2206-wjhjai'
++ xcodebuild -exportArchive -exportOptionsPlist /var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_config20161003-2206-1f0vw3k.plist -archivePath '/Users/vagrant/Library/Developer/Xcode/Archives/2016-10-03/App 2016-10-03 05.57.17.xcarchive' -exportPath /var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_output20161003-2206-wjhjai
+2016-10-03 06:01:58.299 xcodebuild[5284:14924] [MT] IDEDistribution: -[IDEDistributionLogging _createLoggingBundleAtPath:]: Created bundle at path '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/App_2016-10-03_06-01-58.298.xcdistributionlogs'.
+2016-10-03 06:01:59.596 xcodebuild[5284:14924] [MT] IDEDistribution: Step failed: <IDEDistributionThinningStep: 0x7f868c80f810>: Error Domain=IDEDistributionErrorDomain Code=14 "No applicable devices found." UserInfo={NSLocalizedDescription=No applicable devices found.}
+error: exportArchive: No applicable devices found.
+
+Error Domain=IDEDistributionErrorDomain Code=14 "No applicable devices found." UserInfo={NSLocalizedDescription=No applicable devices found.}
+
+** EXPORT FAILED **
+[06:01:59]: Exit status: 70
+[06:01:59]: 2016-10-03 13:01:58 +0000 [MT] Running step: IDEDistributionSigningAssetsStep with <IDEDistributionContext: 0x7f868c51ed70; archive(resolved)='<IDEArchive: 0x7f868c4af8d0>', distributionTask(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodEnterprise: 0x7f868c202a00>', teamID(resolved)='(null)'>
+	Chain (2, self inclusive):
+	<IDEDistributionContext: 0x7f868c51ed70; archive = '(null)', distributionMethod='<IDEDistributionMethodEnterprise: 0x7f868c202a00>', teamID='(null)'>
+	<IDEDistributionContext: 0x7f868c4b0e70; archive = '<IDEArchive: 0x7f868c4af8d0>', distributionMethod='(null)', teamID='(null)'>
+</IDEDistributionContext: 0x7f868c51ed70>
+```
+
+This error is a little decieving, thinking it might be a code signing error or
+some weird configuration issue with Fastlane.
+But if you look further into the error, you may see the following:
+
+```
+2016-10-03 13:01:58 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/IDEDistributionThinningStep.s1x' '--json' '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/ipatool-json-filepath-RUCdRR' '--info' '--toolchain' '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr' '--platforms' '/Applications/Xcode.app/Contents/Developer/Platforms'
+2016-10-03 13:01:58 +0000  ruby 2.0.0p648 (2015-12-16 revision 53162) [universal.x86_64-darwin15]
+2016-10-03 13:01:59 +0000  /usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.13.1/lib/bundler/definition.rb:181:in `rescue in specs': Your bundle is locked to json (1.8.3), but that version could not be found in any of the sources listed in your Gemfile. If you haven't changed sources, that means the author of json (1.8.3) has removed it. You'll need to update your bundle to a different version of json (1.8.3) that hasn't been removed in order to install. (Bundler::GemNotFound)
+	from /usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.13.1/lib/bundler/definition.rb:175:in `specs'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.13.1/lib/bundler/definition.rb:235:in `specs_for'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.13.1/lib/bundler/definition.rb:224:in `requested_specs'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.13.1/lib/bundler/runtime.rb:118:in `block in definition_method'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.13.1/lib/bundler/runtime.rb:19:in `setup'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.13.1/lib/bundler.rb:99:in `setup'
+	from /usr/local/lib/ruby/gems/2.3.0/gems/bundler-1.13.1/lib/bundler/setup.rb:20:in `<top (required)>'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	from /System/Library/Frameworks/Ruby.framework/Versions/2.0/usr/lib/ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+2016-10-03 13:01:59 +0000 [MT] /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool exited with 1
+2016-10-03 13:01:59 +0000 [MT] ipatool JSON: (null)
+```
+
+So after alot of investigation, Fastlane reverts back to Mac OS system's ruby for exporting.
+But the system ruby doesn't have json 1.8.3 installed.
+
+### Solution:
+
+To fix this issue, you just have to add a `Script` step to run the following:
+
+```
+sudo /usr/bin/gem install bundler
+```
+
+This will install bundler on the system ruby and when the fastlane plugin
+calls bundle install then system ruby will also installed the neccessary dependencies
+
+
 ## Works in local but not on Bitrise.io
 
 _An example error: `ld: file not found ...`_
@@ -333,8 +408,8 @@ The steps leading to the failure were the following:
 2. When a FBSnapshot TestCase is run it launches the app and launches
    a system alert dialog asking the user for permission for push notifications
    (this is just something that's done in the AppDelegate in my app every fresh install).
-3. When the UITests start the permissions dialog is still visible and overlaying the screen. 
-4. The application tries to access some XCUIElements but fails because of the overlaying permissions dialog and eventually fails  
+3. When the UITests start the permissions dialog is still visible and overlaying the screen.
+4. The application tries to access some XCUIElements but fails because of the overlaying permissions dialog and eventually fails
 
 I resolved this by adding a check in the AppDelegate
 (where we fire the permissions dialog) if we are running in unit test mode
@@ -345,14 +420,14 @@ let unitTestMode = NSProcessInfo.processInfo().environment["XCTestConfigurationF
 if !unitTestMode {
 // IMPORTANT: Only ask permission for push notifications (or any notifications) when not running unit tests.
 // The reason for doing this is that it's causing a build failure when the CI runs unit and UI tests.
-// The build failure happens like this: 
+// The build failure happens like this:
 // 1. FBSnapshotTestCase unit tests run and open the application
 // 2. The application asks user for the permission to enable push notifications
 // 3. FBSnapshotTestCase finish but the permissions dialog is still visible
 // 4. UITests start with the permissions dialog overlaying the screen
 // 5. UITest doesn't know what the hell is going on and eventually fails because the dialog is blocking everything
 
-// 6.  BUILD FAILURE 
+// 6.  BUILD FAILURE
 
 askForNotificationPermission()
 }
