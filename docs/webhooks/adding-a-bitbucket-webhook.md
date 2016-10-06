@@ -10,6 +10,8 @@ Copy the webhook URL for the selected service.
 
 ## Setup webhook on Bitbucket
 
+!!! note If you have a Bitbucket webhook already set up for your app, simply skip to the **triggers** section and edit your current one according to the screenshot there.
+
 Navigate to your Bitbucket repository and select `Settings`.
 
 ![Screenshot](/img/webhooks/bitbucket_settings.png)
