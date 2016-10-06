@@ -1,4 +1,11 @@
-To have Bitrise automatically start a build every time you push code into your repository you can set up a webhook at your code hosting service which will automatically trigger a build on Bitrise with the code you push to your repository.
+To have Bitrise automatically start a build every time you push code into your repository you
+can set up a webhook at your code hosting service which will automatically
+trigger a build on Bitrise with the code you push to your repository.
+
+!!! note "If you have a Bitbucket webhook already set up for your app ..."
+    If you have a Bitbucket webhook already set up for your app,
+    simply skip to the [**triggers**](#choose-from-triggers) section
+    and edit your current one according to the screenshot there.
 
 ## Get the webhook URL for Bitbucket
 
@@ -9,8 +16,6 @@ Navigate to the `Code` tab of your app's page and select `Bitbucket` from the dr
 Copy the webhook URL for the selected service.
 
 ## Setup webhook on Bitbucket
-
-!!! note If you have a Bitbucket webhook already set up for your app, simply skip to the **triggers** section and edit your current one according to the screenshot there.
 
 Navigate to your Bitbucket repository and select `Settings`.
 
@@ -27,6 +32,8 @@ Select `Add Webhook`
 Paste the Bitbucket Webhook URL from Bitrise to the `URL` and add a `Title`.
 
 ![Screenshot](/img/webhooks/bitbucket_webhook_info.png)
+
+### Choose from triggers
 
 Select `Choose from a full list of triggers`.
 
