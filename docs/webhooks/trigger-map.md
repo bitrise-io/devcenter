@@ -245,6 +245,72 @@ trigger_map:
   workflow: primary
 ```
 
+
+## Three workflows: test, deploy to staging and deploy to production
+
+Another common CI/CD pattern is to have three workflows:
+
+- A Test workflow, which will run for every pull request, every code push on `feature/` branches etc.,
+  to test whether the test can be integrated into a release (branch)
+- A Staging deployment workflow, to deploy the app/code to an internal/testing system. Examples:
+    - In case of an iOS app this can be e.g. an Ad Hoc signed IPA deployed to HockeyApp, where your tester team can
+      download and test it, or a deploy to iTunes Connect / TestFlight for internal testing.
+    - In case of an Android app this can be a deploy to Google Play to a "beta" track.
+    - In case of a server code this can be a deploy to e.g. a staging Heroku server.
+- A Production deployment workflow, to deploy the app/code into production. Examples:
+    - In case of an iOS app this can be an App Store signed IPA deployed to iTunes Connect/TestFlight,
+      enabled for "external testing".
+    - In case of an Android app this can be a deploy to Google Play as a public update of the app.
+    - In case of a server code this can be a deploy to e.g. the production Heroku server.
+
+So, we have three workflows (`primary` (test), `deploy-to-staging` and `deploy-to-production`)
+and we'll specify three triggers, to select the right workflow for the right trigger.
+
+There are two similar approaches, depending whether you prefer tags of branches for
+production deployment:
+
+### Using Tags to trigger the production deployment
+
+```yaml
+trigger_map:
+- tag: v*.*.*
+  workflow: deploy-to-production
+- push_branch: master
+  workflow: deploy-to-staging
+- push_branch: "*"
+  workflow: primary
+- pull_request_target_branch: "*"
+  workflow: primary
+```
+
+This trigger map configuration will trigger a build:
+
+- with the `deploy-to-production` workflow if a new tag (with the format `v*.*.*`, e.g. `v1.0.0`) is pushed
+- with the `deploy-to-staging` workflow if a code push happens on the `master` branch (e.g. a pull request is merged into the `master` branch)
+- with the `primary` workflow for any other branch and for pull requests
+
+
+### Using a Branch to trigger the production deployment
+
+```yaml
+trigger_map:
+- push_branch: master
+  workflow: deploy-to-production
+- push_branch: develop
+  workflow: deploy-to-staging
+- push_branch: "*"
+  workflow: primary
+- pull_request_target_branch: "*"
+  workflow: primary
+```
+
+This trigger map configuration will trigger a build:
+
+- with the `deploy-to-production` workflow if a code push happens on the `master` branch (e.g. a git flow release branch merged into `master`)
+- with the `deploy-to-staging` workflow if a code push happens on the `develop` branch (e.g. a pull request is merged into the `develop` branch)
+- with the `primary` workflow for any other branch and for pull requests
+
+
 ## How to build only pull requests
 
 If all you want is to run integration tests for pull requests, and you
