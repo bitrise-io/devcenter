@@ -24,6 +24,8 @@ trigger_map:
 - pull_request_target_branch: "*"
   pull_request_source_branch: "*"
   workflow: primary
+- tag: "*"
+  workflow: primary
 workflows:
   primary:
     steps:
@@ -44,8 +46,8 @@ workflows:
     any time (the changes you do in the web UI will be reflected in the `bitrise.yml`,
     and vice versa).
 
-The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch`)
-and for every Pull Request (`pull_request_target_branch`).
+The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: "*"`), Tag Push (`tag: "*"`)
+and for every Pull Request (`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`).
 
 _If you remove the pull request item_ from the `trigger_map` list, then
 no pull request will trigger a build anymore. Example:
@@ -67,7 +69,7 @@ filters should select in case of a matching trigger.
 __Every filter item has to include at least one condition!__
 
 This means that you can't have an item which only specifies the `workflow`,
-at least one filter (`push_branch` / `pull_request_source_branch` / `pull_request_target_branch`)
+at least one filter (`push_branch` / `pull_request_source_branch` / `pull_request_target_branch` / `tag`)
 has to be specified!
 
 ### The available filters:
@@ -77,6 +79,7 @@ has to be specified!
   parameter (the branch the pull request was started from)
 - `pull_request_target_branch` : A filter which is matched against Pull Request events' "target branch"
   parameter - the branch the pull request will be __merged into__
+- `tag` : A filter which is matched against Tag Push events' "tag" (name) parameter
 - `pattern` : __DEPRECATED__ - this filter was used for both code push and pull request events,
   in combination with `is_pull_request_allowed`. This filter is now deprecated,
   as the new filters allow better control over event mapping.
@@ -108,18 +111,19 @@ trigger_map:
 ```
 
 One last note, which is hopefully not surprising after the previous example:
-you can't mix and match `push_branch` and the `pull_request_..` filters in the same
-item. This would effectively mean that the workflow should be selected
-if the event is a Code Push and a Pull Request event __at the same time__.
+you can't mix and match `push_branch`, `tag` and the `pull_request_..` filters __in the same item__.
+This would effectively mean that the workflow should be selected
+if the event is a Code Push and a Pull Request (or Tag Push) event __at the same time__.
 This is simply not possible, source code hosting services send separate
-webhooks for Pull Request (pre-merge state) and for Code Push events.
-_A single webhook event will never be Code Push and Pull Request at the same time._
+webhooks for Pull Request (pre-merge state), Tags and for Code Push events.
+_A single webhook event will never be Code Push, Tag Push and Pull Request at the same time_,
+a single webhook is always related to only one type (Code Push, Tag Push or Pull Request).
 
 
 ## How to build only a single branch
 
 If you want to build only a single branch, for every code push, but for nothing else (no push to
-any other branch should trigger a build, nor any pull request), then
+any other branch should trigger a build, nor any pull request or tag), then
 all you have to do is to specify a `trigger_map` which does not map anything else
 to any workflow, only the branch you want to build.
 
@@ -153,7 +157,7 @@ This configuration will start a build for every code push which happens on
 either `master` or on a `feature/` branch, and will use the same workflow for
 both (`primary`).
 
-If you want to use a differentn workflow for your `master` branch, then
+If you want to use a different workflow for your `master` branch, then
 all you have to do is to change the `workflow:` for that trigger map item:
 
 ```yaml
@@ -197,7 +201,7 @@ This means that if you'd specify the `push_branch: master` __after__ the
 `push_branch: "*"` item, `master` would never be selected as every code push
 event would match `push_branch: "*"` first!
 
-### Don't start two builds for pull requests from the same repository
+## Don't start two builds for pull requests from the same repository
 
 When you start a Pull Request from the same repository (not from a fork,
 just from a branch of the repository),
@@ -205,7 +209,7 @@ __the source code hosting service will send two webhooks__,
 one for the code push and one for the pull request!
 
 An important note: although it might seem like both builds are the same,
-it might not be! The code push event/build builds the code
+it most likely isn't! The code push event/build builds the code
 of the branch, without any merging, etc. It builds the exact same state of the code
 what you have when you checkout that branch.
 The Pull Request build on the other hand builds a "pre-merged" state of the code,
@@ -215,7 +219,7 @@ Whether you want to build both or just one of these in case of a pull request
 is up to you and depends on your project's requirements, but with `bitrise`
 you can decide whether you want it or not.
 
-!!! note "Code merge is treated as Code Push!"
+!!! note "Pull Request merge is actually a Code Push!"
     Source code hosting services treat the event of "merge" as a code push
     event. For example if you merge a Pull Request from `feature/a` into `master`,
     when you merge the PR it will generate a code push to `master`.
@@ -240,6 +244,72 @@ trigger_map:
 - push_branch: "*"
   workflow: primary
 ```
+
+
+## Three workflows: test, deploy to staging and deploy to production
+
+Another common CI/CD pattern is to have three workflows:
+
+- A Test workflow, which will run for every pull request, every code push on `feature/` branches etc.,
+  to test whether the test can be integrated into a release (branch)
+- A Staging deployment workflow, to deploy the app/code to an internal/testing system. Examples:
+    - In case of an iOS app this can be e.g. an Ad Hoc signed IPA deployed to HockeyApp, where your tester team can
+      download and test it, or a deploy to iTunes Connect / TestFlight for internal testing.
+    - In case of an Android app this can be a deploy to Google Play to a "beta" track.
+    - In case of a server code this can be a deploy to e.g. a staging Heroku server.
+- A Production deployment workflow, to deploy the app/code into production. Examples:
+    - In case of an iOS app this can be an App Store signed IPA deployed to iTunes Connect/TestFlight,
+      enabled for "external testing".
+    - In case of an Android app this can be a deploy to Google Play as a public update of the app.
+    - In case of a server code this can be a deploy to e.g. the production Heroku server.
+
+So, we have three workflows (`primary` (test), `deploy-to-staging` and `deploy-to-production`)
+and we'll specify three triggers, to select the right workflow for the right trigger.
+
+There are two similar approaches, depending whether you prefer tags of branches for
+production deployment:
+
+### Using Tags to trigger the production deployment
+
+```yaml
+trigger_map:
+- tag: v*.*.*
+  workflow: deploy-to-production
+- push_branch: master
+  workflow: deploy-to-staging
+- push_branch: "*"
+  workflow: primary
+- pull_request_target_branch: "*"
+  workflow: primary
+```
+
+This trigger map configuration will trigger a build:
+
+- with the `deploy-to-production` workflow if a new tag (with the format `v*.*.*`, e.g. `v1.0.0`) is pushed
+- with the `deploy-to-staging` workflow if a code push happens on the `master` branch (e.g. a pull request is merged into the `master` branch)
+- with the `primary` workflow for any other branch and for pull requests
+
+
+### Using a Branch to trigger the production deployment
+
+```yaml
+trigger_map:
+- push_branch: master
+  workflow: deploy-to-production
+- push_branch: develop
+  workflow: deploy-to-staging
+- push_branch: "*"
+  workflow: primary
+- pull_request_target_branch: "*"
+  workflow: primary
+```
+
+This trigger map configuration will trigger a build:
+
+- with the `deploy-to-production` workflow if a code push happens on the `master` branch (e.g. a git flow release branch merged into `master`)
+- with the `deploy-to-staging` workflow if a code push happens on the `develop` branch (e.g. a pull request is merged into the `develop` branch)
+- with the `primary` workflow for any other branch and for pull requests
+
 
 ## How to build only pull requests
 
@@ -269,13 +339,16 @@ trigger_map:
 
 __Debugging - what happens with webhooks related to un-mapped branches__
 
-You can't limit Webhooks by branch in most of the services,
+You can't limit Webhooks by branch in most of the source code hosting services,
 so [bitrise.io](https://www.bitrise.io) will still receive a webhook call for every code push of other branches,
 but it won't start a build unless it finds a matching filter in the `trigger_map`,
 which specifies a `workflow` to be selected for the build.
 _This is also true if you use the __Build Trigger API__ directly._
 
 You can see all the ignored calls on your [Activity page on bitrise.io](http://www.bitrise.io/activity).
+This means that if you think a given event should have started a build but it did not,
+you should check your `Activity` page (or your source code hosting service's Webhook history - more info a bit below)
+to find out why it did not trigger a build.
 
 An ignored build call entry in the Activity list looks like:
 
@@ -284,7 +357,7 @@ Build trigger failed: trigger-pattern (push_branch:) (pr_source_branch:prtest/t1
 PROJECT-NAME - Run triggered with params: push-branch: , pr-source-branch: prtest/t1, pr-target-branch: develop, but no matching workflow found
 ```
 
-Bitrise returns the reason to the source code hosting service (the service which sent the webhook) too,
+__Bitrise also returns the reason to the source code hosting service__ (the service which sent the webhook, e.g. GitHub) too,
 so if your service has a webhook history (e.g. GitHub, Bitbucket, ...)
 you can see the reason why a given webhook did not trigger a build there too!
 
@@ -295,8 +368,8 @@ and check the response Bitrise returned. It will be something like:
 {"success_responses":[],"failed_responses":[{"status":"error","message":"trigger pattern did not match any defined mapping: Run triggered with params: push-branch: , pr-source-branch: prtest/t1, pr-target-branch: develop, but no matching workflow found","service":"bitrise","slug":"...","build_slug":"","build_number":0,"build_url":"","triggered_workflow":""}]}
 ```
 
-_These detailed responses are only generated if you use
-the new [hooks.bitrise.io](https://hooks.bitrise.io) webhook URL!
+___These detailed responses are only generated if you use
+the new [hooks.bitrise.io](https://hooks.bitrise.io) webhook URL!__
 Initially we had a non open source `bitrise.io/hooks` endpoint
 for webhooks, but every new project registered should now get the new
 `hooks.bitrise.io` webhook URL automatically. If your webhook
@@ -318,6 +391,12 @@ To simulate a Pull Request, you can run:
 
 ```
 bitrise trigger-check --pr-source-branch=feature/a --pr-target-branch=master
+```
+
+To simulate a tag push, you can run:
+
+```
+bitrise trigger-check --tag 1.0.0
 ```
 
 For more information and options run:
