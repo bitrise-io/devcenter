@@ -4,9 +4,8 @@ repo_name: 'GitHub'
 repo_url: 'https://github.com/bitrise-io/devcenter'
 
 pages:
-- Bitrise DevCenter: index.md
+- "Bitrise DevCenter - What is Bitrise?": index.md
 - Getting Started:
-  - What is Bitrise?: getting-started/index.md
   - Builds & Workflows: getting-started/builds-and-workflows.md
   - Code Security: getting-started/code-security.md
 - Infrastructure:
