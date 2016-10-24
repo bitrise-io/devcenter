@@ -21,14 +21,14 @@ distribution certificates and provisioning profiles__!
     but fortunately our updated [codesigndoc](https://github.com/bitrise-tools/codesigndoc)
     can now collect all of these files for you, __automatically__!
 
-So, __does this automatic code signing worth all of this trouble__?
+So, __is this automatic code signing worth all of this trouble__?
 Should you instead opt to use manual code signing in Xcode 8?
 
 In general using Automatic code signing is a good idea, and you should
 migrate to it (as Apple suggests this is the new way, how you should do
 code signing in the future) if you can.
 
-__Does it worth the trouble?__ Well, __the good thing about Automatic code signing__
+__Is it worth the trouble?__ Well, __the good thing about Automatic code signing__
 is that once you collected all the code signing files
 __it's incredibly easy to use these files / to select the right file(s) during your build!__
 
