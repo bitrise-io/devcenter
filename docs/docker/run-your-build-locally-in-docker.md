@@ -24,7 +24,7 @@ If you're familiar with `docker` and the `bitrise` CLI:
 2. Make sure you have your `bitrise.yml` in your repository (you don't have to commit it, but the file have to exist in your repository's root directory)
 3. `cd` into your repository's directory on your Mac/Linux
 4. `docker pull bitriseio/docker-android:latest`
-5. `docker run --env CI=false --volume "$(pwd):/bitrise/src" --rm bitriseio/docker-android:latest bitrise run WORKFLOW`
+5. `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm bitriseio/docker-android:latest bitrise run WORKFLOW`
 
 _Keep reading if you want to read more details and notes about the process and commands!_
 
@@ -65,7 +65,7 @@ of _your repository_, and make sure your `bitrise.yml` is at this location.
 The only thing left to do is to actually run a build:
 
 ```
-docker run --env CI=false --volume "$(pwd):/bitrise/src" --rm bitriseio/docker-android:latest bitrise run WORKFLOW
+docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm bitriseio/docker-android:latest bitrise run WORKFLOW
 ```
 
 _Don't forget to replace `WORKFLOW` with the actual ID of your workflow in your `bitrise.yml`,
@@ -90,3 +90,13 @@ debug the container after a failed build feel free to remove the `--rm` flag,
 and check out a Docker tutorial about how you can connect to an existing
 docker container - _Note: simply running the command again **will not** use the same container,
 but **will create a new one**_!
+
+The `--privileged` flag allows access control of the host (!) from the docker container,
+so you should never use this flag unless you trust the docker image you will use!
+This flag is required for allowing VPNs to work (to change network configs
+of the host) for example.
+
+The `--volume "/var/run/docker.sock:/var/run/docker.sock"` flag exposes the
+docker socket from the host for the container - this is required
+if you want to run other docker containers from whithin the container,
+or if you want to run any `docker` command during your build / inside the container.
