@@ -42,6 +42,7 @@ pages:
 - iOS:
   - Code Signing: ios/code-signing.md
   - Uploading certificates: ios/uploading-certificates.md
+  - How to export Certificates and Provisioning Profiles: ios/export-certificate-and-provisioning-profile.md
   - Resigning an IPA: ios/resigning-an-ipa.md
   - Frequent iOS issues: ios/frequent-ios-issues.md
   - List of known Xcode issues: ios/known-xcode-issues.md
