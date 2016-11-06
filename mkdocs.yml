@@ -62,6 +62,7 @@ pages:
   - "Install Any Additional Tool": tips-and-tricks/install-additional-tools.md
   - How to configure fastlane match for Bitrise: tips-and-tricks/how-to-configure-fastlane-match-for-bitrise.md
 - Frequently Asked Questions (FAQ):
+  - Available Environment Variables: faq/available-environment-variables.md
   - Android x86 Emulator: faq/android-x86-emulator.md
   - How to generate an SSH key pair: faq/how-to-generate-ssh-keypair.md
 - Tools:
