@@ -8,9 +8,10 @@ pages:
 - Getting Started:
   - Builds & Workflows: getting-started/builds-and-workflows.md
   - Code Security: getting-started/code-security.md
+  - Add your first Step to your Workflow: getting-started/add-your-first-step-to-your-workflow.md
 - Infrastructure:
-  - Virtual Machines: infrastructure/virtual-machines.md
   - Available Stacks: infrastructure/available-stacks.md
+  - Virtual Machines: infrastructure/virtual-machines.md
 - Signing up:
   - Signing up with GitHub: signing-up/signing-up-with-github.md
   - Signing up with Bitbucket: signing-up/signing-up-with-bitbucket.md
