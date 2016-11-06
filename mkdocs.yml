@@ -8,6 +8,7 @@ pages:
 - Getting Started:
   - Builds & Workflows: getting-started/builds-and-workflows.md
   - Code Security: getting-started/code-security.md
+  - Add your first Step to your Workflow: getting-started/add-your-first-step-to-your-workflow.md
 - Infrastructure:
   - Virtual Machines: infrastructure/virtual-machines.md
   - Available Stacks: infrastructure/available-stacks.md
