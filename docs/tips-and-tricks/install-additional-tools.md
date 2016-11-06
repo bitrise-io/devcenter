@@ -100,7 +100,7 @@ will check if that tool is installed, and will install it for you if required.
     will not (re)install the specified tool(s) if it's already available.
     That said, there are tools which are not available in the supported dependency managers,
     or you need a version of the tool which is not available in the dependency manager.
-    In those cases you should simply install the tool inside the Script, as described above. 
+    In those cases you should simply install the tool inside the Script, as described above.
 
 An example, installing `cmake` with either `apt-get` (where `apt-get` is available),
 or with `brew` (on macOS):
@@ -169,7 +169,11 @@ workflows:
 
 ## Conditional execution
 
-Additionally, you can use Environment Variables in your scripts too. As an example, using the base [Available Environment Variables](doc:available-environment-variables) `PR` (but you can use any Environment Variable, like the ones exposed by previous steps in the Workflow), to run different scripts in case of a Pull Request and a non Pull Request build:
+Additionally, you can use Environment Variables in your scripts too.
+As an example, using the `PR` environment variable
+(but you can use any [Available Environment Variable](/faq/available-environment-variables/),
+like the ones exposed by previous steps in the Workflow),
+to run different scripts in case of a Pull Request and a non Pull Request build:
 
 ```
 #!/bin/bash
