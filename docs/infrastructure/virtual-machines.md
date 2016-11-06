@@ -1,6 +1,6 @@
 On Bitrise, we have `macOS` and `Linux` virtual machines hosted for your builds.
 You can select from multiple stacks, each with its own list of preinstalled tool versions.
-Read more about available stacks and stack prepare types in the [Available Stacks docs](doc:available-stacks).
+Read more about available stacks and stack prepare types in the [Available Stacks docs](/infrastructure/available-stacks/).
 
 
 !!! note "Passwordless sudo"
