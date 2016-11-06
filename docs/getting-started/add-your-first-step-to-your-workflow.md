@@ -21,7 +21,15 @@ You can search and filter these steps if you want to, or just browse through the
 Adding a Step is as easy as clicking the `Add to Workflow` button
 in this Step Library popup.
 
-Once it's added to your Workflow, you can __Drag and Drop__ to reorder your list of Steps.
+You can __Drag and Drop__ to reorder your list of Steps. During a build,
+steps will be executed one by one, in top-to-bottom order.
 
 Once you're happy with your Workflow you should click the `Save` button on the left side.
 That's all, your next build will automatically use the current saved Workflow!
+
+!!! note "Multiple Workflows"
+    You can create as many workflows as you like, and then
+    specify which one to use for which build trigger event in the `Triggers` section
+    of the Workflow Editor.
+    You can read more about Triggers and workflow selection in the
+    [Control what to build when, with the Trigger Map](/webhooks/trigger-map/) guide.
