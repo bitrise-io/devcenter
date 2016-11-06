@@ -1,4 +1,6 @@
-On Bitrise, we have `OS X` and `Linux` virtual machines hosted for your builds. You can select multiple stacks that holds different versions of these virtual machines. Read more about available stacks and stack prepare types in the [Available Stacks docs](doc:available-stacks).
+On Bitrise, we have `OS X` and `Linux` virtual machines hosted for your builds.
+You can select multiple stacks that holds different versions of these virtual machines.
+Read more about available stacks and stack prepare types in the [Available Stacks docs](doc:available-stacks).
 
 ## Security
 

@@ -1,23 +1,32 @@
-The Stack indicates the virtual machine version that we will use to run your build. After adding your application to Bitrise we will detect the best image, but you can simply change it to a different one on the `Settings` tab of your app.
+The Stack indicates the virtual machine version that we will use to run your build.
+After adding your application to Bitrise we will select an appropriate Stack for it,
+but you can simply change it to a different one on the `Settings` tab of your app.
 
 ![Screenshot](/img/infrastructure/stack_selector.png)
+
+After selecting the Stack you want to use you'll see a short description of the stack,
+with an additional link to learn more about that specific Stack (e.g. to see what
+tools are preinstalled, and which versions, on the selected Stack).
+
+!!! note "The Stack won't be used until you click the `Save` button!"
+    You can see what tools are preinstalled on the Stacks by
+    selecting the stack(s) in the selector, and following the
+    `More information about this Stack` link. The Stack
+    won't be activated for the app until you click the `Save` button.
 
 ## Stack status types
 
 | Type | Description |
 |---|---|
-| Experimental  | Internal, expected to change, and eventually moved to `Preview`. |
-| Preview | Public, users with a related beta flag can access it. Might change or moved to `Beta`. |
-| Beta | Public beta, might change if there's a regression, otherwise will become `Stable` |
-| Stable | Generally available and expected to be supported for the foreseeable future. |
-| LTS | Same as Stable, except it has a specific remove date and no changes will be made to the stack until the removal date (except only really crucial changes, which affect security for example). |
+| Stable | Generally available and expected to be supported for the foreseeable future. __Updated when an update for the Stack's primary tool is available.__ Example: when Xcode 7.3.1 was released, the Xcode 7.3 stack was updated to have 7.3.1 instead of 7.3(.0). In case of `Xamarin` stacks, the Xamarin updates are applied weekly, during the weekends. |
+| LTS (Long Term Support) | No changes (updates) will be made to the stack, except only really crucial changes, which affect security for example, and Bitrise CLI tool updates. Preinstalled tool versions will remain the same, until the Stack is removed from our collection. |
 
 ## Stack prepare types
 
 | Type | Description |
 |---|---|
 | Pre-Booted | If a Stack is available as pre-booted, and there's enough pre-booted machines with that Stack configuration, your build can start right away, without waiting for the build environment to boot. In case there's no more available pre-booted machine with that Stack configuration, your build will start on an `On-Demand` configuration. |
-| On-Demand | If a Stack is available as on-demand configuration and there's no (available) pre-booted configuration for the Stack, our system will have to create a virtual machine for your selected configuration when your build starts. This means that your build will be in `preparing environment` state while the related Virtual Machine is created & booted. For an OS X configuration the boot process usually takes about 1-2 minutes - we're working on improving this. *The prepare time (of course) is not counted into the build time, it won't affect how long your build can run.* |
+| On-Demand | If a Stack is available as on-demand configuration and there's no (available) pre-booted configuration for the Stack, our system will have to create a virtual machine for your selected configuration __when your build starts__. This means that your build will be in `preparing environment` state while the related Virtual Machine is created & booted. For a macOS configuration the boot process usually takes about 1 - 1.5 minutes. *The prepare time (of course) is not counted into the build time, it won't affect how long your build can run.* |
 
 ## What's preinstalled
 
