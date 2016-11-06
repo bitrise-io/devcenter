@@ -23,7 +23,7 @@ pages:
   - Setting up SSH keys: adding-a-new-app/setting-up-ssh-keys.md
   - Setting up configuration: adding-a-new-app/setting-up-configuration.md
 - Tutorials:
-  - Community Created: tutorials/community-created.md
+  - Community Created Tutorials: tutorials/community-created.md
   - Create signed APK on bitrise.io: tutorials/create-signed-apk-on-bitrise.md
   - Configure and connect to your VPN: tutorials/vpn-configuration.md
 - Team management:
