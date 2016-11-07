@@ -43,7 +43,7 @@ On this tab, you just have to paste your HTTPS git clone URL where Bitrise can a
 Paste the URL and click on `Next` to proceed.
 
 
-## 1. Setup repository access
+## 2. Setup repository access
 
 ### Auto-add the SSH key Bitrise generated for you
 
