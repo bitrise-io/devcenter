@@ -8,6 +8,7 @@ pages:
 - Getting Started:
   - Builds & Workflows: getting-started/builds-and-workflows.md
   - Code Security: getting-started/code-security.md
+  - Create your first App on Bitrise.io: getting-started/create-your-first-app-on-bitrise.md
   - Add your first Step to your Workflow: getting-started/add-your-first-step-to-your-workflow.md
 - Infrastructure:
   - Available Stacks: infrastructure/available-stacks.md
@@ -63,7 +64,9 @@ pages:
   - How to configure fastlane match for Bitrise: tips-and-tricks/how-to-configure-fastlane-match-for-bitrise.md
 - Frequently Asked Questions (FAQ):
   - Available Environment Variables: faq/available-environment-variables.md
+  - How to change the owner of an app: faq/how-to-change-the-owner-of-an-app.md
   - Organization FAQ: faq/organization-faq.md
+  - Adding projects with submodules or with private CocoaPods repos: faq/adding-projects-with-submodules.md
   - Android x86 Emulator: faq/android-x86-emulator.md
   - How to generate an SSH key pair: faq/how-to-generate-ssh-keypair.md
 - Tools:
