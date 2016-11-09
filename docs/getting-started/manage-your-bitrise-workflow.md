@@ -6,7 +6,7 @@ in the **Workflow Editor** on Bitrise.io:
 
 This is your app's __Workflow Editor__. You can change, delete and add steps here.
 
-## To change a step
+## Change a step
 
 Select the step here (in the Workflow Editor), on the left side.
 You can change the selected Step's inputs and other configs on the right side.
@@ -14,11 +14,24 @@ You can change the selected Step's inputs and other configs on the right side.
 !!! note
     Steps are executed top-to-bottom, you can reorder them with __Drag and Drop__.
 
-## To remove a step
+
+## Upgrade a Step to the latest version
+
+When a new version is available for a Step in your Workflow,
+you can update the Step to the new version by selecting the Step in the Workflow Editor and
+
+1. Click the orange "update indicator" icon, to upgrade the Step to the latest available version
+1. Or select the new version manually, on the right side, where you can see the step's details (`Version` section).
+
+_Your settings / provided input values for the Step will be kept for the new version, and you can
+also discard the change, by clicking the `Discard` button on the left side._
+
+
+## Remove a step
 
 Select the step on the left side and click on the **trash can** button on the right side.
 
-## To add a new step
+## Add a new step
 
 Click on the `+` sign at the left side to add or insert a new step.
 
