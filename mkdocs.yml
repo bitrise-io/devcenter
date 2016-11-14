@@ -35,6 +35,7 @@ pages:
 - Deployment Tutorials:
   - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
   - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
+  - Deploy to TestFairy with Bitrise: tutorials/deploy/deploy-to-testfairy-with-bitrise.md
 - Team management:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
