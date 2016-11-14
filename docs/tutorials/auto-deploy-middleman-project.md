@@ -98,6 +98,8 @@ For access control, enter `public-read` or `private`, as advised.
 !!! note "Alternative deploy destinations"
     You can of course use `Heroku`, GitHub pages or any other service
     as your deployment target.
+    You can find a more complex setup, deploying to `Heroku`,
+    [on our Blog](http://blog.bitrise.io/2016/04/29/hooking-up-a-middleman-project-to-deploy-a-static-site-to-heroku-with-bitrise.html)
 
 
 ## 7. Run build manually
