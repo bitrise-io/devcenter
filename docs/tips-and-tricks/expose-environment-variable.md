@@ -79,3 +79,58 @@ workflows:
         - webhook_url: ...
         - message: "Release Notes: $MY_RELEASE_NOTE"
 ```
+
+## Overwrite an Environment Variable if another one is set
+
+E.g. if a custom environment variable is set through the Build Trigger API.
+
+The best way to do this, to make sure that no matter what, you overwrite the other env var,
+is to use a Script step, as described above, and check whether the custom env var is set.
+
+As an example, if you want to overwrite the `PROJECT_SCHEME` environment variable,
+if, let's say, a `API_PROJECT_SCHEME` env var is set, just drop in a `Script` step (can be the very first one
+in the workflow), with the content:
+
+```
+#!/bin/bash
+set -ex
+if [ ! -z "$API_PROJECT_SCHEME" ] ; then
+  envman add --key PROJECT_SCHEME --value "$API_PROJECT_SCHEME"
+fi
+```
+
+This script will check whether the `API_PROJECT_SCHEME` env var is defined,
+and if it is, then its value will be assigned to the `PROJECT_SCHEME` environment variable,
+overwriting the original value of `PROJECT_SCHEME`.
+
+
+### Alternative solution: use Workflow Env Vars
+
+Alternatively you can set environment variables for Workflows too.
+The Env Vars you set for a workflow will overwrite the env var
+if defined as an App Env Var or Secret Env Var.
+
+An example workflow which defined an environment variable, and then runs another workflow
+which can use those env vars:
+
+```
+workflows:
+
+  deploy-alpha:
+    envs:
+    - ENV_TYPE: alpha
+    after_run:
+    - _deploy
+
+  _deploy:
+    steps:
+    - script:
+        inputs:
+        - content: |
+            #!/bin/bash
+            echo "ENV_TYPE: $ENV_TYPE"
+```
+
+If you run the `deploy-alpha` workflow, that will set the `ENV_TYPE` env var to `alpha`,
+then it will run the `_deploy` workflow, which can use that environment variable -
+in this example it will simply print its value (the printed text will be: `ENV_TYPE: alpha`).
