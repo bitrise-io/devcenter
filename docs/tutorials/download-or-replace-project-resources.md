@@ -1,6 +1,7 @@
 You can do this in quite a few ways, these are probably the easiest ones:
 
-* use the `ZIP resource archive downloader` Step
+* use the `ZIP resource archive downloader` step for downloading and extracting a ZIP file
+* use the `File Downloader` step to download a single file
 * use a `Script` Step
 
 !!! note "Store the resources file on [bitrise.io](https://www.bitrise.io)"
