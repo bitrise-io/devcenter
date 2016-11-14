@@ -32,6 +32,8 @@ pages:
   - Download or replace project resources: tutorials/download-or-replace-project-resources.md
   - Efficient Continuous Integration and Deployment Workflow for iOS development: tutorials/efficient-continuous-integration-and-deployment-workflow-for-ios.md
   - Configure and connect to your VPN: tutorials/vpn-configuration.md
+- Deployment Tutorials:
+  - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
 - Team management:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
