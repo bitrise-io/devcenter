@@ -34,6 +34,7 @@ pages:
   - Configure and connect to your VPN: tutorials/vpn-configuration.md
 - Deployment Tutorials:
   - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
+  - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
 - Team management:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
