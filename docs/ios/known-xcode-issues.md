@@ -30,6 +30,7 @@ Related links & reports:
 * [Assertion Failure: UI Testing Failure - Failed to receive completion for XCDeviceEvent: page 12 usage 64 duration 0.01s within 10.0s](https://forums.developer.apple.com/thread/31311)
 * [UI Testing Failure - Failed to perform AX action for monitoring the event loop](https://forums.developer.apple.com/thread/31312)
 * [UI Testing Failure due to failed AX Action](https://forums.developer.apple.com/thread/4472)
+* [Every other test case being skipped - UI Testing Failure - App state for <XCUIApplicationProcess: ...> is XCApplicationStateRunningActive (3), still not XCApplicationStateNotRunning](https://forums.developer.apple.com/thread/28732)
 
 
 ### Possible solutions
@@ -39,9 +40,10 @@ Related links & reports:
   a possible workaround can be to **not to store `XCUIApplication()` in a variable**, instead
   reference / use it directly. E.g. instead of: `let app = XCUIApplication() ; ... ; app.launch()`
   do: `XCUIApplication().launch()`
-* Others reported that if you add a delay after `app.launch()` it can
+* Others reported that if you add a delay (`sleep(10)`) after every `app.launch()` related to your tests, it can
   leave enough time for Xcode / the iOS Simulator to initialize the Accessibility labels,
-  so that UI Tests can properly find the elements by the Accessibility labels.
+  so that UI Tests can properly find the elements by the Accessibility labels. ([Related Apple developer forum discussion](https://forums.developer.apple.com/thread/28732))
+    * Related: remove every explicit `app.terminate()` in your `tearDown()` method(s)
 * Try another Simulator device (e.g. instead of running the test in "iPhone 6"
   try it with "iPhone 6s Plus")
 * [Use the Async testing APIs](http://stackoverflow.com/a/32481202/974381)
