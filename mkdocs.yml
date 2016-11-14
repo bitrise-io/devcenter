@@ -28,9 +28,14 @@ pages:
   - Community Created Tutorials: tutorials/community-created.md
   - Create signed APK on bitrise.io: tutorials/create-signed-apk-on-bitrise.md
   - HipChat message with build status and details: tutorials/hipchat-message.md
+  - How to use the Generic File Storage: tutorials/how-to-use-the-generic-file-storage.md
   - Download or replace project resources: tutorials/download-or-replace-project-resources.md
   - Efficient Continuous Integration and Deployment Workflow for iOS development: tutorials/efficient-continuous-integration-and-deployment-workflow-for-ios.md
   - Configure and connect to your VPN: tutorials/vpn-configuration.md
+- Deployment Tutorials:
+  - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
+  - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
+  - Deploy to TestFairy with Bitrise: tutorials/deploy/deploy-to-testfairy-with-bitrise.md
 - Team management:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
