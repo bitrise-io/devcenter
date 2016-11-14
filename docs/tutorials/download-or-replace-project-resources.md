@@ -25,12 +25,27 @@ inside your app's source code directory, you can define the extract target folde
 (of the `ZIP resource archive downloader` step) as `${BITRISE_SOURCE_DIR}/myresource`,
 or `./myresource` (as the default working directory is the source code directory).
 
-!!! note "Single file"
-    If you only want to download a single file, you can of course ZIP it up,
-    but there's also a step for single file downloads. The `File Downloader`
-    step can be used for this use case. Works very similarly as the
-    `ZIP resource archive downloader` step, except it does not require a ZIP file,
-    it simply downloads the specified file to the location you set.
+
+## Single file - using the `File Downloader` step
+
+If you only want to download a single file, you can of course ZIP it up and
+use the `ZIP resource archive downloader` step as described in the previous section,
+but there's also a step for single file downloads.
+
+The `File Downloader` step can be used for this use case. Works very similarly as the
+`ZIP resource archive downloader` step, except it does not require a ZIP file,
+it simply downloads the specified file to the location you set.
+
+
+```
+...
+- file-downloader:
+    inputs:
+    - source: $BITRISEIO_my_file_id_URL
+    - destination: "$BITRISE_SOURCE_DIR/path/to/store/the/file"
+...
+```
+
 
 ## The "manual" way
 
