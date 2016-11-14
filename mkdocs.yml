@@ -32,6 +32,7 @@ pages:
   - Download or replace project resources: tutorials/download-or-replace-project-resources.md
   - Efficient Continuous Integration and Deployment Workflow for iOS development: tutorials/efficient-continuous-integration-and-deployment-workflow-for-ios.md
   - Configure and connect to your VPN: tutorials/vpn-configuration.md
+  - Auto deploy your Middleman blog / static website: tutorials/auto-deploy-middleman-project.md
 - Deployment Tutorials:
   - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
   - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
