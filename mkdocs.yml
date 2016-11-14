@@ -27,9 +27,10 @@ pages:
 - Tutorials:
   - Community Created Tutorials: tutorials/community-created.md
   - Create signed APK on bitrise.io: tutorials/create-signed-apk-on-bitrise.md
-  - Configure and connect to your VPN: tutorials/vpn-configuration.md
   - HipChat message with build status and details: tutorials/hipchat-message.md
+  - Download or replace project resources: tutorials/download-or-replace-project-resources.md
   - Efficient Continuous Integration and Deployment Workflow for iOS development: tutorials/efficient-continuous-integration-and-deployment-workflow-for-ios.md
+  - Configure and connect to your VPN: tutorials/vpn-configuration.md
 - Team management:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
