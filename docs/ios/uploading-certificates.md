@@ -2,11 +2,8 @@
 
 You can easily locate the needed certificates and provisioning profiles for your project with our `codesigndoc` tool.
 
-Simply open your `Terminal.app` on your Mac and run the following command:
-
-```
-bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap.sh)".
-```
+Simply open your `Terminal.app` on your Mac and
+[run the one liner "install" command](https://github.com/bitrise-tools/codesigndoc#one-liner).
 
 After that open your `Finder.app` and drag-and-drop your project's `.xcodeproj` or `.xcworkspace` file into the command line in your terminal.
 ![codesigndoc](/img/ios/codesigndoc.png)
