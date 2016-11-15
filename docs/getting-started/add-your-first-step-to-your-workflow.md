@@ -25,7 +25,7 @@ You can __Drag and Drop__ to reorder your list of Steps. During a build,
 steps will be executed one by one, in top-to-bottom order.
 
 Once you're happy with your Workflow you should click the `Save` button on the left side.
-That's all, your next build will automatically use the current saved Workflow!
+That's all, your next build will automatically use the current, __saved__ Workflow!
 
 !!! note "Multiple Workflows"
     You can create as many workflows as you like, and then
