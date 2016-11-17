@@ -38,6 +38,14 @@ because that's the step which generates, or updates the directory (`./Pods`) whi
 You can download and delete caches, for every branch which generated a cache,
 on the `Settings` tab of the app, under the `Manage Build Caches` section.
 
+!!! warning "Delete a single branch's cache"
+    If you only want to delete the cache which is related to a single branch,
+    you should also delete the default branch's cache too!
+    For more detail see the
+    [If a build runs on a branch which doesn't have a cache yet, it'll get the main/default Branch's cache](#if-a-build-runs-on-a-branch-which-doesnt-have-a-cache-yet-itll-get-the-maindefault-branchs-cache)
+    section.
+
+
 !!! note
     You can see the size of the caches and the last time a given cache was used in the popup.
 
@@ -86,12 +94,14 @@ of the paths gets updated __it'll update the whole cache archive__,
 including all the paths you cache.
 
 
-### If a build runs on a new branch the first time it'll get the main/default Branch's cache.
+### If a build runs on a branch which doesn't have a cache yet, it'll get the main/default Branch's cache
 
-The first build on a non primary/default branch, to speed up things,
-can access (read-only) the primary branch's cache.
+The build on a non default branch, to speed up things,
+can (read-only) access the `primary` branch's cache, until a successful
+build on the new branch. Once a build on the new branch
+pushes a cache, new builds on that branch will get the branch's cache.
+_Caches are stored and available for every branch separately._
 
-__If it pushes back to the cache that won't modify the main/default Branch's cache__,
-that will be stored for the new branch directly,
-and the next time a build runs on this branch it'll use that cache.
-
+!!! note "Default branch"
+    You can see which is your __default branch__ on your
+    [bitrise.io](https://www.bitrise.io) app's `Settings` tab.
