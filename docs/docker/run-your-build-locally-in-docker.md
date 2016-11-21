@@ -23,6 +23,8 @@ If you're familiar with `docker` and the `bitrise` CLI:
 1. Install [docker](https://www.docker.com/)
 2. Make sure you have your `bitrise.yml` in your repository (you don't have to commit it, but the file have to exist in your repository's root directory)
 3. `cd` into your repository's directory on your Mac/Linux
+    * _If you try to reproduce an issue, you should `git clone` your repository into a __new directory__,
+      so that the directory will only contain the files which are committed into the repository!_
 4. `docker pull bitriseio/docker-android:latest`
 5. `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm bitriseio/docker-android:latest bitrise run WORKFLOW`
 
@@ -58,6 +60,12 @@ configuration (`bitrise.yml`).
 
 In your Terminal / Command Line go to (`cd`) the root directory
 of _your repository_, and make sure your `bitrise.yml` is at this location.
+
+__If you try to reproduce an issue, you should `git clone` your repository into a new directory,
+so that the directory will only contain the files which are committed into the repository!__
+It's a frequent reproducibility issue that you try to run the commands in your
+normal working directory, where you most likely have files which are not
+committed into your repository, e.g. files which are in `.gitignore`.
 
 
 ## Run your builds
