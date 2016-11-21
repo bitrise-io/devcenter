@@ -54,6 +54,45 @@ The `Gradle Runner` step does this, and as you can see it in the related input d
 > in the official guide at: [https://docs.gradle.org/current/userguide/gradle_wrapper.html](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
 
 
+## How to install an additional Android SDK package
+
+All you have to do is to add a `Script` step to your workflow,
+and use `android update sdk` to install the additional SDKs or packages you want to.
+
+As an example, to install the Android SDK v18 and the related `build-tools` v18.0.1,
+you can add a `Script` step (can be the very first step in the Workflow)
+with the following content:
+
+```
+#!/bin/bash
+# fail if any commands fails
+set -e
+# debug log
+set -x
+
+# write your script here
+echo y | android update sdk --no-ui --all --filter android-18 | grep 'package installed
+echo y | android update sdk --no-ui --all --filter build-tools-18.0.1 | grep 'package installed
+```
+
+*The `echo y | ` prefix is really important.
+If you miss to include this your build will hang waiting for your input,
+to accept the license agreements presented during an Android SDK / package install.*
+
+**You can get the full list of available packages** by running:
+`android list sdk --no-ui --all --extended`. You can run this on your own machine if you have `android` in your `$PATH`.
+
+!!! note
+    You should only install the Android tools which are *not* yet installed.
+    Calling `android update` for an already installed tool might fail if it can't create a backup -
+    which is the case if you use the default `Docker` file system driver (`aufs`).
+
+    _This issue does not affect builds running on [bitrise.io](https://www.bitrise.io),
+    as the filesystem driver for `docker` is set to `btrfs` instead of the default `aufs`._
+
+    You can check all the pre-installed tools in the official Bitrise Android Dockerfile:
+    [https://github.com/bitrise-docker/android/blob/master/Dockerfile](https://github.com/bitrise-docker/android/blob/master/Dockerfile)
+
 
 ## Enable Gradle debug options
 
