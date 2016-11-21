@@ -61,6 +61,7 @@ pages:
 - Android:
   - Frequent Android issues: android/frequent-android-issues.md
 - Docker:
+  - Docker support on bitrise.io: docker/index.md
   - How to run your build locally in Docker: docker/run-your-build-locally-in-docker.md
   # - How we build our images: docker/how-we-build-our-images.md
 - Tips & Tricks:
