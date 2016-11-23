@@ -76,6 +76,8 @@ pages:
   - "Xcode Archive: export options": tips-and-tricks/xcodebuild-export-options.md
   - "Install Any Additional Tool": tips-and-tricks/install-additional-tools.md
   - How to configure fastlane match for Bitrise: tips-and-tricks/how-to-configure-fastlane-match-for-bitrise.md
+  - Optimize your build times: tips-and-tricks/optimize-your-build-times.md
+  - Should I commit my dependencies into my repository?: tips-and-tricks/should-i-commit-my-dependencies-into-my-repository.md
 - Frequently Asked Questions (FAQ):
   - Available Environment Variables: faq/available-environment-variables.md
   - How to change the owner of an app: faq/how-to-change-the-owner-of-an-app.md
