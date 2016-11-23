@@ -67,6 +67,10 @@ pages:
   - How to run your build locally in Docker: docker/run-your-build-locally-in-docker.md
   - Use your own Docker image: docker/use-your-own-docker-image.md
   # - How we build our images: docker/how-we-build-our-images.md
+- Xamarin:
+  - About Xamarin: xamarin/index.md
+  - Connect your Xamarin account to Bitrise: xamarin/connect-your-xamarin-account-to-bitrise.md
+  - Restore NuGet packages and Xamarin Components: xamarin/restore-nuget-packages-and-xamarin-components.md
 - Tips & Tricks:
   - Skip a Build (skip ci): tips-and-tricks/skip-a-build.md
   - Attach any file as an Artifact to the Build: tips-and-tricks/attach-any-file-to-build.md
