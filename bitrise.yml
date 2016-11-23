@@ -49,6 +49,8 @@ workflows:
             mkdocs build
 
   deploy-to-github-pages:
+    before_run:
+    - setup
     steps:
     - script:
         description: |
