@@ -7,7 +7,13 @@ description: |
 workflows:
   setup:
     steps:
-    - script@1.1.0:
+    - script:
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+            sudo apt-get update
+    - script:
         deps:
           brew:
           # install the python brew package if pip bin is not available
