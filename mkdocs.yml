@@ -33,6 +33,7 @@ pages:
   - Efficient Continuous Integration and Deployment Workflow for iOS development: tutorials/efficient-continuous-integration-and-deployment-workflow-for-ios.md
   - Configure and connect to your VPN: tutorials/vpn-configuration.md
   - Auto deploy your Middleman blog / static website: tutorials/auto-deploy-middleman-project.md
+  - Build with FAKE (F# Make): tutorials/build-with-fake.md
 - Deployment Tutorials:
   - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
   - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
@@ -67,6 +68,14 @@ pages:
   - How to run your build locally in Docker: docker/run-your-build-locally-in-docker.md
   - Use your own Docker image: docker/use-your-own-docker-image.md
   # - How we build our images: docker/how-we-build-our-images.md
+- Xamarin:
+  - About Xamarin: xamarin/index.md
+  - Connect your Xamarin account to Bitrise: xamarin/connect-your-xamarin-account-to-bitrise.md
+  - Restore NuGet packages and Xamarin Components: xamarin/restore-nuget-packages-and-xamarin-components.md
+  - Deploy your Xamarin app: xamarin/deploy-your-xamarin-app.md
+  - Add UITest to your Xamarin app: xamarin/add-unit-test-to-your-xamarin-app.md
+  - Run your tests in the Xamarin Test Cloud: xamarin/run-your-tests-in-the-xamarin-test-cloud.md
+  - Add custom sources to NuGet: xamarin/add-custom-sources-to-nuget.md
 - Tips & Tricks:
   - Skip a Build (skip ci): tips-and-tricks/skip-a-build.md
   - Attach any file as an Artifact to the Build: tips-and-tricks/attach-any-file-to-build.md

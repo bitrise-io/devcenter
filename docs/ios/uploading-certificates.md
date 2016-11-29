@@ -13,4 +13,5 @@ Once it's done you'll have all the required files exported, ready for upload.
 
 Once you have all the needed files, head to your dashboard on [bitrise.io](https://www.bitrise.io) and select your app.
 
-Go to **Workflow** > **Manage Workflows** > and select the **Code Signing & Files** tab on the left. Upload your code signing certificate (p12) and provisioning profiles and you are ready to go! 🚀
+Go to **Workflow** > **Manage Workflows** > and select the **Code Signing & Files** tab on the left.
+Upload your code signing certificate (p12) and provisioning profiles and you are ready to go! 🚀
