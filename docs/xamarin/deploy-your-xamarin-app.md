@@ -28,7 +28,7 @@ The next time you start a build your app will be deployed to the service of your
 
 ### Xamarin.Android
 
-For Xamarin Android project code signing see the [Create signed APK on bitrise.io](/tutorials/create-signed-apk-on-bitrise/) tutorial.
+For Xamarin Android project code signing see the [Create signed APK on bitrise.io](/android/code-signing) tutorial.
 
 ### Xamarin.iOS
 

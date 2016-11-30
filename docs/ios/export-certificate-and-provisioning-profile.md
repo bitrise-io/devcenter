@@ -87,4 +87,4 @@ To upload the .p12 signing certificate file to your app on [bitrise.io](https://
 
 !!! note "More information about how iOS code signing works"
     For more information about how iOS code signing works, please
-    check the [iOS/Code Signing](/ios/code-signing/) page.
+    check the [iOS/Code Signing](/ios/code-signing) page.
