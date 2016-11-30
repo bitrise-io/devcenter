@@ -3,7 +3,7 @@ in your [bitrise.io](https://www.bitrise.io/) build you only have to do three th
 
 1. Make sure that a single SSH key can be used to `git clone` both your main repository (the one
    you register on [bitrise.io](https://www.bitrise.io/)) and the `match` repository.
-   You can find more info [in this guide](http://devcenter.bitrise.io/docs/adding-projects-with-submodules).
+   You can find more info [in this guide](/faq/adding-projects-with-submodules/).
 1. Add an environment variable `MATCH_PASSWORD`, as
    [described in `match`'s docs](https://github.com/fastlane/fastlane/tree/master/match#encryption-password),
    to specify the `Encryption password` you used for `match`.

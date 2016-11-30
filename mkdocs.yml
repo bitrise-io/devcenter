@@ -24,20 +24,6 @@ pages:
   - Connecting a repository: adding-a-new-app/connecting-a-repository.md
   - Setting up SSH keys: adding-a-new-app/setting-up-ssh-keys.md
   - Setting up configuration: adding-a-new-app/setting-up-configuration.md
-- Tutorials:
-  - Community Created Tutorials: tutorials/community-created.md
-  - Create signed APK on bitrise.io: tutorials/create-signed-apk-on-bitrise.md
-  - HipChat message with build status and details: tutorials/hipchat-message.md
-  - How to use the Generic File Storage: tutorials/how-to-use-the-generic-file-storage.md
-  - Download or replace project resources: tutorials/download-or-replace-project-resources.md
-  - Efficient Continuous Integration and Deployment Workflow for iOS development: tutorials/efficient-continuous-integration-and-deployment-workflow-for-ios.md
-  - Configure and connect to your VPN: tutorials/vpn-configuration.md
-  - Auto deploy your Middleman blog / static website: tutorials/auto-deploy-middleman-project.md
-  - Build with FAKE (F# Make): tutorials/build-with-fake.md
-- Deployment Tutorials:
-  - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
-  - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
-  - Deploy to TestFairy with Bitrise: tutorials/deploy/deploy-to-testfairy-with-bitrise.md
 - Team management:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
@@ -53,13 +39,15 @@ pages:
   - Caching Maven: caching/caching-maven.md
   - Caching Ruby GEMs: caching/caching-ruby-gems.md
 - iOS:
-  - Code Signing: ios/code-signing.md
+  - iOS Code Signing: ios/code-signing.md
+  - iOS Code Signing - Technical details: ios/code-signing-technical-details.md
   - Uploading certificates: ios/uploading-certificates.md
   - How to export Certificates and Provisioning Profiles: ios/export-certificate-and-provisioning-profile.md
   - Resigning an IPA: ios/resigning-an-ipa.md
   - Frequent iOS issues: ios/frequent-ios-issues.md
   - List of known Xcode issues: ios/known-xcode-issues.md
 - Android:
+  - Android Code Signing: android/code-signing.md
   - The Android/Linux/Docker environment: android/the-environment.md
   - Android tips and tricks: android/android-tips-and-tricks.md
   - Frequent Android issues: android/frequent-android-issues.md
@@ -76,6 +64,22 @@ pages:
   - Add UITest to your Xamarin app: xamarin/add-unit-test-to-your-xamarin-app.md
   - Run your tests in the Xamarin Test Cloud: xamarin/run-your-tests-in-the-xamarin-test-cloud.md
   - Add custom sources to NuGet: xamarin/add-custom-sources-to-nuget.md
+- Fastlane:
+  - fastlane tools integration: fastlane/fastlane-tools-integration.md
+  - How to configure fastlane match for Bitrise: fastlane/how-to-configure-fastlane-match-for-bitrise.md
+- Tutorials:
+  - Community Created Tutorials: tutorials/community-created.md
+  - HipChat message with build status and details: tutorials/hipchat-message.md
+  - How to use the Generic File Storage: tutorials/how-to-use-the-generic-file-storage.md
+  - Download or replace project resources: tutorials/download-or-replace-project-resources.md
+  - Efficient Continuous Integration and Deployment Workflow for iOS development: tutorials/efficient-continuous-integration-and-deployment-workflow-for-ios.md
+  - Configure and connect to your VPN: tutorials/vpn-configuration.md
+  - Auto deploy your Middleman blog / static website: tutorials/auto-deploy-middleman-project.md
+  - Build with FAKE (F# Make): tutorials/build-with-fake.md
+- Deployment Tutorials:
+  - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
+  - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
+  - Deploy to TestFairy with Bitrise: tutorials/deploy/deploy-to-testfairy-with-bitrise.md
 - Tips & Tricks:
   - Skip a Build (skip ci): tips-and-tricks/skip-a-build.md
   - Attach any file as an Artifact to the Build: tips-and-tricks/attach-any-file-to-build.md
@@ -84,7 +88,6 @@ pages:
   - Enable/Disable a step (optionally, based on a condition): tips-and-tricks/disable-a-step-by-condition.md
   - "Xcode Archive: export options": tips-and-tricks/xcodebuild-export-options.md
   - "Install Any Additional Tool": tips-and-tricks/install-additional-tools.md
-  - How to configure fastlane match for Bitrise: tips-and-tricks/how-to-configure-fastlane-match-for-bitrise.md
   - Optimize your build times: tips-and-tricks/optimize-your-build-times.md
   - Should I commit my dependencies into my repository?: tips-and-tricks/should-i-commit-my-dependencies-into-my-repository.md
 - Frequently Asked Questions (FAQ):
