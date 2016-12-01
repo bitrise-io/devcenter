@@ -34,17 +34,3 @@ and use the `bitrise` command to execute your workflows locally.
 It's a great help when you're developing steps, debugging builds,
 or just want to use Bitrise for [any kind of automation](https://github.com/bitrise-io/steps-random-quote) on your machine.
 
-
-## Feel free to edit any page of this DevCenter and to send us a Pull Request!!
-
-!!! note "Edit on GitHub / in your browser directly!"
-    You can edit the pages on GitHub directly,
-    you don't even have to `git clone` the repository.
-    Just select the file on [GitHub](https://github.com/bitrise-io/devcenter)
-    and click the **pencil/edit** icon,
-    which will open the GitHub editor for the file.
-    [Example for this page](https://github.com/bitrise-io/devcenter/edit/master/docs/index.md).
-
-If you don't want to edit the page on GitHub,
-feel free to [contact us](https://www.bitrise.io/contact),
-and we'll do the change for you!
