@@ -29,13 +29,17 @@ workflows:
             #!/bin/bash
             set -ex
 
+            sudocmd=""
+            if [[ "$(uname)" == "Linux" ]] ; then
+              sudocmd="sudo"
+            fi
 
             # On Linux, with apt installed python / python-pip
             # these commands have to be performed with `sudo`!
-            pip install --upgrade pip
-            pip install --upgrade virtualenv
-            pip install mkdocs && mkdocs --version
-            pip install mkdocs-material
+            ${sudocmd} pip install --upgrade pip
+            ${sudocmd} pip install --upgrade virtualenv
+            ${sudocmd} pip install -r requirements.txt 
+            mkdocs --version
 
   ci:
     before_run:
