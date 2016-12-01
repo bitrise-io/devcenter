@@ -38,7 +38,7 @@ workflows:
             # these commands have to be performed with `sudo`!
             ${sudocmd} pip install --upgrade pip
             ${sudocmd} pip install --upgrade virtualenv
-            pip install -r requirements.txt 
+            ${sudocmd} pip install -r requirements.txt 
             mkdocs --version
 
   ci:
