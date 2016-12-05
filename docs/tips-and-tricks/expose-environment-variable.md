@@ -80,6 +80,37 @@ workflows:
         - message: "Release Notes: $MY_RELEASE_NOTE"
 ```
 
+
+## Copy an environment variable to another key
+
+If you want to expose the value of an environment variable to be accessible
+through another environment variable key, you can simply expose the value with a new key.
+
+For example, if you want to copy the value of the `BITRISE_BUILD_NUMBER` environment variable
+and make it available under the environment variable key `MY_BUILD_NUMBER`, you just have to
+read the current value and expose it under the new key.
+
+To modify the first example here, which exposed a fix value:
+
+```
+envman add --key MY_RELEASE_NOTE --value "This is the release note"
+```
+
+simply reference/read the value of the other environment variable in the `envman add ...` command.
+
+To expose the value of `BITRISE_BUILD_NUMBER` under the key `MY_BUILD_NUMBER`:
+
+```
+envman add --key MY_BUILD_NUMBER --value "${BITRISE_BUILD_NUMBER}"
+```
+
+After this, subsequent steps can get the value of `BITRISE_BUILD_NUMBER` from the
+`MY_BUILD_NUMBER` environment variable.
+
+_Note: if you change the value of `BITRISE_BUILD_NUMBER` after this, the
+value of `MY_BUILD_NUMBER` won't be modified, that will still hold the original value!_
+
+
 ## Overwrite an Environment Variable if another one is set
 
 E.g. if a custom environment variable is set through the Build Trigger API.
