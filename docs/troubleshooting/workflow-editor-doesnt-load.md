@@ -1,0 +1,31 @@
+This can happen if you modified the `bitrise.yml` / workflow configuration in a way which crashes the Workflow Editor UI.
+
+If this would happen please [contact us](https://www.bitrise.io/contact) so we can fix the issue in the UI code,
+then you can fix the `bitrise.yml` through our API.
+
+You can find an example of how the API works [on GitHub](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/upload_download_bitrise_io/bitrise.yml).
+In short, you can use a simple `curl` call to download & to upload an app's config / `bitrise.yml` to [bitrise.io](https://www.bitrise.io).
+
+With the API you can download the `bitrise.yml` from [bitrise.io](https://www.bitrise.io) even if it breaks the Workflow Editor UI,
+fix it locally and then upload the fixed `bitrise.yml` with another API call.
+
+To download the `bitrise.yml` of an app using `curl`:
+
+```
+curl https://www.bitrise.io/api/app/BITRISE_APP_SLUG/config/download.yml?api_token=BITRISE_APP_API_TOKEN
+```
+
+!!! note "Where to get the App Slug and API Token?"
+    You can find both the app's App Slug and the API Token on the `Code` tab of the app
+    on [bitrise.io](https://www.bitrise.io).
+
+Save the `bitrise.yml` into a file, fix it, then you can upload it with another `curl` call.
+
+To upload the `bitrise.yml`:
+
+```
+curl -X POST --data-urlencode "app_config_datastore_yaml=$(cat path/to/bitrise.yml)" https://www.bitrise.io/api/app/BITRISE_APP_SLUG/config/upload.yml?api_token=BITRISE_APP_API_TOKEN
+```
+
+_Note: make sure that you set the right `path/to/bitrise.yml` - specify the path of
+the `bitrise.yml` file where you saved the fixed `bitrise.yml`!_
