@@ -41,6 +41,15 @@ pages:
   - Caching Gradle: caching/caching-gradle.md
   - Caching Maven: caching/caching-maven.md
   - Caching Ruby GEMs: caching/caching-ruby-gems.md
+- Bitrise CLI and bitrise.yml:
+  - Intro: bitrise-cli/index.md
+  - Install the Bitrise CLI: bitrise-cli/installation.md
+  - Run your first build: bitrise-cli/run-your-first-build.md
+  - Basics of bitrise.yml: bitrise-cli/basics-of-bitrise-yml.md
+  - Most important concepts: bitrise-cli/most-important-concepts.md
+  - Workflows: bitrise-cli/workflows.md
+  - Steps: bitrise-cli/steps.md
+  - Create your own Step: bitrise-cli/create-your-own-step.md
 - iOS:
   - iOS Code Signing: ios/code-signing.md
   - iOS Code Signing - Technical details: ios/code-signing-technical-details.md

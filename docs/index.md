@@ -32,5 +32,5 @@ You can read more at [Code Security](/getting-started/code-security).
 To run a Bitrise build on your machine, you can install our [open source runner](https://www.bitrise.io/cli)
 and use the `bitrise` command to execute your workflows locally.
 It's a great help when you're developing steps, debugging builds,
-or just want to use Bitrise for [any kind of automation](https://github.com/bitrise-io/steps-random-quote) on your machine.
+or just want to use Bitrise for _any kind of automation_ on your machine.
 
