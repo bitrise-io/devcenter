@@ -1,6 +1,6 @@
 You can improve your build times with the following tips.
 
-*Feel free to suggest other ways of optimizations!*
+__Feel free to suggest other ways of optimization!__
 
 ## Include your dependencies in your repository
 
@@ -31,3 +31,7 @@ By turning off "clean build" you can speed up subsequent Xcode steps.
 The first one will still have to do a full, clean build, because there's no build cache at the time it runs
 (as every build runs in a brand new, clean Virtual Machine, as descibed in [Code Security](/getting-started/code-security/)),
 but subsequent Xcode steps can use the build cache of the previous Xcode step(s), reducing the compilation time of the step.
+
+## Other
+
+__Feel free to suggest other ways of optimization!__
