@@ -104,6 +104,8 @@ pages:
   - I can't see my GitHub organization / repository on the Add New App page: faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
   - GitHub Pull Request / build Status indicator troubleshooting: faq/github-pull-request-status-troubleshooting.md
   - No builds are triggered when I push code into the repository: faq/no-builds-are-triggered-automatically.md
+- Troubleshooting:
+  - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
 - Tools:
   - Bitrise Tools: tools/bitrise-tools.md
 
