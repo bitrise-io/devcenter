@@ -21,7 +21,7 @@ you install the `Bitrise CLI` on your Mac/PC.
     and once the virtual machine is ready, the build is performed through the Bitrise CLI.
 
 
-## Bitrise CLI - the offline runner
+## Bitrise CLI - the open source, offline, automation runner
 
 To run a Bitrise build on your machine, you can install our [open source runner](https://www.bitrise.io/cli)
 and use the `bitrise` command to execute your _workflows_ locally.
