@@ -1,4 +1,26 @@
-Let's continue with our previous example and talk about what's what in the configuration:
+A bare minimal `bitrise.yml` is as simple as:
+
+```yaml
+format_version: 1.3.1
+```
+
+This configuration is valid, everything else is optional, but does not include anything to execute,
+there's nothing to `run`.
+
+A minimal configuration which you can `bitrise run`:
+
+```yaml
+format_version: 1.3.1
+workflows:
+  test:
+```
+
+This configuration can be executed with `bitrise run test`, and the `bitrise` CLI
+won't give you any errors, but of course there's still nothing declared to do.
+
+Let's continue with our example from the previous guide,
+which executes a single Script step when you run it with `bitrise run test`,
+and talk about what's what in the configuration:
 
 ```yaml
 format_version: 1.3.1
@@ -44,3 +66,8 @@ A quick walk through of this sample configuration:
 - `- content:` : the input we want to set. In this example we only wanted to specify the Content
   of the Script step, all other inputs are irrelevant.
 - `echo "Hello ${MY_NAME}!"` : this is the __value__ we specified for the `content` input.
+
+Read on to learn more about how you can use multiple workflows,
+define multiple steps to execute for a given workflow and for
+more advanced concepts. You'll be able to define your perfect automation
+configuration in no time!

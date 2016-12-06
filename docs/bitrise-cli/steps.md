@@ -1,5 +1,10 @@
+## Step data in bitrise.yml - your diff
 
-## Step reference
+The step data you provide in the `bitrise.yml` is your `diff` against
+the step's default data, the things you want to overwrite.
+
+
+## Step reference/ID format
 
 A step reference from the example `bitrise.yml` above:
 
@@ -36,3 +41,8 @@ new builds will use the "latest version at the time".
 For this reason, it's usually a good idea to specify the version of the step,
 so that your build does not break accidentally when a breaking change
 is introduced in a new version of the step.
+
+### Special step sources
+
+- `git`
+- `path`
