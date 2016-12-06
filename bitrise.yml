@@ -12,7 +12,9 @@ workflows:
         - content: |-
             #!/bin/bash
             set -ex
-            sudo apt-get update
+            if [[ "$(uname)" == "Linux" ]] ; then
+              sudo apt-get update
+            fi
     - script:
         deps:
           brew:
@@ -38,7 +40,7 @@ workflows:
             # these commands have to be performed with `sudo`!
             ${sudocmd} pip install --upgrade pip
             ${sudocmd} pip install --upgrade virtualenv
-            ${sudocmd} pip install -r requirements.txt 
+            ${sudocmd} pip install -r requirements.txt
             mkdocs --version
 
   ci:
