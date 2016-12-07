@@ -1,7 +1,226 @@
-## Step data in bitrise.yml - your diff
+## What is a Step
 
-The step data you provide in the `bitrise.yml` is your `diff` against
-the step's default data, the things you want to overwrite.
+A Step encapsulates a "build task"; the code to perform that task, the inputs/parameters
+you can define for the task, and the outputs the task generates.
+
+For example the `Git Clone` (id: `git-clone`) step performs a "git clone"
+of the specified repository, with the inputs you (or the system) specify (e.g.
+the branch, tag or commit to clone, the local path where the clone should happen, etc.).
+
+From a technical perspective a Step is a semver __versioned__ repository
+which includes the _code_ of the Step and the _interface_ definition of the Step.
+
+The _step interface definition_ (`step.yml`) includes information like the dependencies of the step,
+the inputs and outputs of the step, the title and description of the step;
+and other properties like the issue tracker / support URL, or
+the filter properties which define when the step should be performed or skipped
+and whether a failed step should mark the build as failed.
+
+From a configuration perspective all you have to know about Bitrise Steps
+is how you can include and configure them in your build configuration (`bitrise.yml`).
+
+To include a Step you have to reference it by a [Step reference/ID](#step-referenceid-format)
+in the `steps:` list of a Workflow.
+
+An example, with a single `script` step, which will be executed when you run `bitrise run test`:
+
+```yaml
+format_version: 1.3.1
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test:
+    steps:
+    - script:
+```
+
+
+!!! note "List of available steps (step IDs)"
+    You can list all the available steps in the main Bitrise StepLib
+    by running `bitrise step-list`, or by checking
+    [the steps/ directory of the main Bitrise StepLib repository](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps).
+
+
+Once you include a step in your build configuration (`bitrise.yml`),
+you can specify configurations for the step. The most common thing
+you'll do is to specify values for the step's inputs.
+You can do this with the `inputs:` list property of the step,
+defining the _key_ of the input and the _value_ you want to set.
+
+For example, to specify a simple script to perform for the `script` step,
+you can specify a value for the `script` step's `content` input.
+(_Note: you can list all the inputs of a step with `bitrise step-info STEP-ID`_)
+
+Let's do a simple "Hello World" script, using the `script` step:
+
+```yaml
+format_version: 1.3.1
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test:
+    steps:
+    - script@1.1.3:
+        inputs:
+        - content: "echo 'Hello World!'"
+```
+
+When you run the `test` workflow of this configuration with `bitrise run test`
+you'll now see that the `script` step prints the text `Hellow World` in its log:
+
+```
++------------------------------------------------------------------------------+
+| (0) script@1.1.3                                                             |
++------------------------------------------------------------------------------+
+| id: script                                                                   |
+| version: 1.1.3                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: bash                                                                |
+| time: 2016-12-07T17:05:17+01:00                                              |
++------------------------------------------------------------------------------+
+|                                                                              |
+Hello World!
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| ✓ | script@1.1.3                                                  | 0.30 sec |
++---+---------------------------------------------------------------+----------+
+```
+
+If the step doesn't have any required inputs you don't have to specify an input,
+and of course you can specify values for as many inputs as you want to.
+
+For example the `script` step can run Ruby scripts too, not just Bash scripts.
+To do this, in addition to specifying the script in the `content` input
+you also have to specify the "runner" input:
+
+```yaml
+format_version: 1.3.1
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test:
+    steps:
+    - script@1.1.3:
+        inputs:
+        - content: "puts 'Hello Ruby!'"
+        - runner_bin: ruby
+```
+
+Step input values are always __string__ / text values, as the input id/key and the value
+are passed to the step as environment variables
+([more information](/bitrise-cli/most-important-concepts/#every-input-output-and-parameter-is-an-environment-variable)),
+and the value can be multi line too, using the standard YAML multi line format.
+An example multi line Bash script:
+
+```yaml
+format_version: 1.3.1
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test:
+    steps:
+    - script@1.1.3:
+        inputs:
+        - content: |
+            #!/bin/bash
+            set -ex
+            var_to_print='Hello World!'
+            echo "${var_to_print}"
+```
+
+!!! note "Watch out for the indentation!"
+    Indentation in the YAML format is very important!
+    You should use two-spaces indentation, and you can't use tabs to indent!
+
+    If you use a multi line value, like the one above, it's important that you
+    have to _indent the value with two spaces_, compared to the key!
+
+
+You can change other properties of the step too, not just the inputs.
+For example, if you want to "force" run the step even if a previous step fails,
+you can set the `is_always_run` property to `true`:
+
+```yaml
+format_version: 1.3.1
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test:
+    steps:
+    - script@1.1.3:
+        is_always_run: true
+        inputs:
+        - content: "puts 'Hello Ruby!'"
+        - runner_bin: ruby
+```
+
+or if you want to specify a better, more descriptive title for the step,
+you can use the `title` property:
+
+```yaml
+format_version: 1.3.1
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test:
+    steps:
+    - script@1.1.3:
+        title: Print Hello Ruby
+        is_always_run: true
+        inputs:
+        - content: "puts 'Hello Ruby!'"
+        - runner_bin: ruby
+```
+
+
+### The Step data you define in bitrise.yml - your diff!
+
+You might already suspect it after the examples above:
+the step data / infos you specify in the `bitrise.yml` are the parameters
+of the step __you want to change__ / overwrite.
+
+If you don't specify any input or other step property, only the step (reference/iD),
+that means that the step should run with the default values (defined by the step's developer).
+
+You could also think about this as a `diff`. The step defines values for the step interface
+properties, and in the `bitrise.yml` you define a `diff`, the things you want to change
+and the values to change to.
+
+Let's go through the example above:
+
+```yaml
+    - script@1.1.3:
+        title: Print Hello Ruby
+        is_always_run: true
+        inputs:
+        - content: "puts 'Hello Ruby!'"
+        - runner_bin: ruby
+```
+
+The `- script@1.1.3:` line selects the step, and the properties you define after this
+(with an indentation!)
+are the things you want to overwrite.
+
+To see the step's raw interface definition you can check it in the step library.
+In these examples we always use the [main Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
+The step interface definitions can be found in the StepLib's
+[`steps` directory](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps),
+in this case it's in the [steps/script/1.1.3](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps/script/1.1.3) directory,
+as we used the `1.1.3` version of the `script` step.
+The [`step.yml` in this directory is the step's interface definition](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml).
+
+[Check the `step.yml`](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml),
+you can see all the properties defined for this version of the step.
+Now, if you check our example above, all we did is to
+change the `title` property (from `Script` to `Print Hello Ruby`),
+the `is_always_run` property (from `false` to `true`)
+and two inputs of the step, `content` (from a default, example script content)
+and `runner_bin` (from `/bin/bash` to `ruby`).
+
+All other properties you can see in the step version's `step.yml` will be read
+from the `step.yml`, you don't have to define those. You only have to define
+the things __you want to change__, compared to the values specified for the step
+in the step's interface definition (`step.yml`).
 
 
 ## Step reference/ID format
