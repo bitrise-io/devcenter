@@ -51,6 +51,7 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 
 ## Japanese
 
+* [BitriseのScheduled Buildを使ってキューが詰まる問題を改善する](http://qiita.com/shobyshoby/items/610aaa40b4a49498849c) - *Use Bitrise's Scheduled Build to optimize build times*
 * [BITRISEを用いたAndroidアプリの自動配布](http://qiita.com/sjnya/items/6ac1c800f16a7f24201a) - *Automatic distribution of Android apps using Bitrise*
 * [iOS用のCIサービスBitriseを使ってみた](http://qiita.com/keygx/items/ab6149476f43ec51eb5c) - *Detailed introduction guide*
 * [iOSアプリ用のCI環境を作ろう](http://qiita.com/kou_hon/items/51dda72ad62c0c03a720) - *Using Bitrise to deploy iOS apps to Deploygate*
