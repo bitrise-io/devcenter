@@ -41,6 +41,8 @@ pages:
   - Caching Gradle: caching/caching-gradle.md
   - Caching Maven: caching/caching-maven.md
   - Caching Ruby GEMs: caching/caching-ruby-gems.md
+- CLI:
+  - Why you should use the Steplib: cli/why-you-should-use-the-steplib.md
 - iOS:
   - iOS Code Signing: ios/code-signing.md
   - iOS Code Signing - Technical details: ios/code-signing-technical-details.md
