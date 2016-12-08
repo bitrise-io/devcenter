@@ -181,7 +181,10 @@
 
           <!-- Headline -->
           {% if not h1 %}
-            <h1>{{ page_title | default(site_name, true)}}</h1>
+            <h1>
+              {{ page_title | default(site_name, true)}}
+              <a class="headerlink" href="{{ page.edit_url }}">Edit this page on GitHub!</a>
+            </h1>
           {% endif %}
 
           <!-- Article content -->
