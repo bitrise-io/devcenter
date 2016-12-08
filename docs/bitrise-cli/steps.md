@@ -1,6 +1,6 @@
 ## What is a Step
 
-A Step encapsulates a "build task"; the code to perform that task, the inputs/parameters
+A Step encapsulates a "build task": the code to perform that task, the inputs/parameters
 you can define for the task, and the outputs the task generates.
 
 For example the `Git Clone` (id: `git-clone`) step performs a "git clone"
@@ -219,7 +219,7 @@ and `runner_bin` (from `/bin/bash` to `ruby`).
 
 All other properties you can see in the step version's `step.yml` will be read
 from the `step.yml`, you don't have to define those. You only have to define
-the things __you want to change__, compared to the values specified for the step
+__the things you want to change__, compared to the values specified for the step
 in the step's interface definition (`step.yml`).
 
 
@@ -263,5 +263,84 @@ is introduced in a new version of the step.
 
 ### Special step sources
 
-- `git`
-- `path`
+There are two special step sources:
+
+- `git::`
+- and `path::`
+
+When you use one of these sources, the step won't be identified through
+a Step Library, but through the ID data you specify.
+
+For example, the `script` step's github is at: `https://github.com/bitrise-io/steps-script`.
+To reference the `script` step directly through a git reference,
+you can use the `git::` source, the step's git clone URL,
+and the branch or tag in the repository.
+
+Example, to reference the `1.1.3` version tag of the script step's repository:
+
+```
+- git::https://github.com/bitrise-io/steps-script.git@1.1.3:
+```
+
+In general, __whenever you can use a step version through a Step Library,
+you should do that__, instead of using the `git::` source type,
+because features like _local step caching_ or _network caching_ / alternative
+download URLs are only supported for steps shared in a StepLib.
+
+But this type of referencing allows certain things you can't get through
+a StepLib. For example the `git::` source type can be used for not-yet-published or
+work-in-progress states of a step.
+If you [develop your own Step](/bitrise-cli/create-your-own-step/) you can use
+this `git::` source type to test your step _before you would publish it_
+in a StepLib.
+
+Example:
+
+```
+- git::https://github.com/bitrise-io/steps-script.git@BRANCH-OR-TAG:
+```
+
+`BRANCH-OR-TAG` of course have to be a branch or tag which does exist in
+the step's repository. For example, if you develop your own Step
+and you work on a `soon-to-be-released` branch, you can
+use that state of the step with:
+
+```
+- git::https://github.com/bitrise-io/steps-script.git@soon-to-be-released:
+```
+
+The second special source is `path::`, which works in a similar way,
+except for __local paths__, and it requires no version information.
+
+A good example for this is, again, when you create and work on your own
+Step, you can run the state of the Step (step's code) directly on your Mac/PC,
+without even pushing it to the step's repository.
+
+Both absolute and relative (relative to the `bitrise.yml`!) local paths are supported, so you can:
+
+```
+- path::/path/to/my/step:
+```
+
+as well as:
+
+```
+- path::./relative/path:
+```
+
+During step development it's a best practice to have a `bitrise.yml` directly
+in the step's repository, for unit and ad hoc testing. In this case _the current directory is the step directory_,
+and the step can be referenced with:
+
+```
+- path::./:
+```
+
+_This can also be used if you want to include your build steps in your app's source code._
+For example if you store the `script` step's code in your source code repository,
+under the `steps/script` directory, you can run the version included in your source code
+repository with:
+
+```
+- path::./steps/script:
+```
