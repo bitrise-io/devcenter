@@ -27,10 +27,14 @@ the logs of every step that ran during the workflow.
 You can read more at [Code Security](/getting-started/code-security).
 
 
-## Offline CLI
+## Bitrise CLI - the open source, offline, automation runner
 
-To run a Bitrise build on your machine, you can install our [open source runner](https://www.bitrise.io/cli)
+To run a `bitrise` build on your machine, you can install our [open source runner](https://www.bitrise.io/cli)
 and use the `bitrise` command to execute your workflows locally.
-It's a great help when you're developing steps, debugging builds,
-or just want to use Bitrise for [any kind of automation](https://github.com/bitrise-io/steps-random-quote) on your machine.
+_No [bitrise.io](https://www.bitrise.io) account required to use the Bitrise CLI._
 
+It's a great help when you're developing steps, debugging builds,
+or just want to use Bitrise for _any kind of automation_ on your machine.
+
+You can find more information about the offline runner
+in the [Bitrise CLI and bitrise.yml](/bitrise-cli/) section of the DevCenter.

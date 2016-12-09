@@ -120,6 +120,22 @@ _A single webhook event will never be Code Push, Tag Push and Pull Request at th
 a single webhook is always related to only one type (Code Push, Tag Push or Pull Request).
 
 
+## One trigger = one build
+
+One trigger can only select a single workflow / can only start a single build.
+__The first item which matches the trigger will select the workflow for the build!__
+
+__If you want to run more than one workflow__, you can
+[Chaining workflows](/bitrise-cli/workflows/#chaining-workflows-and-reusing-workflows)
+after each other. _The workflows chained this way won't run in parallel_,
+but the full chain of workflows will be executed, in the order you chain them.
+
+__The order of the items__ also matter: if you'd specify a `push_branch: master` item __after__ a
+`push_branch: "*"` item, the `push_branch: master` _would never be selected_
+as every code push event would match `push_branch: "*"` first,
+and __the first item which matches the trigger will select the workflow for the build!__
+
+
 ## How to build only a single branch
 
 If you want to build only a single branch, for every code push, but for nothing else (no push to
