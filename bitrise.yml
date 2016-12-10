@@ -75,6 +75,9 @@ workflows:
             git clone --branch gh-pages "$REPO_URL" ./site
             mkdocs build --clean
             cd site/
+            # github pages - cname file
+            echo 'devcenter.bitrise.io' > CNAME
+            #
             git config --global user.email "letsconnect@bitrise.io"
             git config --global user.name "Bitrise Bot"
             git add .
