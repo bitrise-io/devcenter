@@ -57,6 +57,8 @@ workflows:
   deploy-to-github-pages:
     before_run:
     - setup
+    envs:
+    - DEVCENTER_CNAME_URL: 'devcenter.bitrise.io'
     steps:
     - script:
         description: |
@@ -76,7 +78,7 @@ workflows:
             mkdocs build --clean
             cd site/
             # github pages - cname file
-            echo 'devcenter.bitrise.io' > CNAME
+            echo "$DEVCENTER_CNAME_URL" > CNAME
             #
             git config --global user.email "letsconnect@bitrise.io"
             git config --global user.name "Bitrise Bot"
