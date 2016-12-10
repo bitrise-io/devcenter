@@ -1,4 +1,4 @@
-On Bitrise, we have `macOS` and `Linux` virtual machines hosted for your builds.
+On [bitrise.io](https://www.bitrise.io), we have `macOS` and `Linux` virtual machines hosted for your builds.
 You can select from multiple stacks, each with its own list of preinstalled tool versions.
 Read more about available stacks and stack prepare types in the [Available Stacks docs](/infrastructure/available-stacks/).
 
