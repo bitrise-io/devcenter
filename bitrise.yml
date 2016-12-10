@@ -79,6 +79,8 @@ workflows:
             cd site/
             # github pages - cname file
             echo "$DEVCENTER_CNAME_URL" > CNAME
+            # timestamp - so that we always have a git change
+            date > build-date.log
             #
             git config --global user.email "letsconnect@bitrise.io"
             git config --global user.name "Bitrise Bot"
