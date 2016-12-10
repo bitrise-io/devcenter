@@ -1,4 +1,4 @@
-In short Bitrise is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration)
+In short __Bitrise__ is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration)
 and [Delivery](https://en.wikipedia.org/wiki/Continuous_delivery) (CI/CD) Platform as a Service (PaaS)
 with a main focus on mobile app development (`iOS`, `Android`, `Xamarin`, ...).
 
