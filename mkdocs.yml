@@ -119,6 +119,8 @@ pages:
   - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
 - Tools:
   - Bitrise Tools: tools/bitrise-tools.md
+- API:
+  - Build Trigger API: api/build-trigger.md
 
 markdown_extensions:
   - codehilite(css_class=code)
