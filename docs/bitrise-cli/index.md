@@ -66,7 +66,8 @@ _Custom StepLibs can also provide fallbacks (alternative download URLs, caches),
 automatic and preiodic checks etc. to provide the best reliability, but you get all these for free
 if you use the main Bitrise StepLib._
 
-### Why to use the StepLib and Steps?
+
+### Why to use the StepLib and Steps instead of ad-hoc build scripts?
 
 Same reason why code libraries / dependencies are awesome:
 
