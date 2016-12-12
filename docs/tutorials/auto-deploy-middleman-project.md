@@ -105,7 +105,7 @@ For access control, enter `public-read` or `private`, as advised.
 ## 7. Run build manually
 
 Once the configuration of your Workflow is complete,
-you can run a build manually by clicking on the `Start a build` button on the app's page (where you see the
+you can run a build manually by clicking on the `Start/Schedule a build` button on the app's page (where you see the
 `Builds`, `Workflow`, `Team`, ... tabs).
 
 
