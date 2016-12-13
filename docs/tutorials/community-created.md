@@ -51,6 +51,7 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 
 ## Japanese
 
+* [bitrise + deploygateでtitaniumアプリ評価環境を作る](http://qiita.com/imoans/items/aa6dec9392d2ed0b77cd) - *Titanium, Bitrise and deploygate*
 * [BitriseでiTunesConnectに自動でipaファイルをビルド&iOSリリース手順](http://qiita.com/narukun/items/960d71f6577146550b08) - *Automate the deployment of iOS apps to iTunesConnect*
 * [BitriseのScheduled Buildを使ってキューが詰まる問題を改善する](http://qiita.com/shobyshoby/items/610aaa40b4a49498849c) - *Use Bitrise's Scheduled Build to optimize build times*
 * [BITRISEを用いたAndroidアプリの自動配布](http://qiita.com/sjnya/items/6ac1c800f16a7f24201a) - *Automatic distribution of Android apps using Bitrise*
