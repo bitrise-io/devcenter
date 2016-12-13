@@ -10,7 +10,7 @@ To add a new app to Bitrise go to your [dashboard](https://bitrise.io/dashboard)
 
 ![Screenshot](/img/adding-a-new-app/add_new_app.png)
 
-In case this is the first application the dashboard will show you the quickstart guide instead of a list of you apps. There you can choose to add your own app right away.
+In case this is the first application the dashboard will show you the quickstart guide instead of a list of you apps. There you can choose to add your first app right away.
 
 Let's check out how you can [connect a repository](/adding-a-new-app/connecting-a-repository)!
 
