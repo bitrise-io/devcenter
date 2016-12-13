@@ -37,7 +37,6 @@ set -e
 set -x
 
 # write your script here
-echo y | android update sdk --no-ui --all --filter extra-android-support | grep 'package installed'
 echo y | android update sdk --no-ui --all --filter extra-android-m2repository | grep 'package installed'
 echo y | android update sdk --no-ui --all --filter extra-google-m2repository | grep 'package installed'
 ```
