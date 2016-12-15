@@ -1,7 +1,7 @@
 A workflow is a collection of steps, environment variables,
 and other configurations for a single `bitrise run`.
 
-The only requirement for a workflow is an ID for the step.
+The only requirement for a workflow is an ID.
 
 ```yaml
 format_version: 1.3.1
