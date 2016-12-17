@@ -44,6 +44,25 @@ _the configuration is not tied to the commit / state of the repository_.
 You can simply change a parameter and hit "rebuild", the new build
 will use the latest configuration from [bitrise.io](https://www.bitrise.io).
 
+### You can't edit the configuration in the Workflow Editor on bitrise.io
+
+The Workflow Editor on [bitrise.io](https://www.bitrise.io) can only be used
+to visualize and edit the configuration stored on [bitrise.io](https://www.bitrise.io).
+
+The [offline workflow editor](https://github.com/bitrise-io/bitrise-workflow-editor)
+of course can be used, so this is probably not a huge issue - and we're
+working on it to make it as streamlined as possible - but might
+make it harder to get started (as you have to install the Bitrise CLI
+locally).
+
+### Pull Requests can run builds with any custom configuration
+
+When someone sends a Pull Request they can modify the `bitrise.yml`
+in your repository any way they like it. A recent trend for example
+is to send pull requests which run a bitcoin miner, as long as
+that's possible. This can make _your_ builds to queue, until you
+abort the related build or it hits the build time limit.
+
 
 ## Example to use bitrise.yml from the repository
 
@@ -65,3 +84,53 @@ The example here is really simple to setup, should work in most cases (unless
 you need a VPN for cloning the repository for example), but __it also requires
 you to maintain the Trigger Map on [bitrise.io](https://www.bitrise.io) instead
 of in the repository__, as that is the recommended solution.
+
+Step by step:
+
+1. Create an app on [bitrise.io](https://www.bitrise.io), or if you already have it registered
+   open it.
+1. Go to the `Workflow` tab to open the Workflow Editor.
+1. In the Workflow Editor switch to `bitrise.yml` mode
+1. Copy the [bitrise.yml content for bitrise.io](#bitriseyml-content-for-bitriseio) from below and paste
+   it into the editor on [bitrise.io](https://www.bitrise.io)
+1. Save the changes.
+
+### bitrise.yml content for bitrise.io
+
+```
+---
+format_version: 1.4.0
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+trigger_map:
+- push_branch: "*"
+  workflow: ci
+- pull_request_target_branch: "*"
+  workflow: ci
+
+workflows:
+  _run_from_repo:
+    steps:
+    - activate-ssh-key:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+    - git-clone: {}
+    - script:
+        title: continue from repo
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+            bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"
+  ci:
+    after_run:
+    - _run_from_repo
+
+  another-workflow:
+    after_run:
+    - _run_from_repo
+
+```
+
+How this works:
+
+WIP
