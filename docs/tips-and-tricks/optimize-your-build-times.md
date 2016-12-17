@@ -11,7 +11,7 @@ For example, in case of CocoaPods, you can delete the CocoaPods Install step fro
 if you include your `Pods` directory **and** the CocoaPods generated `.xcworkspace` file in your repository.
 
 You can read more about the pros & cons of including your dependencies in your repository at:
-[Should I commit my dependencies into my repository?](/tips-and-tricks/should-i-commit-my-dependencies-into-my-repository/)
+[Should I commit my dependencies into my repository?](/faq/should-i-commit-my-dependencies-into-my-repository/)
 
 
 ## Use the Build Cache

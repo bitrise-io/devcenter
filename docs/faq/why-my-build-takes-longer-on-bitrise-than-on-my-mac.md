@@ -38,7 +38,7 @@ You can find more information about this issue at:
 This issue is eliminated by using clean virtual machines on [bitrise.io](https://www.bitrise.io),
 where only the code and dependencies you specify (which are under version control, and are reproducible) are available.
 If it works there then it'll work on a brand new Mac/PC too,
-when a new colleague joins your team and starts to work on the project. 
+when a new colleague joins your team and starts to work on the project.
 
 
 ## Network Resources
@@ -54,7 +54,7 @@ have to be performed for every build in a clean environment.
 Possible solutions:
 
 * Commit your dependencies into your repository -
-  read more: [Should I commit my dependencies into my repository?](/tips-and-tricks/should-i-commit-my-dependencies-into-my-repository) 
+  read more: [Should I commit my dependencies into my repository?](/faq/should-i-commit-my-dependencies-into-my-repository)
 * Cache your dependencies in Bitrise Build Cache -
   read more: [Using the Build Cache](/caching/about-caching)
 
