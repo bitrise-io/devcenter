@@ -102,7 +102,7 @@ pages:
   - "Xcode Archive: export options": tips-and-tricks/xcodebuild-export-options.md
   - "Install Any Additional Tool": tips-and-tricks/install-additional-tools.md
   - Optimize your build times: tips-and-tricks/optimize-your-build-times.md
-  - Should I commit my dependencies into my repository?: tips-and-tricks/should-i-commit-my-dependencies-into-my-repository.md
+  - Use bitrise.yml from repository: tips-and-tricks/use-bitrise-yml-from-repository.md
 - Frequently Asked Questions (FAQ):
   - Available Environment Variables: faq/available-environment-variables.md
   - How to change the owner of an app: faq/how-to-change-the-owner-of-an-app.md
@@ -115,6 +115,7 @@ pages:
   - GitHub Pull Request / build Status indicator troubleshooting: faq/github-pull-request-status-troubleshooting.md
   - No builds are triggered when I push code into the repository: faq/no-builds-are-triggered-automatically.md
   - Why my build takes longer on Bitrise than on my Mac?: faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
+  - Should I commit my dependencies into my repository?: faq/should-i-commit-my-dependencies-into-my-repository.md
 - Troubleshooting:
   - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
 - Tools:
