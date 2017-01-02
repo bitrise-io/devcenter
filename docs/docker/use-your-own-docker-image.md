@@ -1,3 +1,7 @@
+!!! note "Have a question or suggestion? Join the discussion!"
+    You can find this guide's discussion topic at:
+    [discuss.bitrise.io/t/69](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69)
+
 There are two ways to use `docker` on [bitrise.io](https://www.bitrise.io):
 
 1. Run `docker` commands yourself, e.g. with a `Script` step
@@ -288,3 +292,7 @@ in the `Stack Selector` section.
 You just have to copy paste the ID of your image (e.g. `bitriseio/docker-bitrise-base`)
 into the `Docker image to use` field and click the `Save` button.
 Your next build will use the image you specified.
+
+!!! note "Have a question or suggestion? Join the discussion!"
+    You can find this guide's discussion topic at:
+    [discuss.bitrise.io/t/69](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69)
