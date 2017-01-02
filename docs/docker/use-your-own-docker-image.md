@@ -1,3 +1,7 @@
+!!! note "Have a question or suggestion? Join the discussion!"
+    You can find this guide's discussion topic at:
+    [discuss.bitrise.io/t/69](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69)
+
 There are two ways to use `docker` on [bitrise.io](https://www.bitrise.io):
 
 1. Run `docker` commands yourself, e.g. with a `Script` step
@@ -249,10 +253,15 @@ statement at the top of the `Dockerfile`, like the one you can see at:
 [https://github.com/viktorbenei/docker-bitrise-android-ext/blob/master/Dockerfile#L1](https://github.com/viktorbenei/docker-bitrise-android-ext/blob/master/Dockerfile#L1)
 (_don't forget to commit & push it!_).
 
-!!! note "Which image to use? - Performance notes"
-    If you don't need the Android tools you should base your image on the `bitrise-base` image
-    and install just the things you need. If you really need the Android tools then you should use
-    the `android` image, and you should only use the `android-ndk` image as the base image if you actually need the NDK.
+!!! note "Which image to use?"
+    1. If you don't need the Android tools you should base your image on
+       the __bitrise-base__ (`bitriseio/docker-bitrise-base`) image
+       and install just the things you need.
+    1. If you need the Android tools then you should use
+       the __android__ (`bitriseio/docker-android`) image
+       or the __bitrise-base__ (`bitriseio/docker-bitrise-base`) image.
+    1. You should only use the __android-ndk__ (`bitriseio/android-ndk`) image
+       as the base image if you actually need the NDK.
 
     From a performance perspective: you should install the least amount of tools in your image,
     as it'll make your image smaller, which means faster download & build start.
@@ -288,3 +297,7 @@ in the `Stack Selector` section.
 You just have to copy paste the ID of your image (e.g. `bitriseio/docker-bitrise-base`)
 into the `Docker image to use` field and click the `Save` button.
 Your next build will use the image you specified.
+
+!!! note "Have a question or suggestion? Join the discussion!"
+    You can find this guide's discussion topic at:
+    [discuss.bitrise.io/t/69](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69)
