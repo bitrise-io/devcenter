@@ -32,6 +32,11 @@ The only thing you have to care about is that it should be after the step(s) whi
 For example in case of `CocoaPods` you should put the `Cache:Push` step anywhere after the `CocoaPods` install,
 because that's the step which generates, or updates the directory (`./Pods`) which is cached.
 
+## Example build cache configurations
+
+You can find example build cache configurations / guides at:
+[discuss.bitrise.io/tags/build-cache](https://discuss.bitrise.io/tags/build-cache)
+
 
 ## Downloading and deleting caches
 
