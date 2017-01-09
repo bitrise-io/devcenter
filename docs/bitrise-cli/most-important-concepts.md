@@ -74,6 +74,7 @@ __The environment variable processing order:__
 
 1. [Bitrise CLI exposed environment variables]((/faq/available-environment-variables/#exposed-by-the-bitrise-cli))
 1. [Secrets](/bitrise-cli/secrets/)
+1. One-off environment variables specified for the build through the [Build Trigger API](/api/build-trigger)
 1. `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/))
 1. [Workflow environment variables](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
 1. Step inputs
