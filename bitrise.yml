@@ -42,6 +42,7 @@ workflows:
             ${sudocmd} pip install --upgrade virtualenv
             ${sudocmd} pip install -r requirements.txt
             mkdocs --version
+            pip show mkdocs-material
 
   ci:
     before_run:
