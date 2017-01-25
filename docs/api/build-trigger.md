@@ -44,6 +44,26 @@ A minimal sample JSON body, which specifies _master_ as the `branch` parameter:
 }
 ```
 
+__To pass this JSON payload__ you can either pass it as the __body__ of the request __as string__ (the JSON object serialized to string),
+or if you want to pass it as an object (e.g. if you want to call it from JavaScript) then you have to include a root `payload`
+element, or set the JSON object as the value of the `payload` POST parameter.
+
+jQuery example using the `payload` parameter:
+
+```
+$.post("https://www.bitrise.io/app/APP-SLUG/build/start.json", {
+    "payload":{
+        "hook_info":{
+            "type":"bitrise",
+            "api_token":"APP-API-TOKEN"
+        },
+        "build_params":{
+            "branch":"master"
+        }
+    }
+})
+```
+
 
 ## Build Params
 
