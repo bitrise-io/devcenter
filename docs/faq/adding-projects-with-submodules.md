@@ -8,7 +8,7 @@ the build successful.
 
 If your git hosting service supports it, the best, most secure way is to
 register __the same SSH key__ for every repository you have to access during the build,
-as "Deploymen keys". Due to technical reasons (true for most git hosting services),
+as "Deployment keys". Due to technical reasons (true for most git hosting services),
 you should not use multiple SSH keys, instead use the same SSH key for every repository!
 
 __If your git hosting service does not support the use of a single SSH key
