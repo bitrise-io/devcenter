@@ -71,8 +71,8 @@ set -e
 set -x
 
 # write your script here
-echo y | android update sdk --no-ui --all --filter android-18 | grep 'package installed
-echo y | android update sdk --no-ui --all --filter build-tools-18.0.1 | grep 'package installed
+echo y | android update sdk --no-ui --all --filter android-18 | grep 'package installed'
+echo y | android update sdk --no-ui --all --filter build-tools-18.0.1 | grep 'package installed'
 ```
 
 *The `echo y | ` prefix is really important.
