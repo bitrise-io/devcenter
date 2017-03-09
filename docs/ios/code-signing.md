@@ -141,7 +141,7 @@ and the second one to App Store)._
 
 There are third party tools which can be used for managing your code signing files,
 like [fastlane match](https://github.com/fastlane/fastlane/tree/master/match) -
-related bitrise.io setup guide: [How to configure fastlane match for Bitrise](/tips-and-tricks/how-to-configure-fastlane-match-for-bitrise/) -
+related bitrise.io setup guide: [How to configure fastlane match for Bitrise](/fastlane/how-to-configure-fastlane-match-for-bitrise/) -
 or [fastlane sigh](https://github.com/fastlane/fastlane/tree/master/sigh).
 
 !!! warning
