@@ -43,9 +43,9 @@ at the next time the Stack is updated.
 
 ## Virtual machine updates
 
-Updates are always announced on our [News Blog](http://blog.bitrise.io/)
+Updates are always announced in the [#changelog category of discuss.bitrise.io](https://discuss.bitrise.io/c/changelog)
 and can be seen on [your Bitrise Dashboard](https://www.bitrise.io/dashboard).
-We will also send you a *Platform Updates* email about significant changes,
+We will also send you a *Platform Updates* notification about significant changes,
 unless you disable this feature under your [account settings page](https://www.bitrise.io/me/profile).
 
 ### Stack updates
