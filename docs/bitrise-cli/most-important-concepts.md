@@ -41,7 +41,7 @@ envman add --key MY_TEST_ENV_KEY --value 'test value for test key'
 ```
 
 You can find more examples in [envman's README](https://github.com/bitrise-io/envman),
-and in the [Expose an Environment Variable and use it in another Step](/tips-and-tricks/expose-environment-variable) guide.
+and in the [Expose an Environment Variable and use it in another Step](/docs/tips-and-tricks/expose-environment-variable.md) guide.
 
 
 ## Availability order of environment variables
@@ -49,17 +49,17 @@ and in the [Expose an Environment Variable and use it in another Step](/tips-and
 Environment variables are available __after__ the environment variable
 is "processed".
 
-There are a few environment variables [exposed by the Bitrise CLI itself](/faq/available-environment-variables/#exposed-by-the-bitrise-cli),
+There are a few environment variables [exposed by the Bitrise CLI itself](/docs/faq/available-environment-variables.md#exposed-by-the-bitrise-cli),
 those are available from the start (e.g. `BITRISE_SOURCE_DIR` and `BITRISE_TRIGGERED_WORKFLOW_ID`).
 
 All other environment variables are "processed" / made available _as the build progresses._
 
 There are two types of environment variables which are processed and
 made available before the workflow would be executed:
-[Secrets](/bitrise-cli/secrets/) and `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
+[Secrets](/docs/bitrise-cli/secrets.md) and `App Env Vars` (`app: envs:` in the [bitrise.yml](/docs/bitrise-cli/basics-of-bitrise-yml.md)).
 
 After these, the processing of the specified Workflow starts, and the
-[environment variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
+[environment variables specified for that Workflow](/docs/bitrise-cli/workflows.md#define-workflow-specific-parameters--environment-variables)
 are made available. If the workflow has before or after workflows, when
 a specific workflow is processed (right before the first step of the workflow would run)
 the workflow's environment variables are processed and made available.
@@ -72,11 +72,11 @@ so those are available for subsequent steps __after the Step finishes__.
 
 __The environment variable processing order:__
 
-1. [Bitrise CLI exposed environment variables]((/faq/available-environment-variables/#exposed-by-the-bitrise-cli))
-1. [Secrets](/bitrise-cli/secrets/)
-1. One-off environment variables specified for the build through the [Build Trigger API](/api/build-trigger)
-1. `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/))
-1. [Workflow environment variables](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
+1. [Bitrise CLI exposed environment variables]((/docs/faq/available-environment-variables.md#exposed-by-the-bitrise-cli))
+1. [Secrets](/docs/bitrise-cli/secrets.md)
+1. One-off environment variables specified for the build through the [Build Trigger API](/docs/api/build-trigger.md)
+1. `App Env Vars` (`app: envs:` in the [bitrise.yml](/docs/bitrise-cli/basics-of-bitrise-yml.md))
+1. [Workflow environment variables](/docs/bitrise-cli/workflows.md#define-workflow-specific-parameters--environment-variables)
 1. Step inputs
 1. Step outputs
 
@@ -110,5 +110,5 @@ other step __after__ the step (which generates the outputs) completes.
 
 You can find more information about environment variable availability
 of Workflow env vars in chained workflows in the
-[Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#note-about-workflow-environment-variables)
+[Workflows: Note about workflow environment variables](/docs/bitrise-cli/workflows.md#note-about-workflow-environment-variables)
 documentation.
