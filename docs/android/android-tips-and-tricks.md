@@ -124,8 +124,8 @@ which can be useful in case there's not enough RAM available in the system.
 
 ## Emulators
 
-You can use our Android emulator steps to create & boot emulators:
-[http://www.bitrise.io/integrations#?filter=emulator](http://www.bitrise.io/integrations#?filter=emulator).
+You can find and use our Android emulator steps to create & boot emulators:
+[http://www.bitrise.io/integrations](http://www.bitrise.io/integrations).
 
 First you have to create an emulator with a `Create Android emulator` step,
 where you can set the Android version and a couple of other parameters for the new emulator,
