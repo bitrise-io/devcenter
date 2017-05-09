@@ -122,6 +122,7 @@ pages:
   - Bitrise Tools: tools/bitrise-tools.md
 - API:
   - Build Trigger API: api/build-trigger.md
+  - App Status / Badge API: api/app-status-badge.md
 
 markdown_extensions:
   - codehilite(css_class=code)
