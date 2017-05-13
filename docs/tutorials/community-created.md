@@ -32,6 +32,7 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 * [How to automate your React Native deployment workflow using Bitrise](https://logbook.hanno.co/bitrise-deployment-workflow-react-native/)
 * [Continuous Integration for React Native Apps With Fastlane and Bitrise (iOS)](http://blog.thebakery.io/continuous-integration-for-react-native-applications-with-fastlane-and-bitrise-ios-version/)
 * [Snowflake: React Native app Continuous Integration with Bitrise.io](https://github.com/bartonhammond/snowflake/#continuous-integration) - *detailed setup guide with youtube videos*
+* [Bitrise + CodePush + React Native = Ideal Mobile CI Setup?](https://medium.com/@mthakkar_/bitrise-codepush-react-native-ideal-mobile-ci-setup-6283b86146c)
 
 ### Cordova
 
