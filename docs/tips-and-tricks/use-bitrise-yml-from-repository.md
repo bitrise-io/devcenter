@@ -91,7 +91,7 @@ Step by step:
    open it.
 1. Go to the `Workflow` tab to open the Workflow Editor.
 1. In the Workflow Editor switch to `bitrise.yml` mode
-1. In the `bitirse.yml` mode:
+1. In the `bitrise.yml` mode:
     - If you already have a configuration which you want to use, download the `bitrise.yml` first,
       and save it into the _root_ of your repository.
       _There's a button to quickly download the current `bitrise.yml`._
