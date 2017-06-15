@@ -24,4 +24,7 @@ before you'd even commit the code, as well as how you can test and use your step
 in any build by using [the `git::` step reference](/bitrise-cli/steps/#special-step-sources), and finally (and optionally)
 how you can share your step with others through the Bitrise StepLib.
 
-_If you'd have any question, please [contact us](https://www.bitrise.io/contact)!_
+
+If you'd have any questions visit our [community discussion site](https://discuss.bitrise.io/) or [contact us](https://www.bitrise.io/contact)!
+
+**Need some inspiration for a new step idea?** Look no further, we have a list! [This way please](https://discuss.bitrise.io/search?q=tags%3Acontrib-this-feature%20tag%3Astep) :)
