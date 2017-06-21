@@ -34,7 +34,7 @@ You can run `codesigndoc` with the [one liner you can find in its Readme](https:
     There are two one-liners, one for __Xcode__ projects, and one for __Xamarin__ (iOS) projects.
     Make sure you use the right one!
 
-!!! note "Troubleshooting: Ensure the sate of the code"
+!!! note "Troubleshooting: Ensure the state of the code"
     You get the most accurate result if you run `codesigndoc` on the same state of your
     repository/code which is available after a clean `git clone`, as that will
     be the state of the code after the build server checks out the code (e.g.
