@@ -1,0 +1,14 @@
+{
+  "inventory": {
+    "/v0.1/me": {
+      "GET": "{\n  \"data\": {\n    \"username\": \"api-demo\"\n  }\n}"
+    },
+    "/v0.1/me/apps": {
+      "GET": "{\n  \"data\": [\n    {\n      \"slug\": \"f46e89061e967f27\",\n      \"title\": \"sample-apps-xamarin-cross-platform\"\n    },\n    {\n      \"slug\": \"13533d589b89fb4b\",\n      \"title\": \"sample-apps-osx-10-12\"\n    }\n  ],\n  \"paging\": {\n    \"next\": \"669403bffbe35909\",\n    \"page_item_limit\": 2,\n    \"total_item_count\": 4\n  }\n}"
+    }
+  },
+  "delimiter": {
+    "left": "{{",
+    "right": "}}"
+  }
+}

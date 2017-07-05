@@ -116,11 +116,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me
 Example response:
 
 ```
-{
-  "data": {
-    "username": "api-demo"
-  }
-}
+{{ (var "/v0.1/me").GET }}
 ```
 
 ### GET /me/apps
@@ -136,23 +132,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me/a
 Example response:
 
 ```
-{
-  "data": [
-    {
-      "slug": "f46e89061e967f27",
-      "title": "sample-apps-xamarin-cross-platform"
-    },
-    {
-      "slug": "13533d589b89fb4b",
-      "title": "sample-apps-osx-10-12"
-    }
-  ],
-  "paging": {
-    "next": "669403bffbe35909",
-    "page_item_limit": 2,
-    "total_item_count": 4
-  }
-}
+{{ (var "/v0.1/me/apps").GET }}
 ```
 
 ### GET /apps/{APP-SLUG}/builds
