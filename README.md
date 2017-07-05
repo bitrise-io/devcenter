@@ -22,7 +22,7 @@ and we'll do the change for you!
 
 ## API docs - edit the `.gg` files!!
 
-API responses and the whole `.md` files are auto-generate;
+API responses and the whole `.md` files are auto-generated;
 please edit the `.md.gg` template files instead of editing the `.md` directly!
 
 To add a new endpoint documentation section:
