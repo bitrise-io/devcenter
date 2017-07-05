@@ -1,49 +1,8 @@
-format_version: 1.3.0
+format_version: 3
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-
 description: |
   Official guides: http://www.mkdocs.org
-
 workflows:
-  setup:
-    steps:
-    - script:
-        inputs:
-        - content: |-
-            #!/bin/bash
-            set -ex
-            if [[ "$(uname)" == "Linux" ]] ; then
-              sudo apt-get update
-            fi
-    - script:
-        deps:
-          brew:
-          # install the python brew package if pip bin is not available
-          # pip is available in brew through the pythong package
-          - name: python
-            bin_name: pip
-          apt_get:
-          - name: python-pip
-          - name: python-dev
-          - name: build-essential
-        inputs:
-        - content: |
-            #!/bin/bash
-            set -ex
-
-            sudocmd=""
-            if [[ "$(uname)" == "Linux" ]] ; then
-              sudocmd="sudo"
-            fi
-
-            # On Linux, with apt installed python / python-pip
-            # these commands have to be performed with `sudo`!
-            ${sudocmd} pip install --upgrade pip
-            ${sudocmd} pip install --upgrade virtualenv
-            ${sudocmd} pip install -r requirements.txt
-            mkdocs --version
-            pip show mkdocs-material
-
   ci:
     before_run:
     - setup
@@ -54,12 +13,11 @@ workflows:
             #!/bin/bash
             set -ex
             mkdocs build
-
   deploy-to-github-pages:
     before_run:
     - setup
     envs:
-    - DEVCENTER_CNAME_URL: 'devcenter.bitrise.io'
+    - DEVCENTER_CNAME_URL: devcenter.bitrise.io
     steps:
     - script:
         description: |
@@ -88,7 +46,65 @@ workflows:
             git add .
             git commit -m 'deploy - [skip ci] for gh-pages branch'
             git push origin gh-pages
+  generate-api-docs:
+    steps:
+    - script@1.1.4:
+        title: gen api docs
+        deps:
+          brew:
+          - name: go
+          apt_get:
+          - name: golang
+            bin_name: go
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+            # generate gotgen config
+            go run _scripts/gen_api_docs_gotgen_config.go
+            # move it into docs/api
+            api_docs_dir_pth="./docs/api"
+            mv ./gg.conf.json "${api_docs_dir_pth}/gg.conf.json"
+            # run gotgen there
+            go get -u -v github.com/bitrise-tools/gotgen
+            cd "${api_docs_dir_pth}"
+            gotgen generate
+  setup:
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+            if [[ "$(uname)" == "Linux" ]] ; then
+              sudo apt-get update
+            fi
+    - script:
+        deps:
+          brew:
+          - name: python
+            bin_name: pip
+          apt_get:
+          - name: python-pip
+          - name: python-dev
+          - name: build-essential
+        inputs:
+        - content: |
+            #!/bin/bash
+            set -ex
 
+            sudocmd=""
+            if [[ "$(uname)" == "Linux" ]] ; then
+              sudocmd="sudo"
+            fi
+
+            # On Linux, with apt installed python / python-pip
+            # these commands have to be performed with `sudo`!
+            ${sudocmd} pip install --upgrade pip
+            ${sudocmd} pip install --upgrade virtualenv
+            ${sudocmd} pip install -r requirements.txt
+            mkdocs --version
+            pip show mkdocs-material
   up:
     steps:
     - script:

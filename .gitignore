@@ -1,3 +1,4 @@
 site/
 .bitrise*
 .directory
+gg.conf.json

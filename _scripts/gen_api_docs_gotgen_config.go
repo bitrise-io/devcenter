@@ -88,6 +88,7 @@ func main() {
 	}
 	ggConfInventory.Inventory = map[string]map[string]string{}
 
+	log.Println("=============================")
 	for _, aReq := range []struct {
 		HTTPMethod  string
 		Path        string
@@ -95,6 +96,8 @@ func main() {
 	}{
 		{HTTPMethod: "GET", Path: "/v0.1/me"},
 		{HTTPMethod: "GET", Path: "/v0.1/me/apps", QueryParams: "?limit=2"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?limit=3"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846"},
 	} {
 		fullURL := apiHost + aReq.Path + aReq.QueryParams
 		log.Printf("=> %s %s (%s)", aReq.HTTPMethod, aReq.Path, fullURL)
@@ -110,6 +113,13 @@ func main() {
 		log.Fatalf("Failed to marshal GG config, error: %+v", err)
 	}
 	fmt.Printf("%s\n", ggConfJSON)
-
 	log.Println("=============================")
+
+	const confFilePath = "./gg.conf.json"
+	log.Println("Writing config into file ...")
+	if err := ioutil.WriteFile(confFilePath, ggConfJSON, 0666); err != nil {
+		log.Fatalf("Failed to write config into gg.conf.json file, error: %+v", err)
+	}
+	log.Println("Write DONE, path:", confFilePath)
+
 }
