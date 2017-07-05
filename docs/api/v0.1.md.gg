@@ -116,11 +116,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me
 #### Example response
 
 ```
-{
-  "data": {
-    "username": "api-demo"
-  }
-}
+{{ (var "/v0.1/me").GET }}
 ```
 
 ### GET /me/apps
@@ -136,23 +132,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me/a
 #### Example response
 
 ```
-{
-  "data": [
-    {
-      "slug": "f46e89061e967f27",
-      "title": "sample-apps-xamarin-cross-platform"
-    },
-    {
-      "slug": "13533d589b89fb4b",
-      "title": "sample-apps-osx-10-12"
-    }
-  ],
-  "paging": {
-    "next": "669403bffbe35909",
-    "page_item_limit": 2,
-    "total_item_count": 4
-  }
-}
+{{ (var "/v0.1/me/apps").GET }}
 ```
 
 ### GET /apps/{APP-SLUG}/builds
@@ -185,66 +165,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/app
 #### Example response
 
 ```
-{
-  "data": [
-    {
-      "abort_reason": "User api-demo requested to abort this build with reason: canceled through the API",
-      "branch": "master",
-      "build_number": 12,
-      "commit_hash": null,
-      "commit_message": "this build will be aborted through the API",
-      "environment_prepare_finished_at": "2017-06-20T22:35:03Z",
-      "finished_at": "2017-06-20T22:35:15Z",
-      "is_on_hold": false,
-      "slug": "ce86c8475d31d288",
-      "started_on_worker_at": "2017-06-20T22:35:03Z",
-      "status": 3,
-      "status_text": "aborted",
-      "tag": null,
-      "triggered_at": "2017-06-20T22:35:02.40449Z",
-      "triggered_workflow": "primary"
-    },
-    {
-      "abort_reason": null,
-      "branch": "master",
-      "build_number": 11,
-      "commit_hash": "b4e7cad230e3fc2f2f84dbb455c7ac7f89a3a18b",
-      "commit_message": "API Demo - commit hash example\n\nThis build has a specified commit hash",
-      "environment_prepare_finished_at": "2017-06-20T22:31:28Z",
-      "finished_at": "2017-06-20T22:33:00Z",
-      "is_on_hold": false,
-      "slug": "c518445a250a5848",
-      "started_on_worker_at": "2017-06-20T22:31:28Z",
-      "status": 1,
-      "status_text": "success",
-      "tag": null,
-      "triggered_at": "2017-06-20T22:31:27.940493Z",
-      "triggered_workflow": "primary"
-    },
-    {
-      "abort_reason": "User api-demo requested to abort this build with reason: This is an example abort build",
-      "branch": "master",
-      "build_number": 10,
-      "commit_hash": null,
-      "commit_message": "Abort example",
-      "environment_prepare_finished_at": "2017-05-30T15:47:17Z",
-      "finished_at": "2017-05-30T15:47:32Z",
-      "is_on_hold": false,
-      "slug": "3247e2920496e846",
-      "started_on_worker_at": "2017-05-30T15:47:17Z",
-      "status": 3,
-      "status_text": "aborted",
-      "tag": null,
-      "triggered_at": "2017-05-30T15:47:17.135312Z",
-      "triggered_workflow": "primary"
-    }
-  ],
-  "paging": {
-    "next": "3247e2920496e846",
-    "page_item_limit": 3,
-    "total_item_count": 12
-  }
-}
+{{ (var "/v0.1/apps/669403bffbe35909/builds").GET }}
 ```
 
 
@@ -265,25 +186,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/app
 #### Example response
 
 ```
-{
-  "data": {
-    "abort_reason": "User api-demo requested to abort this build with reason: This is an example abort build",
-    "branch": "master",
-    "build_number": 10,
-    "commit_hash": null,
-    "commit_message": "Abort example",
-    "environment_prepare_finished_at": "2017-05-30T15:47:17Z",
-    "finished_at": "2017-05-30T15:47:32Z",
-    "is_on_hold": false,
-    "slug": "3247e2920496e846",
-    "started_on_worker_at": "2017-05-30T15:47:17Z",
-    "status": 3,
-    "status_text": "aborted",
-    "tag": null,
-    "triggered_at": "2017-05-30T15:47:17.135312Z",
-    "triggered_workflow": "primary"
-  }
-}
+{{ (var "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846").GET }}
 ```
 
 

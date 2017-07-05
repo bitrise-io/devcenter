@@ -18,3 +18,18 @@ and we'll do the change for you!
 - `tips-and-tricks` vs `tutorials` : `tutorials` have to include a complete guide as much as possible,
   e.g. steps to register the repository/app. `tips-and-tricks` is short, only describes the thing it
   wants to achieve. Later can be moved into `tutorial`, by adding more info.
+
+
+## API docs - edit the `.gg` files!!
+
+API responses and the whole `.md` files are auto-generate;
+please edit the `.md.gg` template files instead of editing the `.md` directly!
+
+To add a new endpoint documentation section:
+
+- open the `docs/api/vX.md.gg` template file
+- add the endpoint section, following the other endpoints' doc structure
+- add the example endpoint call to the `_scripts/gen_api_docs_gotgen_config.go` file (using the `api-demo`
+  bitrise.io user to locate the right example URL, e.g. if it have to include a repo/build/... slug)
+- use that in the _example response_ section of the endpoint (`{{ (var "/URL-PATH").HTTPMETHOD }}`)
+- and finally, run: `bitrise run generate-api-docs` to generate the `.md` from the `.md.gg`
