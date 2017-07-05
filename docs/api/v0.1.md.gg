@@ -173,9 +173,9 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/app
 
 Get a specific build's data.
 
-Status codes (`status`) and related status texts (`status_text`): **See the `GET /apps/{APP-SLUG}/builds` endpoint description**
+Status codes (`status`) and related status texts (`status_text`): **See the [`GET /apps/{APP-SLUG}/builds` endpoint description](#get-appsapp-slugbuilds)**
 
-Build times: **See the `GET /apps/{APP-SLUG}/builds` endpoint description**
+Build times: **See the [`GET /apps/{APP-SLUG}/builds` endpoint description](#get-appsapp-slugbuilds)**
 
 #### Example `curl` request
 
