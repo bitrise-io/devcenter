@@ -69,12 +69,34 @@ $.post("https://www.bitrise.io/app/APP-SLUG/build/start.json", {
 
 The following parameters are supported in the `build_params` object:
 
-* `branch` - *String*
-* `tag`  - *String*
-* `commit_hash` - *String*
-* `commit_message` - *String*
-* `workflow_id` - *String*
-* `environments` - *Array of objects*
+### Git related:
+
+* `branch` (string): The (Source) Branch to build. In case of a standard git commit this is the branch of the commit.
+  In case of a Pull Request build this is the source branch, the one the PR was started from.
+* `tag` (string): The git Tag to build.
+* `commit_hash` (string): The git Commit Hash to build.
+* `commit_message` (strings): The git commit message (or build's message).
+
+### Bitrise.io specific:
+
+* `workflow_id`: (string): Force the use of the specified workflow ID. If not defined then the workflow will be selected
+  based on the project's [Trigger Map config](/webhooks/trigger-map/).
+* `environments` (array of objects): See the [Specify Environment Variables](#specify-environment-variables) section for more info
+  about the `environments` objects.
+
+### Pull Request specific:
+
+* `branch_dest` (string): Used only in case of Pull Request builds: the destination/target branch of the Pull Request,
+  the one the PR will be merged *into*. Example: `master`.
+* `pull_request_id` (int): Pull Request ID on the source code hosting system (e.g. the PR number on GitHub)
+* `pull_request_repository_url` (string): repository url from where the Pull Request is sent. E.g. if
+  it's created from a fork this should be the fork's URL. Example: `https://github.com/xyz/bitrise.git`.
+* `pull_request_merge_branch` (string): the pre-merge branch, __if the source code hosting system supports & provides__
+  the pre-merged state of the PR on a special "merge branch" (ref). Probably only GitHub supports this.
+  Example: `pull/12/merge`.
+* `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`) __if the source code hosting system supports & provides__ this.
+  This special git `ref` should point to the __source__ of the Pull Request. Supported by GitHub and GitLab.
+  Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
 
 !!! note "Git Clone - parameter priority"
     If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
