@@ -135,6 +135,22 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me/a
 {{ (var "/v0.1/me/apps").GET }}
 ```
 
+### GET /apps/{APP-SLUG}
+
+Get a specific app's data.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/apps/APP-SLUG
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909").GET }}
+```
+
 ### GET /apps/{APP-SLUG}/builds
 
 Get the builds of a specific app.
