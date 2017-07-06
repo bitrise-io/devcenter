@@ -99,6 +99,7 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?limit=3"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log"},
 	} {
 		fullURL := apiHost + aReq.Path + aReq.QueryParams
 		log.Printf("=> %s %s (%s)", aReq.HTTPMethod, aReq.Path, fullURL)
