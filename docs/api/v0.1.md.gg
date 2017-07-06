@@ -206,6 +206,40 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/app
 ```
 
 
+### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/log
+
+Get the **log info** of a specific Build.
+
+The log info includes the last couple of **chunks** (`log_chunks`) of the build log,
+as well as other meta infos like how many chunks were generated during the build (`generated_log_chunks_num`).
+
+Once the build is finished and the full log is available in the log archives (`"is_archived": true`)
+the response will also include an __expiring__, read only download URL (`expiring_raw_log_url`).
+
+There's no guarantee for how long this expiring raw log URL will exist (other than "for a couple of minutes"),
+so please **do not store** this URL! If you want to retrieve the full (raw) log please:
+
+1. Call this log info endpoint
+1. And right after that, when you get the response, parse the `expiring_raw_log_url` from it and send a `GET` request to that URL as soon as possible.
+
+**Important:** when you send your `GET` request to the `expiring_raw_log_url` URL please **do not** include the Authorization headers.
+In fact, you should not include any special header at all; just create a simple GET request and send it to the `expiring_raw_log_url` url.
+The `expiring_raw_log_url` is configured so that it does not require any other parameter other than what's included in the URL.
+
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/log'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log").GET }}
+```
+
+
 ## WIP / working on it
 
 See [https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554).
