@@ -14,7 +14,7 @@ You are able to define more workflows for the very same app,
 and define [triggers](https://bitrise-io.github.io/devcenter/webhooks/trigger-map/) to specify which workflow should be selected for
 which trigger.
 
-The steps can do anything that can be implemented a command line scripts / programs:
+The steps can do anything that can be implemented by command line scripts / programs:
 send emails, [text messages](https://github.com/bitrise-io/steps-sms-text-message),
 pass values to each other, [create Xcode archives](https://github.com/bitrise-io/steps-xcode-archive),
 gather system information about the Virtual Machine
