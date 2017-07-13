@@ -1,30 +1,28 @@
-Once you register an app you can start to modify it's Workflow,
-to customize how a build should work.
+Once you've registered an app you can start modifying its Workflow,
+that is to customize how a build should work.
 
 To edit your App's Workflow you should open the `Workflow Editor`:
 
-1. Select your App on [bitrise.io](https://www.bitrise.io)
+1. After [logging in](https://www.bitrise.io), select your App on your [Dashboard](https://www.bitrise.io/dashboard)
 2. Select the `Workflow` tab
 
-Once you're in the Workflow Editor you can see the list of Steps which are already in your Workflow.
+In the Workflow Editor you can see a preset list of Steps based on your app we added to your Workflow.
 
 ## Add a new Step to the Workflow
 
 If you want to **add a new Step** to the Workflow,
-just click the `+` sign button between the Steps.
+just click the `+` sign button between the Steps you want the new one to be.
 
-![Add step button in Workflow Editor](/img/getting-started/add-new-step-button-in-workflow-editor.png)
+![Add step button in Workflow Editor](/img/getting-started/add-your-first-step.png)
 
 This will show you a list of available Steps in our __Step Library__.
 You can search and filter these steps if you want to, or just browse through the collection.
-
-Adding a Step is as easy as clicking the `Add to Workflow` button
-in this Step Library popup.
+Clicking the Step will add it to your Workflow.
 
 You can __Drag and Drop__ to reorder your list of Steps. During a build,
 steps will be executed one by one, in top-to-bottom order.
 
-Once you're happy with your Workflow you should click the `Save` button on the left side.
+Once you're happy with your Workflow Save it on the top right! 
 That's all, your next build will automatically use the current, __saved__ Workflow!
 
 !!! note "Multiple Workflows"
