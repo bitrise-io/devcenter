@@ -74,7 +74,7 @@ during the build, you should check this guide: [Adding projects with submodules]
 ## 3. Validation setup
 
 In this section you have to specify a branch, which will be used in the next step:
-your repository will be cloned, the specified branch will be checked,
+your repository will be cloned, the specified branch will be checked out,
 and our [open source project scanner](https://github.com/bitrise-core/bitrise-init)
 will scan through the repository, and will construct base configuration(s)
 appropriate for your project.
