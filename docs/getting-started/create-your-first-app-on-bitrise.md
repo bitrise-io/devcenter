@@ -18,7 +18,7 @@ You can either choose any one of [GitHub.com](https://github.com/), [Bitbucket.o
 
 ### GitHub / Bitbucket / GitLab
 
-Under Connect your repository just choose your preferred storage for the repo you want to add to Bitrise.
+Under Connect your repository just choose the git hosting service for the repo you want to add to Bitrise.
 (If you haven't connected your GitHub, Bitbucket or GitLab account yet on your profile, click on the green button to do so here.) Now you can see all your repos listed and a Search field if case you have many of them. If you hover on the repository names, you can get a glimpse of their descriptions, too.
 Your personal repos are separated from the ones that belong to an organization or other user.
 
