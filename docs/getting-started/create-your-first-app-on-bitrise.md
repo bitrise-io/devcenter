@@ -52,7 +52,7 @@ __if you have admin rights to the repo__ you selected.
 
 ### Copy the public key Bitrise generated
 
-If you use other repos for your build, you have to copy the __public key__ to your provider's account (*not* as a deployment key).
+If you use other repos for your build, you have to copy the __public key__ and __register it as an account SSH key__ on your git hosting service (*not* as a deployment key).
 You can also use this option if you don't have admin rights to the repo, or if the repository is not hosted on GitHub, Bitbucket or GitLab.com or if you use submodules and want to use the same SSH key for multiple repositories.
 If you use submodules or private Cocoapods,
 use this guide: [Adding projects with submodules](/faq/adding-projects-with-submodules/)
