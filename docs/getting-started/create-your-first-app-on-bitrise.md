@@ -2,30 +2,26 @@ We are always refining our UI and UX, to achieve the best and smoothest experien
 but at the same time give you enough room for experimentation and customization.
 
 Because of the very reason of us believing that you should be able to do everything you want with Bitrise,
-it can seem a bit complex in a few parts.
+some parts may seem a bit complex at first glance.
 
 This guide will help you get your first app up and running on Bitrise. Let's dive in!
 
 First of all you have to open the [Add New App page](https://www.bitrise.io/apps/add),
-either by clicking the `Add` button on the [Dashboard](https://www.bitrise.io/dashboard),
-or selecting the `Add new App` option in the Account drop down menu (top right corner).
+either by clicking `Add` on the [Dashboard](https://www.bitrise.io/dashboard),
+or selecting `Add new App` in the Account drop down menu (top right corner).
 
 ## 1. Code repository setup
 
 The first step of adding an app is to specify where its code is stored.
 
-You have two main options here:
-
-1. You store your code on [GitHub.com](https://github.com/), [Bitbucket.org](https://bitbucket.org/) or [GitLab.com](https://gitlab.com/)
-1. You store your code somewhere else
+You can either choose any one of [GitHub.com](https://github.com/), [Bitbucket.org](https://bitbucket.org/) or [GitLab.com](https://gitlab.com/) or add an other location manually.
 
 ### GitHub / Bitbucket / GitLab
 
-This is fairly easy. Just click on the tab where you have the repo you want to add to Bitrise.
-If you haven't connected your GitHub, Bitbucket or GitLab account, click on the green button to do so.
-After that you'll see all your repos listed with an option to filter them.
+Under Connect your repository just choose the git hosting service for the repo you want to add to Bitrise.
+(If you haven't connected your GitHub, Bitbucket or GitLab account yet on your profile, click on the green button to do so here.) Now you can see all your repos listed and a Search field in case you have many of them. If you hover on the repository names, you can get a glimpse of their descriptions, too.
 Your personal repos are separated from the ones that belong to an organization or other user.
-If you hover on the repository names, you can get a glimpse of its description, too.
+
 Select the repository from the list to proceed to the next step.
 
 !!! note "Why does Bitrise need write permissions on Github/Bitbucket/GitLab?"
@@ -35,15 +31,16 @@ Select the repository from the list to proceed to the next step.
     - Registering a Webhook for the repository
 
     Please note, that __if you want to avoid giving Bitrise write permissions,
-    you can select the `Other / Manual` option__, and do the setup yourself.
+    you can select `Other / Manual`__ instead, and do the setup yourself.
 
 ### Other / Manual setup option
 
-On this tab, you just have to paste your HTTPS git clone URL where Bitrise can access your code.
-Paste the URL and click on `Next` to proceed.
+Paste your HTTPS git clone URL where Bitrise can access your code and click on `Next` to proceed.
 
 
 ## 2. Setup repository access
+
+You need to specify how Bitrise will be able to access the source code. Depending on whether or not you have admin rights to the repo
 
 ### Auto-add the SSH key Bitrise generated for you
 
@@ -55,17 +52,14 @@ __if you have admin rights to the repo__ you selected.
 
 ### Copy the public key Bitrise generated
 
-Copy the __public key__ to your provider's account (*not* as a deployment key).
-You can use this option if you don't have admin rights to the repo,
-or if the repository is not hosted on GitHub, Bitbucket or GitLab.com.
-
-Choose this option also if you use submodules and want to use the same SSH key for multiple repositories.
+If you use other repos for your build, you have to copy the __public key__ and __register it as an account SSH key__ on your git hosting service (*not* as a deployment key).
+You can also use this option if you don't have admin rights to the repo, or if the repository is not hosted on GitHub, Bitbucket or GitLab.com or if you use submodules and want to use the same SSH key for multiple repositories.
 If you use submodules or private Cocoapods,
 use this guide: [Adding projects with submodules](/faq/adding-projects-with-submodules/)
 
 ### Use your own keypair
 
-You can paste your existing SSH __private key__ to the text area on the bottom of this section.
+You can paste your existing SSH __private key__ on Add own SSH tab.
 __Make sure it is an RSA private key without a passphrase,__
 otherwise you won't be able to use it on Bitrise.
 
@@ -94,8 +88,8 @@ or if you can't use the automatic scanner!*
 
 ## 4. Validating repository
 
-You don't have to do anything in this section. A validation
-is started automatically after you finished in the previous section.
+You don't have to do anything in this section: a validation
+is started automatically based on the setup you have just finished. 
 You can check the progress and the logs of the validation while it runs,
 and the errors and warnings in case the scanner would generate any.
 
@@ -104,7 +98,7 @@ and the errors and warnings in case the scanner would generate any.
 
 Platform selection: We try to detect on validation whether you added an Android, iOS, or Xamarin project,
 or any other project type the [scanner](https://github.com/bitrise-core/bitrise-init) supports.
-If we succeed, only the one, corresponding tab will be active.
+If we succeed, you can either Confirm the settings or Edit them.
 If we fail to detect it, you have to select one and configure it manually.
 
 We will also try to detect your build configuration automatically, based on your project settings / project
@@ -113,23 +107,22 @@ files in the repository.
 
 ## 6. Webhook setup
 
-If we have support for adding webhooks automatically to the source code hosting
-service you use, you can add the webhook in this section with a single click.
+To have Bitrise __automatically start a build every time you push code into your repository__ you can set up a webhook at your code hosting service which will automatically trigger a build on Bitrise with the code you push to your repository.
+
+If we have permission for adding webhooks automatically to the source code hosting service you use, you can add the webhook in this section with a single click or you can skip this step (unrecommended).
 
 !!! warning "Error: Webhook registration failed"
     If you see a message like this, that means that you don't have admin rights to the repo,
-    so no webhook could be created. Contact the administrator, register the webhook manually as described below
+    so no webhook could be created. Contact the administrator, register the webhook manually (see link to the guide below)
     or skip this step if you're OK with starting builds manually (not advised).
-
-Otherwise you'll see information about how you can do this manually in this section.
 
 You can find the webhook setup guide [here](/webhooks/),
 if you'd have to do this manually.
 
 
-## 7. Finishing
+## 7. Congratulations, you have set up your first app on Bitrise.io!
 
-After you finish in the "webhook" section, a build is triggered automatically
+After you are done in the "webhook" section, a build is triggered automatically
 for your app, with the base configuration detected and generated by
 the "Repository validator / scanner". At this point you should have
 a base working configuration, which you'll be able to improve and change
