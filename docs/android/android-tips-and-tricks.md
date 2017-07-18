@@ -48,7 +48,7 @@ The `Gradle Runner` step does this, and as you can see it in the related input d
 
 > Using a Gradle Wrapper (gradlew) is strongly suggested, as the wrapper is what makes sure
 > that the right Gradle version is installed and used for the build.
-> 
+>
 > __You can find more information about the Gradle Wrapper (gradlew),
 > and about how you can generate one (if you would not have one already)__
 > in the official guide at: [https://docs.gradle.org/current/userguide/gradle_wrapper.html](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
@@ -56,8 +56,12 @@ The `Gradle Runner` step does this, and as you can see it in the related input d
 
 ## How to install an additional Android SDK package
 
+__The preferred way to do this is to use the `Install missing Android tools` step.
+Please only use a Script solution if you really have to, as you'll have to update
+the Script if the Android tools change (which did happen).__
+
 All you have to do is to add a `Script` step to your workflow,
-and use `android update sdk` to install the additional SDKs or packages you want to.
+and use the Android `sdkmanager` tool to install the additional packages you want to.
 
 As an example, to install the Android SDK v18 and the related `build-tools` v18.0.1,
 you can add a `Script` step (can be the very first step in the Workflow)
@@ -71,27 +75,14 @@ set -e
 set -x
 
 # write your script here
-echo y | android update sdk --no-ui --all --filter android-18 | grep 'package installed'
-echo y | android update sdk --no-ui --all --filter build-tools-18.0.1 | grep 'package installed'
+sdkmanager "platforms;android-18"
+sdkmanager "build-tools;18.0.1"
 ```
 
-*The `echo y | ` prefix is really important.
-If you miss to include this your build will hang waiting for your input,
-to accept the license agreements presented during an Android SDK / package install.*
-
 **You can get the full list of available packages** by running:
-`android list sdk --no-ui --all --extended`. You can run this on your own machine if you have `android` in your `$PATH`.
-
-!!! note
-    You should only install the Android tools which are *not* yet installed.
-    Calling `android update` for an already installed tool might fail if it can't create a backup -
-    which is the case if you use the default `Docker` file system driver (`aufs`).
-
-    _This issue does not affect builds running on [bitrise.io](https://www.bitrise.io),
-    as the filesystem driver for `docker` is set to `btrfs` instead of the default `aufs`._
-
-    You can check all the pre-installed tools in the official Bitrise Android Dockerfile:
-    [https://github.com/bitrise-docker/android/blob/master/Dockerfile](https://github.com/bitrise-docker/android/blob/master/Dockerfile)
+`sdkmanager --list --include_obsolete --verbose`.
+You can run this on your own machine if you have `$ANDROID_HOME/tools/bin` in your `$PATH`.
+If not then you can run it with `/PATH/TO/ANDROID-SDK-HOME/tools/bin/sdkmanager ...`.
 
 
 ## Enable Gradle debug options
@@ -135,19 +126,10 @@ which makes sure that the emulator is booted and ready for subsequent steps.
 
 ### Emulator with Google APIs
 
-To create an Android Emulator with Google APIs,
-you can use the following code snippet instead of the `Create Android emulator` step:
+__Instead of using a Script step to create an android emulator please use the `Create Android emulator` step!
+There are simply too many edge cases to cover here, as well as the commands and working configurations change quite frequently.__
 
-```
-#!/bin/bash
-set -ex
-
-echo y | android update sdk --no-ui --all --filter addon-google_apis-google-21
-
-echo y | android update sdk --no-ui --all --filter sys-img-armeabi-v7a-google_apis-21
-
-echo no | android create avd --force --name YOUR_EMULATOR_NAME --target "android-21" --abi "google_apis/armeabi-v7a"
-```
+_The section below is kept here for referencing purposes, and might be outdated._
 
 **Note about Android SDK versions:** at this time there are lots of known issues reported for Android Emulators
 with Android SDK version 22 & 23 when combined with Google Play services
