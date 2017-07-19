@@ -184,6 +184,71 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/app
 {{ (var "/v0.1/apps/669403bffbe35909/builds").GET }}
 ```
 
+#### Filtering parameters for build list
+
+It's possible to filter the builds with URL query parameters.
+
+##### Available parameters:
+
+- **`status`** (integer): In the response there will be only the builds with a certain status.
+- **`branch`** (string): Retrieves the builds from the given branch.
+- **`trigger_event_type`** (string): With this parameter the builds can be filtered based on the trigger event. Data type: *string* The available values are the following:
+  - *`push`*: when the response contains only the builds which were triggered by a commit push
+  - *`pull`*: when the response contains only the builds which were triggered by a pull request
+- **`after`** (integer): Giving this parameter, in the response there will be only those builds which were triggered after or at the given time. The value has to be passed as UNIX timestamp.
+- **`before`** (integer): Similar to the previous one this filters by the time when the build was triggered, but this retrieves the ones before or at the given time. The value has to be passed as UNIX timestamp.
+
+##### Example `curl` requests
+
+Request with `status` filtering:
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds?status=1'
+```
+
+Response:
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?status=1").GET }}
+```
+
+Request with `branch` filtering:
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds?branch=master'
+```
+
+Response:
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?branch=master").GET }}
+```
+
+Request with `trigger_event_type` filtering:
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds?trigger_event_type=push'
+```
+
+Response:
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?trigger_event_type=push").GET }}
+```
+
+Request with `before` filtering:
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds?before=1497997887'
+```
+
+Response:
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?before=1497997887").GET }}
+```
+
+Request with `after` filtering:
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds?after=1497997887'
+```
+
+Response:
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?after=1497997887").GET }}
+```
 
 ### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}
 
