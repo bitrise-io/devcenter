@@ -239,6 +239,53 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/app
 {{ (var "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log").GET }}
 ```
 
+### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts
+
+Get the artifacts for a specific build.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts").GET }}
+```
+
+### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
+
+Get a certain build artifact's data.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").GET }}
+```
+
+### POST /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}/enable_public_page
+
+Set if the public page of the certain build artifact is enabled or not.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG/enable_public_page'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce/enable_public_page").GET }}
+```
 
 ## WIP / working on it
 
