@@ -69,6 +69,7 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 * [iOS対応のCIサービス「Bitrise」を使ってみた](http://sssslide.com/www.slideshare.net/koogawa/ioscibitrise) - *SlideShare*
 * [Bitrise,fastlane,CrashlyticsでiOSアプリのテスト配布を自動化する](http://techblog.lclco.com/entry/2016/05/09/192230) - *Bitrise + fastlane, automate testing & deployment (to Crashlytics) of iOS apps*
 * [Xcode iOS CI Tutorial Bitrise編 -Amarron Blog](http://amarron.blog/detail.php?id=20170715)
+* [fastlaneとBitriseでiOSアプリのCI始めました](http://blog.lisb.direct/entry/2017/07/20/100000) - *CI with Bitrise and fastlane*
 
 ## Persian
 
