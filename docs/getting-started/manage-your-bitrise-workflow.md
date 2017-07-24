@@ -82,7 +82,7 @@ Under every Step input field you can see one of these two indicators:
 - or `Environment Variables won't be replaced in input`
 
 It's the status of the `is_expand` option of the input.
-*You can change this only in YAML mode (`bitrise.yml` mode of the editor - left side).*
+*You can change this only in YAML mode (`bitrise.yml` tab of the editor).*
 
 What does this option do?
 
