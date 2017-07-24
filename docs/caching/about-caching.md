@@ -89,6 +89,7 @@ downloading it from it's canonical CDN / cloud storage location.
 One important note: storing a dependency in Bitrise Build Cache might help if you have **reliability**
 issues with the resource's / dependency's canonical download location.
 Popular tools / dependencies might get rate limited ([example: PhantomJS](https://github.com/Medium/phantomjs/issues/501)).
+CDN servers might have availability issues, like jCenter/Bintray. A few examples: [#1](http://status.bitrise.io/incidents/gcx1qn5lj7yt), [#2](http://status.bitrise.io/incidents/3ztgwxvwq7rm), [#3](http://status.bitrise.io/incidents/dqpby9m1n274).
 If that's the case, storing the dependency in Bitrise Build Cache might help.
 It might not improve the build time but **it definitely can improve the reliability**.
 

@@ -19,6 +19,8 @@ Could not find com.android.support:appcompat-v7:24.2.0.
 
 ### Solution
 
+__Please use the `Install missing Android tools` step. The section below is kept only for referencing purposes!__
+
 The error means that your build requires an Android package which is either not (yet) preinstalled
 (_you can see which packages are preinstalled [here, on GitHub](https://github.com/bitrise-docker/android/blob/master/Dockerfile#L30) -
 feel free to send us a Pull Request if you'd want to add a new preinstalled package!_),
@@ -36,20 +38,25 @@ set -e
 # debug log
 set -x
 
-# write your script here
+# For newer Android SDK:
+sdkmanager "extras;android;m2repository"
+sdkmanager "extras;google;m2repository"
+
+# For older Android SDK:
 echo y | android update sdk --no-ui --all --filter extra-android-m2repository | grep 'package installed'
 echo y | android update sdk --no-ui --all --filter extra-google-m2repository | grep 'package installed'
 ```
 
-In most cases you don't need all three packages to be updated, so you can try to remove them one
+In most cases you don't need both packages to be updated, so you can try to remove them one
 by one, but having all three in the script covers most of the cases related to this error.
-
 
 !!! note "We update the preinstalled Android packages on every weekend"
     so if the error is related to an outdated package, the workaround
     we describe here can be removed from your build after that weekend's update.
 
 ### Alternative solution for the license error
+
+__Please use the `Install missing Android tools` step. The section below is kept only for referencing purposes!__
 
 An alternative solution for the `You have not accepted the license agreements of the following SDK components`
 error, as printed in the log:
@@ -91,32 +98,4 @@ into the system's Android SDK Home path under `licenses` directory.
 
 ## Install an additional Android package
 
-An Android package (e.g. a build tool version) is not preinstalled or missing?
-No problem at all, the solution is quite simple!
-
-Just add a `Script` step to your Workflow (can be the very first step)
-and run `android sdk update ..` with the package you want to install.
-
-An example `Script` step content which installs `build-tools-24.0.3`:
-
-```
-#!/bin/bash
-# fail if any commands fails
-set -e
-# debug log
-set -x
-
-# write your script here
-echo y | android update sdk --no-ui --all --filter build-tools-24.0.3 | grep 'package installed'
-```
-
-This should work for any other Android package - you can
-get the full available Android package list by running this on your Mac/PC:
-
-```
-android list sdk --no-ui --all --extended
-```
-
-!!! note "Request a package to be pre-installed"
-    If we missed an Android package which should be pre-installed,
-    feel free to create a Pull Request here: [https://github.com/bitrise-docker/android/blob/master/Dockerfile](https://github.com/bitrise-docker/android/blob/master/Dockerfile)
+Please see [this section](/android/android-tips-and-tricks/#how-to-install-an-additional-android-sdk-package).
