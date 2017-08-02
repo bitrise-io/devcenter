@@ -1,14 +1,14 @@
 To start editing your workflow you first have to open it
 in the **Workflow Editor** on Bitrise.io:
 
-1. Open your App's page on [Bitrise.io](https://www.bitrise.io/)
+1. Log in on [Bitrise.io](https://www.bitrise.io/) and select your app on the Dashboard
 2. Select the `Workflow` tab
 
-This is your app's __Workflow Editor__. You can change, delete and add steps here.
+This is your app's __Workflow Editor__. You can change, delete, add and reorder steps here. Don't forget to `Save` or you can `Discard` changes on the top right._
 
 ## Change a step
 
-Select the step here (in the Workflow Editor), on the left side.
+Select the step you want to change from the list on the left side.
 You can change the selected Step's inputs and other configs on the right side.
 
 !!! note
@@ -17,31 +17,36 @@ You can change the selected Step's inputs and other configs on the right side.
 
 ## Upgrade a Step to the latest version
 
-When a new version is available for a Step in your Workflow,
-you can update the Step to the new version by selecting the Step in the Workflow Editor and
+When a new version is available for a Step in your Workflow, you can update it in two ways: 
 
-1. Click the orange "update indicator" icon, to upgrade the Step to the latest available version
-1. Or select the new version manually, on the right side, where you can see the step's details (`Version` section).
+1. Click the orange dot, our update indicator in the top right of the Step's icon to upgrade the Step to the latest available version
+1. Or select the Step and in the right side's `Version` section update to the new version manually.
 
-_Your settings / provided input values for the Step will be kept for the new version, and you can
-also discard the change, by clicking the `Discard` button on the left side._
+In the dropdown you can set a Step to __always latest__. In this case we'll always update it without further notice.
+
+_Your settings / provided input values for the Step will be kept for the new version._
+
+![Update steps in Workflow Editor](/img/getting-started/update-steps.png)
 
 
 ## Remove a step
 
-Select the step on the left side and click on the **trash can** button on the right side.
+Select the step on the left side and click on the **trash can** on the right side or delete it at the bottom of the step.
 
 ## Add a new step
 
-Click on the `+` sign at the left side to add or insert a new step.
+If you want to **add a new Step** to the Workflow,
+just click the `+` between the Steps you want the new one to be.
 
-Once you clicked the `+` sign you'll see a list of available steps on the right side.
-You can select a filter (ex: `deploy`) to show only a group of the available steps.
+![Add step button in Workflow Editor](/img/getting-started/add-your-first-step.png)
 
-Once you selected the step you want to add, just click on the **Add to Workflow** button.
-The new step will be selected automatically,
-and all you have to do is fill in its required inputs
+This will show you a list of available Steps in our __Step Library__.
+You can search and filter these steps if you want to, or just browse through the collection.
+Clicking the Step will add it to your Workflow and then all you have to do is fill in its required inputs
 (on the right side you'll see which inputs are required - marked with an orange border).
+
+You can also clone a Step by clicking the __Clone icon__ on the right side and then you can __Drag and Drop__ it to its place. 
+
 
 ## Create a new Workflow
 
@@ -65,7 +70,7 @@ at the top right corner of the workflow area.
 
 Click into any input field of a Step and a green `Insert Variable` button will appear.
 Click this button and you'll get a full list of available Environment Variables.
-You can search in this list, and when you find the one you're looking for just click it,
+You can search this list, and when you find the one you're looking for just click it,
 and it'll be inserted into the input field for you.
 
 
@@ -77,7 +82,7 @@ Under every Step input field you can see one of these two indicators:
 - or `Environment Variables won't be replaced in input`
 
 It's the status of the `is_expand` option of the input.
-*You can change this only through in YAML mode (`bitrise.yml` mode of the editor - left side).*
+*You can change this only in YAML mode (`bitrise.yml` tab of the editor).*
 
 What does this option do?
 
@@ -90,7 +95,7 @@ and you enable this option, it'll replace every occurrence of `$HOME` in that in
 with the value of the `HOME` environment variable
 (in this case, the home folder's path, e.g. `/Users/[user]` or `/home/[user]`).
 If it's disabled then it won't be replaced,
-the value you specify for the input will be passed as the text `$HOME`,
+the value you specify for the input will be passed as text (`$HOME`),
 and *the Step itself might or might not expand* the value.
 
 __Usually you should leave this option on the default value, the one defined by the Step for the input__.
