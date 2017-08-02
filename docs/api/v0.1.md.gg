@@ -278,7 +278,7 @@ Set if the public page of the certain build artifact is enabled or not.
 #### Example `curl` request
 
 ```
-curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' -d '{"is_page_enabled":true}' http://localhost:3001/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG
+curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' -d '{"is_public_page_enabled":true}' http://localhost:3001/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG
 ```
 
 #### Example response
