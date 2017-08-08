@@ -4,9 +4,10 @@ Steps to grant access for Bitrise.io to a given GitHub Organization:
 2. In the top right corner click your user / avatar
 3. In the list select [Settings](https://github.com/settings/profile)
 4. On the left side select [Authorized applications](https://github.com/settings/applications)
-5. In the list click __Bitrise__
-6. On the sub page, go to the __Organization access__ section,
-   locate the Organization you want to grant access to, and click the `Grant access` button.
+5. In the left-side navigation, click __Authorized OAuth Apps__, and choose __Bitrise__
+6. Locate the Organization you want to grant access to, and click `Grant`.
+
+![Authorized OAuth Apps](/img/faq/authorized-oauth-apps.png)
 
 You can now go back to [bitrise.io](https://www.bitrise.io) and you
 should see the organization / repository on the Add New App page.
