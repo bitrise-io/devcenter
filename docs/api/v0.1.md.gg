@@ -257,7 +257,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/app
 
 ### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
 
-Get a certain build artifact's data.
+Get a certain build artifact's data. The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
 
 #### Example `curl` request
 
@@ -285,6 +285,22 @@ curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' -d '{"is_public_page_en
 
 ```
 {{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH }}
+```
+
+### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}/download
+
+Retrieves a presigned Amazon S3 URL for the artifact. Similar to the show endpoint the URL is valid for 10 minutes.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG/download'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce/download").GET }}
 ```
 
 ## WIP / working on it
