@@ -15,6 +15,7 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 
 * [How to automate Android build process on Bitrise CI (part 1)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-71ae3a94362e)
 * [How to automate Android build process on Bitrise CI (part 2)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-part-2-b3f8124c29ee)
+* [How to Connect Physical Devices to Bitrise.io](https://www.thedroidsonroids.com/blog/how-to-connect-physical-devices-to-bitrise-io) - *[Open STF](https://openstf.io) integration*
 
 ### Xamarin
 
@@ -44,7 +45,6 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 
 ### Other
 
-* [How to Connect Physical Devices to Bitrise.io](https://www.thedroidsonroids.com/blog/how-to-connect-physical-devices-to-bitrise-io) - *[Open STF](https://openstf.io) integration*
 * [Improved Continuous Integration With Bitrise – Rémy Chantenay (Travelex)](https://medium.com/@remy.chantenay/bitrise-travelex-digital-f3388019bae)
 * [Mobile Continuous Delivery With Bitrise | Benoit Pasquier](http://benoitpasquier.fr/mobile-continuous-delivery-bitrise-io/) - *intro*
 * [I was trying to setup a macOS Server for continuous integration. Now I am a happy Bitrise user.](https://theswiftdev.com/2016/08/29/macos-xcode-build-server-tutorial/)
