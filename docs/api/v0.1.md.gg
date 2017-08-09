@@ -273,12 +273,14 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/app
 
 ### PATCH /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
 
-Set if the public page of the certain build artifact is enabled or not.
+Set the attributes of a build artifact. In the request body have to be sent a JSON with the specified new attribute values.
+
+_Note: at this time only the `is_public_page_enabled` attribute can be set through this endpoint call._
 
 #### Example `curl` request
 
 ```
-curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' -d '{"is_public_page_enabled":true}' http://localhost:3001/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG
+curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' -d '{"is_public_page_enabled":true}' http://api.bitrise.io:3001/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG
 ```
 
 #### Example response
