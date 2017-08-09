@@ -39,7 +39,7 @@ The repositories used for our virtual machine preparation are open source,
 and pull requests are welcome.
 If you'd like to have a tool pre-installed in our machines,
 feel free to add your changes and they will be included in the related Stack(s)
-at the next time the Stack is updated.
+the next time the Stack is updated.
 
 ## Virtual machine updates
 
@@ -56,8 +56,8 @@ Minor patches might be applied during the week in case we detect an issue
 with the current virtual machine environment.
 These patches do not change any pre-installed tool version, unless it's really necessary.
 
-We try to test every stack change as much as we can, before it would be
-released, to avoid any change / update during the week.
+We test every stack change as much as we can before it is
+released to avoid any changes / updates during the week.
 
 ## iOS Simulator version & SDK support
 
