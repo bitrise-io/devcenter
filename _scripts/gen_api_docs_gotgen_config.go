@@ -1,6 +1,7 @@
 package main
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -23,8 +24,8 @@ func httpErrorDescription(resp *http.Response) string {
 	return errStr + " | Body: " + string(bodyBytes)
 }
 
-func recordResponse(httpMethod, apiURL string) string {
-	req, err := http.NewRequest(httpMethod, apiURL, nil)
+func recordResponse(httpMethod, apiURL, requestBody string) string {
+	req, err := http.NewRequest(httpMethod, apiURL, bytes.NewBuffer([]byte(requestBody)))
 	if err != nil {
 		log.Fatalf("Failed to create request, error: %+v", err)
 	}
@@ -93,6 +94,7 @@ func main() {
 		HTTPMethod  string
 		Path        string
 		QueryParams string
+		RequestBody string
 	}{
 		{HTTPMethod: "GET", Path: "/v0.1/me"},
 		{HTTPMethod: "GET", Path: "/v0.1/me/apps", QueryParams: "?limit=2"},
@@ -100,11 +102,16 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?limit=3"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce"},
+		{HTTPMethod: "PATCH", Path: "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce", RequestBody: `{"is_public_page_enabled":true}`},
 	} {
 		fullURL := apiHost + aReq.Path + aReq.QueryParams
 		log.Printf("=> %s %s (%s)", aReq.HTTPMethod, aReq.Path, fullURL)
-		prettyResp := recordResponse(aReq.HTTPMethod, fullURL)
-		ggConfInventory.Inventory[aReq.Path] = map[string]string{}
+		prettyResp := recordResponse(aReq.HTTPMethod, fullURL, aReq.RequestBody)
+		if _, found := ggConfInventory.Inventory[aReq.Path]; !found {
+			ggConfInventory.Inventory[aReq.Path] = map[string]string{}
+		}
 		ggConfInventory.Inventory[aReq.Path][aReq.HTTPMethod] = prettyResp
 	}
 
