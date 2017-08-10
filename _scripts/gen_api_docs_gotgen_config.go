@@ -8,6 +8,8 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"regexp"
+	"strings"
 )
 
 var (
@@ -53,6 +55,32 @@ func recordResponse(httpMethod, apiURL, requestBody string) string {
 	}
 
 	return string(prettyBytes)
+}
+
+func getTemplateURL(realURL string) string {
+	templateURL := realURL
+	if strings.Contains(templateURL, "apps/") {
+		regEx, err := regexp.Compile("apps/[a-z0-9]+")
+		if err != nil {
+			log.Fatal("App slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "apps/APP-SLUG")
+	}
+	if strings.Contains(templateURL, "builds/") {
+		regEx, err := regexp.Compile("builds/[a-z0-9]+")
+		if err != nil {
+			log.Fatal("Build slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "builds/BUILD-SLUG")
+	}
+	if strings.Contains(templateURL, "artifacts/") {
+		regEx, err := regexp.Compile("artifacts/[a-z0-9]+")
+		if err != nil {
+			log.Fatal("Artifact slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "artifacts/ARTIFACT-SLUG")
+	}
+	return templateURL
 }
 
 // DelimiterModel ...
@@ -113,6 +141,8 @@ func main() {
 			ggConfInventory.Inventory[aReq.Path] = map[string]string{}
 		}
 		ggConfInventory.Inventory[aReq.Path][aReq.HTTPMethod] = prettyResp
+		templateURLKey := fmt.Sprintf("%s_cURL", aReq.HTTPMethod)
+		ggConfInventory.Inventory[aReq.Path][templateURLKey] = getTemplateURL(fullURL)
 	}
 
 	log.Println("=============================")
