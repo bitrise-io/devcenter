@@ -110,7 +110,7 @@ You can use this endpoint to get information about your account (identified by t
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/me").GET_cURL }}'
 ```
 
 #### Example response
@@ -126,7 +126,7 @@ Retrieve the apps you have access to. This includes the apps created / owned by 
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me/apps
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/me/apps").GET_cURL }}'
 ```
 
 #### Example response
@@ -142,7 +142,7 @@ Get a specific app's data.
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/apps/APP-SLUG
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909").GET_cURL }}'
 ```
 
 #### Example response
@@ -175,7 +175,7 @@ Build times:
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds'
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds").GET_cURL }}'
 ```
 
 #### Example response
@@ -196,7 +196,7 @@ Build times: **See the [`GET /apps/{APP-SLUG}/builds` endpoint description](#get
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG'
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846").GET_cURL }}'
 ```
 
 #### Example response
@@ -230,7 +230,7 @@ The `expiring_raw_log_url` is configured so that it does not require any other p
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/log'
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log").GET_cURL }}'
 ```
 
 #### Example response
@@ -239,6 +239,55 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/app
 {{ (var "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log").GET }}
 ```
 
+### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts
+
+Get the artifacts for a specific build.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts").GET }}
+```
+
+### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
+
+Get a certain build artifact's data. The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").GET }}
+```
+
+### PATCH /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
+
+Set the attributes of a build artifact. In the request body have to be sent a JSON with the specified new attribute values.
+
+_Note: at this time only the `is_public_page_enabled` attribute can be set through this endpoint call._
+
+#### Example `curl` request
+
+```
+curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' -d '{"is_public_page_enabled":true}' '{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH }}
+```
 
 ## WIP / working on it
 
