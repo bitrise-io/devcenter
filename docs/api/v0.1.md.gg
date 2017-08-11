@@ -289,6 +289,40 @@ curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' -d '{"is_public_page_en
 {{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH }}
 ```
 
+### POST /apps/{APP-SLUG}/builds/{BUILD-SLUG}/abort
+
+Abort a running build.
+
+Optionally you can specify a JSON body for the request, with an `abort_reason`. Example:
+
+```
+{
+	"abort_reason": "test build abort"
+}
+```
+
+#### Example `curl` request
+
+```
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/{APP-SLUG}/builds/{BUILD-SLUG}/abort' -d '{"abort_reason": "test build abort via curl"}'
+```
+
+#### Example response
+
+```
+{
+    "status": "ok"
+}
+```
+
+If the build is already finished or aborted you'll get an error:
+
+```
+{
+    "error_msg": "Build already finished, can't abort it."
+}
+```
+
 ## WIP / working on it
 
 See [https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554).
