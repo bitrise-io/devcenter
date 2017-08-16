@@ -128,6 +128,11 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/me/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?limit=3"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?status=3"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?branch=master"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?trigger_event_type=push"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?before=1493127294"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?after=1497998102"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts"},
@@ -138,11 +143,11 @@ func main() {
 		log.Printf("=> %s %s (%s)", aReq.HTTPMethod, aReq.Path, fullURL)
 		prettyResp := recordResponse(aReq.HTTPMethod, fullURL, aReq.RequestBody)
 		if _, found := ggConfInventory.Inventory[aReq.Path]; !found {
-			ggConfInventory.Inventory[aReq.Path] = map[string]string{}
+			ggConfInventory.Inventory[aReq.Path+aReq.QueryParams] = map[string]string{}
 		}
-		ggConfInventory.Inventory[aReq.Path][aReq.HTTPMethod] = prettyResp
+		ggConfInventory.Inventory[aReq.Path+aReq.QueryParams][aReq.HTTPMethod] = prettyResp
 		templateURLKey := fmt.Sprintf("%s_cURL", aReq.HTTPMethod)
-		ggConfInventory.Inventory[aReq.Path][templateURLKey] = getTemplateURL(fullURL)
+		ggConfInventory.Inventory[aReq.Path+aReq.QueryParams][templateURLKey] = getTemplateURL(fullURL)
 	}
 
 	log.Println("=============================")
