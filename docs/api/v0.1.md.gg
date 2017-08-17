@@ -210,24 +210,24 @@ Response:
 {{ (var "/v0.1/apps/669403bffbe35909/builds?status=3").GET }}
 ```
 
-Request with `branch` filtering (builds on master branch):
+Request with `branch` filtering (builds on develop branch):
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?branch=master").GET_cURL }}'
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?branch=develop").GET_cURL }}'
 ```
 
 Response:
 ```
-{{ (var "/v0.1/apps/669403bffbe35909/builds?branch=master").GET }}
+{{ (var "/v0.1/apps/669403bffbe35909/builds?branch=develop").GET }}
 ```
 
 Request with `trigger_event_type` filtering:
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?trigger_event_type=push").GET_cURL }}'
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?trigger_event_type=pull-request").GET_cURL }}'
 ```
 
 Response:
 ```
-{{ (var "/v0.1/apps/669403bffbe35909/builds?trigger_event_type=push").GET }}
+{{ (var "/v0.1/apps/669403bffbe35909/builds?trigger_event_type=pull-request").GET }}
 ```
 
 Request with `before` filtering (builds triggered before 04.25.2017 1:34pm):
