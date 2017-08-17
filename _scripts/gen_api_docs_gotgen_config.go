@@ -133,6 +133,7 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?trigger_event_type=pull-request"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?before=1493127294"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?after=1497998102"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?workflow=secondary"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts"},
