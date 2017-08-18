@@ -147,8 +147,10 @@ func main() {
 			ggConfInventory.Inventory[aReq.Path+aReq.QueryParams] = map[string]string{}
 		}
 		ggConfInventory.Inventory[aReq.Path+aReq.QueryParams][aReq.HTTPMethod] = prettyResp
-		templateURLKey := fmt.Sprintf("%s_cURL", aReq.HTTPMethod)
-		ggConfInventory.Inventory[aReq.Path+aReq.QueryParams][templateURLKey] = getTemplateURL(fullURL)
+		ggConfInventory.Inventory[aReq.Path+aReq.QueryParams][fmt.Sprintf("%s_cURL", aReq.HTTPMethod)] = getTemplateURL(fullURL)
+		if aReq.RequestBody != "" {
+			ggConfInventory.Inventory[aReq.Path+aReq.QueryParams][fmt.Sprintf("%s_RequestBody", aReq.HTTPMethod)] = aReq.RequestBody
+		}
 	}
 
 	log.Println("=============================")
