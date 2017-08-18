@@ -280,7 +280,7 @@ _Note: at this time only the `is_public_page_enabled` attribute can be set throu
 #### Example `curl` request
 
 ```
-curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' -d '{"is_public_page_enabled":true}' '{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH_cURL }}'
+curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH_cURL }}' -d '{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH_RequestBody }}'
 ```
 
 #### Example response
