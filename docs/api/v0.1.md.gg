@@ -194,7 +194,7 @@ It's possible to filter the builds with URL query parameters.
 - **`branch`** (string): Retrieves the builds from the given branch.
 - **`trigger_event_type`** (string): With this parameter the builds can be filtered based on the trigger event. Data type: *string* The available values are the following:
   - *`push`*: when the response contains only the builds which were triggered by a commit push
-  - *`pull`*: when the response contains only the builds which were triggered by a pull request
+  - *`pull-request`*: when the response contains only the builds which were triggered by a pull request
 - **`after`** (integer): Giving this parameter, in the response there will be only those builds which were triggered after or at the given time. The value has to be passed as UNIX timestamp.
 - **`before`** (integer): Similar to the previous one this filters by the time when the build was triggered, but this retrieves the ones before or at the given time. The value has to be passed as UNIX timestamp.
 - **`workflow`** (string): The response will contain only the builds triggered with the specified workflow.
