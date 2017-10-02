@@ -19,7 +19,7 @@ Then, go to the [Add new app page](https://www.bitrise.io/apps/add) and select
 the Organization in the __dropdown at the top left__.
 
 You can change this throughout the process of adding the app, or after you finished adding the app,
-changing the owner is possible through [transferring ownership](/faq/how-to-change-the-owner-of-an-app/).
+changing the owner is possible through [transferring ownership](/docs/faq/how-to-change-the-owner-of-an-app/).
 
 
 ## How do I migrate/transfer my existing apps to an Organization?
