@@ -9,7 +9,7 @@ and click the **pencil/edit** icon,
 which will open the GitHub editor for the file.
 [Example for this page](https://github.com/bitrise-io/devcenter/edit/master/README.md).
 
-The deployed documentation can be found on http://devcenter.bitrise.io, which points to the repository's `/docs` subfolder. All links point to this folder as a root folder.
+The deployed documentation can be found at [http://devcenter.bitrise.io](http://devcenter.bitrise.io), which is a statically generated site, based on this repository's `/docs` directory. All links in the articles are relative to the `/docs` directory!
 
 If you don't want to edit the page on GitHub,
 feel free to [contact us](https://www.bitrise.io/contact),
