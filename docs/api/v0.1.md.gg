@@ -126,13 +126,13 @@ Retrieve the apps you have access to. This includes the apps created / owned by 
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/me/apps").GET_cURL }}'
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/me/apps?limit=2").GET_cURL }}'
 ```
 
 #### Example response
 
 ```
-{{ (var "/v0.1/me/apps").GET }}
+{{ (var "/v0.1/me/apps?limit=2").GET }}
 ```
 
 ### GET /apps/{APP-SLUG}
@@ -175,15 +175,104 @@ Build times:
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds").GET_cURL }}'
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?limit=3").GET_cURL }}'
 ```
 
 #### Example response
 
 ```
-{{ (var "/v0.1/apps/669403bffbe35909/builds").GET }}
+{{ (var "/v0.1/apps/669403bffbe35909/builds?limit=3").GET }}
 ```
 
+#### Filtering parameters for build list
+
+It's possible to filter the builds with URL query parameters.
+
+##### Available parameters:
+
+- **`status`** (integer): In the response there will be only the builds with a certain status.
+- **`branch`** (string): Retrieves the builds from the given branch.
+- **`trigger_event_type`** (string): With this parameter the builds can be filtered based on the trigger event. Data type: *string* The available values are the following:
+  - *`push`*: when the response contains only the builds which were triggered by a commit push
+  - *`pull-request`*: when the response contains only the builds which were triggered by a pull request
+- **`pull_request_id`** (integer): This parameter specifies the pull request id of the actual build, works only if `trigger_event_type` parameter is specified with the value *`pull-request`*
+- **`after`** (integer): Giving this parameter, in the response there will be only those builds which were triggered after or at the given time. The value has to be passed as UNIX timestamp.
+- **`before`** (integer): Similar to the previous one this filters by the time when the build was triggered, but this retrieves the ones before or at the given time. The value has to be passed as UNIX timestamp.
+- **`workflow`** (string): The response will contain only the builds triggered with the specified workflow.
+
+##### Example `curl` requests
+
+Request with `status` filtering (aborted builds):
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?status=3").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?status=3").GET }}
+```
+
+Request with `branch` filtering (builds on _develop_ branch):
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?branch=develop").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?branch=develop").GET }}
+```
+
+Request with `trigger_event_type` filtering (builds triggered by _pull request_):
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?trigger_event_type=pull-request").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?trigger_event_type=pull-request").GET }}
+```
+
+Request with `before` filtering (builds triggered before 04.25.2017 1:34pm):
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?before=1493127294").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?before=1493127294").GET }}
+```
+
+Request with `after` filtering (builds triggered after 06.20.2017 10:35pm):
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?after=1497998102").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?after=1497998102").GET }}
+```
+
+Request with `workflow` filtering (builds triggered with _secondary_ workflow):
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?workflow=secondary").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?workflow=secondary").GET }}
+```
 
 ### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}
 
