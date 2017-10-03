@@ -40,7 +40,7 @@ If your builds are running fine but you still can't see the status indicator on 
   (who owns the repository) for Bitrise, so even though everything else is in place,
   GitHub will still reject the status message [bitrise.io](https://www.bitrise.io) sends to it.
   See the
-  [Grant access to a GitHub Organization](/docs/faq/grant-access-to-github-organization)
+  [Grant access to a GitHub Organization](/docs/faq/grant-access-to-github-organization.md)
   guide for more information.
 - Another thing might be that the user you specified as the
   [Service credential User](#make-sure-to-select-a-service-credential-user-who-has-a-connected-github-account)
@@ -51,7 +51,7 @@ If your builds are running fine but you still can't see the status indicator on 
   but rather copy-pasted your repository's URL, you still need to grant access to the organization to see
   the build status indicator on GitHub.
   See the
-  [Grant access to a GitHub Organization](/docs/faq/grant-access-to-github-organization)
+  [Grant access to a GitHub Organization](/docs/faq/grant-access-to-github-organization.md)
   guide for more information, and make sure that you selected the right
   [Service credential User](#make-sure-to-select-a-service-credential-user-who-has-a-connected-github-account)
   for the app on [bitrise.io](https://www.bitrise.io).

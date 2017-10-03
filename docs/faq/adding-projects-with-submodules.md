@@ -60,7 +60,7 @@ There are three options to grant [Bitrise](https://www.bitrise.io) access to you
 * _Use your own SSH keypair_: can be used if you also have the private key of the given user.
   You just have to paste the private key and [Bitrise](https://www.bitrise.io) will be able to access the repositories.
   If you'd want to go with this option, it's important that __the SSH key have to be an RSA key, without a passphrase!__
-  You can find an example of how you can generate a key like that [here](/docs/faq/how-to-generate-ssh-keypair/).
+  You can find an example of how you can generate a key like that [here](/docs/faq/how-to-generate-ssh-keypair.md).
 
 ## When you already registered your App on Bitrise.io
 
