@@ -29,7 +29,7 @@ Let's see why.
   By including your dependencies inside your repository you won't have to
   rely on using the exact same version of the tool everywhere (across your team and on your CI service as well).
 * No more issues with private submodules / private pods.
-  As described here [Adding projects with submodules](/faq/adding-projects-with-submodules/) granting permission
+  As described here [Adding projects with submodules](/docs/faq/adding-projects-with-submodules.md) granting permission
   to a project which depends on private Pods, submodules or other git related dependencies can be quite hard.
   Most will simply not go through with activating and de-activating separate Deployment SSH keys
   for every dependency and will eventually just add the SSH key to their account or to a "bot" account as a personal SSH key.

@@ -54,7 +54,7 @@ have to be performed for every build in a clean environment.
 Possible solutions:
 
 * Commit your dependencies into your repository -
-  read more: [Should I commit my dependencies into my repository?](/faq/should-i-commit-my-dependencies-into-my-repository)
+  read more: [Should I commit my dependencies into my repository?](/docs/faq/should-i-commit-my-dependencies-into-my-repository.md)
 * Cache your dependencies in Bitrise Build Cache -
   read more: [Using the Build Cache](/caching/about-caching)
 
