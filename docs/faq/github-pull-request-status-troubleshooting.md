@@ -1,5 +1,5 @@
 If you can't see the nice little green/red CI checks status (like the one you can see on our [Blog,
-about the Pull Request status feature announcement](http://blog.bitrise.io/2015/04/23/pull-request-support-for-github-repositories.html))
+about the Pull Request status feature announcement](https://blog.bitrise.io/pull-request-support-for-github))
 on the Pull Request's GitHub page, you should check this list for troubleshooting.
 
 ## Make sure to select a Service credential User who has a connected GitHub account
