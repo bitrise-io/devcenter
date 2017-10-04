@@ -9,7 +9,7 @@ Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io
 
 ![Screenshot](/img/signing-up/github_signup.png)
 
-Select `GitHub` for authenticating yourself with one of these services.
+Select `GitHub` for authenticating yourself with this service.
 
 ## Authorize Bitrise
 
