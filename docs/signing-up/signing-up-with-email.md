@@ -19,3 +19,5 @@ After you provided your credentials, press **Done**.
 After successful registration we will send you a confirmation email. Click on the confirmation link in the email and you are ready to roll!
 
 ![Screenshot](/img/signing-up/confirmation-email.png)
+
+If you haven't received a confirmation email, click **Resend confirmation email** you see at the end of the registration process.
