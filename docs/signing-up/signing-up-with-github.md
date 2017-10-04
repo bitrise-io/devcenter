@@ -1,11 +1,11 @@
-You are able to authenticate yourself with your GitHub user against __Bitrise__. It means some practical benefits, like logging in with one click and of course you won't have to authorize your GitHub account when adding repositories hosted by these providers again.
+You are able to authenticate yourself with your GitHub user against __Bitrise__. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your GitHub account when adding repositories hosted by these providers again.
 
 !!! note
-    If you'd like to sign up with your email address, please follow the instructions in [sign up with email address](/signing-up/signing-up-with-email).
+    If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/signing-up/signing-up-with-email).
 
 ## Sign up
 
-Go to the Sign up page with pressing `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
+Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
 
 ![Screenshot](/img/signing-up/github_signup.png)
 
@@ -13,7 +13,7 @@ Select `GitHub` for authenticating yourself with one of these services.
 
 ## Authorize Bitrise
 
-You have to authorize Bitrise before we can establish the connection. This means you give permissions to Bitrise to access (read) your repositories.
+You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
 
 ![Screenshot](/img/signing-up/github_authorization.png)
 
