@@ -208,7 +208,7 @@ It's possible to filter the builds with URL query parameters. These parameters e
 - **`before`** (integer): Similar to the previous one this filters by the time when the build was triggered, but this retrieves the ones before or at the given time. The value has to be passed as UNIX timestamp.
 - **`workflow`** (string): The response will contain only the builds triggered with the specified workflow.
 - **`commit_message`** (string): In the result set there will be the builds with the given commit message, this parameter is case insensitive and also retrieves the partial matches.
-- **`build_number`** (string): Retrieves builds with build number equal to or less than this given parameter.
+- **`build_number`** (string): Retrieves build with the specified actual build number parameter.
 
 ##### Example `curl` requests
 
