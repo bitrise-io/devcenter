@@ -194,7 +194,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe
 
 #### Filtering parameters for build list
 
-It's possible to filter the builds with URL query parameters.
+It's possible to filter the builds with URL query parameters. These parameters evaluated with a logical AND operator.
 
 ##### Available parameters:
 
@@ -207,6 +207,8 @@ It's possible to filter the builds with URL query parameters.
 - **`after`** (integer): Giving this parameter, in the response there will be only those builds which were triggered after or at the given time. The value has to be passed as UNIX timestamp.
 - **`before`** (integer): Similar to the previous one this filters by the time when the build was triggered, but this retrieves the ones before or at the given time. The value has to be passed as UNIX timestamp.
 - **`workflow`** (string): The response will contain only the builds triggered with the specified workflow.
+- **`commit_message`** (string): In the result set there will be the builds with the given commit message, this parameter is case insensitive and also retrieves the partial matches.
+- **`build_number`** (string): Retrieves build with the specified actual build number parameter.
 
 ##### Example `curl` requests
 
@@ -280,6 +282,30 @@ Response:
 
 ```
 {{ (var "/v0.1/apps/669403bffbe35909/builds?workflow=secondary").GET }}
+```
+
+Request with `commit_message` filtering (builds with commit message __):
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?commit_message=build%20will%20be%20aborted").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?commit_message=build%20will%20be%20aborted").GET }}
+```
+
+Request with `build_number` filtering (builds with commit message __):
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?build_number=3").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?build_number=3").GET }}
 ```
 
 ### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}
@@ -377,13 +403,13 @@ _Note: at this time only the `is_public_page_enabled` attribute can be set throu
 #### Example `curl` request
 
 ```
-curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH_cURL }}' -d '{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH_RequestBody }}'
+curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/ddf4134555e833d8/artifacts/5a9f5da8d5f1057c").PATCH_cURL }}' -d '{{ (var "/v0.1/apps/669403bffbe35909/builds/ddf4134555e833d8/artifacts/5a9f5da8d5f1057c").PATCH_RequestBody }}'
 ```
 
 #### Example response
 
 ```
-{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH }}
+{{ (var "/v0.1/apps/669403bffbe35909/builds/ddf4134555e833d8/artifacts/5a9f5da8d5f1057c").PATCH }}
 ```
 
 ### POST /apps/{APP-SLUG}/builds/{BUILD-SLUG}/abort
