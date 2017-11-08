@@ -1,10 +1,10 @@
-A frequent question is whether it's possible to run the Android x86 emulator,
-instead of the ARM emulators.
+A frequent question is whether it's possible to run the Android x86 emulator, instead of the ARM emulators.
 
-Unfortunately, as far as we know, none of the public cloud environments expose the required
-hardware virtualization bit required for running the Android x86 emulator.
+As an experiment we now allow all the required nested virtualization bits for the x86 Android emulators __on the Linux/Android stacks__, which means that we can use the virtualization that the host machine has for running an emulator with x86 architecture, and we can thus skip the slow emulation. This is still 10-15% slower than when run on a physical machine, but it is still much faster than the armv7-a emulator.
 
-If you know about any solution, [please contact us](https://www.bitrise.io/contact)!
+__This feature is only available on the Linux/Android stacks__ right now.
+
+## Alternatives (for other stacks)
 
 For now, the best workaround seems to be [Oracle's Ravello](https://www.ravellosystems.com/) ( [a related blog post](https://www.ravellosystems.com/blog/android-emulator-on-amazon-ec2-and-google-cloud/) )
 if you need a full emulator (with UI),
