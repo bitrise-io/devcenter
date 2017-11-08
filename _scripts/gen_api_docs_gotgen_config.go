@@ -140,7 +140,7 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce"},
-		{HTTPMethod: "PATCH", Path: "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce", RequestBody: `{"is_public_page_enabled":true}`},
+		{HTTPMethod: "PATCH", Path: "/v0.1/apps/669403bffbe35909/builds/ddf4134555e833d8/artifacts/5a9f5da8d5f1057c", RequestBody: `{"is_public_page_enabled":true}`},
 	} {
 		fullURL := apiHost + aReq.Path + aReq.QueryParams
 		log.Printf("=> %s %s (%s)", aReq.HTTPMethod, aReq.Path, fullURL)

@@ -403,13 +403,13 @@ _Note: at this time only the `is_public_page_enabled` attribute can be set throu
 #### Example `curl` request
 
 ```
-curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH_cURL }}' -d '{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH_RequestBody }}'
+curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/ddf4134555e833d8/artifacts/5a9f5da8d5f1057c").PATCH_cURL }}' -d '{{ (var "/v0.1/apps/669403bffbe35909/builds/ddf4134555e833d8/artifacts/5a9f5da8d5f1057c").PATCH_RequestBody }}'
 ```
 
 #### Example response
 
 ```
-{{ (var "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts/0d2277e50b8d32ce").PATCH }}
+{{ (var "/v0.1/apps/669403bffbe35909/builds/ddf4134555e833d8/artifacts/5a9f5da8d5f1057c").PATCH }}
 ```
 
 ### POST /apps/{APP-SLUG}/builds/{BUILD-SLUG}/abort
