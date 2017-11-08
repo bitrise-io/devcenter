@@ -1,4 +1,6 @@
-As an experiment we now allow nested virtualization __on the Linux/Android stacks__, which means that we can use the virtualization that the host machine has for running an emulator with x86 architecture, and we can thus skip the slow emulation. This is still 10-15% slower than when run on a physical machine, but it is still much faster than the armv7-a emulator.
+A frequent question is whether it's possible to run the Android x86 emulator, instead of the ARM emulators.
+
+As an experiment we now allow all the required nested virtualization bits for the x86 Android emulators __on the Linux/Android stacks__, which means that we can use the virtualization that the host machine has for running an emulator with x86 architecture, and we can thus skip the slow emulation. This is still 10-15% slower than when run on a physical machine, but it is still much faster than the armv7-a emulator.
 
 __This feature is only available on the Linux/Android stacks__ right now.
 
