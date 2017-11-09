@@ -398,7 +398,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe
 
 Set the attributes of a build artifact. In the request body have to be sent a JSON with the specified new attribute values.
 
-_Note: at this time only the `is_public_page_enabled` attribute can be set through this endpoint call._
+_Note: at this time only the `is_public_page_enabled` attribute can be set through this endpoint call. This attribute can only set for the artifacts with type `android-apk` or `ios-ipa`._
 
 #### Example `curl` request
 
