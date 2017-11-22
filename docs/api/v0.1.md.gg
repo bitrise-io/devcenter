@@ -416,7 +416,7 @@ curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/66
 
 Abort a running build.
 
-Optionally you can specify a JSON body for the request, with an `abort_reason`. With parameter `abort_with_success` you can set the type of abort, if it's set as `true`, then the build will get a status with value 4, which means that it's aborted, but it counts as a successful build, this way Github will show as successful too. Also you can specify whether sending email notification about the abort is required or not. Example:
+Optionally you can specify a JSON body for the request, with an `abort_reason`. With parameter `abort_with_success` you can set the type of abort, if it's set as `true`, then the build will get a status with value 4, which means that it's aborted, but it counts as a successful build, this way Github will show as successful too. Also you can specify whether notifications (emails) should be sent. Example:
 
 ```
 {
