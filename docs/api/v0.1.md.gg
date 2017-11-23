@@ -416,18 +416,20 @@ curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/66
 
 Abort a running build.
 
-Optionally you can specify a JSON body for the request, with an `abort_reason`. Example:
+Optionally you can specify a JSON body for the request, with an `abort_reason`. With parameter `abort_with_success` you can set the type of abort, if it's set as `true`, then the build will get a status with value 4, which means that it's aborted, but it counts as a successful build, this way Github will show as successful too. Also you can specify whether notifications (emails) should be sent. Example:
 
 ```
 {
-	"abort_reason": "test build abort"
+	"abort_reason": "abort with abort_with_success=true test & skip_notifications=true",
+	"abort_with_success": true,
+	"skip_notifications": true
 }
 ```
 
 #### Example `curl` request
 
 ```
-curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/{APP-SLUG}/builds/{BUILD-SLUG}/abort' -d '{"abort_reason": "test build abort via curl"}'
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/{APP-SLUG}/builds/{BUILD-SLUG}/abort' -d '{"abort_reason": "abort with abort_with_success=true test & skip_notifications=true", "abort_with_success": true,"skip_notifications": true}'
 ```
 
 #### Example response
