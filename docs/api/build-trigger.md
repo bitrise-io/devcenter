@@ -75,7 +75,7 @@ The following parameters are supported in the `build_params` object:
   In case of a Pull Request build this is the source branch, the one the PR was started from.
 * `tag` (string): The git Tag to build.
 * `commit_hash` (string): The git Commit Hash to build.
-* `commit_message` (strings): The git commit message (or build's message).
+* `commit_message` (string): The git commit message (or build's message).
 
 ### Bitrise.io specific:
 
