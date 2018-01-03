@@ -8,7 +8,19 @@ The event type that triggered the webhook is sent in a custom header:
 "Bitrise-Event-Type": "build/triggered" # or "build/finished"
 ```
 
-Some data of the build is sent in the payload:
+The recent delivery attempts of a webhook can be found on the Code tab, so you can inspect the sent payload and the given response, and even request a redelivery of a given item. (Please note that Bitrise tries to deliver an item only once, no automatic retry attempts are made: it can be requested manually.)
+
+## Build events
+
+### Build triggered
+
+Custom header:
+
+```
+"Bitrise-Event-Type": "build/triggered"
+```
+
+Payload example:
 
 ```
 {
@@ -24,4 +36,26 @@ Some data of the build is sent in the payload:
 }
 ```
 
-The recent delivery attempts of a webhook can be found on the Code tab, so you can inspect the sent payload and the given response, and even request a redelivery of a given item. (Bitrise attempts to deliver an item once unless requested manually.)
+### Build finished
+
+Custom header:
+
+```
+"Bitrise-Event-Type": "build/finished"
+```
+
+Payload example:
+
+```
+{
+  "build_slug":"1234abcd",
+  "build_number":3,
+  "app_slug":"abcd1234",
+  "git": {
+    "provider":"github",
+    "src_branch":"feature/branch",
+    "dst_branch":master, # If the build was triggered by a pull request
+    "pull_request_id":32 # If the build was triggered by a pull request
+  }
+}
+```
