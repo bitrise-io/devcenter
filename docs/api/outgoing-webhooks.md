@@ -24,4 +24,4 @@ Some data of the build is sent in the payload:
 }
 ```
 
-The recent delivery attempts of a webhook can be found on the Code tab, so you can inspect the sent payload and the given response, and even request a redelivery of a given item.
+The recent delivery attempts of a webhook can be found on the Code tab, so you can inspect the sent payload and the given response, and even request a redelivery of a given item. (Bitrise attempts to deliver an item once unless requested manually.)
