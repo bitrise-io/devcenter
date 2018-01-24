@@ -19,7 +19,7 @@ xcodebuild -exportArchive \
 Back in the days of Xcode 6 this was everything you had to do; just specify the format to be `ipa`
 and set the required paths and the Provisioning Profile to be used for code signing the `ipa`.
 
-`Xcode 7` instroduced a lot of additional archive feature and the support for
+`Xcode 7` introduced a lot of additional archive feature and the support for
 defining more complex archive parameters. This meant that although Xcode 7 still supports
 the old parameters, it's now declared as **deprecated**, and you'd get
 the following warning if you'd use the old parameters instead of the new `-exportOptionsPlist` parameter: 
