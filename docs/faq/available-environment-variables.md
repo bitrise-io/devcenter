@@ -56,3 +56,4 @@ These environments are available for builds running on [bitrise.io](https://www.
 * `BITRISE_CERTIFICATE_PASSPHRASE` : Certificate / Identity's password / passphrase,
   the one specified on [bitrise.io](https://www.bitrise.io).
   Pipe character (`|`) separated list, in case more than one value is provided.
+* `BITRISE_IO` : indicates that the build is running in a bitrise.io environment. Value is set to `"true"` by bitrise.io when it starts a build.
