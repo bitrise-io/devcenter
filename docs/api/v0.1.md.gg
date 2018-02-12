@@ -349,6 +349,10 @@ so please **do not store** this URL! If you want to retrieve the full (raw) log 
 In fact, you should not include any special header at all; just create a simple GET request and send it to the `expiring_raw_log_url` url.
 The `expiring_raw_log_url` is configured so that it does not require any other parameter other than what's included in the URL.
 
+When a build is running, the log chunks can be retrieved with filtering, because in this case every response contain a `timestamp` which has Unix timestamp format. You can send this value in the next call as query parameter with the key `timestamp`, so the next response will contain only the chunks created after the timestamp.
+There is also a `limit` parameter which has 50 as the default value, with this you can limit the number of the retrieved log chunks.
+
+_Note: If build is finished the logs will be archived, in this case there are no filtering options, the filter parameters won't have any effect on the content of the response, the whole archived log will be retrieved._
 
 #### Example `curl` request
 
