@@ -12,6 +12,8 @@ The recent delivery attempts of a webhook can be found on the Code tab, so you c
 
 ## Build events
 
+_Note: the available values of the build status parameter can be found at the [build list part of the Bitrise API documentation](/api/v0.1/#get-appsapp-slugbuilds)_
+
 ### Build triggered
 
 Custom header:
@@ -27,11 +29,13 @@ Payload example:
   "build_slug":"1234abcd",
   "build_number":3,
   "app_slug":"abcd1234",
+  "build_status":0,
   "git": {
     "provider":"github",
     "src_branch":"feature/branch",
-    "dst_branch":master, # If the build was triggered by a pull request
-    "pull_request_id":32 # If the build was triggered by a pull request
+    "dst_branch":"master", # If the build was triggered by a pull request
+    "pull_request_id":32, # If the build was triggered by a pull request
+    "tag":"v1.0" # If the build was triggered by tag
   }
 }
 ```
@@ -51,11 +55,13 @@ Payload example:
   "build_slug":"1234abcd",
   "build_number":3,
   "app_slug":"abcd1234",
+  "build_status":1,
   "git": {
     "provider":"github",
     "src_branch":"feature/branch",
     "dst_branch":master, # If the build was triggered by a pull request
     "pull_request_id":32 # If the build was triggered by a pull request
+    "tag":"v1.0" # If the build was triggered by tag
   }
 }
 ```
