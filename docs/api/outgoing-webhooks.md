@@ -12,7 +12,7 @@ The recent delivery attempts of a webhook can be found on the Code tab, so you c
 
 ## Build events
 
-_Note: the available values of the build status parameter can be found at the [build list part of the Bitrise API documentation](http://devcenter.bitrise.io/api/v0.1/#get-appsapp-slugbuilds)_
+_Note: the available values of the build status parameter can be found at the [build list part of the Bitrise API documentation](/api/v0.1/#get-appsapp-slugbuilds)_
 
 ### Build triggered
 
