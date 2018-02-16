@@ -159,6 +159,64 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe
 {{ (var "/v0.1/apps/669403bffbe35909").GET }}
 ```
 
+### POST /apps/{APP-SLUG}/provisioning-profiles
+
+Add provisioning profile for a specific application. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles").POST_cURL }}' -d '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles").POST_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+  "data": {
+    "slug":"1C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "upload_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e"
+  }
+}
+```
+
+After this call you have to upload to AWS your provisioning profile file with the presigned URL.
+
+#### Example `curl` request
+
+```
+curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
+```
+
+### POST /apps/{APP-SLUG}/build-certificates
+
+Add certificate file for a specific application. This is the first phase of the certificate file upload process, calling this endpoint a new certificate object is created and its slug and a presigned upload URL will be retrieved.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates").POST_cURL }}' -d '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates").POST_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+  "data": {
+    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "upload_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/prov_profile_documents/uploads/78991/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124031Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=9884fb2a2aeaebb5a216d31715577e3c6c6bc7e7b936f85cc502a904fa054306"
+  }
+}
+```
+
+After this call you have to upload to AWS your certificate file with the presigned URL.
+
+#### Example `curl` request
+
+```
+curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/prov_profile_documents/uploads/78991/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124031Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=9884fb2a2aeaebb5a216d31715577e3c6c6bc7e7b936f85cc502a904fa054306
+```
+
 ### GET /apps/{APP-SLUG}/builds
 
 Get the builds of a specific app.
