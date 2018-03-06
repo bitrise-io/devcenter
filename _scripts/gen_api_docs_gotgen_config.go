@@ -136,6 +136,12 @@ func main() {
 		},
 		{HTTPMethod: "POST", Path: "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W/uploaded", NoResponse: true},
 		{
+			HTTPMethod:  "PATCH",
+			Path:        "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W",
+			RequestBody: `{"is_protected":true}`,
+			NoResponse:  true,
+		},
+		{
 			HTTPMethod:  "POST",
 			Path:        "/v0.1/apps/518e869d56f2adfd/build-certificates",
 			RequestBody: `{"upload_file_name":"sample_cert.p12","upload_file_size":1023}`,

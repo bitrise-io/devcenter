@@ -173,9 +173,14 @@ curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518
 
 ```
 {
-  "data": {
-    "slug": "01C6FA6P6HRQT5PQ8RMMVVXE6W",
-    "upload_url": "https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e"
+  "data":{
+    "upload_file_name":"sample.provisionprofile",
+    "upload_file_size":2047,
+    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "processed":false,
+    "is_expose":true,
+    "is_protected":false,
+    "upload_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e"
   }
 }
 ```
@@ -202,13 +207,45 @@ curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/51
 
 ```
 {
-  "data": {
-    "upload_file_name": "sample.provisionprofile",
-    "upload_file_size": 2047,
-    "slug": "01C6FA6P6HRQT5PQ8RMMVVXE6W",
-    "processed": false,
-    "is_expose": true,
-    "is_protected": false
+  "data":{
+    "upload_file_name":"sample.provisionprofile",
+    "upload_file_size":2047,
+    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "processed":false,
+    "is_expose":true,
+    "is_protected":false
+  }
+}
+```
+
+### PATCH /apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}
+
+Set a specific subset of provisioning profile attributes. You can update the `is_protected`, `is_expose` and `processed` attributes of a provisioning profile object. There are some constraints:
+
+1. once the `is_protected` flag is set with value `true` it cannot be changed anymore
+1. when the value of `is_protected` is `true`, then the `is_expose` flag cannot be set to other value
+1. once `processed` flag set to true, then its value cannot be changed anymore
+
+Violating these constraints the response will be `Bad Request`.
+_Note: the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body '{"processed":true}'_
+
+#### Example `curl` request
+
+```
+curl -X PATCH -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W").PATCH_cURL }} -d '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W").PATCH_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+  "data":{
+    "upload_file_name":"sample.provisionprofile",
+    "upload_file_size":2047,
+    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "processed":false,
+    "is_expose":true,
+    "is_protected":true
   }
 }
 ```
@@ -227,8 +264,14 @@ curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518
 
 ```
 {
-  "data": {
+  "data":{
+    "upload_file_name":"sample_cert.p12",
+    "upload_file_size":1023,
     "slug":"01C6FA2R4CB772QTDETBE0MENP",
+    "processed":false,
+    "certificate_password":"",
+    "is_expose":true,
+    "is_protected":false,
     "upload_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e"
   }
 }
@@ -256,13 +299,14 @@ curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518
 
 ```
 {
-  "data": {
-    "upload_file_name": "sample_cert.p12",
-    "upload_file_size": 1023,
-    "slug": "01C6FA2R4CB772QTDETBE0MENP",
-    "processed": false,
-    "is_expose": true,
-    "is_protected": false
+  "data":{
+    "upload_file_name":"sample_cert.p12",
+    "upload_file_size":1023,
+    "slug":"01C6FA2R4CB772QTDETBE0MENP",
+    "processed":true,
+    "certificate_password":"",
+    "is_expose":true,
+    "is_protected":false
   }
 }
 ```
