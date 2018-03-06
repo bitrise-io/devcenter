@@ -325,7 +325,7 @@ _Note: the previous `/apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG
 #### Example `curl` request
 
 ```
-curl -X PATCH -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA6P6HRQT5PQ8RMMVVXE6W").PATCH_cURL }} -d '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA6P6HRQT5PQ8RMMVVXE6W").PATCH_RequestBody }}'
+curl -X PATCH -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP").PATCH_cURL }} -d '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP").PATCH_RequestBody }}'
 ```
 
 #### Example response

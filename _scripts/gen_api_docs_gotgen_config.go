@@ -148,6 +148,12 @@ func main() {
 			NoResponse:  true,
 		},
 		{HTTPMethod: "POST", Path: "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP/uploaded", NoResponse: true},
+		{
+			HTTPMethod:  "PATCH",
+			Path:        "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP",
+			RequestBody: `{"is_protected":true}`,
+			NoResponse:  true,
+		},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?limit=3"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?status=3"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?branch=develop"},
