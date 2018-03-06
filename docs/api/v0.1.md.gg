@@ -311,6 +311,39 @@ curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518
 }
 ```
 
+### PATCH /apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}
+
+Set a specific subset of build certificate attributes. You can update the `is_protected`, `is_expose`, `certificate_password` and `processed` attributes of a build certificate object. There are some constraints:
+
+1. once the `is_protected` flag is set with value `true` it cannot be changed anymore
+1. when the value of `is_protected` is `true`, then the `is_expose` flag cannot be set to other value
+1. once `processed` flag set to true, then its value cannot be changed anymore
+
+Violating these constraints the response will be `Bad Request`.
+_Note: the previous `/apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body '{"processed":true}'_
+
+#### Example `curl` request
+
+```
+curl -X PATCH -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA6P6HRQT5PQ8RMMVVXE6W").PATCH_cURL }} -d '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA6P6HRQT5PQ8RMMVVXE6W").PATCH_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+  "data":{
+    "upload_file_name":"sample_cert.p12",
+    "upload_file_size":1023,
+    "slug":"01C6FA2R4CB772QTDETBE0MENP",
+    "processed":true,
+    "certificate_password":"",
+    "is_expose":true,
+    "is_protected":true
+  }
+}
+```
+
 ### GET /apps/{APP-SLUG}/builds
 
 Get the builds of a specific app.
