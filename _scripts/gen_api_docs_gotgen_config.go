@@ -163,6 +163,7 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?workflow=secondary"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?commit_message=build%20will%20be%20aborted"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?build_number=3"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?sort_by=running_first"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts"},
