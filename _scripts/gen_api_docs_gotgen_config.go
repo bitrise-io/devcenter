@@ -123,10 +123,37 @@ func main() {
 		Path        string
 		QueryParams string
 		RequestBody string
+		NoResponse  bool
 	}{
 		{HTTPMethod: "GET", Path: "/v0.1/me"},
 		{HTTPMethod: "GET", Path: "/v0.1/me/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
+		{
+			HTTPMethod:  "POST",
+			Path:        "/v0.1/apps/518e869d56f2adfd/provisioning-profiles",
+			RequestBody: `{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}`,
+			NoResponse:  true,
+		},
+		{HTTPMethod: "POST", Path: "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W/uploaded", NoResponse: true},
+		{
+			HTTPMethod:  "PATCH",
+			Path:        "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W",
+			RequestBody: `{"is_protected":true}`,
+			NoResponse:  true,
+		},
+		{
+			HTTPMethod:  "POST",
+			Path:        "/v0.1/apps/518e869d56f2adfd/build-certificates",
+			RequestBody: `{"upload_file_name":"sample_cert.p12","upload_file_size":1023}`,
+			NoResponse:  true,
+		},
+		{HTTPMethod: "POST", Path: "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP/uploaded", NoResponse: true},
+		{
+			HTTPMethod:  "PATCH",
+			Path:        "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP",
+			RequestBody: `{"is_protected":true}`,
+			NoResponse:  true,
+		},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?limit=3"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?status=3"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?branch=develop"},
@@ -144,7 +171,10 @@ func main() {
 	} {
 		fullURL := apiHost + aReq.Path + aReq.QueryParams
 		log.Printf("=> %s %s (%s)", aReq.HTTPMethod, aReq.Path, fullURL)
-		prettyResp := recordResponse(aReq.HTTPMethod, fullURL, aReq.RequestBody)
+		prettyResp := ""
+		if !aReq.NoResponse {
+			prettyResp = recordResponse(aReq.HTTPMethod, fullURL, aReq.RequestBody)
+		}
 		if _, found := ggConfInventory.Inventory[aReq.Path]; !found {
 			ggConfInventory.Inventory[aReq.Path+aReq.QueryParams] = map[string]string{}
 		}
