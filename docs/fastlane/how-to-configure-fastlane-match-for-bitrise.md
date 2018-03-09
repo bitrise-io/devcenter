@@ -18,6 +18,6 @@ in your [bitrise.io](https://www.bitrise.io/) build you only have to do three th
    username and password for Apple Dev Portal login)!
     * If you use `match` in your `Fastfile` or `fastlane` config: `match(app_identifier: "my.domain", type: "appstore", readonly: true)`
     * If you use it as a command line tool: `match development --readonly`
-    * More info in `match`'s [official readme / docs](https://github.com/fastlane/fastlane/tree/master/match)
+    * More info in `match`'s [official readme / docs](https://docs.fastlane.tools/actions/match/)
 
 That's all, you can now enjoy the utility of `match`, automated with [bitrise.io](https://www.bitrise.io/) 🚀
