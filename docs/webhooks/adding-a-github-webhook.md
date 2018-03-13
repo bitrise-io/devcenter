@@ -14,15 +14,15 @@ Navigate to your GitHub repository and select `Settings`.
 
 ![Screenshot](https://www.filepicker.io/api/file/azZor2oLQ3uRM7cE5xkQ)
 
-Select `Add webhook` under Webhooks & Services.
+Select `Add webhook` under Webhooks.
 
 ![Screenshot](https://www.filepicker.io/api/file/NNCEwWaQ0iRJsrmN8Pi7)
 
-Paste the GitHub Webhook URL from Bitrise to the Payload URL.
+Paste the GitHub Webhook URL from Bitrise to the Payload URL...
 
 ![Screenshot](https://www.filepicker.io/api/file/ZGqRm2GmRJOxOtKZqYs5)
 
-Select `Let me select individual events`.
+And on the same page, select `Let me select individual events`.
 
 ![Screenshot](https://www.filepicker.io/api/file/gnMC4mNvSUS8TuwiG2gA)
 
