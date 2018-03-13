@@ -80,6 +80,20 @@ func getTemplateURL(realURL string) string {
 		}
 		templateURL = regEx.ReplaceAllString(templateURL, "artifacts/ARTIFACT-SLUG")
 	}
+	if strings.Contains(templateURL, "provisioning-profiles/") {
+		regEx, err := regexp.Compile("provisioning-profiles/[A-Za-z0-9]+")
+		if err != nil {
+			log.Fatal("Provisioning profile slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "provisioning-profiles/PROVISIONING-PROFILE-SLUG")
+	}
+	if strings.Contains(templateURL, "build-certificates/") {
+		regEx, err := regexp.Compile("build-certificates/[A-Za-z0-9]+")
+		if err != nil {
+			log.Fatal("Build certificates slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "build-certificates/BUILD-CERTIFICATE-SLUG")
+	}
 	return templateURL
 }
 
