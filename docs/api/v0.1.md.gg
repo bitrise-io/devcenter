@@ -493,6 +493,29 @@ Response:
 {{ (var "/v0.1/apps/669403bffbe35909/builds?build_number=3").GET }}
 ```
 
+#### Sorting parameters for build list
+
+There are two available sorting parameter for this endpoint:
+
+- **`created_by`:** descending order by the `created_at` attribute (default setting)
+- **`running_first`:** it's also ordered by `created_at` in descending order, but all running builds are listed first and then the builds with other status
+
+_Note: sorting the list by `running_first` doesn't support paging parameters_
+
+##### Example `curl` request
+
+Request:
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?sort_by=running_first").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?sort_by=running_first").GET }}
+```
+
 ### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}
 
 Get a specific build's data.
