@@ -97,14 +97,18 @@ workflows:
             if [[ "$(uname)" == "Linux" ]] ; then
               sudocmd="sudo"
             fi
+            pipcmd="pip"
+            if [[ "$(uname)" == "Darwin" ]] ; then
+              pipcmd="pip3"
+            fi
 
             # On Linux, with apt installed python / python-pip
             # these commands have to be performed with `sudo`!
-            ${sudocmd} pip install --upgrade pip
-            ${sudocmd} pip install --upgrade virtualenv
-            ${sudocmd} pip install -r requirements.txt
+            ${sudocmd} ${pipcmd} install --upgrade pip
+            ${sudocmd} ${pipcmd} install --upgrade virtualenv
+            ${sudocmd} ${pipcmd} install -r requirements.txt
             mkdocs --version
-            pip show mkdocs-material
+            ${pipcmd} show mkdocs-material
   up:
     steps:
     - script:
