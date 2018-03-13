@@ -1,15 +1,15 @@
-You are able to authenticate yourself with your Bitbucket user against __Bitrise__. It means some practical benefits, like logging in with one click and of course you won't have to authorize your Bitbucket account when adding repositories hosted by these providers again.
+You are able to authenticate yourself with your Bitbucket user against __Bitrise__. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Bitbucket account when adding repositories hosted by these providers again.
 
 !!! note
-    If you'd like to sign up with your email address, please follow the instructions in [sign up with email address](/signing-up/signing-up-with-email).
+    If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/signing-up/signing-up-with-email).
 
 ## Sign up
 
-Go to the Sign up page with pressing `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
+Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
 
-![Screenshot](/img/signing-up/bitbucket_signup.png)
+![Screenshot](/img/signing-up/bitbucket_signup-2017.png)
 
-Select `Bitbucket` for authenticating yourself with one of these services.
+Select `Bitbucket` for authenticating yourself with this service.
 
 ## Authorize Bitrise
 

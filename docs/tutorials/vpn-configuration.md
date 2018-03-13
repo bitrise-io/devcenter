@@ -85,7 +85,7 @@ render_template() {
 temp_dir=/tmp/vpn-config
 mkdir $temp_dir
 
-# IPsec config file, se examples at https://wiki.strongswan.org/projects/strongswan/wiki/IKEv1Examples and https://wiki.strongswan.org/projects/strongswan/wiki/IKEv2Examples
+# IPsec config file, see examples at https://wiki.strongswan.org/projects/strongswan/wiki/IKEv1Examples and https://wiki.strongswan.org/projects/strongswan/wiki/IKEv2Examples
 echo "Downloading ipsec.conf..."
 wget https://www.example.com/ipsec.conf.template -O $temp_dir/ipsec.conf.template
 # IPsec credentials file, see documentation at https://wiki.strongswan.org/projects/strongswan/wiki/IpsecSecrets
