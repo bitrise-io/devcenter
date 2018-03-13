@@ -5,6 +5,10 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 
 ## English
 
+### Getting Started
+
+* [How to implement mobile continuous integration(CI) and delivery(CD) using bitrise.io](https://medium.com/@feliperfmarques/how-to-implement-mobile-continuous-integration-ci-and-delivery-cd-using-bitrise-io-eb7866dfc641)
+
 ### iOS
 
 * [Let's automate Swift builds with Bitrise](https://medium.com/@erkekin/lets-automate-swift-builds-with-bitrise-47225d547c98)
@@ -13,6 +17,7 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 
 ### Android
 
+* [Seamless Android Builds With Bitrise. Offload Your System](http://myhexaville.com/2017/10/18/seamless-android-builds-with-bitrise/)
 * [How to automate Android build process on Bitrise CI (part 1)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-71ae3a94362e)
 * [How to automate Android build process on Bitrise CI (part 2)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-part-2-b3f8124c29ee)
 * [How to Connect Physical Devices to Bitrise.io](https://www.thedroidsonroids.com/blog/how-to-connect-physical-devices-to-bitrise-io) - *[Open STF](https://openstf.io) integration*
@@ -47,7 +52,6 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 ### Other
 
 * [Improved Continuous Integration With Bitrise – Rémy Chantenay (Travelex)](https://medium.com/@remy.chantenay/bitrise-travelex-digital-f3388019bae)
-* [Mobile Continuous Delivery With Bitrise | Benoit Pasquier](http://benoitpasquier.fr/mobile-continuous-delivery-bitrise-io/) - *intro*
 * [I was trying to setup a macOS Server for continuous integration. Now I am a happy Bitrise user.](https://theswiftdev.com/2016/08/29/macos-xcode-build-server-tutorial/)
 * [The Trials of Mobile Automation at InVision](http://engineering.invisionapp.com/post/trials-of-mobile-automation/) - *ChatOps with Slack and Bitrise*
 * [How to send commit changes by email once CI build passes?](https://medium.com/@hesam.kamalan/how-to-send-commit-changes-by-email-once-ci-build-passes-dee13c67c195)
@@ -72,6 +76,10 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 * [Bitrise,fastlane,CrashlyticsでiOSアプリのテスト配布を自動化する](http://techblog.lclco.com/entry/2016/05/09/192230) - *Bitrise + fastlane, automate testing & deployment (to Crashlytics) of iOS apps*
 * [Xcode iOS CI Tutorial Bitrise編 -Amarron Blog](http://amarron.blog/detail.php?id=20170715)
 * [fastlaneとBitriseでiOSアプリのCI始めました](http://blog.lisb.direct/entry/2017/07/20/100000) - *CI with Bitrise and fastlane*
+
+## Portuguese
+
+* [Como implementar mobile continuous integration(CI) e delivery(CD) usando bitrise.io](https://medium.com/@feliperfmarques/como-implementar-mobile-continuous-integration-ci-e-delivery-cd-usando-bitrise-io-c16007263deb)
 
 ## Persian
 
