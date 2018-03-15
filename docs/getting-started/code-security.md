@@ -9,7 +9,7 @@ to manage the environment, not for build environment isolation - that's ensured 
 full virtual machines for every build._
 
 This way your builds are always protected from changes made by others and from your previous builds,
-no one else can access your code and you can use a stable environment to define your build workflow. Every build is completed in an isolated environment, unrelated to any previous or paralelly running builds.
+no one else can access your code and you can use a stable environment to define your build workflow. Every build is completed in an isolated environment, unrelated to any previous or parallelly running builds.
 
 ## Source code
 
