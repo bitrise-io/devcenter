@@ -131,7 +131,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/me").GET_cURL }}
 
 Retrieve the apps you have access to. This includes the apps created / owned by you, as well as apps where you're a Team member (either added directly, or through an Organization's Group). All the apps you have access to (similar to the Dashboard on [bitrise.io](https://www.bitrise.io).
 
-_Note: the `/me/apps` endpoint is also working and the same as above, but will be deprecated in the future_
+_Note: the `/me/apps` endpoint is also working and the same as above, but it's deprecated_
 
 #### Example `curl` request
 
@@ -149,8 +149,8 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps?limit=2").G
 
 There are two available sorting parameter for this endpoint:
 
-- **`created_at`:** descending order by the `created_at` attribute (default setting)
-- **`last_build_at`:** it's also ordered by `last_build_at` time in descending order,
+- **`created_at`:** descending order by the `created_at` attribute (default)
+- **`last_build_at`:** it's ordered by `last_build_at` attribute in descending order,
 
 ##### Example `curl` request
 
