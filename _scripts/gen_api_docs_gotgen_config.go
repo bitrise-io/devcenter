@@ -140,7 +140,8 @@ func main() {
 		NoResponse  bool
 	}{
 		{HTTPMethod: "GET", Path: "/v0.1/me"},
-		{HTTPMethod: "GET", Path: "/v0.1/me/apps", QueryParams: "?limit=2"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps", QueryParams: "?limit=2"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps", QueryParams: "?limit=2&sort_by=last_build_at"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
 		{
 			HTTPMethod:  "POST",

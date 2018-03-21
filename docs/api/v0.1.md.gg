@@ -127,20 +127,43 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/me").GET_cURL }}
 {{ (var "/v0.1/me").GET }}
 ```
 
-### GET /me/apps
+### GET /apps
 
 Retrieve the apps you have access to. This includes the apps created / owned by you, as well as apps where you're a Team member (either added directly, or through an Organization's Group). All the apps you have access to (similar to the Dashboard on [bitrise.io](https://www.bitrise.io).
+
+_Note: the `/me/apps` endpoint is also working and the same as above, but it's deprecated_
 
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/me/apps?limit=2").GET_cURL }}'
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps?limit=2").GET_cURL }}'
 ```
 
 #### Example response
 
 ```
-{{ (var "/v0.1/me/apps?limit=2").GET }}
+{{ (var "/v0.1/apps?limit=2").GET }}
+```
+
+#### Sorting parameters for app list
+
+There are two available sorting parameter for this endpoint:
+
+- **`created_at`:** descending order by the `created_at` attribute (default)
+- **`last_build_at`:** it's ordered by `last_build_at` attribute in descending order,
+
+##### Example `curl` request
+
+Request:
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps?limit=2&sort_by=last_build_at").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps?limit=2&sort_by=last_build_at").GET }}
 ```
 
 ### GET /apps/{APP-SLUG}
@@ -497,7 +520,7 @@ Response:
 
 There are two available sorting parameter for this endpoint:
 
-- **`created_by`:** descending order by the `created_at` attribute (default setting)
+- **`created_at`:** descending order by the `created_at` attribute (default setting)
 - **`running_first`:** it's also ordered by `created_at` in descending order, but all running builds are listed first and then the builds with other status
 
 _Note: sorting the list by `running_first` doesn't support paging parameters_
