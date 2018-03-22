@@ -158,6 +158,8 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/organizations/e1ec3dea540bcf21"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps", QueryParams: "?limit=2&sort_by=last_build_at"},
+		{HTTPMethod: "GET", Path: "/v0.1/users/8e82ac7601178f17/apps", QueryParams: "?limit=2"},
+		{HTTPMethod: "GET", Path: "/v0.1/organizations/e1ec3dea540bcf21/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
 		{
 			HTTPMethod:  "POST",
