@@ -16,8 +16,6 @@ workflows:
   deploy-to-github-pages:
     before_run:
     - setup
-    envs:
-    - DEVCENTER_CNAME_URL: devcenter.bitrise.io
     steps:
     - script:
         description: |
@@ -31,21 +29,9 @@ workflows:
         - content: |-
             #!/bin/bash
             set -ex
-            rm -rf ./site
-            REPO_URL=$(git remote get-url origin)
-            git clone --branch gh-pages "$REPO_URL" ./site
+            # Build & Deploy
             mkdocs build --clean
-            cd site/
-            # github pages - cname file
-            echo "$DEVCENTER_CNAME_URL" > CNAME
-            # timestamp - so that we always have a git change
-            date > build-date.log
-            #
-            git config --global user.email "letsconnect@bitrise.io"
-            git config --global user.name "Bitrise Bot"
-            git add .
-            git commit -m 'deploy - [skip ci] for gh-pages branch'
-            git push origin gh-pages
+            mkdocs gh-deploy
   generate-api-docs:
     steps:
     - script@1.1.4:
@@ -71,14 +57,6 @@ workflows:
             gotgen generate
   setup:
     steps:
-    - script:
-        inputs:
-        - content: |-
-            #!/bin/bash
-            set -ex
-            if [[ "$(uname)" == "Linux" ]] ; then
-              sudo apt-get update
-            fi
     - script:
         deps:
           brew:
