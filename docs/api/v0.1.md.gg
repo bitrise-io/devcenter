@@ -241,6 +241,73 @@ curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/51
 }
 ```
 
+### GET /apps/{APP-SLUG}/provisioning-profiles
+
+List provisioning profiles for a specific application.
+
+#### Example `curl` request
+
+```
+curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data": [
+    {
+      "upload_file_name":"sample.provisionprofile",
+      "upload_file_size":2047,
+      "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+      "processed":false,
+      "is_expose":true,
+      "is_protected":false
+    },
+    {
+      "upload_file_name":"sample2.provisionprofile",
+      "upload_file_size":2047,
+      "slug":"01C6FA6P6HRQT5PQ8RMMVVXE5T",
+      "processed":true,
+      "is_expose":true,
+      "is_protected":true
+    }
+  ],
+  "paging": {
+    "page_item_limit": 50,
+    "total_item_count": 2
+  }
+}
+```
+
+### GET /apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}
+
+Get a specific provisioning profile's data.
+
+#### Example `curl` request
+
+```
+curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data": {
+    "upload_file_name":"sample.provisionprofile",
+    "upload_file_size":2047,
+    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "processed":false,
+    "is_expose":true,
+    "is_protected":false,
+    "download_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/prov_profile_documents/uploads/80144/original/sample.provisionprofile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180322%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180322T091652Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=6dd7bb3db72aafb2d434da7b1a8f80a82a3a7a0276e84620137ed64de5025ab2"
+  }
+}
+```
+
+_Note: `download_url` is generated only when the provisioning profile's `is_protected` attribute is `false`_
+
 ### PATCH /apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}
 
 Set a specific subset of provisioning profile attributes. You can update the `is_protected`, `is_expose` and `processed` attributes of a provisioning profile object. There are some constraints:
@@ -333,6 +400,76 @@ curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518
   }
 }
 ```
+
+### GET /apps/{APP-SLUG}/build-certificates
+
+List build certificates for a specific application.
+
+#### Example `curl` request
+
+```
+curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data": [
+    {
+      "upload_file_name":"sample_cert.p12",
+      "upload_file_size":1023,
+      "slug":"01C6FA2R4CB772QTDETBE0MENP",
+      "processed":true,
+      "certificate_password":"",
+      "is_expose":true,
+      "is_protected":false
+    },
+    {
+      "upload_file_name":"sample_cert_2.p12",
+      "upload_file_size":1023,
+      "slug":"01C6FA2R4CB772QTDETBE0MEMO",
+      "processed":true,
+      "certificate_password":"s0m3-s3cr3t-ch4r4ct3r5",
+      "is_expose":true,
+      "is_protected":true
+    }
+  ],
+  "paging": {
+    "page_item_limit": 50,
+    "total_item_count": 2
+  }
+}
+```
+
+### GET /apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}
+
+Get a specific build certificate's data.
+
+#### Example `curl` request
+
+```
+curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data": {
+    "upload_file_name":"sample_cert.p12",
+    "upload_file_size":1023,
+    "slug":"01C6FA2R4CB772QTDETBE0MENP",
+    "processed":true,
+    "certificate_password":"",
+    "is_expose":true,
+    "is_protected":false,
+    "download_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/prov_profile_documents/uploads/80144/original/sample.provisionprofile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180322%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180322T091652Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=6dd7bb3db72aafb2d434da7b1a8f80a82a3a7a0276e84620137ed64de5025ab2"
+  }
+}
+```
+
+_Note: `download_url` is generated only when the build certificate's `is_protected` attribute is `false`_
 
 ### PATCH /apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}
 
