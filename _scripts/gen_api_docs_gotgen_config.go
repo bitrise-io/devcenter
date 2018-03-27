@@ -168,6 +168,8 @@ func main() {
 			NoResponse:  true,
 		},
 		{HTTPMethod: "POST", Path: "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W/uploaded", NoResponse: true},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/518e869d56f2adfd/provisioning-profiles", NoResponse: true},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W", NoResponse: true},
 		{
 			HTTPMethod:  "PATCH",
 			Path:        "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W",
@@ -181,6 +183,8 @@ func main() {
 			NoResponse:  true,
 		},
 		{HTTPMethod: "POST", Path: "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP/uploaded", NoResponse: true},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/518e869d56f2adfd/build-certificates", NoResponse: true},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP", NoResponse: true},
 		{
 			HTTPMethod:  "PATCH",
 			Path:        "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP",
