@@ -59,6 +59,20 @@ func recordResponse(httpMethod, apiURL, requestBody string) string {
 
 func getTemplateURL(realURL string) string {
 	templateURL := realURL
+	if strings.Contains(templateURL, "users/") {
+		regEx, err := regexp.Compile("users/[a-z0-9]+")
+		if err != nil {
+			log.Fatal("User slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "users/USER-SLUG")
+	}
+	if strings.Contains(templateURL, "organizations/") {
+		regEx, err := regexp.Compile("organizations/[a-z0-9]+")
+		if err != nil {
+			log.Fatal("Organization slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "organizations/USER-SLUG")
+	}
 	if strings.Contains(templateURL, "apps/") {
 		regEx, err := regexp.Compile("apps/[a-z0-9]+")
 		if err != nil {
@@ -140,8 +154,12 @@ func main() {
 		NoResponse  bool
 	}{
 		{HTTPMethod: "GET", Path: "/v0.1/me"},
+		{HTTPMethod: "GET", Path: "/v0.1/users/8e82ac7601178f17"},
+		{HTTPMethod: "GET", Path: "/v0.1/organizations/e1ec3dea540bcf21"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps", QueryParams: "?limit=2&sort_by=last_build_at"},
+		{HTTPMethod: "GET", Path: "/v0.1/users/8e82ac7601178f17/apps", QueryParams: "?limit=2"},
+		{HTTPMethod: "GET", Path: "/v0.1/organizations/e1ec3dea540bcf21/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
 		{
 			HTTPMethod:  "POST",

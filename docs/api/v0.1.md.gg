@@ -127,6 +127,38 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/me").GET_cURL }}
 {{ (var "/v0.1/me").GET }}
 ```
 
+### GET /users/USER-SLUG
+
+Get information about a specific user account.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/users/8e82ac7601178f17").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/users/8e82ac7601178f17").GET }}
+```
+
+### GET /organizations/ORG-SLUG
+
+Get information about a specific oraganization account.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/organizations/e1ec3dea540bcf21").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/organizations/e1ec3dea540bcf21").GET }}
+```
+
 ### GET /apps
 
 Retrieve the apps you have access to. This includes the apps created / owned by you, as well as apps where you're a Team member (either added directly, or through an Organization's Group). All the apps you have access to (similar to the Dashboard on [bitrise.io](https://www.bitrise.io).
@@ -164,6 +196,42 @@ Response:
 
 ```
 {{ (var "/v0.1/apps?limit=2&sort_by=last_build_at").GET }}
+```
+
+### GET /users/USER-SLUG/apps
+
+Also you can list apps for a specific user, obviously only those applicaitons with be listed in this response, which you have required rights. This endpoint works and responses the same as the `/apps` one, so you can use the same parameters too.
+
+_Note: this endpoint doesn't work with the `/me` subroute_
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/users/8e82ac7601178f17/apps?limit=2").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/users/8e82ac7601178f17/apps?limit=2").GET }}
+```
+
+### GET /organizations/ORG-SLUG/apps
+
+Also you can list apps for a specific oraganization, it works the very same way as the `/users/USER-SLUG/apps` one.
+
+_Note: this endpoint doesn't work with the `/me` subroute_
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/organizations/e1ec3dea540bcf21/apps?limit=2").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/organizations/e1ec3dea540bcf21/apps?limit=2").GET }}
 ```
 
 ### GET /apps/{APP-SLUG}
