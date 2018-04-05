@@ -119,12 +119,15 @@ For more information see:
 It's important that this parameter have to be an __array of objects__,
 and that every item of the array have to include
 at least a `mapped_to` (the key of the Environment Variable, without a dollar sign (`$`))
-and a `value` property (the value of the variable).
+and a `value` property (the value of the variable). By default environment variable names inside values will be replaced in triggered build by actual value from target environment. This behavior can be disabled by setting `is_expand` flag to `false`.
 
 Example:
 
 ```
-"environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]
+"environments":[
+  {"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true},
+  {"mapped_to":"HELP_ENV","value":"$HOME variable contains user's home directory path","is_expand":false},
+]
 ```
 
 ### Workflow to be used for the build

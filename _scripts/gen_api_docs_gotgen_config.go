@@ -59,6 +59,20 @@ func recordResponse(httpMethod, apiURL, requestBody string) string {
 
 func getTemplateURL(realURL string) string {
 	templateURL := realURL
+	if strings.Contains(templateURL, "users/") {
+		regEx, err := regexp.Compile("users/[a-z0-9]+")
+		if err != nil {
+			log.Fatal("User slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "users/USER-SLUG")
+	}
+	if strings.Contains(templateURL, "organizations/") {
+		regEx, err := regexp.Compile("organizations/[a-z0-9]+")
+		if err != nil {
+			log.Fatal("Organization slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "organizations/USER-SLUG")
+	}
 	if strings.Contains(templateURL, "apps/") {
 		regEx, err := regexp.Compile("apps/[a-z0-9]+")
 		if err != nil {
@@ -79,6 +93,20 @@ func getTemplateURL(realURL string) string {
 			log.Fatal("Artifact slug regex compilation failed")
 		}
 		templateURL = regEx.ReplaceAllString(templateURL, "artifacts/ARTIFACT-SLUG")
+	}
+	if strings.Contains(templateURL, "provisioning-profiles/") {
+		regEx, err := regexp.Compile("provisioning-profiles/[A-Za-z0-9]+")
+		if err != nil {
+			log.Fatal("Provisioning profile slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "provisioning-profiles/PROVISIONING-PROFILE-SLUG")
+	}
+	if strings.Contains(templateURL, "build-certificates/") {
+		regEx, err := regexp.Compile("build-certificates/[A-Za-z0-9]+")
+		if err != nil {
+			log.Fatal("Build certificates slug regex compilation failed")
+		}
+		templateURL = regEx.ReplaceAllString(templateURL, "build-certificates/BUILD-CERTIFICATE-SLUG")
 	}
 	return templateURL
 }
@@ -123,10 +151,46 @@ func main() {
 		Path        string
 		QueryParams string
 		RequestBody string
+		NoResponse  bool
 	}{
 		{HTTPMethod: "GET", Path: "/v0.1/me"},
-		{HTTPMethod: "GET", Path: "/v0.1/me/apps", QueryParams: "?limit=2"},
+		{HTTPMethod: "GET", Path: "/v0.1/users/8e82ac7601178f17"},
+		{HTTPMethod: "GET", Path: "/v0.1/organizations/e1ec3dea540bcf21"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps", QueryParams: "?limit=2"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps", QueryParams: "?limit=2&sort_by=last_build_at"},
+		{HTTPMethod: "GET", Path: "/v0.1/users/8e82ac7601178f17/apps", QueryParams: "?limit=2"},
+		{HTTPMethod: "GET", Path: "/v0.1/organizations/e1ec3dea540bcf21/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
+		{
+			HTTPMethod:  "POST",
+			Path:        "/v0.1/apps/518e869d56f2adfd/provisioning-profiles",
+			RequestBody: `{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}`,
+			NoResponse:  true,
+		},
+		{HTTPMethod: "POST", Path: "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W/uploaded", NoResponse: true},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/518e869d56f2adfd/provisioning-profiles", NoResponse: true},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W", NoResponse: true},
+		{
+			HTTPMethod:  "PATCH",
+			Path:        "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W",
+			RequestBody: `{"is_protected":true}`,
+			NoResponse:  true,
+		},
+		{
+			HTTPMethod:  "POST",
+			Path:        "/v0.1/apps/518e869d56f2adfd/build-certificates",
+			RequestBody: `{"upload_file_name":"sample_cert.p12","upload_file_size":1023}`,
+			NoResponse:  true,
+		},
+		{HTTPMethod: "POST", Path: "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP/uploaded", NoResponse: true},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/518e869d56f2adfd/build-certificates", NoResponse: true},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP", NoResponse: true},
+		{
+			HTTPMethod:  "PATCH",
+			Path:        "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP",
+			RequestBody: `{"is_protected":true}`,
+			NoResponse:  true,
+		},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?limit=3"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?status=3"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?branch=develop"},
@@ -136,6 +200,7 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?workflow=secondary"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?commit_message=build%20will%20be%20aborted"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?build_number=3"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?sort_by=running_first"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds/9fb8eaaa4bdd3763/artifacts"},
@@ -144,7 +209,10 @@ func main() {
 	} {
 		fullURL := apiHost + aReq.Path + aReq.QueryParams
 		log.Printf("=> %s %s (%s)", aReq.HTTPMethod, aReq.Path, fullURL)
-		prettyResp := recordResponse(aReq.HTTPMethod, fullURL, aReq.RequestBody)
+		prettyResp := ""
+		if !aReq.NoResponse {
+			prettyResp = recordResponse(aReq.HTTPMethod, fullURL, aReq.RequestBody)
+		}
 		if _, found := ggConfInventory.Inventory[aReq.Path]; !found {
 			ggConfInventory.Inventory[aReq.Path+aReq.QueryParams] = map[string]string{}
 		}

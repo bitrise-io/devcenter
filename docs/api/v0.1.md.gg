@@ -127,20 +127,111 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/me").GET_cURL }}
 {{ (var "/v0.1/me").GET }}
 ```
 
-### GET /me/apps
+### GET /users/USER-SLUG
 
-Retrieve the apps you have access to. This includes the apps created / owned by you, as well as apps where you're a Team member (either added directly, or through an Organization's Group). All the apps you have access to (similar to the Dashboard on [bitrise.io](https://www.bitrise.io).
+Get information about a specific user account.
 
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/me/apps?limit=2").GET_cURL }}'
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/users/8e82ac7601178f17").GET_cURL }}'
 ```
 
 #### Example response
 
 ```
-{{ (var "/v0.1/me/apps?limit=2").GET }}
+{{ (var "/v0.1/users/8e82ac7601178f17").GET }}
+```
+
+### GET /organizations/ORG-SLUG
+
+Get information about a specific oraganization account.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/organizations/e1ec3dea540bcf21").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/organizations/e1ec3dea540bcf21").GET }}
+```
+
+### GET /apps
+
+Retrieve the apps you have access to. This includes the apps created / owned by you, as well as apps where you're a Team member (either added directly, or through an Organization's Group). All the apps you have access to (similar to the Dashboard on [bitrise.io](https://www.bitrise.io).
+
+_Note: the `/me/apps` endpoint is also working and the same as above, but it's deprecated_
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps?limit=2").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps?limit=2").GET }}
+```
+
+#### Sorting parameters for app list
+
+There are two available sorting parameter for this endpoint:
+
+- **`created_at`:** descending order by the `created_at` attribute (default)
+- **`last_build_at`:** it's ordered by `last_build_at` attribute in descending order,
+
+##### Example `curl` request
+
+Request:
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps?limit=2&sort_by=last_build_at").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps?limit=2&sort_by=last_build_at").GET }}
+```
+
+### GET /users/USER-SLUG/apps
+
+Also you can list apps for a specific user, obviously only those applicaitons with be listed in this response, which you have required rights. This endpoint works and responses the same as the `/apps` one, so you can use the same parameters too.
+
+_Note: this endpoint doesn't work with the `/me` subroute_
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/users/8e82ac7601178f17/apps?limit=2").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/users/8e82ac7601178f17/apps?limit=2").GET }}
+```
+
+### GET /organizations/ORG-SLUG/apps
+
+Also you can list apps for a specific oraganization, it works the very same way as the `/users/USER-SLUG/apps` one.
+
+_Note: this endpoint doesn't work with the `/me` subroute_
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/organizations/e1ec3dea540bcf21/apps?limit=2").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/organizations/e1ec3dea540bcf21/apps?limit=2").GET }}
 ```
 
 ### GET /apps/{APP-SLUG}
@@ -157,6 +248,328 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe
 
 ```
 {{ (var "/v0.1/apps/669403bffbe35909").GET }}
+```
+
+### POST /apps/{APP-SLUG}/provisioning-profiles
+
+Add provisioning profile for a specific application. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.
+
+#### Example `curl` request
+
+```
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles").POST_cURL }}' -d '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles").POST_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+  "data":{
+    "upload_file_name":"sample.provisionprofile",
+    "upload_file_size":2047,
+    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "processed":false,
+    "is_expose":true,
+    "is_protected":false,
+    "upload_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e"
+  }
+}
+```
+
+After this call you have to upload to AWS your provisioning profile file with the presigned URL.
+
+#### Example `curl` request
+
+```
+curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
+```
+
+### POST /apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded
+
+After the provisioning profile is uploaded to AWS, you have to confirm the upload with this endpoint.
+
+#### Example `curl` request
+
+```
+curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W/uploaded").POST_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data":{
+    "upload_file_name":"sample.provisionprofile",
+    "upload_file_size":2047,
+    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "processed":false,
+    "is_expose":true,
+    "is_protected":false
+  }
+}
+```
+
+### GET /apps/{APP-SLUG}/provisioning-profiles
+
+List provisioning profiles for a specific application.
+
+#### Example `curl` request
+
+```
+curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data": [
+    {
+      "upload_file_name":"sample.provisionprofile",
+      "upload_file_size":2047,
+      "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+      "processed":false,
+      "is_expose":true,
+      "is_protected":false
+    },
+    {
+      "upload_file_name":"sample2.provisionprofile",
+      "upload_file_size":2047,
+      "slug":"01C6FA6P6HRQT5PQ8RMMVVXE5T",
+      "processed":true,
+      "is_expose":true,
+      "is_protected":true
+    }
+  ],
+  "paging": {
+    "page_item_limit": 50,
+    "total_item_count": 2
+  }
+}
+```
+
+### GET /apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}
+
+Get a specific provisioning profile's data.
+
+#### Example `curl` request
+
+```
+curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data": {
+    "upload_file_name":"sample.provisionprofile",
+    "upload_file_size":2047,
+    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "processed":false,
+    "is_expose":true,
+    "is_protected":false,
+    "download_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/prov_profile_documents/uploads/80144/original/sample.provisionprofile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180322%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180322T091652Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=6dd7bb3db72aafb2d434da7b1a8f80a82a3a7a0276e84620137ed64de5025ab2"
+  }
+}
+```
+
+_Note: `download_url` is generated only when the provisioning profile's `is_protected` attribute is `false`_
+
+### PATCH /apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}
+
+Set a specific subset of provisioning profile attributes. You can update the `is_protected`, `is_expose` and `processed` attributes of a provisioning profile object. There are some constraints:
+
+1. once the `is_protected` flag is set with value `true` it cannot be changed anymore
+1. when the value of `is_protected` is `true`, then the `is_expose` flag cannot be set to other value
+1. once `processed` flag set to true, then its value cannot be changed anymore
+
+Violating these constraints the response will be `Bad Request`.
+_Note: the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body '{"processed":true}'_
+
+#### Example `curl` request
+
+```
+curl -X PATCH -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W").PATCH_cURL }} -d '{{ (var "/v0.1/apps/518e869d56f2adfd/provisioning-profiles/01C6FA6P6HRQT5PQ8RMMVVXE6W").PATCH_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+  "data":{
+    "upload_file_name":"sample.provisionprofile",
+    "upload_file_size":2047,
+    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "processed":false,
+    "is_expose":true,
+    "is_protected":true
+  }
+}
+```
+
+### POST /apps/{APP-SLUG}/build-certificates
+
+Add certificate file for a specific application. This is the first phase of the certificate file upload process, calling this endpoint a new certificate object is created and its slug and a presigned upload URL will be retrieved.
+
+#### Example `curl` request
+
+```
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates").POST_cURL }}' -d '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates").POST_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+  "data":{
+    "upload_file_name":"sample_cert.p12",
+    "upload_file_size":1023,
+    "slug":"01C6FA2R4CB772QTDETBE0MENP",
+    "processed":false,
+    "certificate_password":"",
+    "is_expose":true,
+    "is_protected":false,
+    "upload_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e"
+  }
+}
+```
+
+After this call you have to upload to AWS your certificate file with the presigned URL.
+
+#### Example `curl` request
+
+```
+curl -T sample_cert.p12 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e
+```
+
+### POST /apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}/uploaded
+
+After the certificate file is uploaded to AWS, you have to confirm the upload with this endpoint.
+
+#### Example `curl` request
+
+```
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP/uploaded").POST_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data":{
+    "upload_file_name":"sample_cert.p12",
+    "upload_file_size":1023,
+    "slug":"01C6FA2R4CB772QTDETBE0MENP",
+    "processed":true,
+    "certificate_password":"",
+    "is_expose":true,
+    "is_protected":false
+  }
+}
+```
+
+### GET /apps/{APP-SLUG}/build-certificates
+
+List build certificates for a specific application.
+
+#### Example `curl` request
+
+```
+curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data": [
+    {
+      "upload_file_name":"sample_cert.p12",
+      "upload_file_size":1023,
+      "slug":"01C6FA2R4CB772QTDETBE0MENP",
+      "processed":true,
+      "certificate_password":"",
+      "is_expose":true,
+      "is_protected":false
+    },
+    {
+      "upload_file_name":"sample_cert_2.p12",
+      "upload_file_size":1023,
+      "slug":"01C6FA2R4CB772QTDETBE0MEMO",
+      "processed":true,
+      "certificate_password":"s0m3-s3cr3t-ch4r4ct3r5",
+      "is_expose":true,
+      "is_protected":true
+    }
+  ],
+  "paging": {
+    "page_item_limit": 50,
+    "total_item_count": 2
+  }
+}
+```
+
+### GET /apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}
+
+Get a specific build certificate's data.
+
+#### Example `curl` request
+
+```
+curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data": {
+    "upload_file_name":"sample_cert.p12",
+    "upload_file_size":1023,
+    "slug":"01C6FA2R4CB772QTDETBE0MENP",
+    "processed":true,
+    "certificate_password":"",
+    "is_expose":true,
+    "is_protected":false,
+    "download_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/prov_profile_documents/uploads/80144/original/sample.provisionprofile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180322%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180322T091652Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=6dd7bb3db72aafb2d434da7b1a8f80a82a3a7a0276e84620137ed64de5025ab2"
+  }
+}
+```
+
+_Note: `download_url` is generated only when the build certificate's `is_protected` attribute is `false`_
+
+### PATCH /apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}
+
+Set a specific subset of build certificate attributes. You can update the `is_protected`, `is_expose`, `certificate_password` and `processed` attributes of a build certificate object. There are some constraints:
+
+1. once the `is_protected` flag is set with value `true` it cannot be changed anymore
+1. when the value of `is_protected` is `true`, then the `is_expose` flag cannot be set to other value
+1. once `processed` flag set to true, then its value cannot be changed anymore
+
+Violating these constraints the response will be `Bad Request`.
+_Note: the previous `/apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body '{"processed":true}'_
+
+#### Example `curl` request
+
+```
+curl -X PATCH -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP").PATCH_cURL }} -d '{{ (var "/v0.1/apps/518e869d56f2adfd/build-certificates/01C6FA2R4CB772QTDETBE0MENP").PATCH_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+  "data":{
+    "upload_file_name":"sample_cert.p12",
+    "upload_file_size":1023,
+    "slug":"01C6FA2R4CB772QTDETBE0MENP",
+    "processed":true,
+    "certificate_password":"",
+    "is_expose":true,
+    "is_protected":true
+  }
+}
 ```
 
 ### GET /apps/{APP-SLUG}/builds
@@ -308,6 +721,29 @@ Response:
 {{ (var "/v0.1/apps/669403bffbe35909/builds?build_number=3").GET }}
 ```
 
+#### Sorting parameters for build list
+
+There are two available sorting parameter for this endpoint:
+
+- **`created_at`:** descending order by the `created_at` attribute (default setting)
+- **`running_first`:** it's also ordered by `created_at` in descending order, but all running builds are listed first and then the builds with other status
+
+_Note: sorting the list by `running_first` doesn't support paging parameters_
+
+##### Example `curl` request
+
+Request:
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds?sort_by=running_first").GET_cURL }}'
+```
+
+Response:
+
+```
+{{ (var "/v0.1/apps/669403bffbe35909/builds?sort_by=running_first").GET }}
+```
+
 ### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}
 
 Get a specific build's data.
@@ -349,6 +785,10 @@ so please **do not store** this URL! If you want to retrieve the full (raw) log 
 In fact, you should not include any special header at all; just create a simple GET request and send it to the `expiring_raw_log_url` url.
 The `expiring_raw_log_url` is configured so that it does not require any other parameter other than what's included in the URL.
 
+When a build is running, the log chunks can be retrieved with filtering, because in this case every response contain a `timestamp` which has Unix timestamp format. You can send this value in the next call as query parameter with the key `timestamp`, so the next response will contain only the chunks created after the timestamp.
+There is also a `limit` parameter which has 50 as the default value, with this you can limit the number of the retrieved log chunks.
+
+_Note: If build is finished the logs will be archived, in this case there are no filtering options, the filter parameters won't have any effect on the content of the response, the whole archived log will be retrieved._
 
 #### Example `curl` request
 

@@ -12,7 +12,7 @@ which can be executed with the [open source Bitrise CLI](https://www.bitrise.io/
 [You can create and share your own build Steps too](https://github.com/bitrise-steplib/step-template).
 You are able to define more workflows for the very same app,
 and define [triggers](https://bitrise-io.github.io/devcenter/webhooks/trigger-map/) to specify which workflow should be selected for
-which trigger.
+each trigger.
 
 The steps can do anything that can be implemented by command line scripts / programs:
 send emails, [text messages](https://github.com/bitrise-io/steps-sms-text-message),

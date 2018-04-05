@@ -66,7 +66,7 @@ workflows:
 ```
 
 When you run the `test` workflow of this configuration with `bitrise run test`
-you'll now see that the `script` step prints the text `Hellow World` in its log:
+you'll now see that the `script` step prints the text `Hello World` in its log:
 
 ```
 +------------------------------------------------------------------------------+
