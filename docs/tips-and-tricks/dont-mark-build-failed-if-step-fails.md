@@ -13,7 +13,7 @@ An example `script` step which, although fails, it won't "break" the build:
         echo "Failing Step."
         exit 1
         # exit 1 would mark this step as Failed, but it won't break the Build
-        #  because of the is_skippable: true flag / propery
+        #  because of the is_skippable: true flag / property
 ```
 
 You can find more examples on [GitHub](https://github.com/bitrise-io/bitrise/blob/fec3772ee2287d6e405d908fb9b42367a5751b43/_examples/tutorials/errors-force-run-and-skippable/bitrise.yml).
