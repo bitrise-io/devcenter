@@ -191,6 +191,11 @@ func main() {
 			RequestBody: `{"is_protected":true}`,
 			NoResponse:  true,
 		},
+		{
+			HTTPMethod:  "POST",
+			Path:        "/v0.1/apps/669403bffbe35909/builds",
+			RequestBody: `{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"bitrise_api_doc"}`,
+		},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?limit=3"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?status=3"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909/builds", QueryParams: "?branch=develop"},
@@ -213,7 +218,7 @@ func main() {
 		if !aReq.NoResponse {
 			prettyResp = recordResponse(aReq.HTTPMethod, fullURL, aReq.RequestBody)
 		}
-		if _, found := ggConfInventory.Inventory[aReq.Path]; !found {
+		if _, found := ggConfInventory.Inventory[aReq.Path+aReq.QueryParams]; !found {
 			ggConfInventory.Inventory[aReq.Path+aReq.QueryParams] = map[string]string{}
 		}
 		ggConfInventory.Inventory[aReq.Path+aReq.QueryParams][aReq.HTTPMethod] = prettyResp
