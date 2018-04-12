@@ -62,4 +62,4 @@ released to avoid any changes / updates during the week.
 ## iOS Simulator version & SDK support
 
 All the iOS Simulator versions which can be installed
-through *Xcode -> Preferences -> Downloads* are installed and available.
+through *Xcode -> Preferences -> Components* are installed and available.
