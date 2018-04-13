@@ -85,6 +85,7 @@ The following parameters are supported in the `build_params` object:
   based on the project's [Trigger Map config](/webhooks/trigger-map/).
 * `environments` (array of objects): See the [Specify Environment Variables](#specify-environment-variables) section for more info
   about the `environments` objects.
+* `skip_git_status_report` (bool): Skip sending build status for the connected git provider
 
 ### Pull Request specific:
 
