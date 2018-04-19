@@ -249,21 +249,6 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe
 ```
 {{ (var "/v0.1/apps/669403bffbe35909").GET }}
 ```
-### GET /apps/{APP-SLUG}
-
-Get a specific app's data.
-
-#### Example `curl` request
-
-```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909").GET_cURL }}'
-```
-
-#### Example response
-
-```
-{{ (var "/v0.1/apps/669403bffbe35909").GET }}
-```
 
 ### GET /apps/{APP-SLUG}/bitrise.yml
 
