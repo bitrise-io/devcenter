@@ -250,6 +250,38 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe
 {{ (var "/v0.1/apps/669403bffbe35909").GET }}
 ```
 
+### GET /apps/{APP-SLUG}/bitrise.yml
+
+Download the bitrise.yml of your application.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/13533d589b89fb4b/bitrise.yml").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/13533d589b89fb4b/bitrise.yml").GET }}
+```
+
+### POST /apps/{APP-SLUG}/bitrise.yml
+
+Upload a new bitrise.yml for your application.
+
+#### Example `curl` request
+
+```
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/13533d589b89fb4b/bitrise.yml").POST_cURL }}' -d '{{ (var "/v0.1/apps/13533d589b89fb4b/bitrise.yml").POST_RequestBody }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/apps/13533d589b89fb4b/bitrise.yml").POST }}
+```
+
 ### POST /apps/{APP-SLUG}/provisioning-profiles
 
 Add provisioning profile for a specific application. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.

@@ -10,6 +10,8 @@ import (
 	"os"
 	"regexp"
 	"strings"
+
+	"github.com/go-yaml/yaml"
 )
 
 var (
@@ -26,12 +28,13 @@ func httpErrorDescription(resp *http.Response) string {
 	return errStr + " | Body: " + string(bodyBytes)
 }
 
-func recordResponse(httpMethod, apiURL, requestBody string) string {
+func recordResponse(httpMethod, apiURL, requestBody, responseType string) string {
 	req, err := http.NewRequest(httpMethod, apiURL, bytes.NewBuffer([]byte(requestBody)))
 	if err != nil {
 		log.Fatalf("Failed to create request, error: %+v", err)
 	}
 	req.Header.Set("Authorization", "token "+apiAccessToken)
+	req.Header.Set("Content-Type", "application/json")
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
@@ -45,13 +48,23 @@ func recordResponse(httpMethod, apiURL, requestBody string) string {
 	}
 
 	respParsed := map[string]interface{}{}
-	if err := json.NewDecoder(resp.Body).Decode(&respParsed); err != nil {
-		log.Fatalf("Failed to JSON decode response, error: %+v | response: %+v", err, resp)
-	}
-
-	prettyBytes, err := json.MarshalIndent(&respParsed, "", "  ")
-	if err != nil {
-		log.Fatalf("Failed to pretty (JSON) print response, error: %+v", err)
+	prettyBytes := []byte{}
+	if responseType == "yml" {
+		if err := yaml.NewDecoder(resp.Body).Decode(&respParsed); err != nil {
+			log.Fatalf("Failed to YAML decode response, error: %+v | response: %+v", err, resp)
+		}
+		prettyBytes, err = yaml.Marshal(&respParsed)
+		if err != nil {
+			log.Fatalf("Failed to pretty (YAML) print response, error: %+v", err)
+		}
+	} else {
+		if err := json.NewDecoder(resp.Body).Decode(&respParsed); err != nil {
+			log.Fatalf("Failed to JSON decode response, error: %+v | response: %+v", err, resp)
+		}
+		prettyBytes, err = json.MarshalIndent(&respParsed, "", "  ")
+		if err != nil {
+			log.Fatalf("Failed to pretty (JSON) print response, error: %+v", err)
+		}
 	}
 
 	return string(prettyBytes)
@@ -111,6 +124,18 @@ func getTemplateURL(realURL string) string {
 	return templateURL
 }
 
+func uploadBitriseYMLRequestBody() string {
+	type Response struct {
+		AppConfigDataStoreYAML string `json:"app_config_datastore_yaml"`
+	}
+	response := recordResponse("GET", apiHost+"/v0.1/apps/13533d589b89fb4b/bitrise.yml", "", "yml")
+	respBytes, err := json.Marshal(Response{AppConfigDataStoreYAML: response})
+	if err != nil {
+		log.Fatal("Cannot fetch bitrise.yml for request body")
+	}
+	return string(respBytes)
+}
+
 // DelimiterModel ...
 type DelimiterModel struct {
 	Left  string `json:"left"`
@@ -147,11 +172,12 @@ func main() {
 
 	log.Println("=============================")
 	for _, aReq := range []struct {
-		HTTPMethod  string
-		Path        string
-		QueryParams string
-		RequestBody string
-		NoResponse  bool
+		HTTPMethod   string
+		Path         string
+		QueryParams  string
+		RequestBody  string
+		ResponseType string
+		NoResponse   bool
 	}{
 		{HTTPMethod: "GET", Path: "/v0.1/me"},
 		{HTTPMethod: "GET", Path: "/v0.1/users/8e82ac7601178f17"},
@@ -161,6 +187,8 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/users/8e82ac7601178f17/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/organizations/e1ec3dea540bcf21/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
+		{HTTPMethod: "GET", Path: "/v0.1/apps/13533d589b89fb4b/bitrise.yml", ResponseType: "yml"},
+		{HTTPMethod: "POST", Path: "/v0.1/apps/13533d589b89fb4b/bitrise.yml", RequestBody: uploadBitriseYMLRequestBody()},
 		{
 			HTTPMethod:  "POST",
 			Path:        "/v0.1/apps/518e869d56f2adfd/provisioning-profiles",
@@ -216,7 +244,7 @@ func main() {
 		log.Printf("=> %s %s (%s)", aReq.HTTPMethod, aReq.Path, fullURL)
 		prettyResp := ""
 		if !aReq.NoResponse {
-			prettyResp = recordResponse(aReq.HTTPMethod, fullURL, aReq.RequestBody)
+			prettyResp = recordResponse(aReq.HTTPMethod, fullURL, aReq.RequestBody, aReq.ResponseType)
 		}
 		if _, found := ggConfInventory.Inventory[aReq.Path+aReq.QueryParams]; !found {
 			ggConfInventory.Inventory[aReq.Path+aReq.QueryParams] = map[string]string{}
