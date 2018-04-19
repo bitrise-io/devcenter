@@ -288,7 +288,7 @@ Upload a new bitrise.yml for your application.
 #### Example `curl` request
 
 ```
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/13533d589b89fb4b/bitrise.yml").POST_cURL }}' -d '{{ (var "/v0.1/apps/13533d589b89fb4b/bitrise.yml").POST_RequestBody }}'
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/13533d589b89fb4b/bitrise.yml").POST_cURL }}' -d '{{ (var "/v0.1/apps/13533d589b89fb4b/bitrise.yml").POST_RequestBody }}'
 ```
 
 #### Example response
