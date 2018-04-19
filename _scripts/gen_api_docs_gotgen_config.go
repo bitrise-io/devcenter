@@ -34,6 +34,7 @@ func recordResponse(httpMethod, apiURL, requestBody, responseType string) string
 		log.Fatalf("Failed to create request, error: %+v", err)
 	}
 	req.Header.Set("Authorization", "token "+apiAccessToken)
+	req.Header.Set("Content-Type", "application/json")
 
 	client := &http.Client{}
 	resp, err := client.Do(req)
@@ -123,6 +124,18 @@ func getTemplateURL(realURL string) string {
 	return templateURL
 }
 
+func uploadBitriseYMLRequestBody() string {
+	type Response struct {
+		AppConfigDataStoreYAML string `json:"app_config_datastore_yaml"`
+	}
+	response := recordResponse("GET", apiHost+"/v0.1/apps/13533d589b89fb4b/bitrise.yml", "", "yml")
+	respBytes, err := json.Marshal(Response{AppConfigDataStoreYAML: response})
+	if err != nil {
+		log.Fatal("Cannot fetch bitrise.yml for request body")
+	}
+	return string(respBytes)
+}
+
 // DelimiterModel ...
 type DelimiterModel struct {
 	Left  string `json:"left"`
@@ -175,6 +188,7 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/organizations/e1ec3dea540bcf21/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/13533d589b89fb4b/bitrise.yml", ResponseType: "yml"},
+		{HTTPMethod: "POST", Path: "/v0.1/apps/13533d589b89fb4b/bitrise.yml", RequestBody: uploadBitriseYMLRequestBody()},
 		{
 			HTTPMethod:  "POST",
 			Path:        "/v0.1/apps/518e869d56f2adfd/provisioning-profiles",
