@@ -162,8 +162,10 @@ At the bottom of the popup you can find a `curl` call, based on the parameters y
 A base curl call would look like this (with `master` specified as the `branch` build parameter):
 
 ```
-curl https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","api_token":"APP-API-TOKEN"},"build_params":{"branch":"master"}}'
+curl -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","api_token":"APP-API-TOKEN"},"build_params":{"branch":"master"}}'
 ```
+
+_Note: please don't forget to add `Content-Type` header with `application/json` value_
 
 A more advanced example: let's say you want to build the __master__ `branch`
 using the `deployment` workflow,
@@ -172,6 +174,6 @@ and set a test environment variable (`API_TEST_ENV`),
 the call will look like this:
 
 ```
-curl https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","api_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'
+curl  -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","api_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'
 ```
 
