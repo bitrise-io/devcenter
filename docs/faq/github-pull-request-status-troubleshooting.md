@@ -9,7 +9,7 @@ have to connect his/her GitHub account, or else [bitrise.io](https://www.bitrise
 won't be able to send the status messages to GitHub.
 
 !!! note "Set the Service credential User for the app"
-    You can set which Team Member's sercive connections should be used when Bitrise tries to communicate
+    You can set which Team Member's service connections should be used when Bitrise tries to communicate
     with GitHub or any other connected service (like Bitbucket or Xamarin) API.
     You can set this user on the `Team` tab of the app, in the __Service credential User__ section.
     Default is to use the Owner's credentials.
