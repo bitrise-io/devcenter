@@ -17,7 +17,7 @@ To download the `bitrise.yml` please check the [related section of the Bitrise A
 
 Save the `bitrise.yml` into a file, fix it, then you can upload it with another `curl` call.
 
-To upload the `bitrise.yml` please also follow the [related part of the Bitrise API documentation](api/v0.1/#post-appsapp-slugbitriseyml).
+To upload the `bitrise.yml` please also follow the [related part of the Bitrise API documentation](/api/v0.1/#post-appsapp-slugbitriseyml).
 
 _Note: make sure that you set the right `path/to/bitrise.yml` - specify the path of
 the `bitrise.yml` file where you saved the fixed `bitrise.yml`!_
