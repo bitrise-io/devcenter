@@ -56,6 +56,7 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 * [The Trials of Mobile Automation at InVision](http://engineering.invisionapp.com/post/trials-of-mobile-automation/) - *ChatOps with Slack and Bitrise*
 * [How to send commit changes by email once CI build passes?](https://medium.com/@hesam.kamalan/how-to-send-commit-changes-by-email-once-ci-build-passes-dee13c67c195)
 * [Continuous integration made easy with Bitrise](https://blog.alltheflow.com/continuous-integration-made-easy-with-bitrise/) - *intro to Step development*
+* [How to Create Bitrise Step in Go – Flutter Example](https://www.thedroidsonroids.com/blog/how-to-create-bitrise-step-in-go-flutter-example) - *Step development in Golang*
 
 
 ## Japanese
