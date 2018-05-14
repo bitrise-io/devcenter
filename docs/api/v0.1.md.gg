@@ -884,6 +884,30 @@ curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/66
 {{ (var "/v0.1/apps/669403bffbe35909/builds/ddf4134555e833d8/artifacts/5a9f5da8d5f1057c").PATCH }}
 ```
 
+### DELETE /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
+
+Delete a specific artifact.
+
+#### Example `curl` request
+
+```
+curl -X DELETE -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/ddf4134555e833d8/artifacts/5a9f5da8d5f1057c").DELETE_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "data": {
+      "artifact_type": "android-apk",
+      "file_size_bytes": 607185,
+      "is_public_page_enabled": true,
+      "slug": "5a9f5da8d5f1057c",
+      "title": "app-debug.apk"
+    }
+}
+```
+
 ### POST /apps/{APP-SLUG}/builds
 
 Trigger a new build.
