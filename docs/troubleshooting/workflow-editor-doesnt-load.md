@@ -11,10 +11,6 @@ fix it locally and then upload the fixed `bitrise.yml` with another API call. Fo
 
 To download the `bitrise.yml` please check the [related section of the Bitrise API documentation](/api/v0.1/#get-appsapp-slugbitriseyml).
 
-!!! note "Where to get the App Slug and API Token?"
-    You can find both the app's App Slug and the API Token on the `Code` tab of the app
-    on [bitrise.io](https://www.bitrise.io).
-
 Save the `bitrise.yml` into a file, fix it, then you can upload it with another `curl` call.
 
 To upload the `bitrise.yml` please also follow the [related part of the Bitrise API documentation](/api/v0.1/#post-appsapp-slugbitriseyml).
