@@ -124,7 +124,16 @@ pages:
   - Build Trigger API: api/build-trigger.md
   - App Status / Badge API: api/app-status-badge.md
   - Outgoing Webhooks: api/outgoing-webhooks.md
-  - Bitrise.io API v0.1 (Work In Progress): api/v0.1.md
+  - Bitrise.io API v0.1 (Work In Progress):
+    - Introduction to the Bitrise API: api/bitrise-api-v01/api-index.md
+    - API Authentication: api/bitrise-api-v01/api-authentication.md
+    - Responses and Pagination: api/bitrise-api-v01/response-and-pagination.md
+    - Endpoints:
+      - Account management: api/bitrise-api-v01/account-management-endpoints.md
+      - App management: api/bitrise-api-v01/app-management-endpoints.md
+      - Bitrise.yml: api/bitrise-api-v01/bitrise-yml-endpoints.md
+      - Code signing: api/bitrise-api-v01/code-signing-endpoints.md
+      - Build data and build triggering: api/bitrise-api-v01/build-management-endpoints.md
 
 markdown_extensions:
   - codehilite(css_class=code)
