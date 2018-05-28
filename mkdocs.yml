@@ -29,6 +29,11 @@ pages:
 - Team management:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
+  - Organizations:
+    - Creating organizations: team-management/organizations/creating-org.md
+    - Managing billing and subscription for organizations: team-management/organizations/managing-billing-sub.md
+    - Managing the invoices of your organizations: team-management/organizations/managing-invoices.md
+    - Finding the URL of your organizations: team-management/organizations/org-url.md
 - Webhooks:
   - Adding webhooks: webhooks/index.md
   - Adding a GitHub webhook: webhooks/adding-a-github-webhook.md
