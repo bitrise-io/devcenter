@@ -181,6 +181,7 @@ func main() {
 	}{
 		{HTTPMethod: "GET", Path: "/v0.1/me"},
 		{HTTPMethod: "GET", Path: "/v0.1/users/8e82ac7601178f17"},
+		{HTTPMethod: "GET", Path: "/v0.1/organizations"},
 		{HTTPMethod: "GET", Path: "/v0.1/organizations/e1ec3dea540bcf21"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps", QueryParams: "?limit=2"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps", QueryParams: "?limit=2&sort_by=last_build_at"},
