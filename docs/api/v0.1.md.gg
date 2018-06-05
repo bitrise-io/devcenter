@@ -143,6 +143,22 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/users/8e82ac7601
 {{ (var "/v0.1/users/8e82ac7601178f17").GET }}
 ```
 
+### GET /organizations
+
+List the organizations you are part of.
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/organizations").GET_cURL }}'
+```
+
+#### Example response
+
+```
+{{ (var "/v0.1/organizations").GET }}
+```
+
 ### GET /organizations/ORG-SLUG
 
 Get information about a specific oraganization account.
