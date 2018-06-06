@@ -101,6 +101,8 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
 
     - The `Platform` input needs to be set to: `device`.
     - The `Build command configuration` input must match the `Build configuration` input of the `Generate cordova build configuration` step.
+    
+    ![Screenshot](/img/code-signing/ios-code-signing/cordova-archive-step.png)
 
 1. Set the `Should remove platforms as prepare step?` to `false`. This is crucial: it ensures the step will not remove and re-add the platform of the native projects generated in the `Cordova prepare` or the `Ionic prepare` step.
 
