@@ -9,7 +9,7 @@ Before setting up automatic provisioning in your workflow, make sure that:
 
 * you collected the required files with [codesigndoc](https://github.com/bitrise-tools/codesigndoc). You can also upload the distribution and development certificates with the tool!
 * you have at least __Admin__ role in the developer portal team.
-* [your Apple Developer account is connected to bitrise.io](https://devcenter.bitrise.io/adding-a-new-app/connecting-apple-dev-account).
+* [your Apple Developer account is connected to bitrise.io](/signing-up/connecting-apple-dev-account).
 * Apple Developer Portal integration to your Bitrise project is enabled.
 
 !!! note "Xcode Automatically manage signing option"
