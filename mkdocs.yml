@@ -16,6 +16,7 @@ pages:
 - Infrastructure:
   - Available Stacks: infrastructure/available-stacks.md
   - Virtual Machines: infrastructure/virtual-machines.md
+  - The Android/Linux/Docker environment: infrastructure/the-environment.md
 - Signing up:
   - Signing up with GitHub: signing-up/signing-up-with-github.md
   - Signing up with Bitbucket: signing-up/signing-up-with-bitbucket.md
@@ -26,6 +27,13 @@ pages:
   - Connecting a repository: adding-a-new-app/connecting-a-repository.md
   - Setting up SSH keys: adding-a-new-app/setting-up-ssh-keys.md
   - Setting up configuration: adding-a-new-app/setting-up-configuration.md
+- Code signing:
+  - Android code signing:
+    - Android code signing procedures: code-signing/android-code-signing/android-code-signing-procedures.md
+    - Android code signing using Bitrise Sign APK step: code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
+    - Android code signing with Android Studio: code-signing/android-code-signing/android-code-signing-with-android-studio.md
+    - Android code signing in Gradle: code-signing/android-code-signing/android-code-signing-in-gradle.md
+  - Xamarin Android code signing: code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
 - Team management:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
@@ -64,11 +72,6 @@ pages:
   - Resigning an IPA: ios/resigning-an-ipa.md
   - Frequent iOS issues: ios/frequent-ios-issues.md
   - List of known Xcode issues: ios/known-xcode-issues.md
-- Android:
-  - Android Code Signing: android/code-signing.md
-  - The Android/Linux/Docker environment: android/the-environment.md
-  - Android tips and tricks: android/android-tips-and-tricks.md
-  - Frequent Android issues: android/frequent-android-issues.md
 - Docker:
   - Docker support on bitrise.io: docker/index.md
   - How to run your build locally in Docker: docker/run-your-build-locally-in-docker.md
@@ -99,6 +102,7 @@ pages:
   - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
   - Deploy to TestFairy with Bitrise: tutorials/deploy/deploy-to-testfairy-with-bitrise.md
 - Tips & Tricks:
+  - Android tips and tricks: tips-and-tricks/android-tips-and-tricks.md
   - Skip a Build (skip ci): tips-and-tricks/skip-a-build.md
   - Attach any file as an Artifact to the Build: tips-and-tricks/attach-any-file-to-build.md
   - Expose an Environment Variable and use it in another Step: tips-and-tricks/expose-environment-variable.md
@@ -123,8 +127,9 @@ pages:
   - Should I commit my dependencies into my repository?: faq/should-i-commit-my-dependencies-into-my-repository.md
 - Troubleshooting:
   - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
+  - Frequent Android issues: troubleshooting/frequent-android-issues.md
 - Tools:
-  - Bitrise Tools: tools/bitrise-tools.md
+  - Bitrise tools: tools/bitrise-tools.md
 - API:
   - Build Trigger API: api/build-trigger.md
   - App Status / Badge API: api/app-status-badge.md
