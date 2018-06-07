@@ -21,6 +21,7 @@ pages:
   - Signing up with Bitbucket: signing-up/signing-up-with-bitbucket.md
   - Signing up with email: signing-up/signing-up-with-email.md
   - Trial after signing up: signing-up/trial-after-signing-up.md
+  - Connecting your Apple Developer Account to Bitrise: signing-up/connecting-apple-dev-account.md
 - Adding a new app:
   - Adding a new app: adding-a-new-app/index.md
   - Connecting a repository: adding-a-new-app/connecting-a-repository.md
