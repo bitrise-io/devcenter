@@ -250,6 +250,24 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/organizations/e1
 {{ (var "/v0.1/organizations/e1ec3dea540bcf21/apps?limit=2").GET }}
 ```
 
+### POST /apps/APP-SLUG/register-webhook
+
+Register a webhook for a specific application
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/register-webhook").POST_cURL }}'
+```
+
+#### Example response
+
+```
+{
+  "status": "ok",
+}
+```
+
 ### GET /apps/{APP-SLUG}
 
 Get a specific app's data.
