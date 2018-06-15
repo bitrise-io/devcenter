@@ -13,6 +13,7 @@ pages:
   - Create your first App on Bitrise.io: getting-started/create-your-first-app-on-bitrise.md
   - Add your first Step to your Workflow: getting-started/add-your-first-step-to-your-workflow.md
   - Manage your Bitrise workflow: getting-started/manage-your-bitrise-workflow.md
+  - Scheduling your builds: getting-started/Scheduling-Builds.md
 - Infrastructure:
   - Available Stacks: infrastructure/available-stacks.md
   - Virtual Machines: infrastructure/virtual-machines.md
@@ -122,6 +123,7 @@ pages:
   - Why my build takes longer on Bitrise than on my Mac?: faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
   - Should I commit my dependencies into my repository?: faq/should-i-commit-my-dependencies-into-my-repository.md
 - Troubleshooting:
+  - Enabling Bitrise Support user for your app: troubleshooting/enabling-bitrise-support-user.md
   - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
 - Tools:
   - Bitrise Tools: tools/bitrise-tools.md
