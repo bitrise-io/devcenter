@@ -37,7 +37,6 @@ You can download your files from `GENERIC FILE STORAGE`(for example, your keysto
    inputs:
    - source: $BITRISEIO_ANDROID_KEYSTORE_URL
    - destination: "$HOME/keystores/my_keystore.jks" #native android#
-   - destination: "$BITRISE_SOURCE_DIR/keystores/my_keystore.jks" #Xamarin android
 ...
 
 ```
