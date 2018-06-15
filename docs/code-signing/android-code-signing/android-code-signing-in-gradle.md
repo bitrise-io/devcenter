@@ -1,7 +1,7 @@
 
 ## Configure manually in Gradle
 
-You can manually specify the code signing configuration during the build process in your Gradle configuration.
+You can manually specify the code signing configuration in your Gradle configuration so that your app gets signed during the build process.
 
 1. Open your module-level `build.gradle` file.
 
