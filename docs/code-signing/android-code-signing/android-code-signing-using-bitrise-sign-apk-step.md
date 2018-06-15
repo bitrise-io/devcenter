@@ -41,7 +41,7 @@ You can download your files from `GENERIC FILE STORAGE`(for example, your keysto
 
 ```
 
-After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks` or at `$BITRISE_SOURCE_DIR/keystores/my_keystore.jks`.
+After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
 ## Run your deploy workflow
 
