@@ -5,7 +5,7 @@
 4. Select your Apple ID and your team from the right side bar, then click on `View Details...`.
 5. A dialog will appear where you will see your code signing identities and the provisioning profiles.
 6. Select the certificates and choose `Export` from the pop-up menu.
-![Export certificate](img/code-signing/ios-code-signing/xcode_export_certificate.png)
+![Export certificate](/img/code-signing/ios-code-signing/xcode_export_certificate.png)
 7. Enter a filename in the Save As dialog. You can set a password and a verification to store it securely, but it's not necessary.
 8. Xcode will export the requested certificate in .p12 format.
 
@@ -14,7 +14,7 @@
 2. On the top left sidebar select `login` and on the bottom left select `My Certificates`.
 3. This will list all your installed certificates and the associated private key.
 4. Select the one that you would like to export and choose `Export` from the pop-up menu.
-![Export certificate](img/code-signing/ios-code-signing/keychain_access_export.png)
+![Export certificate](/img/code-signing/ios-code-signing/keychain_access_export.png)
 7. Enter a filename in the Save As dialog. You can set a password and a verification to store it securely, but it's not necessary.
 8. Keychain Access will export the requested certificate in .p12 format.
 
