@@ -45,7 +45,7 @@ android {
 
 !!! tip
 
-     You can use the `System.getenv` ("ENV_KEY") file to access environment variables in the Gradle config file.
+     You can use the `System.getenv("ENV_KEY")` file to access environment variables in the Gradle config file.
 
 An example of your `build.gradle` when using environment variables as `keyPassword` and `storePassword` in the `Code signing` of the Workflow Editor. (You get these environment variables when you upload your keystore to the `GENERIC FILE STORAGE` field of the `Code Signing` tab in your Workflow Editor.):
 
