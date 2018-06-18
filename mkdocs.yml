@@ -41,7 +41,7 @@ pages:
   - Adding a Bitbucket webhook: webhooks/adding-a-bitbucket-webhook.md
   - "Control what to build when, with the Trigger Map": webhooks/trigger-map.md
   - Webhook Troubleshooting: webhooks/troubleshooting.md
- - Code signing:
+- Code signing:
   - iOS code signing:
     - iOS code signing on Bitrise: code-signing/ios-code-signing/code-signing.md
     - Collecting and exporting code signing files with codesigndoc: code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
