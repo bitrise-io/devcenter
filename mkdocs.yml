@@ -41,20 +41,20 @@ pages:
   - Adding a Bitbucket webhook: webhooks/adding-a-bitbucket-webhook.md
   - "Control what to build when, with the Trigger Map": webhooks/trigger-map.md
   - Webhook Troubleshooting: webhooks/troubleshooting.md
-  - Code signing:
-    - iOS code signing:
-      - iOS code signing on Bitrise: code-signing/ios-code-signing/code-signing.md
-      - Collecting and exporting code signing files with codesigndoc: code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
-      - Managing iOS code signing files - automatic provisioning: code-signing/ios-code-signing/ios-auto-provisioning.md
-      - Managing iOS code signing files - manual provisioning: code-signing/ios-code-signing/ios-manual-provisioning.md
-      - Creating a signed .ipa for Xcode projects: code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
-      - Creating a signed .ipa for Xamarin projects: code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
-      - Re-signing an .ipa: code-signing/ios-code-signing/resigning-an-ipa.md
-      - Code signing with Ionic and Cordova projects: code-signing/ios-code-signing/ionic-cordova-code-signing.md
-      - Protecting your code signing files: code-signing/ios-code-signing/protecting-your-code-signing-files.md
-      - Generating code signing files: code-signing/ios-code-signing/generating-code-signing-files.md
-      - Exporting code signing files without codesigndoc: code-signing/ios-code-signing/exporting-code-signing-files.md
-      - Code signing iOS frameworks: code-signing/ios-code-signing/code-signing-ios-frameworks.md
+- Code signing:
+  - iOS code signing:
+    - iOS code signing on Bitrise: code-signing/ios-code-signing/code-signing.md
+    - Collecting and exporting code signing files with codesigndoc: code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
+    - Managing iOS code signing files - automatic provisioning: code-signing/ios-code-signing/ios-auto-provisioning.md
+    - Managing iOS code signing files - manual provisioning: code-signing/ios-code-signing/ios-manual-provisioning.md
+    - Creating a signed .ipa for Xcode projects: code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
+    - Creating a signed .ipa for Xamarin projects: code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
+    - Re-signing an .ipa: code-signing/ios-code-signing/resigning-an-ipa.md
+    - Code signing with Ionic and Cordova projects: code-signing/ios-code-signing/ionic-cordova-code-signing.md
+    - Protecting your code signing files: code-signing/ios-code-signing/protecting-your-code-signing-files.md
+    - Generating code signing files: code-signing/ios-code-signing/generating-code-signing-files.md
+    - Exporting code signing files without codesigndoc: code-signing/ios-code-signing/exporting-code-signing-files.md
+    - Code signing iOS frameworks: code-signing/ios-code-signing/code-signing-ios-frameworks.md
 - Caching:
   - About caching: caching/about-caching.md
   - Caching Cocoapods: caching/caching-cocoapods.md
