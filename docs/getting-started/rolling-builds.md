@@ -8,7 +8,7 @@ You can cancel running builds or builds on hold - no need to abort them manually
     different workflows!
 
 !!! warning "`Bitrise Start Build` step"
-    The `Bitrise Start Build step` allows users to trigger a different workflow as one of the steps of a given workflow. Unfortunately, if the Rolling Builds feature is enabled, the triggered workflow will cancel the previous ones - that is, no steps after the `Bitrise Start Build` step will run in the previous workflow.
+    The `Bitrise Start Build step` allows users to trigger a different workflow as one of the steps of a given workflow. Unfortunately, if the Rolling Builds feature is enabled, the triggered workflow will cancel the previous workflows.
 
 You can also set which types of triggered builds you wish to abort. Let's see how!
 
