@@ -46,7 +46,14 @@ pages:
   - Adding webhooks: webhooks/index.md
   - Adding a GitHub webhook: webhooks/adding-a-github-webhook.md
   - Adding a Bitbucket webhook: webhooks/adding-a-bitbucket-webhook.md
-  - "Control what to build when, with the Trigger Map": webhooks/trigger-map.md
+  - Adding a Gitlab webhook: webhooks/adding-a-gitlab-webhook.md
+  - Adding a Gogs webhook: webhooks/adding-a-gogs-webhook.md
+  - Adding a Slack webhook: webhooks/adding-a-slack-webhook.md
+  - Adding a Visual Studio webhook: webhooks/adding-a-visual-studio-webhook.md
+  - Adding an Assembla webhook: webhooks/adding-assembla-webhook.md
+  - Adding a Deveo webhook: webhooks/adding-deveo-webhook.md
+  - Adding outgoing webhooks: webhooks/adding-outgoing-webhooks.md
+  - Using the Trigger Map to trigger builds: webhooks/trigger-map.md
   - Webhook Troubleshooting: webhooks/troubleshooting.md
 - Code signing:
   - Android code signing:
