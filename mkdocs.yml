@@ -151,7 +151,7 @@ pages:
   - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
   - Frequent iOS issues: troubleshooting/frequent-ios-issues.md
   - List of known Xcode issues: troubleshooting/known-xcode-issues.md
-  - troubleshooting/trigger-doesnt-work.md
+  - Build Trigger does not work: troubleshooting/trigger-doesnt-work.md
 - Tools:
   - Bitrise tools: tools/bitrise-tools.md
 - API:
