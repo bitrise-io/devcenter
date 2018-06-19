@@ -15,7 +15,7 @@ Let's see how to set it up!
 
 ### What the Bitrise Support user can see if it's enabled
 
-The Bitrise Support user has access to your builds and can edit your workflows. We can also modify the inputs of the `Team`, `Code` and the `Settings` tab. In the case of a failing workflow, our best practice is to create a new and correct version of the failing workflow called `support-testing`. You can compare our `support-testing` with your own and update yours or keep the `support-testing` workflow and develop it further.
+The Bitrise Support user has access to your builds and can edit your workflows. We can also modify the inputs of the `Team`, `Code` and the `Settings` tab. In the case of a failing workflow, our best practice is to create a new and correct version of the failing workflow called `support-testing`. You can compare our `support-testing` with your own and update yours or keep the `support-testing` workflow, rename it as you wish and develop it further.
 
 ### What the Bitrise Support user can't see if it's enabled
 
