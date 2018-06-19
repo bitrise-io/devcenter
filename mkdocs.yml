@@ -13,6 +13,8 @@ pages:
   - Create your first App on Bitrise.io: getting-started/create-your-first-app-on-bitrise.md
   - Add your first Step to your Workflow: getting-started/add-your-first-step-to-your-workflow.md
   - Manage your Bitrise workflow: getting-started/manage-your-bitrise-workflow.md
+  - Rolling builds: getting-started/rolling-builds.md
+  - Selective builds: getting-started/selective_builds.md 
   - Triggering builds:
     - Triggering builds: getting-started/triggering-builds/triggering-builds.md
     - Triggering builds with code push: getting-started/triggering-builds/trigger-code-push.md
@@ -149,6 +151,7 @@ pages:
   - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
   - Frequent iOS issues: troubleshooting/frequent-ios-issues.md
   - List of known Xcode issues: troubleshooting/known-xcode-issues.md
+  - troubleshooting/trigger-doesnt-work.md
 - Tools:
   - Bitrise tools: tools/bitrise-tools.md
 - API:
