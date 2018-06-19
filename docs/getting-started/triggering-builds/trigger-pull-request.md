@@ -14,10 +14,10 @@ By default, every new app you add will have a trigger that triggers a build ever
 
     ![PR trigger](/img/getting-started/triggering-builds/pull-request-trigger.png)
 
-1. In the existing trigger "template", click the `SOURCE BRANCH` and `TARGET BRANCH` options.
+1. In the existing trigger, click the `SOURCE BRANCH` and `TARGET BRANCH` options.
 
     !!! note "`+ ADD TRIGGER` option"
-        If you have an existing trigger set up already, click the `+ ADD TRIGGER` option to set up a new one.
+        If you have your own trigger set up already, click the `+ ADD TRIGGER` option to set up a new one.
 
 1. Type the names of the source branch and the target branch. Make sure there are no spelling errors, otherwise the trigger won't work.
 
