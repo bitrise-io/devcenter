@@ -1,4 +1,4 @@
-Once you've registered an app you can start modifying its Workflow,
+When you've registered an app you can start modifying its Workflow,
 that is to customize how a build should work.
 
 To edit your App's Workflow you should open the `Workflow Editor`:
@@ -22,7 +22,7 @@ Clicking the Step will add it to your Workflow.
 You can __Drag and Drop__ to reorder your list of Steps. During a build,
 steps will be executed one by one, in top-to-bottom order.
 
-Once you're happy with your Workflow Save it on the top right! 
+Once you're happy with your Workflow Save it on the top right!
 That's all, your next build will automatically use the current, __saved__ Workflow!
 
 !!! note "Multiple Workflows"

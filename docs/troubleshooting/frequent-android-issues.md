@@ -98,4 +98,4 @@ into the system's Android SDK Home path under `licenses` directory.
 
 ## Install an additional Android package
 
-Please see [this section](/android/android-tips-and-tricks/#how-to-install-an-additional-android-sdk-package).
+Please see [this section](/tips-and-tricks/android-tips-and-tricks/#how-to-install-an-additional-android-sdk-package).
