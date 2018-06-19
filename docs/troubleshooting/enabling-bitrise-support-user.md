@@ -1,17 +1,17 @@
 
-You can enable `Bitrise Support user` if you need tech support from us (for example, looking into your workflow, your build log, your app settings or your yml) so that we can fix your technical issues in the most efficient way.
+If you need quick tech support from us, our onsite chat support can look into your project and fix your technical issues in the most efficient way! All you have to do is enable `Bitrise Support user` so that we have access to your project, specifically to your workflow, your build log, your app settings or to your yml. 
 
-With the toggle function, you can easily turn the `Bitrise Support user` on and off, no need to add us as a user to your app's Team any more.
+With the toggle function, you can easily turn the `Bitrise Support user` on and off, no need to add us as a user to your app's Team any more. 
 
 Let's see how to set it up!
 
 1. Go to the `Settings` tab of your project.
 
-2. Scroll down to the `Enable Bitrise Support user for this app` and toggle the switch to the right to enable it (don't do it, if you just wanted to enable it for future use). It might take a couple of seconds to work and you might need to refresh your page to see the enabled status.
+2. Scroll down to the `Enable Bitrise Support user for this app` and toggle the switch to the right to enable it. It might take a couple of seconds to work and you might need to refresh your page to see the enabled status.
 
     ![Screenshot](/img/troubleshooting/enable-bitrise-support-user.png)
 
-3. Ping us through our onsite chat and notify us that you have enabled the Bitrise support user for your app so that we can help you with your issue.
+3. Ping us through our onsite chat and notify us that you have enabled the Bitrise support user for your app so that we can help you with your issue. 
 
 ### What the Bitrise Support user can see if it's enabled
 
