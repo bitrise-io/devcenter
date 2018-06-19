@@ -17,11 +17,12 @@ and what _build message_ to present on the Build's details page.
 
 You have to call your build trigger with a `POST` request with a JSON body.
 
-!!! note "API Token and App Slug"
-    When you use the Bitrise Trigger API you have to specify the App's `API Token` and `App Slug`.
-    You can view both and regenerate your App's API Token anytime you want to,
+!!! note "Build Trigger Token and App Slug"
+    When you use the Bitrise Trigger API you have to specify the App's `Build Trigger Token` and `App Slug`.
+    You can view both and regenerate your App's Build Trigger Token anytime you want to,
     on the `Code` tab of the app.
 
+_Note: the old `api_token` parameter is DEPRECATED, please use the `build_trigger_token` parameter instead_
 
 ## JSON body
 
@@ -29,7 +30,7 @@ The JSON body has to contain at least:
 
 * a `hook_info` object with:
     * a `type` key and `bitrise` as its value
-    * an `api_token` key and your _API Token_ as its value
+    * a `build_trigger_token` key and your _Build Trigger Token_ as its value
 * a `build_params` object, with at least a `tag`, `branch` or `workflow_id` parameter specified
 
 A minimal sample JSON body, which specifies _master_ as the `branch` parameter:
@@ -38,7 +39,7 @@ A minimal sample JSON body, which specifies _master_ as the `branch` parameter:
 {
   "hook_info": {
     "type": "bitrise",
-    "api_token": "..."
+    "build_trigger_token": "..."
   },
   "build_params": {
     "branch": "master"
@@ -57,7 +58,7 @@ $.post("https://app.bitrise.io/app/APP-SLUG/build/start.json", {
     "payload":{
         "hook_info":{
             "type":"bitrise",
-            "api_token":"APP-API-TOKEN"
+            "build_trigger_token":"APP-API-TOKEN"
         },
         "build_params":{
             "branch":"master"
@@ -162,7 +163,7 @@ At the bottom of the popup you can find a `curl` call, based on the parameters y
 A base curl call would look like this (with `master` specified as the `branch` build parameter):
 
 ```
-curl -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","api_token":"APP-API-TOKEN"},"build_params":{"branch":"master"}}'
+curl -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master"}}'
 ```
 
 _Note: please don't forget to add `Content-Type` header with `application/json` value_
@@ -174,6 +175,6 @@ and set a test environment variable (`API_TEST_ENV`),
 the call will look like this:
 
 ```
-curl  -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","api_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'
+curl  -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'
 ```
 
