@@ -14,6 +14,7 @@ pages:
   - Add your first Step to your Workflow: getting-started/add-your-first-step-to-your-workflow.md
   - Manage your Bitrise workflow: getting-started/manage-your-bitrise-workflow.md
   - Rolling builds: getting-started/rolling-builds.md
+  - Scheduling your builds: getting-started/Scheduling-Builds.md
   - Selective builds: getting-started/selective_builds.md 
   - Triggering builds:
     - Triggering builds: getting-started/triggering-builds/triggering-builds.md
@@ -148,6 +149,7 @@ pages:
   - Why my build takes longer on Bitrise than on my Mac?: faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
   - Should I commit my dependencies into my repository?: faq/should-i-commit-my-dependencies-into-my-repository.md
 - Troubleshooting:
+  - Enabling Bitrise Support user for your app: troubleshooting/enabling-bitrise-support-user.md
   - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
   - Frequent iOS issues: troubleshooting/frequent-ios-issues.md
   - List of known Xcode issues: troubleshooting/known-xcode-issues.md
