@@ -6,19 +6,18 @@ To run builds as an organization, you need to subscribe to an __Organization__ p
 
 No need for lengthy preparation when you wish to create an organization on Bitrise: all you really need is an existing Bitrise account - this will be the default owner of the organization - and an organization name. You can set up everything else later!
 
-1. Log in to [bitrise.io](https://www.bitrise.io).
+1. Log in to [bitrise.io](https://www.bitrise.io) and open your profile page.
 
-1. On the top menu bar, find the `+` symbol and click it.
+    ![Screenshot](/img/team-management/organization/account-profile-menu.png)
 
-    ![Screenshot](/img/team-management/organization/add-org.png)
+1. On the left, locate the `Organizations` menu and click `+ New Organization`.
 
-1. Choose `Add organization` from the dropdown menu.
-
-      Alternatively, you can create a new organization from:
-      - your `Account settings` page: find the `+ New Organization` option on the left.
-      - on the `Apps` screen: open the dropdown menu above your apps and click `Create organization`.
-
-      ![Screenshot](/img/team-management/organization/add-org-apps.png)
+    !!! note "Creating an organization from the Dashboard"
+        Alternatively, you can:
+        
+        - go to your Dashboard.
+        - open the dropdown menu called `Switch Dashboard context`.
+        - click `Create organization`.
 
 1. In the pop-up window, enter the name and the billing email of your organization, and click `Create`.
 
