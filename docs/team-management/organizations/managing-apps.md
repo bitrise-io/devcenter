@@ -110,7 +110,7 @@ There are two separate ways to assign one or more groups to an app that is owned
 For rights of roles, check out the Role Cheatsheet!
 
 !!! note "Create a new group"
-    If there are no groups you can assign to the app in this menu, you will see a grey box telling you `No groups to show`. Clicking the link will take you your organization's `Groups` page where you can create the groups you need, including removing the group from the app.
+    If there are no groups you can assign to the app in this menu, you will see a grey box telling you `No groups to show`. Clicking the link will take you to your organization's `Groups` page where you can create the groups you need, including removing the group from the app.
 
     ![Screenshot](/img/team-management/organization/add-group-from-org.png)
 
