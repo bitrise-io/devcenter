@@ -1,4 +1,4 @@
-Organization owners can access and delete all apps linked to the organization, can manage the billing details of an organization and can add or remove other owners. Org##anization owners are in their own group in the organization and they are managed via membership in this group.
+Organization owners can access and delete all apps linked to the organization, can manage the billing details of an organization and can add or remove other owners. Organization owners are in their own group in the organization and they are managed via membership in this group.
 
 Every organization must have at least one owner.
 
