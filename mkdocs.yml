@@ -15,7 +15,7 @@ pages:
   - Manage your Bitrise workflow: getting-started/manage-your-bitrise-workflow.md
   - Rolling builds: getting-started/rolling-builds.md
   - Scheduling your builds: getting-started/Scheduling-Builds.md
-  - Selective builds: getting-started/selective_builds.md 
+  - Selective builds: getting-started/selective_builds.md
   - Triggering builds:
     - Triggering builds: getting-started/triggering-builds/triggering-builds.md
     - Triggering builds with code push: getting-started/triggering-builds/trigger-code-push.md
@@ -45,6 +45,9 @@ pages:
     - Managing billing and subscription for organizations: team-management/organizations/managing-billing-sub.md
     - Managing the invoices of your organizations: team-management/organizations/managing-invoices.md
     - Finding the URL of your organizations: team-management/organizations/org-url.md
+    - Managing organization members: team-management/organizations/members-organizations.md
+    - Changing the owners of an organization: team-management/organizations/org-ownership.md
+    - Managing the apps of organizations: team-management/organizations/managing-apps.md
 - Webhooks:
   - Adding webhooks: webhooks/index.md
   - Adding a GitHub webhook: webhooks/adding-a-github-webhook.md
@@ -135,7 +138,6 @@ pages:
   - Optimize your build times: tips-and-tricks/optimize-your-build-times.md
   - Use bitrise.yml from repository: tips-and-tricks/use-bitrise-yml-from-repository.md
 - Frequently Asked Questions (FAQ):
-  - Frequent Android issues: troubleshooting/frequent-android-issues.md
   - Available Environment Variables: faq/available-environment-variables.md
   - How to change the owner of an app: faq/how-to-change-the-owner-of-an-app.md
   - Organization FAQ: faq/organization-faq.md
@@ -151,6 +153,7 @@ pages:
 - Troubleshooting:
   - Enabling Bitrise Support user for your app: troubleshooting/enabling-bitrise-support-user.md
   - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
+  - Frequent Android issues: troubleshooting/frequent-android-issues.md
   - Frequent iOS issues: troubleshooting/frequent-ios-issues.md
   - List of known Xcode issues: troubleshooting/known-xcode-issues.md
   - Build Trigger does not work: troubleshooting/trigger-doesnt-work.md

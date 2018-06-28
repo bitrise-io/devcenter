@@ -39,7 +39,7 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
 
 ### Ionic/Cordova code signing with auto provisioning
 
-1. Make sure you have your .p12 signing certificates are uploaded to [bitrise.io](https://www.bitrise.io).
+1. Make sure your .p12 signing certificates are uploaded to [bitrise.io](https://www.bitrise.io).
 
     If you use `codesigndoc` to collect the files, note that you can tell the tool to export only the certificates, by calling: `codesigndoc scan --certs-only xcode`. `codesigndoc` can also upload the files to the website, or you can do that manually.
 
@@ -101,7 +101,7 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
 
     - The `Platform` input needs to be set to: `device`.
     - The `Build command configuration` input must match the `Build configuration` input of the `Generate cordova build configuration` step.
-    
+
     ![Screenshot](/img/code-signing/ios-code-signing/cordova-archive-step.png)
 
 1. Set the `Should remove platforms as prepare step?` to `false`. This is crucial: it ensures the step will not remove and re-add the platform of the native projects generated in the `Cordova prepare` or the `Ionic prepare` step.
