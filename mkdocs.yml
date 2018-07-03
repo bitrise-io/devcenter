@@ -201,6 +201,7 @@ theme:
   # include_search_page: false
   # search_index_only: true
   feature:
+    tabs: false
   palette:
     primary: 'deep purple'
     accent: 'deep purple'
