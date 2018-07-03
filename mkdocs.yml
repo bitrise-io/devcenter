@@ -189,15 +189,17 @@ markdown_extensions:
   - toc:
       permalink: '⚓'
 
-copyright: 'Copyright &copy; 2016 - 2018 David Breuer'
+copyright: 'Copyright &copy; 2014 - 2018 Bitrise Ltd.'
 
 theme:
   name: null
   custom_dir: 'mkdocs-material/material'
   language: 'en'
+  static_templates:
+    - 404.html
   # Don't include MkDocs' JavaScript
-  include_search_page: false
-  search_index_only: true
+  # include_search_page: false
+  # search_index_only: true
   feature:
   palette:
     primary: 'deep purple'
