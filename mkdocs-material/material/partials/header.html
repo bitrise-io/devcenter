@@ -22,7 +22,20 @@
               {{ config.site_name }}
             {% else %}
               <span class="md-header-nav__topic">
-                {{ config.site_name }}
+                <!-- {{ config.site_name }} -->
+
+                {% if page %}
+                  {% for doc in page.ancestors %}
+                    {% if doc.link %}
+                      <span class="md-header-nav__breadcrumbs parent"><a href="{{ doc.link|e }}">{{ doc.title }}</a></span>
+                      {% else %}
+                      <span class="md-header-nav__breadcrumbs parent">{{ doc.title }} /</span>
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+
+                {% if page %}<span class="md-header-nav__breadcrumbs current">{{ page.title }}</span>{% endif %}
+
               </span>
               <span class="md-header-nav__topic">
                 {{ page.title }}

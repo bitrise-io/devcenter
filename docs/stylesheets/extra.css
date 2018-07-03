@@ -40,3 +40,11 @@ nav li ul li a {
   background-color: #fff;
   color: #000;
 }
+
+.md-header-nav__breadcrumbs:after {
+  display: inline;
+  color: hsla(0,0%,100%,.3);
+}
+.md-header-nav__breadcrumbs.parent {
+  color: hsla(0,0%,100%,.7);
+}
