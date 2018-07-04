@@ -53,8 +53,8 @@ These environments are available for builds running on [bitrise.io](https://www.
 * `BITRISEIO_GIT_REPOSITORY_SLUG` : the slug of the Git repository of the project (for example, `bitrise-blog`)
 * `BITRISE_PULL_REQUEST` : Pull Request ID, which triggered the build (if any)
 * `BITRISEIO_PULL_REQUEST_REPOSITORY_URL` : The repository URL from where the Pull Request is sent
-* `$BITRISEIO_PULL_REQUEST_MERGE_BRANCH` : The pre-merge branch - if the Git hosting provider supports and provides the pre-merged state of a Pull Request on a special "merge branch"
-* `$BITRISEIO_PULL_REQUEST_HEAD_BRANCH` : The Pull Request "head branch", if the Git hosting provider system supports & provides this. This special git ref should point to the source of the Pull Request
+* `BITRISEIO_PULL_REQUEST_MERGE_BRANCH` : The pre-merge branch - if the Git hosting provider supports and provides the pre-merged state of a Pull Request on a special "merge branch"
+* `BITRISEIO_PULL_REQUEST_HEAD_BRANCH` : The Pull Request "head branch", if the Git hosting provider system supports & provides this. This special git ref should point to the source of the Pull Request
 * `BITRISE_PROVISION_URL` : Provisioning Profile(s) URL - the ones uploaded to [bitrise.io](https://www.bitrise.io).
   Pipe character (`|`) separated list, in case more than one value is provided.
 * `BITRISE_CERTIFICATE_URL` : Certificate / Identity URL - the one uploaded to [bitrise.io](https://www.bitrise.io).
