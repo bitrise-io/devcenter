@@ -1,6 +1,6 @@
-.admonition a {
-  color: white !important;
-  font-weight: bold !important;
+.md-typeset pre, .md-typeset pre code {
+  background-color: #272822;
+  color: #e6db74;
 }
 
 nav span.section {
@@ -32,6 +32,7 @@ nav li ul li a {
 .md-clipboard:before {
   color: #fff;
 }
+.codehilite:hover .md-clipboard:before, .md-typeset .highlight:hover .md-clipboard:before, pre:hover .md-clipboard:before,
 .md-clipboard:focus:before, .md-clipboard:hover:before {
   color: #e6db74 !important;
   opacity: 1;
