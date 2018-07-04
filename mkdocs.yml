@@ -1,5 +1,5 @@
 site_name: Bitrise DevCenter
-theme: material
+# theme: material
 # theme_dir: custom_theme_files
 edit_uri: blob/master/docs/
 repo_name: 'GitHub'
@@ -15,7 +15,7 @@ pages:
   - Manage your Bitrise workflow: getting-started/manage-your-bitrise-workflow.md
   - Rolling builds: getting-started/rolling-builds.md
   - Scheduling your builds: getting-started/Scheduling-Builds.md
-  - Selective builds: getting-started/selective_builds.md 
+  - Selective builds: getting-started/selective_builds.md
   - Triggering builds:
     - Triggering builds: getting-started/triggering-builds/triggering-builds.md
     - Triggering builds with code push: getting-started/triggering-builds/trigger-code-push.md
@@ -163,12 +163,45 @@ pages:
   - Bitrise.io API v0.1 (Work In Progress): api/v0.1.md
 
 markdown_extensions:
-  - codehilite(css_class=code)
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      css_class: code
+      use_pygments: false
+      guess_lang: false
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - codehilite
   - admonition
   - toc:
       permalink: '⚓'
 
-extra:
+copyright: 'Copyright &copy; 2014 - 2018 Bitrise Ltd.'
+
+theme:
+  name: null
+  custom_dir: 'mkdocs-material/material'
+  language: 'en'
+  static_templates:
+    - 404.html
+  # Don't include MkDocs' JavaScript
+  # include_search_page: false
+  # search_index_only: true
+  feature:
+    tabs: false
   palette:
     primary: 'deep purple'
     accent: 'deep purple'
@@ -177,4 +210,25 @@ extra:
   font:
     text: 'Roboto'
     code: 'Source Code Pro'
-extra_css: ['stylesheets/extra.css']
+
+
+extra_css:
+  - 'stylesheets/extra.css'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css'
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-go.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-graphql.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-bash.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-javascript.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markdown.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-json.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ruby.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-yaml.min.js'
+
+
+# Google Analytics
+# google_analytics:
+#   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+#   - auto
