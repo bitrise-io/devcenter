@@ -94,7 +94,6 @@ pages:
   - Step inputs: bitrise-cli/step-inputs.md
   - Step outputs: bitrise-cli/step-outputs.md
   - Setting a time limit for steps: bitrise-cli/step-timeout.md
-  - Triggering builds with the Trigger Map: bitrise-cli/trigger-map.md
   - Secrets: bitrise-cli/secrets.md
   - Most important concepts: bitrise-cli/most-important-concepts.md
   - Create your own Step: bitrise-cli/create-your-own-step.md
