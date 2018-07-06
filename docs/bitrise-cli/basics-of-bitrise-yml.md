@@ -1,6 +1,6 @@
 A bare minimal `bitrise.yml` is as simple as:
 
-```yaml
+``` yaml
 format_version: 1.3.1
 ```
 
@@ -9,7 +9,7 @@ there's nothing to `run`.
 
 A minimal configuration which you can `bitrise run`:
 
-```yaml
+``` yaml
 format_version: 1.3.1
 workflows:
   test:
@@ -22,7 +22,7 @@ Let's continue with our example from the previous guide,
 which executes a single Script step when you run it with `bitrise run test`,
 and talk about what's what in the configuration:
 
-```yaml
+``` yaml
 format_version: 1.3.1
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 

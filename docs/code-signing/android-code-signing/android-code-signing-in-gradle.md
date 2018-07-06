@@ -11,7 +11,7 @@ You can manually specify the code signing configuration in your Gradle configura
 
     An example of the signing configuration in `build.gradle`:
 
-     ```
+     ``` Groovy
      android {
          signingConfigs {
              release {
