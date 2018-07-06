@@ -23,7 +23,8 @@ Follow the steps to see how you can set it up for your next build!
 
   8. Click `Schedule Build` at the bottom of the pop-up window.
 
-Now you're back on your `Builds` board and you can see your scheduled build.
+!!! done
+    Now you're back on your `Builds` board and you can see your scheduled build.
 
  If you click on `Show scheduled`, you can edit/delete your schedules, disable build scheduling by toggling the switch to the left, or immediately trigger the build by clicking on the `Trigger now` button.
 
