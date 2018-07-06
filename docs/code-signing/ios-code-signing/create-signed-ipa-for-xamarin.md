@@ -4,7 +4,7 @@ You can easily create a signed IPA for your Xamarin project with Bitrise. All yo
     Before setting up IPA export, make sure that:
 
        * your code signing files have been collected: we recommend using our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool.
-       * you have the `Certificate and profile installer` step in your workflow
+       * you have the `Certificate and profile installer` step in your workflow.
 
 If you're all set, proceed to setting up IPA export in your workflow:
 
