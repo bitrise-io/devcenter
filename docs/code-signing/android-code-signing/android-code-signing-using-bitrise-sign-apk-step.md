@@ -35,8 +35,8 @@ You can download your files from `GENERIC FILE STORAGE`(for example, your keysto
 !!! example
     In this example, we're downloading a keystore file.
 
-    ```
-    ...
+    ``` yaml
+    ... 
     - file-downloader:
        inputs:
        - source: $BITRISEIO_ANDROID_KEYSTORE_URL
