@@ -57,4 +57,4 @@ Since your keystore is gitignored, you have to upload your keystore to the `GENE
   ![Screenshot](/img/android-code-signing/file-downloader.png)
 
 !!! important "Ensure the same keystore path"
-    Ensure that your Bitrise keystore path is the same as your local path relative to your project root. For example, if `keystore.jks`is in your project's root, then your Bitrise keystore path has to be $BITRISE_SOURCE_DIR/keystore.jks.
+    Ensure that your Bitrise keystore path is the same as your local path relative to your project root. For example, if `keystore.jks`is in your project's root, then your Bitrise keystore path has to be `$BITRISE_SOURCE_DIR/keystore.jks`.
