@@ -3,7 +3,7 @@
 
 You can create a signed APK using the `Sign APK step` in our Bitrise workflow.
 
-Bitrise Project Scanner provides a `deploy workflow` which contains the Sign APK step. With this step, you can digitally sign your APK as part of your workflow. This step is configured to run if you have already uploaded your keystore file to Bitrise. All you have to do is upload your keystore file in the `Code signing` tab of the Workflow Editor.
+Bitrise Project Scanner provides a `deploy workflow` which contains the `Sign APK step`. With this step, you can digitally sign your APK as part of your workflow. This step is configured to run if you have already uploaded your keystore file to Bitrise. All you have to do is upload your keystore file in the `Code signing` tab of the Workflow Editor.
 
 In this section, we walk you through the code signing steps using our `android-multiple-test-results-sample` demo app.
 
@@ -23,23 +23,28 @@ In this section, we walk you through the code signing steps using our `android-m
 
 6. Click on `Save metadata`.
 
-The Sign APK step will receive your uploaded files.
+    !!! success
+        The `Sign APK` step will receive your uploaded files.
 
-Bitrise uploads your keystore file and assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The Sign APK step in the workflow will track this environment variable and will run if it is set.
+Bitrise uploads your keystore file and assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The `Sign APK` step in the workflow will track this environment variable and will run if it is set.
 
 ## Download your files
 
 You can download your files from `GENERIC FILE STORAGE`(for example, your keystore file) using the `File-downloader` step:
 
-```
-...
-- file-downloader:
-   inputs:
-   - source: $BITRISEIO_ANDROID_KEYSTORE_URL
-   - destination: "$HOME/keystores/my_keystore.jks" #native android#               
-...
+!!! example
+    In this example, we're downloading a keystore file.
 
-```
+    ```
+    ...
+    - file-downloader:
+       inputs:
+       - source: $BITRISEIO_ANDROID_KEYSTORE_URL
+       - destination: "$HOME/keystores/my_keystore.jks" #native android#               
+    ...
+
+    ```
+
 
 After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
