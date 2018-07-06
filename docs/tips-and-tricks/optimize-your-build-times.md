@@ -34,6 +34,8 @@ but subsequent Xcode steps can use the build cache of the previous Xcode step(s)
 
 ## Other
 
+Stay updated with Swift compiling tips: https://github.com/fastred/Optimizing-Swift-Build-Times
+
 __Feel free to suggest other ways of optimization!__
 
 - [Guarding Against Long Compiles](http://khanlou.com/2016/12/guarding-against-long-compiles/)
