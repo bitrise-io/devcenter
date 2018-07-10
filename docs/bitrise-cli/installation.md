@@ -4,14 +4,18 @@ Installing the Bitrise CLI is super simple. It is distributed as a single binary
 
 1. Run the following command in a bash shell:
 
-        sudo curl -o /usr/local/bin/bitrise https://github.com/bitrise-io/bitrise/releases/download/1.16.0/bitrise-$(uname -s)-$(uname -m)
+    ``` bash
+    curl -fL https://github.com/bitrise-io/bitrise/releases/download/1.16.0/bitrise-$(uname -s)-$(uname -m) > /usr/local/bin/bitrise`
+    ```
 
-    !!! note "Bitrise CLI version"
+    !!! info "Bitrise CLI version"
         You can check the latest release of the Bitrise CLI on its [releases](https://github.com/bitrise-io/bitrise/releases) page.
 
 1. Make the downloaded binary executable:
 
-    `sudo chmod +x /usr/local/bin/bitrise`
+    ``` bash
+    chmod +x /usr/local/bin/bitrise
+    ```
 
 1. Run `bitrise setup`. This will verify if everything that is required for Bitrise to run is installed and available. If you skip this, the CLI will perform the setup anyway the first time you call `bitrise run`.
 
@@ -23,7 +27,9 @@ If you have the `Homebrew` package manager installed on your Mac, you can use it
 
 1. Open the `Terminal` app on your Mac and run:
 
-    `brew update && brew install bitrise`
+    ``` bash
+    brew update && brew install bitrise
+    ```
 
 1. Run `bitrise setup`. This will verify if everything that is required for Bitrise to run is installed and available. If you skip this, the CLI will perform the setup anyway the first time you call `bitrise run`.
 
