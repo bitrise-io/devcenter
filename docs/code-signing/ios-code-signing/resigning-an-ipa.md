@@ -1,9 +1,10 @@
 During the development of your iOS app you will need multiple types of distributions for different purposes, such as internal testing or deployment to the App Store. The good news is that this does not require setting up two separate workflows on [bitrise.io](https://www.bitrise.io).
 
-What it _does_ require is:
+!!! todo "Before you start"
+    You need to:
 
-* uploading different types of .p12 certificates (for example, developer and distribution certificates)
-* uploading the associated Provisioning Profiles (or managing them automatically with the `iOS Auto Provisioning` step)
+    * upload different types of .p12 certificates (for example, developer and distribution certificates)
+    * upload the associated Provisioning Profiles (or managing them automatically with the `iOS Auto Provisioning` step)
 
 If all your code signing files are in place, proceed to setting up your workflow. In this example we'll be setting up a workflow to create two signed .ipa files: one with the `development` and one with the `app-store` export method.
 
