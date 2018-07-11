@@ -3,14 +3,14 @@ Step inputs are environment items that tell the Bitrise CLI how to run a given s
 Step inputs can be defined in the `bitrise.yml` file of the project by setting the `inputs` attribute. They have the same syntax as every environment property. It consists of two main parts: a `KEY: value` pair and an `opts` field. The key and the value are required, the `opts` field is optional.
 
 ```
-- MY_KEY_FOR_THE_ENV: my value for the env
+- my_key_for_the_env: my value for the env
   opts:
     title: An example env var item
     is_dont_change_value: false
     category: example
 ```
 
-- `MY_KEY_FOR_THE_ENV`: the key of the environment item (required)
+- `my_key_for_the_env`: the key of the environment item (required)
 - `my value for the env`: the value of the item (required)
 - `opts`: optional attributes.
 
@@ -36,7 +36,7 @@ Set the `is_template` attribute in the `bitrise.yml` file of your project to use
 
 1. Open the `bitrise.yml` file of your project.
 
-1. Find the step in which you wish to use a template expression.
+1. Find the step you need, and then the input of that step in which you wish to use a template expression.
 
 1. Add an `opts` field to the `content` of the step.
 
