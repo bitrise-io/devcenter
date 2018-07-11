@@ -172,7 +172,6 @@ workflows:
         - runner_bin: ruby
 ```
 
-
 ### The Step data you define in bitrise.yml - your diff!
 
 You might already suspect it after the examples above:
@@ -221,7 +220,6 @@ All other properties you can see in the step version's `step.yml` will be read
 from the `step.yml`, you don't have to define those. You only have to define
 __the things you want to change__, compared to the values specified for the step
 in the step's interface definition (`step.yml`).
-
 
 ## Step reference/ID format
 
