@@ -1,13 +1,12 @@
-In short __Bitrise__ is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration)
+__Bitrise__ is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration)
 and [Delivery](https://en.wikipedia.org/wiki/Continuous_delivery) (CI/CD) Platform as a Service (PaaS)
-with a main focus on mobile app development (`iOS`, `Android`, `Xamarin`, ...).
+with a main focus on mobile app development (`iOS`, `Android`, `Xamarin`, ...). It is a collection of tools and services to help you with the development and automation of your software projects
 
 __Automate the testing and deployment of your apps with just a few clicks.__
 
-When you trigger a build a Virtual Machine is assigned to host
-your build and your defined Workflow (series of build Steps) will be executed, step by step.
+## Run your builds on bitrise.io
 
-A `Workflow` consists of one or more build `Steps` (open source git repositories
+You can run a build of your app on Bitrise by defining a `Workflow`. A `Workflow` consists of one or more build `Steps` (open source git repositories
 which can be executed with the [open source Bitrise CLI](https://www.bitrise.io/cli)).
 [You can create and share your own build Steps too](https://github.com/bitrise-steplib/step-template).
 You are able to define more workflows for the very same app,
@@ -21,6 +20,9 @@ gather system information about the Virtual Machine
 running the build, notify other users (e.g. on Slack)
 or even [publish to iTunes Connect](https://github.com/bitrise-io/steps-deploy-to-itunesconnect-deliver), and many more.
 You can read more at [Builds and Workflows](/getting-started/builds-and-workflows).
+
+When you trigger a build a Virtual Machine is assigned to host
+your build and your defined Workflow (series of build Steps) will be executed, step by step.
 
 After a build is finished the Virtual Machine is destroyed and you can browse
 the logs of every step that ran during the workflow.
