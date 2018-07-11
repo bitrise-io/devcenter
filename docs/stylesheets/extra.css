@@ -1,6 +1,6 @@
-.admonition a {
-  color: white !important;
-  font-weight: bold !important;
+.md-typeset pre, .md-typeset pre code {
+  background-color: #272822;
+  color: #e6db74;
 }
 
 nav span.section {
@@ -22,4 +22,30 @@ nav li ul li a {
 
 .article .wrapper {
   padding-top: 77px !important;
+}
+
+.codehilite code, .codehilite pre {
+  padding: 6px 0px 6px 12px;
+  margin-bottom: 16px;
+}
+
+.md-clipboard:before {
+  color: #fff;
+}
+.codehilite:hover .md-clipboard:before, .md-typeset .highlight:hover .md-clipboard:before, pre:hover .md-clipboard:before,
+.md-clipboard:focus:before, .md-clipboard:hover:before {
+  color: #e6db74 !important;
+  opacity: 1;
+}
+.md-clipboard__message {
+  background-color: #fff;
+  color: #000;
+}
+
+.md-header-nav__breadcrumbs:after {
+  display: inline;
+  color: hsla(0,0%,100%,.3);
+}
+.md-header-nav__breadcrumbs.parent {
+  color: hsla(0,0%,100%,.7);
 }
