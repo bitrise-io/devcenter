@@ -1,4 +1,7 @@
-mkdocs==0.16.1
+mkdocs>=0.17.1
+Pygments>=2.2
+pymdown-extensions>=4.11
 mkdocs-bootstrap==0.1.1
 mkdocs-bootswatch==0.4.0
-mkdocs-material==1.0.3
+mkdocs-material==2.9.2
+tornado<5
