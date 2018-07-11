@@ -8,7 +8,7 @@ Creating your own Step is as simple as running a `bitrise` CLI (v1.6.1+) command
 
 Once you have the Bitrise CLI installed, to generate a new Bitrise Step all you have to do is:
 
-```
+``` bash
 # If this is the very first time you use the CLI / if you just installed the CLI run this:
 bitrise setup
 

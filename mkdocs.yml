@@ -1,5 +1,5 @@
 site_name: Bitrise DevCenter
-theme: material
+# theme: material
 # theme_dir: custom_theme_files
 edit_uri: blob/master/docs/
 repo_name: 'GitHub'
@@ -13,14 +13,25 @@ pages:
   - Create your first App on Bitrise.io: getting-started/create-your-first-app-on-bitrise.md
   - Add your first Step to your Workflow: getting-started/add-your-first-step-to-your-workflow.md
   - Manage your Bitrise workflow: getting-started/manage-your-bitrise-workflow.md
+  - Rolling builds: getting-started/rolling-builds.md
+  - Scheduling your builds: getting-started/Scheduling-Builds.md
+  - Selective builds: getting-started/selective_builds.md
+  - Triggering builds:
+    - Triggering builds: getting-started/triggering-builds/triggering-builds.md
+    - Triggering builds with code push: getting-started/triggering-builds/trigger-code-push.md
+    - Triggering builds with pull requests: getting-started/triggering-builds/trigger-pull-request.md
+    - Triggering builds with Git Tags: getting-started/triggering-builds/trigger-git-tags.md
+    - Reporting the build status to your git hosting provider: getting-started/triggering-builds/status-reporting.md
 - Infrastructure:
   - Available Stacks: infrastructure/available-stacks.md
   - Virtual Machines: infrastructure/virtual-machines.md
+  - The Android/Linux/Docker environment: infrastructure/the-environment.md
 - Signing up:
   - Signing up with GitHub: signing-up/signing-up-with-github.md
   - Signing up with Bitbucket: signing-up/signing-up-with-bitbucket.md
   - Signing up with email: signing-up/signing-up-with-email.md
   - Trial after signing up: signing-up/trial-after-signing-up.md
+  - Connecting your Apple Developer Account to Bitrise: signing-up/connecting-apple-dev-account.md
 - Adding a new app:
   - Adding a new app: adding-a-new-app/index.md
   - Connecting a repository: adding-a-new-app/connecting-a-repository.md
@@ -38,8 +49,35 @@ pages:
   - Adding webhooks: webhooks/index.md
   - Adding a GitHub webhook: webhooks/adding-a-github-webhook.md
   - Adding a Bitbucket webhook: webhooks/adding-a-bitbucket-webhook.md
-  - "Control what to build when, with the Trigger Map": webhooks/trigger-map.md
+  - Adding a Gitlab webhook: webhooks/adding-a-gitlab-webhook.md
+  - Adding a Gogs webhook: webhooks/adding-a-gogs-webhook.md
+  - Adding a Slack webhook: webhooks/adding-a-slack-webhook.md
+  - Adding a Visual Studio webhook: webhooks/adding-a-visual-studio-webhook.md
+  - Adding an Assembla webhook: webhooks/adding-assembla-webhook.md
+  - Adding a Deveo webhook: webhooks/adding-deveo-webhook.md
+  - Adding outgoing webhooks: webhooks/adding-outgoing-webhooks.md
+  - Using the Trigger Map to trigger builds: webhooks/trigger-map.md
   - Webhook Troubleshooting: webhooks/troubleshooting.md
+- Code signing:
+  - Android code signing:
+    - Android code signing procedures: code-signing/android-code-signing/android-code-signing-procedures.md
+    - Android code signing using Bitrise Sign APK step: code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
+    - Android code signing with Android Studio: code-signing/android-code-signing/android-code-signing-with-android-studio.md
+    - Android code signing in Gradle: code-signing/android-code-signing/android-code-signing-in-gradle.md
+    - Xamarin Android code signing: code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
+  - iOS code signing:
+    - iOS code signing on Bitrise: code-signing/ios-code-signing/code-signing.md
+    - Collecting and exporting code signing files with codesigndoc: code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
+    - Managing iOS code signing files - automatic provisioning: code-signing/ios-code-signing/ios-auto-provisioning.md
+    - Managing iOS code signing files - manual provisioning: code-signing/ios-code-signing/ios-manual-provisioning.md
+    - Creating a signed .ipa for Xcode projects: code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
+    - Creating a signed .ipa for Xamarin projects: code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
+    - Re-signing an .ipa: code-signing/ios-code-signing/resigning-an-ipa.md
+    - Code signing with Ionic and Cordova projects: code-signing/ios-code-signing/ionic-cordova-code-signing.md
+    - Protecting your code signing files: code-signing/ios-code-signing/protecting-your-code-signing-files.md
+    - Generating code signing files: code-signing/ios-code-signing/generating-code-signing-files.md
+    - Exporting code signing files without codesigndoc: code-signing/ios-code-signing/exporting-code-signing-files.md
+    - Code signing iOS frameworks: code-signing/ios-code-signing/code-signing-ios-frameworks.md
 - Caching:
   - About caching: caching/about-caching.md
   - Caching Cocoapods: caching/caching-cocoapods.md
@@ -48,27 +86,17 @@ pages:
   - Caching Ruby Gems: caching/caching-ruby-gems.md
 - Bitrise CLI and bitrise.yml:
   - Intro: bitrise-cli/index.md
-  - Install the Bitrise CLI: bitrise-cli/installation.md
+  - Install and update the Bitrise CLI: bitrise-cli/installation.md
   - Run your first build: bitrise-cli/run-your-first-build.md
   - Basics of bitrise.yml: bitrise-cli/basics-of-bitrise-yml.md
   - Workflows: bitrise-cli/workflows.md
   - Steps: bitrise-cli/steps.md
+  - Step inputs: bitrise-cli/step-inputs.md
+  - Step outputs: bitrise-cli/step-outputs.md
+  - Setting a time limit for steps: bitrise-cli/step-timeout.md
   - Secrets: bitrise-cli/secrets.md
   - Most important concepts: bitrise-cli/most-important-concepts.md
   - Create your own Step: bitrise-cli/create-your-own-step.md
-- iOS:
-  - iOS Code Signing: ios/code-signing.md
-  - iOS Code Signing - Technical details: ios/code-signing-technical-details.md
-  - Uploading certificates: ios/uploading-certificates.md
-  - How to export Certificates and Provisioning Profiles: ios/export-certificate-and-provisioning-profile.md
-  - Resigning an IPA: ios/resigning-an-ipa.md
-  - Frequent iOS issues: ios/frequent-ios-issues.md
-  - List of known Xcode issues: ios/known-xcode-issues.md
-- Android:
-  - Android Code Signing: android/code-signing.md
-  - The Android/Linux/Docker environment: android/the-environment.md
-  - Android tips and tricks: android/android-tips-and-tricks.md
-  - Frequent Android issues: android/frequent-android-issues.md
 - Docker:
   - Docker support on bitrise.io: docker/index.md
   - How to run your build locally in Docker: docker/run-your-build-locally-in-docker.md
@@ -99,6 +127,7 @@ pages:
   - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
   - Deploy to TestFairy with Bitrise: tutorials/deploy/deploy-to-testfairy-with-bitrise.md
 - Tips & Tricks:
+  - Android tips and tricks: tips-and-tricks/android-tips-and-tricks.md
   - Skip a Build (skip ci): tips-and-tricks/skip-a-build.md
   - Attach any file as an Artifact to the Build: tips-and-tricks/attach-any-file-to-build.md
   - Expose an Environment Variable and use it in another Step: tips-and-tricks/expose-environment-variable.md
@@ -109,6 +138,7 @@ pages:
   - Optimize your build times: tips-and-tricks/optimize-your-build-times.md
   - Use bitrise.yml from repository: tips-and-tricks/use-bitrise-yml-from-repository.md
 - Frequently Asked Questions (FAQ):
+  - Frequent Android issues: troubleshooting/frequent-android-issues.md
   - Available Environment Variables: faq/available-environment-variables.md
   - How to change the owner of an app: faq/how-to-change-the-owner-of-an-app.md
   - Organization FAQ: faq/organization-faq.md
@@ -122,22 +152,59 @@ pages:
   - Why my build takes longer on Bitrise than on my Mac?: faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
   - Should I commit my dependencies into my repository?: faq/should-i-commit-my-dependencies-into-my-repository.md
 - Troubleshooting:
+  - Enabling Bitrise Support user for your app: troubleshooting/enabling-bitrise-support-user.md
   - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
+  - Frequent iOS issues: troubleshooting/frequent-ios-issues.md
+  - List of known Xcode issues: troubleshooting/known-xcode-issues.md
+  - Build Trigger does not work: troubleshooting/trigger-doesnt-work.md
 - Tools:
-  - Bitrise Tools: tools/bitrise-tools.md
+  - Bitrise tools: tools/bitrise-tools.md
 - API:
   - Build Trigger API: api/build-trigger.md
-  - App Status / Badge API: api/app-status-badge.md
+  - App Status Image/Badge API: api/app-status-badge.md
   - Outgoing Webhooks: api/outgoing-webhooks.md
   - Bitrise.io API v0.1 (Work In Progress): api/v0.1.md
 
 markdown_extensions:
-  - codehilite(css_class=code)
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      css_class: code
+      use_pygments: false
+      guess_lang: false
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - codehilite
   - admonition
   - toc:
       permalink: '⚓'
 
-extra:
+copyright: 'Copyright &copy; 2014 - 2018 Bitrise Ltd.'
+
+theme:
+  name: null
+  custom_dir: 'mkdocs-material/material'
+  language: 'en'
+  static_templates:
+    - 404.html
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+  feature:
+    tabs: false
   palette:
     primary: 'deep purple'
     accent: 'deep purple'
@@ -146,4 +213,25 @@ extra:
   font:
     text: 'Roboto'
     code: 'Source Code Pro'
-extra_css: ['stylesheets/extra.css']
+
+
+extra_css:
+  - 'stylesheets/extra.css'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/themes/prism-okaidia.min.css'
+extra_javascript:
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-go.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-graphql.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-bash.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-javascript.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-markdown.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-json.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ruby.min.js'
+  - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-yaml.min.js'
+
+
+# Google Analytics
+# google_analytics:
+#   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+#   - auto
