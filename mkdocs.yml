@@ -159,7 +159,7 @@ pages:
   - Bitrise tools: tools/bitrise-tools.md
 - API:
   - Build Trigger API: api/build-trigger.md
-  - App Status / Badge API: api/app-status-badge.md
+  - App Status Image/Badge API: api/app-status-badge.md
   - Outgoing Webhooks: api/outgoing-webhooks.md
   - Bitrise.io API v0.1 (Work In Progress): api/v0.1.md
 
