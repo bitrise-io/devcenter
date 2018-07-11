@@ -2,6 +2,8 @@ If you have more than one concurrency, you can run more than one build simultane
 
 In the example, we have three workflows of a single app set up to run at the same time. Let's call these workflows `Trigger`, `Building` and `Testing`. The workflow called `Trigger` will be triggered by a pull request, and then the workflow will trigger `Building` and `Testing` which will run simultaneously.
 
+All workflows run on separate, "clean" Virtual Machines. They can also run on different types of stacks: to choose the stack for any workflow, enter the `Workflow Editor` of the app and select the `Stack` tab. 
+
 If any of the builds fail, the build will be considered a failed build. If the build is triggered by a webhook, Bitrise will send a summarized build result to the Git hosting provider. If __any__ of the parallel builds fail, a failed status will be reported.
 
 !!! info "What you need"
