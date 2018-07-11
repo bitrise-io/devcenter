@@ -6,26 +6,28 @@ Currently Bitrise will detect `iOS`, `Android`, `Xamarin` and `fastlane` project
 You can configure other types of projects too, but that will require manual
 configuration.
 
+## Automatic project configuration
 
-## Project configuration with automatic repository scanner
+Enter the name of the default branch of your repository where your project is located. This branch should include the configuration of your project. Once you hit `Next`, Bitrise will automatically start the validation of the repository.
 
-To validate and automatically scan your project you only need to tell Bitrise
-the default branch of your repository.
+  ![Choosing branch](./img/adding-a-new-app/choose-branch.png)
+
 During validation Bitrise will make sure it has access to the given branch,
 using the [SSH key](/adding-a-new-app/setting-up-ssh-keys) you set up.
 
-After successful validation Bitrise will scan your repository and give you a default workflow
+If the validation is successful, Bitrise will scan your repository and give you a default workflow based on the configuration of the project.
 
+## Manual project configuration
 
-## Skipping the scanner - full manual configuration
+If the validation fails, choose the `Restart scanning without validation` option.
 
-If for some reason you want to skip the scanner, you can choose
-the **Configure manually without project scanning** option,
-in the **Validation setup** section.
+  ![Validation failed](./img/adding-a-new-app/validation-failed.png)
 
-![Configure manually without project scanning](/img/adding-a-new-app/validation_configure_manually.png)
+In this case, you have to configure the project manually. Click `Next`. You will see the `Validating Repository` message again but this time Bitrise only checks that we have access to the specified repository.
 
-By choosing this option [bitrise.io](https://www.bitrise.io/) will only
-validate the access to the repository, but it won't run the scanner.
-Instead, it'll present you the manual configuration options
-in the *Project build configuration* section.
+Choose the project type (for example, Xamarin) and specify the necessary inputs (for example, the path to the Xamarin Solution file). You can also select the stack on which you wish to run your builds.
+
+  ![Choose project type](./img/adding-a-new-app/select-project-type.png)
+
+!!! note "Restarting validation"
+    You can restart validation if you want Bitrise to automatically detect your project type. Once you fixed the issue that caused validation to fail for the first time, go to the `Project build configuration` window and select the `Detected` tab. Choose the `Restart current validation` option.
