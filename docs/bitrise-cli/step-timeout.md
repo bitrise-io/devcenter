@@ -9,7 +9,7 @@ A step timeout, defined in seconds, sets a maximum time a step is allowed to run
 1. Add a `timeout` property before the other step inputs.
 
     !!! example
-        ```
+        ``` yaml
         - xcode-test@1.18.14:
              timeout: 120
              inputs:
