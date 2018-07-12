@@ -2,15 +2,15 @@ Step outputs are environment items that are the result of running a given step. 
 
 Step outputs can be defined in the `bitrise.yml` file of the project by setting the `outputs` attribute. They have the same syntax as every environment property. It consists of two main parts: a `KEY: value` pair and an `opts` field. The key and the value are required, the `opts` field is optional.
 
-```
-- MY_KEY_FOR_THE_ENV: my value for the env
+```yaml
+- my_key_for_the_env: my value for the env
   opts:
     title: An example env var item
     is_dont_change_value: false
     category: example
 ```
 
-`MY_KEY_FOR_THE_ENV`: the key of the environment item (required)
+`my_key_for_the_env`: the key of the environment item (required)
 `my value for the env`: the value of the item (required)
 `opts`: optional attributes.
 
@@ -26,13 +26,14 @@ The default outputs of a step cannot be changed by the user in `bitrise.yml`. Ho
 
 1. Set the `outputs` attribute: specify the original environment key - the default output that the step generates - and the alias.
 
-    __Example__
-
+    !!! example
+        ``` yaml
         workflows:
           primary:
           steps:
           - gradle-runner:
               outputs:
               - BITRISE_APK_PATH: ALIAS_APK_PATH
+        ```
 
     In the example, the value for the `BITRISE_APK_PATH` environment variable will be exported under the `ALIAS_APK_PATH` key.
