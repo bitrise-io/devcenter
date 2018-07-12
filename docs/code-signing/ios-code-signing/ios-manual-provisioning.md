@@ -1,6 +1,6 @@
 Manage your code signing files on [bitrise.io](https://www.bitrise.io). With manual provisioning, you can collect your Provisioning Profiles and .p12 certificates with our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool and then upload them manually or by using the tool.
 
-!!! note "Xcode Automatically manage signing option"
+!!! info "Xcode Automatically manage signing option"
     We support using Xcode's
     _Automatically manage signing_ option, introduced in Xcode 8, with your project. In this case, create an IPA of the desired type on your local machine to let Xcode generate the required profiles and then codesigndoc can collect these. If your project changes and Xcode re-generates the profiles, you will need to re-upload these profiles to Bitrise as well.
 
@@ -16,7 +16,7 @@ If you collected all the necessary files with the codesigndoc tool, proceed to u
 
     ![Uploading certificates and Provisioning Profiles](/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
 
-    !!! note "Provisioning Profile file extensions"
+    !!! info "Provisioning Profile file extensions"
         For a MacOS project, the Provisioning Profile file extension is `.provisionprofile`; for an iOS project, the file extension is `.mobileprovision`.
 
 1. Make sure you have the `Certificate and profile installer` step in your app's Workflow. You can check it on the `Workflow` tab of the `Workflow Editor`.
@@ -25,7 +25,7 @@ If you collected all the necessary files with the codesigndoc tool, proceed to u
 
     ![Certificate and profile installer step in your workflow](/img/code-signing/ios-code-signing/workflow-with-cert-prof-inst.png)
 
-!!! note "Troubleshooting: missing Distribution signing files"
+!!! tip "Troubleshooting: missing Distribution signing files"
     If `codesigndoc` does not pick up one or more distribution .p12 files and/or Provisioning Profile(s),
     you can export those manually (.p12 from `Keychain Access` app, Provisioning Profiles from
     [Apple Developer Portal](https://developer.apple.com/)), just like you would when you
