@@ -23,6 +23,7 @@ pages:
     - Triggering builds with pull requests: getting-started/triggering-builds/trigger-pull-request.md
     - Triggering builds with Git Tags: getting-started/triggering-builds/trigger-git-tags.md
     - Reporting the build status to your git hosting provider: getting-started/triggering-builds/status-reporting.md
+    - Starting parallel builds with a single trigger: getting-started/triggering-builds/trigger-multiple-workflows.md
 - Infrastructure:
   - Available Stacks: infrastructure/available-stacks.md
   - Virtual Machines: infrastructure/virtual-machines.md
