@@ -89,11 +89,14 @@ pages:
   - Caching Ruby GEMs: caching/caching-ruby-gems.md
 - Bitrise CLI and bitrise.yml:
   - Intro: bitrise-cli/index.md
-  - Install the Bitrise CLI: bitrise-cli/installation.md
+  - Install and update the Bitrise CLI: bitrise-cli/installation.md
   - Run your first build: bitrise-cli/run-your-first-build.md
   - Basics of bitrise.yml: bitrise-cli/basics-of-bitrise-yml.md
   - Workflows: bitrise-cli/workflows.md
   - Steps: bitrise-cli/steps.md
+  - Step inputs: bitrise-cli/step-inputs.md
+  - Step outputs: bitrise-cli/step-outputs.md
+  - Setting a time limit for steps: bitrise-cli/step-timeout.md
   - Secrets: bitrise-cli/secrets.md
   - Most important concepts: bitrise-cli/most-important-concepts.md
   - Create your own Step: bitrise-cli/create-your-own-step.md
