@@ -10,6 +10,7 @@ pages:
 - Getting Started:
   - Builds & Workflows: getting-started/builds-and-workflows.md
   - Code Security: getting-started/code-security.md
+  - Account Security: getting-started/account-security.md
   - Create your first App on Bitrise.io: getting-started/create-your-first-app-on-bitrise.md
   - Add your first Step to your Workflow: getting-started/add-your-first-step-to-your-workflow.md
   - Manage your Bitrise workflow: getting-started/manage-your-bitrise-workflow.md
@@ -34,6 +35,7 @@ pages:
   - Connecting your Apple Developer Account to Bitrise: signing-up/connecting-apple-dev-account.md
 - Adding a new app:
   - Adding a new app: adding-a-new-app/index.md
+  - Registering a test device: adding-a-new-app/registering-a-test-device.md
   - Connecting a repository: adding-a-new-app/connecting-a-repository.md
   - Setting up SSH keys: adding-a-new-app/setting-up-ssh-keys.md
   - Setting up configuration: adding-a-new-app/setting-up-configuration.md
