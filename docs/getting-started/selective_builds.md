@@ -11,7 +11,7 @@ You may want to use this setting if:
     The current version of our Selective Builds feature only works with GitHub projects. If your repository is hosted by another git hosting service, the option will not be available.
 
 !!! note "Service credential user"
-    The appropriate Service credential user must be set app on your app's `Team` page. This user must have an admin right for the GitHub repository of the project. [Read more about setting up the Service credential user](/faq/github-pull-request-status-troubleshooting/#make-sure-to-select-a-service-credential-user-who-has-a-connected-github-account).
+    The appropriate Service credential user must be set on your app's `Team` page. This user must have an admin right for the GitHub repository of the project. [Read more about setting up the Service credential user](/faq/github-pull-request-status-troubleshooting/#make-sure-to-select-a-service-credential-user-who-has-a-connected-github-account).
 
 1. Click on your app on your `Dashboard`.
 
