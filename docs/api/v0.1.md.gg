@@ -305,6 +305,36 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f
 }
 ```
 
+### POST /apps/APP-SLUG/finish
+
+Save the application at the end of the application add process
+
+Parameters:
+
+- `project_type`: the type of your project (`android`, `ios`, `cordova`, `other`, `xamarin`, `macos`, `ionic`, `react-native`, `fastlane`, null)
+- `stack_id`: the id of the stack the application will be built (these can be found in the [system report](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports) file names)
+- `config_id`: which `default-android-config`, `default-cordova-config`, `default-fastlane-config`, `default-ionic-config`, `default-ios-config`,`default-macos-config`, `default-react-native-config`, `default-xamarin-config`, `other-config` (default if parameter is not speficied)
+- `mode`: config specification mode, has to be specified with `manual` value
+- `envs`: environment variables for the application workflows
+- `organization_slug`: the slug of the organization, who will be the owner of the application, if it's not specified, then the authenticated user will be the owner
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/finish").POST_cURL }}' -d '{{ (var "/v0.1/apps/022d8a3124f1225d/finish").POST_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+	"status": "ok",
+	"build_trigger_token": "ewUL_74D1PrKtBe5LF19Dg",
+	"branch_name": "master",
+	"is_webhook_auto_reg_supported": true
+}
+```
+
 ### GET /apps/{APP-SLUG}
 
 Get a specific app's data.

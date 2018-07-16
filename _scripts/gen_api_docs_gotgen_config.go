@@ -204,6 +204,12 @@ func main() {
 			Path:       "/v0.1/apps/022d8a3124f1225d/register-webhook",
 			NoResponse: true,
 		},
+		{
+			HTTPMethod:  "POST",
+			Path:        "/v0.1/apps/022d8a3124f1225d/finish",
+			RequestBody: `{"project_type":"ios","stack_id":"osx-vs4mac-stable","config":"default-ios-config","mode":"manual","envs":{"env1":"val1","env2":"val2"},"organization_slug":"e1ec3dea540bcf21"}`,
+			NoResponse:  true,
+		},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/13533d589b89fb4b/bitrise.yml", ResponseType: "yml"},
 		{HTTPMethod: "POST", Path: "/v0.1/apps/13533d589b89fb4b/bitrise.yml", RequestBody: uploadBitriseYMLRequestBody()},
