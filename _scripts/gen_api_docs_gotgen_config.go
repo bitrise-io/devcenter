@@ -199,6 +199,11 @@ func main() {
 			RequestBody: `{"auth_ssh_private_key":"your-private-ssh-key","auth_ssh_public_key":"your-public-ssh-key","is_register_key_into_provider_service":false}`,
 			NoResponse:  true,
 		},
+		{
+			HTTPMethod: "POST",
+			Path:       "/v0.1/apps/022d8a3124f1225d/register-webhook",
+			NoResponse: true,
+		},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/669403bffbe35909"},
 		{HTTPMethod: "GET", Path: "/v0.1/apps/13533d589b89fb4b/bitrise.yml", ResponseType: "yml"},
 		{HTTPMethod: "POST", Path: "/v0.1/apps/13533d589b89fb4b/bitrise.yml", RequestBody: uploadBitriseYMLRequestBody()},
