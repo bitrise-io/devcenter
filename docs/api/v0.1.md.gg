@@ -250,6 +250,25 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/organizations/e1
 {{ (var "/v0.1/organizations/e1ec3dea540bcf21/apps?limit=2").GET }}
 ```
 
+### POST /apps/register
+
+Add a new application
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/register").POST_cURL }}' -d '{{ (var "/v0.1/apps/register").POST_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+  "status": "ok",
+  "slug": "022d8a3124f1225d"
+}
+```
+
 ### POST /apps/APP-SLUG/register-ssh-key
 
 Register an SSH key to a specific application

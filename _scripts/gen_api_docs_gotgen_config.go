@@ -189,6 +189,12 @@ func main() {
 		{HTTPMethod: "GET", Path: "/v0.1/organizations/e1ec3dea540bcf21/apps", QueryParams: "?limit=2"},
 		{
 			HTTPMethod:  "POST",
+			Path:        "/v0.1/apps/register",
+			RequestBody: `{"provider":"github","is_public":false,"repo_url":"git@github.com:api_demo/example-repository.git","type":"git","git_repo_slug":"example-repository","git_owner":"api_demo"}`,
+			NoResponse:  true,
+		},
+		{
+			HTTPMethod:  "POST",
 			Path:        "/v0.1/apps/022d8a3124f1225d/register-ssh-key",
 			RequestBody: `{"auth_ssh_private_key":"your-private-ssh-key","auth_ssh_public_key":"your-public-ssh-key","is_register_key_into_provider_service":false}`,
 			NoResponse:  true,
