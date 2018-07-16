@@ -269,6 +269,24 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/register").
 }
 ```
 
+### POST /apps/APP-SLUG/register-ssh-key
+
+Register an SSH key to a specific application
+
+#### Example `curl` request
+
+```
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/register-ssh-key").POST_cURL }}' -d '{{ (var "/v0.1/apps/022d8a3124f1225d/register-ssh-key").POST_RequestBody }}'
+```
+
+#### Example response
+
+```
+{
+  "status": "ok",
+}
+```
+
 ### GET /apps/{APP-SLUG}
 
 Get a specific app's data.
