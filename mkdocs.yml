@@ -234,6 +234,7 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ruby.min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-yaml.min.js'
+  - 'javascripts/prism.collapse-block.js'
 
 
 # Google Analytics
