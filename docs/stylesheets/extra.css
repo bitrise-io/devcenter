@@ -71,7 +71,7 @@ code.collpased::after {
   background-color: #e6db74;
   color: #000;
   font-weight: bold;
-  z-index: 999;
+  z-index: 1;
   bottom: 0px;
   position: absolute;
   padding: 10px 15px;
