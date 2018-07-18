@@ -15,13 +15,15 @@ You can specify the code signing configuration for your Xamarin Android project 
 
 6. Fill out the signing information.
 
-## Use the same keystore path locally and on bitrise.io for Xamarin Android
+## Use the same keystore path locally and on [bitrise.io](https://www.bitrise.io) for Xamarin Android
 
-You __cannot use environment variables__ in your keystore path in your Xamarin project! The keystore path has to be relative to the folder of your Xamarin Android project. You can also use an absolute path.
+!!! warning "Do not use environment variables in keystore path"
+    You __cannot use environment variables__ in your keystore path in your Xamarin project! The keystore path has to be relative to the folder of your Xamarin Android project. You can also use an absolute path.
 
 You can use the same path on your local machine and on [bitrise.io](https://www.bitrise.io) by putting your keystore into your repository.
 
-**Make sure you don't forget to gitignore your keystore in your repository.**
+!!! attention
+    Don't forget to gitignore your keystore in your repository.
 
 Since your keystore is gitignored, you have to upload your keystore to the `GENERIC FILE STORAGE` of Bitrise and download it to the same location in the build.
 
@@ -33,9 +35,10 @@ Since your keystore is gitignored, you have to upload your keystore to the `GENE
 
 4. Type your environment variable name here in the first field.
 
-    For example: `XAMARIN_KEYSTORE`
+    !!! example
+        In our example, we use `XAMARIN_KEYSTORE`.
 
-    ![Screenshot](/img/android-code-signing/generic-file-storage-xm.png)
+        ![Screenshot](/img/android-code-signing/generic-file-storage-xm.png)
 
 5. Upload your keystore file in the `Upload file field`.
 
@@ -45,7 +48,7 @@ Since your keystore is gitignored, you have to upload your keystore to the `GENE
 
 6. Navigate back to your workflow.
 
-7. Insert the `File Downloader` step before the Xamarin Archive step. The `File Downloader` step will get a `Download source url` input.
+7. Insert the `File Downloader` step before the `Xamarin Archive` step. The `File Downloader` step will get a `Download source url` input.
 
 8. Type your environment variable, for example, `$BITRISEIO_XAMARIN_KEYSTORE_URL` in the `Download source url` field.
 
@@ -53,5 +56,5 @@ Since your keystore is gitignored, you have to upload your keystore to the `GENE
 
   ![Screenshot](/img/android-code-signing/file-downloader.png)
 
-!!! note "Ensure the same keystore path"
-    Ensure that your Bitrise keystore path is the same as your local path relative to your project root. For example, if `keystore.jks`is in your project's root, then your Bitrise keystore path has to be $BITRISE_SOURCE_DIR/keystore.jks.
+!!! important "Ensure the same keystore path"
+    Ensure that your Bitrise keystore path is the same as your local path relative to your project root. For example, if `keystore.jks`is in your project's root, then your Bitrise keystore path has to be `$BITRISE_SOURCE_DIR/keystore.jks`.

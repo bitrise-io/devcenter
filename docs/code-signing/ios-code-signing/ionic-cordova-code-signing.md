@@ -39,9 +39,15 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
 
 ### Ionic/Cordova code signing with auto provisioning
 
-1. Make sure you have your .p12 signing certificates are uploaded to [bitrise.io](https://www.bitrise.io).
+1. Make sure your .p12 signing certificates are uploaded to [bitrise.io](https://www.bitrise.io).
 
-    If you use `codesigndoc` to collect the files, note that you can tell the tool to export only the certificates, by calling: `codesigndoc scan --certs-only xcode`. `codesigndoc` can also upload the files to the website, or you can do that manually.
+    If you use `codesigndoc` to collect the files, note that you can tell the tool to export only the certificates, by calling:
+
+    ``` bash
+    codesigndoc scan --certs-only xcode
+    ```
+
+    `codesigndoc` can also upload the files to the website, or you can do that manually.
 
 1. Add the `Cordova prepare` or the `Ionic prepare` step to your Workflow. These steps call the `platform rm` and `platform add` commands.
 
@@ -60,40 +66,27 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
 
 1. Add the `Generate cordova build configuration` step to your Workflow. Configure the step to use the code signing settings exported by the `iOS Auto Prevision` step:
 
-    An example for development distribution:
+    !!! example "Development distribution example"
+        ``` yaml
+        - generate-cordova-build-configuration:
+            inputs:
+            - development_team: $BITRISE_DEVELOPER_TEAM
+            - package_type: development
+            - code_sign_identity: $BITRISE_DEVELOPMENT_CODESIGN_IDENTITY
+            - provisioning_profile: $BITRISE_DEVELOPMENT_PROFILE
+            - configuration: debug
+        ```
 
-            - generate-cordova-build-configuration:
-
-                inputs:
-
-                - development_team: $BITRISE_DEVELOPER_TEAM
-
-                - package_type: development
-
-                - code_sign_identity: "$BITRISE_DEVELOPMENT_CODESIGN_IDENTITY"
-
-                - provisioning_profile: "$BITRISE_DEVELOPMENT_PROFILE"
-
-                - configuration: debug
-
-
-    An example for production distribution:
-
-
-            - generate-cordova-build-configuration:
-
-                inputs:
-
-                - development_team: $BITRISE_DEVELOPER_TEAM
-
-                - package_type: app-store
-
-                - code_sign_identity: "$BITRISE_PRODUCTION_CODESIGN_IDENTITY"
-
-                - provisioning_profile: "$BITRISE_PRODUCTION_PROFILE"
-
-                - configuration: release
-
+    !!! example "Production distribution example"
+        ``` yaml
+        - generate-cordova-build-configuration:
+            inputs:
+            - development_team: $BITRISE_DEVELOPER_TEAM
+            - package_type: app-store
+            - code_sign_identity: $BITRISE_PRODUCTION_CODESIGN_IDENTITY
+            - provisioning_profile: $BITRISE_PRODUCTION_PROFILE
+            - configuration: release
+        ```
 
 1. Add the `Cordova Archive` or the `Ionic Archive` step to your workflow.
 
@@ -101,7 +94,7 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
 
     - The `Platform` input needs to be set to: `device`.
     - The `Build command configuration` input must match the `Build configuration` input of the `Generate cordova build configuration` step.
-    
+
     ![Screenshot](/img/code-signing/ios-code-signing/cordova-archive-step.png)
 
 1. Set the `Should remove platforms as prepare step?` to `false`. This is crucial: it ensures the step will not remove and re-add the platform of the native projects generated in the `Cordova prepare` or the `Ionic prepare` step.
