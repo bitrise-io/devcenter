@@ -4,14 +4,14 @@ Step inputs can be defined in the `bitrise.yml` file of the project by setting t
 
 !!! example
     ``` yaml
-    - MY_KEY_FOR_THE_ENV: my value for the env
+    - my_key_for_the_env: my value for the env
       opts:
         title: An example env var item
         is_dont_change_value: false
         category: example
     ```
 
-- `MY_KEY_FOR_THE_ENV`: the key of the environment item (required)
+- `my_key_for_the_env`: the key of the environment item (required)
 - `my value for the env`: the value of the item (required)
 - `opts`: optional properties.
 
