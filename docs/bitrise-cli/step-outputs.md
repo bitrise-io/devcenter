@@ -2,15 +2,15 @@ Step outputs are environment items that are the result of running a given step. 
 
 Step outputs can be defined in the `bitrise.yml` file of the project by setting the `outputs` attribute. They have the same syntax as every environment property. It consists of two main parts: a `KEY: value` pair and an `opts` field. The key and the value are required, the `opts` field is optional.
 
-```yaml
-- my_key_for_the_env: my value for the env
+``` yaml
+- MY_KEY_FOR_THE_ENV: my value for the env
   opts:
     title: An example env var item
     is_dont_change_value: false
     category: example
 ```
 
-`my_key_for_the_env`: the key of the environment item (required)
+`MY_KEY_FOR_THE_ENV`: the key of the environment item (required)
 `my value for the env`: the value of the item (required)
 `opts`: optional attributes.
 
