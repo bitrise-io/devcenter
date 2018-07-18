@@ -94,7 +94,6 @@ pages:
   - Install and update the Bitrise CLI: bitrise-cli/installation.md
   - Run your first build: bitrise-cli/run-your-first-build.md
   - Basics of bitrise.yml: bitrise-cli/basics-of-bitrise-yml.md
-  - bitrise.yml online: bitrise-cli/bitrise-yml-online.md
   - Workflows: bitrise-cli/workflows.md
   - Steps: bitrise-cli/steps.md
   - Step inputs: bitrise-cli/step-inputs.md
