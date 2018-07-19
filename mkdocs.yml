@@ -23,6 +23,7 @@ pages:
     - Triggering builds with pull requests: getting-started/triggering-builds/trigger-pull-request.md
     - Triggering builds with Git Tags: getting-started/triggering-builds/trigger-git-tags.md
     - Reporting the build status to your git hosting provider: getting-started/triggering-builds/status-reporting.md
+    - Starting parallel builds with a single trigger: getting-started/triggering-builds/trigger-multiple-workflows.md
 - Infrastructure:
   - Available Stacks: infrastructure/available-stacks.md
   - Virtual Machines: infrastructure/virtual-machines.md
@@ -88,7 +89,7 @@ pages:
   - Caching Cocoapods: caching/caching-cocoapods.md
   - Caching Gradle: caching/caching-gradle.md
   - Caching Maven: caching/caching-maven.md
-  - Caching Ruby GEMs: caching/caching-ruby-gems.md
+  - Caching Ruby Gems: caching/caching-ruby-gems.md
 - Bitrise CLI and bitrise.yml:
   - Intro: bitrise-cli/index.md
   - Install and update the Bitrise CLI: bitrise-cli/installation.md
