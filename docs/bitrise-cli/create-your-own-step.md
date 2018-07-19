@@ -1,6 +1,6 @@
 Creating your own Step is as simple as running a `bitrise` CLI (v1.6.1+) command and following the guide it prints. You can generate steps using either the Bash or Go toolkits.
 
-If you don't have the `bitrise` CLI installed you can find the installation guide [here](/bitrise-cli/installation/).
+If you don't have the Bitrise CLI installed, check the installation guide [here](/bitrise-cli/installation/).
 
 !!! warning
     Make sure you have the latest version of the Bitrise CLI, or at the very least, you have version 1.6.1 or higher. Call `bitrise --version` to check your Bitrise CLI version. This is important because the CLI uses the `:step` plugin to create Steps and this plugin was introduced as a core plugin in v1.6.1.
