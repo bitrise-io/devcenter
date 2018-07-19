@@ -10,6 +10,7 @@ pages:
 - Getting Started:
   - Builds & Workflows: getting-started/builds-and-workflows.md
   - Code Security: getting-started/code-security.md
+  - Account Security: getting-started/account-security.md
   - Create your first App on Bitrise.io: getting-started/create-your-first-app-on-bitrise.md
   - Add your first Step to your Workflow: getting-started/add-your-first-step-to-your-workflow.md
   - Manage your Bitrise workflow: getting-started/manage-your-bitrise-workflow.md
@@ -34,6 +35,7 @@ pages:
   - Connecting your Apple Developer Account to Bitrise: signing-up/connecting-apple-dev-account.md
 - Adding a new app:
   - Adding a new app: adding-a-new-app/index.md
+  - Registering a test device: adding-a-new-app/registering-a-test-device.md
   - Connecting a repository: adding-a-new-app/connecting-a-repository.md
   - Setting up SSH keys: adding-a-new-app/setting-up-ssh-keys.md
   - Setting up configuration: adding-a-new-app/setting-up-configuration.md
@@ -45,6 +47,9 @@ pages:
     - Managing billing and subscription for organizations: team-management/organizations/managing-billing-sub.md
     - Managing the invoices of your organizations: team-management/organizations/managing-invoices.md
     - Finding the URL of your organizations: team-management/organizations/org-url.md
+    - Managing organization members: team-management/organizations/members-organizations.md
+    - Changing the owners of an organization: team-management/organizations/org-ownership.md
+    - Managing the apps of organizations: team-management/organizations/managing-apps.md
 - Webhooks:
   - Adding webhooks: webhooks/index.md
   - Adding a GitHub webhook: webhooks/adding-a-github-webhook.md
@@ -138,7 +143,6 @@ pages:
   - Optimize your build times: tips-and-tricks/optimize-your-build-times.md
   - Use bitrise.yml from repository: tips-and-tricks/use-bitrise-yml-from-repository.md
 - Frequently Asked Questions (FAQ):
-  - Frequent Android issues: troubleshooting/frequent-android-issues.md
   - Available Environment Variables: faq/available-environment-variables.md
   - How to change the owner of an app: faq/how-to-change-the-owner-of-an-app.md
   - Organization FAQ: faq/organization-faq.md
@@ -154,6 +158,7 @@ pages:
 - Troubleshooting:
   - Enabling Bitrise Support user for your app: troubleshooting/enabling-bitrise-support-user.md
   - Workflow Editor doesn't load: troubleshooting/workflow-editor-doesnt-load.md
+  - Frequent Android issues: troubleshooting/frequent-android-issues.md
   - Frequent iOS issues: troubleshooting/frequent-ios-issues.md
   - List of known Xcode issues: troubleshooting/known-xcode-issues.md
   - Build Trigger does not work: troubleshooting/trigger-doesnt-work.md
@@ -229,6 +234,7 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ruby.min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-yaml.min.js'
+  - 'javascripts/prism.collapse-block.js'
 
 
 # Google Analytics

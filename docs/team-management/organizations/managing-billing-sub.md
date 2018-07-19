@@ -36,6 +36,7 @@ You can set up a credit card and we'll bill you automatically; for other payment
 Setting up a subscription plan for an organization requires billing information, including payment details. You can set up a credit card and we'll bill you automatically; for other payment methods, please contact our support.
 
 1. Sign in with an account that is an owner of an organization and open its profile page.
+
 1. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
     !!! warning "Make sure it's the right profile"

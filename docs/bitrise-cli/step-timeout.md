@@ -8,10 +8,13 @@ A step timeout, defined in seconds, sets a maximum time a step is allowed to run
 
 1. Add a `timeout` property before the other step inputs.
 
+    !!! example
+        ``` yaml
         - xcode-test@1.18.14:
              timeout: 120
              inputs:
              - project_path: "$BITRISE_PROJECT_PATH"
              - scheme: "$BITRISE_SCHEME"
+        ```
 
 And you're done! In our example, the `xcode-test` step will abort after 120 seconds. Check the build logs to see what caused the step to exceed the limit.
