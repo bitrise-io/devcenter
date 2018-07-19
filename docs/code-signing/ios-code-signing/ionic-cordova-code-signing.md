@@ -39,7 +39,7 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
 
 ### Ionic/Cordova code signing with auto provisioning
 
-1. Make sure you have your .p12 signing certificates are uploaded to [bitrise.io](https://www.bitrise.io).
+1. Make sure your .p12 signing certificates are uploaded to [bitrise.io](https://www.bitrise.io).
 
     If you use `codesigndoc` to collect the files, note that you can tell the tool to export only the certificates, by calling:
 

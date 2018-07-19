@@ -49,3 +49,34 @@ nav li ul li a {
 .md-header-nav__breadcrumbs.parent {
   color: hsla(0,0%,100%,.7);
 }
+
+/**
+* Collapse Hightlited Code Block (PrismJS Plugin)
+*/
+.md-typeset pre>code.collpased {
+  max-height: 300px;
+  margin-bottom: 30px;
+  transition: max-height 0.3s linear;
+  -moz-transition: max-height 0.3s linear;
+}
+
+.md-typeset pre>code.collpased.open {
+  max-height: 130em;
+  margin-bottom: 30px;
+}
+
+code.collpased::after {
+  cursor: pointer;
+  content: "+ Show more";
+  background-color: #e6db74;
+  color: #000;
+  font-weight: bold;
+  z-index: 1;
+  bottom: 0px;
+  position: absolute;
+  padding: 10px 15px;
+  left: 0px;
+}
+code.collpased.open::after {
+  content: "- Show less";
+}
