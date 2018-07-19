@@ -16,7 +16,7 @@ bitrise setup
 # If you want to update the Step plugin to the latest version:
 bitrise plugin update step
 
-# And to generate a new Step simply run this command and follow the guide it prints:
+# And to generate a new Step, simply run this command and follow the guide it prints:
 bitrise :step create
 ```
 
@@ -30,7 +30,7 @@ Once you are done, you should have a `step.yml` and, depending on whether you ch
 
 The generated Step's README describes:
 
-- how you can run your Step locally, before you even commit the code
+- how you can run your Step locally, before you even commit the code,
 - how you can test and use your Step in any build by using [the `git::` Step reference](/bitrise-cli/Steps/#special-Step-sources),
 - how you can share your Step with others through the Bitrise StepLib if you wish to do so.
 
@@ -71,7 +71,7 @@ __Do not use Environment Variables directly in your Step's code__. Instead, expo
 
 ### Submodules and dependencies
 
-__Do not use submodules, or require any other resource downloaded on-demand in your Step__. Try to include everything required for your Step in the Step's repository. Otherwise you can run into problems if, say, the Step fails to download a resource because of a network error.
+__Do not use submodules, or require any other resource downloaded on-demand in your Step__. Try to include everything required for your Step in the Step's repository. Otherwise you can run into problems if, say, the Step fails to download a resource because of a network error or some authorization problem.
 
 In the case of submodules, you should include the content of the other repository instead of using it as a submodule of your Step's repository.
 
