@@ -88,7 +88,7 @@ pages:
   - Caching Cocoapods: caching/caching-cocoapods.md
   - Caching Gradle: caching/caching-gradle.md
   - Caching Maven: caching/caching-maven.md
-  - Caching Ruby GEMs: caching/caching-ruby-gems.md
+  - Caching Ruby Gems: caching/caching-ruby-gems.md
 - Bitrise CLI and bitrise.yml:
   - Intro: bitrise-cli/index.md
   - Install and update the Bitrise CLI: bitrise-cli/installation.md
