@@ -1,6 +1,6 @@
 ### Step properties
 
-Step properties provide important data of a Step, such as its project type, its source code or the dependencies it requires. A step's inputs and outputs are also defined as step properties. Let's take a look at the properties!
+Step properties provide important data of a Step, such as its project type, its source code or the dependencies it requires. A Step's inputs and outputs are also defined as step properties. Let's take a look at the properties!
 
 - `title`, `summary` and `description` : metadata, for comments, tools and GUI.
   _Note: these meta properties can be used for permanent comments. Standard YML comments
