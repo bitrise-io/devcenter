@@ -1,6 +1,6 @@
 Step inputs are environment items that tell the Bitrise CLI how to run a given step. As discussed in the [Steps](/bitrise-cli/steps) section, the default inputs can be found in the `step.yml` file of every step and the user only needs to manually set the inputs they wish to change.
 
-Step inputs can be defined in the `bitrise.yml` file of the project by setting the `inputs` property. They have the same syntax as every environment property. It consists of two main parts: a `KEY: value` pair and an `opts` field. The key and the value are required, the `opts` field is optional.
+Step inputs can be defined in the `step.yml` file of the project by setting the `inputs` property. They have the same syntax as every environment property. It consists of two main parts: a `KEY: value` pair and an `opts` field. The key and the value are required, the `opts` field is optional.
 
 !!! example
     ``` yaml
@@ -33,9 +33,9 @@ Of course, a step input can have many more properties - let's take a look at the
 
 If you need a step to use a certain value only in certain circumstances, use template expressions as step inputs. Template expressions are evaluated before the step uses the input. They are written in Go's template language - you can read more about that [here](https://golang.org/pkg/text/template/).
 
-Set the `is_template` property in the `bitrise.yml` file of your project to use template expressions.
+Set the `is_template` property in the `step.yml` file of your project to use template expressions.
 
-1. Open the `bitrise.yml` file of your project.
+1. Open the `step.yml` file of your project.
 
 1. Find the step in which you wish to use a template expression.
 
