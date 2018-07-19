@@ -1,4 +1,4 @@
-Creating your own Step is as simple as running a `bitrise` CLI (v1.6.1+) command and following the guide it prints. You can generate steps using either the Bash or Go toolkits.
+Creating your own Step is as simple as running a `bitrise` CLI (v1.6.1+) command and following the guide it prints. You can generate Steps using either the Bash or Go toolkits.
 
 If you don't have the Bitrise CLI installed, check the installation guide [here](/bitrise-cli/installation/).
 
@@ -25,7 +25,7 @@ bitrise :step create
 
 Once you are done, you should have a `step.yml` and, depending on whether you chose Go or Bash, a `main.go` or a `step.sh` file in your new Step's repository.
 
-- The `step.yml` file is the Step interface definition, containing dependencies, Step inputs and Step outputs as well as other Step properties.
+- The `step.yml` file is the Step interface definition, containing dependencies, Step inputs and Step outputs as well as other step properties.
 - `main.go` or `step.sh` contains the actual functionality of the Step. __DO NOT CHANGE the working directory!__
 
 The generated Step's README describes:
@@ -41,7 +41,7 @@ The generated Step's README describes:
 
 A newly created Step is a 'skeleton': in the `step.yml` file, certain properties are assigned default values and example inputs and outputs are created to show the structure of these.
 
-Many Step properties are automatically generated - for example, when sharing the Step - while other properties should be set manually if they are required. When creating a new Step with the plugin, only the `project_type_tags` property does not get filled with some value by default but of course you can manually modify all properties in the `step.yml` file.
+Many step properties are automatically generated - for example, when sharing the Step - while other properties should be set manually if they are required. When creating a new Step with the plugin, only the `project_type_tags` property does not get filled with some value by default but of course you can manually modify all properties in the `step.yml` file.
 
 Step inputs and outputs are also Step properties. For more information, see [Step properties](/bitrise-cli/Step-properties), [Step inputs](/bitrise-cli/Step-inputs), [Step outputs](/bitrise-cli/Step-outputs).
 
@@ -81,13 +81,13 @@ If you have any questions visit our [community discussion site](https://discuss.
 
 **Need some inspiration for a new Step idea?** Look no further, we have a list! [This way please](https://discuss.bitrise.io/search?q=tags%3Acontrib-this-feature%20tag%3AStep) :)
 
-## Sharing a new step
+## Sharing a new Step
 
 If you wish to share your newly created Step with the wider world, that's great - and simple!
 
 We recommend you start with the command `bitrise share`. This will print you a guide on sharing steps - all you need to do is follow! But we'll summarize the most important things here as well, if you wish to look at the process before even firing up a command line interface.
 
-1. Make sure your step is stored in a public git repository.
+1. Make sure your Step is stored in a public git repository.
 
 1. Fork the StepLib repository you want to have your step in. The official Bitrise StepLib can be found here: https://github.com/bitrise-io/bitrise-steplib
 
