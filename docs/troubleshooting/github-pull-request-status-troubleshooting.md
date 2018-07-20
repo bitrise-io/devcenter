@@ -14,7 +14,7 @@ must have a connected account to the git hosting provider.
 1. Check the `Account Settings page` of the account of the Service credential User.
 
 On the left side you can find the __Connected Accounts__ section,
-where you can connect and disconnect other services (like GitHub, Bitbucket or Xamarin)
+where you can connect and disconnect other services (like GitHub, Bitbucket or GitLab)
 to your [bitrise.io](https://www.bitrise.io) account.
 
 !!! note "Make sure you connected the correct account"
