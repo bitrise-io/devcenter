@@ -17,10 +17,10 @@ This guide explains how to grant access for [bitrise.io](https://www.bitrise.io/
 
   ![Screenshot](/img/faq/third-party-access.jpg)
 
-You can see the Organization and its repository if you go back to [bitrise.io](https://www.bitrise.io), click on your avatar, select `Add new App` and hit `Next`.
+You can see the Organization and its repositories if you go back to [bitrise.io](https://www.bitrise.io), click on your avatar, select `Add new App` and hit `Next`.
 
 !!! note "Repository is a fork of another private repository"
-    If the repository is a fork of another private repository which belongs to **(another) organization**, you have to repeat these steps and grant access for Bitrise for the organization __which owns the original repository__.
+    If the repository is a fork of another private repository which belongs to **(another) Organization**, you have to repeat these steps and grant access for Bitrise for the Organization __which owns the original repository__.
 
     This is a GitHub limitation: to be able to access a private repository fork
     __you have to grant access for the service (Bitrise) in both repositories__;
