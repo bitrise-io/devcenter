@@ -2,7 +2,7 @@ Manage your code signing files on [bitrise.io](https://www.bitrise.io). You can 
 
 With automatic provisioning, the `iOS Auto Provision` step will manage the Provisioning Profiles. You only have to upload the .p12 certificate files manually to [bitrise.io](https://www.bitrise.io).
 
-!!! note "Upload all signing certificates for your project"
+!!! warning "Upload all signing certificates for your project"
     We strongly recommend uploading __BOTH__ the development and distribution signing certificates for your project. Without the different types of certificates, you will not be able to generate different types of signed IPAs.
 
 Before setting up automatic provisioning in your workflow, make sure that:
@@ -12,7 +12,7 @@ Before setting up automatic provisioning in your workflow, make sure that:
 * [your Apple Developer account is connected to bitrise.io](/signing-up/connecting-apple-dev-account).
 * Apple Developer Portal integration to your Bitrise project is enabled.
 
-!!! note "Xcode Automatically manage signing option"
+!!! info "Xcode Automatically manage signing option"
     The `iOS Auto Provision` step can automatically manage profiles even if the iOS project uses Xcode's
     _Automatically manage signing_ option, introduced in Xcode 8. The step can detect if the provided iOS
     project uses _Automatically manage signing_ option or not. Then it will download the Xcode managed profiles which are needed to sign your project and
@@ -30,7 +30,7 @@ Once you are ready, proceed to uploading your files and setting up your workflow
 
     ![Uploading certificates and Provisioning Profiles](/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
 
-    !!! note "Provisioning Profile file extensions"
+    !!! info "Provisioning Profile file extensions"
         For a MacOS project, the Provisioning Profile file extension is `.provisionprofile`; for an iOS project, the file extension is `.mobileprovision`.
 
 1. Make sure that you do __NOT__ have the `Certificate and profile installer` step in your Workflow. If you have both `iOS Auto Provision` and `Certificate and profile installer` steps in your Workflow, your build will fail.
@@ -46,7 +46,7 @@ Once you are ready, proceed to uploading your files and setting up your workflow
     * `Distribution type` - make sure its value matches the value of the `Select method for export` input in the `Xcode Archive & Export for iOS step`.
     * `Scheme` - you can restrict which targets to process.
 
-!!! note "Troubleshooting: missing Distribution signing files"
+!!! hint "Troubleshooting: missing Distribution signing files"
     If `codesigndoc` does not pick up one or more distribution .p12 files,
     you can export those manually from the `Keychain Access` app, just like you would when you
     transfer these files between Macs.
