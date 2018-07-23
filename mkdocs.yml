@@ -23,6 +23,7 @@ pages:
     - Triggering builds with pull requests: getting-started/triggering-builds/trigger-pull-request.md
     - Triggering builds with Git Tags: getting-started/triggering-builds/trigger-git-tags.md
     - Reporting the build status to your git hosting provider: getting-started/triggering-builds/status-reporting.md
+    - Starting parallel builds with a single trigger: getting-started/triggering-builds/trigger-multiple-workflows.md
 - Infrastructure:
   - Available Stacks: infrastructure/available-stacks.md
   - Virtual Machines: infrastructure/virtual-machines.md
@@ -88,7 +89,7 @@ pages:
   - Caching Cocoapods: caching/caching-cocoapods.md
   - Caching Gradle: caching/caching-gradle.md
   - Caching Maven: caching/caching-maven.md
-  - Caching Ruby GEMs: caching/caching-ruby-gems.md
+  - Caching Ruby Gems: caching/caching-ruby-gems.md
 - Bitrise CLI and bitrise.yml:
   - Intro: bitrise-cli/index.md
   - Install and update the Bitrise CLI: bitrise-cli/installation.md
@@ -97,12 +98,13 @@ pages:
   - bitrise.yml online: bitrise-cli/bitrise-yml-online.md
   - Workflows: bitrise-cli/workflows.md
   - Steps: bitrise-cli/steps.md
+  - Step properties: bitrise-cli/step-properties.md
   - Step inputs: bitrise-cli/step-inputs.md
   - Step outputs: bitrise-cli/step-outputs.md
   - Setting a time limit for steps: bitrise-cli/step-timeout.md
   - Secrets: bitrise-cli/secrets.md
   - Most important concepts: bitrise-cli/most-important-concepts.md
-  - Create your own Step: bitrise-cli/create-your-own-step.md
+  - Create and share your own Step: bitrise-cli/create-your-own-step.md
 - Docker:
   - Docker support on bitrise.io: docker/index.md
   - How to run your build locally in Docker: docker/run-your-build-locally-in-docker.md
@@ -151,8 +153,8 @@ pages:
   - Android x86 Emulator: faq/android-x86-emulator.md
   - How to generate an SSH key pair: faq/how-to-generate-ssh-keypair.md
   - Grant access to a GitHub Organization: faq/grant-access-to-github-organization.md
+  - Grant access to a Bitbucket team: faq/grant-access-to-bitbucket-team.md
   - I can't see my GitHub organization / repository on the Add New App page: faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
-  - GitHub Pull Request / build Status indicator troubleshooting: faq/github-pull-request-status-troubleshooting.md
   - No builds are triggered when I push code into the repository: faq/no-builds-are-triggered-automatically.md
   - Why my build takes longer on Bitrise than on my Mac?: faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
   - Should I commit my dependencies into my repository?: faq/should-i-commit-my-dependencies-into-my-repository.md
@@ -163,6 +165,7 @@ pages:
   - Frequent iOS issues: troubleshooting/frequent-ios-issues.md
   - List of known Xcode issues: troubleshooting/known-xcode-issues.md
   - Build Trigger does not work: troubleshooting/trigger-doesnt-work.md
+  - Build status indicator on GitHub/GitLab/Bitbucket does not work: troubleshooting/github-pull-request-status-troubleshooting.md
 - Tools:
   - Bitrise tools: tools/bitrise-tools.md
 - API:
@@ -235,6 +238,7 @@ extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-python.min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-ruby.min.js'
   - 'https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/components/prism-yaml.min.js'
+  - 'javascripts/prism.collapse-block.js'
 
 
 # Google Analytics
