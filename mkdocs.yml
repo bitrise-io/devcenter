@@ -114,7 +114,6 @@ pages:
   - About Xamarin: xamarin/index.md
   - Restore NuGet packages: xamarin/restore-nuget-packages-and-xamarin-components.md
   - Deploy your Xamarin app: xamarin/deploy-your-xamarin-app.md
-  - Add UITest to your Xamarin app: xamarin/add-unit-test-to-your-xamarin-app.md
   - Run your tests in the Xamarin Test Cloud: xamarin/run-your-tests-in-the-xamarin-test-cloud.md
   - Add custom sources to NuGet: xamarin/add-custom-sources-to-nuget.md
 - Fastlane:
