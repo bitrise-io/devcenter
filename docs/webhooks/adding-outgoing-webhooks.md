@@ -30,12 +30,14 @@ And you're done! You can modify your webhook at any time by clicking `Edit` next
 
 ### Adding custom headers to outgoing webhooks
 
-You can add extra headers to your outgoing webhooks via the web interface. For example, if you have an API listening to the webhook, you can track the requests with API keys set as a custom header.
+You can add extra headers to your outgoing webhooks via the `Code` tab of the web interface. For example, if you have an API listening to the webhook, you can track the requests with API keys set as a custom header.
 
 You can add custom headers either when:
 
 - [creating a new outgoing webhook](/webhooks/adding-outgoing-webhooks#adding-an-outgoing-webhook).
 - modifying an existing outgoing webhook by clicking the `Edit` button next to the URL.
+
+Add the header:
 
 1. Find the `WEBHOOK HEADERS` section.
 
