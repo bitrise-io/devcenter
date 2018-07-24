@@ -86,6 +86,7 @@ pages:
     - Code signing iOS frameworks: code-signing/ios-code-signing/code-signing-ios-frameworks.md
 - Caching:
   - About caching: caching/about-caching.md
+  - Passing artifacts from one build to another: caching/caching-build-build.md
   - Caching Cocoapods: caching/caching-cocoapods.md
   - Caching Gradle: caching/caching-gradle.md
   - Caching Maven: caching/caching-maven.md
