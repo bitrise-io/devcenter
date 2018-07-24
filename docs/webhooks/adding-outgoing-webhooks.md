@@ -15,7 +15,7 @@ You can set up and configure the webhooks sent by Bitrise on the web UI. Let's s
 
 1. Click `+ Add webhook`.
 
-    ![Adding outgoing webhook](/img/webhooks/adding-outgoing.jpeg)
+    ![Adding outgoing webhook](/img/webhooks/adding-outgoing.png)
 
 1. Enter the URL of the service where you wish to send the notification in the `URL` field.
 
@@ -38,6 +38,8 @@ You can add custom headers either when:
 - modifying an existing outgoing webhook by clicking the `Edit` button next to the URL.
 
 1. Find the `WEBHOOK HEADERS` section.
+
+    ![Webhook headers](/img/webhooks/webhook-headers.png)
 
 1. Add a key and a value to the header. You need both to be able to save the header.
 
