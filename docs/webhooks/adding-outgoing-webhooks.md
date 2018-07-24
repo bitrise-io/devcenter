@@ -5,7 +5,7 @@ You can configure Bitrise to send build event notifications to any service you w
 
 You can use this notification to share build statuses with your git provider if we don’t support it yet, notify only the right team about build success or failure, or use it to automate your in-house release pipeline.
 
-You can add, remove and edit your webhooks as well.
+You can add, remove and edit your webhooks easily on the website interface.
 
 ## Adding an outgoing webhook
 
@@ -27,6 +27,23 @@ You can set up and configure the webhooks sent by Bitrise on the web UI. Let's s
 1. Click `Create Webhook`.
 
 And you're done! You can modify your webhook at any time by clicking `Edit` next to the webhook URL displayed.
+
+### Adding custom headers to outgoing webhooks
+
+You can add extra headers to your outgoing webhooks via the web interface. For example, if you have an API listening to the webhook, you can track the requests with API keys set as a custom header.
+
+You can add custom headers either when:
+
+- [creating a new outgoing webhook](/webhooks/adding-outgoing-webhooks#adding-an-outgoing-webhook).
+- modifying an existing outgoing webhook by clicking the `Edit` button next to the URL.
+
+1. Find the `WEBHOOK HEADERS` section.
+
+1. Add a key and a value to the header. You need both to be able to save the header.
+
+1. Click `Add header`.
+
+1. Click `Create webhook`/`Update webhook`.
 
 ## Checking and resending webhook deliveries
 
