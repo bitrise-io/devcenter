@@ -2,7 +2,7 @@
 You can pass files or dependenciess from one build to another with the [`Bitrise.io Cache:Pull`](https://www.bitrise.io/integrations/steps/cache-pull) and [`Bitrise.io Cache:Push`](https://www.bitrise.io/integrations/steps/cache-push) steps in your workflow. Insert the `Bitrise.io Cache:Pull` step right after the `Git Clone Repository` step and the `Bitrise.io Cache:Push` step at the end of your workflow. Note, that in the first build there is no cache archive yet that can be downloaded with the `Bitrise.io Cache:Pull` step. Once the first build has successfully run on Bitrise, the cache archive files will be uploaded to the cloud storage with the `Bitrise.io Cache:Push` step. The next build will be able to access the files stored on the cloud with the `Bitrise.io Cache:Pull` step.
 
 !!! important
-    You can create a cache archive of the files/dependencies that were created during the building of your master branch or of the a new build that was NOT started by a pull request.
+    You can create a cache archive of the files/dependencies that were created during the building of your master branch or of the new build that was NOT started by a pull request.
 
 !!! warning "Pull requests and caching"
     If there is a build, which has been triggered by a pull request, the build will only perform a **cache pull** but NOT **cache push**!
