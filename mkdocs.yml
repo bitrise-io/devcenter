@@ -121,6 +121,8 @@ pages:
 - Fastlane:
   - fastlane tools integration: fastlane/fastlane-tools-integration.md
   - How to configure fastlane match for Bitrise: fastlane/how-to-configure-fastlane-match-for-bitrise.md
+- Testing:
+  - Android unit test: testing/android-run-a-unit-test.md
 - Tutorials:
   - Community Created Tutorials: tutorials/community-created.md
   - HipChat message with build status and details: tutorials/hipchat-message.md
@@ -130,8 +132,6 @@ pages:
   - Configure and connect to your VPN: tutorials/vpn-configuration.md
   - Auto deploy your Middleman blog / static website: tutorials/auto-deploy-middleman-project.md
   - Build with FAKE (F# Make): tutorials/build-with-fake.md
-- Testing:
-  - Android unit test: testing/android-run-a-unit-test.md
 - Deployment Tutorials:
   - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
   - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
