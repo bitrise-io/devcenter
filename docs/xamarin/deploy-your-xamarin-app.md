@@ -22,4 +22,6 @@ Simply add the integration Step you want to use instead of the `Deploy to bitris
 (but in any case after the `Xamarin Archive` step, as that's the step which generates the
 deployable artifact - `.ipa`, `.apk`, ...), and fill out the parameters of the step.
 
+For more information on code signing for Xamarin projects, see [Xamarin Android code signing](/code-signing/xamarin-android-code-signing/xamarin-android-code-signing) and [Creating a signed .ipa for Xamarin projects](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin).
+
 The next time you start a build your app will be deployed to the service of your choice!

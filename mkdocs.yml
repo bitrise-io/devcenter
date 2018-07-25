@@ -111,15 +111,15 @@ pages:
   - Use your own Docker image: docker/use-your-own-docker-image.md
   # - How we build our images: docker/how-we-build-our-images.md
 - Xamarin:
-  - About Xamarin: xamarin/index.md
-  - Restore NuGet packages: xamarin/restore-nuget-packages-and-xamarin-components.md
-  - Deploy your Xamarin app: xamarin/deploy-your-xamarin-app.md
-  - Add UITest to your Xamarin app: xamarin/add-unit-test-to-your-xamarin-app.md
-  - Run your tests in the Xamarin Test Cloud: xamarin/run-your-tests-in-the-xamarin-test-cloud.md
-  - Add custom sources to NuGet: xamarin/add-custom-sources-to-nuget.md
+  - About Xamarin: other/xamarin/index.md
+  - Restore NuGet packages: other/xamarin/restore-nuget-packages-and-xamarin-components.md
+  - Deploy your Xamarin app: other/xamarin/deploy-your-xamarin-app.md
+  - Add custom sources to NuGet: other/xamarin/add-custom-sources-to-nuget.md
 - Fastlane:
   - fastlane tools integration: fastlane/fastlane-tools-integration.md
   - How to configure fastlane match for Bitrise: fastlane/how-to-configure-fastlane-match-for-bitrise.md
+- Testing:
+  - Run your tests in the Visual Studio App Center: testing/run-your-tests-in-the-app-center.md
 - Tutorials:
   - Community Created Tutorials: tutorials/community-created.md
   - HipChat message with build status and details: tutorials/hipchat-message.md
