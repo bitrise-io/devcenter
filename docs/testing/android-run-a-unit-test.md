@@ -8,7 +8,7 @@ This tutorial tells you how to run a unit test against your app and how to gener
 Luckily, your Android primary workflow already contains the `Android Unit Test` and the `Android Lint ` steps which are responsible for performing unit test on your build.
 
 !!! note
-    If you use custom steps or scripts, our `Deploy to Bitrise.io` step by default deploys apps from the `$BITRISE_DEPLOY_DIR` directory, so make sure that you move the generated app there, or set the deploy directory or the file path input of the step to point to the location of the app file.
+    If you use custom steps or scripts, our `Deploy to Bitrise.io` step by default deploys files/build artifacts from the `$BITRISE_DEPLOY_DIR` directory, so make sure that you move the generated app there, or set the deploy directory or the file path input of the step to point to the location of the files/build artifacts.
 
 ## Generate test reports
 
