@@ -13,23 +13,21 @@ video session about setting up Xamarin apps on Bitrise here: [https://www.youtub
 
 ### Getting Started
 
-* [Connect your Xamarin account to Bitrise](/xamarin/connect-your-xamarin-account-to-bitrise) 
 * [Creating your first App on Bitrise](/getting-started/create-your-first-app-on-bitrise)
-* [Restore NuGet packages and Xamarin Components](/xamarin/restore-nuget-packages-and-xamarin-components)
+* [Restore NuGet packages](/xamarin/restore-nuget-packages)
 
 
 ### Code Signing
 
-* [iOS code signing](/ios/code-signing)
-* [Android code signing](/android/code-signing) 
+* [iOS code signing](/code-signing/ios-code-signing/code-signing)
+* [Android code signing](/code-signing/android-code-signing//android-code-signing-procedures)
 
 
 ### Advanced
 
 * [Deploy your Xamarin app](/xamarin/deploy-your-xamarin-app)
-* [Add Unit Test to your Xamarin app](/xamarin/add-unit-test-to-your-xamarin-app)
-* [Run your tests in the Xamarin Test Cloud](/xamarin/run-your-tests-in-the-xamarin-test-cloud)
-* [Add custom sources to NuGet](/xamarin/add-custom-sources-to-nuget) 
+* [Run your tests in the Visual Studio App Center](/xamarin/run-your-tests-in-the-app-center)
+* [Add custom sources to NuGet](/xamarin/add-custom-sources-to-nuget)
 * [Build with FAKE (F# Make)](/tutorials/build-with-fake)
 
 !!! note "Community created tutorials"
