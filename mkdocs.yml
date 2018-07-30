@@ -112,7 +112,7 @@ pages:
   # - How we build our images: docker/how-we-build-our-images.md
 - Xamarin:
   - About Xamarin: xamarin/index.md
-  - Restore NuGet packages: xamarin/restore-nuget-packages-and-xamarin-components.md
+  - Restore NuGet packages: xamarin/restore-nuget-packages.md
   - Deploy your Xamarin app: xamarin/deploy-your-xamarin-app.md
   - Add custom sources to NuGet: xamarin/add-custom-sources-to-nuget.md
 - Fastlane:
