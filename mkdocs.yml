@@ -121,6 +121,8 @@ pages:
 - Fastlane:
   - fastlane tools integration: fastlane/fastlane-tools-integration.md
   - How to configure fastlane match for Bitrise: fastlane/how-to-configure-fastlane-match-for-bitrise.md
+- Testing:
+  - Android unit test: testing/android-run-a-unit-test.md
 - Tutorials:
   - Community Created Tutorials: tutorials/community-created.md
   - HipChat message with build status and details: tutorials/hipchat-message.md
