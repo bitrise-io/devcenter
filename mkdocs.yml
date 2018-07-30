@@ -120,6 +120,7 @@ pages:
   - How to configure fastlane match for Bitrise: fastlane/how-to-configure-fastlane-match-for-bitrise.md
 - Testing:
   - Run your tests in the Visual Studio App Center: testing/run-your-tests-in-the-app-center.md
+  - Android unit test: testing/android-run-a-unit-test.md
 - Tutorials:
   - Community Created Tutorials: tutorials/community-created.md
   - HipChat message with build status and details: tutorials/hipchat-message.md
