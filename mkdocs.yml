@@ -62,7 +62,7 @@ pages:
     - Triggering builds with Git Tags: builds/triggering-builds/trigger-git-tags.md
     - Starting parallel builds with a single trigger: builds/triggering-builds/trigger-multiple-workflows.md
     - Reporting the build status to your git hosting provider: builds/triggering-builds/status-reporting.md
-  - Scheduling your builds: getting-started/Scheduling-Builds.md
+  - Scheduling your builds: builds/Scheduling-Builds.md
   - Rolling builds: builds/rolling-builds.md
   - Selective builds: builds/selective_builds.md
   - Build artifacts online: builds/build-artifacts-online.md
