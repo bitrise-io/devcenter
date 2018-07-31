@@ -20,7 +20,7 @@ All you need to get started is adding two steps to your Workflow:
 * `Bitrise.io Cache:Push` step to check the state of the cache and upload it if required
 
 You should add the `Bitrise.io Cache:Pull` (download) step right before you'd use the cache.
-For example, in case of an iOS app, you can insert the `Bitrise.io Cache:Pull` step between the `Git Clone Repository` and the dependency installer steps (for example, the `Run CocoaPods install` or `Carthage` steps). You should not put the `Bitrise.io Cache:Push` step BEFORE the `Git Clone Repository` step.
+For example, in the case of an iOS app, you can insert the `Bitrise.io Cache:Pull` step between the `Git Clone Repository` and the dependency installer steps (for example, the `Run CocoaPods install` or `Carthage` steps). You should not put the `Bitrise.io Cache:Push` step BEFORE the `Git Clone Repository` step.
 
 The `Bitrise.io Cache:Push` step should be the very last step in the workflow.
 
@@ -110,4 +110,4 @@ The build on a non-default branch, to speed things up, can access (read-only) th
 !!! note "Default branch"
     You can see which is your __default branch__ if you click the `Settings` tab of your app.
 
-If a build was started with a code push, the cache will be available on the push branch and will be pulled from the same push branch. If you start a Pull Request (PR), the cache of the PR source branch will be pulled and pushed to the same source branch. In case of a tag event, there is no code change so there is nothing to cache.
+If a build was started with a code push, the cache will be available on the push branch and will be pulled from the same push branch. If you start a Pull Request (PR), the cache of the PR source branch will be pulled and pushed to the same source branch. In the case of a tag event, there is no code change so there is nothing to cache.
