@@ -1,8 +1,4 @@
 The caching will tar all the cached directories and dependencies, and store them securely in Amazon S3.
-Note that if you store files which are downloaded from a CDN/cloud storage, you might not see any improvement,
-as downloading it from the Bitrise Build Cache storage will probably take about the same time as downloading
-it from its canonical CDN/cloud storage location.
-However, Bitrise Caching still might help if you have reliability issues with the resource's, or dependency's canonical download location.
 
 !!! note "Cache Expiring"
     The Build Cache, related to a __specific branch__, expires/is auto-deleted after 7 days,
