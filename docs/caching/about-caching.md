@@ -20,9 +20,9 @@ All you need to get started is adding two steps to your Workflow:
 * `Bitrise.io Cache:Push` step to check the state of the cache and upload it if required
 
 You should add the `Bitrise.io Cache:Pull` (download) step right before you'd use the cache.
-For example, in case of an iOS app, you can insert the `Bitrise.io Cache:Pull` step between the `Git Clone Repository` and the `Run CocoaPods install` steps. If you want to cache your `./Pods` directory, you should not pull the cache before the `Git Clone Repository` step, because the `Git Clone Repository` will create the base directory for `./Pods`. Before the `Git Clone Repository` step, your code (and the directories your code creates when git cloned) is not available on the Virtual Machine.
+For example, in case of an iOS app, you can insert the `Bitrise.io Cache:Pull` step between the `Git Clone Repository` and the dependency installer steps (for example, the `Run CocoaPods install` or `Carthage` steps). You should not put the `Bitrise.io Cache:Push` step BEFORE the `Git Clone Repository` step.
 
-The `Bitrise.io Cache:Push` step can be the very last step in the workflow. Make sure the step is after the step(s) which update(s) the cached paths. For example, in case of `Run CocoaPods install` step, you should put the `Bitrise.io Cache:Push` step anywhere AFTER the `Run CocoaPods install` step, because that's the step which generates or updates the directory (`./Pods`) which is cached.
+The `Bitrise.io Cache:Push` step should be the very last step in the workflow.
 
 !!! example "Example build cache configurations"
     You can find example build cache configurations/guides at our [build-cache discuss page](https://discuss.bitrise.io/tags/build-cache).
