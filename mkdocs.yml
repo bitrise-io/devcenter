@@ -134,6 +134,7 @@ pages:
   - Auto deploy your Middleman blog / static website: tutorials/auto-deploy-middleman-project.md
   - Build with FAKE (F# Make): tutorials/build-with-fake.md
 - Deployment Tutorials:
+  - Android deployment: tutorials/deploy/android-deployment.md
   - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
   - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
   - Deploy to TestFairy with Bitrise: tutorials/deploy/deploy-to-testfairy-with-bitrise.md
