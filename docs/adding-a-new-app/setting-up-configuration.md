@@ -31,3 +31,9 @@ Choose the project type (for example, Xamarin) and specify the necessary inputs 
 
 !!! note "Restarting validation"
     You can restart validation if you want Bitrise to automatically detect your project type. Once you fixed the issue that caused validation to fail for the first time, go to the `Project build configuration` window and select the `Detected` tab. Choose the `Restart current validation` option.
+
+## Webhook setup
+
+Once project configuration is finished, Bitrise offers you the chance to immediately register a webhook in your repository. After the webhook is set up, any code change in your repository will trigger the automatically created `primary` workflow by default.
+
+Read about webhooks in detail in our [Webhooks](/webhooks) section.
