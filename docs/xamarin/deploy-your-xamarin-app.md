@@ -22,22 +22,6 @@ Simply add the integration Step you want to use instead of the `Deploy to bitris
 (but in any case after the `Xamarin Archive` step, as that's the step which generates the
 deployable artifact - `.ipa`, `.apk`, ...), and fill out the parameters of the step.
 
+For more information on code signing for Xamarin projects, see [Xamarin Android code signing](/code-signing/xamarin-android-code-signing/xamarin-android-code-signing) and [Creating a signed .ipa for Xamarin projects](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin).
+
 The next time you start a build your app will be deployed to the service of your choice!
-
-## Code signing
-
-### Xamarin.Android
-
-For Xamarin Android project code signing see the [Create signed APK on bitrise.io](/android/code-signing) tutorial.
-
-### Xamarin.iOS
-
-__Work in progress__ - this section will be updated soon.
-
-Right now the best way to get started with Xamarin.iOS code signing
-is to run [codesigndoc](https://github.com/bitrise-tools/codesigndoc#one-liner)
-and upload the files it generates, or to manually upload the code signing
-files you use locally.
-
-_Code signing files can be uploaded to [bitrise.io](https://www.bitrise.io)
-in the app's Workflow Editor, under the `Code signing & Files` section of the editor._

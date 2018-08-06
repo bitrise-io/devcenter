@@ -14,16 +14,6 @@ pages:
   - Create your first App on Bitrise.io: getting-started/create-your-first-app-on-bitrise.md
   - Add your first Step to your Workflow: getting-started/add-your-first-step-to-your-workflow.md
   - Manage your Bitrise workflow: getting-started/manage-your-bitrise-workflow.md
-  - Rolling builds: getting-started/rolling-builds.md
-  - Scheduling your builds: getting-started/Scheduling-Builds.md
-  - Selective builds: getting-started/selective_builds.md
-  - Triggering builds:
-    - Triggering builds: getting-started/triggering-builds/triggering-builds.md
-    - Triggering builds with code push: getting-started/triggering-builds/trigger-code-push.md
-    - Triggering builds with pull requests: getting-started/triggering-builds/trigger-pull-request.md
-    - Triggering builds with Git Tags: getting-started/triggering-builds/trigger-git-tags.md
-    - Reporting the build status to your git hosting provider: getting-started/triggering-builds/status-reporting.md
-    - Starting parallel builds with a single trigger: getting-started/triggering-builds/trigger-multiple-workflows.md
 - Infrastructure:
   - Available Stacks: infrastructure/available-stacks.md
   - Virtual Machines: infrastructure/virtual-machines.md
@@ -64,6 +54,19 @@ pages:
   - Adding outgoing webhooks: webhooks/adding-outgoing-webhooks.md
   - Using the Trigger Map to trigger builds: webhooks/trigger-map.md
   - Webhook Troubleshooting: webhooks/troubleshooting.md
+- Builds:
+  - Triggering builds:
+    - Triggering builds: builds/triggering-builds/triggering-builds.md
+    - Triggering builds with code push: builds/triggering-builds/trigger-code-push.md
+    - Triggering builds with pull requests: builds/triggering-builds/trigger-pull-request.md
+    - Triggering builds with Git Tags: builds/triggering-builds/trigger-git-tags.md
+    - Starting parallel builds with a single trigger: builds/triggering-builds/trigger-multiple-workflows.md
+    - Reporting the build status to your git hosting provider: builds/triggering-builds/status-reporting.md
+  - Scheduling your builds: builds/Scheduling-Builds.md
+  - Rolling builds: builds/rolling-builds.md
+  - Selective builds: builds/selective_builds.md
+  - Build artifacts online: builds/build-artifacts-online.md
+  - Available environment variables: builds/available-environment-variables.md
 - Code signing:
   - Android code signing:
     - Android code signing procedures: code-signing/android-code-signing/android-code-signing-procedures.md
@@ -112,15 +115,15 @@ pages:
   # - How we build our images: docker/how-we-build-our-images.md
 - Xamarin:
   - About Xamarin: xamarin/index.md
-  - Connect your Xamarin account to Bitrise: xamarin/connect-your-xamarin-account-to-bitrise.md
-  - Restore NuGet packages and Xamarin Components: xamarin/restore-nuget-packages-and-xamarin-components.md
+  - Restore NuGet packages: xamarin/restore-nuget-packages.md
   - Deploy your Xamarin app: xamarin/deploy-your-xamarin-app.md
-  - Add UITest to your Xamarin app: xamarin/add-unit-test-to-your-xamarin-app.md
-  - Run your tests in the Xamarin Test Cloud: xamarin/run-your-tests-in-the-xamarin-test-cloud.md
   - Add custom sources to NuGet: xamarin/add-custom-sources-to-nuget.md
 - Fastlane:
   - fastlane tools integration: fastlane/fastlane-tools-integration.md
   - How to configure fastlane match for Bitrise: fastlane/how-to-configure-fastlane-match-for-bitrise.md
+- Testing:
+  - Run your tests in the Visual Studio App Center: testing/run-your-tests-in-the-app-center.md
+  - Android unit test: testing/android-run-a-unit-test.md
 - Tutorials:
   - Community Created Tutorials: tutorials/community-created.md
   - HipChat message with build status and details: tutorials/hipchat-message.md
@@ -146,7 +149,6 @@ pages:
   - Optimize your build times: tips-and-tricks/optimize-your-build-times.md
   - Use bitrise.yml from repository: tips-and-tricks/use-bitrise-yml-from-repository.md
 - Frequently Asked Questions (FAQ):
-  - Available Environment Variables: faq/available-environment-variables.md
   - How to change the owner of an app: faq/how-to-change-the-owner-of-an-app.md
   - Organization FAQ: faq/organization-faq.md
   - Adding projects with submodules or with private CocoaPods repos: faq/adding-projects-with-submodules.md
