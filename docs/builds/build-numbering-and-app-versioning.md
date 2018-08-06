@@ -16,7 +16,7 @@ Please note that the build number must be either 0 or a positive integer. Negati
 
 ## Set up app versioning automatically on Bitrise
 
-Track the version of your app in its git repository by modifying the file containing the essential information about the app (for example, the `info.plist` file for iOS apps and the `AndroidManifest.xml` file for Android apps).
+Track the version of your app in its git repository by modifying the file containing the essential information about the app (for example, the `Info.plist` file for iOS apps and the `AndroidManifest.xml` file for Android apps).
 
 Bitrise has two steps to do this for you. These two steps can insert the Bitrise build number or some other specified number into their respective files:
 
@@ -28,6 +28,11 @@ Both steps accept either numbers (integers and/or numeric strings) or environmen
 
 ### Setting the `versionCode` and the `versionName` of an Android app
 
+For an Android app, the `versionCode` setting is used as an internal version number, to determine if a build of the app is more recent than another build. The `versionName` setting is a string used as the version number shown to users. 
+
+!!! info
+    For in-depth information about Android versioning, please check out [the Android developer guide on the subject](https://developer.android.com/studio/publish/versioning).
+
 1. Add the `Set Android Manifest Version Code and Name` step to your Workflow.
 
 1. Set the file path to the `AndroidManifest.xml` file in the `AndroidManifest.xml file path` input.
@@ -38,17 +43,20 @@ Both steps accept either numbers (integers and/or numeric strings) or environmen
 
 ![Set android version](/img/builds/set-android-version.png)
 
-For more information about Android versioning, please check out [the Android developer guide on the subject](https://developer.android.com/studio/publish/versioning).
-
 ### Setting the `CFBundleVersion` and `CFBundleShortVersionString` of an iOS app
+
+For an iOS app, the value of the `CFBundleVersion` key ("_Bundle version_" in Xcode) is the __build number__ of the app while the value of the `CFBundleShortVersionString` key ("_Bundle versions string_, short" in Xcode) is the __version number__ of the app.
+
+!!! info
+    For in-depth information about iOS versioning, including the functions of the `CFBundleVersion` and the `CFBundleShortVersionString` keys, please check out [this Apple technical note](https://developer.apple.com/library/archive/technotes/tn2420/_index.html); you can also look up the [summary of most important keys](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html).
 
 1. Add the `Set Xcode Project Build Number` step to your Workflow.
 
-1. Set the file path to the `info.plist` file in the `Info.plist file path` input.
+1. Set the file path to the `Info.plist` file in the `Info.plist file path` input.
 
-1. Add a value in the `Build Number` input. This sets the `CFBundleVersion` to the specified value in the `info.plist` file. The default value is the `$BITRISE_BUILD_NUMBER` environment value.
+1. Add a value in the `Build Number` input. This sets the `CFBundleVersion` key to the specified value in the `Info.plist` file. The default value is the `$BITRISE_BUILD_NUMBER` environment value.
 
-1. Optionally, add a value in the `Version Number` input. This will set the `CFBundleShortVersionString` to the specified value in the `info.plist` file. This input is not required.
+1. Optionally, add a value in the `Version Number` input. This will set the `CFBundleShortVersionString` key to the specified value in the `Info.plist` file. This input is not required.
 
 ![Set iOS version](/img/builds/set-ios-version.png)
 
