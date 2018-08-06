@@ -4,4 +4,4 @@ pymdown-extensions>=4.11
 mkdocs-bootstrap==0.1.1
 mkdocs-bootswatch==0.4.0
 mkdocs-material==2.9.2
-tornado<5
+tornado>5
