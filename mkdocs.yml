@@ -30,6 +30,7 @@ pages:
   - Connecting a repository: adding-a-new-app/connecting-a-repository.md
   - Setting up SSH keys: adding-a-new-app/setting-up-ssh-keys.md
   - Setting up configuration: adding-a-new-app/setting-up-configuration.md
+  - Public apps: adding-a-new-app/public-apps.md
 - Team management:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
