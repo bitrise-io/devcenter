@@ -22,7 +22,7 @@ Setting up an app that is in a self-hosted GitLab repository is very simple: Bit
 
 1. In the `Redirect URI` field, enter https://app.bitrise.io/users/auth/gitlab/callback.
 
-1. In the `Scopes` menu, check __`api`__ and __`read_repository`__.
+1. In the `Scopes` menu, check __`api`__.
 
     ![New Application settings](/img/adding-a-new-app/gitlab-newapp-settings.png)
 
