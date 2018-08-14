@@ -31,7 +31,7 @@ pages:
   - Available Stacks: infrastructure/available-stacks.md
   - Virtual Machines: infrastructure/virtual-machines.md
   - The Android/Linux/Docker environment: infrastructure/the-environment.md
-- Team management:
+- Teams and organizations:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
   - Organizations:
