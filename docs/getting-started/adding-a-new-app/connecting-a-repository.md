@@ -1,6 +1,13 @@
 After you've selected adding a new app, you will find yourself on the `Create app` page.
 
-Bitrise will give you options to connect any kind of git repository to it. `GitHub` and `Bitbucket` are supported out of the box.
+Select your app's privacy setting: it can be either public or private.
+
+- Private apps are only accessible to you, your organization members and those who are invited to work on an app. They require authentication to access the repository of the app.
+
+- [Public apps](/adding-a-new-app/public-apps) expose their `bitrise.yml` and their build logs to everyone. If you have the build URL of a public app, you can view its build log, to help with troubleshooting, for example. Public apps do not require authentication and they cannot have SSH keys.
+
+Bitrise will give you options to connect any kind of git repository to it. `GitHub`, `GitLab` and `Bitbucket` are supported out of the box.
+
 If you've already authorized Bitrise, for example, with your GitHub,
 you will see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
 
@@ -10,7 +17,7 @@ you will see Bitrise automatically listing all your repositories, so you can jus
 
 ![Screenshot](/img/adding-a-new-app/connect-repo.png)
 
-If you haven't authorized Bitrise against the provider hosting your repository, it will ask for permission.
+If you haven't [authorized Bitrise](/getting-started/adding-a-new-app/connecting-account-bitrise) against the provider hosting your repository, it will ask for permission. 
 
 ![Screenshot](/img/adding-a-new-app/authorize-at-provider.png)
 
