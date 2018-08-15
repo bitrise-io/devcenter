@@ -16,7 +16,7 @@ e.g. `bitrise run my-workflow --inventory /path/to/secrets.yml`.
     starts with `.bitrise`, which can be done by adding the
     line: `.bitrise*` to your `.gitignore` file.
 
-The format of the secrets YAML file is really simple. It have to include
+The format of the secrets YAML file is really simple. It has to include
 a root `envs:` item and then the list of environment variables.
 
 Example:
