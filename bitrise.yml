@@ -14,6 +14,8 @@ workflows:
             set -ex
             mkdocs build
   deploy-to-github-pages:
+    envs:
+    - GOOGLE_ANALYTICS_KEY: 'UA-53276411-1'
     before_run:
     - setup
     steps:
