@@ -81,7 +81,7 @@ You have successfully prepared your Google Play Console project. A services cred
 
     `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 
-6. Go back to your `Workflow Editor` and add `Google Play Deploy` step to your Workflow.
+6. Go back to your `Workflow Editor` and add the `Google Play Deploy` step to the end of your Workflow.
 
 8. Fill out the required input fields which are:
 
