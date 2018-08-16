@@ -66,6 +66,7 @@ pages:
   - Rolling builds: builds/rolling-builds.md
   - Selective builds: builds/selective_builds.md
   - Build artifacts online: builds/build-artifacts-online.md
+  - Build numbering and app versioning: builds/build-numbering-and-app-versioning.md
   - Available environment variables: builds/available-environment-variables.md
 - Code signing:
   - Android code signing:
@@ -245,6 +246,6 @@ extra_javascript:
 
 
 # Google Analytics
-# google_analytics:
-#   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-#   - auto
+google_analytics:
+  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+  - auto
