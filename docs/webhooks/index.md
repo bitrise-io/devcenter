@@ -4,12 +4,40 @@ To have Bitrise automatically start a build every time you push code into your r
 
 ## Setting up incoming webhooks automatically
 
-If you select `GitHub` or `Bitbucket` as the source code provider when you add your app Bitrise automatically sets up a webhook for it with a click of a button at the end of your app setup journey. In this case, you can skip this tutorial.
+There are two ways to automatically set up an incoming webhook:
 
-## Setting up incoming webhooks by hand
+- when adding a new app  
+- on the `Code` tab of the app
+
+!!! note
+    Automatic webhook registration is supported for apps hosted on GitHub, GitLab and Bitbucket. 
+
+### Adding a webhook automatically when adding an app
+
+If you select `GitHub`, `GitLab` or `Bitbucket` as the source code provider when you add your app Bitrise automatically sets up a webhook for it with a click of a button at the end of your app setup journey.
+
+![Register webhook](/img/webhooks/add-app-webhook.png)
+
+### Adding a webhook automatically on the Code tab
+
+You can automatically register a webhook to the repository on the `Code` tab of the app. This requires:
+
+- that you have admin rights to the repository
+- that the account that hosts the repository is connected to your Bitrise account.
+
+Open your app on bitrise.io and go to the `Code` tab.
+
+![Register webhook](/img/webhooks/code-tab.png)
+
+Find the `INCOMING WEBHOOKS` section and click `SETUP AUTOMATICALLY`.
+
+![Register webhook](/img/webhooks/webhook-auto.png)
+
+## Setting up incoming webhooks manually
 
 You can manually setup or change your webhooks after you registered your application.
-We support multiple webhook providers. You can find the supported providers in your application's `Code` tab.
+
+You can find the supported providers in your application's `Code` tab. Choose the `SELECT MANUALLY` option to set up a webhook with any of the supported providers.
 
 ![Screenshot](/img/webhooks/webhook-providers.png)
 
@@ -31,7 +59,7 @@ You can find detailed description about the setup on the Code tab or select a pr
 
 ## Setting up outgoing webhooks
 
-You can also set up outgoing webhooks on Bitrise. With these, Bitrise can notify any selected service about your build events. A build event is:
+You can also set up [outgoing webhooks](/webhooks/adding-outgoing-webhooks) on Bitrise. With these, Bitrise can notify any selected service about your build events. A build event is:
 
 - when a build is started
 - when a build ends.
