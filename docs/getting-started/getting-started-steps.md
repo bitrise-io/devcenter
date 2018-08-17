@@ -1,12 +1,12 @@
-Steps represent a block of script execution with predefined input and output variables. Steps can be managed directly from the [Workflow Editor](/getting-started/getting-started-workflows). In the Workflow Editor, you can:
+Steps represent a block of script execution with predefined input and output variables. [Read more about Steps in the Bitrise CLI section](/bitrise-cli/steps).
+
+Steps can be managed directly from the [Workflow Editor](/getting-started/getting-started-workflows). In the Workflow Editor, you can:
 
 - Add and remove Steps in workflows
 - Rearrange the order of Steps in any workflow
 - Specify the version of the Step you wish to run in a given workflow
 - Specify the inputs of the Steps you need
-- Set a Step to run only if the previous Step succeeded
-
-Read more about how Steps work "under the hood" in the [Bitrise CLI section](/bitrise-cli/steps).
+- Set a Step to run only if the previous Step succeeded.
 
 ### Add a new step
 
@@ -24,8 +24,6 @@ You can add any Step to your workflow - there are absolutely no restrictions. Pl
 
 This will show you a list of available Steps in our __Step Library__.
 You can search and filter these steps: enter a search expression in the `Search steps` field and set the platform on the right of the field. Note that by default, you will only see the Steps that are relevant to the platform of your project: click `ALL` to search within all the available Steps.
-
-Alternatively, browse through the entire collection of Steps by clicking `SHOW ALL STEPS`.
 
 Clicking the Step will add it to the selected workflow. Don't forget to save the workflow when you are done!
 
@@ -113,7 +111,11 @@ replacing it with an environment variable.
 
 ### Skipping Steps
 
-There is no point in running a unit test Step if the previous Step failed to build your app. Therefore, you can easily tell Bitrise to not even try: set up any Step to be skipped if the previous Step failed.
+There is no point in running, for example, a unit test Step if the previous Step failed to build your app. Therefore, you can easily tell Bitrise to not even try: set up any Step to be skipped if the previous Step failed.
+
+Of course, there are examples when it's better to run a Step even if the previous Step failed. For example, if the `Bitrise.io Cache:Pull` Step fails, there is no reason not to run the next Step - in fact, if the next Step is one that installs dependencies then it's a very bad idea to skip that Step if pulling the cache is unsuccessful.
+
+This guide walks you through on how to skip a given Step that has been set to run even if the previous Step failed.
 
 1. Open your app by clicking on the app's name on your [`Dashboard`](https://app.bitrise.io/dashboard).
 
