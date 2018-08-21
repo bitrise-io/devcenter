@@ -10,20 +10,27 @@
 		<meta property="og:site_name" content="{{ site.data.basic_info.name }}">
 		<meta name="theme-color" content="{{ site.data.basic_info.color_1 }}">
 		<link rel="canonical" href="{{ site.data.basic_info.page_url }}">
-		<link rel="stylesheet" href="assets/main.css">
+		<link rel="stylesheet" href="/assets/main.css">
 	</head>
 	<body>
 		<header>{% include header.html %}</header>
-		<div>
-			<label>{{ site.data.basic_info.name }}</label>
-			<ul>
-				{% for post in site.posts %}
-					<li>
-						<a href="{{ post.url }}">{{ post.title }}</a>
-					</li>
-				{% endfor %}
-			</ul>
-			<main>{{ content }}</main>
+		<div class="mdc-layout-grid">
+			<div class="mdc-layout-grid__inner">
+				<div class="sidebar mdc-layout-grid__cell--span-3">
+					<label>{{ site.data.basic_info.name }}</label>
+					<ul>
+						{% for post in site.posts %}
+							<li>
+								<a href="{{ post.url }}">{{ post.title }}</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<main class="mdc-layout-grid__cell--span-7">{{ content }}</main>
+				<div class="mdc-layout-grid__cell--span-2">
+
+				</div>
+			</div>
 		</div>
 		<footer>{% include footer.html %}</footer>
 	</body>
