@@ -21,12 +21,14 @@
 					<nav class="mdc-drawer mdc-drawer--permanent">
 						<div class="mdc-drawer__content">
 							<nav id="icon-with-text-demo" class="mdc-list">
-							<!-- <a class="mdc-list-item mdc-list-item--activated" href="#">
-								<i class="material-icons mdc-list-item__graphic" aria-hidden="true">inbox</i>Inbox
-							</a> -->
-							{% for post in site.posts %}
-								<a class="mdc-list-item" href="{{ post.url }}">{{ post.title }}</a>
-							{% endfor %}
+								{% for post in site.posts %}
+									{% if page.url == post.url %}
+										<a class="mdc-list-item mdc-list-item--activated" href="{{ post.url }}">
+									{% else %}
+										<a class="mdc-list-item" href="{{ post.url }}">
+									{% endif %}
+										{{ post.title }}</a>
+								{% endfor %}
 							</nav>
 						</div>
 					</nav>
