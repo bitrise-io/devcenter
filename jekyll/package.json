@@ -1,0 +1,17 @@
+{
+  "name": "jekyll",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@material/drawer": "^0.38.0",
+    "@material/layout-grid": "^0.34.0",
+    "@material/list": "^0.38.1",
+    "@material/typography": "^0.38.0"
+  }
+}
