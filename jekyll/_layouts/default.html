@@ -1,3 +1,9 @@
+{% for post in site.posts %}
+	{% if page.url == post.url %}
+		{% assign current_post = post %}
+	{% endif %}
+{% endfor %}
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
@@ -8,21 +14,34 @@
 		<meta property="og:locale" content="en_US">
 		<meta property="og:url" content="{{ site.data.basic_info.page_url }}">
 		<meta property="og:site_name" content="{{ site.data.basic_info.name }}">
-		<meta name="theme-color" content="{{ site.data.basic_info.color_1 }}">
+		<meta name="theme-color" content="{{ site.data.basic_info.color_deep_purple }}">
 		<link rel="canonical" href="{{ site.data.basic_info.page_url }}">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/main.css">
 	</head>
-	<body class="mdc-typography">
-		<header>{% include header.html %}</header>
-		<div class="mdc-layout-grid">
-			<div class="mdc-layout-grid__inner">
+	<body class="mdc-typography top-app-bar__frame">
+		<header class="top-bar mdc-top-app-bar mdc-top-app-bar--fixed">
+			<div class="mdc-top-app-bar__row">
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+					{% if current_post %}
+						<span class="mdc-top-app-bar__title">{{ current_post.title }}</span>
+					{% else %}
+						<span class="mdc-top-app-bar__title">{{ site.data.basic_info.name }}</span>
+					{% endif %}
+				</section>
+				<section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+					<a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a>
+				</section>
+			</div>
+		</header>
+		<div class="mdc-layout-grid mdc-top-app-bar--fixed-adjust">
+			<div class="mdc-layout-grid__inner column-parent">
 				<div class="sidebar mdc-layout-grid__cell--span-3">
 					<nav class="mdc-drawer mdc-drawer--permanent">
 						<div class="mdc-drawer__content">
 							<nav id="icon-with-text-demo" class="mdc-list">
 								{% for post in site.posts %}
-									{% if page.url == post.url %}
+									{% if post == current_post %}
 										<a class="mdc-list-item mdc-list-item--activated" href="{{ post.url }}">
 									{% else %}
 										<a class="mdc-list-item" href="{{ post.url }}">
@@ -33,7 +52,7 @@
 						</div>
 					</nav>
 				</div>
-				<main class="mdc-layout-grid__cell--span-7">{{ content }}</main>
+				<main class="content mdc-layout-grid__cell--span-7">{{ content }}</main>
 				<div class="mdc-layout-grid__cell--span-2">
 
 				</div>

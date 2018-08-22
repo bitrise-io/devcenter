@@ -1,3 +1,4 @@
 name: Bitrise DevCenter
 page_url: https://devcenter.bitrise.io
-color_1: "#7e57c2"
+color_deep_purple: "#7e57c2"
+color_deep_purple_shady: "#7c4dff"

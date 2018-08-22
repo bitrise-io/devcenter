@@ -12,6 +12,7 @@
     "@material/drawer": "^0.38.0",
     "@material/layout-grid": "^0.34.0",
     "@material/list": "^0.38.1",
+    "@material/top-app-bar": "^0.38.1",
     "@material/typography": "^0.38.0"
   }
 }
