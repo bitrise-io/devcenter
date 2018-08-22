@@ -1,6 +1,6 @@
-{% for post in site.posts %}
-	{% if page.url == post.url %}
-		{% assign current_post = post %}
+{% for article in site.articles %}
+	{% if page.url == article.url %}
+		{% assign current_article = article %}
 	{% endif %}
 {% endfor %}
 
@@ -23,8 +23,8 @@
 		<header class="top-bar">
 			<div class="middle-aligner">
 				<a class="logo" href="/"><img src="/assets/logo.svg"></a>
-				{% if current_post %}
-					<span>{{ current_post.title }}</span>
+				{% if current_article %}
+					<span>{{ current_article.title }}</span>
 				{% else %}
 					<span>{{ site.data.basic_info.name }}</span>
 				{% endif %}
@@ -33,19 +33,24 @@
 		<div class="column-parent middle-aligner">
 			<nav class="menu">
 				<label>{{ site.data.basic_info.name }}</label>
-				<ul>
-					{% for post in site.posts %}
+				<ol>
+					{% for article in site.articles %}
 						<li>
-							{% if post == current_post %}
-								<a class="active" href="{{ post.url }}">{{ post.title }}</a>
+							{% if article == current_article %}
+								<a href="{{ article.url }}" class="active">{{ article.title }}</a>
 							{% else %}
-								<a href="{{ post.url }}">{{ post.title }}</a>
+								<a href="{{ article.url }}">{{ article.title }}</a>
 							{% endif %}
 						</li>
 					{% endfor %}
-				</ul>
+				</ol>
 			</nav>
-			<main class="content">{{ content }}</main>
+			<main class="content">
+				{% if current_article %}
+					<h1>{{ current_article.title }}</h1>
+				{% endif %}
+				{{ content }}
+			</main>
 		</div>
 		<footer>
 			<div class="middle-aligner">

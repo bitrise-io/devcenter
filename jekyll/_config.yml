@@ -42,6 +42,18 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+collections:
+  articles:
+    output: true
+    permalink: /:path
+
+defaults:
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: default
+
 sass:
   load_paths:
     - _sass
