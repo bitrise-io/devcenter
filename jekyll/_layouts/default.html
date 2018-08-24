@@ -20,16 +20,26 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/main.css">
+		<script src="/assets/javascripts/simple-jekyll-search.min.js"></script>
 	</head>
 	<body class="mdc-typography">
 		<header class="top-bar">
 			<div class="middle-aligner">
 				<a class="logo" href="/"><img src="/assets/logo.svg"></a>
-				{% if current_article %}
-					<span>{{ current_article.title }}</span>
-				{% else %}
-					<span>{{ site.data.basic_info.name }}</span>
-				{% endif %}
+				<div class="title">
+					{% if current_article %}
+						{{ current_article.title }}
+					{% else %}
+						{{ site.data.basic_info.name }}
+					{% endif %}
+				</div>
+				<div class="search-bar">
+					<div class="input-wrapper">
+						<label class="material-icon"></label>
+						<input type="text" id="search-input" placeholder="Search">
+					</div>
+					<ul id="results-container"></ul>
+				</div>
 			</div>
 		</header>
 		<div class="column-parent middle-aligner">
@@ -69,7 +79,7 @@
 				{% if current_article %}
 					<div class="title-with-source-edit">
 						<h1>{{ current_article.title }}</h1>
-						<a class="material-icon" href="{{ current_article_source_url }}" target="_blank"></a>
+						<a class="material-icon" href="{{ current_article_source_url }}" target="_blank"></a>
 					</div>
 				{% endif %}
 				{{ content }}
@@ -85,4 +95,11 @@
 			</div>
 		</footer>
 	</body>
+	<script>
+		var sjs = SimpleJekyllSearch({
+			searchInput: document.getElementById('search-input'),
+			resultsContainer: document.getElementById('results-container'),
+			json: '/search.json'
+		});
+	</script>
 </html>

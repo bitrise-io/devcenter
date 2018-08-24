@@ -4,10 +4,14 @@
 @charset "utf-8";
 
 $spacing-default-horizontal: 2rem;
-$spacing-header-vertical: 1.6rem;
+$spacing-header-vertical: 0.6rem;
 $spacing-footer-vertical: 1.6rem;
 $color-deep_purple: {{ site.data.colors.deep_purple }};
 $color-deep_purple_shady: {{ site.data.colors.deep_purple_shady }};
+
+* {
+	outline: none;
+}
 
 html {
 	font-size: 62.5%;
@@ -52,7 +56,6 @@ header.top-bar {
 	color: white;
 
 	.middle-aligner {
-		box-sizing: border-box;
 		display: flex;
 		align-items: center;
 
@@ -74,10 +77,95 @@ header.top-bar {
 				height: 24px;
 			}
 		}
+
+		.search-bar {
+			width: 30%;
+			position: relative;
+			margin-left: auto;
+
+			.input-wrapper {
+				position: relative;
+
+				.material-icon {
+					position: absolute;
+					top: 0.7rem;
+					left: 1rem;
+					color: hsla(0, 0%, 100%, .5);
+
+					&:before {
+						content: "\E8B6";
+					}
+				}
+
+				input#search-input {
+					width: 100%;
+					line-height: 3rem;
+					border: none;
+					border-radius: .2rem;
+					padding-left: 4.4rem;
+					padding-right: 4.4rem;
+					background-color: rgba(0, 0, 0, .26);
+					font-size: 1.6rem;
+					font-weight: 200;
+					transition: background-color .25s cubic-bezier(.1, .7, .1, 1);
+					color: hsla(0, 0%, 100%, .5);
+
+					&:hover, &:focus {
+						background-color: hsla(0, 0%, 100%, .12);
+						color: white;
+					}
+				}
+
+				input#search-input::-webkit-input-placeholder {
+					color: hsla(0, 0%, 100%, .5);
+				}
+				input#search-input::-moz-placeholder {
+					color: hsla(0, 0%, 100%, .5);
+				}
+				input#search-input:-ms-input-placeholder {
+					color: hsla(0, 0%, 100%, .5);
+				}
+				input#search-input:-moz-placeholder {
+					color: hsla(0, 0%, 100%, .5);
+				}
+			}
+
+			ul#results-container {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				width: 100%;
+				margin: 1rem 0;
+				border-radius: .2rem;
+				padding-left: 0;
+				box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.5);
+				font-size: 1.5rem;
+				list-style: none;
+				background-color: white;
+				overflow: hidden;
+
+				li {
+					box-shadow: 0 -0.1rem 0 rgba(0, 0, 0, .07);
+
+					a {
+						display: block;
+						padding: 1.2rem 1.5rem;
+						text-decoration: none;
+						color: black;
+						transition: background-color .25s;
+
+						&:hover, &:focus {
+							background-color: rgba(124, 77, 255, .1);
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
 .middle-aligner {
+	box-sizing: border-box;
 	max-width: 122rem;
 	width: 100%;
 	margin-right: auto;
@@ -177,6 +265,10 @@ main.content {
 		text-decoration: none;
 		color: #7e57c2;
 		transition: color .125s;
+
+		&:before {
+			content: "";
+		}
 
 		&:hover, &:focus {
 			color: $color-deep_purple_shady;
