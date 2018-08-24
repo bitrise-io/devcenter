@@ -8,11 +8,13 @@ This guide will help you get your first app up and running on Bitrise. Let's div
 
 First of all you have to open the [Add New App page](https://www.bitrise.io/apps/add),
 either by clicking `Add` on the [Dashboard](https://www.bitrise.io/dashboard),
-or selecting `Add new App` in the Account drop down menu (top right corner).
+or clicking `+` on the top menu bar and selecting `Add app`.
 
-## 1. Code repository setup
+## 1. Privacy and code repository setup
 
-The first step of adding an app is to specify where its code is stored.
+Set the privacy setting of the app: public or private. A public app's build logs are exposed to the public: anyone can view them if they have the build URL. Public apps cannot have SSH keys.
+
+The next step is to specify where the app's code is stored.
 
 You can either choose any one of [GitHub.com](https://github.com/), [Bitbucket.org](https://bitbucket.org/) or [GitLab.com](https://gitlab.com/) or add an other location manually.
 
@@ -89,7 +91,7 @@ or if you can't use the automatic scanner!*
 ## 4. Validating repository
 
 You don't have to do anything in this section: a validation
-is started automatically based on the setup you have just finished. 
+is started automatically based on the setup you have just finished.
 You can check the progress and the logs of the validation while it runs,
 and the errors and warnings in case the scanner would generate any.
 
