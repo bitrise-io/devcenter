@@ -26,6 +26,7 @@
 		<header class="top-bar">
 			<div class="middle-aligner">
 				<a class="logo" href="/"><img src="/assets/logo.svg"></a>
+				<button class="burger material-icon" onclick="toggleSideBar()"></button>
 				<div class="title">
 					{% if current_article %}
 						{{ current_article.title }}
@@ -43,7 +44,7 @@
 			</div>
 		</header>
 		<div class="column-parent middle-aligner">
-			<nav class="menu">
+			<nav id="side-menu">
 				<label>{{ site.data.basic_info.name }}</label>
 				<ol>
 					{% for article in site.articles %}
@@ -101,5 +102,12 @@
 			resultsContainer: document.getElementById('results-container'),
 			json: '/search.json'
 		});
+	</script>
+	<script>
+		var sideMenu = document.getElementById('side-menu');
+
+		function toggleSideBar() {
+			sideMenu.classList.toggle("open");
+		}
 	</script>
 </html>
