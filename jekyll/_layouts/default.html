@@ -1,6 +1,7 @@
 {% for article in site.articles %}
 	{% if page.url == article.url %}
 		{% assign current_article = article %}
+		{% assign current_article_source_url = "https://github.com/bitrise-io/devcenter/blob/master/docs" | append: article.url | append: ".md" %}
 	{% endif %}
 {% endfor %}
 
@@ -17,6 +18,7 @@
 		<meta name="theme-color" content="{{ site.data.colors.deep_purple }}">
 		<link rel="canonical" href="{{ site.data.basic_info.page_url }}">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/main.css">
 	</head>
 	<body class="mdc-typography">
@@ -35,11 +37,27 @@
 				<label>{{ site.data.basic_info.name }}</label>
 				<ol>
 					{% for article in site.articles %}
+						{% assign groups = "" | split: ", " %}
+						{% assign _path_parts = article.path | split: "/" %}
+						{% for _path_part in _path_parts %}
+							{% if _path_part == _path_parts.first or _path_part == _path_parts.last %}
+								{% continue %}
+							{% endif %}
+							{% assign _words = _path_part | split: "-" %}
+							{% assign _group_name = "" %}
+							{% for _word in _words %}
+								{% assign _capitalized_word = _word | capitalize %}
+								{% assign _group_name = _group_name | append: " " | append: _capitalized_word %}
+							{% endfor %}
+							{% assign _group_name_as_array = _group_name | split: "-" %}
+							{% assign groups = groups | concat: _group_name_as_array %}
+						{% endfor %}
+
 						<li>
 							{% if article == current_article %}
-								<a href="{{ article.url }}" class="active">{{ article.title }}</a>
+								<a href="{{ article.url }}" class="active">{{ groups | join: " /"}} / {{ article.title }}</a>
 							{% else %}
-								<a href="{{ article.url }}">{{ article.title }}</a>
+								<a href="{{ article.url }}">{{ groups | join: " /"}} / {{ article.title }}</a>
 							{% endif %}
 						</li>
 					{% endfor %}
@@ -47,7 +65,10 @@
 			</nav>
 			<main class="content">
 				{% if current_article %}
-					<h1>{{ current_article.title }}</h1>
+					<div class="title-with-source-edit">
+						<h1>{{ current_article.title }}</h1>
+						<a class="material-icon" href="{{ current_article_source_url }}" target="_blank"></a>
+					</div>
 				{% endif %}
 				{{ content }}
 			</main>
