@@ -54,10 +54,12 @@
 						{% endfor %}
 
 						<li>
+							{% assign anchor_title = groups | join: " /" | append: " / " | append: article.title  %}
+
 							{% if article == current_article %}
-								<a href="{{ article.url }}" class="active">{{ groups | join: " /"}} / {{ article.title }}</a>
+								<a href="{{ article.url }}" class="active">{{ anchor_title }}</a>
 							{% else %}
-								<a href="{{ article.url }}">{{ groups | join: " /"}} / {{ article.title }}</a>
+								<a href="{{ article.url }}">{{ anchor_title }}</a>
 							{% endif %}
 						</li>
 					{% endfor %}
