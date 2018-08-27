@@ -76,3 +76,9 @@ a `bitrise run` command, you can use the environment variables everywhere in
 your `bitrise.yml`, for example in `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)),
 [Workflow environment variables](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
 and Step inputs too.
+
+## Secret filtering with Bitrise CLI
+
+Bitrise CLI automatically filters your secret env vars and prints `[REDACTED]` with newlines after the key (if the value is at least 6 characters long) so that the secret env vars are NOT VISIBLE in the build log. This applies to both **private and public apps**.
+
+For more information on secrets, check out our [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) section.
