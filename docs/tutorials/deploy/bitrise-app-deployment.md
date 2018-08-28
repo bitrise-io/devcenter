@@ -33,7 +33,7 @@ For each deployed app you'll see an information and notifications card on the Bu
 where you can check the details of the App (title, bundle id, version number, size, etc.)
 and you can download or install the App right from the Build's page.
 
-__If you built your iOS App__ with a Development or Ad-Hock Provisioning Profile,
+__If you built your iOS App__ with a Development or Ad Hoc Provisioning Profile,
 an additional section will be presented with a list of allowed device identifiers (UDID).
 
 If you or a team member of your App's team register a device for
