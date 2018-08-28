@@ -25,14 +25,16 @@
 	<body class="mdc-typography">
 		<header class="top-bar">
 			<div class="middle-aligner">
-				<a class="logo" href="/"><img src="/assets/logo.svg"></a>
-				<button class="burger material-icon" onclick="toggleSideBar()"></button>
-				<div class="title">
-					{% if current_article %}
-						{{ current_article.title }}
-					{% else %}
-						{{ site.data.basic_info.name }}
-					{% endif %}
+				<div class="subgroup">
+					<a class="logo" href="/"><img src="/assets/logo.svg"></a>
+					<button class="burger material-icon" onclick="toggleSideBar()"></button>
+					<div class="title">
+						{% if current_article %}
+							{{ current_article.title }}
+						{% else %}
+							{{ site.data.basic_info.name }}
+						{% endif %}
+					</div>
 				</div>
 				<div class="search-bar">
 					<div class="input-wrapper">

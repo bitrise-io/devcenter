@@ -61,40 +61,45 @@ header.top-bar {
 		display: flex;
 		align-items: center;
 
-		a.logo {
-			margin: (-$spacing-header-vertical) 2rem (-$spacing-header-vertical) (-$padding-logo-horizontal);
-			padding: $padding-logo-horizontal;
-			font-size: 2.4rem;
-			cursor: pointer;
-			transition: opacity .25s;
+		.subgroup {
+			display: flex;
+			align-items: center;
+			width: 676px;
+			min-width: 0;
+			margin-right: 2rem;
 
-			&:hover, &:focus {
-				opacity: .7;
+			a.logo {
+				margin: (-$spacing-header-vertical) 2rem (-$spacing-header-vertical) (-$padding-logo-horizontal);
+				padding: $padding-logo-horizontal;
+				font-size: 2.4rem;
+				cursor: pointer;
+				transition: opacity .25s;
+
+				&:hover, &:focus {
+					opacity: .7;
+				}
+
+				img {
+					display: block;
+					width: 24px;
+					height: 24px;
+				}
 			}
 
-			img {
-				display: block;
-				width: 24px;
-				height: 24px;
+			button.burger {
+				display: none;
 			}
-		}
 
-		button.burger {
-			display: none;
-		}
-
-		.title {
-			margin-right: 1rem;
-			white-space: nowrap;
-			overflow: hidden;
-			text-overflow: ellipsis;
+			.title {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 		}
 
 		.search-bar {
-			width: 30%;
-			flex-shrink: 0;
+			flex: 0 0 30%;
 			position: relative;
-			margin-left: auto;
 
 			.input-wrapper {
 				position: relative;
@@ -344,6 +349,7 @@ main.content {
 
 		a {
 			flex: 0 0 auto;
+			margin-left: 1rem;
 			padding-top: .5rem;
 			font-size: 2.4rem;
 
@@ -402,32 +408,35 @@ footer {
 
 		.middle-aligner {
 
-			a.logo {
-				display: none;
-			}
+			.subgroup {
 
-			button.burger {
-				display: block;
-				margin-right: 1rem;
-				border: none;
-				padding: $padding-logo-horizontal;
-				font-size: 2.5rem;
-				background-color: transparent;
-				color: white;
-				transition: opacity .25s;
-				cursor: pointer;
-
-				&:before {
-					content: "\E5D2";
+				a.logo {
+					display: none;
 				}
 
-				&:hover, &:focus {
-					opacity: .7;
+				button.burger {
+					display: block;
+					margin-right: 1rem;
+					border: none;
+					padding: $padding-logo-horizontal;
+					font-size: 2.5rem;
+					background-color: transparent;
+					color: white;
+					transition: opacity .25s;
+					cursor: pointer;
+
+					&:before {
+						content: "\E5D2";
+					}
+
+					&:hover, &:focus {
+						opacity: .7;
+					}
 				}
 			}
 
 			.search-bar {
-				width: 50%;
+				flex-basis: 50%;
 			}
 		}
 	}
@@ -483,21 +492,24 @@ footer {
 			flex-direction: column;
 			align-items: flex-start;
 
-			button.burger {
+			.subgroup {
+				width: 100%;
 				margin-right: 0;
-				margin-bottom: 0.2rem;
-				margin-left: - $padding-logo-horizontal;
-			}
 
-			.title {
-				margin-right: 0;
-				margin-bottom: 1.2rem;
-				text-align: center;
+				button.burger {
+					margin-right: 0;
+					margin-bottom: 0.2rem;
+					margin-left: - $padding-logo-horizontal;
+				}
+
+				.title {
+					text-align: center;
+				}
 			}
 
 			.search-bar {
+				flex-basis: auto;
 				width: 100%;
-				margin-left: 0;
 			}
 		}
 	}
