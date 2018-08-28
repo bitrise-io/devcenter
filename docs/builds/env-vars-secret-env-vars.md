@@ -39,7 +39,7 @@ The `Expose for Pull Request` can be enabled if you want your secrets to be expo
 
 !!! warning "Public apps and sensitive information"
     * In the case of [public apps](/adding-a-new-app/public-apps/), step input fields containing sensitive information are marked with a [`SENSITIVE`](/builds/sensitive-input-fields/) label and only secret env vars can be used there!
-    * The `Expose for Pull Request` toggle is by **default disabled** since your secrets must be kept hidden in publicly accessible build logs!
+    * The `Expose for Pull Request` toggle is by **default disabled** and cannot be enabled since your secrets must be kept hidden in publicly accessible build logs!
 
 Head over to [Secrets](/bitrise-cli/secrets/) for more information on [secret filtering](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli/).
 
