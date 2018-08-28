@@ -352,6 +352,23 @@ main.content {
 			}
 		}
 	}
+
+	h1, h2, h3, h4, h5, h6 {
+
+		a.anchor-symbol {
+			margin-left: 1rem;
+			opacity: 0;
+			transition: opacity 0.125s ease;
+		}
+
+		&:hover a.anchor-symbol {
+			opacity: 0.26;
+
+			&:hover, &:focus {
+				opacity: 1;
+			}
+		}
+	}
 }
 
 footer {

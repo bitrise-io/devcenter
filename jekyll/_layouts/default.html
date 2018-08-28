@@ -83,7 +83,7 @@
 						<a class="material-icon" href="{{ current_article_source_url }}" target="_blank"></a>
 					</div>
 				{% endif %}
-				{{ content }}
+				{% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
 			</main>
 		</div>
 		<footer>
