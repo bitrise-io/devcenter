@@ -48,35 +48,8 @@
 		<div class="column-parent middle-aligner">
 			<nav id="side-menu">
 				<label>{{ site.data.basic_info.name }}</label>
-				<ol>
-					{% for article in site.articles %}
-						{% assign groups = "" | split: ", " %}
-						{% assign _path_parts = article.path | split: "/" %}
-						{% for _path_part in _path_parts %}
-							{% if _path_part == _path_parts.first or _path_part == _path_parts.last %}
-								{% continue %}
-							{% endif %}
-							{% assign _words = _path_part | split: "-" %}
-							{% assign _group_name = "" %}
-							{% for _word in _words %}
-								{% assign _capitalized_word = _word | capitalize %}
-								{% assign _group_name = _group_name | append: " " | append: _capitalized_word %}
-							{% endfor %}
-							{% assign _group_name_as_array = _group_name | split: "-" %}
-							{% assign groups = groups | concat: _group_name_as_array %}
-						{% endfor %}
-
-						<li>
-							{% assign anchor_title = groups | join: " /" | append: " / " | append: article.title  %}
-
-							{% if article == current_article %}
-								<a href="{{ article.url }}" class="active">{{ anchor_title }}</a>
-							{% else %}
-								<a href="{{ article.url }}">{{ anchor_title }}</a>
-							{% endif %}
-						</li>
-					{% endfor %}
-				</ol>
+				{% assign menu = site.menus.topmost %}
+				{% include menu.html %}
 			</nav>
 			<main class="content">
 				{% if current_article %}
@@ -110,6 +83,11 @@
 
 		function toggleSideBar() {
 			sideMenu.classList.toggle("open");
+		}
+	</script>
+	<script>
+		function toggleMenuListOpener(event) {
+			event.target.classList.toggle("open");
 		}
 	</script>
 </html>
