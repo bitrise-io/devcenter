@@ -1,47 +1,12 @@
 ---
-topmost:
-  - title: Bitrise DevCenter - What is Bitrise?
-    identifier: bitrise-dev-center-what-is-bitrise
+main:
+  - title: Bitrise DevCenter
+    identifier: bitrise-devcenter
   - title: Getting Started
     identifier: getting-started
-  - title: Infrastructure
-    identifier: infrastructure
-  - title: Signing up
-    identifier: signing-up
-  - title: Adding a new app
-    identifier: adding-a-new-app
-  - title: Team management
-    identifier: team-management
-  - title: Webhooks
-    identifier: webhooks
   - title: Builds
     identifier: builds
-  - title: Code signing
-    identifier: code-signing
-  - title: Caching
-    identifier: caching
-  - title: Bitrise CLI and bitrise.yml
-    identifier: bitrise-cli-and-bitrise-yml
-  - title: Docker
-    identifier: docker
-  - title: Xamarin
-    identifier: xamarin
-  - title: Fastlane
-    identifier: fastlane
-  - title: Testing
-    identifier: testing
-  - title: Tutorials
-    identifier: tutorials
-  - title: Deployment Tutorials
-    identifier: deployment-tutorials
-  - title: Tips & Tricks
-    identifier: tips-tricks
-  - title: Frequently Asked Questions (FAQ)
-    identifier: frequently-asked-questions-faq
-  - title: Troubleshooting
-    identifier: troubleshooting
-  - title: Tools
-    identifier: tools
-  - title: API
-    identifier: api
+builds:
+  - title: Triggering builds
+    identifier: triggering-builds
 ---

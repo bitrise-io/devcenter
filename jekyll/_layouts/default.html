@@ -48,7 +48,7 @@
 		<div class="column-parent middle-aligner">
 			<nav id="side-menu">
 				<label>{{ site.data.basic_info.name }}</label>
-				{% assign menu = site.menus.topmost %}
+				{% assign menu = site.menus.main %}
 				{% include menu.html %}
 			</nav>
 			<main class="content">
@@ -79,9 +79,8 @@
 		});
 	</script>
 	<script>
-		var sideMenu = document.getElementById('side-menu');
-
 		function toggleSideBar() {
+			var sideMenu = document.getElementById('side-menu');
 			sideMenu.classList.toggle("open");
 		}
 	</script>
@@ -89,5 +88,24 @@
 		function toggleMenuListOpener(event) {
 			event.target.classList.toggle("open");
 		}
+	</script>
+	<script>
+		function configureSideMenu() {
+			var activeMenuItem = document.querySelector("#side-menu a.current");
+			var iteratedElement = activeMenuItem;
+
+			while (iteratedElement.tagName != "OL" && !iteratedElement.classList.contains("menu-list")) {
+				iteratedElement = iteratedElement.parentNode;
+			}
+
+			var listOpener = iteratedElement.previousElementSibling;
+			if (!listOpener) {
+				return;
+			}
+
+			listOpener.classList.add("open");
+		}
+
+		configureSideMenu();
 	</script>
 </html>
