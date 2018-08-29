@@ -9,7 +9,7 @@ For example, let's say the organization called _TestOrg_ owns an app called _Tes
 
 ## Creating groups for organizations
 
-1. Sign in with an account that is an __owner__ or an __admin__ of an organization and open its profile page.
+1. Sign in with an account that is an __owner__ of the organization and open its profile page.
 
 1. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
@@ -27,7 +27,7 @@ For example, let's say the organization called _TestOrg_ owns an app called _Tes
 
 In practice, adding members to an organization means adding members to a group belonging to an organization. Once you have the groups you need for your organization, adding members to them is very simple.
 
-1. Sign in with an account that is an __owner__ or an __admin__ of an organization and open its profile page.
+1. Sign in with an account that is an __owner__ of the organization and open its profile page.
 
 1. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
@@ -57,7 +57,7 @@ Members can be removed from the entire organization or from one of the groups be
 
 ### Removing group members
 
-1. Sign in with an account that is an __owner__ or an __admin__ of an organization and open its profile page.
+1. Sign in with an account that is an __owner__ of the organization and open its profile page.
 
 1. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
@@ -73,7 +73,7 @@ Members can be removed from the entire organization or from one of the groups be
 
 Removing members from the entire organization removes them from all the groups they are part of in the organization and they can no longer work on any of the apps unless they are invited back, either as a group member or as an outside contributor.
 
-1. Sign in with an account that is an __owner__ or an __admin__ of an organization and open its profile page.
+1. Sign in with an account that is an __owner__ of the organization and open its profile page.
 
 1. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
@@ -94,7 +94,7 @@ Removing members from the entire organization removes them from all the groups t
 
 ## Deleting groups
 
-1. Sign in with an account that is an __owner__ or an __admin__ of an organization and open its profile page.
+1. Sign in with an account that is an __owner__ of the organization and open its profile page.
 
 1. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
