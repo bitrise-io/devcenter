@@ -54,6 +54,11 @@ If you don't like the changes made to your _current_ bitrise.yml, you can easily
 
 You can __edit__ your build config in yml format in the `bitrise.yml editor` if you go to your app's `Workflow Editor` and click the `bitrise.yml` tab.
 
+- press `F1` for the full command list
+- fold and unfold with the `-` and `+` signs
+- press `Ctrl`/`Cmd` + `F` for search and replace where you can search with `RegExp`, `Match Whole Word`, case-sensitive, case-insensitive, or to search only in the selected section
+- use the `preview sidebar` on the right for easier navigation
+
 You can __save__ or __discard__ any changes you have made with the config. If you click `Download currently saved config`, you can __download__ this YML version to your own computer and run it with bitrise CLI on your Mac/PC.
 
 You might want to __clone__ this whole YML configuration or just part of it to another app, so that you can use the copied version as a base and extend it with a few extra steps. All you have to do is copy this bitrise.yml content and paste it into the new app's bitrise.yml editor and develop it further.
