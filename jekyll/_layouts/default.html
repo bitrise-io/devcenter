@@ -94,16 +94,19 @@
 			var activeMenuItem = document.querySelector("#side-menu a.current");
 			var iteratedElement = activeMenuItem;
 
-			while (iteratedElement.tagName != "OL" && !iteratedElement.classList.contains("menu-list")) {
-				iteratedElement = iteratedElement.parentNode;
-			}
+			while (true) {
+				while (iteratedElement.tagName != "OL" && !iteratedElement.classList.contains("menu-list")) {
+					iteratedElement = iteratedElement.parentNode;
+				}
 
-			var listOpener = iteratedElement.previousElementSibling;
-			if (!listOpener) {
-				return;
-			}
+				var listOpener = iteratedElement.previousElementSibling;
+				if (listOpener.tagName != "BUTTON" || !listOpener.classList.contains("menu-list-opener")) {
+					break;
+				}
 
-			listOpener.classList.add("open");
+				listOpener.classList.add("open");
+				iteratedElement = listOpener;
+			}
 		}
 
 		configureSideMenu();

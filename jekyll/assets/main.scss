@@ -225,11 +225,13 @@ nav#side-menu {
 		}
 
 		li.menu-item {
-			margin-top: .625em;
+			display: flex;
+			flex-direction: column;
 
 			button.menu-list-opener, a {
-				display: block;
+				display: flex;
 				margin-top: .625em;
+				margin-bottom: .625em;
 				transition: color .125s;
 				text-overflow: ellipsis;
 				color: inherit;
@@ -254,7 +256,6 @@ nav#side-menu {
 
 				&:after {
 					content: "\E315";
-					display: inline-block;
 					margin-left: 0.2rem;
 					font-family: Material Icons;
 					font-style: normal;
@@ -505,12 +506,11 @@ footer {
 				overflow-y: auto;
 
 				li.menu-item {
-					margin-top: 0rem;
 					border-top: .1rem solid rgba(0, 0, 0, .07);
 
 					button.menu-list-opener, a {
-						display: block;
-						margin-top: 0rem;
+						margin-top: 0;
+						margin-bottom: 0;
 						padding: 1.2rem $spacing-default-horizontal;
 					}
 				}
