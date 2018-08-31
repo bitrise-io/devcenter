@@ -1,7 +1,3 @@
----
-menus: api
-title: Bitrise.io API v0.1 (Work In Progress)
----
 !!! warning "The API is work-in-progress"
     The API is work-in-progress, we'll add docs for new endpoints here as we progress,
     as well as we might change things a bit if required.

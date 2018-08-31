@@ -57,6 +57,11 @@ workflows:
             go get -u -v github.com/bitrise-tools/gotgen
             cd "${api_docs_dir_pth}"
             gotgen generate
+
+            echo '---
+            menus: api
+            title: Bitrise.io API v0.1 (Work In Progress)
+            ---' | cat - ./v0.1.md > temp && mv temp ./v0.1.md
   setup:
     steps:
     - script:
