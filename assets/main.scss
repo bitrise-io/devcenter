@@ -104,7 +104,7 @@ header.top-bar {
 			.input-wrapper {
 				position: relative;
 
-				.material-icon {
+				.search-icon {
 					position: absolute;
 					top: 0.7rem;
 					left: 1rem;
@@ -145,6 +145,27 @@ header.top-bar {
 				}
 				input#search-input:-moz-placeholder {
 					color: hsla(0, 0%, 100%, .5);
+				}
+
+				input#search-input:not(:focus) + .search-clear {
+					opacity: 0;
+				}
+
+				.search-clear {
+					display: block;
+					position: absolute;
+					top: - 0.4rem;
+					right: 0;
+					border: none;
+					padding: 1rem;
+					font-size: 2rem;
+					color: hsla(0, 0%, 100%, .5);
+					background-color: transparent;
+					cursor: pointer;
+
+					&:before {
+						content: "";
+					}
 				}
 			}
 
