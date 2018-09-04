@@ -394,6 +394,40 @@ main.content {
 		-webkit-overflow-scrolling: touch;
 		background-color: #272822;
 		color: #e6db74;
+
+		&.collapseable {
+
+			button.collapser {
+				width: 100%;
+				border: none;
+				padding: 0;
+				text-align: left;
+				font-family: inherit;
+				font-size: inherit;
+				background-color: #272822;
+
+				&:before {
+					content: "- Show less";
+					display: inline-block;
+					padding: 10px 15px;
+					font-weight: bold;
+					color: #000;
+					background-color: #e6db74;
+					cursor: pointer;
+				}
+			}
+
+			&.collapsed {
+
+				code {
+					max-height: 300px;
+				}
+
+				button.collapser:before {
+					content: "+ Show more";
+				}
+			}
+		}
 	}
 
 	code {
