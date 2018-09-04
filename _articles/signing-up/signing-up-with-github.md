@@ -2,7 +2,7 @@
 title: Signing up with GitHub
 menu:
   signing-up:
-    weight: 5
+    weight: 1
 
 ---
 You are able to authenticate yourself with your GitHub user against __Bitrise__. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your GitHub account when adding repositories hosted by these providers again.
