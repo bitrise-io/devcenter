@@ -2,7 +2,7 @@
 title: Use your own Docker image
 menu:
   docker:
-    weight: 2
+    weight: 3
 
 ---
 !!! note "Have a question or suggestion? Join the discussion!"
