@@ -2,7 +2,7 @@
 title: Adding a new team member
 menu:
   team-management:
-    weight: 2
+    weight: 1
 
 ---
 Now that you have set up your app on Bitrise we can start inviting team members! You can select multiple roles for the new members, like: `admin`, `developer`, and `qa/tester`.
