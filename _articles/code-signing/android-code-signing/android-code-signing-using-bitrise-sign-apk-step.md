@@ -2,7 +2,7 @@
 title: Android code signing using Bitrise Sign APK step
 menu:
   android-code-signing:
-    weight: 4
+    weight: 2
 
 ---
 ## Create a signed APK with the `Sign APK` step

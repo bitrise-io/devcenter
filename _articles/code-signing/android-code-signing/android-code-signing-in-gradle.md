@@ -2,7 +2,7 @@
 title: Android code signing in Gradle
 menu:
   android-code-signing:
-    weight: 1
+    weight: 4
 
 ---
 ## Configure manually in Gradle
