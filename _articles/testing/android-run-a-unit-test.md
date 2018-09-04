@@ -2,7 +2,7 @@
 title: Android unit test
 menu:
   testing:
-    weight: 1
+    weight: 2
 
 ---
 ## Run a unit test
