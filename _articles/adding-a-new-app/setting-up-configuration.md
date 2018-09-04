@@ -2,7 +2,7 @@
 title: Setting up configuration
 menu:
   adding-a-new-app:
-    weight: 3
+    weight: 5
 
 ---
 After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for
