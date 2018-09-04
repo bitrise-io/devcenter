@@ -2,7 +2,7 @@
 title: Available environment variables
 menu:
   builds:
-    weight: 6
+    weight: 7
 
 ---
 ## Interactive available Environment Variables list

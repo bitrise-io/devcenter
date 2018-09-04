@@ -80,4 +80,4 @@ team-management:
 builds:
 - title: Triggering builds
   identifier: triggering-builds
-  weight: 7
+  weight: 1
