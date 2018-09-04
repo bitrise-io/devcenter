@@ -1,6 +1,9 @@
 ---
-menus: tips-and-tricks
 title: Skip a Build (skip ci)
+menu:
+  tips-and-tricks:
+    weight: 1
+
 ---
 If you want to skip a specific commit, to not to start a build,
 all you have to do is to include either `[skip ci]` or `[ci skip]`

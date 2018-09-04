@@ -1,6 +1,9 @@
 ---
-menus: tips-and-tricks
 title: Use bitrise.yml from repository
+menu:
+  tips-and-tricks:
+    weight: 6
+
 ---
 Storing the build configuration (`bitrise.yml`) in your repository can be a great idea.
 It has its own PROs and CONs of course, so you have to decide it yourself

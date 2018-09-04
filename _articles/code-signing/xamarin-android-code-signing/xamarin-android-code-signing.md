@@ -1,8 +1,10 @@
 ---
-menus: android-code-signing
 title: Xamarin Android code signing
----
+menu:
+  android-code-signing:
+    weight: 5
 
+---
 ## Configure code signing in Xamarin Studio
 
 You can specify the code signing configuration for your Xamarin Android project by creating a signed APK in [Xamarin Studio](https://www.visualstudio.com/xamarin/).

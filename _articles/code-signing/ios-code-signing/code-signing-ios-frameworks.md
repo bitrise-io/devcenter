@@ -1,6 +1,9 @@
 ---
-menus: ios-code-signing
 title: Code signing iOS frameworks
+menu:
+  ios-code-signing:
+    weight: 7
+
 ---
 [^1]: http://stackoverflow.com/questions/30963294/creating-ios-osx-frameworks-is-it-necessary-to-codesign-them-before-distributin
 

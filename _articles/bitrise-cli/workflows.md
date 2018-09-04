@@ -1,6 +1,9 @@
 ---
-menus: bitrise-cli
 title: Workflows
+menu:
+  bitrise-cli:
+    weight: 5
+
 ---
 A workflow is a collection of steps, environment variables,
 and other configurations for a single `bitrise run`.

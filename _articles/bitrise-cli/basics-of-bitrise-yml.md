@@ -1,6 +1,9 @@
 ---
-menus: bitrise-cli
 title: Basics of bitrise.yml
+menu:
+  bitrise-cli:
+    weight: 6
+
 ---
 A bare minimal `bitrise.yml` is as simple as:
 

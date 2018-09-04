@@ -1,8 +1,10 @@
 ---
-menus: adding-a-new-app
 title: Connecting a repository
----
+menu:
+  adding-a-new-app:
+    weight: 4
 
+---
 After you've selected adding a new app, you will find yourself on the `Create app` page.
 
 Select your app's privacy setting: it can be either public or private.

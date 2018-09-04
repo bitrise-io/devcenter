@@ -1,6 +1,9 @@
 ---
-menus: signing-up
 title: Connecting your Apple Developer Account to Bitrise
+menu:
+  signing-up:
+    weight: 2
+
 ---
 ## Connecting Your Apple Developer Account to Bitrise
 

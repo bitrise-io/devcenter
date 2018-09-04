@@ -1,6 +1,9 @@
 ---
-menus: webhooks
 title: Using the Trigger Map to trigger builds
+menu:
+  webhooks:
+    weight: 6
+
 ---
 Now that you have a [webhook registered](/webhooks/),
 the next step is to define when to build what.
@@ -354,4 +357,3 @@ trigger_map:
 - pull_request_target_branch: master
   workflow: primary
 ```
-

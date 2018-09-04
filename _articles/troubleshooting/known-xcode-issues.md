@@ -1,6 +1,9 @@
 ---
-menus: troubleshooting
 title: List of known Xcode issues
+menu:
+  troubleshooting:
+    weight: 1
+
 ---
 **Feel free to add your comments to this list.**
 

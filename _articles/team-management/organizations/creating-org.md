@@ -1,6 +1,9 @@
 ---
-menus: organizations
 title: Creating organizations
+menu:
+  organizations:
+    weight: 5
+
 ---
 You can create and manage __Organizations__ on [bitrise.io](https://www.bitrise.io) to manage entire teams quickly and effectively. You can set up multiple groups within an organization for different projects - for example, you can have a _Developer_ group and a _Tester_ group assigned to different app. You can also set roles for your group: these roles determine the access rights provided to members of the group.
 

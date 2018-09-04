@@ -1,6 +1,9 @@
 ---
-menus: fastlane
 title: How to configure fastlane match for Bitrise
+menu:
+  fastlane:
+    weight: 1
+
 ---
 If you want to use [fastlane match](https://github.com/fastlane/fastlane/tree/master/match)
 in your [bitrise.io](https://www.bitrise.io/) build you only have to do three things:

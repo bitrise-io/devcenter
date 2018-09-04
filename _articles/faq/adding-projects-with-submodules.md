@@ -1,6 +1,9 @@
 ---
-menus: faq
 title: Adding projects with submodules or with private CocoaPods repos
+menu:
+  faq:
+    weight: 3
+
 ---
 If you have a project with one or more submodules
 or other private repository dependencies (for example, CocoaPods repositories), you have to grant access to all repositories for a successful build.

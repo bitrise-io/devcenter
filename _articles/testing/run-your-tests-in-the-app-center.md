@@ -1,6 +1,9 @@
 ---
-menus: testing
 title: Run your tests in the Visual Studio App Center
+menu:
+  testing:
+    weight: 2
+
 ---
 Upload and schedule tests on the Visual Studio App Center for your projects. The following testing frameworks are available:
 

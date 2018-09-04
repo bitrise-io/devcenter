@@ -1,6 +1,9 @@
 ---
-menus: webhooks
 title: Webhook Troubleshooting
+menu:
+  webhooks:
+    weight: 5
+
 ---
 First of all, if you registered your app on [bitrise.io](https://www.bitrise.io) a while ago (especially
 if before 2016 Sept.) you should check the webhook URL registered on the git hosting service you use (GitHub, Bitbucket, ...).

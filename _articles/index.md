@@ -1,6 +1,9 @@
 ---
-menus: bitrise-devcenter
-title: "Bitrise DevCenter - What is Bitrise?"
+title: Bitrise DevCenter - What is Bitrise?
+menu:
+  bitrise-devcenter:
+    weight: 1
+
 ---
 __Bitrise__ is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration)
 and [Delivery](https://en.wikipedia.org/wiki/Continuous_delivery) (CI/CD) Platform as a Service (PaaS)

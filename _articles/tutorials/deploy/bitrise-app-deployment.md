@@ -1,6 +1,9 @@
 ---
-menus: deployment-tutorials
 title: Bitrise OTA App Deployment
+menu:
+  deployment-tutorials:
+    weight: 4
+
 ---
 Bitrise has an integrated App Deployment system you can use for App and other build artifact file distribution.
 

@@ -1,6 +1,9 @@
 ---
-menus: organizations
 title: Managing billing and subscription for organizations
+menu:
+  organizations:
+    weight: 3
+
 ---
 It's very simple to set up a subscription plan for your organization even if you skipped that step when creating the organization. You can also modify your plan and your billing information at any time if you are the owner of the organization.
 

@@ -1,6 +1,9 @@
 ---
-menus: bitrise-cli
 title: Secrets
+menu:
+  bitrise-cli:
+    weight: 2
+
 ---
 Secrets can be accessed and used in a similar way as App Env Vars,
 the main difference is that __secrets are not stored as part of the build configuration__.

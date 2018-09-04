@@ -1,6 +1,9 @@
 ---
-menus: faq
 title: Grant access to a GitHub Organization
+menu:
+  faq:
+    weight: 6
+
 ---
 This guide explains how to grant access for [bitrise.io](https://www.bitrise.io/) to your GitHub Organization.
 

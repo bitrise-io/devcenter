@@ -1,6 +1,9 @@
 ---
-menus: tips-and-tricks
 title: Expose an Environment Variable and use it in another Step
+menu:
+  tips-and-tricks:
+    weight: 7
+
 ---
 You can expose Environment Variables from one Step,
 to make it available for every other Step performed after the Step during the build.

@@ -1,6 +1,9 @@
 ---
-menus: tips-and-tricks
-title: "Xcode Archive: export options"
+title: 'Xcode Archive: export options'
+menu:
+  tips-and-tricks:
+    weight: 10
+
 ---
 If you create a new iOS app on [bitrise.io](https://www.bitrise.io/)
 the generated default workflow wil include our `Xcode Archive` step.

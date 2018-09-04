@@ -1,6 +1,10 @@
 ---
-menus: tips-and-tricks
-title: Don't mark the Build as failed if a given step would fail (ignore the error of the Step)
+title: Don't mark the Build as failed if a given step would fail (ignore the error
+  of the Step)
+menu:
+  tips-and-tricks:
+    weight: 8
+
 ---
 *To do this you have to switch to `bitrise.yml` mode (open the Workflow Editor on bitrise.io -> left side: click on `bitrise.yml` to switch to the interactive `bitrise.yml` editor).*
 

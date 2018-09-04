@@ -1,6 +1,9 @@
 ---
-menus: deployment-tutorials
 title: Publish your app to Appaloosa
+menu:
+  deployment-tutorials:
+    weight: 1
+
 ---
 Would you like to **beta test** and **deploy** your app to 1 or thousands of users?
 **[Appaloosa](http://appaloosa.io)** helps you distribute your mobile apps privately,

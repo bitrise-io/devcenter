@@ -1,6 +1,9 @@
 ---
-menus: webhooks
 title: Adding webhooks
+menu:
+  webhooks:
+    weight: 8
+
 ---
 Most source code hosting service provides a feature to register webhooks. A webhook is basically an URL which will be called on specified events.
 

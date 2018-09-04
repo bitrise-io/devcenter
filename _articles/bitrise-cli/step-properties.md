@@ -1,6 +1,9 @@
 ---
-menus: bitrise-cli
 title: Step properties
+menu:
+  bitrise-cli:
+    weight: 12
+
 ---
 ### Step properties
 

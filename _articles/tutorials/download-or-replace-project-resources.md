@@ -1,6 +1,9 @@
 ---
-menus: tutorials
 title: Download or replace project resources
+menu:
+  tutorials:
+    weight: 2
+
 ---
 You can do this in quite a few ways, these are probably the easiest ones:
 

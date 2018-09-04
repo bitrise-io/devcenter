@@ -1,6 +1,9 @@
 ---
-menus: builds
 title: Rolling builds
+menu:
+  builds:
+    weight: 1
+
 ---
 You can cancel running builds or builds on hold - no need to abort them manually! If you turn on the __Rolling Builds__ feature, you can automatically abort the previous builds of your app once a new one is started.
 

@@ -1,6 +1,9 @@
 ---
-menus: xamarin
 title: Add custom sources to NuGet
+menu:
+  xamarin:
+    weight: 3
+
 ---
 If you are using third-party NuGet packages in your application
 you have to add these sources to your NuGet package sources.

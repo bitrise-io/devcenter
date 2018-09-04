@@ -1,6 +1,9 @@
 ---
-menus: ios-code-signing
 title: Managing iOS code signing files - automatic provisioning
+menu:
+  ios-code-signing:
+    weight: 9
+
 ---
 Manage your code signing files on [bitrise.io](https://www.bitrise.io). You can use iOS automatic provisioning to automatically generate the required Provisioning Profiles for your project.
 

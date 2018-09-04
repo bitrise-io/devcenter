@@ -1,6 +1,9 @@
 ---
-menus: faq
 title: How to generate an SSH key pair
+menu:
+  faq:
+    weight: 5
+
 ---
 If you want to do manual SSH key configuration on [bitrise.io](https://www.bitrise.io)
 you can generate an appropriate SSH keypair with a simple Command Line / Terminal command:

@@ -1,6 +1,9 @@
 ---
-menus: getting-started
 title: Manage your Bitrise workflow
+menu:
+  getting-started:
+    weight: 4
+
 ---
 To start editing your workflow you first have to open it
 in the **Workflow Editor** on Bitrise.io:

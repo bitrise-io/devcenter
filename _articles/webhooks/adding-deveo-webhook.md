@@ -1,6 +1,9 @@
 ---
-menus: webhooks
 title: Adding a Deveo webhook
+menu:
+  webhooks:
+    weight: 12
+
 ---
 You can set up webhooks so that Bitrise automatically triggers a build of your app whenever you perform a specified action, such as a code push or a pull request. For Deveo, all you have to do is register your `bitrise-webhooks` URL for
 a [Deveo](https://deveo.com) repository.

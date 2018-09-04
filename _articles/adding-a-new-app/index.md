@@ -1,6 +1,9 @@
 ---
-menus: adding-a-new-app
 title: Adding a new app
+menu:
+  adding-a-new-app:
+    weight: 5
+
 ---
 When adding your app to __Bitrise__, we will clone your repository to make sure we can access it. Besides cloning your repository we will run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your workflow with all the necessary steps to build and deploy your app.
 

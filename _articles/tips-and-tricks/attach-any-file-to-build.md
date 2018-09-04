@@ -1,6 +1,9 @@
 ---
-menus: tips-and-tricks
 title: Attach any file as an Artifact to the Build
+menu:
+  tips-and-tricks:
+    weight: 5
+
 ---
 For this example we'll attach the OS X `system.log` to the Build as an Artifact,
 but this works for any file, even for ones that you generate during the build,

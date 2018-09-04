@@ -1,6 +1,9 @@
 ---
-menus: tutorials
 title: Auto deploy your Middleman blog / static website
+menu:
+  tutorials:
+    weight: 5
+
 ---
 This tutorial helps you create a basic static website project (e.g. a Blog) with [Middleman](https://middlemanapp.com/),
 connect and deploy it with Bitrise.

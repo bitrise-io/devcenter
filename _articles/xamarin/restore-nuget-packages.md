@@ -1,6 +1,9 @@
 ---
-menus: xamarin
 title: Restore NuGet packages
+menu:
+  xamarin:
+    weight: 4
+
 ---
 To restore your [NuGet](https://www.nuget.org/) packages,
 simply navigate to the app on [bitrise.io](https://www.bitrise.io),

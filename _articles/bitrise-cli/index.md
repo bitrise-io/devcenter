@@ -1,6 +1,9 @@
 ---
-menus: bitrise-cli
 title: Intro
+menu:
+  bitrise-cli:
+    weight: 11
+
 ---
 Bitrise is a collection of tools and services to help you with the development
 and automation of your software projects, with a main focus on mobile apps.

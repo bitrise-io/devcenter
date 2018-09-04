@@ -1,6 +1,9 @@
 ---
-menus: bitrise-cli
 title: Steps
+menu:
+  bitrise-cli:
+    weight: 1
+
 ---
 ## What is a Step
 

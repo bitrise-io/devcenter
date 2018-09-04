@@ -1,6 +1,9 @@
 ---
-menus: adding-a-new-app
 title: Setting up SSH keys
+menu:
+  adding-a-new-app:
+    weight: 2
+
 ---
 SSH keys serve the role of secure transfer between services. In the case of Bitrise, it will ask for your permission to be authorized at your git source provider, for example, GitHub. Read more about how to [authorize Bitrise](/adding-a-new-app/connecting-a-repository).
 

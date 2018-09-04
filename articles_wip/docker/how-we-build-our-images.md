@@ -1,6 +1,9 @@
 ---
 title: How we build our images
-menus: wip--docker
+menu:
+  wip--docker:
+    weight: 1
+
 ---
 WIP
 

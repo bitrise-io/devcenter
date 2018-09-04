@@ -1,6 +1,9 @@
 ---
-menus: tips-and-tricks
 title: Enable/Disable a step (optionally, based on a condition)
+menu:
+  tips-and-tricks:
+    weight: 2
+
 ---
 ## Disable a Step
 

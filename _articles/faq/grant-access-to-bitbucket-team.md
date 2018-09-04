@@ -1,6 +1,9 @@
 ---
-menus: faq
 title: Grant access to a Bitbucket team
+menu:
+  faq:
+    weight: 7
+
 ---
 This guide explains how to grant access for [bitrise.io](https://www.bitrise.io/) to your Bitbucket team.
 

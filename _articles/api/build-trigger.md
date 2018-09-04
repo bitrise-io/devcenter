@@ -1,6 +1,9 @@
 ---
-menus: api
 title: Build Trigger API
+menu:
+  api:
+    weight: 4
+
 ---
 _Note: the `www` endpoint is now deprecated. Please use the `https://app.bitrise.io/app/APP-SLUG/build/start.json` endpoint instead._
 
@@ -181,4 +184,3 @@ the call will look like this:
 ```
 curl  -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'
 ```
-

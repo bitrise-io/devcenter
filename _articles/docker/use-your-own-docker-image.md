@@ -1,6 +1,9 @@
 ---
-menus: docker
 title: Use your own Docker image
+menu:
+  docker:
+    weight: 2
+
 ---
 !!! note "Have a question or suggestion? Join the discussion!"
     You can find this guide's discussion topic at:

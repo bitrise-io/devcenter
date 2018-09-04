@@ -1,6 +1,9 @@
 ---
-menus: caching
 title: Caching Cocoapods
+menu:
+  caching:
+    weight: 5
+
 ---
 Before you start, make sure you have the latest version of the `Cocoapods Install` step in your workflow.
 

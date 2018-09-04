@@ -1,6 +1,9 @@
 ---
-menus: infrastructure
 title: Available Stacks
+menu:
+  infrastructure:
+    weight: 1
+
 ---
 The Stack indicates the virtual machine version that we will use to run your build.
 After adding your application to Bitrise we will select an appropriate Stack for it,

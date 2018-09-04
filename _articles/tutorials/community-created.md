@@ -1,6 +1,9 @@
 ---
-menus: tutorials
 title: Community Created Tutorials
+menu:
+  tutorials:
+    weight: 6
+
 ---
 *If you write a tutorial or blog post about Bitrise feel free to
 [add it to this list yourself](https://github.com/bitrise-io/devcenter/edit/master/docs/tutorials/community-created.md)

@@ -1,6 +1,9 @@
 ---
-menus: tutorials
 title: Build with FAKE (F# Make)
+menu:
+  tutorials:
+    weight: 4
+
 ---
 To add support for your [FAKE](http://fsharp.github.io/FAKE/) build scripts,
 open your app's [Workflow Editor on bitrise.io](/getting-started/manage-your-bitrise-workflow/)

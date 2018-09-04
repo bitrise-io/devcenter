@@ -1,8 +1,10 @@
 ---
-menus: troubleshooting
 title: Frequent iOS issues
----
+menu:
+  troubleshooting:
+    weight: 5
 
+---
 ## Searching for errors and issues in Xcode generated output
 
 _This applies only to the raw, unfiltered output of Xcode.

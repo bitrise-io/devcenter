@@ -1,9 +1,11 @@
 ---
-menus: builds
 title: Scheduling your builds
----
+menu:
+  builds:
+    weight: 3
 
- You can schedule your builds to run automatically at a specific time of the week so that you can check your logs when it's most convenient for you.
+---
+You can schedule your builds to run automatically at a specific time of the week so that you can check your logs when it's most convenient for you.
 
 Follow the steps to see how you can set it up for your next build!
 

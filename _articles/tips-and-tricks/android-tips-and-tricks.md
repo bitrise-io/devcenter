@@ -1,6 +1,9 @@
 ---
-menus: tips-and-tricks
 title: Android tips and tricks
+menu:
+  tips-and-tricks:
+    weight: 3
+
 ---
 ## What are Gradle tasks and how can I get the list of available tasks in my project?
 

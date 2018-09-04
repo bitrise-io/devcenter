@@ -1,6 +1,9 @@
 ---
-menus: getting-started
 title: Builds & Workflows
+menu:
+  getting-started:
+    weight: 5
+
 ---
 # Builds & Workflows
 

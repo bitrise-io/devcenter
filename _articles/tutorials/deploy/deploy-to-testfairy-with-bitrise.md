@@ -1,6 +1,9 @@
 ---
-menus: deployment-tutorials
 title: Deploy to TestFairy with Bitrise
+menu:
+  deployment-tutorials:
+    weight: 3
+
 ---
 If you are looking for a deployment service that also gives you lots of insights
 about your application, then [TestFairy](https://www.testfairy.com/) is a great service to check out.

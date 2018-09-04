@@ -1,6 +1,9 @@
 ---
-menus: faq
 title: How to change the owner of an app
+menu:
+  faq:
+    weight: 1
+
 ---
 It can happen that you need to transfer an Application on [Bitrise](https://www.bitrise.io)
 to another User or to an Organization.

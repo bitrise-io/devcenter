@@ -1,6 +1,9 @@
 ---
-menus: webhooks
 title: Adding a Slack webhook
+menu:
+  webhooks:
+    weight: 1
+
 ---
 You can register the `bitrise-webhooks` URL (`.../h/slack/BITRISE-APP-SLUG/BITRISE-APP-API-TOKEN`) as either
 an [Outgoing Webhook](https://my.slack.com/services/new/outgoing-webhook) or

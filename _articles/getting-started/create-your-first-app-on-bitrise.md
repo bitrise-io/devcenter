@@ -1,6 +1,9 @@
 ---
-menus: getting-started
 title: Create your first App on Bitrise.io
+menu:
+  getting-started:
+    weight: 1
+
 ---
 We are always refining our UI and UX, to achieve the best and smoothest experience possible,
 but at the same time give you enough room for experimentation and customization.

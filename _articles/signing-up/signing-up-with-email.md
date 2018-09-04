@@ -1,6 +1,9 @@
 ---
-menus: signing-up
 title: Signing up with email
+menu:
+  signing-up:
+    weight: 4
+
 ---
 You can sign up to Bitrise in one step with your email address.
 

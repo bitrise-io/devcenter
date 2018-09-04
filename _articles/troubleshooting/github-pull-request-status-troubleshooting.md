@@ -1,6 +1,9 @@
 ---
-menus: troubleshooting
 title: Build status indicator on GitHub/GitLab/Bitbucket does not work
+menu:
+  troubleshooting:
+    weight: 7
+
 ---
 If your builds do not send status reports to your git hosting provider - GitHub, GitLab or Bitbucket -, you will need to do a little investigating to find out what causes the problem. Let's take a look at the potential issues!
 

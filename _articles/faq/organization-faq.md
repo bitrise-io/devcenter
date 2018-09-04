@@ -1,6 +1,9 @@
 ---
-menus: faq
 title: Organization FAQ
+menu:
+  faq:
+    weight: 2
+
 ---
 ## What is an Organization on Bitrise?
 

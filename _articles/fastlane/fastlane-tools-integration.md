@@ -1,6 +1,9 @@
 ---
-menus: fastlane
 title: fastlane tools integration
+menu:
+  fastlane:
+    weight: 2
+
 ---
 Having more time to be creative is the key to great inventions.
 We believe that giving developers the chance to work without distractions is the most important thing that can lead to extraordinary creations.

@@ -1,6 +1,9 @@
 ---
-menus: faq
 title: Why my build takes longer on Bitrise than on my Mac?
+menu:
+  faq:
+    weight: 10
+
 ---
 First of all you have to determine which step(s) consume significant time,
 to identify what can possibly be improved.

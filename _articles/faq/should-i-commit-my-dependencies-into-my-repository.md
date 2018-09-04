@@ -1,6 +1,9 @@
 ---
-menus: faq
 title: Should I commit my dependencies into my repository?
+menu:
+  faq:
+    weight: 11
+
 ---
 It's a highly debated topic, there are obvious pros and cons
 for both keeping your dependencies in or outside of your code repository.

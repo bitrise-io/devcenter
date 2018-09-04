@@ -1,6 +1,9 @@
 ---
-menus: faq
 title: No builds are triggered when I push code into the repository
+menu:
+  faq:
+    weight: 9
+
 ---
 If no builds are triggered automatically when you push code into your repository,
 you should __make sure your webhook is properly set on the git hosting

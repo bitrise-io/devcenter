@@ -1,6 +1,9 @@
 ---
-menus: api
-title: "App Status Image/Badge API"
+title: App Status Image/Badge API
+menu:
+  api:
+    weight: 1
+
 ---
 With the `Status Image API token`, you can get an embeddable SVG badge image, a JSON message reflecting the status of the app, or a specific branch of the app.
 

@@ -1,8 +1,10 @@
 ---
-menus: testing
 title: Android unit test
----
+menu:
+  testing:
+    weight: 1
 
+---
 ## Run a unit test
 
 Unit testing is useful if you want to verify individual code blocks, catch bugs or prevent crashes as early as possible.

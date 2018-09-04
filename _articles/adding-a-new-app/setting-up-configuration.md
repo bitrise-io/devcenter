@@ -1,6 +1,9 @@
 ---
-menus: adding-a-new-app
 title: Setting up configuration
+menu:
+  adding-a-new-app:
+    weight: 3
+
 ---
 After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for
 your project, Bitrise will download your code to make sure it can access the repository

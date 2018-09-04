@@ -1,6 +1,9 @@
 ---
-menus: faq
 title: Android x86 Emulator
+menu:
+  faq:
+    weight: 4
+
 ---
 A frequent question is whether it's possible to run the Android x86 emulator, instead of the ARM emulators.
 

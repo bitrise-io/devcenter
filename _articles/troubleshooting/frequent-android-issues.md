@@ -1,8 +1,10 @@
 ---
-menus: troubleshooting
 title: Frequent Android issues
----
+menu:
+  troubleshooting:
+    weight: 4
 
+---
 ## Could not find an android package or you have not accepted the license agreements
 
 ### Error

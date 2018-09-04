@@ -1,6 +1,9 @@
 ---
-menus: bitrise-cli
 title: Most important concepts
+menu:
+  bitrise-cli:
+    weight: 7
+
 ---
 ## Every input, output and parameter is an Environment Variable
 

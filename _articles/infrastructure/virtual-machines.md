@@ -1,6 +1,9 @@
 ---
-menus: infrastructure
 title: Virtual Machines
+menu:
+  infrastructure:
+    weight: 2
+
 ---
 On [bitrise.io](https://www.bitrise.io), we have `macOS` and `Linux` virtual machines hosted for your builds.
 You can select from multiple stacks, each with its own list of preinstalled tool versions.
