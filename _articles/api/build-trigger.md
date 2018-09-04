@@ -2,7 +2,7 @@
 title: Build Trigger API
 menu:
   api:
-    weight: 4
+    weight: 1
 
 ---
 _Note: the `www` endpoint is now deprecated. Please use the `https://app.bitrise.io/app/APP-SLUG/build/start.json` endpoint instead._
