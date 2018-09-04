@@ -2,7 +2,7 @@
 title: Intro
 menu:
   bitrise-cli:
-    weight: 11
+    weight: 1
 
 ---
 Bitrise is a collection of tools and services to help you with the development
