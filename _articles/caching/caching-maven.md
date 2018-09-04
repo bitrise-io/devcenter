@@ -2,7 +2,7 @@
 title: Caching Maven
 menu:
   caching:
-    weight: 1
+    weight: 4
 
 ---
 1. Open your app's `Workflow Editor`.
