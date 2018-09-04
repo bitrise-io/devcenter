@@ -2,7 +2,7 @@
 title: Build with FAKE (F# Make)
 menu:
   tutorials:
-    weight: 4
+    weight: 8
 
 ---
 To add support for your [FAKE](http://fsharp.github.io/FAKE/) build scripts,
