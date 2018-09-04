@@ -2,7 +2,7 @@
 title: Add your first Step to your Workflow
 menu:
   getting-started:
-    weight: 3
+    weight: 5
 
 ---
 When you've registered an app you can start modifying its Workflow,

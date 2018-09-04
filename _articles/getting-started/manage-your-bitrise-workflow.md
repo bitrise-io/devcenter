@@ -2,7 +2,7 @@
 title: Manage your Bitrise workflow
 menu:
   getting-started:
-    weight: 4
+    weight: 6
 
 ---
 To start editing your workflow you first have to open it

@@ -2,7 +2,7 @@
 title: Account Security
 menu:
   getting-started:
-    weight: 2
+    weight: 3
 
 ---
 ## Enable Two-factor authentication
