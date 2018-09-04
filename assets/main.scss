@@ -201,6 +201,32 @@ header.top-bar {
 				}
 			}
 		}
+
+		.source-code {
+			display: flex;
+			align-items: center;
+			margin-left: 2rem;
+			padding: 0.4rem;
+			text-decoration: none;
+			transition: opacity .25s;
+
+			.source-host-logo {
+				width: 24px;
+				height: 24px;
+				margin-right: 0.6rem;
+				pointer-events: none;
+			}
+
+			.source-host-name {
+				font-size: 1.3rem;
+				font-weight: 700;
+				color: white;
+			}
+
+			&:hover, &:focus {
+				opacity: 0.7;
+			}
+		}
 	}
 }
 
@@ -498,6 +524,10 @@ footer {
 
 			.search-bar {
 				flex-basis: 50%;
+			}
+
+			.source-code {
+				display: none;
 			}
 		}
 	}
