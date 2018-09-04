@@ -2,7 +2,7 @@
 title: Restore NuGet packages
 menu:
   xamarin:
-    weight: 4
+    weight: 3
 
 ---
 To restore your [NuGet](https://www.nuget.org/) packages,

@@ -2,7 +2,7 @@
 title: Add custom sources to NuGet
 menu:
   xamarin:
-    weight: 3
+    weight: 4
 
 ---
 If you are using third-party NuGet packages in your application
