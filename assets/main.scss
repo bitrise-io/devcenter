@@ -2,6 +2,7 @@
 ---
 
 @charset "utf-8";
+@import "monokai.css";
 
 $spacing-default-horizontal: 2rem;
 $spacing-header-vertical: 0.6rem;
@@ -494,6 +495,23 @@ main.content {
 			&:hover, &:focus {
 				opacity: 1;
 			}
+		}
+	}
+
+	.message-box {
+		$horizontalpadding: 1.2rem;
+		$verticalpadding: .8rem;
+		$icon-width: 2.6rem;
+
+		.message-title {
+			padding: $verticalpadding $horizontalpadding;
+			padding-left: $horizontalpadding + $icon-width + $horizontalpadding;
+			white-space: pre-line;
+		}
+
+		.message-content {
+			padding: $verticalpadding $horizontalpadding;
+			white-space: pre-line;
 		}
 	}
 }
