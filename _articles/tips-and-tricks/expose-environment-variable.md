@@ -2,7 +2,7 @@
 title: Expose an Environment Variable and use it in another Step
 menu:
   tips-and-tricks:
-    weight: 7
+    weight: 4
 
 ---
 You can expose Environment Variables from one Step,
