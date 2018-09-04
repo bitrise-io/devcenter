@@ -1,7 +1,6 @@
 ---
 menus: testing
 title: Android unit test
-weight: 2
 ---
 
 ## Run a unit test
