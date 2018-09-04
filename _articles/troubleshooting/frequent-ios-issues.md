@@ -2,7 +2,7 @@
 title: Frequent iOS issues
 menu:
   troubleshooting:
-    weight: 5
+    weight: 4
 
 ---
 ## Searching for errors and issues in Xcode generated output

@@ -2,7 +2,7 @@
 title: Workflow Editor doesn't load
 menu:
   troubleshooting:
-    weight: 6
+    weight: 2
 
 ---
 This can happen if you modified the `bitrise.yml` / workflow configuration in a way which crashes the Workflow Editor UI.
