@@ -2,7 +2,7 @@
 title: Adding a Gogs webhook
 menu:
   webhooks:
-    weight: 10
+    weight: 5
 
 ---
 You can set up webhooks so that Bitrise automatically triggers a build of your app whenever you perform a specified action. For Gogs, all you have to do is register your `bitrise-webhooks` URL as a Webhook in your [Gogs](https://gogs.io) repository.

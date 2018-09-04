@@ -2,7 +2,7 @@
 title: Adding outgoing webhooks
 menu:
   webhooks:
-    weight: 11
+    weight: 10
 
 ---
 You can configure Bitrise to send build event notifications to any service you would like. A build event is:

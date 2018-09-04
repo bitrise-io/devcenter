@@ -2,7 +2,7 @@
 title: Webhook Troubleshooting
 menu:
   webhooks:
-    weight: 5
+    weight: 12
 
 ---
 First of all, if you registered your app on [bitrise.io](https://www.bitrise.io) a while ago (especially
