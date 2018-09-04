@@ -2,7 +2,7 @@
 title: Triggering builds
 menu:
   triggering-builds:
-    weight: 2
+    weight: 1
 
 ---
 If you set up incoming webhooks to Bitrise, you can automatically trigger builds by specifying a trigger event and a workflow. You can specify multiple triggers, and add new triggers or remove existing ones any time you wish.
