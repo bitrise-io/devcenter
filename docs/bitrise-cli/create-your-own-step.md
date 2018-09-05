@@ -31,7 +31,7 @@ Once you are done, you should have a `step.yml` and, depending on whether you ch
 The generated Step's README describes:
 
 - how you can run your Step locally, before you even commit the code,
-- how you can test and use your Step in any build by using [the `git::` Step reference](/bitrise-cli/Steps/#special-Step-sources),
+- how you can test and use your Step in any build by using [the `git::` Step reference](/bitrise-cli/steps/#special-Step-sources),
 - how you can share your Step with others through the Bitrise StepLib if you wish to do so.
 
 !!! warning "Most important concepts"
@@ -43,7 +43,7 @@ A newly created Step is a 'skeleton': in the `step.yml` file, certain properties
 
 Many step properties are automatically generated - for example, when sharing the Step - while other properties should be set manually if they are required. When creating a new Step with the plugin, only the `project_type_tags` property does not get filled with some value by default but of course you can manually modify all properties in the `step.yml` file.
 
-Step inputs and outputs are also Step properties. For more information, see [Step properties](/bitrise-cli/Step-properties), [Step inputs](/bitrise-cli/Step-inputs), [Step outputs](/bitrise-cli/Step-outputs).
+Step inputs and outputs are also Step properties. For more information, see [Step properties](/bitrise-cli/step-properties), [Step inputs](/bitrise-cli/step-inputs), [Step outputs](/bitrise-cli/step-outputs).
 
 ### Naming conventions: versioning, Step ID, step inputs and outputs
 
@@ -75,7 +75,7 @@ __Do not use submodules, or require any other resource downloaded on-demand in y
 
 In the case of submodules, you should include the content of the other repository instead of using it as a submodule of your Step's repository.
 
-You can, however, declare dependencies that you can fetch from an OS dependency manager, such as `apt-get` or `brew`. For more information on declaring dependencies, see [Step properties](/bitrise-cli/Step-properties).
+You can, however, declare dependencies that you can fetch from an OS dependency manager, such as `apt-get` or `brew`. For more information on declaring dependencies, see [Step properties](/bitrise-cli/step-properties).
 
 If you have any questions visit our [community discussion site](https://discuss.bitrise.io/) or [contact us](https://www.bitrise.io/contact)!
 
