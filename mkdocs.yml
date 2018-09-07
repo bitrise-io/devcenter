@@ -17,11 +17,13 @@ pages:
     - Trial after signing up: getting-started/signing-up/trial-after-signing-up.md
     - Connecting your GitHub/GitLab/Bitbucket account to Bitrise: getting-started/signing-up/connecting-account-bitrise.md
     - Connecting your Apple Developer Account to Bitrise: getting-started/signing-up/connecting-apple-dev-account.md
+    - Connecting self-hosted GitLab instances: getting-started/signing-up/self-hosted-gitlab.md
   - Adding a new app:
     - Adding a new app: getting-started/adding-a-new-app/index.md
     - Connecting a repository: getting-started/adding-a-new-app/connecting-a-repository.md
     - Setting up SSH keys: getting-started/adding-a-new-app/setting-up-ssh-keys.md
     - Setting up configuration: getting-started/adding-a-new-app/setting-up-configuration.md
+    - Public apps: getting-started/adding-a-new-app/public-apps.md
   - Build process: getting-started/builds-and-workflows.md
   - Code Security: getting-started/code-security.md
   - Account Security: getting-started/account-security.md
@@ -68,6 +70,8 @@ pages:
   - Selective builds: builds/selective_builds.md
   - Build artifacts online: builds/build-artifacts-online.md
   - Build numbering and app versioning: builds/build-numbering-and-app-versioning.md
+  - Secrets and Env Vars: builds/env-vars-secret-env-vars.md
+  - Sensitive input in public apps: builds/sensitive-input-field.md
   - Available environment variables: builds/available-environment-variables.md
 - Code signing:
   - Android code signing:
