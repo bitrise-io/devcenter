@@ -11,7 +11,7 @@ which can be executed with the [open source Bitrise CLI](https://www.bitrise.io/
 
 - [Create and share your own build Steps](https://github.com/bitrise-steplib/step-template).
 
-- Define more workflows for the very same app, and define [triggers](https://bitrise-io.github.io/devcenter/webhooks/trigger-map/) to specify which workflow should be selected for each trigger.
+- Define more workflows for the very same app, and define [triggers](/webhooks/trigger-map) to specify which workflow should be selected for each trigger.
 
 The steps can do anything that can be implemented by command line scripts / programs:
 
