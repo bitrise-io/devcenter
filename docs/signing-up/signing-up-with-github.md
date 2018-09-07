@@ -7,7 +7,7 @@ You are able to authenticate yourself with your GitHub user against __Bitrise__.
 
 Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
 
-![Screenshot](/img/signing-up/github_signup-2017.png)
+![Screenshot](/img/signing-up/github-signup-2017.png)
 
 Select `GitHub` for authenticating yourself with this service.
 
