@@ -935,6 +935,22 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe
 {{ (var "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/log").GET }}
 ```
 
+### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/bitrise.yml
+
+Download the bitrise.yml of your build
+
+#### Example `curl` request
+
+``` bash
+curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/bitrise.yml").GET_cURL }}'
+```
+
+#### Example response
+
+``` json
+{{ (var "/v0.1/apps/669403bffbe35909/builds/3247e2920496e846/bitrise.yml").GET }}
+```
+
 ### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts
 
 Get the artifacts for a specific build.
