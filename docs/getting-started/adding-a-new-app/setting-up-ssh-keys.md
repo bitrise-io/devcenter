@@ -12,7 +12,7 @@ The reason behind the need for being authorized, is that Bitrise has to have a w
 
 In the case of GitHub, GitLab and Bitbucket repository setups, Bitrise will generate a public and private SSH key pair and ask whether you like the idea of adding that into your repository automatically as deploy key, or you'd like to add it by hand.
 
-![Screenshot](/img/adding-a-new-app/bitrise_auto_add_ssh_key.png)
+![Screenshot](/img/adding-a-new-app/bitrise_auto_add_ssh_key2.png)
 
 You need admin rights to the repository to be able to auto-add the key to it. In any other case, copy the public key from here and add it to your repository at your provider.
 
