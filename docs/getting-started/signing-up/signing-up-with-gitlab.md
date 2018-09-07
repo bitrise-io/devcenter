@@ -1,4 +1,4 @@
-You are able to authenticate yourself with your GitLab user against __Bitrise__. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your GitHub account when adding repositories hosted by these providers again.
+You are able to authenticate yourself with your GitLab user against __Bitrise__. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your GitLab account when adding repositories hosted by these providers again.
 
 !!! note
     If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/signing-up/signing-up-with-email).
@@ -21,7 +21,7 @@ If you press the `Authorize` button, you will be redirected to Bitrise.
 
 ## Finish signup
 
-You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service's availability, you are also able to connect more accounts, GitHub and Bitbucket, for example. Last, but not least, you don't have to stick to your connected account's username.
+You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service's availability. You are also able to connect more accounts from other Git providers like GitHub and Bitbucket, for example.
 
 After that, you are ready to roll.
 
