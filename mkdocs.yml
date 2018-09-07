@@ -72,6 +72,8 @@ pages:
   - Build artifacts online: builds/build-artifacts-online.md
   - Build numbering and app versioning: builds/build-numbering-and-app-versioning.md
   - Accessing the bitrise.yml of builds: builds/bitrise-yml-online.md
+  - Secrets and Env Vars: builds/env-vars-secret-env-vars.md
+  - Sensitive input in public apps: builds/sensitive-input-field.md
   - Available environment variables: builds/available-environment-variables.md
 - Code signing:
   - Android code signing:
