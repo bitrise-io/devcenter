@@ -17,7 +17,7 @@ you will see Bitrise automatically listing all your repositories, so you can jus
 
 ![Screenshot](/img/adding-a-new-app/connect-repo.png)
 
-If you haven't authorized Bitrise against the provider hosting your repository, it will ask for permission.
+If you haven't [authorized Bitrise](/getting-started/adding-a-new-app/connecting-account-bitrise) against the provider hosting your repository, it will ask for permission. 
 
 ![Screenshot](/img/adding-a-new-app/authorize-at-provider.png)
 
