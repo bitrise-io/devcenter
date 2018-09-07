@@ -21,7 +21,7 @@ If you press the `Authorize` button, you will be redirected to Bitrise.
 
 ## Finish signup
 
-You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service's availability, you are also able to connect more accounts, GitHub and Bitbucket, for example. Last, but not least, you don't have to stick to your connected account's username.
+You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service's availability. You are also able to connect more accounts from other Git providers like GitHub and Bitbucket, for example.
 
 After that, you are ready to roll.
 
