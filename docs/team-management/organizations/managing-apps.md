@@ -2,7 +2,7 @@ Organizations can own several apps, with different (or the same, if that's what 
 
 ## Adding new apps to an organization
 
-A new app can be added directly to an organization. You can do this either from the organization's `Account settings` page or from the Dashboard of an account that has either the `Owner` or the `Admin` role in the organization.
+A new app can be added directly to an organization. You can do this either from the organization's `Account settings` page or from the Dashboard of an account that is a member of the organization.
 
 1. Get to the `Create New App` page.
 
@@ -32,9 +32,12 @@ You have two options to transfer app ownership.
 - Several apps can be transferred at the same time from the organization profile.
 - Any given app can be transferred from the app's `Team` tab.
 
+!!! info
+    App ownership can be transferred __from__ an organization to another account on the app's `Team` tab. Only organization owners can do this. 
+
 ### Transferring apps from the organization profile
 
-1. Sign in with an account that is an owner of an organization and open its profile page.
+1. Sign in with an account that is a member of the organization and open the account's profile page.
 
 1. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
@@ -52,7 +55,7 @@ You have two options to transfer app ownership.
 
 It can happen that you need to transfer an application on [Bitrise](https://www.bitrise.io) to another user. This can be done in a few seconds by following these quick steps:
 
-1. Login with the **current owner** of the app.
+1. Login with the **current owner of the app**.
 
 2. Open the app's page and go to the `Team` tab.
 
@@ -70,12 +73,12 @@ The new user can either be another private account or an organization.
 
 There are two separate ways to assign one or more groups to an app that is owned by an organization.
 
-- __Assign a group from the `Groups` menu of the organization's profile page__. This way you can add a group to multiple apps simultaneously.
-- __Assign a group from the `Team` tab of the app__. If the groups you need already exist and you only need to assign groups to a single app, this method works perfectly.
+- __Assign a group from the `Groups` menu of the organization's profile page__. This way you can add a group to multiple apps simultaneously. Only __organization owners__ can do this!
+- __Assign a group from the `Team` tab of the app__. If the groups you need already exist and you only need to assign groups to a single app, this method works perfectly. Organization owners and accounts that have an __admin__ role on the app's team can do this.
 
 ### Assigning a group from the `Groups` menu.
 
-1. Sign in with an account that is an __owner__ or an __admin__ of an organization and open its profile page.
+1. Sign in with an account that is an __owner__ of the organization and open its profile page.
 
 1. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
