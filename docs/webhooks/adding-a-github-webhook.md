@@ -1,8 +1,12 @@
 You can specify webhooks so that Bitrise automatically triggers a build of your app whenever you perform a specified action, such as a code push or a pull request. For GitHub, all you have to do is register your `bitrise-webhooks` URL as a Webhook in your [GitHub](https://www.github.com) repository.
 
+You can register a webhook either automatically or manually. This guide walks you through the process of __manually__ registering a webhook. [Read more about automatic webhook registration](/webhooks/#setting-up-incoming-webhooks-automatically).  
+
 ## Get the webhook URL for GitHub
 
-1. Navigate to the `Code` tab of your app's page and select `GitHub` from the dropdown menu of the `Incoming Webhooks` section.
+1. Go to the `Code` tab of your app's page and in the `INCOMING WEBHOOKS` menu, click `SETUP MANUALLY`.
+
+1. Select `GitHub` from the dropdown menu.
 
     ![Screenshot](/img/webhooks/github-webhook-1.png)
 
