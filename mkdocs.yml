@@ -8,31 +8,30 @@ repo_url: 'https://github.com/bitrise-io/devcenter'
 pages:
 - "Bitrise DevCenter - What is Bitrise?": index.md
 - Getting Started:
-  - Builds & Workflows: getting-started/builds-and-workflows.md
+  - Quick start guide to Bitrise: getting-started/index.md
+  - Signing up:
+    - Signing up with GitHub: getting-started/signing-up/signing-up-with-github.md
+    - Signing up with Bitbucket: getting-started/signing-up/signing-up-with-bitbucket.md
+    - Signing up with GitLab: getting-started/signing-up/signing-up-with-gitlab.md
+    - Signing up with email: getting-started/signing-up/signing-up-with-email.md
+    - Trial after signing up: getting-started/signing-up/trial-after-signing-up.md
+    - Connecting your GitHub/GitLab/Bitbucket account to Bitrise: getting-started/signing-up/connecting-account-bitrise.md
+    - Connecting your Apple Developer Account to Bitrise: getting-started/signing-up/connecting-apple-dev-account.md
+  - Adding a new app:
+    - Adding a new app: getting-started/adding-a-new-app/index.md
+    - Connecting a repository: getting-started/adding-a-new-app/connecting-a-repository.md
+    - Setting up SSH keys: getting-started/adding-a-new-app/setting-up-ssh-keys.md
+    - Setting up configuration: getting-started/adding-a-new-app/setting-up-configuration.md
+  - Build process: getting-started/builds-and-workflows.md
   - Code Security: getting-started/code-security.md
   - Account Security: getting-started/account-security.md
-  - Create your first App on Bitrise.io: getting-started/create-your-first-app-on-bitrise.md
   - Workflows: getting-started/getting-started-workflows.md
   - Steps: getting-started/getting-started-steps.md
 - Infrastructure:
   - Available Stacks: infrastructure/available-stacks.md
   - Virtual Machines: infrastructure/virtual-machines.md
   - The Android/Linux/Docker environment: infrastructure/the-environment.md
-- Signing up:
-  - Signing up with GitHub: signing-up/signing-up-with-github.md
-  - Signing up with Bitbucket: signing-up/signing-up-with-bitbucket.md
-  - Signing up with email: signing-up/signing-up-with-email.md
-  - Trial after signing up: signing-up/trial-after-signing-up.md
-  - Connecting your Apple Developer Account to Bitrise: signing-up/connecting-apple-dev-account.md
-- Adding a new app:
-  - Adding a new app: adding-a-new-app/index.md
-  - Registering a test device: adding-a-new-app/registering-a-test-device.md
-  - Connecting a repository: adding-a-new-app/connecting-a-repository.md
-  - Setting up SSH keys: adding-a-new-app/setting-up-ssh-keys.md
-  - Setting up configuration: adding-a-new-app/setting-up-configuration.md
-  - Public apps: adding-a-new-app/public-apps.md
-  - Connecting self-hosted GitLab instances: adding-a-new-app/self-hosted-gitlab.md
-- Team management:
+- Teams and organizations:
   - Adding a new team member: team-management/index.md
   - Changing the owner of an app: team-management/changing-the-owner-of-an-app.md
   - Organizations:
@@ -125,6 +124,7 @@ pages:
   - fastlane tools integration: fastlane/fastlane-tools-integration.md
   - How to configure fastlane match for Bitrise: fastlane/how-to-configure-fastlane-match-for-bitrise.md
 - Testing:
+  - Registering a test device: testing/registering-a-test-device.md
   - Run your tests in the Visual Studio App Center: testing/run-your-tests-in-the-app-center.md
   - Android unit test: testing/android-run-a-unit-test.md
 - Tutorials:
