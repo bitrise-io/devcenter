@@ -52,7 +52,7 @@ Tell Bitrise where the code of your app is stored. You can either:
 - copy the public key Bitrise generated.
 - use your own SSH keypair. Make sure your private key is an RSA key without a passphrase.
 
-![Screenshot](/img/adding-a-new-app/bitrise_auto_add_ssh_key.png)
+![Screenshot](/img/adding-a-new-app/bitrise_auto_add_ssh_key2.png)
 
 Public apps cannot have SSH keys.
 
