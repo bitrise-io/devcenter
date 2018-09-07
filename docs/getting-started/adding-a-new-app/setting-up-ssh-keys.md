@@ -12,7 +12,7 @@ The reason behind the need for being authorized, is that Bitrise has to have a w
 
 In the case of GitHub, GitLab and Bitbucket repository setups, Bitrise will generate a public and private SSH key pair and ask whether you like the idea of adding that into your repository automatically as deploy key, or you'd like to add it by hand.
 
-![Screenshot](/img/adding-a-new-app/bitrise_auto_add_ssh_key.png)
+![Screenshot](/img/adding-a-new-app/bitrise_auto_add_ssh_key2.png)
 
 You need admin rights to the repository to be able to auto-add the key to it. In any other case, copy the public key from here and add it to your repository at your provider.
 
@@ -20,7 +20,11 @@ The auto-add option will add the generated key as a read-only [deploy key](https
 
 ## Manual setup
 
-If you have private dependencies or submodules, you have to add the generated SSH key manually to your profile at your provider instead. That's because deploy keys are only valid for one repository.
+If you have private dependencies or submodules, you have to add the generated SSH key manually to your profile at your provider instead. That's because deploy keys are only valid for one repository. 
+
+When the system asks if you need to use an additional private repository, click `I need to` and copy the key.
+
+![Add own SSH key](/img/adding-a-new-app/own-ssh.png)
 
 !!! note "A bot user"
     A simple workaround is adding a \"bot\" user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
