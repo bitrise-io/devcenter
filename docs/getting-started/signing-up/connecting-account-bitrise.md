@@ -22,7 +22,9 @@ Connecting one Git provider account is not final: you can disconnect an account 
 
 1. Click `Connect GitHub/GitLab/Bitbucket`. This will take you to the login page of the Git provider. 
 
-1. Log in to the Git provider account. If the login was successful, you should be redirected to Bitrise, and a pop-up message should inform you that you successfully linked the account. Click `Okay`.
+1. Log in to the Git provider account. 
+
+1. You should be prompted to authorize Bitrise.io - do it! If successful, you should be redirected to Bitrise, and a pop-up message should inform you that you successfully linked the account. Click `Okay`.
 
 And you are done! If everything goes well, you are redirected to the `Create New App` page and you can add your new app.
 
@@ -36,7 +38,9 @@ And you are done! If everything goes well, you are redirected to the `Create New
 
     ![Connect account to Bitrise](/img/signing-up/connect-account.png)
 
-1. Log in to the Git provider account and then click `Okay`.
+1. Log in to the Git provider account.
+
+1. You should be prompted to authorize Bitrise.io - do it! If successful, you should be redirected to Bitrise, and a pop-up message should inform you that you successfully linked the account. Click `Okay`.
 
 And you are done!
 
