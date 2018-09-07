@@ -5,6 +5,10 @@ When adding your app to __Bitrise__, we will clone your repository to make sure 
     * Android
     * Xamarin
     * Fastlane
+    * macOS
+    * Cordova
+    * Ionic
+    * React Native
 
 To add a new app to Bitrise go to your [dashboard](https://bitrise.io/dashboard) and press the `Add new app` button.
 
@@ -13,5 +17,3 @@ To add a new app to Bitrise go to your [dashboard](https://bitrise.io/dashboard)
 In case this is the first application the dashboard will show you the quickstart guide instead of a list of you apps. There you can choose to add your first app right away.
 
 Let's check out how you can [connect a repository](/adding-a-new-app/connecting-a-repository)!
-
-![Screenshot](/img/adding-a-new-app/quickstart_guide.png)
