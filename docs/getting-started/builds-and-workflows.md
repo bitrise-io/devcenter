@@ -19,7 +19,7 @@ Read more about how the CLI, workflows and steps work "under the hood" in the [B
 1. Trigger builds by:
     * clicking the `Build` button on the application's page (manual build trigger)
     * [scheduling with a selected branch and frequency](/builds/scheduling-builds)
-    * [webhooks](/devcenter/webhooks) - after each code/tag push or pull request to the given branch
+    * [webhooks](/webhooks/) - after each code/tag push or pull request to the given branch
     * our `Build Trigger API`
 2. Environment preparation:
    A virtual machine will be provisioned and prepared to run the build.
