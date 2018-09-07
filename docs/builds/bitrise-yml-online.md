@@ -1,5 +1,5 @@
 
-Every bitrise.yml file is stored for your builds on [bitrise.io](https://www.bitrise.io). They come in handy when you'd like to check the configuration with which a specific build has run. To do that, you can either use the online `Workflow Editor` or your build's online bitrise.yml file. If you choose the latter, you can compare changes, restore the current build to the original version, edit the config, and download the file to your Mac/PC.
+Every `bitrise.yml` file is stored for your builds on [bitrise.io](https://www.bitrise.io). They come in handy when you'd like to check the configuration with which a specific build has run. To do that, you can either use the online `Workflow Editor` or your build's online bitrise.yml file. If you choose the latter, you can compare changes, restore the current build to the original version, edit the config, and download the file to your Mac/PC.
 
 
 !!! tip "Using filters on your Builds Board"
@@ -39,7 +39,7 @@ Once you've clicked `Show bitrise.yml`, you will see the `BUILD'S BITRISE YML` p
 
 ## Restoring and undoing changes in bitrise.yml online
 
-If you don't like the changes made to your _current_ bitrise.yml, you can easily restore it to the build's original bitrise.yml.
+If you don't like the changes made to your _current_ `bitrise.yml`, you can easily restore it to the build's original `bitrise.yml`.
 
 1. Click the `Show bitrise.yml` button at the top OR at the bottom of your inline log on [bitrise.io](https://www.bitrise.io/).
 
@@ -49,6 +49,15 @@ If you don't like the changes made to your _current_ bitrise.yml, you can easily
 
 ![Screenshot](/img/bitrise-cli-bitrise-yml/confirm-bitrise-yml-changes.png)
 
+## Deleting a build's bitrise.yml
+
+If you wish, you can simply delete a build's `bitrise.yml` file. But please note that this action cannot be undone: nobody will be able to view that particular build's `bitrise.yml` file once you delete it.
+
+1. Select an application on your `Dashboard` and select one of its builds.
+
+1. Click the `Delete bitrise.yml` button.
+
+1. In the confirmation window, click `Yes`.
 
 ## Editing and downloading bitrise.yml online
 
