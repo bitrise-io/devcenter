@@ -8,6 +8,7 @@ repo_url: 'https://github.com/bitrise-io/devcenter'
 pages:
 - "Bitrise DevCenter - What is Bitrise?": index.md
 - Getting Started:
+  - Quick start guide to Bitrise: getting-started/index.md
   - Signing up:
     - Signing up with GitHub: getting-started/signing-up/signing-up-with-github.md
     - Signing up with Bitbucket: getting-started/signing-up/signing-up-with-bitbucket.md
@@ -24,7 +25,6 @@ pages:
   - Build process: getting-started/builds-and-workflows.md
   - Code Security: getting-started/code-security.md
   - Account Security: getting-started/account-security.md
-  - Create your first App on Bitrise.io: getting-started/create-your-first-app-on-bitrise.md
   - Workflows: getting-started/getting-started-workflows.md
   - Steps: getting-started/getting-started-steps.md
 - Infrastructure:
