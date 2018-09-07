@@ -17,6 +17,7 @@ pages:
     - Trial after signing up: getting-started/signing-up/trial-after-signing-up.md
     - Connecting your GitHub/GitLab/Bitbucket account to Bitrise: getting-started/signing-up/connecting-account-bitrise.md
     - Connecting your Apple Developer Account to Bitrise: getting-started/signing-up/connecting-apple-dev-account.md
+    - Connecting self-hosted GitLab instances: getting-started/signing-up/self-hosted-gitlab.md
   - Adding a new app:
     - Adding a new app: getting-started/adding-a-new-app/index.md
     - Connecting a repository: getting-started/adding-a-new-app/connecting-a-repository.md
