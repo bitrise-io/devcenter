@@ -8,6 +8,7 @@ repo_url: 'https://github.com/bitrise-io/devcenter'
 pages:
 - "Bitrise DevCenter - What is Bitrise?": index.md
 - Getting Started:
+  - Quick start guide to Bitrise: getting-started/index.md
   - Signing up:
     - Signing up with GitHub: getting-started/signing-up/signing-up-with-github.md
     - Signing up with Bitbucket: getting-started/signing-up/signing-up-with-bitbucket.md
