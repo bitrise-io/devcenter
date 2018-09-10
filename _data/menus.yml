@@ -70,9 +70,6 @@ main:
 - title: Builds
   identifier: builds
   weight: 8
-wip--docker:
-- weight: 1
-  title: How we build our images
 team-management:
 - title: Organizations
   identifier: organizations
