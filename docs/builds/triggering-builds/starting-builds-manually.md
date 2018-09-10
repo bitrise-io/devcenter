@@ -8,7 +8,7 @@ Starting a build manually on Bitrise takes literally two clicks - if you leave e
 
 ![Start a build](/img/builds/start-build.png)
 
-At this point, the __Build configuration__ window opens and you you are presented with two tabs near the top of the window:
+At this point, the __Build configuration__ window opens and you are presented with two tabs near the top of the window:
 
 - __Basic__
 - __Advanced__
