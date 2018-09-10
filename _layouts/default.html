@@ -10,7 +10,13 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{{ site.data.basic_info.name }}</title>
+		<title>
+			{% if page.url != "/" and page.url != "/index" %}
+				{{ current_article.title }} - {{ site.data.basic_info.name }}
+			{% else %}
+				{{ site.data.basic_info.name }}
+			{% endif %}
+		</title>
 		<meta property="og:title" content="{{ site.data.basic_info.name }}">
 		<meta property="og:locale" content="en_US">
 		<meta property="og:url" content="{{ site.data.basic_info.page_url }}">
