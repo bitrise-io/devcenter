@@ -8,5 +8,4 @@ fields:
   config:
     required: true
 pages:
-- _articles/adding-more-content.md
 - _articles/my-test-article.md
