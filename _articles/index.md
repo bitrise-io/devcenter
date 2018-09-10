@@ -5,7 +5,6 @@ menu:
     weight: 1
   bitrise-devcenter:
     weight: 1
-published: false
 
 ---
 **Bitrise** is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration)
