@@ -7,3 +7,5 @@ fields:
   name: title
   config:
     required: true
+pages:
+- _articles/my-test-article.md
