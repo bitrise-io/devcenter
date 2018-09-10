@@ -9,4 +9,4 @@ published: false
 ---
 This is an **article**
 
-![](img/team-management/organization/assign-group-popup.png)
+![](/img/team-management/organization/switch-profile-2.png)
