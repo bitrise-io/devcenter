@@ -70,9 +70,6 @@ main:
 - title: Getting Started
   identifier: getting-started
   weight: 2
-- title: Bitrise DevCenter
-  identifier: bitrise-devcenter
-  weight: 1
 team-management:
 - title: Organizations
   identifier: organizations

@@ -1,6 +1,8 @@
 ---
 title: Bitrise DevCenter - What is Bitrise?
 menu:
+  main:
+    weight: 1
   bitrise-devcenter:
     weight: 1
 
