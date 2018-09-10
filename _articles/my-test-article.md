@@ -5,7 +5,6 @@ menu:
   code-signing:
     weight: 2
     title: primary
-published: false
 
 ---
 This is my **test article**. Good?
