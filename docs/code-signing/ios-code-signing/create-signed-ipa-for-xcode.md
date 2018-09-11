@@ -10,7 +10,7 @@ You can easily create a signed IPA for your Xcode project with Bitrise. All you 
 
 If you're all set, proceed to setting up IPA export in your workflow:
 
-1. Make sure you have the `Xcode Archive for iOS` step in the app's Workflow Editor, depending on your project type. Select your step.
+1. Make sure you have the `Xcode Archive & Export for iOS` step in the app's Workflow Editor, depending on your project type. Select your step.
 
 1. Set the `Select method for export` input of the step to the type of code signing you want to use.
 
