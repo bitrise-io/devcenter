@@ -2,7 +2,7 @@
 title: Connecting a repository
 menu:
   adding-a-new-app:
-    weight: 3
+    weight: 2
 
 ---
 After you've selected adding a new app, you will find yourself on the `Create app` page.

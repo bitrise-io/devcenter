@@ -2,7 +2,7 @@
 title: Connecting your GitHub/GitLab/Bitbucket account to Bitrise
 menu:
   signing-up:
-    weight: 100
+    weight: 6
 
 ---
 To take full advantage of all the features Bitrise offers, including automatic webhook registration, you need to connect your GitHub/GitLab/Bitbucket account to your Bitrise account. This gives Bitrise __write permissions__ to the repositories on those accounts. You can connect all three Git provider accounts to your Bitrise account, by one of two methods:

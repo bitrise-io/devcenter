@@ -2,7 +2,7 @@
 title: Create your first App on Bitrise.io
 menu:
   getting-started:
-    weight: 4
+    weight: 7
 
 ---
 We are always refining our UI and UX, to achieve the best and smoothest experience possible,

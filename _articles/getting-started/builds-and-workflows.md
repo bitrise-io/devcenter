@@ -2,7 +2,7 @@
 title: Builds & Workflows
 menu:
   getting-started:
-    weight: 1
+    weight: 4
 
 ---
 ## Builds & Workflows

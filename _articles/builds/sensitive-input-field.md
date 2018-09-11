@@ -2,7 +2,7 @@
 title: Sensitive input in public apps
 menu:
   builds:
-    weight: 100
+    weight: 8
 
 ---
 Any sensitive information such as passwords, IDs, and API tokens are exposed in the build logs/bitrise.yml of your public apps, hence visible to anyone who has the build URL of the app. You can hide these inputs with **secret environment variables (env vars)** so that those are not available in build logs/bitrise.yml.
