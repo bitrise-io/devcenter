@@ -2,7 +2,7 @@
 title: Steps
 menu:
   getting-started:
-    weight: 9
+    weight: 8
 
 ---
 Steps represent a block of script execution with predefined input and output variables. [Read more about Steps in the Bitrise CLI section](/bitrise-cli/steps).

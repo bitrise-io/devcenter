@@ -2,7 +2,7 @@
 title: Trial after signing up
 menu:
   signing-up:
-    weight: 4
+    weight: 5
 
 ---
 After you have created your account on Bitrise it will start with a **14-day trial** of

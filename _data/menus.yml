@@ -7,6 +7,30 @@ code-signing:
   identifier: android-code-signing
   weight: 1
 main:
+- title: Tips & Tricks
+  identifier: tips-and-tricks
+  weight: 16
+- title: Builds
+  identifier: builds
+  weight: 6
+- title: Testing
+  identifier: testing
+  weight: 13
+- title: Tutorials
+  identifier: tutorials
+  weight: 14
+- title: Deployment Tutorials
+  identifier: deployment-tutorials
+  weight: 15
+- title: Frequently Asked Questions (FAQ)
+  identifier: faq
+  weight: 17
+- title: Troubleshooting
+  identifier: troubleshooting
+  weight: 18
+- title: API
+  identifier: api
+  weight: 20
 - title: Teams and organizations
   identifier: team-management
   weight: 4
@@ -37,33 +61,9 @@ main:
 - title: Caching
   identifier: caching
   weight: 8
-- title: API
-  identifier: api
-  weight: 20
 - title: Tools
   identifier: tools
   weight: 19
-- title: Troubleshooting
-  identifier: troubleshooting
-  weight: 18
-- title: Frequently Asked Questions (FAQ)
-  identifier: faq
-  weight: 17
-- title: Tips & Tricks
-  identifier: tips-and-tricks
-  weight: 16
-- title: Deployment Tutorials
-  identifier: deployment-tutorials
-  weight: 15
-- title: Tutorials
-  identifier: tutorials
-  weight: 14
-- title: Testing
-  identifier: testing
-  weight: 13
-- title: Builds
-  identifier: builds
-  weight: 6
 team-management:
 - title: Organizations
   identifier: organizations

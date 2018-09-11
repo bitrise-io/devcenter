@@ -2,7 +2,7 @@
 title: Signing up with email
 menu:
   signing-up:
-    weight: 3
+    weight: 4
 
 ---
 You can sign up to Bitrise in one step with your email address.
