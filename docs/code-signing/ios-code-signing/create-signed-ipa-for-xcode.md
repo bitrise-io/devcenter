@@ -1,4 +1,4 @@
-You can easily create a signed IPA for your project with Bitrise. All you need to do is set the relevant inputs of our `Xcode Archive` step!
+You can easily create a signed IPA for your Xcode project with Bitrise. All you need to do is set the relevant inputs of our `Xcode Archive & Export for iOS` step!
 
 !!! todo "Before you start"
     Before setting up IPA export, make sure that:
