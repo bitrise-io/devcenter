@@ -2,7 +2,7 @@
 title: Deploy your Xamarin app
 menu:
   xamarin:
-    weight: 2
+    weight: 3
 
 ---
 After successfully adding your Xamarin application we will create a default workflow (build configuration) for you.
