@@ -35,4 +35,4 @@ Adding a new app as a public app is incredibly simple: at the start of the proce
 After this, proceed as usual to set up the app.
 
 !!! warning
-    Remember: a public app's build logs and `bitrise.yml` file can be seen by anyone - make sure these files do not expose anything you do not want to be seen! Check out our [Sensitive input in public apps](/builds/sensitive-input-field) section to learn how to protect sensitive input in your public apps.
+    Remember: a public app's build logs and `bitrise.yml` file can be seen by anyone - make sure these files do not expose anything you do not want to be seen!

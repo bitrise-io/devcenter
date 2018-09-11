@@ -16,13 +16,7 @@ main:
 - title: Infrastructure
   identifier: infrastructure
   weight: 3
-- title: Signing up
-  identifier: signing-up
-  weight: 4
-- title: Adding a new app
-  identifier: adding-a-new-app
-  weight: 5
-- title: Team management
+- title: Teams and organizations
   identifier: team-management
   weight: 6
 - title: Webhooks
@@ -78,3 +72,10 @@ builds:
 - title: Triggering builds
   identifier: triggering-builds
   weight: 1
+getting-started:
+- title: Signing up
+  identifier: signing-up
+  weight: 1
+- title: Adding a new app
+  identifier: adding-a-new-app
+  weight: 2

@@ -5,7 +5,7 @@ menu:
     weight: 5
 
 ---
-You can easily create a signed IPA for your Xamarin project with Bitrise. All you need to do is set the relevant inputs of our `Xamarin Archive` step!
+You can easily create a signed IPA for your Xcode project with Bitrise. All you need to do is set the relevant inputs of our `Xcode Archive & Export for iOS` step!
 
 !!! todo "Before you start"
     Before setting up IPA export, make sure that:
@@ -17,7 +17,7 @@ You can easily create a signed IPA for your Xamarin project with Bitrise. All yo
 
 If you're all set, proceed to setting up IPA export in your workflow:
 
-1. Make sure you have the `Xcode Archive for iOS` step in the app's Workflow Editor, depending on your project type. Select your step.
+1. Make sure you have the `Xcode Archive & Export for iOS` step in the app's Workflow Editor, depending on your project type. Select your step.
 
 1. Set the `Select method for export` input of the step to the type of code signing you want to use.
 

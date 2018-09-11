@@ -14,7 +14,7 @@ You are able to authenticate yourself with your Bitbucket user against __Bitrise
 
 Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
 
-![Screenshot](/img/signing-up/bitbucket_signup-2017.png)
+![Screenshot](/img/signing-up/sign-up-bitrise.png)
 
 Select `Bitbucket` for authenticating yourself with this service.
 
@@ -29,8 +29,6 @@ If you press the `Grant access` button, you will be redirected to Bitrise.
 ## Finish signup
 
 You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service's availability, you are also able to connect more accounts, GitHub **and** Bitbucket, for example. Last, but not least, you don't have to stick to your connected account's username.
-
-![Screenshot](/img/signing-up/signup_finish.png)
 
 After that, you are ready to roll.
 
