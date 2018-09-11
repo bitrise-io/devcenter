@@ -1,5 +1,5 @@
 ---
-title: Quick start guide to Bitrise
+title: Bitrise DevCenter - What is Bitrise?
 menu:
   main:
     weight: 1
