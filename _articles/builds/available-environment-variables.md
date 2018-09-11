@@ -2,7 +2,7 @@
 title: Available environment variables
 menu:
   builds:
-    weight: 7
+    weight: 9
 
 ---
 ## Exposed by the Bitrise CLI
