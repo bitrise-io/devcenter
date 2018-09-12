@@ -5,7 +5,9 @@ redirect_from:
 - "/getting-started/bitrise/"
 menu:
   ios-code-signing:
-    weight: 6
+    weight: '6'
+  webhooks:
+    weight: 11
   getting-started:
     weight: 9
 published: false
