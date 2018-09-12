@@ -1,0 +1,1859 @@
+
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>
+			
+				Code Security - Bitrise DevCenter
+			
+		</title>
+		<meta property="og:title" content="Bitrise DevCenter">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:url" content="https://devcenter.bitrise.io">
+		<meta property="og:site_name" content="Bitrise DevCenter">
+		<meta name="theme-color" content="#7e57c2">
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
+		<link rel="mask-icon" href="/favicon.svg" color="#3bc3a3">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png">
+		<link rel="apple-touch-icon" href="/apple-touch-icon-76x76.png" type="image/png" sizes="76x76">
+		<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" type="image/png" sizes="120x120">
+		<link rel="apple-touch-icon" href="/apple-touch-icon-152x152.png" type="image/png" sizes="152x152">
+		<link rel="canonical" href="https://devcenter.bitrise.io">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="/assets/main.css">
+		<script src="/assets/javascripts/simple-jekyll-search.js"></script>
+	</head>
+	<body class="mdc-typography">
+		<header class="top-bar">
+			<div class="middle-aligner">
+				<div class="subgroup">
+					<a class="logo" href="/"><img src="/assets/images/logo.svg"></a>
+					<button class="burger material-icon" onclick="toggleSideBar()"></button>
+					<div class="title">
+						
+							Code Security
+						
+					</div>
+				</div>
+				<div class="search-bar">
+					<div class="input-wrapper">
+						<label class="search-icon material-icon"></label>
+						<input type="text" id="search-input" placeholder="Search">
+						<button class="search-clear material-icon" onclick="clearSearchField()"></button>
+					</div>
+					<ul id="results-container"></ul>
+				</div>
+				<a class="source-code" href="https://github.com/bitrise-io/devcenter/" target="_blank">
+					<object type="image/svg+xml" data="/assets/images/logo-github.svg" class="source-host-logo"></object>
+					<span class="source-host-name">GitHub</span>
+				</a>
+			</div>
+		</header>
+		<div class="column-parent middle-aligner">
+			<nav id="side-menu">
+				<label>Bitrise DevCenter</label>
+				
+				
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/index" title="Bitrise DevCenter - What is Bitrise?">Bitrise DevCenter - What is Bitrise?</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Getting Started</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/index" title="Quick start guide to Bitrise">Quick start guide to Bitrise</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Signing up</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/signing-up/signing-up-with-github" title="Signing up with GitHub">Signing up with GitHub</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/signing-up/signing-up-with-bitbucket" title="Signing up with Bitbucket">Signing up with Bitbucket</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/signing-up/signing-up-with-gitlab" title="Signing up with GitLab">Signing up with GitLab</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/signing-up/signing-up-with-email" title="Signing up with email">Signing up with email</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/signing-up/trial-after-signing-up" title="Trial after signing up">Trial after signing up</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/signing-up/connecting-account-bitrise" title="Connecting your GitHub/GitLab/Bitbucket account to Bitrise">Connecting your GitHub/GitLab/Bitbucket account to Bitrise</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/signing-up/connecting-apple-dev-account" title="Connecting your Apple Developer Account to Bitrise">Connecting your Apple Developer Account to Bitrise</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/signing-up/self-hosted-gitlab" title="Connecting self-hosted GitLab instances">Connecting self-hosted GitLab instances</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Adding a new app</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/adding-a-new-app/index" title="Adding a new app">Adding a new app</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/adding-a-new-app/connecting-a-repository" title="Connecting a repository">Connecting a repository</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/adding-a-new-app/setting-up-ssh-keys" title="Setting up SSH keys">Setting up SSH keys</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/adding-a-new-app/setting-up-configuration" title="Setting up configuration">Setting up configuration</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/adding-a-new-app/public-apps" title="Public apps">Public apps</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/builds-and-workflows" title="Builds & Workflows">Builds & Workflows</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/code-security" title="Code Security" class="current">Code Security</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/account-security" title="Account Security">Account Security</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/getting-started-workflows" title="Workflows">Workflows</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/getting-started/getting-started-steps" title="Steps">Steps</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Infrastructure</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/infrastructure/available-stacks" title="Available Stacks">Available Stacks</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/infrastructure/virtual-machines" title="Virtual Machines">Virtual Machines</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/infrastructure/the-environment" title="The Android/Linux/Docker environment">The Android/Linux/Docker environment</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Teams and organizations</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/team-management/index" title="Adding a new team member">Adding a new team member</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/team-management/changing-the-owner-of-an-app" title="Changing the owner of an app">Changing the owner of an app</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Organizations</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/team-management/organizations/creating-org" title="Creating organizations">Creating organizations</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/team-management/organizations/managing-billing-sub" title="Managing billing and subscription for organizations">Managing billing and subscription for organizations</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/team-management/organizations/managing-invoices" title="Managing the invoices of your organizations">Managing the invoices of your organizations</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/team-management/organizations/org-url" title="Finding the URL of your organizations">Finding the URL of your organizations</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/team-management/organizations/members-organizations" title="Managing organization members">Managing organization members</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/team-management/organizations/org-ownership" title="Changing the owners of an organization">Changing the owners of an organization</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/team-management/organizations/managing-apps" title="Managing the apps of organizations">Managing the apps of organizations</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Webhooks</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/index" title="Adding webhooks">Adding webhooks</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/adding-a-github-webhook" title="Adding a GitHub webhook">Adding a GitHub webhook</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/adding-a-bitbucket-webhook" title="Adding a Bitbucket webhook">Adding a Bitbucket webhook</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/adding-a-gitlab-webhook" title="Adding a Gitlab webhook">Adding a Gitlab webhook</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/adding-a-gogs-webhook" title="Adding a Gogs webhook">Adding a Gogs webhook</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/adding-a-slack-webhook" title="Adding a Slack webhook">Adding a Slack webhook</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/adding-a-visual-studio-webhook" title="Adding a Visual Studio webhook">Adding a Visual Studio webhook</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/adding-assembla-webhook" title="Adding an Assembla webhook">Adding an Assembla webhook</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/adding-deveo-webhook" title="Adding a Deveo webhook">Adding a Deveo webhook</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/adding-outgoing-webhooks" title="Adding outgoing webhooks">Adding outgoing webhooks</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/trigger-map" title="Using the Trigger Map to trigger builds">Using the Trigger Map to trigger builds</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/webhooks/troubleshooting" title="Webhook Troubleshooting">Webhook Troubleshooting</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Builds</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Triggering builds</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/triggering-builds/triggering-builds" title="Triggering builds">Triggering builds</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/triggering-builds/trigger-code-push" title="Triggering builds with code push">Triggering builds with code push</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/triggering-builds/trigger-pull-request" title="Triggering builds with pull requests">Triggering builds with pull requests</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/triggering-builds/trigger-git-tags" title="Triggering builds with Git Tags">Triggering builds with Git Tags</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/triggering-builds/trigger-multiple-workflows" title="Starting parallel builds with a single trigger">Starting parallel builds with a single trigger</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/triggering-builds/status-reporting" title="Reporting the build status to your git hosting provider">Reporting the build status to your git hosting provider</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/Scheduling-Builds" title="Scheduling your builds">Scheduling your builds</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/rolling-builds" title="Rolling builds">Rolling builds</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/selective_builds" title="Selective builds">Selective builds</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/build-artifacts-online" title="Build artifacts online">Build artifacts online</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/build-numbering-and-app-versioning" title="Build numbering and app versioning">Build numbering and app versioning</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/env-vars-secret-env-vars" title="Secrets and Env Vars">Secrets and Env Vars</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/sensitive-input-field" title="Sensitive input in public apps">Sensitive input in public apps</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/builds/available-environment-variables" title="Available environment variables">Available environment variables</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Code signing</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Android code signing</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/android-code-signing/android-code-signing-procedures" title="Android code signing procedures">Android code signing procedures</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step" title="Android code signing using Bitrise Sign APK step">Android code signing using Bitrise Sign APK step</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/android-code-signing/android-code-signing-with-android-studio" title="Android code signing with Android Studio">Android code signing with Android Studio</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/android-code-signing/android-code-signing-in-gradle" title="Android code signing in Gradle">Android code signing in Gradle</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/xamarin-android-code-signing/xamarin-android-code-signing" title="Xamarin Android code signing">Xamarin Android code signing</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">iOS code signing</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/code-signing" title="iOS code signing on Bitrise">iOS code signing on Bitrise</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/collecting-files-with-codesigndoc" title="Collecting and exporting code signing files with codesigndoc">Collecting and exporting code signing files with codesigndoc</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/ios-auto-provisioning" title="Managing iOS code signing files - automatic provisioning">Managing iOS code signing files - automatic provisioning</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/ios-manual-provisioning" title="Managing iOS code signing files - manual provisioning">Managing iOS code signing files - manual provisioning</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/create-signed-ipa-for-xcode" title="Creating a signed .ipa for Xcode projects">Creating a signed .ipa for Xcode projects</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/create-signed-ipa-for-xamarin" title="Creating a signed .ipa for Xamarin projects">Creating a signed .ipa for Xamarin projects</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/resigning-an-ipa" title="Re-signing an .ipa">Re-signing an .ipa</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/ionic-cordova-code-signing" title="Code signing with Ionic and Cordova projects">Code signing with Ionic and Cordova projects</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/protecting-your-code-signing-files" title="Protecting your code signing files">Protecting your code signing files</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/generating-code-signing-files" title="Generating code signing files">Generating code signing files</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/exporting-code-signing-files" title="Exporting code signing files without codesigndoc">Exporting code signing files without codesigndoc</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/code-signing/ios-code-signing/code-signing-ios-frameworks" title="Code signing iOS frameworks">Code signing iOS frameworks</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Caching</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/caching/about-caching" title="About caching">About caching</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/caching/caching-cocoapods" title="Caching Cocoapods">Caching Cocoapods</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/caching/caching-gradle" title="Caching Gradle">Caching Gradle</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/caching/caching-maven" title="Caching Maven">Caching Maven</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/caching/caching-ruby-gems" title="Caching Ruby Gems">Caching Ruby Gems</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Bitrise CLI and bitrise.yml</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/index" title="Intro">Intro</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/installation" title="Install and update the Bitrise CLI">Install and update the Bitrise CLI</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/run-your-first-build" title="Run your first build">Run your first build</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/basics-of-bitrise-yml" title="Basics of bitrise.yml">Basics of bitrise.yml</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/bitrise-yml-online" title="bitrise.yml online">bitrise.yml online</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/workflows" title="Workflows">Workflows</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/steps" title="Steps">Steps</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/step-properties" title="Step properties">Step properties</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/step-inputs" title="Step inputs">Step inputs</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/step-outputs" title="Step outputs">Step outputs</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/step-timeout" title="Setting a time limit for steps">Setting a time limit for steps</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/secrets" title="Secrets">Secrets</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/most-important-concepts" title="Most important concepts">Most important concepts</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/bitrise-cli/create-your-own-step" title="Create and share your own Step">Create and share your own Step</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Docker</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/docker/index" title="Docker support on bitrise.io">Docker support on bitrise.io</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/docker/run-your-build-locally-in-docker" title="How to run your build locally in Docker">How to run your build locally in Docker</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/docker/use-your-own-docker-image" title="Use your own Docker image">Use your own Docker image</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Xamarin</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/xamarin/index" title="About Xamarin">About Xamarin</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/xamarin/restore-nuget-packages" title="Restore NuGet packages">Restore NuGet packages</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/xamarin/deploy-your-xamarin-app" title="Deploy your Xamarin app">Deploy your Xamarin app</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/xamarin/add-custom-sources-to-nuget" title="Add custom sources to NuGet">Add custom sources to NuGet</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Fastlane</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/fastlane/fastlane-tools-integration" title="fastlane tools integration">fastlane tools integration</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/fastlane/how-to-configure-fastlane-match-for-bitrise" title="How to configure fastlane match for Bitrise">How to configure fastlane match for Bitrise</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Testing</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/testing/registering-a-test-device" title="Registering a test device">Registering a test device</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/testing/run-your-tests-in-the-app-center" title="Run your tests in the Visual Studio App Center">Run your tests in the Visual Studio App Center</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/testing/android-run-a-unit-test" title="Android unit test">Android unit test</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Tutorials</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/community-created" title="Community Created Tutorials">Community Created Tutorials</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/hipchat-message" title="HipChat message with build status and details">HipChat message with build status and details</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/how-to-use-the-generic-file-storage" title="How to use the Generic File Storage">How to use the Generic File Storage</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/download-or-replace-project-resources" title="Download or replace project resources">Download or replace project resources</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/efficient-continuous-integration-and-deployment-workflow-for-ios" title="Efficient Continuous Integration and Deployment Workflow for iOS development">Efficient Continuous Integration and Deployment Workflow for iOS development</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/vpn-configuration" title="Configure and connect to your VPN">Configure and connect to your VPN</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/auto-deploy-middleman-project" title="Auto deploy your Middleman blog / static website">Auto deploy your Middleman blog / static website</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/build-with-fake" title="Build with FAKE (F# Make)">Build with FAKE (F# Make)</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Deployment Tutorials</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/deploy/android-deployment" title="Android deployment">Android deployment</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/deploy/bitrise-app-deployment" title="Bitrise OTA App Deployment">Bitrise OTA App Deployment</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/deploy/publish-your-app-to-appaloosa" title="Publish your app to Appaloosa">Publish your app to Appaloosa</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tutorials/deploy/deploy-to-testfairy-with-bitrise" title="Deploy to TestFairy with Bitrise">Deploy to TestFairy with Bitrise</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Tips & Tricks</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/tips-and-tricks/android-tips-and-tricks" title="Android tips and tricks">Android tips and tricks</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tips-and-tricks/skip-a-build" title="Skip a Build (skip ci)">Skip a Build (skip ci)</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tips-and-tricks/attach-any-file-to-build" title="Attach any file as an Artifact to the Build">Attach any file as an Artifact to the Build</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tips-and-tricks/expose-environment-variable" title="Expose an Environment Variable and use it in another Step">Expose an Environment Variable and use it in another Step</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tips-and-tricks/dont-mark-build-failed-if-step-fails" title="Don't mark the Build as failed if a given step would fail (ignore the error of the Step)">Don't mark the Build as failed if a given step would fail (ignore the error of the Step)</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tips-and-tricks/disable-a-step-by-condition" title="Enable/Disable a step (optionally, based on a condition)">Enable/Disable a step (optionally, based on a condition)</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tips-and-tricks/xcodebuild-export-options" title="Xcode Archive: export options">Xcode Archive: export options</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tips-and-tricks/install-additional-tools" title="Install Any Additional Tool">Install Any Additional Tool</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tips-and-tricks/optimize-your-build-times" title="Optimize your build times">Optimize your build times</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/tips-and-tricks/use-bitrise-yml-from-repository" title="Use bitrise.yml from repository">Use bitrise.yml from repository</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Frequently Asked Questions (FAQ)</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/how-to-change-the-owner-of-an-app" title="How to change the owner of an app">How to change the owner of an app</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/organization-faq" title="Organization FAQ">Organization FAQ</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/adding-projects-with-submodules" title="Adding projects with submodules or with private CocoaPods repos">Adding projects with submodules or with private CocoaPods repos</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/android-x86-emulator" title="Android x86 Emulator">Android x86 Emulator</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/how-to-generate-ssh-keypair" title="How to generate an SSH key pair">How to generate an SSH key pair</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/grant-access-to-github-organization" title="Grant access to a GitHub Organization">Grant access to a GitHub Organization</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/grant-access-to-bitbucket-team" title="Grant access to a Bitbucket team">Grant access to a Bitbucket team</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page" title="I can't see my GitHub organization / repository on the Add New App page">I can't see my GitHub organization / repository on the Add New App page</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/no-builds-are-triggered-automatically" title="No builds are triggered when I push code into the repository">No builds are triggered when I push code into the repository</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac" title="Why my build takes longer on Bitrise than on my Mac?">Why my build takes longer on Bitrise than on my Mac?</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/faq/should-i-commit-my-dependencies-into-my-repository" title="Should I commit my dependencies into my repository?">Should I commit my dependencies into my repository?</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Troubleshooting</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/troubleshooting/enabling-bitrise-support-user" title="Enabling Bitrise Support user for your app">Enabling Bitrise Support user for your app</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/troubleshooting/workflow-editor-doesnt-load" title="Workflow Editor doesn't load">Workflow Editor doesn't load</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/troubleshooting/frequent-android-issues" title="Frequent Android issues">Frequent Android issues</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/troubleshooting/frequent-ios-issues" title="Frequent iOS issues">Frequent iOS issues</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/troubleshooting/known-xcode-issues" title="List of known Xcode issues">List of known Xcode issues</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/troubleshooting/trigger-doesnt-work" title="Build Trigger does not work">Build Trigger does not work</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/troubleshooting/github-pull-request-status-troubleshooting" title="Build status indicator on GitHub/GitLab/Bitbucket does not work">Build status indicator on GitHub/GitLab/Bitbucket does not work</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">Tools</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/tools/bitrise-tools" title="Bitrise tools">Bitrise tools</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">API</button>
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a href="/api/build-trigger" title="Build Trigger API">Build Trigger API</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/api/app-status-badge" title="App Status Image/Badge API">App Status Image/Badge API</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/api/outgoing-webhooks" title="Outgoing Webhooks">Outgoing Webhooks</a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a href="/api/v0.1" title="Bitrise.io API v0.1 (Work In Progress)">Bitrise.io API v0.1 (Work In Progress)</a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+</ol>
+
+
+			</nav>
+			<main class="content">
+				
+					<div class="title-with-source-edit">
+						<h1>Code Security</h1>
+						<a class="material-icon" href="https://github.com/bitrise-io/devcenter/blob/master/docs/getting-started/code-security.md" target="_blank"></a>
+					</div>
+				
+				<p>To guarantee the security of your builds we use <a href="/infrastructure/virtual-machines">virtual machines</a> for builds.
+Every build runs in its own, clean virtual machine and we discard the whole virtual machine after the build finishes,
+erasing every file your build uses and every change you make during your build.</p>
+
+<p><em>This is also true for the Linux/Android stacks, which use Docker containers to run the build.
+The build itself still gets a full virtual machine where no other Docker container is started,
+only the one used as the environment of the build. In short we only use Docker containers
+to manage the environment, not for build environment isolation - that’s ensured by using
+full virtual machines for every build.</em></p>
+
+<p>This way your builds are always protected from changes made by others and from your previous builds,
+no one else can access your code and you can use a stable environment to define your build workflow. Every build is completed in an isolated environment, unrelated to any previous or parallelly running builds.</p>
+
+<h2 id="source-code">Source code <a href="#source-code" class="anchor-symbol">⚓</a></h2>
+
+<p>We don’t store your source code. The source code is only accessed on the build machines (virtual machines)
+the way you define it in your Bitrise Configuration (workflow). If you don’t have a Git Clone step in your configuration,
+then the source code won’t be touched at all. At the end of the build the whole Virtual Machine is destroyed.</p>
+
+<h2 id="code-signing-and-other-files">Code signing and other files <a href="#code-signing-and-other-files" class="anchor-symbol">⚓</a></h2>
+
+<p>The files you upload in the Workflow Editor (<strong>Code Signing &amp; Files</strong> section of the editor)
+are stored on <code class="highlighter-rouge">Amazon S3</code> in a way that it’s only accessible for the web servers.</p>
+
+<p>The required credentials are not stored in any database, it is only available in the web servers’ environment.
+Build servers can’t access the files directly either.
+When a build starts the web server generates a read-only,
+time limited access URL for these files, using <a href="https://docs.aws.amazon.com/aws-sdk-php/v3/guide/service/s3-presigned-url.html">Amazon S3 presigned URLs</a>.</p>
+
+<h2 id="passwords">Passwords <a href="#passwords" class="anchor-symbol">⚓</a></h2>
+
+<p>Passwords are stored in a hashed, encrypted form.
+We are encrypting the passwords with <a href="https://en.wikipedia.org/wiki/Bcrypt">bcrypt algorithm</a>, using multiple stretches.</p>
+
+			</main>
+		</div>
+		<footer>
+			<div class="middle-aligner">
+				<div class="meta">
+					Copyright © 2014 - 2018 Bitrise Ltd.
+					<br>
+					<em>Powered by <a href="https://jekyllrb.com/">Jekyll</a></em>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-53276411-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+
+	<script src="/assets/javascripts/search-input.js"></script>
+	<script src="/assets/javascripts/side-menu.js"></script>
+	<script src="/assets/javascripts/code-collapse.js"></script>
+</html>
