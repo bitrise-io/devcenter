@@ -18,8 +18,7 @@ As an example, if you click into an input of the third step of your workflow, th
 
 You can also replace the variable for a new one in `Env Vars`. Delete the old value and set the new one. If you toggle the `Replace variables in inputs` to the right, the new value will be used everywhere in your workflow.
 
-!!! warning "Do not add secrets to your `Env Vars`"
-    Contrary to [secret env vars](#about-secrets/), env vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to `Env Vars`.
+**IMPORTANT**: Contrary to [secret env vars](#about-secrets/), env vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to `Env Vars`.
 
 ### Setting an env var in every/in a specific workflow
 
@@ -43,9 +42,10 @@ If you toggle the `Replace variables in inputs` to the right, the new value will
 
 The `Expose for Pull Request` can be enabled if you want your secrets to be exposed in your build logs in PRs.
 
-!!! warning "Public apps and sensitive information"
-    * In the case of [public apps](/adding-a-new-app/public-apps/), step input fields containing sensitive information are marked with a [`SENSITIVE`](/builds/sensitive-input-fields/) label and only secret env vars can be used there!
-    * The `Expose for Pull Request` toggle is by **default disabled** and cannot be enabled since your secrets must be kept hidden in publicly accessible build logs!
+**IMPORTANT:**
+
+* In the case of [public apps](/adding-a-new-app/public-apps/), step input fields containing sensitive information are marked with a `[SENSITIVE](/builds/sensitive-input-fields/)` label and only secret env vars can be used there! 
+* The `Expose for Pull Request` toggle is by **default disabled** and cannot be enabled since your secrets must be kept hidden in publicly accessible build logs!
 
 Head over to [Secrets](/bitrise-cli/secrets/) for more information on [secret filtering](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli/).
 
