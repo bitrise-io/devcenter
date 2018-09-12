@@ -34,15 +34,6 @@ main:
 - title: Teams and organizations
   identifier: team-management
   weight: 4
-- title: Fastlane
-  identifier: fastlane
-  weight: 12
-- title: Xamarin
-  identifier: xamarin
-  weight: 11
-- title: Docker
-  identifier: docker
-  weight: 10
 - title: Bitrise CLI and bitrise.yml
   identifier: bitrise-cli
   weight: 9
@@ -79,3 +70,13 @@ builds:
 - title: Triggering builds
   identifier: triggering-builds
   weight: 1
+tutorials: 
+- title: Fastlane
+  identifier: fastlane
+  weight: 1
+- title: Xamarin
+  identifier: xamarin
+  weight: 2
+- title: Docker
+  identifier: docker
+  weight: 3
