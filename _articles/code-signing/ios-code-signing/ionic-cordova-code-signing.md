@@ -73,8 +73,8 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
 
    __Production distribution example__
    ```yaml 
-   - generate-cordova-build-configuration: 
-   	   inputs: 
+   - generate-cordova-build-configuration:	
+   	inputs:
        - development_team: $BITRISE_DEVELOPER_TEAM 
        - package_type: app-store 
        - code_sign_identity: $BITRISE_PRODUCTION_CODESIGN_IDENTITY 
