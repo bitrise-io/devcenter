@@ -7,3 +7,4 @@ fields:
   name: title
   config:
     required: true
+  label: title
