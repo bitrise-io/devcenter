@@ -5,8 +5,3 @@ redirect_from: []
 published: false
 
 ---
-Getting started with iOS.
-
-Editing.
-
-More editing. 
