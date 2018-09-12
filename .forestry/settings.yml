@@ -4,10 +4,14 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: _articles/infrastructure
+  label: Infrastructure
+  create: all
+  match: "**/*"
 - type: document
   path: _articles/index.md
   label: Bitrise DevCenter - What is Bitrise?
-  match: "**/*"
 - type: document
   path: how-to-use-forestry.md
   label: Help
