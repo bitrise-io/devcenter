@@ -62,8 +62,8 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
 	__Development distribution example__:
     
 	```yaml
-	- generate-cordova-build-configuration: 
-    	inputs: 
+	- generate-cordova-build-configuration:
+    	inputs:
         - development_team: $BITRISE_DEVELOPER_TEAM 
         - package_type: development 
         - code_sign_identity: $BITRISE_DEVELOPMENT_CODESIGN_IDENTITY 
@@ -71,16 +71,18 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
         - configuration: debug
     ```
 
-   __Production distribution example__
+   __Production distribution example__:
+   
    ```yaml 
-   - generate-cordova-build-configuration:	
-   	inputs:
+   - generate-cordova-build-configuration:
+       inputs:
        - development_team: $BITRISE_DEVELOPER_TEAM 
        - package_type: app-store 
        - code_sign_identity: $BITRISE_PRODUCTION_CODESIGN_IDENTITY 
        - provisioning_profile: $BITRISE_PRODUCTION_PROFILE 
        - configuration: release
     ```
+
 5. Add the `Cordova Archive` or the `Ionic Archive` step to your workflow.
 6. Fill in the required inputs.
    * The `Platform` input needs to be set to: `device`.
