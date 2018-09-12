@@ -5,6 +5,21 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: _articles/docker
+  label: Docker
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/xamarin
+  label: Xamarin
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/testing
+  label: Testing
+  create: all
+  match: "**/*"
+- type: directory
   path: _articles/caching
   label: Caching
   create: all
