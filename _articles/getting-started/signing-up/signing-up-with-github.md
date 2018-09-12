@@ -28,7 +28,7 @@ If you press the `Authorize application` button, you will be redirected to Bitri
 
 ## Finish signup
 
-You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service's availability, you are also able to connect more accounts, GitHub **and** Bitbucket, for example. Last, but not least, you don't have to stick to your connected account's username.![Screenshot](/img/signing-up/signup_finish.png)
+You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service's availability, you are also able to connect more accounts, GitHub **and** Bitbucket, for example. Last, but not least, you don't have to stick to your connected account's username.
 
 After that, you are ready to roll.
 
