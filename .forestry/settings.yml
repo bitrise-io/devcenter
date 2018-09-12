@@ -53,21 +53,6 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/docker
-  label: Docker
-  create: all
-  match: "**/*"
-- type: directory
-  path: _articles/xamarin
-  label: Xamarin
-  create: all
-  match: "**/*"
-- type: directory
-  path: _articles/fastlane
-  label: Fastlane
-  create: all
-  match: "**/*"
-- type: directory
   path: _articles/testing
   label: Testing
   create: all
