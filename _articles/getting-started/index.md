@@ -11,10 +11,10 @@ Bitrise is powerful and complex - but getting started is easy and intuitive! You
 
 First of all, you need a Bitrise account. Choose one of the following to sign up:
 
-- [Email](/getting-started/signing-up/signing-up-with-email)
-- [GitHub](/getting-started/signing-up/signing-up-with-github)
-- [GitLab](/getting-started/signing-up/signing-up-with-gitlab)
-- [Bitbucket](/getting-started/signing-up/signing-up-with-bitbucket)
+* [Email](/getting-started/signing-up/signing-up-with-email)
+* [GitHub](/getting-started/signing-up/signing-up-with-github)
+* [GitLab](/getting-started/signing-up/signing-up-with-gitlab)
+* [Bitbucket](/getting-started/signing-up/signing-up-with-bitbucket)
 
 Signing up with either of the Git service providers means you connect your Bitrise account to your account on that service provider. With a connected account, you can easily grant Bitrise access to any of your repositories on that account.
 
@@ -28,10 +28,10 @@ After signing up, you can connect your Bitrise account to all of the three suppo
 
 ### Privacy
 
-Set your app's privacy setting to either __private__ or [__public__](/getting-started/adding-a-new-app/public-apps):
+Set your app's privacy setting to either **private** or [**public**](/getting-started/adding-a-new-app/public-apps):
 
-- Private apps can be accessed only by you, your organization members and team members.
-- Public apps expose their build logs and their `bitrise.yml` file to everyone.
+* Private apps can be accessed only by you, your organization members and team members.
+* Public apps expose their build logs and their `bitrise.yml` file to everyone.
 
 ![App privacy](/img/adding-a-new-app/app-privacy.png)
 
@@ -39,25 +39,24 @@ Set your app's privacy setting to either __private__ or [__public__](/getting-st
 
 Tell Bitrise where the code of your app is stored. You can either:
 
-- [Connect a repository from a connected GitHub/GitLab/Bitbucket account](/getting-started/adding-a-new-app/connecting-a-repository). Bitrise will then automatically display all the available repositories from the selected service, all you need to do is choose one.
+* [Connect a repository from a connected GitHub/GitLab/Bitbucket account](/getting-started/adding-a-new-app/connecting-a-repository). Bitrise will then automatically display all the available repositories from the selected service, all you need to do is choose one.
 
-!!! note "Why does Bitrise need write permissions on Github/Bitbucket/GitLab?"
-    Connecting your GitHub/GitLab/Bitbucket account gives Bitrise write permission to the repositories. There are two things that Bitrise couldn't do without it:
+<div class=“message-box note”><div class=“message-title”> Why does Bitrise need write permissions on Github/Bitbucket/GitLab? </div> <div class=“message-content”> Connecting your GitHub/GitLab/Bitbucket account gives Bitrise write permission to the repositories. There are two things that Bitrise couldn't do without it:
 
-    - Adding an SSH key to the selected repository
-    - Registering a Webhook for the repository
+* Adding an SSH key to the selected repository
+* Registering a Webhook for the repository</div></div>
 
-- Manually add the location of the source code: choose the `Other/Manual` option then paste an __HTTPS git clone URL__.
 
-- You can also use a repository that is on [a self-hosted GitLab instance](getting-started/adding-a-new-app/self-hosted-gitlab).
+* Manually add the location of the source code: choose the `Other/Manual` option then paste an **HTTPS git clone URL**.
+* You can also use a repository that is on [a self-hosted GitLab instance](getting-started/adding-a-new-app/self-hosted-gitlab).
 
 ### Setup repository access
 
 [Set up an SSH key to access the selected repository](/getting-started/adding-a-new-app/setting-up-ssh-keys/). This is required for private apps to ensure Bitrise can clone the repository. You can:
 
-- auto-add the SSH key Bitrise generated.
-- copy the public key Bitrise generated.
-- use your own SSH keypair. Make sure your private key is an RSA key without a passphrase.
+* auto-add the SSH key Bitrise generated.
+* copy the public key Bitrise generated.
+* use your own SSH keypair. Make sure your private key is an RSA key without a passphrase.
 
 ![Screenshot](/img/adding-a-new-app/bitrise_auto_add_ssh_key2.png)
 
@@ -79,9 +78,9 @@ After setting up repository access, type the branch of the repository you wish t
 
 Once you added an app, your first build will be kicked off automatically. This means running a workflow which is a collection of Steps. Steps represent a block of script execution with predefined input and output variables and they are the heart of Bitrise. You can create new workflows, chain workflows together. You can also modify Step inputs, add and remove Steps to and from workflows.
 
-- [The build process](/getting-started/builds-and-workflows)
-- [Workflows](/getting-started/getting-started-workflows)
-- [Steps](/getting-started/getting-started-steps)
+* [The build process](/getting-started/builds-and-workflows)
+* [Workflows](/getting-started/getting-started-workflows)
+* [Steps](/getting-started/getting-started-steps)
 
 ## Teams and organizations
 
