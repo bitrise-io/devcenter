@@ -4,34 +4,52 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: how-to-use-forestry.md
+  label: Help
+  read_only: true
+- type: document
+  path: _articles/index.md
+  label: Bitrise DevCenter - What is Bitrise?
 - type: directory
-  path: _articles/tools
-  label: Tools
+  path: _articles/getting-started
+  label: Getting started
+  create: all
+  match: "**/*"
+  new_doc_ext: md
+- type: directory
+  path: _articles/infrastructure
+  label: Infrastructure
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/api
-  label: API
+  path: _articles/team-management
+  label: Teams and organizations
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/fastlane
-  label: Fastlane
+  path: _articles/webhooks
+  label: Webhooks
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/faq
-  label: FAQ
+  path: _articles/builds
+  label: Builds
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/tips-and-tricks
-  label: Tips and tricks
+  path: _articles/code-signing
+  label: Code signing
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/tutorials
-  label: Tutorials
+  path: _articles/caching
+  label: Caching
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/bitrise-cli
+  label: Bitrise CLI
   create: all
   match: "**/*"
 - type: directory
@@ -45,56 +63,43 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: _articles/fastlane
+  label: Fastlane
+  create: all
+  match: "**/*"
+- type: directory
   path: _articles/testing
   label: Testing
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/caching
-  label: Caching
+  path: _articles/tutorials
+  label: Tutorials
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/webhooks
-  label: Webhooks
+  path: _articles/tips-and-tricks
+  label: Tips and tricks
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/infrastructure
-  label: Infrastructure
-  create: all
-  match: "**/*"
-- type: document
-  path: _articles/index.md
-  label: Bitrise DevCenter - What is Bitrise?
-- type: document
-  path: how-to-use-forestry.md
-  label: Help
-  read_only: true
-- type: directory
-  path: _articles/team-management
-  label: Teams and organizations
-  create: all
-  match: "**/*"
-- type: directory
-  path: _articles/getting-started
-  label: Getting started
-  create: all
-  match: "**/*"
-  new_doc_ext: md
-- type: directory
-  path: _articles/code-signing
-  label: Code signing
-  create: all
-  match: "**/*"
-- type: directory
-  path: _articles/bitrise-cli
-  label: Bitrise CLI
+  path: _articles/faq
+  label: FAQ
   create: all
   match: "**/*"
 - type: directory
   path: _articles/troubleshooting
   label: Troubleshooting
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/tools
+  label: Tools
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/api
+  label: API
   create: all
   match: "**/*"
 upload_dir: _articles/img
