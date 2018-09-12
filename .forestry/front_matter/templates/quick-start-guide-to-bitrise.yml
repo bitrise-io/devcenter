@@ -1,0 +1,15 @@
+---
+label: Quick start guide to Bitrise
+hide_body: 
+is_partial: 
+fields:
+- name: title
+  label: Title
+  type: text
+  hidden: false
+  default: ''
+- name: redirect_from
+  label: Redirect from
+  type: list
+  hidden: false
+  default: ''
