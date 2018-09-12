@@ -2,3 +2,4 @@ site/
 .bitrise*
 .directory
 gg.conf.json
+.DS_Store

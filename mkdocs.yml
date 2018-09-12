@@ -144,6 +144,7 @@ pages:
   - Android deployment: tutorials/deploy/android-deployment.md
   - Bitrise OTA App Deployment: tutorials/deploy/bitrise-app-deployment.md
   - Publish your app to Appaloosa: tutorials/deploy/publish-your-app-to-appaloosa.md
+  - Upload to DeployGate: tutorials/deploy/deploy-apps-to-deploygate-from-bitrise.md
   - Deploy to TestFairy with Bitrise: tutorials/deploy/deploy-to-testfairy-with-bitrise.md
 - Tips & Tricks:
   - Android tips and tricks: tips-and-tricks/android-tips-and-tricks.md
