@@ -5,6 +5,26 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: _articles/tools
+  label: Tools
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/api
+  label: API
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/fastlane
+  label: Fastlane
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/faq
+  label: FAQ
+  create: all
+  match: "**/*"
+- type: directory
   path: _articles/tips-and-tricks
   label: Tips and tricks
   create: all
