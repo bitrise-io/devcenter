@@ -33,4 +33,4 @@ Every organization must have at least one owner.
    ![Screenshot](/img/team-management/organization/org-owners.png)
 5. Find the account you wish to remove and click the little checkmark on the right.
 
-   **Organizations must have at least one owner.** If you are trying to remove the only owner of the organization, the system will throw an error message. An organization must have at least one owner.
+   **Organizations must have at least one owner.** If you are trying to remove the only owner of the organization, the system will throw an error message.
