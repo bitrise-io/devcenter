@@ -9,11 +9,10 @@ You can sign up to Bitrise in one step with your email address.
 
 ![Screenshot](/img/signing-up/sign-up-bitrise.png)
 
-!!! note
-    If you would like to use your GitHub / Bitbucket account, please check out the following devcenter articles:
+If you would like to use your GitHub / Bitbucket account, please check out the following devcenter articles:
 
-    * [Signing up with GitHub](/signing-up/signing-up-with-github)
-    * [Signing up with Bitbucket](/signing-up/signing-up-with-bitbucket)
+* [Signing up with GitHub](/getting-started/signing-up/signing-up-with-github)
+* [Signing up with Bitbucket](/getting-started/signing-up/signing-up-with-bitbucket)
 
 ## Sign up
 
