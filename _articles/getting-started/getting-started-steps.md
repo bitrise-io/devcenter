@@ -103,8 +103,7 @@ The only reason to change it is if your input includes the `$` character (in a p
 and you want to keep the `$` character in the input, instead of
 replacing it with an environment variable.
 
-!!! note
-If you want to reference another environment variable, even if that one's value includes the $ character, you have to **enable** this option, or else your reference won't work. In such a case, **disable this option where you specify the value with $ in it**, and enable the option everywhere else where you reference that environment variable.
+**IMPORTANT:** If you want to reference another environment variable, even if that one's value includes the $ character, you have to **enable** this option, or else your reference won't work. In such a case, **disable this option where you specify the value with $ in it**, and enable the option everywhere else where you reference that environment variable.
 
 ### Skipping Steps
 
