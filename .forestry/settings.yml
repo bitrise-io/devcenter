@@ -4,13 +4,43 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: how-to-use-forestry.md
+  label: Help
+  read_only: true
 - type: directory
   path: _articles
-  label: Articles
+  label: All articles
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/team-management
+  label: Teams and organizations
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/getting-started
+  label: Getting started
+  create: all
+  match: "**/*"
+  new_doc_ext: md
+- type: directory
+  path: _articles/code-signing
+  label: Code signing
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/bitrise-cli
+  label: Bitrise CLI
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/troubleshooting
+  label: Troubleshooting
   create: all
   match: "**/*"
 upload_dir: _articles/img
-public_path: "/img"
+public_path: "/_articles/img"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
