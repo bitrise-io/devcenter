@@ -1,5 +1,6 @@
 ---
 title: Bitrise DevCenter - What is Bitrise?
+permalink: /
 menu:
   main:
     weight: 1
