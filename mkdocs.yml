@@ -55,14 +55,15 @@ pages:
   - Adding an Assembla webhook: webhooks/adding-assembla-webhook.md
   - Adding a Deveo webhook: webhooks/adding-deveo-webhook.md
   - Adding outgoing webhooks: webhooks/adding-outgoing-webhooks.md
-  - Using the Trigger Map to trigger builds: webhooks/trigger-map.md
   - Webhook Troubleshooting: webhooks/troubleshooting.md
 - Builds:
   - Triggering builds:
     - Triggering builds: builds/triggering-builds/triggering-builds.md
+    - Starting builds manually: builds/triggering-builds/starting-builds-manually.md
     - Triggering builds with code push: builds/triggering-builds/trigger-code-push.md
     - Triggering builds with pull requests: builds/triggering-builds/trigger-pull-request.md
     - Triggering builds with Git Tags: builds/triggering-builds/trigger-git-tags.md
+    - Triggering builds with the Trigger Map: builds/triggering-builds/trigger-map.md
     - Starting parallel builds with a single trigger: builds/triggering-builds/trigger-multiple-workflows.md
     - Reporting the build status to your git hosting provider: builds/triggering-builds/status-reporting.md
   - Scheduling your builds: builds/Scheduling-Builds.md
@@ -70,6 +71,7 @@ pages:
   - Selective builds: builds/selective_builds.md
   - Build artifacts online: builds/build-artifacts-online.md
   - Build numbering and app versioning: builds/build-numbering-and-app-versioning.md
+  - Accessing the bitrise.yml of builds: builds/bitrise-yml-online.md
   - Secrets and Env Vars: builds/env-vars-secret-env-vars.md
   - Sensitive input in public apps: builds/sensitive-input-field.md
   - Available environment variables: builds/available-environment-variables.md
@@ -104,9 +106,8 @@ pages:
   - Install and update the Bitrise CLI: bitrise-cli/installation.md
   - Run your first build: bitrise-cli/run-your-first-build.md
   - Basics of bitrise.yml: bitrise-cli/basics-of-bitrise-yml.md
-  - bitrise.yml online: bitrise-cli/bitrise-yml-online.md
-  - Workflows: bitrise-cli/workflows.md
-  - Steps: bitrise-cli/steps.md
+  - Workflows in YAML: bitrise-cli/workflows.md
+  - Steps in YAML: bitrise-cli/steps.md
   - Step properties: bitrise-cli/step-properties.md
   - Step inputs: bitrise-cli/step-inputs.md
   - Step outputs: bitrise-cli/step-outputs.md
