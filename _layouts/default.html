@@ -1,7 +1,7 @@
 {% for article in site.articles %}
 	{% if page.url == article.url %}
 		{% assign current_article = article %}
-		{% assign current_article_source_url = "https://github.com/bitrise-io/devcenter/blob/master/docs" | append: article.url | append: ".md" %}
+		{% assign current_article_source_url = "https://github.com/bitrise-io/devcenter/blob/master/_articles" | append: article.url | append: ".md" %}
 	{% endif %}
 {% endfor %}
 
