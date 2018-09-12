@@ -25,12 +25,8 @@ Every organization must have at least one owner.
 
 1. Sign in with an account that is an owner of an organization and open its profile page.
 2. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
-
-   ![Screenshot](/img/team-management/organization/switch-profile-2.png)
 3. On the left, select `Groups` from the menu options.
 4. Find the `Organization owners` group.
-
-   ![Screenshot](/img/team-management/organization/org-owners.png)
 5. Find the account you wish to remove and click the little checkmark on the right.
 
    **Organizations must have at least one owner.** If you are trying to remove the only owner of the organization, the system will throw an error message.
