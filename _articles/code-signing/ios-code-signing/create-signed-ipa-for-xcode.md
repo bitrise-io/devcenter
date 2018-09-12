@@ -7,13 +7,12 @@ menu:
 ---
 You can easily create a signed IPA for your Xcode project with Bitrise. All you need to do is set the relevant inputs of our `Xcode Archive & Export for iOS` step!
 
-!!! todo "Before you start"
-    Before setting up IPA export, make sure that:
+Before setting up IPA export, make sure that:
 
-       * your code signing files have been collected: we recommend using our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool.
-       * you have the required steps in your workflow to manage code your signing files:
-          * `Certificate and profile installer` if you uploaded your Provisioning Profiles manually.
-          * `iOS Auto Provisioning` if you connected your Bitrise account to your Apple Developer account for automatic provisioning.
+* your code signing files have been collected: we recommend using our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool.
+* you have the required steps in your workflow to manage code your signing files:
+* `Certificate and profile installer` if you uploaded your Provisioning Profiles manually.
+* `iOS Auto Provisioning` if you connected your Bitrise account to your Apple Developer account for automatic provisioning.
 
 If you're all set, proceed to setting up IPA export in your workflow:
 
