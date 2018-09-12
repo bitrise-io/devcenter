@@ -7,15 +7,7 @@ menu:
 ---
 The caching will tar all the cached directories and dependencies, and store them securely in Amazon S3.
 
-!!! note "Cache Expiring"
-    The Build Cache, related to a __specific branch__, expires/is auto-deleted after 7 days,
-    __if there's no new build on that branch in the meantime__.
-
-    This means that __if you do builds on a specific branch every day__ (more frequently than a week),
-    __it'll never expire/won't get deleted automatically__.
-    If you don't start a build on that specific branch for more than 7 days, then the related cache
-    will be removed, and your next build will run like the first time, when there was no cache for that branch yet.
-
+__IMPORTANT__: The Build Cache, related to a __specific branch__, expires/is auto-deleted after 7 days, __if there's no new build on that branch in the meantime__. This means that __if you do builds on a specific branch every day__ (more frequently than a week), __it'll never expire/won't get deleted automatically__. If you don't start a build on that specific branch for more than 7 days, then the related cache will be removed, and your next build will run like the first time, when there was no cache for that branch yet.
 
 ## Setup
 
@@ -31,8 +23,7 @@ For example, in the case of an iOS app, you can insert the `Bitrise.io Cache:Pul
 
 The `Bitrise.io Cache:Push` step should be the very last step in the workflow.
 
-!!! example "Example build cache configurations"
-    You can find example build cache configurations/guides at our [build-cache discuss page](https://discuss.bitrise.io/tags/build-cache).
+You can find example build cache configurations/guides at our [build-cache discuss page](https://discuss.bitrise.io/tags/build-cache).
 
 ### Ignore files/dependencies
 
@@ -49,8 +40,7 @@ To ignore a path element, part of a path or exclude a full directory, check out 
 
 * `/` excludes a full directory if `/` is placed AFTER a directory, for example, `/my/full/path` will look like this `/my/full/path/`.
 
-!!! warning "Invalid cache item"
-    You can't ignore a path which results in an invalid cache item.
+__IMPORTANT__: You can't ignore a path which results in an invalid cache item.
 
     For example, if you specify `a/path/to/cache` path to be cached, you can't ignore `a/path/to`, as that would ignore every file and wouldn't check for changes, hence no fingerprint could be generated for `a/path/to/cache`.
 
@@ -67,9 +57,7 @@ You can download and delete caches for every branch which generated a cache in t
     [If a build runs on a branch which doesn't have a cache yet, it'll get the main/default Branch's cache](#if-a-build-runs-on-a-branch-which-doesnt-have-a-cache-yet-itll-get-the-maindefault-branchs-cache)
     section.
 
-
-!!! note
-    You can see the size of the caches and the last time a given cache was used in the popup window.
+You can see the size of the caches and the last time a given cache was used in the popup window.
 
 
 ## Technical notes
@@ -87,10 +75,10 @@ The whole logic of comparing caches (to see if there was any relevant change) an
 This also means that you can write your own Steps and implement your own comparison and compression logic.
 The Step just has to use the Build Cache API to get download and upload URLs, there's no restriction on the cache file format or on its content.
 
-!!! idea "Advanced notes"
-    * You can create your own Cache steps
-    * You can create and use your own Build Cache server and API
+A couple more handy tips: 
 
+* You can create your own Cache steps
+* You can create and use your own Build Cache server and API
 
 ### The cache might or might not be available
 
@@ -101,20 +89,18 @@ You should write your code in a way that it won't fail if the cache can't be acc
 This means that if you store files which are downloaded from a CDN/cloud storage, you might not see
 any speed improvement, as downloading it from the Bitrise Build Cache storage will probably take about the same time as downloading it from its canonical CDN/cloud storage location.
 
-!!! important "Reliability issues with canonical download location"
-    Storing a dependency in Bitrise Build Cache might help if you have **reliability** issues with the resource's/dependency's canonical download location. Popular tools/dependencies might get rate limited (for example, [PhantomJS](https://github.com/Medium/phantomjs/issues/501)). CDN servers might have availability issues, like jCenter/Bintray. Here are a few examples: [#1](http://status.bitrise.io/incidents/gcx1qn5lj7yt), [#2](http://status.bitrise.io/incidents/3ztgwxvwq7rm), and [#3](http://status.bitrise.io/incidents/dqpby9m1n274).
+
+__IMPORTANT__: Storing a dependency in Bitrise Build Cache might help if you have **reliability** issues with the resource's/dependency's canonical download location. Popular tools/dependencies might get rate limited (for example, [PhantomJS](https://github.com/Medium/phantomjs/issues/501)). CDN servers might have availability issues, like jCenter/Bintray. Here are a few examples: [#1](http://status.bitrise.io/incidents/gcx1qn5lj7yt), [#2](http://status.bitrise.io/incidents/3ztgwxvwq7rm), and [#3](http://status.bitrise.io/incidents/dqpby9m1n274).
     If that's the case, storing the dependency in Bitrise Build Cache might help you. It might not improve the build time but **it definitely can improve the reliability**.
 
 ### The cache is stored as one archive file
 
 So if you have multiple paths you want to cache and any of the paths gets updated, __it'll update the whole cache archive__, including all the paths you cache.
 
-
 ### If a build runs on a branch which doesn't have a cache yet, it'll get the cache of the main/default branch
 
 The build on a non-default branch, to speed things up, can access (read-only) the cache of the `primary` branch, until a successful build is found on the new branch. Once a build on the new branch pushes a cache, new builds on that branch will get the cache of the branch. _Caches are stored and available for every branch separately._
 
-!!! note "Default branch"
-    You can see which is your __default branch__ if you click the `Settings` tab of your app.
+You can see which is your __default branch__ if you click the `Settings` tab of your app.
 
 If a build was started with a code push, the cache will be available on the push branch and will be pulled from the same push branch. If you start a Pull Request (PR), the cache of the PR source branch will be pulled and pushed to the same source branch. In the case of a tag event, there is no code change so there is nothing to cache.
