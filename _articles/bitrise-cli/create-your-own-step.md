@@ -9,8 +9,8 @@ Creating your own Step is as simple as running a `bitrise` CLI (v1.6.1+) command
 
 If you don't have the Bitrise CLI installed, check the installation guide [here](/bitrise-cli/installation/).
 
-!!! warning
-    Make sure you have the latest version of the Bitrise CLI, or at the very least, you have version 1.6.1 or higher. Call `bitrise --version` to check your Bitrise CLI version. This is important because the CLI uses the `:step` plugin to create Steps and this plugin was introduced as a core plugin in v1.6.1.
+
+__IMPORTANT__: Make sure you have the latest version of the Bitrise CLI, or at the very least, you have version 1.6.1 or higher. Call `bitrise --version` to check your Bitrise CLI version. This is important because the CLI uses the `:step` plugin to create Steps and this plugin was introduced as a core plugin in v1.6.1.
 
 ## Creating the Step
 
@@ -27,8 +27,7 @@ bitrise plugin update step
 bitrise :step create
 ```
 
-!!! note
-    Running `bitrise :step` without any commands will print the plugin's help.
+Running `bitrise :step` without any commands will print the plugin's help.
 
 Once you are done, you should have a `step.yml` and, depending on whether you chose Go or Bash, a `main.go` or a `step.sh` file in your new Step's repository.
 
@@ -41,8 +40,7 @@ The generated Step's README describes:
 - how you can test and use your Step in any build by using [the `git::` Step reference](/bitrise-cli/steps/#special-Step-sources),
 - how you can share your Step with others through the Bitrise StepLib if you wish to do so.
 
-!!! warning "Most important concepts"
-    Before proceeding with configuring your step, check out [some important concepts you must be aware of](/bitrise-cli/most-important-concepts.md)!
+__IMPORTANT__: Before proceeding with configuring your step, check out [some important concepts you must be aware of](/bitrise-cli/most-important-concepts.md)!
 
 ## Step development guidelines
 
@@ -66,15 +64,16 @@ Step inputs and outputs are also Step properties. For more information, see [Ste
 
 __Do not use Environment Variables directly in your Step's code__. Instead, expose every outside variable as an input of your Step and set the default value of that input to the Environment Variable you want to use. You can do this in the `step.yml` file. This way it's easier to test the Step and the user of the Step can easily declare these inputs, without having to scour through code for the required variable.
 
-!!! example
-    The `xcode-archive` Step generates an output Environment Variable `$BITRISE_IPA_PATH`. Create an input for this in your Step:
+__Example__:
+ 
+ The `xcode-archive` Step generates an output Environment Variable `$BITRISE_IPA_PATH`. Create an input for this in your Step:
 
-    ```yaml
-    inputs:
-      - ipa-path: $BITRISE_IPA_PATH
-        opts:
-            title: "IPA path"
-    ```
+```yaml
+inputs:
+  - ipa-path: $BITRISE_IPA_PATH
+    opts:
+        title: "IPA path"
+```
 
 ### Submodules and dependencies
 
