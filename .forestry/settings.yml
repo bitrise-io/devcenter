@@ -7,7 +7,6 @@ sections:
 - type: document
   path: forestry-help.md
   label: Help
-  read_only: false
 - type: directory
   path: _articles/reviews
   label: For review
