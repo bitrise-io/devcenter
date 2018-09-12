@@ -43,7 +43,7 @@ To run a `bitrise` build on your machine, you can install our [open source runne
 and use the `bitrise` command to execute your workflows locally.
 _No_ [_bitrise.io_](https://www.bitrise.io) _account required to use the Bitrise CLI._
 
-It's a great help when you're developing Steps, debugging builds, or just want to use Bitrise for _any kind of automation_ on your machine.
+It's a great help when you're developing Steps, debugging builds, or just want to use Bitrise for _any kind of automation_ on your machines.
 
 You can find more information about the offline runner
 in the [Bitrise CLI and bitrise.yml](/bitrise-cli/) section of the DevCenter.
