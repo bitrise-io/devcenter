@@ -5,14 +5,13 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
+  path: _articles/index.md
+  label: Bitrise DevCenter - What is Bitrise?
+  match: "**/*"
+- type: document
   path: how-to-use-forestry.md
   label: Help
   read_only: true
-- type: directory
-  path: _articles
-  label: All articles
-  create: all
-  match: "**/*"
 - type: directory
   path: _articles/team-management
   label: Teams and organizations
