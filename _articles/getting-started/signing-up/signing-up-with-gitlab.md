@@ -5,10 +5,10 @@ menu:
     weight: 3
 
 ---
-You are able to authenticate yourself with your GitLab user against __Bitrise__. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your GitLab account when adding repositories hosted by these providers again.
+You are able to authenticate yourself with your GitLab user against **Bitrise**. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your GitLab account when adding repositories hosted by these providers again.
 
-!!! note
-    If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/signing-up/signing-up-with-email).
+
+If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/signing-up/signing-up-with-email).
 
 ## Sign up
 
