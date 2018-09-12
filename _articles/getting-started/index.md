@@ -1,11 +1,12 @@
 ---
 title: Quick start guide to Bitrise
+redirect_from:
+- "/getting-started/create-your-first-app-on-bitrise/"
+- "/getting-started/add-your-first-step-to-your-workflow/"
 menu:
   getting-started:
     weight: 1
-redirect_from:
-  - /getting-started/create-your-first-app-on-bitrise/
-  - /add-your-first-step-to-your-workflow/
+
 ---
 Bitrise is powerful and complex - but getting started is easy and intuitive! You can kick off your first build within minutes of signing up. Let's go over what you need to do make that happen!
 
