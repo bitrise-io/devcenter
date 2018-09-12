@@ -13,11 +13,9 @@ Artifacts are deployed into the `APPS & Artifacts` section in your build's page 
 
 1. Insert the `Deploy to Bitrise.io` step AFTER the step/s that generate the artifacts or even better if the `Deploy to Bitrise.io` step is **at the very end of your workflow**. For more information, check out [Attach any file as an Artifact to the Build](https://devcenter.bitrise.io/tips-and-tricks/attach-any-file-to-build/).
 
-!!! important
-    Add the `Deploy to Bitrise.io` step in the right place. If you insert the step before other steps that generate files during the build, then `Deploy to Bitrise.io` will have nothing to deploy.
+**IMPORTANT:** Add the `Deploy to Bitrise.io` step in the right place. If you insert the step before other steps that generate files during the build, then `Deploy to Bitrise.io` will have nothing to deploy.
 
-!!! note
-    Note that the content of any sub-directories found in the deploy directory will not be displayed in the `APPS and Artifacts` section of your build. You can, however, **compress your artifacts** into a zip file if you modify the default `false` value to `true` in the `Compress the artifacts into one file` field in the `Deploy to Bitrise.io` step. This will compress the whole directory along with its sub-directories and deploy to `APPS & Artifacts`.
+Note that the content of any sub-directories found in the deploy directory will not be displayed in the `APPS and Artifacts` section of your build. You can, however, **compress your artifacts** into a zip file if you modify the default `false` value to `true` in the `Compress the artifacts into one file` field in the `Deploy to Bitrise.io` step. This will compress the whole directory along with its sub-directories and deploy to `APPS & Artifacts`.
 
 ### Modify target directory path
 
