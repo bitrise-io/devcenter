@@ -10,7 +10,7 @@ sections:
   create: all
   match: "**/*"
 - type: document
-  path: how-to-use-forestry.md
+  path: forestry-help.md
   label: Help
   read_only: true
 - type: document
