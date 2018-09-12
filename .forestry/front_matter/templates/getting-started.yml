@@ -1,0 +1,23 @@
+---
+label: getting-started
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: field_group
+  label: menu
+  name: menu
+  fields:
+  - type: field_group
+    name: getting-started
+    label: getting-started
+    fields:
+    - type: text
+      name: weight
+      label: weight
+      config:
+        required: true
+pages:
+- _articles/getting-started/let-s-try-fmt.md

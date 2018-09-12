@@ -1,0 +1,23 @@
+---
+label: ios-code-signing
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: field_group
+  name: menu
+  label: menu
+  fields:
+  - type: field_group
+    name: ios-code-signing
+    label: ios-code-signing
+    fields:
+    - type: text
+      name: weight
+      label: weight
+      config:
+        required: true
+pages:
+- _articles/code-signing/ios-code-signing/ios-code-signing-faq.md

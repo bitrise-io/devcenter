@@ -1,0 +1,23 @@
+---
+label: menuing-as-hell
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: field_group
+  label: menu
+  name: menu
+  fields:
+  - type: field_group
+    name: menuing-as-hell
+    label: menuing-as-hell
+    fields:
+    - type: text
+      name: weight
+      label: weight
+      config:
+        required: true
+pages:
+- _articles/getting-started/menuing-as-hell.md

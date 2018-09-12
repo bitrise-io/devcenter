@@ -1,0 +1,25 @@
+---
+label: organizations
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: field_group
+  label: menu
+  name: menu
+  fields:
+  - type: field_group
+    name: organizations
+    label: organizations
+    fields:
+    - type: text
+      name: weight
+      label: weight
+      config:
+        required: true
+pages:
+- _articles/team-management/organizations/org-it-up-even-more.md
+- _articles/team-management/organizations/whatuuuup.md
+- _articles/team-management/organizations/orging-it-up.md
