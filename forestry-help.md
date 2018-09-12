@@ -12,6 +12,14 @@ You can come back and edit the article any time. Please remember that every time
 
 NOTE: it is recommended to create a new article in an external editor, such as Atom, and work on it there until it is ready for review. Ideally, you should only save a new article on Forestry when it's done - that way the entire new article is a single commit on GitHub.
 
+**ALTERNATIVE OPTION**: Edit your article on Forestry as much as you want. Once you are done:
+
+1. Cut the entire content (keep it on the clipboard).
+2. Save the empty article.
+3. Paste the content back, and save again.
+
+This way you will have a commit that will show the entire content of the article as new content. Voilá!
+
 ## Updating an existing article
 
 1. Create a new article in the `For review` section.
@@ -19,6 +27,8 @@ NOTE: it is recommended to create a new article in an external editor, such as A
 3. Add your changes.
 
 NOTE: Once again, it is recommended to edit the existing article in an external editor until it is ready for review. Once you are finished (the article is ready for review), copy the contents into the new article you created in the `For reviews` section. This is to ensure all changes are visible in a single commit.
+
+See the alternative option above!
 
 ## Getting an article reviewed
 
