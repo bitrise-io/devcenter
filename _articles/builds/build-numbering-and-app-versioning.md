@@ -71,9 +71,11 @@ To offset your version number by your Bitrise build number every time a build is
 
 Let's say you have an app and you are about to run its fifth build on Bitrise. You wish to offset the Build Number by 6 as the app had six builds before starting to use Bitrise. The following configuration is used:
 
-    - Version Code: $BITRISE_BUILD_NUMBER
-    - Version Code Offset: 6
-    - Version Name: 1.0.5
+```yaml
+- Version Code: $BITRISE_BUILD_NUMBER
+- Version Code Offset: 6
+- Version Name: 1.0.5
+```
 
 The value of `$BITRISE_BUILD_NUMBER` (which equals 5 in our example) will be added to the `Version Code Offset` value. As such, `android:versionName` value will be set to 1.0.5 (11), indicating it's the 11th build of the 1.0.5 version of your app.
 
@@ -81,8 +83,10 @@ The value of `$BITRISE_BUILD_NUMBER` (which equals 5 in our example) will be add
 
 Let's say you have an app and you are about to run its fifth build on Bitrise. You wish to offset the Build Number by 6 as the app had six builds before starting to use Bitrise. The following configuration is used:
 
-    - Build Number: $BITRISE_BUILD_NUMBER
-    - Build Number Offset: 6
-    - Version Number: 1.1
+```yaml
+- Build Number: $BITRISE_BUILD_NUMBER
+- Build Number Offset: 6
+- Version Number: 1.1
+```
 
 The value of `$BITRISE_BUILD_NUMBER` (which equals 5 in our example) will be added to the `Build Number Offset` value. As such, `CFBundleShortVersionString` will be set to 1.1 (11), indicating it's the 11th build of the 1.1 version of your app.
