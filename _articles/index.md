@@ -13,22 +13,20 @@ with a main focus on mobile app development (`iOS`, `Android`, `Xamarin`, ...). 
 
 ## Run your builds on bitrise.io
 
-- Run a build of your app on Bitrise by defining a `Workflow`. A `Workflow` consists of one or more build `Steps` (open source git repositories
-which can be executed with the [open source Bitrise CLI](https://www.bitrise.io/cli)).
-
-- [Create and share your own build Steps](https://github.com/bitrise-steplib/step-template).
-
-- Define more workflows for the very same app, and define [triggers](/webhooks/trigger-map) to specify which workflow should be selected for each trigger.
+* Run builds of your app on Bitrise by defining a `Workflow`. A `Workflow` consists of one or more build `Steps` (open source git repositories
+  which can be executed with the [open source Bitrise CLI](https://www.bitrise.io/cli)).
+* [Create and share your own build Steps](https://github.com/bitrise-steplib/step-template).
+* Define more workflows for the very same app, and define [triggers](/webhooks/trigger-map) to specify which workflow should be selected for each trigger.
 
 The steps can do anything that can be implemented by command line scripts / programs:
 
-- send emails,
-- [send text messages](https://github.com/bitrise-io/steps-sms-text-message),
-- pass values to each other,
-- [create Xcode archives](https://github.com/bitrise-io/steps-xcode-archive),
-- gather system information about the Virtual Machine running the build,
-- notify other users (for example, on Slack)
-- even [publish to iTunes Connect](https://github.com/bitrise-io/steps-deploy-to-itunesconnect-deliver), and many more.
+* send emails,
+* [send text messages](https://github.com/bitrise-io/steps-sms-text-message),
+* pass values to each other,
+* [create Xcode archives](https://github.com/bitrise-io/steps-xcode-archive),
+* gather system information about the Virtual Machine running the build,
+* notify other users (for example, on Slack)
+* even [publish to iTunes Connect](https://github.com/bitrise-io/steps-deploy-to-itunesconnect-deliver), and many more.
 
 ### Infrastructure
 
@@ -38,7 +36,6 @@ After a build is finished the Virtual Machine is destroyed and you can browse th
 You can read more at [Code Security](/getting-started/code-security).
 
 The VMs are equipped with all the necessary tools required to build your app. Bitrise automatically detects which Stack - virtual machine type - is appropriate for your app but of course you can change it manually at any time.
-
 
 ## Bitrise CLI - the open source, offline, automation runner
 
