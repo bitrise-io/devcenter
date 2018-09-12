@@ -1,4 +1,4 @@
-site/
-.bitrise*
-.directory
+node_modules
 gg.conf.json
+_site
+.bitrise.secrets.yml

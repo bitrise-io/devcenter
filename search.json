@@ -1,0 +1,14 @@
+---
+layout: null
+---
+[
+  {% for article in site.articles %}
+    {
+      "title"    : "{{ article.title | escape }}",
+      "category" : "{{ article.category }}",
+      "tags"     : "{{ article.tags | join: ', ' }}",
+      "url"      : "{{ site.baseurl }}{{ article.url }}",
+      "date"     : "{{ article.date }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

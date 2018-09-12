@@ -9,7 +9,7 @@ and click the **pencil/edit** icon,
 which will open the GitHub editor for the file.
 [Example for this page](https://github.com/bitrise-io/devcenter/edit/master/README.md).
 
-The deployed documentation can be found at [http://devcenter.bitrise.io](http://devcenter.bitrise.io), which is a statically generated site, based on this repository's `/docs` directory. All links in the articles are relative to the `/docs` directory!
+The deployed documentation can be found at [http://devcenter.bitrise.io](http://devcenter.bitrise.io), which is a statically generated site, based on this repository's `/_articles` directory. All links in the articles are relative to the `/_articles` directory!
 
 If you don't want to edit the page on GitHub,
 feel free to [contact us](https://www.bitrise.io/contact),
@@ -29,7 +29,7 @@ please edit the `.md.gg` template files instead of editing the `.md` directly!
 
 To add a new endpoint documentation section:
 
-- open the `docs/api/vX.md.gg` template file
+- open the `_articles/api/vX.md.gg` template file
 - add the endpoint section, following the other endpoints' doc structure
 - add the example endpoint call to the `_scripts/gen_api_docs_gotgen_config.go` file (using the `api-demo`
   bitrise.io user to locate the right example URL, e.g. if it have to include a repo/build/... slug)
