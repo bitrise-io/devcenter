@@ -14,6 +14,6 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/getting-started/account-security.md
 - _articles/getting-started/getting-started-with-ios.md
 - _articles/getting-started/getting-started-workflows.md
-- _articles/getting-started/account-security.md
