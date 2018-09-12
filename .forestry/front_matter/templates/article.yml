@@ -8,3 +8,5 @@ fields:
   config:
     required: true
   label: title
+pages:
+- _articles/getting-started/getting-started-with-ios.md
