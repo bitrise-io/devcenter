@@ -8,5 +8,3 @@ fields:
   config:
     required: true
   label: title
-pages:
-- _articles/getting-started/create-your-first-app-on-bitrise.md
