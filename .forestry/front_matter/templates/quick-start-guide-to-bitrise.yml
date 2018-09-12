@@ -13,5 +13,3 @@ fields:
   type: list
   hidden: false
   default: ''
-pages:
-- _articles/getting-started/getting-started-with-ios.md
