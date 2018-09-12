@@ -41,7 +41,7 @@ Tell Bitrise where the code of your app is stored. You can either:
 
 * [Connect a repository from a connected GitHub/GitLab/Bitbucket account](/getting-started/adding-a-new-app/connecting-a-repository). Bitrise will then automatically display all the available repositories from the selected service, all you need to do is choose one.
 * Manually add the location of the source code: choose the `Other/Manual` option then paste an **HTTPS git clone URL**.
-* You can also use a repository that is on [a self-hosted GitLab instance](getting-started/adding-a-new-app/self-hosted-gitlab).
+* You can also use a repository that is on [a self-hosted GitLab instance](getting-started/signing-up/self-hosted-gitlab).
 
 **Why does Bitrise need write permissions on Github/Bitbucket/GitLab?** Connecting your GitHub/GitLab/Bitbucket account gives Bitrise write permission to the repositories. There are two things that Bitrise couldn't do without it:
 
@@ -50,7 +50,7 @@ Tell Bitrise where the code of your app is stored. You can either:
 
 ### Setup repository access
 
-[Set up an SSH key to access the selected repository](/getting-started/adding-a-new-app/setting-up-ssh-keys/). This is required for private apps to ensure Bitrise can clone the repository. You can:
+[Set up an SSH key to access the selected repository](/getting-started/adding-a-new-app/setting-up-ssh-keys). This is required for private apps to ensure Bitrise can clone the repository. You can:
 
 * auto-add the SSH key Bitrise generated.
 * copy the public key Bitrise generated.
@@ -82,6 +82,6 @@ Once you added an app, your first build will be kicked off automatically. This m
 
 ## Teams and organizations
 
-Once you set up a new app, you can [start inviting team members](/team-management/adding-a-new-team-member). If you have a Developer or an Organization plan, you can have unlimited team members!
+Once you set up a new app, you can [start inviting team members](/team-management/index). If you have a Developer or an Organization plan, you can have unlimited team members!
 
-You can also [create organizations](/team-management/creating-org) if you are on one of our Organization plans. Organizations allow you to manage entire teams quickly and effectively.
+You can also [create organizations](/team-management/organizations/creating-org) if you are on one of our Organization plans. Organizations allow you to manage entire teams quickly and effectively.
