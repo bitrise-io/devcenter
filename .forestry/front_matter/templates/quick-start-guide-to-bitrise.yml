@@ -13,3 +13,5 @@ fields:
   type: list
   hidden: false
   default: ''
+pages:
+- _articles/getting-started/account-security.md

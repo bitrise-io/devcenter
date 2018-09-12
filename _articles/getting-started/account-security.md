@@ -1,5 +1,7 @@
 ---
 title: Account Security
+redirect_from:
+- "/getting-started/manage-your-workflow/"
 menu:
   getting-started:
     weight: 6
