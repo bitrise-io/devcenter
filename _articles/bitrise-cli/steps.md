@@ -14,7 +14,7 @@ For example the `Git Clone` (id: `git-clone`) step performs a "git clone"
 of the specified repository, with the inputs you (or the system) specify (e.g.
 the branch, tag or commit to clone, the local path where the clone should happen, etc.).
 
-From a technical perspective a Step is a semver __versioned__ repository
+From a technical perspective a Step is a semver **versioned** repository
 which includes the _code_ of the Step and the _interface_ definition of the Step.
 
 The _step interface definition_ (`step.yml`) includes information like the dependencies of the step,
@@ -41,12 +41,9 @@ workflows:
     - script:
 ```
 
+{% include message_box.html type="note" title="List of available steps (step IDs)" content="
 
-!!! note "List of available steps (step IDs)"
-    You can list all the available steps in the main Bitrise StepLib
-    by running `bitrise step-list`, or by checking
-    [the steps/ directory of the main Bitrise StepLib repository](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps).
-
+You can list all the available steps in the main Bitrise StepLib by running `bitrise step-list`, or by checking [the steps/ directory of the main Bitrise StepLib repository](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps)."%}
 
 Once you include a step in your build configuration (`bitrise.yml`),
 you can specify configurations for the step. The most common thing
@@ -56,7 +53,7 @@ defining the _key_ of the input and the _value_ you want to set.
 
 For example, to specify a simple script to perform for the `script` step,
 you can specify a value for the `script` step's `content` input.
-(_Note: you can list all the inputs of a step with `bitrise step-info STEP-ID`_)
+(_Note: you can list all the inputs of a step with_ `_bitrise step-info STEP-ID_`)
 
 Let's do a simple "Hello World" script, using the `script` step:
 
@@ -75,23 +72,21 @@ workflows:
 When you run the `test` workflow of this configuration with `bitrise run test`
 you'll now see that the `script` step prints the text `Hello World` in its log:
 
-```
-+------------------------------------------------------------------------------+
-| (0) script@1.1.3                                                             |
-+------------------------------------------------------------------------------+
-| id: script                                                                   |
-| version: 1.1.3                                                               |
-| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
-| toolkit: bash                                                                |
-| time: 2016-12-07T17:05:17+01:00                                              |
-+------------------------------------------------------------------------------+
-|                                                                              |
-Hello World!
-|                                                                              |
-+---+---------------------------------------------------------------+----------+
-| ✓ | script@1.1.3                                                  | 0.30 sec |
-+---+---------------------------------------------------------------+----------+
-```
+    +------------------------------------------------------------------------------+
+    | (0) script@1.1.3                                                             |
+    +------------------------------------------------------------------------------+
+    | id: script                                                                   |
+    | version: 1.1.3                                                               |
+    | collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+    | toolkit: bash                                                                |
+    | time: 2016-12-07T17:05:17+01:00                                              |
+    +------------------------------------------------------------------------------+
+    |                                                                              |
+    Hello World!
+    |                                                                              |
+    +---+---------------------------------------------------------------+----------+
+    | ✓ | script@1.1.3                                                  | 0.30 sec |
+    +---+---------------------------------------------------------------+----------+
 
 If the step doesn't have any required inputs you don't have to specify an input,
 and of course you can specify values for as many inputs as you want to.
@@ -113,7 +108,7 @@ workflows:
         - runner_bin: ruby
 ```
 
-Step input values are always __string__ / text values, as the input id/key and the value
+Step input values are always **string** / text values, as the input id/key and the value
 are passed to the step as environment variables
 ([more information](/bitrise-cli/most-important-concepts/#every-input-output-and-parameter-is-an-environment-variable)),
 and the value can be multi line too, using the standard YAML multi line format.
@@ -136,12 +131,11 @@ workflows:
 ```
 
 !!! note "Watch out for the indentation!"
-    Indentation in the YAML format is very important!
-    You should use two-spaces indentation, and you can't use tabs to indent!
+Indentation in the YAML format is very important!
+You should use two-spaces indentation, and you can't use tabs to indent!
 
     If you use a multi line value, like the one above, it's important that you
     have to _indent the value with two spaces_, compared to the key!
-
 
 You can change other properties of the step too, not just the inputs.
 For example, if you want to "force" run the step even if a previous step fails,
@@ -183,7 +177,7 @@ workflows:
 
 You might already suspect it after the examples above:
 the step data / infos you specify in the `bitrise.yml` are the parameters
-of the step __you want to change__ / overwrite.
+of the step **you want to change** / overwrite.
 
 If you don't specify any input or other step property, only the step (reference/iD),
 that means that the step should run with the default values (defined by the step's developer).
@@ -210,12 +204,12 @@ are the things you want to overwrite.
 To see the step's raw interface definition you can check it in the step library.
 In these examples we always use the [main Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
 The step interface definitions can be found in the StepLib's
-[`steps` directory](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps),
+`[steps](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps)`[ directory](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps),
 in this case it's in the [steps/script/1.1.3](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps/script/1.1.3) directory,
 as we used the `1.1.3` version of the `script` step.
-The [`step.yml` in this directory is the step's interface definition](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml).
+The `[step.yml](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml)`[ in this directory is the step's interface definition](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml).
 
-[Check the `step.yml`](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml),
+[Check the ](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml)`[step.yml](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml)`,
 you can see all the properties defined for this version of the step.
 Now, if you check our example above, all we did is to
 change the `title` property (from `Script` to `Print Hello Ruby`),
@@ -225,24 +219,22 @@ and `runner_bin` (from `/bin/bash` to `ruby`).
 
 All other properties you can see in the step version's `step.yml` will be read
 from the `step.yml`, you don't have to define those. You only have to define
-__the things you want to change__, compared to the values specified for the step
+**the things you want to change**, compared to the values specified for the step
 in the step's interface definition (`step.yml`).
 
 ## Step reference/ID format
 
 A step reference from the example `bitrise.yml` above:
 
-```
-- script@1.1.3:
-```
+    - script@1.1.3:
 
 1. the StepLib source
-1. the Step ID
-1. the Step Version
+2. the Step ID
+3. the Step Version
 
 Step reference format: `- StepLibSource::StepID@StepVersion:`
 
-__From the three components only Step ID is required (e.g. `- script:`).__
+**From the three components only Step ID is required (e.g.** `**- script:**`**).**
 This example item could alternatively be written as `- https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3:`,
 to include all three components of the step reference.
 
@@ -254,10 +246,10 @@ So, if `default_step_lib_source` is set to `https://github.com/bitrise-io/bitris
 and the latest version of the Script step is `1.1.3`, all the following references
 will mean the exact same thing:
 
-- `- https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3:`
-- `- script@1.1.3:`
-- `- https://github.com/bitrise-io/bitrise-steplib.git::script:`
-- `- script:`
+* `- https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3:`
+* `- script@1.1.3:`
+* `- https://github.com/bitrise-io/bitrise-steplib.git::script:`
+* `- script:`
 
 But, if a new version of the `script` step is released (e.g. `2.0.0`)
 and you don't include the `@1.1.3` version reference component,
@@ -270,8 +262,8 @@ is introduced in a new version of the step.
 
 There are two special step sources:
 
-- `git::`
-- and `path::`
+* `git::`
+* and `path::`
 
 When you use one of these sources, the step won't be identified through
 a Step Library, but through the ID data you specify.
@@ -283,12 +275,10 @@ and the branch or tag in the repository.
 
 Example, to reference the `1.1.3` version tag of the script step's repository:
 
-```
-- git::https://github.com/bitrise-io/steps-script.git@1.1.3:
-```
+    - git::https://github.com/bitrise-io/steps-script.git@1.1.3:
 
-In general, __whenever you can use a step version through a Step Library,
-you should do that__, instead of using the `git::` source type,
+In general, **whenever you can use a step version through a Step Library,
+you should do that**, instead of using the `git::` source type,
 because features like _local step caching_ or _network caching_ / alternative
 download URLs are only supported for steps shared in a StepLib.
 
@@ -301,21 +291,17 @@ in a StepLib.
 
 Example:
 
-```
-- git::https://github.com/bitrise-io/steps-script.git@BRANCH-OR-TAG:
-```
+    - git::https://github.com/bitrise-io/steps-script.git@BRANCH-OR-TAG:
 
 `BRANCH-OR-TAG` of course have to be a branch or tag which does exist in
 the step's repository. For example, if you develop your own Step
 and you work on a `soon-to-be-released` branch, you can
 use that state of the step with:
 
-```
-- git::https://github.com/bitrise-io/steps-script.git@soon-to-be-released:
-```
+    - git::https://github.com/bitrise-io/steps-script.git@soon-to-be-released:
 
 The second special source is `path::`, which works in a similar way,
-except for __local paths__, and it requires no version information.
+except for **local paths**, and it requires no version information.
 
 A good example for this is, again, when you create and work on your own
 Step, you can run the state of the Step (step's code) directly on your Mac/PC,
@@ -323,29 +309,21 @@ without even pushing it to the step's repository.
 
 Both absolute and relative (relative to the `bitrise.yml`!) local paths are supported, so you can:
 
-```
-- path::/path/to/my/step:
-```
+    - path::/path/to/my/step:
 
 as well as:
 
-```
-- path::./relative/path:
-```
+    - path::./relative/path:
 
 During step development it's a best practice to have a `bitrise.yml` directly
 in the step's repository, for unit and ad hoc testing. In this case _the current directory is the step directory_,
 and the step can be referenced with:
 
-```
-- path::./:
-```
+    - path::./:
 
 _This can also be used if you want to include your build steps in your app's source code._
 For example if you store the `script` step's code in your source code repository,
 under the `steps/script` directory, you can run the version included in your source code
 repository with:
 
-```
-- path::./steps/script:
-```
+    - path::./steps/script:
