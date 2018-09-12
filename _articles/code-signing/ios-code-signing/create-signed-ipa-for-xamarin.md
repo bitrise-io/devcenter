@@ -7,11 +7,10 @@ menu:
 ---
 You can easily create a signed IPA for your Xamarin project with Bitrise. All you need to do is set the relevant inputs of our `Xamarin Archive` step!
 
-!!! todo "Before you start"
-    Before setting up IPA export, make sure that:
+Before setting up IPA export, make sure that:
 
-       * your code signing files have been collected: we recommend using our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool.
-       * you have the `Certificate and profile installer` step in your workflow.
+* your code signing files have been collected: we recommend using our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool.
+* you have the `Certificate and profile installer` step in your workflow.
 
 If you're all set, proceed to setting up IPA export in your workflow:
 
@@ -28,17 +27,7 @@ If you're all set, proceed to setting up IPA export in your workflow:
 
 If you wish to use more than one code signing type (for example, to create both Ad-hoc and App Store signed apps), create more than one `Release` configuration in Xamarin Studio. Set the separate configurations to the types you want to use.
 
-!!! tip "Tip: copy/clone an existing Release configuration"
-    You can `Copy` the existing
-    `Release` configuration in Xamarin Studio, to have an identical base configuration,
-    where you only change the code signing settings. For example,
-    `Copy` the `Release|iPhone` configuration with the name `ReleaseAppStore`,
-    set the code signing to App Store for this `ReleaseAppStore` configuration,
-    and specify this configuration as the `Xamarin solution configuration`
-    input of the `Xamarin Archive` step.
 
-!!! tip "Changing code signing configurations in a Xamarin project"
-    Don't forget to run `codesigndoc` again if you change code signing
-    configurations in your Xamarin project, or to manually collect
-    and upload the signing files required for the configurations
-    you want to use!
+You can `Copy` the existing `Release` configuration in Xamarin Studio, to have an identical base configuration, where you only change the code signing settings. For example, `Copy` the `Release|iPhone` configuration with the name `ReleaseAppStore`, set the code signing to App Store for this `ReleaseAppStore` configuration, and specify this configuration as the `Xamarin solution configuration` input of the `Xamarin Archive` step.
+
+Don't forget to run `codesigndoc` again if you change code signing configurations in your Xamarin project, or to manually collect and upload the signing files required for the configurations you want to use!
