@@ -20,6 +20,8 @@ Before setting up automatic provisioning in your workflow, make sure that:
 
 The `iOS Auto Provision` step can automatically manage profiles if the iOS project uses Xcode's _Automatically manage signing_ option, introduced in Xcode 8. If the option is enabled for your project, the step will download the Xcode managed profiles which are needed to sign your project and will install them together with the provided certificates.
 
+If you do not use the _Automatically manage signing_ option, the step will try to generate a Provisioning Profile of your project. 
+
 Once you are ready, proceed to uploading your files and setting up your workflow:
 
 1. Open your app on your `Dashboard`.
@@ -39,5 +41,7 @@ Once you are ready, proceed to uploading your files and setting up your workflow
    * `The Developer Portal team id` - find this on the [Membership Details page of your Apple Developer Portal account](https://developer.apple.com/account/#/membership)
    * `Distribution type` - make sure its value matches the value of the `Select method for export` input in the `Xcode Archive & Export for iOS step`.
    * `Scheme` - you can restrict which targets to process.
+
+Optionally, you can set one more input if you the _Automatically manage signing option_ in Xcode: if the input marked with `Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?` is set to `true` then the step will try to generate a profile. If you use manual code signing in Xcode, this input has no effect. 
 
 If `codesigndoc` does not pick up one or more distribution .p12 files, you can export those manually from the `Keychain Access` app, just like you would when you transfer these files between Macs.
