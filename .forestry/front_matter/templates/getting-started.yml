@@ -19,5 +19,3 @@ fields:
       label: weight
       config:
         required: true
-pages:
-- _articles/getting-started/let-s-try-fmt.md
