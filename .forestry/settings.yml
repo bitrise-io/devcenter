@@ -4,15 +4,15 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: forestry-help.md
+  label: Help
+  read_only: true
 - type: directory
   path: _articles/reviews
   label: For review
   create: all
   match: "**/*"
-- type: document
-  path: forestry-help.md
-  label: Help
-  read_only: true
 - type: document
   path: _articles/index.md
   label: Bitrise DevCenter - What is Bitrise?
