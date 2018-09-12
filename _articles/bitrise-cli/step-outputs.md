@@ -33,14 +33,14 @@ The default outputs of a step cannot be changed by the user in the `bitrise.yml`
 
 1. Set the `outputs` attribute: specify the original environment key - the default output that the step generates - and the alias.
 
-    !!! example
-        ``` yaml
-        workflows:
-          primary:
-          steps:
-          - gradle-runner:
-              outputs:
-              - BITRISE_APK_PATH: ALIAS_APK_PATH
-        ```
+__Example__:
+``` yaml
+workflows:
+  primary:
+  steps:
+  - gradle-runner:
+      outputs:
+      - BITRISE_APK_PATH: ALIAS_APK_PATH
+```
 
-    In the example, the value for the `BITRISE_APK_PATH` environment variable will be exported under the `ALIAS_APK_PATH` key.
+In the example, the value for the `BITRISE_APK_PATH` environment variable will be exported under the `ALIAS_APK_PATH` key.
