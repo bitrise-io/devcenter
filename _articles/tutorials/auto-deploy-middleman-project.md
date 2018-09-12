@@ -2,7 +2,7 @@
 title: Auto deploy your Middleman blog / static website
 menu:
   tutorials:
-    weight: 7
+    weight: 10
 
 ---
 This tutorial helps you create a basic static website project (e.g. a Blog) with [Middleman](https://middlemanapp.com/),

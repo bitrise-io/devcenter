@@ -2,7 +2,7 @@
 title: Configure and connect to your VPN
 menu:
   tutorials:
-    weight: 6
+    weight: 9
 
 ---
 Do you require a VPN connection for your build, to be able to connect to your server,
