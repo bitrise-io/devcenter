@@ -14,9 +14,7 @@ Installing the Bitrise CLI is super simple. It is distributed as a single binary
     ``` bash
     curl -fL https://github.com/bitrise-io/bitrise/releases/download/1.21.0/bitrise-$(uname -s)-$(uname -m) > /usr/local/bin/bitrise
     ```
-
-    !!! info "Bitrise CLI version"
-        You can check the latest release of the Bitrise CLI on its [releases](https://github.com/bitrise-io/bitrise/releases) page.
+    You can check the latest release of the Bitrise CLI on its [releases](https://github.com/bitrise-io/bitrise/releases) page.
 
 1. Make the downloaded binary executable:
 
