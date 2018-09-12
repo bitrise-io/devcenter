@@ -16,7 +16,7 @@ with a main focus on mobile app development (`iOS`, `Android`, `Xamarin`, ...). 
 * Run builds of your app on Bitrise by defining a `Workflow`. A `Workflow` consists of one or more build `Steps` (open source git repositories
   which can be executed with the [open source Bitrise CLI](https://www.bitrise.io/cli)).
 * [Create and share your own build Steps](https://github.com/bitrise-steplib/step-template).
-* Define more workflows for the very same app, and define [triggers](/webhooks/trigger-map) to specify which workflow should be selected for each trigger.
+* Define more workflows for the same app, and define [triggers](/webhooks/trigger-map) to specify which workflow should be selected for each trigger.
 
 The steps can do anything that can be implemented by command line scripts / programs:
 
