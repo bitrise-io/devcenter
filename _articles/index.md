@@ -18,7 +18,7 @@ with a main focus on mobile app development (`iOS`, `Android`, `Xamarin`, ...). 
 * [Create and share your own build Steps](https://github.com/bitrise-steplib/step-template).
 * Define more workflows for the same app, and define [triggers](/webhooks/trigger-map) to specify which workflow should be selected for each trigger.
 
-The steps can do anything that can be implemented by command line scripts / programs:
+The steps can do anything that can be implemented by command line scripts and/or programs:
 
 * send emails,
 * [send text messages](https://github.com/bitrise-io/steps-sms-text-message),
