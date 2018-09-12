@@ -1,7 +1,7 @@
 ---
-label: Quick start guide to Bitrise
-hide_body: 
-is_partial: 
+label: basic template
+hide_body: false
+is_partial: false
 fields:
 - name: title
   label: Title
