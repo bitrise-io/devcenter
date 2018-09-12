@@ -52,19 +52,19 @@ Set the `is_template` property in the `step.yml` file of your project to use tem
 
 1. Add the template expression to the step's `content`.
 
-    !!! example
-        ``` Go
-        - script:
-          title: Template example
-          inputs:
-          - content: |-
-              {{if .IsCI}}
-              echo "CI mode"
-              {{else}}
-              echo "not CI mode"
-              {{end}}
-            opts:
-              is_template: true
-        ```
+__Example:__
+``` Go
+- script:
+  title: Template example
+  inputs:
+  - content: |-
+      {{if .IsCI}}
+      echo "CI mode"
+      {{else}}
+      echo "not CI mode"
+      {{end}}
+    opts:
+      is_template: true
+```
 
 Check out the template utility [on GitHub](https://github.com/bitrise-io/bitrise/blob/master/bitrise/template_util.go#L17)!
