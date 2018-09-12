@@ -24,8 +24,7 @@ Head over to [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) to find o
 1. Click the `Select Secret Variable` button below the input field which is marked with the yellow `SENSITIVE` label.
 2. In the `Insert variable` pop-up, browse the `Choose Secret Env Var` list or create a new secret env var (add the key and the value) in the `Create New Secret Env Var` section.
 
-   !!! warning "`Expose for Pull Requests` toggle is disabled in public apps"
-   The `Expose for Pull Requests?` toggle under the `Value` field is by default disabled and cannot be enabled with public apps to **protect the secrets of your public app in the case of pull requests**.
+   **IMPORTANT**: The `Expose for Pull Requests?` toggle under the `Value` field is by default disabled and cannot be enabled with public apps to **protect the secrets of your public app in the case of pull requests**.
 3. Hit `Add`.
 
    The new secret env var will be available in the `Choose Secret Env Var` list or under the `Secrets` tab for your app.
