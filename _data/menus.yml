@@ -17,10 +17,14 @@ tutorials:
   identifier: xamarin
   weight: 2
 fastlane:
-- weight: 2
+- weight: 4
   title: How to configure fastlane match for Bitrise
+- weight: 2
+  title: fastlane tools integration
 - weight: 1
   title: fastlane tools integration
+- weight: 3
+  title: How to configure fastlane match for Bitrise
 getting-started:
 - title: Signing up
   identifier: signing-up
@@ -33,14 +37,22 @@ team-management:
   identifier: organizations
   weight: 3
 xamarin:
-- weight: 4
+- weight: 8
   title: Add custom sources to NuGet
-- weight: 2
-  title: Restore NuGet packages
-- weight: 3
+- weight: 7
+  title: Add custom sources to NuGet
+- weight: 6
   title: Deploy your Xamarin app
+- weight: 5
+  title: Deploy your Xamarin app
+- weight: 4
+  title: Restore NuGet packages
+- weight: 2
+  title: About Xamarin
 - weight: 1
   title: About Xamarin
+- weight: 3
+  title: Restore NuGet packages
 builds:
 - title: Triggering builds
   identifier: triggering-builds
@@ -95,9 +107,15 @@ main:
   identifier: tips-and-tricks
   weight: 13
 docker:
-- weight: 3
+- weight: 6
   title: Use your own Docker image
-- weight: 2
+- weight: 5
+  title: Use your own Docker image
+- weight: 4
   title: How to run your build locally in Docker
+- weight: 3
+  title: How to run your build locally in Docker
+- weight: 2
+  title: Docker support on bitrise.io
 - weight: 1
   title: Docker support on bitrise.io
