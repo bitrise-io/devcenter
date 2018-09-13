@@ -29,10 +29,9 @@ A YAML configuration example of the step & input:
 That's all, your next build will attach the OS X system log file
 to your build - you'll see it at the top of the Build's page.
 
-{% include message_box.html type="note" title="By default the **Deploy to Bitrise.io** will always run" content="
-By default the `Deploy to Bitrise.io` will always run,
-even if a previous step fails, __so you can deploy failed step/tool logs too.__
-"%}
+!!! note "By default the **Deploy to Bitrise.io** will always run"
+    By default the `Deploy to Bitrise.io` will always run,
+    even if a previous step fails, __so you can deploy failed step/tool logs too.__
 
 
 ## Deploy a directory
@@ -58,10 +57,9 @@ An example configuration:
 
 _Note: as every input's, `is_compress`'s value have to be a __string__, that's why `true` is surrounded with quotes._
 
-{% include message_box.html type="note" title="Using more than one `Deploy to Bitrise.io` step" content="
-You can use as many `Deploy to Bitrise.io` steps as you want to,
-even in a single build / workflow.
-Alternatively of course you can move all the files you want to deploy
-into a single directory, and deploy that directory with the step,
-it's up to you to decide which solution works best for you.
-"%}
+!!! note "Using more than one `Deploy to Bitrise.io` step"
+    You can use as many `Deploy to Bitrise.io` steps as you want to,
+    even in a single build / workflow.
+    Alternatively of course you can move all the files you want to deploy
+    into a single directory, and deploy that directory with the step,
+    it's up to you to decide which solution works best for you.

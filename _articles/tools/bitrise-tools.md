@@ -7,13 +7,12 @@ menu:
 ---
 List of Open Source tools maintained by the Bitrise team.
 
-{% include message_box.html type="note" title="Where can I find the repositories?" content="
-For historical reasons the core Bitrise CLI tools live in [github.com/bitrise-io](https://github.com/bitrise-io),
-but most of our tools, and every new tool we create lives in
-the [github.com/bitrise-tools](https://github.com/bitrise-tools),
-and the CLI core components (plugins, etc.)
-in the [github.com/bitrise-core](https://github.com/bitrise-core) GitHub organization.
-"%}
+!!! note "Where can I find the repositories?"
+    For historical reasons the core Bitrise CLI tools live in [github.com/bitrise-io](https://github.com/bitrise-io),
+    but most of our tools, and every new tool we create lives in
+    the [github.com/bitrise-tools](https://github.com/bitrise-tools),
+    and the CLI core components (plugins, etc.)
+    in the [github.com/bitrise-core](https://github.com/bitrise-core) GitHub organization.
 
 
 ## Core, Bitrise CLI tools

@@ -20,6 +20,5 @@ Luckily, your Android primary workflow already contains the `Android Unit Test` 
 
 The `Android Unit Test` step generates and exports unit test reports into the `$BITRISE_DEPLOY_DIR` folder. Then the `Deploy to Bitrise.io` step exports those reports from the `$BITRISE_DEPLOY_DIR` folder to the respective build's `APPS & Artifacts` tab on [bitrise.io](https://www.bitrise.io). You can view or download those reports to your local computer.
 
-{% include message_box.html type="note" title="Troubleshooting: Failed build" content="
-If your build has failed running, click on `Download logs`. In the last lines of your Step log, you can view the error message and fix the error accordingly. If you're done, commit your changes to your repository, and a new build should start automatically.
-"%}
+!!! note "Troubleshooting: Failed build"
+    If your build has failed running, click on `Download logs`. In the last lines of your Step log, you can view the error message and fix the error accordingly. If you're done, commit your changes to your repository, and a new build should start automatically.

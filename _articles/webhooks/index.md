@@ -20,9 +20,8 @@ We support multiple webhook providers. You can find the supported providers in y
 
 ![Screenshot](/img/webhooks/webhook-providers.png)
 
-{% include message_box.html type="note" title="Custom webhook support" content="
-[Our webhook processor is Open Sourced](https://github.com/bitrise-io/bitrise-webhooks). If you are looking for a not supported solution, you can create an issue on the GitHub page or create a pull request with the implementation.
-"%}
+!!! note "Custom webhook support"
+    [Our webhook processor is Open Sourced](https://github.com/bitrise-io/bitrise-webhooks). If you are looking for a not supported solution, you can create an issue on the GitHub page or create a pull request with the implementation.
 
     You can also run your own webhook provider behind your own firewall if required.
 

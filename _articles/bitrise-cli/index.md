@@ -24,12 +24,11 @@ This section of the DevCenter is dedicated to this runner (`Bitrise CLI`) and th
 [bitrise.io](https://www.bitrise.io) account__, the only requirement is that
 you install the `Bitrise CLI` on your Mac/PC.
 
-{% include message_box.html type="note" title="Bitrise CLI on bitrise.io" content="
-The CLI you can install is exactly the same as what's used on [bitrise.io](https://www.bitrise.io).
-When a build starts on [bitrise.io](https://www.bitrise.io), a virtual machine
-is created for the build with the Bitrise CLI preinstalled,
-and once the virtual machine is ready, the build is performed through the Bitrise CLI.
-"%}
+!!! note "Bitrise CLI on bitrise.io"
+    The CLI you can install is exactly the same as what's used on [bitrise.io](https://www.bitrise.io).
+    When a build starts on [bitrise.io](https://www.bitrise.io), a virtual machine
+    is created for the build with the Bitrise CLI preinstalled,
+    and once the virtual machine is ready, the build is performed through the Bitrise CLI.
 
 
 ## Bitrise CLI - the open source, offline, automation runner
@@ -63,12 +62,11 @@ _You can also create your own Step Library if you want to, but it's usually
 easier to just reference your steps with their `git clone` URL directly
 if you don't want to share it with others._
 
-{% include message_box.html type="note" title="Custom StepLib support in tools" content="
-The Bitrise CLI tools can work with custom step libraries, but other
-tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io)
-might be limited in functionality for steps not available in the main
-[Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
-"%}
+!!! note "Custom StepLib support in tools"
+    The Bitrise CLI tools can work with custom step libraries, but other
+    tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io)
+    might be limited in functionality for steps not available in the main
+    [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
 
 If possible you should share your steps in the
 main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib),

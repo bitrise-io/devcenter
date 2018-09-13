@@ -84,10 +84,9 @@ In case of the default export_options.plist does not fit your needs,
 you can specify your own export options too.
 To do this create a plist file (in your repository) with the options you want to use.
 
-{% include message_box.html type="note" title="Available export options" content="
-You can get a list of all available options by calling `xcodebuild -h` -
-check the **Available keys for -exportOptionsPlist:** section of the printed help.
-"%}
+!!! note "Available export options"
+    You can get a list of all available options by calling `xcodebuild -h` -
+    check the **Available keys for -exportOptionsPlist:** section of the printed help.
 
 *These are the options you can select in Xcode when you export the ipa manually.*
 
@@ -118,11 +117,10 @@ Your export options plist should look like:
 </plist>
 ```
 
-{% include message_box.html type="note" title="Code Signing note" content="
-Of course, if you set the `method` to `app-store` then you have to upload / use
-an App Store code signing Identity & Provisioning Profile (it have to be
-available in the system).
-"%}
+!!! note "Code Signing note"
+    Of course, if you set the `method` to `app-store` then you have to upload / use
+    an App Store code signing Identity & Provisioning Profile (it have to be
+    available in the system).
 
 
 ### Related issues:

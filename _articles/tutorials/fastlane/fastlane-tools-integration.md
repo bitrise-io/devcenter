@@ -16,13 +16,12 @@ We love how [Felix Krause](https://krausefx.com) sought to solve this problem by
 creating [fastlane](https://fastlane.tools). So by the combined force of earth, water, fire and wind…
 we integrated the whole [fastlane toolkit](https://fastlane.tools) - booyah! How cool is that!
 
-{% include message_box.html type="note" title="Bitrise offline CLI" content="
-We have an open source, offline CLI, which can be used in a similar way as _fastlane_.
-If you're interested, you can find the CLI's website [here](https://www.bitrise.io/cli),
-and its GitHub repository [here](https://github.com/bitrise-io/bitrise).
-You can use this CLI to run your bitrise configurations locally, which can
-include runing _fastlane_ too as part of the build, as described below ;)
-"%}
+!!! note "Bitrise offline CLI"
+    We have an open source, offline CLI, which can be used in a similar way as _fastlane_.
+    If you're interested, you can find the CLI's website [here](https://www.bitrise.io/cli),
+    and its GitHub repository [here](https://github.com/bitrise-io/bitrise).
+    You can use this CLI to run your bitrise configurations locally, which can
+    include runing _fastlane_ too as part of the build, as described below ;)
 
 ## What is fastlane?
 
@@ -40,12 +39,12 @@ workflow](/getting-started/manage-your-bitrise-workflow),
 after the `Git Clone` step (and any other dependency step).
 
 !!! note
-You should also add/keep the `Certificate and profile installer` step in the workflow,
-to download your _.p12 Certificates_ and _Provisioning Profiles_ uploaded to [bitrise.io](https://www.bitrise.io)
-and to install them. __Even if you don't upload your files to [bitrise.io](https://www.bitrise.io)
-and instead you use a fastlane tool to manage your code signing files you should
-still keep this step in the workflow__. Read more about [iOS Code Signing using
-third party tools](/ios/code-signing/#use-a-third-party-tool-to-manage-your-code-signing-files).
+    You should also add/keep the `Certificate and profile installer` step in the workflow,
+    to download your _.p12 Certificates_ and _Provisioning Profiles_ uploaded to [bitrise.io](https://www.bitrise.io)
+    and to install them. __Even if you don't upload your files to [bitrise.io](https://www.bitrise.io)
+    and instead you use a fastlane tool to manage your code signing files you should
+    still keep this step in the workflow__. Read more about [iOS Code Signing using
+    third party tools](/ios/code-signing/#use-a-third-party-tool-to-manage-your-code-signing-files).
 
 With adding the _fastlane_ step we ensure that you are running on the latest _fastlane_ version,
 as it is pre-installed on all our VMs.
@@ -53,10 +52,9 @@ Inside the step you can set the _fastlane_ action and we will run it automatical
 
 For more configuration options see the `Fastlane` step's description in the Workflow Editor!
 
-{% include message_box.html type="note" content="
-If you want to use [bitrise.io](https://www.bitrise.io) to store your code signing files,
-you should just follow the [iOS Code Signing guide here](/ios/code-signing/).
-"%}
+!!! note
+    If you want to use [bitrise.io](https://www.bitrise.io) to store your code signing files,
+    you should just follow the [iOS Code Signing guide here](/ios/code-signing/).
 
 ## What's next?
 

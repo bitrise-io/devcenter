@@ -50,13 +50,12 @@ __IMPORTANT__: You can't ignore a path which results in an invalid cache item.
 
 You can download and delete caches for every branch which generated a cache in the `Manage Build Caches` section of your app's `Settings` tab.
 
-{% include message_box.html type="warning" title="Delete a single branch's cache" content="
-If you only want to delete the cache which is related to a single branch,
-you should also delete the default branch's cache too!
-For more details, see the
-[If a build runs on a branch which doesn't have a cache yet, it'll get the main/default Branch's cache](#if-a-build-runs-on-a-branch-which-doesnt-have-a-cache-yet-itll-get-the-maindefault-branchs-cache)
-section.
-"%}
+!!! warning "Delete a single branch's cache"
+    If you only want to delete the cache which is related to a single branch,
+    you should also delete the default branch's cache too!
+    For more details, see the
+    [If a build runs on a branch which doesn't have a cache yet, it'll get the main/default Branch's cache](#if-a-build-runs-on-a-branch-which-doesnt-have-a-cache-yet-itll-get-the-maindefault-branchs-cache)
+    section.
 
 You can see the size of the caches and the last time a given cache was used in the popup window.
 

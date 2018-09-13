@@ -152,10 +152,9 @@ but that requires some customization in your project.*
 
 ## Installing / Using Java version X
 
-{% include message_box.html type="note" title="Java 8 is now pre-installed" content="
-Java 8 is now the pre-installed Java version on the Bitrise.io Linux Stack.
-This section is kept here for future reference, in case you'd need another Java version.
-"%}
+!!! note "Java 8 is now pre-installed"
+    Java 8 is now the pre-installed Java version on the Bitrise.io Linux Stack.
+    This section is kept here for future reference, in case you'd need another Java version.
 
 _If you'd need a Java / JDK version which is not preinstalled on the Android stacks,
 you can follow this guide to install it. This example will install Java/JDK 8,

@@ -76,9 +76,8 @@ Removing members from the entire organization removes them from all the groups t
    ![Screenshot](/img/team-management/organization/remove-from-org.png)
 5. In the pop-up window, click `Yes`.
 
-{% include message_box.html type="note" title="Removing yourself" content="
+!!! note "Removing yourself"
 You can remove yourself from the organization this way. You will lose all access rights you had to the organization. Only click `Yes` in the pop-up window if you are certain you wish to do this.
-"%}
 
 ![Screenshot](/img/team-management/organization/org-are-you-sure.png)
 
