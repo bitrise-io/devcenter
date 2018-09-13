@@ -17,21 +17,25 @@ tutorials:
   identifier: xamarin
   weight: 2
 fastlane:
-- weight: 1
-  title: fastlane tools integration
-- weight: 6
-  title: How to configure fastlane match for Bitrise
 - weight: 3
-  title: How to configure fastlane match for Bitrise
-- weight: 4
   title: fastlane tools integration
 - weight: 5
+  title: How to configure fastlane match for Bitrise
+- weight: 4
+  title: How to configure fastlane match for Bitrise
+- weight: 1
+  title: fastlane tools integration
+- weight: 2
   title: fastlane tools integration
 - weight: 8
   title: How to configure fastlane match for Bitrise
-- weight: 2
+- weight: 6
   title: fastlane tools integration
 - weight: 7
+  title: fastlane tools integration
+- weight: 10
+  title: How to configure fastlane match for Bitrise
+- weight: 9
   title: How to configure fastlane match for Bitrise
 getting-started:
 - title: Signing up
@@ -44,39 +48,6 @@ team-management:
 - title: Organizations
   identifier: organizations
   weight: 3
-xamarin:
-- weight: 11
-  title: Add custom sources to NuGet
-- weight: 10
-  title: Deploy your Xamarin app
-- weight: 8
-  title: Restore NuGet packages
-- weight: 7
-  title: Add custom sources to NuGet
-- weight: 5
-  title: Deploy your Xamarin app
-- weight: 3
-  title: About Xamarin
-- weight: 4
-  title: Restore NuGet packages
-- weight: 2
-  title: About Xamarin
-- weight: 6
-  title: About Xamarin
-- weight: 12
-  title: Restore NuGet packages
-- weight: 14
-  title: Deploy your Xamarin app
-- weight: 16
-  title: Add custom sources to NuGet
-- weight: 15
-  title: Add custom sources to NuGet
-- weight: 13
-  title: Deploy your Xamarin app
-- weight: 1
-  title: About Xamarin
-- weight: 9
-  title: Restore NuGet packages
 builds:
 - title: Triggering builds
   identifier: triggering-builds
@@ -131,27 +102,33 @@ main:
   identifier: tips-and-tricks
   weight: 13
 docker:
-- weight: 8
-  title: Use your own Docker image
+- weight: 3
+  title: Docker support on bitrise.io
 - weight: 7
   title: How to run your build locally in Docker
-- weight: 5
+- weight: 8
+  title: Use your own Docker image
+- weight: 6
   title: Use your own Docker image
 - weight: 4
   title: How to run your build locally in Docker
-- weight: 1
-  title: Docker support on bitrise.io
-- weight: 6
-  title: Docker support on bitrise.io
-- weight: 10
-  title: How to run your build locally in Docker
-- weight: 12
-  title: Use your own Docker image
 - weight: 2
   title: Docker support on bitrise.io
 - weight: 11
   title: Use your own Docker image
-- weight: 9
+- weight: 10
   title: How to run your build locally in Docker
-- weight: 3
+- weight: 1
+  title: Docker support on bitrise.io
+- weight: 9
+  title: Docker support on bitrise.io
+- weight: 13
+  title: How to run your build locally in Docker
+- weight: 15
+  title: Use your own Docker image
+- weight: 14
+  title: Use your own Docker image
+- weight: 12
+  title: How to run your build locally in Docker
+- weight: 5
   title: Docker support on bitrise.io
