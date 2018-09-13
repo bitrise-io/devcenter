@@ -2,7 +2,7 @@
 title: Protecting your code signing files
 menu:
   ios-code-signing:
-    weight: 10
+    weight: 9
 
 ---
 ## Protecting your code signing files

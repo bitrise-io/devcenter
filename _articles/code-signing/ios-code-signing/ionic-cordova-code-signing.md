@@ -2,7 +2,7 @@
 title: Code signing with Ionic and Cordova projects
 menu:
   ios-code-signing:
-    weight: 9
+    weight: 8
 
 ---
 Naturally, Bitrise supports iOS applications built with either **Ionic** or **Cordova**. However, the code signing process is slightly different compared to a "native" Xcode project.
