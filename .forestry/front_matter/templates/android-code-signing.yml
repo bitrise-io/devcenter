@@ -19,3 +19,5 @@ fields:
       label: weight
       config:
         required: true
+pages:
+- _articles/reviews/front-matter-templates-are-awesome.md
