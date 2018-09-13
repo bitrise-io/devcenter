@@ -17,10 +17,12 @@ published: false
 
     **IMPORTANT**: the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you.
  8. Select the .ipa export method. You can modify this later - for now, select `development`. You should see your:
+ 
     * Project or Workspace path
     * Scheme name
     * ipa export method
     * iOS stack
+    
  9. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build - click the message and it will take you to the build page.
 10. Test.
 
