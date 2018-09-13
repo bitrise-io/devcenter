@@ -47,4 +47,4 @@ _No_ [_bitrise.io_](https://www.bitrise.io) _account required to use the Bitrise
 It's a great help when you're developing Steps, debugging builds, or just want to use Bitrise for _any kind of automation_ on your machines.
 
 You can find more information about the offline runner
-in the [Bitrise CLI and bitrise.yml](/bitrise-cli/) section of the DevCenter.
+in the [Bitrise CLI and bitrise.yml](/bitrise-cli/index/) section of the DevCenter.
