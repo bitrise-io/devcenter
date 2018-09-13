@@ -5,12 +5,13 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: document
+  path: forestry-help.md
+  label: Forestry User Guide - Articles and the editor
+  read_only: true
+- type: document
   path: forestry-help-menus.md
   label: Forestry User Guide - Menu items
   match: "**/*"
-- type: document
-  path: forestry-help.md
-  label: Forestry User Guide - Articles and the editor
 - type: directory
   path: _articles/reviews
   label: For review
