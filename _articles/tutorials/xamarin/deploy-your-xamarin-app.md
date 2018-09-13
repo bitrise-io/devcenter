@@ -5,7 +5,6 @@ menu:
     weight: 4
 
 ---
-
 After successfully adding your Xamarin application, we will create a default workflow (build configuration) for you.
 This workflow includes a `Deploy to bitrise.io` step by default.
 

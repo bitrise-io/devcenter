@@ -1,10 +1,11 @@
 ---
 title: Deploy apps to DeployGate from Bitrise
 menu:
-  deploy:
-    weight: 3
----
+  deployment-tutorials:
+    weight: 4
+    title: Deploy apps to Deploygate from Bitrise
 
+---
 ## What is DeployGate?
 
 **[DeployGate](https://deploygate.com?locale=en)** is a mobile app distribution platform for iOS/Android. DeployGate delivers your in-development iOS/Android apps to your development team, members, employees, and QA testing team in your organization or to testers outside of your company.
