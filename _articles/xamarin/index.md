@@ -34,6 +34,5 @@ video session about setting up Xamarin apps on Bitrise here: [https://www.youtub
 * [Add custom sources to NuGet](/xamarin/add-custom-sources-to-nuget)
 * [Build with FAKE (F# Make)](/tutorials/build-with-fake)
 
-!!! note "Community created tutorials"
-For more, community created tutorials, see the Xamarin section on the
-[Community Created Tutorials](/tutorials/community-created) page.
+{% include message_box.html type="note" title="Community created tutorials" content="
+For more, community created tutorials, see the Xamarin section on the [Community Created Tutorials](/tutorials/community-created) page. "%} 
