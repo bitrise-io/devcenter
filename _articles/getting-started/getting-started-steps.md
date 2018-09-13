@@ -1,7 +1,7 @@
 ---
 title: Steps
 redirect_from:
-- "/getting-started/manage-your-bitrise-workflow/#environment-variable-replace-mode"
+- "/getting-started/manage-your-bitrise-workflow#environment-variable-replace-mode"
 menu:
   getting-started:
     weight: 8
