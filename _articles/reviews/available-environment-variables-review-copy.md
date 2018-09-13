@@ -1,27 +1,19 @@
 ---
-title: Available environment variables
-menu:
-  builds:
-    weight: 9
+title: Available Environment Variables - review copy
+date: 2018-09-13 08:21:32 +0000
+redirect_from: []
+published: false
 
 ---
 ## Exposed by the Bitrise CLI
 
-These Environment Variables are available everywhere, even if you run the build on your own Mac
-(using the [Bitrise CLI](https://www.bitrise.io/cli)):
+These Environment Variables are available everywhere, even if you run the build on your own Mac (using the [Bitrise CLI](https://www.bitrise.io/cli)):
 
 * `BITRISE_TRIGGERED_WORKFLOW_ID` : the Workflow's ID which was triggered, either with `bitrise run` or `bitrise trigger`
-* `BITRISE_TRIGGERED_WORKFLOW_TITLE` : the Workflow's title (if you provided one) which was triggered,
-  either with `bitrise run` or `bitrise trigger`
-* `BITRISE_BUILD_STATUS` : current status of the build - `"0"` if there are no failed steps yet,
-  `"1"` if there's at least one failed step
-* `BITRISE_SOURCE_DIR` : path of source / base workdir. By default it's the directory where `bitrise` runs
-  (e.g. your repository root), unless you provide a different value.
-  Can be overwritten during the build, which will change the working directory for subsequent Steps in the build.
-* `BITRISE_DEPLOY_DIR` : directory to store artifacts / files for deploy.
-  It's a temporary directory created by `bitrise` CLI by default, and can be overwritten before starting `bitrise` CLI.
-  _The content of this directory can be attached to the_ [_bitrise.io_](https://www.bitrise.io)_ build page, as artifacts,
-  with the _`_Deploy to Bitrise.io_` _step for example._
+* `BITRISE_TRIGGERED_WORKFLOW_TITLE` : the Workflow's title (if you provided one) which was triggered, either with `bitrise run` or `bitrise trigger`
+* `BITRISE_BUILD_STATUS` : current status of the build - `"0"` if there are no failed steps yet, `"1"` if there's at least one failed step
+* `BITRISE_SOURCE_DIR` : path of source / base workdir. By default it's the directory where `bitrise` runs (e.g. your repository root), unless you provide a different value. Can be overwritten during the build, which will change the working directory for subsequent Steps in the build.
+* `BITRISE_DEPLOY_DIR` : directory to store artifacts / files for deploy. It's a temporary directory created by `bitrise` CLI by default, and can be overwritten before starting `bitrise` CLI. _The content of this directory can be attached to the_ [_bitrise.io_](https://www.bitrise.io) _build page, as artifacts, with the_ `_Deploy to Bitrise.io_` _step for example._
 * `CI` : indicates whether `bitrise` CLI is running in CI (Continuous Integration) mode. Value can be `"true"` or `"false"`.
 * `PR` : indicates whether `bitrise` CLI is running in PR (Pull Request) mode. Value can be `"true"` or `"false"`.
 
@@ -48,13 +40,9 @@ These environments are available for builds running on [bitrise.io](https://www.
 * `BITRISEIO_PULL_REQUEST_REPOSITORY_URL` : The repository URL from where the Pull Request is sent
 * `BITRISEIO_PULL_REQUEST_MERGE_BRANCH` : The pre-merge branch - if the Git hosting provider supports and provides the pre-merged state of a Pull Request on a special "merge branch"
 * `BITRISEIO_PULL_REQUEST_HEAD_BRANCH` : The Pull Request "head branch", if the Git hosting provider system supports & provides this. This special git ref should point to the source of the Pull Request
-* `BITRISE_PROVISION_URL` : Provisioning Profile(s) URL - the ones uploaded to [bitrise.io](https://www.bitrise.io).
-  Pipe character (`|`) separated list, in case more than one value is provided.
-* `BITRISE_CERTIFICATE_URL` : Certificate / Identity URL - the one uploaded to [bitrise.io](https://www.bitrise.io).
-  Pipe character (`|`) separated list, in case more than one value is provided.
-* `BITRISE_CERTIFICATE_PASSPHRASE` : Certificate / Identity's password / passphrase,
-  the one specified on [bitrise.io](https://www.bitrise.io).
-  Pipe character (`|`) separated list, in case more than one value is provided.
+* `BITRISE_PROVISION_URL` : Provisioning Profile(s) URL - the ones uploaded to [bitrise.io](https://www.bitrise.io). Pipe character (`|`) separated list, in case more than one value is provided.
+* `BITRISE_CERTIFICATE_URL` : Certificate / Identity URL - the one uploaded to [bitrise.io](https://www.bitrise.io). Pipe character (`|`) separated list, in case more than one value is provided.
+* `BITRISE_CERTIFICATE_PASSPHRASE` : Certificate / Identity's password / passphrase, the one specified on [bitrise.io](https://www.bitrise.io). Pipe character (`|`) separated list, in case more than one value is provided.
 * `BITRISE_IO` : indicates that the build is running in a bitrise.io environment. Value is set to `"true"` by bitrise.io when it starts a build.
 
 For more information on env vars, check out [Secrets and Env Vars](/builds/env-vars-secret-env-vars/).
