@@ -25,8 +25,9 @@ __IMPORTANT__: You cannot simply add `gem environment gemdir` to the input of yo
 
 1. Insert the `Cache:Pull` step after the `Git Clone` but before the `Android Build` steps.
 
-    !!! note "Step version"
-        Make sure that your step is version 1.0.0 or newer.
+    {% include message_box.html type="note" title="Step version" content="
+Make sure that your step is version 1.0.0 or newer.
+"%}
 
 1. Insert the `Cache:Push` step to the very end of your workflow.
 

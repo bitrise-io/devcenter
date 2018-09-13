@@ -14,9 +14,10 @@ which is probably the easiest way to get started.
 
 For this example we'll use [this Bitrise Android sample project](https://github.com/bitrise-samples/sample-apps-android-sdk22).
 
-!!! warning "Large images ahead"
-    The official Bitrise Docker images are quite large, due to the fact that it includes
-    a wide variety of preinstalled tools. You'll need at __least__ 20-25 GB free disk space!
+{% include message_box.html type="warning" title="Large images ahead" content="
+The official Bitrise Docker images are quite large, due to the fact that it includes
+a wide variety of preinstalled tools. You'll need at __least__ 20-25 GB free disk space!
+"%}
 
 If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli)
 you should try that first. You don't have to master the CLI,
@@ -62,9 +63,10 @@ Once the download succeeds you have everything prepared to run your build
 in Docker! The last thing you have to do is to download your Bitrise build
 configuration (`bitrise.yml`).
 
-!!! note "`bitrise.yml`"
-    You can download your project's `bitrise.yml` from the __Workflow Editor__
-    on [bitrise.io](https://www.bitrise.io), under the `bitrise.yml` section.
+{% include message_box.html type="note" title="`bitrise.yml`" content="
+You can download your project's `bitrise.yml` from the __Workflow Editor__
+on [bitrise.io](https://www.bitrise.io), under the `bitrise.yml` section.
+"%}
 
 In your Terminal / Command Line go to (`cd`) the root directory
 of _your repository_, and make sure your `bitrise.yml` is at this location.
@@ -84,11 +86,12 @@ The only thing left to do is to actually run a build:
 docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm bitriseio/docker-android:latest bitrise run WORKFLOW
 ```
 
-!!! note
-    If you want to just jump into the container and experiment inside, you can replace `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container.
-    E.g.: `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it bitriseio/docker-android:latest bash`.
-    After this, if you want to, you can run `bitrise run WORKFLOW`, which will run the workflow inside the container.
-    To exit from the container just run `exist`.
+{% include message_box.html type="note" content="
+If you want to just jump into the container and experiment inside, you can replace `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container.
+E.g.: `docker run --privileged --env CI=false --volume \"$(pwd):/bitrise/src\" --volume \"/var/run/docker.sock:/var/run/docker.sock\" -it bitriseio/docker-android:latest bash`.
+After this, if you want to, you can run `bitrise run WORKFLOW`, which will run the workflow inside the container.
+To exit from the container just run `exist`.
+"%}
 
 _Don't forget to replace `WORKFLOW` with the actual ID of your workflow in your `bitrise.yml`,
 with something like `primary`!_

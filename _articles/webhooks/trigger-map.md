@@ -43,15 +43,16 @@ workflows:
             echo "$BITRISE_TRIGGERED_WORKFLOW_ID"
 ```
 
-!!! note "What is bitrise.yml?"
-    `bitrise.yml` is the representation of your app's configuration.
-    In the workflow editor you can edit it in a visual way through the web UI,
-    but you can always switch to `bitrise.yml` mode (left side of the workflow editor)
-    to see the configuration in a YAML format, as well as you can edit the configuration
-    in YAML format too. It's up to you which solution you prefer, the visual web UI
-    or the YAML (`bitrise.yml`) representation, and you can switch between the two
-    any time (the changes you do in the web UI will be reflected in the `bitrise.yml`,
-    and vice versa).
+{% include message_box.html type="note" title="What is bitrise.yml?" content="
+`bitrise.yml` is the representation of your app's configuration.
+In the workflow editor you can edit it in a visual way through the web UI,
+but you can always switch to `bitrise.yml` mode (left side of the workflow editor)
+to see the configuration in a YAML format, as well as you can edit the configuration
+in YAML format too. It's up to you which solution you prefer, the visual web UI
+or the YAML (`bitrise.yml`) representation, and you can switch between the two
+any time (the changes you do in the web UI will be reflected in the `bitrise.yml`,
+and vice versa).
+"%}
 
 The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: "*"`), Tag Push (`tag: "*"`)
 and for every Pull Request (`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`).
@@ -216,9 +217,10 @@ trigger_map:
   workflow: primary
 ```
 
-!!! warning "Order of the items matter!"
-    When `bitrise` receives a webhook event (any kind) it'll match it against
-    the app's `trigger_map`. __The first item it matches will select the workflow for the build!__
+{% include message_box.html type="warning" title="Order of the items matter!" content="
+When `bitrise` receives a webhook event (any kind) it'll match it against
+the app's `trigger_map`. __The first item it matches will select the workflow for the build!__
+"%}
 
 This means that if you'd specify the `push_branch: master` __after__ the
 `push_branch: "*"` item, `master` would never be selected as every code push
@@ -241,10 +243,11 @@ Whether you want to build both or just one of these in case of a pull request
 is up to you and depends on your project's requirements, but with `bitrise`
 you can decide whether you want it or not.
 
-!!! note "Pull Request merge is actually a Code Push!"
-    Source code hosting services treat the event of "merge" as a code push
-    event. For example if you merge a Pull Request from `feature/a` into `master`,
-    when you merge the PR it will generate a code push to `master`.
+{% include message_box.html type="note" title="Pull Request merge is actually a Code Push!" content="
+Source code hosting services treat the event of \"merge\" as a code push
+event. For example if you merge a Pull Request from `feature/a` into `master`,
+when you merge the PR it will generate a code push to `master`.
+"%}
 
 An example to build only the pull request ("pre-merged") events/state,
 in addition to deploying `master`:

@@ -56,9 +56,10 @@ echo y | android update sdk --no-ui --all --filter extra-google-m2repository | g
 In most cases you don't need both packages to be updated, so you can try to remove them one
 by one, but having all three in the script covers most of the cases related to this error.
 
-!!! note "We update the preinstalled Android packages on every weekend"
-    so if the error is related to an outdated package, the workaround
-    we describe here can be removed from your build after that weekend's update.
+{% include message_box.html type="note" title="We update the preinstalled Android packages on every weekend" content="
+so if the error is related to an outdated package, the workaround
+we describe here can be removed from your build after that weekend's update.
+"%}
 
 ### Alternative solution for the license error
 

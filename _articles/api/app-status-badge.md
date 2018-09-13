@@ -14,20 +14,23 @@ With the `Status Image API token`, you can get an embeddable SVG badge image, a 
 2. In the `Status image` popup, you can optionally set a branch, and get copy-paste-ready `Embed` codes for the SVG image.
 
 
-    !!! example "Example SVG URL"
-        ```
-        https://app.bitrise.io/app/APP-ID/status.svg?token=STATUS-IMAGE-API-TOKEN&branch=master
-        ```
+    {% include message_box.html type="example" title="Example SVG URL" content="
+```
+https://app.bitrise.io/app/APP-ID/status.svg?token=STATUS-IMAGE-API-TOKEN&branch=master
+```
+"%}
 
     To get the JSON equivalent of the status image, simply replace the `.svg` in the `Embed` URL with `.json`.
 
-    !!! example "JSON URL"
-        ```
-        https://app.bitrise.io/app/APP-ID/status.json?token=STATUS-IMAGE-API-TOKEN&branch=master
-        ```
+    {% include message_box.html type="example" title="JSON URL" content="
+```
+https://app.bitrise.io/app/APP-ID/status.json?token=STATUS-IMAGE-API-TOKEN&branch=master
+```
+"%}
 
-!!! attention "STATUS-IMAGE-API-TOKEN"
-    The `STATUS-IMAGE-API-TOKEN` is a special token which can only be used for calling this endpoint (you can find this token in the `Status image` popup). No other information can be retrieved with this token, and it's not the same as the `API Token` which you can find on the `Code` tab!
+{% include message_box.html type="attention" title="STATUS-IMAGE-API-TOKEN" content="
+The `STATUS-IMAGE-API-TOKEN` is a special token which can only be used for calling this endpoint (you can find this token in the `Status image` popup). No other information can be retrieved with this token, and it's not the same as the `API Token` which you can find on the `Code` tab!
+"%}
 
 ## JSON response
 

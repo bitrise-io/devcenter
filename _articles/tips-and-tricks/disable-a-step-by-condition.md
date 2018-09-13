@@ -39,12 +39,11 @@ and so you don't want to do a `Git Clone`. Of course you can change the `run_if`
 property of any step, so you can specify a `run_if: true` for the `Git Clone`
 step if you want to run it locally too.
 
-!!! note
-    CI mode can be enabled on your own Mac/PC by setting the `CI` environment to `true`
-    (e.g. with `export CI=true` in your Bash Terminal), or by running
-    `bitrise run` with the `--ci` flag: `bitrise --ci run ...`._
-
-
+{% include message_box.html type="note" content="
+CI mode can be enabled on your own Mac/PC by setting the `CI` environment to `true`
+(e.g. with `export CI=true` in your Bash Terminal), or by running
+`bitrise run` with the `--ci` flag: `bitrise --ci run ...`._
+"%}
 
 ## Run a Step only if the Build failed
 
@@ -70,8 +69,9 @@ An example `script` step, which will only run if the Build failed:
         echo "Build Failed!"
 ```
 
-!!! note "A **run_if** can be any valid **Go** template"
-    A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `"True"`, `"t"`, `"yes"` or `"y"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't.
+{% include message_box.html type="note" title="A **run_if** can be any valid **Go** template" content="
+A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `\"True\"`, `\"t\"`, `\"yes\"` or `\"y\"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't.
+"%}
 
 An example `run_if` to check a **custom environment variable** (you
 can expose environment variables from your scripts too,

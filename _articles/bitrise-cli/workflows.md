@@ -30,10 +30,11 @@ workflows:
 This configuration contains two workflows, `first` and `second`,
 so you can execute both `bitrise run first` and `bitrise run second`.
 
-!!! note "Available workflow list"
-    You can list all the available workflows in a `bitrise.yml`
-    by running `bitrise run` or `bitrise workflows` in the directory
-    of the `bitrise.yml`.
+{% include message_box.html type="note" title="Available workflow list" content="
+You can list all the available workflows in a `bitrise.yml`
+by running `bitrise run` or `bitrise workflows` in the directory
+of the `bitrise.yml`.
+"%}
 
 
 ## Add steps to a workflow

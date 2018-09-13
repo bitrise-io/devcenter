@@ -130,12 +130,13 @@ workflows:
             echo "${var_to_print}"
 ```
 
-!!! note "Watch out for the indentation!"
+{% include message_box.html type="note" title="Watch out for the indentation!" content="
 Indentation in the YAML format is very important!
 You should use two-spaces indentation, and you can't use tabs to indent!
 
-    If you use a multi line value, like the one above, it's important that you
-    have to _indent the value with two spaces_, compared to the key!
+If you use a multi line value, like the one above, it's important that you
+have to _indent the value with two spaces_, compared to the key!
+"%}
 
 You can change other properties of the step too, not just the inputs.
 For example, if you want to "force" run the step even if a previous step fails,

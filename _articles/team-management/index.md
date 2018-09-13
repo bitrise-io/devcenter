@@ -10,8 +10,9 @@ Different roles have different permissions that you can read more about below.
 
 To invite a team member head to the `Team tab` on your application's page. You can invite any user by their username or by their email address. If they are not registered on Bitrise we will send out an invitation email for them. Before granting access to a new user, select their role.
 
-!!! warning "Inviting team members"
-    You need to be the app's `owner` or an `admin` to be able to add new team members to your app.
+{% include message_box.html type="warning" title="Inviting team members" content="
+You need to be the app's `owner` or an `admin` to be able to add new team members to your app.
+"%}
 
 `Owners` and `admins` can change the roles of other members by clicking `Change role` next to the member's name.
 

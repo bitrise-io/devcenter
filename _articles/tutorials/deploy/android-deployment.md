@@ -25,8 +25,9 @@ In this guide, you will learn how to:
 
 * Sign your `APK` file [digitally](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/).
 
-    !!! note "Keystore file"
-        Do not forget to upload your keystore file to [bitrise.io](htts://www.bitrise.io).
+    {% include message_box.html type="note" title="Keystore file" content="
+Do not forget to upload your keystore file to [bitrise.io](htts://www.bitrise.io).
+"%}
 
   Once your code signing is completed, your config will look like this:
 

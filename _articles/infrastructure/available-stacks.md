@@ -15,7 +15,7 @@ After selecting the Stack you want to use you'll see a short description of the 
 with an additional link to learn more about that specific Stack (e.g. to see what
 tools are preinstalled, and which versions, on the selected Stack).
 
-!!! note "The Stack won't be used until you click the `Save` button!"
+{% include message_box.html type="note" title="The Stack won't be used until you click the `Save` button!"%}
 
 ## Stack status types
 

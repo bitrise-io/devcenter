@@ -87,12 +87,13 @@ set -ex
 sudo apt-get install -y cmake
 ```
 
-!!! note "Don't forget the `-y` flag for `apt-get`!"
-    If you don't add the `-y` ("yes") flag to the `apt-get` command, `apt-get` will
-    present a prompt which you have to accept or deny __manually__.
-    This is not a problem on your own Linux machine, but in a CI environment
-    you can't provide manual input for `apt-get`. To prevent this issue,
-    and to auto accept the prompt, just use the `-y` flag, as shown in the example.
+{% include message_box.html type="note" title="Don't forget the `-y` flag for `apt-get`!" content="
+If you don't add the `-y` (\"yes\") flag to the `apt-get` command, `apt-get` will
+present a prompt which you have to accept or deny __manually__.
+This is not a problem on your own Linux machine, but in a CI environment
+you can't provide manual input for `apt-get`. To prevent this issue,
+and to auto accept the prompt, just use the `-y` flag, as shown in the example.
+"%}
 
 
 ## Advanced option: use `deps` in `bitrise.yml`
@@ -102,12 +103,13 @@ of the `bitrise.yml`. If you declare `deps` _for a given Step_,
 the [Bitrise CLI](https://github.com/bitrise-io/bitrise)
 will check if that tool is installed, and will install it for you if required.
 
-!!! note "Available dependency managers"
-    This method is the preferred way of handling (step) dependencies, as the Bitrise CLI
-    will not (re)install the specified tool(s) if it's already available.
-    That said, there are tools which are not available in the supported dependency managers,
-    or you need a version of the tool which is not available in the dependency manager.
-    In those cases you should simply install the tool inside the Script, as described above.
+{% include message_box.html type="note" title="Available dependency managers" content="
+This method is the preferred way of handling (step) dependencies, as the Bitrise CLI
+will not (re)install the specified tool(s) if it's already available.
+That said, there are tools which are not available in the supported dependency managers,
+or you need a version of the tool which is not available in the dependency manager.
+In those cases you should simply install the tool inside the Script, as described above.
+"%}
 
 An example, installing `cmake` with either `apt-get` (where `apt-get` is available),
 or with `brew` (on macOS):

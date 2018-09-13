@@ -36,8 +36,9 @@ Choose the project type (for example, Xamarin) and specify the necessary inputs 
 
   ![Choose project type](/img/adding-a-new-app/select-project-type.png)
 
-!!! note "Restarting validation"
-    You can restart validation if you want Bitrise to automatically detect your project type. Once you fixed the issue that caused validation to fail for the first time, go to the `Project build configuration` window and select the `Detected` tab. Choose the `Restart current validation` option.
+{% include message_box.html type="note" title="Restarting validation" content="
+You can restart validation if you want Bitrise to automatically detect your project type. Once you fixed the issue that caused validation to fail for the first time, go to the `Project build configuration` window and select the `Detected` tab. Choose the `Restart current validation` option.
+"%}
 
 ## Webhook setup
 

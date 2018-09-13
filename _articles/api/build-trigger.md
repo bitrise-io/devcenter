@@ -12,22 +12,24 @@ With the Build Trigger API you can start a new build of your app with a simple A
 You can define parameters for the build like what `branch`, `tag` or _git commit_ to use
 and what _build message_ to present on the Build's details page.
 
-!!! note "Interactive cURL call configurator"
-    You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build`
-    button on your app's [bitrise.io](https://www.bitrise.io) page
-    and switching to `Advanced` mode in the popup.
-    At the bottom of the popup you can find a `curl` call,
-    based on the parameters you specify in the popup.
+{% include message_box.html type="note" title="Interactive cURL call configurator" content="
+You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build`
+button on your app's [bitrise.io](https://www.bitrise.io) page
+and switching to `Advanced` mode in the popup.
+At the bottom of the popup you can find a `curl` call,
+based on the parameters you specify in the popup.
+"%}
 
 
 ## How to start a build by calling the Trigger API?
 
 You have to call your build trigger with a `POST` request with a JSON body.
 
-!!! note "Build Trigger Token and App Slug"
-    When you use the Bitrise Trigger API you have to specify the App's `Build Trigger Token` and `App Slug`.
-    You can view both and regenerate your App's Build Trigger Token anytime you want to,
-    on the `Code` tab of the app.
+{% include message_box.html type="note" title="Build Trigger Token and App Slug" content="
+When you use the Bitrise Trigger API you have to specify the App's `Build Trigger Token` and `App Slug`.
+You can view both and regenerate your App's Build Trigger Token anytime you want to,
+on the `Code` tab of the app.
+"%}
 
 _Note: the old `api_token` parameter is DEPRECATED, please use the `build_trigger_token` parameter instead_
 
@@ -109,11 +111,12 @@ The following parameters are supported in the `build_params` object:
   This special git `ref` should point to the __source__ of the Pull Request. Supported by GitHub and GitLab.
   Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
 
-!!! note "Git Clone - parameter priority"
-    If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
-    If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored.
-    These will still be logged, will be available for steps and will be visible on the Build's details page,
-    but the `Git Clone` step will use the the most specific parameter for checkout.
+{% include message_box.html type="note" title="Git Clone - parameter priority" content="
+If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
+If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored.
+These will still be logged, will be available for steps and will be visible on the Build's details page,
+but the `Git Clone` step will use the the most specific parameter for checkout.
+"%}
 
 ### Specify Environment Variables
 
