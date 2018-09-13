@@ -32,4 +32,4 @@ The `primary` workflow of an iOS app includes the two [Steps](/getting-started/g
 * `Xcode Test for iOS`
 * `Deploy to Bitrise.io`
 
-{% include message_box.html type="note" title="Code signing files" content=" Running Xcode tests and deploying their results to Bitrise do not require any code signing files. So don't worry about them just yet! "%}
+{% include message_box.html type="note" title="Code signing files" content="Running Xcode tests and deploying their results to Bitrise do not require any code signing files. So don't worry about them just yet!"%}
