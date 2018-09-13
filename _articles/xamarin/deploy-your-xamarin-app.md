@@ -1,3 +1,10 @@
+---
+title: Deploy your Xamarin app
+menu:
+  xamarin:
+    weight: 3
+---
+
 After successfully adding your Xamarin application we will create a default workflow (build configuration) for you.
 This workflow includes a `Deploy to bitrise.io` step by default.
 
@@ -14,7 +21,7 @@ Also you can send out the build to any tester by providing their email address.
 
 Besides the default Bitrise deployment we have [dozens of other services integrated](http://www.bitrise.io/integrations#?filter=deploy) to Bitrise.
 You can simply modify your workflow and add the ones you would like to,
-like [HockeyApp](http://hockeyapp.net/), [Appaloosa](/tutorials/deploy/publish-your-app-to-appaloosa/), [TestFairy](/tutorials/deploy/deploy-to-testfairy-with-bitrise/) 
+like [HockeyApp](http://hockeyapp.net/), [Appaloosa](/tutorials/deploy/publish-your-app-to-appaloosa/), [TestFairy](/tutorials/deploy/deploy-to-testfairy-with-bitrise/)
 or [DeployGate](/tutorials/deploy/deploy-apps-to-deploygate-from-bitrise/) -
 just filter by the `deploy` tag in the list to see all the available deployment steps.
 
