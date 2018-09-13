@@ -1,5 +1,7 @@
 ---
 title: Intro
+redirect_from:
+- "/bitrise-cli"
 menu:
   bitrise-cli:
     weight: 1
