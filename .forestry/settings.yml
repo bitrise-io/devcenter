@@ -72,6 +72,11 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: _articles/fastlane
+  label: Fastlane
+  create: all
+  match: "**/*"
+- type: directory
   path: _articles/xamarin
   label: Xamarin
   create: all
