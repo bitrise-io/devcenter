@@ -16,31 +16,6 @@ tutorials:
 - title: Xamarin
   identifier: xamarin
   weight: 2
-fastlane:
-- weight: 1
-  title: fastlane tools integration
-- weight: 6
-  title: How to configure fastlane match for Bitrise
-- weight: 3
-  title: How to configure fastlane match for Bitrise
-- weight: 5
-  title: fastlane tools integration
-- weight: 7
-  title: How to configure fastlane match for Bitrise
-- weight: 2
-  title: fastlane tools integration
-- weight: 4
-  title: fastlane tools integration
-- weight: 10
-  title: How to configure fastlane match for Bitrise
-- weight: 8
-  title: fastlane tools integration
-- weight: 9
-  title: fastlane tools integration
-- weight: 12
-  title: How to configure fastlane match for Bitrise
-- weight: 11
-  title: How to configure fastlane match for Bitrise
 getting-started:
 - title: Signing up
   identifier: signing-up
