@@ -1,7 +1,7 @@
 ---
 title: Quick start guide to Bitrise
 redirect_from:
-- https://devcenter.bitrise.io/webhooks/
+- "/webhooks/"
 - "/getting-started/adding-a-new-app/"
 - "/getting-started/create-your-first-app-on-bitrise/"
 - "/getting-started/add-your-first-step-to-your-workflow/"
@@ -75,7 +75,7 @@ After setting up repository access, type the branch of the repository you wish t
 
 ### Webhook setup
 
-[Register a webhook](/webhooks) immediately so Bitrise can start a build every time you push code into your repository. You can skip webhook setup when creating a new app: you can always set up webhooks later.
+[Register a webhook](/webhooks/index/) immediately so Bitrise can start a build every time you push code into your repository. You can skip webhook setup when creating a new app: you can always set up webhooks later.
 
 ## Builds and workflows
 
