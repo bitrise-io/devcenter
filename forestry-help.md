@@ -10,7 +10,10 @@
 
 You can come back and edit the article any time. Please remember that every time you click `Save`, Forestry pushes a commit to GitHub. You can view your file in the DevCenter repository.
 
-NOTE: it is recommended to create a new article in an external editor, such as Atom, and work on it there until it is ready for review. Ideally, you should only save a new article on Forestry when it's done - that way the entire new article is a single commit on GitHub.
+{% include message_box.html type="important" title="GitHub commits" content="Please make sure when your article is ready for review that a single commit on GitHub will make all changes visible. With a new article, that means you should:
+
+1. Cut its entire content (keep it on the clipboard!) and then click Save draft. 
+2. Once it is saved (the little circle is green), paste the content back in and click Save draft. "%} 
 
 **ALTERNATIVE OPTION**: Edit your article on Forestry as much as you want. Once you are done:
 
