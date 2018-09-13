@@ -26,7 +26,7 @@ After signing up, you can connect your Bitrise account to all of the three suppo
 
 ## Adding apps
 
-[Add a new app](/getting-started/adding-a-new-app/) any time by clicking the `+` symbol on the top menu bar and then selecting `Add app` from the dropdown menu.
+[Add a new app](/getting-started/adding-a-new-app/index) any time by clicking the `+` symbol on the top menu bar and then selecting `Add app` from the dropdown menu.
 
 ![Adding a new app](/img/adding-a-new-app/add_new_app.png)
 
