@@ -31,7 +31,10 @@ This is my **NOTABLE content**.
 
 It is _so_, \`very\` **cool**.
 "%}
-	{% include message_box.html type="example" title="My message" content="
+
+1. Please test the message box here.
+    {% include message_box.html type="example" title="My message" content="
 	This is my **EXAMPLE content**.
 	It is _so_, \`very\` _EXEMPLARY_.
 	"%}
+1. Tell me how the test went. 
