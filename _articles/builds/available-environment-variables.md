@@ -20,8 +20,8 @@ These Environment Variables are available everywhere, even if you run the build 
   Can be overwritten during the build, which will change the working directory for subsequent Steps in the build.
 * `BITRISE_DEPLOY_DIR` : directory to store artifacts / files for deploy.
   It's a temporary directory created by `bitrise` CLI by default, and can be overwritten before starting `bitrise` CLI.
-  _The content of this directory can be attached to the [bitrise.io](https://www.bitrise.io) build page, as artifacts,
-  with the `Deploy to Bitrise.io` step for example._
+  _The content of this directory can be attached to the_ [_bitrise.io_](https://www.bitrise.io)_ build page, as artifacts,
+  with the _`_Deploy to Bitrise.io_` _step for example._
 * `CI` : indicates whether `bitrise` CLI is running in CI (Continuous Integration) mode. Value can be `"true"` or `"false"`.
 * `PR` : indicates whether `bitrise` CLI is running in PR (Pull Request) mode. Value can be `"true"` or `"false"`.
 
@@ -41,7 +41,7 @@ These environments are available for builds running on [bitrise.io](https://www.
 * `BITRISEIO_GIT_BRANCH_DEST` : Used only with builds triggered by Pull Requests - the destination/target branch of the Pull Request that triggered the build
 * `BITRISE_GIT_TAG` : tag which triggered the build (if any)
 * `BITRISE_GIT_COMMIT` : commit hash which triggered the build (if any)
-* `BITRISE_GIT_MESSAGE` : commit message - or the message you specified if you triggered the build manually
+* `BITRISE_GIT_MESSAGE` : commit message - or the message you specified if you triggered the build manually. This env var is mapped to [`commit message`](https://devcenter.bitrise.io/api/build-trigger/#git-related) in the API.
 * `BITRISEIO_GIT_REPOSITORY_OWNER` : the owner of the Git repository of the project (for example, `bitrise-team`)
 * `BITRISEIO_GIT_REPOSITORY_SLUG` : the slug of the Git repository of the project (for example, `bitrise-blog`)
 * `BITRISE_PULL_REQUEST` : Pull Request ID, which triggered the build (if any)
