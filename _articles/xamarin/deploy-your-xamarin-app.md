@@ -6,12 +6,12 @@ menu:
 
 ---
 
-After successfully adding your Xamarin application we will create a default workflow (build configuration) for you.
+After successfully adding your Xamarin application, we will create a default workflow (build configuration) for you.
 This workflow includes a `Deploy to bitrise.io` step by default.
 
 Building the default workflow will checkout your git repository,
 archive your application and move all the generated applications ( `ipa` / `apk` ) to the deployment folder.
-After the archive the `Deploy to bitrise.io` step will upload these files to Bitrise.
+After the archive, the `Deploy to bitrise.io` step will upload these files to Bitrise.
 
 We will not just upload your application,
 but send out an email to your team as well.
@@ -32,4 +32,4 @@ deployable artifact - `.ipa`, `.apk`, ...), and fill out the parameters of the s
 
 For more information on code signing for Xamarin projects, see [Xamarin Android code signing](/code-signing/xamarin-android-code-signing/xamarin-android-code-signing) and [Creating a signed .ipa for Xamarin projects](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin).
 
-The next time you start a build your app will be deployed to the service of your choice!
+The next time you start a build, your app will be deployed to the service of your choice!
