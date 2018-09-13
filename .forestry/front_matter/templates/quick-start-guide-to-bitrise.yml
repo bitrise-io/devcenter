@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/reviews/available-environment-variables-review-copy.md
 - _articles/code-signing/ios-code-signing/getting-started-with-ios-apps.md
 - _articles/reviews/getting-started-with-ios-apps.md
 - _articles/getting-started/account-security.md
