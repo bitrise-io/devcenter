@@ -83,8 +83,8 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 1. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
 2. Go to the app's Workflow Editor and create a [new workflow](/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
 3. Change the `Select method for export` input of the `Xcode Archive & Export for iOS` Step:
-   * if you wish to distribute your app to external testers, choose `ad-hoc`.
-   * if you wish to upload the app to the App Store, choose `app-store`.
+   * if you wish to distribute your app to external testers, select `ad-hoc`.
+   * if you wish to upload the app to the App Store, select `app-store`.
 4. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
 5. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
 
@@ -93,3 +93,5 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
    * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
    Don't worry, the password will not be visible in the logs or exposed - that's why [it is marked ](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)`[SENSITIVE](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)`.
+   
+And that's it! Start a build - if everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store. 
