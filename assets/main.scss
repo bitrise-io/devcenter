@@ -503,6 +503,8 @@ main.content {
 		$verticalpadding: .8rem;
 		$icon-width: 2rem;
 
+		margin-top: 2rem;
+		margin-bottom: 2rem;
 		border-left: .4rem solid;
 		border-radius: .2rem;
 		font-size: 1.28rem;
@@ -521,8 +523,11 @@ main.content {
 		}
 
 		.message-content {
-			border-top: .1rem solid rgba(68,138,255,.1);
 			padding: $verticalpadding $horizontalpadding;
+		}
+
+		.message-title + .message-content {
+			border-top: .1rem solid rgba(68,138,255,.1);
 		}
 
 		@mixin message_box_styling($color-light, $color-dark, $icon-character) {
