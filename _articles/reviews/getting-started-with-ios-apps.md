@@ -10,3 +10,29 @@ Getting started with iOS. Testing if my update broke anything.
 {% include message_box.html type="important" title="iOS apps" content="iOS is fantastic.
 
 It is _so_, very great. "%}
+
+{% include message_box.html type="warning" title="My message" content="
+This is my **WARNING**.
+
+It is *so*, \`very\` SPECTACULAR.
+"%}
+{% include message_box.html type="done" title="My message" content="
+This is my **DONE content**.
+
+It is *so*, \`very\` DONE. No more actions are required from our user. 
+"%}
+{% include message_box.html type="info" title="My message" content="
+This is my **content**, full of __INFORMATION__.
+
+It is *so*, \`very\` INFORMATIVE.
+"%}
+{% include message_box.html type="note" title="My message" content="
+This is my **NOTABLE content**.
+
+It is *so*, \`very\` cool.
+"%}
+{% include message_box.html type="example" title="My message" content="
+This is my **EXAMPLE content**.
+
+It is *so*, \`very\` EXEMPLARY.
+"%}
