@@ -1,7 +1,7 @@
 ---
 
 ---
-**IMPORTANT: This guide is intended to be used with the Forestry CMS**. Our external contributors who submit pull requests to the DevCenter repository do NOT need to follow this guide as it is not relevant for them! 
+**IMPORTANT: This guide is intended to be used with the Forestry CMS**. Our external contributors who submit pull requests to the DevCenter repository do NOT need to follow this guide as it is not relevant for them!
 
 ***
 
@@ -17,7 +17,7 @@ You can come back and edit the article any time. Please remember that every time
 **IMPORTANT:** Please make sure when your article is ready for review that a single commit on GitHub makes all changes visible. With a new article, that means you should:
 
 1. Cut its entire content (keep it on the clipboard!) and then click `Save draft`
-2. Once it is saved (the little circle is green), paste the content back in and click `Save draft`. 
+2. Once it is saved (the little circle is green), paste the content back in and click `Save draft`.
 
 This way you will have a commit that will show the entire content of the article as new content. Voilá!
 
@@ -27,7 +27,7 @@ This way you will have a commit that will show the entire content of the article
 2. Copy the contents of the existing article into the new article.
 3. Add your changes.
 
-**IMPORTANT:** Please make sure when your article is ready for review that a single commit on GitHub makes all changes visible. With an existing article this means you should make sure that all your changes are added with a single `Save`. 
+**IMPORTANT:** Please make sure when your article is ready for review that a single commit on GitHub makes all changes visible. With an existing article this means you should make sure that all your changes are added with a single `Save`.
 
 ### Getting an article reviewed
 
@@ -44,20 +44,32 @@ NOTE: if you have several articles ready for review, you will find each article 
 Once the review is done and the article is approved, we are ready to publish.
 
 1. Copy the contents of the article in the `For review` section in to the article in its "proper" place. For example, if you edited the _Quick Start Guide to Bitrise_ article, copy the content from the article in the `For review` section to the article in the `Getting started` section.
-2. If the `Draft` setting is `ON`, turn it off. Once it's off, click `Save`. 
+2. If the `Draft` setting is `ON`, turn it off. Once it's off, click `Save`.
 
-And done! Forestry will push your article into the repository and GitHub pages will build it. 
+And done! Forestry will push your article into the repository and GitHub pages will build it.
 
-### Images and links 
+### Images and links
 
-### Note, info, warning 
+You can add images and links with both the Raw Editor and the WYSIWYG editor. Links can point to both internal (other DevCenter articles) and external content. 
 
-Forestry supports using snippets to quickly add shortcodes to your content. In our case, the snippets include all message boxes which are HTML codes inserted directly into the content, parsed when building the site. 
+#### Images 
 
-NOTE: You can only insert snippets from the WYSIWYG editor. 
+* In the Raw Editor, adding images works exactly the same way as in any Markdown editor. The image file must be uploaded to the repository (you can do this in Forestry or in GitHub) and make sure the image link points to the correct file.
+* In the WYSIWYG editor, place the cursor where you wish to place the image and select the image icon on the bottom toolbar. Either select your image (you can search for it by filename) or upload a new one by clicking on the `+` icon.
 
-1. Place the cursor where you wish to insert a message box. 
+#### Links
+
+* In the Raw Editor, adding links works exactly the same way as in any Markdown editor. 
+* In the WYSIWYG editor, highlight the text you wish to turn into a hyperlink and click the link icon on the bottom toolbar. Enter the relative path to another DevCenter article (all paths are relative to the _articles folder) or the URL of external content. 
+
+### Note, info, warning
+
+Forestry supports using snippets to quickly add shortcodes to your content. In our case, the snippets include all message boxes which are HTML codes inserted directly into the content, parsed when building the site.
+
+NOTE: You can only insert snippets from the WYSIWYG editor.
+
+1. Place the cursor where you wish to insert a message box.
 2. Open the Snippets menu on the bottom toolbar.
-3. Select the type of message box you need. 
+3. Select the type of message box you need.
 4. Enter the title of your message between the quotation marks after `title=.`
 5. Enter the content of your message between the quotation marks after `content=`.
