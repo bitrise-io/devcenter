@@ -1,7 +1,7 @@
 ---
 title: Steps
 redirect_from:
-- "/getting-started/manage-your-bitrise-workflow"
+- "/getting-started/manage-your-bitrise-workflow/"
 menu:
   getting-started:
     weight: 8
