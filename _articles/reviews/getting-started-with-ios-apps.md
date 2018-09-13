@@ -33,6 +33,5 @@ It is _so_, \`very\` **cool**.
 "%}
 	{% include message_box.html type="example" title="My message" content="
 	This is my **EXAMPLE content**.
-
 	It is _so_, \`very\` _EXEMPLARY_.
 	"%}
