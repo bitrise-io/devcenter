@@ -11,6 +11,7 @@ sections:
 - type: document
   path: forestry-help-menus.md
   label: Forestry User Guide - Menu items
+  read_only: true
 - type: directory
   path: _articles/reviews
   label: For review
