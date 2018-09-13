@@ -1,5 +1,7 @@
 ---
 title: Connecting self-hosted GitLab instances
+redirect_from:
+- "/getting-started/index/getting-started/signing-up/self-hosted-gitlab/"
 menu:
   signing-up:
     weight: 7
