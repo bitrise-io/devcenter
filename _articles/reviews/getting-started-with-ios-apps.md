@@ -44,3 +44,10 @@ The `primary` workflow of an iOS app includes the two [Steps](/getting-started/g
 * `Deploy to Bitrise.io`
 
 {% include message_box.html type="note" title="Code signing files" content="Running Xcode tests and deploying their results to Bitrise do not require any code signing files. So don't worry about them just yet!"%}
+
+The `Xcode Test for iOS` step runs the pre-defined Xcode tests. It has a default configuration that does not need to be modified: if the tests are written correctly, they will work. You can find the same configuration options in Xcode, too. 
+
+The `Deploy to Bitrise.io` will deploy the following to the logs and [apps & artifacts](/builds/build-artifacts-online/) page of the build:
+
+- your test results 
+- 
