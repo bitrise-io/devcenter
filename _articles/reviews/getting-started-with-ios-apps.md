@@ -29,9 +29,9 @@ published: false
     * Scheme name
     * ipa export method
     * iOS stack
-
+    
  9. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build - click the message and it will take you to the build page.
-
+ 
 10. Test.
 
 ## Running Xcode tests
@@ -45,9 +45,14 @@ The `primary` workflow of an iOS app includes the two [Steps](/getting-started/g
 
 {% include message_box.html type="note" title="Code signing files" content="Running Xcode tests and deploying their results to Bitrise do not require any code signing files. So don't worry about them just yet!"%}
 
-The `Xcode Test for iOS` step runs the pre-defined Xcode tests. It has a default configuration that does not need to be modified: if the tests are written correctly, they will work. You can find the same configuration options in Xcode, too. 
+The `Xcode Test for iOS` step runs the pre-defined Xcode tests. It has a default configuration that does not need to be modified: if the tests are written correctly, they will work. You can find the same configuration options in Xcode, too.
 
 The `Deploy to Bitrise.io` will deploy the following to the logs and [apps & artifacts](/builds/build-artifacts-online/) page of the build:
 
-- your test results 
-- 
+* your Xcode test results
+* your raw `xcodebuildoutput` log. 
+
+## Code signing 
+
+To install and test the app on other physical devices, you will need to create and export an .ipa file. This requires setting up code signing. In the example below, we'll use 
+
