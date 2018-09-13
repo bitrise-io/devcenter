@@ -1,6 +1,7 @@
 ---
 title: Quick start guide to Bitrise
 redirect_from:
+- https://devcenter.bitrise.io/webhooks/
 - "/getting-started/adding-a-new-app/"
 - "/getting-started/create-your-first-app-on-bitrise/"
 - "/getting-started/add-your-first-step-to-your-workflow/"
