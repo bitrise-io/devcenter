@@ -1,6 +1,7 @@
 ---
 title: Quick start guide to Bitrise
 redirect_from:
+- "/getting-started/adding-a-new-app/"
 - "/getting-started/create-your-first-app-on-bitrise/"
 - "/getting-started/add-your-first-step-to-your-workflow/"
 menu:
@@ -25,7 +26,7 @@ After signing up, you can connect your Bitrise account to all of the three suppo
 
 ## Adding apps
 
-[Add a new app](/getting-started/adding-a-new-app/) any time by clicking the `+` symbol on the top menu bar and then selecting `Add app` from the dropdown menu.
+[Add a new app](/getting-started/adding-a-new-app/index) any time by clicking the `+` symbol on the top menu bar and then selecting `Add app` from the dropdown menu.
 
 ![Adding a new app](/img/adding-a-new-app/add_new_app.png)
 
@@ -73,7 +74,7 @@ After setting up repository access, type the branch of the repository you wish t
 
 ### Webhook setup
 
-[Register a webhook](/webhooks) immediately so Bitrise can start a build every time you push code into your repository. You can skip webhook setup when creating a new app: you can always set up webhooks later.
+[Register a webhook](/webhooks/index/) immediately so Bitrise can start a build every time you push code into your repository. You can skip webhook setup when creating a new app: you can always set up webhooks later.
 
 ## Builds and workflows
 

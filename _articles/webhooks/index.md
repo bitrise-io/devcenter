@@ -1,5 +1,7 @@
 ---
 title: Adding webhooks
+redirect_from:
+- "/webhooks/"
 menu:
   webhooks:
     weight: 1

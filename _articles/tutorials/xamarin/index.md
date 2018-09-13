@@ -35,4 +35,4 @@ video session about setting up Xamarin apps on Bitrise here: [https://www.youtub
 * [Build with FAKE (F# Make)](/tutorials/build-with-fake)
 
 {% include message_box.html type="note" title="Community created tutorials" content="
-For more, community created tutorials, see the Xamarin section on the [Community Created Tutorials](/tutorials/community-created) page. "%} 
+For more, community created tutorials, see the Xamarin section on the [Community Created Tutorials](/tutorials/community-created) page. "%}
