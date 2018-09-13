@@ -6,7 +6,8 @@ webhook_url:
 sections:
 - type: document
   path: forestry-help.md
-  label: Help
+  label: Forestry User Guide
+  read_only: false
 - type: directory
   path: _articles/reviews
   label: For review
