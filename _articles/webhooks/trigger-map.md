@@ -73,12 +73,12 @@ has to be specified!
 
 ### The available filters:
 
-* `push_branch` : A filter which is matched against Code Push events' \"branch" parameter
-* `pull_request_source_branch` : A filter which is matched against Pull Request events' \"source branch"
+* `push_branch` : A filter which is matched against Code Push events' "branch" parameter
+* `pull_request_source_branch` : A filter which is matched against Pull Request events' "source branch"
   parameter (the branch the pull request was started from)
-* `pull_request_target_branch` : A filter which is matched against Pull Request events' \"target branch"
+* `pull_request_target_branch` : A filter which is matched against Pull Request events' "target branch"
   parameter - the branch the pull request will be **merged into**
-* `tag` : A filter which is matched against Tag Push events' \"tag" (name) parameter
+* `tag` : A filter which is matched against Tag Push events' "tag" (name) parameter
 * `pattern` : **DEPRECATED** - this filter was used for both code push and pull request events,
   in combination with `is_pull_request_allowed`. This filter is now deprecated,
   as the new filters allow better control over event mapping.
