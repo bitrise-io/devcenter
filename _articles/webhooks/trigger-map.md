@@ -123,7 +123,7 @@ after each other. _The workflows chained this way won't run in parallel_,
 but the full chain of workflows will be executed, in the order you chain them.
 
 **The order of the items** also matter: if you'd specify a `push_branch: mast` _item **after** a_ `_push_branch: \"*"_` item, the `push_branch: master` _would never be selected_
-as every code push event would match `push_branch: "*"` first,
+as every code push event would match `push_branch: \"*"` first,
 and **the first item which matches the trigger will select the workflow for the build!**
 
 ## How to build only a single branch
