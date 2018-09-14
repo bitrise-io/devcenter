@@ -26,7 +26,7 @@ No need for lengthy preparation when you wish to create an organization on Bitri
    ![Screenshot](/img/team-management/organization/add-org-apps.png)
 4. In the pop-up window, enter the name and the billing email of your organization, and click `Create`.
 
-   {% include message_box.html type="note" title="Invoices" content=" By default, your invoices will be sent to the billing email 		you set here."%}
+   {% include message_box.html type="note" title="Invoices" content=" By default, your invoices will be sent to the billing email you set here."%}
 
 ![Screenshot](/img/team-management/organization/name-email-org.png)
 5\. Provide your billing information.
