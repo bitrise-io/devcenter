@@ -21,11 +21,7 @@ You can manually setup or change your webhooks after you registered your applica
 We support multiple webhook providers. You can find the supported providers in your application's `Code` tab.
 
 ![Screenshot](/img/webhooks/webhook-providers.png)
-
-!!! note "Custom webhook support"
-    [Our webhook processor is Open Sourced](https://github.com/bitrise-io/bitrise-webhooks). If you are looking for a not supported solution, you can create an issue on the GitHub page or create a pull request with the implementation.
-
-    You can also run your own webhook provider behind your own firewall if required.
+[Our webhook processor is Open Sourced](https://github.com/bitrise-io/bitrise-webhooks). If you are looking for a not supported solution, you can create an issue on the GitHub page or create a pull request with the implementation. You can also run your own webhook provider behind your own firewall if required.
 
 You can find detailed description about the setup on the Code tab or select a provider to check its devcenter article:
 
@@ -42,8 +38,8 @@ You can find detailed description about the setup on the Code tab or select a pr
 
 You can also set up outgoing webhooks on Bitrise. With these, Bitrise can notify any selected service about your build events. A build event is:
 
-- when a build is started
-- when a build ends.
+* when a build is started
+* when a build ends.
 
 ## Troubleshooting
 
