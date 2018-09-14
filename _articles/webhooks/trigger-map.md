@@ -199,8 +199,7 @@ trigger_map:
   workflow: primary
 ```
 
-{% include message_box.html type="warning" title="Order of the items matter!" content="
-TWhen `bitrise` receives a webhook event (any kind) it'll match it against the app's `trigger_map`. **The first item it matches will select the workflow for the build!**
+{% include message_box.html type="warning" title="Order of the items matter!" content=" When `bitrise` receives a webhook event (any kind), it'll match it against the app's `trigger_map`. **The first item it matches will select the workflow for the build!**
 
 This means that if you'd specify the `push_branch: master` **after** the `push_branch: "*"` item, `master` would never be selected as every code push event would match `push_branch: "*"` first!
 "%}
