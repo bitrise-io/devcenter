@@ -23,4 +23,4 @@ By default, every new app you add will have a trigger that triggers a build ever
 7. Select the workflow you wish to trigger (for example, `primary`).
 8. Click `Save` in the top right corner.
 
-And you're done! From now on, if code gets pushed to the selected branch of your app's repository, Bitrise will trigger a build with the selected workflow!
+You're done! From now on, if code gets pushed to the selected branch of your app's repository, Bitrise will trigger a build with the selected workflow!
