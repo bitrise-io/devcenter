@@ -12,7 +12,7 @@ When you register a webhook for an event or for multiple events (for example, fo
 for `Pull Request` events), your source code hosting service will call the webhook
 every time the related event happens.
 
-On [bitrise.io](https://www.bitrise.io) these webhooks calls are called "triggers",
+On [bitrise.io](https://www.bitrise.io) these webhooks calls are called *triggers*,
 and can be mapped to different `Workflows`, or not mapped at all.
 If you don't map a trigger to any workflow, then [bitrise.io](https://www.bitrise.io) won't
 start a build. If you map it to a workflow, then a build will be started
@@ -59,7 +59,7 @@ trigger_map:
 
 This configuration will start a build with the `primary` workflow for every code push, but for nothing else (for example not for pull requests).
 
-## "Components" of the `trigger_map`
+## Components of the `trigger_map`
 
 A `trigger_map` is a _list of filters_, and the `workflow` the given
 filters should select in case of a matching trigger.
@@ -72,12 +72,12 @@ has to be specified!
 
 ### The available filters:
 
-* `push_branch` : A filter which is matched against Code Push events' "branch" parameter
-* `pull_request_source_branch` : A filter which is matched against Pull Request events' "source branch"
+* `push_branch` : A filter which is matched against Code Push events' \"branch" parameter
+* `pull_request_source_branch` : A filter which is matched against Pull Request events' \"source branch"
   parameter (the branch the pull request was started from)
-* `pull_request_target_branch` : A filter which is matched against Pull Request events' "target branch"
+* `pull_request_target_branch` : A filter which is matched against Pull Request events' \"target branch"
   parameter - the branch the pull request will be **merged into**
-* `tag` : A filter which is matched against Tag Push events' "tag" (name) parameter
+* `tag` : A filter which is matched against Tag Push events' \"tag" (name) parameter
 * `pattern` : **DEPRECATED** - this filter was used for both code push and pull request events,
   in combination with `is_pull_request_allowed`. This filter is now deprecated,
   as the new filters allow better control over event mapping.
@@ -200,7 +200,7 @@ trigger_map:
 
 {% include message_box.html type="warning" title="Order of the items matter!" content=" When `bitrise` receives a webhook event (any kind), it'll match it against the app's `trigger_map`. **The first item it matches will select the workflow for the build!**
 
-This means that if you'd specify the `push_branch: master` **after** the `push_branch: "*"` item, `master` would never be selected as every code push event would match `push_branch: "*"` first!
+This means that if you'd specify the `push_branch: master` **after** the `push_branch: \"*"` item, `master` would never be selected as every code push event would match `push_branch: \"*"` first!
 "%}
 
 ## Don't start two builds for pull requests from the same repository
@@ -210,7 +210,7 @@ just from a branch of the repository),
 **the source code hosting service will send two webhooks**,
 one for the code push and one for the pull request!
 
-{% include message_box.html type="important" title="Pull Request build" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event/build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a "pre-merged" state of the code. This "pre-merged" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
+{% include message_box.html type="important" title="Pull Request build" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event/build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a \"pre-merged" state of the code. This \"pre-merged" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
 "%}
 
 Whether you want to build both or just one of these in case of a pull request
@@ -219,7 +219,7 @@ you can decide whether you want it or not.
 
 {% include message_box.html type="note" title="Pull Request merge is a Code Push" content=" Source code hosting services treat the event of "merge" as a code push event. For example if you merge a Pull Request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`."%}
 
-An example to build only the pull request ("pre-merged") events/state,
+An example to build only the pull request (\"pre-merged") events/state,
 in addition to deploying `master`:
 
 ```yaml
@@ -248,11 +248,11 @@ Another common CI/CD pattern is to have three workflows:
   to test whether the test can be integrated into a release (branch)
 * A Staging deployment workflow, to deploy the app/code to an internal/testing system. Examples:
   * In case of an iOS app this can be, for example, an Ad Hoc signed IPA deployed to HockeyApp, where your tester team can download and test it, or a deploy to iTunes Connect / TestFlight for internal testing.
-  * In case of an Android app this can be a deploy to Google Play to a "beta" track.
+  * In case of an Android app this can be a deploy to Google Play to a \"beta" track.
   * In case of a server code this can be a deploy to, for example, a staging Heroku server.
 * A Production deployment workflow, to deploy the app/code into production. Examples:
   * In case of an iOS app this can be an App Store signed IPA deployed to iTunes Connect/TestFlight,
-    enabled for "external testing".
+    enabled for \"external testing".
   * In case of an Android app this can be a deploy to Google Play as a public update of the app.
   * In case of a server code this can be a deploy to, for example, the production Heroku server.
 
