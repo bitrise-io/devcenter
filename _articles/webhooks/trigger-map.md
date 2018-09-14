@@ -46,8 +46,8 @@ workflows:
 {% include message_box.html type="info" title="What is `bitrise.yml`" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa). 
 "%}
 
-The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: \"*"`), Tag Push (`tag: \"*"`)
-and for every Pull Request (`pull_request_target_branch: \"*"` & `pull_request_source_branch: \"*"`).
+The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: "*"`), Tag Push (`tag: "*"`)
+and for every Pull Request (`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`).
 
 _If you remove the pull request item_ from the `trigger_map` list, then
 no pull request will trigger a build anymore. Example:
@@ -123,8 +123,8 @@ One trigger can only select a single workflow / can only start a single build.
 after each other. _The workflows chained this way won't run in parallel_,
 but the full chain of workflows will be executed, in the order you chain them.
 
-**The order of the items** also matter: if you'd specify a `push_branch: mast` _item **after** a_ `_push_branch: \"*"_` item, the `push_branch: master` _would never be selected_
-as every code push event would match `push_branch: \"*"` first,
+**The order of the items** also matter: if you'd specify a `push_branch: mast` _item **after** a_ `_push_branch: "*"_` item, the `push_branch: master` _would never be selected_
+as every code push event would match `push_branch: "*"` first,
 and **the first item which matches the trigger will select the workflow for the build!**
 
 ## How to build only a single branch
@@ -201,7 +201,7 @@ trigger_map:
 
 {% include message_box.html type="warning" title="Order of the items matter!" content=" When `bitrise` receives a webhook event (any kind), it'll match it against the app's `trigger_map`. **The first item it matches will select the workflow for the build!**
 
-This means that if you'd specify the `push_branch: master` **after** the `push_branch: \"*"` item, `master` would never be selected as every code push event would match `push_branch: \"*"` first!
+This means that if you'd specify the `push_branch: master` **after** the `push_branch: \"*\"` item, `master` would never be selected as every code push event would match `push_branch: \"*\"` first!
 "%}
 
 ## Don't start two builds for pull requests from the same repository
@@ -211,16 +211,17 @@ just from a branch of the repository),
 **the source code hosting service will send two webhooks**,
 one for the code push and one for the pull request!
 
-{% include message_box.html type="important" title="Pull Request build" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event/build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a \"pre-merged" state of the code. This \"pre-merged" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
+{% include message_box.html type="important" title="Pull Request build" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event/build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a "pre-merged" state of the code. This "pre-merged" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
 "%}
 
 Whether you want to build both or just one of these in case of a pull request
 is up to you and depends on your project's requirements, but with `bitrise`
 you can decide whether you want it or not.
 
-{% include message_box.html type="note" title="Pull Request merge is a Code Push" content=" Source code hosting services treat the event of "merge" as a code push event. For example if you merge a Pull Request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`."%}
+{% include message_box.html type="note" title="Pull Request merge is a Code Push" content=" Source code hosting services treat the event of \"merge\" as a code push event. For example if you merge a Pull Request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`.
+"%}
 
-An example to build only the pull request (\"pre-merged") events/state,
+An example to build only the pull request ("pre-merged") events/state,
 in addition to deploying `master`:
 
 ```yaml
@@ -249,11 +250,11 @@ Another common CI/CD pattern is to have three workflows:
   to test whether the test can be integrated into a release (branch)
 * A Staging deployment workflow, to deploy the app/code to an internal/testing system. Examples:
   * In case of an iOS app this can be, for example, an Ad Hoc signed IPA deployed to HockeyApp, where your tester team can download and test it, or a deploy to iTunes Connect / TestFlight for internal testing.
-  * In case of an Android app this can be a deploy to Google Play to a \"beta" track.
+  * In case of an Android app this can be a deploy to Google Play to a "beta" track.
   * In case of a server code this can be a deploy to, for example, a staging Heroku server.
 * A Production deployment workflow, to deploy the app/code into production. Examples:
   * In case of an iOS app this can be an App Store signed IPA deployed to iTunes Connect/TestFlight,
-    enabled for \"external testing".
+    enabled for "external testing".
   * In case of an Android app this can be a deploy to Google Play as a public update of the app.
   * In case of a server code this can be a deploy to, for example, the production Heroku server.
 
