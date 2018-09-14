@@ -21,6 +21,7 @@ You can manually setup or change your webhooks after you registered your applica
 We support multiple webhook providers. You can find the supported providers in your application's `Code` tab.
 
 ![Screenshot](/img/webhooks/webhook-providers.png)
+
 [Our webhook processor is Open Sourced](https://github.com/bitrise-io/bitrise-webhooks). If you are looking for a not supported solution, you can create an issue on the GitHub page or create a pull request with the implementation. You can also run your own webhook provider behind your own firewall if required.
 
 You can find detailed description about the setup on the Code tab or select a provider to check its devcenter article:
