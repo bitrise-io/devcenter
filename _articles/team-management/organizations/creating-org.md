@@ -31,7 +31,7 @@ No need for lengthy preparation when you wish to create an organization on Bitri
 
 You can skip this step and provide these details at a later date. **Only the owner(s) of an organization can modify these.**
 
-NOTE! You need to **subscribe to an Organization** plan to be able to run builds.
+Note that you need to **subscribe to an Organization** plan to be able to run builds.
 
 6\. Transfer apps to your organization.
 
