@@ -29,18 +29,18 @@ No need for lengthy preparation when you wish to create an organization on Bitri
    {% include message_box.html type="note" title="Invoices" content=" By default, your invoices will be sent to the billing email you set here."%}
 
 ![Screenshot](/img/team-management/organization/name-email-org.png)
-5\. Provide your billing information.
+5. Provide your billing information.
 
 You can skip this step and provide these details at a later date. **Only the owner(s) of an organization can modify these.**
 
 {% include message_box.html type="note" title="Organizations is a premium feature" content=" You need to subscribe to an **Organization** plan to be able to run builds."%} 
 
- 6. Transfer apps to your organization.
+6. Transfer apps to your organization.
 
 You can skip this step and transfer your apps or add new apps to your organization at any time.
 
 ![Screenshot](/img/team-management/organization/transfer-apps-creation.png)
-7\. In the pop-up window, click `Check billing` to immediately set up a subscription plan. You can also add your billing information here.
+7. In the pop-up window, click `Check billing` to immediately set up a subscription plan. You can also add your billing information here.
 
 Alternatively, click `OK` to finish creating your org.
 
