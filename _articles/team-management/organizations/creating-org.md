@@ -24,16 +24,14 @@ No need for lengthy preparation when you wish to create an organization on Bitri
    * on the `Apps` screen: open the dropdown menu above your apps and click `Create organization`.
 
    ![Screenshot](/img/team-management/organization/add-org-apps.png)
-4. In the pop-up window, enter the name and the billing email of your organization, and click `Create`.
-
-   {% include message_box.html type="note" title="Invoices" content=" By default, your invoices will be sent to the billing email you set here."%}
+4. In the pop-up window, enter the name and the billing email of your organization, and click `Create`. By default, your invoices will be sent to the billing email you set here.
 
 ![Screenshot](/img/team-management/organization/name-email-org.png)
 5\. Provide your billing information.
 
 You can skip this step and provide these details at a later date. **Only the owner(s) of an organization can modify these.**
 
-{% include message_box.html type="note" title="Organizations is a premium feature" content=" You need to subscribe to an **Organization** plan to be able to run builds."%}
+NOTE! You need to **subscribe to an Organization** plan to be able to run builds.
 
 6. Transfer apps to your organization.
 
