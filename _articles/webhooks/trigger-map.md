@@ -43,10 +43,11 @@ workflows:
             echo "$BITRISE_TRIGGERED_WORKFLOW_ID"
 ```
 
-{% include message_box.html type="info" title="What is `bitrise.yml`" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa). "%}
+{% include message_box.html type="info" title="What is `bitrise.yml`" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa). 
+"%}
 
-The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: "*"`), Tag Push (`tag: "*"`)
-and for every Pull Request (`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`).
+The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: \"*"`), Tag Push (`tag: \"*"`)
+and for every Pull Request (`pull_request_target_branch: \"*"` & `pull_request_source_branch: \"*"`).
 
 _If you remove the pull request item_ from the `trigger_map` list, then
 no pull request will trigger a build anymore. Example:
