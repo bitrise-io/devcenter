@@ -27,7 +27,7 @@ You can set up a credit card and we'll bill you automatically; for other payment
    ![Screenshot](/img/team-management/organization/add-credit-card.png) If you do not want to be billed automatically, you do not need to provide a credit card. In this case, contact our support to set up a different payment method, such as wire transfer. This option is available from 5x concurrency on Standard plans or 3x concurrency on Elite plans but **only with annual billing**.
 5. Fill out the details.
 
-   Note that only the owner(s) of the organization has any access to the organization's billing information.
+   Note that **only the owner(s) of the organization** has any access to the organization's billing information.
 
 ### Setting up an organization subscription plan
 
