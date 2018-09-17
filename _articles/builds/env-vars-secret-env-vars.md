@@ -20,8 +20,7 @@ You can also replace the variable for a new one in `Env Vars`. Delete the old va
 
 Contrary to [secret env vars](#about-secrets/), env vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to `Env Vars.`
 
-{% include message_box.html type="important" title="My message" content="
-Contrary to [secret env vars](#about-secrets/), env vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to `Env Vars.` "%}
+{% include message_box.html type="important" title="Protect your secrets" content=" Contrary to [secret env vars](#about-secrets/), env vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to `Env Vars.` "%}
 
 ### Setting an env var in every/in a specific workflow
 
