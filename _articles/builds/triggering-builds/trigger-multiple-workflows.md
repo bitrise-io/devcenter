@@ -29,7 +29,7 @@ If any of the builds fail, the build will be considered a failed build. If the b
 
    ![Secret env](/img/getting-started/triggering-builds/secret_token.png)
    Feel free to use any key you wish for the secret. We recommend something simple like `$ACCESS_TOKEN`.
-3. Add the `Bitrise Start Build` step to the `Trigger` workflow. 
+3. Add the `Bitrise Start Build` step to the `Trigger` workflow.
 
    **IMPORTANT:** The `Bitrise Start Build` step will set an environment variable to all builds it starts: `$SOURCE_BITRISE_BUILD_NUMBER`. This means that all builds of the app started by this step will have the same build number despite running with different workflows.
 4. Add the secret env storing your personal access token to the `Bitrise Access Token` input of the step: click the `Insert variable` button and choose the key you created.
@@ -40,7 +40,7 @@ If any of the builds fail, the build will be considered a failed build. If the b
    ![Workflows input](/img/getting-started/triggering-builds/workflows-input.png)
 6. Add the `Bitrise Wait for Build` step as the **last step** of the `Trigger` workflow.
 
-    **IMPORTANT:** The step checks statuses of the builds defined in the step. The builds are defined in the `Build slugs` input: the slugs are the output of the `Bitrise Start Build` step. As long as the builds defined by the slugs are running, the step will hold the build it is running in. The build will fail if any of the builds included in the step fail.
+   **IMPORTANT:** The step checks statuses of the builds defined in the step. The builds are defined in the `Build slugs` input: the slugs are the output of the `Bitrise Start Build` step. As long as the builds defined by the slugs are running, the step will hold the build it is running in. The build will fail if any of the builds included in the step fail.
 7. Add the secret env storing your personal access token to the `Bitrise Access Token` input of the step: click the `Insert variable` button and choose the key you created.
 
    ![Secret env](/img/getting-started/triggering-builds/access-token-input.png)
