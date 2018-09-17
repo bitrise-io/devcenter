@@ -7,7 +7,7 @@ menu:
 ---
 The caching will tar all the cached directories and dependencies, and store them securely in Amazon S3.
 
-{% include message_box.html type="important" title="When does the Build Cache gets auto-deleted" content=" The Build Cache, related to a **specific branch**, expires/is auto-deleted after 7 days, **if there's no new build on that branch in the meantime**. This means that **if you do builds on a specific branch every day** (more frequently than a week), **it'll never expire/won't get deleted automatically**. If you don't start a build on that specific branch for more than 7 days, then the related cache will be removed, and your next build will run like the first time, when there was no cache for that branch yet.
+{% include message_box.html type="info" title="When does the Build Cache gets auto-deleted" content=" The Build Cache, related to a **specific branch**, expires/is auto-deleted after 7 days, **if there's no new build on that branch in the meantime**. This means that **if you do builds on a specific branch every day** (more frequently than a week), **it'll never expire/won't get deleted automatically**. If you don't start a build on that specific branch for more than 7 days, then the related cache will be removed, and your next build will run like the first time, when there was no cache for that branch yet.
 "%}
 
 ## Setup
