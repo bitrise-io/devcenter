@@ -39,11 +39,10 @@ To ignore a path element, part of a path or exclude a full directory, check out 
 * `**` replaces a part of the path, for example, `a/**/b` will match `a/x/y/z/b`.
 * `/` excludes a full directory if `/` is placed AFTER a directory, for example, `/my/full/path` will look like this `/my/full/path/`.
 
-**IMPORTANT**: You can't ignore a path which results in an invalid cache item.
+{% include message_box.html type="important" title="My message" content=" You can't ignore a path which results in an invalid cache item. For example, if you specify \`a/path/to/cache\` path to be cached, you can't ignore \`a/path/to\`, as that would ignore every file and wouldn't check for changes, hence no fingerprint could be generated for \`a/path/to/cache\`.
 
-    For example, if you specify `a/path/to/cache` path to be cached, you can't ignore `a/path/to`, as that would ignore every file and wouldn't check for changes, hence no fingerprint could be generated for `a/path/to/cache`.
-    
-    You can, however, ignore paths INSIDE a cache path. For example, if your path is `a/path/to/cache`, you can ignore `a/path/to/cache/.ignore-me`, unless that's the only file inside `a/path/to/cache`.
+You can, however, ignore paths INSIDE a cache path. For example, if your path is \`a/path/to/cache\`, you can ignore \`a/path/to/cache/.ignore-me\`, unless that's the only file inside \`a/path/to/cache\`."%} 
+
 
 ## Download and delete caches
 
