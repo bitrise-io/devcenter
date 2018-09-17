@@ -11,7 +11,7 @@ Please note that manual and scheduled builds are also cancelledbif you start a n
 
 Also, builds running on the same branch will be cancelled even if they run different workflows!
 
-**IMPORTANT**: The Bitrise Start Build step allows users to trigger a different workflow as one of the steps of a given workflow. Unfortunately, if the Rolling Builds feature is enabled, the triggered workflow will cancel the previous workflows.
+{% include message_box.html type="important" title="Bitrise Start Build step" content=" The Bitrise Start Build step allows users to trigger a different workflow as one of the steps of a given workflow. Unfortunately, if the Rolling Builds feature is enabled, the triggered workflow will cancel the previous workflows. "%}
 
 You can also set which types of triggered builds you wish to abort. Let's see how!
 
