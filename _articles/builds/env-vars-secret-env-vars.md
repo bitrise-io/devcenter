@@ -32,7 +32,7 @@ You can set env vars for any of your workflows separately as well. If you wish t
 
 ![Screenshot](/img/builds/workflow-env-var.png)
 
-Check out our list of [Available Environment Variables](/builds/available-environment-variables/) exposed by Bitrise CLI and [bitrise.io](https://www.bitrise.io/).
+Check out our list of [Available Environment Variables](/builds/available-environment-variables/) exposed by Bitrise CLI and [bitrise.io](https://bitrise.io).
 
 ## About `Secrets`
 
