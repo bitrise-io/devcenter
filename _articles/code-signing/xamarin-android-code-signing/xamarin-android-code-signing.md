@@ -22,7 +22,7 @@ You **cannot use environment variables** in your keystore path in your Xamarin p
 
 You can use the same path on your local machine and on [bitrise.io](https://www.bitrise.io) by putting your keystore into your repository.
 
-**IMPORTANT**: Don't forget to gitignore your keystore in your repository.
+{% include message_box.html type="important" title="Gitignore your keystore" content=" Don't forget to gitignore your keystore in your repository! "%}
 
 Since your keystore is gitignored, you have to upload your keystore to the `GENERIC FILE STORAGE` of Bitrise and download it to the same location in the build.
 
@@ -45,4 +45,6 @@ Since your keystore is gitignored, you have to upload your keystore to the `GENE
 
 ![Screenshot](/img/android-code-signing/file-downloader.png)
 
-**IMPORTANT**: Ensure that your Bitrise keystore path is the same as your local path relative to your project root. For example, if `keystore.jks`is in your project's root, then your Bitrise keystore path has to be `$BITRISE_SOURCE_DIR/keystore.jks`.
+{% include message_box.html type="important" title="Bitrise keystore path" content="
+Ensure that your Bitrise keystore path is the same as your local path relative to your project root. For example, if `keystore.jks`is in your project's root, then your Bitrise keystore path has to be `$BITRISE_SOURCE_DIR/keystore.jks`
+"%}
