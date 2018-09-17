@@ -56,14 +56,10 @@ _You can also create your own Step Library if you want to, but it's usually
 easier to just reference your steps with their _`_git clone_`_ URL directly
 if you don't want to share it with others._
 
-!!! note "Custom StepLib support in tools"
-The Bitrise CLI tools can work with custom step libraries, but other
-tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io)
-might be limited in functionality for steps not available in the main
-[Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
+{% include message_box.html type="note" title="Custom StepLib support in tools" content="
+The Bitrise CLI tools can work with custom step libraries, but other tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io) might be limited in functionality for steps not available in the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib). "%}
 
-If possible you should share your steps in the
-main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib),
+If possible, you should share your steps in the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib),
 to help others as well as for the extra reliability the StepLib offers.
 
 _Custom StepLibs can also provide fallbacks (alternative download URLs, caches),
