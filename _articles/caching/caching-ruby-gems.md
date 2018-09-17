@@ -22,7 +22,7 @@ Ruby Gems are installed into a single directory by default. You can get the loca
                 envman add --key GEM_HOME --value "$(gem environment gemdir)"
 4. Insert the `Cache:Pull` step after the `Git Clone` but before the `Android Build` steps.
 
-   **IMPORTANT!** Make sure that your step is version 1.0.0 or newer.
+   **IMPORTANT:** Make sure that your step is version 1.0.0 or newer.
 5. Insert the `Cache:Push` step to the very end of your workflow.
 
 And you're done!
