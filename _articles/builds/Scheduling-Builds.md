@@ -22,7 +22,7 @@ Follow the steps to see how you can set it up for your next build!
 7. Check and fill out the rest of the input fields if necessary. You can schedule your build in the advanced version of the `Build configuration` window too.
 8. Click `Schedule Build` at the bottom of the pop-up window.
 
-{% include message_box.html type="done" title="My message" content="  Now you're back on your `Builds` board and you can see your scheduled build.. 
+{% include message_box.html type="done" title="" content="  Now you're back on your `Builds` board and you can see your scheduled build.. 
 "%}
 
 If you click on `Show scheduled`, you can edit/delete your schedules, disable build scheduling by toggling the switch to the left, or immediately trigger the build by clicking on the `Trigger now` button.
