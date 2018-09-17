@@ -13,6 +13,24 @@ You can manually specify the code signing configuration in your Gradle configura
 2. Add the `signingConfigs` codeblock to your code and define the following entries specific to your project:
    `storeFile`, `storePassword`, `keyAlias`, and `keyPassword`.
 
+{% include message_box.html type="example" title="Example signing configuration" content=" \`\`\`android { 
+
+   signingConfigs { 
+
+   	   release { 
+
+       	 keyAlias 'MyAndroidKey' 
+
+         keyPassword '***' 
+
+         storeFile file("/path/to/my/keystore.jks") 
+
+         storePassword '***' 
+
+       } 
+
+   } ...\`\`\` "%} 
+
 **Example signing configuration**:
 
     android { 
