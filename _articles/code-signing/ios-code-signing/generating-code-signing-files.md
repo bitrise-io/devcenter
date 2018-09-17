@@ -66,7 +66,7 @@ Also make sure that your app is connected to the correct Team.
 
 {% include message_box.html type="note" title="Manual Provisioning Profiles setup" content=" If you hit any issues and can't resolve it, move to the manual step and set up Provisioning Profiles following the documentation. "%}
 
-{% include message_box.html type="note" title="" Distribution Provisioning Profile=" To setup a distribution Provisioning Profile, go ahead with the manual setup. "%}
+{% include message_box.html type="note" title="Distribution Provisioning Profile=" To setup a distribution Provisioning Profile, go ahead with the manual setup. "%}
 
 ### Download a Provisioning Profile with Xcode
 
