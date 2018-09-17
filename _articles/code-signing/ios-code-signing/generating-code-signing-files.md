@@ -64,11 +64,11 @@ Also make sure that your app is connected to the correct Team.
 2. Go to the `Signing` section and under the `Team` select your correct team.
    ![Team selector](/img/code-signing/ios-code-signing/xcode_team_selector.png)
 
-!!! note
+{% include message_box.html type="note" title="" content="
 If you hit any issues and can't resolve it move to the manual step and set up Provisioning Profiles following the documentation.
+"%}
 
-!!! note
-To setup a distribution Provisioning Profile, go ahead with the manual setup.
+{% include message_box.html type="note" title="" content=" To setup a distribution Provisioning Profile, go ahead with the manual setup. "%}
 
 ### Download a Provisioning Profile with Xcode
 
