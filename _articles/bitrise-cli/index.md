@@ -17,19 +17,15 @@ the hosted automation service, but the heart of Bitrise is the
 which is responsible for interpreting the build configuration and executing it.
 
 This open source runner is referred to as `Bitrise CLI` or `Bitrise`,
-and __it's a tool which you can install and run on your own Mac/PC!__
+and **it's a tool which you can install and run on your own Mac/PC!**
 
 This section of the DevCenter is dedicated to this runner (`Bitrise CLI`) and the
-`bitrise.yml` configuration format, __the things described here don't even require a
-[bitrise.io](https://www.bitrise.io) account__, the only requirement is that
+`bitrise.yml` configuration format, **the things described here don't even require a**
+[**bitrise.io**](https://www.bitrise.io) **account**, the only requirement is that
 you install the `Bitrise CLI` on your Mac/PC.
 
-!!! note "Bitrise CLI on bitrise.io"
-    The CLI you can install is exactly the same as what's used on [bitrise.io](https://www.bitrise.io).
-    When a build starts on [bitrise.io](https://www.bitrise.io), a virtual machine
-    is created for the build with the Bitrise CLI preinstalled,
-    and once the virtual machine is ready, the build is performed through the Bitrise CLI.
-
+{% include message_box.html type="note" title="Bitrise CLI on bitrise.io" content="
+The CLI you can install is exactly the same as what's used on [bitrise.io](https://www.bitrise.io). When a build starts on [bitrise.io](https://www.bitrise.io), a virtual machine is created for the build with the Bitrise CLI preinstalled, and once the virtual machine is ready, the build is performed through the Bitrise CLI. "%}
 
 ## Bitrise CLI - the open source, offline, automation runner
 
@@ -38,7 +34,6 @@ and use the `bitrise` command to execute your _workflows_ locally.
 It's a great help when you're developing steps, debugging builds,
 or just want to use Bitrise for _any kind of automation_ on your machine.
 
-
 ## bitrise.yml - the configuration format
 
 The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`,
@@ -46,27 +41,26 @@ as that's the expected file name the configuration should be saved with.
 
 _Technically the CLI can also accept the configuration in JSON format,
 and the file name can be changed too, but if you save the configuration
-into a file named `bitrise.yml`, you can simply `bitrise run` in that directory,
+into a file named _`_bitrise.yml_`_, you can simply_ `_bitrise run_`_ in that directory,
 without specifying any configuration path, and the CLI will read the
-configuration from `bitrise.yml` automatically._
-
+configuration from _`_bitrise.yml_` _automatically._
 
 ## Step Library (StepLib)
 
 The StepLib is the collection of the build steps you can use in your
 `bitrise.yml`. The steps in the official [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)
-are all open source, __you can write your own__ too and then share it with others!
+are all open source, **you can write your own** too and then share it with others!
 See the [step-template](https://github.com/bitrise-steplib/step-template) for more information.
 
 _You can also create your own Step Library if you want to, but it's usually
-easier to just reference your steps with their `git clone` URL directly
+easier to just reference your steps with their _`_git clone_`_ URL directly
 if you don't want to share it with others._
 
 !!! note "Custom StepLib support in tools"
-    The Bitrise CLI tools can work with custom step libraries, but other
-    tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io)
-    might be limited in functionality for steps not available in the main
-    [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
+The Bitrise CLI tools can work with custom step libraries, but other
+tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io)
+might be limited in functionality for steps not available in the main
+[Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
 
 If possible you should share your steps in the
 main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib),
@@ -81,12 +75,12 @@ if you use the main Bitrise StepLib._
 Same reason why code libraries / dependencies are awesome:
 
 You have a code which can be updated independently from other parts,
-and __you can re-use/share__ this between your configurations.
+and **you can re-use/share** this between your configurations.
 
-__Shared maintenance__: when you use Steps created by others you don't have to maintain
+**Shared maintenance**: when you use Steps created by others you don't have to maintain
 the codes, but you can contribute to it if you want to, or create and use your own.
 
-__Versioned__: If a new version doesn't work for you, __you can always go back to a previous one__.
+**Versioned**: If a new version doesn't work for you, **you can always go back to a previous one**.
 
 _We frequently push features as Steps instead of building it into the core tools.
 This allows faster and versioned iterations, and updating the parts independently.
