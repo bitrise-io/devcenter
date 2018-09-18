@@ -1,7 +1,7 @@
 ---
 title: iOS code signing on Bitrise
 redirect_from:
-- "/ios/code-signing/#use-a-third-party-tool-to-manage-your-code-signing-files"
+- "/ios/code-signing/"
 menu:
   ios-code-signing:
     weight: 1
