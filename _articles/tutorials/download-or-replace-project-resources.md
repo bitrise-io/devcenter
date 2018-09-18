@@ -11,7 +11,7 @@ You can do this in quite a few ways, these are probably the easiest ones:
 * use the `File Downloader` step to download a single file
 * use a `Script` Step
 
-{% include message_box.html type="note" title="Store the resources file on [bitrise.io](https://www.bitrise.io)" content="You can store the resources file on [bitrise.io](https://www.bitrise.io). In the Workflow Editor select the `Code signing & Files` section, and upload the archive file in the `Generic File Storage` section. Bitrise will automatically generate a (time limited, expiring) download URL for the files you upload here, and will expose the download URL as an Environment Variable. "%}
+{% include message_box.html type="note" title="Store the resources file on [bitrise.io](https://www.bitrise.io)" content=" In the Workflow Editor select the `Code signing & Files` section, and upload the archive file in the `Generic File Storage` section. Bitrise will automatically generate a (time limited, expiring) download URL for the files you upload here, and will expose the download URL as an Environment Variable. "%}
 
 ## Using the `ZIP resource archive downloader` step
 
