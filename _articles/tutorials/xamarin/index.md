@@ -29,7 +29,7 @@ video session about setting up Xamarin apps on Bitrise here: [https://www.youtub
 
 ### Advanced
 
-* [Deploy your Xamarin app](/xamarin/deploy-your-xamarin-app)
+* [Deploy your Xamarin app](/tutorials/xamarin/deploy-your-xamarin-app)
 * [Run your tests in the Visual Studio App Center](/testing/run-your-tests-in-the-app-center)
 * [Add custom sources to NuGet](/xamarin/add-custom-sources-to-nuget)
 * [Build with FAKE (F# Make)](/tutorials/build-with-fake)
