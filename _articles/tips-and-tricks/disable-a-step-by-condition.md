@@ -58,7 +58,7 @@ An example `script` step, which will only run if the Build failed:
             echo "Build Failed!"
 
 {% include message_box.html type="note" title="A **run_if** can be any valid **Go** template" content="
-A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `"True"`, `"t"`, `"yes"` or `"y"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't.
+A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `\"True\"`, `\"t\"`, `\"yes\"` or `\"y\"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't.
 "%}
 
 An example `run_if` to check a **custom environment variable** (you
