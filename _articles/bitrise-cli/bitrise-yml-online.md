@@ -10,7 +10,7 @@ Every bitrise.yml file is stored for your builds on [bitrise.io](https://www.bit
 {% include message_box.html type="note" title="Using filters on your Builds Board" content="
 If an app has multiple builds on [bitrise.io](https://www.bitrise.io) and you want to pick a specific build out of those, then these filters will help you a lot. Click on your app in your `Dashboard` and use the following fields:
 
-* You can search for a build number or commit message in the \`Try build number or commit message\` grey field.
+* You can search for a build number or commit message in the`Try build number or commit message` grey field.
 * You can pick which of these triggers was used for your build: `Pushes`, `Pull Requests`, `Tags` or all of these.
 * You can pick which `branch` the build was started on.
 * You can select either the `primary` or the `deploy workflow` of the build."%}
