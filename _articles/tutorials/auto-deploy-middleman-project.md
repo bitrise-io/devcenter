@@ -27,23 +27,17 @@ if you don't want to install the full Xcode.app.
 
 Once you have Ruby and Xcode (Command Line Tools), execute the following from the command line:
 
-```
-gem install middleman
-```
+    gem install middleman
 
 This will install Middleman, its dependencies and the command-line tools for using Middleman.
-
 
 ## 3. Create a Middleman project
 
 To create a Middleman project, navigate to the root folder of your repository and execute the following from the command line:
 
-```
-middleman init my_new_project
-```
+    middleman init my_new_project
 
 Once the setup is finished, commit and push your changes.
-
 
 ## 4. Connect your repository with Bitrise
 
@@ -58,7 +52,6 @@ In the second step, you will see a list of all your repositories on GitHub. Sele
 In the third step, you will get an alert, since the repository you are connecting is not an Xcode project.
 Select "Configure Manually", then enter the branch name "master".
 
-
 ## 5. Prepare your Workflow
 
 Once you created your project, select it in the [Dashboard](https://www.bitrise.io/dashboard)
@@ -70,51 +63,47 @@ You can add new steps by clicking on the `+` sign button between steps / in the 
 from the step list popup. Add the following steps to your Workflow, in this order:
 
 1. `Activate SSH key` - unless you used the public, non SSH URL of the repository during the Add New App process
-1. `Git Clone Repository`
-1. `Script`
+2. `Git Clone Repository`
+3. `Script`
 
 Select the `Script` step and add the following lines:
 
-```
-#!/bin/bash
-set -ex
-bundle install
-bundle exec middleman build --verbose
-```
+    #!/bin/bash
+    set -ex
+    bundle install
+    bundle exec middleman build --verbose
 
 The above code installs the dependencies specified in your `Gemfile`, and runs a Middleman build on the virtual machine.
-
 
 ## 6. Deploy to Amazon S3: Add an Amazon S3 bucket sync to your Workflow steps
 
 Now we are going to add and customize an Amazon S3 bucket sync to the Workflow steps.
-Click on the *Add new Step* button and select `Amazon S3 bucket sync` from the step list.
+Click on the _Add new Step_ button and select `Amazon S3 bucket sync` from the step list.
 
 Select the step to customize it.
 
-- Enter your AWS access key
-- Your AWS secret key
-- And enter a name for your S3 bucket.
-- For your local path, enter the following: `$BITRISE_SOURCE_DIR/build/`
+* Enter your AWS access key
+* Your AWS secret key
+* And enter a name for your S3 bucket.
+* For your local path, enter the following: `$BITRISE_SOURCE_DIR/build/`
 
-This will select the *contents* of the build folder in the project source path on the virtual machine.
+This will select the _contents_ of the build folder in the project source path on the virtual machine.
 It will be uploaded on every build.
 
 For access control, enter `public-read` or `private`, as advised.
 
-!!! note "Alternative deploy destinations"
-    You can of course use `Heroku`, GitHub pages or any other service
-    as your deployment target.
-    You can find a more complex setup, deploying to `Heroku`,
-    [on our Blog](http://blog.bitrise.io/2016/04/29/hooking-up-a-middleman-project-to-deploy-a-static-site-to-heroku-with-bitrise.html)
+{% include message_box.html type="note" title="Alternative deploy destinations" content="
+You can of course use `Heroku`, GitHub pages or any other service as your deployment target.
+"%}
 
+You can find a more complex setup, deploying to `Heroku`,
+[on our Blog](http://blog.bitrise.io/2016/04/29/hooking-up-a-middleman-project-to-deploy-a-static-site-to-heroku-with-bitrise.html).
 
 ## 7. Run build manually
 
 Once the configuration of your Workflow is complete,
 you can run a build manually by clicking on the `Start/Schedule a build` button on the app's page (where you see the
 `Builds`, `Workflow`, `Team`, ... tabs).
-
 
 ## 8. Run builds automatically
 
