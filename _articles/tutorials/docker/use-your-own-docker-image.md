@@ -27,7 +27,7 @@ All you have to do is:
 3. Additionally, if you want to run the build on [bitrise.io](https://www.bitrise.io), make sure that you select
    a Linux/Android stack for the app; those stacks have `docker` preinstalled and ready to use our of the box.
 
-{% include message_box.html type="info" title="GitHub sample repository" content=" You can find a sample repository on GitHub, which is configure to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli): [https://github.com/bitrise-samples/minimal-docker](https://github.com/bitrise-samples/minimal-docker "https://github.com/bitrise-samples/minimal-docker") "%} 
+{% include message_box.html type="info" title="GitHub sample repository" content=" You can find a sample repository on GitHub, which is configure to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli): [https://github.com/bitrise-samples/minimal-docker](https://github.com/bitrise-samples/minimal-docker). "%} 
 
 ### Running docker hello-world
 
@@ -138,7 +138,7 @@ The output will be something like:
     | ✓ | docker run hello-world                                        | 4.24 sec |
     +---+---------------------------------------------------------------+----------+
 
-{% include message_box.html type="info" title="GitHub sample repository" content=" You can find a sample repository on GitHub, which is configure to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli): [https://github.com/bitrise-samples/minimal-docker](https://github.com/bitrise-samples/minimal-docker "https://github.com/bitrise-samples/minimal-docker") "%}
+{% include message_box.html type="info" title="GitHub sample repository" content=" You can find a sample repository on GitHub, which is configure to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli): [https://github.com/bitrise-samples/minimal-docker](https://github.com/bitrise-samples/minimal-docker). "%}
 
 ### Using docker-compose
 
