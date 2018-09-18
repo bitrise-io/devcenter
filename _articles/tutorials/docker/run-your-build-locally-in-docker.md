@@ -57,9 +57,8 @@ Once the download succeeds you have everything prepared to run your build
 in Docker! The last thing you have to do is to download your Bitrise build
 configuration (`bitrise.yml`).
 
-!!! note "`bitrise.yml`"
-You can download your project's `bitrise.yml` from the **Workflow Editor**
-on [bitrise.io](https://www.bitrise.io), under the `bitrise.yml` section.
+{% include message_box.html type="note" title="`bitrise.yml`" content="
+You can download your project's `bitrise.yml` from the **Workflow Editor** on [bitrise.io](https://www.bitrise.io), under the `bitrise.yml` section. "%} 
 
 In your Terminal / Command Line go to (`cd`) the root directory
 of _your repository_, and make sure your `bitrise.yml` is at this location.
