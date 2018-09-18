@@ -13,8 +13,7 @@ This tutorial tells you how to run a unit test against your app and how to gener
 
 Luckily, your Android primary workflow already contains the `Android Unit Test` and the `Android Lint` steps which are responsible for performing unit test on your build.
 
-{% include message_box.html type="note" title="My message" content="
-If you use custom steps or scripts, our `Deploy to Bitrise.io` step by default deploys files/build artifacts from the `$BITRISE_DEPLOY_DIR` directory, so make sure that you move the generated app there, or set the deploy directory or the file path input of the step to point to the location of the files/build artifacts. Please note, that if the specified path is a directory, then every file in that directory will be deployed. If there are subdirectories in the specified directory, they won't get uploaded! You can upload a directory's content recursively, if you use the **Compress** option, which will compress the whole directory including every subdirectory. And finally, if you specify a file path, then only the specified file will get deployed.
+{% include message_box.html type="note" title="Using custom steps/scripts" content=" If you use custom steps or scripts, our `Deploy to Bitrise.io` step by default deploys files/build artifacts from the `$BITRISE_DEPLOY_DIR` directory, so make sure that you move the generated app there, or set the deploy directory or the file path input of the step to point to the location of the files/build artifacts. Please note, that if the specified path is a directory, then every file in that directory will be deployed. If there are subdirectories in the specified directory, they won't get uploaded! You can upload a directory's content recursively, if you use the **Compress** option, which will compress the whole directory including every subdirectory. And finally, if you specify a file path, then only the specified file will get deployed.
 "%}
 
 ## Generate test reports
