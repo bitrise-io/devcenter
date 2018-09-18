@@ -39,7 +39,7 @@ The generated Step's README describes:
 * how you can test and use your Step in any build by using [the ](/bitrise-cli/steps/#special-Step-sources)`[git::](/bitrise-cli/steps/#special-Step-sources)`[ Step reference](/bitrise-cli/steps/#special-Step-sources),
 * how you can share your Step with others through the Bitrise StepLib if you wish to do so.
 
-{% include message_box.html type="important" title="Before proceeding with step configuration" content=" Check out [some important concepts you must be aware of](/bitrise-cli/most-important-concepts.md)!
+{% include message_box.html type="important" title="Before proceeding with step configuration" content=" Check out [some important concepts you must be aware of](/bitrise-cli/most-important-concepts/)!
 "%}
 
 ## Step development guidelines
