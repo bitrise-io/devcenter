@@ -20,7 +20,7 @@ video session about setting up Xamarin apps on Bitrise here: [https://www.youtub
 ### Getting Started
 
 * [Creating your first App on Bitrise](/getting-started/create-your-first-app-on-bitrise)
-* [Restore NuGet packages](/xamarin/restore-nuget-packages)
+* [Restore NuGet packages](/tutorials/xamarin/restore-nuget-packages)
 
 ### Code Signing
 
