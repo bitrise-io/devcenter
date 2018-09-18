@@ -175,7 +175,7 @@ which is configure to run on your Mac/Linux using the _[_Bitrise CLI_](https://w
 
 > Use a Linux/Android stack and set the environment docker image for the app (`Settings` tab)
 
-{% include message_box.html type="warning" title="Custom Android docker image" content="Creating and maintaining your own Android Docker image can be quite time consuming! **If what you need is just to install a couple of additional tools, you should do that with e.g. a Script step instead!** For more information see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide. _You should only use your own Android docker image if you really have to!_ "%}
+{% include message_box.html type="warning" title="Custom Android docker image" content="Creating and maintaining your own Android Docker image can be quite time consuming! **If what you need is just to install a couple of additional tools, you should do that with, for example, a Script step instead!** For more information, see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide. _You should only use your own Android docker image if you really have to!_ "%}
 
 If you want to run your build in a custom docker environment,
 **you should base your own docker image on one of our base Docker images**, as those have every base tool pre-installed,
@@ -204,11 +204,9 @@ As you can see, if you want to base your own image on one of our available image
 it at the very top of your `Dockerfile` with a `FROM bitriseio/IMAGE-ID:latest`,
 for example: `FROM bitriseio/docker-bitrise-base:latest`
 
-{% include message_box.html type="warning" title="Don't use the `-alpha` images for your builds" content="
-For every docker image we have on Docker Hub we have a `-alpha` post fixed version too. the `-alpha` ones are rebuilt frequently and are **not precached on** [**bitrise.io**](https://www.bitrise.io), so you should avoid those. The only purpose of the `-alpha` images is to provide ready to use test environments for us, before we would publish a non `-alpha` version. "%}
+{% include message_box.html type="warning" title="Don't use the `-alpha` images for your builds" content=" For every docker image we have on Docker Hub, we have a `-alpha` post fixed version too. the `-alpha` ones are rebuilt frequently and are **not precached on** [**bitrise.io**](https://www.bitrise.io), so you should avoid those. The only purpose of the `-alpha` images is to provide ready to use test environments for us, before we would publish a non `-alpha` version. "%}
 
-{% include message_box.html type="important" title="Docker Hub ID" content="
-you have to use the **Docker Hub ID** of the image you want to use as the base image (ex: `bitriseio/docker-android`, `bitriseio/android-ndk` or `bitriseio/docker-bitrise-base`). "}
+{% include message_box.html type="important" title="Docker Hub ID" content=" You have to use the **Docker Hub ID** of the image you want to use as the base image (ex: `bitriseio/docker-android`, `bitriseio/android-ndk` or `bitriseio/docker-bitrise-base`). "%}
 
 You can find an example project which extends our Android image by
 installing additional SDKs at: [https://github.com/viktorbenei/docker-bitrise-android-ext](https://github.com/viktorbenei/docker-bitrise-android-ext)
@@ -241,7 +239,7 @@ statement at the top of the `Dockerfile`, like the one you can see at:
 
   From a performance perspective: you should install the least amount of tools in your image,
 
-  as it'll make your image smaller, which means faster download & build start "%}
+  as it'll make your image smaller, which means faster download & build start. "%}
 
 You now have the description of your image. Go to [Docker Hub](https://hub.docker.com), click `Create` in the top menu and select `Create Automated Build`.
 If you haven't linked your GitHub account to your Docker Hub account you'll have to do it now.
@@ -253,9 +251,7 @@ This means that every time you change the repository, commit & push the change D
 
 **One more thing you should do is to Link your image to our base image you use, so that every time our base image is updated your image will update as well.**
 
-_This is especially important if you base your Docker image on one of our Android images.
-Those images are quite large, and if we have to do a change in the base Docker image and you don't build a new image,
-**your image will require the old base image, which won't be pre-cached** on the build Virtual Machines anymore!
+This is especially important if you base your Docker image on one of our Android images. Those images are quite large, and if we have to do a change in the base Docker image and you don't build a new image, **your image will require the old base image, which won't be pre-cached** on the build Virtual Machines anymore!
 This means that to _`_docker pull_` _your image it won't be enough to download just the diffs anymore,
 **the whole image will have to be pulled** which might even result in errors like "no space left on the device" -
 to _`_docker pull_` _the base Android image, if no cache is available, it already requires \~10GB disk space, and the Android NDK image is even larger!_
