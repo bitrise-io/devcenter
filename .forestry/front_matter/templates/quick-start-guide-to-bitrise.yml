@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/bitrise-cli/most-important-concepts.md
 - _articles/builds/available-environment-variables.md
 - _articles/getting-started/signing-up/connecting-apple-dev-account.md
 - _articles/builds/sensitive-input-field.md
