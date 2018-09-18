@@ -19,8 +19,7 @@ won't start a build, nor will:
     
     [ci skip]
 
-{% include message_box.html type="warning" title="Only the head/last commit message is checked!" content="
-**If you push more than one commit**, only the last (/"head/") commit's message will be checked for the skip ci pattern! "%}
+{% include message_box.html type="warning" title="Only the head/last commit message is checked!" content="**If you push more than one commit**, only the last (head) commit's message will be checked for the skip ci pattern! "%}
 
 If you'd decide that you still want to start a build you'll have to
 either rebase that commit (e.g. just change its commit message), or push another commit.
