@@ -19,7 +19,7 @@ To do this all you have to do is:
 3. and in the _Message_ input field you can include environment variables
    defined by Bitrise and by the steps which run before the HipChat Message step.
 
-{% include message_box.html type="note" title="How to insert environment variables" content=" If you click into any Step input field, an **Insert Variable** button will appear. With this you can insert environment variables defined by Bitrise (for example the App's title, the Build's unique ID or the Build's URL on Bitrise) and environment variables exported by Steps which ran before this step (for example, an Xcode Build's status or the generated IPA path). "%}
+{% include message_box.html type="note" title="How to insert environment variables in Step inputs" content=" If you click into any Step input field, an **Insert Variable** button will appear. With this you can insert environment variables defined by Bitrise (for example the App's title, the Build's unique ID or the Build's URL on Bitrise) and environment variables exported by Steps which ran before this step (for example, an Xcode Build's status or the generated IPA path). "%}
 
 Fill out the HipChat steps' required input fields, and for the HipChat Message
 step's `Message` input include the build's url with the `$BITRISE_BUILD_URL` environment variable,
