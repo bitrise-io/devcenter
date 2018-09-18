@@ -94,8 +94,7 @@ To expose the value of `BITRISE_BUILD_NUMBER` under the key `MY_BUILD_NUMBER`:
 After this, subsequent steps can get the value of `BITRISE_BUILD_NUMBER` from the
 `MY_BUILD_NUMBER` environment variable.
 
-_Note: if you change the value of_ `_BITRISE_BUILD_NUMBER_`_ after this, the
-value of _`_MY_BUILD_NUMBER_` _won't be modified, that will still hold the original value!_
+_Note: if you change the value of_ `_BITRISE_BUILD_NUMBER_`after this, the value of `_MY_BUILD_NUMBER_` _won't be modified, that will still hold the original value!_
 
 ## Overwrite an Environment Variable if another one is set
 
