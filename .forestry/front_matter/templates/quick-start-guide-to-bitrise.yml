@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/tutorials/xamarin/deploy-your-xamarin-app.md
 - _articles/tutorials/xamarin/restore-nuget-packages.md
 - _articles/code-signing/ios-code-signing/code-signing.md
 - _articles/bitrise-cli/most-important-concepts.md
