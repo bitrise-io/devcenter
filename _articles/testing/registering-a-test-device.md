@@ -35,6 +35,8 @@ You can delete the registered device any time if you click on the `x` icon.
 3. Click on `Register manually`.
 4. In the `Register device` dialog, fill out the `Title` field and the `Identifier` field with your device's UDID.
 5. Hit `Register Device`.
+   
+
    You can **get your UDID** if you plug your device into a computer, and open iTunes. Under `Summary`, you should see a Serial Number. If you click on it, it will reveal your device's `UDID` which you can paste into the `Identifier` field on our `[Test Devices](https://www.bitrise.io/me/profile#/test_devices)`.
 6. Register this test device to the [Apple Developer Portal](https://developer.apple.com/) with the correct provisioning profile added to your device or use our [Auto Provisioning](/code-signing/ios-code-signing/ios-auto-provisioning) step with enabling profile generation.
 
