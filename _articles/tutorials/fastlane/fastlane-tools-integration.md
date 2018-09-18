@@ -40,7 +40,7 @@ With adding the _fastlane_ step we ensure that you are running on the latest _fa
 
 For more configuration options see the `Fastlane` step's description in the Workflow Editor!
 
-{% include message_box.html type="info" title="iOS code signing guidelines" content=" If you want to use [bitrise.io](https://www.bitrise.io) to store your code signing files, you should just follow the [iOS Code Signing guide here](/ios/code-signing/). "%}
+{% include message_box.html type="info" title="iOS code signing guide" content=" If you want to use [bitrise.io](https://www.bitrise.io) to store your code signing files, you should just follow the [iOS Code Signing guide here](/ios/code-signing/). "%}
 
 ## What's next?
 
