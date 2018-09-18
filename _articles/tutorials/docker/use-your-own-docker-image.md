@@ -5,8 +5,7 @@ menu:
     weight: 3
 
 ---
-{% include message_box.html type="note" title="Have a question or suggestion" content="
-Join the discussion!" You can find this guide's discussion topic at: [discuss.bitrise.io/t/69](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69). "%}
+{% include message_box.html type="note" title="Have a question or suggestion" content=" Join the discussion! You can find this guide's discussion topic at: [discuss.bitrise.io/t/69](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69). "%}
 
 There are two ways to use `docker` on [bitrise.io](https://www.bitrise.io):
 
@@ -29,7 +28,7 @@ All you have to do is:
    a Linux/Android stack for the app; those stacks have `docker` preinstalled and ready to use our of the box.
 
 _You can find a sample repository on GitHub,
-which is configure to run on your Mac/Linux using the _[_Bitrise CLI_](https://www.bitrise.io/cli)_:_
+which is configure to run on your Mac/Linux using the _[_Bitrise CLI_](https://www.bitrise.io/cli):
 [_https://github.com/bitrise-samples/minimal-docker_](https://github.com/bitrise-samples/minimal-docker)
 
 ### Running docker hello-world
@@ -142,7 +141,7 @@ The output will be something like:
     +---+---------------------------------------------------------------+----------+
 
 _You can find a sample repository on GitHub,
-which is configure to run on your Mac/Linux using the _[_Bitrise CLI_](https://www.bitrise.io/cli)_:_
+which is configure to run on your Mac/Linux using the _[_Bitrise CLI_](https://www.bitrise.io/cli):
 [_https://github.com/bitrise-samples/minimal-docker_](https://github.com/bitrise-samples/minimal-docker)
 
 ### Using docker-compose
@@ -169,14 +168,14 @@ Docker compose will build and run the image automatically, you don't have to spe
 name will be used by `docker-compose` to tag the image automatically.
 
 _You can find a sample repository on GitHub,
-which is configure to run on your Mac/Linux using the _[_Bitrise CLI_](https://www.bitrise.io/cli)_:_
+which is configure to run on your Mac/Linux using the _[_Bitrise CLI_](https://www.bitrise.io/cli):
 [_https://github.com/bitrise-samples/minimal-docker_](https://github.com/bitrise-samples/minimal-docker)
 
 ## Using bitrise.io custom docker image option
 
 > Use a Linux/Android stack and set the environment docker image for the app (`Settings` tab)
 
-{% include message_box.html type="warning" title="Custom Android docker image" content="Creating and maintaining your own Android Docker image can be quite time consuming! **If what you need is just to install a couple of additional tools, you should do that with e.g. a Script step instead!** For more information see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide. _You should only use your own Android docker image if you really have to!_ "%} 
+{% include message_box.html type="warning" title="Custom Android docker image" content="Creating and maintaining your own Android Docker image can be quite time consuming! **If what you need is just to install a couple of additional tools, you should do that with e.g. a Script step instead!** For more information see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide. _You should only use your own Android docker image if you really have to!_ "%}
 
 If you want to run your build in a custom docker environment,
 **you should base your own docker image on one of our base Docker images**, as those have every base tool pre-installed,
@@ -234,15 +233,15 @@ statement at the top of the `Dockerfile`, like the one you can see at:
 
 {% include message_box.html type="info" title="Which image to use?" content="
 
-*  If you don't need the Android tools you should base yo **image** the **bitrise-base** (`bitriseio/docker-bitrise-base`) image and install just the things you need. 
-*  If you need the Android tools then you should use the **android** (`bitriseio/docker-android`) image
-  or the **bitrise-base** (`bitriseio/docker-bitrise-base`) image. 
+* If you don't need the Android tools you should base yo **image** the **bitrise-base** (`bitriseio/docker-bitrise-base`) image and install just the things you need.
+* If you need the Android tools then you should use the **android** (`bitriseio/docker-android`) image
+  or the **bitrise-base** (`bitriseio/docker-bitrise-base`) image.
 * You should only use the **android-ndk** (`bitriseio/android-ndk`) image
   as the base image if you actually need the NDK.
 
   From a performance perspective: you should install the least amount of tools in your image,
 
-  as it'll make your image smaller, which means faster download & build start "%} 
+  as it'll make your image smaller, which means faster download & build start "%}
 
 You now have the description of your image. Go to [Docker Hub](https://hub.docker.com), click `Create` in the top menu and select `Create Automated Build`.
 If you haven't linked your GitHub account to your Docker Hub account you'll have to do it now.
@@ -275,4 +274,4 @@ You just have to copy paste the ID of your image (e.g. `bitriseio/docker-bitrise
 into the `Docker image to use` field and click the `Save` button.
 Your next build will use the image you specified.
 
-{% include message_box.html type="note" title="Have a question or suggestion" content=" Join the discussion!" You can find this guide's discussion topic at: [discuss.bitrise.io/t/69](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69). "%}
+{% include message_box.html type="note" title="Have a question or suggestion" content=" Join the discussion! You can find this guide's discussion topic at: [discuss.bitrise.io/t/69](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69). "%}
