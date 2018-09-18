@@ -76,7 +76,7 @@ The only thing left to do is to actually run a build:
     docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm bitriseio/docker-android:latest bitrise run WORKFLOW
 
 
-If you want to just jump into the container and experiment inside, you can replace `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container. E.g.: `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it bitriseio/docker-android:latest bash`. After this, if you want to, you can run `bitrise run WORKFLOW`, which will run the workflow inside the container. To exit from the container, just run `exist`. 
+If you want to just jump into the container and experiment inside, you can replace `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container. As an example: `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it bitriseio/docker-android:latest bash`. After this, if you want to, you can run `bitrise run WORKFLOW`, which will run the workflow inside the container. To exit from the container, just run `exist`. 
 
 _Don't forget to replace_ `_WORKFLOW_` _with the actual ID of your workflow in your_ `_bitrise.yml_`_,
 with something like _`__primary__`!
