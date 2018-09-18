@@ -24,7 +24,7 @@ won't start a build, nor will:
 If you'd decide that you still want to start a build you'll have to
 either rebase that commit (e.g. just change its commit message), or push another commit.
 
-{% include message_box.html type="note" title="Push an empty commit" content=" Git allows to create and push empty commits, so if you'd decide that you still want to build a skipped build you can do `git commit --allow-empty -m /"I decided to run this/"` on the related branch and push the commit. "%}
+{% include message_box.html type="note" title="Push an empty commit" content=" Git allows to create and push empty commits, so if you'd decide that you still want to build a skipped build you can do `git commit --allow-empty -m "I decided to run this"` on the related branch and push the commit. "%}
 
 ## Pull Requests
 
