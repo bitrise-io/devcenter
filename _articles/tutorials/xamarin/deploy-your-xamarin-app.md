@@ -1,6 +1,7 @@
 ---
 title: Deploy your Xamarin app
 redirect_from:
+- "/xamarin/deploy-your-xamarin-app/"
 - "/xamarin/deploy-your-xamarin-app"
 menu:
   xamarin:
