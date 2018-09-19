@@ -23,4 +23,4 @@ If you enable the `Do you want to remain the connected services user?` option in
 
 The "connected services" user specifies which Team Member's service connections / accounts connected to his/her Bitrise user should be used when Bitrise tries to communicate with another service (GitHub, Bitbucket, ...), for example to send back build status information, or to register a new SSH key automatically.
 
-Admins of an app can change this any time on the \`Settings\` tab of the app.
+Admins of an app can change this any time on the `Settings` tab of the app.
