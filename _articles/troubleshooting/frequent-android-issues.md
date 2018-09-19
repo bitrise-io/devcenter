@@ -50,7 +50,7 @@ with the following content:
 In most cases you don't need both packages to be updated, so you can try to remove them one
 by one, but having all three in the script covers most of the cases related to this error.
 
-{% include message_box.html type="note" title="We update the preinstalled Android packages on every weekend" content=" So if the error is related to an outdated package, the workaround we describe here can be removed from your build after the weekend update is completed. "%} 
+{% include message_box.html type="note" title="We update the preinstalled Android packages every weekend" content=" So if the error is related to an outdated package, the workaround we describe here can be removed from your build after the weekend update is completed. "%} 
 
 ### Alternative solution for the license error
 
