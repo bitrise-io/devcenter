@@ -107,7 +107,7 @@ Step by step:
 5. Save the changes.
 
 {% include message_box.html type="note" title="After downloading the original bitrise.yml from bitrise.io" content="
-The original `bitrise.yml` you downloaded from [bitrise.io](https://www.bitrise.io) most likely includes the steps to retrieve your repository. These steps will be redundant, as you will define how the repository should be accessed in the \\"wrapper\\" config on [bitrise.io](https://www.bitrise.io), so go ahead and remove the `activate-ssh-key` and `git-clone` steps from it before you would commit it into your repository.
+The original `bitrise.yml` you downloaded from [bitrise.io](https://www.bitrise.io) most likely includes the steps to retrieve your repository. These steps will be redundant, as you will define how the repository should be accessed in the \"wrapper\" config on [bitrise.io](https://www.bitrise.io), so go ahead and remove the `activate-ssh-key` and `git-clone` steps from it before you would commit it into your repository.
 "%}
 
 ### bitrise.yml content for bitrise.io
