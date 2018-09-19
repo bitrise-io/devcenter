@@ -24,10 +24,7 @@ You have to call your build trigger with a `POST` request with a JSON body.
 When you use the Bitrise Trigger API you have to specify the App's `Build Trigger Token` and `App Slug`. You can view both and regenerate your App's Build Trigger Token anytime you want to, on the `Code` tab of the app.
 "%}
 
-{% include message_box.html type="important" title="Old API token parameter" content=" The old `_api_token_` parameter is DEPRECATED, please use the `_build_trigger_token_`parameter instead.
-
-
-_Note: the old_ `_api_token_` _parameter is DEPRECATED, please use the_ `_build_trigger_token_` _parameter instead_
+{% include message_box.html type="important" title="Old API token parameter" content=" The old `_api_token_` parameter is DEPRECATED, please use the `_build_trigger_token_`parameter instead. "%}
 
 ## JSON body
 
@@ -102,11 +99,8 @@ The following parameters are supported in the `build_params` object:
   This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab.
   Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
 
-!!! note "Git Clone - parameter priority"
-If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
-If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored.
-These will still be logged, will be available for steps and will be visible on the Build's details page,
-but the `Git Clone` step will use the the most specific parameter for checkout.
+{% include message_box.html type="note" title="Git Clone - parameter priority" content="
+If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step. If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored. These will still be logged, will be available for steps and will be visible on the Build's details page, but the `Git Clone` step will use the the most specific parameter for checkout. "%}
 
 ### Specify Environment Variables
 
