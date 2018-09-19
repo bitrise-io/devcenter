@@ -14,7 +14,7 @@ There are two ways to achieve this:
   as "Deployment keys". This is the best, most secure way but not supported by all git hosting services (GitHub, for example, doesn't support it).
 * Register an SSH key for a user account. Simply add a "bot" / "machine" user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign _read_ permissions to the bot user. After that, you can use the SSH key to clone to the repository or any submodule.
 
-{% include message_box.html type="note" title="Use a machine user with read only access" content=" It is not required to use a special \\"bot\\" / \\"machine\\" user: you can add the SSH key to your own account on the git hosting service. The best practice, however, is to use a **machine user, with** **read only** access, for those repositories you want to access during the build. "%} 
+{% include message_box.html type="note" title="Use a machine user with read only access" content=" It is not required to use a special \"bot\" / \"machine\" user: you can add the SSH key to your own account on the git hosting service. The best practice, however, is to use a **machine user, with** **read only** access, for those repositories you want to access during the build. "%} 
 
 [GitHub itself recommends this method](https://developer.github.com/v3/guides/managing-deploy-keys/#machine-users) for accessing multiple repositories.
 
