@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/troubleshooting/frequent-ios-issues.md
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/getting-started/adding-a-new-app/index.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md

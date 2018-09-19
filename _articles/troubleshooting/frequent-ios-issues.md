@@ -1,5 +1,7 @@
 ---
 title: Frequent iOS issues
+redirect_from:
+- "#works-in-local-but-not-on-bitriseio"
 menu:
   troubleshooting:
     weight: 4
