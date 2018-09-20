@@ -23,7 +23,7 @@ With DeployGate and Bitrise, you can quickly build a fully automated in-house do
 
 # Upload your app to DeployGate via Bitrise
 
-To upload your app to DeployGate,  add `DeployGate Upload` step to your bitrise workflow.
+To upload your app to DeployGate, add `DeployGate Upload` step to your bitrise workflow.
 
 ![DeployGate Workflow Step](/img/tutorials/deploy/deploygate/step.png)
 
@@ -45,9 +45,9 @@ You can also set optional variables for using advanced features as below:
 |-|-|
 |Short Message|Summary of update shown on DeployGate.<br>You can use `$GIT_CLONE_COMMIT_MESSAGE_SUBJECT` if you want to use the same message as git commit|
 |Distribution Key|You can make multiple public install links (we called it **`Distribution Page`**) for a different version of app binary in the same app. <br>By specifying the distribution page's hash, that distribution page will be updated simultaneously. The "xxxx" portion of the distributed page's URL like https://deploygate.com/distributions/xxxx|
-|Distribution Name|Specify the name of the updated distribution page. If nothing exists, a new distribution page will be created. Possible usage includes creating distribution pages for each Git branch name. (e.g. `$BITRISE_GIT_BRANCH`)|
+|Distribution Name|Specify the name of the updated distribution page. If nothing exists, a new distribution page will be created. Possible usage includes creating distribution pages for each Git branch name. (for example `$BITRISE_GIT_BRANCH`)|
 |Release Note|Message for the new release in distribution page. This message will be notified to your distribution page's testers|
-|Disable Notify(iOS Only)|There is no DeployGate client app in iOS platform. By default, we are using email notification for release updates. If you don't need email notification, please set this option as `true`|
+|Disable Notify(iOS Only)|There is no DeployGate client app in iOS platform. By default, we use email notifications for release updates. If you don't need email notification, please set this option as `true`|
 
 !!! note
     These options are based on **[DeloyGate API](https://docs.deploygate.com/reference)**. For more details, please read references at [DeployGate.com](https://deploygate.com?locale=en)
@@ -56,7 +56,7 @@ You can also set optional variables for using advanced features as below:
 
 ![Distribution Page](/img/tutorials/deploy/deploygate/distribution_page.png)
 
-**Distribution Page** (Shareable link) is a feature to generate a landing page for the app installation of your app's specific version. When you are uploading an app to DeployGate, the system automatically assigns a sequential number (we are calling it **`Revision Number`**) for each uploaded build. On Distribution Page, you can choose specific revision of app to distribute for each group of testers.
+**Distribution Page** (Shareable link) is a feature to generate a landing page for the app installation of your app's specific version. When you upload an app to DeployGate, the system automatically assigns a sequential number (we are calling it **`Revision Number`**) for each uploaded build. On Distribution Page, you can choose specific revision of app to distribute for each group of testers.
 This feature is handy for distributing your app to multiple tester groups for different purposes such as QAs, Dog Fooding, or Test Marketing.
 
-You can also generate a distribution link when you upload app from Bitrise with DeployGate Upload step. Please refer to the optional variables above.
+You can also generate a distribution page when you upload an app from Bitrise with DeployGate Upload step. Please refer to the optional variables above.
