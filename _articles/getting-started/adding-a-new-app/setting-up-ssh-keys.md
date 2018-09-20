@@ -35,7 +35,7 @@ When the system asks if you need to use an additional private repository, click 
 
 ![Add own SSH key](/img/adding-a-new-app/own-ssh.png)
 
-{% include message_box.html type="note" title="A bot user" content=" A simple workaround is adding a \\"bot\\" user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
+{% include message_box.html type="note" title="A bot user" content=" A simple workaround is adding a \"bot\" user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
 "%}
 
 {% include message_box.html type="warning" content=" **Do not** add the key to the repository Deploy Keys. Add it to the user's account who has access to the repositories. "%}
