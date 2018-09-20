@@ -17,9 +17,7 @@ Setting up an app that is in a self-hosted GitLab repository is very simple: Bit
 **Only Organizations can use privately hosted GitLab instances on Bitrise**. If you are not on an Organization plan, you should not follow this guide.
 
  1. Log in to your GitLab instance with **root** privileges.
-
-    !!! warning
-    If you connect to Bitrise without root privileges, your Organization's other team members will not have access to the repository on the GitLab instance.
+    If you connect to Bitrise **without root privileges**, your Organization's other team members will **not have access to the repository on the GitLab instance**.
  2. Go to the admin area by clicking the little wrench icon on the top menu bar.
  3. On the left menu bar, select `Applications`, then click `New Application`.
 
