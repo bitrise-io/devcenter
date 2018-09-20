@@ -15,21 +15,22 @@ After selecting the Stack you want to use you'll see a short description of the 
 with an additional link to learn more about that specific Stack (e.g. to see what
 tools are preinstalled, and which versions, on the selected Stack).
 
-!!! note "The Stack won't be used until you click the `Save` button!"
+{% include message_box.html type="important" title="Make sure you hit the `Save` button" content=" The Stack won't be used until you click the `Save` button!
+"%}
 
 ## Stack status types
 
 | Type | Description |
-|---|---|
-| Stable | Generally available and expected to be supported for the foreseeable future. __Updated when an update for the Stack's primary tool is available.__ Example: when Xcode 7.3.1 was released, the Xcode 7.3 stack was updated to have 7.3.1 instead of 7.3(.0). In case of `Xamarin` stacks, the Xamarin updates are applied weekly, during the weekends. |
+| --- | --- |
+| Stable | Generally available and expected to be supported for the foreseeable future. Updated when an update for the Stack's primary tool is available. Example: when Xcode 7.3.1 was released, the Xcode 7.3 stack was updated to have 7.3.1 instead of 7.3(.0). In case of Xamarin stacks, the Xamarin updates are applied weekly, during the weekends. |
 | LTS (Long Term Support) | No changes (updates) will be made to the stack, except for absolutely crucial changes (for example which affect security), and Bitrise CLI tool updates. Preinstalled tool versions will remain the same, until the Stack is removed from our collection. |
 
 ## Stack prepare types
 
 | Type | Description |
-|---|---|
-| Pre-Booted | If a Stack is available as pre-booted, and there's enough pre-booted machines with that Stack configuration, your build can start right away, without waiting for the build environment to boot. In case there's no more available pre-booted machine with that Stack configuration, your build will start on an `On-Demand` configuration. |
-| On-Demand | If a Stack is available as on-demand configuration and there's no (available) pre-booted configuration for the Stack, our system will have to create a virtual machine for your selected configuration __when your build starts__. This means that your build will be in `preparing environment` state while the related Virtual Machine is created & booted. For a macOS configuration the boot process usually takes about 1 - 1.5 minutes. *The prepare time (of course) is not counted into the build time, it won't affect how long your build can run.* |
+| --- | --- |
+| Pre-Booted | If a Stack is available as pre-booted, and there's enough pre-booted machines with that Stack configuration, your build can start right away, without waiting for the build environment to boot. In case there's no more available pre-booted machine with that Stack configuration, your build will start on an On-Demand configuration. |
+| On-Demand | If a Stack is available as on-demand configuration and there's no (available) pre-booted configuration for the Stack, our system will have to create a virtual machine for your selected configuration when your build starts. This means that your build will be in preparing environment state while the related Virtual Machine is created & booted. For a macOS configuration the boot process usually takes about 1 - 1.5 minutes. The prepare time (of course) is not counted into the build time, it won't affect how long your build can run. |
 
 ## What's preinstalled
 
