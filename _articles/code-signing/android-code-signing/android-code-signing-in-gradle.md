@@ -43,9 +43,7 @@ If your keystore path is `$HOME/keystores/my_keystore.jks`, then your `build.gra
 
 You can use the `System.getenv("ENV_KEY")` file to access environment variables in the Gradle config file.
 
-Using env vars as `keyPassword` and `storePassword` in the `Code signing` tab:
-
-Your `build.gradle` will look like this:
+If you use env vars as `keyPassword` and `storePassword` in the `Code signing` tab, your `build.gradle` will look like this:
 
     android {
        signingConfigs {
@@ -62,7 +60,7 @@ You get these environment variables when you upload your keystore to the `GENERI
 
 {% include message_box.html type="important" title="Define the used env vars" content=" Do not forget to define the used environment variables on [bitrise.io](https://www.bitrise.io) as well.
 
-When you upload a keystore file in the `Android keystore file` section and you have all the fields filled out, Bitrise will export these environment variables automatically. 
+When you upload a keystore file in the `Android keystore file` section and you have all the fields filled out, Bitrise will export these environment variables automatically.
 
 * `BITRISEIO_ANDROID_KEYSTORE_ALIAS`
 * `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
