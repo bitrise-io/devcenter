@@ -68,14 +68,15 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!*
 
 ## Japanese
 
+* [Bitrise, GitHub, DeployGateを連携させ、全自動でアプリをビルドして配信するCI/CDシステムを作る](https://qiita.com/kyoro353/items/200d5b34b9f5805dd43a) - *Automated continuous build, test and distribute system with Bitrise and DeployGate*
 * [ReactNative のアプリケーションを Bitrise でビルドする](http://qiita.com/jtakahashi0604/items/5133358aa55a03137fbc) - *Build ReactNative app with Bitrise*
-* [bitrise + deploygateでtitaniumアプリ評価環境を作る](http://qiita.com/imoans/items/aa6dec9392d2ed0b77cd) - *Titanium, Bitrise and deploygate*
+* [bitrise + deploygateでtitaniumアプリ評価環境を作る](http://qiita.com/imoans/items/aa6dec9392d2ed0b77cd) - *Titanium, Bitrise and DeployGate*
 * [BitriseでiTunesConnectに自動でipaファイルをビルド&iOSリリース手順](http://qiita.com/narukun/items/960d71f6577146550b08) - *Automate the deployment of iOS apps to iTunesConnect*
 * [BitriseのScheduled Buildを使ってキューが詰まる問題を改善する](http://qiita.com/shobyshoby/items/610aaa40b4a49498849c) - *Use Bitrise's Scheduled Build to optimize build times*
 * [BITRISEを用いたAndroidアプリの自動配布](http://qiita.com/sjnya/items/6ac1c800f16a7f24201a) - *Automatic distribution of Android apps using Bitrise*
 * [iOS用のCIサービスBitriseを使ってみた](http://qiita.com/keygx/items/ab6149476f43ec51eb5c) - *Detailed introduction guide*
-* [iOSアプリ用のCI環境を作ろう](http://qiita.com/kou_hon/items/51dda72ad62c0c03a720) - *Using Bitrise to deploy iOS apps to Deploygate*
-* [Androidアプリ開発用のCI環境を作ろう](http://qiita.com/kou_hon/items/fe80072a38dd8aa861af) - *Using Bitrise to deploy Android apps to Deploygate*
+* [iOSアプリ用のCI環境を作ろう](http://qiita.com/kou_hon/items/51dda72ad62c0c03a720) - *Using Bitrise to deploy iOS apps to DeployGate*
+* [Androidアプリ開発用のCI環境を作ろう](http://qiita.com/kou_hon/items/fe80072a38dd8aa861af) - *Using Bitrise to deploy Android apps to DeployGate*
 * [BITRISEを使っています](http://www.slideshare.net/kurikazu/bitrise-62409912) - *SlideShare*
 * [CircleCIのiOSビルドが有料プラン化するらしいので、Bitriseの無料プランに乗り換えてみた](http://engineering.otobank.co.jp/entry/ios-build-switch-to-bitrise-from-circleci) - *Migrating a CircleCI configuration to Bitrise*
 * [iOS用のCIサービス「Bitrise」を使ったメモ](http://blog.koogawa.com/entry/2016/01/31/110032) - *Notes about using Bitrise for iOS Continuous Integration*
