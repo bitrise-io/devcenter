@@ -36,7 +36,7 @@ You can download your files from `GENERIC FILE STORAGE`(for example, your keysto
 An example for downloading a keystore file" content=" 
 
 
-...
+```
 - file-downloader:
 
    inputs:
@@ -45,7 +45,7 @@ An example for downloading a keystore file" content="
 
    - destination: "$HOME/keystores/my_keystore.jks" #native android#
 
-...
+```
 
 After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
