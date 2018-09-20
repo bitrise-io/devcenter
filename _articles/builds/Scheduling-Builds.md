@@ -1,5 +1,7 @@
 ---
 title: Scheduling your builds
+redirect_from:
+- "/builds/scheduling-builds"
 menu:
   builds:
     weight: 2
