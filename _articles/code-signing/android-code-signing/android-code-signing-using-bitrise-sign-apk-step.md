@@ -33,18 +33,18 @@ Bitrise uploads your keystore file and assigns an environment variable (`BITRISE
 
 You can download your files from `GENERIC FILE STORAGE`(for example, your keystore file) using the `File-downloader` step:
 
-!!! example
-In this example, we're downloading a keystore file.
+{% include message_box.html type="example" title="downloading a keystore file" content="
+...
 
-``` yaml
-...
-- file-downloader:
+\- file-downloader:
+
    inputs:
+
    - source: $BITRISEIO_ANDROID_KEYSTORE_URL
+
    - destination: "$HOME/keystores/my_keystore.jks" #native android#
-...
-    
-```
+
+... "%} 
 
 After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
