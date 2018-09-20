@@ -66,7 +66,8 @@ If, for example, you create a workflow based on your `primary` one, it means tha
 
 You can set up multiple workflows to run in succession. The order of these workflows can be rearranged, new workflows can be added to the "chain" and existing workflows can be removed from it at any time.
 
-**IMPORTANT**: Be aware that if you chain workflows together as described in this guide, all the workflows will still run on the same Virtual Machine. However, if you use the `Bitrise Start Build` step as described in [this guide](/builds/triggering-builds/trigger-multiple-workflows), each of the triggered workflows will run on a separate Virtual Machine.
+{% include message_box.html type="important" title="`Bitrise Start Build` step" content="
+Be aware that if you chain workflows together as described in this guide, all the workflows will still run on the same Virtual Machine. However, if you use the `Bitrise Start Build` step as described in [this guide](/builds/triggering-builds/trigger-multiple-workflows), each of the triggered workflows will run on a separate Virtual Machine. "%} 
 
 1. Click the app's `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
 2. Open the `WORKFLOW` menu on the left and select a workflow. The default is the `primary` workflow. You can chain workflows before and after the selected workflow.
