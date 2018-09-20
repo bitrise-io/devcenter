@@ -9,15 +9,16 @@ menu:
 ---
 When adding your app to **Bitrise**, we will clone your repository to make sure we can access it. Besides cloning your repository we will run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your workflow with all the necessary steps to build and deploy your app.
 
-!!! note "Currently we are supporting the following projects out of the box"
-\* iOS
-\* Android
-\* Xamarin
-\* Fastlane
-\* macOS
-\* Cordova
-\* Ionic
-\* React Native
+{% include message_box.html type="note" title="Currently we are supporting the following projects out of the box" content="  
+
+* iOS  
+* Android 
+* Xamarin 
+* Fastlane 
+* macOS 
+* Cordova  
+* Ionic 
+* React Native "%} 
 
 To add a new app to Bitrise go to your [dashboard](https://bitrise.io/dashboard) and press the `Add new app` button.
 
