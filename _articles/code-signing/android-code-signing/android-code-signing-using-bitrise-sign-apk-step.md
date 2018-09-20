@@ -1,5 +1,7 @@
 ---
 title: Android code signing using Bitrise Sign APK step
+redirect_from:
+- "/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/"
 menu:
   android-code-signing:
     weight: 2

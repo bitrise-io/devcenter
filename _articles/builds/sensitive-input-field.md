@@ -1,5 +1,7 @@
 ---
 title: Sensitive input in public apps
+redirect_from:
+- sensitive-input-field/#set-a-sensitive-input-in-a-step/
 menu:
   builds:
     weight: 8
@@ -35,7 +37,7 @@ Head over to [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) to find o
 
 The selected or newly created secret env var will get automatically saved into the input field of the step.
 
-**IMPORTANT:** note that you cannot modify the input manually in the input field marked with the `SENSITIVE` label! Instead, click on the field and then click the `Select secret variable` to **replace** the existing input with another secret env var from the list or to **create a new one** in the `Insert variable` pop-up.
+{% include message_box.html type="important" title="`Select secret variable`" content=" Note that you cannot modify the input manually in the input field marked with the `SENSITIVE` label! Instead, click on the field and then click the `Select secret variable` to **replace** the existing input with another secret env var from the list or to **create a new one** in the `Insert variable` pop-up. "%}
 
 * **Do not add private information in the** `**Env Var**` **tab**! Our `Secret` tab is designed to hold encrypted inputs as secret env vars which will not be exposed in `bitrise.yml` or in public app PRs.
 * Note that secret env vars can only hide sensitive information **in the build logs of your public app**. If you **attach any other file to your build log** which contains sensitive information but it is not encrypted, then sensitive information will be visible to anyone who has the build URL!

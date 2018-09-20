@@ -11,30 +11,20 @@ in the commit message.
 
 For example, the commit message:
 
-```
-This is not important, please [skip ci]
-```
+    This is not important, please [skip ci]
 
 won't start a build, nor will:
 
-```
-I just changed the README
+    I just changed the README
+    
+    [ci skip]
 
-[ci skip]
-```
-
-
-!!! warning "Only the head/last commit message is checked!"
-    __If you push more than one commit__, only the last ("head") commit's
-    message will be checked for the skip ci pattern!
+{% include message_box.html type="warning" title="Only the head/last commit message is checked!" content="**If you push more than one commit**, only the last (head) commit's message will be checked for the skip ci pattern! "%}
 
 If you'd decide that you still want to start a build you'll have to
 either rebase that commit (e.g. just change its commit message), or push another commit.
 
-!!! note "You can push an empty commit"
-    Git allows to create and push empty commits, so if you'd decide that you
-    still want to build a skipped build you can do `git commit --allow-empty -m "I decided to run this"`
-    on the related branch and push the commit.
+{% include message_box.html type="note" title="Push an empty commit" content=" Git allows to create and push empty commits, so if you'd decide that you still want to build a skipped build you can do `git commit --allow-empty -m \"I decided to run this\"` on the related branch and push the commit."%}
 
 ## Pull Requests
 
@@ -48,15 +38,14 @@ This "branch" (ref) is also removed / made unaccessible after you close the pull
 Other services like Bitbucket doesn't even create this virtual branch / ref, the pull request is just
 a virtual data but can't be accessed through `git` directly.
 
-!!! note "What's the commit message of a Pull Request?"
-    In any case this means that __the Pull Request itself__ is treated as a (virtual) commit,
-    where __the commit message is the title + description of the Pull Request__ and
-    not the commit(s) of the pull request!
+{% include message_box.html type="note" title="What's the commit message of a Pull Request?" content="
+In any case this means that **the Pull Request itself** is treated as a (virtual) commit, where **the commit message is the title + description of the Pull Request** and not the commit(s) of the pull request!
+"%}
 
-This means that, __if you want to skip a pull request__, you have to include the Skip CI
-pattern __in the Pull Request's title or description__, and not in the commit's message!
+This means that, **if you want to skip a pull request**, you have to include the Skip CI
+pattern **in the Pull Request's title or description**, and not in the commit's message!
 
-__Once you decide to not to skip the Pull Request / more commits in the pull request__
+**Once you decide to not to skip the Pull Request / more commits in the pull request**
 you can simply remove the
 Skip CI pattern from the Pull Request's title or description, which should automatically
 trigger a new build with the latest commit, and all future commits of the pull request

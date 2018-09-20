@@ -14,17 +14,12 @@ make it the very last step of the Workflow) and with the Public Install Page for
 To do this all you have to do is:
 
 1. add a `Send HipChat message` step to your app's Workflow, after the `Deploy to Bitrise.io step`,
-1. fill out the required inputs (authentication token, the room's ID you want to send the message to,
+2. fill out the required inputs (authentication token, the room's ID you want to send the message to,
    color of the message, ...),
-1. and in the *Message* input field you can include environment variables
+3. and in the _Message_ input field you can include environment variables
    defined by Bitrise and by the steps which run before the HipChat Message step.
 
-!!! note
-    If you click into any Step input field, an **Insert Variable** button will appear.
-    With this you can insert environment variables defined by Bitrise
-    (for example the App's title, the Build's unique ID or the Build's URL on Bitrise)
-    and environment variables exported by Steps which ran before this step
-    (for example an Xcode Build's status or the generated IPA path).
+{% include message_box.html type="note" title="How to insert environment variables in Step inputs" content=" If you click into any Step input field, an **Insert Variable** button will appear. With this you can insert environment variables defined by Bitrise (for example the App's title, the Build's unique ID or the Build's URL on Bitrise) and environment variables exported by Steps which ran before this step (for example, an Xcode Build's status or the generated IPA path). "%}
 
 Fill out the HipChat steps' required input fields, and for the HipChat Message
 step's `Message` input include the build's url with the `$BITRISE_BUILD_URL` environment variable,
@@ -33,12 +28,10 @@ and the related Public Install Page URL with `$BITRISE_PUBLIC_INSTALL_PAGE_URL`.
 
 An example `Message` input:
 
-```
-Your build's details can be found at: $BITRISE_BUILD_URL,
-and the Public Install page at: $BITRISE_PUBLIC_INSTALL_PAGE_URL
-
-Build status: $BITRISE_BUILD_STATUS
-```
+    Your build's details can be found at: $BITRISE_BUILD_URL,
+    and the Public Install page at: $BITRISE_PUBLIC_INSTALL_PAGE_URL
+    
+    Build status: $BITRISE_BUILD_STATUS
 
 That's all. Once you configure your Workflow this way and start a new build,
 you'll be notified about the build and deploy on HipChat,

@@ -20,24 +20,21 @@ To do this:
 
 A YAML configuration example of the step & input:
 
-```
-    - deploy-to-bitrise-io:
-        inputs:
-        - deploy_path: "/var/log/system.log"
-```
+        - deploy-to-bitrise-io:
+            inputs:
+            - deploy_path: "/var/log/system.log"
 
 That's all, your next build will attach the OS X system log file
 to your build - you'll see it at the top of the Build's page.
 
-!!! note "By default the **Deploy to Bitrise.io** will always run"
-    By default the `Deploy to Bitrise.io` will always run,
-    even if a previous step fails, __so you can deploy failed step/tool logs too.__
-
+{% include message_box.html type="note" title="By default the **Deploy to Bitrise.io** will always run" content="
+By default the `Deploy to Bitrise.io` will always run, even if a previous step fails, **so you can deploy failed step/tool logs too.**
+"%}
 
 ## Deploy a directory
 
 The `Deploy to Bitrise.io` step accepts both file and directory path as its input,
-but by default __it does not deploy files recursively__, from sub directories
+but by default **it does not deploy files recursively**, from sub directories
 if you specify a directory as it's `deploy_path` input.
 
 If you want to do that and deploy the whole directory with every sub directory
@@ -48,18 +45,11 @@ the compressed file, instead of deploying files one by one.
 
 An example configuration:
 
-```
-    - deploy-to-bitrise-io:
-        inputs:
-        - deploy_path: /deploy/this/directory/recursively
-        - is_compress: 'true'
-```
+        - deploy-to-bitrise-io:
+            inputs:
+            - deploy_path: /deploy/this/directory/recursively
+            - is_compress: 'true'
 
-_Note: as every input's, `is_compress`'s value have to be a __string__, that's why `true` is surrounded with quotes._
+_Note: as every input's,_ `_is_compress_`_'s value have to be a **string**, that's why_ `_true_` _is surrounded with quotes._
 
-!!! note "Using more than one `Deploy to Bitrise.io` step"
-    You can use as many `Deploy to Bitrise.io` steps as you want to,
-    even in a single build / workflow.
-    Alternatively of course you can move all the files you want to deploy
-    into a single directory, and deploy that directory with the step,
-    it's up to you to decide which solution works best for you.
+{% include message_box.html type="note" title="Using more than one `Deploy to Bitrise.io` step" content=" You can use as many `Deploy to Bitrise.io` steps as you want to, even in a single build / workflow. Alternatively of course you can move all the files you want to deploy into a single directory, and deploy that directory with the step, it's up to you to decide which solution works best for you."%}

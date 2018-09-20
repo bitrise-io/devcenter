@@ -26,10 +26,7 @@ The only required parameter you have to add is your API Key on TestFairy.
 To get it you should navigate to your [account preferences](https://app.testfairy.com/settings/) on TestFairy
 and find the key under your API Key menu.
 
-!!! note
-    You can also enable or disable the email notifications and set the tester groups you would like to notify.
-    There's an option to make your users always upgrade to the latest build by enabling Auto update in the step,
-    and you can also start recording video and set the length of it.
+{% include message_box.html type="note" title="Email notifications and Auto update" content=" You can also enable or disable the email notifications and set the tester groups you would like to notify. There's an option to make your users always upgrade to the latest build by enabling Auto update in the step, and you can also start recording video and set the length of it."%}
 
 # Ready to go!
 

@@ -5,75 +5,65 @@ menu:
     weight: 1
 
 ---
-_Note: the `www` endpoint is now deprecated. Please use the `https://app.bitrise.io/app/APP-SLUG/build/start.json` endpoint instead._
+_Note: the_ `_www_` _endpoint is now deprecated. Please use the_ `_https://app.bitrise.io/app/APP-SLUG/build/start.json_` _endpoint instead._
 
 With the Build Trigger API you can start a new build of your app with a simple API call.
 
 You can define parameters for the build like what `branch`, `tag` or _git commit_ to use
 and what _build message_ to present on the Build's details page.
 
-!!! note "Interactive cURL call configurator"
-    You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build`
-    button on your app's [bitrise.io](https://www.bitrise.io) page
-    and switching to `Advanced` mode in the popup.
-    At the bottom of the popup you can find a `curl` call,
-    based on the parameters you specify in the popup.
-
+{% include message_box.html type="note" title="Interactive cURL call configurator" content="
+You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
+"%}
 
 ## How to start a build by calling the Trigger API?
 
 You have to call your build trigger with a `POST` request with a JSON body.
 
-!!! note "Build Trigger Token and App Slug"
-    When you use the Bitrise Trigger API you have to specify the App's `Build Trigger Token` and `App Slug`.
-    You can view both and regenerate your App's Build Trigger Token anytime you want to,
-    on the `Code` tab of the app.
+{% include message_box.html type="note" title="Build Trigger Token and App Slug" content="
+When you use the Bitrise Trigger API you have to specify the App's `Build Trigger Token` and `App Slug`. You can view both and regenerate your App's Build Trigger Token anytime you want to, on the `Code` tab of the app.
+"%}
 
-_Note: the old `api_token` parameter is DEPRECATED, please use the `build_trigger_token` parameter instead_
+{% include message_box.html type="important" title="Old API token parameter" content=" The old `_api_token_` parameter is DEPRECATED, please use the `_build_trigger_token_`parameter instead. "%}
 
 ## JSON body
 
 The JSON body has to contain at least:
 
 * a `hook_info` object with:
-    * a `type` key and `bitrise` as its value
-    * a `build_trigger_token` key and your _Build Trigger Token_ as its value
+  * a `type` key and `bitrise` as its value
+  * a `build_trigger_token` key and your _Build Trigger Token_ as its value
 * a `build_params` object, with at least a `tag`, `branch` or `workflow_id` parameter specified
 
 A minimal sample JSON body, which specifies _master_ as the `branch` parameter:
 
-```
-{
-  "hook_info": {
-    "type": "bitrise",
-    "build_trigger_token": "..."
-  },
-  "build_params": {
-    "branch": "master"
-  }
-}
-```
+    {
+      "hook_info": {
+        "type": "bitrise",
+        "build_trigger_token": "..."
+      },
+      "build_params": {
+        "branch": "master"
+      }
+    }
 
-__To pass this JSON payload__ you can either pass it as the __body__ of the request __as string__ (the JSON object serialized to string),
+**To pass this JSON payload** you can either pass it as the **body** of the request **as string** (the JSON object serialized to string),
 or if you want to pass it as an object (e.g. if you want to call it from JavaScript) then you have to include a root `payload`
 element, or set the JSON object as the value of the `payload` POST parameter.
 
 jQuery example using the `payload` parameter:
 
-```
-$.post("https://app.bitrise.io/app/APP-SLUG/build/start.json", {
-    "payload":{
-        "hook_info":{
-            "type":"bitrise",
-            "build_trigger_token":"APP-API-TOKEN"
-        },
-        "build_params":{
-            "branch":"master"
+    $.post("https://app.bitrise.io/app/APP-SLUG/build/start.json", {
+        "payload":{
+            "hook_info":{
+                "type":"bitrise",
+                "build_trigger_token":"APP-API-TOKEN"
+            },
+            "build_params":{
+                "branch":"master"
+            }
         }
-    }
-})
-```
-
+    })
 
 ## Build Params
 
@@ -98,46 +88,41 @@ The following parameters are supported in the `build_params` object:
 ### Pull Request specific:
 
 * `branch_dest` (string): Used only in case of Pull Request builds: the destination/target branch of the Pull Request,
-  the one the PR will be merged *into*. Example: `master`.
+  the one the PR will be merged _into_. Example: `master`.
 * `pull_request_id` (int): Pull Request ID on the source code hosting system (e.g. the PR number on GitHub)
 * `pull_request_repository_url` (string): repository url from where the Pull Request is sent. E.g. if
   it's created from a fork this should be the fork's URL. Example: `https://github.com/xyz/bitrise.git`.
-* `pull_request_merge_branch` (string): the pre-merge branch, __if the source code hosting system supports & provides__
+* `pull_request_merge_branch` (string): the pre-merge branch, **if the source code hosting system supports & provides**
   the pre-merged state of the PR on a special "merge branch" (ref). Probably only GitHub supports this.
   Example: `pull/12/merge`.
-* `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`) __if the source code hosting system supports & provides__ this.
-  This special git `ref` should point to the __source__ of the Pull Request. Supported by GitHub and GitLab.
+* `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`) **if the source code hosting system supports & provides** this.
+  This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab.
   Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
 
-!!! note "Git Clone - parameter priority"
-    If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
-    If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored.
-    These will still be logged, will be available for steps and will be visible on the Build's details page,
-    but the `Git Clone` step will use the the most specific parameter for checkout.
+{% include message_box.html type="note" title="Git Clone - parameter priority" content="
+If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step. If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored. These will still be logged, will be available for steps and will be visible on the Build's details page, but the `Git Clone` step will use the the most specific parameter for checkout. "%}
 
 ### Specify Environment Variables
 
-You can define additional *environment variables* for your build.
+You can define additional _environment variables_ for your build.
 
-_These variables will be handled with priority between `Secrets` and `App Env Vars`,
+_These variables will be handled with priority between_ `_Secrets_` _and_ `_App Env Vars_`_,
 which means that you can not overwrite environment variables defined in
 your build configuration (e.g. App Env Vars), only Secrets.
 For more information see:
-[Availability order of environment variables](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)_
+_[_Availability order of environment variables_](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)
 
-It's important that this parameter have to be an __array of objects__,
+It's important that this parameter have to be an **array of objects**,
 and that every item of the array have to include
 at least a `mapped_to` (the key of the Environment Variable, without a dollar sign (`$`))
 and a `value` property (the value of the variable). By default environment variable names inside values will be replaced in triggered build by actual value from target environment. This behavior can be disabled by setting `is_expand` flag to `false`.
 
 Example:
 
-```
-"environments":[
-  {"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true},
-  {"mapped_to":"HELP_ENV","value":"$HOME variable contains user's home directory path","is_expand":false},
-]
-```
+    "environments":[
+      {"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true},
+      {"mapped_to":"HELP_ENV","value":"$HOME variable contains user's home directory path","is_expand":false},
+    ]
 
 ### Workflow to be used for the build
 
@@ -148,7 +133,7 @@ automatically (based on the _Trigger Map_), and how you can
 define separate Workflows for separate branches, tags or pull requests
 without the need to specify the workflow manually for every build.
 
-With the Trigger API you can however __overwrite__ this selection
+With the Trigger API you can however **overwrite** this selection
 and specify exactly which Workflow you want to use.
 
 All you have to do is add a `workflow_id` parameter to your `build_params`
@@ -156,9 +141,7 @@ and specify the Workflow you want to use for that specific build.
 
 An example `build_params` with `branch` and `workflow_id`:
 
-```
-"build_params":{"branch":"master","workflow_id":"deploy"}'
-```
+    "build_params":{"branch":"master","workflow_id":"deploy"}'
 
 ## `curl` example generator
 
@@ -169,18 +152,14 @@ At the bottom of the popup you can find a `curl` call, based on the parameters y
 
 A base curl call would look like this (with `master` specified as the `branch` build parameter):
 
-```
-curl -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master"}}'
-```
+    curl -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master"}}'
 
-_Note: please don't forget to add `Content-Type` header with `application/json` value_
+_Note: please don't forget to add_ `_Content-Type_` _header with_ `_application/json_` _value_
 
-A more advanced example: let's say you want to build the __master__ `branch`
+A more advanced example: let's say you want to build the **master** `branch`
 using the `deployment` workflow,
 specify a build message (`commit_message`)
 and set a test environment variable (`API_TEST_ENV`),
 the call will look like this:
 
-```
-curl  -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'
-```
+    curl  -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'

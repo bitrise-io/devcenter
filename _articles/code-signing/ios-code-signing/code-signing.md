@@ -1,5 +1,7 @@
 ---
 title: iOS code signing on Bitrise
+redirect_from:
+- "/ios/code-signing/"
 menu:
   ios-code-signing:
     weight: 1
@@ -32,7 +34,6 @@ The basic workflow of code signing is pretty straightforward:
 You can use third party tools to manage code signing on Bitrise, such as [fastlane match](https://github.com/fastlane/fastlane/tree/master/match)
 or [fastlane sigh](https://github.com/fastlane/fastlane/tree/master/sigh). However, we recommend using our own steps and tools.
 
-**IMPORTANT**: If you decide to use a third party tool for code signing management, please consult the tool's documentation and issue tracker, we only provide customer support for our own Step (`Certificate and profile installer`)
-and tools (`codesigndoc`)!
+{% include message_box.html type="important" title="Third party guide for code signing" content=" If you decide to use a third party tool for code signing management, please consult the tool's documentation and issue tracker, we only provide customer support for our own Step (`Certificate and profile installer`) and tools (`codesigndoc`)!"%}
 
 Even if you use a third party tool to manage your code signing files, and you don't plan to upload any code signing file to bitrise.io, you should keep the `Certificate and profile installer` step in your Workflow. This is because certain tools were not designed to work in an ephemeral environment, or in a full clean macOS install, and the `Certificate and profile installer` includes common workarounds for this situation. It's not guaranteed that it will help with the tool of your choice, but it won't cause any issue either.

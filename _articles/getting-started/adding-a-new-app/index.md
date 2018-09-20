@@ -1,5 +1,7 @@
 ---
 title: Adding a new app
+redirect_from:
+- "/adding-a-new-app/"
 menu:
   adding-a-new-app:
     weight: 1

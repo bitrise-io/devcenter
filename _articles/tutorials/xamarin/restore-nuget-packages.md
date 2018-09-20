@@ -1,5 +1,7 @@
 ---
 title: Restore NuGet packages
+redirect_from:
+- "/xamarin/restore-nuget-packages"
 menu:
   xamarin:
     weight: 2
