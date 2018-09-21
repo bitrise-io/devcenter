@@ -58,7 +58,7 @@ Let's see how an **Android deploy workflow** looks like!
 5. Go back to your Build's page and click `Start/Schedule a build`.
 6. Select `deploy` in the Basic tab of `Build configuration` pop-up window.
 
-Here is an example of a build generated with deploy workflow:
+Here is an example of a deploy workflow:
 
     deploy:
         - activate-ssh-key@4.0.3:
