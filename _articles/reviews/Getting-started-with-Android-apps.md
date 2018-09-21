@@ -7,7 +7,7 @@ published: false
 ---
 ## Add an Android app to bitrise.io
 
-{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) to connect your Bitrise account to your account on a Git service provider. "%}
+{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account on a Git service provider. "%}
 
 1. Log into bitrise.io.
 2. On your Dashboard, click `+ Add new app`.
@@ -54,7 +54,7 @@ Let's see how an **Android deploy workflow** looks like!
 1. Select the `deploy` workflow in Workflow Editor.
 2. Go to the Code Signing tab of your Workflow Editor.
 3. Drag-and-drop your keystore file to the `ANDROID KEYSTORE FILE` field.
-4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and `Save metadata`. You should have these already at hand as these are included your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. More information on the keystore file [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our `Sign APK step` (by default included in your Android deploy workflow) will take care of signing your apk so that it's ready for distribution!
+4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and `Save metadata`. You should have these already at hand as these are included your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. More information on the keystore file [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our `Sign APK step` (by default included in your Android deploy workflow) will take care of signing your apk so that it's ready for distribution! Head over to your [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!
 5. Go back to your Build's page and click `Start/Schedule a build`.
 6. Select `deploy` in the Basic tab of `Build configuration` pop-up window.
 
@@ -149,4 +149,4 @@ If you add `Google Play Deploy` step to your workflow (before the `Cache Push` s
 
 {% include message_box.html type="note" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow select another `DEPLOY` step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
 
-You're ready to deploy!
+That's all! Start or schedule a build and share the URL with external testers or distribute your app on an app store of your choice!
