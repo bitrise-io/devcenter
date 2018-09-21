@@ -7,7 +7,7 @@ published: false
 ---
 ## Adding an Android app to [bitrise.io](https://www.bitrise.io/)
 
-{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to \[bitrise.io\]([https://www.bitrise.io](https://www.bitrise.io) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](\[https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise\]) to connect your Bitrise account to your account on a Git service provider. "%}
+{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to \[bitrise.io\]([https://www.bitrise.io](https://www.bitrise.io) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways]([https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise\]) to connect your Bitrise account to your account on a Git service provider. "%}
 
 1. Log into bitrise.io.
 2. On your Dashboard, click `+ Add new app`.
