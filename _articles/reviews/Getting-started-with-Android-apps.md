@@ -96,13 +96,11 @@ Here is an example of a build generated with deploy workflow:
             - notify_user_groups: testers
         - cache-push@2.0.5: {}
 
-{% include message_box.html type="important" title="Order of the steps matter" content=" 
+{% include message_box.html type="important" title="Order of the steps matter!" content=" 
 
 * Right after our `Do anything with Script` step, the `Install missing Android SDK components` will take care of installing the missing Android SDK components that your project might be lacking.
 * `Change Android versionCode and versionName` step must be inserted BEFORE the `Android Build `step as the former makes sure you will upload the the build with the right version code to your app's marketplace.
 * Android Lint and Android Unit Test steps must be inserted BEFORE the `Android Build` step to test your code and debug before building your build.
-* 
-* 
-* "%}
+* `Sign APK` step must be AFTER the `Android Build` step as this builds your project so that you have an apk ready to be signed with the `Sign APK` step. Make sure that this step is BEFORE any deploy step (which distributes your apk to a marketplace) so that you can upload an authorized project.
 
 .
