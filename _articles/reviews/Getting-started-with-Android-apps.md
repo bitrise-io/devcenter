@@ -5,9 +5,9 @@ redirect_from: []
 published: false
 
 ---
-## Adding an Android app to [bitrise.io](https://www.bitrise.io/)
+## Adding an Android app to bitrise.io
 
-{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to \[bitrise.io\]([https://www.bitrise.io](https://www.bitrise.io) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](\[https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise\]) to connect your Bitrise account to your account on a Git service provider. "%}
+{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to \[bitrise.io\]([https://www.bitrise.io](https://www.bitrise.io)) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](\[https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise\]) to connect your Bitrise account to your account on a Git service provider. "%}
 
 1. Log into bitrise.io.
 2. On your Dashboard, click `+ Add new app`.
@@ -101,19 +101,23 @@ Here is an example of a build generated with deploy workflow:
 * Right after our `Do anything with Script` step, the `Install missing Android SDK components` will take care of installing the missing Android SDK components that your project might be lacking.
 * `Change Android versionCode and versionName` step must be inserted BEFORE the `Android Build`step as the former makes sure you will upload the the build with the right version code to your app's marketplace.
 * Android Lint and Android Unit Test steps must be inserted BEFORE the `Android Build` step to test your code and debug before building your build.
-* `Sign APK` step must be AFTER the `Android Build` step as this builds your project so that you have an apk ready to be signed with the `Sign APK` step. Make sure that this step is BEFORE any deploy step (which distributes your apk to a marketplace) so that you can upload an authorized project.
+* `Sign APK` step must be AFTER the `Android Build` step as this builds your project so that you have an apk ready to be signed with the `Sign APK` step. Make sure that this step is BEFORE any deploy step (which distributes your apk to a marketplace) so that you can upload an authorized project."%}
 
-## Deploying to [bitrise.io]() and to a marketplace
+## Deploying to bitrise.io and to a marketplace
 
-If your app is **deployed to bitrise.io**, it means that you can share the generated apk with your team members using the buil's URL. You can also check out the apk in the APPS & ARTIFACTS tab on your Build's page.
+### Deploying to bitrise.io
 
-If you add `Google Play Deploy` step to your workflow (before the `Cache Push` step), your **signed apk will get uploaded to the playstore**. 
+If your app is deployed to bitrise.io, it means that you can share the generated apk with your team members using the buil's URL. You can also check out the apk in the APPS & ARTIFACTS tab on your Build's page.
+
+### Deploying to marketplace
+
+If you add `Google Play Deploy` step to your workflow (before the `Cache Push` step), your signed apk will get uploaded to the playstore.
 
 {% include message_box.html type="important" title="Make sure you are in sync with Google Play Store" content="
 
 * [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
 * Set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
-*  In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+* In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
 * Copy the env key which stores your uploaded file’s url.
 
   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
@@ -123,7 +127,7 @@ If you add `Google Play Deploy` step to your workflow (before the `Cache Push` s
   * `Package name`: the package name of your Android app
   * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)"%}
 
-
+{% include message_box.html type="note" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow to add a new step to your workflow and select another deploy step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`.  "%}
 
 You're ready to deploy!
 
