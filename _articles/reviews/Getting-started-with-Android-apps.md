@@ -113,16 +113,16 @@ If your app is deployed to bitrise.io, it means that you can share the generated
 
 If you add `Google Play Deploy` step to your workflow (before the `Cache Push` step), your signed apk will get uploaded to the playstore.
 
-{% include message_box.html type="important" title="Make sure you are in sync with Google Play Store" content="
+1. Make sure you are in sync with Google Play Store!
 
 * [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
 * Set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
-* In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-* Copy the env key which stores your uploaded file’s url.
+2. In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+3. Copy the env key which stores your uploaded file’s url.
 
   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-* Go back to the Google Play Deploy step in your Workflow Editor.
-* Fill out the required input fields as follows:
+4. Go back to the Google Play Deploy step in your Workflow Editor.
+5. Fill out the required input fields as follows:
   * `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the  environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
   * `Package name`: the package name of your Android app
   * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)"%}
