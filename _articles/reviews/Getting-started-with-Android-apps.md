@@ -117,7 +117,7 @@ If you selected instrumentation, don't forget to set **Test APK path** under t
 
 {% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow select another `TEST` step from our collection, but make sure you stick that step BEFORE the `Android Build` step. 
 
-## Deploy
+## Deploy your project
 
 ### Deploy to bitrise.io
 
@@ -129,8 +129,8 @@ If you add `Google Play Deploy` step to your workflow (before the `Cache Push` s
 
 1. Make sure you are in sync with Google Play Store!
 
-* [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-* Set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+	* [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+	* Set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
 
 1. In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
 2. Copy the env key which stores your uploaded file’s url.
