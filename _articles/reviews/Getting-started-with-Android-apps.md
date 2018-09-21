@@ -105,7 +105,7 @@ Here is an example of a build generated with deploy workflow:
 
 ## Test your project
 
-As you can see in the above Android workflows, the `Android Lint` and `Android Unit` Test steps are by default included in your workflow. 
+As you can see in the above Android workflows, the `Android Lint` and `Android Unit` Test steps are by default included in your workflow.
 
 For UI testing, add our `beta Virtual Device Testing for Android` step to **Run Android UI tests on virtual devices**. Available test types - make sure you select one!
 
@@ -115,32 +115,40 @@ For UI testing, add our `beta Virtual Device Testing for Android` step to **Run 
 
 If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
 
-{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow select another `TEST` step from our collection, but make sure you stick that step BEFORE the `Android Build` step. 
+{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow select another `TEST` step from our collection, but make sure you stick that step BEFORE the `Android Build` step.
+
+You can notify user groups or individual users that your project has been built. 
+
+1. Go to the `Deploy to bitrise.io` step
+2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)!
 
 ## Deploy your project
 
 ### Deploy to bitrise.io
+This step generates all the artifacts related to your build into the APPS & ARTIFACTS tab on your Build's page.
 
-If your app is deployed to bitrise.io, it means that you can share the generated apk with your team members using the buil's URL. You can also check out the apk in the APPS & ARTIFACTS tab on your Build's page.
+You can share the generated apk with your team members using the buil's URL. You can also notify user groups or individual users that your apk has been built. 
+
+1. Go to the `Deploy to bitrise.io` step
+2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! 
+These details can be also modified under `Notifications` if you click the eye icon next to your generated apk in the APPS & ARTIFACTS tab.
 
 ### Deploy to marketplace
 
 If you add `Google Play Deploy` step to your workflow (before the `Cache Push` step), your signed apk will get uploaded to a marketplace of your choice.
 
 1. Make sure you are in sync with Google Play Store!
-
-	* [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-	* Set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
-
-1. In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-2. Copy the env key which stores your uploaded file’s url.
+   * [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+   * Set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+2. In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. `Go back to the Google Play Deploy step in your Workflow Editor.`
-4. Fill out the required input fields as follows:
-5. `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the  environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-6. `Package name`: the package name of your Android app
-7. `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)"%}
+4. `Go back to the Google Play Deploy step in your Workflow Editor.`
+5. Fill out the required input fields as follows:
+6. `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the  environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+7. `Package name`: the package name of your Android app
+8. `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)"%}
 
 {% include message_box.html type="note" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow select another `DEPLOY` step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
 
