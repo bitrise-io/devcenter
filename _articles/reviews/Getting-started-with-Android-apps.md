@@ -111,24 +111,23 @@ If your app is deployed to bitrise.io, it means that you can share the generated
 
 ### Deploying to marketplace
 
-If you add `Google Play Deploy` step to your workflow (before the `Cache Push` step), your signed apk will get uploaded to the playstore.
+If you add `Google Play Deploy` step to your workflow (before the `Cache Push` step), your signed apk will get uploaded to a marketplace of your choice.
 
 1. Make sure you are in sync with Google Play Store!
 
 * [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
 * Set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+
 2. In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
 3. Copy the env key which stores your uploaded file’s url.
 
-  For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Go back to the Google Play Deploy step in your Workflow Editor.
-5. Fill out the required input fields as follows:
-  * `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the  environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-  * `Package name`: the package name of your Android app
-  * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)"%}
+   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL `
+4. `Go back to the Google Play Deploy step in your Workflow Editor. `
+5.  Fill out the required input fields as follows:
+6. `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the  environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+7. `Package name`: the package name of your Android app
+8. `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)"%}
 
-{% include message_box.html type="note" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow to add a new step to your workflow and select another deploy step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`.  "%}
+{% include message_box.html type="note" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow select another deploy step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
 
 You're ready to deploy!
-
-.
