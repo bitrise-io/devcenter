@@ -7,7 +7,7 @@ published: false
 ---
 ## Add an Android app to bitrise.io
 
-{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to \[bitrise.io\]([https://www.bitrise.io](https://www.bitrise.io)) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](\[https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise\]) to connect your Bitrise account to your account on a Git service provider. "%}
+{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) to connect your Bitrise account to your account on a Git service provider. "%}
 
 1. Log into bitrise.io.
 2. On your Dashboard, click `+ Add new app`.
@@ -47,7 +47,7 @@ An example of an **Android primary workflow**:
         - deploy-to-bitrise-io@1.3.15: {}
         - cache-push@2.0.5: {}
 
-As you can see in this workflow, there is no Android Build step that would build your project and Sign APK step is missing as well, hence this workflow is only a jumping off-point for you to test your project on code level - no UI testing at this stage.
+As you can see in this workflow, there is no `Android Build` step that would build your project and our `Sign APK` step is missing as well, hence this workflow is only a jumping off-point for you to test your project on code level.
 
 Let's see how an **Android deploy workflow** looks like!
 
@@ -98,6 +98,7 @@ Here is an example of a build generated with deploy workflow:
 
 {% include message_box.html type="important" title="Order of the steps matter!" content="
 
+* To create Gradle dependencies, keep the Bitrise.io `Cache:Pull` step as the first and the Bitrise.io`Cache:Push` step as the very last step in your workflow!
 * Right after our `Do anything with Script` step, the `Install missing Android SDK components` will take care of installing the missing Android SDK components that your project might be lacking.
 * `Change Android versionCode and versionName` step must be inserted BEFORE the `Android Build`step as the former makes sure you will upload the the build with the right version code to your app's marketplace.
 * Android Lint and Android Unit Test steps must be inserted BEFORE the `Android Build` step to test your code and debug before building your build.
@@ -117,21 +118,17 @@ If you selected instrumentation, don't forget to set **Test APK path** under t
 
 {% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow select another `TEST` step from our collection, but make sure you stick that step BEFORE the `Android Build` step.
 
-You can notify user groups or individual users that your project has been built. 
+## Deploy your project
+
+### Deploy to bitrise.io step
+
+This step generates all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
+
+You can share the generated apk with your team members using the buil's URL. You can also notify user groups or individual users that your apk has been built.
 
 1. Go to the `Deploy to bitrise.io` step
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)!
-
-## Deploy your project
-
-### Deploy to bitrise.io
-This step generates all the artifacts related to your build into the APPS & ARTIFACTS tab on your Build's page.
-
-You can share the generated apk with your team members using the buil's URL. You can also notify user groups or individual users that your apk has been built. 
-
-1. Go to the `Deploy to bitrise.io` step
-2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! 
-These details can be also modified under `Notifications` if you click the eye icon next to your generated apk in the APPS & ARTIFACTS tab.
+   These details can be also modified under `Notifications` if you click the eye icon next to your generated apk in the APPS & ARTIFACTS tab.
 
 ### Deploy to marketplace
 
