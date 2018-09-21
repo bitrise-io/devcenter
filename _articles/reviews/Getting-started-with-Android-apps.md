@@ -96,11 +96,32 @@ Here is an example of a build generated with deploy workflow:
             - notify_user_groups: testers
         - cache-push@2.0.5: {}
 
-{% include message_box.html type="important" title="Order of the steps matter!" content=" 
+{% include message_box.html type="important" title="Order of the steps matter!" content="
 
 * Right after our `Do anything with Script` step, the `Install missing Android SDK components` will take care of installing the missing Android SDK components that your project might be lacking.
-* `Change Android versionCode and versionName` step must be inserted BEFORE the `Android Build `step as the former makes sure you will upload the the build with the right version code to your app's marketplace.
+* `Change Android versionCode and versionName` step must be inserted BEFORE the `Android Build`step as the former makes sure you will upload the the build with the right version code to your app's marketplace.
 * Android Lint and Android Unit Test steps must be inserted BEFORE the `Android Build` step to test your code and debug before building your build.
 * `Sign APK` step must be AFTER the `Android Build` step as this builds your project so that you have an apk ready to be signed with the `Sign APK` step. Make sure that this step is BEFORE any deploy step (which distributes your apk to a marketplace) so that you can upload an authorized project.
+
+## Deploying to [bitrise.io]() and to a marketplace
+
+If your app is **deployed to bitrise.io**, it means that you can share the generated apk with your team members using the buil's URL. You can also check out the apk in the APPS & ARTIFACTS tab on your Build's page.
+
+If you add `Google Play Deploy` step to your workflow (before the `Cache Push` step), your **signed apk will get uploaded to the playstore**. 
+
+{% include message_box.html type="important" title="Make sure you are in sync with Google Play Store" content="
+
+* [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+* Set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+*  In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+* Copy the env key which stores your uploaded file’s url.
+
+  For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+* Go back to the Google Play Deploy step in your Workflow Editor.
+* Fill out the required input fields as follows:
+  * `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the  environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+  * `Package name`: the package name of your Android app
+  * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)"%}
+You're ready to deploy!
 
 .
