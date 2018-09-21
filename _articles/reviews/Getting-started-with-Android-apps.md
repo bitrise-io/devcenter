@@ -105,13 +105,17 @@ Here is an example of a build generated with deploy workflow:
 
 ## Test your project
 
-As you can see in the above Android workflows, the `Android Lint` and `Android Unit` Test steps are by default included in your workflow. You can add our `beta Virtual Device Testing for Android` step to **Run Android UI tests on virtual devices**. Available test types - make sure you select one!
+As you can see in the above Android workflows, the `Android Lint` and `Android Unit` Test steps are by default included in your workflow. 
 
-* instrumentation 
-* robo 
+For UI testing, add our `beta Virtual Device Testing for Android` step to **Run Android UI tests on virtual devices**. Available test types - make sure you select one!
+
+* instrumentation
+* robo
 * gameloop
 
 If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
+
+{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow select another `TEST` step from our collection, but make sure you stick that step BEFORE the `Android Build` step. 
 
 ## Deploy
 
@@ -138,6 +142,6 @@ If you add `Google Play Deploy` step to your workflow (before the `Cache Push` s
 6. `Package name`: the package name of your Android app
 7. `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)"%}
 
-{% include message_box.html type="note" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow select another deploy step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
+{% include message_box.html type="note" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow select another `DEPLOY` step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
 
 You're ready to deploy!
