@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-## Adding an Android app to bitrise.io
+## Add an Android app to bitrise.io
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to \[bitrise.io\]([https://www.bitrise.io](https://www.bitrise.io)) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](\[https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise\]) to connect your Bitrise account to your account on a Git service provider. "%}
 
@@ -103,13 +103,23 @@ Here is an example of a build generated with deploy workflow:
 * Android Lint and Android Unit Test steps must be inserted BEFORE the `Android Build` step to test your code and debug before building your build.
 * `Sign APK` step must be AFTER the `Android Build` step as this builds your project so that you have an apk ready to be signed with the `Sign APK` step. Make sure that this step is BEFORE any deploy step (which distributes your apk to a marketplace) so that you can upload an authorized project."%}
 
-## Deploying to bitrise.io and to a marketplace
+## Test your project
 
-### Deploying to bitrise.io
+As you can see in the above Android workflows, the `Android Lint` and `Android Unit` Test steps are by default included in your workflow. You can add our `beta Virtual Device Testing for Android` step to **Run Android UI tests on virtual devices**. Available test types - make sure you select one!
+
+* instrumentation 
+* robo 
+* gameloop
+
+If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
+
+## Deploy
+
+### Deploy to bitrise.io
 
 If your app is deployed to bitrise.io, it means that you can share the generated apk with your team members using the buil's URL. You can also check out the apk in the APPS & ARTIFACTS tab on your Build's page.
 
-### Deploying to marketplace
+### Deploy to marketplace
 
 If you add `Google Play Deploy` step to your workflow (before the `Cache Push` step), your signed apk will get uploaded to a marketplace of your choice.
 
@@ -118,15 +128,15 @@ If you add `Google Play Deploy` step to your workflow (before the `Cache Push` s
 * [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
 * Set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
 
-2. In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-3. Copy the env key which stores your uploaded file’s url.
+1. In your Bitrise Dashboard, go to Code Signing and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+2. Copy the env key which stores your uploaded file’s url.
 
-   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL `
-4. `Go back to the Google Play Deploy step in your Workflow Editor. `
-5.  Fill out the required input fields as follows:
-6. `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the  environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-7. `Package name`: the package name of your Android app
-8. `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)"%}
+   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+3. `Go back to the Google Play Deploy step in your Workflow Editor.`
+4. Fill out the required input fields as follows:
+5. `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the  environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+6. `Package name`: the package name of your Android app
+7. `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)"%}
 
 {% include message_box.html type="note" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow select another deploy step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
 
