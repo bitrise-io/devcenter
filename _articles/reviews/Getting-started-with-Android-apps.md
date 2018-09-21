@@ -7,7 +7,7 @@ published: false
 ---
 ## Add an Android app to bitrise.io
 
-{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account on a Git service provider. "%}
+{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
 1. Log into bitrise.io.
 2. On your Dashboard, click `+ Add new app`.
@@ -18,7 +18,7 @@ published: false
 7. Type the name of the branch that includes your project's configuration - master, for example, - then click `Next`.
 8. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them.
    * Bitrise Scanner selects the module of your project by default.  If there are more modules to choose from in the `Module` list, select a module that works best for your project.
-   * Select a variant for **building** (you can `Select All Variants` which will generate all variants in APPS & ARTIFACTS) and for **testing**.
+   * Select a variant for **building** (you can `Select All Variants` which will generate all variants in APPS & ARTIFACTS) and select a variant for **testing** too.
 9. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary workflow - click the message and it will take you to the build page. The first build does not generate an apk yet, however, you can already check out the project's logs on the Build's page.
 
 An example of an **Android primary workflow**:
@@ -52,9 +52,9 @@ As you can see in this workflow, there is no `Android Build` step that would bui
 Let's see how an **Android deploy workflow** looks like!
 
 1. Select the `deploy` workflow in Workflow Editor.
-2. Go to the Code Signing tab of your Workflow Editor.
+2. Go to the `Code Signing` tab of your Workflow Editor.
 3. Drag-and-drop your keystore file to the `ANDROID KEYSTORE FILE` field.
-4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and `Save metadata`. You should have these already at hand as these are included your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. More information on the keystore file [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our `Sign APK step` (by default included in your Android deploy workflow) will take care of signing your apk so that it's ready for distribution! Head over to your [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!
+4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and `Save metadata`. You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. More information on the keystore file [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our `Sign APK step` (by default included in your Android deploy workflow) will take care of signing your apk so that it's ready for distribution! Head over to your [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!
 5. Go back to your Build's page and click `Start/Schedule a build`.
 6. Select `deploy` in the Basic tab of `Build configuration` pop-up window.
 
