@@ -1,5 +1,5 @@
 ---
-title: Steps
+title: Steps in YAML
 menu:
   bitrise-cli:
     weight: 6
