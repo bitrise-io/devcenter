@@ -1,8 +1,9 @@
 ---
 title: Using the Trigger Map to trigger builds
 menu:
-  webhooks:
-    weight: 11
+  triggering-builds:
+    weight: 5
+    title: Triggering builds with the Trigger map
 
 ---
 Now that you have a [webhook registered](/webhooks/),
