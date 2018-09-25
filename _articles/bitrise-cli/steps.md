@@ -2,7 +2,7 @@
 title: Steps
 menu:
   bitrise-cli:
-    weight: 7
+    weight: 6
 
 ---
 ## What is a Step
