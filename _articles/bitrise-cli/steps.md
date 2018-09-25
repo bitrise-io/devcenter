@@ -1,5 +1,8 @@
 ---
 title: Steps in YAML
+redirect_from:
+- "/bitrise-cli/steps/"
+- "/bitrise-cli/steps"
 menu:
   bitrise-cli:
     weight: 6
