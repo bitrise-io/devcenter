@@ -90,6 +90,6 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
    * Apple ID
    * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
-   Don't worry, the password will not be visible in the logs or exposed - that's why [it is marked ](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)`[SENSITIVE](``[https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/ "https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/")``)`.
+   Don't worry, the password will not be visible in the logs or exposed - that's why [it is marked `SENSITIVE`](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/).
 
 And that's it! Start a build - if everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
