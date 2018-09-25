@@ -1,5 +1,8 @@
 ---
 title: Accessing the bitrise.yml file online
+redirect_from:
+- "/bitrise-cli/bitrise-yml-online/"
+- "/bitrise-cli/bitrise-yml-online"
 menu:
   builds:
     weight: 6
@@ -20,7 +23,9 @@ If an app has multiple builds on [bitrise.io](https://www.bitrise.io) and you wa
 ## Accessing a build's bitrise.yml
 
 1. Select an application on your `Dashboard` and select one of its builds.
+
 2. Click the `Show bitrise.yml` button at the top OR at the bottom of your inline log.
+
    You should see your build's bitrise.yml content displayed in ace editor but it's not editable here. See where you can [edit the bitrise.yml online](#editing-and-downloading-bitriseyml-online).
 
 ## Checking changes in bitrise.yml online
@@ -55,3 +60,13 @@ You can **edit** your build config in yml format in the `bitrise.yml editor` if 
 You can **save** or **discard** any changes you have made with the config. If you click `Download currently saved config`, you can **download** this YML version to your own computer and run it with bitrise CLI on your Mac/PC.
 
 You might want to **clone** this whole YML configuration or just part of it to another app, so that you can use the copied version as a base and extend it with a few extra steps. All you have to do is copy this bitrise.yml content and paste it into the new app's bitrise.yml editor and develop it further.
+
+## Deleting a build's bitrise.yml
+
+ If you wish, you can simply delete a build's `bitrise.yml` file. But please note that this action cannot be undone: nobody will be able to view that particular build's `bitrise.yml` file once you delete it.
+ 
+ 1. Select an application on your `Dashboard` and select one of its builds.
+ 
+ 1. Click the `Delete bitrise.yml` button.
+ 
+ 1. In the confirmation window, click `Yes`.
