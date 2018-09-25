@@ -6,9 +6,6 @@ menu:
     title: Triggering builds with the Trigger map
 
 ---
-Now that you have a [webhook registered](/webhooks/),
-the next step is to define when to build what.
-
 When you register a webhook for an event or for multiple events (for example, for `Code Push` and
 for `Pull Request` events), your source code hosting service will call the webhook
 every time the related event happens.
