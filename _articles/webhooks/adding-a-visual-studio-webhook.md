@@ -13,9 +13,11 @@ on [visualstudio.com 's documentations site](https://www.visualstudio.com/en-us/
 
 ## Get the webhook URL for Visual Studio
 
-1. Navigate to the `Code` tab of your app's page and select `Visual Studio Online / Visual Studio Team Services` from the dropdown menu of the `Incoming Webhooks` section.
+1. Go to the `Code` tab of your app's page and in the `INCOMING WEBHOOKS` menu, click `SETUP MANUALLY`.
 
-    ![Screenshot](/img/webhooks/bitrise-visual-webhook.png)
+1. Select `Visual Studio Online / Visual Studio Team Services` from the dropdown menu.
+
+    ![Screenshot](/img/bitrise-visual-webhook.png)
 
 1. Copy the webhook URL for the selected service.
 
