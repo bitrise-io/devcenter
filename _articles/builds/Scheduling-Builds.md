@@ -1,6 +1,7 @@
 ---
 title: Scheduling your builds
 redirect_from:
+- "/builds/scheduling-builds/"
 - "/builds/scheduling-builds"
 menu:
   builds:
