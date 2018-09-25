@@ -45,8 +45,9 @@ Find the `INCOMING WEBHOOKS` section and click `SETUP AUTOMATICALLY`.
 
 ## Setting up incoming webhooks manually
 
-You can manually setup or change your webhooks after you registered your application.
-We support multiple webhook providers. You can find the supported providers in your application's `Code` tab.
+You can manually setup or change your webhooks after you registered your application. 
+
+You can find the supported providers in your application's \`Code\` tab. Choose the \`SELECT MANUALLY\` option to set up a webhook with any of the supported providers.
 
 ![Screenshot](/img/webhook-providers.png)
 
