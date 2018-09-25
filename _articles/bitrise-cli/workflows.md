@@ -1,5 +1,8 @@
 ---
-title: Workflows
+title: Workflows in YAML
+redirect_from:
+- "/bitrise-cli/workflows/"
+- "/bitrise-cli/workflows"
 menu:
   bitrise-cli:
     weight: 5
@@ -223,7 +226,7 @@ To help with this, the Bitrise CLI supports a small notation called
 "utility workflows".
 
 **A workflow is considered as a utility workflow if it's ID starts
-with an underscore character (for example **`**_setup**`**).**
+with an underscore character (for example __`__**_setup**__`).
 
 Utility workflows are listed at the end of the workflow list if you
 run `bitrise run` or `bitrise workflows`, and
