@@ -81,7 +81,7 @@ so those are available for subsequent steps __after the Step finishes__.
 
 __The environment variable processing order:__
 
-1. [Bitrise CLI exposed environment variables](/faq/available-environment-variables/#exposed-by-the-bitrise-cli)
+1. [Bitrise CLI exposed environment variables](/builds/available-environment-variables/#exposed-by-the-bitrise-cli)
 1. [Secrets](/bitrise-cli/secrets/)
 1. One-off environment variables specified for the build through the [Build Trigger API](/api/build-trigger)
 1. `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/))
