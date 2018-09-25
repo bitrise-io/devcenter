@@ -45,7 +45,7 @@ Find the `INCOMING WEBHOOKS` section and click `SETUP AUTOMATICALLY`.
 
 ## Setting up incoming webhooks manually
 
-You can manually setup or change your webhooks after you registered your application. 
+You can manually setup or change your webhooks after you registered your application.
 
 You can find the supported providers in your application's \`Code\` tab. Choose the \`SELECT MANUALLY\` option to set up a webhook with any of the supported providers.
 
@@ -66,7 +66,7 @@ You can find detailed description about the setup on the Code tab or select a pr
 
 ## Setting up outgoing webhooks
 
-You can also set up outgoing webhooks on Bitrise. With these, Bitrise can notify any selected service about your build events. A build event is:
+You can also set up [outgoing webhooks](/webhooks/adding-outgoing-webhooks/) on Bitrise. With these, Bitrise can notify any selected service about your build events. A build event is:
 
 * when a build is started
 * when a build ends.
