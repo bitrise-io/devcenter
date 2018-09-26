@@ -12,11 +12,11 @@ sections:
 - type: document
   path: forestry-help.md
   label: Forestry User Guide - Articles and the editor
-  read_only: false
+  read_only: true
 - type: document
   path: forestry-help-menus.md
   label: Forestry User Guide - Menu items
-  read_only: false
+  read_only: true
 - type: directory
   path: _articles/reviews
   label: For review
