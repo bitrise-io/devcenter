@@ -36,7 +36,6 @@ pages:
 - _articles/builds/sensitive-input-field.md
 - _articles/getting-started/signing-up/self-hosted-gitlab.md
 - _articles/bitrise-cli/index.md
-- _articles/reviews/getting-started-with-ios-apps.md
 - _articles/getting-started/getting-started-steps.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/code-signing/ios-code-signing/getting-started-with-ios-apps.md
