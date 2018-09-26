@@ -21,7 +21,7 @@ Developing for iOS is not always easy - our aim is to make it as simple as possi
 7. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them. In the case of an iOS app, we're looking for your Xcode Project (`.xcodeproj`) or Xcode Workspace (`.xcworkspace`) path.
 
    **IMPORTANT**: the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
-8. Select the .ipa export method. You can modify this later - for now, select `development`. 
+8. Select the .ipa export method. You can modify this later - for now, select `development`.
 
    ![](/_articles/img/ios-project-scanned.png)
 
@@ -36,7 +36,7 @@ Developing for iOS is not always easy - our aim is to make it as simple as possi
 
 Once you created your app, the first build will run based on the automatically created **primary** workflow. You can check it out in the app's [Workflow Editor](/getting-started/getting-started-workflows): click the app's name on your Dashboard then click the `Workflow` tab.
 
-{% include message_box.html type="important" title="Test targets" content="If your app does not have test targets defined, the primary workflow will be the only automatically created workflow and it will NOT include the `Xcode Test for iOS` Step. "%} 
+{% include message_box.html type="important" title="Test targets" content="If your app does not have test targets defined, the primary workflow will be the only automatically created workflow and it will NOT include the `Xcode Test for iOS` Step. "%}
 
 If you have test targets defined, the `primary` workflow of an iOS app includes the two [Steps](/getting-started/getting-started-steps) you need to run your Xcode tests, and view their results on [bitrise.io](https://bitrise.io):
 
@@ -65,7 +65,7 @@ You will need:
 * an iOS **Development** certificate (a .p12 certificate file)
 * a **Development** type Provisioning Profile
 
-1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa locally. 
+1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa locally.
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
 
    The tool can also upload your code signing files to Bitrise - we recommend doing so! Otherwise, upload them manually: enter the Workflow Editor and select the `Code signing` tab, then upload the files in their respective fields.
@@ -89,14 +89,14 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 * an iOS **Distribution** Certificate
 * an **App Store** type Provisioning Profile
 
-1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa. If this fails locally, it will definitely fail on Bitrise, too! 
+1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
 3. Go to the app's Workflow Editor and create a [new workflow](/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
 4. Set the `Select method for export` input of the `Xcode Archive & Export for iOS` Step to `app-store`.
 
    ![](/_articles/img/app-store-export.png)
 
-   If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`. In that case, skip the next steps in the guide: you only need the `Deploy to Bitrise.io` Step in your workflow. 
+   If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`. In that case, skip the next steps in the guide: you only need the `Deploy to Bitrise.io` Step in your workflow.
 5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
 6. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
 
@@ -104,6 +104,6 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
    * Apple ID
    * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
-   Don't worry, the password will not be visible in the logs or exposed - [that's why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets). 
+   Don't worry, the password will not be visible in the logs or exposed - [that's why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
 
 And that's it! Start a build - if everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
