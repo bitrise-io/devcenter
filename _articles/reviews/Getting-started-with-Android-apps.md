@@ -90,7 +90,6 @@ Here is an example of a deploy workflow:
             - variant: "$BUILD_VARIANT"
         - sign-apk@1.2.3:
             run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
-        - google-play-deploy@1.5.1: {}
         - deploy-to-bitrise-io@1.3.15:
             inputs:
             - notify_user_groups: testers
@@ -98,7 +97,7 @@ Here is an example of a deploy workflow:
 
 {% include message_box.html type="important" title="Order of the steps matter!" content="
 
-* To create Gradle dependencies, keep the `Bitrise.io Cache:Pull` step as the first and the `Bitrise.io Cache:Push` step as the very last step in your workflow!
+* To cache Gradle dependencies, keep the `Bitrise.io Cache:Pull` step as the first and the `Bitrise.io Cache:Push` step as the very last step in your workflow!
 * Right after our `Do anything with Script` step, the `Install missing Android SDK components` will take care of installing the missing Android SDK components that your project might be lacking.
 * `Change Android versionCode and versionName` step must be inserted BEFORE the `Android Build`step as the former makes sure you will upload the build with the right version code and version name to your app's marketplace.
 * Android Lint and Android Unit Test steps must be inserted BEFORE the `Android Build` step to test your code and debug before building your build.
@@ -106,7 +105,7 @@ Here is an example of a deploy workflow:
 
 ## Dependencies
 
-Luckily, our `Android Build` step, which is by default part of your deploy workflow, takes care of all the dependencies which you have listed in your `build.gradle` file and install them for your project. 
+Luckily, our `Android Build` step, which is by default part of your deploy workflow, takes care of all the dependencies which you have listed in your `build.gradle` file and install them for your project.
 
 ## Test your project
 
@@ -120,13 +119,13 @@ For UI testing, add our `beta Virtual Device Testing for Android` step to **run 
 
 If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
 
-{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow and select another `TEST` step from our collection. Make sure you stick that step BEFORE the `Android Build` step!
+{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow and select another `TEST` step from our collection.
 
 ## Deploy your project
 
 ### Deploy to bitrise.io step
 
-This step generates all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
+This step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
 
 You can share the generated apk with your team members using the buil's URL. You can also notify user groups or individual users that your apk has been built.
 
@@ -135,7 +134,7 @@ You can share the generated apk with your team members using the buil's URL. You
 
 ### Deploy to marketplace
 
-If you add `Google Play Deploy` step to your workflow (before the `Bitrise.io Cache:Push` step), your signed apk will get uploaded to a marketplace of your choice.
+If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step), your signed apk will get uploaded to a marketplace of your choice.
 
 1. Make sure you are in sync with Google Play Store! Learn how to
    * [register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
