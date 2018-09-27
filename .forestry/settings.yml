@@ -10,9 +10,9 @@ sections:
   create: all
   match: "**/*"
 - type: document
-  path: forestry-help-menus.md
+  path: forestry-help.md
   label: Forestry User Guide - Articles and the editor
-  read_only: true
+  match: "**/*"
 - type: document
   path: forestry-help-menus.md
   label: Forestry User Guide - Menu items
