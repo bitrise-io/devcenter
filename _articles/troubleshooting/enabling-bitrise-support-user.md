@@ -12,15 +12,10 @@ With the toggle function, you can easily turn the `Bitrise Support user` on and 
 Let's see how to set it up!
 
 1. Go to the `Settings` tab of your project.
-
 2. Scroll down to the `Enable Bitrise Support user for this app` and toggle the switch to the right to enable it.
+   It might take a couple of seconds to work and you might need to **refresh your page** to see the enabled status.
 
-    !!! tip
-        It might take a couple of seconds to work and you might need to **refresh your page** to see the enabled status.
-
-
-    ![Screenshot](/img/troubleshooting/enable-bitrise-support-user.png)
-
+   ![Screenshot](/img/troubleshooting/enable-bitrise-support-user.png)
 3. Ping us through our onsite chat and notify us that you have enabled the Bitrise support user for your app so that we can help you with your issue.
 
 ### What the Bitrise Support user can see if it's enabled
