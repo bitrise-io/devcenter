@@ -105,7 +105,7 @@ Here is an example of a deploy workflow:
 
 ## Dependencies
 
-Luckily, our `Android Build` step, which is by default part of your deploy workflow, takes care of all the dependencies which you have listed in your `build.gradle` file and install them for your project.
+Luckily, our `Android Build` step, which is by default part of your deploy workflow, takes care of all the dependencies which you have listed in your `build.gradle` file and installs them for your project.
 
 ## Test your project
 
@@ -145,7 +145,7 @@ If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 4. Go back to the `Google Play Deploy` step in your Workflow Editor.\`
 5. Fill out the required input fields as follows:
-   * `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the  environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
 
