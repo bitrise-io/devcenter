@@ -1,5 +1,7 @@
 ---
 title: Available Stacks
+redirect_from:
+- "/docs/available-stacks"
 menu:
   infrastructure:
     weight: 1
