@@ -21,12 +21,9 @@ On the left side you can find the **Connected Accounts** section,
 where you can connect and disconnect other services (like GitHub, Bitbucket or GitLab)
 to your [bitrise.io](https://www.bitrise.io) account.
 
-{% include message_box.html type="important" title="Make sure you connected the correct account" content="
-If you have more than one account with the given service, you should also check whether you connected one that can access the repository. You can check which user you connected by clicking the name of the service provider on your [bitrise.io](https://www.bitrise.io) [Account Settings](https://www.bitrise.io/me/profile) page. It will open the connected user's page on the website of your git hosting provider. "%} 
+{% include message_box.html type="important" title="Make sure you connected the correct account" content=" If you have more than one account with the given service, you should also check whether you connected one that can access the repository. You can check which user you connected by clicking the name of the service provider on your [bitrise.io](https://www.bitrise.io) [Account Settings](https://www.bitrise.io/me/profile) page. It will open the connected user's page on the website of your git hosting provider. "%}
 
-{% include message_box.html type="important" title="Admin rights" content="
-Make sure that the Service credential User has administrative rights to the repository. Check this on the repository settings on the website of your git hosting provider.
-"%}
+{% include message_box.html type="important" title="Admin rights" content=" Make sure that the Service credential User has administrative rights to the repository. Check this on the repository settings on the website of your git hosting provider. "%}
 
 ## Checking repository permissions and repository URL
 
