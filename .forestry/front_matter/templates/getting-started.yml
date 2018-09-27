@@ -19,5 +19,3 @@ fields:
       label: weight
       config:
         required: true
-pages:
-- _articles/reviews/getting-started-with-ios-apps.md

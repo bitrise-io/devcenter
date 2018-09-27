@@ -47,7 +47,7 @@ If you have test targets defined, the `primary` workflow of an iOS app includes 
 
 The `Xcode Test for iOS` step runs the pre-defined Xcode tests. It has a default configuration that does not need to be modified: if the tests are written correctly, they will work. You can find the same configuration options in Xcode, too.
 
-The `Deploy to Bitrise.io` will deploy the following to the `Logs` and `[Apps & Artifacts](/builds/build-artifacts-online/)` tab of the build:
+The `Deploy to Bitrise.io` will deploy the following to the `Logs` and [Apps & Artifacts](/builds/build-artifacts-online/) tab of the build:
 
 * your Xcode test results
 * your raw `xcodebuildoutput` log.
