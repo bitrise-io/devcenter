@@ -12,7 +12,6 @@ sections:
 - type: document
   path: forestry-help.md
   label: Forestry User Guide - Articles and the editor
-  match: "**/*"
 - type: document
   path: forestry-help-menus.md
   label: Forestry User Guide - Menu items
