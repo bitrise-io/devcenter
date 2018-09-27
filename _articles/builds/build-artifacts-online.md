@@ -2,7 +2,7 @@
 title: Build artifacts online
 menu:
   builds:
-    weight: 5
+    weight: 6
 
 ---
 If you select a build of your app, in the `APPS & Artifacts` tab of your build's page you can check out the artifacts (for example, files & reports) which have been generated during the build. All files are destroyed at the end of the build so if you want to view or download any files, insert `Deploy to bitrise.io` step to your workflow so that it can help you access the artifacts.
