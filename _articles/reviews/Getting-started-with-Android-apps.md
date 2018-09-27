@@ -123,7 +123,7 @@ If you selected instrumentation, don't forget to set **Test APK path** under t
 
 ## Deploy your project
 
-### Deploy to bitrise.io step
+### Deploy to bitrise.io
 
 This step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
 
