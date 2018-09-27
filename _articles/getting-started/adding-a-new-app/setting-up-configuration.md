@@ -1,5 +1,7 @@
 ---
 title: Setting up configuration
+redirect_from:
+- "/adding-a-new-app/setting-up-configuration"
 menu:
   adding-a-new-app:
     weight: 4
