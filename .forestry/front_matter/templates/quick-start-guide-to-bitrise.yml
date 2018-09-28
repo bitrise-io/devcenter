@@ -15,7 +15,6 @@ fields:
   default: ''
 pages:
 - _articles/infrastructure/available-stacks.md
-- _articles/reviews/getting-started-with-reactnative-apps.md
 - _articles/getting-started/adding-a-new-app/setting-up-configuration.md
 - _articles/reviews/code-signing-troubleshooting.md
 - _articles/builds/bitrise-yml-online.md
