@@ -11,7 +11,7 @@ Note that this requires an incoming webhook set up with the hosting service of y
 
 By default, every new app you add will have a trigger that triggers a build every time code is pushed to any branch of your repository.
 
-1. Open your app on [bitrise.io](hhtps://www.bitrise.io).
+1. Open your app on [bitrise.io](https://www.bitrise.io).
 2. Open the `Workflow Editor`.
 3. Select the `Triggers` tab.
 4. Select the `PUSH` option.
