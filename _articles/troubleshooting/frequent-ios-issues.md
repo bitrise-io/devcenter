@@ -1,6 +1,7 @@
 ---
 title: Frequent iOS issues
 redirect_from:
+- "/ios/frequent-ios-issues/"
 - "/ios/frequent-ios-issues/#works-in-local-but-not-on-bitriseio"
 - "#works-in-local-but-not-on-bitriseio"
 menu:
