@@ -5,6 +5,7 @@ menu:
   builds:
     weight: 2
 redirect_from:
+- "/builds/triggering-builds/starting-builds-manually/"
 - "/builds/starting-builds-manually/"
 
 ---
