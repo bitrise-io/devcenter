@@ -11,7 +11,7 @@ Note that this requires an incoming webhook set up with the hosting service of y
 
 Note that certain providers, such as GitLab, require Tag Push events to be specifically enabled in the webhook setup.
 
-1. Open your app on [bitrise.io](hhtps://www.bitrise.io).
+1. Open your app on [bitrise.io](https://www.bitrise.io).
 2. Open the `Workflow Editor`.
 3. Select the `Triggers` tab.
 4. Select the `TAG` option.
