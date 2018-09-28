@@ -12,7 +12,6 @@ sections:
 - type: document
   path: forestry-help.md
   label: Forestry User Guide
-  match: "**/*"
   read_only: true
 - type: directory
   path: _articles/reviews
