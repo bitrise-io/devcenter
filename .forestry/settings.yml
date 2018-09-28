@@ -9,10 +9,6 @@ sections:
   label: Forestry data files - MENUS.YML here
   create: all
   match: "**/*"
-- type: document
-  path: forestry-help.md
-  label: Forestry User Guide
-  read_only: true
 - type: directory
   path: _articles/reviews
   label: For review
