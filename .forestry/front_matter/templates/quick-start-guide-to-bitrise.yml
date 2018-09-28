@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/builds/build-numbering-and-app-versioning.md
 - _articles/getting-started/adding-a-new-app/connecting-a-repository.md
 - _articles/builds/Starting-builds-manually.md
 - _articles/reviews/getting-started-with-reactnative-apps.md

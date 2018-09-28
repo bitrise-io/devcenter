@@ -1,5 +1,7 @@
 ---
 title: Build numbering and app versioning
+redirect_from:
+- "/builds/build-numbering-and-app-versioning/builds/build-numbering-and-app-versioning"
 menu:
   builds:
     weight: 8
