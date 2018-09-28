@@ -19,6 +19,11 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: _articles
+  label: Bitrise Devcenter - What is Bitrise
+  create: all
+  match: index.md
+- type: directory
   path: _articles/getting-started
   label: Getting started
   create: all
