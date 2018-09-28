@@ -1,5 +1,7 @@
 ---
 title: Connecting a repository
+redirect_from:
+- https:/getting-started/adding-a-new-app/connecting-your-repository
 menu:
   adding-a-new-app:
     weight: 2
