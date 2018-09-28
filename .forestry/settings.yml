@@ -12,7 +12,7 @@ sections:
 - type: document
   path: forestry-help.md
   label: Forestry User Guide
-  read_only: false
+  read_only: true
 - type: directory
   path: _articles/reviews
   label: For review
