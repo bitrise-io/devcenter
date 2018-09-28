@@ -15,7 +15,7 @@ Before setting up automatic provisioning in your workflow, make sure that:
 
 * you collected the required files with [codesigndoc](https://github.com/bitrise-tools/codesigndoc). You can also upload the distribution and development certificates with the tool!
 * you have at least **Admin** role in the developer portal team.
-* [your Apple Developer account is connected to bitrise.io](getting-started/signing-up/connecting-apple-dev-account/).
+* [your Apple Developer account is connected to bitrise.io](/getting-started/signing-up/connecting-apple-dev-account/).
 * Apple Developer Portal integration to your Bitrise project is enabled.
 
 The `iOS Auto Provision` step can automatically manage profiles if the iOS project uses Xcode's _Automatically manage signing_ option, introduced in Xcode 8. If the option is enabled for your project, the step will download the Xcode managed profiles which are needed to sign your project and will install them together with the provided certificates.
