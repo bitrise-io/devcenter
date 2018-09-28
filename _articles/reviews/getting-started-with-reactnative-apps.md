@@ -16,6 +16,12 @@ Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can acc
 
 ## Set up a React Native project on bitrise.io
 
+{% include message_box.html type="note" title="My message" content="
+This is my **NOTABLE content**.
+
+It is *so*, \`very\` cool.
+"%}
+
 1. Log into [bitrise.io](https://www.bitrise.io).
 2. Click `Add a new app`.
 3. Select the privacy setting of your app: `private` or `public`.
