@@ -1,5 +1,7 @@
 ---
 title: Setting up SSH keys
+redirect_from:
+- "/adding-a-new-app/setting-up-ssh-keys/"
 menu:
   adding-a-new-app:
     weight: 3
