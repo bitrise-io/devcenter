@@ -1,5 +1,7 @@
 ---
 title: Selective builds
+redirect_from:
+- "/builds/selective-builds/"
 menu:
   builds:
     weight: 5
