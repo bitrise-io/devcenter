@@ -60,7 +60,7 @@ based on the provisioning profile embedded in the `.xcarchive` (which is generat
 command, also performed by the `Xcode Archive` step, right before the `xcodebuild -exportArchive` command).
 
 The embedded provisioning profile depends on your code sign settings in your project. You can force the desired code signing configuration with `Xcode Archive` step's `force_code_sign_identity` and `force_provisioning_profile` inputs.
-You can find more information about these options in the [iOS Code Signing](ios/code-signing) article.
+You can find more information about these options in the [iOS Code Signing](/code-signing/ios-code-signing/create-signed-ipa-for-xcode/) article.
 
 Every other export option which can be defined in the Plist is optional.
 
