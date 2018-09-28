@@ -1,11 +1,11 @@
 ---
 title: Getting started with ReactNative apps
 date: 2018-09-27 13:04:45 +0000
-menu:
-  getting-started:
-    weight: '12'
 redirect_from:
 - "/builds/troubleshooting/"
+menu:
+  getting-started:
+    weight: 12
 published: false
 
 ---
@@ -17,19 +17,16 @@ Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can acc
 
 ## Set up a React Native project on bitrise.io
 
-{% include message_box.html type="note" title="My message" content="
-This is my **NOTABLE content**.
-
-It is *so*, \`very\` cool.
-"%}
+In this tutorial, we're using `[sample-apps-react-native-ios-and-android](https://github.com/bitrise-samples/sample-apps-react-native-ios-and-android)` sample app.
 
 1. Log into [bitrise.io](https://www.bitrise.io).
 2. Click `Add a new app`.
-3. Select the privacy setting of your app: `private` or `public`.
-4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](https://devcenter.bitrise.io/getting-started/adding-a-new-app/connecting-a-repository/).
+3. Select the privacy setting of your app: `private` or `[public](/getting-started/adding-a-new-app/public-apps/)`.
+4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
 7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project, which includes stack selection and workflow setup. In the case of a React Native project, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration).
+   * 
 
 These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor.
 
@@ -133,4 +130,4 @@ deploy a xamarin app - about deployment
 
 ## Deploy to your app's marketplace
 
-`[Deploy to iTunes Connect - Application Loader](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader)` and `[Google Play Deploy](https://www.bitrise.io/integrations/steps/google-play-deploy)` steps take care of the swift deplopment of your .ipa or apk packages.
+[Deploy to iTunes Connect - Application Loader](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader)`and`[Google Play Deploy](https://www.bitrise.io/integrations/steps/google-play-deploy) steps take care of the swift deplopment of your .ipa or apk packages.
