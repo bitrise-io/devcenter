@@ -21,7 +21,7 @@ In this guide, you will learn how to:
 * Create a [new Bitrise project](getting-started/adding-a-new-app). Bitrise scans your Android project and creates the initial configuration for it.
 * Sign your `APK` file [digitally](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/).
 
-  Do not forget to **upload your keystore file** to [bitrise.io](htts://www.bitrise.io).
+  Do not forget to **upload your keystore file** to [bitrise.io](https://www.bitrise.io).
 
   Once your code signing is completed, your config will look like this:
 
