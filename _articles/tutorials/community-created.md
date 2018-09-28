@@ -34,7 +34,6 @@ _or_ [_contact us_](https://www.bitrise.io/contact) _and we'll add it for you!_
   * [Getting Started with Bitrise](https://jfarrell.net/2016/09/06/getting-started-with-bitrise/)
   * [Understanding Workflows](https://jfarrell.net/2016/09/11/understanding-workflows/)
 * [Xamarin project setup on Bitrise.io](https://www.youtube.com/watch?v=ChX0TQzOd8c) - _youtube video_
-* [Xamarin Continuous Integration with Bitrise.io](http://codingwithcookie.com/2016/05/xamarin-continuous-integration-with-bitrise-io/) - _Xamarin project setup guide with Code Signing notes_
 * [(Xamarin) Continuous Integration and Deployment with Bitrise](http://blog.cayas.de/continuous-integration-and-deployment-with-bitrise) - _getting started guide_
 * [Motz Codes Live: Continuous Integration & Deployment for Xamarin with Bitrise](https://www.youtube.com/watch?v=1UeNajpjIXY) - _youtube video, detailed guide_
 
@@ -80,7 +79,6 @@ _or_ [_contact us_](https://www.bitrise.io/contact) _and we'll add it for you!_
 * [俺的Bitrise活用術](http://yanma.hateblo.jp/entry/2016/03/15/104131)
 * [iOS対応のCIサービス「Bitrise」を使ってみた](http://sssslide.com/www.slideshare.net/koogawa/ioscibitrise) - _SlideShare_
 * [Bitrise,fastlane,CrashlyticsでiOSアプリのテスト配布を自動化する](http://techblog.lclco.com/entry/2016/05/09/192230) - _Bitrise + fastlane, automate testing & deployment (to Crashlytics) of iOS apps_
-* [Xcode iOS CI Tutorial Bitrise編 -Amarron Blog](http://amarron.blog/detail.php?id=20170715)
 * [fastlaneとBitriseでiOSアプリのCI始めました](http://blog.lisb.direct/entry/2017/07/20/100000) - _CI with Bitrise and fastlane_
 
 ## Portuguese
