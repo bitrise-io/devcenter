@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/builds/Starting-builds-manually.md
 - _articles/reviews/getting-started-with-reactnative-apps.md
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/adding-a-new-app/setting-up-configuration.md

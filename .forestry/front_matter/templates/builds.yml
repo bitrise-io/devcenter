@@ -19,5 +19,3 @@ fields:
       label: weight
       config:
         required: true
-pages:
-- _articles/builds/Starting-builds-manually.md

@@ -4,6 +4,8 @@ date: 2018-09-25 13:58:51 +0000
 menu:
   builds:
     weight: 2
+redirect_from:
+- "/builds/starting-builds-manually/"
 
 ---
 Starting a build manually on Bitrise takes literally two clicks - if you leave everything on the default settings. If you do not wish to do that, or at least want to be sure what the default settings are, read on! We'll walk you through the process.
