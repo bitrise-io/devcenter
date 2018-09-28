@@ -30,13 +30,11 @@ In this tutorial, we're using `[sample-apps-react-native-ios-and-android](https:
 
      ![](/img/select-variant-for-building.jpg)
    * `Project (or Workspace) path` - Select your Xcode project or Xcode Workspace path.
-   * `Select Scheme name` - Select a scheme name.
+   * `Select Scheme name` - Select a scheme name. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
 
-     ![](/img/select_scheme_name.jpg)
+     ![](/img/select_scheme_name.jpg) 
 
-{% include message_box.html type="important" title="Shared scheme" content=" the validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
-"%}
-These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor.
+ These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor.
 
 1. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
