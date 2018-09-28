@@ -1,5 +1,6 @@
 ---
 title: Android deployment
+redirect_from: []
 menu:
   deployment-tutorials:
     weight: 1
@@ -47,7 +48,7 @@ In this guide, you will learn how to:
 ## Register to Google Play Store and set up your first project
 
 1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/).
-   If you already have a Google Play Developer account, and you have already deployed your app to Google Play Store, skip to [Set up Google Play API access](#set-up-google-play-API-access).
+   If you already have a Google Play Developer account, and you have already deployed your app to Google Play Store, skip to [Set up Google Play API access](#set-up-google-play-api-access).
 2. Go through the [Prepare & roll out steps](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
 
 ## Set up Google Play API access
