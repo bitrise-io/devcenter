@@ -34,7 +34,7 @@ In this tutorial, we're using `[sample-apps-react-native-ios-and-android](https:
 
      ![](/img/select_scheme_name.jpg) 
 
- These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor.
+{% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor." %}
 
 1. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
