@@ -25,9 +25,17 @@ In this tutorial, we're using `[sample-apps-react-native-ios-and-android](https:
 4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
-7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project, which includes stack selection and workflow setup. In the case of a React Native project, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration).
-   * 
+7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project, which includes stack selection and workflow setup. In the case of a React Native project, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). 
+   * `Select variant for building` - select a variant that suits your project. Pick `Select All Variants `for  to build all variants.
 
+     ![](/img/select-variant-for-building.jpg)
+   * `Project (or Workspace) path` - Select your Xcode project or Xcode Workspace path.
+   * `Select Scheme name` - Select a scheme name.
+
+     ![](/img/select_scheme_name.jpg)
+
+{% include message_box.html type="important" title="Shared scheme" content=" the validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
+"%}
 These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor.
 
 1. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
