@@ -11,11 +11,7 @@ sections:
   match: "**/*"
 - type: document
   path: forestry-help.md
-  label: Forestry User Guide - Articles and the editor
-  read_only: true
-- type: document
-  path: forestry-help-menus.md
-  label: Forestry User Guide - Menu items
+  label: Forestry User Guide
   read_only: true
 - type: directory
   path: _articles/reviews
