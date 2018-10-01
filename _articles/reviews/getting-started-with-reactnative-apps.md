@@ -209,6 +209,18 @@ An example of a React Native YML
 
 You can use React Native's built in testing method, called `jest`. Add another `Run nmp command` step to your workflow, WHERE?, and instead of `install`, type `test` in the `npm command with arguments to run` input field.
 
+
+As you can see in the above Android workflows, the Android Lint and Android Unit Test steps are by default included in your workflow.
+
+For UI testing, add our beta Virtual Device Testing for Android step to run Android UI tests on virtual devices. Available test types - make sure you select one!
+
+- instrumentation
+- robo
+- gameloop
+
+If you selected instrumentation, don’t forget to set Test APK path under the Instrumentation Test group as well.
+
+
 ## Deploy to Bitrise
 
 You can generate an .ipa file with the `Xcode Archive` step and an apk file with the `Android Build` step. Then `Deploy to Bitrise` step deploys your generated .ipa and apk to [bitrise.io](https://www.bitrise.io) so that you can share the project with your team members using the project's URL.
