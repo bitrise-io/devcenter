@@ -25,18 +25,17 @@ In this tutorial, we're using `[sample-apps-react-native-ios-and-android](https:
 4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
-7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project, which includes stack selection and workflow setup. In the case of a React Native project, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). 
-   * `Select variant for building` - select a variant that suits your project. Pick `Select All Variants `for  to build all variants.
+7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project, which includes stack selection and workflow setup. In the case of a React Native project, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can select the variant, the project path and the scheme name in the drop down fields.
+   * `Select variant for building` - select a variant that suits your project. Pick `Select All Variants`for  to build all variants.
 
      ![](/img/select-variant-for-building.jpg)
    * `Project (or Workspace) path` - Select your Xcode project or Xcode Workspace path.
    * `Select Scheme name` - Select a scheme name. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
 
-     ![](/img/select_scheme_name.jpg) 
+     ![](/img/select_scheme_name.jpg)
+8. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
 {% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor." %}
-
-1. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
 You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io). Let's continue!
 
@@ -46,19 +45,21 @@ You might wonder how dependencies (javascript and native ones) are installed to 
 
 ### Javascript dependencies
 
-If Bitrise scanner has successfully scanned your project, `Run npm command` or `Run yarn command` steps will be included in your workflow. In `Run npm command`, type `install` in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project. `Run yarn command` can install javascript dependencies automatically to your project without you having to configure the step.
+If Bitrise scanner has successfully scanned your project, `Run npm command` or `Run yarn command` steps will be included in your workflow. 
+
+In `Run npm command`, type `install` in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project. `Run yarn command` can install javascript dependencies automatically to your project without you having to configure the step manually.
 
 ### Native dependencies
 
-Our `Install missing Android tools` step installs native dependencies for your Android project - luckily this steps is by default included in your workflow.
+Our `Install missing Android tools` step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your workflow.
 
 You have the option to use a dependency manager for your iOS projects as well if you add our `Run CocoaPods install` step to your workflow as this step is not part of the workflow by default.
 
 ## Configure your workflow
 
-When configuring your workflow, keep in mind that your React Native repo consists of an Android and an iOS project so all configs should be done as you would normally do in the case of your Android and iOS app development.  This means that there is an Android and an iOS app in the same repo.
+When configuring your workflow, keep in mind that your React Native repo consists of an Android and an iOS project so all configs should be done as you would normally do in the case of your Android and iOS app development. This means that there is an Android and an iOS app in the same repo.
 
-When running a React Native build, first an Android, then an iOS build will get built. If your org has more than one concurrency, you can have Android and iOS run simultaneously.
+After having run a React Native build, first an Android, then an iOS build gets built. If your org has more than one concurrency, you can have Android and iOS run simultaneously.
 
 * Make sure your code signing is completed correctly.
   For more information, check out our step-by-step guides:
