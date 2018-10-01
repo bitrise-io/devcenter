@@ -9,7 +9,7 @@ menu:
 published: false
 
 ---
-This guide describes how to set up, configure and deploy your React Native project to its own distribution platform using Bitrise in no time! When configuring your workflow, keep in mind that your React Native repo consists of an Android and an iOS project so all configs should be done as you would normally do in the case of your Android and iOS app development. 
+This guide describes how to set up, configure and deploy your React Native project to its own distribution platform using Bitrise in no time! When configuring your workflow, keep in mind that your React Native repo consists of an Android and an iOS project so all configs should be done as you would normally do in the case of your Android and iOS app development.
 
 ## Before setting up a React Native project
 
@@ -46,7 +46,7 @@ You might wonder how dependencies (javascript and native ones) are installed to 
 
 ### Javascript dependencies
 
-If Bitrise scanner has successfully scanned your project, `Run npm command` or `Run yarn command` steps will be included in your workflow. 
+If Bitrise scanner has successfully scanned your project, `Run npm command` or `Run yarn command` steps will be included in your workflow.
 
 In `Run npm command`, type `install` in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project. `Run yarn command` can install javascript dependencies automatically to your project without you having to configure the step manually.
 
@@ -58,8 +58,21 @@ You have the option to use a dependency manager for your iOS projects as well if
 
 ## Code signing your React Native project
 
-Your React Native project consists of two projects. Both projects must be properly code signed to be able to upload them to their respective marketplaces. If you click on the `Code Signing` tab of the Workflow Editor, you can see that iOS-related (`Provisioning Profile` & the `.p12 certificate`)  and 
+Your React Native project consists of two projects. Both projects must be properly code signed to be able to upload them to their respective marketplaces. If you click on the `Code Signing` tab of the Workflow Editor, you can see that iOS-related (`Provisioning Profile` & the `.p12 certificate`)  and
 Android-related (`ANDROID KEYSTORE FILE`) must be uploaded.
+
+Let's see the process step by step!
+
+### Android code signing
+
+1. Select the `deploy` workflow at the `WORKFLOW` dropdown menu in the top left corner of your apps' Workflow Editor.
+2. Go to the `Code Signing` tab.
+3. Drag-and-drop your keystore file to the `ANDROID KEYSTORE FILE` field.
+4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and click `Save metadata`.
+
+   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on keystore file, click [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our `Sign APK step` (by default included in your Android deploy workflow) will take care of signing your apk so that it’s ready for distribution!
+
+{% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!"%}
 
 ## Configure your workflow
 
