@@ -2,6 +2,7 @@
 title: Getting started with Android apps
 date: 2018-09-21 08:47:45 +0000
 redirect_from:
+- "/getting-started/getting-started-with-android-apps/"
 - "/getting-started/getting-started-with-Android-apps/"
 menu:
   getting-started:
