@@ -58,7 +58,7 @@ You have the option to use a dependency manager for your iOS projects as well if
 
 ## Code signing your React Native project
 
-Your React Native app consists of two projects. Both projects must be properly code signed to be able to upload them to their respective marketplaces. If you click on the `Code Signing` tab of the Workflow Editor, luckily all iOS and Android code signing fields are displayed in one page for you to conveniently and quickly upload the necessary files. 
+Your React Native app consists of two projects. Both projects must be properly code signed to be able to upload them to their respective marketplaces. If you click on the `Code Signing` tab of the Workflow Editor, luckily all iOS and Android code signing fields are displayed in one page for you to conveniently and quickly upload the necessary files.
 
 Let's see the process step by step!
 
@@ -79,7 +79,7 @@ With this the Android chunk of code signing is done!
 
 ### Code sign your iOs project
 
-Code signing procedures depend on what you wish to do with the exported .ipa. Would you like to test it on a registered device or would you like to deploy it to Testflight? 
+Code signing procedures depend on what you wish to do with the exported .ipa. Would you like to test it on a registered device or would you like to deploy it to Testflight?
 
 To **install and test the app on other physical devices**, you will need to create and export an .ipa file. This requires setting up code signing. In the example, we’ll be exporting an .ipa with the `development` export method: you cannot upload such an app to Testflight but you can test it, for example, on the devices of your internal testers.
 
@@ -113,7 +113,7 @@ If you uploaded the correct code signing files, the `Certificate and profile in
 There are two things to take care of to deploy your React Native project:
 
 * setting the `app-store` for export method
-* adding the respective `deploy` step to your workflow, for example, \`Google Play Deploy\`. 
+* adding the respective `deploy` step to your workflow, for example, \`Google Play Deploy\`.
 
 If you set up your code signing files and created an .ipa for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**. Let’s see how!To deploy to Testflight and to the App Store, you will need more code signing files:
 
@@ -208,12 +208,6 @@ An example of a React Native YML
 ## Test your project
 
 You can use React Native's built in testing method, called `jest`. Add another `Run nmp command` step to your workflow, WHERE?, and instead of `install`, type `test` in the `npm command with arguments to run` input field.
-
-unit ?
-
-ui test?
-
-Testfairy vs Testflight ?
 
 ## Deploy to Bitrise
 
