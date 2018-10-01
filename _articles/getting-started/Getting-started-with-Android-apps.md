@@ -156,6 +156,6 @@ If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
 
-{% include message_box.html type="note" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow and select another `DEPLOY` step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
+{% include message_box.html type="info" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow and select another `DEPLOY` step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
 
 That's all! Start or schedule a build and share the URL with external testers or distribute your app on an app store of your choice!
