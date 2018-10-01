@@ -110,14 +110,12 @@ If you uploaded the correct code signing files, the `Certificate and profile in
 
 ## Deploy your project
 
-If you set up your code signing files and created an .ipa for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**. Let’s see how!
-
 There are two things to take care of to deploy your React Native project:
 
 * setting the `app-store` for export method
 * adding the respective `deploy` step to your workflow, for example, \`Google Play Deploy\`. 
 
-To deploy to Testflight and to the App Store, you will need more code signing files:
+If you set up your code signing files and created an .ipa for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**. Let’s see how!To deploy to Testflight and to the App Store, you will need more code signing files:
 
 * an iOS **Distribution** Certificate
 * an **App Store** type Provisioning Profile
@@ -222,7 +220,3 @@ Testfairy vs Testflight ?
 You can generate an .ipa file with the `Xcode Archive` step and an apk file with the `Android Build` step. Then `Deploy to Bitrise` step deploys your generated .ipa and apk to [bitrise.io](https://www.bitrise.io) so that you can share the project with your team members using the project's URL.
 
 deploy a xamarin app - about deployment
-
-## Deploy to your app's marketplace
-
-[Deploy to iTunes Connect - Application Loader](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader)`and`[Google Play Deploy](https://www.bitrise.io/integrations/steps/google-play-deploy) steps take care of the swift deplopment of your .ipa or apk packages.
