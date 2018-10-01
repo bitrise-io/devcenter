@@ -58,8 +58,7 @@ You have the option to use a dependency manager for your iOS projects as well if
 
 ## Code signing your React Native project
 
-Your React Native project consists of two projects. Both projects must be properly code signed to be able to upload them to their respective marketplaces. If you click on the `Code Signing` tab of the Workflow Editor, you can see that iOS-related (`Provisioning Profile` & the `.p12 certificate`)  and
-Android-related (`ANDROID KEYSTORE FILE`) must be uploaded.
+Your React Native app consists of two projects. Both projects must be properly code signed to be able to upload them to their respective marketplaces. If you click on the `Code Signing` tab of the Workflow Editor, luckily all iOS and Android code signing fields are displayed in one page for you to conveniently and quickly upload the necessary files. 
 
 Let's see the process step by step!
 
