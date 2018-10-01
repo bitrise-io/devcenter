@@ -9,13 +9,13 @@ menu:
 published: false
 
 ---
-This guide describes how to set up, configure and deploy your React Native project to its own distribution platform using Bitrise in no time!
+This guide describes how to set up, configure and deploy your React Native project to its own distribution platform using Bitrise in no time! When configuring your workflow, keep in mind that your React Native repo consists of an Android and an iOS project so all configs should be done as you would normally do in the case of your Android and iOS app development. 
 
 ## Before setting up a React Native project
 
 Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) to do that.
 
-## Set up a React Native project on bitrise.io
+## Add a React Native project on bitrise.io
 
 In this tutorial, we're using `[sample-apps-react-native-ios-and-android](https://github.com/bitrise-samples/sample-apps-react-native-ios-and-android)` sample app.
 
@@ -25,7 +25,7 @@ In this tutorial, we're using `[sample-apps-react-native-ios-and-android](https:
 4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
-7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project, which includes stack selection and workflow setup. In the case of a React Native project, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can select the variant, the project path and the scheme name in the drop down fields.
+7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project, which includes stack selection and workflow setup. In the case of a React Native project, you should see `React Native` as the selected **project type and** `**android**` **as** . If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can select the variant, the project path and the scheme name in the drop down fields.
    * `Select variant for building` - select a variant that suits your project. Pick `Select All Variants`for  to build all variants.
 
      ![](/img/select-variant-for-building.jpg)
@@ -38,7 +38,7 @@ In this tutorial, we're using `[sample-apps-react-native-ios-and-android](https:
 
 {% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor." %}
 
-You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io). Let's continue!
+You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io)! Your first build gets kicked off automatically on the primary workflow. You can check the generated reports of the primary workflow on the `APPS & ARTIFACTS` tab of Build's page.
 
 ## Install dependencies
 
@@ -56,9 +56,12 @@ Our `Install missing Android tools` step installs the missing native dependencie
 
 You have the option to use a dependency manager for your iOS projects as well if you add our `Run CocoaPods install` step to your workflow as this step is not part of the workflow by default.
 
-## Configure your workflow
+## Code signing your React Native project
 
-When configuring your workflow, keep in mind that your React Native repo consists of an Android and an iOS project so all configs should be done as you would normally do in the case of your Android and iOS app development. This means that there is an Android and an iOS app in the same repo.
+Your React Native project consists of two projects. Both projects must be properly code signed to be able to upload them to their respective marketplaces. If you click on the `Code Signing` tab of the Workflow Editor, you can see that iOS-related (`Provisioning Profile` & the `.p12 certificate`)  and 
+Android-related (`ANDROID KEYSTORE FILE`) must be uploaded.
+
+## Configure your workflow
 
 After having run a React Native build, first an Android, then an iOS build gets built. If your org has more than one concurrency, you can have Android and iOS run simultaneously.
 
