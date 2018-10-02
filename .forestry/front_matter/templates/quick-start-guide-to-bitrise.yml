@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/reviews/code-signing-troubleshooting.md
 - _articles/builds/selective_builds.md
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
