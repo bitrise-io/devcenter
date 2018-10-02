@@ -5,7 +5,7 @@ Over the coming weeks, we hope some of our Japanese users will assist us in loca
 
 **If you contribute 5 or more paragraphs of quality text to the effort - either through one PR of 5 paragraphs or 5 PR’s of one paragraph each - , we will send you a limited edition Bitrise t-shirt as a thank you for helping us out. This will be a t-shirt reserved for Bitrise contributors, so not something you’ll be able to get by attending an event or just asking nicely.**
 
-Translating any page in the Devcenter is highly appreciated. These are the primery pages that would be the most helpful for new developers:
+Translating any page in the Devcenter is highly appreciated. These are the primary pages that would be the most helpful for new developers:
 
 https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/
 
