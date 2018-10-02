@@ -5,51 +5,17 @@ redirect_from: []
 published: false
 
 ---
-Auto provisioning issues:
+* 
 
-* certificate and profile installer is in the workflow
-* no profiles are uploaded to the Developer portal
-* Developer portal account is not connected
+**The** `Xcode Archive & Export for iOS` **Step fails with the error message _Code signing error_.**
 
-Certificate and profile installer issues:
+Most of the time, this error means your project is missing either the correct .p12 certificate file or the correct provisioning profile - or the **Select method for export** input of the Step is set incorrectly. Here's what you can do:
 
-* not the right types of profile and certificate uploaded to Bitrise
-* not all code signing files are uploaded
-
-Xcode Archive issues:
-
-* export-method does not match code signing file type
-
-Other stuff:
-
-* manual vs automatic code signing in Xcode
-* ad-hoc vs app-store vs enterprise profiles
-
-**The** `**Xcode Archive & Export for iOS**` **Step fails with the error message _Code signing error_.**
-
-Most of the time, this error means your project is missing either the correct .p12 certificate file or the correct provisioning profile - or the **Select method for export**
-
-  
- input of the Step is set incorrectly. Here's what you can do:
-
-* Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise: go to your app's `Workflow Editor` and check the `Code Signing` tab. If you use the `iOS Auto Provision` Step, you only need to upload a .p12 certificate file. 
-* Check that the provisioning profile and the .p12 certificate of your project match. A Development type provisioning profile requires a Development certificate. An App Store, Ad-hoc or Enterprise type provisioning profile requires a Distribution certificate. 
+* Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise: go to your app's `Workflow Editor` and check the `Code Signing` tab. If you use the `iOS Auto Provision` Step, you only need to upload a .p12 certificate file.
+* Check that the provisioning profile and the .p12 certificate of your project match. A Development type provisioning profile requires a Development certificate. An App Store, Ad-hoc or Enterprise type provisioning profile requires a Distribution certificate.
 * Check that your uploaded code signing files are valid! Remember that these files can and do expire. 
 
-**Code signing error: No profile for team 'TEAM ID' matching 'x' found: Xcode couldn't find any provisioning profiles matching 'x'.**
-
-The most likely reason for this error is that your project does not have a valid provisioning profile. The potential issues include:
-
-* the provisioning profile is missing: there is no valid profile at all. If you use manual provisioning, go to your app's `Workflow Editor` and check the `Code Signing` tab. If you do not have a provisioning profile uploaded, do it. You can collect it with our codesigndoc tool!
-* the provisioning profile does not match the certificate and/or the export method. For example, you have a Distribution certificate uploaded but you only have a Development type Provisioning Profile. In this scenario, if you set the `Export method` input of the `Xcode Archive & Export for iOS` Step to, say, `app-store`, the Step and your build will fail with the above error message.
-
-If you get this error AND your code signing files are managed by Xcode - that is, the `Automatically manage signing` option in Xcode is checked -, the best practice is to generate an .ipa file locally. That should generate and upload the necessary provisioning profiles to the Apple Developer Portal.
-
-**Code Signing Error: Provisioning profile "x" doesn't include signing certificate "y".**
-
-Once again, check that the provisioning profiles and certificates uploaded to Bitrise are valid and matching. We also recommend generating an .ipa locally - if that succeeds, [use our codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/) to collect the code signing files again and upload them!
-
-If you use the `iOS Auto Provision` Step, you only need to upload the appropriate certificates, of course.
+**The** `**iOS Auto Provision**` **Step fails**
 
 **I uploaded a Distribution certificate and an App Store type provisioning profile but my builds still fail.**
 
