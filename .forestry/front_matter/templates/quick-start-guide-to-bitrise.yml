@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/troubleshooting/known-xcode-issues.md
 - _articles/tips-and-tricks/android-tips-and-tricks.md
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/reviews/code-signing-troubleshooting.md

@@ -1,5 +1,7 @@
 ---
 title: List of known Xcode issues
+redirect_from:
+- "/ios/known-xcode-issues/"
 menu:
   troubleshooting:
     weight: 5
