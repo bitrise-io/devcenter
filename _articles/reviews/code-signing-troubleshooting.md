@@ -5,7 +5,11 @@ redirect_from: []
 published: false
 
 ---
-* 
+* profile
+* certificate
+* export-method
+
+Generate ipa locally. 
 
 **The** `Xcode Archive & Export for iOS` **Step fails with the error message _Code signing error_.**
 
@@ -16,6 +20,10 @@ Most of the time, this error means your project is missing either the correct .p
 * Check that your uploaded code signing files are valid! Remember that these files can and do expire. 
 
 **The** `**iOS Auto Provision**` **Step fails**
+
+* generate ipa locally
+* check uploaded profile
+* check that your account is connected 
 
 **I uploaded a Distribution certificate and an App Store type provisioning profile but my builds still fail.**
 
