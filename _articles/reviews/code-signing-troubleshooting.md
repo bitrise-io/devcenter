@@ -18,6 +18,8 @@ Most of the time, this error means your project is missing either the correct .p
 * Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise: go to your app's `Workflow Editor` and check the `Code Signing` tab. If you use the `iOS Auto Provision` Step, you only need to upload a .p12 certificate file.
 * Check that the provisioning profile and the .p12 certificate of your project match. A Development type provisioning profile requires a Development certificate. An App Store, Ad-hoc or Enterprise type provisioning profile requires a Distribution certificate.
 * Check that your uploaded code signing files are valid! Remember that these files can and do expire. 
+* export-method 
+* ios-auto-provision vs certificate and profile installer
 
 **The** `**iOS Auto Provision**` **Step fails**
 
