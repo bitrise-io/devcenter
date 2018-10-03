@@ -31,11 +31,9 @@ In this tutorial, we're using this [sample app](https://github.com/bitrise-sampl
    * You can see that Android is automatically selected in `The root directory of an Android app`.
    * If your project consist of only one module, that module will be selected for `Module`. If your project contains more than one module, you can pick a module, but we recommend the main one!
    * In `Select variant for building` field, select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick `debug` or `release` if you wish to generate an apk or an .ipa file.
-
-     ![](/img/select-variant-for-building.jpg)Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
-
-	* `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
-     * In `Select ipa export method` select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
+    * Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
+   * `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
+   * In `Select ipa export method` select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
 9. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
 {% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor." %}
