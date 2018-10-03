@@ -15,7 +15,7 @@ If you suspect an error is related to code signing, there is almost certainly a 
 
 Let's look into what you can do to make sure code signing works!
 
-**The _Xcode Archive & Export for iOS_ Step fails with the error message _Code signing error_.**
+### The _Xcode Archive & Export for iOS_ Step fails with the error message _Code signing error_.
 
 Most of the time, this error means your project is missing either the correct .p12 certificate file or the correct provisioning profile - or the `Select method for export` input of the Step is set incorrectly. Here's what you can do:
 
@@ -25,13 +25,13 @@ Most of the time, this error means your project is missing either the correct .p
 
 * Check that the team IDs the uploaded code signing files belong to are the correct team IDs. Also, make sure the provisioning profile contains the correct App ID.
 
-* Check that your uploaded code signing files are valid! Remember that these files can and do expire.
+* Check that your uploaded code signing files are valid! Remember that these files can and do expire or get revoked. 
 
 * Check the `Select method for export` input of the Step in the Workflow Editor. If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
 
 * Make sure that you do not have both the `iOS Auto Provision` and the `Certificate and profile installer` Steps in your workflow. You cannot use both in the same workflow - your build will definitely fail.
 
-**The _iOS Auto Provision Step_ fails.**
+### The _iOS Auto Provision Step_ fails.
 
 The `iOS Auto Provision` Step manages your provisioning profiles for you: it downloads the profiles from the Apple Developer portal and installs them for you. Here's what you can do if this Step fails:
 
@@ -41,6 +41,6 @@ The `iOS Auto Provision` Step manages your provisioning profiles for you: it dow
 
 * Make sure that your Bitrise account is connected to the Apple Developer portal and that you have at least an Admin role in your Apple Developer team.
 
-**I uploaded a Distribution certificate and an App Store type provisioning profile but my builds still fail.**
+### I uploaded a Distribution certificate and an App Store type provisioning profile but my builds still fail.
 
 To export an .ipa file with the app-store or ad-hoc export methods, you also need to upload a Development certificate, as the first step of the .ipa export process uses that to generate an .xcodearchive file. Even if you only wish to use Bitrise to submit your apps to the App Store, we strongly recommend uploading a Developer certificate and provisioning profile of the app, too, for this reason.
