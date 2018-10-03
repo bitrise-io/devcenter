@@ -1,5 +1,7 @@
 ---
 title: About Xamarin
+redirect_from:
+- "/xamarin/"
 menu:
   xamarin:
     weight: 1

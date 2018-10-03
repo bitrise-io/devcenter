@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/tutorials/xamarin/index.md
 - _articles/reviews/code-signing-troubleshooting.md
 - _articles/troubleshooting/frequent-android-issues.md
 - _articles/troubleshooting/known-xcode-issues.md
