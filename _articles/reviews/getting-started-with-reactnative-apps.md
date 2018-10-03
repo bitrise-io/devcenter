@@ -63,7 +63,7 @@ A React Native app can consists of two projects, an Android and an iOS - both mu
 
 Let's see the process step by step!
 
-### Code sign your Android project
+### Sign your Android project
 
 1. Select the `deploy` workflow at the `WORKFLOW` dropdown menu in the top left corner of your apps' Workflow Editor.
 2. Go to the `Code Signing` tab.
