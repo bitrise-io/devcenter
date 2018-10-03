@@ -5,11 +5,15 @@ redirect_from: []
 published: false
 
 ---
-* profile
-* certificate
-* export-method
+To make iOS code signing work on Bitrise, you generally need three things:
 
-Generate ipa locally. 
+* a provisioning profile
+* a .p12 certificate file
+* setting the `Select method for export` input of the `Xcode Archive & Export for iOS` Step
+
+If you suspect an error is related to code signing, there is almost certainly a problem with one of these three. When trying to build an iOS app on Bitrise, we strongly recommend generating an .ipa of the app locally, on your own machine first. If that fails, the build will certainly fail on Bitrise, too.
+
+Let's look into what you can do to make sure code signing works! 
 
 **The** `Xcode Archive & Export for iOS` **Step fails with the error message _Code signing error_.**
 
