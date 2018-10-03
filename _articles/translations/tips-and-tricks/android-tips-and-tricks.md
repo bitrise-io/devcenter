@@ -1,13 +1,3 @@
----
-title: Android tips and tricks
-redirect_from:
-- https://devcenter.bitrise.io/android/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project
-- "/android/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project"
-menu:
-  tips-and-tricks:
-    weight: 1
-
----
 ## What are Gradle tasks and how can I get the list of available tasks in my project?
 
 A `gradle` task is a process you can run with `gradle`.
