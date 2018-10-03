@@ -106,7 +106,7 @@ If you uploaded the correct code signing files, the `Certificate and profile in
 
 {% include message_box.html type="info" title="About iOS code signing" content=" iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)!"%}
 
-## Code sign your iOS project for deployment
+### Code sign your iOS project for deployment
 
 If you set up your code signing files and created an .ipa for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**. To deploy to Testflight and to the App Store, you will need more code signing files:
 
@@ -131,11 +131,11 @@ If you set up your code signing files and created an .ipa for your internal test
    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars#about-secrets).
 7. [Start a build](/builds/Starting-builds-manually/).
 
-   If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store
+   If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
 
 ## Test your project
 
-You can use React Native's built in testing method, called `jest`. Add another `Run nmp command` step to your workflow, and instead of `install`, type `test` in the `npm command with arguments to run` input field.
+You can use React Native's built in testing method, called `jest`. Add another `Run nmp command` step to your workflow, and type `test` in the `npm command with arguments to run` input field.
 
 ![](/img/run-nmp-test.png)
 
