@@ -1,14 +1,3 @@
----
-title: Frequent iOS issues
-redirect_from:
-- "/ios/frequent-ios-issues/"
-- "/ios/frequent-ios-issues/#works-in-local-but-not-on-bitriseio"
-- "#works-in-local-but-not-on-bitriseio"
-menu:
-  troubleshooting:
-    weight: 4
-
----
 ## Searching for errors and issues in Xcode generated output
 
 _This applies only to the raw, unfiltered output of Xcode.
