@@ -1,10 +1,3 @@
----
-title: Signing up with Bitbucket
-menu:
-  signing-up:
-    weight: 2
-
----
 You are able to authenticate yourself with your Bitbucket user against **Bitrise**. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Bitbucket account when adding repositories hosted by these providers again.
 
 {% include message_box.html type="note" title="Signing up with email address" content="If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/getting-started/signing-up/signing-up-with-email). "%}
