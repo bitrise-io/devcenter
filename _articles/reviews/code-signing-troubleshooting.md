@@ -17,13 +17,13 @@ Let's look into what you can do to make sure code signing works!
 
 **The** `Xcode Archive & Export for iOS` **Step fails with the error message _Code signing error_.**
 
-Most of the time, this error means your project is missing either the correct .p12 certificate file or the correct provisioning profile - or the **Select method for export** input of the Step is set incorrectly. Here's what you can do:
+Most of the time, this error means your project is missing either the correct .p12 certificate file or the correct provisioning profile - or the `Select method for export` input of the Step is set incorrectly. Here's what you can do:
 
 * Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise: go to your app's `Workflow Editor` and check the `Code Signing` tab. If you use the `iOS Auto Provision` Step, you only need to upload a .p12 certificate file.
 * Check that the provisioning profile and the .p12 certificate of your project match. A Development type provisioning profile requires a Development certificate. An App Store, Ad-hoc or Enterprise type provisioning profile requires a Distribution certificate.
 * Check that your uploaded code signing files are valid! Remember that these files can and do expire. 
-* export-method 
-* ios-auto-provision vs certificate and profile installer
+* Check the `Select method for export` input of the Step in the Workflow Editor. If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile. 
+* Make sure that you do not have both the `iOS Auto Provision` and the `Certificate and profile installer` Steps in your workflow. You cannot use both in the same workflow - your build will definitely fail. 
 
 **The** `**iOS Auto Provision**` **Step fails**
 
