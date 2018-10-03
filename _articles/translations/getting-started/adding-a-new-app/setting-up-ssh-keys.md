@@ -1,12 +1,3 @@
----
-title: Setting up SSH keys
-redirect_from:
-- "/adding-a-new-app/setting-up-ssh-keys/"
-menu:
-  adding-a-new-app:
-    weight: 3
-
----
 SSH keys serve the role of secure transfer between services. In the case of Bitrise, it will ask for your permission to be authorized at your git source provider, for example, GitHub. Read more about how to [authorize Bitrise](/getting-started/adding-a-new-app/connecting-a-repository).
 
 The reason behind the need for being authorized, is that Bitrise has to have a working SSH connection to your repository to be able to clone it. There are several ways to make it work. Automatically, by adding it manually, or by using your own key.
