@@ -1,12 +1,3 @@
----
-title: List of known Xcode issues
-redirect_from:
-- "/ios/known-xcode-issues/"
-menu:
-  troubleshooting:
-    weight: 5
-
----
 **Feel free to add your comments to this list.**
 
 [You can do it directly on GitHub, by clicking this link](https://github.com/bitrise-io/devcenter/blob/master/_articles/troubleshooting/known-xcode-issues.md),
