@@ -134,7 +134,7 @@ If you selected instrumentation, don't forget to set **Test APK path** under t
 
 This step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
 
-You can share the generated apk with your team members using the buil's URL. You can also notify user groups or individual users that your apk has been built.
+You can share the generated apk with your team members using the build's URL. You can also notify user groups or individual users that your apk has been built.
 
 1. Go to the `Deploy to bitrise.io` step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated apk in the `APPS & ARTIFACTS` tab.
@@ -150,7 +150,7 @@ If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Go back to the `Google Play Deploy` step in your Workflow Editor.\`
+4. Go back to the `Google Play Deploy` step in your Workflow Editor.
 5. Fill out the required input fields as follows:
    * `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
