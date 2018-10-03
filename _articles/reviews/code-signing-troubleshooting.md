@@ -25,7 +25,7 @@ Most of the time, this error means your project is missing either the correct .p
 * Check the `Select method for export` input of the Step in the Workflow Editor. If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
 * Make sure that you do not have both the `iOS Auto Provision` and the `Certificate and profile installer` Steps in your workflow. You cannot use both in the same workflow - your build will definitely fail.
 
-**The** `**iOS Auto Provision**` **Step fails**
+**The** `iOS Auto Provision` **Step fails**
 
 The `iOS Auto Provision` Step 
 
