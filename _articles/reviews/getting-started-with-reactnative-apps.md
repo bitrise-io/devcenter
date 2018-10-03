@@ -9,13 +9,13 @@ menu:
 published: false
 
 ---
-This guide describes how to set up, configure and deploy your React Native project to its own distribution platform using Bitrise in no time! Your React Native repo consists of an Android and an iOS project so all configurations should be done as you would normally do with Android and iOS apps. When running a React Native project, you will see that first an Android, then an iOS build gets built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously.
+This guide describes how to set up, configure and deploy your React Native project to its own distribution platform using Bitrise in no time! Your React Native repo consists of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project, you will see that first an Android, then an iOS build gets built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously.
 
 ## Before setting up a React Native project
 
 Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) to do that.
 
-## Add a React Native project on bitrise.io
+## Add a React Native project to bitrise.io
 
 In this tutorial, we're using this [sample app](https://github.com/bitrise-samples/sample-apps-react-native-ios-and-android). Let's start!
 
@@ -25,36 +25,33 @@ In this tutorial, we're using this [sample app](https://github.com/bitrise-sampl
 4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
-7. At `Validating repository/Project build configuration`, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
-8. At `Project build configuration`, you can select some build configuration.
-   * For React Native projects, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration).
-   * You can see that Android is automatically selected in `The root directory of an Android app`.
-   * If your project consist of only one module, that module will be selected for `Module`. If your project contains more than one module, you can pick a module, but we recommend the main one!
+7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
+8. At `Project build configuration`, select your preferred build configuration.
+   * For React Native projects, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that Android is automatically selected in `The root directory of an Android app`.
+   * If your project consist of only one module, that module will be automatically selected for `Module`. If your project contains more than one module, you can pick a module, but we recommend the main one!
    * In `Select variant for building` field, select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick `debug` or `release` if you wish to generate an apk or an .ipa file.
    * Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
    * `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
-   * In `Select ipa export method` select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
+   * In `Select ipa export method`, select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
 9. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
-{% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor." %}
+{% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can modify at the `Stack` tab of your Workflow Editor." %}
 
-You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of of the first build on the `APPS & ARTIFACTS` tab of your Build's page.
+You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the `APPS & ARTIFACTS` tab of your Build's page.
 
 ## Install dependencies
-
-You might wonder how dependencies (javascript and native ones) are installed to your project. We've got you covered!
 
 ### Javascript dependencies
 
 If Bitrise scanner has successfully scanned your project, `Run npm command` or `Run yarn command` steps will be included in your workflow.
 
-In `Run npm command`, type `install` in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project. `Run yarn command` can install javascript dependencies automatically to your project without configure the step manually.
+In `Run npm command`, type `install` in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project. `Run yarn command` can install javascript dependencies automatically to your project without having to configure the step manually.
 
 ### Native dependencies
 
-Our `Install missing Android tools` step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your deploy workflow.
+`Install missing Android tools` step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your deploy workflow.
 
-For iOS dependencies, add the `Run CocoaPods install` step to your workflow as it is not part of the workflow by default.
+For iOS dependencies, you can add the `Run CocoaPods install` step to your workflow as it is not part of the workflow by default.
 
 ## Code signing
 
