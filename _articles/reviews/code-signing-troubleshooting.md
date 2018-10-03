@@ -27,6 +27,8 @@ Most of the time, this error means your project is missing either the correct .p
 
 **The** `**iOS Auto Provision**` **Step fails**
 
+The `iOS Auto Provision` Step 
+
 * generate ipa locally
 * check uploaded profile
 * check that your account is connected
