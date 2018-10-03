@@ -1,11 +1,3 @@
----
-title: Account Security
-redirect_from: []
-menu:
-  getting-started:
-    weight: 6
-
----
 ## Enable Two-factor authentication
 
 We provide an extra layer of security if you enable Two-factor authentication (TFA) on your Bitrise account.
