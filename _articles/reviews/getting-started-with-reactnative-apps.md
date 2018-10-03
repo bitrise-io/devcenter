@@ -9,7 +9,7 @@ menu:
 published: false
 
 ---
-This guide describes how to set up, configure and deploy your React Native project to its own distribution platform using Bitrise in no time! When configuring your workflow, keep in mind that your React Native repo consists of an Android and an iOS project so all configs should be done as you would normally do in the case of your Android and iOS app development. After having run a React Native build, first an Android, then an iOS build gets built. If your organization has more than one concurrency, you can have Android and iOS run simultaneously.
+This guide describes how to set up, configure and deploy your React Native project to its own distribution platform using Bitrise in no time! Your React Native repo consists of an Android and an iOS project so all configurations should be done as you would normally do with Android and iOS apps. When running a React Native project, you will see that first an Android, then an iOS build gets built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously.
 
 ## Before setting up a React Native project
 
@@ -17,24 +17,23 @@ Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can acc
 
 ## Add a React Native project on bitrise.io
 
-In this tutorial, we're using `[sample-apps-react-native-ios-and-android](https://github.com/bitrise-samples/sample-apps-react-native-ios-and-android)` sample app.
+In this tutorial, we're using this [sample app](https://github.com/bitrise-samples/sample-apps-react-native-ios-and-android). Let's start!
 
 1. Log into [bitrise.io](https://www.bitrise.io).
 2. Click `Add a new app`.
-3. Select the privacy setting of your app: `private` or `[public](/getting-started/adding-a-new-app/public-apps/)`.
+3. Select the privacy setting of your app: **private** and [**public**](/getting-started/adding-a-new-app/public-apps/).
 4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
-7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project, which includes stack selection and workflow setup. In the case of a React Native project, you should see `React Native` as the selected **project type and** `**android**` **as** . If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can select the variant, the project path and the scheme name in the drop down fields.
-   * `Select variant for building` - select a variant that suits your project. Pick `Select All Variants`for  to build all variants. ha csak apkt akar, akkor vagy debug vagy release. iosnel is ha debug configgal buildelink olyan lesz a log, ami mar egy release appnal nincs bekapcsolva. ha egy module volt akkor app mdul lesz mint default, ezt at lehet irni, lehet tobb modul is, ilyenkor tud valasztani-de valassz az app modul-t(valassza a fo modult ne pedig a depedencyt)
-
-     ![](/img/select-variant-for-building.jpg)
+7. At `Validating repository/Project build configuration`, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
+8. At `Project build configuration`, you can select some build configuration. In the case of a React Native project, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that Android is automatically selected in `The root directory of an Android app`. If your project consist of only one module, that module will be selected for `Module`, however, if your project contains more than one module, you can pick a module, we recommend the main one! is aYou can select the variant, the project path and the scheme name in the drop down fields. In `Select variant for building` field,  select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick `debug` or \`ha csak apkt akar, akkor vagy debug vagy release. iosnel is ha debug configgal buildelink olyan lesz a log, ami mar egy release appnal nincs bekapcsolva. ha egy module volt akkor app mdul lesz mint default, ezt at lehet irni, lehet tobb modul is, ilyenkor tud valasztani-de valassz az app modul-t(valassza a fo modult ne pedig a depedencyt)
+   * ![](/img/select-variant-for-building.jpg)
    * `Project (or Workspace) path` - Select your Xcode project or Xcode Workspace path.
    * `Select Scheme name` - Select a scheme name. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found). shared scheme by default?
 
      ![Project build configuration](/img/select_scheme_name.jpg "Project build")
    * ipa export method?  - development, app store, ad hoc enterprise.
-8. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
+9. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
 {% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor." %}
 
