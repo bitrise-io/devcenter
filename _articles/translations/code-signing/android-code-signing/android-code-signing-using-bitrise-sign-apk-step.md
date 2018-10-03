@@ -1,12 +1,3 @@
----
-title: Android code signing using Bitrise Sign APK step
-redirect_from:
-- "/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/"
-menu:
-  android-code-signing:
-    weight: 2
-
----
 ## Create a signed APK with the `Sign APK` step
 
 You can create a signed APK using the `Sign APK step` in our Bitrise workflow.
