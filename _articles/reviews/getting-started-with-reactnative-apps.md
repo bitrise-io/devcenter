@@ -31,14 +31,14 @@ In this tutorial, we're using this [sample app](https://github.com/bitrise-sampl
    * You can see that Android is automatically selected in `The root directory of an Android app`.
    * If your project consist of only one module, that module will be selected for `Module`. If your project contains more than one module, you can pick a module, but we recommend the main one!
    * In `Select variant for building` field, select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick `debug` or `release` if you wish to generate an apk or an .ipa file.
-    * Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
+   * Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
    * `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
    * In `Select ipa export method` select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
 9. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
 {% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor." %}
 
-You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io)! Your first build gets kicked off automatically on the primary workflow. You can check the generated reports of the primary workflow on the `APPS & ARTIFACTS` tab of Build's page.
+You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of of the first build on the `APPS & ARTIFACTS` tab of your Build's page.
 
 ## Install dependencies
 
@@ -48,17 +48,17 @@ You might wonder how dependencies (javascript and native ones) are installed to 
 
 If Bitrise scanner has successfully scanned your project, `Run npm command` or `Run yarn command` steps will be included in your workflow.
 
-In `Run npm command`, type `install` in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project. `Run yarn command` can install javascript dependencies automatically to your project without you having to configure the step manually.
+In `Run npm command`, type `install` in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project. `Run yarn command` can install javascript dependencies automatically to your project without configure the step manually.
 
 ### Native dependencies
 
-Our `Install missing Android tools` step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your workflow.
+Our `Install missing Android tools` step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your deploy workflow.
 
-You have the option to use a dependency manager for your iOS projects as well if you add our `Run CocoaPods install` step to your workflow as this step is not part of the workflow by default.
+For iOS dependencies, add the `Run CocoaPods install` step to your workflow as it is not part of the workflow by default.
 
-## Code signing your React Native project
+## Code signing
 
-Your React Native app consists of two projects. Both projects must be properly code signed to be able to upload them to their respective marketplaces. If you click on the `Code Signing` tab of the Workflow Editor, luckily all iOS and Android code signing fields are displayed in one page for you to conveniently and quickly upload the necessary files.
+Your React Native app consists of two projects, an Android and an iOS - both must be properly code signed. If you click on the `Code Signing` tab of your project's Workflow Editor, iOS and Android code signing fields are displayed in one page for you.
 
 Let's see the process step by step!
 
@@ -73,15 +73,13 @@ Let's see the process step by step!
 
 {% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!"%}
 
-With this the Android chunk of code signing is done!
+Android chunk of code signing is done!
 
 ![](/img/android-code-signing-react.png)
 
-### Code sign your iOs project
+### Code sign your iOs project for testing
 
-Code signing procedures depend on what you wish to do with the exported .ipa. Would you like to test it on a registered device or would you like to deploy it to Testflight?
-
-To **install and test the app on other physical devices**, you will need to create and export an .ipa file. This requires setting up code signing. In the example, we’ll be exporting an .ipa with the `development` export method: you cannot upload such an app to Testflight but you can test it, for example, on the devices of your internal testers.
+Code signing your iOS project depends on what you wish to do with the exported .ipa file. In this section, we describe how to code sign your project if you wish to **install and test it on internal testers' registered devices**. We’ll be exporting an .ipa with the `development` export method! If you wish to upload your .ipa file to an app store, check out this section! 
 
 {% include message_box.html type="note" title="Automatic provisioning" content="
 The example procedure described here uses manual provisioning, with the `Certificate and profile installer`Step. However, Bitrise also supports [automatic provisioning](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/) but it is not in the scope of this guide.
@@ -97,113 +95,45 @@ You will need:
 2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
 
    The tool can also upload your code signing files to Bitrise - we recommend doing so! Otherwise, upload them manually: enter the Workflow Editor and select the `Code signing` tab, then upload/drag-and-drop the files in their respective fields.
-3. Go to your app’s Workflow Editor, and select the `deploy` workflow in the `WORKFLOW`dropdown menu in the top left corner.
+3. Go to your app’s Workflow Editor, and select the `deploy` workflow in the `WORKFLOW `dropdown menu in the top left corner.
 4. Check that you have the `Certificate and profile installer` Step in your workflow. It must be before the `Xcode Archive & Export for iOS` Step (you can have other Steps between the two, like `Xcode Test for iOS`).
 5. Check the `Select method for export` input of the `Xcode Archive & Export for iOS`Step. By default, it should be the `$BITRISE_EXPORT_METHOD` environment variable. This variable stores the export method you selected when creating the app. If you selected `development` back then, you don’t need to change the input. Otherwise, manually set it to `development`.
 
    ![Export method env var](https://devcenter.bitrise.io/img/export-method-envvar.png)
 6. [Start a build](https://devcenter.bitrise.io/builds/starting-builds-manually/).
 
-If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa with the development export method. If you have the `Deploy to Bitrise.io`Step in your workflow, you can find the .ipa on the `Apps & Artifacts` tab of the build page.
+If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa with the **development export method**. If you have the `Deploy to Bitrise.io `Step in your workflow, you can find the .ipa on the `APPS & ARTIFACTS` tab of the Build's page.
 
 {% include message_box.html type="info" title="About iOS code signing" content=" iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)!"%}
 
-## Deploy your project
+## Code sign your iOS project for deployment
 
-There are two things to take care of to deploy your React Native project:
-
-* setting the `app-store` for export method
-* adding the respective `deploy` step to your workflow, for example, \`Google Play Deploy\`.
-
-If you set up your code signing files and created an .ipa for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**. Let’s see how!To deploy to Testflight and to the App Store, you will need more code signing files:
+If you set up your code signing files and created an .ipa for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**. Let’s see how! To deploy to Testflight and to the App Store, you will need more code signing files:
 
 * an iOS **Distribution** Certificate
 * an **App Store** type Provisioning Profile
 
- 1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa. If this fails locally, it will definitely fail on Bitrise, too!
- 2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
- 3. Go to the app’s Workflow Editor and create a [new workflow](https://devcenter.bitrise.io/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
- 4. Set the `Select method for export` input of the `Xcode Archive & Export for iOS` Step to `app-store`.
+1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa. If this fails locally, it will definitely fail on Bitrise, too!
+2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
+3. Go to the app’s Workflow Editor and create a [new workflow](https://devcenter.bitrise.io/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
+4. Set the `Select method for export` input of the `Xcode Archive & Export for iOS` Step to `app-store`.
 
-    ![App store export](https://devcenter.bitrise.io/img/app-store-export.png)
+   ![App store export](https://devcenter.bitrise.io/img/app-store-export.png)
 
-    If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`. In that case, skip the next steps in the guide: you only need the `Deploy to Bitrise.io` Step in your workflow.
- 5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
- 6. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
+   If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`. In that case, skip the next steps in the guide: you only need the `Deploy to Bitrise.io` Step in your workflow.
+5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
+6. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
 
-    The Step will need your:
-    * Apple ID
-    * password or, if you use two-factor authentication on iTunes Connect, your application password.
+   The Step will need your:
+   * Apple ID
+   * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
-    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars#about-secrets).
- 7. Make sure you are in sync with Google Play Store! Learn how to
-    * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-    * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
- 8. In your Bitrise `Dashboard`, go to `Code Signing` and upload the service account JSON key into the `GENERIC FILE STORAGE.`
- 9. Copy the env key which stores your uploaded file’s url.
+   Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars#about-secrets).
 
-    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-10. Go back to the `Google Play Deploy` step in your Workflow Editor.\`
-11. Fill out the required input fields as follows:
-    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-    * `Package name`: the package name of your Android app
-    * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
 
-And that’s it! Start a build - if everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.Configure your workflow
+9. Start a build.
 
-The `Run npm command` step should be set to `install` and can be inserted anywhere before `Xcode Archive & Export for iOS` or the `Android Build` steps. Make sure the `Working directory` input field is set to the directory where your React Native project is located. If it's stored elsewhere, set that path here or use our `Change working directory` step which will replace the old directory path to the new one in your workflow.
-
-An example of a React Native YML
-
-    yml
-    default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-    project_type: react-native
-    trigger_map:
-    - push_branch: "*"
-      workflow: primary
-    - pull_request_source_branch: master
-      workflow: primary
-      pull_request_target_branch: master
-    workflows:
-      deploy:
-        steps:
-        - activate-ssh-key@3.1.1:
-            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-        - git-clone@4.0.11: {}
-        - script@1.1.5:
-            title: Do anything with Script step
-        - npm@0.9.1:
-            inputs:
-            - command: install
-        - install-missing-android-tools@2.1.1: {}
-        - android-build@0.9.4:
-            inputs:
-            - project_location: "$PROJECT_LOCATION"
-            - module: "$MODULE"
-            - variant: "$BUILD_VARIANT"
-        - certificate-and-profile-installer@1.9.3: {}
-        - xcode-archive@2.4.8:
-            inputs:
-            - project_path: "$BITRISE_PROJECT_PATH"
-            - scheme: "$BITRISE_SCHEME"
-            - export_method: "$BITRISE_EXPORT_METHOD"
-            - configuration: Release
-        - deploy-to-bitrise-io@1.3.12: {}
-      primary:
-        steps:
-        - activate-ssh-key:
-            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-        - git-clone@4.0.11: {}
-        - virtual-device-testing-for-android@1.0.3: {}
-        - script@1.1.5:
-            title: Do anything with Script step
-        - npm@0.9.1:
-            inputs:
-            - command: install
-        - npm@0.9.1:
-            inputs:
-            - command: test
-        - deploy-to-bitrise-io: {}
+   If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store
 
 ## Test your project
 
@@ -227,6 +157,30 @@ for ui test - megirod xcodeban teszteket es android studioban, ez az xcode test 
 
 ## Deploy to Bitrise
 
-You can generate an .ipa file with the `Xcode Archive` step and an apk file with the `Android Build` step. Then `Deploy to Bitrise` step deploys your generated .ipa and apk to [bitrise.io](https://www.bitrise.io) so that you can share the project with your team members using the project's URL.
+The \`Deploy to bitrise.io\` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page.
 
-deploy a xamarin app - about deployment
+You can share the generated apk with your team members using the build’s URL. You can also notify user groups or individual users that your apk/.ipa has been built.
+
+1. Go to the `Deploy to bitrise.io` step.
+2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated apk in the `APPS & ARTIFACTS` tab.
+
+## Deploy to an app store
+
+If you wish to deploy your iOS app, follow the steps in Code sign your iOS project for deployment
+
+If you wish to deploy your Android app, follow the steps:
+
+1. Make sure you are in sync with Google Play Store! Learn how to
+   * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+   * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+2. In your Bitrise `Dashboard`, go to `Code Signing tab` and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+3. Copy the env key which stores your uploaded file’s url.
+
+   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+4. Add the `Google Play Deploy` step after the `Sign APK` step in your deploy workflow.
+5. Fill out the required input fields as follows:
+   * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * `Package name`: the package name of your Android app
+   * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
+
+And that’s it! Start a build - if everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.Configure your workflow
