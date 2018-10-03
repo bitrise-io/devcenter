@@ -1,13 +1,3 @@
----
-title: Steps
-redirect_from:
-- "/getting-started/builds-and-workflows/getting-started/getting-started-steps"
-- "/getting-started/manage-your-bitrise-workflow/"
-menu:
-  getting-started:
-    weight: 8
-
----
 Steps represent a block of script execution with predefined input and output variables. [Read more about Steps in the Bitrise CLI section](/bitrise-cli/steps).
 
 Steps can be managed directly from the [Workflow Editor](/getting-started/getting-started-workflows). In the Workflow Editor, you can:
