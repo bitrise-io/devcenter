@@ -1,10 +1,3 @@
----
-title: Builds & Workflows
-menu:
-  getting-started:
-    weight: 4
-
----
 ## Builds & Workflows
 
 Once you added an app to Bitrise, your first build will be kicked off automatically.
