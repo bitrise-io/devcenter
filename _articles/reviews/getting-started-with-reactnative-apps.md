@@ -26,13 +26,16 @@ In this tutorial, we're using this [sample app](https://github.com/bitrise-sampl
 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
 7. At `Validating repository/Project build configuration`, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
-8. At `Project build configuration`, you can select some build configuration. In the case of a React Native project, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that Android is automatically selected in `The root directory of an Android app`. If your project consist of only one module, that module will be selected for `Module`, however, if your project contains more than one module, you can pick a module, we recommend the main one! is aYou can select the variant, the project path and the scheme name in the drop down fields. In `Select variant for building` field,  select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick `debug` or \`ha csak apkt akar, akkor vagy debug vagy release. iosnel is ha debug configgal buildelink olyan lesz a log, ami mar egy release appnal nincs bekapcsolva. ha egy module volt akkor app mdul lesz mint default, ezt at lehet irni, lehet tobb modul is, ilyenkor tud valasztani-de valassz az app modul-t(valassza a fo modult ne pedig a depedencyt)
-   * ![](/img/select-variant-for-building.jpg)
-   * `Project (or Workspace) path` - Select your Xcode project or Xcode Workspace path.
-   * `Select Scheme name` - Select a scheme name. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found). shared scheme by default?
+8. At `Project build configuration`, you can select some build configuration.
+   * For React Native projects, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration).
+   * You can see that Android is automatically selected in `The root directory of an Android app`.
+   * If your project consist of only one module, that module will be selected for `Module`. If your project contains more than one module, you can pick a module, but we recommend the main one!
+   * In `Select variant for building` field, select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick `debug` or `release` if you wish to generate an apk or an .ipa file.
 
-     ![Project build configuration](/img/select_scheme_name.jpg "Project build")
-   * ipa export method?  - development, app store, ad hoc enterprise.
+     ![](/img/select-variant-for-building.jpg)Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
+
+	* `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
+     * In `Select ipa export method` select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
 9. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
 {% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor." %}
@@ -222,7 +225,7 @@ rn en milyen unit es ui tesztek mennek - maintenance task
 
 react javasolja h jest testing liberarivel teszteljunk, ezt alapbol bekoti, ez teszteli a js kodot. egy npr run commandal lehet lefuttatni ehhez kell az npm teszt steppet- js cript testing of the project .
 
-for ui test - megirod xcodeban teszteket es android studioban, ez az xcode test steppe, es a gradle unit testtel lefuttatni a workflowban. 
+for ui test - megirod xcodeban teszteket es android studioban, ez az xcode test steppe, es a gradle unit testtel lefuttatni a workflowban.
 
 ## Deploy to Bitrise
 
