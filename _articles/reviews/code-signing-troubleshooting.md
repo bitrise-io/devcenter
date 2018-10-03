@@ -13,7 +13,7 @@ To make iOS code signing work on Bitrise, you generally need three things:
 
 If you suspect an error is related to code signing, there is almost certainly a problem with one of these three. When trying to build an iOS app on Bitrise, we strongly recommend generating an .ipa of the app locally, on your own machine first. If that fails, the build will certainly fail on Bitrise, too.
 
-Let's look into what you can do to make sure code signing works! 
+Let's look into what you can do to make sure code signing works!
 
 **The** `Xcode Archive & Export for iOS` **Step fails with the error message _Code signing error_.**
 
@@ -21,15 +21,15 @@ Most of the time, this error means your project is missing either the correct .p
 
 * Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise: go to your app's `Workflow Editor` and check the `Code Signing` tab. If you use the `iOS Auto Provision` Step, you only need to upload a .p12 certificate file.
 * Check that the provisioning profile and the .p12 certificate of your project match. A Development type provisioning profile requires a Development certificate. An App Store, Ad-hoc or Enterprise type provisioning profile requires a Distribution certificate.
-* Check that your uploaded code signing files are valid! Remember that these files can and do expire. 
-* Check the `Select method for export` input of the Step in the Workflow Editor. If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile. 
-* Make sure that you do not have both the `iOS Auto Provision` and the `Certificate and profile installer` Steps in your workflow. You cannot use both in the same workflow - your build will definitely fail. 
+* Check that your uploaded code signing files are valid! Remember that these files can and do expire.
+* Check the `Select method for export` input of the Step in the Workflow Editor. If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
+* Make sure that you do not have both the `iOS Auto Provision` and the `Certificate and profile installer` Steps in your workflow. You cannot use both in the same workflow - your build will definitely fail.
 
 **The** `**iOS Auto Provision**` **Step fails**
 
 * generate ipa locally
 * check uploaded profile
-* check that your account is connected 
+* check that your account is connected
 
 **I uploaded a Distribution certificate and an App Store type provisioning profile but my builds still fail.**
 
