@@ -44,3 +44,8 @@ The `iOS Auto Provision` Step manages your provisioning profiles for you: it dow
 ### I uploaded a Distribution certificate and an App Store type provisioning profile but my builds still fail.
 
 To export an .ipa file with the app-store or ad-hoc export methods, you also need to upload a Development certificate, as the first step of the .ipa export process uses that to generate an .xcodearchive file. Even if you only wish to use Bitrise to submit your apps to the App Store, we strongly recommend uploading a Developer certificate and provisioning profile of the app, too, for this reason.
+
+### I have added the _Run Cocoapods Install_ Step and now my builds are failing 
+
+Installing dependencies can result in a failed build for many reasons. When it comes to iOS code signing, problems can occur if your project is modified in any way between installing the code signing files and exporting an .ipa. In practice, this means that in your Bitrise workflow, Steps that install dependencies - such as `Run Cocoapods Install` or `Carthage` - should be BEFORE Steps that install code signing files. 
+
