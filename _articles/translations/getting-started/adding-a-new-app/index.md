@@ -1,13 +1,3 @@
----
-title: Adding a new app
-redirect_from:
-- "/tutorials/deploy/android-deployment/getting-started/adding-a-new-app"
-- "/adding-a-new-app/"
-menu:
-  adding-a-new-app:
-    weight: 1
-
----
 When adding your app to **Bitrise**, we will clone your repository to make sure we can access it. Besides cloning your repository we will run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your workflow with all the necessary steps to build and deploy your app.
 
 {% include message_box.html type="note" title="Currently we are supporting the following projects out of the box" content="  
