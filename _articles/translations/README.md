@@ -23,4 +23,8 @@ https://devcenter.bitrise.io/troubleshooting/frequent-android-issues/
 
 https://devcenter.bitrise.io/getting-started/index/
 
+https://devcenter.bitrise.io/xamarin/add-custom-sources-to-nuget/
+
+http://devcenter.bitrise.io/xamarin
+
 Thank you so much for your help!
