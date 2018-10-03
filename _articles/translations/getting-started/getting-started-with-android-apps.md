@@ -1,15 +1,3 @@
----
-title: Getting started with Android apps
-date: 2018-09-21 08:47:45 +0000
-redirect_from:
-- "/getting-started/Getting-started-with-Android-apps/"
-- "/getting-started/Getting-started-with-android-apps/"
-- "/getting-started/getting-started-with-Android-apps/"
-menu:
-  getting-started:
-    weight: 10
-
----
 In this guide, we'll walk you through how to add an Android app to Bitrise, what primary and deploy workflows can do, and finally how to test and deploy your app to [bitrise.io](https://www.bitrise.io/) and to the App Store.
 
 ## Add an Android app to bitrise.io
