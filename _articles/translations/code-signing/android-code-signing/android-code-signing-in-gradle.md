@@ -1,10 +1,3 @@
----
-title: Android code signing in Gradle
-menu:
-  android-code-signing:
-    weight: 4
-
----
 ## Configure manually in Gradle
 
 You can manually specify the code signing configuration in your Gradle configuration so that your app gets signed during the build process.
