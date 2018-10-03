@@ -26,14 +26,14 @@ In this tutorial, we're using `[sample-apps-react-native-ios-and-android](https:
 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
 7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project, which includes stack selection and workflow setup. In the case of a React Native project, you should see `React Native` as the selected **project type and** `**android**` **as** . If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can select the variant, the project path and the scheme name in the drop down fields.
-   * `Select variant for building` - select a variant that suits your project. Pick `Select All Variants`for  to build all variants.
+   * `Select variant for building` - select a variant that suits your project. Pick `Select All Variants`for  to build all variants. ha csak apkt akar, akkor vagy debug vagy release. iosnel is ha debug configgal buildelink olyan lesz a log, ami mar egy release appnal nincs bekapcsolva. ha egy module volt akkor app mdul lesz mint default, ezt at lehet irni, lehet tobb modul is, ilyenkor tud valasztani-de valassz az app modul-t(valassza a fo modult ne pedig a depedencyt)
 
      ![](/img/select-variant-for-building.jpg)
    * `Project (or Workspace) path` - Select your Xcode project or Xcode Workspace path.
-   * `Select Scheme name` - Select a scheme name. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
+   * `Select Scheme name` - Select a scheme name. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found). shared scheme by default?
 
      ![Project build configuration](/img/select_scheme_name.jpg "Project build")
-   * ipa export method?  - az ios-nel ki kell valasztani.
+   * ipa export method?  - development, app store, ad hoc enterprise.
 8. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
 {% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can alter at the `Stack` tab of your Workflow Editor." %}
@@ -209,17 +209,21 @@ An example of a React Native YML
 
 You can use React Native's built in testing method, called `jest`. Add another `Run nmp command` step to your workflow, WHERE?, and instead of `install`, type `test` in the `npm command with arguments to run` input field.
 
-
 As you can see in the above Android workflows, the Android Lint and Android Unit Test steps are by default included in your workflow.
 
 For UI testing, add our beta Virtual Device Testing for Android step to run Android UI tests on virtual devices. Available test types - make sure you select one!
 
-- instrumentation
-- robo
-- gameloop
+* instrumentation
+* robo
+* gameloop
 
 If you selected instrumentation, don’t forget to set Test APK path under the Instrumentation Test group as well.
 
+rn en milyen unit es ui tesztek mennek - maintenance task
+
+react javasolja h jest testing liberarivel teszteljunk, ezt alapbol bekoti, ez teszteli a js kodot. egy npr run commandal lehet lefuttatni ehhez kell az npm teszt steppet- js cript testing of the project .
+
+for ui test - megirod xcodeban teszteket es android studioban, ez az xcode test steppe, es a gradle unit testtel lefuttatni a workflowban. 
 
 ## Deploy to Bitrise
 
