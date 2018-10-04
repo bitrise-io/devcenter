@@ -5,7 +5,7 @@ redirect_from:
 - "/builds/troubleshooting/"
 menu:
   getting-started:
-    weight: 12
+    weight: 11
 published: false
 
 ---

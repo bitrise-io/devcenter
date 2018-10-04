@@ -61,7 +61,7 @@ main:
   weight: 2
 - title: Bitrise CLI and bitrise.yml
   identifier: bitrise-cli
-  weight: 9
+  weight: 10
 - title: Teams and organizations
   identifier: team-management
   weight: 4
@@ -73,7 +73,7 @@ main:
   weight: 11
 - title: Testing
   identifier: testing
-  weight: 10
+  weight: 9
 - title: Builds
   identifier: builds
   weight: 6
