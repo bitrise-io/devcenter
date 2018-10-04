@@ -1,5 +1,5 @@
 ---
-title: Install and update the Bitrise CLI
+title: Installing and updating the Bitrise CLI
 menu:
   bitrise-cli:
     weight: 2
