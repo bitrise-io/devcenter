@@ -11,6 +11,8 @@ Developing for iOS is not always easy - our aim is to make it as simple as possi
 
 ## Adding an iOS app
 
+{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
+
 1. Click the `+` sign on the top menu bar and select `Add app`.
 
 2. On the Create new App page, choose the account you wish to add the app to.
@@ -85,6 +87,7 @@ You will need:
 5. Check the `Select method for export` input of the `Xcode Archive & Export for iOS` Step. By default, it should be the `$BITRISE_EXPORT_METHOD` environment variable. This variable stores the export method you selected when creating the app. If you selected `development` back then, you don't need to change the input. Otherwise, manually set it to `development`.
 
    ![Export method env var](/img/export-method-envvar.png)
+   
 6. [Start a build](/builds/starting-builds-manually/).
 
 If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa with the development export method. If you have the `Deploy to Bitrise.io` Step in your workflow, you can find the .ipa on the `Apps & Artifacts` tab of the build page.
@@ -113,6 +116,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
    If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`. In that case, skip the next steps in the guide: you only need the `Deploy to Bitrise.io` Step in your workflow.
    
 5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
+
 6. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
 
    The Step will need your:
