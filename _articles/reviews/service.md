@@ -9,7 +9,7 @@ published: false
 
 ## 1. INTRODUCTION
 
-    1.1 _The following terms and conditions (referred to herein as "**Terms of
+   1.1 _The following terms and conditions (referred to herein as "**Terms of
     Service**" or "**Agreement**") tells you the terms of use on which you
     may make use of the [bitrise.io](https://www.bitrise.io) | website ("Website") and 	all content, services ("Services") and products available at or through the
     Website including the purchase of any Upgrades (as defined in Clause 6.1). The 			Website is owned and operated by Bitrise Ltd. ("Bitrise").
@@ -19,13 +19,13 @@ published: false
     Privacy Policy) and procedures that may be published from time to time
     on this Website by Bitrise._
 
-  1.2Please read this Agreement carefully before accessing or using the
-  Website as this Agreement will apply to your use of the Website. We
-  recommend that you print a copy of this for future reference. By
-  accessing or using any part of the Website or Services, you confirm that
-  you accept these Terms of Service and that you agree to comply with
-  them. If you do not agree to all the terms and conditions of this
-  Agreement, then you must not access the Website or use the Services.
+  1.2 	Please read this Agreement carefully before accessing or using the
+  		Website as this Agreement will apply to your use of the Website. We
+  		recommend that you print a copy of this for future reference. By
+  		accessing or using any part of the Website or Services, you confirm that
+ 		you accept these Terms of Service and that you agree to comply with
+ 		them. If you do not agree to all the terms and conditions of this
+  		Agreement, then you must not access the Website or use the Services.
 
   In some areas you will have different rights under these Terms of Service depending on whether you are a business or consumer.
 
