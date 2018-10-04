@@ -13,7 +13,9 @@ published: false
 
 ## Before you start 
 
-Bitrise detects your Xamarin solution file. The solution file will have to contain all the solution configuration/solution platform combinations that you wish to build on Bitrise. 
+Bitrise detects your Xamarin solution file. The solution file will have to contain all the solution configuration/solution platform combinations that you wish to build on Bitrise. [Set up your solution configurations in Visual Studio](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings). 
+
+{% include message_box.html type="example" title="Solution configuration example" content="If your solution file contains an Android and an iOS project but you only want Bitrise to build one of them, set up a solution configuration in Visual Studio that only builds one and use that configuration on Bitrise. "%} 
 
 ## Adding a Xamarin app
 
@@ -32,5 +34,3 @@ Bitrise detects your Xamarin solution file. The solution file will have to conta
  9. Select the Xamarin solution platform. This setting can be changed later. 
 10. Confirm your build configuration. 
 11. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
-
-Android test: you have to start an emulator: AVD Manager step 
