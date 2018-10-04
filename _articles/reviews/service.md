@@ -9,16 +9,15 @@ published: false
 
 ## 1. INTRODUCTION
 
-  1.1 _The following terms and conditions (referred to herein as "**Terms of
-      Service**" or "**Agreement**") tells you the terms of use on which you
-      may make use of the [bitrise.io](https://www.bitrise.io) | website ("Website") and all
-      content, services ("Services") and products available at or through the
-      Website including the purchase of any Upgrades (as defined in Clause 6.1). The Website is owned and operated by Bitrise Ltd. ("Bitrise").
-      The Website is offered subject to your acceptance without modification
-      of all of the terms and conditions contained herein and all other
-      operating rules, policies (including, without limitation, Bitrise's
-      Privacy Policy) and procedures that may be published from time to time
-      on this Website by Bitrise._
+    1.1 _The following terms and conditions (referred to herein as "**Terms of
+    Service**" or "**Agreement**") tells you the terms of use on which you
+    may make use of the [bitrise.io](https://www.bitrise.io) | website ("Website") and 	all content, services ("Services") and products available at or through the
+    Website including the purchase of any Upgrades (as defined in Clause 6.1). The 			Website is owned and operated by Bitrise Ltd. ("Bitrise").
+    The Website is offered subject to your acceptance without modification
+    of all of the terms and conditions contained herein and all other
+    operating rules, policies (including, without limitation, Bitrise's
+    Privacy Policy) and procedures that may be published from time to time
+    on this Website by Bitrise._
 
   1.2Please read this Agreement carefully before accessing or using the
   Website as this Agreement will apply to your use of the Website. We
