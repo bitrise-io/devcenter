@@ -5,7 +5,11 @@ redirect_from: []
 published: false
 
 ---
-[Xamarin](/tutorials/xamarin/index/) provides a developer with tools that can help them building cross-platform mobile applications. 
+[Xamarin](/tutorials/xamarin/index/) provides a developer with tools that can help them building cross-platform mobile applications. Bitrise supports Xamarin apps, of course: this guide aims to walk you through the procedure of:
+
+* adding a Xamarin app to Bitrise
+* testing the app
+* deploying the app 
 
 ## Adding a Xamarin app
 
@@ -24,3 +28,5 @@ published: false
  9. Select the Xamarin solution platform. This setting can be changed later. 
 10. Confirm your build configuration. 
 11. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
+
+Android test: you have to start an emulator: AVD Manager step 
