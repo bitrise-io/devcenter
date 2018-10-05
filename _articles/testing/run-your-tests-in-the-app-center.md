@@ -15,14 +15,13 @@ Upload and schedule tests on the Visual Studio App Center for your projects. The
 * Xamarin.UITest
 * XCUITest
 
-In the Workflow Editor [add](/getting-started/getting-started-workflows/)
-the `App Center upload and schedule tests` step to your workflow.
+1. In the Workflow Editor, [add](/getting-started/getting-started-workflows/) the `App Center upload and schedule tests` step to your workflow.
 
-The step has multiple required inputs. Find the value of these inputs by setting up your test on the Visual Studio App Center.
-
-1. [Prepare your test for upload.](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/)
-2. Create an [App Center](https://appcenter.ms/apps) project.
-3. Navigate to `Test runs` tab and start a `New test run`:
+   The step has multiple required inputs. You can find the value of these inputs by setting up your test on the Visual Studio App Center.
+2. Log in to the App Center. 
+3. [Prepare your test for upload](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/).
+4. Create an [App Center](https://appcenter.ms/apps) project.
+5. Navigate to `Test runs` tab and start a `New test run`:
    * Select the devices you want to test your app on.
    * Configure the test run:  choose a test series, a system language and a test framework.
    * **On the** `**Submit**` **tab you will find every required input for the step in the** `**Upload and schedule test**` **section**.
