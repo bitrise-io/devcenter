@@ -44,6 +44,7 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
 Installing your dependencies with Xamarin apps is taken care of by a dedicated Step: `NuGet restore`. This Step is part of every automatically created [workflow](/getting-started/getting-started-workflows/) for Xamarin apps and it has one required input: the path to the Xamarin solution file which is stored as an Environment Variable when you add the app. 
 
 1. Enter the Workflow Editor of your app, and click the `Workflows` tab. 
+2. Make sure you have the `NuGet restore` Step in your workflow. 
 
 ## Testing Xamarin apps 
 
@@ -62,4 +63,13 @@ Unit tests of Xamarin apps can be run with the `NUnit Runner` Step. The Step run
    * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. 
    * **Xamarin platform**: the target platform of your solution configuration. 
 
-{% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running test."%} 
+{% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running tests."%} 
+
+### UI testing 
+
+For UI tests, we strongly recommend using our `App Center upload and schedule tests` Step. You need to set up the tests in the Visual Studio App Center - [read more about it in our guide](/testing/run-your-tests-in-the-app-center/). Let's go through the process in brief.
+
+1. Add the `App Center upload and schedule tests` Step to your workflow. 
+
+   This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app. 
+2. Fill in the required inputs of the Step. You can find all these in the App Center after setting up your test run: check the **Submit** tab.
