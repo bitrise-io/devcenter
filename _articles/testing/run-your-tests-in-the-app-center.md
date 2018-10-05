@@ -26,3 +26,12 @@ Upload and schedule tests on the Visual Studio App Center for your projects. The
    * Configure the test run:  choose a test series, a system language and a test framework.
    * **On the** `**Submit**` **tab you will find every required input for the step in the** `**Upload and schedule test**` **section**.
    * Click on `Done`.
+6. On Bitrise, open the Workflow Editor and fill in the required inputs of the Step. You will need to:
+   * get an API token
+   * set a target app 
+   * set a test framework - you can see the available options 
+   * add the device selection slug
+   * add the name of the test series
+   * set the system locale (for example, _en_US_) for the test run
+   * set the path to an application file, either .ipa or .apk
+   * set the path to a test directory. Use the appropriate directory for the chosen test framework. 
