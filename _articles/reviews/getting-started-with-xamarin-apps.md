@@ -9,13 +9,17 @@ published: false
 
 * adding a Xamarin app to Bitrise
 * testing the app
-* deploying the app 
+* deploying the app
 
-## Before you start 
+## Before you start
 
-Bitrise detects your Xamarin solution file. The solution file will have to contain all the solution configuration/solution platform combinations that you wish to build on Bitrise. [Set up your solution configurations in Visual Studio](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings). 
+Before adding a Xamarin app on Bitrise, you need to prepare your Xamarin solution file. Bitrise detects the solution file and all the available solution configurations present in it. 
 
-{% include message_box.html type="example" title="Solution configuration example" content="If your solution file contains an Android and an iOS project but you only want Bitrise to build one of them, set up a solution configuration in Visual Studio that only builds one and use that configuration on Bitrise. "%} 
+A Xamarin solution file can contain multiple projects. Your solution configuration determines which projects (_solution items_) should be built and what project configuration type should the build use. 
+
+The solution file will have to contain all the solution configurations that you wish to build on Bitrise. [Set up your solution configurations in Visual Studio](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings). Also, make sure that a solution configuration you wish to build on a given solution platform is compatible with that platform. 
+
+{% include message_box.html type="example" title="Solution configuration example" content="For example, if your solution file contains an Android and an iOS project but you only want Bitrise to build the Android project, set up a solution configuration in Visual Studio that only builds the Android project and use that configuration on Bitrise. Use the appropriate solution platform for that configuration: for example, if you only build an Android project, do not set iPhone as your solution platform."%}
 
 ## Adding a Xamarin app
 
@@ -28,9 +32,9 @@ Bitrise detects your Xamarin solution file. The solution file will have to conta
  5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
  6. Type the name of the branch that includes your project's configuration - master, for example - then click `Next`.
  7. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them. In the case of a Xamarin app, we're looking for the Xamarin Solution file.
- 8. Select the Xamarin solution configuration. The available options are based on the solution file. This setting can be changed later. 
+ 8. Select the Xamarin solution configuration. The available options are based on the solution file. This setting can be changed later.
 
     ![](/img/xamarin-setup-config.png)
- 9. Select the Xamarin solution platform. This setting can be changed later. 
-10. Confirm your build configuration. 
+ 9. Select the Xamarin solution platform. This setting can be changed later.
+10. Confirm your build configuration.
 11. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
