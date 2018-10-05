@@ -87,3 +87,12 @@ With the help of Bitrise, you can deploy a Xamarin app to:
 To deploy your app, you need to build and export the application file, of course. But that is very simple!
 
 ### Exporting the app package file 
+
+On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same. To make sure you build the correct project type, set up your solution configurations in Visual Studio. For example, if you wish to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
+
+1. Enter the Workflow Editor of your app, and click the `Workflows` tab. 
+2. Make sure you have the `Xamarin Archive` Step in the workflow you wish to use. 
+3. Make sure the required inputs of the Step have appropriate values. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
+   * **Path to the Xamarin Solution file**: the location of your Xamarin solution file. 
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. Change the appropriate environment variable if you wish to run a different configuration; for example, if you only wish to build an iOS project, as opposed to both iOS and Android projects.  
+   * **Xamarin solution platform**: the target platform of your solution configuration. 
