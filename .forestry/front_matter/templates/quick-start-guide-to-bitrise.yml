@@ -15,7 +15,6 @@ fields:
   default: ''
 pages:
 - _articles/reviews/getting-started-with-xamarin-apps.md
-- _articles/reviews/service.md
 - _articles/reviews/code-signing-troubleshooting.md
 - _articles/tutorials/xamarin/index.md
 - _articles/troubleshooting/frequent-android-issues.md
