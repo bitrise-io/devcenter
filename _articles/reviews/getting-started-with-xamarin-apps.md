@@ -32,7 +32,7 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
  5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
  6. Type the name of the branch that includes your project's configuration - master, for example - then click `Next`.
  7. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them. In the case of a Xamarin app, we're looking for the Xamarin Solution file.
- 8. Select the Xamarin solution configuration. The available options are based on the solution file. This will be stored as an Environment Variable and it can be changed later.
+ 8. Select the Xamarin solution configuration. The available options are based on the solution file. This will be stored as an [Environment Variable](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/) and it can be changed later.
 
     ![](/img/xamarin-setup-config.png)
  9. Select the Xamarin solution platform. This will be stored as an Environment Variable and it can be changed later.
@@ -41,8 +41,25 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
 
 ## Installing dependencies
 
-Installing your dependencies with Xamarin apps is taken care of by a dedicated Step: `NuGet restore`. This Step is part of every automatically created workflow for Xamarin apps and it has one required input: the path to the Xamarin solution file which is stored as an Environment Variable when you add the app. 
+Installing your dependencies with Xamarin apps is taken care of by a dedicated Step: `NuGet restore`. This Step is part of every automatically created [workflow](/getting-started/getting-started-workflows/) for Xamarin apps and it has one required input: the path to the Xamarin solution file which is stored as an Environment Variable when you add the app. 
+
+1. Enter the Workflow Editor of your app, and click the `Workflows` tab. 
 
 ## Testing Xamarin apps 
 
-You can run **unit tests** and **UI tests** on Bitrise, both with Android and iOS projects.  
+You can run **unit tests** and **UI tests** on Bitrise, both with Android and iOS projects. It is very easy to configure and you can use all the testing frameworks available on the Microsoft App Center. 
+
+### Unit testing 
+
+Unit tests of Xamarin apps can be run with the `NUnit Runner` Step. The Step runs NUnit 2.x and NUnit 3.0 or higher tests with the NUnit Console Runner (_nunit3-console.exe_). 
+
+1. Enter the Workflow Editor of your app, and click the `Workflows` tab. 
+2. Add the `NUnit runner` Step to your workflow. 
+
+   This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app. 
+3. Fill in the required input variables. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
+   * **Path to Xamarin Solution**: the location of your Xamarin solution file. 
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. 
+   * **Xamarin platform**: the target platform of your solution configuration. 
+
+{% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running test."%} 
