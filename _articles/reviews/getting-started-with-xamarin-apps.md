@@ -15,9 +15,9 @@ published: false
 
 Before adding a Xamarin app on Bitrise, you need to prepare your Xamarin solution file. Bitrise detects the solution file and all the available solution configurations present in it. 
 
-A Xamarin solution file can contain multiple projects. Your solution configuration determines which projects (_solution items_) should be built and what project configuration type the build should use. 
+A Xamarin solution file can contain multiple projects. Your solution configuration determines which projects (_solution items_) should be built and what project configuration type (for example, debug or release) the build should use. 
 
-The solution file will have to contain all the solution configurations that you wish to build on Bitrise. [Set up your solution configurations in Visual Studio](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings). Also, make sure that a solution configuration you wish to build on a given solution platform is compatible with that platform. 
+ [Set up your solution configurations in Visual Studio](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings). The solution file will have to contain all the solution configurations that you wish to build on Bitrise. Also, make sure that a solution configuration you wish to build on a given solution platform is compatible with that platform. 
 
 {% include message_box.html type="example" title="Solution configuration example" content="For example, if your solution file contains an Android and an iOS project but you only want Bitrise to build the Android project, set up a solution configuration in Visual Studio that only builds the Android project and use that configuration on Bitrise. Use the appropriate solution platform for that configuration: for example, if you only build an Android project, do not set iPhone as your solution platform."%}
 
