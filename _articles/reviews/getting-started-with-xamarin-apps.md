@@ -46,6 +46,8 @@ Installing your dependencies with Xamarin apps is taken care of by a dedicated S
 1. Enter the Workflow Editor of your app, and click the `Workflows` tab. 
 2. Make sure you have the `NuGet restore` Step in your workflow. 
 
+   The Step's single required input is the path to the Xamarin solution file. By default, the input is an [Environment Variable](/getting-started/getting-started-steps/#environment-variables-as-step-inputs), stored when adding the app to Bitrise. Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
+
 ## Testing Xamarin apps 
 
 You can run **unit tests** and **UI tests** on Bitrise, both with Android and iOS projects. It is very easy to configure and you can use all the testing frameworks available on the Microsoft App Center. 
@@ -60,7 +62,7 @@ Unit tests of Xamarin apps can be run with the `NUnit Runner` Step. The Step run
    This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app. 
 3. Fill in the required input variables. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
    * **Path to Xamarin Solution**: the location of your Xamarin solution file. 
-   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. 
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. Change the appropriate environment variable if you wish to run a different configuration; for example, if you only wish to build an iOS project, as opposed to both iOS and Android projects.  
    * **Xamarin platform**: the target platform of your solution configuration. 
 
 {% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running tests."%} 
@@ -73,3 +75,15 @@ For UI tests, we strongly recommend using our `App Center upload and schedule te
 
    This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app. 
 2. Fill in the required inputs of the Step. You can find all these in the App Center after setting up your test run: check the **Submit** tab.
+
+## Deploying Xamarin apps 
+
+With the help of Bitrise, you can deploy a Xamarin app to:
+
+* Bitrise.io 
+* the App Store
+* Google Play
+
+To deploy your app, you need to build and export the application file, of course. But that is very simple!
+
+### Exporting the app package file 
