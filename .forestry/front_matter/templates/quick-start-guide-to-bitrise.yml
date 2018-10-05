@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/reviews/getting-started-with-xamarin-apps.md
 - _articles/reviews/code-signing-troubleshooting.md
 - _articles/tutorials/xamarin/index.md
@@ -53,6 +54,5 @@ pages:
 - _articles/getting-started/signing-up/self-hosted-gitlab.md
 - _articles/bitrise-cli/index.md
 - _articles/getting-started/getting-started-steps.md
-- _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/getting-started/account-security.md
 - _articles/getting-started/getting-started-workflows.md
