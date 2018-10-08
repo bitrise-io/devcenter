@@ -90,6 +90,21 @@ To deploy your app, you need to build, sign and export the application file.
 
 ### Code signing Xamarin apps 
 
+Code signing requires different approaches for iOS and Android projects. We're presenting a brief overview here of code signing for both platforms.
+
+#### **Android**
+
+For Android, you need an APK and you need to sign that APK. Bitrise makes that happen with the `Sign APK` Step. The Step requires a keystore file, a keystore password and a keystore alias. 
+
+1. [Create a code signing identity in Visual Studio](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/signing/?tabs=vswin). 
+2. Upload the keystore file to Bitrise: open the Workflow Editor of your app, go to the `Code Signing` tab and upload the file to the `ANDROID KEYSTORE FILE` section. 
+3. Set a password and an alias. 
+4. On the `Workflows` tab, add the `Sign APK` Step to your workflow, AFTER the `Xamarin Archive` Step. 
+
+Read more about using the `Sign APK` Step [in our guide](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/)!
+
+#### **iOS**
+
 ### Exporting the app package file 
 
 On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same for all Xamarin apps. To make sure you build the correct project type, set up your solution configurations in Visual Studio. For example, if you want to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
