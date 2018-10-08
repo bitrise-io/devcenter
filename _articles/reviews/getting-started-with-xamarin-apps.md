@@ -11,6 +11,8 @@ published: false
 * testing the app
 * deploying the app
 
+You can do everything in this guide in one single workflow but we recommend using at least two: one to test your app and one to deploy it. Also, you can build both an iOS and an Android version of a Xamarin app within a single workflow. 
+
 ## Before you start
 
 Before adding a Xamarin app on Bitrise, you need to prepare your Xamarin solution file. Bitrise detects the solution file and all the available solution configurations present in it. 
@@ -84,7 +86,9 @@ With the help of Bitrise, you can deploy a Xamarin app to:
 * the App Store
 * Google Play
 
-To deploy your app, you need to build and export the application file, of course. But that is very simple!
+To deploy your app, you need to build, sign and export the application file.
+
+### Code signing Xamarin apps 
 
 ### Exporting the app package file 
 
@@ -97,4 +101,4 @@ On Bitrise, it does not matter whether you want to export an .ipa file, an .apk 
    * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.  
    * **Xamarin solution platform**: the target platform of your solution configuration. 
 
-### Deploying to Bitrise.io and to online stores
+### Deploying the app
