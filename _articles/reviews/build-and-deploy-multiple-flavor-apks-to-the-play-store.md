@@ -5,7 +5,9 @@ redirect_from: []
 published: false
 
 ---
-You can have an app with multiple flavors where flavors represent different versions of the core app. Each version has different features to them. Each of these versions can be built and released to an App Store or deployed to the same device. when - if you want to build a release a different version of your app 
+You can have an app with multiple flavors where flavors represent different versions of the core app. Each version has different features to them. Each of these versions can be built and released to an App Store or deployed to the same device. 
+
+Build types are not the same as build flavors. Build types mean how the app is built and packaged such as a debug or a release build. If you have two flavors of the same app and at least two build types, it means 4 different versions, that is, build variants can be made.
 
 It is possible to have multiple flavors of your Android APK  and have them built and released separately from their main/base/full version. 
 
