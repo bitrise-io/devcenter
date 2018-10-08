@@ -96,3 +96,5 @@ On Bitrise, it does not matter whether you want to export an .ipa file, an .apk 
    * **Path to the Xamarin Solution file**: the location of your Xamarin solution file. 
    * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. Change the appropriate environment variable if you wish to run a different configuration; for example, if you only wish to build an iOS project, as opposed to both iOS and Android projects.  
    * **Xamarin solution platform**: the target platform of your solution configuration. 
+
+### Deploying to Bitrise.io and to online stores
