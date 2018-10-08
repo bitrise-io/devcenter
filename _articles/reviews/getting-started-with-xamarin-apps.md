@@ -105,6 +105,18 @@ Read more about using the `Sign APK` Step [in our guide](/code-signing/android-c
 
 #### **iOS**
 
+1. Set up your code signing identity and provisioning profile [on Visual Studio](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/provisioning/). 
+2. In the solution file, find the iOS project you want to build and set up its project options. You need to set:
+   * the signing identity you want to use (for example, Developer)
+   * the provisioning profile
+
+   You can also set up custom entitlements in a .plist file. 
+3. On your own machine, use our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool to collect the code signing files of your project. 
+4. Upload the files - the .p12 certificate and the provisioning profile - to Bitrise: open the Workflow Editor of your app and upload the files on the `Code Signing` tab.
+5. Add the `Certificate and profile installer` Step to your workflow. 
+
+Read more about iOS code signing [in our guide](https://yv69yaruhkt48w.preview.forestry.io/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/)! 
+
 ### Exporting the app package file 
 
 On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same for all Xamarin apps. To make sure you build the correct project type, set up your solution configurations in Visual Studio. For example, if you want to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
@@ -117,3 +129,9 @@ On Bitrise, it does not matter whether you want to export an .ipa file, an .apk 
    * **Xamarin solution platform**: the target platform of your solution configuration. 
 
 ### Deploying the app
+
+We'll walk you through how to deploy your Xamarin app to:
+
+* Bitrise.io
+* Google Play
+* the App Store
