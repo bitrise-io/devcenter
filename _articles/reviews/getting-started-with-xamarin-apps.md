@@ -50,7 +50,7 @@ Installing your dependencies with Xamarin apps is taken care of by a dedicated S
 
 ## Testing Xamarin apps 
 
-You can run **unit tests** and **UI tests** on Bitrise, both with Android and iOS projects. It is very easy to configure and you can use all the testing frameworks available on the Microsoft App Center. 
+You can run **unit tests** and **UI tests** on Bitrise, both with Android and iOS projects. It is easy to configure and you can use all the testing frameworks available on the Microsoft App Center. 
 
 ### Unit testing 
 
@@ -88,7 +88,7 @@ To deploy your app, you need to build and export the application file, of course
 
 ### Exporting the app package file 
 
-On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same. To make sure you build the correct project type, set up your solution configurations in Visual Studio. For example, if you wish to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
+On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same for all Xamarin apps. To make sure you build the correct project type, set up your solution configurations in Visual Studio. For example, if you wish to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
 
 1. Enter the Workflow Editor of your app, and click the `Workflows` tab. 
 2. Make sure you have the `Xamarin Archive` Step in the workflow you wish to use. 
