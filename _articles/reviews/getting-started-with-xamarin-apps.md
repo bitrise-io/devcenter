@@ -17,7 +17,7 @@ Before adding a Xamarin app on Bitrise, you need to prepare your Xamarin solutio
 
 A Xamarin solution file can contain multiple projects. Your solution configuration determines which projects (_solution items_) should be built and what project configuration type (for example, _debug_ or _release_) the build should use. 
 
- [Set up your solution configurations in Visual Studio](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings). The solution file will have to contain all the solution configurations that you wish to build on Bitrise. Also, make sure that a solution configuration you wish to build on a given solution platform is compatible with that platform. 
+ [Set up your solution configurations in Visual Studio](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings). The solution file will have to contain all the solution configurations that you want to build on Bitrise. Also, make sure that a solution configuration you wish to build on a given solution platform is compatible with that platform. 
 
 {% include message_box.html type="example" title="Solution configuration" content="For example, if your solution file contains an Android and an iOS project but you want Bitrise to build only the Android project, set up a solution configuration in Visual Studio that only builds the Android project and use that configuration on Bitrise. Use the appropriate solution platform for that configuration: for example, if you only build an Android project, do not set iPhone as your solution platform."%}
 
@@ -62,7 +62,7 @@ Unit tests of Xamarin apps can be run with the `NUnit Runner` Step. The Step run
    This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app. 
 3. Fill in the required input variables. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
    * **Path to Xamarin Solution**: the location of your Xamarin solution file. 
-   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. Change the appropriate environment variable if you wish to run a different configuration; for example, if you only wish to build an iOS project, as opposed to both iOS and Android projects.  
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. Change the appropriate environment variable if you wish to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.  
    * **Xamarin platform**: the target platform of your solution configuration. 
 
 {% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running tests."%} 
@@ -88,13 +88,13 @@ To deploy your app, you need to build and export the application file, of course
 
 ### Exporting the app package file 
 
-On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same for all Xamarin apps. To make sure you build the correct project type, set up your solution configurations in Visual Studio. For example, if you wish to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
+On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same for all Xamarin apps. To make sure you build the correct project type, set up your solution configurations in Visual Studio. For example, if you want to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
 
 1. Enter the Workflow Editor of your app, and click the `Workflows` tab. 
-2. Make sure you have the `Xamarin Archive` Step in the workflow you wish to use. 
+2. Make sure you have the `Xamarin Archive` Step in your workflow. 
 3. Make sure the required inputs of the Step have appropriate values. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
    * **Path to the Xamarin Solution file**: the location of your Xamarin solution file. 
-   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. Change the appropriate environment variable if you wish to run a different configuration; for example, if you only wish to build an iOS project, as opposed to both iOS and Android projects.  
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.  
    * **Xamarin solution platform**: the target platform of your solution configuration. 
 
 ### Deploying to Bitrise.io and to online stores
