@@ -15,7 +15,7 @@ You can do everything in this guide in one single workflow but we recommend usin
 
 ## Before you start
 
-Before adding a Xamarin app on Bitrise, you need to prepare your Xamarin solution file. Bitrise detects the solution file and all the available solution configurations present in it. 
+Before adding a Xamarin app on Bitrise, you need to prepare your Xamarin solution file. Bitrise detects the solution file and all the available [solution configurations](https://docs.microsoft.com/en-us/visualstudio/ide/understanding-build-configurations?view=vs-2017) present in it. 
 
 A Xamarin solution file can contain multiple projects. Your solution configuration determines which projects (_solution items_) should be built and what project configuration type (for example, _debug_ or _release_) the build should use. 
 
@@ -92,6 +92,8 @@ To deploy your app, you need to build, sign and export the application file.
 
 Code signing requires different approaches for iOS and Android projects. We're presenting a brief overview here of code signing for both platforms.
 
+For the purposes of deploying your app, we recommend [creating a new workflow](/getting-started/getting-started-workflows/), based on the automatically created deploy workflow. 
+
 #### **Android**
 
 For Android, you need an APK and you need to sign that APK. Bitrise makes that happen with the `Sign APK` Step. The Step requires a keystore file, a keystore password and a keystore alias. 
@@ -135,3 +137,24 @@ We'll walk you through how to deploy your Xamarin app to:
 * Bitrise.io
 * Google Play
 * the App Store
+
+It's important to note that most of the configuration is done in Visual Studio. You need to set up [an appropriate Release configuration](https://docs.microsoft.com/en-us/visualstudio/debugger/how-to-set-debug-and-release-configurations?view=vs-2017) for your project. For your iOS project, set up the correct code signing identity in Visual Studio: for example, a Distribution identity with an App Store type provisioning profile. 
+
+Before you start, upload all the necessary code signing files to Bitrise! Remember that if you want to release your app to the App Store, you need to upload a Distribution type .p12 certificate file and an App Store type provisioning profile. 
+
+1. Go to the `Workflows` tab of the Workflow Editor. 
+2. Select the workflow you created for deploying your app.
+3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow. 
+4. Add the following Steps AFTER the `Xamarin Archive` Step: 
+   * `Deploy to Bitrise.io`
+
+
+   * `Deploy to iTunes Connect - Application Loader`
+   * `Google Play Deploy`
+5. Click the `Deploy to iTunes Connect - Application Loader`  Step, and enter your Apple ID and password in the relevant input field.
+6. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field. 
+
+   Note that you need to create a Secret Environment Variable to reference the Service Account's JSON key file. Learn more about [how to access your JSON key file](https://yv69yaruhkt48w.preview.forestry.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
+7. Start a build!
+
+If the build is successful, congratulations - you've just deployed your Xamarin app!
