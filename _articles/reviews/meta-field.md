@@ -44,4 +44,4 @@ Set a namespace ID to your meta so that the namespace can mark the customized bl
       }
     }
 
-Any customization you set in `meta` will only replicate to your own yml.editor as a custom parameter and will not be present in the default Workflow Editor. The reason for this is that meta and its content is ignored and not validated when a variable is saved in Workflow Editor. 
+Any customization you set in `meta` will only replicate to your own yml.editor as a custom parameter and **will not be present in the standard Workflow Editor**. The reason for this, even though Workflow Editor normally validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process. 
