@@ -5,22 +5,43 @@ redirect_from: []
 published: false
 
 ---
-Build logs allow users to analyze their builds and find out what went wrong - and what went right! On Bitrise, build logs are easily accessible, they can be viewed on the website in their entirety or they can be downloaded to view them on your own device. 
+Build logs allow users to analyze their builds and find out what went wrong - and what went right! On Bitrise, build logs are easily accessible, they can be viewed on the website in their entirety or they can be downloaded to view them on your own device.
 
 ### Finding a build log
 
-When you run a build, a build log is generated automatically. Every build has its own log, with its own unique build log URL. The build log URL contains the build slug: a hexadecimal identifier for a specific build. 
+When you run a build, a build log is generated automatically. Every build has its own log, with its own unique build log URL. The build log URL contains the build slug: a hexadecimal identifier for a specific build.
 
 1. Log in to Bitrise and click on your app on the Apps page.
-2. Click the `Builds` tab. 
+2. Click the `Builds` tab.
 3. Select the build you want to check out.
-4. Find the log under the `LOGS` tab. 
+4. Find the log under the `LOGS` tab.
 
-{% include message_box.html type="info" title="Opening the full log" content="By default, only the end of the log is displayed. Click the bar on the top of the log to expand."%} 
+{% include message_box.html type="info" title="Opening the full log" content="If you have a longer build log then by default, only the end of the log is displayed. Click the bar on the top of the log to expand."%}
 
 ### Contents of a build log
 
 All Bitrise build logs have the same basic structure. When opening a full log, under the Bitrise logo you will find:
 
 * the version of the Bitrise CLI that ran the build
-* information about what modes Bitrise ran the build in (for example, CI mode)
+* the name of the workflow that was run (for example, primary)
+
+Below this basic information, you will see every Step that was ran as part of the build. For each Step, Bitrise displays:
+
+* the name and version of the Step
+* the running time of the Step
+* a printout of the Step's commands and their results, including highlighted error messages
+* whether the Step passed or failed
+
+Check your build log carefully when a build fails. Error messages are usually highlighted in red. For failed Steps, an exit code is displayed next to their names. This can tell you more about why the particular Step failed. 
+
+### Downloading a build log
+
+If you need to send your build logs to people who do not have access to the app on Bitrise, or you want to store your logs in your own archives, you can simply download the log file from Bitrise. 
+
+{% include message_box.html type="warning" title="Log security" content="Please note that your build log can contain sensitive information! Make sure to check its contents before downloading the log file and sending it out to anyone. We recommend using [Secrets](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/#about-secrets) to make sure nothing sensitive appears in build logs."%} 
+
+1. Log in to Bitrise and click on your app on the Apps page.
+2. Click the `Builds` tab.
+3. Select the build you want to check out.
+4. Find the log under the `LOGS` tab.
+5. Click the `Download Logs` button. 
