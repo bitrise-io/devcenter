@@ -11,7 +11,7 @@ published: false
 * testing the app
 * deploying the app
 
-You can do everything **_in this guide_** in one single workflow but we recommend using at least two: one to test your app and one to deploy it. Also, you can build both an iOS and an Android version of a Xamarin app within a single workflow.
+You can do the entire procedure in one single workflow but we recommend using at least two: one to test your app and one to deploy it. There is no need to have separate workflows for the different project types, though: you can build both an iOS and an Android version of a Xamarin app within a single workflow.
 
 ## Before you start
 
@@ -48,7 +48,7 @@ Installing your dependencies with Xamarin apps is taken care of by a dedicated S
 1. Enter the Workflow Editor of your app, and click the `Workflows` tab.
 2. Make sure you have the `NuGet restore` Step in your workflow.
 
-   The Step's single required input is the path to the Xamarin solution file. By default, the input is an [Environment Variable](/getting-started/getting-started-steps/#environment-variables-as-step-inputs), stored when adding the app to Bitrise. **_Click on the_** `**_Env Vars_**` **_tab in the Workflow Editor to change the value of the Environment Variable._**
+   The Step's single required input is the path to the Xamarin solution file. By default, the input is an [Environment Variable](/getting-started/getting-started-steps/#environment-variables-as-step-inputs), stored when adding the app to Bitrise. If you want to use a different solution file, click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
 
 ## Testing Xamarin apps
 
@@ -62,9 +62,9 @@ Unit tests of Xamarin apps can be run with the `NUnit Runner` Step. The Step run
 2. Add the `NUnit runner` Step to your workflow.
 
    This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app.
-3. Fill in the required input variables. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). **_Click on the_** `**_Env Vars_**` **_tab in the Workflow Editor to change the value of the Environment Variable._**
+3. Fill in the required input variables. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). If you want to use a different solution file or solution configuration, click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
    * **Path to Xamarin Solution**: the location of your Xamarin solution file.
-   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. Change the appropriate environment variable if you wish to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
    * **Xamarin platform**: the target platform of your solution configuration.
 
 {% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running tests."%}
@@ -100,7 +100,7 @@ For Android, you need an APK and you need to sign that APK. Bitrise makes that h
 
 1. [Create a code signing identity in Visual Studio](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/signing/?tabs=vswin).
 2. Upload the keystore file to Bitrise: open the Workflow Editor of your app, go to the `Code Signing` tab and upload the file to the `ANDROID KEYSTORE FILE` section.
-3. Set a password and an alias. **_\[For Android, users need to provide a keystore password, a keystore alias and a private key password - so here I believe the last one is missing :).\]_**
+3. Set a keystore password, a keystore alias and a private key password.
 4. On the `Workflows` tab, add the `Sign APK` Step to your workflow, AFTER the `Xamarin Archive` Step.
 
 Read more about using the `Sign APK` Step [in our guide](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/)!
@@ -142,17 +142,20 @@ It's important to note that most of the configuration is done in Visual Studio. 
 
 Before you start, upload all the necessary code signing files to Bitrise! Remember that if you want to release your app to the App Store, you need to upload a Distribution type .p12 certificate file and an App Store type provisioning profile.
 
-1. Go to the `Workflows` tab of the Workflow Editor.
-2. Select the workflow you created for deploying your app.
-3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
-4. Add the following Steps AFTER the `Xamarin Archive` Step:
-   * `Deploy to Bitrise.io`
-   * `Deploy to iTunes Connect - Application Loader`
-   * `Google Play Deploy`
-5. Click the `Deploy to iTunes Connect - Application Loader`  Step, and enter your Apple ID and password in the relevant input field.
-6. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field.
+ 1. Go to the `Workflows` tab of the Workflow Editor.
+ 2. Select the workflow you created for deploying your app.
+ 3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
+ 4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.
+ 5. Add the following Steps AFTER the `Xamarin Archive` Step:
+    * `Deploy to Bitrise.io`
+    * `Deploy to iTunes Connect - Application Loader`
+    * `Google Play Deploy`
+ 6. Click the `Deploy to iTunes Connect - Application Loader`  Step, and enter your Apple ID and password in the relevant input field.
+ 7. Upload the Service Account JSON key file to the **Generic File Storage** on the `Code Signing`tab of the Workflow Editor. 
 
-   Note that you need to create a Secret Environment Variable to reference the Service Account's JSON key file. Learn more about [how to access your JSON key file](https://yv69yaruhkt48w.preview.forestry.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
-7. Start a build!
+    Learn more about [how to access your JSON key file](https://yv69yaruhkt48w.preview.forestry.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
+ 8. Create a Secret Environment Variable to reference the Service Account's JSON key file.
+ 9. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field.
+10. Start a build!
 
 If the build is successful, congratulations - you've just deployed your Xamarin app!
