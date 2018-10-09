@@ -1,5 +1,5 @@
 ---
-title: 'Custom properties to '
+title: Customizing Workflow Editor
 date: 2018-10-09 11:04:33 +0000
 redirect_from: []
 published: false
@@ -12,7 +12,7 @@ Our jumping-off point is a standard env var yml which has a `KEY` and an `opts` 
     KEY: "VALUE",
     opts: {
       title: "My env var"
-      description: "Description of my env var, which is long."
+      description: "Description of my env var."
       summary: "Summary of env var."
       ...
     }
@@ -24,7 +24,7 @@ Now this structure can be expanded by adding the `meta` section right at the end
     KEY: "VALUE",
     opts: {
       title: "My env var"
-      description: "Description of my env var, which is long."
+      description: "Description of my env var."
       summary: "Summary of env var."
       ...
       meta: {
