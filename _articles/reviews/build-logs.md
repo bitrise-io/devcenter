@@ -11,6 +11,8 @@ Build logs allow users to analyze their builds and find out what went wrong - an
 
 When you run a build, a build log is generated automatically. Every build has its own log, with its own unique build log URL. The build log URL contains the build slug: a hexadecimal identifier for a specific build.
 
+{% include message_box.html type="note" title="Assisting Bitrise Support" content="When Bitrise Support asks for your build logs, the best thing to do is send the build URL."%} 
+
 1. Log in to Bitrise and click on your app on the Apps page.
 2. Click the `Builds` tab.
 3. Select the build you want to check out.
