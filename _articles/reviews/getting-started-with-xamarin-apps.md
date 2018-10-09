@@ -11,15 +11,15 @@ published: false
 * testing the app
 * deploying the app
 
-You can do everything in this guide in one single workflow but we recommend using at least two: one to test your app and one to deploy it. Also, you can build both an iOS and an Android version of a Xamarin app within a single workflow. 
+You can do everything **_in this guide_** in one single workflow but we recommend using at least two: one to test your app and one to deploy it. Also, you can build both an iOS and an Android version of a Xamarin app within a single workflow.
 
 ## Before you start
 
-Before adding a Xamarin app on Bitrise, you need to prepare your Xamarin solution file. Bitrise detects the solution file and all the available [solution configurations](https://docs.microsoft.com/en-us/visualstudio/ide/understanding-build-configurations?view=vs-2017) present in it. 
+Before adding a Xamarin app on Bitrise, you need to prepare your Xamarin solution file. Bitrise detects the solution file and all the available [solution configurations](https://docs.microsoft.com/en-us/visualstudio/ide/understanding-build-configurations?view=vs-2017) present in it.
 
-A Xamarin solution file can contain multiple projects. Your solution configuration determines which projects (_solution items_) should be built and what project configuration type (for example, _debug_ or _release_) the build should use. 
+A Xamarin solution file can contain multiple projects. Your solution configuration determines which projects (_solution items_) should be built and what project configuration type (for example, _debug_ or _release_) the build should use.
 
- [Set up your solution configurations in Visual Studio](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings). The solution file will have to contain all the solution configurations that you want to build on Bitrise. Also, make sure that a solution configuration you wish to build on a given solution platform is compatible with that platform. 
+[Set up your solution configurations in Visual Studio](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings). The solution file will have to contain all the solution configurations that you want to build on Bitrise. Also, make sure that a solution configuration you wish to build on a given solution platform is compatible with that platform.
 
 {% include message_box.html type="example" title="Solution configuration" content="For example, if your solution file contains an Android and an iOS project but you want Bitrise to build only the Android project, set up a solution configuration in Visual Studio that only builds the Android project and use that configuration on Bitrise. Use the appropriate solution platform for that configuration: for example, if you only build an Android project, do not set iPhone as your solution platform."%}
 
@@ -43,92 +43,92 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
 
 ## Installing dependencies
 
-Installing your dependencies with Xamarin apps is taken care of by a dedicated Step: `NuGet restore`. This Step is part of every automatically created [workflow](/getting-started/getting-started-workflows/) for Xamarin apps and it has one required input: the path to the Xamarin solution file which is stored as an Environment Variable when you add the app. 
+Installing your dependencies with Xamarin apps is taken care of by a dedicated Step: `NuGet restore`. This Step is part of every automatically created [workflow](/getting-started/getting-started-workflows/) for Xamarin apps and it has one required input: the path to the Xamarin solution file which is stored as an Environment Variable when you add the app.
 
-1. Enter the Workflow Editor of your app, and click the `Workflows` tab. 
-2. Make sure you have the `NuGet restore` Step in your workflow. 
+1. Enter the Workflow Editor of your app, and click the `Workflows` tab.
+2. Make sure you have the `NuGet restore` Step in your workflow.
 
-   The Step's single required input is the path to the Xamarin solution file. By default, the input is an [Environment Variable](/getting-started/getting-started-steps/#environment-variables-as-step-inputs), stored when adding the app to Bitrise. Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
+   The Step's single required input is the path to the Xamarin solution file. By default, the input is an [Environment Variable](/getting-started/getting-started-steps/#environment-variables-as-step-inputs), stored when adding the app to Bitrise. **_Click on the_** `**_Env Vars_**` **_tab in the Workflow Editor to change the value of the Environment Variable._**
 
-## Testing Xamarin apps 
+## Testing Xamarin apps
 
-You can run **unit tests** and **UI tests** on Bitrise, both with Android and iOS projects. It is easy to configure and you can use all the testing frameworks available on the Microsoft App Center. 
+You can run **unit tests** and **UI tests** on Bitrise, both with Android and iOS projects. It is easy to configure and you can use all the testing frameworks available on the Microsoft App Center.
 
-### Unit testing 
+### Unit testing
 
-Unit tests of Xamarin apps can be run with the `NUnit Runner` Step. The Step runs NUnit 2.x and NUnit 3.0 or higher tests with the NUnit Console Runner (_nunit3-console.exe_). 
+Unit tests of Xamarin apps can be run with the `NUnit Runner` Step. The Step runs NUnit 2.x and NUnit 3.0 or higher tests with the NUnit Console Runner (_nunit3-console.exe_).
 
-1. Enter the Workflow Editor of your app, and click the `Workflows` tab. 
-2. Add the `NUnit runner` Step to your workflow. 
+1. Enter the Workflow Editor of your app, and click the `Workflows` tab.
+2. Add the `NUnit runner` Step to your workflow.
 
-   This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app. 
-3. Fill in the required input variables. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
-   * **Path to Xamarin Solution**: the location of your Xamarin solution file. 
-   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. Change the appropriate environment variable if you wish to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.  
-   * **Xamarin platform**: the target platform of your solution configuration. 
+   This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app.
+3. Fill in the required input variables. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). **_Click on the_** `**_Env Vars_**` **_tab in the Workflow Editor to change the value of the Environment Variable._**
+   * **Path to Xamarin Solution**: the location of your Xamarin solution file.
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you wish to run on Bitrise. Change the appropriate environment variable if you wish to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
+   * **Xamarin platform**: the target platform of your solution configuration.
 
-{% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running tests."%} 
+{% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running tests."%}
 
-### UI testing 
+### UI testing
 
 For UI tests, we strongly recommend using our `App Center upload and schedule tests` Step. You need to set up the tests in the Visual Studio App Center - [read more about it in our guide](/testing/run-your-tests-in-the-app-center/). Let's go through the process in brief.
 
-1. Add the `App Center upload and schedule tests` Step to your workflow. 
+1. Add the `App Center upload and schedule tests` Step to your workflow.
 
-   This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app. 
+   This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app.
 2. Fill in the required inputs of the Step. You can find all these in the App Center after setting up your test run: check the **Submit** tab.
 
-## Deploying Xamarin apps 
+## Deploying Xamarin apps
 
 With the help of Bitrise, you can deploy a Xamarin app to:
 
-* Bitrise.io 
+* Bitrise.io
 * the App Store
 * Google Play
 
 To deploy your app, you need to build, sign and export the application file.
 
-### Code signing Xamarin apps 
+### Code signing Xamarin apps
 
 Code signing requires different approaches for iOS and Android projects. We're presenting a brief overview here of code signing for both platforms.
 
-For the purposes of deploying your app, we recommend [creating a new workflow](/getting-started/getting-started-workflows/), based on the automatically created deploy workflow. 
+For the purposes of deploying your app, we recommend [creating a new workflow](/getting-started/getting-started-workflows/), based on the automatically created deploy workflow.
 
 #### **Android**
 
-For Android, you need an APK and you need to sign that APK. Bitrise makes that happen with the `Sign APK` Step. The Step requires a keystore file, a keystore password and a keystore alias. 
+For Android, you need an APK and you need to sign that APK. Bitrise makes that happen with the `Sign APK` Step. The Step requires a keystore file, a keystore password and a keystore alias.
 
-1. [Create a code signing identity in Visual Studio](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/signing/?tabs=vswin). 
-2. Upload the keystore file to Bitrise: open the Workflow Editor of your app, go to the `Code Signing` tab and upload the file to the `ANDROID KEYSTORE FILE` section. 
-3. Set a password and an alias. 
-4. On the `Workflows` tab, add the `Sign APK` Step to your workflow, AFTER the `Xamarin Archive` Step. 
+1. [Create a code signing identity in Visual Studio](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/signing/?tabs=vswin).
+2. Upload the keystore file to Bitrise: open the Workflow Editor of your app, go to the `Code Signing` tab and upload the file to the `ANDROID KEYSTORE FILE` section.
+3. Set a password and an alias. **_\[For Android, users need to provide a keystore password, a keystore alias and a private key password - so here I believe the last one is missing :).\]_**
+4. On the `Workflows` tab, add the `Sign APK` Step to your workflow, AFTER the `Xamarin Archive` Step.
 
 Read more about using the `Sign APK` Step [in our guide](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/)!
 
 #### **iOS**
 
-1. Set up your code signing identity and provisioning profile [on Visual Studio](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/provisioning/). 
+1. Set up your code signing identity and provisioning profile [on Visual Studio](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/provisioning/).
 2. In the solution file, find the iOS project you want to build and set up its project options. You need to set:
    * the signing identity you want to use (for example, Developer)
    * the provisioning profile
 
-   You can also set up custom entitlements in a .plist file. 
-3. On your own machine, use our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool to collect the code signing files of your project. 
+   You can also set up custom entitlements in a .plist file.
+3. On your own machine, use our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool to collect the code signing files of your project.
 4. Upload the files - the .p12 certificate and the provisioning profile - to Bitrise: open the Workflow Editor of your app and upload the files on the `Code Signing` tab.
-5. Add the `Certificate and profile installer` Step to your workflow. 
+5. Add the `Certificate and profile installer` Step to your workflow.
 
-Read more about iOS code signing [in our guide](https://yv69yaruhkt48w.preview.forestry.io/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/)! 
+Read more about iOS code signing [in our guide](https://yv69yaruhkt48w.preview.forestry.io/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/)!
 
-### Exporting the app package file 
+### Exporting the app package file
 
 On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same for all Xamarin apps. To make sure you build the correct project type, set up your solution configurations in Visual Studio. For example, if you want to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
 
-1. Enter the Workflow Editor of your app, and click the `Workflows` tab. 
-2. Make sure you have the `Xamarin Archive` Step in your workflow. 
+1. Enter the Workflow Editor of your app, and click the `Workflows` tab.
+2. Make sure you have the `Xamarin Archive` Step in your workflow.
 3. Make sure the required inputs of the Step have appropriate values. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
-   * **Path to the Xamarin Solution file**: the location of your Xamarin solution file. 
-   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.  
-   * **Xamarin solution platform**: the target platform of your solution configuration. 
+   * **Path to the Xamarin Solution file**: the location of your Xamarin solution file.
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
+   * **Xamarin solution platform**: the target platform of your solution configuration.
 
 ### Deploying the app
 
@@ -138,21 +138,19 @@ We'll walk you through how to deploy your Xamarin app to:
 * Google Play
 * the App Store
 
-It's important to note that most of the configuration is done in Visual Studio. You need to set up [an appropriate Release configuration](https://docs.microsoft.com/en-us/visualstudio/debugger/how-to-set-debug-and-release-configurations?view=vs-2017) for your project. For your iOS project, set up the correct code signing identity in Visual Studio: for example, a Distribution identity with an App Store type provisioning profile. 
+It's important to note that most of the configuration is done in Visual Studio. You need to set up [an appropriate Release configuration](https://docs.microsoft.com/en-us/visualstudio/debugger/how-to-set-debug-and-release-configurations?view=vs-2017) for your project. For your iOS project, set up the correct code signing identity in Visual Studio: for example, a Distribution identity with an App Store type provisioning profile.
 
-Before you start, upload all the necessary code signing files to Bitrise! Remember that if you want to release your app to the App Store, you need to upload a Distribution type .p12 certificate file and an App Store type provisioning profile. 
+Before you start, upload all the necessary code signing files to Bitrise! Remember that if you want to release your app to the App Store, you need to upload a Distribution type .p12 certificate file and an App Store type provisioning profile.
 
-1. Go to the `Workflows` tab of the Workflow Editor. 
+1. Go to the `Workflows` tab of the Workflow Editor.
 2. Select the workflow you created for deploying your app.
-3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow. 
-4. Add the following Steps AFTER the `Xamarin Archive` Step: 
+3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
+4. Add the following Steps AFTER the `Xamarin Archive` Step:
    * `Deploy to Bitrise.io`
-
-
    * `Deploy to iTunes Connect - Application Loader`
    * `Google Play Deploy`
 5. Click the `Deploy to iTunes Connect - Application Loader`  Step, and enter your Apple ID and password in the relevant input field.
-6. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field. 
+6. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field.
 
    Note that you need to create a Secret Environment Variable to reference the Service Account's JSON key file. Learn more about [how to access your JSON key file](https://yv69yaruhkt48w.preview.forestry.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
 7. Start a build!
