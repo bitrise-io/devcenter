@@ -5,13 +5,36 @@ redirect_from: []
 published: false
 
 ---
-You can release and deploy multiple flavors of your Android APK separately from their main version using only one workflow. no need for separate workflows for every flavor to be built!
+You can deploy multiple flavor APKs in one workflow using our Gradle Runner, Sign APK and a deploy step.
 
-* Van egy sample appunk a multiple flavor androidra?
-* Hogy jon a kepbe a while label app dolog. \[white label app - an app that can be further customized based on the reseller's requirements.\]
-* user feedback: "There's a chance I missed something but I couldn't find a way to deploy multiple flavors out-of-the-box without assigning a different workflow for each, or writing custom scripting steps.
+`Android Build` step can only build one variant so if this step is part of your workflow, then we advise you to replace it with `Gradle Runner` step.
 
-  More specifically and from what I can remember, **the Bitrise-provided environment variable $BITRISE_SIGNED_APK_PATH only returned a random package out of all, and the $BITRISE_APK_PATH_LIST (sic) was mixing up packages resulting to "incorrect package" errors from Google Play.** I submitted a disc_ssion post about the matter which either got deleted or I can't seem to re-visit it._
+1. In Gradle Runner step, set the task names of your build variants in `Gradle task to run` step input field. Each task name must be exactly the same name that you have as a build variant name in \[Android Studio\]! Make sure you separate them only with a space, no need for `,` separation! In the below image, you can see the order of the steps for the deploy workflow and the `Gradle Task to run` step input with two build variant we're building:
+
+   `assembleMyflavorDebug` and `assembleMyflavorDebugAndroidTest`
+   ![](/img/gradle-multiflavor.jpg)
+
+   Gradle Runner generates a `BITRISE_APK_PATH_LIST` env var that contains ALL the build variants you have set in the step input above. Note that we have another env var for building one APK, that is the `BITRISE_APK_PATH`.
+2. Add the Sign APK step if it's missing from your workflow.
+3. Set the `$BITRISE_APK_PATH_LIST` in the `apk path` input field. This will make sure all the required apks will get code signed with the uploaded keystore file. Check out how you can upload your keystore file to bitrise.io.
+4. Add the Google Play Depoy step to AFTER the Sign APK step.
+5. In Google Play Deploy, set the `$BITRISE_SIGNED_APK_PATH` env var in the `APK or App Bundle file path` step input field so that Google Play Deploy can release all your build variants set in this env var.
+
+If you need to use another keystore
+
+white label-  universalis app, tovabb lehet fejleszteni a megrendelok igenyei szerint. (color, logo, signing files of the first rest)  ha mas megrendelok vannak, kulonbozo keystore file , es akkor tobb sing apk step. vagy az andrroidos projektben amikor egy task buildelok akkor signolodjon az apk. vagy android studio val signoljam. de ugyanabban a mappaban legyen a keystore, legyen env var. (olvassa el h a gradle settingsben hogyan tudsz code signingolni) You can release and deploy multiple flavors of your Android APK separately from their main version using only one workflow. no need for separate workflows for every flavor to be built!
+
+
+android buld es gradle runner is ugy mukodik, h ezeknek eket outputja van: bitrise apk_path es bitrise apk_path list. ha egy apk generalt akkor az bemegy a bitrise apk pahtbe, es belerakjuk az apk listbe (pipe separalva) minden tovabbi step vagyis sign apk es google pkay deploy tudjak fogadni a z ak patht es a listet is. (listnel van az h tobb build is kigeneralodik) sign apk es google play deployt h a listesre mutasson, ezt be kell allitani, ugyanazzal az egy keystorrral.
+
+1 task egy flavourt tud buildelni, miden task nevnek tartamaznia kell a flavour nevet.
+
+1. sign: berakom asign apk stepet, es az apk step inputjat atallitom. a listes verioja. igy a sing aok tobb aokt lesignol a megadott keystorral.
+2. sign apk kiexportalja h bitrise sign apk step ez az output. listazza az osszes flavourt ami signolva van
+3. berak google play deploy, berakom az ak_path inputot raallitom a sign apk step outputjara.
+4. deploy to bitrise. io - minden ami a deploy mpaabbaban van az kideployolodik
+
+bekonofizom a sign apkt h a listet varja ezzel vegig signolja a listat,es a signolt apkat a bitrise a sing apk env be rakja be es a google play deploy ez alapjan deployol ezt az envet kell megadnom a bitrise sign _apk path-t ezt a az apk-app bundle file path-be be kell rakni.
 
 ## Difference between build types and product flavors:
 
@@ -46,25 +69,4 @@ You can release and deploy multiple flavors of your Android APK separately from 
 
   paidRelease
 
-More on shared code stored in the main folder and flavor folders in Android Studio Guide.
-
-Once you know which flavor you want to build, the only thing you need to modify is the `Gradle task to run` input in Android Build step. Here you can add the build variant ( which is the combination of build type and flavor) or variants.
-
-If you need multiple variants in a single build, you have options:
-
-1. Set an `assembleX` task, for example, `assembleDebug` in the `Gradle task to run` field of Android Build.
-
-   It **generates all flavors** in a build or **just lists the tasks separated by a 		space**:
-
-   `assembleFlavor1Debug assembleFlavor2Debug`
-2. Use multiple Gradle Runner steps so you can define the flavors you need one by one in one workflow:
-
-   `assembleFlavor1Debug` in Gradle Runner no. 1
-
-   `assembleFlavor2Debug` in Gradle Runner no. 2
-
-   Using separate Gradle Runner steps enables the $BITRISE_APK_PATH to contain the 		flavor that has just been built. For example: /path/to/my/flavor1-debug.apk and 		/path/to/my/flavor2-debug.apk This way the **Sign APK, Deploy to bitrise.io and the 	Google Play Deploy steps can automatically pick up the APK to code sign and deploy 		your app.**
-3. Have **one Gradle Runner step which generates all the flavors of the ap**p and insert as **many Google Play Deploy** step as many flavors you want to deploy.
-4. Have one **workflow with the defined Gradle Runner and Google Play Deploy steps and set the variables as env vars**? Then create multiple workflows which will run this template utility after setting the env var.
-
-Code signing procedure is the same for every build variant.
+More on shared code stored in the main folder and flavor folders in Android Studio Guide
