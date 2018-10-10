@@ -1,41 +1,70 @@
 ---
-title: Build and deploy multiple flavor APKs to the Play Store
+title: Build and deploy multiple flavor APKs in a single workflow to the Play Store
 date: 2018-10-08 11:02:02 +0000
 redirect_from: []
 published: false
 
 ---
-You can have an app with multiple flavors where flavors represent different versions of the core app. Each version has different features or accessibility options added to them. Each of these versions can be built and released to an App Store or deployed to the same device. 
+You can release and deploy multiple flavors of your Android APK separately from their main version using only one workflow. no need for separate workflows for every flavor to be built!
 
-Build types are not the same as build flavors. Build types mean how the app is built and packaged such as a debug or a release build. If you have two flavors of the same app and at least two build types, it means 4 different versions, build variants can be made.
+* Van egy sample appunk a multiple flavor androidra?
+* Hogy jon a kepbe a while label app dolog. \[white label app - an app that can be further customized based on the reseller's requirements.\]
+* user feedback: "There's a chance I missed something but I couldn't find a way to deploy multiple flavors out-of-the-box without assigning a different workflow for each, or writing custom scripting steps.
 
-?code signing files will be the same for all flavors and build variants?
+  More specifically and from what I can remember, **the Bitrise-provided environment variable $BITRISE_SIGNED_APK_PATH only returned a random package out of all, and the $BITRISE_APK_PATH_LIST (sic) was mixing up packages resulting to "incorrect package" errors from Google Play.** I submitted a disc_ssion post about the matter which either got deleted or I can't seem to re-visit it._
 
-You can check the definitions of the app flavors in `build.gradle` file.
+## Difference between build types and product flavors:
 
-You can define as many flavors as many configuration you need to add to your app, meaning each configuration can be have its own flavor package/directory . Once an app has received a flavor, it cannot be released as a flavorless app. It is possible to have multiple flavors of your Android APK  and have them built and released separately from their main/base/full version. 
+* **BUILD TYPE:** when creating a new module in Android Studio, it creates a **release and debug** \[used every time when you develop an app until you switch to the release build type\] **build types automatically** of the app. build types mean a the same code base and UI but different compilation/packaging!
+* **PRODUCT FLAVOR:** app can have multiple flavors where flavor means different behavior between different versions/flavors of the same app- different version of the core app BUT with extra features:
+  * free or paid version of the app
+  * different versions based on user roles (admin, customer) or client groups
+  * demo and full version of the app
 
-Make sure that you have saved the application ID of your flavors since Google Play Store will require the unique app ID of the app version you're uploading.
+  You can check your flavors in the `scr` \[source\] folder in Android Studio - ON BITRISE? WHAT OTHER FLAVORS CAN BE \[dimensions\].
 
-* This comes in handy when you want to add different features or create a free/ version of the same app. 
-* With separate building and deployment process, you can also avoid having a gigantic APK file. 
+      android {
+      ...
+      defaultConfig {...}
+      buildTypes {...}
+      productFlavors {
+      admin {
+      ..
+      }
+      customer {
+      ..
+      }
+      }
+      }
+  * **BUILD VARIANT** - it combines the app's **build types and flavors.** You can check them in the Build Variant tab of Android Studio.
 
-## Generate a build using build variant
+  freeDebug
 
-Anything to do in Gradle beforehand?
+  freeRelease
 
-Have the Gradle Runner/Android Build step in your workflow to assemble the flavor. You can have as many Gradle Runner/Android Build step in your workflow as many flavors you want to build.
+  paidDebug
 
-In the Gradle Runner step define the following inputs:
+  paidRelease
 
-* In the Gradle Task to run, define the action:
-  * assemble - Assembles all variants of all applications and secondary packages. 
-  * assembleAndroidTest - Assembles all the Test applications. 
-  * assembleDebug - Assembles all Debug builds.
-  * assembleRelease - Assembles all Release builds.
+More on shared code stored in the main folder and flavor folders in Android Studio Guide.
 
-## Release and deploy a build
+Once you know which flavor you want to build, the only thing you need to modify is the `Gradle task to run` input in Android Build step. Here you can add the build variant ( which is the combination of build type and flavor) or variants.
 
-Add the Deploy to Google Play Store step to your workflow as many times as you had the Gradle Runner step in your workflow.
+If you need multiple variants in a single build, you have options:
 
-Or simoly use env vars and reference them?
+1. Set an `assembleX` task, for example, `assembleDebug` in the `Gradle task to run` field of Android Build.
+
+   It **generates all flavors** in a build or **just lists the tasks separated by a 		space**:
+
+   `assembleFlavor1Debug assembleFlavor2Debug`
+2. Use multiple Gradle Runner steps so you can define the flavors you need one by one in one workflow:
+
+   `assembleFlavor1Debug` in Gradle Runner no. 1
+
+   `assembleFlavor2Debug` in Gradle Runner no. 2
+
+   Using separate Gradle Runner steps enables the $BITRISE_APK_PATH to contain the 		flavor that has just been built. For example: /path/to/my/flavor1-debug.apk and 		/path/to/my/flavor2-debug.apk This way the **Sign APK, Deploy to bitrise.io and the 	Google Play Deploy steps can automatically pick up the APK to code sign and deploy 		your app.**
+3. Have **one Gradle Runner step which generates all the flavors of the ap**p and insert as **many Google Play Deploy** step as many flavors you want to deploy.
+4. Have one **workflow with the defined Gradle Runner and Google Play Deploy steps and set the variables as env vars**? Then create multiple workflows which will run this template utility after setting the env var.
+
+Code signing procedure is the same for every build variant.
