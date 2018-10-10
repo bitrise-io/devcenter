@@ -12,6 +12,8 @@ Before setting up IPA export, make sure that:
 * your code signing files have been collected.
 * you have the `Certificate and profile installer` step in your workflow.
 
+{% include message_box.html type="important" title="iOS Auto Provision" content="Automatic provisioning with the `iOS Auto Provision` Step is not supported for Xamarin apps!"%} 
+
 If you're all set, proceed to setting up IPA export in your workflow:
 
 1. Make sure that you have the `Xamarin Archive` step in the app's Workflow Editor and select it.
