@@ -7,6 +7,8 @@ published: false
 ---
 You can deploy multiple flavor APKs in one workflow using our Gradle Runner step. You will need to do some settings to the `Sign APK` and the `Google Play Deploy` steps - so keep you eyes peeled! In this tutorial, we walk you through how you can generate multiple flavor APKs (or just a few out of all your build variants) using on `Gradle Runner` and deploy step and how you can deploy them to an app store.
 
+{% include message_box.html type="note" title="About build types, flavors and build variants" content=" Build types mean how your build is packaged, for example, compiled as `debug` or `release`. Flavor means when an app's core code is enhanced with different features. This results in many different versions of the same app such as free/paid, demo/full. A build variant, which we will mention in this guide a lot, means the combination of flavors and build types."%}
+
 ## Generate APKs
 
 Once you have a deploy workflow (as an example find the screenshot below) do the following:
@@ -29,7 +31,6 @@ To code sign and deploy your multiple flavor APKs, follow the steps:
 2. Set the `$BITRISE_APK_PATH_LIST` in the `apk path` input field. This will make sure all the required APKs will get code signed with the keystore file you uploaded to the `Code Signing` tab. Check out [how you can upload your keystore file to bitrise.io](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#create-a-signed-apk-with-the-sign-apk-step/). The step will export a `$BITRISE_SIGNED_APK_PATH` env var output.
 3. Add the `Google Play Deploy` step AFTER the `Sign APK` step.
 4. Set the `$BITRISE_SIGNED_APK_PATH` env var in the `APK or App Bundle file path` step input field so that Google Play Deploy can release all your build variants set in this env var.
-
 
 ### Signing and deploying a white label app
 
