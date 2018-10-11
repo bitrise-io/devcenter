@@ -1,4 +1,9 @@
-![T-shirt](/_articles/translations/T-shirt - Mockups - White.png)
+<p align="center">
+  <br>
+  <img width="400" src="https://github.com/tamasbtr/devcenter/blob/master/_articles/translations/T-shirt%20-%20Mockups%20-%20White.png?raw=true" alt="Bitrise contributor t-shirt">
+  <br>
+  <br>
+</p>
 
 ## 日本語訳のコントリビューターには限定Tシャツをプレゼント！ :jp:
 As part of our commitment to the community, we’ll be localizing a good chunk of **Bitrise in Japanese**. There’s a bit of a challenge involved, though. Turns out, most translators have zero understanding of app development, which leads to translations that don’t actually do what they’re supposed to: help Japanese users on Bitrise. That’s where (hopefully) you come in:
