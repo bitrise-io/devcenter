@@ -1,40 +1,40 @@
-To take full advantage of all the features Bitrise offers, including automatic webhook registration, you need to connect your GitHub/GitLab/Bitbucket account to your Bitrise account. This gives Bitrise **write permissions** to the repositories on those accounts. You can connect all three Git provider accounts to your Bitrise account, by one of two methods:
+Bitriseの提供する機能（自動Webhook登録を含む）をすべて活用するには、GitHub/GitLab/BitbucketアカウントをBitriseアカウントと連携する必要があります。連携することで、そのアカウントのリポジトリにBitriseへの **書き込み権限** が付与されます。3つすべてのGitプロバイダのアカウントをBitriseアカウントと次の2つの方法で連携することができます。
 
-* Connecting the account when adding a new app
-* Connecting the account from your `Account settings` page
+* 新しいアプリを追加したときにアカウントを連携します
+* `Account settings`ページからアカウントを連携します
  
- Please note that you cannot connect two accounts from the same Git provider (for example, two GitHub accounts) to Bitrise.
+ Bitriseに同じGitプロバイダ（例．2つのGitHubアカウント）から2つのアカウントを連携することはできないことにご注意ください。
 
-Connecting one Git provider account is not final: you can disconnect an account and connect a different one at any time.
+1つのGitプロバイダアカウントを連携しても終わりではありません。アカウントを連携を解除して、いつでも異なるアカウントを接続することができます。
 
-### Connect your GitHub/GitLab/BitBucket account when adding a new app
+### 新しいアプリを追加したときにGitHub/GitLab/BitBucketアカウントを連携する
 
-1. Log in to your [bitrise.io](https://www.bitrise.io) account.
-2. Click the `+` symbol on the top menu bar and select `Add app`.
-3. On the `Create New App` page, select the account and set the app's privacy setting.
-4. Choose the git service provider of the app's repository. If no account with that provider has been connected to your Bitrise account, the UI will display the option to connect.
+1. [bitrise.io](https://www.bitrise.io)アカウントでログインします。
+2. 上部のメニューバーの`+`ボタンをクリックして、`Add app`を選択します。
+3. `Create New App`ページ上で、アカウントを選択してアプリのプライバシー設定を設定します。
+4. アプリのリポジトリのGitサービスプロバイダを選びます。Bitriseアカウントにプロバイダのアカウントが連携されていない場合はUIに連携オプションが表示されます。
 
    ![Connect account when adding new app](/img/signing-up/add-app-account-connect.png)
-5. Click `Connect GitHub/GitLab/Bitbucket`. This will take you to the login page of the Git provider.
-6. Log in to the Git provider account.
-7. You should be prompted to authorize Bitrise.io - do it! If successful, you should be redirected to Bitrise, and a pop-up message should inform you that you successfully linked the account. Click `Okay`.
+5. `Connect GitHub/GitLab/Bitbucket`をクリックします。Gitプロバイダのログインページが表示されます。
+6. Gitプロバイダのアカウントでログインします。
+7. Bitrise.ioを承認するように促されますので、承認してください！成功すれば、Bitriseへリダイレクトされます。ポップアップメッセージでアカウントの接続に成功したことが表示されるので、`Okay`をクリックします。
 
-And you are done! If everything goes well, you are redirected to the `Create New App` page and you can add your new app.
+これで完了です！すべてうまくいっていれば、`Create New App`ページにリダイレクトされ、新しいアプリを追加できます。
 
-### Connect your GitHub/GitLab/BitBucket account from the Account settings page
+### アカウント設定ページからGitHub/GitLab/BitBucketアカウントを連携する
 
-1. Log in to your [bitrise.io](https://www.bitrise.io) account.
-2. Click your avatar on the top right corner and select `Account settings`.
-3. On the left menu bar, click the toggle next to the name of the Git provider you wish to connect.
+1. [bitrise.io](https://www.bitrise.io)アカウントでログインします。
+2. 右上にあるアバターをクリックし、`Account settings`を選択します。
+3. 左メニューから、連携したいアカウントのGitプロバイダ名のトグルスイッチをクリックします。
 
    ![Connect account to Bitrise](/img/signing-up/connect-account.png)
-4. Log in to the Git provider account.
-5. You should be prompted to authorize Bitrise.io - do it! If successful, you should be redirected to Bitrise, and a pop-up message should inform you that you successfully linked the account. Click `Okay`.
+4. Gitプロバイダアカウントでログインします。
+7. Bitrise.ioを承認するように促されますので、承認してください！成功すれば、Bitriseへリダイレクトされます。ポップアップメッセージでアカウントの接続に成功したことが表示されるので、`Okay`をクリックします。
 
-And you are done!
+これで完了です！
 
-### Disconnect your GitHub/GitLab/BitBucket account
+### GitHub/GitLab/BitBucketアカウント連携の解除
 
-1. Log in to your [bitrise.io](https://www.bitrise.io) account.
-2. Click your avatar on the top right corner and select `Account settings`.
-3. On the left menu bar, click the toggle next to the name of the Git provider you wish to disconnect.
+1. [bitrise.io](https://www.bitrise.io)アカウントでログインします。
+2. 右上にあるアバターをクリックし、`Account settings`を選択します。
+3. 左メニューから、連携を解除したいGitプロバイダ名のトグルスイッチをクリックします。
