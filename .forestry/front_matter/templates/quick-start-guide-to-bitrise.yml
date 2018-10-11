@@ -20,7 +20,6 @@ pages:
 - _articles/reviews/build-logs.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/reviews/getting-started-with-xamarin-apps.md
-- _articles/reviews/code-signing-troubleshooting.md
 - _articles/tutorials/xamarin/index.md
 - _articles/troubleshooting/frequent-android-issues.md
 - _articles/troubleshooting/known-xcode-issues.md
