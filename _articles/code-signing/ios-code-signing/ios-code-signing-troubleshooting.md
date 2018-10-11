@@ -36,7 +36,7 @@ Most of the time, this error means your project is missing either the correct .p
 
 * Check that your uploaded code signing files are valid! Remember that these files can and do expire or get revoked.
 
-* **Check the** `**Select method for export**` **input of the Step in the Workflow Editor**. If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
+* **Check the** `Select method for export` **input of the Step in the Workflow Editor**. If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
 
 ![](/img/export_fail.png)
 
