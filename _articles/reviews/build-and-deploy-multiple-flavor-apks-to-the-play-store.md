@@ -5,9 +5,14 @@ redirect_from: []
 published: false
 
 ---
-You can deploy multiple flavor APKs in one workflow using our Gradle Runner step. You will need to do some settings to the `Sign APK` and the `Google Play Deploy` steps - so keep you eyes peeled! In this tutorial, we walk you through how you can generate multiple flavor APKs (or just a few out of all your build variants) using on `Gradle Runner` and deploy step and how you can deploy them to an app store.
+You can deploy multiple flavor APKs in one workflow using our Gradle Runner step. You will need to do some settings to `Sign APK` and `Google Play Deploy` steps - so keep you eyes peeled! But first a little recap on the most important terms we will use in this guide.
 
-{% include message_box.html type="note" title="About build types, flavors and build variants" content=" Build types mean how your build is packaged, for example, compiled as `debug` or `release`. Flavor means when an app's core code is enhanced with different features. This results in many different versions of the same app such as free/paid, demo/full. A build variant, which we will mention in this guide a lot, means the combination of flavors and build types."%}
+{% include message_box.html type="note" title="About build types, flavors and build variants" content=" Build types mean the way your build is packaged, for example, compiled as `debug` or `release`. Flavor means when an app's core code is enhanced with different features resulting in different versions of the same app (just to mention the most common examples: free/paid, demo/full). Finally, where all of the above blends together is build variant, which we will mention in this guide a lot. Build variant means the combination of flavors and build types, for example: 
+
+* freeDebug 
+* freeRelease 
+* paidDebug 
+* paidRelease"%}
 
 ## Generate APKs
 
