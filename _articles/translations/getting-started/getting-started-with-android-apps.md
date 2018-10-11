@@ -100,7 +100,7 @@
 {% include message_box.html type="重要" title="ステップの順序！" content="
 
 * Gradleの依存関係をキャッシュするためには、ワークフローの最初のステップを`Bitrise.io Cache:Pull`に、最後のステップを`Bitrise.io Cache:Push`としてください！
-* `Do nothing anything with Script`ステップの直後の、`Install missing Android SDK components`はプロジェクトに不足している可能性があるAndroid SDKコンポーネントをインストールします。
+* `Do anything with Script`ステップの直後の、`Install missing Android SDK components`はプロジェクトに不足している可能性があるAndroid SDKコンポーネントをインストールします。
 * `Change Android versionCode and versionName`ステップは、`Android Build`ステップの**前に**挿入する必要があります。これは正しいバージョンコードとバージョン名のビルドをアップロードするためです。
 * ビルド処理を行う前にコードとデバッグをテストするため、 `Android Lint`と` Android Unit Test`ステップは `Android Build`ステップの**前に**挿入する必要があります。
 * `Sign APK`ステップは` Android Build`ステップの**後で**なければなりません。後者はあなたのプロジェクトをビルドします。 承認されたプロジェクトをアップロードできるように、このステップはすべての展開ステップの**前に**あることを確認してください。"%}
