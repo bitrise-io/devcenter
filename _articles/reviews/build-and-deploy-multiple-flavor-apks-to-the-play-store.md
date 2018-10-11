@@ -32,14 +32,14 @@ Once you have a deploy workflow (as an example find the screenshot below) do the
 
    ![](/img/gradle-multiflavor.jpg)
 
-   Gradle Runner generates a `$BITRISE_APK_PATH_LIST` env var output that contains ALL the build variants you have set in the step above. We will need this output later - keep it handy!
+   Gradle Runner generates a `$BITRISE_APK_PATH_LIST` env var output that contains ALL the build variants you have set in the step above. We will need this output env var later - you can always check the generated env var key and its value at `Env Vars` tab!
 
 ## Signing and deploying
 
 To code sign and deploy your multiple flavor APKs, follow the steps:
 
 1. Add the `Sign APK` step AFTER the `Gradle Runner` step if it's missing from your workflow.
-2. Set the `$BITRISE_APK_PATH_LIST` in the `apk path` input field. This will make sure all the required APKs will get code signed with the keystore file you uploaded to the `Code Signing` tab. Check out [how you can upload your keystore file to bitrise.io](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#create-a-signed-apk-with-the-sign-apk-step/). The step will export a `$BITRISE_SIGNED_APK_PATH` env var output.
+2. Set the `$BITRISE_APK_PATH_LIST` in the `apk path` input field. This will make sure all the required APKs will get code signed with the keystore file you uploaded to the `Code Signing` tab. Check out [how you can upload your keystore file to bitrise.io](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#create-a-signed-apk-with-the-sign-apk-step/). The step will export a `$BITRISE_SIGNED_APK_PATH` env var output which lists all your build variants.
 3. Add the `Google Play Deploy` step AFTER the `Sign APK` step.
 4. Set the `$BITRISE_SIGNED_APK_PATH` env var in the `APK or App Bundle file path` step input field so that Google Play Deploy can release all your build variants set in this env var.
 
