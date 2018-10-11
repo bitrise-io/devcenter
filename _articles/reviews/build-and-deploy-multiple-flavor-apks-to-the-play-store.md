@@ -11,7 +11,7 @@ You can deploy multiple flavor APKs in one workflow using our `Gradle Runner` st
 
 Build types mean the way your build is packaged, for example, compiled as `debug` or `release`. 
 
-Flavor means when an app's core code is enhanced with different features resulting in different versions of the same app (just to mention the most common examples: free/paid, demo/full). 
+Flavor means when an app's core code is enhanced with features resulting in different versions of the same app (just to mention the most common examples: free/paid, demo/full). 
 
 Finally, where all of the above blends together is build variant, which we will mention in this guide a lot. Build variant means the combination of flavors and build types, for example: 
 
@@ -26,7 +26,7 @@ Once you have a deploy workflow (as an example find the screenshot below) do the
 
 1. Insert `Gradle Runner` step after testing steps to your deploy workflow. `Android Build` step can only build one variant so if this step is part of your workflow, then we advise you to replace it with `Gradle Runner` step.
 2. Click the `Config` section.
-3. Specify the `assemble` [Gradle task](/tips-and-tricks/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project/) by adding your build variants' task names in the `Gradle task to run` step input field - as many tasks names as many build variants you want to build in one workflow. Each task name must be **exactly the same build variant name** what you have in Android Studio! Make sure you separate them only with a space, no need for `,`! In the below image, you can see the order of the steps for the deploy workflow and the `Gradle Task to run` step input with two build variants we're building:
+3. Specify the `assemble` [Gradle task](/tips-and-tricks/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project/) by adding your build variants' task names in the `Gradle task to run` step input field - as many tasks names as many build variants you want to build in one workflow. Each task name must be **exactly the same build variant name** what you have in `Build Variant` in Android Studio! Make sure you separate them only with a space, no need for `,`! In the below image, you can see the order of the steps for the deploy workflow and the `Gradle Task to run` step input with two build variants we're building:
 
    `assembleMyflavorDebug` and `assembleMyflavorDebugAndroidTest`
 
