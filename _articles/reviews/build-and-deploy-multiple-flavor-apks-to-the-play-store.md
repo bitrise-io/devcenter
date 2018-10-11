@@ -18,7 +18,7 @@ Finally, where all of the above blends together is build variant, which we will 
 * freeDebug 
 * freeRelease 
 * paidDebug 
-* paidRelease"%}
+* paidRelease
 
 ## Generate APKs
 
