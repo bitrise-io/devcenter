@@ -1,4 +1,12 @@
-## Help us localize, get a t-shirt :jp:
+<p align="center">
+  <br>
+  <img width="400" src="https://github.com/tamasbtr/devcenter/blob/master/_articles/translations/T-shirt%20-%20Mockups%20-%20White.png?raw=true" alt="Bitrise contributor t-shirt">
+  <br>
+  <br>
+</p>
+
+## 日本語訳のコントリビューターには限定Tシャツをプレゼント！ :jp:
+
 As part of our commitment to the community, we’ll be localizing a good chunk of **Bitrise in Japanese**. There’s a bit of a challenge involved, though. Turns out, most translators have zero understanding of app development, which leads to translations that don’t actually do what they’re supposed to: help Japanese users on Bitrise. That’s where (hopefully) you come in:
 
 Over the coming weeks, we hope some of our Japanese users will assist us in localizing a section of our DevCenter and some of the pages most critical to understanding how and why to use Bitrise.
