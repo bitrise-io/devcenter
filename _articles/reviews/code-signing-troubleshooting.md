@@ -38,7 +38,7 @@ The `iOS Auto Provision` Step manages your provisioning profiles for you: it dow
 
 ### I uploaded a Distribution certificate and an App Store type provisioning profile but I cannot deploy to the App Store because of a code signing error!
 
-To export an .ipa file with the app-store or ad-hoc export methods, you also need to upload a **Development certificate, as the first step of the .ipa export process uses that to generate an .xcodearchive file. Even if you only wish to use Bitrise to submit your apps to the App Store, we strongly recommend uploading a Developer certificate** and provisioning profile of the app, too, for this reason.
+To export an .ipa file with the app-store or ad-hoc export methods, you also need to upload a Development certificate and Development type provisioning profile, as the first step of the .ipa export process uses that to generate an .xcodearchive file. 
 
 ### I have added the _Run Cocoapods Install_ Step and now my builds are failing
 
