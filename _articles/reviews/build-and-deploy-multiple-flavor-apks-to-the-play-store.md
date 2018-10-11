@@ -32,7 +32,7 @@ Once you have a deploy workflow (as an example find the screenshot below) do the
 
    ![](/img/gradle-multiflavor.jpg)
 
-   Gradle Runner generates a `$BITRISE_APK_PATH_LIST` env var output that contains ALL the build variants you have set in the step above. We will need this output env var later - you can always check the generated env var key and its value at `Env Vars` tab!
+   Gradle Runner generates a `$BITRISE_APK_PATH_LIST` env var output that contains ALL the build variants you have set in the step above. We will need this output env var later - you can always check this env var key and its value containing the APKs at `Env Vars` tab!
 
 ## Signing and deploying
 
