@@ -1,27 +1,28 @@
-Open source projects are great - we all love them! They can be a pain to maintain, however, especially with CI/CD in the picture. That's why we have introduced the Public Apps feature for Bitrise: to make everyone's life a lot easier!
+オープンソースプロジェクトは素晴らしいものですし、私達はみんなそれが大好きです！ しかしながら、CI/CDについて言えば、オープンソースであることで維持が面倒になることがあります。私達はもっと人々の生活を快適にしたいと考えていました。これがBitriseに Public Apps の機能を導入した理由です。
 
-If your Bitrise app is public, anyone who has the build URL can see the build logs. For example, if the CI status check on GitHub fails on a pull request, anyone can click on the build URL and view the build logs. As such, outside contributors can troubleshoot issues easier, find out why, for example, a pull request of theirs resulted in a failed build. They do not have to be invited to a Bitrise team to be able to view Bitrise logs and they do not need the help of a Bitrise team member, either.
+公開されたBitriseのアプリケーションは、ビルドのURLを知っていれば誰でもビルドログを見ることができます。たとえば、Github上であるプルリクエストのCIが失敗している時、誰でもそのビルドのURLをクリックしてビルドログを見ることができます。このことによって、チーム外のコントリビューターがなぜそのプルリクエストのビルドが失敗したのかを解明する、というような問題解決がしやすくなります。ログを見られるようにBitriseチームに招待したり、Bitriseチームのメンバーの手を借りたりする必要はありません。
 
-Of course, this does not mean anyone can do anything with your public app on Bitrise. If the user viewing the logs is not invited to work on the app in some role, they will only be able to:
+もちろん、Bitriseで公開したアプリケーションについて誰がどんなことでもできる、ということではありません。ログを見ているユーザーがそのアプリケーションで作業する権限を与えられていない場合、そのユーザーができることは以下だけです。
 
-* view the build logs
-* download the build logs
-* view the build's `bitrise.yml` file.
+* ビルドログの閲覧
+* ビルドログのダウンロード
+* ビルドの `bitrise.yml` の閲覧
 
-{% include message_box.html type="warning" title="Setting an app to public" content=" **You can only set an app to public when adding the app to Bitrise!** Once an app has been added, its privacy settings **CANNOT** be changed again.
+{% include message_box.html type="warning" title="アプリケーションを公開状態で追加する" content=" **公開状態を設定することができるのは、Bitriseにアプリケーションを追加した時だけです！** アプリケーションを追加した後で公開状態を **変更することはできません。**
 "%}
 
-### Add a new app as public
+### アプリケーションを公開状態で追加する
 
-Adding a new app as a public app is incredibly simple: at the start of the process of adding a new app, you will be asked to choose between a private and a public option for the app. Choosing the public option does not change anything about the process itself, it only determines the accessibility of the app.
+アプリケーションを公開状態で追加するのは驚くほど簡単です。アプリケーションを追加する際、はじめにprivateかpublicかを設定する選択肢があります。publicを選択することでプロセスそのものは何も変わりませんが、ただアプリケーションへのアクセシビリティが設定されます。
 
-1. Click the `+` symbol on the top menu bar.
-2. Click `Add app`.
-3. Choose the account you wish to use for the app.
-4. Set the privacy of the app to `Public`.
+1. 上部のメニューバーの `+` マークをクリックします。
+2. `Add app` をクリックします。
+3. アプリケーションを利用するアカウントを選択します。
+4. アプリケーションの公開状態を `Public` に設定します。
 
 ![Set the app to Public](/img/adding-a-new-app/public-app.png)
 
-After this, proceed as usual to set up the app.
+これ以後は、アプリケーションを通常通り設定してください。
 
-{% include message_box.html type="warning" title="Public app's build logs are available for anyone" content=" Remember: a public app's build logs and `bitrise.yml` file can be seen by anyone - make sure these files do not expose anything you do not want to be seen!"%}
+{% include message_box.html type="warning" title="公開されたアプリケーションのログは誰でも閲覧することができます" content=" 注意：公開されたアプリケーションのビルドログと `bitrise.yml` は誰でも見ることができます。 見られたらまずいものを公開しないようにしてください！"%}
+s
