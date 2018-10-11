@@ -1,8 +1,11 @@
 Bitrise is powerful and complex - but getting started is easy and intuitive! You can kick off your first build within minutes of signing up. Let's go over what you need to do make that happen!
+Bitriseはパワフルかつ複雑です。ですが簡単に、そして直感的に利用することができます！数分で終わる登録の後、あなたのアプリのビルドを行うことができます。Let's go over what you need to do make that happen!
 
 ## Signing up to Bitrise
+## Bitriseに登録する
 
 First of all, you need a Bitrise account. Choose one of the following to sign up:
+まずは最初に、Bitriseのアカウントが必要です。登録に使用するものを以下より選択してください。
 
 * [Email](/getting-started/signing-up/signing-up-with-email)
 * [GitHub](/getting-started/signing-up/signing-up-with-github)
@@ -78,3 +81,4 @@ Once you added an app, your first build will be kicked off automatically. This m
 Once you set up a new app, you can [start inviting team members](/team-management/index). If you have a Developer or an Organization plan, you can have unlimited team members!
 
 You can also [create organizations](/team-management/organizations/creating-org) if you are on one of our Organization plans. Organizations allow you to manage entire teams quickly and effectively.
+s
