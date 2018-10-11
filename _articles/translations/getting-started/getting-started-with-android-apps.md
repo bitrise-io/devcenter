@@ -99,20 +99,17 @@
 
 {% include message_box.html type="重要" title="ステップの順序！" content="
 
-* `Sign APK` step must be AFTER the `Android Build` step as the latter builds your project so that you have an apk ready to be signed with the `Sign APK` step. Make sure that this step is BEFORE any deploy step so that you can upload an authorized project."%}
-
 * Gradleの依存関係をキャッシュするためには、ワークフローの最初のステップを`Bitrise.io Cache:Pull`に、最後のステップを`Bitrise.io Cache:Push`としてください！
-* `Do nothing anything with Script`ステップの直後の、` Install missing Android SDK components`はプロジェクトに不足している可能性があるAndroid SDKコンポーネントをインストールします。
-* `Do nothing anything with Script`の直後に、` Install missing Android SDK components`がプロジェクトに欠けている欠落しているAndroid SDKコンポーネントをインストールします。
+* `Do nothing anything with Script`ステップの直後の、`Install missing Android SDK components`はプロジェクトに不足している可能性があるAndroid SDKコンポーネントをインストールします。
 * `Change Android versionCode and versionName`ステップは、`Android Build`ステップの**前に**挿入する必要があります。これは正しいバージョンコードとバージョン名のビルドをアップロードするためです。
 * ビルド処理を行う前にコードとデバッグをテストするため、 `Android Lint`と` Android Unit Test`ステップは `Android Build`ステップの**前に**挿入する必要があります。
-* `Sign APK`ステップは` Android Build`ステップの**後で**なければなりません。後者はあなたのプロジェクトをビルドします。 承認されたプロジェクトをアップロードできるように、このステップはすべての展開ステップの**前に**あることを確認してください。
+* `Sign APK`ステップは` Android Build`ステップの**後で**なければなりません。後者はあなたのプロジェクトをビルドします。 承認されたプロジェクトをアップロードできるように、このステップはすべての展開ステップの**前に**あることを確認してください。"%}
 
 ## 依存関係
 
 幸運にも、`deploy`ワークフローのデフォルトである `Android Build`ステップは、` build.gradle`ファイルにリストアップしたすべての依存関係を処理し、あなたのプロジェクトにインストールします。
 
-## アプリのテスト方法
+## アプリのテスト
 
 前述のAndroidワークフローの通り、`Android Lint`と`Android Unit Test`のステップがデフォルトでワークフローに含まれています。
 
@@ -150,10 +147,10 @@ instrumentationを選択した場合は、**Instrumentation Test**グループ�
    * 例: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 4. ワークフローエディタにて `Google Play Deploy`ステップに戻ります。
 5. 次のように必要な入力フィールドを入力します。
-   * `Service Account JSON key file path`: このフィールドはリモートURLを受け入れることができるので、アップロードされたサービスアカウントのJSONキーを含む環境変数を指定する必要があります。 例：`$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * `Service Account JSON key file path`: このフィールドはアップロードされたサービスアカウントのJSONキーを含む環境変数を指定する必要があります。リモートURLを受け付けます。 例：`$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: あなたのAndroidアプリのパッケージ名
    * `Track`: APKを展開するトラック(alpha/beta/rollout/production)
 
-{% include message_box.html type="情報" title="ワークフローに追加できる他のdeployステップ "content ="ワークフローの左側にある`+`記号をクリックし、コレクションから別の `DEPLOY`ステップを選択します。例)`Appetize.io deploy`、`Amazon Device Farm File Directory`"%}
+{% include message_box.html type="情報" title="ワークフローに追加できる他のdeployステップ "content ="ワークフローの左側にある`+`記号をクリックし、コレクションから別の`DEPLOY`ステップを選択します。例えば`Appetize.io deploy`や`Amazon Device Farm File Directory`です。"%}
 
 これで全部です！ ビルドを開始またはスケジュールし、外部のテスターとURLを共有するか、あなたが選んだアプリストアにアプリを配布してください！
