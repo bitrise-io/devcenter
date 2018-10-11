@@ -1,40 +1,32 @@
-## Builds & Workflows
+## ビルドとワークフロー
 
-Once you added an app to Bitrise, your first build will be kicked off automatically.
+アプリを Bitrise に追加したら、自動的に初回ビルドが開始されます。
 
-A *build* is the process specified by the app's [*workflow*](/getting-started/getting-started-workflows), which is a collection of [*steps*](getting-started/getting-started-steps). The app's build configuration is specified in the [`bitrise.yml` configuration file](/bitrise-cli/basics-of-bitrise-yml) which you can modify in [bitrise.io](https://www.bitrise.io)'s
-graphical Workflow Editor UI,
-or in a [yaml editor](http://blog.bitrise.io/2016/02/12/edit-your-yaml-files-like-a-boss.html) directly.
+*ビルド*は、アプリの[_ワークフロー_](/getting-started/getting-started-workflows)で定められたプロセスであり、またワークフローは[_ステップ_](getting-started/getting-started-steps)の集合です。アプリのビルド設定は[`bitrise.yml` 設定ファイル](/bitrise-cli/basics-of-bitrise-yml)でなされ、その編集は[bitrise.io](https://www.bitrise.io)のグラフィカルワークフローエディター UI 上、あるいは[yaml エディター](http://blog.bitrise.io/2016/02/12/edit-your-yaml-files-like-a-boss.html)上で直接できます。
 
-On the graphical UI of the [Workflow editor](/getting-started/getting-started-workflows), you are able to add, remove, and reorder the build steps.
-Steps represent a block of script execution with predefined input and output variables. Steps can be written in various languages, like bash, Go, Ruby, Swift, and more.
+[ワークフローエディター](/getting-started/getting-started-workflows)のグラフィカル UI 上では、ビルドステップの追加・削除・並び替えができます。ステップは、事前定義された入力値・出力値を伴うスクリプト実行を表します。ステップは、bash・Go・Ruby・Swift などのさまざまな言語で記述できます。
 
-When a build is running, these scripts will be downloaded and executed in the order you've defined in your workflow,
-with the input parameters you set. They will produce the predefined outputs set as [environment variables](/builds/available-environment-variables).
+ビルドが実行された際は、これらのスクリプトはワークフローで定義した順番・入力パラメーターにしたがってダウンロード・実行されます。そして、[環境変数](/builds/available-environment-variables)として事前定義された出力を生成します。
 
-Read more about how the CLI, workflows and steps work "under the hood" in the [Bitrise CLI and bitrise.yml](/bitrise-cli/) section.
+CLI・ワークフロー・ステップをどう扱うかについてのより詳細は、[Bitrise CLI と bitrise.yml](/bitrise-cli/)の"under the hood"の節を参照してください。
 
-## The build process
+## ビルドプロセス
 
-1. Trigger builds by:
-    * clicking the `Build` button on the application's page (manual build trigger)
-    * [scheduling with a selected branch and frequency](/builds/scheduling-builds)
-    * [webhooks](/webhooks/) - after each code/tag push or pull request to the given branch
-    * our `Build Trigger API`
-2. Environment preparation:
-   A virtual machine will be provisioned and prepared to run the build.
-   Build specific environment variables are preset so you can use these in your steps.
-   You can find more information about the available stacks in the Workflow Editor, on the `Stack` tab.
-4. Workflow execution:
-   Steps in Workflows are executed in the same order as defined in the Workflow editor of your application,
-   from top to bottom. You can reorder the steps by dragging.
-   The log each step generates will be displayed on the build's details page.
-5. Cleanup:
-   After the execution of the build, a build log is
-   created and stored on the Bitrise server and **the virtual machine gets destroyed**,
-   so your code/files will not fall into the wrong hands.
+1. トリガーとなるもの：
+   - アプリページの`Build`ボタン押下（手動ビルドトリガー）
+   - [特定のブランチを特定の頻度でスケジュール実行](/builds/scheduling-builds)
+   - [webhooks](/webhooks/)（特定のコード・タグの PUSH および特定のブランチへのプルリクエスト後）
+   - 提供されている `Build Trigger API`
+2. 環境準備：
+   仮想マシンのプロビジョニング・ビルド実行の準備をします。
+   指定された環境変数をステップで使えるようにプリセットします。
+   扱えるスタックのさらなる詳細情報は、ワークフローエディターの`Stack`タブにて確認できます。
+3. ワークフローの実行：
+   ワークフローのステップは、アプリのワークフローエディターで定義された順番通りに上から下まで実行されます。ステップはドラッグ操作で並び替えできます。
+   ビルド詳細ページに、それぞれのステップの出力するログが表示されます。
+4. クリーンアップ：
+   ビルド実行後、Bitrise サーバーにビルドログが生成・保存され、**仮想マシンは破棄されるため**、あなたのコード・ファイルが悪用されることはありません。
 
-## Build concurrency
+## ビルドの並列数
 
-Build concurrency determines how many builds you can run simultaneously. Builds over your subscription plan's concurrency count will be marked as __on hold__.
-They will start whenever your ongoing builds are finished and you have a free build slot. You can always [purchase additional concurrencies](https://www.bitrise.io/pricing) with the Developer or Organization (Org Standard or Org Elite) plans to increase the concurrent builds you can run at the same time.
+ビルドの並列数とは、同時に実行できるビルド数を指します。あなたの購読しているプランのビルド並列数を超えるビルドは**on hold**(保留)扱いになります。保留されたビルドは、実行中のビルドが終了してビルド可能枠に空きができると開始されます。いつでも、Developer あるいは Organization (Org Standard あるいは Org Elite)プランを[追加のビルド並列数を購入](https://www.bitrise.io/pricing)して同時に実行可能なビルド数を引き上げることができます。
