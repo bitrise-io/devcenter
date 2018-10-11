@@ -1,33 +1,30 @@
-To guarantee the security of your builds we use [virtual machines](/infrastructure/virtual-machines) for builds.
-Every build runs in its own, clean virtual machine and we discard the whole virtual machine after the build finishes,
-erasing every file your build uses and every change you make during your build.
+ビルドのセキュリティを保証するために、ビルドには[仮想マシン](/infrastructure/virtual-machines)を使用します。
+すべてのビルドは独自のクリーンな仮想マシンで実行され、ビルドが完了した後で仮想マシン全体を破棄し、
+ビルドで使用されるすべてのファイルと全ての変更を消去します。
 
-_This is also true for the Linux/Android stacks, which use Docker containers to run the build.
-The build itself still gets a full virtual machine where no other Docker container is started,
-only the one used as the environment of the build. In short we only use Docker containers
-to manage the environment, not for build environment isolation - that's ensured by using
-full virtual machines for every build._
+_これはDockerコンテナを使用してビルドを実行するLinux / Androidスタックでも当てはまります。
+ビルド自体は、他のDockerコンテナが起動されていない完全な仮想マシンを取得しますが、
+ビルドの環境として使用されるもののみが使用されます。つまり、Dockerコンテナのみを使用して環境を管理し、
+ビルド環境を隔離するのではなく、すべてのビルドに完全な仮想マシンを使用することによって保証されます。_
 
-This way your builds are always protected from changes made by others and from your previous builds,
-no one else can access your code and you can use a stable environment to define your build workflow. Every build is completed in an isolated environment, unrelated to any previous or parallelly running builds.
+このようにして、ビルドは他人や以前のビルドの変更から常に保護され、誰もあなたのコードにアクセスすることはできず、
+安定した環境を使ってビルドワークフローを定義することができます。すべてのビルドは、以前のビルドまたは並行して実行されているビルドとは無関係に、独立した環境で完了します。
 
-## Source code
+## ソースコード
 
-We don't store your source code. The source code is only accessed on the build machines (virtual machines)
-the way you define it in your Bitrise Configuration (workflow). If you don't have a Git Clone step in your configuration,
-then the source code won't be touched at all. At the end of the build the whole Virtual Machine is destroyed.
+あなたのソースコードは保存しません。ソースコードは、Bitrise Configuration（ワークフロー）で定義した方法でビルドマシン（仮想マシン）でのみアクセスされます。
+設定にGit Cloneの手順がない場合、ソースコードにはまったく触れる事はできません。ビルドの最後に、仮想マシン全体が破壊されます。
 
-## Code signing and other files
+## コード署名などのファイル
 
-The files you upload in the Workflow Editor (**Code Signing & Files** section of the editor)
-are stored on `Amazon S3` in a way that it's only accessible for the web servers.
+あなたがワークフローエディタ（エディタの **コード署名とファイル** セクション）にアップロードしたファイルは、
+Amazon S3に格納されており、Webサーバーのみアクセス可能です。
 
-The required credentials are not stored in any database, it is only available in the web servers' environment.
-Build servers can't access the files directly either.
-When a build starts the web server generates a read-only,
-time limited access URL for these files, using [Amazon S3 presigned URLs](https://docs.aws.amazon.com/aws-sdk-php/v3/guide/service/s3-presigned-url.html).
+必要な資格情報はどのデータベースにも格納されず、Webサーバーの環境でのみ使用できます。ビルドサーバーはファイルに直接アクセスすることもできません。
+ビルドが開始されると、Webサーバーは[Amazon S3の署名付きURL](https://docs.aws.amazon.com/aws-sdk-php/v3/guide/service/s3-presigned-url.html)を使用し、
+これらのファイルの読み取り専用の時間制限付きアクセスURLを生成します。
 
-## Passwords
+## パスワード
 
-Passwords are stored in a hashed, encrypted form.
-We are encrypting the passwords with [bcrypt algorithm](https://en.wikipedia.org/wiki/Bcrypt), using multiple stretches.
+パスワードは、暗号化されたハッシュ形式で格納されます。
+[bcryptアルゴリズム](https://en.wikipedia.org/wiki/Bcrypt)を使用し、複数回ストレッチングを行いパスワードを暗号化しています。
