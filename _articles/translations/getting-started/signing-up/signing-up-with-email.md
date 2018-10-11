@@ -1,22 +1,22 @@
-You can sign up to Bitrise in one step with your email address.
+メールアドレスを使ってBitriseにサインアップすることができます。
 
 ![Screenshot](/img/signing-up/sign-up-bitrise.png)
 
-If you would like to use your GitHub / Bitbucket account, please check out the following devcenter articles:
+GitHub / Bitbucketアカウントを使用するには、以下の記事をチェックしてください：
 
 * [Signing up with GitHub](/getting-started/signing-up/signing-up-with-github)
 * [Signing up with Bitbucket](/getting-started/signing-up/signing-up-with-bitbucket)
 
 ## Sign up
 
-You just have to pick a username, add your email address and choose a password. Click **Sign up with email**.
+ユーザー名を選択し、メールアドレスを追加してパスワードを選択するだけです。 **Sign up with email** をクリックします。
 
 ![Screenshot](/img/signing-up/sign-up-credentials.png)
 
-After you provided your credentials, press **Done**.
+資格情報を入力したら、**Done** をクリックします。
 
-After successful registration we will send you a confirmation email. Click on the confirmation link in the email and you are ready to roll!
+登録が完了すると、確認メールが送信されます。メールの確認リンクをクリックすると、ロールする準備が整います！
 
 ![Screenshot](/img/signing-up/confirmation-email.png)
 
-If you haven't received a confirmation email, click **Resend confirmation email** you see at the end of the registration process.
+確認メールが届かない場合は、登録プロセスの最後に表示される **Resend confirmation email** をクリックしてください。
