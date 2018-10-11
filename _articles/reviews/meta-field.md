@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-You can create unique customization for a step input or an env var if you add `meta` section to `opts` in your bitrise.yml.editor. `meta` works like a container that holds any custom-specific **_\[what does this mean?\]_** properties (such as background color or labels above step inputs)  that is **not by default part** of any Workflow Editor. In this guide, we unveil the secrets of this handy feature by using an env var as our example.
+If you decide to take your very own spin on our open-source Workflow Editor and use it offline in a team, you can do some customization (highlighting, background color) to the environment variables. You can add  meta to env varsYou can create unique customization for a step input or an env var if you add `meta` section to `opts` in your bitrise.yml.editor. `meta` works like a container that holds any custom properties (such as background color or labels above step inputs)  that is **not by default part** of any Workflow Editor. In this guide, we unveil the secrets of this handy feature by using an env var as our example.
 
 Our jumping-off point is a standard env var yml which has a `KEY` and an `opts` where `opts` contains `title`, `description` and `summary`.
 
