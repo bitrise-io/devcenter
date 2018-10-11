@@ -1,26 +1,30 @@
 ---
-title: Triggering builds with code push
+title: プッシュをトリガーにする
 menu:
   triggering-builds:
     weight: 2
 
 ---
-You can set up triggers so that every time code is pushed to the specified branch of your repository, a build is automatically triggered on Bitrise.
+トリガーを設定すると、リポジトリの指定されたブランチにプッシュされるたびにBitrise上でビルドが実行されます。
 
-Note that this requires an incoming webhook set up with the hosting service of your repository. Read more in the [Webhooks](/webhooks/index) section.
+あらかじめリポジトリのホスティングサービスでIncoming WebHookを設定しておく必要があります。  
+詳しくは[Webhooks](/webhooks/index)セクションを参照してください。
 
-By default, every new app you add will have a trigger that triggers a build every time code is pushed to any branch of your repository.
+任意のブランチがリポジトリにプッシュされたときのトリガーがデフォルトで設定されています。  
 
-1. Open your app on [bitrise.io](https://www.bitrise.io).
-2. Open the `Workflow Editor`.
-3. Select the `Triggers` tab.
-4. Select the `PUSH` option.
+1. [bitrise.io](https://www.bitrise.io)であなたのアプリケーションのページを開きます。
+2. `Workflow Editor`を開きます。
+3. `Triggers`タブを開きます。
+4. `PUSH`オプションを開きます。
 
    ![Push trigger](/img/getting-started/triggering-builds/push-trigger.png)
-5. In the existing trigger, click the `Push branch` option.
-   If you have an existing trigger set up already, click the `+ ADD TRIGGER` option to set up a new one.
-6. Type in the name of the branch (for example, `master`). Make sure there are no spelling errors, otherwise the trigger won't work.
-7. Select the workflow you wish to trigger (for example, `primary`).
-8. Click `Save` in the top right corner.
+5. 既存のトリガーで`Push branch`オプションをクリックします。  
+   もしトリガーがすでに設定されている場合は、`+ ADD TRIGGER`オプションをクリックして新しいトリガーを設定します。
+6. ブランチ名を入力します（例えば`master`など）。  
+   スペルミスがないように気をつけてください。  
+   ブランチ名にミスがある場合、トリガーは機能しません。
+7. トリガーを紐付けるWorkflowを選択します（例えば`primary`など）。
+8. 右上にある`Save`をクリックします。
 
-You're done! From now on, if code gets pushed to the selected branch of your app's repository, Bitrise will trigger a build with the selected workflow!
+これで完了です！  
+これより、あなたのリポジトリの指定されたブランチにコードがプッシュされると、Bitriseは設定されたWorkflowでビルドを開始します。
