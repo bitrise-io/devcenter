@@ -11,6 +11,8 @@ To make iOS code signing work on Bitrise, you generally need three things:
 * a .p12 certificate file
 * setting the `Select method for export` input of the `Xcode Archive & Export for iOS` Step
 
+Xcode generates an Xcode archive - this needs a developer certificate and profile. This archive is exported - 
+
 If you suspect an error is related to code signing, there is almost certainly a problem with one of these three. When trying to build an iOS app on Bitrise, we strongly recommend generating an .ipa file of the app locally, on your own machine first. If that fails, the build will certainly fail on Bitrise, too.
 
 Let's look into what you can do to make sure code signing works!
@@ -30,9 +32,8 @@ Most of the time, this error means your project is missing either the correct .p
 
 The `iOS Auto Provision` Step manages your provisioning profiles for you: it downloads the profiles from the Apple Developer portal and installs them for you. Here's what you can do if this Step fails:
 
-* If you are trying to use it with a Xamarin app, you will have to swap it for the `Certificate and profile installer` Step. Automatic provisioning is not supported for Xamarin apps. 
-* Before trying to use this Step, generate an .ipa file locally and make sure the profiles are uploaded to the Apple Developer portal.
-* Check that the uploaded provisioning profile contains the correct App ID and that it is valid.
+* If you are trying to use it with a Xamarin app, you will have to swap it for the `Certificate and profile installer` Step. Automatic provisioning is not supported for Xamarin apps.
+* Before trying to use this Step, generate an .ipa file locally - with the same export method you want to use on Bitrise - to ensure that the profiles are uploaded to the Apple Developer portal.
 * Make sure that your Bitrise account is connected to the Apple Developer portal and that you have at least an Admin role in your Apple Developer team.
 
 ### I uploaded a Distribution certificate and an App Store type provisioning profile but I cannot deploy to the App Store because of a code signing error!
@@ -41,6 +42,6 @@ To export an .ipa file with the app-store or ad-hoc export methods, you also nee
 
 ### I have added the _Run Cocoapods Install_ Step and now my builds are failing
 
-Installing dependencies can result in a failed build for many reasons. When it comes to iOS code signing, problems can occur if you use the `iOS Auto Provision` Step. In practice, this means that in your Bitrise workflow, Steps that install dependencies - such as `Run Cocoapods Install` or `Carthage` - should be BEFORE the `iOS Auto Provision` Step. 
+Installing dependencies can result in a failed build for many reasons. When it comes to iOS code signing, problems can occur if you use the `iOS Auto Provision` Step. In practice, this means that in your Bitrise workflow, Steps that install dependencies - such as `Run Cocoapods Install` or `Carthage` - should be BEFORE the `iOS Auto Provision` Step.
 
 ### 
