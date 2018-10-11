@@ -1,22 +1,27 @@
-In this guide, we'll walk you through how to add an Android app to Bitrise, what primary and deploy workflows can do, and finally how to test and deploy your app to [bitrise.io](https://www.bitrise.io/) and to the App Store.
+このガイドでは、以下について説明します。
 
-## Add an Android app to bitrise.io
+- BitriseにAndroidアプリを追加する方法
+- `primary`ワークフローと`deploy`ワークフローでできること
+- アプリのテスト方法
+- [bitrise.io](https://www.bitrise.io/)もしくはマーケットプレイスにデプロイする方法
 
-{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
+## bitrise.ioにAndroidアプリを追加する
 
-1. Log into [bitrise.io](https://www.bitrise.io/).
-2. On your Dashboard, click `+ Add new app`.
-3. On `Create new App` page, choose the account your wish to add the app to.
-4. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click `Next`.
-5. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
-6. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
-7. Type the name of the branch that includes your project's configuration - master, for example, - then click `Next`.
-8. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them.
-   * Bitrise Scanner selects the module of your project by default.  If there are more modules to choose from in the `Module` list, select a module that works best for your project.
-   * Select a variant for **building** (you can `Select All Variants` which will generate all variants in `APPS & ARTIFACTS`) and select a variant for **testing** too.
-9. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary workflow - click the message and it will take you to the build page. The first build does not generate an apk yet, however, you can already check out the project's logs on the Build's page.
+{% include message_box.html type="note" title="既にBitriseアカウントをお持ちですか?" content="[bitrise.io](https://www.bitrise.io)にサインアップして、Bitriseアカウントにアクセスできることを確認してください。 GitホスティングサービスのアカウントにBitriseアカウントを接続する方法は、[4通り](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)あります。"%}
 
-An example of an **Android primary workflow**:
+1. [bitrise.io](https://www.bitrise.io/)にログインします。
+2. ダッシュボードで`+ Add new app`をクリックします。
+3. `Create new App`ページで、アプリを追加するアカウントを選択します。
+4. アプリの公開設定をPrivateまたは[Public](/getting-started/adding-a-new-app/public-apps)に設定し、`Next`をクリックします。
+5. リポジトリを持つGitホスティングサービスを選択し、リポジトリを選択します。詳細は[connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/)を参照してください。
+6. リポジトリのアクセスを求めるプロンプトが表示されたら、`No, auto-add SSH key`を選択します。詳細は[SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/)を参照してください。
+7. プロジェクトで設定したブランチ名(例えばmasterなど)を入力し、`Next`をクリックします。
+8. Bitriseがプロジェクトを検証するのでしばらくお待ちください。設定ファイルに基づいてアプリのセットアップを行います。
+   * Bitrise Scannerはデフォルトでプロジェクトのモジュールを選択します。 `Module`リストで選択できるモジュールがさらにある場合は、プロジェクトに最適なモジュールを選択してください。
+   * **ビルド**のバリアントを選択します(`APPS & ARTIFACTS`にて生成されるすべてのバリアントを選択可能)。**テスト**のバリアントも同様に選択します。
+9. プロンプトが表示されたらWebhookを登録して、コードがリポジトリにプッシュされたときにBitriseが自動的にビルドを開始できるようにします。 これにより、`primary`ワークフローでの最初のビルドが開始されます。メッセージをクリックするとビルドページに移動します。 最初のビルドではまだapkは作成されませんが、ビルドページでプロジェクトのログを確認することができます。
+
+以下はAndroid `primary`ワークフローの一例です。
 
     primary:
         steps:
@@ -42,18 +47,20 @@ An example of an **Android primary workflow**:
         - deploy-to-bitrise-io@1.3.15: {}
         - cache-push@2.0.5: {}
 
-As you can see in this workflow, there is no `Android Build` step that would build your project and our `Sign APK` step is missing as well, hence this workflow is only a jumping off-point for you to test your project on code level.
+このワークフローは、あなたのプロジェクトをビルドする `Android Build`ステップも` Sign APK`ステップもありません。
+したがって、このワークフローはコードレベルでプロジェクトをテストするための出発点に過ぎません。
 
-Let's see how an **Android deploy workflow** looks like!
+では、どのように**Android deployワークフロー**を行うか見てましょう！
 
-1. Select the `deploy` workflow in Workflow Editor.
-2. Go to the `Code Signing` tab of your Workflow Editor.
-3. Drag-and-drop your keystore file to the `ANDROID KEYSTORE FILE` field.
-4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and `Save metadata`. You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. More information on the keystore file [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our `Sign APK step` (by default included in your Android deploy workflow) will take care of signing your apk so that it's ready for distribution! Head over to our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!
-5. Go back to your Build's page and click `Start/Schedule a build`.
-6. Select `deploy` in the Basic tab of `Build configuration` pop-up window.
 
-Here is an example of a deploy workflow:
+1. ワークフローエディタで`deploy`ワークフローを選択します。
+2. `Code Signing`タブに移動します。
+3. キーストアファイルを `ANDROID KEYSTORE FILE`フィールドにドラッグ＆ドロップします。
+4. `Keystore password`、`Keystore alias`、`Private key password`フィールドに情報を入力し`Save metadata`をクリックします。Bitriseにアプリをアップロードする前にAndroid Studioで生成されたキーストアファイルに含まれているので、これらはすでに手元にあるはずです。キーストアファイルの詳細については、[こちら](https://developer.android.com/studio/publish/app-signing)を参照してください。この情報を`Sign APK step` (Android deployワークフローのデフォルトに含まれます)タブに追加すると、デフォルトでAndroid配布ワークフローに含まれている「署名APKステップ」がapkに署名して配布準備が整います。コード署名オプションの詳細については、[Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/)を参照してください。
+5. ビルドページに戻り、`Start/Schedule a build`をクリックします。
+6. ポップアップウィンドウの`Build configuration`タブで `deploy`を選択します。
+
+以下はAndroid `deploy`ワークフローの一例です。
 
     deploy:
         - activate-ssh-key@4.0.3:
@@ -90,60 +97,63 @@ Here is an example of a deploy workflow:
             - notify_user_groups: testers
         - cache-push@2.0.5: {}
 
-{% include message_box.html type="important" title="Order of the steps matter!" content="
+{% include message_box.html type="重要" title="ステップの順序！" content="
 
-* To cache Gradle dependencies, keep the `Bitrise.io Cache:Pull` step as the first and the `Bitrise.io Cache:Push` step as the very last step in your workflow!
-* Right after our `Do anything with Script` step, the `Install missing Android SDK components` will take care of installing the missing Android SDK components that your project might be lacking.
-* `Change Android versionCode and versionName` step must be inserted BEFORE the `Android Build`step as the former makes sure you will upload the build with the right version code and version name to your app's marketplace.
-* `Android Lint` and `Android Unit Test` steps must be inserted BEFORE the `Android Build` step to test your code and debug before building your build.
 * `Sign APK` step must be AFTER the `Android Build` step as the latter builds your project so that you have an apk ready to be signed with the `Sign APK` step. Make sure that this step is BEFORE any deploy step so that you can upload an authorized project."%}
 
-## Dependencies
+* Gradleの依存関係をキャッシュするためには、ワークフローの最初のステップを`Bitrise.io Cache:Pull`に、最後のステップを`Bitrise.io Cache:Push`としてください！
+* `Do nothing anything with Script`ステップの直後の、` Install missing Android SDK components`はプロジェクトに不足している可能性があるAndroid SDKコンポーネントをインストールします。
+* `Do nothing anything with Script`の直後に、` Install missing Android SDK components`がプロジェクトに欠けている欠落しているAndroid SDKコンポーネントをインストールします。
+* `Change Android versionCode and versionName`ステップは、`Android Build`ステップの**前に**挿入する必要があります。これは正しいバージョンコードとバージョン名のビルドをアップロードするためです。
+* ビルド処理を行う前にコードとデバッグをテストするため、 `Android Lint`と` Android Unit Test`ステップは `Android Build`ステップの**前に**挿入する必要があります。
+* `Sign APK`ステップは` Android Build`ステップの**後で**なければなりません。後者はあなたのプロジェクトをビルドします。 承認されたプロジェクトをアップロードできるように、このステップはすべての展開ステップの**前に**あることを確認してください。
 
-Luckily, our `Android Build` step, which is by default part of your deploy workflow, takes care of all the dependencies which you have listed in your `build.gradle` file and installs them for your project.
+## 依存関係
 
-## Test your project
+幸運にも、`deploy`ワークフローのデフォルトである `Android Build`ステップは、` build.gradle`ファイルにリストアップしたすべての依存関係を処理し、あなたのプロジェクトにインストールします。
 
-As you can see in the above Android workflows, the `Android Lint` and `Android Unit Test` steps are by default included in your workflow.
+## アプリのテスト方法
 
-For UI testing, add our `beta Virtual Device Testing for Android` step to **run Android UI tests on virtual devices**. Available test types - make sure you select one!
+前述のAndroidワークフローの通り、`Android Lint`と`Android Unit Test`のステップがデフォルトでワークフローに含まれています。
+
+UIテストを行う場合、**仮想デバイスでAndroid UIテストを実行するために**、`beta Virtual Device Testing for Android`ステップを追加してください。
+利用可能なテストタイプの中から1つを選択してください！
 
 * instrumentation
 * robo
 * gameloop
 
-If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
+instrumentationを選択した場合は、**Instrumentation Test**グループ下で**Test APK path**を設定することを忘れないでください。
 
-{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow and select another `TEST` step from our collection."%}
+{% include message_box.html type="情報" title="より多くのテストステップの選択" content="ワークフローの左側にある`+`記号をクリックし、私たちのコレクションから別の `TEST`ステップを選択してください。"%}
 
-## Deploy your project
+## プロジェクトのデプロイ
 
-### Deploy to bitrise.io
+### bitrise.ioへのデプロイ
 
-This step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
+このステップでは、ビルドページにある[APPS & ARTIFACTS](/builds/build-artifacts-online/)タブに、ビルドに関連するすべての成果物をアップロードします。
 
-You can share the generated apk with your team members using the buil's URL. You can also notify user groups or individual users that your apk has been built.
+ビルドのURLを使用して、生成されたapkをチームメンバーと共有できます。 apkがビルドされたことをユーザーグループまたは個人に通知することもできます。
 
-1. Go to the `Deploy to bitrise.io` step.
-2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated apk in the `APPS & ARTIFACTS` tab.
+1. `Deploy to bitrise.io`ステップに進みます。
+2. `Notify: User Roles`で、受け取るロールを付与します。 または通知するユーザの電子メールアドレスを`Notify: Emails`フィールドに入力します。 これらの電子メールアドレスを[secret env vars](/builds/env-vars-secret-env-vars/)に設定してください！これらの詳細は `APPS＆ARTIFACTS`タブで生成されたapkの隣にある`eye`アイコンをクリックすると`Notifications`の下で変更することもできます。
 
-### Deploy to marketplace
+### マーケットプレイスへのデプロイ
 
-If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step), your signed apk will get uploaded to a marketplace of your choice.
+ワークフロー(`Sign APK`ステップの後)に `Google Play Deploy`ステップを追加すると、署名済みapkがあなたの選択したマーケットプレイスにアップロードされます。
 
-1. Make sure you are in sync with Google Play Store! Learn how to
+1. Google Playストアと同期していることを確認してください。やり方を学ぶ
    * [register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
    * set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
-2. In your Bitrise `Dashboard`, go to `Code Signing` and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-3. Copy the env key which stores your uploaded file’s url.
+2. Bitriseのダッシュボードで、 `Code Signing`に移動し、サービスアカウントのJSONキーを`GENERIC FILE STORAGE`にアップロードします。
+3. アップロードしたファイルのURLを格納するenvキーをコピーします。
+   * 例: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+4. ワークフローエディタにて `Google Play Deploy`ステップに戻ります。
+5. 次のように必要な入力フィールドを入力します。
+   * `Service Account JSON key file path`: このフィールドはリモートURLを受け入れることができるので、アップロードされたサービスアカウントのJSONキーを含む環境変数を指定する必要があります。 例：`$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * `Package name`: あなたのAndroidアプリのパッケージ名
+   * `Track`: APKを展開するトラック(alpha/beta/rollout/production)
 
-   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Go back to the `Google Play Deploy` step in your Workflow Editor.\`
-5. Fill out the required input fields as follows:
-   * `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   * `Package name`: the package name of your Android app
-   * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
+{% include message_box.html type="情報" title="ワークフローに追加できる他のdeployステップ "content ="ワークフローの左側にある`+`記号をクリックし、コレクションから別の `DEPLOY`ステップを選択します。例)`Appetize.io deploy`、`Amazon Device Farm File Directory`"%}
 
-{% include message_box.html type="info" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow and select another `DEPLOY` step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
-
-That's all! Start or schedule a build and share the URL with external testers or distribute your app on an app store of your choice!
+これで全部です！ ビルドを開始またはスケジュールし、外部のテスターとURLを共有するか、あなたが選んだアプリストアにアプリを配布してください！
