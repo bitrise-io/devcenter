@@ -7,6 +7,9 @@ code-signing:
   identifier: ios-code-signing
   weight: 2
 tutorials:
+- title: Deployment Tutorials
+  identifier: deployment-tutorials
+  weight: 1
 - title: Docker
   identifier: docker
   weight: 3
@@ -65,9 +68,6 @@ main:
 - title: Teams and organizations
   identifier: team-management
   weight: 4
-- title: Deployment Tutorials
-  identifier: deployment-tutorials
-  weight: 12
 - title: Tutorials
   identifier: tutorials
   weight: 11

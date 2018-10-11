@@ -1,8 +1,9 @@
 ---
-title: 'iOS code signing: troubleshooting'
-date: 2018-09-26 14:16:21 +0000
-redirect_from: []
-published: false
+title: iOS code signing - troubleshooting
+date: 2018-10-11 11:28:48 +0000
+menu:
+  ios-code-signing:
+    weight: 13
 
 ---
 To make iOS code signing work on Bitrise, you generally need three things:
@@ -11,7 +12,11 @@ To make iOS code signing work on Bitrise, you generally need three things:
 * a .p12 certificate file
 * setting the `Select method for export` input of the `Xcode Archive & Export for iOS` Step
 
-Xcode generates an Xcode archive - this needs a developer certificate and profile. This archive is exported -
+To get your code signing files, you can:
+
+- use our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool
+- [export them with Xcode](https://devcenter.bitrise.io/code-signing/ios-code-signing/exporting-code-signing-files/#exporting-certificates-using-xcode)
+- [export them with the Keychain app](https://devcenter.bitrise.io/code-signing/ios-code-signing/exporting-code-signing-files/#exporting-manually)
 
 If you suspect an error is related to code signing, there is almost certainly a problem with one of these three. When trying to build an iOS app on Bitrise, we strongly recommend generating an .ipa file of the app locally, on your own machine first. If that fails, the build will certainly fail on Bitrise, too.
 
@@ -31,7 +36,7 @@ Most of the time, this error means your project is missing either the correct .p
 
 * Check that your uploaded code signing files are valid! Remember that these files can and do expire or get revoked.
 
-* **Check the** `**Select method for export**` **input of the Step in the Workflow Editor**. If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
+* **Check the** `Select method for export` **input of the Step in the Workflow Editor**. If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
 
 ![](/img/export_fail.png)
 
