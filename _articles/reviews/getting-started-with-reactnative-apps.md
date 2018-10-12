@@ -78,7 +78,7 @@ Let's see the process step by step!
 
 The Android chunk of code signing is done!
 
-### Sign and export your iOs project for testing
+### Sign and export your iOS project for testing
 
 Code signing your iOS project depends on what you wish to do with the exported .ipa file. In this section, we describe how to code sign your project if you wish to **install and test it on internal testers' registered devices**. You will need an .ipa file exported with the `development` export method to share your project with testers.
 
