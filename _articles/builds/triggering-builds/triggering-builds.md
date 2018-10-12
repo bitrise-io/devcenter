@@ -1,10 +1,3 @@
----
-title: ビルドトリガー
-menu:
-  triggering-builds:
-    weight: 1
-
----
 Bitriseのビルドトリガーには以下のいずれかを選択できます。
 
 - [手動による開始](/builds/triggering-builds/starting-builds-manually/)
