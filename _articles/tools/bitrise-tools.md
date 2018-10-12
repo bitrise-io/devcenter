@@ -18,7 +18,7 @@ For historical reasons the core Bitrise CLI tools live in [github.com/bitrise-io
 * [stepman](https://github.com/bitrise-io/stepman) -
   used for managing the Step Library, including
   downloading and sharing steps.
-* [envman](https://github.com/bitrise-io/bitrise) -
+* [envman](https://github.com/bitrise-io/envman) -
   environment variable manager, can be used independently
   and Bitrise CLI uses it to isolate and manage environment variables during the build.
 
