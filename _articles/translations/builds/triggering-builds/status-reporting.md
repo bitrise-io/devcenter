@@ -1,24 +1,19 @@
----
-title: Reporting the build status to your git hosting provider
-menu:
-  triggering-builds:
-    weight: 7
+# ビルドステータスをGitホスティングサービスにレポートする
 
----
-Bitrise can push back build status reports to your git hosting provider (GitHub/GitLab/Bitbucket). You only need to authenticate Bitrise to communicate towards the git hosting service. Apart from build status reports, this enables other operations, such as auto-registering SSH keys or Webhooks.
+BitriseはビルドステータスをGitホスティングサービス（GitHub/GitLab/Bitbucket）に知らせることができます。必要な作業は、Bitriseと連携するための認証をGitホスティングサービスでしていただくだけです。認証をすることで、ビルドステータスのレポート以外にも、SSHキーやWebhookの自動登録などができるようになります。
 
-To do this, you need to specify a Service Credential User on the `Team` tab of your app on [bitrise.io](https://www.bitrise.io). You also need to make sure that this user has a connected account with the git hosting service of your choice on [bitrise.io](https://www.bitrise.io). This account will be used by Bitrise to communicate with the API of the git hosting provider.
+これを行うには、[bitrise.io](https://www.bitrise.io)上におけるアプリケーションの`Team`タブで`Service Credential User`を設定します。また、そのユーザーが、[bitrise.io](https://www.bitrise.io)で利用しているGitホスティングサービスと連携されたアカウントを持っていることを確認してください。このアカウントは、BitriseがGitホスティングサービスのAPIを使用するために利用します。
 
-Please note that status reports are sent only for automatically triggered builds, such as builds triggered by a code push or a pull request.
+ステータスレポートは、レポジトリへのプッシュやプルリクエストをトリガーにした自動ビルドの場合でのみ機能することに注意してください。
 
-1. Make sure the account you wish to use is connected to the relevant hosting provider: go to the `Account settings` page of the account and check the `CONNECTED ACCOUNTS` menu on the left side.
+1. 使用するアカウントが、Gitホスティングサービスと連携していることを確認するには、`Account setting`ページの左側にある`CONNECTED ACCOUNTS`をチェックしてください。
 
     ![Connected account](/img/getting-started/triggering-builds/connected-account.png)
 
-1. Go to the `Team` tab of your app on [bitrise.io](https://www.bitrise.io).
+1. [bitrise.io](https://www.bitrise.io)に登録したアプリケーションの`Team`タブを表示します
 
-1. Find the `Service credential User` menu and select the user with the connected account.
+1. `Service credential User`という項目で、任意のアカウントを選択します
 
     ![Service credential user](/img/getting-started/triggering-builds/service-credential.png)
 
-1. Click the `Test the git connection` button to make sure the selected user's connection can be used for sending back the build status to the hosting provider.
+1. `Test the git connection`をクリックし、選択したユーザーアカウントでGitホスティングサービスにビルドステータスを送信することができるかを確認します
