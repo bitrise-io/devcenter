@@ -21,7 +21,7 @@ If you have an Android deploy workflow do the following:
 
    `Gradle Runner` generates a `$BITRISE_APK_PATH_LIST` env var output that contains ALL the build variants you have set in `Gradle task to run` step above. We will need this output env var later but you can always check it and its value containing the APKs at `Env Vars` tab!
 
-## Signing and deploying
+## Sign and deploy multi-flavor APKs
 
 1. Add one `Sign APK` step AFTER the `Gradle Runner` step if it's missing from your workflow.
 2. Set the `$BITRISE_APK_PATH_LIST` in the `apk path` input field which will make sure all the required APKs will get code signed with the one keystore file you uploaded to the `Code Signing` tab. Check out [how you can upload your keystore file to bitrise.io](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#create-a-signed-apk-with-the-sign-apk-step/). The step will export a `$BITRISE_SIGNED_APK_PATH` env var output which lists all your signed build variants.
