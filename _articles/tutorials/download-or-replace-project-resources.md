@@ -2,7 +2,7 @@
 title: Download or replace project resources
 menu:
   tutorials:
-    weight: 7
+    weight: 8
 
 ---
 You can do this in quite a few ways, these are probably the easiest ones:

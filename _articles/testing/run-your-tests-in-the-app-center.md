@@ -34,4 +34,4 @@ Upload and schedule tests on the Visual Studio App Center for your projects. The
    * add the name of the test series
    * set the system locale (for example, _en_US_) for the test run
    * set the path to an application file, either .ipa or .apk
-   * set the path to a test directory. Use the appropriate directory for the chosen test framework. 
+   * set the path to a test directory. Use the appropriate directory for the chosen test framework.

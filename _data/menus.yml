@@ -7,18 +7,18 @@ code-signing:
   identifier: ios-code-signing
   weight: 2
 tutorials:
-- title: Deployment Tutorials
-  identifier: deployment-tutorials
-  weight: 1
 - title: Docker
   identifier: docker
+  weight: 4
+- title: Xamarin
+  identifier: xamarin
   weight: 3
 - title: Fastlane
   identifier: fastlane
-  weight: 1
-- title: Xamarin
-  identifier: xamarin
   weight: 2
+- title: Deployment Tutorials
+  identifier: deployment-tutorials
+  weight: 1
 getting-started:
 - title: Signing up
   identifier: signing-up
@@ -35,18 +35,18 @@ builds:
   identifier: triggering-builds
   weight: 1
 main:
-- title: Frequently Asked Questions (FAQ)
-  identifier: faq
-  weight: 14
-- title: Troubleshooting
-  identifier: troubleshooting
-  weight: 15
-- title: Tools
-  identifier: tools
-  weight: 16
 - title: API
   identifier: api
-  weight: 17
+  weight: 16
+- title: Frequently Asked Questions (FAQ)
+  identifier: faq
+  weight: 13
+- title: Troubleshooting
+  identifier: troubleshooting
+  weight: 14
+- title: Tools
+  identifier: tools
+  weight: 15
 - title: Caching
   identifier: caching
   weight: 8
@@ -79,4 +79,4 @@ main:
   weight: 6
 - title: Tips & Tricks
   identifier: tips-and-tricks
-  weight: 13
+  weight: 12
