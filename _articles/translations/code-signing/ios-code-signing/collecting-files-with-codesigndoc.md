@@ -17,7 +17,6 @@
 3. `Finder.app`を開き、プロジェクトの`.xcodeproj`もしくは`.xcworkspace`のファイルを`Terminal`のコマンドラインにドラッグアンドドロップします。
 
 ### codesigndocでBitriseにファイルをアップロードする
-### Uploading the files to Bitrise with codesigndoc
 
 1. 一度コード署名のファイルが収集できたら、`codesigndoc`は次のようにファイルをアップロードするか確認してきます:
 
