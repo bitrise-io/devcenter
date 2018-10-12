@@ -1,11 +1,6 @@
----
-title: Pull Requestをトリガーにする
-menu:
-  triggering-builds:
-    weight: 3
+# Pull Requestをトリガーにする
 
----
-あなたのレポジトリの、指定したソースブランチから、指定したターゲットブランチへのPull RequestがオープンされたことをトリガーにしてBitrise上でビルドが実行されるように設定することができます。
+あなたのレポジトリの指定したソースブランチから、指定したターゲットブランチへのPull Requestがオープンされたことをトリガーにして、Bitrise上でビルドが実行されるように設定することができます。
 
 あらかじめリポジトリのホスティングサービスでIncoming WebHookを設定しておく必要があります。  
 詳しくは[Webhooks](/webhooks/index)セクションを参照してください。
