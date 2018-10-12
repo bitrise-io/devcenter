@@ -25,7 +25,7 @@ Bitriseはパワフルかつ複雑ですが、簡単かつ直感的に利用す�
 
 アプリのプライバシー設定について、**private**か[**public**](/getting-started/adding-a-new-app/public-apps)のいずれかを選択してください。
 
-* privateの場合、あなたとあなたの組織のメンバー、及びチームメンバーのみがアクセスすることができます。
+* privateの場合、あなたとあなたのOrganizationに所属するメンバー、及びチームメンバーのみがアクセスすることができます。
 * publicの場合、ビルドログ及び`bitrise.yml`ファイルは公開されます。
 
 ![アプリプライバシー](/img/adding-a-new-app/app-privacy.png)
@@ -78,6 +78,6 @@ GitHub/GitLab/Bitbucketに接続すると、リポジトリにつきBitriseに�
 
 ## チームと組織
 
-一度アプリを設定すれば、[チームメンバーを招待する](/team-management/index)ことができます。もし開発者プランか組織プランを契約している場合、無制限にチームメンバーを招待できます！
+一度アプリを設定すれば、[チームメンバーを招待する](/team-management/index)ことができます。もしDeveloperプランかOrganizationプランを契約している場合、無制限にチームメンバーを招待できます！
 
-また、組織プランを契約している場合、[組織を作る](/team-management/organizations/creating-org)ことができます。組織を作成することですばやく、そして効率的にチームを管理できます。
+また、Organizationプランを契約している場合、[Organizationを作る](/team-management/organizations/creating-org)ことができます。Organization上ではすばやく、そして効率的にチームを管理することができます。
