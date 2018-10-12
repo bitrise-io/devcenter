@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-You can generate, code sign and deploy multiple flavor APKs in one workflow using our `Gradle Runner` step. You will need to do some settings to `Sign APK` and `Google Play Deploy` steps - so keep you eyes peeled! But first a little recap on the most important terms we will use in this guide.
+You can generate, code sign and deploy multiple flavor APKs in one workflow using our `Gradle Runner` step. You will need to do some settings to `Sign APK` and `Google Play Deploy` steps - so keep you eyes peeled! But first a little summary on the most important terms we will use in this guide.
 
 {% include message_box.html type="info" title="About build types, flavors and build variants" content="
 Build types mean the way your build is packaged, for example, compiled as `debug` for debugging or `release` for releasing the app.
