@@ -1,4 +1,4 @@
-[NuGet](https://www.nuget.org/)パッケージを回復するためには、
+[NuGet](https://www.nuget.org/)パッケージを復元するためには、
 [bitrise.io](https://www.bitrise.io)のページで自身のアプリのページに行き、
 ワークフローエディタを開くために`WorkFlow`タブを選択してください。
 
