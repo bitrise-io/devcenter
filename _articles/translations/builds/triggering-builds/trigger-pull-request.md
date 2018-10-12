@@ -1,29 +1,33 @@
 ---
-title: Triggering builds with pull requests
+title: Pull Requestをトリガーにする
 menu:
   triggering-builds:
     weight: 3
 
 ---
-You can set up a trigger so that every time a pull request is opened from a specified source branch to a specified target branch of your repository, a build is automatically triggered on Bitrise.
+あなたのレポジトリの、指定したソースブランチから、指定したターゲットブランチへのPull RequestがオープンされたことをトリガーにしてBitrise上でビルドが実行されるように設定することができます。
 
-Note that this requires an incoming webhook set up with the hosting service of your repository. Read more in the [Webhooks](/webhooks) section.
+あらかじめリポジトリのホスティングサービスでIncoming WebHookを設定しておく必要があります。  
+詳しくは[Webhooks](/webhooks/index)セクションを参照してください。
 
-By default, every new app you add will have a trigger that triggers a build every time any pull request is opened in your repository.
+Bitriseに登録された全てのアプリケーションには、Pull Requestがオープンされたときのトリガーがデフォルトで設定されています。
 
-1. Open your app on [bitrise.io](https://www.bitrise.io).
-2. Open the `Workflow Editor`.
-3. Select the `Triggers` tab.
-4. Select the `PULL REQUEST` option.
+1. [bitrise.io](https://www.bitrise.io)であなたのアプリケーションのページを開きます
+2. `Workflow Editor`を開きます
+3. `Triggers`タブを開きます
+4. `PULL REQUEST`オプションを開きます
 
    ![PR trigger](/img/getting-started/triggering-builds/pull-request-trigger.png)
-5. In the existing trigger, click the `SOURCE BRANCH` and `TARGET BRANCH` options.
+5. 既存のトリガーで、`SOURCE BRANCH`と`TARGET BRANCH`をクリックします。
 
-   If you have your own trigger set up already, click the `+ ADD TRIGGER` option to set up a new one.
-6. Type the names of the source branch and the target branch. Make sure there are no spelling errors, otherwise the trigger won't work.
+   もしトリガーがすでに設定されている場合は、`+ ADD TRIGGER`オプションをクリックして新しいトリガーを設定します。
+6. ソースブランチとターゲットブランチのブランチ名を入力します。スペルミスがないように気をつけてください。ブランチ名にミスがある場合、トリガーは機能しません。
 
-   You can leave either the source or target branch fields, or both, empty: the trigger will work accordingly. For example, if you leave both empty, as is the default with new apps, every pull request will trigger a build.
-7. Select the workflow you wish to trigger (for example, `primary`).
-8. Click `Save` in the top right corner.
+   ソースブランチとターゲットブランチのいずれか、または両方を空のままにすることができ、トリガーはそれ相応に動作します。たとえば、新しいアプリで両方のフィールドを空のままにする（これがデフォルト状態です）と、すべてのPull Requestによってビルドが開始されます。
 
-And you're done! From now on, if a pull request is opened in your repository, Bitrise will trigger a build with the selected workflow!
+7. トリガーを紐付けるWorkflowを選択します（例えば`primary`など）。
+
+8. 右上にある`Save`をクリックします。
+
+これで完了です！
+これより、あなたのリポジトリの指定されたブランチにコードがプッシュされると、Bitriseは設定されたWorkflowでビルドを開始します。
