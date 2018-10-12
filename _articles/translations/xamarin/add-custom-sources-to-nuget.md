@@ -1,7 +1,7 @@
-If you are using third-party NuGet packages in your application
-you have to add these sources to your NuGet package sources.
+アプリケーション内にNuGetによるサードパーティーパッケージを利用したい場合は, 
+それらのソースを自身のNuGetのソースに加える必要があります。
 
-Simply add a new `Script` step to your workflow with the following bash script as the content:
+やることは単純で, あなたのワークフローに`Script`ステップを新たに追加し, 以下の内容のbash scriptを記述するだけです！
 
 ```
 #!/bin/bash
@@ -10,14 +10,14 @@ set -ex
 nuget sources add -Name NAME_FOR_SOURCE -Source SOURCE_URL
 ```
 
-!!! warning
-    Don't forget to update the `NAME_FOR_SOURCE` and `SOURCE_URL` parameters,
-    and make sure to place the `Script` step before the `NuGet Restore Step`.
+!!! 注意
+    `NAME_FOR_SOURCE`と`SOURCE_URL`のパラメーターを更新することと
+    `NuGet Restore Step`の前に`Script`ステップを追加することを忘れないでください。
 
 
-### Custom NuGet source with credentials
+### 認証情報が必要なNuGetソースの場合
 
-If you need to set credentials for your NuGet source you can modify the `Script` above in the following way:
+もしあなたのNuGetソースに認証情報が必要な場合, 以下のように`Script`を変更してください。
 
 ```
 #!/bin/bash
