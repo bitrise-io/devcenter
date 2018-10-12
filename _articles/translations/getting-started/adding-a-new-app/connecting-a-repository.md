@@ -1,33 +1,31 @@
-After you've selected adding a new app, you will find yourself on the `Create app` page.
+新しいアプリの追加を選択すると、`Create app`ページが表示されます。
 
-Select your app's privacy setting: it can be either public or private.
+まずアプリのプライバシー設定を、パブリックまたはプライベートから選択してください。
 
-* Private apps are only accessible to you, your organization members and those who are invited to work on an app. They require authentication to access the repository of the app.
-* [Public apps](/adding-a-new-app/public-apps) expose their `bitrise.yml` and their build logs to everyone. If you have the build URL of a public app, you can view its build log, to help with troubleshooting, for example. Public apps do not require authentication and they cannot have SSH keys.
+* プライベート設定のアプリは、あなたとあなたの組織に所属するメンバー、およびこのアプリに招待された人のみがアクセスできます。このアプリのリポジトリにアクセスするためには、認証が必要です。
+* [パブリック設定のアプリ](/adding-a-new-app/public-apps)は、その`bitrise.yml`とビルドのログが公開されます。パブリック設定のアプリのビルドURLがある場合、トラブルシューティングを支援するためにビルドログも閲覧できます。パブリック設定のアプリは認証が必要ないため、SSHキーはありません。
 
-Bitrise will give you options to connect any kind of git repository to it. `GitHub`, `GitLab` and `Bitbucket` are supported out of the box.
+Bitriseには、あらゆるGitリポジトリに接続するためのオプションがあります。`GitHub`と`GitLab`、`Bitbucket`に接続する場合は、特別な追加設定は不要です。
 
-If you've already authorized Bitrise, for example, with your GitHub,
-you will see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
+例えば、すでにGitHubでBitriseを認証している場合、Bitriseは自動であなたのすべてのリポジトリを一覧表示します。あとはその中から接続したいもの選択するだけです。
 
-{% include message_box.html type="note" title="Connect any git repository to Bitrise" content="
-You can connect any private or public git repository to Bitrise. We will automatically create an SSH key that you can use to setup the connection with your provider.
+{% include message_box.html type="note" title="任意のGitリポジトリとの接続" content="
+公開・または非公開を問わず、任意のGitリポジトリとBitriseとを接続させることが可能です。Bitriseは自動でSSHキーを生成するため、それを使ってプロバイダとの接続を設定できます。
 "%}
 
 ![Screenshot](/img/adding-a-new-app/connect-repo.png)
 
-If you haven't [authorized Bitrise](/getting-started/adding-a-new-app/connecting-account-bitrise) against the provider hosting your repository, it will ask for permission.
+あなたのリポジトリをホストしているプロバイダで[Bitriseを認証](/getting-started/adding-a-new-app/connecting-account-bitrise) していない場合、リポジトリは許可を要求します。
 
 ![Screenshot](/img/adding-a-new-app/authorize-at-provider.png)
 
-It will then list your repositories as above. If you'd like to connect git repository hosted by other than GitHub or Bitbucket,
-select the `Other / Manual` tab.
+上の図のようにリポジトリは一覧で表示されます。もしGitHubやBitbucket以外でホストされているリポジトリに接続したい場合は、`Other / Manual`を選択してください。
 
 ![Screenshot](/img/adding-a-new-app/add-other-repo.png)
 
-You will have to add the git url of the repository you would like to connect.
+接続したいリポジトリのGit URLを入力してください。
 
-{% include message_box.html type="warning" title="Use SSH URLs for private repositories" content=" Please note, that if you are connecting a private repository, Bitrise will try to clone it through SSH, so it's necessary to provide an SSH URL to your repository here. "%}
+{% include message_box.html type="warning" title="プライベートリポジトリとの接続にはSSH URLを使用してください" content="プライベートリポジトリに接続する場合、BitriseはSSH経由でクローンを行います。そのため、リポジトリのSSH URLを入力する必要があります。"%}
 
-Bitrise will add an SSH key to your repository at a later step.
-Read more about how to add SSH keys automatically, or manually at [SSH keys](/adding-a-new-app/setting-up-ssh-keys/).
+この後のステップで、BitriseはあなたのリポジトリにSSHキーを追加します。
+SSHキーを自動または手動で追加する方法について詳しくは[SSH keys](/adding-a-new-app/setting-up-ssh-keys/)をご覧ください。
