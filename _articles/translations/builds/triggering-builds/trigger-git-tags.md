@@ -1,25 +1,22 @@
----
-title: Triggering builds with Git Tags
-menu:
-  triggering-builds:
-    weight: 4
+# Gitのタグをトリガーにビルドする
 
----
-You can specify a pattern for your Git Tags to trigger a specific workflow. This is a good way to build and deploy your app in a specific state. And it's very easy to set up!
+特定パターンのGitタグをワークフロー実行のトリガーにすることができます。これは、アプリケーションが特定の状態になった時のビルド・デプロイに適した方法です。しかもこのセットアップは非常に簡単です！
 
-Note that this requires an incoming webhook set up with the hosting service of your repository. Read more in the [Webhooks](/webhooks) section.
+あらかじめリポジトリのホスティングサービスでIncoming WebHookを設定しておく必要があります。  
+詳しくは[Webhooks](/webhooks/index)セクションを参照してください。
 
-Note that certain providers, such as GitLab, require Tag Push events to be specifically enabled in the webhook setup.
 
-1. Open your app on [bitrise.io](https://www.bitrise.io).
-2. Open the `Workflow Editor`.
-3. Select the `Triggers` tab.
-4. Select the `TAG` option.
+特定のGitプロバイダ（例えばGitLabのような）では、タグがプッシュされたイベントをWebhook設定で明示的に有効にしておく必要があります。
+
+1. [bitrise.io](https://www.bitrise.io)であなたのアプリケーションのページを開きます
+2. `Workflow Editor`を開きます
+3. `Triggers`タブを開きます
+4. `TAG`オプションを開きます
 
    ![Tag trigger](/img/getting-started/triggering-builds/tag-trigger.png)
-5. Click `+ ADD TRIGGER`.
-6. In the `TAG` window, add the tag that you wish to trigger a build.
-7. Select the workflow you wish to trigger (for example, `primary`).
-8. Click `Save` in the top right corner.
+5. `+ ADD TRIGGER`をクリックします
+6. `TAG`ウィンドウで、トリガーにしたいタグを追加します
+7. タグをトリガーに実行したいワークフローを選択します（例えば`primary`のような）
+8. 右上にある`Save`をクリックします。
 
-And you're done!
+これで完了です！
