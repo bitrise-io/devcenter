@@ -1,10 +1,3 @@
----
-title: Cocoapodsをキャッシュする
-menu:
-  caching:
-    weight: 2
-
----
 事前に、ワークフロー内に最新バージョンの`Cocoapods Install`ステップがあることを確認してください。
 
 1. `Workflow Editor`を開きます。
