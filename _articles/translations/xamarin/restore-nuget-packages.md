@@ -1,7 +1,7 @@
-To restore your [NuGet](https://www.nuget.org/) packages,
-simply navigate to the app on [bitrise.io](https://www.bitrise.io),
-and select the `Workflow` tab to open the Workflow Editor.
+[NuGet](https://www.nuget.org/)パッケージを回復するためには、
+[bitrise.io](https://www.bitrise.io)のページで自身のアプリのページに行き、
+そして, ワークフローエディタを開くために`WorkFlow`タブを選択してください。
 
-Add the `NuGet Restore` step to your workflow, after the `Git Clone` step.
-By default the step will use the same solution file that you have provided when you added your app,
-but you can simply modify it if you need to.
+ワークフローにおいて、`Git Clone` ステップの後に`NuGet Restore`ステップを追加してください。
+アプリを追加する際に, デフォルトでは自身が指定したソリューションファイルを使うようになります。
+もし必要であれば, 簡単に修正することも可能です。
