@@ -1,10 +1,3 @@
----
-title: codesigndoc を使わずコード署名ファイルをエクスポートする
-menu:
-  ios-code-signing:
-    weight: 11
-
----
 ### Xcodeを使用したエクスポート
 
 1. Xcodeを起動します。
