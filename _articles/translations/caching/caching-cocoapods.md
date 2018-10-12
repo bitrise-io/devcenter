@@ -1,16 +1,16 @@
 ---
-title: Caching Cocoapods
+title: Cocoapodsをキャッシュする
 menu:
   caching:
     weight: 2
 
 ---
-Before you start, make sure you have the latest version of the `Cocoapods Install` step in your workflow.
+事前に、ワークフロー内に最新バージョンの`Cocoapods Install`ステップがあることを確認してください。
 
-1. Open your app's `Workflow Editor`.
-2. Insert the `Cache:Pull` step after the `Git Clone` but before the `Cocoapods Install` steps. 
+1. `Workflow Editor`を開きます。
+2. `Cache:Pull`ステップを、`Git Clone`から`Cocoapods Install`のまでの間に挿入してください。
 
-   **IMPORTANT**: Make sure that your step is version 1.0.0 or newer. With the older versions, you have to manually specify paths for caching.
-3. Insert the `Cache:Push` step to the very end of your workflow.
+   **重要**: ステップのバージョンは1.0.0以上のものを使用してください。それ以前のバージョンでは、キャッシュのパスを手動で指定する必要があります。
+3. `Cache:Push`ステップをワークフローの末尾に追加してください。
 
-And that is all you have to do! If you wish to use an earlier version of the `Cache` steps, you can find more information [here](https://discuss.bitrise.io/t/how-to-cache-cocoapods-dependencies/193).
+これで完了です！もし過去バージョンの`Cache`ステップを使用したい場合は、[こちら](https://discuss.bitrise.io/t/how-to-cache-cocoapods-dependencies/193)をご覧ください。
