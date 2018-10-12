@@ -1,31 +1,30 @@
-With [Xamarin](https://xamarin.com) integration you can now build your
-iOS and Android Xamarin applications on [Bitrise](https://www.bitrise.io).
+[Xamarin](https://xamarin.com) インテグレーションを使えば [Bitrise](https://www.bitrise.io) で iOS と Android の Xamarin アプリをビルドすることができます。
 
-We have listed a couple of tutorials to help you get started, but if you get stuck,
-feel free to [contact us](https://www.bitrise.io/contact)!
+いくつかのチュートリアルを用意しました。もしハマった場合は気軽に[連絡してください](https://www.bitrise.io/contact)！
 
-## Xamarin tutorials
+## Xamarin チュートリアル
 
-**Highlighted**:
-A great overview and a detailed "getting started" tutorial: check out [James Montemagno](https://twitter.com/JamesMontemagno)'s
-video session about setting up Xamarin apps on Bitrise here: [https://www.youtube.com/watch?v=1UeNajpjIXY](https://www.youtube.com/watch?v=1UeNajpjIXY)
+**ハイライト**:
+素晴らしい概要と初めのチュートリアルとして、
+[James Montemagno](https://twitter.com/JamesMontemagno) さんが Bitrise 上で Xamarin アプリを使うための設定を紹介した動画があるので見てみましょう。
+[https://www.youtube.com/watch?v=1UeNajpjIXY](https://www.youtube.com/watch?v=1UeNajpjIXY)
 
-### Getting Started
+### まずはじめに
 
-* [Creating your first App on Bitrise](/getting-started/create-your-first-app-on-bitrise)
-* [Restore NuGet packages](/tutorials/xamarin/restore-nuget-packages)
+* [Bitrise で最初のアプリを作成する](/getting-started/create-your-first-app-on-bitrise)
+* [NuGet パッケージをリストアする](/tutorials/xamarin/restore-nuget-packages)
 
-### Code Signing
+### コード署名
 
-* [iOS code signing](/code-signing/ios-code-signing/code-signing)
-* [Android code signing](/code-signing/android-code-signing//android-code-signing-procedures)
+* [iOS コード署名](/code-signing/ios-code-signing/code-signing)
+* [Android コード署名](/code-signing/android-code-signing//android-code-signing-procedures)
 
 ### Advanced
 
-* [Deploy your Xamarin app](/tutorials/xamarin/deploy-your-xamarin-app)
-* [Run your tests in the Visual Studio App Center](/testing/run-your-tests-in-the-app-center)
-* [Add custom sources to NuGet](/xamarin/add-custom-sources-to-nuget)
-* [Build with FAKE (F# Make)](/tutorials/build-with-fake)
+* [Xamarin アプリを署名する](/tutorials/xamarin/deploy-your-xamarin-app)
+* [Visual Studio App Center でテストする方法](/testing/run-your-tests-in-the-app-center)
+* [NuGet にカスタムソースを追加する方法](/xamarin/add-custom-sources-to-nuget)
+* [FAKE(F# Make)でビルドする方法](/tutorials/build-with-fake)
 
 {% include message_box.html type="note" title="Community created tutorials" content="
 For more, community created tutorials, see the Xamarin section on the [Community Created Tutorials](/tutorials/community-created) page. "%}
