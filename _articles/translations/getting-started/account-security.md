@@ -1,31 +1,31 @@
-## 2要素認証の有効化
+## 二段階認証の有効化
 
-あたなの Bitrise アカウントで2要素認証を有効にすれば、さらにセキュリティが強化されます。
+Bitriseアカウントの二段階認証(TFA)を有効化すれば、セキュリティが強化されます。
 
-1. あなたの携帯電話に [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=en) をダウンロードしてインストールします。
-2. [bitrise.io](https://www.bitrise.io) にログインし、`Profile`画面に行きます。
+1. 携帯電話に [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=ja) をダウンロードしてインストールします。
+2. [bitrise.io](https://www.bitrise.io) にログインして、 `Profile` ページに移動します。
 3. `Account settings` をクリックします。
-4. スクロールし、左にある `Security` をクリックします。
-5. `Two-factor authentication` 項目にある `Enable` をクリックします。 
-6. 先ほどインストールした Google Authenticator を開き、画面に表示されている QR コードをスキャンします。
-7. 生成された 6桁の数字を入力します。
-8. 2要素認証をアクティベートして、リカバリーコードを保存したら、`letsconnect@bitrise.io` から確認メールが届きます。
+4. スクロールして左側にある `Security` をクリックします。
+5. `Two-factor authentication` の下にある、 `Enable` をクリックします
+6. 表示されるQRコードを、携帯電話にインストールされた Google Authenticator でスキャンします。
+7. 生成される6桁のコードを入力します。
+8. 二段階認証が有効化されリカバリーコードが保存されると、 `letsconnect@bitrise.io` から確認のメールが届きます。
 
-もし紐づけられたアカウント(GitHub, Bitbucket, GitLab and Xamarin)で2要素認証を有効にしていない場合、確認して有効にすることをお勧めします。
+もしまだしていない場合、連携しているアカウント(GitHub, Bitbucket, GitLab, Xamarin)の二段階認証も有効化することを推奨します。
 
-## 手動でパーソナルアクセストークンを生成する
+## 手動でパーソナルアクセストークンを生成
 
-プロフィール画面の`Security`タブに2種類のパーソナルアクセストークンがあります。
+プロフィールの `Security` タブには2種類のパーソナルアクセストークンがあります：
 
-- `auto-generated`: Bitrise API を使って Bitrise が自動で生成
-- `user-generated`: ユーザが手動で生成
+* `auto-generated` は、Bitrise APIを利用する際に自動的にBitriseによって生成されます。
+* `user-generated` は、あなたが手動で生成することができます。
 
-手動で新しいパーソナルアクセストークンを生成する手順は次の通りです。
+以下の手順に従って新しいトークンを手動で生成してください！
 
-1. プロフィール画面の`Security`タブにある `Generate new` をクリックします。
-2. `Token description` を埋め、適切な有効期限(1時間、1日、1ヵ月、無期限)
+1. あなたのプロフィールの `Security` タブの、 `Generate new` をクリックします。
+2. `Token description` フィールドを入力して、トークンの適切な有効期限(１時間、１日、１ヶ月、または永続)を選択します。
 3. `Save & Continue` をクリックします。
-4. `Personal Access token` ポップアップウィンドウに生成されたパーソナルアクセストークンが表示されます。後で確認できるように安全な場所に保存してください。
+4. ポップアップウィンドウの `Personal Access token` で、新しく作成されたトークンを確認します。後に使用するためにトークンを安全な場所に保存します。
 5. `Done` をクリックします。
 
-`Security` ページにあなたのすべてのパーソナルアクセストークンが有効期限と一緒に表示されています。`Edit` で編集、`Remove`で削除することができます。
+`Security` ページで、あなたの全てのトークンとその有効期限を確認することができるようになります。また、それぞれ `Edit` と `Remove` ができます。

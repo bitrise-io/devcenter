@@ -1,23 +1,24 @@
-You can authenticate your Apple Developer Account on Bitrise and integrate the Apple Developer Portal with your Bitrise project. This allows you to use our `iOS Auto Provisioning` step which makes managing Provisioning Profiles for iOS applications a lot easier!
+BitriseでApple Developer Accountを認証し、Apple Developer PortalとBitriseのプロジェクトを統合することができます。
+これにより、iOSアプリのProvisioning Profilesの管理がとても簡単になる、 `iOS Auto Provisioning` を利用することができます！
 
-All you need is a [bitrise.io](https://www.bitrise.io) account and a valid Apple Developer Account.
+必要なのは、[bitrise.io](https://www.bitrise.io)アカウントと有効なApple Developer Accountだけです。
 
-### Authenticating your Apple Developer Account on Bitrise
+### BitriseでApple Developer Accountを認証する
 
-1. Log in to [bitrise.io](https://www.bitrise.io).
-2. Click on your profile in the upper-right corner of your `Dashboard` and select `Account settings` from the dropdown menu.
+1. [bitrise.io](https://www.bitrise.io)にログインしてください。
+2. `Dashboard` の右上にあるプロフィールをクリックし、プルダウンメニューから`アカウント設定`を選択します。
 
    ![Account settings menu](/img/adding-a-new-app/account-settings.png)
-3. On the menu bar on the left, select `Apple Developer Account`.
-4. Provide your credentials in the popup window and click `Store credentials`.
+3. 左側のメニューバーで、`Apple Developer Account`を選択します。
+4. ポップアップウィンドウでApple Developer Accountの認証情報を入力し、`Store credentials`をクリックします。
 
    ![Connecting Apple Developer account](/img/adding-a-new-app/apple-dev-acc-sync.png)
-5. If two-factor authentication is enabled on your Apple Developer account, you will be prompted to provide your verification code. In this case, your authentication will expire in 30 days - Bitrise will prompt you before that happens!
+5. Apple Developerアカウントで2段階認証が有効になっている場合は、確認コードを入力するよう求められます。この場合、認証は30日後に期限切れになります。期限切れになる前に認証を行ってください！
 
-### Enabling Apple Developer Portal integration
+### Apple Developer Portalの統合を有効にする
 
-You can authorize your project to receive Apple Developer Portal data from Bitrise once your Apple Developer Account is connected to your [bitrise.io](https://www.bitrise.io) account.
+Apple Developer Accountが[bitrise.io](https://www.bitrise.io)アカウントに接続されると、BitriseからApple Developer Portalデータを受け取るようにすることができます。
 
-1. Open your project's page on [bitrise.io](https://www.bitrise.io).
-2. Select the `Team` tab.
-3. Select your account in the `Connected Apple Developer Portal Account` menu at the bottom of the page.
+1. [bitrise.io](https://www.bitrise.io)でプロジェクトのページを開きます。
+2. `Team` タブを選択します。
+3. ページの下部にある `Connected Apple Developer Portal Account` メニューでアカウントを選択します。

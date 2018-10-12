@@ -1,20 +1,20 @@
-When adding your app to **Bitrise**, we will clone your repository to make sure we can access it. Besides cloning your repository we will run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your workflow with all the necessary steps to build and deploy your app.
+**Bitrise**にあなたのアプリを追加すると、リポジトリをクローンしてアクセス出来ることを確認します。リポジトリのクローンのほかに、サポートされているすべてのアプリケーションを検出しアプリをビルドして配布するのに必要なワークフローを設定するため[プロジェクトスキャナ]（https://github.com/bitrise-steplib/steps-project-scanner）を実行します。
 
-{% include message_box.html type="note" title="Currently we are supporting the following projects out of the box" content="  
+{% include message_box.html type="note" title="現在以下のプロジェクトをサポートしています" content="
 
 * iOS  
-* Android 
-* Xamarin 
-* Fastlane 
-* macOS 
+* Android
+* Xamarin
+* Fastlane
+* macOS
 * Cordova  
-* Ionic 
-* React Native "%} 
+* Ionic
+* React Native "%}
 
-To add a new app to Bitrise go to your [dashboard](https://bitrise.io/dashboard) and press the `Add new app` button.
+Bitriseに新しいアプリを追加するには、[ダッシュボード]（https://bitrise.io/dashboard）に移動し、`Add new app`ボタンを押します。
 
-![Screenshot](/img/adding-a-new-app/add_new_app.png)
+![スクリーンショット](/img/adding-a-new-app/add_new_app.png)
 
-In case this is the first application the dashboard will show you the quickstart guide instead of a list of you apps. There you can choose to add your first app right away.
+これが最初のアプリケーションの場合、ダッシュボードにはあなたのアプリ一覧の代わりにクイックスタートガイドが表示されます。そこにすぐ最初のアプリを追加することができます。
 
-Let's check out how you can [connect a repository](/getting-started/adding-a-new-app/connecting-a-repository)!
+[リポジトリに接続](/getting-started/adding-a-new-app/connecting-a-repository)する方法を見てみましょう！
