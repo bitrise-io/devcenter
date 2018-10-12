@@ -8,5 +8,11 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "@material/typography": "^0.38.0",
+    "simple-jekyll-search": "^1.7.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.3"
+  }
 }
