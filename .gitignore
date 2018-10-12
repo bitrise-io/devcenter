@@ -3,3 +3,5 @@ gg.conf.json
 _site
 .bitrise.secrets.yml
 .DS_Store
+.bundle
+vendor
