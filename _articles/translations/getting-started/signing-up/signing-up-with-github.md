@@ -1,6 +1,6 @@
 GitHubのユーザーアカウントを利用して**Bitrise**と連携することができます。連携することで１クリックでログインすることができ、また、これらのプロバイダーによってGithub上でレポジトリを作る際にGitHubへの連携をする必要がなくなります。
 
-{% include message_box.html type="note" title="Signing up with email address" content=" If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/getting-started/signing-up/signing-up-with-email). "%} 
+{% include message_box.html type="note" title="メールアドレスでサインインする" content="[signing up with email address](/getting-started/signing-up/signing-up-with-email)にそって登録するすることでメールアドレスから登録することができます"%} 
 
 ## サインアップ
 
