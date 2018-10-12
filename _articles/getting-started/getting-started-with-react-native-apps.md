@@ -140,7 +140,7 @@ You can share the generated APK/.ipa file with your team members using the build
 
 ## Deploy to an app store
 
-If you wish to deploy your iOS app, follow the steps in [Code sign your iOS project for deployment](/getting-started-with-reactnative-apps/#code-sign-your-ios-project-for-deployment).
+If you wish to deploy your iOS app, follow the steps in [Code sign your iOS project for deployment](/getting-started-with-reactnative-apps/#code-sign-your-ios-project-for-deployment/).
 
 ### Deploy your iOS app to Testflight and iTunes Connect
 
