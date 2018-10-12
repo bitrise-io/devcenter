@@ -55,7 +55,9 @@ Make sure that you have:
 
 * generated an .ipa file locally, on your own machine, at least once
 * uploaded all the Developer certificates that are included in the provisioning profile to Bitrise 
-* uploaded the app's Development Provisioning Profile if you want to use [manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning/) on Bitrise
+* uploaded the app's Development Provisioning Profile if you want to use [manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning/) on Bitrise. If you use [auto-provisioning](), you don't need to upload a profile.
+* uploaded a Distribution certificate for the app
+* uploaded an Ad-hoc Provisioning Profile (if you want to use manual provisioning)
 
 #### Deploying the app
 
@@ -70,3 +72,8 @@ Make sure that you have:
 7. Click the `APPS & ARTIFACTS` tab to find your .ipa file that you can distribute. 
 
 ## Deploying an iOS app to iTunes Connect
+
+You can deploy an app to iTunes Connect (rebranded as App Store Connect) to: 
+
+* invite testers on Testflight
+* release your app on the App Store 
