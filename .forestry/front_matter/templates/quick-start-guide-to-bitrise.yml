@@ -33,7 +33,6 @@ pages:
 - _articles/builds/build-numbering-and-app-versioning.md
 - _articles/getting-started/adding-a-new-app/connecting-a-repository.md
 - _articles/builds/Starting-builds-manually.md
-- _articles/reviews/getting-started-with-reactnative-apps.md
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/adding-a-new-app/setting-up-configuration.md
 - _articles/builds/bitrise-yml-online.md
