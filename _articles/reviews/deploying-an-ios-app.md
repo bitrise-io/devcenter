@@ -78,7 +78,7 @@ You can deploy an app to iTunes Connect (rebranded as App Store Connect) to:
 * invite testers on Testflight
 * release your app on the App Store 
 
-On Bitrise, you can 
+On Bitrise, you can either simply just upload your binary to iTunes Connect or you can also submit it for review. 
 
 #### Before you start
 
@@ -92,6 +92,8 @@ Make sure that you have:
 
 #### Deploying the app
 
+When deploying an app to 
+
 1. Make sure the `Certificate and profile installer` Step or the `iOS Auto Provision` Step is in your workflow.
 
    Do NOT use both!
@@ -100,5 +102,3 @@ Make sure that you have:
 4. Add the `Deploy to iTunes Connect` Step to your workflow.
 5. 
 6. Start a build.
-7. When the build is finished, go to the app's `Builds` page and click the latest build.
-8. Click the `APPS & ARTIFACTS` tab to find your .ipa file that you can distribute.

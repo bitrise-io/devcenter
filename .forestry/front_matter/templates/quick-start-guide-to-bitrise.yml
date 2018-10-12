@@ -14,8 +14,8 @@ fields:
   hidden: false
   default: ''
 pages:
-- _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/reviews/deploying-an-ios-app.md
+- _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/reviews/meta-field.md
 - _articles/reviews/build-and-deploy-multiple-flavor-apks-to-the-play-store.md
 - _articles/reviews/build-logs.md
