@@ -16,3 +16,7 @@ Turn on `Device Testing` on the app's `Settings` tab.
    ![](/img/android-vdt-turn-on.jpg)
 
 ## Modify your primary workflow
+
+1. Add `Gradle Runner` Step after testing steps before the deploy tests. 
+2. Add an extra task; `assembleDebugAndroidTest`, to the `Gradle task to run` step input field.
+3. Add '[BETA] Virtual Device Testing for Android` Step after `Gradle Runner` Step.
