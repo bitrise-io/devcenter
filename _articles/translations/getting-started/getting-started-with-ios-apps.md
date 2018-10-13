@@ -1,36 +1,41 @@
-Developing for iOS is not always easy - our aim is to make it as simple as possible for you! In this guide, we'll walk you through how to add an iOS app to Bitrise, how to run Xcode tests, manage your code signing files and deploy the app to bitrise.io and to the App Store.
+iOS の開発は時に複雑です。我々の目的は開発する上での負担をできる限り削減することです！ このガイドでは以下の説明を行います。
 
-## Adding an iOS app
+- BitriseにiOSアプリを追加する
+- XCode テストの実行
+- アプリの署名、及び .ipa ファイルのエクスポート
+- TestFlight 及び App Store へのデプロイ
 
-1. Click the `+` sign on the top menu bar and select `Add app`.
+## BitriseにiOSアプリを追加する
 
-2. On the Create new App page, choose the account you wish to add the app to.
+1. メニューバーにある `+` マークをクリックし、 `Add app` を選択。
 
-3. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click `Next`.
+2. 新規アプリ作成画面にて、アプリを追加するアカウントを選択。
 
-4. Select the Git hosting service that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-your-repository).
+3. アプリのプライバシー設定を Private か [Public](/getting-started/adding-a-new-app/public-apps) に設定し、`Next` を選択。
 
-5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
+4. リポジトリが格納されているGit ホストを選択し、プロジェクトが格納されているリポジトリを選択。詳しくは[リポジトリの連携](/getting-started/adding-a-new-app/connecting-your-repository)にて。
 
-6. Type the name of the branch that includes your project's configuration - master, for example - then click `Next`.
+5. リポジトリへのアクセス設定画面では `No, auto-add SSH key` を選択。詳しくは[SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/)にて。
 
-7. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them. In the case of an iOS app, we're looking for your Xcode Project (`.xcodeproj`) or Xcode Workspace (`.xcworkspace`) path.
+6. プロジェクトの構成が含まれているブランチ名( `master` 等)を入力して、 `Next` を選択。
 
-   **IMPORTANT**: the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
+7. Bitrise がプロジェクトの検証を開始するので待機する。 Bitrise は構成ファイルを元にアプリのセットアップを行う。iOS アプリの場合 XCode Project ファイル (`.xcodeproj`)、または XCode Workspace ファイル (`.xcworkspace`)を参照する。
+
+   **重要**: プロジェクトのビルドSchemeが共有されていない場合、検証に失敗します。 あなたの XCode Scheme に手動でBitriseを繋げることはできますが、Scheme が共有されている場合、Bitrise が自動的に検出します。詳しくは[こちらのFAQ](/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)より。
    
-8. Select the .ipa export method. You can modify this later - for now, select `development`.
+8. .ipa エキスポートのメソッドを選択。まずは `development` を選択してください（後で変更可能）。
 
    ![iOS project scanned](/img/ios-project-scanned.png)
 
-   Once you clicked it, you should see your:
-   * Project or Workspace path
-   * Scheme name
-   * ipa export method
+   選択すれば下記情報が表示されます:
+   * プロジェクト、またはワークスペースへのPath
+   * Scheme名
+   * ipa エキスポートのメソッド
    * iOS stack
    
-9. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
+9. Webhook を設定することでコードがリポジトリに Push される度、またはPull Request が作成された際に Bitrise が起動されます。これは最初のビルドでも発生します。表示されるメッセージをクリックすることでビルドページに飛ばされます。
 
-## Running Xcode tests
+## XCode テストの実行
 
 Once you created your app, the first build will run based on the automatically created **primary** workflow. You can check it out in the app's [Workflow Editor](/getting-started/getting-started-workflows): click the app's name on your Dashboard then click the `Workflow` tab.
 
@@ -50,7 +55,7 @@ The `Deploy to Bitrise.io` will deploy the following to the `Logs` and [Apps & A
 * your Xcode test results
 * your raw `xcodebuildoutput` log.
 
-## Code signing and exporting an .ipa
+## アプリの署名、及び .ipa ファイルのエクスポート
 
 To install and test the app on other physical devices, you will need to create and export an .ipa file. This requires setting up code signing. In the example, we'll be exporting an .ipa with the `development` export method: you cannot upload such an app to Testflight but you can test it, for example, on the devices of your internal testers.
 
@@ -82,7 +87,7 @@ If you uploaded the correct code signing files, the `Certificate and profile ins
 
 iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](/code-signing/ios-code-signing/code-signing)!
 
-## Deploying to TestFlight and the App Store
+## TestFlight 及び App Store へのデプロイ
 
 If you set up your code signing files and created an .ipa for your internal testers, it is time to involve external testers and then to publish your iOS app to the App Store. Let's see how!
 
