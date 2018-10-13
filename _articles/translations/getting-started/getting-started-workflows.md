@@ -1,39 +1,40 @@
-A Bitrise workflow is a collection of Steps. When a build of an app is run, the steps will be executed in the order that is defined in the workflow. Workflows can be created, defined and modified in two ways:
+Bitriseワークフローは複数のステップの集まりです。アプリのビルド時に、ステップがワークフローで定義されたステップが実行されます。ワークフローは次の2つの方法で、作成と変更ができます。
 
-* Using the graphical Workflow Editor on [bitrise.io](https://www.bitrise.io)
-* Directly editing the `bitrise.yml` file of your project
+* [bitrise.io](https://www.bitrise.io)のグラフィカルワークフローエディタを使う
+* プロジェクトの`bitrise.yml`を直接編集する
 
-Ultimately, both methods modify the `bitrise.yml` file - the `Workflow Editor` is simply a friendlier way of doing so!
+どちらの方法でも結果的に`bitrise.yml`を変更することになります - `Workflow Editor（ワークフローエディタ）`を使う方法の方がよりシンプルで易しいです！
 
-By default, a single build is a single workflow. But it's also possible to [chain workflows together](/getting-started/getting-started-workflows#chain-workflows-together) so they run in succession, as well as to [trigger multiple workflows to run simultaneously](/builds/triggering-builds/trigger-multiple-workflows).
+デフォルトでは、1つのビルドに1つのワークフローが対応しています。しかし、[ワークフロー同士の連結](/getting-started/getting-started-workflows#chain-workflows-together)を設定して、連続して実行することも可能ですし、[複数のワークフローのトリガーを設定して同時に実行する](/builds/triggering-builds/trigger-multiple-workflows)ことも出来ます。
 
-## Default Workflows
+## デフォルトワークフロー
 
-When you add a new app on [bitrise.io](https://www.bitrise.io), two workflows are created automatically. These are the `primary` and the `deploy` workflows. By default, every code change in your project's repository triggers the `primary` workflow if the required webhook has been set up.
+[bitrise.io](https://www.bitrise.io)にアプリを追加すると、2つのワークフローが作成されます。`primary（プライマリ）`ワークフローと`deploy（デプロイ）`ワークフローです。webhookが設定されている場合、デフォルトでは、プロジェクトのコードの変更があるたびに`primary（プライマリ）`ワークフローのトリガーが実行されます。
 
-Triggers can be configured so that any other workflow (including `deploy`) is automatically triggered when certain code events happen. For more information, [read some more about build triggers](/builds/triggering-builds/triggering-builds).
+特定のイベントが発生するたびに、他の任意のワークフロー（`deploy（デプロイ）`ワークフローを含む）が実行されるように、トリガーを設定することができます。詳しくは、[ビルドトリガーについてより詳しく知る](/builds/triggering-builds/triggering-builds)をお読みください。
 
-### The `primary` workflow
+### `primary（プライマリー）`ワークフロー
 
-The `primary` workflow is automatically created when adding a new app. Once the process of adding the app is over, Bitrise triggers the app's first build automatically: this build runs with the `primary` workflow.
+`primary（プライマリー）`ワークフローは、新しいアプリの追加時に自動的に作成されます。アプリを追加する処理が完了すると、Bitriseは自動的に初回のビルドを実行します: このビルドは、`primary`ワークフローによって実行されます。
 
-![Primary workflow](/img/getting-started/primary-workflow.png)
+![primaryワークフロー](/img/getting-started/primary-workflow.png)
 
-The `primary` workflow is not the same for every app you create: it contains different Steps depending on the project type. For example, an Android project's `primary` workflow will include the `Install missing Android SDK components`, the `Android Lint` and the `Android Unit Test` Steps. But overall, `primary` is a "basic" workflow that always performs the following actions:
+`primary`ワークフローは、作成したアプリごとに同じではありません: プロジェクトの種類によって、含まれるステップが異なります。例えば、Androidプロジェクトの`primary`ワークフローは、`Install missing Android SDK components（不足しているAndroid SDKのインストール）`、`Android Lint`、`Android Unit Test`のステップを含むでしょう。ただし、`primary`は"基本の"ワークフローであり、共通して以下のアクションを行います:
 
-* Activates the SSH key, if one has been added to the app. The step saves it to file and then loads it into the user's ssh-agent with the `ssh-add` command. The step, by default, does not run if there is no SSH key added.
-* Clones the Git repository of the project with the `Git Clone Repository` Step.
-* `Bitrise.io Cache:Pull` and `Bitrise.io Cache:Push` Steps. Read more about [caching on Bitrise](/caching/about-caching).
+* `ssh-add`コマンドで、SSHキーがアプリに追加されている場合にアクティベートを行います。このステップでは、SSHキーの保存、ユーザーのssh-agentへのロードを実行します。
+* `Git Clone Repository`ステップで、プロジェクトのGitレポジトリをクローンを実行します。
+* `Bitrise.io Cache:Pull` and `Bitrise.io Cache:Push`ステップについては、[Btriseでのキャッシュ](/caching/about-caching) を参照してください。
 * Deploys build artifacts with the `Deploy to Bitrise.io` Step.
+* `Deploy to Bitrise.io`ステップで、ビルド成果物のデプロイを行います。
 
-### The `deploy` workflow
+### `deploy（デプロイ）`ワークフロー
 
-The `deploy` workflow is automatically created when adding a new app. It is similar to the [primary workflow](/getting-started/getting-started-workflows#the-primary-workflow) in a number of ways:
+`deploy（デプロイ）`ワークフローは、新しいアプリの追加時に自動的に作成されます。いくつかの点で[primaryワークフロー](/getting-started/getting-started-workflows#the-primary-workflow)と似ています。
 
-* it has the same 'basic' steps
-* its specific steps are dependent on the project type
+* '基本的な'ステップを含む
+* 実際に含まれるステップはプロジェクトの種類によって異なる
 
-The `deploy` workflow, however, also contains the Steps that "build" the project, and, if the build is successful, produces the necessary artifacts for installing the app or deploying it online. For example, an Android project's `deploy` workflow contains the `Android Build` Step that builds your project with Gradle, and the `Sign APK` Step that creates a signed .apk file which can be deployed to Google Play or installed on test devices.
+`deploy（デプロイ）`ワークフローは、"build"ステップを含み、ビルドが成功した場合に、オンライン上でインストールもしくはデプロイが可能な成果物を作成します。例えば、Androidプロジェクトの`deploy`ワークフローは、Gradleでのビルドを実行する`Android Build`ステップや、Google Playへのデプロイや検証端末へのインストールが可能な署名済み.apkファイルを作成する`Sign APK`ステップを含みます。
 
 ## Creating your own workflow
 
