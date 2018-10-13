@@ -1,17 +1,13 @@
-## Searching for errors and issues in Xcode generated output
+## Xcode の出力からエラーと問題を見つける
+_この方法は Xcode の出力をフィルターしないログのみに対応しています。
+ログにエラーの理由が表示されていない場合、Xcode の`Output Tool`オプションを適切に指定しているかを確認してください。
+`xcodebuild`（Xcodeのコマンドラインツール）は、非常に verbose なアウトプットをしますが、Xcode のコマンドラインツール（`xcodebuild`）によって提示される解決方法が含まれます。Bitrise 公式のすべてのステップには、`xcodebuild`のオプションとして`Output Tool`の入力を受け付けます。_
 
-_This applies only to the raw, unfiltered output of Xcode.
-If you can't find the error reason in the logs make sure to switch the `Output Tool` option
-of the Xcode ... step to `xcodebuild` (Xcode's Command Line Tool), which will
-result in a quite verbose output, but will include everything the way it's produced by
-Xcode's command line build tool (`xcodebuild`). All of the official Bitrise Xcode steps
-have an `Output Tool` input with a `xcodebuild` option._
+`error:`という文字列を Xcode のログから検索しましょう。その内容が99%のケースでその問題を起こしている原因です。
 
-You should search for `error:` in the Xcode logs, in 99% of the cases that'll be the one which causes your issues.
+もしうまく見つからない場合は、`warning:`という文字列でも検索してみましょう。Xcodeは失敗しているにも関わらず、`error:`を出力しないケースがたまにあります。
 
-If that doesn't work you should also search for `warning:`, in rare cases Xcode doesn't print an `error:` even if it fails.
-
-If you have the logs on your own machine then you can run something like this in your Terminal:
+自分のローカル環境でもそのログがある場合、以下のようなコマンドを使って検索できます。
 
 ```
 grep --color 'error:' my.log
@@ -19,62 +15,48 @@ grep --color 'warning:' my.log
 ```
 
 
-## Xcode Scheme not found
+## Xcode Scheme が見つからない問題
 
-The first thing you should check if you can't see your Xcode project's scheme
-during setup, or if you get a `The project named "Foo" does not contain a scheme named "Bar"` error during build,
-is your Xcode project settings.
+ステップの途中で Xcode プロジェクトが見つからない場合やビルド中に`The project named "Foo" does not contain a scheme named "Bar"`というエラーが発生している場合、まずはじめにXcodeプロジェクトの設定を確認しましょう。
 
-* Check if the desired Scheme is shared
-* When you share your scheme the Xcode project changes. Don't forget to **commit** and to **push** your changes!
-* If the related validation is still running on Bitrise abort it and try to run it again.
+* 必要なスキームが共有されているかを確認しましょう
+* スキームを共有するとき、Xcode プロジェクトは変更されます。忘れず変更を**コミット**し、**プッシュ**しましょう！
+* 関連するバリデーションがBitrise上で走っている場合はAbortして再実行してください
 
 ![Xcode shared scheme](/img/ios/xcode-shared-scheme.png)
 
-**Don't forget to commit & push the changes** if you just enabled the Shared option!
-This change should be reflected in your `git` repository,
-under you project / workspace
-(which is actually a directory, just seems like a file in Finder):
-`*.xcodeproj OR *.xcworkspace/xcshareddata/xcschemes/SchemeName.xcscheme`.
+共有オプションを有効にした時は、**変更をコミット・プッシュすることを忘れないようにしましょう！**`git`リポジトリにはプロジェクトやワークスペース、具体的には `*.xcodeproj`または`*.xcworkspace/xcshareddata/xcschemes/SchemeName.xcscheme`(これはFinderではファイルのように見えますが、実際はディレクトリです)が含まれており、共有オプションの変更を反映する必要があります。
 
-If you still can't see the desired Scheme,
-try to look into your `.gitignore` file and check if you are ignoring the config files of your Xcode project.
+必要なスキームがまだ見つからない場合、`.gitignore`で Xcode プロジェクトの設定ファイルが無視されていないかを確認してください。
 
 
-## CocoaPods (missing) dependency issue
+## CocoaPods の依存解決問題
 
-### Error:
+### エラー
 
 ```
 ld: library not found for -lPods-...
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
 
-OR:
+または
 
 ```
 no such module '...'
 ```
 
-### Solution:
+### 解決方法
 
-Most likely you use Cocoapods but you specified the Xcode project (.xcodeproj) file
-instead of the Workspace (`.xcworkspace`) file. Go to your App's **Workflow tab** on Bitrise,
-click **Manage Workflows**, click **App Environments** and change the `BITRISE_PROJECT_PATH` item.
-This will change the default Project Path configuration for every workflow.
+多くの場合は、Cocoapods を使っていてワークスペース（`.xcodeproj`）の代わりに Xcode プロジェクトを指定してしまっています。Bitrise上の App の**Workflow タブ**へ行き、**Manage Workflows**、**App Environments**の順にクリックして`BITRISE_PROJECT_PATH`の項目を変更します。これによりすべてのワークフローにおけるデフォルトのプロジェクトパスの設定を変更できます。
 
-**If it worked before** and the `BITRISE_PROJECT_PATH` did not solve the issue,
-then check your App's other environments - the project file path might be overwritten by a Workflow environment variable,
-or you might have specified a Project Path for the related Xcode step directly.
+**以前動いていた場合**や`BITRISE_PROJECT_PATH`の修正で解決しなかった場合、Appの他の環境設定を確認しましょう。プロジェクトのファイルパスはワークフローの環境変数によって上書きされることがあります。もしくは、関連するXcodeのステップで直接プロジェクトのパスを指定してしまっている可能性もあります。
 
 
-## Fastlane Export Issue
+## Fastlane での出力エラー
+_このセクションは[@kwoylie](https://github.com/kwoylie)からの提供で、`Gemfile`がリポジトリにあり、`fastlane`ステップを使っていて`Gemfile`を自動的に利用する場合に当てはまります。_
 
-_This section was contributed by [@kwoylie](https://github.com/kwoylie),
-and applies if you have a `Gemfile` in your repository and you use
-the `fastlane` step which uses the `Gemfile` automatically if present._
 
-`Gemfile` content was:
+`Gemfile` が以下の内容のとき
 
 ```
 gem "fastlane", "1.104.0"
@@ -84,10 +66,9 @@ gem "CFPropertyList","2.3.3"
 gem "sqlite3", "1.3.11"
 ```
 
-I have been battling issues with Fastlane just not letting me export to an enterprise build on
-bitrise cloud service. But it works perfectly fine on my colleagues and my machine.
+私は Fastlane が Bitrise のクラウドサービスでエンタープライズビルドへ出力できない問題と戦っていましたが、同僚や私のローカル環境では全く問題なく動いていました。
 
-I had disabled xcpretty on Fastlane and got the following error from gym:
+Fastlane 上の xcpretty を無効にすると、gym から次のエラーが出ていました。
 
 ```
 $/usr/bin/xcrun /usr/local/lib/ruby/gems/2.3.0/gems/gym-1.10.0/lib/assets/wrap_xcodebuild/xcbuild-safe.sh -exportArchive -exportOptionsPlist '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_config20161003-2206-1f0vw3k.plist' -archivePath /Users/vagrant/Library/Developer/Xcode/Archives/2016-10-03/App\ 2016-10-03\ 05.57.17.xcarchive -exportPath '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_output20161003-2206-wjhjai'
@@ -107,9 +88,7 @@ Error Domain=IDEDistributionErrorDomain Code=14 "No applicable devices found." U
 </IDEDistributionContext: 0x7f868c51ed70>
 ```
 
-This error is a little decieving, thinking it might be a code signing error or
-some weird configuration issue with Fastlane.
-But if you look further into the error, you may see the following:
+このエラーは少し罠で、コード署名のエラーか Fastlane の設定の何かがおかしいという問題だと考えていました。しかし、よく見ると次の出力があることが分かります。
 
 ```
 2016-10-03 13:01:58 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/IDEDistributionThinningStep.s1x' '--json' '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/ipatool-json-filepath-RUCdRR' '--info' '--toolchain' '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr' '--platforms' '/Applications/Xcode.app/Contents/Developer/Platforms'
@@ -128,91 +107,70 @@ But if you look further into the error, you may see the following:
 2016-10-03 13:01:59 +0000 [MT] ipatool JSON: (null)
 ```
 
-So after alot of investigation, Fastlane reverts back to Mac OS system's ruby for exporting.
-But the system ruby doesn't have json 1.8.3 installed.
+よくよく調査すると、エクスポート時に Fastlane が MacOS のシステムRuby を使うように戻していました。しかし、システム Ruby は json 1.8.3 をインストールしていません。
 
-### Solution:
+### 解決方法
 
-To fix this issue, you just have to add a `Script` step to run the following:
+この問題を修正するためには、次の`Script`ステップを追加する必要があります。
 
 ```
 sudo /usr/bin/gem install bundler
 ```
 
-This will install bundler on the system ruby and when the fastlane plugin
-calls bundle install then system ruby will also installed the neccessary dependencies
+このスクリプトはシステム Ruby に bundler をインストールして、Fastlane のプラグインが bundle install を呼び、システム Ruby は必要な依存をインストールします。
 
 
-## Works in local but not on Bitrise.io
+## ローカルで動くが Bitrise.io 上では動かないとき
+_例えば`ld: file not found ...`のようなエラー_
 
-_An example error: `ld: file not found ...`_
+まずはじめに Xcode を再起動して新しくビルドをしてください。
 
-First of all restart your Xcode and try a new build.
+上手くいかない場合は Xcode で**クリーンビルド**を実行してください。
 
-If it doesn't help try a **clean build** in Xcode.
+エラーが表示されない場合は、シミュレーターのリセットを試してください。
 
-If no error was displayed, try resetting your simulator(s).
+他の問題であり得るのは CocoaPods のバージョンの問題です。
+CocoaPods を`[sudo] gem install cocoapods`でアップデートしてください。また、`Podfile.lock`が**リポジトリにチェックインされている**ことを確認してください。このファイルが利用している Pod の厳密なバージョンを保持しているためです。*このファイルがない場合、Bitrise は常により新しいバージョンの Pod をダウンロードして利用する可能性があります*
 
-Another problem could be your CocoaPods version.
-Try updating your CocoaPods with the `[sudo] gem install cocoapods` command.
-Also make sure that your `Podfile.lock` is **committed into your repository**,
-as that's the file which describes the exact Pod versions you use.
-*Without this Bitrise might download newer versions of Pods than the ones you use.*
+まだエラーが表示されない場合、プロジェクトの`Pods`フォルダを削除して`pod install`コマンドの再実行を試みてください。
 
-If there's still no error try deleting the `Pods` folder in your project and run the `pod install` command again.
-
-Finally, if none of the above helped, or you get an error with `ld: file not found` on Bitrise,
-and the path contains `DerivedData`, with no other error message, like this:
+最後に、今までの試行でも上手く行かない場合、または、Bitrise 上で`ld: file not found`エラーが出ていて、そのパスに`DerivedData`が含まれていて他のエラーメッセージがない場合、例えば次のようなエラーの時
 
 ```
 ld: file not found: /Users/vagrant/Library/Developer/Xcode/DerivedData/...
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 ```
 
-Try deleting the Xcode local cache. After that the error should be reproducible on your local machine.
+Xcode のローカルキャッシュを削除してみてください。実行後に、ローカル環境でそのエラーが再現するはずです。
 
-You can delete the local Xcode cache using your Terminal:
+次のコマンドで Xcode のローカルキャッシュを削除できます。
 
 ```
 rm -rf ~/Library/Developer/Xcode/DerivedData
 ```
 
 
-## Step hangs (times out after a period without any logs)
+## ステップがハングした場合（何もログを出力しなくなってタイムアウトした場合）
 
-Check whether the scripts you use trigger any GUI prompts or popups, or wait for any user input.
-If a script waits for any user input it can cause the build to hang.
+スクリプトが GUI プロンプトやポップアップを呼び出したり、ユーザの入力待ちになっていないかを確認してください。
+スクリプトがユーザの入力待ちになっている場合、ハングの原因になります。
 
-Most frequent sources of this issue:
+よくある原因
 
-* `Xcode` (command line tools) might hang if you try to build a Scheme which is not marked as **shared**.
-  Usually it hangs right after you start any `xcodebuild` command (e.g. `xcodebuild -list` or `xcodebuild .. archive`).
-    * __Solution__: Please make sure that you marked the Scheme as **shared**,
-      and that you actually committed & pushed it into your repository.
-      For more information please follow this guide: [Xcode scheme not found](#xcode-scheme-not-found).
-* Your script tries to access an item in the OS X Keychain and the item is configured to
-  ask for permission before access (this is the default type of Access Control configuration
-  if you add an item - for example a password - to Keychain)
-* You try to use a script or tool which requires permissions where OS X presents a popup
-  for acceptance (for example an `osascript`). You can use a workaround to allow the tool,
-  without manual interaction by the user, for example by using [https://github.com/jacobsalmela/tccutil](https://github.com/jacobsalmela/tccutil).
-    * For example to add `osascript` to the allowed OS X Accessibility list you can call **tccutil** from
-      your script (don't forget to include it in your repository or download on-the-fly): `sudo python tccutil.py -i /usr/bin/osascript`
-    * You can download the script from GitHub directly, for example: `wget https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py`.
-* It can also be **something in your app's code**.
-  An example: one of our user had a simple **popup in the app, presented only at the first start of the app**.
-  Once the popup was dismissed, the fact was stored in the app's local storage, and the popup was not shown anymore.
-  They did dismiss the popup on their iOS Simulator, but on Bitrise every build runs in a brand new,
-  clean environment, which means that the simulator is in the same state as if you'd hit __"Reset Content and Settings"__ in the iOS Simulator's menu.
-    * __Solution__: try to clean out the simulator/emulator before you'd run the tests on your Mac/PC, to simulate the "first run" experience.
+* **共有されていない**スキームをビルドしようとしている時、`Xcode`（コマンドラインツール）はハングする可能性があります
+	* __解決方法__: スキームが共有されていることを確認してください。また、リポジトリに変更をコミットしてプッシュしてください。より詳細な情報は次のリファレンスを参考にしてください。 [Xcode Scheme が見つからない問題](#Xcode Scheme が見つからない問題)
+* スクリプトが OS X のキーチェーンのアイテムにアクセスしようとして、アイテムが許可を取るように設定されている。（パスワードなどのアイテムをキーチェーンに追加したときに設定される、アクセスコントロールのデフォルトです）
+* OS Xがポップアップを表示して許可を求めるスクリプトやツール（例えば、`osascript`など）を使用しようとしている。手動のインタラクションなしにツールを許可できるワークアラウンドを使うことができます。例えば、[https://github.com/jacobsalmela/tccutil](https://github.com/jacobsalmela/tccutil)などです。
+	* 例えば、OS Xのアクセシビリティのリストを許可する`osascript`を追加するとき、そのスクリプトから**tccutil**を呼び出すことができます。`sudo python tccutil.py -i /usr/bin/osascript`（プロジェクトのリポジトリに含めるか、即時でダウンロードするようにするかを忘れずに）
+	* GitHubからスクリプトを直接ダウンロードすることができます。`wget https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py`
+* **あなたのAppのコードに何か問題がある**場合もあります。例えば、**アプリの初回起動時だけにアプリ内で表示されるポップアップ**がある場合です。一度ポップアップをディスミスしたら、そのことをAppのローカルストレージに保存すると、そのポップアップはもう表示されなくなります。私たちがiOSシミュレーター上でディスミスしても、Bitrise 上では毎回新しい真っさらな環境になります。つまり、それはシミュレーターのメニューで __"Reset Content and Settings"__ を押したのと同様な状態です。
+	* __解決方法__: 初回起動の体験を再現するために、Mac や PC 上でテストする前にシミュレーターやエミュレータをクリーンにしてください。 
 
-It might also be that the build does not hang, **it just doesn't generate any log output**.
-This can happen for various reasons;
-you can find an example in case of an [iOS library project](https://github.com/bitrise-samples/xcodebuild-piped-output-issue-reproduction).
+また、これらはハングもせず、単に何も出力しないということもあります。
+これはいくつかの理由があって発生します。[iOS library project](https://github.com/bitrise-samples/xcodebuild-piped-output-issue-reproduction)から例を見つけることができます。
 
-## CocoaPods frameworks signing issue
-
-When you get an error something like this:
+## CocoaPods フレームワークの署名での問題
+次のようなエラーが発生したとき
 
 ```
 === CLEAN TARGET Pods-Xxxxxxxxx OF PROJECT Pods WITH CONFIGURATION Release ===
@@ -222,30 +180,22 @@ Check dependencies
 [BEROR]CodeSign error: code signing is required for product type 'Framework' in SDK 'iOS 8.1'
 ```
 
-This error is related to how CocoaPods expects code signing configurations for __frameworks__.
-
-### Solution 1: make sure that you upload/include/install a wildcard development provisioning profile
-
-Usually this issue does not happen on your local Mac, and this is the reason why it does not:
-When Xcode performs an initial code signing (when it compiles the framework projects)
-it requires a certificate and provisioning profile which can be used for
-signing the CocoaPods framework projects.
-
-On your Mac you most likely have your own Development certificate and
-__Wildcard__ team provisioning profile, which is enough for Xcode to do the
-initial code signing for the framework projects.
-
-So, Solution #1 is exactly this, upload these (Development identity/certificate (.p12)
-and the Team __wildcard__ provisioning profile) to [bitrise.io](https://www.bitrise.io),
-and Xcode will work the same way as it does on your Mac.
-It'll do an initial code signing with the development signing files,
-and then it'll resign the archive when it exports the final IPA.
+このエラーは、CocoaPodsが__フレームワーク__のコード署名設定をどのように期待しているかに関連します。
 
 
-### Solution 2: modifying code signing settings through `Podfile`
+### 解決方法1: ワイルドカードの development プロビジョニングプロファイルをアップロード・インクルード・インストールしているかを確認する
 
-One of our beloved user sent us the following fix for this problem.
-You should add the following script as a `Post script` to your `Podfile`:
+通常、この問題は以下の理由のためローカル環境では発生しません。
+Xcodeが初期のコード署名を処理する時（フレームワークプロジェクトをコンパイルする時）、CocoaPodsのフレームワークプロジェクトで利用可能な証明書やプロビジョニングプロファイルを要求するからです。
+
+個人のMac上では、ほとんどの場合自分自身のDevelopment証明書と__ワイルドカード__のチームのプロビジョニングプロファイルを持っていて、フレームワークプロジェクトに対して初期コードの署名をするには十分です。
+
+そのため、解決方法1 はこの通り、Development identityと証明書（.p12）とチームの__ワイルドカード__のプロビジョニングプロファイルを[bitrise.io](https://www.bitrise.io)へアップロードするとXcodeは個人のMacで動いていたのと同じように動きます。development 署名ファイルを使って初期コード署名をし、最終的なIPAを生成した際にアーカイブにもう一度サインします。
+
+
+### 解決方法2: `Podfile`でコード署名の設定を変更する
+
+あるユーザが私たちに送ってきた解決方法です。`Podfile`に`Post script`として次のスクリプトを追加します。
 
 ```
 post_install do |installer|
@@ -259,131 +209,110 @@ post_install do |installer|
 end
 ```
 
-You can find a related CocoaPods issue and discussion at:
-[https://github.com/CocoaPods/CocoaPods/issues/4331](https://github.com/CocoaPods/CocoaPods/issues/4331)
+CocoaPodsに関連する問題や議論は[https://github.com/CocoaPods/CocoaPods/issues/4331](https://github.com/CocoaPods/CocoaPods/issues/4331)で見つけることができます。
 
-You can also find possible solutions at CocoaPod's official GitHub issues page,
-like this one: [https://github.com/CocoaPods/CocoaPods/issues/3063](https://github.com/CocoaPods/CocoaPods/issues/3063).
+また、可能な解決方法もCocoaPodsの公式GitHub Issuesページで見ることができます。例: [https://github.com/CocoaPods/CocoaPods/issues/3063](https://github.com/CocoaPods/CocoaPods/issues/3063)
 
 
-## Installing an Enterprise app: `Untrusted Enterprise Developer`
+## エンタープライズAppをインストール中での`Untrusted Enterprise Developer`
 
-If you try to install an Enterprise distribution signed app you might get a
-popup when you try to run the app the first time, with the title **Untrusted Enterprise Developer**.
+Enterprise ディストリビューション署名済みAppをインストールしようとした場合、初回起動時に**Untrusted Enterprise Developer**というタイトルのポップアップが表示されることがあるかもしれません。
 
 ![iOS Untrusted Enterprise Developer popup](/img/ios/ios-untrusted-enterprise-developer.png)
 
-Starting with iOS 9 there's no option to "Trust" the developer right from the popup.
+iOS 9 からは、ポップアップの右側に”信頼する”というオプションがありません。
 
-You can Trust the developer and enable the app to run in iOS Settings:
+iOSの設定で開発者を信頼して App を起動できるようにできます。
 
-1. Open the Settings app on your iPhone or iPad
-2. Select the `General` category
-3. Select the `Profile` option
-    * starting with iOS 9.2 the option was renamed to `Device Management` instead of `Profile`
-4. Tap on the Enterprise App option related to the app (the one mentioned in the popup)
-5. Tap the `Trust "The Developer's Name"` button
-6. A popup will appear, tap on `Trust` again
+1. 環境設定を iPhone または iPad で開きます
+2. `General`カテゴリを選択します
+3. `Profile`オプションを表示します
+	* iOS 9.2 から`Profile`から`Device Management`にリネームされています
+4. そのAppのエンタープライズAppオプションをタップします（ポップアップ中で言及されているもの）
+5. `Trust "The Developer's Name"`ボタンをタップ
+6. ポップアップが表示されるので、もう一度`信頼する`をタップ
 
-You should now be able to run the app, and any other Enterprise app from the same developer.
+これでAppを起動できるようになっていて、同時に同じ開発者の他のエンタープライズAppも同様に起動できるはずです。
 
 
-## No dSYM found
+## dSYM が見つからない
+いくつかのサービスは、配置済みの App の dSYM を要求しますが、Xcode プロジェクトの設定で dSYM の生成を無効にしている場合があります。
 
-A couple of services require the dSYM to be present for deployment but you might have disabled the dSYM generation in your Xcode project.
+### 解決方法
 
-### Solution:
-
-To generate debug symbols (dSYM) go to your `Xcode Project's Settings -> Build Settings -> Debug Information Format` and set it to *DWARF with dSYM File*.
-
+デバッグシンボル（dSYM）を生成するには、`Xcode Project's Settings -> Build Settings -> Debug Information Format` へ行き、*DWARF with dSYM File*を設定します。
 
 ## Invalid IPA: get-task-allow values in the embedded .mobileprovision don't match your binary
 
-**Solution:** Generate a new Certificate on the Apple Developer portal, **not** in Xcode.
 
-Another solution might be: make sure you have the proper Signing Identity and Provisioning Profile
-in Xcode project settings for both the target and for the project.
+**解決方法:** Xcode**ではなく**、Apple デベロッパーポータルで新しい証明書を生成します。
+
+他に考えられる解決方法として、ターゲットとプロジェクトの Xcode プロジェクト設定に適切な署名アイデンティティとプロビジョニングプロファイルがあることを確認してください。
 
 
 ## No identity found
 
-You uploaded the correct *Provisioning Profile* and *Certificate* pair,
-if you check the identity hash it matches with the one you can see in your Keychain,
-but you still get an error like:
+正しい *Provisioning Profile* と *Certificate* ペアをアップロードして、アイデンティティハッシュを確認して、キーチェーンにあるものと一致するにも関わらず、次のようなエラーがまだ出ているケースです。
+
 
 ```
 22...D11: no identity found
 ```
 
-**Solution:**
+**解決方法**
 
-You probably have a configuration in your Xcode project settings which specifies
-which keychain should be used for the build,
-your scheme might include something like `--keychain /../../xxx.keychain` code signing flag
-and a `CODE_SIGN_KEYCHAIN` variable set in the *.pbxproj*.
+Xcode プロジェクトの設定で、ビルドでどのキーチェーンが使われるべきかが設定されている可能性があり、`--keychain /../../xxx.keychain`のようなコード署名のフラグや*.pbxproj*で`CODE_SIGN_KEYCHAIN` 変数のようなものがスキームに含まれているかもしれません。
 
-_This might happen if you migrate your Xcode Bot based setup into Bitrise._
+_これはXcode Botをベースにした設定を Bitrise に移行する場合に起きる可能性があります_
 
-To fix the issue you have to remove the keychain selection configurations from your
-Xcode project settings.
+この問題を修正するには、Xcode プロジェクトの設定からキーチェーンの選択設定を削除する必要があります。
 
 
 ## No mobileprovision_path found / No embedded.mobileprovision found in ...
 
-Error: `No embedded.mobileprovision found in ...`
+エラー:
+`No embedded.mobileprovision found in ...` または `No mobileprovision_path found`
 
-Or: `No mobileprovision_path found`
+
+### 解決方法1: `Skip Install` Xcode Settings
+
+Xcode のアーカイブステップでこの問題が発生する場合、Xcode プロジェクトの設定を確認する必要があります。ほとんどの場合は、`Skip Install`オプションを`YES`にセットする必要があります。
+
+この設定は iOS フレームワークのみで必要で、**iOS Apps では`NO`をセットする必要があります。**
+
+公式ドキュメントは[https://developer.apple.com/library/ios/technotes/tn2215/_index.html](https://developer.apple.com/library/ios/technotes/tn2215/_index.html)で確認できます。
+
+* *Xcode がアプリケーションを正常にアーカイブしているのにも関わらず、アーカイブオーガナイザーがマイアーカイブセクションで表示されていない*ケース
 
 
-### Possible solution 1: `Skip Install` Xcode Settings
+### 解決方法2: `Installation Directory` Xcode Settings
 
-If you get this error in the Xcode Archive step you should check your Xcode Projects settings. Most likely you have the `Skip Install` option set to `YES`.
+**あり得る別の原因**は、あなた（または、あなたが使っているツール）が Xcode プロジェクトの`Build Setting -> Deployment -> Installation Directory` の設定を変更してしまっている場合があります。あなたのAppが標準の`Products/Applications`フォルダではなく、`Products/Users/USERNAME/...`フィルダに生成され、中間ビルドのフル絶対パスを含みます。
 
-This should only be used for iOS frameworks, **for iOS apps this should be set to `NO`**.
 
-You can find the official documentation at:
-[https://developer.apple.com/library/ios/technotes/tn2215/_index.html](https://developer.apple.com/library/ios/technotes/tn2215/_index.html)
-- under the *Xcode successfully archived my application, but the Archives Organizer does not list my archive* section.
+**解決方法:** `Installation Directory`オプションに`$(LOCAL_APPS_DIR)`（新しくiOSのXcodeプロジェクトを作成した時のデフォルト値）、または、`/Applications`（`$(LOCAL_APPS_DIR)`のデフォルト値）が設定されていることを確認し、ビルドツールがこのオプションを変更していないことを確認してください。
 
-### Possible solution 2: `Installation Directory` Xcode Settings
-
-**Another cause of the issue can be** if you (or a tool you use) modifies
-the `Build Setting -> Deployment -> Installation Directory` settings in your Xcode Project.
-This can result in an `.xcarchive` where your app is not generated
-into the canonical `Products/Applications` folder, but instead into a `Products/Users/USERNAME/...` folder,
-including the full absolute path of an intermediate build.
-
-**Solution:** Please make sure that the `Installation Directory` option is set to `$(LOCAL_APPS_DIR)`
-(the default value when you generate a new iOS Xcode Project) or `/Applications`
-(which is the default value of `$(LOCAL_APPS_DIR)`) in your Xcode Project settings,
-and that no build tool you use modifies this option.
-
-*Huge thanks to **Antje**, who reported this solution!*
+*この解決方法を教示いただいた**Antje**さん、ありがとうございます！*
 
 
 ## Duplicated Schemes
 
-This is quite rare, but worth checking.
-If you have multiple Schemes in your Xcode Project or Workspace with the **exact same name**,
-when your project is built with Xcode's Command Line Tools Xcode will select one of these Schemes/Configurations,
-__randomly__. This can result in random build success / failure,
-and if you check the Raw Xcode output you'll see something like this:
-`xcodebuild: error: Scheme YOUR_DUPLICATED_SCHEME is not currently configured for the test action` when it fails.
+このケースはまれですが、確認する価値はあります。
+Xcode プロジェクトに複数のスキームがある場合や**全く同じ名前**のワークスペースがある場合で、プロジェクトがコマンドラインツールでビルドされる時、Xcode は__ランダムに__それらのスキームやコンフィギュレーションを選択します。これによりビルドはランダムに成功・失敗をし、Xcode の出力を見ると失敗時に`xcodebuild: error: Scheme YOUR_DUPLICATED_SCHEME is not currently configured for the test action`といった表示があるでしょう。
 
-This might also happen if you use CocoaPods and one of your Pods have the same name as your project.
+CocoaPodsを利用してプロジェクトと同じ名前のPodがある場合に起こり得ます。
 
-In any way you can debug this by listing the available Schemes with Xcode's command line tool.
-In your project's directory run: `xcodebuild -workspace ./path/to/workspace/file -list` - or if you use a project file
-instead of a workspace file: `xcodebuild -project ./path/to/project/file -list`.
-There should be no duplicated Scheme in the printed list.
-You can run this command on your Mac and on bitrise.io too (just add it to a Script step), and ideally you should see the same list.
+一応、Xcode のコマンドラインツールで利用可能なスキームの一覧を表示してデバッグすることができます。
+プロジェクトのディレクトリで`xcodebuild -workspace ./path/to/workspace/file -list`を実行するか、ワークスペースファイルの代わりにプロジェクトファイルを使っている場合、`xcodebuild -project ./path/to/project/file -list`を実行してください。
+プリントしたリストで重複するスキームが存在しないようにしてください。
+このコマンドは、あなたの Mac や bitrise.io （スクリプトステップに追加するだけ）でも実行でき、理想的には同じリストを見ることができるはずです。
 
 
 ## System dialog blocks the tests to run
 
-_(huge thanks to [@AronI](https://github.com/AronI) who reported this issue and the solution)_
+_（この問題と解決方法を教示いただいた[@AronI](https://github.com/AronI)さん、ありがとうございます）_
 
-Error:
+エラー:
 
 ```
 2016-09-08 07:30:34.535 XCTRunner[6174:22447] Running tests...\
@@ -395,24 +324,19 @@ Error:
 }
 ```
 
-Solution:
+解決方法:
 
-> So to put it simply my problem was my UI Tests were failing.
+> 簡単に言えば、問題はUIテストが落ちていたということだった。
 
-The steps leading to the failure were the following:
+失敗するまでのステップは次の通りです。
 
-1. Unit tests run and pass. However a few of the unit tests are FBSnapshotTestCase tests
-   which are kind of UI Tests but are still kept in the unit test bundle.
-   They launch the app and compare screens with reference images of the screen.
-2. When a FBSnapshot TestCase is run it launches the app and launches
-   a system alert dialog asking the user for permission for push notifications
-   (this is just something that's done in the AppDelegate in my app every fresh install).
-3. When the UITests start the permissions dialog is still visible and overlaying the screen.
-4. The application tries to access some XCUIElements but fails because of the overlaying permissions dialog and eventually fails
+1. ユニットテストはパスします。しかし、いくつかのユニットテストはFBSnapshotTestCase のテストで、これは UI テストの類だがユニットテストのバンドルにあります。App を起動してスクリーンの参考画像と比較します。
+2. あるFBSnapshot TestCase が実行されたとき、その App が起動して Push 通知の許可を取るアラートダイアログが表示されます。（これは新規インストール後に毎回 AppDelegate で起きるような何かです）
+3. UITests が開始された時、許可のダイアログはまだ表示されていて画面を覆いかぶさっています。
+4. アプリケーションはある XCUIElements にアクセスしようとしますが、覆いかぶさっている許可のダイアログによって失敗します。
 
-I resolved this by adding a check in the AppDelegate
-(where we fire the permissions dialog) if we are running in unit test mode
-and only asking for permissions when not running unit tests:
+AppDelegate（許可のダイアログを呼び出している場所）でユニットテストを実行しているかどうかを確認するようにして、ユニットテスト実行時以外でのみ許可を取るようにして、この問題を解決しました。
+
 
 ```
 let unitTestMode = NSProcessInfo.processInfo().environment["XCTestConfigurationFilePath"] != nil
@@ -432,5 +356,5 @@ askForNotificationPermission()
 }
 ```
 
-> This is probably a pretty big edge case but just wanted to report this to you if someone might encounter this problem sometime.
-> Hopefully this will come to use to someone.
+> これはおそらくとてもエッジケースですが、この問題にぶち当たるかもしれない人のために伝えておこうと思いました。
+> 誰かのお役に立てれば幸いです。
