@@ -5,7 +5,7 @@ Bitriseワークフローは複数のステップの集まりです。アプリ�
 
 どちらの方法でも結果的に`bitrise.yml`を変更することになります - `Workflow Editor（ワークフローエディタ）`を使う方法の方がよりシンプルで易しいです！
 
-デフォルトでは、1つのビルドに1つのワークフローが対応しています。しかし、[ワークフロー同士の連結](/getting-started/getting-started-workflows#chain-workflows-together)を設定して、連続して実行することも可能ですし、[複数のワークフローのトリガーを設定して同時に実行する](/builds/triggering-builds/trigger-multiple-workflows)ことも出来ます。
+デフォルトでは、1つのビルドに1つのワークフローが対応しています。しかし、[ワークフローの連結](/getting-started/getting-started-workflows#chain-workflows-together)を設定して、連続して実行することも可能ですし、[複数のワークフローのトリガーを設定して同時に実行する](/builds/triggering-builds/trigger-multiple-workflows)ことも出来ます。
 
 ## デフォルトワークフロー
 
@@ -24,7 +24,6 @@ Bitriseワークフローは複数のステップの集まりです。アプリ�
 * `ssh-add`コマンドで、SSHキーがアプリに追加されている場合にアクティベートを行います。このステップでは、SSHキーの保存、ユーザーのssh-agentへのロードを実行します。
 * `Git Clone Repository`ステップで、プロジェクトのGitレポジトリをクローンを実行します。
 * `Bitrise.io Cache:Pull` and `Bitrise.io Cache:Push`ステップについては、[Btriseでのキャッシュ](/caching/about-caching) を参照してください。
-* Deploys build artifacts with the `Deploy to Bitrise.io` Step.
 * `Deploy to Bitrise.io`ステップで、ビルド成果物のデプロイを行います。
 
 ### `deploy（デプロイ）`ワークフロー
