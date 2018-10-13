@@ -5,6 +5,8 @@ redirect_from: []
 published: false
 
 ---
+Tests run with [Firebase Test Lab](https://firebase.google.com/docs/test-lab/android/firebase-console). Tests to run **might take**  . Bitrise provides unlimited device minutes until our `[BETA] Virtual Device Testing for Android` Step is in beta version. You can run instrumentation tests to execute your app using the Espresso framework and **UI Automator 2.0**., robo tests that analyzes your app's UI and can simulate user activity, and gameloop tests that use demo mode to simulate gamer activity.
+
 ## Enable UI tests on virtual devices
 
 Turn on `Device Testing` on the app's `Settings` tab.
@@ -25,7 +27,7 @@ Turn on `Device Testing` on the app's `Settings` tab.
 4. Set the `Test APK path` of the APK you want to test **in the field**
 5. Select the `**Test type**`: `robo` (by default selected), `instrumentation`, `gameloop`
 
-   In this tutorial, we chose `robo`.
+   In this tutorial, we chose `robo/insturmentation`.
 6. how to do instrumentation test: [https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4](https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4 "https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4")
 7. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`. You can check the **available test devices** and its versions if you click on the arrow for more information above the step input field.
 
