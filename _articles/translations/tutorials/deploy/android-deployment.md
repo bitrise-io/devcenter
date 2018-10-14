@@ -1,29 +1,30 @@
 ---
-title: Android deployment
+title: Androidのデプロイ
 redirect_from: []
 menu:
   deployment-tutorials:
     weight: 1
 
 ---
-This guide describes how you can add your Android project to [bitrise.io](https://www.bitrise.io) and deploy the APK built from your project to [Google Play Store](https://play.google.com/store). We're using the [sample-apps-android-googleplay](https://github.com/bitrise-samples/sample-apps-android-googleplay) app as an example for this tutorial.
+ここでは、Androidプロジェクトを[bitrise.io](https://www.bitrise.io) に追加し、ビルドしたAPKを[Google Play Store](https://play.google.com/store)にデプロイする方法を説明します。
+このチュートリアルでは[sample-apps-android-googleplay](https://github.com/bitrise-samples/sample-apps-android-googleplay)を例として使用します。
 
-In this guide, you will learn how to:
+このチュートリアルでは以下の内容を説明します。
 
-* create an Android project on [bitrise.io](https://www.bitrise.io)
-* set up a [Google Play Store](https://play.google.com/store) project
-* set up [Google Play API](https://developers.google.com/android-publisher/getting_started) access
-* [deploy to Google Play Store](#deploy-to-google-play-store-using-bitrise-google-play-deploy-step) using Bitrise's `Google Play Deploy` step
+* [bitrise.io](https://www.bitrise.io)にAndroidのプロジェクトを作成する
+* [Google Play Store](https://play.google.com/store) のプロジェクトをセットアップする
+* [Google Play API](https://developers.google.com/android-publisher/getting_started) のアクセス設定を行う
+* Bitriseの `Google Play Deploy`ステップを使用して、[Google Play Storeにデプロイする](#deploy-to-google-play-store-using-bitrise-google-play-deploy-step)
 
-## Create your Android project on [bitrise.io](https://www.bitrise.io)
+## [bitrise.io](https://www.bitrise.io)にAndroidプロジェクトを作成する
 
-* Log into [bitrise.io](htts://www.bitrise.io).
-* Create a [new Bitrise project](getting-started/adding-a-new-app). Bitrise scans your Android project and creates the initial configuration for it.
-* Sign your `APK` file [digitally](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/).
+* [bitrise.io](https://www.bitrise.io)にログインしてください。
+* [新規Bitriseプロジェクト](getting-started/adding-a-new-app)を作成してください。 BitriseはAndroidプロジェクトをスキャンし、初期設定を行います。
+* `APK` ファイルへの [署名](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/)を行ってください。
 
-  Do not forget to **upload your keystore file** to [bitrise.io](https://www.bitrise.io).
+  忘れずに[bitrise.io](https://www.bitrise.io)に**keystoreファイルをアップロード**してください。
 
-  Once your code signing is completed, your config will look like this:
+  署名が完了した時点でのコンフィグファイルは以下のようになっています。
 
   ```yaml
   workflows:
@@ -45,41 +46,42 @@ In this guide, you will learn how to:
     - cache-push@2.0.5: {}
   ```
 
-## Register to Google Play Store and set up your first project
+## Google Play Storeの登録を行い、プロジェクトの初期セットアップをする
 
-1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/).
-   If you already have a Google Play Developer account, and you have already deployed your app to Google Play Store, skip to [Set up Google Play API access](#set-up-google-play-api-access).
-2. Go through the [Prepare & roll out steps](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
+1. [Google Play Developer Account](https://developer.android.com/distribute/console/)に登録してください。
+   すでにGoogle Play Developer Accountに登録済みで、かつ、Google Play Storeにアプリをデプロイをしたことがある場合、[Google Play APIのアクセス設定を行う](#google-play-apiのアクセス設定を行う)まで飛ばしてください。
+2. [リリースの準備と公開](https://support.google.com/googleplay/android-developer/answer/7159011?hl=ja)に従ってセットアップを行ってください。
 
-## Set up Google Play API access
+## Google Play APIのアクセス設定を行う
 
-1. Link your API project by `Creating a new API project` or `Using an existing API project`.
-2. Set up `API Access Clients` using a service account and grant `Release manager` role to the service account.
-3. **Save the downloaded JSON key of your service account** now because you will need it later.
+1. `新しい API プロジェクトを作成`、または、`既存の API プロジェクトを使用`し、API プロジェクトをリンクしてください。
+2. サービスアカウントを使用して`API アクセス クライアントを設定`し、サービスアカウントに`Release manager`権限を付与してください。
+3. あとで必要になるので、**ダウンロードしたJSON keyをサービスアカウントに保存**してください。
 
-Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started) guide if you need more information on the process.
+詳細な手順は[Google Play Developer API](https://developers.google.com/android-publisher/getting_started)を確認してください。
 
-You have successfully prepared your Google Play Console project. A services credential account has been created which is authorized to manage your releases.
+これでGoogle Play Consoleのプロジェクトの準備が完了しました。
+リリース管理の権限を持ったサービスアカウントが作成されています。
 
-## Deploy to Google Play Store using Bitrise `Google Play Deploy` step
+## Bitriseの`Google Play Deploy`ステップを使ってGoogle Play Storeにデプロイする
 
-1. Log in to [bitrise.io](https://www.bitrise.io).
-2. Select your project and go to your `Workflow Editor`.
-3. Open the `Code Signing` tab of your `Workflow Editor`.
-4. Upload the service account JSON key into the `GENERIC FILE STORAGE`.
-5. Copy the env key which stores your uploaded file's url.
+1. [bitrise.io](https://www.bitrise.io)にログインしてください。
+2. プロジェクトを選択し、`Workflow Editor`を開いてください。
+3. `Workflow Editor`の`Code Signing`タブを開いてください。
+4. `GENERIC FILE STORAGE`にサービスアカウントのJSON keyをアップロードしてください。
+5. アップロードしたファイルのURLの環境変数をコピーしてください。
 
-   For example:
+   例:
 
    `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-6. Go back to your `Workflow Editor` and add the `Google Play Deploy` step to the end of your Workflow.
-7. Fill out the required input fields which are:
-   * `Service Account JSON key file path`: This field can accept a remote url so you have to provide the environment which contains your uploaded service account JSON key.
-     For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   * `Package name`: the package name of your Android app
-   * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
+6. `Workflow Editor`に戻り、`Google Play Deploy`ステップをWorkflowに追加してください。
+7. 以下に従って、必須の入力項目を埋めてくだい。
+   * `Service Account JSON key file path`: この入力値はリモートURLを設定できます。アップロードしたサービスアカウントのJSON keyのURLを環境変数で指定してください。
+     例: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * `Package name`: Androidアプリのパッケージ名
+   * `Track`: APKのトラック (alpha/beta/rollout/production)
 
-The final configuration looks like this:
+最終的なコンフィグファイルは以下のようになっています。
 
 ```yaml
 workflows:
@@ -106,4 +108,5 @@ deploy:
   - cache-push@2.0.5: {}
 ```
 
-Your workflow is ready for deploying your app automatically to [Google Play Store](https://play.google.com/store). Once the app is tested and generated, you can upload it to Google Play Store.
+これで自動で[Google Play Store](https://play.google.com/store)にアプリをデプロイするWorkflowの準備ができました。
+アプリがテストされた後にビルドされ、Google Play Storeにアップロードされます。
