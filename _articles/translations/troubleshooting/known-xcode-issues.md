@@ -88,34 +88,35 @@ Xcode 7.3を使用する"iPhone 6"のシミュレーターデバイスの場合�
 
 "iPhone 6s Plus"にシミュレーターデバイスを変更することで、`Xcode 7.3`ではこの問題が解決しました。
 
-## Xcode Unit Test fails without any error, with exit code 65
+## Xcodeの単体テストがエラー無しで失敗し、コード65で終了する
 
-This can be caused by a lot of things, Xcode or some other tool simply
-omits / does not present any error message.
+これは多くのことが原因になりえます。Xcodeやいくつかの他のツールがまったく
+エラーメッセージを省略し/表示しません。
 
-You can find a long discussion, with possible reasons & solutions [here](https://github.com/bitrise-io/bitrise.io/issues/5).
+考えられうる理由や解決方法についての長い議論を見ることができます。[ここ](https://github.com/bitrise-io/bitrise.io/issues/5).
 
-A quick summary:
+概要:
 
-* First of all, if you use `xcpretty` to format the output try a build without it
-  (if you use the Xcode Test step you can set `xcodebuild` as the "Output Tool" option/input
-  to not to format the log produced by `xcodebuild`). The cause is: `xcpretty` sometimes
-  omits the error message in it's output. [Related GitHub issue](https://github.com/bitrise-io/bitrise.io/issues/27).
-* If you don't use our `Xcode Test` step to run your UI Test you should try to run
-  it with our Xcode Test step. We always try to improve the reliability of the step,
-  implementing known workarounds for common issues.
-* If you use our Xcode Test step: make sure you use the latest version, as it
-  might include additional workarounds / fixes.
-* Try [another Xcode version](http://devcenter.bitrise.io/docs/available-stacks#section-how-to-switch-to-the-new-beta-stacks),
-  there are issues which are present in one Xcode version but not in another one.
-* Make sure your desired [Xcode scheme is shared](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found). Don't forget to commit and push the changes if you just enabled it.
-* It might also be a [project configuration issue in your Xcode project](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-140188658),
-  or a [code issue in your tests](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-160171566),
-  or a [multi threading issue in your code](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-190163069).
-* We received reports that this might also be caused by Code Coverage report generation,
-  you can disable the `Generate code coverage files?` option of the Xcode Test step
-  to not to generate Code Coverage files.
-* If the previous steps did not help, you should check the whole discussion and suggested solutions at: [https://github.com/bitrise-io/bitrise.io/issues/5](https://github.com/bitrise-io/bitrise.io/issues/5)
+* まず最初に、`xcpretty`を使ってアウトプットをフォーマットする場合アウトプットなしのビルドを試しましょう
+  (Xcode Testステップを使用する場合は"Output Tool"オプション/インプットとして`xcodebuild`を設定することができます。
+  `xcodebuild`により生成されたログをフォーマットしないようにします。)。これの理由: `xcpretty`がときどき
+  アウトプットのなかのエラーメッセージを省略するため。 [関連するGitHubのissue](https://github.com/bitrise-io/bitrise.io/issues/27).
+* UIテストを実行するために私たちの`Xcode Test`ステップを使用しない場合は、私たちのXcode Testステップを
+  使用し実行を試すべきです。私たちは常にステップの信頼性を向上させようとしており、
+  一般的な問題の既知の回避策を実装します。
+* 私たちのXcode Testステップを使用している場合: 最新版を使用しているか確認してください。
+  追加の回避策や修正が含まれている可能性があります。
+* [異なる別のXcodeバージョン](http://devcenter.bitrise.io/docs/available-stacks#section-how-to-switch-to-the-new-beta-stacks)を試してみてください。
+  一つのXcodeのバージョンでは発生するが、別のバージョンでは発生しない問題があります。
+* 期待どおりに[Xcodeスキームがsharedである](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)が確認してください。
+  それを有効にした場合、その変更をコミットしプッシュすることを忘れないでください。
+* または[Xcodeプロジェクトのプロジェクト構成の問題](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-140188658)や、
+  [テストのコードの問題](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-160171566)、
+  [コードのマルチスレッドの問題](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-190163069)であるかもしれません。
+* 私たちはコードカバレッジレポート作成によってこの問題が発生しているかもしれないという報告を受けています。
+  Xcode Testステップのオプションの`Generate code coverage files?`を無効にすることができ、
+  コードカバレッジファイルを生成しないようにすることができます。
+* 以上の方法で問題が解決しなかった場合、次のリンクから議論全体や推奨されている解決方法を確認しましょう。: [https://github.com/bitrise-io/bitrise.io/issues/5](https://github.com/bitrise-io/bitrise.io/issues/5)
 
 ## `Segmentation fault`
 
