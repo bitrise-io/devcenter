@@ -1,39 +1,38 @@
-After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for
-your project, Bitrise will download your code to make sure it can access the repository
-and will run an automatic repository scanner script to find the best initial configuration for your project.
-Currently Bitrise will detect `iOS`, `Android`, `Xamarin` and `fastlane` projects out of the box.
+プロジェクトに[SSHキーを設定](/adding-a-new-app/setting-up-ssh-keys)した後、Bitriseはソースコードをダウンロードしてレポジトリにアクセスできるか念のために確認して、プロジェクトの最適な初期設定を把握するために自動でレポジトリスキャンスクリプトを実行します。
+現時点ではBitriseは`iOS`, `Android`, `Xamarin` と `fastlane`プロジェクトを自動で検知します。
 
-You can configure other types of projects too, but that will require manual
-configuration.
+他の種類のプロジェクトも設定できますが、それには手動で設定が必要です。
 
-## Automatic project configuration
+## プロジェクトの自動設定
 
-Enter the name of the default branch of your repository where your project is located. This branch should include the configuration of your project. Once you hit `Next`, Bitrise will automatically start the validation of the repository.
+プロジェクトが配置されているレポジトリのデフォルトブランチの名前を入力してください。
+このブランチにはプロジェクトの設定ファイルが含まれている必要があります。`Next`を押すと、Bitriseは自動的にレポジトリのバリデーションを行います。
+
+![ブランチの選択](/img/adding-a-new-app/choose-branch.png)
 
 ![Choosing branch](/img/adding-a-new-app/choose-branch.png)
 
-During validation Bitrise will make sure it has access to the given branch,
-using the [SSH key](/adding-a-new-app/setting-up-ssh-keys) you set up.
+バリデーション中にBitriseは設定した[SSHキー](/adding-a-new-app/setting-up-ssh-keys)を使って指定されたブランチにアクセスできるか確認します。
+もしバリデーションに成功すれば、Bitriseはレポジトリをスキャンしてプロジェクトの設定に基づいたデフォルトのワークフローを表示します。
 
-If the validation is successful, Bitrise will scan your repository and give you a default workflow based on the configuration of the project.
+## プロジェクトの手動設定
 
-## Manual project configuration
+もしバリデーションに失敗したら、`Restart scanning without validation`オプションを選択してください。
 
-If the validation fails, choose the `Restart scanning without validation` option.
+![バリデーションの失敗](/img/adding-a-new-app/validation-failed.png)
 
-![Validation failed](/img/adding-a-new-app/validation-failed.png)
+この場合は、プロジェクトを手動で設定する必要があります。`Next`をクリックしてください。再び`Validating Repository`メッセージが見えますが、今度はBitriseは指定したレポジトリにアクセスできることだけ確認します。
 
-In this case, you have to configure the project manually. Click `Next`. You will see the `Validating Repository` message again but this time Bitrise only checks that we have access to the specified repository.
+プロジェクトの種類を選択して(例えば、Xamarinなど)必要事項を指定してください(例えば、Xamarinのソリューションファイルへのパスなど)。ビルドを実行したいスタックも選べます。
 
-Choose the project type (for example, Xamarin) and specify the necessary inputs (for example, the path to the Xamarin Solution file). You can also select the stack on which you wish to run your builds.
+![プロジェクトの種類を選択](/img/adding-a-new-app/select-project-type.png)
 
-![Choose project type](/img/adding-a-new-app/select-project-type.png)
+{% include message_box.html type="note" title="バリデーションの再実行" content="
+Bitriseに自動的にプロジェクトの種類を検知させるならバリデーションを再実行できます。バリデーションの失敗を起こしていた問題を解消したら、`Project build configuration`画面に移動して、`Detected`タブを選択してください。そして`Restart current validation`オプションを選択してください。 "%}
 
-{% include message_box.html type="note" title="Restarting validation" content="
-You can restart validation if you want Bitrise to automatically detect your project type. Once you fixed the issue that caused validation to fail for the first time, go to the `Project build configuration` window and select the `Detected` tab. Choose the `Restart current validation` option. "%}
+## Webhookの設定
 
-## Webhook setup
+設定が終わったら、Bitriseはすぐにあなたのレポジトリにwebhookの設定を勧めできます。webhookを設定した後は、デフォルトでレポジトリ内のあらゆるソースコードの変更によって`primary`ワークフローが自動作成されるようになります。
 
-Once project configuration is finished, Bitrise offers you the chance to immediately register a webhook in your repository. After the webhook is set up, any code change in your repository will trigger the automatically created `primary` workflow by default.
+webhookの詳細については[Webhooks](/webhooks)セクションを呼んでください。
 
-Read about webhooks in detail in our [Webhooks](/webhooks) section.
