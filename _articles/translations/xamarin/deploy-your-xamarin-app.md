@@ -1,27 +1,21 @@
-After successfully adding your Xamarin application, we will create a default workflow (build configuration) for you.
-This workflow includes a `Deploy to bitrise.io` step by default.
+Xamarinアプリケーションの追加に成功した後に、デフォルトのワークフロー(ビルド設定)を作成します。
+このワークフローは、デフォルトで`Deploy to bitrise.io`ステップを含んでいます。
 
-Building the default workflow will checkout your git repository,
-archive your application and move all the generated applications ( `ipa` / `apk` ) to the deployment folder.
-After the archive, the `Deploy to bitrise.io` step will upload these files to Bitrise.
+デフォルトのワークフローでは、あなたのgitリポジトリに切り替えたあと、
+アプリケーションのアーカイブを作成し、全てのアプリケーションファイル( `ipa` / `apk` ) をデプロイメントフォルダーに移動させます。
+さらに、その後`Deploy to bitrise.io` ステップでBitriseにアプリケーションをアップロードします。
 
-We will not just upload your application,
-but send out an email to your team as well.
-They can simply open the email from their mobile device and install the application from there.
-Also you can send out the build to any tester by providing their email address.
+また、ただアプリケーションをアップロードするだけではなく、あなたのチームメンバーにメールを送ります。
+そして、モバイルデバイスでそのメールを開き、アプリケーションをインストールすることができます。
+また、メールアドレスを予め設定しておくことで、ビルドしたアプリケーションを任意のテスターに送信することが可能です。
 
-## But what if you are already using or want to use another deployment service?
+## 他のデプロイメントサービスを利用したい、もしくはすでに使っている場合
 
-Besides the default Bitrise deployment we have [dozens of other services integrated](http://www.bitrise.io/integrations#?filter=deploy) to Bitrise.
-You can simply modify your workflow and add the ones you would like to,
-like [HockeyApp](http://hockeyapp.net/), [Appaloosa](/tutorials/deploy/publish-your-app-to-appaloosa/), [TestFairy](/tutorials/deploy/deploy-to-testfairy-with-bitrise/)
-or [DeployGate](/tutorials/deploy/deploy-apps-to-deploygate-from-bitrise/) -
-just filter by the `deploy` tag in the list to see all the available deployment steps.
+デフォルトのBitriseのデプロイ手法に加えて、Bitriseには[様々な他のデプロイサービス](http://www.bitrise.io/integrations#?filter=deploy)が存在します。
+これによって、[HockeyApp](http://hockeyapp.net/)、 [Appaloosa](/tutorials/deploy/publish-your-app-to-appaloosa/)、[TestFairy](/tutorials/deploy/deploy-to-testfairy-with-bitrise/)、[DeployGate](/tutorials/deploy/deploy-apps-to-deploygate-from-bitrise/) などのように、あなたはとても簡単に既存のワークフローを修正したり、好きなステップを追加できたりします。(利用可能なデプロイステップを確認するには、`deploy`タグで検索できます。)
 
-Simply add the integration Step you want to use instead of the `Deploy to bitrise.io` step or after that
-(but in any case after the `Xamarin Archive` step, as that's the step which generates the
-deployable artifact - `.ipa`, `.apk`, ...), and fill out the parameters of the step.
+行うことは、ただ`Deploy to bitrise.io`ステップの代わりもしくはそのステップの後に（多くは、`.ipa`、`.apk`などのデプロイ可能なファイルを作成するステップである`Xamarin Archive` の後に）、あなたの利用したい統合ステップを追加しパラメータの記入を行うだけです。
 
-For more information on code signing for Xamarin projects, see [Xamarin Android code signing](/code-signing/xamarin-android-code-signing/xamarin-android-code-signing) and [Creating a signed .ipa for Xamarin projects](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin).
+Xamarinプロジェクトにおけるより詳細なコード署名についての情報は、[Xamarin Androidのためのコード署名](/code-signing/xamarin-android-code-signing/xamarin-android-code-signing)と[署名されたXamarinプロジェクトの.ipaの作成](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin)を確認してください.
 
-The next time you start a build, your app will be deployed to the service of your choice!
+これを利用すると、ビルド始めるだけであなたの選んだサービスにアプリがデプロイされるようになります！
