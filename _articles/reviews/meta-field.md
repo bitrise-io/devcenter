@@ -5,10 +5,12 @@ redirect_from: []
 published: false
 
 ---
-You can customize env vars **_only env vars at the moment?_** using `meta` **_section_** without it being checked by Workflow Editor. Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the **_Workflow Editor validation process - even if offline?_**. Let's see some use cases when your project can benefit from customization:
+You can customize env vars using `meta` **_section_** without it being checked by Workflow Editor. Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process. Let's see some use cases when your project can benefit from customization:
 
-1. If you decide to take your spin on our open-source Workflow Editor and fork it to your own repository use it **_offline in a team_**, you can do some customization to the environment variables of an app you are writing there. Add a `meta` section to `opts` to WHAT/Workflow?
-2. You can also customize **_env vars on bitrise.io's bitrise.yml_** to manipulate, for example, the background of an env var. Add `meta` to `opts` in  **_bitrise.yml.editor_** to customize how env vars appear on your Workflow Editor. `meta` works like a container that holds any custom properties that is **not by default part** of any Workflow Editor. **_How the rest of Workflow Editor' UI looks is maintained by Bitrise._**
+1. If you decide to take your spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and fork it to your own repository use it **_offline in a team_**, you can do some customization to the environment variables of an app you are writing there.  how to download Bitrise CLI and Workflow Editor. Add a `meta` section to `opts` to WHAT/Workflow? If you have your own website and include Workflow Editor there from a forked version of our open source Workflow Editor and you want to keep an eye on one of the env vars and what it was last modified, you can place a meta . The tool will save what it was last modified and by who. This only works through a Workflow Editor shared in your company's intranet or shared by a software.
+
+   to manipulate, for example, the background of an env var. Add `meta` to `opts` in  **_bitrise.yml.editor_** to customize how env vars appear on your Workflow Editor. `meta` works like a container that holds any custom properties that is **not by default part** of any Workflow Editor. **_How the rest of Workflow Editor' UI looks is maintained by Bitrise._**
+2. You can also customize **_env vars on bitrise.io's bitrise.yml_** to manipulate
 
 ## Adding meta to bitrise.yml
 
@@ -22,7 +24,7 @@ Our jumping-off point is a standard env var yml which has `KEY` and  `opts` wher
       ...
     }
 
-Now this structure can be expanded by adding the `meta` section right at the end of your `opts` list so that you can customize the env var to your own liking. Make sure that `meta` is WITHIN the `opts` section and set a namespace ID!
+Now this structure can be expanded by adding the `meta` section right at the end of your `opts` list so that you can customize the env var to your own liking. Make sure that `meta` is WITHIN the `opts` section and set with a namespace ID!
 
 The format you should use is the following:
 
@@ -65,11 +67,3 @@ As another example, if you wanted to keep an eye on the changed env vars of your
         }
       }
     }
-
-## Adding meta to your offline Workflow Editor
-
-Make sure you have [Bitrise CLI installed](/bitrise-cli/installation/) on your local computer.
-
-1. Run `bitrise setup`.
-2. `cd` into a directory where you have your bitrise.yml.
-3. Run `bitrise :workflow-editor` to add it as a plugin to your installed Bitrise CLI. You should have your app locally on your computer along with the bitrise.yml created. Then you can go ahead and modify its workflow/s as you wish.
