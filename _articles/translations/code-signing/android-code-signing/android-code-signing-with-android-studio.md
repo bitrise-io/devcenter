@@ -1,12 +1,12 @@
-You can specify the code signing configuration for your project in [Android Studio](https://developer.android.com/studio/).
+[Android Studio](https://developer.android.com/studio/)を利用することで、コード署名証明書を明記することができます。
 
-1. Go to `Project navigator`.
+1. `Project navigator`を開きます。
 
-2. Select your project and open `Module Settings`.
+2. あなたのプロジェクトを選択し、`Module Settings`を開きます。
 
-3. From `Modules`, select your module.
+3. `Modules`から、あなたのモジュールを選択します。
 
-4. On the `Signing` tab, fill out the signing information. In our example, we used the following values:
+4. `Signing`タブより、署名情報を記入してください。例は、以下のようになります。
 
     * name: release
 
@@ -18,4 +18,4 @@ You can specify the code signing configuration for your project in [Android Stud
 
     * store password: ***
 
-Once you filled out the signing information, the `signingConfigs` block will be created in your module's `build.gradle` file.
+一度署名情報を記入すると、`signingConfigs`ブロックがあなたのモジュールの`build.gradle`ファイル内に作成されます。
