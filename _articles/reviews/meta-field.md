@@ -1,5 +1,5 @@
 ---
-title: Customizing Workflow Editor
+title: Customizing bitrise.yml
 date: 2018-10-09 11:04:33 +0000
 redirect_from: []
 published: false
@@ -26,7 +26,7 @@ The format you should use is the following:
         }
     }
 
-Let's see some use cases when you can customize `bitrise.yml` to your own liking:
+Let's see some use cases when you would benefit from customizing `bitrise.yml` to your own liking:
 
 * If you decide to take your spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and create your own version of it, first you have to fork it! Then you can use it (for example, by adding it to your website) and can customize to the environment variables (env var) in the `bitrise.yml` tab.  Let's say you want to keep an eye on one of the env vars; when it was last modified and by who, you can place the following `meta` section in `bitrise.yml` to your own version of Workflow Editor.
 
