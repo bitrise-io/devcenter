@@ -1,8 +1,5 @@
 ---
 title: テストデバイスの登録
-menu:
-  testing:
-    weight: 1
 
 ---
 ## SafariでiOSデバイスを登録する
