@@ -5,43 +5,7 @@ redirect_from: []
 published: false
 
 ---
-Any tool, that can edit bitrise.yml, you can use to place custom information/properties to bitrise.yml it being checked by Workflow Editor. Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process. Let's see some use cases when your project can benefit from customization:
-
-1. If you decide to take your own spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and create your own version of it, you can use it **_offline in a team_** (for example, by adding it to your website) **_after having forked it,_** you can do some customization to the environment variables in the `bitrise.yml` tab.  Let's say you want to keep an eye on one of the env vars and when it was last modified and by who, you can place the following meta section to `bitrise.yml` in your own version of Workflow Editor.
-
-       app:
-         envs:
-         - ASXaS: "`ZX`ZX"
-           opts:
-             is_expand: false
-             meta:
-               audit: # used by the Audited Workflow Editor imagenary tool, that works like WFE but saves the modifier and modification date, and displays it
-                 last_modified_at: 2018.09.12.
-                 last_modifier: Jane Doe
-
-   It will save when `audit` env var was last modified (`last_modified_at`) and by who (`last_modifier`). Of course, this use case works only if your customized tool is shared with your team in your company's intranet or by a software.
-
-   Another use case with meta can be if you want to highlight an env var in your own tool: 
-
-       meta: {
-         my_fancy_new_workflow_editor: {
-           env_var_background_color: "red"
-         }
-       }
-
-## Adding meta to bitrise.yml
-
-Our jumping-off point is a standard env var yml which has `KEY` and  `opts` where `opts` contains `title`, `description` and `summary`.
-
-    KEY: "VALUE",
-    opts: {
-      title: "My env var"
-      description: "Description of my env var."
-      summary: "Summary of env var."
-      ...
-    }
-
-Now this structure can be expanded by adding the `meta` section right at the end of your `opts` list so that you can customize the env var to your own liking. Make sure that `meta` is WITHIN the `opts` section and set with a namespace ID!
+You can add custom properties, notes or even try new configurations of your workflow in `bitrise.yml` by using `meta` field and namespacing.
 
 The format you should use is the following:
 
@@ -62,25 +26,64 @@ The format you should use is the following:
         }
     }
 
-As you can see above, you can add as many custom settings/properties to your `meta` section as you wish by adding another **_namespace ID_** and key to env vars. As an example, if you wanted to set red background for your env vars in your project, you'd add the following `meta` section to your `opts`.
+Let's see some use cases when you can customize `bitrise.yml` to your own liking:
 
-    meta: {
-      my_fancy_new_workflow_editor: {
-        env_var_background_color: "red"
-      }
-    }
+* If you decide to take your spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and create your own version of it, first you have to fork it! Then you can use it (for example, by adding it to your website) and can customize to the environment variables (env var) in the `bitrise.yml` tab.  Let's say you want to keep an eye on one of the env vars; when it was last modified and by who, you can place the following `meta` section in `bitrise.yml` to your own version of Workflow Editor.
 
-As another example, if you wanted to keep an eye on the changed env vars of your project and see when they were last updated, you could add the following `meta` to your env vars `opts` list.
+       app:
+         envs:
+         - ASXaS: "`ZX`ZX"
+           opts:
+             is_expand: false
+             meta:
+               audit: # used by the Audited Workflow Editor imagenary tool, that works like WFE but saves the modifier and modification date, and displays it
+                 last_modified_at: 2018.09.12.
+                 last_modifier: Jane Doe
 
-    {
-      MY_ENV_VAR: "value"
-      opts: {
-        title: "My env var"
-        description: "Description of my env var."
-        meta: {
-          my_forked_workflow_editor: {
-            last_modified: "2018.10.11.16:16"
-          }
-        }
-      }
-    }
+Of course, this use case works only if your customized tool is shared with your team in your company's own intranet or by a software.
+
+* Another use case with `meta` can be if you want to add background color to an env var in your own tool:
+
+       meta: {
+         my_fancy_new_workflow_editor: {
+           env_var_background_color: "red"
+         }
+       }
+* You can see `meta` in action on [bitrise.io](https://www.bitrise.io/) as well, for example, when you select a different stack for your workflow than the default Stack. Just click Workflow Editor on the UI and pick another stack type for your workflow/s in the `Stacks` tab. This way you can test (only in the UI) how your workflow runs in the new Stack.
+
+![](/img/stack-os.png)
+
+If you head back to the `bitrise.yml` tab, a `bitrise.io meta` is added to the deploy workflow:
+
+    workflows:
+      deploy:
+        steps:
+        - activate-ssh-key@4.0.3:
+            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+        - git-clone@4.0.11: {}
+        - script@1.1.5:
+            title: Do anything with Script step
+        - npm@0.9.1:
+            inputs:
+            - command: install
+        - install-missing-android-tools@2.2.0:
+            inputs:
+            - gradlew_path: "$PROJECT_LOCATION/gradlew"
+        - android-build@0.9.5:
+            inputs:
+            - project_location: "$PROJECT_LOCATION"
+            - module: "$MODULE"
+            - variant: "$BUILD_VARIANT"
+        - certificate-and-profile-installer@1.10.1: {}
+        - xcode-archive@2.4.14:
+            inputs:
+            - project_path: "$BITRISE_PROJECT_PATH"
+            - scheme: "$BITRISE_SCHEME"
+            - export_method: "$BITRISE_EXPORT_METHOD"
+            - configuration: Release
+        - deploy-to-bitrise-io@1.3.15: {}
+        meta:
+          bitrise.io:
+            stack: osx-xcode-10.1.x
+
+Since this meta is only interpreted on [bitrise.io](https://www.bitrise.io/) and not locally or on Bitrise CLI, it is categorized by a `bitrise.io` namespace (where the stack is the key and `linux-docker-android-lts` is the value). Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process.
