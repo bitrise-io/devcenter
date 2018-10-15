@@ -1,29 +1,29 @@
-You are able to authenticate yourself with your GitLab user against **Bitrise**. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your GitLab account when adding repositories hosted by these providers again.
+GitLabのユーザーアカウントを利用して、**Bitrise**と連携することができます。 これにより、1クリックでのログインが可能になり、これらのプロバイダーによってホストされたリポジトリを追加する際のGitLabへの連携も必要無くなります。
 
-{% include message_box.html type="note" title="Signing up with email address" content=" If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/getting-started/signing-up/signing-up-with-email). "%}
+{% include message_box.html type="note" title="メールアドレスでのサインイン" content="[signing up with email address](/getting-started/signing-up/signing-up-with-email)にそって登録するすることでメールアドレスから登録することができます。"%}
 
-## Sign up
+## サインアップ
 
-Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
+`Sign up!`をクリックして[bitrise.io](https://bitrise.io)のランディングページでサインアップをしましょう。
 
 ![Screenshot](/img/signing-up/sign-up-bitrise.png)
 
-Select `GitLab` for authenticating yourself with this service.
+`GitLab`を選択してあなたのアカウントを連携させましょう。
 
-## Authorize Bitrise
+## Bitriseと連携する
 
-You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
+接続する前にBitriseと連携する必要があります。これは、Bitriseにあなたのアカウントのレポジトリを読み込む権限を与えることを意味します。
 
 ![Screenshot](/img/signing-up/gitlab_authorization.png)
 
-If you press the `Authorize` button, you will be redirected to Bitrise.
+`Authorize application`のボタンを押すことで、Bitriseに移動します。
 
-## Finish signup
+## サインアップを完了する
 
-You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service's availability. You are also able to connect more accounts from other Git providers like GitHub and Bitbucket, for example.
+Bitriseアカウントを作成するにあたってユーザーネームとパスワードの設定が必要です。これであなたはこのサービスを信頼して利用することができます。また、GitHub、Bitbucketなどの他のGitプロバイダーからのアカウントの登録も可能です。
 
-After that, you are ready to roll.
+これにて連携は完了です。
 
-From now on, you are able to sign in with a click of a button. Choose your favorite!
+サインインして、自由にサービスをご利用ください。
 
 ![Screenshot](/img/signing-up/signup_success.png)
