@@ -37,12 +37,12 @@ Android アプリのディレクトリで `gradle tasks` を実行すること�
     assembleRelease - Assembles all Release builds.
     ...
 
-`スクリプト` ステップで `gradle 実行するタスク名` (例: `gradle assemble`) を呼び出すか、
-`Gradle ランナー` ステップ ([https://github.com/bitrise-io/steps-gradle-runner](https://github.com/bitrise-io/steps-gradle-runner)) で
+`Script` ステップで `gradle 実行するタスク名` (例: `gradle assemble`) を呼び出すか、
+`Gradle Runner` ステップ ([https://github.com/bitrise-io/steps-gradle-runner](https://github.com/bitrise-io/steps-gradle-runner)) で
 `gradle_task` 入力値としてタスクを指定することで任意のタスクを bitrise 上で実行することができます。
 
 `**gradle**` **を直接実行する代わりに、** `**gradlew**` **(Gradle ラッパー) を使用するべきです！**
-`Gradle ランナー` ステップはこれを行い、ステップの関連する入力説明でそれを見ることができます:
+`Gradle Runner` ステップはこれを行い、ステップの関連する入力説明でそれを見ることができます:
 
 > Using a Gradle Wrapper (gradlew) is strongly suggested, as the wrapper is what makes sure
 > that the right Gradle version is installed and used for the build.
