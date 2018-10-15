@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-You can customize env vars using `meta` **_section_** without it being checked by Workflow Editor. Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process. Let's see some use cases when your project can benefit from customization:
+Any tool, that can edit bitrise.yml, you can use to place custom information/properties to bitrise.yml it being checked by Workflow Editor. Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process. Let's see some use cases when your project can benefit from customization:
 
 1. If you decide to take your spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and fork it to your own repository use it **_offline in a team_**, you can do some customization to the environment variables of an app you are writing there.  how to download Bitrise CLI and Workflow Editor. Add a `meta` section to `opts` to WHAT/Workflow? If you have your own website and include Workflow Editor there from a forked version of our open source Workflow Editor and you want to keep an eye on one of the env vars and what it was last modified, you can place a meta . The tool will save what it was last modified and by who. This only works through a Workflow Editor shared in your company's intranet or shared by a software.
 
