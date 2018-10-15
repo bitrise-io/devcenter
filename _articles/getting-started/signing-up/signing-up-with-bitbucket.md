@@ -1,36 +1,28 @@
----
-title: Signing up with Bitbucket
-menu:
-  signing-up:
-    weight: 2
+Bitbucketのユーザーアカウントを利用してBitriseと連携することができます。連携することで１クリックでログインすることができ、また、これらのプロバイダーによってGithub上でレポジトリを作る際にBitbucketへの連携をする必要がなくなります。
+{% include message_box.html type="note" title="メールアドレスでサインインする" content="signing up with email addressにそって登録するすることでメールアドレスから登録することができます"%}
 
----
-You are able to authenticate yourself with your Bitbucket user against **Bitrise**. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Bitbucket account when adding repositories hosted by these providers again.
+## サインアップ
 
-{% include message_box.html type="note" title="Signing up with email address" content="If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/getting-started/signing-up/signing-up-with-email). "%}
-
-## Sign up
-
-Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
+`Sign up!`をクリックして[bitrise.io](https://bitrise.io)のランディングページでサインアップをします
 
 ![Screenshot](/img/signing-up/sign-up-bitrise.png)
 
-Select `Bitbucket` for authenticating yourself with this service.
+`Bitbucket`を選択してあなたのアカウントを連携させます。
 
-## Authorize Bitrise
+## Bitriseと連携する
 
-You have to authorize Bitrise before we can establish the connection. This means you give permissions to Bitrise to access (read) your repositories.
+接続する前にBitriseと連携する必要があります。これは、Bitriseにあなたのアカウントのレポジトリを読み込む権限を与えることを意味します。
 
 ![Screenshot](/img/signing-up/bitrise_authorization.png)
 
-If you press the `Grant access` button, you will be redirected to Bitrise.
+`Grant access`のボタンを押すことでBitriseに移動します。
 
-## Finish signup
+## サインアップを完了する
 
-You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service's availability, you are also able to connect more accounts, GitHub **and** Bitbucket, for example. Last, but not least, you don't have to stick to your connected account's username.
+Bitriseアカウントを作成するにあたってユーザー名とパスワードの設定が必要です。指定したサービスの可用性に頼ることなく自由にアクセスできます。また、複数のGitHub、またはBitbucketのアカウントの登録も可能です。そして、連携アカウントのユーザー名と同じ必要はありません。
 
-After that, you are ready to roll.
+これで連携は完了です。
 
-From now on, you are able to sign in with a click of a button. Choose your favorite!
+以降、ボタンをクリックしてサインインができるようになります。
 
 ![Screenshot](/img/signing-up/signup_success.png)
