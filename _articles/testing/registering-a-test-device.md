@@ -11,15 +11,15 @@ The most comfortable way to register your iOS test device on [bitrise.io](https:
 
  1. Open Safari in **non-incognito mode** on your iOS device and log into [bitrise.io](https://www.bitrise.io).
  2. Go to your `Profile`.
- 3. Click `Account Settings`.
- 4. Click `Test devices` on the left.
- 5. Click `Register this device`.
- 6. In the pop-up window, click `Allow` so that [bitrise.io](https://www.bitrise.io) can show your configuration profile.
- 7. Click `Install` when the `Install Profile` dialog appears.
+ 3. Tap `Account Settings`.
+ 4. Tap `Test devices` on the left.
+ 5. Tap `Register this device`.
+ 6. In the pop-up window, Tap `Allow` so that [bitrise.io](https://www.bitrise.io) can show your configuration profile.
+ 7. Tap `Install` when the `Install Profile` dialog appears.
  8. Enter your devices's passcode.
- 9. Click `Install` on the `Install Profile` again.
+ 9. Tap `Install` on the `Install Profile` again.
     Now you can see your UDID and your iOS device name in the `Register device` dialog.
-10. Click `Register device`.
+10. Tap `Register device`.
 11. Register this test device to the [Apple Developer Portal](https://developer.apple.com/) with the correct provisioning profile added to your device or use our [Auto Provisioning](/code-signing/ios-code-signing/ios-auto-provisioning) step with enabling profile generation.
 
 If you go back to `Test devices`, you can see the registered device:
@@ -35,9 +35,8 @@ You can delete the registered device any time if you click on the `x` icon.
 3. Click on `Register manually`.
 4. In the `Register device` dialog, fill out the `Title` field and the `Identifier` field with your device's UDID.
 5. Hit `Register Device`.
-   
 
-   You can **get your UDID** if you plug your device into a computer, and open iTunes. Under `Summary`, you should see a Serial Number. If you click on it, it will reveal your device's `UDID` which you can paste into the `Identifier` field on our `[Test Devices](https://www.bitrise.io/me/profile#/test_devices)`.
+   You can **get your UDID** if you plug your device into a computer, and open iTunes. Under `Summary`, you should see a Serial Number. If you click on it, it will reveal your device's `UDID` which you can paste into the `Identifier` field on our [Test Devices](https://www.bitrise.io/me/profile#/test_devices).
 6. Register this test device to the [Apple Developer Portal](https://developer.apple.com/) with the correct provisioning profile added to your device or use our [Auto Provisioning](/code-signing/ios-code-signing/ios-auto-provisioning) step with enabling profile generation.
 
 Now you can see your registered test device under [Registered test devices](https://www.bitrise.io/me/profile#/test_devices).
