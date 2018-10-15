@@ -5,34 +5,36 @@ redirect_from: []
 published: false
 
 ---
-Tests run with [Firebase Test Lab](https://firebase.google.com/docs/test-lab/android/firebase-console). Tests to run **might take**  . Bitrise provides unlimited device minutes until our `[BETA] Virtual Device Testing for Android` Step is in beta version. You can run instrumentation tests to execute your app using the Espresso framework and **UI Automator 2.0**., robo tests that analyzes your app's UI and can simulate user activity, and gameloop tests that use demo mode to simulate gamer activity.
+Tests run with [Firebase Test Lab](https://firebase.google.com/docs/test-lab/android/firebase-console). Bitrise provides unlimited device minutes until our `[BETA] Virtual Device Testing for Android` Step is in beta version. You can run instrumentation tests to execute your app using the Espresso framework and **UI Automator 2.0**., robo tests that analyzes your app's UI and can simulate user activity, and gameloop tests that use demo mode to simulate gamer activity.
 
 ## Enable UI tests on virtual devices
 
 Turn on `Device Testing` on the app's `Settings` tab.
 
 1. Toggle the switch to the right.
-2. Click `add step to primary workflow` to add two steps that you need for UI testing: `Gradle Runner` Step to generate an APK for testing and `[BETA] Virtual Device Testing for Android` Step to create the test reports of your app.
-3. Add the Virtual Device Testing step to your primary workflow.
+2. Click `add step to primary workflow` to add two steps that you need for UI testing: 
+   * `Gradle Runner` Step to generate an APK for testing and
+   * `[BETA] Virtual Device Testing for Android` Step to run the tests and create the test reports of your app
 
    ![](/img/android-vdt-turn-on.jpg)
 
 ## Modify your primary workflow
 
-1. Add `Gradle Runner` Step after testing steps before the deploy tests if you haven't clicked `add step to primary workflow` on the `Device Testing` tab.
-2. Add an extra task; `assembleDebugAndroidTest`, to the `Gradle task to run` step input field.
+Make sure you have added `Gradle Runner` and `[BETA] Virtual Device Testing` steps to your workflow.
+
+1. Add an extra task; `assembleDebugAndroidTest`, to the `Gradle task to run` step input field.
 
    ![](/img/assembledebugandroidtest.jpg)
-3. Add `[BETA] Virtual Device Testing for Android` Step after `Gradle Runner` Step if you haven't clicked `add step to primary workflow` on the `Device Testing` tab.
-4. Set the `Test APK path` of the APK you want to test **in the field**
-5. Select the `**Test type**`: `robo` (by default selected), `instrumentation`, `gameloop`
+2. Add `[BETA] Virtual Device Testing for Android` Step after `Gradle Runner` Step if you haven't clicked `add step to primary workflow` on the `Device Testing` tab.
+3. Set the `Test APK path` of the APK you want to test **in the field**
+4. Select the `**Test type**`: `robo` (by default selected), `instrumentation`, `gameloop`
 
    In this tutorial, we chose `robo/insturmentation`.
-6. how to do instrumentation test: [https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4](https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4 "https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4")
-7. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`. You can check the **available test devices** and its versions if you click on the arrow for more information above the step input field.
+5. how to do instrumentation test: [https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4](https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4 "https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4")
+6. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`. You can check the **available test devices** and its versions if you click on the arrow for more information above the step input field.
 
    ![](/img/test-devices.png)
-8. Start a build.
+7. Start a build.
 
 ## Check test results
 
