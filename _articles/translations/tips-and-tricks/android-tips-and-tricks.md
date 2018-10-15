@@ -1,19 +1,19 @@
-## What are Gradle tasks and how can I get the list of available tasks in my project?
+## Gradle タスクとは何で、どうすれば自分のプロジェクトで利用可能なタスクの一覧を取得できますか？
 
-A `gradle` task is a process you can run with `gradle`.
-You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal.
+`gradle` タスクとは、あなたが `gradle` で実行することのできる処理のことです。
+コマンドラインやターミナルで `gradle 実行するタスク` を実行することでこれらのタスクを実行することができます。
 
-A standard Android Gradle project includes a lot of tasks by default, things like:
+標準的な Android の Gradle プロジェクトにはデフォルトでたくさんのタスクが含まれています。たとえば:
 
-* `androidDependencies - Displays the Android dependencies of the project.`
-* `assemble - Assembles all variants of all applications and secondary packages.`
-* `assembleAndroidTest - Assembles all the Test applications.`
-* `clean - Deletes the build directory`
+* `androidDependencies - プロジェクトの Android の依存関係を表示します。`
+* `assemble - 全てのアプリケーションと第二のパッケージの全てのバリアントを組み立てます。`
+* `assembleAndroidTest - 全てのテストアプリケーションを組み立てます。`
+* `clean - ビルドディレクトリを削除します。`
 
-You can get the base task list by calling `gradle tasks` in your Android app's directory,
-or to see all the available tasks you can call `gradle tasks --all`.
+Android アプリのディレクトリで `gradle tasks` を実行することで基本タスクの一覧を取得することができ、
+`gradle tasks --all` を呼び出すことで全ての利用可能なタスクを確認することができます。
 
-Running `gradle tasks` you'll get a list of available Gradle tasks in the format:
+`gradle tasks` を実行すると、利用可能な Gradle タスクの一覧を次のようなフォーマットで取得できます:
 
     $ gradle task
     
@@ -37,12 +37,12 @@ Running `gradle tasks` you'll get a list of available Gradle tasks in the format
     assembleRelease - Assembles all Release builds.
     ...
 
-You can run any of the tasks on bitrise from a `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemle`)
-or by using our `Gradle Runner` step ([https://github.com/bitrise-io/steps-gradle-runner](https://github.com/bitrise-io/steps-gradle-runner))
-and specifying the task as the value of the `gradle_task` input.
+`Script` ステップで `gradle 実行するタスク名` (例: `gradle assemble`) を呼び出すか、
+`Gradle Runner` ステップ ([https://github.com/bitrise-io/steps-gradle-runner](https://github.com/bitrise-io/steps-gradle-runner)) で
+`gradle_task` 入力値としてタスクを指定することで任意のタスクを bitrise 上で実行することができます。
 
-**Instead of running** `**gradle**` **directly, you should run the gradle commands through** `**gradlew**` **(the Gradle Wrapper)!**
-The `Gradle Runner` step does this, and as you can see it in the related input description of the step:
+`**gradle**` **を直接実行する代わりに、** `**gradlew**` **(Gradle ラッパー) を使用するべきです！**
+`Gradle Runner` ステップはこれを行い、ステップの関連する入力説明でそれを見ることができます:
 
 > Using a Gradle Wrapper (gradlew) is strongly suggested, as the wrapper is what makes sure
 > that the right Gradle version is installed and used for the build.
