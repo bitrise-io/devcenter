@@ -25,16 +25,15 @@ Make sure you have added `Gradle Runner` and `[BETA] Virtual Device Testing` ste
 1. Add an extra task; `assembleDebugAndroidTest`, to the `Gradle task to run` step input field.
 
    ![](/img/assembledebugandroidtest.jpg)
-2. Add `[BETA] Virtual Device Testing for Android` Step after `Gradle Runner` Step if you haven't clicked `add step to primary workflow` on the `Device Testing` tab.
-3. Set the `Test APK path` of the APK you want to test **in the field**
-4. Select the `**Test type**`: `robo` (by default selected), `instrumentation`, `gameloop`
+2. Set the `Test APK path` of the APK you want to test **in the field**
+3. Select the `**Test type**`: `robo` (by default selected), `instrumentation`, `gameloop`
 
    In this tutorial, we chose `robo/insturmentation`.
-5. how to do instrumentation test: [https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4](https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4 "https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4")
-6. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`. You can check the **available test devices** and its versions if you click on the arrow for more information above the step input field.
+4. how to do instrumentation test: [https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4](https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4 "https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4")
+5. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`. 
 
    ![](/img/test-devices.png)
-7. Start a build.
+6. Start a build.
 
 ## Check test results
 
