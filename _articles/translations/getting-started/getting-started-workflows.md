@@ -1,93 +1,94 @@
-A Bitrise workflow is a collection of Steps. When a build of an app is run, the steps will be executed in the order that is defined in the workflow. Workflows can be created, defined and modified in two ways:
+Bitriseワークフローは複数のステップの集まりです。アプリのビルド時に、ステップがワークフローで定義されたステップが実行されます。ワークフローは次の2つの方法で、作成と変更ができます。
 
-* Using the graphical Workflow Editor on [bitrise.io](https://www.bitrise.io)
-* Directly editing the `bitrise.yml` file of your project
+* [bitrise.io](https://www.bitrise.io)のグラフィカルワークフローエディタを使う
+* プロジェクトの`bitrise.yml`を直接編集する
 
-Ultimately, both methods modify the `bitrise.yml` file - the `Workflow Editor` is simply a friendlier way of doing so!
+どちらの方法でも結果的に`bitrise.yml`を変更することになります - `Workflow Editor（ワークフローエディタ）`を使う方法の方がよりシンプルで易しいです！
 
-By default, a single build is a single workflow. But it's also possible to [chain workflows together](/getting-started/getting-started-workflows#chain-workflows-together) so they run in succession, as well as to [trigger multiple workflows to run simultaneously](/builds/triggering-builds/trigger-multiple-workflows).
+デフォルトでは、1つのビルドに1つのワークフローが対応しています。しかし、[ワークフローの連結](/getting-started/getting-started-workflows#chain-workflows-together)を設定して、連続して実行することも可能ですし、[複数のワークフローのトリガーを設定して同時に実行する](/builds/triggering-builds/trigger-multiple-workflows)ことも出来ます。
 
-## Default Workflows
+## デフォルトワークフロー
 
-When you add a new app on [bitrise.io](https://www.bitrise.io), two workflows are created automatically. These are the `primary` and the `deploy` workflows. By default, every code change in your project's repository triggers the `primary` workflow if the required webhook has been set up.
+[bitrise.io](https://www.bitrise.io)にアプリを追加すると、2つのワークフローが作成されます。`primary（プライマリ）`ワークフローと`deploy（デプロイ）`ワークフローです。webhookが設定されている場合、デフォルトでは、プロジェクトのコードの変更があるたびに`primary（プライマリ）`ワークフローのトリガーが実行されます。
 
-Triggers can be configured so that any other workflow (including `deploy`) is automatically triggered when certain code events happen. For more information, [read some more about build triggers](/builds/triggering-builds/triggering-builds).
+特定のイベントが発生するたびに、他の任意のワークフロー（`deploy（デプロイ）`ワークフローを含む）が実行されるように、トリガーを設定することができます。詳しくは、[ビルドトリガーについてより詳しく知る](/builds/triggering-builds/triggering-builds)をお読みください。
 
-### The `primary` workflow
+### `primary（プライマリー）`ワークフロー
 
-The `primary` workflow is automatically created when adding a new app. Once the process of adding the app is over, Bitrise triggers the app's first build automatically: this build runs with the `primary` workflow.
+`primary（プライマリー）`ワークフローは、新しいアプリの追加時に自動的に作成されます。アプリを追加する処理が完了すると、Bitriseは自動的に初回のビルドを実行します: このビルドは、`primary`ワークフローによって実行されます。
 
-![Primary workflow](/img/getting-started/primary-workflow.png)
+![primaryワークフロー](/img/getting-started/primary-workflow.png)
 
-The `primary` workflow is not the same for every app you create: it contains different Steps depending on the project type. For example, an Android project's `primary` workflow will include the `Install missing Android SDK components`, the `Android Lint` and the `Android Unit Test` Steps. But overall, `primary` is a "basic" workflow that always performs the following actions:
+`primary`ワークフローは、作成したアプリごとに同じではありません: プロジェクトの種類によって、含まれるステップが異なります。例えば、Androidプロジェクトの`primary`ワークフローは、`Install missing Android SDK components（不足しているAndroid SDKのインストール）`、`Android Lint`、`Android Unit Test`のステップを含むでしょう。ただし、`primary`は"基本の"ワークフローであり、共通して以下のアクションを行います:
 
-* Activates the SSH key, if one has been added to the app. The step saves it to file and then loads it into the user's ssh-agent with the `ssh-add` command. The step, by default, does not run if there is no SSH key added.
-* Clones the Git repository of the project with the `Git Clone Repository` Step.
-* `Bitrise.io Cache:Pull` and `Bitrise.io Cache:Push` Steps. Read more about [caching on Bitrise](/caching/about-caching).
-* Deploys build artifacts with the `Deploy to Bitrise.io` Step.
+* `ssh-add`コマンドで、SSHキーがアプリに追加されている場合にアクティベートを行います。このステップでは、SSHキーの保存、ユーザーのssh-agentへのロードを実行します。
+* `Git Clone Repository`ステップで、プロジェクトのGitレポジトリをクローンを実行します。
+* `Bitrise.io Cache:Pull` and `Bitrise.io Cache:Push`ステップについては、[Btriseでのキャッシュ](/caching/about-caching) を参照してください。
+* `Deploy to Bitrise.io`ステップで、ビルド成果物のデプロイを行います。
 
-### The `deploy` workflow
+### `deploy（デプロイ）`ワークフロー
 
-The `deploy` workflow is automatically created when adding a new app. It is similar to the [primary workflow](/getting-started/getting-started-workflows#the-primary-workflow) in a number of ways:
+`deploy（デプロイ）`ワークフローは、新しいアプリの追加時に自動的に作成されます。いくつかの点で[primaryワークフロー](/getting-started/getting-started-workflows#the-primary-workflow)と似ています。
 
-* it has the same 'basic' steps
-* its specific steps are dependent on the project type
+* '基本的な'ステップを含む
+* 実際に含まれるステップはプロジェクトの種類によって異なる
 
-The `deploy` workflow, however, also contains the Steps that "build" the project, and, if the build is successful, produces the necessary artifacts for installing the app or deploying it online. For example, an Android project's `deploy` workflow contains the `Android Build` Step that builds your project with Gradle, and the `Sign APK` Step that creates a signed .apk file which can be deployed to Google Play or installed on test devices.
+`deploy（デプロイ）`ワークフローは、"build"ステップを含み、ビルドが成功した場合に、オンライン上でインストールもしくはデプロイが可能な成果物を作成します。例えば、Androidプロジェクトの`deploy`ワークフローは、Gradleでのビルドを実行する`Android Build`ステップや、Google Playへのデプロイや検証端末へのインストールが可能な署名済み.apkファイルを作成する`Sign APK`ステップを含みます。
 
-## Creating your own workflow
+## 独自のワークフローを作成する
 
-It's very simple to create your own workflow with the Workflow Editor. You can create new workflows based on any of the existing ones, or you can simply create an empty workflow and add the steps yourself.
+ワークフローエディターを使って、とても簡単に独自のワークフローを作成できます。
+既存のワークフローをベースにして新しいワークフローを作成することも、空のワークフローを作成してステップを追加することもできます。
 
-If, for example, you create a workflow based on your `primary` one, it means that it will be created with the exact same Steps as the `primary` workflow.
+例えば、`primary`ワークフローをベースにしてワークフローを作成した場合、`primary`ワークフローと全く同じステップになります。
 
-1. Click the app's `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
-2. Click `+ Workflow`
+1. `Workflow`タブをクリックしてください。変更の保存または破棄をすることなく、ワークフローエディタを終了できないことに注意してください。
+2. `+ Workflow`をクリックしてください
 
-   ![Create workflow](/img/getting-started/create-workflow.png)
-3. Select the workflow you want to use as the basis for the new one. Alternatively, choose the `Empty workflow` option to create an empty workflow
+   ![ワークフローの作成](/img/getting-started/create-workflow.png)
+3. 新しいワークフローのベースに使用するワークフローを選択してください。
 
-   ![Add new workflow](/img/getting-started/add-new-workflow.png)
-4. Add the Steps you need to your workflow. Click the `+` symbol between two Steps to insert a Step at that position. Remove Steps you do not need by clicking on the Step and clicking the little trash bin symbol.
-5. Click `Save` in the top right corner.
+   ![新しいワークフローを追加](/img/getting-started/add-new-workflow.png)
+4. ワークフローに必要なステップを追加してください。任意の位置にステップを挿入するには、導入したいステップの間の`+`マークをクリックしてください。
+5. 左上隅にある`Save`をクリックしてください。
 
-   ![Save workflow](/img/getting-started/save-workflow.png)
+   ![ワークフローの保存](/img/getting-started/save-workflow.png)
 
-## Chaining workflows together
+## ワークフローの連結
 
-You can set up multiple workflows to run in succession. The order of these workflows can be rearranged, new workflows can be added to the "chain" and existing workflows can be removed from it at any time.
+複数のワークフローを連続して実行するように設定することができます。いつでも、ワークフローの順番を並び変えることや、新しいワークフローを"チェーン"に加えることや、既存のワークフローを削除することができます。
 
-{% include message_box.html type="important" title="Bitrise Start Build step" content="
-Be aware that if you chain workflows together as described in this guide, all the workflows will still run on the same Virtual Machine. However, if you use the `Bitrise Start Build` step as described in [this guide](/builds/triggering-builds/trigger-multiple-workflows), each of the triggered workflows will run on a separate Virtual Machine. "%} 
+{% include message_box.html type="important" title="Bitrise Start Buildステップ" content="
+このガイドの説明にしたがってワークフローの連結を行う場合、全てが同じバーチャルマシン上で実行されることに注意してください。ただし、[このガイド](/builds/triggering-builds/trigger-multiple-workflows)の説明にしたがって`Bitrise Start Build`ステップを使う場合、それぞれのワークフローは別のバーチャルマシン上で実行されます。"%} 
 
-1. Click the app's `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
-2. Open the `WORKFLOW` menu on the left and select a workflow. The default is the `primary` workflow. You can chain workflows before and after the selected workflow.
+1. `Workflow`タブをクリックしてください。変更の保存または破棄をすることなく、ワークフローエディタを終了できないことに注意してください。
+2. 左の`WORKFLOW`メニューを開き、ワークフローを選んでください。デフォルトは、`primary`ワークフローです。選択中のワークフローの前または後にワークフローを連結することができます。
 
-   ![Selecting workflows](/img/getting-started/selecting-workflows.png)
-3. Click `Add Workflow before` to chain a workflow before the currently selected one or click `Add Workflow after` to chain a workflow after the currently selected one.
+   ![ワークフローの選択](/img/getting-started/selecting-workflows.png)
+3. 選択中のワークフローの前に追加した場合は`Add Workflow before`をクリック、後に追加した場合は`Add Workflow after`をクリックしてください。
 
-   ![Chaining workflows](/img/getting-started/chain-workflow.png)
-4. Click `Save` in the top right corner.
+   ![ワークフローの連結](/img/getting-started/chain-workflow.png)
+4. 右上隅にある`Save`をクリックしてください。
 
-## Rearranging workflows
+## ワークフローの組み替え
 
-Once you have a "chain", you can easily rearrange the order of workflows in a drag-and-drop menu.
+作成した"チェーン"は、ドラッグ&ドロップで簡単に順番を変更できます。
 
-1. Click the app's `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
-2. Open the `WORKFLOW` menu on the left and select a workflow that is part of a "chain".
-3. Click `Rearrange` to bring up a drag-and-drop menu where you can rearrange the workflows of the chain.
+1. `Workflow`タブをクリックしてください。変更の保存または破棄をすることなく、ワークフローエディタを終了できないことに注意してください。
+2. 左の`WORKFLOW`メニューを開き、"チェーン"に含まれるワークフローを選択してください。
+3. `Rearrange`をクリックすると、チェーンのワークフローの組み替えができるドラッグアンドドロップメニューが表示されます。
 
-   ![Rearranging workflows](/img/getting-started/rearrange-workflows.png)
-4. Click `Save` in the top right corner.
+   ![ワークフローの組み替え](/img/getting-started/rearrange-workflows.png)
+4. 右上隅にある`Save`をクリックしてください。
 
-## Renaming workflows
+## ワークフローの名前の変更
 
-Rename your workflows at any time you feel necessary: it's quick and simple.
+ワークフローの名前は必要に応じていつでも変更できます: すぐに簡単にできます。
 
-1. Click the app's `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
-2. Open the `WORKFLOW` menu on the left and select a workflow.
-3. Click `RENAME` next to the name of the workflow.
+1. `Workflow`タブをクリックしてください。変更の保存または破棄をすることなく、ワークフローエディタを終了できないことに注意してください。
+2. 左の`WORKFLOW`メニューを開き、ワークフローを選んでください。
+3. ワークフロー名の隣にある`RENAME`をクリックしてください。
 
-   ![Selecting workflows](/img/getting-started/selecting-workflows.png)
-4. Type the new name then click the check mark to save the new name.
-5. Click `Save` in the top right corner.
+   ![ワークフローの選択](/img/getting-started/selecting-workflows.png)
+4. 新しいワークフロー名を入力し、チェックマークをクリックして保存してください。
+5. 右上隅にある`Save`をクリックしてください。
