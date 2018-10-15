@@ -7,10 +7,27 @@ published: false
 ---
 Any tool, that can edit bitrise.yml, you can use to place custom information/properties to bitrise.yml it being checked by Workflow Editor. Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process. Let's see some use cases when your project can benefit from customization:
 
-1. If you decide to take your spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and fork it to your own repository use it **_offline in a team_**, you can do some customization to the environment variables of an app you are writing there.  how to download Bitrise CLI and Workflow Editor. Add a `meta` section to `opts` to WHAT/Workflow? If you have your own website and include Workflow Editor there from a forked version of our open source Workflow Editor and you want to keep an eye on one of the env vars and what it was last modified, you can place a meta . The tool will save what it was last modified and by who. This only works through a Workflow Editor shared in your company's intranet or shared by a software.
+1. If you decide to take your own spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and create your own version of it, you can use it **_offline in a team_** (for example, by adding it to your website) **_after having forked it,_** you can do some customization to the environment variables in the `bitrise.yml` tab.  Let's say you want to keep an eye on one of the env vars and when it was last modified and by who, you can place the following meta section to `bitrise.yml` in your own version of Workflow Editor.
 
-   to manipulate, for example, the background of an env var. Add `meta` to `opts` in  **_bitrise.yml.editor_** to customize how env vars appear on your Workflow Editor. `meta` works like a container that holds any custom properties that is **not by default part** of any Workflow Editor. **_How the rest of Workflow Editor' UI looks is maintained by Bitrise._**
-2. You can also customize **_env vars on bitrise.io's bitrise.yml_** to manipulate
+       app:
+         envs:
+         - ASXaS: "`ZX`ZX"
+           opts:
+             is_expand: false
+             meta:
+               audit: # used by the Audited Workflow Editor imagenary tool, that works like WFE but saves the modifier and modification date, and displays it
+                 last_modified_at: 2018.09.12.
+                 last_modifier: Jane Doe
+
+   It will save when `audit` env var was last modified (`last_modified_at`) and by who (`last_modifier`). Of course, this use case works only if your customized tool is shared with your team in your company's intranet or by a software.
+
+   Another use case with meta can be if you want to highlight an env var in your own tool: 
+
+       meta: {
+         my_fancy_new_workflow_editor: {
+           env_var_background_color: "red"
+         }
+       }
 
 ## Adding meta to bitrise.yml
 
