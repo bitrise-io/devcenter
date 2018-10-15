@@ -10,3 +10,11 @@ With Bitrise's virtual device testing solution, you can run iOS tests on virtual
 Our virtual device testing is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/): it uses real, production devices running in a Google data center to test your app. The devices are flashed with updated APIs and have customizable locale settings, allowing you to road-test your app on the hardware and configurations it'll encounter in real-world use.
 
 For iOS apps, Firebase Test Lab runs [XCTest](https://developer.apple.com/documentation/xctest) tests. 
+
+## Enabling Virtual Device Testing 
+
+Before you attempt to use any of our Virtual Device Testing Steps, the feature itself must be enabled for your app. 
+
+1. Log in to [bitrise.io](https://app.bitrise.io/). 
+2. Select the app on your Dashboard. 
+3. Go to the `Settings` tab. 
