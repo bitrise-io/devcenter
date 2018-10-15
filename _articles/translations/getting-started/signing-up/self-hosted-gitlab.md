@@ -1,42 +1,41 @@
-For organizations, Bitrise supports connecting to self-hosted GitLab instances. Connecting is simple, and once it's done, you can add apps to Bitrise from privately hosted repositories [in the usual way](/getting-started/adding-a-new-app). All functions that you got used to with publicly hosted repositories will be available!
+企業や組織向けに、Bitriseは自前でホストしたGitLabインスタンスへのアクセスをサポートしています。接続はカンタンです、いったんできれば内部的にホストされたリポジトリからBitriseにアプリを追加することができます[普段の使い方](/getting-started/adding-a-new-app)。 いままで使っていたようなすべての機能が内部的にホストされたリポジトリのアプリに対して可能になります！！
 
-Setting up an app that is in a self-hosted GitLab repository is very simple: Bitrise needs to be authorized as an application for the entire GitLab instance and then the **Application Id** and the **Secret** value belonging to the Bitrise OAuth application must be added to the organization on [bitrise.io](https://www.bitrise.io).
+自身でホストしたGitLab上にアプリを用意するのは非常にカンタンです: BitriseはすべてのGitLabインスタンスに対して認証がされている必要があります、さらに**Application Id**は**Secret**は[bitrise.io](https://www.bitrise.io)においてBitrise OAuth アプリケーションに追加されている必要があります。
 
-## Connect a self-hosted GitLab instance with Bitrise
+## 自身でホストしたGitLabインスタンスにBitriseから接続する
 
-**Only Organizations can use privately hosted GitLab instances on Bitrise**. If you are not on an Organization plan, you should not follow this guide.
+**自身でホストしたGitLabインスタンスへのアクセスはOrganizationsのみでご利用いただけます**。もしOrganizationプランをご利用でない場合、以下のガイドはご利用いただけません。
 
- 1. Log in to your GitLab instance with **root** privileges.
-    If you connect to Bitrise **without root privileges**, your Organization's other team members will **not have access to the repository on the GitLab instance**.
- 2. Go to the admin area by clicking the little wrench icon on the top menu bar.
- 3. On the left menu bar, select `Applications`, then click `New Application`.
-
+ 1. **ルート** 権限でGitLabインスタンスへログインする
+    もし **ルート権限無しで** Bitriseに接続する場合、あなたの組織の他のチームメンバーは **GitLabインスタンス上のリポジトリにはアクセスできません**。
+ 2. 上部のメニューバーの小さいレンチアイコンをクリックして管理画面へ移動してください。
+ 3. 左側のメニューバーから, `Applications`を選択して, `New Application`をクリックしてください。
     ![New Application](/img/adding-a-new-app/gitlab-newapp.png)
- 4. In the `Name` field, enter a name that clearly identifies the application. For the sake of simplicity, we recommend **Bitrise**.
- 5. In the `Redirect URI` field, enter https://app.bitrise.io/users/auth/gitlab/callback.
- 6. In the `Scopes` menu, check `**api**`.
+ 4. `Name`の箇所に明確に識別できるアプリ名を入力してください。カンタンにするために私達は**Bitrise**を推奨しています。
+ 5. `Redirect URI`の箇所に、https://app.bitrise.io/users/auth/gitlab/callback を入力してください。
+ 6. `Scopes`メニューで`**api**`をチェックしてください。
 
     ![New Application settings](/img/adding-a-new-app/gitlab-newapp-settings.png)
- 7. Click `Submit`. On the next page, you should see an `Application Id` and a `Secret`. You'll need both to connect to your GitLab instance on [bitrise.io](https://www.bitrise.io).
+ 7. `Submit`をクリックしてください。次のページにおいて、`Application Id`と`Secret`を確認できます。[bitrise.io](https://www.bitrise.io)においてGitLabインスタンスへの接続はこの2つが必要になります。
 
     ![App id and secret](/img/adding-a-new-app/appid-secret.png)
- 8. Go to your organization's profile page on [bitrise.io](https://www.bitrise.io).
- 9. Select the `Connected Accounts` option on the left menu bar.
-10. Add your self-hosted GitLab credentials:
+ 8. [bitrise.io](https://www.bitrise.io)でorganization'sのプロフィールの画面へ移動してください。
+ 9. 左のメニューバーから`Connected Accounts`オプションを選択してください.
+10. GitLabのcredentialsを入力してください。:
     * App ID
     * Secret
-    * Self-hosted URL
+    * 自身でホストしているURL
 
-You are done! Now you are able to access your privately hosted repositories with Bitrise.
+これで完了です！ これで内部でホストされたリポジトリにBitriseがアクセスできるようになりました。
 
-## Add a new app from a self-hosted GitLab repository
+## 自身でホストしたGitLabリポジトリから新しいアプリを追加する
 
-Before you start, make sure you [created an OAuth application](/getting-started/signing-up/self-hosted-gitlab#connect-a-self-hosted-gitlab-instance-with-bitrise) in your self-hosted GitLab instance.
+始める前に、自身でホストしたGitLabインスタンスの [created an OAuth application](/getting-started/signing-up/self-hosted-gitlab#connect-a-self-hosted-gitlab-instance-with-bitrise) を確認してください。
 
-1. Log in to [bitrise.io](https://www.bitrise.io) and click the `+` symbol on the top menu bar and select `Add app` from the options.
-2. Choose an Organization account.
-3. When prompted to select your Git provider, select GitLab. Select the `Self-hosted` option.
-4. If you haven't provided your self-hosted GitLab credentials to the organization before, you can do it at this stage.
-5. Click `Connect`.
+1. [bitrise.io](https://www.bitrise.io)にログインして、上部のメニューバーの`+`をクリックし、オプションから`Add app`を選択してください。
+2. Organizationアカウントを選択してください。
+3. Gitのプロバイダを選択するように言われたら、GitLabを選択してください。その時`Self-hosted`オプションも選択してください。
+4. もし自身でホストしたGitLabのcredentialsを設定する前なら、このタイミングで入力することもできます。
+5. `Connect`をクリックしてください。
 
-Once connected, proceed as usual to [setting up your project configuration](/adding-a-new-app/setting-up-configuration).
+接続が完了したら、いつものように[setting up your project configuration](/adding-a-new-app/setting-up-configuration)からご利用ください。
