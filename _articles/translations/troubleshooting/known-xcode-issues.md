@@ -1,27 +1,25 @@
-**Feel free to add your comments to this list.**
+**自由にこのリストにあなたのコメントを追加してください。**
 
-[You can do it directly on GitHub, by clicking this link](https://github.com/bitrise-io/devcenter/blob/master/_articles/troubleshooting/known-xcode-issues.md),
-just don't forget to send it as a Pull Request ;)
+[このリンクをクリックすることで、GitHub上に直接追加することができます。](https://github.com/bitrise-io/devcenter/blob/master/_articles/troubleshooting/known-xcode-issues.md),
+ただしプルリクエストとしてそれを送ることを忘れないでください ;)
 
-## Performance related
+## パフォーマンス関連
 
-_Note: mainly affects UI tests._
+_ノート: 主にUIテストに影響します。_
 
-The root cause of the issue is that Xcode / the iOS Simulator has issues
-in performance limited environments. This included Virtual Machines (which is
-how your builds are running on [bitrise.io](https://www.bitrise.io)),
-MacBook Airs, Mac Minis with HDD storage, ...
+Xcode / iOS Simulatorに紐づく問題の根本的な原因は限られた環境のパフォーマンスによって発生します。これは仮想マシン(あなたが[bitrise.io](https://www.bitrise.io)の上でビルドし走らせるもの), 
+MacBook Airs, HDDストレージのMac Minis, ...
 
-It can happen even if you use
-[Apple's Xcode Bots CI server](http://www.openradar.me/23386199) on _non SSD_
-Mac Mini.
+あるいはあなたが_SSDではない_Mac Miniで
+[Apple's Xcode Bots CI server](http://www.openradar.me/23386199)
+を使った場合にも起こりえます。
 
-Examples:
+例:
 
-* UI Tests fail to start
-* One or more UI Test case hangs
+* UIテストの開始に失敗した
+* 一つまたは複数のUIテストケースが応答しなくなる
 
-Related links & reports:
+関連するリンクとレポート:
 
 * [XCode bot error: Early unexpected exit, operation never finished bootstrapping](http://stackoverflow.com/questions/36312500/xcode-bot-error-early-unexpected-exit-operation-never-finished-bootstrapping)
 * [UI Testing Failure - Failed to launch within 2.5s, Interrupting test](https://forums.developer.apple.com/thread/20747)
@@ -31,31 +29,29 @@ Related links & reports:
 * [UI Testing Failure due to failed AX Action](https://forums.developer.apple.com/thread/4472)
 * [Every other test case being skipped - UI Testing Failure - App state for <XCUIApplicationProcess: ...> is XCApplicationStateRunningActive (3), still not XCApplicationStateNotRunning](https://forums.developer.apple.com/thread/28732)
 
-### Possible solutions
+### 解決方法
 
-* As reported [in this StackOverflow answer](http://stackoverflow.com/a/37866825/974381) &
-  [in this Apple dev forum discussion](https://forums.developer.apple.com/thread/4472)
-  a possible workaround can be to **not to store** `**XCUIApplication()**` **in a variable**, instead
-  reference / use it directly. E.g. instead of: `let app = XCUIApplication() ; ... ; app.launch()`
-  do: `XCUIApplication().launch()`
-* Others reported that if you add a delay (`sleep(10)`) after every `app.launch()` related to your tests, it can
-  leave enough time for Xcode / the iOS Simulator to initialize the Accessibility labels,
-  so that UI Tests can properly find the elements by the Accessibility labels. ([Related Apple developer forum discussion](https://forums.developer.apple.com/thread/28732))
-  * Related: remove every explicit `app.terminate()` in your `tearDown()` method(s)
-* Try another Simulator device (e.g. instead of running the test in "iPhone 6"
-  try it with "iPhone 6s Plus")
-* [Use the Async testing APIs](http://stackoverflow.com/a/32481202/974381)
-* Some users had success with splitting the tests into multiple Schemes,
-  and running those separately, with separate Test steps.
-  * A great article about splitting tests into multiple Schemes:
+* [このStackOverflowの回答](http://stackoverflow.com/a/37866825/974381)と
+  [このApple dev forum discussion](https://forums.developer.apple.com/thread/4472)で報告されているように、
+  **変数の中に** `**XCUIApplication()**` **を保持せず**、代わりに
+  直接参照/使用することが、ひとつの回避方法となりえます。 たとえば. `let app = XCUIApplication() ; ... ; app.launch()`の代わりに、
+  `XCUIApplication().launch()`を実行します。
+* 他に報告されているものでは、テスト関連で`app.launch()`の後ごとに遅延処理(`sleep(10)`)を追加した場合、Xcode / iOS SimulatorがAccessibility labelsの初期化するのに十分な時間が残っており、
+  それによりUIテストがAccessibility labelsの要素を正しく見つけることができます。 ([関連するApple developer forum discussion](https://forums.developer.apple.com/thread/28732))
+  * 関連: `tearDown()`メソッド(メソッド群)ですべての明示的な`app.terminate()`を取り除くこと
+* 別のシミュレーターデバイスで試す (例. "iPhone 6"でテストを実行する代わりに
+  "iPhone 6s Plus"で試してみる)
+* [非同期テストのAPI群を使用する](http://stackoverflow.com/a/32481202/974381)
+* いくつかのユーザーは複数のスキームにテストを分割し、
+  分かれたテストのステップを、別々に実行させることで成功させました。
+  * 複数のスキームにテストを分割することに関連する素晴らしい記事:
     [http://artsy.github.io/blog/2016/04/06/Testing-Schemes](http://artsy.github.io/blog/2016/04/06/Testing-Schemes)
-* [Sometimes it's related to a code which makes Xcode to misbehave](https://github.com/fastlane/fastlane/issues/3874#issuecomment-219991408)
-* Try another Xcode version.
+* [ときどきXcodeを誤作動させるコードが関連している場合](https://github.com/fastlane/fastlane/issues/3874#issuecomment-219991408)
+* 異なるバージョンのXcodeを試してみる。
 
-## Flaky UI tests, UI test cases failing randomly
+## 不安定なUIテスト、ランダムなUIテストケースの失敗
 
-This can happen with a really simple project too. Even something as
-simple as:
+これは実にシンプルなプロジェクトでも発生しえます。本当にこのようなほど単純なことに:
 
     func testAddAnItemGoToDetailsThenDeleteIt() {
             // Use recording to get started writing UI tests.
@@ -80,46 +76,47 @@ simple as:
             XCTAssert(tablesQuery.cells.count == 0)
         }
 
-can trigger this issue.
+この問題を引き起こします。
 
-### Possible solutions
+### 解決方法
 
-We could reproduce this issue with the code above, using `Xcode 7.3`.
-The exact same code worked perfectly with `Xcode 7.2.1` while it randomly
-failed with `7.3`. The solution was to use a different iOS Simulator device.
-The test failed _2 out of 3_ on average with the "iPhone 6" simulator device
-using Xcode 7.3, while it worked perfectly with Xcode 7.2.1.
+`Xcode 7.3`を使用し、上記のコードでこの問題を再現させることができました。 
+`Xcode 7.2.1`では全く同じコードが完璧に動作しましたが、
+`7.3`ではランダムに失敗します。開発方法は異なるiOS Simulatorデバスを使用することでした。
+Xcode 7.3を使用する"iPhone 6"のシミュレーターデバイスの場合平均して_3回のうち2回_テストが失敗しましたが、
+一方でXcode 7.2.1では完璧に動作しました。
 
-Changing the simulator device to "iPhone 6s Plus" solved the issue with `Xcode 7.3`.
+"iPhone 6s Plus"にシミュレーターデバイスを変更することで、`Xcode 7.3`ではこの問題が解決しました。
 
-## Xcode Unit Test fails without any error, with exit code 65
+## Xcodeの単体テストがエラー無しで失敗し、コード65で終了する
 
-This can be caused by a lot of things, Xcode or some other tool simply
-omits / does not present any error message.
+これは多くのことが原因になりえます。Xcodeやいくつかの他のツールがまったく
+エラーメッセージを省略し/表示しません。
 
-You can find a long discussion, with possible reasons & solutions [here](https://github.com/bitrise-io/bitrise.io/issues/5).
+考えられうる理由や解決方法についての長い議論を見ることができます。[ここ](https://github.com/bitrise-io/bitrise.io/issues/5).
 
-A quick summary:
+概要:
 
-* First of all, if you use `xcpretty` to format the output try a build without it
-  (if you use the Xcode Test step you can set `xcodebuild` as the "Output Tool" option/input
-  to not to format the log produced by `xcodebuild`). The cause is: `xcpretty` sometimes
-  omits the error message in it's output. [Related GitHub issue](https://github.com/bitrise-io/bitrise.io/issues/27).
-* If you don't use our `Xcode Test` step to run your UI Test you should try to run
-  it with our Xcode Test step. We always try to improve the reliability of the step,
-  implementing known workarounds for common issues.
-* If you use our Xcode Test step: make sure you use the latest version, as it
-  might include additional workarounds / fixes.
-* Try [another Xcode version](http://devcenter.bitrise.io/docs/available-stacks#section-how-to-switch-to-the-new-beta-stacks),
-  there are issues which are present in one Xcode version but not in another one.
-* Make sure your desired [Xcode scheme is shared](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found). Don't forget to commit and push the changes if you just enabled it.
-* It might also be a [project configuration issue in your Xcode project](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-140188658),
-  or a [code issue in your tests](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-160171566),
-  or a [multi threading issue in your code](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-190163069).
-* We received reports that this might also be caused by Code Coverage report generation,
-  you can disable the `Generate code coverage files?` option of the Xcode Test step
-  to not to generate Code Coverage files.
-* If the previous steps did not help, you should check the whole discussion and suggested solutions at: [https://github.com/bitrise-io/bitrise.io/issues/5](https://github.com/bitrise-io/bitrise.io/issues/5)
+* まず最初に、`xcpretty`を使ってアウトプットをフォーマットする場合アウトプットなしのビルドを試しましょう
+  (Xcode Testステップを使用する場合は"Output Tool"オプション/インプットとして`xcodebuild`を設定することができます。
+  `xcodebuild`により生成されたログをフォーマットしないようにします。)。これの理由: `xcpretty`がときどき
+  アウトプットのなかのエラーメッセージを省略するため。 [関連するGitHubのissue](https://github.com/bitrise-io/bitrise.io/issues/27).
+* UIテストを実行するために私たちの`Xcode Test`ステップを使用しない場合は、私たちのXcode Testステップを
+  使用し実行を試すべきです。私たちは常にステップの信頼性を向上させようとしており、
+  一般的な問題の既知の回避策を実装します。
+* 私たちのXcode Testステップを使用している場合: 最新版を使用しているか確認してください。
+  追加の回避策や修正が含まれている可能性があります。
+* [異なる別のXcodeバージョン](http://devcenter.bitrise.io/docs/available-stacks#section-how-to-switch-to-the-new-beta-stacks)を試してみてください。
+  一つのXcodeのバージョンでは発生するが、別のバージョンでは発生しない問題があります。
+* 期待どおりに[Xcodeスキームがsharedである](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)が確認してください。
+  それを有効にした場合、その変更をコミットしプッシュすることを忘れないでください。
+* または[Xcodeプロジェクトのプロジェクト構成の問題](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-140188658)や、
+  [テストのコードの問題](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-160171566)、
+  [コードのマルチスレッドの問題](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-190163069)であるかもしれません。
+* 私たちはコードカバレッジレポート作成によってこの問題が発生しているかもしれないという報告を受けています。
+  Xcode Testステップのオプションの`Generate code coverage files?`を無効にすることができ、
+  コードカバレッジファイルを生成しないようにすることができます。
+* 以上の方法で問題が解決しなかった場合、次のリンクから議論全体や推奨されている解決方法を確認しましょう。: [https://github.com/bitrise-io/bitrise.io/issues/5](https://github.com/bitrise-io/bitrise.io/issues/5)
 
 ## `Segmentation fault`
 
