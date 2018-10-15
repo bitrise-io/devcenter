@@ -1,9 +1,6 @@
 ---
 title: Androidのデプロイ
 redirect_from: []
-menu:
-  deployment-tutorials:
-    weight: 1
 
 ---
 ここでは、Androidプロジェクトを[bitrise.io](https://www.bitrise.io) に追加し、ビルドしたAPKを[Google Play Store](https://play.google.com/store)にデプロイする方法を説明します。
