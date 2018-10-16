@@ -29,7 +29,13 @@ First you need to enable device testing to your app, then select a build whose p
 
      ![](/img/primary-virtual-device.png) Now check your primary workflow, it should contain `Gradle Runner` and `[BETA] Virtual Device Testing for Android` Steps in the right places.
 
-## Modify your primary workflow
+## Running tests
+
+`robo` is by default the configured test type but you can switch to `instrumentation` or `gameloop` as well. 
+
+* robo -
+* instrumentation -
+* gameloop -
 
 1. Open the primary workflow in `Workflow Editor`.
 2. Click `Gradle Runner`
