@@ -26,7 +26,7 @@ That's it! You are now ready to start using our Device Testing solution.
 
 ## Running device tests for iOS apps
 
-To run device tests with our Firebase Test Lab solution, you will need to add two Steps to your workflow:
+To run device tests with the Firebase Test Lab solution, you will need to add two Steps to your workflow:
 
 * `Xcode Build for testing for iOS`
 * `iOS Device Testing`
