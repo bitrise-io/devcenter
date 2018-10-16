@@ -1,12 +1,10 @@
 ---
-title: Android UI test on virtual devices
+title: Device testing for Android
 date: 2018-10-13 08:39:08 +0000
 redirect_from: []
 published: false
 
 ---
-
-## Enable UI tests on virtual devices
 
 First you need to enable device testing to your app, then select a build whose primary workflow Bitrise will extend with our building test, `Gradle Runner` and our `[BETA] Virtual Device Testing for Android` Step.
 
@@ -30,6 +28,7 @@ First you need to enable device testing to your app, then select a build whose p
 
 When testing your build, `robo` is set as the default testing type. You can choose from another two types as well:
 
+* robo -
 * instrumentation -
 * gameloop -
 
@@ -57,8 +56,7 @@ When testing your build, `robo` is set as the default testing type. You can choo
 5. Set your Debug/Test APK env var in the `APK path` input field in `[BETA] Virtual Device Testing for Android`.
 6. Select `instrumentation` as `Test type`.
 7. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
-
-   Under `Instrumentation Test` section you can set the test APK path.
+8. _Optional_: Under `Instrumentation Test` section you can set the test APK path.
 
 ![](/img/instrumentation-test.png)
 
