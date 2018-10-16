@@ -5,9 +5,6 @@ redirect_from: []
 published: false
 
 ---
-Tests run with [Firebase Test Lab](https://firebase.google.com/docs/test-lab/android/firebase-console). Bitrise provides unlimited device minutes until our `[BETA] Virtual Device Testing for Android` Step is in beta version. You can run instrumentation tests to execute your app using the Espresso framework and **UI Automator 2.0**., robo tests that analyzes your app's UI and can simulate user activity, and gameloop tests that use demo mode to simulate gamer activity.
-
-why emulator too slow.
 
 ## Enable UI tests on virtual devices
 
