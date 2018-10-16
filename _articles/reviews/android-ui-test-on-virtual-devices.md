@@ -17,7 +17,7 @@ First you need to enable device testing to your app, then select a build whose p
 
    ![](/img/settings-device-testing.png)
 
-   Save you some manual config for yourself and let Bitrise add the two steps you need in your primary workflow to perform virtual device testing. 
+   Save you some manual config for yourself and let Bitrise add the two steps you need in your primary workflow to perform virtual device testing.
 2. From `Settings` go to your app's `Build` page.
 3. Click on a build you want to perform UI testing on.
 4. If you have enabled device testing in Step 1., you should find `DEVICE TESTS BETA` next to `APPS & ARTIFACTS` tab.
@@ -31,29 +31,32 @@ First you need to enable device testing to your app, then select a build whose p
 
 ## Running tests
 
-`robo` is by default the configured test type but you can switch to `instrumentation` or `gameloop` as well. 
+When testing your build, `robo` is set as the default testing type. You can choose from another two types as well:
 
-* robo -
 * instrumentation -
 * gameloop -
 
+### Running robo tests
+
 1. Open the primary workflow in `Workflow Editor`.
-2. Click `Gradle Runner`
-3. Add an extra task; `assembleDebugAndroidTest`, to the `Gradle task to run` step input field.
+2. Click the `Gradle Runner` Step.
+3. Add the `assembleDebug` task to the `Gradle task to run` Step input field. This will prepare a a debug APK ...
 
-   ![](/img/assembledebugandroidtest.jpg)
-4. Set the `Test APK path` of the APK you want to test **in the field**
-5. Select the `**Test type**`: `robo` (by default selected), `instrumentation`, `gameloop`
+![](/img/assembedebug-gradle.jpg)
 
-   In this tutorial, we chose `robo/insturmentation`.
-6. how to do instrumentation test: [https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4](https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4 "https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4")
-7. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
+1. ![](/img/assembledebugandroidtest.jpg)
+2. Set the `Test APK path` of the APK you want to test **in the field**
+3. `robo` (by default selected)
+4. how to do instrumentation test: [https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4](https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4 "https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4")
+5. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/test-devices.png)
-8. Start a build.
+6. Start a build.
 
 ## Check test results
 
 You can check UI test result on the `DEVICE TEST` tab of your app's build page. You will see the list of devices used in the UI test. If you click the device, you will get more details on the test results, status of individual tests, a video of the test, screenshots, and activity map, logs, and a list of the generated files.
 
 You can download all the test files.
+
+how to do unit testing in bitrise, link it here.
