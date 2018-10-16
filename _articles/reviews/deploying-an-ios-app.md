@@ -34,7 +34,7 @@ Make sure that you have:
 1. Make sure the `Certificate and profile installer` Step or the `iOS Auto Provision` Step is in your workflow.
 
    Do NOT use both!
-2. Make sure you the `Xcode Archive & Export for iOS` Step is in your workflow.
+2. Make sure the `Xcode Archive & Export for iOS` Step is in your workflow.
 3. Set the `Select method for export` input of the Step to `development`.
 4. Make sure the `Deploy to Bitrise.io` Step is in your workflow.
 5. Start a build.
@@ -116,12 +116,10 @@ With the `Deploy to iTunes Connect` Step, you can:
    The Step will store the path of the exported .ipa file in the $BITRISE_IPA_PATH environment variable.
 4. Add the `Deploy to iTunes Connect` Step to your workflow.
 5. Fill the required inputs.
-   * **Either the app's Apple ID or its Bundle ID is a required input**. One of the two must be provided. 
-
-
-   * If you set the `Submit for Review` to `true`, the Step will wait for your submission to be processed on iTunes Connect and then submit the given version of the app for review
+   * **Either the app's Apple ID or its Bundle ID is a required input**. One of the two must be provided.
+   * If you set the `Submit for Review` to `true`, the Step will wait for your submission to be processed on iTunes Connect and then submit the given version of the app for review.
    * The default value of the `Skip App Version Update` input is `No`. Change it only if you [incremented the app version](/builds/build-numbering-and-app-versioning/) in another way.
-   * If you use an iTunes Connect account that is linked to multiple teams, provide either a **Team ID** or a **Team name**! 
+   * If you use an iTunes Connect account that is linked to multiple teams, provide either a **Team ID** or a **Team name**!
 6. Start a build.
 
-If all goes well, your app will be submitted to iTunes Connect and you can distribute it via Testflight or via the App Store! 
+If all goes well, your app will be submitted to iTunes Connect and you can distribute it via Testflight or via the App Store!
