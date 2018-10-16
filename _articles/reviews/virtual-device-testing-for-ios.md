@@ -39,6 +39,8 @@ The `iOS Device Testing` Step takes the path to this .zip file - exported as an 
 2. Add the `Xcode Build for testing for iOS` Step to your workflow.
 
    Note that it should come AFTER the `Certificate and profile installer` Step. 
+
+   ![](/img/xcode-build-for-test.png)
 3. In the `Scheme name` input, set the Xcode Scheme you want to use. By default, the value of the input is the `$BITRISE_SCHEME` [Environment Variable](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/) which is stored when your app is created. 
 
    By default, the scheme defines which configuration - for example, Debug or Release - will be used. In the `Configuration name` input, you can define the configuration type manually. 
@@ -60,4 +62,16 @@ If all goes well, you should be able to view your results on the Build page.
 
 ## Checking the device test results 
 
-Check out the test results of your device tests on the Build page of your app. You can view the results of the tests run on each device, and check the details of each test case. 
+Check out the test results of your device tests on the Build page of your app. You can view the results of the tests run on each device, and check the details of each test case. This includes:
+
+* test cases
+* video
+* screenshots
+* logs
+* files generated during the test 
+
+![](/img/test-results.png)
+
+1. Go to the `Build` tab of the app. 
+2. Go to the `DEVICE TESTS` tab. 
+3. Check out the test results per device. 
