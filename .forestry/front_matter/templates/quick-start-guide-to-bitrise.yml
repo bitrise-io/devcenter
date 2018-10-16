@@ -14,8 +14,8 @@ fields:
   hidden: false
   default: ''
 pages:
-- _articles/reviews/android-ui-test-on-virtual-devices.md
 - _articles/reviews/virtual-device-testing-for-ios.md
+- _articles/reviews/android-ui-test-on-virtual-devices.md
 - _articles/reviews/deploying-an-ios-app.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/reviews/meta-field.md

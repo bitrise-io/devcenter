@@ -9,7 +9,7 @@ With Bitrise's iOS device testing solution, you can run iOS tests on physical de
 
 Our device testing solution is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/): it uses real, production devices running in a Google data center to test your app. The devices are flashed with updated APIs and have customizable locale settings. You can find the resulting logs, videos and screenshots on Bitrise.
 
-For iOS apps, Firebase Test Lab runs [XCTest](https://developer.apple.com/documentation/xctest) tests.
+For iOS apps, Firebase Test Lab runs [XCTest](https://developer.apple.com/documentation/xctest) tests. Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/ios/available-testing-devices).
 
 ## Enabling Device Testing
 
@@ -26,12 +26,38 @@ That's it! You are now ready to start using our Device Testing solution.
 
 To run device tests with our Firebase Test Lab solution, you will need to add two Steps to your workflow:
 
-* `Build for Xcode Testing`
+* `Xcode Build for testing for iOS`
 * `iOS Device Testing`
 
-The `Build for Xcode Testing` performs xcodebuild's `build-for-testing` action: it builds the tests defined in your iOS project's [Xcode scheme](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html). The Step exports a .zip file that contains your test directory (by default, it's _Debug-iphoneos_) and the `xctestrun` file. 
+{% include message_box.html type="note" title="Beta status" content="Please note that currently, both Steps are in beta phase. They are already stable and work well but we're working on improving them!"%} 
+
+The `Xcode Build for testing for iOS` performs xcodebuild's `build-for-testing` action: it builds the tests defined in your iOS project's [Xcode scheme](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html). The Step exports a .zip file that contains your test directory (by default, it's _Debug-iphoneos_) and the `xctestrun` file. 
 
 The `iOS Device Testing` Step takes the path to this .zip file - exported as an Environment Variable - as input to run your tests and export the test results to Bitrise.
 
 1. Check that you [enabled Device Testing](/testing/virtual-device-testing-for-ios/#enabling-device-testing) for the app. 
-2. 
+2. Add the `Xcode Build for testing for iOS` Step to your workflow.
+
+   Note that it should come AFTER the `Certificate and profile installer` Step. 
+3. In the `Scheme name` input, set the Xcode Scheme you want to use. By default, the value of the input is the `$BITRISE_SCHEME` [Environment Variable](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/) which is stored when your app is created. 
+
+   By default, the scheme defines which configuration - for example, Debug or Release - will be used. In the `Configuration name` input, you can define the configuration type manually. 
+4. Set a destination option for xcodebuild in the `Device destination` input of the Step. 
+
+   The default value is `generic/platform=ios`. For the available values, call `man xcodebuild` on your local machine and check the `Destinations` section of the printout. 
+5. Add the `iOS Device Testing` Step to the workflow. 
+
+   The Step has to come after the `Xcode Build for testing for iOS` Step.
+
+   ![](/img/ios-device-testing.png)
+6. In the `Test devices` input field, specify the devices on which you want to test the app.
+
+   Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/ios/available-testing-devices).
+7. Optionally, you can download all the files generated in the test run: under the `Debug` input group, set the `Download files` input to `true`.
+8. Start a build! 
+
+If all goes well, you should be able to view your results on the Build page. 
+
+## Checking the device test results 
+
+Check out the test results of your device tests on the Build page of your app. You can view the results of the tests run on each device, and check the details of each test case. 
