@@ -5,7 +5,6 @@ redirect_from: []
 published: false
 
 ---
-
 First you need to enable device testing to your app, then select a build whose primary workflow Bitrise will extend with our building test, `Gradle Runner` and our `[BETA] Virtual Device Testing for Android` Step.
 
 1. First you have to turn on `Device Testing` on the app's `Settings` tab. Toggle the switch to the right in the upper right corner of `Device Testing`.
@@ -67,3 +66,7 @@ You can check UI test result on the `DEVICE TEST` tab of your app's build page. 
 You can download all the test files.
 
 how to do unit testing in bitrise, link it here.
+
+for robo - video and screenshots available
+
+for instru - logs available
