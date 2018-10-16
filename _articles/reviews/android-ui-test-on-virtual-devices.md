@@ -20,10 +20,11 @@ Tests run with [Firebase Test Lab](https://firebase.google.com/docs/test-lab/and
 
    ![](/img/build-device-test.jpg)
 5. Click `add step to primary workflow` to add two steps that you need for UI testing:
-   * `Gradle Runner` Step to generate an APK for testing and
+   * `Gradle Runner` Step to generate an APK for testing
    * `[BETA] Virtual Device Testing for Android` Step to run the tests and create the test reports of your app
 
      ![](/img/primary-virtual-device.png)
+Now you can check your primary workflow that it contains `Gradle Runner` and `[BETA] Virtual Device Testing for Android` in the right places.
 
 ## Modify your primary workflow
 
