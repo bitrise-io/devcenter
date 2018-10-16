@@ -23,7 +23,7 @@ Tests run with [Firebase Test Lab](https://firebase.google.com/docs/test-lab/and
    * `Gradle Runner` Step to generate an APK for testing and
    * `[BETA] Virtual Device Testing for Android` Step to run the tests and create the test reports of your app
 
-   ![](/img/android-vdt-turn-on.jpg)
+     ![](/img/primary-virtual-device.png)
 
 ## Modify your primary workflow
 
