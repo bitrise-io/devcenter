@@ -1,9 +1,5 @@
 ---
 title: 最初のビルドを実行する
-menu:
-  bitrise-cli:
-    weight: 3
-
 ---
 Bitriseビルドを実行するために必要なものは2つだけです：
 
