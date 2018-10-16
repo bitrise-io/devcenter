@@ -38,7 +38,7 @@ When testing your build, `robo` is set as the default testing type. You can choo
 
 ### Running robo tests
 
-1. Open the primary workflow in `Workflow Editor`.
+1. Open the primary workflow of your build in `Workflow Editor`.
 2. Click the `Gradle Runner` Step.
 3. Add the `assembleDebug` task to the `Gradle task to run` Step input field. This will prepare a debug APK env var containing the debug APK path of your build. You will need this env var in the next step.
 
@@ -53,7 +53,13 @@ When testing your build, `robo` is set as the default testing type. You can choo
 
 ### Running instrumentation tests
 
-## [https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4](https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4 "https://discuss.bitrise.io/t/how-to-run-android-ui-tests-on-virtual-devices/2496/4")
+1. Open the primary workflow of your build in `Workflow Editor`.
+2. Click the `Gradle Runner` Step.
+3. Add the `assembleDebugAndroidTest`  **_task afte_**r `assembleDebug` task to the `Gradle task to run` Step input field. This will build an APK and a debug APK. env var containing the debug APK path of your build. You will need this env var in the next step.
+4. Click `[BETA] Virtual Device Testing for Android` Step to set the 
+5. Set your Debug/Test APK env var in the `APK path` input field in `[BETA] Virtual Device Testing for Android`.
+6. Select `instrumentation` as `Test type`.
+7. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
 
 ## Check test results
 
