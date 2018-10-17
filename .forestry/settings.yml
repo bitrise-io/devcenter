@@ -4,17 +4,6 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: directory
-  path: assets
-  label: CSS files
-  create: all
-  match: "**/*"
-  new_doc_ext: scss
-- type: directory
-  path: _data
-  label: Forestry data files - MENUS.YML here
-  create: all
-  match: "**/*"
 - type: document
   path: forestry-help.md
   label: Forestry User Guide
@@ -105,6 +94,17 @@ sections:
   label: API
   create: all
   match: "**/*"
+- type: directory
+  path: _data
+  label: Forestry data files - MENUS.YML here
+  create: all
+  match: "**/*"
+- type: directory
+  path: assets
+  label: CSS files
+  create: all
+  match: "**/*"
+  new_doc_ext: scss
 upload_dir: _articles/img
 public_path: "/img"
 front_matter_path: ''
