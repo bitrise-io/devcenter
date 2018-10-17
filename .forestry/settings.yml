@@ -4,6 +4,16 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: ".forestry"
+  label: ".forestry"
+  create: all
+  match: "**/*"
+- type: directory
+  path: _includes
+  label: _includes (HTML)
+  create: all
+  match: "**/*"
 - type: document
   path: forestry-help.md
   label: Forestry User Guide
@@ -92,6 +102,11 @@ sections:
 - type: directory
   path: _articles/api
   label: API
+  create: all
+  match: "**/*"
+- type: directory
+  path: assets
+  label: CSS files
   create: all
   match: "**/*"
 - type: directory
