@@ -105,6 +105,11 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: _layouts
+  label: _layouts
+  create: all
+  match: "**/*"
+- type: directory
   path: _includes
   label: _includes (HTML)
   create: all
