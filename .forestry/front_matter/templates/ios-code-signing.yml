@@ -21,3 +21,4 @@ fields:
         required: true
 pages:
 - _articles/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
+- _articles/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md

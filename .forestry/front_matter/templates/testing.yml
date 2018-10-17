@@ -21,3 +21,4 @@ fields:
         required: true
 pages:
 - _articles/testing/device-testing-for-ios.md
+- _articles/testing/device-testing-for-ios.md
