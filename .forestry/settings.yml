@@ -109,11 +109,6 @@ sections:
   label: _includes (HTML)
   create: all
   match: "**/*"
-- type: directory
-  path: assets
-  label: CSS files
-  create: all
-  match: "**/*"
 upload_dir: _articles/img
 public_path: "/img"
 front_matter_path: ''
