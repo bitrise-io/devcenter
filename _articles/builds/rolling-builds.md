@@ -6,9 +6,6 @@ menu:
 
 ---
 
-And done! From now on, you don't have to wait for a triggered build to finish if you do not need it!
-
-
 手動でキャンセルする必要はなく実行中のビルドや保留中のビルドをキャンセルすることができます。もし**Rolling Builds**という機能をオンにすると新しいビルドが始まれば自動的にアプリの以前のビルドを中断することができます。
 
 手動と予定するビルドも`Rolling builds` をオンにし新しいビルドを開始する場合、キャンセルされることに注意してください。
