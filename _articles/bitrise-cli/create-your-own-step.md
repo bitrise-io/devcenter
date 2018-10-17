@@ -97,9 +97,9 @@ We recommend you start with the command `bitrise share`. This will print you a g
 2. Fork the StepLib repository you want to have your step in. The official Bitrise StepLib can be found here: https://github.com/bitrise-io/bitrise-steplib
 3. Call `$ bitrise share start -c https://github.com/[your-username]/bitrise-steplib.git`, with the git clone URL of your forked StepLib repository. This will prepare your forked StepLib locally for sharing.
 4. Add the step version tag to your Step's repository.
-5. Call $ bitrise share create --tag \[step-version-tag\] --git \[step-git-uri\].git --stepid \[step-id\],
+5. Call `$ bitrise share create --tag [step-version-tag] --git [step-git-uri].git --stepid [step-id]`,
    to add your Step to your forked StepLib repository (locally).
-6. You can call $ bitrise audit -c https://github.com/\[your-username\]/bitrise-steplib.git
+6. You can call `$ bitrise audit -c https://github.com/[your-username]/bitrise-steplib.git`
    to perform a complete health-check on your forked StepLib.
 7. Create a Pull Request in the original StepLib repository.
 
