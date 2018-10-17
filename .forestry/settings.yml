@@ -99,12 +99,6 @@ sections:
   label: Forestry data files - MENUS.YML here
   create: all
   match: "**/*"
-- type: directory
-  path: _includes
-  label: _includes (HTML layout)
-  create: all
-  match: "**/*"
-  new_doc_ext: html
 upload_dir: _articles/img
 public_path: "/img"
 front_matter_path: ''
