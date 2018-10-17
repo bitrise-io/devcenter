@@ -32,7 +32,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link rel="stylesheet" href="/assets/main.css">
-		<script src="/assets/javascripts/simple-jekyll-search.js"></script>
+		<link rel="stylesheet" href="/assets/search.css">
 	</head>
 	<body class="mdc-typography">
 		<header class="top-bar">
@@ -54,7 +54,6 @@
 						<input type="text" id="search-input" placeholder="Search">
 						<button class="search-clear material-icon" onclick="clearSearchField()"></button>
 					</div>
-					<ul id="results-container"></ul>
 				</div>
 				<a class="source-code" href="{{ site.data.basic_info.source_code_url }}" target="_blank">
 					<object type="image/svg+xml" data="/assets/images/logo-github.svg" class="source-host-logo"></object>
@@ -89,6 +88,9 @@
 		</footer>
 	</body>
 	{% include analytics.html %}
+	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+
 	<script src="/assets/javascripts/search-input.js"></script>
 	<script src="/assets/javascripts/side-menu.js"></script>
 	<script src="/assets/javascripts/code-collapse.js"></script>

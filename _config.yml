@@ -59,3 +59,9 @@ sass:
   load_paths:
     - _sass
     - node_modules
+
+algolia:
+  application_id: HI1538U2K4
+  index_name: devcenter
+  files_to_exclude:
+    - forestry-help*
