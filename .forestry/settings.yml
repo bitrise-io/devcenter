@@ -9,7 +9,7 @@ sections:
   label: CSS files
   create: all
   match: "**/*"
-  new_doc_ext: ".scss"
+  new_doc_ext: scss
 - type: directory
   path: _data
   label: Forestry data files - MENUS.YML here
