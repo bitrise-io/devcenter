@@ -5,6 +5,12 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
+  path: assets
+  label: CSS files
+  create: all
+  match: "**/*"
+  new_doc_ext: ".scss"
+- type: directory
   path: _data
   label: Forestry data files - MENUS.YML here
   create: all
