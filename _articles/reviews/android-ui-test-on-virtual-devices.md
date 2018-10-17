@@ -70,3 +70,5 @@ how to do unit testing in bitrise, link it here.
 for robo - video and screenshots available
 
 for instru - logs available
+
+unlimited testing time
