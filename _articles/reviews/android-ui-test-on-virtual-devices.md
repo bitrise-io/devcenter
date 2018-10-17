@@ -5,16 +5,18 @@ redirect_from: []
 published: false
 
 ---
-First you need to enable device testing to your app, then select a build whose primary workflow Bitrise will extend with our building test, `Gradle Runner` and our `[BETA] Virtual Device Testing for Android` Step.
+## Enable device testing
+
+First you need to enable device testing to your app, then select a build whose primary workflow Bitrise will extend with our `Gradle Runner` and `[BETA] Virtual Device Testing for Android` Step.
 
 1. First you have to turn on `Device Testing` on the app's `Settings` tab. Toggle the switch to the right in the upper right corner of `Device Testing`.
 
    ![](/img/settings-device-testing.png)
 
-   Save you some manual config for yourself and let Bitrise add the two steps you need in your primary workflow to perform virtual device testing.
+   Save some manual config for yourself and let Bitrise add the two steps you need in your primary workflow to perform virtual device testing.
 2. From `Settings` go to your app's `Build` page.
-3. Click on a build you want to perform UI testing on.
-4. If you have enabled device testing in Step 1., you should find `DEVICE TESTS BETA` next to `APPS & ARTIFACTS` tab.
+3. Click on a build you want to test on a virtual device.
+4. If you have enabled device testing in Step 1., you should find `DEVICE TESTS BETA` next to `APPS & ARTIFACTS` as a third tab.
 
    ![](/img/build-device-test.jpg)
 5. Click `add step to primary workflow` to add two steps that you need for UI testing:
