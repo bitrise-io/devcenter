@@ -26,22 +26,22 @@ No need for lengthy preparation when you wish to create an organization on Bitri
    ![Screenshot](/img/team-management/organization/add-org-apps.png)
 4. In the pop-up window, enter the name and the billing email of your organization, and click `Create`. By default, your invoices will be sent to the billing email you set here.
 
-![Screenshot](/img/team-management/organization/name-email-org.png)
-5\. Provide your billing information.
+	![Screenshot](/img/team-management/organization/name-email-org.png)
+5. Provide your billing information.
 
-You can skip this step and provide these details at a later date. **Only the owner(s) of an organization can modify these.**
+	You can skip this step and provide these details at a later date. **Only the owner(s) of an organization can modify these.**
 
-Note that you need to **subscribe to an Organization** plan to be able to run builds.
+	Note that you need to **subscribe to an Organization** plan to be able to run builds.
 
 1. Transfer apps to your organization.
 
-You can skip this step and transfer your apps or add new apps to your organization at any time.
+	You can skip this step and transfer your apps or add new apps to your organization at any time.
 
-![Screenshot](/img/team-management/organization/transfer-apps-creation.png)
-7\. In the pop-up window, click `Check billing` to immediately set up a subscription plan. You can also add your billing information here.
+	![Screenshot](/img/team-management/organization/transfer-apps-creation.png)
+7. In the pop-up window, click `Check billing` to immediately set up a subscription plan. You can also add your billing information here.
 
-Alternatively, click `OK` to finish creating your org.
+	Alternatively, click `OK` to finish creating your org.
 
-![Screenshot](/img/team-management/organization/no-active-sub-yet.png)
+	![Screenshot](/img/team-management/organization/no-active-sub-yet.png)
 
 And that's it! You can start inviting people to your organization!
