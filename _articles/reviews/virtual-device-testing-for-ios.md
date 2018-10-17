@@ -33,7 +33,7 @@ To run device tests with the Firebase Test Lab solution, you will need to add tw
 
 {% include message_box.html type="note" title="Beta status" content="Please note that currently, both Steps are in beta phase. They are already stable and work well but we're working on improving them!"%}
 
-The `Xcode Build for testing for iOS` performs xcodebuild's `build-for-testing` action: it builds the tests defined in your iOS project's [Xcode scheme](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html). The Step exports a .zip file that contains your test directory (by default, it's _Debug-iphoneos_) and the `xctestrun` file.
+The `Xcode Build for testing for iOS` performs _xcodebuild_'s `build-for-testing` action: it builds the tests defined in your iOS project's [Xcode scheme](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html). The Step exports a .zip file that contains your test directory (by default, it's _Debug-iphoneos_) and the `xctestrun` file.
 
 The `iOS Device Testing` Step takes the path to this .zip file - exported as an Environment Variable - as input to run your tests and export the test results to Bitrise.
 
@@ -46,7 +46,7 @@ The `iOS Device Testing` Step takes the path to this .zip file - exported as an 
 3. In the `Scheme name` input, set the Xcode Scheme you want to use. By default, the value of the input is the `$BITRISE_SCHEME` [Environment Variable](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/) which is stored when your app is created.
 
    By default, the scheme defines which configuration - for example, Debug or Release - will be used. In the `Configuration name` input, you can define the configuration type manually.
-4. Set a destination option for xcodebuild in the `Device destination` input of the Step.
+4. Set a destination option for _xcodebuild_ in the `Device destination` input of the Step.
 
    The default value is `generic/platform=ios`. For the available values, call `man xcodebuild` on your local machine and check the `Destinations` section of the printout.
 5. Add the `iOS Device Testing` Step to the workflow.
