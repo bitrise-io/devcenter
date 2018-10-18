@@ -18,11 +18,8 @@ First you need to enable device testing to your app, then select a build whose p
    ![](/img/settings-device-testing.png)
 
    Save some manual config for yourself and let Bitrise add the two steps you need in your primary workflow to perform virtual device testing.
-   
 2. From `Settings` go to your app's `Build` page.
-
 3. Click on a build you want to test.
-
 4. If you have enabled device testing in Step 1., you should find `DEVICE TESTS BETA` next to `APPS & ARTIFACTS` as a third tab.
 
    ![](/img/build-device-test.jpg)
@@ -37,47 +34,37 @@ First you need to enable device testing to your app, then select a build whose p
 
 With Bitrise, you can choose from 3 different test types:
 
-* robo - default test type in Bitrise. Learn more about robo test [here](https://firebase.google.com/docs/test-lab/android/robo-ux-test).
-* instrumentation - unit test?
-* gameloop - [test](https://firebase.google.com/docs/test-lab/android/game-loop) where a game app runs while simulating the actions of a player.
+* robo - default test type in Bitrise to do what. Learn more about robo test [here](https://firebase.google.com/docs/test-lab/android/robo-ux-test).
+* instrumentation - unit test? for Bitrise?
+* gameloop - [test](https://firebase.google.com/docs/test-lab/android/game-loop) type where player actions are simulated while a game app runs.
 
 ### Running robo tests
 
 1. Open the primary workflow of your build in `Workflow Editor`.
-
-2. Click the `Gradle Runner` Step.
-
+2. Click `Gradle Runner` Step.
 3. Add the `assembleDebug` task to the `Gradle task to run` Step input field. This will prepare a debug APK env var containing the debug APK path of your build. You will need this env var in the next step.
 
    ![](/img/assembedebug-gradle.jpg)
-4. Set your Debug/Test APK env var in the `APK path` input field in `[BETA] Virtual Device Testing for Android`.
-
-5. Select `robo` if it is not selected already as `Test type`.
-
-6. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
+4. Click `[BETA] Virtual Device Testing for Android.`
+5. Set your APK env var in the `APK path` input field.
+6. Check if `robo` is the selected test type in the `Test type` field.
+7. Add the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/test-devices.png)
-7. Start a build.
+8. Start a build.
 
 ### Running instrumentation tests
 
 1. Open the primary workflow of your build in `Workflow Editor`.
-
-2. Click the `Gradle Runner` Step.
-
-3. Add the `assembleDebugAndroidTest`  task after `assembleDebug` task to the `Gradle task to run` Step input field. This will build an APK and a debug APK. env var containing the debug APK path of your build. You will need this env var in the next step.
-
-4. Click `[BETA] Virtual Device Testing for Android` Step to set the
-
-5. Set your Debug/Test APK env var in the `APK path` input field in `[BETA] Virtual Device Testing for Android`.
-
+2. Click `Gradle Runner` Step.
+3. Add the `assembleDebugAndroidTest` task after `assembleDebug` task to the `Gradle task to run` input field. This will build an APK and a debug APK env var containing the debug APK path of your build. You will need this env var in the next step.
+4. Click `[BETA] Virtual Device Testing for Android`.
+5. Set your **Debug/Test APK** env var in the `APK path` input field in `[BETA] Virtual Device Testing for Android`.
 6. Select `instrumentation` as `Test type`.
-
-7. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
-
+7. Add the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
 8. _Optional_: Under `Instrumentation Test` section you can set the test APK path.
 
-        ![](/img/instrumentation-test.png)
+   ![](/img/instrumentation-test.png)
 
 ## Check test results
 
@@ -87,8 +74,7 @@ You can download all the test files.
 
 how to do unit testing in bitrise, link it here.
 
-for robo - video and screenshots available
+* for robo tests - video and screenshots available
 
-for instru - logs available
 
-unlimited testing time
+* for instrumentation tests - logs available
