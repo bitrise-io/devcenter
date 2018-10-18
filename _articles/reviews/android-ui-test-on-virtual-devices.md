@@ -5,6 +5,10 @@ redirect_from: []
 published: false
 
 ---
+With Bitrise’s Android virtual device testing solution, you can run Android tests on physical devices without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. There are no limits to using the Step, other than your overall build time limit.
+
+Our device testing solution is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/): it uses real, production devices running in a Google data center to test your app. These devices are flashed with updated APIs and have customizable locale settings. You can find the resulting logs, videos and screenshots on Bitrise.
+
 ## Enable device testing
 
 First you need to enable device testing to your app, then select a build whose primary workflow Bitrise will extend with our `Gradle Runner` and `[BETA] Virtual Device Testing for Android` Step.
@@ -15,11 +19,11 @@ First you need to enable device testing to your app, then select a build whose p
 
    Save some manual config for yourself and let Bitrise add the two steps you need in your primary workflow to perform virtual device testing.
 2. From `Settings` go to your app's `Build` page.
-3. Click on a build you want to test on a virtual device.
+3. Click on a build you want to test.
 4. If you have enabled device testing in Step 1., you should find `DEVICE TESTS BETA` next to `APPS & ARTIFACTS` as a third tab.
 
    ![](/img/build-device-test.jpg)
-5. Click `add step to primary workflow` to add two steps that you need for UI testing:
+5. Click `add step to primary workflow` to add two steps that you need for device testing:
    * `Gradle Runner` Step to generate an APK for testing
    * `[BETA] Virtual Device Testing for Android` Step to run the tests and create the test reports of your app
 
@@ -27,11 +31,11 @@ First you need to enable device testing to your app, then select a build whose p
 
 ## Running tests
 
-When testing your build, `robo` is set as the default testing type. You can choose from another two types as well:
+With Bitrise, you can choose from 3 different test types:
 
-* robo -
-* instrumentation -
-* gameloop -
+* robo - default test type in Bitrise. Learn more about robo test [here](https://firebase.google.com/docs/test-lab/android/robo-ux-test).
+* instrumentation - unit test?
+* gameloop - [test](https://firebase.google.com/docs/test-lab/android/game-loop) where a game app runs while simulating the actions of a player. 
 
 ### Running robo tests
 
