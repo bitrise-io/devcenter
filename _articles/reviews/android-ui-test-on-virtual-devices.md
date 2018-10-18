@@ -44,12 +44,16 @@ With Bitrise, you can choose from 3 different test types:
 ### Running robo tests
 
 1. Open the primary workflow of your build in `Workflow Editor`.
+
 2. Click the `Gradle Runner` Step.
+
 3. Add the `assembleDebug` task to the `Gradle task to run` Step input field. This will prepare a debug APK env var containing the debug APK path of your build. You will need this env var in the next step.
 
    ![](/img/assembedebug-gradle.jpg)
 4. Set your Debug/Test APK env var in the `APK path` input field in `[BETA] Virtual Device Testing for Android`.
+
 5. Select `robo` if it is not selected already as `Test type`.
+
 6. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/test-devices.png)
@@ -58,12 +62,19 @@ With Bitrise, you can choose from 3 different test types:
 ### Running instrumentation tests
 
 1. Open the primary workflow of your build in `Workflow Editor`.
+
 2. Click the `Gradle Runner` Step.
+
 3. Add the `assembleDebugAndroidTest`  task after `assembleDebug` task to the `Gradle task to run` Step input field. This will build an APK and a debug APK. env var containing the debug APK path of your build. You will need this env var in the next step.
+
 4. Click `[BETA] Virtual Device Testing for Android` Step to set the
+
 5. Set your Debug/Test APK env var in the `APK path` input field in `[BETA] Virtual Device Testing for Android`.
+
 6. Select `instrumentation` as `Test type`.
+
 7. Select the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
+
 8. _Optional_: Under `Instrumentation Test` section you can set the test APK path.
 
         ![](/img/instrumentation-test.png)
