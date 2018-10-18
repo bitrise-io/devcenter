@@ -1,21 +1,21 @@
-You can cancel running builds or builds on hold - no need to abort them manually! If you turn on the **Rolling Builds** feature, you can automatically abort the previous builds of your app once a new one is started.
+手動でキャンセルする必要はなく実行中のビルドや保留中のビルドをキャンセルすることができます。もし**Rolling Builds**という機能をオンにすると新しいビルドが始まれば自動的にアプリの以前のビルドを中断することができます。
 
-Please note that manual and scheduled builds are also cancelledbif you start a new build with the `Rolling builds` option enabled.
+手動と予定するビルドも`Rolling builds` をオンにし新しいビルドを開始する場合、キャンセルされることに注意してください。
 
-Also, builds running on the same branch will be cancelled even if they run different workflows!
+また同じブランチ上で実行しているビルドは、たとえ異なるワークフローで実行中であろうとキャンセルされます。
 
-{% include message_box.html type="important" title="Bitrise Start Build step" content=" This step allows users to trigger a different workflow as one of the steps of a given workflow. Unfortunately, if the Rolling Builds feature is enabled, the triggered workflow will cancel the previous workflows. "%}
+{% include message_box.html type="important" title="Bitrise Start Build step" content=" このステップによりユーザーは、定められたワークフローのステップの一つとして違うワークフローを動作させることができます。残念なことにRolling Builds機能をオンにしている場合、その引き起こされたワークフローは以前のワークフローを中断することになります。 "%}
 
-You can also set which types of triggered builds you wish to abort. Let's see how!
+加えて中断したい稼働中のビルドの種類を選ぶことができます。こちらが手順です。
 
-1. Open your `Dashboard` on [bitrise.io](https://www.bitrise.io) and select your app.
-2. Select the `Settings` tab from the menubar.
-3. Scroll down to the `ENABLE ROLLING BUILDS` option and toggle it.
+1. [bitrise.io](https://www.bitrise.io) 上の `Dashboard` を開きアプリを選択します。
+2. メニューバーから `Settings` タブを選択します。
+3. 下へスクロールし`ENABLE ROLLING BUILDS` を切り替えます。
 
-![Rolling Builds](/img/getting-started/rolling-builds.png)
-4. Select the type(s) of builds you wish to abort when a new build is started.
-* `Pull Requests`: will cancel all previous builds for Pull Requests and all related Pushes
-* `Pushes`: will cancel all previous builds for Pushes to the same branch
-* `Running builds`: will also auto-cancel running builds in addition to on-hold ones
+   ![Rolling Builds](/img/getting-started/rolling-builds.png)
+4. 新しいビルドが開始したとき中断したいビルドの種類を選択する。
+   * `Pull Requests`: プルリクエスト中の全ての以前のビルドを全てキャンセルし、関連する全てのプッシュもキャンセルする。
+   * `Pushes`: 同じブランチ上のプッシュしている以前の全てのビルドをキャンセルする。
+   * `Running builds`: 保留中のものに加え実行中のビルドを自動でキャンセルする。
 
-And done! From now on, you don't have to wait for a triggered build to finish if you do not need it!
+これで必要のない場合でも稼働中のビルドが終わるのを待たなくて大丈夫です。
