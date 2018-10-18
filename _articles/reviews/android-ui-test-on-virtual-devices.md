@@ -18,8 +18,11 @@ First you need to enable device testing to your app, then select a build whose p
    ![](/img/settings-device-testing.png)
 
    Save some manual config for yourself and let Bitrise add the two steps you need in your primary workflow to perform virtual device testing.
+   
 2. From `Settings` go to your app's `Build` page.
+
 3. Click on a build you want to test.
+
 4. If you have enabled device testing in Step 1., you should find `DEVICE TESTS BETA` next to `APPS & ARTIFACTS` as a third tab.
 
    ![](/img/build-device-test.jpg)
