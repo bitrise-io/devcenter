@@ -5,9 +5,9 @@ redirect_from: []
 published: false
 
 ---
-With Bitrise’s Android virtual device testing solution, you can run Android tests on physical devices without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. There are no limits to using the Step, other than your overall build time limit.
+you can choose to rn on emulator. With Bitrise’s Android virtual device testing solution, you can run Android tests on emulators without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. There are no limits to using the Step, other than your overall build time limit.
 
-Our device testing solution is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/): it uses real, production devices running in a Google data center to test your app. These devices are flashed with updated APIs and have customizable locale settings. You can find the resulting logs, videos and screenshots on Bitrise.
+Our device testing solution is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/). You can find the resulting logs, videos and screenshots on Bitrise.
 
 ## Enabling device testing
 
@@ -34,18 +34,20 @@ First you need to enable device testing to your app, then select a build whose p
 
 With Bitrise, you can choose from 3 different test types:
 
-* robo - default test type in Bitrise to do what. Learn more about robo test [here](https://firebase.google.com/docs/test-lab/android/robo-ux-test).
-* instrumentation - unit test? for Bitrise?
-* gameloop - [test](https://firebase.google.com/docs/test-lab/android/game-loop) type where player actions are simulated while a game app runs.
+* robo - default test type in Bitrise
+* instrumentation - elore megirt test esetek alapjan futtatja le a ui testet.
+* gameloop
+
+If you want to read up on them, take a look at [Firebase's documentation](https://firebase.google.com/docs/test-lab/android/overview).
 
 ### Running robo tests
 
 1. Open the primary workflow of your build in `Workflow Editor`.
-2. Click `Gradle Runner` Step.
-3. Add the `assembleDebug` task to the `Gradle task to run` Step input field. This will prepare a debug APK env var containing the debug APK path of your build. You will need this env var in the next step.
+2. Add one `Android Build` Step after the `Android Unit Test`.
+3. Add the `Debug` task to the `Variant` Step input field. This will prepare a debug APK env var containing the debug APK path of your build. You will need this env var in the next step.
 
-   ![](/img/assembedebug-gradle.jpg)
-4. Click `[BETA] Virtual Device Testing for Android.`
+   ![](/img/robo-test.png)
+4. Add `[BETA] Virtual Device Testing for Android` Step to your workflow.
 5. Set your APK env var in the `APK path` input field.
 6. Check if `robo` is the selected test type in the `Test type` field.
 7. Add the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
@@ -55,14 +57,33 @@ With Bitrise, you can choose from 3 different test types:
 
 ### Running instrumentation tests
 
+Android Build step 1 sima apk, exportal egy apkt
+
+Android Build step 2 test apk egymas utan itt az output alias-t Bitrise test apk step > ezt beadni a vdt stepnek.
+
 1. Open the primary workflow of your build in `Workflow Editor`.
-2. Click `Gradle Runner` Step.
-3. Add the `assembleDebugAndroidTest` task after `assembleDebug` task to the `Gradle task to run` input field. This will build an APK and a debug APK env var containing the debug APK path of your build. You will need this env var in the next step.
-4. Click `[BETA] Virtual Device Testing for Android`.
-5. Set your **Debug/Test APK** env var in the `APK path` input field in `[BETA] Virtual Device Testing for Android`.
-6. Select `instrumentation` as `Test type`.
-7. Add the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
-8. _Optional_: Under `Instrumentation Test` section you can set the test APK path.
+2. Add two `Android Build` Steps after the `Android Unit Test` Step. We will generate an APK in the first build step and a test APK in the second build step.
+3. In the first `Android Build` Step, add the `Debug` task to the `Variant` field.
+4. In the second `Android Build` Step, add the `DebugAndroidTest` task into the `Variant` field.
+
+![](/img/instrumentation-test-1.png)
+
+1. Click `bitrise.yml` tab and edit the primary workflow by adding the output alias for instrumentation testing to your second `Android Build` step. This will replicate to the `Test APK path` field of the `Instrumentation Test` section of the `[BETA] Virtual Device Testing` step. With this little trick, you will be able to output a test APK as well.
+
+        - android-build@0.9.5:
+               inputs:
+               - variant: Debug
+               - module: app
+           - android-build@0.9.5:
+               inputs:
+               - variant: DebugAndroidTest
+               - module: app
+               outputs:
+               - BITRISE_APK_PATH: BITRISE_TEST_APK_PATH
+
+   ![](/img/virtual-device.png)
+2. Select `instrumentation` as `Test type` in \[BETA\] Virtual Device Testing step\`.
+3. Add the type of test device in the `Test devices` input field. The format should be the following: `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/instrumentation-test.png)
 
@@ -75,6 +96,8 @@ You can download all the test files.
 how to do unit testing in bitrise, link it here.
 
 * for robo tests - video and screenshots available
-
-
 * for instrumentation tests - logs available
+
+robo - minden menut funkciot vegignyomkod, vieoval, screenshottal
+
+insturmentation test - en mondom h mit teszteljen, selectaltabb.
