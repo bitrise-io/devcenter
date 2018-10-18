@@ -65,3 +65,4 @@ algolia:
   index_name: devcenter
   files_to_exclude:
     - forestry-help*
+    - _articles/translations/**/*.md
