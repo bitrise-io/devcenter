@@ -18,7 +18,7 @@ To deploy an iOS app to any platform, you need:
 
 ## Deploying an iOS app to Bitrise.io
 
-Deploy an app to Bitrise to be able to download the .ipa file and install it on devices specified in the app's Development Provisioning Profile. This way your internal testers can easily test the app.
+Deploy an app to Bitrise to be able to download the .ipa file and install it on devices specified in the app's Development Provisioning Profile. This way, your internal testers can easily test the app.
 
 #### Before you start
 
