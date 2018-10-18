@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-you can choose to rn on emulator. With Bitrise’s Android virtual device testing solution, you can run Android tests on emulators without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. There are no limits to using the Step, other than your overall build time limit.
+With Bitrise’s Android virtual device testing solution, you can run Android tests on emulators without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. There are no limits to using the Step, other than your overall build time limit.
 
 Our device testing solution is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/). You can find the resulting logs, videos and screenshots on Bitrise.
 
