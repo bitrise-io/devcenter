@@ -76,6 +76,8 @@ For UI tests, we strongly recommend using our `App Center upload and schedule te
 1. Add the `App Center upload and schedule tests` Step to your workflow.
 
    This Step should be after the `NuGet restore` and the `Xamarin Archive` Steps, in order to install all your dependencies and build the app before running tests.
+
+   ![](/img/app-center-test.png)
 2. Fill in the required inputs of the Step. You can find all these in the App Center after setting up your test run: check the **Submit** tab.
 
 ## Deploying Xamarin apps
@@ -129,6 +131,8 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 
 1. Enter the Workflow Editor of your app, and click the `Workflows` tab.
 2. Make sure you have the `Xamarin Archive` Step in your workflow.
+
+   ![](/img/xamarin-archive.png)
 3. Make sure the required inputs of the Step have appropriate values. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
    * **Path to the Xamarin Solution file**: the location of your Xamarin solution file.
    * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
@@ -136,19 +140,21 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 
 ### Deploying to the App Store
 
-{% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need to use a Distribution type code signing identity with an App Store provisioning profile. Also, make sure that the Distribution certificate and the provisioning profile are uploaded to Bitrise!"%} 
+{% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need to use a Distribution type code signing identity with an App Store provisioning profile. Also, make sure that the Distribution certificate and the provisioning profile are uploaded to Bitrise!"%}
 
 1. Go to the `Workflows` tab of the Workflow Editor.
 2. Select the workflow you created for deploying your app.
 3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
 4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.
-5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow. 
+5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow.
+
+   ![](/img/itunes-connect.png)
 6. Click the `Deploy to iTunes Connect - Application Loader`  Step, and enter your Apple ID and password in the relevant input field.
 7. Start a build!
 
 ### Deploying to Google Play
 
-{% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need a **Release** configuration."%} 
+{% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need a **Release** configuration."%}
 
 1. Go to the `Workflows` tab of the Workflow Editor.
 2. Select the workflow you created for deploying your app.
