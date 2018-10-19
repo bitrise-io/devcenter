@@ -1,40 +1,34 @@
-<!--
-These are the copies from the Bitrise Features page: https://www.bitrise.io/features/android-features
-With your help, we could build the first localized version for Japan.
--->
+Androidの今後 : Androidプロジェクトのためのすぐにサポート。簡単にビルド、テスト、デプロイします。
 
-ANDROID FEATURES
-Out of the box support for your native Android projects. Build, test and deploy with ease.
+# プロジェクトスキャナ
+60秒未満で、BitriseにAndroidアプリを追加できます。私たちのスキャナは、プラットフォーム、依存関係、構成を自動的で検出し、アプリケーションをビルド、テスト、デプロイする基本ワークフローを自動的に作成します。
 
-# Project scanner
-Adding your Android app to Bitrise takes less than 60 seconds. Our scanner automatically detects platform, dependencies and configuration and creates a base workflow that builds, tests and deploys your app on the first build.
+# Dockerのサポート
+私たちの作成したDockerテンプレートでは、Androidアプリを構築するのに必要なすべてのツールをキャッシュしています。新しくビルドをトリガーするとすぐに構築されます。さらに、CLIと同じDockerイメージを使用して、ビルドを同じ環境でローカルにデバッグすることも可能です。
 
-# Docker support
-Our predefined Docker image is cached and holds all the necessary tooling to build your Android apps. Once you trigger a new build it will start immediately. In addition, you can use the same Docker image in tandem with our CLI to debug your build locally, in the same environment.
+チェックガイド>
 
-Check guide >
+# エミュレータを確実に実行する
+Bitriseは、Firebase Test LabのVirtual Device Testingソリューションと完全に統合されています。これによりワンクリックでUIテストを迅速かつ確実に実行できます。 Firebaseの場合と同じように、ビルドのページでビデオ、スクリーンショット、テストログを確認することができます。私たちの仮想マシンのネイティブエミュレータのサポートは常に改善していますので、AVDマネージャを使ってx86エミュレータを試すことができます。
 
-# Run emulators reliably
-Bitrise fully integrates with Firebase Test Lab’s Virtual Device Testing solution, which you can enable with one click to run UI tests quickly and reliably. You can check the video, screenshots and logs of your tests right on your build’s page, just as you would on Firebase. We’re constantly improving support for native emulators in our virtual machines, so you can experiment with AVD manager to run x86 emulators.
+# 安全なファイルストレージ
+## シークレット環境変数
+データは暗号化されて保存され、ビルド中またはUIで公開するときにのみ公開されます。接続されたサービスのcredentialsとAPIキーは安全に保存されます。
 
-# Secure file storage
-## Secret environment variables
-Secrets are stored encrypted and are only exposed during build or when you’d like to reveal them on the UI. Your credentials and API keys for connected services are safe with us.
+## 秘密とファイルを保護する
+プロビジョニングプロファイル、証明書、キーストアなどの秘密のenvまたはファイルを保護されたものとして設定できます。保護された秘密はUI上で明らかにすることはできず、そのようなファイルはあなたのチームの誰かからダウンロードすることはできません。
 
-## Make secrets & files protected
-You can set any secret env or file, such as provisioning profile, certificate or keystore as protected. Protected secrets cannot be revealed on the UI and such files cannot be downloaded by anyone from your team.
+# 簡単なコード署名
+Androidプロジェクトに署名するには、リリースキーストアファイルをアップロードし、署名APKを追加すれば完了です。署名されたAPKはどこにでも配布できます。
 
-# Effortless code signing
-To sign your Android project, simply upload your release keystore file, add the Sign APK step and you’re done - you can distribute your signed .APK anywhere.
+# 自動的に配布
+## テスターに​​展開する
+BitriseではメールでAPKをインストール可能なリンクが送信が可能で、テスターに​​アプリを簡単に送る事ができます。
 
-# Distribute your app automatically
-## Deploy to testers
-If you are looking for an easy way to send your app to testers, you can use Bitrise deploy. This will send a link to specific email addresses so that your testers can install the .APK.
+## Google Playに直接送信
+リリースされた署名付きアプリをGoogle Playに自動的に送信することができます。
 
-## Send straight to Google Play
-You can automatically send your release signed apps to Google Play.
+## 第三者に展開する
+他のテストサービスを利用している場合にも、引き続き利用する事が可能です。HockeyApp、TestFairyにも対応しています。
 
-## Deploy to third parties
-If you already use another service for deployment, fear not, you can keep using that. From HockeyApp to TestFairy, we’ve got them all.
-
-## Dozens of integrations that work with your Android project
+## 複数の端末で動作するAndroidプロジェクトを統合します
