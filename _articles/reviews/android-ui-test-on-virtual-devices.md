@@ -57,8 +57,7 @@ If you want to read up on the difference between these test types, take a look a
 3. In the first `Android Build` Step, add the `Debug` task to the `Variant` field.
 4. In the second `Android Build` Step, add the `DebugAndroidTest` task into the `Variant` field.
 
-	![](/img/instrumentation-test-1.png)
-
+   ![](/img/instrumentation-test-1.png)
 5. Click `bitrise.yml` tab and edit the primary workflow by adding the [output alias](https://devcenter.bitrise.io/bitrise-cli/step-outputs/#exporting-step-outputs-in-output-aliases/) for instrumentation testing to your second `Android Build` step. This will replicate to the `Test APK path` field of the `Instrumentation Test` section of the `[BETA] Virtual Device Testing` step. With this little trick, you will be able to output a test APK as well.
 
         - android-build@0.9.5:
@@ -77,6 +76,8 @@ If you want to read up on the difference between these test types, take a look a
 7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of  `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/instrumentation-test.png)
+ 8. Start a build.  
+ 
 
 ## Check test results
 
