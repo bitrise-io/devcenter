@@ -35,6 +35,8 @@ With Bitrise, you can choose from 3 different test types:
 
 If you want to read up on the difference between these test types, take a look at [Firebase's documentation](https://firebase.google.com/docs/test-lab/android/overview).
 
+There is a small difference between configuring your workflow for `robo` and `instrumentation` tests, so let's see them separately!
+
 ### Running robo tests
 
 1. Open the primary workflow of your build in `Workflow Editor`.
@@ -44,7 +46,7 @@ If you want to read up on the difference between these test types, take a look a
    ![](/img/robo-test.png)
 4. Add `[BETA] Virtual Device Testing for Android` Step after `Android Build` Step.
 5. Set the `APK path` input field.
-6. Check if `robo` is the selected `Test type`.
+6. Check if `robo` is the selected `Test type`. It should be since it is the default test type.
 7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/test-devices.png)
@@ -76,20 +78,15 @@ If you want to read up on the difference between these test types, take a look a
 7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of  `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/instrumentation-test.png)
- 8. Start a build.  
- 
+8. Start a build.
 
 ## Check test results
 
-You can check UI test result on the `DEVICE TEST` tab of your app's build page. You will see the list of devices used in the UI test. If you click the device, you will get more details on the test results, status of individual tests, a video of the test, screenshots, and activity map, logs, and a list of the generated files.
+You can check UI test result on the `DEVICE TESTS` tab of your app's build page.
 
-You can download all the test files.
+1. Go back to your `Builds` page, select your build, and click `DEVICE TESTS` tab to check your test result.
+2. Click the device you've tested your project on.
 
-how to do unit testing in bitrise, link it here.
+   ![](/img/device-test-page.jpg)
 
-* for robo tests - video and screenshots available
-* for instrumentation tests - logs available
-
-robo - minden menut funkciot vegignyomkod, vieoval, screenshottal
-
-insturmentation test - en mondom h mit teszteljen, selectaltabb.
+You can view test cases and downloadable logs if you've selected `instrumentation` test and a video and screenshots if you've selected `robo` as test type. Or scroll down and download all your reports in `FILES GENERATED`.
