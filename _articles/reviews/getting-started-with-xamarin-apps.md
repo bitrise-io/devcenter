@@ -123,7 +123,7 @@ Read more about iOS code signing [in our guide](https://yv69yaruhkt48w.preview.f
 
 On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same for all Xamarin apps. To make sure you build the correct project type, set up your solution configurations in Visual Studio.
 
-For example, if you want to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration. 
+For example, if you want to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
 
 For your iOS project, set up the correct code signing identity in Visual Studio: for example, a Distribution identity with an App Store type provisioning profile.
 
@@ -136,31 +136,28 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 
 ### Deploying to the App Store
 
- Click the `Deploy to iTunes Connect - Application Loader`  Step, and enter your Apple ID and password in the relevant input field.
+1. Go to the `Workflows` tab of the Workflow Editor.
+2. Select the workflow you created for deploying your app.
+3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
+4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.
+5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow. 
+6. Click the `Deploy to iTunes Connect - Application Loader`  Step, and enter your Apple ID and password in the relevant input field.
+7. Start a build!
 
 ### Deploying to Google Play
 
- 1. Go to the `Workflows` tab of the Workflow Editor.
- 2. Select the workflow you created for deploying your app.
- 3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
- 4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.
- 5. Add the `Google Play Deploy` Step to the workflow. 
+1. Go to the `Workflows` tab of the Workflow Editor.
+2. Select the workflow you created for deploying your app.
+3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
+4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.
+5. Add the `Google Play Deploy` Step to the workflow.
 
-    The Step needs to be after the `Xamarin Archive` Step.
- 6. Upload the Service Account JSON key file to the **Generic File Storage** on the `Code Signing`tab of the Workflow Editor.
+   The Step needs to be after the `Xamarin Archive` Step.
+6. Upload the Service Account JSON key file to the **Generic File Storage** on the `Code Signing`tab of the Workflow Editor.
 
-    Learn more about [how to access your JSON key file](https://yv69yaruhkt48w.preview.forestry.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
- 7. Create a Secret Environment Variable to reference the Service Account's JSON key file.
- 8. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field.
- 9. Start a build!
-10. 
-    * 
-11. 
-12. Upload the Service Account JSON key file to the **Generic File Storage** on the `Code Signing`tab of the Workflow Editor.
-
-    Learn more about [how to access your JSON key file](https://yv69yaruhkt48w.preview.forestry.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
-13. Create a Secret Environment Variable to reference the Service Account's JSON key file.
-14. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field.
-15. Start a build!
+   Learn more about [how to access your JSON key file](https://yv69yaruhkt48w.preview.forestry.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
+7. Create a Secret Environment Variable to reference the Service Account's JSON key file.
+8. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field.
+9. Start a build!
 
 If the build is successful, congratulations - you've just deployed your Xamarin app!
