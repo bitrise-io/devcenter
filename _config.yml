@@ -66,4 +66,4 @@ algolia:
   files_to_exclude:
     - forestry-help*
     - _articles/translations/**/*.md
-    - _config.yml
+    - _articles/reviews/**/*.md
