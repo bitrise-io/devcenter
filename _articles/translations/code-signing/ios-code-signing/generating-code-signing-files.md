@@ -44,7 +44,7 @@
 
 プロビジョニングとは、端末で起動してアプリサービスを使用するためのアプリの準備と設定のプロセスです。Development Provisioning Profileには、アプリの実行に適したデバイス識別子（UUID）が保持されます。Distribution Provisioning ProfileにはApp Storeプロファイルが含まれているため、アプリをApp Storeに配布でき、Ad-hocプロファイルはテスターに​​配布するのに適しています。
 
-### Generate a Provisioning Profile with Xcode
+### Xcodeでプロビジョニングプロファイルを生成する
 
 Xcodeは、プロジェクトの固有のバンドルIDと一致するプロジェクトのApp IDを自動的に生成します。アプリケーションIDは、1つ以上のアプリケーションを識別するために使用されます。 1つの一意のバンドルIDにのみ一致する _explicit App ID_ または複数のものに一致する _wildcard App ID_ にすることができます。
 
