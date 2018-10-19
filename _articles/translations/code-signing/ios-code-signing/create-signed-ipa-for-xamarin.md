@@ -1,10 +1,3 @@
----
-title: Xamarin projectで署名つきIPAを作成する
-menu:
-  ios-code-signing:
-    weight: 6
-
----
 Bitriseでは、Xamarinプロジェクトでの署名つきIPAの作成を手軽に行えます。`Xamarin Archive`で入力の設定を行うだけです。
 
 IPAのエクスポートの設定をする前に次の項目を確認しましょう。
