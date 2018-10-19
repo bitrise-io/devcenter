@@ -125,7 +125,7 @@ On Bitrise, it does not matter whether you want to export an .ipa file, an .apk 
 
 For example, if you want to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
 
-For your iOS project, set up the correct code signing identity in Visual Studio: for example, a Distribution identity with an App Store type provisioning profile.
+For your iOS project, set up the correct code signing identity in Visual Studio: for example, if you want to upload your app to the App Store, use a Distribution identity with an App Store type provisioning profile.
 
 1. Enter the Workflow Editor of your app, and click the `Workflows` tab.
 2. Make sure you have the `Xamarin Archive` Step in your workflow.
@@ -136,6 +136,8 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 
 ### Deploying to the App Store
 
+{% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need to use a Distribution type code signing identity with an App Store provisioning profile. Also, make sure that the Distribution certificate and the provisioning profile are uploaded to Bitrise!"%} 
+
 1. Go to the `Workflows` tab of the Workflow Editor.
 2. Select the workflow you created for deploying your app.
 3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
@@ -145,6 +147,8 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 7. Start a build!
 
 ### Deploying to Google Play
+
+{% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need a **Release** configuration."%} 
 
 1. Go to the `Workflows` tab of the Workflow Editor.
 2. Select the workflow you created for deploying your app.
