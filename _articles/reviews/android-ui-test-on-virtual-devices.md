@@ -59,7 +59,7 @@ If you want to read up on the difference between these test types, take a look a
 
 ![](/img/instrumentation-test-1.png)
 
-1. Click `bitrise.yml` tab and edit the primary workflow by adding the [output alias](https://devcenter.bitrise.io/bitrise-cli/step-outputs/#exporting-step-outputs-in-output-aliases/) for instrumentation testing to your second `Android Build` step. This will replicate to the `Test APK path` field of the `Instrumentation Test` section of the `[BETA] Virtual Device Testing` step. With this little trick, you will be able to output a test APK as well.
+5. Click `bitrise.yml` tab and edit the primary workflow by adding the [output alias](https://devcenter.bitrise.io/bitrise-cli/step-outputs/#exporting-step-outputs-in-output-aliases/) for instrumentation testing to your second `Android Build` step. This will replicate to the `Test APK path` field of the `Instrumentation Test` section of the `[BETA] Virtual Device Testing` step. With this little trick, you will be able to output a test APK as well.
 
         - android-build@0.9.5:
                inputs:
@@ -73,8 +73,8 @@ If you want to read up on the difference between these test types, take a look a
                - BITRISE_APK_PATH: BITRISE_TEST_APK_PATH
 
    ![](/img/virtual-device.png)
-2. Select `instrumentation` as `Test type` in `[BETA] Virtual Device Testing step`.
-3. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of  `deviceID,version,language,orientation` separated with `,`.
+6. Select `instrumentation` as `Test type` in `[BETA] Virtual Device Testing step`.
+7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of  `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/instrumentation-test.png)
 
