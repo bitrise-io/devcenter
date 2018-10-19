@@ -1,44 +1,39 @@
-<!--
-These are the copies from the Bitrise Features page: https://www.bitrise.io/features/cross-platform-features
-With your help, we could build the first localized version for Japan.
--->
+CROSS-PLATFORMの機能
+Xamarin、React Native、Ionic＆Cordovaプロジェクトのサポートが可能です。
 
-CROSS-PLATFORM FEATURES
-Out of the box support for Xamarin, React Native, Ionic & Cordova projects.
+# プロジェクトスキャナ
+クロスプラットフォームアプリケーションを追加もBitriseを使うと60秒未満で可能です。Bitriseは、プラットフォーム、依存関係、構成を自動的に検出し、最初のビルドでアプリケーションをビルド、テスト、デプロイする基本ワークフローを作成します。人気のある依存マネージャとフレームワークのサポートをしています。
+- NuGet
+- FAKE
+- CAKE
+- NPM
+- Yarn
 
-# Project scanner
-Adding your cross-platform app to Bitrise takes less than 60 seconds. Our scanner automatically detects platform, dependencies and configuration and creates a base workflow that builds, tests and deploys your app on the first build. Support for popular dependency managers and frameworks
-NuGet
-FAKE
-CAKE
-NPM
-Yarn
+# 同一プロジェクトからiOSとAndroid用にビルド
+iOSとAndroidのワークフローを作成し、自動ビルドすることが可能です。プロジェクト全体または一部のワークフローのビルドスタックを選択できます。
 
-# Build for iOS and Android from the same project
-Create an iOS and an Android specific workflow and keep everything neat and tidy. You can select a build stack for your whole project or even for a specific workflow.
+# アプリの自動配布
+##テスターに配布
+Bitriseを使うとテスターに簡単にアプリを配布することができます。特定のメールにリンクが送信され、テスターはIPAをインストールできます。
 
-# Distribute your app automatically
-## Deploy to testers
-If you are looking for an easy way to send your app to testers, you can use Bitrise deploy. This will send a link to specific email addresses so that your testers can install the .IPA.
+##ストアに配布
+アプリを自動的にGoogle PlayまたはiTunes Connectに送ることができます。
 
-## Send straight to the store
-You can automatically send your apps to Google Play or iTunes Connect.
+##第三者に配布
+展開のためにすでに別のサービスを使用している場合でも大丈夫です。別のサービスを引き続き使用できます。 HockeyAppからTestFairyまで、我々はサポートしています。
 
-## Deploy to third parties
-If you already use another service for deployment, fear not, you can keep using that. From HockeyApp to TestFairy, we’ve got them all.
+# 簡単なコード署名
+## iOSのためのCodesigndoc
+あなたの端末で簡単なコマンドを実行すると、われわれの友好的な近所のCodesigndocは、アプリケーションの署名に必要なファイルを全てエックスポートします。
 
-# Effortless code signing
-## Codesigndoc for iOS
-Run a simple command in your terminal, and our friendly neighborhood Codesigndoc will collect and export all your files needed to sign your app.
+## キーストアをアップロード
+Androidプロジェクトに署名するには、リリースキーストアファイルをアップロードし、署名APKステップを追加すれば完了です。署名されたAPKはどこにでも配布できます。
 
-## Upload your keystore
-To sign your Android project, simply upload your release keystore file, add the Sign APK step and you’re done - you can distribute your signed .APK anywhere.
+# 安全なファイルストレージ
+##シークレット環境変数
+データは暗号化して保存され、ビルド中またはUIで公開するときにのみ公開されます。接続されたサービスの資格情報とAPIキーは安全です。
 
-# Secure file storage
-## Secret environment variables
-Secrets are stored encrypted and are only exposed during build or when you’d like to reveal them on the UI. Your credentials and API keys for connected services are safe with us.
+##秘密とファイルを保護する
+プロビジョニングプロファイル、証明書、キーストアなどのenvまたはファイルを保護可能です。保護されたデータはUI上からは表示されず、チームメンバーもダウンロードすることはできません。
 
-## Make secrets & files protected
-You can set any secret env or file, such as provisioning profile, certificate or keystore as protected. Protected secrets cannot be revealed on the UI and such files cannot be downloaded by anyone from your team.
-
-## Dozens of integrations that work with your cross platform project
+##クロスプラットフォームプロジェクトで動作する数十の統合
