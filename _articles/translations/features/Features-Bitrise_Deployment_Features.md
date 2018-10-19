@@ -1,19 +1,14 @@
-<!--
-These are the copies from the Bitrise Features page: https://www.bitrise.io/features/cross-platform-features
-With your help, we could build the first localized version for Japan.
--->
+BITRISEデプロイメント機能
+私たちのデプロイメントサービスを使うと簡単にテスターとアプリの共有が可能です。
 
-BITRISE DEPLOYMENT FEATURES
-Use our own over-the-air deployment service to share your app quickly with your testers
+# 電子メール、テスターグループの追加
+個々のメールの転送または、管理者、開発者、テスターをアクセスグループの追加のいずれかでインストールリンクを送信することができます。
 
-# Add emails or tester groups
-Specify individual email addresses, or send the install link to one of your predefined access groups, such as Admins, Developers or Testers.
+# ビルドのページからアーティファクトを取得
+Bitrise.ioを使用すると、すべてのデータをビルドで見ることができます。画像やHTMLレポートをインラインで表示したり、生成されたアプリ（IPAまたはAPK）を同じページからダウンロードして配布することができます。
 
-# Get all your artifacts from the build’s page
-If you use the Deploy to Bitrise.io step, all generated artifacts will be listed on the build’s page. You can view images or html reports inline, or download and distribute any generated apps (IPA or APK) right from the same page.
+# 複数のアプリを同時にデプロイ
+同じアプリの複数のバージョンを生成している場合や、別々に署名されたアプリが必要な場合は、ビルドのページから複数のアプリにデプロイが可能です。
 
-# Deploy multiple apps in the same build
-When you are generating multiple flavors of the same app or you need apps signed differently, you can deploy multiple apps which you can access from the build’s page.
-
-# Do you prefer a third party? We’ve got you.
-Check our Steps >
+# サードパーティがいいですか？いつでもあなたを待っています。
+ステップを見てください
