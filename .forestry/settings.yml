@@ -90,11 +90,6 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/api
-  label: API
-  create: all
-  match: "**/*"
-- type: directory
   path: _data
   label: Forestry data files - MENUS.YML here
   create: all
