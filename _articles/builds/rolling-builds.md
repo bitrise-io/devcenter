@@ -1,8 +1,8 @@
 ---
 title: Rolling builds
 menu:
-builds:
-weight: 4
+  builds:
+    weight: 4
 
 ---
 
@@ -20,10 +20,10 @@ You can also set which types of triggered builds you wish to abort. Let's see ho
 2. Select the `Settings` tab from the menubar.
 3. Scroll down to the `ENABLE ROLLING BUILDS` option and toggle it.
 
-![Rolling Builds](/img/getting-started/rolling-builds.png)
+  ![Rolling Builds](/img/getting-started/rolling-builds.png)
 4. Select the type(s) of builds you wish to abort when a new build is started.
-* `Pull Requests`: will cancel all previous builds for Pull Requests and all related Pushes
-* `Pushes`: will cancel all previous builds for Pushes to the same branch
-* `Running builds`: will also auto-cancel running builds in addition to on-hold ones
+  * `Pull Requests`: will cancel all previous builds for Pull Requests and all related Pushes
+  * `Pushes`: will cancel all previous builds for Pushes to the same branch
+  * `Running builds`: will also auto-cancel running builds in addition to on-hold ones
 
 And done! From now on, you don't have to wait for a triggered build to finish if you do not need it!
