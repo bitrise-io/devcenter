@@ -1,10 +1,3 @@
----
-title: Xcode projectで署名つきIPAを作成する
-menu:
-  ios-code-signing:
-    weight: 5
-
----
 Bitriseでは、Xcodeプロジェクトでの署名つきIPAの作成を手軽に行えます。`Xcode Archive & Export for iOS` で入力の設定を行うだけです。
 
 IPAをエクスポートする設定を行う前に、次の項目を確認してください。
