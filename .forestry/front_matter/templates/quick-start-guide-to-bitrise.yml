@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/reviews/getting-started-with-xamarin-apps.md
 - _articles/reviews/android-ui-test-on-virtual-devices.md
 - _articles/reviews/deploying-an-ios-app.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
@@ -21,7 +22,6 @@ pages:
 - _articles/reviews/build-and-deploy-multiple-flavor-apks-to-the-play-store.md
 - _articles/reviews/build-logs.md
 - _articles/testing/run-your-tests-in-the-app-center.md
-- _articles/reviews/getting-started-with-xamarin-apps.md
 - _articles/tutorials/xamarin/index.md
 - _articles/troubleshooting/frequent-android-issues.md
 - _articles/troubleshooting/known-xcode-issues.md
