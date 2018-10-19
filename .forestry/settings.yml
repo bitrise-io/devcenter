@@ -10,7 +10,7 @@ sections:
   read_only: true
 - type: directory
   path: _articles/reviews
-  label: For review
+  label: For reviews
   create: all
   match: "**/*"
 - type: directory
