@@ -14,7 +14,6 @@ fields:
   hidden: false
   default: ''
 pages:
-- _articles/reviews/getting-started-with-xamarin-apps.md
 - _articles/reviews/android-ui-test-on-virtual-devices.md
 - _articles/reviews/deploying-an-ios-app.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
