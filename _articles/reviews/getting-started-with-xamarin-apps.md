@@ -25,7 +25,7 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
 
 ## Adding a Xamarin app
 
-{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
+{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
  1. Click the `+` sign on the top menu bar and select `Add app`.
  2. On the Create new App page, choose the account you wish to add the app to.
@@ -119,7 +119,7 @@ Read more about using the `Sign APK` Step [in our guide](/code-signing/android-c
 4. Upload the files - the .p12 certificate and the provisioning profile - to Bitrise: open the Workflow Editor of your app and upload the files on the `Code Signing` tab.
 5. Add the `Certificate and profile installer` Step to your workflow.
 
-Read more about iOS code signing [in our guide](https://yv69yaruhkt48w.preview.forestry.io/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/)!
+Read more about iOS code signing [in our guide](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/)!
 
 ### Exporting the app package file
 
@@ -165,7 +165,7 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
    The Step needs to be after the `Xamarin Archive` Step.
 6. Upload the Service Account JSON key file to the **Generic File Storage** on the `Code Signing`tab of the Workflow Editor.
 
-   Learn more about [how to access your JSON key file](https://yv69yaruhkt48w.preview.forestry.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
+   Learn more about [how to access your JSON key file](/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
 7. Create a Secret Environment Variable to reference the Service Account's JSON key file.
 8. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field.
 9. Start a build!
