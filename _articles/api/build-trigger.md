@@ -5,7 +5,7 @@ menu:
     weight: 1
 
 ---
-_Note: the_ `_www_` _endpoint is now deprecated. Please use the_ `_https://app.bitrise.io/app/APP-SLUG/build/start.json_` _endpoint instead._
+_Note: the_ `www` _endpoint is now deprecated. Please use the_ `https://app.bitrise.io/app/APP-SLUG/build/start.json` _endpoint instead._
 
 With the Build Trigger API you can start a new build of your app with a simple API call.
 
@@ -24,7 +24,7 @@ You have to call your build trigger with a `POST` request with a JSON body.
 When you use the Bitrise Trigger API you have to specify the App's `Build Trigger Token` and `App Slug`. You can view both and regenerate your App's Build Trigger Token anytime you want to, on the `Code` tab of the app.
 "%}
 
-{% include message_box.html type="important" title="Old API token parameter" content=" The old `_api_token_` parameter is DEPRECATED, please use the `_build_trigger_token_`parameter instead. "%}
+{% include message_box.html type="important" title="Old API token parameter" content=" The old `api_token` parameter is DEPRECATED, please use the `build_trigger_token`parameter instead. "%}
 
 ## JSON body
 
@@ -106,11 +106,11 @@ If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone
 
 You can define additional _environment variables_ for your build.
 
-_These variables will be handled with priority between_ `_Secrets_` _and_ `_App Env Vars_`_,
+_These variables will be handled with priority between_ `Secrets` _and_ `App Env Vars`_,
 which means that you can not overwrite environment variables defined in
 your build configuration (e.g. App Env Vars), only Secrets.
 For more information see:
-_[_Availability order of environment variables_](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)
+_[Availability order of environment variables](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)
 
 It's important that this parameter have to be an **array of objects**,
 and that every item of the array have to include
@@ -154,7 +154,7 @@ A base curl call would look like this (with `master` specified as the `branch` b
 
     curl -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master"}}'
 
-_Note: please don't forget to add_ `_Content-Type_` _header with_ `_application/json_` _value_
+_Note: please don't forget to add_ `Content-Type` _header with_ `application/json` _value_
 
 A more advanced example: let's say you want to build the **master** `branch`
 using the `deployment` workflow,
