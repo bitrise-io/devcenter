@@ -15,6 +15,6 @@ title: Androidのユニットテスト
 
 ## テストレポートの生成
 
-`Android Unit Test`ステップは、テストレポートを生成して`$BITRISE_DEPLOY_DIR`フォルダに出力します。`Deploy to Bitrise.io`ステップはそれらのレポートを`$BITRISE_DEPLOY_DIR`フォルダからそれぞれのビルドの`APPS & Artifacts`タブ([bitrise.io](https://www.bitrise.io)に出力します。これらのレポートはローカルコンピュータから閲覧・ダウンロードが可能です。
+`Android Unit Test`ステップは、テストレポートを生成して`$BITRISE_DEPLOY_DIR`フォルダに出力します。`Deploy to Bitrise.io`ステップはそれらのレポートを`$BITRISE_DEPLOY_DIR`フォルダからそれぞれのビルドの`APPS & Artifacts`タブ([bitrise.io](https://www.bitrise.io))に出力します。これらのレポートはローカルコンピュータから閲覧・ダウンロードが可能です。
 
 {% include message_box.html type="note" title="ビルドが失敗した場合のログを確認する" content="ビルドに失敗した場合は、`Download logs`をクリックしてください。 ログの最終行からエラーメッセージを確認し、それに応じてエラーを修正することができます。 作業が完了したら、変更をリポジトリにコミットすると新しいビルドが自動的に開始されます。"%}
