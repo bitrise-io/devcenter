@@ -1,14 +1,19 @@
-<!--
-This is the third onboarding email we send out for new developers.
-With your help, we could send Japanese messages to our new Japanese users. :)
--->
+これであなたはワークフローを設定する方法を理解しました。
+次はCIのスキルをもう1段階引き上げましょう。 👍
 
-Now that you know how to setup your workflows, it's the right time to take your CI skills to the next level. 👍
+あなたはワークフローを更新していたときに、
+アプリのbitrise.ymlファイルを更新していました。 
+これはアプリのワークフローエディタのbitrise.ymlタブにあります。
 
-When you were updating your workflow you were updating your app's bitrise.yml file. It can be found in your app's workflow editor under the bitrise.yml tab.
+このyamlファイルを変更したり、
+ローカルマシンにダウンロードしてgitリポジトリで管理することもできます。 
+さらに、Bitrise CLIをダウンロードし、
+Bitriseで実行しているのと同じワークフローをローカルで実行することもできます。
 
-If you would like to, you can modify this yaml file or even download it to your local machine and place it in your git repository. Even better, you can download our [Bitrise CLI](https://app.bitrise.io/cli) and run the same workflow we're running on Bitrise, locally.
+CLIはオープンソースであり、
+これを使用してBitriseのインテグレーションを簡単に開発することができます。 
+あなたがコミュニティと共有したいのであれば、
+それをBitrise Step Libraryに追加してプルリクエストを送ってください。
+上手く行けば、$25 / month の割引を得ることができるでしょう！ 👾
 
-The CLI is open source and you can use it to easily develop integrations for Bitrise. If you want to share it with the community simply add it back to the [Bitrise Step Library](https://github.com/bitrise-io/bitrise-steplib) with a Pull Request and reach out to us to get a $25/mo discount,because you are awesome! 👾
-
-Feel free to contact me here or through the on-site chat at any time if you have any questions!
+何かご不明な点がございましたら、いつでも連絡してください。
