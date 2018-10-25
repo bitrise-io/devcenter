@@ -5,6 +5,8 @@ redirect_from: []
 published: false
 
 ---
+## Add a Cordova/Ionic app to Bitrise
+
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider."%}
 
  1. Log into [bitrise.io](https://www.bitrise.io/).
@@ -19,10 +21,31 @@ published: false
     * iOS
     * Android
     * iOS and Android (where the Android build gets built first)
-10. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary workflow - click the message and it will take you to the build page. The first build does not generate an apk yet, however, you can already check out the project’s logs on the Build’s page.
 
-After the scanner validation, you can select which platform to build your app for. You can select:
+    ![](/img/select-platform-cordova.jpg)![](/img/select-platform-ionic.jpg)
+10. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary workflow - click the message and it will take you to the build page. The first build does not generate an APK and an .ipa yet, however, you can already check out the project’s logs on the Build’s page.
 
-* iOS
-* Android
-* iOS and Android (where the Android build gets built first)
+An example of primary workflow:
+
+    primary:
+        steps:
+        - activate-ssh-key@4.0.3:
+            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+        - git-clone@4.0.11: {}
+        - script@1.1.5:
+            title: Do anything with Script step
+        - npm@0.9.1:
+            inputs:
+            - command: install
+        - karma-jasmine-runner@0.9.1: {}
+        - deploy-to-bitrise-io@1.3.15: {}
+
+## Dependencies
+
+
+## Code signing
+
+
+
+## Deploy
+
