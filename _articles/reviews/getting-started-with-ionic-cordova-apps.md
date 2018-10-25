@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-## Add a Cordova/Ionic app to Bitrise
+## Add a Ionic/Cordova app to Bitrise
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider."%}
 
@@ -89,5 +89,7 @@ For Cordova:
             - platform: "$CORDOVA_PLATFORM"
             - target: emulator
         - deploy-to-bitrise-io@1.3.15: {}
+
+{% include message_box.html type="note" title="Automatic provisioning" content=" The example procedure described here uses manual provisioning, with the `Certificate and profile installer`Step. However, Bitrise also supports [automatic provisioning](https://yv69yaruhkt48w.preview.forestry.io/code-signing/ios-code-signing/ios-auto-provisioning/) but it is not in the scope of this guide." %}
 
 ## Deploy
