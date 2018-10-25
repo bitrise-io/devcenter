@@ -23,7 +23,7 @@ published: false
     * iOS and Android (where the Android build gets built first)
 
     ![](/img/select-platform-cordova.jpg)
-    
+
     ![](/img/select-platform-ionic.jpg)
 10. **Select scheme name? Select export method? \[ad-hoc, dev...\]**
 11. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary workflow - click the message and it will take you to the build page. The first build does not generate an APK and an .ipa yet, however, you can already check out the project’s logs on the Build’s page.
@@ -100,7 +100,7 @@ If you want to build an app for iOS or Android you need to upload the platform-s
 5. Add the `Generate cordova build configuration` Step to your workflow if it's not already in it.
 6. The required inputs fields for Android (`Keystore`, `Keystore password`, `Alias` and `Password`) are already filled out for you since you have uploaded your keystore file to the `Code Signing` tab and added the metadata at Step 2 and 3. Based on this information, env vars have been generated which are now conveniently used in `Generate cordova build configuration` Step.
 
-## Deploying Ionic/Cordova app 
+## Deploying Ionic/Cordova app
 
 1. Add the `Cordova archive` or the `Ionic archive` step to your workflow. **Or Both?**
 2. Fill in the required inputs.
@@ -111,7 +111,7 @@ If you want to build an app for iOS or Android you need to upload the platform-s
 
 ### Deploying to Bitrise
 
-Add the `Deploy to Bitrise.io` Step to your workflow. This will upload all your build artifacts into the APPS & ARTIFACTS tab of your Build's page.
+Add the `Deploy to Bitrise.io` Step to your workflow. This will upload all your build artifacts into the `APPS & ARTIFACTS` tab of your Build's page.
 
 ### Deploying to an App Store
 
