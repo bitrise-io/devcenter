@@ -22,7 +22,9 @@ published: false
     * Android
     * iOS and Android (where the Android build gets built first)
 
-    ![](/img/select-platform-cordova.jpg)![](/img/select-platform-ionic.jpg)
+    ![](/img/select-platform-cordova.jpg)
+    
+    ![](/img/select-platform-ionic.jpg)
 10. **Select scheme name? Select export method? \[ad-hoc, dev...\]**
 11. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary workflow - click the message and it will take you to the build page. The first build does not generate an APK and an .ipa yet, however, you can already check out the project’s logs on the Build’s page.
 
@@ -50,6 +52,8 @@ An example of primary workflow:
 ## Testing Ionic/Cordova apps
 
 [Unit testing](https://docs.microsoft.com/en-us/visualstudio/cross-platform/tools-for-cordova/debug-test/basic-tests-with-jasmine?view=toolsforcordova-2017) is performed by `Karma Jasmine Test Runner` step which is right after `Run nmp command` dependency installer.
+
+**UI testing?**
 
 ## Code signing
 
