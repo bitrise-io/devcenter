@@ -23,7 +23,8 @@ published: false
     * iOS and Android (where the Android build gets built first)
 
     ![](/img/select-platform-cordova.jpg)![](/img/select-platform-ionic.jpg)
-10. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary workflow - click the message and it will take you to the build page. The first build does not generate an APK and an .ipa yet, however, you can already check out the project’s logs on the Build’s page.
+10. **Select scheme name? Select export method? \[ad-hoc, dev...\]**
+11. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary workflow - click the message and it will take you to the build page. The first build does not generate an APK and an .ipa yet, however, you can already check out the project’s logs on the Build’s page.
 
 An example of primary workflow:
 
@@ -42,10 +43,51 @@ An example of primary workflow:
 
 ## Dependencies
 
+`Run npm command` Step is by default part of your primary and deploy workflows. This step takes care of installing all Javascript dependencies listed in your app's `package.json` file. Make sure you have `the nmp command with arguments to run` field should be set to `install`.
+
+Any other? Platform specific?
 
 ## Code signing
 
+For Ionic:
 
+    deploy:
+        steps:
+        - activate-ssh-key:
+            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+        - git-clone: {}
+        - script:
+            title: Do anything with Script step
+        - npm:
+            inputs:
+            - command: install
+        - karma-jasmine-runner: {}
+        - generate-cordova-build-configuration: {}
+        - ionic-archive:
+            inputs:
+            - platform: "$IONIC_PLATFORM"
+            - target: emulator
+        - deploy-to-bitrise-io: {}
+
+For Cordova:
+
+      deploy:
+        steps:
+        - activate-ssh-key@4.0.3:
+            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+        - git-clone@4.0.11: {}
+        - script@1.1.5:
+            title: Do anything with Script step
+        - certificate-and-profile-installer@1.10.1: {}
+        - npm@0.9.1:
+            inputs:
+            - command: install
+        - karma-jasmine-runner@0.9.1: {}
+        - generate-cordova-build-configuration@0.9.6: {}
+        - cordova-archive@1.1.1:
+            inputs:
+            - platform: "$CORDOVA_PLATFORM"
+            - target: emulator
+        - deploy-to-bitrise-io@1.3.15: {}
 
 ## Deploy
-
