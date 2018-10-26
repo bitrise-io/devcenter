@@ -3,6 +3,9 @@ title: Deploying Android apps
 date: 2018-10-26 13:00:41 +0000
 redirect_from:
 - "/tutorials/deploy/android-deployment/"
+menu:
+  android-deploy:
+    weight: 1
 
 ---
 This guide describes how you can add your Android project to [bitrise.io](https://www.bitrise.io) and deploy the APK built from your project to [Google Play Store](https://play.google.com/store). We're using the [sample-apps-android-googleplay](https://github.com/bitrise-samples/sample-apps-android-googleplay) app as an example for this tutorial.
