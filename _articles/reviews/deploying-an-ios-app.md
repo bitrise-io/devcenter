@@ -7,9 +7,9 @@ published: false
 ---
 You can deploy an iOS app to:
 
-* Bitrise.io (for internal testers)
-* devices of external testers
-* iTunes Connect (to release the app to Testflight and the App Store)
+* [Bitrise.io (for internal testers)](/deploy/deploying-an-ios-app/#deploying-an-ios-app-to-bitriseio)
+* [devices of external testers](/deploy/deploying-an-ios-app/#deploying-an-ios-app-for-external-testers-without-testflight)
+* [iTunes Connect (to release the app to Testflight and the App Store)](/deploy/deploying-an-ios-app/#deploying-an-ios-app-to-itunes-connect)
 
 To deploy an iOS app to any platform, you need:
 
