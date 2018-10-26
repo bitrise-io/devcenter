@@ -15,7 +15,7 @@ If you have an Android deploy workflow do the following:
 2. Click the `Config` section of the Step.
 3. Specify the `assemble` [Gradle tasks](/tips-and-tricks/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project/) by adding your build variants' task names in the `Gradle task to run` Step input field - as many task names as many build variants you want to build in one workflow. Each task name must be **exactly the same build variant name** what you have listed in `Build Variant` window of Android Studio! Make sure you separate them only with a space, no need for `,`! In the below image, you can see the order of the Steps for the deploy workflow and the `Gradle Task to run` Step input with the two build variants:
 
-   `assembleMyflavorDebug` and `assembleMyflavorDebugAndroidTest`
+   `assembleDemo` and `assembleFul`
 
    ![](/img/gradle-multiflavor.jpg)
 
