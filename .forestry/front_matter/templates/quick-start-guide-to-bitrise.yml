@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/deploy/android-deploy/deploying-android-apps.md
 - _articles/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/deploy/ios-deploy/introduction-to-deploying-ios-apps.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
