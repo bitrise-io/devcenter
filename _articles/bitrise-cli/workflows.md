@@ -36,7 +36,7 @@ so you can execute both `bitrise run first` and `bitrise run second`.
 {% include message_box.html type="note" title="Available workflow list" content="
 You can list all the available workflows in a `bitrise.yml` by running `bitrise run` or `bitrise workflows` in the directory of the `bitrise.yml`. "%}
 
-## Add steps to a workflow
+## Adding steps to a workflow
 
 To add steps to a workflow simply include `steps:` and then the list of steps.
 For example to run two script steps after each other:
@@ -60,7 +60,7 @@ continuing with `Second step`.
 
 _To learn more about Build Steps, check the_ [_Steps_](/bitrise-cli/steps) _section._
 
-## Define workflow specific parameters / environment variables
+## Defining workflow specific parameters / environment variables
 
 In addition to steps, you can also specify environment variables
 for every workflow.
@@ -225,12 +225,12 @@ reusable workflows. Finding the right workflow might get tricky.
 To help with this, the Bitrise CLI supports a small notation called
 "utility workflows".
 
-**A workflow is considered as a utility workflow if it's ID starts
-with an underscore character (for example __`__**_setup**__`).
+A workflow is considered as a utility workflow if it's ID starts
+with an underscore character (for example, `setup`).
 
 Utility workflows are listed at the end of the workflow list if you
 run `bitrise run` or `bitrise workflows`, and
-**utility workflows can't be executed directly with a** `**bitrise run**`.
+**utility workflows can't be executed directly with a** `bitrise run` **command**.
 
 These workflows can still be referenced in `before_run` and `after_run`
 lists of course, and **there's absolutely no other difference
