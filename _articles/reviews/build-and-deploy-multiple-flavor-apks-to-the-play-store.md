@@ -17,9 +17,8 @@ If you have an Android deploy workflow do the following:
 
    `assembleDemo` and `assembleFull`
 
-	![](/img/multiflavor.jpg)
-
-1. `Gradle Runner` generates a `$BITRISE_APK_PATH_LIST` env var output that contains ALL the build variants you have set in `Gradle task to run` Step above. We will need this output env var later but you can always check it and its value containing the APKs at the `Env Vars` tab of your Workflow Editor!
+   ![](/img/multiflavor.jpg)
+4. `Gradle Runner` generates a `$BITRISE_APK_PATH_LIST` env var output that contains ALL the build variants you have set in `Gradle task to run` Step above. We will need this output env var later but you can always check it and its value containing the APKs at the `Env Vars` tab of your Workflow Editor!
 
 ## Sign and deploy multi-flavor APKs
 
