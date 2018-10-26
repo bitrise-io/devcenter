@@ -23,7 +23,6 @@ pages:
 - _articles/reviews/android-ui-test-on-virtual-devices.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/reviews/meta-field.md
-- _articles/reviews/build-and-deploy-multiple-flavor-apks-to-the-play-store.md
 - _articles/reviews/build-logs.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/tutorials/xamarin/index.md
