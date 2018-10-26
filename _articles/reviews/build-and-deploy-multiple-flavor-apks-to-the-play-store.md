@@ -9,7 +9,7 @@ You can generate, code sign and deploy multiple flavor (multi-flavor) APKs in on
 
 ## Generate multi-flavor APKs
 
-If you have an Android deploy workflow, do the following:
+If you have an Android deploy workflow at hand, do the following:
 
 1. Insert `Gradle Runner` Step after the Android testing steps. `Android Build` step can only build one variant so if this Step is part of your workflow, then we advise you to replace it with our `Gradle Runner` Step.
 2. Click the `Config` section of the Step.
