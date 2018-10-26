@@ -40,6 +40,8 @@ Make sure that you have:
 3. Set the `Select method for export` input of the Step to `development`.
 
    You can use other export methods, too, but if you only deploy to Bitrise and want to install your app on the specified devices of internal testers, `development` is sufficient.
+
+   ![](/img/code-signing/ios-code-signing/xcode-archive-export-method.png)
 4. Make sure the `Deploy to Bitrise.io` Step is in your workflow.
 5. Start a build.
 6. When the build is finished, go to the app's `Builds` page and click the latest build.
@@ -94,7 +96,7 @@ Make sure that you have:
 * uploaded a Distribution certificate for the app
 * uploaded an App Store Provisioning Profile (if you want to use manual provisioning)
 
-Register the app on iTunes Connect. Keep in mind that every time you want to push an app to iTunes Connect, it **must have a unique build and version number** - increment either or both before deploying.
+Register the app on iTunes Connect. Keep in mind that every time you want to push an app to iTunes Connect, it **must have a unique build and version number** - [increment either or both](/builds/build-numbering-and-app-versioning/) before deploying.
 
 #### Deploying the app
 
@@ -104,6 +106,8 @@ To deploy the app to iTunes Connect, we have two Steps:
 * `Deploy to iTunes Connect - Application Loader`
 
 `Deploy to iTunes Connect - Application Loader` is simple: it simply pushes an .ipa or .pkg binary file to iTunes Connect. With this Step, you **cannot** submit the app for review on the App Store, for example.
+
+![](/img/itunes-connect.png)
 
 With the `Deploy to iTunes Connect` Step, you can:
 
@@ -118,6 +122,8 @@ With the `Deploy to iTunes Connect` Step, you can:
 3. Set the `Select method for export` input of the Step to `app-store`.
 
    The Step will store the path of the exported .ipa file in the $BITRISE_IPA_PATH environment variable.
+
+   ![](/img/app-store-export.png)
 4. Add the `Deploy to iTunes Connect` Step to your workflow.
 5. Fill the required inputs.
    * **Either the app's Apple ID or its Bundle ID is a required input**. One of the two must be provided.
