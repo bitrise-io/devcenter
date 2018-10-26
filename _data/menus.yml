@@ -52,7 +52,7 @@ builds:
   weight: 1
 main:
 - title: Deployment
-  identifier: deploy
+  identifier: deployment
   weight: 10
 - title: API
   identifier: api
