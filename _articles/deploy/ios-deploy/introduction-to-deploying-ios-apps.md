@@ -15,4 +15,4 @@ To deploy an iOS app to any platform, you need:
 * [code signing files](/code-signing/ios-code-signing/code-signing/)
 * [to archive your Xcode project and export a signed .ipa file](/code-signing/ios-code-signing/create-signed-ipa-for-xcode/)
 
-Our guides delve into the specifics of these two basic requirements and show how to use our Steps to deploy the app in the exact way you want to! 
+Our guides delve into the specifics of these two basic requirements and show how to use our Steps to deploy the app in the exact way you want to!
