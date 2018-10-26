@@ -1,4 +1,11 @@
 ---
+deployment:
+- title: Android deployment
+  identifier: android-deploy
+  weight: 1
+- title: iOS deployment
+  identifier: ios-deploy
+  weight: 2
 code-signing:
 - title: Android code signing
   identifier: android-code-signing
