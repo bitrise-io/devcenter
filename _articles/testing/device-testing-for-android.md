@@ -2,7 +2,6 @@
 title: Device testing for Android
 date: 2018-10-26 08:33:44 +0000
 redirect_from: []
-published: false
 
 ---
 With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. There are no limits to using the Step, other than your overall build time limit.
