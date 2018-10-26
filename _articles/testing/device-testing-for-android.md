@@ -82,7 +82,7 @@ There is a small difference between configuring your workflow for `robo` and `in
    ![](/img/instrumentation-test.png)
 8. Start a build.
 
-## Check test results
+## Checking test results
 
 You can check UI test result on the `DEVICE TESTS` tab of your app's build page.
 
