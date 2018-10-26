@@ -64,7 +64,7 @@ main:
   weight: 14
 - title: Deployment
   identifier: deployment
-  weight: 11
+  weight: 10
 - title: API
   identifier: api
   weight: 17
@@ -91,7 +91,7 @@ main:
   weight: 2
 - title: Bitrise CLI and bitrise.yml
   identifier: bitrise-cli
-  weight: 10
+  weight: 11
 - title: Teams and organizations
   identifier: team-management
   weight: 4
