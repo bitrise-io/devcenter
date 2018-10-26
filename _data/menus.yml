@@ -1,11 +1,11 @@
 ---
 deployment:
-- title: Android deployment
-  identifier: android-deploy
-  weight: 1
 - title: iOS deployment
   identifier: ios-deploy
   weight: 2
+- title: Android deployment
+  identifier: android-deploy
+  weight: 1
 code-signing:
 - title: Android code signing
   identifier: android-code-signing
@@ -38,34 +38,42 @@ team-management:
   identifier: organizations
   weight: 3
 api:
+- weight: 7
+  title: Bitrise.io API v0.1 (Work In Progress)
 - weight: 3
-  title: Outgoing Webhooks
+  title: App Status Image/Badge API
 - weight: 1
   title: Build Trigger API
+- weight: 5
+  title: Outgoing Webhooks
+- weight: 6
+  title: Outgoing Webhooks
 - weight: 2
-  title: App Status Image/Badge API
+  title: Build Trigger API
 - weight: 4
+  title: App Status Image/Badge API
+- weight: 8
   title: Bitrise.io API v0.1 (Work In Progress)
 builds:
 - title: Triggering builds
   identifier: triggering-builds
   weight: 1
 main:
-- title: Deployment
-  identifier: deployment
-  weight: 10
-- title: API
-  identifier: api
-  weight: 16
 - title: Frequently Asked Questions (FAQ)
   identifier: faq
-  weight: 13
+  weight: 14
+- title: Deployment
+  identifier: deployment
+  weight: 11
+- title: API
+  identifier: api
+  weight: 17
 - title: Troubleshooting
   identifier: troubleshooting
-  weight: 14
+  weight: 15
 - title: Tools
   identifier: tools
-  weight: 15
+  weight: 16
 - title: Caching
   identifier: caching
   weight: 8
@@ -89,7 +97,7 @@ main:
   weight: 4
 - title: Tutorials
   identifier: tutorials
-  weight: 11
+  weight: 12
 - title: Testing
   identifier: testing
   weight: 9
@@ -98,4 +106,4 @@ main:
   weight: 6
 - title: Tips & Tricks
   identifier: tips-and-tricks
-  weight: 12
+  weight: 13
