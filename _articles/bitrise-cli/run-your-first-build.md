@@ -1,5 +1,5 @@
 ---
-title: Run your first build
+title: Running your first build
 menu:
   bitrise-cli:
     weight: 3
