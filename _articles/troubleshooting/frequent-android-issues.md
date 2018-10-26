@@ -23,7 +23,7 @@ or
 
 ### Solution
 
-**Please use the** `**Install missing Android tools**` **step. The section below is kept only for referencing purposes!**
+**Please use the** `Install missing Android tools` **step. The section below is kept only for referencing purposes!**
 
 The error means that your build requires an Android package which is either not (yet) preinstalled
 (_you can see which packages are preinstalled_ [_here, on GitHub_](https://github.com/bitrise-docker/android/blob/master/Dockerfile#L30)_ -
@@ -56,7 +56,7 @@ by one, but having all three in the script covers most of the cases related to t
 
 ### Alternative solution for the license error
 
-**Please use the** `**Install missing Android tools**` **step. The section below is kept only for referencing purposes!**
+**Please use the** `Install missing Android tools` **step. The section below is kept only for referencing purposes!**
 
 An alternative solution for the `You have not accepted the license agreements of the following SDK components`
 error, as printed in the log:
@@ -74,11 +74,11 @@ but in short this can be done by:
 > folder (this should be located at `<android sdk home path>/licenses`) of your current workstation,
 > to the Android Sdk Home directory of the machine where you now want to build your projects.
 
-**Create an** `**android-licenses**`** directory in the root directory of your git repository,
-and copy the license files into this directory**,
+**Create an** `android-licenses` **directory in the root directory of your git repository**,
+and copy the license files into this directory,
 then in your Workflow copy the licenses to the right location using a `Script` step.
 
-**Add the** `**Script**` **step right after the** `**Git Clone**` **step** (that's when your code is available
+**Add the** `Script` **step right after the** `Git Clone` **step** (that's when your code is available
 on the build virtual machine), with the content:
 
     #!/bin/bash
@@ -92,6 +92,6 @@ on the build virtual machine), with the content:
 That's all, this script copies the licenses from the `android-licenses` (from your repository)
 into the system's Android SDK Home path under `licenses` directory.
 
-## Install an additional Android package
+## Installing an additional Android package
 
 Please see [this section](/tips-and-tricks/android-tips-and-tricks/#how-to-install-an-additional-android-sdk-package).
