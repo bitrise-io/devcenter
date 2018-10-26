@@ -1,0 +1,21 @@
+---
+label: ios-deploy
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: field_group
+  label: menu
+  name: menu
+  fields:
+  - type: field_group
+    name: ios-deploy
+    label: ios-deploy
+    fields:
+    - type: text
+      name: weight
+      label: weight
+      config:
+        required: true
