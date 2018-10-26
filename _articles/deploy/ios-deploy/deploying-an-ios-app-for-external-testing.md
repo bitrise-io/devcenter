@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-Before deploying your app to the App Store, you might want to release it to external testers who can test it on their devices outside the development environment. You can do this by exporting an .ipa file with the **ad-hoc** export method.
+Before deploying your app to the App Store, you might want to release it to external testers who can test it on their devices outside the development environment. If you do not want to use Testflight, then you can do this by exporting an .ipa file with the **ad-hoc** export method.
 
 {% include message_box.html type="important" title="Using Testflight" content="If you wish to invite external testers using Testflight, you CANNOT use the **ad-hoc** export method. You need an .ipa with the **app-store** export method."%}
 
