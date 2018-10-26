@@ -16,6 +16,6 @@ To deploy an iOS app to any platform, you need:
 
 Our guides delve into the specifics of these two basic requirements and show how to use our Steps to deploy the app in the exact way you want to!
 
-* [Deploying an iOS app to Bitrise.io (for internal testers)](/deploy/ios-deploy/deploying-an-ios-app/#deploying-an-ios-app-to-bitriseio)
-* [Deploying an iOS app for external testing](/deploy/ios-deploy/deploying-an-ios-app/#deploying-an-ios-app-for-external-testers-without-testflight)
-* [Deploying an iOS app to iTunes Connect](/deploy/ios-deploy/deploying-an-ios-app/#deploying-an-ios-app-to-itunes-connect)
+* [Deploying an iOS app to Bitrise.io (for internal testers)](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/)
+* [Deploying an iOS app for external testing](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/)
+* [Deploying an iOS app to iTunes Connect](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/)
