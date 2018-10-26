@@ -14,12 +14,12 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
+- _articles/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
 - _articles/deploy/android-deploy/deploying-android-apps.md
 - _articles/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/deploy/ios-deploy/introduction-to-deploying-ios-apps.md
-- _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
-- _articles/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
 - _articles/testing/device-testing-for-android.md
 - _articles/reviews/getting-started-with-macos-apps.md
 - _articles/reviews/getting-started-with-ionic-cordova-apps.md

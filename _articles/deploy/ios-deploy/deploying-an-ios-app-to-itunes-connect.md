@@ -2,7 +2,6 @@
 title: Deploying an iOS app to iTunes Connect
 date: 2018-10-26 12:41:22 +0000
 redirect_from: []
-published: false
 
 ---
 You can deploy an app to iTunes Connect (rebranded as App Store Connect) to:
