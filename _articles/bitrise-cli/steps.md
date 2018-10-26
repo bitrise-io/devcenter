@@ -29,7 +29,7 @@ and whether a failed step should mark the build as failed.
 From a configuration perspective all you have to know about Bitrise Steps
 is how you can include and configure them in your build configuration (`bitrise.yml`).
 
-To include a Step you have to reference it by a [Step reference/ID](#step-referenceid-format)
+To include a Step you have to reference it by a [Step reference ID](#step-referenceid-format)
 in the `steps:` list of a Workflow.
 
 An example, with a single `script` step, which will be executed when you run `bitrise run test`:
@@ -46,7 +46,7 @@ workflows:
 
 {% include message_box.html type="note" title="List of available steps (step IDs)" content="
 
-You can list all the available steps in the main Bitrise StepLib by running `bitrise step-list`, or by checking [the steps/ directory of the main Bitrise StepLib repository](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps)."%}
+You can list all the available steps in the main Bitrise StepLib by running `bitrise step-list`, or by checking [the main Bitrise Steplib repository](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps)."%}
 
 Once you include a step in your build configuration (`bitrise.yml`),
 you can specify configurations for the step. The most common thing
@@ -56,7 +56,7 @@ defining the _key_ of the input and the _value_ you want to set.
 
 For example, to specify a simple script to perform for the `script` step,
 you can specify a value for the `script` step's `content` input.
-(_Note: you can list all the inputs of a step with_ `_bitrise step-info STEP-ID_`)
+(_Note: you can list all the inputs of a step with_ `bitrise step-info STEP-ID`)
 
 Let's do a simple "Hello World" script, using the `script` step:
 
@@ -133,12 +133,11 @@ workflows:
             echo "${var_to_print}"
 ```
 
-!!! note "Watch out for the indentation!"
-Indentation in the YAML format is very important!
+{% include message_box.html type="important" title="Indentation in YAML" content="Indentation in the YAML format is very important!
 You should use two-spaces indentation, and you can't use tabs to indent!
 
-    If you use a multi line value, like the one above, it's important that you
-    have to _indent the value with two spaces_, compared to the key!
+If you use a multi line value, like the one above, it's important that you
+have to _indent the value with two spaces_, compared to the key!"%}
 
 You can change other properties of the step too, not just the inputs.
 For example, if you want to "force" run the step even if a previous step fails,
@@ -207,13 +206,11 @@ are the things you want to overwrite.
 To see the step's raw interface definition you can check it in the step library.
 In these examples we always use the [main Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
 The step interface definitions can be found in the StepLib's
-`[steps](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps)`[ directory](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps),
-in this case it's in the [steps/script/1.1.3](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps/script/1.1.3) directory,
-as we used the `1.1.3` version of the `script` step.
-The `[step.yml](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml)`[ in this directory is the step's interface definition](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml).
+[steps directory](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps).
 
-[Check the ](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml)`[step.yml](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml)`,
-you can see all the properties defined for this version of the step.
+The [step.yml file in this directory is the step's interface definition](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml).
+
+You can see all the properties defined for this version of the step.
 Now, if you check our example above, all we did is to
 change the `title` property (from `Script` to `Print Hello Ruby`),
 the `is_always_run` property (from `false` to `true`)
@@ -237,7 +234,7 @@ A step reference from the example `bitrise.yml` above:
 
 Step reference format: `- StepLibSource::StepID@StepVersion:`
 
-**From the three components only Step ID is required (e.g.** `**- script:**`**).**
+**From the three components only Step ID is required (for example,**`script`**).**
 This example item could alternatively be written as `- https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3:`,
 to include all three components of the step reference.
 
