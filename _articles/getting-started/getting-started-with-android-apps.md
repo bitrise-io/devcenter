@@ -12,7 +12,12 @@ menu:
 ---
 In this guide, we'll walk you through how to add an Android app to Bitrise, what primary and deploy workflows can do, and finally how to test and deploy your app to [bitrise.io](https://www.bitrise.io/) and to the App Store.
 
-## Add an Android app to bitrise.io
+* [Adding an Android app to bitrise.io](/getting-started/getting-started-with-android-apps/#add-an-android-app-to-bitriseio)
+* [Dependencies](/getting-started/getting-started-with-android-apps/#dependencies)
+* [Testing your project](/getting-started/getting-started-with-android-apps/#testing-your-project)
+* [Deploying your project](/getting-started-with-android-apps/#deploying-your-project)
+
+## Adding an Android app to bitrise.io
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
@@ -114,7 +119,7 @@ Here is an example of a deploy workflow:
 
 Luckily, our `Android Build` step, which is by default part of your deploy workflow, takes care of all the dependencies which you have listed in your `build.gradle` file and installs them for your project.
 
-## Test your project
+## Testing your project
 
 As you can see in the above Android workflows, the `Android Lint` and `Android Unit Test` steps are by default included in your workflow.
 
@@ -128,9 +133,9 @@ If you selected instrumentation, don't forget to set **Test APK path** under t
 
 {% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow and select another `TEST` step from our collection."%}
 
-## Deploy your project
+## Deploying your project
 
-### Deploy to bitrise.io
+### Deploying to bitrise.io
 
 This step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
 
@@ -139,7 +144,7 @@ You can share the generated apk with your team members using the build's URL. Yo
 1. Go to the `Deploy to bitrise.io` step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated apk in the `APPS & ARTIFACTS` tab.
 
-### Deploy to marketplace
+### Deploying to marketplace
 
 If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step), your signed apk will get uploaded to a marketplace of your choice.
 
