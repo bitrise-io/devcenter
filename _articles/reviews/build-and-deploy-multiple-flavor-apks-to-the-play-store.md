@@ -22,7 +22,7 @@ If you have an Android deploy workflow, do the following:
 
 ## Sign and deploy multi-flavor APKs
 
-1. Add one `Sign APK` Step AFTER the `Gradle Runner` Step if it's missing from your workflow.
+1. Add one `Sign APK` Step AFTER `Gradle Runner` Step if it's missing from your workflow.
 2. Set the `$BITRISE_APK_PATH_LIST` in the `apk path` input field which will make sure all the required APKs will get code signed with the keystore file you uploaded to the `Code Signing` tab. Check out [how you can upload your keystore file to bitrise.io](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#create-a-signed-apk-with-the-sign-apk-step/). The Step will export a `$BITRISE_SIGNED_APK_PATH` env var output which lists all your signed build variants.
 3. Add the `Google Play Deploy` Step AFTER the `Sign APK` step.
 4. Set the `$BITRISE_SIGNED_APK_PATH` env var in the `APK or App Bundle file path` Step input field so that `Google Play Deploy` can release all your build variants to the app store.
