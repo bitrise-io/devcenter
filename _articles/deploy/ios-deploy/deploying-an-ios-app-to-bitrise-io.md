@@ -2,7 +2,6 @@
 title: Deploying an iOS app to Bitrise.io
 date: 2018-10-26 12:37:47 +0000
 redirect_from: []
-published: false
 
 ---
 Deploy an app to Bitrise to be able to download the .ipa file and install it on devices specified in the app's Development Provisioning Profile. This way, your internal testers can easily test the app.
