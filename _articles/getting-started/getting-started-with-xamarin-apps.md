@@ -14,6 +14,12 @@ menu:
 
 You can do the entire procedure in one single workflow but we recommend using at least two: one to test your app and one to deploy it. There is no need to have separate workflows for the different project types, though: you can build both an iOS and an Android version of a Xamarin app within a single workflow.
 
+* [Before you start](/getting-started/getting-started-with-xamarin-apps/#before-you-start)
+* [Adding a Xamarin app](/getting-started/getting-started-with-xamarin-apps/#adding-a-xamarin-app)
+* [Installing dependencies](/getting-started/getting-started-with-xamarin-apps/#installing-dependencies)
+* [Testing Xamarin apps](/getting-started/getting-started-with-xamarin-apps/#testing-xamarin-apps)
+* [Deploying Xamarin apps](/getting-started/getting-started-with-xamarin-apps/#deploying-xamarin-apps)
+
 ## Before you start
 
 Before adding a Xamarin app on Bitrise, you need to prepare your Xamarin solution file. Bitrise detects the solution file and all the available [solution configurations](https://docs.microsoft.com/en-us/visualstudio/ide/understanding-build-configurations?view=vs-2017) present in it.
