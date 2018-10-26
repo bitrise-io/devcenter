@@ -65,6 +65,11 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: _articles/deploy
+  label: Deployment
+  create: all
+  match: "**/*"
+- type: directory
   path: _articles/tutorials
   label: Tutorials
   create: all
