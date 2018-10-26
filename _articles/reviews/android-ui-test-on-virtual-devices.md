@@ -2,9 +2,6 @@
 title: Device testing for Android-draft
 date: 2018-10-13 08:39:08 +0000
 redirect_from: []
-menu:
-  testing:
-    weight: 5
 published: false
 
 ---
