@@ -15,11 +15,11 @@ If you have an Android deploy workflow do the following:
 2. Click the `Config` section of the Step.
 3. Specify the `assemble` [Gradle tasks](/tips-and-tricks/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project/) by adding your build variants' task names in the `Gradle task to run` Step input field - as many task names as many build variants you want to build in one workflow. Each task name must be **exactly the same build variant name** what you have listed in `Build Variant` window of Android Studio! Make sure you separate them only with a space, no need for `,`! In the below image, you can see the order of the Steps for the deploy workflow and the `Gradle Task to run` Step input with the two build variants:
 
-   `assembleDemo` and `assembleFul`
+   `assembleDemo` and `assembleFull`
 
-   ![](/img/gradle-multiflavor.jpg)
+![](/img/multiflavor.jpg)
 
-   `Gradle Runner` generates a `$BITRISE_APK_PATH_LIST` env var output that contains ALL the build variants you have set in `Gradle task to run` Step above. We will need this output env var later but you can always check it and its value containing the APKs at the `Env Vars` tab of your Workflow Editor!
+1. `Gradle Runner` generates a `$BITRISE_APK_PATH_LIST` env var output that contains ALL the build variants you have set in `Gradle task to run` Step above. We will need this output env var later but you can always check it and its value containing the APKs at the `Env Vars` tab of your Workflow Editor!
 
 ## Sign and deploy multi-flavor APKs
 
