@@ -82,7 +82,7 @@ If you uploaded the correct code signing files, the `Certificate and profile ins
 
 If you set up your code signing files and created an .app or .pkg file for your internal testers, it is time to involve external testers and then to publish your MacOS app to the App Store. Let's see how!
 
-{% include message_box.html type="note" title="My message" content="If you want to distribute your app elsewhere than the App Store, you can sign it with [a Developer ID](https://developer.apple.com/support/developer-id/). This method is not in the scope of this guide."%} 
+{% include message_box.html type="note" title="Developer ID" content="If you want to distribute your app elsewhere than the App Store, you can sign it with [a Developer ID](https://developer.apple.com/support/developer-id/). This method is not in the scope of this guide."%} 
 
 To deploy to Testflight and to the App Store, you will need more code signing files:
 
