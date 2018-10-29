@@ -146,18 +146,20 @@ Now that we're ready for deployment, let's see how to publish your iOS and Andro
 
 ### Deploying to Google Play Store
 
-1. **Make sure you are in sync with Google Play Store! Learn how to**
-   * [**register to Google Play Store and set up your project**](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   * **set up** [**Google Play API access**](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access) **- \[I'd put this before the procedure, as a prerequisite\]**
-2. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-3. Copy the env key which stores your uploaded file’s url.
+Before you start:
 
-   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Add the `Google Play Deploy` step after `Cordova Archive` or `Ionic Archive` Step in your deploy workflow.
-5. Fill out the required input fields:
-   * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   * `Package name`: the package name of your Android app
-   * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
+* make sure you have [**registered to Google Play Store and set up your project**](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+* make sure you have set up [**Google Play API access**](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+
+1. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+2. Copy the env key which stores your uploaded file’s url.
+     For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+3. Add the `Google Play Deploy` step after `Cordova Archive` or `Ionic Archive` Step in your deploy workflow.
+4. Fill out the required input fields:
+
+* `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+* `Package name`: the package name of your Android app
+* `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
 
 ### Deploying to Bitrise
 
