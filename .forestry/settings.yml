@@ -96,6 +96,11 @@ sections:
   label: Tools
   create: all
   match: "**/*"
+- type: directory
+  path: _articles/api
+  label: API
+  create: all
+  match: "**/*"
 - type: heading
   label: Data files
 - type: document
