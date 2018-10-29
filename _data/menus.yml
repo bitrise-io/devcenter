@@ -37,23 +37,6 @@ team-management:
 - title: Organizations
   identifier: organizations
   weight: 3
-api:
-- weight: 7
-  title: Bitrise.io API v0.1 (Work In Progress)
-- weight: 3
-  title: App Status Image/Badge API
-- weight: 1
-  title: Build Trigger API
-- weight: 5
-  title: Outgoing Webhooks
-- weight: 6
-  title: Outgoing Webhooks
-- weight: 2
-  title: Build Trigger API
-- weight: 4
-  title: App Status Image/Badge API
-- weight: 8
-  title: Bitrise.io API v0.1 (Work In Progress)
 builds:
 - title: Triggering builds
   identifier: triggering-builds
