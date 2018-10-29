@@ -78,11 +78,9 @@ You will need:
 
 If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa with the development export method. If you have the `Deploy to Bitrise.io` Step in your workflow, you can find the .ipa on the `Apps & Artifacts` tab of the build page.
 
-iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](/code-signing/ios-code-signing/code-signing)!
-
 ## Deploying to TestFlight and the App Store
 
-If you set up your code signing files and created an .ipa for your internal testers, it is time to involve external testers and then to publish your iOS app to the App Store. Let's see how!
+If you set up your code signing files and created an .app or .pkg file for your internal testers, it is time to involve external testers and then to publish your MacOS app to the App Store. Let's see how!
 
 {% include message_box.html type="note" title="My message" content="If you want to distribute your app elsewhere than the App Store, you can sign it with [a Developer ID](https://developer.apple.com/support/developer-id/). This method is not in the scope of this guide."%} 
 
@@ -94,7 +92,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 1. On your local machine, set up App Store code signing for your project in Xcode, and export an .app or .pkg file. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
 3. Go to the app's Workflow Editor and create a [new workflow](/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
-4. Set the `Select method for export` input of the `Xcode Archive & Export for iOS` Step to `app-store`.
+4. Set the `Export Method` input of the `Xcode Archive for Mac` Step to `app-store`.
 
    ![App store export](/img/app-store-export.png)
 5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive for Mac` Step but preferably before the `Deploy to Bitrise.io` Step.
