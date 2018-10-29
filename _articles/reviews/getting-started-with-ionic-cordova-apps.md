@@ -76,7 +76,7 @@ To sign your iOS project, you have to upload code signing certificates and provi
 
    ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
 4. Make sure you have the `Certificate and profile installer` step in your workflow as this Step can download and install the certificates ton the virtual machine.
-5. Add the `Generate cordova build configuration` step to your Workflow. (This step does all the configuration needed for the next step, which is `Cordova Archive` or `Ionic Archive`.) It **must come after** the `Certificate and profile installer` step. 
+5. Add the `Generate cordova build configuration` step to your Workflow. (This step does all the configuration needed for the next step, which is `Cordova Archive` or `Ionic Archive`.) It **must come after** the `Certificate and profile installer` step.
 6. Fill in the required input for the step. Please note that both the `Code Signing Identity` and the `Provisioning Profile` are required inputs for iOS apps even though they are not marked as such.
 
    ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/code-signing/ios-code-signing/cordova-config-inputs.png)
@@ -135,15 +135,15 @@ Now that we're ready for deployment, let's see how to publish your iOS and Andro
 
 ### Deploying to Google Play Store
 
-1. Make sure you are in sync with Google Play Store! Learn how to
-   * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+1. **Make sure you are in sync with Google Play Store! Learn how to**
+   * [**register to Google Play Store and set up your project**](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+   * **set up** [**Google Play API access**](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access) **- \[I'd put this before the procedure, as a prerequisite\]**
 2. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 4. Add the `Google Play Deploy` step after `Cordova Archive` or `Ionic Archive` Step in your deploy workflow.
-5. Fill out the required input fields as follows:
+5. Fill out the required input fields:
    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
