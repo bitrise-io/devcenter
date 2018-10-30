@@ -162,5 +162,5 @@ If your build requires JDK 8, you can install and activate it with a `Script` st
     echo "done"
 
 That's all, just add the `Script` step to the Workflow with the content above,
-and start a new build. _This_ `_Script_`_ step can be the very first step in the Workflow,
-as it does not depend on anything else._
+and start a new build. This `Script` step can be the very first step in the Workflow,
+as it does not depend on anything else.
