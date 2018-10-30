@@ -59,7 +59,7 @@ In `Run npm command`, type `install` in the `npm command with arguments to run` 
 
 ### Native dependencies
 
-`Install missing Android tools` step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your deploy workflow.
+`Install missing Android SDK components` Step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your deploy workflow.
 
 For iOS dependencies, you can add the `Run CocoaPods install` step to your workflow as it is not part of the workflow by default.
 
