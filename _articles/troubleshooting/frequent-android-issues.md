@@ -23,7 +23,7 @@ or
 
 ### Solution
 
-**Please use the** `Install missing Android tools` **step. The section below is kept only for referencing purposes!**
+**Please use the** `Install missing Android SDK components` **Step. The section below is kept only for referencing purposes!**
 
 The error means that your build requires an Android package which is either not (yet) preinstalled
 (_you can see which packages are preinstalled_ [_here, on GitHub_](https://github.com/bitrise-docker/android/blob/master/Dockerfile#L30)_ -
@@ -52,11 +52,11 @@ with the following content:
 In most cases you don't need both packages to be updated, so you can try to remove them one
 by one, but having all three in the script covers most of the cases related to this error.
 
-{% include message_box.html type="note" title="We update the preinstalled Android packages every weekend" content=" So if the error is related to an outdated package, the workaround we describe here can be removed from your build after the weekend update is completed. "%} 
+{% include message_box.html type="note" title="We update the preinstalled Android packages every weekend" content=" So if the error is related to an outdated package, the workaround we describe here can be removed from your build after the weekend update is completed. "%}
 
 ### Alternative solution for the license error
 
-**Please use the** `Install missing Android tools` **step. The section below is kept only for referencing purposes!**
+**Please use the** `Install missing Android SDK components` **step. The section below is kept only for referencing purposes!**
 
 An alternative solution for the `You have not accepted the license agreements of the following SDK components`
 error, as printed in the log:
