@@ -20,7 +20,6 @@ pages:
 - _articles/testing/device-testing-for-android.md
 - _articles/reviews/getting-started-with-macos-apps.md
 - _articles/reviews/getting-started-with-ionic-cordova-apps.md
-- _articles/reviews/android-ui-test-on-virtual-devices.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/reviews/meta-field.md
 - _articles/reviews/build-logs.md
