@@ -42,7 +42,7 @@ Let's see some use cases when you would benefit from customizing `bitrise.yml` t
                  last_modified_at: 2018.09.12.
                  last_modifier: Jane Doe
 
-Of course, this use case works only if your customized tool is shared with your team in your company's own intranet or if it's handled by some software.
+Of course this use case works only if your customized tool is shared with your team in your company's own intranet or if it's handled by some software.
 
 * Another use case with `meta` can be if you want to add background color to an env var in your own tool:
 
