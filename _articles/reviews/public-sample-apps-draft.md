@@ -18,7 +18,21 @@ This guide aims to remedy some pain points you might experience when configuring
 * fastlane-snappy-sample-app
 * android-sample-app
 
+## About triggers
+
+With every public sample app, the primary workflow gets triggered when code is pushed to the Feature branch. If code is pushed content to the develop branch, then the deploy workflow gets triggered.
+
+![](/img/triggers-sample-app.png)
+
+Learn more about triggering builds [here](/builds/triggering-builds/triggering-builds/).
+
 ## ios-sample-app
+
+We suggest you to include the `Deploy to Bitrise.io - Apps, Logs, Artifacts` step so that you can check why Xcode has failed. 
+
+![](/img/sample-app-ios.png)
+
+![](/img/xcode-test-results.png)
 
 ## android-sample-app
 
