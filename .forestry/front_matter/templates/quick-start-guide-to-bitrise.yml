@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/bitrise-cli/customizing-bitrise-yml.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/reviews/deploying-an-ios-app-for-simulators.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
