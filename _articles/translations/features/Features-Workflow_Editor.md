@@ -1,78 +1,73 @@
-<!--
-These are the copies from the Bitrise Features page: https://www.bitrise.io/features/workflow-editor
-With your help, we could build the first localized version for Japan.
--->
-
-WORKFLOW EDITOR
-# Create workflows for any scenario
+ワークフロー エディタ
+# 任意のシナリオのワークフローを作成します
 
 ## GitFlow
-If you use GitFlow for development, you can easily create separate workflows for your feature/*, develop and master branches, to define which kind of tests to run when, and which version of your app to deploy to specific tester groups.
+開発用のGItFlowを使用すると、ワークフローの個別の作成や、ブランチでの開発、実行するテストの種類や、特定のテスターグループに展開するアプリケーションのバージョンを簡単に指定する事ができます。
 
 ## White label apps
-For your white label apps, you can easily create different workflows for your different app flavors, defining the necessary environment variables at the beginning of a build. Check the guide in our Docs.
+あなたの White label apps に、様々なアプリケーションフレーバ専用のワークフローを作成する事ができます。
 
-## Cross-platform
-Setting up a CI for your cross-platform apps has never been easier. Simply create an iOS and an Android specific workflow and keep everything neat and tidy with your setup.
+## クロスプラットフォーム
+iOSとAndroid専用のワークフローを作成し、それぞれの環境を整えましょう。
 
-## Workflow specific stacks
-Run your regression tests by defining a different stack for a workflow. This could come in handy when a new Xcode beta comes out and you’d like to test it out on your project before migrating your whole project over.
+## ワークフロー特有のスタック
+テストを実行するにはワークフローに異なるスタックを定義します。これは、Xcodeの最新版(beta含む)が出てきた際、プロジェクト全体を移行する前に全体をテストしたい時に非常に役立ちます。
 
-Read more on our blog
+ブログをもっと見る
 
 ———
 
-# Define what to build when with triggers
+# ビルドする際の条件を設定します
 ## Code push
-Setup which workflow to build with when a specific branch is updated.
+特定のブランチがアップデートされた時。
 
 ## Pull request
-Test your code before merging your pull request. Bitrise allows specifying a/the source and a/the target branch of your PR and sends back the build status automatically to GitHub, Bitbucket or GitLab.
+プルリクエストをマージする前にコードをテストをしてください。 Bitriseでは、プルリクエストのソースブランチとターゲットブランチを指定し、自動的にGitHub、Bitbucket、GitLabにビルドステータスを返すことができます。
 
 ## Tags
-Define what should happen when you add a tag to your repository.
+リポジトリにタグを追加するときに何が起こるべきかを定義します。
 
-Check trigger map docs
-
-———
-
-# Secure file storage
-## Secret environment variables
-Secrets are stored encrypted and are only exposed during (a) build(s) or when you’d like to reveal them on the UI. Your credentials and API keys for connected services are safe with us.
-
-## Make secrets & files protected
-You can set any secret env or file, such as (a) provisioning profile(s), (a) certificate(s) or (a) keystore(s) as protected. Protected secrets cannot be revealed on the UI and such files cannot be downloaded by anyone from your team.
+ドキュメントを確認する
 
 ———
 
-# Run the same config locally
-Download your bitrise.yml and use our open source CLI locally to debug a build or to run your automations from the terminal. Bitrise saves each build’s configuration state and if changed you can check out a diff between the older and the new versions. Something seems off? Click restore to roll back to an earlier version.
+# 安全なファイルストレージ
+## シークレット環境変数
+シークレットは暗号化されて保存され、ビルド中またはUIを公開するときにのみ公開されます。接続されたサービスの資格情報とAPIキーは安全です。
 
-Read more about CLI
-
-———
-
-# Chain workflows together
-Specify workflows for repeat stages in your pipelines and connect them together seamlessly. See all your workflow chains at a glance on the UI.
+## ファイルの保護
+プロビジョニング・プロファイル、証明書または保護されたキーストアなど、秘密のenvまたはファイルを設定できます。保護された秘密はUI上に公開することはできず、そのファイルはあなたのチームの誰もダウンロードすることはできません
 
 ———
 
-# 180+ integrations
-You name it, we have it. Use steps from our library to create powerful workflows, and if you’re missing an integration, add it to our open source library.
+# 同じ設定をローカルで実行する
+`bitrise.yml` をダウンロードし、オープンソースのCLIをローカルで使用して、デバッグしたり、端末からオートメーションを実行したりしてください。Bitriseは各ビルドの設定状態を保存し、変更された場合は、古いバージョンと新しいバージョンの差分を確認することができます。ちなみに、以前のバージョンにロールバックするには、[復元]をクリックします。 
 
-## Scripting
-You can do scripting, but you don’t have to. Sometimes you need something custom, we get it. Drop in a Script step anywhere in your workflow and run any command or install any tool that you need. Don’t worry you have full control over the virtual machine.
-
-———
-
-# Open source
-You can even configure your workflows on your desktop by downloading the open source editor, if adding lines to your YAML is not your style.
-
-Check the source code on GitHub
+CLIについての詳細
 
 ———
 
-NOT SURE YET?
-# Sign up now — choose plan later
-Take a look around and find your perfect fit!
-SIGN UP FOR FREE TRIAL
+# 一緒にワークフローのチェーンを見ましょう
+パイプラインの繰り返しステージのワークフローを指定し、シームレスに接続します。 UI上のすべてのワークフローチェーンを一目で見ることができます。
+
+———
+
+# 180以上の統合が可能
+ライブラリの手順を使用して強力なワークフローを作成します。統合が欠けている場合は、オープンソースライブラリに追加してください。
+
+## スクリプティング
+あなたはスクリプトを書くことができますが、しかしそれをする必要はありません。ワークフロー内の任意の場所にScriptステップを挿入し、コマンドを実行するか、必要なツールをインストールします。仮想マシンは完全に制御できるので心配しないでください。
+
+———
+
+# オープンソース
+YAMLにラインを追加するのがあなたのスタイルにと合わない場合は、オープンソースエディタをダウンロードしてデスクトップ上にワークフローを設定することもできます。
+
+GitHubのソースコードを確認する
+
+———
+
+もうお分かりですね？
+# 今すぐ申し込む - 後でプランを選択する
+周りの人を見てみましょう。あなたにも完璧な設定が見つかるはずです！
+無料トライアルに申し込む
