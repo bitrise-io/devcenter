@@ -53,7 +53,11 @@ Run any of the tasks on Bitrise either using `Do anything with our Script` Step 
   sample
 * You can use our `Gradle Runner` or `Android Build` Steps and specify the task as the value of the step input.
 
-![](/img/gradle-task.png) Instead of running `gradle` directly, you should run the gradle commands through `gradlew` (Gradle Wrapper) which is part of our `Gradle Runner` Step. You can find more information about the Gradle Wrapper (gradlew) and how you can generate one (if you would not have done it already) in the [official guide](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
+![](/img/gradle-task.png) Instead of running `gradle` directly, you should run the gradle commands through `gradlew` (Gradle Wrapper) which is part of our `Gradle Runner` Step. 
+
+![](/img/gradlew.png)
+
+You can find more information about the Gradle Wrapper (gradlew) and how you can generate one (if you would not have done it already) in the [official guide](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
 
 ## How to install an additional Android SDK package
 
