@@ -28,7 +28,7 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ## ios-sample-app
 
-If you use `Xcode test for iOS` Step in you workflow, we suggest you to include the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step so that you can check the test results (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page.  
+If you use `Xcode test for iOS` Step in you workflow, we suggest you to include the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step so that you can check the test results (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page.
 
 ![](/img/sample-app-ios.png)
 
@@ -40,9 +40,9 @@ If you use `Xcode test for iOS` Step in you workflow, we suggest you to include 
 
 ## carthage-sample-app
 
-Our `Carthage` Step is a iOS dependency manager. 
+Our `Carthage` Step is a iOS dependency manager.
 
-* Make sure you add your `Github Personal Access Token` input in the step input field as a secret, otherwise the build will throw the following error message: 
+* Make sure you add your `Github Personal Access Token` input in the step input field as a secret, otherwise the build will throw the following error message:
 
       API rate limit exceeded for 208.52.166.154. (But here’s the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.
 
@@ -57,14 +57,9 @@ Our `Carthage` Step is a iOS dependency manager.
 
 * `Generate cordova build configuration` step is a configuration step which generates the build.json file on which the building is based.
 
-  {% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" This is my **content**, full o**__INFOR**It is *so*, \`ver **INFORM**
-
-For more information on code signing Ionic or Cordova, read this [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/).
-
-For more information on how to get stared with Ionic or Cordova, read this guide.
+  {% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" For more information on code signing Ionic or Cordova, read this [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/). For more information on code signing Ionic or Cordova, read this guide." %}
 
 ## fastlane-ios-sample-app and fastlane-android-sample-app
-
 
 ## fastlane-snappy-sample-app
 
