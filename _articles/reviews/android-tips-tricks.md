@@ -18,7 +18,7 @@ A standard Android Gradle project includes a lot of tasks by default such as:
 
 ### How to get the list of available Gradle tasks in your project
 
-To get the base task list, call `gradle tasks` in your Android app's directory. When running `gradle tasks`, you'll get a list of available Gradle tasks in the format:
+* To get the base task list, call `gradle tasks` in your Android app's directory. When running `gradle tasks`, you'll get a list of available Gradle tasks in the format:
 
     $ gradle task
     
@@ -42,17 +42,16 @@ To get the base task list, call `gradle tasks` in your Android app's directory. 
     assembleRelease - Assembles all Release builds.
     ...
 
-To see all the available tasks, call `gradle tasks --all`.
+* To see all the available tasks, call `gradle tasks --all`.
 
-### How to run a Gradle task
+### Run Gradle task with our Steps
 
-Run any of the tasks on Bitrise either using `Do anything with our Script` Step or our `Gradle Runner` Step. 
+Run any of the tasks on Bitrise either using `Do anything with our Script` Step or our `Gradle Runner` Step.
 
 * You can run any of the tasks on Bitrise by using our `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemle`).
 
-    sample
-
-* You can use our `Gradle Runner` or `Android Build` Steps ([https://github.com/bitrise-io/steps-gradle-runner](https://github.com/bitrise-io/steps-gradle-runner "https://github.com/bitrise-io/steps-gradle-runner")) and specify the task as the value of the step input.
+  sample
+* You can use our `Gradle Runner` or `Android Build` Steps and specify the task as the value of the step input.
 
 ![](/img/gradle-task.png)
 
