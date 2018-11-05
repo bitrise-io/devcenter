@@ -65,10 +65,9 @@ For more information on how to get stared with Ionic or Cordova, read this guide
 
 ## fastlane-ios-sample-app and fastlane-android-sample-app
 
-\-
 
 ## fastlane-snappy-sample-app
 
 This workflow is configured to create screenshots of the unit test so that you can check the output in the `APPS & ARTIFACTS` tab of your Build's page.
 
-* ![](/img/screenshot-snappy.png)
+![](/img/screenshot-snappy.png)
