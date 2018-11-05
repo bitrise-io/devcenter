@@ -28,7 +28,7 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ## ios-sample-app
 
-We suggest you to include the `Deploy to Bitrise.io - Apps, Logs, Artifacts` step so that you can check why Xcode has failed. 
+If you use `Xcode test for iOS` Step in you workflow, we suggest you to include the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step so that you can check the test results (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page.  
 
 ![](/img/sample-app-ios.png)
 
@@ -40,27 +40,35 @@ We suggest you to include the `Deploy to Bitrise.io - Apps, Logs, Artifacts` ste
 
 ## carthage-sample-app
 
-Our `Carthage` Step is a iOS dependency manager.
+Our `Carthage` Step is a iOS dependency manager. 
 
-* Make sure you add your `Github Personal Access Token` input in the step as a secret, otherwise the build will throw the following error message: API rate limit exceeded for 208.52.166.154. (But here’s the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.
-* The step must come before any building step!
+* Make sure you add your `Github Personal Access Token` input in the step input field as a secret, otherwise the build will throw the following error message: 
+
+      API rate limit exceeded for 208.52.166.154. (But here’s the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.
+
+  Make sure you insert the step BEFORE any building step in your deploy workflow.
+* cocoapods - if ios dependencies mentioned?
 
 ## xamarin-sample-app
 
-* NuGet restore Step is the recommended dependency manager for your Xamarin project.
+* NuGet restore Step is the recommended dependency manager for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
 
 ## ionic-sample-app and cordova-sample-app
 
 * `Generate cordova build configuration` step is a configuration step which generates the build.json file on which the building is based.
 
-For more information on code signing Ionic or Cordova, read this guide.
+  {% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" This is my **content**, full o**__INFOR**It is *so*, \`ver **INFORM**
+
+For more information on code signing Ionic or Cordova, read this [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/).
 
 For more information on how to get stared with Ionic or Cordova, read this guide.
 
 ## fastlane-ios-sample-app and fastlane-android-sample-app
 
+\-
+
 ## fastlane-snappy-sample-app
 
-This workflow is configured to create screenshots of the unit test
+This workflow is configured to create screenshots of the unit test so that you can check the output in the `APPS & ARTIFACTS` tab of your Build's page.
 
-* 
+* ![](/img/screenshot-snappy.png)
