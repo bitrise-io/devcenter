@@ -36,7 +36,7 @@ If you use `Xcode test for iOS` Step in you workflow, we suggest you to include 
 
 ## android-sample-app
 
-* in your primary workflow you should have all the testing steps such as `Android Lint` and `Android Unit Test` Steps, whereas your deploy workflow should contain the building step, like Android Build or Gradle Runner Steps.
+* in your primary workflow you should have all the testing steps such as `Android Lint` and `Android Unit Test` Steps, whereas your deploy workflow should contain one of our building steps, like `Android Build` or `Gradle Runner` Steps.
 
 ## carthage-sample-app
 
@@ -51,7 +51,7 @@ Our `Carthage` Step is a iOS dependency manager.
 
 ## xamarin-sample-app
 
-* NuGet restore Step is the recommended dependency manager for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
+* `NuGet restore` Step is the recommended dependency manager for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
 
 ## ionic-sample-app and cordova-sample-app
 
