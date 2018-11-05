@@ -7,7 +7,7 @@ published: false
 ---
 ## Gradle Runner vs Android Build
 
-In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps. 
+In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps and what the major differences are. 
 
 ## About Gradle tasks
 
