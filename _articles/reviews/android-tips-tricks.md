@@ -46,13 +46,13 @@ To see all the available tasks, call `gradle tasks --all`.
 
 ### How to run a Gradle task
 
-Run any of the tasks on Bitrise either using `Script` Step or our `Gradle Runner` Step. 
+Run any of the tasks on Bitrise either using `Do anything with our Script` Step or our `Gradle Runner` Step. 
 
-You can run any of the tasks on bitrise from a `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemle`).
+* You can run any of the tasks on Bitrise by using our `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemle`).
 
     sample
 
-You can use `Gradle Runner` step ([https://github.com/bitrise-io/steps-gradle-runner](https://github.com/bitrise-io/steps-gradle-runner "https://github.com/bitrise-io/steps-gradle-runner")) and specify the task as the value of `Gradle task to run` input.
+* You can use our `Gradle Runner` or `Android Build` Steps ([https://github.com/bitrise-io/steps-gradle-runner](https://github.com/bitrise-io/steps-gradle-runner "https://github.com/bitrise-io/steps-gradle-runner")) and specify the task as the value of the step input.
 
 ![](/img/gradle-task.png)
 
