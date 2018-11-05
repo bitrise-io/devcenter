@@ -5,6 +5,10 @@ redirect_from: []
 published: false
 
 ---
+## Gradle Runner vs Android Build
+
+In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps. 
+
 ## About Gradle tasks
 
 A `gradle` task is a process you can run with `gradle`. You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal.
@@ -48,12 +52,12 @@ To see all the available tasks, call `gradle tasks --all`.
 
 Run any of the tasks on Bitrise either using `Do anything with our Script` Step or our `Gradle Runner` Step.
 
-* You can run any of the tasks on Bitrise by using our `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemle`).
+* You can run any of the tasks on Bitrise by using our `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemble`).
 
   sample
 * You can use our `Gradle Runner` or `Android Build` Steps and specify the task as the value of the step input.
 
-![](/img/gradle-task.png) Instead of running `gradle` directly, you should run the gradle commands through `gradlew` (Gradle Wrapper) which is part of our `Gradle Runner` Step. 
+![](/img/gradle-task.png) Instead of running `gradle` directly, you should run the gradle commands through `gradlew` (Gradle Wrapper) which is part of our `Gradle Runner` Step.
 
 ![](/img/gradlew.png)
 
@@ -61,7 +65,9 @@ You can find more information about the Gradle Wrapper (gradlew) and how you can
 
 ## How to install an additional Android SDK package
 
-**The preferred way to do this is to use the** `Install missing Android SDK components` **step**. Please only use a Script solution if you really have to, as you'll have to update the Script if the Android tools change (which did happen).
+We suggest you to use our `Install missing Android SDK components` Step to install dependencies for your Android project. Please only use a Script? solution if you really have to, as you'll have to manually update the Script if the Android tools change (which did happen).
+
+### Manual installation of Android SDKs?
 
 All you have to do is to add a `Script` step to your workflow, and use the Android `sdkmanager` tool to install the additional packages you want to.
 
