@@ -42,11 +42,19 @@ To get the base task list, call `gradle tasks` in your Android app's directory. 
     assembleRelease - Assembles all Release builds.
     ...
 
-To see all the available tasks, call `gradle tasks --all`
+To see all the available tasks, call `gradle tasks --all`.
 
 ### How to run a Gradle task
 
-You can run any of the tasks on bitrise from a `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemle`) or by using our `Gradle Runner` step ([https://github.com/bitrise-io/steps-gradle-runner](https://github.com/bitrise-io/steps-gradle-runner "https://github.com/bitrise-io/steps-gradle-runner")) and specifying the task as the value of the `gradle_task` input.
+Run any of the tasks on Bitrise either using `Script` Step or our `Gradle Runner` Step. 
+
+You can run any of the tasks on bitrise from a `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemle`).
+
+    sample
+
+You can use `Gradle Runner` step ([https://github.com/bitrise-io/steps-gradle-runner](https://github.com/bitrise-io/steps-gradle-runner "https://github.com/bitrise-io/steps-gradle-runner")) and specify the task as the value of `Gradle task to run` input.
+
+![](/img/gradle-task.png)
 
 **Instead of running** `gradle` **directly, you should run the gradle commands through** `gradlew` **(the Gradle Wrapper)!** The `Gradle Runner` step does this, and as you can see it in the related input description of the step:
 
