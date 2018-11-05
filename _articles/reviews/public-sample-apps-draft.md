@@ -57,7 +57,7 @@ Our `Carthage` Step is a iOS dependency manager.
 
 * `Generate cordova build configuration` step is a configuration step which generates the build.json file on which the building is based.
 
-  {% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" For more information on code signing Ionic or Cordova, read this [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/). For more information on code signing Ionic or Cordova, read this guide." %}
+{% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" For more information on code signing Ionic or Cordova, read this [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/). For more information on code signing Ionic or Cordova, read this guide." %}
 
 ## fastlane-ios-sample-app and fastlane-android-sample-app
 
