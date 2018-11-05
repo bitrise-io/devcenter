@@ -5,16 +5,18 @@ redirect_from: []
 published: false
 
 ---
-## What are Gradle tasks and how can I get the list of available tasks in my project?
+## About Gradle tasks
 
 A `gradle` task is a process you can run with `gradle`. You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal.
 
-A standard Android Gradle project includes a lot of tasks by default, things like:
+A standard Android Gradle project includes a lot of tasks by default such as:
 
-* `androidDependencies - Displays the Android dependencies of the project.`
-* `assemble - Assembles all variants of all applications and secondary packages.`
-* `assembleAndroidTest - Assembles all the Test applications.`
-* `clean - Deletes the build directory`
+* `androidDependencies` - Displays the Android dependencies of the project.
+* `assemble` - Assembles all variants of all applications and secondary packages.
+* `assembleAndroidTest` - Assembles all the Test applications.
+* `clean` - Deletes the build directory.
+
+### Get the list of available Gradle tasks in your project
 
 You can get the base task list by calling `gradle tasks` in your Android app's directory, or to see all the available tasks you can call `gradle tasks --all`.
 
