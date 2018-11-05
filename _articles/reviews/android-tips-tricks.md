@@ -16,11 +16,9 @@ A standard Android Gradle project includes a lot of tasks by default such as:
 * `assembleAndroidTest` - Assembles all the Test applications.
 * `clean` - Deletes the build directory.
 
-### Get the list of available Gradle tasks in your project
+### How to get the list of available Gradle tasks in your project
 
-You can get the base task list by calling `gradle tasks` in your Android app's directory, or to see all the available tasks you can call `gradle tasks --all`.
-
-Running `gradle tasks` you'll get a list of available Gradle tasks in the format:
+To get the base task list, call `gradle tasks` in your Android app's directory. When running `gradle tasks`, you'll get a list of available Gradle tasks in the format:
 
     $ gradle task
     
@@ -43,6 +41,10 @@ Running `gradle tasks` you'll get a list of available Gradle tasks in the format
     assembleDebug - Assembles all Debug builds.
     assembleRelease - Assembles all Release builds.
     ...
+
+To see all the available tasks, call `gradle tasks --all`
+
+### How to run a Gradle task
 
 You can run any of the tasks on bitrise from a `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemle`) or by using our `Gradle Runner` step ([https://github.com/bitrise-io/steps-gradle-runner](https://github.com/bitrise-io/steps-gradle-runner "https://github.com/bitrise-io/steps-gradle-runner")) and specifying the task as the value of the `gradle_task` input.
 
