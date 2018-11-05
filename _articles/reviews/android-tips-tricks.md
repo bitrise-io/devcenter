@@ -18,7 +18,7 @@ A standard Android Gradle project includes a lot of tasks by default such as:
 
 ### How to get the list of available Gradle tasks in your project
 
-* To get the base task list, call `gradle tasks` in your Android app's directory. When running `gradle tasks`, you'll get a list of available Gradle tasks in the format:
+To get the base task list, call `gradle tasks` in your Android app's directory. When running `gradle tasks`, you'll get a list of available Gradle tasks in the format:
 
     $ gradle task
     
@@ -42,7 +42,7 @@ A standard Android Gradle project includes a lot of tasks by default such as:
     assembleRelease - Assembles all Release builds.
     ...
 
-* To see all the available tasks, call `gradle tasks --all`.
+To see all the available tasks, call `gradle tasks --all`.
 
 ### Run Gradle task with our Steps
 
