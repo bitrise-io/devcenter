@@ -100,18 +100,11 @@ As an example, if you wanted to install the Android SDK v18 and the related `bui
        sdkmanager "platforms;android-18"
        sdkmanager "build-tools;18.0.1"
 
-   \#!/bin/bash
-   \#_fail if any commands fails
-   set -e_
-   \#debug log_
-   set -x
-   \#write your script here
-   sdkmanager "platforms;android-18"
-   sdkmanager "build-tools;18.0.1"
-
 To check the full list of available packages by
 
-1. Run `sdkmanager --list --include_obsolete --verbose` command. You can run this on your own machine if you have `$ANDROID_HOME/tools/bin` in your `$PATH`. If not then you can run it with `/PATH/TO/ANDROID-SDK-HOME/tools/bin/sdkmanager ...`.
+1. Run `sdkmanager --list --include_obsolete --verbose` command. 
+
+   You can run this command on your own machine if you have `$ANDROID_HOME/tools/bin` in your `$PATH`.  If not, then you can run it with `/PATH/TO/ANDROID-SDK-HOME/tools/bin/sdkmanager ...`.
 
 ## Enable Gradle debug options
 
