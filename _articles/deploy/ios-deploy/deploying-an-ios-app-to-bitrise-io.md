@@ -32,8 +32,10 @@ Make sure that you have:
 
    ![](/img/code-signing/ios-code-signing/xcode-archive-export-method.png)
 4. Make sure the `Deploy to Bitrise.io` Step is in your workflow.
+
+   By default, the value of the `Enable public page for the App?` input is set to `true`. This way, once the build runs, a public install page will be available with a long and random URL which can be shared with others who are not registered on Bitrise. This URL is sent to the users in an email. The `Notify: User Roles` and the `Notify: Emails` inputs determine which users get the email. 
 5. Start a build.
 6. When the build is finished, go to the app's `Builds` page and click the latest build.
 7. Click the `APPS & ARTIFACTS` tab to find your .ipa file.
 
-And that's it! The file can now be installed on all the devices included in the app's provisioning profile.
+And that's it! The file can now be installed on all the devices included in the app's provisioning profile. 
