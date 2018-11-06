@@ -81,7 +81,7 @@ You can manually install the missing Android SDKs as well if you...
 
 Before you start:
 
-* Make sure you have the Android `sdkmanager` installed to your local computer.
+* Make sure you have the Android `sdkmanager` installed to your local computer. For more information on `sdkmanager`, check out their [guide](https://developer.android.com/studio/command-line/sdkmanager).
 
 1. Add a `Do anything with Script step` to your workflow.
 2. Use the Android `sdkmanager` [tool](https://developer.android.com/studio/command-line/sdkmanager) to install the additional packages you need.
