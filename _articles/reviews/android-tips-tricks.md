@@ -79,6 +79,10 @@ We suggest you to use our `Install missing Android SDK components` Step to insta
 
 You can manually install the missing Android SDKs as well if you...
 
+Before you start:
+
+* Make sure you have the Android `sdkmanager` installed to your local computer.
+
 1. Add a `Do anything with Script step` to your workflow.
 2. Use the Android `sdkmanager` [tool](https://developer.android.com/studio/command-line/sdkmanager) to install the additional packages you need.
 
@@ -100,7 +104,7 @@ As an example, if you wanted to install the Android SDK v18 and the related `bui
        sdkmanager "platforms;android-18"
        sdkmanager "build-tools;18.0.1"
 
-To check the full list of available packages by
+You can check the full list of available packages (including obsolete packages) that you have already installed by running an `sdk` task:
 
 1. Run `sdkmanager --list --include_obsolete --verbose` command. 
 
