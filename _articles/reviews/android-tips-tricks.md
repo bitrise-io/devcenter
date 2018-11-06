@@ -91,6 +91,15 @@ As an example, if you wanted to install the Android SDK v18 and the related `bui
 1. Add the `Do anything with Script step` (can be the very first step in your workflow)
 2. Type the following content:
 
+       #!/bin/bash
+       #fail if any commands fails
+       set -e
+       #debug log_
+       set -x
+       #write your script here
+       sdkmanager "platforms;android-18"
+       sdkmanager "build-tools;18.0.1"
+
    \#!/bin/bash
    \#_fail if any commands fails
    set -e_
