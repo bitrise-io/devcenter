@@ -63,15 +63,30 @@ You can find more information about the Gradle Wrapper (gradlew) and how you can
 
 ## How to install an additional Android SDK package
 
+You can update your current Android SDK package either using our Step or installing the respective package manually.
+
+**Advantages of Install missing Android SDK components:**
+
+**Advantages of Do anything with Script step:**
+
 ### Automatic installation of Android SDKs
 
-We suggest you to use our `Install missing Android SDK components` Step to install dependencies for your Android project. **Please only use a Script? solution if you really have to, as you'll have to manually update the Script if the Android tools change (which did happen).**
+We suggest you to use our `Install missing Android SDK components` Step to install dependencies and Android SDK components for your Android project. The Step runs the `gradlew dependencies` **command in your project**. Provide the required NDK version in the `NDK version` input field and let the step take care of installation!
+
+![](/img/android-ndk.png)
 
 ### Manual installation of Android SDKs?
 
-All you have to do is to add a `Script` step to your workflow, and use the Android `sdkmanager` [tool](https://developer.android.com/studio/command-line/sdkmanager) to install the additional packages you want to.
+You can manually install the missing Android SDKs as well if you...
 
-As an example, to install the Android SDK v18 and the related `build-tools` v18.0.1, you can add a `Script` step (can be the very first step in the Workflow) with the following content:
+1. Add a `Do anything with Script step` to your workflow.
+2. Use the Android `sdkmanager` [tool](https://developer.android.com/studio/command-line/sdkmanager) to install the additional packages you need.
+
+{% include message_box.html type="important" title="When to use the Script Step" content="
+Please only use the Script Step solution if you really have to **WHEN?**, as you'll have to manually update the Script if the Android tools change which does happen.
+"%}
+
+As an example, to install the Android SDK v18 and the related `build-tools` v18.0.1, you can add a `Do anything with Script step` (can be the very first step in the Workflow) with the following content:
 
     #!/bin/bash
     # fail if any commands fails
