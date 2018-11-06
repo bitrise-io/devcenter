@@ -134,14 +134,14 @@ This method can be used to limit the allowed RAM the Gradle JVM process can use,
 
 You can use our Android emulator [steps](http://www.bitrise.io/integrations) to create and boot Android emulators. Let's see how!
 
+{% include message_box.html type="important" title="My message" content=" Instead of using a `Do anything with Script step` to create an Android emulator, please use  `Create Android emulator` step! There are simply too many edge cases to cover here, as well as the commands and working configurations change quite frequently. "%}
+
 1. Add `Create Android emulator` Step to your workflow. **WHERE?**
 2. Set the Android version in the `Target platform of the new AVD` Step input field. **ORHER INPUTS?**
-3. Add the `Start Android emulator` Step to boot the new emulator. 
+3. Add the `Start Android emulator` Step to boot the new emulator.
 4. **Set the input ....**
 
 ### Emulator with Google APIs
-
-**Instead of using a Script step to create an android emulator please use the** `Create Android emulator` **step__! There are simply too many edge cases to cover here, as well as the commands and working configurations change quite frequently.**
 
 _The section below is kept here for referencing purposes, and might be outdated._
 
