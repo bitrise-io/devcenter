@@ -9,6 +9,10 @@ published: false
 
 In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps and what the major differences are.
 
+`Gradle Runner` Step
+
+`Android Build` Step
+
 ## About Gradle tasks
 
 [Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. They perform actions that are needed to build a project. A `gradle` task is a process you can run with `gradle`. You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal.
@@ -143,7 +147,7 @@ You can use our Android emulator [steps](http://www.bitrise.io/integrations) to 
 
 ### Emulator with Google APIs
 
-_The section below is kept here for referencing purposes, and might be outdated._
+**The section below is kept here for referencing purposes, and might be outdated.**
 
 **Note about Android SDK versions:** at this time there are lots of known issues reported for Android Emulators with Android SDK version 22 & 23 when combined with Google Play services (see [1](http://stackoverflow.com/questions/32856919/androidstudio-emulator-wont-run-unless-you-update-google-play-services) and [2](https://code.google.com/p/android/issues/detail?id=176348)). The script above creates an emulator with SDK version 21, which should work properly with Google Play services.
 
