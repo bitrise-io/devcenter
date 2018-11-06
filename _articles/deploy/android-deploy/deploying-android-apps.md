@@ -60,6 +60,18 @@ Check out the [Google Play Developer API](https://developers.google.com/android-
 
 You have successfully prepared your Google Play Console project. A services credential account has been created which is authorized to manage your releases.
 
+## Deploying to bitrise.io
+
+The `Deploy to bitrise.io - Apps, Logs, Artifacts` Step attaches all the generated artifacts to your build and uploads them into the [ APPS & ARTIFACTS](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. By default, the value of the `Enable public page for the App?` input field is set to `true`. This way, once the build runs, a public install page will be available with a long and random URL which can be shared with others who are not registered on Bitrise.
+
+You can notify user groups or individual users that your APK file has been built by roles or email address. You can share the app's public install page with anyone if you set the following input fields:
+
+1. Go to the `Deploy to bitrise.io` step.
+2. In the `Notify: User Roles` input field, add the role (for example, `testers`, `developers`, `admins`) so that only those get notified who have been granted with this particular role.
+3. Or fill out the `Notify: Emails` input field with email addresses of the users you want to send the URL to. Make sure you set those email addresses as [secret env vars](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK file in the `APPS & ARTIFACTS` tab. Here you can check the URL by clicking `Open Public install page`.
+
+![](/img/public-install-page.png)
+
 ## Deploying to the Google Play Store
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
