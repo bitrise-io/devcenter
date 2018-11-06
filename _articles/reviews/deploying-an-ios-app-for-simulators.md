@@ -43,4 +43,4 @@ An .app file built with our `Xcode build for simulator` Step works with just abo
    The easiest solution is to use the `BITRISE_APP_DIR_PATH_LIST` Environment Variable that is an output of the `Xcode build for simulator` Step.
    Optionally, you can also enable verbose logging for more efficient debugging.
 
-The `Appteize.io deploy` Step will produce one output: the `APPETIZE_APP_URL` Environment Variable. it is a public URL where you can access your app.
+The `Appetize.io deploy` Step will produce one output: the `APPETIZE_APP_URL` Environment Variable. it is a public URL where you can access your app.
