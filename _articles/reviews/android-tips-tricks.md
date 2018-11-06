@@ -7,11 +7,11 @@ published: false
 ---
 ## Gradle Runner vs Android Build
 
-In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps and what the major differences are. 
+In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps and what the major differences are.
 
 ## About Gradle tasks
 
-A `gradle` task is a process you can run with `gradle`. You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal.
+[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. They perform actions that are needed to build a project. A `gradle` task is a process you can run with `gradle`. You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal.
 
 A standard Android Gradle project includes a lot of tasks by default such as:
 
@@ -22,7 +22,7 @@ A standard Android Gradle project includes a lot of tasks by default such as:
 
 ### How to get the list of available Gradle tasks in your project
 
-To get the base task list, call `gradle tasks` in your Android app's directory. When running `gradle tasks`, you'll get a list of available Gradle tasks in the format:
+To get the basic task list, call `gradle tasks` in your Android app's directory. When running `gradle tasks`, you'll get a list of available Gradle tasks in the format:
 
     $ gradle task
     
@@ -50,26 +50,26 @@ To see all the available tasks, call `gradle tasks --all`.
 
 ### Run Gradle task with our Steps
 
-Run any of the tasks on Bitrise either using `Do anything with our Script` Step or our `Gradle Runner` Step.
+You can run any of the Gradle tasks on Bitrise either using `Do anything with our Script` Step, `Gradle Runner` or `Android Build` Step.
 
-* You can run any of the tasks on Bitrise by using our `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemble`).
-
-  sample
+* You can run any of the tasks on Bitrise by using our `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemble`). **sample**
 * You can use our `Gradle Runner` or `Android Build` Steps and specify the task as the value of the step input.
 
-![](/img/gradle-task.png) Instead of running `gradle` directly, you should run the gradle commands through `gradlew` (Gradle Wrapper) which is part of our `Gradle Runner` Step.
+![](/img/gradlew-gradle-task.png)
 
-![](/img/gradlew.png)
+**Instead of running** `**gradle**` **directly, you should run the gradle commands through** `**gradlew**` **(Gradle Wrapper) which is part of our** `**Gradle Runner**` **Step.**
 
 You can find more information about the Gradle Wrapper (gradlew) and how you can generate one (if you would not have done it already) in the [official guide](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
 
 ## How to install an additional Android SDK package
 
-We suggest you to use our `Install missing Android SDK components` Step to install dependencies for your Android project. Please only use a Script? solution if you really have to, as you'll have to manually update the Script if the Android tools change (which did happen).
+### Automatic installation of Android SDKs
+
+We suggest you to use our `Install missing Android SDK components` Step to install dependencies for your Android project. **Please only use a Script? solution if you really have to, as you'll have to manually update the Script if the Android tools change (which did happen).**
 
 ### Manual installation of Android SDKs?
 
-All you have to do is to add a `Script` step to your workflow, and use the Android `sdkmanager` tool to install the additional packages you want to.
+All you have to do is to add a `Script` step to your workflow, and use the Android `sdkmanager` [tool](https://developer.android.com/studio/command-line/sdkmanager) to install the additional packages you want to.
 
 As an example, to install the Android SDK v18 and the related `build-tools` v18.0.1, you can add a `Script` step (can be the very first step in the Workflow) with the following content:
 
