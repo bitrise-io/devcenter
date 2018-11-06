@@ -84,11 +84,10 @@ Before you start:
 * Make sure you have the Android `sdkmanager` installed to your local computer. For more information on `sdkmanager`, check out their [guide](https://developer.android.com/studio/command-line/sdkmanager).
 
 1. Add a `Do anything with Script step` to your workflow.
-2. Use the Android `sdkmanager` [tool](https://developer.android.com/studio/command-line/sdkmanager) to install the additional packages you need.
+2. Use the Android `sdkmanager` tool to install the additional packages you need.
 
 {% include message_box.html type="important" title="When to use the Script Step" content="
-Please only use the Script Step solution if you really have to **WHEN?**, as you'll have to manually update the Script if the Android tools change which does happen.
-"%}
+Please only use the `Do anything with Script step` solution if you really have to **WHENdoes that happen?**, as you'll have to manually update the `Script content` if the Android tools change. "%}
 
 As an example, if you wanted to install the Android SDK v18 and the related `build-tools` v18.0.1:
 
