@@ -64,7 +64,7 @@ You have successfully prepared your Google Play Console project. A services cred
 
 The `Deploy to bitrise.io - Apps, Logs, Artifacts` Step attaches all the generated artifacts to your build and uploads them into the [ APPS & ARTIFACTS](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. By default, the value of the `Enable public page for the App?` input field is set to `true`. This way, once the build runs, a public install page will be available with a long and random URL which can be shared with others who are not registered on Bitrise.
 
-You can notify user groups or individual users that your APK file has been built by roles or email address. You can share the app's public install page with anyone if you set the following input fields:
+You can notify user groups or individual users that your APK file has been built by specifying roles and/or email addresses. You can share the app's public install page with anyone if you set the following input fields:
 
 1. Go to the `Deploy to bitrise.io` step.
 2. In the `Notify: User Roles` input field, add the role (for example, `testers`, `developers`, `admins`) so that only those get notified who have been granted with this particular role.
