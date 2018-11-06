@@ -86,19 +86,23 @@ You can manually install the missing Android SDKs as well if you...
 Please only use the Script Step solution if you really have to **WHEN?**, as you'll have to manually update the Script if the Android tools change which does happen.
 "%}
 
-As an example, to install the Android SDK v18 and the related `build-tools` v18.0.1, you can add a `Do anything with Script step` (can be the very first step in the Workflow) with the following content:
+As an example, if you wanted to install the Android SDK v18 and the related `build-tools` v18.0.1:
 
-    #!/bin/bash
-    # fail if any commands fails
-    set -e
-    # debug log
-    set -x
-    
-    # write your script here
-    sdkmanager "platforms;android-18"
-    sdkmanager "build-tools;18.0.1"
+1. Add the `Do anything with Script step` (can be the very first step in your workflow)
+2. Type the following content:
 
-**You can get the full list of available packages** by running: `sdkmanager --list --include_obsolete --verbose`. You can run this on your own machine if you have `$ANDROID_HOME/tools/bin` in your `$PATH`. If not then you can run it with `/PATH/TO/ANDROID-SDK-HOME/tools/bin/sdkmanager ...`.
+   \#!/bin/bash
+   \#_fail if any commands fails
+   set -e_
+   \#debug log_
+   set -x
+   \#write your script here
+   sdkmanager "platforms;android-18"
+   sdkmanager "build-tools;18.0.1"
+
+To check the full list of available packages by
+
+1. Run `sdkmanager --list --include_obsolete --verbose` command. You can run this on your own machine if you have `$ANDROID_HOME/tools/bin` in your `$PATH`. If not then you can run it with `/PATH/TO/ANDROID-SDK-HOME/tools/bin/sdkmanager ...`.
 
 ## Enable Gradle debug options
 
