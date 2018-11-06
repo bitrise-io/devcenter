@@ -153,17 +153,16 @@ _There are possible workarounds for newer versions (see_ [_1_](http://stackoverf
 
 {% include message_box.html type="note" title="Java 8 is now pre-installed" content=" Java 8 is now the pre-installed Java version on the Bitrise.io Linux Stack. This section is kept here for future reference, in case you'd need another Java version. "%}
 
-_If you'd need a Java / JDK version which is not preinstalled on the Android stacks, you can follow this guide to install it. This example will install Java/JDK 8, please adapt it to the version you need._
+If you'd need a Java or JDK version which is not preinstalled on the Android stacks, you can follow this guide to install it. This example will install Java/JDK 8 with a `Do anything with Script step`, feel free to adapt it to the version you need.
 
-If your build requires JDK 8, you can install and activate it with a `Script` step:
+1. Add the `Do anything with Script step` to your workflow with the content below:
 
-    #!/bin/bash
-    set -ex
-    
-    add-apt-repository -y ppa:openjdk-r/ppa
-    apt-get update -qq
-    apt-get install -y openjdk-8-jdk
-    update-java-alternatives -s /usr/lib/jvm/java-1.8.0-openjdk-amd64
-    echo "done"
-
-That's all, just add the `Script` step to the Workflow with the content above, and start a new build. This `Script` step can be the very first step in the Workflow, as it does not depend on anything else.
+       #!/bin/bash
+       set -ex
+       
+       add-apt-repository -y ppa:openjdk-r/ppa
+       apt-get update -qq
+       apt-get install -y openjdk-8-jdk
+       update-java-alternatives -s /usr/lib/jvm/java-1.8.0-openjdk-amd64
+       echo "done"
+2. Start a new build. This `Script` step can be the very first step in the Workflow, as it does not depend on anything else.
