@@ -105,34 +105,39 @@ As an example, if you wanted to install the Android SDK v18 and the related `bui
 
 You can check the full list of available packages (including obsolete packages) that you have already installed by running an `sdk` task:
 
-1. Run `sdkmanager --list --include_obsolete --verbose` command. 
+1. Run `sdkmanager --list --include_obsolete --verbose` command.
 
    You can run this command on your own machine if you have `$ANDROID_HOME/tools/bin` in your `$PATH`.  If not, then you can run it with `/PATH/TO/ANDROID-SDK-HOME/tools/bin/sdkmanager ...`.
 
 ## Enable Gradle debug options
 
-If your Gradle build fails and you can't find any information in the logs you can try to call it with `--stacktrace --debug` flags (ex: `gradle ... --stacktrace --debug`) to get more detailed logs.
+If your Gradle build fails, we recommend you to check your build's log in the `APPS & ARTIFACTS` tab. If you're lost, you can call `--stacktrace --debug` flags (for example, `gradle ... --stacktrace --debug`) to get more detailed logs.
 
-In most cases `--stacktrace` should be enough, and the `Gradle Runner` step includes this flag by default.
+In most cases `--stacktrace` should be enough, and the `Gradle Runner` step includes this flag by default. **why calling it if you can type it in in the debug section of Gradle Runner?**
 
-## Run a bitrise Android build on your Mac/PC, with Docker
+![](/img/stacktrace.png)
+
+## Run a bitrise Android build on your Mac/PC with Docker
 
 You can run your build on your Mac/PC, inside the same `docker` container you use on [bitrise.io](https://www.bitrise.io), to fully test your build in an identical environment! You can find the detailed guide here: [How to run your build locally in Docker](/docker/run-your-build-locally-in-docker/)
 
 ## Memory (RAM) limit
 
-You can specify the amount allowed RAM for the JVM by adding two **Environment Variables** to your Workflow, e.g. as `App Env Var`s:
+You can specify the amount allowed RAM for the Java Virtual Machine by adding two **Environment Variables** to your Workflow, for example, as `App Env Var`s:
 
 * `GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'`
-* `_JAVA_OPTIONS: "-Xms512m -Xmx1024m"`
+* `JAVA_OPTIONS: "-Xms512m -Xmx1024m"`
 
 This method can be used to limit the allowed RAM the Gradle JVM process can use, which can be useful in case there's not enough RAM available in the system.
 
 ## Emulators
 
-You can find and use our Android emulator steps to create & boot emulators: [http://www.bitrise.io/integrations](http://www.bitrise.io/integrations "http://www.bitrise.io/integrations").
+You can use our Android emulator [steps](http://www.bitrise.io/integrations) to create and boot Android emulators. Let's see how!
 
-First you have to create an emulator with a `Create Android emulator` step, where you can set the Android version and a couple of other parameters for the new emulator, then you can boot this emulator with the `Start Android emulator` step, which makes sure that the emulator is booted and ready for subsequent steps.
+1. Add `Create Android emulator` Step to your workflow. **WHERE?**
+2. Set the Android version in the `Target platform of the new AVD` Step input field. **ORHER INPUTS?**
+3. Add the `Start Android emulator` Step to boot the new emulator. 
+4. **Set the input ....**
 
 ### Emulator with Google APIs
 
