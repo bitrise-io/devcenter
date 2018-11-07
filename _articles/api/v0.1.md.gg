@@ -1,13 +1,10 @@
-!!! warning "The API is work-in-progress"
-    The API is work-in-progress, we'll add docs for new endpoints here as we progress,
-    as well as we might change things a bit if required.
+{% include message_box.html type="warning" title="The API is work-in-progress" content=" The API is work-in-progress, we'll add docs for new endpoints here as we progress, and might change things a bit if required."%}
 
-- Join the discussion at: [https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554).
+* Join the discussion at: [https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554).
   Follow it if you want to get notified about new endpoints and changes,
   we announce those there.
-- If you want to request a new API feature / endpoint,
+* If you want to request a new API feature / endpoint,
   please do it here: [http://discuss.bitrise.io/t/bitrise-public-api/37](http://discuss.bitrise.io/t/bitrise-public-api/37)
-
 
 ## API domain/host and versioning
 
@@ -23,21 +20,21 @@ There's no long term compatibility promise for `v0.1`, although we try to do our
 
 ## Authentication
 
-The current API supports only one type of authentication, user generated __Personal Access Tokens__.
+The current API supports only one type of authentication, user generated **Personal Access Tokens**.
 
-Right now __every API endpoint requires authentication__, there's no endpoint which you can call without including the authentication information, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io)).
+Right now **every API endpoint requires authentication**, there's no endpoint which you can call without including the authentication information, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io)).
 
-To acquire a Personal Access Token for your user, sign in with that user on [bitrise.io](https://www.bitrise.io), go to your __Account Settings__ page, and select the [Security](https://www.bitrise.io/me/profile#/security) tab on the left side.
+To acquire a Personal Access Token for your user, sign in with that user on [bitrise.io](https://www.bitrise.io), go to your **Account Settings** page, and select the [Security](https://www.bitrise.io/me/profile#/security) tab on the left side.
 
 Here you can manage your account's Two Factor Authentication settings, as well as your Personal Access Tokens.
 
-To get started with the API simply click the __Generate new token__ button, and save the generated Personal Access Token somewhere safe.
+To get started with the API simply click the **Generate new token** button, and save the generated Personal Access Token somewhere safe.
 
-__Important note: the generated token is shown only once, when it's generated!__ There's no way to see the token value again! You can of course generate as many Access Tokens as you like, and delete the ones you don't need anymore.
+{% include message_box.html type="important" title="Availability of the generated token" content=" The generated token is shown only once, when it's generated! There's no way to see the token value again! You can of course generate as many Access Tokens as you like, and delete the ones you don't need anymore. "%}
 
 Once you have the token you can start interacting with the API.
 
-To provide the required access token you have to add a __HEADER__ to your requests, with the key `Authorization` and value `token THE-ACCESS-TOKEN`.
+To provide the required access token you have to add a **HEADER** to your requests, with the key `Authorization` and value `token THE-ACCESS-TOKEN`.
 
 An example API call with auth, using `curl`:
 
@@ -48,7 +45,6 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me
 ## Response
 
 Every endpoint responds with a JSON formatted response.
-
 
 ### Pagination
 
@@ -69,32 +65,33 @@ Example:
 }
 ```
 
-_Note: the `next` property of the `paging` object is only included if there's at least one more page available. If there's no `next` property inside `paging` that means that there's no more page to retrieve._
+{% include message_box.html type="note" title="`_next_` property of the `_paging_` object" content=" The `_next_` property of the `_paging_` object is only included if there's at least one more page available. If there's no `_next_` property inside `_paging_` that means that there's no more page to retrieve.
+"%}
 
 The `page_item_limit` property can be set with the query parameter named `limit` at the GET requests, so you can specify the size of the response pages. The default and also maximum value for this parameter is 50.
 
 Example:
 
-- Calling `https://api.bitrise.io/v0.1/me/apps` will retrieve you the first page of your apps with size of 50.
-- If you call `https://api.bitrise.io/v0.1/me/apps?limit=10`, the response is also the first page of your apps, but it will contain only 10 elements.
+* Calling `https://api.bitrise.io/v0.1/me/apps` will retrieve you the first page of your apps with size of 50.
+* If you call `https://api.bitrise.io/v0.1/me/apps?limit=10`, the response is also the first page of your apps, but it will contain only 10 elements.
 
 
 If you want to iterate through all the items this is what you have to do:
 
 1. First call the endpoint without any pagination parameters
-1. From the response process the `paging` object.
-1. If the `paging` object includes a `next` item, simply call the exact same endpoint with an additional `next=` query parameter, and pass the value you got in the response as the value of the `next` parameter.
+2. From the response process the `paging` object.
+3. If the `paging` object includes a `next` item, simply call the exact same endpoint with an additional `next=` query parameter, and pass the value you got in the response as the value of the `next` parameter.
 
 That's all.
 
 A quick example, iterating through all of your registered apps:
 
 1. First call `https://api.bitrise.io/v0.1/me/apps`
-1. Process the items (`data` property)
-1. Then check the `paging` (root) property.
-1. If there's a `next` property inside `paging` simply call the endpoint again, with the `next` query parameter
-    * Example: `https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
-1. Repeate this until the `paging` object does not include a `next` property, which means that the page you received was the last one.
+2. Process the items (`data` property)
+3. Then check the `paging` (root) property.
+4. If there's a `next` property inside `paging` simply call the endpoint again, with the `next` query parameter
+   * Example: `https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
+5. Repeate this until the `paging` object does not include a `next` property, which means that the page you received was the last one.
 
 
 ## Endpoints
@@ -252,12 +249,18 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/organizations/e1
 
 ### POST /apps/register
 
-Add a new application
+Add a new application. The parameters in the request body are the following:
+- **provider**(string): the git provider you are using, it can be `github`, `bitbucket`, `gitlab`, `gitlab-self-hosted` or `custom`
+- **is_public**(boolean): if `true` then the repository visibility setting will be public, in case of `false` it will be private
+- **repo_url**(string): this is the URL of your repository
+- **type**(string): it has to be provided by legacy reasons and has to have the `git` value
+- **git_repo_slug**(string): the slug of the repository at the git provider
+- **git_owner**(string): the slug of the owner of the repository at the git provider
 
 #### Example `curl` request
 
 ``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/register").POST_cURL }}' -d '{{ (var "/v0.1/apps/register").POST_RequestBody }}'
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/register").POST_cURL }}' -d '{{ (var "/v0.1/apps/register").POST_RequestBody }}'
 ```
 
 #### Example response
@@ -271,12 +274,15 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/register").
 
 ### POST /apps/APP-SLUG/register-ssh-key
 
-Register an SSH key to a specific application
+Register an SSH key to a specific application. There are three parameters to use:
+- **auth_ssh_private_key**(string): the private part of the SSH key you would like to use
+- **auth_ssh_public_key**(string): the public part of the SSH key you would like to use
+- **is_register_key_into_provider_service**(boolean): if it's set to true, the provided SSH key will be register at the provider of the application
 
 #### Example `curl` request
 
 ``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/register-ssh-key").POST_cURL }}' -d '{{ (var "/v0.1/apps/022d8a3124f1225d/register-ssh-key").POST_RequestBody }}'
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/register-ssh-key").POST_cURL }}' -d '{{ (var "/v0.1/apps/022d8a3124f1225d/register-ssh-key").POST_RequestBody }}'
 ```
 
 #### Example response
@@ -294,7 +300,7 @@ Register a webhook for a specific application
 #### Example `curl` request
 
 ``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/register-webhook").POST_cURL }}'
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/register-webhook").POST_cURL }}'
 ```
 
 #### Example response
@@ -313,7 +319,7 @@ Parameters:
 
 - `project_type`: the type of your project (`android`, `ios`, `cordova`, `other`, `xamarin`, `macos`, `ionic`, `react-native`, `fastlane`, null)
 - `stack_id`: the id of the stack the application will be built (these can be found in the [system report](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports) file names)
-- `config_id`: which `default-android-config`, `default-cordova-config`, `default-fastlane-config`, `default-ionic-config`, `default-ios-config`,`default-macos-config`, `default-react-native-config`, `default-xamarin-config`, `other-config` (default if parameter is not speficied)
+- `config`: which `default-android-config`, `default-cordova-config`, `default-fastlane-config`, `default-ionic-config`, `default-ios-config`,`default-macos-config`, `default-react-native-config`, `default-xamarin-config`, `other-config` (default if parameter is not speficied)
 - `mode`: config specification mode, has to be specified with `manual` value
 - `envs`: environment variables for the application workflows
 - `organization_slug`: the slug of the organization, who will be the owner of the application, if it's not specified, then the authenticated user will be the owner
@@ -321,7 +327,7 @@ Parameters:
 #### Example `curl` request
 
 ``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/finish").POST_cURL }}' -d '{{ (var "/v0.1/apps/022d8a3124f1225d/finish").POST_RequestBody }}'
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/finish").POST_cURL }}' -d '{{ (var "/v0.1/apps/022d8a3124f1225d/finish").POST_RequestBody }}'
 ```
 
 #### Example response
