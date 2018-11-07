@@ -9,52 +9,26 @@ published: false
 
 In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps and what the major differences are.
 
-`Gradle Runner` Step: more complex, can be used to run any gradle related tasks, it performs whatever task you input. can run any gradle task
+`Gradle Runner` Step: more complex Step which is based on Gradle tasks. You can use this step to run any gradle task (link) that is available in your task list. More on how to call task list, here. You can run multiple tasks at the same time if you insert the tasks separated with space in the `Gradle task to run` input field. For example: `assembleDebug` `assembleDebugAndroidTest` where Gradle Runner step will output as many APK paths as many assemble tasks you have set.
 
-* **Config**
-
-  Optional path to the gradle build file to use
-  Gradle task to run
-  gradlew file path
-* **Export Config**
-
-  APK, TEST APK, Mapping file include filter input fields
-* **Debug**
-
-  Set the additional cache
-  Additional options for gradle call
-
-`Android Build` Step: android steps are alsmost same as gradle runner but here you need to config this step as you config your project in android studio. more a reflection of configuration/development  of android studio UI. you can only build with this step, can only work with assemble beginning tasks. Lint-lint kezdetu task, unit testnel a test kezdeto taskokat.
-
-* **Project location Module Variant**
-* **Option**
-
-  APK location pattern
-  Set the level of cache
-  Additional Gradle Arguments
-
-## when running more tasks at the same time - gradle runner task inputba tobbet is fel tudok vinni: \``l debug assembedebug android test``
-
-gradle runner outputs two apk paths in this case and can be used in virtual device testing.
-
-android build - simlpler ux.
+`Android Build` Step: provides a simplified user experience of Android Studio. This step reflects the configuration of your project in Android Studio. This step is geared towards building your project it cannot perform any other Gradle task. You can have any `assemble` - related task performed by this Step.
 
 ## About Gradle tasks
 
-[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. They perform actions that are needed to build a project. Y**ou can define tasks specific to your project or use the default ones (any takss can be used that are defined in  in gradle build files).** A `gradle` task is a process you can run with `gradle` **command?**. You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal. (all tasks can be run not just the defaults but whichever are listed in the file above)
+[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. They perform actions that are needed to build a project. You can use any task that is defined in gradle build files - either defined by you or available by default. You can run all the available tasks by running `gradlew TASK-TO-RUN` in your Command Line / Terminal.
 
-A most common Android Gradle project includes a lot of tasks by default such as:
+Here is a list of the most common default tasks of an Android Gradle project:
 
 * `androidDependencies` - displays the Android dependencies of the project.
 * `assemble` - assembles all variants of all applications and secondary packages.
 * `assembleAndroidTest` - assembles all the Test applications.
 * `clean` - deletes the build directory.
 
-at bitrise we use and run gradlew. users project has a `gradlew` which means when you generate a new android project Gradle has a given version and gradle wrapper puts this version Gradle version into my project.
+At Bitrise we use and run gradlew. users project has a `gradlew` which means when you generate a new android project Gradle has a given version and gradle wrapper puts this version Gradle version into my project.
 
 ### How to get the list of available Gradlew tasks in your project
 
-To get the basic task list, call `gradlew tasks` in your Android app's directory. When running `gradlew tasks`, you'll get a list of available Gradle tasks in the format:
+To get the basic task list, call `gradlew tasks` in your Android app's directory. When running `gradlew tasks`, you'll get a list of available Gradle tasks in this format:
 
     $ ./gradlew tasks
     
@@ -78,19 +52,17 @@ To get the basic task list, call `gradlew tasks` in your Android app's directory
     assembleRelease - Assembles all Release builds.
     ...
 
-To see all the available tasks, call ./`gradlew tasks --all`.
+To see all the available tasks listed in your task list, call ./`gradlew tasks --all`.
 
 ### Run Gradle task with our Steps
 
-You can run any of the Gradle tasks on Bitrise either using `Do anything with our Script` Step, `Gradle Runner` or `Android Build` Step.
+You can run any of the Gradle tasks on Bitrise either using `Do anything with our Script` Step and `Gradle Runner` Steps.
 
-* You can run any of the tasks on Bitrise by using our `Script` step and calling ./`gradlew task-name-to-run` i**n the Script input field.** (for example: ./`gradlew assemble`). **sample**
+* Run any task by calling `./gradlew task-name-to-run` in the Script input field of `Do anything with our Script` Step (for example: `./gradlew assemble`). You're free to insert this step anywhere in your workflow where it works best for you.
 
-![](/img/script-field.png)
+![](/img/gradle-runner-gradlew.png)
 
-* You can use our `Gradle Runner` or `Android Build` Steps and specify the task that is available in your task list (when you called call ./`gradlew tasks --all before you have the task list)` as the value of the step input.
-
-![](/img/gradlew-gradle-task.png)
+* You can use our `Gradle Runner` Step and specify the task that is available in your task list (when you called call ./`gradlew tasks --all before you have the task list)` as the value of the step input.
 
 if using scanner for uploading project, the gradlew path is automatically filled in, otherwise provide the path manually.
 
@@ -112,7 +84,7 @@ We suggest you to use our `Install missing Android SDK components` Step to **ins
 
 ### Manual installation of Android SDKs?
 
-You can manually install the missing Android SDKs as well if you **why would they? if any issue with the step, you can try.As an alternative, you can** 
+You can manually install the missing Android SDKs as well if you **why would they? if any issue with the step, you can try.As an alternative, you can**
 
 Before you start:
 
@@ -146,7 +118,7 @@ You can check the full list of available packages (including obsolete packages) 
 
 ## Enable Gradle debug options
 
-If your Gradle build fails, we recommend you to check your build's log in the `APPS & ARTIFACTS` tab. 
+If your Gradle build fails, we recommend you to check your build's log in the `APPS & ARTIFACTS` tab.
 
 If you're lost, you can call `--stacktrace --debug` flags (for example, `gradle ... --stacktrace --debug`) to get more detailed logs.
 
