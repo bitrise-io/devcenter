@@ -101,6 +101,10 @@ sections:
   label: API
   create: all
   match: "**/*"
+- type: document
+  path: _articles/api/v0.1.md.gg
+  label: API .gg file
+  match: "**/*"
 - type: heading
   label: Data files
 - type: document
