@@ -176,7 +176,8 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/organizations/e1
 
 Retrieve the apps you have access to. This includes the apps created / owned by you, as well as apps where you're a Team member (either added directly, or through an Organization's Group). All the apps you have access to (similar to the Dashboard on [bitrise.io](https://www.bitrise.io).
 
-_Note: the `/me/apps` endpoint is also working and the same as above, but it's deprecated_
+{% include message_box.html type="note" title="" content="The `/me/apps` endpoint is also working and the same as above, but it's deprecated.
+"%}
 
 #### Example `curl` request
 
@@ -215,7 +216,7 @@ Response:
 
 Also you can list apps for a specific user, obviously only those applicaitons with be listed in this response, which you have required rights. This endpoint works and responses the same as the `/apps` one, so you can use the same parameters too.
 
-_Note: this endpoint doesn't work with the `/me` subroute_
+{% include message_box.html type="note" title="" content="This endpoint doesn't work with the `/me` subroute."%}
 
 #### Example `curl` request
 
@@ -233,7 +234,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/users/8e82ac7601
 
 Also you can list apps for a specific oraganization, it works the very same way as the `/users/USER-SLUG/apps` one.
 
-_Note: this endpoint doesn't work with the `/me` subroute_
+{% include message_box.html type="note" title="" content="This endpoint doesn't work with the `/me` subroute."%}
 
 #### Example `curl` request
 
@@ -512,8 +513,7 @@ curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/51
   }
 }
 ```
-
-_Note: `download_url` is generated only when the provisioning profile's `is_protected` attribute is `false`_
+{% include message_box.html type="note" title="" content="A `download_url` is generated only when the provisioning profile's `is_protected` attribute is `false`"%}
 
 ### PATCH /apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}
 
@@ -524,7 +524,8 @@ Set a specific subset of provisioning profile attributes. You can update the `is
 1. once `processed` flag set to true, then its value cannot be changed anymore
 
 Violating these constraints the response will be `Bad Request`.
-_Note: the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body '{"processed":true}'_
+
+{% include message_box.html type="note" title="" content="The previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body '{"processed":true}'"%} 
 
 #### Example `curl` request
 
@@ -676,7 +677,7 @@ curl -X POST -H  'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/51
 }
 ```
 
-_Note: `download_url` is generated only when the build certificate's `is_protected` attribute is `false`_
+{% include message_box.html type="note" title="" content="A `download_url` is generated only when the build certificate's `is_protected` attribute is `false`"%}
 
 ### PATCH /apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}
 
@@ -687,7 +688,8 @@ Set a specific subset of build certificate attributes. You can update the `is_pr
 1. once `processed` flag set to true, then its value cannot be changed anymore
 
 Violating these constraints the response will be `Bad Request`.
-_Note: the previous `/apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body '{"processed":true}'_
+
+{% include message_box.html type="note" title="" content="The previous `/apps/{APP-SLUG}/build-certificates/{BUILD-CERTIFICATE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body '{"processed":true}'"%} 
 
 #### Example `curl` request
 
@@ -867,7 +869,7 @@ There are two available sorting parameter for this endpoint:
 - **`created_at`:** descending order by the `created_at` attribute (default setting)
 - **`running_first`:** it's also ordered by `created_at` in descending order, but all running builds are listed first and then the builds with other status
 
-_Note: sorting the list by `running_first` doesn't support paging parameters_
+{% include message_box.html type="note" title="" content="Sorting the list by `running_first` doesn't support paging parameters."%} 
 
 ##### Example `curl` request
 
@@ -927,7 +929,8 @@ The `expiring_raw_log_url` is configured so that it does not require any other p
 When a build is running, the log chunks can be retrieved with filtering, because in this case every response contain a `timestamp` which has Unix timestamp format. You can send this value in the next call as query parameter with the key `timestamp`, so the next response will contain only the chunks created after the timestamp.
 There is also a `limit` parameter which has 50 as the default value, with this you can limit the number of the retrieved log chunks.
 
-_Note: If build is finished the logs will be archived, in this case there are no filtering options, the filter parameters won't have any effect on the content of the response, the whole archived log will be retrieved._
+{% include message_box.html type="note" title="" content="If build is finished the logs will be archived, in this case there are no filtering options, the filter parameters won't have any effect on the content of the response, the whole archived log will be retrieved."%} 
+
 
 #### Example `curl` request
 
@@ -993,7 +996,7 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/669403bffbe
 
 Set the attributes of a build artifact. In the request body have to be sent a JSON with the specified new attribute values.
 
-_Note: at this time only the `is_public_page_enabled` attribute can be set through this endpoint call. This attribute can only set for the artifacts with type `android-apk` or `ios-ipa`._
+{% include message_box.html type="note" title="" content="At this time only the `is_public_page_enabled` attribute can be set through this endpoint call. This attribute can only set for the artifacts with type `android-apk` or `ios-ipa`."%} 
 
 #### Example `curl` request
 
