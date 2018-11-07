@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/reviews/test-api.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/reviews/android-tips-tricks.md
 - _articles/reviews/public-sample-apps-draft.md
