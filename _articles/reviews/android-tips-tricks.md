@@ -9,53 +9,54 @@ published: false
 
 In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps and what the major differences are.
 
-`Gradle Runner` Step:
+`Gradle Runner` Step: more complex, can be used to run any gradle related tasks, it performs whatever task you input. can run any gradle task
 
-* Config
+* **Config**
 
-Optional path to the gradle build file to use
+  Optional path to the gradle build file to use
+  Gradle task to run
+  gradlew file path
+* **Export Config**
 
-Gradle task to run
+  APK, TEST APK, Mapping file include filter input fields
+* **Debug**
 
-gradlew file path
+  Set the additional cache
+  Additional options for gradle call
 
-* Export Config
+`Android Build` Step: android steps are alsmost same as gradle runner but here you need to config this step as you config your project in android studio. more a reflection of configuration/development  of android studio UI. you can only build with this step, can only work with assemble beginning tasks. Lint-lint kezdetu task, unit testnel a test kezdeto taskokat.
 
-APK, TEST APK, Mapping file include filter input fields
+* **Project location Module Variant**
+* **Option**
 
-* Debug
+  APK location pattern
+  Set the level of cache
+  Additional Gradle Arguments
 
-Set the additional cache
+## when running more tasks at the same time - gradle runner task inputba tobbet is fel tudok vinni: \``l debug assembedebug android test``
 
-Additional options for gradle call
+gradle runner outputs two apk paths in this case and can be used in virtual device testing.
 
-`Android Build` Step:
-
-* Project location Module Variant
-* Option
-
-APK location pattern 
-
-Set the level of cache
-
-Additional Gradle Arguments
+android build - simlpler ux.
 
 ## About Gradle tasks
 
-[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. They perform actions that are needed to build a project. Y**ou can define tasks specific to your project or use the default ones.** A `gradle` task is a process you can run with `gradle`. You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal.
+[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. They perform actions that are needed to build a project. Y**ou can define tasks specific to your project or use the default ones (any takss can be used that are defined in  in gradle build files).** A `gradle` task is a process you can run with `gradle` **command?**. You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal. (all tasks can be run not just the defaults but whichever are listed in the file above)
 
-A standard Android Gradle project includes a lot of tasks by default such as:
+A most common Android Gradle project includes a lot of tasks by default such as:
 
 * `androidDependencies` - displays the Android dependencies of the project.
 * `assemble` - assembles all variants of all applications and secondary packages.
 * `assembleAndroidTest` - assembles all the Test applications.
 * `clean` - deletes the build directory.
 
-### How to get the list of available Gradle tasks in your project
+at bitrise we use and run gradlew. users project has a `gradlew` which means when you generate a new android project Gradle has a given version and gradle wrapper puts this version Gradle version into my project.
 
-To get the basic task list, call `gradle tasks` in your Android app's directory. When running `gradle tasks`, you'll get a list of available Gradle tasks in the format:
+### How to get the list of available Gradlew tasks in your project
 
-    $ gradle task
+To get the basic task list, call `gradlew tasks` in your Android app's directory. When running `gradlew tasks`, you'll get a list of available Gradle tasks in the format:
+
+    $ ./gradlew tasks
     
     :tasks
     
@@ -77,18 +78,21 @@ To get the basic task list, call `gradle tasks` in your Android app's directory.
     assembleRelease - Assembles all Release builds.
     ...
 
-To see all the available tasks, call `gradle tasks --all`.
+To see all the available tasks, call ./`gradlew tasks --all`.
 
 ### Run Gradle task with our Steps
 
 You can run any of the Gradle tasks on Bitrise either using `Do anything with our Script` Step, `Gradle Runner` or `Android Build` Step.
 
-* You can run any of the tasks on Bitrise by using our `Script` step and calling `gradle task-name-to-run` i**n the Script input field ?** (for example: `gradle assemble`). **sample**
-* You can use our `Gradle Runner` or `Android Build` Steps and specify the task as the value of the step input.
+* You can run any of the tasks on Bitrise by using our `Script` step and calling ./`gradlew task-name-to-run` i**n the Script input field.** (for example: ./`gradlew assemble`). **sample**
+
+![](/img/script-field.png)
+
+* You can use our `Gradle Runner` or `Android Build` Steps and specify the task that is available in your task list (when you called call ./`gradlew tasks --all before you have the task list)` as the value of the step input.
 
 ![](/img/gradlew-gradle-task.png)
 
-**Instead of running** `**gradle**` **directly, you should run the gradle commands through** `**gradlew**` **(Gradle Wrapper) which is part of our** `**Gradle Runner**` **Step.**
+if using scanner for uploading project, the gradlew path is automatically filled in, otherwise provide the path manually.
 
 You can find more information about the Gradle Wrapper (gradlew) and how you can generate one (if you have not done it already) in the [official guide](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
 
@@ -102,13 +106,13 @@ You can update your current Android SDK package either using our Step or install
 
 ### Automatic installation of Android SDKs
 
-We suggest you to use our `Install missing Android SDK components` Step to install dependencies and missing Android SDK components for your Android project. The Step runs the `gradlew dependencies` **command in your project to install them?**. Provide the required NDK version in the `NDK version` input field and let the step take care of installation!
+We suggest you to use our `Install missing Android SDK components` Step to **install dependencies and missing Android SDK components** for your Android project. The Step runs the `gradlew dependencies` **to only print out the lst of dependencies that influence my project**. if found, the step installs all the missing ones.  the Provide the required NDK version in the `NDK version` input field and let the step take care of installation!
 
 ![](/img/android-ndk.png)
 
 ### Manual installation of Android SDKs?
 
-You can manually install the missing Android SDKs as well if you **why would they?**
+You can manually install the missing Android SDKs as well if you **why would they? if any issue with the step, you can try.As an alternative, you can** 
 
 Before you start:
 
@@ -142,7 +146,9 @@ You can check the full list of available packages (including obsolete packages) 
 
 ## Enable Gradle debug options
 
-If your Gradle build fails, we recommend you to check your build's log in the `APPS & ARTIFACTS` tab. If you're lost, you can call `--stacktrace --debug` flags (for example, `gradle ... --stacktrace --debug`) to get more detailed logs.
+If your Gradle build fails, we recommend you to check your build's log in the `APPS & ARTIFACTS` tab. 
+
+If you're lost, you can call `--stacktrace --debug` flags (for example, `gradle ... --stacktrace --debug`) to get more detailed logs.
 
 In most cases `--stacktrace` should be enough, and the `Gradle Runner` step includes this flag by default. **why calling it if you can type it in the debug section of Gradle Runner?**
 
@@ -167,18 +173,10 @@ You can use our Android emulator [steps](http://www.bitrise.io/integrations) to 
 
 {% include message_box.html type="important" title="`Create Android emulator` vs `Do anything with Script step`" content=" Instead of using `Do anything with Script step` to create an Android emulator, please use  `Create Android emulator` step! There are simply too many edge cases to cover here, as well as the commands and working configurations change quite frequently. "%}
 
-1. Add `Create Android emulator` Step to your workflow. **WHERE?**
+1. Add `AVD manager` Step to your workflow. (set the device, api level and opi inputs) **one of the firs steps of your workflow. when this runs, an emulator starts booting, the earlier yu start it the more tasks you can perform before emulator starts working. (cloning, caching pulling, ect) so when im getting to the point that i want to use emulator i need to add the wait for android emulator step. after wait for emulaor step add the step you want to use the emulator with.**
 2. Set the Android version in the `Target platform of the new AVD` Step input field. **ORHER INPUTS?**
 3. Add the `Start Android emulator` Step to boot the new emulator.
 4. **Set the input ....**
-
-### Emulator with Google APIs
-
-**The section below is kept here for referencing purposes, and might be outdated.**
-
-**Note about Android SDK versions:** at this time there are lots of known issues reported for Android Emulators with Android SDK version 22 & 23 when combined with Google Play services (see [1](http://stackoverflow.com/questions/32856919/androidstudio-emulator-wont-run-unless-you-update-google-play-services) and [2](https://code.google.com/p/android/issues/detail?id=176348)). The script above creates an emulator with SDK version 21, which should work properly with Google Play services.
-
-_There are possible workarounds for newer versions (see_ [_1_](http://stackoverflow.com/questions/34329363/app-wont-run-unless-you-update-google-play-services-with-google-maps-api-andr) _and_ [_2_](http://stackoverflow.com/questions/33114112/app-wont-run-unless-you-update-google-play-services)), but that requires some customization in your project.
 
 ## Installing / Using Java version X
 
