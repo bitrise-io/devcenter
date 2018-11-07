@@ -62,44 +62,34 @@ You can run any of the Gradle tasks on Bitrise either using `Do anything with ou
 
 ![](/img/gradle-runner-gradlew.png)
 
-* You can use our `Gradle Runner` Step and specify the task that is available in your task list (when you called call ./`gradlew tasks --all before you have the task list)` as the value of the step input.
-
-if using scanner for uploading project, the gradlew path is automatically filled in, otherwise provide the path manually.
-
-You can find more information about the Gradle Wrapper (gradlew) and how you can generate one (if you have not done it already) in the [official guide](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
+* You can use our `Gradle Runner` Step and specify the task that is available in your task list (when you called call ./`gradlew tasks --all before you have the task list)` as the value of the step input. If you've been using our scanner to upload your project to bitrise.io, the `gradlew file path` input field gets filled out automatically with the respective path, otherwise make sure you fill it out manually!
 
 ## How to install an additional Android SDK package
 
-You can update your current Android SDK package either using our Step or installing the respective package manually.
+You can update your Android SDK package or install missing dependencies either using our `Install missing Android SDK components` Step or i_nstalling the respective package manually._
 
-**Advantages of Install missing Android SDK components:**
+### Automatic installation of Android SDKs and dependencies
 
-**Advantages of Do anything with Script step:**
+We suggest you to use our `Install missing Android SDK components` Step to install dependencies and missing Android SDK components for your Android project:
 
-### Automatic installation of Android SDKs
+1. Provide the required NDK version in the `NDK Revision` input field. Leave this input empty if you are not using NDK in your project.
 
-We suggest you to use our `Install missing Android SDK components` Step to **install dependencies and missing Android SDK components** for your Android project. The Step runs the `gradlew dependencies` **to only print out the lst of dependencies that influence my project**. if found, the step installs all the missing ones.  the Provide the required NDK version in the `NDK version` input field and let the step take care of installation!
+The Step runs the `gradlew dependencies` command and prints out a list of dependencies and SDK components that are relevant to your project. Then the Step installs all them.
 
 ![](/img/android-ndk.png)
 
 ### Manual installation of Android SDKs?
 
-You can manually install the missing Android SDKs as well if you **why would they? if any issue with the step, you can try.As an alternative, you can**
+As an alternative to `Install missing Android SDK components` you can manually install the missing Android SDKs as well.
+
+{% include message_box.html type="important" title="When to use the Script Step" content=" Please only use the `Do anything with Script` step solution if you really need an alternative to the `Install missing Android SDK components Step` , as you'll have to manually update the `Script content` if the Android tools change. "%}
 
 Before you start:
 
 * Make sure you have the Android `sdkmanager` installed to your local computer. For more information on `sdkmanager`, check out Android Studio's [guide](https://developer.android.com/studio/command-line/sdkmanager).
 
-1. Add a `Do anything with Script step` to your workflow.
-2. Use the Android `sdkmanager` tool to install the additional packages you need.
-
-{% include message_box.html type="important" title="When to use the Script Step" content="
-Please only use the `Do anything with Script step` solution if you really have to **WHEN does that happen?**, as you'll have to manually update the `Script content` if the Android tools change. "%}
-
-As an example, if you wanted to install the Android SDK v18 and the related `build-tools` v18.0.1, follow the steps:
-
-1. Add the `Do anything with Script step` (c**an be the very first step in your workflow)**
-2. Type the following content:
+1. Add `Do anything with Script step` (can be the very first step) to your workflow.
+2. Add the required platform and build-tools version to the `Script content`. In this example, we're installing the Android SDK v18 and the related `build-tools` v18.0.1
 
        #!/bin/bash
        #fail if any commands fails
@@ -113,7 +103,6 @@ As an example, if you wanted to install the Android SDK v18 and the related `bui
 You can check the full list of available packages (including obsolete packages) that you have already installed by running an `sdk` task:
 
 1. Run `sdkmanager --list --include_obsolete --verbose` command.
-
    You can run this command on your own machine if you have `$ANDROID_HOME/tools/bin` in your `$PATH`.  If not, then you can run it with `/PATH/TO/ANDROID-SDK-HOME/tools/bin/sdkmanager ...`.
 
 ## Enable Gradle debug options
@@ -122,33 +111,46 @@ If your Gradle build fails, we recommend you to check your build's log in the `A
 
 If you're lost, you can call `--stacktrace --debug` flags (for example, `gradle ... --stacktrace --debug`) to get more detailed logs.
 
-In most cases `--stacktrace` should be enough, and the `Gradle Runner` step includes this flag by default. **why calling it if you can type it in the debug section of Gradle Runner?**
+In most cases `--stacktrace` should be enough, and the `Gradle Runner` step includes this flag by default.
 
 ![](/img/stacktrace.png)
 
 ## Run a bitrise Android build on your Mac/PC with Docker
 
-You can run your build on your Mac/PC, inside the same `docker` container you use on [bitrise.io](https://www.bitrise.io), to fully test your build in an identical environment! You can find the detailed guide here: [How to run your build locally in Docker](/docker/run-your-build-locally-in-docker/)
+You can run your build on your Mac/PC inside the same `docker` container you use on [bitrise.io](https://www.bitrise.io) to fully test your build in an identical environment! You can find the detailed guide here: [How to run your build locally in Docker](/docker/run-your-build-locally-in-docker/)
 
 ## Memory (RAM) limit
 
-You can specify the amount allowed RAM for the Java Virtual Machine by adding two **Environment Variables** to your Workflow, for example, as `App Env Var`s:
+You can specify the amount allowed RAM for the Java Virtual Machine (JVM) by adding two environment variables to your workflow.
+
+For example:
 
 * `GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'`
 * `JAVA_OPTIONS: "-Xms512m -Xmx1024m"`
 
-This method can be used to limit the allowed RAM the Gradle JVM process can use, which can be useful in case there's not enough RAM available in the system.
+You can limit the allowed RAM the Gradle JVM process uses, which is useful if there's not enough RAM available in the system.
 
 ## Emulators
 
 You can use our Android emulator [steps](http://www.bitrise.io/integrations) to create and boot Android emulators. Let's see how!
 
-{% include message_box.html type="important" title="`Create Android emulator` vs `Do anything with Script step`" content=" Instead of using `Do anything with Script step` to create an Android emulator, please use  `Create Android emulator` step! There are simply too many edge cases to cover here, as well as the commands and working configurations change quite frequently. "%}
+{% include message_box.html type="important" title="`AVD Manager` vs `Do anything with Script step`" content=" Instead of using `Do anything with Script step` to create an Android emulator, please use  `AVD Manager` Step! There are simply too many edge cases to cover relating to our script step, as well as the commands and working configurations change quite frequently. "%}
 
-1. Add `AVD manager` Step to your workflow. (set the device, api level and opi inputs) **one of the firs steps of your workflow. when this runs, an emulator starts booting, the earlier yu start it the more tasks you can perform before emulator starts working. (cloning, caching pulling, ect) so when im getting to the point that i want to use emulator i need to add the wait for android emulator step. after wait for emulaor step add the step you want to use the emulator with.**
-2. Set the Android version in the `Target platform of the new AVD` Step input field. **ORHER INPUTS?**
-3. Add the `Start Android emulator` Step to boot the new emulator.
-4. **Set the input ....**
+1. Add `AVD manager` Step to your workflow. It can be one of the first steps in your workflow.
+2. Set the following required input fields in the step: `Device Profile`, `Android API level`, and `OS Tag`.
+
+![](/img/avd-manager.png)
+
+When this Step runs, it takes time for the emulator to boot up. The earlier you place the 	step, the more tasks (cloning, caching) you can complete in your workflow before the emulator starts working.
+
+3. Add the `Wait for Emulator` Step to your workflow. Make sure you add it before a step you want to use the Android Virtual Device with. In our example, we are using `Wait for Android emulator` step to run the virtual device from the `Gradle Runner - UI test` Step onwards. 
+
+![](/img/wait-for-android-emu.png)
+
+3\. (set the device, api level and opi inputs) **one of the firs steps of your workflow. when this runs, an emulator starts booting, the earlier yu start it the more tasks you can perform before emulator starts working. (cloning, caching pulling, ect) so when im getting to the point that i want to use emulator i need to add the wait for android emulator step. after wait for emulaor step add the step you want to use the emulator with.**
+4\. Set the Android version in the `Target platform of the new AVD` Step input field. **ORHER INPUTS?**
+5\. Add the `Start Android emulator` Step to boot the new emulator.
+6\. **Set the input ....**
 
 ## Installing / Using Java version X
 
