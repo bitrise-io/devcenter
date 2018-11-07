@@ -21,4 +21,4 @@ published: false
         └───────────────┴────────────────────────┴────────────────┴
 ```
 
-Let's try it like this then. This is wrong but I know why now. Rebuild the site, now!
+Let's try it like this then. This is wrong but I know why now. Rebuild the site, now! Let's try again. 
