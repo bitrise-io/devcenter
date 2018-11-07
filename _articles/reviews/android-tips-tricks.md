@@ -139,9 +139,9 @@ You can use our Android emulator [steps](http://www.bitrise.io/integrations) to 
 1. Add `AVD manager` Step to your workflow. It can be one of the first steps in your workflow.
 2. Set the following required input fields in the step: `Device Profile`, `Android API level`, and `OS Tag`.
 
-![](/img/avd-manager.png)
+	![](/img/avd-manager.png)
 
-When this Step runs, it takes time for the emulator to boot up. The earlier you place the 	step, the more tasks (cloning, caching) you can complete in your workflow before the emulator starts working.
+	When this Step runs, it takes time for the emulator to boot up. The earlier you place the 	step, the more tasks (cloning, caching) you can complete in your workflow before the emulator starts working.
 
 3. Add the `Wait for Emulator` Step to your workflow. Make sure you add it before a step you want to use the Android Virtual Device with. In our example, we are using `Wait for Android emulator` step to run the virtual device from the `Gradle Runner - UI test` Step onwards. 
 
