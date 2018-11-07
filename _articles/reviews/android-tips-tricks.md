@@ -9,9 +9,36 @@ published: false
 
 In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps and what the major differences are.
 
-`Gradle Runner` Step
+`Gradle Runner` Step:
 
-`Android Build` Step
+* Config
+
+Optional path to the gradle build file to use
+
+Gradle task to run
+
+gradlew file path
+
+* Export Config
+
+APK, TEST APK, Mapping file include filter input fields
+
+* Debug
+
+Set the additional cache
+
+Additional options for gradle call
+
+`Android Build` Step:
+
+* Project location Module Variant
+* Option
+
+APK location pattern 
+
+Set the level of cache
+
+Additional Gradle Arguments
 
 ## About Gradle tasks
 
