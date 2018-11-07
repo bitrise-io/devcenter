@@ -252,12 +252,18 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/organizations/e1
 
 ### POST /apps/register
 
-Add a new application
+Add a new application. The parameters in the request body are the following:
+- **provider**(string): the git provider you are using, it can be `github`, `bitbucket`, `gitlab`, `gitlab-self-hosted` or `custom`
+- **is_public**(boolean): if `true` then the repository visibility setting will be public, in case of `false` it will be private
+- **repo_url**(string): this is the URL of your repository
+- **type**(string): it has to be provided by legacy reasons and has to have the `git` value
+- **git_repo_slug**(string): the slug of the repository at the git provider
+- **git_owner**(string): the slug of the owner of the repository at the git provider
 
 #### Example `curl` request
 
 ``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/register").POST_cURL }}' -d '{{ (var "/v0.1/apps/register").POST_RequestBody }}'
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/register").POST_cURL }}' -d '{{ (var "/v0.1/apps/register").POST_RequestBody }}'
 ```
 
 #### Example response
@@ -271,12 +277,15 @@ curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/register").
 
 ### POST /apps/APP-SLUG/register-ssh-key
 
-Register an SSH key to a specific application
+Register an SSH key to a specific application. There are three parameters to use:
+- **auth_ssh_private_key**(string): the private part of the SSH key you would like to use
+- **auth_ssh_public_key**(string): the public part of the SSH key you would like to use
+- **is_register_key_into_provider_service**(boolean): if it's set to true, the provided SSH key will be register at the provider of the application
 
 #### Example `curl` request
 
 ``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/register-ssh-key").POST_cURL }}' -d '{{ (var "/v0.1/apps/022d8a3124f1225d/register-ssh-key").POST_RequestBody }}'
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/register-ssh-key").POST_cURL }}' -d '{{ (var "/v0.1/apps/022d8a3124f1225d/register-ssh-key").POST_RequestBody }}'
 ```
 
 #### Example response
@@ -294,7 +303,7 @@ Register a webhook for a specific application
 #### Example `curl` request
 
 ``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/register-webhook").POST_cURL }}'
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/register-webhook").POST_cURL }}'
 ```
 
 #### Example response
@@ -313,7 +322,7 @@ Parameters:
 
 - `project_type`: the type of your project (`android`, `ios`, `cordova`, `other`, `xamarin`, `macos`, `ionic`, `react-native`, `fastlane`, null)
 - `stack_id`: the id of the stack the application will be built (these can be found in the [system report](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports) file names)
-- `config_id`: which `default-android-config`, `default-cordova-config`, `default-fastlane-config`, `default-ionic-config`, `default-ios-config`,`default-macos-config`, `default-react-native-config`, `default-xamarin-config`, `other-config` (default if parameter is not speficied)
+- `config`: which `default-android-config`, `default-cordova-config`, `default-fastlane-config`, `default-ionic-config`, `default-ios-config`,`default-macos-config`, `default-react-native-config`, `default-xamarin-config`, `other-config` (default if parameter is not speficied)
 - `mode`: config specification mode, has to be specified with `manual` value
 - `envs`: environment variables for the application workflows
 - `organization_slug`: the slug of the organization, who will be the owner of the application, if it's not specified, then the authenticated user will be the owner
@@ -321,7 +330,7 @@ Parameters:
 #### Example `curl` request
 
 ``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/finish").POST_cURL }}' -d '{{ (var "/v0.1/apps/022d8a3124f1225d/finish").POST_RequestBody }}'
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' '{{ (var "/v0.1/apps/022d8a3124f1225d/finish").POST_cURL }}' -d '{{ (var "/v0.1/apps/022d8a3124f1225d/finish").POST_RequestBody }}'
 ```
 
 #### Example response
