@@ -15,14 +15,14 @@ In the following section, we'd like to give you a few use cases when to use our 
 
 ## About Gradle tasks
 
-[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. They perform actions that are needed to build a project. A `gradle` task is a process you can run with `gradle`. You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal.
+[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. They perform actions that are needed to build a project. Y**ou can define tasks specific to your project or use the default ones.** A `gradle` task is a process you can run with `gradle`. You can run these tasks by running `gradle TASK-TO-RUN` in your Command Line / Terminal.
 
 A standard Android Gradle project includes a lot of tasks by default such as:
 
-* `androidDependencies` - Displays the Android dependencies of the project.
-* `assemble` - Assembles all variants of all applications and secondary packages.
-* `assembleAndroidTest` - Assembles all the Test applications.
-* `clean` - Deletes the build directory.
+* `androidDependencies` - displays the Android dependencies of the project.
+* `assemble` - assembles all variants of all applications and secondary packages.
+* `assembleAndroidTest` - assembles all the Test applications.
+* `clean` - deletes the build directory.
 
 ### How to get the list of available Gradle tasks in your project
 
@@ -56,14 +56,14 @@ To see all the available tasks, call `gradle tasks --all`.
 
 You can run any of the Gradle tasks on Bitrise either using `Do anything with our Script` Step, `Gradle Runner` or `Android Build` Step.
 
-* You can run any of the tasks on Bitrise by using our `Script` step by calling `gradle task-name-to-run` (for example: `gradle assemble`). **sample**
+* You can run any of the tasks on Bitrise by using our `Script` step and calling `gradle task-name-to-run` i**n the Script input field ?** (for example: `gradle assemble`). **sample**
 * You can use our `Gradle Runner` or `Android Build` Steps and specify the task as the value of the step input.
 
 ![](/img/gradlew-gradle-task.png)
 
 **Instead of running** `**gradle**` **directly, you should run the gradle commands through** `**gradlew**` **(Gradle Wrapper) which is part of our** `**Gradle Runner**` **Step.**
 
-You can find more information about the Gradle Wrapper (gradlew) and how you can generate one (if you would not have done it already) in the [official guide](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
+You can find more information about the Gradle Wrapper (gradlew) and how you can generate one (if you have not done it already) in the [official guide](https://docs.gradle.org/current/userguide/gradle_wrapper.html).
 
 ## How to install an additional Android SDK package
 
@@ -75,27 +75,27 @@ You can update your current Android SDK package either using our Step or install
 
 ### Automatic installation of Android SDKs
 
-We suggest you to use our `Install missing Android SDK components` Step to install dependencies and Android SDK components for your Android project. The Step runs the `gradlew dependencies` **command in your project**. Provide the required NDK version in the `NDK version` input field and let the step take care of installation!
+We suggest you to use our `Install missing Android SDK components` Step to install dependencies and missing Android SDK components for your Android project. The Step runs the `gradlew dependencies` **command in your project to install them?**. Provide the required NDK version in the `NDK version` input field and let the step take care of installation!
 
 ![](/img/android-ndk.png)
 
 ### Manual installation of Android SDKs?
 
-You can manually install the missing Android SDKs as well if you...
+You can manually install the missing Android SDKs as well if you **why would they?**
 
 Before you start:
 
-* Make sure you have the Android `sdkmanager` installed to your local computer. For more information on `sdkmanager`, check out their [guide](https://developer.android.com/studio/command-line/sdkmanager).
+* Make sure you have the Android `sdkmanager` installed to your local computer. For more information on `sdkmanager`, check out Android Studio's [guide](https://developer.android.com/studio/command-line/sdkmanager).
 
 1. Add a `Do anything with Script step` to your workflow.
 2. Use the Android `sdkmanager` tool to install the additional packages you need.
 
 {% include message_box.html type="important" title="When to use the Script Step" content="
-Please only use the `Do anything with Script step` solution if you really have to **WHENdoes that happen?**, as you'll have to manually update the `Script content` if the Android tools change. "%}
+Please only use the `Do anything with Script step` solution if you really have to **WHEN does that happen?**, as you'll have to manually update the `Script content` if the Android tools change. "%}
 
-As an example, if you wanted to install the Android SDK v18 and the related `build-tools` v18.0.1:
+As an example, if you wanted to install the Android SDK v18 and the related `build-tools` v18.0.1, follow the steps:
 
-1. Add the `Do anything with Script step` (can be the very first step in your workflow)
+1. Add the `Do anything with Script step` (c**an be the very first step in your workflow)**
 2. Type the following content:
 
        #!/bin/bash
@@ -117,7 +117,7 @@ You can check the full list of available packages (including obsolete packages) 
 
 If your Gradle build fails, we recommend you to check your build's log in the `APPS & ARTIFACTS` tab. If you're lost, you can call `--stacktrace --debug` flags (for example, `gradle ... --stacktrace --debug`) to get more detailed logs.
 
-In most cases `--stacktrace` should be enough, and the `Gradle Runner` step includes this flag by default. **why calling it if you can type it in in the debug section of Gradle Runner?**
+In most cases `--stacktrace` should be enough, and the `Gradle Runner` step includes this flag by default. **why calling it if you can type it in the debug section of Gradle Runner?**
 
 ![](/img/stacktrace.png)
 
