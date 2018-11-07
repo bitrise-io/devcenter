@@ -36,7 +36,7 @@ When you trigger a build a Virtual Machine is assigned to host, your build and y
 After a build is finished the Virtual Machine is destroyed and you can browse the logs of every step that ran during the workflow.
 You can read more at [Code Security](/getting-started/code-security).
 
-The VMs are equipped with all the necessary tools required to build your app. Bitrise automatically detects which Stack - virtual machine type - is appropriate for your app but of course you can change it manually at any time.
+The VMs are equipped with all the tools required to build your app. Bitrise automatically detects which Stack - virtual machine type - is appropriate for your app but of course you can change it manually at any time.
 
 ## Bitrise CLI - the open source, offline, automation runner
 
