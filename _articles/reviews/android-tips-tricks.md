@@ -144,7 +144,7 @@ You can use our Android emulator [steps](http://www.bitrise.io/integrations) to 
    When this Step runs, it takes time for the emulator to boot up. The earlier you place the 	step, the more tasks (cloning, caching) you can complete in your workflow before the emulator starts working.
 3. Add the `Wait for Emulator` Step to your workflow. Make sure you add it before a step you want to use the Android Virtual Device with. In our example, we are using `Wait for Android emulator` step to run the virtual device from the `Gradle Runner - UI test` Step onwards.
 
-	![](/img/wait-for-android-emu.png)
+   ![](/img/wait-for-android-emu.png)
 
 ## Installing / Using Java version X
 
