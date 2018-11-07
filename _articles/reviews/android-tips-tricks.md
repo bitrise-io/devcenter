@@ -9,7 +9,7 @@ published: false
 
 In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps and what the major differences are.
 
-`Gradle Runner` Step: more complex Step which is based on Gradle tasks. You can use this step to run any gradle task (link) that is available in your task list. More on how to call task list, here. You can run multiple tasks at the same time if you insert the tasks separated with space in the `Gradle task to run` input field. For example: `assembleDebug` `assembleDebugAndroidTest` where Gradle Runner step will output as many APK paths as many assemble tasks you have set.
+`Gradle Runner` Step: it's a more complex Step which is based on Gradle tasks. You can use this step to run any gradle task (link) that is available in your task list. More on how to call task list, here. You can run multiple tasks at the same time if you insert the tasks separated with space in the `Gradle task to run` input field. For example: `assembleDebug` `assembleDebugAndroidTest` where Gradle Runner step will output as many APK paths as many assemble tasks you have set.
 
 `Android Build` Step: provides a simplified user experience of Android Studio. This step reflects the configuration of your project in Android Studio. This step is geared towards building your project it cannot perform any other Gradle task. You can have any `assemble` - related task performed by this Step.
 
