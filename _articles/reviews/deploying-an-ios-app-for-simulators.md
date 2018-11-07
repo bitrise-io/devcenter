@@ -9,7 +9,7 @@ You can build and deploy your iOS application to a simulator, to show it off in 
 
 The .app file can be run on any simulator. On Bitrise, we have a Step to upload your app to Appetize.io: the `Appetize.io deploy` Step. With this Step, you can deploy your app so you can run it in a browser.
 
-To build the app for a simulator, you do not need code signing files!
+To build an app for a simulator, you do not need code signing files!
 
 ### Building an app for a simulator
 
