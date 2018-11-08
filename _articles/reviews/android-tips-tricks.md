@@ -17,7 +17,7 @@ Our `Android Build` Step is different from `Gradle Runner` in the sense that it 
 
 ## About Gradle tasks
 
-[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. You can use any task that is defined in gradle build files where tasks are either defined by you or available by default based on your project. You can run these available tasks with the `gradlew TASK-TO-RUN` command in your Command Line / Terminal.
+[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. You can use any task that is defined in gradle build files where tasks are either specified by you or available by default based on your project. You can run these available tasks with the `gradlew TASK-TO-RUN` command in your Command Line / Terminal.
 
 Here is a list of the most common default tasks of an Android Gradle project:
 
@@ -26,7 +26,7 @@ Here is a list of the most common default tasks of an Android Gradle project:
 * `assembleAndroidTest` - assembles all the Test applications.
 * `clean` - deletes the build directory.
 
-{% include message_box.html type="info" title="About Gradle Wrapper" content=" At Bitrise we use and run `gradlew` (Gradle Wrapper) which helps update your project by installing the needed Gradle version specific to your project. Check out [Gradle's official documentation](https://docs.gradle.org/current/userguide/gradle_wrapper.html) about Gradle Wrapper and how you can generate one! %}
+{% include message_box.html type="info" title="About Gradle Wrapper" content=" At Bitrise we use and run `gradlew` (Gradle Wrapper) which helps update your project by installing the needed Gradle version specific to your project. Check out [Gradle's official documentation](https://docs.gradle.org/current/userguide/gradle_wrapper.html) about Gradle Wrapper and how you can generate one!" %}
 
 ### How to get the list of available Gradlew tasks in your project
 
