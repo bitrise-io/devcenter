@@ -64,16 +64,27 @@ You can run Gradle tasks on Bitrise using `Do anything with our Script` Step, `A
 
 1. Insert the Step anywhere in your workflow.
 2. Run any task by calling `./gradlew task-name-to-run` in the Script input field (for example: `./gradlew assemble`).
+3. Make sure the right executor type is selected to run your script in the `Execution with / runner binary` input field of the `Config` section.
 
 #### Gradle Runner Step
 
-You can use our `Gradle Runner` Step and specify the task that is available in your task list (when you called call ./`gradlew tasks --all before you have the task list)` as the value of the step input. If you've been using our scanner to upload your project to bitrise.io, the `gradlew file path` input field gets filled out automatically with the respective path, otherwise make sure you fill it out manually!
+As a minimum input, make sure you fill out the following required two input fields:
+
+1. Specify the task that is available in your task list and that you want to run as the value of the `Gradle task to run` step input.
+2. If you've been using our scanner to upload your project to [bitrise.io](https://www.bitrise.io/), the `gradlew file path` input field gets filled out automatically with the respective path, otherwise make sure you fill it out manually! In this case make sure to add a relative path to the repository root, for example: `./gradlew` or `./sub/dir/gradlew` (if it is a subdirectory)
 
 ![](/img/gradle-runner-gradlew.png)
 
+#### Android Build
+
+This step can only perform building-related Gradle tasks. If you wish to run other type of tasks, please use `Gradle Runner` Step.
+1. Add the Step after the testing steps but before the code signing step in deploy workflow.
+2. Set the required `Project Location` input field to reflect the root directory of your project.
+
+
 ## How to install an additional Android SDK package
 
-You can update your Android SDK package or install missing dependencies either using our `Install missing Android SDK components` Step or i_nstalling the respective package manually._
+You can update your Android SDK package or install missing dependencies either using our `Install missing Android SDK components` Step or installing the respective package manually.
 
 ### Automatic installation of Android SDKs and dependencies
 
@@ -89,7 +100,7 @@ The Step runs the `gradlew dependencies` command and prints out a list of depend
 
 As an alternative to `Install missing Android SDK components` you can manually install the missing Android SDKs as well.
 
-{% include message_box.html type="important" title="When to use the Script Step" content=" Please only use the `Do anything with Script` step solution if you really need an alternative to the `Install missing Android SDK components Step` , as you'll have to manually update the `Script content` if the Android tools change. "%}
+{% include message_box.html type="important" title="When to use the Script Step" content=" Please only use the `Do anything with Script` step solution if you really need an alternative to the `Install missing Android SDK components Step`, as you'll have to manually update the `Script content` if the Android tools change. "%}
 
 Before you start:
 
