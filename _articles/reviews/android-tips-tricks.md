@@ -7,15 +7,17 @@ published: false
 ---
 ## Gradle Runner vs Android Build
 
-In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps and what the major differences are.
+In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps are both building steps but they are slightly different in their functions. and what the major differences are.
 
-`Gradle Runner` Step: it's a more complex Step which is based on Gradle tasks. You can use this step to run any gradle task (link) that is available in your task list. More on how to call task list, here. You can run multiple tasks at the same time if you insert the tasks separated with space in the `Gradle task to run` input field. For example: `assembleDebug` `assembleDebugAndroidTest` where Gradle Runner step will output as many APK paths as many assemble tasks you have set.
+Our `Gradle Runner` Step is the headquarter for all your Gradle tasks. It runs a single or multiple Gradle task(s) you specify and then copies the generated APK(s) into the Bitrise Deploy Directory (`$BITRISE_DEPLOY_DIR`). This step runs ANY Gradle task (not just building task) that is available in your project's [task list](/tips-and-tricks/android-tips-tricks/#how-to-get-the-list-of-available-gradlew-tasks-in-your-project/). You can run multiple tasks at the same time if you insert the tasks separated with spaces in the `Gradle task to run` input field of the Step.
 
-`Android Build` Step: provides a simplified user experience of Android Studio. This step reflects the configuration of your project in Android Studio. This step is geared towards building your project it cannot perform any other Gradle task. You can have any `assemble` - related task performed by this Step.
+For example: `assembleDebug` `assembleDebugAndroidTest` where Gradle Runner step will output as many APK paths as many assemble tasks you have set.
+
+Our `Android Build` Step is different from `Gradle Runner` in the sense that it provides a simplified user experience of Android Studio's developing functions: it reflects how you would configure your project in Android Studio. This step is geared towards ONLY building your project, therefore, it cannot perform any other Gradle task (as opposed to `Gradle Runner`). As a result, you can use `assemble` - related task with this Step.
 
 ## About Gradle tasks
 
-[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. They perform actions that are needed to build a project. You can use any task that is defined in gradle build files - either defined by you or available by default. You can run all the available tasks by running `gradlew TASK-TO-RUN` in your Command Line / Terminal.
+[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. You can use any task that is defined in gradle build files where tasks are either defined by you or available by default based on your project. You can run these available tasks with the `gradlew TASK-TO-RUN` command in your Command Line / Terminal.
 
 Here is a list of the most common default tasks of an Android Gradle project:
 
@@ -24,7 +26,7 @@ Here is a list of the most common default tasks of an Android Gradle project:
 * `assembleAndroidTest` - assembles all the Test applications.
 * `clean` - deletes the build directory.
 
-At Bitrise we use and run gradlew. users project has a `gradlew` which means when you generate a new android project Gradle has a given version and gradle wrapper puts this version Gradle version into my project.
+{% include message_box.html type="info" title="About Gradle Wrapper" content=" At Bitrise we use and run `gradlew` (Gradle Wrapper) which helps update your project by installing the needed Gradle version specific to your project. Check out [Gradle's official documentation](https://docs.gradle.org/current/userguide/gradle_wrapper.html) about Gradle Wrapper and how you can generate one! %}
 
 ### How to get the list of available Gradlew tasks in your project
 
