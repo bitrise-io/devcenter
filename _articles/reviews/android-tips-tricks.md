@@ -30,7 +30,7 @@ Here is a list of the most common default tasks of an Android Gradle project:
 
 ### Get the list of available Gradlew tasks in your project
 
-To get the basic task list, call `gradlew tasks` in your Android app's directory. When running `gradlew tasks`, you'll get a list of available `gradle tasks` in this format:
+To get the basic task list, call `gradlew tasks` in your Android app's directory. When running `gradlew tasks`, you'll get a list of **available and most frequently** used `gradle tasks` in this format:
 
     $ ./gradlew tasks
     
@@ -54,7 +54,7 @@ To get the basic task list, call `gradlew tasks` in your Android app's directory
     assembleRelease - Assembles all Release builds.
     ...
 
-**To see all the available tasks listed in your task list**, call `./gradlew tasks --all`.
+To see **all the available tasks listed** in your task list, call `./gradlew tasks --all`.
 
 ### Run Gradle task with our Steps
 
