@@ -75,7 +75,7 @@ As a minimum input, make sure you fill out the following required two input fiel
 
 ![](/img/gradle-runner-gradlew.png)
 
-#### Android Build
+#### Android Build Step
 
 This step can only perform building-related `gradle tasks`. If you wish to run other type of `gradle tasks`, please use our `Gradle Runner` Step.
 
