@@ -28,7 +28,7 @@ Here is a list of the most common default tasks of an Android Gradle project:
 
 {% include message_box.html type="info" title="About Gradle Wrapper" content=" At Bitrise we use and run `gradlew` (Gradle Wrapper) which helps update your project by installing the needed Gradle version specific to your project. Check out [Gradle's official documentation](https://docs.gradle.org/current/userguide/gradle_wrapper.html) about Gradle Wrapper and how you can generate one!" %}
 
-### How to get the list of available Gradlew tasks in your project
+### Get the list of available Gradlew tasks in your project
 
 To get the basic task list, call `gradlew tasks` in your Android app's directory. When running `gradlew tasks`, you'll get a list of available Gradle tasks in this format:
 
@@ -54,17 +54,22 @@ To get the basic task list, call `gradlew tasks` in your Android app's directory
     assembleRelease - Assembles all Release builds.
     ...
 
-To see all the available tasks listed in your task list, call ./`gradlew tasks --all`.
+**To see all the available tasks listed in y**our task list, call ./`gradlew tasks --all`.
 
 ### Run Gradle task with our Steps
 
-You can run any of the Gradle tasks on Bitrise either using `Do anything with our Script` Step and `Gradle Runner` Steps.
+You can run Gradle tasks on Bitrise using `Do anything with our Script` Step, `Android Build` and `Gradle Runner` Steps.
 
-* Run any task by calling `./gradlew task-name-to-run` in the Script input field of `Do anything with our Script` Step (for example: `./gradlew assemble`). You're free to insert this step anywhere in your workflow where it works best for you.
+#### Do anything with Script Step
+
+1. Insert the Step anywhere in your workflow.
+2. Run any task by calling `./gradlew task-name-to-run` in the Script input field (for example: `./gradlew assemble`).
+
+#### Gradle Runner Step
+
+You can use our `Gradle Runner` Step and specify the task that is available in your task list (when you called call ./`gradlew tasks --all before you have the task list)` as the value of the step input. If you've been using our scanner to upload your project to bitrise.io, the `gradlew file path` input field gets filled out automatically with the respective path, otherwise make sure you fill it out manually!
 
 ![](/img/gradle-runner-gradlew.png)
-
-* You can use our `Gradle Runner` Step and specify the task that is available in your task list (when you called call ./`gradlew tasks --all before you have the task list)` as the value of the step input. If you've been using our scanner to upload your project to bitrise.io, the `gradlew file path` input field gets filled out automatically with the respective path, otherwise make sure you fill it out manually!
 
 ## How to install an additional Android SDK package
 
