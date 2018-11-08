@@ -7,9 +7,9 @@ published: false
 ---
 ## Gradle Runner vs Android Build
 
-In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps are both building steps but they are slightly different in their functions. and what the major differences are.
+We'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps. They are both building steps but they are slightly different in their functions, and in what the major differences are.
 
-Our `Gradle Runner` Step is the headquarter for all your `gradle tasks`. It runs a single or multiple Gradle task(s) you specify and then copies the generated APK(s) into the Bitrise Deploy Directory (`$BITRISE_DEPLOY_DIR`). This step runs ANY Gradle task (not just building task) that is available in your project's [task list](/tips-and-tricks/android-tips-tricks/#how-to-get-the-list-of-available-gradlew-tasks-in-your-project/). You can run multiple tasks at the same time if you insert the tasks separated with spaces in the `Gradle task to run` input field of the Step.
+Our `Gradle Runner` Step is the headquarters for all your `gradle tasks`. It runs a single or multiple Gradle task(s) you specify and then copies the generated APK(s) into the Bitrise Deploy Directory (`$BITRISE_DEPLOY_DIR`). This step runs ANY Gradle task (not just building task) that is available in your project's [task list](/tips-and-tricks/android-tips-tricks/#how-to-get-the-list-of-available-gradlew-tasks-in-your-project/). You can run multiple tasks at the same time if you insert the tasks separated with spaces in the `Gradle task to run` input field of the Step.
 
 For example: `assembleDebug` `assembleDebugAndroidTest` where Gradle Runner step will output as many APK paths as many assemble tasks you have set.
 
@@ -17,7 +17,7 @@ Our `Android Build` Step is different from `Gradle Runner` in the sense that it 
 
 ## About Gradle tasks
 
-[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are integral part of Gradle build script. You can use any task that is defined in gradle build files where tasks are either specified by you or available by default based on your project. You can run these available tasks with the `gradlew TASK-TO-RUN` command in your Command Line / Terminal.
+[Gradle tasks](https://docs.gradle.org/current/userguide/tutorial_using_tasks.html) are an integral part of Gradle build script. You can use any task that is defined in gradle build files where tasks are either specified by you or available by default based on your project. You can run these available tasks with the `gradlew TASK-TO-RUN` command in your Command Line / Terminal.
 
 Here is a list of the most common default tasks of an Android Gradle project:
 
@@ -54,7 +54,7 @@ To get the basic task list, call `gradlew tasks` in your Android app's directory
     assembleRelease - Assembles all Release builds.
     ...
 
-**To see all the available tasks listed in y**our task list, call ./`gradlew tasks --all`.
+**To see all the available tasks listed in your task list**, call `./gradlew tasks --all`.
 
 ### Run Gradle task with our Steps
 
@@ -68,18 +68,18 @@ You can run `gradle tasks` on Bitrise using `Do anything with our Script` Step, 
 
 #### Gradle Runner Step
 
-As a minimum input, make sure you fill out the following required two input fields:
+As a minimum input, make sure you fill out the following two input fields:
 
 1. Specify the task that is available in your task list as the value of the `Gradle task to run` step input.
-2. If you've been using our scanner to upload your project to [bitrise.io](https://www.bitrise.io/), the `gradlew file path` input field gets automatically filled out with the respective path in the Step. Otherwise make sure you fill it out manually and make sure to add a relative path to the repository root, for example: `./gradlew` or `./sub/dir/gradlew` (if it is a subdirectory).
+2. If you use our scanner to upload your project to [bitrise.io](https://www.bitrise.io/), the `gradlew file path` input field gets automatically filled out with the respective path in the Step. Otherwise make sure you fill it out manually and make sure to add a relative path to the repository root, for example: `./gradlew` or `./sub/dir/gradlew` (if it is a subdirectory).
 
 ![](/img/gradle-runner-gradlew.png)
 
 #### Android Build Step
 
-This step can only perform building-related `gradle tasks`. If you wish to run other type of `gradle tasks`, please use our `Gradle Runner` Step.
+This Step can only perform building-related `gradle tasks`. If you wish to run other type of `gradle tasks`, please use our `Gradle Runner` Step.
 
-1. Add the Step after the testing steps but before the code signing step in your deploy workflow.
+1. Add the Step after the testing steps but before the code signing Step in your deploy workflow.
 2. Set the required `Project Location` input field to reflect the root directory of your project.
 
 ## How to install an additional Android SDK package
@@ -88,7 +88,7 @@ You can update your Android SDK package or install missing dependencies either u
 
 ### Automatic installation of Android SDKs and dependencies
 
-We suggest you to use our `Install missing Android SDK components` Step to install dependencies and missing Android SDK components for your Android project:
+We suggest using our `Install missing Android SDK components` Step to install dependencies and missing Android SDK components for your Android project:
 
 1. Provide the required NDK version in the `NDK Revision` input field. Leave this input empty if you are not using NDK in your project.
 
@@ -98,7 +98,7 @@ The Step runs the `gradlew dependencies` command and prints out a list of depend
 
 ### Manual installation of Android SDKs
 
-As an alternative to `Install missing Android SDK components` you can manually install the missing Android SDKs as well.
+As an alternative to the `Install missing Android SDK components` Step you can manually install the missing Android SDKs as well.
 
 {% include message_box.html type="important" title="When to use `Do anything with our Script step`" content=" Please only use the `Do anything with Script step` solution if you really need an alternative to the `Install missing Android SDK components Step`, as you'll have to **manually** update the `Script content` if the Android tools change. "%}
 
@@ -129,7 +129,7 @@ If your Gradle build fails, we recommend you to first check your build's log in 
 
 If you're still lost, you can call `--stacktrace --debug` flags (for example, `gradle ... --stacktrace --debug`) to get more detailed logs.
 
-In most cases `--stacktrace` should be enough, and the `Gradle Runner` step includes this flag by default.
+In most cases `--stacktrace` should be enough, and the `Gradle Runner` Step includes this flag by default.
 
 ![](/img/stacktrace.png)
 
@@ -150,17 +150,17 @@ You can limit the allowed RAM the Gradle JVM process uses. This is useful if the
 
 ## Emulators
 
-You can use our Android emulator steps such as `AVD Manager` and `Wait for Emulator` to create and boot Android emulators. Let's see how!
+You can use our Android emulator Steps such as `AVD Manager` and `Wait for Emulator` to create and boot Android emulators. Let's see how!
 
-{% include message_box.html type="important" title="`AVD Manager` vs `Do anything with Script step`" content=" Instead of using `Do anything with Script step` to create an Android emulator, please use  `AVD Manager` Step! There are simply too many edge cases to cover relating to our script step, as well as the commands and working configurations change quite frequently. "%}
+{% include message_box.html type="important" title="`AVD Manager` vs `Do anything with Script step`" content=" Instead of using `Do anything with Script step` to create an Android emulator, please use  `AVD Manager` Step! There are simply too many edge cases to cover relating to our script Step, as well as the commands and working configurations change quite frequently. "%}
 
 1. Add `AVD manager` Step to your workflow. It can be one of the first steps in your workflow.
 2. Set the following required input fields in the step: `Device Profile`, `Android API level`, and `OS Tag`.
 
    ![](/img/avd-manager.png)
 
-   The Emulator needs some time to boot up. The earlier you place the step in your workflow, the more tasks (cloning or caching) you can complete in your workflow before the emulator starts working.
-3. Add the `Wait for Emulator` Step to your workflow. This step acts a shield preventing the `AVD Manager` to kick in. Make sure you add it BEFORE the step with which you want to use the `AVD Manager`. In our example, we are using `Wait for Android emulator` step to only start the Android Virtual Device FROM the `Gradle Runner - UI test` Step onwards.
+   The Emulator needs some time to boot up. The earlier you place the Step in your workflow, the more tasks (cloning or caching) you can complete in your workflow before the emulator starts working.
+3. Add the `Wait for Emulator` Step to your workflow. This step acts a shield preventing the `AVD Manager` to kick in. Make sure you add it BEFORE the step with which you want to use the `AVD Manager`. In our example, we are using `Wait for Android emulator` Step to only start the Android Virtual Device FROM the `Gradle Runner - UI test` Step onwards.
 
    ![](/img/wait-for-android-emu.png)
 
@@ -180,4 +180,4 @@ If you need a Java or JDK version which is not preinstalled on the Android stack
        apt-get install -y openjdk-8-jdk
        update-java-alternatives -s /usr/lib/jvm/java-1.8.0-openjdk-amd64
        echo "done"
-2. Start a new build. This `Script` step can be the very first step in the Workflow, as it does not depend on anything else.
+2. Start a new build. This `Script` Step can be the very first step in the Workflow, as it does not depend on anything else.
