@@ -26,7 +26,7 @@ Here is a list of the most common default tasks of an Android Gradle project:
 * `assembleAndroidTest` - assembles all the Test applications.
 * `clean` - deletes the build directory.
 
-{% include message_box.html type="info" title="About Gradle Wrapper" content=" At Bitrise we use and run `gradlew` (Gradle Wrapper) which helps update your project by installing the needed Gradle version specific to your project. Check out [Gradle's official documentation](https://docs.gradle.org/current/userguide/gradle_wrapper.html) about Gradle Wrapper and how you can generate one!" %}
+{% include message_box.html type="info" title="About Gradle Wrapper" content=" At Bitrise we use `gradlew` (Gradle Wrapper) which helps update your project by installing the needed Gradle version specific to your project. Check out [Gradle's official documentation](https://docs.gradle.org/current/userguide/gradle_wrapper.html) about Gradle Wrapper and how you can generate one!" %}
 
 ### Get the list of available Gradlew tasks in your project
 
@@ -58,7 +58,7 @@ To get the basic task list, call `gradlew tasks` in your Android app's directory
 
 ### Run Gradle task with our Steps
 
-You can run Gradle tasks on Bitrise using `Do anything with our Script` Step, `Android Build` and `Gradle Runner` Steps.
+You can run Gradle tasks on Bitrise using `Do anything with our Script` Step, `Gradle Runner` and `Android Build` Steps.
 
 #### Do anything with Script Step
 
@@ -70,21 +70,21 @@ You can run Gradle tasks on Bitrise using `Do anything with our Script` Step, `A
 
 As a minimum input, make sure you fill out the following required two input fields:
 
-1. Specify the task that is available in your task list and that you want to run as the value of the `Gradle task to run` step input.
-2. If you've been using our scanner to upload your project to [bitrise.io](https://www.bitrise.io/), the `gradlew file path` input field gets filled out automatically with the respective path, otherwise make sure you fill it out manually! In this case make sure to add a relative path to the repository root, for example: `./gradlew` or `./sub/dir/gradlew` (if it is a subdirectory)
+1. Specify the task that is available in your task list as the value of the `Gradle task to run` step input.
+2. If you've been using our scanner to upload your project to [bitrise.io](https://www.bitrise.io/), the `gradlew file path` input field gets automatically filled out with the respective path in the Step. Otherwise make sure you fill it out manually and make sure to add a relative path to the repository root, for example: `./gradlew` or `./sub/dir/gradlew` (if it is a subdirectory).
 
 ![](/img/gradle-runner-gradlew.png)
 
 #### Android Build
 
-This step can only perform building-related Gradle tasks. If you wish to run other type of tasks, please use `Gradle Runner` Step.
-1. Add the Step after the testing steps but before the code signing step in deploy workflow.
-2. Set the required `Project Location` input field to reflect the root directory of your project.
+This step can only perform building-related Gradle tasks. If you wish to run other type of Gradle tasks, please use our `Gradle Runner` Step.
 
+1. Add the Step after the testing steps but before the code signing step in your deploy workflow.
+2. Set the required `Project Location` input field to reflect the root directory of your project.
 
 ## How to install an additional Android SDK package
 
-You can update your Android SDK package or install missing dependencies either using our `Install missing Android SDK components` Step or installing the respective package manually.
+You can update your Android SDK package or install missing dependencies either using our `Install missing Android SDK components` Step or `Do anything with Script step` where installing the respective package requires a little manual coding.
 
 ### Automatic installation of Android SDKs and dependencies
 
@@ -92,15 +92,15 @@ We suggest you to use our `Install missing Android SDK components` Step to insta
 
 1. Provide the required NDK version in the `NDK Revision` input field. Leave this input empty if you are not using NDK in your project.
 
-The Step runs the `gradlew dependencies` command and prints out a list of dependencies and SDK components that are relevant to your project. Then the Step installs all them.
-
 ![](/img/android-ndk.png)
 
-### Manual installation of Android SDKs?
+The Step runs the `gradlew dependencies` command and prints out a list of dependencies and SDK components that are relevant to your project. Then the Step takes care of installing them.
+
+### Manual installation of Android SDKs
 
 As an alternative to `Install missing Android SDK components` you can manually install the missing Android SDKs as well.
 
-{% include message_box.html type="important" title="When to use the Script Step" content=" Please only use the `Do anything with Script` step solution if you really need an alternative to the `Install missing Android SDK components Step`, as you'll have to manually update the `Script content` if the Android tools change. "%}
+{% include message_box.html type="important" title="When to use `Do anything with our Script`" content=" Please only use the `Do anything with Script` step solution if you really need an alternative to the `Install missing Android SDK components Step`, as you'll have to manually update the `Script content` if the Android tools change. "%}
 
 Before you start:
 
