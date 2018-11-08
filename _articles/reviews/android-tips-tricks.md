@@ -9,11 +9,11 @@ published: false
 
 In the following section, we'd like to give you a few use cases when to use our `Gradle Runner` and `Android Build` Steps are both building steps but they are slightly different in their functions. and what the major differences are.
 
-Our `Gradle Runner` Step is the headquarter for all your Gradle tasks. It runs a single or multiple Gradle task(s) you specify and then copies the generated APK(s) into the Bitrise Deploy Directory (`$BITRISE_DEPLOY_DIR`). This step runs ANY Gradle task (not just building task) that is available in your project's [task list](/tips-and-tricks/android-tips-tricks/#how-to-get-the-list-of-available-gradlew-tasks-in-your-project/). You can run multiple tasks at the same time if you insert the tasks separated with spaces in the `Gradle task to run` input field of the Step.
+Our `Gradle Runner` Step is the headquarter for all your `gradle tasks`. It runs a single or multiple Gradle task(s) you specify and then copies the generated APK(s) into the Bitrise Deploy Directory (`$BITRISE_DEPLOY_DIR`). This step runs ANY Gradle task (not just building task) that is available in your project's [task list](/tips-and-tricks/android-tips-tricks/#how-to-get-the-list-of-available-gradlew-tasks-in-your-project/). You can run multiple tasks at the same time if you insert the tasks separated with spaces in the `Gradle task to run` input field of the Step.
 
 For example: `assembleDebug` `assembleDebugAndroidTest` where Gradle Runner step will output as many APK paths as many assemble tasks you have set.
 
-Our `Android Build` Step is different from `Gradle Runner` in the sense that it provides a simplified user experience of Android Studio's developing functions: it reflects how you would configure your project in Android Studio. This step is geared towards ONLY building your project, therefore, it cannot perform any other Gradle task (as opposed to `Gradle Runner`). As a result, you can use `assemble` - related task with this Step.
+Our `Android Build` Step is different from `Gradle Runner` in the sense that it provides a simplified user experience of Android Studio's developing functions: it reflects how you would configure your project in Android Studio. This step is geared towards ONLY building your project, therefore, it cannot perform any other`gradle task` (as opposed to `Gradle Runner`). As a result, you can use `assemble` - related task with this Step.
 
 ## About Gradle tasks
 
@@ -30,7 +30,7 @@ Here is a list of the most common default tasks of an Android Gradle project:
 
 ### Get the list of available Gradlew tasks in your project
 
-To get the basic task list, call `gradlew tasks` in your Android app's directory. When running `gradlew tasks`, you'll get a list of available Gradle tasks in this format:
+To get the basic task list, call `gradlew tasks` in your Android app's directory. When running `gradlew tasks`, you'll get a list of available `gradle tasks` in this format:
 
     $ ./gradlew tasks
     
@@ -58,9 +58,9 @@ To get the basic task list, call `gradlew tasks` in your Android app's directory
 
 ### Run Gradle task with our Steps
 
-You can run Gradle tasks on Bitrise using `Do anything with our Script` Step, `Gradle Runner` and `Android Build` Steps.
+You can run `gradle tasks` on Bitrise using `Do anything with our Script` Step, `Gradle Runner` and `Android Build` Steps.
 
-#### Do anything with Script Step
+#### Do anything with Script step
 
 1. Insert the Step anywhere in your workflow.
 2. Run any task by calling `./gradlew task-name-to-run` in the Script input field (for example: `./gradlew assemble`).
@@ -77,7 +77,7 @@ As a minimum input, make sure you fill out the following required two input fiel
 
 #### Android Build
 
-This step can only perform building-related Gradle tasks. If you wish to run other type of Gradle tasks, please use our `Gradle Runner` Step.
+This step can only perform building-related `gradle tasks`. If you wish to run other type of `gradle tasks`, please use our `Gradle Runner` Step.
 
 1. Add the Step after the testing steps but before the code signing step in your deploy workflow.
 2. Set the required `Project Location` input field to reflect the root directory of your project.
@@ -100,14 +100,14 @@ The Step runs the `gradlew dependencies` command and prints out a list of depend
 
 As an alternative to `Install missing Android SDK components` you can manually install the missing Android SDKs as well.
 
-{% include message_box.html type="important" title="When to use `Do anything with our Script`" content=" Please only use the `Do anything with Script` step solution if you really need an alternative to the `Install missing Android SDK components Step`, as you'll have to manually update the `Script content` if the Android tools change. "%}
+{% include message_box.html type="important" title="When to use `Do anything with our Script step`" content=" Please only use the `Do anything with Script step` solution if you really need an alternative to the `Install missing Android SDK components Step`, as you'll have to **manually** update the `Script content` if the Android tools change. "%}
 
 Before you start:
 
-* Make sure you have the Android `sdkmanager` installed to your local computer. For more information on `sdkmanager`, check out Android Studio's [guide](https://developer.android.com/studio/command-line/sdkmanager).
+* Make sure you have the Android `sdkmanager` installed to your local computer. For more information on `sdkmanager`, check out this [guide](https://developer.android.com/studio/command-line/sdkmanager).
 
 1. Add `Do anything with Script step` (can be the very first step) to your workflow.
-2. Add the required platform and build-tools version to the `Script content`. In this example, we're installing the Android SDK v18 and the related `build-tools` v18.0.1
+2. Add the required platform and build-tools version to the `Script content`. In this example, we're installing the Android SDK v18 and the related `build-tools` with v18.0.1.
 
        #!/bin/bash
        #fail if any commands fails
@@ -125,9 +125,9 @@ You can check the full list of available packages (including obsolete packages) 
 
 ## Enable Gradle debug options
 
-If your Gradle build fails, we recommend you to check your build's log in the `APPS & ARTIFACTS` tab.
+If your Gradle build fails, we recommend you to first check your build's log in the `APPS & ARTIFACTS` tab.
 
-If you're lost, you can call `--stacktrace --debug` flags (for example, `gradle ... --stacktrace --debug`) to get more detailed logs.
+If you're still lost, you can call `--stacktrace --debug` flags (for example, `gradle ... --stacktrace --debug`) to get more detailed logs.
 
 In most cases `--stacktrace` should be enough, and the `Gradle Runner` step includes this flag by default.
 
@@ -146,11 +146,11 @@ For example:
 * `GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'`
 * `JAVA_OPTIONS: "-Xms512m -Xmx1024m"`
 
-You can limit the allowed RAM the Gradle JVM process uses, which is useful if there's not enough RAM available in the system.
+You can limit the allowed RAM the Gradle JVM process uses. This is useful if there's not enough RAM available in the system.
 
 ## Emulators
 
-You can use our Android emulator [steps](http://www.bitrise.io/integrations) to create and boot Android emulators. Let's see how!
+You can use our Android emulator steps such as `AVD Manager` and `Wait for Emulator` to create and boot Android emulators. Let's see how!
 
 {% include message_box.html type="important" title="`AVD Manager` vs `Do anything with Script step`" content=" Instead of using `Do anything with Script step` to create an Android emulator, please use  `AVD Manager` Step! There are simply too many edge cases to cover relating to our script step, as well as the commands and working configurations change quite frequently. "%}
 
@@ -159,16 +159,16 @@ You can use our Android emulator [steps](http://www.bitrise.io/integrations) to 
 
    ![](/img/avd-manager.png)
 
-   When this Step runs, it takes time for the emulator to boot up. The earlier you place the 	step, the more tasks (cloning, caching) you can complete in your workflow before the emulator starts working.
-3. Add the `Wait for Emulator` Step to your workflow. Make sure you add it before a step you want to use the Android Virtual Device with. In our example, we are using `Wait for Android emulator` step to run the virtual device from the `Gradle Runner - UI test` Step onwards.
+   The Emulator needs some time to boot up. The earlier you place the step in your workflow, the more tasks (cloning or caching) you can complete in your workflow before the emulator starts working.
+3. Add the `Wait for Emulator` Step to your workflow. This step acts a shield preventing the `AVD Manager` to kick in. Make sure you add it BEFORE the step with which you want to use the `AVD Manager`. In our example, we are using `Wait for Android emulator` step to only start the Android Virtual Device FROM the `Gradle Runner - UI test` Step onwards.
 
    ![](/img/wait-for-android-emu.png)
 
 ## Installing / Using Java version X
 
-{% include message_box.html type="note" title="Java 8 is now pre-installed" content=" Java 8 is now the pre-installed Java version on the Bitrise.io Linux Stack. This section is kept here for future reference, in case you'd need another Java version. "%}
+{% include message_box.html type="note" title="Java 8 is now pre-installed" content=" Java 8 is now the pre-installed Java version on the [bitrise.io](https://www.bitrise.io/) Linux Stack. This section is kept here for future reference, in case you'd need another Java version. "%}
 
-If you'd need a Java or JDK version which is not preinstalled on the Android stacks, you can follow this guide to install it. This example will install Java/JDK 8 with a `Do anything with Script step`, feel free to adapt it to the version you need.
+If you need a Java or JDK version which is not preinstalled on the Android stacks, you can follow this guide to install it. This example will install Java/JDK 8 with a `Do anything with Script step`, feel free to adapt it to the version you need.
 
 1. Add the `Do anything with Script step` to your workflow with the content below:
 
