@@ -48,7 +48,7 @@ You can add a secret env var to your workflow using our `Secrets` tab.
 
 You can also add a secret env var directly in a [step's](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/) `SENSITIVE` input.
 
-### Edit a secret env var
+### Editing a secret env var
 
 Once you've added a new secret env var in the `Secrets` tab, you come back to it any time, modify its content or make it protected from curious eyes!
 
@@ -62,7 +62,11 @@ Once you've added a new secret env var in the `Secrets` tab, you come back to it
 
 ![](/img/make-it-protected.png) " %}
 
-You can replace the variable for a new one in `Secrets` by clicking the `eye` icon, manually deleting the old value and setting the new one. (Do not use the orange `Delete` button as it will delete the whole row!)
+1. `Delete` the secret env var if you do not need it any more. Please note if you hit this button, the whole row will get deleted.
+
+You can **show** and **hide** the value of an env var with the `eye` icon. This feature is useful if you have a long list of secret env vars in `Secrets` and you wish to check the value of only one secret env var while leaving the other values hidden. If a value is hidden, it's represented with the `crossed out eye` icon.
+
+![](/img/hidden-value-1.png)
 
 If you toggle the `Replace variables in inputs` to the right, the new value will be used everywhere in your workflow.
 
@@ -71,11 +75,3 @@ The `Expose for Pull Request` can be enabled if you want your secrets to be expo
 {% include message_box.html type="important" title="About `SENSITIVE` label" content=" In the case of [public apps](/adding-a-new-app/public-apps/), step input fields containing sensitive information are marked with a `[SENSITIVE]` label and only secret env vars can be used there! The `Expose for Pull Request` toggle is by **default disabled** and cannot be enabled since your secrets must be kept hidden in publicly accessible build logs! "%}
 
 Head over to [Secrets](/bitrise-cli/secrets/) for more information on [secret filtering](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli/).
-
-### Hiding values in `Secrets` tab
-
-You can show and hide the value of an env var with the `eye` icon. This feature is useful if you have a long list of secret env vars in `Secrets` and you wish to check the value of only one secret env var while leaving the other values hidden. If a value is hidden, it's represented with the `crossed out eye` icon.
-
-Select `Make it protected` by clicking the 3 dots `...` next to the value. Once you set a value to this status, you will see a `lock`, meaning **neither you nor anybody with the access to the app can "unlock"/check the value again**. Since this change is irreversible, a confirmation pop-up window will be displayed prior to saving your changes.
-
-![Screenshot](/img/builds/secrets-icons.png)
