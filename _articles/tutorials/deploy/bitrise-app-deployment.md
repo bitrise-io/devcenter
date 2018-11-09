@@ -14,10 +14,14 @@ be available on the related Build's details page).
 
 ## How does it work?
 
-iOS apps
+### iOS apps
 
-If you want to distribute your iOS App through Bitrise all you need in your App's Workflow, is an `Xcode Archive` step to generate the iOS app IPA,
-and a `Deploy to Bitrise.io` step to distribute it.
+To distribute your iOS app and its artifacts through bitrise.io, you will need two steps in your workflow:
+
+* `Xcode Archive`
+* `Deploy to Bitrise.io`
+
+`Xcode Archive` generates an .ipa file which can be distributed by the `Deploy to Bitrise.io` with team members or to anyone.
 
 For Android apps, use the `Gradle Runner` step to generate the APK, and use the
 `Deploy to Bitrise.io` step to deploy it.
@@ -30,7 +34,7 @@ can generate the app, and use the `Deploy to Bitrise.io` step to deploy it.
 
 **_One important thing if you use custom steps/scripts_**_: the_ `_Deploy to Bitrise.io_`
 _step by default deploys apps from the_ `_$BITRISE_DEPLOY_DIR_`_ directory, so make sure that you
-move the generated app there, or set the _`_Deploy directory or file path_`_ input
+move the generated app there, or set the `__Deploy directory or file path__` input
 of the _`_Deploy to Bitrise.io step_` _to point to the location of the app file._
 
 If the app file (`.ipa` / `.apk`) is available, the `Deploy to Bitrise.io` step will
