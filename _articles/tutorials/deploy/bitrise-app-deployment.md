@@ -14,6 +14,14 @@ be available on the related Build's details page).
 
 ## How does it work?
 
+| Platform | Building step |
+
+| --- | --- |
+
+| iOS | `Xcode Archive` |
+
+| Android | `Gradler Runner` or `Android Build` |
+
 ### iOS apps
 
 To distribute your iOS app and its artifacts through bitrise.io, you will need two steps in your workflow:
@@ -24,12 +32,6 @@ To distribute your iOS app and its artifacts through bitrise.io, you will need t
 `Xcode Archive` generates an .ipa file which can be distributed by the `Deploy to Bitrise.io` with team members or to anyone.
 
 ### Android
-
-    | Tables   |      Are      |  Cool |
-    |----------|:-------------:|------:|
-    | col 1 is |  left-aligned | $1600 |
-    | col 2 is |    centered   |   $12 |
-    | col 3 is | right-aligned |    $1 |
 
 To distribute your Android app and its artifacts through bitrise.io, you will need two steps in your workflow:
 
