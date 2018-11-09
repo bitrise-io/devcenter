@@ -26,18 +26,20 @@ Head over to [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) to find o
 ## Set a sensitive input in a step
 
 1. Click the `Select Secret Variable` button below the input field which is marked with the yellow `SENSITIVE` label.
-2. In the `Insert variable` pop-up, browse the `Choose Secret Env Var` list or create a new secret env var (add the key and the value) in the `Create New Secret Env Var` section.
+2. In the `Insert variable` pop-up, browse the `Choose Secret Env Var` list or create a new secret env var (add the key and the value) in the `Create New Secret Env Var` section. 
 
-   {% include message_box.html type="important" title=" `Expose for pull request?` toggle" content=" This toggle under the `Value` field is by default disabled and cannot be enabled with public apps to **protect the secrets of your public app in the case of pull requests**. "%} 
-3. Hit `Add`.
+   ![](/img/insert-variable.png)
 
-   The new secret env var will be available in the `Choose Secret Env Var` list or under the `Secrets` tab for your app.
+   The `Expose for pull request?` toggle under the `Value` field is by default disabled and cannot be enabled with public apps to **protect the secrets of your public app in the case of pull requests**.
+3. If you've entered a new env var, hit `Add new`.
 
-   If you wish to delete your input or keep this field empty, click the red `x`.
-
-   ![Screenshot](/img/builds/secret-webhook.png)
+The new secret env var will be available in the `Choose Secret Env Var` list or under the `Secrets` tab for your app for future reference/use.
 
 The selected or newly created secret env var will get automatically saved into the input field of the step.
+
+You can always modify the secret env var registered for a `SENSITIVE` input field if you click the `Select secret variable` button or head over to the `Secrets` tab where you get a full list of your secret env vars.
+
+![](/img/secrets-email.png)
 
 {% include message_box.html type="important" title="`Select secret variable`" content=" Note that you cannot modify the input manually in the input field marked with the `SENSITIVE` label! Instead, click on the field and then click the `Select secret variable` to **replace** the existing input with another secret env var from the list or to **create a new one** in the `Insert variable` pop-up. "%}
 
