@@ -3,6 +3,7 @@ title: Secrets and Env Vars
 menu:
   builds:
     weight: 9
+published: false
 
 ---
 Every secret environment variable (secret env var) is an env var but not every environment variable (env var) is a secret env var!
@@ -18,7 +19,7 @@ As an example, if you click into an input of the third step of your workflow, th
 
 You can also replace the variable for a new one in `Env Vars`. Delete the old value and set the new one. If you toggle the `Replace variables in inputs` to the right, the new value will be used everywhere in your workflow.
 
-{% include message_box.html type="important" title="Protect your secrets" content=" Contrary to [secret env vars](#about-secrets/), env vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to `Env Vars.` "%}
+{% include message_box.html type="important" title="Protect your secrets" content=" Contrary to [secret env vars](#about-secrets/), env vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to `Env Vars`. "%}
 
 ### Setting an env var in every/in a specific workflow
 
@@ -38,16 +39,28 @@ Secret env vars are special type of env vars as they hide information in an encr
 
 ### Adding a secret env var
 
-You can add a secret env var to your workflow by using our `Secrets` tab.
+You can add a secret env var to your workflow using our `Secrets` tab.
 
 1. Click `Add new` on the `Secrets` tab.
 2. Set the `key` and `value` fields.
 
 ![](/img/locked-secret.png)
 
-You can also add a secret env var directly in a [step's](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/) `SENSITIVE` input. 
+You can also add a secret env var directly in a [step's](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/) `SENSITIVE` input.
 
 ### Edit a secret env var
+
+Once you've added a new secret env var in the `Secrets` tab, you come back to it any time, modify its content or make it protected from curious eyes!
+
+1. Click `Edit` next to the value of  your secret env var.
+2. Modify its content if needed.
+3. If you want to hide the value, click `Make it protected`. A lock is shown.
+
+{% include message_box.html type="important" title="Life after `Make it protected` " content=" Please note if you clicked this button, **neither you nor anybody with the access to the app can "unlock"/check the value again**. 
+
+![](/img/secrets2.png)Since this change is irreversible, a confirmation pop-up window will be displayed prior to saving your changes.
+
+![](/img/make-it-protected.png) " %}
 
 You can replace the variable for a new one in `Secrets` by clicking the `eye` icon, manually deleting the old value and setting the new one. (Do not use the orange `Delete` button as it will delete the whole row!)
 
