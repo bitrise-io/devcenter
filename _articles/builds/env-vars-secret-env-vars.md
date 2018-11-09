@@ -56,7 +56,7 @@ Once you've added a new secret env var in the `Secrets` tab, you come back to it
 2. Modify its content if needed.
 3. If you want to hide the value, click `Make it protected`. A lock is shown.
 
-{% include message_box.html type="important" title="Life after `Make it protected` " content=" Please note if you clicked this button, **neither you nor anybody with the access to the app can "unlock"/check the value again**. 
+{% include message_box.html type="important" title="Life after `Make it protected` " content=" Please note if you clicked this button, **neither you nor anybody with the access to the app can unlock or check the value again**.
 
 ![](/img/secrets2.png)Since this change is irreversible, a confirmation pop-up window will be displayed prior to saving your changes.
 
