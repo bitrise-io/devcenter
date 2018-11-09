@@ -23,8 +23,20 @@ To distribute your iOS app and its artifacts through bitrise.io, you will need t
 
 `Xcode Archive` generates an .ipa file which can be distributed by the `Deploy to Bitrise.io` with team members or to anyone.
 
-For Android apps, use the `Gradle Runner` step to generate the APK, and use the
-`Deploy to Bitrise.io` step to deploy it.
+### Android
+
+    | Tables   |      Are      |  Cool |
+    |----------|:-------------:|------:|
+    | col 1 is |  left-aligned | $1600 |
+    | col 2 is |    centered   |   $12 |
+    | col 3 is | right-aligned |    $1 |
+
+To distribute your Android app and its artifacts through bitrise.io, you will need two steps in your workflow:
+
+* `Gradle Runner` or `Android Build`
+* `Deploy to Bitrise.io`
+
+Our two building steps; `Gradle Runner` and `Android Build` generate the APK file and with `Deploy to Bitrise.io` Step to deploy it.
 
 For Xamarin apps use the `Xamarin Archive step` to create the iOS/Android app,
 and use the `Deploy to Bitrise.io` step to deploy it.
