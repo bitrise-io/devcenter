@@ -6,6 +6,7 @@ redirect_from:
 menu:
   builds:
     weight: 10
+published: false
 
 ---
 Any sensitive information such as passwords, IDs, and API tokens are exposed in the build logs/bitrise.yml of your public apps, hence visible to anyone who has the build URL of the app. You can hide these inputs with **secret environment variables (env vars)** so that those are not available in build logs/bitrise.yml.
@@ -27,7 +28,7 @@ Head over to [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) to find o
 1. Click the `Select Secret Variable` button below the input field which is marked with the yellow `SENSITIVE` label.
 2. In the `Insert variable` pop-up, browse the `Choose Secret Env Var` list or create a new secret env var (add the key and the value) in the `Create New Secret Env Var` section.
 
-   {% include message_box.html type="important" title=" 'Expose for pull request?\` toggle" content=" This toggle under the `Value` field is by default disabled and cannot be enabled with public apps to **protect the secrets of your public app in the case of pull requests**. "%} 
+   {% include message_box.html type="important" title=" `Expose for pull request?` toggle" content=" This toggle under the `Value` field is by default disabled and cannot be enabled with public apps to **protect the secrets of your public app in the case of pull requests**. "%} 
 3. Hit `Add`.
 
    The new secret env var will be available in the `Choose Secret Env Var` list or under the `Secrets` tab for your app.
