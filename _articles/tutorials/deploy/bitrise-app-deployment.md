@@ -14,15 +14,7 @@ be available on the related Build's details page).
 
 ## How does it work?
 
-| Platform | Building step |
-
-| --- | --- |
-
-| iOS | `Xcode Archive` |
-
-| Android | `Gradler Runner` or `Android Build` |
-
-### iOS apps
+### iOS
 
 To distribute your iOS app and its artifacts through bitrise.io, you will need two steps in your workflow:
 
@@ -31,7 +23,7 @@ To distribute your iOS app and its artifacts through bitrise.io, you will need t
 
 `Xcode Archive` generates an .ipa file which can be distributed by the `Deploy to Bitrise.io` with team members or to anyone.
 
-### Android
+### Android 
 
 To distribute your Android app and its artifacts through bitrise.io, you will need two steps in your workflow:
 
@@ -40,8 +32,14 @@ To distribute your Android app and its artifacts through bitrise.io, you will ne
 
 Our two building steps; `Gradle Runner` and `Android Build` generate the APK file and with `Deploy to Bitrise.io` Step to deploy it.
 
-For Xamarin apps use the `Xamarin Archive step` to create the iOS/Android app,
-and use the `Deploy to Bitrise.io` step to deploy it.
+### Xamarin
+
+To distribute your Xamarin app and its artifacts through bitrise.io, you will need two steps in your workflow:
+
+* `Xamarin Archive` 
+* `Deploy to Bitrise.io`
+
+Use the `Xamarin Archive step` to create the iOS/Android app and the `Deploy to Bitrise.io` step to deploy it.
 
 For any other project type, just use the step(s) or script(s) which
 can generate the app, and use the `Deploy to Bitrise.io` step to deploy it.
