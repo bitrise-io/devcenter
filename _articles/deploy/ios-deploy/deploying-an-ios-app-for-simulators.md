@@ -30,7 +30,7 @@ To build the app for a simulator, you do not need code signing files!
 The Step will produce the following outputs:
 
 * `BITRISE_APP_DIR_PATH`: the path to the generated .app file.
-* `BITRISE_APP_DIR_PATH_LIST`: the path to the generated .app file and the paths to every dependent target app. The paths are separated with the "|" character.
+* `BITRISE_APP_DIR_PATH_LIST`: the path to the generated .app file and the paths to every dependent target app. The paths are separated with the `|` character.
 * `BITRISE_XCODE_BUILD_RAW_RESULT_TEXT_PATH`: the path to the log file of the raw build results.
 
 ### Deploying the app to Appetize.io
