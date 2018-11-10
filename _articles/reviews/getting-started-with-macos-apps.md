@@ -71,20 +71,20 @@ You will need:
 4. Check that you have the `Certificate and profile installer` Step in your workflow. It must be before the `Xcode Archive for Mac` Step (you can have other Steps between the two, like `Xcode Test for Mac`).
 5. Check the `Export method` input under the `app/pkg export configs` input group of the `Xcode Archive for Mac` Step.
 
-    If you selected `development` when you added the app to Bitrise, you don't need to change the input. Otherwise, manually set it to `development`.
+   If you selected `development` when you added the app to Bitrise, you don't need to change the input. Otherwise, manually set it to `development`.
 
    ![Export method env var](/img/export-method-envvar.png)
 6. [Start a build](/builds/starting-builds-manually/).
 
 If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive for Mac` Step should export an .ipa with the development export method. If you have the `Deploy to Bitrise.io` Step in your workflow, you can find the .ipa on the `Apps & Artifacts` tab of the build page.
 
-## Deploying to TestFlight and the App Store
+## Deploying to the App Store
 
 If you set up your code signing files and created an .app or .pkg file for your internal testers, it is time to involve external testers and then to publish your MacOS app to the App Store. Let's see how!
 
-{% include message_box.html type="note" title="Developer ID" content="If you want to distribute your app elsewhere than the App Store, you can sign it with [a Developer ID](https://developer.apple.com/support/developer-id/). This method is not in the scope of this guide."%} 
+{% include message_box.html type="note" title="Developer ID" content="If you want to distribute your app elsewhere than the App Store, you can sign it with [a Developer ID](https://developer.apple.com/support/developer-id/). This method is not in the scope of this guide."%}
 
-To deploy to Testflight and to the App Store, you will need more code signing files:
+To deploy to the App Store, you will need more code signing files:
 
 * a **Distribution** Certificate
 * an **App Store** type Provisioning Profile
@@ -93,8 +93,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
 3. Go to the app's Workflow Editor and create a [new workflow](/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
 4. Set the `Export Method` input of the `Xcode Archive for Mac` Step to `app-store`.
-
-   ![App store export](/img/app-store-export.png)
+   * app-store: requires installer certificate
 5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive for Mac` Step but preferably before the `Deploy to Bitrise.io` Step.
 6. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
 
