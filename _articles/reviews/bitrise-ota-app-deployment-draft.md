@@ -83,7 +83,7 @@ You can send install invites and notifications based on roles or email address. 
 
 You can specify the list of groups and emails for automatic install invite notification in the App’s Workflow using the `Notify: User Groups` and `Notify: Emails` step input fields.
 
-#### Test Devices
+### Test Devices
 
 If you built your **iOS App** with a **development or an ad hoc provisioning profile**, an additional section will be presented with a list of allowed device identifiers (UDID) on your Build's page. If you or a team member of your app’s team [register a device](/testing/registering-a-test-device/) for his/her Bitrise account and the device’s identifier can be found in the Provisioning Profile, you will see the following in the list:
 
