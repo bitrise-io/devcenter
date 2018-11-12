@@ -11,13 +11,13 @@ With this you can distribute your iOS and Android app, over the air, for your te
 
 | Platform | Build step | Deploy step |
 | --- | --- | --- |
-| iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Android | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Xamarin | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| React Native | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Ionic | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [iOS](/getting-started/getting-started-with-ios-apps/) | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Android](/getting-started/getting-started-with-android-apps/)| Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Xamarin](/getting-started/getting-started-with-xamarin-apps/) | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [React Native](/getting-started/getting-started-with-react-native-apps/) | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Ionic](/getting-started-with-ionic-cordova-apps/) | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Cordova](/getting-started-with-ionic-cordova-apps/) | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [MacOS]() | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
 {% include message_box.html type="important" title="Deploy directory file path" content="
 If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure you move the generated app into this directory or set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file.
