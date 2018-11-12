@@ -60,28 +60,26 @@ You can access this Public install page's URL, if you head over to your generate
 
 ![](/img/public-install-page-1.png)
 
-If you click `Open Public install page` link, you’ll see a base description of the App (title, version, size, supported devices). 
+If you click `Open Public install page` link, you’ll see a base description of the App (title, version, size, supported devices).
 
 ![](/img/public-install-page-example.png)
 
 If you visit your iOS Build's page from an iOS device (which you've registered for your account), you’ll see an `Install` button instead of the `Download` button. With this **you can install the App on your device directly from Bitrise**.
 
-Now let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see a bunch of other information the deployed app. Here you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) and download the file to your local computer as well.
+{% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account, but you have to make it sure that they’ll actually be able to instal the app. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. "%}
 
-![](/img/info-card-android.jpg)
+Now let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
-{% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account, but **you have to make it sure that they’ll actually be able to instal the app** - if you don’t use an Enterprise Provisioning Profile to build your App, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS App can’t be installed on any other device, only on the ones which were included in the Provisioning Profile the build was signed with. "%}
+![](/img/info-card-android.jpg) 
 
-{% include message_box.html type="note" title="Device identifier" content="
-If you built your iOS App** with a Development or Ad Hoc Provisioning Profile, an additional section will be presented with a list of allowed device identifiers (UDID)
-"%}
+#### Test Devices
 
-If you or a team member of your App’s team register a device for his/her Bitrise account (you can do this on your [Account Settings page](https://www.bitrise.io/me/profile) in the [Test Devices](/testing/registering-a-test-device/) section) and the device’s identifier can be found in the Provisioning Profile, you will see two things in the list:
+If you built your **iOS App** with a **Development or Ad Hoc Provisioning Profile**, an additional section will be presented with a list of allowed device identifiers (UDID). If you or a team member of your app’s team register a device for his/her Bitrise account (you can do this on your [Account Settings page](https://www.bitrise.io/me/profile) in the [Test Devices](/testing/registering-a-test-device/) section) and the device’s identifier can be found in the Provisioning Profile, you will see two things in the list:
 
 * the Test device identifier with its name
 * the person's name who registered the Test device
 
-**For Android apps you don’t have to register your test devices**, as Android apps don’t have per-device install restrictions. You’ll, however, have to enable the **“Unknown Sources”** option in Android to be able to install the app/apk from outside of the Google Play Store.
+For **Android** apps, you don’t have to register your test devices , as Android apps don’t have per-device install restrictions. You’ll, however, have to enable the **“Unknown Sources”** option in Android to be able to install the APK from outside of the Google Play Store.
 
 ## Notifications and install invites [⚓](https://devcenter.bitrise.io/tutorials/deploy/bitrise-app-deployment/#notifications-and-install-invites)
 
