@@ -16,7 +16,7 @@ With this you can distribute your iOS and Android app, over the air, for your te
 - Notify: Emails
 - Enable Public Page for the App?
 
-Here is a short recap on the different build steps to each platform. The links point to our more in-depth tutorials if you needed more information.
+Here is a short recap on the different build steps platforms use. The links point to our step by step getting started tutorials if you needed more information for each platform.
 
 
 | Platform | Build step | Deploy step |
@@ -29,7 +29,7 @@ Here is a short recap on the different build steps to each platform. The links p
 | Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 | MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
-Take a look at the required and sensitive fields of the Step:
+First let's have a look at the required and sensitive fields of the Step:
 
 ![](/img/deploy-to-bitrise.png)
 
