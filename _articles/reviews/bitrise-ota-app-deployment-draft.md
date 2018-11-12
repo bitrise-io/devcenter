@@ -52,7 +52,9 @@ Set one or more email addresses of those who should get **notification**. This f
 
 ### Enable Public Page for the App
 
-With this option enabled, you can create a public install page that comes with a long and random URL. You can share this URL with anyone - yes, even those who are not registered on Bitrise!
+With this option enabled, you can create a public install page that comes with a long and random URL. You can share this URL with anyone - yes, even with those who are not registered on Bitrise!
+
+You can enable it directly in the Step's input field or at the generated .ipa/APK in your Build's `APPS & ARTIFACTS` tab.
 
 You can access this URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file. View online as shown below or download it to your local computer!
 
