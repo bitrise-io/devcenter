@@ -5,6 +5,8 @@ redirect_from: []
 published: false
 
 ---
+## About Deploy to Bitrise.io Step
+
 Bitrise has an integrated App Deployment system you can use for App and other build artifact file distribution.
 
 With this you can distribute your iOS and Android app, over the air, for your testers (**even for those who don’t have a Bitrise account**) or you can just use it for archiving your App and other build artifact files (these files will be available on the related Build’s details page).
@@ -21,13 +23,35 @@ With this you can distribute your iOS and Android app, over the air, for your te
 
 ![](/img/deploy-to-bitrise.png)
 
-{% include message_box.html type="important" title="Deploy directory file path" content="
-If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure you move the generated app into this directory or set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file.
-"%}
+### Deploy directory or file path
 
-If the app file (.ipa/APK) is available, the `Deploy to Bitrise.io` Step will upload the file for the Build and **the file will be listed on the Build’s page**.
+If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure you move the generated app into this directory or set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file. If the app file (.ipa/APK) is available, the `Deploy to Bitrise.io` Step will upload the file for the Build and **the file will be listed on the Build’s page**.
 
-Depending on the **notification settings** you set for the `Deploy to Bitrise.io` step, Bitrise.io will also send emails for the Team of the app.
+### Notify: User Roles
+
+You can define who should get notification of the generated build based on your app's user groups. There are a couple of options for you to choose from:
+
+* leave `everyone` in the input field to notify everyone in the group.
+* notify based on user role: `testers`, `developers`, `admins`, or `owner` (select one or more and separate with commas)
+* if you don't want to notify anyone, set it to `none`.
+
+The default input here is `everyone`.
+
+### Notify: Emails
+
+Set one or more email addresses of those who should get **notification**. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in `Secrets`.
+
+### Enable Public Page for the App?
+
+Enable this option if you wish to create a public install page (with long and random URL) and share it with those not registered on Bitrise.
+
+If you disable this option, the `Notify: Emails` option will be ignored and the `Notify: User Roles` users will receive the build's URL instead of the public page's URL!
+
+You can access this URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file. View online as shown below or download it to your local computer!
+
+![](/img/public-install-page-1.png)
+
+![](/img/public-install-page-example.png)
 
 For each deployed app you’ll see an information and notifications card on the Build’s page, where you can check the details of the App (title, bundle id, version number, size, etc.) and you can download or install the App right from the Build’s page.
 
@@ -35,7 +59,7 @@ For each deployed app you’ll see an information and notifications card on the 
 If you built your iOS App** with a Development or Ad Hoc Provisioning Profile, an additional section will be presented with a list of allowed device identifiers (UDID)
 "%}
 
-If you or a team member of your App’s team register a device for his/her Bitrise account (you can do this on your [Account Settings page](https://www.bitrise.io/me/profile) in the [Test Devices](/testing/registering-a-test-device/) section) and the device’s identifier can be found in the Provisioning Profile, you will see two things in the list: 
+If you or a team member of your App’s team register a device for his/her Bitrise account (you can do this on your [Account Settings page](https://www.bitrise.io/me/profile) in the [Test Devices](/testing/registering-a-test-device/) section) and the device’s identifier can be found in the Provisioning Profile, you will see two things in the list:
 
 * the Test device identifier with its name
 * the person's name who registered the Test device
