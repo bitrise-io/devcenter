@@ -19,6 +19,9 @@ With this you can distribute your iOS and Android app, over the air, for your te
 | Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 | MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
+{% include message_box.html type="important" title="Deploy directory file path" content="
+If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure you move the generated app into this directory or set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file.
+"%}
 
 If the app file (`.ipa` / `.apk`) is available, the `Deploy to Bitrise.io` step will upload it for the Build and **it will be listed on the Build’s details page**. Depending on the **notification settings** you set for the `Deploy to Bitrise.io` step, Bitrise.io will also send emails for the Team of the app.
 
