@@ -52,19 +52,21 @@ Set one or more email addresses of those who should get **notification**. This f
 
 ### Enable Public Page for the App
 
-With this option enabled, you can create a public install page that comes with a long and random URL. You can share this URL with anyone - yes, even with those who are not registered on Bitrise!
+With this option enabled, you can create a Public install page that comes with a long and random URL. You can share this URL with anyone - yes, even with those who are not registered on Bitrise!
 
 You can enable it directly in the Step's input field or at the generated .ipa/APK in your Build's `APPS & ARTIFACTS` tab.
 
-You can access this URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file. View online as shown below or download it to your local computer!
+You can access this Public install page's URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file. Click the `eye` icon to view the details online !
 
 ![](/img/public-install-page-1.png)
 
-Opening this link you’ll see a base description of the App (title, version, size, supported devices). If you visit your iOS Build's page from an iOS device (which you've registered for your account), you’ll see an `Install` button instead of the `Download` button. With this **you can install the App on your device directly from Bitrise**.
+If you click `Open Public install page` link, you’ll see a base description of the App (title, version, size, supported devices). 
 
 ![](/img/public-install-page-example.png)
 
-Let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see an information and notifications card for each deployed app. Here you can check the details of the App (such as App title, Bundle ID, Version, Size, etc).
+If you visit your iOS Build's page from an iOS device (which you've registered for your account), you’ll see an `Install` button instead of the `Download` button. With this **you can install the App on your device directly from Bitrise**.
+
+Now let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see a bunch of other information the deployed app. Here you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) and download the file to your local computer as well.
 
 ![](/img/info-card-android.jpg)
 
