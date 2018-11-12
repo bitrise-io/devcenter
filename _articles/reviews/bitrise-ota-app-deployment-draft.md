@@ -9,21 +9,17 @@ Bitrise has an integrated App Deployment system you can use for App and other bu
 
 With this you can distribute your iOS and Android app, over the air, for your testers (**even for those who don’t have a Bitrise account**) or you can just use it for archiving your App and other build artifact files (these files will be available on the related Build’s details page).
 
-| Platform  |Build step   |Deploy step   |
-|---|---|---|
-|[iOS](/getting-started/getting-started-with-ios-apps/)   |Xcode Archive & Export for iOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts    |
-|[Android](/getting-started/getting-started-with-android-apps/)   |Gradle Runner or Android Build   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
-|[Xamarin](/getting-started/getting-started-with-xamarin-apps/)   |Xamarin Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
-|[React Native](/getting-started/getting-started-with-react-native-apps/)   |Android Build and/or Xcode Archive & Export for iOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
-|[Ionic](/getting-started-with-ionic-cordova-apps/)   |Ionic Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
-|[Cordova](/getting-started-with-ionic-cordova-apps/)   |Cordova Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
-|[MacOS]()   |Archive for MacOS and/or Export for MacOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+| Platform | Build step | Deploy step |
+| --- | --- | --- |
+| iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Android | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Xamarin | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| React Native | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Ionic | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
-
-## How does it work? 
-
-
-**_One important thing if you use custom steps/scripts_**_: the_ `_Deploy to Bitrise.io_`_step by default deploys apps from the_ `_$BITRISE_DEPLOY_DIR_`_ directory, so make sure that you move the generated app there, or set the `__Deploy directory or file path__` input of the `__Deploy to Bitrise.io step__` __to point to the location of the app file._
+{% include message_box_html type="important" title="My message" content=" If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure you move the generated app into this directory or set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file.
 
 If the app file (`.ipa` / `.apk`) is available, the `Deploy to Bitrise.io` step will upload it for the Build and **it will be listed on the Build’s details page**. Depending on the **notification settings** you set for the `Deploy to Bitrise.io` step, Bitrise.io will also send emails for the Team of the app.
 
