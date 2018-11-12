@@ -50,18 +50,9 @@ The default input here is `everyone`.
 
 Set one or more email addresses of those who should get **notification**. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in `Secrets`.
 
-### Enable Public Page for the App?
+### Enable Public Page for the App
 
 With this option enabled, you can create a public install page that comes with a long and random URL. You can share it with even those who are not registered on Bitrise.
-
-You can disable this toggle any time:
-
-* in your Build's `APPS & ARTIFACTS`, move the toggle to the left or
-* in the Step, set the step input field to `false` value
-
-{% include message_box.html type="warning" title="Who can receive the app after disabling?" content="
-If you disable this function for the app, then only your app's team members will be able to install the app from Bitrise! Additionally, the `Notify: Emails` option will be ignored and the `Notify: User Roles` users will receive the build's URL instead of the public page's URL!
-"%}
 
 Opening this link you’ll see a base description of the App (title, version, size, supported devices) and an `Install` button if you visit the page from an iOS or Android device (depending on the app’s platform of course).
 
@@ -99,3 +90,14 @@ On the Build’s page you can send install invites for your testers. You can eit
 **You can specify the list of groups and emails for automatic install invite notification** in the App’s Workflow. Similarly to the Public page option just select the `Deploy to Bitrise.io` step in your Workflow and specify the list of groups and emails to automatically notify in the `Notify: User Groups` and `Notify: Emails` options.
 
 Keep in mind that if you disable the _Public install page_ option, Bitrise won’t send install invite emails for the emails you specify, only to those who are in the App’s Team, because in this case only your team members can access the App (on the Build’s page).
+
+### Disable Public Page for the App
+
+You can disable this toggle any time:
+
+* in your Build's `APPS & ARTIFACTS`, move the toggle to the left or
+* in the Step, set the step input field to `false` value
+
+{% include message_box.html type="warning" title="Who can receive the app after disabling?" content="
+If you disable this function for the app, then only your app's team members will be able to install the app from Bitrise! Additionally, the `Notify: Emails` option will be ignored and the `Notify: User Roles` users will receive the build's URL instead of the public page's URL!
+"%}
