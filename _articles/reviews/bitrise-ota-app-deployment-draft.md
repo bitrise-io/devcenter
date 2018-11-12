@@ -12,12 +12,12 @@ With this you can distribute your iOS and Android app, over the air, for your te
 | Platform  |Build step   |Deploy step   |
 |---|---|---|
 |[iOS](/getting-started/getting-started-with-ios-apps/)   |Xcode Archive & Export for iOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts    |
-|Android   |Gradle Runner or Android Build   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
-|Xamarin   |Xamarin Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
-|React Native   |Android Build and/or Xcode Archive & Export for iOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
-|Ionic   |Ionic Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
-|Cordova   |Cordova Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
-|MacOS   |Archive for MacOS and/or Export for MacOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[Android](/getting-started/getting-started-with-android-apps/)   |Gradle Runner or Android Build   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[Xamarin](/getting-started/getting-started-with-xamarin-apps/)   |Xamarin Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[React Native](/getting-started/getting-started-with-react-native-apps/)   |Android Build and/or Xcode Archive & Export for iOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[Ionic]()   |Ionic Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[Cordova]()   |Cordova Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[MacOS]()   |Archive for MacOS and/or Export for MacOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
 
 
 ## How does it work? 
