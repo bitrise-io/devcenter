@@ -71,12 +71,14 @@ inputs:
     opts:
       title: "IPA path"
 ```
-            
-### Secret environment variables in Steps 
 
-You can mark Step inputs as **Sensitive** to make sure their values do not get exposed. Sensitive inputs only accept [Secrets](/bitrise-cli/secrets/) - secret environment variables - as values. This ensures they are not visible in build logs. 
+### Secret environment variables in Steps
 
-To mark a Step input as sensitive, use the `is_sensitive` property. It has two values: `true` and `false`. 
+You can mark Step inputs as **Sensitive** to make sure their values do not get exposed. Sensitive inputs only accept [Secrets](/bitrise-cli/secrets/) - secret environment variables - as values. This ensures they are not visible in build logs.
+
+To mark a Step input as sensitive, use the `is_sensitive` property. It has two values: `true` and `false`.
+
+{% include message_box.html type="important" title="The `is_expand` property" content="If you mark an input as sensitive, the `is_expand` property of the input also must be `true` (which is the default setting)!"%}
 
 ```yaml
 inputs:
