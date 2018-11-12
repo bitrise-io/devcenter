@@ -22,33 +22,6 @@ With this you can distribute your iOS and Android app, over the air, for your te
 
 ## How does it work? 
 
-### iOS 
-
-To distribute your iOS app and its artifacts through bitrise.io, you will need two steps in your workflow:
-
-* `Xcode Archive`
-* `Deploy to Bitrise.io`
-
-`Xcode Archive` generates an .ipa file which can be distributed by the `Deploy to Bitrise.io` with team members or to anyone.
-
-### Android 
-To distribute your Android app and its artifacts through bitrise.io, you will need two steps in your workflow:
-
-* `Gradle Runner` or `Android Build`
-* `Deploy to Bitrise.io`
-
-Our two building steps; `Gradle Runner` and `Android Build` generate the APK file and with `Deploy to Bitrise.io` Step to deploy it.
-
-### Xamarin
-
-To distribute your Xamarin app and its artifacts through bitrise.io, you will need two steps in your workflow:
-
-* `Xamarin Archive`
-* `Deploy to Bitrise.io`
-
-Use the `Xamarin Archive step` to create the iOS/Android app and the `Deploy to Bitrise.io` step to deploy it.
-
-For any other project type, just use the step(s) or script(s) which can generate the app, and use the `Deploy to Bitrise.io` step to deploy it.
 
 **_One important thing if you use custom steps/scripts_**_: the_ `_Deploy to Bitrise.io_`_step by default deploys apps from the_ `_$BITRISE_DEPLOY_DIR_`_ directory, so make sure that you move the generated app there, or set the `__Deploy directory or file path__` input of the `__Deploy to Bitrise.io step__` __to point to the location of the app file._
 
