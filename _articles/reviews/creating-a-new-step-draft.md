@@ -65,11 +65,27 @@ Step inputs and outputs are also Step properties. For more information, see [Ste
 
 The `xcode-archive` Step generates an output Environment Variable `$BITRISE_IPA_PATH`. Create an input for this in your Step:
 
-    inputs:
-      - ipa-path: $BITRISE_IPA_PATH
-        opts:
-            title: "IPA path"
+```yaml
+inputs:
+  - ipa-path: $BITRISE_IPA_PATH
+    opts:
+      title: "IPA path"
+```
             
+### Secret environment variables in Steps 
+
+You can mark Step inputs as **Sensitive** to make sure their values do not get exposed. Sensitive inputs only accept [Secrets](/bitrise-cli/secrets/) - secret environment variables - as values. This ensures they are not visible in build logs. 
+
+To mark a Step input as sensitive, use the `is_sensitive` property. It has two values: `true` and `false`. 
+
+```yaml
+inputs:
+  - certificate_urls: $BITRISE_CERTIFICATE_URL
+    opts:
+      title: "Certificate URL"
+      is_sensitive: true
+```
+
 ### Submodules and dependencies
 
 **Do not use submodules, or require any other resource downloaded on-demand in your Step**. Try to include everything required for your Step in the Step's repository. Otherwise you can run into problems if, say, the Step fails to download a resource because of a network error or some authorization problem.
