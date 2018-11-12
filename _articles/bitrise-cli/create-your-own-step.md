@@ -15,16 +15,14 @@ If you don't have the Bitrise CLI installed, check the installation guide [here]
 
 Once the Bitrise CLI is installed, create your own Step with three simple commands.
 
-``` bash
-# If this is the very first time you use the CLI / if you just installed the CLI run this:
-bitrise setup
-
-# If you want to update the Step plugin to the latest version:
-bitrise plugin update step
-
-# And to generate a new Step, simply run this command and follow the guide it prints:
-bitrise :step create
-```
+    # If this is the very first time you use the CLI / if you just installed the CLI run this:
+    bitrise setup
+    
+    # If you want to update the Step plugin to the latest version:
+    bitrise plugin update step
+    
+    # And to generate a new Step, simply run this command and follow the guide it prints:
+    bitrise :step create
 
 Running `bitrise :step` without any commands will print the plugin's help.
 
@@ -39,8 +37,7 @@ The generated Step's README describes:
 * how you can test and use your Step in any build by using [the ](/bitrise-cli/steps/#special-Step-sources)`[git::](/bitrise-cli/steps/#special-Step-sources)`[ Step reference](/bitrise-cli/steps/#special-Step-sources),
 * how you can share your Step with others through the Bitrise StepLib if you wish to do so.
 
-{% include message_box.html type="important" title="Before proceeding with step configuration" content=" Check out [some important concepts you must be aware of](/bitrise-cli/most-important-concepts/)!
-"%}
+{% include message_box.html type="important" title="Before proceeding with step configuration" content=" Check out [some important concepts you must be aware of](/bitrise-cli/most-important-concepts/)! "%}
 
 ## Step development guidelines
 
@@ -72,7 +69,23 @@ The `xcode-archive` Step generates an output Environment Variable `$BITRISE_IPA_
 inputs:
   - ipa-path: $BITRISE_IPA_PATH
     opts:
-        title: "IPA path"
+      title: "IPA path"
+```
+
+### Secret environment variables in Steps
+
+You can mark Step inputs as **Sensitive** to make sure their values do not get exposed. Sensitive inputs only accept [Secrets](/bitrise-cli/secrets/) - secret environment variables - as values. This ensures they are not visible in build logs.
+
+To mark a Step input as sensitive, use the `is_sensitive` property. It has two values: `true` and `false`.
+
+{% include message_box.html type="important" title="The `is_expand` property" content="If you mark an input as sensitive, the `is_expand` property of the input also must be `true` (which is the default setting)!"%}
+
+```yaml
+inputs:
+  - certificate_urls: $BITRISE_CERTIFICATE_URL
+    opts:
+      title: "Certificate URL"
+      is_sensitive: true
 ```
 
 ### Submodules and dependencies
@@ -94,13 +107,11 @@ If you wish to share your newly created Step with the wider world, that's great 
 We recommend you start with the command `bitrise share`. This will print you a guide on sharing steps - all you need to do is follow! But we'll summarize the most important things here as well, if you wish to look at the process before even firing up a command line interface.
 
 1. Make sure your Step is stored in a public git repository.
-2. Fork the StepLib repository you want to have your step in. The official Bitrise StepLib can be found here: https://github.com/bitrise-io/bitrise-steplib
-3. Call `$ bitrise share start -c https://github.com/[your-username]/bitrise-steplib.git`, with the git clone URL of your forked StepLib repository. This will prepare your forked StepLib locally for sharing.
+2. Fork the StepLib repository you want to have your step in. The official Bitrise StepLib can be found here: [https://github.com/bitrise-io/bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib "https://github.com/bitrise-io/bitrise-steplib")
+3. Call `$ bitrise share start -c ``[https://github.com/](https://github.com/ "https://github.com/")``[your-username]/bitrise-steplib.git`, with the git clone URL of your forked StepLib repository. This will prepare your forked StepLib locally for sharing.
 4. Add the step version tag to your Step's repository.
-5. Call `$ bitrise share create --tag [step-version-tag] --git [step-git-uri].git --stepid [step-id]`,
-   to add your Step to your forked StepLib repository (locally).
-6. You can call `$ bitrise audit -c https://github.com/[your-username]/bitrise-steplib.git`
-   to perform a complete health-check on your forked StepLib.
+5. Call `$ bitrise share create --tag [step-version-tag] --git [step-git-uri].git --stepid [step-id]`, to add your Step to your forked StepLib repository (locally).
+6. You can call `$ bitrise audit -c ``[https://github.com/](https://github.com/ "https://github.com/")``[your-username]/bitrise-steplib.git` to perform a complete health-check on your forked StepLib.
 7. Create a Pull Request in the original StepLib repository.
 
 And that's it, you are done! Once your PR is merged, your step will be available to everyone who uses the StepLib repository you chose.
