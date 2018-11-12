@@ -53,10 +53,12 @@ Set one or more email addresses of those who should get **notification**. This f
 
 ### Enable Public Page for the App?
 
-Enable this option if you wish to create a public install page (with long and random URL) and share it with those not registered on Bitrise. You can disable it any time:
+With this option enabled, you can create a public install page that comes with a long and random URL. You can share it with even those who are not registered on Bitrise. 
 
-* either moving the toggle to the left in your Build's `APPS & ARTIFACTS`
-* or setting the step input field to `false`
+You can disable this toggle any time:
+
+* in your Build's `APPS & ARTIFACTS`, move the toggle to the left or
+* in the Step, set the step input field to `false` value
 
 If you disable this function for the app, then only your app's team members will be able to install the app from Bitrise!
 
