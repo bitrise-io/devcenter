@@ -5,9 +5,9 @@ redirect_from: []
 published: false
 
 ---
-Bitrise has an integrated App Deployment system you can use for App and other build artifact file distribution.
+Bitrise has an integrated app deployment system you can use for app and other build artifact file distribution.
 
-With this you can distribute your iOS and Android app, over the air, for your testers (**even for those who don’t have a Bitrise account**) or you can just use it for archiving your App and other build artifact files (these files will be available on the related Build’s details page).
+With this you can distribute your apps over the air for your app's team members (**or** **even for those who don’t have a Bitrise account**). You can also use it to archive your app and other build artifact files which will be available on the app's Build page.
 
 * Deploy directory or file path
 * Notify: User Roles
@@ -66,7 +66,7 @@ If you click `Open Public install page` link, you’ll see a base description of
 
 If you visit your iOS Build's page from an iOS device (which you've registered for your account), you’ll see an `Install` button instead of the `Download` button. With this you **can install** the App on your device directly from Bitrise.
 
-{% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account, but you have to make it sure that they’ll actually be able to instal the app. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. "%}
+{% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. "%}
 
 Now let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
@@ -76,7 +76,7 @@ Now let's head back to your Build's page! Besides the `Public install page` link
 
 You can send install invites and notifications based on roles or email address. You can either send invites for a group of your team members (testers, developers, admins or owner) or (if the `Public install page` option is enabled) you can send install invites to any email address.
 
-{% include message_box.html type="note" title="Who and when can't access the Public install page" content="
+{% include message_box.html type="note" title="Can't access the Public install page?" content="
 
 * Keep in mind that if you disable the `Public install page` toggle, Bitrise won’t send install invite emails for the emails you specified. Only those can get the link who are in the app's team.
 * Keep in mind that the install invite emails contain the `Public install page` URL. If you invite someone **who’s not in your App’s team** and then disable the `Public install page` toggle, they won’t be able to access the install page! Those who are in your App’s team will be redirected to the Build’s page if the `Public install page` toggle is disabled. "%}
