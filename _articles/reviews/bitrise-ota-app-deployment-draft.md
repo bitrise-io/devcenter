@@ -11,25 +11,32 @@ With this you can distribute your iOS and Android app, over the air, for your te
 
 | Platform | Build step | Deploy step |
 | --- | --- | --- |
-| [iOS](/getting-started/getting-started-with-ios-apps/) | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Android](/getting-started/getting-started-with-android-apps/)| Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Xamarin](/getting-started/getting-started-with-xamarin-apps/) | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [React Native](/getting-started/getting-started-with-react-native-apps/) | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Ionic](/getting-started-with-ionic-cordova-apps/) | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Cordova](/getting-started-with-ionic-cordova-apps/) | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [MacOS]() | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Android | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Xamarin | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| React Native | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Ionic | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
 {% include message_box.html type="important" title="Deploy directory file path" content="
 If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure you move the generated app into this directory or set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file.
 "%}
 
-If the app file (`.ipa` / `.apk`) is available, the `Deploy to Bitrise.io` step will upload it for the Build and **it will be listed on the Build’s details page**. Depending on the **notification settings** you set for the `Deploy to Bitrise.io` step, Bitrise.io will also send emails for the Team of the app.
+If the app file (.ipa/APK) is available, the `Deploy to Bitrise.io` Step will upload the file for the Build and **the file will be listed on the Build’s page**.
+
+Depending on the **notification settings** you set for the `Deploy to Bitrise.io` step, Bitrise.io will also send emails for the Team of the app.
 
 For each deployed app you’ll see an information and notifications card on the Build’s page, where you can check the details of the App (title, bundle id, version number, size, etc.) and you can download or install the App right from the Build’s page.
 
-**If you built your iOS App** with a Development or Ad Hoc Provisioning Profile, an additional section will be presented with a list of allowed device identifiers (UDID).
+{% include message_box.html type="note" title="Device identifier" content="
+If you built your iOS App** with a Development or Ad Hoc Provisioning Profile, an additional section will be presented with a list of allowed device identifiers (UDID)
+"%}
 
-If you or a team member of your App’s team register a device for his/her Bitrise account (you can do this on your [Account Settings page](https://www.bitrise.io/me/profile) in the _Test Devices_ section) and the device’s identifier can be found in the Provisioning Profile, then instead of just presenting the identifier in the list you’ll see the user who registered the device and the device’s name.
+If you or a team member of your App’s team register a device for his/her Bitrise account (you can do this on your [Account Settings page](https://www.bitrise.io/me/profile) in the [Test Devices](/testing/registering-a-test-device/) section) and the device’s identifier can be found in the Provisioning Profile, you will see two things in the list: 
+
+* the Test device identifier with its name
+* the person's name who registered the Test device
 
 Visiting the Build page from an iOS device (which you registered for your account) and you’ll see an `Install` button instead of the `Download` button. With this **you can install the App on your device directly from Bitrise**.
 
