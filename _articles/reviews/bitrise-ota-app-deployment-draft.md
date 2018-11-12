@@ -11,7 +11,7 @@ With this you can distribute your iOS and Android app, over the air, for your te
 
 | Platform  |Build step   |Deploy step   |
 |---|---|---|
-|iOS   |Xcode Archive & Export for iOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts    |
+|[iOS](/getting-started/getting-started-with-ios-apps/)   |Xcode Archive & Export for iOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts    |
 |Android   |Gradle Runner or Android Build   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
 |Xamarin   |Xamarin Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
 |React Native   |Android Build and/or Xcode Archive & Export for iOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
