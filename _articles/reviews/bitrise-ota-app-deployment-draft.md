@@ -16,7 +16,7 @@ With this you can distribute your iOS and Android app, over the air, for your te
 - Notify: Emails
 - Enable Public Page for the App?
 
-
+Here is a short recap on the different build steps to each platform. The links point to our more in-depth tutorials if you needed more information.
 
 
 | Platform | Build step | Deploy step |
