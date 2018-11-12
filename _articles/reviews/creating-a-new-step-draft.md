@@ -69,7 +69,7 @@ The `xcode-archive` Step generates an output Environment Variable `$BITRISE_IPA_
       - ipa-path: $BITRISE_IPA_PATH
         opts:
             title: "IPA path"
-
+            
 ### Submodules and dependencies
 
 **Do not use submodules, or require any other resource downloaded on-demand in your Step**. Try to include everything required for your Step in the Step's repository. Otherwise you can run into problems if, say, the Step fails to download a resource because of a network error or some authorization problem.
