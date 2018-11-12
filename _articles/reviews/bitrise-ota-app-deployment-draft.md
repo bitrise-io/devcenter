@@ -9,12 +9,7 @@ Bitrise has an integrated app deployment system you can use for app and other bu
 
 With this you can distribute your apps over the air for your app's team members (**or** **even for those who don’t have a Bitrise account**). You can also use it to archive your app and other build artifact files which will be available on the app's Build page.
 
-* Deploy directory or file path
-* Notify: User Roles
-* Notify: Emails
-* Enable Public Page for the App?
-
-Here is a short recap on the different build steps platforms use. The links point to our step by step getting started tutorials if you needed more information for each platform.
+Here is a short recap on the different build steps per platform. The links point to our step by step getting started tutorials if you needed more information for each platform.
 
 | Platform | Build step | Deploy step |
 | --- | --- | --- |
