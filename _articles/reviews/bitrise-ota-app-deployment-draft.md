@@ -11,13 +11,13 @@ With this you can distribute your iOS and Android app, over the air, for your te
 
 | Platform  |Build step   |Deploy step   |
 |---|---|---|
-|[iOS](/getting-started/getting-started-with-ios-apps/)   |`Xcode Archive & Export for iOS`   |`Deploy to Bitrise.io - Apps, Logs, Artifacts`    |
-|[Android](/getting-started/getting-started-with-android-apps/)   |`Gradle Runner` or `Android Build`   |`Deploy to Bitrise.io - Apps, Logs, Artifacts`   |
-|[Xamarin](/getting-started/getting-started-with-xamarin-apps/)   |`Xamarin Archive`   |`Deploy to Bitrise.io - Apps, Logs, Artifacts`   |
-|[React Native](/getting-started/getting-started-with-react-native-apps/)   |`Android Build` and/or `Xcode Archive & Export for iOS`   |`Deploy to Bitrise.io - Apps, Logs, Artifacts`   |
-|[Ionic](/getting-started-with-ionic-cordova-apps/)   |`Ionic Archive`   |`Deploy to Bitrise.io - Apps, Logs, Artifacts`   |
-|[Cordova](/getting-started-with-ionic-cordova-apps/)   |`Cordova Archive`   |`Deploy to Bitrise.io - Apps, Logs, Artifacts`   |
-|[MacOS]()   |`Archive for MacOS` and/or `Export for MacOS`   |`Deploy to Bitrise.io - Apps, Logs, Artifacts`   |
+|[iOS](/getting-started/getting-started-with-ios-apps/)   |Xcode Archive & Export for iOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts    |
+|[Android](/getting-started/getting-started-with-android-apps/)   |Gradle Runner or Android Build   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[Xamarin](/getting-started/getting-started-with-xamarin-apps/)   |Xamarin Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[React Native](/getting-started/getting-started-with-react-native-apps/)   |Android Build and/or Xcode Archive & Export for iOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[Ionic](/getting-started-with-ionic-cordova-apps/)   |Ionic Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[Cordova](/getting-started-with-ionic-cordova-apps/)   |Cordova Archive   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
+|[MacOS]()   |Archive for MacOS and/or Export for MacOS   |Deploy to Bitrise.io - Apps, Logs, Artifacts   |
 
 
 ## How does it work? 
