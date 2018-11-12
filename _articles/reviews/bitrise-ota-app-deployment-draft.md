@@ -52,17 +52,17 @@ Set one or more email addresses of those who should get **notification**. This f
 
 ### Enable Public Page for the App
 
-With this option enabled, you can create a public install page that comes with a long and random URL. You can share it with even those who are not registered on Bitrise.
-
-Opening this link you’ll see a base description of the App (title, version, size, supported devices) and an `Install` button if you visit the page from an iOS or Android device (depending on the app’s platform of course).
+With this option enabled, you can create a public install page that comes with a long and random URL. You can share this URL with anyone - yes, even those who are not registered on Bitrise!
 
 You can access this URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file. View online as shown below or download it to your local computer!
 
 ![](/img/public-install-page-1.png)
 
+Opening this link you’ll see a base description of the App (title, version, size, supported devices). If you visit your iOS Build's page from an iOS device (which you've registered for your account), you’ll see an `Install` button instead of the `Download` button. With this **you can install the App on your device directly from Bitrise**.
+
 ![](/img/public-install-page-example.png)
 
-Besides the `Public install page` link, you’ll see an information and notifications card for each deployed app. Here you can check the details of the App (such as App title, Bundle ID, Version, Size, etc).
+Let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see an information and notifications card for each deployed app. Here you can check the details of the App (such as App title, Bundle ID, Version, Size, etc).
 
 ![](/img/info-card-android.jpg)
 
@@ -76,8 +76,6 @@ If you or a team member of your App’s team register a device for his/her Bitri
 
 * the Test device identifier with its name
 * the person's name who registered the Test device
-
-Visiting the Build page from an iOS device (which you registered for your account), you’ll see an `Install` button instead of the `Download` button. With this **you can install the App on your device directly from Bitrise**.
 
 **For Android apps you don’t have to register your test devices**, as Android apps don’t have per-device install restrictions. You’ll, however, have to enable the **“Unknown Sources”** option in Android to be able to install the app/apk from outside of the Google Play Store.
 
