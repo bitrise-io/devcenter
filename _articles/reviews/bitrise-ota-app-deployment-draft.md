@@ -70,7 +70,7 @@ Now let's head back to your Build's page! Besides the `Public install page` link
 
 ![](/img/info-card-android.jpg)
 
-{% include message_box.html type="warning" title="My message" content=" You can share this page with anyone, even if they don’t have a Bitrise account, but **you have to make it sure that they’ll actually be able to instal the app** - if you don’t use an Enterprise Provisioning Profile to build your App, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS App can’t be installed on any other device, only on the ones which were included in the Provisioning Profile the build was signed with. "%}
+{% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account, but **you have to make it sure that they’ll actually be able to instal the app** - if you don’t use an Enterprise Provisioning Profile to build your App, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS App can’t be installed on any other device, only on the ones which were included in the Provisioning Profile the build was signed with. "%}
 
 {% include message_box.html type="note" title="Device identifier" content="
 If you built your iOS App** with a Development or Ad Hoc Provisioning Profile, an additional section will be presented with a list of allowed device identifiers (UDID)
