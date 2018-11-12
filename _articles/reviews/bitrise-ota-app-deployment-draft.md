@@ -9,6 +9,17 @@ Bitrise has an integrated App Deployment system you can use for App and other bu
 
 With this you can distribute your iOS and Android app, over the air, for your testers (**even for those who don’t have a Bitrise account**) or you can just use it for archiving your App and other build artifact files (these files will be available on the related Build’s details page).
 
+| Platform  |Build step   |Deploy step   |
+|---|---|---|
+|iOS   |Xcode Archive & Export for iOS   |   |
+|Android   |Gradle Runner or Android Build   |   |
+|Xamarin   |Xamarin Archive   |   |
+|React Native   |Android Build and/or Xcode Archive & Export for iOS   |   |
+|Ionic   |Ionic Archive   |   |
+|Cordova   |Cordova Archive   |   |
+|MacOS   |Archive for MacOS and/or Export for MacOS   |   |
+
+
 ## How does it work? 
 
 ### iOS 
