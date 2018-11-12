@@ -11,13 +11,12 @@ Bitrise has an integrated App Deployment system you can use for App and other bu
 
 With this you can distribute your iOS and Android app, over the air, for your testers (**even for those who don’t have a Bitrise account**) or you can just use it for archiving your App and other build artifact files (these files will be available on the related Build’s details page).
 
-- Deploy directory or file path
-- Notify: User Roles
-- Notify: Emails
-- Enable Public Page for the App?
+* Deploy directory or file path
+* Notify: User Roles
+* Notify: Emails
+* Enable Public Page for the App?
 
 Here is a short recap on the different build steps platforms use. The links point to our step by step getting started tutorials if you needed more information for each platform.
-
 
 | Platform | Build step | Deploy step |
 | --- | --- | --- |
@@ -53,16 +52,16 @@ Set one or more email addresses of those who should get **notification**. This f
 
 ### Enable Public Page for the App?
 
-With this option enabled, you can create a public install page that comes with a long and random URL. You can share it with even those who are not registered on Bitrise. 
+With this option enabled, you can create a public install page that comes with a long and random URL. You can share it with even those who are not registered on Bitrise.
 
 You can disable this toggle any time:
 
 * in your Build's `APPS & ARTIFACTS`, move the toggle to the left or
 * in the Step, set the step input field to `false` value
 
-If you disable this function for the app, then only your app's team members will be able to install the app from Bitrise!
-
-If you disable this option, the `Notify: Emails` option will be ignored and the `Notify: User Roles` users will receive the build's URL instead of the public page's URL!
+{% include message_box.html type="warning" title="Who can receive the app after disabling?" content="
+If you disable this function for the app, then only your app's team members will be able to install the app from Bitrise! Additionally, the `Notify: Emails` option will be ignored and the `Notify: User Roles` users will receive the build's URL instead of the public page's URL!
+"%}
 
 Opening this link you’ll see a base description of the App (title, version, size, supported devices) and an `Install` button if you visit the page from an iOS or Android device (depending on the app’s platform of course).
 
