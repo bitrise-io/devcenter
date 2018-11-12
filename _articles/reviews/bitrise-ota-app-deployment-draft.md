@@ -5,8 +5,6 @@ redirect_from: []
 published: false
 
 ---
-## About Deploy to Bitrise.io Step
-
 Bitrise has an integrated App Deployment system you can use for App and other build artifact file distribution.
 
 With this you can distribute your iOS and Android app, over the air, for your testers (**even for those who don’t have a Bitrise account**) or you can just use it for archiving your App and other build artifact files (these files will be available on the related Build’s details page).
@@ -32,11 +30,11 @@ First let's have a look at the required and sensitive fields of the Step:
 
 ![](/img/deploy-to-bitrise.png)
 
-### Deploy directory or file path
+## Deploy directory or file path
 
 If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure you move the generated app into this directory or set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file. If the app file (.ipa/APK) is available, the `Deploy to Bitrise.io` Step will upload the file for the Build and **the file will be listed on the Build’s page**.
 
-### Notify: User Roles
+## Notify: User Roles
 
 You can define who should get notification of the generated build based on your app's user groups. There are a couple of options for you to choose from:
 
@@ -46,17 +44,19 @@ You can define who should get notification of the generated build based on your 
 
 The default input here is `everyone`.
 
-### Notify: Emails
+## Notify: Emails
 
 Set one or more email addresses of those who should get **notification**. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in `Secrets`.
 
-### Enable Public Page for the App
+## Enable Public Page for the App
 
 With this option enabled, you can create a Public install page that comes with a long and random URL. You can share this URL with anyone - yes, even with those who are not registered on Bitrise!
 
 You can enable it directly in the Step's input field or at the generated .ipa/APK in your Build's `APPS & ARTIFACTS` tab.
 
-You can access this Public install page's URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file. Click the `eye` icon to view the details online !
+## Access the Public install page
+
+You can access the Public install page's URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file. Click the `eye` icon to view the details online !
 
 ![](/img/public-install-page-1.png)
 
@@ -70,26 +70,27 @@ If you visit your iOS Build's page from an iOS device (which you've registered f
 
 Now let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
-![](/img/info-card-android.jpg) 
+![](/img/info-card-android.jpg)
+
+### Send invites and notifications
+
+You can send install invites and notifications based on roles or email address. You can either send invites for a group of your team members (testers, developers, admins or owner) or (if the `Public install page` option is enabled) you can send install invites to any email address.
+
+{% include message_box.html type="note" title="Who and when can't access the Public install page" content="
+
+* Keep in mind that if you disable the `Public install page` toggle, Bitrise won’t send install invite emails for the emails you specified. Only those can get the link who are in the app's team.
+* Keep in mind that the install invite emails contain the `Public install page` URL. If you invite someone **who’s not in your App’s team** and then disable the `Public install page` toggle, they won’t be able to access the install page! Those who are in your App’s team will be redirected to the Build’s page if the `Public install page` toggle is disabled. "%}
+
+You can specify the list of groups and emails for automatic install invite notification in the App’s Workflow using the `Notify: User Groups` and `Notify: Emails` step input fields.
 
 #### Test Devices
 
-If you built your **iOS App** with a **Development or Ad Hoc Provisioning Profile**, an additional section will be presented with a list of allowed device identifiers (UDID). If you or a team member of your app’s team register a device for his/her Bitrise account (you can do this on your [Account Settings page](https://www.bitrise.io/me/profile) in the [Test Devices](/testing/registering-a-test-device/) section) and the device’s identifier can be found in the Provisioning Profile, you will see two things in the list:
+If you built your **iOS App** with a **development or an ad hoc provisioning profile**, an additional section will be presented with a list of allowed device identifiers (UDID) on your Build's page. If you or a team member of your app’s team [register a device](/testing/registering-a-test-device/) for his/her Bitrise account and the device’s identifier can be found in the Provisioning Profile, you will see the following in the list:
 
 * the Test device identifier with its name
 * the person's name who registered the Test device
 
-For **Android** apps, you don’t have to register your test devices , as Android apps don’t have per-device install restrictions. You’ll, however, have to enable the **“Unknown Sources”** option in Android to be able to install the APK from outside of the Google Play Store.
-
-## Notifications and install invites [⚓](https://devcenter.bitrise.io/tutorials/deploy/bitrise-app-deployment/#notifications-and-install-invites)
-
-On the Build’s page you can send install invites for your testers. You can either send invites for a group of your team (testers, developers, admins or owner) or (if the `Public install page` option is enabled) you can send install invites to any email address.
-
-**Keep in mind that the install invite email contains the URL of the Public install page.** If you invite someone who’s not in your App’s team and then disable the Public install page, they won’t be able to access the install page! Those who are in your App’s team will be redirected to the Build’s page if the Public install page is disabled.
-
-**You can specify the list of groups and emails for automatic install invite notification** in the App’s Workflow. Similarly to the Public page option just select the `Deploy to Bitrise.io` step in your Workflow and specify the list of groups and emails to automatically notify in the `Notify: User Groups` and `Notify: Emails` options.
-
-Keep in mind that if you disable the _Public install page_ option, Bitrise won’t send install invite emails for the emails you specify, only to those who are in the App’s Team, because in this case only your team members can access the App (on the Build’s page).
+For **Android** apps, you don’t have to register your test devices, as Android apps don’t have per-device install restrictions. However you’ll have to enable the `Unknown Sources` option in Android to be able to install the APK from outside of the Google Play Store.
 
 ### Disable Public Page for the App
 
