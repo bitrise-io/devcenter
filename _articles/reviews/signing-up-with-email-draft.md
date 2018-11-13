@@ -5,11 +5,11 @@ redirect_from: []
 published: false
 
 ---
-You can sign up to Bitrise in one step with your email address.
+You can easily sign up to Bitrise in one step with your email address.
 
 ## Sign up
 
-1. Add your username, email address and password.
+1. Add your username, email address and password on our [Sign Up](https://app.bitrise.io/users/sign_up) page.
 
    You must provide a strong password which fulfills the following requirements:
 
@@ -25,7 +25,7 @@ You can sign up to Bitrise in one step with your email address.
 
 How about adding your [first app](/getting-started/adding-a-new-app/index/) now?
 
-If you haven't received a confirmation email, click **Resend confirmation email** you see at Step 4.
+If you haven't received a confirmation email, click the **Resend confirmation email** button you see at Step 4.
 
 ## Issues with Log in
 
