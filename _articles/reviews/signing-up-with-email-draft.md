@@ -15,7 +15,7 @@ You can sign up to Bitrise in one step with your email address.
 
    ![](/img/your-password-should-have-1.png)
 2. Click `Sign up with email`
-3. Add your first name, last name, your company name and a few more details if you wish. You can also add those later.
+3. Optional step: Add your first name, last name, your company name and a few more details if you wish. You can also add those later.
 4. Check your inbox for our Confirmation Instructions.
 
    ![](/img/check-your-inbox.png)
@@ -27,9 +27,11 @@ How about adding your [first app](/getting-started/adding-a-new-app/index/) now?
 
 If you haven't received a confirmation email, click **Resend confirmation email** you see at Step 4.
 
-Isses with logging in
+## Issues with Log in
 
-If you failed to log in for the third time, [reCAPTCHA](https://developers.google.com/recaptcha/) gets activated where you can prove you are not a robot. If you failed to log in for an excessive amount of times, you will get locked out. Check your inbox for our `Unlock Instructions` email!
+If you failed to log in for the third time, [reCAPTCHA](https://developers.google.com/recaptcha/) gets activated for you. 
+
+If you failed to log in for an excessive amount of time, you will automatically get locked out. Check your inbox for our `Unlock Instructions` email!
 
 ![](/img/lockedout.png)
 
