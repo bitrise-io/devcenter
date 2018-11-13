@@ -11,13 +11,13 @@ You can sign up to Bitrise in one step with your email address.
 
 1. Add your username, email address and password.
 
-{% include message_box.html type="important" title="My message" content="You must provide a strong password which fulfills the following requirements: 
+	You must provide a strong password which fulfills the following requirements: 
 
-![](/img/your-password-should-have-1.png) "%}
+![](/img/your-password-should-have-1.png)
 
-After you provided your credentials, press **Done**.
+2. Click `Sign up with email`.
 
-After successful registration we will send you a confirmation email. Click on the confirmation link in the email and you are ready to roll!
+After successful registration we send you a confirmation email. Click the confirmation link found in the email and you are ready to rock & roll!
 
 ![Screenshot](/img/signing-up/confirmation-email.png)
 
