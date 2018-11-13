@@ -9,7 +9,7 @@ Bitrise has an integrated app deployment system you can use for app and other bu
 
 With this you can distribute your apps over the air for your app's team members or even for those who don’t have a Bitrise account. You can also use it to archive your app and other build artifact files which will be available on the app's Build page for viewing and downloading.
 
-Here is a short recap on the different build steps per platform. The links point to our step by step getting started tutorials if you needed more information for each platform.
+Here is a short recap on the different build steps per platform. The links under `Platform` point to our Getting started tutorials if you needed more information for each platform (for example, on code signing, packaging and deploying).
 
 | Platform | Build step | Deploy step |
 | --- | --- | --- |
@@ -27,21 +27,26 @@ First let's have a look at the required and sensitive fields of the Step:
 
 ## Deploy directory or file path
 
-If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure you move the generated app into this directory or set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file. If the app file (.ipa/APK) is available, the `Deploy to Bitrise.io` Step will upload the file for the Build and **the file will be listed on the Build’s page**.
+If the file path of the app (.ipa/APK) is available in the right directory, the `Deploy to Bitrise.io` Step will upload the file for the Build and **the file will be listed on the Build’s page**.
+
+If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure:
+
+* you move the generated app into this directory or
+* you set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file.
 
 ## Notify: User Roles
 
-You can define who should get notification of the generated build based on your app's user groups. There are a couple of options for you to choose from:
+You can define who should get notified of the generated build based on your app's user groups. There are a couple of options for you to choose from:
 
 * leave `everyone` in the input field to notify everyone in the group.
-* notify based on user role: `testers`, `developers`, `admins`, or `owner` (select one or more and separate with commas)
+* notify based on user role: `testers`, `developers`, `admins`, or `owner` (Select one or more and separate the roles with commas)
 * if you don't want to notify anyone, set it to `none`.
 
-The default input here is `everyone`.
+The default input value here is `everyone`.
 
 ## Notify: Emails
 
-Set one or more email addresses of those who should get **notification**. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in `Secrets`.
+Set one or more email addresses of those who should get **notification**. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in our `Secrets` tab.
 
 ## Enable Public Page for the App
 
