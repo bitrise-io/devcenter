@@ -46,7 +46,7 @@ The default input value here is `everyone`.
 
 ## Notify: Emails
 
-Set one or more email addresses of those who should get **notification**. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in our `Secrets` tab.
+Set one or more email addresses of those who should get notification. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in our `Secrets` tab.
 
 ## Enable Public Page for the App
 
@@ -54,9 +54,9 @@ With this option enabled, you can create a Public install page that comes with a
 
 You can enable it directly in the Step's input field or at the generated .ipa/APK in your Build's `APPS & ARTIFACTS` tab.
 
-## Access the Public install page
+### Access the Public install page
 
-You can access the Public install page's URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file. Click the `eye` icon to view the details online !
+You can access the Public install page's URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file. 
 
 ![](/img/public-install-page-1.png)
 
@@ -66,7 +66,7 @@ If you click `Open Public install page` link, you’ll see a base description of
 
 If you visit your iOS Build's page from an iOS device (which you've registered for your account), you’ll see an `Install` button instead of the `Download` button. With this you **can install** the App on your device directly from Bitrise.
 
-{% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. "%}
+{% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, **you have to add every device identifier (UDID)** to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. "%}
 
 Now let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
@@ -74,7 +74,7 @@ Now let's head back to your Build's page! Besides the `Public install page` link
 
 ### Send invites and notifications
 
-You can send install invites and notifications based on roles or email address. You can either send invites for a group of your team members (testers, developers, admins or owner) or (if the `Public install page` option is enabled) you can send install invites to any email address.
+You can send install invites and notifications based on roles or email address. You can either send invites for a group of your app's team members (testers, developers, admins or owner) or (if the `Public install page` option is enabled) you can send install invites to any email address.
 
 {% include message_box.html type="note" title="Can't access the Public install page?" content="
 
@@ -96,8 +96,8 @@ For **Android** apps, you don’t have to register your test devices, as Android
 
 You can disable this toggle any time:
 
-* in your Build's `APPS & ARTIFACTS`, move the toggle to the left or
-* in the Step, set the step input field to `false` value
+* move the toggle to the left in your Build's `APPS & ARTIFACTS` or
+* set the step input field to `false` value in the Step
 
 {% include message_box.html type="warning" title="Who can receive the app after disabling?" content="
 If you disable this function for the app, then only your app's team members will be able to install the app from Bitrise! Additionally, the `Notify: Emails` option will be ignored and the `Notify: User Roles` users will receive the build's URL instead of the public page's URL!
