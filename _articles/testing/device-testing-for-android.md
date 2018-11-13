@@ -24,7 +24,7 @@ First you need to enable device testing to your app, then select a build whose p
 
    ![](/img/build-device-test.jpg)
 5. Click `add step to primary workflow` to add two steps that you need for device testing to your primary workflow:
-   * `Gradle Runner` Step to generate an APK for testing
+   * `Android Build` Step to generate an APK for testing
    * `[BETA] Virtual Device Testing for Android` Step to run the tests and create the test reports![](/img/primary-virtual-device.png)
 
 ## Running tests
