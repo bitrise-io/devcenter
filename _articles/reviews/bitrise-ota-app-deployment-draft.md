@@ -11,7 +11,7 @@ With this you can distribute your apps over the air for your app's team members 
 
 Here is a short recap on the different build steps per platform. The links under `Platform` point to our Getting started tutorials if you needed more information for each platform (for example, on code signing, packaging and deploying).
 
-| Platform | Build step | Deploy step |
+| Platform | Build step | Deploy step to Bitrise |
 | --- | --- | --- |
 | [iOS](/getting-started/getting-started-with-ios-apps/) | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 | [Android](/getting-started/getting-started-with-android-apps/) | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
