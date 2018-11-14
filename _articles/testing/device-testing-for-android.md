@@ -52,6 +52,8 @@ There is a small difference between configuring your workflow for `robo` and `in
 7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/test-devices.png)
+
+   Check out Firebase [Available devices in Test Lab]() guide on the test devices.
 8. Start a build.
 
 ### Running instrumentation tests
