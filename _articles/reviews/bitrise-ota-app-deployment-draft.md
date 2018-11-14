@@ -13,12 +13,12 @@ Here is a short recap on the different build steps per platform. The links under
 
 | Platform | Build step | Deploy step |
 | --- | --- | --- |
-| iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Android | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Xamarin | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| React Native | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Ionic | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [iOS](/getting-started/getting-started-with-ios-apps/) | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Android](/getting-started/getting-started-with-android-apps/) | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Xamarin](/getting-started/getting-started-with-xamarin-apps/) | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [React Native](/getting-started/getting-started-with-react-native-apps/) | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Ionic](/getting-started-with-ionic-cordova-apps/) | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Cordova](/getting-started-with-ionic-cordova-apps/) | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 | MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
 First let's have a look at the required and sensitive fields of the Step:
@@ -48,15 +48,15 @@ The default input value here is `everyone`.
 
 Set one or more email addresses of those who should get notification. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in our `Secrets` tab.
 
-## Enable Public Page for the App
+## Enabling Public Page for the App
 
 With this option enabled, you can create a Public install page that comes with a long and random URL. You can share this URL with anyone - yes, even with those who are not registered on Bitrise!
 
 You can enable it directly in the Step's input field or at the generated .ipa/APK in your Build's `APPS & ARTIFACTS` tab.
 
-### Access the Public install page
+### Accessing the Public install page
 
-You can access the Public install page's URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file. 
+You can access the Public install page's URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file.
 
 ![](/img/public-install-page-1.png)
 
@@ -72,7 +72,7 @@ Now let's head back to your Build's page! Besides the `Public install page` link
 
 ![](/img/info-card-android.jpg)
 
-### Send invites and notifications
+### Sending invites and notifications
 
 You can send install invites and notifications based on roles or email address. You can either send invites for a group of your app's team members (testers, developers, admins or owner) or (if the `Public install page` option is enabled) you can send install invites to any email address.
 
@@ -92,7 +92,7 @@ If you built your **iOS App** with a **development or an ad hoc provisioning pro
 
 For **Android** apps, you don’t have to register your test devices, as Android apps don’t have per-device install restrictions. However you’ll have to enable the `Unknown Sources` option in Android to be able to install the APK from outside of the Google Play Store.
 
-### Disable Public Page for the App
+### Disabling Public Page for the App
 
 You can disable this toggle any time:
 
