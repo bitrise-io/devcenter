@@ -53,7 +53,7 @@ There is a small difference between configuring your workflow for `robo` and `in
 
    ![](/img/test-devices.png)
 
-   Check out Firebase [Available devices in Test Lab]() guide on the test devices.
+   Check out Firebase [Available devices in Test Lab](https://firebase.google.com/docs/test-lab/android/available-testing-devices) guide on the test devices.
 8. Start a build.
 
 ### Running instrumentation tests
