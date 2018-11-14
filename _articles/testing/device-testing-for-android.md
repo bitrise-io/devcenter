@@ -51,7 +51,7 @@ There is a small difference between configuring your workflow for `robo` and `in
 6. Check if `robo` is the selected `Test type`. It should be since it is the default test type.
 7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of `deviceID,version,language,orientation` separated with `,`.
 
-Check out Firebase [Available devices in Test Lab](https://firebase.google.com/docs/test-lab/android/available-testing-devices) guide on the test devices.
+	Check out Firebase [Available devices in Test Lab](https://firebase.google.com/docs/test-lab/android/available-testing-devices) guide on the test devices.
 8. Start a build.
 
 ### Running instrumentation tests
