@@ -43,6 +43,7 @@ We advise you to include all testing related steps in your primary workflow and 
 
 {% include message_box.html type="info" title="More about Android" content="
 
+* Let's [get started with Android apps](/getting-started/getting-started-with-android-apps/)
 * [About Android code signing](/code-signing/android-code-signing/android-code-signing-procedures/)
 * [About Android build steps](/tips-and-tricks/android-tips-and-tricks/)
 * About [Android UI ](/testing/device-testing-for-android/)and [Android unit testing](/testing/android-run-a-unit-test/)
