@@ -39,7 +39,7 @@ add cocoappods dep manager
 
 ## android-sample-app
 
-We advise you to include all testing related steps in your primary workflow and have the code signing and build steps in your deploy workflow. The only exception here is our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step which deploys all the test results and other artifacts to the `APPS & ARTIFACTS` tab of your Build's page on bitrise.io.
+We advise you to include all testing related steps in your primary workflow and have the code signing and build steps in your deploy workflow. The only exception here is our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step which deploys all the test results and other artifacts to the `APPS & ARTIFACTS` tab of your Build's page on bitrise.io so you need this Step in your primary workflow!
 
 {% include message_box.html type="info" title="More about Android" content="
 
@@ -47,7 +47,7 @@ We advise you to include all testing related steps in your primary workflow and 
 * [About Android code signing](/code-signing/android-code-signing/android-code-signing-procedures/)
 * [About Android build steps](/tips-and-tricks/android-tips-and-tricks/)
 * About [Android UI ](/testing/device-testing-for-android/)and [Android unit testing](/testing/android-run-a-unit-test/)
-* About [Android deployment](/deploy/android-deploy/deploying-android-apps/)%}
+* About [Android deployment](/deploy/android-deploy/deploying-android-apps/)" %}
 
 ## carthage-sample-app
 
