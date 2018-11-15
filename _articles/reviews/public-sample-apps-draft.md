@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-This guide aims to remedy some pain points you might experience when configuring your workflow. With the help of our Bitrise public sample apps collection, we will demonstrate how workflows should be configured, and what a successfully run build looks like.
+Bitrise public sample apps are available for your compare your project with This guide aims to remedy some pain points you might experience when configuring your workflow. With the help of our Bitrise public sample apps collection, we will demonstrate how workflows should be configured, and what a successfully run build looks like.
 
 For each sample public app we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
 
@@ -46,6 +46,7 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 * Let's [get started with iOS apps](/getting-started/getting-started-with-ios-apps/)
 * About [iOS code signing ](/code-signing/ios-code-signing/code-signing/)with troubleshooting
+* About [frequent iOS issues](/troubleshooting/frequent-ios-issues/)
 * About [device testing for iOS](/testing/device-testing-for-ios/)
 * About [iOS deployment](/deploy/ios-deploy/introduction-to-deploying-ios-apps/)"%}
 
