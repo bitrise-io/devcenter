@@ -19,6 +19,8 @@ This guide aims to remedy some pain points you might experience when configuring
 * fastlane-snappy-sample-app
 * android-sample-app
 
+primary delpy
+
 ## About triggers
 
 With every public sample app, the primary workflow gets triggered when code is pushed to the Feature branch. If code is pushed content to the develop branch, then the deploy workflow gets triggered.
@@ -29,17 +31,24 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ## ios-sample-app
 
-If you use `Xcode test for iOS` Step in you workflow, we suggest you to include the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step so that you can check the test results (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page.
+* If you use the `Xcode test for iOS` Step in you workflow, we suggest you to include our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step. This way you can check the test results (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page.
 
 ![](/img/sample-app-ios.png)
 
 ![](/img/xcode-test-results.png)
 
-add cocoappods dep manager
+* With iOS projects, we advise you to add our `Run CocoaPods install` step to your primary workflow to make sure all your iOS dependencies are installed.
+
+{% include message_box.html type="info" title="More on iOS" content="
+
+* Let's [get started with iOS apps](/getting-started/getting-started-with-ios-apps/)
+* About [iOS code signing ](/code-signing/ios-code-signing/code-signing/)with troubleshooting
+* About [device testing for iOS](/testing/device-testing-for-ios/)
+* About [iOS deployment](/deploy/ios-deploy/introduction-to-deploying-ios-apps/)"%}
 
 ## android-sample-app
 
-We advise you to include all testing related steps in your primary workflow and have the code signing and build steps in your deploy workflow. The only exception here is our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step which deploys all the test results and other artifacts to the `APPS & ARTIFACTS` tab of your Build's page on bitrise.io so you need this Step in your primary workflow!
+* We advise you to include all testing related steps in your primary workflow and have the code signing and build steps in your deploy workflow. The only exception here is our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step which deploys all the test results and other artifacts to the `APPS & ARTIFACTS` tab of your Build's page on bitrise.io so you need this Step in your primary workflow!
 
 {% include message_box.html type="info" title="More about Android" content="
 
