@@ -62,6 +62,8 @@ Our `Carthage` Step is a iOS dependency manager.
 
 ## reactnative-sample-app
 
+## reactnative-sample-app with Expo Eject
+
 If your React Native comes with an Expo framework, it does not contain any native elements. This sample app shows an iOS and **Android** workflow where the Android workflow contains our `[BETA] Expo Eject` Step. This Step generates the necessary native elements to your projects using the [Expo Development CLI.](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli)
 
 {% include message_box.html type="important" title="Do you have an Expo account?" content=" This step requires your Expo username and password. Head over to Expo to create an account or keep them handy when setting the `[BETA] Expo Eject` Step input fields.
@@ -69,11 +71,12 @@ If your React Native comes with an Expo framework, it does not contain any nativ
 ![](/img/expo-eject.png)" %}
 
 1. Select the `Expo CLi version`.
-2. In the case of a React Native project **using Expo Kit** library: 
-   * add your Expo username 
+2. In the case of a React Native project **using Expo Kit** library:
+   * add your Expo username
    * add your Expo password for your Expo account. Note, this is sensitive information, so make sure you set it as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/).
-   In both cases, the Step will run `expo eject --eject-method expoKit`.
-3. 
+     In both cases, the Step will run `expo eject --eject-method expoKit`.
+3. `Run expo publish after eject?`  
+4. `React Native version to set in package.json`  
 
 ## fastlane-ios-sample-app and fastlane-android-sample-app
 
