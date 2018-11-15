@@ -9,7 +9,7 @@ Bitrise public sample apps are available for your compare your project with This
 
 For each sample public app we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
 
-These workflows don't contain any signing certificates, provisioning profiles or keystore files. If you run the builds and see the error message they throw due to missing code signing files, you'll remember the next time to upload them. 
+These workflows don't contain any signing certificates, provisioning profiles or keystore files. If you run the builds and see the error message they throw due to missing code signing files, you'll remember the next time to upload them.
 
 {% include message_box.html type="note" title="Up-to-date sample apps" content=" All the sample apps we provide in this guide are monitored by our developers on a weekly basis. All apps are scheduled to run between 4 and 5 on every Monday morning to see if the VM updates happening on Saturdays have disrupted the sample apps. If so, our developers fix the sample apps so that you have them as reliable reference."%}
 
@@ -92,7 +92,7 @@ react native bundle step it bundles your app ez az install react native utan szo
 
 ## expo-sample-app
 
-If your React Native comes with an Expo framework, it does not contain any native elements. This sample app shows an primary and deploy workflow, where the primary workflow contains our `[BETA] Expo Eject` and `Recreate user schemes` Steps. `[BETA] Expo Eject` Step generates the necessary native elements to your projects using the [Expo Development CLI.](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli)
+If your React Native comes with an Expo framework, it does not contain any native elements. This sample app shows a primary and deploy workflow, where the primary workflow contains our `[BETA] Expo Eject` and `Recreate user schemes` Steps. `[BETA] Expo Eject` Step generates the necessary native elements to your projects using the [Expo Development CLI.](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli)
 
 {% include message_box.html type="important" title="Do you have an Expo account?" content=" This step requires your Expo username and password. Head over to Expo to create an account or keep them handy when setting the `[BETA] Expo Eject` Step input fields.
 
@@ -103,14 +103,18 @@ If your React Native comes with an Expo framework, it does not contain any nativ
    * add your Expo username
    * add your Expo password for your Expo account. Note, this is sensitive information, so make sure you set it as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/).
      In both cases, the Step will run `expo eject --eject-method expoKit`.
-3. `Run expo publish after eject?`
-4. `React Native version to set in package.json`
+3. `Run expo publish after eject?` With this set to `yes` or `no` you can control if the Step should automatically publish your app on Expo.io once it gets ejected.
+4. `React Native version to set in package.json` Here you can add the version if it is missing from your package.json file.
+5. `Recreate user schemes` Step: Platform-specific files get generated. In the case of an iOS project: you need to use SHARED schemes. To fulfill this requirement, you either take care of it in XCode or leave it to `Recreate user schemes`. When running your build, the step scans your project and lists out the shared schemes, if any, and recreates shared ones if those have been missing from your project (based on your Xcode project file)
 
-`Recreate user schemes`
-
-1. 
+   ![](/img/recreate=schemes.png)
+6. 
 
 ## fastlane-ios-sample-app and fastlane-android-sample-app
+
+* You can run all your existing fastlane lanes using our `fastlane` step:
+
+![](/img/fastlane-lane.png)
 
 ## fastlane-snappy-sample-app
 
