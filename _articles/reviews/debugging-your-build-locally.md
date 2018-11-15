@@ -5,39 +5,44 @@ redirect_from: []
 published: false
 
 ---
-If the build works on your local Mac/PC but not on [bitrise.io 70](https://www.bitrise.io/), that’s usually because of uncommitted / gitignored files or a tool version difference. There can be other reasons, for example in case of iOS code signing errors it’s usually because a code signing file which is available on your Mac, but you did not upload it to [bitrise.io 70](https://www.bitrise.io/) and so it’s not available there.
+If your build fails on Bitrise, we often recommend to try and run it locally, on your machine. To do this, do the following:
 
-In any case, the first steps you should try, preferably before you’d report the issue (as this will be the first thing we’ll ask for anyway ;)) is to do a full clean clone of your project, and try to run the build there. This helps to eliminate the most common issue, that you have a file in your project’s regular working directory which is not committed into git, and so it’s not available when [bitrise.io 70](https://www.bitrise.io/) clones the repository.
+* do a full clean git clone of your project's online repository
+* run the build on your machine with the Bitrise CLI
+
+This helps to eliminate, among other things, a very common issue: that uncommitted or gitignored files are in your working directory but they haven't been committed into your git repository online and therefore they are not available when Bitrise clones the repository for running the build. Other possible issues include:
+
+* code signing files are present on your local machine but not uploaded to Bitrise 
+* a difference in the version of the tool(s) used for the build
 
 ## Testing with a full clean git clone
 
-1. open your Terminal / Command Line
-2. type in: `cd /tmp`
-3. clone your repository with: `git clone REPOURL ./quick-repo-test --branch BRANCH-YOU-WANT-TO-TEST`
+1. Open your Terminal / Command Line interface on your machine.
+2. Type in: `cd /tmp`
+3. Clone your repository with: `git clone REPOURL ./quick-repo-test --branch BRANCH-YOU-WANT-TO-TEST`
    * example: `git clone ``[https://github.com/bitrise-io/bitrise.git](https://github.com/bitrise-io/bitrise.git "https://github.com/bitrise-io/bitrise.git")`` ./quick-repo-test --branch master`
-4. `cd ./quick-repo-test`
+4. Type `cd ./quick-repo-test.`
 
-and then run the commands you want to test, to build your project, or open the project file from this directory (you can open the directory in Finder / file browser by typing in: `open .`).
+Run the commands you want to test, to build your project, or open the project file from this directory.
 
-## Test with the Bitrise CLI
+## Testing with the Bitrise CLI
 
-You can also run the same build locally, using the [Bitrise CLI 213](https://www.bitrise.io/cli). For this, follow the steps in the previous section (**Testing with a full clean git clone**), and once you’re in the `/tmp/quick-repo-test` directory:
+After doing a full clean git clone, run a build locally, using the [Bitrise CLI](https://www.bitrise.io/cli). 
 
-1. Do a clean git clone, as described in the previous section: **Testing with a full clean git clone**
-2. Install the [Bitrise CLI 213](https://www.bitrise.io/cli) following the install instructions (it takes less than a minute to install it, the Bitrise CLI is distributed as a single binary, without any installer)
-3. Download your app’s `bitrise.yml` from [bitrise.io 70](https://www.bitrise.io/):
-   1. open the app on [bitrise.io 70](https://www.bitrise.io/)
-   2. click the Workflow tab to open the Workflow Editor
-   3. on the left side select `bitrise.yml`
-   4. download the yml and save it into `/tmp/quick-repo-test` with the file name `bitrise.yml`
-4. Now that you have the `bitrise.yml` in `/tmp/quick-repo-test`, run the build with: `bitrise run WORKFLOW-TO-RUN` (e.g. `bitrise run primary`)
+1. [Install the Bitrise CLI](/bitrise-cli/installation/).
+2. [Download](/builds/bitrise-yml-online/) your app’s `bitrise.yml` file from [bitrise.io](https://www.bitrise.io/).
+3. Run the build with: `bitrise run <workflow-name>` (for example, `bitrise run primary`).
 
-This should help to reproduce the issue in most cases.
+This should help to reproduce the issues in most cases, and allow you to attempt to debug them on your own machine. 
 
-### Additional notes for iOS projects
+If the build succeeds under these conditions, contact our support! 
 
-* Make sure that you run the tests in the same simulator as the one [bitrise.io 20](http://bitrise.io/) runs. If you use the Bitrise CLI to run the tests locally this is not required, that uses the same configuration.
-* If you’re debugging an iOS unit/UI test issue, please make sure to **reset the iOS Simulator** (in the Simulator app select the **Simulator** menu bar item -> then **Reset Content and Settings…**).
+{% include message_box.html type="important" title="Running iOS tests" content="
+
+* Make sure that you run the tests in the same simulator as the one [bitrise.io](http://bitrise.io/) runs. If you use the Bitrise CLI to run the tests locally this is not required, that uses the same configuration.
+
+
+* If you’re debugging an iOS unit/UI test issue, please make sure to **reset the iOS Simulator** (in the Simulator app select the **Simulator** menu bar item -> then **Reset Content and Settings…**)"%} 
 
 ### Additional notes for Android/Gradle projects
 
