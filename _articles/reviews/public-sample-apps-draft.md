@@ -7,6 +7,10 @@ published: false
 ---
 This guide aims to remedy some pain points you might experience when configuring your workflow. With the help of our Bitrise public sample apps collection, we will demonstrate how workflows should be configured, and what a successfully run build looks like.
 
+For each sample public app we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
+
+These workflows don't contain any signing certificates, provisioning profiles or keystore files. If you run the builds and see the error message they throw due to missing code signing files, you'll remember the next time to upload them. 
+
 {% include message_box.html type="note" title="Up-to-date sample apps" content=" All the sample apps we provide in this guide are monitored by our developers on a weekly basis. All apps are scheduled to run between 4 and 5 on every Monday morning to see if the VM updates happening on Saturdays have disrupted the sample apps. If so, our developers fix the sample apps so that you have them as reliable reference."%}
 
 * carthage-sample-app
@@ -18,8 +22,6 @@ This guide aims to remedy some pain points you might experience when configuring
 * fastlane-android-sample-app
 * fastlane-snappy-sample-app
 * android-sample-app
-
-primary delpy
 
 ## About triggers
 
@@ -37,6 +39,7 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ![](/img/xcode-test-results.png)
 
+* You don't have to sacrifice safety when developing public iOS apps. Your signing certificates and provisioning profiles are safe from curious eyes in our Code Signing tab since the tab is not accessible for non-team members. Certificate and provisioning profile URLs are redacted in build logs. Do not expose your secret env vars with the `Expose for Pull Requests?` toggle.
 * With iOS projects, we advise you to add our `Run CocoaPods install` step to your primary workflow to make sure all your iOS dependencies are installed.
 
 {% include message_box.html type="info" title="More on iOS" content="
