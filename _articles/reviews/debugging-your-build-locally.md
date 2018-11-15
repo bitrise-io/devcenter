@@ -42,11 +42,9 @@ If the build succeeds under these conditions, contact our support!
 * Make sure that you run the tests in the same simulator as the one [bitrise.io](http://bitrise.io/) runs. If you use the Bitrise CLI to run the tests locally this is not required, that uses the same configuration.
 
 
-* If you’re debugging an iOS unit/UI test issue, please make sure to **reset the iOS Simulator** (in the Simulator app select the **Simulator** menu bar item -> then **Reset Content and Settings…**)"%} 
+* If you’re debugging an iOS unit/UI test issue, please make sure to **reset the iOS Simulator** (in the Simulator app, select the **Simulator** menu bar item -> then **Reset Content and Setting**)."%} 
 
-### Additional notes for Android/Gradle projects
-
-* If you still can’t reproduce the issue locally (after following the previous steps), you might also want to delete the `$HOME/.gradle` (hidden) directory, to clear your Gradle caches. (Quick Terminal / Command Line command: `rm -rf $HOME/.gradle`)
+{% include message_box.html type="important" title="Android projects" content="If you still can’t reproduce the issue locally, you might also want to delete the `$HOME/.gradle` (hidden) directory, to clear your Gradle caches. (Quick Terminal / Command Line command: `rm -rf $HOME/.gradle`)"%} 
 
 ## Download and use the Android/Linux environment
 
