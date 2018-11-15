@@ -68,6 +68,13 @@ If your React Native comes with an Expo framework, it does not contain any nativ
 
 ![](/img/expo-eject.png)" %}
 
+1. Select the `Expo CLi version`.
+2. In the case of a React Native project **using Expo Kit** library: 
+   * add your Expo username 
+   * add your Expo password for your Expo account. Note, this is sensitive information, so make sure you set it as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/).
+   In both cases, the Step will run `expo eject --eject-method expoKit`.
+3. 
+
 ## fastlane-ios-sample-app and fastlane-android-sample-app
 
 ## fastlane-snappy-sample-app
