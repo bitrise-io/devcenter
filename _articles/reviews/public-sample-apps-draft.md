@@ -13,6 +13,7 @@ This guide aims to remedy some pain points you might experience when configuring
 * xamarin-sample-app
 * ionic-sample-app
 * cordova-sample-app
+* reactnative-sample-app
 * fastlane-ios-sample-app
 * fastlane-android-sample-app
 * fastlane-snappy-sample-app
@@ -58,6 +59,14 @@ Our `Carthage` Step is a iOS dependency manager.
 * `Generate cordova build configuration` step is a configuration step which generates the build.json file on which the building is based.
 
 {% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" For more information on code signing Ionic or Cordova, read this [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/). For more information on code signing Ionic or Cordova, read this guide." %}
+
+## reactnative-sample-app
+
+If your React Native comes with an Expo framework, it does not contain any native elements. This sample app shows an iOS and **Android** workflow where the Android workflow contains our `[BETA] Expo Eject` Step. This Step generates the necessary native elements to your projects using the [Expo Development CLI.](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli)
+
+{% include message_box.html type="important" title="Do you have an Expo account?" content=" This step requires your Expo username and password. Head over to Expo to create an account or keep them handy when setting the `[BETA] Expo Eject` Step input fields.
+
+![](/img/expo-eject.png)" %}
 
 ## fastlane-ios-sample-app and fastlane-android-sample-app
 
