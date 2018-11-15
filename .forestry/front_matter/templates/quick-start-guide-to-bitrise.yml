@@ -18,7 +18,6 @@ pages:
 - _articles/reviews/bitrise-ota-app-deployment-draft.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
-- _articles/reviews/android-tips-tricks.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/bitrise-cli/customizing-bitrise-yml.md
 - _articles/reviews/deploying-an-ios-app-for-simulators.md
