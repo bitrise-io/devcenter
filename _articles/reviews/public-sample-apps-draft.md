@@ -35,9 +35,18 @@ If you use `Xcode test for iOS` Step in you workflow, we suggest you to include 
 
 ![](/img/xcode-test-results.png)
 
+add cocoappods dep manager
+
 ## android-sample-app
 
-* in your primary workflow you should have all the testing steps such as `Android Lint` and `Android Unit Test` Steps, whereas your deploy workflow should contain one of our building steps, like `Android Build` or `Gradle Runner` Steps.
+We advise you to include all testing related steps in your primary workflow and have the code signing and build steps in your deploy workflow. The only exception here is our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step which deploys all the test results and other artifacts to the `APPS & ARTIFACTS` tab of your Build's page on bitrise.io.
+
+{% include message_box.html type="info" title="More about Android" content="
+
+* [About Android code signing](/code-signing/android-code-signing/android-code-signing-procedures/)
+* [About Android build steps](/tips-and-tricks/android-tips-and-tricks/)
+* About [Android UI ](/testing/device-testing-for-android/)and [Android unit testing](/testing/android-run-a-unit-test/)
+* About [Android deployment](/deploy/android-deploy/deploying-android-apps/)%}
 
 ## carthage-sample-app
 
@@ -48,7 +57,6 @@ Our `Carthage` Step is a iOS dependency manager.
       API rate limit exceeded for 208.52.166.154. (But here’s the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.
 
   Make sure you insert the step BEFORE any building step in your deploy workflow.
-* cocoapods - if ios dependencies mentioned?
 
 ## xamarin-sample-app
 
@@ -62,9 +70,15 @@ Our `Carthage` Step is a iOS dependency manager.
 
 ## reactnative-sample-app
 
-## reactnative-sample-app with Expo Eject
+run npm command step and run yarn command steps:  either of them, 1. install or it runs a jest stest if you type test.
 
-If your React Native comes with an Expo framework, it does not contain any native elements. This sample app shows an iOS and **Android** workflow where the Android workflow contains our `[BETA] Expo Eject` Step. This Step generates the necessary native elements to your projects using the [Expo Development CLI.](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli)
+plusz install react native step
+
+react native bundle step it bundles your app ez az install react native utan szokott jonni,nem mindig szokott kelleni, valamikor kell valamikor nem. oszzebundeli a link from bazsi.
+
+## expo-sample-app
+
+If your React Native comes with an Expo framework, it does not contain any native elements. This sample app shows an primary and deploy workflow, where the primary workflow contains our `[BETA] Expo Eject` and `Recreate user schemes` Steps. `[BETA] Expo Eject` Step generates the necessary native elements to your projects using the [Expo Development CLI.](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli)
 
 {% include message_box.html type="important" title="Do you have an Expo account?" content=" This step requires your Expo username and password. Head over to Expo to create an account or keep them handy when setting the `[BETA] Expo Eject` Step input fields.
 
@@ -75,8 +89,12 @@ If your React Native comes with an Expo framework, it does not contain any nativ
    * add your Expo username
    * add your Expo password for your Expo account. Note, this is sensitive information, so make sure you set it as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/).
      In both cases, the Step will run `expo eject --eject-method expoKit`.
-3. `Run expo publish after eject?`  
-4. `React Native version to set in package.json`  
+3. `Run expo publish after eject?`
+4. `React Native version to set in package.json`
+
+`Recreate user schemes`
+
+1. 
 
 ## fastlane-ios-sample-app and fastlane-android-sample-app
 
