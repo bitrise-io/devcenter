@@ -15,7 +15,6 @@ fields:
   default: ''
 pages:
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
-- _articles/reviews/device-testing-for-android-fix.md
 - _articles/getting-started/builds-and-workflows.md
 - _articles/reviews/debugging-your-build-locally.md
 - _articles/reviews/signing-up-with-email-draft.md
