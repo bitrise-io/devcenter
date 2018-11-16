@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/getting-started/builds-and-workflows.md
 - _articles/reviews/debugging-your-build-locally.md
 - _articles/reviews/signing-up-with-email-draft.md
 - _articles/reviews/bitrise-ota-app-deployment-draft.md
