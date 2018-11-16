@@ -7,7 +7,9 @@ menu:
     weight: 5
 
 ---
-With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. There are no limits to using the Step, other than your overall build time limit.
+With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. 
+
+{% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can only contain one `[BETA] Virtual Device Testing` Step performing one type of test. 
 
 Our device testing solution is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/). You can find the resulting logs, videos and screenshots on Bitrise.
 
@@ -51,7 +53,7 @@ There is a small difference between configuring your workflow for `robo` and `in
 6. Check if `robo` is the selected `Test type`. It should be since it is the default test type.
 7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of `deviceID,version,language,orientation` separated with `,`.
 
-	Check out Firebase [Available devices in Test Lab](https://firebase.google.com/docs/test-lab/android/available-testing-devices) guide on the test devices.
+   Check out Firebase [Available devices in Test Lab](https://firebase.google.com/docs/test-lab/android/available-testing-devices) guide on the test devices.
 8. Start a build.
 
 ### Running instrumentation tests
