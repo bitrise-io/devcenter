@@ -18,7 +18,7 @@ Steps can be managed directly from the [Workflow Editor](/getting-started/gettin
 * Specify the inputs of the Steps you need
 * Set a Step to run only if the previous Step succeeded.
 
-### Add a new step
+### Adding a new Step
 
 You can add any Step to your workflow - there are absolutely no restrictions. Please note that this means that it's possible to add a Step specific to, for example, iOS apps to a workflow of an Android app. Always make sure you only add the relevant Steps to your workflow!
 
@@ -36,7 +36,7 @@ Clicking the Step will add it to the selected workflow. Don't forget to save the
 
 You can also clone a Step by clicking the **Clone icon** on the right side and then you can **Drag and Drop** it to its place.
 
-### Remove a step
+### Removing a Step
 
 1. Open your app by clicking on the app's name on your `[Dashboard](https://app.bitrise.io/dashboard)`.
 2. Click the `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
