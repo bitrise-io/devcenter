@@ -7,7 +7,7 @@ menu:
     weight: 2
 
 ---
-## Create a signed APK with the `Sign APK` step
+## Creating a signed APK with the Sign APK Step
 
 You can create a signed APK using the `Sign APK step` in our Bitrise workflow.
 
@@ -29,27 +29,23 @@ In this section, we walk you through the code signing steps using our `android-m
 
 Bitrise uploads your keystore file and assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The `Sign APK` step in the workflow will track this environment variable and will run if it is set.
 
-## Download your files
+## Downloading your files
 
-You can download your files from `GENERIC FILE STORAGE`(for example, your keystore file) using the `File-downloader` step:
+You can download your files from `GENERIC FILE STORAGE` (for example, your keystore file) using the `File-downloader` step:
 
-An example for downloading a keystore file" content=" 
+An example for downloading a keystore file" content="
 
-
-```
-- file-downloader:
-
-   inputs:
-
-   - source: $BITRISEIO_ANDROID_KEYSTORE_URL
-
-   - destination: "$HOME/keystores/my_keystore.jks" #native android#
-
-```
+    - file-downloader:
+    
+       inputs:
+    
+       - source: $BITRISEIO_ANDROID_KEYSTORE_URL
+    
+       - destination: "$HOME/keystores/my_keystore.jks" #native android#
 
 After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
-## Run your deploy workflow
+## Running your deploy workflow
 
 You can run a workflow _manually_.
 
