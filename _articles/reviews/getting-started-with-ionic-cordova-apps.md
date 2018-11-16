@@ -53,7 +53,7 @@ As an example, have a look at a Cordova **primary workflow** containing `Karma J
         - karma-jasmine-runner@0.9.1: {}
         - deploy-to-bitrise-io@1.3.15: {}
 
-{% include message_box.html type="info" title="How about using other testing frameworks?" content=" It's worth mentioning that if your workflow contains any testing framework **other than** `Karma Jasmine Test Runner` or `Jasmine Test Runner` steps,  our scanner will interpret your workflow as a building workflow instead of a testing one. The reason for this is our scanner couldn't detect a known testing framework like `Karma Jasmine Test Runner` or `Jasmine Test Runner` Steps hence it will run as a primary, but instead of testing, it will **build** your project on the emulator." %}
+{% include message_box.html type="info" title="How about using other testing frameworks?" content=" It's worth mentioning that our scanner knows about Jasmin and Karma Jasmine testing solutions. If your project uses another test framework/runner, our the scanner will not be able to generate a test workflow (which would be the `primary` workflow), but it will generate a build workflow. Since this workflow is the only one generated, it will be the `primary` workflow." %}
 
 ## Dependencies
 
@@ -67,7 +67,7 @@ Leave the input field of `The 'yarn' command to run` empty or set it to `install
 
 ## Testing Ionic/Cordova apps
 
-Perform [unit testing](https://docs.microsoft.com/en-us/visualstudio/cross-platform/tools-for-cordova/debug-test/basic-tests-with-jasmine?view=toolsforcordova-2017) by our `Karma Jasmine Test Runner` or `Jasmine Test Runner` Steps. If your Cordova/Ionic project has Karma Jasmine dependency in its `package.json` file, our Scanner will detect it and automatically insert the respective testing step into your workflow. If this dependency is missing from your project, you can manually insert one of steps to your workflow using our Workflow Editor - just make sure you place it right after `Run nmp command` or `Run yarn command` package manager Step.
+Perform unit testing by our `Karma Jasmine Test Runner` or `Jasmine Test Runner` Steps. If your Cordova/Ionic project has Karma Jasmine dependency in its `package.json` file, our Scanner will detect it and automatically insert the respective testing step into your workflow. If this dependency is missing from your project, you can manually insert one of steps to your workflow using our Workflow Editor - just make sure you place it right after `Run nmp command` or `Run yarn command` package manager Step.
 
 ## Code signing
 
