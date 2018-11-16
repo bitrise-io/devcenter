@@ -53,7 +53,7 @@ As an example, have a look at a Cordova **primary workflow** containing `Karma J
         - karma-jasmine-runner@0.9.1: {}
         - deploy-to-bitrise-io@1.3.15: {}
 
-{% include message_box.html type="info" title="How about using other testing frameworks?" content=" It's worth mentioning that our scanner knows about Jasmin and Karma Jasmine testing solutions. If your project uses another test framework/runner, our  scanner will not be able to generate a test workflow (which would be the `primary` workflow), but it will generate a build workflow. Since this workflow is the only one generated, it will be the `primary` workflow." %}
+{% include message_box.html type="info" title="How about using other testing frameworks?" content=" It's worth mentioning that our scanner knows about Jasmin and Karma Jasmine testing solutions. If your project uses another test framework/runner, our  scanner will not be able to generate a test workflow (which would be the `primary` workflow), but it will generate a build workflow instead. Since this workflow is the only one generated, it will be called `primary` workflow." %}
 
 ## Dependencies
 
