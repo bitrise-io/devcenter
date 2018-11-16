@@ -2,6 +2,10 @@
 title: Getting started with Ionic/Cordova apps - draft
 date: 2018-10-25 07:01:54 +0000
 redirect_from: []
+menu:
+  getting-started:
+    weight: 13
+    title: Getting started with Ionic/Cordova apps
 published: false
 
 ---
