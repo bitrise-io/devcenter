@@ -76,7 +76,7 @@ You will need:
    ![Export method env var](/img/export-method-envvar.png)
 6. [Start a build](/builds/starting-builds-manually/).
 
-If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive for Mac` Step should export an .ipa with the development export method. If you have the `Deploy to Bitrise.io` Step in your workflow, you can find the .ipa on the `Apps & Artifacts` tab of the build page.
+If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive for Mac` Step should export an .app or .pkg file with the development export method. If you have the `Deploy to Bitrise.io` Step in your workflow, you can find the binary package file on the `Apps & Artifacts` tab of the build page.
 
 ## Deploying to the App Store
 
