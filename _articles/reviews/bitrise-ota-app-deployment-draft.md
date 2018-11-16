@@ -25,7 +25,7 @@ First let's have a look at the required and sensitive fields of the Step:
 
 ![](/img/deploy-to-bitrise.png)
 
-## Deploy directory or file path
+## Deploying directory or file path
 
 If the file path of the app (.ipa/APK) is available in the right directory, the `Deploy to Bitrise.io` Step will upload the file for the Build and **the file will be listed on the Build’s page**.
 
