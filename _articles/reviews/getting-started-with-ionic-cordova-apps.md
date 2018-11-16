@@ -135,7 +135,7 @@ Now that we're ready for deployment, let's see how to publish your iOS and Andro
 
 ### Deploying to App Store Connect
 
-1. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
+1. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Cordova Archive` or `Ionic Archive` Steps but preferably before the `Deploy to Bitrise.io` Step.
 2. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
 
    The Step will need your:
