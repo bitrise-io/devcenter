@@ -53,7 +53,7 @@ As an example, have a look at a Cordova **primary workflow** containing `Karma J
         - karma-jasmine-runner@0.9.1: {}
         - deploy-to-bitrise-io@1.3.15: {}
 
-{% include message_box.html type="info" title="How about using other testing frameworks?" content=" It's worth mentioning that our scanner knows about Jasmin and Karma Jasmine testing solutions. If your project uses another test framework/runner, our the scanner will not be able to generate a test workflow (which would be the `primary` workflow), but it will generate a build workflow. Since this workflow is the only one generated, it will be the `primary` workflow." %}
+{% include message_box.html type="info" title="How about using other testing frameworks?" content=" It's worth mentioning that our scanner knows about Jasmin and Karma Jasmine testing solutions. If your project uses another test framework/runner, our  scanner will not be able to generate a test workflow (which would be the `primary` workflow), but it will generate a build workflow. Since this workflow is the only one generated, it will be the `primary` workflow." %}
 
 ## Dependencies
 
@@ -84,7 +84,7 @@ To sign your iOS project, you have to upload code signing certificates and provi
    You can do this either on the website UI or with the `codesigndoc` tool itself.
 
    ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
-4. Make sure you have the `Certificate and profile installer` step in your workflow as this Step can download and install the certificates ton the virtual machine.
+4. Make sure you have the `Certificate and profile installer` step in your workflow as this Step can download and install the certificates on the virtual machine.
 5. Add the `Generate cordova build configuration` step to your Workflow. (This step does all the configuration needed for the next step, which is `Cordova Archive` or `Ionic Archive`.) It **must come after** the `Certificate and profile installer` step.
 6. Fill in the required input for the step. Please note that both the `Code Signing Identity` and the `Provisioning Profile` are required inputs for iOS apps even though they are not marked as such.
 
@@ -124,7 +124,7 @@ Before deploying your app to any marketplace you need to generate a codesigned .
 
 1. Add the `Cordova archive` or the `Ionic archive` step to your workflow.
 2. Fill in the required inputs.
-   * The `Platform` input needs to be set to: `device`.
+   * The `Platform` input needs to be set to `device`.
    * The `Build command configuration` input must match the `Build configuration` input of the `Generate cordova build configuration` step.
 
    The archive step must come after the `Generate cordova build configuration` step in the workflow.
@@ -135,7 +135,7 @@ Now that we're ready for deployment, let's see how to publish your iOS and Andro
 
 ### Deploying to App Store Connect
 
-1. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Cordova Archive` or `Ionic Archive` Steps but preferably before the `Deploy to Bitrise.io` Step.
+1. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Cordova Archive` or `Ionic Archive` Steps but preferably before the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step.
 2. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
 
    The Step will need your:
@@ -148,8 +148,8 @@ Now that we're ready for deployment, let's see how to publish your iOS and Andro
 
 Before you start:
 
-* make sure you have [**registered to Google Play Store and set up your project**](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-* make sure you have set up [**Google Play API access**](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+* make sure you have [registered to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+* make sure you have set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
 
 1. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
 2. Copy the env key which stores your uploaded file’s url. For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
@@ -162,11 +162,11 @@ Before you start:
 
 ### Deploying to Bitrise
 
-Add the `Deploy to Bitrise.io` Step to your workflow. This will upload all your build artifacts into the `APPS & ARTIFACTS` tab of your Build's page.
+Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow. This will upload all your build artifacts into the `APPS & ARTIFACTS` tab of your Build's page.
 
 You can share the generated .ipa or APK with your team members using the build’s URL. You can also notify user groups or individual users that your .ipa or APK has been built.
 
-1. Go to the `Deploy to bitrise.io` step.
+1. Go to the `Deploy to bitrise.io - Apps, Logs, Artifacts` Step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](https://yv69yaruhkt48w.preview.forestry.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated .ipa or APK in the `APPS & ARTIFACTS` tab.
 
 Start a build! If your app is properly configured, you can find it deployed to the marketplace of your choice!
