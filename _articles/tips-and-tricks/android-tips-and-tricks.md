@@ -31,7 +31,7 @@ Here is a list of the most common default tasks of an Android Gradle project:
 
 {% include message_box.html type="info" title="About Gradle Wrapper" content=" At Bitrise we use `gradlew` (Gradle Wrapper) which helps update your project by installing the needed Gradle version specific to your project. Check out [Gradle's official documentation](https://docs.gradle.org/current/userguide/gradle_wrapper.html) about Gradle Wrapper and how you can generate one!" %}
 
-### Get the list of available Gradlew tasks in your project
+### Getting the list of available Gradlew tasks in your project
 
 To get the basic task list, call `gradlew tasks` in your Android app's directory. When running `gradlew tasks`, you'll get a list of **available and most frequently** used `gradle tasks` in this format:
 
@@ -59,7 +59,7 @@ To get the basic task list, call `gradlew tasks` in your Android app's directory
 
 To see **all the available tasks listed** in your task list, call `./gradlew tasks --all`.
 
-### Run Gradle task with our Steps
+### Running Gradle task with our Steps
 
 You can run `gradle tasks` on Bitrise using `Do anything with our Script` Step, `Gradle Runner` and `Android Build` Steps.
 
@@ -125,7 +125,7 @@ You can check the full list of available packages (including obsolete packages) 
 
 1. Run `sdkmanager --list --include_obsolete --verbose` command. You can run this command on your own machine if you have `$ANDROID_HOME/tools/bin` in your `$PATH`.  If not, then you can run it with `/PATH/TO/ANDROID-SDK-HOME/tools/bin/sdkmanager ...`.
 
-## Enable Gradle debug options
+## Enabling Gradle debug options
 
 If your Gradle build fails, we recommend you to first check your build's log in the `APPS & ARTIFACTS` tab.
 
@@ -135,7 +135,7 @@ In most cases `--stacktrace` should be enough, and the `Gradle Runner` Step incl
 
 ![](/img/stacktrace.png)
 
-## Run a bitrise Android build on your Mac/PC with Docker
+## Running a bitrise Android build on your Mac/PC with Docker
 
 You can run your build on your Mac/PC inside the same `docker` container you use on [bitrise.io](https://www.bitrise.io) to fully test your build in an identical environment! You can find the detailed guide here: [How to run your build locally in Docker](/docker/run-your-build-locally-in-docker/)
 
