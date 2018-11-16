@@ -5,7 +5,7 @@ menu:
     weight: 5
 
 ---
-## Configure code signing in Xamarin Studio
+## Configuring code signing in Xamarin Studio
 
 You can specify the code signing configuration for your Xamarin Android project by creating a signed APK in [Xamarin Studio](https://www.visualstudio.com/xamarin/).
 
@@ -16,7 +16,7 @@ You can specify the code signing configuration for your Xamarin Android project 
 5. Check the `Sign .APK file using the following keystore details`.
 6. Fill out the signing information.
 
-## Use the same keystore path locally and on [bitrise.io](https://www.bitrise.io) for Xamarin Android
+## Using the same keystore path locally and on [bitrise.io](https://www.bitrise.io) for Xamarin Android
 
 You **cannot use environment variables** in your keystore path in your Xamarin project! The keystore path has to be relative to the folder of your Xamarin Android project. You can also use an absolute path.
 
