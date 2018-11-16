@@ -12,7 +12,7 @@ Our device testing solution is based on [Firebase Test Lab](https://firebase.goo
 
 For iOS apps, Firebase Test Lab runs [XCTest](https://developer.apple.com/documentation/xctest) tests. Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/ios/available-testing-devices).
 
-{% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can contain only one `iOS Device Testing` Step, performing one type of test. This is because Bitrise sends the build slug to Firebase Test Lab. Sending the same build slug results in a _"Build already exists"_ error. "%}
+{% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can contain only one `iOS Device Testing` Step, performing one type of test. This is because Bitrise sends the build slug to Firebase Test Lab. Sending the same build slug results in a _"Build already exists"_ error." %}
 
 ## Enabling Device Testing
 
