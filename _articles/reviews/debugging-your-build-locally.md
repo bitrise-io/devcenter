@@ -10,9 +10,9 @@ If your build fails on Bitrise, we often recommend to try and run it locally, on
 * do a full clean git clone of your project's online repository
 * run the build on your machine with the Bitrise CLI
 
-This helps to eliminate, among other things, a very common issue: that uncommitted or gitignored files are in your working directory but they haven't been committed into your git repository online and therefore they are not available when Bitrise clones the repository for running the build. Other possible issues include:
+This helps to eliminate, among other things, a very common issue: that uncommitted or "gitignored" files are in your working directory but they haven't been committed into your git repository online and therefore they are not available when Bitrise clones the repository for running the build. Other possible issues include:
 
-* code signing files are present on your local machine but not uploaded to Bitrise 
+* code signing files are present on your local machine but not uploaded to Bitrise
 * a difference in the version of the tool(s) used for the build
 
 ## Testing with a full clean git clone
@@ -27,33 +27,27 @@ Run the commands you want to test, to build your project, or open the project fi
 
 ## Testing with the Bitrise CLI
 
-After doing a full clean git clone, run a build locally, using the [Bitrise CLI](https://www.bitrise.io/cli). 
+After doing a full clean git clone, run a build locally, using the [Bitrise CLI](https://www.bitrise.io/cli).
 
 1. [Install the Bitrise CLI](/bitrise-cli/installation/).
 2. [Download](/builds/bitrise-yml-online/) your app’s `bitrise.yml` file from [bitrise.io](https://www.bitrise.io/).
 3. Run the build with: `bitrise run <workflow-name>` (for example, `bitrise run primary`).
 
-This should help to reproduce the issues in most cases, and allow you to attempt to debug them on your own machine. 
+This should help reproducing the issues in most cases, and allow you to attempt to debug them on your own machine.
 
-If the build succeeds under these conditions, contact our support! 
+If the build succeeds under these conditions but still fails on Bitrise, contact our support!
 
 {% include message_box.html type="important" title="Running iOS tests" content="
 
 * Make sure that you run the tests in the same simulator as the one [bitrise.io](http://bitrise.io/) runs. If you use the Bitrise CLI to run the tests locally this is not required, that uses the same configuration.
+* If you’re debugging an iOS unit/UI test issue, please make sure to **reset the iOS Simulator** (in the Simulator app, select the **Simulator** menu bar item -> then **Reset Content and Setting**)."%}
 
+{% include message_box.html type="important" title="Android projects" content="If you still can’t reproduce the issue locally, you might also want to delete the `$HOME/.gradle` (hidden) directory, to clear your Gradle caches. (Quick Terminal / Command Line command: `rm -rf $HOME/.gradle`)"%}
 
-* If you’re debugging an iOS unit/UI test issue, please make sure to **reset the iOS Simulator** (in the Simulator app, select the **Simulator** menu bar item -> then **Reset Content and Setting**)."%} 
+## Using the Android/Linux environment locally
 
-{% include message_box.html type="important" title="Android projects" content="If you still can’t reproduce the issue locally, you might also want to delete the `$HOME/.gradle` (hidden) directory, to clear your Gradle caches. (Quick Terminal / Command Line command: `rm -rf $HOME/.gradle`)"%} 
+If your project uses the Android/Linux environment, you can download and use the exact same environment as the one your build is running in on [bitrise.io](https://www.bitrise.io/).
 
-## Download and use the Android/Linux environment
+[Follow our guide](/docker/run-your-build-locally-in-docker/) to make it work!
 
-**This only works if your project uses the Android/Linux environment.** If you do, that’s awesome, as **you can download and use the exact same environment** as the one your build is running in on [bitrise.io 70](https://www.bitrise.io/)!
-
-To do this, please follow this guide: [https://bitrise-io.github.io/devcenter/docker/run-your-build-locally-in-docker/](https://bitrise-io.github.io/devcenter/docker/run-your-build-locally-in-docker/ "https://bitrise-io.github.io/devcenter/docker/run-your-build-locally-in-docker/")[ 88](https://bitrise-io.github.io/devcenter/docker/run-your-build-locally-in-docker/)
-
-**Note**: for best efficiency you should first do a **clean git clone** (as described above -> **Testing with a full clean git clone**) and run `docker` from there, so that files which are in your `.gitignore` won’t affect the build, and the build can run the way how it runs on [bitrise.io 70](https://www.bitrise.io/).
-
-## Still doesn’t work
-
-Please report the issue at [https://discuss.bitrise.io/c/issues/build-issues](https://discuss.bitrise.io/c/issues/build-issues "https://discuss.bitrise.io/c/issues/build-issues")[ 84](https://discuss.bitrise.io/c/issues/build-issues) - we’ll try to help as soon as possible!
+{% include message_box.html type="info" title="My message" content="Ideally, you should first do a **clean git clone** and run `docker` from there, so that files which are in your `.gitignore` won’t affect the build, and the build can run the the same way as on [bitrise.io](https://www.bitrise.io/)."%} 
