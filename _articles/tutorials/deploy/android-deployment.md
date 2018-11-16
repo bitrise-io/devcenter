@@ -15,7 +15,7 @@ In this guide, you will learn how to:
 * set up [Google Play API](https://developers.google.com/android-publisher/getting_started) access
 * [deploy to Google Play Store](#deploy-to-google-play-store-using-bitrise-google-play-deploy-step) using Bitrise's `Google Play Deploy` step
 
-## Create your Android project on [bitrise.io](https://www.bitrise.io)
+## Creating your Android project on [bitrise.io](https://www.bitrise.io)
 
 * Log into [bitrise.io](htts://www.bitrise.io).
 * Create a [new Bitrise project](getting-started/adding-a-new-app). Bitrise scans your Android project and creates the initial configuration for it.
@@ -45,13 +45,13 @@ In this guide, you will learn how to:
     - cache-push@2.0.5: {}
   ```
 
-## Register to Google Play Store and set up your first project
+## Registering to Google Play Store and setting up your first project
 
 1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/).
    If you already have a Google Play Developer account, and you have already deployed your app to Google Play Store, skip to [Set up Google Play API access](#set-up-google-play-api-access).
 2. Go through the [Prepare & roll out steps](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
 
-## Set up Google Play API access
+## Setting up Google Play API access
 
 1. Link your API project by `Creating a new API project` or `Using an existing API project`.
 2. Set up `API Access Clients` using a service account and grant `Release manager` role to the service account.
@@ -61,7 +61,7 @@ Check out the [Google Play Developer API](https://developers.google.com/android-
 
 You have successfully prepared your Google Play Console project. A services credential account has been created which is authorized to manage your releases.
 
-## Deploy to Google Play Store using Bitrise `Google Play Deploy` step
+## Deploying to Google Play Store using Bitrise Google Play Deploy step
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
 2. Select your project and go to your `Workflow Editor`.
