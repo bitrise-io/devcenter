@@ -9,7 +9,7 @@ menu:
 ---
 With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. 
 
-{% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can only contain one `[BETA] Virtual Device Testing` Step performing one type of test. "%}
+{% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can contain only one `[BETA] Virtual Device Testing` Step performing one type of test. "%}
 
 Our device testing solution is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/). You can find the resulting logs, videos and screenshots on Bitrise.
 
