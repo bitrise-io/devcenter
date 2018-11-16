@@ -23,7 +23,7 @@ This helps to eliminate, among other things, a very common issue: that uncommitt
    * example: `git clone ``[https://github.com/bitrise-io/bitrise.git](https://github.com/bitrise-io/bitrise.git "https://github.com/bitrise-io/bitrise.git")`` ./quick-repo-test --branch master`
 4. Type `cd ./quick-repo-test.`
 
-Run the commands you want to test, to build your project, or open the project file from this directory.
+Run the commands you want to test, to build your project, or to open the project file from this directory.
 
 ## Testing with the Bitrise CLI
 
@@ -33,7 +33,7 @@ After doing a full clean git clone, run a build locally, using the [Bitrise CLI
 2. [Download](/builds/bitrise-yml-online/) your app’s `bitrise.yml` file from [bitrise.io](https://www.bitrise.io/).
 3. Run the build with: `bitrise run <workflow-name>` (for example, `bitrise run primary`).
 
-This should help reproducing the issues in most cases, and allow you to attempt to debug them on your own machine.
+This should help reproducing the issues in most cases, and allows you to attempt to debug them on your own machine.
 
 If the build succeeds under these conditions but still fails on Bitrise, contact our support!
 
@@ -50,4 +50,4 @@ If your project uses the Android/Linux environment, you can download and use th
 
 [Follow our guide](/docker/run-your-build-locally-in-docker/) to make it work!
 
-{% include message_box.html type="info" title="Run docker from a clean git clone" content="Ideally, you should first do a **clean git clone** and run `docker` from there, so that files which are in your `.gitignore` won’t affect the build, and the build can run the the same way as on [bitrise.io](https://www.bitrise.io/)."%} 
+{% include message_box.html type="info" title="Run docker from a clean git clone" content="Ideally, you should first do a **clean git clone** and run `docker` from there, so that files which are in your `.gitignore` won’t affect the build, and the build can run the the same way as on [bitrise.io](https://www.bitrise.io/)."%}
