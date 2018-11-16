@@ -82,12 +82,12 @@ If you uploaded the correct code signing files, the `Certificate and profile ins
 
 If you set up your code signing files and created an .app or .pkg file for your internal testers, it is time to involve external testers and then to publish your MacOS app to the App Store. Let's see how!
 
-{% include message_box.html type="note" title="Developer ID" content="If you want to distribute your app elsewhere than the App Store, you can sign it with [a Developer ID](https://developer.apple.com/support/developer-id/). This method is not in the scope of this guide."%}
+{% include message_box.html type="note" title="Developer ID" content="If you want to distribute your app outside the App Store, you can sign it with [a Developer ID](https://developer.apple.com/support/developer-id/). This method is not in the scope of this guide but on Bitrise, it works the same way: you just need to upload the appropriate code signing files."%}
 
 To deploy to the App Store, you will need more code signing files:
 
-* a **Distribution** Certificate
-* an **App Store** type Provisioning Profile
+* a **Mac App** **Distribution** Certificate
+* a **Mac** **Installer Distribution** certificate
 
 1. On your local machine, set up App Store code signing for your project in Xcode, and export an .app or .pkg file. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
