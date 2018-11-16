@@ -23,6 +23,8 @@ These workflows don't contain any signing certificates, provisioning profiles or
 * fastlane-snappy-sample-app
 * android-sample-app
 
+quick start guide-ban megemliteni
+
 ## About triggers
 
 With every public sample app, the primary workflow gets triggered when code is pushed to the Feature branch. If code is pushed content to the develop branch, then the deploy workflow gets triggered.
