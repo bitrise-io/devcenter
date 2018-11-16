@@ -39,7 +39,7 @@ Set your app's privacy setting to either **private** or [**public**](/getting-st
 
 ![App privacy](/img/adding-a-new-app/app-privacy.png)
 
-### Connect a repository
+### Connecting a repository
 
 Tell Bitrise where the code of your app is stored. You can either:
 
@@ -52,7 +52,7 @@ Tell Bitrise where the code of your app is stored. You can either:
 * Adding an SSH key to the selected repository
 * Registering a Webhook for the repository
 
-### Setup repository access
+### Setting up repository access
 
 [Set up an SSH key to access the selected repository](/getting-started/adding-a-new-app/setting-up-ssh-keys). This is required for private apps to ensure Bitrise can clone the repository. You can:
 
@@ -64,7 +64,7 @@ Tell Bitrise where the code of your app is stored. You can either:
 
 Public apps cannot have SSH keys.
 
-### Validate and configure the project
+### Validating and configuring the project
 
 After setting up repository access, type the branch of the repository you wish to use and click `Next`.
 
