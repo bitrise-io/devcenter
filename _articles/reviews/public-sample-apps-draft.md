@@ -5,13 +5,11 @@ redirect_from: []
 published: false
 
 ---
-Bitrise public sample apps are available for your compare your project with This guide aims to remedy some pain points you might experience when configuring your workflow. 
+Bitrise public sample apps are available for your compare your project with This guide aims to remedy some pain points you might experience when configuring your workflow.
 
 {% include message_box.html type="info" title="Want to learn more about public apps?" content=" Check out these articles for more information:
 
 * [Public apps](/getting-started/adding-a-new-app/public-apps/)
-
-
 * [Sensitive input in public apps](/builds/sensitive-input-field/)"%}
 
 For each sample public app we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
@@ -42,14 +40,16 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ## ios-sample-app
 
-* If you use the `Xcode test for iOS` Step in you workflow, we suggest you to include our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step. This way you can check the test results (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page.
+* If you use the `Xcode test for iOS` Step in you workflow, we suggest you to include our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step. This way you can check test results (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page.
 
 ![](/img/sample-app-ios.png)
 
 ![](/img/xcode-test-results.png)
 
-* You don't have to sacrifice safety when developing public iOS apps. Your signing certificates and provisioning profiles are safe from curious eyes in our Code Signing tab since the tab is not accessible for non-team members. Certificate and provisioning profile URLs are redacted in build logs. Do not expose your secret env vars with the `Expose for Pull Requests?` toggle.
+* Even if  Your signing certificates and provisioning profiles are safe from curious eyes in our Code Signing tab since the tab is not accessible for non-team members. Certificate and provisioning profile URLs are redacted in build logs. Do not expose your secret env vars with the `Expose for Pull Requests?` toggle.
 * With iOS projects, we advise you to add our `Run CocoaPods install` step to your primary workflow to make sure all your iOS dependencies are installed.
+
+{% include message_box.html type="note" title="Safety comes first with code signing" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes! Files uploaded to the `Code signing` tab are not accessible to people outside of your team! Even if you generate a public app and share the build with someone, Certificate and provisioning profile URLs are redacted in build logs . "%}
 
 {% include message_box.html type="info" title="More on iOS" content="
 
@@ -61,7 +61,7 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ## android-sample-app
 
-* We advise you to include all testing related steps in your primary workflow and have the code signing and build steps in your deploy workflow. The only exception here is our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step which deploys all the test results and other artifacts to the `APPS & ARTIFACTS` tab of your Build's page on bitrise.io so you need this Step in your primary workflow!
+* In this sample app we show you how to build your primary workflow to perform unit and UI tests and have the results deployed to your your build's `APPS & ARTIFACTS` - all test reports at your fingertips to help you fix any issues in your project before marketplace deployment. If you select `deploy` at the `WORKFLOW` drop-down menu, you will see all the steps necessary to build, code sign and deploy your app. We advise you to include all testing related steps in your primary workflow and have the code signing and build steps in your deploy workflow. The only exception here is our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step which deploys all the test results and other artifacts to the `APPS & ARTIFACTS` tab of your Build's page on bitrise.io so you need this Step in your primary workflow!
 
 {% include message_box.html type="info" title="More about Android" content="
 
