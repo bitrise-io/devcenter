@@ -1,18 +1,13 @@
 ---
-title: Public sample apps-draft
+title: Sample apps-draft
 date: 2018-10-30 14:13:21 +0000
 redirect_from: []
 published: false
 
 ---
-Bitrise public sample apps are available for your compare your project with This guide aims to remedy some pain points you might experience when configuring your workflow.
+Bitrise sample apps are available for your compare your project with This guide aims to remedy some pain points you might experience when configuring your workflow.
 
-{% include message_box.html type="info" title="Want to learn more about public apps?" content=" Check out these articles for more information:
-
-* [Public apps](/getting-started/adding-a-new-app/public-apps/)
-* [Sensitive input in public apps](/builds/sensitive-input-field/)"%}
-
-For each sample public app we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
+For each sample app, we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
 
 These workflows don't contain any signing certificates, provisioning profiles or keystore files, therefore if you run the builds you will see a code signing error message. We hope next time you encounter the same error message with your own build, you will remember to upload your code signing files. If you need more help on code signing, check out our [Android](/code-signing/android-code-signing/android-code-signing-procedures/) and [iOS](/code-signing/ios-code-signing/code-signing/) guides.
 
@@ -39,7 +34,7 @@ quick start guide-ban megemliteni
 
 ## About triggers
 
-With every public sample app, the primary workflow gets triggered when code is pushed to the Feature branch. If code is pushed content to the develop branch, then the deploy workflow gets triggered.
+With every sample app, the primary workflow gets triggered when code is pushed to the Feature branch. If code is pushed content to the develop branch, then the deploy workflow gets triggered.
 
 ![](/img/triggers-sample-app.png)
 
