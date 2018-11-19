@@ -27,7 +27,6 @@ pages:
 - _articles/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
 - _articles/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/testing/device-testing-for-android.md
-- _articles/reviews/getting-started-with-ionic-cordova-apps.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/tutorials/xamarin/index.md
 - _articles/troubleshooting/frequent-android-issues.md
