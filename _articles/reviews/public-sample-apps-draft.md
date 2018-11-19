@@ -14,7 +14,14 @@ Bitrise public sample apps are available for your compare your project with This
 
 For each sample public app we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
 
-These workflows don't contain any signing certificates, provisioning profiles or keystore files. If you run the builds and see the error message they throw due to missing code signing files, you'll remember the next time to upload them.
+These workflows don't contain any signing certificates, provisioning profiles or keystore files, therefore if you run the builds you will see a code signing error message. We hope next time you encounter the same error message with your own build, you will remember to upload your code signing files. If you need more help on code signing, check out our [Android](/code-signing/android-code-signing/android-code-signing-procedures/) and [iOS](/code-signing/ios-code-signing/code-signing/) guides.
+
+ {% include message_box.html type="note" title="Safety comes first with code signing" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes! 
+
+* Files uploaded to the `Code signing` tab are not accessible to people outside of your team! 
+* Even if you generate a public app and share the build with someone, Certificate and provisioning profile URLs are redacted in build logs .
+* If you have exported an encrypted profile from Xcode, you can use password protection for that file on our `Code Signing` tab as well.
+* One last note: the `Expose for Pull Request` toggle in `Secrets` tab is by default disabled for public apps as secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
 
 {% include message_box.html type="note" title="Up-to-date sample apps" content=" All the sample apps we provide in this guide are monitored by our developers on a weekly basis. All apps are scheduled to run between 4 and 5 on every Monday morning to see if the VM updates happening on Saturdays have disrupted the sample apps. If so, our developers fix the sample apps so that you have them as reliable reference."%}
 
@@ -47,13 +54,6 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 ![](/img/xcode-test-results.png)
 
 * With iOS projects, we advise you to add our `Run CocoaPods install` step to your primary workflow to make sure all your iOS dependencies are installed.
-
-{% include message_box.html type="note" title="Safety comes first with code signing" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes! 
-
-* Files uploaded to the `Code signing` tab are not accessible to people outside of your team! 
-* Even if you generate a public app and share the build with someone, Certificate and provisioning profile URLs are redacted in build logs .
-* If you have exported an encrypted profile from Xcode, you can use password protection for that file on our `Code Signing` tab as well.
-* One last note: the `Expose for Pull Request` toggle in `Secrets` tab is by default disabled for public apps as secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
 
 {% include message_box.html type="info" title="More on iOS" content="
 
