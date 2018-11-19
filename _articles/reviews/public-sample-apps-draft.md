@@ -46,10 +46,13 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ![](/img/xcode-test-results.png)
 
-* Even if  Your signing certificates and provisioning profiles are safe from curious eyes in our Code Signing tab since the tab is not accessible for non-team members. Certificate and provisioning profile URLs are redacted in build logs. Do not expose your secret env vars with the `Expose for Pull Requests?` toggle.
 * With iOS projects, we advise you to add our `Run CocoaPods install` step to your primary workflow to make sure all your iOS dependencies are installed.
 
-{% include message_box.html type="note" title="Safety comes first with code signing" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes! Files uploaded to the `Code signing` tab are not accessible to people outside of your team! Even if you generate a public app and share the build with someone, Certificate and provisioning profile URLs are redacted in build logs . "%}
+{% include message_box.html type="note" title="Safety comes first with code signing" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes! 
+
+* Files uploaded to the `Code signing` tab are not accessible to people outside of your team! 
+* Even if you generate a public app and share the build with someone, Certificate and provisioning profile URLs are redacted in build logs .
+* If you have exported an encrypted profile from Xcode, you can use password protection for that file on our `Code Signing` tab as well.  "%}
 
 {% include message_box.html type="info" title="More on iOS" content="
 
