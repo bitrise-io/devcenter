@@ -52,7 +52,8 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 * Files uploaded to the `Code signing` tab are not accessible to people outside of your team! 
 * Even if you generate a public app and share the build with someone, Certificate and provisioning profile URLs are redacted in build logs .
-* If you have exported an encrypted profile from Xcode, you can use password protection for that file on our `Code Signing` tab as well.  "%}
+* If you have exported an encrypted profile from Xcode, you can use password protection for that file on our `Code Signing` tab as well.
+* One last note: the `Expose for Pull Request` toggle in `Secrets` tab is by default disabled for public apps as secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
 
 {% include message_box.html type="info" title="More on iOS" content="
 
