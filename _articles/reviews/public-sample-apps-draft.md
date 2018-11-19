@@ -57,11 +57,11 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 {% include message_box.html type="info" title="More on iOS" content="
 
-* Let's [get started with iOS apps](/getting-started/getting-started-with-ios-apps/)
-* About [iOS code signing ](/code-signing/ios-code-signing/code-signing/)with troubleshooting
-* About [frequent iOS issues](/troubleshooting/frequent-ios-issues/)
-* About [device testing for iOS](/testing/device-testing-for-ios/)
-* About [iOS deployment](/deploy/ios-deploy/introduction-to-deploying-ios-apps/)"%}
+* [Let's get started with iOS apps](/getting-started/getting-started-with-ios-apps/)
+* [About iOS code signing with troubleshooting](/code-signing/ios-code-signing/code-signing/)
+* [About frequent iOS issues](/troubleshooting/frequent-ios-issues/)
+* [About device testing for iOS](/testing/device-testing-for-ios/)
+* [About iOS deployment](/deploy/ios-deploy/introduction-to-deploying-ios-apps/)"%}
 
 ## android-sample-app
 
@@ -69,11 +69,11 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 {% include message_box.html type="info" title="More about Android" content="
 
-* Let's [get started with Android apps](/getting-started/getting-started-with-android-apps/)
+* [Let's get started with Android apps](/getting-started/getting-started-with-android-apps/)
 * [About Android code signing](/code-signing/android-code-signing/android-code-signing-procedures/)
 * [About Android build steps](/tips-and-tricks/android-tips-and-tricks/)
 * About [Android UI ](/testing/device-testing-for-android/)and [Android unit testing](/testing/android-run-a-unit-test/)
-* About [Android deployment](/deploy/android-deploy/deploying-android-apps/)" %}
+* [About Android deployment](/deploy/android-deploy/deploying-android-apps/)" %}
 
 ## carthage-sample-app
 
