@@ -11,9 +11,9 @@ For each sample app, we provide a primary and deploy workflow, these contain the
 
 These workflows don't contain any signing certificates, provisioning profiles or keystore files, therefore if you run the builds you will see a code signing error message. We hope next time you encounter the same error message with your own build, you will remember to upload your code signing files. If you need more help on code signing, check out our [Android](/code-signing/android-code-signing/android-code-signing-procedures/) and [iOS](/code-signing/ios-code-signing/code-signing/) guides.
 
- {% include message_box.html type="note" title="Safety comes first with code signing" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes! 
+{% include message_box.html type="note" title="Safety comes first when code signing" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes!
 
-* Files uploaded to the `Code signing` tab are not accessible to people outside of your team! 
+* Files uploaded to the `Code signing` tab are not accessible to people outside of your team!
 * Even if you generate a public app and share the build with someone, Certificate and provisioning profile URLs are redacted in build logs .
 * If you have exported an encrypted profile from Xcode, you can use password protection for that file on our `Code Signing` tab as well.
 * One last note: the `Expose for Pull Request` toggle in `Secrets` tab is by default disabled for public apps as secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
@@ -85,9 +85,9 @@ Our `Carthage` Step is a iOS dependency manager.
 * `NuGet restore` Step is the recommended dependency manager for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
 
 {% include message_box.html type="info" title="More on Xamarin" content="
-This is my **content**, full of __INFORMATION__.
+This is my **content**, full of **INFORMATION**.
 
-It is *so*, \`very\` INFORMATIVE.
+It is _so_, \`very\` INFORMATIVE.
 "%}
 
 ## ionic-sample-app and cordova-sample-app
@@ -97,9 +97,9 @@ It is *so*, \`very\` INFORMATIVE.
 {% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" For more information on code signing Ionic or Cordova, read this [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/). For more information on code signing Ionic or Cordova, read this guide." %}
 
 {% include message_box.html type="info" title="More on Ionic/Cordova" content="
-This is my **content**, full of __INFORMATION__.
+This is my **content**, full of **INFORMATION**.
 
-It is *so*, \`very\` INFORMATIVE.
+It is _so_, \`very\` INFORMATIVE.
 "%}
 
 ## reactnative-sample-app
@@ -111,9 +111,9 @@ plusz install react native step
 react native bundle step it bundles your app ez az install react native utan szokott jonni,nem mindig szokott kelleni, valamikor kell valamikor nem. oszzebundeli a link from bazsi.
 
 {% include message_box.html type="info" title="More on React Native" content="
-This is my **content**, full of __INFORMATION__.
+This is my **content**, full of **INFORMATION**.
 
-It is *so*, \`very\` INFORMATIVE.
+It is _so_, \`very\` INFORMATIVE.
 "%}
 
 ## expo-sample-app
