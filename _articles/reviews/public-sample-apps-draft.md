@@ -23,7 +23,7 @@ These workflows don't contain any signing certificates, provisioning profiles or
 * If you have exported an encrypted profile from Xcode, you can use password protection for that file on our `Code Signing` tab as well.
 * One last note: the `Expose for Pull Request` toggle in `Secrets` tab is by default disabled for public apps as secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
 
-{% include message_box.html type="note" title="Up-to-date sample apps" content=" All the sample apps we provide in this guide are monitored by our developers on a weekly basis. All apps are scheduled to run between 4 and 5 on every Monday morning to see if the VM updates happening on Saturdays have disrupted the sample apps. If so, our developers fix the sample apps so that you have them as reliable reference."%}
+All the sample apps we provide in this guide are monitored by our developers on a weekly basis. All apps are scheduled to run between 4 and 5 on every Monday morning to see if the VM updates happening on Saturdays have disrupted the sample apps. If so, our developers fix the sample apps so that you have them as reliable reference.
 
 * carthage-sample-app
 * xamarin-sample-app
