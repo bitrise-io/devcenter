@@ -9,8 +9,9 @@ Before you distribute your app through [Google Play Store](https://play.google.c
 
 You can specify the code signing configuration for your project in Android Studio or manually in your Gradle configuration. You can also use the `sign-apk` step in your Bitrise Workflow Editor to have your APK signed automatically.
 
-Different Android code signing procedures:
+{% include message_box.html type="info" title="Different Android code signing procedures:" content=" 
 
 * [Android code signing with Android Studio](/code-signing/android-code-signing/android-code-signing-with-android-studio/)
-* [Android code signing in Gradle](/code-signing/android-code-signing/android-code-signing-in-gradle/) 
+* [Android code signing in Gradle](/code-signing/android-code-signing/android-code-signing-in-gradle/)
 * [Android code signing using Bitrise Sign APK step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/)
+  "%}
