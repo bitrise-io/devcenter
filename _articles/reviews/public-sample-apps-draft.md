@@ -72,7 +72,7 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ## carthage-sample-app
 
-If you use our `Carthage` Step to manage your dependencies instead of `Run Cocoapods install`, make sure you add your `Github Personal Access Token` input in the step input field as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets). 
+If you use our `Carthage` Step to manage your dependencies instead of `Run Cocoapods install`, make sure you add your `Github Personal Access Token` input in the step input field as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets).
 
 ![](/img/carthage.png)
 
@@ -86,7 +86,7 @@ Make sure you insert the step BEFORE any building step in your deploy workflow.
 
 * `NuGet restore` Step is the recommended dependency manager for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
 
-{% include message_box.html type="info" title="More on Xamarin" content=" 
+{% include message_box.html type="info" title="More on Xamarin" content="
 
 * [Getting started with Xamarin apps](/getting-started/getting-started-with-xamarin-apps/) "%}
 
@@ -94,13 +94,9 @@ Make sure you insert the step BEFORE any building step in your deploy workflow.
 
 * `Generate cordova build configuration` step is a configuration step which generates the build.json file on which the building is based.
 
-{% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" For more information on code signing Ionic or Cordova, read this [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/). For more information on code signing Ionic or Cordova, read this guide." %}
+{% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" 
 
-{% include message_box.html type="info" title="More on Ionic/Cordova" content="
-This is my **content**, full of **INFORMATION**.
-
-It is _so_, \`very\` INFORMATIVE.
-"%}
+* [Getting started with Xamarin apps](/getting-started/getting-started-with-ionic-cordova-apps/)" %}
 
 ## reactnative-sample-app
 
