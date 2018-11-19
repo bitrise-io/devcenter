@@ -92,7 +92,7 @@ Make sure you insert the step BEFORE any building step in your deploy workflow.
 
 ## ionic-sample-app and cordova-sample-app
 
-* `Generate cordova build configuration` step is a configuration step which generates the build.json file on which the building is based.
+* `Generate cordova build configuration` step is a configuration step which generates the build.json file on which the building process is based.
 
 {% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" 
 
