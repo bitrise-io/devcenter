@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-Bitrise sample apps are available for your compare your project with This guide aims to remedy some pain points you might experience when configuring your workflow.
+Bitrise maintains a couple of sample apps to demonstrate the   This guide aims to remedy some pain points you might experience when configuring your workflow.
 
 For each sample app, we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
 
@@ -72,13 +72,15 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ## carthage-sample-app
 
-Our `Carthage` Step is a iOS dependency manager.
+If you use our `Carthage` Step to manage your dependencies instead of `Run Cocoapods install`, make sure you add your `Github Personal Access Token` input in the step input field as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets). 
 
-* Make sure you add your `Github Personal Access Token` input in the step input field as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets), otherwise the build will throw the following error message:
+![](/img/carthage.png)
+
+If you reveice the following error message, the token is surely missing:
 
       API rate limit exceeded for 208.52.166.154. (But here’s the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.
 
-  Make sure you insert the step BEFORE any building step in your deploy workflow.
+Make sure you insert the step BEFORE any building step in your deploy workflow.
 
 ## xamarin-sample-app
 
