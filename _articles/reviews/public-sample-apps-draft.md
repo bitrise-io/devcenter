@@ -74,7 +74,7 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 Our `Carthage` Step is a iOS dependency manager.
 
-* Make sure you add your `Github Personal Access Token` input in the step input field as a secret, otherwise the build will throw the following error message:
+* Make sure you add your `Github Personal Access Token` input in the step input field as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets), otherwise the build will throw the following error message:
 
       API rate limit exceeded for 208.52.166.154. (But here’s the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.
 
@@ -84,11 +84,23 @@ Our `Carthage` Step is a iOS dependency manager.
 
 * `NuGet restore` Step is the recommended dependency manager for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
 
+{% include message_box.html type="info" title="More on Xamarin" content="
+This is my **content**, full of __INFORMATION__.
+
+It is *so*, \`very\` INFORMATIVE.
+"%}
+
 ## ionic-sample-app and cordova-sample-app
 
 * `Generate cordova build configuration` step is a configuration step which generates the build.json file on which the building is based.
 
 {% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" For more information on code signing Ionic or Cordova, read this [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/). For more information on code signing Ionic or Cordova, read this guide." %}
+
+{% include message_box.html type="info" title="More on Ionic/Cordova" content="
+This is my **content**, full of __INFORMATION__.
+
+It is *so*, \`very\` INFORMATIVE.
+"%}
 
 ## reactnative-sample-app
 
@@ -97,6 +109,12 @@ run npm command step and run yarn command steps:  either of them, 1. install or 
 plusz install react native step
 
 react native bundle step it bundles your app ez az install react native utan szokott jonni,nem mindig szokott kelleni, valamikor kell valamikor nem. oszzebundeli a link from bazsi.
+
+{% include message_box.html type="info" title="More on React Native" content="
+This is my **content**, full of __INFORMATION__.
+
+It is *so*, \`very\` INFORMATIVE.
+"%}
 
 ## expo-sample-app
 
