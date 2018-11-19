@@ -52,7 +52,7 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 {% include message_box.html type="info" title="More on iOS" content="
 
-* [Let's get started with iOS apps](/getting-started/getting-started-with-ios-apps/)
+* [Getting started with iOS apps](/getting-started/getting-started-with-ios-apps/)
 * [About iOS code signing with troubleshooting](/code-signing/ios-code-signing/code-signing/)
 * [About frequent iOS issues](/troubleshooting/frequent-ios-issues/)
 * [About device testing for iOS](/testing/device-testing-for-ios/)
@@ -64,7 +64,7 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 {% include message_box.html type="info" title="More about Android" content="
 
-* [Let's get started with Android apps](/getting-started/getting-started-with-android-apps/)
+* [Getting started with Android apps](/getting-started/getting-started-with-android-apps/)
 * [About Android code signing](/code-signing/android-code-signing/android-code-signing-procedures/)
 * [About Android build steps](/tips-and-tricks/android-tips-and-tricks/)
 * About [Android UI ](/testing/device-testing-for-android/)and [Android unit testing](/testing/android-run-a-unit-test/)
@@ -86,11 +86,9 @@ Make sure you insert the step BEFORE any building step in your deploy workflow.
 
 * `NuGet restore` Step is the recommended dependency manager for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
 
-{% include message_box.html type="info" title="More on Xamarin" content="
-This is my **content**, full of **INFORMATION**.
+{% include message_box.html type="info" title="More on Xamarin" content=" 
 
-It is _so_, \`very\` INFORMATIVE.
-"%}
+* [Getting started with Xamarin apps](/getting-started/getting-started-with-xamarin-apps/) "%}
 
 ## ionic-sample-app and cordova-sample-app
 
