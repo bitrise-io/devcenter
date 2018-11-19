@@ -5,7 +5,14 @@ redirect_from: []
 published: false
 
 ---
-Bitrise public sample apps are available for your compare your project with This guide aims to remedy some pain points you might experience when configuring your workflow. With the help of our Bitrise public sample apps collection, we will demonstrate how workflows should be configured, and what a successfully run build looks like.
+Bitrise public sample apps are available for your compare your project with This guide aims to remedy some pain points you might experience when configuring your workflow. 
+
+{% include message_box.html type="info" title="Want to learn more about public apps?" content=" Check out these articles for more information:
+
+* [Public apps](/getting-started/adding-a-new-app/public-apps/)
+
+
+* [Sensitive input in public apps](/builds/sensitive-input-field/)"%}
 
 For each sample public app we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
 
