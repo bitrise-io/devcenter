@@ -21,7 +21,7 @@ This helps to eliminate, among other things, a very common issue: that uncommitt
 1. Open your Terminal / Command Line interface on your machine.
 2. Type in: `cd /tmp`
 3. Clone your repository with: `git clone REPOURL ./quick-repo-test --branch BRANCH-YOU-WANT-TO-TEST`
-   * example: `git clone ``[``[https://github.com/bitrise-io/bitrise.git](https://github.com/bitrise-io/bitrise.git "https://github.com/bitrise-io/bitrise.git")``](``[https://github.com/bitrise-io/bitrise.git](https://github.com/bitrise-io/bitrise.git "https://github.com/bitrise-io/bitrise.git")`` "``[https://github.com/bitrise-io/bitrise.git](https://github.com/bitrise-io/bitrise.git "https://github.com/bitrise-io/bitrise.git")``")`` ./quick-repo-test --branch master`
+   * example: `git clone https://github.com/bitrise-io/bitrise.git ./quick-repo-test --branch master`
 4. Type `cd ./quick-repo-test.`
 
 Run the commands you want to test, to build your project, or to open the project file from this directory.
