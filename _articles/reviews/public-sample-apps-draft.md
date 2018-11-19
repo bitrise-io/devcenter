@@ -84,7 +84,7 @@ Make sure you insert the step BEFORE any building step in your deploy workflow.
 
 ## xamarin-sample-app
 
-* `NuGet restore` Step is the recommended dependency manager for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
+* We advise you to use our `NuGet restore` Step to manage dependencies for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
 
 {% include message_box.html type="info" title="More on Xamarin" content="
 
@@ -92,9 +92,9 @@ Make sure you insert the step BEFORE any building step in your deploy workflow.
 
 ## ionic-sample-app and cordova-sample-app
 
-* `Generate cordova build configuration` step is a configuration step which generates the build.json file on which the building process is based.
+* If you wish to generate a build.json file, use our `Generate cordova build configuration` Step. This Step helps you to configure your build...
 
-{% include message_box.html type="info" title="Learn more about Ionic and Cordova" content=" 
+{% include message_box.html type="info" title="Learn more about Ionic and Cordova" content="
 
 * [Getting started with Xamarin apps](/getting-started/getting-started-with-ionic-cordova-apps/)" %}
 
