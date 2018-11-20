@@ -131,7 +131,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
 ## Testing your project
 
-You can use React Native's built in testing method, called `jest`. Add another `Run nmp command` step to your workflow, and type `test` in the `npm command with arguments to run` input field.
+You can use React Native's built in testing method, called `jest` to perform unit tests.  Add another `Run nmp command` step to your workflow, and type `test` in the `npm command with arguments to run` input field.
 
 ![](/img/run-nmp-test.png)
 
