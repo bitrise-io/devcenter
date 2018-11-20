@@ -15,7 +15,7 @@ These workflows don't contain any signing certificates, provisioning profiles or
 
 * Files uploaded to the `Code signing` tab are not accessible to people outside of your team!
 * Even if you generate a public app and share the build with someone, the **certificate and provisioning profile URLs** are redacted in build logs.
-* If you have exported an encrypted profile from Xcode, you can protect the file with the same password you used in Xcode on our `Code Signing` tab. 
+* If you have exported an encrypted profile from Xcode, you can protect the file with the same password you used in Xcode on our `Code Signing` tab.
 * The `Expose for Pull Request` toggle in `Secrets` tab is by default **disabled for public apps** since secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
 * carthage-sample-app
 * xamarin-sample-app
@@ -37,7 +37,7 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ## android-sample-app
 
-* In this sample app we show you how to build your primary workflow to perform unit and UI tests and have the results deployed to your your build's `APPS & ARTIFACTS` - all test reports at your fingertips to help you fix any issues in your project before marketplace deployment. If you select `deploy` at the `WORKFLOW` drop-down menu, you will see all the steps necessary to build, code sign and deploy your app. We advise you to include all testing related steps in your primary workflow and have the code signing and build steps in your deploy workflow. The only exception here is our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step which deploys all the test results and other artifacts to the `APPS & ARTIFACTS` tab of your Build's page on bitrise.io so you need this Step in your primary workflow!
+* In this sample app we show you an Android primary and deploy workflow. The primary one performs unit and UI tests and deploys the results to your build's `APPS & ARTIFACTS` tab with the help our our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step - all test reports at your fingertips to help you fix any issues in your project. The deploy workflow takes care of building, code signing and deploying your app.
 
 {% include message_box.html type="info" title="More about Android" content="
 
@@ -49,50 +49,49 @@ Learn more about triggering builds [here](/builds/triggering-builds/triggering-b
 
 ## carthage-sample-app
 
-If you use our `Carthage` Step to manage your dependencies instead of `Run Cocoapods install`, make sure you add your `Github Personal Access Token` input in the step input field as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets).
+If you use our `Carthage` Step to manage your dependencies instead of `Run Cocoapods install` Step, make sure you add your `Github Personal Access Token` input in the step input field as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets).
 
 ![](/img/carthage.png)
 
-If you reveice the following error message, the token is surely missing:
+If you receive the following error message, the token is surely missing from the Step:
 
       API rate limit exceeded for 208.52.166.154. (But here’s the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.
 
-Make sure you insert the step BEFORE any building step in your deploy workflow.
-
 ## expo-sample-app
 
-If your React Native comes with an Expo framework, it does not contain any native elements. This sample app shows a primary and deploy workflow, where the primary workflow contains our `[BETA] Expo Eject` and `Recreate user schemes` Steps. `[BETA] Expo Eject` Step generates the necessary native elements to your projects using the [Expo Development CLI.](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli)
+If your React Native project comes with an Expo framework, it does not contain any native elements. The expo-sample-app shows a primary and deploy workflow, where the primary workflow contains our `[BETA] Expo Eject` and `Recreate user schemes` Steps. `[BETA] Expo Eject` Step generates the necessary native elements to your projects using the [Expo Development CLI.](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli)
 
 {% include message_box.html type="important" title="Do you have an Expo account?" content=" This step requires your Expo username and password. Head over to Expo to create an account or keep them handy when setting the `[BETA] Expo Eject` Step input fields.
 
 ![](/img/expo-eject.png)" %}
 
-1. Select the `Expo CLi version`.
-2. In the case of a React Native project **using Expo Kit** library:
-   * add your Expo username
-   * add your Expo password for your Expo account. Note, this is sensitive information, so make sure you set it as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/). In both cases, the Step will run `expo eject --eject-method expoKit`.
-3. `Run expo publish after eject?` With this set to `yes` or `no` you can control if the Step should automatically publish your app on Expo.io once it gets ejected.
-4. `React Native version to set in package.json` Here you can add the version if it is missing from your package.json file.
-5. `Recreate user schemes` Step: Platform-specific files get generated. In the case of an iOS project: you need to use SHARED schemes. To fulfill this requirement, you either take care of it in XCode or leave it to `Recreate user schemes`. When running your build, the step scans your project and lists out the shared schemes, if any, and recreates shared ones if those have been missing from your project (based on your Xcode project file)
+Follow the steps to fill out the required `[BETA] Expo Eject` Step input fields:
 
-   ![](/img/recreate=schemes.png)
-6. 
+1. Specify the `Expo CLI version`.
+2. In the `Username for Expo` input field, if you have a React Native project with Expo Kit library, you have to add your Expo username. Step will run `expo eject --eject-method expoKit`.
+3. In the `Password for Expo account` input field, if you have a React Native project with Expo Kit library, you have to add your Expo password. Note, this is sensitive information, so make sure you set it as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/). Step will run `expo eject --eject-method expoKit`.
+4. `Run expo publish after eject?` With this set to `yes` or `no` you can control if the Step should automatically publish your app on Expo.io once it gets ejected.
+5. `React Native version to set in package.json` Here you can add the version if it is missing from your package.json file.
+
+In the case of an iOS project: you need to use SHARED schemes. The `Recreate user schemes` Step generates platform-specific files. To fulfill this requirement, you either generate shared schemes in XCode or leave it to our `Recreate user schemes`. Make sure you add the location of your Xcode project file in the `Project or Workspace path`.
+
+When you run your build, the Step scans your project and lists out the shared schemes, if any, and recreates shared ones if those have been missing from your project (based on your Xcode project file)
+
+![](/img/recreate=schemes.png)
 
 ## fastlane-ios-sample-app and fastlane-android-sample-app
 
-* You can run all your existing fastlane lanes using our `fastlane` step:
-
-![](/img/fastlane-lane.png)
+* You can run all your existing fastlane lanes using our `fastlane` step in an iOS or Android workflow.
 
 ## fastlane-snappy-sample-app
 
-This workflow is configured to create screenshots of the unit test so that you can check the output in the `APPS & ARTIFACTS` tab of your Build's page.
+* This workflow is configured to create screenshots of the unit test so that you can check the output in the `APPS & ARTIFACTS` tab of your Build's page.
 
 ![](/img/screenshot-snappy.png)
 
 ## ios-sample-app
 
-* This sample app contains our `Xcode test for iOS` and our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Steps. This way you can check test results generated by `Xcode test for iOS` Step (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page. If your workflow [does not contain any test targets](/getting-started/getting-started-with-ios-apps/#running-xcode-tests), your workflow will not contain the `Xcode test for iOS` Step. 
+* This sample app contains our `Xcode test for iOS` and our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Steps. This way you can check test results generated by `Xcode test for iOS` Step (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page. If your workflow [does not contain any test targets](/getting-started/getting-started-with-ios-apps/#running-xcode-tests), your workflow will not contain the `Xcode test for iOS` Step.
 
 ![](/img/sample-app-ios.png)
 
@@ -110,20 +109,11 @@ This workflow is configured to create screenshots of the unit test so that you c
 
 ## ionic-sample-app and cordova-sample-app
 
-* If you wish to generate a build.json file, use our `Generate cordova build configuration` Step. This Step helps you to configure your build...
+* If you wish to generate a build.json file, insert our `Generate cordova build configuration` Step in your deploy workflow. If you have an iOS project, make sure you add it after the `Certificate and profile installer` step in your workflow.
 
 {% include message_box.html type="info" title="Learn more about Ionic and Cordova" content="
 
-* [Getting started with Xamarin apps](/getting-started/getting-started-with-ionic-cordova-apps/)" %}
-
-## xamarin-sample-app
-
-* We advise you to use our `NuGet restore` Step to manage dependencies for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
-
-{% include message_box.html type="info" title="More on Xamarin" content="
-
-* [Getting started with Xamarin apps](/getting-started/getting-started-with-xamarin-apps/) "%}
-* 
+* [Getting started with Ionic/Cordova apps](/getting-started/getting-started-with-ionic-cordova-apps/)" %}
 
 ## reactnative-sample-app
 
@@ -133,8 +123,15 @@ plusz install react native step
 
 react native bundle step it bundles your app ez az install react native utan szokott jonni,nem mindig szokott kelleni, valamikor kell valamikor nem. oszzebundeli a link from bazsi.
 
-{% include message_box.html type="info" title="More on React Native" content="
-This is my **content**, full of **INFORMATION**.
+{% include message_box.html type="info" title="More on React Native" content=" This is my **content**, full of **INFORMATION**.
 
-It is _so_, \`very\` INFORMATIVE.
-"%}
+It is _so_, \`very\` INFORMATIVE. "%}
+
+## xamarin-sample-app
+
+* We advise you to use our `NuGet restore` Step to manage dependencies for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
+
+{% include message_box.html type="info" title="More on Xamarin" content="
+
+* [Getting started with Xamarin apps](/getting-started/getting-started-with-xamarin-apps/) "%}
+* 
