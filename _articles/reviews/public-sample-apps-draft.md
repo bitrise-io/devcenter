@@ -14,9 +14,9 @@ These workflows don't contain any signing certificates, provisioning profiles or
 {% include message_box.html type="note" title="Protecting your code signing files" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes!
 
 * Files uploaded to the `Code signing` tab are not accessible to people outside of your team!
-* Even if you generate a public app and share the build with someone, the certificate and provisioning profile URLs are redacted in build logs.
+* Even if you generate a public app and share the build with someone, the **certificate and provisioning profile URLs** are redacted in build logs.
 * If you have exported an encrypted profile from Xcode, you can protect the file with the same password you used in Xcode on our `Code Signing` tab. 
-* The `Expose for Pull Request` toggle in `Secrets` tab is by default disabled for public apps since secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
+* The `Expose for Pull Request` toggle in `Secrets` tab is by default **disabled for public apps** since secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
 * carthage-sample-app
 * xamarin-sample-app
 * ionic-sample-app
@@ -29,29 +29,11 @@ These workflows don't contain any signing certificates, provisioning profiles or
 
 ## About triggers
 
-With every sample app, the primary workflow gets triggered when code is pushed to the Feature branch. If code is pushed content to the develop branch, then the deploy workflow gets triggered.
+With every sample app, the primary workflow gets triggered when code is pushed to the Feature branch. If code is pushed to the developer branch, then the deploy workflow gets triggered.
 
 ![](/img/triggers-sample-app.png)
 
 Learn more about triggering builds [here](/builds/triggering-builds/triggering-builds/).
-
-## ios-sample-app
-
-* If you use the `Xcode test for iOS` Step in you workflow, we suggest you to include our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step. This way you can check test results (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page.
-
-![](/img/sample-app-ios.png)
-
-![](/img/xcode-test-results.png)
-
-* With iOS projects, we advise you to add our `Run CocoaPods install` step to your primary workflow to make sure all your iOS dependencies are installed.
-
-{% include message_box.html type="info" title="More on iOS" content="
-
-* [Getting started with iOS apps](/getting-started/getting-started-with-ios-apps/)
-* [About iOS code signing with troubleshooting](/code-signing/ios-code-signing/code-signing/)
-* [About frequent iOS issues](/troubleshooting/frequent-ios-issues/)
-* [About device testing for iOS](/testing/device-testing-for-ios/)
-* [About iOS deployment](/deploy/ios-deploy/introduction-to-deploying-ios-apps/)"%}
 
 ## android-sample-app
 
@@ -77,36 +59,6 @@ If you reveice the following error message, the token is surely missing:
 
 Make sure you insert the step BEFORE any building step in your deploy workflow.
 
-## xamarin-sample-app
-
-* We advise you to use our `NuGet restore` Step to manage dependencies for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
-
-{% include message_box.html type="info" title="More on Xamarin" content="
-
-* [Getting started with Xamarin apps](/getting-started/getting-started-with-xamarin-apps/) "%}
-
-## ionic-sample-app and cordova-sample-app
-
-* If you wish to generate a build.json file, use our `Generate cordova build configuration` Step. This Step helps you to configure your build...
-
-{% include message_box.html type="info" title="Learn more about Ionic and Cordova" content="
-
-* [Getting started with Xamarin apps](/getting-started/getting-started-with-ionic-cordova-apps/)" %}
-
-## reactnative-sample-app
-
-run npm command step and run yarn command steps:  either of them, 1. install or it runs a jest stest if you type test.
-
-plusz install react native step
-
-react native bundle step it bundles your app ez az install react native utan szokott jonni,nem mindig szokott kelleni, valamikor kell valamikor nem. oszzebundeli a link from bazsi.
-
-{% include message_box.html type="info" title="More on React Native" content="
-This is my **content**, full of **INFORMATION**.
-
-It is _so_, \`very\` INFORMATIVE.
-"%}
-
 ## expo-sample-app
 
 If your React Native comes with an Expo framework, it does not contain any native elements. This sample app shows a primary and deploy workflow, where the primary workflow contains our `[BETA] Expo Eject` and `Recreate user schemes` Steps. `[BETA] Expo Eject` Step generates the necessary native elements to your projects using the [Expo Development CLI.](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli)
@@ -118,8 +70,7 @@ If your React Native comes with an Expo framework, it does not contain any nativ
 1. Select the `Expo CLi version`.
 2. In the case of a React Native project **using Expo Kit** library:
    * add your Expo username
-   * add your Expo password for your Expo account. Note, this is sensitive information, so make sure you set it as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/).
-     In both cases, the Step will run `expo eject --eject-method expoKit`.
+   * add your Expo password for your Expo account. Note, this is sensitive information, so make sure you set it as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/). In both cases, the Step will run `expo eject --eject-method expoKit`.
 3. `Run expo publish after eject?` With this set to `yes` or `no` you can control if the Step should automatically publish your app on Expo.io once it gets ejected.
 4. `React Native version to set in package.json` Here you can add the version if it is missing from your package.json file.
 5. `Recreate user schemes` Step: Platform-specific files get generated. In the case of an iOS project: you need to use SHARED schemes. To fulfill this requirement, you either take care of it in XCode or leave it to `Recreate user schemes`. When running your build, the step scans your project and lists out the shared schemes, if any, and recreates shared ones if those have been missing from your project (based on your Xcode project file)
@@ -138,3 +89,52 @@ If your React Native comes with an Expo framework, it does not contain any nativ
 This workflow is configured to create screenshots of the unit test so that you can check the output in the `APPS & ARTIFACTS` tab of your Build's page.
 
 ![](/img/screenshot-snappy.png)
+
+## ios-sample-app
+
+* This sample app contains our `Xcode test for iOS` and our `Deploy to Bitrise.io - Apps, Logs, Artifacts` Steps. This way you can check test results generated by `Xcode test for iOS` Step (`All`, `Failing` and `Passing`) in the `APPS & ARTIFACTS` tab on your Build's page. If your workflow [does not contain any test targets](/getting-started/getting-started-with-ios-apps/#running-xcode-tests), your workflow will not contain the `Xcode test for iOS` Step. 
+
+![](/img/sample-app-ios.png)
+
+![](/img/xcode-test-results.png)
+
+* With iOS projects, we advise you to add our `Run CocoaPods install` step to your primary workflow to make sure all your iOS dependencies are installed.
+
+{% include message_box.html type="info" title="More on iOS" content="
+
+* [Getting started with iOS apps](/getting-started/getting-started-with-ios-apps/)
+* [About iOS code signing with troubleshooting](/code-signing/ios-code-signing/code-signing/)
+* [About frequent iOS issues](/troubleshooting/frequent-ios-issues/)
+* [About device testing for iOS](/testing/device-testing-for-ios/)
+* [About iOS deployment](/deploy/ios-deploy/introduction-to-deploying-ios-apps/)"%}
+
+## ionic-sample-app and cordova-sample-app
+
+* If you wish to generate a build.json file, use our `Generate cordova build configuration` Step. This Step helps you to configure your build...
+
+{% include message_box.html type="info" title="Learn more about Ionic and Cordova" content="
+
+* [Getting started with Xamarin apps](/getting-started/getting-started-with-ionic-cordova-apps/)" %}
+
+## xamarin-sample-app
+
+* We advise you to use our `NuGet restore` Step to manage dependencies for your [Xamarin](/getting-started/getting-started-with-xamarin-apps/) project.
+
+{% include message_box.html type="info" title="More on Xamarin" content="
+
+* [Getting started with Xamarin apps](/getting-started/getting-started-with-xamarin-apps/) "%}
+* 
+
+## reactnative-sample-app
+
+run npm command step and run yarn command steps:  either of them, 1. install or it runs a jest stest if you type test.
+
+plusz install react native step
+
+react native bundle step it bundles your app ez az install react native utan szokott jonni,nem mindig szokott kelleni, valamikor kell valamikor nem. oszzebundeli a link from bazsi.
+
+{% include message_box.html type="info" title="More on React Native" content="
+This is my **content**, full of **INFORMATION**.
+
+It is _so_, \`very\` INFORMATIVE.
+"%}
