@@ -5,21 +5,18 @@ redirect_from: []
 published: false
 
 ---
-Bitrise maintains a couple of sample apps to demonstrate the recommended setup and configuration of a workflow. We encourage you to have a look at them! All the sample apps we provide in this guide are monitored by our developers on a weekly basis. All apps are scheduled to run between 4 and 5 on every Monday morning to see if the VM updates happening on Saturdays have disrupted the sample apps. If so, our developers fix the sample apps so that you have them as reliable reference.
+Bitrise maintains a couple of sample apps to demonstrate the recommended setup and configuration of a workflow. We encourage you to have a look at them! All the sample apps we provide in this guide are monitored by our developers on a weekly basis. The apps are scheduled to run between 4 and 5 on every Monday morning to check if our VM updates happening on Saturdays have disrupted the sample apps. If so, our developers fix them.
 
-For each sample app, we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
+For each sample app, we provide a primary and deploy workflow, these contain the most frequently used and recommended steps to use with a specific platform.
 
 These workflows don't contain any signing certificates, provisioning profiles or keystore files, therefore if you run the builds you will see a code signing error message. We hope next time you encounter the same error message with your own build, you will remember to upload your code signing files. If you need more help on code signing, check out our [Android](/code-signing/android-code-signing/android-code-signing-procedures/) and [iOS](/code-signing/ios-code-signing/code-signing/) guides.
 
-{% include message_box.html type="note" title="Safety comes first when code signing" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes!
+{% include message_box.html type="note" title="Some  code signing" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes!
 
 * Files uploaded to the `Code signing` tab are not accessible to people outside of your team!
-* Even if you generate a public app and share the build with someone, Certificate and provisioning profile URLs are redacted in build logs .
-* If you have exported an encrypted profile from Xcode, you can use password protection for that file on our `Code Signing` tab as well.
-* One last note: the `Expose for Pull Request` toggle in `Secrets` tab is by default disabled for public apps as secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
-
-All the sample apps we provide in this guide are monitored by our developers on a weekly basis. All apps are scheduled to run between 4 and 5 on every Monday morning to see if the VM updates happening on Saturdays have disrupted the sample apps. If so, our developers fix the sample apps so that you have them as reliable reference.
-
+* Even if you generate a public app and share the build with someone, the certificate and provisioning profile URLs are redacted in build logs.
+* If you have exported an encrypted profile from Xcode, you can protect the file with the same password you used in Xcode on our `Code Signing` tab. 
+* The `Expose for Pull Request` toggle in `Secrets` tab is by default disabled for public apps since secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
 * carthage-sample-app
 * xamarin-sample-app
 * ionic-sample-app
@@ -29,8 +26,6 @@ All the sample apps we provide in this guide are monitored by our developers on 
 * fastlane-android-sample-app
 * fastlane-snappy-sample-app
 * android-sample-app
-
-quick start guide-ban megemliteni
 
 ## About triggers
 
