@@ -79,15 +79,6 @@ When you run your build, the Step scans your project and lists out the shared sc
 
 ![](/img/recreate=schemes.png)
 
-## fastlane-ios-sample-app and fastlane-android-sample-app
-
-* You can run all your existing fastlane lanes using our `fastlane` step in an iOS or Android workflow.
-
-## fastlane-snappy-sample-app
-
-* This workflow is configured to create screenshots of the unit test so that you can check the output in the `APPS & ARTIFACTS` tab of your Build's page.
-
-![](/img/screenshot-snappy.png)
 
 ## ios-sample-app
 
