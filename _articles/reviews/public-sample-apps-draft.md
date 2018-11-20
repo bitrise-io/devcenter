@@ -17,12 +17,6 @@ These workflows don't contain any signing certificates, provisioning profiles or
 * Even if you generate a public app and share the build with someone, the **certificate and provisioning profile URLs** are redacted in build logs.
 * If you have exported an encrypted profile from Xcode, you can protect the file with the same password you used in Xcode on our `Code Signing` tab.
 * The `Expose for Pull Request` toggle in `Secrets` tab is by default **disabled for public apps** since secrets included in PR builds can be accessed by anyone who can open a pull request. "%}
-* carthage-sample-app
-* xamarin-sample-app
-* ionic-sample-app
-* cordova-sample-app
-* reactnative-sample-app
-* android-sample-app
 
 ## About triggers
 
