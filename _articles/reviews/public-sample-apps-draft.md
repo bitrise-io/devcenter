@@ -117,15 +117,15 @@ When you run your build, the Step scans your project and lists out the shared sc
 
 ## reactnative-sample-app
 
-run npm command step and run yarn command steps:  either of them, 1. install or it runs a jest stest if you type test.
+* Make sure you have the `Install React Native` Step in your workflow to install the [React Native CLI npm package](https://www.npmjs.com/package/react-native-cli).
+* Make sure you have the `React Native bundle` Step right after the `Install React Native` Step. This Step bundles up the
 
-plusz install react native step
 
-react native bundle step it bundles your app ez az install react native utan szokott jonni,nem mindig szokott kelleni, valamikor kell valamikor nem. oszzebundeli a link from bazsi.
+* You can use two dependency manager steps with your React Native project: `Run npm command` and `Run yarn command`. If you add `install` in the `The npm command with arguments to run` input field, the step will install all the native or missing dependencies to your project. If you type `test`, the Step will run a jest test. 
 
-{% include message_box.html type="info" title="More on React Native" content=" This is my **content**, full of **INFORMATION**.
+{% include message_box.html type="info" title="More on React Native" content="
 
-It is _so_, \`very\` INFORMATIVE. "%}
+* [Getting started with React Native apps](/getting-started/getting-started-with-react-native-apps/) "%}
 
 ## xamarin-sample-app
 
@@ -134,4 +134,3 @@ It is _so_, \`very\` INFORMATIVE. "%}
 {% include message_box.html type="info" title="More on Xamarin" content="
 
 * [Getting started with Xamarin apps](/getting-started/getting-started-with-xamarin-apps/) "%}
-* 
