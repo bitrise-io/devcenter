@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-Bitrise maintains a couple of sample apps to demonstrate the   This guide aims to remedy some pain points you might experience when configuring your workflow.
+Bitrise maintains a couple of sample apps to demonstrate the recommended setup and configuration of a workflow. We encourage you to have a look at them! All the sample apps we provide in this guide are monitored by our developers on a weekly basis. All apps are scheduled to run between 4 and 5 on every Monday morning to see if the VM updates happening on Saturdays have disrupted the sample apps. If so, our developers fix the sample apps so that you have them as reliable reference.
 
 For each sample app, we provide a primary and deploy workflow, these contain the most frequent and recommended step to use with the respective platform.
 
