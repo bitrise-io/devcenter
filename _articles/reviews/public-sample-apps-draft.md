@@ -11,7 +11,7 @@ For each sample app, we provide a primary and deploy workflow, these contain the
 
 These workflows don't contain any signing certificates, provisioning profiles or keystore files, therefore if you run the builds you will see a code signing error message. We hope next time you encounter the same error message with your own build, you will remember to upload your code signing files. If you need more help on code signing, check out our [Android](/code-signing/android-code-signing/android-code-signing-procedures/) and [iOS](/code-signing/ios-code-signing/code-signing/) guides.
 
-{% include message_box.html type="note" title="Some  code signing" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes!
+{% include message_box.html type="note" title="Protecting your code signing files" content="Irrespective of public or private apps, your code signing files are always protected from curious eyes!
 
 * Files uploaded to the `Code signing` tab are not accessible to people outside of your team!
 * Even if you generate a public app and share the build with someone, the certificate and provisioning profile URLs are redacted in build logs.
