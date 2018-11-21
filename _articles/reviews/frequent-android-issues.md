@@ -28,7 +28,7 @@ or
 The above error message means that your build requires an Android package which is either not preinstalled yet or outdated. The solution is to install the missing Android package(s) or update the current ones.
 
 1. Add the `Install missing Android SDK components` Step to your workflow.
-2. To do that add a `Script` step to your workflow. The step should be before the step where you got the above error or even the very first step in the workflow - with the following content:
+2. To do that add a `Do anything with Script` Step to your workflow. The step should be before the step where you got the above error or even the very first step in the workflow - with the following content:
 
        #!/bin/bash
        
@@ -56,9 +56,9 @@ The above error message means that your build requires an Android package which 
        
        echo y | android update sdk --no-ui --all --filter extra-google-m2repository | grep 'package installed'
 
-{% include message_box.html type="info" title="List of preinstalled packages" content=" You can see which packages are preinstalled on GitHub. Feel free to send us a PR if you'd like to add a new preinstalled package!" %}   
-   
-   In most cases you don't need both packages to be updated, so you can try to remove them one by one, but having all three in the script covers most of the cases related to this error.
+{% include message_box.html type="info" title="List of preinstalled packages" content=" You can see which packages are preinstalled on GitHub. Feel free to send us a PR if you'd like to add a new preinstalled package!" %}
+
+In most cases you don't need both packages to be updated, so you can try to remove them one by one, but having all three in the script covers most of the cases related to this error.
 
 {% include message_box.html type="note" title="We update the preinstalled Android packages every weekend" content=" So if the error is related to an outdated package, the workaround we describe here can be removed from your build after the weekend update is completed. "%}
 
@@ -71,13 +71,14 @@ An alternative solution for the `You have not accepted the license agreements of
     Before building your project, you need to accept the license agreements and complete the installation of the missing components using the Android Studio SDK Manager.
       Alternatively, to learn how to transfer the license agreements from one workstation to another, go to http://d.android.com/r/studio-ui/export-licenses.html
 
-1. Locate the licenses on your Mac/PC:
+1. Locate the licenses on your Mac/PC.
 
-If you have accepted the license agreements on one workstation, but wish to build your projects on a different one, you can export your licenses by copying the accepted licenses folder from the Android Sdk Home folder (this should be located at `<android sdk home path>/licenses`) of your current workstation, to the Android Sdk Home directory of the machine where you now want to build your projects.
+   If you have accepted the license agreements on one workstation, but wish to build your projects on a different one, you can export your licenses by copying the accepted licenses folder from the Android SDK Home folder (this should be located at `<android sdk home path>/licenses`) of your current workstation to the Android SDK Home directory of the machine where you now want to build your projects.
+2. Create an `android-licenses` directory in the root directory of your git repository.
+3. Copy the license files into the `android-licenses` directory. 
+4. In your Workflow copy the licenses to the right location using a `Do anything with Script` step.
 
-**Create an** `android-licenses` **directory in the root directory of your git repository**, and copy the license files into this directory, then in your Workflow copy the licenses to the right location using a `Script` step.
-
-**Add the** `Script` **step right after the** `Git Clone` **step** (that's when your code is available on the build virtual machine), with the content:
+**Add the** `Do anything with Script` **step right after the** `Git Clone` **step** (that's when your code is available on the build virtual machine), with the content:
 
     #!/bin/bash
     # fail if any commands fails
