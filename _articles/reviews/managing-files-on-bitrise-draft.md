@@ -45,4 +45,12 @@ For iOS files, you need to use the dedicated menu options for provisioning profi
 
 {% include message_box.html type="info" title="Password protection for iOS code signing files" content="You can set a password in Xcode to store your code signing certificates securely. This password can be viewed on Bitrise: click on the eye icon next to the certificate file, in the **Password** field."%} 
 
-### Output files and build artifacts
+### Output files
+
+Builds can generate and export files: for example, you can export a binary package file of your app with a Bitrise build. You can easily find these files: 
+
+1. Open the build that you ran.
+2. Go to the Apps & Artifacts tab.
+3. View and download the files generated. 
+
+You can read more about [build artifacts](/builds/build-artifacts-online/) in our detailed guide! 
