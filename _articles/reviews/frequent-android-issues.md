@@ -66,7 +66,7 @@ In most cases you don't need both packages to be updated, so you can try to remo
 
 This is an alternative solution for the license error. Please use the `Install missing Android SDK components` step. The section below is kept only for referencing purposes!
 
-An alternative solution for the `You have not accepted the license agreements of the following SDK components` error message is as printed in the log:
+An alternative solution for the `You have not accepted the license agreements of the following SDK components` error message, that comes from Gradle and the Android tools, is as printed in the log:
 
     Before building your project, you need to accept the license agreements and complete the installation of the missing components using the Android Studio SDK Manager.
       Alternatively, to learn how to transfer the license agreements from one workstation to another, go to http://d.android.com/r/studio-ui/export-licenses.html
