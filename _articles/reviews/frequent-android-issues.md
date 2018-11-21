@@ -35,29 +35,29 @@ The above error message means that your build requires an Android package which 
 
        #!/bin/bash
        
-           # fail if any commands fails
+       # fail if any commands fails
        
-           set -e
+       set -e
        
-           # debug log
+       # debug log
        
-           set -x
-       
-           
-       
-           # For newer Android SDK:
-       
-           sdkmanager "extras;android;m2repository"
-       
-           sdkmanager "extras;google;m2repository"
+       set -x
        
            
        
-           # For older Android SDK:
+       # For newer Android SDK:
        
-           echo y | android update sdk --no-ui --all --filter extra-android-m2repository | grep 'package installed'
+       sdkmanager "extras;android;m2repository"
        
-           echo y | android update sdk --no-ui --all --filter extra-google-m2repository | grep 'package installed'
+       sdkmanager "extras;google;m2repository"
+       
+           
+       
+       # For older Android SDK:
+       
+       echo y | android update sdk --no-ui --all --filter extra-android-m2repository | grep 'package installed'
+       
+       echo y | android update sdk --no-ui --all --filter extra-google-m2repository | grep 'package installed'
 
    In most cases you don't need both packages to be updated, so you can try to remove them one by one, but having all three in the script covers most of the cases related to this error.
 
