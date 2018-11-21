@@ -11,7 +11,7 @@ In this guide we aim to address the most frequent Android error messages and the
 
 ### Error
 
-You can get following error message when
+You can get these two error messages when...
 
     > A problem occurred configuring project ':lib'.
        > You have not accepted the license agreements of the following SDK components:
