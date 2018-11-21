@@ -86,8 +86,7 @@ Let's see the steps:
    		set -e
    		# debug log
    		set -x
-    
-    rsync -avhP ./android-licenses/ "$ANDROID_HOME/licenses/"
+  		rsync -avhP ./android-licenses/ "$ANDROID_HOME/licenses/"
 
 This script copies the licenses from the `android-licenses` (from your repository) into the system's Android SDK Home path under `licenses` directory.
 
