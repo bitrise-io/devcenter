@@ -81,11 +81,11 @@ Let's see the steps:
 4. In your Workflow copy the licenses to the right location using a `Do anything with Script` step.
 5. Add the `Do anything with Script` step right after the `Git Clone` step (that's when your code is available on the build virtual machine), with the content:
 
-    #!/bin/bash
-    # fail if any commands fails
-    set -e
-    # debug log
-    set -x
+    	#!/bin/bash
+   		# fail if any commands fails
+   		set -e
+   		# debug log
+   		set -x
     
     rsync -avhP ./android-licenses/ "$ANDROID_HOME/licenses/"
 
