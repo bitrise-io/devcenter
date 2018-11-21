@@ -56,8 +56,8 @@ The above error message means that your build requires an Android package which 
        
        echo y | android update sdk --no-ui --all --filter extra-google-m2repository | grep 'package installed'
 
-   {% include message_box.html type="info" title="List of preinstalled packages" content=" You can see which packages are preinstalled [on GitHub](https://github.com/bitrise-docker/android/blob/master/Dockerfile#L30). Feel free to send us a PR if you'd like to add a new preinstalled package!" %}
-
+{% include message_box.html type="info" title="List of preinstalled packages" content=" You can see which packages are preinstalled on GitHub. Feel free to send us a PR if you'd like to add a new preinstalled package!" %}   
+   
    In most cases you don't need both packages to be updated, so you can try to remove them one by one, but having all three in the script covers most of the cases related to this error.
 
 {% include message_box.html type="note" title="We update the preinstalled Android packages every weekend" content=" So if the error is related to an outdated package, the workaround we describe here can be removed from your build after the weekend update is completed. "%}
