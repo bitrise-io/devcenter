@@ -71,14 +71,15 @@ An alternative solution for the `You have not accepted the license agreements of
     Before building your project, you need to accept the license agreements and complete the installation of the missing components using the Android Studio SDK Manager.
       Alternatively, to learn how to transfer the license agreements from one workstation to another, go to http://d.android.com/r/studio-ui/export-licenses.html
 
+Let's see the steps:
+
 1. Locate the licenses on your Mac/PC.
 
    If you have accepted the license agreements on one workstation, but wish to build your projects on a different one, you can export your licenses by copying the accepted licenses folder from the Android SDK Home folder (this should be located at `<android sdk home path>/licenses`) of your current workstation to the Android SDK Home directory of the machine where you now want to build your projects.
 2. Create an `android-licenses` directory in the root directory of your git repository.
-3. Copy the license files into the `android-licenses` directory. 
+3. Copy the license files into the `android-licenses` directory.
 4. In your Workflow copy the licenses to the right location using a `Do anything with Script` step.
-
-**Add the** `Do anything with Script` **step right after the** `Git Clone` **step** (that's when your code is available on the build virtual machine), with the content:
+5. Add the `Do anything with Script` step right after the `Git Clone` step (that's when your code is available on the build virtual machine), with the content:
 
     #!/bin/bash
     # fail if any commands fails
@@ -88,8 +89,6 @@ An alternative solution for the `You have not accepted the license agreements of
     
     rsync -avhP ./android-licenses/ "$ANDROID_HOME/licenses/"
 
-That's all, this script copies the licenses from the `android-licenses` (from your repository) into the system's Android SDK Home path under `licenses` directory.
+This script copies the licenses from the `android-licenses` (from your repository) into the system's Android SDK Home path under `licenses` directory.
 
-## Installing an additional Android package
-
-Please see [this section](/tips-and-tricks/android-tips-and-tricks/#how-to-install-an-additional-android-sdk-package).
+For more information on how to how to install additional Android package, check out [this guide](/tips-and-tricks/android-tips-and-tricks/#how-to-install-an-additional-android-sdk-package).
