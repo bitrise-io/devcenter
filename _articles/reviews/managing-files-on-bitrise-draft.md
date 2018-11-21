@@ -9,7 +9,10 @@ Managing files on Bitrise Bitrise allows you to upload files to use in your buil
 
 ### Uploading files to use in your build
 
-If your build requires any files to make it work, upload them to the Generic File Storage. The Generic File Storage accepts any file type, all you need to do is provide a unique ID and upload the file. The only restriction is that the file cannot be bigger than 5 MB.
+If your build requires any files to make it work, upload them to the Generic File Storage. The Generic File Storage accepts any file type, all you need to do is provide a unique ID and upload the file. There are two restrictions:
+
+* the file cannot be bigger than 5 MB
+* you can only store a total of 5 different files at the same time. If you want to upload more, you need to delete one of the files in the storage.
 
 1. Go to the Dashboard.
 2. Open the app you want to add files to.
@@ -22,10 +25,24 @@ If your build requires any files to make it work, upload them to the Generic Fil
 
    Remember that the file size cannot exceed 5 MB.
 
-Now you can use this file in a variety of ways in your build - read more in [the detailed guide about the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/).
+Now you can use this file in a variety of ways in your build - read more in [the detailed guide about the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/). 
+
+Once a file is uploaded, it can also be:
+
+* downloaded by anyone who has Admin or Owner role on the app's team on Bitrise, unless [it is protected](/protecting-your-code-signing-files/)
+* exposed to Pull Request builds
 
 ### Code signing files
 
-Bitrise can do your code signing for you but we need some files to make it happen. You can upload Android code signing files to the Generic File Storage but for iOS files, you need to use the dedicated menu options for provisioning profiles and code signing identities. 
+Bitrise can do your code signing for you but we need some files to make it happen. 
+
+For Android apps, upload code signing files to the [Generic File Storage](). 
+
+For iOS files, you need to use the dedicated menu options for provisioning profiles and code signing identities. 
+
+* [Android code signing](/code-signing/android-code-signing/android-code-signing-procedures/)
+* [iOS code signing](/code-signing/ios-code-signing/code-signing/)
+
+{% include message_box.html type="info" title="Password protection for iOS code signing files" content="You can set a password in Xcode to store your code signing certificates securely. This password can be viewed on Bitrise: click on the eye icon next to the certificate file, in the **Password** field."%} 
 
 ### Output files and build artifacts
