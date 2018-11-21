@@ -29,9 +29,9 @@ The above error message means that your build requires an Android package which 
 
 1. Add the `Install missing Android SDK components` Step to your workflow.
 
-	{% include message_box.html type="info" title="List of preinstalled packages" content=" You can see which packages are preinstalled [on GitHub](https://github.com/bitrise-docker/android/blob/master/Dockerfile#L30). Feel free to send us a PR if you'd like to add a new preinstalled package!" %}
+{% include message_box.html type="info" title="List of preinstalled packages" content=" You can see which packages are preinstalled [on GitHub](https://github.com/bitrise-docker/android/blob/master/Dockerfile#L30). Feel free to send us a PR if you'd like to add a new preinstalled package!" %}
 
-1. To do that add a `Script` step to your workflow. The step should be before the step where you got the above error or even the very first step in the workflow - with the following content:
+2. To do that add a `Script` step to your workflow. The step should be before the step where you got the above error or even the very first step in the workflow - with the following content:
 
        #!/bin/bash
        
