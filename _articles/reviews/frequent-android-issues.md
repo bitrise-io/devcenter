@@ -27,11 +27,11 @@ or
 
 The above error message means that your build requires an Android package which is either not preinstalled yet or outdated. The solution is to install the missing Android package(s) or update the current ones.
 
-Add the `Install missing Android SDK components` Step to your workflow.
+1. Add the `Install missing Android SDK components` Step to your workflow.
 
 {% include message_box.html type="info" title="List of preinstalled packages" content=" You can see which packages are preinstalled [on GitHub](https://github.com/bitrise-docker/android/blob/master/Dockerfile#L30). Feel free to send us a PR if you'd like to add a new preinstalled package!" %}
 
-The solution is quite simple, you just have to install/update the related package(s). To do that add a `Script` step to your workflow - should be before the step where you get the error, it can be the very first step in the workflow - with the following content:
+2. To do that add a `Script` step to your workflow. The step should be before the step where you got the above error or even the very first step in the workflow - with the following content:
 
     #!/bin/bash
     # fail if any commands fails
