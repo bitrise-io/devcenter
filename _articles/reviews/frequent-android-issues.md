@@ -90,4 +90,4 @@ Let's see the steps:
 
 This script copies the licenses from the `android-licenses` (from your repository) into the system's Android SDK Home path under `licenses` directory.
 
-For more information on how to how to install additional Android package, check out [this guide](/tips-and-tricks/android-tips-and-tricks/#how-to-install-an-additional-android-sdk-package).
+For more information on how to install additional Android package, check out [this guide](/tips-and-tricks/android-tips-and-tricks/#how-to-install-an-additional-android-sdk-package).
