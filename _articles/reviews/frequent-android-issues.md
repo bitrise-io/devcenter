@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-In this guide we aim to address the most frequent Android issues you might face when using Bitrise.
+In this guide we aim to address the most frequent Android error messages and the solution(s) to them.
 
 ## Could not find an android package or you have not accepted the license agreements
 
