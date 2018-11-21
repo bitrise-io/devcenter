@@ -28,9 +28,6 @@ or
 The above error message means that your build requires an Android package which is either not preinstalled yet or outdated. The solution is to install the missing Android package(s) or update the current ones.
 
 1. Add the `Install missing Android SDK components` Step to your workflow.
-
-{% include message_box.html type="info" title="List of preinstalled packages" content=" You can see which packages are preinstalled [on GitHub](https://github.com/bitrise-docker/android/blob/master/Dockerfile#L30). Feel free to send us a PR if you'd like to add a new preinstalled package!" %}
-
 2. To do that add a `Script` step to your workflow. The step should be before the step where you got the above error or even the very first step in the workflow - with the following content:
 
        #!/bin/bash
@@ -58,6 +55,8 @@ The above error message means that your build requires an Android package which 
        echo y | android update sdk --no-ui --all --filter extra-android-m2repository | grep 'package installed'
        
        echo y | android update sdk --no-ui --all --filter extra-google-m2repository | grep 'package installed'
+
+   {% include message_box.html type="info" title="List of preinstalled packages" content=" You can see which packages are preinstalled [on GitHub](https://github.com/bitrise-docker/android/blob/master/Dockerfile#L30). Feel free to send us a PR if you'd like to add a new preinstalled package!" %}
 
    In most cases you don't need both packages to be updated, so you can try to remove them one by one, but having all three in the script covers most of the cases related to this error.
 
