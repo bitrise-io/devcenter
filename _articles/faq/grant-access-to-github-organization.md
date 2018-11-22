@@ -1,5 +1,5 @@
 ---
-title: Grant access to a GitHub Organization
+title: How to grant Bitrise access to a GitHub Organization?
 menu:
   faq:
     weight: 6
