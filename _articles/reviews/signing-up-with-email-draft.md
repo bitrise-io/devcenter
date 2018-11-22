@@ -19,23 +19,24 @@ You can easily sign up to Bitrise in one step with your email address.
 4. Check your inbox for our Confirmation Instructions.
 
    ![](/img/check-your-inbox.png)
+
+   If you haven't received a confirmation email, click the **Resend confirmation email** button you see at Step 4.
 5. Click `Confirm my account` which takes you to your Bitrise Dashboard.
 
    ![](/img/add-your-first-app.png)
 
 How about adding your [first app](/getting-started/adding-a-new-app/index/) now?
 
-If you haven't received a confirmation email, click the **Resend confirmation email** button you see at Step 4.
-
 ## Issues with Logging in
 
-If you failed to log in for the third time, [reCAPTCHA](https://developers.google.com/recaptcha/) gets activated for you.
+If you failed to log in for the third time, [reCAPTCHA](https://developers.google.com/recaptcha/) will get enabled to check if you are a human.
 
-If you failed to log in for an excessive amount of time, you will automatically get locked out. Check your inbox for our `Unlock Instructions` email!
+If you failed to log in for an excessive amount of attempts, you will automatically get locked out. Check your inbox for our `Unlock Instructions` email!
 
 ![](/img/lockedout.png)
 
-{% include message_box.html type="info" title="Sign up with a git provider" content=" If you would like to use your GitHub / Bitbucket account, please check out the following devcenter articles:
+{% include message_box.html type="info" title="Sign up with a git provider" content=" If you would like to use your GitHub / Bitbucket account, please check out the following DevCenter articles:
 
 * [Signing up with GitHub](/getting-started/signing-up/signing-up-with-github)
+* [Signing up with Gitlab](/getting-started/signing-up/signing-up-with-gitlab/)
 * [Signing up with Bitbucket](/getting-started/signing-up/signing-up-with-bitbucket) " %}
