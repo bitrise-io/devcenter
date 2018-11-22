@@ -1,5 +1,5 @@
 ---
-title: Adding projects with submodules or with private CocoaPods repos
+title: Can I add projects with submodules or with private repo dependencies?
 menu:
   faq:
     weight: 3
