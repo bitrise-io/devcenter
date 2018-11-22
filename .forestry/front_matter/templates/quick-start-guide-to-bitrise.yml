@@ -14,7 +14,6 @@ fields:
   hidden: false
   default: ''
 pages:
-- _articles/reviews/signing-up-with-email-draft.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/reviews/managing-files-on-bitrise-draft.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
