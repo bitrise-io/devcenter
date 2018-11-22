@@ -20,7 +20,7 @@ You can easily sign up to Bitrise in one step with your email address.
 
    ![](/img/check-your-inbox.png)
 
-   If you haven't received a confirmation email, click the **Resend confirmation email** button you see at Step 4.
+   If you haven't received a confirmation email, click the **Resend confirmation email** button.
 5. Click `Confirm my account` which takes you to your Bitrise Dashboard.
 
    ![](/img/add-your-first-app.png)
