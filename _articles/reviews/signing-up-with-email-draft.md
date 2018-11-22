@@ -15,7 +15,7 @@ You can easily sign up to Bitrise in one step with your email address.
 
    ![](/img/your-password-should-have-1.png)
 2. Click `Sign up with email`
-3. Optional step: Add your first name, last name, your company name and a few more details if you wish. You can also add those later.
+3. _Optional step_: Add your first name, last name, your company name and a few more details if you wish. You can also add those later.
 4. Check your inbox for our Confirmation Instructions.
 
    ![](/img/check-your-inbox.png)
@@ -25,8 +25,6 @@ You can easily sign up to Bitrise in one step with your email address.
 
    ![](/img/add-your-first-app.png)
 
-How about adding your [first app](/getting-started/adding-a-new-app/index/) now?
-
 ## Issues with Logging in
 
 If you failed to log in for the third time, [reCAPTCHA](https://developers.google.com/recaptcha/) will get enabled to check if you are a human.
@@ -35,7 +33,7 @@ If you failed to log in for an excessive amount of attempts, you will automatica
 
 ![](/img/lockedout.png)
 
-{% include message_box.html type="info" title="Sign up with a git provider" content=" If you would like to use your GitHub / Bitbucket account, please check out the following DevCenter articles:
+{% include message_box.html type="info" title="Sign up with a git provider" content=" If you would like to use your GitHub/Gitlab/ Bitbucket account, please check out the following DevCenter articles:
 
 * [Signing up with GitHub](/getting-started/signing-up/signing-up-with-github)
 * [Signing up with Gitlab](/getting-started/signing-up/signing-up-with-gitlab/)
