@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/reviews/android-tips-tricks-how-to-install-a-specific-android-sdk-version.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/reviews/managing-files-on-bitrise-draft.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
