@@ -1,5 +1,5 @@
 ---
-title: I can't see my GitHub organization / repository on the Add New App page
+title: Why can't I see my GitHub organization / repository on the Add New App page?
 menu:
   faq:
     weight: 8
