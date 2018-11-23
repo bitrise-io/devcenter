@@ -16,7 +16,7 @@ It can happen that you need to transfer an Application on [Bitrise](https://www.
 5. After selecting the new owner from the dropdown, click on the purple button that says
    `Transfer ownership to <Username>`, and you are done!
 
-{% include message_box.html type="info" title="Good to know: Do you want to remain the connected services user?" content="If you enable the `Do you want to remain the connected services user?` option in the Transfer popup, then during the transfer you'll be explicitly marked as the "connected services" user for the app during the transfer."%}
+{% include message_box.html type="info" title="Good to know: Do you want to remain the connected services user?" content="If you enable the `Do you want to remain the connected services user?` option in the Transfer popup, then during the transfer you'll be explicitly marked as the connected services user for the app during the transfer."%}
 
 The "connected services" user specifies which Team Member's service connections / accounts connected to his/her Bitrise user should be used when Bitrise tries to communicate with another service (GitHub, Bitbucket, ...), for example to send back build status information, or to register a new SSH key automatically.
 
