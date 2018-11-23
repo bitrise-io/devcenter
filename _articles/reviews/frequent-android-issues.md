@@ -21,15 +21,15 @@ or
 
     Could not find com.android.support:appcompat-v7:24.2.0.
 
-### Solution 1 
+### Solution 1
 
-The above error messages mean that your build requires an Android package which is either not installed or outdated. You also have to take care of accepting those licenses agreements for the SDK tools. If the accepted license agreements and/or SDK components are missing from your project, you won't be able to build your project. 
+The above error messages mean that your build requires an Android package which is either not installed or outdated. You also have to take care of accepting those licenses agreements for the SDK tools. If the accepted license agreements and/or SDK components are missing from your project, you won't be able to build your project.
 
 We advise you to use our `Install missing Android SDK components` and add it to your workflow. Make sure you insert this Step right before any build or test step and those steps rely on the outcome of the dependency Step. If you keep getting the same error messages despite using our `Install missing Android SDK` Step, have a look at **Solution 2** below.
 
 ### Solution 2
 
- This solution uses our `Do anything with Script` Step. Let's see how!
+This solution uses our `Do anything with Script` Step. Let's see how!
 
 1. Create an `android-licenses` directory in the root directory of your git repository.
 2. Copy the license files into this directory from your computer.
@@ -72,15 +72,15 @@ We advise you to use our `Install missing Android SDK components` and add it to 
 
 ### Error
 
-You got the above error message because `Create Android emulator` or `Start Android emulator` Steps have not been properly configured. 
+You got the above error message because either one or both of our `Create Android emulator` or `Start Android emulator` Steps has not been properly set. 
 
 ### Solution
 
-We advise you to use `AVD Manager` Step instead of `Create Android emulator` or `Start Android emulator` Steps. `AVD Manager` Step takes care of all the functions the other two steps perform since it creates and starts the emulator at the same time. If you want to control when the emulator should kick in, use our `Wait for Android emulator` Step. Check out our detailed [guide](/tips-and-tricks/android-tips-and-tricks/#emulators)!
+We advise you to use `AVD Manager` Step instead of having to set the `Create Android emulator` and `Start Android emulator` Steps individually. `AVD Manager` performs all the other two steps, meaning it creates and starts the emulator at the same time. If you want to control when the emulator should kick in, use our `Wait for Android emulator` Step. Check out our guide on [Emulators](/tips-and-tricks/android-tips-and-tricks/#emulators) for more information!
 
 ## "Could not find intellij-core.jar"
 
-If you experience the following error message, it is most likely related to jcenter.
+If you experience the following error message, it is most likely related to jcenter. You most likely have started using a more recent version of Gradle but your project has not been updated accordingly. 
 
     Could not resolve all files for configuration ‘:classpath’.
     Could not find intellij-core.jar (com.android.tools.external.com-intellij:intellij-core:26.0.1).
@@ -99,13 +99,30 @@ As an example:
       jcenter()
     }
 
+## "Could not download project dependency"
+
+### Error
+
+The error is related to a temporary network issue at Bitray/jcenter.
+
+### Solution
+
+Since the issue is not related to Bitrise, we advise you to:
+
+1. Check [Bintray jcenter](https://status.bintray.com/history)'s service status page.
+2. Wait until the issue is resolved on their side.
+3. Rebuild your project.
+
 ## "Keystore file ' /root/keystores/.jks' not found for signing config"
 
-You most probably have not downloaded your keystore file to the same location.
+### Error
 
-1. Add a `File downloader` Step to you workflow to download the file **WHERE IN THE WORKFLOW? before the Gradle Runner step as user wanted to sign apk in Gradle Runner step?**
-2. You need a file downloader step with the following settings:
+The `Sign APK` Step prints the above error message out if you have not uploaded your keystore file to the `ANDROID KEYSTORE FILE` section of the `Code Signing` tab.
 
-   `- Download source URL: $BITRISEIO_ANDROID_KEYSTORE_URL` 
-   `- Download destination path: "$HOME/keystores/mysigningfile.jks"`
-3. 
+### Solution
+
+1. Upload your keystore file to the `ANDROID KEYSTORE FILE` field.
+2. Set your `keystore password`, `keystore alias`, and `private key password`. 
+3. Rebuild your project.
+
+Check out our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) for more information.
