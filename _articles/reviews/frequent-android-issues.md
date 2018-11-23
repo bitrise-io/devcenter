@@ -66,17 +66,19 @@ This solution uses our `Do anything with Script` Step. Let's see how!
 
 **In most cases you don't need both packages to be updated, so you can try to remove them one by one, but having all three in the script covers most of the cases related to this error.**
 
-## "Cannot start android emulator"
-
-[https://discuss.bitrise.io/t/cannot-start-android-emulator-no-error-message/4103](https://discuss.bitrise.io/t/cannot-start-android-emulator-no-error-message/4103 "https://discuss.bitrise.io/t/cannot-start-android-emulator-no-error-message/4103")
+## "Could not download project dependency" BENCE
 
 ### Error
 
-You got the above error message because either one or both of our `Create Android emulator` or `Start Android emulator` Steps has not been properly set.
+The error is related to a temporary network issue at Bintray/jcenter.
 
 ### Solution
 
-We advise you to use `AVD Manager` Step instead of having to set the `Create Android emulator` and `Start Android emulator` Steps individually. `AVD Manager` performs all the other two steps, meaning it creates and starts the emulator at the same time. If you want to control when the emulator should kick in, use our `Wait for Android emulator` Step. Check out our guide on [Emulators](/tips-and-tricks/android-tips-and-tricks/#emulators) for more information!
+Since the issue is not related to Bitrise, we advise you to:
+
+1. Check [Bintray jcenter](https://status.bintray.com/history)'s service status page.
+2. Wait until the issue is resolved on their side.
+3. Rebuild your project.
 
 ## "Could not find intellij-core.jar"
 
@@ -99,46 +101,72 @@ As an example:
       jcenter()
     }
 
-## "Could not download project dependency"
+## "Cannot start android emulator"
+
+[https://discuss.bitrise.io/t/cannot-start-android-emulator-no-error-message/4103](https://discuss.bitrise.io/t/cannot-start-android-emulator-no-error-message/4103 "https://discuss.bitrise.io/t/cannot-start-android-emulator-no-error-message/4103")
 
 ### Error
 
-The error is related to a temporary network issue at Bitray/jcenter.
+You got the above error message because either one or both of our `Create Android emulator` or `Start Android emulator` Steps has not been properly set.
 
 ### Solution
 
-Since the issue is not related to Bitrise, we advise you to:
-
-1. Check [Bintray jcenter](https://status.bintray.com/history)'s service status page.
-2. Wait until the issue is resolved on their side.
-3. Rebuild your project.
+We advise you to use `AVD Manager` Step instead of having to set the `Create Android emulator` and `Start Android emulator` Steps individually. `AVD Manager` performs all the other two steps, meaning it creates and starts the emulator at the same time. If you want to control when the emulator should kick in, use our `Wait for Android emulator` Step. Check out our guide on [Emulators](/tips-and-tricks/android-tips-and-tricks/#emulators) for more information!
 
 ## "Keystore file ' /root/keystores/.jks' not found for signing config"
 
 ### Error
 
-The `Sign APK` Step prints the above error message out if you have not uploaded your keystore file to the `ANDROID KEYSTORE FILE` section of the `Code Signing` tab.
+The `Sign APK` Step prints out the above error message if you have not uploaded your keystore file to the `ANDROID KEYSTORE FILE` section of the `Code Signing` tab.
 
 ### Solution
 
-1. Upload your keystore file to the `ANDROID KEYSTORE FILE` field.
-2. Set your `keystore password`, `keystore alias`, and `private key password`.
-3. Rebuild your project.
+1. Go to the `Code Signing` tab of your Workflow Editor.
+2. Upload your keystore file (drag and drop it ) to the `ANDROID KEYSTORE FILE` field.
+3. Set your `keystore password`, `keystore alias`, and `private key password`.
+4. Rebuild your project.
 
 Check out our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) for more information.
 
-## "Signature mismatching" and "Invalid"
+## "Signature mismatching" ??
+
+VDT issue
 
 ### Error
 
-The "Signature mismatching" error implies that the app apk and the test apk have not been matched with their right variant
+The "Signature mismatching" error implies that the app apk and the test apk have not been matched **with their right variant/filter**
 
 ### Solution 
 
-In Gradle Runner Step, you can use the `APK file include filter` and the `Test APK file include filter` step input fields to filter which apk should match with that particular filter.
+In `Gradle Runner` Step, you can use the `APK file include filter` and the `Test APK file include filter` step input fields to circumvent the mismatched signatures.
+
+1. Go to the `Export Config` section of `Gradle Runner` Step. 
+2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
 
 ### Error 
 
 If you see the invalid error in your build log, you most probably will see a completely blank Dashboard of your app ( you cannot see any test results) You have to use the same  troubleshooting process as described above.
 
 In Gradle Runner Step, you can use the `APK file include filter` and the `Test APK file include filter` step input fields to filter which apk should match with that particular filter.
+
+## "Invalid" ??
+
+VDT issue
+
+### Error 
+
+If you get the "Invalid" error message in your build log, it is most likely related to virtual device test, meaning, it could not start the test. That's why you cannot see any test result in your Dashboard. 
+
+### Solution
+
+Make sure you match the APKs based on their bundle IDs.
+
+## "Gitignored config.json file" ??
+
+### Error
+
+Build cannot run until the config.json file is not included in your repository. Config.json file is usually gitignored in your own repository since it comes from...
+
+### Solution
+
+Make sure you include it into your repository.
