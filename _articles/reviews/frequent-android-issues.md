@@ -72,7 +72,7 @@ This solution uses our `Do anything with Script` Step. Let's see how!
 
 ### Error
 
-You got the above error message because either one or both of our `Create Android emulator` or `Start Android emulator` Steps has not been properly set. 
+You got the above error message because either one or both of our `Create Android emulator` or `Start Android emulator` Steps has not been properly set.
 
 ### Solution
 
@@ -80,7 +80,7 @@ We advise you to use `AVD Manager` Step instead of having to set the `Create And
 
 ## "Could not find intellij-core.jar"
 
-If you experience the following error message, it is most likely related to jcenter. You most likely have started using a more recent version of Gradle but your project has not been updated accordingly. 
+If you experience the following error message, it is most likely related to jcenter. You most likely have started using a more recent version of Gradle but your project has not been updated accordingly.
 
     Could not resolve all files for configuration ‘:classpath’.
     Could not find intellij-core.jar (com.android.tools.external.com-intellij:intellij-core:26.0.1).
@@ -122,7 +122,23 @@ The `Sign APK` Step prints the above error message out if you have not uploaded 
 ### Solution
 
 1. Upload your keystore file to the `ANDROID KEYSTORE FILE` field.
-2. Set your `keystore password`, `keystore alias`, and `private key password`. 
+2. Set your `keystore password`, `keystore alias`, and `private key password`.
 3. Rebuild your project.
 
 Check out our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) for more information.
+
+## "Signature mismatching" and "Invalid"
+
+### Error
+
+The "Signature mismatching" error implies that the app apk and the test apk have not been matched with their right variant
+
+### Solution 
+
+In Gradle Runner Step, you can use the `APK file include filter` and the `Test APK file include filter` step input fields to filter which apk should match with that particular filter.
+
+### Error 
+
+If you see the invalid error in your build log, you most probably will see a completely blank Dashboard of your app ( you cannot see any test results) You have to use the same  troubleshooting process as described above.
+
+In Gradle Runner Step, you can use the `APK file include filter` and the `Test APK file include filter` step input fields to filter which apk should match with that particular filter.
