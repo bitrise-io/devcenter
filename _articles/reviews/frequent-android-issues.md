@@ -103,8 +103,6 @@ As an example:
 
 ## "Cannot start android emulator"
 
-[https://discuss.bitrise.io/t/cannot-start-android-emulator-no-error-message/4103](https://discuss.bitrise.io/t/cannot-start-android-emulator-no-error-message/4103 "https://discuss.bitrise.io/t/cannot-start-android-emulator-no-error-message/4103")
-
 ### Error
 
 You got the above error message because either one or both of our `Create Android emulator` or `Start Android emulator` Steps has not been properly set.
