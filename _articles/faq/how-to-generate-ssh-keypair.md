@@ -1,5 +1,5 @@
 ---
-title: How to generate an SSH key pair
+title: How can I generate an SSH key pair?
 menu:
   faq:
     weight: 5
