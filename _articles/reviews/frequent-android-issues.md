@@ -66,7 +66,7 @@ This solution uses our `Do anything with Script` Step. Let's see how!
 
 **In most cases you don't need both packages to be updated, so you can try to remove them one by one, but having all three in the script covers most of the cases related to this error.**
 
-## "Could not download project dependency" BENCE
+## "Could not download project dependency" - error message??
 
 ### Error
 
