@@ -143,12 +143,6 @@ In `Gradle Runner` Step, you can use the `APK file include filter` and the `Test
 1. Go to the `Export Config` section of `Gradle Runner` Step. 
 2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
 
-### Error 
-
-If you see the invalid error in your build log, you most probably will see a completely blank Dashboard of your app ( you cannot see any test results) You have to use the same  troubleshooting process as described above.
-
-In Gradle Runner Step, you can use the `APK file include filter` and the `Test APK file include filter` step input fields to filter which apk should match with that particular filter.
-
 ## "Invalid" ??
 
 VDT issue
@@ -159,7 +153,10 @@ If you get the "Invalid" error message in your build log, it is most likely rela
 
 ### Solution
 
-Make sure you match the APKs based on their bundle IDs.
+Make sure you match the APKs based on their bundle IDs using the `Gradle Runner` step.
+
+1. Go to the `Export Config` section of `Gradle Runner` Step. 
+2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
 
 ## "Gitignored config.json file" ??
 
