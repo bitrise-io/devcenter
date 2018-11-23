@@ -2,7 +2,7 @@
 title: Should I commit my dependencies into my repository?
 menu:
   faq:
-    weight: 11
+    weight: 10
 
 ---
 **Our recommendation is that you should include your dependencies inside your repository, whenever you can**.

@@ -2,7 +2,7 @@
 title: Organization FAQ
 menu:
   faq:
-    weight: 2
+    weight: 11
 
 ---
 ## What is an Organization on Bitrise?
