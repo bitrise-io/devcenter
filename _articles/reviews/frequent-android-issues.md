@@ -165,3 +165,13 @@ Build cannot run until the config.json file is not included in your repository. 
 ### Solution
 
 Make sure you include it into your repository.
+
+## "Version 42 of this app can not be downloaded by any devices as they will all receive APKs with higher version codes" 
+
+### Error
+
+The issue here is that your APK version is higher in one of your lower track. 
+
+### Solution
+
+To resolve the issue, you have to deactivate higher APK version
