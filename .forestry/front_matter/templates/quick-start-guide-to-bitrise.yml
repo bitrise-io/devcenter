@@ -21,9 +21,9 @@ pages:
 - _articles/builds/Starting-builds-manually.md
 - _articles/builds/triggering-builds/trigger-map.md
 - _articles/builds/bitrise-yml-online.md
-- _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/reviews/frequent-android-issues.md
+- _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/builds/selective_builds.md
