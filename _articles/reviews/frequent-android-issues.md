@@ -166,12 +166,16 @@ Build cannot run until the config.json file is not included in your repository. 
 
 Make sure you include it into your repository.
 
-## "Version 42 of this app can not be downloaded by any devices as they will all receive APKs with higher version codes" 
+## "Version 42 of this app can not be downloaded by any devices as they will all receive APKs with higher version codes"
 
 ### Error
 
-The issue here is that your APK version is higher in one of your lower track. 
+The issue here is that your APK version is higher in one of your lower track.
 
 ### Solution
 
-To resolve the issue, you have to deactivate higher APK version
+To resolve the issue, you have to deactivate higher APK version.
+
+1. In `Google Play Deploy` Step, check if the `Untrack blocking version` is set to `true` value.
+
+If so, the Step will automatically deactivate every APK with lower version code on lower level tracks.
