@@ -7,7 +7,7 @@ published: false
 ---
 In this guide we aim to address the most frequent Android error messages and the solution(s) to them.
 
-## "Could not find an android package" or "you have not accepted the license agreements"
+## 1. "Could not find an android package" or "you have not accepted the license agreements"
 
 ### Error
 
@@ -66,7 +66,7 @@ This solution uses our `Do anything with Script` Step. Let's see how!
 
 **In most cases you don't need both packages to be updated, so you can try to remove them one by one, but having all three in the script covers most of the cases related to this error.**
 
-## "Could not download project dependency" - error message??
+## 2. "Could not download project dependency" - error message [http://status.bintray.com/incidents/gc6bhb1hb6m6](http://status.bintray.com/incidents/gc6bhb1hb6m6 "http://status.bintray.com/incidents/gc6bhb1hb6m6")??
 
 ### Error
 
@@ -80,7 +80,7 @@ Since the issue is not related to Bitrise, we advise you to:
 2. Wait until the issue is resolved on their side.
 3. Rebuild your project.
 
-## "Could not find intellij-core.jar"
+## 3. "Could not find intellij-core.jar"
 
 If you experience the following error message, it is most likely related to jcenter. You most likely have started using a more recent version of Gradle but your project has not been updated accordingly.
 
@@ -101,7 +101,7 @@ As an example:
       jcenter()
     }
 
-## "Cannot start android emulator"
+## 4. "Cannot start android emulator"
 
 ### Error
 
@@ -111,7 +111,7 @@ You got the above error message because either one or both of our `Create Androi
 
 We advise you to use `AVD Manager` Step instead of having to set the `Create Android emulator` and `Start Android emulator` Steps individually. `AVD Manager` performs all the other two steps, meaning it creates and starts the emulator at the same time. If you want to control when the emulator should kick in, use our `Wait for Android emulator` Step. Check out our guide on [Emulators](/tips-and-tricks/android-tips-and-tricks/#emulators) for more information!
 
-## "Keystore file ' /root/keystores/.jks' not found for signing config"
+## 5. "Keystore file ' /root/keystores/.jks' not found for signing config"
 
 ### Error
 
@@ -126,7 +126,7 @@ The `Sign APK` Step prints out the above error message if you have not uploaded 
 
 Check out our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) for more information.
 
-## "Signature mismatching" ??
+## 6. "Signature mismatching" ??
 
 VDT issue
 
@@ -141,7 +141,7 @@ In `Gradle Runner` Step, you can use the `APK file include filter` and the `Test
 1. Go to the `Export Config` section of `Gradle Runner` Step.
 2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
 
-## "Invalid" ??
+## 7. "Invalid" ??
 
 VDT issue
 
@@ -156,7 +156,7 @@ Make sure you match the APKs based on their bundle IDs using the `Gradle Runner`
 1. Go to the `Export Config` section of `Gradle Runner` Step.
 2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
 
-## "Gitignored config.json file" ??
+## 8. "Gitignored config.json file" ??
 
 ### Error
 
@@ -166,7 +166,7 @@ Build cannot run until the config.json file is not included in your repository. 
 
 Make sure you include it into your repository.
 
-## "Version 42 of this app can not be downloaded by any devices as they will all receive APKs with higher version codes"
+## 9. "Version 42 of this app can not be downloaded by any devices as they will all receive APKs with higher version codes"
 
 ### Error
 
@@ -178,4 +178,17 @@ To resolve the issue, you have to deactivate higher APK version.
 
 1. In `Google Play Deploy` Step, check if the `Untrack blocking version` is set to `true` value.
 
-If so, the Step will automatically deactivate every APK with lower version code on lower level tracks.
+If the input field has the `tru` value set, the Step will automatically deactivate every APK with lower version code on lower level tracks.
+
+## 10. "Could not find method include()" ???
+
+### Error
+
+If `Gradle Runner` Step fails due to this error message, it means that...
+
+### Solution
+
+To resolve this issue:
+
+1. Go to the `Gradle Runner` Step.
+2. In the `Optional path to the gradle build file to use` input field,  of change the `settings.gradle` to `build.gradle`!
