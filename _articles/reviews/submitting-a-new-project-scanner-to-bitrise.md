@@ -18,3 +18,15 @@ Before you start, make sure that `$GOPATH/bin` is added to `$PATH` on your compu
 Once you are ready, open your Terminal/Command Line Interface and go to the folder of your project. Start the plugin:
 
     $ bitrise init
+
+The bitrise-init plugin will run all the available scanners to determine the type of the project. These scanners are:
+
+* React Native
+* React Native Expo
+* Ionic
+* Cordova
+* iOS
+* MacOS
+* Android
+* Xamarin
+* fastlane
