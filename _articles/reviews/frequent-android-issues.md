@@ -166,6 +166,9 @@ Build cannot run until the config.json file is not included in your repository. 
 
 Make sure you include it into your repository.
 
+1. Go to the `Export Config` section of `Gradle Runner` Step.
+2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
+
 ## 9. "Version 42 of this app can not be downloaded by any devices as they will all receive APKs with higher version codes"
 
 ### Error
