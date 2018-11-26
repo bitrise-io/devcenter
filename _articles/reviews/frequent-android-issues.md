@@ -134,26 +134,26 @@ VDT issue
 
 The "Signature mismatching" error implies that the app apk and the test apk have not been matched **with their right variant/filter**
 
-### Solution 
+### Solution
 
 In `Gradle Runner` Step, you can use the `APK file include filter` and the `Test APK file include filter` step input fields to circumvent the mismatched signatures.
 
-1. Go to the `Export Config` section of `Gradle Runner` Step. 
+1. Go to the `Export Config` section of `Gradle Runner` Step.
 2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
 
 ## "Invalid" ??
 
 VDT issue
 
-### Error 
+### Error
 
-If you get the "Invalid" error message in your build log, it is most likely related to virtual device test, meaning, it could not start the test. That's why you cannot see any test result in your Dashboard. 
+If you get the "Invalid" error message in your build log, it is most likely related to virtual device test, meaning, it could not start the test. That's why you cannot see any test result in your Dashboard.
 
 ### Solution
 
 Make sure you match the APKs based on their bundle IDs using the `Gradle Runner` step.
 
-1. Go to the `Export Config` section of `Gradle Runner` Step. 
+1. Go to the `Export Config` section of `Gradle Runner` Step.
 2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
 
 ## "Gitignored config.json file" ??
