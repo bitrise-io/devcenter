@@ -11,36 +11,41 @@ When adding a new project on the website or initializing a project on your own m
 
 The possible workflows are described in a scan result model, such as this:
 
-```
-options:
-  DETECTED_PLATFORM_1: OptionModel
-  DETECTED_PLATFORM_2: OptionModel
-  ...
+    options:
+      DETECTED_PLATFORM_1: OptionModel
+      DETECTED_PLATFORM_2: OptionModel
+      ...
+    
+    configs:
+      DETECTED_PLATFORM_1:
+        CONFIG_NAME_1: ConfigModel
+        CONFIG_NAME_2: ConfigModel
+        ...
+      DETECTED_PLATFORM_2:
+        CONFIG_NAME_1: ConfigModel
+        CONFIG_NAME_2: ConfigModel
+        ...
+      ...
+    
+    warnings:
+      DETECTED_PLATFORM_1:
+      - "warning message 1"
+      - "warning message 2"
+      ...
+      DETECTED_PLATFORM_2:
+      - "warning message 1"
+      - "warning message 2"
+      ...
 
-configs:
-  DETECTED_PLATFORM_1:
-    CONFIG_NAME_1: ConfigModel
-    CONFIG_NAME_2: ConfigModel
-    ...
-  DETECTED_PLATFORM_2:
-    CONFIG_NAME_1: ConfigModel
-    CONFIG_NAME_2: ConfigModel
-    ...
-  ...
+* Every platform scanner writes its possible options, configurations and warnings into this model. These will be translated into step input values by choosing the desired values for the given options.
+* Every option chain’s last option selects a configuration.
+* Warnings display the issues with the given project setup.
 
-warnings:
-  DETECTED_PLATFORM_1:
-  - "warning message 1"
-  - "warning message 2"
-  ...
-  DETECTED_PLATFORM_2:
-  - "warning message 1"
-  - "warning message 2"
-  ...
- ```
- 
-- Every platform scanner writes its possible options, configurations and warnings into this model. These will be translated into step input values by choosing the desired values for the given options. 
+## Options
 
-- Every option chain’s last option selects a configuration. 
+`Options` represents a question and the possible answers to the question. For example:
 
-- Warnings display the issues with the given project setup.
+* Question: What is the path to the iOS project files?
+* Possible answers: List of possible paths to check 
+
+These questions and answers are translated into step inputs. The scanner should either determine the input value or let the user select or type the value. 
