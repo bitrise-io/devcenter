@@ -126,7 +126,7 @@ The `Sign APK` Step prints out the above error message if you have not uploaded 
 
 Check out our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) for more information.
 
-## 6. "Signature mismatching" ???? - error message
+## 6. "Signature mismatching" 
 
 ### Error
 
@@ -155,8 +155,8 @@ If you get the "Invalid" error message in your build log, it is most likely rela
 Make sure you match the APKs based on their variant type using the `Gradle Runner` step.
 
 1. In `Gradle Runner` Step, you can use the `APK file include filter` and the `Test APK file include filter` step input fields to circumvent the mismatched signatures.
-   1. Go to the `Export Config` section of `Gradle Runner` Step.
-   2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
+2. Go to the `Export Config` section of `Gradle Runner` Step.
+3. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
 
 ## 8. "Gitignored config.json file" 
 
@@ -170,17 +170,11 @@ Make sure you include it into your repository.
 
 1\.
 
-2\.
-
-3\.
-
-## 9. "Version of this app can not be downloaded by any devices as they will all receive APKs with higher version codes" ???
+## 9. "Version of this app can not be downloaded by any devices as they will all receive APKs with higher version codes"
 
 ### Error
 
 The issue is related to an APK which has a higher versionCode on a lower track than another APK with lower versionCode but in a higher track.
-
-The issue here is that your APK version is higher in one of your lower track. in order vannak tracket, alpha, beta, release, ezek rang szerint novekednek, az alpha kisebb jogosulttsagokkal bir mint a release ami elerheto barki szamara, ezek csopprtok. ki akarok rakni egy verzio szamba egy csoportban, es a nalanal kisebb csoportban van egy magasabb verzioju. a a 40-esnel nagyobb apk-t le kell szedni a listarol. nagyobb trackre akarok feltolteni egy kisebb veriojut mint ami a kisebb tracken levo apknak a verzioja.
 
 ### Solution
 
