@@ -13,7 +13,7 @@ With the Bitrise CLI, you can make this work on your own computer. You will need
 * the **bitrise-init** plugin
 * [Ruby](https://www.ruby-lang.org/en/) version 2.2.2 or higher
 
-Before you start, make sure that `$GOPATH/bin` is added to `$PATH` on your computer! By default, your Go workspace is at `$HOME/go/bin`.
+{% include message_box.html type="important" title="Go workspace" content="Before you start, make sure that `$GOPATH/bin` is added to `$PATH` on your computer! By default, your Go workspace is at `$HOME/go/bin`."%}
 
 Once you are ready, open your Terminal/Command Line Interface and go to the folder of your project. Start the plugin:
 
