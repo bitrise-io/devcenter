@@ -10,7 +10,7 @@ When you add a new app to Bitrise, our we detect the type of your project and ge
 With the Bitrise CLI, you can make this work on your own computer. You will need:
 
 * [golang](https://github.com/golang/go)
-* the **bitrise-init** plugin
+* the [**bitrise-init** plugin](https://github.com/bitrise-core/bitrise-init)
 * [Ruby](https://www.ruby-lang.org/en/) version 2.2.2 or higher
 
 {% include message_box.html type="important" title="Go workspace" content="Before you start, make sure that `$GOPATH/bin` is added to `$PATH` on your computer! By default, your Go workspace is at `$HOME/go/bin`."%}
