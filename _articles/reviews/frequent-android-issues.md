@@ -34,7 +34,7 @@ This solution uses our `Do anything with Script` Step. Let's see how!
 1. Create an `android-licenses` directory in the root directory of your git repository.
 2. Copy the license files into this directory from your computer.
 3. Add a `Do anything with Script` Step **after** the `Git Clone Repository` Step.
-4. Add the script to the `Script content` input field, for example.
+4. Add the script to the `Script content` input field, for example:
 
        #!/bin/bash
        
@@ -66,7 +66,7 @@ This solution uses our `Do anything with Script` Step. Let's see how!
 
 **In most cases you don't need both packages to be updated, so you can try to remove them one by one, but having all three in the script covers most of the cases related to this error.**
 
-## 2. "Could not download project dependency" - error message [http://status.bintray.com/incidents/gc6bhb1hb6m6](http://status.bintray.com/incidents/gc6bhb1hb6m6 "http://status.bintray.com/incidents/gc6bhb1hb6m6")??
+## 2. "Could not download project dependency" - error message 
 
 ### Error
 
@@ -76,7 +76,7 @@ The error is related to a temporary network issue at Bintray/jcenter.
 
 Since the issue is not related to Bitrise, we advise you to:
 
-1. Check [Bintray jcenter](https://status.bintray.com/history)'s service status page.
+1. Check [Bintray jcenter](https://status.bintray.com)'s service status page.
 2. Wait until the issue is resolved on their side.
 3. Rebuild your project.
 
@@ -101,17 +101,17 @@ As an example:
       jcenter()
     }
 
-## 4. "Cannot start android emulator"
+## 4. "I Cannot start android emulator"
 
 ### Error
 
-You got the above error message because either one or both of our `Create Android emulator` or `Start Android emulator` Steps has not been properly set.
+You cannot start the android emulator if the `Create Android emulator` or `Start Android emulator` Steps have not been properly set.
 
 ### Solution
 
 We advise you to use `AVD Manager` Step instead of having to set the `Create Android emulator` and `Start Android emulator` Steps individually. `AVD Manager` performs all the other two steps, meaning it creates and starts the emulator at the same time. If you want to control when the emulator should kick in, use our `Wait for Android emulator` Step. Check out our guide on [Emulators](/tips-and-tricks/android-tips-and-tricks/#emulators) for more information!
 
-## 5. "Keystore file ' /root/keystores/.jks' not found for signing config"
+## 5. "Keystore file not found for signing config"
 
 ### Error
 
@@ -126,37 +126,39 @@ The `Sign APK` Step prints out the above error message if you have not uploaded 
 
 Check out our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) for more information.
 
-## 6. "Signature mismatching" ??
-
-VDT issue
+## 6. "Signature mismatching" ???? - error message
 
 ### Error
 
-The "Signature mismatching" error implies that the app apk and the test apk have not been matched **with their right variant/filter**
+The "Signature mismatching" error implies that the app apk and the test apk have not been matched with their right code signing key, that is different keys have been used  for the app and for the debug APKs. In this case your virtual device test will not run and you will not have any results available on your Dashboard.
+
+Your app APK is signed with a release key (or with nothing) while your debug APK is signed with a debug key. Your goal is to have these two APKs signed with the same key. If they are signed with different keys, your build will fail. The bottom line is your app APK and your debug APK cannot be signed with different keys.
 
 ### Solution
 
-In `Gradle Runner` Step, you can use the `APK file include filter` and the `Test APK file include filter` step input fields to circumvent the mismatched signatures.
+You have to match the build type with the Gradle Runner tasks of your app APK and your debug APK.
 
-1. Go to the `Export Config` section of `Gradle Runner` Step.
-2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
+assembleRelease and assembleDebugAndroidTest (two different types of APKs)
+
+assembleDebug and assembleDebugAndroidTest 
 
 ## 7. "Invalid" ??
 
-VDT issue
+This is error is related to virtual device testing and might result in a completely blank Dashboard.
 
 ### Error
 
-If you get the "Invalid" error message in your build log, it is most likely related to virtual device test, meaning, it could not start the test. That's why you cannot see any test result in your Dashboard.
+If you get the "Invalid" error message in your build log, it is most likely related to virtual device test, meaning, it could not start the test. That's why you cannot see any test result in your Dashboard. It is related to the `assemble` Gradle task which generates all variants of your project, but using our filter option you can define which APK you want to export out of all generated variants.
 
 ### Solution
 
-Make sure you match the APKs based on their bundle IDs using the `Gradle Runner` step.
+Make sure you match the APKs based on their variant type using the `Gradle Runner` step.
 
-1. Go to the `Export Config` section of `Gradle Runner` Step.
-2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
+1. In `Gradle Runner` Step, you can use the `APK file include filter` and the `Test APK file include filter` step input fields to circumvent the mismatched signatures.
+   1. Go to the `Export Config` section of `Gradle Runner` Step.
+   2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
 
-## 8. "Gitignored config.json file" ??
+## 8. "Gitignored config.json file" 
 
 ### Error
 
@@ -166,14 +168,19 @@ Build cannot run until the config.json file is not included in your repository. 
 
 Make sure you include it into your repository.
 
-1. Go to the `Export Config` section of `Gradle Runner` Step.
-2. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
+1\.
 
-## 9. "Version 42 of this app can not be downloaded by any devices as they will all receive APKs with higher version codes"
+2\.
+
+3\.
+
+## 9. "Version of this app can not be downloaded by any devices as they will all receive APKs with higher version codes" ???
 
 ### Error
 
-The issue here is that your APK version is higher in one of your lower track.
+The issue is related to an APK which has a higher versionCode on a lower track than another APK with lower versionCode but in a higher track.
+
+The issue here is that your APK version is higher in one of your lower track. in order vannak tracket, alpha, beta, release, ezek rang szerint novekednek, az alpha kisebb jogosulttsagokkal bir mint a release ami elerheto barki szamara, ezek csopprtok. ki akarok rakni egy verzio szamba egy csoportban, es a nalanal kisebb csoportban van egy magasabb verzioju. a a 40-esnel nagyobb apk-t le kell szedni a listarol. nagyobb trackre akarok feltolteni egy kisebb veriojut mint ami a kisebb tracken levo apknak a verzioja.
 
 ### Solution
 
@@ -181,17 +188,4 @@ To resolve the issue, you have to deactivate higher APK version.
 
 1. In `Google Play Deploy` Step, check if the `Untrack blocking version` is set to `true` value.
 
-If the input field has the `tru` value set, the Step will automatically deactivate every APK with lower version code on lower level tracks.
-
-## 10. "Could not find method include()" ???
-
-### Error
-
-If `Gradle Runner` Step fails due to this error message, it means that...
-
-### Solution
-
-To resolve this issue:
-
-1. Go to the `Gradle Runner` Step.
-2. In the `Optional path to the gradle build file to use` input field,  of change the `settings.gradle` to `build.gradle`!
+If the input field has the `true` value set, the Step will automatically deactivate every APK with lower version code on lower level tracks.
