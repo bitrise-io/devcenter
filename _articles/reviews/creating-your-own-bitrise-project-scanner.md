@@ -39,4 +39,8 @@ warnings:
   ...
  ```
  
- Every platform scanner writes its possible options, configurations and warnings into this model. 
+- Every platform scanner writes its possible options, configurations and warnings into this model. These will be translated into step input values by choosing the desired values for the given options. 
+
+- Every option chain’s last option selects a configuration. 
+
+- Warnings display the issues with the given project setup.
