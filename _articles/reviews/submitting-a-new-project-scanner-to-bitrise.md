@@ -30,3 +30,5 @@ The bitrise-init plugin will run all the available scanners to determine the typ
 * Android
 * Xamarin
 * fastlane
+
+You can create and submit your own scanner to detect other project types, too. 
