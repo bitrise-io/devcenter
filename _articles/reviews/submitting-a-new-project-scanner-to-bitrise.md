@@ -32,3 +32,17 @@ The bitrise-init plugin will run all the available scanners to determine the typ
 * fastlane
 
 You can create and submit your own scanner to detect other project types, too. 
+
+Depending on the project type, the tool asks for user input: for example, with an iOS project, it asks the user to specify an export method.
+
+```
+Select: ipa export method
+Please select from the list:
+[1] : app-store
+[2] : ad-hoc
+[3] : enterprise
+[4] : development
+(type in the option's number, then hit Enter) :
+```
+
+
