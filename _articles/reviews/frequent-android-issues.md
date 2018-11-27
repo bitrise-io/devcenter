@@ -66,7 +66,7 @@ This solution uses our `Do anything with Script` Step. Let's see how!
 
 **In most cases you don't need both packages to be updated, so you can try to remove them one by one, but having all three in the script covers most of the cases related to this error.**
 
-## 2. "Could not download project dependency" - error message 
+## 2. "Could not download project dependency" - error message
 
 ### Error
 
@@ -126,7 +126,7 @@ The `Sign APK` Step prints out the above error message if you have not uploaded 
 
 Check out our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) for more information.
 
-## 6. "Signature mismatching" 
+## 6. "Signature mismatching"
 
 ### Error
 
@@ -140,7 +140,7 @@ You have to match the build type with the Gradle Runner tasks of your app APK an
 
 assembleRelease and assembleDebugAndroidTest (two different types of APKs)
 
-assembleDebug and assembleDebugAndroidTest 
+assembleDebug and assembleDebugAndroidTest
 
 ## 7. "Invalid" ??
 
@@ -158,7 +158,7 @@ Make sure you match the APKs based on their variant type using the `Gradle Runne
 2. Go to the `Export Config` section of `Gradle Runner` Step.
 3. Specify the filter. This filter is a standard find commands -path pattern, see: [http://linux.die.net/man/1/find](http://linux.die.net/man/1/find "http://linux.die.net/man/1/find") All APKs that have this filter in their file name will be copied to the Bitrise Deploy Directory.
 
-## 8. "Gitignored config.json file" 
+## 8. "Gitignored config.json file"
 
 ### Error
 
@@ -167,8 +167,6 @@ Build cannot run until the config.json file is not included in your repository. 
 ### Solution
 
 Make sure you include it into your repository.
-
-1\.
 
 ## 9. "Version of this app can not be downloaded by any devices as they will all receive APKs with higher version codes"
 
