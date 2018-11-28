@@ -16,6 +16,29 @@ Make sure you perform the following steps to include Workflow Editor as one of t
 3. Run `bitrise setup` just to be sure everything's prepared. This will take care of
 4. `cd` into a directory where you have your `bitrise.yml`, and run: `bitrise :workflow-editor`
 
+Here is the overall look and feel:
+
+![](/img/offline-workflow-editor.png)
+
 ## Upgrading Workflow Editor version
 
 You can upgrade to the latest version of the Workflow Editor by running `bitrise plugin update workflow-editor`.
+
+## Developing Workflow Editor
+
+You can build a stand-alone binary with embedded resources.
+
+1. Run `bitrise run go-install`
+
+### Running Workflow Editor in development mode
+
+1. In your Workflow Editor's directory, run `docker-compose up` command.
+2. In your browser, you can reach the Workflow Editor on `localhost:1234`. Be aware that you usually have to wait a while.
+3. By default, the Workflow Editor will open the `bitrise.yml` and `.bitrise.secrets.yml` found in this folder. For testing purposes, you might want to edit custom files. To do so, set the `TEST_BITRISE_CONFIG_PATH` and `TEST_BITRISE_SECRETS_PATH` environment variables with the path pointing to the custom files' paths.
+
+### Running tests
+
+1. In the Workflow Editor's directory, run `up-middleman-jasmine`.
+2. In your browser, you can view the tests on `localhost:4567/jasmine`.
+
+Note that every time you make a change to the code, you have to exit the running workflow and start it up again. You can make changes to the specs without having to do this.
