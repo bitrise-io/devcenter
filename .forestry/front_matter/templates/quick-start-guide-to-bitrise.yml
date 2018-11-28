@@ -62,7 +62,6 @@ pages:
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
-- _articles/reviews/debugging-your-build-locally.md
 - _articles/reviews/managing-files-on-bitrise-draft.md
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
