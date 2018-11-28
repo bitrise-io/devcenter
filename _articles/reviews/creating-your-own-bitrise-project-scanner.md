@@ -9,7 +9,11 @@ The project scanner is a tool that identifies the given project's type and gener
 
 When adding a new project on the website or initializing a project on your own machine, the [bitrise-init](https://github.com/bitrise-core/bitrise-init) tool iterates through every scanner, calls the scanner interface methods on each of them and collects their outputs. Based on these outputs, a basic configuration is generated.
 
-The possible workflows are described in a scan result model, such as this:
+The possible workflows are described in a scan result model. The model consists of:
+
+* options
+* configs
+* warnings
 
     options:
       DETECTED_PLATFORM_1: OptionModel
