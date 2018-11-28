@@ -15,6 +15,7 @@ The possible workflows are described in a scan result model. The model consists 
 * configs
 * warnings
 
+```
     options:
       DETECTED_PLATFORM_1: OptionModel
       DETECTED_PLATFORM_2: OptionModel
@@ -40,6 +41,7 @@ The possible workflows are described in a scan result model. The model consists 
       - "warning message 1"
       - "warning message 2"
       ...
+```
 
 * Every platform scanner writes its possible options, configurations and warnings into this model. These will be translated into step input values by choosing the desired values for the given options.
 * Every option chain’s last option selects a configuration.
@@ -52,4 +54,4 @@ The possible workflows are described in a scan result model. The model consists 
 * Question: What is the path to the iOS project files?
 * Possible answers: List of possible paths to check 
 
-These questions and answers are translated into step inputs. The scanner should either determine the input value or let the user select or type the value. 
+These questions and answers are translated into step inputs. The scanner should either determine the input value or let the user select or type the value.
