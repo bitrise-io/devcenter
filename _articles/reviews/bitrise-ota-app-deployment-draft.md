@@ -9,17 +9,17 @@ Bitrise has an integrated app deployment system you can use for app and other bu
 
 With this you can distribute your apps over the air for your app's team members or even for those who don’t have a Bitrise account. You can also use it to archive your app and other build artifact files which will be available on the app's Build page for viewing and downloading.
 
-Here is a short recap on the different build steps per platform. The links under `Platform` point to our Getting started tutorials if you needed more information for each platform (for example, on code signing, packaging and deploying).
+Here is a short recap on the different build steps per platform. The links under `Platform` point to our Getting started tutorials if you needed more information for each platform (for example, on code signing, packaging or deploying).
 
 | Platform | Build step | Deploy step to Bitrise |
 | --- | --- | --- |
-| iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Android | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Xamarin | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| React Native | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Ionic | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [iOS](https://devcenter.bitrise.io/getting-started/getting-started-with-ios-apps/) | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Android](https://devcenter.bitrise.io/getting-started/getting-started-with-android-apps/) | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Xamarin](https://devcenter.bitrise.io/getting-started/getting-started-with-xamarin-apps/) | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [React Native](https://devcenter.bitrise.io/getting-started/getting-started-with-react-native-apps/) | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Ionic](https://devcenter.bitrise.io/getting-started/getting-started-with-ionic-cordova-apps/) | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [Cordova](https://devcenter.bitrise.io/getting-started/getting-started-with-ionic-cordova-apps/) | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| [MacOS](https://devcenter.bitrise.io/getting-started/getting-started-with-macos-apps/) | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
 First let's have a look at the required and sensitive fields of the Step:
 
