@@ -80,3 +80,33 @@ type OptionModel struct {
 * `Title`: the human readable name of the input
 * `EnvKey`: it represents the input's key in the step model
 * `ChildOptionMap`: the map of the subsequent options if the user chooses a given value for the option
+
+For example, let's see a scenario where you choose a value for the `Scheme` input. The possible values are:
+
+* `SchemeWithTest`
+* `SchemeWithoutTest`
+
+By choosing `SchemeWithTest`, the next option will be related to the simulator used to perform the test. 
+
+By choosing `SchemeWithoutTest`, the next option will be about the export method for the .ipa file.
+
+{% raw %} 
+```JSON
+{
+    "title": "Scheme",
+    "env_key": "scheme",
+    "value_map": {
+        "SchemeWithTest": {
+            "title": "Simulator name",
+            "env_key": "simulator_name",
+            ...
+        },
+        "SchemeWithoutTest": {
+            "title": "Export method",
+            "env_key": "export_method",
+            ...
+        }
+    }
+}
+```
+{% endraw %} 
