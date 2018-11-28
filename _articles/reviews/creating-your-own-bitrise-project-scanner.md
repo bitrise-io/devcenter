@@ -7,6 +7,8 @@ published: false
 ---
 The project scanner is a tool that identifies the given project's type and generates a basic Bitrise configuration. Each supported project type has its own scanner: these scanners are stored as separate packages.
 
+A project type scanner defines at least two workflows: one for testing (`primary`) and one for building (`deploy`). It includes the minimal amount of Steps to successfully run them.
+
 When adding a new project on the website or initializing a project on your own machine, the [bitrise-init](https://github.com/bitrise-core/bitrise-init) tool iterates through every scanner, calls the scanner interface methods on each of them and collects their outputs. Based on these outputs, a basic configuration is generated.
 
 The possible workflows are described in a scan result model. The model consists of:
@@ -181,3 +183,5 @@ type ScannerInterface interface {
 * `Options() (models.OptionModel, models.Warnings, error)`: it is used to generate option branches for the project. Each branch should define a complete and valid option set to build the final bitrise config model. Every option branch’s last `Options` has to store a configuration id, which will be filled with the selected options.
 * `Configs() (models.BitriseConfigMap, error)`: it is used to generate the possible configs. BitriseConfigMap’s each element is a bitrise config template which will be fulfilled with the user selected option values.
 * `DefaultOptions() models.OptionModel and DefaultConfigs() (models.BitriseConfigMap, error)` : they are used to generate the options and configs without scanning the given project. In this case every required step input value is provided by the user. This way even if a scanner fails, the user has an option to get started.
+
+## Submitting your own scanner 
