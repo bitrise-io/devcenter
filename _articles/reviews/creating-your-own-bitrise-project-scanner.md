@@ -43,7 +43,7 @@ warnings:
   - "warning message 1"
   - "warning message 2"
   ...
- ```
+```
 
 * Every platform scanner writes its possible options, configurations and warnings into this model. These will be translated into step input values by choosing the desired values for the given options.
 * Every option chain’s last option selects a configuration.
@@ -77,4 +77,6 @@ type OptionModel struct {
 }
 ```
 
-It
+* `Title`: the human readable name of the input
+* `EnvKey`: it represents the input's key in the step model
+* `ChildOptionMap`: the map of the subsequent options if the user chooses a given value for the option
