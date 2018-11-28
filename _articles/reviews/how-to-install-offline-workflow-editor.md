@@ -42,3 +42,14 @@ You can build a stand-alone binary with embedded resources.
 2. In your browser, you can view the tests on `localhost:4567/jasmine`.
 
 Note that every time you make a change to the code, you have to exit the running workflow and start it up again. You can make changes to the specs without having to do this.
+
+### Releasing a new version
+
+1. Generate a GitHub personal access token for your user (one who has rights to create releases on the repository) - you can generate one here: [https://github.com/settings/tokens](https://github.com/settings/tokens "https://github.com/settings/tokens")
+2. Generate a Discuss API key: you need to be a Discourse admin for this, then you can generate an API key for yourself at: [https://discuss.bitrise.io/admin/api/keys](https://discuss.bitrise.io/admin/api/keys "https://discuss.bitrise.io/admin/api/keys")
+3. Ensure clean git
+4. If new release requires Bitrise CLI to be updated, in `bitrise-plugin.yml` change `min_version` requirement of the `bitrise` tool to the required CLI version
+5. Optional: set the following secrets: $GITHUB_RELEASE_API_TOKEN, $GITHUB_USERNAME, $DISCUSS_API_KEY, $DISCUSS_USERNAME
+6. Call `bitrise run create-release`
+7. During the build you will need to specify a new version number, and if you did not specify any of the secrets above, you will need to specify those as well.
+8. After the build has finished, close the related GitHub issues, and milestones if the issues were assigned to any.
