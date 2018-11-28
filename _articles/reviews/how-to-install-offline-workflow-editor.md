@@ -53,3 +53,11 @@ Note that every time you make a change to the code, you have to exit the running
 6. Call `bitrise run create-release`
 7. During the build you will need to specify a new version number, and if you did not specify any of the secrets above, you will need to specify those as well.
 8. After the build has finished, close the related GitHub issues, and milestones if the issues were assigned to any.
+
+### Testing the version release BEFORE releasing it
+
+1. In bitrise.yml, create a workflow e. g. `test-release`
+2. From the `create-release` workflow, copy-paste the _GitHub release_ and _Create Discuss topic_ steps.
+3. In the GitHub release step, remove the `files_to_upload` input, set the `$NEW_RELEASE_VERSION` everywhere to something arbitrary, same for the `body`, and **most importantly set** `**draft: 'yes'**`
+4. In the Create Discuss topic step, **change the** `**DISCUSS_CHANGELOG_CATEGORY_ID**` **to the ID of one our discuss.bitrise.io's internal channels' ID** (you can find an ID using the Discourse API with a cURL request) so that it is only visible to us; also change the `title` and the `raw` parameter to something arbitrary.
+5. After the test release process, don't forget to delete the draft release and the internal changelog topic.
