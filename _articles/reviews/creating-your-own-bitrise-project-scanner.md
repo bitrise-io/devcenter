@@ -16,31 +16,31 @@ The possible workflows are described in a scan result model. The model consists 
 * warnings
 
 ```
-    options:
-      DETECTED_PLATFORM_1: OptionModel
-      DETECTED_PLATFORM_2: OptionModel
-      ...
-    
-    configs:
-      DETECTED_PLATFORM_1:
-        CONFIG_NAME_1: ConfigModel
-        CONFIG_NAME_2: ConfigModel
-        ...
-      DETECTED_PLATFORM_2:
-        CONFIG_NAME_1: ConfigModel
-        CONFIG_NAME_2: ConfigModel
-        ...
-      ...
-    
-    warnings:
-      DETECTED_PLATFORM_1:
-      - "warning message 1"
-      - "warning message 2"
-      ...
-      DETECTED_PLATFORM_2:
-      - "warning message 1"
-      - "warning message 2"
-      ...
+options:
+  DETECTED_PLATFORM_1: OptionModel
+  DETECTED_PLATFORM_2: OptionModel
+  ...
+
+configs:
+  DETECTED_PLATFORM_1:
+    CONFIG_NAME_1: ConfigModel
+    CONFIG_NAME_2: ConfigModel
+    ...
+  DETECTED_PLATFORM_2:
+    CONFIG_NAME_1: ConfigModel
+    CONFIG_NAME_2: ConfigModel
+    ...
+  ...
+
+warnings:
+  DETECTED_PLATFORM_1:
+  - "warning message 1"
+  - "warning message 2"
+  ...
+  DETECTED_PLATFORM_2:
+  - "warning message 1"
+  - "warning message 2"
+  ...
 ```
 
 * Every platform scanner writes its possible options, configurations and warnings into this model. These will be translated into step input values by choosing the desired values for the given options.
