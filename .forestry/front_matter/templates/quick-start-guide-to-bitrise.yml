@@ -14,7 +14,6 @@ fields:
   hidden: false
   default: ''
 pages:
-- _articles/reviews/bitrise-ota-app-deployment-draft.md
 - _articles/webhooks/index.md
 - _articles/builds/Scheduling-Builds.md
 - _articles/bitrise-cli/customizing-bitrise-yml.md
@@ -22,6 +21,7 @@ pages:
 - _articles/builds/triggering-builds/trigger-map.md
 - _articles/builds/bitrise-yml-online.md
 - _articles/reviews/creating-your-own-bitrise-project-scanner.md
+- _articles/reviews/bitrise-ota-app-deployment-draft.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/infrastructure/available-stacks.md
