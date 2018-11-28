@@ -14,7 +14,7 @@ Make sure you perform the following steps to include Workflow Editor as one of t
 1. In your Terminal/Command Line, install [Go](https://golang.org/) by typing `brew install go` command (on macOS). If it's already installed, you can update it to the most recent version by running `brew reinstall go`.
 2. Install the latest [Bitrise CLI](/bitrise-cli/installation/). If it's already installed, you can upgrade to the most up-to-date version by running `brew reinstall bitrise`.
 3. Run `bitrise setup` just to be sure everything's prepared. This will take care of
-4. `cd` into a directory where you have your bitrise.yml, and run: `bitrise :workflow-editor`
+4. `cd` into a directory where you have your `bitrise.yml`, and run: `bitrise :workflow-editor`
 
 Here is the overall look and feel:
 
