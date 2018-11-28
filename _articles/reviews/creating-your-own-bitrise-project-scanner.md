@@ -64,7 +64,7 @@ Selecting an option can start a chain: it can lead to different options being pr
 
 ### The option model
 
-The OptionModel represents an input option:
+The OptionModel represents an input option. In Go, it looks something like this:
 
 ```Go
 // OptionModel ...
@@ -81,16 +81,16 @@ type OptionModel struct {
 * `EnvKey`: it represents the input's key in the step model
 * `ChildOptionMap`: the map of the subsequent options if the user chooses a given value for the option
 
-For example, let's see a scenario where you choose a value for the `Scheme` input. The possible values are:
+For example, let's see a scenario where you choose a value for the `Scheme` input. You will have a `value_map` in the `options`. The possible values are:
 
 * `SchemeWithTest`
 * `SchemeWithoutTest`
 
-By choosing `SchemeWithTest`, the next option will be related to the simulator used to perform the test. 
+By choosing `SchemeWithTest`, the next option will be related to the simulator used to perform the test.
 
 By choosing `SchemeWithoutTest`, the next option will be about the export method for the .ipa file.
 
-{% raw %} 
+{% raw %}
 ```JSON
 {
     "title": "Scheme",
@@ -109,4 +109,45 @@ By choosing `SchemeWithoutTest`, the next option will be about the export method
     }
 }
 ```
-{% endraw %} 
+{% endraw %}
+
+Every option chain has a first option: this is called `head`. The possible values of the options can branch the option chain. 
+
+Every option branch's last `options` must have a `config` property set. `config` holds the id of the generated Bitrise configuration which will select the values for the options of the given project. 
+
+An options chain's last `options` cannot have a `value_map`.
+
+{% raw %}
+```JSON
+{
+    "title": "Scheme",
+    "env_key": "scheme",
+    "value_map": {
+        "SchemeWithTest": {
+            "title": "Simulator name",
+            "env_key": "simulator_name",
+            "value_map": {
+                "-": {
+                    "config": "bitrise_config_with_test",
+                }
+            }
+        },
+        "SchemeWithoutTest": {
+            "title": "Export method",
+            "env_key": "export_method",
+            "value_map": {
+                "development": {
+                    "config": "bitrise_config_without_test",
+                },
+                "app-store": {
+                    "config": "bitrise_config_without_test",
+                },
+                "ad-hoc": {
+                    "config": "bitrise_config_without_test",
+                }
+            }
+        }
+    }
+}
+```
+{% endraw %}
