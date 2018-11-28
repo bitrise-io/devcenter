@@ -5,117 +5,98 @@ menu:
     weight: 2
 
 ---
-Bitrise has an integrated App Deployment system you can use for App and other build artifact file distribution.
+Bitrise has an integrated app deployment system you can use for app and other build artifact file distribution.
 
-With this you can distribute your iOS and Android app, over the air, for your testers (**even for those who don't have a Bitrise account**)
-or you can just use it for archiving your App and other build artifact files (these files will
-be available on the related Build's details page).
+With this you can distribute your apps over the air for your app's team members or even for those who don’t have a Bitrise account. You can also use it to archive your app and other build artifact files which will be available on the app's Build page for viewing and downloading.
 
-## How does it work?
+Here is a short recap on the different build steps per platform. The links under `Platform` point to our Getting started tutorials if you needed more information for each platform (for example, on code signing, packaging or deploying).
 
-### iOS
+| Platform | Build step | Deploy step to Bitrise |
+| --- | --- | --- |
+| iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Android | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Xamarin | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| React Native | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Ionic | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
-To distribute your iOS app and its artifacts through bitrise.io, you will need two steps in your workflow:
+First let's have a look at the required and sensitive fields of the Step:
 
-* `Xcode Archive`
-* `Deploy to Bitrise.io`
+![](/img/deploy-to-bitrise.png)
 
-`Xcode Archive` generates an .ipa file which can be distributed by the `Deploy to Bitrise.io` with team members or to anyone.
+## Deploying directory or file path
 
-### Android
+If the file path of the app (.ipa/APK) is available in the right directory, the `Deploy to Bitrise.io` Step will upload the file for the Build and **the file will be listed on the Build’s page**.
 
-To distribute your Android app and its artifacts through bitrise.io, you need two steps in your workflow:
+If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure:
 
-* `Gradle Runner` or `Android Build`
-* `Deploy to Bitrise.io`
+* you move the generated app into this directory or
+* you set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file.
 
-Our two building steps; `Gradle Runner` and `Android Build` generate the APK file and with `Deploy to Bitrise.io` Step to deploy it.
+## Notify: User Roles
 
-### Xamarin
+You can define who should get notified of the generated build based on your app's user groups. There are a couple of options for you to choose from:
 
-To distribute your Xamarin app and its artifacts through bitrise.io, you will need two steps in your workflow:
+* leave `everyone` in the input field to notify everyone in the group.
+* notify based on user role: `testers`, `developers`, `admins`, or `owner` (Select one or more and separate the roles with commas)
+* if you don't want to notify anyone, set it to `none`.
 
-* `Xamarin Archive`
-* `Deploy to Bitrise.io`
+The default input value here is `everyone`.
 
-Use the `Xamarin Archive step` to create the iOS/Android app and the `Deploy to Bitrise.io` step to deploy it.
+## Notify: Emails
 
-For any other project type, just use the step(s) or script(s) which
-can generate the app, and use the `Deploy to Bitrise.io` step to deploy it.
+Set one or more email addresses of those who should get notification. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in our `Secrets` tab.
 
-**_One important thing if you use custom steps/scripts_**_: the_ `_Deploy to Bitrise.io_`
-_step by default deploys apps from the_ `_$BITRISE_DEPLOY_DIR_`_ directory, so make sure that you
-move the generated app there, or set the `__Deploy directory or file path__` input
-of the _`_Deploy to Bitrise.io step_` _to point to the location of the app file._
+## Enabling Public Page for the App
 
-If the app file (`.ipa` / `.apk`) is available, the `Deploy to Bitrise.io` step will
-upload it for the Build and **it will be listed on the Build's details page**.
-Depending on the **notification settings** you set for the `Deploy to Bitrise.io` step,
-Bitrise.io will also send emails for the Team of the app.
+With this option enabled, you can create a Public install page that comes with a long and random URL. You can share this URL with anyone - yes, even with those who are not registered on Bitrise!
 
-For each deployed app you'll see an information and notifications card on the Build's page,
-where you can check the details of the App (title, bundle id, version number, size, etc.)
-and you can download or install the App right from the Build's page.
+You can enable it directly in the Step's input field or at the generated .ipa/APK in your Build's `APPS & ARTIFACTS` tab.
 
-**If you built your iOS App** with a Development or Ad Hoc Provisioning Profile,
-an additional section will be presented with a list of allowed device identifiers (UDID).
+### Accessing the Public install page
 
-If you or a team member of your App's team register a device for
-his/her Bitrise account (you can do this on your [Account Settings page](https://www.bitrise.io/me/profile) in the _Test Devices_ section)
-and the device's identifier can be found in the Provisioning Profile,
-then instead of just presenting the identifier in the list you'll see the user who registered the device and the device's name.
+You can access the Public install page's URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file.
 
-Visiting the Build page from an iOS device (which you registered for your account)
-and you'll see an `Install` button instead of the `Download` button.
-With this **you can install the App on your device directly from Bitrise**.
+![](/img/public-install-page-1.png)
 
-**For Android apps you don't have to register your test devices**,
-as Android apps don't have per-device install restrictions. You'll, however,
-have to enable the **"Unknown Sources"** option in Android to be able to
-install the app/apk from outside of the Google Play Store.
+If you click `Open Public install page` link, you’ll see a base description of the App (title, version, size, supported devices).
 
-## Public App install page
+![](/img/public-install-page-example.png)
 
-If you enable the **Public install page** option (of the `Deploy to Bitrise.io` step)
-for the App, then a **long, random URL** will be available for you,
-which you **can be sent even to people who are not registered on Bitrise.io**.
+If you visit your iOS Build's page from an iOS device (which you've registered for your account), you’ll see an `Install` button instead of the `Download` button. With this you **can install** the App on your device directly from Bitrise.
 
-Opening this link you'll see a base description of the
-App (title, version, size, supported devices) and an `Install`
-button if you visit the page from an iOS or Android device (depending on the app's
-platform of course).
+{% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, **you have to add every device identifier (UDID)** to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store .ipa won't receive a Public install page as it should be uploaded to the app store directly. "%}
 
-You can share this page with anyone, even if they don't have a Bitrise account,
-but **you have to make it sure that they'll actually be able to install it** -
-if you don't use an Enterprise Provisioning Profile to build your App,
-you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac),
-the iOS App can't be installed on any other device, only on the ones which were
-included in the Provisioning Profile the build was signed with.
+Now let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
-**You can enable or disable the App's public install page any time from the related Build page**
-and **you can also set the default state** (enabled or disabled) **in your App's Workflow**
-(select the `Deploy to Bitrise.io` step and set the `Enable public page for the App?` to `false`
-if you don't want to automatically enable this feature).
+![](/img/app-release-unsigned.jpg)
 
-**_If you disable the Public install page for the App, then only your App's team members will be able to install the App from Bitrise,
-from the Build's detail page!_**
+### Sending invites and notifications
 
-## Notifications and install invites
+You can send install invites and notifications based on roles or email address. You can either send invites for a group of your app's team members (testers, developers, admins or owner) or (if the `Public install page` option is enabled) you can send install invites to any email address.
 
-On the Build's page you can send install invites for your testers.
-You can either send invites for a group of your team (testers, developers, admins or owner) or
-(if the `Public install page` option is enabled) you can send install invites to any email address.
+{% include message_box.html type="note" title="Can't access the Public install page?" content="
 
-**Keep in mind that the install invite email contains the URL of the Public install page.**
-If you invite someone who's not in your App's team and then disable the Public install page,
-they won't be able to access the install page!
-Those who are in your App's team will be redirected to the Build's page if the Public install page is disabled.
+* Keep in mind that if you disable the `Public install page` toggle, Bitrise won’t send install invite emails for the emails you specified. Only those can get the link who are in the app's team.
+* Keep in mind that the install invite emails contain the `Public install page` URL. If you invite someone **who’s not in your App’s team** and then disable the `Public install page` toggle, they won’t be able to access the install page! Those who are in your App’s team will be redirected to the Build’s page if the `Public install page` toggle is disabled. "%}
 
-**You can specify the list of groups and emails for automatic install invite notification** in the App's Workflow.
-Similarly to the Public page option just select the `Deploy to Bitrise.io` step in your Workflow
-and specify the list of groups and emails to automatically notify in the `Notify: User Groups` and `Notify: Emails` options.
+You can specify the list of groups and emails for automatic install invite notification in the App’s Workflow using the `Notify: User Groups` and `Notify: Emails` step input fields.
 
-Keep in mind that if you disable the _Public install page_ option,
-Bitrise won't send install invite emails for the emails you specify,
-only to those who are in the App's Team,
-because in this case only your team members can access the App (on the Build's page).
+### Test Devices
+
+If you built your **iOS App** with a **development or an ad hoc provisioning profile**, an additional section will be presented with a list of allowed device identifiers (UDID) on your Build's page. If you or a team member of your app’s team [register a device](/testing/registering-a-test-device/) for his/her Bitrise account and the device’s identifier can be found in the Provisioning Profile, you will see the following in the list:
+
+* the Test device identifier with its name
+* the person's name who registered the Test device
+
+For **Android** apps, you don’t have to register your test devices, as Android apps don’t have per-device install restrictions. However you’ll have to enable the `Unknown Sources` option in Android to be able to install the APK from outside of the Google Play Store.
+
+### Disabling Public Page for the App
+
+You can disable this toggle any time:
+
+* move the toggle to the left in your Build's `APPS & ARTIFACTS` or
+* set the step input field to `false` value in the Step
+
+{% include message_box.html type="warning" title="Who can receive the app after disabling?" content=" If you disable this function for the app, then only your app's team members will be able to install the app from Bitrise! Additionally, the `Notify: Emails` option will be ignored and the `Notify: User Roles` users will receive the build's URL instead of the public page's URL! "%}
