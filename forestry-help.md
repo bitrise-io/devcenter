@@ -77,3 +77,5 @@ The workaround is to use the {% raw %} tag to indicate to Jekyll that nothing wi
 Please, {{ Jekyll }}, just display everything, brackets and all here.
 
 {% endraw %} 
+
+Of course, this works for any formatting that might be lost otherwise when the site is built. 
