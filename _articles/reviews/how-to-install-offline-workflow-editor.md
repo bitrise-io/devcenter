@@ -45,11 +45,12 @@ Note that every time you make a change to the code, you have to exit the running
 
 ### Releasing a new version
 
-1. Generate a GitHub personal access token for your user (one who has rights to create releases on the repository) - you can generate one here: [https://github.com/settings/tokens](https://github.com/settings/tokens "https://github.com/settings/tokens")
-2. Generate a Discuss API key: you need to be a Discourse admin for this, then you can generate an API key for yourself at: [https://discuss.bitrise.io/admin/api/keys](https://discuss.bitrise.io/admin/api/keys "https://discuss.bitrise.io/admin/api/keys")
-3. Ensure clean git
-4. If new release requires Bitrise CLI to be updated, in `bitrise-plugin.yml` change `min_version` requirement of the `bitrise` tool to the required CLI version
-5. Optional: set the following secrets: $GITHUB_RELEASE_API_TOKEN, $GITHUB_USERNAME, $DISCUSS_API_KEY, $DISCUSS_USERNAME
+1. Generate a GitHub personal access token for your user (one who has rights to create releases on the repository) - you can generate one [here](https://github.com/settings/tokens).
+2. Generate a Discuss API key: 
+   * you need to be a Discourse admin for this, then you can generate an API key for yourself [here](https://discuss.bitrise.io/admin/api/keys).
+3. Ensure clean git.
+4. If new release requires Bitrise CLI to be updated, change `min_version` requirement of the `bitrise` tool to the required CLI version in `bitrise-plugin.yml`.
+5. _Optional step_: set the following secrets: `$GITHUB_RELEA_E_API_TOKEN`, `$GITHUB_USERNAME`, `$DISCUSS_API_KEY`, `$DISCUSS_USERNAME`
 6. Call `bitrise run create-release`
 7. During the build you will need to specify a new version number, and if you did not specify any of the secrets above, you will need to specify those as well.
 8. After the build has finished, close the related GitHub issues, and milestones if the issues were assigned to any.
