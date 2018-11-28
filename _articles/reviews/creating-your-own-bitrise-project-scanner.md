@@ -156,7 +156,7 @@ An options chain's last `options` cannot have a `value_map`.
 
 {% endraw %}
 
-## Scanners 
+## Scanners
 
 Scanners generate the possible `options` chains and the possible workflows for the `options` per project type. The `ActiveScanner` variable holds each scanner implementation. Every specific scanner implements the `ScannerInterface` method.
 
@@ -176,4 +176,8 @@ type ScannerInterface interface {
 }
 ```
 
-`Name() string`: 
+* `Name() string`: it is used for logging and storing the scanner output (warnings, options and configs). The scanner output is stored in `map[SCANNER_NAME]OUTPUT`. For example, an `options` map for an iOS project is stored in `optionsMap[ios]options`. 
+* `DetectPlatform(string) (bool, error)`: it is used to determine if the given search directory contains the project type or not.
+* `Options() (models.OptionModel, models.Warnings, error)`: it is used to generate option branches for the project. Each branch should define a complete and valid option set to build the final bitrise config model. Every option branch’s last `Options` has to store a configuration id, which will be filled with the selected options.
+* `Configs() (models.BitriseConfigMap, error)`: it is used to generate the possible configs. BitriseConfigMap’s each element is a bitrise config template which will be fulfilled with the user selected option values.
+* `DefaultOptions() models.OptionModel and DefaultConfigs() (models.BitriseConfigMap, error)` : they are used to generate the options and configs without scanning the given project. In this case every required step input value is provided by the user. This way even if a scanner fails, the user has an option to get started.
