@@ -15,7 +15,7 @@ The possible workflows are described in a scan result model. The model consists 
 * configs
 * warnings
 
-Here is the basic structure of the model:
+Here is the basic structure of the model, in YAML:
 
 ```yaml
 options:
@@ -64,7 +64,7 @@ Selecting an option can start a chain: it can lead to different options being pr
 
 ### The option model
 
-The OptionModel represents an input option. In Go, it looks something like this:
+The OptionModel represents an input option. It looks like this in Go:
 
 ```Go
 // OptionModel ...
@@ -91,6 +91,7 @@ By choosing `SchemeWithTest`, the next option will be related to the simulator u
 By choosing `SchemeWithoutTest`, the next option will be about the export method for the .ipa file.
 
 {% raw %}
+
 ```JSON
 {
     "title": "Scheme",
@@ -109,15 +110,17 @@ By choosing `SchemeWithoutTest`, the next option will be about the export method
     }
 }
 ```
+
 {% endraw %}
 
-Every option chain has a first option: this is called `head`. The possible values of the options can branch the option chain. 
+Every option chain has a first option: this is called `head`. The possible values of the options can branch the option chain.
 
-Every option branch's last `options` must have a `config` property set. `config` holds the id of the generated Bitrise configuration which will select the values for the options of the given project. 
+Every option branch's last `options` must have a `config` property set. `config` holds the id of the generated Bitrise configuration which will select the values for the options of the given project.
 
 An options chain's last `options` cannot have a `value_map`.
 
 {% raw %}
+
 ```JSON
 {
     "title": "Scheme",
@@ -150,4 +153,27 @@ An options chain's last `options` cannot have a `value_map`.
     }
 }
 ```
+
 {% endraw %}
+
+## Scanners 
+
+Scanners generate the possible `options` chains and the possible workflows for the `options` per project type. The `ActiveScanner` variable holds each scanner implementation. Every specific scanner implements the `ScannerInterface` method.
+
+```Go
+// ScannerInterface ...
+type ScannerInterface interface {
+    Name() string
+    DetectPlatform(string) (bool, error)
+
+    Options() (models.OptionModel, models.Warnings, error)
+    Configs() (models.BitriseConfigMap, error)
+
+    DefaultOptions() models.OptionModel
+    DefaultConfigs() (models.BitriseConfigMap, error)
+
+    ExcludedScannerNames() []string
+}
+```
+
+`Name() string`: 
