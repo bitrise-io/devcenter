@@ -66,8 +66,9 @@ can expose environment variables from your scripts too,
 using [envman](https://github.com/bitrise-io/envman/)):
 
 ```
+{% raw %}
 run_if: |-
- 	\{\{enveq "CUSTOM_ENV_VAR_KEY" "test value to test against"\}\}
+ 	{{ enveq "CUSTOM_ENV_VAR_KEY" "test value to test against"\}\}
 ```
 
 This `run_if` will skip the step in every case when the value of `CUSTOM_ENV_VAR_KEY`
