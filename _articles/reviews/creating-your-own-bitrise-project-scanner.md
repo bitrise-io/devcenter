@@ -15,7 +15,9 @@ The possible workflows are described in a scan result model. The model consists 
 * configs
 * warnings
 
-```
+Here is the basic structure of the model:
+
+```yaml
 options:
   DETECTED_PLATFORM_1: OptionModel
   DETECTED_PLATFORM_2: OptionModel
@@ -41,7 +43,7 @@ warnings:
   - "warning message 1"
   - "warning message 2"
   ...
-```
+ ```
 
 * Every platform scanner writes its possible options, configurations and warnings into this model. These will be translated into step input values by choosing the desired values for the given options.
 * Every option chain’s last option selects a configuration.
@@ -52,6 +54,27 @@ warnings:
 `Options` represents a question and the possible answers to the question. For example:
 
 * Question: What is the path to the iOS project files?
-* Possible answers: List of possible paths to check 
+* Possible answers: List of possible paths to check
 
 These questions and answers are translated into step inputs. The scanner should either determine the input value or let the user select or type the value.
+
+For example, the `Xcode Archive & Export for iOS` Step has an input called `export-method`. This informs the Step of the type of .ipa you want to export. The value cannot be determined based on the source code so the scanner collects every possible value and presents them to the user in the form of a list to choose from.
+
+Selecting an option can start a chain: it can lead to different options being presented afterwards. For example, if you select an Xcode scheme that has associated test targets, it leads to different "questions". Similarly, selecting a certain option can lead to a different workflow being generated afterwards.
+
+### The option model
+
+The OptionModel represents an input option:
+
+```Go
+// OptionModel ...
+type OptionModel struct {
+    Title  string
+    EnvKey string
+
+    ChildOptionMap map[string]*OptionModel
+    Config         string
+}
+```
+
+It

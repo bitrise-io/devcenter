@@ -21,6 +21,7 @@ pages:
 - _articles/builds/Starting-builds-manually.md
 - _articles/builds/triggering-builds/trigger-map.md
 - _articles/builds/bitrise-yml-online.md
+- _articles/reviews/creating-your-own-bitrise-project-scanner.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/infrastructure/available-stacks.md
@@ -68,4 +69,3 @@ pages:
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
 - _articles/reviews/how-to-install-offline-workflow-editor.md
 - _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
-- _articles/reviews/creating-your-own-bitrise-project-scanner.md
