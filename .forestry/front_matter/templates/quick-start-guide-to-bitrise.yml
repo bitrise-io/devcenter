@@ -23,7 +23,6 @@ pages:
 - _articles/reviews/creating-your-own-bitrise-project-scanner.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/reviews/frequent-android-issues.md
-- _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/builds/selective_builds.md
@@ -60,6 +59,7 @@ pages:
 - _articles/tutorials/xamarin/restore-nuget-packages.md
 - _articles/getting-started/signing-up/self-hosted-gitlab.md
 - _articles/getting-started/signing-up/connecting-apple-dev-account.md
+- _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
