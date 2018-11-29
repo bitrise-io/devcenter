@@ -54,6 +54,7 @@ pages:
 - _articles/tutorials/xamarin/index.md
 - _articles/tutorials/xamarin/deploy-your-xamarin-app.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
+- _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/getting-started/adding-a-new-app/index.md
 - _articles/getting-started/adding-a-new-app/public-apps.md
 - _articles/tutorials/xamarin/restore-nuget-packages.md
@@ -61,7 +62,6 @@ pages:
 - _articles/getting-started/signing-up/connecting-apple-dev-account.md
 - _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
 - _articles/reviews/decrypt-file-draft.md
-- _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
