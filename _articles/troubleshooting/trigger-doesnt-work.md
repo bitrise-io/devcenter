@@ -2,7 +2,7 @@
 title: Build Trigger does not work
 menu:
   troubleshooting:
-    weight: 6
+    weight: 7
 
 ---
 Unfortunately, it can happen that your build triggers do not trigger a build automatically on Bitrise. There are many potential issues that can stop your builds - let's take a look!

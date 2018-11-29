@@ -4,7 +4,7 @@ redirect_from:
 - "/android/frequent-android-issues/"
 menu:
   troubleshooting:
-    weight: 3
+    weight: 4
 
 ---
 ## Could not find an android package or you have not accepted the license agreements
