@@ -2,7 +2,7 @@
 title: Step properties
 menu:
   bitrise-cli:
-    weight: 8
+    weight: 7
 
 ---
 ### Step properties

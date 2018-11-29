@@ -5,7 +5,7 @@ redirect_from:
 - "/bitrise-cli/steps"
 menu:
   bitrise-cli:
-    weight: 7
+    weight: 6
 
 ---
 ## What is a Step

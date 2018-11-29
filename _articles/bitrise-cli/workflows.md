@@ -5,7 +5,7 @@ redirect_from:
 - "/bitrise-cli/workflows"
 menu:
   bitrise-cli:
-    weight: 6
+    weight: 5
 
 ---
 A workflow is a collection of steps, environment variables,
