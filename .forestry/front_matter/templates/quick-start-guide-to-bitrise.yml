@@ -54,9 +54,9 @@ pages:
 - _articles/tutorials/xamarin/index.md
 - _articles/tutorials/xamarin/deploy-your-xamarin-app.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
+- _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/getting-started/adding-a-new-app/index.md
 - _articles/getting-started/adding-a-new-app/public-apps.md
-- _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/tutorials/xamarin/restore-nuget-packages.md
 - _articles/getting-started/signing-up/self-hosted-gitlab.md
 - _articles/getting-started/signing-up/connecting-apple-dev-account.md
