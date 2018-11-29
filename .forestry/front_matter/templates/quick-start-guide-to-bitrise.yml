@@ -37,7 +37,6 @@ pages:
 - _articles/getting-started/adding-a-new-app/connecting-a-repository.md
 - _articles/getting-started/adding-a-new-app/setting-up-configuration.md
 - _articles/getting-started/adding-a-new-app/setting-up-ssh-keys.md
-- _articles/bitrise-cli/index.md
 - _articles/bitrise-cli/most-important-concepts.md
 - _articles/bitrise-cli/workflows.md
 - _articles/bitrise-cli/steps.md
@@ -55,6 +54,7 @@ pages:
 - _articles/tutorials/xamarin/deploy-your-xamarin-app.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/bitrise-cli/offline-workflow-editor.md
+- _articles/bitrise-cli/index.md
 - _articles/getting-started/adding-a-new-app/index.md
 - _articles/getting-started/adding-a-new-app/public-apps.md
 - _articles/tutorials/xamarin/restore-nuget-packages.md

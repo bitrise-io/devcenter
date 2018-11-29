@@ -39,11 +39,7 @@ or just want to use Bitrise for _any kind of automation_ on your machine.
 The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`,
 as that's the expected file name the configuration should be saved with.
 
-_Technically the CLI can also accept the configuration in JSON format,
-and the file name can be changed too, but if you save the configuration
-into a file named _`_bitrise.yml_`_, you can simply_ `_bitrise run_`_ in that directory,
-without specifying any configuration path, and the CLI will read the
-configuration from _`_bitrise.yml_` _automatically._
+_Technically the CLI can also accept the configuration in JSON format, and the file name can be changed too, but if you save the configuration into a file named `bitrise.yml`, you can simply `bitrise run` in that directory, without specifying any configuration path, and the CLI will read the configuration from `bitrise.yml` automatically._
 
 ## Step Library (StepLib)
 
@@ -53,8 +49,8 @@ are all open source, **you can write your own** too and then share it with other
 See the [step-template](https://github.com/bitrise-steplib/step-template) for more information.
 
 _You can also create your own Step Library if you want to, but it's usually
-easier to just reference your steps with their _`_git clone_`_ URL directly
-if you don't want to share it with others._
+easier to just reference your steps with their `git clone` URL directly
+if you don't want to share it with others.
 
 {% include message_box.html type="note" title="Custom StepLib support in tools" content="
 The Bitrise CLI tools can work with custom step libraries, but other tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io) might be limited in functionality for steps not available in the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib). "%}
