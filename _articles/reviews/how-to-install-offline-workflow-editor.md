@@ -11,9 +11,9 @@ Bitrise Workflow Editor is designed in such a way that you can run it offline on
 
 Make sure you perform the following steps to include Workflow Editor as one of the Bitrise CLI core plugins.
 
-1. In your Terminal/Command Line, install [Go](https://golang.org/) by typing `brew install go` command (on macOS). If it's already installed, you can update it to the most recent version by running `brew reinstall go`.
+1. In your Terminal/Command Line, install [Go](https://golang.org/) by running `brew install go` command (on macOS). If it's already installed, you can update it to the most recent version by running `brew reinstall go`.
 2. Install the latest [Bitrise CLI](/bitrise-cli/installation/). If it's already installed, you can upgrade to the most up-to-date version by running `brew reinstall bitrise`.
-3. Run `bitrise setup` to install Workflow Editor as part of the Bitrise Plugins. Running `bitrise setup` also checks if Bitrise Core tools, OS X tools, Bitrise Plugins and Toolkits are installed on your local machine. If not, the command will automatically install them.
+3. Run `bitrise setup` to install offline Workflow Editor as part of the Bitrise Plugins. Running `bitrise setup` also checks if Bitrise Core tools, OS X tools, Bitrise Plugins and Toolkits are installed on your local machine. If not, the command will automatically install them.
 
 ## Start offline Workflow Editor
 
@@ -55,7 +55,7 @@ Note that every time you make a change to the code, you have to exit the running
    Beware that you can only generate an API key for yourself if you are a Discourse admin.
 3. Ensure clean git.
 4. If new release requires Bitrise CLI to be updated, change `min_version` requirement of the `bitrise` tool to the required CLI version in `bitrise-plugin.yml`.
-5. _Optional step_: set the following secret environment variables:
+5. _Optional step:_ set the following secret environment variables:
    * `$GITHUB_RELEA_E_API_TOKEN`
    * `$GITHUB_USERNAME`
    * `$DISCUSS_API_KEY`
