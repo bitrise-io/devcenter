@@ -20,7 +20,7 @@ Make sure you have [Go](https://golang.org/) installed on your local computer.
 
 ## Start offline Workflow Editor
 
-If all the required tools are installed, all you have to do is start your offline Workflow Editor.
+If the required tools are installed, all you have to do is start your offline Workflow Editor.
 
 1. `cd` into a directory where you have your `bitrise.yml`.
 2. Run `bitrise :workflow-editor` command to start your offline session.
