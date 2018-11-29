@@ -62,6 +62,7 @@ pages:
 - _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
 - _articles/reviews/decrypt-file-draft.md
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
+- _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/reviews/managing-files-on-bitrise-draft.md
