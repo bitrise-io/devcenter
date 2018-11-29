@@ -11,9 +11,12 @@ Bitrise Workflow Editor is designed in such a way that you can run it offline on
 
 Make sure you perform the following steps to include Workflow Editor as one of the Bitrise CLI core plugins.
 
-1. In your Terminal/Command Line, install [Go](https://golang.org/) by running `brew install go` command (on macOS). If it's already installed, you can update it to the most recent version by running `brew reinstall go`.
-2. Install the latest [Bitrise CLI](/bitrise-cli/installation/). If it's already installed, you can upgrade to the most up-to-date version by running `brew reinstall bitrise`.
-3. Run `bitrise setup` to install offline Workflow Editor as part of the Bitrise Plugins. Running `bitrise setup` also checks if Bitrise Core tools, OS X tools, Bitrise Plugins and Toolkits are installed on your local machine. If not, the command will automatically install them.
+Before you start:
+
+Make sure you have [Go](https://golang.org/) installed on your local computer.
+
+1. Install the latest Bitrise CLI as discussed [here](/bitrise-cli/installation/).
+2. Run `bitrise setup` to install offline Workflow Editor as part of the Bitrise Plugins. Running `bitrise setup` also checks if Bitrise Core tools, OS X tools, Bitrise Plugins and Toolkits are installed on your local machine. If not, the command will automatically install them.
 
 ## Start offline Workflow Editor
 
@@ -53,7 +56,7 @@ Note that every time you make a change to the code, you have to exit the running
 2. [Generate](https://discuss.bitrise.io/admin/api/keys) a Discuss API key:
 
    Beware that you can only generate an API key for yourself if you are a Discourse admin.
-3. Ensure clean git.
+3. Ensure clean git so that there are no untracked files in your working directory.
 4. If new release requires Bitrise CLI to be updated, change `min_version` requirement of the `bitrise` tool to the required CLI version in `bitrise-plugin.yml`.
 5. _Optional step:_ set the following secret environment variables:
    * `$GITHUB_RELEA_E_API_TOKEN`
@@ -68,6 +71,6 @@ Note that every time you make a change to the code, you have to exit the running
 
 1. In `bitrise.yml`, create a workflow, for example, `test-release`.
 2. From the `create-release` workflow, copy-paste the `GitHub Release` and _Create Discuss topic_ steps.
-3. In the `GitHub release` Step, remove the `files_to_upload` input, set the `$NEW_RELEASE_VERSION` everywhere to something arbitrary, same for the `body`, and most importantly set `**draft: 'yes'**`
-4. In the `Create Discuss topic` Step, change the `**DISCUSS_CHANGELOG_CATEGORY_ID**` to the ID of one our [discuss.bitrise.io](https://discuss.bitrise.io)'s internal channels' ID (you can find an ID using the Discourse API with a cURL request) so that it is only visible to us; also change the `title` and the `raw` parameter to something arbitrary.
+3. In the `GitHub release` Step, remove the `files_to_upload` input, set the `$NEW_RELEASE_VERSION` everywhere to something arbitrary, same or the `body`, and most importantly set `draft: 'yes'`.
+4. In the `Create Discuss topic` Step, change the `DISCUSS_CHANGELOG_CATEGORY_ID` to the ID of one our [discuss.bitrise.io](https://discuss.bitrise.io)'s internal channels' ID (you can find an ID using the Discourse API with a cURL request) so that it is only visible to us; also change the `title` and the `raw` parameter to something arbitrary.
 5. After the test release process, don't forget to delete the draft release and the internal changelog topic.
