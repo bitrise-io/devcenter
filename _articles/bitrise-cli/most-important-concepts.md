@@ -4,7 +4,7 @@ redirect_from:
 - "/bitrise-cli/most-important-concepts.md"
 menu:
   bitrise-cli:
-    weight: 13
+    weight: 14
 
 ---
 ## Every input, output and parameter is an Environment Variable
