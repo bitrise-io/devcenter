@@ -11,11 +11,11 @@ Bitrise Workflow Editor is designed in such a way that you can run it offline on
 
 ## Installing offline Workflow Editor to your Mac/PC
 
-Make sure you perform the following steps to include Workflow Editor as one of the Bitrise CLI core plugins.
-
 Before you start:
 
 Make sure you have [Go](https://golang.org/) installed on your local computer.
+
+Make sure you perform the following steps to include Workflow Editor as one of the Bitrise CLI core plugins.
 
 1. Install the latest Bitrise CLI as discussed [here](/bitrise-cli/installation/).
 2. Run `bitrise setup` to install offline Workflow Editor as part of the Bitrise Plugins. Running `bitrise setup` also checks if Bitrise Core tools, OS X tools, Bitrise Plugins and Toolkits are installed on your local machine. If not, the command will automatically install them.
