@@ -51,7 +51,6 @@ pages:
 - _articles/builds/build-numbering-and-app-versioning.md
 - _articles/getting-started/account-security.md
 - _articles/builds/sensitive-input-field.md
-- _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/tutorials/xamarin/index.md
 - _articles/tutorials/xamarin/deploy-your-xamarin-app.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
@@ -62,6 +61,7 @@ pages:
 - _articles/getting-started/signing-up/connecting-apple-dev-account.md
 - _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
 - _articles/reviews/decrypt-file-draft.md
+- _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
