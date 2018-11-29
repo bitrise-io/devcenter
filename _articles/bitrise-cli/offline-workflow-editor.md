@@ -7,13 +7,13 @@ menu:
     weight: 3
 
 ---
-Bitrise Workflow Editor is designed in such a way that you can run it offline on your Mac/PC without having to log into [bitrise.io]( https://www.bitrise.io/). The Workflow Editor is open source, you can find its repository [here](https://github.com/bitrise-io/bitrise-workflow-editor). You can also join the join the discussion around Workflow Editor [here](https://discuss.bitrise.io/t/workflow-editor-v2-open-source-offline-workflow-editor/39).
+Bitrise Workflow Editor is designed in such a way that you can run it offline on your Mac/PC without having to log into [bitrise.io](https://www.bitrise.io/). The Workflow Editor is open source, you can find its repository [here](https://github.com/bitrise-io/bitrise-workflow-editor). You can also join the join the discussion around Workflow Editor [here](https://discuss.bitrise.io/t/workflow-editor-v2-open-source-offline-workflow-editor/39).
 
 ## Installing offline Workflow Editor to your Mac/PC
 
 Before you start:
 
-Make sure you have [Go](https://golang.org/) installed on your local computer.
+* Make sure you have [Go](https://golang.org/) installed on your local computer.
 
 Make sure you perform the following steps to include Workflow Editor as one of the Bitrise CLI core plugins.
 
