@@ -20,9 +20,7 @@ An example:
 
 ## Run a Step only in CI environment, skip it for local builds
 
-This is quite similar to how you [completely disable a step](#disable-a-step),
-but instead of specifying `false`
-as the `run_if` expression, you specify `.IsCI`, which will only be true in CI mode.
+This is quite similar to how you [completely disable a step](#disable-a-step), but instead of specifying `false` as the `run_if` expression, you specify `.IsCI`, which will only be true in CI mode.
 
 This method can be useful to debug builds locally, where you don't want to run
 specific steps on your own Mac/PC. Lots of Steps have this `run_if` flag set by default,
@@ -37,9 +35,7 @@ step if you want to run it locally too.
 
 ## Run a Step only if the Build failed
 
-_To do this you have to switch to_ `_bitrise.yml_`_ mode
-(open the Workflow Editor on bitrise.io -> left side: click on _`_bitrise.yml_`
-_to switch to the interactive_ `_bitrise.yml_` _editor)._
+_To do this you have to switch to `bitrise.yml` mode (open the Workflow Editor on bitrise.io -> left side: click on `bitrise.yml` to switch to the interactive `bitrise.yml` editor)._
 
 You have to add two properties to the Step you **only** want to run when
 the Build failed (at that point, when the Step would run):
