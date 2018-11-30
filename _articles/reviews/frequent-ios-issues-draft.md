@@ -6,9 +6,9 @@ published: false
 ---
 ## Searching for errors and issues in Xcode generated output
 
-{% include message_box.html type="note" title="Xcode output" content="The solutions presented here apply only to the raw, unfiltered output of Xcode. Every official Bitrise Xcode step has an `Output Tool` input with an `xcodebuild` option_._ If you can't find the error reason in the logs, make sure to switch the `Output Tool` option any Xcode Step you use to `xcodebuild` (Xcode's Command Line Tool). This results in a verbose output but will include everything the way it's produced by `xcodebuild`. "%} 
+{% include message_box.html type="note" title="Xcode output" content="The solutions presented here apply only to the raw, unfiltered output of Xcode. Every official Bitrise Xcode step has an `Output Tool` input with an `xcodebuild` option_._ If you can't find the error reason in the logs, make sure to switch the `Output Tool` option any Xcode Step you use to `xcodebuild` (Xcode's Command Line Tool). This results in a verbose output but will include everything the way it's produced by `xcodebuild`. "%}
 
-Search for `error:` in the Xcode logs: in 99% of the cases the error message covers the reason for your issues. 
+Search for `error:` in the Xcode logs: in 99% of the cases the error message covers the reason for your issues.
 
 If that doesn't work, search for `warning:`. In rare cases Xcode doesn't print an `error:` even if it fails.
 
@@ -44,7 +44,7 @@ OR:
 
 ### Solution:
 
-The problem, usually, is that you use Cocoapods but you specified the Xcode project (`.xcodeproj`) file instead of the Workspace (`.xcworkspace`) file. 
+The problem, usually, is that you use Cocoapods but you specified the Xcode project (`.xcodeproj`) file instead of the Workspace (`.xcworkspace`) file.
 
 1. Go to your App's **Workflows** tab on Bitrise.
 2. Click **Env Vars** and change the `BITRISE_PROJECT_PATH` item. This will change the default Project Path configuration for every workflow.
@@ -63,7 +63,7 @@ _This section was contributed by_ [_@kwoylie_](https://github.com/kwoylie)_, and
     gem "CFPropertyList","2.3.3"
     gem "sqlite3", "1.3.11"
 
-Fastlane, with xcpretty disabled, produced the following error on Bitrise: 
+Fastlane, with xcpretty disabled, produced the following error on Bitrise:
 
     $/usr/bin/xcrun /usr/local/lib/ruby/gems/2.3.0/gems/gym-1.10.0/lib/assets/wrap_xcodebuild/xcbuild-safe.sh -exportArchive -exportOptionsPlist '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_config20161003-2206-1f0vw3k.plist' -archivePath /Users/vagrant/Library/Developer/Xcode/Archives/2016-10-03/App\ 2016-10-03\ 05.57.17.xcarchive -exportPath '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_output20161003-2206-wjhjai'
     + xcodebuild -exportArchive -exportOptionsPlist /var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_config20161003-2206-1f0vw3k.plist -archivePath '/Users/vagrant/Library/Developer/Xcode/Archives/2016-10-03/App 2016-10-03 05.57.17.xcarchive' -exportPath /var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_output20161003-2206-wjhjai
@@ -106,30 +106,25 @@ Add a `Script` step to run the following:
 
     sudo /usr/bin/gem install bundler
 
-This will install bundler on the system Ruby and when the fastlane plugin calls bundle install then system Ruby will also install the neccessary dependencies
+This will install bundler on the system Ruby and when the fastlane plugin calls bundle install then system Ruby will also install the neccessary dependencies.
 
-## Works in local but not on Bitrise.io
+## The build works in local but not on bitrise.io
 
-_An example error:_ `_ld: file not found ..._`
+_Example:_ `_ld: file not found ..._`
 
-Go through the following steps. After every step, check if it solved your issue. 
+Go through the following steps. After every step, check if it solved your issue.
 
 1. Restart your Xcode and try a new build.
+2. Try a **clean build** in Xcode.
+3. Try resetting your simulator(s).
+4. If you use Cocoapods, try updating it:
 
-1. Try a **clean build** in Xcode.
+       [sudo] gem install cocoapods
 
-1. Try resetting your simulator(s).
+   Also make sure that your `Podfile.lock` is **committed into your repository**. The file describes exactly what versions of Pods you use. _Without this file Bitrise might download newer versions of Pods than the ones you use._
+5. Try deleting the `Pods` folder in your project and run the `pod install` command again.
 
-Another problem could be your CocoaPods version. Try updating your CocoaPods with the `[sudo] gem install cocoapods` command. Also make sure that your `Podfile.lock` is **committed into your repository**, as that's the file which describes the exact Pod versions you use. _Without this Bitrise might download newer versions of Pods than the ones you use._
-
-If there's still no error try deleting the `Pods` folder in your project and run the `pod install` command again.
-
-Finally, if none of the above helped, or you get an error with `ld: file not found` on Bitrise, and the path contains `DerivedData`, with no other error message, like this:
-
-    ld: file not found: /Users/vagrant/Library/Developer/Xcode/DerivedData/...
-    clang: error: linker command failed with exit code 1 (use -v to see invocation)
-
-Try deleting the Xcode local cache. After that the error should be reproducible on your local machine.
+If none of the above helped, try deleting the Xcode local cache. After that the error should be reproducible on your local machine.
 
 You can delete the local Xcode cache using your Terminal:
 
