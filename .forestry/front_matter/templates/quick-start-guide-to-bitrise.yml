@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/builds/Scheduling-Builds.md
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
@@ -51,7 +52,6 @@ pages:
 - _articles/builds/triggering-builds/trigger-map.md
 - _articles/bitrise-cli/steps.md
 - _articles/bitrise-cli/workflows.md
-- _articles/builds/Scheduling-Builds.md
 - _articles/webhooks/index.md
 - _articles/getting-started/adding-a-new-app/public-apps.md
 - _articles/tutorials/deploy/android-deployment.md
