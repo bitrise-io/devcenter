@@ -215,7 +215,7 @@ To generate dSYM, go to your `Xcode Project's Settings -> Build Settings -> Debu
 
 **Solution:** Generate a new Certificate on the Apple Developer portal, **not** in Xcode.
 
-Another solution might be: make sure you have the proper Signing Identity and Provisioning Profile in Xcode project settings for both the target and for the project.
+Another possible solution: make sure you have the proper Signing Identity and Provisioning Profile in Xcode project settings for both the target and for the project.
 
 ## No identity found
 
@@ -241,11 +241,9 @@ Or: `No mobileprovision_path found`
 
 If you get this error in the Xcode Archive step you should check your Xcode Projects settings. Most likely you have the `Skip Install` option set to `YES`.
 
-This should only be used for iOS frameworks, **for iOS apps this should be set to** `NO`.
+This should only be used for iOS frameworks! **For iOS apps this should be set to** `NO`.
 
-You can check out [the official documentation](https://developer.apple.com/library/ios/technotes/tn2215/_index.html).
-
-Look up the _Xcode successfully archived my application, but the Archives Organizer does not list my archive_ section.
+You can check out [the official documentation](https://developer.apple.com/library/ios/technotes/tn2215/_index.html). Look up the _Xcode successfully archived my application, but the Archives Organizer does not list my archive_ section.
 
 ### Possible solution 2: `Installation Directory` Xcode Settings
 
@@ -289,16 +287,12 @@ Error:
     \
     }
 
-Solution:
-
-> So to put it simply my problem was my UI Tests were failing.
-
-The steps leading to the failure were the following:
-
-1. Unit tests run and pass. However a few of the unit tests are FBSnapshotTestCase tests which are kind of UI Tests but are still kept in the unit test bundle. They launch the app and compare screens with reference images of the screen.
+1. Unit tests run and pass. However, a few of the unit tests are FBSnapshotTestCase tests which are kind of UI Tests but are still kept in the unit test bundle. They launch the app and compare screens with reference images of the screen.
 2. When a FBSnapshot TestCase is run it launches the app and launches a system alert dialog asking the user for permission for push notifications (this is just something that's done in the AppDelegate in my app every fresh install).
 3. When the UITests start the permissions dialog is still visible and overlaying the screen.
 4. The application tries to access some XCUIElements but fails because of the overlaying permissions dialog and eventually fails
+
+Solution: 
 
 I resolved this by adding a check in the AppDelegate (where we fire the permissions dialog) if we are running in unit test mode and only asking for permissions when not running unit tests:
 
@@ -317,5 +311,3 @@ I resolved this by adding a check in the AppDelegate (where we fire the permissi
     
     askForNotificationPermission()
     }
-
-> This is probably a pretty big edge case but just wanted to report this to you if someone might encounter this problem sometime. Hopefully this will come to use to someone.
