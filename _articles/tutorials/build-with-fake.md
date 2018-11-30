@@ -50,7 +50,7 @@ printf "\e[34mExecuting ${fake_build_script}\e[0m\n"
 $(IFS=' '; echo "${command[*]}")
 ```
 
-You should update the `output_directory` and `fake_build_script` variables for your needs and you are ready to go!
+{% include message_box.html type="important" title="Don't forget!" content=" 
 
-!!! note
-    You should set the `output_directory` to the same directory where your build script will search for the FAKE dlls.
+* You should update the `output_directory` and `fake_build_script` variables for your needs and you are ready to go!
+* You should set the `output_directory` to the same directory where your build script will search for the FAKE dlls." %}
