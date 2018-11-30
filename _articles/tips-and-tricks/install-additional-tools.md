@@ -9,7 +9,7 @@ If you need something you can't find a Step for, you can always install & use to
 
 Just add a `Script` step to your Workflow, and either write your script there, or run a script from your repository.
 
-_Passwordless_ `_sudo_` _is enabled on all of our build virtual machines, so you can freely use_ `_sudo_` _if you need it._
+_Passwordless `sudo` is enabled on all of our build virtual machines, so you can freely use `sudo` if you need it._
 
 Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib).
 You can find a template and more information about how you can create your own Step at: [https://github.com/bitrise-steplib/step-template](https://github.com/bitrise-steplib/step-template)
@@ -35,7 +35,7 @@ Or, in a more robust form (which is better if you want to extend the content in 
     set -ex
     bash ./path/to/script.sh
 
-_The_ `_set -ex_` _line is recommended for every multi-line Bash script, to make your scripts easier to debug._
+_The `set -ex` line is recommended for every multi-line Bash script, to make your scripts easier to debug._
 
 You can of course run non Bash scripts too, e.g. a Ruby script:
 
@@ -74,7 +74,7 @@ For example, to install `cmake` with a script step, on Linux, using `apt-get`:
     sudo apt-get install -y cmake
 
 {% include message_box.html type="important" title="Don't forget the `-y` flag for `apt-get`!" content="
-If you don't add the `-y` (\"yes\") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny **manually**. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example.
+If you don't add the `-y` ("yes") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny **manually**. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example.
 "%}
 
 ## Advanced option: use `deps` in `bitrise.yml`
@@ -163,9 +163,7 @@ to run different scripts in case of a Pull Request and a non Pull Request build:
       bash ./path/to/not-pull-request.sh
     fi
 
-_Note: if you **don't** want to run any part of the Step/script based on a variable (like_ `_$PR_`_),
-you don't have to implement the check in the script. You can use the _`_run_if_`_ expression in
-the _`_bitrise.yml_` _directly to declare in which case(s) the Step should run. Additionally,_
-`_run_if_`_ can be added to any step, not just to Script steps.
-You can find more information about _`_run_if_`_ expressions
-in _[_this guide_](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed)_._
+_Note: if you **don't** want to run any part of the Step/script based on a variable (like `$PR`),
+you don't have to implement the check in the script. You can use the `run_if` expression in
+the `bitrise.yml` directly to declare in which case(s) the Step should run. Additionally,
+`run_if` can be added to any step, not just to Script steps. You can find more information about `run_if` expressions in [this guide](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed)_.
