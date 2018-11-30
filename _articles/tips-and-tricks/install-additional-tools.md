@@ -74,7 +74,7 @@ For example, to install `cmake` with a script step, on Linux, using `apt-get`:
     sudo apt-get install -y cmake
 
 {% include message_box.html type="important" title="Don't forget the `-y` flag for `apt-get`!" content="
-If you don't add the `-y` (\"yes \") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example.
+If you don't add the `-y` (\"yes\") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example.
 "%}
 
 
