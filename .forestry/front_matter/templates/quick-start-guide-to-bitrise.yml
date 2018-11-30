@@ -19,7 +19,6 @@ pages:
 - _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
 - _articles/bitrise-cli/index.md
 - _articles/bitrise-cli/offline-workflow-editor.md
-- _articles/reviews/decrypt-file-draft.md
 - _articles/reviews/creating-your-own-bitrise-project-scanner.md
 - _articles/reviews/how-to-install-offline-workflow-editor.md
 - _articles/reviews/frequent-android-issues.md
