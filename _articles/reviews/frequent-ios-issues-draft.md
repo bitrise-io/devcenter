@@ -8,9 +8,9 @@ published: false
 
 {% include message_box.html type="note" title="Xcode output" content="The solutions presented here apply only to the raw, unfiltered output of Xcode. Every official Bitrise Xcode step has an `Output Tool` input with an `xcodebuild` option_._ If you can't find the error reason in the logs, make sure to switch the `Output Tool` option any Xcode Step you use to `xcodebuild` (Xcode's Command Line Tool). This results in a verbose output but will include everything the way it's produced by `xcodebuild`. "%} 
 
-You should search for `error:` in the Xcode logs, in 99% of the cases that'll be the one which causes your issues.
+Search for `error:` in the Xcode logs: in 99% of the cases the error message covers the reason for your issues. 
 
-If that doesn't work you should also search for `warning:`, in rare cases Xcode doesn't print an `error:` even if it fails.
+If that doesn't work, search for `warning:`. In rare cases Xcode doesn't print an `error:` even if it fails.
 
 If you have the logs on your own machine then you can run something like this in your Terminal:
 
@@ -19,9 +19,9 @@ If you have the logs on your own machine then you can run something like this in
 
 ## Xcode Scheme not found
 
-The first thing you should check if you can't see your Xcode project's scheme during setup, or if you get a `The project named "Foo" does not contain a scheme named "Bar"` error during build, is your Xcode project settings.
+If you can't see your Xcode project's scheme during setup, or if you get a `The project named "Foo" does not contain a scheme named "Bar"` error during build, **check your Xcode project settings.**
 
-* Check if the desired Scheme is shared
+* Check if the desired Scheme is shared - Bitrise only works with shared schemes.
 * When you share your scheme the Xcode project changes. Don't forget to **commit** and to **push** your changes!
 * If the related validation is still running on Bitrise abort it and try to run it again.
 
@@ -29,7 +29,7 @@ The first thing you should check if you can't see your Xcode project's scheme du
 
 **Don't forget to commit & push the changes** if you just enabled the Shared option! This change should be reflected in your `git` repository, under you project / workspace (which is actually a directory, just seems like a file in Finder): `*.xcodeproj OR *.xcworkspace/xcshareddata/xcschemes/SchemeName.xcscheme`.
 
-If you still can't see the desired Scheme, try to look into your `.gitignore` file and check if you are ignoring the config files of your Xcode project.
+If you still can't see the desired Scheme, look into your `.gitignore` file and check if you are ignoring the config files of your Xcode project.
 
 ## CocoaPods (missing) dependency issue
 
@@ -44,13 +44,16 @@ OR:
 
 ### Solution:
 
-Most likely you use Cocoapods but you specified the Xcode project (.xcodeproj) file instead of the Workspace (`.xcworkspace`) file. Go to your App's **Workflow tab** on Bitrise, click **Manage Workflows**, click **App Environments** and change the `BITRISE_PROJECT_PATH` item. This will change the default Project Path configuration for every workflow.
+The problem, usually, is that you use Cocoapods but you specified the Xcode project (`.xcodeproj`) file instead of the Workspace (`.xcworkspace`) file. 
 
-**If it worked before** and the `BITRISE_PROJECT_PATH` did not solve the issue, then check your App's other environments - the project file path might be overwritten by a Workflow environment variable, or you might have specified a Project Path for the related Xcode step directly.
+1. Go to your App's **Workflows** tab on Bitrise.
+2. Click **Env Vars** and change the `BITRISE_PROJECT_PATH` item. This will change the default Project Path configuration for every workflow.
+
+**If it worked before** and the `BITRISE_PROJECT_PATH` did not solve the issue, then check your App's other environment variables. The project file path might be overwritten by a Workflow environment variable, or you might have specified a Project Path for the related Xcode step directly.
 
 ## Fastlane Export Issue
 
-_This section was contributed by_ [_@kwoylie_](https://github.com/kwoylie)_, and applies if you have a_ `_Gemfile_` _in your repository and you use the_ `_fastlane_` _step which uses the_ `_Gemfile_` _automatically if present._
+_This section was contributed by_ [_@kwoylie_](https://github.com/kwoylie)_, and applies if you have a_ `Gemfile` _in your repository and you use the_ `fastlane` _step which uses the_ `Gemfile` _automatically if present._
 
 `Gemfile` content was:
 
@@ -60,9 +63,7 @@ _This section was contributed by_ [_@kwoylie_](https://github.com/kwoylie)_, and
     gem "CFPropertyList","2.3.3"
     gem "sqlite3", "1.3.11"
 
-I have been battling issues with Fastlane just not letting me export to an enterprise build on bitrise cloud service. But it works perfectly fine on my colleagues and my machine.
-
-I had disabled xcpretty on Fastlane and got the following error from gym:
+Fastlane, with xcpretty disabled, produced the following error on Bitrise: 
 
     $/usr/bin/xcrun /usr/local/lib/ruby/gems/2.3.0/gems/gym-1.10.0/lib/assets/wrap_xcodebuild/xcbuild-safe.sh -exportArchive -exportOptionsPlist '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_config20161003-2206-1f0vw3k.plist' -archivePath /Users/vagrant/Library/Developer/Xcode/Archives/2016-10-03/App\ 2016-10-03\ 05.57.17.xcarchive -exportPath '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_output20161003-2206-wjhjai'
     + xcodebuild -exportArchive -exportOptionsPlist /var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_config20161003-2206-1f0vw3k.plist -archivePath '/Users/vagrant/Library/Developer/Xcode/Archives/2016-10-03/App 2016-10-03 05.57.17.xcarchive' -exportPath /var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/gym_output20161003-2206-wjhjai
@@ -80,7 +81,7 @@ I had disabled xcpretty on Fastlane and got the following error from gym:
     	<IDEDistributionContext: 0x7f868c4b0e70; archive = '<IDEArchive: 0x7f868c4af8d0>', distributionMethod='(null)', teamID='(null)'>
     </IDEDistributionContext: 0x7f868c51ed70>
 
-This error is a little decieving, thinking it might be a code signing error or some weird configuration issue with Fastlane. But if you look further into the error, you may see the following:
+This error is misleading: it looks like it might be a code signing error or some configuration issue with fastlane. But if you look further into the error, you may see the following:
 
     2016-10-03 13:01:58 +0000 [MT] Running /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/IDEDistributionThinningStep.s1x' '--json' '/var/folders/90/5stft2v13fb_m_gv3c8x9nwc0000gn/T/ipatool-json-filepath-RUCdRR' '--info' '--toolchain' '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr' '--platforms' '/Applications/Xcode.app/Contents/Developer/Platforms'
     2016-10-03 13:01:58 +0000  ruby 2.0.0p648 (2015-12-16 revision 53162) [universal.x86_64-darwin15]
@@ -132,22 +133,22 @@ You can delete the local Xcode cache using your Terminal:
 
     rm -rf ~/Library/Developer/Xcode/DerivedData
 
-## Step hangs (times out after a period without any logs)
+## Step hangs
 
-Check whether the scripts you use trigger any GUI prompts or popups, or wait for any user input. If a script waits for any user input it can cause the build to hang.
+If a Step times out after a period without any logs, check if the scripts you use trigger any GUI prompts or popups, or wait for any user input. If a script waits for any user input it can cause the build to hang.
 
 Most frequent sources of this issue:
 
 * `Xcode` (command line tools) might hang if you try to build a Scheme which is not marked as **shared**. Usually it hangs right after you start any `xcodebuild` command (e.g. `xcodebuild -list` or `xcodebuild .. archive`).
-  * **Solution**: Please make sure that you marked the Scheme as **shared**, and that you actually committed & pushed it into your repository. For more information please follow this guide: [Xcode scheme not found](#xcode-scheme-not-found).
+  * **Solution**: Make sure that you marked the Scheme as **shared**, and that you actually committed & pushed it into your repository. For more information please follow this guide: [Xcode scheme not found](#xcode-scheme-not-found).
 * Your script tries to access an item in the OS X Keychain and the item is configured to ask for permission before access (this is the default type of Access Control configuration if you add an item - for example a password - to Keychain)
 * You try to use a script or tool which requires permissions where OS X presents a popup for acceptance (for example an `osascript`). You can use a workaround to allow the tool, without manual interaction by the user, for example by using [https://github.com/jacobsalmela/tccutil](https://github.com/jacobsalmela/tccutil "https://github.com/jacobsalmela/tccutil").
-  * For example to add `osascript` to the allowed OS X Accessibility list you can call **tccutil** from your script (don't forget to include it in your repository or download on-the-fly): `sudo python tccutil.py -i /usr/bin/osascript`
-  * You can download the script from GitHub directly, for example: `wget ``[https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py](https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py "https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py")`.
+  * For example, to add `osascript` to the allowed OS X Accessibility list, you can call **tccutil** from your script (don't forget to include it in your repository or download on-the-fly): `sudo python tccutil.py -i /usr/bin/osascript`
+  * You can download the script from GitHub directly. For example: `wget ``[https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py](https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py "https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py")`.
 * It can also be **something in your app's code**. An example: one of our user had a simple **popup in the app, presented only at the first start of the app**. Once the popup was dismissed, the fact was stored in the app's local storage, and the popup was not shown anymore. They did dismiss the popup on their iOS Simulator, but on Bitrise every build runs in a brand new, clean environment, which means that the simulator is in the same state as if you'd hit **"Reset Content and Settings"** in the iOS Simulator's menu.
-  * **Solution**: try to clean out the simulator/emulator before you'd run the tests on your Mac/PC, to simulate the "first run" experience.
+  * **Solution**: try to clean out the simulator/emulator before running tests on your Mac/PC, to simulate the "first run" experience.
 
-It might also be that the build does not hang, **it just doesn't generate any log output**. This can happen for various reasons; you can find an example in case of an [iOS library project](https://github.com/bitrise-samples/xcodebuild-piped-output-issue-reproduction).
+Occasionally, a build **just doesn't generate any log output**. This can happen for various reasons; you can find an example in case of an [iOS library project](https://github.com/bitrise-samples/xcodebuild-piped-output-issue-reproduction).
 
 ## CocoaPods frameworks signing issue
 
