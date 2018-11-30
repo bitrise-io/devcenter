@@ -257,11 +257,23 @@ _Huge thanks to **Antje**, who reported this solution!_
 
 ## Duplicated Schemes
 
-If you have multiple Schemes in your Xcode Project or Workspace with the **exact same name**, when your project is built with Xcode's Command Line Tools Xcode will select one of these Schemes/Configurations, **randomly**. This can result in random build success / failure, and if you check the Raw Xcode output you'll see something like this: `xcodebuild: error: Scheme YOUR_DUPLICATED_SCHEME is not currently configured for the test action` when it fails.
+If you have multiple Schemes in your Xcode Project or Workspace with the **exact same name**, Xcode will select one of these Schemes/Configurations **randomly** when building your project. This can result in random build success / failure, and if you check the raw Xcode output you'll see something like this: `xcodebuild: error: Scheme YOUR_DUPLICATED_SCHEME is not currently configured for the test action` when it fails.
 
-This might also happen if you use CocoaPods and one of your Pods have the same name as your project.
+This can also happen if you use CocoaPods and one of your Pods have the same name as your project.
 
-In any way you can debug this by listing the available Schemes with Xcode's command line tool. In your project's directory run: `xcodebuild -workspace ./path/to/workspace/file -list` - or if you use a project file instead of a workspace file: `xcodebuild -project ./path/to/project/file -list`. There should be no duplicated Scheme in the printed list. You can run this command on your Mac and on bitrise.io too (just add it to a Script step), and ideally you should see the same list.
+To debug this, list the available Schemes with Xcode's command line tool. In your project's directory, run: 
+
+```
+xcodebuild -workspace ./path/to/workspace/file -list
+```
+
+If you use a project file instead of a workspace file, run this: 
+
+```
+xcodebuild -project ./path/to/project/file -list
+``` 
+
+There should be no duplicated Scheme in the printed list. To run this command on bitrise.io, add it to a Script step. Compare the results after running it both on your computer and on bitrise.io: the lists should be identical.
 
 ## System dialog blocks the tests to run
 
