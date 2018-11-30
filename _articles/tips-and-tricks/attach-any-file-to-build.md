@@ -50,6 +50,6 @@ An example configuration:
             - deploy_path: /deploy/this/directory/recursively
             - is_compress: 'true'
 
-_Note: as every input's,_ `_is_compress_`_'s value have to be a **string**, that's why_ `_true_` _is surrounded with quotes._
+_Note: as every input's,_ `is_compress`_'s value have to be a **string**, that's why_ `_true_` _is surrounded with quotes._
 
 {% include message_box.html type="note" title="Using more than one `Deploy to Bitrise.io` step" content=" You can use as many `Deploy to Bitrise.io` steps as you want to, even in a single build / workflow. Alternatively of course you can move all the files you want to deploy into a single directory, and deploy that directory with the step, it's up to you to decide which solution works best for you."%}
