@@ -98,25 +98,27 @@ This error is misleading: it looks like it might be a code signing error or some
     2016-10-03 13:01:59 +0000 [MT] /Applications/Xcode.app/Contents/Developer/usr/bin/ipatool exited with 1
     2016-10-03 13:01:59 +0000 [MT] ipatool JSON: (null)
 
-So after alot of investigation, Fastlane reverts back to Mac OS system's ruby for exporting. But the system ruby doesn't have json 1.8.3 installed.
+What happens is that fastlane reverts back to the Mac OS system's Ruby for exporting. But the system Ruby doesn't have json 1.8.3 installed.
 
 ### Solution:
 
-To fix this issue, you just have to add a `Script` step to run the following:
+Add a `Script` step to run the following:
 
     sudo /usr/bin/gem install bundler
 
-This will install bundler on the system ruby and when the fastlane plugin calls bundle install then system ruby will also installed the neccessary dependencies
+This will install bundler on the system Ruby and when the fastlane plugin calls bundle install then system Ruby will also install the neccessary dependencies
 
 ## Works in local but not on Bitrise.io
 
 _An example error:_ `_ld: file not found ..._`
 
-First of all restart your Xcode and try a new build.
+Go through the following steps. After every step, check if it solved your issue. 
 
-If it doesn't help try a **clean build** in Xcode.
+1. Restart your Xcode and try a new build.
 
-If no error was displayed, try resetting your simulator(s).
+1. Try a **clean build** in Xcode.
+
+1. Try resetting your simulator(s).
 
 Another problem could be your CocoaPods version. Try updating your CocoaPods with the `[sudo] gem install cocoapods` command. Also make sure that your `Podfile.lock` is **committed into your repository**, as that's the file which describes the exact Pod versions you use. _Without this Bitrise might download newer versions of Pods than the ones you use._
 
