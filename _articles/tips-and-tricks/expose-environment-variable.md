@@ -5,12 +5,7 @@ menu:
     weight: 4
 
 ---
-You can expose Environment Variables from one Step,
-to make it available for every other Step performed after the Step during the build.
-An example might be that you want to generate a
-release note which you want to use in a message or deploy step.
-Exposing environment variables is really easy,
-you just have to use [envman](https://github.com/bitrise-io/envman/) if you want to make it available for every other Step.
+You can expose Environment Variables from one Step, to make it available for every other Step performed after the Step during the build. An example might be that you want to generate a release note which you want to use in a message or deploy step. Exposing environment variables is really easy, you just have to use [envman](https://github.com/bitrise-io/envman/) if you want to make it available for every other Step.
 
 A very simple example might be:
 
@@ -29,7 +24,7 @@ or read the value from a file:
 
     envman add --key MY_RELEASE_NOTE --valuefile ./some/file/path
 
-_You can read more about how_ `_envman_`can be used on it's [_GitHub page_](https://github.com/bitrise-io/envman/).
+You can read more about how `envman `can be used on it's [GitHub page](https://github.com/bitrise-io/envman/).
 
 {% include message_box.html type="warning" title="Env Var value size limit" content="
 Environment Variable values set through `envman` are limited to 10KB by default. This is done in order to prevent issues with common tools. Different tools have different environment size constraints, e.g. `Bash` will start to fail on OS X once the environments set exceed \~120KB (**in total, not a single variable!**). "%}
