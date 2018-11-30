@@ -56,5 +56,4 @@ and write your own download code, something like this:
     # Uncompress it
     unzip -u "download/path" -d "uncompress/target/path"
 
-_If you'd need an additional tool to download or uncompress the resources file,
-please see the _[_Install Any Additional Tool_](/tips-and-tricks/install-additional-tools/) _guide._
+_If you'd need an additional tool to download or uncompress the resources file, please see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide._
