@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
 - _articles/bitrise-cli/index.md
 - _articles/bitrise-cli/offline-workflow-editor.md
@@ -57,7 +58,6 @@ pages:
 - _articles/tutorials/deploy/android-deployment.md
 - _articles/troubleshooting/frequent-ios-issues.md
 - _articles/getting-started/adding-a-new-app/index.md
-- _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/tutorials/xamarin/deploy-your-xamarin-app.md
 - _articles/tutorials/xamarin/restore-nuget-packages.md
 - _articles/code-signing/ios-code-signing/code-signing.md
