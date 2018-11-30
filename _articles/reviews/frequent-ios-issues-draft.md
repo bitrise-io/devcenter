@@ -189,27 +189,27 @@ If you try to install an Enterprise distribution signed app you might get a popu
 
 ![iOS Untrusted Enterprise Developer popup](/img/ios/ios-untrusted-enterprise-developer.png)
 
-Starting with iOS 9 there's no option to "Trust" the developer right from the popup.
+Starting with iOS 9, there's no option to "Trust" the developer right from the popup.
 
 You can Trust the developer and enable the app to run in iOS Settings:
 
-1. Open the Settings app on your iPhone or iPad
-2. Select the `General` category
-3. Select the `Profile` option
+1. Open the Settings app on your iPhone or iPad.
+2. Select the `General` category.
+3. Select the `Profile` option.
    * starting with iOS 9.2 the option was renamed to `Device Management` instead of `Profile`
-4. Tap on the Enterprise App option related to the app (the one mentioned in the popup)
-5. Tap the `Trust "The Developer's Name"` button
-6. A popup will appear, tap on `Trust` again
+4. Tap on the Enterprise App option related to the app (the one mentioned in the popup).
+5. Tap the `Trust "The Developer's Name"` button.
+6. A popup will appear, tap on `Trust` again.
 
 You should now be able to run the app, and any other Enterprise app from the same developer.
 
 ## No dSYM found
 
-A couple of services require the dSYM to be present for deployment but you might have disabled the dSYM generation in your Xcode project.
+A couple of services require debug symbols (dSYM) to be present for deployment but dSYM generation might have been disabled in your Xcode project.
 
 ### Solution:
 
-To generate debug symbols (dSYM) go to your `Xcode Project's Settings -> Build Settings -> Debug Information Format` and set it to _DWARF with dSYM File_.
+To generate dSYM, go to your `Xcode Project's Settings -> Build Settings -> Debug Information Format` and set it to _DWARF with dSYM File_.
 
 ## Invalid IPA: get-task-allow values in the embedded .mobileprovision don't match your binary
 
@@ -241,23 +241,23 @@ Or: `No mobileprovision_path found`
 
 If you get this error in the Xcode Archive step you should check your Xcode Projects settings. Most likely you have the `Skip Install` option set to `YES`.
 
-This should only be used for iOS frameworks, **for iOS apps this should be set to** `**NO**`.
+This should only be used for iOS frameworks, **for iOS apps this should be set to** `NO`.
 
-You can find the official documentation at: [https://developer.apple.com/library/ios/technotes/tn2215/_index.html](https://developer.apple.com/library/ios/technotes/tn2215/_index.html "https://developer.apple.com/library/ios/technotes/tn2215/_index.html")
+You can check out [the official documentation](https://developer.apple.com/library/ios/technotes/tn2215/_index.html).
 
-* under the _Xcode successfully archived my application, but the Archives Organizer does not list my archive_ section.
+Look up the _Xcode successfully archived my application, but the Archives Organizer does not list my archive_ section.
 
 ### Possible solution 2: `Installation Directory` Xcode Settings
 
-**Another cause of the issue can be** if you (or a tool you use) modifies the `Build Setting -> Deployment -> Installation Directory` settings in your Xcode Project. This can result in an `.xcarchive` where your app is not generated into the canonical `Products/Applications` folder, but instead into a `Products/Users/USERNAME/...` folder, including the full absolute path of an intermediate build.
+If something modifies the `Build Setting -> Deployment -> Installation Directory` settings in your Xcode Project, it can result in an `.xcarchive` where your app is not generated into the canonical `Products/Applications` folder, but instead into a `Products/Users/USERNAME/...` folder, including the full absolute path of an intermediate build.
 
-**Solution:** Please make sure that the `Installation Directory` option is set to `$(LOCAL_APPS_DIR)` (the default value when you generate a new iOS Xcode Project) or `/Applications` (which is the default value of `$(LOCAL_APPS_DIR)`) in your Xcode Project settings, and that no build tool you use modifies this option.
+**Solution:** Make sure that the `Installation Directory` option is set to `$(LOCAL_APPS_DIR)` (the default value when you generate a new iOS Xcode Project) or `/Applications` (which is the default value of `$(LOCAL_APPS_DIR)`) in your Xcode Project settings, and that no build tool you use modifies this option.
 
 _Huge thanks to **Antje**, who reported this solution!_
 
 ## Duplicated Schemes
 
-This is quite rare, but worth checking. If you have multiple Schemes in your Xcode Project or Workspace with the **exact same name**, when your project is built with Xcode's Command Line Tools Xcode will select one of these Schemes/Configurations, **randomly**. This can result in random build success / failure, and if you check the Raw Xcode output you'll see something like this: `xcodebuild: error: Scheme YOUR_DUPLICATED_SCHEME is not currently configured for the test action` when it fails.
+If you have multiple Schemes in your Xcode Project or Workspace with the **exact same name**, when your project is built with Xcode's Command Line Tools Xcode will select one of these Schemes/Configurations, **randomly**. This can result in random build success / failure, and if you check the Raw Xcode output you'll see something like this: `xcodebuild: error: Scheme YOUR_DUPLICATED_SCHEME is not currently configured for the test action` when it fails.
 
 This might also happen if you use CocoaPods and one of your Pods have the same name as your project.
 
