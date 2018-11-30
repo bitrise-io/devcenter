@@ -130,26 +130,26 @@ You can delete the local Xcode cache using your Terminal:
 
     rm -rf ~/Library/Developer/Xcode/DerivedData
 
-## Step hangs
+## A Step hangs
 
-If a Step times out after a period without any logs, check if the scripts you use trigger any GUI prompts or popups, or wait for any user input. If a script waits for any user input it can cause the build to hang.
+If a Step times out after a period without any logs, check if the scripts you use trigger any GUI prompts or popups, or wait for any user input. If a script waits for any user input, it can cause the build to hang.
 
-Most frequent sources of this issue:
+Most frequent sources of this issue with an iOS project:
 
-* `Xcode` (command line tools) might hang if you try to build a Scheme which is not marked as **shared**. Usually it hangs right after you start any `xcodebuild` command (e.g. `xcodebuild -list` or `xcodebuild .. archive`).
-  * **Solution**: Make sure that you marked the Scheme as **shared**, and that you actually committed & pushed it into your repository. For more information please follow this guide: [Xcode scheme not found](#xcode-scheme-not-found).
+* Trying to build a Scheme which is not marked as **shared**. Usually, it hangs right after you start any `xcodebuild` command (e.g. `xcodebuild -list` or `xcodebuild .. archive`).
+  * **Solution**: Make sure that you marked the Scheme as **shared**, and that you actually committed & pushed it into your repository. 
 * Your script tries to access an item in the OS X Keychain and the item is configured to ask for permission before access (this is the default type of Access Control configuration if you add an item - for example a password - to Keychain)
 * You try to use a script or tool which requires permissions where OS X presents a popup for acceptance (for example an `osascript`). You can use a workaround to allow the tool, without manual interaction by the user, for example by using [https://github.com/jacobsalmela/tccutil](https://github.com/jacobsalmela/tccutil "https://github.com/jacobsalmela/tccutil").
   * For example, to add `osascript` to the allowed OS X Accessibility list, you can call **tccutil** from your script (don't forget to include it in your repository or download on-the-fly): `sudo python tccutil.py -i /usr/bin/osascript`
   * You can download the script from GitHub directly. For example: `wget ``[https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py](https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py "https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py")`.
-* It can also be **something in your app's code**. An example: one of our user had a simple **popup in the app, presented only at the first start of the app**. Once the popup was dismissed, the fact was stored in the app's local storage, and the popup was not shown anymore. They did dismiss the popup on their iOS Simulator, but on Bitrise every build runs in a brand new, clean environment, which means that the simulator is in the same state as if you'd hit **"Reset Content and Settings"** in the iOS Simulator's menu.
+* It can also be **something in your app's code**. An example: one of our users had a simple **popup in the app, presented only at the first start of the app**. Once the popup was dismissed, the fact was stored in the app's local storage, and the popup was not shown anymore. They did dismiss the popup on their iOS Simulator, but on Bitrise every build runs in a brand new, clean environment, which means that the simulator is in the same state as if you'd hit **"Reset Content and Settings"** in the iOS Simulator's menu.
   * **Solution**: try to clean out the simulator/emulator before running tests on your Mac/PC, to simulate the "first run" experience.
 
 Occasionally, a build **just doesn't generate any log output**. This can happen for various reasons; you can find an example in case of an [iOS library project](https://github.com/bitrise-samples/xcodebuild-piped-output-issue-reproduction).
 
 ## CocoaPods frameworks signing issue
 
-When you get an error something like this:
+This error is related to how CocoaPods expects code signing configurations for **frameworks**.
 
     === CLEAN TARGET Pods-Xxxxxxxxx OF PROJECT Pods WITH CONFIGURATION Release ===
     
@@ -157,19 +157,17 @@ When you get an error something like this:
     [BEROR]Code Sign error: No code signing identities found: No valid signing identities (i.e. certificate and private key pair) matching the team ID “(null)” were found.
     [BEROR]CodeSign error: code signing is required for product type 'Framework' in SDK 'iOS 8.1'
 
-This error is related to how CocoaPods expects code signing configurations for **frameworks**.
+### Solution 1: a wildcard development provisioning profile
 
-### Solution 1: make sure that you upload/include/install a wildcard development provisioning profile
+When Xcode performs an initial code signing (when it compiles the framework projects), it requires a certificate and provisioning profile which can be used for signing the CocoaPods framework projects.
 
-Usually this issue does not happen on your local Mac, and this is the reason why it does not: When Xcode performs an initial code signing (when it compiles the framework projects) it requires a certificate and provisioning profile which can be used for signing the CocoaPods framework projects.
+On your Mac, you most likely have your own Development certificate and **Wildcard** team provisioning profile, which is enough for Xcode to do the initial code signing for the framework projects.
 
-On your Mac you most likely have your own Development certificate and **Wildcard** team provisioning profile, which is enough for Xcode to do the initial code signing for the framework projects.
-
-So, Solution #1 is exactly this, upload these (Development identity/certificate (.p12) and the Team **wildcard** provisioning profile) to [bitrise.io](https://www.bitrise.io), and Xcode will work the same way as it does on your Mac. It'll do an initial code signing with the development signing files, and then it'll resign the archive when it exports the final IPA.
+So upload these (Development identity/certificate (.p12) and the Team **wildcard** provisioning profile) to [bitrise.io](https://www.bitrise.io). Xcode will do an initial code signing with the development signing files, and then it'll resign the archive when it exports the final IPA.
 
 ### Solution 2: modifying code signing settings through `Podfile`
 
-One of our beloved user sent us the following fix for this problem. You should add the following script as a `Post script` to your `Podfile`:
+One of our beloved users sent us the following fix for this problem. Add the following script as a `Post script` to your `Podfile`:
 
     post_install do |installer|
       installer.pods_project.targets.each do |target|
