@@ -5,7 +5,7 @@ menu:
     weight: 11
 
 ---
-This tutorial helps you create a basic static website project (e.g. a Blog) with [Middleman](https://middlemanapp.com/),
+This tutorial helps you create a basic static website project (for example, a blog) with [Middleman](https://middlemanapp.com/),
 connect and deploy it with Bitrise.
 
 ## 1. Create and clone a repository on Github
