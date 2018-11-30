@@ -74,9 +74,8 @@ For example, to install `cmake` with a script step, on Linux, using `apt-get`:
     sudo apt-get install -y cmake
 
 {% include message_box.html type="important" title="Don't forget the `-y` flag for `apt-get`!" content="
-If you don't add the `-y` (\"yes\") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example.
+If you don't add the `-y` ("yes") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example.
 "%}
-
 
 ## Advanced option: use `deps` in `bitrise.yml`
 
@@ -116,12 +115,7 @@ A minimal `bitrise.yml` for demonstration:
                   set -ex
                   which cmake
 
-An advanced tip: if you want to declare a dependency which might be available from
-another source (not through the package manager), then you might also want to declare the
-related `binary name`. If that matches the package name (like in case of `cmake`) this is
-completely optional, but in case the package does not match the binary name you can
-declare it with `bin_name`. An example is AWS CLI, where the package name in both
-package managers is `awscli`, but the binary itself is `aws`.
+{% include message_box.html type="info" title="Advanced tip" content=" if you want to declare a dependency which might be available from another source (not through the package manager), then you might also want to declare the related `binary name`. If that matches the package name (like in case of `cmake`) this is completely optional, but in case the package does not match the binary name you can declare it with `bin_name`. An example is AWS CLI, where the package name in both package managers is `awscli`, but the binary itself is `aws`." %}
 
 A minimal `bitrise.yml` for demonstration:
 
@@ -165,6 +159,4 @@ to run different scripts in case of a Pull Request and a non Pull Request build:
     fi
 
 _Note: if you **don't** want to run any part of the Step/script based on a variable (like_ `_$PR_`_),
-you don't have to implement the check in the script. You can use the _`_run_if_`_ expression in
-the _`_bitrise.yml_` _directly to declare in which case(s) the Step should run. Additionally,_
-`_run_if_` _can be added to any step, not just to Script steps. You can find more information about_ `_run_if_` _expressions in_ [_this guide_](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed).
+you don't have to implement the check in the script. You can use the _`_run_if_` _expression in the_ `_bitrise.yml_` _directly to declare in which case(s) the Step should run. Additionally,_ `_run_if_` _can be added to any step, not just to Script steps. You can find more information about_ `_run_if_` _expressions in_ [_this guide_](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed).
