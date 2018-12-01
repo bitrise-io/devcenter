@@ -13,6 +13,10 @@ Bitrise Project Scanner provides a `deploy workflow` which contains the `Sign AP
 
 In this section, we walk you through the code signing steps using our `android-multiple-test-results-sample` demo app.
 
+Before you start:
+
+* Make sure you have the `Sign APK` Step in your deploy workflow right after your build steps but before `Google Play deploy` Step.
+
 1. Log into [bitrise.io](https://www.bitrise.io/) and click on your app.
 2. On your Bitrise `Dashboard`, click on `Workflow`.
 3. Click on `Code signing`.
@@ -27,15 +31,18 @@ In this section, we walk you through the code signing steps using our `android-m
    ![Screenshot](/img/android-code-signing/three-fields.png)
 6. Click on `Save metadata`.
    When you have successfully uploaded a keystore file in the `ANDROID KEYSTORE FILE` section and you have all the fields filled out, Bitrise will automatically export the following env vars based on your input.
-
-	* `BITRISEIO_ANDROID_KEYSTORE_ALIAS`
-	* `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
-	* `BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD`
-	* `BITRISEIO_ANDROID_KEYSTORE_URL`
-
+   * `BITRISEIO_ANDROID_KEYSTORE_ALIAS`
+   * `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
+   * `BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD`
+   * `BITRISEIO_ANDROID_KEYSTORE_URL`
 7. Bitrise collects and pastes the `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`, `BITRISEIO_ANDROID_KEYSTORE_ALIAS`, and `BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD` env vars into the respective input fields of the `Sign APK` step.
 
 Bitrise uploads your keystore file and assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The `Sign APK` step in the workflow will track this environment variable and will run if it is set.
+
+{% include message_box.html type="important" title="Keystore URL" content=" 
+
+* For remote keystores you can provide any download location (for example, https://URL/TO/keystore.jks). 
+* For local keystores, please provide file path url. (for example, file://PATH/TO/keystore.jks)." %}
 
 ## Downloading your files
 
