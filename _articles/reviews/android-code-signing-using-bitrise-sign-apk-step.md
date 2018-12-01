@@ -18,14 +18,14 @@ Before you start:
 * Make sure you have the `Sign APK` Step in your deploy workflow right after your build steps but before `Google Play deploy` Step.
 
 1. Log into [bitrise.io](https://www.bitrise.io/) and click on your app.
-2. On your Bitrise `Dashboard`, click on `Workflow`.
-3. Click on `Code signing`.
+2. On your `Dashboard`, click `Workflow`.
+3. Click `Code signing`.
 4. Click or drag-and-drop your keystore file on the `Upload file` field of the `ANDROID KEYSTORE FILE` section.
 
    ![Screenshot](/img/android-code-signing/upload-file.png)
 
-   A keystore URL automatically gets generated once you upload the keystore file. Bitrise assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The `Sign APK` step will track this environment variable in the workflow and will run it if it is set.
-5. Fill out the displayed three input fields:
+   A keystore URL automatically gets generated once you upload the keystore file. Bitrise assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. 
+5. Fill out the displayed three input fields with your credentials:
    * `keystore password`
    * `keystore alias`
    * `private key password`
@@ -34,16 +34,12 @@ Before you start:
 6. Click on `Save metadata`.
 
    When you have successfully uploaded a keystore file in the `ANDROID KEYSTORE FILE` section and you have all the fields filled out, Bitrise will automatically export the following env vars based on your input:
-   * `BITRISEIO_ANDROID_KEYSTORE_ALIAS`
-   * `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
-   * `BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD`
-   * `BITRISEIO_ANDROID_KEYSTORE_URL`
-7. Bitrise uses the above env vars and sets them as inputs into the respective fields of the `Sign APK` step.
+   * `$BITRISEIO_ANDROID_KEYSTORE_ALIAS`
+   * `$BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
+   * `$BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD`
+   * `$BITRISEIO_ANDROID_KEYSTORE_URL`
 
-{% include message_box.html type="important" title="Keystore URL" content="
-
-* For remote keystores you can provide any download location (for example, https://URL/TO/keystore.jks).
-* For local keystores, please provide file path url. (for example, file://PATH/TO/keystore.jks)." %}
+   Bitrise uses the above env vars and sets them as inputs into the respective fields of the `Sign APK` step. Once the Step runs, it produces a signed APK which will be used as the input value of the `APK or App Bundle file path` field in the `Google Play Deploy` Step.
 
 ## Downloading your files
 
