@@ -23,6 +23,8 @@ Before you start:
 4. Click or drag-and-drop your keystore file on the `Upload file` field of the `ANDROID KEYSTORE FILE` section.
 
    ![Screenshot](/img/android-code-signing/upload-file.png)
+
+   A keystore URL automatically gets generated once you upload the keystore file. Bitrise assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The `Sign APK` step will track this environment variable in the workflow and will run it if it is set.
 5. Fill out the displayed three input fields:
    * `keystore password`
    * `keystore alias`
@@ -30,18 +32,17 @@ Before you start:
 
    ![Screenshot](/img/android-code-signing/three-fields.png)
 6. Click on `Save metadata`.
-   When you have successfully uploaded a keystore file in the `ANDROID KEYSTORE FILE` section and you have all the fields filled out, Bitrise will automatically export the following env vars based on your input.
+
+   When you have successfully uploaded a keystore file in the `ANDROID KEYSTORE FILE` section and you have all the fields filled out, Bitrise will automatically export the following env vars based on your input:
    * `BITRISEIO_ANDROID_KEYSTORE_ALIAS`
    * `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
    * `BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD`
    * `BITRISEIO_ANDROID_KEYSTORE_URL`
-7. Bitrise collects and pastes the `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`, `BITRISEIO_ANDROID_KEYSTORE_ALIAS`, and `BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD` env vars into the respective input fields of the `Sign APK` step.
+7. Bitrise uses the above env vars and sets them as inputs into the respective fields of the `Sign APK` step.
 
-Bitrise uploads your keystore file and assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The `Sign APK` step in the workflow will track this environment variable and will run if it is set.
+{% include message_box.html type="important" title="Keystore URL" content="
 
-{% include message_box.html type="important" title="Keystore URL" content=" 
-
-* For remote keystores you can provide any download location (for example, https://URL/TO/keystore.jks). 
+* For remote keystores you can provide any download location (for example, https://URL/TO/keystore.jks).
 * For local keystores, please provide file path url. (for example, file://PATH/TO/keystore.jks)." %}
 
 ## Downloading your files
