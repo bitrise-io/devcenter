@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/builds/Scheduling-Builds.md
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
@@ -24,7 +25,6 @@ pages:
 - _articles/reviews/frequent-android-issues.md
 - _articles/reviews/managing-files-on-bitrise-draft.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
-- _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/getting-started/builds-and-workflows.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md

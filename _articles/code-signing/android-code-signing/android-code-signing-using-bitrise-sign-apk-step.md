@@ -9,7 +9,7 @@ menu:
 ---
 ## Creating a signed APK with the Sign APK Step
 
-You can create a signed APK using the `Sign APK step` in our Bitrise workflow.
+You can create a signed APK using the `Sign APK step` in your Bitrise workflow.
 
 Bitrise Project Scanner provides a `deploy workflow` which contains the `Sign APK step`. With this step, you can digitally sign your APK as part of your workflow. This step is configured to run if you have already uploaded your keystore file to Bitrise. All you have to do is upload your keystore file in the `Code signing` tab of the Workflow Editor.
 
