@@ -57,4 +57,6 @@ An example for downloading a keystore file" content="
 
 After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
+If you need more information, read [How to use the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/) guide. 
+
 {% include message_box.html type="info" title="Deploy your Android app with Bitrise" content=" Check out our [guide](https:/deploy/android-deploy/deploying-android-apps/) on how to deploy your app to [bitrise.io](https://www.bitrise.io/) and to a marketplace of your choice. " %}
