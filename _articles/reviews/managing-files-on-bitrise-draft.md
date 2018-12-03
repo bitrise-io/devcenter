@@ -61,7 +61,7 @@ You can use encrypted files on Bitrise, easily and securely. All you need to do 
 
 In this example, we'll show how to do this. We use the **pwgen** password generator tool and **GPG** as the encryption software.
 
-{% include message_box.html type="important" title="GPG" content="Please note that the `Decrypt file` Step only decrypts files encrypted with GPG. If you use other encryption software, you will not be able to decrypt files on Bitrise."%} 
+{% include message_box.html type="important" title="GPG" content="Please note that the `Decrypt file` Step only decrypts files encrypted with GPG. If you use other encryption software, you will not be able to decrypt files on Bitrise."%}
 
 1. Open your Terminal/Command Line.
 2. Create a 22 character passphrase for encryption.
@@ -73,8 +73,8 @@ In this example, we'll show how to do this. We use the **pwgen** password genera
 4. Upload the file to the Generic File Storage on Bitrise.
 5. Add the `Decrypt file` Step to your workflow.
 6. Add your passphrase as a [secret Environment Variable](/builds/env-vars-secret-env-vars/) and insert it to the relevant Step input.
-7. Add the encrypted file path and the output file path to the relevant Step inputs. 
+7. Add the encrypted file path and the output file path to the relevant Step inputs.
 
-   You can find the Environment Variable for the encrypted file path in the Generic File Storage. 
+   You can find the Environment Variable for the encrypted file path in the Generic File Storage.
 
 That's it! Once you run the build, the Step will decrypt your file and you can use it for whatever you need it for!
