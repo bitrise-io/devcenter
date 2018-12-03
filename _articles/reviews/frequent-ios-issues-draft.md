@@ -33,7 +33,7 @@ If you still can't see the desired Scheme, look into your `.gitignore` file and 
 
 ## CocoaPods (missing) dependency issue
 
-### Error:
+### Error
 
     ld: library not found for -lPods-...
     clang: error: linker command failed with exit code 1 (use -v to see invocation)
@@ -42,7 +42,7 @@ OR:
 
     no such module '...'
 
-### Solution:
+### Solution
 
 The problem, usually, is that you use Cocoapods but you specified the Xcode project (`.xcodeproj`) file instead of the Workspace (`.xcworkspace`) file.
 
@@ -54,6 +54,8 @@ The problem, usually, is that you use Cocoapods but you specified the Xcode proj
 ## Fastlane Export Issue
 
 _This section was contributed by_ [_@kwoylie_](https://github.com/kwoylie)_, and applies if you have a_ `Gemfile` _in your repository and you use the_ `fastlane` _step which uses the_ `Gemfile` _automatically if present._
+
+### Error
 
 `Gemfile` content was:
 
@@ -100,7 +102,7 @@ This error is misleading: it looks like it might be a code signing error or some
 
 What happens is that fastlane reverts back to the Mac OS system's Ruby for exporting. But the system Ruby doesn't have json 1.8.3 installed.
 
-### Solution:
+### Solution
 
 Add a `Script` step to run the following:
 
@@ -110,7 +112,11 @@ This will install bundler on the system Ruby and when the fastlane plugin calls 
 
 ## The build works in local but not on bitrise.io
 
+### Error
+
 _Example:_ `_ld: file not found ..._`
+
+### Solution
 
 Go through the following steps. After every step, check if it solved your issue.
 
@@ -137,7 +143,7 @@ If a Step times out after a period without any logs, check if the scripts you us
 Most frequent sources of this issue with an iOS project:
 
 * Trying to build a Scheme which is not marked as **shared**. Usually, it hangs right after you start any `xcodebuild` command (e.g. `xcodebuild -list` or `xcodebuild .. archive`).
-  * **Solution**: Make sure that you marked the Scheme as **shared**, and that you actually committed & pushed it into your repository. 
+  * **Solution**: Make sure that you marked the Scheme as **shared**, and that you actually committed & pushed it into your repository.
 * Your script tries to access an item in the OS X Keychain and the item is configured to ask for permission before access (this is the default type of Access Control configuration if you add an item - for example a password - to Keychain)
 * You try to use a script or tool which requires permissions where OS X presents a popup for acceptance (for example an `osascript`). You can use a workaround to allow the tool, without manual interaction by the user, for example by using [https://github.com/jacobsalmela/tccutil](https://github.com/jacobsalmela/tccutil "https://github.com/jacobsalmela/tccutil").
   * For example, to add `osascript` to the allowed OS X Accessibility list, you can call **tccutil** from your script (don't forget to include it in your repository or download on-the-fly): `sudo python tccutil.py -i /usr/bin/osascript`
@@ -150,6 +156,8 @@ Occasionally, a build **just doesn't generate any log output**. This can happen 
 ## CocoaPods frameworks signing issue
 
 This error is related to how CocoaPods expects code signing configurations for **frameworks**.
+
+### Error
 
     === CLEAN TARGET Pods-Xxxxxxxxx OF PROJECT Pods WITH CONFIGURATION Release ===
     
@@ -207,23 +215,31 @@ You should now be able to run the app, and any other Enterprise app from the sam
 
 A couple of services require debug symbols (dSYM) to be present for deployment but dSYM generation might have been disabled in your Xcode project.
 
-### Solution:
+### Solution
 
 To generate dSYM, go to your `Xcode Project's Settings -> Build Settings -> Debug Information Format` and set it to _DWARF with dSYM File_.
 
-## Invalid IPA: get-task-allow values in the embedded .mobileprovision don't match your binary
+## Invalid IPA
 
-**Solution:** Generate a new Certificate on the Apple Developer portal, **not** in Xcode.
+### Error
+
+Invalid IPA: get-task-allow values in the embedded `.mobileprovision` don't match your binary.
+
+### Solution
+
+Generate a new Certificate on the Apple Developer portal, **not** in Xcode.
 
 Another possible solution: make sure you have the proper Signing Identity and Provisioning Profile in Xcode project settings for both the target and for the project.
 
 ## No identity found
 
+### Error
+
 You uploaded the correct _Provisioning Profile_ and _Certificate_ pair, if you check the identity hash it matches with the one you can see in your Keychain, but you still get an error like:
 
     22...D11: no identity found
 
-**Solution:**
+### **Solution**
 
 You probably have a configuration in your Xcode project settings which specifies which keychain should be used for the build, your scheme might include something like `--keychain /../../xxx.keychain` code signing flag and a `CODE_SIGN_KEYCHAIN` variable set in the _.pbxproj_.
 
@@ -233,11 +249,13 @@ To fix the issue you have to remove the keychain selection configurations from y
 
 ## No mobileprovision_path found / No embedded.mobileprovision found in ...
 
-Error: `No embedded.mobileprovision found in ...`
+### Error
+
+`No embedded.mobileprovision found in ...`
 
 Or: `No mobileprovision_path found`
 
-### Possible solution 1: `Skip Install` Xcode Settings
+### Solution 1: `Skip Install` Xcode Settings
 
 If you get this error in the Xcode Archive step you should check your Xcode Projects settings. Most likely you have the `Skip Install` option set to `YES`.
 
@@ -245,7 +263,7 @@ This should only be used for iOS frameworks! **For iOS apps this should be set t
 
 You can check out [the official documentation](https://developer.apple.com/library/ios/technotes/tn2215/_index.html). Look up the _Xcode successfully archived my application, but the Archives Organizer does not list my archive_ section.
 
-### Possible solution 2: `Installation Directory` Xcode Settings
+### Solution 2: `Installation Directory` Xcode Settings
 
 If something modifies the `Build Setting -> Deployment -> Installation Directory` settings in your Xcode Project, it can result in an `.xcarchive` where your app is not generated into the canonical `Products/Applications` folder, but instead into a `Products/Users/USERNAME/...` folder, including the full absolute path of an intermediate build.
 
@@ -259,17 +277,13 @@ If you have multiple Schemes in your Xcode Project or Workspace with the **exact
 
 This can also happen if you use CocoaPods and one of your Pods have the same name as your project.
 
-To debug this, list the available Schemes with Xcode's command line tool. In your project's directory, run: 
+To debug this, list the available Schemes with Xcode's command line tool. In your project's directory, run:
 
-```
-xcodebuild -workspace ./path/to/workspace/file -list
-```
+    xcodebuild -workspace ./path/to/workspace/file -list
 
-If you use a project file instead of a workspace file, run this: 
+If you use a project file instead of a workspace file, run this:
 
-```
-xcodebuild -project ./path/to/project/file -list
-``` 
+    xcodebuild -project ./path/to/project/file -list
 
 There should be no duplicated Scheme in the printed list. To run this command on bitrise.io, add it to a Script step. Compare the results after running it both on your computer and on bitrise.io: the lists should be identical.
 
@@ -292,7 +306,7 @@ Error:
 3. When the UITests start the permissions dialog is still visible and overlaying the screen.
 4. The application tries to access some XCUIElements but fails because of the overlaying permissions dialog and eventually fails
 
-Solution: 
+Solution:
 
 I resolved this by adding a check in the AppDelegate (where we fire the permissions dialog) if we are running in unit test mode and only asking for permissions when not running unit tests:
 
