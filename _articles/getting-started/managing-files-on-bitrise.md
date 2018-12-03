@@ -2,6 +2,10 @@
 title: 'Managing files on Bitrise '
 date: 2018-12-03 10:05:49 +0000
 redirect_from: []
+menu:
+  getting-started:
+    weight: 9
+    title: Managing files on Bitrise
 
 ---
 Managing files on Bitrise allows you to upload files to use in your builds. You are required to upload files for the purposes of code signing. Builds also produce files as outputs. The good news is that this is all very simple!

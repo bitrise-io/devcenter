@@ -50,4 +50,4 @@ If you choose `Advanced` in the **Build configuration** window, you have all the
 
 {% include message_box.html type="info" title="Conflicting input" content="If, for example, you specify a commit hash, you will notice that the Git Tag option disappears. This ensures that you cannot enter conflicting input values. 
 
-If you specify a commit hash and a branch where that commit does not exist (for example, **master**), Bitrise will find the branch that does have the given commit (for example, **testing**) and run a build with that branch. "%} 
+If you specify a commit hash and a branch where that commit does not exist (for example, **master**), Bitrise will find the branch that does have the given commit (for example, **testing**) and run a build with that branch. "%}
