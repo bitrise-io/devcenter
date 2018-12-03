@@ -16,7 +16,7 @@ If you face the above issue please first:
 
 In short, you can use a simple `curl` call to **download** and to **upload** an app's configuration or `bitrise.yml` to [bitrise.io](https://www.bitrise.io). You can find an example of how the API works on [GitHub](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/upload_download_bitrise_io/bitrise.yml).
 
-Before you start
+Before you start:
 
 * Make sure you have a Personal Access Token which you can generate on your [account's security tab](https://www.bitrise.io/me/profile#/security).
 
