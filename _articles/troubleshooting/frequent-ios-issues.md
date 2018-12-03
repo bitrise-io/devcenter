@@ -11,13 +11,13 @@ menu:
 ---
 ## Searching for errors and issues in Xcode generated output
 
-{% include message_box.html type="note" title="Xcode output" content="The solutions presented here apply only to the raw, unfiltered output of Xcode. Every official Bitrise Xcode step has an `Output Tool` input with an `xcodebuild` option_._ If you can't find the error reason in the logs, make sure to switch the `Output Tool` option any Xcode Step you use to `xcodebuild` (Xcode's Command Line Tool). This results in a verbose output but will include everything the way it's produced by `xcodebuild`. "%}
+{% include message_box.html type="note" title="Xcode output" content="The solutions presented here apply only to the raw, unfiltered output of Xcode. Every official Bitrise Xcode step has an `Output Tool` input with an `xcodebuild` option. If you can't find the error reason in the logs, make sure to switch the `Output Tool` option of any Xcode Step you use to `xcodebuild` (Xcode's Command Line Tool). This results in a verbose output but will include everything the way it's produced by `xcodebuild`. "%}
 
 Search for `error:` in the Xcode logs: in 99% of the cases the error message covers the reason for your issues.
 
 If that doesn't work, search for `warning:`. In rare cases Xcode doesn't print an `error:` even if it fails.
 
-If you have the logs on your own machine then you can run something like this in your Terminal:
+If you have the logs on your own machine, then you can run something like this in your Terminal:
 
     grep --color 'error:' my.log
     grep --color 'warning:' my.log
@@ -27,8 +27,8 @@ If you have the logs on your own machine then you can run something like this in
 If you can't see your Xcode project's scheme during setup, or if you get a `The project named "Foo" does not contain a scheme named "Bar"` error during build, **check your Xcode project settings.**
 
 * Check if the desired Scheme is shared - Bitrise only works with shared schemes.
-* When you share your scheme the Xcode project changes. Don't forget to **commit** and to **push** your changes!
-* If the related validation is still running on Bitrise abort it and try to run it again.
+* When you share your scheme, the Xcode project changes. Don't forget to **commit** and to **push** your changes!
+* If the related validation is still running on Bitrise, abort it and try to run it again.
 
 ![Xcode shared scheme](/img/ios/xcode-shared-scheme.png)
 
@@ -113,7 +113,7 @@ Add a `Script` step to run the following:
 
     sudo /usr/bin/gem install bundler
 
-This will install bundler on the system Ruby and when the fastlane plugin calls bundle install then system Ruby will also install the neccessary dependencies.
+This will install bundler on the system Ruby and when the fastlane plugin calls bundle install, then system Ruby will also install the neccessary dependencies.
 
 ## The build works in local but not on bitrise.io
 
@@ -147,7 +147,7 @@ If a Step times out after a period without any logs, check if the scripts you us
 
 Most frequent sources of this issue with an iOS project:
 
-* Trying to build a Scheme which is not marked as **shared**. Usually, it hangs right after you start any `xcodebuild` command (e.g. `xcodebuild -list` or `xcodebuild .. archive`).
+* Trying to build a Scheme which is not marked as **shared**. Usually, it hangs right after you start any `xcodebuild` command (for example, `xcodebuild -list` or `xcodebuild .. archive`).
   * **Solution**: Make sure that you marked the Scheme as **shared**, and that you actually committed & pushed it into your repository.
 * Your script tries to access an item in the OS X Keychain and the item is configured to ask for permission before access (this is the default type of Access Control configuration if you add an item - for example a password - to Keychain)
 * You try to use a script or tool which requires permissions where OS X presents a popup for acceptance (for example an `osascript`). You can use a workaround to allow the tool, without manual interaction by the user, for example by using [https://github.com/jacobsalmela/tccutil](https://github.com/jacobsalmela/tccutil "https://github.com/jacobsalmela/tccutil").
@@ -262,7 +262,7 @@ Or: `No mobileprovision_path found`
 
 ### Solution 1: `Skip Install` Xcode Settings
 
-If you get this error in the Xcode Archive step you should check your Xcode Projects settings. Most likely you have the `Skip Install` option set to `YES`.
+If you get this error in the Xcode Archive step, you should check your Xcode Projects settings. Most likely you have the `Skip Install` option set to `YES`.
 
 This should only be used for iOS frameworks! **For iOS apps this should be set to** `NO`.
 
@@ -278,7 +278,7 @@ _Huge thanks to **Antje**, who reported this solution!_
 
 ## Duplicated Schemes
 
-If you have multiple Schemes in your Xcode Project or Workspace with the **exact same name**, Xcode will select one of these Schemes/Configurations **randomly** when building your project. This can result in random build success / failure, and if you check the raw Xcode output you'll see something like this: `xcodebuild: error: Scheme YOUR_DUPLICATED_SCHEME is not currently configured for the test action` when it fails.
+If you have multiple Schemes in your Xcode Project or Workspace with the **exact same name**, Xcode will select one of these Schemes/Configurations **randomly** when building your project. This can result in random build success / failure, and if you check the raw Xcode output, you'll see something like this: `xcodebuild: error: Scheme YOUR_DUPLICATED_SCHEME is not currently configured for the test action` when it fails.
 
 This can also happen if you use CocoaPods and one of your Pods have the same name as your project.
 
@@ -290,7 +290,7 @@ If you use a project file instead of a workspace file, run this:
 
     xcodebuild -project ./path/to/project/file -list
 
-There should be no duplicated Scheme in the printed list. To run this command on bitrise.io, add it to a Script step. Compare the results after running it both on your computer and on bitrise.io: the lists should be identical.
+There should be no duplicated Scheme in the printed list. To run this command on [bitrise.io](https://www.bitrise.io/), add it to a Script step. Compare the results after running it both on your computer and on [bitrise.io](https://www.bitrise.io/): the lists should be identical.
 
 ## System dialog blocks the tests to run
 
@@ -307,9 +307,9 @@ Error:
     }
 
 1. Unit tests run and pass. However, a few of the unit tests are FBSnapshotTestCase tests which are kind of UI Tests but are still kept in the unit test bundle. They launch the app and compare screens with reference images of the screen.
-2. When a FBSnapshot TestCase is run it launches the app and launches a system alert dialog asking the user for permission for push notifications (this is just something that's done in the AppDelegate in my app every fresh install).
-3. When the UITests start the permissions dialog is still visible and overlaying the screen.
-4. The application tries to access some XCUIElements but fails because of the overlaying permissions dialog and eventually fails
+2. When a FBSnapshot TestCase is run, it launches the app and launches a system alert dialog asking the user for permission for push notifications (this is just something that's done in the AppDelegate in my app at every fresh install).
+3. When the UITests start, the permissions dialog is still visible and overlaying the screen.
+4. The application tries to access some XCUIElements but fails because of the overlaying permissions dialog and eventually fails.
 
 Solution:
 
