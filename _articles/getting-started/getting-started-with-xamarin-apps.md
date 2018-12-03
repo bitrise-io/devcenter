@@ -87,7 +87,7 @@ For UI tests, we strongly recommend using our `App Center upload and schedule te
    ![](/img/app-center-test.png)
 2. Fill in the required inputs of the Step. You can find all these in the App Center after setting up your test run: check the **Submit** tab.
 
-If you're interested in Calabash UI testing on Bitrise, check out this [discuss guide](https://discuss.bitrise.io/t/how-to-do-calabash-uitesting-on-bitrise/361).
+If you're interested in Calabash UI testing on Bitrise, check out this [discuss guide](https://discuss.bitrise.io/t/how-to-do-calabash-uitesting-on-bitrise/361)!
 
 ## Deploying Xamarin apps
 
