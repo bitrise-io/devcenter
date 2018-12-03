@@ -12,9 +12,9 @@ If you face the above issue please first:
 1. [contact us](https://www.bitrise.io/contact) so we can fix the issue in the UI code
 2. then you can fix the `bitrise.yml` through our API
 
-## Managing bitrise.yml with API
+## Managing bitrise.yml with the API
 
-In short, you can use a simple `curl` call to **download** and to **upload** an app's configuration or `bitrise.yml` to [bitrise.io](https://www.bitrise.io). You can find an example of how the API works on [GitHub](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/upload_download_bitrise_io/bitrise.yml).
+Use a simple `curl` call to **download** and to **upload** an app's configuration or `bitrise.yml` to [bitrise.io](https://www.bitrise.io). You can find an example of how the API works on [GitHub](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/upload_download_bitrise_io/bitrise.yml).
 
 Before you start:
 
