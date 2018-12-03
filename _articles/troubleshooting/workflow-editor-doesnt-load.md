@@ -22,4 +22,4 @@ Before you start
 
 1. Download the `bitrise.yml` with an [API call](/api/v0.1/#get-appsapp-slugbitriseyml) (even if it breaks the Workflow Editor UI)Check out the respective API. You will get a response in YML format.
 2. Save the `bitrise.yml` into a file and modify it.
-3. Upload the `bitrise.yml` for your application with [another API](/api/v0.1/#post-appsapp-slugbitriseyml) call. Make sure the path to your fixed or modified `bitrise.yml` is correctly set! You will get a response in JSON format.
+3. Upload the `bitrise.yml` for your application with [another API](/api/v0.1/#post-appsapp-slugbitriseyml) call to [bitrise.io](https://www.bitrise.io). Make sure the path to your fixed or modified `bitrise.yml` is correctly set! You will get a response in JSON format.
