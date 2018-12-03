@@ -25,6 +25,8 @@ You can manually specify the code signing configuration in your Gradle configura
            } 
        } ...
 
+For more information, check out how to [Configure Gradle to sign your app](https://developer.android.com/studio/publish/app-signing).
+
 ## About environment variables
 
 You can avoid having the same keystore path locally and on [bitrise.io](https://www.bitrise.io) by using configuration values and environment variables in the keystore path (`storeFile`) and in the keystore password.
