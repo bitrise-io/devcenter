@@ -5,14 +5,21 @@ redirect_from: []
 published: false
 
 ---
-If your keystore is defined in a gradle task with keystore path poining to the location of the file, you can have your project signed using our \`File Downloader\` step. build.gradleben a keystore path van meg de maga file hianyzik.
 
-1\. Add the File Downloader step to your workflow. The step should be added before any build step you use. Our File Downloader Step will download the keystore file from the \`ANDROID KEYSTORE FILE\` section (innen ugye?)  / \`Generic File Storage\`(itt nem a keystore szokott lenni).
+If your keystore path is defined in your `build.gradle` file but keystore file is missing from from the location where the path points to, you can use one of our file downloader steps to download the keystore file and place it in the right location.
 
-2\. Fill out the following 2 input fields:
+There are two Steps which download files from the `Code Signing` tab.
 
- - \`Download source url\`: which is the generated keystore URL you get when you upload your file to \`ANDROID KEYSTORE FILE\` section of the \`Code Signing\` tab)
+* File Downloader: If you have uploaded your keystore file to the `ANDROID KEYSTORE FILE` section of the `Code Signing` tab, this is the step you have to use. An env var gets automatically generated with a URL to the file and the file will be available by this URL.
+* Generic File Downloader: The step will download all the files you uploaded to the  `GENERIC FILE STORAGE` section of the Workflow Editor (under `$GENERIC_FILE_STORAGE`). For example, if you upload `myconfig.ini` file to the `GENERIC FILE STORAGE`, then the step will download the file and it will be available as `$GENERIC_FILE_STORAGE/myconfig.ini`.
 
- - \`Download destination path\`: set the location where the file should be placed. In this case it is your Gradle build file's path where you want the Step to insert the keystore file. home.-ra kell h mutasson. ugyanaz legyen az eleresi utvonal mint a build.gradle file-ban van. igy mukodini fog a gradl runner vagy az android step.
+1. Add either the `File Downloader` or the `Generic File Downloader` step to your workflow. The step should be added before the `Gradle Runner` Step.
 
-3\. Add a build step to your workflow: either \`Gradle Runner\` or \`Android Build\` Steps
+2. If you use the `File Downloader` Step, fill out the following 2 input fields:
+
+	* `Download source url`: set the generated keystore URL you get when you upload your file to the `ANDROID KEYSTORE FILE` section of the `Code Signing` tab)
+	* `Download destination path`: set the location where the keystore file should be placed within your `build.gradle` file. (for example,`file://$HOME/keystores/project_release.keystore`) The path has to be the same as the path defined in your `build.gradle` file.
+
+3. Add the `Gradle Runner` Step right after your file downloading step.
+
+Our `File Downloader` Step will download the keystore file from the `ANDROID KEYSTORE FILE` section `Generic File Storage`.
