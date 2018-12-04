@@ -17,17 +17,17 @@ There are two ways to use `docker` on [bitrise.io](https://www.bitrise.io/):
 
 ## Run docker commands during the build
 
-**This is the recommended way of using docker**, both locally and on [bitrise.io](https://www.bitrise.io/).
+**This is the recommended way of using docker** both locally and on [bitrise.io](https://www.bitrise.io/).
 
 All you have to do is:
 
 1. Add a `Script` step to your workflow.
-2. And the `docker` (or `docker-compose`, etc.) command you want to run
-3. Additionally, if you want to run the build on [bitrise.io](https://www.bitrise.io/), make sure that you select a Linux/Android stack for the app; those stacks have `docker` preinstalled and ready to use out of the box.
+2. And the `docker` (or `docker-compose`, etc.) command you want to run.
+3. Additionally, if you want to run the build on [bitrise.io](https://www.bitrise.io/), make sure that you select a Linux/Android stack for the app; those stacks have `docker` preinstalled and are ready to use out of the box.
 
 GitHub sample repository
 
-You can find a sample repository on GitHub, which is configure to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli): [https://github.com/bitrise-samples/minimal-docker](https://github.com/bitrise-samples/minimal-docker "https://github.com/bitrise-samples/minimal-docker").
+You can find a sample repository on GitHub, which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli): [https://github.com/bitrise-samples/minimal-docker](https://github.com/bitrise-samples/minimal-docker "https://github.com/bitrise-samples/minimal-docker").
 
 ### Running docker hello-world
 
