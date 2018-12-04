@@ -8,5 +8,3 @@ fields:
   type: text
   hidden: false
   default: ''
-pages:
-- _articles/reviews/frequent-ios-issues-draft.md
