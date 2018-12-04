@@ -40,7 +40,7 @@ The `Xcode Build for testing for iOS` performs _xcodebuild_'s `build-for-testing
 
 The `iOS Device Testing` Step takes the path to this .zip file - exported as an Environment Variable - as input to run your tests and export the test results to Bitrise.
 
-1. Check that you [enabled Device Testing](/testing/virtual-device-testing-for-ios/#enabling-device-testing) for the app.
+1. Check that you [enabled Device Testing](/testing/device-testing-for-ios/#enabling-device-testing) for the app.
 2. Add the `Xcode Build for testing for iOS` Step to your workflow.
 
    Note that it should come AFTER the `Certificate and profile installer` Step.
