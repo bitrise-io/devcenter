@@ -61,7 +61,7 @@ Following the official “getting started” guide for example, to run the “he
 
 ### Build and run a Dockerfile
 
-A bit more complex example, using your own `Dockerfile` in your repository to define the docker environment:
+Here is a bit more complex example for using your own `Dockerfile` in your repository to define the docker environment:
 
     ---
     format_version: 1.3.1
@@ -137,7 +137,7 @@ The output will be something like:
     | ✓ | docker run hello-world                                        | 4.24 sec |
     +---+---------------------------------------------------------------+----------+
 
-GitHub sample repository
+#### GitHub sample repository
 
 You can find a sample repository on GitHub, which is configure to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli): [https://github.com/bitrise-samples/minimal-docker](https://github.com/bitrise-samples/minimal-docker "https://github.com/bitrise-samples/minimal-docker").
 
@@ -161,13 +161,13 @@ lines with a single `docker-compose` call:
 
     docker-compose run --rm sample-app
 
-Docker compose will build and run the image automatically, you don’t have to specify a `-t` tag - the `services` name will be used by `docker-compose` to tag the image automatically.
+Docker compose will build and run the image automatically, you don’t have to specify a `-t` tag since the `services` name will be used by `docker-compose` to tag the image automatically.
 
-You can find a sample repository on GitHub, which is configure to run on your Mac/Linux using the [_Bitrise CLI_](https://www.bitrise.io/cli): [_https://github.com/bitrise-samples/minimal-docker_](https://github.com/bitrise-samples/minimal-docker "https://github.com/bitrise-samples/minimal-docker")
+You can find a sample repository on GitHub, which is configured to run on your Mac/Linux using the [_Bitrise CLI_](https://www.bitrise.io/cli): [_https://github.com/bitrise-samples/minimal-docker_](https://github.com/bitrise-samples/minimal-docker "https://github.com/bitrise-samples/minimal-docker")
 
-## Using bitrise.io custom docker image option [⚓](https://devcenter.bitrise.io/tutorials/docker/use-your-own-docker-image/#using-bitriseio-custom-docker-image-option)
+## Using bitrise.io custom docker image option
 
-> Use a Linux/Android stack and set the environment docker image for the app (`Settings` tab)
+> Use a Linux/Android stack and set the environment docker image for the app (on the `Stack` tab)
 
 Custom Android docker image
 
