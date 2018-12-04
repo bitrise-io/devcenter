@@ -71,3 +71,4 @@ pages:
 - _articles/reviews/file-downloader-for-code-signing.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
 - _articles/reviews/the-android-linux-docker-environment.md
+- _articles/reviews/use-your-own-docker-image.md
