@@ -15,7 +15,7 @@ In this guide, we'll walk you through how to add an Android app to Bitrise, what
 * [Adding an Android app to bitrise.io](/getting-started/getting-started-with-android-apps/#add-an-android-app-to-bitriseio)
 * [Dependencies](/getting-started/getting-started-with-android-apps/#dependencies)
 * [Testing your project](/getting-started/getting-started-with-android-apps/#testing-your-project)
-* [Deploying your project](/getting-started-with-android-apps/#deploying-your-project)
+* [Deploying your project](/getting-started/getting-started-with-android-apps/#deploying-your-project)
 
 ## Adding an Android app to bitrise.io
 
