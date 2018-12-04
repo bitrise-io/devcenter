@@ -86,7 +86,7 @@ The Android chunk of code signing is done!
 
 Code signing your iOS project depends on what you wish to do with the exported .ipa file. In this section, we describe how to code sign your project if you wish to **install and test it on internal testers' registered devices**. You will need an .ipa file exported with the `development` export method to share your project with testers.
 
-If you wish to upload your .ipa file to an app store, check out [this](/getting-started-with-reactnative-apps/#sign-and-export-your-ios-project-for-deployment) section!
+If you wish to upload your .ipa file to an app store, check out [this](/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment) section!
 
 {% include message_box.html type="note" title="Automatic provisioning" content=" The example procedure described here uses manual provisioning, with the `Certificate and profile installe` Step. However, Bitrise also supports [automatic provisioning](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/) but it is not in the scope of this guide. "%}
 
