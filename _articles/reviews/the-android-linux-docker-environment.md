@@ -18,7 +18,7 @@ We're still experimenting with new VM providers and VM configurations, but in ge
 
 We use standard [Docker](https://quay.io) images, published on [Quay](https://quay.io/organization/bitriseio), and the related `Dockerfile` which you can find on [GitHub](https://github.com/bitrise-docker).
 
-{% include message_box.html type="note" title="What is a `Dockerfile`?" content=" The `Dockerfile` is the description file which describes the docker image / environment and is directly used to build the image." %}
+{% include message_box.html type="note" title="What is a Dockerfile?" content=" The `Dockerfile` is the description file which describes the docker image / environment and is directly used to build the image." %}
 
 Right now we have four docker images, built on top of each other:
 
@@ -50,21 +50,23 @@ Right now we have four docker images, built on top of each other:
 ### Android NDK LTS image ( / )
 
 * image name: `quay.io/bitriseio/android-ndk-lts`
+* 
+* 
 
 ## Docker & Virtual Machines
 
-**Every build runs in a new VM** (which is destroyed right after the build), not just in a new container! This allows us to grant you full control over `Docker` and the whole environment.
+**Every build runs in a new VM** not just in a new container. The VM is destroyed right after the build. This allows us to grant you full control over `Docker` and the whole environment.
 
-When your build starts on the Docker based Stack we volume mount the `/var/run/docker.sock` socket into your container (similar to calling `docker run -v /var/run/docker.sock:/var/run/docker.sock ...`; you can find a description about this access granting method at: [https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/](https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/ "https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/")).
+When your build starts on the Docker based Stack, we volume mount the `/var/run/docker.sock` socket into your container (similar to calling `docker run -v /var/run/docker.sock:/var/run/docker.sock ...`. You can find a description about this access granting method [here](https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/)).
 
 {% include message_box.html type="note" title="Docker binary installation" content=" The `docker` binary have to be installed inside the base Docker image (we install Docker in every one of our Docker images so that you don't have to do anything if you use our image, or you base your own image on our Docker images), because docker started to migrate from a single-binary solution to dynamically loaded components, and simply sharing the `docker` binary is not sufficient anymore. "%}
 
 This means that you have access to `docker` in your container, and can use other tools which use docker, like [docker-compose](https://docs.docker.com/compose). You can, for example, configure and run tests and other automations on website projects using `docker-compose`.
 
-You can call `docker info`, `docker build`, `docker run`, `docker login`, `docker push`, etc. exactly how you would on your own machine.
+You can call `docker info`, `docker build`, `docker run`, `docker login`, `docker push` exactly how you would on your own machine.
 
 ### Shared volumes
 
-{% include message_box.html type="warning" title="How to run `docker` in your build and share volumes" content="  **If you want to run** `**docker**` **in your build, and share volumes**: because of how `docker` handles volume sharing, only those volumes can be shared which are shared with the base docker container (the one your build is running in). Everything under `/bitrise` can be mounted as a volume, but no other path is guaranteed to work with `--volume` mapping. "%}
+{% include message_box.html type="warning" title="How to run `docker` in your build and share volumes" content="  **If you want to run** `**docker**` **in your build and share volumes**, please note that only those volumes can be shared which are shared with the base docker container (the one your build is running in). This is due to how `docker` handles volume sharing. Everything under `/bitrise` can be mounted as a volume, but no other path is guaranteed to work with `--volume` mapping. "%}
 
-**Practically this means** that if you use the standard paths and you use relative paths to mount volumes it'll work as expected, as the default source code directory is located inside `/bitrise` (by default it's `/bitrise/src` in our Docker images). **What won't work** is if you change the source code directory to be located **outside** of `/bitrise`, or you want to mount a folder with an absolute path outside of `/bitrise`.
+It means that if you use the standard paths and you use relative paths to mount volumes, it'll work as expected, as the default source code directory is located inside `/bitrise` (by default it's `/bitrise/src` in our Docker images). **What won't work**, however, is if you change the source code directory to be located **outside** of `/bitrise`, or you want to mount a folder with an absolute path outside of `/bitrise`.
