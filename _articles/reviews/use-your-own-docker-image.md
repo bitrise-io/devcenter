@@ -10,26 +10,26 @@ published: false
 
 There are two ways to use `docker` on [bitrise.io](https://www.bitrise.io/):
 
-1. Run `docker` commands yourself, for example, with a `Script` step
-2. Use a Linux/Android stack and set the environment docker image for the app (`Settings` tab)
+1. Run `docker` commands yourself, for example, with a `Script` step.
+2. Use a Linux/Android stack and set the environment docker image for the app on the `Stack` tab of the Workflow Editor.
 
-**The first option is strongly preferred, you should not change the base environment docker image (on the** `**Settings**` tab on bitrise.io) unless you really have to! Running the `docker` commands yourself during the build is way more flexible, and provides an overall better control.
+**The first option is strongly preferred, you should not change the base environment docker image (on the** `Stack` tab) unless you really have to! Running the `docker` commands yourself during the build is way more flexible, and provides an overall better control.
 
-## Run docker commands during the build 
+## Run docker commands during the build
 
-**This is the preferred way of using docker**, both locally and on [bitrise.io](https://www.bitrise.io/).
+**This is the recommended way of using docker**, both locally and on [bitrise.io](https://www.bitrise.io/).
 
 All you have to do is:
 
-1. Add a `Script` step to your workflow
-2. And in the `Script` step run the `docker` (or `docker-compose`, etc.) command you want to
-3. Additionally, if you want to run the build on [bitrise.io](https://www.bitrise.io/), make sure that you select a Linux/Android stack for the app; those stacks have `docker` preinstalled and ready to use our of the box.
+1. Add a `Script` step to your workflow.
+2. And the `docker` (or `docker-compose`, etc.) command you want to run
+3. Additionally, if you want to run the build on [bitrise.io](https://www.bitrise.io/), make sure that you select a Linux/Android stack for the app; those stacks have `docker` preinstalled and ready to use out of the box.
 
 GitHub sample repository
 
 You can find a sample repository on GitHub, which is configure to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli): [https://github.com/bitrise-samples/minimal-docker](https://github.com/bitrise-samples/minimal-docker "https://github.com/bitrise-samples/minimal-docker").
 
-### Running docker hello-world 
+### Running docker hello-world
 
 Following the official “getting started” guide for example, to run the “hello world” docker image your bitrise build configuration yml can be as simple as:
 
@@ -59,7 +59,7 @@ Following the official “getting started” guide for example, to run the “he
     
                 docker run hello-world
 
-### Build and run a Dockerfile 
+### Build and run a Dockerfile
 
 A bit more complex example, using your own `Dockerfile` in your repository to define the docker environment:
 
@@ -141,7 +141,7 @@ GitHub sample repository
 
 You can find a sample repository on GitHub, which is configure to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli): [https://github.com/bitrise-samples/minimal-docker](https://github.com/bitrise-samples/minimal-docker "https://github.com/bitrise-samples/minimal-docker").
 
-### Using docker-compose 
+### Using docker-compose
 
 The previous example could be even shorter using [docker-compose](https://docs.docker.com/compose/).
 
