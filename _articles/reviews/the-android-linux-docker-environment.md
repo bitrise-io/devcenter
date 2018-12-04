@@ -24,7 +24,7 @@ Right now we have four docker images, built on top of each other:
 
 ### Bitrise Base image ([GitHub](https://github.com/bitrise-docker/bitrise-base) / [Docker Hub](https://quay.io/repository/bitriseio/bitrise-base))
 
-* image name: `quay.io/bitriseio/bitrise-base`
+* image name ID: `quay.io/bitriseio/bitrise-base`
 * includes all the **non-Android tools and environment setup**
 * ideal to be used for non-Android projects as a base image, if you want to use it locally too, as this is the smallest image
 * `Ruby`, `Go`, `Python`, `git` and the [bitrise command line tools](https://www.bitrise.io/cli) are all preinstalled and ready to use
@@ -33,7 +33,7 @@ Right now we have four docker images, built on top of each other:
 
 ### Base Android image ([GitHub](https://github.com/bitrise-docker/android) / [Docker Hub](https://quay.io/repository/bitriseio/android))
 
-* image name: `quay.io/bitriseio/android`
+* image name ID: `quay.io/bitriseio/android`
 * **extends the Bitrise Base image** with Android specific tools and environments
 * multiple Android SDK, build tool and system image versions are preinstalled, as well as `gradle` and `maven`
 * you can use the `$ANDROID_HOME` environment variable to point to the location of the pre-installed Android SDK
@@ -41,7 +41,7 @@ Right now we have four docker images, built on top of each other:
 
 ### Android NDK image ([GitHub](https://github.com/bitrise-docker/android-ndk) / [Docker Hub](https://hub.docker.com/r/bitriseio/android-ndk/))
 
-* image name: `quay.io/bitriseio/android-ndk`
+* image name ID: `quay.io/bitriseio/android-ndk`
 * **built on the Base Android image** and extends it with the latest Android NDK
 * you can use the `$ANDROID_NDK_HOME` environment variable to point to the location of the preinstalled Android NDK, and it's also added to `$PATH`
 * check out the related `Dockerfile` [where](https://github.com/bitrise-docker/android-ndk/blob/master/Dockerfile) you can see what's preinstalled in this image.
@@ -49,7 +49,7 @@ Right now we have four docker images, built on top of each other:
 
 ### Android NDK LTS image ( / )
 
-* image name: `quay.io/bitriseio/android-ndk-lts`
+* image name ID: `quay.io/bitriseio/android-ndk-lts`
 * 
 * 
 
