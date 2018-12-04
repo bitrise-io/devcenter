@@ -7,9 +7,9 @@ published: false
 ---
 If the file path of your keystore file is defined in your `build.gradle` file but the keystore file itself is missing from the location where the path points to, you can use one of our file downloading steps to download the keystore file from Bitrise and place it in the defined location.
 
-Bitrise has two Steps which download files from the `Code Signing` tab:
+Bitrise has two Steps which download files from the `Code Signing` tab. Which one to use in your workflow depends on where you uploaded your keystore file in `Code Signing` tab:
 
-* `File Downloader` Step: If you have uploaded your keystore file to the `ANDROID KEYSTORE FILE` section of the `Code Signing` tab, this is the step you have to use. Once the file is uploaded, an env var gets automatically generated with a URL.
+* `File Downloader` Step: If you have uploaded your keystore file to the `ANDROID KEYSTORE FILE` section of the `Code Signing` tab, this is the step you should use. Once the file is uploaded, Bitrise assigns an env var (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value.
 
   ![](/img/android-keystore.png)
 * `Generic File Downloader` Step: The step will download all the files you uploaded to the  `GENERIC FILE STORAGE` under this `$GENERIC_FILE_STORAGE` env var in the Workflow Editor. For example, if you upload `myconfig.ini` file to the `GENERIC FILE STORAGE`, then the step will download the file and it will be available as `$GENERIC_FILE_STORAGE/myconfig.ini`.
