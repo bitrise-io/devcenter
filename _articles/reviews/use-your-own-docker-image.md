@@ -13,7 +13,7 @@ There are two ways to use `docker` on [bitrise.io](https://www.bitrise.io/):
 1. Run `docker` commands yourself, for example, with a `Script` step.
 2. Use a Linux/Android stack and set the environment docker image for the app on the `Stack` tab of the Workflow Editor.
 
-**The first option is strongly preferred, you should not change the base environment docker image (on the** `Stack` tab) unless you really have to! Running the `docker` commands yourself during the build is way more flexible, and provides an overall better control.
+**The first option is the recommended option, you should not change the base environment docker image** (on the `Stack` tab) unless you really have to! Running the `docker` commands yourself during the build is way more flexible, and provides an overall better control.
 
 ## Run docker commands during the build
 
