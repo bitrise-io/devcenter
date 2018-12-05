@@ -206,7 +206,7 @@ You have to use the **quay.io ID** of the image you want to use as the base im
 
 ### Creating the Docker Image to use it on bitrise.io [⚓](https://devcenter.bitrise.io/tutorials/docker/use-your-own-docker-image/#create-the-docker-image-to-be-able-to-use-it-on-bitriseio)
 
-You can create it any way you want to and push it into any Docker registry. The only requirement is that it have to be a **public** image, private images are not (yet) supported.
+You can create the Docker image in any way you want and push it into any Docker registry. The only requirement is that your image has to be a **public** one since private images are not supported at the moment.
 
 We’ll show a quick example with GitHub and Docker Hub, using Docker Hub’s automatic builds (it’ll automatically create a new Docker image for you every time you change your Dockerfile on GitHub).
 
@@ -215,15 +215,18 @@ What you need for this guide:
 * [GitHub account](https://github.com/)
 * [Docker Hub account](https://hub.docker.com/)
 
-First, you have to create a new repository on GitHub, and add at least a `Dockerfile`, with a `FROM bitriseio/IMAGE-ID:latest` statement at the top of the `Dockerfile`, like the one you can see at: [https://github.com/viktorbenei/docker-bitrise-android-ext/blob/master/Dockerfile#L1](https://github.com/viktorbenei/docker-bitrise-android-ext/blob/master/Dockerfile#L1 "https://github.com/viktorbenei/docker-bitrise-android-ext/blob/master/Dockerfile#L1") (_don’t forget to commit & push it!_).
+1. Create a new repository on GitHub.
+2. Add at least a `Dockerfile` with a `FROM bitriseio/IMAGE-ID:latest` statement at the top of the `Dockerfile` like this [one](https://github.com/viktorbenei/docker-bitrise-android-ext/blob/master/Dockerfile#L1).
+3. Commit and push it.
 
-Which image to use?
+{% include message_box.html type="note" title="Which image to use?" content=" 
 
-* If you don’t need the Android tools you should base yo **image** the **bitrise-base** (`bitriseio/docker-bitrise-base`) image and install just the things you need.
-* If you need the Android tools then you should use the **android** (`bitriseio/docker-android`) image or the **bitrise-base** (`bitriseio/docker-bitrise-base`) image.
-* You should only use the **android-ndk** (`bitriseio/android-ndk`) image as the base image if you actually need the NDK.
+* If you don’t need the Android tools, you should **base your image on the** **bitrise-base** (`quay.io/bitriseio/bitrise-base`) **image** and install just the things you need. 
+* If you need the Android tools, then you should use the **android** (`quay.io/bitriseio/android`) image or the **bitrise-base** (`quay.io/bitriseio/bitrise-base`) image.
+* You should only use the **android-ndk** (`quay.io/bitriseio/android-ndk`) image as the base image if you actually need the NDK.
+* You should only use the Android NDK LTS, if 
 
-  From a performance perspective: you should install the least amount of tools in your image, as it’ll make your image smaller, which means faster download & build start.
+From a performance perspective, if you install the least amount of tools in your image,  it’ll make your image smaller, which means faster download & build start. "%}
 
 You now have the description of your image. Go to [Docker Hub](https://hub.docker.com/), click `Create` in the top menu and select `Create Automated Build`. If you haven’t linked your GitHub account to your Docker Hub account you’ll have to do it now. Once the link between GitHub and Docker Hub is established you’ll see a list of your GitHub repositories. Select the repository you just created (the one with the `Dockerfile` in its root), and follow the guide.
 
