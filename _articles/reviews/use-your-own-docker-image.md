@@ -220,7 +220,7 @@ What you need for this guide:
  3. Commit and push your changes.
 
     {% include message_box.html type="note" title="Which image to use?" content="
-    * If you don’t need the Android tools, you should **base your image on 				the** **bitrise-base** (`quay.io/bitriseio/bitrise-base`) **image** and install 	just the things you need.
+   * If you don’t need the Android tools, you should **base your image on 				the** **bitrise-base** (`quay.io/bitriseio/bitrise-base`) **image** and install 	just the things you need.
     * If you need the Android tools, then you should use 				the **android** (`quay.io/bitriseio/android`) image or the **bitrise-base** (`quay.io/bitriseio/bitrise-base`) image.
     * You should only use the **android-ndk** (`quay.io/bitriseio/android-ndk`) image as the base image if you actually need the NDK.
     * You should only use the Android NDK LTS, if ...
