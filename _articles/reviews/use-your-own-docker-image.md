@@ -195,7 +195,7 @@ To base your own image on one of our available images:
 
 1. Specify your base image at the very top of your `Dockerfile` with a `FROM bitriseio/IMAGE-ID:latest`.
 
-As an example: `FROM bitriseio/docker-bitrise-base:latest`
+	As an example: `FROM bitriseio/docker-bitrise-base:latest`
 
 {% include message_box.html type="important" title="Don’t use the `-alpha` images for your builds" content=" For every docker image we have on [quay.io](https://quay.io/), we have a `-alpha` post fixed version too. The `-alpha` ones are rebuilt frequently and are **not precached on** [**bitrise.io**](https://www.bitrise.io/), so you should avoid those. The only purpose of the `-alpha` images is to provide ready to use test environments for us, before we would publish a non `-alpha`version. "%}
 
