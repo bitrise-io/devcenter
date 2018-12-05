@@ -134,7 +134,7 @@ The output will be something like:
     | ✓ | docker run hello-world                                        | 4.24 sec |
     +---+---------------------------------------------------------------+----------+
 
-{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli)."  }%
+{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli)."  %}
 
 ### Using docker-compose
 
@@ -158,7 +158,7 @@ lines with a single `docker-compose` call:
 
 Docker compose will build and run the image automatically, you don’t have to specify a `-t` tag since the `services` name will be used by `docker-compose` to tag the image automatically.
 
-{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli)."  }%
+{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli)."  %}
 
 ## Using bitrise.io custom docker image option
 
@@ -202,7 +202,7 @@ As an example: `FROM bitriseio/docker-bitrise-base:latest`
 {% include message_box.html type="note" title="Quay.io ID" content="
 You have to use the **quay.io ID** of the image you want to use as the base image. For example, `quay.io/bitriseio/android`, `quay.io/bitriseio/android-ndk` or `quay.io/bitriseio/bitrise-base`. "%}
 
-{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli)."  }%
+{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli)."  %}
 
 ### Creating the Docker Image to use it on bitrise.io [⚓](https://devcenter.bitrise.io/tutorials/docker/use-your-own-docker-image/#create-the-docker-image-to-be-able-to-use-it-on-bitriseio)
 
