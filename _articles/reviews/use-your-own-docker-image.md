@@ -217,16 +217,14 @@ What you need for this guide:
 
  1. Create a new repository on GitHub.
  2. Add at least a `Dockerfile` with a `FROM bitriseio/IMAGE-ID:latest` statement at the top of the `Dockerfile` like this [one](https://github.com/viktorbenei/docker-bitrise-android-ext/blob/master/Dockerfile#L1).
- 3. Commit and push your changes.
-
+ 3. Commit and push your changes. Now you should have the description of your image.
     {% include message_box.html type="note" title="Which image to use?" content="
-   * If you don’t need the Android tools, you should **base your image on 				the** **bitrise-base** (`quay.io/bitriseio/bitrise-base`) **image** and install 	just the things you need.
-    * If you need the Android tools, then you should use 				the **android** (`quay.io/bitriseio/android`) image or the **bitrise-base** (`quay.io/bitriseio/bitrise-base`) image.
+   * If you don’t need the Android tools, you should **base your image on the** **bitrise-			base** (`quay.io/bitriseio/bitrise-base`) **image** and install just the things you need.
+    * If you need the Android tools, then you should use 					the **android** (`quay.io/bitriseio/android`) image or the **bitrise-base** (`quay.io/bitriseio/bitrise-base`) image.
     * You should only use the **android-ndk** (`quay.io/bitriseio/android-ndk`) image as the base image if you actually need the NDK.
     * You should only use the Android NDK LTS, if ...
-      From a performance perspective, if you install the least amount of tools in your 	image,  it’ll make your image smaller, which means faster download & build start. "%}
+      From a performance perspective, if you install the least amount of tools in your image, it’ll make your image smaller, which means faster download & build start. "%}
 
-    Now you should have the description of your image.
  4. Go to [quay.io](https://quay.io/).
  5. Click `Create` in the top menu.
  6. Select `Create Automated Build`. Note that if you haven’t linked your GitHub account to your [quay.io account](https://quay.io/signin/), you’ll have to do it now. Once the link between GitHub and [quay.io](https://quay.io/) is established, you’ll see a list of your GitHub repositories.
