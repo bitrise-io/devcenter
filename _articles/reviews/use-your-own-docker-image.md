@@ -240,10 +240,13 @@ From a performance perspective, you should install the least amount of tools in 
 
 ### Use your own (public) Docker image for your builds [⚓](https://devcenter.bitrise.io/tutorials/docker/use-your-own-docker-image/#use-your-own-public-docker-image-for-your-builds)
 
-Once you have your own Docker image and you verified that it can be `docker pull`-ed, you can set its ID on the `Settings` tab of your app on [bitrise.io](https://www.bitrise.io/), in the `Stack Selector` section.
+Once you have your own Docker image and you checked if it can be `docker pull`-ed, you can set its ID this way:
 
-You just have to copy paste the ID of your image (e.g. `bitriseio/docker-bitrise-base`) into the `Docker image to use` field and click the `Save` button. Your next build will use the image you specified.
+1. Go to your Workflow Editor.
+2. Click the `Stack` tab. 
+3. Copy and paste the ID of your app (for example, `quay.io/bitriseio/bitrise-base`)
 
-Have a question or suggestion
+   ![](/img/docker-image-to-use.png)
+4. Click Save in the upper-right corner.
 
-Join the discussion! You can find this guide’s discussion topic at: [discuss.bitrise.io/t/69](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69).
+Now you should be able to use your own image to run your builds on [bitrise.io](https://www.bitrise.io).
