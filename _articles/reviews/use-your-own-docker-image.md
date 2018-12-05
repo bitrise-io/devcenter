@@ -224,7 +224,6 @@ What you need for this guide:
     * If you need the Android tools, then you should use 				the **android** (`quay.io/bitriseio/android`) image or the **bitrise-base** (`quay.io/bitriseio/bitrise-base`) image.
     * You should only use the **android-ndk** (`quay.io/bitriseio/android-ndk`) image as the base image if you actually need the NDK.
     * You should only use the Android NDK LTS, if ...
-
       From a performance perspective, if you install the least amount of tools in your 	image,  it’ll make your image smaller, which means faster download & build start. "%}
 
     Now you should have the description of your image.
