@@ -210,7 +210,11 @@ You can create the Docker image in any way you want and push it into any Docker 
 
 We’ll show a quick example with GitHub and Quay, using Quay’s automatic builds (it’ll automatically create a new Docker image for you every time you change your Dockerfile on GitHub).
 
-{% include message_box.html type="note" title="Which image to use?" content=" If you **don’t need the Android tools**, you should base your image on the bitrise-base (`quay.io/bitriseio/bitrise-base`) image and install only the things you need. If you **need the Android tools,** then you should use the android (`quay.io/bitriseio/android`) image or the bitrise-base (`quay.io/bitriseio/bitrise-base`) image. You should only use the android-ndk (`quay.io/bitriseio/android-ndk`) image as the base image if you actually need the NDK.
+{% include message_box.html type="note" title="Which image to use?" content="
+
+*  If you **don’t need the Android tools**, you should base your image on the bitrise-base (`quay.io/bitriseio/bitrise-base`) image and install only the things you need.
+*  If you **need the Android tools,** then you should use the android (`quay.io/bitriseio/android`) image or the bitrise-base (`quay.io/bitriseio/bitrise-base`) image. 
+* You should only use the android-ndk (`quay.io/bitriseio/android-ndk`) image as the base image if you actually need the NDK.
 
 From a performance perspective, you should install the least amount of tools in your image, as it’ll make your image smaller, which means faster download & build start. "%}
 
