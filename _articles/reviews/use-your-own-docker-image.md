@@ -215,29 +215,34 @@ What you need for this guide:
 * [GitHub account](https://github.com/)
 * [Docker Hub account](https://hub.docker.com/)
 
-1. Create a new repository on GitHub.
-2. Add at least a `Dockerfile` with a `FROM bitriseio/IMAGE-ID:latest` statement at the top of the `Dockerfile` like this [one](https://github.com/viktorbenei/docker-bitrise-android-ext/blob/master/Dockerfile#L1).
-3. Commit and push your changes.
+ 1. Create a new repository on GitHub.
+ 2. Add at least a `Dockerfile` with a `FROM bitriseio/IMAGE-ID:latest` statement at the top of the `Dockerfile` like this [one](https://github.com/viktorbenei/docker-bitrise-android-ext/blob/master/Dockerfile#L1).
+ 3. Commit and push your changes.
 
-   {% include message_box.html type="note" title="Which image to use?" content="
-   * If you don’t need the Android tools, you should **base your image on 				the** **bitrise-base** (`quay.io/bitriseio/bitrise-base`) **image** and install 	just the things you need.
-   * If you need the Android tools, then you should use 				the **android** (`quay.io/bitriseio/android`) image or the **bitrise-base** (`quay.io/bitriseio/bitrise-base`) image.
-   * You should only use the **android-ndk** (`quay.io/bitriseio/android-ndk`) image as the base image if you actually need the NDK.
-   * You should only use the Android NDK LTS, if ...
+    {% include message_box.html type="note" title="Which image to use?" content="
+    * If you don’t need the Android tools, you should **base your image on 				the** **bitrise-base** (`quay.io/bitriseio/bitrise-base`) **image** and install 	just the things you need.
+    * If you need the Android tools, then you should use 				the **android** (`quay.io/bitriseio/android`) image or the **bitrise-base** (`quay.io/bitriseio/bitrise-base`) image.
+    * You should only use the **android-ndk** (`quay.io/bitriseio/android-ndk`) image as the base image if you actually need the NDK.
+    * You should only use the Android NDK LTS, if ...
 
-     From a performance perspective, if you install the least amount of tools in your 	image,  it’ll make your image smaller, which means faster download & build start. "%}
+      From a performance perspective, if you install the least amount of tools in your 	image,  it’ll make your image smaller, which means faster download & build start. "%}
 
-   Now you should have the description of your image.
-4. Go to [quay.io](https://quay.io/). 
-5. Click `Create` in the top menu.
-6.  Select `Create Automated Build`. Note that if you haven’t linked your GitHub account to your [quay.io account](https://quay.io/signin/), you’ll have to do it now. Once the link between GitHub and [quay.io](https://quay.io/) is established, you’ll see a list of your GitHub repositories. 
-7. Select the repository you just created (the one with the `Dockerfile` in its root), and follow the guide.
+    Now you should have the description of your image.
+ 4. Go to [quay.io](https://quay.io/).
+ 5. Click `Create` in the top menu.
+ 6. Select `Create Automated Build`. Note that if you haven’t linked your GitHub account to your [quay.io account](https://quay.io/signin/), you’ll have to do it now. Once the link between GitHub and [quay.io](https://quay.io/) is established, you’ll see a list of your GitHub repositories.
+ 7. Select the repository you just created (the one with the `Dockerfile` in its root), and follow the guide.
 
-	Congratulations! You now have a fully automatic Docker image creation, based on 	your GitHub repository! This means that every time you change the repository, 		commit & push the change, Quay will pick up the new `Dockerfile` and will build a 	Docker image for you.
+    Congratulations! You now have a fully automatic Docker image creation, based on 	your GitHub repository! This means that every time you change the repository, 		commit & push the change, Quay will pick up the new `Dockerfile` and will build a 	Docker image for you.
+ 8. **To link your image to one of our base images**, go to [quay.io](https://quay.io/). This is 
+ 9. Go to the `Build Settings` tab, under the `Repository Links` section.
+10. Specify the ID of our Docker image (for example, `quay.io/bitriseio/bitrise-base`).
+11. Save the link.
 
-8. Do not forget to link your image to our base image you use, so that every time our base image is updated your image will get updated as well. This is especially important if you base your Docker image on one of our Android images. Those images are quite large. If we change the base Docker image and you don’t build a new image, **your image will require the old base image, which won’t be pre-cached** on the build Virtual Machines anymore! This means that to `docker pull` your image it won’t be enough to download just the diffs anymore, **the whole image will have to be pulled** which might even result in errors like “no space left on the device” - to `docker pull`the base Android image, if no cache is available, it already requires \~10GB disk space, and the Android NDK image is even larger!
+    The next time the specified image is updated, your image will be re-built as well using the `Dockerfile` in your repository. 
 
-**Link your image to one of ours**: you can do this on DockerHub, on the `Build Settings`tab, under the `Repository Links` section. Just specify the ID of our Docker image (ex: `bitriseio/docker-android`), save the link and the next time the specified image is updated your image will be re-built as well (using the `Dockerfile` in **your** repository).
+{% include message_box.html type="note" title="Why bother linking your image to our base image?" content=" Linking your image to our base image is important so that every time our base image is updated, your image will get updated as well. This is especially important if you base your Docker image on one of our Android images. Those images are quite large. If we change the base Docker image and you don’t build a new image, **your image will require the old base image, which won’t be pre-cached** on the build Virtual Machines anymore! This means that when you `docker pull` your image, it won’t be enough to download just the diffs anymore, **the whole image will have to be pulled**. This might even result in errors like “no space left on the device”. To `docker pull` the base Android image, if no cache is available, requires \~10GB disk space, and the Android NDK image is even larger!
+**"%}**
 
 ### Use your own (public) Docker image for your builds [⚓](https://devcenter.bitrise.io/tutorials/docker/use-your-own-docker-image/#use-your-own-public-docker-image-for-your-builds)
 
