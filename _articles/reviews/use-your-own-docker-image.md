@@ -5,14 +5,14 @@ redirect_from: []
 published: false
 
 ---
-{% include message_box.html type="note" title="Have a question or suggestion?" content=" Join the discussion on this topic [here](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69). "%}
+{% include message_box.html type="note" title="Have a question or suggestion?" content=" Join the discussion on [How to use your own Docker image for your builds](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69). "%}
 
 There are two ways to use `docker` on [bitrise.io](https://www.bitrise.io/):
 
 1. Run `docker` commands yourself, for example, with a `Script` step.
 2. Use a Linux/Android stack and set the environment docker image for the app on the `Stack` tab of the Workflow Editor.
 
-**Running** `**docker**` **commands with a** `**Script**` **Step is the recommended option as you should not change the base environment docker image on the** `**Stack**` **tab** unless you really have to! Running the `docker` commands yourself during the build is way more flexible and provides an overall better control.
+Running `docker` commands with a `Script` Step is the recommended option as you should not change the base environment docker image on the `Stack` tab unless you really have to! Running the `docker` commands yourself during the build is way more flexible and provides an overall better control.
 
 ## Running docker commands during the build
 
@@ -212,13 +212,13 @@ We’ll show a quick example with GitHub and Quay, using Quay’s automatic buil
 
 {% include message_box.html type="note" title="Which image to use?" content="
 
-*  If you **don’t need the Android tools**, you should base your image on the bitrise-base (`quay.io/bitriseio/bitrise-base`) image and install only the things you need.
-*  If you **need the Android tools,** then you should use the android (`quay.io/bitriseio/android`) image or the bitrise-base (`quay.io/bitriseio/bitrise-base`) image. 
+* If you **don’t need the Android tools**, you should base your image on the bitrise-base (`quay.io/bitriseio/bitrise-base`) image and install only the things you need.
+* If you **need the Android tools,** then you should use the android (`quay.io/bitriseio/android`) image or the bitrise-base (`quay.io/bitriseio/bitrise-base`) image.
 * You should **only use the android-ndk** (`quay.io/bitriseio/android-ndk`) image as the base image if you actually need the NDK.
 
 From a performance perspective, you should install the least amount of tools in your image, as it’ll make your image smaller, which means faster download & build start. "%}
 
- Before you start, make sure you have:
+Before you start, make sure you have:
 
 * [GitHub account](https://github.com/)
 * [Quay account](https://quay.io/)
@@ -243,7 +243,7 @@ From a performance perspective, you should install the least amount of tools in 
 Once you have your own Docker image and you checked if it can be `docker pull`-ed, you can set its ID this way:
 
 1. Go to your Workflow Editor.
-2. Click the `Stack` tab. 
+2. Click the `Stack` tab.
 3. Copy and paste the ID of your app (for example, `quay.io/bitriseio/bitrise-base`)
 
    ![](/img/docker-image-to-use.png)
