@@ -47,15 +47,20 @@ Open your Terminal / Command Line, and download the docker image you want to use
 
 **If you try to reproduce an issue, you should** `git clone` **your repository into a new directory**, so that the directory will only contain the files which are committed into the repository! It's a frequent reproducibility issue that you try to run the commands in your normal working directory, where you most likely have files which are not committed into your repository, for example, files which are in `.gitignore`.
 
-## Run your builds
+## Running your builds
 
 The only thing left to do is to actually run a build:
 
     docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm bitriseio/docker-android:latest bitrise run WORKFLOW
 
-If you want to just jump into the container and experiment inside, you can replace `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container. As an example: `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it bitriseio/docker-android:latest bash`. After this, if you want to, you can run `bitrise run WORKFLOW`, which will run the workflow inside the container. To exit from the container, just run `exist`.
+* If you want to jump into the container and experiment inside, you can replace:
 
-_Don't forget to replace_ `_WORKFLOW__` _with the actual ID of your workflow in your_ `_bitrise.yml_`_, with something like_ `_primary_`!
+   `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` 
+
+  with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container.
+
+  For example: `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it bitriseio/docker-android:latest bash`. After this, you can run `bitrise run WORKFLOW`, which will run the workflow inside the container. To exit from the container, just run `exit`.
+* Don't forget to replace `WORKFLOW` with the actual ID of your workflow in your `bitrise.yml`, with something like `primary`!
 
 This command will share the current directory (the directory of your repository) as a shared volume with the docker container, and will make it available **inside** the container at the path `/bitrise/src`.
 
