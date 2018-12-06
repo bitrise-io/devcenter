@@ -12,7 +12,9 @@ There are two ways to use `docker` on [bitrise.io](https://www.bitrise.io/):
 1. Run `docker` commands yourself, for example, with a `Script` step.
 2. Use a Linux/Android stack and set the environment docker image for the app on the `Stack` tab of the Workflow Editor.
 
-Running `docker` commands with a `Script` Step is the recommended option as you should not change the base environment docker image on the `Stack` tab unless you really have to! Running the `docker` commands yourself during the build is way more flexible and provides an overall better control.
+Running `docker` commands with a `Script` Step is the **recommended option** as you should **not change the base environment docker image** on the `Stack` tab unless you really have to! Running the `docker` commands yourself during the build is way more flexible and provides an overall better control.
+
+{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli). "%}
 
 ## Running docker commands during the build
 
@@ -21,14 +23,14 @@ Running `docker` commands with a `Script` Step is the recommended option as you 
 You have to:
 
 1. Add a `Script` step to your workflow.
-2. And the `docker` (or any other docker command such as `docker-compose`) you want to run.
+2. Add the `docker` (or any other docker command such as `docker-compose`) you want to run.
 3. If you want to run the build on [bitrise.io](https://www.bitrise.io/), make sure that you select a Linux/Android stack for the app; those stacks have `docker` preinstalled and are ready to use out of the box.
 
-{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli). "%}
+We provide three examples on how to run Docker commands using our `Script` Step
 
 ### Running docker hello-world
 
-Following the official “getting started” guide for example, to run the “hello world” docker image, your bitrise build configuration yml can be as simple as:
+In this example, we're following the official “getting started” guide to run the “hello world” docker image. Your bitrise build configuration yml can be as simple as:
 
     ---
     format_version: 1.3.1
@@ -90,7 +92,7 @@ Here is a bit more complex example for using your own `Dockerfile` in your rep
 This workflow will:
 
 1. Git Clone your repository.
-2. And then run `docker build -t bitrise-minimal-sample .` and `docker run --rm bitrise-minimal-sample` in the repository’s root.
+2. Then run `docker build -t bitrise-minimal-sample .` and `docker run --rm bitrise-minimal-sample` in the repository’s root.
 
 If you have a `Dockerfile` like this in the root of the repository:
 
@@ -134,8 +136,6 @@ The output will be something like:
     | ✓ | docker run hello-world                                        | 4.24 sec |
     +---+---------------------------------------------------------------+----------+
 
-{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli)."  %}
-
 ### Using docker-compose
 
 The previous example could be even shorter using [docker-compose](https://docs.docker.com/compose/).
@@ -147,7 +147,7 @@ For example, if you have a `docker-compose.yml` like this in your repository r
       sample-app:
         build: .
 
-You can replace the
+you can replace the
 
     docker build -t bitrise-minimal-sample .
     docker run --rm bitrise-minimal-sample
@@ -158,8 +158,6 @@ lines with a single `docker-compose` call:
 
 Docker compose will build and run the image automatically, you don’t have to specify a `-t` tag since the `services` name will be used by `docker-compose` to tag the image automatically.
 
-{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli)."  %}
-
 ## Using bitrise.io custom docker image option
 
 Use a Linux/Android stack and set the environment docker image for the app (on the `Stack` tab)
@@ -167,29 +165,15 @@ Use a Linux/Android stack and set the environment docker image for the app (on t
 {% include message_box.html type="important" title="Custom Android docker image" content=" Creating and maintaining your own Android Docker image can be quite time consuming! **If you only need to install a couple of additional tools, you should do** that, for example, with a **Script Step** instead! For more information, see our [Install Any Additional Tool](https://devcenter.bitrise.io/tips-and-tricks/install-additional-tools/) guide. You should only use your own Android docker image if you really have to!
 "%}
 
-If you want to run your build in a custom docker environment, **you should base your own docker image on one of our base Docker images**. Our base Docker images have every base tool pre-installed, the standard bitrise directories created, the Environments (like `$BITRISE_DEPLOY_DIR`) set, and are pre-cached on the build virtual machines. **If you decide to create your own Docker image please read this guide, from start to finish!**
+If you want to run your build in a custom docker environment, **you should base your own docker image on one of our base Docker images**. Our base Docker images have every base tool pre-installed, the standard bitrise directories created, the environments (like `$BITRISE_DEPLOY_DIR`) set, and are pre-cached on the build virtual machines. **If you decide to create your own Docker image please read this guide, from start to finish!**
 
-**Feel free to send Pull Request for our images if you think we missed something, which would be useful for everyone who uses our images!**
+**Feel free to send Pull Request for our images if you think we missed something, this would be useful for everyone who uses our images!**
 
-The bare-minimum Bitrise base image can be found at:
+The bare-minimum Bitrise base image can be found at [quay.io](https://quay.io/repository/bitriseio/bitrise-base) and at [Github](https://github.com/bitrise-docker/bitrise-base):
 
-* Docker Hub: [https://quay.io/repository/bitriseio/bitrise-base](https://quay.io/repository/bitriseio/bitrise-base "https://quay.io/repository/bitriseio/bitrise-base")
-* GitHub: [https://github.com/bitrise-docker/bitrise-base](https://github.com/bitrise-docker/bitrise-base "https://github.com/bitrise-docker/bitrise-base")
-
-Android base image, built on the bare-minimum base image, adding Android specific tools and Envs:
-
-* Docker Hub: [https://quay.io/repository/bitriseio/android](https://quay.io/repository/bitriseio/android "https://quay.io/repository/bitriseio/android")
-* GitHub: [https://github.com/bitrise-docker/android](https://github.com/bitrise-docker/android "https://github.com/bitrise-docker/android")
-
-Android NDK image, built on the Android base image, adding a pre-installed Android NDK and Envs:
-
-* Docker Hub: [https://quay.io/repository/bitriseio/android-ndk](https://quay.io/repository/bitriseio/android-ndk "https://quay.io/repository/bitriseio/android-ndk")
-* GitHub: [https://github.com/bitrise-docker/android-ndk](https://github.com/bitrise-docker/android-ndk "https://github.com/bitrise-docker/android-ndk")
-
-Android NDK LTS
-
-* Docker Hub: [https://quay.io/repository/bitriseio/android-ndk-lts](https://quay.io/repository/bitriseio/android-ndk-lts "https://quay.io/repository/bitriseio/android-ndk-lts")
-* GitHub:
+* Android base image, built on the bare-minimum base image with Android-specific tools and envs can be found at [quay.io](https://quay.io/repository/bitriseio/android) and at [Github](https://github.com/bitrise-docker/android):
+* Android NDK image, built on the Android base image with pre-installed Android NDK and envs, can be found at [quay.io](https://quay.io/repository/bitriseio/android-ndk) and at [Github](https://github.com/bitrise-docker/android-ndk):
+* Android NDK LTS, can be found at [quay.io ](https://quay.io/repository/bitriseio/android-ndk-lts)and at [Github](https://github.com/bitrise-docker/android-ndk-lts): 
 
 To base your own image on one of our available images:
 
@@ -197,12 +181,10 @@ To base your own image on one of our available images:
 
    As an example: `FROM bitriseio/docker-bitrise-base:latest`
 
-{% include message_box.html type="important" title="Don’t use the `-alpha` images for your builds" content=" For every docker image we have on [quay.io](https://quay.io/), we have a `-alpha` post fixed version too. The `-alpha` ones are rebuilt frequently and are **not precached on** [**bitrise.io**](https://www.bitrise.io/), so you should avoid those. The only purpose of the `-alpha` images is to provide ready to use test environments for us, before we would publish a non `-alpha`version. "%}
+{% include message_box.html type="important" title="Don’t use the `-alpha` images for your builds" content=" For every docker image we have on [quay.io](https://quay.io/), we have a `-alpha` post fixed version too. The `-alpha` ones are frequently rebuilt and are **not precached on** [**bitrise.io**](https://www.bitrise.io/), so you should avoid those. The only purpose of the `-alpha` images is to provide ready to use test environments for us, before we would publish a non `-alpha`version. "%}
 
 {% include message_box.html type="note" title="Quay.io ID" content="
 You have to use the **quay.io ID** of the image you want to use as the base image. For example, `quay.io/bitriseio/android`, `quay.io/bitriseio/android-ndk` or `quay.io/bitriseio/bitrise-base`. "%}
-
-{% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli)."  %}
 
 ### Creating the Docker Image to use it on bitrise.io [⚓](https://devcenter.bitrise.io/tutorials/docker/use-your-own-docker-image/#create-the-docker-image-to-be-able-to-use-it-on-bitriseio)
 
