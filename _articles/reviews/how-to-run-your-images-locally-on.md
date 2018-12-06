@@ -5,13 +5,12 @@ redirect_from: []
 published: false
 
 ---
-To be able to run your Linux stack builds locally you'll need [docker](https://www.docker.com/).
+ To be able to run your Linux stack builds locally you'll need [docker](https://www.docker.com/):
 
-For Linux just follow the [official install instructions](https://docs.docker.com/engine/installation/linux/).
+* For Linux just follow the [official install instructions](https://docs.docker.com/engine/installation/linux/).
+* For Mac you can use [Docker for Mac](https://www.docker.com/products/docker#/mac), which is the easiest way to get started.
 
-For Mac you can use [Docker for Mac](https://www.docker.com/products/docker#/mac), which is probably the easiest way to get started.
-
-For this example we'll use [this Bitrise Android sample project](https://github.com/bitrise-samples/sample-apps-android-sdk22).
+In this guide we'll use [this Bitrise Android sample project](https://github.com/bitrise-samples/sample-apps-android-sdk22).
 
 {% include message_box.html type="warning" title="Large images ahead" content=" The official Bitrise Docker images are quite large, due to the fact that it includes a wide variety of preinstalled tools. You'll need at **least** 20-25 GB free disk space! "%}
 
