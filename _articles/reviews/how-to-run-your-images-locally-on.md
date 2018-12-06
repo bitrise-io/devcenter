@@ -16,6 +16,8 @@ In this guide we'll use [this Bitrise Android sample project](https://github.com
 
 If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you should try that first. You don't have to master the CLI, if you know what `bitrise run WORKFLOW` does, that should be enough for this tutorial.
 
+## Downloading Docker images from quay.io
+
 1. Install [docker](https://www.docker.com/).
 2. Make sure you have your `bitrise.yml` in your repository (you don't have to commit it, but the file must exist in your repository's root directory).
 3. `cd` into your repository's directory on your Mac/Linux.
@@ -24,15 +26,14 @@ If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you sh
 
    If you want to just jump into the container and experiment inside, you can replace `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container. For example, `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it bitriseio/docker-android:latest bash`.
 
-	In general, if your project is an Android project but you don't use Android NDK, to preserve precious disk space, you should use the [quay.io/bitriseio/android](https://quay.io/repository/bitriseio/android) docker image. You can find other official Bitrise docker images on our Quay page. In this example, we're using the `bitriseio/docker-android` one.
-
-2. Download docker images from the [Quay](https://quay.io/organization/bitriseio) running this command:
+   In general, if your project is an Android project but you don't use Android NDK, to preserve precious disk space, you should use the [quay.io/bitriseio/android](https://quay.io/repository/bitriseio/android) docker image. You can find other official Bitrise docker images on our Quay page. In this example, we're using the `bitriseio/docker-android` one.
+6. Download docker images from the [Quay](https://quay.io/organization/bitriseio) running this command:
 
    `docker pull quay.io/bitriseio/docker-android:latest`
 
    Be aware that this can take quite a bit of time, as this image is over 10 GB. If the 			download would fail or hang, you can restart it any time by running the same command again.
-3. Once the download succeeds, download your Bitrise build configuration (`bitrise.yml`) to the root directory of your repository. You can download your project's `bitrise.yml` from the `bitrise.yml` tab of your Workflow Editor on [bitrise.io](https://www.bitrise.io). 
-4. In your Terminal / Command Line go to (`cd`) the root directory of your repository. Check if your `bitrise.yml` is at this location.
+7. Once the download succeeds, download your Bitrise build configuration (`bitrise.yml`) to the root directory of your repository. You can download your project's `bitrise.yml` from the `bitrise.yml` tab of your Workflow Editor on [bitrise.io](https://www.bitrise.io).
+8. In your Terminal / Command Line go to (`cd`) the root directory of your repository. Check if your `bitrise.yml` is at this location.
 
 **If you try to reproduce an issue, you should** `git clone` **your repository into a new directory**, so that the directory will only contain the files which are committed into the repository! It's a frequent reproducibility issue that you try to run the commands in your normal working directory, where you most likely have files which are not committed into your repository, for example, files which are in `.gitignore`.
 
