@@ -19,8 +19,6 @@ If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you sh
 1. Install [docker](https://www.docker.com/).
 2. Make sure you have your `bitrise.yml` in your repository (you don't have to commit it, but the file must exist in your repository's root directory).
 3. `cd` into your repository's directory on your Mac/Linux.
-
-   (If you try to reproduce an issue, you should `git clone` your repository into a **new directory**, so that the directory will only contain the files which are committed into the repository!)
 4. `docker pull bitriseio/docker-android:latest`
 5. `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm bitriseio/docker-android:latest bitrise run WORKFLOW`
 
