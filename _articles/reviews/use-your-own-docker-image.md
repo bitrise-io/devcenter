@@ -213,14 +213,13 @@ Before you start, make sure you have:
  2. Add at least a `Dockerfile` with a `FROM bitriseio/IMAGE-ID:latest` statement at the top of the `Dockerfile` like this [one](https://github.com/viktorbenei/docker-bitrise-android-ext/blob/master/Dockerfile#L1).
  3. Commit and push your changes. Now you should have the description of your image.
  4. Go to [quay.io](https://quay.io/).
- 5. Click `Create` in the top menu.
+ 5. Click `Create New Repository` in the top menu.
  6. Select `Create Automated Build`. Note that if you haven’t linked your GitHub account to your [quay.io account](https://quay.io/signin/), you’ll have to do it now. Once the link between GitHub and [quay.io](https://quay.io/) is established, you’ll see a list of your GitHub repositories.
- 7. Select the repository you just created (the one with the `Dockerfile` in its root), and follow the guide. Now you should have your automatic Docker image creation in place, based on your GitHub repository! This means that every time you change the repository, commit & push the change, Quay will pick up the new `Dockerfile` and will build a Docker image for you.
- 8. To link your image to one of our base images, go to [quay.io](https://quay.io/).
- 9. Go to the `Build Settings` tab under the `Repository Links` section.
-10. Specify the ID of our Docker image (for example, `quay.io/bitriseio/bitrise-base`).
-11. Save the link.
-12. Next time the specified image is updated, your image will be re-built as well using the `Dockerfile` in your repository.
+ 7. Select the repository you just created (the one with the `Dockerfile` in its root), and follow the instructions. Now you should have your automatic Docker image creation in place, based on your GitHub repository! This means that every time you change the repository, commit & push the change, Quay will pick up the new `Dockerfile` and will build a Docker image for you.
+ 8. To link your image to one of our base images, go to `Build Settings` tab under the `Repository Links` section.
+ 9. Specify the ID of our Docker image (for example, `quay.io/bitriseio/bitrise-base`).
+10. Save the link.
+11. Next time the specified image is updated, your image will be re-built as well using the `Dockerfile` in your repository.
 
 {% include message_box.html type="note" title="Why bother linking your image to our base image?" content=" Linking your image to our base image is important so that every time our base image is updated, your image will get updated as well. This is especially important if you base your Docker image on one of our Android images. Those images are quite large. If we change the base Docker image and you don’t build a new image, **your image will require the old base image, which won’t be pre-cached** on the build Virtual Machines anymore! This means that when you `docker pull` your image, it won’t be enough to download just the diffs anymore, **the whole image will have to be pulled**. This might even result in errors like “no space left on the device”. To `docker pull` the base Android image, if no cache is available, requires /\~/10GB disk space, and the Android NDK image is even larger!"%}
 
