@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
- To be able to run your Linux stack builds locally you'll need [docker](https://www.docker.com/):
+To be able to run your Linux stack builds locally you'll need [docker](https://www.docker.com/):
 
 * For Linux just follow the [official install instructions](https://docs.docker.com/engine/installation/linux/).
 * For Mac you can use [Docker for Mac](https://www.docker.com/products/docker#/mac), which is the easiest way to get started.
@@ -23,37 +23,37 @@ If you're familiar with `docker` and the `bitrise` CLI:
 1. Install [docker](https://www.docker.com/).
 2. Make sure you have your `bitrise.yml` in your repository (you don't have to commit it, but the file must exist in your repository's root directory).
 3. `cd` into your repository's directory on your Mac/Linux.
-   * If you try to reproduce an issue, you should `git clone` your repository into a **new directory**, so that the directory will only contain the files which are committed into the repository!
+
+   (If you try to reproduce an issue, you should `git clone` your repository into a **new directory**, so that the directory will only contain the files which are committed into the repository!)
 4. `docker pull bitriseio/docker-android:latest`
 5. `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm bitriseio/docker-android:latest bitrise run WORKFLOW`
 
-    If you want to just jump into the container and experiment inside, you can replace `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container. For example, `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it bitriseio/docker-android:latest bash`. 
+   If you want to just jump into the container and experiment inside, you can replace `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container. For example, `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it bitriseio/docker-android:latest bash`.
 
 ## Getting started
 
-Open your Terminal / Command Line, and download the docker image you want to use. In general, if your project is an Android project but you don't use Android NDK, to preserve precious disk space, you should use the [bitriseio/docker-android](https://quay.io/repository/bitriseio/android) docker image. You can find other official Bitrise docker images [on our Docker Hub page](https://quay.io/organization/bitriseio). In this guide, we'll use the `bitriseio/docker-android` one.
+In general, if your project is an Android project but you don't use Android NDK, to preserve precious disk space, you should use the [bitriseio/docker-android](https://quay.io/repository/bitriseio/android) docker image. You can find other official Bitrise docker images [on our Quay page](https://quay.io/organization/bitriseio). In this guide, we'll use the `bitriseio/docker-android` one.
 
-1. Download docker images from the [Docker Hub](https://quay.io/organization/bitriseio) running this command:
+1. Open your Terminal / Command Line.
+2. Download docker images from the [Quay](https://quay.io/organization/bitriseio) running this command:
 
-   docker pull bitriseio/docker-android:latest
+   `docker pull bitriseio/docker-android:latest`
 
    Be aware that this can take quite a bit of time, as this image is over 10 GB. If the 			download would fail or hang, you can restart it any time by running the same command again.
-2. Once the download succeeds, download your Bitrise build configuration (`bitrise.yml`) to the root directory of your repository.
-
-   {% include message_box.html type="note" title="Where can I find the `bitrise.yml`?" content=" You can download your project's `bitrise.yml` from the `bitrise.yml` tab of your Workflow Editor on [bitrise.io](https://www.bitrise.io). "%}
-3. In your Terminal / Command Line go to (`cd`) the root directory of your repository. Check if your `bitrise.yml` is at this location.
+3. Once the download succeeds, download your Bitrise build configuration (`bitrise.yml`) to the root directory of your repository. You can download your project's `bitrise.yml` from the `bitrise.yml` tab of your Workflow Editor on [bitrise.io](https://www.bitrise.io). 
+4. In your Terminal / Command Line go to (`cd`) the root directory of your repository. Check if your `bitrise.yml` is at this location.
 
 **If you try to reproduce an issue, you should** `git clone` **your repository into a new directory**, so that the directory will only contain the files which are committed into the repository! It's a frequent reproducibility issue that you try to run the commands in your normal working directory, where you most likely have files which are not committed into your repository, for example, files which are in `.gitignore`.
 
 ## Running your builds
 
-The only thing left to do is to actually run a build:
+Run your build with the following command:
 
     docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm bitriseio/docker-android:latest bitrise run WORKFLOW
 
 * If you want to jump into the container and experiment inside, you can replace:
 
-   `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` 
+  `--rm bitriseio/docker-android:latest bitrise run WORKFLOW`
 
   with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container.
 
