@@ -26,7 +26,7 @@ If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you sh
 
    If you want to just jump into the container and experiment inside, you can replace `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container. For example, `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it bitriseio/docker-android:latest bash`.
 
-	In general, if your project is an Android project but you don't use 	Android NDK, to preserve precious disk space, you should use the 		[bitriseio/docker-android (https://quay.io/repository/bitriseio/android) docker image. You can find other official Bitrise docker images [on our Quay page](https://quay.io/organization/bitriseio). In this guide, we'll use the `bitriseio/docker-android` one.
+	In general, if your project is an Android project but you don't use Android NDK, to preserve precious disk space, you should use the [quay.io/bitriseio/android](https://quay.io/repository/bitriseio/android) docker image. You can find other official Bitrise docker images on our Quay page. In this example, we're using the `bitriseio/docker-android` one.
 
 2. Download docker images from the [Quay](https://quay.io/organization/bitriseio) running this command:
 
