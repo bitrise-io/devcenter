@@ -16,10 +16,6 @@ In this guide we'll use [this Bitrise Android sample project](https://github.com
 
 If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you should try that first. You don't have to master the CLI, if you know what `bitrise run WORKFLOW` does, that should be enough for this tutorial.
 
-## TL;DR;
-
-If you're familiar with `docker` and the `bitrise` CLI:
-
 1. Install [docker](https://www.docker.com/).
 2. Make sure you have your `bitrise.yml` in your repository (you don't have to commit it, but the file must exist in your repository's root directory).
 3. `cd` into your repository's directory on your Mac/Linux.
@@ -30,11 +26,8 @@ If you're familiar with `docker` and the `bitrise` CLI:
 
    If you want to just jump into the container and experiment inside, you can replace `--rm bitriseio/docker-android:latest bitrise run WORKFLOW` with `-it bitriseio/docker-android:latest bash` to start an interactive bash shell inside the container. For example, `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it bitriseio/docker-android:latest bash`.
 
-## Getting started
+	In general, if your project is an Android project but you don't use 	Android NDK, to preserve precious disk space, you should use the 		[bitriseio/docker-android (https://quay.io/repository/bitriseio/android) docker image. You can find other official Bitrise docker images [on our Quay page](https://quay.io/organization/bitriseio). In this guide, we'll use the `bitriseio/docker-android` one.
 
-In general, if your project is an Android project but you don't use Android NDK, to preserve precious disk space, you should use the [bitriseio/docker-android](https://quay.io/repository/bitriseio/android) docker image. You can find other official Bitrise docker images [on our Quay page](https://quay.io/organization/bitriseio). In this guide, we'll use the `bitriseio/docker-android` one.
-
-1. Open your Terminal / Command Line.
 2. Download docker images from the [Quay](https://quay.io/organization/bitriseio) running this command:
 
    `docker pull bitriseio/docker-android:latest`
