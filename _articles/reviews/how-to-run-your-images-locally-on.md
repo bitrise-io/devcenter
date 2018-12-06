@@ -28,7 +28,7 @@ If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you sh
 
 2. Download docker images from the [Quay](https://quay.io/organization/bitriseio) running this command:
 
-   `docker pull bitriseio/docker-android:latest`
+   `docker pull quay.io/bitriseio/docker-android:latest`
 
    Be aware that this can take quite a bit of time, as this image is over 10 GB. If the 			download would fail or hang, you can restart it any time by running the same command again.
 3. Once the download succeeds, download your Bitrise build configuration (`bitrise.yml`) to the root directory of your repository. You can download your project's `bitrise.yml` from the `bitrise.yml` tab of your Workflow Editor on [bitrise.io](https://www.bitrise.io). 
