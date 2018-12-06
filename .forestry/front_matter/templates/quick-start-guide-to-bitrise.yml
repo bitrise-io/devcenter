@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/reviews/docker-support-on-bitrise-io.md
 - _articles/reviews/how-to-run-your-images-locally-on.md
 - _articles/webhooks/index.md
 - _articles/bitrise-cli/customizing-bitrise-yml.md
@@ -72,4 +73,3 @@ pages:
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
 - _articles/reviews/the-android-linux-docker-environment.md
 - _articles/reviews/use-your-own-docker-image.md
-- _articles/reviews/docker-support-on-bitrise-io.md
