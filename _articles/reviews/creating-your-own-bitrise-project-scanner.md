@@ -12,7 +12,7 @@ A project type scanner defines at least two workflows: one for testing (`primary
 {% include message_box.html type="important" title="Build and test Steps" content="Build Steps and test Steps have specific requirements:
 
 * a **build** Step must build your app so that it is ready for deployment and it must output an Environment Variable that points to the output file(s). For example, a build Step to build an iOS app must output an .ipa file (not, say, .xcodearchive) and the path to this .ipa file.
-* a **test** Step must output the test results so that they are available for viewing on the build page on [bitrise.io](app.bitrise.io)."%} 
+* a **test** Step must output the test results so that they are available for viewing on the build page on [bitrise.io](app.bitrise.io)."%}
 
 When adding a new project on the website or initializing a project on your own machine, the [bitrise-init](https://github.com/bitrise-core/bitrise-init) tool iterates through every scanner, calls the scanner interface methods on each of them and collects their outputs. Based on these outputs, a basic configuration is generated.
 
