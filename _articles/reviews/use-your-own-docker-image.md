@@ -204,7 +204,7 @@ We’ll show a quick example with GitHub and Quay, using Quay’s automatic buil
 
 From a performance perspective, you should install the least amount of tools in your image, as it’ll make your image smaller, which means faster download & build start. "%}
 
-Before you start, make sure you have:
+Before you start, make sure you have a:
 
 * [GitHub account](https://github.com/)
 * [Quay account](https://quay.io/)
