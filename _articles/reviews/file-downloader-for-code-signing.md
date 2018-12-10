@@ -12,7 +12,7 @@ Bitrise has two Steps which download files from the `Code Signing` tab. Which on
 * `File Downloader` Step: `ANDROID KEYSTORE FILE` section is the recommended place to upload your keystore file. If you have uploaded your keystore file here, this is the step you should use. Once the file is uploaded, Bitrise assigns an env var (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value.
 
   ![](/img/android-keystore.png)
-* `Generic File Storage` Step: If you have uploaded your keystore file to the `GENERIC FILE STORAGE` section on the `Code Signing` tab, this is the step you should use. Bitrise assigns an env var (`$GENERIC_FILE_STORAGE`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. If you use an env var in your `build.gradle` file, you can use a `Script` Step to overwrite the value with the destination path defined in the `GENERIC FILE STORAGE. 
+* `Generic File Storage` Step: If you have uploaded your keystore file to the `GENERIC FILE STORAGE` section on the `Code Signing` tab, this is the step you should use. Bitrise assigns an env var (`$GENERIC_FILE_STORAGE`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. If you use an env var in your `build.gradle` file, you can use a `Script` Step to overwrite the value with the destination path defined in the `GENERIC FILE STORAGE`.
 
   ![](/img/keystore-generic.png)
 
