@@ -5,7 +5,7 @@ redirect_from: []
 published: false
 
 ---
-To be able to run your Linux stack builds locally you'll need [docker](https://www.docker.com/):
+To be able to run your Linux stack builds locally, you'll need [docker](https://www.docker.com/):
 
 * For Linux just follow the [official install instructions](https://docs.docker.com/engine/installation/linux/).
 * For Mac you can use [Docker for Mac](https://www.docker.com/products/docker#/mac), which is the easiest way to get started.
