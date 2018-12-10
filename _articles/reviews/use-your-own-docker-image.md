@@ -16,7 +16,7 @@ Running `docker` commands with a `Script` Step is the **recommended option** as 
 
 {% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli). "%}
 
-## Running docker commands during the build
+## Running docker commands with the Script step during the build
 
 **This is the recommended way of using docker** both locally and on [bitrise.io](https://www.bitrise.io/).
 
@@ -177,7 +177,7 @@ The bare-minimum Bitrise base image can be found at [quay.io](https://quay.io/re
 
 * Android base image, built on the bare-minimum base image with Android-specific tools and envs can be found at [quay.io](https://quay.io/repository/bitriseio/android) and at [Github](https://github.com/bitrise-docker/android):
 * Android NDK image, built on the Android base image with pre-installed Android NDK and envs, can be found at [quay.io](https://quay.io/repository/bitriseio/android-ndk) and at [Github](https://github.com/bitrise-docker/android-ndk):
-* Android NDK LTS, can be found at [quay.io ](https://quay.io/repository/bitriseio/android-ndk-lts)and at [Github](https://github.com/bitrise-docker/android-ndk-lts): 
+* Android NDK LTS, can be found at [quay.io ](https://quay.io/repository/bitriseio/android-ndk-lts)and at [Github](https://github.com/bitrise-docker/android-ndk-lts):
 
 To base your own image on one of our available images:
 
