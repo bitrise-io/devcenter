@@ -2,6 +2,9 @@
 title: Downloading a keystore file
 date: 2018-12-11 10:30:01 +0000
 redirect_from: []
+menu:
+  android-code-signing:
+    weight: 5
 published: false
 
 ---
