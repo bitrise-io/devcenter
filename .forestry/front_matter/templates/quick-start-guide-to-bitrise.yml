@@ -65,7 +65,6 @@ pages:
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
-- _articles/reviews/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/getting-started/managing-files-on-bitrise.md
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
