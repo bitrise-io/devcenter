@@ -24,7 +24,7 @@ Before you start:
 
    ![Screenshot](/img/android-code-signing/upload-file.png)
 
-   A keystore URL automatically gets generated once you upload the keystore file. Bitrise assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. 
+   A keystore URL automatically gets generated once you upload the keystore file. Bitrise assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future.
 5. Fill out the displayed three input fields with your credentials:
    * `keystore password`
    * `keystore alias`
@@ -45,7 +45,7 @@ Before you start:
 
 You can download your files from `GENERIC FILE STORAGE` (for example, your keystore file) using the `File-downloader` step:
 
-An example for downloading a keystore file" content="
+An example for downloading a keystore file:
 
     - file-downloader:
     
@@ -57,6 +57,6 @@ An example for downloading a keystore file" content="
 
 After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
-If you need more information, read [How to use the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/) guide. 
+If you need more information, read [How to use the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/) guide.
 
 {% include message_box.html type="info" title="Deploy your Android app with Bitrise" content=" Check out our [guide](https:/deploy/android-deploy/deploying-android-apps/) on how to deploy your app to [bitrise.io](https://www.bitrise.io/) and to a marketplace of your choice. " %}
