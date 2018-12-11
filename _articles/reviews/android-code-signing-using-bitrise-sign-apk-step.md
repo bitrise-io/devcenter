@@ -57,6 +57,8 @@ An example for downloading a keystore file:
 
 After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
-If you need more information, read [How to use the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/) guide.
+You might find these guides helpful as well:
 
-For more tips on downloading your keystore file, check out [this article](/code-signing/android-code-signing/downloading-a-keystore-file/).
+* [How to use the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/)
+* [Downloading a keystore file](/code-signing/android-code-signing/downloading-a-keystore-file/)
+* [Managing files on Bitrise](/getting-started/managing-files-on-bitrise/)
