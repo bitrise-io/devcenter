@@ -29,7 +29,7 @@ Right now we have four docker images, built on top of each other:
 * ideal to be used for non-Android projects as a base image, if you want to use it locally too, as this is the smallest image
 * `Ruby`, `Go`, `Python`, `git` and the [bitrise command line tools](https://www.bitrise.io/cli) are all preinstalled and ready to use
 * OS: `Ubuntu 16.04`, 64 bit
-* check out the related `Dockerfile` [where](https://github.com/bitrise-docker/bitrise-base/blob/master/Dockerfile) you can see what's preinstalled in this image.
+* check out the related `Dockerfile` [where](https://github.com/bitrise-docker/bitrise-base/blob/master/Dockerfile) you can see what's preinstalled in this image
 
 ### Base Android image ([GitHub](https://github.com/bitrise-docker/android) / [Docker Hub](https://quay.io/repository/bitriseio/android))
 
@@ -44,14 +44,16 @@ Right now we have four docker images, built on top of each other:
 * image name ID: `quay.io/bitriseio/android-ndk`
 * **built on the Base Android image** and extends it with the latest Android NDK
 * you can use the `$ANDROID_NDK_HOME` environment variable to point to the location of the preinstalled Android NDK, and it's also added to `$PATH`
-* check out the related `Dockerfile` [where](https://github.com/bitrise-docker/android-ndk/blob/master/Dockerfile) you can see what's preinstalled in this image.
-  You can find the pre-installed tools & System Report of this Stack [here](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/linux-docker-android.log).
+* check out the related `Dockerfile` [where](https://github.com/bitrise-docker/android-ndk/blob/master/Dockerfile) you can see what's preinstalled in this image
+*  You can find the pre-installed tools & System Report of this Stack [here](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/linux-docker-android.log)
 
 ### Android NDK LTS image ( / )
 
 * image name ID: `quay.io/bitriseio/android-ndk-lts`
-* 
-* 
+* it’s always a **tagged version of an older Android NDK image**
+* you can use the `$ANDROID_NDK_HOME` environment variable to point to the location of the preinstalled Android NDK, and it’s also added to `$PATH`
+* OS: Ubuntu16.04, 64 bit
+* you can find the pre-installed tools & System Report of this Stack [here](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/linux-docker-android-lts.log)
 
 ## Docker & Virtual Machines
 
