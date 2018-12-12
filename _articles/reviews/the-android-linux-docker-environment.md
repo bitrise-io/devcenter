@@ -22,7 +22,7 @@ We use standard [Docker](https://quay.io) images, published on [Quay](https://qu
 
 Right now we have four docker images, built on top of each other:
 
-### Bitrise Base image ([GitHub](https://github.com/bitrise-docker/bitrise-base) / [Docker Hub](https://quay.io/repository/bitriseio/bitrise-base))
+### Bitrise Base image ([GitHub](https://github.com/bitrise-docker/bitrise-base) / [Quay](https://quay.io/repository/bitriseio/bitrise-base))
 
 * image name ID: `quay.io/bitriseio/bitrise-base`
 * includes all the **non-Android tools and environment setup**
@@ -31,7 +31,7 @@ Right now we have four docker images, built on top of each other:
 * OS: `Ubuntu 16.04`, 64 bit
 * check out the related `Dockerfile` [where](https://github.com/bitrise-docker/bitrise-base/blob/master/Dockerfile) you can see what's preinstalled in this image
 
-### Base Android image ([GitHub](https://github.com/bitrise-docker/android) / [Docker Hub](https://quay.io/repository/bitriseio/android))
+### Base Android image ([GitHub](https://github.com/bitrise-docker/android) / [Quay](https://quay.io/repository/bitriseio/android))
 
 * image name ID: `quay.io/bitriseio/android`
 * **extends the Bitrise Base image** with Android specific tools and environments
@@ -39,7 +39,7 @@ Right now we have four docker images, built on top of each other:
 * you can use the `$ANDROID_HOME` environment variable to point to the location of the pre-installed Android SDK
 * check out the related `Dockerfile` [where](https://github.com/bitrise-docker/android/blob/master/Dockerfile) you can see what's preinstalled in this image
 
-### Android NDK image ([GitHub](https://github.com/bitrise-docker/android-ndk) / [Docker Hub](https://hub.docker.com/r/bitriseio/android-ndk/))
+### Android NDK image ([GitHub](https://github.com/bitrise-docker/android-ndk) / [Quay](https://hub.docker.com/r/bitriseio/android-ndk/))
 
 * image name ID: `quay.io/bitriseio/android-ndk`
 * **built on the Base Android image** and extends it with the latest Android NDK
@@ -47,7 +47,7 @@ Right now we have four docker images, built on top of each other:
 * check out the related `Dockerfile` [where](https://github.com/bitrise-docker/android-ndk/blob/master/Dockerfile) you can see what's preinstalled in this image
 *  You can find the pre-installed tools & System Report of this Stack [here](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/linux-docker-android.log)
 
-### Android NDK LTS image ( / )
+### Android NDK LTS image (GitHub / Quay)
 
 * image name ID: `quay.io/bitriseio/android-ndk-lts`
 * it’s always a **tagged version of an older Android NDK image**
