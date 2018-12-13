@@ -116,7 +116,7 @@ By choosing `SchemeWithoutTest`, the next option will be about the export method
 
 Every option chain has a first option: this is called `head`. The possible values of the options can branch the option chain.
 
-Every option branch's last `options` must have a `config` property set. `config` holds the id of the generated Bitrise configuration which will select the values for the options of the given project.
+Every option branch's last `options` must have a `config` property set. `config` holds the id of the generated Bitrise configuration.
 
 An options chain's last `options` cannot have a `value_map`.
 
