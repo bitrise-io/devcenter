@@ -39,7 +39,7 @@ Right now we have four docker images, built on top of each other:
 * you can use the `$ANDROID_HOME` environment variable to point to the location of the pre-installed Android SDK
 * check out the related `Dockerfile` [where](https://github.com/bitrise-docker/android/blob/master/Dockerfile) you can see what's preinstalled in this image
 
-### Android NDK image ([GitHub](https://github.com/bitrise-docker/android-ndk) / [Quay](https://hub.docker.com/r/bitriseio/android-ndk/))
+### Android NDK image ([GitHub](https://github.com/bitrise-docker/android-ndk) / [Quay](https://quay.io/repository/bitriseio/android-ndk))
 
 * image name ID: `quay.io/bitriseio/android-ndk`
 * **built on the Base Android image** and extends it with the latest Android NDK
@@ -71,4 +71,6 @@ You can call `docker info`, `docker build`, `docker run`, `docker login`, `docke
 
 {% include message_box.html type="warning" title="How to run `docker` in your build and share volumes" content="  **If you want to run** `**docker**` **in your build and share volumes**, please note that only those volumes can be shared which are shared with the base docker container (the one your build is running in). This is due to how `docker` handles volume sharing. Everything under `/bitrise` can be mounted as a volume, but no other path is guaranteed to work with `--volume` mapping. "%}
 
-It means that if you use the standard paths and you use relative paths to mount volumes, it'll work as expected, as the default source code directory is located inside `/bitrise` (by default it's `/bitrise/src` in our Docker images). **What won't work**, however, is if you change the source code directory to be located **outside** of `/bitrise`, or you want to mount a folder with an absolute path outside of `/bitrise`.
+It means that if you use the standard paths and you use relative paths to mount volumes, it'll work as expected, as the default source code directory is located inside `/bitrise` (by default it's `/bitrise/src` in our Docker images). 
+
+**What won't work**, however, is if you change the source code directory to be located **outside** of `/bitrise`, or you want to mount a folder with an absolute path outside of `/bitrise`.
