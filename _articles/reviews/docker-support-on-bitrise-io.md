@@ -5,11 +5,11 @@ redirect_from: []
 published: false
 
 ---
-[Docker](https://www.docker.com/) is an ideal tool to create, use and share custom environments, as well as to provide a lightweight way to do builds in emphemeral environments (where the environment is destroyed after the build, and a new one is created as the next build starts).
+[Quay](https://quay.io/) is an ideal tool to create, use and share custom environments, as well as to provide a lightweight way to do builds in emphemeral environments (where the environment is destroyed after the build, and a new one is created as the next build starts).
 
-Unfortunately Docker can only be used to **run** Linux **guest** systems right now. Since Windows Server 2016, it’s possible to run Windows docker containers (guest system) but only from Windows Server 2016 and on Windows 10 with Anniversary Update.
+**Unfortunately Docker can only be used to run Linux guest systems right now. Since Windows Server 2016, it’s possible to run Windows docker containers (guest system) but only from Windows Server 2016 and on Windows 10 with Anniversary Update.**
 
-Docker can be installed on Linux, macOS and Windows, but the environment (container) it runs can only be Linux (and Windows, on Windows Server 2016 and on Windows 10 with Anniversary Update). Linux containers (guest) can run on all platforms where you can install `docker` (Linux, Windows, macOS, …).
+**Docker can be installed on Linux, macOS and Windows, but the environment (container) it runs can only be Linux (and Windows, on Windows Server 2016 and on Windows 10 with Anniversary Update). Linux containers (guest) can run on all platforms where you can install** `**docker**` **(Linux, Windows, macOS, …).**
 
 **This is why our Android/Linux environment is provided as a docker image, but not our macOS Stacks.**
 
