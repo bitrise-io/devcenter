@@ -2,6 +2,9 @@
 title: Initializing a Bitrise project locally
 date: 2018-12-13 11:37:13 +0000
 redirect_from: []
+menu:
+  bitrise-cli:
+    weight: 4
 
 ---
 When you add a new app to Bitrise, our we detect the type of your project and generate a basic `bitrise.yml` file for you, with workflows that are appropriate for your project type.

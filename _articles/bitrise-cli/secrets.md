@@ -2,7 +2,7 @@
 title: Secrets
 menu:
   bitrise-cli:
-    weight: 13
+    weight: 14
 
 ---
 Secrets can be accessed and used in a similar way as App Env Vars,
