@@ -190,7 +190,7 @@ To base your own image on one of our available images:
 
 ### Use your own (public) Docker image for your builds [⚓](https://devcenter.bitrise.io/tutorials/docker/use-your-own-docker-image/#use-your-own-public-docker-image-for-your-builds)
 
-Once you have your own Docker image and you checked if it can be `docker pull`-ed, you can set its ID this way:
+If you have your own Docker image and you checked if it can be `docker pull`-ed, you can set its ID this way:
 
 1. Go to your Workflow Editor.
 2. Click the `Stack` tab.
