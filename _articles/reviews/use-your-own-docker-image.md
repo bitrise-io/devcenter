@@ -186,7 +186,7 @@ To base your own image on one of our available images:
 
 {% include message_box.html type="important" title="Don’t use the `alpha` images for your builds" content=" For every docker image we have on [quay.io](https://quay.io/), we have an `alpha` tagged version too. The `alpha` ones are frequently rebuilt and are **not precached on** [**bitrise.io**](https://www.bitrise.io/), so you should avoid those. The only purpose of the `alpha` images is to provide ready to use test environments for us, before we would publish a non-alpha version. "%}
 
-{% include message_box.html type="note" title="Quay.io ID" content=" You have to use the **quay.io ID** of the image you want to use as the base image. For example, `quay.io/bitriseio/android`, `quay.io/bitriseio/android-ndk`, `quay.io/bitriseio/android-ndk-lts`, `quay.io/bitriseio/bitrise-base`. "%}
+{% include message_box.html type="note" title="Quay.io ID" content=" You have to use the **quay.io ID** of the image you want to use as the base image. For example, `quay.io/bitriseio/android`, `quay.io/bitriseio/android-ndk`, `quay.io/bitriseio/android-ndk-lts`, or `quay.io/bitriseio/bitrise-base`. "%}
 
 ### Use your own (public) Docker image for your builds [⚓](https://devcenter.bitrise.io/tutorials/docker/use-your-own-docker-image/#use-your-own-public-docker-image-for-your-builds)
 
