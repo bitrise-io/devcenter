@@ -7,7 +7,7 @@ menu:
     weight: 4
 
 ---
-When you add a new app to Bitrise, our we detect the type of your project and generate a basic `bitrise.yml` file for you, with workflows that are appropriate for your project type.
+When you add a new app to Bitrise, we detect the type of your project and generate a basic `bitrise.yml` file for you, with workflows that are appropriate for your project type.
 
 With the Bitrise CLI, you can make this work on your own computer. You will need:
 

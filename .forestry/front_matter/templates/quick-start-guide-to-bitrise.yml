@@ -18,7 +18,6 @@ pages:
 - _articles/reviews/how-to-run-your-images-locally-on.md
 - _articles/webhooks/index.md
 - _articles/bitrise-cli/creating-your-own-bitrise-project-scanner.md
-- _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/bitrise-cli/customizing-bitrise-yml.md
 - _articles/builds/Starting-builds-manually.md
 - _articles/builds/triggering-builds/trigger-map.md
@@ -28,6 +27,7 @@ pages:
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/builds/selective_builds.md
+- _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/getting-started/signing-up/connecting-account-bitrise.md
 - _articles/testing/device-testing-for-android.md
 - _articles/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
