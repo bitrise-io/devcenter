@@ -1,15 +1,17 @@
 ---
-title: Expose an Environment Variable and use it in another Step
+title: Expose an Environment Variable and use it in another Step - draft
 redirect_from: []
 date: 2018-12-14 10:24:56 +0000
 published: false
 
 ---
-You can expose environment variables (env vars) from one Step and make it available for every other Step performed after the Step during the build. In this guide, we will demonstrate a few handy tricks with env vars using a simple example: You want to generate a release note which you wish to use in a message or deploy step. In this guide we show you how to expose env vars, then how to use, copy, and overwrite env vars with the release note example. 
+You can expose environment variables (env vars) from one Step and make it available for every other Step performed after the Step during the build. In this guide, we will demonstrate a few handy tricks with env vars using a simple example: In this guide we will show you how to generate a release note which you wish to use in a message or deploy step. In this guide we show you how to expose env vars, then how to use, copy, and overwrite env vars with the release note example. 
 
 ## Exposing environment variables with envman
 
-Exposing env vars is really easy: you just have to use [envman](https://github.com/bitrise-io/envman/) if you want to make env vars available for every other Step.
+Exposing env vars is really easy: use [envman](https://github.com/bitrise-io/envman/) to make env vars available for every other Step.
+
+{% include message_box.html type="info" title="About envman" content=" You can read more about how `envman` can be used on it's  [GitHub page](https://github.com/bitrise-io/envman/). "%}
 
 Here is a simple example:
 
@@ -17,7 +19,7 @@ Here is a simple example:
 
 You can call `envman` in any Step, including a script step, or even in your own script (stored in your repository) if you call it from a `bitrise` build.
 
-`envman` can be used in a couple of ways:
+Other ways of using `envman`:
 
 * You can specify the value as the `--value` parameter (you can see this in the previous example), pipe the value:
 
@@ -25,10 +27,6 @@ You can call `envman` in any Step, including a script step, or even in your own 
 * Or read the value from a file:
 
       envman add --key MY_RELEASE_NOTE --valuefile ./some/file/path
-
-{% include message_box.html type="info" title="About envman" content="
-You can read more about how `envman` can be used on it's  [GitHub page](https://github.com/bitrise-io/envman/).
-"%}
 
 {% include message_box.html type="warning" title="Env var value size limit" content=" Note that env var values set through `envman` are limited to 10KB by default in an effort to prevent issues with common tools. Different tools have different environment size constraints, for example, `Bash` will start to fail on OS X once the environments set exceed \~120KB (in total, not a single variable!). "%}
 
