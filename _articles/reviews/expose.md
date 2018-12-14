@@ -5,7 +5,7 @@ date: 2018-12-14 10:24:56 +0000
 published: false
 
 ---
-You can expose environment variables (env var) from one Step and make it available for every other Step performed after the Step during the build. An example might be that you want to generate a release note which you want to use in a message or deploy step.
+You can expose environment variables (env vars) from one Step and make it available for every other Step performed after the Step during the build. For example, you want to generate a release note which you wish to use in a message or deploy step. In this guide we show you how to expose, use, copy, and overwrite env vars with the release note example.
 
 ## Exposing environment variables with envman
 
@@ -79,7 +79,7 @@ If you want to expose the value of an env var to be accessible through another e
 
 After this, subsequent steps can get the value of `BITRISE_BUILD_NUMBER` from the `MY_BUILD_NUMBER` env var. If you change the value of `BITRISE_BUILD_NUMBER` after this, the value of `MY_BUILD_NUMBER` won't be modified, it will still hold the original value!
 
-## Overwrite an Environment Variable if another one is set
+## Overwriting an Environment Variable if another one is set
 
 For example, if a custom environment variable is set through the Build Trigger API.
 
