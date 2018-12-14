@@ -27,18 +27,18 @@ You can call `envman` in any Step, including a script step, or even in your own 
       envman add --key MY_RELEASE_NOTE --valuefile ./some/file/path
 
 {% include message_box.html type="info" title="About envman" content="
-You can read more about how `envman` can be used on it's [GitHub page](https://github.com/bitrise-io/envman/).
+You can read more about how `envman` can be used on it's  [GitHub page](https://github.com/bitrise-io/envman/).
 "%}
 
 {% include message_box.html type="warning" title="Env var value size limit" content=" Note that env var values set through `envman` are limited to 10KB by default in an effort to prevent issues with common tools. Different tools have different environment size constraints, for example, `Bash` will start to fail on OS X once the environments set exceed \~120KB (in total, not a single variable!). "%}
 
- **For larger data**, however, you should use files or other solutions, and use environment variables to point to the file / to the ID or location of where the data is stored.
+**For larger data**, however, you should use files or other solutions, and use environment variables to point to the file / to the ID or location of where the data is stored.
 
 ## Using exposed environment variables
 
-Once the env var is exposed, you can use it like any other env var. In `bash` you can reference the previous example environment as: `$MY_RELEASE_NOTE`.
+Once the env var is exposed, you can use it like any other env var. In Bash you can reference the previous environment example as `$MY_RELEASE_NOTE`.
 
-You can of course use these exposed environment variables in the inputs of other Steps. For example the **HockeyApp Deploy** step has a `notes` input, you can reference the previous example variable by inserting `$MY_RELEASE_NOTE` into the input, like: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
+You can use these exposed environment variables in the inputs of other Steps as well. For example, the `HockeyApp iOS / Android Deploy` Step has a `notes` input, you can reference the previous example variable by inserting `$MY_RELEASE_NOTE` into the input, like: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
 
 A simple example, exposing the release note and then using it in another `Script step`, and in a `Slack step`:
 
