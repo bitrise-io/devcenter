@@ -38,9 +38,9 @@ You can read more about how `envman` can be used on it's  [GitHub page](https://
 
 Once the env var is exposed, you can use it like any other env var. In Bash you can reference the previous environment example as `$MY_RELEASE_NOTE`.
 
-You can use these exposed env vars in the inputs of other Steps as well. For example, the `HockeyApp iOS / Android Deploy` Step has a `Notes attached to the deploy` input field where you can reference the previous example variable. Insert `$MY_RELEASE_NOTE` into the input field like: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
+You can use these exposed env vars in the inputs of other Steps as well. For example, the `HockeyApp iOS / Android Deploy` Step has a `notes` input field where you can reference the previous example variable. Insert `$MY_RELEASE_NOTE` into the input like so: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
 
-A simple example, exposing the release note and then using it in another `Script step`, and in a `Slack step`:
+Here is another example where we're exposing the release note and then using it in another `Scrip` and in a `Send a Slack message` Step.
 
     format_version: 1.1.0
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -64,25 +64,20 @@ A simple example, exposing the release note and then using it in another `Script
             - webhook_url: ...
             - message: "Release Notes: $MY_RELEASE_NOTE"
 
-## Copy an environment variable to another key
+## Copying an environment variable to another key
 
-If you want to expose the value of an environment variable to be accessible through another environment variable key, you can simply expose the value with a new key.
+If you want to expose the value of an env var to be accessible through another env var key, you can simply expose the value with a new key. For example, if you want to copy the value of the `BITRISE_BUILD_NUMBER` environment variable and make it available under the environment variable key `MY_BUILD_NUMBER`, you just have to read the current value and expose it under the new key.
 
-For example, if you want to copy the value of the `BITRISE_BUILD_NUMBER` environment variable and make it available under the environment variable key `MY_BUILD_NUMBER`, you just have to read the current value and expose it under the new key.
+* To modify the first example here, which exposed a fix value:
 
-To modify the first example here, which exposed a fix value:
+      envman add --key MY_RELEASE_NOTE --value "This is the release note"
 
-    envman add --key MY_RELEASE_NOTE --value "This is the release note"
+  You can simply reference/read the value of the other environment variable in the `envman add ...` command.
+* To expose the value of `BITRISE_BUILD_NUMBER` under the key `MY_BUILD_NUMBER`:
 
-simply reference/read the value of the other environment variable in the `envman add ...` command.
+      envman add --key MY_BUILD_NUMBER --value "${BITRISE_BUILD_NUMBER}"
 
-To expose the value of `BITRISE_BUILD_NUMBER` under the key `MY_BUILD_NUMBER`:
-
-    envman add --key MY_BUILD_NUMBER --value "${BITRISE_BUILD_NUMBER}"
-
-After this, subsequent steps can get the value of `BITRISE_BUILD_NUMBER` from the `MY_BUILD_NUMBER` environment variable.
-
-_Note: if you change the value of_ `_BITRISE_BUILD_NUMBER_` _after this, the value of_ `_MY_BUILD_NUMBER_` _won't be modified, that will still hold the original value!_
+After this, subsequent steps can get the value of `BITRISE_BUILD_NUMBER` from the `MY_BUILD_NUMBER` env var. If you change the value of `BITRISE_BUILD_NUMBER` after this, the value of `MY_BUILD_NUMBER` won't be modified, it will still hold the original value!
 
 ## Overwrite an Environment Variable if another one is set
 
