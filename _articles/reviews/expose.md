@@ -38,7 +38,7 @@ You can read more about how `envman` can be used on it's  [GitHub page](https://
 
 Once the env var is exposed, you can use it like any other env var. In Bash you can reference the previous environment example as `$MY_RELEASE_NOTE`.
 
-You can use these exposed environment variables in the inputs of other Steps as well. For example, the `HockeyApp iOS / Android Deploy` Step has a `notes` input, you can reference the previous example variable by inserting `$MY_RELEASE_NOTE` into the input, like: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
+You can use these exposed env vars in the inputs of other Steps as well. For example, the `HockeyApp iOS / Android Deploy` Step has a `Notes attached to the deploy` input field where you can reference the previous example variable. Insert `$MY_RELEASE_NOTE` into the input field like: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
 
 A simple example, exposing the release note and then using it in another `Script step`, and in a `Slack step`:
 
