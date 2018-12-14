@@ -28,6 +28,7 @@ pages:
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/builds/selective_builds.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
+- _articles/reviews/expose.md
 - _articles/getting-started/signing-up/connecting-account-bitrise.md
 - _articles/testing/device-testing-for-android.md
 - _articles/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
