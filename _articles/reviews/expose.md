@@ -19,10 +19,10 @@ You can call `envman` in any Step, including a script step, or even in your own 
 
 `envman` can be used in a couple of ways:
 
-* You can specify the value as the `--value` parameter (you can see this in the previous example), pipe the value, for example:
+* You can specify the value as the `--value` parameter (you can see this in the previous example), pipe the value:
 
       echo 'hi' | envman add --key MY_RELEASE_NOTE
-* Or read the value from a file, for example:
+* Or read the value from a file:
 
       envman add --key MY_RELEASE_NOTE --valuefile ./some/file/path
 
@@ -30,11 +30,13 @@ You can call `envman` in any Step, including a script step, or even in your own 
 You can read more about how `envman` can be used on it's [GitHub page](https://github.com/bitrise-io/envman/).
 "%}
 
-{% include message_box.html type="warning" title="Env Var value size limit" content=" Environment Variable values set through `envman` are limited to 10KB by default. This is done in order to prevent issues with common tools. Different tools have different environment size constraints, e.g. `Bash` will start to fail on OS X once the environments set exceed \~120KB (**in total, not a single variable!**). "%}
+{% include message_box.html type="warning" title="Env var value size limit" content=" Note that env var values set through `envman` are limited to 10KB by default in an effort to prevent issues with common tools. Different tools have different environment size constraints, for example, `Bash` will start to fail on OS X once the environments set exceed \~120KB (in total, not a single variable!). "%}
 
-**For larger data** you should use files or other solutions, and use environment variables to point to the file / to the ID or location of where the data is stored.
+ **For larger data**, however, you should use files or other solutions, and use environment variables to point to the file / to the ID or location of where the data is stored.
 
-Once the environment variable is exposed you can use it like any other environment variable. In `bash` you can reference the previous example environment as: `$MY_RELEASE_NOTE`.
+## Using exposed environment variables
+
+Once the env var is exposed, you can use it like any other env var. In `bash` you can reference the previous example environment as: `$MY_RELEASE_NOTE`.
 
 You can of course use these exposed environment variables in the inputs of other Steps. For example the **HockeyApp Deploy** step has a `notes` input, you can reference the previous example variable by inserting `$MY_RELEASE_NOTE` into the input, like: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
 
