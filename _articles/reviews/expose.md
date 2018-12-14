@@ -1,5 +1,5 @@
 ---
-title: Expose
+title: Expose an Environment Variable and use it in another Step
 redirect_from: []
 date: 2018-12-14 10:24:56 +0000
 published: false
