@@ -95,9 +95,9 @@ This script will check whether the `API_PROJECT_SCHEME` env var is defined, and 
 
 ### Alternative solution: use Workflow Env Vars
 
-Alternatively you can set environment variables for Workflows too. The Env Vars you set for a workflow will overwrite the env var if defined as an App Env Var or Secret Env Var.
+Alternatively you can set environment variables for Workflows too. The env vars you set for a workflow will overwrite the env var if defined as an app env var or [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/).
 
-An example workflow which defined an environment variable, and then runs another workflow which can use those env vars:
+An example workflow which defined an env var, and then runs another workflow which can use those env vars:
 
     workflows:
     
