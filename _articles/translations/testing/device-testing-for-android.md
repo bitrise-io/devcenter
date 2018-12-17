@@ -4,23 +4,23 @@ title: Androidのデバイステスト
 ---
 BitriseのAndroidデバイステストソリューションを用いることで、デバイスのセットアップや登録を行うことなく、エミュレータ上でUIテストを実行できます。 専用のステップを使用し、テストするデバイスタイプを設定するだけです。
 
-{% include message_box.html type="note" title="制限" content="ビルド時間によって制限される場合があります。また、1つのビルドには1種類のテスト(`instrumentation`、`robo` または `gameloop`）を実行する `[BETA] Virtual Device Testing` ステップを1つだけ含めることができます。  "%}
+{% include message_box.html type="note" title="制限" content="ビルド時間によって制限される場合があります。また、1つのビルドには1種類のテスト(`instrumentation`、`robo`または`gameloop`）を実行する`[BETA] Virtual Device Testing`ステップを1つだけ含めることができます。  "%}
 
-デバイステストソリューションは[Firebase Test Lab]（https://firebase.google.com/docs/test-lab/) をベースとしています。 実行結果のログ、ビデオ、スクリーンショットはBitriseで閲覧することができます。
+デバイステストソリューションは[Firebase Test Lab](https://firebase.google.com/docs/test-lab/)をベースとしています。 実行結果のログ、ビデオ、スクリーンショットはBitriseで閲覧することができます。
 
 ## デバイステストを有効化
 
 まず、アプリのデバイステストを有効にし、`Gradle Runner`と`[BETA] Virtual Device Testing for Android`ステップを拡張したビルドを選択する必要があります。
 
-1. はじめにアプリの `Settings` タブ上で`Device Testing` をONにします。`Device Testing`の右上隅にあるスイッチを右に切り替えます。
+1. はじめにアプリの`Settings`タブ上で`Device Testing`をONにします。`Device Testing`の右上隅にあるスイッチを右に切り替えます。
 
    ![](/img/settings-device-testing.png)
 2. `Settings` ページからアプリの `Build` ページに移動します。
 3. テストを行うビルドをクリックします。
-4. もし `Step 1` でデバイステストを有効にしていれば、`APPS & ARTIFACTS`の次に3番目のタブ `DEVICE TESTS BETA` が出現するのでこれをクリックします。
+4. もし`Step 1`でデバイステストを有効にしていれば、`APPS & ARTIFACTS`の次に3番目のタブ`DEVICE TESTS BETA` が出現するのでこれをクリックします。
 
    ![](/img/build-device-test.jpg)
-5. `add step to primary workflow` をクリックして、デバイステストに必要な2つのステップを`primary workflow`に追加します。
+5. `add step to primary workflow`をクリックして、デバイステストに必要な2つのステップを`primary workflow`に追加します。
    * `Android Build` - テストのためにapkを生成するステップ
    * `[BETA] Virtual Device Testing for Android` - テストを実行しテストレポートを生成するステップ![](/img/primary-virtual-device.png)
 
@@ -33,7 +33,7 @@ Bitriseでは3つのテストタイプから選択可能です。
 * gameloop
 
 もしテストタイプの違いを知りたい場合は[Firebase's documentation](https://firebase.google.com/docs/test-lab/android/overview)をご覧ください。
-`robo`テストと` instrumentation`テストでは設定方法に少し違いがありますので、別々に見てみましょう！
+`robo`テストと`instrumentation`テストでは設定方法に少し違いがありますので、別々に見てみましょう！
 
 ### `robo`テストの実行
 
@@ -84,7 +84,7 @@ Bitriseでは3つのテストタイプから選択可能です。
 
 UIテストの結果は、ビルドページの `DEVICE TESTS`タブで確認できます。
 
-1. `Builds`ページに戻り、ビルドを選択し、`DEVICE TESTS`タブをクリックしてテスト結果を確認します。
+1. `Builds`ページに戻りビルドを選択し、`DEVICE TESTS`タブをクリックしてテスト結果を確認します。
 2. プロジェクトをテストしたデバイスをクリックします。
 
    ![](/img/device-test-page.jpg)
