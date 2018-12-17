@@ -62,7 +62,6 @@ pages:
 - _articles/getting-started/signing-up/connecting-apple-dev-account.md
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/builds/Scheduling-Builds.md
-- _articles/reviews/submitting-a-new-project-scanner-to-bitrise.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/reviews/public-sample-apps-draft.md
