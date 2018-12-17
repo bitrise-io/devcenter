@@ -12,7 +12,7 @@ To be able to run your Linux stack builds locally, you'll need [docker](https://
 
 In this guide we'll use [this Bitrise Android sample project](https://github.com/bitrise-samples/sample-apps-android-sdk22).
 
-{% include message_box.html type="warning" title="Large images ahead" content=" The official Bitrise Docker images are quite large, due to the fact that it includes a wide variety of preinstalled tools. You'll need at **least** 20-25 GB free disk space! "%}
+{% include message_box.html type="warning" title="Large images ahead" content=" The official Bitrise Docker images are quite large because they include a wide variety of preinstalled tools. You'll need at **least** 20-25 GB free disk space! "%}
 
 If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you should try that first. You don't have to master the CLI, if you know what `bitrise run WORKFLOW` does, that should be enough for this tutorial.
 
@@ -21,18 +21,27 @@ If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you sh
 1. Install [docker](https://www.docker.com/).
 2. Make sure you have your `bitrise.yml` in your repository (you don't have to commit it, but the file must exist in your repository's root directory).
 3. `cd` into your repository's directory on your Mac/Linux.
-4. `docker pull quay.io/bitriseio/android:latest` to pull the image from its registry.
-5. `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm quay.io/bitriseio/android:latest bitrise run WORKFLOW`
+4. Pull the image from its registry:
+   ```
+   docker pull quay.io/bitriseio/android:latest
+   ```
+5. Run the following command:
+	```
+	docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm quay.io/bitriseio/android:latest bitrise run WORKFLOW`
+	```
+   If you want to just jump into the container and experiment inside, you can replace `--rm quay.io/bitriseio/android:latest bitrise run WORKFLOW` with `-it quay.io/bitriseio/android:latest bash` to start an interactive bash shell inside the container. For example: 
+   ```
+   docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it quay.io/bitriseio/android:latest bash
+   ```
 
-   If you want to just jump into the container and experiment inside, you can replace `--rm quay.io/bitriseio/android:latest bitrise run WORKFLOW` with `-it quay.io/bitriseio/android:latest bash` to start an interactive bash shell inside the container. For example, `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it quay.io/bitriseio/android:latest bash`.
+   In general, if your project is an Android project but you don't use Android NDK, to preserve precious disk space, you should use the [quay.io/bitriseio/android](https://quay.io/repository/bitriseio/android) docker image. You can find other official Bitrise docker images on our [Quay page](https://quay.io/organization/bitriseio). In this example, we're using the `quay.io/bitriseio/android` one.
+6. Download docker images from the [Quay](https://quay.io/organization/bitriseio):
+   ```
+   docker pull quay.io/bitriseio/android:latest`
+   ```
 
-   In general, if your project is an Android project but you don't use Android NDK, to preserve precious disk space, you should use the [quay.io/bitriseio/android](https://quay.io/repository/bitriseio/android) docker image. You can find other official Bitrise docker images on our[ Quay page](https://quay.io/organization/bitriseio). In this example, we're using the `quay.io/bitriseio/android` one.
-6. Download docker images from the [Quay](https://quay.io/organization/bitriseio) running this command:
-
-   `docker pull quay.io/bitriseio/android:latest`
-
-   Be aware that this can take quite a bit of time, as this image is over 10 GB. If the 			download would fail or hang, you can restart it any time by running the same command again.
-7. Once the download succeeds, download your Bitrise build configuration (`bitrise.yml`) to the root directory of your repository. You can download your project's `bitrise.yml` from the `bitrise.yml` tab of your Workflow Editor on [bitrise.io](https://www.bitrise.io).
+   Be aware that this can take quite a bit of time, as this image is over 10 GB. If the 			download fails or hangs, you can restart it any time by running the same command again.
+7. Download your Bitrise build configuration (`bitrise.yml`) to the root directory of your repository. You can download your project's `bitrise.yml` from the `bitrise.yml` tab of your Workflow Editor on [bitrise.io](https://www.bitrise.io).
 8. In your Terminal / Command Line go to (`cd`) the root directory of your repository. Check if your `bitrise.yml` is at this location.
 
 **If you try to reproduce an issue, you should** `git clone` **your repository into a new directory**, so that the directory will only contain the files which are committed into the repository! It's a frequent reproducibility issue that you try to run the commands in your normal working directory, where you most likely have files which are not committed into your repository, for example, files which are in `.gitignore`.
@@ -41,7 +50,9 @@ If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you sh
 
 Run your build with the following command:
 
-    docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm quay.io/bitriseio/android:latest bitrise run WORKFLOW
+```
+docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm quay.io/bitriseio/android:latest bitrise run WORKFLOW
+```
 
 * If you want to jump into the container and experiment inside, you can replace:
 
@@ -49,7 +60,11 @@ Run your build with the following command:
 
   with `-it quay.io/bitriseio/android:latest bash` to start an interactive bash shell inside the container.
 
-  For example: `docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it quay.io/bitriseio/android:latest bash`. After this, you can run `bitrise run WORKFLOW`, which will run the workflow inside the container. To exit from the container, just run `exit`.
+  For example: 
+  ```
+  docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it quay.io/bitriseio/android:latest bash`.
+  ```
+  After this, you can run `bitrise run WORKFLOW`, which will run the workflow inside the container. To exit from the container, just run `exit`.
 * Don't forget to replace `WORKFLOW` with the actual ID of your workflow in your `bitrise.yml`, with something like `primary`!
 
 This command will share the current directory (the directory of your repository) as a shared volume with the docker container, and will make it available **inside** the container at the path `/bitrise/src`.
