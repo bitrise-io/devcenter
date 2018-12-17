@@ -80,7 +80,7 @@ There is a small difference between configuring your workflow for `robo` and `in
                - BITRISE_APK_PATH: BITRISE_TEST_APK_PATH
 
    ![](/img/virtual-device.png)
-6. Select `instrumentation` as `Test type` in `[BETA] Virtual Device Testing step`.
+6. Select `instrumentation` as `Test type` in `[BETA] Virtual Device Testing` step.
 7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of  `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/instrumentation-test.png)
