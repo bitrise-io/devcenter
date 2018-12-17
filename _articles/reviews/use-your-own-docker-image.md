@@ -12,7 +12,7 @@ There are two ways to use `docker` on [bitrise.io](https://www.bitrise.io/):
 1. Run `docker` commands yourself, for example, with a `Script` step.
 2. Use a Linux/Android stack and set the environment docker image for the app on the `Stack` tab of the Workflow Editor.
 
-Running `docker` commands with a `Script` Step is the **recommended option** as you should **not change the base environment docker image** on the `Stack` tab unless you really have to! Running the `docker` commands yourself during the build is way more flexible and provides an overall better control.
+Running `docker` commands with a `Script` Step is the **recommended option** as you should **not change the base environment docker image** on the `Stack` tab unless you really have to! Running the `docker` commands yourself during the build is way more flexible and provides an overall higher level of control.
 
 {% include message_box.html type="note" title="GitHub sample repository" content=" You can find a sample repository on [GitHub](https://github.com/bitrise-samples/minimal-docker), which is configured to run on your Mac/Linux using the [Bitrise CLI](https://www.bitrise.io/cli). "%}
 
@@ -96,7 +96,7 @@ Here is a bit more complex example for using your own `Dockerfile` in your rep
 This workflow will:
 
 1. Git Clone your repository.
-2. Then run `docker build -t bitrise-minimal-sample .` and `docker run --rm bitrise-minimal-sample` in the repository’s root.
+2. Run `docker build -t bitrise-minimal-sample .` and `docker run --rm bitrise-minimal-sample` in the repository’s root.
 
 If you have a `Dockerfile` like this in the root of the repository:
 
