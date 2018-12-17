@@ -7,7 +7,7 @@ published: false
 ---
 ## Hardware
 
-We're experimenting with new VM providers and VM configurations, but in general, what you can expect:
+**\[We're experimenting with new VM providers and VM configurations, but in general, what you can expect\]:**
 
 * at least 7.5GB RAM
 * at least 2 CPU cores
@@ -57,11 +57,13 @@ Right now we have four docker images, built on top of each other:
 
 ## Docker & Virtual Machines
 
-**Every build runs in a new VM** not just in a new container. The VM is destroyed right after the build. This allows us to grant you full control over `Docker` and the whole environment.
+**Every build runs in a new VM,** not just in a new container. The VM is destroyed right after the build. This allows us to grant you full control over `Docker` and the whole environment.
 
 When your build starts on the Docker based Stack, we volume mount the `/var/run/docker.sock` socket into your container (similar to calling `docker run -v /var/run/docker.sock:/var/run/docker.sock ...`. You can find a description about this access granting method [here](https://jpetazzo.github.io/2015/09/03/do-not-use-docker-in-docker-for-ci/)).
 
-{% include message_box.html type="note" title="Docker binary installation" content=" The `docker` binary have to be installed inside the base Docker image (we install Docker in every one of our Docker images so that you don't have to do anything if you use our image, or you base your own image on our Docker images), because docker started to migrate from a single-binary solution to dynamically loaded components, and simply sharing the `docker` binary is not sufficient anymore. "%}
+{% include message_box.html type="note" title="Docker binary installation" content=" The `docker` binary has to be installed inside the base Docker image because docker started to migrate from a single-binary solution to dynamically loaded components, and simply sharing the `docker` binary is not sufficient anymore.
+
+We install Docker in every one of our Docker images so that you don't have to do anything if you use our image, or you base your own image on our Docker images."%}
 
 This means that you have access to `docker` in your container, and can use other tools which use docker, like [docker-compose](https://docs.docker.com/compose). You can, for example, configure and run tests and other automations on website projects using `docker-compose`.
 
@@ -69,8 +71,8 @@ You can call `docker info`, `docker build`, `docker run`, `docker login`, `docke
 
 ### Shared volumes
 
-{% include message_box.html type="warning" title="How to run `docker` in your build and share volumes" content="  **If you want to run** `**docker**` **in your build and share volumes**, please note that only those volumes can be shared which are shared with the base docker container (the one your build is running in). This is due to how `docker` handles volume sharing. Everything under `/bitrise` can be mounted as a volume, but no other path is guaranteed to work with `--volume` mapping. "%}
+{% include message_box.html type="warning" title="How to run `docker` in your build and share volumes" content="If you want to run `docker` in your build and share volumes, please note that only those volumes can be shared that are shared with the base docker container (the one your build is running in). This is due to how `docker` handles volume sharing. Everything under `/bitrise` can be mounted as a volume, but no other path is guaranteed to work with `--volume` mapping. "%}
 
-It means that if you use the standard paths and you use relative paths to mount volumes, it'll work as expected, as the default source code directory is located inside `/bitrise` (by default it's `/bitrise/src` in our Docker images). 
+It means that if you use the standard paths and you use relative paths to mount volumes, it'll work as expected, as the default source code directory is located inside `/bitrise` (by default it's `/bitrise/src` in our Docker images).
 
 **What won't work**, however, is if you change the source code directory to be located **outside** of `/bitrise`, or you want to mount a folder with an absolute path outside of `/bitrise`.
