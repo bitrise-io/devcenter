@@ -28,7 +28,6 @@ pages:
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/builds/selective_builds.md
 - _articles/reviews/expose.md
-- _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/getting-started/signing-up/connecting-account-bitrise.md
 - _articles/testing/device-testing-for-android.md
 - _articles/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
@@ -69,7 +68,8 @@ pages:
 - _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/getting-started/managing-files-on-bitrise.md
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
-- _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
 - _articles/reviews/the-android-linux-docker-environment.md
 - _articles/reviews/use-your-own-docker-image.md
+- _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
+- _articles/code-signing/android-code-signing/downloading-a-keystore-file.md

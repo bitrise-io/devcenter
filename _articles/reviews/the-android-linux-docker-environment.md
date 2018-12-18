@@ -7,7 +7,7 @@ published: false
 ---
 ## Hardware
 
-**\[We're experimenting with new VM providers and VM configurations, but in general, what you can expect\]:**
+The current hardware specifications are the following:
 
 * at least 7.5GB RAM
 * at least 2 CPU cores
