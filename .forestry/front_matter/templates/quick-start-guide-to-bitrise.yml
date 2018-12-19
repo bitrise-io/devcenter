@@ -24,6 +24,7 @@ pages:
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/reviews/docker-support-on-bitrise-io.md
+- _articles/reviews/vpn-draft.md
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/builds/selective_builds.md
