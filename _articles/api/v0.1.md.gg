@@ -5,6 +5,10 @@
   we announce those there.
 * If you want to request a new API feature / endpoint,
   please do it here: [http://discuss.bitrise.io/t/bitrise-public-api/37](http://discuss.bitrise.io/t/bitrise-public-api/37)
+  
+{% include message_box.html type="Endpoints" title="The endpoint reference documentation has been moved to another location:
+
+[Bitrise API endpoints](https://api-docs.bitrise.io)"%} 
 
 ## API domain/host and versioning
 
