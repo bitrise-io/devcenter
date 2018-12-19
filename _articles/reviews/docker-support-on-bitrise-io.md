@@ -19,4 +19,4 @@ Our Linux/Android stacks have full `docker` support. This means that you can r
 
 ## Setting custom docker images
 
-You can [set a custom docker image](/tutorials/docker/use-your-own-docker-image/) for your builds if you select the Linux/Android stack on the `Stack` tab of your app's Workflow Editor. In most cases however you should not change this image! Instead, you should run `docker` commands during the build using our a `Script` step.
+You can [set a custom docker image](/tutorials/docker/use-your-own-docker-image/) for your builds if you select the Linux/Android stack on the `Stack` tab of your app's Workflow Editor. In most cases, however, you should not change this image! Instead, you should run `docker` commands during the build using our a `Script` step.

@@ -14,7 +14,6 @@ fields:
   hidden: false
   default: ''
 pages:
-- _articles/reviews/docker-support-on-bitrise-io.md
 - _articles/reviews/how-to-run-your-images-locally-on.md
 - _articles/webhooks/index.md
 - _articles/bitrise-cli/creating-your-own-bitrise-project-scanner.md
@@ -24,6 +23,7 @@ pages:
 - _articles/builds/bitrise-yml-online.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/reviews/frequent-android-issues.md
+- _articles/reviews/docker-support-on-bitrise-io.md
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/builds/selective_builds.md
