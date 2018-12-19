@@ -17,15 +17,51 @@ To connect to a VPN, you need to:
 
 You can configure and connect a VPN anywhere in your Workflow - BEFORE you would use the VPN connection, of course. For example, if you require a VPN connection to access your repository, you have to connect before the `Git Clone` Step.
 
-{% include message_box.html type="important" title="SSH sessions" content="When you choose your VPN tool and do the setup/configuration, you have to be careful **not to restart or abort** existing SSH sessions! The [bitrise.io](https://www.bitrise.io) workers will abort the build if the SSH connection between the build's Control/Master machine and the build virtual machine terminates!"%} 
+{% include message_box.html type="important" title="SSH sessions" content="When you choose your VPN tool and do the setup/configuration, you have to be careful **not to restart or abort** existing SSH sessions! The [bitrise.io](https://www.bitrise.io) workers will abort the build if the SSH connection between the build's Control/Master machine and the build virtual machine terminates!"%}
 
-## Example
+## Example configurations
+
+### Using the `Connect to OpenVPN Server` Step
+
+To use the `Connect to OpenVPN Server` Step, you need to build an OpenVPN server in advance. [Read more about how to set up an OpenVPN server](https://www.digitalocean.com/community/tutorials/how-to-set-up-an-openvpn-server-on-ubuntu-18-04).
+
+Once the server is ready, encode the following in Base64:
+
+* CA certificate
+* client certificate
+* client private key
+
+You can retrieve the contents of Base64 with the following command:
+
+    $ base64 <certificate or private key file path>
+
+Now you are ready to set up the VPN on Bitrise, in the Workflow Editor of your app:
+
+1. Register the encoded certificates and keys as [Secrets](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/#adding-a-secret-env-var) on [bitrise.io]().
+
+   We recommend using the following keys as they are the default inputs for the VPN Step:
+   * CA certificate: `$VPN_CA_CRT_BASE64`
+   * Client certificate: `$VPN_CLIENT_CRT_BASE64`
+   * Private key: `VPN_CLIENT_KEY_BASE64`
+2. Add the `Connect to OpenVPN Server` Step to your workflow.
+
+   Don't forget to add the Step before any Steps that might require VPN connection.
+3. [Add the previously created Secrets](https://devcenter.bitrise.io/getting-started/getting-started-steps/#environment-variables-as-step-inputs) to their respective inputs:
+   * `Base64 encoded CA Certificate`
+   * `Base64 encoded Client Certificate`
+   * `Base64 encoded Client Private Key`
+
+   If you created the Secrets with the recommended keys, you do not have to change the inputs. 
+4. Fill in the other required inputs.
+   * `Host`: the Open VPN Server IP or hostname
+   * `Port`: OpenVPN Server Port number
+   * `Protocol`: OpenVPN Server Protocol 
+
+### Strongswan VPN setup with Script Step
 
 This is an example script which you can either save into your repository and run
 it from there, or just copy paste its content into a `Script Step` in your `bitrise`
 configuration (`bitrise.yml` / Workflow).
-
-_You can choose other VPN tools, not just the one shown here (_[_strongswan_](https://www.strongswan.org)_), this is just one example setup which works on_ [_bitrise.io_](https://www.bitrise.io)_._
 
 ```bash
 #!/usr/bin/env bash
