@@ -51,13 +51,13 @@ Now you are ready to set up the VPN on Bitrise, in the Workflow Editor of your a
    * `Base64 encoded Client Certificate`
    * `Base64 encoded Client Private Key`
 
-   If you created the Secrets with the recommended keys, you do not have to change the inputs. 
+   If you created the Secrets with the recommended keys, you do not have to change the inputs.
 4. Fill in the other required inputs.
    * `Host`: the Open VPN Server IP or hostname
    * `Port`: OpenVPN Server Port number
-   * `Protocol`: OpenVPN Server Protocol 
+   * `Protocol`: OpenVPN Server Protocol
 
-### Strongswan VPN setup with Script Step
+### Strongswan VPN setup
 
 This is an example script which you can either save into your repository and run
 it from there, or just copy paste its content into a `Script Step` in your `bitrise`
@@ -183,3 +183,14 @@ esac
 
 # Your VPN connection should be up and running. Any following steps of your Bitrise workflow can access devices over your VPN connection 🎉
 ```
+
+### Cisco VPN connect
+
+You can also use a `Cisco VPN connect` Step: it connects with Cisco VPN provided by VPN3000 Concentrator, Juniper/Netscreen, IOS and PIX using **vpnc**. 
+
+To provide VPN client settings and credentials required for the step, you can: 
+
+* use the existing vpnc configuration file: `vpnc.conf`
+* use the `Command line options` input of the Step. The options specified in this input will take precedence over the configuration file! 
+
+For more information on setting up vpnc, check the [vpnc homepage](https://www.unix-ag.uni-kl.de/\~massar/vpnc/) and the [vpnc manual](https://linux.die.net/man/8/vpnc).
