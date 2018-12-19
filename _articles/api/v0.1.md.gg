@@ -1,4 +1,4 @@
-{% include message_box.html type="warning" title="The API is work-in-progress" content=" The API is work-in-progress" content="The API is work-in-progress: we will add new endpoints and possibly update the existing ones in the future."%}
+{% include message_box.html type="warning" title="The API is work-in-progress" content=" The API is work-in-progress: we will add new endpoints and possibly update the existing ones in the future. "%}
 
 * Join the discussion at: [https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554).
   Follow it if you want to get notified about new endpoints and changes,
