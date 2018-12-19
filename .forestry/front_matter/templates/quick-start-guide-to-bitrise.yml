@@ -25,6 +25,7 @@ pages:
 - _articles/reviews/frequent-android-issues.md
 - _articles/reviews/docker-support-on-bitrise-io.md
 - _articles/reviews/vpn-draft.md
+- _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/builds/selective_builds.md
@@ -63,7 +64,6 @@ pages:
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/builds/Scheduling-Builds.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
-- _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/bitrise-cli/offline-workflow-editor.md
