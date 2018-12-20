@@ -1,59 +1,55 @@
 ---
-title: Download or replace project resources
+title: Downloading or replacing project resources
 menu:
   tutorials:
     weight: 8
 
 ---
-You can do this in quite a few ways, these are probably the easiest ones:
+There are multiple ways of downloading or replacing project resources. We'll go through the following examples:
 
-* use the `ZIP resource archive downloader` step for downloading and extracting a ZIP file
-* use the `File Downloader` step to download a single file
-* use a `Script` Step
+* using the `ZIP resource archive downloader` step for downloading and extracting a ZIP file
+* using the `File Downloader` step to download a single file
+* using a `Script` Step
 
 {% include message_box.html type="note" title="Store the resources file on [bitrise.io](https://www.bitrise.io)" content=" In the Workflow Editor select the `Code signing & Files` section, and upload the archive file in the `Generic File Storage` section. Bitrise will automatically generate a (time limited, expiring) download URL for the files you upload here, and will expose the download URL as an Environment Variable. "%}
 
-## Using the `ZIP resource archive downloader` step
+## Using the `ZIP resource archive downloader` Step
 
-If you have your resources on your server in a zip archive, all you have to do
-is to add the `ZIP resource archive downloader` Step to your Workflow,
-specify the URL of the ZIP and the destination where the zip's content should be uncompressed.
+If you have your resources on your server in a zip archive, it's very simple to download it:
+
+1. Add the `ZIP resource archive downloader` Step to your Workflow.
+2. Specify the URL of the ZIP and the destination where the zip's content should be uncompressed.
 
 The _source code of your app_ will be (by default) downloaded into the folder
 defined in the `$BITRISE_SOURCE_DIR` environment variable.
 
-If you want to place the content of your ZIP archive into a folder called _myresource_
-inside your app's source code directory, you can define the extract target folder
-(of the `ZIP resource archive downloader` step) as `${BITRISE_SOURCE_DIR}/myresource`,
-or `./myresource` (as the default working directory is the source code directory).
+You can also place the content of your ZIP archive into a specific folder within your app's source code directory. Just define the destination folder of the  `ZIP resource archive downloader` Step like this: `${BITRISE_SOURCE_DIR}/folder_name` or `.folder_name`.
 
-## Single file - using the `File Downloader` step
+## Using the `File Downloader` Step
 
-If you only want to download a single file, you can of course ZIP it up and
-use the `ZIP resource archive downloader` step as described in the previous section,
-but there's also a step for single file downloads.
+If you only want to download a single file, use the `File Downloader` Step. 
 
-The `File Downloader` step can be used for this use case. Works very similarly as the
-`ZIP resource archive downloader` step, except it does not require a ZIP file,
-it simply downloads the specified file to the location you set.
+1. Add the `File Downloader` Step to your Workflow.
+2. Specify the URL of the file and the destination where the file should be downloaded to.
 
-    ...
+    ```yaml
     - file-downloader:
         inputs:
         - source: $BITRISEIO_my_file_id_URL
         - destination: "$BITRISE_SOURCE_DIR/path/to/store/the/file"
-    ...
+    ```
 
-## The "manual" way
+## Using a Script Step
 
-If you want to control the whole download process, you can use the `Script` step
-and write your own download code, something like this:
+If you want to control the whole download process, you can use the `Script` step and write your own download code. For example:
 
-    #!/bin/bash
-    set -ex
-    # Download your resource
-    curl -fo "download/path" "https://url/of/your/resource"
-    # Uncompress it
-    unzip -u "download/path" -d "uncompress/target/path"
+```bash
+#!/bin/bash
+set -ex
+# Download your resource
+curl -fo "download/path" "https://url/of/your/resource"
+# Uncompress it
+unzip -u "download/path" -d "uncompress/target/path"
+```
 
-_If you'd need an additional tool to download or uncompress the resources file, please see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide._
+_If you'd need an additional tool to download or uncompress the resources file, please see the_ [_Install Any Additional Tool_](/tips-and-tricks/install-additional-tools/) _guide._
