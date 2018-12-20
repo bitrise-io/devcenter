@@ -1,5 +1,5 @@
 ---
-title: Deploying your Middleman blog / static website
+title: Deploying your Middleman website
 menu:
   tutorials:
     weight: 10
