@@ -28,6 +28,7 @@ pages:
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
+- _articles/reviews/getting-started-with-flutter-apps.md
 - _articles/builds/selective_builds.md
 - _articles/reviews/expose.md
 - _articles/getting-started/signing-up/connecting-account-bitrise.md
