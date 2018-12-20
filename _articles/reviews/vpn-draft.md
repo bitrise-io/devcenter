@@ -188,7 +188,7 @@ esac
 
 You can use the `Cisco VPN connect` Step: it connects with Cisco VPN provided by VPN3000 Concentrator, Juniper/Netscreen, IOS and PIX using **vpnc**. 
 
-To provide VPN client settings and credentials required for the step, you can: 
+To provide VPN client settings and credentials required for the Step, you can: 
 
 * use the existing vpnc configuration file: `vpnc.conf`
 * use the `Command line options` input of the Step. The options specified in this input will take precedence over the configuration file! 
