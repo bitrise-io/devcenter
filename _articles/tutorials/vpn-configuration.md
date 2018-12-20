@@ -1,5 +1,5 @@
 ---
-title: Configure and connect to your VPN
+title: Configuring and connecting to your VPN
 menu:
   tutorials:
     weight: 8
