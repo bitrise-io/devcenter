@@ -2,7 +2,7 @@
 title: Expose an Environment Variable and use it in another Step
 menu:
   tips-and-tricks:
-    weight: 4
+    weight: 5
 
 ---
 You can expose Environment Variables from one Step, to make it available for every other Step performed after the Step during the build. An example might be that you want to generate a release note which you want to use in a message or deploy step. Exposing environment variables is really easy, you just have to use [envman](https://github.com/bitrise-io/envman/) if you want to make it available for every other Step.

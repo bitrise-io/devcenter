@@ -1,8 +1,9 @@
 ---
 title: Efficient Continuous Integration and Deployment Workflow for iOS development
 menu:
-  tutorials:
-    weight: 9
+  tips-and-tricks:
+    weight: 2
+    title: Efficient CI/CD workflow for iOS development
 
 ---
 # An efficient CI/CD Workflow for iOS development

@@ -2,7 +2,7 @@
 title: Install Any Additional Tool
 menu:
   tips-and-tricks:
-    weight: 8
+    weight: 9
 
 ---
 If you need something you can't find a Step for, you can always install & use tools with scripts or Script steps.

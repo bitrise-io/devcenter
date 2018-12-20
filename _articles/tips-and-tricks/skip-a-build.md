@@ -2,7 +2,7 @@
 title: Skip a Build (skip ci)
 menu:
   tips-and-tricks:
-    weight: 2
+    weight: 3
 
 ---
 If you want to skip a specific commit, to not to start a build,
