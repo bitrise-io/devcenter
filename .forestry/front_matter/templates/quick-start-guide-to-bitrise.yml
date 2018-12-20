@@ -21,7 +21,6 @@ pages:
 - _articles/builds/Starting-builds-manually.md
 - _articles/builds/triggering-builds/trigger-map.md
 - _articles/builds/bitrise-yml-online.md
-- _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/reviews/docker-support-on-bitrise-io.md
 - _articles/reviews/vpn-draft.md
@@ -29,6 +28,7 @@ pages:
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/reviews/getting-started-with-flutter-apps.md
+- _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/builds/selective_builds.md
 - _articles/reviews/expose.md
 - _articles/getting-started/signing-up/connecting-account-bitrise.md
