@@ -1,5 +1,5 @@
 ---
-title: Build with FAKE (F# Make)
+title: Building with FAKE (F# Make)
 menu:
   tutorials:
     weight: 11
