@@ -1,13 +1,11 @@
 ---
-title: Efficient Continuous Integration and Deployment Workflow for iOS development
+title: Efficient CI/CD Workflow for iOS development
 menu:
   tips-and-tricks:
     weight: 2
     title: Efficient CI/CD workflow for iOS development
 
 ---
-# An efficient CI/CD Workflow for iOS development
-
 To achieve an efficient workflow for rapid iOS app development you have to specify the
 automation scenarios and the triggers to start specific scenarios.
 
