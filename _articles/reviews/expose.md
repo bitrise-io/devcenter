@@ -9,9 +9,9 @@ You can expose environment variables (env vars) from one Step and make it availa
 
 ## Exposing environment variables with envman
 
-Exposing env vars is really easy: use [envman](https://github.com/bitrise-io/envman/) to make env vars available for every other Step.
+**Exposing env vars is really easy: use** [**envman**](https://github.com/bitrise-io/envman/) **to make env vars available for every other Step.**
 
-{% include message_box.html type="info" title="About envman" content=" You can read more about how `envman` can be used on it's  [GitHub page](https://github.com/bitrise-io/envman/). "%}
+{% include message_box.html type="info" title="About envman" content=" Check out more details about `envman` on it's  [GitHub page](https://github.com/bitrise-io/envman/). "%}
 
 Here is a simple example:
 
@@ -19,12 +19,10 @@ Here is a simple example:
 
 You can call `envman` in any Step, including a script step, or even in your own script (stored in your repository) if you call it from a `bitrise` build.
 
-Other ways of using `envman`:
-
-* You can specify the value as the `--value` parameter (you can see this in the previous example). Pipe the value as shown here:
+You can specify the value as the `--value` parameter (you can see this in the previous example). Pipe the value as shown here:
 
       echo 'hi' | envman add --key MY_RELEASE_NOTE
-* Or read the value from a file:
+You can also read the value from a file:
 
       envman add --key MY_RELEASE_NOTE --valuefile ./some/file/path
 
