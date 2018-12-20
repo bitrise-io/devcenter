@@ -1,5 +1,5 @@
 ---
-title: Auto deploy your Middleman blog / static website
+title: Deploying your Middleman blog / static website
 menu:
   tutorials:
     weight: 10
