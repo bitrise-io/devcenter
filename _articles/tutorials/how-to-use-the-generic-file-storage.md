@@ -1,5 +1,5 @@
 ---
-title: How to use the Generic File Storage
+title: Using the Generic File Storage
 menu:
   tutorials:
     weight: 6
