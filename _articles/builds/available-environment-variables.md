@@ -44,7 +44,7 @@ These environments are available for builds running on [bitrise.io](https://www.
 * `BITRISEIO_GIT_BRANCH_DEST` : Used only with builds triggered by Pull Requests - the destination/target branch of the Pull Request that triggered the build
 * `BITRISE_GIT_TAG` : tag which triggered the build (if any)
 * `BITRISE_GIT_COMMIT` : commit hash which triggered the build (if any)
-* `BITRISE_GIT_MESSAGE` : commit message - or the message you specified if you triggered the build manually. This env var is mapped to [`commit message`](https://devcenter.bitrise.io/api/build-trigger/#git-related) in the API.
+* `BITRISE_GIT_MESSAGE` : commit message, Pull Request title or the message you specified if you triggered the build manually. This env var is mapped to [`commit message`](https://devcenter.bitrise.io/api/build-trigger/#git-related) in the API.
 * `BITRISEIO_GIT_REPOSITORY_OWNER` : the owner of the Git repository of the project (for example, `bitrise-team`)
 * `BITRISEIO_GIT_REPOSITORY_SLUG` : the slug of the Git repository of the project (for example, `bitrise-blog`)
 * `BITRISE_PULL_REQUEST` : Pull Request ID, which triggered the build (if any)
