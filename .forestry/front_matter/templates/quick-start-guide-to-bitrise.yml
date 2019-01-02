@@ -22,7 +22,6 @@ pages:
 - _articles/builds/triggering-builds/trigger-map.md
 - _articles/builds/bitrise-yml-online.md
 - _articles/reviews/frequent-android-issues.md
-- _articles/reviews/docker-support-on-bitrise-io.md
 - _articles/reviews/vpn-draft.md
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/infrastructure/available-stacks.md
