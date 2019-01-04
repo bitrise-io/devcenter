@@ -63,12 +63,13 @@ Here is another example where we're exposing the release note and then using it 
 
 If you want to expose the value of an env var to be accessible through another env var key, you can simply expose the value with a new key. For example, if you want to copy the value of the `BITRISE_BUILD_NUMBER_` env var and make it available under the env var key `MY_BUILD_NUMBER`, you just have to read the current value and expose it under the new key.
 
-* To modify the first example here, which exposed a fix value:
+To modify the first example here, which exposed a fix value:
 
       envman add --key MY_RELEASE_NOTE --value "This is the release note"
 
-  You can simply reference/read the value of the other environment variable in the `envman add ...` command.
-* To expose the value of `BITRISE_BUILD_NUMBER` under the key `MY_BUILD_NUMBER`:
+You can simply reference/read the value of the other environment variable in the `envman add ...` command.
+
+To expose the value of `BITRISE_BUILD_NUMBER` under the key `MY_BUILD_NUMBER`:
 
       envman add --key MY_BUILD_NUMBER --value "${BITRISE_BUILD_NUMBER}"
 
