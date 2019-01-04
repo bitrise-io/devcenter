@@ -1,5 +1,5 @@
 ---
-title: Exposing env vars and using them in another Step - draft
+title: Exposing env vars and using them in another step - draft
 redirect_from: []
 date: 2018-12-14 10:24:56 +0000
 published: false
