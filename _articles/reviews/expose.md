@@ -79,8 +79,6 @@ After this, subsequent steps can get the value of `BITRISE_BUILD_NUMBER` from th
 
 ## Overwriting an environment variable if another one is set
 
-For example, if a custom environment variable is set through the Build Trigger API.
-
 The best way to overwrite an env var is to use a Script Step as described above and check if the custom env var is set.
 
 As an example, if you want to overwrite the `PROJECT_SCHEME` env var and an `API_PROJECT_SCHEME` env var is set, insert a `Script` step in the workflow (can be the first Step) with this content:
