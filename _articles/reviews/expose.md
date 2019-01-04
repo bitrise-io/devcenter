@@ -33,7 +33,7 @@ You can also read the value from a file:
 
 Once the env var is exposed, you can use it like any other env var. For example, in Bash you can reference the previous environment example as `$MY_RELEASE_NOTE`.
 
-**You can use these exposed env vars in the inputs of other Steps as well. For example, the** `**HockeyApp iOS / Android Deploy**` **Step has a** `**notes**` **input field where you can reference the previous example variable. Insert** `**$MY_RELEASE_NOTE**` **into the input like so:** `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
+You can use these exposed env vars in the inputs of other Steps as well. For example, the `HockeyApp Deploy` Step has a `notes` input field where you can reference the previous example variable. Insert `$MY_RELEASE_NOTE` into the input like so: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
 
 Here is another example where we're exposing the release note and then using it in another `Script` and in a `Send a Slack message` Step.
 
@@ -57,11 +57,11 @@ Here is another example where we're exposing the release note and then using it 
             inputs:
             - channel: ...
             - webhook_url: ...
-            - message: "Release Notes: $MY_RELEASE_NOTE"
+            - message: "Release Note: $MY_RELEASE_NOTE"
 
 ## Copying an environment variable to another key
 
-If you want to expose the value of an env var to be accessible through another env var key, you can simply expose the value with a new key. For example, if you want to copy the value of the `BITRISE_BUILD_NUMBER` environment variable and make it available under the environment variable key `MY_BUILD_NUMBER`, you just have to read the current value and expose it under the new key.
+If you want to expose the value of an env var to be accessible through another env var key, you can simply expose the value with a new key. For example, if you want to copy the value of the `BITRISE_BUILD_NUMBER_` env var and make it available under the env var key `MY_BUILD_NUMBER`, you just have to read the current value and expose it under the new key.
 
 * To modify the first example here, which exposed a fix value:
 
