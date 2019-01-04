@@ -5,13 +5,11 @@ date: 2018-12-14 10:24:56 +0000
 published: false
 
 ---
-You can expose environment variables (env vars) from one Step and make it available for every other Step performed after the Step during the build.
-
-In this guide, we will demonstrate a few handy tricks with env vars using a simple example: In this guide we will show you how to generate a release note which you wish to use in a message or deploy step. In this guide we show you how to expose env vars, then how to use, copy, and overwrite env vars with the release note example.
+In this guide we show you how to expose environment variables (env vars) and use those, then how to copy env vars to another key and finally how to overwrite env vars.
 
 ## Exposing environment variables with envman
 
-You can use [envman](https://github.com/bitrise-io/envman/) to make env vars available for every other Step.
+You can expose env vars from one Step and make it available for every other Step performed after the Step during the build. You can use [envman](https://github.com/bitrise-io/envman/) to manage env vars.
 
 Here is a simple example:
 
