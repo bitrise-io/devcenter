@@ -93,9 +93,9 @@ This script will check whether the `API_PROJECT_SCHEME` env var is defined, and 
 
 ### Alternative solution: use Workflow environment variables
 
-Alternatively you can set environment variables for Workflows too. The env vars you set for a workflow will overwrite the env var if defined as an app env var or [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/).
+Alternatively you can set env vars for Workflows too. The env vars you set for a workflow will overwrite the env var if defined as an app env var or [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/).
 
-An example workflow which defined an env var, and then runs another workflow which can use those env vars:
+Here is an example workflow which defines an env var, and then runs another workflow which can use those env vars:
 
     workflows:
     
@@ -113,4 +113,4 @@ An example workflow which defined an env var, and then runs another workflow whi
                 #!/bin/bash
                 echo "ENV_TYPE: $ENV_TYPE"
 
-If you run the `deploy-alpha` workflow, that will set the `ENV_TYPE` env var to `alpha`, then it will run the `deploy` workflow, which can use that environment variable. In this example, it will simply print its value (the printed text will be: `ENV_TYPE: alpha`).
+If you run the `deploy-alpha` workflow, that will set the `ENV_TYPE` env var to `alpha`, then it will run the `deploy` workflow, which can use that env var. In this example, it will simply print its value (the printed text will be: `ENV_TYPE: alpha`).
