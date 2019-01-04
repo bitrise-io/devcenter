@@ -1,5 +1,5 @@
 ---
-title: Expose an Environment Variable and use it in another Step
+title: Exposing env vars and using them in another step
 menu:
   tips-and-tricks:
     weight: 5
