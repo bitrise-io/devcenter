@@ -27,7 +27,7 @@ You can also read the value from a file:
 
       envman add --key MY_RELEASE_NOTE --valuefile ./some/file/path
 
-{% include message_box.html type="warning" title="Env var value size limit" content=" Note that env var values set through `envman` are limited to **10KB** by default in an effort to prevent issues with common tools. Different tools have different environment size constraints. For example, `Bash` will start to fail on OS X once the environments set exceed \~120KB (in total, not a single variable) **For larger data**, however, you should use files or other solutions, and use environment variables to point to the file, to the ID, or to the location of the stored data. "%}
+{% include message_box.html type="warning" title="Env var value size limit" content=" Note that env var values set through `envman` are limited to **10KB** by default in an effort to prevent issues with common tools. Different tools have different environment size constraints. For example, `Bash` will start to fail on OS X once the environments set exceed \~120KB (in total, not a single variable). **For larger data**, however, you should use files or other solutions, and use environment variables to point to the file, to the ID, or to the location of the stored data. "%}
 
 ## Using exposed environment variables
 
