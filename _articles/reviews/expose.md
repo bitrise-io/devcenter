@@ -5,7 +5,7 @@ date: 2018-12-14 10:24:56 +0000
 published: false
 
 ---
-You can expose environment variables (env vars) from one Step and make it available for every other Step performed after the Step during the build. 
+You can expose environment variables (env vars) from one Step and make it available for every other Step performed after the Step during the build.
 
 In this guide, we will demonstrate a few handy tricks with env vars using a simple example: In this guide we will show you how to generate a release note which you wish to use in a message or deploy step. In this guide we show you how to expose env vars, then how to use, copy, and overwrite env vars with the release note example.
 
@@ -59,7 +59,7 @@ Here is another example where we're exposing the release note and then using it 
             - webhook_url: ...
             - message: "Release Note: $MY_RELEASE_NOTE"
 
-## Copying an environment variable to another key
+## Copying an environment variables to another key
 
 If you want to expose the value of an env var to be accessible through another env var key, you can simply expose the value with a new key. For example, if you want to copy the value of the `BITRISE_BUILD_NUMBER_` env var and make it available under the env var key `MY_BUILD_NUMBER`, you just have to read the current value and expose it under the new key.
 
@@ -75,13 +75,13 @@ To expose the value of `BITRISE_BUILD_NUMBER` under the key `MY_BUILD_NUMBER`:
 
 After this, subsequent steps can get the value of `BITRISE_BUILD_NUMBER` from the `MY_BUILD_NUMBER` env var. If you change the value of `BITRISE_BUILD_NUMBER` after this, the value of `MY_BUILD_NUMBER` won't be modified, it will still hold the original value!
 
-## Overwriting an Environment Variable if another one is set
+## Overwriting an environment variable if another one is set
 
 For example, if a custom environment variable is set through the Build Trigger API.
 
-The best way to do this, to make sure that no matter what, you overwrite the other env var, is to use a Script step, as described above, and check whether the custom env var is set.
+The best way to overwrite an env var is to use a Script Step as described above and check if the custom env var is set.
 
-As an example, if you want to overwrite the `PROJECT_SCHEME` environment variable, if, let's say, a `API_PROJECT_SCHEME` env var is set, just drop in a `Script` step (can be the very first one in the workflow), with the content:
+As an example, if you want to overwrite the `PROJECT_SCHEME` env var and an `API_PROJECT_SCHEME` env var is set, insert a `Script` step in the workflow (can be the first Step) with this content:
 
     #!/bin/bash
     set -ex
@@ -89,7 +89,7 @@ As an example, if you want to overwrite the `PROJECT_SCHEME` environment variabl
       envman add --key PROJECT_SCHEME --value "$API_PROJECT_SCHEME"
     fi
 
-This script will check whether the `API_PROJECT_SCHEME` env var is defined, and if it is, then its value will be assigned to the `PROJECT_SCHEME` environment variable, overwriting the original value of `PROJECT_SCHEME`.
+This script will check whether the `API_PROJECT_SCHEME` env var is defined, and if it is, its value will be assigned to the `PROJECT_SCHEME` environment variable, overwriting the original value of `PROJECT_SCHEME`.
 
 ### Alternative solution: use Workflow Env Vars
 
@@ -113,4 +113,4 @@ An example workflow which defined an env var, and then runs another workflow whi
                 #!/bin/bash
                 echo "ENV_TYPE: $ENV_TYPE"
 
-If you run the `deploy-alpha` workflow, that will set the `ENV_TYPE` env var to `alpha`, then it will run the `_deploy` workflow, which can use that environment variable - in this example it will simply print its value (the printed text will be: `ENV_TYPE: alpha`).
+If you run the `deploy-alpha` workflow, that will set the `ENV_TYPE` env var to `alpha`, then it will run the `deploy` workflow, which can use that environment variable. In this example, it will simply print its value (the printed text will be: `ENV_TYPE: alpha`).
