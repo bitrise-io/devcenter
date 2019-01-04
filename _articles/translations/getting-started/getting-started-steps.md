@@ -73,7 +73,7 @@ Stepの入力フィールドをクリックすると、グリーン色の `Inser
 * または `Environment Variables won't be replaced in input`
 
 これは `is_expand` オプションの状態です。
-_これはYAMLモードでしか変更できません (_`_bitrise.yml_` _tab of the editor)._
+_これはYAMLモードでしか変更できません (エディタにある_`_bitrise.yml_` _タブ)._
 
 このオプションがすること
 
