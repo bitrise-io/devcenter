@@ -5,13 +5,13 @@ date: 2018-12-14 10:24:56 +0000
 published: false
 
 ---
-You can expose environment variables (env vars) from one Step and make it available for every other Step performed after the Step during the build. In this guide, we will demonstrate a few handy tricks with env vars using a simple example: In this guide we will show you how to generate a release note which you wish to use in a message or deploy step. In this guide we show you how to expose env vars, then how to use, copy, and overwrite env vars with the release note example.
+You can expose environment variables (env vars) from one Step and make it available for every other Step performed after the Step during the build. 
+
+In this guide, we will demonstrate a few handy tricks with env vars using a simple example: In this guide we will show you how to generate a release note which you wish to use in a message or deploy step. In this guide we show you how to expose env vars, then how to use, copy, and overwrite env vars with the release note example.
 
 ## Exposing environment variables with envman
 
-**Exposing env vars is really easy: use** [**envman**](https://github.com/bitrise-io/envman/) **to make env vars available for every other Step.**
-
-{% include message_box.html type="info" title="About envman" content=" Check out more details about `envman` on it's  [GitHub page](https://github.com/bitrise-io/envman/). "%}
+**You can use** [**envman**](https://github.com/bitrise-io/envman/) **to make env vars available for every other Step.**
 
 Here is a simple example:
 
@@ -22,19 +22,18 @@ You can call `envman` in any Step, including a script step, or even in your own 
 You can specify the value as the `--value` parameter (you can see this in the previous example). Pipe the value as shown here:
 
       echo 'hi' | envman add --key MY_RELEASE_NOTE
+
 You can also read the value from a file:
 
       envman add --key MY_RELEASE_NOTE --valuefile ./some/file/path
 
-{% include message_box.html type="warning" title="Env var value size limit" content=" Note that env var values set through `envman` are limited to 10KB by default in an effort to prevent issues with common tools. Different tools have different environment size constraints, for example, `Bash` will start to fail on OS X once the environments set exceed \~120KB (in total, not a single variable!). "%}
-
-**For larger data**, however, you should use files or other solutions, and use environment variables to point to the file / to the ID / location of the stored data.
+{% include message_box.html type="warning" title="Env var value size limit" content=" Note that env var values set through `envman` are limited to **10KB** by default in an effort to prevent issues with common tools. Different tools have different environment size constraints. For example, `Bash` will start to fail on OS X once the environments set exceed \~120KB (in total, not a single variable) **For larger data**, however, you should use files or other solutions, and use environment variables to point to the file, to the ID, or to the location of the stored data. "%}
 
 ## Using exposed environment variables
 
 Once the env var is exposed, you can use it like any other env var. For example, in Bash you can reference the previous environment example as `$MY_RELEASE_NOTE`.
 
-You can use these exposed env vars in the inputs of other Steps as well. For example, the `HockeyApp iOS / Android Deploy` Step has a `notes` input field where you can reference the previous example variable. Insert `$MY_RELEASE_NOTE` into the input like so: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
+**You can use these exposed env vars in the inputs of other Steps as well. For example, the** `**HockeyApp iOS / Android Deploy**` **Step has a** `**notes**` **input field where you can reference the previous example variable. Insert** `**$MY_RELEASE_NOTE**` **into the input like so:** `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
 
 Here is another example where we're exposing the release note and then using it in another `Script` and in a `Send a Slack message` Step.
 

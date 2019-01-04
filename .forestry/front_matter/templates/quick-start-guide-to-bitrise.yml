@@ -23,6 +23,7 @@ pages:
 - _articles/reviews/frequent-android-issues.md
 - _articles/reviews/vpn-draft.md
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
+- _articles/builds/available-environment-variables.md
 - _articles/infrastructure/available-stacks.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/testing/run-your-tests-in-the-app-center.md
@@ -48,7 +49,6 @@ pages:
 - _articles/code-signing/ios-code-signing/code-signing.md
 - _articles/tips-and-tricks/android-tips-and-tricks.md
 - _articles/tutorials/deploy/android-deployment.md
-- _articles/builds/available-environment-variables.md
 - _articles/builds/build-numbering-and-app-versioning.md
 - _articles/getting-started/account-security.md
 - _articles/builds/sensitive-input-field.md
