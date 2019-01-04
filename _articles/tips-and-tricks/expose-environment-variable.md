@@ -5,7 +5,7 @@ menu:
     weight: 5
 
 ---
-In this guide we show you how to expose environment variables (env vars) and use those, then how to copy env vars to another key and finally how to overwrite env vars.
+In this guide we show you how to expose environment variables (env vars) and use them, then how to copy env vars to another key and finally how to overwrite env vars.
 
 ## Exposing environment variables with envman
 
