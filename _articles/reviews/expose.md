@@ -33,7 +33,9 @@ You can also read the value from a file:
 
 Once the env var is exposed, you can use it like any other env var. For example, in Bash you can reference the previous environment example as `$MY_RELEASE_NOTE`.
 
-You can use these exposed env vars in the inputs of other Steps as well. For example, the `HockeyApp Deploy` Step has a `notes` input field where you can reference the previous example variable. Insert `$MY_RELEASE_NOTE` into the input like so: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
+You can use these exposed env vars in the inputs of other Steps as well. For example, the `HockeyApp Deploy` Step has a `notes` input field where you can reference the previous example variable.
+
+Insert `$MY_RELEASE_NOTE` into the input like so: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
 
 Here is another example where we're exposing the release note and then using it in another `Script` and in a `Send a Slack message` Step.
 
