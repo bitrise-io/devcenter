@@ -61,7 +61,7 @@ Here is another example where we're exposing the release note and then using it 
             - webhook_url: ...
             - message: "Release Note: $MY_RELEASE_NOTE"
 
-## Copying an environment variables to another key
+## Copying an environment variable to another key
 
 If you want to expose the value of an env var to be accessible through another env var key, you can simply expose the value with a new key. For example, if you want to copy the value of the `BITRISE_BUILD_NUMBER_` env var and make it available under the env var key `MY_BUILD_NUMBER`, you just have to read the current value and expose it under the new key.
 
