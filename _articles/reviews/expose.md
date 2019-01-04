@@ -11,7 +11,7 @@ In this guide, we will demonstrate a few handy tricks with env vars using a simp
 
 ## Exposing environment variables with envman
 
-**You can use** [**envman**](https://github.com/bitrise-io/envman/) **to make env vars available for every other Step.**
+You can use [envman](https://github.com/bitrise-io/envman/) to make env vars available for every other Step.
 
 Here is a simple example:
 
