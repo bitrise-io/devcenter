@@ -5,45 +5,37 @@ menu:
     weight: 5
 
 ---
-You can expose Environment Variables from one Step, to make it available for every other Step performed after the Step during the build. An example might be that you want to generate a release note which you want to use in a message or deploy step. Exposing environment variables is really easy, you just have to use [envman](https://github.com/bitrise-io/envman/) if you want to make it available for every other Step.
+In this guide we show you how to expose environment variables (env vars) and use those, then how to copy env vars to another key and finally how to overwrite env vars.
 
-A very simple example might be:
+## Exposing environment variables with envman
+
+You can expose env vars from one Step and make it available for every other Step performed after the Step during the build. You can use [envman](https://github.com/bitrise-io/envman/) to manage env vars.
+
+Here is a simple example:
 
     envman add --key MY_RELEASE_NOTE --value "This is the release note"
 
-You can call `envman` in any Step, including a script step,
-or even in your own script (stored in your repository) if you call it from a `bitrise` build.
+You can call `envman` in any Step, including a script step, or even in your own script (stored in your repository) if you call it from a `bitrise` build.
 
-Envman can be used in a couple of ways.
-You can specify the value as the `--value` parameter (you can see this in the previous example),
-pipe the value:
+You can specify the value as the `--value` parameter (you can see this in the previous example). Pipe the value as shown here:
 
-    echo 'hi' | envman add --key MY_RELEASE_NOTE
+      echo 'hi' | envman add --key MY_RELEASE_NOTE
 
-or read the value from a file:
+You can also read the value from a file:
 
-    envman add --key MY_RELEASE_NOTE --valuefile ./some/file/path
+      envman add --key MY_RELEASE_NOTE --valuefile ./some/file/path
 
-You can read more about how `envman `can be used on it's [GitHub page](https://github.com/bitrise-io/envman/).
+{% include message_box.html type="warning" title="Env var value size limit" content=" Note that env var values set through `envman` are limited to **10KB** by default in an effort to prevent issues with common tools. Different tools have different environment size constraints. For example, `Bash` will start to fail on OS X once the environments set exceed \~120KB (in total, not a single variable). **For larger data**, however, you should use files or other solutions, and use environment variables to point to the file, to the ID, or to the location of the stored data. "%}
 
-{% include message_box.html type="warning" title="Env Var value size limit" content="
-Environment Variable values set through `envman` are limited to 10KB by default. This is done in order to prevent issues with common tools. Different tools have different environment size constraints, e.g. `Bash` will start to fail on OS X once the environments set exceed \~120KB (**in total, not a single variable!**). "%}
+## Using exposed environment variables
 
-**For larger data** you should use files or other solutions, and use environment variables to point to the file / to the ID or location of where the data is stored.
+Once the env var is exposed, you can use it like any other env var. For example, in Bash you can reference the previous environment example as `$MY_RELEASE_NOTE`.
 
-Once the environment variable is exposed you can use it like
-any other environment variable. In `bash` you can reference
-the previous example environment as: `$MY_RELEASE_NOTE`.
+You can use these exposed env vars in the inputs of other Steps as well. For example, the `HockeyApp Deploy` Step has a `notes` input field where you can reference the previous example variable.
 
-You can of course use these exposed environment variables in the inputs of other Steps.
-For example the **HockeyApp Deploy** step has a `notes` input,
-you can reference the previous example variable by inserting `$MY_RELEASE_NOTE` into the input,
-like: `The Release Note: $MY_RELEASE_NOTE`,
-which will be resolved as `The Release Note: This is the release note` (if you used
-the first example to set the value of `MY_RELEASE_NOTE`).
+Insert `$MY_RELEASE_NOTE` into the input like so: `The Release Note: $MY_RELEASE_NOTE`, which will be resolved as `The Release Note: This is the release note` (if you used the first example to set the value of `MY_RELEASE_NOTE`).
 
-A simple example, exposing the release note and then using it in another `Script step`,
-and in a `Slack step`:
+Here is another example where we're exposing the release note and then using it in another `Script` and in a `Send a Slack message` Step.
 
     format_version: 1.1.0
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -65,42 +57,29 @@ and in a `Slack step`:
             inputs:
             - channel: ...
             - webhook_url: ...
-            - message: "Release Notes: $MY_RELEASE_NOTE"
+            - message: "Release Note: $MY_RELEASE_NOTE"
 
-## Copy an environment variable to another key
+## Copying an environment variable to another key
 
-If you want to expose the value of an environment variable to be accessible
-through another environment variable key, you can simply expose the value with a new key.
-
-For example, if you want to copy the value of the `BITRISE_BUILD_NUMBER` environment variable
-and make it available under the environment variable key `MY_BUILD_NUMBER`, you just have to
-read the current value and expose it under the new key.
+If you want to expose the value of an env var to be accessible through another env var key, you can simply expose the value with a new key. For example, if you want to copy the value of the `BITRISE_BUILD_NUMBER_` env var and make it available under the env var key `MY_BUILD_NUMBER`, you just have to read the current value and expose it under the new key.
 
 To modify the first example here, which exposed a fix value:
 
-    envman add --key MY_RELEASE_NOTE --value "This is the release note"
+      envman add --key MY_RELEASE_NOTE --value "This is the release note"
 
-simply reference/read the value of the other environment variable in the `envman add ...` command.
+You can simply reference/read the value of the other environment variable in the `envman add ...` command.
 
 To expose the value of `BITRISE_BUILD_NUMBER` under the key `MY_BUILD_NUMBER`:
 
-    envman add --key MY_BUILD_NUMBER --value "${BITRISE_BUILD_NUMBER}"
+      envman add --key MY_BUILD_NUMBER --value "${BITRISE_BUILD_NUMBER}"
 
-After this, subsequent steps can get the value of `BITRISE_BUILD_NUMBER` from the
-`MY_BUILD_NUMBER` environment variable.
+After this, subsequent steps can get the value of `BITRISE_BUILD_NUMBER` from the `MY_BUILD_NUMBER` env var. If you change the value of `BITRISE_BUILD_NUMBER` after this, the value of `MY_BUILD_NUMBER` won't be modified, it will still hold the original value!
 
-_Note: if you change the value of `BITRISE_BUILD_NUMBER` after this, the value of `MY_BUILD_NUMBER` won't be modified, that will still hold the original value!_
+## Overwriting an environment variable if another one is set
 
-## Overwrite an Environment Variable if another one is set
+The best way to overwrite an env var is to use a Script Step as described above and check if the custom env var is set.
 
-For example, if a custom environment variable is set through the Build Trigger API.
-
-The best way to do this, to make sure that no matter what, you overwrite the other env var,
-is to use a Script step, as described above, and check whether the custom env var is set.
-
-As an example, if you want to overwrite the `PROJECT_SCHEME` environment variable,
-if, let's say, a `API_PROJECT_SCHEME` env var is set, just drop in a `Script` step (can be the very first one
-in the workflow), with the content:
+As an example, if you want to overwrite the `PROJECT_SCHEME` env var and an `API_PROJECT_SCHEME` env var is set, insert a `Script` step in the workflow (can be the first Step) with this content:
 
     #!/bin/bash
     set -ex
@@ -108,18 +87,13 @@ in the workflow), with the content:
       envman add --key PROJECT_SCHEME --value "$API_PROJECT_SCHEME"
     fi
 
-This script will check whether the `API_PROJECT_SCHEME` env var is defined,
-and if it is, then its value will be assigned to the `PROJECT_SCHEME` environment variable,
-overwriting the original value of `PROJECT_SCHEME`.
+This script will check whether the `API_PROJECT_SCHEME` env var is defined, and if it is, its value will be assigned to the `PROJECT_SCHEME` environment variable, overwriting the original value of `PROJECT_SCHEME`.
 
-### Alternative solution: use Workflow Env Vars
+### Alternative solution: use Workflow environment variables
 
-Alternatively you can set environment variables for Workflows too.
-The Env Vars you set for a workflow will overwrite the env var
-if defined as an App Env Var or Secret Env Var.
+Alternatively, you can set env vars for Workflows too. The env vars you set for a workflow will overwrite the env var if defined as an app env var or [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/).
 
-An example workflow which defined an environment variable, and then runs another workflow
-which can use those env vars:
+Here is an example workflow which defines an env var, and then runs another workflow that can use those env vars:
 
     workflows:
     
@@ -137,6 +111,4 @@ which can use those env vars:
                 #!/bin/bash
                 echo "ENV_TYPE: $ENV_TYPE"
 
-If you run the `deploy-alpha` workflow, that will set the `ENV_TYPE` env var to `alpha`,
-then it will run the `_deploy` workflow, which can use that environment variable -
-in this example it will simply print its value (the printed text will be: `ENV_TYPE: alpha`).
+If you run the `deploy-alpha` workflow, that will set the `ENV_TYPE` env var to `alpha`, then it will run the `deploy` workflow, which can use that env var. In this example, it will simply print its value (the printed text will be: `ENV_TYPE: alpha`).
