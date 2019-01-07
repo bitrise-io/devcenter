@@ -23,7 +23,7 @@ Public apps cannot have SSH keys. If you set your app's privacy settings to Publ
 
 In the case of GitHub, GitLab and Bitbucket repository setups, Bitrise will generate a public and private SSH key pair and ask whether you like the idea of adding that into your repository automatically as deploy key, or you'd like to add it by hand.
 
-![Screenshot](/img/adding-a-new-app/bitrise_auto_add_ssh_key2.png)
+![](/img/repo-access.png)
 
 You need admin rights to the repository to be able to auto-add the key to it. In any other case, copy the public key from here and add it to your repository at your provider.
 
@@ -35,9 +35,9 @@ If you have private dependencies or submodules, you have to add the generated SS
 
 When the system asks if you need to use an additional private repository, click `I need to` and copy the key.
 
-![Add own SSH key](/img/adding-a-new-app/own-ssh.png)
+![](/img/manual-steup.png)
 
-{% include message_box.html type="note" title="A bot user" content=" A simple workaround is adding a \"bot\" user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
+{% include message_box.html type="note" title="A bot user" content=" A simple workaround is adding a "bot" user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
 "%}
 
 {% include message_box.html type="warning" title=" **Do not** add the key to the repository Deploy Keys!" content=" Add it to the user's account who has access to the repositories. "%}
