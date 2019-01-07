@@ -61,8 +61,8 @@ pages:
 - _articles/builds/Scheduling-Builds.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/getting-started/adding-a-new-app/connecting-a-repository.md
-- _articles/reviews/getting-started-with-flutter-apps.md
 - _articles/getting-started/adding-a-new-app/public-apps.md
+- _articles/reviews/getting-started-with-flutter-apps.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/bitrise-cli/offline-workflow-editor.md
