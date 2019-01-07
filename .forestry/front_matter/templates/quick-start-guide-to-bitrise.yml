@@ -57,9 +57,9 @@ pages:
 - _articles/getting-started/adding-a-new-app/public-apps.md
 - _articles/tutorials/xamarin/restore-nuget-packages.md
 - _articles/getting-started/signing-up/self-hosted-gitlab.md
-- _articles/getting-started/signing-up/connecting-apple-dev-account.md
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/getting-started/signing-up/connecting-account-bitrise.md
+- _articles/getting-started/signing-up/connecting-apple-dev-account.md
 - _articles/builds/Scheduling-Builds.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/reviews/getting-started-with-flutter-apps.md
