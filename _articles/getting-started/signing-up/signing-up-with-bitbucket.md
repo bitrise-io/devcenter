@@ -13,7 +13,7 @@ You are able to authenticate yourself with your Bitbucket user against **Bitrise
 
 Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
 
-![Screenshot](/img/signing-up/sign-up-bitrise.png)
+![](/img/sign-up.jpg)
 
 Select `Bitbucket` for authenticating yourself with this service.
 
