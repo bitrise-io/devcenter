@@ -53,7 +53,6 @@ pages:
 - _articles/tutorials/xamarin/deploy-your-xamarin-app.md
 - _articles/bitrise-cli/index.md
 - _articles/getting-started/adding-a-new-app/index.md
-- _articles/getting-started/adding-a-new-app/public-apps.md
 - _articles/tutorials/xamarin/restore-nuget-packages.md
 - _articles/getting-started/signing-up/self-hosted-gitlab.md
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
@@ -63,6 +62,7 @@ pages:
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/getting-started/adding-a-new-app/connecting-a-repository.md
 - _articles/reviews/getting-started-with-flutter-apps.md
+- _articles/getting-started/adding-a-new-app/public-apps.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/bitrise-cli/offline-workflow-editor.md
