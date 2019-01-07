@@ -37,7 +37,7 @@ Set your app's privacy setting to either **private** or [**public**](/getting-st
 * Private apps can be accessed only by you, your organization members and team members.
 * Public apps expose their build logs and their `bitrise.yml` file to everyone.
 
-![App privacy](/img/adding-a-new-app/app-privacy.png)
+![](/img/choose-account.jpg)
 
 ### Connecting a repository
 
@@ -60,7 +60,7 @@ Tell Bitrise where the code of your app is stored. You can either:
 * copy the public key Bitrise generated.
 * use your own SSH keypair. Make sure your private key is an RSA key without a passphrase.
 
-![Screenshot](/img/adding-a-new-app/bitrise_auto_add_ssh_key2.png)
+![](/img/repo-access.png)
 
 Public apps cannot have SSH keys.
 
