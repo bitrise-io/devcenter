@@ -29,7 +29,6 @@ pages:
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/builds/selective_builds.md
 - _articles/reviews/expose.md
-- _articles/getting-started/signing-up/connecting-account-bitrise.md
 - _articles/testing/device-testing-for-android.md
 - _articles/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
@@ -60,6 +59,7 @@ pages:
 - _articles/getting-started/signing-up/self-hosted-gitlab.md
 - _articles/getting-started/signing-up/connecting-apple-dev-account.md
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
+- _articles/getting-started/signing-up/connecting-account-bitrise.md
 - _articles/builds/Scheduling-Builds.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/reviews/getting-started-with-flutter-apps.md

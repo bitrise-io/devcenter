@@ -11,8 +11,8 @@ To take full advantage of all the features Bitrise offers, including automatic w
 
 * Connecting the account when adding a new app
 * Connecting the account from your `Account settings` page
- 
- Please note that you cannot connect two accounts from the same Git provider (for example, two GitHub accounts) to Bitrise.
+
+Please note that you cannot connect two accounts from the same Git provider (for example, two GitHub accounts) to Bitrise.
 
 Connecting one Git provider account is not final: you can disconnect an account and connect a different one at any time.
 
@@ -23,7 +23,7 @@ Connecting one Git provider account is not final: you can disconnect an account 
 3. On the `Create New App` page, select the account and set the app's privacy setting.
 4. Choose the git service provider of the app's repository. If no account with that provider has been connected to your Bitrise account, the UI will display the option to connect.
 
-   ![Connect account when adding new app](/img/signing-up/add-app-account-connect.png)
+   ![](/img/bitbucket-created.jpg)
 5. Click `Connect GitHub/GitLab/Bitbucket`. This will take you to the login page of the Git provider.
 6. Log in to the Git provider account.
 7. You should be prompted to authorize Bitrise.io - do it! If successful, you should be redirected to Bitrise, and a pop-up message should inform you that you successfully linked the account. Click `Okay`.
