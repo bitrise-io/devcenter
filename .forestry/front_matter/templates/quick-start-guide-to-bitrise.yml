@@ -28,7 +28,6 @@ pages:
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/builds/selective_builds.md
-- _articles/reviews/getting-started-with-flutter-apps.md
 - _articles/reviews/expose.md
 - _articles/getting-started/signing-up/connecting-account-bitrise.md
 - _articles/testing/device-testing-for-android.md
@@ -63,6 +62,7 @@ pages:
 - _articles/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/builds/Scheduling-Builds.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
+- _articles/reviews/getting-started-with-flutter-apps.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/bitrise-cli/offline-workflow-editor.md

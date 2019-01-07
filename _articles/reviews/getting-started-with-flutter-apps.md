@@ -28,3 +28,5 @@ published: false
    * ipa export method
    * iOS stack
 9. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
+
+## Testing a Flutter app
