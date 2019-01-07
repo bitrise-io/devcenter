@@ -35,7 +35,6 @@ pages:
 - _articles/getting-started/builds-and-workflows.md
 - _articles/getting-started/getting-started-workflows.md
 - _articles/getting-started/getting-started-steps.md
-- _articles/getting-started/adding-a-new-app/connecting-a-repository.md
 - _articles/getting-started/adding-a-new-app/setting-up-configuration.md
 - _articles/getting-started/adding-a-new-app/setting-up-ssh-keys.md
 - _articles/bitrise-cli/most-important-concepts.md
@@ -62,6 +61,7 @@ pages:
 - _articles/getting-started/signing-up/connecting-apple-dev-account.md
 - _articles/builds/Scheduling-Builds.md
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
+- _articles/getting-started/adding-a-new-app/connecting-a-repository.md
 - _articles/reviews/getting-started-with-flutter-apps.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
