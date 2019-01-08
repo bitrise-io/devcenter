@@ -33,3 +33,9 @@ You can use our automatically generated `primary` workflow to test your Flutter 
    You can specify either tags or branches of the Flutter SDK's git repository. The default value is `stable`. This will use the latest stable branch of Flutter. 
    * To find the available version tags, check: [https://github.com/flutter/flutter/releases](https://github.com/flutter/flutter/releases "https://github.com/flutter/flutter/releases")
    * To see the the avilable branches, check: [https://github.com/flutter/flutter/branches](https://github.com/flutter/flutter/branches "https://github.com/flutter/flutter/branches")
+3. To the `Flutter Test` Step, add any flags you wish to use to the `Additional parameters` input.
+
+   The Step runs the `flutter test` command with these flags. 
+4. Make sure the `Project Location` input of the `Flutter Test` Step is correct. 
+
+   The default value is the the environment variable created for your Flutter project's location. 
