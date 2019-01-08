@@ -25,4 +25,9 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
 
 ## Testing a Flutter app
 
-You can use our automatically generated `primary` workflow to test your Flutter app. This will contain the necessary Steps 
+You can use our automatically generated `primary` workflow to test your Flutter app. This contains the necessary Steps to install the Flutter SDK and to test your Flutter app on Bitrise. 
+
+1. Open your app's Workflow Editor. 
+2. In the `Flutter Install` Step, fill in the `Flutter SDK Version` input. 
+
+   The default value is `stable`. This will use the latest 
