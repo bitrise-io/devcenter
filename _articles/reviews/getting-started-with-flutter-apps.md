@@ -30,4 +30,6 @@ You can use our automatically generated `primary` workflow to test your Flutter 
 1. Open your app's Workflow Editor. 
 2. In the `Flutter Install` Step, fill in the `Flutter SDK Version` input. 
 
-   The default value is `stable`. This will use the latest 
+   The default value is `stable`. This will use the latest stable branch of Flutter. 
+   * To find the available version tags, check: [https://github.com/flutter/flutter/releases](https://github.com/flutter/flutter/releases "https://github.com/flutter/flutter/releases")
+   * To see the the avilable branches, check: [https://github.com/flutter/flutter/branches](https://github.com/flutter/flutter/branches "https://github.com/flutter/flutter/branches")
