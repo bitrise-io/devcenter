@@ -124,10 +124,10 @@ There are a few places to deploy your app but the configuration is slightly diff
 
 Before deploying your app to any marketplace you need to generate a codesigned .ipa and/or APK so make sure you perform these steps:
 
-1. Add the `Cordova archive` or the `Ionic archive` step to your workflow.
+1. Add the `Cordova archive` or the `Ionic archive` step to your workflow. (Note that  if you're building for both iOS and Android in one project, and either of your apps fails, the whole `Cordova Archive/Ionic Archive` Step will fail.)
 2. Fill in the required inputs.
    * The `Platform` input needs to be set to `device`.
-   * The `Build command configuration` input must match the `Build configuration` input of the `Generate cordova build configuration` step.
+   * The `Build command configuration` input must match the `Build configuration` input of the `Generate cordova build configuration` Step.
 
    The archive step must come after the `Generate cordova build configuration` step in the workflow.
 
