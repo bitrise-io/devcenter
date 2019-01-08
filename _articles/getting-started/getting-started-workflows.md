@@ -71,9 +71,8 @@ Be aware that if you chain workflows together as described in this guide, all th
 
 1. Click the app's `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
 2. Open the `WORKFLOW` menu on the left and select a workflow. The default is the `primary` workflow. You can chain workflows before and after the selected workflow.
-
-   ![](/img/chain.png)
 3. Click `Add Workflow before` to chain a workflow before the currently selected one or click `Add Workflow after` to chain a workflow after the currently selected one.
+
    ![](/img/chaining.jpg)
 4. Click `Save` in the top right corner.
 
@@ -84,6 +83,8 @@ Once you have a "chain", you can easily rearrange the order of workflows in a dr
 1. Click the app's `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
 2. Open the `WORKFLOW` menu on the left and select a workflow that is part of a "chain".
 3. Click `Rearrange` to bring up a drag-and-drop menu where you can rearrange the workflows of the chain.
+
+   ![](/img/rearrange.png)
 4. Click `Save` in the top right corner.
 
 ## Renaming workflows
