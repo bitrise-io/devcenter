@@ -13,7 +13,7 @@ Before you start, make sure you have .aab necessary file format for Android App 
 
 If you are using `Gradle Runner` Step in your workflow, set the following:
 
-1. In the `Gradle task to run` input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project .
+1. In the `Gradle task to run` input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
 
    ![](/img/bundlerelease.jpg)
 2. Click `Export config` to see your export options.
@@ -21,9 +21,9 @@ If you are using `Gradle Runner` Step in your workflow, set the following:
    * `APK file include filter`
    * `Test APK file include filter`
 
-	![](/img/include-filter.jpg)
+   ![](/img/include-filter.jpg)
 
-	![](/img/test-include-filter.jpg)
+   ![](/img/test-include-filter.jpg)
 
 This way the Step will generate a bundle instead of an APK even if the Step's output is `$BITRISE_APK_ATH`.
 
