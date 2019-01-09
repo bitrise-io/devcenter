@@ -58,7 +58,16 @@ We'll discuss the Steps specific to iOS and Android deployment in their respecti
 
 ### Deploying a Flutter app to the App Store 
 
-Deploying your iOS Flutter project to the App Store requires code signing files: 
+To deploy your iOS Flutter project to the App Store, you'll need to build the app, export an. ipa file and submit it to the App Store.
+
+Unlike testing, this requires code signing files: 
 
 * an iOS Distribution Certificate (a .p12 file)
 * an App Store Provisioning Profile 
+
+Read more about iOS code signing on Bitrise in [our detailed guides](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing/)! 
+
+1. Make sure you have the `Certificate and profile installer` Step in your workflow. 
+2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise. 
+3. Set the `Select method for export` input to `app-store`. 
+4. 
