@@ -39,4 +39,4 @@ The System Reports include the list of preinstalled tools and their version on t
 The System Report scripts are also open source, so if you want to run it yourself
 or you want to add another tool / system check, feel free to send us a pull request!
 
-You can find every available stack's System Report on GitHub: [https://github.com/bitrise-io/bitrise.io/tree/master/system_reports](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports)
+You can find every available stack's System Report on [GitHub](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports).
