@@ -77,7 +77,7 @@ Let's see the process step by step!
 
 {% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!"%}
 
-![](/img/android-code-signing-react.png)
+![](/img/keystore.png)
 
 The Android chunk of code signing is done!
 
@@ -103,7 +103,7 @@ You will need:
 4. Check that you have the `Certificate and profile installer` Step in your workflow. It must be before the `Xcode Archive & Export for iOS` Step (you can have other Steps between the two, like `Xcode Test for iOS`).
 5. Check the `Select method for export` input of the `Xcode Archive & Export for iOS` Step. By default, it should be the `$BITRISE_EXPORT_METHOD` environment variable. This variable stores the export method you selected when creating the app. If you selected `development` back then, you don’t need to change the input. Otherwise, manually set it to `development`.
 
-   ![Export method env var](https://devcenter.bitrise.io/img/export-method-envvar.png)
+   ![](/img/export-method.png)
 6. [Start a build](https://devcenter.bitrise.io/builds/starting-builds-manually/).
 
 If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa file with the **development export method**. If you have the `Deploy to Bitrise.io`Step in your workflow, you can find the .ipa file on the `APPS & ARTIFACTS` tab of the Build's page.
@@ -124,7 +124,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 3. Go to the app’s Workflow Editor and create a [new workflow](https://devcenter.bitrise.io/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
 4. Set the `Select method for export` input of the `Xcode Archive & Export for iOS` Step to `app-store`.
 
-   ![App store export](https://devcenter.bitrise.io/img/app-store-export.png)
+   ![](/img/app-store-export-method-1.png)
 
    If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc` method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
 
@@ -132,7 +132,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
 You can use React Native's built in testing method, called `jest` to perform unit tests.  Add another `Run nmp command` step to your workflow, and type `test` in the `npm command with arguments to run` input field.
 
-![](/img/run-nmp-test.png)
+![](/img/test-npm.png)
 
 ## Deploying to Bitrise
 
