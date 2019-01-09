@@ -97,3 +97,22 @@ Read more about iOS code signing on Bitrise in [our detailed guides](https://dev
 9. [Start a build]()! 
 
 If all goes well, the Step will submit the app to App Store Connect. You can, from the App Store Connect page, distribute the app to external testers via Testflight, or release it to the App Store itself. 
+
+### Deploying a Flutter app to Google Play 
+
+{% include message_box.html type="important" title="Android code signing" content="Before you start, make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE` field!"%}
+
+1. Make sure you are in sync with Google Play Store! Learn how to
+   * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+   * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+2. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+3. Copy the env key which stores your uploaded file’s url.
+
+   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+4. Add the `Google Play Deploy` step after the `Sign APK` step in your deploy workflow.
+5. Fill out the required input fields as follows:
+   * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * `Package name`: the package name of your Android app
+   * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
+
+And that’s it! Start a build and release your Android app to the app store of your choice.
