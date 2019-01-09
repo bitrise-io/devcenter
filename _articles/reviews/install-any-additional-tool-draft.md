@@ -9,7 +9,7 @@ If you need something you can't find a Step for, you can always install and use 
 
 Just add a `Script` step to your Workflow, and either write your script there, or run a script from your repository.
 
-_Passwordless_ `_sudo_` _is enabled on all of our build virtual machines, so you can freely use_ `_sudo_` _if you need it._
+_Passwordless `sudo` is enabled on all of our build virtual machines, so you can freely use `sudo` if you need it._
 
 Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib). You can find a template and more information about how you can create your own **Step at our Github Steplib template**.
 
