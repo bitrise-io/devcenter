@@ -52,7 +52,7 @@ To build and deploy a Flutter app, we recommend creating a new workflow based on
 * `Flutter Install`
 * `Flutter Build` 
 
-You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. 
+You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. You can set this in the `Platform` input of the `Flutter Build` Step. 
 
 We'll discuss the Steps specific to iOS and Android deployment in their respective sections! 
 
@@ -69,5 +69,7 @@ Read more about iOS code signing on Bitrise in [our detailed guides](https://dev
 
 1. Make sure you have the `Certificate and profile installer` Step in your workflow. 
 2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise. 
-3. Set the `Select method for export` input to `app-store`. 
-4. 
+3. Open the `Flutter Build` Step and find the `iOS Platform Configs` input group. 
+4. Make sure the `Additional parameters` input has the value `--release`.
+5. Set the `Select method for export` input to `app-store`. 
+6. 
