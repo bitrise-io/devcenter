@@ -46,3 +46,8 @@ You can use our automatically generated `primary` workflow to test your Flutter 
 Run a build! Once it's done, you can find your test results on the `Apps and Artifacts` tab of the **Build** page of the app.
 
 ## Deploying a Flutter app
+
+To build and deploy a Flutter app, we recommend creating a new workflow based on the automatically created `deploy` workflow. As a minimum, the workflow must contain the following Steps: 
+
+* `Flutter Install`
+* `Flutter Build` 
