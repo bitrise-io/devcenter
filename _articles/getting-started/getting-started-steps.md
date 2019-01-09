@@ -27,7 +27,7 @@ You can add any Step to your workflow - there are absolutely no restrictions. Pl
 3. Select the workflow you need in the `WORKFLOW` dropdown menu on the top left.
 4. Click the `+` symbol between two Steps to insert a Step at that position.
 
-   ![](/img/adding-step.png)
+   ![Adding a step](/img/adding-step-1.png)
 
 This will show you a list of available Steps in our **Step Library**.
 You can search and filter these steps: enter a search expression in the `Search steps` field and set the platform on the right of the field. Note that by default, you will only see the Steps that are relevant to the platform of your project: click `ALL` to search within all the available Steps.
@@ -38,7 +38,7 @@ You can also clone a Step by clicking the **Clone icon** on the right side and t
 
 ### Removing a Step
 
-1. Open your app by clicking on the app's name on your `[Dashboard](https://app.bitrise.io/dashboard)`.
+1. Open your app by clicking on the app's name on your [Dashboard](https://app.bitrise.io/dashboard).
 2. Click the `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
 3. Select the workflow you need in the `WORKFLOW` dropdown menu on the top left.
 4. Click the Step you want to remove.
@@ -52,13 +52,13 @@ If a Step has an orange dot on it, it indicates you do not have the latest versi
 * Clicking the orange dot automatically upgrades the Step to the latest version.
 * Click on the Step then find the `Version` menu on the right. Open the dropdown menu and select the version you need. If you select `always latest`, the Step will always run the latest version available in our Step library.
 
-![Update steps in Workflow Editor](/img/getting-started/update-steps.png)
+![Managing step versions](/img/update-version-1.png)
 
 ### Step inputs
 
 Click on a Step to bring up its input variables on the right of the currently selected workflow. Steps have required and optional inputs: required inputs are marked as such in the Workflow Editor. **If required inputs do not have valid values, the step will fail**.
 
-![Required input](/img/getting-started/step-inputs.png)
+![Adding step input](/img/step-input.png)
 
 Modify a Step input by either:
 
@@ -69,9 +69,9 @@ You can use environment variables as Step inputs for any Step. But make sure tha
 
 ### Environment variables as Step inputs
 
-Click into any input field of a Step and a green `Insert Variable` button will appear.
+Click into any input field of a Step and a purple `Insert Variable` button will appear.
 
-![Insert variable](/img/getting-started/insert-variable.png)
+![Insert variable](/img/env-var.png)
 
 Click this button and you'll get a full list of [available Environment Variables](/builds/available-environment-variables). You can search this list, and when you find the one you're looking for just click it, and it'll be inserted into the input field for you.
 
@@ -81,11 +81,11 @@ Under every Step input field you can see one of these two indicators:
 * or `Environment Variables won't be replaced in input`
 
 It's the status of the `is_expand` option of the input.
-_You can change this only in YAML mode (_`bitrise.yml` _tab of the editor)._
+_You can change this only in YAML mode (`bitrise.yml` tab of the editor)._
 
 What does this option do?
 
-* If **enabled** it'll replace Environment Variables (e.g. `$HOME` or `${HOME}`)
+* If **enabled** it'll replace Environment Variables (for example, `$HOME` or `${HOME}`)
   inside the input text with the Environment Variable's value **before** it would be passed to the Step.
 * If **disabled** it won't replace anything in the input text, the whole text will be passed to the Step "as-it-is".
 
@@ -106,7 +106,7 @@ The only reason to change it is if your input includes the `$` character (in a p
 and you want to keep the `$` character in the input, instead of
 replacing it with an environment variable.
 
-**IMPORTANT:** If you want to reference another environment variable, even if that one's value includes the $ character, you have to **enable** this option, or else your reference won't work. In such a case, **disable this option where you specify the value with $ in it**, and enable the option everywhere else where you reference that environment variable.
+{% include message_box.html type="important" title="Referencing another environment variable" content=" If you want to reference another environment variable, even if that one's value includes the $ character, you have to **enable** this option, or else your reference won't work. In such a case, **disable this option where you specify the value with $ in it**, and enable the option everywhere else where you reference that environment variable."%}
 
 ### Skipping Steps
 
@@ -116,10 +116,10 @@ Of course, there are examples when it's better to run a Step even if the previou
 
 This guide walks you through on how to skip a given Step that has been set to run even if the previous Step failed.
 
-1. Open your app by clicking on the app's name on your `[Dashboard](https://app.bitrise.io/dashboard)`.
+1. Open your app by clicking on the app's name on your [Dashboard](https://app.bitrise.io/dashboard).
 2. Click the `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
 3. Select the workflow you need in the `WORKFLOW` dropdown menu on the top left.
 4. Click the Step you want to skip.
 5. On the right, use the toggle to disable the `Run if previous Step failed` option.
 
-   ![Run if previous failed](/img/getting-started/run-if-failed.png)
+   ![Run if previous step failed](/img/run-if-prev-version.png)
