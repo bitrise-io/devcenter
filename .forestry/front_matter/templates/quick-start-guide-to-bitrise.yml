@@ -24,7 +24,6 @@ pages:
 - _articles/reviews/vpn-draft.md
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/builds/available-environment-variables.md
-- _articles/infrastructure/available-stacks.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/builds/selective_builds.md
@@ -69,5 +68,6 @@ pages:
 - _articles/getting-started/managing-files-on-bitrise.md
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
+- _articles/infrastructure/available-stacks.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md

@@ -11,11 +11,9 @@ The Stack indicates the virtual machine version that we will use to run your bui
 After adding your application to Bitrise we will select an appropriate Stack for it.
 Change it in the `Stacks` tab of the Workflow Editor.
 
-![Screenshot](/img/infrastructure/stack_selector.png)
+![](/img/stack-selector.png)
 
-After selecting the Stack you want to use you'll see a short description of the stack
-with an additional link to learn more about that specific Stack (e.g. to see what
-tools are preinstalled, and which versions, on the selected Stack).
+After selecting the Stack you want to use, you'll see a short description of the stack with an additional link to learn more about that specific Stack (e.g. to see what tools are preinstalled, and which versions, on the selected Stack).
 
 {% include message_box.html type="important" title="Make sure you hit the `Save` button" content=" The Stack won't be used until you click the `Save` button!
 "%}
