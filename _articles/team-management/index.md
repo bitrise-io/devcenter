@@ -13,24 +13,26 @@ To invite a team member head to the `Team tab` on your application's page. You c
 {% include message_box.html type="warning" title="Inviting team members" content=" You need to be the app's `owner` or an `admin` to be able to add new team members to your app.
 "%}
 
+![](/img/grant-access.png)
+
 `Owners` and `admins` can change the roles of other members by clicking `Change role` next to the member's name.
 
-![Screenshot](/img/team-management/add-new-member.png)
+![](/img/change-role.png)
 
 Check out the different roles and permissions below:
 
 ## Owner
 
-![Screenshot](/img/team-management/owners.png)
+![](/img/role-cheet-sheet-owner.png)
 
 ## Admin
 
-![Screenshot](/img/team-management/admins.png)
+![](/img/admin.png)
 
 ## Developer
 
-![Screenshot](/img/team-management/developers.png)
+![](/img/developer.png)
 
 ## Tester / QA
 
-![Screenshot](/img/team-management/testers-qa.png)
+![](/img/tester-qa.png)
