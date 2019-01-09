@@ -21,7 +21,7 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
  8. Choose a stack. If you are not sure [which one of our stacks](/infrastructure/available-stacks/) you wish to use, just leave it on the default value!
  9. If you have both an iOS and an Android project in your Flutter repo, you will be prompted to select:
     * an export method for the iOS project
-    * the variants you want to use for the Android project
+    * the variant you want to use for the Android project
 10. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
 
 ## Testing a Flutter app
@@ -52,8 +52,13 @@ To build and deploy a Flutter app, we recommend creating a new workflow based on
 * `Flutter Install`
 * `Flutter Build` 
 
+You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. 
+
 We'll discuss the Steps specific to iOS and Android deployment in their respective sections! 
 
 ### Deploying a Flutter app to the App Store 
 
-Deploying your iOS Flutter project to the App Store is simple. 
+Deploying your iOS Flutter project to the App Store requires code signing files: 
+
+* an iOS Distribution Certificate (a .p12 file)
+* an App Store Provisioning Profile 
