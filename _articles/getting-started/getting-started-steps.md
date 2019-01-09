@@ -22,7 +22,7 @@ Steps can be managed directly from the [Workflow Editor](/getting-started/gettin
 
 You can add any Step to your workflow - there are absolutely no restrictions. Please note that this means that it's possible to add a Step specific to, for example, iOS apps to a workflow of an Android app. Always make sure you only add the relevant Steps to your workflow!
 
-1. Open your app by clicking on the app's name on your `[Dashboard](https://app.bitrise.io/dashboard)`.
+1. Open your app by clicking on the app's name on your [Dashboard](https://app.bitrise.io/dashboard).
 2. Click the `Workflow` tab. Note that you cannot leave the Workflow editor without either saving or discarding any changes you made.
 3. Select the workflow you need in the `WORKFLOW` dropdown menu on the top left.
 4. Click the `+` symbol between two Steps to insert a Step at that position.
@@ -81,7 +81,7 @@ Under every Step input field you can see one of these two indicators:
 * or `Environment Variables won't be replaced in input`
 
 It's the status of the `is_expand` option of the input.
-_You can change this only in YAML mode (`bitrise.yml` tab of the editor)._
+_You can change this only in YAML mode (_`_bitrise.yml_` _tab of the editor)._
 
 What does this option do?
 
