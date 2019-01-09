@@ -26,7 +26,7 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
 
 ## Testing a Flutter app
 
-You can write and run unit, widget and integration tests with Flutter. For more information, check out [Flutter's official documentation](https://flutter.io/docs/testing). 
+You can write and run **unit-**, **widget-,** and **integration** tests with Flutter. For more information, check out [Flutter's official documentation](https://flutter.io/docs/testing). 
 
 You can use our automatically generated `primary` workflow to test your Flutter app. This contains the necessary Steps to install the Flutter SDK and to test your Flutter app on Bitrise.
 
@@ -47,7 +47,13 @@ Run a build! Once it's done, you can find your test results on the `Apps and Art
 
 ## Deploying a Flutter app
 
-To build and deploy a Flutter app, we recommend creating a new workflow based on the automatically created `deploy` workflow. As a minimum, the workflow must contain the following Steps: 
+To build and deploy a Flutter app, we recommend creating a new workflow based on the automatically created `deploy` workflow. As a minimum, the workflow must contain these Flutter Steps: 
 
 * `Flutter Install`
 * `Flutter Build` 
+
+We'll discuss the Steps specific to iOS and Android deployment in their respective sections! 
+
+### Deploying a Flutter app to the App Store 
+
+Deploying your iOS Flutter project to the App Store is simple. 
