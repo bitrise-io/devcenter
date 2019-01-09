@@ -100,7 +100,7 @@ If all goes well, the Step will submit the app to App Store Connect. You can, fr
 
 ### Deploying a Flutter app to Google Play 
 
-To deploy your app to Google Play, you need to export an APK file and sign it. 
+To deploy your app to Google Play, you need to export an APK file and sign it. You can [configure the signing](https://flutter.io/docs/deployment/android#configure-signing-in-gradle) in the app's `build.gradle` file and then Flutter will sign your app during the build phase. 
 
 1. Make sure you are in sync with Google Play Store! Learn how to
    * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
