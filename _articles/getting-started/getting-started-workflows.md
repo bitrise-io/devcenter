@@ -95,6 +95,6 @@ Rename your workflows at any time you feel necessary: it's quick and simple.
 2. Open the `WORKFLOW` menu on the left and select a workflow.
 3. Click `RENAME` next to the name of the workflow.
 
-   ![Selecting workflows](/img/getting-started/selecting-workflows.png)
+   ![](/img/rename-workflow.png)
 4. Type the new name then click the check mark to save the new name.
 5. Click `Save` in the top right corner.
