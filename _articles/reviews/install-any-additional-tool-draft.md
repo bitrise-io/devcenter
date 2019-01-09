@@ -5,13 +5,13 @@ date: 2019-01-09 15:23:55 +0000
 published: false
 
 ---
-If you need something you can't find a Step for, you can always install & use tools with scripts or Script steps.
+If you need something you can't find a Step for, you can always install and use tools with scripts or Script steps.
 
 Just add a `Script` step to your Workflow, and either write your script there, or run a script from your repository.
 
-_Passwordless `sudo` is enabled on all of our build virtual machines, so you can freely use `sudo` if you need it._
+_Passwordless_ `_sudo_` _is enabled on all of our build virtual machines, so you can freely use_ `_sudo_` _if you need it._
 
-Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib). You can find a template and more information about how you can create your own Step at: [https://github.com/bitrise-steplib/step-template](https://github.com/bitrise-steplib/step-template "https://github.com/bitrise-steplib/step-template")
+Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib). You can find a template and more information about how you can create your own **Step at our Github Steplib template**.
 
 ## Step by step setup
 
@@ -24,7 +24,7 @@ Once you have a working script, **you can also transform it into a Step** and op
 
 _Note: you can drag-and-drop reorder the steps in the Workflow, so you don't have to delete and re-add a step if you'd want to change the order._
 
-If you want to run a script from your repository you can run it from this Script step. Paths are relative to your repository's root. So, for example, if you have a Bash script at `path/to/script.sh` you can run it with this `Script content`:
+If you want to run a script from your repository, you can run it from this Script Step. Paths are relative to your repository's root. So, for example, if you have a Bash script at `path/to/script.sh` you can run it with this `Script content`:
 
     bash ./path/to/script.sh
 
@@ -34,9 +34,9 @@ Or, in a more robust form (which is better if you want to extend the content in 
     set -ex
     bash ./path/to/script.sh
 
-_The_ `_set -ex_` _line is recommended for every multi-line Bash script, to make your scripts easier to debug._
+_The `set -ex` line is recommended for every multi-line Bash script, to make your scripts easier to debug._
 
-You can of course run non Bash scripts too, e.g. a Ruby script:
+You can of course run non Bash scripts too, for example, a Ruby script:
 
     #!/bin/bash
     set -ex
@@ -68,7 +68,7 @@ For example, to install `cmake` with a script step, on Linux, using `apt-get`:
     set -ex
     sudo apt-get install -y cmake
 
-{% include message_box.html type="important" title="Don't forget the `-y` flag for `apt-get`!" content=" If you don't add the `-y` ("yes") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example. "%}
+{% include message_box.html type="important" title="Don't forget the `-y` flag for `apt-get`!" content=" If you don't add the `-y` (/"yes/") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example. "%}
 
 ## Advanced option: use `deps` in `bitrise.yml`
 
@@ -143,4 +143,4 @@ Additionally, you can use Environment Variables in your scripts too. As an examp
       bash ./path/to/not-pull-request.sh
     fi
 
-_Note: if you **don't** want to run any part of the Step/script based on a variable (like_ `_$PR_`_), you don't have to implement the check in the script. You can use the _`_run_if_` _expression in the_ `_bitrise.yml_` _directly to declare in which case(s) the Step should run. Additionally,_ `_run_if_` _can be added to any step, not just to Script steps. You can find more information about_ `_run_if_` _expressions in_ [_this guide_](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed).
+Note: if you **don't** want to run any part of the Step/script based on a variable (like `$PR`), you don't have to implement the check in the script. You can use the`run_if` expression in the `bitrise.yml` directly to declare in which case(s) the Step should run. Additionally, `run_if` can be added to any step, not just to Script steps. You can find more information about `run_if` expressions in [this guide](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed).
