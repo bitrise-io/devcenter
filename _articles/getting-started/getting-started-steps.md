@@ -27,7 +27,7 @@ You can add any Step to your workflow - there are absolutely no restrictions. Pl
 3. Select the workflow you need in the `WORKFLOW` dropdown menu on the top left.
 4. Click the `+` symbol between two Steps to insert a Step at that position.
 
-![Add step button in Workflow Editor](/img/getting-started/add-your-first-step.png)
+   ![](/img/adding-step.png)
 
 This will show you a list of available Steps in our **Step Library**.
 You can search and filter these steps: enter a search expression in the `Search steps` field and set the platform on the right of the field. Note that by default, you will only see the Steps that are relevant to the platform of your project: click `ALL` to search within all the available Steps.
