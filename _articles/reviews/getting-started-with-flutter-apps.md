@@ -25,11 +25,11 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
 
 ## Testing a Flutter app
 
-You can use our automatically generated `primary` workflow to test your Flutter app. This contains the necessary Steps to install the Flutter SDK and to test your Flutter app on Bitrise. 
-
 You can write and run unit, widget and integration tests with Flutter. For more information, check out [Flutter's official documentation](https://flutter.io/docs/testing). 
 
-1. Open your app's Workflow Editor. 
+You can use our automatically generated `primary` workflow to test your Flutter app. This contains the necessary Steps to install the Flutter SDK and to test your Flutter app on Bitrise.
+
+1. Open your app's Workflow Editor and open the `primary` workflow. 
 2. In the `Flutter Install` Step, fill in the `Flutter SDK Version` input. 
 
    You can specify either tags or branches of the Flutter SDK's git repository. The default value is `stable`. This will use the latest stable branch of Flutter. 
@@ -41,3 +41,7 @@ You can write and run unit, widget and integration tests with Flutter. For more 
 4. Make sure the `Project Location` input of the `Flutter Test` Step is correct. 
 
    The default value is the the environment variable created for your Flutter project's location. 
+
+Run a build! Once it's done, you can find your test results on the `Apps and Artifacts` tab of the **Build** page of the app.
+
+## Deploying a Flutter app
