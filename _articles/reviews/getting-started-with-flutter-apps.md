@@ -17,12 +17,18 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
  4. Select the Git hosting service that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-your-repository).
  5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
  6. Type the name of the branch that includes your project's configuration - master, for example - then click `Next`.
- 7. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them. In the case of Flutter apps, you definitely need a `pubspec.yaml` file in your project. 
- 8. Choose a stack. If you are not sure [which one of our stacks](/infrastructure/available-stacks/) you wish to use, just leave it on the default value!
+ 7. Wait while Bitrise is validating your project. 
+
+    We look for your configuration files and set up your app based on them. In the case of Flutter apps, you definitely need a `pubspec.yaml` file in your project. 
+ 8. Choose a stack. 
+
+    If you are not sure [which one of our stacks](/infrastructure/available-stacks/) you wish to use, just leave it on the default value!
  9. If you have both an iOS and an Android project in your Flutter repo, you will be prompted to select:
     * an export method for the iOS project
     * the variant you want to use for the Android project
-10. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
+10. Register a webhook when prompted. 
+
+    With a webhook, Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
 
 ## Testing a Flutter app
 
