@@ -62,6 +62,15 @@ You can build both iOS and Android projects at the same time or you can build th
 
 We'll discuss the Steps specific to iOS and Android deployment in their respective sections! 
 
+### Deploying to Bitrise
+
+The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build’s page.
+
+You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
+
+1. Go to the `Deploy to bitrise.io` step.
+2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK/.ipa file in the `APPS & ARTIFACTS` tab.
+
 ### Deploying a Flutter app to the App Store 
 
 To deploy your iOS Flutter project to the App Store, you'll need to build the app, export an. ipa file and submit it to the App Store.
@@ -79,4 +88,8 @@ Read more about iOS code signing on Bitrise in [our detailed guides](https://dev
 4. Make sure the `Additional parameters` input has the value `--release`.
 5. Set the `Select method for export` input to `app-store`. 
 6. Add the `Deploy to iTunes Connect` Step to the end of the workflow.
-7. Fill in your Apple ID, your Password in their respective input fields.
+7. Provide your Apple credentials in the respective input fields.
+   * Apple ID
+   * password or, if you use two-factor authentication on iTunes Connect, your application password.
+
+   Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
