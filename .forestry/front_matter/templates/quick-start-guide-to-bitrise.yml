@@ -69,5 +69,6 @@ pages:
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
 - _articles/infrastructure/available-stacks.md
+- _articles/reviews/install-any-additional-tool-draft.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
