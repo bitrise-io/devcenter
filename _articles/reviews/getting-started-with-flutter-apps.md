@@ -71,7 +71,7 @@ You can share the generated APK/.ipa file with your team members using the build
 1. Go to the `Deploy to bitrise.io` step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK/.ipa file in the `APPS & ARTIFACTS` tab.
 
-### Deploying a Flutter app to the App Store 
+### Deploying a Flutter app to App Store Connect
 
 To deploy your iOS Flutter project to the App Store, you'll need to build the app, export an. ipa file and submit it to the App Store.
 
@@ -94,3 +94,6 @@ Read more about iOS code signing on Bitrise in [our detailed guides](https://dev
    * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
+9. [Start a build]()! 
+
+If all goes well, the Step will submit the app to App Store Connect. You can, from the App Store Connect page, distribute the app to external testers via Testflight, or release it to the App Store itself. 
