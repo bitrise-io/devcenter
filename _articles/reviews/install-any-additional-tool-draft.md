@@ -5,19 +5,17 @@ date: 2019-01-09 15:23:55 +0000
 published: false
 
 ---
-If you need something you can't find a Step for, you can always install and use tools with scripts or Script steps.
+If you need something you can't find a Step for, you can always install and use tools with scripts or Script steps. Add a `Script` step to your Workflow, and either write your script there, or run a script from your repository. We will show you how to do both!
 
-Just add a `Script` step to your Workflow, and either write your script there, or run a script from your repository.
+_Passwordless_ `_sudo_` _is enabled on all of our build virtual machines, so you can freely use_ `_sudo_` _if you need it._
 
-_Passwordless `sudo` is enabled on all of our build virtual machines, so you can freely use `sudo` if you need it._
-
-Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib). You can find a template and more information about how you can create your own **Step at our Github Steplib template**.
+Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib). You can find a template and a README about Step creation at our [Github page](https://github.com/bitrise-core/bitrise-plugins-step/tree/master/create/templates).
 
 ## Step by step setup
 
-1. Open your app on Bitrise.io
-2. Open the app's Workflow Editor (on the `Workflow` tab -> click `Manage Workflows`)
-3. Select a Workflow
+1. Click your app on the right side of your [Bitrise Dashboard](https://app.bitrise.io/dashboard/builds).
+2. Click `Workflows` to open the Workflow Editor (on the `Workflow` tab -> click `Manage Workflows`)
+3. Select a Workflow in the Workflow
 4. Click on the `+` sign (you can see this between every step), where you want to insert your Script step
 5. In the step list search for "script", and click the `Add to Workflow` button on the "Script" step item.
 6. Now that you have the Script step in your workflow, you just have to select it and write your script into the `Script content` input (on the right side of the Workflow Editor).
@@ -34,7 +32,7 @@ Or, in a more robust form (which is better if you want to extend the content in 
     set -ex
     bash ./path/to/script.sh
 
-_The `set -ex` line is recommended for every multi-line Bash script, to make your scripts easier to debug._
+_The_ `_set -ex_` _line is recommended for every multi-line Bash script, to make your scripts easier to debug._
 
 You can of course run non Bash scripts too, for example, a Ruby script:
 
@@ -68,7 +66,7 @@ For example, to install `cmake` with a script step, on Linux, using `apt-get`:
     set -ex
     sudo apt-get install -y cmake
 
-{% include message_box.html type="important" title="Don't forget the `-y` flag for `apt-get`!" content=" If you don't add the `-y` (/"yes/") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example. "%}
+{% include message_box.html type="important" title="Don't forget the `-y` flag for `apt-get`!" content=" If you don't add the `-y` (\\"yes\\") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example. "%}
 
 ## Advanced option: use `deps` in `bitrise.yml`
 
