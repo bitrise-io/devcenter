@@ -62,9 +62,7 @@ You can build both iOS and Android projects at the same time or you can build th
 
 Here's the example workflow we'll use in this configuration:
 
-![](/img/flutter-workflow.png)
-
-We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
+![](/img/flutter-workflow.png)We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
 
 ### Deploying to Bitrise
 
