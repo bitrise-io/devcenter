@@ -7,7 +7,7 @@ published: false
 ---
 Creating an Android app bundle with Bitrise is _almost_ the same as generating an APK. Tweaking a few step inputs will enable you to compile an Android app bundle (.aab) file from your code, get the bundle signed and deployed to Google Play Store.
 
-## Generating Android App Bundle with Gradle Runner Step
+## Generating Android app bundle with Gradle Runner Step
 
 Our scanner can detect your code as an Android project and kick your first build off right away! If you select the `deploy` workflow in the app's Workflow Editor, you get a basic `deploy` workflow.
 
@@ -27,7 +27,7 @@ Before you start, make sure that:
 
    ![](/img/include-filter.jpg)This way the Step will generate an Android app bundle instead of an APK even if there is an APK in the Step's output path: `$BITRISE_APK_PATH`.
 
-## Signing an Android App Bundle
+## Signing an Android app bundle
 
 Signing an Android app bundle file is the same as signing an APK.
 
@@ -45,7 +45,7 @@ If you have uploaded your keystore file and filled out the required credentials,
 
 {% include message_box.html type="note" title="Can I create an Android App Bundle with Android Build Step?" content=" Since the `Android Build` Step uses the `assemble` Gradle command exclusively, you cannot run a `bundle` command with it. Use the `Gradle Runner` Step instead!" %}
 
-## Deploying your Android App Bundle to bitrise.io and to Google Play Store
+## Deploying your Android app bundle to bitrise.io and to Google Play Store
 
 1. Add the `Deploy to bitrise.io` Step after the `Gradle Runner` Step. It uploads the bundle into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page.
 2. Make sure you are in sync with Google Play Store! Learn how to
