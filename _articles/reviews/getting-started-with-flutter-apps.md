@@ -88,7 +88,9 @@ Read more about iOS code signing on Bitrise in [our detailed guides](https://dev
 2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise.
 3. Open the `Flutter Build` Step and find the `iOS Platform Configs` input group.
 4. Make sure the `Additional parameters` input has the value `--release`.
-5. Add the `Xcode Archive & Export for iOS` Step to the workflow
+5. Add the `Xcode Archive & Export for iOS` Step to the workflow.
+
+   It should be after the `Flutter Build` Step.
 6. Set the `Select method for export` input of the Step to `app-store`.
 7. Add the `Deploy to iTunes Connect` Step to the end of the workflow.
 8. Provide your Apple credentials in the respective input fields.
@@ -122,8 +124,9 @@ Once that is done, you are ready to configure a workflow to deploy the app.
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Add the `Google Play Deploy` Step after the `Sign APK` Step in your deploy workflow.
-5. Fill out the required input fields as follows:
+4. Add the `Sign APK` Step to your workflow. 
+5. Add the `Google Play Deploy` Step after the `Sign APK` Step to your workflow.
+6. Fill out the required input fields as follows:
    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
