@@ -47,7 +47,7 @@ If you have uploaded your keystore file and filled out the required credentials,
 
 ## Deploying your Android app bundle to bitrise.io and to Google Play Store
 
-1. Add the `Deploy to bitrise.io` Step after the `Gradle Runner` Step. It uploads the bundle into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page.
+1. Add the `Deploy to bitrise.io` Step after the `Gradle Runner` Step. It uploads the bundle into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page so that you can check it prior to app store distribution.
 2. Make sure you are in sync with Google Play Store! Learn how to
    * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
    * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
