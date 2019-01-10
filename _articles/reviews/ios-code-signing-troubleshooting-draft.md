@@ -47,7 +47,7 @@ Most of the time, this error means your project is missing either the correct .p
 
 ![](/img/export_fail.png)
 
-If you use Xcode managed signing, 
+If you use Xcode managed signing, the Step only accepts an Xcode managed provisioning profile. 
 
 ### The _iOS Auto Provision Step_ fails
 
