@@ -45,33 +45,35 @@ You can of course run non-Bash scripts too, for example, a **Ruby script**:
     set -ex
     ruby ./path/to/script.rb
 
-### Examples
+## Examples for installing dependencies
 
-At this point you already have the Script step in your Workflow, and you just have to write the script to install the dependency. How do you do that? Exactly the same way you would on your own Mac / Linux, in your Terminal / Command Line!
+Now you have the `Script` Step in your Workflow, and you just have to write the script to install the dependency. You can do it in the same way as you would on your own Mac / Linux, in your Terminal / Command Line!
 
-#### `brew` on macOS
+### `brew` on macOS
 
-For example, to install `cmake` with a script step, on macOS, using `brew`:
+For example, to install `cmake` with a `Script` Step on macOS, use the following `brew` command:
 
     #!/bin/bash
     set -ex
     brew install cmake
 
-Actually, the whole Script content could be as short as:
+The whole `Script content` could be as short as:
 
     brew install cmake
 
-Which is exactly how you would use `brew` on your Mac, but you'll most likely add more content to the Script step sooner or later; the first example is a more future proof Bash script template.
+This is exactly how you would use `brew` on your Mac, but since you'll most likely add more content to the `Script` Step sooner or later, the first example is a more future proof Bash script template.
 
-#### `apt-get` on Linux
+### `apt-get` on Linux
 
-For example, to install `cmake` with a script step, on Linux, using `apt-get`:
+For example, to install `cmake` with a `Script` Step on Linux, use the following `apt-get` command:
 
     #!/bin/bash
     set -ex
     sudo apt-get install -y cmake
 
-Don't forget the `-y` flag for `apt-get`! If you don't add the `-y` (yes) flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example.
+{% include message_box.html type="important" title="Don't forget the `-y` flag for `apt-get`" content="If you don't add the `-y` (yes) flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example.
+
+"%}
 
 ## Advanced option: use `deps` in `bitrise.yml`
 
