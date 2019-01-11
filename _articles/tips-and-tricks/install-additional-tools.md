@@ -1,93 +1,83 @@
 ---
-title: Install Any Additional Tool
+title: Installing any additional tools
 menu:
   tips-and-tricks:
     weight: 9
 
 ---
-If you need something you can't find a Step for, you can always install & use tools with scripts or Script steps.
+If you need something you can't find a Step for, you can always install and use tools with scripts or Script steps. Add a `Script` step to your Workflow, and either write your script there, or run a script from your repository. Passwordless `sudo` is enabled in all of our build virtual machines, so you can freely use `sudo` if you need it.
 
-Just add a `Script` step to your Workflow, and either write your script there, or run a script from your repository.
+Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib). You can find a template and a README about Step creation at our [Github page](https://github.com/bitrise-core/bitrise-plugins-step/tree/master/create/templates).
 
-_Passwordless_ `_sudo_` _is enabled on all of our build virtual machines, so you can freely use_ `_sudo_` _if you need it._
+## Adding a Script Step to a workflow
 
-Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib).
-You can find a template and more information about how you can create your own Step at: [https://github.com/bitrise-steplib/step-template](https://github.com/bitrise-steplib/step-template)
+1. Click your app on the right side of your [Dashboard](https://app.bitrise.io/dashboard/builds).
+2. Click the `Workflow` tab to open Workflow Editor.
+3. Select a workflow in the `WORKFLOW` menu.
 
-## Step by step setup
+   ![](/img/workflow-menu.png)
+4. Once, you have your workflow, click the `+` sign to insert a Step at that position from our **Step Library**.
+5. In the `Search steps` bar, search for "script" and click on the `Script` Step . This will add the Step to your workflow.
+6. Click the Step in your workflow.
+7. Insert your script into the `Script content`  input field.
 
-1. Open your app on Bitrise.io
-2. Open the app's Workflow Editor (on the `Workflow` tab -> click `Manage Workflows`)
-3. Select a Workflow
-4. Click on the `+` sign (you can see this between every step), where you want to insert your Script step
-5. In the step list search for "script", and click the `Add to Workflow` button on the "Script" step item.
-6. Now that you have the Script step in your workflow, you just have to select it and write your script into the `Script content` input (on the right side of the Workflow Editor).
+## Running a script from a repo with Script Step
 
-_Note: you can drag-and-drop reorder the steps in the Workflow, so you don't have to delete and re-add a step if you'd want to change the order._
-
-If you want to run a script from your repository you can run it from this Script step. Paths are relative to your repository's root. So, for example, if you have a Bash script at `path/to/script.sh` you can run it with this `Script content`:
+If you want to run a script from your repository, you can run it from this `Script` Step. Paths are relative to your repository's root. For example, if you have a **Bash script** at `path/to/script.sh` you can add it to the `Script content` input field and run it with the following command:
 
     bash ./path/to/script.sh
 
-Or, in a more robust form (which is better if you want to extend the content in the future):
+Or in a more robust form, which is better if you want to extend the content later:
 
     #!/bin/bash
     set -ex
     bash ./path/to/script.sh
 
-_The_ `_set -ex_` _line is recommended for every multi-line Bash script, to make your scripts easier to debug._
+{% include message_box.html type="note" title="set -ex" content=" The `set -ex` line is recommended for every multi-line Bash script to make your scripts easier to debug. "%}
 
-You can of course run non Bash scripts too, e.g. a Ruby script:
+You can run non-Bash scripts too, for example, a **Ruby script**:
 
     #!/bin/bash
     set -ex
     ruby ./path/to/script.rb
 
-### Examples
+## Examples for installing dependencies
 
-At this point you already have the Script step in your Workflow, and you just have to write the
-script to install the dependency. How do you do that? Exactly the same way you would on
-your own Mac / Linux, in your Terminal / Command Line!
+Now you have the `Script` Step in your Workflow, you just have to write the script to install the dependency. You can do it in the same way as you would on your own Mac / Linux, in your Terminal / Command Line! Let's see some examples!
 
-#### `brew` on macOS
+### `brew` on macOS
 
-For example, to install `cmake` with a script step, on macOS, using `brew`:
+For example, to install `cmake` with a `Script` Step on macOS, use the following `brew` command:
 
     #!/bin/bash
     set -ex
     brew install cmake
 
-Actually, the whole Script content could be as short as:
+The whole `Script content` could be as short as:
 
     brew install cmake
 
-Which is exactly how you would use `brew` on your Mac, but you'll most likely
-add more content to the Script step sooner or later; the first
-example is a more future proof Bash script template.
+This is exactly how you would use `brew` on your Mac, but since you'll most likely add more content to the `Script` Step sooner or later, the first example is a more future proof Bash script template.
 
-#### `apt-get` on Linux
+### `apt-get` on Linux
 
-For example, to install `cmake` with a script step, on Linux, using `apt-get`:
+For example, to install `cmake` with a `Script` Step on Linux, use the following `apt-get` command:
 
     #!/bin/bash
     set -ex
     sudo apt-get install -y cmake
 
-{% include message_box.html type="important" title="Don't forget the `-y` flag for `apt-get`!" content="
-If you don't add the `-y` (\"yes\") flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you can't provide manual input for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example.
+{% include message_box.html type="important" title="Don't forget the `-y` flag for `apt-get`" content="If you don't add the `-y` (yes) flag to the `apt-get` command, `apt-get` will present a prompt which you have to accept or deny manually. This is not a problem on your own Linux machine, but in a CI environment you **can't provide manual input** for `apt-get`. To prevent this issue, and to auto accept the prompt, just use the `-y` flag, as shown in the example.
+
 "%}
 
 ## Advanced option: use `deps` in `bitrise.yml`
 
-Instead of installing your tool inside the Script step, you can use the `deps` option
-of the `bitrise.yml`. If you declare `deps` _for a given Step_,
-the [Bitrise CLI](https://github.com/bitrise-io/bitrise)
-will check if that tool is installed, and will install it for you if required.
+Instead of installing your tool inside the `Script` Step, you can also use the `deps` option of the `bitrise.yml`. If you declare `deps` _for a specific Step_, the [Bitrise CLI](https://github.com/bitrise-io/bitrise) will check if that tool is installed, and will install it for you, if required.
 
-{% include message_box.html type="note" title="Available dependency managers" content=" This method is the preferred way of handling (step) dependencies, as the Bitrise CLI will not (re)install the specified tool(s) if it's already available. That said, there are tools which are not available in the supported dependency managers, or you need a version of the tool which is not available in the dependency manager. In those cases you should simply install the tool inside the Script, as described above. "%}
+{% include message_box.html type="note" title="Available dependency managers" content=" This method is the preferred way of handling (step) dependencies, as Bitrise CLI will not (re)install the specified tool(s) if it's already available. That said, there are tools which are not available in the supported dependency managers, or you need a version of the tool which is not available in the dependency manager. In these cases, you should simply install the tool inside the `Script` Step, as described above. "%}
 
-An example, installing `cmake` with either `apt-get` (where `apt-get` is available),
-or with `brew` (on macOS):
+An example, installing `cmake` with either `apt-get` (where `apt-get` is available), or with `brew` (on macOS):
 
     deps:
       brew:
@@ -115,7 +105,7 @@ A minimal `bitrise.yml` for demonstration:
                   set -ex
                   which cmake
 
-{% include message_box.html type="info" title="Advanced tip" content=" If you want to declare a dependency which might be available from another source (not through the package manager), then you might also want to declare the related `binary name`. If that matches the package name (like in case of `cmake`) this is completely optional, but in case the package does not match the binary name you can declare it with `bin_name`. An example is AWS CLI, where the package name in both package managers is `awscli`, but the binary itself is `aws`." %}
+{% include message_box.html type="info" title="Advanced tip" content=" If you want to declare a dependency which might be available from another source (not through the package manager), then you might also want to declare the related `binary name`. If that matches the package name (like in case of `cmake`) this is completely optional, but in case the package does not match the binary name, you can declare it with `bin_name`. An example is AWS CLI, where the package name in both package managers is `awscli`, but the binary itself is `aws`." %}
 
 A minimal `bitrise.yml` for demonstration:
 
@@ -141,11 +131,7 @@ A minimal `bitrise.yml` for demonstration:
 
 ## Conditional execution
 
-Additionally, you can use Environment Variables in your scripts too.
-As an example, using the `PR` environment variable
-(but you can use any [Available Environment Variable](/faq/available-environment-variables/),
-like the ones exposed by previous steps in the Workflow),
-to run different scripts in case of a Pull Request and a non Pull Request build:
+Additionally, you can use environment variables (env vars) in your scripts too. Here is an example for the `PR` env var where we run different scripts for a Pull Request and for a non-Pull Request build:
 
     #!/bin/bash
     set -ex
@@ -158,5 +144,6 @@ to run different scripts in case of a Pull Request and a non Pull Request build:
       bash ./path/to/not-pull-request.sh
     fi
 
-_Note: if you **don't** want to run any part of the Step/script based on a variable (like_ `_$PR_`_),
-you don't have to implement the check in the script. You can use the _`_run_if_` _expression in the_ `_bitrise.yml_` _directly to declare in which case(s) the Step should run. Additionally,_ `_run_if_` _can be added to any step, not just to Script steps. You can find more information about_ `_run_if_` _expressions in_ [_this guide_](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed).
+Note that you can use any [available env var](/builds/available-environment-variables/#exposed-by-the-bitrise-cli), like the ones exposed by previous steps in the Workflow.
+
+{% include message_box.html type="note" title="Use `run_if` in `bitrise.yml`" content=" If you **don't** want to run any part of the Step/script based on a variable (like `$PR`), you don't have to implement the check in the script. You can use the `run_if` expression in the `bitrise.yml` directly to declare when the Step should run since `run_if` can be added to any step, not just to Script steps. You can find more information about `run_if` expressions in [this guide](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed). " %}
