@@ -90,7 +90,6 @@ To sign your iOS project, you have to upload code signing certificates and provi
 5. Add the `Generate cordova build configuration` step to your Workflow. (This step does all the configuration needed for the next step, which is `Cordova Archive` or `Ionic Archive`.) It **must come after** the `Certificate and profile installer` step.
 6. Fill in the required input for the step. Please note that both the `Code Signing Identity` and the `Provisioning Profile` are required inputs for iOS apps even though they are not marked as such.
 
-   ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/code-signing/ios-code-signing/cordova-config-inputs.png)
    * `Build configuration`: you can set it to either `debug` or `release`.
    * `Code Sign Identity`: enter a Developer or a Distribution identity.
    * `Provisioning Profile`: enter the appropriate Provisioning Profile.
