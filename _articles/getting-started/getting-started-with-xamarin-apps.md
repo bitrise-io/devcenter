@@ -43,7 +43,7 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
  7. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them. In the case of a Xamarin app, we're looking for the Xamarin Solution file.
  8. Select the Xamarin solution configuration. The available options are based on the solution file. This will be stored as an [Environment Variable](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/) and it can be changed later.
 
-    ![](/img/xamarin-setup-config.png)
+    ![](/img/xamarin-project-build.png)
  9. Select the Xamarin solution platform. This will be stored as an Environment Variable and it can be changed later.
 10. Confirm your build configuration.
 11. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
@@ -84,7 +84,7 @@ For UI tests, we strongly recommend using our `App Center upload and schedule te
 
    This Step should be after the `NuGet restore` and the `Xamarin Archive` Steps, in order to install all your dependencies and build the app before running tests.
 
-   ![](/img/app-center-test.png)
+   ![](/img/ui-testing-xamarin.png)
 2. Fill in the required inputs of the Step. You can find all these in the App Center after setting up your test run: check the **Submit** tab.
 
 If you're interested in Calabash UI testing on Bitrise, check out this [discuss guide](https://discuss.bitrise.io/t/how-to-do-calabash-uitesting-on-bitrise/361)!
@@ -141,7 +141,7 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 1. Enter the Workflow Editor of your app, and click the `Workflows` tab.
 2. Make sure you have the `Xamarin Archive` Step in your workflow.
 
-   ![](/img/xamarin-archive.png)
+   ![](/img/xamarin-archive.jpg)
 3. Make sure the required inputs of the Step have appropriate values. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
    * **Path to the Xamarin Solution file**: the location of your Xamarin solution file.
    * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
@@ -157,7 +157,7 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.
 5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow.
 
-   ![](/img/itunes-connect.png)
+   ![](/img/deploy-itunes-connect.jpg)
 6. Click the `Deploy to iTunes Connect - Application Loader`  Step, and enter your Apple ID and password in the relevant input field.
 7. Start a build!
 
