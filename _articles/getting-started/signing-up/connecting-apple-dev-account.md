@@ -16,7 +16,7 @@ All you need is a [bitrise.io](https://www.bitrise.io) account and a valid Apple
 1. Log in to [bitrise.io](https://www.bitrise.io).
 2. Click on your profile in the upper-right corner of your `Dashboard` and select `Account settings` from the dropdown menu.
 
-   ![Account settings menu](/img/adding-a-new-app/account-settings.png)
+   ![](/img/account-settings.jpg)
 3. On the menu bar on the left, select `Apple Developer Account`.
 4. Provide your credentials in the popup window and click `Store credentials`.
 
