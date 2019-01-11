@@ -23,7 +23,7 @@ you will see Bitrise automatically listing all your repositories, so you can jus
 You can connect any private or public git repository to Bitrise. We will automatically create an SSH key that you can use to setup the connection with your provider.
 "%}
 
-![Screenshot](/img/adding-a-new-app/connect-repo.png)
+![](/img/connect-repo.jpg)
 
 If you haven't [authorized Bitrise](/getting-started/adding-a-new-app/connecting-account-bitrise) against the provider hosting your repository, it will ask for permission.
 
@@ -32,7 +32,7 @@ If you haven't [authorized Bitrise](/getting-started/adding-a-new-app/connecting
 It will then list your repositories as above. If you'd like to connect git repository hosted by other than GitHub or Bitbucket,
 select the `Other / Manual` tab.
 
-![Screenshot](/img/adding-a-new-app/add-other-repo.png)
+![](/img/other.jpg)
 
 You will have to add the git url of the repository you would like to connect.
 
