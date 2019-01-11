@@ -77,9 +77,9 @@ For example, to install `cmake` with a `Script` Step on Linux, use the following
 
 ## Advanced option: use `deps` in `bitrise.yml`
 
-Instead of installing your tool inside the Script step, you can use the `deps` option of the `bitrise.yml`. If you declare `deps` _for a given Step_, the [Bitrise CLI](https://github.com/bitrise-io/bitrise) will check if that tool is installed, and will install it for you if required.
+Instead of installing your tool inside the Script step, you can also use the `deps` option of the `bitrise.yml`. If you declare `deps` _for a specific Step_, the [Bitrise CLI](https://github.com/bitrise-io/bitrise) will check if that tool is installed, and will install it for you if required.
 
-{% include message_box.html type="note" title="Available dependency managers" content=" This method is the preferred way of handling (step) dependencies, as the Bitrise CLI will not (re)install the specified tool(s) if it's already available. That said, there are tools which are not available in the supported dependency managers, or you need a version of the tool which is not available in the dependency manager. In those cases you should simply install the tool inside the Script, as described above. "%}
+{% include message_box.html type="note" title="Available dependency managers" content=" This method is the preferred way of handling (step) dependencies, as Bitrise CLI will not (re)install the specified tool(s) if it's already available. That said, there are tools which are not available in the supported dependency managers, or you need a version of the tool which is not available in the dependency manager. In these cases, you should simply install the tool inside the `Script` Step, as described above. "%}
 
 An example, installing `cmake` with either `apt-get` (where `apt-get` is available), or with `brew` (on macOS):
 
@@ -109,7 +109,7 @@ A minimal `bitrise.yml` for demonstration:
                   set -ex
                   which cmake
 
-{% include message_box.html type="info" title="Advanced tip" content=" If you want to declare a dependency which might be available from another source (not through the package manager), then you might also want to declare the related `binary name`. If that matches the package name (like in case of `cmake`) this is completely optional, but in case the package does not match the binary name you can declare it with `bin_name`. An example is AWS CLI, where the package name in both package managers is `awscli`, but the binary itself is `aws`." %}
+{% include message_box.html type="info" title="Advanced tip" content=" If you want to declare a dependency which might be available from another source (not through the package manager), then you might also want to declare the related `binary name`. If that matches the package name (like in case of `cmake`) this is completely optional, but in case the package does not match the binary name, you can declare it with `bin_name`. An example is AWS CLI, where the package name in both package managers is `awscli`, but the binary itself is `aws`." %}
 
 A minimal `bitrise.yml` for demonstration:
 
@@ -135,7 +135,7 @@ A minimal `bitrise.yml` for demonstration:
 
 ## Conditional execution
 
-Additionally, you can use Environment Variables in your scripts too. As an example, using the `PR` environment variable (but you can use any [Available Environment Variable](/faq/available-environment-variables/), like the ones exposed by previous steps in the Workflow), to run different scripts in case of a Pull Request and a non Pull Request build:
+Additionally, you can use environment variables (env vars) in your scripts too. Here is an example for the `PR` env var where we run different scripts for a Pull Request and for a non-Pull Request build:
 
     #!/bin/bash
     set -ex
@@ -148,4 +148,7 @@ Additionally, you can use Environment Variables in your scripts too. As an examp
       bash ./path/to/not-pull-request.sh
     fi
 
-Note: if you **don't** want to run any part of the Step/script based on a variable (like `$PR`), you don't have to implement the check in the script. You can use the`run_if` expression in the `bitrise.yml` directly to declare in which case(s) the Step should run. Additionally, `run_if` can be added to any step, not just to Script steps. You can find more information about `run_if` expressions in [this guide](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed).
+ You can use any [available env var](/builds/available-environment-variables/#exposed-by-the-bitrise-cli), like the ones exposed by previous steps in the Workflow.
+
+{% include message_box.html type="note" title="Use `run_if` in `bitrise.yml`" content=" If you **don't** want to run any part of the Step/script based on a variable (like `$PR`), you don't have to implement the check in the script. You can use the `run_if` expression in the `bitrise.yml` directly to declare when the Step should run since `run_if` can be added to any step, not just to Script steps. You can find more information about `run_if` expressions in [this guide](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed). " %}
+
