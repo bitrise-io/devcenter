@@ -23,7 +23,7 @@ In this guide, we'll walk you through how to add a MacOS app to Bitrise, how to 
    **IMPORTANT**: the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://app.forestry.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
 8. Select the export method. You can modify this later - for now, select `development`.
 
-   ![/img/mac-detected.png](https://app.forestry.io/sites/yv69yaruhkt48w/body-media//img/mac-detected.png)
+   ![](/img/project-build-config-macos.png)
 
    Once you clicked it, you should see your:
    * Project or Workspace path
@@ -95,7 +95,7 @@ To deploy to the App Store, you will need more code signing files:
 3. Go to the app's Workflow Editor and create a [new workflow](https://app.forestry.io/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
 4. Set the `Export Method` input of the `Xcode Archive for Mac` Step to `app-store`.
 
-   You can export multiple binaries with different export methods: use the `Export macOS Xcode archive` Step in your workflow. 
+   You can export multiple binaries with different export methods: use the `Export macOS Xcode archive` Step in your workflow.
 5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive for Mac` Step but preferably before the `Deploy to Bitrise.io` Step.
 6. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
 
