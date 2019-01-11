@@ -35,9 +35,9 @@ Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can 
     * Android
     * iOS and Android (where the Android build gets built first)
 
-    ![](/img/select-platform-cordova.jpg)
+    ![](/img/project-build-cordova.png)
 
-    ![](/img/select-platform-ionic.jpg)
+    ![](/img/project-build-ionic.png)
 10. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary workflow - click the message and it will take you to the build page. The first build does not generate an APK and an .ipa yet, however, you can already check out the project’s logs on the Build’s page.
 
 As an example, have a look at a Cordova **primary workflow** containing `Karma Jasmine Test Runner` step.
@@ -89,7 +89,6 @@ To sign your iOS project, you have to upload code signing certificates and provi
 4. Make sure you have the `Certificate and profile installer` step in your workflow as this Step can download and install the certificates on the virtual machine.
 5. Add the `Generate cordova build configuration` step to your Workflow. (This step does all the configuration needed for the next step, which is `Cordova Archive` or `Ionic Archive`.) It **must come after** the `Certificate and profile installer` step.
 6. Fill in the required input for the step. Please note that both the `Code Signing Identity` and the `Provisioning Profile` are required inputs for iOS apps even though they are not marked as such.
-
    * `Build configuration`: you can set it to either `debug` or `release`.
    * `Code Sign Identity`: enter a Developer or a Distribution identity.
    * `Provisioning Profile`: enter the appropriate Provisioning Profile.
@@ -102,13 +101,13 @@ To sign your iOS project, you have to upload code signing certificates and provi
 1. For a signed Android project, go to the `Code Signing` tab of your Workflow Editor.
 2. Click or drag-and-drop your keystore file on the `Upload file` field of the `ANDROID KEYSTORE FILE` section.
 
-   ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/android-code-signing/upload-file.png)
+   ![](/img/keystore-file.png)
 3. Fill out the displayed three input fields:
    * `keystore password`
    * `keystore alias`
    * `private key password`
 
-   ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/android-code-signing/three-fields.png)
+     ![](/img/keystore.png)
 4. Click `Save metadata`. Bitrise uploads your keystore file and assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The step will generate the following env vars which will be used at a later step:
    * `$BITRISEIO_ANDROID_KEYSTORE_URL`
    * `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
