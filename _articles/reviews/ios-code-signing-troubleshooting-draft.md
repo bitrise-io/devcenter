@@ -29,11 +29,11 @@ If the Step fails, check the logs. If you see the message: `Code signing error` 
 
 Most of the time, this error means your project is missing either the correct .p12 certificate file or the correct provisioning profile - or the `Select method for export` input of the Step is set incorrectly.
 
-### Manual provisioning 
+### Manual provisioning
 
-If you manually upload your provisioning profiles and use the `Certificate and profile installer` Step to install your code signing files, read on. 
+If you manually upload your provisioning profiles and use the `Certificate and profile installer` Step to install your code signing files, read on.
 
-If you use the `iOS Auto Provision` Step, skip to [Automatic provisioning](/code-signing/ios-code-signing/ios-code-signing-troubleshooting/). 
+If you use the `iOS Auto Provision` Step, skip to [Automatic provisioning](/code-signing/ios-code-signing/ios-code-signing-troubleshooting/).
 
 1. Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise.
 
@@ -51,15 +51,10 @@ If you use the `iOS Auto Provision` Step, skip to [Automatic provisioning](/code
 
    If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
 
-	![](/img/export_fail.png)
-
-1. Check if the capability lists in the iOS app and in the provisioning profile on the Developer Portal match. 
+   ![](/img/export_fail.png)
+6. Check if the capability lists in the **iOS app** and in the **provisioning profile uploaded to the Developer Portal** match.
 
    ![](/img/capapbilities_xcode.png)
-
-   ![](/img/capabilities.png)
-
-   This is only relevant if the `iOS Auto Provision` Step is set to NOT generate a profile. 
 
 {% include message_box.html type="info" title="Xcode managed signing" content="If you use Xcode managed signing, the Step only accepts an Xcode managed provisioning profile.
 
@@ -82,17 +77,20 @@ With the `iOS Auto Provision` Step, you do not need to manually upload a provisi
 3. Check the `Select method for export` input of the Step in the Workflow Editor.
 
    If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file.
-4. Check if the certificate is locked. If it is, check if the password is correct! 
+4. Check if the certificate is locked. If it is, check if the password is correct!
 
-When you use the `iOS Auto Provision` Step, using Xcode managed signing is an important factor. Let's go through what can happen depending on whether you use the option. 
+When you use the `iOS Auto Provision` Step, using Xcode managed signing is an important factor. Let's go through what can happen depending on whether you use the option.
 
-#### If Xcode managed signing is enabled in the iOS app 
+#### If Xcode managed signing is enabled in the iOS app
 
 1. Check the value of the `Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?` input is set to in the `iOS Auto Provision` step.
-   * If it's set to `no`, the Step will look for an Xcode Managed Provisioning Profile on the Apple Developer Portal. 
-   * If it's set to `yes`, the Step will generate a new manual provisioning profile on the Apple Developer portal for the project .
+   * If it's set to `no`, the Step will look for an Xcode Managed Provisioning Profile on the Apple Developer Portal.
+   * If it's set to `yes`, the Step will generate a new manual provisioning profile on the Apple Developer portal for the project.
+2. Check if the capability lists in the iOS app and in the provisioning profile on the Developer Portal match.
 
-#### If Xcode managed signing is disabled in the iOS app 
+   This is only relevant if the `iOS Auto Provision` Step is set to NOT generate a profile.
+
+#### If Xcode managed signing is disabled in the iOS app
 
 If you uncheck Xcode managed signing, the `iOS Auto Provision` step generates a new provisioning profile on the Apple Developer portal for the project when running a build. This profile will be up to date with all of the capabilities and developer devices.
 
@@ -103,3 +101,15 @@ The `iOS Auto Provision` Step manages your provisioning profiles for you: it dow
 * If you are trying to use it with a Xamarin app, you will have to swap it for the `Certificate and profile installer` Step. Automatic provisioning is not supported for Xamarin apps.
 * Before trying to use this Step, generate an .ipa file locally - with the same export method you want to use on Bitrise - to ensure that the profiles are uploaded to the Apple Developer portal.
 * Make sure that your Bitrise account is connected to the Apple Developer portal and that you have at least an Admin role in your Apple Developer team.
+
+## Could not install the app on a device 
+
+To install iOS apps on a given device, you have to either:
+
+* export an .ipa file with the `development` export method, with the device's UDID registered in the provisioning profile used for the export
+* export an .ipa file with the `ad-hoc` export method and install the app via the public install page generated by the `Deploy to Bitrise.io` Step. 
+
+1. Check that the device UDID is included in the app's provisioning profile. 
+   * If you use manual provisioning, check the provisioning profile you uploaded to Bitrise.
+   * If you use automatic provisioning, `Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?` input is set to `no` in the `iOS Auto Provision` step: check the provisioning profile on the Apple Developer Portal.
+   * If you use automatic provisioning, and the `Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?` input is set to `yes` in the `iOS Auto Provision` step: check that the device is registered to the developer team on the Apple Developer portal.
