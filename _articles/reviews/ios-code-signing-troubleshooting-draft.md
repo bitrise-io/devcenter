@@ -51,7 +51,15 @@ If you use the `iOS Auto Provision` Step, skip to [Automatic provisioning](/code
 
    If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
 
-![](/img/export_fail.png)
+	![](/img/export_fail.png)
+
+1. Check if the capability lists in the iOS app and in the provisioning profile on the Developer Portal match. 
+
+   ![](/img/capapbilities_xcode.png)
+
+   ![](/img/capabilities.png)
+
+   This is only relevant if the `iOS Auto Provision` Step is set to NOT generate a profile. 
 
 {% include message_box.html type="info" title="Xcode managed signing" content="If you use Xcode managed signing, the Step only accepts an Xcode managed provisioning profile.
 
@@ -83,9 +91,10 @@ When you use the `iOS Auto Provision` Step, using Xcode managed signing is an im
 1. Check the value of the `Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?` input is set to in the `iOS Auto Provision` step.
    * If it's set to `no`, the Step will look for an Xcode Managed Provisioning Profile on the Apple Developer Portal. 
    * If it's set to `yes`, the Step will generate a new manual provisioning profile on the Apple Developer portal for the project .
-2. Check if the capability lists in the iOS app and in the provisioning profile on the Developer Portal match. 
 
-   This is only relevant if the `iOS Auto Provision` Step is set to NOT generate a profile. 
+#### If Xcode managed signing is disabled in the iOS app 
+
+If you uncheck Xcode managed signing, the `iOS Auto Provision` step generates a new provisioning profile on the Apple Developer portal for the project when running a build. This profile will be up to date with all of the capabilities and developer devices.
 
 ## The _iOS Auto Provision Step_ fails
 
