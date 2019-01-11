@@ -82,7 +82,10 @@ When you use the `iOS Auto Provision` Step, using Xcode managed signing is an im
 
 1. Check the value of the `Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?` input is set to in the `iOS Auto Provision` step.
    * If it's set to `no`, the Step will look for an Xcode Managed Provisioning Profile on the Apple Developer Portal. 
-   * If it's set to `yes`, the Step will generate a new manual provisioning profile on the Apple Developer portal for the project 
+   * If it's set to `yes`, the Step will generate a new manual provisioning profile on the Apple Developer portal for the project .
+2. Check if the capability lists in the iOS app and in the provisioning profile on the Developer Portal match. 
+
+   This is only relevant if the `iOS Auto Provision` Step is set to NOT generate a profile. 
 
 ## The _iOS Auto Provision Step_ fails
 
