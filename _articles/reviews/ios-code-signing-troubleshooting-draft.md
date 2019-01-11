@@ -113,3 +113,4 @@ To install iOS apps on a given device, you have to either:
    * If you use manual provisioning, check the provisioning profile you uploaded to Bitrise.
    * If you use automatic provisioning, `Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?` input is set to `no` in the `iOS Auto Provision` step: check the provisioning profile on the Apple Developer Portal.
    * If you use automatic provisioning, and the `Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?` input is set to `yes` in the `iOS Auto Provision` step: check that the device is registered to the developer team on the Apple Developer portal.
+2. Check the logs to see if the `Xcode Archive & Export for iOS` Step used the provisioning profile with the device's UDID in it. 
