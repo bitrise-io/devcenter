@@ -68,7 +68,7 @@ Public apps cannot have SSH keys.
 
 After setting up repository access, type the branch of the repository you wish to use and click `Next`.
 
-![Choosing branch](/img/adding-a-new-app/choose-branch.png)
+![](/img/choose-branch.png)
 
 [Bitrise will scan and validate your repository and set up a project configuration](/getting-started/adding-a-new-app/setting-up-configuration) based on the results. If the validation fails, you can set up the project manually.
 
