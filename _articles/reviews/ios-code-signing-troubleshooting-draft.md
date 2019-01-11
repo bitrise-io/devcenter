@@ -37,7 +37,7 @@ If you use the `iOS Auto Provision` Step, skip to [Automatic provisioning](/code
 
 1. Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise.
 
-   To do so, go to your app's `Workflow Editor` and check the `Code Signing` tab. If you use the `iOS Auto Provision` Step, you only need to upload a .p12 certificate file.
+   To do so, go to your app's `Workflow Editor` and check the `Code Signing` tab.
 2. Check that the provisioning profile and the .p12 certificate of your project match.
 
    A Development type provisioning profile requires a Development certificate. An App Store, Ad-hoc or Enterprise type provisioning profile requires a Distribution certificate. You can check the compatibility on the Code Signing tab: click `Show matching Certificates, Devices & Capabilities` under any provisioning profile.
@@ -59,23 +59,30 @@ Read more about it in [Apple's Technical Q&A](https://developer.apple.com/librar
 
 ### Automatic provisioning
 
-With the `iOS Auto Provision` Step, you do not need to manually upload a provisioning profile to Bitrise. The possible issues with this method depend on whether you use Xcode managed signing. 
+With the `iOS Auto Provision` Step, you do not need to manually upload a provisioning profile to Bitrise. You only need a certificate.
 
-1. Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise.
+1. Check that you have a .p12 certificate uploaded to Bitrise.
 
-   To do so, go to your app's `Workflow Editor` and check the `Code Signing` tab. If you use the `iOS Auto Provision` Step, you only need to upload a .p12 certificate file.
-2. Check that the provisioning profile and the .p12 certificate of your project match.
+   To do so, go to your app's `Workflow Editor` and check the `Code Signing` tab.
 
-   A Development type provisioning profile requires a Development certificate. An App Store, Ad-hoc or Enterprise type provisioning profile requires a Distribution certificate. You can check the compatibility on the Code Signing tab: click `Show matching Certificates, Devices & Capabilities` under any provisioning profile.
-3. Check that the uploaded code signing files belong to the correct team IDs.
+   Check that the uploaded code signing files belong to the correct team IDs.
 
    Also, make sure the provisioning profile is for the correct Bundle ID.
-4. Check that your uploaded code signing files are valid!
+2. Check that your uploaded certificate is valid!
 
    Remember that these files can and do expire or get revoked.
-5. Check the `Select method for export` input of the Step in the Workflow Editor.
+3. Check the `Select method for export` input of the Step in the Workflow Editor.
 
-   If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
+   If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file.
+4. Check if the certificate is locked. If it is, check if the password is correct! 
+
+When you use the `iOS Auto Provision` Step, using Xcode managed signing is an important factor. Let's go through what can happen depending on whether you use the option. 
+
+#### If Xcode managed signing is enabled in the iOS app 
+
+1. Check the value of the `Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?` input is set to in the `iOS Auto Provision` step.
+   * If it's set to `no`, the Step will look for an Xcode Managed Provisioning Profile on the Apple Developer Portal. 
+   * If it's set to `yes`, the Step will generate a new manual provisioning profile on the Apple Developer portal for the project 
 
 ## The _iOS Auto Provision Step_ fails
 
