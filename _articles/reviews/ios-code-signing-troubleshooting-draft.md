@@ -21,13 +21,19 @@ If you suspect an error is related to code signing, there is almost certainly a 
 
 Let's look into what you can do to make sure code signing works!
 
-### The _Xcode Archive & Export for iOS_ Step fails
+## The _Xcode Archive & Export for iOS_ Step fails
 
 If the Step fails, check the logs. If you see the message: `Code signing error` then this guide can hopefully help you find the solution!
 
 ![](/img/archive_fail.png)
 
-Most of the time, this error means your project is missing either the correct .p12 certificate file or the correct provisioning profile - or the `Select method for export` input of the Step is set incorrectly. Here's what you can do:
+Most of the time, this error means your project is missing either the correct .p12 certificate file or the correct provisioning profile - or the `Select method for export` input of the Step is set incorrectly.
+
+### Manual provisioning 
+
+If you manually upload your provisioning profiles and use the `Certificate and profile installer` Step to install your code signing files, read on. 
+
+If you use the `iOS Auto Provision` Step, skip to [Automatic provisioning](/code-signing/ios-code-signing/ios-code-signing-troubleshooting/). 
 
 1. Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise.
 
@@ -51,7 +57,27 @@ Most of the time, this error means your project is missing either the correct .p
 
 Read more about it in [Apple's Technical Q&A](https://developer.apple.com/library/archive/qa/qa1814/_index.html)."%}
 
-### The _iOS Auto Provision Step_ fails
+### Automatic provisioning
+
+With the `iOS Auto Provision` Step, you do not need to manually upload a provisioning profile to Bitrise. The possible issues with this method depend on whether you use Xcode managed signing. 
+
+1. Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise.
+
+   To do so, go to your app's `Workflow Editor` and check the `Code Signing` tab. If you use the `iOS Auto Provision` Step, you only need to upload a .p12 certificate file.
+2. Check that the provisioning profile and the .p12 certificate of your project match.
+
+   A Development type provisioning profile requires a Development certificate. An App Store, Ad-hoc or Enterprise type provisioning profile requires a Distribution certificate. You can check the compatibility on the Code Signing tab: click `Show matching Certificates, Devices & Capabilities` under any provisioning profile.
+3. Check that the uploaded code signing files belong to the correct team IDs.
+
+   Also, make sure the provisioning profile is for the correct Bundle ID.
+4. Check that your uploaded code signing files are valid!
+
+   Remember that these files can and do expire or get revoked.
+5. Check the `Select method for export` input of the Step in the Workflow Editor.
+
+   If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
+
+## The _iOS Auto Provision Step_ fails
 
 The `iOS Auto Provision` Step manages your provisioning profiles for you: it downloads the profiles from the Apple Developer portal and installs them for you. Here's what you can do if this Step fails:
 
