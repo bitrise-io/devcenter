@@ -5,7 +5,7 @@ date: 2019-01-09 15:23:55 +0000
 published: false
 
 ---
-If you need something you can't find a Step for, you can always install and use tools with scripts or Script steps. Add a `Script` step to your Workflow, and either write your script there, or run a script from your repository. Passwordless `sudo` is enabled in all of our build virtual machines, so you can freely use `sudo` if you need it. 
+If you need something you can't find a Step for, you can always install and use tools with scripts or Script steps. Add a `Script` step to your Workflow, and either write your script there, or run a script from your repository. Passwordless `sudo` is enabled in all of our build virtual machines, so you can freely use `sudo` if you need it.
 
 Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib). You can find a template and a README about Step creation at our [Github page](https://github.com/bitrise-core/bitrise-plugins-step/tree/master/create/templates).
 
@@ -27,7 +27,7 @@ If you want to run a script from your repository, you can run it from this `Scri
 
     bash ./path/to/script.sh
 
-Or in a more robust form which is better if you want to extend the content later:
+Or in a more robust form, which is better if you want to extend the content later:
 
     #!/bin/bash
     set -ex
