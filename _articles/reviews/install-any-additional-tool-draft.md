@@ -5,36 +5,41 @@ date: 2019-01-09 15:23:55 +0000
 published: false
 
 ---
-If you need something you can't find a Step for, you can always install and use tools with scripts or Script steps. Add a `Script` step to your Workflow, and either write your script there, or run a script from your repository. We will show you how to do both!
-
-_Passwordless_ `_sudo_` _is enabled on all of our build virtual machines, so you can freely use_ `_sudo_` _if you need it._
+If you need something you can't find a Step for, you can always install and use tools with scripts or Script steps. Add a `Script` step to your Workflow, and either write your script there, or run a script from your repository. Passwordless `sudo` is enabled in all of our build virtual machines, so you can freely use `sudo` if you need it. **We will show you how to do both!**
 
 Once you have a working script, **you can also transform it into a Step** and optionally share it with others (through our StepLib). You can find a template and a README about Step creation at our [Github page](https://github.com/bitrise-core/bitrise-plugins-step/tree/master/create/templates).
 
-## Step by step setup
+## Adding a Script Step to a workflow
 
-1. Click your app on the right side of your [Bitrise Dashboard](https://app.bitrise.io/dashboard/builds).
-2. Click `Workflows` to open the Workflow Editor (on the `Workflow` tab -> click `Manage Workflows`)
-3. Select a Workflow in the Workflow
-4. Click on the `+` sign (you can see this between every step), where you want to insert your Script step
-5. In the step list search for "script", and click the `Add to Workflow` button on the "Script" step item.
-6. Now that you have the Script step in your workflow, you just have to select it and write your script into the `Script content` input (on the right side of the Workflow Editor).
+1. Click your app on the right side of your [Dashboard](https://app.bitrise.io/dashboard/builds).
+2. Click `Workflow` tab to open the Workflow Editor (on the `Workflow` tab -> click `Manage Workflows`)
+3. Select a workflow in the `WORKFLOW` menu.
 
-_Note: you can drag-and-drop reorder the steps in the Workflow, so you don't have to delete and re-add a step if you'd want to change the order._
+   ![](/img/workflow-menu.png)
+4. Once, you have your workflow, click the `+` sign to insert a Step at that position from our Step Library.
+5. In the `Search steps` bar, search for "script" and click on the `Script` Step . This will add the Step to your workflow.
+6. Click the Step and write your script into the `Script content`  input field.
 
-If you want to run a script from your repository, you can run it from this Script Step. Paths are relative to your repository's root. So, for example, if you have a Bash script at `path/to/script.sh` you can run it with this `Script content`:
+{% include message_box.html type="info" title="About workflows" content="
+Check out our [guide on Workflows](/getting-started/getting-started-workflows/) to find out what else you can do with your workflow.
+"%}
+
+## Running a script from a repo with Script Step
+
+If you want to run a script from your repository, you can run it from this Script Step. Paths are relative to your repository's root. For example, if you have a **Bash script** at `path/to/script.sh` you can run it with the following command added to the `Script content` input field:
 
     bash ./path/to/script.sh
 
-Or, in a more robust form (which is better if you want to extend the content in the future):
+Or in a more robust form which is better if you want to extend the content later:
 
     #!/bin/bash
     set -ex
     bash ./path/to/script.sh
 
-_The_ `_set -ex_` _line is recommended for every multi-line Bash script, to make your scripts easier to debug._
+{% include message_box.html type="note" title="set -ex" content="
+The `set -ex` line is recommended for every multi-line Bash script to make your scripts easier to debug. "%}
 
-You can of course run non Bash scripts too, for example, a Ruby script:
+You can of course run non-Bash scripts too, for example, a **Ruby script**:
 
     #!/bin/bash
     set -ex
