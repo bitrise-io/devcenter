@@ -41,7 +41,7 @@ You can use our automatically generated `primary` workflow to test your Flutter 
 
    You can specify either tags or branches of the Flutter SDK's git repository. The default value is `stable`. This will use the latest stable branch of Flutter.
    * To find the available version tags, check: [https://github.com/flutter/flutter/releases](https://github.com/flutter/flutter/releases "https://github.com/flutter/flutter/releases")
-   * To see the the avilable branches, check: [https://github.com/flutter/flutter/branches](https://github.com/flutter/flutter/branches "https://github.com/flutter/flutter/branches")
+   * To see the the available branches, check: [https://github.com/flutter/flutter/branches](https://github.com/flutter/flutter/branches "https://github.com/flutter/flutter/branches")
 3. To the `Flutter Test` Step, add any flags you wish to use to the `Additional parameters` input.
 
    The Step runs the `flutter test` command with these flags. To check the available flags, open a command line interface on your own machine and run `flutter test --help`.
@@ -60,7 +60,7 @@ To build and deploy a Flutter app, we recommend creating a new workflow based on
 
 You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. You can set this in the `Platform` input of the `Flutter Build` Step.
 
-Here's the example workflow we'll use in this configuration, with all the necessary Steps:
+Here's an example workflow we'll use in this configuration, with all the necessary Steps:
 
 ![](/img/flutter-workflow.png)We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
 
@@ -75,7 +75,7 @@ You can share the generated APK/.ipa file with your team members using the build
 
 ### Deploying a Flutter app to App Store Connect
 
-To deploy your iOS Flutter project to the App Store, you'll need to build the app, export an. ipa file and submit it to the App Store.
+To deploy your iOS Flutter project to the App Store, you'll need to build the app, export an .ipa file and submit it to the App Store.
 
 Unlike testing, this requires code signing files:
 
@@ -104,7 +104,7 @@ If all goes well, the Step will submit the app to App Store Connect. You can, fr
 
 ### Deploying a Flutter app to Google Play
 
-To deploy your app to Google Play, you need to export an APK file and sign it. 
+To deploy your app to Google Play, you need to export an APK file and sign it.
 
 You can [configure the signing](https://flutter.io/docs/deployment/android#configure-signing-in-gradle) in the app's `build.gradle` file and then Flutter will sign your app during the build phase.
 
@@ -126,9 +126,9 @@ Once that is done, you are ready to configure a workflow to deploy the app.
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Add the `Sign APK` Step to your workflow. 
+4. Add the `Sign APK` Step to your workflow.
 
-   It should be after the `Flutter Build` Step. 
+   It should be after the `Flutter Build` Step.
 5. Open the `Flutter Build` Step and find the `Android Platform Configs` input group.
 6. Make sure the `Additional parameters` input has the value `--release`.
 7. Add the `Google Play Deploy` Step after the `Sign APK` Step to your workflow.
