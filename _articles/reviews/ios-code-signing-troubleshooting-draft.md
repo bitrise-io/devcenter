@@ -47,9 +47,9 @@ Most of the time, this error means your project is missing either the correct .p
 
 ![](/img/export_fail.png)
 
- {% include message_box.html type="info" title="Xcode managed signing" content="If you use Xcode managed signing, the Step only accepts an Xcode managed provisioning profile.
+{% include message_box.html type="info" title="Xcode managed signing" content="If you use Xcode managed signing, the Step only accepts an Xcode managed provisioning profile.
 
-Read more about it in [Apple's Technical Q&A](https://developer.apple.com/library/archive/qa/qa1814/_index.html)."%} 
+Read more about it in [Apple's Technical Q&A](https://developer.apple.com/library/archive/qa/qa1814/_index.html)."%}
 
 ### The _iOS Auto Provision Step_ fails
 
@@ -58,11 +58,3 @@ The `iOS Auto Provision` Step manages your provisioning profiles for you: it dow
 * If you are trying to use it with a Xamarin app, you will have to swap it for the `Certificate and profile installer` Step. Automatic provisioning is not supported for Xamarin apps.
 * Before trying to use this Step, generate an .ipa file locally - with the same export method you want to use on Bitrise - to ensure that the profiles are uploaded to the Apple Developer portal.
 * Make sure that your Bitrise account is connected to the Apple Developer portal and that you have at least an Admin role in your Apple Developer team.
-
-### I uploaded a Distribution certificate and an App Store type provisioning profile but I cannot deploy to the App Store because of a code signing error!
-
-To export an .ipa file with the app-store or ad-hoc export methods, you also need to upload a Development certificate and Development type provisioning profile, as the first step of the .ipa export process uses that to generate an .xcodearchive file.
-
-### I have added the _Run Cocoapods Install_ Step and now my builds are failing
-
-Installing dependencies can result in a failed build for many reasons. When it comes to iOS code signing, problems can occur if you use the `iOS Auto Provision` Step. In practice, this means that in your Bitrise workflow, Steps that install dependencies - such as `Run Cocoapods Install` or `Carthage` - should be BEFORE the `iOS Auto Provision` Step.
