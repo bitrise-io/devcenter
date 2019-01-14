@@ -7,19 +7,6 @@ published: false
 ---
 This Step generates two APKs which you need to run instrumentation test for your Android App. The step conveniently generates an **APK from your app and a test APK** which then you can upload to Firebase with the `[BETA] Virtual Device Testing for Android` Step. Behind the scenes, the Step builds your Android project and an Android Test variant with gradle, therefore, there is no need for `Gradle Runner` Step to run these two commands: `app:assembleDebug` and `:app:assembleDebugAndroidTest.`
 
-**Required inputs for the step for Android Build for UI testing**  
-`project_location`: The root directory of your android project, for example, where your root build gradle file exist (also gradlew, settings.gradle, etc...)  
-`module`: Set the module that you want to build. To see your available modules please open your project in Android Studio and go in \[Project Structure\] and see the list on the left.  
-`variant`: Set the variant that you want to build. To see your available variants please open your project in Android Studio and go in \[Project Structure\] -> variants section.  
-`apk_path_pattern`: After the build the step will find the APK files with the given pattern. **And VDT can pick them app?**
-
-**Step outputs:**  
-`BITRISE_APK_PATH`:  
-Path of the generated (and copied) APK - after filtering.
-
-`BITRISE_TEST_APK_PATH`:  
-Path of the generated (and copied) test APK - after filtering.
-
 **Why would you need it?**  
 This step will generate all the APKs what you will need to run instrumentation test for your Android app.  
 It will generate an APK from your app and the belonging test APK too.
@@ -65,7 +52,7 @@ There is a small difference between configuring your workflow for `robo` and `in
 ### Running robo tests
 
 1. Open the primary workflow of your build in `Workflow Editor`.
-2. **Add an** `**Android Build**` **Step after t**he `Android Unit Test` Step to **export an APK** 
+2. **Add an** `**Android Build**` **Step after t**he `Android Unit Test` Step to **export an APK**
 3. Add the `Debug` task to the `Variant` Step input field. This will prepare an env var containing the APK path of your build. You will need this env var in the next step.
 
    ![](/img/robo-test.png)
@@ -83,15 +70,24 @@ There is a small difference between configuring your workflow for `robo` and `in
 
 1. Open the `primary workflow` of your build in `Workflow Editor`.
 2. Add the `Android Build for UI testing` Step to your wofkflow. To export and APK and a Test APK you have to set the following input fields:
-- project location:
-- module:
-- variant:
-3. Add the [BETA] Virtual Device Testing` Step right after the `Android Build for UI testing` Step. Set the following:
-- Test type:Select `instrumentation` as `Test type`
-7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of  `deviceID,version,language,orientation` separated with `,`.
+
+* project location:
+* module:
+* variant:
+  project_location: The root directory of your android project, for example, where your root build gradle file exist (also gradlew, settings.gradle, etc...)module: Set the module that you want to build. To see your available modules please open your project in Android Studio and go in \[Project Structure\] and see the list on the left.variant: Set the variant that you want to build. To see your available variants please open your project in Android Studio and go in \[Project Structure\] -> variants section.apk_path_pattern: After the build the step will find the APK files with the given pattern.
+
+1. Add the \[BETA\] Virtual Device Testing`Step right after the`Android Build for UI testing\` Step. Set the following:
+
+* Test type:Select `instrumentation` as `Test type`
+
+1. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of  `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/instrumentation-test.png)
-8. Start a build.
+2. Start a build.
+
+Step outputs:BITRISE_APK_PATH:Path of the generated (and copied) APK - after filtering.
+
+BITRISE_TEST_APK_PATH:Path of the generated (and copied) test APK - after filtering.
 
 ## Checking test results
 
