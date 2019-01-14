@@ -66,6 +66,7 @@ pages:
 - _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/getting-started/managing-files-on-bitrise.md
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
+- _articles/reviews/android-ui-testing-with-android-build-draft.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
 - _articles/infrastructure/available-stacks.md
 - _articles/reviews/ios-code-signing-troubleshooting-draft.md
