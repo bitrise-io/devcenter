@@ -5,9 +5,9 @@ date: 2019-01-14 11:32:07 +0000
 published: false
 
 ---
-This Step generates two APKs which you need to run instrumentation test for your Android App. The step conveniently generates an **APK from your app and a test APK** which then you can upload to Firebase with the `[BETA] Virtual Device Testing for Android` Step. Behind the scenes, the Step builds your Android project and an Android Test variant with via gradle no need for Gradle Runner to run these two commands: `app:assembleDebug` and `:app:assembleDebugAndroidTest.`
+This Step generates two APKs which you need to run instrumentation test for your Android App. The step conveniently generates an **APK from your app and a test APK** which then you can upload to Firebase with the `[BETA] Virtual Device Testing for Android` Step. Behind the scenes, the Step builds your Android project and an Android Test variant with gradle, therefore, there is no need for `Gradle Runner` Step to run these two commands: `app:assembleDebug` and `:app:assembleDebugAndroidTest.`
 
-**Required inputs for the step:**  
+**Required inputs for the step for Android Build for UI testing**  
 `project_location`: The root directory of your android project, for example, where your root build gradle file exist (also gradlew, settings.gradle, etc...)  
 `module`: Set the module that you want to build. To see your available modules please open your project in Android Studio and go in \[Project Structure\] and see the list on the left.  
 `variant`: Set the variant that you want to build. To see your available variants please open your project in Android Studio and go in \[Project Structure\] -> variants section.  
@@ -65,7 +65,7 @@ There is a small difference between configuring your workflow for `robo` and `in
 ### Running robo tests
 
 1. Open the primary workflow of your build in `Workflow Editor`.
-2. **Add an** `**Android Build**` **Step after t**he `Android Unit Test` Step to export an APK.
+2. **Add an** `**Android Build**` **Step after t**he `Android Unit Test` Step to **export an APK** 
 3. Add the `Debug` task to the `Variant` Step input field. This will prepare an env var containing the APK path of your build. You will need this env var in the next step.
 
    ![](/img/robo-test.png)
@@ -77,31 +77,17 @@ There is a small difference between configuring your workflow for `robo` and `in
    ![](/img/test-devices-android.png)
 
    Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/android/available-testing-devices).
-8. Start a build.
+8. Start a build. csak app apk-t kreal, nincs test, itt marad az android build.
 
 ### Running instrumentation tests
 
 1. Open the `primary workflow` of your build in `Workflow Editor`.
-2. **Add two** `**Android Build**` **Steps after** `Android Unit Test` Step. We will export an APK in the first build step and a test APK in the second build step.
-3. In the first `Android Build` Step, add the `Debug` task to the `Variant` field. **NORMAL APK**
-4. In the second `Android Build` Step, add the `DebugAndroidTest` task into the `Variant` field. **ANDROID TEST APK**
-
-   ![](/img/instrumentation-test-1.png)
-5. **Click** `**bitrise.yml**` **tab and edit the primary workflow** by adding the [output alias](https://devcenter.bitrise.io/bitrise-cli/step-outputs/#exporting-step-outputs-in-output-aliases/) for instrumentation testing to your second `Android Build` step. This will replicate to the `Test APK path` field of the `Instrumentation Test` section of the `[BETA] Virtual Device Testing` step. With this little trick, you will be able to output a test APK as well.
-
-        - android-build@0.9.5:
-               inputs:
-               - variant: Debug
-               - module: app
-           - android-build@0.9.5:
-               inputs:
-               - variant: DebugAndroidTest
-               - module: app
-               outputs:
-               - BITRISE_APK_PATH: BITRISE_TEST_APK_PATH
-
-   ![](/img/virtual-device.png)
-6. Select `instrumentation` as `Test type` in `[BETA] Virtual Device Testing` step.
+2. Add the `Android Build for UI testing` Step to your wofkflow. To export and APK and a Test APK you have to set the following input fields:
+- project location:
+- module:
+- variant:
+3. Add the [BETA] Virtual Device Testing` Step right after the `Android Build for UI testing` Step. Set the following:
+- Test type:Select `instrumentation` as `Test type`
 7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of  `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/instrumentation-test.png)
@@ -117,3 +103,13 @@ You can check UI test result on the `DEVICE TESTS` tab of your app's build page.
    ![](/img/device-test-page.jpg)
 
 You can view test cases and downloadable logs if you've selected `instrumentation` test and a video and screenshots if you've selected `robo` as test type. Or scroll down and download all your reports in `FILES GENERATED`.
+
+module;app
+
+variant:debug
+
+be vdt
+
+be instur
+
+alapbol a test apk path es az apk path van beegetve
