@@ -16,11 +16,11 @@ published: false
 
 ## API domain/host and versioning
 
-The Bitrise API's host is: [https://api.bitrise.io/](https://api.bitrise.io/ "https://api.bitrise.io/")
+The Bitrise API's host is: [https://api.bitrise.io/](https://api.bitrise.io/)
 
 Every endpoint except the root one is versioned, and the version have to be included in the URL right after the host.
 
-Example: [https://api.bitrise.io/v0.1/me](https://api.bitrise.io/v0.1/me "https://api.bitrise.io/v0.1/me") (requires authentication)
+Example: [https://api.bitrise.io/v0.1/me](https://api.bitrise.io/v0.1/me) (requires authentication)
 
 Right now we have only one version, `v0.1`.
 
