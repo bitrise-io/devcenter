@@ -7,8 +7,8 @@ published: false
 ---
 {% include message_box.html type="warning" title="The API is work-in-progress" content=" The API is work-in-progress: we will add new endpoints and possibly update the existing ones in the future. "%}
 
-* Join the discussion at: [https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554 "https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554"). Follow it if you want to get notified about new endpoints and changes, we announce those there.
-* If you want to request a new API feature / endpoint, please do it here: [http://discuss.bitrise.io/t/bitrise-public-api/37](http://discuss.bitrise.io/t/bitrise-public-api/37 "http://discuss.bitrise.io/t/bitrise-public-api/37")
+* Join the discussion at: [https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554). Follow it if you want to get notified about new endpoints and changes, we announce those there.
+* If you want to request a new API feature / endpoint, please do it here: [http://discuss.bitrise.io/t/bitrise-public-api/37](http://discuss.bitrise.io/t/bitrise-public-api/37)
 
 {% include message_box.html type="info" title="Endpoints" content="The endpoint reference documentation is available here:
 
@@ -77,8 +77,8 @@ The `page_item_limit` property can be set with the query parameter named `limit`
 
 Example:
 
-* Calling `[https://api.bitrise.io/v0.1/me/apps](https://api.bitrise.io/v0.1/me/apps)` will retrieve you the first page of your apps with size of 50.
-* If you call `[https://api.bitrise.io/v0.1/me/apps?limit=10](https://api.bitrise.io/v0.1/me/apps?limit=10)`, the response is also the first page of your apps, but it will contain only 10 elements.
+* Calling `https://api.bitrise.io/v0.1/me/apps` will retrieve you the first page of your apps with size of 50.
+* If you call `https://api.bitrise.io/v0.1/me/apps?limit=10`, the response is also the first page of your apps, but it will contain only 10 elements.
 
 If you want to iterate through all the items this is what you have to do:
 
@@ -94,7 +94,7 @@ A quick example, iterating through all of your registered apps:
 2. Process the items (`data` property)
 3. Then check the `paging` (root) property.
 4. If there's a `next` property inside `paging` simply call the endpoint again, with the `next` query parameter
-   * Example: `[https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE](https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE)`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
+   * Example: `https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
 5. Repeate this until the `paging` object does not include a `next` property, which means that the page you received was the last one.
 
 ## Endpoints
