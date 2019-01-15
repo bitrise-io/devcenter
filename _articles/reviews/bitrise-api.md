@@ -28,19 +28,21 @@ There's no long term compatibility promise for `v0.1`, although we try to do our
 
 ## Authentication
 
-The current API supports only one type of authentication, user generated **Personal Access Tokens**.
+The current API supports only one type of authentication: user generated **Personal Access Tokens**.
 
-Right now **every API endpoint requires authentication**, there's no endpoint which you can call without including the authentication information, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io "https://api.bitrise.io")).
+Right now **every API endpoint requires authentication**, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io "https://api.bitrise.io")).
 
-To acquire a Personal Access Token for your user, sign in with that user on [bitrise.io](https://www.bitrise.io), go to your **Account Settings** page, and select the [Security](https://www.bitrise.io/me/profile#/security) tab on the left side.
+### Acquiring a Personal Access Token
 
-Here you can manage your account's Two Factor Authentication settings, as well as your Personal Access Tokens.
-
-To get started with the API simply click the **Generate new token** button, and save the generated Personal Access Token somewhere safe.
+1. Sign in on [bitrise.io](https://www.bitrise.io),
+2. Go to your **Account Settings** page
+3. Select the [Security](https://www.bitrise.io/me/profile#/security) tab on the left side.
+4. Click the `Generate new token` button to create a new Personal Access Token.
+5. Save the generated token. 
 
 {% include message_box.html type="important" title="Availability of the generated token" content=" The generated token is shown only once, when it's generated! There's no way to see the token value again! You can of course generate as many Access Tokens as you like, and delete the ones you don't need anymore. "%}
 
-Once you have the token you can start interacting with the API.
+### Authenticating with the API
 
 To provide the required access token you have to add a **HEADER** to your requests, with the key `Authorization` and value `token THE-ACCESS-TOKEN`.
 
