@@ -10,7 +10,7 @@ published: false
 * Join the discussion at: [https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554 "https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554"). Follow it if you want to get notified about new endpoints and changes, we announce those there.
 * If you want to request a new API feature / endpoint, please do it here: [http://discuss.bitrise.io/t/bitrise-public-api/37](http://discuss.bitrise.io/t/bitrise-public-api/37 "http://discuss.bitrise.io/t/bitrise-public-api/37")
 
-{% include message_box.html type="info" title="Endpoints" content="The endpoint reference documentation has been moved to another location:
+{% include message_box.html type="info" title="Endpoints" content="The endpoint reference documentation is available here:
 
 [Bitrise API endpoints](https://api-docs.bitrise.io)"%}
 
