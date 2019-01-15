@@ -44,7 +44,7 @@ Right now **every API endpoint requires authentication**, except the "root" URL 
 
 ### Authenticating with the API
 
-To provide the required access token you have to add a **HEADER** to your requests, with the key `Authorization` and value `token THE-ACCESS-TOKEN`.
+To provide the required access token, you have to add a **HEADER** to your requests, with the key `Authorization` and value `token THE-ACCESS-TOKEN`.
 
 An example API call with auth, using `curl`:
 
@@ -56,9 +56,9 @@ Every endpoint responds with a JSON formatted response.
 
 ### Pagination
 
-When you call an endpoint which returns a list of items you always have to be prepared that you might not get the whole list in a single response, you'll have to iterate through the "pages" to retrieve all the items.
+When you call an endpoint that returns a list of items, you might not get the whole list in a single response. You'll have to iterate through the "pages" to retrieve all the items.
 
-The response of the endpoint will include a `paging` object, with `total_item_count` and `page_item_limit` properties, and if there's a "next" page available it'll also include a `next` "anchor" item.
+The response of such endpoints include a `paging` object, with `total_item_count` and `page_item_limit` properties. If there is a "next" page available it'll also include a `next` "anchor" item. For example, the response will show the app slug of the first app on the next page.
 
 Example:
 
@@ -71,14 +71,14 @@ Example:
       }
     }
 
-{% include message_box.html type="note" title="`_next_` property of the `_paging_` object" content=" The `_next_` property of the `_paging_` object is only included if there's at least one more page available. If there's no `_next_` property inside `_paging_` that means that there's no more page to retrieve. "%}
+{% include message_box.html type="note" title="The `next` property of the `paging` object" content=" The `next` property of the `paging` object is only included if there's at least one more page available. If there's no `next` property inside `paging` that means that there's no more page to retrieve. "%}
 
 The `page_item_limit` property can be set with the query parameter named `limit` at the GET requests, so you can specify the size of the response pages. The default and also maximum value for this parameter is 50.
 
 Example:
 
-* Calling `[https://api.bitrise.io/v0.1/me/apps](https://api.bitrise.io/v0.1/me/apps "https://api.bitrise.io/v0.1/me/apps")` will retrieve you the first page of your apps with size of 50.
-* If you call `[https://api.bitrise.io/v0.1/me/apps?limit=10](https://api.bitrise.io/v0.1/me/apps?limit=10 "https://api.bitrise.io/v0.1/me/apps?limit=10")`, the response is also the first page of your apps, but it will contain only 10 elements.
+* Calling `[https://api.bitrise.io/v0.1/me/apps](https://api.bitrise.io/v0.1/me/apps)` will retrieve you the first page of your apps with size of 50.
+* If you call `[https://api.bitrise.io/v0.1/me/apps?limit=10](https://api.bitrise.io/v0.1/me/apps?limit=10)`, the response is also the first page of your apps, but it will contain only 10 elements.
 
 If you want to iterate through all the items this is what you have to do:
 
