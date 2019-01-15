@@ -38,7 +38,7 @@ Right now **every API endpoint requires authentication**, except the "root" URL 
 2. Go to your **Account Settings** page
 3. Select the [Security](https://www.bitrise.io/me/profile#/security) tab on the left side.
 4. Click the `Generate new token` button to create a new Personal Access Token.
-5. Save the generated token. 
+5. Save the generated token.
 
 {% include message_box.html type="important" title="Availability of the generated token" content=" The generated token is shown only once, when it's generated! There's no way to see the token value again! You can of course generate as many Access Tokens as you like, and delete the ones you don't need anymore. "%}
 
@@ -75,25 +75,25 @@ Example:
 
 The `page_item_limit` property can be set with the query parameter named `limit` at the GET requests, so you can specify the size of the response pages. The default and also maximum value for this parameter is 50.
 
-Example:
+**Example:**
 
 * Calling `https://api.bitrise.io/v0.1/me/apps` will retrieve you the first page of your apps with size of 50.
 * If you call `https://api.bitrise.io/v0.1/me/apps?limit=10`, the response is also the first page of your apps, but it will contain only 10 elements.
 
-If you want to iterate through all the items this is what you have to do:
+If you want to iterate through all the items, this is what you have to do:
 
-1. First call the endpoint without any pagination parameters
+1. Call the endpoint without any pagination parameters
 2. From the response process the `paging` object.
-3. If the `paging` object includes a `next` item, simply call the exact same endpoint with an additional `next=` query parameter, and pass the value you got in the response as the value of the `next` parameter.
+3. If the `paging` object includes a `next` item, call the exact same endpoint with an additional `next=` query parameter, and pass the value you got in the response as the value of the `next` parameter.
 
-That's all.
+**Example:**
 
-A quick example, iterating through all of your registered apps:
+Iterating through all your registered apps. 
 
-1. First call `[https://api.bitrise.io/v0.1/me/apps](https://api.bitrise.io/v0.1/me/apps)`
+1. Call `[https://api.bitrise.io/v0.1/me/apps](https://api.bitrise.io/v0.1/me/apps)`
 2. Process the items (`data` property)
-3. Then check the `paging` (root) property.
-4. If there's a `next` property inside `paging` simply call the endpoint again, with the `next` query parameter
+3. Check the `paging` (root) property.
+4. If there's a `next` property inside `paging`, call the endpoint again, with the `next` query parameter
    * Example: `https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
 5. Repeate this until the `paging` object does not include a `next` property, which means that the page you received was the last one.
 
