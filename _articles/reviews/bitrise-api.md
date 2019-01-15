@@ -97,4 +97,4 @@ Iterating through all your registered apps:
 
 ## Endpoints
 
-The [Bitrise API endpoint reference documentation](https://api-docs.bitrise.io) list every available endpoint and their parameters, along with the possible responses. You can also try them out! 
+The [Bitrise API endpoint reference documentation](https://api-docs.bitrise.io) lists every available endpoint and their parameters, along with the possible responses. You can also try them out! 
