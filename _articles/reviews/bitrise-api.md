@@ -90,7 +90,7 @@ That's all.
 
 A quick example, iterating through all of your registered apps:
 
-1. First call `[https://api.bitrise.io/v0.1/me/apps](https://api.bitrise.io/v0.1/me/apps "https://api.bitrise.io/v0.1/me/apps")`
+1. First call `[https://api.bitrise.io/v0.1/me/apps](https://api.bitrise.io/v0.1/me/apps)`
 2. Process the items (`data` property)
 3. Then check the `paging` (root) property.
 4. If there's a `next` property inside `paging` simply call the endpoint again, with the `next` query parameter
