@@ -30,7 +30,7 @@ There's no long term compatibility promise for `v0.1`, although we try to do our
 
 The current API supports only one type of authentication: user generated **Personal Access Tokens**.
 
-Right now **every API endpoint requires authentication**, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io "https://api.bitrise.io")).
+Right now **every API endpoint requires authentication**, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io)).
 
 ### Acquiring a Personal Access Token
 
@@ -94,7 +94,7 @@ A quick example, iterating through all of your registered apps:
 2. Process the items (`data` property)
 3. Then check the `paging` (root) property.
 4. If there's a `next` property inside `paging` simply call the endpoint again, with the `next` query parameter
-   * Example: `[https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE](https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE "https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE")`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
+   * Example: `[https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE](https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE)`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
 5. Repeate this until the `paging` object does not include a `next` property, which means that the page you received was the last one.
 
 ## Endpoints
