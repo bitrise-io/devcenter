@@ -44,7 +44,7 @@ In practice, adding members to an organization means adding members to a group b
    ![](/img/test-group.jpg)
 6. From the `Team` tab you can also access all the functions to manage groups. You simply have to click `MANAGE GROUP` to the right of the group members, and click the action you need in the pop-up window, including removing the group from the app.
 
-![Screenshot](/img/team-management/organization/team-group-popup.png)
+   ![](/img/test-group-manage-group.png)
 
 ## Removing members from organizations
 
