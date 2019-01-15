@@ -16,6 +16,6 @@ It can happen that you need to transfer an application on [Bitrise](https://www.
 
 For transferring the ownership, select the new user to transfer the app to:
 
-![](/img/select-owner.png)
+   ![](/img/select-owner.png)
 
 You can use the `Do you want to remain the connected services User?` toggle to stay the connected service user. This is important if you are the admin of the given repository on `GitHub`, or `Bitbucket` and the app needs your credentials to work on Bitrise.
