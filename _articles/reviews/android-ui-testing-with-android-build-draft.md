@@ -5,7 +5,7 @@ date: 2019-01-14 11:32:07 +0000
 published: false
 
 ---
-With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app.
+With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices.
 
 {% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can contain only one `[BETA] Virtual Device Testing` Step performing one type of test (`instrumentation`, `robo` or `gameloop`. "%}
 
@@ -59,9 +59,9 @@ There is a small difference between configuring your workflow for `robo` and `in
 1. Open the `primary workflow` of your build in `Workflow Editor`.
 2. Add the `Android Build for UI testing` Step to your workflow.
 3. To export an APK and a Test APK, you have to set the following input fields in the `Android Build for UI testing` Step.
-   * Project Location: the root directory of your Android project
-   * Module: set the module you wish to build
-   * Variant: set the variant you wish to build
+   * `Project Location`: the root directory of your Android project
+   * `Module`: set the module you wish to build
+   * `Variant`: set the variant you wish to build
 
    ![](/img/android-build-ui-testing.png)
 
@@ -85,13 +85,3 @@ You can check UI test result on the `DEVICE TESTS` tab of your app's build page.
    ![](/img/device-test-page.jpg)
 
 You can view test cases and downloadable logs if you've selected `instrumentation` test and a video and screenshots if you've selected `robo` as test type. Or scroll down and download all your reports in `FILES GENERATED`.
-
-module;app
-
-variant:debug
-
-be vdt
-
-be instur
-
-alapbol a test apk path es az apk path van beegetve
