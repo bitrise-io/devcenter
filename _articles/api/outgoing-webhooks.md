@@ -37,6 +37,7 @@ Payload example:
   "build_number":3,
   "app_slug":"abcd1234",
   "build_status":0,
+  "build_triggered_workflow":"deploy"
   "git": {
     "provider":"github",
     "src_branch":"feature/branch",
@@ -63,6 +64,7 @@ Payload example:
   "build_number":3,
   "app_slug":"abcd1234",
   "build_status":1,
+  "build_triggered_workflow":"deploy"
   "git": {
     "provider":"github",
     "src_branch":"feature/branch",
