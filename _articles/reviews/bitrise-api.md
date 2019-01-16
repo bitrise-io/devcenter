@@ -114,3 +114,9 @@ You can try out any endpoint in the reference documentation itself! All you need
 5. Click on the endpoint you want to try it out to open its details. 
 6. Fill in the required parameters. 
 7. Click `Execute`. 
+
+The API will return:
+
+* the `curl` command of your request 
+* the request URL
+* the server response 
