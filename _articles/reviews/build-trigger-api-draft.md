@@ -5,7 +5,7 @@ date: 2019-01-16 15:45:49 +0000
 published: false
 
 ---
-{% include message_box.html type="important" title="The Build Trigger API is deprecated" content="The `https://app.bitrise.io/app/APP-SLUG/build/start.json` endpoint should not be called directly any more. Instead, `api.bitrise.io` should be used. This allows for authenticating based on user account, with a Personal Access Token. "%} 
+{% include message_box.html type="important" title="The Build Trigger API is deprecated" content="The `https://app.bitrise.io/app/APP-SLUG/build/start.json` endpoint should not be called directly any more. Instead, `api.bitrise.io` should be used. This allows for authenticating based on user account, with a Personal Access Token."%} 
 
 With the Build Trigger API you can start a new build of your app with a simple API call.
 
