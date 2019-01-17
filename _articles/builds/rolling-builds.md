@@ -11,7 +11,7 @@ Please note that manual and scheduled builds are also cancelled if you start a n
 
 {% include message_box.html type="info" title="When is a build aborted?" content="If you trigger a build on a branch where a build is already running, the running build is aborted only if it runs the same workflow.
 
-For example, if you trigger a build on the **master** branch of your repository with the **deploy** workflow, it will not cancel a build running on the same **master** branch with the **primary** workflow."%} 
+For example, if you trigger a build on the **master** branch of your repository with the **deploy** workflow, it will NOT cancel a build running on the same **master** branch with the **primary** workflow."%} 
 
 You can also set which types of triggered builds you wish to abort. Let's see how!
 
