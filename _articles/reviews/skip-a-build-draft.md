@@ -24,7 +24,7 @@ If you do want to start a build after all, you have two choices:
 * rebase the commit (change the commit message) 
 * push another commit.
 
-{% include message_box.html type="note" title="Push an empty commit" content=" Git allows to create and push empty commits, so if you'd decide that you still want to build a skipped build you can do `git commit --allow-empty -m \"I decided to run this\"` on the related branch and push the commit."%}
+{% include message_box.html type="note" title="Push an empty commit" content=" Git allows to create and push empty commits. If you want to build a skipped build you can do `git commit --allow-empty -m \"I decided to run this\"` on the related branch and push the commit."%}
 
 ## Skipping a Pull Request
 
