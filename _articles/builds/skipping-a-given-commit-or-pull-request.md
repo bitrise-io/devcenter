@@ -1,8 +1,8 @@
 ---
 title: Skipping a given commit or pull request
-redirect_from: []
+redirect_from:
+- "/tips-and-tricks/skip-a-build/"
 date: 2019-01-18 16:46:57 +0000
-published: false
 
 ---
 Depending on your [settings](/builds/triggering-builds/triggering-builds/), every code change in your repository can trigger Bitrise builds. However, if you need to, you can skip a specific commit or pull request. Skipping means, in this context, that a code change will NOT trigger a build on Bitrise, even if the triggers are set up to do so. 
