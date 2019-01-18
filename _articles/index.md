@@ -59,4 +59,3 @@ You can easily access and use our API, built on Golang - all you need to do is a
 
 
 * [Bitrise API endpoint documentation](https://api-docs.bitrise.io)"%}
-  
