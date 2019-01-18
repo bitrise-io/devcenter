@@ -5,13 +5,13 @@ date: 2019-01-18 13:20:16 +0000
 published: false
 
 ---
-If you want to skip a specific commit, to not to start a build, all you have to do is to include either `[skip ci]` or `[ci skip]` in the commit message.
+You can skip a specific commit or pull request on Bitrise easily. Skipping means, in this context, that a code change will NOT trigger a build on Bitrise. 
 
-For example, the commit message:
+## Skipping a commit
+
+To make sure a specific commit does not trigger a build, include either `[skip ci]` or `[ci skip]` in the commit message: 
 
     This is not important, please [skip ci]
-
-won't start a build, nor will:
 
     I just changed the README
     
@@ -19,11 +19,14 @@ won't start a build, nor will:
 
 {% include message_box.html type="warning" title="Only the head/last commit message is checked!" content="**If you push more than one commit**, only the last (head) commit's message will be checked for the skip ci pattern! "%}
 
-If you'd decide that you still want to start a build you'll have to either rebase that commit (e.g. just change its commit message), or push another commit.
+If you do want to start a build after all, you have two choices:
+
+* rebase the commit (change the commit message) 
+* push another commit.
 
 {% include message_box.html type="note" title="Push an empty commit" content=" Git allows to create and push empty commits, so if you'd decide that you still want to build a skipped build you can do `git commit --allow-empty -m \"I decided to run this\"` on the related branch and push the commit."%}
 
-## Pull Requests
+## Skipping a Pull Request
 
 Skip CI works for Pull Requests too, but a little bit differently, due to how Pull Requests are handled on the git source code hosting services.
 
