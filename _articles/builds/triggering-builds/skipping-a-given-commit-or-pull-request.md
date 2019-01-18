@@ -1,6 +1,7 @@
 ---
 title: Skipping a given commit or Pull Request
-redirect_from: []
+redirect_from:
+- "/tips-and-tricks/skip-a-build/"
 date: 2019-01-18 17:09:42 +0000
 published: false
 
