@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/reviews/skip-a-build-draft.md
 - _articles/webhooks/index.md
 - _articles/bitrise-cli/creating-your-own-bitrise-project-scanner.md
 - _articles/bitrise-cli/customizing-bitrise-yml.md
