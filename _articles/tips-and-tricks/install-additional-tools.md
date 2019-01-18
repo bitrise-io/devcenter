@@ -2,7 +2,7 @@
 title: Installing any additional tools
 menu:
   tips-and-tricks:
-    weight: 9
+    weight: 8
 
 ---
 If you need something you can't find a Step for, you can always install and use tools with scripts or Script steps. Add a `Script` step to your Workflow, and either write your script there, or run a script from your repository. Passwordless `sudo` is enabled in all of our build virtual machines, so you can freely use `sudo` if you need it.

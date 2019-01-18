@@ -2,7 +2,7 @@
 title: Enable/Disable a step (optionally, based on a condition)
 menu:
   tips-and-tricks:
-    weight: 7
+    weight: 6
 
 ---
 ## Disable a Step

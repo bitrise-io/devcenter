@@ -2,7 +2,7 @@
 title: Attach any file as an Artifact to the Build
 menu:
   tips-and-tricks:
-    weight: 4
+    weight: 3
 
 ---
 For this example we'll attach the OS X `system.log` to the Build as an Artifact,
