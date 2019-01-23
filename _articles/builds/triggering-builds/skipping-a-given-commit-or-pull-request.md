@@ -16,7 +16,7 @@ To make sure a specific commit does not trigger a build, include either `[skip c
 
     This is not important, please [skip ci]
    
-
+Or:
     
     I just changed the README
     
