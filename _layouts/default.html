@@ -1,97 +1,97 @@
 {% for article in site.articles %}
-	{% if page.url == article.url %}
-		{% assign current_article = article %}
-		{% assign current_article_source_url = "https://github.com/bitrise-io/devcenter/blob/master/" | append: article.path %}
-	{% endif %}
+  {% if page.url == article.url %}
+    {% assign current_article = article %}
+    {% assign current_article_source_url = "https://github.com/bitrise-io/devcenter/blob/master/" | append: article.path %}
+  {% endif %}
 {% endfor %}
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>
-			{% if page.url != "/" and page.url != "/index" %}
-				{{ current_article.title }} - {{ site.data.basic_info.name }}
-			{% else %}
-				{{ site.data.basic_info.name }}
-			{% endif %}
-		</title>
-		<meta property="og:title" content="{{ site.data.basic_info.name }}">
-		<meta property="og:locale" content="en_US">
-		<meta property="og:url" content="{{ site.data.basic_info.page_url }}">
-		<meta property="og:site_name" content="{{ site.data.basic_info.name }}">
-		<meta name="theme-color" content="{{ site.data.colors.deep_purple }}">
-		<link rel="icon" href="/favicon.ico" type="image/x-icon">
-		<link rel="mask-icon" href="/favicon.svg" color="#3bc3a3">
-		<link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png">
-		<link rel="apple-touch-icon" href="/apple-touch-icon-76x76.png" type="image/png" sizes="76x76">
-		<link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" type="image/png" sizes="120x120">
-		<link rel="apple-touch-icon" href="/apple-touch-icon-152x152.png" type="image/png" sizes="152x152">
-		<link rel="canonical" href="{{ site.data.basic_info.page_url }}">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-		<link rel="stylesheet" href="/assets/main.css">
-		<link rel="stylesheet" href="/assets/search.css">
-	</head>
-	<body class="mdc-typography">
-		<header class="top-bar">
-			<div class="middle-aligner">
-				<div class="subgroup">
-					<a class="logo" href="/"><img src="/assets/images/logo.svg"></a>
-					<button class="burger material-icon" onclick="toggleSideBar()"></button>
-					<div class="title">
-						{% if current_article %}
-							{{ current_article.title }}
-						{% else %}
-							{{ site.data.basic_info.name }}
-						{% endif %}
-					</div>
-				</div>
-				<div class="search-bar">
-					<div class="input-wrapper">
-						<label class="search-icon material-icon"></label>
-						<input type="text" id="search-input" placeholder="Search">
-						<button class="search-clear material-icon" onclick="clearSearchField()"></button>
-					</div>
-				</div>
-				<a class="source-code" href="{{ site.data.basic_info.source_code_url }}" target="_blank">
-					<object type="image/svg+xml" data="/assets/images/logo-github.svg" class="source-host-logo"></object>
-					<span class="source-host-name">GitHub</span>
-				</a>
-			</div>
-		</header>
-		<div class="column-parent middle-aligner">
-			<nav id="side-menu">
-				<label>{{ site.data.basic_info.name }}</label>
-				{% assign menu = site.menus.main %}
-				{% include menu.html %}
-			</nav>
-			<main class="content">
-				{% if current_article %}
-					<div class="title-with-source-edit">
-						<h1>{{ current_article.title }}</h1>
-						<a class="material-icon" href="{{ current_article_source_url }}" target="_blank"></a>
-					</div>
-				{% endif %}
-				{% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
-			</main>
-		</div>
-		<footer>
-			<div class="middle-aligner">
-				<div class="meta">
-					Copyright © 2014 - {{ "now" | date: "%Y" }} Bitrise Ltd.
-					<br>
-					<em>Powered by <a href="https://jekyllrb.com/">Jekyll</a></em>
-				</div>
-			</div>
-		</footer>
-	</body>
-	{% include analytics.html %}
-	<script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      {% if page.url != "/" and page.url != "/index" %}
+        {{ current_article.title }} - {{ site.data.basic_info.name }}
+      {% else %}
+        {{ site.data.basic_info.name }}
+      {% endif %}
+    </title>
+    <meta property="og:title" content="{{ site.data.basic_info.name }}" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="{{ site.data.basic_info.page_url }}" />
+    <meta property="og:site_name" content="{{ site.data.basic_info.name }}" />
+    <meta name="theme-color" content="{{ site.data.colors.deep_purple }}" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/favicon.svg" color="#3bc3a3" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-76x76.png" type="image/png" sizes="76x76" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" type="image/png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-152x152.png" type="image/png" sizes="152x152" />
+    <link rel="canonical" href="{{ site.data.basic_info.page_url }}" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/main.css" />
+    <link rel="stylesheet" href="/assets/search.css" />
+  </head>
+  <body class="mdc-typography">
+    <header class="top-bar">
+      <div class="middle-aligner">
+        <div class="subgroup">
+          <a class="logo" href="/"><img src="/assets/images/logo.svg"/></a>
+          <button class="burger material-icon" onclick="toggleSideBar()"></button>
+          <div class="title">
+            {% if current_article %}
+              {{ current_article.title }}
+            {% else %}
+              {{ site.data.basic_info.name }}
+            {% endif %}
+          </div>
+        </div>
+        <div class="search-bar">
+          <div class="input-wrapper">
+            <label class="search-icon material-icon"></label>
+            <input type="text" id="search-input" placeholder="Search" />
+            <button class="search-clear material-icon" onclick="clearSearchField()"></button>
+          </div>
+        </div>
+        <div class="lang-selector">
+          <a href="{{ page.url_without_lang }}" {% if page.lang == 'en' %}class="active"{% endif %}>English</a>
+          <a href="/jp{{ page.url_without_lang }}" {% if page.lang == 'jp' %}class="active"{% endif %}>日本人</a>
+        </div>
+        <a class="source-code" href="{{ site.data.basic_info.source_code_url }}" target="_blank">
+          <object type="image/svg+xml" data="/assets/images/logo-github.svg" class="source-host-logo"></object>
+          <span class="source-host-name">GitHub</span>
+        </a>
+      </div>
+    </header>
+    <div class="column-parent middle-aligner">
+      <nav id="side-menu">
+        <label>{{ site.data.basic_info.name }}</label> {% assign menu = site.menus.main %} {% include menu.html %}
+      </nav>
+      <main class="content">
+        {% if current_article %}
+        <div class="title-with-source-edit">
+          <h1>{{ current_article.title }}</h1>
+          <a class="material-icon" href="{{ current_article_source_url }}" target="_blank"></a>
+        </div>
+        {% endif %} {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
+      </main>
+    </div>
+    <footer>
+      <div class="middle-aligner">
+        <div class="meta">
+          Copyright © 2014 - {{ 'now' | date: '%Y' }} Bitrise Ltd. <br />
+          <em>Powered by <a href="https://jekyllrb.com/">Jekyll</a></em>
+        </div>
+      </div>
+    </footer>
+  </body>
+  {% include analytics.html %}
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 
-	<script src="/assets/javascripts/search-input.js"></script>
-	<script src="/assets/javascripts/side-menu.js"></script>
-	<script src="/assets/javascripts/code-collapse.js"></script>
+  <script src="/assets/javascripts/search-input.js"></script>
+  <script src="/assets/javascripts/side-menu.js"></script>
+  <script src="/assets/javascripts/code-collapse.js"></script>
 </html>

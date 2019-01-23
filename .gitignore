@@ -14,3 +14,5 @@ _site
 
 # Secrets
 .bitrise.secrets.yml
+
+.sass-cache
