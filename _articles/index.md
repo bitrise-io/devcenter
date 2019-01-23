@@ -1,5 +1,5 @@
 ---
-title: Bitrise DevCenter - What is Bitrise?
+title: What is Bitrise?
 permalink: "/"
 menu:
   main:
