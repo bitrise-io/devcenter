@@ -48,6 +48,8 @@ You can use our automatically generated `primary` workflow to test your Flutter 
 4. To the `Flutter Test` Step - if you have it -, add any flags you wish to use to the `Additional parameters` input.
 
    The Step runs the `flutter test` command with the specified flags. To check the available flags, open a command line interface on your own machine and run `flutter test --help`.
+
+   ![](/img/flutter_test.png)
 5. Make sure the `Project Location` input of the `Flutter Test` Step is correct.
 
    The default value is the the environment variable created for your Flutter project's location.
@@ -56,12 +58,14 @@ Run a build! Once it's done, you can find your test results on the `Apps and Art
 
 ## Deploying a Flutter app
 
-To build and deploy a Flutter app, we recommend creating a new workflow based on the automatically created `deploy` workflow. As a minimum, the workflow must contain these Flutter Steps:
+To build and deploy a Flutter app, a workflow must contain these Flutter Steps:
 
 * `Flutter Install`
 * `Flutter Build`
 
-You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. You can set this in the `Platform` input of the `Flutter Build` Step.
+If you have platforms specified in your repository, a `deploy` workflow will be automatically generated when adding the app on Bitrise. The content of this workflow depends on the platform: for example, if your app contains only an iOS project, the workflow will contain the `Certificate and profile installer` and the `Xcode Archive & Export for iOS` Steps. 
+
+You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. You can set this in the `Platform` input of the `Flutter Build` Step any time. By default, the Step is configured according to the platform or platforms that the scanner detected when adding the app on Bitrise. 
 
 Here's an example workflow we'll use in this configuration, with all the necessary Steps:
 
