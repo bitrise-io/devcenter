@@ -29,7 +29,7 @@ You have to:
 We provide three examples on how to run Docker commands using our `Script` Step:
 
 * [Running docker hello-world](/tutorials/docker/use-your-own-docker-image/#running-docker-hello-world)
-* [Building and running a Dockerfile](/tutorials/docker/use-your-own-docker-image/#build-and-run-a-dockerfile)
+* [Building and running a Dockerfile](/tutorials/docker/use-your-own-docker-image/#building-and-running-a-dockerfile)
 * [Using docker-compose](/tutorials/docker/use-your-own-docker-image/#using-docker-compose)
 
 ### Running docker hello-world
