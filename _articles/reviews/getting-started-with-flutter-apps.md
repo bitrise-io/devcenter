@@ -20,7 +20,7 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
  7. Wait while Bitrise is validating your project.
 
     We look for your configuration files and set up your app based on them. In the case of Flutter apps, you definitely need a `pubspec.yaml` file in your project.
- 8. If your app has tests in the repo, you will be prompted to decide if you want to run them.
+ 8. If your app has tests in the repository, you will be prompted to decide if you want to run them.
 
     ![](/img/select_test.png)
  9. 
