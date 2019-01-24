@@ -95,7 +95,7 @@ Read more about iOS code signing on Bitrise in [our detailed guides](https://dev
 2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise.
 3. Open the `Flutter Build` Step and find the `iOS Platform Configs` input group.
 4. Make sure the `Additional parameters` input has the value `--release`.
-5. Add the `Xcode Archive & Export for iOS` Step to the workflow.
+5. Make sure you have the `Xcode Archive & Export for iOS` Step in the workflow.
 
    It should be after the `Flutter Build` Step.
 6. Set the `Select method for export` input of the Step to `app-store`.
