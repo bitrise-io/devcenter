@@ -70,7 +70,6 @@ pages:
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
 - _articles/reviews/bitrise-api.md
 - _articles/infrastructure/available-stacks.md
-- _articles/reviews/install-any-additional-tool-draft.md
 - _articles/reviews/build-trigger-api-draft.md
 - _articles/reviews/android-app-bundle-draft.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
