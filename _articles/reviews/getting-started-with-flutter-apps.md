@@ -65,13 +65,15 @@ To build and deploy a Flutter app, a workflow must contain these Flutter Steps:
 
 If you have platforms specified in your repository, a `deploy` workflow will be automatically generated when adding the app on Bitrise. The content of this workflow depends on the platform: for example, if your app contains only an iOS project, the workflow will contain the `Certificate and profile installer` and the `Xcode Archive & Export for iOS` Steps. 
 
-You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. You can set this in the `Platform` input of the `Flutter Build` Step any time. By default, the Step is configured according to the platform or platforms that the scanner detected when adding the app on Bitrise. 
+You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. **You can set this in the** `Platform` **input of the** `**Flutter Build**` **Step any time**. By default, the Step is configured according to the platform or platforms that the scanner detected when adding the app on Bitrise. 
 
 Here's an example workflow we'll use in this configuration, with all the necessary Steps:
 
 ![](/img/flutter-workflow.png)We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
 
-### Deploying to Bitrise
+{% include message_box.html type="note" title="Packages and libraries" content="We also support building Flutter packages and libraries. Unlike in the case of apps, there is no artifact to build so there is no need for a `Flutter Build` Step in your workflow."%} 
+
+### Deploying a Flutter app to Bitrise
 
 The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build’s page.
 
@@ -91,21 +93,22 @@ Unlike testing, this requires code signing files:
 
 Read more about iOS code signing on Bitrise in [our detailed guides](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing/)!
 
-1. Make sure you have the `Certificate and profile installer` Step in your workflow.
-2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise.
-3. Open the `Flutter Build` Step and find the `iOS Platform Configs` input group.
-4. Make sure the `Additional parameters` input has the value `--release`.
-5. Make sure you have the `Xcode Archive & Export for iOS` Step in the workflow.
+ 1. Make sure you have the `Certificate and profile installer` Step in your workflow.
+ 2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise.
+ 3. Open the `Flutter Build` Step and find the `iOS Platform Configs` input group.
+ 4. Make sure the `Additional parameters` input has the value `--release`.
+ 5. Check the `Platform` input of the Step: make sure it's set to either `iOS` or `both`. 
+ 6. Make sure you have the `Xcode Archive & Export for iOS` Step in your workflow.
 
-   It should be after the `Flutter Build` Step.
-6. Set the `Select method for export` input of the Step to `app-store`.
-7. Add the `Deploy to iTunes Connect` Step to the end of the workflow.
-8. Provide your Apple credentials in the respective input fields.
-   * Apple ID
-   * password or, if you use two-factor authentication on iTunes Connect, your application password.
+    It should be after the `Flutter Build` Step.
+ 7. Set the `Select method for export` input of the Step to `app-store`.
+ 8. Add the `Deploy to iTunes Connect` Step to the end of the workflow.
+ 9. Provide your Apple credentials in the respective input fields.
+    * Apple ID
+    * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
-   Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
-9. [Start a build]()!
+    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
+10. [Start a build]()!
 
 If all goes well, the Step will submit the app to App Store Connect. You can, from the App Store Connect page, distribute the app to external testers via Testflight, or release it to the App Store itself.
 
@@ -133,13 +136,14 @@ Once that is done, you are ready to configure a workflow to deploy the app.
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Add the `Sign APK` Step to your workflow.
+4. Make sure you have the `Sign APK` Step in your workflow.
 
    It should be after the `Flutter Build` Step.
 5. Open the `Flutter Build` Step and find the `Android Platform Configs` input group.
 6. Make sure the `Additional parameters` input has the value `--release`.
-7. Add the `Google Play Deploy` Step after the `Sign APK` Step to your workflow.
-8. Fill out the required input fields as follows:
+7. Check the `Platform` input of the Step: make sure it's set to either `android` or `both`. 
+8. Make sure you have the `Google Play Deploy` Step after the `Sign APK` Step to your workflow.
+9. Fill out the required input fields as follows:
    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
