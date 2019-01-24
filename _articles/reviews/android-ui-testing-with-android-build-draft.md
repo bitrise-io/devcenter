@@ -61,7 +61,7 @@ There is a small difference between configuring your workflow for `robo` and `in
 3. To export an APK and a Test APK, you have to set the following input fields in the `Android Build for UI testing` Step.
    * `Project Location`: the root directory of your Android project
    * `Module`: set the module you wish to build
-   * `Variant`: set the variant you wish to build
+   * `Variant`: set the variant you wish to build (usually `debug`)
 
    ![](/img/android-build-ui-testing.png)
 
