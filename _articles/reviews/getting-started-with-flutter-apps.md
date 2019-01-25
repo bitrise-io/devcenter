@@ -23,7 +23,7 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
  8. If your app has tests in the repository, you will be prompted to decide if you want to run them.
 
     ![](/img/select_test.png)
- 9. If you have an iOS project in your Flutter project, you will have to select an ipa export method.
+ 9. If you have an iOS project in your Flutter project, you will have to select an .ipa export method.
 
     ![undefined](https://cdn.buttercms.com/rOAuKJ2jToSecv2pEs7g)
 10. Register a webhook when prompted.
