@@ -11,29 +11,32 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
-1. Click the `+` sign on the top menu bar and select `Add app`.
-2. On the `Create New App` page, choose the account you wish to add the app to.
-3. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click `Next`.
-4. Select the Git hosting service that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-your-repository).
-5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
-6. Type the name of the branch that includes your project's configuration - master, for example - then click `Next`.
-7. Wait while Bitrise is validating your project.
+ 1. Click the `+` sign on the top menu bar and select `Add app`.
+ 2. On the `Create New App` page, choose the account you wish to add the app to.
+ 3. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click `Next`.
+ 4. Select the Git hosting service that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-your-repository).
+ 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
+ 6. Type the name of the branch that includes your project's configuration - master, for example - then click `Next`.
+ 7. Wait while Bitrise is validating your project.
 
-   We look for your configuration files and set up your app based on them. In the case of Flutter apps, you definitely need a `pubspec.yaml` file in your project.
-8. If your app has tests in the repository, you will be prompted to decide if you want to run them.
+    We look for your configuration files and set up your app based on them. In the case of Flutter apps, you definitely need a `pubspec.yaml` file in your project.
+ 8. If your app has tests in the repository, you will be prompted to decide if you want to run them.
 
-   ![](/img/select_test.png)
-9. Register a webhook when prompted.
+    ![](/img/select_test.png)
+ 9. If you have an iOS project in your Flutter project, you will have to select an ipa export method.
 
-   With a webhook, Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
+    ![undefined](https://cdn.buttercms.com/rOAuKJ2jToSecv2pEs7g)
+10. Register a webhook when prompted.
+
+    With a webhook, Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
 
 ## Testing a Flutter app
 
 You can write and run **unit-**, **widget-,** and **integration** tests with Flutter. For more information, check out [Flutter's official documentation](https://flutter.io/docs/testing).
 
-You can use our automatically generated `primary` workflow to test your Flutter app. By default, it will include the `Flutter Analyze` Step which runs static code tests. 
+You can use our automatically generated `primary` workflow to test your Flutter app. By default, it will include the `Flutter Analyze` Step which runs static code tests.
 
-{% include message_box.html type="info" title="Flutter tests" content="If you have tests in your repository, and selected **yes** when prompted, during app creation, whether you want to run these tests, the primary workflow will include the `Flutter Test` Step by default. If you add tests to your app later, add the `Flutter Test` Step to your workflow manually."%} 
+{% include message_box.html type="info" title="Flutter tests" content="If you have tests in your repository, and selected **yes** when prompted, during app creation, whether you want to run these tests, the primary workflow will include the `Flutter Test` Step by default. If you add tests to your app later, add the `Flutter Test` Step to your workflow manually."%}
 
 1. Open your app's Workflow Editor and open the `primary` workflow.
 2. In the `Flutter Install` Step, fill in the `Flutter SDK Version` input.
@@ -62,15 +65,15 @@ To build and deploy a Flutter app, a workflow must contain these Flutter Steps:
 * `Flutter Install`
 * `Flutter Build`
 
-If you have platforms specified in your repository, a `deploy` workflow will be automatically generated when adding the app on Bitrise. The content of this workflow depends on the platform: for example, if your app contains only an iOS project, the workflow will contain the `Certificate and profile installer` and the `Xcode Archive & Export for iOS` Steps. 
+If you have platforms specified in your repository, a `deploy` workflow will be automatically generated when adding the app on Bitrise. The content of this workflow depends on the platform: for example, if your app contains only an iOS project, the workflow will contain the `Certificate and profile installer` and the `Xcode Archive & Export for iOS` Steps.
 
-You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. **You can set this in the** `Platform` **input of the** `**Flutter Build**` **Step any time**. By default, the Step is configured according to the platform or platforms that the scanner detected when adding the app on Bitrise. 
+You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. **You can set this in the** `Platform` **input of the** `**Flutter Build**` **Step any time**. By default, the Step is configured according to the platform or platforms that the scanner detected when adding the app on Bitrise.
 
 Here's an example workflow we'll use in this configuration, with all the necessary Steps:
 
 ![](/img/flutter-workflow.png)We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
 
-{% include message_box.html type="note" title="Packages and libraries" content="We also support building Flutter packages and libraries. Unlike in the case of apps, there is no artifact to build so there is no need for a `Flutter Build` Step in your workflow."%} 
+{% include message_box.html type="note" title="Packages and libraries" content="We also support building Flutter packages and libraries. Unlike in the case of apps, there is no artifact to build so there is no need for a `Flutter Build` Step in your workflow."%}
 
 ### Deploying a Flutter app to Bitrise
 
@@ -96,7 +99,7 @@ Read more about iOS code signing on Bitrise in [our detailed guides](https://dev
  2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise.
  3. Open the `Flutter Build` Step and find the `iOS Platform Configs` input group.
  4. Make sure the `Additional parameters` input has the value `--release`.
- 5. Check the `Platform` input of the Step: make sure it's set to either `iOS` or `both`. 
+ 5. Check the `Platform` input of the Step: make sure it's set to either `iOS` or `both`.
  6. Make sure you have the `Xcode Archive & Export for iOS` Step in your workflow.
 
     It should be after the `Flutter Build` Step.
@@ -140,7 +143,7 @@ Once that is done, you are ready to configure a workflow to deploy the app.
    It should be after the `Flutter Build` Step.
 5. Open the `Flutter Build` Step and find the `Android Platform Configs` input group.
 6. Make sure the `Additional parameters` input has the value `--release`.
-7. Check the `Platform` input of the Step: make sure it's set to either `android` or `both`. 
+7. Check the `Platform` input of the Step: make sure it's set to either `android` or `both`.
 8. Make sure you have the `Google Play Deploy` Step after the `Sign APK` Step to your workflow.
 9. Fill out the required input fields as follows:
    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
