@@ -62,6 +62,7 @@ pages:
 - _articles/getting-started/adding-a-new-app/public-apps.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
+- _articles/getting-started/getting-started-with-flutter-apps.md
 - _articles/reviews/getting-started-with-flutter-apps.md
 - _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/getting-started/managing-files-on-bitrise.md
