@@ -106,7 +106,7 @@ If there are no groups you can assign to the app in this menu, you will see a gr
 
 From the `Team` tab you can also access all the functions to manage groups. You simply have to click `MANAGE GROUP` to the right of the group members, and click the action you need in the pop-up window.
 
-![Screenshot](/img/team-management/organization/team-group-popup.png)
+![](/img/manage-group-change-roles.png)
 
 ## Adding outside contributors to an app
 
@@ -131,4 +131,4 @@ You can add outside contributors to any application if you have `Admin` or `Owne
 3. Find the group you wish to remove, and click the `MANAGE GROUP` option next to one of the names of the group members.
 4. Click `REMOVE FROM APP`. Click `Yes` in the pop-up window.
 
-   ![Screenshot](/img/team-management/organization/team-group-popup.png)
+   ![](/img/manage-group-change-roles.png)
