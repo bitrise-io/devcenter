@@ -94,7 +94,7 @@ There are two separate ways to assign one or more groups to an app that is owned
 2. Select the `Team` tab.
 3. Find the `Add a group from <OrgName>` menu.
 
-   ![](/img/add-a-group-from-testing.png)
+   ![Screenshot](/img/team-management/organization/add-group-org.png)
 4. Find the group you wish to add and click the `+` symbol.
 5. Select the role for the group.
 
