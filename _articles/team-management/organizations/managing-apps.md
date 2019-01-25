@@ -16,14 +16,16 @@ A new app can be added directly to an organization. You can do this either from 
    There are three options to get there:
    * On the top menu bar, find the `+` symbol and click it, then click the `Add App` option.
 
-     ![Screenshot](/img/team-management/organization/add-org.png)
+     ![](/img/add-new-app.jpg)
    * Open the `Dashboard` on [bitrise.io](https://www.bitrise.io), open the dropdown menu above your app list and select your organization. Click the `+ Add new app` button.
 
-     ![Screenshot](/img/team-management/organization/add-new-app-org.png)
+     ![](/img/add-new-app-organization.png)
    * Open the `Account settings` page of your organization, and click the `Apps` option on the menu on the left. Click the `Add new app` button.
+
+     ![](/img/add-new-app-org-settings.jpg)
 2. On `Create New App` page, make sure that the organization account is selected in the dropdown menu.
 
-   ![Screenshot](/img/team-management/organization/add-app-screen.png)
+   ![](/img/create-new-app-organization-selected.png)
 3. Proceed with adding a new app as usual! It will be owned by the organization.
 
 ## Transferring apps to an organization
@@ -42,11 +44,11 @@ App ownership can be transferred **from** an organization to another account on 
 1. Sign in with an account that is a member of the organization and open the account's profile page.
 2. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
-   ![Screenshot](/img/team-management/organization/switch-profile-2.png)
+   ![](/img/switch-profile-1.jpg)
 3. On the left, select `Apps` from the menu options.
 4. Click the `Transfer apps` button.
 
-   ![Screenshot](/img/team-management/organization/transfer-app-org.png)
+   ![](/img/add-new-app-org-settings.jpg)
 5. Find the apps you wish to transfer and toggle the switch on the right. Once you're done, click `Done`.
 
 ### Transferring an app from the Team tab
@@ -60,7 +62,7 @@ It can happen that you need to transfer an application on [Bitrise](https://www.
 
 For transferring the ownership, select the new user to transfer the app to:
 
-![Screenshot](/img/team-management/transfering-ownership.png)
+![](/img/transfer-ownership-team-tab.jpg)
 
 The new user can either be another private account or an organization.
 
@@ -68,23 +70,23 @@ The new user can either be another private account or an organization.
 
 There are two separate ways to assign one or more groups to an app that is owned by an organization.
 
-* **Assign a group from the** `**Groups**` **menu of the organization's profile page**. This way you can add a group to multiple apps simultaneously. Only **organization owners** can do this!
-* **Assign a group from the** `**Team**` **tab of the app**. If the groups you need already exist and you only need to assign groups to a single app, this method works perfectly. Organization owners and accounts that have an **admin** role on the app's team can do this.
+* **Assign a group from the** `Groups` **menu of the organization's profile page**. This way you can add a group to multiple apps simultaneously. Only **organization owners** can do this!
+* **Assign a group from the** `Team` **tab of the app**. If the groups you need already exist and you only need to assign groups to a single app, this method works perfectly. Organization owners and accounts that have an **admin** role on the app's team can do this.
 
-### Assigning a group from the `Groups` menu.
+### Assigning a group from the `Groups` menu
 
 1. Sign in with an account that is an **owner** of the organization and open its profile page.
 2. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
-   ![Screenshot](/img/team-management/organization/switch-profile-2.png)
+   ![](/img/switch-profile.jpg)
 3. On the left, select `Groups` from the menu options.
 4. Choose the group you wish to assign, and click the dropdown menu indicated by the `...` symbol.
 5. Click `Assign group to apps`.
 
-   ![Screenshot](/img/team-management/organization/assign-group-to-apps.png)
+   ![](/img/assign-group-to-apps.jpg)
 6. Find the app(s) you need and select the appropriate role for the group. You can check out the role cheatsheet on any app's `Team` tab.
 
-   ![Screenshot](/img/team-management/organization/assign-group-popup.png)
+   ![](/img/popup-assign.png)
 
 ### Assigning a group from the `Team` tab.
 
@@ -92,7 +94,7 @@ There are two separate ways to assign one or more groups to an app that is owned
 2. Select the `Team` tab.
 3. Find the `Add a group from <OrgName>` menu.
 
-   ![Screenshot](/img/team-management/organization/add-group-org.png)
+   ![](/img/add-a-group-from-testing.png)
 4. Find the group you wish to add and click the `+` symbol.
 5. Select the role for the group.
 
