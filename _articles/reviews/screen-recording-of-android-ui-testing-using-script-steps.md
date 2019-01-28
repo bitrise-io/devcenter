@@ -12,6 +12,8 @@ You can add steps to your workflow by clicking the `+` before/after a step and t
 
 Let's see how to put together a workflow using 3 `Script` Steps to set up screen recording with your specific/tailored unit test! (Since you can rename any Step, we're renaming the inserted Step as `Start screen recording` to show which Step does what in this example workflow.)
 
+![](/img/screen-recording-wf.png)
+
 1. Add the `AVD Manager` Step to your workflow, preferably after any dependency installer step to create and run Android Virtual Device.
 2. Add the `Wait for Android Emulator` Step after the `AVD Manager` Step. This Step makes sure the Android emulator has finished booting before screen recording would start.
 3. Add a `Script` Step after the `Wait for Android Emulator` Step. (We will call it `Start screen recording`.)
@@ -27,15 +29,16 @@ Let's see how to put together a workflow using 3 `Script` Steps to set up screen
    * will start screen recording while UI test is running
    * will capture a screenshot of the emulator screen
 4. Add another `Script` Step after the `Start screen recording` Step. (We will call it `Run UI test` Step.)
-5. Add your script (for example, Maven, npm or Appium tests) in the `Script content` input field to call and run your UI test.
+   1. Add your script (for example, Maven, npm or Appium tests) in the `Script content` input field to call and run your UI test.
 
-   ![](/img/ui-test-script.png)
-6. Add the third `Script` Step (`Stop Screen recording and get file from emulator` Step) after the `Run UI tests` Step.
+      ![](/img/ui-test-script.png)
+5. Insert the third `Script` Step (`Stop Screen recording and get file from emulator` Step) after the `Run UI tests` Step.
    1. Add the following script to the `Script content` input field.
 
           $ANDROID_HOME/platform-tools/adb shell "killall -INT screenrecord"
           sleep 10
           $ANDROID_HOME/platform-tools/adb pull /sdcard/video.mp4 $BITRISE_DEPLOY_DIR/video.mp4
           adb pull /sdcard/screen.png $BITRISE_DEPLOY_DIR/
-	This Step stops the screen recoding and gets the recording/logs from the Emulator.
-7. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export the output of the UI test to the `APPS & ARTIFACTS` section of your Build's page. The step will pull the recording and the screenshot from the repository specified in the previous step.
+
+   This Step stops the screen recoding and gets the recording/screenshot/logs from the Emulator.
+6. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export the output of the UI test to the `APPS & ARTIFACTS` section of your Build's page. The step will pull the recording and the screenshot from the repository (`BITRISE_DEPLOY_DIR`) specified in the previous step.
