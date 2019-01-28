@@ -6,7 +6,7 @@ date: 2019-01-14 12:57:07 +0000
 published: false
 
 ---
-You can run your UI test specific to your app and have the whole process screen recorded using one Bitrise workflow. Let's see how to put together a workflow using our `AVD Manager`, `Wait for Android Emulator` and `Script` Steps to set up screen recording for UI testing!
+You can run your UI test specific to your app and have the whole process screen recorded using one Bitrise workflow. Let's see how to put together a workflow using our `AVD Manager`, `Wait for Android Emulator` and `Script` Steps!
 
 ![](/img/screen-recording-workflow.png)
 
