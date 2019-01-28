@@ -8,9 +8,9 @@ published: false
 ---
 You can run your UI test specific to your app and have the whole process screen recorded using one Bitrise workflow. Let's see how to put together a workflow using our `AVD Manager`, `Wait for Android Emulator` and `Script` Steps to set up screen recording for UI testing!
 
-![](/img/screen-recording-wf.png)
+![](/img/screen-recording-workflow.png)
 
-1. Add the `AVD Manager` Step to your workflow, preferably after any dependency installer step to create and run an Android Virtual Device.
+1. Add the `AVD Manager` Step to your workflow, preferably after any dependency installer step, to create and run an Android Virtual Device.
 2. Add the `Wait for Android Emulator` Step after the `AVD Manager` Step. This Step makes sure the Android emulator has finished booting before screen recording would start.
 3. Add a `Script` Step after the `Wait for Android Emulator` Step. (Since you can rename any Step, we're renaming the inserted Step as `Start screen recording` to show which `Script` Step does what in this example workflow.)
    1. Insert the following commands to the `Script content` input field:
@@ -38,10 +38,10 @@ You can run your UI test specific to your app and have the whole process screen 
 
    This Step stops the screen recoding and gets the recording/screenshot/logs from the Emulator.
 
-       /opt/android-sdk-linux/platform-tools/adb shell 'killall -INT screenrecord' killall: screenrecord: No such process If there is a conflict in the screen size (screenrecording size and device size
+       /opt/android-sdk-linux/platform-tools/adb shell 'killall -INT screenrecord' killall: screenrecord: No such process
 
    If you get the above error messages, the screen resolution of the screen recording and device are in conflict. You have to set resolution size in the:
    * `Start screen recording` Step.
    * OR Make sure you have the right resolution set in the `Resolution` field of the `AVD Manager` Step.
      ![](/img/screen-resolution-avd-manager.png)
-6. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export the output of the UI test to the `APPS & ARTIFACTS` section of your Build's page. The step will pull the recording and the screenshot from the repository (`BITRISE_DEPLOY_DIR`) specified in the previous step.
+6. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export the output of the UI test to the `APPS & ARTIFACTS` section of your Build's page. The Step will pull the recording and the screenshot from the repository (`BITRISE_DEPLOY_DIR`) specified in the previous step.
