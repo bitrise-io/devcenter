@@ -22,8 +22,8 @@ You can run your UI test specific to your app and have the whole process screen 
           disown
 
    `Start screen recording` Step kills to birds with one stone:
-   * will start screen recording while UI test is running
-   * will capture a screenshot of the emulator screen
+   * starts screen recording while UI test is running
+   * captures a screenshot of the emulator screen
 4. Add another `Script` Step after the `Start screen recording` Step. (We will call it `Run UI test` Step.)
    1. Add your script (for example, Maven, npm or Appium tests) in the `Script content` input field to call and run your UI test.
 
@@ -36,12 +36,12 @@ You can run your UI test specific to your app and have the whole process screen 
           $ANDROID_HOME/platform-tools/adb pull /sdcard/video.mp4 $BITRISE_DEPLOY_DIR/video.mp4
           adb pull /sdcard/screen.png $BITRISE_DEPLOY_DIR/
 
-   This Step stops the screen recoding and gets the recording/screenshot/logs from the Emulator.
+   As the title suggests, this Step stops the screen recoding, gets the recording/screenshot/logs from the Emulator and places them at the `BITRISE_DEPLOY_DIR` path.
 
        /opt/android-sdk-linux/platform-tools/adb shell 'killall -INT screenrecord' killall: screenrecord: No such process
 
-   If you get the above error messages, the screen resolution of the screen recording and the device are in conflict. You can fix the resolution size in the:
-   * `Script content` field of the `Start screen recording` Step or
+   If you get the above error messages, the screen resolution of the screen recording and the device are in conflict. You can fix the resolution size:
+   * in the `Script content` field of the `Start screen recording` Step or
    * check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step.
      ![](/img/screen-resolution-avd-manager.png)
 6. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export the output of the UI test to the `APPS & ARTIFACTS` section of your Build's page. The Step will pull the recording and the screenshot from the repository (`BITRISE_DEPLOY_DIR`) specified in the previous step.
