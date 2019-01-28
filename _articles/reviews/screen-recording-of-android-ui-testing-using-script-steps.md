@@ -40,8 +40,8 @@ You can run your UI test specific to your app and have the whole process screen 
 
        /opt/android-sdk-linux/platform-tools/adb shell 'killall -INT screenrecord' killall: screenrecord: No such process
 
-   If you get the above error messages, the screen resolution of the screen recording and device are in conflict. You have to set resolution size in the:
-   * `Start screen recording` Step.
-   * OR Make sure you have the right resolution set in the `Resolution` field of the `AVD Manager` Step.
+   If you get the above error messages, the screen resolution of the screen recording and the device are in conflict. You can fix the resolution size in the:
+   * `Script content` field of the `Start screen recording` Step or
+   * check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step.
      ![](/img/screen-resolution-avd-manager.png)
 6. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export the output of the UI test to the `APPS & ARTIFACTS` section of your Build's page. The Step will pull the recording and the screenshot from the repository (`BITRISE_DEPLOY_DIR`) specified in the previous step.
