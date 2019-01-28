@@ -6,13 +6,13 @@ date: 2019-01-14 12:57:07 +0000
 published: false
 
 ---
-You can run your UI test specific to your app and have the whole process screen recorded using one Bitrise workflow. Let's see how to put together a workflow using our `AVD Manager`, `Wait for Android Emulator` and `Script` Steps!
+You can run your UI test specific to your app and have the whole process screen recorded using one Bitrise workflow. Let's see how to put together a workflow using our `AVD Manager`, `Wait for Android Emulator` and `Script` Steps! Here is an example workflow containing the steps we will use in this guide:
 
 ![](/img/screen-recording-workflow.png)
 
 1. Add the `AVD Manager` Step to your workflow, preferably after any dependency installer step, to create and run an Android Virtual Device.
 2. Add the `Wait for Android Emulator` Step after the `AVD Manager` Step. This Step makes sure the Android emulator has finished booting before screen recording would start.
-3. Add a `Script` Step after the `Wait for Android Emulator` Step. (Since you can rename any Step, we're renaming the inserted Step as `Start screen recording` to show which `Script` Step does what in this example workflow.)
+3. Add a `Script` Step after the `Wait for Android Emulator` Step. (We'e renaming the inserted `Script` Step as `Start screen recording` to show which `Script` Step does what in this workflow.)
    1. Insert the following commands to the `Script content` input field:
 
           $ANDROID_HOME/platform-tools/adb shell "screenrecord /sdcard/video.mp4 --verbose" &> $BITRISE_DEPLOY_DIR/logs.txt &
