@@ -75,5 +75,6 @@ pages:
 - _articles/reviews/screen-recording-of-android-ui-testing-using-script-steps.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
+- _articles/reviews/screen-recording-of-ui-testing-with-appium.md
 - _articles/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/reviews/skip-a-build-draft.md
