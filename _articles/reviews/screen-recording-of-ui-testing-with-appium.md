@@ -5,3 +5,4 @@ date: 2019-01-29 09:58:48 +0000
 published: false
 
 ---
+* for Android UI testing using Appium framework or for all platforms?
