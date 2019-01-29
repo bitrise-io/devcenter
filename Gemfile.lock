@@ -1,3 +1,9 @@
+PATH
+  remote: plugins/localization
+  specs:
+    localization (0.0.1)
+      jekyll (>= 3.0, < 4.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -100,6 +106,7 @@ DEPENDENCIES
   jekyll-menus
   jekyll-redirect-from
   jekyll-sitemap
+  localization!
   minima (~> 2.0)
   tzinfo-data
 

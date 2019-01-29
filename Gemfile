@@ -24,6 +24,8 @@ group :jekyll_plugins do
   gem "jekyll-menus"
   gem "jekyll-redirect-from"
   gem "jekyll-algolia"
+  # gem "jekyll-multiple-languages-plugin"
+  gem "localization", :path => 'plugins/localization'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

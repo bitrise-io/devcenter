@@ -2,107 +2,107 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url: 
+webhook_url:
 sections:
 - type: document
   path: forestry-help.md
   label: Forestry User Guide
   read_only: true
 - type: directory
-  path: _articles/reviews
+  path: _articles/en/reviews
   label: For review
   create: all
   match: "**/*"
 - type: heading
   label: DevCenter articles
 - type: directory
-  path: _articles
+  path: _articles/en/
   label: Bitrise Devcenter - What is Bitrise
   create: all
   match: index.md
 - type: directory
-  path: _articles/getting-started
+  path: _articles/en/getting-started
   label: Getting started
   create: all
   match: "**/*"
   new_doc_ext: md
 - type: directory
-  path: _articles/infrastructure
+  path: _articles/en/infrastructure
   label: Infrastructure
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/team-management
+  path: _articles/en/team-management
   label: Teams and organizations
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/webhooks
+  path: _articles/en/webhooks
   label: Webhooks
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/builds
+  path: _articles/en/builds
   label: Builds
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/code-signing
+  path: _articles/en/code-signing
   label: Code signing
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/caching
+  path: _articles/en/caching
   label: Caching
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/bitrise-cli
+  path: _articles/en/bitrise-cli
   label: Bitrise CLI
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/testing
+  path: _articles/en/testing
   label: Testing
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/deploy
+  path: _articles/en/deploy
   label: Deployment
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/tutorials
+  path: _articles/en/tutorials
   label: Tutorials
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/tips-and-tricks
+  path: _articles/en/tips-and-tricks
   label: Tips and tricks
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/faq
+  path: _articles/en/faq
   label: FAQ
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/troubleshooting
+  path: _articles/en/troubleshooting
   label: Troubleshooting
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/tools
+  path: _articles/en/tools
   label: Tools
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/api
+  path: _articles/en/api
   label: API
   create: all
   match: "**/*"
 - type: document
-  path: _articles/api/v0.1.md.gg
+  path: _articles/en/api/v0.1.md.gg
   label: API .gg file
 - type: heading
   label: Data files
@@ -129,7 +129,7 @@ sections:
   label: _includes (HTML)
   create: all
   match: "**/*"
-upload_dir: _articles/img
+upload_dir: img
 public_path: "/img"
 front_matter_path: ''
 use_front_matter_path: false

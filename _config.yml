@@ -17,10 +17,10 @@ title: Bitrise DevCenter
 email: letsconnect@bitrise.io
 description: >- # this means to ignore newlines until "baseurl:"
   Bitrise is a Continuous Integration and Delivery (CI/CD) Platform as a Service (PaaS) with a main focus on mobile app development. It saves developers hours every day by automating tasks that are boring and repetitive from the moment they finish coding till the app lands in an app store.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: '' # the subpath of your site, e.g. /blog
+url: '' # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
-github_username:  jekyll
+github_username: jekyll
 
 # Build settings
 markdown: kramdown
@@ -30,6 +30,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-menus
   - jekyll-redirect-from
+  - localization
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -43,15 +44,29 @@ plugins:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+# collections:
+#   articles:
+#     output: true
+#     permalink: /:path/
+
 collections:
   articles:
     output: true
     permalink: /:path/
+    localized: true
+
+exclude: 
+  - 'plugins'
 
 defaults:
   - scope:
-      path: ""
+      path: ''
       type: articles
+    values:
+      layout: default
+  - scope:
+      path: ''
+      type: whatever
     values:
       layout: default
 
@@ -65,5 +80,7 @@ algolia:
   index_name: devcenter
   files_to_exclude:
     - forestry-help*
-    - _articles/translations/**/*.md
-    - _articles/reviews/**/*.md
+    - _articles/en/reviews/**/*.md
+
+languages: ['en', 'jp']
+exclude_from_localizations: ['assets/**/*', 'bitrise.yml', 'apple-touch-icon-*.png']
