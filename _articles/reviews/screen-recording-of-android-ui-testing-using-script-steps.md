@@ -39,20 +39,22 @@ You can run your UI test specific to your app and have the whole process screen 
           adb pull /sdcard/screen2.png $BITRISE_DEPLOY_DIR/
 
    As the title suggests, this Step:
-   * stops the screen recoding, 
+   * stops the screen recoding,
    * gets the screen recording,
    * gets those Emulator screenshots that were taken before UI tests had started
    * gets the final screenshot of the Emulator screen/ from the Emulator and places The Step places these files in  `BITRISE_DEPLOY_DIR` path.
 
-   **Error messages:**
+No such process and Encoder failed (err=-38). If you get below error messages `Stop Screen recording,get file` Step, the screen resolution of the screen recording and the device does not match.
 
        /opt/android-sdk-linux/platform-tools/adb shell 'killall -INT screenrecord' killall: screenrecord: No such process
        
        Encoder failed (err=-38)
 
-   If you get the above error messages, the screen resolution of the screen recording and the device does not match. You can fix it:
-   * check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step. ![](/img/screen-resolution-avd-manager.png)
-   * If you're not using the `AVD Manager` Step and start the emulator with a Script Step, then you can fix the screen size conflict in the Script content field of the `Start screen recording` Step.
+You can fix it:
 
-         --size <WIDTHxHEIGHT>
-6. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export all files stored in the BITRISE_DEPLDIR (If you did not place the files in this directory, they will not be deployed to the APPS & ARTIFACTS tab of your Build's page.)
+* Check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step. ![](/img/screen-resolution-avd-manager.png)
+* If you're not using the `AVD Manager` Step and start the emulator with a `Script` Step, then you can fix the screen size conflict in the `Script content` field of the `Start screen recording` Step with this short addition:
+
+      --size <WIDTHxHEIGHT>
+
+1. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export all files stored in the BITRISE_DEPLDIR (If you did not place the files in this directory, they will not be deployed to the APPS & ARTIFACTS tab of your Build's page.)
