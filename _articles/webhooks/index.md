@@ -26,7 +26,7 @@ If you select `GitHub` or `Bitbucket` as the source code provider when you add y
 
 If you select `GitHub`, `GitLab` or `Bitbucket` as the source code provider when you add your app Bitrise automatically sets up a webhook for it with a click of a button at the end of your app setup journey.
 
-![Register webhook](/img/add-app-webhook.png)
+![](/img/register-webhook.png)
 
 ### Adding a webhook automatically on the Code tab
 
@@ -37,7 +37,7 @@ You can automatically register a webhook to the repository on the `Code` tab of 
 
 Open your app on bitrise.io and go to the `Code` tab.
 
-![Code tab](/img/code-tab.png)
+![](/img/code-tab-webhook.png)
 
 Find the `INCOMING WEBHOOKS` section and click `SETUP AUTOMATICALLY`.
 
@@ -47,7 +47,7 @@ Find the `INCOMING WEBHOOKS` section and click `SETUP AUTOMATICALLY`.
 
 You can manually setup or change your webhooks after you registered your application.
 
-You can find the supported providers in your application's \`Code\` tab. Choose the \`SELECT MANUALLY\` option to set up a webhook with any of the supported providers.
+You can find the supported providers in your application's `Code` tab. Choose the `SETUP MANUALLY` option to set up a webhook with any of the supported providers.
 
 ![Screenshot](/img/webhook-providers.png)
 
