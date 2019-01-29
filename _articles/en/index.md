@@ -1,5 +1,5 @@
 ---
-title: Bitrise DevCenter - What is Bitrise?
+title: What is Bitrise?
 permalink: "/"
 menu:
   main:
@@ -48,3 +48,14 @@ It's a great help when you're developing Steps, debugging builds, or just want t
 
 You can find more information about the offline runner
 in the [Bitrise CLI and bitrise.yml](/bitrise-cli/index/) section of the DevCenter.
+
+## Bitrise API
+
+You can easily access and use our API, built on Golang - all you need to do is acquire a Personal Access Token to authenticate and you are good to go!
+
+{% include message_box.html type="info" title="API documentation" content="
+
+* [Bitrise API overview](/api/v0.1/)
+
+
+* [Bitrise API endpoint documentation](https://api-docs.bitrise.io)"%}

@@ -30,13 +30,13 @@ Once the server is ready, encode the following in Base64:
 * client certificate
 * client private key
 
-You can retrieve the contents of Base64 with the following command:
+You can base64 encode files with the following command:
 
-    $ base64 <certificate or private key file path>
+    $ base64 <filepath>
 
 Now you are ready to set up the VPN on Bitrise, in the Workflow Editor of your app:
 
-1. Register the encoded certificates and keys as [Secrets](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/#adding-a-secret-env-var) on [bitrise.io]().
+1. Register the encoded certificates and the key as [Secrets](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/#adding-a-secret-env-var) on [bitrise.io]().
 
    We recommend using the following keys as they are the default inputs for the VPN Step:
    * CA certificate: `$VPN_CA_CRT_BASE64`

@@ -2,7 +2,7 @@
 title: Reporting the build status to your git hosting provider
 menu:
   triggering-builds:
-    weight: 7
+    weight: 8
 
 ---
 Bitrise can push back build status reports to your git hosting provider (GitHub/GitLab/Bitbucket). You only need to authenticate Bitrise to communicate towards the git hosting service. Apart from build status reports, this enables other operations, such as auto-registering SSH keys or Webhooks.

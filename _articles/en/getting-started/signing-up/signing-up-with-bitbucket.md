@@ -9,6 +9,14 @@ You are able to authenticate yourself with your Bitbucket user against **Bitrise
 
 {% include message_box.html type="note" title="Signing up with email address" content="If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/getting-started/signing-up/signing-up-with-email). "%}
 
+{% include message_box.html type="info" title="Trial after signing up" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
+
+* 45 minutes of build time
+* 1000 builds a month
+* a maximum of 100 team members
+
+Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!"%}
+
 ## Sign up
 
 Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).

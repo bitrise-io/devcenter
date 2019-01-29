@@ -106,11 +106,11 @@ If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone
 
 You can define additional _environment variables_ for your build.
 
-_These variables will be handled with priority between_ `Secrets` _and_ `App Env Vars`_,
+_These variables will be handled with priority between_ `Secrets` _and_ `App Env Vars`,
 which means that you can not overwrite environment variables defined in
 your build configuration (e.g. App Env Vars), only Secrets.
 For more information see:
-_[Availability order of environment variables](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)
+[Availability order of environment variables](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)
 
 It's important that this parameter have to be an **array of objects**,
 and that every item of the array have to include

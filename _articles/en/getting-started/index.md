@@ -24,6 +24,14 @@ Signing up with either of the Git service providers means you connect your Bitri
 
 After signing up, you can connect your Bitrise account to all of the three supported Git service providers. For example, after you signed up with GitHub, you can connect your Bitrise account to both your GitLab and Bitbucket accounts, too, and access any repositories you have on those accounts.
 
+{% include message_box.html type="info" title="Trial after signing up" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
+
+* 45 minutes of build time
+* 1000 builds a month
+* a maximum of 100 team members
+
+Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!"%}
+
 ## Adding apps
 
 [Add a new app](/getting-started/adding-a-new-app/index) any time by clicking the `+` symbol on the top menu bar and then selecting `Add app` from the dropdown menu.
