@@ -2,6 +2,10 @@
 title: Screen recording of Android UI tests with Script Steps
 redirect_from: []
 date: 2019-01-30 13:47:29 +0000
+menu:
+  tips-and-tricks:
+    weight: 11
+    title: Screen recording of Android UI tests with Script Step
 published: false
 
 ---
