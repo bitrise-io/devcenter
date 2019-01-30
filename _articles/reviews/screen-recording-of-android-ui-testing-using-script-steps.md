@@ -42,10 +42,10 @@ You can run your UI test specific to your Android app and have the whole process
    `Stop Screen recording & get file from emulator` Step does the following:
    * stops the screen recoding,
    * gets the screen recording,
-   * gets those Emulator screenshots that were taken before UI tests had started
+   * gets those Emulator screenshots that had been taken before UI tests started
    * gets the final screenshot of the Emulator screen
    * places these files in the `BITRISE_DEPLOY_DIR` path
-8. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export all files stored in the `BITRISE_DEPLOY_DIR` directory to `APPS & ARTIFACTS`. You can check these files at the `APPS & ARTIFACTS` tab of your Build's page. (Note, that if you did not place the files in this directory, they will not be deployed to the APPS & ARTIFACTS tab of your Build's page.)
+8. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export all files stored in the `BITRISE_DEPLOY_DIR` directory to `APPS & ARTIFACTS`. You can check these files at the `APPS & ARTIFACTS` tab of your Build's page. (Note that if you did not place the files in this directory, they will not be deployed to the APPS & ARTIFACTS tab of your Build's page.)
 
 If your build failes due to `No such process` (error message below) or an `Encoder failed (err=-38)` error in your build log, most likely the screen resolution of the screen recording and the device does not match.
 
