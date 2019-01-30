@@ -13,7 +13,7 @@ You can run your UI test specific to your Android app and have the whole process
 1. Add the `AVD Manager` Step at the beginning of your workflow to create and run an Android Virtual Device.
 2. Add the `Wait for Android Emulator` Step after the `AVD Manager` Step. This Step makes sure that the Android emulator has finished booting before the screen recording would start.
 3. Add a `Script` Step after the `Wait for Android Emulator` Step. (We're renaming this `Script` Step as `Start screen recording` Step.)
-   * Insert the following commands to the `Script content` input field:
+4. Insert the following commands to the `Script content` input field:
 
           $ANDROID_HOME/platform-tools/adb shell "screenrecord /sdcard/video.mp4 --verbose" &> $BITRISE_DEPLOY_DIR/logs.txt &
           disown
@@ -24,10 +24,10 @@ You can run your UI test specific to your Android app and have the whole process
    `Start screen recording` Step kills two birds with one stone:
    * starts screen recording before UI testing
    * captures a screenshot of the emulator screen BEFORE the UI test would start
-4. Add another `Script` Step after the `Start screen recording` Step. (We will call it `Run UI test` Step.)
+5. Add another `Script` Step after the `Start screen recording` Step. (We will call it `Run UI test` Step.)
    * Add your script (for example, Maven, npm or Appium tests) in the `Script content` input field to call and run your UI test.
-5. Insert the third `Script` Step (`Stop Screen recording & get file from emulator`) after the `Run UI tests` Step.
-   * Add the following script to the `Script content` input field.
+6. Insert the third `Script` Step (`Stop Screen recording & get file from emulator`) after the `Run UI tests` Step.
+7. Add the following script to the `Script content` input field.
 
           $ANDROID_HOME/platform-tools/adb shell "killall -INT screenrecord"
           sleep 10
@@ -45,7 +45,7 @@ You can run your UI test specific to your Android app and have the whole process
    * gets those Emulator screenshots that were taken before UI tests had started
    * gets the final screenshot of the Emulator screen
    * places these files in the `BITRISE_DEPLOY_DIR` path
-6. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export all files stored in the `BITRISE_DEPLOY_DIR` directory to `APPS & ARTIFACTS`. You can check these files at the `APPS & ARTIFACTS` tab of your Build's page. (Note, that if you did not place the files in this directory, they will not be deployed to the APPS & ARTIFACTS tab of your Build's page.)
+8. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export all files stored in the `BITRISE_DEPLOY_DIR` directory to `APPS & ARTIFACTS`. You can check these files at the `APPS & ARTIFACTS` tab of your Build's page. (Note, that if you did not place the files in this directory, they will not be deployed to the APPS & ARTIFACTS tab of your Build's page.)
 
 If your build failes due to `No such process` (error message below) or an `Encoder failed (err=-38)` error in your build log, most likely the screen resolution of the screen recording and the device does not match.
 
