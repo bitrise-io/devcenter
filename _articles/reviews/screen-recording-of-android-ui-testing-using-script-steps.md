@@ -45,18 +45,15 @@ You can run your UI test specific to your app and have the whole process screen 
    * gets those Emulator screenshots that were taken before UI tests had started
    * gets the final screenshot of the Emulator screen
    * places these files in the `BITRISE_DEPLOY_DIR` path
-
 6. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export all files stored in the BITRISE_DEPLDIR (If you did not place the files in this directory, they will not be deployed to the APPS & ARTIFACTS tab of your Build's page.)
 
-   No such process and Encoder failed (err=-38). If you get below error messages `Stop Screen recording,get file` Step, the screen resolution of the screen recording and the device does not match.
+If you get a `No such process` (below) or an `Encoder failed (err=-38)` error in your build log, most likely the screen resolution of the screen recording and the device does not match.
 
-          /opt/android-sdk-linux/platform-tools/adb shell 'killall -INT screenrecord' killall: screenrecord: No such process
-          
-          Encoder failed (err=-38)
+    /opt/android-sdk-linux/platform-tools/adb shell 'killall -INT screenrecord' killall: screenrecord: No such process
 
-   You can fix it:
-   * Check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step. ![](/img/screen-resolution-avd-manager.png)
-   * If you're not using the `AVD Manager` Step and start the emulator with a `Script` Step, then you can fix the screen size conflict in the `Script content` field of the `Start screen recording` Step with this short addition:
+Here is what to check:
 
-         --size <WIDTHxHEIGHT>
-   1.
+* Check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step. ![](/img/screen-resolution-avd-manager.png)
+* If you're NOT using the `AVD Manager` Step (and start the emulator with a `Script` Step), then you can fix the screen size (width and height) in the `Script content` field of the `Start screen recording` Step with `--size <WIDTHxHEIGHT>`
+
+  
