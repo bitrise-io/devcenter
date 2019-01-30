@@ -54,4 +54,4 @@ If you get a `No such process` (below) or an `Encoder failed (err=-38)` error in
 Here is what to check:
 
 * Check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step. ![](/img/screen-resolution-avd-manager.png)
-* If you're NOT using the `AVD Manager` Step (and start the emulator with a `Script` Step), then you can fix the screen size (width and height) in the `Script content` field of the `Start screen recording` Step with `--size <WIDTHxHEIGHT>`
+* If you're NOT using the `AVD Manager` Step (and start the emulator with a `Script` Step), then you can fix the screen size (width and height) in the `Script content` field of the `Start screen recording` Step with `--size <WIDTHxHEIGHT>`.
