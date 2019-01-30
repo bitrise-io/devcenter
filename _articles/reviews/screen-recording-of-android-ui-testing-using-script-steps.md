@@ -47,6 +47,17 @@ You can run your UI test specific to your Android app and have the whole process
    * places these files in the `BITRISE_DEPLOY_DIR` path
 8. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export all files stored in the `BITRISE_DEPLOY_DIR` directory to `APPS & ARTIFACTS`. You can check these files at the `APPS & ARTIFACTS` tab of your Build's page. (Note that if you did not place the files in this directory, they will not be deployed to the APPS & ARTIFACTS tab of your Build's page.)
 
+{% include message_box.html type="note" title="My message" content="
+If your build failes due to `No such process` (error message below) or an `Encoder failed (err=-38)` error in your build log, most likely the screen resolution of the screen recording and the device does not match.
+
+    /opt/android-sdk-linux/platform-tools/adb shell 'killall -INT screenrecord' killall: screenrecord: No such process
+
+Here is what to check:
+
+* Check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step. ![](/img/screen-resolution-avd-manager.png)
+* If you're NOT using the `AVD Manager` Step to start the emulator (and use `Script` Step instead), then you can fix the screen size in the `Script content` field of the `Start screen recording` Step by specifying the width and height of the screen: `--size <WIDTHxHEIGHT>`.
+"%}
+
 If your build failes due to `No such process` (error message below) or an `Encoder failed (err=-38)` error in your build log, most likely the screen resolution of the screen recording and the device does not match.
 
     /opt/android-sdk-linux/platform-tools/adb shell 'killall -INT screenrecord' killall: screenrecord: No such process
