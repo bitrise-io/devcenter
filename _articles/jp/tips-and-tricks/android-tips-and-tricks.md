@@ -1,6 +1,6 @@
 ---
 # jp title missing
-title: Android tips and tricks
+title: Androidに関するヒント
 redirect_from:
 - "/android/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project"
 menu:
