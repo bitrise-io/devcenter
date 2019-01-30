@@ -2,7 +2,7 @@
 title: Efficient CI/CD Workflow for iOS development
 menu:
   tips-and-tricks:
-    weight: 2
+    weight: 3
     title: Efficient CI/CD workflow for iOS development
 
 ---
