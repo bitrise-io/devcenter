@@ -21,6 +21,7 @@ pages:
 - _articles/builds/triggering-builds/trigger-map.md
 - _articles/builds/bitrise-yml-online.md
 - _articles/reviews/stack-update-and-removal-policy.md
+- _articles/reviews/ios-troubleshooting-draft.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/builds/available-environment-variables.md
