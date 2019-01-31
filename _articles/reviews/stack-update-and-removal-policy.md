@@ -11,12 +11,12 @@ about removal
 
 ## Xcode stacks
 
-There are two types of Xcode stacks: Stable stacks and Edge stacks.
+We use two types of Xcode stacks: Stable stacks and Edge stacks.
 
-* Xcode Stable stacks are **built once, and are not updated** at all, except with Bitrise CLI related updates, dependency manager cache updates and with critical fixes. These are Stable stacks, designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
-* Xcode "edge" stack is **re-built every week**, so it includes the latest-and-greatest versions of the pre-installed tools, not just dependency manager cache updates. It uses the same scripts we use for creating new Xcode stacks, which can be found at: [https://github.com/bitrise-io/osx-box-bootstrap](https://github.com/bitrise-io/osx-box-bootstrap "https://github.com/bitrise-io/osx-box-bootstrap")[ 9](https://github.com/bitrise-io/osx-box-bootstrap).
+* Xcode Stable stacks are **built once, and are not updated** at all (except with Bitrise CLI related updates, dependency manager cache updates and with critical fixes). These stacks are designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
+* Xcode "Edge" stack is **re-built every week as opposed to the Xcode Stable stacks**. The Xcode "Edge" stack includes the latest-and-greatest versions of the pre-installed tools on top of the dependency manager cache updates. It uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
 
-**Dependency manager cache updates:** All of the macOS stacks receive a dependency manager cache (`brew`, `cocoapods` and `bitrise CLI`) update every week. _These Cache updates **do not** change the pre-installed tool versions, it’s only an update of package manager caches, for faster dependency installs. As everything else we use for provisioning the macOS VMs, the weekly cache update_ `_Ansible_` _playbook_ [_can be found on GitHub 8_](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/weekly-cache-update-playbook.yml)_._
+**Dependency manager cache updates:** All of the macOS stacks receive a dependency manager cache (brew, cocoapods and bitrise CLI) update every week. These cache updates do not change the pre-installed tool versions and only update the package manager caches, for faster dependency installs. As for everything else we use for provisioning the macOS VMs, the weekly cache update `Ansible` playbook can be found on [GitHub](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/weekly-cache-update-playbook.yml).
 
 ## Android / Linux (Docker) stacks
 
@@ -36,6 +36,10 @@ In addition to the dependency manager cache updates, Xamarin Stacks are upgraded
 This means that the Xamarin stacks are **hybrid** stacks, built on a _Stable_ base Xcode stack, but applying certain Xamarin specific bits and updates every week.
 
 The **Xamarin Stable LTS (Long Term Support)** stack, similar to the Android LTS stack, is a “frozen” version of a previous Xamarin Stable stack version, and is not updated at all, except with Bitrise CLI related updates and with critical fixes.
+
+The Xamarin Studio installer is no longer available on [https://www.xamarin.com/platform](https://www.xamarin.com/platform "https://www.xamarin.com/platform")[ 4](https://www.xamarin.com/platform), and even the previously downloaded Xamarin Studio installer will now install Visual Studio for Mac instead of Xamarin Studio, so we’re now deprecating the Xamarin Studio stacks and replacing it with the new Visual Studio for Mac one.
+
+We’ll slowly move projects to the Visual Studio for Mac stack and keep an eye on the error rates. We’ll remove the Xamarin Studio stacks early September, if everything goes as planned (will keep it longer if required of course).
 
 ## Stack Deprecation / removal policy
 
