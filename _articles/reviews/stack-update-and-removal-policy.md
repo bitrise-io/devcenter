@@ -18,20 +18,20 @@ We use two types of Xcode stacks: Stable stacks and Edge stacks.
 
 ### **About dependency manager cache updates**
 
-All of the macOS stacks receive a dependency manager cache (brew, cocoapods and bitrise CLI) update every week. These cache updates do not change the pre-installed tool versions and only update the package manager caches, for faster dependency installs. As for everything else we use for provisioning the macOS VMs, the weekly cache update `Ansible` playbook can be found on [GitHub](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/weekly-cache-update-playbook.yml).
+All of the macOS stacks receive a dependency manager cache (brew, cocoapods and bitrise CLI) update every week. These cache updates do not change the pre-installed tool versions, they **only update the package manager caches**, for faster dependency installs. As for everything else we use for provisioning the macOS VMs, the weekly cache update `Ansible` playbook can be found on [GitHub](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/weekly-cache-update-playbook.yml).
 
 ## Android / Linux (Docker) stacks
 
 The Android / Linux stacks are prepared with `docker`, using multiple separate docker images, built on top of each other. You can find these docker images on [GitHub](https://github.com/bitrise-docker).
 
 * The **Android (Ubuntu 16.04)** stack is a **rolling release stack**, rebuilt automatically from a base Ubuntu image.
-* The **Android LTS (Long Term Support) (Ubuntu 14.04)** image is a “frozen” version of a previous rolling release image, and is not updated at all, except with Bitrise CLI related updates and with critical fixes.
+* The **Android LTS (Long Term Support) (Ubuntu 14.04)** image is a “frozen” version of a previous rolling release image, and is not updated at all (except with Bitrise CLI related updates and with critical fixes).
 
 ## Xamarin stacks
 
 The Xamarin Stacks are built on top of the latest Stable Xcode stack, so the preinstalled things of the base Xcode stack are not updated and are the same as in the base Xcode stack. The Xamarin specific bits are applied on top of the base Xcode image **every week** when generating the Xamarin stacks ([using this Ansible playbook](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/xamarin-playbook.yml)).
 
-The dependency manager cache updates are applied on these stacks too (see the `Xcode stacks -> Dependency manager cache updates` section for more detail).
+The [dependency manager cache updates](infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) are applied on these stacks too.
 
 In addition to the dependency manager cache updates, Xamarin Stacks are upgraded to the latest Xamarin Studio versions on every weekend, except the `LTS` (Long Term Support) stacks.
 
@@ -39,9 +39,10 @@ This means that the Xamarin stacks are **hybrid** stacks, built on a _Stable_
 
 The **Xamarin Stable LTS (Long Term Support)** stack, similar to the Android LTS stack, is a “frozen” version of a previous Xamarin Stable stack version, and is not updated at all, except with Bitrise CLI related updates and with critical fixes.
 
-The Xamarin Studio installer is no longer available on [https://www.xamarin.com/platform](https://www.xamarin.com/platform "https://www.xamarin.com/platform")[ 4](https://www.xamarin.com/platform), and even the previously downloaded Xamarin Studio installer will now install Visual Studio for Mac instead of Xamarin Studio, so we’re now deprecating the Xamarin Studio stacks and replacing it with the new Visual Studio for Mac one.
+{% include message_box.html type="note" title="Deprecated Xamarin Studio Stacks" content="
+Please note that Xamarin Studio stacks have been deprecated and replaced with the new Visual Studio for Mac stack. Make sure you switch to the Visual Studio for Mac one if you've been using the Xamarin Studio one before!
+"%}
 
-We’ll slowly move projects to the Visual Studio for Mac stack and keep an eye on the error rates. We’ll remove the Xamarin Studio stacks early September, if everything goes as planned (will keep it longer if required of course).
 
 ## Stack Deprecation / removal policy
 
