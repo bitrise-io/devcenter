@@ -13,7 +13,7 @@ about removal
 
 There are two types of Xcode stacks: Stable stacks and Edge stacks.
 
-* Xcode stable stacks are **built once, and are not updated** at all, except with Bitrise CLI related updates, dependency manager cache updates and with critical fixes. These are Stable stacks, designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
+* Xcode Stable stacks are **built once, and are not updated** at all, except with Bitrise CLI related updates, dependency manager cache updates and with critical fixes. These are Stable stacks, designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
 * Xcode "edge" stack is **re-built every week**, so it includes the latest-and-greatest versions of the pre-installed tools, not just dependency manager cache updates. It uses the same scripts we use for creating new Xcode stacks, which can be found at: [https://github.com/bitrise-io/osx-box-bootstrap](https://github.com/bitrise-io/osx-box-bootstrap "https://github.com/bitrise-io/osx-box-bootstrap")[ 9](https://github.com/bitrise-io/osx-box-bootstrap).
 
 **Dependency manager cache updates:** All of the macOS stacks receive a dependency manager cache (`brew`, `cocoapods` and `bitrise CLI`) update every week. _These Cache updates **do not** change the pre-installed tool versions, it’s only an update of package manager caches, for faster dependency installs. As everything else we use for provisioning the macOS VMs, the weekly cache update_ `_Ansible_` _playbook_ [_can be found on GitHub 8_](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/weekly-cache-update-playbook.yml)_._
@@ -27,7 +27,7 @@ The Android / Linux stacks are prepared with `docker`, using multiple separate 
 
 ## Xamarin stacks
 
-The Xamarin Stacks are built on top of the latest stable Xcode stack, so the preinstalled things of the base Xcode stack are not updated and are the same as in the base Xcode stack. The Xamarin specific bits are applied on top of the base Xcode image **every week** when generating the Xamarin stacks ([using this Ansible playbook](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/xamarin-playbook.yml)).
+The Xamarin Stacks are built on top of the latest Stable Xcode stack, so the preinstalled things of the base Xcode stack are not updated and are the same as in the base Xcode stack. The Xamarin specific bits are applied on top of the base Xcode image **every week** when generating the Xamarin stacks ([using this Ansible playbook](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/xamarin-playbook.yml)).
 
 The dependency manager cache updates are applied on these stacks too (see the `Xcode stacks -> Dependency manager cache updates` section for more detail).
 
@@ -59,7 +59,7 @@ And the latest versions from the previous two Xcode major versions:
 * 6.4
   "%}
 
-**Removal schedule**: **when the first beta of the next major Xcode version is released** we **deprecate**all the minor versions of the last major version, except the very last version (continuing the above example, when the first beta of Xcode 9 was released we deprecated all the Xcode 8 stacks except the very last one, 8.3.x) as well as the oldest major version (Xcode 6.4 in the example above).
+**Removal schedule**: **when the first beta of the next major Xcode version is released** we **deprecate** all the minor versions of the last major version, except the very last version (continuing the above example, when the first beta of Xcode 9 was released we deprecated all the Xcode 8 stacks except the very last one, 8.3.x) as well as the oldest major version (Xcode 6.4 in the example above).
 
 **Once the first final (non beta) version of the new major Xcode version is released** we remove the deprecated stacks, the oldest major version (from the above example, when Xcode 9 (final, non beta) was released we removed the Xcode 6 (6.4) stack) as well as the minor versions of the last major version except the latest minor version (in the example above the Xcode 8.0, 8.1 and 8.2 stacks; keeping the Xcode 8.3 one).
 
@@ -73,7 +73,9 @@ We upgrade the Xamarin Stable LTS stack when we roll out the first Xamarin updat
 
 What we do actually is that we keep the last Xamarin Stable (non LTS) stack built on the previous / last Xcode major version.
 
+{% include message_box.html type="example" title="My message" content="
 **Example:** when the first **Xamarin Stable** (non LTS) stack (built on Xcode 9) was released, we upgraded the **Xamarin Stable LTS** stack to the one built on the latest Xcode 8 version.
+"%}
 
 This means that the Xamarin Stable LTS stack is **supported for about 1 year**, in sync with Xcode major version releases.
 
@@ -81,6 +83,8 @@ This means that the Xamarin Stable LTS stack is **supported for about 1 year**,
 
 The **Android/Linux LTS** stack is upgraded when we release the first non LTS stack update with a new Ubuntu LTS version.
 
-**Example**: The **Android/Linux LTS** stack was upgraded to the last version built on Ubuntu 16.04 when we released the first non LTS Android/Linux stack update built on Ubuntu 18.04
+{% include message_box.html type="example" title="My message" content="
+The **Android/Linux LTS** stack was upgraded to the last version built on Ubuntu 16.04 when we released the first non LTS Android/Linux stack update built on Ubuntu 18.04
+"%}
 
 This means that an Android/Linux LTS stack is **supported for about 2 years**, roughly in sync with Ubuntu LTS (long term support) releases.
