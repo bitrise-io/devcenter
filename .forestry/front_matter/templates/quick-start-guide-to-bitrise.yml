@@ -20,6 +20,7 @@ pages:
 - _articles/getting-started/adding-a-new-app/connecting-a-repository.md
 - _articles/builds/triggering-builds/trigger-map.md
 - _articles/builds/bitrise-yml-online.md
+- _articles/reviews/stack-update-and-removal-policy.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/reviews/vpn-draft.md
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
