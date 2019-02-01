@@ -16,7 +16,9 @@ We use two types of Xcode stacks: Stable stacks and Edge stacks.
 
 ### **About dependency manager cache updates**
 
-All of the macOS stacks receive a dependency manager cache update (brew, cocoapods and bitrise CLI) every week. These cache updates do not change the pre-installed tool versions, they **only update the package manager caches**, for faster dependency installs. For more information on everything else we use for provisioning the macOS VMs, head over to the weekly cache update `Ansible` playbook on [GitHub](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/weekly-cache-update-playbook.yml).
+All of the macOS stacks receive a dependency manager cache update (brew, cocoapods and bitrise CLI) every week. These cache updates do not change the pre-installed tool versions, they **only update the package manager caches** for faster dependency installs. 
+
+For more information on everything else we use for provisioning the macOS VMs, head over to the weekly cache update `Ansible` playbook on [GitHub](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/weekly-cache-update-playbook.yml).
 
 ## Android / Linux (Docker) stacks
 
