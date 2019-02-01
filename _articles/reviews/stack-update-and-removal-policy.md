@@ -65,24 +65,17 @@ And the latest versions from the previous two Xcode major versions:
 
 #### **Deprecating and removing Xcode stacks**:
 
-**When the first beta of the next major Xcode version is released**, we **deprecate** all the minor versions of the last major version, except the very last version
+When the first **beta of the next major Xcode version i**s released, we **deprecate** all the minor versions of the last major version, except the very last version
 
-{% include message_box.html type="example" title="continuing the above example, " content="
-Upon the release of Xcode 9, we deprecated
+{% include message_box.html type="example" title="Example for deprecating Xcode stacks when beta Xcode version is released " content=" When Xcode 9 was released, we deprecated
 
 * all the Xcode 8 stacks except the very last one (8.3.x)
-* as well as the oldest major version (Xcode 6.4).
+* the oldest major version (Xcode 6.4).
   "%}
 
-**When the first final (non beta) version of the new major Xcode version is released,** we **remove** the deprecated stacks; the oldest major version as well as the minor versions of the last major version except the latest minor version.
+When the first **final (non beta) version** of the new major Xcode version is released, we **remove** the deprecated stacks; the oldest major version as well as the minor versions of the last major version except the latest minor version.
 
-{% include message_box.html type="example" title="My message" content="
-For example, when Xcode 9 (final, non beta) was released, we removed:
-the Xcode 6 (6.4) 
-the minor versions of the last major version (Xcode 8.0, 8.1 and 8.2 stacks) except the latest minor version (Xcode 8.3)
-"%}
-
-
+{% include message_box.html type="example" title="Example for stack removal when final Xcode is released" content=" For example, when Xcode 9 (final, non beta) was released, we removed: the Xcode 6 (6.4) the minor versions of the last major version (Xcode 8.0, 8.1 and 8.2 stacks) except the latest minor version (Xcode 8.3) "%}
 
 This means that the latest patch release version of Xcode is **supported for about 2.5 years**, in sync with Xcode major version releases.
 
