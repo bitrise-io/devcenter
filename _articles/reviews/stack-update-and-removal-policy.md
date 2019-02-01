@@ -5,7 +5,7 @@ date: 2019-01-31 10:50:13 +0000
 published: false
 
 ---
-Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated (no preinstalled tools etc.), and there are stacks which are completely re-built every week. You can find the update type of the stacks below.
+Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated (no preinstalled tools etc.), and there are stacks which are completely re-built every week.
 
 about removal
 
