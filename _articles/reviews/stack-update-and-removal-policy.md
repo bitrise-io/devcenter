@@ -63,7 +63,7 @@ And the latest versions from the previous two Xcode major versions:
 * 6.4
   "%}
 
-#### **Removal schedule/plicy**:
+#### **Deprecating and removing Xcode stacks**:
 
 **When the first beta of the next major Xcode version is released**, we **deprecate** all the minor versions of the last major version, except the very last version
 
@@ -74,7 +74,15 @@ Upon the release of Xcode 9, we deprecated
 * as well as the oldest major version (Xcode 6.4).
   "%}
 
-**Once the first final (non beta) version of the new major Xcode version is released,** we remove the deprecated stacks, the oldest major version (from the above example, when Xcode 9 (final, non beta) was released we removed the Xcode 6 (6.4) stack) as well as the minor versions of the last major version except the latest minor version (in the example above the Xcode 8.0, 8.1 and 8.2 stacks; keeping the Xcode 8.3 one).
+**When the first final (non beta) version of the new major Xcode version is released,** we **remove** the deprecated stacks; the oldest major version as well as the minor versions of the last major version except the latest minor version.
+
+{% include message_box.html type="example" title="My message" content="
+For example, when Xcode 9 (final, non beta) was released, we removed:
+the Xcode 6 (6.4) 
+the minor versions of the last major version (Xcode 8.0, 8.1 and 8.2 stacks) except the latest minor version (Xcode 8.3)
+"%}
+
+
 
 This means that the latest patch release version of Xcode is **supported for about 2.5 years**, in sync with Xcode major version releases.
 
