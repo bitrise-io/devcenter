@@ -29,7 +29,7 @@ The Android / Linux stacks are prepared with `docker`, using multiple separate 
 
 ## Xamarin stacks
 
-The Xamarin Stacks are built on top of the latest Stable Xcode stack, so the preinstalled things of the base Xcode stack are not updated and are the same as in the base Xcode stack. The Xamarin specific bits are applied on top of the base Xcode image **every week** when generating the Xamarin stacks ([using this Ansible playbook](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/xamarin-playbook.yml)).
+The Xamarin Stacks are built on top of the latest Stable Xcode stack, so the _preinstalled things of the b_ase Xcode stack are not updated and are the same as in the base Xcode stack. The Xamarin specific bits are applied on top of the base Xcode image **every week** when generating the Xamarin stacks ([using this Ansible playbook](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/xamarin-playbook.yml)).
 
 The [dependency manager cache updates](infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) are applied on these stacks too.
 
@@ -37,7 +37,7 @@ In addition to the dependency manager cache updates, Xamarin Stacks are upgraded
 
 This means that the Xamarin stacks are **hybrid** stacks, built on a Stable base Xcode stack, but applying certain Xamarin specific bits and updates every week.
 
-The **Xamarin Stable LTS (Long Term Support)** stack, similar to the Android LTS stack, is a “frozen” version of a previous Xamarin Stable stack version, and is not updated at all, except with Bitrise CLI related updates and with critical fixes.
+The **Xamarin Stable LTS (Long Term Support)** stack, similar to the Android LTS stack, is a “frozen” version of a previous Xamarin Stable stack version, and is **not updated** at all (except with Bitrise CLI related updates and with critical fixes).
 
 {% include message_box.html type="note" title="Deprecated Xamarin Studio Stacks" content="
 Please note that Xamarin Studio stacks have been deprecated and replaced with the new Visual Studio for Mac stack. Make sure you switch to the Visual Studio for Mac one if you've been using the Xamarin Studio one before!
