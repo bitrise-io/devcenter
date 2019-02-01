@@ -48,7 +48,7 @@ The **Xamarin Stable LTS (Long Term Support)** stack, similar to the Android L
 * We keep the latest patch version of every minor Xcode version as long as that Xcode version is the latest major version.
 * In addition, we keep the very last minor+patch version of the previous two major Xcode versions
 
-{% include message_box.html type="example" title="Example for" content=" When the latest Xcode version was 8.3.3 we kept:
+{% include message_box.html type="example" title="An Xcode example" content=" When the latest Xcode version was 8.3.3 we kept:
 
 All the latest patch releases for every minor version of Xcode 8:
 
@@ -63,7 +63,17 @@ And the latest versions from the previous two Xcode major versions:
 * 6.4
   "%}
 
-**Removal schedule**: **when the first beta of the next major Xcode version is released**, we **deprecate** all the minor versions of the last major version, except the very last version (continuing the above example, when the first beta of Xcode 9 was released we deprecated all the Xcode 8 stacks except the very last one, 8.3.x) as well as the oldest major version (Xcode 6.4 in the example above).
+### **Removal schedule/plicy**:
+
+**When the first beta of the next major Xcode version is released**, we **deprecate** all the minor versions of the last major version, except the very last version 
+
+{% include message_box.html type="example" title="continuing the above example, " content="
+Upon the release of Xcode 9, we deprecated 
+
+* all the Xcode 8 stacks except the very last one (8.3.x)
+* as well as the oldest major version (Xcode 6.4).
+"%}
+
 
 **Once the first final (non beta) version of the new major Xcode version is released,** we remove the deprecated stacks, the oldest major version (from the above example, when Xcode 9 (final, non beta) was released we removed the Xcode 6 (6.4) stack) as well as the minor versions of the last major version except the latest minor version (in the example above the Xcode 8.0, 8.1 and 8.2 stacks; keeping the Xcode 8.3 one).
 
