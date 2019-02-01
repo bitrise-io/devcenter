@@ -63,8 +63,8 @@ And the latest versions from the previous two Xcode major versions:
 * 6.4
 
 We will carry this example through our guide to illustrate stack removal and deprecation processes.
-  
-  "%}
+
+"%}
 
 #### **Deprecating and removing Xcode stacks**:
 
@@ -84,14 +84,11 @@ This means that the latest patch release version of Xcode is **supported for ab
 
 ### Xamarin
 
-Most of the Xamarin stacks are upgraded every weekend, so the only stack which is affected by a long term support and deprecation policy is the **Xamarin Stable LTS (long term support)** stack.
+Most of the Xamarin stacks are upgraded **every weekend**, so the only stack which is affected by a long term support and deprecation policy is the **Xamarin Stable LTS (long term support)** stack.
 
-We upgrade the Xamarin Stable LTS stack when we roll out the first Xamarin updates built on a new Xcode major version.
+We upgrade the Xamarin Stable LTS stack when we roll out the first Xamarin updates built on a new Xcode major version. What we do actually is that we keep the last Xamarin Stable (non LTS) stack built on the previous / last Xcode major version.
 
-What we do actually is that we keep the last Xamarin Stable (non LTS) stack built on the previous / last Xcode major version.
-
-{% include message_box.html type="example" title="My message" content="
-**Example:** when the first **Xamarin Stable** (non LTS) stack (built on Xcode 9) was released, we upgraded the **Xamarin Stable LTS** stack to the one built on the latest Xcode 8 version.
+{% include message_box.html type="example" title="Example for updating an Xamarin Stable LTS update" content=" When the first **Xamarin Stable** **(non LTS)** stack (built on Xcode 9) was released, we upgraded the **Xamarin Stable LTS** stack to the one built on the latest Xcode 8 version.
 "%}
 
 This means that the Xamarin Stable LTS stack is **supported for about 1 year**, in sync with Xcode major version releases.
@@ -101,7 +98,6 @@ This means that the Xamarin Stable LTS stack is **supported for about 1 year**,
 The **Android/Linux LTS** stack is upgraded when we release the first non LTS stack update with a new Ubuntu LTS version.
 
 {% include message_box.html type="example" title="My message" content="
-The **Android/Linux LTS** stack was upgraded to the last version built on Ubuntu 16.04 when we released the first non LTS Android/Linux stack update built on Ubuntu 18.04
-"%}
+The **Android/Linux LTS** stack was upgraded to the last version built on Ubuntu 16.04 when we released the first non LTS Android/Linux stack update built on Ubuntu 18.04. "%}
 
 This means that an Android/Linux LTS stack is **supported for about 2 years**, roughly in sync with Ubuntu LTS (long term support) releases.
