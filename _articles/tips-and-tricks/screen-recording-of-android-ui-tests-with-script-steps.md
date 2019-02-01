@@ -6,7 +6,6 @@ menu:
   tips-and-tricks:
     weight: 2
     title: Screen recording of Android UI tests with Script Step
-published: false
 
 ---
 You can run your UI test specific to your Android app and have the whole process screen recorded using one Bitrise workflow. Here is an example workflow containing the steps we will use in this guide:
