@@ -115,8 +115,7 @@ We recommend you start with the command `bitrise share`. This will print you a g
 4. Add the step version tag to your Step's repository.
 5. Add the Step to your forked StepLib repository: 
    ```
-   $ bitrise share create --tag [step-version-tag] 
-   --git [step-git-uri].git --stepid [step-id]
+   $ bitrise share create --tag [step-version-tag] --git [step-git-uri].git --stepid [step-id]
    ```
 6. Optionally, perform a complete health check on your forked StepLib:
    ```
