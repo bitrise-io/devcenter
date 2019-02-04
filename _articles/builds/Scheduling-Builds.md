@@ -21,7 +21,7 @@ Follow the steps to see how you can set it up for your next build!
 5. Set the hour and minute in the `HH/MM` field.
 6. On the timeline, select the day(s) when you want your build to run.
 
-   ![](/img/basic-build-config-scheduled.png)
+   ![](/img/basic-build-config-scheduled-1.jpg)
 7. Check and fill out the rest of the input fields if necessary. You can schedule your build in the advanced version of the `Build configuration` window too.
 8. Click `Schedule Build` at the bottom of the pop-up window.
 
