@@ -5,7 +5,7 @@ date: 2019-01-31 10:50:13 +0000
 published: false
 
 ---
-Sta cks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week.
+Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week.
 
 ## Xcode stacks
 
