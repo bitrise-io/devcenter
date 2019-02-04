@@ -5,7 +5,7 @@ date: 2019-01-31 10:50:13 +0000
 published: false
 
 ---
-Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week.
+Sta cks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week.
 
 ## Xcode stacks
 
@@ -78,7 +78,7 @@ When the first **beta of the next major Xcode version** is released, we **depr
 
 When the first **final (non beta) version** of the new major Xcode version is released, we **remove** the deprecated stacks; the oldest major version as well as the minor versions of the last major version except the latest minor version.
 
-{% include message_box.html type="example" title="Example for removing stacks when final Xcode version is released" content=" For example, when Xcode 9 (final, non beta) was released, we removed: 
+{% include message_box.html type="example" title="Example for removing stacks when final Xcode version is released" content=" For example, when Xcode 9 (final, non beta) was released, we removed:
 
 * the oldest major version (the Xcode 6 (6.4) stack)
 * the minor versions of the last major version (Xcode 8.0, 8.1 and 8.2 stacks) except for the latest minor version (Xcode 8.3) "%}
