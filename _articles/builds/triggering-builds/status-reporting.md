@@ -13,12 +13,9 @@ Please note that status reports are sent only for automatically triggered builds
 
 1. Make sure the account you wish to use is connected to the relevant hosting provider: go to the `Account settings` page of the account and check the `CONNECTED ACCOUNTS` menu on the left side.
 
-    ![Connected account](/img/getting-started/triggering-builds/connected-account.png)
+   ![](/img/connected-accounts.png)
+2. Go to the `Team` tab of your app on [bitrise.io](https://www.bitrise.io).
+3. Find the `Service credential User` menu and select the user with the connected account.
 
-1. Go to the `Team` tab of your app on [bitrise.io](https://www.bitrise.io).
-
-1. Find the `Service credential User` menu and select the user with the connected account.
-
-    ![Service credential user](/img/getting-started/triggering-builds/service-credential.png)
-
-1. Click the `Test the git connection` button to make sure the selected user's connection can be used for sending back the build status to the hosting provider.
+   ![](/img/service-credential-user.png)
+4. Click the `Test the git connection` button to make sure the selected user's connection can be used for sending back the build status to the hosting provider.
