@@ -2,6 +2,9 @@
 title: 'Stack update and removal policy '
 redirect_from: []
 date: 2019-02-05 15:39:10 +0000
+menu:
+  infrastructure:
+    weight: 4
 published: false
 
 ---
