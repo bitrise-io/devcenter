@@ -16,7 +16,7 @@ We love how [Felix Krause](https://krausefx.com) sought to solve this problem by
 creating [fastlane](https://fastlane.tools). So by the combined force of earth, water, fire and wind…
 we integrated the whole [fastlane toolkit](https://fastlane.tools) - booyah! How cool is that!
 
-{% include message_box.html type="note" title="Bitrise offline CLI" content=" We have an open source, offline CLI, which can be used in a similar way as _fastlane_. If you're interested, you can find the CLI's website [here](https://www.bitrise.io/cli), and its GitHub repository [here](https://github.com/bitrise-io/bitrise). You can use this CLI to run your bitrise configurations locally, which can include runing _fastlane_ too as part of the build, as described below. ;) "%} 
+{% include message_box.html type="note" title="Bitrise offline CLI" content=" We have an open source, offline CLI, which can be used in a similar way as _fastlane_. If you're interested, you can find the CLI's website [here](https://www.bitrise.io/cli), and its GitHub repository [here](https://github.com/bitrise-io/bitrise). You can use this CLI to run your bitrise configurations locally, which can include runing _fastlane_ too as part of the build, as described below. ;) "%}
 
 ## What is fastlane?
 
@@ -29,9 +29,7 @@ and upload or update to the App Store.
 
 ## How to get started?
 
-Using _fastlane_ for your workflow is easy as pie. Just [add the ](/getting-started/manage-your-bitrise-workflow)`[Fastlane](/getting-started/manage-your-bitrise-workflow)`[ step to your
-workflow](/getting-started/manage-your-bitrise-workflow),
-after the `Git Clone` step (and any other dependency step).
+Using _fastlane_ for your workflow is easy as pie. Just add the [Fastlane](https://www.bitrise.io/integrations/steps/fastlane) step to [your workflow](/getting-started/manage-your-bitrise-workflow) after the `Git Clone` step (and any other dependency step).
 
 {% include message_box.html type="warning" title="Have our Certificate and profile installer step in your workflow!" content=" You should also add/keep the `Certificate and profile installer` step in the workflow, to download your _.p12 Certificates_ and _Provisioning Profiles_ uploaded to [bitrise.io](https://www.bitrise.io) and to install them. **Even if you don't upload your files to** [**bitrise.io**](https://www.bitrise.io) **and instead you use a fastlane tool to manage your code signing files you should still keep this step in the workflow**. Read more about [iOS Code Signing using third party tools](/ios/code-signing/#use-a-third-party-tool-to-manage-your-code-signing-files).
 "%}
