@@ -35,7 +35,7 @@ The Android / Linux stacks are prepared with `docker`, using multiple separate 
 
 The Visual Studio for Mac stacks are built on top of the latest Stable Xcode stack, so the preinstalled building tools of the base Xcode stack are not updated and are the same as in the base Xcode stack. The Xamarin specific bits are applied on top of the base Xcode image **every week** when generating the Visual Studio for Mac stacks ([using this Ansible playbook](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/xamarin-playbook.yml)).
 
-The [dependency manager cache updates](infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) are applied on these stacks too. Visual Studio for Mac stacks are upgraded to the latest Visual Studio for Mac versions on **every weekend**.
+The [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) are applied on these stacks too. Visual Studio for Mac stacks are upgraded to the latest Visual Studio for Mac versions on **every weekend**.
 
 This means that the Visual Studio for Mac stacks are [**hybrid** stacks](/infrastructure/stack-update-and-removal-policy/#hybrid-stacks), built on a Stable base Xcode stack, but applying certain Visual Studio for Mac and Xamarin specific bits and updates every week.
 
@@ -102,6 +102,6 @@ This means that the **Hybrid Visual Studio for Mac Stable** is **supported for a
 
 The **Android/Linux LTS** stack is upgraded when we release the first non LTS stack update with a new Ubuntu LTS version.
 
-{% include message_box.html type="example" title="My message" content=" The **Android/Linux LTS** stack was upgraded to the last version built on Ubuntu 16.04 when we released the first non LTS Android/Linux stack update built on Ubuntu 18.04. "%}
+{% include message_box.html type="example" title="Example for upgrading the Android/Linux LTS stack" content=" The **Android/Linux LTS** stack was upgraded to the last version built on Ubuntu 16.04 when we released the first non LTS Android/Linux stack update built on Ubuntu 18.04. "%}
 
 This means that an Android/Linux LTS stack is **supported for about 2 years**, roughly in sync with Ubuntu LTS (long term support) releases.
