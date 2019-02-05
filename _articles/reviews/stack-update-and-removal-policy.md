@@ -35,7 +35,7 @@ The Visual Studio for Mac stacks are built on top of the latest Stable Xcode sta
 
 The [dependency manager cache updates](infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) are applied on these stacks too. Visual Studio for Mac stacks are upgraded to the latest Visual Studio for Mac versions on **every weekend**.
 
-This means that the Visual Studio for Mac stacks are **hybrid** stacks, (link)built on a Stable base Xcode stack, but applying certain Visual Studio for Mac and Xamarin specific bits and updates every week.
+This means that the Visual Studio for Mac stacks are [**hybrid** stacks](/infrastructure/stack-update-and-removal-policy/#hybrid-stacks), built on a Stable base Xcode stack, but applying certain Visual Studio for Mac and Xamarin specific bits and updates every week.
 
 ## Deprecating and removing stacks
 
@@ -85,16 +85,16 @@ This means that the latest patch release version of Xcode is **supported for ab
 
 Altogether we have 4 Hybrid stacks:
 
-* The **Hybrid Visual Studio 4 Mac Stable** and **Hybrid Visual Studio 4 Mac Beta** Stacks are updated every weekend with the current Visual Studio 4 Mac Stable and Beta releases.
+* The **Hybrid Visual Studio for Mac Stable** and **Hybrid Visual Studio for Mac Beta** Stacks are updated every weekend with the current Visual Studio 4 Mac Stable and Beta releases.
 * The **Hybrid stack, with both Android tools and Xcode 8** is affected by a long term support and deprecation policy, so it only gets the latest Bitrise CLI and critical updates.
-* The **Previous Hybrid stack with Xamarin and vs4mac** is kept on the previous version of Visual Studio 4 Mac.
+* The **Previous Hybrid stack with Xamarin and vs4mac** is kept on the previous version of Visual Studio for Mac.
 
-So when a new version of Visual Studio 4 Mac (vs4mac) comes out:
+So when a new version of Visual Studio for Mac (vs4mac) comes out:
 
 * the current vs4mac Stable becomes the Previous Hybrid stack with Xamarin and vs4mac and
 * the current Previous Hybrid stack with Xamarin and vs4mac gets deprecated.
 
-This means that the **Hybrid Visual Studio 4 Mac Stable** is **supported for about 1 year**, in sync with the major Xcode version releases.
+This means that the **Hybrid Visual Studio for Mac Stable** is **supported for about 1 year**, in sync with the major Xcode version releases.
 
 ### Android/Linux Stacks
 
