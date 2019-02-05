@@ -70,6 +70,7 @@ pages:
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
 - _articles/reviews/bitrise-api.md
 - _articles/reviews/webhook-troubleshooting-draft.md
+- _articles/infrastructure/stack-update-and-removal-policy.md
 - _articles/infrastructure/available-stacks.md
 - _articles/reviews/build-trigger-api-draft.md
 - _articles/reviews/android-app-bundle-draft.md
