@@ -29,7 +29,7 @@ and upload or update to the App Store.
 
 ## How to get started?
 
-Using _fastlane_ for your workflow is easy as pie. Just [add the ](/getting-started/manage-your-bitrise-workflow)`[Fastlane](/getting-started/manage-your-bitrise-workflow)`[ step to your
+Using _fastlane_ for your workflow is easy as pie. Just [add the ](/getting-started/manage-your-bitrise-workflow) [Fastlane](https://www.bitrise.io/integrations/steps/fastlane) [ step to your
 workflow](/getting-started/manage-your-bitrise-workflow),
 after the `Git Clone` step (and any other dependency step).
 
