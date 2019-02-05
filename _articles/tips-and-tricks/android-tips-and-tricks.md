@@ -154,7 +154,7 @@ You can limit the allowed RAM the Gradle JVM process uses. This is useful if the
 
 You can use our Android emulator Steps such as `AVD Manager` and `Wait for Emulator` to create and boot Android emulators. Let's see how!
 
-{% include message_box.html type="important" title="`AVD Manager` vs `Do anything with Script step`" content=" Instead of using `Do anything with Script step` to create an Android emulator, please use  `AVD Manager` Step! There are simply too many edge cases to cover relating to our script Step, as well as the commands and working configurations change quite frequently. "%}
+{% include message_box.html type="important" title="`AVD Manager` vs `Do anything with Script step`" content=" Instead of using `Do anything with Script step` to create an Android emulator, please use  `AVD Manager` Step! There are simply too many edge cases to cover relating to our `Script` Step, as well as the commands and working configurations change quite frequently. "%}
 
 1. Add `AVD manager` Step to your workflow. It can be one of the first steps in your workflow.
 2. Set the following required input fields in the step: `Device Profile`, `Android API level`, and `OS Tag`.
