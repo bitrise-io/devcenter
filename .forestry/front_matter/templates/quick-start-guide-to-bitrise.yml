@@ -21,7 +21,6 @@ pages:
 - _articles/builds/triggering-builds/trigger-map.md
 - _articles/builds/bitrise-yml-online.md
 - _articles/reviews/stack-update-and-removal-policy.md
-- _articles/reviews/ios-troubleshooting-draft.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/builds/available-environment-variables.md
@@ -60,7 +59,6 @@ pages:
 - _articles/getting-started/adding-a-new-app/public-apps.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
-- _articles/reviews/xcode-test-draft.md
 - _articles/getting-started/getting-started-with-flutter-apps.md
 - _articles/builds/selective_builds.md
 - _articles/builds/Scheduling-Builds.md
@@ -68,9 +66,9 @@ pages:
 - _articles/getting-started/managing-files-on-bitrise.md
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
-- _articles/reviews/bitrise-api.md
 - _articles/reviews/webhook-troubleshooting-draft.md
 - _articles/infrastructure/stack-update-and-removal-policy.md
+- _articles/reviews/xcode-test-draft.md
 - _articles/infrastructure/available-stacks.md
 - _articles/reviews/build-trigger-api-draft.md
 - _articles/reviews/android-app-bundle-draft.md
