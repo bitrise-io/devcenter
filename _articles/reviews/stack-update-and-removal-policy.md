@@ -5,7 +5,7 @@ date: 2019-01-31 10:50:13 +0000
 published: false
 
 ---
-Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week.
+Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week. Check out our Stacks in our [system reports Github site](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports).
 
 ## Xcode stacks
 
@@ -27,23 +27,19 @@ The Android / Linux stacks are prepared with `docker`, using multiple separate 
 * The **Android (Ubuntu 16.04)** stack is a **rolling release stack**, rebuilt automatically from a base Ubuntu image.
 * The **Android LTS (Long Term Support) (Ubuntu 14.04)** image is a “frozen” version of a previous rolling release image, and is not updated at all (except with Bitrise CLI related updates and with critical fixes).
 
-## Xamarin stacks
+## Hybrid (Visual Studio for Mac) stacks
 
 {% include message_box.html type="note" title="Deprecated Xamarin Studio Stacks" content=" Please note that Xamarin Studio stacks have been deprecated and replaced with the new Visual Studio for Mac stack. Make sure you switch to the Visual Studio for Mac one if you've been using the Xamarin Studio one before! "%}
 
-The Xamarin Stacks are built on top of the latest Stable Xcode stack, so the preinstalled things of the base Xcode stack are not updated and are the same as in the base Xcode stack. The Xamarin specific bits are applied on top of the base Xcode image **every week** when generating the Xamarin stacks ([using this Ansible playbook](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/xamarin-playbook.yml)).
+The Visual Studio for Mac stacks are built on top of the latest Stable Xcode stack, so the preinstalled building tools of the base Xcode stack are not updated and are the same as in the base Xcode stack. The Xamarin specific bits are applied on top of the base Xcode image **every week** when generating the Visual Studio for Mac stacks ([using this Ansible playbook](https://github.com/bitrise-io/osx-box-bootstrap/blob/master/xamarin-playbook.yml)).
 
-The [dependency manager cache updates](infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) are applied on these stacks too.
+The [dependency manager cache updates](infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) are applied on these stacks too. Visual Studio for Mac stacks are upgraded to the latest Visual Studio for Mac versions on **every weekend**.
 
-In addition to the dependency manager cache updates, Xamarin Stacks are upgraded to the latest Visual Studio for Mac versions on **every weekend**, except for the Long Term Support stacks.
-
-This means that the Xamarin stacks are **hybrid** stacks, built on a Stable base Xcode stack, but applying certain Xamarin specific bits and updates every week.
-
-The **Xamarin Stable LTS (Long Term Support)** stack, similar to the Android LTS stack, is a “frozen” version of a previous Xamarin Stable stack version, and is **not updated** at all (except with Bitrise CLI related updates and with critical fixes).
+This means that the Visual Studio for Mac stacks are **hybrid** stacks, (link)built on a Stable base Xcode stack, but applying certain Visual Studio for Mac and Xamarin specific bits and updates every week.
 
 ## Deprecating and removing stacks
 
-### Xcode
+### Xcode Stacks
 
 We keep the latest patch version of every minor Xcode version as long as that Xcode version is the latest major version.
 
@@ -67,7 +63,7 @@ We will carry this example through our guide to illustrate stack removal and dep
 
 "%}
 
-#### **Deprecating and removing Xcode stacks**:
+#### **Deprecating and removing Xcode stacks**
 
 When the first **beta of the next major Xcode version** is released, we **deprecate** all the minor versions of the last major version, except the very last version
 
@@ -85,17 +81,22 @@ When the first **final (non beta) version** of the new major Xcode version is re
 
 This means that the latest patch release version of Xcode is **supported for about 2.5 years**, in sync with Xcode major version releases.
 
-### Xamarin
+### Hybrid Stacks
 
-Most of the Xamarin stacks are upgraded **every weekend**, so the only stack which is affected by a long term support and deprecation policy is the **Xamarin Stable LTS (long term support)** stack.
+Altogether we have 4 Hybrid stacks:
 
-We upgrade the Xamarin Stable LTS stack when we roll out the first Xamarin updates built on a new Xcode major version. We keep the last Xamarin Stable (non LTS) stack built on the previous / last Xcode major version.
+* The **Hybrid Visual Studio 4 Mac Stable** and **Hybrid Visual Studio 4 Mac Beta** Stacks are updated every weekend with the current Visual Studio 4 Mac Stable and Beta releases.
+* The **Hybrid stack, with both Android tools and Xcode 8** is affected by a long term support and deprecation policy, so it only gets the latest Bitrise CLI and critical updates.
+* The **Previous Hybrid stack with Xamarin and vs4mac** is kept on the previous version of Visual Studio 4 Mac.
 
-{% include message_box.html type="example" title="Example for updating an Xamarin Stable LTS update" content=" When the first **Xamarin Stable** **(non LTS)** stack (built on Xcode 9) was released, we upgraded the **Xamarin Stable LTS** stack to the one built on the latest Xcode 8 version. "%}
+So when a new version of Visual Studio 4 Mac (vs4mac) comes out:
 
-This means that the Xamarin Stable LTS stack is **supported for about 1 year**, in sync with Xcode major version releases.
+* the current vs4mac Stable becomes the Previous Hybrid stack with Xamarin and vs4mac and
+* the current Previous Hybrid stack with Xamarin and vs4mac gets deprecated.
 
-### Android/Linux
+This means that the **Hybrid Visual Studio 4 Mac Stable** is **supported for about 1 year**, in sync with the major Xcode version releases.
+
+### Android/Linux Stacks
 
 The **Android/Linux LTS** stack is upgraded when we release the first non LTS stack update with a new Ubuntu LTS version.
 
