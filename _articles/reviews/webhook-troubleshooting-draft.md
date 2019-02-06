@@ -5,9 +5,13 @@ date: 2019-02-05 10:22:25 +0000
 published: false
 
 ---
-If you registered your app on [bitrise.io](https://www.bitrise.io) a while ago (especially before September 2016) you should check the webhook URL registered on the git hosting service you use (for example, GitHub, Bitbucket).
+## bitrise.io/hooks vs hooks.bitrise.io
 
-{% include message_box.html type="important" title="bitrise.io/hooks vs hooks.bitrise.io" content=" Please note that a new trigger feature (like [skip ci](https://bitrise-io.github.io/devcenter/tips-and-tricks/skip-a-build/) or tag based triggering) is only available if you use the new `hooks.bitrise.io` webhook URL! We used to have an open source `bitrise.io/hooks` endpoint for webhooks, but every new project registered should now get the new `hooks.bitrise.io` webhook URL automatically. If your webhook would still be a `bitrise.io/hooks` URL, please replace it with the new `hooks.bitrise.io/` URL - you can find this on the `Code` tab of your app! "%}
+Please note that a new trigger feature (like [skip ci](https://bitrise-io.github.io/devcenter/tips-and-tricks/skip-a-build/) or tag based triggering) is only available if you use the new `hooks.bitrise.io` webhook URL! We used to have an open source `bitrise.io/hooks` endpoint for webhooks, but every new project registered should now get the new `hooks.bitrise.io` webhook URL automatically.
+
+If you registered your app on [bitrise.io](https://www.bitrise.io) a while ago (especially before September 2016) you should check the webhook URL registered on the git hosting service you use (for example, GitHub, Bitbucket). 
+
+If your webhook would still be a `bitrise.io/hooks` URL, please replace it with the new `hooks.bitrise.io/` URL - you can find this on the `Code` tab of your app!
 
 ## Debugging
 
