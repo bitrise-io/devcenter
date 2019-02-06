@@ -18,5 +18,3 @@ The `Deploy to Bitrise.io` will deploy the following to the `Logs` and [Apps & A
 
 * your Xcode test results
 * your raw `xcodebuildoutput` log.
-
-To test
