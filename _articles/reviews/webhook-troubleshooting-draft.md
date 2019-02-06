@@ -7,9 +7,8 @@ published: false
 ---
 If you registered your app on [bitrise.io](https://www.bitrise.io) a while ago (especially if before September 2016) you should check the webhook URL registered on the git hosting service you use (GitHub, Bitbucket, ...).
 
-Please note that a new trigger feature (like [skip ci](https://bitrise-io.github.io/devcenter/tips-and-tricks/skip-a-build/) or tag based triggering) is only available if you use the new `hooks.bitrise.io` webhook URL! Initially we had a non open source `bitrise.io/hooks` endpoint for webhooks, but every new project registered should now get the new `hooks.bitrise.io` webhook URL automatically.
-
-**If your webhook would still be a** `**bitrise.io/hooks**` **URL, please replace it with the new** `**hooks.bitrise.io/**` **URL - you can find this on the** `**Code**` **tab of your app!**
+{% include message_box.html type="note" title="bitrise.io/hooks vs hooks.bitrise.io" content="
+Please note that a new trigger feature (like [skip ci](https://bitrise-io.github.io/devcenter/tips-and-tricks/skip-a-build/) or tag based triggering) is only available if you use the new `hooks.bitrise.io` webhook URL! We used to have an open source `bitrise.io/hooks` endpoint for webhooks, but every new project registered should now get the new `hooks.bitrise.io` webhook URL automatically. If your webhook would still be a `bitrise.io/hooks` URL, please replace it with the new `hooks.bitrise.io/` URL - you can find this on the `Code` tab of your app! "%}
 
 **Debugging - what happens with webhooks related to un-mapped branches**
 
