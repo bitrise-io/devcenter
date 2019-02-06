@@ -27,7 +27,7 @@ Simply open the webhook history on your source code hosting service, and check t
 
     {"success_responses":[],"failed_responses":[{"status":"error","message":"trigger pattern did not match any defined mapping: Run triggered with params: push-branch: , pr-source-branch: prtest/t1, pr-target-branch: develop, but no matching workflow found","service":"bitrise","slug":"...","build_slug":"","build_number":0,"build_url":"","triggered_workflow":""}]}
 
-**_These detailed responses are only generated if you use the new _**[**_hooks.bitrise.io_**](https://hooks.bitrise.io) **_webhook URL!_** _Initially we had a non open source_ `_bitrise.io/hooks_`_ endpoint for webhooks, but every new project registered should now get the new `__hooks.bitrise.io__` webhook URL automatically. If your webhook would still be a _`_bitrise.io/hook_` _URL, please replace it with the new_ `_hooks.bitrise.io/_` _URL - you can find this on the_ `_Code_` _tab of your app!_
+These detailed responses are only generated if you use the new [hooks.bitrise.io](https://hooks.bitrise.io) webhook URL! Initially we had a non open source `bitrise.io/hooks` endpoint for webhooks, but every new project registered should now get the new `hooks.bitrise.io` webhook URL automatically. If your webhook would still be a `bitrise.io/hook` URL, please replace it with the new `hooks.bitrise.io/` URL - you can find this on the `Code` tab of your app!
 
 ## Local debugging
 
