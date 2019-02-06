@@ -5,7 +5,7 @@ date: 2019-02-05 10:22:25 +0000
 published: false
 
 ---
-## bitrise.io/hooks vs hooks.bitrise.io
+## bitrise.io/hooks versus hooks.bitrise.io
 
 Please note that a new trigger feature (like [skip ci](https://bitrise-io.github.io/devcenter/tips-and-tricks/skip-a-build/) or tag based triggering) is only available if you use the new `hooks.bitrise.io` webhook URL! We used to have an open source `bitrise.io/hooks` endpoint for webhooks, but every new project registered should now get the new `hooks.bitrise.io` webhook URL automatically.
 
