@@ -17,9 +17,9 @@ You can't limit webhooks by branch in most of the source code hosting services. 
 
 This means that if you think a given event should have started a build but it did not:
 
-1. You should check your Bitrise `Activity` page to find out why it did not trigger a build. You can see all the ignored calls on your [Activity page on bitrise.io](http://www.bitrise.io/activity).
+1. You should check your Bitrise `Activity` page to find out why it failed to trigger a build. You can see all the ignored calls on your [Activity page on bitrise.io](http://www.bitrise.io/activity).
 
-   An ignored build call entry in the Activity list looks like:
+   An ignored build call entry in the Activity list looks like this:
 
        Build trigger failed: trigger-pattern (push_branch:) (pr_source_branch:prtest/t1) (pr_target_branch:develop) did not match any defined workflow in trigger_map
        PROJECT-NAME - Run triggered with params: push-branch: , pr-source-branch: prtest/t1, pr-target-branch: develop, but no matching workflow found
@@ -27,7 +27,7 @@ This means that if you think a given event should have started a build but it di
 
    Bitrise returns the reason to the source code hosting service, so if your service has a webhook history, you can see the reason why a given webhook failed to trigger a build!
 
-   As an example, a Bitrise response Bitrise returned. 
+   Here is an example for a response returned by Bitrise
 
        {"success_responses":[],"failed_responses":[{"status":"error","message":"trigger pattern did not match
 
