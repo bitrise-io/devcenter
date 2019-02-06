@@ -25,8 +25,7 @@ This means that if you think a given event should have started a build but it di
 2. You should check your source code hosting service's Webhook history. 
 
    Bitrise returns the reason to the source code hosting service (the service which sent the webhook, e.g. GitHub) too, so if your service has a webhook history (e.g. GitHub, Bitbucket, ...) you can see the reason why a given webhook did not trigger a build there too!
-
-Simply open the webhook history on your source code hosting service, and check the response Bitrise returned. It will be something like:
+3. Open the webhook history on your source code hosting service, and check the response Bitrise returned. It will be something like:
 
     {"success_responses":[],"failed_responses":[{"status":"error","message":"trigger pattern did not match any defined mapping: Run triggered with params: push-branch: , pr-source-branch: prtest/t1, pr-target-branch: develop, but no matching workflow found","service":"bitrise","slug":"...","build_slug":"","build_number":0,"build_url":"","triggered_workflow":""}]}
 
