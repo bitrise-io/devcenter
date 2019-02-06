@@ -65,7 +65,6 @@ pages:
 - _articles/getting-started/managing-files-on-bitrise.md
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
-- _articles/reviews/webhook-troubleshooting-draft.md
 - _articles/infrastructure/stack-update-and-removal-policy.md
 - _articles/infrastructure/available-stacks.md
 - _articles/reviews/build-trigger-api-draft.md
