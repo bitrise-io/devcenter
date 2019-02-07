@@ -17,7 +17,7 @@ Of course, there are some technical details that should be kept in mind. We'll g
 
 ### The value of an Environment Variable can only be a String
 
-Environment Variables can only hold `String` values. Even if you set a number or bool, like `1` or `true` as the value of the Environment Variable, that will be a string.
+Environment Variables can only hold `String` values. Even if you set a number or bool, like `1` or `true` as the value of the Environment Variable, it will be considered a string.
 
 ### Parent processes can't access Environment Variables exposed by child processes
 
