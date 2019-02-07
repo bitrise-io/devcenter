@@ -51,40 +51,29 @@ There are environment variables [exposed by the Bitrise CLI itself](/faq/availab
 
 All other environment variables are "processed" and made available _as the build progresses._
 
-There are two types of environment variables which are processed and made available before the workflow would be executed:
+The process works like this:
 
-* [Secrets](/bitrise-cli/secrets/)
-* App Env Vars (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
+1. There are two types of environment variables which are processed and made available before the workflow would be executed:
+   * [Secrets](/bitrise-cli/secrets/)
+   * App Env Vars (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
+2. One-off environment variables specified for the build through our API
+3. The processing of the specified Workflow starts, and the [environment variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available.
 
-After these, the processing of the specified Workflow starts, and the [environment variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available. If the workflow has before or after workflows, when a specific workflow is processed (right before the first step of the workflow would run) the workflow's environment variables are processed and made available.
+   If the workflow has workflows [chained before or after it](https://devcenter.bitrise.io/getting-started/getting-started-workflows/#chaining-workflows-together), the environment variables of the chained workflows are processed and made available right before the first step of the workflow would run.
+4. Step inputs are exposed for each Step, right before the Step would start.
+5. Step outputs are exposed by the specific Step, so those are available for subsequent Steps **after the Step finishes**.
 
-Step inputs are also environment variables; those are exposed only for the specific step, and right before the Step would start.
+### Why does the processing order matter?
 
-Last but not least Step outputs are exposed by the specific step, so those are available for subsequent steps **after the Step finishes**.
-
-**The environment variable processing order:**
-
-1. [Bitrise CLI exposed environment variables](/builds/available-environment-variables/#exposed-by-the-bitrise-cli)
-2. [Secrets](/bitrise-cli/secrets/)
-3. One-off environment variables specified for the build through the [Build Trigger API](/api/build-trigger)
-4. `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/))
-5. [Workflow environment variables](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
-6. Step inputs
-7. Step outputs
-
-**So, why does the processing order matter?**
-
-An environment variable is only available **after** it is processed and made available. **When you reference or use an environment variable, you can only reference/use those which are already processed!**
-
-A couple of examples:
+An environment variable is only available **after** it is processed and made available. **You can only reference/use environment variables that are already processed!**
 
 * In the value of a `Secret` environment variable, you can use environment variables exposed by Bitrise CLI, but you can't use any other environment variable (App Env Vars, Workflow Env Vars, ...), as those are not processed when secrets are processed.
-* In the value of an `App Env Var`, you can use environment variables from `Secrets` as well as the Bitrise CLI exposed ones, but you can't use Workflow Env Vars, nor Step inputs.
+* In the value of an `App Env Var`, you can use environment variables from `Secrets` as well as the Bitrise CLI exposed ones, but you can't use Workflow Env Vars or Step inputs.
 * In a `Workflow environment variable` you can use all the above (`Secrets`, `App Env Vars`, Bitrise CLI exposed env vars).
-* And finally, in step input values, you can use all other environment variables, including the workflow's environment variables, as well as the outputs of steps which run before the specific step.
+* In step input values, you can use all other environment variables, including the workflow's environment variables, as well as the outputs of Steps which run before the specific Step.
 
 ### Environment variables of chained workflows
 
-Once an environment variable of a workflow is processed and made available, it is available everywhere else during the build. This means that other workflows of the chain **can** use the environment variables of a workflow which is performed **before** the specific workflow, similar to Step outputs, which are available for every other step **after** the step (which generates the outputs) completes.
+Once an environment variable of a workflow is processed and made available, it is available everywhere else during the build. This means that other workflows of the chain **can** use the environment variables of a workflow which is performed **before** the specific workflow, similar to Step outputs, which are available for every other step **after** the Step that generates the outputs completes.
 
 You can find more information about environment variable availability of Workflow env vars in chained workflows in the [Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#note-about-workflow-environment-variables) documentation.
