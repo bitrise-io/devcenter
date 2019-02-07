@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/builds/sensitive-input-field.md
 - _articles/bitrise-cli/creating-your-own-bitrise-project-scanner.md
 - _articles/bitrise-cli/customizing-bitrise-yml.md
 - _articles/builds/Starting-builds-manually.md
@@ -44,7 +45,6 @@ pages:
 - _articles/tutorials/deploy/android-deployment.md
 - _articles/builds/build-numbering-and-app-versioning.md
 - _articles/getting-started/account-security.md
-- _articles/builds/sensitive-input-field.md
 - _articles/tutorials/xamarin/index.md
 - _articles/tutorials/xamarin/deploy-your-xamarin-app.md
 - _articles/bitrise-cli/index.md
