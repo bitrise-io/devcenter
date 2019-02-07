@@ -51,17 +51,16 @@ There are environment variables [exposed by the Bitrise CLI itself](/faq/availab
 
 All other environment variables are "processed" and made available _as the build progresses._
 
-The process works like this:
+The processing order is this: 
 
-1. There are two types of environment variables which are processed and made available before the workflow would be executed:
-   * [Secrets](/bitrise-cli/secrets/)
-   * App Env Vars (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
-2. One-off environment variables specified for the build through our API
-3. The processing of the specified Workflow starts, and the [environment variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available.
+1. Environment variables exposed by the Bitrise CLI
+2. [Secrets](/bitrise-cli/secrets/) and App Env Vars: both are processed before a workflow starts
+3. One-off environment variables specified for the build through our API
+4. Workflow environment variables: when the processing of the specified Workflow starts, the [environment variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available.
 
    If the workflow has workflows [chained before or after it](https://devcenter.bitrise.io/getting-started/getting-started-workflows/#chaining-workflows-together), the environment variables of the chained workflows are processed and made available right before the first step of the workflow would run.
-4. Step inputs are exposed for each Step, right before the Step would start.
-5. Step outputs are exposed by the specific Step, so those are available for subsequent Steps **after the Step finishes**.
+5. Step inputs: they are exposed for each Step, right before the Step would start.
+6. Step outputs: they are exposed by the specific Step, so those are available for subsequent Steps **after the Step finishes**.
 
 ### Why does the processing order matter?
 
