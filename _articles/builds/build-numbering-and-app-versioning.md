@@ -17,7 +17,7 @@ Set the build number manually on the website. This is useful if, for example, yo
 
 Open your app and go to its `Settings` tab.
 
-![build numbering](/img/builds/build-numbering.png)
+![](/img/build-number.png)
 
 Under `YOUR NEXT BUILD NUMBER WILL BE`, the number of your next build will be displayed (unsurprisingly). This number is incremented automatically whenever a new build is triggered but here you can also set it manually.
 
