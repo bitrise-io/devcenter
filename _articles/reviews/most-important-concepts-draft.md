@@ -5,19 +5,21 @@ date: 2019-02-06 17:11:39 +0000
 published: false
 
 ---
+To understand Bitrise in depth, there are a few key concepts that must be kept in mind. These are immutable and crucial to the way we do things. 
+
 ## Every input, output and parameter is an Environment Variable
 
 Every step input, step output, secret environment variable, app environment variable and workflow environment variable (basically every input and variable in your build config) is an environment variable.
 
-There's nothing special about how Bitrise handles environment variables, **these are regular environment variable, with the same rules and restrictions as any other environment variable.**
+There's nothing special about how Bitrise handles environment variables. **These are all regular environment variables, with the same rules and restrictions as any other environment variable.**
 
-To highlight a couple of technical details:
+Of course, there are some technical details that should be kept in mind. We'll go over some of them. 
 
 ### The value of an Environment Variable can only be a String
 
 Environment Variables can only hold `String` values. Even if you set a number or bool, like `1` or `true` as the value of the Environment Variable, that will be a string.
 
-### Parent process can't access  Environment Variables exposed by child processes
+### Parent processes can't access Environment Variables exposed by child processes
 
 Parent process(es) can't access Environment Variables exposed by child processes.
 
