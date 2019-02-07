@@ -23,13 +23,23 @@ Environment Variables can only hold `String` values. Even if you set a number or
 
 Parent process(es) can't access Environment Variables exposed by child processes.
 
-For example, if you run a `my_bash_script.sh` in your Terminal with `bash my_bash_script.sh`, and `my_bash_script.sh` sets an environment variable with `export MY_VAR=the-value`, you won't be able to access `MY_VAR` in your Terminal after the script is finished, `MY_VAR` will only be available in `my_bash_script.sh` **and** in the processes / scripts started by `my_bash_script.sh`.
+For example, you run a script in your Terminal:
 
-In terms of Bitrise CLI this means that if you `export MY_VAR=...` in a Script step, `MY_VAR` won't be available in subsequent steps. This is true for the steps too, regardless of which language the step is written in.
+```
+bash my_bash_script.sh
+```
+
+Let's say this script sets a variable called `MY_VAR`: 
+
+```
+export MY_VAR=the-value`
+```
+
+Once the script is finished, you won't be able to access `MY_VAR` in your Terminal. It is only available in the script and in the processes or scripts started by the script. 
+
+In terms of Bitrise CLI this means that if you `export MY_VAR=...` in a Script Step, `MY_VAR` won't be available in subsequent Steps. This is true for the Steps too, regardless of which language the Step is written in.
 
 Bitrise CLI includes a mechanism for exposing environment variables from Steps so that subsequent Steps can also access it, through the Bitrise CLI tool called [envman](https://github.com/bitrise-io/envman).
-
-To set an environment variable in your script or in your step to make that available in other steps too, you have to do that through `envman`.
 
 A simple example:
 
@@ -41,11 +51,14 @@ You can find more examples in [envman's README](https://github.com/bitrise-io/en
 
 Environment variables are available **after** the environment variable is "processed".
 
-There are a few environment variables [exposed by the Bitrise CLI itself](/faq/available-environment-variables/#exposed-by-the-bitrise-cli), those are available from the start (e.g. `BITRISE_SOURCE_DIR` and `BITRISE_TRIGGERED_WORKFLOW_ID`).
+There are environment variables [exposed by the Bitrise CLI itself](/faq/available-environment-variables/#exposed-by-the-bitrise-cli). These are available from the start: for example, `BITRISE_SOURCE_DIR` and `BITRISE_TRIGGERED_WORKFLOW_ID`.
 
-All other environment variables are "processed" / made available _as the build progresses._
+All other environment variables are "processed" and made available _as the build progresses._
 
-There are two types of environment variables which are processed and made available before the workflow would be executed: [Secrets](/bitrise-cli/secrets/) and `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
+There are two types of environment variables which are processed and made available before the workflow would be executed: 
+
+- [Secrets](/bitrise-cli/secrets/)
+- App Env Vars (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
 
 After these, the processing of the specified Workflow starts, and the [environment variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available. If the workflow has before or after workflows, when a specific workflow is processed (right before the first step of the workflow would run) the workflow's environment variables are processed and made available.
 
