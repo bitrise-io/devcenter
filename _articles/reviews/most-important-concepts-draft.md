@@ -9,7 +9,13 @@ To understand Bitrise in depth, there are a few key concepts that must be kept i
 
 ## Every input, output and parameter is an Environment Variable
 
-Every step input, step output, secret environment variable, app environment variable and workflow environment variable (basically every input and variable in your build config) is an environment variable.
+Every input and variable in your build configuration is an environment variable. For example:
+
+* step inputs
+* step outputs
+* secrets
+* app environment variables
+* workflow environment variables 
 
 There's nothing special about how Bitrise handles environment variables. **These are all regular environment variables, with the same rules and restrictions as any other environment variable.**
 
