@@ -5,7 +5,7 @@ date: 2019-02-06 17:11:39 +0000
 published: false
 
 ---
-To understand Bitrise in depth, there are a few key concepts that must be kept in mind. These are immutable and crucial to the way we do things. 
+To understand Bitrise in depth, there are a few key concepts that must be kept in mind. These are immutable and crucial to the way we do things.
 
 ## Every input, output and parameter is an Environment Variable
 
@@ -13,7 +13,7 @@ Every step input, step output, secret environment variable, app environment vari
 
 There's nothing special about how Bitrise handles environment variables. **These are all regular environment variables, with the same rules and restrictions as any other environment variable.**
 
-Of course, there are some technical details that should be kept in mind. We'll go over some of them. 
+Of course, there are some technical details that should be kept in mind. We'll go over some of them.
 
 ### The value of an Environment Variable can only be a String
 
@@ -25,21 +25,17 @@ Parent process(es) can't access Environment Variables exposed by child processes
 
 For example, you run a script in your Terminal:
 
-```
-bash my_bash_script.sh
-```
+    bash my_bash_script.sh
 
-Let's say this script sets a variable called `MY_VAR`: 
+Let's say this script sets a variable called `MY_VAR`:
 
-```
-export MY_VAR=the-value`
-```
+    export MY_VAR=the-value`
 
-Once the script is finished, you won't be able to access `MY_VAR` in your Terminal. It is only available in the script and in the processes or scripts started by the script. 
+Once the script is finished, you won't be able to access `MY_VAR` in your Terminal. It is only available in the script and in the processes or scripts started by the script.
 
-In terms of Bitrise CLI this means that if you `export MY_VAR=...` in a Script Step, `MY_VAR` won't be available in subsequent Steps. This is true for the Steps too, regardless of which language the Step is written in.
+This means that if you use `export MY_VAR=...` in a Script Step, `MY_VAR` won't be available in subsequent Steps. This is true for other Steps too, regardless of which language the Step is written in.
 
-Bitrise CLI includes a mechanism for exposing environment variables from Steps so that subsequent Steps can also access it, through the Bitrise CLI tool called [envman](https://github.com/bitrise-io/envman).
+The Bitrise CLI includes a mechanism for exposing environment variables from Steps so that subsequent Steps can also access it, through the Bitrise CLI tool called [envman](https://github.com/bitrise-io/envman).
 
 A simple example:
 
@@ -55,10 +51,10 @@ There are environment variables [exposed by the Bitrise CLI itself](/faq/availab
 
 All other environment variables are "processed" and made available _as the build progresses._
 
-There are two types of environment variables which are processed and made available before the workflow would be executed: 
+There are two types of environment variables which are processed and made available before the workflow would be executed:
 
-- [Secrets](/bitrise-cli/secrets/)
-- App Env Vars (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
+* [Secrets](/bitrise-cli/secrets/)
+* App Env Vars (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
 
 After these, the processing of the specified Workflow starts, and the [environment variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available. If the workflow has before or after workflows, when a specific workflow is processed (right before the first step of the workflow would run) the workflow's environment variables are processed and made available.
 
