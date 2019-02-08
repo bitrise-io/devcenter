@@ -15,7 +15,6 @@ fields:
   default: ''
 pages:
 - _articles/builds/sensitive-input-field.md
-- _articles/reviews/attach-any-file-as-an-artifact-draft.md
 - _articles/bitrise-cli/creating-your-own-bitrise-project-scanner.md
 - _articles/bitrise-cli/customizing-bitrise-yml.md
 - _articles/builds/Starting-builds-manually.md
@@ -62,6 +61,7 @@ pages:
 - _articles/getting-started/getting-started-with-flutter-apps.md
 - _articles/builds/selective_builds.md
 - _articles/builds/Scheduling-Builds.md
+- _articles/reviews/attach-any-file-as-an-artifact-draft.md
 - _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/getting-started/managing-files-on-bitrise.md
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
