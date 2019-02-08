@@ -5,22 +5,23 @@ date: 2019-02-07 16:54:44 +0000
 published: false
 
 ---
-For this example we'll attach the OS X `system.log` to the Build as an Artifact, but this works for any file, even for ones that you generate during the build, you just have to replace the example path we use (`/var/log/system.log`) with the path you want to deploy. You can of course use Environment Variables in the path too, like `$HOME/`.
+You can attach any file to a build as an artifact with Bitrise, even files that you generate during the build. Deployed Artifacts appear on the Build's page, in the `Artifacts & Apps` section, and anyone who has access to the Build page can download it from there.
 
-_Deployed Artifacts appear on the Build's page, in the Artifacts & Apps section, and anyone who has access to the Build page can download it from there._
+We'll go through an example of how to do this. 
 
-To do this:
+1. Add a `Deploy to Bitrise.io` Step to your workflow. 
 
-* Add a new [Deploy to Bitrise.io](https://github.com/bitrise-io/steps-deploy-to-bitrise-io) step to your workflow, to any point you want to (can be the very last step in the workflow, but of course if you want to deploy a file which is generated during the build you should add the step **after** the file is generated and available).
-* Change the `Deploy directory or file path` input of the Step to: `/var/log/system.log`
+   If you want to attach a file you generated during the build, add this Step after the Step that generates the file or makes it available. Otherwise it can be at any point
+2. Change the `Deploy directory or file path` input of the Step to the path of the file you want to deploy.
+   An example in yaml format:
+   ```yaml
+   - deploy-to-bitrise-io:
+      inputs:
+      - deploy_path: "/var/log/system.log"
+   ```
+3. Run your build.
 
-A YAML configuration example of the step & input:
-
-        - deploy-to-bitrise-io:
-            inputs:
-            - deploy_path: "/var/log/system.log"
-
-That's all, your next build will attach the OS X system log file to your build - you'll see it at the top of the Build's page.
+That's it! Your next build will attach your file - in our example, the OS X system log file - to your build and you will see on the Build's page. 
 
 {% include message_box.html type="note" title="By default the **Deploy to Bitrise.io** will always run" content=" By default the `Deploy to Bitrise.io` will always run, even if a previous step fails, **so you can deploy failed step/tool logs too.** "%}
 
