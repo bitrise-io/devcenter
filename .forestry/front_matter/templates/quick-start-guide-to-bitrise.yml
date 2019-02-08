@@ -61,10 +61,10 @@ pages:
 - _articles/getting-started/getting-started-with-flutter-apps.md
 - _articles/builds/selective_builds.md
 - _articles/builds/Scheduling-Builds.md
-- _articles/reviews/attach-any-file-as-an-artifact-draft.md
 - _articles/bitrise-cli/offline-workflow-editor.md
 - _articles/getting-started/managing-files-on-bitrise.md
 - _articles/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
+- _articles/reviews/attach-any-file-as-an-artifact-draft.md
 - _articles/getting-started/getting-started-with-ionic-cordova-apps.md
 - _articles/infrastructure/stack-update-and-removal-policy.md
 - _articles/infrastructure/available-stacks.md
