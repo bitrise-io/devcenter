@@ -4,6 +4,7 @@ date: 2019-02-11 11:57:59 +0000
 menu:
   android-deploy:
     weight: 5
+redirect_from: []
 published: false
 
 ---
@@ -51,10 +52,35 @@ There is a small difference between configuring your workflow for `robo` and `in
 6. Check if `robo` is the selected `Test type`.
 7. Add the type of test device in the `Test devices` input field. If choosing a different device than the default, your input should have the format of `deviceID,version,language,orientation` separated with `,`.
 
-   ![](/img/robo-test-1.png)
+   ![](https://devcenter.bitrise.io/img/robo-test-1.png)
 
    Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/android/available-testing-devices).
 8. Start a build and [check your test results](/testing/device-testing-for-android/#running-instrumentation-tests).
+
+#### Setting user interaction for a successful robo test
+
+If your app needs specific user input to fill out text fields for a successful robo test (for example, since certain UI elements of the app are only accessible for the test if username and email address are populated for log in), then we suggest you to use `Robo Directives` input field.
+
+1. Click `Robo Test` section in the `[BETA] Virtual Device Testing for Android` Step.
+2. Find `Robo directives` and set your user input directives.
+   * make sure you provide a comma-separated list of key-value pairs, where the key is the Android resource name of the target UI element and the value is the text string.
+   * make sure you set only one directives per line and you separate parameters with `,` character.
+   * make sure you provide your test credentials and not the production ones.
+
+Note that EditText fields are supported but not text fields in WebView UI elements.
+
+![](/img/robo-directives.png)
+
+Based on the input you provide, you can successfully run a robo test and check the test results on the `DEVICE TESTS` tab of your Build's page. The test results can be, for example:
+
+* screenshots of the final state of the Emulator screen
+* recorded video
+* logs
+* files
+
+Here is a screenshot of a successful robo test, where the test could get to `My application` by populating the `email` and `password` fields with the pre-defined directives.
+
+![](/img/successful-robo-test.jpg)
 
 ### Running instrumentation tests
 
