@@ -70,9 +70,9 @@ pages:
 - _articles/infrastructure/available-stacks.md
 - _articles/reviews/build-trigger-api-draft.md
 - _articles/reviews/android-app-bundle-draft.md
+- _articles/reviews/screen-recording-of-ui-testing-with-appium.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
-- _articles/reviews/screen-recording-of-ui-testing-with-appium.md
 - _articles/webhooks/index.md
 - _articles/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/reviews/most-important-concepts-draft.md
