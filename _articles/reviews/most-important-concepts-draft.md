@@ -15,7 +15,7 @@ Every input and variable in your build configuration is an environment variable.
 * step outputs
 * secrets
 * app environment variables
-* workflow environment variables 
+* workflow environment variables
 
 There's nothing special about how Bitrise handles environment variables. **These are all regular environment variables, with the same rules and restrictions as any other environment variable.**
 
@@ -57,7 +57,7 @@ There are environment variables [exposed by the Bitrise CLI itself](/faq/availab
 
 All other environment variables are "processed" and made available _as the build progresses._
 
-The processing order is this: 
+The processing order is this:
 
 1. Environment variables exposed by the Bitrise CLI
 2. [Secrets](/bitrise-cli/secrets/) and App Env Vars: both are processed before a workflow starts
