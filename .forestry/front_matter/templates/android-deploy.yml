@@ -21,3 +21,4 @@ fields:
         required: true
 pages:
 - _articles/deploy/android-deploy/deploying-android-apps.md
+- _articles/reviews/device-testing-for-android-draft.md
