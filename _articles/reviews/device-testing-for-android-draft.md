@@ -78,7 +78,7 @@ Based on the input you provide, you can successfully run a robo test and check t
 * logs
 * files
 
-Here is a screenshot of a successful robo test, where the test could get to `My application` by populating the `email` and `password` fields with the pre-defined directives.
+Here is a screenshot of a successful robo test, where robo test could get all the way to `My application` by populating the `email` and `password` fields with the pre-defined directives.
 
 ![](/img/successful-robo-test.jpg)
 
