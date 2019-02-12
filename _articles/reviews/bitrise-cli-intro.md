@@ -5,17 +5,15 @@ date: 2019-02-11 16:11:52 +0000
 published: false
 
 ---
-Bitrise is a collection of tools and services to help you with the development and automation of your software projects, with a main focus on mobile apps.
-
-Most of this DevCenter describes things related to [bitrise.io](https://www.bitrise.io), the hosted automation service, but the heart of Bitrise is the [open source Bitrise CLI / runner](https://github.com/bitrise-io/bitrise), which is responsible for interpreting the build configuration and executing it.
-
-This open source runner is referred to as `Bitrise CLI` or `Bitrise`, and **it's a tool which you can install and run on your own Mac/PC!**
-
-This section of the DevCenter is dedicated to this runner (`Bitrise CLI`) and the `bitrise.yml` configuration format, **the things described here don't even require a** [**bitrise.io**](https://www.bitrise.io) **account**, the only requirement is that you install the `Bitrise CLI` on your Mac/PC.
-
-{% include message_box.html type="note" title="Bitrise CLI on bitrise.io" content=" The CLI you can install is exactly the same as what's used on [bitrise.io](https://www.bitrise.io). When a build starts on [bitrise.io](https://www.bitrise.io), a virtual machine is created for the build with the Bitrise CLI preinstalled, and once the virtual machine is ready, the build is performed through the Bitrise CLI. "%}
+Bitrise is a [collection of tools](https://devcenter.bitrise.io/tools/bitrise-tools/) and [services](https://www.bitrise.io) to help you with the development and automation of your software projects, with a main focus on mobile apps. Most of our DevCenter describes things related to [bitrise.io](https://www.bitrise.io), the hosted automation service. The heart of Bitrise is the [open source Bitrise CLI / runner](https://github.com/bitrise-io/bitrise), which is responsible for interpreting and executing the build configuration.
 
 ## Bitrise CLI - the open source, offline, automation runner
+
+This open source runner, referred to as `Bitrise CLI` or `Bitrise`, is a tool which you can install and run on your own Mac/PC!
+
+{% include message_box.html type="info" title="Do I need a bitrise.io account to use the Bitrise CLI offline runner" content=" You do not need a bitrise.io account to use the offline automation runner, the only requirement is to install `Bitrise CLI` on your Mac/PC.  "%}
+
+{% include message_box.html type="note" title="Bitrise CLI on bitrise.io" content=" The CLI you can install is exactly the same as what's used on [bitrise.io](https://www.bitrise.io). When a build starts on [bitrise.io](https://www.bitrise.io), a virtual machine is created for the build with the Bitrise CLI preinstalled, and once the virtual machine is ready, the build is performed through the Bitrise CLI. "%}
 
 To run a Bitrise build on your machine, you can install our [open source runner](https://www.bitrise.io/cli) and use the `bitrise` command to execute your _workflows_ locally. It's a great help when you're developing steps, debugging builds, or just want to use Bitrise for _any kind of automation_ on your machine.
 
