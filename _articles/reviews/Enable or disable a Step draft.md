@@ -11,14 +11,14 @@ We mostly use `run_if` expressions to do these things. [Check out the template e
 
 {% include message_box.html type="info" title="A **run_if** can be any valid **Go** template" content=" A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `\"True\"`, `\"t\"`, `\"yes\"` or `\"y\"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't. "%}
 
-An example `run_if` to check a **custom environment variable** (you can expose environment variables from your scripts too, using [envman](https://github.com/bitrise-io/envman/)):
+An example `run_if` to check a **custom environment variable**:
 
     {% raw %}
     run_if: |-
      	{{enveq "CUSTOM_ENV_VAR_KEY" "test value to test against"}}
     {% endraw %}    
 
-This `run_if` will skip the step in every case when the value of `CUSTOM_ENV_VAR_KEY` is not `test value to test against`.
+This `run_if` will skip the Step if the value of `CUSTOM_ENV_VAR_KEY` is not `test value to test against`.
 
 ## Disabling a Step
 
