@@ -23,9 +23,9 @@ You can also generate code coverage files, and export the test results as a comp
 
 ### Configuring the Xcode tests on Bitrise
 
-The default input values of the `Xcode Test` Step could work if your tests are written correctly. However, we recommend making sure that all the inputs have the value you want so the Step can do what you need!
+The default input values of the `Xcode Test for iOS` Step could work if your tests are written correctly. However, we recommend making sure that all the inputs have the value you want so the Step can do what you need!
 
-Check the following required inputs of the `Xcode Test` Step before running a build. These inputs determine the sort of tests the Step will run.
+Check the following required inputs of the `Xcode Test for iOS` Step before running a build. These inputs determine the sort of tests the Step will run.
 
 * **Scheme name**: the scheme you use must be marked as Shared in Xcode!
 * **Device**: set it to the value that is shown in Xcode's device selection dropdown menu.
@@ -34,7 +34,7 @@ Check the following required inputs of the `Xcode Test` Step before running a bu
 
 ### Generating code coverage files
 
-By default, the `Xcode Test` Step does not generate code coverage files. If you need them, however, it's easy to change: just set the `Generate code coverage files?` to `yes`.
+By default, the `Xcode Test for iOS` Step does not generate code coverage files. If you need them, however, it's easy to change: just set the `Generate code coverage files?` to `yes`.
 
 This sets two additional flags to the `xcodebuild` command:
 
@@ -46,4 +46,4 @@ If you run a successful build, code coverage files will be included in your resu
 
 You can export the attachments of your UITest into the `BITRISE_DEPLOY_DIR` directory. These attachments include screenshots taken during the UI test, as well as any other artifacts that might have been generated. They are exported as a compressed zip file.
 
-By default, the `Xcode Test` Step does not export artifacts of the UITest. If you want to export them, set the `Export UITest Artifacts` input of the `Xcode Test` Step to `true`.
+By default, the `Xcode Test for iOS` Step does not export artifacts of the UITest. If you want to export them, set the `Export UITest Artifacts` input of the `Xcode Test for iOS` Step to `true`.
