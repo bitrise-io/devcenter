@@ -51,6 +51,15 @@ You can also create your own Step Library if you want to, but it's usually easie
 
 Custom StepLibs can also provide fallbacks (alternative download URLs, caches), automatic and periodic checks to provide the best reliability, but you get all these for free if you use the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
 
+{% include message_box.html type="info" title="About Steps" content="
+Learn more about Steps here:
+"%}
+
+* [Steps in YAML](/bitrise-cli/steps/)
+* [Step properties](/bitrise-cli/step-properties/)
+* [Step inputs](/bitrise-cli/step-inputs/)
+* [Step outputs](/bitrise-cli/step-outputs/)
+
 ### Why to use the StepLib and Steps instead of ad-hoc build scripts?
 
 Same reason why code libraries / dependencies are awesome:
