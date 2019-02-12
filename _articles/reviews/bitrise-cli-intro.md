@@ -32,9 +32,9 @@ Head over to other articles to learn more about `Bitrise CLI`:
 
 ## bitrise.yml - the configuration format
 
-The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`, as that's the expected file name the configuration should be saved with.
+The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.
 
-_Technically the CLI can also accept the configuration in JSON format, and the file name can be changed too, but if you save the configuration into a file named_ `_bitrise.yml_`_, you can simply_ `_bitrise run_` _in that directory, without specifying any configuration path, and the CLI will read the configuration from_ `_bitrise.yml_` _automatically._
+Note, that technically the `Bitrise CLI` can also accept the configuration in JSON format, and the file name can be changed too, but if you save the configuration into a file named `bitrise.yml`, you can simply `bitrise run` in that directory without specifying any configuration path! This way the CLI will read the configuration from `bitrise.yml` automatically.
 
 ## Step Library (StepLib)
 
