@@ -36,6 +36,15 @@ The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`. T
 
 Note, that technically the `Bitrise CLI` can also accept the configuration in JSON format, and the file name can be changed too, but if you save the configuration into a file named `bitrise.yml`, you can simply `bitrise run` in that directory without specifying any configuration path! This way the CLI will read the configuration from `bitrise.yml` automatically.
 
+{% include message_box.html type="info" title="More information on bitrise.yml" content="
+
+Head over to other articles to learn more about `bitrise.yml`
+
+* [Basics of bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)
+* [Customizing bitrise.yml](/bitrise-cli/customizing-bitrise-yml/)
+
+"%}
+
 ## Step Library (StepLib)
 
 The StepLib is the collection of the build steps you can use in your `bitrise.yml`. The steps in the official [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib) are all open source, **you can write your own** too and then share it with others! See the [step-template](https://github.com/bitrise-steplib/step-template) for more information.
