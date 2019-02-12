@@ -47,15 +47,13 @@ Head over to other articles to learn more about `bitrise.yml`
 
 ## Step Library (StepLib)
 
-The StepLib is the collection of the build steps you can use in your `bitrise.yml`. The steps in the official [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib) are all open source, **you can write your own** too and then share it with others! See the [step-template](https://github.com/bitrise-steplib/step-template) for more information.
+The StepLib is the collection of the build steps you can use in your `bitrise.yml`. The steps in the official [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib) are all open source. You [can write your own too and then share](/bitrise-cli/create-your-own-step/) it with others!
 
 You can also create your own Step Library if you want to, but it's usually easier to just reference your steps with their `git clone` URL directly if you don't want to share it with others.
 
 {% include message_box.html type="note" title="Custom StepLib support in tools" content=" The Bitrise CLI tools can work with custom step libraries, but other tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io) might be limited in functionality for steps not available in the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib). "%}
 
-If possible, you should share your steps in the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib), to help others as well as for the extra reliability the StepLib offers.
-
-_Custom StepLibs can also provide fallbacks (alternative download URLs, caches), automatic and preiodic checks etc. to provide the best reliability, but you get all these for free if you use the main Bitrise StepLib._
+Custom StepLibs can also provide fallbacks (alternative download URLs, caches), automatic and periodic checks to provide the best reliability, but you get all these for free if you use the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
 
 ### Why to use the StepLib and Steps instead of ad-hoc build scripts?
 
