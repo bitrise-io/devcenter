@@ -53,12 +53,13 @@ Custom StepLibs can also provide fallbacks (alternative download URLs, caches), 
 
 {% include message_box.html type="info" title="About Steps" content="
 Learn more about Steps here:
-"%}
-
 * [Steps in YAML](/bitrise-cli/steps/)
 * [Step properties](/bitrise-cli/step-properties/)
 * [Step inputs](/bitrise-cli/step-inputs/)
 * [Step outputs](/bitrise-cli/step-outputs/)
+"%}
+
+
 
 ### Why to use the StepLib and Steps instead of ad-hoc build scripts?
 
