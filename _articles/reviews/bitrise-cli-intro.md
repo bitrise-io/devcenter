@@ -5,23 +5,19 @@ date: 2019-02-11 16:11:52 +0000
 published: false
 
 ---
-Bitrise is a [collection of tools](https://devcenter.bitrise.io/tools/bitrise-tools/) and [services](https://www.bitrise.io) to help you with the development and automation of your software projects, with a main focus on mobile apps. Most of our DevCenter describes things related to [bitrise.io](https://www.bitrise.io), the hosted automation service. The heart of Bitrise is the [open source Bitrise CLI / runner](https://github.com/bitrise-io/bitrise), which is responsible for interpreting and executing the build configuration.
+Bitrise is a [collection of tools](https://devcenter.bitrise.io/tools/bitrise-tools/) and [services](https://www.bitrise.io) to help you with the development and automation of your software projects, with a main focus on mobile apps. Most of our DevCenter describes things related to [bitrise.io](https://www.bitrise.io), the hosted automation service, however, the heart of Bitrise is the [open source Bitrise CLI / runner](https://github.com/bitrise-io/bitrise), which is responsible for interpreting and executing the build configuration.
 
 ## Bitrise CLI - the open source, offline, automation runner
 
-This open source runner, referred to as `Bitrise CLI` or `Bitrise`, is a tool which you can install and run on your own Mac/PC! **This CLI is exactly the same as what's used on** [bitrise.io](https://www.bitrise.io). What is means is that when a build starts on [bitrise.io](https://www.bitrise.io), a virtual machine is created for the build with the `Bitrise CLI` preinstalled, and once the virtual machine is ready, the build is performed through the `Bitrise CLI`.
+This open source runner, referred to as `Bitrise CLI` or `Bitrise`, is a tool which you can install and run on your own Mac/PC! **This CLI is exactly the same as what's used on** [bitrise.io](https://www.bitrise.io). What it means is that when a build starts on [bitrise.io](https://www.bitrise.io), a virtual machine is created for the build with the `Bitrise CLI` preinstalled, and once the virtual machine is ready, the build is performed through the `Bitrise CLI`.
 
-{% include message_box.html type="note" title="Do I need a bitrise.io account to use the Bitrise CLI offline runner?" content=" You do not need a bitrise.io account to use the offline automation runner, the only requirement is to install `Bitrise CLI` on your Mac/PC.  "%}
+{% include message_box.html type="note" title="Do I need a bitrise.io account to use the Bitrise CLI offline runner?" content=" You do not need a [bitrise.io](https://www.bitrise.io) account to use the offline automation runner, the only requirement is to install `Bitrise CLI` on your Mac/PC.  "%}
 
-To run a Bitrise build on your machine, you can install our [open source runner](https://www.bitrise.io/cli) and use the `bitrise` command to **execute your workflows locally**. It's a great help when you're:
+To run a Bitrise build on your machine, you can install our [open source runner](https://www.bitrise.io/cli) and use the `bitrise` command to **execute your workflows locally**. It's a great help when you're developing steps, debugging builds, or just want to use Bitrise for any kind of automation on your machine.
 
-* developing steps,
-* debugging builds,
-* want to use Bitrise for any kind of automation on your machine.
+{% include message_box.html type="info" title="Explore Bitrise CLI" content="
 
-{% include message_box.html type="info" title="More information on Bitrise CLI" content="
-
-Head over to other articles to learn more about `Bitrise CLI`:
+Learn more about what else you can do with `Bitrise CLI`:
 
 * [Installing and updating the Bitrise CLI](/bitrise-cli/installation/)
 * [Installing and upgrading the offline Workflow Editor](/bitrise-cli/offline-workflow-editor/)
@@ -36,9 +32,9 @@ The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`. T
 
 Note, that technically the `Bitrise CLI` can also accept the configuration in JSON format, and the file name can be changed too, but if you save the configuration into a file named `bitrise.yml`, you can simply `bitrise run` in that directory without specifying any configuration path! This way the CLI will read the configuration from `bitrise.yml` automatically.
 
-{% include message_box.html type="info" title="More information on bitrise.yml" content="
+{% include message_box.html type="info" title="Explore bitrise.yml" content="
 
-Head over to other articles to learn more about `bitrise.yml`
+ Learn more about what else you can do with `bitrise.yml`:
 
 * [Basics of bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)
 * [Customizing bitrise.yml](/bitrise-cli/customizing-bitrise-yml/)

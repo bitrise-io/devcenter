@@ -75,6 +75,7 @@ pages:
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/webhooks/index.md
+- _articles/reviews/Enable or disable a Step draft.md
 - _articles/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/tips-and-tricks/screen-recording-of-android-ui-tests-with-script-steps.md
 - _articles/reviews/xcode-test-draft.md
