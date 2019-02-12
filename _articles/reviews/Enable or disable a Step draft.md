@@ -28,6 +28,21 @@ Example:
 
 ## Running a Step only in CI environment
 
+Running a Step only in a CI environment means your build will skip that particular Step for local builds. Like disabling Steps, you can do this with a `run_if` expression. 
+
+1. Open your app's `bitrise.yml` file.
+2. Find the Step that you want to disable.
+3. Add `run_if: .IsCI` to it.
+
+Example:
+
+    - script:
+        run_if: .IsCI
+        inputs:
+        - content: |-
+            #!/bin/bash
+            echo "This will only ever run in a CI environment because run_if: IsCI"
+
 This is quite similar to how you [completely disable a step](#disable-a-step), but instead of specifying `false` as the `run_if` expression, you specify `.IsCI`, which will only be true in CI mode.
 
 This method can be useful to debug builds locally, where you don't want to run specific steps on your own Mac/PC. Lots of Steps have this `run_if` flag set by default, for example the `Git Clone` step is configured with `run_if: .IsCI` in the step's default configuration (`step.yml`), because the most common use case when you run a build locally is that you already have the code on your Mac/PC and so you don't want to do a `Git Clone`. Of course you can change the `run_if` property of any step, so you can specify a `run_if: true` for the `Git Clone` step if you want to run it locally too.
