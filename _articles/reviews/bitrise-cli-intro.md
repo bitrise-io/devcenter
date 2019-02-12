@@ -5,7 +5,7 @@ date: 2019-02-11 16:11:52 +0000
 published: false
 
 ---
-Bitrise is a [collection of tools](https://devcenter.bitrise.io/tools/bitrise-tools/) and [services](https://www.bitrise.io) to help you with the development and automation of your software projects, with a main focus on mobile apps. Most of our DevCenter describes things related to [bitrise.io](https://www.bitrise.io), the hosted automation service, however, the heart of Bitrise is the [open source Bitrise CLI / runner](https://github.com/bitrise-io/bitrise), which is responsible for interpreting and executing the build configuration.
+Bitrise is a [collection of tools](https://devcenter.bitrise.io/tools/bitrise-tools/) and [services](https://www.bitrise.io) to help you with the development and automation of your software projects, with a main focus on mobile apps. Most of our DevCenter describes functionalities related to [bitrise.io](https://www.bitrise.io), the hosted automation service, however, the heart of Bitrise is the [open source Bitrise CLI / runner](https://github.com/bitrise-io/bitrise), which is responsible for interpreting and executing the build configuration.
 
 ## Bitrise CLI - the open source, offline, automation runner
 
@@ -34,7 +34,7 @@ Note, that technically the `Bitrise CLI` can also accept the configuration in JS
 
 {% include message_box.html type="info" title="Explore bitrise.yml" content="
 
- Learn more about what else you can do with `bitrise.yml`:
+Learn more about what else you can do with `bitrise.yml`:
 
 * [Basics of bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)
 * [Customizing bitrise.yml](/bitrise-cli/customizing-bitrise-yml/)
