@@ -43,7 +43,7 @@ Since your keystore is gitignored, you have to upload your keystore to the `GENE
 8. Type your environment variable, for example, `$BITRISEIO_XAMARIN_KEYSTORE_URL` in the `Download source url` field.
 9. Set your keystore path in the `Download destination path`.
 
-![Screenshot](/img/android-code-signing/file-downloader.png)
+![](/img/file-downloader.png)
 
 {% include message_box.html type="important" title="Bitrise keystore path" content="
 Ensure that your Bitrise keystore path is the same as your local path relative to your project root. For example, if `keystore.jks` is in your project's root, then your Bitrise keystore path has to be `$BITRISE_SOURCE_DIR/keystore.jks`.
