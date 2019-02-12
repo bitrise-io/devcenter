@@ -26,7 +26,7 @@ Example:
 
 {% include message_box.html type="note" title="Experimenting with workflows" content="To experiment with different configurations for a workflow, without removing or disabling Steps, we recommend cloning the workflow. You can modify the cloned workflow as much as you wish without changing anything in the original."%}
 
-## Running a Step only in CI environment
+## Running a Step only in a CI environment
 
 Running a Step only in a CI environment means your build will skip that particular Step for local builds. Like disabling Steps, you can do this with a `run_if` expression. Use this to debug builds locally.
 
@@ -43,15 +43,28 @@ Example:
             #!/bin/bash
             echo "This will only ever run in a CI environment because run_if: IsCI"
 
-{% include message_box.html type="info" title="My message" content="Many Steps have this .`IsCI` flag set by default: for example, the `Git Clone` Step. However, you can change the `run_if` property of these Steps, too: just set it to `run_if: true`."%} 
+{% include message_box.html type="info" title="My message" content="Many Steps have this .`IsCI` flag set by default: for example, the `Git Clone` Step. However, you can change the `run_if` property of these Steps, too: just set it to `run_if: true`."%}
 
 {% include message_box.html type="info" title="Enable CI mode" content=" CI mode can be enabled on your own Mac/PC by setting the `CI` environment to `true` (for example, run `export CI=true` in your Bash Terminal), or by running `bitrise run` with the `--ci` flag: `bitrise --ci run ...`. "%}
 
-## Run a Step only if the build failed
+## Running a Step only if the build failed
 
-_To do this you have to switch to_ `_bitrise.yml_` _mode (open the Workflow Editor on bitrise.io -> left side: click on_ `_bitrise.yml_` _to switch to the interactive_ `_bitrise.yml_` _editor)._
+It is possible to run a Step ONLY if the build failed before it got to that particular Step. In addition to `run_if`, you will need to use the `is_always_run` property as well. 
 
-You have to add two properties to the Step you **only** want to run when the Build failed (at that point, when the Step would run):
+1. Open your app's `bitrise.yml` file.
+2. Find the Step that you want to disable.
+3. Add `run_if: .IsBuildFailed` to it.
+4. Add `is_always_run: true` to it.  
+
+Example:
+
+    - script:
+        is_always_run: true
+        run_if: .IsBuildFailed
+        inputs:
+        - content: |-
+            #!/bin/bash
+            echo "Build Failed!"
 
 * `is_always_run: true` (this enables the Step to be considered to run even if a previous Step failed)
 * `run_if: .IsBuildFailed` (you can find more examples of the `run_if` template at: [https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml "https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml")).
