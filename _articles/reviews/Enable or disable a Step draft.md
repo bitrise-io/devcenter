@@ -7,7 +7,7 @@ published: false
 ---
 You can enable or disable a Step in any given workflow, and you can also set conditions for Steps. You can do it either on your own machine, with the Bitrise CLI or by using the `bitrise.yml` tab of the Workflow Editor.
 
-We mostly use `run_if` expressions to do these things. [Check out the template expressions](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml)! 
+We mostly use `run_if` expressions to do these things. [Check out the template expressions](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml)!
 
 {% include message_box.html type="info" title="A **run_if** can be any valid **Go** template" content=" A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `\"True\"`, `\"t\"`, `\"yes\"` or `\"y\"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't. "%}
 
@@ -56,7 +56,7 @@ Running a Step only in a CI environment means your build will skip that particul
             #!/bin/bash
             echo "This will only ever run in a CI environment because run_if: IsCI"
 
-{% include message_box.html type="info" title="My message" content="Many Steps have this .`IsCI` flag set by default: for example, the `Git Clone` Step. However, you can change the `run_if` property of these Steps, too: just set it to `run_if: true`."%}
+{% include message_box.html type="info" title="The `.IsCI` flag" content="Many Steps have this .`IsCI` flag set by default: for example, the `Git Clone` Step. However, you can change the `run_if` property of these Steps, too: just set it to `run_if: true`."%}
 
 {% include message_box.html type="info" title="Enable CI mode" content=" CI mode can be enabled on your own Mac/PC by setting the `CI` environment to `true` (for example, run `export CI=true` in your Bash Terminal), or by running `bitrise run` with the `--ci` flag: `bitrise --ci run ...`. "%}
 
@@ -69,7 +69,7 @@ It is possible to run a Step ONLY if the build failed before it got to that part
 3. Add `run_if: .IsBuildFailed` to it.
 4. Add `is_always_run: true` to it.
 
-   This enables the Step to run even if a previous Step failed. 
+   This enables the Step to run even if a previous Step failed.
 
 **Example:**
 
