@@ -30,7 +30,7 @@ Learn more about what else you can do with `Bitrise CLI`:
 
 The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.
 
-Note, that technically the `Bitrise CLI` can also accept the configuration in JSON format, and the file name can be changed too, but if you save the configuration into a file named `bitrise.yml`, you can simply `bitrise run` in that directory without specifying any configuration path! This way the CLI will read the configuration from `bitrise.yml` automatically.
+If you save the configuration into a file named `bitrise.yml`, you can simply `bitrise run` in that directory without specifying any configuration path! This way the CLI will read the configuration from `bitrise.yml` automatically.  (Note, that technically the `Bitrise CLI` can also accept the configuration in JSON format.)
 
 {% include message_box.html type="info" title="Explore bitrise.yml" content="
 
@@ -53,13 +53,12 @@ Custom StepLibs can also provide fallbacks (alternative download URLs, caches), 
 
 {% include message_box.html type="info" title="About Steps" content="
 Learn more about Steps here:
+
 * [Steps in YAML](/bitrise-cli/steps/)
 * [Step properties](/bitrise-cli/step-properties/)
 * [Step inputs](/bitrise-cli/step-inputs/)
 * [Step outputs](/bitrise-cli/step-outputs/)
-"%}
-
-
+  "%}
 
 ### Why to use the StepLib and Steps instead of ad-hoc build scripts?
 
