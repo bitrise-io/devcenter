@@ -47,7 +47,6 @@ pages:
 - _articles/getting-started/account-security.md
 - _articles/tutorials/xamarin/index.md
 - _articles/tutorials/xamarin/deploy-your-xamarin-app.md
-- _articles/bitrise-cli/index.md
 - _articles/getting-started/adding-a-new-app/index.md
 - _articles/tutorials/xamarin/restore-nuget-packages.md
 - _articles/getting-started/signing-up/self-hosted-gitlab.md
@@ -76,6 +75,7 @@ pages:
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/webhooks/index.md
 - _articles/reviews/Enable or disable a Step draft.md
+- _articles/bitrise-cli/index.md
 - _articles/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/tips-and-tricks/screen-recording-of-android-ui-tests-with-script-steps.md
 - _articles/reviews/xcode-test-draft.md
