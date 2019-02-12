@@ -9,7 +9,7 @@ You can enable or disable a Step in any given workflow, and you can also set con
 
 ## Disabling a Step
 
-If you do not want to remove a Step from your workflow but you don't want it to run, you can disable it, using the `run_if` property.
+If you do not want to remove a Step from your workflow but you don't want it to run, you can disable it, using a `run_if` expression.
 
 1. Open your app's `bitrise.yml` file.
 2. Find the Step that you want to disable.
@@ -26,7 +26,7 @@ Example:
 
 {% include message_box.html type="note" title="Experimenting with workflows" content="To experiment with different configurations for a workflow, without removing or disabling Steps, we recommend cloning the workflow. You can modify the cloned workflow as much as you wish without changing anything in the original."%} 
 
-## Run a Step only in CI environment, skip it for local builds
+## Running a Step only in CI environment
 
 This is quite similar to how you [completely disable a step](#disable-a-step), but instead of specifying `false` as the `run_if` expression, you specify `.IsCI`, which will only be true in CI mode.
 
