@@ -7,6 +7,19 @@ published: false
 ---
 You can enable or disable a Step in any given workflow, and you can also set conditions for Steps. You can do it either on your own machine, with the Bitrise CLI or by using the `bitrise.yml` tab of the Workflow Editor.
 
+We mostly use `run_if` expressions to do these things. [Check out the template expressions](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml)! 
+
+{% include message_box.html type="info" title="A **run_if** can be any valid **Go** template" content=" A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `\"True\"`, `\"t\"`, `\"yes\"` or `\"y\"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't. "%}
+
+An example `run_if` to check a **custom environment variable** (you can expose environment variables from your scripts too, using [envman](https://github.com/bitrise-io/envman/)):
+
+    {% raw %}
+    run_if: |-
+     	{{enveq "CUSTOM_ENV_VAR_KEY" "test value to test against"}}
+    {% endraw %}    
+
+This `run_if` will skip the step in every case when the value of `CUSTOM_ENV_VAR_KEY` is not `test value to test against`.
+
 ## Disabling a Step
 
 If you do not want to remove a Step from your workflow but you don't want it to run, you can disable it, using a `run_if` expression.
@@ -15,7 +28,7 @@ If you do not want to remove a Step from your workflow but you don't want it to 
 2. Find the Step that you want to disable.
 3. Add `run_if: false` to it.
 
-Example:
+**Example:**
 
     - script:
         run_if: false
@@ -34,7 +47,7 @@ Running a Step only in a CI environment means your build will skip that particul
 2. Find the Step that you want to disable.
 3. Add `run_if: .IsCI` to it.
 
-Example:
+**Example:**
 
     - script:
         run_if: .IsCI
@@ -49,27 +62,16 @@ Example:
 
 ## Running a Step only if the build failed
 
-It is possible to run a Step ONLY if the build failed before it got to that particular Step. In addition to `run_if`, you will need to use the `is_always_run` property as well. 
+It is possible to run a Step ONLY if the build failed before it got to that particular Step. In addition to `run_if`, you will need to use the `is_always_run` property as well.
 
 1. Open your app's `bitrise.yml` file.
 2. Find the Step that you want to disable.
 3. Add `run_if: .IsBuildFailed` to it.
-4. Add `is_always_run: true` to it.  
+4. Add `is_always_run: true` to it.
 
-Example:
+   This enables the Step to run even if a previous Step failed. 
 
-    - script:
-        is_always_run: true
-        run_if: .IsBuildFailed
-        inputs:
-        - content: |-
-            #!/bin/bash
-            echo "Build Failed!"
-
-* `is_always_run: true` (this enables the Step to be considered to run even if a previous Step failed)
-* `run_if: .IsBuildFailed` (you can find more examples of the `run_if` template at: [https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml "https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml")).
-
-An example `script` step, which will only run if the Build failed:
+**Example:**
 
     - script:
         is_always_run: true
@@ -78,14 +80,3 @@ An example `script` step, which will only run if the Build failed:
         - content: |-
             #!/bin/bash
             echo "Build Failed!"
-
-{% include message_box.html type="note" title="A **run_if** can be any valid **Go** template" content=" A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `\"True\"`, `\"t\"`, `\"yes\"` or `\"y\"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't. "%}
-
-An example `run_if` to check a **custom environment variable** (you can expose environment variables from your scripts too, using [envman](https://github.com/bitrise-io/envman/)):
-
-    {% raw %}
-    run_if: |-
-     	{{enveq "CUSTOM_ENV_VAR_KEY" "test value to test against"}}
-    {% endraw %}    
-
-This `run_if` will skip the step in every case when the value of `CUSTOM_ENV_VAR_KEY` is not `test value to test against`.
