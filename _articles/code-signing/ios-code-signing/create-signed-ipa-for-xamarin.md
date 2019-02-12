@@ -12,7 +12,7 @@ Before setting up IPA export, make sure that:
 * your code signing files have been collected.
 * you have the `Certificate and profile installer` step in your workflow.
 
-{% include message_box.html type="important" title="iOS Auto Provision" content="Automatic provisioning with the `iOS Auto Provision` Step is not supported for Xamarin apps!"%} 
+{% include message_box.html type="important" title="iOS Auto Provision" content="Automatic provisioning with the `iOS Auto Provision` Step is not supported for Xamarin apps!"%}
 
 If you're all set, proceed to setting up IPA export in your workflow:
 
@@ -23,7 +23,7 @@ If you're all set, proceed to setting up IPA export in your workflow:
    You can control the code signing type in your Xamarin project by setting the
    code signing configurations in Xamarin Studio.
 
-   ![Select export method for Xamarin Archive for iOS](/img/code-signing/ios-code-signing/xamarin-archive-export-method.png)
+   ![](/img/xamarin-archive-release-iphone.png)
 
 If you wish to use more than one code signing type (for example, to create both Ad-hoc and App Store signed apps), create more than one `Release` configuration in Xamarin Studio. Set the separate configurations to the types you want to use.
 
