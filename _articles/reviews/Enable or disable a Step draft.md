@@ -5,18 +5,17 @@ date: 2019-02-12 11:15:35 +0000
 published: false
 
 ---
-You can enable or disable a Step in any given workflow, and you can also set conditions for Steps. You can do it either on your own machine, with the Bitrise CLI or by using the `bitrise.yml` tab of the Workflow Editor. 
+You can enable or disable a Step in any given workflow, and you can also set conditions for Steps. You can do it either on your own machine, with the Bitrise CLI or by using the `bitrise.yml` tab of the Workflow Editor.
 
 ## Disabling a Step
 
-If you do not want to remove a Step from your workflow but you don't want it to run, you can disable it, using the `run_if` input. 
+If you do not want to remove a Step from your workflow but you don't want it to run, you can disable it, using the `run_if` property.
 
-1. Open your app's `bitrise.yml` file. 
-2. 
+1. Open your app's `bitrise.yml` file.
+2. Find the Step that you want to disable.
+3. Add `run_if: false` to it.
 
-If you don't want to remove the Step from your Workflow and you don't want to duplicate the Workflow either (which is the preferred way if you want to experiment with new things; you can just create a "backup" clone of your original Workflow) then you can simply disable a Step by specifying `run_if: false`.
-
-An example:
+Example:
 
     - script:
         run_if: false
@@ -24,6 +23,8 @@ An example:
         - content: |-
             #!/bin/bash
             echo "This will never run, because of run_if:false"
+
+{% include message_box.html type="note" title="Experimenting with workflows" content="To experiment with different configurations for a workflow, without removing or disabling Steps, we recommend cloning the workflow. You can modify the cloned workflow as much as you wish without changing anything in the original."%} 
 
 ## Run a Step only in CI environment, skip it for local builds
 
