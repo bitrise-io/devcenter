@@ -30,7 +30,7 @@ Learn more about what else you can do with `Bitrise CLI`:
 
 The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.
 
-If you save the configuration into a file named `bitrise.yml`, you can simply `bitrise run` in that directory without specifying any configuration path! This way the CLI will read the configuration from `bitrise.yml` automatically.  (Note, that technically the `Bitrise CLI` can also accept the configuration in JSON format.)
+If you save the configuration into a file named `bitrise.yml`, you can simply `bitrise run` in that directory without specifying any configuration path! This way the CLI will read the configuration from `bitrise.yml` automatically.  (Technically the `Bitrise CLI` can also accept the configuration in JSON format.)
 
 {% include message_box.html type="info" title="Explore bitrise.yml" content="
 
