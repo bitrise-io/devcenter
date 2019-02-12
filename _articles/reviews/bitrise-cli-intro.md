@@ -59,10 +59,8 @@ Custom StepLibs can also provide fallbacks (alternative download URLs, caches), 
 
 Same reason why code libraries / dependencies are awesome:
 
-You have a code which can be updated independently from other parts, and **you can re-use/share** this between your configurations.
+* **Re-use and share**: You have a code which can be updated independently from other parts, and you can re-use/share this between your configurations.
+* **Shared maintenance**: when you use Steps created by others you don't have to maintain the codes, but you can contribute to it if you want to, or create and use your own.
+* **Versioned**: If a new version doesn't work for you, you can always go back to a previous one.
 
-**Shared maintenance**: when you use Steps created by others you don't have to maintain the codes, but you can contribute to it if you want to, or create and use your own.
-
-**Versioned**: If a new version doesn't work for you, **you can always go back to a previous one**.
-
-_We frequently push features as Steps instead of building it into the core tools. This allows faster and versioned iterations, and updating the parts independently. We try to maintain compatibility as much as possible, so older versions can work too, providing a way to upgrade when it's appropriate for you._
+We frequently push features as Steps instead of building it into the core tools. This allows faster and versioned iterations, and updating the parts independently. We try to maintain compatibility as much as possible, so older versions can work too, providing a way to upgrade when it's appropriate for you.
