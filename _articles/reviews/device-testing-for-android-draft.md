@@ -57,19 +57,20 @@ There is a small difference between configuring your workflow for `robo` and `in
    Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/android/available-testing-devices).
 8. Start a build and [check your test results](/testing/device-testing-for-android/#running-instrumentation-tests).
 
-#### Setting user interaction for a successful robo test
+#### Setting user input for a successful robo test
 
-If your app needs specific user input to fill out text fields for a successful robo test (for example, since certain UI elements of the app are only accessible for the test if username and email address are populated for log in), then we suggest you to use `Robo Directives` input field.
+If your app needs specific user interaction for a successful robo test, then we suggest you to use `Robo Directives` input field. A simple use case would be when certain UI elements of the app are only accessible for robo testing if username and email address as the required user inputs are populated for log in.
 
-1. Click `Robo Test` section in the `[BETA] Virtual Device Testing for Android` Step.
-2. Find `Robo directives` and set your user input directives.
+1. Open the `[BETA] Virtual Device Testing for Android` Step in your workflow.
+2. Click `Robo Test` section.
+3. Find `Robo directives` input field and set your required user input directives.
    * make sure you provide a comma-separated list of key-value pairs, where the key is the Android resource name of the target UI element and the value is the text string.
    * make sure you set only one directives per line and you separate parameters with `,` character.
-   * make sure you provide your test credentials and not the production ones.
-
-Note that EditText fields are supported but not text fields in WebView UI elements.
+   * make sure you provide your _test_ credentials and not the production ones.
 
 ![](/img/robo-directives.png)
+
+Note that EditText fields are supported but not text fields in WebView UI elements.
 
 Based on the input you provide, you can successfully run a robo test and check the test results on the `DEVICE TESTS` tab of your Build's page. The test results can be, for example:
 
@@ -78,7 +79,7 @@ Based on the input you provide, you can successfully run a robo test and check t
 * logs
 * files
 
-Here is a screenshot of a successful robo test, where robo test could get all the way to `My application` by populating the `email` and `password` fields with the pre-defined directives.
+Here is a screenshot of a successful robo test, where robo test got all the way through to `My application` by populating the `email` and `password` fields first with the pre-defined directives.
 
 ![](/img/successful-robo-test.jpg)
 
