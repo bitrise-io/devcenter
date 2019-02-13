@@ -12,3 +12,19 @@ Developer
 Tester 
 
 Owner in an organization
+
+Who can:
+
+manage payment
+
+add or delete app
+
+manage team member roles 
+
+workflows
+
+run builds 
+
+How to have different roles on different apps 
+
+Org groups vs roles 
