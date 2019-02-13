@@ -40,6 +40,8 @@ If you want to read up on the difference between these test types, take a look a
 
 There is a small difference between configuring your workflow for `robo` and `instrumentation` tests, so let's see them separately!
 
+Note that if you have several variants of an APK and you want to cherry pick the one that has the tests for Virtual Device testing, you should set that particular APK in the build Step. For that you have to change the default gradle task to the name of the test APK (that contains your tests) so that the right APK gets generated and then used in our `[BETA] Virtual Device Testing`.
+
 ### Running robo tests
 
 1. Open the primary workflow of your build in `Workflow Editor`.
