@@ -5,11 +5,12 @@ date: 2019-02-13 15:21:14 +0000
 published: false
 
 ---
+
 Admin
 
 Developer
 
-Tester 
+Tester
 
 Owner in an organization
 
@@ -19,12 +20,12 @@ manage payment
 
 add or delete app
 
-manage team member roles 
+manage team member roles
 
 workflows
 
-run builds 
+run builds
 
-How to have different roles on different apps 
+How to have different roles on different apps
 
-Org groups vs roles 
+Org groups vs roles
