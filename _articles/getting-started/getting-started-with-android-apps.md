@@ -159,7 +159,7 @@ If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step
 5. Fill out the required input fields as follows:
    * `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
-   * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
+   * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
 
 {% include message_box.html type="info" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow and select another `DEPLOY` step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
 
