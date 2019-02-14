@@ -9,7 +9,7 @@ Roles are very important on Bitrise. They limit what you can and cannot do with 
 
 ### Owners
 
-There are two types of owners: application owners and organization owners. 
+There are two types of owners: **application owners** and **organization owners**. 
 
 Admin
 
