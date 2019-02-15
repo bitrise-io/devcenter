@@ -63,3 +63,10 @@ Here's the role cheatsheet for testers/QA:
 Testers can only view builds. They cannot access build logs and they cannot modify the app in any way or form. 
 
 They have no access to sensitive data such as payment information, access tokens or even webhooks. 
+
+### Assigning roles to users
+
+There are two ways to assign roles to users: 
+
+* Invite an individual user account to work on the app, and assign it a certain role: we'll cover that in this guide!
+* [Assign a group of the organization that owns the app a certain role](/team-management/organizations/managing-apps/#assigning-groups-to-apps).
