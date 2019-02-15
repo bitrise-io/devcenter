@@ -58,6 +58,7 @@ pages:
 - _articles/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/getting-started/adding-a-new-app/public-apps.md
 - _articles/reviews/public-sample-apps-draft.md
+- _articles/reviews/Roles on Bitrise - draft.md
 - _articles/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/getting-started/getting-started-with-flutter-apps.md
 - _articles/builds/selective_builds.md
@@ -80,4 +81,3 @@ pages:
 - _articles/reviews/xcode-test-draft.md
 - _articles/tips-and-tricks/screen-recording-of-android-ui-tests-with-script-steps.md
 - _articles/reviews/screen-recording-of-ui-testing-with-appium.md
-- _articles/reviews/Roles on Bitrise - draft.md

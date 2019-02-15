@@ -15,7 +15,13 @@ By the default, the owner of an application is the account that created the appl
 
 ### Admins
 
-Admins can be assigned to applications, either in groups or individually. Organizations do not have admins. 
+Admins can be assigned to applications, either in groups or individually. Organizations do not have admins: organization groups can be assigned to applications as admins. 
+
+Here's the role cheatsheet for admins:
+
+![](/img/admins.png)
+
+So, for example, an admin cannot delete an application but can invite other members to work on the app. The admin can also give admin rights to other users - however, they cannot transfer ownership of the app! 
 
 #### Assigning admins to an application
 
