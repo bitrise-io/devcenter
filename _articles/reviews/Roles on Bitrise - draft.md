@@ -20,9 +20,9 @@ Bitrise has the following roles:
 
 There are two types of owners: **application owners** and **organization owners**. 
 
-By the default, the owner of an application is the account that created the application. This can be either an individual user or an organization. An owner of an organization has owner rights to all the apps owned by the organizations. 
+By the default, the owner of an application is the account that created the application. This can be either an individual user or an organization. **An owner of an organization has owner rights to all the apps owned by the organization.** 
 
-Owners have unlimited access to applications. Only owners can destroy apps or transfer the ownership of apps, and only they access to payment information. 
+Owners have unlimited access to applications. Only owners can destroy apps or transfer the ownership of apps, and only they have access to payment information. 
 
 If an organization owns the app, only the owners of the organization can transfer or destroy the app. 
 
