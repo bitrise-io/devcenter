@@ -9,6 +9,13 @@ Roles are very important on Bitrise. They limit what you can and cannot do with 
 
 Roles work on an application basis: the same user can have different roles on different applications. As such, organizations have no inherent "roles": organizations have groups and different groups can be assigned different roles. 
 
+Bitrise has the following roles:
+
+* owners
+* admins
+* developers
+* testers/QA
+
 ### Owners
 
 There are two types of owners: **application owners** and **organization owners**. 
