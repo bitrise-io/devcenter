@@ -7,6 +7,8 @@ published: false
 ---
 Roles are very important on Bitrise. They limit what you can and cannot do with an application. 
 
+Roles work on an application basis: the same user can have different roles on different applications. As such, organizations have no inherent "roles": organizations have groups and different groups can be assigned different roles. 
+
 ### Owners
 
 There are two types of owners: **application owners** and **organization owners**. 
@@ -29,7 +31,15 @@ So, for example, an admin cannot delete an application but can invite other memb
 
 #### Assigning admins to an application
 
-Developer
+### Developers 
+
+Developers can be assigned to applications, either in groups or individually. Organizations do not have developers: organization groups can be assigned to applications as developers. 
+
+Here's the role cheatsheet for developers:
+
+![](/img/developers.png) 
+
+So, for example, developers cannot change team member roles or edit workflows. They can, however, run builds and view build logs. 
 
 Tester
 
