@@ -19,7 +19,7 @@ The newly added apps would always have the latest config in this case, but the p
 
 You can store the `bitrise.yml` in the project's repo. This would mostly be similar to the previously mentioned method with ability to track the changes using your own source control system as an added bonus.
 
-Storing it in a separate repository and using that as a submodule, for example, in your main repo. Here is a [guide](http://devcenter.bitrise.io/tips-and-tricks/use-bitrise-yml-from-repository/) on how to store `bitrise.yml` in your repo. If you download our open source Workflow Editor, you can manually edit the yml file on your local computer.
+Storing it in a separate repository and using that as a submodule, for example, in your main repo. Here is a [guide](http://devcenter.bitrise.io/tips-and-tricks/use-bitrise-yml-from-repository/) on how to store `bitrise.yml` in your repo. If you download our open source Workflow Editor, you can manually edit the yml file on your local PC.
 
 ## Storing yml in a repository along with other project's yml
 
