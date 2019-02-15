@@ -46,7 +46,7 @@ Here's the role cheatsheet for developers:
 
 ![](/img/developers.png) 
 
-So, for example, developers cannot change team member roles or edit workflows. They can, however, run builds and view build logs. 
+So, for example, developers cannot change team member roles, add new team members, remove existing team members or create, edit or delete workflows. They can, however, run builds and view build logs. 
 
 Tester
 
