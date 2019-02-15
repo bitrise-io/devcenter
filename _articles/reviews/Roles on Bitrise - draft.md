@@ -13,6 +13,8 @@ There are two types of owners: **application owners** and **organization owners*
 
 By the default, the owner of an application is the account that created the application. This can be either an individual user or an organization. 
 
+Only owners can destroy apps or transfer the ownership of apps. 
+
 ### Admins
 
 Admins can be assigned to applications, either in groups or individually. Organizations do not have admins: organization groups can be assigned to applications as admins. 
