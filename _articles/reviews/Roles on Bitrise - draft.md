@@ -15,6 +15,8 @@ By the default, the owner of an application is the account that created the appl
 
 Only owners can destroy apps or transfer the ownership of apps. 
 
+If an organization owns the app, only the owners of the organization can transfer or destroy the app. 
+
 ### Admins
 
 Admins can be assigned to applications, either in groups or individually. Organizations do not have admins: organization groups can be assigned to applications as admins. 
