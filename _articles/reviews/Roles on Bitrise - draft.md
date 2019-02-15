@@ -20,9 +20,9 @@ Bitrise has the following roles:
 
 There are two types of owners: **application owners** and **organization owners**. 
 
-By the default, the owner of an application is the account that created the application. This can be either an individual user or an organization. 
+By the default, the owner of an application is the account that created the application. This can be either an individual user or an organization. An owner of an organization has owner rights to all the apps owned by the organizations. 
 
-Only owners can destroy apps or transfer the ownership of apps. 
+Owners have unlimited access to applications. Only owners can destroy apps or transfer the ownership of apps, and only they access to payment information. 
 
 If an organization owns the app, only the owners of the organization can transfer or destroy the app. 
 
@@ -36,8 +36,6 @@ Here's the role cheatsheet for admins:
 
 So, for example, an admin cannot delete an application but can invite other members to work on the app. The admin can also give admin rights to other users - however, they cannot transfer ownership of the app! 
 
-#### Assigning admins to an application
-
 ### Developers 
 
 Developers can be assigned to applications, either in groups or individually. Organizations do not have developers: organization groups can be assigned to applications as developers. 
@@ -48,22 +46,16 @@ Here's the role cheatsheet for developers:
 
 So, for example, developers cannot change team member roles, add new team members, remove existing team members or create, edit or delete workflows. They can, however, run builds and view build logs. 
 
-Tester
+They have no access to sensitive data such as payment information, access tokens or even webhooks. 
 
-Owner in an organization
+### Testers/QA
 
-Who can:
+Testers can be assigned to applications, either in groups or individually. Organizations do not have testers: organization groups can be assigned to applications as testers. 
 
-manage payment
+Here's the role cheatsheet for testers/QA:
 
-add or delete app
+![](/img/testers.png)
 
-manage team member roles
+Testers can only view builds. They cannot access build logs and they cannot modify the app in any way or form. 
 
-workflows
-
-run builds
-
-How to have different roles on different apps
-
-Org groups vs roles
+They have no access to sensitive data such as payment information, access tokens or even webhooks. 
