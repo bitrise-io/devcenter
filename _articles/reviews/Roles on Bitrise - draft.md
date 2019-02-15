@@ -22,7 +22,11 @@ There are two types of owners: **application owners** and **organization owners*
 
 By the default, the owner of an application is the account that created the application. This can be either an individual user or an organization. **An owner of an organization has owner rights to all the apps owned by the organization.** 
 
-Owners have unlimited access to applications. Only owners can destroy apps or transfer the ownership of apps, and only they have access to payment information. 
+Here's the role cheatsheet for owners:
+
+![](/img/owners.png)
+
+Owners have unlimited access to applications. Only owners can destroy apps or [transfer the ownership of apps](/team-management/changing-the-owner-of-an-app/), and only they have access to payment information. 
 
 If an organization owns the app, only the owners of the organization can transfer or destroy the app. 
 
@@ -34,7 +38,7 @@ Here's the role cheatsheet for admins:
 
 ![](/img/admins.png)
 
-So, for example, an admin cannot delete an application but can invite other members to work on the app. The admin can also give admin rights to other users - however, they cannot transfer ownership of the app! 
+So, for example, an admin cannot delete an application but can invite other members to work on the app. The admin can also give admin rights to other users - however, [they cannot transfer ownership](/team-management/changing-the-owner-of-an-app/) of the app! 
 
 ### Developers 
 
