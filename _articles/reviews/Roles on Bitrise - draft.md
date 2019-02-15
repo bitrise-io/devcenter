@@ -66,7 +66,19 @@ They have no access to sensitive data such as payment information, access tokens
 
 ### Assigning roles to users
 
-There are two ways to assign roles to users: 
+There are three ways to assign roles to users: 
 
 * Invite an individual user account to work on the app, and assign it a certain role: we'll cover that in this guide!
 * [Assign a group of the organization that owns the app a certain role](/team-management/organizations/managing-apps/#assigning-groups-to-apps).
+
+Users who have **owner** or **admin** rights to the applications can invite new team members and assign them roles. Let's see how to assign individual users to apps! 
+
+1. Open the app's page on Bitrise.
+2. Click the `Team` tab. 
+3. In the `Add users to this app` box, type the username or the email of the user you want to invite. 
+
+   ![](/img/add-users.png)
+
+   Note that [the process is the same if the app is owned by an organization](/team-management/organizations/managing-apps/#adding-outside-contributors-to-an-app) except you will see `Add outside contributors to this app` above the box where you enter the username or email. 
+4. Select the role you want to assign.
+5. Click `Grant Access`.
