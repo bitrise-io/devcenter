@@ -11,11 +11,13 @@ Roles are very important on Bitrise. They limit what you can and cannot do with 
 
 There are two types of owners: **application owners** and **organization owners**. 
 
+By the default, the owner of an application is the account that created the application. This can be either an individual user or an organization. 
+
 ### Admins
 
 Admins can be assigned to applications, either in groups or individually. Organizations do not have admins. 
 
-Admins 
+#### Assigning admins to an application
 
 Developer
 
