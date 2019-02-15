@@ -15,7 +15,7 @@ There are two types of owners: **application owners** and **organization owners*
 
 Admins can be assigned to applications, either in groups or individually. Organizations do not have admins. 
 
-Admin
+Admins 
 
 Developer
 
