@@ -19,6 +19,8 @@ The newly added apps would always have the latest config in this case, but the p
 
 You can store the `bitrise.yml` in the project's repo. This would mostly be similar to the previously mentioned method with ability to track the changes using your own source control system as an added bonus.
 
+Storing it in a separate repository and using that as a submodule, for example, in your main repo.
+
 ## Storing yml in a repository along with other project's yml
 
 You can store the `bitrise.yml` in a repository that can keep every project's yml. **This way you have the ability to track the changes to the ymls in a different repository and these changes wouldn't create extra noise in the project repository.** You can create a common yml that can be called from within any other `bitrise.yml` and you can keep the project specific ymls in their own folders.
