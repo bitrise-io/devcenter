@@ -69,8 +69,8 @@ pages:
 - _articles/infrastructure/available-stacks.md
 - _articles/reviews/build-trigger-api-draft.md
 - _articles/reviews/android-app-bundle-draft.md
-- _articles/reviews/device-testing-for-android-draft.md
 - _articles/reviews/notifications-guide-draft.md
+- _articles/reviews/device-testing-for-android-draft.md
 - _articles/team-management/user-roles-on-app-teams.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
