@@ -9,7 +9,7 @@ Notifications are updates about your activity on Bitrise. Usually, they concern 
 
 ## Email notifications
 
-Email notifications are sent to every user who is assigned to work on an application. They are sent when a build is finished.
+Our built-in email notification system sends emails about builds to every user who is assigned to work on an application. They are sent when a build is finished.
 
 Email notifications are automatically set up for all applications when first creating them. By default, there are different settings for successful builds and failed builds. There are three possible settings:
 

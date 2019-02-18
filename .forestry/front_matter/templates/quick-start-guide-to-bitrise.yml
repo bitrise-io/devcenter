@@ -70,11 +70,11 @@ pages:
 - _articles/reviews/build-trigger-api-draft.md
 - _articles/reviews/android-app-bundle-draft.md
 - _articles/reviews/device-testing-for-android-draft.md
+- _articles/reviews/notifications-guide-draft.md
 - _articles/team-management/user-roles-on-app-teams.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/reviews/how-to-change-the-user-name-and-user-email-used-for-git-push-from-bitrise.md
-- _articles/reviews/notifications-guide-draft.md
 - _articles/webhooks/index.md
 - _articles/bitrise-cli/index.md
 - _articles/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
