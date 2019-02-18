@@ -74,7 +74,6 @@ pages:
 - _articles/team-management/user-roles-on-app-teams.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
-- _articles/reviews/Roles on Bitrise - draft.md
 - _articles/webhooks/index.md
 - _articles/bitrise-cli/index.md
 - _articles/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
