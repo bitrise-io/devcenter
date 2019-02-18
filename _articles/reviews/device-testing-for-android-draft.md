@@ -3,7 +3,7 @@ title: device testing for Android - draft
 date: 2019-02-11 11:57:59 +0000
 menu:
   android-deploy:
-    weight: 5
+    weight: 3
 redirect_from: []
 published: false
 
