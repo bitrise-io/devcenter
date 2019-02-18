@@ -2,7 +2,6 @@
 title: User roles on app teams
 redirect_from: []
 date: 2019-02-18 14:53:53 +0000
-published: false
 
 ---
 Roles are very important on Bitrise. They limit what you can and cannot do with an application.
@@ -11,10 +10,10 @@ Roles work on an application basis: the same user can have different roles on di
 
 Bitrise has the following roles:
 
-* owners
-* admins
-* developers
-* testers/QA
+* [Owners](/team-management/user-roles-on-app-teams/#owners)
+* [Admins](/team-management/user-roles-on-app-teams/#admins)
+* [Developers](/team-management/user-roles-on-app-teams/#developers)
+* [Testers/QA](/team-management/user-roles-on-app-teams/#testersqa)
 
 ### Owners
 
