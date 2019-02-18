@@ -23,7 +23,7 @@ Before you attempt to use any of our Virtual Device Testing Steps, the feature i
 3. Go to the `Settings` tab.
 4. Scroll down to `Device Testing` and toggle `ENABLE UI TESTS ON VIRTUAL DEVICES`.
 
-![](/img/settings-device-testing.png)
+   ![](/img/enable-ui-test-on-virtual-devices.png)
 
 That's it! You are now ready to start using our Device Testing solution.
 
@@ -56,7 +56,7 @@ The `iOS Device Testing` Step takes the path to this .zip file - exported as an 
 
    The Step has to come after the `Xcode Build for testing for iOS` Step.
 
-   ![](/img/ios-device-testing.png)
+   ![](/img/test-devices-1.png)
 6. In the `Test devices` input field, specify the devices on which you want to test the app.
 
    Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/ios/available-testing-devices).
