@@ -17,6 +17,8 @@ Email notifications are automatically set up for all applications when first cre
 * **Never send email**.
 * **Send email when build status changes on the same branch**. This is the default setting for successful builds. This means that if build #1 and build #2 both succeeded, you will not get a notification about build #2. However, if build #3 fails and then build #4 succeeds again, you will be notified. 
 
+The alternative solution is to send emails via a Step: this allows for far more customization regarding the notifications. We'll cover both options in this guide. 
+
 ### Configuring email notifications
 
 You can change your email notification settings at any time - you can even completely disable them. 
