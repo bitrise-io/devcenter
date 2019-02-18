@@ -27,4 +27,4 @@ You can change your email notification settings at any time - you can even compl
 4. Scroll down to email notifications.
 
    ![](/img/email-notifications.png)
-5. Select the settings you need for both successful and failed builds. 
+5. Select the settings you need for both successful and failed builds from the appropriate dropdown menu. 
