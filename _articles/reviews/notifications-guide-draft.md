@@ -30,3 +30,5 @@ You can change your email notification settings at any time - you can even compl
 
    ![](/img/email-notifications.png)
 5. Select the settings you need for both successful and failed builds from the appropriate dropdown menu. 
+
+   For example, if you want to disable receiving notifications, set both options to **Never send email**.
