@@ -86,6 +86,5 @@ You can check UI test result on the `DEVICE TESTS` tab of your app's build page.
 1. Go back to your `Builds` page, select your build, and click `DEVICE TESTS` tab to check your test result.
 2. Click the device you've tested your project on.
 
-   ![](/img/device-test-page.jpg)
 
 You can view test cases and downloadable logs if you've selected `instrumentation` test and a video and screenshots if you've selected `robo` as test type. Or scroll down and download all your reports in `FILES GENERATED`.
