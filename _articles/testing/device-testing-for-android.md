@@ -17,15 +17,17 @@ Our device testing solution is based on [Firebase Test Lab](https://firebase.go
 
 1. First you have to turn on `Device Testing` on the app's `Settings` tab. Toggle the switch to the right in the upper right corner of `Device Testing`.
 
-   ![](/img/settings-device-testing.png)
+   ![](/img/enable-ui-test-on-virtual-devices.png)
 2. From `Settings`, go to your app's `Build` page.
 3. Click on a build you want to test.
 4. If you have enabled device testing in Step 1., you should find `DEVICE TESTS BETA` next to `APPS & ARTIFACTS` as a third tab. Click it!
 
-   ![](/img/build-device-test.jpg)
+   ![](/img/builds-device tests.png)
 5. Click `add step to primary workflow` to add two steps that you need for device testing to your primary workflow:
    * `Android Build` Step for `robo` test or `Android Build for UI Testing` Step for `instrumentation` test
-   * `[BETA] Virtual Device Testing for Android` Step to run tests and create test reports.![](/img/primary-virtual-device.png)
+   * `[BETA] Virtual Device Testing for Android` Step to run tests and create test reports.
+
+     ![](/img/add-step-to-primary-workflow.png)
 
 ## Running tests
 
