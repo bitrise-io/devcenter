@@ -25,7 +25,6 @@ pages:
 - _articles/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/builds/available-environment-variables.md
 - _articles/reviews/sharing-and-storing-workflows-among-apps-draft.md
-- _articles/reviews/how-to-change-the-user-name-and-user-email-used-for-git-push-from-bitrise.md
 - _articles/getting-started/getting-started-with-react-native-apps.md
 - _articles/testing/run-your-tests-in-the-app-center.md
 - _articles/testing/device-testing-for-android.md
@@ -75,6 +74,7 @@ pages:
 - _articles/reviews/notifications-guide-draft.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
+- _articles/reviews/how-to-change-the-user-name-and-user-email-used-for-git-push-from-bitrise.md
 - _articles/webhooks/index.md
 - _articles/bitrise-cli/index.md
 - _articles/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
