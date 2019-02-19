@@ -64,13 +64,12 @@ If your app needs specific user interaction for a successful robo test, you can 
 1. Click the `[BETA] Virtual Device Testing for Android` Step in your workflow.
 2. Click `Robo Test` section.
 3. Find `Robo directives` input field and set your required user input directives.
-   * provide a comma-separated list of key-value pairs, where the key is the Android resource name of the target UI element, and the value is the text string. EditText fields are supported but not text fields in WebView UI elements. For example, you could use the following parameter for custom login: 
+   * provide a comma-separated list of key-value pairs, where the key is the Android resource name of the target UI element, and the value is the text string. EditText fields are supported but not text fields in WebView UI elements. For example, you could use the following parameter for custom login:
 
          username_resource,username,ENTER_TEXT
          password_resource,password,ENTER_TEXT
          loginbtn_resource,,SINGLE_CLICK
-         
-One directive per line, the parameters are separated with , character. For example: `ResourceName,InputText,ActionType`         
+	* One directive per line, the parameters are separated with , character. For example: `ResourceName,InputText,ActionType`
 
 ![](/img/robo-directives.png)
 
