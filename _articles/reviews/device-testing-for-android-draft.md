@@ -40,8 +40,6 @@ If you want to read up on the difference between these test types, take a look a
 
 There is a small difference between configuring your workflow for `robo` and `instrumentation` tests, so let's see them separately!
 
-Note that if you have several variants of an APK and you want to cherry pick the one that contains tests for Virtual Device testing, you should set that particular APK in the build Step. Specify the \`G`radle task to run`in this order task (for example assemble) +module (app) +variant (debug) in Gradle Runner step so that the right APK gets generated and then used in `[BETA] Virtual Device Testing`. mindket app kell a teszthez: \`assembleDebug es assembleDebugAndroidTest (assemble debug az apkt generalja le) az assmebledebugandroid test apk a teszteket generalja le mellel. 2 taskot kell megadnia, ezeket hasznalja a vdt. a user is tudja a ket apkt hasznalni virtual machinen vagy lokalon tesztelsz es meg akarod nezni hogy mi . tesz package es ossze tudod allitani az osszes szukseges dolgot a vdt stephez. is (Bazsi masolat manualisan amit a vd step csinalna. ehhez neki kell egy emluator a gepen vagy lokalban teszelni h rakoti a telot.)
-
 ### Running robo tests
 
 1. Open the primary workflow of your build in `Workflow Editor`.
@@ -61,13 +59,18 @@ Note that if you have several variants of an APK and you want to cherry pick the
 
 #### Setting user input for a successful robo test
 
-If your app needs specific user interaction for a successful robo test, you can use `Robo Directives` input field to set those necessary inputs. For example, certain UI elements of the app are only accessible for robo testing if the required user inputs (username and email address) are populated for successful log in. 
+If your app needs specific user interaction for a successful robo test, you can use `Robo Directives` input field to set those necessary inputs. For example, certain UI elements of the app are only accessible for robo testing if the required user inputs (username and email address) are populated for successful log in.
 
 1. Click the `[BETA] Virtual Device Testing for Android` Step in your workflow.
 2. Click `Robo Test` section.
 3. Find `Robo directives` input field and set your required user input directives.
-   * make sure you provide a comma-separated list of key-value pairs followed by the action type (enter text vagy single click), where the key is the Android resource name of the target UI element and the value is the text string. pelda uirol.
-   * make sure you set only one directives per line and you separate parameters with `,` character.
+   * provide a comma-separated list of key-value pairs, where the key is the Android resource name of the target UI element, and the value is the text string. EditText fields are supported but not text fields in WebView UI elements. For example, you could use the following parameter for custom login: 
+
+         username_resource,username,ENTER_TEXT
+         password_resource,password,ENTER_TEXT
+         loginbtn_resource,,SINGLE_CLICK
+         
+One directive per line, the parameters are separated with , character. For example: `ResourceName,InputText,ActionType`         
 
 ![](/img/robo-directives.png)
 
