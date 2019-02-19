@@ -63,16 +63,16 @@ Note that if you have several variants of an APK and you want to cherry pick the
 
 If your app needs specific user interaction for a successful robo test, you can use `Robo Directives` input field to set those necessary inputs. For example, certain UI elements of the app are only accessible for robo testing if the required user inputs (username and email address) are populated for successful log in.
 
-1. Open the `[BETA] Virtual Device Testing for Android` Step in your workflow.
+1. Click the `[BETA] Virtual Device Testing for Android` Step in your workflow.
 2. Click `Robo Test` section.
 3. Find `Robo directives` input field and set your required user input directives.
    * make sure you provide a comma-separated list of key-value pairs, where the key is the Android resource name of the target UI element and the value is the text string.
    * make sure you set only one directives per line and you separate parameters with `,` character.
-   * make sure you provide your _test_ credentials and not the production ones.
+   * make sure you provide your _test_ credentials and _not the production_ ones.
 
 ![](/img/robo-directives.png)
 
-Note that EditText fields are supported but not text fields in WebView UI elements.
+Please note that EditText fields are supported but not text fields in WebView UI elements.
 
 Based on the input you provide, you can successfully run a robo test and check the test results on the `DEVICE TESTS` tab of your Build's page. The test results can be, for example:
 
@@ -81,7 +81,7 @@ Based on the input you provide, you can successfully run a robo test and check t
 * logs
 * files
 
-Here is a screenshot of a successful robo test, where robo test got all the way through to `My application` by populating the `email` and `password` fields first with the pre-defined directives.
+Here is a screenshot of a successful robo test, where the robo test got all the way through to `My application` by populating the `email` and `password` fields first with the pre-defined directives from `Robo directives`.
 
 ![](/img/successful-robo-test.jpg)
 
