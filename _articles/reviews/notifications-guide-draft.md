@@ -37,7 +37,7 @@ You can change your email notification settings at any time - you can even compl
 
 ### Sending emails with a Step
 
-The `Send Email with Mailgun` Step can send emails to any email address with customized updates. You can use environment variables to send information, as well as attach files to the emails. 
+The `Send Email with Mailgun` Step can send emails to any email address with customized updates, in either HTML or plain text format. You can use environment variables to send information, as well as attach files to the emails. 
 
 To use the Step, you need:
 
@@ -53,7 +53,7 @@ To use the Step, you need:
 2. Create a Secret Environment Variable that holds your Mailgun domain.
 
    We recommend naming the key `$MAILGUN_DOMAIN`. This is the default value of the Step's relevant input.
-3. Add the `Send Email with Mailgun` Step to your workflow.
+3. Add the `Send Email with Mailgun` Step to the end of your workflow.
 4. Find the `Send To emails` input of the Step. Click on the input and then click `Select secret variable`.
 5. Create a new Secret Environment Variable that contains the list of the email addresses.
 
@@ -66,3 +66,5 @@ To use the Step, you need:
 7. Attach files if necessary: the `File attachments` input accepts a file path or an environment variable as input. 
 
    Multiple files can be attached: separate their paths with commas. 
+
+Run a build - and check your emails! 
