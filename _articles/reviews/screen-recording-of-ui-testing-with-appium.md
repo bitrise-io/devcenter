@@ -19,11 +19,3 @@ Depending on your script, the test outputs can be:
 * xmls reports
 
 Here is an example app for you:
-
-1. elinditja az appiumot appium &> $BITRISE_DEPLOY_DIR/logs.txt &
-
-   disown
-2. np test a masodik ha a packaga json -ban bekonfiguralta a tesztet arra h ez lfuttassa a teszteket:  npm test (lefutnak a tesztek)
-3. a testen belul egy shell paranccsal futassa le a screen record es file pull commandokat.ezt nem irja sehova bitrise-on a teszt javascript fileba irja le.
-4. resultok elerhetok: meghivja a pull parancsot az adb pullal kihuzza az eredmenyeket es atmozgatja a deploy dirbe.
-5. deploy to bitrise.io > apps and artiffacts. ez kirak mindent a deplou dirbol az apps and artifacsbol.
