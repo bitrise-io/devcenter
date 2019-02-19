@@ -40,7 +40,7 @@ If you want to read up on the difference between these test types, take a look a
 
 There is a small difference between configuring your workflow for `robo` and `instrumentation` tests, so let's see them separately!
 
-Note that if you have several variants of an APK and you want to cherry pick the one that contains tests for Virtual Device testing, you should set that particular APK in the build Step. Specify the gradle task in this order task (for example assemble) +module (app) +variant (debug) in Gradle Runner step so that the right APK gets generated and then used in `[BETA] Virtual Device Testing`.
+Note that if you have several variants of an APK and you want to cherry pick the one that contains tests for Virtual Device testing, you should set that particular APK in the build Step. Specify the \`G`radle task to run`in this order task (for example assemble) +module (app) +variant (debug) in Gradle Runner step so that the right APK gets generated and then used in `[BETA] Virtual Device Testing`. mindket app kell a teszthez: \`assembleDebug es assembleDebugAndroidTest (assemble debug az apkt generalja le) az assmebledebugandroid test apk a teszteket generalja le mellel. 2 taskot kell megadnia, ezeket hasznalja a vdt. a user is tudja a ket apkt hasznalni virtual machinen vagy lokalon tesztelsz es meg akarod nezni hogy mi . tesz package es ossze tudod allitani az osszes szukseges dolgot a vdt stephez. is (Bazsi masolat manualisan amit a vd step csinalna. ehhez neki kell egy emluator a gepen vagy lokalban teszelni h rakoti a telot.)
 
 ### Running robo tests
 
