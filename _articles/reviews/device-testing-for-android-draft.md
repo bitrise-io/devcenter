@@ -1,10 +1,10 @@
 ---
 title: device testing for Android - draft
 date: 2019-02-11 11:57:59 +0000
+redirect_from: []
 menu:
   android-deploy:
     weight: 3
-redirect_from: []
 published: false
 
 ---
@@ -40,7 +40,7 @@ If you want to read up on the difference between these test types, take a look a
 
 There is a small difference between configuring your workflow for `robo` and `instrumentation` tests, so let's see them separately!
 
-Note that if you have several variants of an APK and you want to cherry pick the one that has the tests for Virtual Device testing, you should set that particular APK in the build Step. For that you have to change the default gradle task to the name of the test APK (that contains your tests) so that the right APK gets generated and then used in our `[BETA] Virtual Device Testing`.
+Note that if you have several variants of an APK and you want to cherry pick the one that contains tests for Virtual Device testing, you should set that particular APK in the build Step. Change the default gradle task to the name of the test APK in `Gradle Runner` Step so that the right APK gets generated and then used in `[BETA] Virtual Device Testing`.
 
 ### Running robo tests
 
@@ -61,7 +61,7 @@ Note that if you have several variants of an APK and you want to cherry pick the
 
 #### Setting user input for a successful robo test
 
-If your app needs specific user interaction for a successful robo test, then we suggest you to use `Robo Directives` input field. A simple use case would be when certain UI elements of the app are only accessible for robo testing if username and email address as the required user inputs are populated for log in.
+If your app needs specific user interaction for a successful robo test, you can use `Robo Directives` input field to set those necessary inputs. For example, certain UI elements of the app are only accessible for robo testing if the required user inputs (username and email address) are populated for successful log in.
 
 1. Open the `[BETA] Virtual Device Testing for Android` Step in your workflow.
 2. Click `Robo Test` section.
