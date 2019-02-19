@@ -54,3 +54,4 @@ To use the Step, you need:
 
    We recommend naming the key `$MAILGUN_DOMAIN`. This is the default value of the Step's relevant input.
 3. Add the `Send Email with Mailgun` Step to your workflow. 
+4. 
