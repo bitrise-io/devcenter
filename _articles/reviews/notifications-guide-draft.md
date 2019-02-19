@@ -19,7 +19,7 @@ Email notifications are automatically set up for all applications when first cre
 
 ![](/img/email-from-bitrise.png)
 
-The alternative solution is **to send emails via a dedicated Step**: this allows for far more customization regarding the notifications. We'll cover both options in this guide. 
+The alternative solution is to send emails via a dedicated Step: this allows for far more customization regarding the notifications. We'll cover both options in this guide. 
 
 ### Configuring email notifications
 
@@ -36,3 +36,10 @@ You can change your email notification settings at any time - you can even compl
    For example, if you want to disable receiving notifications, set both options to **Never send email**.
 
 ### Sending emails with a Step 
+
+You can send emails to any email address with customized updates using our `Send Email with Mailgun` Step. 
+
+To use the Step, you need:
+
+* A Mailgun account.
+* [A Mailgun API key](https://help.mailgun.com/hc/en-us/articles/203380100-Where-can-I-find-my-API-key-and-SMTP-credentials-).
