@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: How can I generate an SSH key pair?
+title: SSHキーペアの生成方法を教えてください。
 menu:
   faq:
     weight: 4

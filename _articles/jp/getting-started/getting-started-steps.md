@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Steps
+title: ステップの開始
 redirect_from:
 - "/getting-started/builds-and-workflows/getting-started/getting-started-steps"
 - "/getting-started/manage-your-bitrise-workflow/"

@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: 'Xcode Archive: export options'
+title: Xcodeアーカイブ：書き出し
 menu:
   tips-and-tricks:
     weight: 8

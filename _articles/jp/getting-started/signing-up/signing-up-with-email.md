@@ -1,3 +1,10 @@
+---
+title: メールアドレスを使ったサインアップ
+menu:
+  signing-up:
+    weight: 4
+
+---
 メールアドレスを使ってBitriseにサインアップすることができます。
 
 ![Screenshot](/img/signing-up/sign-up-bitrise.png)

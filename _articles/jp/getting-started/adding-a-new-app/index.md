@@ -1,4 +1,14 @@
-**Bitrise**にあなたのアプリを追加すると、リポジトリをクローンしてアクセス出来ることを確認します。リポジトリのクローンのほかに、サポートされているすべてのアプリケーションを検出しアプリをビルドして配布するのに必要なワークフローを設定するため[プロジェクトスキャナ]（https://github.com/bitrise-steplib/steps-project-scanner）を実行します。
+---
+title: 新しいアプリの追加
+redirect_from:
+- "/tutorials/deploy/android-deployment/getting-started/adding-a-new-app"
+- "/adding-a-new-app/"
+menu:
+  adding-a-new-app:
+    weight: 1
+
+---
+Bitriseにあなたのアプリを追加すると、リポジトリをクローンしてアクセス出来ることを確認します。リポジトリのクローンのほかに、サポートされているすべてのアプリケーションを検出しアプリをビルドして配布するのに必要なワークフローを設定するため[プロジェクトスキャナ]（https://github.com/bitrise-steplib/steps-project-scanner）を実行します。
 
 {% include message_box.html type="note" title="現在以下のプロジェクトをサポートしています" content="
 

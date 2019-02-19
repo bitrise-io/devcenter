@@ -1,53 +1,35 @@
 ---
-# jp title missing
-title: Bitrise DevCenter - What is Bitrise?
-permalink: "/"
+title: 新しいチームメンバーの追加
 menu:
-  main:
+  team-management:
     weight: 1
 ---
+Bitriseでアプリをセットアップすると、チームメンバーを招待することができます！新しいメンバーの役割は`管理者`、`開発者`,`テスター/QA`から選択でき、実行可能な権限は役割ごとに異なります。
 
-{% include not_translated_yet.html %}
+新しいチームメンバーの追加は、アプリの画面上部にある`Team`タブから行えます。ユーザ名またはEメールアドレスを指定することで任意のユーザを招待できます。招待した相手がBitriseに登録していない場合は、自動で招待メールが送信されます。また、新しいユーザからのアクセスを許可する前に、そのユーザの役割を選択する必要があります。
 
-**Bitrise** is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration)
-and [Delivery](https://en.wikipedia.org/wiki/Continuous_delivery) (CI/CD) Platform as a Service (PaaS)
-with a main focus on mobile app development (`iOS`, `Android`, `Xamarin`, ...). It is a collection of tools and services to help you with the development and automation of your software projects.
+{% include message_box.html type="warning" title="チームメンバーの招待" content="アプリへの新しいメンバーの追加は`オーナー`または`管理者`のみが実行できます。
+"%}
 
-**Automate the testing and deployment of your apps with just a few clicks.**
+`オーナー` と `管理者`はメンバー名の隣にある `Change role`をクリックすることで、他のメンバーの役割を変更できます。
 
-## Run your builds on bitrise.io
+![Screenshot](/img/team-management/add-new-member.png)
 
-* Run builds of your app on Bitrise by defining a `Workflow`. A `Workflow` consists of one or more build `Steps` (open source git repositories
-  which can be executed with the [open source Bitrise CLI](https://www.bitrise.io/cli)).
-* [Create and share your own build Steps](https://github.com/bitrise-steplib/step-template).
-* Define more workflows for the same app, and define [triggers](/webhooks/trigger-map) to specify which workflow should be selected for each trigger.
 
-The steps can do anything that can be implemented by command line scripts and/or programs:
+それぞれの役割で実行可能な権限は以下の通りです。
 
-* send emails,
-* [send text messages](https://github.com/bitrise-io/steps-sms-text-message),
-* pass values to each other,
-* [create Xcode archives](https://github.com/bitrise-io/steps-xcode-archive),
-* gather system information about the Virtual Machine running the build,
-* notify other users (for example, on Slack)
-* even [publish to iTunes Connect](https://github.com/bitrise-io/steps-deploy-to-itunesconnect-deliver), and many more.
+## オーナー
 
-### Infrastructure
+![Screenshot](/img/team-management/owners.png)
 
-When you trigger a build a Virtual Machine is assigned to host, your build and your defined Workflow (series of build Steps) will be executed, step by step.
+## 管理者
 
-After a build is finished the Virtual Machine is destroyed and you can browse the logs of every step that ran during the workflow.
-You can read more at [Code Security](/getting-started/code-security).
+![Screenshot](/img/team-management/admins.png)
 
-The VMs are equipped with all the tools required to build your app. Bitrise automatically detects which Stack - virtual machine type - is appropriate for your app but of course you can change it manually at any time.
+## 開発者
 
-## Bitrise CLI - the open source, offline, automation runner
+![Screenshot](/img/team-management/developers.png)
 
-To run a `bitrise` build on your machine, you can install our [open source runner](https://www.bitrise.io/cli)
-and use the `bitrise` command to execute your workflows locally.
-_No_ [_bitrise.io_](https://www.bitrise.io) _account required to use the Bitrise CLI._
+## テスター / QA
 
-It's a great help when you're developing Steps, debugging builds, or just want to use Bitrise for _any kind of automation_ on your machines.
-
-You can find more information about the offline runner
-in the [Bitrise CLI and bitrise.yml](/bitrise-cli/index/) section of the DevCenter.
+![Screenshot](/img/team-management/testers-qa.png)

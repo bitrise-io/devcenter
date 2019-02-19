@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Frequent iOS issues
+title: よくあるiOS上の問題
 redirect_from:
 - "/ios/frequent-ios-issues/"
 - "/ios/frequent-ios-issues/#works-in-local-but-not-on-bitriseio"
@@ -175,7 +174,7 @@ rm -rf ~/Library/Developer/Xcode/DerivedData
 	* 例えば、OS Xのアクセシビリティのリストを許可する`osascript`を追加するとき、そのスクリプトから**tccutil**を呼び出すことができます。`sudo python tccutil.py -i /usr/bin/osascript`（プロジェクトのリポジトリに含めるか、即時でダウンロードするようにするかを忘れずに）
 	* GitHubからスクリプトを直接ダウンロードすることができます。`wget https://raw.githubusercontent.com/jacobsalmela/tccutil/master/tccutil.py`
 * **あなたのAppのコードに何か問題がある**場合もあります。例えば、**アプリの初回起動時だけにアプリ内で表示されるポップアップ**がある場合です。一度ポップアップをディスミスしたら、そのことをAppのローカルストレージに保存すると、そのポップアップはもう表示されなくなります。私たちがiOSシミュレーター上でディスミスしても、Bitrise 上では毎回新しい真っさらな環境になります。つまり、それはシミュレーターのメニューで __"Reset Content and Settings"__ を押したのと同様な状態です。
-	* __解決方法__: 初回起動の体験を再現するために、Mac や PC 上でテストする前にシミュレーターやエミュレータをクリーンにしてください。 
+	* __解決方法__: 初回起動の体験を再現するために、Mac や PC 上でテストする前にシミュレーターやエミュレータをクリーンにしてください。
 
 また、これらはハングもせず、単に何も出力しないということもあります。
 これはいくつかの理由があって発生します。[iOS library project](https://github.com/bitrise-samples/xcodebuild-piped-output-issue-reproduction)から例を見つけることができます。

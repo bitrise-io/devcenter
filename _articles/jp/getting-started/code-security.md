@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Code Security
+title: コードセキュリティ
 menu:
   getting-started:
     weight: 5

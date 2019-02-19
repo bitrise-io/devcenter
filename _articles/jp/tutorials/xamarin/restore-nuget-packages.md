@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Restore NuGet packages
+title: NuGetパッケージの復元
 redirect_from:
 - "/xamarin/restore-nuget-packages"
 menu:

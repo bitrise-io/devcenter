@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: Androidに関するヒント
 redirect_from:
 - "/android/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project"
@@ -25,19 +24,19 @@ Android アプリのディレクトリで `gradle tasks` を実行すること�
 `gradle tasks` を実行すると、利用可能な Gradle タスクの一覧を次のようなフォーマットで取得できます:
 
     $ gradle task
-    
+
     :tasks
-    
+
     ------------------------------------------------------------
     All tasks runnable from root project
     ------------------------------------------------------------
-    
+
     Android tasks
     -------------
     androidDependencies - Displays the Android dependencies of the project.
     signingReport - Displays the signing info for each variant.
     sourceSets - Prints out all the source sets defined in this project.
-    
+
     Build tasks
     -----------
     assemble - Assembles all variants of all applications and secondary packages.
@@ -78,7 +77,7 @@ with the following content:
     set -e
     # debug log
     set -x
-    
+
     # write your script here
     sdkmanager "platforms;android-18"
     sdkmanager "build-tools;18.0.1"
@@ -153,7 +152,7 @@ If your build requires JDK 8, you can install and activate it with a `Script` st
 
     #!/bin/bash
     set -ex
-    
+
     add-apt-repository -y ppa:openjdk-r/ppa
     apt-get update -qq
     apt-get install -y openjdk-8-jdk

@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Getting started with Android apps
+title: Androidアプリの開始
 redirect_from:
 - "/getting-started/Getting-started-with-Android-apps/"
 - "/getting-started/Getting-started-with-android-apps/"

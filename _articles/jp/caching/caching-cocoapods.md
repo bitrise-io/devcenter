@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Caching Cocoapods
+title: Cocoapodsのキャッシュ
 menu:
   caching:
     weight: 2

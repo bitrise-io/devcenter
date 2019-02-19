@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Collecting and exporting code signing files with codesigndoc
+title: codesigndocを使ったコード署名ファイルの収集とエクスポート
 menu:
   ios-code-signing:
     weight: 2
@@ -40,7 +39,7 @@ menu:
        Fetching your application list from Bitrise...
        Select the app which you want to upload the provisioning profiles
        Please select from the list:
-       
+
 これで完了です！
 
 もしBitriseの`iOS Auto Provisioning`で自動プロビジョニングを使いたい場合は、収集するファイルは証明書のみで大丈夫です。これは`codesigndoc scan`を実行するときに`--certs-only`フラッグを設定することでできます。

@@ -1,4 +1,11 @@
-GitLabのユーザーアカウントを利用して、**Bitrise**と連携することができます。 これにより、1クリックでのログインが可能になり、これらのプロバイダーによってホストされたリポジトリを追加する際のGitLabへの連携も必要無くなります。
+---
+title: GitLabを使ったサインアップ
+menu:
+  signing-up:
+    weight: 3
+
+---
+GitLabのユーザーアカウントを利用して、Bitriseと連携することができます。 これにより、1クリックでのログインが可能になり、これらのプロバイダーによってホストされたリポジトリを追加する際のGitLabへの連携も必要無くなります。
 
 {% include message_box.html type="note" title="メールアドレスでのサインイン" content="[signing up with email address](/getting-started/signing-up/signing-up-with-email)にそって登録するすることでメールアドレスから登録することができます。"%}
 

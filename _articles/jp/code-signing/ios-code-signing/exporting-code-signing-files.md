@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Exporting code signing files without codesigndoc
+title: codesigndocを使わないコード署名ファイルのエクスポート
 menu:
   ios-code-signing:
     weight: 11

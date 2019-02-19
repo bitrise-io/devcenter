@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: List of known Xcode issues
+title: Xcodeの問題点のリスト
 redirect_from:
 - "/ios/known-xcode-issues/"
 menu:
@@ -16,7 +15,7 @@ menu:
 
 _ノート: 主にUIテストに影響します。_
 
-Xcode / iOS Simulatorに紐づく問題の根本的な原因は限られた環境のパフォーマンスによって発生します。これは仮想マシン(あなたが[bitrise.io](https://www.bitrise.io)の上でビルドし走らせるもの), 
+Xcode / iOS Simulatorに紐づく問題の根本的な原因は限られた環境のパフォーマンスによって発生します。これは仮想マシン(あなたが[bitrise.io](https://www.bitrise.io)の上でビルドし走らせるもの),
 MacBook Airs, HDDストレージのMac Minis, ...
 
 あるいはあなたが_SSDではない_Mac Miniで
@@ -65,23 +64,23 @@ MacBook Airs, HDDストレージのMac Minis, ...
     func testAddAnItemGoToDetailsThenDeleteIt() {
             // Use recording to get started writing UI tests.
             // Use XCTAssert and related functions to verify your tests produce the correct results.
-    
-    
+
+
             let app = XCUIApplication()
             let masterNavigationBar = app.navigationBars["Master"]
             masterNavigationBar.buttons["Add"].tap()
-    
+
             let tablesQuery = app.tables
             let firstElemQuery = tablesQuery.cells.elementBoundByIndex(0)
             firstElemQuery.tap()
             app.navigationBars.matchingIdentifier("Detail").buttons["Master"].tap()
             masterNavigationBar.buttons["Edit"].tap()
-    
+
             firstElemQuery.buttons.elementBoundByIndex(0).tap()
             firstElemQuery.buttons["Delete"].tap()
-    
+
             masterNavigationBar.buttons["Done"].tap()
-    
+
             XCTAssert(tablesQuery.cells.count == 0)
         }
 
@@ -89,7 +88,7 @@ MacBook Airs, HDDストレージのMac Minis, ...
 
 ### 解決方法
 
-`Xcode 7.3`を使用し、上記のコードでこの問題を再現させることができました。 
+`Xcode 7.3`を使用し、上記のコードでこの問題を再現させることができました。
 `Xcode 7.2.1`では全く同じコードが完璧に動作しましたが、
 `7.3`ではランダムに失敗します。開発方法は異なるiOS Simulatorデバスを使用することでした。
 Xcode 7.3を使用する"iPhone 6"のシミュレーターデバイスの場合平均して_3回のうち2回_テストが失敗しましたが、

@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Frequent Android issues
+title: よくあるAndroid上の問題
 redirect_from:
 - "/android/frequent-android-issues/"
 menu:
@@ -40,11 +39,11 @@ menu:
     set -e
     # debug log
     set -x
-    
+
     # For newer Android SDK:
     sdkmanager "extras;android;m2repository"
     sdkmanager "extras;google;m2repository"
-    
+
     # For older Android SDK:
     echo y | android update sdk --no-ui --all --filter extra-android-m2repository | grep 'package installed'
     echo y | android update sdk --no-ui --all --filter extra-google-m2repository | grep 'package installed'
@@ -52,7 +51,7 @@ menu:
 ほとんどの場合、両方のパッケージを更新する必要はないので、1つずつ削除することはできますが、
 このエラーに関連するケースの大半はスクリプトの3つすべてでカバーできます。
 
-{% include message_box.html type="note" title="We update the preinstalled Android packages every weekend" content=" So if the error is related to an outdated package, the workaround we describe here can be removed from your build after the weekend update is completed. "%} 
+{% include message_box.html type="note" title="We update the preinstalled Android packages every weekend" content=" So if the error is related to an outdated package, the workaround we describe here can be removed from your build after the weekend update is completed. "%}
 
 ### ライセンスエラーの代替解決策
 
@@ -81,7 +80,7 @@ gitリポジトリのルートディレクトリに** android-licenses ** **デ�
     set -e
     # debug log
     set -x
-    
+
     rsync -avhP ./android-licenses/ "$ANDROID_HOME/licenses/"
 
 つまり、このスクリプトはあなたのリポジトリからの `android-licenses`のライセンスをコピーし、

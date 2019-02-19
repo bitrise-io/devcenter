@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Protecting your code signing files
+title: コード署名ファイルの保護
 menu:
   ios-code-signing:
     weight: 9

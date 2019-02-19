@@ -1,3 +1,13 @@
+---
+title: 自前でホストしたGitlabインスタンスの接続
+redirect_from:
+- "/getting-started/adding-a-new-app/self-hosted-gitlab/#connect-a-self-hosted-gitlab-instance-with-bitrise/"
+- "/getting-started/index/getting-started/signing-up/self-hosted-gitlab/"
+menu:
+  signing-up:
+    weight: 7
+
+---
 企業や組織向けに、Bitriseは自前でホストしたGitLabインスタンスへのアクセスをサポートしています。接続はカンタンです、いったんできれば内部的にホストされたリポジトリからBitriseにアプリを追加することができます[普段の使い方](/getting-started/adding-a-new-app)。 いままで使っていたようなすべての機能が内部的にホストされたリポジトリのアプリに対して可能になります！！
 
 自身でホストしたGitLab上にアプリを用意するのは非常にカンタンです: BitriseはすべてのGitLabインスタンスに対して認証がされている必要があります、さらに**Application Id**は**Secret**は[bitrise.io](https://www.bitrise.io)においてBitrise OAuth アプリケーションに追加されている必要があります。

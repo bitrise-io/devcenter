@@ -1,3 +1,10 @@
+---
+title: Bitbucketを使ったサインアップ
+menu:
+  signing-up:
+    weight: 2
+
+---
 Bitbucketのアカウントを**Bitrise**と連携することができます。連携することで１クリックでログインすることができ、また、これらのプロバイダーによってBitbucket上でレポジトリを作る際にBitbucketへの連携をする必要がなくなります。
 
 {% include message_box.html type="note" title="メールアドレスでサインインする" content=" signing up with email addressにそって登録するすることでメールアドレスから登録することができます"%}

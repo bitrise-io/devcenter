@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Workflows
+title: ワークフロー
 redirect_from:
 - "/getting-started/manage-your-workflow/"
 menu:
@@ -68,7 +67,7 @@ Bitriseワークフローは複数のステップの集まりです。アプリ�
 複数のワークフローを連続して実行するように設定することができます。いつでも、ワークフローの順番を並び変えることや、新しいワークフローを"チェーン"に加えることや、既存のワークフローを削除することができます。
 
 {% include message_box.html type="important" title="Bitrise Start Buildステップ" content="
-このガイドの説明にしたがってワークフローの連結を行う場合、全てが同じバーチャルマシン上で実行されることに注意してください。ただし、[このガイド](/builds/triggering-builds/trigger-multiple-workflows)の説明にしたがって`Bitrise Start Build`ステップを使う場合、それぞれのワークフローは別のバーチャルマシン上で実行されます。"%} 
+このガイドの説明にしたがってワークフローの連結を行う場合、全てが同じバーチャルマシン上で実行されることに注意してください。ただし、[このガイド](/builds/triggering-builds/trigger-multiple-workflows)の説明にしたがって`Bitrise Start Build`ステップを使う場合、それぞれのワークフローは別のバーチャルマシン上で実行されます。"%}
 
 1. `Workflow`タブをクリックしてください。変更の保存または破棄をすることなく、ワークフローエディタを終了できないことに注意してください。
 2. 左の`WORKFLOW`メニューを開き、ワークフローを選んでください。デフォルトは、`primary`ワークフローです。選択中のワークフローの前または後にワークフローを連結することができます。

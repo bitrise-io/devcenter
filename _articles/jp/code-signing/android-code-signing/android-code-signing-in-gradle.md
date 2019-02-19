@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Android code signing in Gradle
+title: Gradle上でのAndroidコード署名
 menu:
   android-code-signing:
     weight: 4
@@ -15,14 +14,14 @@ Gradle設定でコード署名の設定をマニュアルで指定して、ビ�
 
 **署名設定のサンプル**:
 
-    android { 
-       signingConfigs { 
-       	   release { 
-           	 keyAlias 'MyAndroidKey' 
-             keyPassword '***' 
-             storeFile file("/path/to/my/keystore.jks") 
-             storePassword '***' 
-           } 
+    android {
+       signingConfigs {
+       	   release {
+           	 keyAlias 'MyAndroidKey'
+             keyPassword '***'
+             storeFile file("/path/to/my/keystore.jks")
+             storePassword '***'
+           }
        } ...
 
 ## 環境変数について
@@ -31,14 +30,14 @@ Gradle設定でコード署名の設定をマニュアルで指定して、ビ�
 
 プロジェクトのキーストアパスが `$HOME/keystores/my_keystore.jks` と設定されている場合、モジュールレベルの `build.gradle` は次のようになっているでしょう:
 
-    android { 
-       signingConfigs { 
-       	   release { 
-           	 keyAlias 'MyAndroidKey' 
-             keyPassword '***' 
+    android {
+       signingConfigs {
+       	   release {
+           	 keyAlias 'MyAndroidKey'
+             keyPassword '***'
              storeFile file(System.getenv("HOME") + "/keystores/my_keystore.jks")
-             storePassword '***' 
-           } 
+             storePassword '***'
+           }
        } ...
 
 `System.getenv("ENV_KEY")` を使い、Gradle設定ファイルから環境変数にアクセスすることができます。

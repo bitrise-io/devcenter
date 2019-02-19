@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: iOS code signing - troubleshooting
+title: iOSコード署名 - トラブルシューティング
 menu:
   ios-code-signing:
     weight: 13

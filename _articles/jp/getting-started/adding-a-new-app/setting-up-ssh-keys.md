@@ -1,3 +1,12 @@
+---
+title: SSHキーの設定
+redirect_from:
+- "/adding-a-new-app/setting-up-ssh-keys/"
+menu:
+  adding-a-new-app:
+    weight: 3
+
+---
 SSHキーはサービス間でのセキュアな情報転送を担います。Bitriseにおいては、GitHubなどのプロバイダでの認証のためにあなたの許可を求めます。Bitriseを認証する方法について詳しくは[こちら](/getting-started/adding-a-new-app/connecting-a-repository)をご覧ください。
 
 認証が必要となる理由は、Bitriseがあなたのリポジトリからクローンする際にSSH通信を行うためです。セットアップはいくつかの方法で行うことができます。自動または手動セットアップ、あるいは自分で生成したSSHキーを使用する方法があります。

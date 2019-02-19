@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: About Xamarin
+title: Xamarinについて
 redirect_from:
 - "/xamarin/"
 menu:

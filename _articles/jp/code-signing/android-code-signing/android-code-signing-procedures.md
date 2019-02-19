@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Android code signing procedures
+title: Androidコード署名手順
 menu:
   android-code-signing:
     weight: 1
@@ -12,5 +11,5 @@ code signingの設定は、Android Studioで記述することも、Gradleに手
 様々なAndroid code signingの方法
 
 * [Android Studioでcode signing](/code-signing/android-code-signing/android-code-signing-with-android-studio/)
-* [Gradleでcode signing](/code-signing/android-code-signing/android-code-signing-in-gradle/) 
+* [Gradleでcode signing](/code-signing/android-code-signing/android-code-signing-in-gradle/)
 * [Bitrise Sign APK stepを使用したcode signing](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/)

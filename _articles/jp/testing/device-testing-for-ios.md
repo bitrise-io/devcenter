@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Device testing for iOS
+title: iOSデバイステスト
 menu:
   testing:
     weight: 4
@@ -47,25 +46,25 @@ Firebase Test Labでのデバイステストを実行するために、以下の
    `Certificate and profile installer`ステップ以降に追加する必要があることに注意してください。
 
    ![](/img/xcode-build-for-test.png)
-   
+
 3. `Scheme name`には、使用したいスキーマ名を入力してください。デフォルトでは、[環境変数](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)の`$BITRISE_SCHEME`に設定されています。 この値は、アプリを作成した際に設定されています。
 
    デフォルトでは、スキーマには使用するコンフィグレーション(DebugやReleaseなど)が指定さています。`Configuration name`に値を入力することで、手動でコンフィグレーションの種類を指定できます。
-   
+
 4. ステップ内の`Device destination`に値を入力し、_xcodebuild_のdestinationオプションを設定する。
 
    初期値は`generic/platform=ios`です。設定可能な値は、ローカルの端末上で`man xcodebuild`を実行し、`Destinations`セクションから参照できます。
-   
+
 5. ワークフローに`iOS Device Testing`ステップを追加する。
 
    このステップは、`Xcode Build for testing for iOS`ステップ以降に追加してください。
 
    ![](/img/ios-device-testing.png)
-   
+
 6. `Test devices`の入力フィールド内に、アプリをテストしたいデバイスを指定する。
 
    利用可能なデバイスの一覧は[こちら](https://firebase.google.com/docs/test-lab/ios/available-testing-devices)をご覧ください。
-   
+
 7. オプションとして、テスト実行時に生成されたすべてのファイルをダウンロードすることができます。この機能を利用するには、`Debug`グループ内にある`Download files`を`true`にしてください。
 
 8. ビルドを開始しましょう！

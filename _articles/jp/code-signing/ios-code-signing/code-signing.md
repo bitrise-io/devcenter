@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: iOS code signing on Bitrise
+title: Bitrise上でのiOSコード署名
 redirect_from:
 - "/ios/code-signing/"
 menu:

@@ -1,6 +1,6 @@
 ---
 # jp title missing
-title: Rolling builds
+title: Rolling builds機能
 menu:
   builds:
     weight: 4

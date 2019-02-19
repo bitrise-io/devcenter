@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Deploy your Xamarin app
+title: Xamarinアプリのデプロイ
 redirect_from:
 - "/xamarin/deploy-your-xamarin-app/"
 - "/xamarin/deploy-your-xamarin-app"

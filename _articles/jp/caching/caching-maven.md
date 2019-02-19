@@ -1,6 +1,6 @@
 ---
 # jp title missing
-title: Caching Maven
+title: Mavenのキャッシュ
 menu:
   caching:
     weight: 4

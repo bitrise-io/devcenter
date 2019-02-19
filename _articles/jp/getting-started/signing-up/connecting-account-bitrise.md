@@ -1,8 +1,17 @@
+---
+title: GitHub/GitLab/BitbucketアカウントをBitriseと連携させる
+redirect_from:
+- "/getting-started/adding-a-new-app/connecting-account-bitrise"
+menu:
+  signing-up:
+    weight: 5
+
+---
 Bitriseの提供する機能（自動Webhook登録を含む）をすべて活用するには、GitHub/GitLab/BitbucketアカウントをBitriseアカウントと連携する必要があります。連携することで、そのアカウントのリポジトリにBitriseへの **書き込み権限** が付与されます。3つすべてのGitプロバイダのアカウントをBitriseアカウントと次の2つの方法で連携することができます。
 
 * 新しいアプリを追加したときにアカウントを連携します
 * `Account settings`ページからアカウントを連携します
- 
+
  Bitriseに同じGitプロバイダ（例．2つのGitHubアカウント）から2つのアカウントを連携することはできないことにご注意ください。
 
 1つのGitプロバイダアカウントを連携しても終わりではありません。アカウントを連携を解除して、いつでも異なるアカウントを接続することができます。

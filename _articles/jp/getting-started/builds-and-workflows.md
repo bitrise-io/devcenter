@@ -1,6 +1,5 @@
 ---
-# jp title missing
-title: Builds
+title: ビルド
 redirect_from:
 - "/getting-started/builds-and-workflows"
 - "/getting-started/builds-and-workflows/"
