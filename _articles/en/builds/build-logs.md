@@ -19,7 +19,7 @@ When you run a build, a build log is generated automatically. Every build has it
 3. Select the build you want to check out.
 4. Find the log under the `LOGS` tab.
 
-   ![](/img/build-logs.png)
+   ![](/img/logs.jpg)
 
 {% include message_box.html type="info" title="Opening the full log" content="If you have a longer build log then by default, only the end of the log is displayed. Click the bar on the top of the log to expand."%}
 
@@ -57,11 +57,11 @@ If you need to send your build logs to people who do not have access to the app 
 
 If necessary, you can delete the logs of any build on Bitrise. It can be handy if, for example, you do not want new team members to see potentially sensitive information that is displayed in previous logs.
 
-Not all team members are authorized to delete logs: only those with either **Admin** or **Owner** role in the team can do it. 
+Not all team members are authorized to delete logs: only those with either **Admin** or **Owner** role in the team can do it.
 
 {% include message_box.html type="info" title="Deletion is final" content="Be aware that you cannot undo deleting a log. Once you delete it, there is no way to recover the log file."%}
 
-![](/img/confirm-delete.png)
+![](/img/build-logs-are-you-sure-1.png)
 
 1. Log in to Bitrise and click on your app on the Apps page.
 2. Click the `Builds` tab.

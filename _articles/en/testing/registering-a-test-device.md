@@ -24,7 +24,7 @@ The most comfortable way to register your iOS test device on [bitrise.io](https:
 
 If you go back to `Test devices`, you can see the registered device:
 
-![Screenshot](/img/adding-a-new-app/ios-device.jpg)
+![](/img/registered-test-device.jpg)
 
 You can delete the registered device any time if you click on the `x` icon.
 

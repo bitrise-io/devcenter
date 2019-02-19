@@ -17,17 +17,17 @@ Follow the steps to see how you can set it up for your next build!
 3. Click on `Start/Schedule a Build`.
 4. In the `Build configuration` pop-up window, toggle the switch to the right to enable `Schedule this build` feature.
 
-   ![Screenshot](/img/scheduling-builds/disabled-build-scheduling.png)
+   ![](/img/basic-build-config-1.jpg)
 5. Set the hour and minute in the `HH/MM` field.
-6. On the timeline, click on the day(s) when you want your build to run.
+6. On the timeline, select the day(s) when you want your build to run.
 
-   ![Screenshot](/img/scheduling-builds/selected-builds.png)
+   ![](/img/basic-build-config-scheduled-1.jpg)
 7. Check and fill out the rest of the input fields if necessary. You can schedule your build in the advanced version of the `Build configuration` window too.
 8. Click `Schedule Build` at the bottom of the pop-up window.
 
-{% include message_box.html type="info" title="Conflicting input" content="Using the Advanced option, you have access to additional options for your build: you can enter a git tag or a commit hash. If, for example, you specify a commit hash, you will notice that the Git Tag option disappears. This ensures that you cannot enter conflicting input values. 
+{% include message_box.html type="info" title="Conflicting input" content="Using the Advanced option, you have access to additional options for your build: you can enter a git tag or a commit hash. If, for example, you specify a commit hash, you will notice that the Git Tag option disappears. This ensures that you cannot enter conflicting input values.
 
-If you specify a commit hash and a branch where that commit does not exist (for example, **master**), Bitrise will find the branch that does have the given commit (for example, **testing**) and run a build with that branch. "%} 
+If you specify a commit hash and a branch where that commit does not exist (for example, **master**), Bitrise will find the branch that does have the given commit (for example, **testing**) and run a build with that branch. "%}
 
 Now you're back on your `Builds` board and you can see your scheduled build.
 

@@ -5,45 +5,25 @@ date: 2019-01-29 09:58:48 +0000
 published: false
 
 ---
-* for Android UI testing using Appium framework or for all platforms?
-* this bitrise discuss: [https://discuss.bitrise.io/t/appium-tests-setup/1122/3](https://discuss.bitrise.io/t/appium-tests-setup/1122/3 "https://discuss.bitrise.io/t/appium-tests-setup/1122/3") any use?
-* simply just using the code here? [http://appium.io/docs/en/commands/device/recording-screen/start-recording-screen/#example-usage](http://appium.io/docs/en/commands/device/recording-screen/start-recording-screen/#example-usage "http://appium.io/docs/en/commands/device/recording-screen/start-recording-screen/#example-usage")
+[Appium](http://appium.io/) is a popular testing framework to catch defects in native, hybrid, and web apps. You can easily integrate your Appium UI tests into your own Bitrise workflow using our `Script` Step. This way you can have the whole testing screen recorded and can visually verify if your app is doing what it's supposed to do.
 
-You can run your UI test specific to your app and have the whole process screen recorded using one Bitrise workflow. Let's see how to put together a workflow using our `AVD Manager`, `Wait for Android Emulator` and `Script` Steps! Here is an example workflow containing the steps we will use in this guide:
+In this guide we're demonstrating a test workflow with an Appium test written in JS which calls an ADB shell command (but you've got other language options as well -  check out Appium's [Example Usage](http://appium.io/docs/en/commands/device/recording-screen/start-recording-screen/)) And why in JS? Well, JS solution does not support the in-built screen recording command so we had to come up with a workaround. Let's see!
 
-![](/img/screenrecording-ui-workflow.png)
+The only trick here is to use our `Script` and `Deploy to Bitrise.io` Steps: `Script` Step executes your UI test/s and the `Deploy to Bitrise.io` Step delivers your test result to the `DEVICE TESTS` tab of your Build's page.
 
-1. Add the `AVD Manager` Step to your workflow, preferably after any dependency installer step, to create and run an Android Virtual Device.
-2. Add the `Wait for Android Emulator` Step after the `AVD Manager` Step. This Step makes sure the Android emulator has finished booting before screen recording would start.
-3. Add a `Script` Step after the `Wait for Android Emulator` Step. (We're renaming the inserted `Script` Step as `Start screen recording` to distinguish the functional difference between the 3 `Script` Steps in this workflow.)
-   1. Insert the following commands to the `Script content` input field:
+Depending on your script, the test outputs can be:
 
-          $ANDROID_HOME/platform-tools/adb shell "screenrecord /sdcard/video.mp4 --verbose" &> $BITRISE_DEPLOY_DIR/logs.txt &
-          disown
-          
-          $ANDROID_HOME/platform-tools/adb shell "screencap -p /sdcard/screen.png" &> $BITRISE_DEPLOY_DIR/logs.txt &
-          disown
+* video
+* screenshots
+* html reports
+* xmls reports
 
-   `Start screen recording` Step kills to birds with one stone:
-   * starts screen recording while UI test is running
-   * captures a screenshot of the emulator screen
-4. Add another `Script` Step after the `Start screen recording` Step. (We will call it `Run UI test` Step.)
-   1. Add your script (for example, Maven, npm or Appium tests) in the `Script content` input field to call and run your UI test.
+Here is an example app for you:
 
-      ![](/img/ui-test-script.png)
-5. Insert the third `Script` Step (`Stop Screen recording and get file from emulator` Step) after the `Run UI tests` Step.
-   1. Add the following script to the `Script content` input field.
+1. elinditja az appiumot appium &> $BITRISE_DEPLOY_DIR/logs.txt &
 
-          $ANDROID_HOME/platform-tools/adb shell "killall -INT screenrecord"
-          sleep 10
-          $ANDROID_HOME/platform-tools/adb pull /sdcard/video.mp4 $BITRISE_DEPLOY_DIR/video.mp4
-          adb pull /sdcard/screen.png $BITRISE_DEPLOY_DIR/
-
-   As the title suggests, this Step stops the screen recoding, gets the recording/screenshot/logs from the Emulator and places them at the `BITRISE_DEPLOY_DIR` path.
-
-       /opt/android-sdk-linux/platform-tools/adb shell 'killall -INT screenrecord' killall: screenrecord: No such process
-
-   If you get the above error messages, the screen resolution of the screen recording and the device are in conflict. You can fix the resolution size:
-   * in the `Script content` field of the `Start screen recording` Step or
-   * check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step. ![](/img/screen-resolution-avd-manager.png)
-6. Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow to export the output of the UI test to the `APPS & ARTIFACTS` section of your Build's page. The Step will pull the recording and the screenshot from the repository (`BITRISE_DEPLOY_DIR`) specified in the previous step.
+   disown
+2. np test a masodik ha a packaga json -ban bekonfiguralta a tesztet arra h ez lfuttassa a teszteket:  npm test (lefutnak a tesztek)
+3. a testen belul egy shell paranccsal futassa le a screen record es file pull commandokat.ezt nem irja sehova bitrise-on a teszt javascript fileba irja le.
+4. resultok elerhetok: meghivja a pull parancsot az adb pullal kihuzza az eredmenyeket es atmozgatja a deploy dirbe.
+5. deploy to bitrise.io > apps and artiffacts. ez kirak mindent a deplou dirbol az apps and artifacsbol.

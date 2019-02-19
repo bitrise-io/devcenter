@@ -32,7 +32,7 @@ Before you start:
    * `keystore alias`
    * `private key password`
 
-   ![Screenshot](/img/android-code-signing/three-fields.png)
+   ![](/img/android-keystore-file.png)
 6. Click on `Save metadata`.
 
    When you have successfully uploaded a keystore file in the `ANDROID KEYSTORE FILE` section and you have all the fields filled out, Bitrise will automatically export the following env vars based on your input:

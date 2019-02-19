@@ -14,7 +14,7 @@ There are two ways to achieve this:
   as "Deployment keys". This is the best, most secure way but not supported by all git hosting services (GitHub, for example, doesn't support it).
 * Register an SSH key for a user account. Simply add a "bot" / "machine" user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign _read_ permissions to the bot user. After that, you can use the SSH key to clone to the repository or any submodule.
 
-{% include message_box.html type="note" title="Use a machine user with read only access" content=" It is not required to use a special \"bot\" / \"machine\" user: you can add the SSH key to your own account on the git hosting service. The best practice, however, is to use a **machine user, with** **read only** access, for those repositories you want to access during the build. "%} 
+{% include message_box.html type="note" title="Use a machine user with read only access" content=" It is not required to use a special bot/machine user: you can add the SSH key to your own account on the git hosting service. The best practice, however, is to use a **machine user, with** **read only** access, for those repositories you want to access during the build. "%}
 
 [GitHub itself recommends this method](https://developer.github.com/v3/guides/managing-deploy-keys/#machine-users) for accessing multiple repositories.
 
@@ -32,6 +32,10 @@ There is one important detail to keep in mind when you want to give access to al
   use the SSH URL there as well! The same applies for submodules and every other private
   git repository URL you want to use with the SSH key you register on [Bitrise.io](https://www.bitrise.io/)!
 * If you have a **public** app: **use HTTPS URLs everywhere!** SSH URLs require SSH keys even if the repository is public. For security reasons, public apps CANNOT have SSH keys. As HTTPS git clone URLs do not require any authentication in the case of public repositories, they should be used for public Bitrise apps.
+
+{% include message_box.html type="info" title="Cloning issues" content="If you encounter issues with git cloning - for example, not all submodules are cloned - try the following command after cloning:
+
+`git submodule update --recursive --remote --merge --force`"%} 
 
 ## Creating SSH keys for a new private app
 
@@ -54,5 +58,4 @@ and click `Show SSH Public Key`.
 
 Copy the key to the given user and you are ready to build!
 
-If necessary, update the given app's SSH key by clicking the `Change SSH Keypair` button
-and choosing one of the three options.
+If necessary, update the given app's SSH key by clicking the `Change SSH Keypair` button and choosing one of the three options.

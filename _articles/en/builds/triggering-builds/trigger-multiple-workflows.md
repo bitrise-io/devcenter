@@ -24,25 +24,28 @@ If any of the builds fail, the build will be considered a failed build. If the b
 
    Go to `Account settings` and select the `Security` option on the left side. Click the `Generate new` button.
 
-   ![Access token](/img/getting-started/triggering-builds/generate-token.png) **IMPORTANT**: Make sure to copy the code once it is generated. You will not be able to see it again!
+   ![](/img/generate-access-tokens.png)
+
+   **IMPORTANT**: Make sure to copy the code once it is generated. You will not be able to see it again!
 2. Create a Secret Environment Variable on the `Secrets` tab of the app's `Workflow Editor` and add the token as its value.
 
-   ![Secret env](/img/getting-started/triggering-builds/secret_token.png)
+   ![](/img/access-token-secrets.png)
+
    Feel free to use any key you wish for the secret. We recommend something simple like `$ACCESS_TOKEN`.
 3. Add the `Bitrise Start Build` step to the `Trigger` workflow.
 
    **IMPORTANT:** The `Bitrise Start Build` step will set an environment variable to all builds it starts: `$SOURCE_BITRISE_BUILD_NUMBER`. This means that all builds of the app started by this step will have the same build number despite running with different workflows.
-4. Add the secret env storing your personal access token to the `Bitrise Access Token` input of the step: click the `Insert variable` button and choose the key you created.
+4. Add the secret env storing your personal access token to the `Bitrise Access Token` input of the step: click the `Select secret variable` button and choose the key you created.
 
-   ![Secret env](/img/getting-started/triggering-builds/access-token-input.png)
+   ![](/img/bitrise-access-token-step.png)
 5. Find the `Workflows` input of the step, and add `Building` and `Testing` to it.
 
-   ![Workflows input](/img/getting-started/triggering-builds/workflows-input.png)
+   ![](/img/bitrise-start-build.png)
 6. Add the `Bitrise Wait for Build` step as the **last step** of the `Trigger` workflow.
 
    **IMPORTANT:** The step checks statuses of the builds defined in the step. The builds are defined in the `Build slugs` input: the slugs are the output of the `Bitrise Start Build` step. As long as the builds defined by the slugs are running, the step will hold the build it is running in. The build will fail if any of the builds included in the step fail.
-7. Add the secret env storing your personal access token to the `Bitrise Access Token` input of the step: click the `Insert variable` button and choose the key you created.
+7. Add the secret env storing your personal access token to the `Bitrise Access Token` input of the step: click the `Select secret variable` button and choose the key you created.
 
-   ![Secret env](/img/getting-started/triggering-builds/access-token-input.png)
+   ![](/img/access-token-select-secret-variable.png)
 
 And you are done! Once you trigger the `Trigger` workflow, the `Bitrise Start Build` step of the workflow will trigger two more builds running simultaneously. If those two builds are successful, the `Bitrise Wait for Build` step lets the first build finish. A single status report is sent to the git hosting provider, regardless whether the build is successful or not.

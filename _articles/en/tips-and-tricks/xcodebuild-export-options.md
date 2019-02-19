@@ -2,11 +2,11 @@
 title: 'Xcode Archive: export options'
 menu:
   tips-and-tricks:
-    weight: 7
+    weight: 8
 
 ---
 If you create a new iOS app on [bitrise.io](https://www.bitrise.io/)
-the generated default workflow wil include our `Xcode Archive` step.
+the generated default workflow will include our `Xcode Archive` step.
 This step can manage to archive and export your iOS app.
 
 ## A bit of history and technical info

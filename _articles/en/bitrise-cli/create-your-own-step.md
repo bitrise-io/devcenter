@@ -107,11 +107,20 @@ If you wish to share your newly created Step with the wider world, that's great 
 We recommend you start with the command `bitrise share`. This will print you a guide on sharing steps - all you need to do is follow! But we'll summarize the most important things here as well, if you wish to look at the process before even firing up a command line interface.
 
 1. Make sure your Step is stored in a public git repository.
-2. Fork the StepLib repository you want to have your step in. The official Bitrise StepLib can be found here: [https://github.com/bitrise-io/bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib "https://github.com/bitrise-io/bitrise-steplib")
-3. Call `$ bitrise share start -c ``[https://github.com/](https://github.com/ "https://github.com/")``[your-username]/bitrise-steplib.git`, with the git clone URL of your forked StepLib repository. This will prepare your forked StepLib locally for sharing.
+2. Fork the StepLib repository you want to have your step in. We recommend using the [The official Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)!
+3. Prepare your forked StepLib locally for sharing: 
+   ```
+   $ bitrise share start -c https://github.com/[your-username]/bitrise-steplib.git
+   ```
 4. Add the step version tag to your Step's repository.
-5. Call `$ bitrise share create --tag [step-version-tag] --git [step-git-uri].git --stepid [step-id]`, to add your Step to your forked StepLib repository (locally).
-6. You can call `$ bitrise audit -c ``[https://github.com/](https://github.com/ "https://github.com/")``[your-username]/bitrise-steplib.git` to perform a complete health-check on your forked StepLib.
+5. Add the Step to your forked StepLib repository: 
+   ```
+   $ bitrise share create --tag [step-version-tag] --git [step-git-uri].git --stepid [step-id]
+   ```
+6. Optionally, perform a complete health check on your forked StepLib:
+   ```
+   $ bitrise audit -c https://github.com/[your-username]/bitrise-steplib.git
+   ```
 7. Create a Pull Request in the original StepLib repository.
 
 And that's it, you are done! Once your PR is merged, your step will be available to everyone who uses the StepLib repository you chose.

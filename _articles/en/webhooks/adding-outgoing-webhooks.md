@@ -55,23 +55,26 @@ You can check if the notifications were successfully sent or not, and you can ch
 1. Go to the `Recent deliveries` section of the `Outgoing Webhooks` menu.
 2. Click an outgoing webhook.
 
-   ![Outgoing webhook](/img/webhooks/outgoing-webhook.jpeg)
+   ![](/img/response-webhook.png)
 3. Select the `REQUEST` tab to see and, if you wish, modify the payload that was sent to the specified URL.
 
    An example payload:
 
-        {
-          "build_slug":"1234abcd",
-          "build_number":3,
-          "app_slug":"abcd1234",
-          "git": {
-            "provider":"github",
-            "src_branch":"feature/branch",
-            "dst_branch":master, # If the build was triggered by a pull request
-            "pull_request_id":32 # If the build was triggered by a pull request
-          }
-        }
+       {
+         "build_slug": "58f4da148d884d68",
+         "build_number": 3,
+         "app_slug": "de7829a7317d976e",
+         "build_status": 0,
+         "build_triggered_workflow": "primary",
+         "git": {
+           "provider": "github",
+           "src_branch": "master",
+           "dst_branch": "master",
+           "pull_request_id": 0,
+           "tag": null
+         }
+       }
 4. Select the `RESPONSE` tab to see the response from the service you sent the notification to.
 5. You can redeliver any delivery. Open the delivery you need and click `Redeliver`.
 
-   ![Redeliver](/img/webhooks/redeliver-payload.jpeg)
+   ![](/img/payload-redelivery.png)

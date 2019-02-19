@@ -2,7 +2,7 @@
 title: Use bitrise.yml from repository
 menu:
   tips-and-tricks:
-    weight: 10
+    weight: 11
 
 ---
 Storing the build configuration (`bitrise.yml`) in your repository can be a great idea.

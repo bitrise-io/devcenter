@@ -43,7 +43,9 @@ If you have test targets defined, the `primary` workflow of a MacOS app includes
 * `Xcode Test for Mac`
 * `Deploy to Bitrise.io`
 
-{% include message_box.html type="note" title="Code signing files" content="Running Xcode tests and deploying their results to Bitrise do not require any code signing files. So don't worry about them just yet!"%}
+{% include message_box.html type="note" title="Code signing files" content="Running Xcode tests and deploying their results to Bitrise do not require any code signing files. 
+
+There is one exception: if you set a team for your project locally, in Xcode, then Xcode will ask for that team's Developer certificate before running the test."%}
 
 The `Xcode Test for Mac` step runs the pre-defined Xcode tests. It has a default configuration that does not need to be modified: if the tests are written correctly, they will work. You can find the same configuration options in Xcode, too.
 

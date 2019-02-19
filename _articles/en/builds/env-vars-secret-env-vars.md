@@ -18,17 +18,17 @@ As an example, if you click into an input of the third step of your workflow, th
 
 You can also replace the variable for a new one in `Env Vars`. Delete the old value and set the new one. If you toggle the `Replace variables in inputs` to the right, the new value will be used everywhere in your workflow.
 
+![](/img/env-vars.png)
+
 {% include message_box.html type="important" title="Protect your secrets" content=" Contrary to [secret env vars](#about-secrets/), env vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to `Env Vars`. "%}
 
 ### Setting an env var in every/in a specific workflow
 
 Under `App Environmental Variables`, you can set all the env vars you wish to use later on in **all your workflows**.
 
-![Screenshot](/img/builds/app-env-var.png)
-
 You can set env vars for any of your workflows separately as well. If you wish to set an env var with a variable which will be **only used in a particular workflow**, then select the respective workflow from the list and add the env var there. The list is comprised of the workflows you named for your app. (In this example below, the app has a `deploy`, `primary` and `dummy` workflow.)
 
-![Screenshot](/img/builds/workflow-env-var.png)
+![](/img/env-var-workflows.png)
 
 Check out our list of [Available Environment Variables](/builds/available-environment-variables/) exposed by Bitrise CLI and bitrise.io.
 
@@ -43,7 +43,7 @@ You can add a secret env var to your workflow using our `Secrets` tab.
 1. Click `Add new` on the `Secrets` tab.
 2. Set the `key` and `value` fields.
 
-![](/img/locked-secret.png)
+   ![](/img/secrets-dummy.png)
 
 You can also add a secret env var directly in a [step's](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/) `SENSITIVE` input.
 
@@ -58,15 +58,17 @@ Once you've added a new secret env var in the `Secrets` tab, you come back to it
 
 {% include message_box.html type="important" title="Life after `Make it protected` " content=" Please note if you clicked this button, **neither you nor anybody with the access to the app can unlock or check the value again**.
 
-![](/img/make-it-protected2.png)
+![](/img/test-key-make-it-protected.png)
 
 Since this change is irreversible, a confirmation pop-up window will be displayed prior to saving your changes.
 
-![](/img/make-it-protected.png)" %}
+![](/img/protected.png)
+
+" %}
 
 You can **show** and **hide** the value of an env var with the `eye` icon. This feature is useful if you have a long list of secret env vars in `Secrets` and you wish to check the value of only one secret env var while leaving the other values hidden. If a value is hidden, it's represented with the `crossed out eye` icon.
 
-![](/img/hidden-value-1.png)
+![](/img/eye-icon.png)
 
 If you toggle the `Replace variables in inputs` to the right, the new value will be used everywhere in your workflow.
 

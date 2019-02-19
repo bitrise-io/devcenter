@@ -1,15 +1,34 @@
 ---
-title: Enable/Disable a step (optionally, based on a condition)
+title: Enabling or disabling a Step conditionally
 menu:
   tips-and-tricks:
-    weight: 6
+    weight: 7
 
 ---
-## Disable a Step
+You can enable or disable a Step in any given workflow, and you can also set conditions for Steps. You can do it either on your own machine, with the Bitrise CLI or by using the `bitrise.yml` tab of the Workflow Editor.
 
-If you don't want to remove the Step from your Workflow and you don't want to duplicate the Workflow either (which is the preferred way if you want to experiment with new things; you can just create a "backup" clone of your original Workflow) then you can simply disable a Step by specifying `run_if: false`.
+We mostly use `run_if` expressions to do these things. [Check out the template expressions](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml)!
 
-An example:
+{% include message_box.html type="info" title="A **run_if** can be any valid **Go** template" content=" A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `\"True\"`, `\"t\"`, `\"yes\"` or `\"y\"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't. "%}
+
+An example `run_if` to check a **custom environment variable**:
+
+    {% raw %}
+    run_if: |-
+     	{{enveq "CUSTOM_ENV_VAR_KEY" "test value to test against"}}
+    {% endraw %}    
+
+This `run_if` will skip the Step if the value of `CUSTOM_ENV_VAR_KEY` is not `test value to test against`.
+
+## Disabling a Step
+
+If you do not want to remove a Step from your workflow but you don't want it to run, you can disable it, using a `run_if` expression.
+
+1. Open your app's `bitrise.yml` file.
+2. Find the Step that you want to disable.
+3. Add `run_if: false` to it.
+
+**Example:**
 
     - script:
         run_if: false
@@ -18,32 +37,41 @@ An example:
             #!/bin/bash
             echo "This will never run, because of run_if:false"
 
-## Run a Step only in CI environment, skip it for local builds
+{% include message_box.html type="note" title="Experimenting with workflows" content="To experiment with different configurations for a workflow, without removing or disabling Steps, we recommend cloning the workflow. You can modify the cloned workflow as much as you wish without changing anything in the original."%}
 
-This is quite similar to how you [completely disable a step](#disable-a-step), but instead of specifying `false` as the `run_if` expression, you specify `.IsCI`, which will only be true in CI mode.
+## Running a Step only in a CI environment
 
-This method can be useful to debug builds locally, where you don't want to run
-specific steps on your own Mac/PC. Lots of Steps have this `run_if` flag set by default,
-for example the `Git Clone` step is configured with `run_if: .IsCI` in the step's
-default configuration (`step.yml`), because the most common use case when you
-run a build locally is that you already have the code on your Mac/PC
-and so you don't want to do a `Git Clone`. Of course you can change the `run_if`
-property of any step, so you can specify a `run_if: true` for the `Git Clone`
-step if you want to run it locally too.
+Running a Step only in a CI environment means your build will skip that particular Step for local builds. Like disabling Steps, you can do this with a `run_if` expression. Use this to debug builds locally.
 
-{% include message_box.html type="note" title="Enable CI mode" content=" CI mode can be enabled on your own Mac/PC by setting the `CI` environment to `true` (e.g. with `export CI=true` in your Bash Terminal), or by running `bitrise run` with the `--ci` flag: `bitrise --ci run ...`. "%}
+1. Open your app's `bitrise.yml` file.
+2. Find the Step that you want to disable.
+3. Add `run_if: .IsCI` to it.
 
-## Run a Step only if the Build failed
+**Example:**
 
-_To do this you have to switch to `bitrise.yml` mode (open the Workflow Editor on bitrise.io -> left side: click on `bitrise.yml` to switch to the interactive `bitrise.yml` editor)._
+    - script:
+        run_if: .IsCI
+        inputs:
+        - content: |-
+            #!/bin/bash
+            echo "This will only ever run in a CI environment because run_if: IsCI"
 
-You have to add two properties to the Step you **only** want to run when
-the Build failed (at that point, when the Step would run):
+{% include message_box.html type="info" title="The `.IsCI` flag" content="Many Steps have this .`IsCI` flag set by default: for example, the `Git Clone` Step. However, you can change the `run_if` property of these Steps, too: just set it to `run_if: true`."%}
 
-* `is_always_run: true` (this enables the Step to be considered to run even if a previous Step failed)
-* `run_if: .IsBuildFailed` (you can find more examples of the `run_if` template at: [https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml)).
+{% include message_box.html type="info" title="Enable CI mode" content=" CI mode can be enabled on your own Mac/PC by setting the `CI` environment to `true` (for example, run `export CI=true` in your Bash Terminal), or by running `bitrise run` with the `--ci` flag: `bitrise --ci run ...`. "%}
 
-An example `script` step, which will only run if the Build failed:
+## Running a Step only if the build failed
+
+It is possible to run a Step ONLY if the build failed before it got to that particular Step. In addition to `run_if`, you will need to use the `is_always_run` property as well.
+
+1. Open your app's `bitrise.yml` file.
+2. Find the Step that you want to disable.
+3. Add `run_if: .IsBuildFailed` to it.
+4. Add `is_always_run: true` to it.
+
+   This enables the Step to run even if a previous Step failed.
+
+**Example:**
 
     - script:
         is_always_run: true
@@ -52,19 +80,3 @@ An example `script` step, which will only run if the Build failed:
         - content: |-
             #!/bin/bash
             echo "Build Failed!"
-
-{% include message_box.html type="note" title="A **run_if** can be any valid **Go** template" content="
-A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `\"True\"`, `\"t\"`, `\"yes\"` or `\"y\"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't.
-"%}
-
-An example `run_if` to check a **custom environment variable** (you
-can expose environment variables from your scripts too,
-using [envman](https://github.com/bitrise-io/envman/)):
-
-    {% raw %}
-    run_if: |-
-     	{{enveq "CUSTOM_ENV_VAR_KEY" "test value to test against"}}
-    {% endraw %}    
-
-This `run_if` will skip the step in every case when the value of `CUSTOM_ENV_VAR_KEY`
-is not `test value to test against`.

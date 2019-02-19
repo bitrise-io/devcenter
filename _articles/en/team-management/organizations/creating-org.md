@@ -24,6 +24,10 @@ No need for lengthy preparation when you wish to create an organization on Bitri
 4. In the pop-up window, enter the name and the billing email of your organization, and click `Create`. By default, your invoices will be sent to the billing email you set here.
 
    ![](/img/create-new-org.png)
+
+   Please note that you will NOT be able to create an organization if the domain part of your email address contains uppercase letters. 
+   * org@example.com will work.
+   * org@Example.com will NOT work! 
 5. Provide your billing information.
 
    You can skip this step and provide these details at a later date. **Only the owner(s) of an organization can modify these.**

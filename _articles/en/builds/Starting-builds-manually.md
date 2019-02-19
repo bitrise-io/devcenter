@@ -15,7 +15,7 @@ Starting a build manually on Bitrise takes literally two clicks - if you leave e
 2. Select the app you wish to build.
 3. Click `Start/Schedule a Build`.
 
-![Start a build](/img/start-build.png)
+   ![](/img/start-schedule-build.png)
 
 At this point, the **Build configuration** window opens and you are presented with two tabs near the top of the window:
 
@@ -28,7 +28,7 @@ At this point, the **Build configuration** window opens and you are presented wi
 
 If you choose `Basic` in the **Build configuration** window, you have three options to configure:
 
-![Basic config window](/img/basic-config-window.png)
+![](/img/basic-build-config.jpg)
 
 * **Branch**: The Git branch that you wish to build. Make sure to type the name of the branch correctly, otherwise the build will fail. You can only enter a single branch. If a pull request to your repository is made from a forked branch, type the name of that branch to run a build of the pull request.
 
@@ -41,13 +41,13 @@ If you choose `Basic` in the **Build configuration** window, you have three opti
 
 If you choose `Advanced` in the **Build configuration** window, you have all the options available with `Basic`, and a few more:
 
-![Advanced config window](/img/advanced-window1.png)
+![](/img/build-config-advanced.jpg)
 
 * **Git Tag**: Builds a particular branch or commit that is tagged with the Tag you enter.
 * **Commit Hash**: Copy a specific commit's hash here to build that particular commit. This option can even send a build status update to your git hosting service.
 * **Custom Environment Variables**: Set up a custom Environment Variable that is used in the build. You can enable the `Replace variables in input?` option: this replaces the Environment Variables in your input with the assigned value. You need to do this if your custom variable references other Environment Variables.
 * **Generated cURL command**: Based on the options you set in the Build configuration window, we provide an automatically generated cURL command. This can be copied and pasted, and you can run it on any platform that has cURL installed.
 
-{% include message_box.html type="info" title="Conflicting input" content="If, for example, you specify a commit hash, you will notice that the Git Tag option disappears. This ensures that you cannot enter conflicting input values. 
+{% include message_box.html type="info" title="Conflicting input" content="If, for example, you specify a commit hash, you will notice that the Git Tag option disappears. This ensures that you cannot enter conflicting input values.
 
 If you specify a commit hash and a branch where that commit does not exist (for example, **master**), Bitrise will find the branch that does have the given commit (for example, **testing**) and run a build with that branch. "%}
