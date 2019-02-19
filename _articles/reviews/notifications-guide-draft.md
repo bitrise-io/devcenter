@@ -68,3 +68,7 @@ To use the Step, you need:
    Multiple files can be attached: separate their paths with commas. 
 
 Run a build - and check your emails! 
+
+## Integrating with Slack
+
+Bitrise supports Slack integration, of course - and it's quite easy to set it up. Send Slack messages to individual users, groups or channels; customize the messages, include attachments, and link buttons that will take the users to the build page. 
