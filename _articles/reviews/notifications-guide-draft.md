@@ -58,3 +58,8 @@ To use the Step, you need:
 5. Create a new Secret Environment Variable that contains the list of the email addresses. 
 
    You can choose any key you want. The addresses should be separated by a comma.
+
+   ![](/img/email-list-secret.png)
+6. Set the email subject, the email message and the email message if the build failed. 
+   * You can insert environment variables to any of three. In the email, the values of the variables will be displayed. 
+   * 
