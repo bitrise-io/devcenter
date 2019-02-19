@@ -37,7 +37,7 @@ You can change your email notification settings at any time - you can even compl
 
 ### Sending emails with a Step
 
-You can send emails to any email address with customized updates using our `Send Email with Mailgun` Step.
+The `Send Email with Mailgun` Step can send emails to any email address with customized updates. You can use environment variables to send information, as well as attach files to the emails. 
 
 To use the Step, you need:
 
@@ -53,13 +53,16 @@ To use the Step, you need:
 2. Create a Secret Environment Variable that holds your Mailgun domain.
 
    We recommend naming the key `$MAILGUN_DOMAIN`. This is the default value of the Step's relevant input.
-3. Add the `Send Email with Mailgun` Step to your workflow. 
-4. Find the `Send To emails` input of the Step. Click on the input and then click `Select secret variable`. 
-5. Create a new Secret Environment Variable that contains the list of the email addresses. 
+3. Add the `Send Email with Mailgun` Step to your workflow.
+4. Find the `Send To emails` input of the Step. Click on the input and then click `Select secret variable`.
+5. Create a new Secret Environment Variable that contains the list of the email addresses.
 
    You can choose any key you want. The addresses should be separated by a comma.
 
    ![](/img/email-list-secret.png)
-6. Set the email subject, the email message and the email message if the build failed. 
-   * You can insert environment variables to any of three. In the email, the values of the variables will be displayed. 
-   * 
+6. Set the email subject, the email message and the email message if the build failed.
+   * You can insert environment variables to any of three. In the email, the values of the variables will be displayed.
+   * The default messages will send the name of the app, the number of the build and whether the build succeeded or failed. 
+7. Attach files if necessary: the `File attachments` input accepts a file path or an environment variable as input. 
+
+   Multiple files can be attached: separate their paths with commas. 
