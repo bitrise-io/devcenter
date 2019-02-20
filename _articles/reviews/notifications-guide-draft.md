@@ -45,7 +45,7 @@ To use the Step, you need:
 * [A Mailgun API key](https://help.mailgun.com/hc/en-us/articles/203380100-Where-can-I-find-my-API-key-and-SMTP-credentials-).
 * [Your Mailgun domain name](https://help.mailgun.com/hc/en-us/articles/203637190-How-do-I-add-a-domain-).
 
-{% include message_box.html type="important" title="Make sure that the Step runs in every build!" content="If you use the `Send Email with Mailgun` Step in your workflow, make sure that it is always set to run even if the previous Step failed! This is the default setting of the Step. If you change it, you will not receive emails if your builds fail."%}
+{% include message_box.html type="important" title="Make sure that the Step runs in every build!" content="If you use the `Send Email with Mailgun` Step in your workflow, make sure that [it is always set to run even if the previous Step failed](/getting-started/getting-started-steps/#skipping-steps)! This is the default setting of the Step. If you change it, you will not receive emails if your builds fail."%}
 
 1. Create a Secret Environment Variable that holds your Mailgun API key.
 
@@ -73,6 +73,12 @@ Run a build - and check your emails!
 
 Bitrise supports Slack integration, of course - and it's quite easy to set it up. Send Slack messages to individual users, groups or channels; customize the messages, include attachments, and link buttons that will take the users to the build page.
 
-To use our dedicated Step, you need either a [Slack webhook URL](https://api.slack.com/incoming-webhooks) or a [Slack API token](https://api.slack.com/bot-users).
+To use our dedicated Step, you need either a [Slack webhook URL](https://api.slack.com/incoming-webhooks) or a [Slack API token for a Slack óóbot user](https://api.slack.com/bot-users).
 
-{% include message_box.html type="important" title="Make sure that the Step runs in every build!" content="If you use the `Send a Slack message` Step in your workflow, make sure that it is always set to run even if the previous Step failed! This is the default setting of the Step. If you change it, messages won't be sent if the build fails."%}
+{% include message_box.html type="important" title="Make sure that the Step runs in every build!" content="If you use the `Send a Slack message` Step in your workflow, make sure that [it is always set to run even if the previous Step failed](/getting-started/getting-started-steps/#skipping-steps)! This is the default setting of the Step. If you change it, messages won't be sent if the build fails."%}
+
+1. Add the `Send a Slack message` Step to your workflow. 
+2. Find either the `Slack Webhook URL` or the `Slack API token` input. Click on the input and then click `Select secret variable`. 
+3. Create a new Secret Environment Variable that stores your webhook URL or your Slack API token.
+
+   You can choose any key you want.  
