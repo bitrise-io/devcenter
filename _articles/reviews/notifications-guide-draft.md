@@ -72,3 +72,5 @@ Run a build - and check your emails!
 ## Integrating with Slack
 
 Bitrise supports Slack integration, of course - and it's quite easy to set it up. Send Slack messages to individual users, groups or channels; customize the messages, include attachments, and link buttons that will take the users to the build page. 
+
+To use our dedicated Step, you need either a [Slack webhook URL](https://api.slack.com/incoming-webhooks) or a [Slack API token](https://api.slack.com/bot-users). 
