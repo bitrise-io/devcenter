@@ -37,7 +37,7 @@ You can change your email notification settings at any time - you can even compl
 
 ### Sending emails with a Step
 
-The `Send Email with Mailgun` Step can send emails to any email address with customized updates, in either HTML or plain text format. You can use environment variables to send information, as well as attach files to the emails. 
+The `Send Email with Mailgun` Step can send emails to any email address with customized updates, in either HTML or plain text format. You can use environment variables to send information, as well as attach files to the emails.
 
 To use the Step, you need:
 
@@ -62,15 +62,17 @@ To use the Step, you need:
    ![](/img/email-list-secret.png)
 6. Set the email subject, the email message and the email message if the build failed.
    * You can insert environment variables to any of three. In the email, the values of the variables will be displayed.
-   * The default messages will send the name of the app, the number of the build and whether the build succeeded or failed. 
-7. Attach files if necessary: the `File attachments` input accepts a file path or an environment variable as input. 
+   * The default messages will send the name of the app, the number of the build and whether the build succeeded or failed.
+7. Attach files if necessary: the `File attachments` input accepts a file path or an environment variable as input.
 
-   Multiple files can be attached: separate their paths with commas. 
+   Multiple files can be attached: separate their paths with commas.
 
-Run a build - and check your emails! 
+Run a build - and check your emails!
 
 ## Integrating with Slack
 
-Bitrise supports Slack integration, of course - and it's quite easy to set it up. Send Slack messages to individual users, groups or channels; customize the messages, include attachments, and link buttons that will take the users to the build page. 
+Bitrise supports Slack integration, of course - and it's quite easy to set it up. Send Slack messages to individual users, groups or channels; customize the messages, include attachments, and link buttons that will take the users to the build page.
 
-To use our dedicated Step, you need either a [Slack webhook URL](https://api.slack.com/incoming-webhooks) or a [Slack API token](https://api.slack.com/bot-users). 
+To use our dedicated Step, you need either a [Slack webhook URL](https://api.slack.com/incoming-webhooks) or a [Slack API token](https://api.slack.com/bot-users).
+
+{% include message_box.html type="important" title="Make sure that the Step runs in every build!" content="If you use the `Send a Slack message` Step in your workflow, make sure that it is always set to run even if the previous Step failed! This is the default setting of the Step. If you change it, messages won't be sent if the build fails."%}
