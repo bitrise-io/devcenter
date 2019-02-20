@@ -38,9 +38,11 @@ With Bitrise, you can choose from 3 different test types:
 
 If you want to read up on the difference between these test types, take a look at [Firebase's documentation](https://firebase.google.com/docs/test-lab/android/overview).
 
-Note that if you have several variants of an APK and you want to pick the one that contains tests, you should set that particular APK in the `Gradle Runner` build Step. Specify the `Gradle task to run` by setting the task (for example `assemble`), module (for example `app`) and variant (for example, `debug`
+{% include message_box.html type="note" title="How to generate the right APKs for virtual device testing" content="
+Note that if you have several variants of an APK and you want to pick the one that contains tests virtual device testing, you should set that particular APK in the `Gradle Runner` build Step. Specify the Gradle task to generate your APK in the `Gradle task to run` input field by setting the task, module and variant. For example: `assembleDebug assembleDebugAndroidTest`
 
-`assembleDebug assembleDebugAndroidTest`
+In the above example, `assembleDebug` generates an APK while `assembleDebugAndroidTest` generates a test APK containing your tests. This way the right APKs get picked up and used in `[BETA] Virtual Device Testing for Android` Step.
+"%}
 
 There is a small difference between configuring your workflow for `robo` and `instrumentation` tests, so let's see them separately!
 
