@@ -49,7 +49,7 @@ You get the most accurate result if you run `codesigndoc` on the same state of y
 
 So, for the best results, we recommend you to:
 
-1. **Do a clean** `**git clone**` **of the repository** (into a new directory) on your Mac.
+1. **Do a clean** `git clone` **of the repository** (into a new directory) on your Mac.
 2. Run `codesigndoc` in this directory (not in the directory where you usually work on the project).
 
 It's also advised to do a full Archive + Export (until you get a signed `.ipa`) of your project from `Xcode.app` first, and run `codesigndoc` **after that**. The reason is that `Xcode.app` might download or update profiles in the background during the IPA export. If you run `codesigndoc` after you exported an `.ipa` from Xcode, `codesigndoc` will able to collect all the files.
