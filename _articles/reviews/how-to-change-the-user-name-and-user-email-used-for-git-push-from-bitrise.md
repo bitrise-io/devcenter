@@ -12,10 +12,10 @@ The default user name and user email on our [Base Bitrise Docker Image](https://
 
 This means that all future commits have the above default user information (due to the `--global` flag).
 
-If you want to change the user name and/or the user email of a commit related to our Base Bitrise Docker image or for any git push (because you want to push back to the repository), follow this short tutorial:
+If you want to "push back" (`git push`) into the repository, you have to **set your own the user name and the email address** follow this short tutorial:
 
-1. Add a `Script` step as the very first step in your workflow. Make sure the Step comes first before you'd `git commit` in Terminal.)
-2. With the following content:
+1. Add a `Script` step as the very first step in your workflow. Make sure the Step comes first before you'd `git commit` in Terminal.
+2. Add the following to the Script input field and insert your own user name and email:
 
        git config --global user.name "User Name"
        git config --global user.email "email-for-the-commit@domain.com"

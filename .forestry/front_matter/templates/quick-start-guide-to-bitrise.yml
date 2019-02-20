@@ -15,6 +15,7 @@ fields:
   default: ''
 pages:
 - _articles/reviews/detox-testing-draft.md
+- _articles/reviews/how-to-change-the-user-name-and-user-email-used-for-git-push-from-bitrise.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/reviews/android-app-bundle-draft.md
@@ -78,6 +79,5 @@ pages:
 - _articles/team-management/user-roles-on-app-teams.md
 - _articles/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/code-signing/android-code-signing/downloading-a-keystore-file.md
-- _articles/reviews/how-to-change-the-user-name-and-user-email-used-for-git-push-from-bitrise.md
 - _articles/webhooks/index.md
 - _articles/reviews/xcode-test-draft.md
