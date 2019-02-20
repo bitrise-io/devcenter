@@ -77,14 +77,14 @@ Bitrise supports Slack integration, of course - and it's quite easy to set it up
 
 {% include message_box.html type="important" title="Make sure that the Step runs in every build!" content="If you use the `Send a Slack message` Step in your workflow, make sure that [it is always set to run even if the previous Step failed](/getting-started/getting-started-steps/#skipping-steps)! This is the default setting of the Step. If you change it, messages won't be sent if the build fails."%}
 
-1. Add the `Send a Slack message` Step to your workflow. 
-2. Find either the `Slack Webhook URL` or the `Slack API token` input. Click on the input and then click `Select secret variable`. 
+1. Add the `Send a Slack message` Step to your workflow.
+2. Find either the `Slack Webhook URL` or the `Slack API token` input. Click on the input and then click `Select secret variable`.
 
    ![](/img/slack-step.png)
 3. Create a new Secret Environment Variable that stores your webhook URL or your Slack API token.
 
-   You can choose any key you want.  
-4. Customize your Slack message with the relevant inputs of the Step. 
+   You can choose any key you want.
+4. Customize your Slack message with the relevant inputs of the Step.
 
    There are several options, including but not limited to:
    * Setting the target channel, group or username: this can be a name or an encoded ID.
@@ -96,4 +96,4 @@ Bitrise supports Slack integration, of course - and it's quite easy to set it up
 
    Check out all the inputs in the Workflow Editor to see all the ways in which you can customize your Slack messages.
 
-Once you're done, run a build! 
+Once you're done, run a build!
