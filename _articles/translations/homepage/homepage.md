@@ -1,46 +1,42 @@
-<!--
-These are the copies from the Bitrise homepage: https://www.bitrise.io/
-With your help, we could build the first localized version for Japan.
--->
-
 # 
-## Continuous Integration and Continuous Delivery for mobile apps.
+## モバイルアプリ向けの継続的インテグレーションと継続的デリバリー
 
-YOU ARE IN A GOOD COMPANY
+あなたの働いている会社はとても素晴らしい。
 
-START BUILDING FOR FREE
-
-———
-
-YOUR CHOICE OF WEAPON
-## Build your apps for any platform
-After connecting your repository, Bitrise scans and configures your project for any mobile platform, be it native or hybrid, so you can start shipping your app immediately.
+無料でビルドを開始しましょう。
 
 ———
 
-FOR YOUR CONVENIENCE
-## Workflows for every development stage
-Forget scripting and create powerful workflows with reusable building blocks.
+多くの中から最適な選択肢
+## 様々なプラットフォーム用のビルド環境を構築する
+リポジトリに接続した後、Bitriseはプロジェクトをスキャンして、ネイティブかハイブリッドを気にせず、様々なモバイルプラットフォーム用に最適化されています。そのため、すぐにアプリのビルドを開始できます。
+
+———
+
+利便性
+## あらゆる開発のワークフローに対応
+各ブランチに対して繰り返している同じ作業を、再利用可能な構成要素で強力なワークフローが作成できます。
 
 * Master
 * Develop
 * Feature
 
 ### Master
+全てのチェックボックスにマークがついたら、App Storeにアプリを自動的に投入するようにできます。
 Once you ticked all the boxes, send your app straight to the App Store automatically.
 
 ### Develop
-Run end-to-end unit and integration tests once a feature is merged and deploy your app internally for manual testing and QA.
+新しい機能がマージされたら、エンドトゥエンドのユニットテストと統合テストを実行し、手動テストとQAのためにアプリを内部環境にデプロイすることができます。
 
 ### Feature/*
-Run your unit tests for every push and get notified when something breaks right away
+何らかの変更をプッシュする度にユニットテストを実行し、変更によって何か異常を検知した際に、すぐに通知を受け取ることができます。
 
 ———
 
-## Run the same config locally
-Download your bitrise.yml and use our open source CLI locally to debug a build or to run your automations from the terminal.
+## 同一の環境をローカルで実行したい
+作成したあなたのbitrise.ymlをダウンロードして、用意されているオープンソースCLIを利用してローカルでビルドをデバッグしたり、あなたの端末からCIを実行することができます。
 
-More about Bitrise CLI
+Bitrise CLIについて
 
 ———
 
