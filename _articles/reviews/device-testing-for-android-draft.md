@@ -38,8 +38,7 @@ With Bitrise, you can choose from 3 different test types:
 
 If you want to read up on the difference between these test types, take a look at [Firebase's documentation](https://firebase.google.com/docs/test-lab/android/overview).
 
-{% include message_box.html type="note" title="How to generate the right APKs for virtual device testing" content="
-Note that if you have several variants of an APK and you want to pick the one that contains tests virtual device testing, you should set that particular APK in the `Gradle Runner` build Step. Specify the Gradle task to generate your APK in the `Gradle task to run` input field by setting the task, module and variant. For example: `assembleDebug assembleDebugAndroidTest`
+{% include message_box.html type="note" title="How to generate the right APKs for virtual device testing" content=" Note that if you have several variants of an APK and you want to pick the one that contains tests for virtual device testing, you should set that particular APK in the `Gradle Runner` build Step. To generate your APK, specify the Gradle task in the `Gradle task to run` input field by setting the **task**, **module** and the **variant**. For example: `assembleDebug assembleDebugAndroidTest`
 
 In the above example, `assembleDebug` generates an APK while `assembleDebugAndroidTest` generates a test APK containing your tests. This way the right APKs get picked up and used in `[BETA] Virtual Device Testing for Android` Step.
 "%}
@@ -65,23 +64,21 @@ There is a small difference between configuring your workflow for `robo` and `in
 
 #### Setting user input for a successful robo test
 
-If your app needs specific user interaction for a successful robo test, you can use `Robo Directives` input field to set those necessary inputs. For example, certain UI elements of the app are only accessible for robo testing if the required user inputs (username and email address) are populated for successful log in.
+If your app needs specific user interaction for a successful robo test, you can use `Robo Directives` input field to set those necessary inputs. For example, certain UI elements of the app are only accessible for robo testing if the required user inputs (username and email address) are populated for log in.
 
 1. Click the `[BETA] Virtual Device Testing for Android` Step in your workflow.
 2. Click `Robo Test` section.
 3. Find `Robo directives` input field and set your required user input directives.
-   * provide a comma-separated list of key-value pairs, where the key is the Android resource name of the target UI element, and the value is the text string. EditText fields are supported but not text fields in WebView UI elements. For example, you could use the following parameter for custom login:
+   * provide a comma-separated list of key-value pairs, where the **key** is the Android resource name of the target UI element, and the **value** is the text string. EditText fields are supported but not text fields in WebView UI elements. For example, you could use the following parameter for custom login:
 
          username_resource,username,ENTER_TEXT
          password_resource,password,ENTER_TEXT
          loginbtn_resource,,SINGLE_CLICK
-   * One directive per line, the parameters are separated with , character. For example: `ResourceName,InputText,ActionType`
+   * One directive per line, the parameters are separated with `,` character. For example: `ResourceName,InputText,ActionType`
 
 ![](/img/robo-directives.png)
 
-Please note that EditText fields are supported but not text fields in WebView UI elements.
-
-Based on the input you provide, you can successfully run a robo test even on pages that are only accessible after a specific user input. and check the test results on the `DEVICE TESTS` tab of your Build's page. The test results can be, for example:
+Based on the input you provide, you can successfully run a robo test (even on pages that are only accessible with a specific user input) and check the test results on the `DEVICE TESTS` tab of your Build's page. The test results can be, for example:
 
 * screenshots of the final state of the Emulator screen
 * recorded video
