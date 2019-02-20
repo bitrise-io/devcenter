@@ -79,6 +79,21 @@ To use our dedicated Step, you need either a [Slack webhook URL](https://api.sla
 
 1. Add the `Send a Slack message` Step to your workflow. 
 2. Find either the `Slack Webhook URL` or the `Slack API token` input. Click on the input and then click `Select secret variable`. 
+
+   ![](/img/slack-step.png)
 3. Create a new Secret Environment Variable that stores your webhook URL or your Slack API token.
 
    You can choose any key you want.  
+4. Customize your Slack message with the relevant inputs of the Step. 
+
+   There are several options, including but not limited to:
+   * Setting the target channel, group or username: this can be a name or an encoded ID.
+   * The text of the message to send.
+   * The bot's username for the message
+   * The message's color
+   * File attachment
+   * Link buttons attached to the message
+
+   Check out all the inputs in the Workflow Editor to see all the ways in which you can customize your Slack messages.
+
+Once you're done, run a build! 
