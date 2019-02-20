@@ -38,6 +38,10 @@ With Bitrise, you can choose from 3 different test types:
 
 If you want to read up on the difference between these test types, take a look at [Firebase's documentation](https://firebase.google.com/docs/test-lab/android/overview).
 
+Note that if you have several variants of an APK and you want to pick the one that contains tests, you should set that particular APK in the `Gradle Runner` build Step. Specify the `Gradle task to run` by setting the task (for example `assemble`), module (for example `app`) and variant (for example, `debug`
+
+`assembleDebug assembleDebugAndroidTest`
+
 There is a small difference between configuring your workflow for `robo` and `instrumentation` tests, so let's see them separately!
 
 ### Running robo tests
@@ -69,7 +73,7 @@ If your app needs specific user interaction for a successful robo test, you can 
          username_resource,username,ENTER_TEXT
          password_resource,password,ENTER_TEXT
          loginbtn_resource,,SINGLE_CLICK
-	* One directive per line, the parameters are separated with , character. For example: `ResourceName,InputText,ActionType`
+   * One directive per line, the parameters are separated with , character. For example: `ResourceName,InputText,ActionType`
 
 ![](/img/robo-directives.png)
 
