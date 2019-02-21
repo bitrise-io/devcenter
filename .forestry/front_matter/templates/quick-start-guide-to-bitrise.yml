@@ -15,8 +15,8 @@ fields:
   default: ''
 pages:
 - _articles/reviews/detox-testing-draft.md
-- _articles/reviews/how-to-change-the-user-name-and-user-email-used-for-git-push-from-bitrise.md
 - _articles/reviews/codesigndoc-update-draft.md
+- _articles/reviews/how-to-change-the-user-name-and-user-email-used-for-git-push-from-bitrise.md
 - _articles/reviews/frequent-android-issues.md
 - _articles/reviews/public-sample-apps-draft.md
 - _articles/reviews/android-app-bundle-draft.md
