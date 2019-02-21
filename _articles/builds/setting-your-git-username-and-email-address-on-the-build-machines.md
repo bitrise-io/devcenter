@@ -2,7 +2,6 @@
 title: Setting your Git username and email address on the build machines
 redirect_from: []
 date: 2019-02-21 14:59:07 +0000
-published: false
 
 ---
 The default Git username and user email address on our Stacks are the following:
