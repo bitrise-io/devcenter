@@ -1,5 +1,5 @@
 ---
-title: Setting your Git credentials on the build machines
+title: Setting your Git credentials on build machines
 redirect_from: []
 date: 2019-02-21 14:59:07 +0000
 menu:
