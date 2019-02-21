@@ -2,6 +2,9 @@
 title: Setting your Git credentials on build machines
 redirect_from: []
 date: 2019-02-21 15:27:32 +0000
+menu:
+  builds:
+    weight: 13
 published: false
 
 ---
