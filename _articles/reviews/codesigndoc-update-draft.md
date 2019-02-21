@@ -5,19 +5,22 @@ date: 2019-02-20 15:58:19 +0000
 published: false
 
 ---
-The open source [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool runs a clean Xcode/Xamarin Studio Archive _on your Mac_, and analyzes the generated archive file. It collects the code signing settings that Xcode or Xamarin Studio used during the archive process, and prints the list of the required code signing files. You can also search for, export and upload these files using `codesigndoc`.
+The open source [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool runs a clean Xcode/Xamarin Studio Archive _on your Mac_, and analyzes the generated archive file. It collects the code signing settings that Xcode or Xamarin Studio used during the archive process, and prints the list of the required code signing files. You can also search for, export and upload these files using `codesigndoc`. 
 
 ### Collecting the files with codesigndoc
 
 1. Open the `Terminal`.
-2. Enter the appropriate one-liner command, depending on your project type.
+2. Go to your project's folder. 
+3. Enter the appropriate one-liner command, depending on your project type.
    * For an **Xcode** project:
 
          bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode.sh)"
    * For a **Xamarin** project:
 
          bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xamarin.sh)"
-3. Open your `Finder.app` and drag-and-drop your project's `.xcodeproj` or `.xcworkspace` file into the command line in your `Terminal`.
+4. The tool will automatically scan your project and look for a `.xcodeproj` or `.xcworkspace` file and do the rest. 
+
+   If the scanner does not find the files, open your `Finder.app` and drag-and-drop your project's `.xcodeproj` or `.xcworkspace` file into the command line in your `Terminal`.
 
 ### Uploading the files to Bitrise with codesigndoc
 
