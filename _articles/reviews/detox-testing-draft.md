@@ -13,11 +13,10 @@ Running Detox requires:
 
 * A Mac with a macOS (El Capitan 10.11 or newer version).
 * Xcode 8.3 or newer version with Xcode command line tools.
-* A working React Native app.
+* A working React Native app. 
 
-Test an app on Bitrise, using Detox:
+[Install and set up Detox for your project](https://github.com/wix/detox/blob/master/docs/Introduction.GettingStarted.md#getting-started). You will need to install Homebrew, Node.js and applesimutils, as well as the Detox command line tools. Add Detox to your project and then create and run Detox tests locally. 
 
-1. [Install and configure Detox](https://github.com/wix/detox/blob/master/docs/Introduction.GettingStarted.md#getting-started). 
+Once you are done, you can test an app on Bitrise, using Detox:
 
-   You will need to install Homebrew, Node.js and applesimutils, as well as the Detox command line tools. 
-2. 
+1. Create a [release device configuration]() inside `package.json` under the `detox` section.
