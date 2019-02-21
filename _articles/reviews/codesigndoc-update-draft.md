@@ -17,7 +17,7 @@ You can use codesigndoc for:
 * Xcode projects.
 * Xcode projects with UITest targets.
 
-{% include message_box.html type="important" title="Valid UITest target" content="If you want to run UITests on Bitrise, you need a scheme that has **a valid UITest target** that is enabled. 
+{% include message_box.html type="important" title="Valid UITest target" content="If you want to run UITests on Bitrise, you need a scheme that has **a valid UITest target** that is enabled.
 
 ![](/img/uitest-target.png)
 
@@ -40,11 +40,16 @@ You can use codesigndoc for:
 
 #### Troubleshooting the UITest scanner
 
-If you run `./codesigndoc scan xcodeuitests` and the scanner cannot find the desired scheme, follow these steps:
+If the UITest scanner cannot find the desired scheme, follow these steps:
 
-1. Make sure your scheme is valid for running a UITest. 
+1. Make sure your scheme is valid for running a UITest.
 
-   It has to contain a UITest target that is enabled to run. 
+   It has to contain a UITest target that is enabled to run.
+2. Refresh your project settings:
+   * Select the `Generic iOS Device` target for your scheme in Xcode.
+   * Clean your project: `⌘ Cmd + ↑ Shift + K`.
+   * Run a build for testing: `⌘ Cmd + ↑ Shift + U`.
+3. Run `codesigndoc` again. 
 
 ### Uploading the files to Bitrise with codesigndoc
 
