@@ -1,5 +1,5 @@
 ---
-title: Setting your Git username and email address on the build machines
+title: Setting your Git username and email address on the build machines - draft
 redirect_from: []
 date: 2019-02-14 14:58:07 +0000
 published: false
