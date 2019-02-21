@@ -42,8 +42,13 @@ Once you are done, you can test your Detox-configured project on Bitrise:
    ```
 2. On [bitrise.io](https://www.bitrise.io/), go to your project and open the Workflow Editor.
 3. Switch to the workflow you want to use.
-4. Add a Script Step to install and run Detox.
+4. Add a `Run npm command` list to your workflow.
+5. Add the Detox install command to the `The npm command with arguments to run` input:
+   ```
+   npm install -g detox-cli
+   ```
+6. Add a Script Step to run Detox.
 
        detox build --configuration ios.sim.release
        detox test --configuration ios.sim.release --cleanup
-5. Run a build! 
+7. Run a build!
