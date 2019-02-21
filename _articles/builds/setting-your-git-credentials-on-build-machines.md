@@ -5,7 +5,6 @@ date: 2019-02-21 15:27:32 +0000
 menu:
   builds:
     weight: 13
-published: false
 
 ---
 The default Git username and user email address on our Stacks are the following:
