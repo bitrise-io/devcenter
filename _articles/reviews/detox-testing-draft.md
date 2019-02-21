@@ -17,6 +17,6 @@ Running Detox requires:
 
 [Install and set up Detox for your project](https://github.com/wix/detox/blob/master/docs/Introduction.GettingStarted.md#getting-started). You will need to install Homebrew, Node.js and applesimutils, as well as the Detox command line tools. Add Detox to your project and then create and run Detox tests locally. 
 
-Once you are done, you can test an app on Bitrise, using Detox:
+Once you are done, you can test your Detox-configured project on Bitrise:
 
 1. Create a [release device configuration]() inside `package.json` under the `detox` section.
