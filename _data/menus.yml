@@ -27,12 +27,12 @@ tutorials:
   identifier: xamarin
   weight: 4
 getting-started:
-- title: Signing up
-  identifier: signing-up
-  weight: 2
 - title: Adding a new app
   identifier: adding-a-new-app
   weight: 3
+- title: Signing up
+  identifier: signing-up
+  weight: 2
 team-management:
 - title: Organizations
   identifier: organizations
