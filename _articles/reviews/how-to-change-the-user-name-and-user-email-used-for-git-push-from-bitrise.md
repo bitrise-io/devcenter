@@ -10,8 +10,6 @@ The default Git username and user email address on our Stacks are the following:
     git config --global user.email "please-set-your-email@bitrise.io"
     git config --global user.name "J. Doe (https://www.git-tower.com/learn/git/faq/change-author-name-email)
 
-(due to security reasons they've  changed from: `git config --global user.email email@example.com` `git config --global user.name "J. Doe"` )
-
 Due to the `--global` flag, all commits to the Stacks have the above default author information.
 
 ## Changing the default Git username and email address
