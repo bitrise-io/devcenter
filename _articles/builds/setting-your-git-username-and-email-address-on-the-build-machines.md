@@ -5,6 +5,7 @@ date: 2019-02-21 14:59:07 +0000
 menu:
   builds:
     weight: 13
+    title: Setting your Git credentials on the build machines
 
 ---
 The default Git username and user email address on our Stacks are the following:
