@@ -3,7 +3,7 @@ title: Device testing for iOS
 date: 2018-10-17 10:31:27 +0000
 menu:
   testing:
-    weight: 4
+    weight: 3
 
 ---
 With Bitrise's iOS device testing solution, you can run iOS tests on physical devices without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. There are no limits to using the Step, other than your overall build time limit.
