@@ -20,6 +20,6 @@ fields:
       config:
         required: true
 pages:
-- _articles/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
-- _articles/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/deploy/ios-deploy/introduction-to-deploying-ios-apps.md
+- _articles/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
+- _articles/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
