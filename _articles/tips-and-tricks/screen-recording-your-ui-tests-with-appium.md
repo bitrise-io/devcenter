@@ -5,7 +5,6 @@ date: 2019-02-22 15:04:24 +0000
 menu:
   tips-and-tricks:
     weight: 2
-published: false
 
 ---
 [Appium](http://appium.io/) is a popular testing framework to catch defects in native, hybrid, and web apps. You can easily integrate your Appium UI tests into your own Bitrise workflow using our `Script` Step. This way you can have the whole testing screen recorded and can visually verify if your app is doing what it's supposed to do.
