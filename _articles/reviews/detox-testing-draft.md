@@ -43,20 +43,20 @@ Once you are done, you can test your Detox-configured project on Bitrise:
 2. On [bitrise.io](https://app.bitrise.io/), go to your project and open the Workflow Editor.
 3. Switch to the workflow you want to use.
 4. Add a `Run npm command` Step to your workflow.
-5. Add the `yarn` Step to your workflow.
-6. Set the `The yarn command to run` input to `install`.
-7. Add the Detox install command to the `The npm command with arguments to run` input:
+5. Add the Detox install command to the `The npm command with arguments to run` input:
 
-       npm install -g detox-cli
-8. Add a Script Step to install Detox utils and then run Detox.
+       install -g detox-cli
+6. Add a Script Step to install the necessary utilities and then run Detox.
 
        #!/bin/bash
        
+       # applesimutils is a collection of utils for Apple simulators
        brew tap wix/brew
        brew install applesimutils
        
+       # 
        detox build --configuration ios.sim.release
        detox test --configuration ios.sim.release --cleanup
 
    You can, of course, put each of these commands in separate Script Steps, for the sake of modularity. 
-9. Run a build!
+7. Run a build!
