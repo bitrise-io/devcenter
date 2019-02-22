@@ -7,7 +7,9 @@ published: false
 ---
 [Appium](http://appium.io/) is a popular testing framework to catch defects in native, hybrid, and web apps. You can easily integrate your Appium UI tests into your own Bitrise workflow using our `Script` Step. This way you can have the whole testing screen recorded and can visually verify if your app is doing what it's supposed to do.
 
-In this guide we'll show how to kickstart Appium and run your UI test specified in the `test.js` file, then retrieve the test results and view them on [bitrise.io](https://www.bitrise.io). (Please note that Javascript does not support the in-built screen recording and screen capturing commands so we're using ADB shell commands as a workaround. For all the other languages, check out [Appium's Start Recording Screen](http://appium.io/docs/en/commands/device/recording-screen/start-recording-screen/) guide.)
+In this guide we'll show how to kickstart Appium and run your UI test specified in the `test.js` file, then retrieve the test results and view them on [bitrise.io](https://www.bitrise.io). 
+
+{% include message_box.html type="note" title="ADB workaround for Javascript" content="Javascript does not support the in-built screen recording and screen capturing commands so we're using ADB shell commands as a workaround. For all the other languages, check out [Appium's Start Recording Screen](http://appium.io/docs/en/commands/device/recording-screen/start-recording-screen/) guide."%} 
 
 We will use our `Script` and `Deploy to Bitrise.io` Steps. Here is why:
 
