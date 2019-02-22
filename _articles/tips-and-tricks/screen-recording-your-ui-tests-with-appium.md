@@ -2,6 +2,9 @@
 title: Screen recording your UI tests with Appium
 redirect_from: []
 date: 2019-02-22 15:04:24 +0000
+menu:
+  tips-and-tricks:
+    weight: 2
 published: false
 
 ---
