@@ -9,9 +9,7 @@ Here are a couple of tricks to share and store a specific workflow among multipl
 
 ## Using bitrise.yml tab
 
-Do you have a workflow that you want to "reuse" multiple times when you onboard new apps? An easy way to do that is if you "switch to" `bitrise.yml` mode/tab in your Workflow Editor. Then copy the yml of reusable app from the `bitrise.yml` tab of the `Workflow Editor` to the new app's `bitrise.yml` tab. 
-
-![](/img/bitrise-yml.png)
+Do you have a workflow that you want to "reuse" multiple times when you onboard new apps? An easy way to do so is through the `bitrise.yml` mode/tab in your Workflow Editor. Then copy the yml of reusable app from the `bitrise.yml` tab of the `Workflow Editor` to the new app's `bitrise.yml` tab.
 
 Please note that the newly added apps would always have the latest config in this case, but the previously added apps would need to be updated manually if needed.
 
