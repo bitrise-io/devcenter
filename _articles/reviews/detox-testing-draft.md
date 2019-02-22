@@ -46,7 +46,10 @@ Once you are done, you can test your Detox-configured project on Bitrise:
 5. Add the Detox install command to the `The npm command with arguments to run` input:
 
        install -g detox-cli
-6. Add a Script Step to install the necessary utilities and then run Detox.
+6. Install a test runner. 
+
+   For example, [our sample app](https://github.com/bitrise-samples/sample-project-react-native) uses `mocha`, installed with the `yarn` Step. To install yarn dependencies, just set the `The yarn command to run` input's value to `install`.
+7. Add a Script Step to install the necessary utilities and then run Detox.
 
        #!/bin/bash
        
@@ -59,4 +62,4 @@ Once you are done, you can test your Detox-configured project on Bitrise:
        detox test --configuration ios.sim.release --cleanup
 
    You can, of course, put each of these commands in separate Script Steps, for the sake of modularity. 
-7. Run a build!
+8. Run a build!
