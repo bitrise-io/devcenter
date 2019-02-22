@@ -14,11 +14,11 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/reviews/screen-recording-of-ui-testing-with-appium.md
 - _articles/reviews/sharing-and-storing-workflows-among-apps-draft.md
 - _articles/reviews/detox-testing-draft.md
 - _articles/builds/setting-your-git-credentials-on-build-machines.md
 - _articles/reviews/codesigndoc-update-draft.md
-- _articles/reviews/screen-recording-of-ui-testing-with-appium.md
 - _articles/tips-and-tricks/screen-recording-of-android-ui-tests-with-script-steps.md
 - _articles/reviews/notifications-guide-draft.md
 - _articles/reviews/xcode-test-draft.md

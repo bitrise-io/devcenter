@@ -13,12 +13,12 @@ In this guide we'll show how to kickstart Appium and run your UI test specified 
 
 We will use our `Script` and `Deploy to Bitrise.io` Steps. Here is why:
 
-* the `Script` Step executes what you insert in its field
+* the `Script` Step executes what you insert in its input field
 * the `Deploy to Bitrise.io` Step delivers your test result to the `APPS & ARTIFACTS` tab of your Build's page.
 
 Let's put this all together!
 
-1. Insert the `Script` Step as the first step in your workflow.
+1. Insert the `Script` Step as the first Step in your workflow.
 2. Click the Step.
 3. Insert the following command to the `Script content` input field.
 
@@ -26,7 +26,7 @@ Let's put this all together!
        disown
        npm test
 
-   (You will find the above mentioned logs.txt file in the Bitrise deploy directory (`BITRISE_DEPLOY_DIR`). This logs.txt file contains the outputs of the Appium server. With the help of the `Deploy to Bitrise.io` Step you will be able to download this file from the `APPS & ARTIFACTS` tab.
+   You will find the above mentioned logs.txt file in the Bitrise deploy directory (`BITRISE_DEPLOY_DIR`). This logs.txt file contains the outputs of the Appium server. With the help of the `Deploy to Bitrise.io` Step you will be able to download this file from the `APPS & ARTIFACTS` tab.
 4. Since screen recoding is not supported through Javascript, we advise you to add the [screen recording](http://adbshell.com/commands/adb-shell-screenrecord) / [screen capturing](http://adbshell.com/commands/adb-shell-screencap) and the[ file retrieving](http://adbshell.com/commands/adb-pull) shell commands to your own `test.js` file.
 5. Once you have pulled the test results (which in this case can be videos and screenshots) from the emulator, make sure you move them to the Bitrise deploy directory (`BITRISE_DEPLOY_DIR`).
 6. Insert the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow so that it can export your test results to the `APPS & ARTIFACTS` tab on your Build's page.
