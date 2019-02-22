@@ -57,7 +57,7 @@ Once you are done, you can test your Detox-configured project on Bitrise:
        brew tap wix/brew
        brew install applesimutils
        
-       # 
+       # we are building and testing a release device configuration
        detox build --configuration ios.sim.release
        detox test --configuration ios.sim.release --cleanup
 
