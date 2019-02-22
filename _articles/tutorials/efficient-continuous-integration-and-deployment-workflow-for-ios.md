@@ -4,6 +4,7 @@ menu:
   tips-and-tricks:
     weight: 3
     title: Efficient CI/CD workflow for iOS development
+published: false
 
 ---
 To achieve an efficient workflow for rapid iOS app development you have to specify the
