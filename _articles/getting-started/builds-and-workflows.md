@@ -12,7 +12,7 @@ menu:
 
 Once you added an app to Bitrise, your first build will be kicked off automatically.
 
-A _build_ is the process specified by the app's [_workflow_](/getting-started/getting-started-workflows), which is a collection of [_steps_](getting-started/getting-started-steps). The app's build configuration is specified in the `[bitrise.yml](/bitrise-cli/basics-of-bitrise-yml)`[ configuration file](/bitrise-cli/basics-of-bitrise-yml) which you can modify in [bitrise.io](https://www.bitrise.io)'s
+A _build_ is the process specified by the app's [_workflow_](/getting-started/getting-started-workflows), which is a collection of [_steps_](getting-started/getting-started-steps). The app's build configuration is specified in the [bitrise.yml configuration file](/bitrise-cli/basics-of-bitrise-yml) which you can modify in [bitrise.io](https://www.bitrise.io)'s
 graphical Workflow Editor UI,
 or in a [yaml editor](http://blog.bitrise.io/2016/02/12/edit-your-yaml-files-like-a-boss.html) directly.
 
