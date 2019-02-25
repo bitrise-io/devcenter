@@ -18,7 +18,6 @@ pages:
 - _articles/reviews/detox-testing-draft.md
 - _articles/testing/running-xcode-tests.md
 - _articles/tips-and-tricks/screen-recording-your-ui-tests-with-appium.md
-- _articles/reviews/screen-recording-of-ui-testing-with-appium.md
 - _articles/reviews/sharing-and-storing-workflows-among-apps-draft.md
 - _articles/builds/setting-your-git-credentials-on-build-machines.md
 - _articles/reviews/codesigndoc-update-draft.md
