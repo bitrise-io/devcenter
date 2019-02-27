@@ -21,10 +21,12 @@ Please note that the newly added apps would always have the latest config in thi
 
 ## Storing bitrise.yml in the project's repo
 
-You can store the `bitrise.yml` in your project's Github repo as well. This is similar to the previously mentioned method but with the bonus: you can track changes using your own source control system.
+You can store the `bitrise.yml` in your project's Github repo as well. This is similar to the previously mentioned method but with the bonus: you can track changes using your own source control system. 
 
 ## Storing bitrise.yml in a repository with other project's bitrise.yml
 
 You can store the `bitrise.yml` _in a repository_ that stores every project's yml. This way you can track the changes to the ymls in a _different repository_ and any changes made to these wouldn't create extra noise in the project repository. **You can create a common yml that can be called from within any other** `bitrise.yml` and you can keep the project specific ymls in their own folders.
 
 Also regarding the solutions where you store the yml in a repository: you don't need to worry about editing the workflows manually as you can use our workflow editor using our CLI.
+
+You might store a lot of apps in a single Github repository for easier app management, then here is how to get a specific workflow started. You can upload a general and simple app to Bitrise where the app only contains the Git Clone and Script Steps/Start Bitrise Steps. Our Git Clone step will clone your git repository and our Script Step will start running the yml stored in your repository. If you have more than one workflow in your repository's yml, you can run that specifically if you define that in the bitrise run command.
