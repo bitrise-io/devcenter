@@ -14,6 +14,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/reviews/saml-draft.md
 - _articles/getting-started/adding-a-new-app/connecting-a-repository.md
 - _articles/reviews/sharing-and-storing-workflows-among-apps-draft.md
 - _articles/reviews/detox-testing-draft.md
