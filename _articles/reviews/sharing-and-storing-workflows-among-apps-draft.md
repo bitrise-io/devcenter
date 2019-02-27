@@ -21,10 +21,10 @@ Please note that the newly added apps would always have the latest config in thi
 
 ## Storing bitrise.yml in the project's repo
 
-You can store the `bitrise.yml` in your project's Github repo. This would mostly be similar to the previously mentioned method with the ability to track changes using your own source control system. 
+You can store the `bitrise.yml` in your project's Github repo as well. This is similar to the previously mentioned method but with the bonus: you can track changes using your own source control system.
 
-## Storing bitrise.yml in a repository along with other project's bitrise.yml
+## Storing bitrise.yml in a repository with other project's bitrise.yml
 
-You can store the `bitrise.yml` in a repository that stores every project's yml. This way you can track the changes to the ymls in a different repository and any changes made to these wouldn't create extra noise in the project repository. **You can create a common yml that can be called from within any other** `bitrise.yml` and you can keep the project specific ymls in their own folders.
+You can store the `bitrise.yml` _in a repository_ that stores every project's yml. This way you can track the changes to the ymls in a _different repository_ and any changes made to these wouldn't create extra noise in the project repository. **You can create a common yml that can be called from within any other** `bitrise.yml` and you can keep the project specific ymls in their own folders.
 
-Also regarding the solutions where you store the yml a repository: you don't need to worry about editing the workflows manually as you can use our workflow editor using our CLI.
+Also regarding the solutions where you store the yml in a repository: you don't need to worry about editing the workflows manually as you can use our workflow editor using our CLI.
