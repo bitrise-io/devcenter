@@ -54,7 +54,7 @@ workflows:
         title: Second step
 ```
 
-When you you run `bitrise run test`, the Bitrise CLI will run the two
+When you run `bitrise run test`, the Bitrise CLI will run the two
 script steps one by one, starting with `First step` and then
 continuing with `Second step`.
 
