@@ -39,6 +39,16 @@ The first one will still have to do a full, clean build, because there's no buil
 (as every build runs in a brand new, clean Virtual Machine, as descibed in [Code Security](/getting-started/code-security/)),
 but subsequent Xcode steps can use the build cache of the previous Xcode step(s), reducing the compilation time of the step.
 
+
+## Disable the symbol indexing process
+
+The process of indexing aims to offer code completion suggestions and to jump between symbols and their definitions.  
+As this process is useless in case of CI build it is safe to disable it.
+
+Setting `COMPILER_INDEX_STORE_ENABLE=NO` in the `.xcconfig` file disables indexing.  
+Because you may not want to bypass indexing outside of CI, a dedicated `.xcconfig` file should be used for it. Otherwise a script could handle it using a tool like [Xcodeproj](https://github.com/CocoaPods/Xcodeproj) to update the `.xcconfig` file.
+
+
 ## Other
 
 __Feel free to suggest other ways of optimization!__
