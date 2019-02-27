@@ -17,6 +17,7 @@ _or_ [_contact us_](https://www.bitrise.io/contact) _and we'll add it for you!_
 
 ### iOS
 
+* [Setting up Continuous Integration for iOS apps on Bitrise](https://savvyapps.com/blog/continuous-integration-ios-bitrise)
 * [Let's automate Swift builds with Bitrise](https://medium.com/@erkekin/lets-automate-swift-builds-with-bitrise-47225d547c98)
 * [Bitrise and Carthage - a simple guide about how to use Carthage on Bitrise](http://blog.ricardopereira.eu/2015/07/10/EN-bitrise-and-carthage/)
 
