@@ -14,7 +14,6 @@ fields:
   hidden: false
   default: ''
 pages:
-- _articles/reviews/continuous-integration-for-ios-apps.md
 - _articles/reviews/saml-draft.md
 - _articles/getting-started/adding-a-new-app/connecting-a-repository.md
 - _articles/reviews/sharing-and-storing-workflows-among-apps-draft.md
