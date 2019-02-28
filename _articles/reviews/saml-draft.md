@@ -7,12 +7,14 @@ published: false
 ---
 ## What is SAML SSO
 
-## When to use this user management
+You can sign up to Bitrise and log into an organization using your company SAML system. Auto-create/register user if it does not exist with that email yet and auto assign to the related Organisation.
 
-SSO should be the only gateway to the Organization's Dashboard in bitrise.
+{% include message_box.html type="note" title="Connecting via Github" content=" Does not prevent the user to sign in with an alternative option, for example, connecting a GitHub account and signing in with the GitHub account. "%}
 
 calls for enhanced security
+
 adds an extra layer of security
+
 it requires you to verify your identity
 
 ## Setting up SAML SSO for your organization (existing)
@@ -20,25 +22,31 @@ it requires you to verify your identity
 Before you start setting up SAML SSO, make sure:
 
 * Your account has an organization. If it doesn't have an organization, go ahead and create one. Learn how to [create an organization](https://devcenter.bitrise.io/team-management/organizations/creating-org/).
-* You have an SAML-supporting identity provider.
+* **Only the organization owner can set up SAM SSO to a Bitrise organization.**
+* You have an SAML-supporting identity provider that your company uses.
 
 1. Go to your organization's Security tab on bitrise.io.
 2. Copy the Single Sign-On URL which you will use in your own Identity Provider's (IdP) site.
 
    ![](/img/SSO-page.jpg)
-3. Log into your Identity Provider (IdP) and add Bitrise as an application based on the copied URL. You will generate your Single Sign-On (SSO) credentials here.
+3. Log into your Identity Provider (IdP) and add Bitrise as an application based on the copied URL at Step 2. You will generate your Single Sign-On (SSO) credentials here.
 4. Add the Single Sign-On credentials to the `Identity provider sign-on URL` and `Certificate`
    fields.
-5. Click the `Configure SSO` button. All members of your organization will be automatically signed out from \[bitrise.io\]. Bitrise sends a notification e-mail which contains the credentials of the Organization's SSO provider. This email also shows the owner with his/her email address of the Organization you can contact for more information. Members of this Organization will be prompted to sign in again by clicking the `sign In via SSO` button or using the provided URL.
-   If all went well, you will see `Single Sign-On (SSO) is enabled for this organization` with a `Review Users` and a `Disable SSO` buttons.
+5. Click the `Configure SSO` button. All members of your organization will be automatically signed out from Bitrise.
+6. Bitrise sends a notification e-mail which contains the credentials of the Organization's SSO provider. This email also shows the organization owner with his/her email address, if you needed to contact the owner for more information.
+7. Members of this Organization will be prompted to sign in again by clicking the `sign In via SSO` button or using the provided URL.
+
+You can check SAML SSO status of the organization owner and other organization members on the `People` tab of your organization. If all went well, you will see `Single Sign-On (SSO) is enabled for this organization` with a `Review Users` and a `Disable SSO` buttons.
 
 * `Review Users`: check the list of users who are registered to this SSO.
-* `Disable SSO`: you can disable using the SSO connected to your organization. Once this is done, all Organization members will be able to sign in with the regular sign-in procedure.
 
-  image on sso has been enabled/disabled email notification + what disabling means via email?
-  On the `People/Security` tab of your Organization, you can see all the owners/members with their actual SAML SSO status (either enables or disabled).
+## How to disable SAML SSO
 
-Note that only owners can remove members from an Organization.
+You can disable SAML SSO using the `Disable SSO` button on the Security tab of your organization's page. Once this is done, all Organization members will be able to sign in with the regular sign-in procedure.
+
+![](/img/disable-saml.jpg)
+
+* image on sso has been enabled/disabled email notification + what disabling means via email?
 
 Outside contributors?
 Remove username from your SSO provider?
@@ -66,3 +74,10 @@ Insert it into the "Certificate" field (Organization's Security page).
 Insert  below URL  into the "Identity provider sign-on URL:" field:
 
 Click the "Configure SSO" button.
+
+Owners can:
+
+* configure saml sso for an organization
+* Note that only owners can remove members from an Organization.
+* disable saml soo for an organization
+* can invite members to an organization
