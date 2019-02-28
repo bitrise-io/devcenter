@@ -40,6 +40,8 @@ You can check SAML SSO status of the organization owner and other organization m
 
 * `Review Users`: check the list of users who are registered to this SSO.
 
+![](/img/enable-saml.jpg)
+
 ## How to disable SAML SSO
 
 You can disable SAML SSO using the `Disable SSO` button on the Security tab of your organization's page. Once this is done, all Organization members will be able to sign in with the regular sign-in procedure.
@@ -50,7 +52,6 @@ You can disable SAML SSO using the `Disable SSO` button on the Security tab of y
 
 Outside contributors?
 Remove username from your SSO provider?
-Who is a SAML admin? \[short q&a\]
 
 ### Joining Bitrise via invitation email
 
@@ -77,7 +78,7 @@ Click the "Configure SSO" button.
 
 Owners can:
 
-* configure saml sso for an organization
+* configure saml sso for an organization "saml admin"
 * Note that only owners can remove members from an Organization.
 * disable saml soo for an organization
 * can invite members to an organization
