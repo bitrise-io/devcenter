@@ -7,7 +7,7 @@ menu:
     weight: 5
 
 ---
-The Selective Builds setting provides change detection for your builds. Enabling it allows you to only trigger a build of an app if certain files or folders have been modified.
+The **Selective Builds** setting provides change detection for your builds. Enabling it allows you to only trigger a build of an app if certain files or folders have been modified.
 
 You may want to use this setting if:
 
