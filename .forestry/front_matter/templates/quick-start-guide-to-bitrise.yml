@@ -14,4 +14,5 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
