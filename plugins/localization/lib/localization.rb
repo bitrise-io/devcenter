@@ -4,10 +4,10 @@ module Jekyll
     #===========================================================================
     default_lang  = payload["site"]["default_lang"]
     current_lang  = payload["site"]["lang"]
-    
+
     static_files  = payload["site"]["static_files"]
     html_pages = payload["site"]["html_pages"]
-    
+
     if default_lang != current_lang
       static_files.delete_if {|x| true }
       html_pages.delete_if {|x| true }
@@ -19,11 +19,11 @@ module Jekyll
     current_lang = article.site.config['lang']
 
     url_without_lang = article.url.gsub(/^\/(#{languages.join('|')}\/?)/, '/')
-    
+
     article.data['lang'] = current_lang
     article.data['url_without_lang'] = url_without_lang
   end ### end articles pre_render
-  
+
 
   class Site
     alias :process_org :process
@@ -33,22 +33,22 @@ module Jekyll
           self.config['languages'].empty?  or
           !self.config['languages'].all?)
           puts 'You must provide at least one language using the "languages" setting on your _config.yml.'
-          
+
           exit
       end
 
       # Original Jekyll configurations
       dest_org = self.dest # Destination folder where the website is generated
-      
+
       # Site building only variables
       languages = self.config['languages'] # List of languages set on _config.yml
-      
+
       # Site wide plugin configurations
       self.config['default_lang'] = languages.first # Default language (first language of array set on _config.yml)
       self.config['lang'] = languages.first # Current language being processed
-      
+
       self.data['lang'] = languages.first
-      
+
       # Build the website for default language
       #-------------------------------------------------------------------------
       puts "Building site for default language: \"#{self.config['lang']}\" from: #{self.source} to: #{self.dest}"
@@ -59,9 +59,9 @@ module Jekyll
         # Language specific config/variables
         @dest                  = dest_org    + "/" + lang
         self.config['lang']    =                     lang
-        
+
         puts "Building site for language: \"#{self.config['lang']}\" from: #{self.source} to: #{@dest}"
-        
+
         process_org
       end
 
@@ -80,7 +80,7 @@ module Jekyll
       filtered_entries.each do |file_path|
         full_path = collection_dir(file_path)
         next if File.directory?(full_path)
-        
+
         # This is the important bit, if `localized` is turned on for the collection skip other locales
         next if self.metadata['localized'] and !file_path.start_with? "#{lang}/"
         if Utils.has_yaml_header? full_path
@@ -110,7 +110,7 @@ module Jekyll
 
       # Default lang should not have a subfolder
       if current_lang == default_lang
-        @url = @url.gsub(/\/#{current_lang}/, '')
+        @url = @url.gsub(/^\/#{current_lang}/, '')
       elsif @url == '/'
         @url = "/#{current_lang}"
       end
@@ -129,7 +129,7 @@ module Jekyll
 
       dest = site.in_dest_dir(base_directory)
       path = site.in_dest_dir(dest, URL.unescape_path(url_without_lang))
-      
+
       if url_without_lang.end_with? "/"
         path = File.join(path, "index.html")
       else
@@ -158,7 +158,7 @@ module Jekyll
 
       # Default lang should not have a subfolder
       if current_lang == default_lang
-        @url = @url.gsub(/\/#{current_lang}/, '')
+        @url = @url.gsub(/^\/#{current_lang}/, '')
       end
       @url
     end
