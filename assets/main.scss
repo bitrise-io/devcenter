@@ -95,7 +95,7 @@ header.top-bar {
 				white-space: nowrap;
 				overflow: hidden;
 				text-overflow: ellipsis;
-			}
+      }
 		}
 
 		.search-bar {
@@ -169,7 +169,24 @@ header.top-bar {
 					}
 				}
 			}
-		}
+    }
+    
+    .lang-selector {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      
+      a {
+        margin-left: 1rem;
+        color: white;
+        text-decoration: none;
+        font-size: 1.4rem;
+
+        &.active {
+          font-weight: bold;
+        }
+      }
+    }
 
 		.source-code {
 			display: flex;
