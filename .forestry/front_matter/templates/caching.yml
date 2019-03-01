@@ -17,5 +17,9 @@ fields:
     - type: text
       name: weight
       label: weight
-      config:
-        required: true
+pages:
+- _articles/en/caching/about-caching.md
+- _articles/en/caching/caching-cocoapods.md
+- _articles/en/caching/caching-gradle.md
+- _articles/en/caching/caching-maven.md
+- _articles/en/caching/caching-ruby-gems.md

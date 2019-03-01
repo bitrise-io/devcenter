@@ -17,5 +17,8 @@ fields:
     - type: text
       name: weight
       label: weight
-      config:
-        required: true
+pages:
+- _articles/en/infrastructure/available-stacks.md
+- _articles/en/infrastructure/stack-update-and-removal-policy.md
+- _articles/en/infrastructure/virtual-machines.md
+- _articles/en/infrastructure/the-environment.md

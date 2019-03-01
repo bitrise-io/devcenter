@@ -17,5 +17,7 @@ fields:
     - type: text
       name: weight
       label: weight
-      config:
-        required: true
+pages:
+- _articles/en/docker/index.md
+- _articles/en/docker/run-your-build-locally-in-docker.md
+- _articles/en/docker/use-your-own-docker-image.md
