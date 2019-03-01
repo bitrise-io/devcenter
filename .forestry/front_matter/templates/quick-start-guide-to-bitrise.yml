@@ -13,3 +13,5 @@ fields:
   type: list
   hidden: false
   default: ''
+pages:
+- _articles/en/troubleshooting/enabling-bitrise-support-user.md
