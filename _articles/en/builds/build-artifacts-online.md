@@ -2,7 +2,7 @@
 title: Build artifacts online
 menu:
   builds:
-    weight: ''
+    weight: 6
 
 ---
 If you select a build of your app, on the `APPS & Artifacts` tab you can check out the artifacts (for example, files & reports) which have been generated during the build.
