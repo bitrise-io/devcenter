@@ -38,10 +38,8 @@ Before you start setting up SAML SSO, make sure:
    ![](/img/email-notification.jpg)
 7. The owner (and other members) of this Organization are be prompted to sign in to Bitrise again by clicking the `sign In via SSO` button or using the provided URL in the email. Make sure you you open the URL in a **new tab**!
 8. Provide your Bitrise email address connected to your organization in your SSO provider.
-
-   {% include message_box.html type="warning" title="Wrong email address" content=" If you provide a different Bitrise 	email address which is not related to the organization, you will get the following error message. You'll have to log in with another account email:
+	If you provide a different Bitrise email address which is not related to the organization, you will get the following 	error message. You'll have to log in with another account email: 
    ![](/img/no-connected-sso-for-this-email-address.png)
-   "%}
 9. As a last step, the `Allow "your organization name" to sign you in` page comes up.
    ![](/img/enable-saml.jpg)
 
