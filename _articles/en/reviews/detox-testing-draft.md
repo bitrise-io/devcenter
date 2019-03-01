@@ -87,7 +87,7 @@ workflows:
         inputs:
         - content: |-
             #!/bin/bash
-			brew tap wix/brew
+            brew tap wix/brew
             brew install applesimutils
             
             detox build --configuration ios.sim.release
