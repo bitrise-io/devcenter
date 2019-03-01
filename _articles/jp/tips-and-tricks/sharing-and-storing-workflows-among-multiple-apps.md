@@ -6,6 +6,8 @@ menu:
     weight: 24
 
 ---
+{% include not_translated_yet.html %}
+
 Here are a couple of tricks to share and store a specific workflow among multiple apps instead of building your workflow from scratch every time you add an app to Bitrise.
 
 ## Using the bitrise.yml tab
