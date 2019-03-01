@@ -8,5 +8,3 @@ fields:
   config:
     required: true
   label: title
-pages:
-- _articles/reviews/Dummy-article.md

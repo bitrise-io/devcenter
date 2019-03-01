@@ -19,5 +19,3 @@ fields:
       label: weight
       config:
         required: true
-pages:
-- _articles/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md

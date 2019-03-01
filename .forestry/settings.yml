@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url:
+webhook_url: 
 sections:
 - type: document
   path: forestry-help.md
@@ -14,14 +14,14 @@ sections:
   create: all
   match: "**/*"
 - type: directory
-  path: _articles/jp/
+  path: _articles/jp
   label: Japanese articles
   create: all
   match: "**/*"
 - type: heading
   label: DevCenter articles
 - type: directory
-  path: _articles/en/
+  path: _articles/en
   label: Bitrise Devcenter - What is Bitrise
   create: all
   match: index.md

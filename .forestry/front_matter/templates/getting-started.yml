@@ -19,6 +19,3 @@ fields:
       label: weight
       config:
         required: true
-pages:
-- _articles/getting-started/getting-started-with-macos-apps.md
-- _articles/getting-started/getting-started-with-xamarin-apps.md

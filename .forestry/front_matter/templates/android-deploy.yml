@@ -19,5 +19,3 @@ fields:
       label: weight
       config:
         required: true
-pages:
-- _articles/deploy/android-deploy/deploying-android-apps.md

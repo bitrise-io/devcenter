@@ -19,5 +19,3 @@ fields:
       label: weight
       config:
         required: true
-pages:
-- _articles/troubleshooting/debugging-your-build-on-your-own-machine.md

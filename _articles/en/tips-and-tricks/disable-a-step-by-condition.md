@@ -5,7 +5,7 @@ menu:
     weight: 8
 
 ---
-You can enable or disable a Step in any given workflow, and you can also set conditions for Steps. You can do it either on your own machine, with the Bitrise CLI or by using the `bitrise.yml` tab of the Workflow Editor.
+You can enable or disable a Step in any given workflow, and you can also set conditions for Steps. You can do it either on your own computer, with the Bitrise CLI or by using the `bitrise.yml` tab of the Workflow Editor.
 
 We mostly use `run_if` expressions to do these things. [Check out the template expressions](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml)!
 
