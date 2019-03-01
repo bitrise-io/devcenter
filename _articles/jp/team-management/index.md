@@ -1,5 +1,5 @@
 ---
-title: Adding a new team member
+title: 新しいチームメンバーの追加
 menu:
   team-management:
     weight: 1
