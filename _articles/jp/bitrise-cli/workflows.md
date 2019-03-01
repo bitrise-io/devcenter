@@ -5,7 +5,7 @@ redirect_from:
 - "/bitrise-cli/workflows"
 menu:
   bitrise-cli:
-    weight: 9
+    weight: 15
 
 ---
 {% include not_translated_yet.html %}

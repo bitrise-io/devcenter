@@ -2,7 +2,7 @@
 title: Code signing with Ionic and Cordova projects
 menu:
   ios-code-signing:
-    weight: 15
+    weight: 16
 
 ---
 {% include not_translated_yet.html %}

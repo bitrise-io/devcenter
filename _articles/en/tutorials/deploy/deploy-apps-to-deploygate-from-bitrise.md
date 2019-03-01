@@ -2,7 +2,7 @@
 title: Deploy apps to DeployGate from Bitrise
 menu:
   deployment-tutorials:
-    weight: 4
+    weight: 6
 
 ---
 # What is DeployGate?

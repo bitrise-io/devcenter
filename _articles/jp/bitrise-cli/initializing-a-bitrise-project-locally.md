@@ -4,7 +4,7 @@ date: 2018-12-13 11:37:13 +0000
 redirect_from: []
 menu:
   bitrise-cli:
-    weight: 5
+    weight: 7
 
 ---
 {% include not_translated_yet.html %}

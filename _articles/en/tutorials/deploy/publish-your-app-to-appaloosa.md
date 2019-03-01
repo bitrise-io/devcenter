@@ -2,7 +2,7 @@
 title: Publish your app to Appaloosa
 menu:
   deployment-tutorials:
-    weight: 3
+    weight: 4
 
 ---
 Would you like to **beta test** and **deploy** your app to 1 or thousands of users?

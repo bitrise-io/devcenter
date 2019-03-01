@@ -4,7 +4,7 @@ redirect_from:
 - "/bitrise-cli/most-important-concepts.md"
 menu:
   bitrise-cli:
-    weight: 15
+    weight: 26
 
 ---
 To understand Bitrise in depth, there are a few key concepts that must be kept in mind. These are immutable and crucial to the way we do things.

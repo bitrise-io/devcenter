@@ -2,7 +2,7 @@
 title: Adding a Deveo webhook
 menu:
   webhooks:
-    weight: 10
+    weight: 17
 
 ---
 {% include not_translated_yet.html %}

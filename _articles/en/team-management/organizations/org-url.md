@@ -2,7 +2,7 @@
 title: Finding the URL of your organizations
 menu:
   organizations:
-    weight: 6
+    weight: 10
 
 ---
 Every organization has its own specific URL on Bitrise - you might need this if, for example, you need some assistance from our support. Or you might want to simply add it to your favourites in a browser.

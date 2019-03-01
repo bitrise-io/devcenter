@@ -4,7 +4,7 @@ date: 2018-12-03 10:05:49 +0000
 redirect_from: []
 menu:
   getting-started:
-    weight: 15
+    weight: 16
     title: Managing files on Bitrise
 
 ---

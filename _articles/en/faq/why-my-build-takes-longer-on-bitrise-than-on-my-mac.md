@@ -2,7 +2,7 @@
 title: Why does my build take longer on Bitrise than on my machine?
 menu:
   faq:
-    weight: 9
+    weight: 12
 
 ---
 If your build takes a lot of time on Bitrise, time for investigating! First, find out which step(s) take a significant time in your build.

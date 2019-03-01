@@ -2,7 +2,7 @@
 title: Adding a Gogs webhook
 menu:
   webhooks:
-    weight: 6
+    weight: 9
 
 ---
 {% include not_translated_yet.html %}

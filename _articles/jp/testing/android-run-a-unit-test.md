@@ -2,7 +2,7 @@
 title: Androidのユニットテスト
 menu:
   testing:
-    weight: 5
+    weight: 6
 
 ---
 ## ユニットテストの実行

@@ -4,7 +4,7 @@ date: 2018-12-11 10:30:01 +0000
 redirect_from: []
 menu:
   android-code-signing:
-    weight: 9
+    weight: 11
 
 ---
 {% include not_translated_yet.html %}

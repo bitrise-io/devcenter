@@ -2,7 +2,7 @@
 title: Adding a Gitlab webhook
 menu:
   webhooks:
-    weight: 5
+    weight: 7
 
 ---
 {% include not_translated_yet.html %}

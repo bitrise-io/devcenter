@@ -2,7 +2,7 @@
 title: Xamarin Android code signing
 menu:
   android-code-signing:
-    weight: 10
+    weight: 12
 
 ---
 {% include not_translated_yet.html %}

@@ -2,7 +2,7 @@
 title: Adding a Bitbucket webhook
 menu:
   webhooks:
-    weight: 4
+    weight: 5
 
 ---
 To have Bitrise automatically start a build every time you push code into your repository you

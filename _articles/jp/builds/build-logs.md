@@ -3,7 +3,7 @@ title: Build logs
 date: 2018-10-31 10:43:57 +0000
 menu:
   builds:
-    weight: 15
+    weight: 23
 
 ---
 {% include not_translated_yet.html %}

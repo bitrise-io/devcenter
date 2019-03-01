@@ -4,7 +4,7 @@ date: 2018-10-26 08:33:44 +0000
 redirect_from: []
 menu:
   testing:
-    weight: 10
+    weight: 11
 
 ---
 With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices.

@@ -2,7 +2,7 @@
 title: Managing the invoices of your organizations
 menu:
   organizations:
-    weight: 4
+    weight: 6
 
 ---
 {% include not_translated_yet.html %}

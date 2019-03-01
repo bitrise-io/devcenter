@@ -2,7 +2,7 @@
 title: Managing organization members
 menu:
   organizations:
-    weight: 7
+    weight: 12
 
 ---
 {% include not_translated_yet.html %}

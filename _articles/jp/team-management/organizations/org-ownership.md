@@ -2,7 +2,7 @@
 title: Changing the owners of an organization
 menu:
   organizations:
-    weight: 8
+    weight: 13
 
 ---
 {% include not_translated_yet.html %}

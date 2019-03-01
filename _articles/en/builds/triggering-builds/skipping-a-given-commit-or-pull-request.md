@@ -5,7 +5,7 @@ redirect_from:
 date: 2019-01-18 17:09:42 +0000
 menu:
   triggering-builds:
-    weight: 12
+    weight: 14
 
 ---
 Depending on your [settings](/builds/triggering-builds/triggering-builds/), every code change in your repository can trigger Bitrise builds. However, if you need to, you can skip a specific commit or pull request. Skipping means, in this context, that a code change will NOT trigger a build on Bitrise, even if the triggers are set up to do so.

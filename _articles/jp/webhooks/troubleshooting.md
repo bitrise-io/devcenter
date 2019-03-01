@@ -2,7 +2,7 @@
 title: Webhook Troubleshooting
 menu:
   webhooks:
-    weight: 12
+    weight: 20
 
 ---
 {% include not_translated_yet.html %}

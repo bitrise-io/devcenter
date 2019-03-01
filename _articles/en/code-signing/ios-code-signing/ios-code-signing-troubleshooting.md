@@ -3,7 +3,7 @@ title: iOS code signing - troubleshooting
 date: 2018-10-11 11:28:48 +0000
 menu:
   ios-code-signing:
-    weight: 25
+    weight: 26
 
 ---
 To make iOS code signing work on Bitrise, you generally need three things:

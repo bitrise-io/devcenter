@@ -2,7 +2,7 @@
 title: Workflow Editor doesn't load
 menu:
   troubleshooting:
-    weight: 4
+    weight: 5
 
 ---
 {% include not_translated_yet.html %}

@@ -2,7 +2,7 @@
 title: How can I generate an SSH key pair?
 menu:
   faq:
-    weight: 5
+    weight: 6
 
 ---
 If you want to do manual SSH key configuration on [bitrise.io](https://www.bitrise.io)

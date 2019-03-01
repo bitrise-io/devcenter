@@ -6,7 +6,7 @@ redirect_from:
 - "/getting-started/getting-started-with-Android-apps/"
 menu:
   getting-started:
-    weight: 18
+    weight: 19
 
 ---
 このガイドでは、以下について説明します。

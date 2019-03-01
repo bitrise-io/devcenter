@@ -2,7 +2,7 @@
 title: Adding a Slack webhook
 menu:
   webhooks:
-    weight: 7
+    weight: 11
 
 ---
 {% include not_translated_yet.html %}

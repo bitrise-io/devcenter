@@ -2,7 +2,7 @@
 title: Deploy to TestFairy with Bitrise
 menu:
   deployment-tutorials:
-    weight: 5
+    weight: 8
 
 ---
 If you are looking for a deployment service that also gives you lots of insights

@@ -2,7 +2,7 @@
 title: Why isn't a build triggered when I push code into the repository?
 menu:
   faq:
-    weight: 10
+    weight: 15
 
 ---
 If no builds are triggered automatically when you push code into your repository,

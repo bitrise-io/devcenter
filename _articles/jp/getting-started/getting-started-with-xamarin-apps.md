@@ -3,7 +3,7 @@ title: Getting started with Xamarin apps
 date: 2018-10-19 11:49:28 +0000
 menu:
   getting-started:
-    weight: 21
+    weight: 22
 
 ---
 {% include not_translated_yet.html %}

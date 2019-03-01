@@ -5,7 +5,7 @@ redirect_from:
 - "/getting-started/manage-your-bitrise-workflow/"
 menu:
   getting-started:
-    weight: 14
+    weight: 15
 
 ---
 Steps represent a block of script execution with predefined input and output variables. [Read more about Steps in the Bitrise CLI section](/bitrise-cli/steps).

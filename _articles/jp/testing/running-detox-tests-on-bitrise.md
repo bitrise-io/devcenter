@@ -3,7 +3,7 @@ title: 'Running Detox tests on Bitrise '
 date: 2019-03-01 12:50:46 +0000
 menu:
   testing:
-    weight: 12
+    weight: 13
 
 ---
 {% include not_translated_yet.html %}

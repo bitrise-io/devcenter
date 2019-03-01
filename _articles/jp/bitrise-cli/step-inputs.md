@@ -2,7 +2,7 @@
 title: Step inputs
 menu:
   bitrise-cli:
-    weight: 12
+    weight: 21
 
 ---
 {% include not_translated_yet.html %}

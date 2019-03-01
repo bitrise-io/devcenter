@@ -2,7 +2,7 @@
 title: Deploy to TestFairy with Bitrise
 menu:
   deployment-tutorials:
-    weight: 6
+    weight: 10
 
 ---
 {% include not_translated_yet.html %}

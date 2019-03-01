@@ -2,7 +2,7 @@
 title: Installing and updating the Bitrise CLI
 menu:
   bitrise-cli:
-    weight: 3
+    weight: 4
 
 ---
 Installing the Bitrise CLI is super simple. It is distributed as a single binary which you can acquire in several ways. All you need to do is download it and make it executable. Let's see how!

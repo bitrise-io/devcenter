@@ -2,7 +2,7 @@
 title: Pull Requestをトリガーにする
 menu:
   triggering-builds:
-    weight: 5
+    weight: 6
 
 ---
 あなたのレポジトリの指定したソースブランチから、指定したターゲットブランチへのPull Requestがオープンされたことをトリガーにして、Bitrise上でビルドが実行されるように設定することができます。

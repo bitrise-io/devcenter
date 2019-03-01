@@ -4,7 +4,7 @@ redirect_from:
 - "/builds/selective-builds/"
 menu:
   builds:
-    weight: 8
+    weight: 12
 
 ---
 {% include not_translated_yet.html %}

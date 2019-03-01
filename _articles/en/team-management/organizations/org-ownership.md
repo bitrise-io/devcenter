@@ -2,7 +2,7 @@
 title: Changing the owners of an organization
 menu:
   organizations:
-    weight: 6
+    weight: 9
 
 ---
 Organization owners can access and delete all apps linked to the organization, can manage the billing details of an organization and can add or remove other owners. Organization owners are in their own group in the organization and they are managed via membership in this group.

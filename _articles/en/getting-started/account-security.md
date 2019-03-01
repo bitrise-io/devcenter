@@ -3,7 +3,7 @@ title: Account Security
 redirect_from: []
 menu:
   getting-started:
-    weight: 10
+    weight: 11
 
 ---
 ## Enable Two-factor authentication

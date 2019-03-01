@@ -2,7 +2,7 @@
 title: Gradle上でのAndroidコード署名
 menu:
   android-code-signing:
-    weight: 7
+    weight: 9
 
 ---
 ## Gradleでコード署名を手動設定する

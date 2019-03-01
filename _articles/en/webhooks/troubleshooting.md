@@ -2,7 +2,7 @@
 title: Webhook Troubleshooting
 menu:
   webhooks:
-    weight: 11
+    weight: 18
 
 ---
 ## bitrise.io/hooks versus hooks.bitrise.io

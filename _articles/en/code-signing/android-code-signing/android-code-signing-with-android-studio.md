@@ -2,7 +2,7 @@
 title: Android code signing with Android Studio
 menu:
   android-code-signing:
-    weight: 6
+    weight: 8
 
 ---
 You can specify the code signing configuration for your project in [Android Studio](https://developer.android.com/studio/).

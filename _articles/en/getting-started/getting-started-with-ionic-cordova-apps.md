@@ -4,7 +4,7 @@ date: 2018-11-16 14:33:48 +0000
 redirect_from: []
 menu:
   getting-started:
-    weight: 26
+    weight: 27
 
 ---
 You can use Cordova and Ionic frameworks to develop cross-platform apps. Bitrise can help you with its automated testing, code signing and deploying procedures so that you can ship your iOS and/or Android app/s to the respective marketplace in no time! If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously. Now let us guide you through the process!

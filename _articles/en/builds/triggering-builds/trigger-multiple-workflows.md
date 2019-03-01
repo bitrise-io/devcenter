@@ -2,7 +2,7 @@
 title: Starting parallel builds with a single trigger
 menu:
   triggering-builds:
-    weight: 6
+    weight: 7
 
 ---
 If you have more than one concurrency, you can run more than one build simultaneously. And since we want to make life as easy for you as possible, these builds can be started automatically, with a single trigger. Let's go through how it works!

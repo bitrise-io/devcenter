@@ -4,7 +4,7 @@ redirect_from:
 - "/android/frequent-android-issues/"
 menu:
   troubleshooting:
-    weight: 5
+    weight: 6
 
 ---
 ## Androidパッケージが見つけられない、もしくはライセンス契約を受け入れていない場合

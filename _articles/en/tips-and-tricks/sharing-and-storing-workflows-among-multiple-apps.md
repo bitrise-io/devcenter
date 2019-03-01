@@ -2,6 +2,9 @@
 title: Sharing and storing workflows among multiple apps
 redirect_from: []
 date: 2019-03-01 14:20:01 +0000
+menu:
+  tips-and-tricks:
+    weight: 24
 published: false
 
 ---

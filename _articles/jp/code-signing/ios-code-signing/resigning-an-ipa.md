@@ -2,7 +2,7 @@
 title: IPAの再署名
 menu:
   ios-code-signing:
-    weight: 13
+    weight: 14
 
 ---
 iOSアプリケーションの開発中に、内部テストやApp Storeへのデプロイなど、さまざまな目的で複数の種類のディストリビューションが必要になります。[bitrise.io](https://www.bitrise.io)では2つの別々のワークフローを設定する必要はありません。

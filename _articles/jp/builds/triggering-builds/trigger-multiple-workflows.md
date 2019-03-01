@@ -2,7 +2,7 @@
 title: Starting parallel builds with a single trigger
 menu:
   triggering-builds:
-    weight: 10
+    weight: 12
 
 ---
 {% include not_translated_yet.html %}

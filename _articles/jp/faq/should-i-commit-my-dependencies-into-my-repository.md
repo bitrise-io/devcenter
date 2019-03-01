@@ -2,7 +2,7 @@
 title: Should I commit my dependencies into my repository?
 menu:
   faq:
-    weight: 12
+    weight: 17
 
 ---
 {% include not_translated_yet.html %}

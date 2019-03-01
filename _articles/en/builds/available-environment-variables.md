@@ -5,7 +5,7 @@ redirect_from:
 - "/faq/available-environment-variables/#exposed-by-the-bitrise-cli"
 menu:
   builds:
-    weight: 11
+    weight: 17
 
 ---
 ## Exposed by the Bitrise CLI

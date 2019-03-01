@@ -2,7 +2,7 @@
 title: Adding a Visual Studio webhook
 menu:
   webhooks:
-    weight: 8
+    weight: 13
 
 ---
 {% include not_translated_yet.html %}

@@ -2,7 +2,7 @@
 title: Secrets
 menu:
   bitrise-cli:
-    weight: 16
+    weight: 29
 
 ---
 {% include not_translated_yet.html %}

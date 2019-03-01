@@ -2,7 +2,7 @@
 title: Exporting code signing files without codesigndoc
 menu:
   ios-code-signing:
-    weight: 21
+    weight: 22
 
 ---
 ### Exporting certificates using Xcode

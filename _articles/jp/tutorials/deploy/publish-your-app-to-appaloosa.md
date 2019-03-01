@@ -2,7 +2,7 @@
 title: Publish your app to Appaloosa
 menu:
   deployment-tutorials:
-    weight: 4
+    weight: 7
 
 ---
 {% include not_translated_yet.html %}
