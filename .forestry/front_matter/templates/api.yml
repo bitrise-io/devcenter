@@ -18,7 +18,7 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/api/build-trigger.md
-- _articles/en/api/app-status-badge.md
-- _articles/en/api/outgoing-webhooks.md
 - _articles/en/api/v0.1.md
+- _articles/en/api/outgoing-webhooks.md
+- _articles/en/api/app-status-badge.md
+- _articles/en/api/build-trigger.md

@@ -17,8 +17,3 @@ fields:
     - type: text
       name: weight
       label: weight
-pages:
-- _articles/en/deploy/bitrise-app-deployment.md
-- _articles/en/deploy/publish-your-app-to-appaloosa.md
-- _articles/en/deploy/deploy-apps-to-deploygate-from-bitrise.md
-- _articles/en/deploy/deploy-to-testfairy-with-bitrise.md
