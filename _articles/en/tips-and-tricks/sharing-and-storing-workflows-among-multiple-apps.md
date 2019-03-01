@@ -5,7 +5,6 @@ date: 2019-03-01 14:20:01 +0000
 menu:
   tips-and-tricks:
     weight: 24
-published: false
 
 ---
 Here are a couple of tricks to share and store a specific workflow among multiple apps instead of building your workflow from scratch every time you add an app to Bitrise.
