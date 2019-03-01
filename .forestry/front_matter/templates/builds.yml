@@ -17,8 +17,16 @@ fields:
     - type: text
       name: weight
       label: weight
-      config:
-        required: true
+      
 pages:
 - _articles/en/builds/selective_builds.md
 - _articles/en/builds/build-artifacts-online.md
+- _articles/en/builds/Starting-builds-manually/
+- _articles/en/builds/Scheduling-Builds/
+- _articles/en/builds/rolling-builds/
+- _articles/en/builds/bitrise-yml-online/
+- _articles/en/builds/build-numbering-and-app-versioning/
+- _articles/en/buildsv-vars-secret-env-vars/
+- _articles/en/builds/sensitive-input-field/
+- _articles/en/builds/available-environment-variables/
+- _articles/en/builds/setting-your-git-credentials-on-build-machines/
