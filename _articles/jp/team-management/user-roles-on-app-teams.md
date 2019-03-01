@@ -6,6 +6,8 @@ menu:
     weight: 2
 
 ---
+{% include not_translated_yet.html %}
+
 Roles are very important on Bitrise. They limit what you can and cannot do with an application.
 
 Roles work on an application basis: the same user can have different roles on different applications. As such, organizations have no inherent "roles", apart from that of the organization owners: organizations have groups and different groups can be assigned different roles.
