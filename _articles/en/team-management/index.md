@@ -2,10 +2,10 @@
 title: Adding a new team member
 menu:
   team-management:
-    weight: 1
+    weight: ''
 
 ---
-Now that you have set up your app on Bitrise we can start inviting team members! You can select multiple roles for the new members, like: `admin`, `developer`, and `qa/tester`.
+Once you have your app set up, you can start inviting team members! You can select multiple roles for the new members, like: `admin`, `developer`, and `qa/tester`.
 Different roles have different permissions that you can read more about below.
 
 To invite a team member head to the `Team tab` on your application's page. You can invite any user by their username or by their email address. If they are not registered on Bitrise we will send out an invitation email for them. Before granting access to a new user, select their role.
@@ -19,20 +19,4 @@ To invite a team member head to the `Team tab` on your application's page. You c
 
 ![](/img/change-role.png)
 
-Check out the different roles and permissions below:
-
-## Owner
-
-![](/img/role-cheet-sheet-owner.png)
-
-## Admin
-
-![](/img/admin.png)
-
-## Developer
-
-![](/img/developer.png)
-
-## Tester / QA
-
-![](/img/tester-qa.png)
+Check out the different roles and permissions in [our guide to the roles on Bitrise]( /team-management/user-roles-on-app-teams/). 
