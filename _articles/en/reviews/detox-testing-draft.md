@@ -19,7 +19,7 @@ Running Detox requires:
 
 Once you are done, you can test your Detox-configured project on Bitrise:
 
-{% include message_box.html type="important" title="Video recording with Detox" content="Video recording with Detox does NOT work on Bitrise. [Detox requires hardware acceleration](https://github.com/wix/Detox/blob/master/docs/APIRef.Artifacts.md#video-recording-issues-on-ci) but our machines - on which your build's virtual machine runs - do not have physical GPUs. Therefore you cannot enable hardware acceleration on them. Sorry!"%} 
+{% include message_box.html type="important" title="Video recording with Detox" content="Video recording with Detox does NOT work on Bitrise. [Detox requires hardware acceleration](https://github.com/wix/Detox/blob/master/docs/APIRef.Artifacts.md#video-recording-issues-on-ci) but our machines - on which your build's virtual machine runs - do not have physical GPUs. Therefore you cannot enable hardware acceleration on them. "%} 
 
 1. Create a [release device configuration]() inside `package.json` under the `detox` section.
 
@@ -79,27 +79,19 @@ workflows:
     - yarn@0.0.8:
         inputs:
         - command: install
-    - npm:
+    - npm@1.0.1:
         inputs:
         - command: install -g detox-cli
         title: Install Detox CLI
-    - npm@1.0.1:
-        inputs:
-        - command: install jest --save-dev
-        title: Install test runner
-    - script:
-        inputs:
-        - content: |-
-            #!/bin/bash
-
-            detox build --configuration ios.sim.release
-        title: Detox - Build Release App
     - script@1.1.5:
         inputs:
         - content: |-
             #!/bin/bash
-
+			brew tap wix/brew
+            brew install applesimutils
+            
+            detox build --configuration ios.sim.release
             detox test --configuration ios.sim.release --cleanup
-        title: Detox - Test Release App
+        title: Detox - Build and Test Release App
     - deploy-to-bitrise-io@1.3.18: {}
 ```
