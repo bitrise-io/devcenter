@@ -17,5 +17,3 @@ fields:
     - type: text
       name: weight
       label: weight
-      config:
-        required: true

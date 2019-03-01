@@ -17,5 +17,10 @@ fields:
     - type: text
       name: weight
       label: weight
-      config:
-        required: true
+pages:
+- _articles/en/testing/registering-a-test-device.md
+- _articles/en/testing/running-xcode-tests.md
+- _articles/en/testing/device-testing-for-ios.md
+- _articles/en/testing/android-run-a-unit-test.md
+- _articles/en/testing/device-testing-for-android.md
+- _articles/en/testing/run-your-tests-in-the-app-center.md

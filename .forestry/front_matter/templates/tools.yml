@@ -17,5 +17,5 @@ fields:
     - type: text
       name: weight
       label: weight
-      config:
-        required: true
+pages:
+- _articles/en/tools/bitrise-tools.md

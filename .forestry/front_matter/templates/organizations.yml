@@ -17,5 +17,11 @@ fields:
     - type: text
       name: weight
       label: weight
-      config:
-        required: true
+pages:
+- _articles/en/organizations/creating-org.md
+- _articles/en/organizations/managing-billing-sub.md
+- _articles/en/organizations/managing-invoices.md
+- _articles/en/organizations/org-url.md
+- _articles/en/organizations/members-organizations.md
+- _articles/en/organizations/org-ownership.md
+- _articles/en/organizations/managing-apps.md
