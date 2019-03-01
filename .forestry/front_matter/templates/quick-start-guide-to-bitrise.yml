@@ -13,3 +13,5 @@ fields:
   type: list
   hidden: false
   default: ''
+pages:
+- _articles/en/testing/running-detox-tests-on-bitrise.md
