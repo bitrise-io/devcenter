@@ -26,7 +26,7 @@ pages:
 - _articles/en/builds/rolling-builds.md
 - _articles/en/builds/bitrise-yml-online.md
 - _articles/en/builds/build-numbering-and-app-versioning.md
-- _articles/en/buildsv-vars-secret-env-vars.md
+- _articles/en/builds/env-vars-secret-env-vars.md
 - _articles/en/builds/sensitive-input-field.md
 - _articles/en/builds/available-environment-variables.md
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
