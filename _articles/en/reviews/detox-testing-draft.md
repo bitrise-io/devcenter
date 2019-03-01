@@ -19,7 +19,7 @@ Running Detox requires:
 
 Once you are done, you can test your Detox-configured project on Bitrise:
 
-{% include message_box.html type="important" title="Video recording with Detox" content="Video recording with Detox does NOT work on Bitrise. Detox requires hardware acceleration but our machines do not have physical GPUs. Therefore you cannot enable hardware acceleration."%} 
+{% include message_box.html type="important" title="Video recording with Detox" content="Video recording with Detox does NOT work on Bitrise. [Detox requires hardware acceleration](https://github.com/wix/Detox/blob/master/docs/APIRef.Artifacts.md#video-recording-issues-on-ci) but our machines - on which your build's virtual machine runs - do not have physical GPUs. Therefore you cannot enable hardware acceleration on them. Sorry!"%} 
 
 1. Create a [release device configuration]() inside `package.json` under the `detox` section.
 
