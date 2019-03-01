@@ -20,4 +20,5 @@ fields:
       config:
         required: true
 pages:
+- _articles/en/builds/selective_builds.md
 - _articles/en/builds/build-artifacts-online.md
