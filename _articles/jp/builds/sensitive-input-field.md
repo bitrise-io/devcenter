@@ -1,15 +1,13 @@
 ---
-# jp title missing
 title: Sensitive input in public apps
 redirect_from:
 - "/sensitive-input-field/"
 - sensitive-input-field/#set-a-sensitive-input-in-a-step/
 menu:
   builds:
-    weight: 10
+    weight: 13
 
 ---
-
 {% include not_translated_yet.html %}
 
 Any sensitive information such as passwords, IDs, and API tokens are exposed in the build logs/bitrise.yml of your public apps, hence visible to anyone who has the build URL of the app. You can hide these inputs with **secret environment variables (env vars)** so that those are not available in build logs/bitrise.yml.

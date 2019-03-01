@@ -1,15 +1,13 @@
 ---
-# jp title missing
 title: Available environment variables
 redirect_from:
 - "/faq/available-environment-variables/"
 - "/faq/available-environment-variables/#exposed-by-the-bitrise-cli"
 menu:
   builds:
-    weight: 11
+    weight: 14
 
 ---
-
 {% include not_translated_yet.html %}
 
 ## Exposed by the Bitrise CLI

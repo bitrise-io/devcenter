@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Why can't I see my GitHub organization / repository on the Add New App page?
 menu:
   faq:
-    weight: 7
+    weight: 8
 
 ---
-
 {% include not_translated_yet.html %}
 
 Most likely you did not grant access to [bitrise.io](https://www.bitrise.io) when you authenticated

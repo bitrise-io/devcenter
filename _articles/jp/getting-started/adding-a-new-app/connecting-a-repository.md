@@ -4,7 +4,7 @@ redirect_from:
 - https:/getting-started/adding-a-new-app/connecting-your-repository
 menu:
   adding-a-new-app:
-    weight: 2
+    weight: 3
 
 ---
 新しいアプリの追加を選択すると、`Create app`ページが表示されます。

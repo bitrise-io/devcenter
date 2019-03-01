@@ -2,7 +2,8 @@
 title: 組織のURLの表示
 menu:
   organizations:
-    weight: 4
+    weight: 5
+
 ---
 すべての組織にはBitrise上での固有URLが存在します。このURLは、私達のサポートによる支援が必要な場合や、単にブラウザのお気に入りに追加する場合などに使用できます。
 

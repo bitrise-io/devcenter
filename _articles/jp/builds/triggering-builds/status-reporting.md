@@ -2,7 +2,8 @@
 title: ビルドステータスをGitホスティングサービスにレポートする
 menu:
   triggering-builds:
-    weight: 7
+    weight: 11
+
 ---
 BitriseはビルドステータスをGitホスティングサービス（GitHub/GitLab/Bitbucket）に知らせることができます。必要な作業は、Bitriseと連携するための認証をGitホスティングサービスでしていただくだけです。認証をすることで、ビルドステータスのレポート以外にも、SSHキーやWebhookの自動登録などができるようになります。
 

@@ -1,13 +1,11 @@
 ---
-# jp title missing
 title: Build logs
 date: 2018-10-31 10:43:57 +0000
 menu:
   builds:
-    weight: 12
+    weight: 15
 
 ---
-
 {% include not_translated_yet.html %}
 
 Build logs allow users to analyze their builds and find out what went wrong - and what went right! On Bitrise, build logs are easily accessible, they can be viewed on the website in their entirety or they can be downloaded to view them on your own device.

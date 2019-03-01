@@ -2,7 +2,7 @@
 title: Re-signing an .ipa
 menu:
   ios-code-signing:
-    weight: 7
+    weight: 14
 
 ---
 During the development of your iOS app you will need multiple types of distributions for different purposes, such as internal testing or deployment to the App Store. The good news is that this does not require setting up two separate workflows on [bitrise.io](https://www.bitrise.io).

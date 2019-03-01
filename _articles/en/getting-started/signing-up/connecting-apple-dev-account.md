@@ -4,7 +4,7 @@ redirect_from:
 - "/signing-up/connecting-apple-dev-account"
 menu:
   signing-up:
-    weight: 6
+    weight: 12
 
 ---
 You can authenticate your Apple Developer Account on Bitrise and integrate the Apple Developer Portal with your Bitrise project. This allows you to use our `iOS Auto Provisioning` step which makes managing Provisioning Profiles for iOS applications a lot easier!

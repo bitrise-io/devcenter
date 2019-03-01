@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: How to run your build locally in Docker
 redirect_from:
 - "/docker/run-your-build-locally-in-docker/"
@@ -8,7 +7,6 @@ menu:
     weight: 2
 
 ---
-
 {% include not_translated_yet.html %}
 
 To be able to run your Linux stack builds locally, you'll need [docker](https://www.docker.com/):

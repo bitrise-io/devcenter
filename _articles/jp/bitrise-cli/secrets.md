@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Secrets
 menu:
   bitrise-cli:
-    weight: 14
+    weight: 16
 
 ---
-
 {% include not_translated_yet.html %}
 
 Secrets can be accessed and used in a similar way as App Env Vars,

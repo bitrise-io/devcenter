@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: Debugging your build on your own machine
 date: 2018-11-19 15:33:56 +0000
 menu:
@@ -7,7 +6,6 @@ menu:
     weight: 1
 
 ---
-
 {% include not_translated_yet.html %}
 
 If your build fails on Bitrise, we often recommend to try and run it locally, on your machine. To do this, do the following:

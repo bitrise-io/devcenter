@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Adding outgoing webhooks
 menu:
   webhooks:
-    weight: 10
+    weight: 11
 
 ---
-
 {% include not_translated_yet.html %}
 
 You can configure Bitrise to send build event notifications to any service you would like. A build event is:

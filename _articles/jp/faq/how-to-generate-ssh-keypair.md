@@ -3,6 +3,7 @@ title: SSHキーペアの生成方法を教えてください。
 menu:
   faq:
     weight: 4
+
 ---
 [Bitrise](https://www.bitrise.io)上で手動でSSHキーの設定を行う場合には、コマンドライン/ターミナルで以下のコマンドを実行することでSSHキーペアを生成できます。
 

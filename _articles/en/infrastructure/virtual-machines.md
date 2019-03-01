@@ -2,7 +2,7 @@
 title: Virtual Machines
 menu:
   infrastructure:
-    weight: 3
+    weight: 5
 
 ---
 On [bitrise.io](https://www.bitrise.io), we have `macOS` and `Linux` virtual machines hosted for your builds.

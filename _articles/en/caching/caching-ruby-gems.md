@@ -2,7 +2,7 @@
 title: Caching Ruby Gems
 menu:
   caching:
-    weight: 5
+    weight: 9
 
 ---
 Ruby Gems are installed into a single directory by default. You can get the location of this directory with gem environment gemdir. If you want to change this directory you can set the `$GEM_HOME` environment variable, this will be picked up by gem install and it’ll install the Gems to the location specified by `$GEM_HOME`.

@@ -6,7 +6,7 @@ redirect_from:
 - "/getting-started/add-your-first-step-to-your-workflow/"
 menu:
   getting-started:
-    weight: 1
+    weight: 2
 
 ---
 Bitrise is powerful and complex - but getting started is easy and intuitive! You can kick off your first build within minutes of signing up. Let's go over what you need to do make that happen!

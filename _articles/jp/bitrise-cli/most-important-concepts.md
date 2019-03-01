@@ -1,14 +1,12 @@
 ---
-# jp title missing
 title: Most important concepts
 redirect_from:
 - "/bitrise-cli/most-important-concepts.md"
 menu:
   bitrise-cli:
-    weight: 15
+    weight: 17
 
 ---
-
 {% include not_translated_yet.html %}
 
 ## Every input, output and parameter is an Environment Variable

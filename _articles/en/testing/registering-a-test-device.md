@@ -2,7 +2,7 @@
 title: Registering a test device
 menu:
   testing:
-    weight: 1
+    weight: 2
 
 ---
 ## Register an iOS device using Safari

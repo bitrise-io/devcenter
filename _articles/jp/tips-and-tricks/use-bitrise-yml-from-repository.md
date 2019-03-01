@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Use bitrise.yml from repository
 menu:
   tips-and-tricks:
-    weight: 11
+    weight: 21
 
 ---
-
 {% include not_translated_yet.html %}
 
 Storing the build configuration (`bitrise.yml`) in your repository can be a great idea.

@@ -2,7 +2,7 @@
 title: メールアドレスを使ったサインアップ
 menu:
   signing-up:
-    weight: 4
+    weight: 7
 
 ---
 メールアドレスを使ってBitriseにサインアップすることができます。

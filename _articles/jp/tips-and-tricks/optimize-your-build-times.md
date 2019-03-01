@@ -1,9 +1,9 @@
 ---
-# jp title missing
 title: Optimize your build times
 menu:
   tips-and-tricks:
-    weight: 10
+    weight: 19
+
 ---
 ビルド時間の改善には、以下のような方法が有効です。
 

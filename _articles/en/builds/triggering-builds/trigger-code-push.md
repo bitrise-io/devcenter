@@ -2,7 +2,7 @@
 title: Triggering builds with code push
 menu:
   triggering-builds:
-    weight: 2
+    weight: 4
 
 ---
 You can set up triggers so that every time code is pushed to the specified branch of your repository, a build is automatically triggered on Bitrise.

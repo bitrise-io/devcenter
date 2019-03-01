@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Adding a Slack webhook
 menu:
   webhooks:
-    weight: 6
+    weight: 7
 
 ---
-
 {% include not_translated_yet.html %}
 
 You can register the `bitrise-webhooks` URL (`.../h/slack/BITRISE-APP-SLUG/BITRISE-APP-API-TOKEN`) as either

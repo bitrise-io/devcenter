@@ -5,7 +5,7 @@ redirect_from:
 - "/xamarin/deploy-your-xamarin-app"
 menu:
   xamarin:
-    weight: 4
+    weight: 8
 
 ---
 After successfully adding your Xamarin application, we will create a default workflow (build configuration) for you.

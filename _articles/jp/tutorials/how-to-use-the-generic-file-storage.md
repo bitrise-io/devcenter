@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Using the Generic File Storage
 menu:
   tutorials:
     weight: 6
 
 ---
-
 {% include not_translated_yet.html %}
 
 ## Uploading files to GENERIC FILE STORAGE on [bitrise.io](https://www.bitrise.io)

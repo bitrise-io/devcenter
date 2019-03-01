@@ -1,14 +1,12 @@
 ---
-# jp title missing
 title: Build numbering and app versioning
 redirect_from:
 - "/builds/build-numbering-and-app-versioning/builds/build-numbering-and-app-versioning"
 menu:
   builds:
-    weight: 8
+    weight: 11
 
 ---
-
 {% include not_translated_yet.html %}
 
 All Bitrise builds have a build number. The first build of your app is, by default, number 1, and the build number gets incremented with each build. You can get a build's Bitrise build number on the website, as well as via the `$BITRISE_BUILD_NUMBER` environment variable. This variable can be used in any step or script where you need the Bitrise build number for any reason.

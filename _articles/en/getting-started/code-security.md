@@ -2,7 +2,7 @@
 title: Code Security
 menu:
   getting-started:
-    weight: 5
+    weight: 8
 
 ---
 To guarantee the security of your builds we use [virtual machines](/infrastructure/virtual-machines) for builds.

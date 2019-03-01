@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Build Trigger API
 menu:
   api:
     weight: 1
 
 ---
-
 {% include not_translated_yet.html %}
 
 _Note: the_ `www` _endpoint is now deprecated. Please use the_ `https://app.bitrise.io/app/APP-SLUG/build/start.json` _endpoint instead._

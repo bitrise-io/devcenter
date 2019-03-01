@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Xamarin Android code signing
 menu:
   android-code-signing:
-    weight: 6
+    weight: 10
 
 ---
-
 {% include not_translated_yet.html %}
 
 ## Configuring code signing in Xamarin Studio

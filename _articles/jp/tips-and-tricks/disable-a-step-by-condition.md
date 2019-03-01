@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Enable/Disable a step (optionally, based on a condition)
 menu:
   tips-and-tricks:
-    weight: 7
+    weight: 13
 
 ---
-
 {% include not_translated_yet.html %}
 
 ## Disable a Step

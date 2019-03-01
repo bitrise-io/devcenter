@@ -2,6 +2,9 @@
 title: Running Detox tests on Bitrise
 redirect_from: []
 date: 2019-03-01 12:43:19 +0000
+menu:
+  testing:
+    weight: 12
 
 ---
 Detox is a gray box end-to-end tests and automation library for mobile apps. Currently, it is only supported for iOS apps built with React Native. If you have a React Native app for iOS on Bitrise, you can run Detox tests.

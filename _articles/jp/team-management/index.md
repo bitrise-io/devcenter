@@ -1,9 +1,9 @@
 ---
-# jp title missing
 title: Adding a new team member
 menu:
   team-management:
     weight: 1
+
 ---
 Bitriseでアプリをセットアップすると、チームメンバーを招待することができます！新しいメンバーの役割は`管理者`、`開発者`,`テスター/QA`から選択でき、実行可能な権限は役割ごとに異なります。
 

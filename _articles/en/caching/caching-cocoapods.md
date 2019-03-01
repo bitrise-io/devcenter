@@ -2,7 +2,7 @@
 title: Caching Cocoapods
 menu:
   caching:
-    weight: 2
+    weight: 3
 
 ---
 Before you start, make sure you have the latest version of the `Cocoapods Install` step in your workflow.

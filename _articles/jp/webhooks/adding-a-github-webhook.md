@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Adding a GitHub webhook
 menu:
   webhooks:
     weight: 2
 
 ---
-
 {% include not_translated_yet.html %}
 
 You can specify webhooks so that Bitrise automatically triggers a build of your app whenever you perform a specified action, such as a code push or a pull request. For GitHub, all you have to do is register your `bitrise-webhooks` URL as a Webhook in your [GitHub](https://www.github.com) repository.

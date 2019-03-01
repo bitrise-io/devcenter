@@ -2,7 +2,7 @@
 title: Collecting and exporting code signing files with codesigndoc
 menu:
   ios-code-signing:
-    weight: 2
+    weight: 4
 
 ---
 The open source [codesigndoc](https://github.com/bitrise-tools/codesigndoc)

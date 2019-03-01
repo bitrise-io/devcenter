@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Webhook Troubleshooting
 menu:
   webhooks:
-    weight: 11
+    weight: 12
 
 ---
-
 {% include not_translated_yet.html %}
 
 First of all, if you registered your app on [bitrise.io](https://www.bitrise.io) a while ago (especially

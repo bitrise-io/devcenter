@@ -2,7 +2,7 @@
 title: Protecting your code signing files
 menu:
   ios-code-signing:
-    weight: 9
+    weight: 17
 
 ---
 You can set your code signing files to `Protected` mode: this means they cannot be downloaded from your [bitrise.io](https://www.bitrise.io) account. Your builds will be able to use these protected files, of course. But if you make the file protected, no one will be able to reveal it and the only way to overwrite it is by deleting the current one and creating a new one.

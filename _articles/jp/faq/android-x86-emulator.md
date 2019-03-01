@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Can I run an Android x86 Emulator on Bitrise?
 menu:
   faq:
     weight: 3
 
 ---
-
 {% include not_translated_yet.html %}
 
 A frequent question is whether it's possible to run the Android x86 emulator, instead of the ARM emulators.

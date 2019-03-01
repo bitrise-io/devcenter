@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Step properties
 menu:
   bitrise-cli:
-    weight: 9
+    weight: 11
 
 ---
-
 {% include not_translated_yet.html %}
 
 ### Step properties

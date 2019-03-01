@@ -4,10 +4,9 @@ redirect_from: []
 date: 2019-02-22 15:33:24 +0000
 menu:
   testing:
-    weight: 2
+    weight: 3
 
 ---
-
 {% include not_translated_yet.html %}
 
 To run Xcode tests on Bitrise, you need to have test targets defined in your projects. You need two Steps to run Xcode tests and view their results:

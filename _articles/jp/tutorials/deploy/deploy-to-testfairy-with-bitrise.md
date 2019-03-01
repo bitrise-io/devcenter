@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Deploy to TestFairy with Bitrise
 menu:
   deployment-tutorials:
-    weight: 5
+    weight: 6
 
 ---
-
 {% include not_translated_yet.html %}
 
 If you are looking for a deployment service that also gives you lots of insights

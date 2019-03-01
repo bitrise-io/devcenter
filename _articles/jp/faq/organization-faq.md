@@ -2,7 +2,8 @@
 title: 組織についてのFAQ
 menu:
   faq:
-    weight: 11
+    weight: 13
+
 ---
 ## Bitriseにおける組織とは何ですか？
 

@@ -2,7 +2,8 @@
 title: codesigndocを使ったコード署名ファイルの収集とエクスポート
 menu:
   ios-code-signing:
-    weight: 2
+    weight: 3
+
 ---
 [codesigndoc](https://github.com/bitrise-tools/codesigndoc)は _Mac上にある_ Xcode/Xamarin Studioのアーカイブを整理し、生成されたアーカイブファイルを解析するオープンソースのツールです。このツールはXcodeもしくはXamarin Studioがアーカイブ時に使用したコード署名の設定を収集し、必要なコード署名ファイルのリストを表示します。さらに`codesigndoc`を使うことでこれらのファイルに対して検索や書き出し、アップロードの操作も行うことができます。
 

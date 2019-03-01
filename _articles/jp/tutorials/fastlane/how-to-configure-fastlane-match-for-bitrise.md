@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: How to configure fastlane match for Bitrise
 menu:
   fastlane:
     weight: 2
 
 ---
-
 {% include not_translated_yet.html %}
 
 If you want to use [fastlane match](https://github.com/fastlane/fastlane/tree/master/match)

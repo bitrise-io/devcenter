@@ -2,7 +2,8 @@
 title: iOSアプリの開始
 menu:
   getting-started:
-    weight: 10
+    weight: 16
+
 ---
 iOS の開発は時に複雑です。我々の目的は開発する上での負担をできる限り削減することです！ このガイドでは以下の説明を行います。
 

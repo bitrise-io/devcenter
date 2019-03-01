@@ -1,9 +1,9 @@
 ---
-# jp title missing
 title: Gradleのキャッシュ
 menu:
   caching:
-    weight: 3
+    weight: 4
+
 ---
 事前に、ワークフロー内に最新バージョンの`Android Build`ステップがあることを確認してください。
 

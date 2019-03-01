@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: Deploying an iOS app for simulators
 date: 2018-11-10 14:34:02 +0000
 menu:
@@ -7,7 +6,6 @@ menu:
     weight: 5
 
 ---
-
 {% include not_translated_yet.html %}
 
 You can build and deploy your iOS application to a simulator, to show it off in a browser, for example. On Bitrise, we have [a dedicated Step](https://www.bitrise.io/integrations/steps/xcode-build-for-simulator) to build for a simulator: the `Xcode build for simulator` Step runs the `xcodebuild` command with an iOS simulator destination and generates an .app file.

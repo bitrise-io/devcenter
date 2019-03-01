@@ -5,6 +5,7 @@ redirect_from:
 menu:
   tips-and-tricks:
     weight: 1
+
 ---
 ## Gradle タスクとは何で、どうすれば自分のプロジェクトで利用可能なタスクの一覧を取得できますか？
 

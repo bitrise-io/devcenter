@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Should I commit my dependencies into my repository?
 menu:
   faq:
-    weight: 10
+    weight: 12
 
 ---
-
 {% include not_translated_yet.html %}
 
 **Our recommendation is that you should include your dependencies inside your repository, whenever you can**.

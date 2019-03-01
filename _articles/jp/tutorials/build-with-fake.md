@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Building with FAKE (F# Make)
 menu:
   tutorials:
     weight: 11
 
 ---
-
 {% include not_translated_yet.html %}
 
 To add support for your [FAKE](http://fsharp.github.io/FAKE/) build scripts,

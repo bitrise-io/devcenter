@@ -3,6 +3,7 @@ title: Androidコード署名手順
 menu:
   android-code-signing:
     weight: 1
+
 ---
 [Google Play Store](https://play.google.com/store/apps)でアプリを配布する前に、APKファイルに署名をする必要があります。
 

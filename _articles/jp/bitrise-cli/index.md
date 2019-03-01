@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: Intro
 redirect_from:
 - "/bitrise-cli"
@@ -9,7 +8,6 @@ menu:
     weight: 1
 
 ---
-
 {% include not_translated_yet.html %}
 
 Bitrise is a collection of tools and services to help you with the development

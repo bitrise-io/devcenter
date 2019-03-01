@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Can I add projects with submodules or with private repo dependencies?
 menu:
   faq:
     weight: 2
 
 ---
-
 {% include not_translated_yet.html %}
 
 If you have a project with one or more submodules

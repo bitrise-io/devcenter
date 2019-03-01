@@ -5,7 +5,7 @@ redirect_from:
 - "/xamarin/add-custom-sources-to-nuget"
 menu:
   xamarin:
-    weight: 3
+    weight: 6
 
 ---
 If you are using third-party NuGet packages in your application

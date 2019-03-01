@@ -1,9 +1,9 @@
 ---
-# jp title missing
 title: Mavenのキャッシュ
 menu:
   caching:
-    weight: 4
+    weight: 6
+
 ---
 1. アプリの`Workflow Editor`を開きます。
 2. `Git Clone`ステップから`Android Build`ステップの間に`Cache:Pull`ステップを挿入します。

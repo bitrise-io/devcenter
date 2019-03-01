@@ -4,7 +4,8 @@ redirect_from:
 - "/getting-started/manage-your-workflow/"
 menu:
   getting-started:
-    weight: 7
+    weight: 11
+
 ---
 Bitriseワークフローは複数のステップの集まりです。アプリのビルド時に、ステップがワークフローで定義されたステップが実行されます。ワークフローは次の2つの方法で、作成と変更ができます。
 

@@ -2,7 +2,8 @@
 title: Xcodeアーカイブ：書き出し
 menu:
   tips-and-tricks:
-    weight: 8
+    weight: 15
+
 ---
 [Bitrise.io](https://www.bitrise.io/)でiOS用の新しいアプリを作成した場合、
 生成されたデフォルトのワークフローには`Xcode Archive`ステップが含まれます。

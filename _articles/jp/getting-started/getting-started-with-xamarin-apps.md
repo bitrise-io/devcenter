@@ -1,13 +1,11 @@
 ---
-# jp title missing
 title: Getting started with Xamarin apps
 date: 2018-10-19 11:49:28 +0000
 menu:
   getting-started:
-    weight: 13
+    weight: 21
 
 ---
-
 {% include not_translated_yet.html %}
 
 [Xamarin](/tutorials/xamarin/index/) provides a developer with tools that can help them building cross-platform mobile applications. Bitrise supports Xamarin apps, of course: this guide aims to walk you through the procedure of:

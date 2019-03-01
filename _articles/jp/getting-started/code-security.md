@@ -2,7 +2,8 @@
 title: コードセキュリティ
 menu:
   getting-started:
-    weight: 5
+    weight: 7
+
 ---
 ビルドのセキュリティを保証するために、ビルドには[仮想マシン](/infrastructure/virtual-machines)を使用します。
 すべてのビルドは独自のクリーンな仮想マシンで実行され、ビルドが完了した後で仮想マシン全体を破棄し、

@@ -1,15 +1,13 @@
 ---
-# jp title missing
 title: Workflows in YAML
 redirect_from:
 - "/bitrise-cli/workflows/"
 - "/bitrise-cli/workflows"
 menu:
   bitrise-cli:
-    weight: 7
+    weight: 9
 
 ---
-
 {% include not_translated_yet.html %}
 
 A workflow is a collection of steps, environment variables,

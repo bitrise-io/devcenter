@@ -2,7 +2,8 @@
 title: iOSコード署名 - トラブルシューティング
 menu:
   ios-code-signing:
-    weight: 13
+    weight: 24
+
 ---
 BitriseでiOSのコード署名を行うためには、基本的に以下の３つが必要です。
 

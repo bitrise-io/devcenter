@@ -2,7 +2,8 @@
 title: アプリのオーナーを変更する
 menu:
   team-management:
-    weight: 2
+    weight: 3
+
 ---
 [Bitrise](https://www.bitrise.io)にあるアプリを別のユーザーに移動させる必要が出てくることがあります。その時、これを以下の手順に従って簡単に行うことができます。
 

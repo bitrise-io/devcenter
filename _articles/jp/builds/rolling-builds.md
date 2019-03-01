@@ -1,9 +1,9 @@
 ---
-# jp title missing
 title: Rolling builds機能
 menu:
   builds:
-    weight: 4
+    weight: 6
+
 ---
 手動でキャンセルする必要はなく実行中のビルドや保留中のビルドをキャンセルすることができます。もし**Rolling Builds**という機能をオンにすると新しいビルドが始まれば自動的にアプリの以前のビルドを中断することができます。
 

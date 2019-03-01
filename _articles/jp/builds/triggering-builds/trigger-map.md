@@ -1,16 +1,14 @@
 ---
-# jp title missing
 title: Using the Trigger Map to trigger builds
 redirect_from:
 - "/webhooks/trigger-map/"
 - "/webhooks/trigger-map"
 menu:
   triggering-builds:
-    weight: 5
+    weight: 9
     title: Triggering builds with the Trigger map
 
 ---
-
 {% include not_translated_yet.html %}
 
 When you register a webhook for an event or for multiple events (for example, for `Code Push` and

@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Managing organization members
 menu:
   organizations:
-    weight: 5
+    weight: 7
 
 ---
-
 {% include not_translated_yet.html %}
 
 Organizations can have multiple **Groups**. Groups form the "backbones" of organizations: they contain the members of the organizations, they can be assigned to different applications owned by the organizations, with different roles assigned to the different groups. Being a member of an organization means being a member of one of the groups belonging to the organization.

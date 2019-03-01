@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Creating and sharing your own Step
 menu:
   bitrise-cli:
-    weight: 16
+    weight: 18
 
 ---
-
 {% include not_translated_yet.html %}
 
 Creating your own Step is as simple as running a `bitrise` CLI (v1.6.1+) command and following the guide it prints. You can generate Steps using either the Bash or Go toolkits.

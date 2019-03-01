@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: About caching
 menu:
   caching:
     weight: 1
 
 ---
-
 {% include not_translated_yet.html %}
 
 The caching will tar all the cached directories and dependencies, and store them securely in Amazon S3.

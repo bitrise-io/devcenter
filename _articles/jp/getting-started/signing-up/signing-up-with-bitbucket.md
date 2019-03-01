@@ -2,7 +2,7 @@
 title: Bitbucketを使ったサインアップ
 menu:
   signing-up:
-    weight: 2
+    weight: 3
 
 ---
 Bitbucketのアカウントを**Bitrise**と連携することができます。連携することで１クリックでログインすることができ、また、これらのプロバイダーによってBitbucket上でレポジトリを作る際にBitbucketへの連携をする必要がなくなります。

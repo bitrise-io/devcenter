@@ -2,7 +2,7 @@
 title: Signing up with GitLab
 menu:
   signing-up:
-    weight: 3
+    weight: 6
 
 ---
 You are able to authenticate yourself with your GitLab user against **Bitrise**. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your GitLab account when adding repositories hosted by these providers again.

@@ -5,6 +5,7 @@ redirect_from:
 menu:
   ios-code-signing:
     weight: 1
+
 ---
 Bitrise上でビルドを実行するには、code signingを行うためのファイルを用意する必要があります。iOSのプロジェクトで必要なファイルは以下の通りです:
 

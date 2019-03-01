@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Workflow Editor doesn't load
 menu:
   troubleshooting:
-    weight: 3
+    weight: 4
 
 ---
-
 {% include not_translated_yet.html %}
 
 If Workflow Editor doesn't load for you, chances are your `bitrise.yml` or a workflow which you have configured crashes the Workflow Editor's UI.

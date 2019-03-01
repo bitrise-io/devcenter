@@ -4,7 +4,7 @@ redirect_from:
 - "/ios/code-signing/"
 menu:
   ios-code-signing:
-    weight: 1
+    weight: 2
 
 ---
 To run a build of your iOS app on Bitrise, you will need to provide code signing files in some way. The code signing of iOS projects requires:

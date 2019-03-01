@@ -3,6 +3,7 @@ title: Bitbucket webhookの追加
 menu:
   webhooks:
     weight: 3
+
 ---
 コードをプッシュするたびにBitriseで自動的にビルドを開始するために、ご利用のコードホスティングサービスにコードをリポジトリにプッシュした際に自動的に実行するwebhookを設定することができます。
 

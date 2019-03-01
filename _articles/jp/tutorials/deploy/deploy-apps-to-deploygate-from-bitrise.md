@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Deploy apps to DeployGate from Bitrise
 menu:
   deployment-tutorials:
-    weight: 4
+    weight: 5
 
 ---
-
 {% include not_translated_yet.html %}
 
 # What is DeployGate?

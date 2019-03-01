@@ -2,7 +2,7 @@
 title: The Android/Linux/Docker environment
 menu:
   infrastructure:
-    weight: 4
+    weight: 6
 
 ---
 ## Hardware

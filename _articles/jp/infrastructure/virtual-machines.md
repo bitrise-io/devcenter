@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Virtual Machines
 menu:
   infrastructure:
     weight: 2
 
 ---
-
 {% include not_translated_yet.html %}
 
 On [bitrise.io](https://www.bitrise.io), we have `macOS` and `Linux` virtual machines hosted for your builds.

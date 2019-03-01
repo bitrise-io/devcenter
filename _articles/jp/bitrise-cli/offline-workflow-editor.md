@@ -1,14 +1,12 @@
 ---
-# jp title missing
 title: Installing and upgrading the offline Workflow Editor
 date: 2018-11-29 13:46:40 +0000
 redirect_from: []
 menu:
   bitrise-cli:
-    weight: 3
+    weight: 4
 
 ---
-
 {% include not_translated_yet.html %}
 
 Bitrise Workflow Editor is designed in such a way that you can run it offline on your Mac/PC without having to log into [bitrise.io](https://www.bitrise.io/). The Workflow Editor is open source, you can find its repository [here](https://github.com/bitrise-io/bitrise-workflow-editor). You can also join the join the discussion around Workflow Editor [here](https://discuss.bitrise.io/t/workflow-editor-v2-open-source-offline-workflow-editor/39).

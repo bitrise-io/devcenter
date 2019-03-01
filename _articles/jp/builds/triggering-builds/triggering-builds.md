@@ -3,6 +3,7 @@ title: ビルドのトリガー
 menu:
   triggering-builds:
     weight: 1
+
 ---
 Bitriseのビルドトリガーには以下のいずれかを選択できます。
 

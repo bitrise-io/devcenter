@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: Available Stacks
 redirect_from:
 - "/docs/available-stacks"
@@ -8,7 +7,6 @@ menu:
     weight: 1
 
 ---
-
 {% include not_translated_yet.html %}
 
 The Stack indicates the virtual machine version that we will use to run your build.

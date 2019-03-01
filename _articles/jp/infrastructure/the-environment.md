@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: The Android/Linux/Docker environment
 menu:
   infrastructure:
-    weight: 3
+    weight: 4
 
 ---
-
 {% include not_translated_yet.html %}
 
 ## Hardware

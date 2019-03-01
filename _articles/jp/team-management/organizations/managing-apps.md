@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Managing the apps of organizations
 menu:
   organizations:
-    weight: 7
+    weight: 9
 
 ---
-
 {% include not_translated_yet.html %}
 
 Organizations can own several apps, with different (or the same, if that's what you need) groups working on different apps. Apps can be transferred between private accounts and organization accounts any time, quickly and easily.

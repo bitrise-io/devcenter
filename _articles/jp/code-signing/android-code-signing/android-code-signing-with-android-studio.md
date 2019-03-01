@@ -1,9 +1,9 @@
 ---
-# jp title missing
 title: Android Studioを使ったAndroidコード署名
 menu:
   android-code-signing:
-    weight: 3
+    weight: 5
+
 ---
 [Android Studio](https://developer.android.com/studio/)を利用することで、コード署名証明書を明記することができます。
 

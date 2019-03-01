@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: How to grant Bitrise access to a GitHub Organization?
 menu:
   faq:
-    weight: 5
+    weight: 6
 
 ---
-
 {% include not_translated_yet.html %}
 
 This guide explains how to grant access for [bitrise.io](https://www.bitrise.io/) to your GitHub Organization.

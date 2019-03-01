@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Skip a Build (skip ci)
 menu:
   tips-and-tricks:
-    weight: 3
+    weight: 5
 
 ---
-
 {% include not_translated_yet.html %}
 
 If you want to skip a specific commit, to not to start a build,

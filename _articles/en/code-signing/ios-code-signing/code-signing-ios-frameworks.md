@@ -2,7 +2,7 @@
 title: Code signing iOS frameworks
 menu:
   ios-code-signing:
-    weight: 12
+    weight: 23
 
 ---
 ## Developing iOS frameworks

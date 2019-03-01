@@ -2,7 +2,7 @@
 title: Generating code signing files
 menu:
   ios-code-signing:
-    weight: 10
+    weight: 19
 
 ---
 You'll need two kinds of files to sign your app: Certificates and Provisioning Profiles.

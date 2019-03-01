@@ -1,15 +1,13 @@
 ---
-# jp title missing
 title: Steps in YAML
 redirect_from:
 - "/bitrise-cli/steps/"
 - "/bitrise-cli/steps"
 menu:
   bitrise-cli:
-    weight: 8
+    weight: 10
 
 ---
-
 {% include not_translated_yet.html %}
 
 ## What is a Step

@@ -5,7 +5,8 @@ redirect_from:
 - "/xamarin/deploy-your-xamarin-app"
 menu:
   xamarin:
-    weight: 4
+    weight: 7
+
 ---
 Xamarinアプリケーションの追加に成功した後に、デフォルトのワークフロー(ビルド設定)を作成します。
 このワークフローは、デフォルトで`Deploy to bitrise.io`ステップを含んでいます。

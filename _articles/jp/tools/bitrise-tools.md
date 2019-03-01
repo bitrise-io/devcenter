@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Bitrise tools
 menu:
   tools:
     weight: 1
 
 ---
-
 {% include not_translated_yet.html %}
 
 List of Open Source tools maintained by the Bitrise team.

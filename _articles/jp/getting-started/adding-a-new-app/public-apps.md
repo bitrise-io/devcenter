@@ -4,7 +4,7 @@ redirect_from:
 - "/adding-a-new-app/public-apps/"
 menu:
   adding-a-new-app:
-    weight: 5
+    weight: 9
 
 ---
 オープンソースプロジェクトは素晴らしいものですし、私達はみんなそれが大好きです！ しかしながら、CI/CDについて言えば、オープンソースであることで維持が面倒になることがあります。私達はもっと人々の生活を快適にしたいと考えていました。これがBitriseに Public Apps の機能を導入した理由です。

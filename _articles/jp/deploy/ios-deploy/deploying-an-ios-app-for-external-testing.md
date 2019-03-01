@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: Deploying an iOS app for external testing
 date: 2018-10-26 12:39:01 +0000
 redirect_from: []
@@ -8,7 +7,6 @@ menu:
     weight: 3
 
 ---
-
 {% include not_translated_yet.html %}
 
 Before deploying your app to the App Store, you might want to release it to external testers who can test it on their devices outside the development environment. If you do not want to use Testflight, then you can do this by exporting an .ipa file with the **ad-hoc** export method.

@@ -4,7 +4,7 @@ redirect_from:
 - "/adding-a-new-app/setting-up-configuration"
 menu:
   adding-a-new-app:
-    weight: 4
+    weight: 8
 
 ---
 After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for

@@ -5,7 +5,8 @@ redirect_from:
 - "/xamarin/add-custom-sources-to-nuget"
 menu:
   xamarin:
-    weight: 3
+    weight: 5
+
 ---
 アプリケーション内にNuGetによるサードパーティーパッケージを利用したい場合は,
 それらのソースを自身のNuGetのソースに加える必要があります。

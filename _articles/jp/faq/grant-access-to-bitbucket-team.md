@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: How can I grant Bitrise access to a Bitbucket team?
 menu:
   faq:
-    weight: 6
+    weight: 7
 
 ---
-
 {% include not_translated_yet.html %}
 
 This guide explains how to grant access for [bitrise.io](https://www.bitrise.io/) to your Bitbucket team.

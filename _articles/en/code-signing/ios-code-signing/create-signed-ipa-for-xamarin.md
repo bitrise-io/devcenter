@@ -2,7 +2,7 @@
 title: Creating a signed .ipa for Xamarin projects
 menu:
   ios-code-signing:
-    weight: 6
+    weight: 12
 
 ---
 You can easily create a signed IPA for your Xamarin project with Bitrise. All you need to do is set the relevant inputs of our `Xamarin Archive` step!

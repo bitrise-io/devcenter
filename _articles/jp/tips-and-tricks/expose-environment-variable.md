@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Exposing env vars and using them in another step
 menu:
   tips-and-tricks:
-    weight: 5
+    weight: 9
 
 ---
-
 {% include not_translated_yet.html %}
 
 In this guide we show you how to expose environment variables (env vars) and use them, then how to copy env vars to another key and finally how to overwrite env vars.

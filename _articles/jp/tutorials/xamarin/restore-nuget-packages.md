@@ -4,7 +4,8 @@ redirect_from:
 - "/xamarin/restore-nuget-packages"
 menu:
   xamarin:
-    weight: 2
+    weight: 3
+
 ---
 [NuGet](https://www.nuget.org/)パッケージを復元するためには、
 [bitrise.io](https://www.bitrise.io)のページで自身のアプリのページに行き、

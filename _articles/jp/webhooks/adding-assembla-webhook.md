@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Adding an Assembla webhook
 menu:
   webhooks:
-    weight: 8
+    weight: 9
 
 ---
-
 {% include not_translated_yet.html %}
 
 You can set up webhooks so that Bitrise automatically triggers a build of your app whenever you perform a specified action, such as a code push or a pull request. For Assembla, you only need to add your `bitrise-webhooks` URL to your [Assembla](https://assembla.com) space.

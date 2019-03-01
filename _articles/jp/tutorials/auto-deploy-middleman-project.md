@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Deploying your Middleman website with Bitrise
 menu:
   tutorials:
     weight: 10
 
 ---
-
 {% include not_translated_yet.html %}
 
 This tutorial helps you create a basic static website project (for example, a blog) with [Middleman](https://middlemanapp.com/),

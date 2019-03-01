@@ -4,7 +4,7 @@ redirect_from:
 - "/adding-a-new-app/setting-up-ssh-keys/"
 menu:
   adding-a-new-app:
-    weight: 3
+    weight: 5
 
 ---
 SSHキーはサービス間でのセキュアな情報転送を担います。Bitriseにおいては、GitHubなどのプロバイダでの認証のためにあなたの許可を求めます。Bitriseを認証する方法について詳しくは[こちら](/getting-started/adding-a-new-app/connecting-a-repository)をご覧ください。

@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: Build status indicator on GitHub/GitLab/Bitbucket does not work
 redirect_from:
 - "/faq/github-pull-request-status-troubleshooting"
@@ -7,10 +6,9 @@ redirect_from:
 - "/faq/github-pull-request-status-troubleshooting/#make-sure-to-select-a-service-credential-user-who-has-a-connected-github-account"
 menu:
   troubleshooting:
-    weight: 8
+    weight: 12
 
 ---
-
 {% include not_translated_yet.html %}
 
 If your builds do not send status reports to your git hosting provider - GitHub, GitLab or Bitbucket -, you will need to do a little investigating to find out what causes the problem. Let's take a look at the potential issues!

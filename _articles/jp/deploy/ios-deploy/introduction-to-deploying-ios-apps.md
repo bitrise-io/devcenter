@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: Introduction to deploying iOS apps
 date: 2018-10-26 12:49:32 +0000
 redirect_from: []
@@ -8,7 +7,6 @@ menu:
     weight: 1
 
 ---
-
 {% include not_translated_yet.html %}
 
 Once you built your app and ran unit tests and UI tests on it, it's time to deploy it. 

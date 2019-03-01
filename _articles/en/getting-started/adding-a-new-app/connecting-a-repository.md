@@ -4,7 +4,7 @@ redirect_from:
 - "/getting-started/adding-a-new-app/connecting-your-repository"
 menu:
   adding-a-new-app:
-    weight: 2
+    weight: 4
 
 ---
 After you've selected adding a new app, you will find yourself on the `Create app` page.

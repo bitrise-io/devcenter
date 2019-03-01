@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: HipChat message with build status and details
 menu:
   tutorials:
     weight: 9
 
 ---
-
 {% include not_translated_yet.html %}
 
 You can send [HipChat](https://www.hipchat.com/) messages during your build.

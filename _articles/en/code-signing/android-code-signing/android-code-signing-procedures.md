@@ -2,7 +2,7 @@
 title: Android code signing procedures
 menu:
   android-code-signing:
-    weight: 1
+    weight: 2
 
 ---
 Before you distribute your app through [Google Play Store](https://play.google.com/store/apps), your APK file must be digitally signed.

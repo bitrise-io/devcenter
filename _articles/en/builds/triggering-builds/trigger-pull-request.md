@@ -2,7 +2,7 @@
 title: Triggering builds with pull requests
 menu:
   triggering-builds:
-    weight: 3
+    weight: 6
 
 ---
 You can set up a trigger so that every time a pull request is opened from a specified source branch to a specified target branch of your repository, a build is automatically triggered on Bitrise.

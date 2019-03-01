@@ -4,7 +4,7 @@ redirect_from:
 - "/xamarin/"
 menu:
   xamarin:
-    weight: 1
+    weight: 2
 
 ---
 With [Xamarin](https://xamarin.com) integration you can now build your

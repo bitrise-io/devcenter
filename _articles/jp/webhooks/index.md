@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: Adding webhooks
 redirect_from:
 - "/webhooks/"
@@ -8,7 +7,6 @@ menu:
     weight: 1
 
 ---
-
 {% include not_translated_yet.html %}
 
 Most source code hosting service provides a feature to register webhooks. A webhook is basically an URL which will be called on specified events.

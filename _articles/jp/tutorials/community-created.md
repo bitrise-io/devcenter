@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Community Created Tutorials
 menu:
   tutorials:
     weight: 1
 
 ---
-
 {% include not_translated_yet.html %}
 
 _If you write a tutorial or blog post about Bitrise feel free to_

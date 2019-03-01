@@ -5,6 +5,7 @@ redirect_from:
 menu:
   xamarin:
     weight: 1
+
 ---
 [Xamarin](https://xamarin.com) インテグレーションを使えば [Bitrise](https://www.bitrise.io) で iOS と Android の Xamarin アプリをビルドすることができます。
 

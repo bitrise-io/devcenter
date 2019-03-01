@@ -1,5 +1,4 @@
 ---
-# jp title missing
 title: fastlane tools integration
 menu:
   fastlane:
@@ -7,7 +6,6 @@ menu:
     title: Fastlane tools integration
 
 ---
-
 {% include not_translated_yet.html %}
 
 Having more time to be creative is the key to great inventions.
