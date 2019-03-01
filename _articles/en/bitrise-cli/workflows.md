@@ -54,7 +54,7 @@ workflows:
         title: Second step
 ```
 
-When you you run `bitrise run test`, the Bitrise CLI will run the two
+When you run `bitrise run test`, the Bitrise CLI will run the two
 script steps one by one, starting with `First step` and then
 continuing with `Second step`.
 
@@ -206,8 +206,7 @@ workflows:
 but when you `bitrise run build-alpha` the `BUILD_TYPE` environment variable will be set to `alpha`,
 while if you `bitrise run build-beta`  the `BUILD_TYPE` environment variable will be set to `beta`.
 
-**Important:** as noted above, workflow defined environment variables are
-only available in the workflow it defines it, and the ones **executed after** that workflow.
+**Important:** as noted above, workflow defined environment variables are only available in the workflow it defines, and the ones **executed after** that workflow.
 In the example above `generic-build` is included as `after_run` workflow,
 so the `BUILD_TYPE` environment variable will be available in the steps of `generic-build`.
 But if you'd use `before_run` instead of `after_run`, that would mean that technically

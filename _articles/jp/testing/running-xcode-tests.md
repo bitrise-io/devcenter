@@ -1,10 +1,15 @@
 ---
-title: Xcode Test draft
+title: Running Xcode tests
 redirect_from: []
-date: 2019-02-04 16:42:15 +0000
-published: false
+date: 2019-02-22 15:33:24 +0000
+menu:
+  testing:
+    weight: 2
 
 ---
+
+{% include not_translated_yet.html %}
+
 To run Xcode tests on Bitrise, you need to have test targets defined in your projects. You need two Steps to run Xcode tests and view their results:
 
 * `Xcode Test for iOS`
@@ -27,14 +32,22 @@ The default input values of the `Xcode Test for iOS` Step could work if your tes
 
 Check the following required inputs of the `Xcode Test for iOS` Step before running a build. These inputs determine the sort of tests the Step will run.
 
+![](/img/xcode-test-input.png)
+
 * **Scheme name**: the scheme you use must be marked as Shared in Xcode!
 * **Device**: set it to the value that is shown in Xcode's device selection dropdown menu.
 * **OS version**: set it to the value that is shown in Xcode's device selection dropdown menu.
 * **Platform**: set it to the value that is shown in Xcode's device selection dropdown menu.
 
+{% include message_box.html type="info" title="Headless mode" content="From Xcode 9 onwards, tests are run in headless mode by default: this means that the simulator will run in the background only. To change it, go to the Step's Debug input group and set the `Run the test in headless mode?` input's value to `no`. However, with this option, tests will take more time."%}
+
+{% include message_box.html type="warning" title="Using `xcpretty`" content="The `xcpretty` output tool does not support parallel tests. If parallel tests are enabled in your project, go to the Step's Debug input group and set the `Output tool` input's value to `xcodebuild`."%}
+
 ### Generating code coverage files
 
 By default, the `Xcode Test for iOS` Step does not generate code coverage files. If you need them, however, it's easy to change: just set the `Generate code coverage files?` to `yes`.
+
+![](/img/code-coverage.png)
 
 This sets two additional flags to the `xcodebuild` command:
 

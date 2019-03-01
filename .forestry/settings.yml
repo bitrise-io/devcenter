@@ -13,6 +13,11 @@ sections:
   label: For review
   create: all
   match: "**/*"
+- type: directory
+  path: _articles/jp/
+  label: Japanese articles
+  create: all
+  match: "**/*"
 - type: heading
   label: DevCenter articles
 - type: directory

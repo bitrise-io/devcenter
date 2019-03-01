@@ -58,6 +58,33 @@ There is a small difference between configuring your workflow for `robo` and `in
    Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/android/available-testing-devices).
 8. Start a build and [check your test results](/testing/device-testing-for-android/#running-instrumentation-tests).
 
+#### Setting user input with Robo directives for successful robo tests
+
+If your app needs specific user interaction for a successful robo test, you can use the `Robo Directives` input field to set those necessary inputs. For example, certain UI elements of the app are only accessible for robo testing if the required user inputs (username and email address) are populated for log in.
+
+1. Click the `[BETA] Virtual Device Testing for Android` Step in your workflow.
+2. Click the `Robo Test` section.
+3. Find the `Robo directives` input field and set your required user input directives.
+   * provide a comma-separated list of key-value pairs, where the **key** is the Android resource name of the target UI element, and the **value** is the text string. EditText fields are supported but not text fields in WebView UI elements. For example, you could use the following parameter for custom login:
+
+         username_resource,username,ENTER_TEXT
+         password_resource,password,ENTER_TEXT
+         loginbtn_resource,,SINGLE_CLICK
+   * One directive per line, the parameters are separated with `,` character. For example: `ResourceName,InputText,ActionType`
+
+![](/img/robo-directives.png)
+
+Based on the input you provide, you can successfully run a robo test (even on pages that are only accessible with a specific user input) and check the test results on the `DEVICE TESTS` tab of your Build's page. The test results can be, for example:
+
+* screenshots of the final state of the Emulator screen
+* recorded video
+* logs
+* files
+
+Here is a screenshot of a successful robo test, where the robo test got all the way through to `My application` by populating the `email` and `password` fields first with the pre-defined directives from the `Robo directives`.
+
+![](/img/successful-robo-test.jpg)
+
 ### Running instrumentation tests
 
 1. Open the `primary workflow` of your build in `Workflow Editor`.
@@ -85,6 +112,5 @@ You can check UI test result on the `DEVICE TESTS` tab of your app's build page.
 
 1. Go back to your `Builds` page, select your build, and click `DEVICE TESTS` tab to check your test result.
 2. Click the device you've tested your project on.
-
 
 You can view test cases and downloadable logs if you've selected `instrumentation` test and a video and screenshots if you've selected `robo` as test type. Or scroll down and download all your reports in `FILES GENERATED`.

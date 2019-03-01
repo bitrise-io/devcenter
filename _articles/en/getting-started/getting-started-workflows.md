@@ -32,7 +32,7 @@ The `primary` workflow is not the same for every app you create: it contains dif
 
 * Activates the SSH key, if one has been added to the app. The step saves it to file and then loads it into the user's ssh-agent with the `ssh-add` command. The step, by default, does not run if there is no SSH key added.
 * Clones the Git repository of the project with the `Git Clone Repository` Step.
-* `Bitrise.io Cache:Pull` and `Bitrise.io Cache:Push` Steps. Read more about [caching on Bitrise](/caching/about-caching).
+* Rusn the `Bitrise.io Cache:Pull` and `Bitrise.io Cache:Push` Steps. Read more about [caching on Bitrise](/caching/about-caching).
 * Deploys build artifacts with the `Deploy to Bitrise.io` Step.
 
 ### The `deploy` workflow

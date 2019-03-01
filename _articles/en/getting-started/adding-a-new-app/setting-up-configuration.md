@@ -10,7 +10,7 @@ menu:
 After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for
 your project, Bitrise will download your code to make sure it can access the repository
 and will run an automatic repository scanner script to find the best initial configuration for your project.
-Currently Bitrise will detect `iOS`, `Android`, `Xamarin` and `fastlane` projects out of the box.
+Currently Bitrise will detect `iOS`, `Android`, `Xamarin`, `Ionic`, `Cordova`, `Flutter`, `React Native` and `fastlane` projects out of the box.
 
 You can configure other types of projects too, but that will require manual
 configuration.
