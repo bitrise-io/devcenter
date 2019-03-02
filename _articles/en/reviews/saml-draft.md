@@ -32,15 +32,13 @@ Let's dive in!
  1. Go to your organization's `Security` tab on [bitrise.io](https://www.bitrise.io).
  2. Copy the `Single Sign-On URL`.  which you will use in your own Identity Provider's (IdP) site.
  3. Log into your SSO provider.
- 4.  Add Bitrise as an application using the copied URL at Step 2. You're generating your Single Sign-On (SSO) credentials which you will need in a minute.
+ 4. Add Bitrise as an application using the copied URL at Step 2. You're generating your Single Sign-On (SSO) credentials which you will need in a minute.
  5. Add those SSO credentials to the `Identity provider sign-on URL` and `Certificate` fields on the `Security` tab.
  6. Click the `Configure SSO` button.
     ![](/img/SSO-page.jpg)
     All members of your organization will be automatically signed out from Bitrise.
  7. Bitrise sends a notification e-mail to the organization owner and the organization members as well. This email contains:
     * the credentials of the Organization's SSO provider (Sign In  via SSO or the provided URL)
-
-
     * the the organization owner's email address (should you need to contact him/her.)
 
     ![](/img/email-notification.jpg)
@@ -60,16 +58,20 @@ Now that you have set up SAML SSO to your organization and the notification emai
 2. Click `People` on the left menu.
 3. Check your (or other organization members') SAML SSO status under `Members`.
 
-What does the `x` mean next to a member's name
-If you click the `x`, you will NOT disable the SAML SSO of that particular org member. The `x` simply removes that member from all groups in that organization.
-
-image are you sure
+   ![](/img/saml-status.png)
 
 You can check SAML SSO status of the organization owner and other organization members on the `People` tab of your organization. If all went well, you will see `Single Sign-On (SSO) is enabled for this organization` with a `Review Users` and a `Disable SSO` buttons.
 
 * `Review Users`: takes you to the `People` tab from the `Security` tab where you can check your and other org member's SAML SSO status.
 * `Disable SSO`: disables SSO for all org members who will be able to sign in with the regular sign-in procedure.
   ![](/img/disable-saml.jpg)
+
+{% include message_box.html type="info" title="What does the `x` mean?" content="
+If you click the `x` next to a member's name, it removes that member from all groups in that organization.
+![](/img/are-you-sure.png)
+"%}
+
+
 
 Outside contributors?
 
