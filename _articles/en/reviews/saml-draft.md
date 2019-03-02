@@ -19,16 +19,16 @@ adds an extra layer of security
 
 it requires you to verify your identity
 
+{% include message_box.html type="important" title="Before you start setting up SAML SSO" content="
+
+* you have an SAML-supporting Identity Provider that you can connect Bitrise to as an application.
+* your account on Bitrise has an organization. If it doesn't have an organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for **existing and brand new organizations** on Bitrise.
+* **as with other** [**organization management actions**](/team-management/user-roles-on-app-teams/)**, only the organization owner can set up SALM SSO to a Bitrise organization.**
+"%}
+
 ## Setting up SAML SSO for an existing Bitrise organization
 
-Before you start setting up SAML SSO, make sure:
-
-* You have an SAML-supporting Identity Provider that you can connect Bitrise to as an application.
-* Your account on Bitrise has an organization. If it doesn't have an organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for **existing and brand new organizations** on Bitrise.
-* **As with other** [**organization management actions**](/team-management/user-roles-on-app-teams/)**, only the organization owner can set up SALM SSO to a Bitrise organization.**
-
-Let's dive in!
-
+In this tutorial, we describe how you can set up SAML SSO and email organization members on enabling the secure connection.
  1. Go to your organization's `Security` tab on [bitrise.io](https://www.bitrise.io).
  2. Copy the `Single Sign-On URL`.  which you will use in your own Identity Provider's (IdP) site.
  3. Log into your SSO provider.
