@@ -19,16 +19,17 @@ adds an extra layer of security
 
 it requires you to verify your identity
 
-{% include message_box.html type="important" title="Before connecting SAML SSO to your organization" content="
-Make sure you have the following already checked out:
+{% include message_box.html type="important" title="Before connecting SAML SSO to your organization" content=" Make sure you have these already checked out:
+
 * you have an SAML-supporting Identity Provider that you can connect Bitrise to as an application.
 * your account on Bitrise has an organization. If it doesn't have an organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for **existing and brand new organizations** on Bitrise.
 * **as with other** [**organization management actions**](/team-management/user-roles-on-app-teams/)**, only the organization owner can set up SALM SSO to a Bitrise organization.**
-"%}
+  "%}
 
 ## Setting up SAML SSO for an existing Bitrise organization
 
 In this tutorial, we describe how you can set up SAML SSO and email organization members on enabling the secure connection.
+
  1. Go to your organization's `Security` tab on [bitrise.io](https://www.bitrise.io).
  2. Copy the `Single Sign-On URL`.  which you will use in your own Identity Provider's (IdP) site.
  3. Log into your SSO provider.
@@ -37,12 +38,10 @@ In this tutorial, we describe how you can set up SAML SSO and email organization
  6. Click the `Configure SSO` button.
     ![](/img/SSO-page.jpg)
     All members of your organization will be automatically signed out from Bitrise.
- 7. Bitrise sends a **notification e-mail** to the organization owner and the organization members as well. This email contains:
-    * the credentials of the Organization's SSO provider (Sign In  via SSO or the provided URL)
-    * the the organization owner's email address (should you need to contact him/her.)
+ 7. Bitrise sends a **notification e-mail** to the organization owner and the organization members as well. This email contains the credentials of the Organization's SSO provider (`Sign In via SSO` or the provided URL) and the organization owner's email address (should you need to contact him/her.)
 
     ![](/img/email-notification.jpg)
- 8. The owner (and other members) of this Organization are be prompted to sign in to Bitrise again by clicking the `sign In via SSO` button or using the provided URL in the email. If using the URL, make sure you open it in a _new tab_!
+ 8. The owner (and other members) of this Organization are prompted to sign in to Bitrise again by clicking the `sign In via SSO` button or using the provided URL in the email. If using the latter, make sure you open the link in a _new tab_!
  9. Your SSO provider's page comes up again where you have to provide your Bitrise email address connected to your organization. WARNING: If you provide a **different Bitrise email address which is not related to that particular organization**, you will get the below error message. Log in with the right email address of the organization.![](/img/no-connected-sso-for-this-email-address.png)
 10. As a last step, the `Allow "your organization name" to sign you in` page comes up.
     ![](/img/enable-saml.jpg)
@@ -65,6 +64,9 @@ Now that you have set up SAML SSO to your organization and the notification emai
 3. Check your (or other organization members') SAML SSO status under `Members`.
 
    ![](/img/saml-status.png)
+
+* `SAML SSO IS ENABLED`: secure connection is active.
+* `SAML SSO IS DISABLED`: The org member most likely has not enabled SSO connection through the `Sign in via SSO` button in the notification email (Step 8) yet.
 
 {% include message_box.html type="info" title="What does the `x` mean?" content="
 If you click the `x` next to a member's name, it removes that member from all groups in that organization.
