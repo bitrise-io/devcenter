@@ -19,8 +19,8 @@ adds an extra layer of security
 
 it requires you to verify your identity
 
-{% include message_box.html type="important" title="Before you start setting up SAML SSO" content="
-
+{% include message_box.html type="important" title="Before connecting SAML SSO to your organization" content="
+Make sure you have the following basic conditions checked out:
 * you have an SAML-supporting Identity Provider that you can connect Bitrise to as an application.
 * your account on Bitrise has an organization. If it doesn't have an organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for **existing and brand new organizations** on Bitrise.
 * **as with other** [**organization management actions**](/team-management/user-roles-on-app-teams/)**, only the organization owner can set up SALM SSO to a Bitrise organization.**
