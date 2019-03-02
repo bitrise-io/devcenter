@@ -81,31 +81,11 @@ You can get the following error message if when you try to sign into Bitrise via
 
 image something went wrong
 
-### Joining Bitrise via invitation email
 
-If the Organization owner has added a a new group member to the organization or has just enabled SAML SSO to the entire organization, you, as an organization member should have received a notification email.
-
-Image
-This email: from Bitrise which invites you to click the `Sign In via SSO` button or open the provided URL in a new tab.
-
-1. Click the `Sign In via SSO` button or open the provided URL in a new tab.
-2. In the next window, you can confirm if you want to allow your Organization to sign you in. If you do, click `Authorize`.
-
-{% include message_box.html type="note" title="There is no connected SSO for this email address" content=" If you have provided the different email address than..., you will be notified in the `There is no connected SSO for this email address pop-up window`. Image. You can log in with the right account associated with your SSO. " %}
 
 Not a bitrise user>
 
-## How to sign in with an existing SSO service?
 
-Open below link in a new tab:
-
-Copy the content of  "Signature Certificate" certificate (on the bottom of the page).
-
-Insert it into the "Certificate" field (Organization's Security page).
-
-Insert  below URL  into the "Identity provider sign-on URL:" field:
-
-Click the "Configure SSO" button.
 
 Owners can:
 
