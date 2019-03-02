@@ -37,16 +37,20 @@ Let's dive in!
  6. Click the `Configure SSO` button.
     ![](/img/SSO-page.jpg)
     All members of your organization will be automatically signed out from Bitrise.
- 7. Bitrise sends a notification e-mail which contains the credentials of the Organization's SSO provider. This email also shows the organization owner with his/her email address, if you needed to contact the owner for more information.
+ 7. Bitrise sends a notification e-mail to the organization owner and the organization members as well. This email contains:
+    * the credentials of the Organization's SSO provider (Sign In  via SSO or the provided URL)
+
+
+    * the the organization owner's email address (should you need to contact him/her.)
 
     ![](/img/email-notification.jpg)
- 8. The owner (and other members) of this Organization are be prompted to sign in to Bitrise again by clicking the `sign In via SSO` button or using the provided URL in the email. Make sure you you open the URL in a **new tab**!
- 9. Provide your Bitrise email address connected to your organization in your SSO provider. WARNING: If you provide a different Bitrise email address which is not related to the organization, you will get the following 	error message. You'll have to log in with another account email: ![](/img/no-connected-sso-for-this-email-address.png)
+ 8. The owner (and other members) of this Organization are be prompted to sign in to Bitrise again by clicking the `sign In via SSO` button or using the provided URL in the email. If using the URL, \]make sure you open it in a **new tab**!
+ 9. Your SSO provider's page comes up again where you have to provide your Bitrise email address connected to your organization. WARNING: If you provide a **different Bitrise email address which is not related to that particular organization**, you will get the below error message. Log in with the email address associated with the organization it belongs to.![](/img/no-connected-sso-for-this-email-address.png)
 10. As a last step, the `Allow "your organization name" to sign you in` page comes up.
     ![](/img/enable-saml.jpg)
 
-* Click "Authorize" if you trust the **organization/group** to control your Bitrise account-sign in.
-* Click "Don't trust" if **...**
+* Click `Authorize` if you trust the **organization/group** to control your Bitrise account-sign in.
+* Click `Don't trust` if **...**
 
 ## Checking your SAML SSO status on Bitrise
 
