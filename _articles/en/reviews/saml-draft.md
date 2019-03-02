@@ -7,21 +7,11 @@ published: false
 ---
 ## What is SAML SSO
 
-Organizations created in Bitrise can log into Bitrise using their own SAML SSO system (easier user management, secure). All you have to do to is add Bitrise as an application to your own SAML-providing Identity Provider (IdP) and set some credentials on your organization's `Security` tab on Bitrise.
-
-Auto-create/register user if it does not exist with that email yet and auto assign to the related Organization.
-
-{% include message_box.html type="note" title="Connecting via Github" content=" Does not prevent the user to sign in with an alternative option, for example, connecting a GitHub account and signing in with the GitHub account. "%}
-
-calls for enhanced security
-
-adds an extra layer of security
-
-it requires you to verify your identity
+Organizations created in Bitrise can log into Bitrise using their own SAML SSO which is a login protocol for easier authentication. All you have to do to is add Bitrise as an application to your own SAML-supporting Identity Provider (IdP) and set some credentials on your organization's `Security` tab on Bitrise.
 
 {% include message_box.html type="important" title="Before connecting SAML SSO to your organization" content=" Make sure:
 
-* you have an SAML-supporting Identity Provider that you can connect Bitrise to as an application.
+* you have a SAML-supporting Identity Provider that you can connect Bitrise to as an application.
 * your account on Bitrise has an organization. If it doesn't have an organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for **existing and brand new organizations** on Bitrise.
 * **as with other** [**organization management actions**](/team-management/user-roles-on-app-teams/)**, only the organization owner can set up SALM SSO to a Bitrise organization.**
   "%}
@@ -36,9 +26,8 @@ In this tutorial, we describe how you can set up SAML SSO and email organization
  4. Add Bitrise as an application using the copied URL at Step 2. You're generating your Single Sign-On (SSO) credentials which you will need in a minute.
  5. Add those SSO credentials to the `Identity provider sign-on URL` and `Certificate` fields on the `Security` tab.
  6. Click the `Configure SSO` button.
-    ![](/img/SSO-page.jpg)
-    All members of your organization will be automatically signed out from Bitrise.
- 7. Bitrise sends a **notification e-mail** to the organization owner and the organization members as well. This email contains the credentials of the Organization's SSO provider (`Sign In via SSO` or the provided URL) and the organization owner's email address (should you need to contact him/her.)
+    ![](/img/SSO-page.jpg) All members of your organization will be automatically signed out from Bitrise.
+ 7. A new account is created which you can confirm in the **verification e-mail** Bitrise sends to the organization members. This email contains a `Sign In via SSO` button or a URL. Click it or copy the link to acknowledge the connection. The email also shows the organization owner's email address (should you need to contact him/her.)
 
     ![](/img/email-notification.jpg)
  8. The owner (and other members) of this Organization are prompted to sign in to Bitrise again by clicking the `sign In via SSO` button or using the provided URL in the email. If using the latter, make sure you open the link in a _new tab_!
@@ -73,13 +62,22 @@ If you click the `x` next to a member's name, it removes that member from all gr
 
 Outside contributors?
 
-## Signing in via SAML
+## Logging in via SSO
+
+If SSO has been already added to your organization but you are currently logged out of Bitrise, you can easily log into your org:
+
+1. Click `SAML SSO` on our [login page](https://app.bitrise.io/users/sign_in). 
+2. Provide your organization name.
+
+   ![](https://files.nuclino.com/files/f47f03b1-6918-4475-81bd-e940e826b630/Screenshot 2019-02-25 at 9.55.37.png)
 
 You can get the following error message if when you try to sign into Bitrise via SAML.
 
-image something went wrong
+ something went wrong image
 
-Not a bitrise user>
+## Logging in if not a Bitrise user yet
+
+Questions:
 
 Owners can:
 
@@ -87,3 +85,8 @@ Owners can:
 * disable saml sso for the entire organization
 * can invite members to an organization
 * As per organization rules, only owners can remove members from an Organization.
+* one company - 2 orgs: enable sso for only one and invite users to that one. Or enable for both orgs but then users cannot be shared among the orgs! If someone wants to be part of both orgs, he/she has to create two separate Bitrise accounts and tie them to the respective orgs individually.
+* if you work for two companies, you should create two separate accounts on Bitrise to join the SSO secured organizations of the companies.
+* saml certificate expires? - contact support!
+* Auto-create/register user if it doesnt exist an auto assign to the right organization.  **Does not prevent the user to sign in with an alternative option**, e.g. connecting a GitHub account and signing in with the GitHub account.
+* SAML SSO signup/signin should **automatically grant access to the given Organisation that SAML login is tied to**.
