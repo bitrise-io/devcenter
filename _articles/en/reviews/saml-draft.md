@@ -7,7 +7,9 @@ published: false
 ---
 ## What is SAML SSO
 
-You can sign up to Bitrise and log into an organization using your company SAML system. Auto-create/register user if it does not exist with that email yet and auto assign to the related Organisation.
+Organizations created in Bitrise can log into Bitrise using their own SAML SSO system (easier user management, secure). All you have to do to is add Bitrise as an application to your own SAML-providing Identity Provider (IdP) and set some credentials on your organization's `Security` tab on Bitrise.
+
+ Auto-create/register user if it does not exist with that email yet and auto assign to the related Organization.
 
 {% include message_box.html type="note" title="Connecting via Github" content=" Does not prevent the user to sign in with an alternative option, for example, connecting a GitHub account and signing in with the GitHub account. "%}
 
@@ -37,9 +39,7 @@ Before you start setting up SAML SSO, make sure:
 
    ![](/img/email-notification.jpg)
 7. The owner (and other members) of this Organization are be prompted to sign in to Bitrise again by clicking the `sign In via SSO` button or using the provided URL in the email. Make sure you you open the URL in a **new tab**!
-8. Provide your Bitrise email address connected to your organization in your SSO provider.
-	If you provide a different Bitrise email address which is not related to the organization, you will get the following 	error message. You'll have to log in with another account email: 
-   ![](/img/no-connected-sso-for-this-email-address.png)
+8. Provide your Bitrise email address connected to your organization in your SSO provider. WARNING: If you provide a different Bitrise email address which is not related to the organization, you will get the following 	error message. You'll have to log in with another account email: ![](/img/no-connected-sso-for-this-email-address.png)
 9. As a last step, the `Allow "your organization name" to sign you in` page comes up.
    ![](/img/enable-saml.jpg)
 
