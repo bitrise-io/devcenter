@@ -44,7 +44,7 @@ Let's dive in!
     * the the organization owner's email address (should you need to contact him/her.)
 
     ![](/img/email-notification.jpg)
- 8. The owner (and other members) of this Organization are be prompted to sign in to Bitrise again by clicking the `sign In via SSO` button or using the provided URL in the email. If using the URL, \]make sure you open it in a **new tab**!
+ 8. The owner (and other members) of this Organization are be prompted to sign in to Bitrise again by clicking the `sign In via SSO` button or using the provided URL in the email. If using the URL, make sure you open it in a **new tab**!
  9. Your SSO provider's page comes up again where you have to provide your Bitrise email address connected to your organization. WARNING: If you provide a **different Bitrise email address which is not related to that particular organization**, you will get the below error message. Log in with the email address associated with the organization it belongs to.![](/img/no-connected-sso-for-this-email-address.png)
 10. As a last step, the `Allow "your organization name" to sign you in` page comes up.
     ![](/img/enable-saml.jpg)
@@ -54,7 +54,7 @@ Let's dive in!
 
 ## Checking your SAML SSO status on Bitrise
 
-You can check your SAML SSO status on your organization's site.
+Now that you have set up SAML SSO to your organization and the notification emails have been sent out to all org members, you might want to check other org members' SSO status. This is handy because from now on org members are automatically logged out from Bitrise until they enable SSO connection through the `Sign in via SSO` button in the notification email (Step 8).
 
 1. Go to your organization on Bitrise.
 2. Click `People` on the left menu.
