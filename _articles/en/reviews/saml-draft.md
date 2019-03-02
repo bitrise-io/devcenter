@@ -29,12 +29,12 @@ Before you start setting up SAML SSO, make sure:
 
 1. Go to your organization's Security tab on bitrise.io.
 2. Copy the Single Sign-On URL which you will use in your own Identity Provider's (IdP) site.
-
-   ![](/img/SSO-page.jpg)
 3. Log into your Identity Provider (IdP) and add Bitrise as an application based on the copied URL at Step 2. You will generate your Single Sign-On (SSO) credentials here.
 4. Add the Single Sign-On credentials to the `Identity provider sign-on URL` and `Certificate`
    fields.
-5. Click the `Configure SSO` button. All members of your organization will be automatically signed out from Bitrise.
+5. Click the `Configure SSO` button. 
+	![](/img/SSO-page.jpg)
+	All members of your organization will be automatically signed out from Bitrise.
 6. Bitrise sends a notification e-mail which contains the credentials of the Organization's SSO provider. This email also shows the organization owner with his/her email address, if you needed to contact the owner for more information.
 
    ![](/img/email-notification.jpg)
