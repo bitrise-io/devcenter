@@ -9,7 +9,7 @@ published: false
 
 Organizations created in Bitrise can log into Bitrise using their own SAML SSO system (easier user management, secure). All you have to do to is add Bitrise as an application to your own SAML-providing Identity Provider (IdP) and set some credentials on your organization's `Security` tab on Bitrise.
 
- Auto-create/register user if it does not exist with that email yet and auto assign to the related Organization.
+Auto-create/register user if it does not exist with that email yet and auto assign to the related Organization.
 
 {% include message_box.html type="note" title="Connecting via Github" content=" Does not prevent the user to sign in with an alternative option, for example, connecting a GitHub account and signing in with the GitHub account. "%}
 
@@ -23,18 +23,20 @@ it requires you to verify your identity
 
 Before you start setting up SAML SSO, make sure:
 
-* Your account has an organization. If it doesn't have an organization, go ahead and create one. Learn how to [create an organization](https://devcenter.bitrise.io/team-management/organizations/creating-org/). The SAML SSO setup flow is the same for existing and brand new organizations as well.
-* **Only the organization owner can set up SAM SSO to a Bitrise organization.**
-* You have an SAML-supporting identity provider that your company uses.
+* You have an SAML-supporting Identity Provider that you can connect Bitrise to as an application.
+* Your account on Bitrise has an organization. If it doesn't have an organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for **existing and brand new organizations** on Bitrise.
+* **As with other** [**organization management actions**](/team-management/user-roles-on-app-teams/)**, only the organization owner can set up SALM SSO to a Bitrise organization.**
+
+Let's dive in!
 
 1. Go to your organization's Security tab on bitrise.io.
 2. Copy the Single Sign-On URL which you will use in your own Identity Provider's (IdP) site.
 3. Log into your Identity Provider (IdP) and add Bitrise as an application based on the copied URL at Step 2. You will generate your Single Sign-On (SSO) credentials here.
 4. Add the Single Sign-On credentials to the `Identity provider sign-on URL` and `Certificate`
    fields.
-5. Click the `Configure SSO` button. 
-	![](/img/SSO-page.jpg)
-	All members of your organization will be automatically signed out from Bitrise.
+5. Click the `Configure SSO` button.
+   ![](/img/SSO-page.jpg)
+   All members of your organization will be automatically signed out from Bitrise.
 6. Bitrise sends a notification e-mail which contains the credentials of the Organization's SSO provider. This email also shows the organization owner with his/her email address, if you needed to contact the owner for more information.
 
    ![](/img/email-notification.jpg)
