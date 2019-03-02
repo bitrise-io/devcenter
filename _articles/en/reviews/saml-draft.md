@@ -68,10 +68,9 @@ Now that you have set up SAML SSO to your organization and the notification emai
 * `SAML SSO IS ENABLED`: secure connection is active.
 * `SAML SSO IS DISABLED`: The org member most likely has not enabled SSO connection through the `Sign in via SSO` button in the notification email (Step 8) yet.
 
-{% include message_box.html type="info" title="What does the `x` mean?" content="
-If you click the `x` next to a member's name, it removes that member from all groups in that organization.
+If you click the `x` next to a member's name, it removes that member from all groups in that organization and his/her SSO gets disabled automatically.
 ![](/img/are-you-sure.png)
-"%}
+
 
 Outside contributors?
 
