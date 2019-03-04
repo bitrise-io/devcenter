@@ -7,7 +7,7 @@ published: false
 ---
 The open source [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool runs a clean Xcode/Xamarin Studio Archive _on your Mac_, and analyzes the generated archive file. It collects the code signing settings that Xcode or Xamarin Studio used during the archive process, and prints the list of the required code signing files. You can also search for, export and upload these files using `codesigndoc`.
 
-{% include message_box.html type="info" title="UI testing" content="If your project contains UITest targets, codesigndoc can scan for that, too. It runs the `xcodebuild build-for-testing` action to create a test-Runner.app, and exports the necessary code signing files. "%}
+If your project contains UITest targets, codesigndoc can scan for that, too. It runs the `xcodebuild build-for-testing` action to create a test-Runner.app, and exports the necessary code signing files.
 
 ### Collecting the files with codesigndoc
 
@@ -15,9 +15,8 @@ You can use codesigndoc for:
 
 * Xamarin projects.
 * Xcode projects.
-* Xcode projects with UITest targets.
 
-{% include message_box.html type="important" title="Valid UITest target" content="If you want to run UITests on Bitrise, you need a scheme that has **a valid UITest target** that is enabled.
+{% include message_box.html type="important" title="Valid UITest target" content="If your Xcode project has UITest targets, you can use codesigndoc to export the necessary files. To do so, you need a scheme that has **a valid UITest target** that is enabled.
 
 ![](/img/uitest-target.png)
 
