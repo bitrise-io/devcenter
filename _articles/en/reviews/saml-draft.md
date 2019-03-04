@@ -7,7 +7,7 @@ published: false
 ---
 ## What is SAML SSO
 
-Organizations created in Bitrise can log into Bitrise using their own SAML SSO provider. All you have to do to is add Bitrise as an application to your own SAML SSO provider and set some credentials on your organization's `Security` tab on Bitrise. 
+Organizations created in Bitrise can log into Bitrise using their own SAML SSO provider. All you have to do to is add Bitrise as an application to your own SAML SSO provider and set some credentials on your organization's `Security` tab on Bitrise.
 
 Signing in via SAML SSO does not inhibit you from signing in, for example, via your GitHub account to Bitrise.
 
@@ -24,7 +24,7 @@ In this tutorial, we describe how you can set up SAML SSO and invite organizatio
 1. Go to your organization's `Security` tab on [bitrise.io](https://www.bitrise.io).
 2. Copy the `Single Sign-On URL`. You will need this to add Bitrise as an app on your SAML SSO provider's site.
 3. Log into your own SAML SSO provider.
-4. Add Bitrise as an application using the copied URL at Step 2. You're generating your Single Sign-On (SSO) credentials here which you will need in a minute on Bitrise.
+4. Add Bitrise as an application using the copied Single Sign-On URL. You're generating your Single Sign-On (SSO) credentials here which you will need in a minute on Bitrise.
 5. Add the generated SSO credentials to the `Identity provider sign-on URL` and `Certificate` fields on the `Security` tab.
 6. Click the `Configure SSO` button.
    ![](/img/SSO-page.jpg)
@@ -39,7 +39,9 @@ Now SAML SSO has been set up to the organization but individual org members have
 
    ![](/img/saml-step-up-enabling-missing.jpg)
    The email also shows the organization owner's email address (should you need to contact him/her.)
-2. Your 're redirected to your SAML SSO provider's site where you have to provide your email address associated with your Bitrise organization. WARNING: If you provide a **different Bitrise email address which is not related to that particular organization**, you will get below error message. Log in with the right email address of the organization.
+2. You are redirected to your SAML SSO provider's site where you have to provide your email address associated with your Bitrise organization. 
+
+   WARNING: If you provide a **different Bitrise email address which is not related to that particular organization**, you will get the below error message. Log in with the right email address of the organization.
 
    ![](/img/no-connected-sso-for-this-email-address.jpg)
 3. You're directed to the the `Allow "your organization name" to sign you in` page.
@@ -97,12 +99,15 @@ If all goes well, you land on our Dashboard.
 
 If you do not have a Bitrise account yet and an organization owner invites you to his/her organization via email, you can easily sign up to Bitrise and connect to the respective organization! Our `Sign In via SSO` email is organization-specific so you're just a couple of clicks away from signing up to Bitrise and accessing the right organization!
 
-1. Find the invitation email you got from Bitrise (letsconnect@bitrise.io) in your mailbox. (If you received an URL instead of an email from the org owner, have no fear! Opening the link in a new tab will take you to your own SAML SSO provider's site.)
+1. Find the invitation email you got from Bitrise (letsconnect@bitrise.io) in your mailbox. 
+
+   (If you received an URL instead of an email from the org owner, have no fear! Opening the link in a new tab will take you to your own SAML SSO provider's site.)
 2. Click `Sign In via SSO` or copy the provided URL in a new tab to acknowledge the connection. You will be redirected to your own SAML SSO provider's site.
-3. Provide your email address. (It should be the same email address where you received the invitation.) Follow your SAML SSO provider's instructions.
-4. You will be redirected to our `Almost there...` page.
-5. Provide a username you wish to use in Bitrise.
-6. Click `Finish Signing Up` to complete your sign up.
+3. Provide your email address. (It should be the same email address where you received the invitation.) 
+4. Follow your SAML SSO provider's instructions.
+5. You will be redirected to our `Almost there...` page.
+6. Provide a username you wish to use in Bitrise.
+7. Click `Finish Signing Up` to complete your sign up.
 
 If all goes well, you land on our Dashboard.
 
