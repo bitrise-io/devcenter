@@ -41,7 +41,7 @@ You can use codesigndoc for:
    ```
    bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh)"
    ```
-   This command runs the `xcodebuild build-for-testing` action to create a test-Runner.app, and exports the necessary code signing files.
+   This command runs the `xcodebuild build-for-testing` action to create a UITest runner .app file, and exports the necessary code signing files.
 
 #### Troubleshooting the UITest scanner
 
