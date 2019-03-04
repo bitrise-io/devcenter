@@ -31,6 +31,11 @@ You can use codesigndoc for:
    * For an **Xcode** project:
 
          bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode.sh)"
+   * For an **Xcode** project with UITest targets: 
+   
+   		```
+   		bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh
+   		```
    * For a **Xamarin** project:
 
          bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xamarin.sh)"
