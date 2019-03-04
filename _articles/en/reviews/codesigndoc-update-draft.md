@@ -7,7 +7,7 @@ published: false
 ---
 The open source [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool runs a clean Xcode/Xamarin Studio Archive _on your Mac_, and analyzes the generated archive file. It collects the code signing settings that Xcode or Xamarin Studio used during the archive process, and prints the list of the required code signing files. You can also search for, export and upload these files using `codesigndoc`.
 
-{% include message_box.html type="info" title="UI testing" content="If your project contains UITest targets, codesigndoc can scan for that, too. It can generate the `.xctestrun` file that is required for iOS device testing."%}
+{% include message_box.html type="info" title="UI testing" content="If your project contains UITest targets, codesigndoc can scan for that, too. It runs the `xcodebuild build-for-testing` action to create a test-Runner.app, and exports the necessary code signing files. "%}
 
 ### Collecting the files with codesigndoc
 
@@ -37,7 +37,11 @@ You can use codesigndoc for:
 4. The tool will automatically scan your project and look for a `.xcodeproj` or `.xcworkspace` file and do the rest.
 
    If the scanner does not find the files, open your `Finder.app` and drag-and-drop your project's `.xcodeproj` or `.xcworkspace` file into the command line in your `Terminal`.
-5. If you have UITest targets
+5. If you have UITest targets, export the required code signing files:
+   ```
+   bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh)"
+   ```
+   This command runs the `xcodebuild build-for-testing` action to create a test-Runner.app, and exports the necessary code signing files.
 
 #### Troubleshooting the UITest scanner
 
