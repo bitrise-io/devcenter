@@ -31,17 +31,13 @@ You can use codesigndoc for:
    * For an **Xcode** project:
 
          bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode.sh)"
-   * For an **Xcode** project with UITest targets: 
-   
-   		```
-   		bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh
-   		```
    * For a **Xamarin** project:
 
          bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xamarin.sh)"
 4. The tool will automatically scan your project and look for a `.xcodeproj` or `.xcworkspace` file and do the rest.
 
    If the scanner does not find the files, open your `Finder.app` and drag-and-drop your project's `.xcodeproj` or `.xcworkspace` file into the command line in your `Terminal`.
+5. If you have UITest targets
 
 #### Troubleshooting the UITest scanner
 
