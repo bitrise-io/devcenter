@@ -5,14 +5,9 @@ date: 2019-02-27 13:46:46 +0000
 published: false
 
 ---
+Organizations created in Bitrise can log into or sign up to Bitrise using their own Identity Provider (IdP) system. All you have to do to is add Bitrise as an application to your own SAML SSO provider and enable the connected SAML SSSO.
 
-Organizations created in Bitrise can log into or sign up to Bitrise using their own Identity Provider (IdP). All you have to do to is add Bitrise as an application to your own SAML SSO provider and enable the connected SAML SSSO.
-
-**Please note that signing in via SAML SSO does not inhibit you from signing in, for example, via your GitHub account to Bitrise.**
-
-**This is true in itself, although once SSO has been enforced on an org, only via that SSO can you get access to that org. If you sign in via GitHub, you would only see your other apps and orgs.**
-
-**after you click on allow AND SSO gets enforced on the org, you'll only be able access this account via the SAML SSO authentication.**
+By setting up SAML SSO in your org, you enforce SAML SSO as the only gateway to the organization. From now on org members will be able to log into the organization via the enforced SAML SSO authentication. You can invite new members to the organization who, while signing up to Bitrise, will have to enable their SAML SSO connection to join the organization. 
 
 **Extra layer of security?**
 
@@ -97,31 +92,15 @@ Now that the organization owner has set up SAML SSO for the organization and all
 * `SAML SSO IS ENABLED`: login via SAML SSO is enabled
 * `SAML SSO IS DISABLED`: The org member has not enabled SSO connection through the `Sign in via SSO` button. To enable it, the org member has to follow the instructions in the verification email from Bitrise.
 
-## Disabling SAML SSO in an organization
-
-You can disable an established SAML SSO for your organization with a simple click.
-
-1. Go to the `Security` tab of your organization.
-2. Click `Disable SSO`.
-
-   A confirmation pop-up appears where you can confirm/cancel your action. Please note that by clicking the `Disable SSO` button, you will disable SAML SSO for all organization members. Once it's done, organization members will be able to log in through their normal Bitrise credentials.
-
-![](/img/disable-sso.png)
-
-Please note if you click the `x` next to an org member's name, it will only remove that person from the organization but his/her SAML SSO is still to be revoked. You can revoke it in your SAML SSO provider's site.
-
-![](/img/disbale-sso-enabled-status.png)
-
 ## Logging in via SSO with a Bitrise account
 
 If SSO connection has been already added to your organization and you are currently logged out of Bitrise, you can easily log into your organization.
 
-1. Click `Login via SSO` on our [login page](https://app.bitrise.io/users/sign_in). ![](/img/login-via-sso.jpg) You will be redirected to the `Initiate Single Sign-on page`.
-2. Provide your organization name.
-3. Click `Continue to log in`. You will be redirected to your own SSO provider's page.
-4. Provide your email address associated with the organization in Bitrise and follow your SAML SSO provider's instructions.
-
-If all goes well, you land on our Dashboard.
+1. Click `Login via SSO` on our [login page](https://app.bitrise.io/users/sign_in). ![](/img/login-via-sso.jpg)
+2. You will be redirected to the `Initiate Single Sign-on page`.
+3. Provide your organization name.
+4. Click `Continue to log in`. You will be redirected to your own SSO provider's page.
+5. Provide your email address associated with the organization in Bitrise and follow your SAML SSO provider's instructions.
 
 ## Logging in via SSO without a Bitrise account
 
@@ -139,6 +118,33 @@ If you do not have a Bitrise account yet and an organization owner invites you t
 
 If all goes well, you land on our Dashboard.
 
+## Disabling SAML SSO in an organization
+
+Organization owners can disable an established SAML SSO for your organization with a click of a button on the `Security` tab. Please note that if you delete someone from the IdP, you have to delete that org member from Bitrise as well.
+
+### Disabling an organization's SAML SSO
+
+1. Go to the `Security` tab of your organization.
+2. Click `Disable SSO`.
+
+   A confirmation pop-up appears where you can confirm/cancel your action. Please note that by clicking the `Disable SSO` button, you will **disable SAML SSO for all organization members**. Once it's done, organization members will be able to log in through their normal Bitrise credentials.
+
+![](/img/disable-sso.png)
+
+### Disabling one org member's SAML SSO
+
+Please note if you click the `x` next to an org member's name removes that person from the organization but his/her SAML SSO is yet to be disabled.
+
+1. Go to your IdP's site.
+2. Disable the org member.
+   Please note that if you fail to do this, the org member will able to re-authenticate again to Bitrise using the IDP connection.
+
+![](/img/disbale-sso-enabled-status.png)
+
 ## Expired SAML SSO certificates
 
 If your SAML SSO certificate has expired and you cannot log into Bitrise through SAML SSO, we advise you to contact our Support team, who will be happy to assist you!
+
+In what case can this happen? 
+
+Can also the IDP / org owner help in this case?
