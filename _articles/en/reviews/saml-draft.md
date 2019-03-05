@@ -16,15 +16,8 @@ By setting up SAML SSO in your org, you enforce SAML SSO as the only gateway to 
 * you have an IdP that you can connect Bitrise to as an application.
 * your account on Bitrise has an organization. If it doesn't have an organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for **existing and brand new organizations** on Bitrise.
 * as with other [organization management actions](/team-management/user-roles-on-app-teams/), only the organization owner can set up SAML SSO to a Bitrise organization. "%}
-* Setting up SAML SSO for an existing Bitrise organization
-* Enabling SAML SSO
-* Checking SAML SSO statuses on Bitrise
-* Disabling SAML SSO in an organization
-* Logging in via SSO with a Bitrise account
-* Logging in via SSO without a Bitrise account
-* Expired SAML SSO certificates
 
-## Setting up SAML SSO for an existing Bitrise organization
+## Setting up SAML SSO for a Bitrise organization
 
 In this tutorial, we describe how you can set up SAML SSO and invite organization members to set up their connections.
 
