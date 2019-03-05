@@ -62,7 +62,7 @@ If all went well, you should be landing on our Dashboard.
 
 Now that the organization owner has set up SAML SSO for the organization and all org members (including the owner) have enabled their SAML SSO, everyone in the org can check their SAML SSO statuses. There are some extra features that only the org owner can access so we will show what org members and the org owner can see.
 
-### Organization owners
+### Organization owner
 
 1. Go to your organization's profile page.
 2. Click `Security` on the left menu. This `Security` tab is **only available for the org owner**!
