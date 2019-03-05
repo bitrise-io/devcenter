@@ -2,7 +2,7 @@
 title: Changing the owner of an app
 menu:
   team-management:
-    weight: 5
+    weight: 6
 
 ---
 It can happen that you need to transfer an application on [Bitrise](https://www.bitrise.io) to another user. This can be done in a few seconds by following these quick steps:

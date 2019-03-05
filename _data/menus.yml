@@ -36,7 +36,7 @@ getting-started:
 team-management:
 - title: Organizations
   identifier: organizations
-  weight: 6
+  weight: 7
 builds:
 - title: Triggering builds
   identifier: triggering-builds
