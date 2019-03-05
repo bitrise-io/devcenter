@@ -2,7 +2,7 @@
 title: Managing billing and subscription for organizations
 menu:
   organizations:
-    weight: 5
+    weight: 4
 
 ---
 {% include not_translated_yet.html %}
