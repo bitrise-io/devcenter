@@ -5,7 +5,7 @@ date: 2019-02-27 13:46:46 +0000
 published: false
 
 ---
-## What is SAML SSO
+## SAML SSO on Bitrise
 
 Organizations created in Bitrise can log into or sign up to Bitrise using their own Identity Provider (IdP). All you have to do to is add Bitrise as an application to your own SAML SSO provider and enable the connected SAML SSSO.
 
