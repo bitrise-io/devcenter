@@ -7,8 +7,6 @@ published: false
 ---
 Triggering builds with the API.
 
-{% include message_box.html type="important" title="The Build Trigger API is deprecated" content="The `https://app.bitrise.io/app/APP-SLUG/build/start.json` endpoint should not be called directly any more. Instead, `api.bitrise.io` should be used. This allows for authenticating based on user account, with a Personal Access Token."%}
-
 With the Build Trigger API you can start a new build of your app with a simple API call.
 
 You can define parameters for the build like what `branch`, `tag` or _git commit_ to use and what _build message_ to present on the Build's details page.
