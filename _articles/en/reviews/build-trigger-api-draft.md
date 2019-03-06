@@ -7,9 +7,9 @@ published: false
 ---
 Triggering builds with the API.
 
-You can define parameters for the build like what `branch`, `tag` or _git commit_ to use and what _build message_ to present on the Build's details page.
+You can define parameters for the build like what `branch`, `tag` or _git commit_ to use and what _build message_ to present on the Build's details page. 
 
-{% include message_box.html type="note" title="Interactive cURL call configurator" content=" You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup. "%}
+{% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup. "%}
 
 ## How to start a build by calling the Trigger API?
 
