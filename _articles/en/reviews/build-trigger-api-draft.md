@@ -5,11 +5,7 @@ date: 2019-01-16 15:45:49 +0000
 published: false
 
 ---
-Triggering builds with the API.
-
-You can define parameters for the build like what `branch`, `tag` or _git commit_ to use and what _build message_ to present on the Build's details page.
-
-{% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup. "%}
+You can trigger and abort builds with the Bitrise API. You can define parameters for the build like what `branch`, `tag` or _git commit_ to use and what _build message_ to present on the Build's details page.
 
 ## Triggering a new build
 
@@ -19,7 +15,11 @@ To trigger a new build with the Bitrise API, call a `POST` request with a JSON b
 curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds' -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"bitrise_api_doc"}'
 ```
 
-### JSON body
+{% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup. "%}
+
+Let's break this request down! 
+
+### The JSON body
 
 The JSON body has to contain at least:
 
