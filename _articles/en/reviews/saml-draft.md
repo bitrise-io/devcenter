@@ -103,7 +103,7 @@ Once all org members have enabled their SAML SSO related to the organization, th
 
 ![](/img/enforce-saml-sso.png)
 
-### When can't you enforce SAML SSO on your organization?
+### Why can't you enforce SAML SSO on your organization?
 
 In some cases the org owner cannot enforce SAML SSO on the organization. This is related to org members who have not enabled their SAML SSO connection yet. The use cases to consider:
 
