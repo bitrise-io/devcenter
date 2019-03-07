@@ -1,7 +1,6 @@
 ---
 label: basic template
 hide_body: false
-is_partial: false
 fields:
 - name: title
   label: Title

@@ -1,7 +1,6 @@
 ---
 label: code-signing
 hide_body: false
-is_partial: false
 fields:
 - type: text
   label: title

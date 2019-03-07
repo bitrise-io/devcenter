@@ -1,7 +1,6 @@
 ---
 label: api
 hide_body: false
-is_partial: false
 fields:
 - type: text
   name: title
