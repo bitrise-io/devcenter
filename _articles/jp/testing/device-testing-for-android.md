@@ -78,7 +78,7 @@ Roboテストを成功させるために、アプリが特定のユーザー操�
 * ログ
 * ファイル
 
-以下は成功したRoboテストのスクリーンショットです。Roboテストは`Robo directives`によって事前に定義された`email`と`password`のフィールドを注入することで`My application`に遷移しました。
+以下は成功したRoboテストのスクリーンショットです。Roboテストは`Robo directives`によって事前に定義された`email`と`password`のフィールドを注入することで`My application`のテストは通りました。
 
 ![](/img/successful-robo-test.jpg)
 
