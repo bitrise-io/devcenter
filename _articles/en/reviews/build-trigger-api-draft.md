@@ -7,19 +7,19 @@ published: false
 ---
 Triggering builds with the API.
 
-You can define parameters for the build like what `branch`, `tag` or _git commit_ to use and what _build message_ to present on the Build's details page. 
+You can define parameters for the build like what `branch`, `tag` or _git commit_ to use and what _build message_ to present on the Build's details page.
 
 {% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup. "%}
 
-## How to start a build by calling the Trigger API?
+## Triggering a new build
 
-You have to call your build trigger with a `POST` request with a JSON body.
+To trigger a new build with the Bitrise API, call a `POST` request with a JSON body. Here's an example `curl` request:
 
-{% include message_box.html type="note" title="Build Trigger Token and App Slug" content=" When you use the Bitrise Trigger API you have to specify the App's `Build Trigger Token` and `App Slug`. You can view both and regenerate your App's Build Trigger Token anytime you want to, on the `Code` tab of the app. "%}
+    bash
+    curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds' -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"bitrise_api_doc"}'
+    
 
-{% include message_box.html type="important" title="Old API token parameter" content=" The old `api_token` parameter is DEPRECATED, please use the `build_trigger_token`parameter instead. "%}
-
-## JSON body
+### JSON body
 
 The JSON body has to contain at least:
 
@@ -123,3 +123,5 @@ _Note: please don't forget to add_ `Content-Type` _header with_ `application/jso
 A more advanced example: let's say you want to build the **master** `branch` using the `deployment` workflow, specify a build message (`commit_message`) and set a test environment variable (`API_TEST_ENV`), the call will look like this:
 
     curl  -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'
+
+## Aborting a build
