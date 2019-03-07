@@ -105,10 +105,14 @@ Once all org members have enabled their SAML SSO related to the organization, th
 
 ### Can't enforce SAML SSO on your organization?
 
-In some cases the org owner cannot enforce SAML SSO on the organization. This is related to org members who have not enabled their SAML SSO connection yet. The use cases to consider:
+In some cases the org owner cannot enforce SAML SSO on the organization. This is related to org members who have not enabled their SAML SSO connection yet. 
 
-* An org member fails to enable SAML SSO on his part:  The owner can remove the org member from the organization and complete the enforcement process for the rest of the organization.
-* An org member tried to enable SAML SSO with another organization: The owner can send the login URL to the org member who can follow the instructions to enable SAML SSO to the right organization.
+* An org member fails to enable SAML SSO on his part:  
+
+  The owner can remove the org member from the organization and complete the enforcement process for the rest of the organization.
+* An org member tried to enable SAML SSO with another organization: 
+
+  The owner can send the login URL to the org member who can follow the instructions to enable SAML SSO to the right organization.
 
 ![](/img/cant-enforce-saml-sso.png)
 
