@@ -30,17 +30,20 @@ The JSON body has to contain at least:
   * `branch` 
   * `workflow_id`
 
-A minimal sample JSON body, which specifies _master_ as the `branch` parameter:
+Here's a minimal sample JSON body which specifies _master_ as the value of the `branch` parameter:
 
     {
       "hook_info": {
         "type": "bitrise",
-        "build_trigger_token": "..."
       },
       "build_params": {
         "branch": "master"
       }
     }
+
+In our earlier example, we passed this JSON payload as a string: to be precise, as a JSON object serialized to a string. 
+
+You can also pass it as an object (for example, if you want to call it from JavaScript. To do so, include a root `payload` element or, alternatively, set the JSON object as the value of the `payload` POST parameter. 
 
 **To pass this JSON payload** you can either pass it as the **body** of the request **as string** (the JSON object serialized to string), or if you want to pass it as an object (e.g. if you want to call it from JavaScript) then you have to include a root `payload` element, or set the JSON object as the value of the `payload` POST parameter.
 
