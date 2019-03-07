@@ -5,13 +5,7 @@ date: 2019-02-27 13:46:46 +0000
 published: false
 
 ---
-Organization members can log into or sign up to Bitrise using their own Identity Provider (IdP) system. All you have to do to is add Bitrise as an application to your own SAML SSO provider and enable the connected SAML SSSO.
-
-## About SAML SSO enforcement
-
-By setting up SAML SSO in your org, you allow SAML SSO as the only gateway to the organization. From now on org members will only be able to log into the organization via the enforced SAML SSO authentication. Those org members who have not enabled their SAML SSO, will not be able to log into the SAML enforced organization and their account related to the org will be deleted. You can invite new members to the organization who, while signing up to Bitrise, will have to enable their SAML SSO connection to join the organization. 
-
-**Extra layer of security? any benefits of the enforced saml on an org?**
+Organization members can log into/sign up to Bitrise using their own SAML SSO provider's system. Once enforcing SAML SSO, organizations will be able to apply the security guidelines of their SAML SSO provider when accessing their own Bitrise organization. 
 
 {% include message_box.html type="important" title="Before connecting SAML SSO to your organization" content=" Make sure:
 
@@ -86,6 +80,29 @@ Now that the organization owner has set up SAML SSO for the organization and all
 * `SAML SSO IS ENABLED`: Login via SAML SSO is enabled
 * `SAML SSO IS DISABLED`: The org member has not enabled SSO connection through the `Sign in via SSO` button. To enable it, the org member has to follow the instructions in the verification email from Bitrise.
 
+## About SAML SSO enforcement
+
+Enforcing SAML SSO on your organization provides an extra layer of security: you can enforce your own security guidelines to your Bitrise organization (for example, password format requirements, two-factor authentication). This will make SAML SSO the only way to log in/sing up to the organization. If you invite more org members to a SAML-enforced organization, they'll have to enable their SAML SSO connection first to join the organization.
+
+### Enforcing SAML SSO on an organization
+
+Once all org members have enabled their SAML SSO related to the organization, the owner can enforce SAML SSO on the organization.
+
+1. Go to your organization's `Security` tab.
+2. Toggle the switch to the right to enforce SAML SSO.
+
+![](/img/enforce-saml-sso.png)
+
+### When can't you enforce SAML SSO on your organization?
+
+In some cases the org owner cannot enforce SAML SSO on the organization. This is related to org members who have not enabled their SAML SSO connection yet. The use cases to consider: 
+
+* An org member fails to enable SAML SSO on his part:  The owner can remove the org member from the organization and complete the enforcement process for the rest of the organization. 
+* An org member tried to enable SAML SSO with another organization: The owner can send the login URL to the org member who can follow the instructions to enable SAML SSO to the right organization.
+
+![](/img/cant-enforce-saml-sso.png)
+
+
 ## Logging in via SSO with a Bitrise account
 
 If SSO connection has been already added to your organization and you are currently logged out of Bitrise, you can easily log into your organization.
@@ -138,6 +155,6 @@ Please note if you click the `x` next to an org member's name removes that perso
 
 If your SAML SSO certificate has expired and you cannot log into Bitrise through SAML SSO, we advise you to contact our Support team, who will be happy to assist you!
 
-**In what case can this happen?** 
+**In what case can this happen?**
 
 **Can also the IDP / org owner help in this case?**
