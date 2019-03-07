@@ -1,5 +1,5 @@
 ---
-title: iOSデバイステスト
+title: iOSのデバイステスト
 menu:
   testing:
     weight: 8
