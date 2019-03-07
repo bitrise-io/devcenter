@@ -15,9 +15,9 @@ You can define parameters for the build like what `branch`, `tag` or _git commit
 
 To trigger a new build with the Bitrise API, call a `POST` request with a JSON body. Here's an example `curl` request:
 
-    bash
-    curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds' -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"bitrise_api_doc"}'
-    
+``` bash
+curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds' -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"bitrise_api_doc"}'
+```
 
 ### JSON body
 
