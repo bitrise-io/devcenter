@@ -25,8 +25,10 @@ The JSON body has to contain at least:
 
 * a `hook_info` object with:
   * a `type` key and `bitrise` as its value
-  * a `build_trigger_token` key and your _Build Trigger Token_ as its value
-* a `build_params` object, with at least a `tag`, `branch` or `workflow_id` parameter specified
+* a `build_params` object, with at least one of the following parameters specified:
+  *  `tag`
+  * `branch` 
+  * `workflow_id`
 
 A minimal sample JSON body, which specifies _master_ as the `branch` parameter:
 
