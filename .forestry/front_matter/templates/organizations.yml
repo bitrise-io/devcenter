@@ -16,3 +16,5 @@ fields:
     - type: text
       name: weight
       label: weight
+pages:
+- _articles/jp/team-management/organizations/saml-sso-in-organizations.md

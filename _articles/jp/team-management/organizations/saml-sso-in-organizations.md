@@ -1,6 +1,10 @@
 ---
 title: SAML SSO in organizations
 date: 2019-03-08 10:46:00 +0000
+redirect_from: []
+menu:
+  organizations:
+    weight: 15
 published: false
 
 ---
