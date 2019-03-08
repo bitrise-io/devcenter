@@ -31,15 +31,18 @@ You can use codesigndoc for:
 
 ### Scanning for UITest targets
 
-If your Xcode project has UITest targets, you can use codesigndoc to export the necessary files. 
+If your Xcode project has UITest targets, you can use codesigndoc to export the necessary code signing files and generate an `.xctestrun` file. You need to do this to run UI tests on Bitrise - for example, with the `iOS Device Testing` Step. 
 
-To do so, you need a scheme that has **a valid UITest target** that is enabled.
+To take advantage of codesigndoc's UI test scanner, you need a scheme that has **a valid UITest target** that is enabled.
 
 ![](/img/uitest-target.png)
 
 ![](/img/uitest-target-enabled.png)
 
-1. Export the required code signing files:
+If your project is set up correctly on your machine, you can start scanning! 
+
+1. Open the `Terminal`.
+2. Use our one-liner to launch the scanner and export the required code signing files:
 
        bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh)"
 
