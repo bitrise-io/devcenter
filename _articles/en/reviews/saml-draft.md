@@ -5,7 +5,7 @@ date: 2019-02-27 13:46:46 +0000
 published: false
 
 ---
-Organization members can log into/sign up to Bitrise using their own SAML SSO provider's system. With SAML SSO organizations will be able to apply the security guidelines of their SAML SSO provider when accessing their own Bitrise organization.
+Organization members can log into/sign up to Bitrise using their own SAML SSO provider's system.
 
 {% include message_box.html type="important" title="Before connecting SAML SSO to your organization" content=" Make sure:
 
@@ -18,7 +18,6 @@ In this guide we cover the following topics:
 * [Setting up SAML SSO for a Bitrise organization]()
 * [Enabling SAML SSO](/organizations/#enabling-saml-sso/)
 * [Checking SAML SSO statuses on Bitrise ](/organizations/#checking-saml-sso-statuses-on-bitrise/)
-* [About SAML SSO enforcement](/organizations/#about-saml-sso-enforcement/)
 * [Logging in via SSO with a Bitrise account](/organizations/#logging-in-via-sso-with-a-bitrise-account/)
 * [Logging in via SSO without a Bitrise account](/organizations/#logging-in-via-sso-without-a-bitrise-account/)
 * [Disabling SAML SSO](/organizations/#disabling-saml-sso-in-an-organization/)
