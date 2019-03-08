@@ -17,12 +17,12 @@ Organization members can log into or sign up to Bitrise using their own SAML SSO
 
 In this guide we cover the following procedures:
 
-* [Setting up SAML SSO for a Bitrise organization](/team-management/organizations/saml-sso-in-organizations/#setting-up-saml-sso-for-a-bitrise-organization/)
-* [Enabling SAML SSO](/team-management/organizations/saml-sso-in-organizations/#enabling-saml-sso/)
-* [Checking SAML SSO statuses on Bitrise ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise/)
-* [Logging in via SSO with a Bitrise account](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-with-a-bitrise-account/)
-* [Logging in via SSO without a Bitrise account](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-without-a-bitrise-account/)
-* [Disabling SAML SSO](/team-management/organizations/saml-sso-in-organizations/#disabling-saml-sso/)
+* [Setting up SAML SSO for a Bitrise organization](/team-management/organizations/saml-sso-in-organizations/#setting-up-saml-sso-for-a-bitrise-organization)
+* [Enabling SAML SSO](/team-management/organizations/saml-sso-in-organizations/#enabling-saml-sso)
+* [Checking SAML SSO statuses on Bitrise ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)
+* [Logging in via SSO with a Bitrise account](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-with-a-bitrise-account)
+* [Logging in via SSO without a Bitrise account](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-without-a-bitrise-account)
+* [Disabling SAML SSO](/team-management/organizations/saml-sso-in-organizations/#disabling-saml-sso)
 
 ## Setting up SAML SSO for a Bitrise organization
 
