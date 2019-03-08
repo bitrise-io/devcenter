@@ -24,7 +24,7 @@ In this guide we cover the following procedures:
 
 ## Setting up SAML SSO for a Bitrise organization
 
-In this tutorial, we describe how organization owners can set up SAML SSO and invite organization members to set up their own connections.
+In this tutorial, we describe how organization owners can set up their SAML SSO and invite organization members to set up their own connections.
 
 1. Go to your organization's `Security` tab on [bitrise.io](https://www.bitrise.io).
 2. Copy the `Single Sign-On URL`. You will need this URL to add Bitrise on your SAML SSO provider's site.
