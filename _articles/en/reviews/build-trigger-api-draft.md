@@ -17,7 +17,7 @@ curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/
 
 {% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup. "%}
 
-Let's break this request down! 
+Let's break this request down!
 
 ### The JSON body
 
@@ -26,8 +26,8 @@ The JSON body has to contain at least:
 * a `hook_info` object with:
   * a `type` key and `bitrise` as its value
 * a `build_params` object, with at least one of the following parameters specified:
-  *  `tag`
-  * `branch` 
+  * `tag`
+  * `branch`
   * `workflow_id`
 
 Here's a minimal sample JSON body which specifies _master_ as the value of the `branch` parameter:
@@ -41,9 +41,9 @@ Here's a minimal sample JSON body which specifies _master_ as the value of the `
       }
     }
 
-In our earlier example, we passed this JSON payload as a string: to be precise, as a JSON object serialized to a string. 
+In our earlier example, we passed this JSON payload as a string: to be precise, as a JSON object serialized to a string.
 
-You can also pass it as an object (for example, if you want to call it from JavaScript. To do so, include a root `payload` element or, alternatively, set the JSON object as the value of the `payload` POST parameter. 
+You can also pass it as an object (for example, if you want to call it from JavaScript. To do so, include a root `payload` element or, alternatively, set the JSON object as the value of the `payload` POST parameter.
 
 Here's a jQuery example using the `payload` parameter:
 
@@ -58,13 +58,13 @@ Here's a jQuery example using the `payload` parameter:
         }
     })
 
-## Build Params
+## Build Parameters
 
 The following parameters are supported in the `build_params` object:
 
 ### Git related:
 
-* `branch` (string): The (Source) Branch to build. In case of a standard git commit this is the branch of the commit. In case of a Pull Request build this is the source branch, the one the PR was started from.
+* `branch` (string): The (Source) Branch to build. In the case of a standard git commit this is the branch of the commit. In the case of a Pull Request build this is the source branch, the one the PR was started from.
 * `tag` (string): The git Tag to build.
 * `commit_hash` (string): The git commit hash to build.
 * `commit_message` (string): The git commit message (or build's message).
@@ -77,9 +77,10 @@ The following parameters are supported in the `build_params` object:
 
 ### Pull Request specific:
 
-* `branch_dest` (string): Used only in case of Pull Request builds: the destination/target branch of the Pull Request, the one the PR will be merged _into_. Example: `master`.
-* `pull_request_id` (int): Pull Request ID on the source code hosting system (e.g. the PR number on GitHub)
-* `pull_request_repository_url` (string): repository url from where the Pull Request is sent. E.g. if it's created from a fork this should be the fork's URL. Example: `[https://github.com/xyz/bitrise.git](https://github.com/xyz/bitrise.git "https://github.com/xyz/bitrise.git")`.
+* `branch_dest` (string): Used only for Pull Request builds: the destination/target branch of the Pull Request, the one the PR will be merged _into_. Example: `master`.
+* `pull_request_id` (int): Pull Request ID on the source code hosting system (for example, the PR number on GitHub)
+* `pull_request_repository_url` (string): repository url from where the Pull Request is sent. For example, if the PR is created from a fork this should be the fork's URL. 
+	Example: `[https://github.com/xyz/bitrise.git](https://github.com/xyz/bitrise.git)`.
 * `pull_request_merge_branch` (string): the pre-merge branch, **if the source code hosting system supports & provides** the pre-merged state of the PR on a special "merge branch" (ref). Probably only GitHub supports this. Example: `pull/12/merge`.
 * `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`) **if the source code hosting system supports & provides** this. This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab. Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
 
