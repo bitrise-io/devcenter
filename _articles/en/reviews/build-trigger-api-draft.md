@@ -62,25 +62,25 @@ Here's a jQuery example using the `payload` parameter:
 
 The following parameters are supported in the `build_params` object:
 
-### Git related:
+### Git related params:
 
 * `branch` (string): The (Source) Branch to build. In the case of a standard git commit this is the branch of the commit. In the case of a Pull Request build this is the source branch, the one the PR was started from.
 * `tag` (string): The git Tag to build.
 * `commit_hash` (string): The git commit hash to build.
 * `commit_message` (string): The git commit message (or build's message).
 
-### Bitrise.io specific:
+### Bitrise-specific params:
 
 * `workflow_id`: (string): Force the use of the specified workflow ID. If not defined then the workflow will be selected based on the project's [Trigger Map config](/webhooks/trigger-map/).
 * `environments` (array of objects): See the [Specify Environment Variables](#specify-environment-variables) section for more info about the `environments` objects.
 * `skip_git_status_report` (bool): Skip sending build status for the connected git provider
 
-### Pull Request specific:
+### Pull Request specific params:
 
 * `branch_dest` (string): Used only for Pull Request builds: the destination/target branch of the Pull Request, the one the PR will be merged _into_. Example: `master`.
-* `pull_request_id` (int): Pull Request ID on the source code hosting system (for example, the PR number on GitHub)
-* `pull_request_repository_url` (string): repository url from where the Pull Request is sent. For example, if the PR is created from a fork this should be the fork's URL. 
-	Example: `[https://github.com/xyz/bitrise.git](https://github.com/xyz/bitrise.git)`.
+* `pull_request_id` (int): Pull Request ID on the source code hosting system (for example, the PR number on GitHub).
+* `pull_request_repository_url` (string): repository url from where the Pull Request is sent. For example, if the PR is created from a fork this should be the fork's URL.
+  Example: `[https://github.com/xyz/bitrise.git](https://github.com/xyz/bitrise.git)`.
 * `pull_request_merge_branch` (string): the pre-merge branch, **if the source code hosting system supports & provides** the pre-merged state of the PR on a special "merge branch" (ref). Probably only GitHub supports this. Example: `pull/12/merge`.
 * `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`) **if the source code hosting system supports & provides** this. This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab. Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
 
