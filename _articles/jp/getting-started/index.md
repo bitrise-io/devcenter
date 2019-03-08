@@ -15,7 +15,7 @@ Bitriseはパワフルかつ複雑ですが、簡単かつ直感的に利用す�
 
 まず最初に、Bitriseのアカウントが必要です。サインアップに使用するものを以下より選択してください。
 
-* [Email](/getting-started/signing-up/signing-up-with-email)
+* [Email](/jp/getting-started/signing-up/signing-up-with-email)
 * [GitHub](/getting-started/signing-up/signing-up-with-github)
 * [GitLab](/getting-started/signing-up/signing-up-with-gitlab)
 * [Bitbucket](/getting-started/signing-up/signing-up-with-bitbucket)
@@ -24,11 +24,9 @@ Bitriseはパワフルかつ複雑ですが、簡単かつ直感的に利用す�
 
 サインアップ後、あなたのBitriseアカウントを3つのGitサービスプロバイダすべてに紐付けることができます。例えばGitHubにサインアップ後、GitLabとBitbucketアカウントにも紐づけ、さらにそれらに紐づく全てのリポジトリにアクセスすることができます。
 
-
 ## アプリを追加する
 
 トップメニューバーの`+`をクリックし、ドロップダウンメニューから`Add app`を選択することで、いつでも[新しいアプリを追加する](/getting-started/adding-a-new-app/index)ことができます。
-
 
 ![新しいアプリを追加する](/img/adding-a-new-app/add_new_app.png)
 
