@@ -1,5 +1,5 @@
 ---
-title: 'Managing files on Bitrise '
+title: Bitrise上のファイル管理　(Managing files on Bitrise)
 date: 2018-12-03 10:05:49 +0000
 redirect_from: []
 menu:
@@ -12,17 +12,33 @@ menu:
 
 Managing files on Bitrise allows you to upload files to use in your builds. You are required to upload files for the purposes of code signing. Builds also produce files as outputs. The good news is that this is all very simple!
 
+Bitrise上のファイル管理はビルド内にファイルをアプロードでき,コード署名のためにファイルをアップロードすることを必要とします。またビルドはファイルをアウトプットとして作成できます。
+
 ### Uploading files to use in your build
+
+### **ファイルをアップロードしてビルド内で活用しよう**
 
 If your build requires any files to make it work, upload them to the Generic File Storage. The Generic File Storage accepts any file type, all you need to do is provide a unique ID and upload the file. There are two restrictions:
 
+ビルドがファイルを要求した場合、Generic File Storageにファイルをアップロードしてください。IDとファイルをアップロードするだけでGeneric File Storageはどのようなファイルも受け付けます。
+
+制限
+
 * the file cannot be bigger than 5 MB
 * you can only store a total of 5 different files at the same time. If you want to upload more, you need to delete one of the files in the storage.
+* 5MB以下のサイズ
+* 5つまでの違うファイルを同時に保存可能。他のファイルをアップロードしたいときは一つ消さなければならない。
 
 1. Go to the Dashboard.
 2. Open the app you want to add files to.
 3. Open the Workflow Editor.
-4. Click the `Code Signing` tab.
+4. Click the `Code Signing` tab.　　　　　　　　　　　　　　　　　　
+
+
+1. ダッシュボード
+2. アプリを開きファイルを追加
+3. Workflow Editorを開く
+4. `Code Signing`をクリック
 
    ![](/img/code-signing-tab.png)
 5. Scroll down to the Generic File Storage and provide a unique ID to your file.
@@ -31,6 +47,14 @@ If your build requires any files to make it work, upload them to the Generic Fil
 6. Upload the file by clicking **Upload file**.
 
    Remember that the file size cannot exceed 5 MB.
+
+
+5. 下にスクロールしてGeneric File Storageを開き固有IDを使いファイルをあける。
+
+   固有IDはBitriseのEnvironment VariableのURLをダウンロードするときに必要になります。
+6. Upload fileをクリックしてファイルをアップロード
+
+   ＊ファイルのサイズが5MB以上だと作動しません
 
 Now you can use this file in a variety of ways in your build - read more in [the detailed guide about the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/).
 
@@ -68,7 +92,7 @@ You can use encrypted files on Bitrise, easily and securely. All you need to do 
 
 In this example, we'll show how to do this. We use the **pwgen** password generator tool and **GPG** as the encryption software.
 
-{% include message_box.html type="important" title="GPG" content="Please note that the `Decrypt file` Step only decrypts files encrypted with GPG. If you use other encryption software, you will not be able to decrypt files on Bitrise."%} 
+{% include message_box.html type="important" title="GPG" content="Please note that the `Decrypt file` Step only decrypts files encrypted with GPG. If you use other encryption software, you will not be able to decrypt files on Bitrise."%}
 
 1. Open your Terminal/Command Line.
 2. Create a 32 character passphrase for encryption.
@@ -77,18 +101,15 @@ In this example, we'll show how to do this. We use the **pwgen** password genera
 3. Encrypt your file.
 
        gpg -c my_secret_file
-   
+
    Optionally, you can encrypt your file(s) in a non-interactive way.
-   
-   ```
-   gpg --batch --passphrase <passphrase> -c my_secret_file
-   ```
-   
+
+       gpg --batch --passphrase <passphrase> -c my_secret_file
 4. Upload `my_secret_file` to the Generic File Storage on Bitrise.
 5. Add the `Decrypt file` Step to your workflow.
 6. Add your passphrase as a [secret Environment Variable](/builds/env-vars-secret-env-vars/) and insert it to the relevant Step input.
-7. Add the encrypted file path and the output file path to the relevant Step inputs. 
+7. Add the encrypted file path and the output file path to the relevant Step inputs.
 
-   You can find the Environment Variable for the encrypted file path in the Generic File Storage. 
+   You can find the Environment Variable for the encrypted file path in the Generic File Storage.
 
 That's it! Once you run the build, the Step will decrypt your file and you can use it for whatever you need it for!
