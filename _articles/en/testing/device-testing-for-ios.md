@@ -36,7 +36,9 @@ To run device tests with the Firebase Test Lab solution, you will need to add tw
 
 {% include message_box.html type="note" title="Beta status" content="Please note that currently, both Steps are in beta phase. They are already stable and work well but we're working on improving them!"%}
 
-The `Xcode Build for testing for iOS` performs _xcodebuild_'s `build-for-testing` action: it builds the tests defined in your iOS project's [Xcode scheme](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html). The Step exports a .zip file that contains your test directory (by default, it's _Debug-iphoneos_) and the `xctestrun` file.
+The `Xcode Build for testing for iOS` performs _xcodebuild_'s `build-for-testing` action: it builds the tests defined in your iOS project's [Xcode scheme](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html). The Step exports a .zip file that contains your test directory (by default, it's _Debug-iphoneos_) and the `xctestrun` file. 
+
+To use this Step, you will need code signing files for the test app: we recommend [using codesigndoc to export the necessary files]()! 
 
 The `iOS Device Testing` Step takes the path to this .zip file - exported as an Environment Variable - as input to run your tests and export the test results to Bitrise.
 
