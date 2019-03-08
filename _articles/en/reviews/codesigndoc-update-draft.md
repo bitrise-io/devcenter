@@ -16,14 +16,6 @@ You can use codesigndoc for:
 * Xamarin projects.
 * Xcode projects.
 
-{% include message_box.html type="important" title="Valid UITest target" content="If your Xcode project has UITest targets, you can use codesigndoc to export the necessary files. To do so, you need a scheme that has **a valid UITest target** that is enabled.
-
-![](/img/uitest-target.png)
-
-![](/img/uitest-target-enabled.png)
-
-"%}
-
 1. Open the `Terminal`.
 2. Go to your project's folder.
 3. Enter the appropriate one-liner command, depending on your project type.
@@ -35,11 +27,22 @@ You can use codesigndoc for:
          bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xamarin.sh)"
 4. The tool will automatically scan your project and look for a `.xcodeproj` or `.xcworkspace` file and do the rest.
 
-   If the scanner does not find the files, open your `Finder.app` and drag-and-drop your project's `.xcodeproj` or `.xcworkspace` file into the command line in your `Terminal`.
-5. If you have UITest targets, export the required code signing files:
-   ```
-   bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh)"
-   ```
+   If the scanner does not find the files, open your `Finder.app` and drag-and-drop your project's `.xcodeproj` or `.xcworkspace` file into the command line in your Terminal.
+
+### Scanning for UITest targets
+
+If your Xcode project has UITest targets, you can use codesigndoc to export the necessary files. 
+
+To do so, you need a scheme that has **a valid UITest target** that is enabled.
+
+![](/img/uitest-target.png)
+
+![](/img/uitest-target-enabled.png)
+
+1. Export the required code signing files:
+
+       bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh)"
+
    This command runs the `xcodebuild build-for-testing` action to create a UITest runner .app file, and exports the necessary code signing files.
 
 #### Troubleshooting the UITest scanner
