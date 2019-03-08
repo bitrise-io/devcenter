@@ -87,7 +87,7 @@ The following parameters are supported in the `build_params` object:
 * `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`). This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab.
   Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
 
-{% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step. If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored. These will still be logged, will be available for steps and will be visible on the Build's details page, but the `Git Clone` step will use the the most specific parameter for checkout. "%}
+{% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step. If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored. These will still be logged, will be available for steps and will be visible on the Build's details page, but the `Git Clone` tep will use the the most specific parameter for checkout. "%}
 
 ### Specify Environment Variables
 

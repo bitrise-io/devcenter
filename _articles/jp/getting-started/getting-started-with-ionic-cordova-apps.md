@@ -4,7 +4,7 @@ date: 2018-11-16 14:33:48 +0000
 redirect_from: []
 menu:
   getting-started:
-    weight: 25
+    weight: 26
 
 ---
 {% include not_translated_yet.html %}
