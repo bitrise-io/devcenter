@@ -5,7 +5,7 @@ date: 2019-02-27 13:46:46 +0000
 published: false
 
 ---
-Organization members can log into/sign up to Bitrise using their own SAML SSO provider's system.
+Organization members can log into or sign up to Bitrise using their own SAML SSO provider's system.
 
 {% include message_box.html type="important" title="Before connecting SAML SSO to your organization" content=" Make sure:
 
