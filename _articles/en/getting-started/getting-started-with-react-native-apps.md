@@ -1,5 +1,5 @@
 ---
-title: Getting started with React Native apps
+title: Getting started with React Native applications
 date: 2018-10-12 13:16:58 +0000
 redirect_from: []
 menu:
