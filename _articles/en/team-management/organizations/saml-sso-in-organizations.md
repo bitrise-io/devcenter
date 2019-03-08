@@ -1,10 +1,10 @@
 ---
 title: SAML SSO in organizations
 date: 2019-03-08 09:49:06 +0000
+redirect_from: []
 menu:
   organizations:
     weight: 15
-published: false
 
 ---
 Organization members can log into or sign up to Bitrise using their own SAML SSO provider's system.
