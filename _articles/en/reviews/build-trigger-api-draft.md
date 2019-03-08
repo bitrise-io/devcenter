@@ -77,14 +77,14 @@ The following parameters are supported in the `build_params` object:
 
 ### Pull Request specific params:
 
-* `branch_dest` (string): Used only for Pull Request builds: the destination/target branch of the Pull Request, the one the PR will be merged _into_. 
+* `branch_dest` (string): Used only for Pull Request builds: the destination/target branch of the Pull Request, the one the PR will be merged _into_.
   Example: `master`.
 * `pull_request_id` (int): Pull Request ID on the source code hosting system (for example, the PR number on GitHub).
 * `pull_request_repository_url` (string): repository url from where the Pull Request is sent. For example, if the PR is created from a fork this should be the fork's URL.
   Example: `https://github.com/xyz/bitrise.git`.
-* `pull_request_merge_branch` (string): the pre-merge branch, **if the source code hosting system supports & provides** the pre-merged state of the PR on a special "merge branch" (ref). 
+* `pull_request_merge_branch` (string): the pre-merge branch, **if the source code hosting system supports & provides** the pre-merged state of the PR on a special "merge branch" (ref).
   Example: `pull/12/merge`.
-* `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`) **if the source code hosting system supports & provides** this. This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab. 
+* `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`). This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab.
   Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
 
 {% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step. If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored. These will still be logged, will be available for steps and will be visible on the Build's details page, but the `Git Clone` step will use the the most specific parameter for checkout. "%}
