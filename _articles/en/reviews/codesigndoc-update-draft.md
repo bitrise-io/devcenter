@@ -29,38 +29,6 @@ You can use codesigndoc for:
 
    If the scanner does not find the files, open your `Finder.app` and drag-and-drop your project's `.xcodeproj` or `.xcworkspace` file into the command line in your Terminal.
 
-### Scanning for UITest targets
-
-If your Xcode project has UITest targets, you can use codesigndoc to export the necessary code signing files and generate an `.xctestrun` file. You need to do this to run UI tests on Bitrise - for example, with the `iOS Device Testing` Step. 
-
-To take advantage of codesigndoc's UI test scanner, you need a scheme that has **a valid UITest target** that is enabled.
-
-![](/img/uitest-target.png)
-
-![](/img/uitest-target-enabled.png)
-
-If your project is set up correctly on your machine, you can start scanning! 
-
-1. Open the `Terminal`.
-2. Use our one-liner to launch the scanner and export the required code signing files:
-
-       bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh)"
-
-   This command runs the `xcodebuild build-for-testing` action to create a UITest runner .app file, and exports the necessary code signing files.
-
-#### Troubleshooting the UITest scanner
-
-If the UITest scanner cannot find the desired scheme, follow these steps:
-
-1. Make sure your scheme is valid for running a UITest.
-
-   It has to contain a UITest target that is enabled to run.
-2. Refresh your project settings:
-   * Select the `Generic iOS Device` target for your scheme in Xcode.
-   * Clean your project: `⌘ Cmd + ↑ Shift + K`.
-   * Run a build for testing: `⌘ Cmd + ↑ Shift + U`.
-3. Run `codesigndoc` again.
-
 ### Uploading the files to Bitrise with codesigndoc
 
 1. Once the code signing files are collected, `codesigndoc` will ask if you wish to upload the files to Bitrise:
@@ -84,6 +52,38 @@ That's all, you are done!
 If you wish to use automatic provisioning with our `iOS Auto Provisioning` step, you only need to collect the certificate file(s). You can run `codesigndoc scan` with the `--certs-only` flag to do that.
 
 You can also install and run `codesigndoc` manually. For more information, check out the [tool's Readme](https://github.com/bitrise-tools/codesigndoc)!
+
+### Scanning for UITest targets
+
+If your Xcode project has UITest targets, you can use codesigndoc to export the necessary code signing files and generate an `.xctestrun` file. You need to do this to run UI tests on Bitrise - for example, with the `iOS Device Testing` Step.
+
+To take advantage of codesigndoc's UI test scanner, you need a scheme that has **a valid UITest target** that is enabled.
+
+![](/img/uitest-target.png)
+
+![](/img/uitest-target-enabled.png)
+
+If your project is set up correctly on your machine, you can start scanning!
+
+1. Open the `Terminal`.
+2. Use our one-liner to launch the scanner and export the required code signing files:
+
+       bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh)"
+
+   This command runs the `xcodebuild build-for-testing` action to create a UITest runner .app file, and exports the necessary code signing files.
+
+#### Troubleshooting the UITest scanner
+
+If the UITest scanner cannot find the desired scheme, follow these steps:
+
+1. Make sure your scheme is valid for running a UITest.
+
+   It has to contain a UITest target that is enabled to run.
+2. Refresh your project settings:
+   * Select the `Generic iOS Device` target for your scheme in Xcode.
+   * Clean your project: `⌘ Cmd + ↑ Shift + K`.
+   * Run a build for testing: `⌘ Cmd + ↑ Shift + U`.
+3. Run `codesigndoc` again.
 
 ### Best practices
 
