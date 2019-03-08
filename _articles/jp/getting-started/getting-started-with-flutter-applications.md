@@ -1,6 +1,10 @@
 ---
 title: Getting started with Flutter applications
 date: 2019-03-08 15:17:45 +0000
+menu:
+  getting-started:
+    weight: 24
+    title: Getting started with Flutter apps
 
 ---
 {% include not_translated_yet.html %}
