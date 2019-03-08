@@ -71,6 +71,7 @@ If your project is set up correctly on your machine, you can start scanning!
        bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh)"
 
    This command runs the `xcodebuild build-for-testing` action to create a UITest runner .app file, and exports the necessary code signing files.
+3. [Upload your files to Bitrise with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/#uploading-the-files-to-bitrise-with-codesigndoc). 
 
 #### Troubleshooting the UITest scanner
 
