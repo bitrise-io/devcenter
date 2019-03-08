@@ -7,6 +7,8 @@ menu:
     weight: 15
 
 ---
+{% include not_translated_yet.html %}
+
 Organization members can log into or sign up to Bitrise using their own SAML SSO provider's system.
 
 {% include message_box.html type="important" title="Before connecting SAML SSO to your organization" content=" Make sure:
