@@ -5,6 +5,8 @@ redirect_from: []
 published: false
 
 ---
+With SAML SSO organizations will be able to apply the security guidelines of their SAML SSO provider when accessing their own Bitrise organization.
+
 In this guide we cover the following topics:
 
 * [Setting up SAML SSO for a Bitrise organization]()
@@ -14,8 +16,6 @@ In this guide we cover the following topics:
 * [Logging in via SSO with a Bitrise account](/organizations/#logging-in-via-sso-with-a-bitrise-account/)
 * [Logging in via SSO without a Bitrise account](/organizations/#logging-in-via-sso-without-a-bitrise-account/)
 * [Disabling SAML SSO](/organizations/#disabling-saml-sso-in-an-organization/)
-
-
 * Click `Authorize` if you trust the organization to control your Bitrise account-sign in process. Note that once you click `Authorize`, SAML SSO gets enforced on the organization and you'll **only be able access this account via SAML SSO authentication**.
 * Click `Don't allow` if the invitation email is from an untrusted source.
 
