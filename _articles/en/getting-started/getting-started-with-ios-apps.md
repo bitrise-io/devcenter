@@ -11,8 +11,8 @@ Developing for iOS is not always easy - our aim is to make it as simple as possi
 
 * [Adding an iOS app](/getting-started/getting-started-with-ios-apps/#adding-an-ios-app)
 * [Running Xcode tests](/getting-started/getting-started-with-ios-apps/#running-xcode-tests)
-* [Code signing and exporting an .ipa](/getting-started-with-ios-apps/#code-signing-and-exporting-an-ipa)
-* [Deploying to TestFlight and the App Store](/getting-started-with-ios-apps/#deploying-to-testflight-and-the-app-store)
+* [Code signing and exporting an .ipa](/getting-started/getting-started-with-ios-apps/#code-signing-and-exporting-an-ipa)
+* [Deploying to TestFlight and the App Store](/getting-started/getting-started-with-ios-apps/#deploying-to-testflight-and-the-app-store)
 
 ## Adding an iOS app
 
