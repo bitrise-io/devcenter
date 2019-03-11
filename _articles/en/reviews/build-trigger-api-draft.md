@@ -1,5 +1,5 @@
 ---
-title: 'Triggering builds - draft '
+title: 'Triggering and aborting builds - draft '
 redirect_from: []
 date: 2019-01-16 15:45:49 +0000
 published: false
@@ -9,7 +9,7 @@ You can trigger and abort builds with the Bitrise API. You can define parameters
 
 ## Triggering a new build
 
-To trigger a new build with the Bitrise API, call a `POST` request with a JSON body. Here's an example `curl` request:
+To trigger a new build with the Bitrise API, call a `POST` request with a JSON body. Here's a template `curl` request:
 
 ``` bash
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"curl"}'
@@ -118,7 +118,7 @@ Example:
       {"mapped_to":"HELP_ENV","value":"$HOME variable contains user's home directory path","is_expand":false},
     ]
 
-### Workflow to be used for the build
+### Setting a workflow for the build
 
 By default the workflow for your build will be selected based on the content of `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically, based on the Trigger Map.
 
@@ -134,8 +134,9 @@ An example call where we specify the `deploy` workflow:
 
 You can abort running builds, and set the reason for aborting, as well as specify if email notifications should be sent about the build. 
 
-Here's an example `curl` request:
+An example `curl` request:
 
 ```bash
-curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"curl"}'
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d "triggered_by":"curl"}'
 ```
+
