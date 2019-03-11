@@ -148,8 +148,16 @@ You can set a reason for aborting the build by using the `abort_reason` paramete
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_reason": "aborted for a reason"}'
 ```
 
-Normally, aborted builds count as failed builds. Use the `abort_with_success` parameter to abort a build but still count it as a successful one.
+Normally, aborted builds count as failed builds. Use the `abort_with_success` parameter to abort a build but still count it as a successful one. Your git provider will show the build as successful. 
 
 ```bash
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_with_success": true}'
+```
+
+### Cancelling email notifications 
+
+Depending on your app settings, Bitrise might send an email notification when a build is aborted. If you do not want a notification, set the `skip_notification` parameter to `true`. 
+
+```bash
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"skip_notification": true}'
 ```
