@@ -117,7 +117,7 @@ Example:
 
 ### Workflow to be used for the build
 
-By default the Workflow for your Build will be selected based on the `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically (based on the _Trigger Map_), and how you can define separate Workflows for separate branches, tags or pull requests without the need to specify the workflow manually for every build.
+By default the workflow for your build will be selected based on the `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically (based on the _Trigger Map_), and how you can define separate Workflows for separate branches, tags or pull requests without the need to specify the workflow manually for every build.
 
 With the Trigger API you can however **overwrite** this selection and specify exactly which Workflow you want to use.
 
