@@ -5,54 +5,48 @@ redirect_from: []
 published: false
 
 ---
-{% include not_translated_yet.html %}
+**Bitrise**はモバイルアプリ開発（`iOS`, `Android`, `Xamarin`, ...）における[継続的インテグレーション](https://en.wikipedia.org/wiki/Continuous_integration)・[デリバリー](https://en.wikipedia.org/wiki/Continuous_delivery)（CI/CD） プラットフォームをサービス（PaaS）として提供しています。ソフトウェアプロジェクトの開発・自動化を手助けするためのツール・サービスの集合体です。
 
-**Bitrise** is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) and [Delivery](https://en.wikipedia.org/wiki/Continuous_delivery) (CI/CD) Platform as a Service (PaaS) with a main focus on mobile app development (`iOS`, `Android`, `Xamarin`, ...). It is a collection of tools and services to help you with the development and automation of your software projects.  
-**Bitrise**はモバイルアプリ開発（`iOS`, `Android`, `Xamarin`, ...）における継続的インテグレーション・デリバリー（CI/CD） プラットフォームをサービス（PaaS）として提供しています。ソフトウェアプロジェクトの開発・自動化を手助けするためのツール・サービスの集合体です。
+**  
+数回のクリックであなたのアプリのテストやデプロイ作業を自動化しましょう！**
 
-**Automate the testing and deployment of your apps with just a few clicks.  
-数回のクリックだけであなたのアプリのテストやデプロイ作業を自動化しましょう！**
-
-## Run your builds on bitrise.io
+## 
 
 ## bitrise.io**でビルドを走らせましょう。**
 
-* Run builds of your app on Bitrise by defining a `Workflow`. A `Workflow` consists of one or more build `Steps` (open source git repositories which can be executed with the [open source Bitrise CLI](https://www.bitrise.io/cli)).
-* [Create and share your own build Steps](https://github.com/bitrise-steplib/step-template).
-* Define more workflows for the same app, and define [triggers](/webhooks/trigger-map) to specify which workflow should be selected for each trigger.
-* `Workflow` を定義することによってBitrise上のアプリを走らせます。`Workflow`には1つ以上の`Step`が含まれています（[open source Bitrise CLI](https://www.bitrise.io/cli)を実行してソースGitレポジトリを開いてください）
+* `Workflow` を定義することによってBitrise上のアプリを走らせます。`Workflow`には1つ以上の`Step`が含まれています（[open source Bitrise CLI](https://www.bitrise.io/cli)を実行してソースGitレポジトリを開いてください）。
 * [あなた自身のビルドステップを作成してシェアしてください。](https://github.com/bitrise-steplib/step-template)
-* 同一アプリにより多くのワークフローがあること、ワークフローがどのトリガー
+* 同一アプリにより多くのワークフローがあること、ワークフローがどのトリガーによって実行されるのかを確認してください。
 
-The steps can do anything that can be implemented by command line scripts and/or programs:
+command line scripts/programs によって実行されていれば、以下のStepが可能です；
 
-* send emails,
-* [send text messages](https://github.com/bitrise-io/steps-sms-text-message),
-* pass values to each other,
-* [create Xcode archives](https://github.com/bitrise-io/steps-xcode-archive),
-* gather system information about the Virtual Machine running the build,
-* notify other users (for example, on Slack)
-* even [publish to iTunes Connect](https://github.com/bitrise-io/steps-deploy-to-itunesconnect-deliver), and many more.
+* Eメールの送信
+* [テキストメッセージの送信](https://github.com/bitrise-io/steps-sms-text-message)
+* ？相互的な情報の共有？
+* [Xcodeアーカイブの作成](https://github.com/bitrise-io/steps-xcode-archive)
+* ？Virtual Machineのビルド走行についてのシステム情報の収集？
+* 他のユーザーへの通知（例：Slack）
+* [iTunes Connectへの登録・申請](https://github.com/bitrise-io/steps-deploy-to-itunesconnect-deliver)などたくさんあります！
 
-### Infrastructure
+### インフラ
 
-When you trigger a build a Virtual Machine is assigned to host, your build and your defined Workflow (series of build Steps) will be executed, step by step.
+ビルドをトリガーする際（Virtual Machineがホストとして登録されている場合）、あなたのビルドと定義済みのワークフロー（一連のビルドStep) は段階的に実行されます。
 
-After a build is finished the Virtual Machine is destroyed and you can browse the logs of every step that ran during the workflow. You can read more at [Code Security](/getting-started/code-security).
+ビルドが終了すると、Virtual Machineはなくなります。その後ワークフローで走った全てのStepのログ記録の参照ができます。詳しくは[Code Security](/getting-started/code-security)をご覧ください。
 
-The VMs are equipped with all the tools required to build your app. Bitrise automatically detects which Stack - virtual machine type - is appropriate for your app but of course you can change it manually at any time.
+Virtual Machinesはアプリのビルドに必要なツールが全て備わっています。Bitriseは自動的にどのStack（バーチャルマシンの種類）があなたのアプリに適しているかを検知します。もちろんいつでも手動で変えることも可能です。
 
-## Bitrise CLI - the open source, offline, automation runner
+### Bitrise CLI - オープンソース・オフライン・オートメーションランナー
 
-To run a `bitrise` build on your machine, you can install our [open source runner](https://www.bitrise.io/cli) and use the `bitrise` command to execute your workflows locally. _No_ [_bitrise.io_](https://www.bitrise.io) _account required to use the Bitrise CLI._
+`bitrise`ビルドをあなたのマシンで走らせる場合、[open source runner](https://www.bitrise.io/cli)をインストールしてください。その上で、`bitrise`コマンドを使いワークフローを実行してください。_bitrise.ioアカウントはBitrise CLIを使用する場合必要ありません。_
 
-It's a great help when you're developing Steps, debugging builds, or just want to use Bitrise for _any kind of automation_ on your machines.
+新しいStepの開発、ビルドのデバギング（誤作動・不具合の修正）を皆様にお手伝いいただけると非常に助かります。
 
-You can find more information about the offline runner in the [Bitrise CLI and bitrise.yml](/bitrise-cli/index/) section of the DevCenter.
+オフラインでビルドを走らせる方法についてはDev Centerの[Bitrise CLI and bitrise.yml](/bitrise-cli/index/)を参照してください。
 
 ## Bitrise API
 
-You can easily access and use our API, built on Golang - all you need to do is acquire a Personal Access Token to authenticate and you are good to go!
+Go言語でのビルドは、BitriseのAPIで簡単にアクセスができ、使うことができます。ユーザー認証のためのPersonal Access Tokenを取得していれば問題なく使うことができます。
 
 {% include message_box.html type="info" title="API documentation" content="
 
