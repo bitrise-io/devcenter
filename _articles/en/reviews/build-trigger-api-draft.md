@@ -10,7 +10,7 @@ You can trigger and abort builds with the Bitrise API. You can define parameters
 ## Triggering a new build
 
 To trigger a new build with the Bitrise API, call the `/apps/{APP-SLUG}/builds` endpoint. You need to specify an app slug and at least one build parameter out of three in a JSON object:
-- a git tag
+- a git tag or git commit hash
 - a branch
 - a workflow ID  
 
@@ -58,9 +58,23 @@ Here's a jQuery example using the `payload` parameter:
         }
     })
 
-### Build Parameters
+### Setting build parameters
 
-You can specify several different build parameters when triggering a build. The following parameters are supported in the `build_params` object:
+You can specify several different build parameters when triggering a build. The parameters should be set in the `build_params` object: let's go through some of the possible configurations!
+
+#### Setting a branch, commit, or tag to build
+
+You can set Git-specific parameters in your call. The `branch` parameter specifies the source branch to be built. This is either the branch of the git commit or, in the case of a Pull Request build, the source branch of the Pull Request.
+
+``` bash
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
+```
+
+You can also build a specific git commit or even a git tag: you just need to set either the commit hash or the tag in the `build_params` object. 
+
+``` bash
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"commit_hash":"0000ffffeeeee"}}'
+```
 
 #### Git related parameters:
 
