@@ -22,7 +22,7 @@ published: false
 * Define more workflows for the same app, and define [triggers](/webhooks/trigger-map) to specify which workflow should be selected for each trigger.
 * `Workflow` を定義することによってBitrise上のアプリを走らせます。`Workflow`には1つ以上の`Step`が含まれています（[open source Bitrise CLI](https://www.bitrise.io/cli)を実行してソースGitレポジトリを開いてください）
 * [あなた自身のビルドステップを作成してシェアしてください。](https://github.com/bitrise-steplib/step-template)
-* 同一アプリにもっと多くのワークフローを
+* 同一アプリにより多くのワークフローがあること、ワークフローがどのトリガー
 
 The steps can do anything that can be implemented by command line scripts and/or programs:
 
