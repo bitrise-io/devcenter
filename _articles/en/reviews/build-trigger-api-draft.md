@@ -78,10 +78,8 @@ You can specify several different build parameters when triggering a build. The 
 #### Pull Request specific parameters:
 
 * `branch_dest` (string): Used only for Pull Request builds: the destination/target branch of the Pull Request. The PR will be merged into this branch.
-  Example: `master`.
 * `pull_request_id` (int): Pull Request ID on the source code hosting system (for example, the PR number on GitHub).
 * `pull_request_repository_url` (string): repository url from where the Pull Request is sent. For example, if the PR is created from a fork this should be the fork's URL.
-  Example: `https://github.com/xyz/bitrise.git`.
 * `pull_request_merge_branch` (string): the pre-merge branch, **if the source code hosting system supports & provides** the pre-merged state of the PR on a special "merge branch" (ref).
   Example: `pull/12/merge`.
 * `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`). This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab.
