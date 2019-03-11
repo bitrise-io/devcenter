@@ -15,7 +15,7 @@ To trigger a new build with the Bitrise API, call a `POST` request with a JSON b
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"curl"}'
 ```
 
-{% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup. **Note that this call uses the app's build trigger token, as opposed to the personal access token shown in the examples in this guide**."%}
+{% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup. **Note that this call uses the** `**app.bitrise.io**` **URL and the app's build trigger token, as opposed to the personal access token shown in the examples in this guide. You can only use the personal access token for all endpoints at api.bitrise.io.**"%}
 
 Let's break this request down!
 
