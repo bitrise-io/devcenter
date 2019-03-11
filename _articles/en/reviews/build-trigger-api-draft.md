@@ -9,11 +9,31 @@ You can trigger and abort builds with the Bitrise API. You can define parameters
 
 ## Triggering a new build
 
-To trigger a new build with the Bitrise API, call a `POST` request with a JSON body. Here's a template `curl` request:
+To trigger a new build with the Bitrise API, you need to specify an app slug and at least one build parameter out of three in a JSON object:
+- a git tag
+- a branch
+- a workflow ID  
+
+The JSON object must also contain a `hook_info` object with a `type` key and `bitrise` as the value of the key. 
+
+Here's a minimal sample JSON body which specifies _master_ as the value of the `branch` parameter:
+
+    {
+      "hook_info": {
+        "type": "bitrise",
+      },
+      "build_params": {
+        "branch": "master"
+      }
+    }
+
+And here's an example curl request: 
 
 ``` bash
-curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"curl"}'
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
 ```
+
+In the above example, we triggered a build of the app's `master` branch. 
 
 {% include message_box.html type="note" title="Authorization" content="All examples in this guide use the `https://api.bitrise.io/v0.1/apps/APP-SLUG/builds` endpoint. This endpoint can only be authorized with a Personal Access Token!"%}
 
@@ -35,16 +55,7 @@ The JSON body has to contain at least:
   * `branch`
   * `workflow_id`
 
-Here's a minimal sample JSON body which specifies _master_ as the value of the `branch` parameter:
 
-    {
-      "hook_info": {
-        "type": "bitrise",
-      },
-      "build_params": {
-        "branch": "master"
-      }
-    }
 
 In our earlier example, we passed this JSON payload as a string: to be precise, as a JSON object serialized to a string.
 
