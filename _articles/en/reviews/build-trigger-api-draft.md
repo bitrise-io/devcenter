@@ -89,15 +89,24 @@ The following parameters are supported in the `build_params` object:
 * `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`). This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab.
   Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
 
-{% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step. If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored. These will still be logged, will be available for steps and will be visible on the Build's details page, but the `Git Clone` tep will use the the most specific parameter for checkout. "%}
+{% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step. 
 
-### Specify Environment Variables
+If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored. 
+
+The ignored parameters will still be logged and they will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the the most specific parameter for checkout. "%}
+
+### Specifying Environment Variables
 
 You can define additional environment variables for your build.
 
-_These variables will be handled with priority between_ `Secrets` _and_ `App Env Vars`, which means that you can not overwrite environment variables defined in your build configuration (e.g. App Env Vars), only Secrets. For more information see: _[Availability order of environment variables](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)
+[Be aware that Environment Variables have a priority order!](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables). These additional variables will be handled with priority between `Secrets` and `App Env Vars`, which means that you can not overwrite environment variables defined in your build configuration (for example, App Env Vars), only Secrets. 
 
-It's important that this parameter have to be an **array of objects**, and that every item of the array have to include at least a `mapped_to` (the key of the Environment Variable, without a dollar sign (`$`)) and a `value` property (the value of the variable). By default environment variable names inside values will be replaced in triggered build by actual value from target environment. This behavior can be disabled by setting `is_expand` flag to `false`.
+This parameter must be an **array of objects**, and that every item of the array must include at least a `mapped_to` property. This must contain:
+
+- The key of the Environment Variable.
+- The value of the Environment Variable.
+
+{% include message_box.html type="note" title="Replacing Env Var names" content="By default environment, variable names inside values will be replaced in triggered build by actual value from the target environment. This behavior can be disabled by setting `is_expand` flag to `false`."%}
 
 Example:
 
