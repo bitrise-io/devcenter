@@ -122,25 +122,13 @@ Example:
 
 By default the workflow for your build will be selected based on the content of `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically, based on the Trigger Map.
 
-With the Trigger API you can however **overwrite** this selection and specify exactly which Workflow you want to use.
+With the API, you can however **overwrite** this selection and specify exactly which workflow you want to use.
 
-All you have to do is add a `workflow_id` parameter to your `build_params` and specify the Workflow you want to use for that specific build.
+All you have to do is add a `workflow_id` parameter to your `build_params` and specify the workflow you want to use for that specific build.
 
 An example `build_params` with `branch` and `workflow_id`:
 
     "build_params":{"branch":"master","workflow_id":"deploy"}'
-
-## `curl` example generator
-
-You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
-
-A base curl call would look like this (with `master` specified as the `branch` build parameter):
-
-    curl -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master"}}'
-
-_Note: please don't forget to add_ `Content-Type` _header with_ `application/json` _value_
-
-A more advanced example: let's say you want to build the **master** `branch` using the `deployment` workflow, specify a build message (`commit_message`) and set a test environment variable (`API_TEST_ENV`), the call will look like this:
 
     curl  -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'
 
