@@ -43,7 +43,7 @@ Here's a minimal sample JSON body which specifies _master_ as the value of the `
 
 In our earlier example, we passed this JSON payload as a string: to be precise, as a JSON object serialized to a string.
 
-You can also pass it as an object (for example, if you want to call it from JavaScript. To do so, include a root `payload` element or, alternatively, set the JSON object as the value of the `payload` POST parameter.
+You can also pass it as an object (for example, if you want to call it from JavaScript). To do so, include a root `payload` element or, alternatively, set the JSON object as the value of the `payload` POST parameter.
 
 Here's a jQuery example using the `payload` parameter:
 
