@@ -24,7 +24,7 @@ curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/
 
 Let's break this request down!
 
-### The JSON body
+### JSON body for triggering builds
 
 The JSON body has to contain at least:
 
@@ -136,10 +136,20 @@ You can abort running builds, and set the reason for aborting, as well as specif
 
 To simply abort the build, call the `/apps/APP-SLUG/builds/BUILD-SLUG/abort` endpoint. The only required parameters are the app slug and the build slug. 
 
-But there are other options, of course.
-
 ```bash
-curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d {"abort_reason": "abort with abort_with_success=true test & skip_notifications=true", "abort_with_success": true,"skip_notifications": true}'
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort"
 ```
 
-### 
+### Setting an abort reason 
+
+You can set a reason for aborting the build by using the `abort_reason` parameter. This parameter takes a string and it will show up on your app's build page. 
+
+```bash
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_reason": "aborted for a reason"}'
+```
+
+Normally, aborted builds count as failed builds. Use the `abort_with_success` parameter to abort a build but still count it as a successful one.
+
+```bash
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_with_success": true}'
+```
