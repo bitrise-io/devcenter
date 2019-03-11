@@ -126,10 +126,8 @@ With the API, you can however **overwrite** this selection and specify exactly w
 
 All you have to do is add a `workflow_id` parameter to your `build_params` and specify the workflow you want to use for that specific build.
 
-An example `build_params` with `branch` and `workflow_id`:
+An example call where we specify the `deploy` workflow:
 
-    "build_params":{"branch":"master","workflow_id":"deploy"}'
-
-    curl  -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"deploy"},"triggered_by":"curl"}'
 
 ## Aborting a build
