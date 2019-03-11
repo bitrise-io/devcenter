@@ -1,6 +1,7 @@
 ---
 title: React Nativeアプリの開始（Getting started with React Native apps）
 date: 2019-03-11 14:54:35 +0000
+redirect_from: []
 published: false
 
 ---
@@ -8,11 +9,13 @@ published: false
 
 You can easily set up and configure your React Native project on Bitrise - the power is in your hands if you want to deploy both native versions or just one to distribution platforms! Your React Native repo can consists of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project, you will see that first an Android, then an iOS build gets built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously.
 
-BitriseではReact Nativeプロジェクトを簡単にセットアップ・構成が行なえます。
+BitriseではReact Nativeプロジェクトを簡単にセットアップ・構成が行なえます。あなたのReact Nativeレポ内にはAndroidとiOSプロジェクトを保存できますので、設定はAndroid、iOSアプリの手順で行うことができます。React Nativeプロジェクトでは、初めにAndroid、その次にiOSのビルドが実行されます。あなたの組織が２つ以上のコンカレンシーをお持ちの場合は、並行して両方のビルドを走らせることができます。
 
-## Before setting up a React Native project
+## Before setting up a React Native project　React Nativeプロジェクトのセットアップ前に
 
 Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. If you haven't signed up yet, here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) to do that.
+
+まずbitrise.ioにサインアップしていることを確認し、Bitriseアカウントにアクセスできることを確認してください。もしまだであれば、４つの方法があります。
 
 ## Add a React Native project to bitrise.io
 
