@@ -74,6 +74,12 @@ You can also build a specific git commit or even a git tag: you just need to set
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"commit_hash":"0000ffffeeeee", "commit_message":"testing"}}'
 ```
 
+{% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step. 
+
+If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored. 
+
+The ignored parameters will still be logged and they will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the the most specific parameter for checkout."%}
+
 ### Setting parameters for Pull Request builds
 
 For a Pull Request build, use the `branch_dest` parameter to set up the destination or target branch of the Pull Request. The PR will be merged into this branch but before that, Bitrise will build your app based on how the code would look like after merging. 
@@ -95,12 +101,6 @@ If your git provider supports it, you can also use the `pull_request_merge_branc
   Example: `pull/12/merge`.
 * `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`). This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab.
   Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
-
-{% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step. 
-
-If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored. 
-
-The ignored parameters will still be logged and they will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the the most specific parameter for checkout. "%}
 
 ### Specifying Environment Variables
 
