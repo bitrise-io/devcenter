@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/bitrise上のファイル管理-managing-files-on-bitrise.md
 - _articles/en/reviews/Japanese translations/このページは日本語への翻訳がまだ完了しておりません-look-like-this.md
 - _articles/jp/getting-started/getting-started-with-flutter-applications.md
 - _articles/en/reviews/Japanese translations/bitriseとは何ですか-what-is-bitrise.md
