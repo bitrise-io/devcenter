@@ -131,3 +131,11 @@ An example call where we specify the `deploy` workflow:
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"deploy"},"triggered_by":"curl"}'
 
 ## Aborting a build
+
+You can abort running builds, and set the reason for aborting, as well as specify if email notifications should be sent about the build. 
+
+Here's an example `curl` request:
+
+```bash
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"curl"}'
+```
