@@ -65,7 +65,7 @@ The following parameters are supported in the `build_params` object:
 ### Git related parameters:
 
 * `branch` (string): The (Source) Branch to build. In the case of a standard git commit this is the branch of the commit. In the case of a Pull Request build this is the source branch of the PR. 
-* `tag` (string): The git Tag to build.
+* `tag` (string): The git tag to build.
 * `commit_hash` (string): The git commit hash to build.
 * `commit_message` (string): The git commit message (or build's message).
 
@@ -115,13 +115,11 @@ Example:
 
 ### Setting a workflow for the build
 
-By default the workflow for your build will be selected based on the content of `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically, based on the Trigger Map.
+By default, the workflow for your build will be selected based on the content of `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically, based on the Trigger Map.
 
 With the API, you can however **overwrite** this selection and specify exactly which workflow you want to use.
 
-All you have to do is add a `workflow_id` parameter to your `build_params` and specify the workflow you want to use for that specific build.
-
-An example call where we specify the `deploy` workflow:
+Add a `workflow_id` parameter to your `build_params` and specify the workflow you want to use for that specific build. Here's an example call where we specify the `deploy` workflow: 
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"deploy"},"triggered_by":"curl"}'
 
