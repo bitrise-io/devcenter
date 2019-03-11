@@ -154,4 +154,4 @@ Once that is done, you are ready to configure a workflow to deploy the app.
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
 
-And that’s it! Start a build and release your Android app to the app store of your choice. 
+And that’s it! Start a build and release your Android app to the app store of your choice.

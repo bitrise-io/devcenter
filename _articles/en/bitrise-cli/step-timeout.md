@@ -2,7 +2,7 @@
 title: Setting a time limit for steps
 menu:
   bitrise-cli:
-    weight: 20
+    weight: 26
 
 ---
 Ensure that your builds do not exceed the time limit by setting up step timeout for steps that might cause builds to hang.

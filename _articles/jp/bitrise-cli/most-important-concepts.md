@@ -4,7 +4,7 @@ redirect_from:
 - "/bitrise-cli/most-important-concepts.md"
 menu:
   bitrise-cli:
-    weight: 31
+    weight: 5
 
 ---
 {% include not_translated_yet.html %}
