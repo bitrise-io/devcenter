@@ -15,9 +15,12 @@ To trigger a new build with the Bitrise API, call a `POST` request with a JSON b
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"curl"}'
 ```
 
+{% include message_box.html type="note" title="Authorization" content="All examples in this guide use the `https://api.bitrise.io/v0.1/apps/APP-SLUG/builds` endpoint. This endpoint can only be authorized with a Personal Access Token!"%}
+
 {% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup. 
 
-**Note that this call uses the** `**app.bitrise.io**` **URL and the app's build trigger token, as opposed to the personal access token shown in the examples in this guide. You can only use the personal access token for all endpoints at api.bitrise.io.**"%}
+**Note that this call uses the** `app.bitrise.io` **URL and the app's build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.**"%}
+
 
 Let's break this request down!
 
@@ -101,7 +104,7 @@ You can define additional environment variables for your build.
 
 [Be aware that Environment Variables have a priority order!](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables). These additional variables will be handled with priority between `Secrets` and `App Env Vars`, which means that you can not overwrite environment variables defined in your build configuration (for example, App Env Vars), only Secrets. 
 
-This parameter must be an **array of objects**, and that every item of the array must include at least a `mapped_to` property. This must contain:
+This parameter must be an **array of objects**, and every item of the array must include at least a `mapped_to` property. This must contain:
 
 - The key of the Environment Variable.
 - The value of the Environment Variable.
@@ -117,7 +120,7 @@ Example:
 
 ### Workflow to be used for the build
 
-By default the workflow for your build will be selected based on the `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically (based on the _Trigger Map_), and how you can define separate Workflows for separate branches, tags or pull requests without the need to specify the workflow manually for every build.
+By default the workflow for your build will be selected based on the content of `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically, based on the Trigger Map.
 
 With the Trigger API you can however **overwrite** this selection and specify exactly which Workflow you want to use.
 
