@@ -134,9 +134,12 @@ An example call where we specify the `deploy` workflow:
 
 You can abort running builds, and set the reason for aborting, as well as specify if email notifications should be sent about the build. 
 
-An example `curl` request:
+To simply abort the build, call the `/apps/APP-SLUG/builds/BUILD-SLUG/abort` endpoint. The only required parameters are the app slug and the build slug. 
+
+But there are other options, of course.
 
 ```bash
-curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d "triggered_by":"curl"}'
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d {"abort_reason": "abort with abort_with_success=true test & skip_notifications=true", "abort_with_success": true,"skip_notifications": true}'
 ```
 
+### 
