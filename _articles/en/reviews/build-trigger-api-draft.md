@@ -12,7 +12,7 @@ You can trigger and abort builds with the Bitrise API. You can define parameters
 To trigger a new build with the Bitrise API, call a `POST` request with a JSON body. Here's an example `curl` request:
 
 ``` bash
-curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds' -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"bitrise_api_doc"}'
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"primary"},"triggered_by":"curl"}'
 ```
 
 {% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup. "%}
@@ -93,7 +93,7 @@ The following parameters are supported in the `build_params` object:
 
 You can define additional _environment variables_ for your build.
 
-_These variables will be handled with priority between_ `Secrets` _and_ `App Env Vars`_, which means that you can not overwrite environment variables defined in your build configuration (e.g. App Env Vars), only Secrets. For more information see: _[Availability order of environment variables](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)
+_These variables will be handled with priority between_ `Secrets` _and_ `App Env Vars`, which means that you can not overwrite environment variables defined in your build configuration (e.g. App Env Vars), only Secrets. For more information see: _[Availability order of environment variables](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)
 
 It's important that this parameter have to be an **array of objects**, and that every item of the array have to include at least a `mapped_to` (the key of the Environment Variable, without a dollar sign (`$`)) and a `value` property (the value of the variable). By default environment variable names inside values will be replaced in triggered build by actual value from target environment. This behavior can be disabled by setting `is_expand` flag to `false`.
 
