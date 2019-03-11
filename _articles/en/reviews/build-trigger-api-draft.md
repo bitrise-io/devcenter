@@ -9,7 +9,7 @@ You can trigger and abort builds with the Bitrise API. You can define parameters
 
 ## Triggering a new build
 
-To trigger a new build with the Bitrise API, you need to specify an app slug and at least one build parameter out of three in a JSON object:
+To trigger a new build with the Bitrise API, call the `/apps/{APP-SLUG}/builds` endpoint. You need to specify an app slug and at least one build parameter out of three in a JSON object:
 - a git tag
 - a branch
 - a workflow ID  
@@ -62,20 +62,20 @@ Here's a jQuery example using the `payload` parameter:
 
 The following parameters are supported in the `build_params` object:
 
-### Git related params:
+### Git related parameters:
 
 * `branch` (string): The (Source) Branch to build. In the case of a standard git commit this is the branch of the commit. In the case of a Pull Request build this is the source branch of the PR. 
 * `tag` (string): The git Tag to build.
 * `commit_hash` (string): The git commit hash to build.
 * `commit_message` (string): The git commit message (or build's message).
 
-### Bitrise-specific params:
+### Bitrise-specific parameters:
 
 * `workflow_id`: (string): Force the use of the specified workflow ID. If not defined then the workflow will be selected based on the project's [Trigger Map configuration](/webhooks/trigger-map/).
 * `environments` (array of objects): See the [Specify Environment Variables](#specify-environment-variables) section for more info about the `environments` objects.
 * `skip_git_status_report` (bool): Skip sending build status to the connected git provider.
 
-### Pull Request specific params:
+### Pull Request specific parameters:
 
 * `branch_dest` (string): Used only for Pull Request builds: the destination/target branch of the Pull Request. The PR will be merged into this branch.
   Example: `master`.
