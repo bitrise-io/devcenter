@@ -41,23 +41,7 @@ In the above example, we triggered a build of the app's `master` branch.
 
 **Note that this call uses the** `app.bitrise.io` **URL and the app's build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.**"%}
 
-
-Let's break this request down!
-
-### JSON body for triggering builds
-
-The JSON body has to contain at least:
-
-* a `hook_info` object with:
-  * a `type` key and `bitrise` as its value
-* a `build_params` object, with at least one of the following parameters specified:
-  * `tag`
-  * `branch`
-  * `workflow_id`
-
-
-
-In our earlier example, we passed this JSON payload as a string: to be precise, as a JSON object serialized to a string.
+In the example, we passed this JSON payload as a string: to be precise, as a JSON object serialized to a string.
 
 You can also pass it as an object (for example, if you want to call it from JavaScript). To do so, include a root `payload` element or, alternatively, set the JSON object as the value of the `payload` POST parameter.
 
