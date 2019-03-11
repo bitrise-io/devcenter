@@ -66,20 +66,20 @@ The following parameters are supported in the `build_params` object:
 
 ### Git related params:
 
-* `branch` (string): The (Source) Branch to build. In the case of a standard git commit this is the branch of the commit. In the case of a Pull Request build this is the source branch, the one the PR was started from.
+* `branch` (string): The (Source) Branch to build. In the case of a standard git commit this is the branch of the commit. In the case of a Pull Request build this is the source branch of the PR. 
 * `tag` (string): The git Tag to build.
 * `commit_hash` (string): The git commit hash to build.
 * `commit_message` (string): The git commit message (or build's message).
 
 ### Bitrise-specific params:
 
-* `workflow_id`: (string): Force the use of the specified workflow ID. If not defined then the workflow will be selected based on the project's [Trigger Map config](/webhooks/trigger-map/).
+* `workflow_id`: (string): Force the use of the specified workflow ID. If not defined then the workflow will be selected based on the project's [Trigger Map configuration](/webhooks/trigger-map/).
 * `environments` (array of objects): See the [Specify Environment Variables](#specify-environment-variables) section for more info about the `environments` objects.
-* `skip_git_status_report` (bool): Skip sending build status for the connected git provider
+* `skip_git_status_report` (bool): Skip sending build status to the connected git provider.
 
 ### Pull Request specific params:
 
-* `branch_dest` (string): Used only for Pull Request builds: the destination/target branch of the Pull Request, the one the PR will be merged _into_.
+* `branch_dest` (string): Used only for Pull Request builds: the destination/target branch of the Pull Request. The PR will be merged into this branch.
   Example: `master`.
 * `pull_request_id` (int): Pull Request ID on the source code hosting system (for example, the PR number on GitHub).
 * `pull_request_repository_url` (string): repository url from where the Pull Request is sent. For example, if the PR is created from a fork this should be the fork's URL.
@@ -93,7 +93,7 @@ The following parameters are supported in the `build_params` object:
 
 ### Specify Environment Variables
 
-You can define additional _environment variables_ for your build.
+You can define additional environment variables for your build.
 
 _These variables will be handled with priority between_ `Secrets` _and_ `App Env Vars`, which means that you can not overwrite environment variables defined in your build configuration (e.g. App Env Vars), only Secrets. For more information see: _[Availability order of environment variables](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)
 
