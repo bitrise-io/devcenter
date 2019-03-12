@@ -87,7 +87,7 @@ For a Pull Request build, use the `branch_dest` parameter to set up the destinat
 To identify the PR itself, use the `pull_request_id` parameter: it takes an integer; for example, the number of the PR on GitHub. 
 
 ``` bash
-curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133}}'
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133, "commit_hash": fffff000000eeeeee}}'
 ```
 
 If your git provider supports it, you can also use the `pull_request_merge_branch` parameter to build the pre-merged state of the branch of the PR. Another alternative is the `pull_request_head_branch` parameter: this is a special git ref that should point to the source of the PR. 
