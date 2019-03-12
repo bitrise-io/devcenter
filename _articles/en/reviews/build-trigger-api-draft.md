@@ -82,13 +82,17 @@ The ignored parameters will still be logged and they will be available for steps
 
 ### Setting parameters for Pull Request builds
 
-For a Pull Request build, use the `branch_dest` parameter to set up the destination or target branch of the Pull Request. The PR will be merged into this branch but before that, Bitrise will build your app based on how the code would look like after merging. 
+For a Pull Request build, use the `branch_dest` parameter to set up the destination or target branch of the Pull Request. The PR will be merged into this branch but before that, Bitrise will build your app based on how the code would look like after merging. This is what happens when a PR build is automatically triggered by a webhook, for example.
+
+To identify the PR itself, use the `pull_request_id` parameter: it takes an integer; for example, the number of the PR on GitHub. 
 
 ``` bash
-curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch_dest":"master"}}'
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133}}'
 ```
 
-If your git provider supports it, you can also use the `pull_request_merge_branch` parameter to build the pre-merge branch of the PR. In that case Bitrise will build your app based on the branch of the PR itself, without taking the destination branch into account. 
+If your git provider supports it, you can also use the `pull_request_merge_branch` parameter to build the pre-merged state of the branch of the PR. 
+
+If you want to trigger a build from a PR opened from a fork of your repository, use the `pull_request_repository_url` parameter. The value should be the URL of the fork. 
 
 #### Bitrise-specific parameters:
 
@@ -154,7 +158,7 @@ You can set a reason for aborting the build by using the `abort_reason` paramete
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_reason": "aborted for a reason"}'
 ```
 
-Normally, aborted builds count as failed builds. Use the `abort_with_success` parameter to abort a build but still count it as a successful one. Your git provider will show the build as successful. 
+Normally, aborted builds count as failed builds. Use the `abort_with_success` parameter to abort a build but still count it as a successful one. The status report sent to your git provider will show the build as successful though on bitrise.io it will be displayed as `Cancelled`. 
 
 ```bash
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_with_success": true}'
