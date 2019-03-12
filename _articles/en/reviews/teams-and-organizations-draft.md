@@ -18,3 +18,5 @@ Teams on Bitrise are based on the applications: all users invited to work on a g
 |App-based|Global|
 | Roles assigned by the app's admins or owners|No inherent roles: just owners and members|
 |Only have access to a single app|Can own and control multiple apps|
+
+Random text
