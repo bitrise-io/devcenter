@@ -40,10 +40,10 @@ If your build requires any files to make it work, upload them to the Generic Fil
 10. Upload the file by clicking **Upload file**.
 
     Remember that the file size cannot exceed 5 MB.
-    9. 下にスクロールしてGeneric File Storageを開き固有IDを使ってファイルをあける。
+    9\. 下にスクロールしてGeneric File Storageを開き固有IDを使ってファイルをあける。
 
     ＊固有IDはBitriseのEnvironment VariableのURLをダウンロードするときに必要になります。
-    10. Upload fileをクリックしてファイルをアップロード
+    10\. Upload fileをクリックしてファイルをアップロード
 
     ＊ファイルのサイズが5MB以上だと作動しません
 
@@ -64,9 +64,9 @@ Once a file is uploaded, it can also be:
 
 ### コード署名ファイル
 
-### Bitrise can do your code signing for you but we need some files to make it happen.
+###### Bitrise can do your code signing for you but we need some files to make it happen.
 
-### Bitriseはコード署名をすることができますが複数のファイルが必要となります。
+###### Bitriseはコード署名をすることができますが複数のファイルが必要となります。
 
 For Android apps, upload code signing files to the [Generic File Storage]().
 
@@ -143,8 +143,7 @@ In this example, we'll show how to do this. We use the **pwgen** password genera
    4\. Bitrise上で`my_secrefile`をGeneric File Storageにアップロードする
    5\. `Decrypt file`Stepをworkflowに追加
    6\. 作ったパスフレーズを [secret Environment Variable](/builds/env-vars-secret-env-vars/)として追加し適応なStep入力に組み込む
-
-    7. 暗号化ファイルをとアウトプットファイルを適応なStep入力に追加する
+   1. 暗号化ファイルをとアウトプットファイルを適応なStep入力に追加する
 
    Generic File Storage内の暗号化ファイルのためのEnvironment Variableを見つけることができます。
 
