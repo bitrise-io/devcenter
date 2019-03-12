@@ -48,7 +48,7 @@ In this tutorial, we're using this [sample app](https://github.com/bitrise-sampl
      スキャン検証はあなたのプロジェクト内にシェアされたスキームがないと失敗します。手動でXcode scheme をBitriseに追加することもできますが、仮にシェアされている状態であれば、自動的に探知します。
    * In `Select ipa export method`, select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
    * `Select ipa export method` では、.ipaファイルのエクスポートする方法を選択します：`ad-hoc`、`app-store`、`development` か`enterprise` のいずれかを選ぶことができます。
-9. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.　`Webhook setup`では、Webhookに登録済であれば、レポジトリにコードをプッシュすると毎回自動的にビルドが開始されます。
+9. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.　`Webhook setup`では、Webhookに登録済であれば、レポジトリにコードがプッシュされると毎回自動的にビルドが開始されます。
 
 {% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can modify at the `Stack` tab of your Workflow Editor." %}
 
@@ -146,40 +146,65 @@ You will need:
    `Certificate and profile installer`ステップがあなたのワークフロー内にあることを確認してください。このステップは、`Xcode Archive & Export for iOS`ステップの前にある必要があります（これらの２つのステップの間に、 `Xcode Test for iOS`のような他のステップを含めることができます。）
 5. Check the `Select method for export` input of the `Xcode Archive & Export for iOS` Step. By default, it should be the `$BITRISE_EXPORT_METHOD` environment variable. This variable stores the export method you selected when creating the app. If you selected `development` back then, you don’t need to change the input. Otherwise, manually set it to `development`.
 
-   `Xcode Archive & Export for iOS` ステップ内にある `Select method for export` インプットを確認してください。デフォルトの環境変数は 
+   `Xcode Archive & Export for iOS` ステップ内にある `Select method for export` インプットを確認してください。デフォルトの環境変数は  `$BITRISE_EXPORT_METHOD`
+
+   となっています。この変数はアプリの作成中に選択したエキスポート手段を保存します。もし以前に`development`を選択していたら、ここではインプットを変更する必要はありません。そうでなければ、`development`にマニュアルでセットしてください。
 
    _![Export method env var](https://devcenter.bitrise.io/img/export-method-envvar.png)_
 6. [Start a build](https://devcenter.bitrise.io/builds/starting-builds-manually/).
 
+   ビルドを開始します。
+
 If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa file with the **development export method**. If you have the `Deploy to Bitrise.io`Step in your workflow, you can find the .ipa file on the `APPS & ARTIFACTS` tab of the Build's page.
+
+正確なコード署名ファイルをアップロードしていると、`Certificate and profile installer` ステップがあなたのコード署名ファイルをインストールし、`Xcode Archive & Export for iOS` ステップがdevelopment export method を用いて.ipa ファイルのエクスポートを行います。ワークフローに`Deploy to Bitrise.io` ステップがあれば、ビルドページ上の `APPS & ARTIFACTS` タブより.ipaファイルを見つけることができます。
 
 {% include message_box.html type="info" title="About iOS code signing" content=" iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)!"%}
 
-### Sign and export your iOS project for deployment
+### Sign and export your iOS project for deployment　  
+iOSプロジェクトのデプロイ作業のための署名・エクスポート
 
 If you set up your code signing files and created an .ipa file for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**.
 
+内部のテスターのためのコード署名ファイルのセットアップ、.ipaファイルの作成をした場合、次は外部のテスターを伴ってApp StoreへあなたのiOSアプリを公開してください。
+
 To deploy to Testflight and to the App Store, you will need more code signing files:
+
+TestflightとApp Storeへデプロイするためには、他のコード署名ファイルが必要になります：
 
 * an iOS **Distribution** Certificate
 * an **App Store** type Provisioning Profile
+* iOS配布証明書
+* Provisioning Profile（App Store）
 
-1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa file. If this fails locally, it will definitely fail on Bitrise, too!
+1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa file. If this fails locally, it will definitely fail on Bitrise, too!　
+
+   ローカルマシンで、Xcode上でのプロジェクトのApp Storeコード署名をセットアップし、App Storeの.ipaファイルをエクスポートしてください。ローカルマシンで失敗すれば、Bitrise上でも間違いなく失敗しますので気をつけてください！
 2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
+
+   [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)を使ってコード署名ファイルの収集とアップロードを行ってください。
 3. Go to the app’s Workflow Editor and create a [new workflow](https://devcenter.bitrise.io/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
+
+   アプリのWorkflow Editorより[新しいワークフロー](https://devcenter.bitrise.io/getting-started/getting-started-workflows/)を作成してください：`+ Worlflow` ボタンをクリック、新規のワークフロー名を入力し `deploy` を**BASED ON** ドロップダウンメニューより選択してください。
 4. Set the `Select method for export` input of the `Xcode Archive & Export for iOS` Step to `app-store`.
+
+   `Xcode Archive & Export for iOS` ステップより `Select method for export`のインプットを`app-store`にセットしてください。
 
    ![App store export](https://devcenter.bitrise.io/img/app-store-export.png)
 
    If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc` method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
 
-## Test your project
+   Testflightへアプリのアップロードを行わずに外部のテスターにアプリを配布する場合、`ad-hoc`を選択しあなたのワークフロー上に`Deploy to Bitrise.io`ステップがあることを確認してください。
+
+## Test your project　プロジェクトのテスト
 
 You can use React Native's built in testing method, called `jest`. Add another `Run nmp command` step to your workflow, and type `test` in the `npm command with arguments to run` input field.
 
+ワークフローに`Run nmp command` ステップを追加し、 `npm command with arguments to run` のフィールドに`test`と入力してください。
+
 ![](/img/run-nmp-test.png)
 
-## Deploy to Bitrise
+## Deploy to Bitrise　Bitriseにデプロイする
 
 The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page.
 
