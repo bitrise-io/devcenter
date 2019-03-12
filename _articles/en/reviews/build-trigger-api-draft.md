@@ -90,25 +90,9 @@ To identify the PR itself, use the `pull_request_id` parameter: it takes an inte
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133}}'
 ```
 
-If your git provider supports it, you can also use the `pull_request_merge_branch` parameter to build the pre-merged state of the branch of the PR. 
+If your git provider supports it, you can also use the `pull_request_merge_branch` parameter to build the pre-merged state of the branch of the PR. Another alternative is the `pull_request_head_branch` parameter: this is a special git ref that should point to the source of the PR. 
 
 If you want to trigger a build from a PR opened from a fork of your repository, use the `pull_request_repository_url` parameter. The value should be the URL of the fork. 
-
-#### Bitrise-specific parameters:
-
-* `workflow_id`: (string): Force the use of the specified workflow ID. If not defined then the workflow will be selected based on the project's [Trigger Map configuration](/webhooks/trigger-map/).
-* `environments` (array of objects): See the [Specify Environment Variables](#specify-environment-variables) section for more info about the `environments` objects.
-* `skip_git_status_report` (bool): Skip sending build status to the connected git provider.
-
-#### Pull Request specific parameters:
-
-* `branch_dest` (string): Used only for Pull Request builds: the destination/target branch of the Pull Request. The PR will be merged into this branch.
-* `pull_request_id` (int): Pull Request ID on the source code hosting system (for example, the PR number on GitHub).
-* `pull_request_repository_url` (string): repository url from where the Pull Request is sent. For example, if the PR is created from a fork this should be the fork's URL.
-* `pull_request_merge_branch` (string): the pre-merge branch, **if the source code hosting system supports & provides** the pre-merged state of the PR on a special "merge branch" (ref).
-  Example: `pull/12/merge`.
-* `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`). This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab.
-  Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
 
 ### Specifying Environment Variables
 
