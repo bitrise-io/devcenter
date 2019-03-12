@@ -5,7 +5,7 @@ date: 2019-01-16 15:45:49 +0000
 published: false
 
 ---
-You can trigger and abort builds with the Bitrise API. You can define parameters for the build like what branch, tag or git commit to use, as well as add your own custom environment variables. 
+You can trigger and abort builds with the Bitrise API. You can define parameters for the build like what branch, tag or git commit to use, as well as add your own custom environment variables.
 
 ## Triggering a new build
 
@@ -79,7 +79,7 @@ curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/
 
 If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored.
 
-The ignored parameters will still be logged and they will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the the most specific parameter for checkout."%}
+The ignored parameters will still be logged and they will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the most specific parameter for checkout."%}
 
 ### Setting parameters for Pull Request builds
 
@@ -114,7 +114,7 @@ This parameter must be an **array of objects**, and every item of the array must
 * The key of the Environment Variable.
 * The value of the Environment Variable.
 
-{% include message_box.html type="note" title="Replacing Env Var names" content="By default environment, variable names inside values will be replaced in triggered build by actual value from the target environment. This behavior can be disabled by setting `is_expand` flag to `false`."%}
+{% include message_box.html type="note" title="Replacing Env Var names" content="By default environment variable names inside values will be replaced in triggered build by actual value from the target environment. This behavior can be disabled by setting `is_expand` flag to `false`."%}
 
 Example:
 
@@ -151,7 +151,7 @@ You can set a reason for aborting the build by using the `abort_reason` paramete
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_reason": "aborted for a reason"}'
 ```
 
-Normally, aborted builds count as failed builds. Use the `abort_with_success` parameter to abort a build but still count it as a successful one. The status report sent to your git provider will show the build as successful though on bitrise.io it will be displayed as `Cancelled`.
+Normally, aborted builds count as failed builds. Use the `abort_with_success` parameter to abort a build but still count it as a successful one. The status report sent to your git provider will show the build as successful though on [bitrise.io](https://www.bitrise.io) it will be displayed as `Cancelled`.
 
 ```bash
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_with_success": true}'
