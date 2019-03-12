@@ -5,7 +5,7 @@ date: 2019-01-16 15:45:49 +0000
 published: false
 
 ---
-You can trigger and abort builds with the Bitrise API. You can define parameters for the build like what `branch`, `tag` or _git commit_ to use and what _build message_ to present on the Build's details page.
+You can trigger and abort builds with the Bitrise API. You can define parameters for the build like what branch, tag or git commit to use, as well as add your own custom environment variables. 
 
 ## Triggering a new build
 
