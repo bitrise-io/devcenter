@@ -11,7 +11,7 @@ You can easily set up and configure your React Native project on Bitrise - the p
 
 BitriseではReact Nativeプロジェクトを簡単にセットアップ・構成が行なえます。あなたのReact Nativeレポ内にはAndroidとiOSプロジェクトを保存できますので、設定はAndroid、iOSアプリの手順で行うことができます。React Nativeプロジェクトでは、初めにAndroid、その次にiOSのビルドが実行されます。あなたの組織が２つ以上のコンカレンシーをお持ちの場合は、並行して両方のビルドを走らせることができます。
 
-## Before setting up a React Native project　
+## Before setting up a React Native project
 
 ## React Nativeプロジェクトのセットアップ前に
 
@@ -44,7 +44,7 @@ In this tutorial, we're using this [sample app](https://github.com/bitrise-sampl
    * Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
    * `Project (or Workspace) path field` では、あなたのXcode project もしくは Xcode Workspace path を選択してください。
    * `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
-   * `Select Scheme name`   
+   * `Select Scheme name`  
      スキャン検証はあなたのプロジェクト内にシェアされたスキームがないと失敗します。手動でXcode scheme をBitriseに追加することもできますが、仮にシェアされている状態であれば、自動的に探知します。
    * In `Select ipa export method`, select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
    * `Select ipa export method` では、.ipaファイルのエクスポートする方法を選択します：`ad-hoc`、`app-store`、`development` か`enterprise` のいずれかを選ぶことができます。
@@ -125,7 +125,7 @@ iOSプロジェクトのコード署名はエクスポートされた.ipaファ�
 
 {% include message_box.html type="note" title="Automatic provisioning" content=" The example procedure described here uses manual provisioning, with the `Certificate and profile installe` Step. However, Bitrise also supports [automatic provisioning](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/) but it is not in the scope of this guide. "%}
 
-You will need:　
+You will need:
 
 * the automatically created `deploy` workflow
 * an iOS **Development** certificate (a .p12 certificate file)
@@ -137,12 +137,18 @@ You will need:　
 1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa file locally.　あなたのプロジェクトでの自動か手動のいずれかのコード署名方法を設定します。ローカルで.ipaファイルの生成を行ってください。
 2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
 
-   The tool can also upload your code signing files to Bitrise - we recommend doing so! Otherwise, upload them manually: enter the Workflow Editor and select the `Code signing` tab, then upload the files in their respective fields.　the codesigndoc toolを使ってコード署名ファイルの収集とアップロードを行ってください。
-3. Go to your app’s Workflow Editor, and select the `deploy` workflow in the `WORKFLOW` dropdown menu in the top left corner.
+   The tool can also upload your code signing files to Bitrise - we recommend doing so! Otherwise, upload them manually: enter the Workflow Editor and select the `Code signing` tab, then upload the files in their respective fields.　[the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)を使ってコード署名ファイルの収集とアップロードを行ってください。このツールはBitriseへコード署名ファイルをアップロードすることも可能なので、この機能を使うことをおすすめします！
+
+   手動でアップロードすることもできます：Workflow Editorを開いて、`Code signing` タブを選択してください。その後、各自のフィールドにファイルのアップロードを行ってください。
+3. Go to your app’s Workflow Editor, and select the `deploy` workflow in the `WORKFLOW` dropdown menu in the top left corner.　アプリのWorkflow Editorに進み上部左端にあるドロップダウンメニューの`WORKFLOW`内の`deploy`ワークフローを選択してください。
 4. Check that you have the `Certificate and profile installer` Step in your workflow. It must be before the `Xcode Archive & Export for iOS` Step (you can have other Steps between the two, like `Xcode Test for iOS`).
+
+   `Certificate and profile installer`ステップがあなたのワークフロー内にあることを確認してください。このステップは、`Xcode Archive & Export for iOS`ステップの前にある必要があります（これらの２つのステップの間に、 `Xcode Test for iOS`のような他のステップを含めることができます。）
 5. Check the `Select method for export` input of the `Xcode Archive & Export for iOS` Step. By default, it should be the `$BITRISE_EXPORT_METHOD` environment variable. This variable stores the export method you selected when creating the app. If you selected `development` back then, you don’t need to change the input. Otherwise, manually set it to `development`.
 
-   ![Export method env var](https://devcenter.bitrise.io/img/export-method-envvar.png)
+   `Xcode Archive & Export for iOS` ステップ内にある `Select method for export` インプットを確認してください。デフォルトの環境変数は 
+
+   _![Export method env var](https://devcenter.bitrise.io/img/export-method-envvar.png)_
 6. [Start a build](https://devcenter.bitrise.io/builds/starting-builds-manually/).
 
 If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa file with the **development export method**. If you have the `Deploy to Bitrise.io`Step in your workflow, you can find the .ipa file on the `APPS & ARTIFACTS` tab of the Build's page.
