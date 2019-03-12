@@ -9,7 +9,9 @@ published: false
 
 Flutter is a mobile app SDK that allows developers to create native apps for both iOS and Android. Bitrise supports Flutter apps: we have dedicated Steps to help you with all your Flutter needs. This guide walks you through setting up, testing, building and deploying a simple Flutter app on Bitrise.
 
-FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、モバイルSDKです。BitriseはFlutterアプリをサポートしています:　全てのFlutter needsに応えるべくBitriseには専用のStepがあります。このガイドではBitriseでのFlutterアプリのセットアップからテスト、ビルド、デプロイまでの説明します。
+このガイドではBitriseでのFlutterアプリのセットアップからテスト、ビルド、デプロイまでの説明します。
+
+FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、モバイルSDKです。BitriseはFlutterアプリをサポートしています:　全てのFlutter needsに応えるべくBitriseには専用のステップがあります。
 
 ## Adding a Flutter app
 
@@ -17,7 +19,7 @@ FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
-{% include message_box.html type="note" title="ビットライズのアカウントはありますか？" content=" [bitrise.io](https://www.bitrise.io)でサインアップしているかを確認しBitriseアカウントにアクセスしてください。[4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)をクリックしBitriseアカウントとGit service providerのアカウントをコネクトする方法をチェックしてください。 "%}
+{% include message_box.html type="note" title="ビットライズのアカウントはありますか？" content=" [bitrise.io](https://www.bitrise.io)でサインアップしているかを確認しBitriseアカウントにアクセスしてください。[4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)をクリックしBitriseアカウントとGit service providerのアカウントとコネクトする方法をチェックしてください。 "%}
 
  1. Click the `+` sign on the top menu bar and select `Add app`.
  2. On the `Create New App` page, choose the account you wish to add the app to.
@@ -32,13 +34,13 @@ FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、
     1. トップメニューにある`+`をクリックし`Add app`セレクトします。
     2. `Create New App`ページでアプリに追加したいアカウントを選びます。
     3. アプリのプライバシーをPrivateまたは[Public](/getting-started/adding-a-new-app/public-apps)に設定します。`Next`をクリックします。
-    4. リポジトをホストするGitホスティングサービスをセレクトし、プロジェクトのリポジトをセレクトします。詳しくは[connecting your repository](/getting-started/adding-a-new-app/connecting-your-repository)
-    5. すぐリポジトリアクセスをセットアップするときは、`No, auto-add SSH key`をクリックする。詳しくは [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/)
+    4. リポジトをホストするGitホスティングサービスをセレクトし、プロジェクトのリポジトをセレクトします。詳しくは[connecting your repository](/getting-started/adding-a-new-app/connecting-your-repository)へ
+    5. すぐリポジトリアクセスをセットアップするときは、`No, auto-add SSH key`をクリックする。詳しくは [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/)へ
     6. ？？？
     7. Bitriseがプロジェクトを有効にするまで待機する。
 
-       BitriseがConfigurationファイルを探し、それらを基にアプリをセットアップする。Flutterアプリの場合はプロジェクトの`pubspec.yaml`ファイルが必要です。
-       1. アプリがリポジトリ内にテストがある場合、迅速に？テスト？を行うか決めます。
+       BitriseがConfigurationファイルを探し、それらを基にアプリをセットアップします。Flutterアプリの場合はプロジェクトの`pubspec.yaml`ファイルが必要です。
+       1. アプリがリポジトリ内にテストがある場合、？テスト？を行うか決め。
 
     ![](/img/select_test.png)
  9. If you have an iOS project in your Flutter project, you will have to select an .ipa export method. 9. FlutteプロジェクトのiOSプロジェクトを使用している場合、an .ipa export methodをセレクトします。
@@ -60,11 +62,11 @@ Flutterで**ユニット、ウィジェット, システムテスト**を書き�
 
 You can use our automatically generated `primary` workflow to test your Flutter app. By default, it will include the `Flutter Analyze` Step which runs static code tests.
 
-Flutterアプリをテストするためにbitriseの自動的に作成される`primary`workflowを使うことができます。デフォルトにより静的コードテストを実行している`Flutter Analyze`を含みます。
+Flutterアプリをテストするためにbitriseの自動的に作成される`primary`ワークフローを使うことができます。デフォルトにより静的コードテストを実行している`Flutter Analyze`を含みます。
 
 {% include message_box.html type="info" title="Flutter tests" content="If you have tests in your repository, and selected **yes** when prompted, during app creation, whether you want to run these tests, the primary workflow will include the `Flutter Test` Step by default. If you add tests to your app later, add the `Flutter Test` Step to your workflow manually."%}
 
-{% include message_box.html type="info" title="Flutter テスト" content="リポジトリでテストしてprompt時にyesをセレクトした場合、アプリの作成中、テストを実行するしないにしても、primary workflowがデフォルトにより`Flutter Test`Stepを組み込みます。テストをアプリに追加した場合は、その後手動で`Flutter Test`Stepに追加されます。
+{% include message_box.html type="info" title="Flutter テスト" content="リポジトリでテストしてprompt時にyesをセレクトした場合、アプリの作成中、テストを実行するしないにしても、プライマリーワークフローがデフォルトにより`Flutter Test`Stepを組み込みます。テストをアプリに追加した場合は、その後手動で`Flutter Test`Stepに追加されます。
 
 1. Open your app's Workflow Editor and open the `primary` workflow.
 2. In the `Flutter Install` Step, fill in the `Flutter SDK Version` input.
@@ -72,16 +74,18 @@ Flutterアプリをテストするためにbitriseの自動的に作成される
    You can specify either tags or branches of the Flutter SDK's git repository. The default value is `stable`. This will use the latest stable branch of Flutter.
    * To find the available version tags, check: [https://github.com/flutter/flutter/releases](https://github.com/flutter/flutter/releases "https://github.com/flutter/flutter/releases")
    * To see the the available branches, check: [https://github.com/flutter/flutter/branches](https://github.com/flutter/flutter/branches "https://github.com/flutter/flutter/branches")
-   1. Workflow Editor アプリ、`primary`workflowを開きます。
+   1. Workflow Editor アプリ、`primary`ワークフローを開きます。
    2. `Flutter Install`Stepで,　`Flutter SDK Version`入力を埋めます。
 
-   Flutter SDKのgitリポジトリのタグかブランチを指定します。デフォルト値は`stable`です。Flutterの新しいstableブランチが使用します。
+   Flutter SDKのgitリポジトリのタグかブランチを指定します。デフォルト値は`stable`です。Flutterの新しいstableブランチを使用できます。
 3. To the `Flutter Analyze` Step, add any flags you wish to use to the `Additional parameters` input.
 
    The Step runs the `flutter analyze` command with the specified flags. To check the available flags, open a command line interface on your own machine and run `flutter analyze --help`.
 4. To the `Flutter Test` Step - if you have it -, add any flags you wish to use to the `Additional parameters` input.
 
    The Step runs the `flutter test` command with the specified flags. To check the available flags, open a command line interface on your own machine and run `flutter test --help`.
+   
+
    3\. `Flutter Analyze`Stepに`Additional parameters`入力に使うフラグを追加します。
 
    Stepが指定されたフラグで`flutter analyze`コマンドを実行します。使用可能なフラグをチェックするにはコマンドラインインターフェイスをマシンで開き`flutter test --help`を実行します。
@@ -93,7 +97,7 @@ Flutterアプリをテストするためにbitriseの自動的に作成される
 5. Make sure the `Project Location` input of the `Flutter Test` Step is correct.
 
    The default value is the the environment variable created for your Flutter project's location.
-   5\. `Flutter Test`Stepの`Project Location`入力が正確であることを確認します。
+   5\. `Flutter Test`ステップの`Project Location`入力が正確であることを確認します。
 
    デフォルト値はFlutter プロジェクトロケーションのために作成された環境変数です。
 
@@ -119,11 +123,11 @@ Flutterアプリをビルド、デプロイするためworkflowに
 
 If you have platforms specified in your repository, a `deploy` workflow will be automatically generated when adding the app on Bitrise. The content of this workflow depends on the platforms: for example, if your app contains only an iOS project, the workflow will contain the `Certificate and profile installer` and the `Xcode Archive & Export for iOS` Steps.
 
-リポジトリで指定されたプラットフォームがあれば、アプリをBitriseに追加した際に`deploy　`workflowが自動的に作成されます。workflowのコンテントはプラットフォーム次第です。例えば、アプリがiOSプロジェクトのみを含んでいる場合、workflowは`Certificate and profile installer`、`Xcode Archive & Export for iOS`Stepを含みます。
+リポジトリで指定されたプラットフォームがあれば、アプリをBitriseに追加した際に`deploy`workflowが自動的に作成されます。workflowのコンテントはプラットフォーム次第です。例えば、アプリがiOSプロジェクトのみを含んでいる場合、workflowは`Certificate and profile installer`、`Xcode Archive & Export for iOS`Stepを含みます。
 
 You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. **You can set this in the** `Platform` **input of the** `**Flutter Build**` **Step any time**. By default, the Step is configured according to the platform or platforms that the scanner detected when adding the app on Bitrise.
 
-iOS、Androidプロジェクトはworkflowを使い同時、または個々の作成を`__**Flutter Build*__`**Stepの**`**Platform**`**入力でいつでも設定することが可能です**。デフォルトにより、Stepは、Bitriseにアプリを追加する際にスキャナーが検出したプラットフォーム？？？？？に従って構成されます。
+iOS、Androidプロジェクトはworkflowを使い同時、または個々の作成を`__**Flutter Build*__`**Stepの__`**Platform**`**入力でいつでも設定することが可能です**。デフォルトにより、Stepは、Bitriseにアプリを追加する際にスキャナーが検出したプラットフォーム？？？？？に従って構成されます。
 
 Here's an example workflow we'll use in this configuration, with all the necessary Steps:
 
