@@ -17,23 +17,32 @@ Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can acc
 
 まずbitrise.ioにサインアップしていることを確認し、Bitriseアカウントにアクセスできることを確認してください。もしまだであれば、４つの方法があります。
 
-## Add a React Native project to bitrise.io
+## Add a React Native project to bitrise.io 
+
+## bitrise.ioにReact Nativeプロジェクトを追加する
 
 In this tutorial, we're using this [sample app](https://github.com/bitrise-samples/sample-apps-react-native-ios-and-android). Let's start!
 
-1. Log into [bitrise.io](https://www.bitrise.io).
-2. Click `Add a new app`.
-3. Select the privacy setting of your app: **private** and [**public**](/getting-started/adding-a-new-app/public-apps/).
-4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
-5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
-6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
-7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
-8. At `Project build configuration`, select your preferred build configuration.
+このチュートリアルでは、サンプルアプリを使用します。では始めましょう！
+
+1. Log into [bitrise.io](https://www.bitrise.io).　bitrise.io にログインする
+2. Click `Add a new app`.　`Add a new app` をクリック
+3. Select the privacy setting of your app: **private** and [**public**](/getting-started/adding-a-new-app/public-apps/).　アプリのプライバシー設定を行う：private か public
+4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).　あなたのレポジトリをホストしているGitホスティングサービスを選択する。詳しくはレポジトリを接続するをお読みください。
+5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).　
+6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.　プロジェクトのコンフィギュレーションに含まれるブランチの名前を入力する（例：master）。選んだら`Next` をクリック
+7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project.　`Validating repository` では、自動的にレポスキャナーが発動しプロジェクトの最適なコンフィグをセットアップします。
+8. At `Project build configuration`, select your preferred build configuration.　`Project build configuration` では、お好きなビルド設定を選択してください。
    * For React Native projects, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that Android is automatically selected in `The root directory of an Android app`.
+   * React Native プロジェクトでは、選択したproject typeとして`React Native` を確認することができます。スキャンが失敗しproject typeが自動的に選択されていない場合、手動によるプロジェクト設定を行えます。Androidが自動的に`The root directory of an Android app` 上で選択されていることが確認できます。
    * If your project consist of only one module, that module will be automatically selected for `Module`. If your project contains more than one module, you can pick a module, but we recommend the main one!
+   * プロジェクトが１つのモジュールだけが含まれている場合、そのモジュールは自動的に`Module`として選択されます。２つ以上のモジュールが含まれるプロジェクトでは、その中から１つモジュールを選択することができます。
    * In `Select variant for building` field, select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick `debug` or `release` if you wish to generate an APK or an .ipa file.
+   * `Select variant for building` のフィールドでは、プロジェクトに合ったバリアントを選択してください。`Select All Variants`は全てのバリアントのビルドを行います。APKや.ipaファイルを生成する場合は、`debug` か `release` を選んでください。
    * Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
+   * `Project (or Workspace) path field` では、あなたのXcode project もしくは Xcode Workspace path を選択してください。
    * `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
+   * `Select Scheme name` は、
    * In `Select ipa export method`, select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
 9. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
