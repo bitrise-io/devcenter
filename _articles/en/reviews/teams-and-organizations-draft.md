@@ -22,4 +22,4 @@ Teams on Bitrise are based on the applications: all users invited to work on a g
 | Roles assigned by the app's admins or owners | No inherent roles: just owners and members |
 | Only have access to a single app | Can own and control multiple apps |
 
-{% include message_box.html type="important" title="Teams vs groups" content="Teams and groups are not the same! [Groups are the main building blocks of organizations](/team-management/organizations/members-organizations/) but by themselves have no "powers": they need to be [assigned to apps](/team-management/organizations/managing-apps/#assigning-groups-to-apps)."%}
+{% include message_box.html type="important" title="Teams vs groups" content="Teams and groups are not the same! [Groups are the main building blocks of organizations](/team-management/organizations/members-organizations/) but by themselves have no powers: they need to be [assigned to apps](/team-management/organizations/managing-apps/#assigning-groups-to-apps)."%}
