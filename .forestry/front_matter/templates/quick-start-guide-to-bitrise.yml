@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/teams-and-organizations-draft.md
 - _articles/en/reviews/Japanese translations/bitrise上のファイル管理-managing-files-on-bitrise.md
 - _articles/en/reviews/Japanese translations/a.md
 - _articles/en/reviews/flutterアプリの開始-getting-started-with-flutter-applications.md
