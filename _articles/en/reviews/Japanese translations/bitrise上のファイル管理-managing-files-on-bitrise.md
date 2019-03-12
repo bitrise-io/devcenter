@@ -81,6 +81,8 @@ iOsファイル: プロビジョニングプロファイルとコード署名ID�
 
 {% include message_box.html type="info" title="Password protection for iOS code signing files" content="You can set a password in Xcode to store your code signing certificates securely. This password can be viewed on Bitrise: click on the eye icon next to the certificate file, in the **Password** field."%}
 
+{% include message_box.html type="info" title="iOSコード署名ファイルのためのパスワード保護" content="Xcodeでコード署名証明書を安全に保存するためにパスワードを設定できます。パスワードはBitriseに表示できます：**パスワード**画面にある証明書ファイルの隣にある目のアイコンをクリックしてください。"%}
+
 ### Output files
 
 ### アウトプットファイル
