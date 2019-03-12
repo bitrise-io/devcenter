@@ -79,7 +79,7 @@ curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/
 
 If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored.
 
-The ignored parameters will still be logged and they will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the most specific parameter for checkout."%}
+The ignored parameters will still be logged. They will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the most specific parameter for checkout."%}
 
 ### Setting parameters for Pull Request builds
 
