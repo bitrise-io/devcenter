@@ -96,7 +96,7 @@ If you want to trigger a build from a PR opened from a fork of your repository, 
 
 ### Skipping git status report
 
-If you have a webhook set up correctly, Bitrise will send status reports to your git provider about your builds. However, this can be disabled via the API: use the `skip_git_status_report` parameter. If it is set to `true`, no build status report will be sent. 
+If you have a webhook set up, Bitrise will send status reports to your git provider about your builds. However, this can be disabled via the API: use the `skip_git_status_report` parameter. If it is set to `true`, no build status report will be sent. 
 
 ``` bash
 curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133, "skip_git_status_report": "true"}}'
