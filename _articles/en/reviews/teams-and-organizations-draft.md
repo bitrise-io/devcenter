@@ -16,6 +16,8 @@ Teams on Bitrise are based on the applications: all users invited to work on a g
 
 [Organizations are created by individual users](/team-management/organizations/creating-org/) but they need their own payment plan: even if the organization's creator is already subscribed to Bitrise, **a separate payment plan must be set up for the organization itself.**
 
+### Teams vs organizations
+
 | Teams | Organizations |
 | --- | --- |
 | App-based | Global |
