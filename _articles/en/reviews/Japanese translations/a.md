@@ -66,7 +66,7 @@ Flutterアプリをテストするためにbitriseの自動的に作成される
 
 {% include message_box.html type="info" title="Flutter tests" content="If you have tests in your repository, and selected **yes** when prompted, during app creation, whether you want to run these tests, the primary workflow will include the `Flutter Test` Step by default. If you add tests to your app later, add the `Flutter Test` Step to your workflow manually."%}
 
-{% include message_box.html type="info" title="Flutter テスト" content="リポジトリでテストしてprompt時にyesをセレクトした場合、アプリの作成中、テストを実行するしないにしても、プライマリーワークフローがデフォルトにより`Flutter Test`Stepを組み込みます。テストをアプリに追加した場合は、その後手動で`Flutter Test`Stepに追加されます。
+{% include message_box.html type="info" title="Flutter テスト" content="リポジトリでテストしてprompt時にyesをセレクトした場合、アプリの作成中、テストを実行するしないにしても、プライマリーワークフローがデフォルトにより`Flutter Test`Stepを組み込みます。テストをアプリに追加した場合は、その後手動で`Flutter Test`Stepに追加されます。"%}
 
 1. Open your app's Workflow Editor and open the `primary` workflow.
 2. In the `Flutter Install` Step, fill in the `Flutter SDK Version` input.
@@ -84,7 +84,6 @@ Flutterアプリをテストするためにbitriseの自動的に作成される
 4. To the `Flutter Test` Step - if you have it -, add any flags you wish to use to the `Additional parameters` input.
 
    The Step runs the `flutter test` command with the specified flags. To check the available flags, open a command line interface on your own machine and run `flutter test --help`.
-   
 
    3\. `Flutter Analyze`Stepに`Additional parameters`入力に使うフラグを追加します。
 
