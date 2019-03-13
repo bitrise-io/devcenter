@@ -26,11 +26,11 @@ In this guide we cover the following topics:
 
 In this tutorial, we describe how organization owners can set up their SAML SSO and invite organization members to set up their own connections.
 
-1. Go to your organization's `Security` tab on [bitrise.io](https://www.bitrise.io).
+1. Go to your organization's `Single Sign On` tab on [bitrise.io](https://www.bitrise.io).
 2. Copy the `Single Sign-On URL`. You will need this URL to add Bitrise on your SAML SSO provider's site.
 3. Log into your own SAML SSO provider.
 4. Add Bitrise using the copied Single Sign-On URL. You're generating your Single Sign-On (SSO) credentials here which you will need in a minute on Bitrise.
-5. Add the generated SSO credentials to the `Identity provider sign-on URL` and `Certificate` fields on the `Security` tab.
+5. Add the generated SSO credentials to the `Identity provider sign-on URL` and `Certificate` fields on the `Single Sign On` tab.
 6. Click the `Configure SSO` button. ![](/img/SSO-page.jpg)
 
 If you've completed the steps, you and org members should get a verification email about SAML SSO connected to the respective organization.
@@ -63,7 +63,7 @@ Now that the org owner has set up SAML SSO for the organization and all org memb
 ### Organization owner
 
 1. Go to your organization's profile page.
-2. Click `Security` on the left menu. This `Security` tab is **only available for the org owner**!
+2. Click `Single Sign On` on the left menu. This `Single Sign On` tab is **only available for the org owner**!
 
    You will see the `Review Users` and the `Disable SSO` buttons:
 
@@ -71,7 +71,7 @@ Now that the org owner has set up SAML SSO for the organization and all org memb
 
    `Disable SSO` disables SAML SSO for all org members. Once disabled, org members will be able to sign in with the regular sign-in procedure. Please note that an individual org member can only be disabled at your own SAML SSO provider's site!
 
-   `Review Users` takes you from the `Security` tab to the `People` tab where you can check the org member's SAML SSO status.
+   `Review Users` takes you from the `Single Sign On` tab to the `People` tab where you can check the org member's SAML SSO status.
 
    ![](/img/peopletab-org-owner.png)
 
@@ -146,11 +146,11 @@ If all goes well, you land on our Bitrise Dashboard.
 
 ## Disabling SAML SSO
 
-Org owners can disable an established SAML SSO for the organization with a click of a button on the `Security` tab. Please note that if you delete someone from your IdP, you have to delete that org member from Bitrise as well.
+Org owners can disable an established SAML SSO for the organization with a click of a button on the `Single Sign On` tab. Please note that if you delete someone from your IdP, you have to delete that org member from Bitrise as well.
 
 ### Disabling an organization's SAML SSO
 
-1. Go to the `Security` tab of your organization.
+1. Go to the `Single Sign On` tab of your organization.
 2. Click `Disable SSO`.
 
    A confirmation pop-up appears where you can confirm/cancel your action. Please note that by clicking the `Disable SSO` button, you will **disable SAML SSO for all organization members**. Once it's done, org members will be able to log in through their normal Bitrise credentials.
