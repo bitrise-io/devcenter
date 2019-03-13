@@ -14,27 +14,22 @@ Before setting up IPA export, make sure that:
 * `Certificate and profile installer` if you uploaded your Provisioning Profiles manually.
 * `iOS Auto Provisioning` if you connected your Bitrise account to your Apple Developer account for automatic provisioning.
 
+{% include message_box.html type="important" title="My message" content="You always need to upload at least a Developer certificate and, if you don't use iOS Auto Provisioning, a Development type Provisioning Profile! That is necessary for our Xcode Steps to be able to test and build your apps properly."%} 
+
 If you're all set, proceed to setting up IPA export in your workflow:
 
 1. Make sure you have the `Xcode Archive & Export for iOS` step in the app's Workflow Editor, depending on your project type. Select your step.
+2. Set the `Select method for export` input of the step to the type of code signing you want to use.
 
-1. Set the `Select method for export` input of the step to the type of code signing you want to use.
+   ![Select export method for Xcode Archive for iOS](/img/code-signing/ios-code-signing/xcode-archive-export-method.png)
 
-    ![Select export method for Xcode Archive for iOS](/img/code-signing/ios-code-signing/xcode-archive-export-method.png)
-
-    If you use automatic provisioning, make sure it matches the value of the `Distribution type` input of the `iOS Auto Provisioning` step. The options are:
-
-    * `auto-detect` - please note that this option is deprecated and will be removed. We do not recommend using it.
-
-    * `app-store`
-
-    * `ad-hoc`
-
-    * `enterprise`
-
-    * `development`.
-
-1. Save the Workflow, and start a new build.
+   If you use automatic provisioning, make sure it matches the value of the `Distribution type` input of the `iOS Auto Provisioning` step. The options are:
+   * `auto-detect` - please note that this option is deprecated and will be removed. We do not recommend using it.
+   * `app-store`
+   * `ad-hoc`
+   * `enterprise`
+   * `development`.
+3. Save the Workflow, and start a new build.
 
 That's all. Xcode will auto select the right signing files based on your project's Bundle ID and
 Team ID settings, and the Export Method you set.
