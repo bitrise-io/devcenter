@@ -11,7 +11,7 @@ We support _Automatically manage signing_ option, introduced in Xcode 8, with yo
 
 If you collected all the necessary files with the codesigndoc tool, proceed to uploading them and setting up your workflow. In this example, we'll be uploading the code signing files manually - however, you can do this with the codesigndoc tool, too!
 
-{% include message_box.html type="important" title="My message" content="You always need to upload at least a Developer certificate and a Development type Provisioning Profile! That is necessary for our Xcode Steps to be able to test and build your apps properly."%} 
+{% include message_box.html type="important" title="Development profile and certificate" content="You always need to upload at least a Developer certificate and a Development type Provisioning Profile! That is necessary for our Xcode Steps to be able to test and build your apps properly."%}
 
 1. Open your app on your `Dashboard`.
 2. Select the `Workflow Editor` tab.

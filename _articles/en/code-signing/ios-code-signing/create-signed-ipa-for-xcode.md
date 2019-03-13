@@ -14,7 +14,7 @@ Before setting up IPA export, make sure that:
 * `Certificate and profile installer` if you uploaded your Provisioning Profiles manually.
 * `iOS Auto Provisioning` if you connected your Bitrise account to your Apple Developer account for automatic provisioning.
 
-{% include message_box.html type="important" title="My message" content="You always need to upload at least a Developer certificate and, if you don't use iOS Auto Provisioning, a Development type Provisioning Profile! That is necessary for our Xcode Steps to be able to test and build your apps properly."%} 
+{% include message_box.html type="important" title="Development profile and certificate" content="You always need to upload at least a Developer certificate and a Development type Provisioning Profile! That is necessary for our Xcode Steps to be able to test and build your apps properly."%}
 
 If you're all set, proceed to setting up IPA export in your workflow:
 

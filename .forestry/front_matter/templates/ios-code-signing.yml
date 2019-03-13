@@ -17,8 +17,8 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
+- _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
 - _articles/en/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
 - _articles/en/code-signing/ios-code-signing/code-signing-ios-frameworks.md
 - _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
