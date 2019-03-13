@@ -18,7 +18,7 @@ In this guide we cover the following topics:
 * [About SAML SSO enforcement](/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement)
 * [Logging in via SSO with a Bitrise account](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-with-a-bitrise-account)
 * [Logging in via SSO without a Bitrise account](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-without-a-bitrise-account)
-* [Disabling SAML SSO](/team-management/organizations/saml-sso-in-organizations/#disabling-saml-sso-in-an-organization)
+* [Disabling SAML SSO](/team-management/organizations/saml-sso-in-organizations/#disabling-saml-sso)
 
 {% include message_box.html type="important" title="Before connecting SAML SSO to your organization" content=" Make sure:
 
