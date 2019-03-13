@@ -11,7 +11,7 @@ In this guide we cover the following topics:
 * [Setting up SAML SSO for a Bitrise organization]()
 * [Enabling SAML SSO](/organizations/#enabling-saml-sso/)
 * [Checking SAML SSO statuses on Bitrise ](/organizations/#checking-saml-sso-statuses-on-bitrise/)
-* [About SAML SSO enforcement](/organizations/#about-saml-sso-enforcement/)
+* [About SAML SSO enforcement](/organizations/#about-saml-sso-enforcement)
 * [Logging in via SSO with a Bitrise account](/organizations/#logging-in-via-sso-with-a-bitrise-account/)
 * [Logging in via SSO without a Bitrise account](/organizations/#logging-in-via-sso-without-a-bitrise-account/)
 * [Disabling SAML SSO](/organizations/#disabling-saml-sso-in-an-organization/)
