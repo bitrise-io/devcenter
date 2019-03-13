@@ -10,7 +10,6 @@ menu:
 Organization members can log into or sign up to Bitrise using their own SAML SSO provider's system. With SAML SSO, organizations will be able to apply the security guidelines of their SAML SSO provider when accessing their Bitrise organization.
 
 In this guide we cover the following topics:
-/getting-started/getting-started-with-android-apps/#dependencies
 
 * [Setting up SAML SSO for a Bitrise organization]()
 * [Enabling SAML SSO](/team-management/organizations/saml-sso-in-organizations/#enabling-saml-sso)
