@@ -24,6 +24,8 @@ The most important concepts to managing apps on Bitrise are:
 
 Organization members can be assigned to application teams individually or as a group. The same organization group can have different roles on different application teams. "%} 
 
+So here's a quick summary of teams and organizations:
+
 | Teams | Organizations |
 | --- | --- |
 | App-based | Global |
