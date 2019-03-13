@@ -11,6 +11,8 @@ We support _Automatically manage signing_ option, introduced in Xcode 8, with yo
 
 If you collected all the necessary files with the codesigndoc tool, proceed to uploading them and setting up your workflow. In this example, we'll be uploading the code signing files manually - however, you can do this with the codesigndoc tool, too!
 
+{% include message_box.html type="important" title="My message" content="You always need to upload at least a Developer certificate and a Development type Provisioning Profile! That is necessary for our Xcode Steps to be able to test and build your apps properly."%} 
+
 1. Open your app on your `Dashboard`.
 2. Select the `Workflow Editor` tab.
 3. Select the `Code Signing` tab.
@@ -27,4 +29,4 @@ If you collected all the necessary files with the codesigndoc tool, proceed to u
 
 If `codesigndoc` does not pick up one or more distribution .p12 files and/or Provisioning Profile(s), you can export those manually (.p12 from `Keychain Access` app, Provisioning Profiles from [Apple Developer Portal](https://developer.apple.com/)), just like you would when you transfer these files between Macs.
 
-But __even if `codesigndoc` does not find all the files, you should upload all the files collected by `codesigndoc`!__ The base files collected by `codesigndoc` are essential for your project's code signing: without those it's not possible to create a signed IPA for the project!
+But **even if** `**codesigndoc**` **does not find all the files, you should upload all the files collected by** `**codesigndoc**`**!** The base files collected by `codesigndoc` are essential for your project's code signing: without those it's not possible to create a signed IPA for the project!
