@@ -161,7 +161,8 @@ If you uploaded the correct code signing files, the `Certificate and profile in
 
 {% include message_box.html type="info" title="About iOS code signing" content=" iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)!"%}
 
-### Sign and export your iOS project for deployment　  
+### Sign and export your iOS project for deployment
+
 iOSプロジェクトのデプロイ作業のための署名・エクスポート
 
 If you set up your code signing files and created an .ipa file for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**.
@@ -177,7 +178,7 @@ TestflightとApp Storeへデプロイするためには、他のコード署名�
 * iOS配布証明書
 * Provisioning Profile（App Store）
 
-1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa file. If this fails locally, it will definitely fail on Bitrise, too!　
+1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa file. If this fails locally, it will definitely fail on Bitrise, too!
 
    ローカルマシンで、Xcode上でのプロジェクトのApp Storeコード署名をセットアップし、App Storeの.ipaファイルをエクスポートしてください。ローカルマシンで失敗すれば、Bitrise上でも間違いなく失敗しますので気をつけてください！
 2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
@@ -208,14 +209,22 @@ You can use React Native's built in testing method, called `jest`. Add another `
 
 The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page.
 
-You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
+`Deploy to bitrise.io` ステップでは、あなたのビルド関連の全てのアーチファクトがBuildページの[APPS&ARTIFACTS](https://devcenter.bitrise.io/builds/build-artifacts-online/)タブへアップロードされます。
 
-1. Go to the `Deploy to bitrise.io` step.
+You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built
+
+ビルドのURLを使用しているチームメンバーと生成されたAPKまたは.ipaファイルを共有することができます。あなたのAPKまたは.ipaファイルがビルドされた場合も、ユーザーグループや個人ユーザーへの通知を行います。
+
+1. Go to the `Deploy to bitrise.io` step.　`Deploy to bitrise.io` ステップに進みます。
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK/.ipa file in the `APPS & ARTIFACTS` tab.
 
-## Deploy to an app store
+   `Notify: User Roles` では、role（役割）を追加すると、ある一定の役割が与えられたユーザーのみに通知されます。あるいは、`Notify: Emails` の欄に通知したいユーザーのメールアドレスを入力すると、そのメールアドレスへ通知が行われます。この場合、入力するメールアドレスに[シークレット環境変数](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)が設定されていることを確認してください。こういった詳細については、`Notifications`で修正することができます。　`APPS & ARTIFACTS`タブ上の、生成されたAPKまたは.ipaファイルの隣りにある`eye` アイコンをクリックしてください。
+
+## Deploy to an app store　App Storeへのデプロイ
 
 If you wish to deploy your iOS app, follow the steps in [Code sign your iOS project for deployment](/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
+
+iOSアプリのデプロイ作業を行う方は、[Code sign your iOS project for deployment](/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment)にあるステップに従ってください。
 
 ### Deploy your iOS app to Testflight and iTunes Connect
 
