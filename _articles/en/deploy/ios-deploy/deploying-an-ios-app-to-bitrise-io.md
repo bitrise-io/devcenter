@@ -4,7 +4,7 @@ date: 2018-10-26 12:37:47 +0000
 redirect_from: []
 menu:
   ios-deploy:
-    weight: 2
+    weight: ''
 
 ---
 Deploy an app to Bitrise to be able to download the .ipa file and install it on devices specified in the app's Development Provisioning Profile. This way, your internal testers can easily test the app.
@@ -28,9 +28,9 @@ Make sure that you have:
 2. Make sure the `Xcode Archive & Export for iOS` Step is in your workflow.
 3. Set the `Select method for export` input of the Step to `development`.
 
-   You can use other export methods, too, but if you only deploy to Bitrise and want to install your app on the specified devices of internal testers, `development` is sufficient.
+   ![](/img/xcode-archive-export-method.png)
 
-   ![](/img/code-signing/ios-code-signing/xcode-archive-export-method.png)
+   You can use other export methods, too, but if you only deploy to Bitrise and want to install your app on the specified devices of internal testers, `development` is sufficient.
 4. Make sure the `Deploy to Bitrise.io` Step is in your workflow.
 
    By default, the value of the `Enable public page for the App?` input is set to `true`. This way, once the build runs, a public install page will be available with a long and random URL which can be shared with others who are not registered on Bitrise. This URL is sent to the users in an email. The `Notify: User Roles` and the `Notify: Emails` inputs determine which users get the email.
@@ -38,7 +38,7 @@ Make sure that you have:
 6. When the build is finished, go to the app's `Builds` page and click the latest build.
 7. Click the `APPS & ARTIFACTS` tab to find your .ipa file.
 
-   You can also find the public install URL here. 
+   You can also find the public install URL here.
 
    ![](/img/public-install-page.png)
 
