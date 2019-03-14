@@ -286,4 +286,4 @@ Once that is done, you are ready to configure a workflow to deploy the app.
 
 And that’s it! Start a build and release your Android app to the app store of your choice.
 
-さあ、AndroidアプリをApp Storeにビルド、リリースしましょう！
+さあ、App StoreにAndroidアプリをビルド、リリースしましょう！
