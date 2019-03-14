@@ -36,7 +36,7 @@ FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、
     3. アプリのプライバシーをPrivateまたは[Public](/getting-started/adding-a-new-app/public-apps)に設定します。`Next`をクリックします。
     4. リポジトをホストするGitホスティングサービスをセレクトし、プロジェクトのリポジトをセレクトします。詳しくは[connecting your repository](/getting-started/adding-a-new-app/connecting-your-repository)へ
     5. すぐリポジトリアクセスをセットアップするときは、`No, auto-add SSH key`をクリックする。詳しくは [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/)へ
-    6. ？？？
+    6. プロジェクトのコンフィグレーションが含まれているブランチの名前(master等）を入力し、`Next`をクリックします。
     7. Bitriseがプロジェクトを有効にするまで待機する。
 
        BitriseがConfigurationファイルを探し、それらを基にアプリをセットアップします。Flutterアプリの場合はプロジェクトの`pubspec.yaml`ファイルが必要です。
@@ -78,6 +78,8 @@ Flutterアプリをテストするためにbitriseの自動的に作成される
    2. `Flutter Install`Stepで,　`Flutter SDK Version`入力を埋めます。
 
    Flutter SDKのgitリポジトリのタグかブランチを指定します。デフォルト値は`stable`です。Flutterの新しいstableブランチを使用できます。
+   * 利用可能なタグを見つけるには[https://github.com/flutter/flutter/releases](https://github.com/flutter/flutter/releases "https://github.com/flutter/flutter/releases")
+   * 利用可能なブランチを見るには[https://github.com/flutter/flutter/branches](https://github.com/flutter/flutter/branches "https://github.com/flutter/flutter/branches")
 3. To the `Flutter Analyze` Step, add any flags you wish to use to the `Additional parameters` input.
 
    The Step runs the `flutter analyze` command with the specified flags. To check the available flags, open a command line interface on your own machine and run `flutter analyze --help`.
@@ -106,7 +108,9 @@ Run a build! Once it's done, you can find your test results on the `Apps and Art
 
 ## Deploying a Flutter app
 
-## Flutterアプリのデプロイ
+## Flutter
+
+## アプリのデプロイ
 
 To build and deploy a Flutter app, a workflow must contain these Flutter Steps:
 
@@ -130,20 +134,36 @@ iOS、Androidプロジェクトはworkflowを使い同時、または個々の�
 
 Here's an example workflow we'll use in this configuration, with all the necessary Steps:
 
+ワークフローの例をこのコンフィグレーションで、必要なステップを踏まえて説明します。
+
 ![](/img/flutter-workflow.png)We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
 
 {% include message_box.html type="note" title="Packages and libraries" content="We also support building Flutter packages and libraries. Unlike in the case of apps, there is no artifact to build so there is no need for a `Flutter Build` Step in your workflow."%}
 
+iOSとAndroidの特有の配置手順については、それぞれのセクションで説明します！
+
+{% include message_box.html type="note" title="パッケージとライブラリ" content="Flutterのパッケージとライブラリをビルドするサポートもしています。アプリとは異なり、ビルドするためのアーティファクトがないのでワークフローに`Flutter Build`ステップは必要ありません。"%}
+
 ### Deploying a Flutter app to Bitrise
+
+### BitriseにFlutter アプリをデプロイ
 
 The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build’s page.
 
 You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
+`Deploy to bitrise.io`ステップはビルドページの[ APPS & ARTIFACTS](/builds/build-artifacts-online/)タブの中にあるビルドに関係している全てのアーティファクトをアップロードします。
+
+ビルドのURLを使用して、作成されたAPK / .ipaファイルをチームメンバーと共有できます。 APK / .ipaファイルが作成されたことをユーザーグループおよび個々のユーザに通知することもできます。
+
 1. Go to the `Deploy to bitrise.io` step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK/.ipa file in the `APPS & ARTIFACTS` tab.
+3. `Deploy to bitrise.io`ステップへ
+4. `Notify: User Roles`にロールを追加するとロールを与えられたユーザーにのみ通知がいきます。または、`Notify: Emails`に通知したいユーザーのメールアドレスを[secret env vars](/builds/env-vars-secret-env-vars/)として設定し入力します。`APPS & ARTIFACTS`タブで作成されたAPK / .ipaファイルの横にあるの`eye`アイコンをクリックすると、詳細を`Notifications`で変更することもできます。
 
 ### Deploying a Flutter app to App Store Connect
+
+### App Store ConnectにFlutterアプリをデプロイ
 
 To deploy your iOS Flutter project to the App Store, you'll need to build the app, export an .ipa file and submit it to the App Store.
 
@@ -154,32 +174,64 @@ Unlike testing, this requires code signing files:
 
 Read more about iOS code signing on Bitrise in [our detailed guides](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing/)!
 
+iOS FlutterプロジェクトをApp Storeにデプロイするために、アプリをビルドし、an .ipaファイルをエクスポート後にApp Storeにサブミットします。
+
+テストとは異なり、コード署名ファイルが必要です。
+
+* iOS Distribution Certificate (a .p12 file)
+* App Store Provisioning Profile
+
+BitriseのiOSコード署名については[our detailed guides](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing/)から！
+
  1. Make sure you have the `Certificate and profile installer` Step in your workflow.
+    1. ワークフローに`Certificate and profile installer`ステップがあるか確認します。
  2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise.
+    2\. [必要なコード署名](/code-signing/ios-code-signing/ios-manual-provisioning/)ファイルをBitriseにアップロードします
  3. Open the `Flutter Build` Step and find the `iOS Platform Configs` input group.
+    3\. `Flutter Build`ステップを開き、`iOS Platform Configs`入力グループを確認してください
  4. Make sure the `Additional parameters` input has the value `--release`.
- 5. Check the `Platform` input of the Step: make sure it's set to either `iOS` or `both`.
+    4\. `Additional parameters`入力にバリュー`--release`があるかを確認してください
+ 5. Check the `Platform` input of the Step: make sure it's set to either `iOS` or `both`. 
+
+    5\. ステップ`Platfor`入力の確認: `iOS`か`both`のどちらかに設定します
  6. Make sure you have the `Xcode Archive & Export for iOS` Step in your workflow.
 
     It should be after the `Flutter Build` Step.
+    6\." `Flutter Build`ステップ後"に、ワークフローに`Xcode Archive & Export for iOS`ステップがあることを確認します。
  7. Set the `Select method for export` input of the Step to `app-store`.
+    7\. ステップの`Select method for export`入力を`app-store`で設定します。
  8. Add the `Deploy to iTunes Connect` Step to the end of the workflow.
+    8\. `Deploy to iTunes Connect`ステップをワークフローの最後に追加します。
  9. Provide your Apple credentials in the respective input fields.
     * Apple ID
     * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
     Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
+    9\. 個々の入力項目にAppleのアカウント情報（クレデンシャル）が必要です。
+    * Apple ID
+    * パスワード、iTunes Connectの二要素認証を使っている場合は申請パスワード
 10. [Start a build]()!
+    10\. ビルド開始！
 
 If all goes well, the Step will submit the app to App Store Connect. You can, from the App Store Connect page, distribute the app to external testers via Testflight, or release it to the App Store itself.
 
+順調に進んだ場合、ステップはアプリをApp Store Connectにサブミットします。App Store Connectページから、Testflightを介してアプリを外部のテスターに​​配布するか、App Storeにリリースできます。
+
 ### Deploying a Flutter app to Google Play
 
+### Google PlayにFlutterアプリをデプロイ
+
 To deploy your app to Google Play, you need to export an APK file and sign it.
+
+Google Playにアプリをデプロイするには、APKファイルをエクスポートして署名する必要があります。
 
 You can [configure the signing](https://flutter.io/docs/deployment/android#configure-signing-in-gradle) in the app's `build.gradle` file and then Flutter will sign your app during the build phase.
 
 In this guide, we'll walk you through the other option: how to sign your APK file on Bitrise and then deploy the app to Google Play. First, you will need to [create a keystore file](https://flutter.io/docs/deployment/android#create-a-keystore) and then upload it to Bitrise.
+
+アプリの`build.gradle`ファイルで[署名を設定](https://flutter.io/docs/deployment/android#configure-signing-in-gradle)すると、ビルドフェーズの間にFlutterがアプリに署名します。
+
+他の選択肢について: BitriseでAPKファイルに署名してからGoogle Playにアプリをデプロイできます。まず、[キーストアファイルを作成](https://flutter.io/docs/deployment/android#create-a-keystore)し、Bitriseにアップロードする必要があります。
 
 1. Open your app's Workflow Editor.
 2. Go to the `Code Signing` tab.
@@ -188,25 +240,50 @@ In this guide, we'll walk you through the other option: how to sign your APK fil
 
 Once that is done, you are ready to configure a workflow to deploy the app.
 
+1. アプリのWorkflow Editorを開きます
+2. `Code Signing`タブへ
+3. keystoreファイルを`ANDROID KEYSTORE FILE`項目にドラッグ＆ドロップします。
+4. `Keystore password`, `Keystore alias`,  `Private key password`らの項目を埋め、`Save metadata`をクリックします。
+
+完了後、アプリをデプロイするためにワークフローを構成できます。
+
 1. Make sure you are in sync with Google Play Store!
 
    Learn how to:
    * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
    * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+     1. Google Play Storeと同期していることを確認します。
+        * [Google Play Store登録とプロジェクトセットアップ](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)の方法
+        *  [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)のセットアップ方法
 2. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+   2. Bitrise `Dashboard`から`Code Signing`タブに行きサービスアカウントJSONキーを`GENERIC FILE STORAGE`にアップロードします。
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   3. ファイルURLがあるenv keyをコピーします。
+
+      例:`BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 4. Make sure you have the `Sign APK` Step in your workflow.
 
    It should be after the `Flutter Build` Step.
+   4. "`Flutter Build`ステップ後"に、ワークフローに`Sign APK`ステップがあるか確認します。
 5. Open the `Flutter Build` Step and find the `Android Platform Configs` input group.
+   5. `Flutter Build`ステップを開き`Android Platform Configs`入力グループを確認します。
 6. Make sure the `Additional parameters` input has the value `--release`.
+   6.  `Additional parameters`入力にバリュー`--release`があるかを確認します。
 7. Check the `Platform` input of the Step: make sure it's set to either `android` or `both`.
+   7. ステップ`Platform`入力の確認:`android`か`both`のどちらかに設定します。
 8. Make sure you have the `Google Play Deploy` Step after the `Sign APK` Step to your workflow.
+   8. ワークフローへの`Sign APK`ステップ後に、`Google Play Deploy`ステップがあることを確認します
 9. Fill out the required input fields as follows:
    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
+     9. 以下の入力項目に記入します。
+        * `Service Account JSON key file path`:この項目はリモートURLを受け入れることができるため、アップロードしたサービスアカウントのJSONキーを含む環境変数を指定する必要があります。例:`$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+        * `Package name`:AndroidアプリのPackage name
+        * `Track`:APKを展開するトラック（例: alpha / beta / rollout / productionまたは設定したカスタムトラック）
 
 And that’s it! Start a build and release your Android app to the app store of your choice.
+
+さあ、AndroidアプリをApp Storeにビルド、リリースしましょう！
