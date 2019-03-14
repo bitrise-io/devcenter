@@ -28,10 +28,10 @@ If your build requires any files to make it work, upload them to the Generic Fil
  2. Open the app you want to add files to.
  3. Open the Workflow Editor.
  4. Click the `Code Signing` tab.
- 5. ダッシュボード
- 6. アプリを開きファイルを追加
- 7. Workflow Editorを開く
- 8. `Code Signing`をクリック
+ 5. ダッシュボードへ。
+ 6. アプリを開きファイルを追加します。
+ 7. Workflow Editorを開きます。
+ 8. `Code Signing`をクリックします。
 
     ![](/img/code-signing-tab.png)
  9. Scroll down to the Generic File Storage and provide a unique ID to your file.
@@ -39,21 +39,23 @@ If your build requires any files to make it work, upload them to the Generic Fil
     The unique ID will be part of the generated download URL that Bitrise stores as an Environment Variable.
 10. Upload the file by clicking **Upload file**.
 
-    Remember that the file size cannot exceed 5 MB.
-    9\. 下にスクロールしてGeneric File Storageを開き固有IDを使ってファイルをあける。
+    Remember that the file size cannot exceed 5 MB. 
 
-    ＊固有IDはBitriseのEnvironment VariableのURLをダウンロードするときに必要になります。
-    10\. Upload fileをクリックしてファイルをアップロード
+    9\. 下にスクロールしてGeneric File Storageを開き固有IDを使ってファイルをあけます。
+
+    ＊固有IDはBitriseが環境変数として保存している作成されたダウンロードURLの一部になります。
+
+     10. **Upload file**をクリックしてファイルをアップロード
 
     ＊ファイルのサイズが5MB以上だと作動しません
 
 Now you can use this file in a variety of ways in your build - read more in [the detailed guide about the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/).
 
-ファイルを多様に使えるようになります。もっと詳しく知りたい方は[ Generic File Storageガイド](/tutorials/how-to-use-the-generic-file-storage/)をクリック。
+ファイルを多様に使えるようになります。詳しく知りたい方は[ Generic File Storageガイド](/tutorials/how-to-use-the-generic-file-storage/)をクリック。
 
 Once a file is uploaded, it can also be:
 
-ファイルがアップロードされたら：
+ファイルがアップロードしたら：
 
 * downloaded by anyone who has Admin or Owner role on the app's team on Bitrise, unless [it is protected](/protecting-your-code-signing-files/)
 * exposed to Pull Request builds
