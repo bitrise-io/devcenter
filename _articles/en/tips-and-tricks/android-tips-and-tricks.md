@@ -95,7 +95,7 @@ We suggest using our `Install missing Android SDK components` Step to install de
 
 1. Provide the required NDK version in the `NDK Revision` input field. Leave this input empty if you are not using NDK in your project.
 
-![](/img/android-ndk.png)
+   ![](/img/install-missing-android-tools.png)
 
 The Step runs the `gradlew dependencies` command and prints out a list of dependencies and SDK components that are relevant to your project. Then the Step takes care of installing them.
 
