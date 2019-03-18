@@ -35,4 +35,8 @@ Once done, set up the SSH keys you created so that Bitrise can clone your reposi
 curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-ssh-key' -d '{"auth_ssh_private_key":"your-private-ssh-key","auth_ssh_public_key":"your-public-ssh-key","is_register_key_into_provider_service":false}'
 ```
 
+Finish the app registration process by calling the `FINISH` endpoint. This endpoint allows you to configure your applications: 
 
+- project type
+- stack
+- 
