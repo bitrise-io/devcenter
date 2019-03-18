@@ -5,13 +5,13 @@ date: 2019-02-25 14:22:28 +0000
 published: false
 
 ---
-The first thing that you have to do is **get a Personal Access Token** from the [Security page of your account](https://www.bitrise.io/me/profile#/security) (if you haven’t already). Then **get the slug of the app** which can be derived from the URL of your application: `[https://www.bitrise.io/app/](https://www.bitrise.io/app/ "https://www.bitrise.io/app/")[{APP-SLUG}#/builds](https://www.bitrise.io/app/%7BAPP-SLUG%7D#/builds.)`[.](https://www.bitrise.io/app/%7BAPP-SLUG%7D#/builds.)
+The first thing that you have to do is **get a Personal Access Token** from the [Security page of your account](https://www.bitrise.io/me/profile#/security) (if you haven’t already). Then **get the slug of the app** which can be derived from the URL of your application: `[https://www.bitrise.io/app/](https://www.bitrise.io/app/ "https://www.bitrise.io/app/")[{APP-SLUG}#/builds](https://www.bitrise.io/app/%7BAPP-SLUG%7D#/builds.)`
 
 Steps of uploading
 
 The uploading process consists of three steps:
 
-1. **Request a pre-signed AWS URL** from Bitrise.
+1. **Request a pre-signed AWS URL** from Bitrise with the `/apps/APP-SLUG/provisioning-profiles` endpoint.
 
        curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
 
