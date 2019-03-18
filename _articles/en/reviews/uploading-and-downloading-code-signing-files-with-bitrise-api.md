@@ -9,8 +9,6 @@ The first thing that you have to do is **get a Personal Access Token** from the 
 
 Steps of uploading
 
-The uploading process consists of three steps:
-
 1. **Request a pre-signed AWS URL** from Bitrise with the `/apps/APP-SLUG/provisioning-profiles` endpoint.
 
        curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
@@ -33,7 +31,7 @@ The response should look like this:
 
 The two important things are the **slug** and the **upload_url**, these will be required for the rest of the steps.
 
-1. **Upload your file to AWS** 
+1. **Upload your file to AWS**
 
        curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
 
@@ -77,7 +75,7 @@ provisioning profile
 
     curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
 
- build certificate
+build certificate
 
      curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates'
 
@@ -87,10 +85,9 @@ If you’d like to download the actual file from AWS, you can also do that with 
 
 * provisioning profile ([Devcenter](https://devcenter.bitrise.io/api/v0.1/#get-appsapp-slugprovisioning-profilesprovisioning-profile-slug))
 
-    curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
-
+  curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
 * build certificate ([Devcenter](https://devcenter.bitrise.io/api/v0.1/#get-appsapp-slugbuild-certificatesbuild-certificate-slug))
 
-    curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG'
+  curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG'
 
 These responses will contain a pre-signed, expiring AWS URL for the actual file.
