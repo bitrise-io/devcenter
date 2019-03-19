@@ -1,5 +1,5 @@
 ---
-title: "(Getting started with Xamarin apps)"
+title: Xamarinアプリの開始手順 (Getting started with Xamarin apps)
 redirect_from: []
 date: 2019-03-19 10:35:17 +0000
 published: false
