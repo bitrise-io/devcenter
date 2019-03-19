@@ -65,20 +65,24 @@ Xamarin solution fileは複数のプロジェクトを含めることができ�
     ![](/img/xamarin-project-build.png)
  9. Select the Xamarin solution platform. This will be stored as an Environment Variable and it can be changed later.　Xamarin solution platformを選択します。これも[Environment Variable](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)として保存され、あとで変更も可能です。
 10. Confirm your build configuration.　ビルド設定の最終確認を行ってください。
-11. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.　webhookの登録をしてください。登録後、コードがプッシュされたりプルリクエストが作成されるとBitriseが自動的にビルドを開始します。
+11. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.　webhookの登録をしてください。登録後、コードがプッシュされたりプルリクエストが作成されるとBitriseが自動的にビルドを開始します。これで最初のビルドが開始されます。messageをクリックすると、自動的にbuildページに遷移されます。
 
-## Installing dependencies
+## Installing dependencies　dependencies のインストール
 
 Installing your dependencies with Xamarin apps is taken care of by a dedicated Step: `NuGet restore`. This Step is part of every automatically created [workflow](/getting-started/getting-started-workflows/) for Xamarin apps and it has one required input: the path to the Xamarin solution file which is stored as an Environment Variable when you add the app.
 
-1. Enter the Workflow Editor of your app, and click the `Workflows` tab.
+Xamarinアプリのdependenciesのインストールは特定のステップ`NuGet restore`により処理されます。このステップは自動で作成されたXamarinアプリの[ワークフロー](/getting-started/getting-started-workflows/)の一部を担っており、一つ必要なインプットがあります：アプリを追加する際Environment Variableとして保存されるXamarin solution fileへの進路です。
+
+1. Enter the Workflow Editor of your app, and click the `Workflows` tab.　アプリのWorkflow Editorへ入り、`Workflows`タブをクリックします。
 2. Make sure you have the `NuGet restore` Step in your workflow.
 
-   The Step's single required input is the path to the Xamarin solution file. By default, the input is an [Environment Variable](/getting-started/getting-started-steps/#environment-variables-as-step-inputs), stored when adding the app to Bitrise. If you want to use a different solution file, click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
+   The Step's single required input is the path to the Xamarin solution file. By default, the input is an [Environment Variable](/getting-started/getting-started-steps/#environment-variables-as-step-inputs), stored when adding the app to Bitrise. If you want to use a different solution file, click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.　あなたのワークフロー内に`NuGet restore`があることを確認してください。ここのステップで必要なインプットはXamarin solution fileへの進路となります。デフォルトでは、そのインプットはEnvironment Variableとなっており、Bitriseにアプリを追加するときに保存されます。異なるsolution fileを使う際は、Workflow Editor内にあるタブ`Env Vars`をクリックしてEnvironment Variableの値を変更してください。
 
-## Testing Xamarin apps
+## Testing Xamarin apps　Xamarinアプリのテスト
 
 You can run **unit tests** and **UI tests** on Bitrise, both with Android and iOS projects. It is easy to configure and you can use all the testing frameworks available on the Microsoft App Center.
+
+BitriseではユニットテストとUIテストが行なえます。
 
 ### Unit testing
 
