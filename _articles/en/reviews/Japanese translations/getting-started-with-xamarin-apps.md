@@ -86,12 +86,12 @@ BitriseではiOS・Androidプロジェクトの両方でユニットテストと
 
 ### Unit testing　ユニットテスト
 
-Unit tests of Xamarin apps can be run with the `NUnit Runner` Step. The Step runs NUnit 2.x and NUnit 3.0 or higher tests with the NUnit Console Runner (_nunit3-console.exe_).　
+Unit tests of Xamarin apps can be run with the `NUnit Runner` Step. The Step runs NUnit 2.x and NUnit 3.0 or higher tests with the NUnit Console Runner (_nunit3-console.exe_).
 
 Xamarinアプリのユニットテストは、`NUnit Runner` ステップにて走らせることができます。そのステップはNUnit Console Runnerを使用したNUnit 2.x もしくはNUnit 3.0 またはそれより高いテストで走ります（_nunit3-console.exe_）。
 
 1. Enter the Workflow Editor of your app, and click the `Workflows` tab.　アプリのWorkflow Editorに入り、`Workflows`タブをクリックします。
-2. Add the `NUnit runner` Step to your workflow.　
+2. Add the `NUnit runner` Step to your workflow.
 
    This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app.　ワークフローに`NUnit runner` ステップを追加します。このステップは`NuGet restore` ステップ後に追加してください：アプリのテストを走らせる前に全ての依存関係をインストールしてください。
 3. Fill in the required input variables. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). If you want to use a different solution file or solution configuration, click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.　必要なinput variablesを入力します。デフォルトでは、全てのinputは[Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs)になっています。異なるsolution fileまたはsolution configuration を使用する場合は、Workflow Editor内のタブ`Env Vars` をクリックし、環境変数の値を変更してください。
@@ -215,31 +215,37 @@ iOSプロジェクトの場合、Visual Studioにて正確なコード署名ア�
 {% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need to use a Distribution type code signing identity with an App Store provisioning profile. Also, make sure that the Distribution certificate and the provisioning profile are uploaded to Bitrise!"%}
 
 1. Go to the `Workflows` tab of the Workflow Editor.　Workflow Editor の`Workflows`タブに進みます。
-2. Select the workflow you created for deploying your app.　アプリのデプロイを行うための作成したワークフローを選択します。
-3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
-4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.
-5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow.
+2. Select the workflow you created for deploying your app.　アプリのデプロイを行うために作成したワークフローを選択します。
+3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.　コード署名ステップと`Xamarin Archive` ステップがワークフローに含まれていることを確認してください。
+4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.　異なるソリューションコンフィグを使用する場合は、`Env Var` タブ上の関連した環境変数の値を変更してください。どの環境変数を変更するかは、`Xamarin Archive` ステップのインプットを確認してください。
+5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow.　`Deploy to iTunes Connect - Application Loader` ステップをワークフローに追加してください。
 
    ![](/img/deploy-itunes-connect.jpg)
-6. Click the `Deploy to iTunes Connect - Application Loader`  Step, and enter your Apple ID and password in the relevant input field.
-7. Start a build!
+6. Click the `Deploy to iTunes Connect - Application Loader`  Step, and enter your Apple ID and password in the relevant input field.　 `Deploy to iTunes Connect - Application Loader`  ステップをクリックし、Apple IDとパスワードを関連したインプットフィールドに入力します。
+7. Start a build!　ビルド開始です！
 
-### Deploying to Google Play
+### Deploying to Google Play　Google Play へのデプロイ
 
 {% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need a **Release** configuration."%}
 
-1. Go to the `Workflows` tab of the Workflow Editor.
-2. Select the workflow you created for deploying your app.
-3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
-4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.
+1. Go to the `Workflows` tab of the Workflow Editor.　Workflow Editor の`Workflows`タブに進みます。
+2. Select the workflow you created for deploying your app.　アプリのデプロイを行うために作成したワークフローを選択します。
+3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.　コード署名ステップと`Xamarin Archive` ステップがワークフローに含まれていることを確認してください。
+4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.　異なるソリューションコンフィグを使用する場合は、`Env Var` タブ上の関連した環境変数の値を変更してください。どの環境変数を変更するかは、`Xamarin Archive` ステップのインプットを確認してください。
 5. Add the `Google Play Deploy` Step to the workflow.
 
-   The Step needs to be after the `Xamarin Archive` Step.
+   The Step needs to be after the `Xamarin Archive` Step.　ワークフローに`Google Play Deploy` ステップを追加してください。このステップは`Xamarin Archive` ステップの後にきます。
 6. Upload the Service Account JSON key file to the **Generic File Storage** on the `Code Signing`tab of the Workflow Editor.
 
    Learn more about [how to access your JSON key file](/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
-7. Create a Secret Environment Variable to reference the Service Account's JSON key file.
-8. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field.
-9. Start a build!
 
-If the build is successful, congratulations - you've just deployed your Xamarin app!
+   Workflow Editor の`Code Signing` タブ上にある**Generic File Storage**へサービスアカウントJSONキーファイルをアップロードしてください。詳しくは[JSONキーファイルのアクセス方法](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)をご確認ください。
+7. Create a Secret Environment Variable to reference the Service Account's JSON key file.
+
+   サービスアカウントのJSONキーファイルを参照するためのシークレット環境変数を作成してください。
+8. Click the `Google Play Deploy` Step, and add the Service Account's JSON key file path and the package name in the relevant input field.  
+   `Google Play Deploy`ステップをクリックし、サービスアカウントのJSON key file pathとパッケージ名を関連したインプットフィールドに追加してください。
+9. Start a build!　ビルド開始です！
+
+If the build is successful, congratulations - you've just deployed your Xamarin app!  
+成功したあなた！おめでとうございます。Xamarinアプリのデプロイが完了しました！
