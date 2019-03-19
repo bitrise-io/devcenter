@@ -5,9 +5,9 @@ date: 2019-02-25 14:22:28 +0000
 published: false
 
 ---
-### Before you start
+## Before you start
 
-Before you'd start creating and uploading code signing files, you have to generate a new token and also grab the slug of the app you want to add the code signing files to. To be able to access and use our API, you have to first generate a Personal Access Token.
+Before you'd start creating and uploading code signing files, you have to generate a new token and grab the slug of the app you want to add the code signing files to. To be able to access and use our API, you have to first generate a Personal Access Token to authorize yourself in the curl command.
 
 1. Go to your `Account Settings`.
 2. Click the `Security` tab on the left.
@@ -17,10 +17,47 @@ Before you'd start creating and uploading code signing files, you have to genera
 
    ![](/img/new-token-generation.png)
 
-The first thing that you have to do is **get a Personal Access Token** from the [Security page of your account](https://www.bitrise.io/me/profile#/security) (if you haven’t already). Then **get the slug of the app** which can be derived from the URL of your application: `[https://www.bitrise.io/app/](https://www.bitrise.io/app/ "https://www.bitrise.io/app/")[{APP-SLUG}#/builds](https://www.bitrise.io/app/%7BAPP-SLUG%7D#/builds.)`
+		storing the new tokens
 
-1. **Request a pre-signed AWS URL** from Bitrise with the `/apps/APP-SLUG/provisioning-profiles` endpoint. Add provisioning profile for a specific application. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.
-2. We're uploading provisioning profile file named `sample.provisionprofile`, the size of which is 2047 bytes.
+6. Get the slug of your app from Bitrise. For example, [https://www.bitrise.io/app/](https://www.bitrise.io/app/ "https://www.bitrise.io/app/")[{APP-SLUG}#/builds](https://www.bitrise.io/app/%7BAPP-SLUG%7D#/builds.)
+
+Now that all is at hands, let's see what you can do with our API.
+
+## Creating a provisioning profile
+
+You can add a new provisioning profile to your app with the post request of `/apps/{app-slug}/provisioning-profiles`. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.
+
+Example `curl` request:
+
+    curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
+
+Where the example response is:
+
+```
+{
+  "data":{
+    "upload_file_name":"sample.provisionprofile",
+    "upload_file_size":2047,
+    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    "processed":false,
+    "is_expose":true,
+    "is_protected":false,
+    "upload_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e"
+  }
+}
+```
+
+After this call you have to upload to AWS your provisioning profile file with the presigned URL.
+
+#### Example `curl` request
+
+```
+curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
+```
+
+1. 
+2. **Request a pre-signed AWS URL** from Bitrise with the `/apps/APP-SLUG/provisioning-profiles` endpoint. Add provisioning profile for a specific application. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.
+3. We're uploading provisioning profile file named `sample.provisionprofile`, the size of which is 2047 bytes.
 
        curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
 
