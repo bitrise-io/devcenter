@@ -17,8 +17,7 @@ Before you'd start creating and uploading code signing files, you have to genera
 
    ![](/img/new-token-generation.png)
 
-		storing the new tokens
-
+        storing the new tokens
 6. Get the slug of your app from Bitrise. For example, [https://www.bitrise.io/app/](https://www.bitrise.io/app/ "https://www.bitrise.io/app/")[{APP-SLUG}#/builds](https://www.bitrise.io/app/%7BAPP-SLUG%7D#/builds.)
 
 Now that all is at hands, let's see what you can do with our API.
@@ -33,31 +32,26 @@ Example `curl` request:
 
 Where the example response is:
 
-```
-{
-  "data":{
-    "upload_file_name":"sample.provisionprofile",
-    "upload_file_size":2047,
-    "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
-    "processed":false,
-    "is_expose":true,
-    "is_protected":false,
-    "upload_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e"
-  }
-}
-```
+    {
+      "data":{
+        "upload_file_name":"sample.provisionprofile",
+        "upload_file_size":2047,
+        "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+        "processed":false,
+        "is_expose":true,
+        "is_protected":false,
+        "upload_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e"
+      }
+    }
 
 After this call you have to upload to AWS your provisioning profile file with the presigned URL.
 
 #### Example `curl` request
 
-```
-curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
-```
+    curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
 
-1. 
-2. **Request a pre-signed AWS URL** from Bitrise with the `/apps/APP-SLUG/provisioning-profiles` endpoint. Add provisioning profile for a specific application. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.
-3. We're uploading provisioning profile file named `sample.provisionprofile`, the size of which is 2047 bytes.
+1. **Request a pre-signed AWS URL** from Bitrise with the `/apps/APP-SLUG/provisioning-profiles` endpoint. Add provisioning profile for a specific application. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.
+2. We're uploading provisioning profile file named `sample.provisionprofile`, the size of which is 2047 bytes.
 
        curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
 
