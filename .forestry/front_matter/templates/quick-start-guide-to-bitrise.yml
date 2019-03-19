@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/fastlane.md
 - _articles/en/reviews/Japanese translations/getting-started-with-xamarin-apps.md
 - _articles/en/reviews/teams-and-organizations-draft.md
 - _articles/en/reviews/Japanese translations/bitrise上のファイル管理-managing-files-on-bitrise.md
