@@ -59,7 +59,7 @@ Once a file is uploaded, it can also be:
 
 * downloaded by anyone who has Admin or Owner role on the app's team on Bitrise, unless [it is protected](/protecting-your-code-signing-files/)
 * exposed to Pull Request builds
-* bitriseのアプリチームの管理者または所有者の人がダウンロードします？？？
+* bitriseのアプリチームの管理者または所有者がダウンロードします,[it is protected](/protecting-your-code-signing-files/)
 * Pull RequestビルドにExposeする
 
 ### Code signing files
@@ -96,13 +96,13 @@ Builds can generate and export files: for example, you can export a binary packa
 1. Open the build that you ran.
 2. Go to the Apps & Artifacts tab.
 3. View and download the generated files.
-4. ビルドを開く
-5. アプリ、Artifactsのタブにいく
-6. 作成したファイルをチェックしてダウンロードする
+4. ビルドを開きます
+5. アプリ、Artifactsのタブに
+6. 作成したファイルをチェックしてダウンロードします
 
 You can read more about [build artifacts](/builds/build-artifacts-online/) in our detailed guide!
 
-詳しく知りたい方は[build artifacts](/builds/build-artifacts-online/)をクリック
+詳しく知りたい方は[build artifacts](/builds/build-artifacts-online/)へ
 
 ### Using encrypted files
 
@@ -122,18 +122,19 @@ In this example, we'll show how to do this. We use the **pwgen** password genera
 
 1. Open your Terminal/Command Line.
 2. Create a 32 character passphrase for encryption.
-   1. ターミナル/コマンドラインを開く
-   2. 32文字のパスフレーズを暗号化のために作る
+   1. ターミナル/コマンドラインを開きます
+   2. 32文字のパスフレーズを暗号化のために作ります
 
       pwgen -s 32 1
 3. Encrypt your file.
-   3\. ファイルを暗号化
+
+    3. ファイルを暗号化します。
 
        gpg -c my_secret_file
 
    Optionally, you can encrypt your file(s) in a non-interactive way.
 
-   オプショナルで、ファイルをインタラクティブせずに暗号化することができる
+   オプショナルで、ファイルをインタラクティブせずに暗号化することができます。
 
        gpg --batch --passphrase <passphrase> -c my_secret_file
 4. Upload `my_secret_file` to the Generic File Storage on Bitrise.
@@ -142,13 +143,15 @@ In this example, we'll show how to do this. We use the **pwgen** password genera
 7. Add the encrypted file path and the output file path to the relevant Step inputs.
 
    You can find the Environment Variable for the encrypted file path in the Generic File Storage.
-   4\. Bitrise上で`my_secrefile`をGeneric File Storageにアップロードする
-   5\. `Decrypt file`Stepをworkflowに追加
-   6\. 作ったパスフレーズを [secret Environment Variable](/builds/env-vars-secret-env-vars/)として追加し適応なStep入力に組み込む
-   1. 暗号化ファイルをとアウトプットファイルを適応なStep入力に追加する
+   4\. Bitrise上で`my_secrefile`をGeneric File Storageにアップロードします。
+
+    5. `Decrypt file`Stepをworkflowに追加します。
+
+    6. 作ったパスフレーズを [secret Environment Variable](/builds/env-vars-secret-env-vars/)として追加し適応なStep入力に組み込みます。
+   7. 暗号化ファイルをとアウトプットファイルを適応なStep入力に追加します。
 
    Generic File Storage内の暗号化ファイルのためのEnvironment Variableを見つけることができます。
 
 That's it! Once you run the build, the Step will decrypt your file and you can use it for whatever you need it for!
 
-以上です！ビルドを行ったらStepがファイルを解読し、必要なことに使うことができます！
+以上です！ビルドを行ったらStepがファイルを解読し、必要に応じて使うことができます！
