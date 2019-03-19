@@ -210,12 +210,12 @@ iOSプロジェクトの場合、Visual Studioにて正確なコード署名ア�
      例：iOSとAndroidの両方のプロジェクトではなく、iOSプロジェクトのみのビルドを行う場合
    * **Xamarin solution platform**: the target platform of your solution configuration.　あなたのソリューションコンフィグのターゲットプラットフォームを示します。
 
-### Deploying to the App Store
+### Deploying to the App Store　App Storeへのデプロイ
 
 {% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need to use a Distribution type code signing identity with an App Store provisioning profile. Also, make sure that the Distribution certificate and the provisioning profile are uploaded to Bitrise!"%}
 
-1. Go to the `Workflows` tab of the Workflow Editor.
-2. Select the workflow you created for deploying your app.
+1. Go to the `Workflows` tab of the Workflow Editor.　Workflow Editor の`Workflows`タブに進みます。
+2. Select the workflow you created for deploying your app.　アプリのデプロイを行うための作成したワークフローを選択します。
 3. Check that the code signing Steps and the `Xamarin Archive` Step are included in the workflow.
 4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the `Env Var` tab. You can check out which Env Vars you need to change in the inputs of the `Xamarin Archive` Step.
 5. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow.
