@@ -7,6 +7,8 @@ published: false
 ---
 ## Before you start
 
+All examples in this guide use the `[https://api.bitrise.io/v0.1/apps/APP-SLUG/builds](https://api.bitrise.io/v0.1/apps/APP-SLUG/builds "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds")` endpoint. This endpoint can only be authorized with a Personal Access Token!
+
 Before you'd start creating and uploading code signing files, you have to generate a new token and grab the slug of the app you want to add the code signing files to. To be able to access and use our API, you have to first generate a Personal Access Token to authorize yourself in the curl command.
 
 1. Go to your `Account Settings`.
