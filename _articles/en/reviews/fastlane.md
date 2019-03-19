@@ -29,8 +29,7 @@ In this case, you have to configure the project manually. Click `Next`. You will
 
 Choose the project type (for example, Xamarin) and specify the necessary inputs (for example, the path to the Xamarin Solution file). You can also select the stack on which you wish to run your builds.
 
-{% include message_box.html type="note" title="Fastlane projects" content="
-Please note that if you choose `fastlane`, then based on your application you can further configure your project by selecting either `iOS`, `Android` or `other` as the `Project type` in `Selected project build configuration`.
+{% include message_box.html type="note" title="Fastlane projects" content=" Please note that if you choose `fastlane` at `Project build configuration`, then you can further configure your project by selecting either `iOS`, `Android` or `other` as the `Project type` in `Selected project build configuration`.
 "%}
 
 ![](/img/project-build-config.png)
