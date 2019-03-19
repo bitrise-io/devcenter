@@ -189,20 +189,26 @@ iOSコード署名についての詳細は[ガイド](/code-signing/ios-code-sig
 
 On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same for all Xamarin apps. To make sure you build the correct project type, set up your solution configurations in Visual Studio.
 
-Bitriseでは、.ipaファイル・.apkファイルや.appファイルなど様々なエクスポートの手段に対応しています。
+Bitriseでは、.ipaファイル・.apkファイルや.appファイルなど様々なエクスポートの手段に対応しています。Xamarinアプリであれば、手順は全て同じです。正確なプロジェクトをビルドするために、Visual Studioのソリューションコンフィグをセットアップしてください。
 
 For example, if you want to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
 
+例えば、Google Playにアップロードするための.apkファイルを入手したい場合、ソリューションコンフィグ内にあるAndroidプロジェクトのためのReleaseプロジェクト設定を使用します。
+
 For your iOS project, set up the correct code signing identity in Visual Studio: for example, if you want to upload your app to the App Store, use a Distribution identity with an App Store type provisioning profile.
 
-1. Enter the Workflow Editor of your app, and click the `Workflows` tab.
-2. Make sure you have the `Xamarin Archive` Step in your workflow.
+iOSプロジェクトの場合、Visual Studioにて正確なコード署名アイデンティティをセットアップしてください。例えば、App Storeへアプリをアップロードしたいときは、App Store type プロビジョニングプロファイルを伴ってDistributionアイデンティティを使用します。
+
+1. Enter the Workflow Editor of your app, and click the `Workflows` tab.　アプリのWorkflow Editorに入り、`Workflows` タブをクリックします。
+2. Make sure you have the `Xamarin Archive` Step in your workflow.　`Xamarin Archive` ステップがワークフローに含まれていることを確認してください。
 
    ![](/img/xamarin-archive.jpg)
-3. Make sure the required inputs of the Step have appropriate values. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.
-   * **Path to the Xamarin Solution file**: the location of your Xamarin solution file.
-   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
-   * **Xamarin solution platform**: the target platform of your solution configuration.
+3. Make sure the required inputs of the Step have appropriate values. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.　ステップに必要なインプットには適切な値が入っています。デフォルトでは全てのインプットは環境変数になっています。Workflow Editorにある`Env Vars` タブをクリックし、環境変数の値を変更してください。
+   * **Path to the Xamarin Solution file**: the location of your Xamarin solution file.  あなたのXamarin ソリューションファイルの場所を示します。
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.　Bitriseであなたが走らせたい、Visual Studioでセットアップされたソリューションコンフィグが表示されます。異なる設定で走らせたい場合は、適切な環境変数に変更してください。
+
+     例：iOSとAndroidの両方のプロジェクトではなく、iOSプロジェクトのみのビルドを行う場合
+   * **Xamarin solution platform**: the target platform of your solution configuration.　あなたのソリューションコンフィグのターゲットプラットフォームを示します。
 
 ### Deploying to the App Store
 
