@@ -292,13 +292,30 @@ Before you start:
 * `Package name`: the package name of your Android app
 * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
 
+   4. 入力欄へ記入:
+*   `Service Account JSON key file path`：このフィールドはリモートURLを受け入れることができるため、アップロードしたサービスアカウントのJSONキーを含む環境変数を指定すします。
+
+  例: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL `
+* `Package name`：Androidアプリのパッケージ名 
+* `Track`：APKをデプロイするトラック(alpha/beta/rollout/production)
+
 ### Deploying to Bitrise
+
+### Bitriseにデプロイ
 
 Add the `Deploy to Bitrise.io - Apps, Logs, Artifacts` Step to your workflow. This will upload all your build artifacts into the `APPS & ARTIFACTS` tab of your Build's page.
 
 You can share the generated .ipa or APK with your team members using the build’s URL. You can also notify user groups or individual users that your .ipa or APK has been built.
 
+ワークフローに`Deploy to Bitrise.io - Apps, Logs, Artifacts`ステップを追加します。すべてのビルドアーティファクトが、ビルドのページの`APPS & ARTIFACTS`タブにアップロードされます。 
+
+ ビルドのURLを使用して、作成された.ipaまたはAPKをチームメンバーと共有できます。また、 .ipa、もしくはAPKが構築されたことをユーザーグループまたは個々のユーザーに通知することもできます。
+
 1. Go to the `Deploy to bitrise.io - Apps, Logs, Artifacts` Step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](https://yv69yaruhkt48w.preview.forestry.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated .ipa or APK in the `APPS & ARTIFACTS` tab.
+   1. `Deploy to bitrise.io - Apps, Logs, Artifacts`ステップに進みます。
+
+
+   2. `Notify: User Roles`で、ロールをユーザーにのみ通知されるようにロールを追加します。または、通知：Eメールフィールドに通知したいユーザーのEメールアドレスを入力します。これらの電子メールアドレスを秘密の環境変数として設定してください。 \[APPS＆ARTIFACTS\]タブで生成された.ipaまたはAPKの横にある目のアイコンをクリックすると、これらの詳細を\[Notifications\]で変更することもできます。
 
 Start a build! If your app is properly configured, you can find it deployed to the marketplace of your choice!
