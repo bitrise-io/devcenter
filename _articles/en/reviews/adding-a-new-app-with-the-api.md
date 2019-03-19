@@ -51,5 +51,11 @@ You're done! Your new app is ready: you can launch your first build!
 
 ## Managing an existing app 
 
-- Listing apps belonging to an account
-- Listing information about a specific app
+With the API, you can:
+
+- List all the apps that belong to the current authorized user.
+- Listing all the information about a specific app.
+- List apps belonging to a specified user account. 
+- List all apps belonging to an organization account. 
+
+You can also manage the app's `bitrise.yml` file: you can either download the application's current file or upload a new `bitrise.yml` file that will overwrite the old one. 
