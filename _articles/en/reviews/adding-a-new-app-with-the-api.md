@@ -50,3 +50,5 @@ curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/
 ```
 
 You're done! Your new app is ready: you can launch your first build!
+
+## Deleting an app
