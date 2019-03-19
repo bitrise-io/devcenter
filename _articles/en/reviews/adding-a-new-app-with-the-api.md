@@ -43,8 +43,6 @@ Finish the app registration process by calling the `finish` endpoint. This endpo
 
 You can also set environment variables, as well as immediately specify an organization that will be the owner of the application.
 
-NOTE FOR A WEBHOOK NOTE
-
 ``` bash
 curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/finish' -d '{"project_type":"ios","stack_id":"osx-vs4mac-stable","config":"default-ios-config","mode":"manual","envs":{"env1":"val1","env2":"val2"},"organization_slug":"e1ec3dea540bcf21"}'
 ```
@@ -53,3 +51,5 @@ You're done! Your new app is ready: you can launch your first build!
 
 ## Managing an existing app 
 
+- Listing apps belonging to an account
+- Listing information about a specific app
