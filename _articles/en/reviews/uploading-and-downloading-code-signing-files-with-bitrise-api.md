@@ -103,9 +103,9 @@ build certificate
 
      curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates'
 
-#### Downloading prov. profiles and build certs
+#### Downloading provisioning profiles and build certificates
 
-If you’d like to download the actual file from AWS, you can also do that with the requests below:
+If you’d like to download the actual file from AWS, you can also do that with the following `curl` requests:
 
 * provisioning profile
 
