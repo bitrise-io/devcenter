@@ -191,7 +191,7 @@ BitriseのiOSコード署名については[our detailed guides](https://devcent
     3\. `Flutter Build`ステップを開き、`iOS Platform Configs`入力グループを確認してください
  4. Make sure the `Additional parameters` input has the value `--release`.
     4\. `Additional parameters`入力にバリュー`--release`があるかを確認してください
- 5. Check the `Platform` input of the Step: make sure it's set to either `iOS` or `both`. 
+ 5. Check the `Platform` input of the Step: make sure it's set to either `iOS` or `both`.
 
     5\. ステップ`Platfor`入力の確認: `iOS`か`both`のどちらかに設定します
  6. Make sure you have the `Xcode Archive & Export for iOS` Step in your workflow.
@@ -253,36 +253,36 @@ Once that is done, you are ready to configure a workflow to deploy the app.
    * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
    * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
      1. Google Play Storeと同期していることを確認します。
-        * [Google Play Store登録とプロジェクトセットアップ](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)の方法
-        *  [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)のセットアップ方法
+        * [Google Play Store登録とプロジェクトセットアップ](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+        * [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)のセットアップ方法
 2. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-   2. Bitrise `Dashboard`から`Code Signing`タブに行きサービスアカウントJSONキーを`GENERIC FILE STORAGE`にアップロードします。
+   2\. Bitrise `Dashboard`から`Code Signing`タブに行きサービスアカウントJSONキーを`GENERIC FILE STORAGE`にアップロードします。
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   3. ファイルURLがあるenv keyをコピーします。
+   3\. ファイルURLがあるenv keyをコピーします。
 
-      例:`BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   例:`BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 4. Make sure you have the `Sign APK` Step in your workflow.
 
    It should be after the `Flutter Build` Step.
-   4. "`Flutter Build`ステップ後"に、ワークフローに`Sign APK`ステップがあるか確認します。
+   4\. "`Flutter Build`ステップ後"に、ワークフローに`Sign APK`ステップがあるか確認します。
 5. Open the `Flutter Build` Step and find the `Android Platform Configs` input group.
-   5. `Flutter Build`ステップを開き`Android Platform Configs`入力グループを確認します。
+   5\. `Flutter Build`ステップを開き`Android Platform Configs`入力グループを確認します。
 6. Make sure the `Additional parameters` input has the value `--release`.
-   6.  `Additional parameters`入力にバリュー`--release`があるかを確認します。
+   6\.  `Additional parameters`入力にバリュー`--release`があるかを確認します。
 7. Check the `Platform` input of the Step: make sure it's set to either `android` or `both`.
-   7. ステップ`Platform`入力の確認:`android`か`both`のどちらかに設定します。
+   7\. ステップ`Platform`入力の確認:`android`か`both`のどちらかに設定します。
 8. Make sure you have the `Google Play Deploy` Step after the `Sign APK` Step to your workflow.
-   8. ワークフローへの`Sign APK`ステップ後に、`Google Play Deploy`ステップがあることを確認します
+   8\. ワークフローへの`Sign APK`ステップ後に、`Google Play Deploy`ステップがあることを確認します
 9. Fill out the required input fields as follows:
    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
-     9. 以下の入力項目に記入します。
-        * `Service Account JSON key file path`:この項目はリモートURLを受け入れることができるため、アップロードしたサービスアカウントのJSONキーを含む環境変数を指定する必要があります。例:`$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-        * `Package name`:AndroidアプリのPackage name
-        * `Track`:APKを展開するトラック（例: alpha / beta / rollout / productionまたは設定したカスタムトラック）
+     9\. 以下の入力項目に記入します。
+     * `Service Account JSON key file path`:この項目はリモートURLを受け入れることができるため、アップロードしたサービスアカウントのJSONキーを含む環境変数を指定する必要があります。例:`$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+     * `Package name`:AndroidアプリのPackage name
+     * `Track`:APKを展開するトラック（例: alpha / beta / rollout / productionまたは設定したカスタムトラック）
 
 And that’s it! Start a build and release your Android app to the app store of your choice.
 
