@@ -77,17 +77,23 @@ In the case of provisioning profiles you can set the `is_protected`,`is_expose` 
 3. once `processed` flag is set to true, then its value cannot be changed anymore
    "%}
 
-For setting the `is_protected` flag of one of your provisioning profiles, here's an example `curl` request with the `/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}` endpoint.
+#### Modifying an uploaded provisioning profile/build certificate
+
+Provisioning profile: 
+
+For setting the `is_protected` flag of one of your provisioning profiles, here's an example `curl` request with the `/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}` endpoint. The required parameters are: app slug and provisioning profile slug.
 
     curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG -d '{"is_protected":true}'
 
-Build certificate
+Build certificate:
+
 For a build certificate you can set the same attributes as for a provisioning profile (see above), but in addition, you can modify the password too, e.g. like this:
 
     curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG -d '{"certificate_password":"s0m3-v3ry-s3cr3t-str1ng"}'
 
-Listing prov. profiles and build certs
-You can list the provisioning profiles and build certificates for a specific app with the following requests:
+#### Listing provisioning profiles and build certificates
+
+Wondering how many provisioning profiles/build certificates belong to an app?  You can list them for a specific app with the following requests: get/post endpoint?
 
 provisioning profile
 
@@ -97,14 +103,14 @@ build certificate
 
      curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates'
 
-Downloading prov. profiles and build certs
+#### Downloading prov. profiles and build certs
 
 If you’d like to download the actual file from AWS, you can also do that with the requests below:
 
-* provisioning profile ([Devcenter](https://devcenter.bitrise.io/api/v0.1/#get-appsapp-slugprovisioning-profilesprovisioning-profile-slug))
+* provisioning profile
 
   curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
-* build certificate ([Devcenter](https://devcenter.bitrise.io/api/v0.1/#get-appsapp-slugbuild-certificatesbuild-certificate-slug))
+* build certificate
 
   curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG'
 
