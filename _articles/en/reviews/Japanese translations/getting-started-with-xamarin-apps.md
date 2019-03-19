@@ -93,8 +93,8 @@ Xamarinアプリのユニットテストは、`NUnit Runner` ステップにて�
 1. Enter the Workflow Editor of your app, and click the `Workflows` tab.　アプリのWorkflow Editorに入り、`Workflows`タブをクリックします。
 2. Add the `NUnit runner` Step to your workflow.　
 
-   This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app.　ワークフローに`NUnit runner` ステップを追加します。このステップは`NuGet restore` ステップ後に追加してください：アプリのテストを走らせる前に全てのdependenciesをインストールしてください。
-3. Fill in the required input variables. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). If you want to use a different solution file or solution configuration, click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.　必要なinput variablesを入力します。デフォルトでは、全てのinputはEnvironment Variablesになっています。異なるsolution fileまたはsolution configuration を使用する場合は、Workflow Editor内のタブ`Env Vars` をクリックし、環境変数の値を変更してください。
+   This Step should be after the `NuGet restore` Step: you will want to install all your dependencies before running tests on your app.　ワークフローに`NUnit runner` ステップを追加します。このステップは`NuGet restore` ステップ後に追加してください：アプリのテストを走らせる前に全ての依存関係をインストールしてください。
+3. Fill in the required input variables. By default, all the inputs are [Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). If you want to use a different solution file or solution configuration, click on the `Env Vars` tab in the Workflow Editor to change the value of the Environment Variable.　必要なinput variablesを入力します。デフォルトでは、全てのinputは[Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs)になっています。異なるsolution fileまたはsolution configuration を使用する場合は、Workflow Editor内のタブ`Env Vars` をクリックし、環境変数の値を変更してください。
    * **Path to Xamarin Solution**: the location of your Xamarin solution file.　あなたのXamarin solution fileの場所を示します。
    * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects. Bitriseであなたが走らせたい、Visual Studioでセットアップされたsolution configurationが表示されます。異なる設定で走らせたい場合は、適切な環境変数に変更してください。
    * **Xamarin platform**: the target platform of your solution configuration.　あなたのsolution configurationのターゲットプラットフォームを示します。
@@ -111,7 +111,7 @@ For UI tests, we strongly recommend using our `App Center upload and schedule te
 
    あなたのワークフローに`App Center upload and schedule tests` ステップを追加します。
 
-   テストを走らせる前に全てのdependenciesをインストールし、アプリをビルドするため、このステップは、`NuGet restore` 、`Xamarin Archive` ステップの後に追加してください。
+   テストを走らせる前に全ての依存関係をインストールしてアプリをビルドするため、このステップは、`NuGet restore` 、`Xamarin Archive` ステップの後に追加してください。
 
    ![](/img/ui-testing-xamarin.png)
 2. Fill in the required inputs of the Step. You can find all these in the App Center after setting up your test run: check the **Submit** tab.
@@ -161,21 +161,35 @@ Read more about using the `Sign APK` Step [in our guide](/code-signing/android-c
 
 #### **iOS**
 
-1. Set up your code signing identity and provisioning profile [on Visual Studio](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/provisioning/).　Visual Studioにて、コード署名アイデンティティとprovisioning profileをセットします。
-2. In the solution file, find the iOS project you want to build and set up its project options. You need to set:　solution file
+1. Set up your code signing identity and provisioning profile [on Visual Studio](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/provisioning/).　Visual Studioにて、コード署名アイデンティティとプロビジョニングプロファイルをセットします。
+2. In the solution file, find the iOS project you want to build and set up its project options. You need to set:　ソリューションファイルでは、ビルドをしたいiOSプロジェクトを探し、そのプロジェクトのオプションを設定します。
    * the signing identity you want to use (for example, Developer)
    * the provisioning profile
+   * 使用したい署名アイデンティティ（例：Developer）
+   * プロビジョニングプロファイル
 
    You can also set up custom entitlements in a .plist file.
+
+   .plist ファイルにてカスタムでエンタイトルメントを設定できます。
 3. On your own machine, use our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool to collect the code signing files of your project.
+
+   ご自身のマシン上では、Bitriseのcodesigndocツールを使ってプロジェクトのコード署名ファイルを収集してください。
 4. Upload the files - the .p12 certificate and the provisioning profile - to Bitrise: open the Workflow Editor of your app and upload the files on the `Code Signing` tab.
+
+   .p12 証明書とプロビジョニングプロファイルをBitriseへアップロードをします。アプリのWorkflow Editorを開き、`Code Signing` タブへファイルのアップロードを行ってください。
 5. Add the `Certificate and profile installer` Step to your workflow.
+
+   `Certificate and profile installer` ステップをワークフローに追加してください。
 
 Read more about iOS code signing [in our guide](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/)!
 
-### Exporting the app package file
+iOSコード署名についての詳細は[ガイド](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/)にてご確認ください。
+
+### Exporting the app package file　アプリパッケージファイルのエクスポート
 
 On Bitrise, it does not matter whether you want to export an .ipa file, an .apk file or an .app file: the process is the same for all Xamarin apps. To make sure you build the correct project type, set up your solution configurations in Visual Studio.
+
+Bitriseでは、.ipaファイル・.apkファイルや.appファイルなど様々なエクスポートの手段に対応しています。
 
 For example, if you want to get an .apk file to upload it to Google Play, use a **Release** project configuration for your Android project in your solution configuration.
 
