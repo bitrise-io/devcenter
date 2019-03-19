@@ -68,16 +68,16 @@ For **build certificates**, the process is exactly the same.
 
 After you have uploaded your files, it’s possible to **set some of their attributes** through the API.
 
-In the case of provisioning profiles you can set the `is_protected`,`is_expose` and `processed` attributes of the document, however, there are some constraints (which also concern the build certificate):
-
 {% include message_box.html type="warning" title="My message" content="
+
+In the case of provisioning profiles you can set the `is_protected`,`is_expose` and `processed` attributes of the document, however, there are some constraints (which also concern the build certificate):
 
 1. once the `is_protected` flag is set to `true` it cannot be changed anymore
 2. when the value of `is_protected` is true, then the `is_expose`flag cannot be set to another value
 3. once `processed` flag is set to true, then its value cannot be changed anymore
    "%}
 
-For setting the `is_protected` flag of one of your provisioning profiles, here's an example `curl` request:
+For setting the `is_protected` flag of one of your provisioning profiles, here's an example `curl` request with the `/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}` endpoint.
 
     curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG -d '{"is_protected":true}'
 
