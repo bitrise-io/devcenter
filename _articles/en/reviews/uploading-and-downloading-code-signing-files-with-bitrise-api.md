@@ -18,13 +18,13 @@ Before you'd start creating and uploading code signing files, you have to genera
    ![](/img/new-token-generation.png)
 
         storing the new tokens
-6. Get the slug of your app from Bitrise. For example, [https://www.bitrise.io/app/](https://www.bitrise.io/app/ "https://www.bitrise.io/app/")[{APP-SLUG}#/builds](https://www.bitrise.io/app/%7BAPP-SLUG%7D#/builds.)
+6. Copy the slug of your app from its app URL. For example, [https://www.bitrise.io/app/](https://www.bitrise.io/app/ "https://www.bitrise.io/app/")[{APP-SLUG}#/builds](https://www.bitrise.io/app/%7BAPP-SLUG%7D#/builds.) where the `APP-SLUG` is what you need.
 
 Now that all is at hands, let's see what you can do with our API.
 
 ## Creating a provisioning profile
 
-You can add a new provisioning profile to your app with the post request of `/apps/{app-slug}/provisioning-profiles`. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.
+You can create a new provisioning profile object by calling the `/apps/{app-slug}/provisioning-profiles` endpoint. The new provisioning profile's slug and its presigned upload URL will be retrieved. You can use this URL to upload the provisioning profile to the storage place of your choice (in our example it is AWS).
 
 Example `curl` request:
 
@@ -44,9 +44,9 @@ Where the example response is:
       }
     }
 
-After this call you have to upload to AWS your provisioning profile file with the presigned URL.
+The new provisioning profile's slug and its presigned upload URL will be retrieved. You can use this URL to upload the provisioning profile to the storage place of your choice (in our example it is AWS).
 
-#### Example `curl` request
+Example `curl` request
 
     curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
 
