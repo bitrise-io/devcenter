@@ -24,7 +24,9 @@ Now that all is at hands, let's see what you can do with our API.
 
 ## Creating a provisioning profile
 
-You can create a new provisioning profile object by calling the `/apps/{app-slug}/provisioning-profiles` endpoint. The new provisioning profile's slug and its presigned upload URL will be retrieved. You can use this URL to upload the provisioning profile to the storage place of your choice (in our example it is AWS).
+**Request a pre-signed AWS URL** from Bitrise.
+
+You can create a new provisioning profile object by calling the `/apps/{app-slug}/provisioning-profiles` endpoint and Bitrise will create a preliminary URL that you can use. The new provisioning profile's slug and its presigned upload URL will be retrieved. You can use this URL to upload the provisioning profile to the storage place of your choice (in our example it is AWS).
 
 Example `curl` request:
 
@@ -44,44 +46,17 @@ Where the example response is:
       }
     }
 
-The new provisioning profile's slug and its presigned upload URL will be retrieved. You can use this URL to upload the provisioning profile to the storage place of your choice (in our example it is AWS).
+The new provisioning profile's slug and its presigned upload URL will be retrieved. You can use this URL to upload the provisioning profile to the storage place of your choice (in our example it is AWS). The two important things are the **slug** and the **upload_url**, these will be required for the rest of the steps. parameters
 
 Example `curl` request
 
     curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
 
-1. **Request a pre-signed AWS URL** from Bitrise with the `/apps/APP-SLUG/provisioning-profiles` endpoint. Add provisioning profile for a specific application. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.
-2. We're uploading provisioning profile file named `sample.provisionprofile`, the size of which is 2047 bytes.
-
-       curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
-
-   The response should look like this:
-
-       {
-       "data":{
-       "upload_file_name":"sample.provisionprofile",
-       "upload_file_size":2047,
-       "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
-       "processed":false,
-       "is_expose":true,
-       "is_protected":false,
-       "upload_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e"
-       }
-       }
-
-The two important things are the **slug** and the **upload_url**, these will be required for the rest of the steps.
-
-1. **Upload your file to AWS**
-
-   Add provisioning profile for a specific application. This is the first phase of the provisioning profile upload process, calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved.
-
-       curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
-
 So now you have your file on AWS, the last step is to confirm that your upload is indeed finished.
 
-**3. Confirm that your file upload is finished**
+## Confirming the file upload
 
-This is where the slug of the provisioning profile object is needed, this request will set the value of the `processed` flag to `true`:
+This is where the slug of the provisioning profile object is needed, this request will set the value of the `processed` flag to `true` with this endpoint: `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded`.
 
     curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG/uploaded'
 
@@ -95,11 +70,14 @@ After you have uploaded your files, it’s possible to **set some of their attri
 
 #### Provisioning profiles
 
-In case of provisioning profiles you can set the `is_protected`,`is_expose` and `processed` attributes of the document, however, there are some constraints (which also concern the build certificate):
+In the case of provisioning profiles you can set the `is_protected`,`is_expose` and `processed` attributes of the document, however, there are some constraints (which also concern the build certificate):
 
+{% include message_box.html type="warning" title="My message" content="
 1. once the `is_protected` flag is set to `true` it cannot be changed anymore
 2. when the value of `is_protected` is true, then the `is_expose`flag cannot be set to another value
 3. once `processed` flag is set to true, then its value cannot be changed anymore
+"%}
+
 
 For setting the `is_protected` flag of one of your provisioning profiles, here's an example `curl` request:
 
