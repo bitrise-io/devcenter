@@ -59,3 +59,11 @@ With the API, you can:
 - List all apps belonging to an organization account. 
 
 You can also manage the app's `bitrise.yml` file: you can either download the application's current file or upload a new `bitrise.yml` file that will overwrite the old one. 
+
+### Uploading a new bitrise.yml file 
+
+The `bitrise.yml` file contains the configuration of your builds. You can modify the current one via the API by uploading a .yaml object.
+
+``` bash
+curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/bitrise.yml' -d '{"app_config_datastore_yaml":"app:\n  envs:\n  - BITRISE_PROJECT_PATH: sample-apps-osx-10-12.xcodeproj\n    opts:\n      is_expand: false\n  - BITRISE_SCHEME: sample-apps-osx-10-12\n    opts:\n      is_expand: false\ndefault_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git\nformat_version: 1.3.1\ntrigger_map:\n- push_branch: '*'\n  workflow: primary\n- pull_request_source_branch: '*'\n  workflow: primary\nworkflows:\n  deploy:\n    steps:\n    - activate-ssh-key@3.1.1:\n        run_if: '{{getenv \"SSH_RSA_PRIVATE_KEY\" | ne \"\"}}'\n    - git-clone@3.4.2: {}\n    - script@1.1.5:\n        title: Do anything with Script step\n    - certificate-and-profile-installer@1.8.4: {}\n    - xcode-test-mac:\n        inputs:\n        - project_path: $BITRISE_PROJECT_PATH\n        - scheme: $BITRISE_SCHEME\n    - xcode-archive-mac@1.4.0:\n        inputs:\n        - project_path: $BITRISE_PROJECT_PATH\n        - scheme: $BITRISE_SCHEME\n    - deploy-to-bitrise-io@1.2.9: {}\n  primary:\n    steps:\n    - activate-ssh-key@3.1.1:\n        run_if: '{{getenv \"SSH_RSA_PRIVATE_KEY\" | ne \"\"}}'\n    - git-clone@3.4.2: {}\n    - script@1.1.5:\n        title: Do anything with Script step\n    - certificate-and-profile-installer@1.8.4: {}\n    - xcode-test-mac@1.1.0:\n        inputs:\n        - project_path: $BITRISE_PROJECT_PATH\n        - scheme: $BITRISE_SCHEME\n    - deploy-to-bitrise-io@1.2.9: {}\n"}'
+```
