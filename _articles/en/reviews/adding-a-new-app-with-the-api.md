@@ -58,6 +58,32 @@ With the API, you can:
 - List apps belonging to a specified user account. 
 - List all apps belonging to an organization account. 
 
+The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL
+
+```json
+{
+  "data": [
+    {
+      "slug": "eeeeefffff00000",
+      "title": "sample-app",
+      "project_type": "android",
+      "provider": "github",
+      "repo_owner": "example-user",
+      "repo_url": "git@github.com:example-user/sample-app.git",
+      "repo_slug": "android-gradle-kotlin-dsl",
+      "is_disabled": false,
+      "status": -1,
+      "is_public": false,
+      "owner": {
+        "account_type": "organization",
+        "name": "Test Org",
+        "slug": "fffffeeeee00000"
+      },
+      "avatar_url": null
+    },
+    {
+```
+
 You can also manage the app's `bitrise.yml` file: you can either download the application's current file or upload a new `bitrise.yml` file that will overwrite the old one. 
 
 ### Uploading a new bitrise.yml file 
