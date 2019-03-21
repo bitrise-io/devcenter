@@ -28,7 +28,7 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
  2. ダッシュボードの`+ Add new app`をクリックします。
  3. `Create new App`ページからアプリを追加したいアカウントを選びます。
  4. アプリのプライバシーをprivate、または [public](https://yv69yaruhkt48w.preview.forestry.io/getting-started/adding-a-new-app/public-apps)に設定し、`Next`をクリックします。
- 5. リポジトリをホストするGit hostingサービスを選択し、プロジェクトをホストするあなたのリポジトリを選択します。詳細は[connecting your repository](https://yv69yaruhkt48w.preview.forestry.io/getting-started/adding-a-new-app/connecting-a-repository/)にて参照してください。
+ 5. リポジトリをホストするGit hostingサービスを選択し、プロジェクトをホストするあなたのリポジトリを選択します。詳細は[connecting your repository](https://yv69yaruhkt48w.preview.forestry.io/getting-started/adding-a-new-app/connecting-a-repository/)を参照してください。
  6. リポジトリアクセスを設定するように求められたら、`No, auto-add SSH key`をクリックします。 詳細は[SSH keys](https://yv69yaruhkt48w.preview.forestry.io/getting-started/adding-a-new-app/setting-up-ssh-keys/)を参照してください。
  7. プロジェクトの設定を含むブランチの名前（`master`など）を入力し、`Next`をクリックします
  8. Bitriseがプロジェクトを検証している間お待ちください。設定ファイルを探し、それらに基づいてアプリを設定します。
@@ -37,9 +37,7 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
     * Android
     * iOS と Android (Androidビルドが最初にビルドされる
 10. ![](/img/project-build-cordova.png)
-11. ![](/img/project-build-ionic.png)
-
-    コードがリポジトリにプッシュされたときにBitriseが自動的にビルドを開始できるように、Promptedが表示されたらWebフックに登録します。メインのワークフローでの最初のビルドも開始できます。 また、メッセージをクリックするとビルドページに移動します。最初のビルドではAPKと.ipaは作成されませんが、ビルドのページでプロジェクトのログを確認できます。
+11. ![](/img/project-build-ionic.png)コードがリポジトリにプッシュされたときにBitriseが自動的にビルドを開始できるように、Promptedが表示されたらWebフックに登録します。メインのワークフローでの最初のビルドも開始できます。 また、メッセージをクリックするとビルドページに移動します。最初のビルドではAPKと.ipaは作成されませんが、ビルドのページでプロジェクトのログを確認できます。
 
     例として、`Karma Jasmine Test Runner`ステップを含むCordova**主要ワークフロー**を確認してください。
 
@@ -62,13 +60,13 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
 
 ## 依存性
 
-アプリの`package.json`ファイルに記載されているJavascript depenciesをインストールするには、`Run npm command`または`Run yarn command`のステップを使用できます。
+アプリの`package.json`ファイルに記載されているJavascript dependenciesをインストールするには、`Run npm command`または`Run yarn command`のステップを使用できます。
 
 `Run npm command`ステップは、デフォルトパートのプライマリワークフローとデプロイワークフローによるものです。 `Run npm command`ステップで、`The nmp command with arguments to run`フィールドが`install`に設定されていることを確認します。
 
 ![](https://devcenter.bitrise.io/img/run-nmp.png)
 
-`The 'yarn' command to run`入力フィールドを空のままにするか、または`install`に設定します -  `Run yarn command`ステップはどちらかの方法でdependencies（依存性）をインストールします。
+`The 'yarn' command to run`入力フィールドを空のままにするか、または`install`に設定します -  `Run yarn command`ステップはどちらかの方法でdependencies（依存関係）をインストールします。
 
 ## Ionic/Cordovaアプリのテスト
 
@@ -104,7 +102,9 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
 
 1. 署名済みのAndroidプロジェクトの場合は、Workflow Editorの`Code Signing`タブへ。
 2. `ANDROID KEYSTORE FILE`セクションの`Upload file`項目でkeystoreファイルをクリックまたはドラッグ＆ドロップします。
-3. ![](/img/keystore-file.png)  3つの入力項目に記入します:
+3. ![](/img/keystore-file.png)  
+
+   3つの入力項目に記入します:
    * `keystore password`
    * `keystore alias`
    * `private key password`
@@ -174,4 +174,4 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
 1. `Deploy to bitrise.io - Apps, Logs, Artifacts`ステップに進みます。
 2. `Notify: User Roles`でロールを追加するとロールを与えられたユーザーにのみ通知がいきます。または、`Notify: Emails`に通知したいユーザーのメールアドレスを[secret env vars](/builds/env-vars-secret-env-vars/)として設定し入力します。`APPS & ARTIFACTS`タブで作成されたAPK / .ipaファイルの横にあるの`eye`アイコンをクリックすると、詳細を`Notifications`で変更することもできます。
 
-ビルドを始めましょう！アプリが正しく設定されていれば、選択した電子市場にデプロイされていることがわかります！
+ビルドを始めよう！アプリが正しく設定されていれば、選択した電子市場にデプロイされていることがわかります！
