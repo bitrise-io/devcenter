@@ -43,22 +43,22 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
 
     例として、`Karma Jasmine Test Runner`ステップを含むCordova**主要ワークフロー**を見てください。
 
-    {% raw %}
-    primary:
-    steps:
-    \- activate-ssh-key@4.0.3:
-    run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-    \- git-clone@4.0.11: {}
-    \- script@1.1.5:
-    title: Do anything with Script step
-    \- npm@0.9.1:
-    inputs:
-    \- command: install
-    \- karma-jasmine-runner@0.9.1: {}
-    \- deploy-to-bitrise-io@1.3.15: {}
-    {% endraw %}
+        {% raw %}
+        primary:
+        steps:
+        - activate-ssh-key@4.0.3:
+        run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+        - git-clone@4.0.11: {}
+        - script@1.1.5:
+        title: Do anything with Script step
+        - npm@0.9.1:
+        inputs:
+        - command: install
+        - karma-jasmine-runner@0.9.1: {}
+        - deploy-to-bitrise-io@1.3.15: {}
+        {% endraw %}
 
-{% include message_box.html type="info" title="他のテストフレームワークを使うのは？" content="BitriseのスキャナーがJasmin、Karma Jasmineのテスト解決法を知っていることは言及する価値があります。プロジェクトが別のテストフレームワーク/ランナーを使用している場合、スキャナーはテストワークフロー（`primary`ワークフロー)を作成することはできませんが、代わりにビルドワークフローを作成できます。このワークフローは作成される唯一のワークフローであるため、`primary`ワークフローと呼びます。" %}
+{% include message_box.html type="info" title="他のテストフレームワークを使うのは？" content="BitriseのスキャナーがJasmin、Karma Jasmineのテスト解決法を知っていることは言及する価値があります。プロジェクトが別のテストフレームワーク/ランナーを使用している場合、スキャナーはテストワークフロー（primaryワークフロー)を作成することはできませんが、代わりにビルドワークフローを作成できます。このワークフローは作成される唯一のワークフローであるため、primaryワークフローと呼びます。" %}
 
 ## 依存性
 
@@ -90,14 +90,15 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
 
    ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
 4. ステップで仮想マシンに証明書をダウンロードしてインストールできるように、ワークフローの`Certificate and profile installer`ステップを確認します。
-5.  ワークフローに`Generate cordova build configuration`ステップを追加します。 （このステップでは、次のステップに必要なすべての設定、`Cordova Archive`または`Ionic Archive`を実行します。）`Certificate and profile installer`ステップの後に行います。
-6.  ステップに必要な入力を記入してください。`Code Signing Identity`と`Provisioning Profile`はどちらも、**以下のようにマークがされていなくても、**iOSアプリの必須入力です。
-   * `Build configuration`：`debug`または`release`のどちらかに設定できます。
-   * `Code Sign Identity`：開発者またはディストリビューションIDを入力します。
-   * `Provisioning Profile`：適切なProvisioning Profileを入力します。
-   * `Packaging Type`：どのようなタイプのビルドがXcodeによって作成されるかをコントロールします。また、コード署名の種類を設定します。
+5. ワークフローに`Generate cordova build configuration`ステップを追加します。 （このステップでは、次のステップに必要なすべての設定、`Cordova Archive`または`Ionic Archive`を実行します。）`Certificate and profile installer`ステップの後に行います。
+6. ステップに必要な入力を記入してください。`Code Signing Identity`と`Provisioning Profile`はどちらも、**以下のようにマークがされていなくても、**iOSアプリの必須入力です。
 
-     Ionic / Cordovaコード署名の詳細については [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/)を参照してください。
+* `Build configuration`：`debug`または`release`のどちらかに設定できます。
+* `Code Sign Identity`：開発者またはディストリビューションIDを入力します。
+* `Provisioning Profile`：適切なProvisioning Profileを入力します。
+* `Packaging Type`：どのようなタイプのビルドがXcodeによって作成されるかをコントロールします。また、コード署名の種類を設定します。
+
+  Ionic / Cordovaコード署名の詳細については [guide](/code-signing/ios-code-signing/ionic-cordova-code-signing/)を参照してください。
 
 ### Androidプロジェクトに署名
 
@@ -124,9 +125,10 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
 アプリを電子市場にデプロイする前に、コード署名された.ipaやAPKを作成する必要があるので、以下のステップを行ってください。
 
 1. `Cordova archive`または`Ionic archive`ステップをワークフローに追加します。 （iOSとAndroidの両方を1つのプロジェクトで構築している場合、どちらかのアプリが失敗すると、`Cordova Archive/Ionic Archive`ステップ全体が失敗します。）
-2.  必要な情報を入力します:
-   * `Platform`入力は`device`に設定が必要です。
-   * `Build command configuration`入力は、`Generate cordova build configuration`ステップの`Build configuration`入力と一致していなければなりません。  アーカイブステップは、ワークフローの`Generate cordova build configuration`ステップの後にに行う必要があります。
+2. 必要な情報を入力します:
+
+* `Platform`入力は`device`に設定が必要です。
+* `Build command configuration`入力は、`Generate cordova build configuration`ステップの`Build configuration`入力と一致していなければなりません。  アーカイブステップは、ワークフローの`Generate cordova build configuration`ステップの後にに行う必要があります。
 
 ![](/img/cordova-archive-1.png)
 
@@ -135,15 +137,16 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
 ### App Store Connectにデプロイ
 
 1. `Cordova Archive` もしくは `Ionic Archive`ステップの後、できれば`Deploy to Bitrise.io - Apps, Logs, Artifacts`ステップの前に、`Deploy to iTunes Connect - Application Loader`ステップをワークフローに追加します
-2.   `Deploy to iTunes Connect - Application Loader`ステップでAppleのアカウント情報を入力します。
+2. `Deploy to iTunes Connect - Application Loader`ステップでAppleのアカウント情報を入力します。
 
-   ステップに必要なもの:
-   * Apple ID
-   * パスワード、もしくは、iTunes Connectで2要素認証を使用する場合、アプリケーションパスワード
+ステップに必要なもの:
 
-     パスワードは表示されません！
+* Apple ID
+* パスワード、もしくは、iTunes Connectで2要素認証を使用する場合、アプリケーションパスワード
 
-     \- [that’s why it is marked SENSITIVE](https://yv69yaruhkt48w.preview.forestry.io/builds/env-vars-secret-env-vars#about-secrets)
+  パスワードは表示されません！
+
+  \- [that’s why it is marked SENSITIVE](https://yv69yaruhkt48w.preview.forestry.io/builds/env-vars-secret-env-vars#about-secrets)
 
 ### Google Play Storeにデプロイ
 
