@@ -14,7 +14,6 @@ fields:
   default: ''
 pages:
 - _articles/en/reviews/Japanese translations/macosアプリ開始-getting-started-with-macos-apps.md
-- _articles/en/reviews/macosの開始 .md
 - _articles/en/reviews/Japanese translations/ionic-cordovaアプリの開始-getting-started-with-ionic-cordova-apps.md
 - _articles/en/reviews/Japanese translations/Getting started with Ionic/Cordova apps.md
 - _articles/en/reviews/fastlane.md
