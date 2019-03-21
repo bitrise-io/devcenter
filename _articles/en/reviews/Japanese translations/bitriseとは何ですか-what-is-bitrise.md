@@ -7,7 +7,7 @@ published: false
 ---
 **Bitrise**はモバイルアプリ開発（`iOS`, `Android`, `Xamarin`, ...）における[継続的インテグレーション](https://en.wikipedia.org/wiki/Continuous_integration)・[デリバリー](https://en.wikipedia.org/wiki/Continuous_delivery)（CI/CD） プラットフォームをサービス（PaaS）として提供しています。ソフトウェアプロジェクトの開発・自動化を手助けするためのツール・サービスの集合体です。
 
-**  
+\**  
 数回のクリックであなたのアプリのテストやデプロイ作業を自動化しましょう！**
 
 ## 
@@ -22,9 +22,9 @@ command line scripts/programs によって実行されていれば、以下のSt
 
 * Eメールの送信
 * [テキストメッセージの送信](https://github.com/bitrise-io/steps-sms-text-message)
-* ？相互的な情報の共有？
+* 相互的な情報・値の共有
 * [Xcodeアーカイブの作成](https://github.com/bitrise-io/steps-xcode-archive)
-* ？Virtual Machineのビルド走行についてのシステム情報の収集？
+* Virtual Machineのビルド走行についてのシステム情報の収集
 * 他のユーザーへの通知（例：Slack）
 * [iTunes Connectへの登録・申請](https://github.com/bitrise-io/steps-deploy-to-itunesconnect-deliver)などたくさんあります！
 
@@ -48,7 +48,7 @@ Virtual Machinesはアプリのビルドに必要なツールが全て備わっ�
 
 Go言語でのビルドは、BitriseのAPIで簡単にアクセスができ、使うことができます。ユーザー認証のためのPersonal Access Tokenを取得していれば問題なく使うことができます。
 
-{% include message_box.html type="info" title="API documentation" content="
+{% include message_box.html type="情報" title="API documentation" content="
 
-* [Bitrise API overview](/api/v0.1/)
+* [Bitrise API overview](https://devcenter.bitrise.io/api/v0.1/)
 * [Bitrise API endpoint documentation](https://api-docs.bitrise.io)"%}
