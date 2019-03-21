@@ -19,6 +19,14 @@ Of course, this does not mean anyone can do anything with your public app on Bit
 
 {% include message_box.html type="warning" title="Setting an app to public" content=" **You can only set an app to public when adding the app to Bitrise!** Once an app has been added, its privacy settings **CANNOT** be changed again. "%}
 
+### Public app resources
+
+Public apps have their own build time and concurrency, regardless of the limits of the accounts of their owners. 
+
+Every single public app gets 45 minutes build time and one concurrency. That means that regardless of the concurrency limits of your account, you can always run a build of a public app. 
+
+If you need more than 45 minutes build time or more than one concurrency for a public app, contact our support! 
+
 ### Add a new app as public
 
 Adding a new app as a public app is incredibly simple: at the start of the process of adding a new app, you will be asked to choose between a private and a public option for the app. Choosing the public option does not change anything about the process itself, it only determines the accessibility of the app.
