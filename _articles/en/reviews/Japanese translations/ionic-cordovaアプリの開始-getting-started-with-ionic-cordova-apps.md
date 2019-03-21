@@ -305,3 +305,6 @@ You can share the generated .ipa or APK with your team members using the build�
    2. `Notify: User Roles`でロールを追加するとロールを与えられたユーザーにのみ通知がいきます。または、`Notify: Emails`に通知したいユーザーのメールアドレスを[secret env vars](/builds/env-vars-secret-env-vars/)として設定し入力します。`APPS & ARTIFACTS`タブで作成されたAPK / .ipaファイルの横にあるの`eye`アイコンをクリックすると、詳細を`Notifications`で変更することもできます。
 
 Start a build! If your app is properly configured, you can find it deployed to the marketplace of your choice!
+
+  
+ビルドを始めましょう！アプリが正しく設定されていれば、選択した電子市場にデプロイされていることがわかります！
