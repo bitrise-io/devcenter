@@ -35,7 +35,7 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
 
 Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider.
 
-[bitrise.io](https://www.bitrise.io/) にサインアップし、アカウントにアクセスしてください。BitriseアカウントをGit service providerアカウントにコネクトする方法は[４つ](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)あります。
+[bitrise.io](https://www.bitrise.io/)にサインアップして、Bitriseアカウントにアクセスできることを確認してください。 GitホスティングサービスのアカウントにBitriseアカウントを接続する方法は、[4通り](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)あります。
 
 ## Adding an Ionic/Cordova app to Bitrise
 
@@ -178,7 +178,7 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
    1. 署名済みのAndroidプロジェクトの場合は、Workflow Editorの`Code Signing`タブへ。
    2. `ANDROID KEYSTORE FILE`セクションの`Upload file`項目でkeystoreファイルをクリックまたはドラッグ＆ドロップします。
 3. ![](/img/keystore-file.png)
-   3. Fill out the displayed three input fields:
+   3\. Fill out the displayed three input fields:
    * `keystore password`
    * `keystore alias`
    * `private key password`
@@ -195,13 +195,13 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
    * `$BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD`
 5. Add the `Generate cordova build configuration` Step to your workflow if it's not already in it.
 6. The required inputs fields for Android (`Keystore`, `Keystore password`, `Alias` and `Password`) are already filled out for you since you have uploaded your keystore file to the `Code Signing` tab and added the metadata at Step 2 and 3. Based on this information, env vars have been generated which are now conveniently used in `Generate cordova build configuration` Step.
-   4. `Save metadata`をクリックします。 Bitriseはkeystoreファイルをアップロードし、環境変数(`BITRISEIO_ANDROID_KEYSTORE_URL`)をバリューとしてファイルのダウンロードURL（時間制限のある、読み取り専用のダウンロードURL）に対応させます。このURLを使用して、次のビルド中にkeystoreファイルをダウンロードできます。このステップでは、後のステップで使用される以下のの環境変数が作成されます。
+   4\. `Save metadata`をクリックします。 Bitriseはkeystoreファイルをアップロードし、環境変数(`BITRISEIO_ANDROID_KEYSTORE_URL`)をバリューとしてファイルのダウンロードURL（時間制限のある、読み取り専用のダウンロードURL）に対応させます。このURLを使用して、次のビルド中にkeystoreファイルをダウンロードできます。このステップでは、後のステップで使用される以下のの環境変数が作成されます。
    * `$BITRISEIO_ANDROID_KEYSTORE_URL`
    * `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
    * `$BITRISEIO_ANDROID_KEYSTORE_ALIAS`
    * `$BITRISEIO_ANDROID_KEY``_TORE_PRIVATE_KEY_PASSWORD_`
      _5._ コードがない場合は、`Generate cordova build configuration`ステップをワークフローに追加します。
-     6.  keystoreファイルを`Code Signing`タブにアップロードし、ステップ2と3でメタデータを追加したので、Androidの必要入力項目（`Keystore`, `Keystore password`, `Alias` ,`Password`）はすでに入力されています。これらの情報に基づき`Generate cordova build configuration`で便利に使用できる環境変数が作成されます。
+     6\.  keystoreファイルを`Code Signing`タブにアップロードし、ステップ2と3でメタデータを追加したので、Androidの必要入力項目（`Keystore`, `Keystore password`, `Alias` ,`Password`）はすでに入力されています。これらの情報に基づき`Generate cordova build configuration`で便利に使用できる環境変数が作成されます。
 
 ## Deploying Ionic/Cordova app
 
@@ -306,5 +306,4 @@ You can share the generated .ipa or APK with your team members using the build�
 
 Start a build! If your app is properly configured, you can find it deployed to the marketplace of your choice!
 
-  
 ビルドを始めましょう！アプリが正しく設定されていれば、選択した電子市場にデプロイされていることがわかります！
