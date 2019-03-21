@@ -1,5 +1,5 @@
 ---
-title: What is Bitrise?
+title: Bitriseとは何ですか？
 permalink: "/"
 menu:
   main:
