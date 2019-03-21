@@ -48,7 +48,7 @@ Virtual Machinesはアプリのビルドに必要なツールが全て備わっ�
 
 Go言語でのビルドは、BitriseのAPIで簡単にアクセスができ、使うことができます。ユーザー認証のためのPersonal Access Tokenを取得していれば問題なく使うことができます。
 
-{% include message_box.html type="情報" title="API documentation" content="
+{% include message_box.html type="info" title="API documentation" content="
 
 * [Bitrise API overview](https://devcenter.bitrise.io/api/v0.1/)
 * [Bitrise API endpoint documentation](https://api-docs.bitrise.io)"%}
