@@ -22,8 +22,6 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
 
 [bitrise.io](https://www.bitrise.io/)にサインアップして、Bitriseアカウントにアクセスできることを確認してください。 GitホスティングサービスのアカウントにBitriseアカウントを接続する方法は、[4通り](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)あります。
 
-## 
-
 ## BitriseにIonic/Cordovaを追加
 
  1. [bitrise.io](https://www.bitrise.io/)にログインします。
