@@ -32,7 +32,7 @@ command line scripts/programs によって実行されていれば、以下のSt
 
 ビルドをトリガーする際（Virtual Machineがホストとして登録されている場合）、あなたのビルドと定義済みのワークフロー（一連のビルドStep) は段階的に実行されます。
 
-ビルドが終了すると、Virtual Machineはなくなります。その後ワークフローで走った全てのStepのログ記録の参照ができます。詳しくは[Code Security](/getting-started/code-security)をご覧ください。
+ビルドが終了すると、Virtual Machineはなくなります。その後ワークフローで走った全てのStepのログ記録の参照ができます。詳しくは[Code Security](/jp/getting-started/code-security)をご覧ください。
 
 Virtual Machinesはアプリのビルドに必要なツールが全て備わっています。Bitriseは自動的にどのStack（バーチャルマシンの種類）があなたのアプリに適しているかを検知します。もちろんいつでも手動で変えることも可能です。
 
