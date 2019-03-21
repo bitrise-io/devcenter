@@ -27,11 +27,11 @@ Xamarin solution fileは複数のプロジェクトを含めることができ�
 
 [Visual Studioにてsolution configurationsのセットアップを行ってください](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings)。Solution file上にはBitriseでビルドを行う全てのsolution configurationsが含まれていなければなりません。また、一定のsolution platformでビルドを行う場合、そのプラットフォームに互換性があることを確認してください。
 
-{% include message_box.html type="例" title="Solution configuration" content="例：ソリューションファイルの中にAndroidとiOSのプロジェクトが含まれていて、AndroidプロジェクトのみをBitriseでビルドを行いたい場合、AndroidプロジェクトのみをビルドするVisual Studio上でsolution configurationをセットアップしてからBitriseでそのコンフィギュレーションを使用してください。適切なソリューションプラットフォームを使用することが重要です。（Androidプロジェクトのみのビルドを行う場合、iPhoneをソリューションプラットフォームとして設定しないでください。）"%}
+{% include message_box.html type="example" title="Solution configuration" content="例：ソリューションファイルの中にAndroidとiOSのプロジェクトが含まれていて、AndroidプロジェクトのみをBitriseでビルドを行いたい場合、AndroidプロジェクトのみをビルドするVisual Studio上でsolution configurationをセットアップしてからBitriseでそのコンフィギュレーションを使用してください。適切なソリューションプラットフォームを使用することが重要です。（Androidプロジェクトのみのビルドを行う場合、iPhoneをソリューションプラットフォームとして設定しないでください。）"%}
 
 ## Xamarinアプリの追加
 
-{% include message_box.html type="メモ" title="Bitriseアカウントをお持ちですか？" content=" [bitrise.io](https://www.bitrise.io)にサインアップ済みでBitriseアカウントにアクセスできるか確認してください。お持ちのGitサービスプロバイダをBitriseアカウントに接続する方法はこちらの[４通りの方法](/getting-started/index#signing-up-to-bitrise)があります。 "%}
+{% include message_box.html type="note" title="Bitriseアカウントをお持ちですか？" content=" [bitrise.io](https://www.bitrise.io)にサインアップ済みでBitriseアカウントにアクセスできるか確認してください。お持ちのGitサービスプロバイダをBitriseアカウントに接続する方法はこちらの[４通りの方法](/getting-started/index#signing-up-to-bitrise)があります。 "%}
 
  1. 上段にあるメニューバーより`+`をクリックして`Add app`を選択します。
  2. Create new Appのページにて、アプリを追加したいアカウントを選んでください。
@@ -69,7 +69,7 @@ Xamarinアプリのユニットテストは、`NUnit Runner` ステップにて�
    * **Xamarin project configuration**: Bitriseであなたが走らせたい、Visual Studioでセットアップされたsolution configurationが表示されます。異なる設定で走らせたい場合は、適切な環境変数に変更してください。
    * **Xamarin platform**: あなたのsolution configurationのターゲットプラットフォームを示します。
 
-{% include message_box.html type="メモ" title="Debugインプット" content="Debugインプットグループ内では、Stepを以下の方法で設定できます：ビルドツールをセットし、NUnitコンソールランナーの追加のフラッグをセット、そしてテスト走行の前にテストプロジェクトをビルドするかどうか設定してください。"%}
+{% include message_box.html type="note" title="Debugインプット" content="Debugインプットグループ内では、Stepを以下の方法で設定できます：ビルドツールをセットし、NUnitコンソールランナーの追加のフラッグをセット、そしてテスト走行の前にテストプロジェクトをビルドするかどうか設定してください。"%}
 
 ### UI testing　UIテスト
 
@@ -146,7 +146,7 @@ iOSプロジェクトの場合、Visual Studioにて正確なコード署名ア�
 
 ### Deploying to the App Store　App Storeへのデプロイ
 
-{% include message_box.html type="メモ" title="始める前に" content="Visual Studio内に正確なsolution configurationがあるかどうか確認してください。App Storeプロビジョニングプロファイルと一緒にDistributionタイプコード署名アイデンティティが必要になります。また、Distribution証明書とプロビジョニングプロファイルがBitriseにアップロードされているか確認してください。"%}
+{% include message_box.html type="note" title="始める前に" content="Visual Studio内に正確なsolution configurationがあるかどうか確認してください。App Storeプロビジョニングプロファイルと一緒にDistributionタイプコード署名アイデンティティが必要になります。また、Distribution証明書とプロビジョニングプロファイルがBitriseにアップロードされているか確認してください。"%}
 
 1. Workflow Editor の`Workflows`タブに進みます。
 2. アプリのデプロイを行うために作成したワークフローを選択します。
@@ -160,7 +160,7 @@ iOSプロジェクトの場合、Visual Studioにて正確なコード署名ア�
 
 ### Google Play へのデプロイ
 
-{% include message_box.html type="メモ" title="始める前に" content="Visual Studio内に正確なsolution configurationがあるかどうか確認してください。**Release** configurationが必要になります。"%}
+{% include message_box.html type="note" title="始める前に" content="Visual Studio内に正確なsolution configurationがあるかどうか確認してください。**Release** configurationが必要になります。"%}
 
 1. Workflow Editor の`Workflows`タブに進みます。
 2. アプリのデプロイを行うために作成したワークフローを選択します。
