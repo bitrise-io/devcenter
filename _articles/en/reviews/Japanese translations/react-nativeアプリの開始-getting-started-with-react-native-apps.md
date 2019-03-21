@@ -27,7 +27,6 @@ BitriseではReact Nativeプロジェクトを簡単にセットアップ・構�
    * プロジェクトに１つのモジュールだけが含まれている場合、そのモジュールは自動的に`Module`として選択されます。２つ以上のモジュールが含まれるプロジェクトでは、その中から１つモジュールを選択することができます。（一つのメインモジュールをおすすめします）
    * `Select variant for building` のフィールドでは、プロジェクトに合ったバリアントを選択してください。`Select All Variants`は全てのバリアントのビルドを行います。APKや.ipaファイルを生成する場合は、`debug` か `release` を選んでください。
    * `Project (or Workspace) path field` では、あなたのXcode project もしくは Xcode Workspace path を選択してください。
-   * `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
    * `Select Scheme name`  
      スキャン検証はあなたのプロジェクト内にシェアされたスキームがないと失敗します。手動でXcode scheme をBitriseに追加することもできますが、仮にシェアされている状態であれば、自動的に探知します。詳しくは、[スキームに関する問題](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)をお読みください。
    * `Select ipa export method` では、.ipaファイルのエクスポートする方法を選択します：`ad-hoc`、`app-store`、`development` か`enterprise` のいずれかを選ぶことができます。
@@ -37,17 +36,17 @@ BitriseではReact Nativeプロジェクトを簡単にセットアップ・構�
 
 これで[bitrise.io](https://www.bitrise.io)上でのReact Nativeプロジェクトのセットアップが完了です！最初のビルドはprimary workflowを使用すると自動的に開始されます。ビルドページ内の`APPS & ARTIFACTS` タブより最初のビルドの生成されたレポートを確認することができます。
 
-## Dependenciesのインストール
+## 依存関係 (dependencies) のインストール
 
 ### Javascript dependencies
 
 Bitriseスキャナーがプロジェクトのスキャンに成功すると、`Run npm command` もしくは `Run yarn command` ステップがワークフローに含まれるようになります。
 
-`Run npm command`では、インプットフィールドの`npm command with arguments to run` に`install` と入力してください。そうすれば、あなたのプロジェクトにJavascript dependenciesが追加されます。
+`Run npm command`では、インプットフィールドの`npm command with arguments to run` に`install` と入力してください。そうすれば、あなたのプロジェクトにJavascript依存関係が追加されます。
 
 ![](/img/run-nmp.png)
 
-`Run yarn command` はあなたのプロジェクトに自動的にJavascript dependencies をインストールします。ステップを手動で設定する必要はありません。
+`Run yarn command` があなたのプロジェクトに自動でJavascript dependenciesをインストールします。ステップを手動で設定する必要はありません。
 
 ### Native dependencies
 
