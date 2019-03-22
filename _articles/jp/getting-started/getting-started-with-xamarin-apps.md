@@ -65,7 +65,7 @@ Xamarinアプリのユニットテストは、`NUnit Runner` ステップにて�
 
 1. アプリのWorkflow Editorに入り、`Workflows`タブをクリックします。
 2. ワークフローに`NUnit runner` ステップを追加します。このステップは`NuGet restore` ステップ後に追加してください：アプリのテストを走らせる前に全ての依存関係をインストールしてください。
-3. 必要なinput variablesを入力します。デフォルトでは、全てのinputは[Environment Variables](/getting-started/getting-started-steps/#environment-variables-as-step-inputs)になっています。異なるsolution fileまたはsolution configuration を使用する場合は、Workflow Editor内のタブ`Env Vars` をクリックし、環境変数の値を変更してください。
+3. 必要なinput variablesを入力します。デフォルトでは、全てのinputは[Environment Variables](/jp/getting-started/getting-started-steps/#environment-variables-as-step-inputs)になっています。異なるsolution fileまたはsolution configuration を使用する場合は、Workflow Editor内のタブ`Env Vars` をクリックし、環境変数の値を変更してください。
    * **Path to Xamarin Solution**: あなたのXamarin solution fileの場所を示します。
    * **Xamarin project configuration**: Bitriseであなたが走らせたい、Visual Studioでセットアップされたsolution configurationが表示されます。異なる設定で走らせたい場合は、適切な環境変数に変更してください。
    * **Xamarin platform**: あなたのsolution configurationのターゲットプラットフォームを示します。
