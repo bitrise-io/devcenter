@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/アプリチームのユーザーのロール-user-roles-on-app-teams.md
 - _articles/jp/builds/configuring-notifications.md
 - _articles/en/builds/configuring-notifications.md
 - _articles/en/reviews/Japanese translations/android-linux-docker-環境-the-android-linux-docker-environment.md
