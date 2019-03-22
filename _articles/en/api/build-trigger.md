@@ -1,63 +1,55 @@
 ---
-title: Build Trigger API
+title: Triggering and aborting builds
 menu:
   api:
-    weight: 1
+    weight: ''
 
 ---
-_Note: the_ `www` _endpoint is now deprecated. Please use the_ `https://app.bitrise.io/app/APP-SLUG/build/start.json` _endpoint instead._
+You can trigger and abort builds with the Bitrise API. You can define parameters for the build like what branch, tag or git commit to use, as well as add your own custom environment variables.
 
-With the Build Trigger API you can start a new build of your app with a simple API call.
+## Triggering a new build
 
-You can define parameters for the build like what `branch`, `tag` or _git commit_ to use
-and what _build message_ to present on the Build's details page.
+To trigger a new build with the Bitrise API, call the `/apps/{APP-SLUG}/builds` endpoint. You need to specify an app slug and at least one build parameter in a JSON object:
 
-{% include message_box.html type="note" title="Interactive cURL call configurator" content="
-You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
-"%}
+* a git tag or git commit hash
+* a branch
+* a workflow ID
 
-## How to start a build by calling the Trigger API?
+The JSON object must also contain a `hook_info` object with a `type` key and `bitrise` as the value of the key.
 
-You have to call your build trigger with a `POST` request with a JSON body.
-
-{% include message_box.html type="note" title="Build Trigger Token and App Slug" content="
-When you use the Bitrise Trigger API you have to specify the App's `Build Trigger Token` and `App Slug`. You can view both and regenerate your App's Build Trigger Token anytime you want to, on the `Code` tab of the app.
-"%}
-
-{% include message_box.html type="important" title="Old API token parameter" content=" The old `api_token` parameter is DEPRECATED, please use the `build_trigger_token`parameter instead. "%}
-
-## JSON body
-
-The JSON body has to contain at least:
-
-* a `hook_info` object with:
-  * a `type` key and `bitrise` as its value
-  * a `build_trigger_token` key and your _Build Trigger Token_ as its value
-* a `build_params` object, with at least a `tag`, `branch` or `workflow_id` parameter specified
-
-A minimal sample JSON body, which specifies _master_ as the `branch` parameter:
+Here's a minimal sample JSON body which specifies _master_ as the value of the `branch` parameter:
 
     {
       "hook_info": {
         "type": "bitrise",
-        "build_trigger_token": "..."
       },
       "build_params": {
         "branch": "master"
       }
     }
 
-**To pass this JSON payload** you can either pass it as the **body** of the request **as string** (the JSON object serialized to string),
-or if you want to pass it as an object (e.g. if you want to call it from JavaScript) then you have to include a root `payload`
-element, or set the JSON object as the value of the `payload` POST parameter.
+And here's an example curl request:
 
-jQuery example using the `payload` parameter:
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
 
-    $.post("https://app.bitrise.io/app/APP-SLUG/build/start.json", {
+In the above example, we triggered a build of the app's `master` branch.
+
+{% include message_box.html type="note" title="Authorization" content="All examples in this guide use the `[https://api.bitrise.io/v0.1/apps/APP-SLUG/builds](https://api.bitrise.io/v0.1/apps/APP-SLUG/builds "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds")` endpoint. This endpoint can only be authorized with a Personal Access Token!"%}
+
+{% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
+
+**Note that this call uses the deprecated** `app.bitrise.io` **URL and the app's build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.**"%}
+
+In the example, we passed this JSON payload as a string: to be precise, as a JSON object serialized to a string.
+
+You can also pass it as an object (for example, if you want to call it from JavaScript). To do so, include a root `payload` element or, alternatively, set the JSON object as the value of the `payload` POST parameter.
+
+Here's a jQuery example using the `payload` parameter:
+
+    $.post("https://api.bitrise.io/app/APP-SLUG/builds/", {
         "payload":{
             "hook_info":{
                 "type":"bitrise",
-                "build_trigger_token":"APP-API-TOKEN"
             },
             "build_params":{
                 "branch":"master"
@@ -65,57 +57,54 @@ jQuery example using the `payload` parameter:
         }
     })
 
-## Build Params
+You can specify several different build parameters when triggering a build. The parameters should be set in the `build_params` object: let's go through some of the possible configurations!
 
-The following parameters are supported in the `build_params` object:
+### Setting a branch, commit, or tag to build
 
-### Git related:
+You can set Git-specific parameters in your call. The `branch` parameter specifies the source branch to be built. This is either the branch of the git commit or, in the case of a Pull Request build, the source branch of the Pull Request.
 
-* `branch` (string): The (Source) Branch to build. In case of a standard git commit this is the branch of the commit.
-  In case of a Pull Request build this is the source branch, the one the PR was started from.
-* `tag` (string): The git Tag to build.
-* `commit_hash` (string): The git commit hash to build.
-* `commit_message` (string): The git commit message (or build's message).
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
 
-### Bitrise.io specific:
+You can also build a specific git commit or even a git tag: you just need to set either the commit hash or the tag in the `build_params` object. You can also set a commit message for the build with the `commit_message` parameter.
 
-* `workflow_id`: (string): Force the use of the specified workflow ID. If not defined then the workflow will be selected
-  based on the project's [Trigger Map config](/webhooks/trigger-map/).
-* `environments` (array of objects): See the [Specify Environment Variables](#specify-environment-variables) section for more info
-  about the `environments` objects.
-* `skip_git_status_report` (bool): Skip sending build status for the connected git provider
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"commit_hash":"0000ffffeeeee", "commit_message":"testing"}}'
 
-### Pull Request specific:
+{% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
 
-* `branch_dest` (string): Used only in case of Pull Request builds: the destination/target branch of the Pull Request,
-  the one the PR will be merged _into_. Example: `master`.
-* `pull_request_id` (int): Pull Request ID on the source code hosting system (e.g. the PR number on GitHub)
-* `pull_request_repository_url` (string): repository url from where the Pull Request is sent. E.g. if
-  it's created from a fork this should be the fork's URL. Example: `https://github.com/xyz/bitrise.git`.
-* `pull_request_merge_branch` (string): the pre-merge branch, **if the source code hosting system supports & provides**
-  the pre-merged state of the PR on a special "merge branch" (ref). Probably only GitHub supports this.
-  Example: `pull/12/merge`.
-* `pull_request_head_branch` (string): the Pull Request's "head branch" (`refs/`) **if the source code hosting system supports & provides** this.
-  This special git `ref` should point to the **source** of the Pull Request. Supported by GitHub and GitLab.
-  Example: `pull/12/head` (github) / `merge-requests/12/head` (gitlab).
+If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored.
 
-{% include message_box.html type="note" title="Git Clone - parameter priority" content="
-If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step. If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored. These will still be logged, will be available for steps and will be visible on the Build's details page, but the `Git Clone` step will use the the most specific parameter for checkout. "%}
+The ignored parameters will still be logged. They will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the most specific parameter for checkout."%}
 
-### Specify Environment Variables
+### Setting parameters for Pull Request builds
 
-You can define additional _environment variables_ for your build.
+For a Pull Request build, use the `branch_dest` parameter to set up the destination or target branch of the Pull Request. The PR will be merged into this branch but before that, Bitrise will build your app based on how the code would look like after merging. This is what happens when a PR build is automatically triggered by a webhook, for example.
 
-_These variables will be handled with priority between_ `Secrets` _and_ `App Env Vars`,
-which means that you can not overwrite environment variables defined in
-your build configuration (e.g. App Env Vars), only Secrets.
-For more information see:
-[Availability order of environment variables](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables)
+To identify the PR itself, use the `pull_request_id` parameter: it takes an integer; for example, the number of the PR on GitHub.
 
-It's important that this parameter have to be an **array of objects**,
-and that every item of the array have to include
-at least a `mapped_to` (the key of the Environment Variable, without a dollar sign (`$`))
-and a `value` property (the value of the variable). By default environment variable names inside values will be replaced in triggered build by actual value from target environment. This behavior can be disabled by setting `is_expand` flag to `false`.
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133, "commit_hash": "fffff000000eeeeee"}}'
+
+If your git provider supports it, you can also use the `pull_request_merge_branch` parameter to build the pre-merged state of the branch of the PR. Another alternative is the `pull_request_head_branch` parameter: this is a special git ref that should point to the source of the PR.
+
+If you want to trigger a build from a PR opened from a fork of your repository, use the `pull_request_repository_url` parameter. The value should be the URL of the fork.
+
+### Skipping git status report
+
+If you have a webhook set up, Bitrise will send status reports to your git provider about your builds. However, this can be disabled via the API: use the `skip_git_status_report` parameter. If it is set to `true`, no build status report will be sent.
+
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133, "skip_git_status_report": "true"}}'
+
+### Specifying Environment Variables
+
+You can define additional environment variables for your build.
+
+[Be aware that Environment Variables have a priority order!](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables) These additional variables will be handled with priority between `Secrets` and `App Env Vars`, which means that you can not overwrite environment variables defined in your build configuration (for example, App Env Vars), only Secrets.
+
+This parameter must be an **array of objects**, and every item of the array must include at least a `mapped_to` property. This must contain:
+
+* The key of the Environment Variable.
+* The value of the Environment Variable.
+
+{% include message_box.html type="note" title="Replacing Env Var names" content="By default environment variable names inside values will be replaced in triggered build by actual value from the target environment. This behavior can be disabled by setting `is_expand` flag to `false`."%}
 
 Example:
 
@@ -124,42 +113,36 @@ Example:
       {"mapped_to":"HELP_ENV","value":"$HOME variable contains user's home directory path","is_expand":false},
     ]
 
-### Workflow to be used for the build
+### Setting a workflow for the build
 
-By default the Workflow for your Build will be selected based on the
-`build_params` and your app's [Trigger Map](/webhooks/trigger-map/).
-This is the same as how [Webhooks](/webhooks/) select the workflow for the build
-automatically (based on the _Trigger Map_), and how you can
-define separate Workflows for separate branches, tags or pull requests
-without the need to specify the workflow manually for every build.
+By default, the workflow for your build will be selected based on the content of `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically, based on the Trigger Map.
 
-With the Trigger API you can however **overwrite** this selection
-and specify exactly which Workflow you want to use.
+With the API, you can however **overwrite** this selection and specify exactly which workflow you want to use.
 
-All you have to do is add a `workflow_id` parameter to your `build_params`
-and specify the Workflow you want to use for that specific build.
+Add a `workflow_id` parameter to your `build_params` and specify the workflow you want to use for that specific build. Here's an example call where we specify the `deploy` workflow:
 
-An example `build_params` with `branch` and `workflow_id`:
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"deploy"}}'
 
-    "build_params":{"branch":"master","workflow_id":"deploy"}'
+## Aborting a build
 
-## `curl` example generator
+You can abort running builds, and set the reason for aborting, as well as specify if email notifications should be sent about the build.
 
-You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build`
-button on your app's [bitrise.io](https://www.bitrise.io) page
-and switching to `Advanced` mode in the popup.
-At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
+To simply abort the build, call the `/apps/APP-SLUG/builds/BUILD-SLUG/abort` endpoint. The only required parameters are the app slug and the build slug.
 
-A base curl call would look like this (with `master` specified as the `branch` build parameter):
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort"
 
-    curl -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master"}}'
+### Setting an abort reason
 
-_Note: please don't forget to add_ `Content-Type` _header with_ `application/json` _value_
+You can set a reason for aborting the build by using the `abort_reason` parameter. This parameter takes a string and it will show up on your app's build page.
 
-A more advanced example: let's say you want to build the **master** `branch`
-using the `deployment` workflow,
-specify a build message (`commit_message`)
-and set a test environment variable (`API_TEST_ENV`),
-the call will look like this:
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_reason": "aborted for a reason"}'
 
-    curl  -H 'Content-Type: application/json' https://app.bitrise.io/app/APP-SLUG/build/start.json --data '{"hook_info":{"type":"bitrise","build_trigger_token":"APP-API-TOKEN"},"build_params":{"branch":"master","commit_message":"Environment in API params test","workflow_id":"deployment","environments":[{"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true}]}}'
+Normally, aborted builds count as failed builds. Use the `abort_with_success` parameter to abort a build but still count it as a successful one. The status report sent to your git provider will show the build as successful though on [bitrise.io](https://www.bitrise.io) it will be displayed as `Cancelled`.
+
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_with_success": true}'
+
+### Cancelling email notifications
+
+Depending on your app settings, Bitrise might send an email notification when a build is aborted. If you do not want a notification, set the `skip_notification` parameter to `true`.
+
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"skip_notification": true}'
