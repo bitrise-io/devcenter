@@ -2,7 +2,7 @@
 title: App Status Image/Badge API
 menu:
   api:
-    weight: 2
+    weight: 3
 
 ---
 {% include not_translated_yet.html %}
