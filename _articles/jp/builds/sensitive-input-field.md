@@ -5,7 +5,7 @@ redirect_from:
 - sensitive-input-field/#set-a-sensitive-input-in-a-step/
 menu:
   builds:
-    weight: 15
+    weight: 17
 
 ---
 {% include not_translated_yet.html %}

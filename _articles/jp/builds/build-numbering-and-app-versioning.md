@@ -4,7 +4,7 @@ redirect_from:
 - "/builds/build-numbering-and-app-versioning/builds/build-numbering-and-app-versioning"
 menu:
   builds:
-    weight: 11
+    weight: 13
 
 ---
 {% include not_translated_yet.html %}

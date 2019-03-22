@@ -2,6 +2,10 @@
 title: Configuring Notifications
 redirect_from: []
 date: 2019-03-22 11:09:35 +0000
+menu:
+  builds:
+    weight: 2
+    title: Configuring notifications
 
 ---
 {% include not_translated_yet.html %}

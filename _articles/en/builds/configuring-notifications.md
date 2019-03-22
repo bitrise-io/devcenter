@@ -2,6 +2,9 @@
 title: Configuring notifications
 redirect_from: []
 date: 2019-03-22 11:08:54 +0000
+menu:
+  builds:
+    weight: 3
 
 ---
 Notifications are updates about your activity on Bitrise. Usually, they concern the state of your builds but you can receive notifications about a lot of different things.

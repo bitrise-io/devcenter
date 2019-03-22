@@ -5,7 +5,7 @@ redirect_from:
 - "/builds/scheduling-builds"
 menu:
   builds:
-    weight: 5
+    weight: 7
 
 ---
 You can schedule your builds to run automatically at a specific time of the week so that you can check your logs when it's most convenient for you.

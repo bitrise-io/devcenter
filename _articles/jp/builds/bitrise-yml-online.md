@@ -5,7 +5,7 @@ redirect_from:
 - "/bitrise-cli/bitrise-yml-online"
 menu:
   builds:
-    weight: 19
+    weight: 21
 
 ---
 {% include not_translated_yet.html %}

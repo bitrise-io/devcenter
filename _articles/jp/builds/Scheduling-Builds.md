@@ -5,7 +5,7 @@ redirect_from:
 - "/builds/scheduling-builds"
 menu:
   builds:
-    weight: 4
+    weight: 6
 
 ---
 最も都合のいい時間にログを確認することができるように、1週間のうちの特定の時間にビルドを自動的に実行するようスケジューリングすることができます。
