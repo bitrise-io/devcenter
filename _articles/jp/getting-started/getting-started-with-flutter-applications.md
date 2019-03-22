@@ -4,7 +4,7 @@ date: 2019-03-08 15:17:45 +0000
 redirect_from: []
 menu:
   getting-started:
-    weight: 24
+    weight: 26
     title: Getting started with Flutter apps
 
 ---

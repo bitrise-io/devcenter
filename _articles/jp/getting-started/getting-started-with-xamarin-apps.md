@@ -3,7 +3,7 @@ title: Xamarinアプリの開始
 date: 2018-10-19 11:49:28 +0000
 menu:
   getting-started:
-    weight: 25
+    weight: 27
 
 ---
 [Xamarin](/tutorials/xamarin/index/)はモバイルアプリにおけるクロスプラットフォームのビルド作業のツールを提供しています。もちろんBitriseはXamarinにも対応しています：ここのガイドは以下の手順を説明します：
