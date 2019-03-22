@@ -2,7 +2,7 @@
 title: Outgoing Webhooks
 menu:
   api:
-    weight: 4
+    weight: 6
 
 ---
 {% include not_translated_yet.html %}
