@@ -9,7 +9,7 @@ You can trigger and abort builds with the Bitrise API. You can define parameters
 
 ## Triggering a new build
 
-To trigger a new build with the Bitrise API, call the `/apps/{APP-SLUG}/builds` endpoint. You need to specify an app slug and at least one build parameter out of three in a JSON object:
+To trigger a new build with the Bitrise API, call the `/apps/{APP-SLUG}/builds` endpoint. You need to specify an app slug and at least one build parameter in a JSON object:
 
 * a git tag or git commit hash
 * a branch
