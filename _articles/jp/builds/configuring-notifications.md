@@ -4,15 +4,17 @@ redirect_from: []
 date: 2019-03-22 11:09:35 +0000
 
 ---
+{% include not_translated_yet.html %}
+
 Notifications are updates about your activity on Bitrise. Usually, they concern the state of your builds but you can receive notifications about a lot of different things.
 
 ## Email notifications
 
 Our built-in email notification system sends emails about builds to every user who is assigned to work on an application. They are sent when a build is finished.
 
-{% include message_box.html type="info" title="Watching the app" content="To receive automatic email messages, [you need to be watching the app](/builds/configuring-notifications/#watching-an-app). If you turn off watching, you won't receive the automated emails."%} 
+{% include message_box.html type="info" title="Watching the app" content="To receive automatic email messages, [you need to be watching the app](/builds/configuring-notifications/#watching-an-app). If you turn off watching, you won't receive the automated emails."%}
 
-Email notifications are automatically set up for all applications when first creating them. By default, there are different settings for successful builds and failed builds. 
+Email notifications are automatically set up for all applications when first creating them. By default, there are different settings for successful builds and failed builds.
 
 There are three possible settings:
 
@@ -26,9 +28,9 @@ The alternative solution is to send emails via a dedicated Step: this allows for
 
 ### Watching an app
 
-Watching an app means getting email notifications for that app. This is the default setting for every app you create or you are invited to. **Turning off watching the app means you will no longer get automatic notifications.** 
+Watching an app means getting email notifications for that app. This is the default setting for every app you create or you are invited to. **Turning off watching the app means you will no longer get automatic notifications.**
 
-To toggle the feature, go to your Dashboard and open the app you want to watch or "unwatch". On the top right, you will see a button with the label `Watching` if you are watching the app currently. If not, the button will show `Watch`. Toggle it. 
+To toggle the feature, go to your Dashboard and open the app you want to watch or "unwatch". On the top right, you will see a button with the label `Watching` if you are watching the app currently. If not, the button will show `Watch`. Toggle it.
 
 ![](/img/watching.png)
 
