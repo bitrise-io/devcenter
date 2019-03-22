@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/組織の請求書管理-managing-the-invoices-of-your-organizations.md
 - _articles/en/reviews/Japanese translations/組織の請求と購読の管理-managing-billing-and-subscription-for-organizations.md
 - _articles/en/reviews/Japanese translations/アプリチームのユーザーのロール-user-roles-on-app-teams.md
 - _articles/jp/builds/configuring-notifications.md
