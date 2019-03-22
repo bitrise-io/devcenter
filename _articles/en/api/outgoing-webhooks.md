@@ -2,7 +2,8 @@
 title: Outgoing Webhooks
 menu:
   api:
-    weight: 3
+    weight: 8
+    title: Outgoing webhooks
 
 ---
 By setting up outgoing webhooks you can make Bitrise send notifications about specific events to your web service, so you can create custom integrations.
