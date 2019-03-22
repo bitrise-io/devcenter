@@ -11,7 +11,11 @@ Notifications are updates about your activity on Bitrise. Usually, they concern 
 
 Our built-in email notification system sends emails about builds to every user who is assigned to work on an application. They are sent when a build is finished.
 
-Email notifications are automatically set up for all applications when first creating them. By default, there are different settings for successful builds and failed builds. There are three possible settings:
+{% include message_box.html type="info" title="Watching the app" content="To receive automatic email messages, [you need to be watching the app](/builds/configuring-notifications/#watching-an-app). If you turn off watching, you won't receive the automated emails."%} 
+
+Email notifications are automatically set up for all applications when first creating them. By default, there are different settings for successful builds and failed builds. 
+
+There are three possible settings:
 
 * **Always send email**. This is the default setting for failed builds.
 * **Never send email**.
@@ -20,6 +24,14 @@ Email notifications are automatically set up for all applications when first cre
 ![](/img/email-from-bitrise.png)
 
 The alternative solution is to send emails via a dedicated Step: this allows for far more customization regarding the notifications. We'll cover both options in this guide.
+
+### Watching an app
+
+Watching an app means getting email notifications for that app. This is the default setting for every app you create or you are invited to. **Turning off watching the app means you will no longer get automatic notifications.** 
+
+To toggle the feature, go to your Dashboard and open the app you want to watch or "unwatch". On the top right, you will see a button with the label `Watching` if you are watching the app currently. If not, the button will show `Watch`. Toggle it. 
+
+![](/img/watching.png)
 
 ### Configuring email notifications
 
@@ -60,8 +72,8 @@ To use the Step, you need:
    You can choose any key you want. The addresses should be separated by a comma.
 
    ![](/img/email-list-secret.png)
-6. Set the email subject, the email message and the email message if the build failed.
-   * You can insert environment variables to any of three. In the email, the values of the variables will be displayed.
+6. Set the email subject, and the two potential email messages: one for a successful build, one for a failed build.
+   * You can insert environment variables to any of the inputs (the subject and the messages). In the email, the values of the variables will be displayed.
    * The default messages will send the name of the app, the number of the build and whether the build succeeded or failed.
 7. Attach files if necessary: the `File attachments` input accepts a file path or an environment variable as input.
 
