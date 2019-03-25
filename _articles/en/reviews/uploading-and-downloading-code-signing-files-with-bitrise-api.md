@@ -7,9 +7,7 @@ published: false
 ---
 ## Before you start
 
-All examples in this guide use the `[https://api.bitrise.io/v0.1/apps/APP-SLUG/builds](https://api.bitrise.io/v0.1/apps/APP-SLUG/builds "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds")` endpoint. This endpoint can only be authorized with a Personal Access Token!
-
-Before you'd start creating and uploading code signing files, you have to generate a new token and grab the slug of the app you want to add the code signing files to. To be able to access and use our API, you have to first generate a Personal Access Token to authorize yourself in the curl command.
+All examples in this guide use the `api.bitrise.io/v0.1/apps/APP-SLUG/builds` endpoint. This endpoint can only be authorized with a Personal Access Token. Let's see how to generate a new Personal Access Token!
 
 1. Go to your `Account Settings`.
 2. Click the `Security` tab on the left.
@@ -24,7 +22,7 @@ Before you'd start creating and uploading code signing files, you have to genera
 
 Now that all is at hands, let's see what you can do with our API.
 
-## Creating a provisioning profile
+## Creating a code signing file
 
 **Request a pre-signed AWS URL** from Bitrise.
 
@@ -53,25 +51,31 @@ Where the example response is:
       }
     }
 
-Use the generated URL to upload the provisioning profile to the storage place of your choice (in our example it is AWS).
+Use the generated `upload_url` to upload the provisioning profile to the storage place of your choice (in our example it is AWS).
 
-Example `curl` request
+Example `curl` request:
 
     curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
 
 ## Confirming the file upload
 
-Now you have your file uploaded to a storage place of your choice/Bitrise, you need to confirm that your upload is indeed finished.
+Now that you have your file uploaded to a storage place of your choice/Bitrise, you need to confirm that your upload is indeed finished.
 
-The two required parameters you'll need are the provisioning profile slug and the app slug. You can confirm that the uploading process is complete if you set the value of the `processed` flag to `true` in a `curl` request:
+The two required parameters you'll need are the provisioning profile slug and the app slug. Set the value of the `processed` flag to `true` in a `curl` request to confirm the completeness of the process :
 
     curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG/uploaded'
 
-For **build certificates**, the process is exactly the same.
+## Updating an uploaded provisioning profile/build certificate
 
-### Setting attributes
+You can perform minor updates to an uploaded code signing file with the `PATCH` method.
 
-After you have uploaded your files to the desired destination/platform, you might want to set some attributes again with the help of our API.
+For example, to make a **provisioning profile** protected, you can set the `is_protected` flag of your provisioning profiles to `true`. The  required parameters are the app slug and the provisioning profile slug.
+
+    curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG -d '{"is_protected":true}'
+
+For a **build certificate** you can set the same attributes as for a provisioning profile (see above), but you can modify the password too:
+
+    curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG -d '{"certificate_password":"s0m3-v3ry-s3cr3t-str1ng"}'
 
 {% include message_box.html type="warning" title="Careful with those attributes!" content="
 
@@ -80,11 +84,14 @@ In the case of provisioning profiles you can set the `is_protected`, `is_exposed
 * Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
 * When the value of `is_protected` is true, then the `is_expose` flag cannot be set to another value.
 * Once the `processed` flag is set to true, then its value cannot be changed anymore.
-  "%}
 
-## Getting specific provisioning profile information
+  Violating these constraints the response will be Bad Request.
 
-You might want to make a specific provisioning profile's data available to have a quick look at it. You can easily do so with the `GET` method and app slug and provisioning profile's slug parameters.
+  Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`. "%}
+
+## Getting specific code signing file's data
+
+You might want to retrieve a specific code signing file's data to have a quick look at it. You can easily do so with the `GET` method and with the app slug and file's slug parameters handy.
 
 Example curl request:
 
@@ -104,36 +111,14 @@ Example response
     }
     }
 
-{% include message_box.html type="note" title="My message" content=" Note that the `download_url` is generated only when the provisioning profile's `is_protected` attribute is false.
+{% include message_box.html type="note" title="Availability of the `download_url`" content=" Note that the `download_url` is generated only when the provisioning profile's `is_protected` attribute is false.
 "%}
 
-## Updating an uploaded provisioning profile/build certificate
+## Listing the uploaded files of an app
 
-You can perform minor updates to an already uploaded provisioning profile or build certificate with the `PATCH` method.
+Wondering how many code signing files belong to an app?  Get a list of them for a specific app with the `GET` method.
 
-To make a provisioning profile protected, you can set the `is_protected` flag of your provisioning profiles to `true`. The  required parameters are the app slug and the provisioning profile slug.
-
-    curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG -d '{"is_protected":true}'
-
-For a build certificate you can set the same attributes as for a provisioning profile (see above), but you can modify the password too:
-
-    curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG -d '{"certificate_password":"s0m3-v3ry-s3cr3t-str1ng"}'
-
-{% include message_box.html type="warning" title="Careful with those attributes!" content="
-
-In the case of provisioning profiles you can set the `is_protected`, `is_exposed` and `processed` attributes of the document, however, there are some constraints (which also concern the build certificate):
-
-* Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
-* When the value of `is_protected` is true, then the `is_expose` flag cannot be set to another value.
-* Once the `processed` flag is set to true, then its value cannot be changed anymore. "%}
-
-Violating these constraints the response will be Bad Request. Note that the previous /apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded endpoint will have the same effect as this one with the request body '{"processed":true}'.
-
-## Listing provisioning profiles /build certificates
-
-Wondering how many provisioning profiles/build certificates belong to an app?  Get a list of them for a specific app with the `GET` method.
-
-For provisioning profiles
+For example, for provisioning profiles:
 
     curl -X GET -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
 
@@ -164,21 +149,16 @@ Example response:
       }
     }
 
-As you can see the example response shows the list of provisioning profiles of a specific app along with their set attributes. You can also check that the max number of file limit is 50.
-
-For build certificates
-
-     curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates'
+As you can see the example response shows the list of provisioning profiles of a specific app along with their set attributes. You can also see that the max number of file limit is 50.
 
 ## Downloading provisioning profiles/build certificates
 
 If you’d like to download the actual file from AWS, you can also do that with the following `curl` requests:
 
-* provisioning profile
+Provisioning profile
 
-  curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
-* build certificate
+    curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
 
-  curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG'
+The response will contain a pre-signed, expiring AWS URL for the file.
 
-These responses will contain a pre-signed, expiring AWS URL for the actual file.
+## Deleting provisioning profiles/build certificates
