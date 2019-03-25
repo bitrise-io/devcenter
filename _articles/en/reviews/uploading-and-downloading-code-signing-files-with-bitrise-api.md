@@ -63,7 +63,7 @@ Example `curl` request
 
 ## Confirming the file upload
 
-So now you have your file uploaded to a storage place of your choice, you need to confirm that your upload is indeed finished.
+So now you have your file uploaded to a storage place of your choice/bitrise, you need to confirm that your upload is indeed finished.
 
 The two required parameters you'll need are the provisioning profile slug and the app slug. You can confirm the uploading process is complete if you set you can set the value of the `processed` flag to `true` a `curl` call:  `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded`.
 
@@ -81,9 +81,9 @@ After you have uploaded your files, it’s possible to **set some of their attri
 
 In the case of provisioning profiles you can set the `is_protected`,`is_expose` and `processed` attributes of the document, however, there are some constraints (which also concern the build certificate):
 
-1. once the `is_protected` flag is set to `true` it cannot be changed anymore
-2. when the value of `is_protected` is true, then the `is_expose`flag cannot be set to another value
-3. once `processed` flag is set to true, then its value cannot be changed anymore
+- Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
+- When the value of `is_protected` is true, then the `is_expose` flag cannot be set to another value.
+- Once the `processed` flag is set to true, then its value cannot be changed anymore.
    "%}
 
 ## Modifying an uploaded provisioning profile/build certificate
