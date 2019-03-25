@@ -31,7 +31,7 @@ You can find an interactive cURL call configurator by clicking on the `Start/Sch
 
 **Note that this call uses the deprecated** `app.bitrise.io` **URL and the app’s build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.**"%}
 
-You can create a new provisioning profile object with a simple `curl` request. This is the first phase of the provisioning profile upload process: by calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved. Required parameters are the app slug and provisioning profile name.
+You can create a new provisioning profile object with a simple `curl` request. This is the first phase of the provisioning profile upload process: by calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved. Required parameters are the app slug and provisioning profile name. Build certificate > presigned url as well?
 
 Example `curl` request:
 
