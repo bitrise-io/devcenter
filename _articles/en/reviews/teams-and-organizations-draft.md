@@ -32,4 +32,4 @@ So here's a quick summary of teams and organizations:
 | Roles assigned by the app's admins or owners | No inherent roles: just owners and members |
 | Only have access to a single app | Can own and control multiple apps |
 
-For more info, check out our [pricing page](https://bitrise.io/pricing/)!
+For more info, check out our [pricing page](https://www.bitrise.io/pricing/)!
