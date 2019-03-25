@@ -9,7 +9,7 @@ published: false
 
 All examples in this guide use the `[https://api.bitrise.io/v0.1/apps/APP-SLUG/builds](https://api.bitrise.io/v0.1/apps/APP-SLUG/builds "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds")` endpoint. This endpoint can only be authorized with a Personal Access Token!
 
-Before you'd start creating and uploading code signing files, you have to generate a new token and grab the slug of the app you want to add the code signing files to. To be able to access and use our API, you have to first generate a Personal Access Token to authorize yourself in the curl command.
+Before you'd start creating and uploading code signing files, you have to generate a new token and grab the slug of the app you want to add the code signing files to. To be able to access and use our API, you have to first generate a Personal Access Token to authorize yourself in the curl command. 
 
 1. Go to your `Account Settings`.
 2. Click the `Security` tab on the left.
@@ -27,6 +27,11 @@ Now that all is at hands, let's see what you can do with our API.
 ## Creating a provisioning profile
 
 **Request a pre-signed AWS URL** from Bitrise.
+
+{% include message_box.html type="note" title="Interactive cURL call configurator" content="
+You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app’s [bitrise.io](https://www.bitrise.io/) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.  
+
+**Note that this call uses the deprecated** `app.bitrise.io` **URL and the app’s build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.**"%}
 
 You can create a new provisioning profile object by calling the `/apps/{app-slug}/provisioning-profiles` endpoint and Bitrise will create a preliminary URL that you can use. The new provisioning profile's slug and its presigned upload URL will be retrieved. You can use this URL to upload the provisioning profile to the storage place of your choice (in our example it is AWS).
 
@@ -81,7 +86,7 @@ In the case of provisioning profiles you can set the `is_protected`,`is_expose` 
 
 #### Modifying an uploaded provisioning profile/build certificate
 
-Provisioning profile: 
+Provisioning profile:
 
 For setting the `is_protected` flag of one of your provisioning profiles, here's an example `curl` request with the `/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}` endpoint. The required parameters are: app slug and provisioning profile slug.
 
