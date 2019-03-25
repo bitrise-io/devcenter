@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/組織オーナーの変更-changing-the-owners-of-an-organization.md
 - _articles/en/reviews/Japanese translations/managing-organization-members.md
 - _articles/en/reviews/teams-and-organizations-draft.md
 - _articles/en/reviews/Japanese translations/組織の請求書管理-managing-the-invoices-of-your-organizations.md
