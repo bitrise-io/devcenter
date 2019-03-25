@@ -119,7 +119,15 @@ For a build certificate you can set the same attributes as for a provisioning pr
 
     curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG -d '{"certificate_password":"s0m3-v3ry-s3cr3t-str1ng"}'
 
-Violating these constraints the response will be Bad Request. Note: the previous /apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded endpoint will have the same effect as this one with the request body '{"processed":true}'
+{% include message_box.html type="warning" title="Careful with those attributes!" content="
+
+In the case of provisioning profiles you can set the `is_protected`, `is_exposed` and `processed` attributes of the document, however, there are some constraints (which also concern the build certificate):
+
+* Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
+* When the value of `is_protected` is true, then the `is_expose` flag cannot be set to another value.
+* Once the `processed` flag is set to true, then its value cannot be changed anymore. "%}
+
+Violating these constraints the response will be Bad Request. Note that the previous /apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded endpoint will have the same effect as this one with the request body '{"processed":true}'.
 
 ## Listing provisioning profiles /build certificates
 
