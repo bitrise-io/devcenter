@@ -79,9 +79,11 @@ If all went well, you should be landing on our Bitrise Dashboard.
 
 以上のステップが完了すると、Bitrise Dashboardへ進むことができます。
 
-## Checking SAML SSO statuses on Bitrise　
+## Checking SAML SSO statuses on Bitrise Bitrise上でSAML SSOステータスの確認
 
 Now that the org owner has set up SAML SSO for the organization and all org members (including the owner) have enabled their SAML SSO, everyone in the org can check their SAML SSO statuses. There are some extra features that only the org owner can access so we will show what org members and the org owner can see separately.
+
+この時点で組織のオーナーは組織のSAML SSOのセットアップ、全ての組織のメンバー（オーナーを含む）がSAML SSOの有効化が完了して、メンバー全員が
 
 ### Organization owner
 
