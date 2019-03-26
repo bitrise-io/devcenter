@@ -5,7 +5,9 @@ date: 2019-02-25 14:22:28 +0000
 published: false
 
 ---
-## Before you start
+You can manage code signing files with the Bitrise API using `POST`, `GET`, `PATCH`, and `DELETE` methods.
+
+## Before you start (can be deleted if included in API intro)
 
 All examples in this guide use the `api.bitrise.io/v0.1/apps/APP-SLUG/builds` endpoint. This endpoint can only be authorized with a Personal Access Token. Let's see how to generate a new Personal Access Token!
 
@@ -22,22 +24,21 @@ All examples in this guide use the `api.bitrise.io/v0.1/apps/APP-SLUG/builds` en
 
 Now that all is at hands, let's see what you can do with our API.
 
-## Creating a code signing file
-
-**Request a pre-signed AWS URL** from Bitrise.
-
-{% include message_box.html type="note" title="Interactive cURL call configurator" content="
-You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app’s [bitrise.io](https://www.bitrise.io/) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
+{% include message_box.html type="note" title="Interactive cURL call configurator" content=" You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app’s [bitrise.io](https://www.bitrise.io/) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
 
 **Note that this call uses the deprecated** `app.bitrise.io` **URL and the app’s build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.**"%}
 
-You can create a new provisioning profile object with a simple `curl` request. This is the first phase of the provisioning profile upload process: by calling this endpoint a new provisioning profile object is created and its slug and a presigned upload URL will be retrieved. Required parameters are the app slug and provisioning profile name. Build certificate > presigned url as well?
+## Creating & uploading a code signing file 
+
+You can add a new code signing file to an application of your choice. This is the first step of uploading any code signing files to a storage place. The required parameters for this method is the app slug and the name of the code signing file. If you call the relevant [Bitrise API endpoint](https://api-docs.bitrise.io/) with the specified parameters, a new code signing file object gets created.
 
 Example `curl` request:
 
     curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
 
-Where the example response is:
+As you can see from the example response below, the file name, its size, slug and pre-signed upload url are retrieved (along with some attributes that you can modify). This pre-signed upload url is a temporary link which you will use to upload the code signing file to its destination.
+
+Example response is:
 
     {
       "data":{
@@ -51,29 +52,39 @@ Where the example response is:
       }
     }
 
-Use the generated `upload_url` to upload the provisioning profile to the storage place of your choice (in our example it is AWS).
+Now that you have this temporary pre-signed `upload_url` at hand, you can upload the code signing file to the storage place of your choice (in our example below it is AWS).
 
 Example `curl` request:
 
     curl -T sample.provisionprofile 'https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/build_certificates/uploads/30067/original/certs.p12?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180216%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180216T124240Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=2bf42176650f00405abfd7b7757635c9be16b43e98013abb7f750d3c658be28e'
 
+Continue with confirming the file upload.
+
 ## Confirming the file upload
 
-Now that you have your file uploaded to a storage place of your choice/Bitrise, you need to confirm that your upload is indeed finished.
+Now that you have your file uploaded, you need to confirm that your upload is indeed completed.
 
-The two required parameters you'll need are the provisioning profile slug and the app slug. Set the value of the `processed` flag to `true` in a `curl` request to confirm the completeness of the process :
+The required parameters will be:
+
+* app slug
+* the code signing file's slug (generated above)
+
+Set the value of the `processed` flag to `true` in a `curl` request to confirm the completeness of the process:
 
     curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG/uploaded'
 
-## Updating an uploaded provisioning profile/build certificate
+## Updating an uploaded code signing file
 
-You can perform minor updates to an uploaded code signing file with the `PATCH` method.
+You can perform minor updates to an uploaded code signing file and check those on. If you've uploaded your file to [Bitrise](https://www.bitrise.io), you can visually check any changes to it on our `Code Signing` tab. The required parameters will be:
 
-For example, to make a **provisioning profile** protected, you can set the `is_protected` flag of your provisioning profiles to `true`. The  required parameters are the app slug and the provisioning profile slug.
+* app slug
+* the code signing file's slug
+
+For example, to make a **provisioning profile** protected, you can set the `is_protected` flag of your provisioning profiles to `true`. 
 
     curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG -d '{"is_protected":true}'
 
-For a **build certificate** you can set the same attributes as for a provisioning profile (see above), but you can modify the password too:
+For a **build certificate** you can set the same attributes as above but you can modify the password too:
 
     curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG -d '{"certificate_password":"s0m3-v3ry-s3cr3t-str1ng"}'
 
