@@ -32,8 +32,8 @@ The `page_item_limit` property can be set with the query parameter named `limit`
 
 **Example**
 
-* Calling `[https://api.bitrise.io/v0.1/me/apps](https://api.bitrise.io/v0.1/me/apps "https://api.bitrise.io/v0.1/me/apps")` will retrieve you the first page of your apps with size of 50.
-* If you call `[https://api.bitrise.io/v0.1/me/apps?limit=10](https://api.bitrise.io/v0.1/me/apps?limit=10 "https://api.bitrise.io/v0.1/me/apps?limit=10")`, the response is also the first page of your apps, but it will contain only 10 elements.
+* Calling `https://api.bitrise.io/v0.1/me/apps` will retrieve you the first page of your apps with size of 50.
+* If you call `https://api.bitrise.io/v0.1/me/apps?limit=10`, the response is also the first page of your apps, but it will contain only 10 elements.
 
 If you want to iterate through all the items, this is what you have to do:
 
@@ -45,9 +45,9 @@ If you want to iterate through all the items, this is what you have to do:
 
 Iterating through all your registered apps:
 
-1. Call `[https://api.bitrise.io/v0.1/me/apps](https://api.bitrise.io/v0.1/me/apps "https://api.bitrise.io/v0.1/me/apps")`.
+1. Call `https://api.bitrise.io/v0.1/me/apps`.
 2. Process the items (`data` property)
 3. Check the `paging` (root) property.
 4. If there's a `next` property inside `paging`, call the endpoint again, with the `next` query parameter
-   * Example: `[https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE](https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE "https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE")`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
+   * Example: `https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
 5. Repeate this until the `paging` object does not include a `next` property, which means that the page you received was the last one.
