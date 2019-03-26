@@ -111,7 +111,7 @@ In the case of provisioning profiles you can set the `is_protected`, `is_exposed
 
   Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`. "%}
 
-## Getting specific code signing file's data
+## Getting a specific code signing file's data
 
 You might want to retrieve a specific code signing file's data to have a quick look at it. You can easily do so with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
 
