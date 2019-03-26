@@ -7,7 +7,7 @@ published: false
 ---
 ## Authentication
 
-The current API supports only one type of authentication: user generated **Personal Access Tokens**.
+The current API supports only one type of authentication: user generated **Personal Access Tokens**. Organizations do not have their own access tokens.
 
 **Every API endpoint requires authentication**, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io "https://api.bitrise.io")).
 
@@ -28,5 +28,3 @@ To provide the required access token, you have to add a **HEADER** to your reque
 An example API call with auth, using `curl`:
 
     curl -H 'Authorization: THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me
-
-## 
