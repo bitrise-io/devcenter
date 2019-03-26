@@ -8,7 +8,7 @@ published: false
 
 You can upload, update, list, and delete code signing files with the [relevant Bitrise API](https://api-docs.bitrise.io/). In this guide we show you how and in what order to use those code signing endpoints.
 
-## Before you start (can be deleted if included in API intro)
+## Before you start _(Can be deleted if included in API intro)_
 
 All examples in this guide use the `api.bitrise.io/v0.1/apps/APP-SLUG/builds` endpoint. This endpoint can only be authorized with a Personal Access Token. Let's see how to generate a new Personal Access Token!
 
