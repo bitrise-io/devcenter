@@ -9,7 +9,7 @@ Welcome to the Bitrise API! Many of the features that you are used to on our web
 
 {% include message_box.html type="warning" title="The API is work-in-progress" content=" The API is work-in-progress: we will add new endpoints and possibly update the existing ones in the future. "%}
 
-You can track the progress of the API! Join the discussion at: https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554. Follow it if you want to get notified about new endpoints and changes, we announce those there.
+You can track the progress of the API: [join the discussion](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554)! Follow it and get notified about new endpoints and changes, we announce those there.
 
 Feel free to contribute! If you want to request a new API feature or a new endpoint, [you can do so!](http://discuss.bitrise.io/t/bitrise-public-api/37) 
 
