@@ -83,40 +83,43 @@ If all went well, you should be landing on our Bitrise Dashboard.
 
 Now that the org owner has set up SAML SSO for the organization and all org members (including the owner) have enabled their SAML SSO, everyone in the org can check their SAML SSO statuses. There are some extra features that only the org owner can access so we will show what org members and the org owner can see separately.
 
-この時点で組織のオーナーは組織のSAML SSOのセットアップ、全ての組織のメンバー（オーナーを含む）がSAML SSOの有効化が完了して、メンバー全員が
+この時点で組織のオーナーは組織のSAML SSOのセットアップ、全ての組織のメンバー（オーナーを含む）がSAML SSOの有効化が完了すると、メンバー全員がSAML SSOステータスの確認ができるようになります。組織のオーナーのみがアクセスできる他の特徴もあり、ここでは組織メンバーと組織オーナーそれぞれが何を閲覧できるのか説明していきます。
 
-### Organization owner
+### Organization owner　組織オーナー
 
-1. Go to your organization's profile page.
-2. Click `Single Sign On` on the left menu. This `Single Sign On` tab is **only available for the org owner**!
+1. Go to your organization's profile page.　組織のプロフィールページへ進みます。
+2. Click `Single Sign On` on the left menu. This `Single Sign On` tab is **only available for the org owner**!　左側のメニューより`Single Sign On` をクリックします。この`Single Sign On` タブは**組織オーナーのみが利用可能**です。
 
-   You will see the `Review Users` and the `Disable SSO` buttons:
+   You will see the `Review Users` and the `Disable SSO` buttons:　`Review Users` と `Disable SSO` ボタンを確認することができます。
 
    ![/img/disable-saml.jpg](https://app.forestry.io/sites/yv69yaruhkt48w/body-media//img/disable-saml.jpg)
 
    `Disable SSO` disables SAML SSO for all org members. Once disabled, org members will be able to sign in with the regular sign-in procedure. Please note that an individual org member can only be disabled at your own SAML SSO provider's site!
 
-   `Review Users` takes you from the `Single Sign On` tab to the `People` tab where you can check the org member's SAML SSO status.
+   `Review Users` takes you from the `Single Sign On` tab to the `People` tab where you can check the org member's SAML SSO status.　`Disable SSO` は全ての組織メンバーのSAML SSOを無効化します。いったん無効化されると、組織メンバーはいつもの方法でサインインができるようになります。組織メンバー個人はご自身のSAML SSOプロバイダサイトでのみ無効化されます。  
+   `Single Sign On` タブから`People` タブへと進むと`Review Users`へ進むことができ、そこでは組織メンバーのSAML SSOステータスを確認することができます。
 
    ![](/img/peopletab-org-owner.png)
 
-* `SAML SSO IS ENABLED`: Login via SAML SSO is enabled.
-* `SAML SSO IS DISABLED`: The org member has not enabled SSO connection through the `Sign in via SSO` button. To enable it, the org member has to follow the instructions in the verification email from Bitrise.
+* `SAML SSO IS ENABLED`: Login via SAML SSO is enabled.　`SAML SSO IS ENABLED`：SAML SSO経由のログインが可能です。
+* `SAML SSO IS DISABLED`: The org member has not enabled SSO connection through the `Sign in via SSO` button. To enable it, the org member has to follow the instructions in the verification email from Bitrise.　`SAML SSO IS DISABLED`：`Sign in via SSO` ボタン経由のSSOコネクションが可能な状態ではありません。可能にする場合、組織メンバーはBitriseから送られてくる確認メールの指示に従ってください。
 
-### Organization members
+### Organization members　組織メンバー
 
-1. Go to your organization's profile page.
-2. Click `People` on the left menu.
-3. Check your (or other organization members') SAML SSO status under `Members`.
+1. Go to your organization's profile page.　組織のプロフィールページへ進みます。
+2. Click `People` on the left menu.　左側のメニューより`People`をクリックします。
+3. Check your (or other organization members') SAML SSO status under `Members`.　`Members`の下にあるご自身の（もしくは他の組織メンバーの）SAML SSOステータスを確認してください。
 
    ![](/img/people-org-members.jpg)
 
-* `SAML SSO IS ENABLED`: Login via SAML SSO is enabled
-* `SAML SSO IS DISABLED`: The org member has not enabled SSO connection through the `Sign in via SSO` button. To enable it, the org member has to follow the instructions in the verification email from Bitrise.
+* `SAML SSO IS ENABLED`: Login via SAML SSO is enabled　　`SAML SSO IS ENABLED`：SAML SSO経由のログインが可能です。
+* `SAML SSO IS DISABLED`: The org member has not enabled SSO connection through the `Sign in via SSO` button. To enable it, the org member has to follow the instructions in the verification email from Bitrise.　`SAML SSO IS DISABLED`：`Sign in via SSO` ボタン経由のSSOコネクションが可能な状態ではありません。可能にする場合、組織メンバーはBitriseから送られてくる確認メールの指示に従ってください。
 
-## About SAML SSO enforcement
+## About SAML SSO enforcement　SAML SSOの施行について
 
 Enforcing SAML SSO on your organization provides an extra layer of security: you can enforce your own security guidelines to your Bitrise organization (for example, password format requirements, two-factor authentication). This will make SAML SSO the only way for logging in/singing up to the organization. If you invite more org members to a SAML-enforced organization, they'll have to enable their SAML SSO connection first to join the organization.
+
+組織でSAML SSOを施行することによって、セキュリティレベルを上げることができます：Bitrise組織にご自身のセキュリティガイドラインを施行する事が可能です（例：パスワードフォーマットの要件、二要素認証など）。これはSAML SSOを組織へログイン・サインアップができる唯一の方法にすることができます。SAMLが施行された組織へ新たな組織メンバーを招待する際、新メンバーはその組織に加わるためにまずSAML SSOコネクションを有効にしなければなりません。
 
 ### Enforcing SAML SSO on an organization
 
