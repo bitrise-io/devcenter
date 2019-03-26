@@ -7,9 +7,11 @@ published: false
 ---
 You can upload, update, list, and delete code signing files with the [relevant Bitrise API](https://api-docs.bitrise.io/). In this guide we show you how and in what order to use those code signing endpoints.
 
+ios
+
 ## Before you start _(Can be deleted if included in planned API intro)_
 
-All examples in this guide use the `api.bitrise.io/v0.1/apps/APP-SLUG/builds` endpoint. This endpoint can only be authorized with a Personal Access Token. Let's see how to generate a new Personal Access Token!
+All examples in this guide use the `api.bitrise.io` URL. This can only be authorized with a Personal Access Token. Let's see how to generate a new Personal Access Token!
 
 1. Go to your `Account Settings`.
 2. Click the `Security` tab on the left.
@@ -37,7 +39,7 @@ If you call the relevant [Bitrise API endpoint](https://api-docs.bitrise.io/) wi
 
 Example `curl` request:
 
-    curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
+    curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
 
 As you can see from the example response below, the file name, its size, slug and pre-signed upload url are retrieved (along with some attributes that you can modify). This pre-signed upload url is a temporary link which you will use to upload the code signing file to its destination.
 
@@ -55,7 +57,7 @@ Example response is:
       }
     }
 
-Now that you have this temporary pre-signed `upload_url` at hand, you can upload the code signing file to the storage place of your choice (in our example below it is AWS).
+Now that you have this temporary pre-signed `upload_url` at hand, you can upload the code signing file to AWS.
 
 Example `curl` request:
 
@@ -78,7 +80,7 @@ The required parameters are:
 
 Set the value of the `processed` flag to `true` in a `curl` request to confirm the completeness of the process:
 
-    curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG/uploaded'
+    curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG/uploaded'
 
 Now that you have confirmed the upload, you can do a bunch of other cool stuff with the files. Continue reading!
 
@@ -93,15 +95,15 @@ The required parameters are:
 
 For example, to make a **provisioning profile** protected, you can set the `is_protected` flag of your provisioning profiles to `true`.
 
-    curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG -d '{"is_protected":true}'
+    curl -X PATCH -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG -d '{"is_protected":true}'
 
 For a **build certificate** you can set the same attributes as above but you can modify the password too:
 
-    curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG -d '{"certificate_password":"s0m3-v3ry-s3cr3t-str1ng"}'
+    curl -X PATCH -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/build-certificates/BUILD-CERTIFICATE-SLUG -d '{"certificate_password":"s0m3-v3ry-s3cr3t-str1ng"}'
 
 {% include message_box.html type="warning" title="Careful with those attributes!" content="
 
-In the case of provisioning profiles you can set the `is_protected`, `is_exposed` and `processed` attributes of the document, however, there are some constraints (which also concern the build certificate):
+In the case of code signing files you can set the `is_protected`, `is_exposed` and `processed` attributes of the document:
 
 * Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
 * When the value of `is_protected` is true, then the `is_expose` flag cannot be set to another value.
@@ -122,7 +124,7 @@ The required parameters are:
 
 Example curl request:
 
-     curl -X GET -H  'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
+     curl -X GET -H  'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
 
 Example response
 
@@ -156,7 +158,7 @@ Optional parameters are:
 
 Example curl request for provisioning profiles:
 
-    curl -X GET -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
+    curl -X GET -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
 
 Example response:
 
@@ -198,12 +200,12 @@ The required parameters are:
 
 Example curl request:
 
-    curl -X DELETE 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
+    curl -X DELETE 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
 
 ## Downloading provisioning profiles/build certificates
 
 If you’d like to download the actual file from a storage place (in our example it is AWS), you can do so with the following `curl` requests:
 
-    curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
+    curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
 
 The response will contain a pre-signed, expiring AWS URL for the file.
