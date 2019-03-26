@@ -30,7 +30,14 @@ Now that all is at hands, let's see what you can do with our API.
 
 ## Creating & uploading a code signing file
 
-You can add a new code signing file to an application of your choice. This is the first step of uploading any code signing files to a storage place. The required parameters for this method is the app slug and the name of the code signing file. If you call the relevant [Bitrise API endpoint](https://api-docs.bitrise.io/) with the specified parameters, a new code signing file object gets created.
+You can add a new code signing file to an application of your choice. This is the first step of uploading any code signing files to a storage place.
+
+The required parameters are:
+
+* app slug
+* file name
+
+If you call the relevant [Bitrise API endpoint](https://api-docs.bitrise.io/) with the specified parameters, a new code signing file object gets created.
 
 Example `curl` request:
 
@@ -64,10 +71,10 @@ Continue with confirming the file upload.
 
 Now that you have your file uploaded, you need to confirm that your upload is indeed completed.
 
-The required parameters will be:
+The required parameters are:
 
 * app slug
-* the code signing file's slug (generated above)
+* file slug (generated above)
 
 Set the value of the `processed` flag to `true` in a `curl` request to confirm the completeness of the process:
 
@@ -77,10 +84,10 @@ Set the value of the `processed` flag to `true` in a `curl` request to confirm t
 
 You can perform minor updates to an uploaded code signing file with the relevant Bitrise API using the `PATCH` method. If you've uploaded your file to [Bitrise](https://www.bitrise.io), you can visually check any changes to it on our `Code Signing` tab.
 
-The required parameters will be:
+The required parameters are:
 
 * app slug
-* the code signing file's slug
+* file slug
 
 For example, to make a **provisioning profile** protected, you can set the `is_protected` flag of your provisioning profiles to `true`.
 
@@ -106,10 +113,10 @@ In the case of provisioning profiles you can set the `is_protected`, `is_exposed
 
 You might want to retrieve a specific code signing file's data to have a quick look at it. You can easily do so with the relevant Bitrise API using the `GET` method.
 
-The required parameters will be:
+The required parameters are:
 
 * app slug
-* the code signing file's slug
+* file slug
 
 Example curl request:
 
@@ -136,18 +143,16 @@ Example response
 
 Wondering how many code signing files belong to an app? Get a list of them with the relevant Bitrise API using the `GET` method.
 
-The required parameters will be:
+The required parameter is:
 
 * app slug
 
 Optional parameters are:
 
-* 
+* next: slug of the first file in the response (as a string)
+* limit: max number of elements per page (as an integer) where the default is 50.
 
-
-* 
-
-For example, for provisioning profiles:
+Example curl request for provisioning profiles:
 
     curl -X GET -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
 
@@ -178,24 +183,24 @@ Example response:
       }
     }
 
-As you can see the example response shows the list of provisioning profiles of a specific app along with their set attributes. You can also see that the max number of file limit is 50.
+As you can see the example response shows the list of provisioning profiles of a specific app along with their defined attributes. You can also see that the max number of file limit is 50.
 
 ## Deleting provisioning profiles/build certificates
 
 You can delete your uploaded code signing file with the relevant Bitrise API using the `DELETE` method.
 
-The required parameters will be:
+The required parameters are:
 
 * app slug
-* the code signing file's slug
+* file slug
+
+Example curl request:
 
     curl -X DELETE 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
 
 ## Downloading provisioning profiles/build certificates
 
-If you’d like to download the actual file from AWS, you can also do that with the following `curl` requests:
-
-Provisioning profile
+If you’d like to download the actual file from a storage place (in our example it is AWS), you can do so with the following `curl` requests:
 
     curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
 
