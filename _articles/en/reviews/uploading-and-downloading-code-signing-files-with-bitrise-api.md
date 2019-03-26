@@ -50,7 +50,7 @@ Example `curl` request:
 
 Continue with confirming the file upload.
 
-## Confirming the iOS file upload
+## Confirming the iOS code signing file upload
 
 Now that you have your file uploaded, you need to confirm that your upload is indeed completed.
 
@@ -124,7 +124,7 @@ Example response
 {% include message_box.html type="note" title="Availability of the `download_url`" content=" Note that the `download_url` is generated only when the provisioning profile's `is_protected` attribute is false.
 "%}
 
-## Listing the uploaded files of an app
+## Listing the uploaded code signing files of an app
 
 Wondering how many iOS code signing files belong to an app? Get a list of them with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
 
@@ -170,7 +170,7 @@ Example response:
 
 As you can see the example response shows the list of provisioning profiles of a specific app along with their defined attributes. You can also see that the max number of file limit is 50.
 
-## Deleting provisioning profiles/build certificates
+## Deleting an iOS code signing file
 
 You can delete your uploaded iOS code signing file with the [relevant Bitrise API ](https://api-docs.bitrise.io/)using the `DELETE` method.
 
@@ -183,7 +183,7 @@ Example curl request:
 
     curl -X DELETE 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
 
-## Downloading provisioning profiles/build certificates
+## Downloading an iOS code signing file
 
 If you’d like to download the actual file from AWS, you can do so with the following `curl` requests:
 
