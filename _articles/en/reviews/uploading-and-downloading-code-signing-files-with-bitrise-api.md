@@ -5,7 +5,8 @@ date: 2019-02-25 14:22:28 +0000
 published: false
 
 ---
-You can manage code signing files with the Bitrise API using `POST`, `GET`, `PATCH`, and `DELETE` methods.
+
+You can upload, update, list, and delete code signing files with the [relevant Bitrise API](https://api-docs.bitrise.io/). In this guide we show you how and in what order to use those code signing endpoints.
 
 ## Before you start (can be deleted if included in API intro)
 
@@ -80,9 +81,11 @@ Set the value of the `processed` flag to `true` in a `curl` request to confirm t
 
     curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG/uploaded'
 
+Now that you have confirmed the upload, you can do a bunch of other cool stuff with the files. Continue reading!
+
 ## Updating an uploaded code signing file
 
-You can perform minor updates to an uploaded code signing file with the relevant Bitrise API using the `PATCH` method. If you've uploaded your file to [Bitrise](https://www.bitrise.io), you can visually check any changes to it on our `Code Signing` tab.
+You can perform minor updates to an uploaded code signing file with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `PATCH` method. If you've uploaded your file to [Bitrise](https://www.bitrise.io), you can visually check any changes to it on our `Code Signing` tab.
 
 The required parameters are:
 
@@ -111,7 +114,7 @@ In the case of provisioning profiles you can set the `is_protected`, `is_exposed
 
 ## Getting specific code signing file's data
 
-You might want to retrieve a specific code signing file's data to have a quick look at it. You can easily do so with the relevant Bitrise API using the `GET` method.
+You might want to retrieve a specific code signing file's data to have a quick look at it. You can easily do so with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
 
 The required parameters are:
 
@@ -141,7 +144,7 @@ Example response
 
 ## Listing the uploaded files of an app
 
-Wondering how many code signing files belong to an app? Get a list of them with the relevant Bitrise API using the `GET` method.
+Wondering how many code signing files belong to an app? Get a list of them with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
 
 The required parameter is:
 
@@ -187,7 +190,7 @@ As you can see the example response shows the list of provisioning profiles of a
 
 ## Deleting provisioning profiles/build certificates
 
-You can delete your uploaded code signing file with the relevant Bitrise API using the `DELETE` method.
+You can delete your uploaded code signing file with the [relevant Bitrise API ](https://api-docs.bitrise.io/)using the `DELETE` method.
 
 The required parameters are:
 
