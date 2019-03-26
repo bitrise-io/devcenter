@@ -1,5 +1,5 @@
 ---
-title: Available Stacks (利用可能なスタック)
+title: 利用可能なスタック（Available Stacks)
 redirect_from: []
 date: 2019-03-21 14:51:08 +0000
 published: false
