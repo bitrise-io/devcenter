@@ -34,7 +34,7 @@ In this guide we cover the following topics:
 * Bitriseへ接続が可能なSAML SSOプロバイダ（アイデンティティ・プロバイダ）を持っていること
 * your account on Bitrise has an organization. If it doesn't have an organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for **existing and brand new organizations** on Bitrise.
 * Bitriseのご自身のアカウントに組織があること。組織がない場合、[作成]()してください。SAML SSOのセットアップはBitrise上のすでに存在する組織や新しい組織と同じです。
-* as with other [organization management actions](ht/team-management/organizations/members-organizations/), only the organization owner can set up SAML SSO to a Bitrise organization. 
+* as with other [organization management actions](ht/team-management/organizations/members-organizations/), only the organization owner can set up SAML SSO to a Bitrise organization.
 * 他の[組織マネジメントアクション](ht/team-management/organizations/members-organizations/)と同じで、組織のオーナーだけがBitrise組織へSAML SSOのセットアップが行えます。"%}
 
 ## Setting up SAML SSO for a Bitrise organization　Bitrise組織のSAML SSOのセットアップ
@@ -72,12 +72,14 @@ Now that the org owner has set up SAML SSO, everyone in the organization has to 
    ![](/img/no-connected-sso-for-this-email-address.jpg)
 3. You're directed to the `Allow "organization name" to sign you in` page.　`Allow "organization name" to sign you in` ページへ遷移されます。
 
-* Click `Authorize` if you trust the organization to control your Bitrise account-sign in process. Note that once you click `Authorize`, you'll **only be able authenticate this account via SAML SSO**.　Bitriseアカウントサインインプロセスをコントロールするために組織を信用していれば、`Authorize` をクリックします。
-* Click `Don't allow` if the invitation email is from an untrusted source.![](/img/enable-saml.jpg)
+* Click `Authorize` if you trust the organization to control your Bitrise account-sign in process. Note that once you click `Authorize`, you'll **only be able authenticate this account via SAML SSO**.　Bitriseアカウント・サインインプロセスをコントロールするのに組織を信用していれば、`Authorize` をクリックします。いったん`Authorize`をクリックすると、このアカウントのみ認証
+* Click `Don't allow` if the invitation email is from an untrusted source.招待メールが信頼していないソースから届いた場合は、`Don't allow` をクリックしてください。
 
 If all went well, you should be landing on our Bitrise Dashboard.
 
-## Checking SAML SSO statuses on Bitrise
+以上のステップが完了すると、Bitrise Dashboardへ進むことができます。
+
+## Checking SAML SSO statuses on Bitrise　
 
 Now that the org owner has set up SAML SSO for the organization and all org members (including the owner) have enabled their SAML SSO, everyone in the org can check their SAML SSO statuses. There are some extra features that only the org owner can access so we will show what org members and the org owner can see separately.
 
