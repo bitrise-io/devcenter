@@ -16,13 +16,13 @@ The required parameters are:
 * app slug
 * file name
 
-If you call the relevant [Bitrise API endpoint](https://api-docs.bitrise.io/) with the specified parameters, a new code signing file object gets created.
+If you call the relevant [Bitrise API endpoint](https://api-docs.bitrise.io/) with the specified parameters, a new iOS code signing file object gets created.
 
 Example `curl` request:
 
     curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
 
-As you can see from the example response below, the file name, its size, slug and pre-signed upload url are retrieved (along with some attributes that you can modify). This pre-signed upload url is a temporary link which you will use to upload the code signing file to its destination.
+As you can see from the example response below, the file name, its size, slug and pre-signed upload url are retrieved (along with some attributes that you can modify). This pre-signed upload url is a temporary link which you will use to upload the iOS code signing file to its destination.
 
 Example response is:
 
@@ -38,7 +38,7 @@ Example response is:
       }
     }
 
-Now that you have this temporary pre-signed `upload_url` at hand, you can upload the code signing file to AWS.
+Now that you have this temporary pre-signed `upload_url` at hand, you can upload the iOS code signing file to AWS.
 
 Example `curl` request:
 
@@ -50,7 +50,7 @@ Example `curl` request:
 
 Continue with confirming the file upload.
 
-## Confirming the file upload
+## Confirming the iOS file upload
 
 Now that you have your file uploaded, you need to confirm that your upload is indeed completed.
 
@@ -65,9 +65,9 @@ Set the value of the `processed` flag to `true` in a `curl` request to confirm t
 
 Now that you have confirmed the upload, you can do a bunch of other cool stuff with the files. Continue reading!
 
-## Updating an uploaded code signing file
+## Updating an uploaded iOS code signing file
 
-You can perform minor updates to an uploaded code signing file with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `PATCH` method. If you've uploaded your file to [Bitrise](https://www.bitrise.io), you can visually check any changes to it on our `Code Signing` tab.
+You can perform minor updates to an uploaded iOS code signing file with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `PATCH` method. If you've uploaded your file to [Bitrise](https://www.bitrise.io), you can visually check any changes to it on our `Code Signing` tab.
 
 The required parameters are:
 
@@ -84,7 +84,7 @@ For a **build certificate** you can set the same attributes as above but you can
 
 {% include message_box.html type="warning" title="Careful with those attributes!" content="
 
-In the case of code signing files you can set the `is_protected`, `is_exposed` and `processed` attributes of the document:
+In the case of iOS code signing files, you can set the `is_protected`, `is_exposed` and `processed` attributes of the document:
 
 * Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
 * When the value of `is_protected` is true, then the `is_expose` flag cannot be set to another value.
@@ -94,9 +94,9 @@ In the case of code signing files you can set the `is_protected`, `is_exposed` a
 
   Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`. "%}
 
-## Getting a specific code signing file's data
+## Getting a specific iOS code signing file's data
 
-You might want to retrieve a specific code signing file's data to have a quick look at it. You can easily do so with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
+You might want to retrieve a specific iOS code signing file's data to have a quick look at it. You can easily do so with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
 
 The required parameters are:
 
@@ -126,7 +126,7 @@ Example response
 
 ## Listing the uploaded files of an app
 
-Wondering how many code signing files belong to an app? Get a list of them with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
+Wondering how many iOS code signing files belong to an app? Get a list of them with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
 
 The required parameter is:
 
@@ -172,7 +172,7 @@ As you can see the example response shows the list of provisioning profiles of a
 
 ## Deleting provisioning profiles/build certificates
 
-You can delete your uploaded code signing file with the [relevant Bitrise API ](https://api-docs.bitrise.io/)using the `DELETE` method.
+You can delete your uploaded iOS code signing file with the [relevant Bitrise API ](https://api-docs.bitrise.io/)using the `DELETE` method.
 
 The required parameters are:
 
