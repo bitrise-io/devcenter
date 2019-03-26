@@ -28,7 +28,7 @@ Now that all is at hands, let's see what you can do with our API.
 
 **Note that this call uses the deprecated** `app.bitrise.io` **URL and the app’s build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.**"%}
 
-## Creating & uploading a code signing file 
+## Creating & uploading a code signing file
 
 You can add a new code signing file to an application of your choice. This is the first step of uploading any code signing files to a storage place. The required parameters for this method is the app slug and the name of the code signing file. If you call the relevant [Bitrise API endpoint](https://api-docs.bitrise.io/) with the specified parameters, a new code signing file object gets created.
 
@@ -75,12 +75,14 @@ Set the value of the `processed` flag to `true` in a `curl` request to confirm t
 
 ## Updating an uploaded code signing file
 
-You can perform minor updates to an uploaded code signing file and check those on. If you've uploaded your file to [Bitrise](https://www.bitrise.io), you can visually check any changes to it on our `Code Signing` tab. The required parameters will be:
+You can perform minor updates to an uploaded code signing file with the relevant Bitrise API using the `PATCH` method. If you've uploaded your file to [Bitrise](https://www.bitrise.io), you can visually check any changes to it on our `Code Signing` tab.
+
+The required parameters will be:
 
 * app slug
 * the code signing file's slug
 
-For example, to make a **provisioning profile** protected, you can set the `is_protected` flag of your provisioning profiles to `true`. 
+For example, to make a **provisioning profile** protected, you can set the `is_protected` flag of your provisioning profiles to `true`.
 
     curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG -d '{"is_protected":true}'
 
@@ -102,7 +104,12 @@ In the case of provisioning profiles you can set the `is_protected`, `is_exposed
 
 ## Getting specific code signing file's data
 
-You might want to retrieve a specific code signing file's data to have a quick look at it. You can easily do so with the `GET` method and with the app slug and file's slug parameters handy.
+You might want to retrieve a specific code signing file's data to have a quick look at it. You can easily do so with the relevant Bitrise API using the `GET` method.
+
+The required parameters will be:
+
+* app slug
+* the code signing file's slug
 
 Example curl request:
 
@@ -127,7 +134,18 @@ Example response
 
 ## Listing the uploaded files of an app
 
-Wondering how many code signing files belong to an app?  Get a list of them for a specific app with the `GET` method.
+Wondering how many code signing files belong to an app? Get a list of them with the relevant Bitrise API using the `GET` method.
+
+The required parameters will be:
+
+* app slug
+
+Optional parameters are:
+
+* 
+
+
+* 
 
 For example, for provisioning profiles:
 
@@ -162,6 +180,17 @@ Example response:
 
 As you can see the example response shows the list of provisioning profiles of a specific app along with their set attributes. You can also see that the max number of file limit is 50.
 
+## Deleting provisioning profiles/build certificates
+
+You can delete your uploaded code signing file with the relevant Bitrise API using the `DELETE` method.
+
+The required parameters will be:
+
+* app slug
+* the code signing file's slug
+
+    curl -X DELETE 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
+
 ## Downloading provisioning profiles/build certificates
 
 If you’d like to download the actual file from AWS, you can also do that with the following `curl` requests:
@@ -171,5 +200,3 @@ Provisioning profile
     curl -X POST -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
 
 The response will contain a pre-signed, expiring AWS URL for the file.
-
-## Deleting provisioning profiles/build certificates
