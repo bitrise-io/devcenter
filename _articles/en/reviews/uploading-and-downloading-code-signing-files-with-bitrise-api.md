@@ -5,30 +5,11 @@ date: 2019-02-25 14:22:28 +0000
 published: false
 
 ---
-You can upload, update, list, and delete code signing files with the [relevant Bitrise API](https://api-docs.bitrise.io/). In this guide we show you how and in what order to use those code signing endpoints.
-
-ios
-
-## Before you start _(Can be deleted if included in planned API intro)_
-
-All examples in this guide use the `api.bitrise.io` URL. This can only be authorized with a Personal Access Token. Let's see how to generate a new Personal Access Token!
-
-1. Go to your `Account Settings`.
-2. Click the `Security` tab on the left.
-3. Click `Generate new` at `Personal access token (BETA)`.
-4. Add a `Token description` and an `Expiration`.
-5. Hit `Save & Continue`.
-
-   ![](/img/new-token-generation.png)
-
-        storing the new tokens
-6. Copy the slug of your app from its app URL. For example, [https://www.bitrise.io/app/](https://www.bitrise.io/app/ "https://www.bitrise.io/app/")[{APP-SLUG}#/builds](https://www.bitrise.io/app/%7BAPP-SLUG%7D#/builds.) where the `APP-SLUG` is what you need.
-
-Now that all is at hands, let's see what you can do with our API.
+You can upload, update, list, and delete iOS code signing files with the [relevant Bitrise API](https://api-docs.bitrise.io/). In this guide we show you how and in what order to use those code signing endpoints.
 
 ## Creating & uploading a code signing file
 
-You can add a new code signing file to an application of your choice. This is the first step of uploading any code signing files to a storage place.
+You can add a new iOS code signing file to an application of your choice.
 
 The required parameters are:
 
@@ -204,7 +185,7 @@ Example curl request:
 
 ## Downloading provisioning profiles/build certificates
 
-If you’d like to download the actual file from a storage place (in our example it is AWS), you can do so with the following `curl` requests:
+If you’d like to download the actual file from AWS, you can do so with the following `curl` requests:
 
     curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
 
