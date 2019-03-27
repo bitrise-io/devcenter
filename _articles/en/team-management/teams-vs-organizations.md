@@ -1,5 +1,5 @@
 ---
-title: Teams vs organizations
+title: Teams and organizations overview
 redirect_from: []
 date: 2019-03-27 15:41:18 +0000
 
