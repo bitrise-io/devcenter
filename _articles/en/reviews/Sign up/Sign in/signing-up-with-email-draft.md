@@ -20,15 +20,6 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 1. Add your `Email`, `Username` and `Password` on our [Sign Up](https://app.bitrise.io/users/sign_up) page.
 
    ![](/img/Sign_up_with_email.jpg)
-
-   Please note that you must provide a strong password which fulfills the following requirements:
-   * it should have at least 12 characters
-   * at least one upper case character
-   * at least one lower case character
-   * at least one number
-   * can not contain the same character more than 3 times in a row (aaa)
-   * cannot be alphabetical order or reverse order (abcd, dcba)
-   * cannot be numerical order or reverse order (1234, 4321)
 2. Click `Sign up with email`.
 3. Check your inbox for our Confirmation Instructions.
 
@@ -57,3 +48,12 @@ If you failed to log in for an excessive amount of attempts, you will automatica
 * [Signing up with GitHub](/getting-started/signing-up/signing-up-with-github)
 * [Signing up with Gitlab](/getting-started/signing-up/signing-up-with-gitlab/)
 * [Signing up with Bitbucket](/getting-started/signing-up/signing-up-with-bitbucket) " %}
+
+  Please note that you must provide a strong password which fulfills the following requirements:
+  * it should have at least 12 characters
+  * at least one upper case character
+  * at least one lower case character
+  * at least one number
+  * can not contain the same character more than 3 times in a row (aaa)
+  * cannot be alphabetical order or reverse order (abcd, dcba)
+  * cannot be numerical order or reverse order (1234, 4321)
