@@ -25,7 +25,7 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML ap
  8. Click `Account Settings`.
  9. Click the organization you want to add SAML SSO.
 10. Click the organization's `Single Sign On` button on the left.
-11. Paste the `SSO URL` to the `Identity provider sing-on URL` field. Paste the content of the downloaded certificate to the `Certificate` field.
+11. Paste the `SSO URL` to the `Identity provider sign-on URL` field. Paste the content of the downloaded certificate to the `Certificate` field.
 
     ![](/img/sso-saml-page.jpg)
 12. Copy the `Single Sign-On URL`.
