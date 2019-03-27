@@ -17,21 +17,33 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
 ## Signing up
 
-1. Add your username, email address and password on our [Sign Up](https://app.bitrise.io/users/sign_up) page.
+1. Add your `Email`, `Username` and `Password` on our [Sign Up](https://app.bitrise.io/users/sign_up) page.
 
-   You must provide a strong password which fulfills the following requirements:
+   ![](/img/Sign_up_with_email.jpg)
 
-   ![](/img/your-password-should-have-1.png)
-2. Click `Sign up with email`
-3. _Optional step_: Add your first name, last name, your company name and a few more details if you wish. You can also add those later.
-4. Check your inbox for our Confirmation Instructions.
-
-   ![](/img/check-your-inbox.png)
+   {% include message_box.html type="important" title="Strong passwords" content=" Please note that you must provide a strong password which fulfills the following requirements:
+   * it should have at least 12 characters
+   * at least one upper case character
+   * at least one lower case character
+   * at least one number
+   * can not contain the same character more than 3 times in a row (aaa)
+   * cannot be alphabetical order or reverse order (abcd, dcba)
+   * cannot be numerical order or reverse order (1234, 4321)
+     %}
+2. Click `Sign up with email`.
+3. Check your inbox for our Confirmation Instructions.
 
    If you haven't received a confirmation email, click the **Resend confirmation email** button.
-5. Click `Confirm my account` which takes you to your Bitrise Dashboard.
 
-   ![](/img/add-your-first-app.png)
+   ![](/img/Check-your-inbox.jpg)
+4. Click the `Confirm My Account` button or copy the URL provided in the email.
+
+   ![](/img/confirm-my-account.jpg)
+   Clicking `Confirm My Account` will take you to `Help us help you` page.
+5. On `Help us help you`, add your first name, last name, your company name and a few more details if you wish. You can also add those later.
+6. Click `Done`. You will be directed to your Bitrise Dashboard.
+
+Now you can go ahead and add your first app to your Dashboard.
 
 ## Issues with Logging in
 
