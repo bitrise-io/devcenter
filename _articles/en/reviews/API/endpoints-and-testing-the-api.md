@@ -18,7 +18,7 @@ You can try out any endpoint in the reference documentation itself! All you need
 3. Click `Authorize`.
 
    ![](/img/authorize.png)
-4. Paste your Personal Access Token to the `Value` field
+4. Paste your Personal Access Token to the `Value` field.
 
    ![](/img/available-auth.png)
 5. Click on the endpoint you want to try it out to open its details.
@@ -27,6 +27,6 @@ You can try out any endpoint in the reference documentation itself! All you need
 
 The API will return:
 
-* the `curl` command of your request.
-* the request URL.
-* the server response.
+* the `curl` command of your request
+* the request URL
+* the server response
