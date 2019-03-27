@@ -21,7 +21,7 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
    ![](/img/Sign_up_with_email.jpg)
 
-   {% include message_box.html type="important" title="Strong passwords" content=" Please note that you must provide a strong password which fulfills the following requirements:
+   Please note that you must provide a strong password which fulfills the following requirements:
    * it should have at least 12 characters
    * at least one upper case character
    * at least one lower case character
@@ -29,7 +29,6 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
    * can not contain the same character more than 3 times in a row (aaa)
    * cannot be alphabetical order or reverse order (abcd, dcba)
    * cannot be numerical order or reverse order (1234, 4321)
-     %}
 2. Click `Sign up with email`.
 3. Check your inbox for our Confirmation Instructions.
 
