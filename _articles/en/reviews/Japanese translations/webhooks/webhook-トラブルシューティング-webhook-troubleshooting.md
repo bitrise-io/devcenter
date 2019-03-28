@@ -35,7 +35,9 @@ An ignored build call entry in the Activity list looks like:
 
 ほとんどのソースコードホスティングサービスでWebhookをブランチごとに制限することはできないので、[bitrise.io](https://www.bitrise.io)は他のブランチのコードプッシュごとにwebhookコールを受け取りますが、ビルドに選択される`workflow`を指定する`trigger_map`で一致するフィルタが見つからない限りビルドを開始できません。 **Build Trigger API**を直接使用する場合も同様です。  
 
-bitrise.io活動ページですべての無視された呼び出しを見ることができます。つまり、特定のイベントがビルドを開始したにもかかわらず開始しなかった場合は、Activityページ（またはソースコードホスティングサービスのWebhook履歴 - 詳細は後述）を確認して、なぜそれがトリガーされなかったかを調べてください。構築します。  アクティビティリストの無視されたビルド呼び出しエントリは次のようになります。
+[bitrise.io活動ページ](http://www.bitrise.io/activity)ですべての無視されたcallを見ることができます。つまり、特定のイベントがビルドを開始したにもかかわらず開始しなかった場合は、`Activity`ページ（またはソースコードホスティングサービスのWebhook履歴 - 詳細は後述）を確認して、ビルドがトリガーされなかったか理由を調べてください。  
+
+アクティビティリストの無視されたビルドcallエントリー：
 
     Build trigger failed: trigger-pattern (push_branch:) (pr_source_branch:prtest/t1) (pr_target_branch:develop) did not match any defined workflow in trigger_map
     PROJECT-NAME - Run triggered with params: push-branch: , pr-source-branch: prtest/t1, pr-target-branch: develop, but no matching workflow found
