@@ -27,8 +27,7 @@ Outgoing webhooks enable integration with other services: specifically, they are
 
 {% include message_box.html type="info" title="Build status reports" content="Notifying your Git provider about the build status does not require outgoing webhooks."%} 
 
-To set up an outgoing webhook for an application, you need to specify the app itself and the creation parameters:
+To set up an outgoing webhook for an application, you need to specify the app itself and at least two of the creation parameters:
 
 * The webhook URL: you can get this from the service you want to integrate with Bitrise.
-* The events that trigger the webhook.
-* Custom webhook headers: these require specifying a key/value pair.
+* The events that trigger the webhook. Currently, this takes two possible values: "all" and "build". 
