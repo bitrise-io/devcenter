@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/webhooks/visual-studio-webhookの追加-adding-a-visual-studio-webhook.md
 - _articles/en/reviews/Japanese translations/webhooks/gitlab-webhookの追加-adding-a-gitlab-webhook.md
 - _articles/en/reviews/Japanese translations/webhooks/slack-webhookの追加-adding-a-slack-webhook.md
 - _articles/en/reviews/Japanese translations/webhooks/gogs-webhookの追加-adding-a-gogs-webhook.md
