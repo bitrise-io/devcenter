@@ -44,7 +44,7 @@ curl -X POST "https://api.bitrise.io/v0.1/apps/APP-SLUG/outgoing-webhooks" -H "a
 
 Example response:
 
-```
+```json
 {
   "slug": "01D72ARNH4KR7KMW3DG3NBKXRK",
   "url": "example.webhook.com",
@@ -61,3 +61,33 @@ Example response:
 
 ### Modifying and deleting outgoing webhooks
 
+To modify an existing webhook, you need to specify all the mandatory parameters in your request. In other words, even if you only want to change the URL, the request still has to contain a valid value for the `events` parameter. 
+
+Example request:
+
+```bash
+curl -X PUT "https://api.bitrise.io/v0.1/apps/APP-SLUG/outgoing-webhooks/WEBHOOK-SLUG" -H "accept: application/json" -H "Authorization: ACCESS-TOKEN" -H "Content-Type: application/json" -d "{ \"events\": [ \"all\" ], \"url\": \"example2.webhook.com\"}"
+```
+
+Example response:
+
+```json
+{
+  "data": {
+    "slug": "01D72ARNH4KR7KMW3DG3NBKXRK",
+    "url": "example2.webhook.com",
+    "events": [
+      "all"
+    ],
+    "headers": null,
+    "created_at": "2019-03-28T14:20:22.436825Z",
+    "updated_at": "2019-03-28T14:20:22.436825Z"
+  }
+}
+```
+
+To delete an outgoing webhook, all you need to do is provide the app slug and the webhook slug in your request:
+
+```bash
+curl -X DELETE "https://api.bitrise.io/v0.1/apps/APP-SLUG/outgoing-webhooks/WEBHOOK-SLUG" -H "accept: application/json" -H "Authorization: ACCESS-TOKEN"
+```
