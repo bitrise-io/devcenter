@@ -5,36 +5,34 @@ date: 2019-03-27 14:53:58 +0000
 published: false
 
 ---
-You can set up webhooks so that Bitrise automatically triggers a build of your app whenever you perform a specified action, such as a code push or a pull request. For GitLab, all you have to do is register your `bitrise-webhooks` URL as a Webhook in your [GitLab](https://www.gitlab.com) repository.
+webhookのセットアップをすると、コードプッシュやプルリクエストなどといった特定のアクションを実行することによって、Bitriseが自動的にアプリのビルドをトリガーします。GitLabでは、`bitrise-webhooks` URLをご自身の[GitLab](https://www.gitlab.com)レポジトリ内にあるWebhookとして登録する必要があります。
 
-webhookがセットアップすると、コードプッシュやプルリクエストなどといったアクションを実行すればBitriseが自動的にアプリのビルドをトリガーします。
+オートまたはマニュアルのどちらかの方法でWebhookの登録が可能です。このガイドではwebhookを**マニュアル（手動）**で登録する方法を説明していきます。[Webhook登録を自動で行うをお読みください](/webhooks/index#setting-up-incoming-webhooks-automatically)。
 
-You can register a webhook either automatically or manually. This guide walks you through the process of **manually** registering a webhook. [Read more about automatic webhook registration](/webhooks/index#setting-up-incoming-webhooks-automatically).
+## GitLab webhook URLの取得
 
-## Get the webhook URL for GitLab
-
-1. Go to the `Code` tab of your app's page and in the `INCOMING WEBHOOKS` menu, click `SETUP MANUALLY`.
-2. Select `GitLab` from the dropdown menu.
+1. アプリページの`Code`タブに進み、`INCOMING WEBHOOKS`メニューより`SETUP MANUALLY` をクリックします。
+2. ドロップダウンメニューより`GitLab`を選択します。
 
    ![Screenshot](/img/bitrise-gitlab-webhook.png)
-3. Copy the webhook URL for the selected service.
+3. 選択したサービスのwebhook URLをコピーしてください。
 
-## Set up webhook on GitLab
+## GitLab上でのwebhookのセットアップ
 
-1. Open your project on [GitLab.com](https://www.gitlab.com)
-2. Go to `Settings` of the project.
-3. Select `Integrations`.
+1. [GitLab.com](https://www.gitlab.com)よりご自身のプロジェクトを開きます。
+2. プロジェクトの`Settings`へ進みます。
+3. `Integrations`を選択します。
 
    ![Screenshot](/img/webhooks/integrations-gitlab.png)
-4. Enter the bitrise-webhooks URL in the URL field.
+4. URL欄にbitrise-webhooks URLを入力します。
 
    ![Screenshot](/img/webhooks/gitlab-webhook-url.png)
-5. In the `Trigger` section select:
+5. `Trigger`セクションの：
    * `Push events`
    * `Tag push events`
    * `Merge request events`
 
-   ![Screenshot](/img/webhooks/gitlab-webhook-events.png)
-6. Click `Add webhook`.
+   を選択します。
+6.  `Add webhook`をクリックしてください。
 
-That's all! The next time you push code, push a new tag or create/update a merge request a build will be triggered (if you have Trigger mapping defined for the event(s) on Bitrise).
+これで完了です！次回以降にコードプッシュやnew tagのプッシュ、またはmerge requestの作成/ アップデートが行われた場合、ビルドがトリガーされます（Bitrise上のイベントの定義されたTrigger mappingをお持ちの方のみ）。
