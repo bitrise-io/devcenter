@@ -30,4 +30,5 @@ Outgoing webhooks enable integration with other services: specifically, they are
 To set up an outgoing webhook for an application, you need to specify the app itself and the creation parameters:
 
 * The webhook URL: you can get this from the service you want to integrate with Bitrise.
-* 
+* The events that trigger the webhook.
+* Custom webhook headers: these require specifying a key/value pair.
