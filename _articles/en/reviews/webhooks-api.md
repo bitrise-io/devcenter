@@ -34,7 +34,7 @@ To set up an outgoing webhook for an application, you need to specify the app it
 * The webhook URL: you can get this from the service you want to integrate with Bitrise.
 * The events that trigger the webhook. Currently, this takes two possible values: "all" and "build". 
 
-It's also possible to set up custom headers, with a key/value pair, as well as specifying a Secret in the payload.
+You can also set up custom headers by specifying a key/value pair in the request.
 
 Example request:
 
