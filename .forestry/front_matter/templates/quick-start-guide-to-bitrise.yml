@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/webhooks/slack-webhookの追加-adding-a-slack-webhook.md
 - _articles/en/reviews/Japanese translations/webhooks/gogs-webhookの追加-adding-a-gogs-webhook.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
 - _articles/en/reviews/webhooks-api.md
