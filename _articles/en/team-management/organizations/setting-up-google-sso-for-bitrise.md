@@ -2,6 +2,9 @@
 title: Setting up Google SSO for Bitrise
 redirect_from: []
 date: 2019-03-28 11:18:49 +0000
+menu:
+  organizations:
+    weight: 17
 published: false
 
 ---
