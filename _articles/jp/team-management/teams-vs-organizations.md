@@ -2,6 +2,9 @@
 title: Teams and organizations overview
 redirect_from: []
 date: 2019-03-27 15:48:36 +0000
+menu:
+  team-management:
+    weight: 2
 
 ---
 {% include not_translated_yet.html %}

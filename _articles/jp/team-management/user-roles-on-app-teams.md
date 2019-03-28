@@ -3,7 +3,7 @@ title: User roles on app teams
 date: 2019-03-01 15:05:34 +0000
 menu:
   team-management:
-    weight: 3
+    weight: 5
 
 ---
 {% include not_translated_yet.html %}
