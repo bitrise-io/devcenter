@@ -5,7 +5,7 @@ date: 2019-03-27 15:58:09 +0000
 published: false
 
 ---
-Both incoming and outgoing webhooks can be set up with the Bitrise API.
+Both incoming and outgoing webhooks can be set up with the Bitrise API. They are important for automatic build triggering and build event reporting to other services. 
 
 ## Incoming webhooks
 
