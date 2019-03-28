@@ -50,7 +50,7 @@ Now that we have the config information, we will leave Google Admin Console for 
    ![](/img/basic-info.png)
 3. Click `Next`.
 4. In the `Service Provider Details` window, do the following:
-   * Paste the copied `Single Sign-On` URL from Bitrise's `Single Sign On` (Step 6 above) tab to the `ASC URL` field.
+   * Paste the copied `Single Sign-On` URL from Bitrise's `Single Sign On` (Step 6 [above](/team-management/organizations/setting-up-google-sso-for-bitrise/#configuring-saml-sso-on-bitrise)) tab to the `ASC URL` field.
    * Type `Bitrise` to the `Entity ID` field. This time it must be Bitrise!
    * Tick the `Signed Response` box.
 
