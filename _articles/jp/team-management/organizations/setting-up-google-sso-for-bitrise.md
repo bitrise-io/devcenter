@@ -2,7 +2,9 @@
 title: Setting up Google SSO for Bitrise
 redirect_from: []
 date: 2019-03-28 11:39:54 +0000
-published: false
+menu:
+  organizations:
+    weight: 17
 
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on Google G Suite.
