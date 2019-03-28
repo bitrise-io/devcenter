@@ -1,5 +1,5 @@
 ---
-title: Setting up Google SSO for Bitrise
+title: Setting up Google SSO for Bitrise- draft
 redirect_from: []
 date: 2019-03-27 11:32:33 +0000
 published: false
