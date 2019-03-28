@@ -46,26 +46,36 @@ An ignored build call entry in the Activity list looks like:
 
 Simply open the webhook history on your source code hosting service, and check the response Bitrise returned. It will be something like:
 
+Bitriseはその理由をソースコードホスティングサービス（GitHubなどのWebhookを送信したサービス）にも返すので、サービスにWebHookの履歴がある場合（GitHub、Bitbucket、...） webhookはそこでもビルドを引き起こしませんでした！
+
+ 単にソースコードホスティングサービスでウェブフックの履歴を開き,Bitriseが返したレスポンスをチェックしてください。以下参照：
+
     {"success_responses":[],"failed_responses":[{"status":"error","message":"trigger pattern did not match any defined mapping: Run triggered with params: push-branch: , pr-source-branch: prtest/t1, pr-target-branch: develop, but no matching workflow found","service":"bitrise","slug":"...","build_slug":"","build_number":0,"build_url":"","triggered_workflow":""}]}
 
 **_These detailed responses are only generated if you use the new_** [**_hooks.bitrise.io_**](https://hooks.bitrise.io) **_webhook URL!_** _Initially we had a non open source_ `_bitrise.io/hooks_` _endpoint for webhooks, but every new project registered should now get the new_ `_hooks.bitrise.io_` _webhook URL automatically. If your webhook would still be a_ `_bitrise.io/hook_` _URL, please replace it with the new_ `_hooks.bitrise.io/_` _URL - you can find this on the_ `_Code_` _tab of your app!_
 
-## Local debugging
+詳細な応答は、新しい[**_hooks.bitrise.io_**](https://hooks.bitrise.io)Webhook URLを使用した場合にのみ作成されます。最初はwebhooks用の非オープンソースの`_bitrise.io/hooks_`エンドポイントがありましたが、登録された新しいプロジェクトはすべて新しい`_hooks.bitrise.io_`　webhook URLを自動的に取得するはずです。それでも_webhook_ が`_bitrise.io/hook_`URLの場合は、新しい `_hooks.bitrise.io/_`URLに置き換えてください。アプリの`_Code_`タブにあります。
+
+## Local debugging　ローカルデバッグ
 
 You can also test which workflow will be selected for a trigger using our [open source, Bitrise CLI](https://www.bitrise.io/cli).
 
+どのワークフローがトリガーとして選択されるかを[open source, Bitrise CLI](https://www.bitrise.io/cli)でテストすることもできます
+
 To simulate a code push, you can run:
+
+コードプッシュをシミュレートするには、以下を実行します：
 
     bitrise trigger-check --push-branch master
 
-To simulate a Pull Request, you can run:
+To simulate a Pull Request, you can run:　プルリクエストをシミュレートするには、以下を実行します：
 
     bitrise trigger-check --pr-source-branch=feature/a --pr-target-branch=master
 
-To simulate a tag push, you can run:
+To simulate a tag push, you can run:　タグプッシュをシミュレートするには、以下を実行します：
 
     bitrise trigger-check --tag 1.0.0
 
-For more information and options run:
+For more information and options run: 詳細情報とオプションについては、以下を実行します：
 
     bitrise trigger-check --help
