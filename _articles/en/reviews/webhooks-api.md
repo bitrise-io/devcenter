@@ -5,11 +5,11 @@ date: 2019-03-27 15:58:09 +0000
 published: false
 
 ---
-Both incoming and outgoing webhooks can be set up with the Bitrise API. They are important for automatic build triggering and build event reporting to other services. 
+Both incoming and outgoing webhooks can be set up with the Bitrise API. They are important for automatic build triggering and the reporting of build events to other services. 
 
 ## Incoming webhooks
 
-Incoming webhooks enable users to set up automatic triggers for their apps on Bitrise: a Bitrise webhook registered on GitHub can automatically trigger a build when code is pushed to the GitHub repository.
+Incoming webhooks enable users to set up automatic triggers for their apps on Bitrise: for example, a Bitrise webhook registered on GitHub can automatically trigger a build when code is pushed to the GitHub repository.
 
 To set up a webhook, you must have connected your Bitrise account to your Git provider account: this allows Bitrise to register the webhook automatically.
 
