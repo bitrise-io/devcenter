@@ -5,7 +5,6 @@ date: 2019-03-28 11:18:49 +0000
 menu:
   organizations:
     weight: 17
-published: false
 
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on Google G Suite.
