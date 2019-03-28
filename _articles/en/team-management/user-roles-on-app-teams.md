@@ -4,7 +4,7 @@ redirect_from: []
 date: 2019-02-18 14:53:53 +0000
 menu:
   team-management:
-    weight: 5
+    weight: 6
 
 ---
 Roles are very important on Bitrise. They limit what you can and cannot do with an application.
