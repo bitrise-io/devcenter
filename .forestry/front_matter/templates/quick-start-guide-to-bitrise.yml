@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/api/endpoints.md
 - _articles/en/reviews/Japanese translations/組織オーナーの変更-changing-the-owners-of-an-organization.md
 - _articles/en/api/response-and-pagination.md
 - _articles/en/api/authentication.md
