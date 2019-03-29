@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/jp/api/response-and-pagination.md
 - _articles/jp/api/authentication.md
 - _articles/jp/api/endpoints-and-testing-the-api.md
 - _articles/en/api/endpoints.md
