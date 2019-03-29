@@ -11,9 +11,19 @@ You can log into Bitrise in many ways:
 
 * with your Bitrise username and password
 * with your Gitlab/Github/Bitbucket account
-* If SAML SSO has been set up to and enforced on it your Bitrise organization, you can log in by providing your organization name
+* with your Bitrise organization name if SAML SSO has been set up to and enforced on it your Bitrise organization
 
 ## Resetting your password
+
+If trying to log in but you forgot your password:
+
+1. Click on `Forgot your password` on our [Login page](https://app.bitrise.io/users/sign_in).
+2. Provide your email address or username so that we know where to send password recovery link.
+
+   ![](/img/forgot-your-password.jpg)
+3. Check your inbox for the `Reset password instructions` sent by letsconnect.
+4. Click `Reset Password` or copy the URL into your browser.
+5. 
 
 ## Issues with Logging in
 
