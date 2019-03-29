@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/webhooks/deveo-webhookの追加-adding-a-deveo-webhook.md
 - _articles/en/reviews/Sign up/Sign in/signing-up-with-email-draft.md
 - _articles/en/reviews/Sign up/Sign in/logging-in-to-bitrise.md
 - _articles/en/reviews/Sign up/Sign in/signing-up-with-gitlab.md
@@ -22,7 +23,6 @@ pages:
 - _articles/en/reviews/Japanese translations/webhooks/webhook-トラブルシューティング-webhook-troubleshooting.md
 - _articles/en/reviews/Japanese translations/webhooks/outgoing-webhook-の追加-adding-outgoing-webhooks.md
 - _articles/en/reviews/webhooks-api.md
-- _articles/en/reviews/Japanese translations/webhooks/deveo-webhookの追加-adding-a-deveo-webhook.md
 - _articles/en/reviews/Japanese translations/webhooks/assembla-webhookの追加-adding-an-assembla-webhook.md
 - _articles/en/reviews/Japanese translations/webhooks/gitlab-webhookの追加-adding-a-gitlab-webhook.md
 - _articles/en/reviews/Japanese translations/webhooks/visual-studio-webhookの追加-adding-a-visual-studio-webhook.md
