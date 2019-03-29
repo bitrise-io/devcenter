@@ -1,5 +1,5 @@
 ---
-title: Endpoints and testing the API
+title: Endpoints and trying the API
 redirect_from: []
 date: 2019-03-29 16:53:56 +0000
 
