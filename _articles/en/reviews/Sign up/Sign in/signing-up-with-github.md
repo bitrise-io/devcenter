@@ -20,7 +20,6 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 ## Signing up
 
 1. Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
-
 2. Select `GitHub` for authenticating yourself with this service.
 
 ## Authorizing Bitrise
