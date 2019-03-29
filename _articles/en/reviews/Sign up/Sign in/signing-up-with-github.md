@@ -11,9 +11,9 @@ You are able to authenticate yourself with your GitHub user against **Bitrise**.
 
 {% include message_box.html type="info" title="Trial after signing up" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
 
-* 45 minutes of build time
-* 1000 builds a month
-* a maximum of 100 team members
+* 45 minutes of build time.
+* 1000 builds a month.
+* A maximum of 100 team members.
 
 Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!"%}
 
@@ -41,13 +41,13 @@ You will have to pick a username and a password for your Bitrise account. This w
    ![](/img/you-re-almost-there.jpg)
 
    Please note that you must provide a **strong password** which fulfills these requirements:
-   * it should have at least 12 characters
-   * at least one upper case character
-   * at least one lower case character
-   * at least one number
-   * can not contain the same character more than 3 times in a row (aaa)
-   * cannot be alphabetical order or reverse order (abcd, dcba)
-   * cannot be numerical order or reverse order (1234, 4321)
+   * It should have at least 12 characters.
+   * At least one upper case character.
+   * At least one lower case character.
+   * At least one number.
+   * Can not contain the same character more than 3 times in a row (aaa).
+   * Cannot be alphabetical order or reverse order (abcd, dcba).
+   * Cannot be numerical order or reverse order (1234, 4321).
 2. On the `Help us help you` page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
 
 After that, you are ready to roll. Add your first app on your Dashboard!
