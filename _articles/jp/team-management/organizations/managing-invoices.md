@@ -5,8 +5,6 @@ menu:
     weight: 6
 
 ---
-{% include not_translated_yet.html %}
-
 請求書を送付できるようにEメールアドレスを設定すれば請求書を探してサイトを探し回る必要はありません。受信箱に直接送付しますがサイトから手動でダウンロードしたい場合も可能です！**組織の__`**Billing**`**ページで過去の請求書を見つけることができます** - 詳しくは[ココ](#downloading-organization-invoices)から
 
 ### 組織の請求書のEメールアドレス設定
@@ -33,10 +31,10 @@ menu:
    ![Screenshot](/img/team-management/organization/switch-profile-2.png)
 3. 左側のメニューオプションから`Billing`を選択します。
 
-	![Screenshot](/img/team-management/organization/billing-sidebar-menu.png)
+   ![Screenshot](/img/team-management/organization/billing-sidebar-menu.png)
 
-	![Screenshot](/img/team-management/organization/billing-sidebar-menu.png) 
-4. `Past statements`メニューを見つけます。 
+   ![Screenshot](/img/team-management/organization/billing-sidebar-menu.png)
+4. `Past statements`メニューを見つけます。
 5. 必要な請求書を選択して、右側のダウンロードアイコンをクリックしてください。
 
-	![Screenshot](/img/team-management/organization/past-invoices.png)
+   ![Screenshot](/img/team-management/organization/past-invoices.png)

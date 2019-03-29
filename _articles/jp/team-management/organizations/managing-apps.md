@@ -5,12 +5,6 @@ menu:
     weight: 14
 
 ---
-{% include not_translated_yet.html %}
-
-Organizations can own several apps, with different (or the same, if that's what you need) groups working on different apps. Apps can be transferred between private accounts and organization accounts any time, quickly and easily.
-
-## 
-
 組織は複数のアプリを所有することができ、異なる（または必要に応じて同じ）グループが異なるアプリで作業します。アプリはプライベートアカウントと組織アカウントの間でいつでも、すばやく簡単に転送できます。
 
 ## 新しいアプリを組織に追加
@@ -130,3 +124,5 @@ Bitrise上のアプリケーションを別のユーザーに転送する必要�
 2. `Team`タブを選択します。
 3. 削除するグループを見つけて、グループメンバーの名前の横にある`MANAGE GROUP`をクリックします。
 4. `REMOVE FROM APP`をクリックします。ポップアップウィンドウで`Yes`をクリックします。
+
+   ![Screenshot](/img/team-management/organization/team-group-popup.png)
