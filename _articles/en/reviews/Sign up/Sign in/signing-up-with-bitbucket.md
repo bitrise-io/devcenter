@@ -41,7 +41,7 @@ You will have to pick a username and a password for your Bitrise account. This w
 
    ![](/img/you-re-almost-there.jpg)
 
-   Please note that you must provide a **strong password** which fulfills these requirements:
+   Please note that you must provide a **strong password** which fulfils these requirements:
    * it should have at least 12 characters
    * at least one upper case character
    * at least one lower case character
