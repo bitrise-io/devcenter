@@ -20,6 +20,8 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 ## Signing up
 
 1. Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
+
+   ![](/img/sign-up-bitrise.jpg)
 2. Select `GitHub` for authenticating yourself with this service.
 
 ## Authorizing Bitrise
@@ -32,10 +34,24 @@ If you press the `Authorize application` button, you will be redirected to Bitri
 
 ## Finishing signup
 
-You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service's availability, you are also able to connect more accounts, GitHub **and** Bitbucket, for example. Last, but not least, you don't have to stick to your connected account's username.
+You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service’s availability, you are also able to connect more accounts, GitHub **and** Bitbucket, for example. Last, but not least, you don’t have to stick to your connected account’s username.
 
-After that, you are ready to roll.
+1. Pick a username and a password for your Bitrise account on the `You are almost there` page.
+
+   ![](/img/you-re-almost-there.jpg)
+
+   Please note that you must provide a **strong password** which fulfills these requirements:
+   * it should have at least 12 characters
+   * at least one upper case character
+   * at least one lower case character
+   * at least one number
+   * can not contain the same character more than 3 times in a row (aaa)
+   * cannot be alphabetical order or reverse order (abcd, dcba)
+   * cannot be numerical order or reverse order (1234, 4321)
+2. On the `Help us help you` page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
+
+After that, you are ready to roll. Add your first app on your Dashboard!
+
+![](/img/add-your-first-app.jpg)
 
 From now on, you are able to sign in with a click of a button. Choose your favorite!
-
-![Screenshot](/img/signing-up/signup_success.png)
