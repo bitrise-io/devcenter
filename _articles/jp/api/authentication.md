@@ -1,5 +1,5 @@
 ---
-title: Authentication
+title: Authenticating
 redirect_from: []
 date: 2019-03-29 16:55:28 +0000
 
