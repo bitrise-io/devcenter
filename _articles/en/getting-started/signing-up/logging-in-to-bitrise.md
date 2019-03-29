@@ -17,7 +17,7 @@ You can log in to Bitrise in many ways:
 
 If you try to log in but you forgot your password:
 
-1. Click `Forgot your password` on our [Login page](https://app.bitrise.io/users/sign_in)
+1. Click `Forgot your password` on our [Login page](https://app.bitrise.io/users/sign_in).
 2. Provide your email address or username so that we know where to send password recovery link.
 
    ![](/img/forgot-your-password.jpg)
