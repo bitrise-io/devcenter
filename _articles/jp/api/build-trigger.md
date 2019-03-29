@@ -2,7 +2,7 @@
 title: Triggering and aborting builds
 menu:
   api:
-    weight: 4
+    weight: 7
 
 ---
 {% include not_translated_yet.html %}

@@ -2,6 +2,10 @@
 title: 'Authentication '
 redirect_from: []
 date: 2019-03-29 16:46:07 +0000
+menu:
+  api:
+    weight: 3
+    title: Authentication
 
 ---
 ## Authentication
