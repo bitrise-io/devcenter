@@ -13,6 +13,9 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/組織オーナーの変更-changing-the-owners-of-an-organization.md
+- _articles/en/api/response-and-pagination.md
+- _articles/en/api/authentication.md
 - _articles/en/reviews/Japanese translations/組織の請求書管理-managing-the-invoices-of-your-organizations.md
 - _articles/en/reviews/Japanese translations/組織の請求と購読の管理-managing-billing-and-subscription-for-organizations.md
 - _articles/en/reviews/Japanese translations/組織のアプリ管理-managing-the-apps-of-organizations.md
@@ -49,7 +52,6 @@ pages:
 - _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
 - _articles/en/reviews/Japanese translations/組織内のsaml-sso-saml-sso-in-organizations.md
 - _articles/en/reviews/API/introduction-to-the-bitrise-api.md
-- _articles/en/reviews/Japanese translations/組織オーナーの変更-changing-the-owners-of-an-organization.md
 - _articles/en/reviews/Japanese translations/managing-organization-members.md
 - _articles/en/reviews/Japanese translations/アプリチームのユーザーのロール-user-roles-on-app-teams.md
 - _articles/jp/builds/configuring-notifications.md
