@@ -1,5 +1,5 @@
 ---
-title: SAML SSO in organizations
+title: 組織内のSAML SSO
 date: 2019-03-08 10:46:00 +0000
 redirect_from: []
 menu:
