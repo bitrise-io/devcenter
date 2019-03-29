@@ -5,18 +5,21 @@ date: 2019-03-29 13:45:36 +0000
 published: false
 
 ---
-{% include message_box.html type="important" title="Two-factor authentication" content="Two-factor authentication is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
+{% include message_box.html type="important" title="Two-factor authentication" content="Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
 
-To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/signing-up/connecting-apple-dev-account/). That allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion."%} 
+To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/signing-up/connecting-apple-dev-account/). That allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion."%}
 
-Two-factor authentication is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
+Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
 
 To make this work, connect your Apple Developer Account to Bitrise. That allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion.
 
-When do you need this?
+Connect your Apple Developer account to Bitrise if:
 
-* If you want to use our `iOS Auto Provision` Step to [manage provisioning profiles for an iOS application](/code-signing/ios-code-signing/ios-auto-provisioning/). 
-* 
+* You want to use our `iOS Auto Provision` Step to [manage provisioning profiles for an iOS application](/code-signing/ios-code-signing/ios-auto-provisioning/).
+* You want to upload your app to the App Store, using either our `fastlane` or `Deploy to iTunes Connect` Steps. 
+* You want to upload metadata, screenshots, or other artifacts using our `fastlane` Step. 
+
+{% include message_box.html type="warning" title="Custom Script Steps" content="If you use, for example, a custom Script Step to utilise `fastlane` or to upload your app to the App Store, you will not be able to get past Apple 2FA by connecting your Apple Developer account. This solution only works with the official Steps, such as `fastlane`, `iOS Auto Provision` or `Deploy to iTunes Connect`. "%} 
 
 ### Authenticating your Apple Developer Account on Bitrise
 
