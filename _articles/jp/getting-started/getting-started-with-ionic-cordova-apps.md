@@ -13,7 +13,7 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
 
 * [Ionic/Cordovaプロジェクトセットアップ前]()
 * [BitriseにIonic/Cordovaを追加する方法]()
-* [依存性](/getting-started/getting-started-with-ionic-cordova-apps/#dependencies)
+* [依存関係](/getting-started/getting-started-with-ionic-cordova-apps/#dependencies)
 * [Ionic/Cordovaアプリのテスト](/getting-started/getting-started-with-ionic-cordova-apps/#testing-ioniccordova-apps)
 * [コード署名](/getting-started/getting-started-with-ionic-cordova-apps/#code-signing)
 * [Ionic/Cordovaアプリのデプロイ](/getting-started/getting-started-with-ionic-cordova-apps/#deploying-ioniccordova-app)
@@ -36,8 +36,9 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
     * iOS
     * Android
     * iOS と Android (Androidビルドが最初にビルドされる
-10. ![](/img/project-build-cordova.png)
-11. ![](/img/project-build-ionic.png)コードがリポジトリにプッシュされたときにBitriseが自動的にビルドを開始できるように、Promptedが表示されたらWebフックに登録します。メインのワークフローでの最初のビルドも開始できます。 また、メッセージをクリックするとビルドページに移動します。最初のビルドではAPKと.ipaは作成されませんが、ビルドのページでプロジェクトのログを確認できます。
+ [](/img/project-build-cordova.png)
+ [](/img/project-build-ionic.png)
+ コードがリポジトリにプッシュされたときにBitriseが自動的にビルドを開始できるように、Promptedが表示されたらWebフックに登録します。メインのワークフローでの最初のビルドも開始できます。 また、メッセージをクリックするとビルドページに移動します。最初のビルドではAPKと.ipaは作成されませんが、ビルドのページでプロジェクトのログを確認できます。
 
     例として、`Karma Jasmine Test Runner`ステップを含むCordova**主要ワークフロー**を確認してください。
 
@@ -58,7 +59,7 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
 
 {% include message_box.html type="info" title="他のテストフレームワークを使うのは？" content="BitriseのスキャナーがJasmin、Karma Jasmineのテスト解決法を知っていることは言及する価値があります。プロジェクトが別のテストフレームワーク/ランナーを使用している場合、スキャナーはテストワークフロー（primaryワークフロー)を作成することはできませんが、代わりにビルドワークフローを作成できます。このワークフローは作成される唯一のワークフローであるため、primaryワークフローと呼びます。" %}
 
-## 依存性
+## 依存関係
 
 アプリの`package.json`ファイルに記載されているJavascript dependenciesをインストールするには、`Run npm command`または`Run yarn command`のステップを使用できます。
 

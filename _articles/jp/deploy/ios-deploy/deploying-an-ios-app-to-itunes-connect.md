@@ -11,20 +11,25 @@ menu:
 
 You can deploy an app to iTunes Connect (rebranded as App Store Connect) to:
 
-* invite testers on Testflight
-* release your app on the App Store
+* Invite testers on Testflight.
+* Release your app on the App Store.
 
 On Bitrise, you can either simply just upload your binary to iTunes Connect or you can also submit it for review.
+
+{% include message_box.html type="important" title="Two-factor authentication" content="Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
+
+To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/signing-up/connecting-apple-dev-account/). That allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion."%}
 
 #### Before you start
 
 Make sure that you have:
 
-* generated an .ipa file locally, on your own machine, at least once
-* uploaded all the Developer certificates that are included in the provisioning profile to Bitrise
-* uploaded the app's Development Provisioning Profile if you want to use [manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning/) on Bitrise. If you use [auto-provisioning](), you don't need to upload a profile.
-* uploaded a Distribution certificate for the app
-* uploaded an App Store Provisioning Profile (if you want to use manual provisioning)
+* Connected your Apple Developer Account to Bitrise.
+* Generated an .ipa file locally, on your own machine, at least once.
+* Uploaded all the Developer certificates that are included in the provisioning profile to Bitrise.
+* Uploaded the app's Development Provisioning Profile if you want to use [manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning/) on Bitrise. If you use [auto-provisioning](), you don't need to upload a profile.
+* Uploaded a Distribution certificate for the app.
+* Uploaded an App Store Provisioning Profile (if you want to use manual provisioning).
 
 Register the app on iTunes Connect. Keep in mind that every time you want to push an app to iTunes Connect, it **must have a unique build and version number** - [increment either or both](/builds/build-numbering-and-app-versioning/) before deploying.
 
