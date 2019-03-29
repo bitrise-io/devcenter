@@ -23,6 +23,9 @@ If trying to log in but you forgot your password:
    ![](/img/forgot-your-password.jpg)
 3. Check your inbox for the `Reset password instructions` sent by letsconnect.
 4. Click `Reset Password` or copy the URL into your browser.
+
+   ![](/img/reset-password2.jpg)
+
 5. 
 
 ## Issues with Logging in
