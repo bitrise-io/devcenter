@@ -5,8 +5,7 @@ date: 2019-03-29 10:34:18 +0000
 published: false
 
 ---
-
-You can log into Bitrise in many ways:
+You can log in to Bitrise in many ways:
 
 * with your Bitrise username and password
 * with your Gitlab/Github/Bitbucket account
