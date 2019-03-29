@@ -26,10 +26,10 @@ Bitriseでアプリを管理するための最も重要なコンセプトは：
 
 チームと組織の要約：
 
-| Teams | Organizations |
+| チーム | 組織 |
 | --- | --- |
-| App-based | Global |
-| Roles assigned by the app's admins or owners | No inherent roles: just owners and members |
-| Only have access to a single app | Can own and control multiple apps |
+| アプリベース | グローバル |
+| アプリの管理者またはオーナーによって割り当てられたロール | 固有のロールはない：オーナーとメンバーだけ |
+| １つのアプリにしかアクセスできない| 複数のアプリを所有し、制御することができる |
 
 詳しくは[価格ページ](https://www.bitrise.io/pricing/)をご参照ください！
