@@ -4,12 +4,20 @@ redirect_from:
 - "/signing-up/connecting-apple-dev-account"
 menu:
   signing-up:
-    weight: 12
+    weight: 13
 
 ---
-You can authenticate your Apple Developer Account on Bitrise and integrate the Apple Developer Portal with your Bitrise project. This allows you to use our `iOS Auto Provisioning` step which makes managing Provisioning Profiles for iOS applications a lot easier!
+Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
 
-All you need is a [bitrise.io](https://www.bitrise.io) account and a valid Apple Developer Account.
+To make this work, connect your Apple Developer Account to Bitrise. That allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion.
+
+Connect your Apple Developer account to Bitrise if:
+
+* You want to use our `iOS Auto Provision` Step to [manage provisioning profiles for an iOS application](/code-signing/ios-code-signing/ios-auto-provisioning/).
+* You want to upload your app to the App Store, using either our `fastlane` or `Deploy to iTunes Connect` Steps.
+* You want to upload metadata, screenshots, or other artifacts using our `fastlane` Step.
+
+{% include message_box.html type="warning" title="Custom Script Steps" content="If you use, for example, a custom Script Step to utilise `fastlane` or to upload your app to the App Store, you will not be able to get past Apple 2FA by connecting your Apple Developer account. This solution only works with the official Steps, such as `fastlane`, `iOS Auto Provision` or `Deploy to iTunes Connect`. "%}
 
 ### Authenticating your Apple Developer Account on Bitrise
 
