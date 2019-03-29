@@ -5,21 +5,17 @@ menu:
     weight: 6
 
 ---
-You are able to authenticate yourself with your GitLab user against **Bitrise**. It brings some practical benefits, like logging in with one click and of course you won’t have to authorize your GitLab account when adding repositories hosted by these providers again.
+You are able to authenticate yourself with your GitLab user against **Bitrise**. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your GitHub account when adding repositories hosted by these providers again.
 
-Signing up with email address
+{% include message_box.html type="note" title="Signing up with email address" content=" If you'd like to sign up with your email address, please follow the instructions in [signing up with email address](/getting-started/signing-up/signing-up-with-email). "%}
 
-If you’d like to sign up with your email address, please follow the instructions in [signing up with email address](https://yv69yaruhkt48w.preview.forestry.io/getting-started/signing-up/signing-up-with-email).
-
-Trial after signing up
-
-If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
+{% include message_box.html type="info" title="Trial after signing up" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
 
 * 45 minutes of build time.
 * 1000 builds a month.
 * A maximum of 100 team members.
 
-Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!
+Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!"%}
 
 ## Signing up
 
