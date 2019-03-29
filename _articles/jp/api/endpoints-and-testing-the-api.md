@@ -1,7 +1,10 @@
 ---
-title: Endpoints and trying the API
+title: Endpoints and testing the API
 redirect_from: []
 date: 2019-03-29 16:53:56 +0000
+menu:
+  api:
+    weight: 7
 
 ---
 {% include not_translated_yet.html %}

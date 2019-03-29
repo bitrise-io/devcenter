@@ -1,7 +1,10 @@
 ---
-title: Authenticating
+title: Authentication
 redirect_from: []
 date: 2019-03-29 16:55:28 +0000
+menu:
+  api:
+    weight: 4
 
 ---
 {% include not_translated_yet.html %}
