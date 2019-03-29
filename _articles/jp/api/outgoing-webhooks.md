@@ -2,7 +2,7 @@
 title: Outgoing Webhooks
 menu:
   api:
-    weight: 10
+    weight: 13
     title: Outgoing webhooks
 
 ---
