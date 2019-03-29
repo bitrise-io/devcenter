@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
 - _articles/jp/getting-started/signing-up/logging-in-with-bitrise.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
 - _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md
