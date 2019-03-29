@@ -30,7 +30,7 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
    ![](/img/confirm-my-account.jpg)
    Clicking `Confirm My Account` will take you to `Help us help you` page.
-5. On `Help us help you`, add your first name, last name, your company name and a few more details if you wish. You can also add those later.
+5. On the `Help us help you` page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
 6. Click `Done`. You will be directed to your Bitrise Dashboard.
 
 Now you can go ahead and add your first app to your Dashboard.

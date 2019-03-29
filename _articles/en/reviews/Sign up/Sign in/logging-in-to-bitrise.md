@@ -30,25 +30,10 @@ If you try to log in but you forgot your password:
 
 Please note that you can always change your password along with other account details in your Account settings.
 
-## Issues with Logging in
+## Issues with logging in
 
 If you failed to log in for the third time, [reCAPTCHA](https://developers.google.com/recaptcha/) will get enabled to check if you are a human.
 
 If you failed to log in for an excessive amount of attempts, you will automatically get locked out. Check your inbox for our `Unlock Instructions` email!
 
 ![](/img/lockedout.png)
-
-{% include message_box.html type="info" title="Sign up with a git provider" content=" If you would like to use your GitHub/Gitlab/ Bitbucket account, please check out the following DevCenter articles:
-
-* [Signing up with GitHub](/getting-started/signing-up/signing-up-with-github)
-* [Signing up with Gitlab](/getting-started/signing-up/signing-up-with-gitlab/)
-* [Signing up with Bitbucket](/getting-started/signing-up/signing-up-with-bitbucket) " %}
-
-  Please note that you must provide a strong password which fulfills the following requirements:
-  * it should have at least 12 characters
-  * at least one upper case character
-  * at least one lower case character
-  * at least one number
-  * can not contain the same character more than 3 times in a row (aaa)
-  * cannot be alphabetical order or reverse order (abcd, dcba)
-  * cannot be numerical order or reverse order (1234, 4321)
