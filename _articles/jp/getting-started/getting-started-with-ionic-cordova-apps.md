@@ -104,7 +104,7 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
 ### Androidプロジェクトに署名
 
 1. 署名済みのAndroidプロジェクトの場合は、Workflow Editorの`Code Signing`タブへ。
-2. `ANDROID KEYSTORE FILE`セクションの`Upload file`項目でkeystoreファイルをクリックまたはドラッグ＆ドロップします。![](/img/keystore-file.png)
+2. `ANDROID KEYSTORE FILE`セクションの`Upload file`項目でkeystoreファイルをクリックまたはドラッグ＆ドロップします。 ![](/img/keystore-file.png)
 3. 3つの入力項目に記入します:
    * `keystore password`
    * `keystore alias`
