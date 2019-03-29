@@ -34,4 +34,4 @@ published: false
    ![Screenshot](/img/webhooks/gogs-webhook-triggered.png)
 8. `Add Webhook`をクリックします
 
-完了です！GogsリポジトリにコードをプッシュするたびにBitrise上でビルドが開始されます。
+完了です！GogsリポジトリにコードをプッシュするたびBitrise上でビルドが開始されます。
