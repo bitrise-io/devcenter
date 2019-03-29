@@ -4,6 +4,8 @@ redirect_from: []
 date: 2019-03-29 16:53:56 +0000
 
 ---
+{% include not_translated_yet.html %}
+
 ## Endpoints
 
 The [Bitrise API endpoint reference documentation](https://api-docs.bitrise.io) lists every available endpoint and their parameters, along with the possible responses. You can also try them out!

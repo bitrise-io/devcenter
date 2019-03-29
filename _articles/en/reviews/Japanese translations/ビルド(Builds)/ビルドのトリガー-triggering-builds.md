@@ -33,7 +33,7 @@ In the following examples, we'll use a very simple Bitrise configuration (`bitri
                 #!/bin/bash
                 echo "$BITRISE_TRIGGERED_WORKFLOW_ID"
 
-{% include message_box.html type="info" title="`bitrise.yml`とは何ですか。" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa). `bitrise.yml`はあなたのアプリの構成の代表の一つです。workflow editorにて、ビジュアルウェブUIを使った編集も可能ですが、いつでも`bitrise.yml`モード（workflow editorの左側）に切り替えてYAMLフォーマットの構成を見ることができます。同様にYAMLフォーマットでの編集も可能です。ビジュアルウェブUIかYAML(`bitrise.io`)のどちらかを選んでください。いつでも変更が可能です。（ウェブUIからYAMLに帰る場合、`bitrise.yml`にすぐに反映されます。逆も同じです。）"%}
+{% include message_box.html type="info" title="`bitrise.yml`とは何ですか。" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa). `bitrise.yml`はあなたのアプリの構成の代表の一つです。workflow editorにて、ビジュアルウェブUIを使った編集も可能ですが、いつでも`bitrise.yml`モード（workflow editorの左側）に切り替えてYAMLフォーマットの構成を見ることができます。同様にYAMLフォーマットでの編集も可能です。ビジュアルウェブUIかYAML(`bitrise.io`)のどちらかを選んでください。いつでも変更が可能です。（ウェブUIからYAMLに帰る場合、`bitrise.yml`にすぐに反映されます。逆も然りです。）"%}
 
 The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: "*"`), Tag Push (`tag: "*"`) and for every Pull Request (`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`).
 
@@ -85,6 +85,8 @@ This means that you can't have an item which only specifies the `workflow`, at l
 
 If you define multiple filters in a single item then **all filters have to match** in order to select that item's workflow. For example:
 
+単一項目内で複数のフィルタを定義する場合、その項目のワークフローを選択するために全てのフィルタが組み合わさっていないといけません。例えば：
+
     trigger_map:
     - pull_request_target_branch: "master"
       pull_request_source_branch: "develop"
@@ -92,7 +94,11 @@ If you define multiple filters in a single item then **all filters have to match
 
 will only select the `primary` workflow if the pull request's source branch is `develop` **AND** the target branch is `master`.
 
+これはプルリクエストのソースブランチが`develop`で**且つ**ターゲットブランチが`master`である場合、`primary`ワークフローのみを選択します。
+
 If you want to specify filters which should be treated separately, for example, to select `primary` for pull requests where the source is `develop`, as well as select for the ones which target `master`:
+
+別々に扱われるフィルターを明記したい場合、例えば、プルリクエストにそのソースが`develop`にある`primary`を選ぶか、`master`をターゲットするプルリクエストを選びます。
 
     trigger_map:
     - pull_request_target_branch: "master"
@@ -101,6 +107,8 @@ If you want to specify filters which should be treated separately, for example, 
       workflow: primary
 
 One last note, which is hopefully not surprising after the previous example: you can't mix and match `push_branch`, `tag` and the `pull_request_..` filters **in the same item**. This would effectively mean that the workflow should be selected if the event is a Code Push and a Pull Request (or Tag Push) event **at the same time**. This is simply not possible, source code hosting services send separate webhooks for Pull Request (pre-merge state), Tags and for Code Push events. _A single webhook event will never be Code Push, Tag Push and Pull Request at the same time_, a single webhook is always related to only one type (Code Push, Tag Push or Pull Request).
+
+最後に、同一項目内において`push_branch`、`tag`
 
 ## One trigger = one build
 
