@@ -2,6 +2,9 @@
 title: Logging in to Bitrise
 redirect_from: []
 date: 2019-03-29 15:00:43 +0000
+menu:
+  signing-up:
+    weight: 16
 
 ---
 You can log in to Bitrise in many ways:
