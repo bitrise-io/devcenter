@@ -5,11 +5,13 @@ date: 2019-03-29 14:40:16 +0000
 published: false
 
 ---
-When you register a webhook for an event or for multiple events (for example, for `Code Push` and for `Pull Request` events), your source code hosting service will call the webhook every time the related event happens.
+When you register a webhook for an event or for multiple events (for example, for `Code Push` and for `Pull Request` events), your source code hosting service will call the webhook every time the related event happens.　イベントにwebhookを登録する際（例：`Code Push` や `Pull Request`）、ご自身のソースコードホスティングサービスは、関連したイベントが発生する度webhookを呼び出します。
 
 On [bitrise.io](https://www.bitrise.io) these webhooks calls are called _triggers_, and can be mapped to different `Workflows`, or not mapped at all. If you don't map a trigger to any workflow, then [bitrise.io](https://www.bitrise.io) won't start a build. If you map it to a workflow, then a build will be started with the selected workflow.
 
-In the following examples, we'll use a very simple Bitrise configuration (`bitrise.yml`), which does nothing else just prints the selected workflow's ID:
+bitrise.ioではwebhookを呼び出す現象をtriggers（トリガー）と呼んでおり、異なる`Workflows` へマップされたりされなかったりします。いかなるワークフローへのマップを望まない場合、bitrise.ioはビルドを開始しません。ワークフローへトリガーをマップすれば、ビルドは選択されたワークフロー上で開始されます。
+
+In the following examples, we'll use a very simple Bitrise configuration (`bitrise.yml`), which does nothing else just prints the selected workflow's ID:　以下の例では、シンプルなBitrise構成（選択されたワークフローIDがプリントされた\[`bitrise.yml`\]）を使います。
 
     ---
     format_version: 1.3.0
@@ -31,9 +33,11 @@ In the following examples, we'll use a very simple Bitrise configuration (`bitri
                 #!/bin/bash
                 echo "$BITRISE_TRIGGERED_WORKFLOW_ID"
 
-{% include message_box.html type="info" title="What is `bitrise.yml`" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa). "%}
+{% include message_box.html type="info" title="`bitrise.yml`とは何ですか。" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa). `bitrise.yml`はあなたのアプリの構成の代表の一つです。workflow editorにて、ビジュアルウェブUIを使った編集も可能ですが、いつでも`bitrise.yml`モード（workflow editorの左側）に切り替えてYAMLフォーマットの構成を見ることができます。同様にYAMLフォーマットでの編集も可能です。ビジュアルウェブUIかYAML(`bitrise.io`)のどちらかを選んでください。いつでも変更が可能です。（ウェブUIからYAMLに帰る場合、`bitrise.yml`にすぐに反映されます。逆も同じです。）"%}
 
 The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: "*"`), Tag Push (`tag: "*"`) and for every Pull Request (`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`).
+
+上記の`bitrise.yml`の例は、コードプッシュ（`push``_branch: ""_`_）、タグプッシュ（_`_tag: "*"_`_）_、_ルリクエスト(_`_pull_request_target_branch: "*"_` _&_ `_pull_request_source_branch: "*"_`_)_
 
 _If you remove the pull request item_ from the `trigger_map` list, then no pull request will trigger a build anymore. Example:
 
