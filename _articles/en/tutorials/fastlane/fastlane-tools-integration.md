@@ -3,7 +3,6 @@ title: fastlane tools integration
 menu:
   fastlane:
     weight: 1
-    title: Fastlane tools integration
 
 ---
 Having more time to be creative is the key to great inventions.
@@ -39,6 +38,10 @@ With adding the _fastlane_ step we ensure that you are running on the latest _fa
 For more configuration options see the `Fastlane` step's description in the Workflow Editor!
 
 {% include message_box.html type="info" title="iOS code signing guide" content=" If you want to use [bitrise.io](https://www.bitrise.io) to store your code signing files, you should just follow the [iOS Code Signing guide here](/ios/code-signing/). "%}
+
+{% include message_box.html type="important" title="Two-factor authentication" content="Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA. This applies even if you use `fastlane`!
+
+To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/signing-up/connecting-apple-dev-account/). That allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion."%}
 
 ## What's next?
 
