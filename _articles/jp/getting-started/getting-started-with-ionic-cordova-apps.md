@@ -36,9 +36,11 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
     * iOS
     * Android
     * iOS と Android (Androidビルドが最初にビルドされる
- [](/img/project-build-cordova.png)
- [](/img/project-build-ionic.png)
- コードがリポジトリにプッシュされたときにBitriseが自動的にビルドを開始できるように、Promptedが表示されたらWebフックに登録します。メインのワークフローでの最初のビルドも開始できます。 また、メッセージをクリックするとビルドページに移動します。最初のビルドではAPKと.ipaは作成されませんが、ビルドのページでプロジェクトのログを確認できます。
+
+       ![](https://devcenter.bitrise.io/img/project-build-cordova.png)
+
+      ![](https://devcenter.bitrise.io/img/project-build-ionic.png)
+10. コードがリポジトリにプッシュされたときにBitriseが自動的にビルドを開始できるように、Promptedが表示されたらWebフックに登録します。メインのワークフローでの最初のビルドも開始できます。 また、メッセージをクリックするとビルドページに移動します。最初のビルドではAPKと.ipaは作成されませんが、ビルドのページでプロジェクトのログを確認できます。
 
     例として、`Karma Jasmine Test Runner`ステップを含むCordova**主要ワークフロー**を確認してください。
 
