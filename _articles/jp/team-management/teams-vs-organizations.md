@@ -1,5 +1,5 @@
 ---
-title: Teams and organizations overview
+title: チームと組織の概要
 redirect_from: []
 date: 2019-03-27 15:48:36 +0000
 menu:
@@ -7,33 +7,31 @@ menu:
     weight: 2
 
 ---
-{% include not_translated_yet.html %}
+Bitriseの2種類のアカウント：
 
-There are two types of accounts on Bitrise:
+* 個人のユーザーアカウント
+* 組織アカウント
 
-* individual user accounts
-* organization accounts
+Bitriseにサインアップするとき、個人アカウントを作成します。個々のユーザーは自分のアプリケーションを作成することも、他のアプリケーションで作業できるように招待することもできます。
 
-When signing up to Bitrise, you create an individual user account. Individual users can create their own applications or be invited to work on other applications.
+### チームvs組織
 
-### Teams vs organizations
+Bitriseでアプリを管理するための最も重要なコンセプトは：
 
-The most important concepts to managing apps on Bitrise are:
+**チーム**：アプリケーションに基づいており、アプリで作業するために招 待されたすべてのユーザーがアプリケーションの**チーム**を構成します。[オーナーと管理者はチームにロールを割り当てる](user-roles-on-app-teams/)ことができます。
 
-**Teams:** They are based on the applications: all users invited to work on a given app make up the **team** of the application. [Owners and admins can assign roles](user-roles-on-app-teams/) on the teams.
+**組織**：[個々のユーザーによって作成されます](/team-management/organizations/creating-org/)。組織は無制限にメンバーを所有、またアプリを所有し制御することができます。組織自らの支払い計画が必要で、組織の作成者が既にBitriseに登録している場合でも、組織は別の支払い計画を設定する必要があります。
 
-**Organizations**: [They are created by individual users](/team-management/organizations/creating-org/). Organizations can have an unlimited number of members and can own and control an unlimited amount of apps. Organizations need their own payment plan: even if the organization's creator is already subscribed to Bitrise, a separate payment plan must be set up for the organization itself.
+{% include message_box.html type="important" title="チームvs組織" content="チームとグループは同じではありません。[グループは組織の主要な構成要素](/team-management/organizations/members-organizations/)ですが、グループ自体に権限がありません。グループを[アプリに割り当てる](/team-management/organizations/managing-apps/#assigning-groups-to-apps)必要があります。
 
-{% include message_box.html type="important" title="Teams vs groups" content="Teams and groups are not the same! [Groups are the main building blocks of organizations](/team-management/organizations/members-organizations/) but by themselves have no powers: they need to be [assigned to apps](/team-management/organizations/managing-apps/#assigning-groups-to-apps).
+組織のメンバーは、個人またはグループとしてアプリケーションに割り当てることができます。同じ組織グループは、異なるアプリケーションチームに異なるロールを持つことができます。"%}
 
-Organization members can be assigned to applications individually or as a group. The same organization group can have different roles on different application teams. "%}
+チームと組織の要約：
 
-So here's a quick summary of teams and organizations:
-
-| Teams | Organizations |
+| チーム | 組織 |
 | --- | --- |
-| App-based | Global |
-| Roles assigned by the app's admins or owners | No inherent roles: just owners and members |
-| Only have access to a single app | Can own and control multiple apps |
+| アプリベース | グローバル |
+| アプリの管理者またはオーナーによって割り当てられたロール | 固有のロールはない：オーナーとメンバーだけ |
+| １つのアプリにしかアクセスできない| 複数のアプリを所有し、制御することができる |
 
-For more info, check out our [pricing page](https://www.bitrise.io/pricing/)!
+詳しくは[価格ページ](https://www.bitrise.io/pricing/)をご参照ください！
