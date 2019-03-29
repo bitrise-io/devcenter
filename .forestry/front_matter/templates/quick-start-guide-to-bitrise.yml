@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Sign up/Sign in/signing-up-with-gitlab.md
 - _articles/en/reviews/Sign up/Sign in/signing-up-with-bitbucket.md
 - _articles/en/reviews/Sign up/Sign in/signing-up-with-github.md
 - _articles/en/reviews/Japanese translations/チームと組織の概要-teams-and-organizations-overview.md
