@@ -37,9 +37,11 @@ In the following examples, we'll use a very simple Bitrise configuration (`bitri
 
 The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: "*"`), Tag Push (`tag: "*"`) and for every Pull Request (`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`).
 
-上記の`bitrise.yml`の例は、コードプッシュ（`push``_branch: ""_`_）、タグプッシュ（_`_tag: "*"_`_）_、_ルリクエスト(_`_pull_request_target_branch: "*"_` _&_ `_pull_request_source_branch: "*"_`_)_
+上記の`bitrise.yml`の例では、コードプッシュ（`pushbranch: "*"`）、タグプッシュ（`tag: "*"`）、プルリクエスト毎に`primary` ブランチを選択します。
 
 _If you remove the pull request item_ from the `trigger_map` list, then no pull request will trigger a build anymore. Example:
+
+`trigger_map`リストからプルリクエストアイテムを削除する場合、プルリクエストがビルドをトリガーする事はありません。例：
 
     trigger_map:
     - push_branch: "*"
@@ -47,21 +49,39 @@ _If you remove the pull request item_ from the `trigger_map` list, then no pull 
 
 This configuration will start a build with the `primary` workflow for every code push, but for nothing else (for example not for pull requests).
 
+この構成は`primary`ワークフローを使ってコードプッシュ毎にビルドが開始されます（それ以外（プルリクエストなど）は何も起こることはありません）。
+
 ## Components of the `trigger_map`
+
+## `trigger_map`の構成要素
 
 A `trigger_map` is a _list of filters_, and the `workflow` the given filters should select in case of a matching trigger.
 
+`trigger_map`は_list of filters (フィルターのリスト）_であり、与えられたフィルターの`workflow`が一致するトリガーの場合選択します。
+
 **Every filter item has to include at least one condition!**
+
+少なくとも１つのコンディションがフィルターアイテムの中に含まれていなければなりません。
 
 This means that you can't have an item which only specifies the `workflow`, at least one filter (`push_branch` / `pull_request_source_branch` / `pull_request_target_branch` / `tag`) has to be specified!
 
-### The available filters:
+これは`workflow`と明記されただけの項目を持つことができないということであり、少なくとも１つのフィルター（）が明記されていなければなりません。
 
-* `push_branch` : A filter which is matched against Code Push events' "branch" parameter
+### The available filters:　利用可能なフィルター：
+
+* `push_branch` : A filter which is matched against Code Push events' "branch" parameter　コードプッシュイベントの"branch"パラメータの組み合わせ
 * `pull_request_source_branch` : A filter which is matched against Pull Request events' "source branch" parameter (the branch the pull request was started from)
+
+  プルリクエストイベント"source branch"パラメータ（プルリクエストが開始されたブランチ）の組み合わせ
 * `pull_request_target_branch` : A filter which is matched against Pull Request events' "target branch" parameter - the branch the pull request will be **merged into**
+
+  プルリクエストイベント"target branch" パラメータ（プルリクエストが併合されるブランチ）の組み合わせ
 * `tag` : A filter which is matched against Tag Push events' "tag" (name) parameter
-* `pattern` : **DEPRECATED** - this filter was used for both code push and pull request events, in combination with `is_pull_request_allowed`. This filter is now deprecated, as the new filters allow better control over event mapping.
+
+  タグプッシュイベント"tag" (name) パラメータの組み合わせ
+* `pattern` : **DEPRECATED** - this filter was used for both code push and pull request events, in combination with `is_pull_request_allowed`. This filter is now deprecated, as the new filters allow better control over event mapping.　
+
+  非推奨　ー　このフィルタは\`\`との併用で、コードプッシュとプルリクエストイベントの両方で使われていました。現在このフィルタは、新しいフィルタがイベントマッピングにおいてより制御されるので今は非推奨となっております。
 
 If you define multiple filters in a single item then **all filters have to match** in order to select that item's workflow. For example:
 
