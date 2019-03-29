@@ -1,5 +1,5 @@
 ---
-title: Signing up with Bitbucket
+title: Signing up with Bitbucket-draft
 redirect_from: []
 date: 2019-03-29 09:56:58 +0000
 published: false

@@ -1,5 +1,5 @@
 ---
-title: Signing up with GitLab
+title: Signing up with GitLab-draft
 redirect_from: []
 date: 2019-03-29 10:00:25 +0000
 published: false
