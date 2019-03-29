@@ -9,8 +9,8 @@ menu:
 ---
 You can deploy an app to iTunes Connect (rebranded as App Store Connect) to:
 
-* invite testers on Testflight
-* release your app on the App Store
+* Invite testers on Testflight.
+* Release your app on the App Store.
 
 On Bitrise, you can either simply just upload your binary to iTunes Connect or you can also submit it for review.
 
