@@ -1,5 +1,5 @@
 ---
-title: Changing the owners of an organization
+title: 組織オーナーの変更
 menu:
   organizations:
     weight: 10
@@ -7,28 +7,28 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-Organization owners can access and delete all apps linked to the organization, can manage the billing details of an organization and can add or remove other owners. Organization owners are in their own group in the organization and they are managed via membership in this group.
+組織のオーナーは、組織にリンクされているすべてのアプリにアクセスして削除したり、組織の請求詳細を管理したり、他のオーナーを追加または削除したりできます。組織のオーナーは組織内の自分のグループに属しており、グループのメンバーシップを介して管理されています。
 
-Every organization must have at least one owner.
+どの組織にも少なくとも1人のオーナーが必要です。
 
-## Adding owners to an organization
+## 組織にオーナーを追加
 
-1. Sign in with an account that is an owner of an organization and open its profile page.
-2. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
+1. 組織のオーナーアカウントでサインインして、プロフィールページを開きます。
+2. 組織のプロファイルページに移動し、左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。
 
    ![Screenshot](/img/team-management/organization/switch-profile-2.png)
-3. On the left, select `Groups` from the menu options.
-4. Find the `Organization owners` group.
+3. 左側のメニューオプションから`Groups`を選択します。
+4. `Organization owners`グループを見つけます。
 
    ![Screenshot](/img/team-management/organization/org-owners.png)
-5. Enter an email address or username. The account in question will become an owner of the organization.
+5. メールアドレスまたはユーザー名を入力してください。そのアカウントが組織のオーナーになります。
 
-## Removing owners from an organization
+## オーナーを組織から削除
 
-1. Sign in with an account that is an owner of an organization and open its profile page.
-2. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
-3. On the left, select `Groups` from the menu options.
-4. Find the `Organization owners` group.
-5. Find the account you wish to remove and click the little checkmark on the right.
+1. 組織のオーナーアカウントでサインインして、プロフィールページを開きます。
+2. 組織のプロファイルページに移動し、左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。
+3. 左側のメニューオプションから`Groups`を選択します。
+4. `Organization owners`グループを見つけます。
+5. 削除するアカウントを見つけて、右側の小さなチェックマークをクリックします。
 
-   **Organizations must have at least one owner.** If you are trying to remove the only owner of the organization, the system will throw an error message.
+   **組織には少なくとも1人のオーナーが必要です**。組織の唯一のオーナーを削除しようとしている場合、エラーメッセージが表示されます。

@@ -1,5 +1,5 @@
 ---
-title: Managing the invoices of your organizations
+title: 組織の請求書管理
 menu:
   organizations:
     weight: 6
@@ -7,40 +7,36 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-Set up an email address so we can send you your invoices - no need to rummage around the site looking for them, we'll deliver them straight to your inbox. However, if you wish to download it manually from the site, you can do that, too, of course! **You can find the past invoices on the organization's** `**Billing**` **page** - you can read more [here](#downloading-organization-invoices)!
+請求書を送付できるようにEメールアドレスを設定すれば請求書を探してサイトを探し回る必要はありません。受信箱に直接送付しますがサイトから手動でダウンロードしたい場合も可能です！**組織の__`**Billing**`**ページで過去の請求書を見つけることができます** - 詳しくは[ココ](#downloading-organization-invoices)から
 
-### Setting up an email address for organization invoices
+### 組織の請求書のEメールアドレス設定
 
-By default, an organization's invoices will be sent to the email provided when the organization was created. However, the owner(s) of the organization can change it at any time.
+デフォルトでは、組織の請求書は組織が作られた際に提供されたEメールに送信されます。組織のオーナーはいつでも変更できます。
 
-1. Sign in with an account that is an owner of an organization and open its profile page.
-2. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
-
-   
-   Be aware that your own billing info and your organization's billing info are **SEPARATE**. You CANNOT change your organization's information in the settings of your own personal profile.
-3. On the left, select `Billing` from the menu options.
+1. 組織のオーナーアカウントでサインインして、プロフィールページを開きます。
+2. 組織のプロファイルページへ：左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。  個人の請求情報と請求情報は**別々**なので注意してください。個人プロフィールの設定で組織の情報を変更することはできません。
+3. 左側のメニューオプションから`Billing`を選択します。
 
    ![Screenshot](/img/team-management/organization/billing-sidebar-menu.png)
-4. Locate the `Invoice email` menu and click `Change email`.
+4. `Invoice email`メニューの、`Change email`をクリックします。
 
    ![Screenshot](/img/team-management/organization/invoice-email-settings.png)
-5. Enter the new email address and click `Save`.
+5. 新しいメールアドレスを入力して`Save`.をクリックします。
 
-And that's it! From now on, your invoices will be sent to the new email address.
+これらのプロセス終了後、請求書が新しいメールアドレスに届きます！
 
-### Downloading organization invoices
+### 組織請求書のダウンロード
 
-1. Sign in with an account that is an owner of an organization and open its profile page.
-2. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
-
-   
-   Be aware that your own billing info and your organization's billing info are **SEPARATE**. You CANNOT change your organization's billing info and subscription plans in the settings of your own personal profile!
+1. 組織のオーナーアカウントでサインインして、プロフィールページを開きます。
+2. 組織のプロファイルページへ：左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。  個人の請求情報と組織の請求情報は**別々**なので注意してください。個人的なプロフィールの設定で組織の請求情報と購読プランを変更することはできません！
 
    ![Screenshot](/img/team-management/organization/switch-profile-2.png)
-3. On the left, select `Billing` from the menu options.
+3. 左側のメニューオプションから`Billing`を選択します。
 
-   ![Screenshot](/img/team-management/organization/billing-sidebar-menu.png)
-4. Locate the `Past statements` menu.
-5. Select the invoice you need and click the download icon on the right.
+	![Screenshot](/img/team-management/organization/billing-sidebar-menu.png)
 
-   ![Screenshot](/img/team-management/organization/past-invoices.png)
+	![Screenshot](/img/team-management/organization/billing-sidebar-menu.png) 
+4. `Past statements`メニューを見つけます。 
+5. 必要な請求書を選択して、右側のダウンロードアイコンをクリックしてください。
+
+	![Screenshot](/img/team-management/organization/past-invoices.png)
