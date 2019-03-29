@@ -2,9 +2,6 @@
 title: Endpoints and testing the API
 redirect_from: []
 date: 2019-03-26 16:32:12 +0000
-menu:
-  api:
-    weight: 8
 published: false
 
 ---
