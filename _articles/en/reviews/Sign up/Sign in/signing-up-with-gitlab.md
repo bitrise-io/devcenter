@@ -15,9 +15,9 @@ Trial after signing up
 
 If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
 
-* 45 minutes of build time
-* 1000 builds a month
-* a maximum of 100 team members
+* 45 minutes of build time.
+* 1000 builds a month.
+* A maximum of 100 team members.
 
 Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!
 
