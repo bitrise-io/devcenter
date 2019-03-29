@@ -46,21 +46,20 @@ Bitriseを構成してビルドのイベント通知を様々なサービスへ�
 1. Find the `WEBHOOK HEADERS` section.　`WEBHOOK HEADERS`セクションを探します。
 
    ![Webhook headers](/img/webhooks/webhook-headers.png)
-2. Add a key and a value to the header. You need both to be able to save the header.　ヘッダにKeyとValueを追加します。ヘッダをセーブするには両方必要になります。
-3. Click `Add header`.　`Add header`をクリックします。
-4. Click `Create webhook`/`Update webhook`をクリックします。
+2. ヘッダにKeyとValueを追加します。ヘッダをセーブするには両方必要になります。
+3. `Add header`をクリックします。
+4. `Create webhook`/`Update webhook`をクリックします。
 
-## Checking and resending webhook deliveries　webhookデリバリのチェックと再送
+## webhookデリバリのチェックと再送
 
-You can check if the notifications were successfully sent or not, and you can check both the payload and the response. The deliveries are marked with appropriate status code, depending on whether the delivery was successful. If it was, you will see a green check mark; if it failed, you will see an orange triangle.　通知がうまく送信されたかどうかや、ペイロードやレスポンスの両方を確認することができます。デリバリは適切なステータスコードでマークされており、デリバリが成功したかどうかはそれによります。成功していれば緑色のチェックマーク、失敗していればオレンジ色の三角形が確認できます。
+通知がうまく送信されたかどうかや、ペイロードやレスポンスの両方を確認することができます。デリバリは適切なステータスコードでマークされており、デリバリが成功したかどうかはそれによります。成功していれば緑色のチェックマーク、失敗していればオレンジ色の三角形が確認できます。
 
-1. Go to the `Recent deliveries` section of the `Outgoing Webhooks` menu.　`Outgoing Webhooks`のメニューより`Recent deliveries`のセクションへ進みます。
-2. Click an outgoing webhook.　outgoing webhookをクリックします。
+1. `Outgoing Webhooks`のメニューより`Recent deliveries`のセクションへ進みます。
+2. outgoing webhookをクリックします。
 
-   ![Outgoing webhook](/img/webhooks/outgoing-webhook.jpeg)
-3. Select the `REQUEST` tab to see and, if you wish, modify the payload that was sent to the specified URL.　確認のため`REQUEST`タブを選択し、任意で特定のURLに送られたpayloadを修正することができます。
+   ![Outgoing webhook](/img/webhooks/outgoing-webhook.jpeg)確認のため`REQUEST`タブを選択し、任意で特定のURLに送られたpayloadを修正することができます。
 
-   An example payload:　payloadの例：
+   payloadの例：
 
         {
           "build_slug":"1234abcd",
@@ -73,7 +72,7 @@ You can check if the notifications were successfully sent or not, and you can ch
             "pull_request_id":32 # If the build was triggered by a pull request
           }
         }
-4. Select the `RESPONSE` tab to see the response from the service you sent the notification to.　レスポンスの確認のため、`RESPONSE`タブを通知を送信したサービスから選択します。
-5. You can redeliver any delivery. Open the delivery you need and click `Redeliver`.　どんなデリバリからでも再デリバリできるようになります。必要なデリバリを開いて`Redeliver`をクリックしてください。
+3. レスポンスの確認のため、`RESPONSE`タブを通知を送信したサービスから選択します。
+4. すべてのデリバリから再デリバリできるようになります。必要なデリバリを開いて`Redeliver`をクリックしてください。
 
    ![Redeliver](/img/webhooks/redeliver-payload.jpeg)

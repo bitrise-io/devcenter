@@ -24,7 +24,9 @@ menu:
 
 **重要**：プロジェクトにSHAREDスキームがない場合、検証は失敗します。Bitriseが自動的に検出するには、共有し、Xcodeスキームに手動でBitriseをポイントする必要があります。
 
-詳しくは[Schemes and the possible issue with them](https://app.forestry.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)を参照してください。 8. エクスポート方法を選択します。後で変更可能なので - `development`を選択します。
+詳しくは[Schemes and the possible issue with them](https://app.forestry.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)を参照してください。
+
+  8. エクスポート方法を選択します。後で変更可能なので - `development`を選択します。
 
 ![](/img/project-build-config-macos.png)
 
