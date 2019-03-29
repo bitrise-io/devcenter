@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/jp/getting-started/signing-up/logging-in-with-bitrise.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
 - _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md
 - _articles/en/getting-started/signing-up/logging-in-to-bitrise.md
