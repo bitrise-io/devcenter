@@ -124,11 +124,15 @@ One trigger can only select a single workflow / can only start a single build. *
 
 項目の順番にもお気をつけください：\~項目の後に〜を明記した場合、`push_branch: master` は選択されることはありません。コードプッシュイベント毎に \~が最初にマッチし、トリガーにマッチする最初の項目がビルドのワークフローを選択します！
 
-## How to build only a single branch
+## How to build only a single branch　単一ブランチのみのビルドする方法
 
 If you want to build only a single branch, for every code push, but for nothing else (no push to any other branch should trigger a build, nor any pull request or tag), then all you have to do is to specify a `trigger_map` which does not map anything else to any workflow, only the branch you want to build.
 
+単一ブランチのみのビルドをコードプッシュ毎に行いたい場合（）、ほかのどのワークフローへのマッピングをしない`trigger_map`を明記してください。
+
 For example, if you only want to build the `master` branch on code push:
+
+例えば、コードプッシュをするとき`master`をビルドしたい場合：
 
     trigger_map:
     - push_branch: master
@@ -136,11 +140,15 @@ For example, if you only want to build the `master` branch on code push:
 
 Or if you only want to build `feature/` branches:
 
+`feature/`ブランチのみのビルドを行う場合：
+
     trigger_map:
     - push_branch: feature/*
       workflow: primary
 
 Or the two together:
+
+２つ同時にする場合：
 
     trigger_map:
     - push_branch: master
@@ -150,7 +158,11 @@ Or the two together:
 
 This configuration will start a build for every code push which happens on either `master` or on a `feature/` branch, and will use the same workflow for both (`primary`).
 
+この構成は`master`か`feature/`ブランチのどちらかで発生するコードプッシュ毎にビルドが開始され、両方の(`primary`)において同じワークフローを使用します。
+
 If you want to use a different workflow for your `master` branch, then all you have to do is to change the `workflow:` for that trigger map item:
+
+ご自身の`master`ブランチで異なるワークフローを使用したい場合、トリガーマップ項目の`workflow:`を変更してください。
 
     trigger_map:
     - push_branch: master
@@ -160,11 +172,17 @@ If you want to use a different workflow for your `master` branch, then all you h
 
 This configuration will use the workflow `deploy` for every code push on `master`, and the workflow `primary` for every code push on `feature/` branches, and **will not start a build for anything else**.
 
-## A very simple, two-workflow CI/CD setup
+この構成では、`master`上においてコードプッシュ毎にワークフロー`deploy`を使用し、`feature/`ブランチ上のコードプッシュ毎にワークフロー`primary`を使用します。他の目的でビルドが開始されることはありません。
+
+## A very simple, two-workflow CI/CD setup　
 
 A base CI/CD setup involves two workflows: one for integration tests, and one for distribution.
 
+ベースとなるCI/CDセットアップは２つのワークフローが関連付けられます。一つがインテグレーションテストで、もう一方は配布となります。
+
 If you have a workflow `primary` for doing the integration tests, and `deploy` to do the deployment / distribution, and you want to run the integration test for code pushes and pull requests on every branch except the `master` branch, which should instead use the `deploy` workflow:
+
+インテグレーションテストを行うワークフロー`primary` 、デプロイ/配布を行うワークフロー`deploy`をお持ちで、`master`ブランチ以外でのブランチ毎でコードプッシュやプルリクエストのインテグレーションテストを行いたい場合（`deploy`ワークフローの代わり）
 
     trigger_map:
     - push_branch: master
