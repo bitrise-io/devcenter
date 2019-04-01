@@ -1,5 +1,5 @@
 ---
-title: Managing a keystore file with Bitrise API - draft
+title: Managing an Android keystore file with Bitrise API - draft
 redirect_from: []
 date: 2019-03-26 15:32:35 +0000
 published: false
