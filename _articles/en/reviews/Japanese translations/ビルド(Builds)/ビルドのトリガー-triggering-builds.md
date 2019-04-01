@@ -110,7 +110,7 @@ One last note, which is hopefully not surprising after the previous example: you
 
 最後に、同一項目内において`push``_branch_`_、_`_tag_`、`pull_reques``_.. _`フィルタを混合させたり、合わせたりすることはできません。_イベントが同時にコードプッシュとプルリクエスト（もしくはタグプッシュ）イベントである場合、そのワークフローが選択されていなくてはならないという意味です。_ソースコードホスティングサービスがプルリクエスト（プリマージ状態）、タグ、そしてコードプッシュイベントのために別々のwebhookに送信することはできません。一つのwebhookイベントではコードプッシュ、タグプッシュ、プルリクエストを同時に行うことはできません。一つのwebhookでは常に一種類のみ（コードプッシュ、タグプッシュ、もしくはプルリクエスト）が関連付けられます。
 
-## One trigger = one build　
+## One trigger = one build
 
 One trigger can only select a single workflow / can only start a single build. **The first item which matches the trigger will select the workflow for the build!**
 
@@ -174,7 +174,7 @@ This configuration will use the workflow `deploy` for every code push on `master
 
 この構成では、`master`上においてコードプッシュ毎にワークフロー`deploy`を使用し、`feature/`ブランチ上のコードプッシュ毎にワークフロー`primary`を使用します。他の目的でビルドが開始されることはありません。
 
-## A very simple, two-workflow CI/CD setup　
+## A very simple, two-workflow CI/CD setup
 
 A base CI/CD setup involves two workflows: one for integration tests, and one for distribution.
 
@@ -182,7 +182,7 @@ A base CI/CD setup involves two workflows: one for integration tests, and one fo
 
 If you have a workflow `primary` for doing the integration tests, and `deploy` to do the deployment / distribution, and you want to run the integration test for code pushes and pull requests on every branch except the `master` branch, which should instead use the `deploy` workflow:
 
-インテグレーションテストを行うワークフロー`primary` 、デプロイ/配布を行うワークフロー`deploy`をお持ちで、`master`ブランチ以外でのブランチ毎でコードプッシュやプルリクエストのインテグレーションテストを行いたい場合（`deploy`ワークフローの代わり）
+インテグレーションテストを行うワークフロー`primary` 、デプロイ/配布を行うワークフロー`deploy`をお持ちで、`master`ブランチ以外でのブランチ毎でコードプッシュやプルリクエストのインテグレーションテストを行いたい場合（`deploy`ワークフローの代わり）：
 
     trigger_map:
     - push_branch: master
@@ -192,15 +192,23 @@ If you have a workflow `primary` for doing the integration tests, and `deploy` t
     - pull_request_target_branch: "*"
       workflow: primary
 
-{% include message_box.html type="warning" title="Order of the items matter!" content=" When `bitrise` receives a webhook event (any kind), it'll match it against the app's `trigger_map`. **The first item it matches will select the workflow for the build!**
+{% include message_box.html type="warning" title="Order of the items matter!項目の順番にご注意ください" content=" When `bitrise` receives a webhook event (any kind), it'll match it against the app's `trigger_map`. **The first item it matches will select the workflow for the build!**
 
-This means that if you'd specify the `push_branch: master` **after** the `push_branch: \"*\"` item, `master` would never be selected as every code push event would match `push_branch: \"*\"` first! "%}
+`bitrise`がwebhookイベントを受け取った時、アプリの`trigger_map`に対してマッチします。マッチする最初の項目がビルドのワークフローを選択します！
 
-## Don't start two builds for pull requests from the same repository
+This means that if you'd specify the `push_branch: master` **after** the `push_branch: \"*\"` item, `master` would never be selected as every code push event would match `push_branch: \"*\"` first! 
+
+これは〜項目の後に`push_branch: master`を明記することで、コードプッシュイベント毎にまず`~` がマッチするので、`master`が選択されることはありません。"%}
+
+## Don't start two builds for pull requests from the same repository　同一レポジトリからプルリクエストによる２つのビルドを開始しないでください。
 
 When you start a Pull Request from the same repository (not from a fork, just from a branch of the repository), **the source code hosting service will send two webhooks**, one for the code push and one for the pull request!
 
-{% include message_box.html type="important" title="Pull Request build" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a "pre-merged" state of the code. This "pre-merged" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request. "%}
+同一レポジトリ（forkからではなく、レポジトリのブランチから）からプルリクエストを開始するとき、**ソースコードホスティングサービスは２つのwebhook**（コードプッシュとプルリクエスト）**を送信します**。
+
+{% include message_box.html type="important" title="Pull Request buildプルリクエストのビルド" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a "pre-merged" state of the code. This "pre-merged" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request. 
+
+両方のビルドが同じように見えますが、本当はそうではありません。ビルド毎のコードプッシュイベントでは、マージしたりすることなく、ブランチのコードをビルドします。ブランチからチェックアウトするときに持っている全く同じ状態のコードをビルドします。一方で、プルリクエストビルドは”プリマージ”状態のコードのビルドも行います。この”プリマージ”状態はコードの最終的なマージされたバージョンではなく、プルリクエストのマージ**後**に表示されるコードを表したクローンのようなものです。"%}
 
 Whether you want to build both or just one of these in case of a pull request is up to you and depends on your project's requirements, but with `bitrise` you can decide whether you want it or not.
 
