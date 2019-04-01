@@ -79,7 +79,7 @@ This means that you can't have an item which only specifies the `workflow`, at l
 * `tag` : A filter which is matched against Tag Push events' "tag" (name) parameter
 
   タグプッシュイベント"tag" (name) パラメータの組み合わせ
-* `pattern` : **DEPRECATED** - this filter was used for both code push and pull request events, in combination with `is_pull_request_allowed`. This filter is now deprecated, as the new filters allow better control over event mapping.　
+* `pattern` : **DEPRECATED** - this filter was used for both code push and pull request events, in combination with `is_pull_request_allowed`. This filter is now deprecated, as the new filters allow better control over event mapping.
 
   非推奨　ー　このフィルタは\`\`との併用で、コードプッシュとプルリクエストイベントの両方で使われていました。現在このフィルタは、新しいフィルタがイベントマッピングにおいてより制御されるので今は非推奨となっております。
 
@@ -108,15 +108,21 @@ If you want to specify filters which should be treated separately, for example, 
 
 One last note, which is hopefully not surprising after the previous example: you can't mix and match `push_branch`, `tag` and the `pull_request_..` filters **in the same item**. This would effectively mean that the workflow should be selected if the event is a Code Push and a Pull Request (or Tag Push) event **at the same time**. This is simply not possible, source code hosting services send separate webhooks for Pull Request (pre-merge state), Tags and for Code Push events. _A single webhook event will never be Code Push, Tag Push and Pull Request at the same time_, a single webhook is always related to only one type (Code Push, Tag Push or Pull Request).
 
-最後に、同一項目内において`push_branch`、`tag`
+最後に、同一項目内において`push``_branch_`_、_`_tag_`、`pull_reques``_.. _`フィルタを混合させたり、合わせたりすることはできません。_イベントが同時にコードプッシュとプルリクエスト（もしくはタグプッシュ）イベントである場合、そのワークフローが選択されていなくてはならないという意味です。_ソースコードホスティングサービスがプルリクエスト（プリマージ状態）、タグ、そしてコードプッシュイベントのために別々のwebhookに送信することはできません。一つのwebhookイベントではコードプッシュ、タグプッシュ、プルリクエストを同時に行うことはできません。一つのwebhookでは常に一種類のみ（コードプッシュ、タグプッシュ、もしくはプルリクエスト）が関連付けられます。
 
-## One trigger = one build
+## One trigger = one build　
 
 One trigger can only select a single workflow / can only start a single build. **The first item which matches the trigger will select the workflow for the build!**
 
+トリガー一つにつき、単一のワークフローを選ぶことができ、一つのビルドを開始することができます。トリガーにマッチする最初の項目がビルドのワークフローを選択します！
+
 **If you want to run more than one workflow**, you can [Chaining workflows](/bitrise-cli/workflows/#chaining-workflows-and-reusing-workflows) after each other. _The workflows chained this way won't run in parallel_, but the full chain of workflows will be executed, in the order you chain them.
 
+２つ以上のワークフローで走らせたい場合、互いに[ワークフローのチェーニング](/bitrise-cli/workflows/#chaining-workflows-and-reusing-workflows)を行うことができます。チェーンされたワークフローは並行して走ることはありませんが、ワークフローをチェーンすれば全てのワークフローが実行されます。
+
 **The order of the items** also matter: if you'd specify a `push_branch: mast` _item **after** a_ `_push_branch: "*"_` item, the `push_branch: master` _would never be selected_ as every code push event would match `push_branch: "*"` first, and **the first item which matches the trigger will select the workflow for the build!**
+
+項目の順番にもお気をつけください：\~項目の後に〜を明記した場合、`push_branch: master` は選択されることはありません。コードプッシュイベント毎に \~が最初にマッチし、トリガーにマッチする最初の項目がビルドのワークフローを選択します！
 
 ## How to build only a single branch
 
