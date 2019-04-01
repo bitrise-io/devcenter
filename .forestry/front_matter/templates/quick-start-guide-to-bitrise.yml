@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Outside contributor/user-roles-on-app-teams-draft.md
 - _articles/en/reviews/Outside contributor/organization-faq.md
 - _articles/en/reviews/Outside contributor/managing-the-apps-of-an-organization-draft.md
 - _articles/en/reviews/managing-files-in-generic-file-storage-with-bitrise.md
