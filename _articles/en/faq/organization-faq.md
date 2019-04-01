@@ -68,9 +68,9 @@ or through the groups assigned to them. Team members with a direct role
 can only access the app they were invited to and can't add an app to the Organization.
 Members of a Team always have a role assigned to them (Admin, Developer or Tester).
 
-## Who are the "contributors"?
+## Who are the "outside contributors"?
 
-Contributors are members of an app's Team with a direct role, invited only to an app of an Organization and not to the Organization itself. **Link to how to add it**
+Outside Contributors are members of an app's Team with a direct role, invited only to an app of an Organization and not to the Organization itself.
 
 ## Can I have multiple Organizations?
 
@@ -87,7 +87,7 @@ After the Pro plan expires, builds can't be started for apps owned by the Organi
 
 ## Can I remove someone from all of my Organization's apps?
 
-If you are an Owner of an Organization, you can remove members and contributors on the Org's `People` tab, with one click. Owners can also remove someone from a group
+If you are an Owner of an Organization, you can remove members and outside contributors on the Org's `People` tab, with one click. Owners can also remove someone from a group
 on the `Groups` tab. In this case the user will be removed from all apps' team that the group is assigned to.
 
 ## Where can I change the avatar for my Organization?
