@@ -1,76 +1,65 @@
 ---
-title: Adding outgoing webhooks
+title: Outgoing webhookの追加
 menu:
   webhooks:
     weight: 19
 
 ---
-{% include not_translated_yet.html %}
+Bitriseを構成してビルドのイベント通知を様々なサービスへ送信することができます。ビルドイベントは以下を表します：
 
-You can configure Bitrise to send build event notifications to any service you would like. A build event is:
+* ビルドが開始したとき
+* ビルドが終了したとき
 
-- when a build is started
-- when a build ends.
+この通知を使ってご自身のgitプロバイダにビルドステータスを共有することができます。もしそのプロバイダをBitriseがサポートしていない場合、ビルド成功・失敗について適切なチームにのみ通知する、もしくは、ご自身のin-house release pipelineを自動化して使用してください。
 
-You can use this notification to share build statuses with your git provider if we don’t support it yet, notify only the right team about build success or failure, or use it to automate your in-house release pipeline.
+ウェブ上のインターフェースから簡単にwebhook の追加・消去・編集が可能です。
 
-You can add, remove and edit your webhooks easily on the website interface.
+## Outgoing webhookの追加
 
-## Adding an outgoing webhook
+ウェブUI上のBitriseが送信するwebhookのセットアップや構成が可能になります。方法は以下のとおりです！
 
-You can set up and configure the webhooks sent by Bitrise on the web UI. Let's see how!
+1. [bitrise.io](https://www.bitrise.io)上のアプリページに進み、`Code`タブを開きます。
+2. `+ Add webhook`をクリックします。
 
-1. Go to your app's page on [bitrise.io](https://www.bitrise.io) and open the `Code` tab.
+   ![Adding outgoing webhook](/img/webhooks/adding-outgoing.png)
+3. `URL`欄に通知を受け取るサービスのURLを入力します。
+4. `Send me everything` もしくは`Select individual events` のどちらかを選択します。
+   * `Send me everything`: 全てのサポートされたイベントタイプがwebhookのトリガーを行います。今現在、ビルドイベントのみがサポートされておりますが、随時他のオプションもサポートしていく予定です！
+   * `Select individual events`: webhookをトリガーする個々のイベントを明示することができます。
+5. `Create Webhook` をクリックしてください。
 
-1. Click `+ Add webhook`.
+これで完了です！webhookのURLの隣にある`Edit`をクリックすればいつでもwebhookの修正が行なえます。
 
-    ![Adding outgoing webhook](/img/webhooks/adding-outgoing.png)
+### Outgoing webhookへカスタムヘッダの追加
 
-1. Enter the URL of the service where you wish to send the notification in the `URL` field.
+追加のヘッダをウェブインタフェースの`Code`タブよりご自身のoutgoing webhookへ追加することができます。例えば、webhookにAPI listeningがある場合、カスタムヘッダとしてセットしたAPIキーを使ってリクエストの追跡が行なえます。
 
-1. Select either the `Send me everything` or the `Select individual events` option.
+カスタムヘッダを追加できるのは（いずれか一方）：
 
-    - `Send me everything`: every supported event type will trigger the webhook. Currently, only build events are supported but there will be other options in the future!
-    - `Select individual events`: you can specify the individual events that should trigger the webhook.
+* [新しいoutgoing webhookを作成する](/webhooks/adding-outgoing-webhooks#adding-an-outgoing-webhook)とき
 
-1. Click `Create Webhook`.
+  もしくは
+* URLの隣りにある`Edit`ボタンをクリックして既存のoutgoing webhookの修正を行うとき
 
-And you're done! You can modify your webhook at any time by clicking `Edit` next to the webhook URL displayed.
+ヘッダを追加する：
 
-### Adding custom headers to outgoing webhooks
+1. Find the `WEBHOOK HEADERS` section.　`WEBHOOK HEADERS`セクションを探します。
 
-You can add extra headers to your outgoing webhooks via the `Code` tab of the web interface. For example, if you have an API listening to the webhook, you can track the requests with API keys set as a custom header.
+   ![Webhook headers](/img/webhooks/webhook-headers.png)
+2. ヘッダにKeyとValueを追加します。ヘッダをセーブするには両方必要になります。
+3. `Add header`をクリックします。
+4. `Create webhook`/`Update webhook`をクリックします。
 
-You can add custom headers either when:
+## webhookデリバリのチェックと再送
 
-- [creating a new outgoing webhook](/webhooks/adding-outgoing-webhooks#adding-an-outgoing-webhook).
-- modifying an existing outgoing webhook by clicking the `Edit` button next to the URL.
+通知がうまく送信されたかどうかや、ペイロードやレスポンスの両方を確認することができます。デリバリは適切なステータスコードでマークされており、デリバリが成功したかどうかはそれによります。成功していれば緑色のチェックマーク、失敗していればオレンジ色の三角形が確認できます。
 
-Add the header:
+1. `Outgoing Webhooks`のメニューより`Recent deliveries`のセクションへ進みます。
+2. outgoing webhookをクリックします。
 
-1. Find the `WEBHOOK HEADERS` section.
+   ![Outgoing webhook](/img/webhooks/outgoing-webhook.jpeg)確認のため`REQUEST`タブを選択し、任意で特定のURLに送られたpayloadを修正することができます。
 
-    ![Webhook headers](/img/webhooks/webhook-headers.png)
-
-1. Add a key and a value to the header. You need both to be able to save the header.
-
-1. Click `Add header`.
-
-1. Click `Create webhook`/`Update webhook`.
-
-## Checking and resending webhook deliveries
-
-You can check if the notifications were successfully sent or not, and you can check both the payload and the response. The deliveries are marked with appropriate status code, depending on whether the delivery was successful. If it was, you will see a green check mark; if it failed, you will see an orange triangle.
-
-1. Go to the `Recent deliveries` section of the `Outgoing Webhooks` menu.
-
-1. Click an outgoing webhook.
-
-    ![Outgoing webhook](/img/webhooks/outgoing-webhook.jpeg)
-
-1. Select the `REQUEST` tab to see and, if you wish, modify the payload that was sent to the specified URL.
-
-    An example payload:
+   payloadの例：
 
         {
           "build_slug":"1234abcd",
@@ -83,9 +72,7 @@ You can check if the notifications were successfully sent or not, and you can ch
             "pull_request_id":32 # If the build was triggered by a pull request
           }
         }
+3. レスポンスの確認のため、`RESPONSE`タブを通知を送信したサービスから選択します。
+4. すべてのデリバリから再デリバリできるようになります。必要なデリバリを開いて`Redeliver`をクリックしてください。
 
-1. Select the `RESPONSE` tab to see the response from the service you sent the notification to.
-
-1. You can redeliver any delivery. Open the delivery you need and click `Redeliver`.
-
-    ![Redeliver](/img/webhooks/redeliver-payload.jpeg)
+   ![Redeliver](/img/webhooks/redeliver-payload.jpeg)
