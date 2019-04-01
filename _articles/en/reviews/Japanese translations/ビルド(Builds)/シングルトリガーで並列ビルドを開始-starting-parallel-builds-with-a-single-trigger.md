@@ -7,7 +7,7 @@ published: false
 ---
 複数の並行性がある場合は、複数のビルドを同時に実行できます。人生を可能な限り簡単にしたいので、ビルドはシングルトリガーで自動的に開始することができます。どのように機能するか見てみましょう！
 
-この例では、単一アプリの3つのワークフローが同時に実行されるように設定されています。これらのワークフローを`Trigger`、`Building` 、`Testing`と呼びましょう。`Trigger`と呼ばれるワークフローはプルリクエストによってトリガーされ、ワークフローは同時に実行される`Building` と `Testing`をトリガーします。  
+この例では、シングルアプリの3つのワークフローが同時に実行されるように設定されています。これらのワークフローを`Trigger`、`Building` 、`Testing`と呼びましょう。`Trigger`と呼ばれるワークフローはプルリクエストによってトリガーされ、ワークフローは同時に実行される`Building` と `Testing`をトリガーします。  
 
 すべてのワークフローは別々の「クリーンな」バーチャルマシンで実行されます。また、さまざまなタイプのスタックで実行することもできます：ワークフローのスタックを選択するには、アプリの`Workflow Editor`に入り、`Stack`タブを選択します。  
 
@@ -32,16 +32,14 @@ published: false
 4. ステップの`Bitrise Access Token`入力に個人的なaccess tokenを保存しているシークレットenvを追加します：`Insert variable`をクリックして、作成したキーを選択してください。
 
    ![Secret env](/img/getting-started/triggering-builds/access-token-input.png)
-5. Find the `Workflows` input of the step, and add `Building` and `Testing` to it.　ステップの`Workflows`入力に`Building` と`Testing`を追加します。
+5. ステップの`Workflows`入力に`Building` と`Testing`を追加します。
 
    ![Workflows input](/img/getting-started/triggering-builds/workflows-input.png)
 6. `Trigger`ワークフローの**最後のステップ**として、`Bitrise Wait for Build`ステップを追加します。
 
     **重要**：このステップでは、ステップで定義されているビルドの状況を確認します。ビルドは`Build slugs`入力で定義されます：スラッグは、`Bitrise Start Build`ステップの出力です。スラッグによって定義されたビルドが実行されている限り、ステップは実行されているビルドを保持し,ステップに含まれているいずれかのビルドが失敗すると、ビルドは失敗します。
-7. Add the secret env storing your personal access token to the `Bitrise Access Token` input of the step: click the `Insert variable` button and choose the key you created.　ステップの`Bitrise Access Token`入力に個人的なアクセストークンを保存しているシークレットenvを追加します：`Insert variable`をクリックして、作成したキーを選択してください。
+7. ステップの`Bitrise Access Token`入力に個人的なアクセストークンを保存しているシークレットenvを追加します：`Insert variable`をクリックして、作成したキーを選択してください。
 
    ![Secret env](/img/getting-started/triggering-builds/access-token-input.png)
-
-And you are done! Once you trigger the `Trigger` workflow, the `Bitrise Start Build` step of the workflow will trigger two more builds running simultaneously. If those two builds are successful, the `Bitrise Wait for Build` step lets the first build finish. A single status report is sent to the git hosting provider, regardless whether the build is successful or not.
 
 完了です！ `Trigger`ワークフローを起動すると、ワークフローの`Bitrise Start Build`ステップが同時に実行されている2つのビルドが起動します。2つのビルドが成功した場合は、`Bitrise Wait for Build`ステップで最初のビルドが完了します。ビルドが成功したかどうかにかかわらず、シングルステータスレポートがgitホスティングプロバイダーに送信されます。
