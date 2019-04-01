@@ -17,8 +17,6 @@ pages:
 - _articles/en/reviews/fastlane.md
 - _articles/en/reviews/API/endpoints-and-testing-the-api.md
 - _articles/en/reviews/API/response-and-pagination.md
-- _articles/en/reviews/Sign up/Sign in/signing-up-with-bitbucket.md
-- _articles/en/reviews/Sign up/Sign in/signing-up-with-email-draft.md
 - _articles/en/reviews/Sign up/Sign in/logging-in-to-bitrise.md
 - _articles/en/reviews/Sign up/Sign in/signing-up-with-gitlab.md
 - _articles/en/reviews/Sign up/Sign in/signing-up-with-github.md
