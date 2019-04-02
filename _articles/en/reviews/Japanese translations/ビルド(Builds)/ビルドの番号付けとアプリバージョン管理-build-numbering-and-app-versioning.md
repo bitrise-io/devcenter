@@ -5,17 +5,23 @@ date: 2019-04-02 14:40:06 +0000
 published: false
 
 ---
-{% include not_translated_yet.html %}
-
 All Bitrise builds have a build number. The first build of your app is, by default, number 1, and the build number gets incremented with each build. You can get a build's Bitrise build number on the website, as well as via the `$BITRISE_BUILD_NUMBER` environment variable. This variable can be used in any step or script where you need the Bitrise build number for any reason.
+
+全てのBitriseビルドにはビルド番号が存在します。あなたのアプリの最初のビルドの場合、デフォルトで１番となっており、ビルドが行われるにつれ番号も増えていきます。ウェブサイト上でBitriseビルド番号の取得ができ、 `$BITRISE_BUILD_NUMBER` の環境変数からでも取得が可能です。この変数はBitriseビルド番号が必要になるステップやスクリプトで使用されます。
 
 You can also take care of your app's versioning automatically, using Bitrise. We have two steps to do it for you - [read more here!](builds/build-numbering-and-app-versioning#Set-up-app-versioning-automatically-on-Bitrise)
 
-## Change the build number of your build
+アプリのバージョン管理を自動的に行うこともBitriseでは可能です。２つのステップがあるので、[ここ](builds/build-numbering-and-app-versioning#Set-up-app-versioning-automatically-on-Bitrise)をお読みください！
+
+## Change the build number of your build　ビルド番号の変更
 
 Set the build number manually on the website. This is useful if, for example, you migrated to Bitrise from some other service where your app already had several builds. This way you do not have to start from 1!
 
+ウェブサイトで手動によるビルド番号の設定を行ってください。アプリが他サービス上ですでにビルドが複数回行なわれていて、Bitriseへ移動させる際に有効です。この方法で１番からスタートすることはありません！
+
 Open your app and go to its `Settings` tab.
+
+アプリを開いて`Settings`タブへ進みます。
 
 ![build numbering](/img/builds/build-numbering.png)
 
