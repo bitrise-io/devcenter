@@ -132,7 +132,7 @@ Example response
       }
     }
 
-{% include message_box.html type="note" title="Availability of the `_download_url_`_" content=" Note that the `_download_url_` is generated only when the file's `is_protected` attribute is false. "%}
+{% include message_box.html type="note" title="Availability of the `download_url`" content=" Note that the `_download_url_` is generated only when the file's `is_protected` attribute is false. "%}
 
 ## Listing the uploaded files of an app
 
