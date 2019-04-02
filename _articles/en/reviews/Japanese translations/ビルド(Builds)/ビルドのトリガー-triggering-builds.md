@@ -5,11 +5,11 @@ date: 2019-03-29 14:40:16 +0000
 published: false
 
 ---
-When you register a webhook for an event or for multiple events (for example, for `Code Push` and for `Pull Request` events), your source code hosting service will call the webhook every time the related event happens.　イベントにwebhookを登録する際（例：`Code Push` や `Pull Request`）、ご自身のソースコードホスティングサービスは、関連したイベントが発生する度webhookを呼び出します。
+１つまたは２つ以上のイベントにwebhookの登録をする際（例：`Code Push` や `Pull Request`イベント）、あなたのソースコードホスティングサービスはwebhookを関連したイベントが発生する度に呼び出します。
 
 On [bitrise.io](https://www.bitrise.io) these webhooks calls are called _triggers_, and can be mapped to different `Workflows`, or not mapped at all. If you don't map a trigger to any workflow, then [bitrise.io](https://www.bitrise.io) won't start a build. If you map it to a workflow, then a build will be started with the selected workflow.
 
-bitrise.ioではwebhookを呼び出す現象をtriggers（トリガー）と呼んでおり、異なる`Workflows` へマップされたりされなかったりします。いかなるワークフローへのマップを望まない場合、bitrise.ioはビルドを開始しません。ワークフローへトリガーをマップすれば、ビルドは選択されたワークフロー上で開始されます。
+[bitrise.io](https://www.bitrise.io)ではwebhookを呼び出すことをtriggers（トリガー）と呼んでおり、異なる`Workflows` へマップされたりされなかったりします。いかなるワークフローへのマップを望まない場合、bitrise.ioはビルドを開始しません。ワークフローへトリガーをマップすれば、ビルドは選択されたワークフロー上で開始されます。
 
 In the following examples, we'll use a very simple Bitrise configuration (`bitrise.yml`), which does nothing else just prints the selected workflow's ID:　以下の例では、シンプルなBitrise構成（選択されたワークフローIDがプリントされた\[`bitrise.yml`\]）を使います。
 
