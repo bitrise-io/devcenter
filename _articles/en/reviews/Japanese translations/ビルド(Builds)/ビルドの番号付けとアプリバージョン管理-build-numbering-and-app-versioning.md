@@ -56,14 +56,17 @@ Both steps accept either numbers (integers and/or numeric strings) or environmen
 
 For an Android app, the `versionCode` setting is used as an internal version number, to determine if a build of the app is more recent than another build. The `versionName` setting is a string used as the version number shown to users.
 
-Androidアプリでは、内部のバージョン番号として`versionName`設定が使用されており、アプリのビルドが他のビルドよりも新しいかどうかを確かめるのに用いられます。`versionName`設定はユーザーへ表示されるバージョン番号として使用される
+Androidアプリでは、内部のバージョン番号として`versionName`設定が使用されており、アプリのビルドが他のビルドよりも新しいかどうかを確かめるのに用いられます。`versionName`設定はユーザーへ表示されるバージョン番号として使用される列のことです。
 
 For in-depth information about Android versioning, please check out [the Android developer guide on the subject](https://developer.android.com/studio/publish/versioning).
 
-1. Add the `Set Android Manifest Version Code and Name` step to your Workflow.
-2. Set the file path to the `AndroidManifest.xml` file in the `AndroidManifest.xml file path` input.
-3. Add a value in the `Version Code` input. This sets the `android:versionCode` attribute to the specified value in the `AndroidManifest.xml` file. The default value is the `$BITRISE_BUILD_NUMBER` environment value.
-4. Add a value in the `Version Name` input. This will set the `android:versionName` attribute to the specified value in the `AndroidManifest.xml` file.
+Androidバージョン管理についての詳しい情報は、[こちら](https://developer.android.com/studio/publish/versioning)をご覧ください。
+
+1. Add the `Set Android Manifest Version Code and Name` step to your Workflow.　ワークフローに `Set Android Manifest Version Code and Name` ステップを追加します。
+2. Set the file path to the `AndroidManifest.xml` file in the `AndroidManifest.xml file path` input.　`AndroidManifest.xml file path` の入力欄の `AndroidManifest.xml` ファイルへファイルパスをセットします。
+3. Add a value in the `Version Code` input. This sets the `android:versionCode` attribute to the specified value in the `AndroidManifest.xml` file. The default value is the `$BITRISE_BUILD_NUMBER` environment value.　
+4. `Version Code`欄に数値を入力します。
+5. Add a value in the `Version Name` input. This will set the `android:versionName` attribute to the specified value in the `AndroidManifest.xml` file.
 
 ![Set android version](/img/builds/set-android-version.png)
 
