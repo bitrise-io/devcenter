@@ -27,22 +27,36 @@ Open your app and go to its `Settings` tab.
 
 Under `YOUR NEXT BUILD NUMBER WILL BE`, the number of your next build will be displayed (unsurprisingly). This number is incremented automatically whenever a new build is triggered but here you can also set it manually.
 
+`YOUR NEXT BUILD NUMBER WILL BE`の下に、次に行われるビルド番号が表示されます。この番号は新しいビルドが行われるごとに自動的に増えていきますが、手動で変更することができます。
+
 Please note that the build number must be either 0 or a positive integer. Negative numbers are not accepted. You can, however, set any number you have already used.
 
-## Set up app versioning automatically on Bitrise
+ビルド番号は０もしくは正の整数でなくてはなりません。負の数は受け付けられないのでご注意ください。すでに使用した番号をもう一度使用することは可能です。
+
+## Set up app versioning automatically on Bitrise　Bitrise上でアプリバージョン管理のセットアップ
 
 Track the version of your app in its git repository by modifying the file containing the essential information about the app (for example, the `Info.plist` file for iOS apps and the `AndroidManifest.xml` file for Android apps).
 
+アプリに関する重要な情報が含まれるファイルの修正をすることでgitレポジトリ内のアプリバージョンを追跡することができます。（例：iOS アプリの場合の`Info.plist`ファイル、Androidアプリの場合の`AndroidManifest.xml`ファイル）
+
 Bitrise has two steps to do this for you. These two steps can insert the Bitrise build number or some other specified number into their respective files:
+
+Bitriseには２種類のステップがあり、Bitriseビルド番号や他の特定の番号をそれぞれのファイルへ挿入することができます。
 
 * `Set Android Manifest Version Code and Name` for Android apps.
 * `Set Xcode Project Build Number` for iOS apps.
+* `Set Android Manifest Version Code and Name` （Androidアプリの場合）
+* `Set Xcode Project Build Number` （iOSアプリの場合）
 
 Both steps accept either numbers (integers and/or numeric strings) or environment variables in their relevant inputs. By default, both use the `$BITRISE_BUILD_NUMBER` environment variable as their default value for the build number.
 
-### Setting the `versionCode` and the `versionName` of an Android app
+ステップの両方において、番号（整数もしくは数字列）もしくは環境変数の使用が可能です。デフォルトでは、`$BITRISE_BUILD_NUMBER` 環境変数をビルド番号のデフォルト値として使用しています。
+
+### Setting the `versionCode` and the `versionName` of an Android app　Androidアプリの`versionCode`と`versionName`の設定
 
 For an Android app, the `versionCode` setting is used as an internal version number, to determine if a build of the app is more recent than another build. The `versionName` setting is a string used as the version number shown to users.
+
+Androidアプリでは、内部のバージョン番号として`versionName`設定が使用されており、アプリのビルドが他のビルドよりも新しいかどうかを確かめるのに用いられます。`versionName`設定はユーザーへ表示されるバージョン番号として使用される
 
 For in-depth information about Android versioning, please check out [the Android developer guide on the subject](https://developer.android.com/studio/publish/versioning).
 
