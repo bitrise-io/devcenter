@@ -196,7 +196,7 @@ If you have a workflow `primary` for doing the integration tests, and `deploy` t
 
 `bitrise`がwebhookイベントを受け取った時、アプリの`trigger_map`に対してマッチします。マッチする最初の項目がビルドのワークフローを選択します！
 
-This means that if you'd specify the `push_branch: master` **after** the `push_branch: \"*\"` item, `master` would never be selected as every code push event would match `push_branch: \"*\"` first! 
+This means that if you'd specify the `push_branch: master` **after** the `push_branch: \"*\"` item, `master` would never be selected as every code push event would match `push_branch: \"*\"` first!
 
 これは〜項目の後に`push_branch: master`を明記することで、コードプッシュイベント毎にまず`~` がマッチするので、`master`が選択されることはありません。"%}
 
@@ -206,15 +206,19 @@ When you start a Pull Request from the same repository (not from a fork, just fr
 
 同一レポジトリ（forkからではなく、レポジトリのブランチから）からプルリクエストを開始するとき、**ソースコードホスティングサービスは２つのwebhook**（コードプッシュとプルリクエスト）**を送信します**。
 
-{% include message_box.html type="important" title="Pull Request buildプルリクエストのビルド" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a "pre-merged" state of the code. This "pre-merged" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request. 
+{% include message_box.html type="important" title="Pull Request buildプルリクエストのビルド" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a "pre-merged" state of the code. This "pre-merged" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
 
 両方のビルドが同じように見えますが、本当はそうではありません。ビルド毎のコードプッシュイベントでは、マージしたりすることなく、ブランチのコードをビルドします。ブランチからチェックアウトするときに持っている全く同じ状態のコードをビルドします。一方で、プルリクエストビルドは”プリマージ”状態のコードのビルドも行います。この”プリマージ”状態はコードの最終的なマージされたバージョンではなく、プルリクエストのマージ**後**に表示されるコードを表したクローンのようなものです。"%}
 
 Whether you want to build both or just one of these in case of a pull request is up to you and depends on your project's requirements, but with `bitrise` you can decide whether you want it or not.
 
-{% include message_box.html type="note" title="Pull Request merge is a Code Push" content=" Source code hosting services treat the event of "merge" as a code push event. For example if you merge a Pull Request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`. "%}
+プルリクエストで両方もしくは一つだけのビルドを行う場合はプロジェクトの必要条件次第ですが、`bitrise`があれば、それを行うかどうかを決めることができます。
+
+{% include message_box.html type="note" title="Pull Request merge is a Code Pushプルリクエストマージはコードプッシュ" content=" Source code hosting services treat the event of "merge" as a code push event. For example if you merge a Pull Request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`. ソースコードホスティングサービスはコードプッシュイベントとしてイベント”マージ”とみなします。例えば、`feature/a`から`master`へプルリクエストをマージしたり、PRをマージするときPRは`master`へコードプッシュを生成します。"%}
 
 An example to build only the pull request ("pre-merged") events/state, in addition to deploying `master`:
+
+`master`をデプロイすることに加え、プルリクエスト（”プリマージ”）イベント/状態のみのビルドを行う一例：
 
     trigger_map:
     - push_branch: master
@@ -224,31 +228,48 @@ An example to build only the pull request ("pre-merged") events/state, in additi
 
 or if you don't want to start a build for pull requests, only for code push events:
 
+プルリクエストのビルドを開始せずにコードプッシュイベントのみを開始する際の一例：
+
     trigger_map:
     - push_branch: master
       workflow: deploy
     - push_branch: "*"
       workflow: primary
 
-## Three workflows: test, deploy to staging and deploy to production
+## Three workflows: test, deploy to staging and deploy to production　３つのワークフロー：テスト、ステージングのデプロイ、製作のデプロイ
 
 Another common CI/CD pattern is to have three workflows:
 
+他の一般的なCI/CDパターンには３つのワークフローが存在します。
+
 * A Test workflow, which will run for every pull request, every code push on `feature/` branches etc., to test whether the test can be integrated into a release (branch)
+* プルリクエスト毎に走るテストワークフロー、`feature/`ブランチ上などでのコードプッシュ毎に、そのテストはリリースブランチへ統合されるかどうかをテストします。
 * A Staging deployment workflow, to deploy the app/code to an internal/testing system. Examples:
+* Staging Deployment Workflowは内部/テストシステムへアプリ/コードのデプロイを行います。例えば：
   * In case of an iOS app this can be, for example, an Ad Hoc signed IPA deployed to HockeyApp, where your tester team can download and test it, or a deploy to iTunes Connect / TestFlight for internal testing.
   * In case of an Android app this can be a deploy to Google Play to a "beta" track.
   * In case of a server code this can be a deploy to, for example, a staging Heroku server.
+  * iOSアプリの場合、（例）IPA署名済みのAd Hocがテスターチームがドウンロードしたりテストを行うHockeyAppへデプロイされる、もしくは、内部テスト用のiTunes Connect/Testflightへのデプロイです。
+  * Androidアプリの場合、Google Playから"beta"トラックへのデプロイです。
+  * サーバーコードの場合、（例）Herokuサーバーのステージング
 * A Production deployment workflow, to deploy the app/code into production. Examples:
+* Production deployment workflowはアプリ/コードをProductionへデプロイします。
   * In case of an iOS app this can be an App Store signed IPA deployed to iTunes Connect/TestFlight, enabled for "external testing".
   * In case of an Android app this can be a deploy to Google Play as a public update of the app.
   * In case of a server code this can be a deploy to, for example, the production Heroku server.
+  * iOSアプリの場合、IPA署名済みのApp StoreがiTunes Connect/TestFlightへデプロイされ、”外部テスト”で有効です。
+  * Androidアプリの場合、Google Playへのアプリの公式アップデートとしてのデプロイです。
+  * サーバーコードの場合、例えば、production Heroku サーバーへのデプロイです。
 
 So, we have three workflows (`primary` (test), `deploy-to-staging` and `deploy-to-production`) and we'll specify three triggers, to select the right workflow for the right trigger.
 
 There are two similar approaches, depending whether you prefer tags of branches for production deployment:
 
-### Using Tags to trigger the production deployment
+`primary`（テスト）、`deploy-to-staging`、`deploy-to-production`の３つのワークフローがあることがわかりました。３つのトリガーを明記することで正しいワークフローに正しいトリガーを選択することができます。
+
+２つの類似したアプローチもありますが、これはご自身のproduction デプロイのブランチのタグ
+
+### Using Tags to trigger the production deployment　productionデプロイをトリガーするタグの使用
 
     trigger_map:
     - tag: v*.*.*
@@ -262,11 +283,16 @@ There are two similar approaches, depending whether you prefer tags of branches 
 
 This trigger map configuration will trigger a build:
 
+このトリガーマップ構成はビルドをトリガーします。
+
 * with the `deploy-to-production` workflow if a new tag (with the format `v*.*.*`,  `v1.0.0`) is pushed
 * with the `deploy-to-staging` workflow if a code push happens on the `master` branch (for example, a pull request is merged into the `master` branch)
 * with the `primary` workflow for any other branch and for pull requests
+* 新しいタグ（）がプッシュされた場合の`deploy-to-production`ワークフローがある時
+* コードプッシュが`master`ブランチ上で発生する場合の`deploy-to-staging`ワークフローがある時
+* ブランチ全般・プルリクエストの`primary`ワークフローがある時
 
-### Using a Branch to trigger the production deployment
+### Using a Branch to trigger the production deployment　productionデプロイをトリガーするブランチの使用
 
     trigger_map:
     - push_branch: master
@@ -280,13 +306,20 @@ This trigger map configuration will trigger a build:
 
 This trigger map configuration will trigger a build:
 
+このトリガーマップ構成はビルドをトリガーします：
+
 * with the `deploy-to-production` workflow if a code push happens on the `master` branch (for example, a git flow release branch merged into `master`)
 * with the `deploy-to-staging` workflow if a code push happens on the `develop` branch (for example, a pull request is merged into the `develop` branch)
 * with the `primary` workflow for any other branch and for pull requests
+* `master`ブランチ上でコードプッシュが発生する場合の`deploy-to-production`がある時（例：`master`へgit flow リリースブランチをマージしたとき）
+* コードプッシュが`develop`ブランチ上で発生する場合の`deploy-to-staging`がある時（例：プルリクエストが`develop`ブランチへマージされる時）
+* ほかのブランチ全般・プルリクエストの`primary`ワークフローがある時
 
-## How to build only pull requests
+## How to build only pull requests　プルリクエストのみでビルドを行う方法
 
-If all you want is to run integration tests for pull requests, and you don't want to do anything else, then you can use a trigger map configuration like this:
+If all you want is to run integration tests for pull requests, and you don't want to do anything else, then you can use a trigger map configuration like this:　
+
+プルリクエストのインテグレーションテストを走らせたい場合、そしてそれ以外に何もしたくない場合、以下のようなトリガーマップ構成を使用できます：
 
     trigger_map:
     - pull_request_target_branch: "*"
@@ -295,6 +328,10 @@ If all you want is to run integration tests for pull requests, and you don't wan
 This will select the `primary` workflow for every and any pull request, and will not start a build for anything else.
 
 If you'd only want to build pull requests which are targeted to be merged into `master`, the configuration would look like this:
+
+これによりプルリクエスト毎に`primary`ワークフローが選択され、それ以外のビルドは開始されません。
+
+`master`へマージされるように仕向けられたプルリクエストのビルドのみを行いたい場合、構成は以下のようになります。
 
     trigger_map:
     - pull_request_target_branch: master
