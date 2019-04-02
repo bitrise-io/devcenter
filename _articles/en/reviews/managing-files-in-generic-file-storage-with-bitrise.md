@@ -182,7 +182,7 @@ Example response:
       }
     }
 
-As you can see the example response shows the list of provisioning profiles of a specific app along with their defined attributes. 
+As you can see the example response shows the list of files of a specific app along with their defined attributes. 
 
 ## Deleting a file
 
