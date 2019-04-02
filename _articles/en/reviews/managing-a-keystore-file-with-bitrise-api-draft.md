@@ -98,3 +98,24 @@ In the case of iOS code signing files, you can set the `is_protected`, `is_expos
   Violating these constraints the response will be Bad Request.
 
   Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`. "%}
+
+## Deleting a keystore file 
+
+You can delete your uploaded keystore file with using the `DELETE` method.
+
+The required parameters are:
+
+* app slug
+* keystore file slug
+
+Example curl request:
+
+    curl -X DELETE 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/keystore-file'
+
+## Downloading an keystore file
+
+If you’d like to download the actual file from AWS, you can do so with the following `curl` requests:
+
+    curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/keystore-file/KEYSTORE-FILE-SLUG'
+
+The response will contain a pre-signed, expiring AWS URL for the file.
