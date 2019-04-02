@@ -11,6 +11,11 @@ To take advantage, all you need to do is rebuild a build with remote access enab
 
 {% include message_box.html type="important" title="Authorization" content="Users who have the `Testers/QA` roles on the app are NOT be able to use remote access."%} 
 
+There are two ways to use remote access on our build machines: 
+
+* **SSH**: this is available for both Linux/Docker based and MacOS machines.
+* **Screenshare**: this is only available for MacOS machines. 
+
 ### Remote access with SSH
 
 1. Go to the build page.
