@@ -40,3 +40,5 @@ And done! You should now be able to access the virtual machine where your build 
    * Password
 5. Open a screenshare application. 
 6. Fill out the required fields with the information from under the `Screenshare` option. 
+
+And done! You should now be able to access the virtual machine where your build is running. 
