@@ -8,3 +8,5 @@ published: false
 Remote access
 
 Rebuild with remote access for debugging purposes. 
+
+Logging in to Mac vs Logging in to Linux VMs
