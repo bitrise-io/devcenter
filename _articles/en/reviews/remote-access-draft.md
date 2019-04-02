@@ -9,6 +9,8 @@ Remote access allows users to connect to their build's virtual machines via SSH 
 
 To take advantage, all you need to do is rebuild a build with remote access enabled and follow the instructions to access the build machine during the build. 
 
+{% include message_box.html type="important" title="Authorization" content="Users who have the `Testers/QA` roles on the app are NOT be able to use remote access."%} 
+
 ### Remote access with SSH
 
 1. Go to the build page.
@@ -18,4 +20,4 @@ To take advantage, all you need to do is rebuild a build with remote access enab
 
        ssh user:password@access.bitrise.io -p 13377
 
-And done! 
+And done! You should now be able to access the virtual machine where your build is running. 
