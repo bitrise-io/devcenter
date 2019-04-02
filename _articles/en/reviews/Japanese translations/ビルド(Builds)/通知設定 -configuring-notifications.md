@@ -82,27 +82,27 @@ Bitriseのビルドイン電子メール通知システムはビルドについ�
 
 BitriseはSlack統合をサポートしており、簡単にセットアップできます。 Slackメッセージを個々のユーザー、グループ、またはチャンネルに送信でき、メッセージカスタマイズ、ファイル送付、ユーザーをビルドページに移動させるリンクボタンを追加しています。
 
-**To use our dedicated Step, you need either a** [Slack webhook URL](https://api.slack.com/incoming-webhooks) **or a** [Slack API token for a Slack bot user](https://api.slack.com/bot-users).
+**当社の専用ステップを使用するには、Slackボットユーザー用の**[Slack webhook URL](https://api.slack.com/incoming-webhooks)または[Slack APIトークン](https://api.slack.com/bot-users)が必要です。
 
-{% include message_box.html type="important" title="Make sure that the Step runs in every build!" content="If you use the `Send a Slack message` Step in your workflow, make sure that [it is always set to run even if the previous Step failed](/getting-started/getting-started-steps/#skipping-steps)! This is the default setting of the Step. If you change it, messages won't be sent if the build fails."%}
+{% include message_box.html type="important" title="ステップがすべてのビルドで実行されていることを確認してください！" content="ワークフローで`Send a Slack message`ステップを使用する場合は、[前の]()[ステップが失敗した場合でも常に実行するように設定されていること](/getting-started/getting-started-steps/#skipping-steps)を確認してください。これはステップのデフォルト設定であり、変更した場合、ビルドが失敗してもメッセージは送信されません。"%}
 
-1. Add the `Send a Slack message` Step to your workflow.
-2. Find either the `Slack Webhook URL` or the `Slack API token` input. Click on the input and then click `Select secret variable`.
+1. `Send a Slack message`ステップをワークフローに追加します。
+2. `Slack Webhook URL`または`Slack API token`入力をクリックしてから、`Select secret variable`をクリックします。
 
    ![](/img/slack-step.png)
-3. Create a new Secret Environment Variable that stores your webhook URL or your Slack API token.
+3. WebhookURLまたはSlack APIトークンを保存する新しいシークレット環境変数を作成します。 
 
-   You can choose any key you want.
-4. Customize your Slack message with the relevant inputs of the Step.
+    好きなキーを選ぶことができます。
+4. ステップの関連入力のSlackメッセージをカスタマイズできます。  
 
-   There are several options, including but not limited to:
-   * Setting the target channel, group or username: this can be a name or an encoded ID.
-   * The text of the message to send.
-   * The bot's username for the message
-   * The message's color
-   * File attachment
-   * Link buttons attached to the message
+   オプション：
+   * ターゲットチャンネル、グループ、またはユーザー名を設定します：名前またはエンコードされたIDです。
+   *  送信するメッセージのテキスト。
+   * メッセージボットのユーザー名  
+   * メッセージの色  
+   * 添付ファイル  
+   * メッセージに添付されているリンクボタン
 
-   Check out all the inputs in the Workflow Editor to see all the ways in which you can customize your Slack messages.
+   Slackメッセージをカスタマイズする方法を確認するには、ワークフローエディターの入力を確認してください。
 
-Once you're done, run a build!
+完了したら、ビルドを開始しよう！
