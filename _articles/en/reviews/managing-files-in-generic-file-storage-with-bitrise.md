@@ -97,13 +97,11 @@ You can set the `is_protected`, `is_exposed` and `processed` attributes of the f
 
   Violating these constraints the response will be Bad Request.
 
-  Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`. 
+  Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`.
 
   "%}
 
 ## Getting a specific file's data
-
-**_How many can they upload? max 50?_**
 
 You might want to retrieve a specific file's data to have a quick look at it. You can easily do so with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
 
@@ -136,7 +134,7 @@ Example response
 
 ## Listing the uploaded files of an app
 
-Wondering how many files belong to an app? Get a list of them with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
+Wondering how many files belong to an app? Get a list of them with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method. Please note that the maximum number of files is 50.
 
 The required parameter is:
 
@@ -149,54 +147,60 @@ Optional parameters are:
 
 Example curl request for provisioning profiles:
 
-    curl -X GET -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
+    curl -X GET -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files'
+
+**_Why adding the keystore one as well? thats a completely differerent field!!_**
 
 Example response:
 
     {
       "data": [
         {
-          "upload_file_name":"sample.provisionprofile",
-          "upload_file_size":2047,
-          "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
-          "processed":false,
-          "is_expose":true,
-          "is_protected":false
+          "upload_file_name": "realmtasks.jks",
+          "upload_file_size": 2068,
+          "slug": "a37f6a0ff582f4ea",
+          "processed": true,
+          "is_expose": true,
+          "is_protected": false,
+          "user_env_key": "ANDROID_KEYSTORE",
+          "exposed_meta_datastore": null
         },
         {
-          "upload_file_name":"sample2.provisionprofile",
-          "upload_file_size":2047,
-          "slug":"01C6FA6P6HRQT5PQ8RMMVVXE5T",
-          "processed":true,
-          "is_expose":true,
-          "is_protected":true
+          "upload_file_name": "Test-File",
+          "upload_file_size": 4865,
+          "slug": "01D7F228E7N8Q8WQJKJM8FV3XM",
+          "processed": true,
+          "is_expose": true,
+          "is_protected": false,
+          "user_env_key": "Test-File",
+          "exposed_meta_datastore": null
         }
       ],
       "paging": {
-        "page_item_limit": 50,
-        "total_item_count": 2
+        "total_item_count": 2,
+        "page_item_limit": 50
       }
     }
 
-As you can see the example response shows the list of provisioning profiles of a specific app along with their defined attributes. You can also see that the max number of file limit is 50.
+As you can see the example response shows the list of provisioning profiles of a specific app along with their defined attributes. 
 
 ## Deleting a file
 
-You can delete your uploaded iOS code signing file with the [relevant Bitrise API ](https://api-docs.bitrise.io/)using the `DELETE` method.
+You can delete your uploaded file with the [relevant Bitrise API ](https://api-docs.bitrise.io/)using the `DELETE` method from `GENERIC PROJECT STORAGE`.
 
 The required parameters are:
 
 * app slug
-* file slug
+* generic project file slug
 
 Example curl request:
 
-    curl -X DELETE 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles'
+    curl -X DELETE 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files'
 
 ## Downloading a file
 
 If you’d like to download the actual file from AWS, you can do so with the following `curl` requests:
 
-    curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles/PROVISIONING-PROFILE-SLUG'
+    curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files/GENERIC-PROJECT-FILE-SLUG'
 
 The response will contain a pre-signed, expiring AWS URL for the file.
