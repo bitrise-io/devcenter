@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/秘密と環境設定-secrets-and-env-vars.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドの番号付けとアプリバージョン管理-build-numbering-and-app-versioning.md
 - _articles/en/reviews/remote-access-draft.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
