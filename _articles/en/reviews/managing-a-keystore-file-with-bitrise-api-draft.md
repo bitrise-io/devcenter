@@ -48,22 +48,20 @@ Example response
       }
     }
 
-As you can see from the example response above, the file name, its size, slug and pre-signed upload url are retrieved (along with some attributes that you can modify).
-
-**download url?**
+As you can see from the example response above, the file name, its size, slug and pre-signed upload url are retrieved (along with some attributes that you can modify). **_download url?_**
 
 Using the generated pre-signed upload URL and the keystore file name, upload your file to AWS with a simple `curl` request.
 
     curl -T' keystore.file 'upload url'
 
-## Cofirming the keystore file upload
+## Confirming the keystore file upload
 
 To complete the uploading process, you have to confirm the upload with another `POST` request:
 
 The required parameters are:
 
 * app slug
-* **generic project file slug**
+* **_generic project file slug_**
 
 Example `curl` request:
 
@@ -80,12 +78,12 @@ The required parameters are:
 * app slug
 * keystore file slug
 
-For example, to make a **keystore file** **protected**, you can set the `is_protected` flag of your keystore file to `true`.
+For example, to make a keystore file protected, you can set the `is_protected` flag of your keystore file to `true`.
 
     curl -X PATCH -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/keystore-file/KEYSTORE-FILE-SLUG -d '{"is_protected":true}'
 
-* _replacing with another one?_
-* _changing attributes? expose for pull requests, make it protected, delete, download_
+* **_replacing with another one?_**
+* **_changing attributes? expose for pull requests, make it protected, delete, download_**
 
 {% include message_box.html type="warning" title="Careful with those attributes!" content="
 
