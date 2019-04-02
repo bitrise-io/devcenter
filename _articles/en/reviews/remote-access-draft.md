@@ -15,8 +15,10 @@ To take advantage, all you need to do is rebuild a build with remote access enab
 
 1. Go to the build page.
 2. Click the `Rebuild with Remote Access` option.
-3. Open a command line interface.
-4. Run the command found under `SSH`:
+3. Click `Remote Access Instructions`. 
+4. Under the `SSH` option, find the command you will need. 
+5. Open a command line interface.
+6. Run the command found under `SSH`:
 
        ssh user:password@access.bitrise.io -p 13377
 
@@ -26,5 +28,10 @@ And done! You should now be able to access the virtual machine where your build 
 
 1. Go to the build page.
 2. Click the `Rebuild with Remote Access` option.
-3. Open a screen share application. 
-4. Fill out the requested fields of 
+3. Click `Remote Access Instructions`. 
+4. Under the `Screenshare` option, find the required information:
+   * Address
+   * Username
+   * Password
+5. Open a screenshare application. 
+6. Fill out the required fields with the information from under the `Screenshare` option. 
