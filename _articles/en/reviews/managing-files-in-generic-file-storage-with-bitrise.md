@@ -5,22 +5,20 @@ date: 2019-04-01 10:48:09 +0000
 published: false
 
 ---
-You can upload, update, list, and delete any files with the [relevant Bitrise API](https://api-docs.bitrise.io/) to the `GENERIC FILE STORAGE` section of our `Code Signing` tab. Should you need more information on generic file storage, check out our [guide](/getting-started/managing-files-on-bitrise/#uploading-files-to-use-in-your-build).
+You can upload, delete, update, and list any files with the [relevant Bitrise API](https://api-docs.bitrise.io/) to the `GENERIC FILE STORAGE` section of our `Code Signing` tab. Should you need more information on generic file storage, check out our [guide](/getting-started/managing-files-on-bitrise/#uploading-files-to-use-in-your-build) on the UI representation.
 
-## Creating & uploading files to 
+## Creating & uploading files to
 
-You can add a new file to an application of your choice.
+You can add a new file to an application of your choice. When calling the relevant API, a new temporary pre-signed upload URL is created which you will use to upload the file to its destination. You can add a new file to an application of your choice and store it in `GENERIC FILE STORAGE`.
 
 The required parameters are:
 
 * app slug
 * file name
 
-If you call the relevant [Bitrise API endpoint](https://api-docs.bitrise.io/) with the specified parameters, a new file object gets created.
-
 Example `curl` request:
 
-    curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/provisioning-profiles' -d '{"upload_file_name":"sample.provisionprofile","upload_file_size":2047}'
+    curl -X POST "https://api.bitrise.io/v0.1/apps/583806e34b4ff0ff/generic-project-files" -H "accept: application/json" -H "Authorization: 0FgS4dsnxG9sYWp3xh9aLkbUz7BC01ZYJRj3RuhDWssadW7NuqbMhobvIWzk76dxrj6md4AXK16pfwj-i6A-uA" -H "Content-Type: application/json" -d "{ \"upload_file_name\": \"Test-File\", \"upload_file_size\": 4865, \"user_env_key\": \"Test-File\"}"
 
 As you can see from the example response below, the file name, its size, slug and pre-signed upload url are retrieved (along with some attributes that you can modify). This pre-signed upload url is a temporary link which you will use to upload the file to its destination.
 
