@@ -5,8 +5,4 @@ date: 2019-04-02 07:09:34 +0000
 published: false
 
 ---
-Remote access
-
-Rebuild with remote access for debugging purposes. 
-
-Logging in to Mac vs Logging in to Linux VMs
+Remote access allows users to connect to their build's virtual machines via SSH or a screenshare app. 
