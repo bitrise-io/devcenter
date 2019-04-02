@@ -7,11 +7,9 @@ published: false
 ---
 １つまたは２つ以上のイベントにwebhookの登録をする際（例：`Code Push` や `Pull Request`イベント）、あなたのソースコードホスティングサービスはwebhookを関連したイベントが発生する度に呼び出します。
 
-On [bitrise.io](https://www.bitrise.io) these webhooks calls are called _triggers_, and can be mapped to different `Workflows`, or not mapped at all. If you don't map a trigger to any workflow, then [bitrise.io](https://www.bitrise.io) won't start a build. If you map it to a workflow, then a build will be started with the selected workflow.
+[bitrise.io](https://www.bitrise.io)ではwebhookを呼び出すことをtriggers（トリガー）と呼んでおり、異なる`Workflows` へマップされたりされなかったりします。いかなるワークフローへのマップを望まない場合、[bitrise.io](https://www.bitrise.io)はビルドを開始しません。ワークフローへトリガーをマップすれば、ビルドは選択されたワークフロー上で開始されます。
 
-[bitrise.io](https://www.bitrise.io)ではwebhookを呼び出すことをtriggers（トリガー）と呼んでおり、異なる`Workflows` へマップされたりされなかったりします。いかなるワークフローへのマップを望まない場合、bitrise.ioはビルドを開始しません。ワークフローへトリガーをマップすれば、ビルドは選択されたワークフロー上で開始されます。
-
-In the following examples, we'll use a very simple Bitrise configuration (`bitrise.yml`), which does nothing else just prints the selected workflow's ID:　以下の例では、シンプルなBitrise構成（選択されたワークフローIDがプリントされた\[`bitrise.yml`\]）を使います。
+以下の例では、選択されたワークフローIDだけが表示された非常にシンプルなBitriseの構成（`bitrise.yml`）を使用します：
 
     ---
     format_version: 1.3.0
@@ -33,72 +31,44 @@ In the following examples, we'll use a very simple Bitrise configuration (`bitri
                 #!/bin/bash
                 echo "$BITRISE_TRIGGERED_WORKFLOW_ID"
 
-{% include message_box.html type="info" title="`bitrise.yml`とは何ですか。" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa). `bitrise.yml`はあなたのアプリの構成の代表の一つです。workflow editorにて、ビジュアルウェブUIを使った編集も可能ですが、いつでも`bitrise.yml`モード（workflow editorの左側）に切り替えてYAMLフォーマットの構成を見ることができます。同様にYAMLフォーマットでの編集も可能です。ビジュアルウェブUIかYAML(`bitrise.io`)のどちらかを選んでください。いつでも変更が可能です。（ウェブUIからYAMLに帰る場合、`bitrise.yml`にすぐに反映されます。逆も然りです。）"%}
+{% include message_box.html type="info" title="`bitrise.yml`とは何ですか。" content=" `bitrise.yml`はあなたのアプリの構成を表します。workflow editorでは、ウェブUI経由のビジュアル的方法を使った編集も可能ですが、いつでも`bitrise.yml`モード（workflow editorの左側）に切り替えてYAMLフォーマットの構成を確認することができます。同様にYAMLフォーマットでの編集も可能です。ビジュアルウェブUIかYAML(`bitrise.yml`)のどちらかを選んでください。いつでも変更が可能です。（ウェブUIからYAMLに切り替える場合、すぐに`bitrise.yml`に反映されます。逆も同じです。）"%}
 
-The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: "*"`), Tag Push (`tag: "*"`) and for every Pull Request (`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`).
+上記の例では、`bitrise.yml`はコードプッシュ毎（`push_branch: "*"`）、タグプッシュ（`tag: "*"`）、プルリクエスト毎（`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`）に`primary` ブランチを選択します。
 
-上記の`bitrise.yml`の例では、コードプッシュ（`pushbranch: "*"`）、タグプッシュ（`tag: "*"`）、プルリクエスト毎に`primary` ブランチを選択します。
-
-_If you remove the pull request item_ from the `trigger_map` list, then no pull request will trigger a build anymore. Example:
-
-`trigger_map`リストからプルリクエストアイテムを削除する場合、プルリクエストがビルドをトリガーする事はありません。例：
+`trigger_map`リストから_プルリクエスト項目を削除する場合_、プルリクエストがビルドをトリガーする事はなくなります。例：
 
     trigger_map:
     - push_branch: "*"
       workflow: primary
 
-This configuration will start a build with the `primary` workflow for every code push, but for nothing else (for example not for pull requests).
-
-この構成は`primary`ワークフローを使ってコードプッシュ毎にビルドが開始されます（それ以外（プルリクエストなど）は何も起こることはありません）。
-
-## Components of the `trigger_map`
+この構成は`primary`ワークフローを使ってコードプッシュ毎にビルドが開始されますが、それ以外（プルリクエストなど）では何も起こりません。
 
 ## `trigger_map`の構成要素
 
-A `trigger_map` is a _list of filters_, and the `workflow` the given filters should select in case of a matching trigger.
+ `trigger_map` というのは、_フィルターのリスト_を表しており、一定のフィルターの`workflow`がマッチするトリガーである場合選択されます。
 
-`trigger_map`は_list of filters (フィルターのリスト）_であり、与えられたフィルターの`workflow`が一致するトリガーの場合選択します。
+**少なくとも１つ以上のコンディションが全てのフィルター項目の中に含まれていなければなりません！**
 
-**Every filter item has to include at least one condition!**
+これは`workflow`と明記されただけの項目を持つことができないということであり、少なくとも１つのフィルター（`push_branch` / `pull_request_source_branch` / `pull_request_target_branch` / `tag`）が明記されていなければなりません！
 
-少なくとも１つのコンディションがフィルターアイテムの中に含まれていなければなりません。
+### 利用可能なフィルター：
 
-This means that you can't have an item which only specifies the `workflow`, at least one filter (`push_branch` / `pull_request_source_branch` / `pull_request_target_branch` / `tag`) has to be specified!
+* `push_branch` : コードプッシュイベントの"branch"パラメータの組み合わせ
+* `pull_request_source_branch` : プルリクエストイベントの"source branch"パラメータ（プルリクエストが開始されたブランチ）の組み合わせ
+* `pull_request_target_branch` : プルリクエストイベントの"target branch" パラメータ（プルリクエストが**マージされる**ブランチ）の組み合わせ
+* `tag` : タグプッシュイベントの"tag" （名前）パラメータの組み合わせ
+* `pattern` : **非推奨**　ー　このフィルタは `is_pull_request_allowed`との併用で、コードプッシュとプルリクエストイベントの両方で使われていました。現在このフィルタは、新しいフィルタがイベントマッピングにおいてより制御されてるので今は非推奨となっております。
 
-これは`workflow`と明記されただけの項目を持つことができないということであり、少なくとも１つのフィルター（）が明記されていなければなりません。
-
-### The available filters:　利用可能なフィルター：
-
-* `push_branch` : A filter which is matched against Code Push events' "branch" parameter　コードプッシュイベントの"branch"パラメータの組み合わせ
-* `pull_request_source_branch` : A filter which is matched against Pull Request events' "source branch" parameter (the branch the pull request was started from)
-
-  プルリクエストイベント"source branch"パラメータ（プルリクエストが開始されたブランチ）の組み合わせ
-* `pull_request_target_branch` : A filter which is matched against Pull Request events' "target branch" parameter - the branch the pull request will be **merged into**
-
-  プルリクエストイベント"target branch" パラメータ（プルリクエストが併合されるブランチ）の組み合わせ
-* `tag` : A filter which is matched against Tag Push events' "tag" (name) parameter
-
-  タグプッシュイベント"tag" (name) パラメータの組み合わせ
-* `pattern` : **DEPRECATED** - this filter was used for both code push and pull request events, in combination with `is_pull_request_allowed`. This filter is now deprecated, as the new filters allow better control over event mapping.
-
-  非推奨　ー　このフィルタは\`\`との併用で、コードプッシュとプルリクエストイベントの両方で使われていました。現在このフィルタは、新しいフィルタがイベントマッピングにおいてより制御されるので今は非推奨となっております。
-
-If you define multiple filters in a single item then **all filters have to match** in order to select that item's workflow. For example:
-
-単一項目内で複数のフィルタを定義する場合、その項目のワークフローを選択するために全てのフィルタが組み合わさっていないといけません。例えば：
+単一項目内で複数のフィルタを定義する場合、その項目のワークフローを選択するために**全てのフィルタがマッチされていないといけません**。例：
 
     trigger_map:
     - pull_request_target_branch: "master"
       pull_request_source_branch: "develop"
       workflow: primary
 
-will only select the `primary` workflow if the pull request's source branch is `develop` **AND** the target branch is `master`.
-
 これはプルリクエストのソースブランチが`develop`で**且つ**ターゲットブランチが`master`である場合、`primary`ワークフローのみを選択します。
 
-If you want to specify filters which should be treated separately, for example, to select `primary` for pull requests where the source is `develop`, as well as select for the ones which target `master`:
-
-別々に扱われるフィルターを明記したい場合、例えば、プルリクエストにそのソースが`develop`にある`primary`を選ぶか、`master`をターゲットするプルリクエストを選びます。
+別々に処理されなければならないフィルターを明記したい場合、（例）ソースが`develop`であるプルリクエストでは`primary`を選ぶか、同時に`master`をターゲットするプルリクエストを選びます：
 
     trigger_map:
     - pull_request_target_branch: "master"
@@ -106,47 +76,31 @@ If you want to specify filters which should be treated separately, for example, 
     - pull_request_source_branch: "develop"
       workflow: primary
 
-One last note, which is hopefully not surprising after the previous example: you can't mix and match `push_branch`, `tag` and the `pull_request_..` filters **in the same item**. This would effectively mean that the workflow should be selected if the event is a Code Push and a Pull Request (or Tag Push) event **at the same time**. This is simply not possible, source code hosting services send separate webhooks for Pull Request (pre-merge state), Tags and for Code Push events. _A single webhook event will never be Code Push, Tag Push and Pull Request at the same time_, a single webhook is always related to only one type (Code Push, Tag Push or Pull Request).
+最後に、**同一項目内において**`push_branch`_、_`tag`、`pull_request_..`フィルタを混合させたり、マッチしたりすることはできません。これは事実上、イベントが**同時の**コードプッシュとプルリクエスト（もしくはタグプッシュ）イベントである場合、そのワークフローが選択する必要があることを表します。ソースコードホスティングサービスがプルリクエスト（プリマージ状態）、タグ、そしてコードプッシュイベントで別々のwebhookに送信することはできません。単一のwebhookイベントではコードプッシュ、タグプッシュ、プルリクエストを同時に行うことはできません。一つのwebhookでは常に一種類のみ（コードプッシュ、タグプッシュ、もしくはプルリクエスト）が関連付けられます。
 
-最後に、同一項目内において`push``_branch_`_、_`_tag_`、`pull_reques``_.. _`フィルタを混合させたり、合わせたりすることはできません。_イベントが同時にコードプッシュとプルリクエスト（もしくはタグプッシュ）イベントである場合、そのワークフローが選択されていなくてはならないという意味です。_ソースコードホスティングサービスがプルリクエスト（プリマージ状態）、タグ、そしてコードプッシュイベントのために別々のwebhookに送信することはできません。一つのwebhookイベントではコードプッシュ、タグプッシュ、プルリクエストを同時に行うことはできません。一つのwebhookでは常に一種類のみ（コードプッシュ、タグプッシュ、もしくはプルリクエスト）が関連付けられます。
+## 単一トリガー = 単一ビルド
 
-## One trigger = one build
+トリガー一つにつき、単一のワークフローのみを選ぶことができ、一つのビルドのみを開始することができます。**トリガーにマッチする最初の項目がビルドのワークフローを選択します！**
 
-One trigger can only select a single workflow / can only start a single build. **The first item which matches the trigger will select the workflow for the build!**
+**２つ以上のワークフローを走らせたい場合**、互いに[ワークフローのチェーニング](/bitrise-cli/workflows/#chaining-workflows-and-reusing-workflows)を行うことができます。チェーンされたワークフローは並行して走ることはありませんが、ワークフローをチェーンすれば全てのワークフローが実行されます。
 
-トリガー一つにつき、単一のワークフローを選ぶことができ、一つのビルドを開始することができます。トリガーにマッチする最初の項目がビルドのワークフローを選択します！
+**項目の順番**にもお気をつけください： `_push_branch: "*"_` 項目の**後**に`push_branch: mast` を明記した場合、`push_branch: master` は選択されることはありません。コードプッシュイベント毎に `push_branch: "*"`が始めにマッチし、**トリガーにマッチする最初の項目はビルドのワークフローを選択します**！
 
-**If you want to run more than one workflow**, you can [Chaining workflows](/bitrise-cli/workflows/#chaining-workflows-and-reusing-workflows) after each other. _The workflows chained this way won't run in parallel_, but the full chain of workflows will be executed, in the order you chain them.
+## 単一ブランチのみのビルド方法
 
-２つ以上のワークフローで走らせたい場合、互いに[ワークフローのチェーニング](/bitrise-cli/workflows/#chaining-workflows-and-reusing-workflows)を行うことができます。チェーンされたワークフローは並行して走ることはありませんが、ワークフローをチェーンすれば全てのワークフローが実行されます。
+単一ブランチのみのビルドをコードプッシュ毎に行いたい（それ以外に何も行わない）場合、ほかのどのワークフローへのマッピングを行わない`trigger_map`（ビルドを行いたいブランチだけ）を明記してください。
 
-**The order of the items** also matter: if you'd specify a `push_branch: mast` _item **after** a_ `_push_branch: "*"_` item, the `push_branch: master` _would never be selected_ as every code push event would match `push_branch: "*"` first, and **the first item which matches the trigger will select the workflow for the build!**
-
-項目の順番にもお気をつけください：\~項目の後に〜を明記した場合、`push_branch: master` は選択されることはありません。コードプッシュイベント毎に \~が最初にマッチし、トリガーにマッチする最初の項目がビルドのワークフローを選択します！
-
-## How to build only a single branch　単一ブランチのみのビルドする方法
-
-If you want to build only a single branch, for every code push, but for nothing else (no push to any other branch should trigger a build, nor any pull request or tag), then all you have to do is to specify a `trigger_map` which does not map anything else to any workflow, only the branch you want to build.
-
-単一ブランチのみのビルドをコードプッシュ毎に行いたい場合（）、ほかのどのワークフローへのマッピングをしない`trigger_map`を明記してください。
-
-For example, if you only want to build the `master` branch on code push:
-
-例えば、コードプッシュをするとき`master`をビルドしたい場合：
+例えば、コードプッシュで`master`ブランチのみをビルドしたい場合：
 
     trigger_map:
     - push_branch: master
       workflow: primary
 
-Or if you only want to build `feature/` branches:
-
-`feature/`ブランチのみのビルドを行う場合：
+`feature/`ブランチのみのビルドを行いたい場合：
 
     trigger_map:
     - push_branch: feature/*
       workflow: primary
-
-Or the two together:
 
 ２つ同時にする場合：
 
@@ -156,13 +110,9 @@ Or the two together:
     - push_branch: feature/*
       workflow: primary
 
-This configuration will start a build for every code push which happens on either `master` or on a `feature/` branch, and will use the same workflow for both (`primary`).
+この構成は`master`か`feature/`ブランチのどちらかで発生するコードプッシュ毎にビルドが開始され、両方で同じワークフロー(`primary`)を使用します。
 
-この構成は`master`か`feature/`ブランチのどちらかで発生するコードプッシュ毎にビルドが開始され、両方の(`primary`)において同じワークフローを使用します。
-
-If you want to use a different workflow for your `master` branch, then all you have to do is to change the `workflow:` for that trigger map item:
-
-ご自身の`master`ブランチで異なるワークフローを使用したい場合、トリガーマップ項目の`workflow:`を変更してください。
+ご自身の`master`ブランチにおいて異なるワークフローを使用したい場合、トリガーマップ項目の`workflow:`を変更してください。
 
     trigger_map:
     - push_branch: master
@@ -170,19 +120,13 @@ If you want to use a different workflow for your `master` branch, then all you h
     - push_branch: feature/*
       workflow: primary
 
-This configuration will use the workflow `deploy` for every code push on `master`, and the workflow `primary` for every code push on `feature/` branches, and **will not start a build for anything else**.
+この構成では、`master`上においてコードプッシュ毎にワークフロー`deploy`を使用し、`feature/`ブランチ上のコードプッシュ毎にワークフロー`primary`を使用します。**他のビルドは開始されません。**
 
-この構成では、`master`上においてコードプッシュ毎にワークフロー`deploy`を使用し、`feature/`ブランチ上のコードプッシュ毎にワークフロー`primary`を使用します。他の目的でビルドが開始されることはありません。
+## 簡単で２つのワークフローのCI/CDセットアップ
 
-## A very simple, two-workflow CI/CD setup
+ベースとなるCI/CDセットアップは２つのワークフローを伴います。一つがintegration tests（インテグレーションテスト）で、もう一方はdistribution（配布）になります。
 
-A base CI/CD setup involves two workflows: one for integration tests, and one for distribution.
-
-ベースとなるCI/CDセットアップは２つのワークフローが関連付けられます。一つがインテグレーションテストで、もう一方は配布となります。
-
-If you have a workflow `primary` for doing the integration tests, and `deploy` to do the deployment / distribution, and you want to run the integration test for code pushes and pull requests on every branch except the `master` branch, which should instead use the `deploy` workflow:
-
-インテグレーションテストを行うワークフロー`primary` 、デプロイ/配布を行うワークフロー`deploy`をお持ちで、`master`ブランチ以外でのブランチ毎でコードプッシュやプルリクエストのインテグレーションテストを行いたい場合（`deploy`ワークフローの代わり）：
+インテグレーションテストを行うワークフロー`primary` 、デプロイ/配布を行うワークフロー`deploy`をお持ちで（`deploy`ワークフローを使用せずに）、`master`ブランチ以外でのでコードプッシュやプルリクエストのインテグレーションテストをブランチ毎で行いたい場合：
 
     trigger_map:
     - push_branch: master
@@ -192,41 +136,27 @@ If you have a workflow `primary` for doing the integration tests, and `deploy` t
     - pull_request_target_branch: "*"
       workflow: primary
 
-{% include message_box.html type="warning" title="Order of the items matter!項目の順番にご注意ください" content=" When `bitrise` receives a webhook event (any kind), it'll match it against the app's `trigger_map`. **The first item it matches will select the workflow for the build!**
+{% include message_box.html type="warning" title="項目の順番にご注意ください！" content=" `bitrise`がwebhookイベント（どんな種類でも）を受理する時、アプリの`trigger_map`に対してマッチします。**マッチする最初の項目がビルドのワークフローを選択します！**
 
-`bitrise`がwebhookイベントを受け取った時、アプリの`trigger_map`に対してマッチします。マッチする最初の項目がビルドのワークフローを選択します！
+これは`push_branch: \"*\"` 項目の**後**に`push_branch: master`を明記することで、コードプッシュイベント毎に始めに `push_branch: \"*\"`  がマッチするので、`master`が選択されることはありません。"%}
 
-This means that if you'd specify the `push_branch: master` **after** the `push_branch: \"*\"` item, `master` would never be selected as every code push event would match `push_branch: \"*\"` first!
+## 同一レポジトリからプルリクエストによる２つのビルドを開始しないでください
 
-これは〜項目の後に`push_branch: master`を明記することで、コードプッシュイベント毎にまず`~` がマッチするので、`master`が選択されることはありません。"%}
+同じレポジトリ（forkからではなく、レポジトリのブランチから）からプルリクエストを開始するとき、**ソースコードホスティングサービスは２つのwebhook**（コードプッシュとプルリクエスト）**を送信します**。
 
-## Don't start two builds for pull requests from the same repository　同一レポジトリからプルリクエストによる２つのビルドを開始しないでください。
+{% include message_box.html type="important" title="Pull Request buildプルリクエストのビルド" content=" 両方のビルドが同じように思えますが、本当はそうではありません。ビルド毎のコードプッシュイベントでは、マージなどすることはなく、ブランチのコードをビルドします。ブランチからチェックアウトするときに、アナラがお持ちの全く同じ状態のコードをビルドします。一方で、プルリクエストのビルドは\\”プリマージ\\”状態のコードのビルドも行います。この\\”プリマージ\\”状態とは、コードの最終的なマージされたバージョンではなく、プルリクエストをマージした**後**に表示されるであろうコードのクローンのようなものを表します。"%}
 
-When you start a Pull Request from the same repository (not from a fork, just from a branch of the repository), **the source code hosting service will send two webhooks**, one for the code push and one for the pull request!
+プルリクエストにおいて、両方もしくは一つだけのビルドを行う場合はプロジェクトの必要条件次第となりますが、`bitrise`を使用すると、それを行うかどうかを決めることができます。
 
-同一レポジトリ（forkからではなく、レポジトリのブランチから）からプルリクエストを開始するとき、**ソースコードホスティングサービスは２つのwebhook**（コードプッシュとプルリクエスト）**を送信します**。
+{% include message_box.html type="note" title="プルリクエストのマージはコードプッシュのことです。" content=" ソースコードホスティングサービスはコードプッシュイベントとしてイベント\\”マージ\\”を処理します。例えば、`feature/a`から`master`へプルリクエストをマージする場合、PRをマージすると`master`へのコードプッシュが生成されます。"%}
 
-{% include message_box.html type="important" title="Pull Request buildプルリクエストのビルド" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a /"pre-merged/" state of the code. This /"pre-merged/" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
-
-両方のビルドが同じように見えますが、本当はそうではありません。ビルド毎のコードプッシュイベントでは、マージしたりすることなく、ブランチのコードをビルドします。ブランチからチェックアウトするときに持っている全く同じ状態のコードをビルドします。一方で、プルリクエストビルドは/”プリマージ/”状態のコードのビルドも行います。この/”プリマージ/”状態はコードの最終的なマージされたバージョンではなく、プルリクエストのマージ**後**に表示されるコードを表したクローンのようなものです。"%}
-
-Whether you want to build both or just one of these in case of a pull request is up to you and depends on your project's requirements, but with `bitrise` you can decide whether you want it or not.
-
-プルリクエストで両方もしくは一つだけのビルドを行う場合はプロジェクトの必要条件次第ですが、`bitrise`があれば、それを行うかどうかを決めることができます。
-
-{% include message_box.html type="note" title="Pull Request merge is a Code Pushプルリクエストマージはコードプッシュ" content=" Source code hosting services treat the event of "merge" as a code push event. For example if you merge a Pull Request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`. ソースコードホスティングサービスはコードプッシュイベントとしてイベント”マージ”とみなします。例えば、`feature/a`から`master`へプルリクエストをマージしたり、PRをマージするときPRは`master`へコードプッシュを生成します。"%}
-
-An example to build only the pull request ("pre-merged") events/state, in addition to deploying `master`:
-
-`master`をデプロイすることに加え、プルリクエスト（”プリマージ”）イベント/状態のみのビルドを行う一例：
+`master`をデプロイすることに加えて、プルリクエスト（”プリマージされた”）イベント/状態のみのビルドを行う一例：
 
     trigger_map:
     - push_branch: master
       workflow: deploy
     - pull_request_target_branch: "*"
       workflow: primary
-
-or if you don't want to start a build for pull requests, only for code push events:
 
 プルリクエストのビルドを開始せずにコードプッシュイベントのみを開始する際の一例：
 
@@ -236,40 +166,25 @@ or if you don't want to start a build for pull requests, only for code push even
     - push_branch: "*"
       workflow: primary
 
-## Three workflows: test, deploy to staging and deploy to production　３つのワークフロー：テスト、ステージングのデプロイ、製作のデプロイ
+## ３つのワークフロー：テスト、stagingのデプロイ、productionのデプロイ
 
-Another common CI/CD pattern is to have three workflows:
+他の共通のCI/CDパターンには３つのワークフローが存在します：
 
-他の一般的なCI/CDパターンには３つのワークフローが存在します。
-
-* A Test workflow, which will run for every pull request, every code push on `feature/` branches etc., to test whether the test can be integrated into a release (branch)
-* プルリクエスト毎に走るテストワークフロー、`feature/`ブランチ上などでのコードプッシュ毎に、そのテストはリリースブランチへ統合されるかどうかをテストします。
-* A Staging deployment workflow, to deploy the app/code to an internal/testing system. Examples:
-* Staging Deployment Workflowは内部/テストシステムへアプリ/コードのデプロイを行います。例えば：
-  * In case of an iOS app this can be, for example, an Ad Hoc signed IPA deployed to HockeyApp, where your tester team can download and test it, or a deploy to iTunes Connect / TestFlight for internal testing.
-  * In case of an Android app this can be a deploy to Google Play to a "beta" track.
-  * In case of a server code this can be a deploy to, for example, a staging Heroku server.
-  * iOSアプリの場合、（例）IPA署名済みのAd Hocがテスターチームがドウンロードしたりテストを行うHockeyAppへデプロイされる、もしくは、内部テスト用のiTunes Connect/Testflightへのデプロイです。
-  * Androidアプリの場合、Google Playから"beta"トラックへのデプロイです。
-  * サーバーコードの場合、（例）Herokuサーバーのステージング
-* A Production deployment workflow, to deploy the app/code into production. Examples:
+* プルリクエスト毎に走るTest workflow（テストワークフロー）は`feature/`ブランチ上などでのコードプッシュ毎にそのテストがリリース（ブランチ）へ統合されるかどうかをテストします。
+* Staging Deployment Workflowは内部/テストシステムへアプリ/コードのデプロイを行います。例：
+  * iOSアプリの場合の例としては、IPAへ署名したAd Hocが、テスターチームがダウンロードしたりテストを行うHockeyAppへデプロイされる、もしくは、内部テスト用のiTunes Connect/Testflightへのデプロイとなります。
+  * Androidアプリの場合、Google Playから"beta"トラックへのデプロイとなります。
+  * サーバーコードの場合の例としては、Staging Herokuサーバーへのデプロイとなります。
 * Production deployment workflowはアプリ/コードをProductionへデプロイします。
-  * In case of an iOS app this can be an App Store signed IPA deployed to iTunes Connect/TestFlight, enabled for "external testing".
-  * In case of an Android app this can be a deploy to Google Play as a public update of the app.
-  * In case of a server code this can be a deploy to, for example, the production Heroku server.
-  * iOSアプリの場合、IPA署名済みのApp StoreがiTunes Connect/TestFlightへデプロイされ、”外部テスト”で有効です。
-  * Androidアプリの場合、Google Playへのアプリの公式アップデートとしてのデプロイです。
-  * サーバーコードの場合、例えば、production Heroku サーバーへのデプロイです。
+  * iOSアプリの場合、IPAへ署名したApp StoreがiTunes Connect/TestFlightへデプロイされ、”外部テスト”で有効化されます。
+  * Androidアプリの場合、Google Playへのアプリの公式アップデートとしてのデプロイとなります。
+  * サーバーコードの場合の例としては、production Heroku サーバーへのデプロイとなります。
 
-So, we have three workflows (`primary` (test), `deploy-to-staging` and `deploy-to-production`) and we'll specify three triggers, to select the right workflow for the right trigger.
+`primary`（テスト）、`deploy-to-staging`、`deploy-to-production`の３つのワークフローがあることがわかりました。３つのトリガーを明記することで正しいトリガーに正しいワークフローを選択することができます。
 
-There are two similar approaches, depending whether you prefer tags of branches for production deployment:
+２つの類似したアプローチもありますが、これはご自身が選ぶproduction デプロイのブランチのタグ次第となります。
 
-`primary`（テスト）、`deploy-to-staging`、`deploy-to-production`の３つのワークフローがあることがわかりました。３つのトリガーを明記することで正しいワークフローに正しいトリガーを選択することができます。
-
-２つの類似したアプローチもありますが、これはご自身のproduction デプロイのブランチのタグ
-
-### Using Tags to trigger the production deployment　productionデプロイをトリガーするタグの使用
+### productionデプロイをトリガーするタグの使用
 
     trigger_map:
     - tag: v*.*.*
@@ -281,18 +196,13 @@ There are two similar approaches, depending whether you prefer tags of branches 
     - pull_request_target_branch: "*"
       workflow: primary
 
-This trigger map configuration will trigger a build:
-
 このトリガーマップ構成はビルドをトリガーします。
 
-* with the `deploy-to-production` workflow if a new tag (with the format `v*.*.*`,  `v1.0.0`) is pushed
-* with the `deploy-to-staging` workflow if a code push happens on the `master` branch (for example, a pull request is merged into the `master` branch)
-* with the `primary` workflow for any other branch and for pull requests
-* 新しいタグ（）がプッシュされた場合の`deploy-to-production`ワークフローがある時
-* コードプッシュが`master`ブランチ上で発生する場合の`deploy-to-staging`ワークフローがある時
-* ブランチ全般・プルリクエストの`primary`ワークフローがある時
+* 新しいタグ（フォーマット `v*.*.*`,  `v1.0.0`を使用）がプッシュされた場合の`deploy-to-production`ワークフローを使用するとき
+* コードプッシュが`master`ブランチ上で発生する場合の`deploy-to-staging`ワークフローを使用するとき
+* 他のブランチ全般・プルリクエストの`primary`ワークフローを使用するとき
 
-### Using a Branch to trigger the production deployment　productionデプロイをトリガーするブランチの使用
+### productionデプロイをトリガーするブランチの使用
 
     trigger_map:
     - push_branch: master
@@ -304,34 +214,23 @@ This trigger map configuration will trigger a build:
     - pull_request_target_branch: "*"
       workflow: primary
 
-This trigger map configuration will trigger a build:
-
 このトリガーマップ構成はビルドをトリガーします：
 
-* with the `deploy-to-production` workflow if a code push happens on the `master` branch (for example, a git flow release branch merged into `master`)
-* with the `deploy-to-staging` workflow if a code push happens on the `develop` branch (for example, a pull request is merged into the `develop` branch)
-* with the `primary` workflow for any other branch and for pull requests
-* `master`ブランチ上でコードプッシュが発生する場合の`deploy-to-production`がある時（例：`master`へgit flow リリースブランチをマージしたとき）
-* コードプッシュが`develop`ブランチ上で発生する場合の`deploy-to-staging`がある時（例：プルリクエストが`develop`ブランチへマージされる時）
-* ほかのブランチ全般・プルリクエストの`primary`ワークフローがある時
+* `master`ブランチ上でコードプッシュが発生する場合の`deploy-to-production`を使用するとき（例：`master`へgit flow リリースブランチをマージしたとき）
+* コードプッシュが`develop`ブランチ上で発生する場合の`deploy-to-staging`を使用するとき（例：プルリクエストが`develop`ブランチへマージされる時）
+* 他のブランチ全般・プルリクエストの`primary`ワークフローを使用するとき
 
-## How to build only pull requests　プルリクエストのみでビルドを行う方法
+## プルリクエストのみでビルドを行う方法
 
-If all you want is to run integration tests for pull requests, and you don't want to do anything else, then you can use a trigger map configuration like this:　
-
-プルリクエストのインテグレーションテストを走らせたい場合、そしてそれ以外に何もしたくない場合、以下のようなトリガーマップ構成を使用できます：
+プルリクエストのインテグレーションテストだけを走らせたい場合、以下のようなトリガーマップ構成を使用できます：
 
     trigger_map:
     - pull_request_target_branch: "*"
       workflow: primary
 
-This will select the `primary` workflow for every and any pull request, and will not start a build for anything else.
-
-If you'd only want to build pull requests which are targeted to be merged into `master`, the configuration would look like this:
-
 これによりプルリクエスト毎に`primary`ワークフローが選択され、それ以外のビルドは開始されません。
 
-`master`へマージされるように仕向けられたプルリクエストのビルドのみを行いたい場合、構成は以下のようになります。
+`master`へマージされるようにターゲットされたプルリクエストのビルドのみを行いたい場合、構成は以下のようになります。
 
     trigger_map:
     - pull_request_target_branch: master
