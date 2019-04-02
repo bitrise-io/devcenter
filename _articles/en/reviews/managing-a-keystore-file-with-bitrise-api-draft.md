@@ -13,11 +13,9 @@ You can find an interactive cURL call configurator by clicking on the `Start/Sch
 **Note that this call uses the deprecated** `app.bitrise.io` **URL and the app’s build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.**
 "%}
 
-## Creating pre-signed URL for uploading an Android keystore file
+## Creating and uploading a keystore file 
 
-The first step is to create a pre-assigned "upload" URL on which you will upload your keystore file.
-
-The required parameters are:
+The first step is to create a pre-signed "upload" URL. This URL is a temporary link which you will use to upload the keystore file to its destination.The required parameters are:
 
 * app slug
 * Android keystore file parameters:
@@ -27,27 +25,76 @@ The required parameters are:
   * name of your file
   * file size of your keystore
 
-Example `curl` request > presigned url
+Example `curl` request
 
       curl -X POST "https://api.bitrise.io/v0.1/apps/APP-SLUG/android-keystore-files" -H "accept: application/json" -H "Authorization: " -H "Content-Type: application/json" -d "{ "alias": "", "password": "", "private_key_password": "", "upload_file_name": "", "upload_file_size": }"
 
-If you fail to provide the passwords, you will get a 500 error code.
+If you fail to provide the correct passwords, you will get a 500 error code.
 
-Upload your keystore file to the pre-assigned upload URL.
+Example response
 
-    curl -T'
+    {
+      "data": {
+        "download_url": "string",
+        "exposed_meta_datastore": "string",
+        "is_expose": true,
+        "is_protected": true,
+        "processed": true,
+        "slug": "string",
+        "upload_file_name": "string",
+        "upload_file_size": 0,
+        "upload_url": "string",
+        "user_env_key": "string"
+      }
+    }
 
-## Confirming the Android keystore file upload
+As you can see from the example response above, the file name, its size, slug and pre-signed upload url are retrieved (along with some attributes that you can modify).
 
-To finish the uploading process, you have to confirm the upload with another `POST` request:
+**download url?**
+
+Using the generated pre-signed upload URL and the keystore file name, upload your file to AWS with a simple `curl` request.
+
+    curl -T' keystore.file 'upload url'
+
+## Cofirming the keystore file upload
+
+To complete the uploading process, you have to confirm the upload with another `POST` request:
 
 The required parameters are:
 
 * app slug
-* generic project file slug
+* **generic project file slug**
 
 Example `curl` request:
 
     curl -X POST -H 'Authorization: THE-ACCESS-TOKEN'/v0.1/apps/{app-slug}/android-keystore-files/{generic-project-file-slug}/uploaded
 
 Now your keystore file is uploaded in the `ANDROID KEYSTORE FILE` section of the `Code Signing` tab.
+
+## Updating an uploaded keystore file
+
+You can perform minor updates to an uploaded keystore file with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `PATCH` method. If you've uploaded your file to [Bitrise](https://www.bitrise.io), you can visually check any changes to it on our `Code Signing` tab.
+
+The required parameters are:
+
+* app slug
+* keystore file slug
+
+For example, to make a **keystore file** **protected**, you can set the `is_protected` flag of your keystore file to `true`.
+
+    curl -X PATCH -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/keystore-file/KEYSTORE-FILE-SLUG -d '{"is_protected":true}'
+
+* _replacing with another one?_
+* _changing attributes? expose for pull requests, make it protected, delete, download_
+
+{% include message_box.html type="warning" title="Careful with those attributes!" content="
+
+In the case of iOS code signing files, you can set the `is_protected`, `is_exposed` and `processed` attributes of the document:
+
+* Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
+* When the value of `is_protected` is true, then the `is_expose` flag cannot be set to another value.
+* Once the `processed` flag is set to true, then its value cannot be changed anymore.
+
+  Violating these constraints the response will be Bad Request.
+
+  Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`. "%}
