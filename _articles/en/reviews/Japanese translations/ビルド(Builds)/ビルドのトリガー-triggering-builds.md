@@ -206,9 +206,9 @@ When you start a Pull Request from the same repository (not from a fork, just fr
 
 同一レポジトリ（forkからではなく、レポジトリのブランチから）からプルリクエストを開始するとき、**ソースコードホスティングサービスは２つのwebhook**（コードプッシュとプルリクエスト）**を送信します**。
 
-{% include message_box.html type="important" title="Pull Request buildプルリクエストのビルド" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a "pre-merged" state of the code. This "pre-merged" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
+{% include message_box.html type="important" title="Pull Request buildプルリクエストのビルド" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a /"pre-merged/" state of the code. This /"pre-merged/" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
 
-両方のビルドが同じように見えますが、本当はそうではありません。ビルド毎のコードプッシュイベントでは、マージしたりすることなく、ブランチのコードをビルドします。ブランチからチェックアウトするときに持っている全く同じ状態のコードをビルドします。一方で、プルリクエストビルドは”プリマージ”状態のコードのビルドも行います。この”プリマージ”状態はコードの最終的なマージされたバージョンではなく、プルリクエストのマージ**後**に表示されるコードを表したクローンのようなものです。"%}
+両方のビルドが同じように見えますが、本当はそうではありません。ビルド毎のコードプッシュイベントでは、マージしたりすることなく、ブランチのコードをビルドします。ブランチからチェックアウトするときに持っている全く同じ状態のコードをビルドします。一方で、プルリクエストビルドは/”プリマージ/”状態のコードのビルドも行います。この/”プリマージ/”状態はコードの最終的なマージされたバージョンではなく、プルリクエストのマージ**後**に表示されるコードを表したクローンのようなものです。"%}
 
 Whether you want to build both or just one of these in case of a pull request is up to you and depends on your project's requirements, but with `bitrise` you can decide whether you want it or not.
 
