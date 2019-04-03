@@ -5,14 +5,14 @@ date: 2019-03-14 15:45:40 +0000
 published: false
 
 ---
+## Adding a new app
+
 | Endpoints | Function |
 | --- | --- |
 | [POST /apps/register](https://api-docs.bitrise.io/#/app-setup/app-create) | Add a new app. |
 | [POST /apps/{app-slug}/register-ssh-key](https://api-docs.bitrise.io/#/app-setup/ssh-key-create) | Add an SSH-key to a specific app. |
 | [POST /apps/{app-slug}/finish](https://api-docs.bitrise.io/#/app-setup/app-finish) | Save the application at the end of the application add process. |
 | [POST /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/app-setup/app-config-create) | Upload a new bitrise.yml for your application |
-
-## Adding a new app
 
 There are three distinct steps to adding an app with the Bitrise API.
 
