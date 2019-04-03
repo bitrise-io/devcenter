@@ -58,12 +58,12 @@ By calling this endpoint, you replace the app's current `bitrise.yml` file. You 
 
 | Endpoints | Function |
 | --- | --- |
-| [GET /apps](https://api-docs.bitrise.io/#/application/app-list) | Add a new app. |
-| [GET /apps/{app-slug}](https://api-docs.bitrise.io/#/application/app-show) | Add an SSH-key to a specific app. |
-| [GET /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/application/app-config-datastore-show) | Save the application at the end of the application add process. |
-| [GET /apps/{app-slug}/branches](https://api-docs.bitrise.io/#/application/branch-list) | Upload a new bitrise.yml for your application |
-| [GET /organizations/{org-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-organization) | Upload a new bitrise.yml for your application |
-| [GET /users/{user-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-user) | Upload a new bitrise.yml for your application |
+| [GET /apps](https://api-docs.bitrise.io/#/application/app-list) | Get list of the apps. |
+| [GET /apps/{app-slug}](https://api-docs.bitrise.io/#/application/app-show) | Get a specific app. |
+| [GET /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/application/app-config-datastore-show) | Get the `bitrise.yml` of a specific app. |
+| [GET /apps/{app-slug}/branches](https://api-docs.bitrise.io/#/application/branch-list) | List the branches of an app's repository. |
+| [GET /organizations/{org-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-organization) | Get list of the apps for an organization. |
+| [GET /users/{user-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-user) | Get list of the apps for a user. |
 
 
 The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL:
