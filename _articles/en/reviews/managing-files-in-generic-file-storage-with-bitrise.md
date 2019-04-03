@@ -84,11 +84,11 @@ For example, to make the uploaded file protected, you can set the `is_protected`
 You can set the `is_protected`, `is_exposed` and `processed` attributes of the file you've uploaded:
 
     {
-      "exposed_meta_datastore": "string",
-      "is_expose": true,
-      "is_protected": true,
-      "processed": true,
-      "user_env_key": "string"
+      \"exposed_meta_datastore\": \"string\",
+      \"is_expose\": \"true\",
+      \"is_protected\": \"true\",
+      \"processed\": \"true\",
+      \"user_env_key\": \"string\"
     }
 
 * Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
