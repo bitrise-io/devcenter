@@ -5,6 +5,10 @@ date: 2019-03-14 15:45:40 +0000
 published: false
 
 ---
+Set up new apps on Bitrise with the API: add the app, generate SSH keys, and set up the app's initial configuration. 
+
+In addition, you can list all apps belonging, for example, to a single user or to a specific organization. 
+
 ## Adding a new app
 
 | Endpoints | Function |
@@ -40,18 +44,29 @@ You can also set environment variables, as well as immediately specify an organi
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/finish' -d '{"project_type":"ios","stack_id":"osx-vs4mac-stable","config":"default-ios-config","mode":"manual","envs":{"env1":"val1","env2":"val2"},"organization_slug":"e1ec3dea540bcf21"}'
 
-You're done! Your new app is ready: you can launch your first build!
+You're done! Your new app is ready.
+
+### Uploading a new bitrise.yml file
+
+The `bitrise.yml` file contains the configuration of your builds. You can modify the current one via the API by posting a full YAML configuration. The below example shows a basic `.yml` configuration.
+
+    curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/bitrise.yml' -d '{"app_config_datastore_yaml":"app:\n  envs:\n  - BITRISE_PROJECT_PATH: build.gradle\n    opts:\n      is_expand: false\ndefault_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git\nformat_version: 1.1.9"}'
+
+By calling this endpoint, you replace the app's current `bitrise.yml` file. You can, of course, modify this uploaded `bitrise.yml` either via the API or on the website itself.
 
 ## Managing an existing app
 
-With the API, you can:
+| Endpoints | Function |
+| --- | --- |
+| [GET /apps](https://api-docs.bitrise.io/#/application/app-list) | Add a new app. |
+| [GET /apps/{app-slug}](https://api-docs.bitrise.io/#/application/app-show) | Add an SSH-key to a specific app. |
+| [GET /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/application/app-config-datastore-show) | Save the application at the end of the application add process. |
+| [GET /apps/{app-slug}/branches](https://api-docs.bitrise.io/#/application/branch-list) | Upload a new bitrise.yml for your application |
+| [GET /organizations/{org-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-organization) | Upload a new bitrise.yml for your application |
+| [GET /users/{user-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-user) | Upload a new bitrise.yml for your application |
 
-* List all the apps that belong to the current authorized user.
-* Listing all the information about a specific app.
-* List apps belonging to a specified user account.
-* List all apps belonging to an organization account.
 
-The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL
+The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL:
 
     {
       "data": [
@@ -75,12 +90,4 @@ The response to any GET request regarding one or more applications will contain 
         },
         {
 
-You can also manage the app's `bitrise.yml` file: you can either download the application's current file or upload a new `bitrise.yml` file that will overwrite the old one.
-
-### Uploading a new bitrise.yml file
-
-The `bitrise.yml` file contains the configuration of your builds. You can modify the current one via the API by posting a full YAML configuration. The below example shows a basic `.yml` configuration.
-
-    curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/bitrise.yml' -d '{"app_config_datastore_yaml":"app:\n  envs:\n  - BITRISE_PROJECT_PATH: build.gradle\n    opts:\n      is_expand: false\ndefault_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git\nformat_version: 1.1.9"}'
-
-By calling this endpoint, you replace the app's current `bitrise.yml` file. You can, of course, modify this uploaded `bitrise.yml` either via the API or on the website itself.
+You can also download the existing bitrise.yml file of any app: the response will contain the full YAML configuration. 
