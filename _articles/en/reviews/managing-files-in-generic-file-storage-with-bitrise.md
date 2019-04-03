@@ -5,7 +5,7 @@ date: 2019-04-01 10:48:09 +0000
 published: false
 
 ---
-You can upload, delete, update, and list any files with the [relevant Bitrise API](https://api-docs.bitrise.io/) to the `GENERIC FILE STORAGE` section of our `Code Signing` tab. Should you need more information on generic file storage, check out our [guide](/getting-started/managing-files-on-bitrise/#uploading-files-to-use-in-your-build) on the UI representation.
+You can upload, delete, update, and list any project files with the [relevant Bitrise API](https://api-docs.bitrise.io/) to the `GENERIC FILE STORAGE` section of our `Code Signing` tab. Should you need more information on generic file storage, check out our [guide](/getting-started/managing-files-on-bitrise/#uploading-files-to-use-in-your-build) on the UI representation.
 
 ## Creating & uploading files to
 
