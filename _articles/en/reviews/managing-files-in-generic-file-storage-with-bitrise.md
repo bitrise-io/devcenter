@@ -149,7 +149,7 @@ Example curl request for provisioning profiles:
 
     curl -X GET -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files'
 
-**_Why adding the keystore one as well? thats a completely differerent field!!_**
+**_Why adding the keystore one as well? thats a completely differerent field!! keystore specific type of generic file, has specific fields in the ui._**
 
 Example response:
 
