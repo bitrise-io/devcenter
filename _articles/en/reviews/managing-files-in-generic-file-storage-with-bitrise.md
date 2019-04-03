@@ -96,17 +96,8 @@ For example, to make the uploaded file protected, you can set the `is_protected`
 
     curl -X PATCH -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-file/GENERIC-PROJECT-FILE-SLUG -d '{"is_protected":true}'
 
-Careful with those attributes!
-
+{% include message_box.html type="note" title="Careful with those attributes!" content="
 You can set the `is_protected`, `is_exposed` and `processed` attributes of the file you've uploaded:
-
-    {
-      "exposed_meta_datastore": "string",
-      "is_expose": "true",
-      "is_protected": "true",
-      "processed": "true",
-      "user_env_key": "string"
-    }
 
 * Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
 * When the value of `is_protected` is true, then the `is_expose` flag cannot be set to another value.
@@ -114,7 +105,7 @@ You can set the `is_protected`, `is_exposed` and `processed` attributes of the f
 
   Violating these constraints the response will be Bad Request.
 
-  Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`.
+  Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`. "%}
 
 ## Retrieving a specific file's data
 
