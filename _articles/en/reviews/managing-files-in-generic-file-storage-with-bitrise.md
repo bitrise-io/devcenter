@@ -25,10 +25,6 @@ The required parameters are:
 * app slug.
 * generic project file's metadata: upload file name, upload file size and the user env key (you can add any name to the user env key).
 
-{% include message_box.html type="note" title="Interactive cURL call configurator" content=" You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app’s [bitrise.io](https://www.bitrise.io/) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
-
-**Note that this call uses the deprecated** `app.bitrise.io` **URL and the app’s build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.**"%}
-
 Example `curl` request:
 
     curl -X POST "https://api.bitrise.io/v0.1/apps/583806e34b4ff0ff/generic-project-files" -H "accept: application/json" -H "Authorization: 0FgS4dsnxG9sYWp3xh9aLkbUz7BC01ZYJRj3RuhDWssadW7NuqbMhobvIWzk76dxrj6md4AXK16pfwj-i6A-uA" -H "Content-Type: application/json" -d "{ \"upload_file_name\": \"Test-File\", \"upload_file_size\": 4865, \"user_env_key\": \"Test-File\"}"
