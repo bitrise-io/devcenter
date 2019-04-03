@@ -21,17 +21,13 @@ Register the app by calling the `register` endpoint and setting all required par
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/register' -d '{"provider":"github","is_public":false,"repo_url":"git@github.com:api_demo/example-repository.git","type":"git","git_repo_slug":"example-repository","git_owner":"api_demo"}'
 
-Once done, set up the SSH keys you created so that Bitrise can clone your repository when running a build. You can also set whether you want to automatically register the public key at your git provider.
+Once done, call the `register-ssh-key` endpoint to set up the SSH keys you created so that Bitrise can clone your repository when running a build. You can also set whether you want to automatically register the public key at your git provider.
 
 ```bash
 curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-ssh-key' -d '{"auth_ssh_private_key":"your-private-ssh-key","auth_ssh_public_key":"your-public-ssh-key","is_register_key_into_provider_service":false}'
 ```
 
-Finish the app registration process by calling the `finish` endpoint. This endpoint allows you to configure your applications:
-
-* project type (for example, Android, iOS, or cordova)
-* the stack that will be used to run the builds
-* initial configuration settings
+Finish the app registration process by calling the `finish` endpoint. This endpoint allows you to configure your applications: set the project type, the stack on which the build will run, and the initial configuration settings. 
 
 You can also set environment variables, as well as immediately specify an organization that will be the owner of the application.
 
@@ -76,8 +72,8 @@ You can also manage the app's `bitrise.yml` file: you can either download the ap
 
 ### Uploading a new bitrise.yml file
 
-The `bitrise.yml` file contains the configuration of your builds. You can modify the current one via the API by posting a full yaml configuration:
+The `bitrise.yml` file contains the configuration of your builds. You can modify the current one via the API by posting a full YAML configuration. The below example shows a basic `.yml` configuration.
 
-    curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/bitrise.yml' -d '{"app_config_datastore_yaml":"app:\n  envs:\n  - BITRISE_PROJECT_PATH: sample-apps-osx-10-12.xcodeproj\n    opts:\n      is_expand: false\n  - BITRISE_SCHEME: sample-apps-osx-10-12\n    opts:\n      is_expand: false\ndefault_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git\nformat_version: 1.3.1\ntrigger_map:\n- push_branch: '*'\n  workflow: primary\n- pull_request_source_branch: '*'\n  workflow: primary\nworkflows:\n  deploy:\n    steps:\n    - activate-ssh-key@3.1.1:\n        run_if: '{{getenv \"SSH_RSA_PRIVATE_KEY\" | ne \"\"}}'\n    - git-clone@3.4.2: {}\n    - script@1.1.5:\n        title: Do anything with Script step\n    - certificate-and-profile-installer@1.8.4: {}\n    - xcode-test-mac:\n        inputs:\n        - project_path: $BITRISE_PROJECT_PATH\n        - scheme: $BITRISE_SCHEME\n    - xcode-archive-mac@1.4.0:\n        inputs:\n        - project_path: $BITRISE_PROJECT_PATH\n        - scheme: $BITRISE_SCHEME\n    - deploy-to-bitrise-io@1.2.9: {}\n  primary:\n    steps:\n    - activate-ssh-key@3.1.1:\n        run_if: '{{getenv \"SSH_RSA_PRIVATE_KEY\" | ne \"\"}}'\n    - git-clone@3.4.2: {}\n    - script@1.1.5:\n        title: Do anything with Script step\n    - certificate-and-profile-installer@1.8.4: {}\n    - xcode-test-mac@1.1.0:\n        inputs:\n        - project_path: $BITRISE_PROJECT_PATH\n        - scheme: $BITRISE_SCHEME\n    - deploy-to-bitrise-io@1.2.9: {}\n"}'
+    curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/bitrise.yml' -d '{"app_config_datastore_yaml":"app:\n  envs:\n  - BITRISE_PROJECT_PATH: build.gradle\n    opts:\n      is_expand: false\ndefault_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git\nformat_version: 1.1.9"}'
 
 By calling this endpoint, you replace the app's current `bitrise.yml` file. You can, of course, modify this uploaded `bitrise.yml` either via the API or on the website itself.
