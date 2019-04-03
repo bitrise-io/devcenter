@@ -78,7 +78,7 @@ Example response:
       }
     }
 
-As you can see the `processed` flag is set to `true` which means your file is now available in `GENERIC FILE STORAGE` on Bitrise. 
+As you can see the `processed` flag is set to `true` which means your file is now available in `GENERIC FILE STORAGE` on Bitrise.
 
 Now that you have confirmed the upload, you can do a bunch of other cool stuff with the files. Continue reading!
 
@@ -90,11 +90,11 @@ The required parameters are:
 
 * app slug
 * generic project file slug
-* **generic project file parameters**
+* generic project file attributes you wish to modify
 
 For example, to make the uploaded file protected, you can set the `is_protected` flag of your file to `true`.
 
-    curl -X PATCH -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-file/PROVISIONING-PROFILE-SLUG -d '{"is_protected":true}'
+    curl -X PATCH -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-file/GENERIC-PROJECT-FILE-SLUG -d '{"is_protected":true}'
 
 Careful with those attributes!
 
