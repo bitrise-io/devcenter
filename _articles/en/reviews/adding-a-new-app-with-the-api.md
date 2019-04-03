@@ -16,7 +16,7 @@ In addition, you can list all apps belonging, for example, to a single user or t
 | [POST /apps/register](https://api-docs.bitrise.io/#/app-setup/app-create) | Add a new app. |
 | [POST /apps/{app-slug}/register-ssh-key](https://api-docs.bitrise.io/#/app-setup/ssh-key-create) | Add an SSH-key to a specific app. |
 | [POST /apps/{app-slug}/finish](https://api-docs.bitrise.io/#/app-setup/app-finish) | Save the application at the end of the application add process. |
-| [POST /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/app-setup/app-config-create) | Upload a new bitrise.yml for your application |
+| [POST /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/app-setup/app-config-create) | Upload a new bitrise.yml for your application. |
 
 There are three distinct steps to adding an app with the Bitrise API.
 
