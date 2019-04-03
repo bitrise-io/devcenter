@@ -78,7 +78,9 @@ Example response:
       }
     }
 
-As you can see the processed flag/data is set to `true` which means your file is now available in `GENERIC FILE STORAGE`. Now that you have confirmed the upload, you can do a bunch of other cool stuff with the files. Continue reading!
+As you can see the processed flag/data is set to `true` which means your file is now available in `GENERIC FILE STORAGE`. 
+
+Now that you have confirmed the upload, you can do a bunch of other cool stuff with the files. Continue reading!
 
 ## Updating an uploaded file
 
