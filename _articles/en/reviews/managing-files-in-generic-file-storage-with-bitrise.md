@@ -1,5 +1,5 @@
 ---
-title: Managing files in GENERIC FILE STORAGE with API
+title: Managing files in Generic File Storage with API
 redirect_from: []
 date: 2019-04-01 10:48:09 +0000
 published: false
@@ -7,7 +7,23 @@ published: false
 ---
 You can upload, delete, update, and list any project files with the [relevant Bitrise API](https://api-docs.bitrise.io/) to the `GENERIC FILE STORAGE` section of our `Code Signing` tab. Should you need more information on how to store your project files, check out [Using the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/).
 
-## Creating & uploading files to
+|  Endpoints |   Function|
+|---|---|
+|[POST
+/apps/{app-slug}/generic-project-files](https://api-docs.bitrise.io/#/generic-project-file/generic-project-files-create)   |  Create a generic project file |
+|[POST
+/apps/{app-slug}/generic-project-files/{generic-project-file-slug}/uploaded](https://api-docs.bitrise.io/#/generic-project-file/generic-project-file-confirm)   |Confirm the upload process    |
+| [ATCH
+/apps/{app-slug}/generic-project-files/{generic-project-file-slug}](https://api-docs.bitrise.io/#/generic-project-file/generic-project-file-update)  |Update an uploaded project file   |
+|  [GET
+/apps/{app-slug}/generic-project-files](https://api-docs.bitrise.io/#/generic-project-file/generic-project-file-list) | Get a lis of the uploaded project files  |
+|  [GET
+/apps/{app-slug}/generic-project-files/{generic-project-file-slug}](https://api-docs.bitrise.io/#/generic-project-file/generic-project-file-show) | Retrieve data of a specific project file  |
+| [DELETE
+/apps/{app-slug}/generic-project-files/{generic-project-file-slug}](https://api-docs.bitrise.io/#/generic-project-file/generic-project-file-delete)  | Delete an uploaded project file  |
+
+
+## Creating & uploading files to Generic File Storage
 
 You can add new files to an application and store it in the `GENERIC FILE STORAGE` section of the `Code Signing` tab. When calling the relevant API endpoint, a new temporary pre-signed upload URL is created which you will use to upload the file to the `GENERIC FILE STORAGE`.
 
@@ -96,7 +112,7 @@ For example, to make the uploaded file protected, you can set the `is_protected`
 
     curl -X PATCH -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-file/GENERIC-PROJECT-FILE-SLUG -d '{"is_protected":true}'
 
-{% include message_box.html type="note" title="Careful with those attributes!" content="
+{% include message_box.html type="important" title="Careful with those attributes!" content="
 You can set the `is_protected`, `is_exposed` and `processed` attributes of the file you've uploaded:
 
 * Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
