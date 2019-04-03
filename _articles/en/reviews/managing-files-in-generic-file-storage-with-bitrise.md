@@ -40,7 +40,7 @@ Example response is:
 
 Now that you have this temporary pre-signed `upload_url` at hand, you can upload the file to AWS.
 
-Example `curl` request:
+**Example** `**curl**` **request: cant upload**
 
     curl -T Test-File.md "https://concrete-userfiles-production.s3.us-west-2.amazonaws.com/project_file_storage_documents/uploads/24043/original/Test-File?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIV2YZWMVCNWNR2HA%2F20190402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190402T125827Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=e1557901d5a07b1b3578d9ffdf84a9b0188b742bfff9c8175a3e87f12c7e2c4e"
 
@@ -73,7 +73,7 @@ The required parameters are:
 
 * app slug
 * generic project file slug
-* generic project file parameters
+* **generic project file parameters**
 
 For example, to make the uploaded file protected, you can set the `is_protected` flag of your file to `true`.
 
@@ -182,7 +182,7 @@ Example response:
       }
     }
 
-As you can see the example response shows the list of files of a specific app along with their defined attributes. 
+As you can see the example response shows the list of files of a specific app along with their defined attributes.
 
 ## Deleting a file
 
