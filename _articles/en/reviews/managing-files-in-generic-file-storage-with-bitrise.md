@@ -57,7 +57,7 @@ Now that you have your file uploaded to AWS, you need to confirm that your uploa
 The required parameters are:
 
 * app slug
-* generic profile slug (generated above)
+* generic project file slug (generated above)
 
 Set the value of the `processed` flag to `true` in a `curl` request to confirm the completeness of the process:
 
@@ -78,7 +78,7 @@ Example response:
       }
     }
 
-As you can see the processed flag/data is set to `true` which means your file is now available in `GENERIC FILE STORAGE`. 
+As you can see the `processed` flag is set to `true` which means your file is now available in `GENERIC FILE STORAGE` on Bitrise. 
 
 Now that you have confirmed the upload, you can do a bunch of other cool stuff with the files. Continue reading!
 
