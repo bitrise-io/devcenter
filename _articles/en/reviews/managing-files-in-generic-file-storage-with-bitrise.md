@@ -116,9 +116,9 @@ You can set the `is_protected`, `is_exposed` and `processed` attributes of the f
 
   Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`.
 
-## Getting a specific file's data
+## Retrieving a specific file's data
 
-You might want to retrieve a specific file's data to have a quick look at it. You can easily do so with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
+You might want to retrieve a specific project file's data to have a quick look at the details. You can easily do so with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method.
 
 The required parameters are:
 
@@ -129,7 +129,7 @@ Example curl request:
 
      curl -X GET -H  'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files/GENERIC-PROJECT-FILE-SLUG'
 
-Example response
+Example response:
 
     {
       "data": {
@@ -145,11 +145,11 @@ Example response
       }
     }
 
-{% include message_box.html type="note" title="Availability of the `download_url`" content=" Note that the `_download_url_` is generated only when the file's `is_protected` attribute is false. "%}
+{% include message_box.html type="note" title="Availability of the `download_url`" content=" Note that the `download_url` is generated only when the file's `is_protected` attribute is false. "%}
 
 ## Listing the uploaded files of an app
 
-Wondering how many files belong to an app? Get a list of them with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method. Please note that the maximum number of files is 50.
+Wondering how many files belong to an app? Get a list of them with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `GET` method. Please note that the **maximum number of files is 50**.
 
 The required parameter is:
 
@@ -158,13 +158,13 @@ The required parameter is:
 Optional parameters are:
 
 * next: slug of the first file in the response (as a string)
-* limit: max number of elements per page (as an integer) where the default is 50.
+* limit: max number of elements per page (as an integer)
 
-Example curl request for provisioning profiles:
+Example `curl` request:
 
     curl -X GET -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files'
 
-**_Why adding the keystore one as well? thats a completely differerent field!! keystore specific type of generic file, has specific fields in the ui._**
+**_keystore specific type of generic file, has specific fields in the ui._**
 
 Example response:
 
@@ -197,7 +197,7 @@ Example response:
       }
     }
 
-As you can see the example response shows the list of files of a specific app along with their defined attributes.
+As you can see the example response shows the list of files specific to an app. Files uploaded to the `ANDROID KEYSTORE SECTION` and to the `GENERIC FILE STORAGE` are both shown. This is due to that the fact that Android keystore files are specific generic project files but represented in a separate UI field from generic project files .
 
 ## Deleting a file
 
@@ -214,7 +214,7 @@ Example curl request:
 
 ## Downloading a file
 
-If you’d like to download the actual file from AWS, you can do so with the following `curl` requests:
+If you’d like to download the actual file from AWS, you can do so with the following `curl` request:
 
     curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files/GENERIC-PROJECT-FILE-SLUG'
 
