@@ -9,18 +9,18 @@ You can upload, delete, update, and list any files with the [relevant Bitrise AP
 
 ## Creating & uploading files to
 
-You can add a new file to an application of your choice. When calling the relevant API, a new temporary pre-signed upload URL is created which you will use to upload the file to its destination. You can add a new file to an application of your choice and store it in `GENERIC FILE STORAGE`.
+You can add new files to an application and store it in the `GENERIC FILE STORAGE` section of the `Code Signing` tab. When calling the relevant API endpoint, a new temporary pre-signed upload URL is created which you will use to upload the file to the `GENERIC FILE STORAGE`.
 
 The required parameters are:
 
 * app slug
-* file name
+* generic project file's metadata: upload file name, upload file size and the user env key (you can add any name to the user env key)
 
 Example `curl` request:
 
     curl -X POST "https://api.bitrise.io/v0.1/apps/583806e34b4ff0ff/generic-project-files" -H "accept: application/json" -H "Authorization: 0FgS4dsnxG9sYWp3xh9aLkbUz7BC01ZYJRj3RuhDWssadW7NuqbMhobvIWzk76dxrj6md4AXK16pfwj-i6A-uA" -H "Content-Type: application/json" -d "{ \"upload_file_name\": \"Test-File\", \"upload_file_size\": 4865, \"user_env_key\": \"Test-File\"}"
 
-As you can see from the example response below, the file name, its size, file slug and pre-signed upload url are retrieved (along with some attributes that you can modify later). This pre-signed upload url is a temporary link which you will use to upload the file to its destination.
+As you can see from the example response below, the file name, file size, file slug and pre-signed upload url are retrieved (along with some attributes that you can modify later). This pre-signed upload url is a temporary link which you will use to upload the file to its destination.Please note that you will need the file slug and the upload url later on so keep these handy.
 
 Example response is:
 
@@ -38,9 +38,9 @@ Example response is:
       }
     }
 
-Now that you have this temporary pre-signed `upload_url` at hand, you can upload the file to AWS.
+Now that you have successfully generated the `upload_url`, you can upload your file to AWS with this `curl` request.
 
-**Example** `**curl**` **request: cant upload**
+Example `curl` request:
 
     curl -T Test-File.md "https://concrete-userfiles-production.s3.us-west-2.amazonaws.com/project_file_storage_documents/uploads/24043/original/Test-File?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIV2YZWMVCNWNR2HA%2F20190402%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190402T125827Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=e1557901d5a07b1b3578d9ffdf84a9b0188b742bfff9c8175a3e87f12c7e2c4e"
 
@@ -52,7 +52,7 @@ Continue with confirming the file upload.
 
 ## Confirming the file upload
 
-Now that you have your file uploaded, you need to confirm that your upload is indeed completed.
+Now that you have your file uploaded to AWS, you need to confirm that your upload is indeed completed.
 
 The required parameters are:
 
@@ -63,7 +63,22 @@ Set the value of the `processed` flag to `true` in a `curl` request to confirm t
 
     curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files/GENERIC-PROJECT-FILES-SLUG/uploaded'
 
-Now that you have confirmed the upload, you can do a bunch of other cool stuff with the files. Continue reading!
+Example response
+
+    {
+      "data": {
+        "upload_file_name": "Test-File",
+        "upload_file_size": 4865,
+        "slug": "01D7F228E7N8Q8WQJKJM8FV3XM",
+        "processed": true,
+        "is_expose": true,
+        "is_protected": false,
+        "user_env_key": "Test-File",
+        "exposed_meta_datastore": null
+      }
+    }
+
+As you can see the processed flag/data is set to `true` which means your file is now available in `GENERIC FILE STORAGE`. Now that you have confirmed the upload, you can do a bunch of other cool stuff with the files. Continue reading!
 
 ## Updating an uploaded file
 
