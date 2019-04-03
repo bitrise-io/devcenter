@@ -22,8 +22,8 @@ You can add new files to an application and store it in the `GENERIC FILE STORAG
 
 The required parameters are:
 
-* app slug
-* generic project file's metadata: upload file name, upload file size and the user env key (you can add any name to the user env key)
+* app slug.
+* generic project file's metadata: upload file name, upload file size and the user env key (you can add any name to the user env key).
 
 {% include message_box.html type="note" title="Interactive cURL call configurator" content=" You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app’s [bitrise.io](https://www.bitrise.io/) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
 
@@ -65,8 +65,8 @@ Now that you have your file uploaded to AWS, you need to confirm that your uploa
 
 The required parameters are:
 
-* app slug
-* generic project file slug (generated above)
+* app slug.
+* generic project file slug (generated above).
 
 Set the value of the `processed` flag to `true` in a `curl` request to confirm the completeness of the process:
 
@@ -97,9 +97,9 @@ You can perform minor updates to an uploaded file with the [relevant Bitrise API
 
 The required parameters are:
 
-* app slug
-* generic project file slug
-* generic project file attributes you wish to modify
+* app slug.
+* generic project file slug.
+* generic project file attributes you wish to modify.
 
 For example, to make the uploaded file protected, you can set the `is_protected` flag of your file to `true`.
 
@@ -122,8 +122,8 @@ You might want to retrieve a specific project file's data to have a quick look a
 
 The required parameters are:
 
-* app slug
-* generic project file slug
+* app slug.
+* generic project file slug.
 
 Example curl request:
 
@@ -153,12 +153,12 @@ Wondering how many files belong to an app? Get a list of them with the [relevant
 
 The required parameter is:
 
-* app slug
+* app slug.
 
 Optional parameters are:
 
-* next: slug of the first file in the response (as a string)
-* limit: max number of elements per page (as an integer)
+* next: slug of the first file in the response (as a string).
+* limit: max number of elements per page (as an integer).
 
 Example `curl` request:
 
@@ -195,7 +195,7 @@ Example response:
       }
     }
 
-As you can see the example response shows the list of files specific to an app. Files uploaded to the `ANDROID KEYSTORE SECTION` and to the `GENERIC FILE STORAGE` are both shown. This is due to that the fact that Android keystore files are specific generic project files but represented in a separate UI field from generic project files .
+As you can see, the example response shows the list of files specific to an app. Files uploaded to the `ANDROID KEYSTORE SECTION` and to the `GENERIC FILE STORAGE` are both shown. This is due to that the fact that Android keystore files are specific generic project files but represented in a separate UI field from generic project files.
 
 ## Deleting a file
 
@@ -203,8 +203,8 @@ You can delete your uploaded file with the [relevant Bitrise API ](https://api-d
 
 The required parameters are:
 
-* app slug
-* generic project file slug
+* app slug.
+* generic project file slug.
 
 Example curl request:
 
