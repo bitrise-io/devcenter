@@ -63,7 +63,7 @@ Set the value of the `processed` flag to `true` in a `curl` request to confirm t
 
     curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files/GENERIC-PROJECT-FILES-SLUG/uploaded'
 
-Example response
+Example response:
 
     {
       "data": {
@@ -94,16 +94,16 @@ For example, to make the uploaded file protected, you can set the `is_protected`
 
     curl -X PATCH -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-file/PROVISIONING-PROFILE-SLUG -d '{"is_protected":true}'
 
-{% include message_box.html type="warning" title="Careful with those attributes!" content="
+Careful with those attributes!
 
 You can set the `is_protected`, `is_exposed` and `processed` attributes of the file you've uploaded:
 
     {
-      \"exposed_meta_datastore\": \"string\",
-      \"is_expose\": \"true\",
-      \"is_protected\": \"true\",
-      \"processed\": \"true\",
-      \"user_env_key\": \"string\"
+      "exposed_meta_datastore": "string",
+      "is_expose": "true",
+      "is_protected": "true",
+      "processed": "true",
+      "user_env_key": "string"
     }
 
 * Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
@@ -114,7 +114,7 @@ You can set the `is_protected`, `is_exposed` and `processed` attributes of the f
 
   Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`.
 
-  "%}
+  
 
 ## Getting a specific file's data
 
