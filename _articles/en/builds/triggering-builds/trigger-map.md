@@ -9,11 +9,9 @@ menu:
     title: Triggering builds with the Trigger map
 
 ---
-When you register a webhook for an event or for multiple events (for example, for `Code Push` and
-for `Pull Request` events), your source code hosting service will call the webhook
-every time the related event happens.
+When you register a webhook for an event or for multiple events (for example, for `Code Push` and for `Pull Request` events), your source code hosting service will call the webhook every time the related event happens.
 
-On [bitrise.io](https://www.bitrise.io) these webhooks calls are called *triggers*,
+On [bitrise.io](https://www.bitrise.io) these webhooks calls are called _triggers_,
 and can be mapped to different `Workflows`, or not mapped at all.
 If you don't map a trigger to any workflow, then [bitrise.io](https://www.bitrise.io) won't
 start a build. If you map it to a workflow, then a build will be started
@@ -44,7 +42,7 @@ workflows:
             echo "$BITRISE_TRIGGERED_WORKFLOW_ID"
 ```
 
-{% include message_box.html type="info" title="What is `bitrise.yml`" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa). 
+{% include message_box.html type="info" title="What is `bitrise.yml`" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa).
 "%}
 
 The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: "*"`), Tag Push (`tag: "*"`)
@@ -212,14 +210,14 @@ just from a branch of the repository),
 **the source code hosting service will send two webhooks**,
 one for the code push and one for the pull request!
 
-{% include message_box.html type="important" title="Pull Request build" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a \"pre-merged\" state of the code. This \"pre-merged\" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
+{% include message_box.html type="important" title="Pull Request build" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a "pre-merged" state of the code. This "pre-merged" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
 "%}
 
 Whether you want to build both or just one of these in case of a pull request
 is up to you and depends on your project's requirements, but with `bitrise`
 you can decide whether you want it or not.
 
-{% include message_box.html type="note" title="Pull Request merge is a Code Push" content=" Source code hosting services treat the event of \"merge\" as a code push event. For example if you merge a Pull Request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`.
+{% include message_box.html type="note" title="Pull Request merge is a Code Push" content=" Source code hosting services treat the event of "merge" as a code push event. For example if you merge a Pull Request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`.
 "%}
 
 An example to build only the pull request ("pre-merged") events/state,
