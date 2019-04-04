@@ -42,51 +42,51 @@ builds:
   identifier: triggering-builds
   weight: 1
 main:
-- title: Frequently Asked Questions (FAQ)
-  identifier: faq
-  weight: 14
-- title: Deployment
-  identifier: deployment
-  weight: 10
 - title: API
   identifier: api
+  weight: 18
+- title: Tools
+  identifier: tools
   weight: 17
 - title: Troubleshooting
   identifier: troubleshooting
-  weight: 15
-- title: Tools
-  identifier: tools
   weight: 16
-- title: Caching
-  identifier: caching
-  weight: 8
-- title: Code signing
-  identifier: code-signing
-  weight: 7
-- title: Webhooks
-  identifier: webhooks
-  weight: 5
-- title: Infrastructure
-  identifier: infrastructure
-  weight: 3
 - title: Getting Started
   identifier: getting-started
-  weight: 2
+  weight: 3
+- title: Frequently Asked Questions (FAQ)
+  identifier: faq
+  weight: 15
+- title: Deployment
+  identifier: deployment
+  weight: 11
+- title: Caching
+  identifier: caching
+  weight: 9
+- title: Code signing
+  identifier: code-signing
+  weight: 8
+- title: Webhooks
+  identifier: webhooks
+  weight: 6
+- title: Infrastructure
+  identifier: infrastructure
+  weight: 4
 - title: Bitrise CLI and bitrise.yml
   identifier: bitrise-cli
-  weight: 11
+  weight: 12
 - title: Teams and organizations
   identifier: team-management
-  weight: 4
+  weight: 5
 - title: Tutorials
   identifier: tutorials
-  weight: 12
+  weight: 13
 - title: Testing
   identifier: testing
-  weight: 9
+  weight: 10
 - title: Builds
   identifier: builds
-  weight: 6
+  weight: 7
 - title: Tips & Tricks
   identifier: tips-and-tricks
-  weight: 13
+  weight: 14

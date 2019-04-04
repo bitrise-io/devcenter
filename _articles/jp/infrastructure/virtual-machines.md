@@ -2,7 +2,7 @@
 title: 仮想マシン
 menu:
   infrastructure:
-    weight: 2
+    weight: 3
 
 ---
 [bitrise.io](https://www.bitrise.io)には、ビルドがホストされる`macOS`と`Linux`の2つの仮想マシンがあります。複数のスタックから選択することができ、それぞれのスタックにプリインストールされたツールのバージョンリストが確認できます。利用可能なスタック、スタック準備タイプについては[こちら](/jp/infrastructure/available-stacks/)を参考にしてください。

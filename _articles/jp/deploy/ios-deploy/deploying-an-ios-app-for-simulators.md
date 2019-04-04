@@ -3,7 +3,7 @@ title: Deploying an iOS app for simulators
 date: 2018-11-10 14:34:02 +0000
 menu:
   ios-deploy:
-    weight: 5
+    weight: 6
 
 ---
 {% include not_translated_yet.html %}

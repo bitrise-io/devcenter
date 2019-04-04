@@ -2,7 +2,7 @@
 title: Android/Linux/Docker 環境
 menu:
   infrastructure:
-    weight: 4
+    weight: 5
 
 ---
 ## ハードウェア

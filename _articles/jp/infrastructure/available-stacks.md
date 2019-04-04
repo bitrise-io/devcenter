@@ -4,7 +4,7 @@ redirect_from:
 - "/docs/available-stacks"
 menu:
   infrastructure:
-    weight: 1
+    weight: 2
 
 ---
 スタック（Stack）とは、仮想マシンのバージョンを示しておりビルド走行に使用します。アプリをBitriseに追加した後、Bitriseが適切なスタックを自動で選択します。Workflow Editorの`Stacks` タブにて変更ができます。
