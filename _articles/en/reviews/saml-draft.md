@@ -5,13 +5,19 @@ date: 2019-02-27 13:46:46 +0000
 published: false
 
 ---
-Organization members can log into or sign up to Bitrise using their own SAML SSO provider's system.
+Organization members can log into or sign up to Bitrise using their own SAML SSO provider's system. 
 
-{% include message_box.html type="important" title="Before connecting SAML SSO to your organization" content=" Make sure:
+{% include message_box.html type="note" title="SAML SSO on Org Elite subscription" content=" 
+
+Please note that SAML SSO is available for organizations with [Org Elite subscription](https://www.bitrise.io/pricing/teams). If your organization has an Org Standard plan and you set up SAML SSO, you will see the Single Sign On button in your Account Settings but won't be able to use it. Click the `Upgrade to Org Elite` to use SAML SSO in your organization. 
+
+![](/img/saml-elite.png)"%}
+
+Before connecting SAML SSO to your organization, make sure
 
 * you have a SAML SSO provider (Identity Provider) that you can connect Bitrise to.
 * your account on Bitrise has an organization. If it doesn't have an organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for **existing and brand new organizations** on Bitrise.
-* as with other [organization management actions](ht/team-management/organizations/members-organizations/), only the organization owner can set up SAML SSO to a Bitrise organization. "%}
+* as with other [organization management actions](ht/team-management/organizations/members-organizations/), only the organization owner can set up SAML SSO to a Bitrise organization.
 
 In this guide we cover the following procedures:
 
