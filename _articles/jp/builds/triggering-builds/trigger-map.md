@@ -214,7 +214,7 @@ just from a branch of the repository),
 **the source code hosting service will send two webhooks**,
 one for the code push and one for the pull request!
 
-{% include message_box.html type="important" title="Pull Request build" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a /"pre-merged/" state of the code. This /"pre-merged/" state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
+{% include message_box.html type="important" title="Pull Request build" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The Pull Request build on the other hand builds a pre-merged state of the code. This pre-merged state is not the final merged version of the code, it only represents a clone of how the code will look like **after** you merged the pull request.
 "%}
 
 Whether you want to build both or just one of these in case of a pull request
