@@ -219,7 +219,7 @@ Whether you want to build both or just one of these in case of a pull request
 is up to you and depends on your project's requirements, but with `bitrise`
 you can decide whether you want it or not.
 
-{% include message_box.html type="note" title="Pull Request merge is a Code Push" content=" Source code hosting services treat the event of /"merge/" as a code push event. For example if you merge a Pull Request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`.
+{% include message_box.html type="note" title="Pull Request merge is a Code Push" content=" Source code hosting services treat the event of merge as a code push event. For example if you merge a Pull Request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`.
 "%}
 
 An example to build only the pull request ("pre-merged") events/state,
