@@ -11,9 +11,7 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-When you register a webhook for an event or for multiple events (for example, for `Code Push` and
-for `Pull Request` events), your source code hosting service will call the webhook
-every time the related event happens.
+When you register a webhook for an event or for multiple events (for example, for `Code Push` and for `Pull Request` events), your source code hosting service will call the webhook every time the related event happens.
 
 On [bitrise.io](https://www.bitrise.io) these webhooks calls are called _triggers_,
 and can be mapped to different `Workflows`, or not mapped at all.
