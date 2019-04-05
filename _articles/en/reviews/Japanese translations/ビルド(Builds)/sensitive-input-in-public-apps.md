@@ -1,5 +1,5 @@
 ---
-title: Sensitive input in public apps
+title: 公開アプリの機密インプット
 redirect_from:
 - sensitive-input-field/#set-a-sensitive-input-in-a-step/
 - "/sensitive-input-field/"
@@ -7,11 +7,13 @@ date: 2019-04-05 09:47:01 +0000
 published: false
 
 ---
-{% include not_translated_yet.html %}
-
 Any sensitive information such as passwords, IDs, and API tokens are exposed in the build logs/bitrise.yml of your public apps, hence visible to anyone who has the build URL of the app. You can hide these inputs with **secret environment variables (env vars)** so that those are not available in build logs/bitrise.yml. To make the sensitive input fields obvious in our Workflow Editor, we've marked them with a yellow `SENSITIVE` label in steps holding sensitive input fields. **These inputs must be defined with the help of secret env vars and not with env vars!**
 
 You can hide any input of your choice with secret env vars even if the field is not labeled `SENSITIVE` but **you must use secret env vars for fields which are by default marked as** `SENSITIVE`.
+
+パスワード、ID、APIトークンなどの機密情報は公開アプリのビルドログ・bitrise.ymlで表示されるので、そのアプリのビルドURLを持っている人なら誰でも見ることができてしまいます。こういった場合、**シークレット環境変数（secret env vars）**を使って隠すことができるので、ビルドログ・bitrise.yml内でも秘密にすることができます。BitriseのWorkflow Editor内で機密インプット欄を見やすくするため、機密インプット欄が存在するステップに黄色で`SENSITIVE`ラベルがマークされています。**これらのインプットはenv vars（環境変数）ではなくsecret env vars（シークレット環境変数）のヘルプを使って定義されないといけません。**
+
+`SENSITIVE`のラベルがなくてもシークレット環境変数を使ってどのインプットでも隠すことができますが、`SENSITIVE`**とデフォルトでマークされている欄には必ずシークレット環境変数を使用しなければなりません。**
 
 ![Screenshot](/img/builds/sensitive-label.png)
 
