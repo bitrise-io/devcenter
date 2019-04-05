@@ -104,7 +104,7 @@ If there are no groups you can assign to the app in this menu, you will see a gr
 
 ![Screenshot](/img/team-management/organization/add-group-from-org.png)
 
-From the `Team` tab you can also access all the functions to manage groups. You simply have to click `MANAGE GROUP` to the right of the group members, and click the action you need in the pop-up window.
+From the `Team` tab you can also access all the functions to manage groups. You have to click `MANAGE GROUP` to the right of the group members, and click the action you need in the pop-up window.
 
 ![](/img/manage-group-change-roles.png)
 
