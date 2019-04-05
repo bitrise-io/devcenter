@@ -30,21 +30,33 @@ Head over to [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) to find o
 
 `Env Vars`と`Secrets`の違いについては[こちら](/builds/env-vars-secret-env-vars/)をお読みください！
 
-## Set a sensitive input in a step
+## Set a sensitive input in a step　ステップ内で機密インプットの設定
 
 1. Click the `Select Secret Variable` button below the input field which is marked with the yellow `SENSITIVE` label.
+
+   黄色で`SENSITIVE`とマークされたインプット欄の下にある`Select Secret Variable`をクリックします。
 2. In the `Insert variable` pop-up, browse the `Choose Secret Env Var` list or create a new secret env var (add the key and the value) in the `Create New Secret Env Var` section.
+
+   `Insert variable`ポップアップ内で、`Choose Secret Env Var`リストをブラウズするか、`Create New Secret Env Var`セクションで新しいシークレット環境変数（キーと値を追加する）を作成してください。
 
    ![](/img/insert-variable.png)
 
    The `Expose for pull request?` toggle under the `Value` field is by default disabled and cannot be enabled with public apps to **protect the secrets of your public app in the case of pull requests**.
+
+   `Value`欄の下にある`Expose for pull request?`トグルはデフォルトで無効になっており、**プルリクエストをする場合に備えて公開アプリの機密情報を保護するため**、公開アプリでは有効化できません。
 3. If you've entered a new env var, hit `Add new`.
+
+   新しい環境変数の入力を終えたら、`Add new`をクリックしてください。
 
 The new secret env var will be available in the `Choose Secret Env Var` list or under the `Secrets` tab for your app for future reference/use.
 
 The selected or newly created secret env var will get automatically saved into the input field of the step.
 
 You can always modify the secret env var registered for a `SENSITIVE` input field if you click the `Select secret variable` button or head over to the `Secrets` tab where you get a full list of your secret env vars.
+
+新しいシークレット環境変数は、アプリを今後参照・使用するのに`Choose Secret Env Var`リスト、または`Secrets` タブの下から確認できます。
+
+選択されたまたは新しく作成されたシークレット環境変数はステップのインプット欄へ自動的にセーブされます。
 
 ![](/img/secrets-email.png)
 
