@@ -108,21 +108,37 @@ From the `Team` tab you can also access all the functions to manage groups. You 
 
 ![](/img/manage-group-change-roles.png)
 
-## Adding contributors to an app
+## Adding Outside contributors to an app
 
 You can add contributors to any application if you have `Admin` or `Owner` right to the app. If an organization owns the app, the contributor does not have to be part of the organization, of course.
 
-1. Go to the app's page on [bitrise.io](https://www.bitrise.io).
-2. Select the `Team` tab.
-3. Find the `Add contributors to this app` menu.
+1. Go to your organization's page on [bitrise.io](https://www.bitrise.io).
+2. On the left menu bar, select `People`.
+3. Toggle the `Allow Outside Contributors` switch to the right. Without enabling this function, you will not be able to add an outside contributor to your app.
 
-   ![](/img/disabled-outside_contributors.jpg)
-4. Enter a username or an email address.
+   ![](/img/enabled-allow-outside-contributor.jpg)
+4. On the left menu bar, select `Apps`.
+5. Search for/click the app you want to add outside contributors to. (In our example, it is the android-multiple-test-results-sample app.)
+
+   ![](/img/switch-to-apps-from-people.jpg)
+   The `Builds` page appears.
+6. Select the `Team` tab.
+7. Find the `Add contributors to this app` menu.
+8. Enter a username or an email address.
 
    The email address you enter - if you choose that option - does not have to be associated with an existing Bitrise account.
-5. Select a role for the user and then click `Grant Access`.
+9. Select a role for the user and then click `Grant Access`.
 
    For rights of roles, check out the Role Cheatsheet!
+   ![](/img/add-outside-contributor.png)
+   Bitrise sends an invitation email to the contributor's email address with a link to view the app.
+
+   ![](/img/invitation-email-outside-contributor.jpg)
+   If all went well, you should see the invited outside contributor at the `People` tab of your organization. You can remove 
+
+   ![](/img/added-outside-contributor.png)
+
+{% include message_box.html type="note" title="Removing outside contributors" content=" You can remove the outside contributor on the `People` tab by clicking the red `x`. Please note that you have to remove all outside contributors before disabling the `Outside Contributor` toggle." %}
 
 ## Removing a group from an app
 
