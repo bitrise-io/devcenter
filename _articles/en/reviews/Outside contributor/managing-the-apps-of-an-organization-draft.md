@@ -116,7 +116,7 @@ You can add contributors to any application if you have `Admin` or `Owner` right
 2. Select the `Team` tab.
 3. Find the `Add contributors to this app` menu.
 
-   ![Screenshot](/img/team-management/organization/add-contributors.png)
+   ![](/img/disabled-outside_contributors.jpg)
 4. Enter a username or an email address.
 
    The email address you enter - if you choose that option - does not have to be associated with an existing Bitrise account.
