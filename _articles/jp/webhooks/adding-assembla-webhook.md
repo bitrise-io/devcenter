@@ -2,7 +2,7 @@
 title: Assembla webhookの追加
 menu:
   webhooks:
-    weight: 15
+    weight: 17
 
 ---
 コードプッシュやプルリクエストなどの指定されたアクションを実行するたびにBitriseが自動的にアプリのビルドをトリガーするようにwebhookを設定できます。 Assemblaの場合は、`bitrise-webhooks`URLをスペース [Assembla](https://assembla.com) に追加するだけです。

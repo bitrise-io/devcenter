@@ -2,7 +2,7 @@
 title: 'Visual Studio webhookの追加 '
 menu:
   webhooks:
-    weight: 13
+    weight: 15
 
 ---
 webhookのセットアップをすると、コードプッシュやプルリクエストなどといった特定のアクションを実行することによって、Bitriseが自動的にアプリのビルドをトリガーします。Visual Studioでは、[visualstudio.com](https://visualstudio.com)プロジェクトを`Service Hooks` インテグレーションとして`bitrise-webhooks` URLの登録が必要になります。

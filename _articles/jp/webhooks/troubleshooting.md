@@ -2,7 +2,7 @@
 title: Webhook トラブルシューティング
 menu:
   webhooks:
-    weight: 20
+    weight: 22
 
 ---
 先日（2016年9月以前に） [bitrise.io](https://www.bitrise.io) にアプリを登録した場合は、使用するgitホスティングサービス（GitHub、Bitbucket、...）に登録されているWebhook URLを確認してください。

@@ -4,7 +4,7 @@ redirect_from:
 - "/webhooks/"
 menu:
   webhooks:
-    weight: 1
+    weight: 2
 
 ---
 ほとんどのソースコードホスティングサービスはwebhookを登録する機能を提供します。webhookは基本的に特定のイベントで呼ばれるURLです。

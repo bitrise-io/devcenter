@@ -2,7 +2,7 @@
 title: Deveo webhookの追加
 menu:
   webhooks:
-    weight: 17
+    weight: 19
 
 ---
 コードプッシュやプルリクエストなどの指定されたアクションを実行するたびにBitriseが自動的にアプリのビルドをトリガーするようにwebhookを設定できます。 Deveoの場合は、 `bitrise-webhooks`URLを [Deveo](https://deveo.com)リポジトリに登録するだけで済みます。

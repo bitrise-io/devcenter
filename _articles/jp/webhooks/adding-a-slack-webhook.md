@@ -2,7 +2,7 @@
 title: Slack webhookの追加
 menu:
   webhooks:
-    weight: 11
+    weight: 13
 
 ---
 `bitrise-webhooks` URL(`.../h/slack/BITRISE-APP-SLUG/BITRISE-APP-API-TOKEN`) は、[Outgoing Webhook](https://my.slack.com/services/new/outgoing-webhook) またはSlackチームの[slash command](https://my.slack.com/services/new/slash-commands)として登録できます。

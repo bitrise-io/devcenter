@@ -2,7 +2,7 @@
 title: fastlane tools integration
 menu:
   fastlane:
-    weight: 2
+    weight: 3
     title: Fastlane tools integration
 
 ---

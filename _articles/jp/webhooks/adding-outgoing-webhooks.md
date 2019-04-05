@@ -2,7 +2,7 @@
 title: Outgoing webhookの追加
 menu:
   webhooks:
-    weight: 19
+    weight: 21
 
 ---
 Bitriseを構成してビルドのイベント通知を様々なサービスへ送信することができます。ビルドイベントは以下を表します：

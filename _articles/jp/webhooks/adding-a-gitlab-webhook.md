@@ -2,7 +2,7 @@
 title: GitLab webhookの追加
 menu:
   webhooks:
-    weight: 7
+    weight: 9
 
 ---
 webhookのセットアップをすると、コードプッシュやプルリクエストなどといった特定のアクションを実行することによって、Bitriseが自動的にアプリのビルドをトリガーします。GitLabでは、`bitrise-webhooks` URLをご自身の[GitLab](https://www.gitlab.com)レポジトリ内にあるWebhookとして登録する必要があります。

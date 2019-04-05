@@ -2,7 +2,7 @@
 title: Gogs webhookの追加
 menu:
   webhooks:
-    weight: 9
+    weight: 11
 
 ---
 指定したアクションを実行するたびにBitriseが自動的にアプリのビルドを開始するように Webhookを設定できます。 Gogsの場合、`bitrise-webhooks`のURLをGogsリポジトリの Webhookとして登録するだけです。

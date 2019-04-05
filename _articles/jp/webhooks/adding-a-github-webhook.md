@@ -2,7 +2,7 @@
 title: GitHub webhookの追加
 menu:
   webhooks:
-    weight: 2
+    weight: 4
 
 ---
 コードプッシュやプルリクエストなどのアクションを実行する度にBitriseがアプリケーションのビルドを自動的にトリガーするようにwebhookを指定できます。 GitHubの場合は、`bitrise-webhooks`のURLを[GitHub](https://www.github.com)リポジトリのWebフックとして登録するだけです。
