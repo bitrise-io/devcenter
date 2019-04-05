@@ -110,10 +110,10 @@ From the `Team` tab you can also access all the functions to manage groups. You 
 
 ## Adding contributors to an app
 
-You can add contributors to any application if you have `Admin` or `Owner` right to the app. There are two types of contributors at Bitrise: 
+You can add contributors to any application if you have `Admin` or `Owner` right to the app. There are two types of contributors at Bitrise:
 
-* "contributors" are _organization members_ who can be individually added to an app.
-* "outside contributors" are _not part of an organization_ but can be individually invited to an app of an organization.
+* **Contributors** are _organization members_ who can be individually added to an app.
+* **Outside contributors** are _not part of an organization_ but can be individually invited to an app of an organization.
 
 This means that if you wish to add an organization member to an app of the organization, all you have to do is add the username/email address of the member under `Add contributors to this app`  on the `Team` page of the app.
 
@@ -138,7 +138,7 @@ Adding an outside contributor requires enabling the `Allow Outside Contributors`
 
    For rights of roles, check out the Role Cheatsheet!
    ![](/img/add-outside-contributor.png)
-Bitrise sends an invitation email to the contributor's email address with a link to view the app.
+   Bitrise sends an invitation email to the contributor's email address with a link to view the app.
 
 ![](/img/invitation-email-outside-contributor.jpg)
 
