@@ -19,13 +19,17 @@ Artifacts are deployed into the `APPS & Artifacts` section in your build's page 
 
    アーティファクトを生成するステップの後に`Deploy to Bitrise.io`を挿入するか、ワークフローの一番最後（推奨）に`Deploy to Bitrise.io`を挿入してください。詳しい情報は、[Attach any file as an Artifact to the Build](https://devcenter.bitrise.io/tips-and-tricks/attach-any-file-to-build/)を参照してください。
 
-{% include message_box.html type="important" title="Where to insert `Deploy to Bitrise.io`の挿入場所" content=" My message" content=" Add the `Deploy to Bitrise.io` step in the right place. If you insert the step before other steps that generate files during the build, then `Deploy to Bitrise.io` will have nothing to deploy.　正しい場所に "%}
+{% include message_box.html type="important" title="Where to insert `Deploy to Bitrise.io`の挿入場所" content=" My message" content=" Add the `Deploy to Bitrise.io` step in the right place. If you insert the step before other steps that generate files during the build, then `Deploy to Bitrise.io` will have nothing to deploy.　正しい場所に`Deploy to Bitrise.io`を追加してください。ビルド中にファイルを生成する他のステップの前に挿入してしまうと`Deploy to Bitrise.io`は何もデプロイしないのでご注意ください。 "%}
 
 Note that the content of any sub-directories found in the deploy directory will not be displayed in the `APPS and Artifacts` section of your build. You can, however, **compress your artifacts** into a zip file if you modify the default `false` value to `true` in the `Compress the artifacts into one file` field in the `Deploy to Bitrise.io` step. This will compress the whole directory along with its sub-directories and deploy to `APPS & Artifacts`.
 
-### Modify target directory path
+デプロイディレクトリ内にあるどのサブディレクトリの内容も、ビルドの`APPS and Artifacts`セクションには表示されないのでご注意ください。しかし、`Deploy to Bitrise.io`ステップにある`Compress the artifacts into one file`欄のデフォルト`false`値を`true`に修正すると、zipファイルに**アーティファクトを圧縮する**ことができます。これはサブディレクトリを含む全てのディレクトリを圧縮し、`APPS & Artifacts`にデプロイします。
+
+### Modify target directory path　ターゲットディレクトリパスの修正
 
 You can **modify the target directory path** to another one but make sure you reference the same directory paths in other steps of your workflow to ensure that the generated files get collected to the same directory.
+
+ターゲットディレクトリパスを他のパスに修正することができますが、ワークフローの他のステップ内で
 
 ### View artifacts if your build has failed
 
