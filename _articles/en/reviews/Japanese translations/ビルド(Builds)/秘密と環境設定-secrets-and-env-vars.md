@@ -29,26 +29,26 @@ published: false
 
 ![Screenshot](/img/builds/workflow-env-var.png)
 
-Check out our list of [Available Environment Variables](/builds/available-environment-variables/) exposed by Bitrise CLI and bitrise.io.
+Bitrise CLIとbitrise.ioで公開されている[利用可能な環境変数](/builds/available-environment-variables/)のリストをチェックしてください。
 
-## About `Secrets`
+## `Secrets`について
 
-Secret env vars are special type of env vars as they hide information in an encrypted format so that your private input is not exposed in the build logs/bitrise.yml. Secret env vars can be set by adding the env var key and the variable in the `Secrets` tab of the Workflow Editor.
+秘密の環境変数は暗号化されたフォーマットで情報を隠す特別なタイプのもので、個人の入力がbuild logs / bitrise.ymlで表示されないようにします。シークレット環境変数は、ワークフローエディタの`Secrets`タブで環境変数キーと変数を追加することで設定できます。
 
-### Adding a secret env var
+### 秘密の環境変数を追加
 
-You can add a secret env var to your workflow using our `Secrets` tab.
+Bitriseの `Secrets`タブを使ってワークフローに秘密の環境変数を追加することができます。
 
-1. Click `Add new` on the `Secrets` tab.
-2. Set the `key` and `value` fields.
+1. `Secrets`タブの`Add new`をクリックします
+2. `key`と`value`フィールドを設定します。
 
 ![](/img/locked-secret.png)
 
-You can also add a secret env var directly in a [step's](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/) `SENSITIVE` input.
+[ステップ](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/)の`SENSITIVE`入力に秘密の環境変数を直接追加することもできます。
 
-### Editing a secret env var
+### 秘密の環境変数を編集
 
-Once you've added a new secret env var in the `Secrets` tab, you come back to it any time, modify its content or make it protected from curious eyes!
+`Secrets`タブに新しい秘密の環境変数を追加すると、いつでも使えたり、コンテンツを変更したり、不思議な目から保護されたりすることができます。
 
 1. Click `Edit` next to the value of  your secret env var.
 2. Modify its content if needed.
