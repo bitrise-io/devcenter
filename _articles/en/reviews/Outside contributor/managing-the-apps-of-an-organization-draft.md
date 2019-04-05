@@ -113,19 +113,19 @@ From the `Team` tab you can also access all the functions to manage groups. You 
 You can add contributors to any application if you have `Admin` or `Owner` right to the app. There are two types of contributors at Bitrise: 
 
 * "contributors" are _organization members_ who can be individually added to an app.
-* "outside contributors" are however _not part of an organization_ but can be invited to an app of an organization.
+* "outside contributors" are _not part of an organization_ but can be individually invited to an app of an organization.
 
-This means that if you wish to add an organization member to an app of the organization, all you have to do is  add the username or the email address of the member on the `Team` page of the app.
+This means that if you wish to add an organization member to an app of the organization, all you have to do is add the username/email address of the member under `Add contributors to this app`  on the `Team` page of the app.
 
 Adding an outside contributor requires enabling the `Allow Outside Contributors` switch on the organizations' `People` tab. Let's see the details!
 
 1. Go to your organization's page on [bitrise.io](https://www.bitrise.io).
 2. On the left menu bar, select `People`.
-3. Toggle the `Allow Outside Contributors` switch to the right. Without enabling this function here, you will not be able to add an outside contributor to your app on the `Team` tab!
+3. Toggle the `Allow Outside Contributors` switch to the right. Please note that without enabling this function here, you will not be able to add an outside contributor to your app on the `Team` tab!
 
    ![](/img/enabled-allow-outside-contributor.jpg)
 4. On the left menu bar, select `Apps`.
-5. Search for or click the app you want to add contributors to. (In our example, it is the android-multiple-test-results-sample app.)
+5. Search for or click the app you want to add outside contributors to. (In our example, it is the android-multiple-test-results-sample app.)
 
    ![](/img/switch-to-apps-from-people.jpg)
    The `Builds` page appears.
@@ -138,9 +138,9 @@ Adding an outside contributor requires enabling the `Allow Outside Contributors`
 
    For rights of roles, check out the Role Cheatsheet!
    ![](/img/add-outside-contributor.png)
-   Bitrise sends an invitation email to the contributor's email address with a link to view the app.
+Bitrise sends an invitation email to the contributor's email address with a link to view the app.
 
-   ![](/img/invitation-email-outside-contributor.jpg)
+![](/img/invitation-email-outside-contributor.jpg)
 
 If all went well, you should see the invited outside contributor at the `People` tab of your organization.
 
