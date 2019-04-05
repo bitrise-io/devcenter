@@ -1,46 +1,36 @@
 ---
-title: Build artifacts online
+title: オンラインでのビルドアーティファクト (Build artifacts online)
 redirect_from: []
 date: 2019-04-05 11:31:23 +0000
 published: false
 
 ---
-If you select a build of your app, in the `APPS & Artifacts` tab of your build's page you can check out the artifacts (for example, files & reports) which have been generated during the build. All files are destroyed at the end of the build so if you want to view or download any files, insert `Deploy to bitrise.io` step to your workflow so that it can help you access the artifacts.
-
 アプリのビルドを選択する場合、ビルドページの`APPS & Artifacts`タブにてビルド中に生成されたアーティファクト（例えば、ファイルやレポート）の確認が行なえます。すべてのファイルはビルド終了時点で破壊されるので、もしファイルを見たりダウンロードする場合、ワークフローへ`Deploy to bitrise.io`ステップを挿入すればアーティファクトへのアクセスが可能になります。
 
-## Deploy files into artifacts　アーティファクトへのファイルのデプロイ
+## アーティファクトへのファイルのデプロイ
 
-Artifacts are deployed into the `APPS & Artifacts` section in your build's page with the help of the `Deploy to Bitrise.io` step. It deploys all the files which have been generated during the build and stores them in the `$BITRISE_DEPLOY_DIR` directory. You can change the target directory path in the `Deploy directory or file path` field under the `Config` section of the step.
+`Deploy to Bitrise.io`ステップを使うことによりビルドページ内の`APPS & Artifacts`セクションへアーティファクトがデプロイされます。ビルド中に生成されたすべてのファイルをデプロイし、`$BITRISE_DEPLOY_DIR` ディレクトリへ保存されます。ステップの`Config`セクションの下にある`Deploy directory or file path` 欄内にあるターゲットディレクトリパスの変更が可能です。
 
-`Deplot to Bitrise.io`ステップを使うことによりビルドページ内の`APPS & Artifacts`セクションへアーティファクトがデプロイされます。ビルド中に生成されたすべてのファイルをデプロイし、`$BITRISE_DEPLOY_DIR` ディレクトリへ保存されます。ステップの`Config`セクションの下にある`Deploy directory or file path` 欄内にあるターゲットディレクトリパスの変更が可能です。
+1. アーティファクトを生成するステップの後に`Deploy to Bitrise.io`を挿入するか、**ワークフローの一番最後**（推奨）に`Deploy to Bitrise.io`を挿入してください。詳しい情報は、[Attach any file as an Artifact to the Build](https://devcenter.bitrise.io/tips-and-tricks/attach-any-file-to-build/)を参照してください。
 
-1. Insert the `Deploy to Bitrise.io` step AFTER the step/s that generate the artifacts or even better if the `Deploy to Bitrise.io` step is **at the very end of your workflow**. For more information, check out our [Attach any file as an Artifact to the Build](https://devcenter.bitrise.io/tips-and-tricks/attach-any-file-to-build/) article.
-
-   アーティファクトを生成するステップの後に`Deploy to Bitrise.io`を挿入するか、ワークフローの一番最後（推奨）に`Deploy to Bitrise.io`を挿入してください。詳しい情報は、[Attach any file as an Artifact to the Build](https://devcenter.bitrise.io/tips-and-tricks/attach-any-file-to-build/)を参照してください。
-
-{% include message_box.html type="important" title="Where to insert `Deploy to Bitrise.io`の挿入場所" content=" My message" content=" Add the `Deploy to Bitrise.io` step in the right place. If you insert the step before other steps that generate files during the build, then `Deploy to Bitrise.io` will have nothing to deploy.　正しい場所に`Deploy to Bitrise.io`を追加してください。ビルド中にファイルを生成する他のステップの前に挿入してしまうと`Deploy to Bitrise.io`は何もデプロイしないのでご注意ください。 "%}
-
-Note that the content of any sub-directories found in the deploy directory will not be displayed in the `APPS and Artifacts` section of your build. You can, however, **compress your artifacts** into a zip file if you modify the default `false` value to `true` in the `Compress the artifacts into one file` field in the `Deploy to Bitrise.io` step. This will compress the whole directory along with its sub-directories and deploy to `APPS & Artifacts`.
+{% include message_box.html type="important" title=" `Deploy to Bitrise.io`の挿入場所" content=" My message" content=" 正しい場所に`Deploy to Bitrise.io`を追加してください。ビルド中にファイルを生成する他のステップの前に挿入してしまうと`Deploy to Bitrise.io`は何もデプロイしないのでご注意ください。 "%}
 
 デプロイディレクトリ内にあるどのサブディレクトリの内容も、ビルドの`APPS and Artifacts`セクションには表示されないのでご注意ください。しかし、`Deploy to Bitrise.io`ステップにある`Compress the artifacts into one file`欄のデフォルト`false`値を`true`に修正すると、zipファイルに**アーティファクトを圧縮する**ことができます。これはサブディレクトリを含む全てのディレクトリを圧縮し、`APPS & Artifacts`にデプロイします。
 
-### Modify target directory path　ターゲットディレクトリパスの修正
+### ターゲットディレクトリパスの修正
 
-You can **modify the target directory path** to another one but make sure you reference the same directory paths in other steps of your workflow to ensure that the generated files get collected to the same directory.
+他のパスに**ターゲットディレクトリパスを修正する**ことができますが、ワークフローの他のステップ内の同じディレクトリパスを参照して、そのディレクトリに生成されたファイルが収集されていることを確認してください。
 
-ターゲットディレクトリパスを他のパスに修正することができますが、ワークフローの他のステップ内で
+### ビルドが失敗したらアーティファクトを調べてください
 
-### View artifacts if your build has failed
+`Run if previous Step failed`トグルが有効であると、ビルドが失敗しても、ビルドの（生成に成功した）アーティファクトへアクセスができます。例えば、生成されたテストレポートファイルをチェックして失敗したビルドのバグを検知することができます。
 
-With the `Run if previous Step failed` toggle enabled, you can access your build artifacts - only those that have been successfully generated - even if your build has failed. For example, you can detect bugs in your failed build by looking into the generated test report files.
+### ビルドのアーティファクトへは誰がアクセスできますか？
 
-### Who can access build artifacts?
+`APPS & Artifacts`のアーティファクトはアプリのオーナー、管理人、開発者、テスター・QAであれば誰でもアクセスできます。`Enable public page fot the App`のデフォルト構成を保つ場合、URLを持つ人なら誰でもアプリとアーティファクトにアクセスすることができます。詳しい情報は [Public App install page](https://devcenter.bitrise.io/tutorials/deploy/bitrise-app-deployment/#public-app-install-page)をご覧ください。
 
-The artifacts at `APPS & Artifacts` are accessible for everyone who are owner, admin, developer, tester/QA of the app. Besides these roles, if you keep the default config of the `Enable public page for the App` feature, then anyone who receives the URL, will be able to access your app and its artifacts. For more information, check out [Public App install page](https://devcenter.bitrise.io/tutorials/deploy/bitrise-app-deployment/#public-app-install-page).
+## ファイルの種類と制限
 
-## File types & limitations
+すべてのファイルの種類は`APPS & Artifacts`でサポートされており利用可能です。ファイルの種類にもよりますが、`eye`アイコンをクリックするかファイルをローカルコンピュータにダウンロードするとアーティファクトをオンラインで確認することもできます。
 
-All file types are supported and will be available in `APPS & Artifacts`. Depending on the type of the file, you can either view your artifacts inline if you click on the `eye` icon or download them to your local computer.
-
-There is no limitation on the NUMBER of files deployed to `APPS & Artifacts` per build. There is a limitation, however, on the file size which is **2GB per file**.
+ビルド毎に`APPS & Artifacts`にデプロイされるファイルの数についての制限はありません。ただし、ファイルのサイズの制限については**ファイルごとに2GBまで**となっています。
