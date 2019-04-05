@@ -118,7 +118,7 @@ You can add contributors to any application if you have `Admin` or `Owner` right
 
    ![](/img/enabled-allow-outside-contributor.jpg)
 4. On the left menu bar, select `Apps`.
-5. Search for or click the app you want to add outside contributors to. (In our example, it is the android-multiple-test-results-sample app.)
+5. Search for or click the app you want to add contributors to. (In our example, it is the android-multiple-test-results-sample app.)
 
    ![](/img/switch-to-apps-from-people.jpg)
    The `Builds` page appears.
@@ -133,7 +133,7 @@ You can add contributors to any application if you have `Admin` or `Owner` right
    ![](/img/add-outside-contributor.png)
    Bitrise sends an invitation email to the contributor's email address with a link to view the app.
 
-   ![](/img/invitation-email-outside-contributor.jpg) 
+   ![](/img/invitation-email-outside-contributor.jpg)
 
 If all went well, you should see the invited outside contributor at the `People` tab of your organization.
 
