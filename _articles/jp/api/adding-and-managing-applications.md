@@ -1,7 +1,10 @@
 ---
-title: Adding and managing applications
+title: Adding and managing apps
 redirect_from: []
 date: 2019-04-05 13:32:19 +0000
+menu:
+  api:
+    weight: 10
 
 ---
 {% include not_translated_yet.html %}

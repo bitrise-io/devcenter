@@ -1,5 +1,5 @@
 ---
-title: "(Setting your Git credentials on build machines)"
+title: ビルドマシンでGitの認証情報を設定(Setting your Git credentials on build machines)
 redirect_from: []
 date: 2019-04-05 14:34:19 +0000
 published: false
