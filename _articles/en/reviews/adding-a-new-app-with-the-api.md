@@ -1,5 +1,5 @@
 ---
-title: Managing apps
+title: Adding and managing apps
 redirect_from: []
 date: 2019-03-14 15:45:40 +0000
 published: false
@@ -90,4 +90,4 @@ The response to any GET request regarding one or more applications will contain 
         },
         {
 
-You can also download the existing bitrise.yml file of any app: the response will contain the full YAML configuration. 
+You can also download the existing bitrise.yml file of any app: the response will contain the full YAML configuration.
