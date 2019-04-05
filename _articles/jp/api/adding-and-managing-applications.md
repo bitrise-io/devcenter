@@ -1,9 +1,11 @@
 ---
-title: Adding and managing apps
+title: Adding and managing applications
 redirect_from: []
-date: 2019-04-05 13:31:28 +0000
+date: 2019-04-05 13:32:19 +0000
 
 ---
+{% include not_translated_yet.html %}
+
 Set up new apps on Bitrise with the API: add the app, generate SSH keys, and set up the app's initial configuration.
 
 In addition, you can list all apps belonging, for example, to a single user or to a specific organization.
