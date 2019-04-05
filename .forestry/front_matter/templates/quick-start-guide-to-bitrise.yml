@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/bitrise-ymlファイルへのオンラインアクセス-accessing-the-bitrise-yml-file-online.md
 - _articles/jp/api/adding-and-managing-applications.md
 - _articles/en/api/adding-and-managing-apps.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/build-artifacts-online.md
