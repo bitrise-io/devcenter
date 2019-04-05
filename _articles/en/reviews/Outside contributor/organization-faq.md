@@ -45,9 +45,9 @@ Teams are handled per app, Organizations are handled globally.
 
 A Team of an Organization's app can contain members invited directly or through the groups assigned to them. Team members with a direct role can only access the app they were invited to and can't add an app to the Organization. Members of a Team always have a role assigned to them (Admin, Developer or Tester).
 
-## Who are the "contributors"?
+## Who are the Outside contributors?
 
-Contributors are members of an app's Team with a direct role, invited only to an app of an Organization and not to the Organization itself.
+[Outside contributors](/team-management/organizations/managing-apps/#adding-outside-contributors-to-an-app) are members of an app's Team with a direct role, invited only to an app of an Organization and not to the Organization itself.
 
 ## Can I have multiple Organizations?
 
