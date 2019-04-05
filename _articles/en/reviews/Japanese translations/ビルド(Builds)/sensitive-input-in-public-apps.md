@@ -1,5 +1,5 @@
 ---
-title: 公開アプリの機密インプット
+title: 公開アプリの機密インプット (Sensitive input in public apps)
 redirect_from:
 - sensitive-input-field/#set-a-sensitive-input-in-a-step/
 - "/sensitive-input-field/"
@@ -19,10 +19,16 @@ You can hide any input of your choice with secret env vars even if the field is 
 
 There are two ways to define secret env vars:
 
+シークレット環境変数を定義する２つの方法があります：
+
 * directly [in the steps](/sensitive-input-field/#set-a-sensitive-input-in-a-step/)
 * in the [Secrets tab](/builds/env-vars-secret-env-vars#about-secrets) of your Workflow Editor and select the secret env var in a step input when needed.
+* ステップ内で直接行う
+* Workflow EditorのSecret Tab内にて必要なときにステップインプットのシークレット環境変数を選択する
 
 Head over to [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) to find out the difference between `Env Vars` and `Secrets`!
+
+`Env Vars`と`Secrets`の違いについては[こちら](/builds/env-vars-secret-env-vars/)をお読みください！
 
 ## Set a sensitive input in a step
 
