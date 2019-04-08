@@ -5,18 +5,18 @@ date: 2019-03-14 15:45:40 +0000
 published: false
 
 ---
-Set up new apps on Bitrise with the API: add the app, generate SSH keys, and set up the app's initial configuration. 
+Set up new apps on Bitrise with the API: add the app, generate SSH keys, and set up the application's initial configuration.
 
-In addition, you can list all apps belonging, for example, to a single user or to a specific organization. 
+In addition, you can list all apps belonging, for example, to a single user or to a specific organization.
 
 ## Adding a new app
 
 | Endpoints | Function |
 | --- | --- |
-| [POST /apps/register](https://api-docs.bitrise.io/#/app-setup/app-create) | Add a new app. |
-| [POST /apps/{app-slug}/register-ssh-key](https://api-docs.bitrise.io/#/app-setup/ssh-key-create) | Add an SSH-key to a specific app. |
-| [POST /apps/{app-slug}/finish](https://api-docs.bitrise.io/#/app-setup/app-finish) | Save the application at the end of the application add process. |
-| [POST /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/app-setup/app-config-create) | Upload a new bitrise.yml for your application. |
+| POST /apps/register | Add a new app. |
+| POST /apps/{app-slug}/register-ssh-key | Add an SSH-key to a specific app. |
+| POST /apps/{app-slug}/finish | Save the application at the end of the application add process. |
+| POST /apps/{app-slug}/bitrise.yml | Upload a new bitrise.yml for your application. |
 
 There are three distinct steps to adding an app with the Bitrise API.
 
@@ -38,7 +38,7 @@ Once done, call the `register-ssh-key` endpoint to set up the SSH keys you creat
 curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-ssh-key' -d '{"auth_ssh_private_key":"your-private-ssh-key","auth_ssh_public_key":"your-public-ssh-key","is_register_key_into_provider_service":false}'
 ```
 
-Finish the app registration process by calling the `finish` endpoint. This endpoint allows you to configure your applications: set the project type, the stack on which the build will run, and the initial configuration settings. 
+Finish the app registration process by calling the `finish` endpoint. This endpoint allows you to configure your applications: set the project type, the stack on which the build will run, and the initial configuration settings.
 
 You can also set environment variables, as well as immediately specify an organization that will be the owner of the application.
 
@@ -58,13 +58,12 @@ By calling this endpoint, you replace the app's current `bitrise.yml` file. You 
 
 | Endpoints | Function |
 | --- | --- |
-| [GET /apps](https://api-docs.bitrise.io/#/application/app-list) | Get list of the apps. |
-| [GET /apps/{app-slug}](https://api-docs.bitrise.io/#/application/app-show) | Get a specific app. |
-| [GET /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/application/app-config-datastore-show) | Get the `bitrise.yml` of a specific app. |
-| [GET /apps/{app-slug}/branches](https://api-docs.bitrise.io/#/application/branch-list) | List the branches of an app's repository. |
-| [GET /organizations/{org-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-organization) | Get list of the apps for an organization. |
-| [GET /users/{user-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-user) | Get list of the apps for a user. |
-
+| GET /apps | Get list of the apps. |
+| GET /apps/{app-slug} | Get a specific app. |
+| GET /apps/{app-slug}/bitrise.yml | Get the bitrise.yml of a specific app. |
+| GET /apps/{app-slug}/branches | List the branches of an app's repository. |
+| GET /organizations/{org-slug}/apps | Get list of the apps for an organization. |
+| GET /users/{user-slug}/apps | Get list of the apps for a user. |
 
 The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL:
 
