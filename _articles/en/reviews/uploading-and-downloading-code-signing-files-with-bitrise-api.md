@@ -24,7 +24,7 @@ Example `curl` request:
 
 As you can see from the example response below, the file name, its size, slug and pre-signed upload url are retrieved (along with some attributes that you can modify). This pre-signed upload url is a temporary link which you will use to upload the iOS code signing file to its destination.
 
-Example response is:
+Example response:
 
     {
       "data":{
