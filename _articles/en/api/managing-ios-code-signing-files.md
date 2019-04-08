@@ -13,23 +13,23 @@ Provisioning profiles
 
 | Endpoints | Function |
 | --- | --- |
-| POST/apps/{app-slug}/provisioning-profiles | Create a generic project file |
-| POST/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}/uploaded | Confirm the upload process |
-| PATCH/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug} | Update an uploaded project file |
-| GET/apps/{app-slug}/provisioning-profiles | Get a list of the uploaded project files |
-| GET/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug} | Retrieve data of a specific project file |
-| DELETE/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug} | Delete an uploaded project file |
+| [POST/apps/{app-slug}/provisioning-profiles](https://api-docs.bitrise.io/#/provisioning-profile/provisioning-profile-create) | Create a generic project file |
+| [POST/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}/uploaded](https://api-docs.bitrise.io/#/provisioning-profile/provisioning-profile-confirm) | Confirm the upload process |
+| [PATCH/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}](https://api-docs.bitrise.io/#/provisioning-profile/provisioning-profile-update) | Update an uploaded project file |
+| [GET/apps/{app-slug}/provisioning-profiles](https://api-docs.bitrise.io/#/provisioning-profile/provisioning-profile-list) | Get a list of the uploaded project files |
+| [GET/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}](https://api-docs.bitrise.io/#/provisioning-profile/provisioning-profile-show) | Retrieve data of a specific project file |
+| [DELETE/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug}](https://api-docs.bitrise.io/#/provisioning-profile/provisioning-profile-delete) | Delete an uploaded project file |
 
 Build certificates
 
 | Endpoints | Function |
 | --- | --- |
-| POST/apps/{app-slug}/build-certificates | Create a generic project file |
-| POST/apps/{app-slug}/build-certificates/{build-certificate-slug}/uploaded | Confirm the upload process |
-| PATCH/apps/{app-slug}/build-certificates/{build-certificate-slug} | Update an uploaded project file |
-| GET/apps/{app-slug}/build-certificates | Get a list of the uploaded project files |
-| GET/apps/{app-slug}/build-certificates/{build-certificate-slug} | Retrieve data of a specific project file |
-| DELETE/apps/{app-slug}/build-certificates/{build-certificate-slug} | Delete an uploaded project file |
+| [POST/apps/{app-slug}/build-certificates](https://api-docs.bitrise.io/#/build-certificate/build-certificate-create) | Create a generic project file |
+| [POST/apps/{app-slug}/build-certificates/{build-certificate-slug}/uploaded](https://api-docs.bitrise.io/#/build-certificate/build-certificate-confirm) | Confirm the upload process |
+| [PATCH/apps/{app-slug}/build-certificates/{build-certificate-slug}](https://api-docs.bitrise.io/#/build-certificate/build-certificate-update) | Update an uploaded project file |
+| [GET/apps/{app-slug}/build-certificates](https://api-docs.bitrise.io/#/build-certificate/build-certificate-list) | Get a list of the uploaded project files |
+| [GET/apps/{app-slug}/build-certificates/{build-certificate-slug}](https://api-docs.bitrise.io/#/build-certificate/build-certificate-show) | Retrieve data of a specific project file |
+| [DELETE/apps/{app-slug}/build-certificates/{build-certificate-slug}](https://api-docs.bitrise.io/#/build-certificate/build-certificate-delete) | Delete an uploaded project file |
 
 ## Creating & uploading an iOS code signing file
 
