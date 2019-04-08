@@ -6,9 +6,7 @@ menu:
     weight: 1
 
 ---
-**Bitrise** is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration)
-and [Delivery](https://en.wikipedia.org/wiki/Continuous_delivery) (CI/CD) Platform as a Service (PaaS)
-with a main focus on mobile app development. It is a collection of tools and services to help you with the development and automation of your software projects.
+**Bitrise** is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) and [Delivery](https://en.wikipedia.org/wiki/Continuous_delivery) (CI/CD) Platform as a Service (PaaS) with a main focus on mobile app development. It is a collection of tools and services to help you with the development and automation of your software projects.
 
 **Automate the testing and deployment of your apps with just a few clicks.**
 
@@ -56,6 +54,4 @@ You can easily access and use our API, built on Golang - all you need to do is a
 {% include message_box.html type="info" title="API documentation" content="
 
 * [Bitrise API overview](/api/v0.1/)
-
-
 * [Bitrise API endpoint documentation](https://api-docs.bitrise.io)"%}
