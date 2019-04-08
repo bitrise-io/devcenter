@@ -105,17 +105,17 @@ Example curl request:
 
 Example response
 
-      {
-        	"data": {
-       		  "upload_file_name":"sample.provisionprofile",
-      		  "upload_file_size":2047,
-              "slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
-              "processed":false,
-              "is_expose":true,
-              "is_protected":false,
-              "download_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/prov_profile_documents/uploads/80144/original/sample.provisionprofile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180322%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180322T091652Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=6dd7bb3db72aafb2d434da7b1a8f80a82a3a7a0276e84620137ed64de5025ab2"
-        }
-        }
+    {
+    	"data": {
+    		"upload_file_name":"sample.provisionprofile",
+    		"upload_file_size":2047,
+    		"slug":"01C6FA6P6HRQT5PQ8RMMVVXE6W",
+    		"processed":false,
+    		"is_expose":true,
+    		"is_protected":false,
+    		"download_url":"https://concrete-userfiles-production.s3-us-west-2.amazonaws.com/prov_profile_documents/uploads/80144/original/sample.provisionprofile?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180322%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20180322T091652Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=6dd7bb3db72aafb2d434da7b1a8f80a82a3a7a0276e84620137ed64de5025ab2"
+    }
+    }
 
 {% include message_box.html type="note" title="Availability of the `download_url`" content=" Note that the `download_url` is generated only when the provisioning profile's `is_protected` attribute is false. "%}
 
