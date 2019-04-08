@@ -26,7 +26,7 @@ As you can see from the example response below, the file name, its size, slug an
 
 Example response:
 
-    {
+     {
       "data":{
         "upload_file_name":"sample.provisionprofile",
         "upload_file_size":2047,
