@@ -1,5 +1,5 @@
 ---
-title: Managing iOS code signing files
+title: Managing iOS code signing files with the Bitrise API
 redirect_from: []
 date: 2019-04-08 14:11:49 +0000
 published: false
