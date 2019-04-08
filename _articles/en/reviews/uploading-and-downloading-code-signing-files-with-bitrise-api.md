@@ -7,7 +7,7 @@ published: false
 ---
 You can upload, update, list, and delete iOS code signing files with the [relevant Bitrise API](https://api-docs.bitrise.io/). In this guide we show you how and in what order to use those code signing endpoints. First, here is a summary of all our code signing endpoints and their functions.
 
-Provisioning profiles:
+Provisioning profiles
 
 | Endpoints | Function |
 | --- | --- |
@@ -18,7 +18,7 @@ Provisioning profiles:
 | GET/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug} | Retrieve data of a specific project file |
 | DELETE/apps/{app-slug}/provisioning-profiles/{provisioning-profile-slug} | Delete an uploaded project file |
 
-Build certificates:
+Build certificates
 
 | Endpoints | Function |
 | --- | --- |
