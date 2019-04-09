@@ -31,18 +31,18 @@ published: false
 * `GIT_REPOSITORY_URL` : gitリポジトリURL
 * `BITRISE_GIT_BRANCH` : ビルドを引き起こしたブランチ（あれば）
 * `BITRISEIO_GIT_BRANCH_DEST` : プルリクエストによってトリガーされたビルド - ビルドをトリガーしたプルリクエストの宛先/ターゲットブランチでのみ使用
-* `BITRISE_GIT_TAG` : tag which triggered the build (if any)
-* `BITRISE_GIT_COMMIT` : commit hash which triggered the build (if any)
-* `BITRISE_GIT_MESSAGE` : commit message, Pull Request title or the message you specified if you triggered the build manually. This env var is mapped to `[commit message](https://devcenter.bitrise.io/api/build-trigger/#git-related)` in the API.
-* `BITRISEIO_GIT_REPOSITORY_OWNER` : the owner of the Git repository of the project (for example, `bitrise-team`)
-* `BITRISEIO_GIT_REPOSITORY_SLUG` : the slug of the Git repository of the project (for example, `bitrise-blog`)
-* `BITRISE_PULL_REQUEST` : Pull Request ID, which triggered the build (if any)
-* `BITRISEIO_PULL_REQUEST_REPOSITORY_URL` : The repository URL from where the Pull Request is sent
-* `BITRISEIO_PULL_REQUEST_MERGE_BRANCH` : The pre-merge branch - if the Git hosting provider supports and provides the pre-merged state of a Pull Request on a special "merge branch"
-* `BITRISEIO_PULL_REQUEST_HEAD_BRANCH` : The Pull Request "head branch", if the Git hosting provider system supports & provides this. This special git ref should point to the source of the Pull Request
-* `BITRISE_PROVISION_URL` : Provisioning Profile(s) URL - the ones uploaded to [bitrise.io](https://www.bitrise.io). Pipe character (`|`) separated list, in case more than one value is provided.
-* `BITRISE_CERTIFICATE_URL` : Certificate / Identity URL - the one uploaded to [bitrise.io](https://www.bitrise.io). Pipe character (`|`) separated list, in case more than one value is provided.
-* `BITRISE_CERTIFICATE_PASSPHRASE` : Certificate / Identity's password / passphrase, the one specified on [bitrise.io](https://www.bitrise.io). Pipe character (`|`) separated list, in case more than one value is provided.
-* `BITRISE_IO` : indicates that the build is running in a bitrise.io environment. Value is set to `"true"` by bitrise.io when it starts a build.
+* `BITRISE_GIT_TAG` : ビルドをトリガーしたタグ（あれば）
+* `BITRISE_GIT_COMMIT` : ビルドを引き起こしたコミットハッシュ（あれば）
+* `BITRISE_GIT_MESSAGE` : コミットメッセージ、プルリクエストタイトル、または手動でビルドを起動した場合は指定したメッセージ。この環境変数は、APIの`[commit message](https://devcenter.bitrise.io/api/build-trigger/#git-related)`にマッピングされています。
+* `BITRISEIO_GIT_REPOSITORY_OWNER` : プロジェクトのGitリポジトリのオーナー（例、`bitrise-team`）
+* `BITRISEIO_GIT_REPOSITORY_SLUG` : プロジェクトのGitリポジトリのスラッグ（例、`bitrise-blog`）
+* `BITRISE_PULL_REQUEST` :ビルドをトリガーしたプルリクエストID（あれば）
+* `BITRISEIO_PULL_REQUEST_REPOSITORY_URL` : プルリクエストの送信元のリポジトリURL
+* `BITRISEIO_PULL_REQUEST_MERGE_BRANCH` : マージ前のブランチ -  Gitホスティングプロバイダが特別な”マージブランチ”のプルリクエストのマージ前の状態をサポートおよび提供している場合
+* `BITRISEIO_PULL_REQUEST_HEAD_BRANCH` : Gitホスティングプロバイダーシステムがサポートして提供している場合は、プルリクエスト「ヘッドブランチ」。特別なgit参照はプルリクエストのソースを指すはずです
+* `BITRISE_PROVISION_URL` :プロビジョニングプロファイルのURL  -  [bitrise.io](https://www.bitrise.io)にアップロードされたもの。複数の値がある場合に、パイプ文字（`|`）リストを分けます。
+* `BITRISE_CERTIFICATE_URL` : 証明書/識別URL  -  [bitrise.io](https://www.bitrise.io)にアップロードされたもの。複数の値がある場合に、パイプ文字（`|`）リストを分けます。
+* `BITRISE_CERTIFICATE_PASSPHRASE` : 証明書/ IDのパスワード/パスフレーズ。 [bitrise.io](https://www.bitrise.io)で指定されているもの。複数の値がある場合に、パイプ文字（`|`）リストを分けます。
+* `BITRISE_IO` : ビルドがbitrise.io環境で実行されていることを示します。ビルドを開始すると、bitrise.ioによって値が `"true"`に設定されます。
 
-For more information on env vars, check out [Secrets and Env Vars](/builds/env-vars-secret-env-vars/).
+環境変数の詳細については、[秘密と環境変数](/builds/env-vars-secret-env-vars/)を参照してください。
