@@ -18,7 +18,7 @@ You can upload, delete, update, and list any project files in the `GENERIC FILE 
 
 ## Creating & uploading files to Generic File Storage
 
-You can add new files to an application and store it in the `GENERIC FILE STORAGE` section of the `Code Signing` tab. When calling the relevant API endpoint, a new temporary pre-signed upload URL is created which you will use to upload the file to the `GENERIC FILE STORAGE`.
+You can add new files to an application and store it in the `GENERIC FILE STORAGE` section of the `Code Signing` tab. When calling the relevant API endpoint, a new temporary pre-signed upload URL is created which you will use to upload the file to the `GENERIC FILE STORAGE`. (Please note that this pre-signed URL is time-limited and expires after 10 minutes.)
 
 The required parameters are:
 
@@ -211,4 +211,4 @@ If you’d like to download the actual file from AWS, you can do so with the fol
 
     curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files/GENERIC-PROJECT-FILE-SLUG'
 
-The response will contain a pre-signed, expiring AWS URL for the file.
+The response will contain a pre-signed AWS URL for the file. Please note that this URL is time-limited and expires after 10 minutes.
