@@ -86,8 +86,30 @@ You can share the generated APK/.ipa file with your team members using the build
 1. Go to the `Deploy to bitrise.io` step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK/.ipa file in the `APPS & ARTIFACTS` tab.
 
+### Deploying a Flutter app to App Store Connect
 
-1. 
+To deploy your iOS Flutter project to the App Store, you'll need to build the app, export an .ipa file and submit it to the App Store.
+
+Unlike testing, this requires code signing files:
+
+* An iOS Distribution Certificate (a .p12 file).
+* An App Store Provisioning Profile.
+
+For Flutter applications, code signing requires setting a Team ID in the project settings in Xcode. 
+
+Read more about iOS code signing on Bitrise in [our detailed guides](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing/)!
+
+#### Configuring Team ID for Flutter apps
+
+Once you created your iOS project locally, you will need to review the project settings for it in Xcode. More specifically, you need to set a valid Team ID: without that, your build will fail on Bitrise. 
+
+1. In Xcode, open `Runner.xcworkspace` in your app’s `ios` folder.
+2. To view your app’s settings, select the `Runner` project in the Xcode project navigator. Then, in the main view sidebar, select the `Runner` target.
+3. Select the `General` tab.
+4. In the `Signing` section, find the `Team` menu and set it to the team associated with your registered Apple Developer account. 
+5. Commit the change to your repository! 
+
+   This is very important: if you only set the Team ID locally, your build will still fail on Bitrise! 
 
 #### Configuring deployment on Bitrise
 
