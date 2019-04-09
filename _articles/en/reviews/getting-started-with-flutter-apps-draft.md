@@ -71,9 +71,15 @@ You can build both iOS and Android projects at the same time or you can build th
 
 Here's an example workflow we'll use in this configuration, with all the necessary Steps:
 
-![](/img/flutter-workflow.png)We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
+![](/img/flutter-workflow.png)
+
+We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
 
 {% include message_box.html type="note" title="Packages and libraries" content="We also support building Flutter packages and libraries. Unlike in the case of apps, there is no artifact to build so there is no need for a `Flutter Build` Step in your workflow."%}
+
+### iOS code signing for Flutter apps
+
+All iOS applications have to be signed with a provisioning profile and certificate to be able to deploy them to the App Store. 
 
 ### Deploying a Flutter app to Bitrise
 
