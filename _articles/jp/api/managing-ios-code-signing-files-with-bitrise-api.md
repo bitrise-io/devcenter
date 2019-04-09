@@ -3,7 +3,7 @@ title: Managing iOS code signing files with the Bitrise API
 date: 2019-04-09 06:36:21 +0000
 menu:
   api:
-    weight: 18
+    weight: 19
 
 ---
 You can upload, update, list, and delete iOS code signing files with the [relevant Bitrise API](https://api-docs.bitrise.io/). In this guide we show you how and in what order to use those code signing endpoints. First, here is a summary of all our iOS code signing endpoints and their functions.
