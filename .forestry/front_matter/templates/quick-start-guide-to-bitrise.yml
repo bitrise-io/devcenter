@@ -13,6 +13,8 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/jp/api/incoming-and-outgoing-webhooks.md
+- _articles/en/api/incoming-and-outgoing-webhooks.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/keystoreファイルのダウンロード-downloading-a-keystore-file.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
 - _articles/en/reviews/deploying-your-middleman-website-with-bitrise-draft.md
