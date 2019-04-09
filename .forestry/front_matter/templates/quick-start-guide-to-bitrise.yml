@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/api/managing-files-in-generic-file-storage.md
 - _articles/en/reviews/getting-started-with-flutter-apps-draft.md
 - _articles/en/api/managing-ios-code-signing-files.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/setting-your-git-credentials-on-build-machines.md
