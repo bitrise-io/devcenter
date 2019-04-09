@@ -30,8 +30,7 @@ This will register a webhook to the Git provider of the application. Afterwards,
 | [GET /apps/{app-slug}/outgoing-webhooks](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-list) | List the outgoing webhooks of an app. |
 | [POST /apps/{app-slug}/outgoing-webhooks](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-create) | Create an outgoing webhook for an app. |
 | [PUT /apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-update) | Update an outgoing webhook of an app. |
-| [DELETE /apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-delete) | 
-Delete an outgoing webhook of an app. |
+| [DELETE /apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-delete) | Delete an outgoing webhook of an app. |
 
 Outgoing webhooks enable integration with other services: specifically, they are used to notify other services. Currently, only build event notifications are supported. There are two supported build events: triggering a build and finishing a build.
 
