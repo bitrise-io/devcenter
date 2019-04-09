@@ -5,13 +5,14 @@ date: 2019-04-09 10:06:04 +0000
 published: false
 
 ---
-This tutorial helps you create a basic static website project (for example, a blog) with [Middleman](https://middlemanapp.com/),
-connect and deploy it with Bitrise.
+**This tutorial helps you create a basic static website project (for example, a blog) with** [**Middleman**](https://middlemanapp.com/)**, connect and deploy it with Bitrise.**
 
-## 1. Create and clone a repository on Github
+## Creating and cloning a repository on Github
 
-To create a new repository on Github, [click here](https://github.com/repositories/new).
-You need to sign in with your Github account, or sign up if you don't have one yet.
+To create a new repository on Github, [follow the steps on Github](https://github.com/new). 
+
+ You need to sign in with your Github account, or sign up if you don't have one yet. 
+
 Once you created your repository, clone it.
 
 ## 2. Install Middleman
