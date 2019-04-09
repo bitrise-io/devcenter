@@ -9,6 +9,10 @@ Both incoming and outgoing webhooks can be set up with the Bitrise API. They are
 
 ## Incoming webhooks
 
+| Endpoints | Function |
+| --- | --- |
+| [POST /apps/{app-slug}/register-webhook](https://api-docs.bitrise.io/#/app-setup/app-webhook-create) | Register an incoming webhook for a specific application. |
+
 Incoming webhooks enable users to set up automatic triggers for their apps on Bitrise: for example, a Bitrise webhook registered on GitHub can automatically trigger a build when code is pushed to the GitHub repository.
 
 To set up a webhook, you must have connected your Bitrise account to your Git provider account: this allows Bitrise to register the webhook automatically.
@@ -20,6 +24,14 @@ Register a webhook with the API by calling the `register-webhook` endpoint with 
 This will register a webhook to the Git provider of the application. Afterwards, you can set up automatic triggers either on the website or via the Trigger Map in the application's `bitrise.yml` file.
 
 ## Outgoing webhooks
+
+| Endpoints | Function |
+| --- | --- |
+| [GET /apps/{app-slug}/outgoing-webhooks](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-list) | List the outgoing webhooks of an app. |
+| [POST /apps/{app-slug}/outgoing-webhooks](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-create) | Create an outgoing webhook for an app. |
+| [PUT /apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-update) | Update an outgoing webhook of an app. |
+| [DELETE /apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-delete) | 
+Delete an outgoing webhook of an app. |
 
 Outgoing webhooks enable integration with other services: specifically, they are used to notify other services. Currently, only build event notifications are supported. There are two supported build events: triggering a build and finishing a build.
 
