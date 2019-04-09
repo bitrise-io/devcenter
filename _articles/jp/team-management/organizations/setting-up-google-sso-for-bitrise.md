@@ -7,6 +7,8 @@ menu:
     weight: 18
 
 ---
+{% include not_translated_yet.html %}
+
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on Google G Suite.
 
 {% include message_box.html type="note" title="Google administrator account" content=" Please note that you must have a Google administrator account to add Bitrise as a SAML app. "%}
