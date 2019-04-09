@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/available-environment-variables.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/利用可能な環境変数-available-environment-variables.md
 - _articles/en/api/managing-files-in-generic-file-storage.md
 - _articles/en/reviews/getting-started-with-flutter-apps-draft.md
