@@ -4,7 +4,7 @@ redirect_from: []
 date: 2019-04-05 13:31:28 +0000
 menu:
   api:
-    weight: 10
+    weight: 9
 
 ---
 Set up new apps on Bitrise with the API: add the app, generate SSH keys, and set up the app's initial configuration.

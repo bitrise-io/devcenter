@@ -3,7 +3,7 @@ title: Managing iOS code signing files with the Bitrise API
 date: 2019-04-09 06:36:21 +0000
 menu:
   api:
-    weight: 1
+    weight: 18
 published: false
 
 ---

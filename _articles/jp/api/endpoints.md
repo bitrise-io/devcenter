@@ -4,7 +4,7 @@ redirect_from: []
 date: 2019-03-29 16:53:56 +0000
 menu:
   api:
-    weight: 8
+    weight: 7
 
 ---
 {% include not_translated_yet.html %}
