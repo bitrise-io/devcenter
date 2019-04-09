@@ -77,10 +77,6 @@ We'll discuss the Steps specific to iOS and Android deployment in their respecti
 
 {% include message_box.html type="note" title="Packages and libraries" content="We also support building Flutter packages and libraries. Unlike in the case of apps, there is no artifact to build so there is no need for a `Flutter Build` Step in your workflow."%}
 
-### iOS code signing for Flutter apps
-
-All iOS applications have to be signed with a provisioning profile and certificate to be able to deploy them to the App Store. 
-
 ### Deploying a Flutter app to Bitrise
 
 The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build’s page.
@@ -96,10 +92,26 @@ To deploy your iOS Flutter project to the App Store, you'll need to build the ap
 
 Unlike testing, this requires code signing files:
 
-* an iOS Distribution Certificate (a .p12 file)
-* an App Store Provisioning Profile
+* An iOS Distribution Certificate (a .p12 file).
+* An App Store Provisioning Profile.
+
+For Flutter applications, code signing requires setting a Team ID in the project settings in Xcode. 
 
 Read more about iOS code signing on Bitrise in [our detailed guides](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing/)!
+
+#### Configuring Team ID for Flutter apps
+
+Once you created your iOS project locally, you will need to review the project settings for it in Xcode. More specifically, you need to set a valid Team ID: without that, your build will fail on Bitrise. 
+
+1. In Xcode, open `Runner.xcworkspace` in your app’s `ios` folder.
+2. To view your app’s settings, select the `Runner` project in the Xcode project navigator. Then, in the main view sidebar, select the `Runner` target.
+3. Select the `General` tab.
+4. In the `Signing` section, find the `Team` menu and set it to the team associated with your registered Apple Developer account. 
+5. Commit the change to your repository! 
+
+   This is very important: if you only set the Team ID locally, your build will still fail on Bitrise! 
+
+#### Configuring deployment on Bitrise
 
  1. Make sure you have the `Certificate and profile installer` Step in your workflow.
  2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise.
