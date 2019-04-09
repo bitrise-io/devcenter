@@ -2,6 +2,9 @@
 title: Managing files in Generic File Storage
 redirect_from: []
 date: 2019-04-09 07:32:06 +0000
+menu:
+  api:
+    weight: 19
 published: false
 
 ---
