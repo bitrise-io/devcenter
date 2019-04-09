@@ -1,6 +1,7 @@
 ---
 title: Incoming and outgoing webhooks
-redirect_from: []
+redirect_from:
+- "/api/outgoing-webhooks/"
 date: 2019-04-09 15:10:01 +0000
 menu:
   api:
