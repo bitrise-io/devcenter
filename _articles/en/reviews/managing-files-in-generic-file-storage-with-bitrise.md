@@ -7,14 +7,16 @@ published: false
 ---
 You can upload, delete, update, and list any project files in the `GENERIC FILE STORAGE` section of the `Code Signing` tab with the [relevant Bitrise API endpoint](https://api-docs.bitrise.io/). Should you need more information on how to store your project files, check out [Using the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/).
 
+Here is a summary of all the endpoints and their functions related to generic project files:
+
 | Endpoints | Function |
 | --- | --- |
-| POST/apps/{app-slug}/generic-project-files | Create a generic project file |
-| POST/apps/{app-slug}/generic-project-files/{generic-project-file-slug}/uploaded | Confirm the upload process |
-| PATCH/apps/{app-slug}/generic-project-files/{generic-project-file-slug} | Update an uploaded project file |
-| GET/apps/{app-slug}/generic-project-files | Get a lis of the uploaded project files |
-| GET/apps/{app-slug}/generic-project-files/{generic-project-file-slug} | Retrieve data of a specific project file |
-| DELETE/apps/{app-slug}/generic-project-files/{generic-project-file-slug} | Delete an uploaded project file |
+| [POST/apps/{app-slug}/generic-project-files](https://api-docs.bitrise.io/#/generic-project-file/generic-project-files-create) | Create a generic project file |
+| [POST/apps/{app-slug}/generic-project-files/{generic-project-file-slug}/uploaded](https://api-docs.bitrise.io/#/generic-project-file/generic-project-file-confirm) | Confirm the upload process |
+| [PATCH/apps/{app-slug}/generic-project-files/{generic-project-file-slug}](https://api-docs.bitrise.io/#/generic-project-file/generic-project-file-update) | Update an uploaded project file |
+| [GET/apps/{app-slug}/generic-project-files](https://api-docs.bitrise.io/#/generic-project-file/generic-project-file-list) | Get a lis of the uploaded project files |
+| [GET/apps/{app-slug}/generic-project-files/{generic-project-file-slug}]( | Retrieve data of a specific project file |
+| [DELETE/apps/{app-slug}/generic-project-files/{generic-project-file-slug}](https://api-docs.bitrise.io/#/generic-project-file/generic-project-file-delete) | Delete an uploaded project file |
 
 ## Creating & uploading files to Generic File Storage
 
