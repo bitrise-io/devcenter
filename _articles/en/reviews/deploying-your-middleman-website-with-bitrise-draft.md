@@ -5,17 +5,19 @@ date: 2019-04-09 10:06:04 +0000
 published: false
 
 ---
+{% include not_translated_yet.html %}
+
 **This tutorial helps you create a basic static website project (for example, a blog) with** [**Middleman**](https://middlemanapp.com/)**, connect and deploy it with Bitrise.**
 
 ## Creating and cloning a repository on Github
 
-To create a new repository on Github, [follow the steps on Github](https://github.com/new). 
+To create a new repository on Github, [follow the steps on Github](https://github.com/new).
 
- You need to sign in with your Github account, or sign up if you don't have one yet. 
+You need to sign in with your Github account, or sign up if you don't have one yet.
 
 Once you created your repository, clone it.
 
-## 2. Install Middleman
+## Installing Middleman
 
 Middleman is distributed using the RubyGems package manager.
 This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman.
@@ -32,7 +34,7 @@ Once you have Ruby and Xcode (Command Line Tools), execute the following from th
 
 This will install Middleman, its dependencies and the command-line tools for using Middleman.
 
-## 3. Create a Middleman project
+## Creating a Middleman project
 
 To create a Middleman project, navigate to the root folder of your repository and execute the following from the command line:
 
@@ -40,7 +42,7 @@ To create a Middleman project, navigate to the root folder of your repository an
 
 Once the setup is finished, commit and push your changes.
 
-## 4. Connect your repository with Bitrise
+## Connecting your repository with Bitrise
 
 To connect your repository with Bitrise, visit the [Bitrise](https://www.bitrise.io/) site.
 You need to sign in with your Bitrise account, or sign up if you don't have one yet.
@@ -53,7 +55,7 @@ In the second step, you will see a list of all your repositories on GitHub. Sele
 In the third step, you will get an alert, since the repository you are connecting is not an Xcode project.
 Select "Configure Manually", then enter the branch name "master".
 
-## 5. Prepare your Workflow
+## Preparing your Workflow
 
 Once you created your project, select it in the [Dashboard](https://www.bitrise.io/dashboard)
 and select the `Workflow` tab from the top menu.
@@ -76,7 +78,7 @@ Select the `Script` step and add the following lines:
 
 The above code installs the dependencies specified in your `Gemfile`, and runs a Middleman build on the virtual machine.
 
-## 6. Deploy to Amazon S3: Add an Amazon S3 bucket sync to your Workflow steps
+## Deploying to Amazon S3: Add an Amazon S3 bucket sync to your Workflow steps
 
 Now we are going to add and customize an Amazon S3 bucket sync to the Workflow steps.
 Click on the _Add new Step_ button and select `Amazon S3 bucket sync` from the step list.
@@ -100,13 +102,13 @@ You can of course use `Heroku`, GitHub pages or any other service as your deploy
 You can find a more complex setup, deploying to `Heroku`,
 [on our Blog](http://blog.bitrise.io/2016/04/29/hooking-up-a-middleman-project-to-deploy-a-static-site-to-heroku-with-bitrise.html).
 
-## 7. Run build manually
+## Running builds manually
 
 Once the configuration of your Workflow is complete,
 you can run a build manually by clicking on the `Start/Schedule a build` button on the app's page (where you see the
 `Builds`, `Workflow`, `Team`, ... tabs).
 
-## 8. Run builds automatically
+## Running builds automatically
 
 If you chose GitHub when adding your repository, each code change (commit) on GitHub will automatically trigger a Bitrise build.
 Otherwise you can find more information about how you can setup a Webhook, to trigger builds
