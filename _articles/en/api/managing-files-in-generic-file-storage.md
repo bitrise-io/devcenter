@@ -4,7 +4,7 @@ redirect_from: []
 date: 2019-04-09 07:32:06 +0000
 menu:
   api:
-    weight: 20
+    weight: 17
 
 ---
 You can upload, delete, update, and list any project files in the `GENERIC FILE STORAGE` section of the `Code Signing` tab with the [relevant Bitrise API endpoint](https://api-docs.bitrise.io/). Should you need more information on how to store your project files, check out [Using the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/).

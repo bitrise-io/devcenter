@@ -1,9 +1,5 @@
 ---
 title: Outgoing Webhooks
-menu:
-  api:
-    weight: 16
-    title: Outgoing webhooks
 
 ---
 {% include not_translated_yet.html %}
