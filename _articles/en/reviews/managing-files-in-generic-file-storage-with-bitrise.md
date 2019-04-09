@@ -1,5 +1,5 @@
 ---
-title: Managing files in Generic File Storage with API
+title: Managing files in Generic File Storage
 redirect_from: []
 date: 2019-04-01 10:48:09 +0000
 published: false
