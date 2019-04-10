@@ -53,36 +53,36 @@ Before you start, make sure you're signed up to Bitrise either via your [git pro
 ## Preparing your Workflow
 
 1. Once you created your project, select it in the [Dashboard](https://www.bitrise.io/dashboard).
-2. Select the `Workflow` tab from the top menu. We are going to add a bash script that will be executed on each build. 
-3. First, delete all the automatically created steps (if any). 
+2. Select the `Workflow` tab from the top menu. We are going to add a bash script that will be executed on each build.
+3. First, delete all the automatically created steps (if any).
 4. Next, we need to add new steps. You can add new steps by clicking on the `+` sign button between steps / in the step list and selecting the step
    from the step list popup. Add the following steps to your Workflow, in this order:
    * `Activate SSH key` - unless you used the public, non SSH URL of the repository during the Add New App process
    * `Git Clone Repository`
    * `Script`
+5. Select the `Script` step and add the following lines:
 
-Select the `Script` step and add the following lines:
-
-    #!/bin/bash
-    set -ex
-    bundle install
-    bundle exec middleman build --verbose
+   \#!/bin/bash
+   set -ex
+   bundle install
+   bundle exec middleman build --verbose
 
 The above code installs the dependencies specified in your `Gemfile`, and runs a Middleman build on the virtual machine.
 
-## Deploying to Amazon S3: Add an Amazon S3 bucket sync to your Workflow steps
+## Deploying to Amazon S3:
+
+Add an Amazon S3 bucket sync to your Workflow steps
 
 Now we are going to add and customize an Amazon S3 bucket sync to the Workflow steps.
-Click on the _Add new Step_ button and select `Amazon S3 bucket sync` from the step list.
 
-Select the step to customize it.
+1. Click on the _Add new Step_ button and select `Amazon S3 bucket sync` from the step list.
+2. Select the step to customize it.
+   * Enter your AWS access key
+   * Your AWS secret key
+   * And enter a name for your S3 bucket.
+   * For your local path, enter the following: `$BITRISE_SOURCE_DIR/build/`
 
-* Enter your AWS access key
-* Your AWS secret key
-* And enter a name for your S3 bucket.
-* For your local path, enter the following: `$BITRISE_SOURCE_DIR/build/`
-
-This will select the _contents_ of the build folder in the project source path on the virtual machine.
+This will select the contents of the build folder in the project source path on the virtual machine.
 It will be uploaded on every build.
 
 For access control, enter `public-read` or `private`, as advised.
