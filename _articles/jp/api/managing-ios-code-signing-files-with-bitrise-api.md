@@ -34,7 +34,7 @@ Build certificates
 | GET/apps/{app-slug}/build-certificates/{build-certificate-slug} | Retrieve data of a specific project file |
 | DELETE/apps/{app-slug}/build-certificates/{build-certificate-slug} | Delete an uploaded project file |
 
-## Creating & uploading an iOS code signing file
+## Creating and uploading an iOS code signing file
 
 You can add a new iOS code signing file to an application of your choice.
 
