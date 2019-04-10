@@ -11,22 +11,17 @@ published: false
 
 ## Creating and cloning a repository on Github
 
-To create a new repository on Github, [follow the steps on Github](https://github.com/new).
+First, you need to sign in with your Github account, or sign up if you don't have one yet.
 
-You need to sign in with your Github account, or sign up if you don't have one yet.
-
-Once you created your repository, clone it.
+1. To create a new repository on Github, [follow the steps on Github](https://github.com/new).
+2. Once you've created your repository, clone it.
 
 ## Installing Middleman
 
 Middleman is distributed using the RubyGems package manager.
 This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman.
 
-MacOS comes prepackaged with Ruby, however, some of the Middleman's dependencies need to be compiled
-during installation and on macOS that requires Xcode.
-Xcode can be installed via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12).
-Alternately you can just install the Xcode Command Line Tools, that should be enough
-if you don't want to install the full Xcode.app.
+MacOS comes prepackaged with Ruby, however, some of Middleman's dependencies need to be compiled during installation and on macOS that requires Xcode. Xcode can be installed via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12). Alternately you can just install the Xcode Command Line Tools, that should be enough if you don't want to install the full Xcode.app.
 
 Once you have Ruby and Xcode (Command Line Tools), execute the following from the command line:
 
@@ -36,11 +31,11 @@ This will install Middleman, its dependencies and the command-line tools for usi
 
 ## Creating a Middleman project
 
-To create a Middleman project, navigate to the root folder of your repository and execute the following from the command line:
+1. To create a Middleman project, navigate to the root folder of your repository and execute the following from the command line:
 
     middleman init my_new_project
 
-Once the setup is finished, commit and push your changes.
+2. Once the setup has finished, commit and push your changes.
 
 ## Connecting your repository with Bitrise
 
