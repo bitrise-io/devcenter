@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/use-bitrise-yml-from-repository-draft.md
 - _articles/en/reviews/account-security-draft.md
 - _articles/jp/api/incoming-and-outgoing-webhooks.md
 - _articles/en/api/incoming-and-outgoing-webhooks.md
