@@ -18,51 +18,48 @@ First, you need to sign in with your Github account, or sign up if you don't hav
 
 ## Installing Middleman
 
-Middleman is distributed using the RubyGems package manager.
-This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman.
+Let's see all the tools you need to use Middleman.
 
-MacOS comes prepackaged with Ruby, however, some of Middleman's dependencies need to be compiled during installation and on macOS that requires Xcode. Xcode can be installed via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12). Alternately you can just install the Xcode Command Line Tools, that should be enough if you don't want to install the full Xcode.app.
+Middleman is distributed using the RubyGems package manager. This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman.
+
+MacOS comes prepackaged with Ruby, however, some of Middleman's dependencies need to be compiled during installation. On macOS that requires Xcode that you can install via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12). Alternately you can just install the Xcode Command Line Tools, that should be enough if you don't want to install the full Xcode.app.
 
 Once you have Ruby and Xcode (Command Line Tools), execute the following from the command line:
 
     gem install middleman
 
-This will install Middleman, its dependencies and the command-line tools for using Middleman.
+This will install Middleman, its dependencies and the command-line tools.
 
 ## Creating a Middleman project
 
+Now that you have installed Middleman, let's create a new Middleman project!
+
 1. To create a Middleman project, navigate to the root folder of your repository and execute the following from the command line:
 
-    middleman init my_new_project
-
+       middleman init my_new_project
 2. Once the setup has finished, commit and push your changes.
 
 ## Connecting your repository with Bitrise
 
-To connect your repository with Bitrise, visit the [Bitrise](https://www.bitrise.io/) site.
-You need to sign in with your Bitrise account, or sign up if you don't have one yet.
-Once you're signed in, select [Add new App](https://www.bitrise.io/apps/add) in the top dropdown menu.
+Before you start, make sure you're signed up to Bitrise either via your [git provider](/getting-started/signing-up/signing-up-with-github/) or [email](/getting-started/signing-up/signing-up-with-email/).
 
-In the first step, you need to select the provider, where you store your code, in this case, GitHub.
-
-In the second step, you will see a list of all your repositories on GitHub. Select the one you just created.
-
-In the third step, you will get an alert, since the repository you are connecting is not an Xcode project.
-Select "Configure Manually", then enter the branch name "master".
+1. Once you're signed in, click `+` to [Add new App](/getting-started/adding-a-new-app/index/).
+2. Connect a [provider](/getting-started/adding-a-new-app/connecting-a-repository/) (in this case, GitHub).
+   You will see a list of all your repositories on GitHub.
+3. Select the repository you just created.
+4. Next you will get an alert, since the repository you are connecting is not an Xcode project. Select `Configure Manually`, then enter the branch name `master`.
+5. 
 
 ## Preparing your Workflow
 
-Once you created your project, select it in the [Dashboard](https://www.bitrise.io/dashboard)
-and select the `Workflow` tab from the top menu.
-We are going to add a bash script that will be executed on each build.
-First, delete all the automatically created steps (if any).
-Next, we need to add new steps.
-You can add new steps by clicking on the `+` sign button between steps / in the step list and selecting the step
-from the step list popup. Add the following steps to your Workflow, in this order:
-
-1. `Activate SSH key` - unless you used the public, non SSH URL of the repository during the Add New App process
-2. `Git Clone Repository`
-3. `Script`
+1. Once you created your project, select it in the [Dashboard](https://www.bitrise.io/dashboard).
+2. Select the `Workflow` tab from the top menu. We are going to add a bash script that will be executed on each build. 
+3. First, delete all the automatically created steps (if any). 
+4. Next, we need to add new steps. You can add new steps by clicking on the `+` sign button between steps / in the step list and selecting the step
+   from the step list popup. Add the following steps to your Workflow, in this order:
+   * `Activate SSH key` - unless you used the public, non SSH URL of the repository during the Add New App process
+   * `Git Clone Repository`
+   * `Script`
 
 Select the `Script` step and add the following lines:
 
