@@ -8,7 +8,7 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-{% include message_box.html type="note" title="iOS code signing with the Bitrise API" content=" This guide describes how to manage your iOS code signing files with the Bitrise API. If you'd like to learn more about how to do the same on the UI, please check out [iOS code signing on Bitrise](/code-signing/ios-code-signing/code-signing/). "%} 
+{% include message_box.html type="note" title="iOS code signing with the Bitrise API" content=" This guide describes how to manage your iOS code signing files with the Bitrise API. If you'd like to learn more about how to do the same on the UI, please check out [iOS code signing on Bitrise](/code-signing/ios-code-signing/code-signing/). "%}
 
 You can upload, update, list, and delete iOS code signing files with the [relevant Bitrise API](https://api-docs.bitrise.io/). In this guide we show you how and in what order to use those code signing endpoints. First, here is a summary of all our iOS code signing endpoints and their functions.
 
@@ -34,7 +34,7 @@ Build certificates
 | GET/apps/{app-slug}/build-certificates/{build-certificate-slug} | Retrieve data of a specific project file |
 | DELETE/apps/{app-slug}/build-certificates/{build-certificate-slug} | Delete an uploaded project file |
 
-## Creating and uploading an iOS code signing file
+## Creating & uploading an iOS code signing file
 
 You can add a new iOS code signing file to an application of your choice.
 
