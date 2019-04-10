@@ -55,7 +55,7 @@ collections:
     permalink: /:path/
     localized: true
 
-exclude: 
+exclude:
   - 'plugins'
 
 defaults:
@@ -81,6 +81,8 @@ algolia:
   files_to_exclude:
     - forestry-help*
     - _articles/en/reviews/**/*.md
+    - _articles/jp/**/*.md
+  nodes_to_index: 'p,h1,h2,h3,h4,h5,h6'
 
 languages: ['en', 'jp']
 exclude_from_localizations: ['assets/**/*', 'bitrise.yml', 'apple-touch-icon-*.png']
