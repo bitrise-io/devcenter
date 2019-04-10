@@ -5,7 +5,7 @@ date: 2019-04-10 09:10:48 +0000
 published: false
 
 ---
-## Enable Two-factor authentication
+## Enabling Two-factor authentication
 
 We provide an extra layer of security if you enable Two-factor authentication (TFA) on your Bitrise account.
 
@@ -18,9 +18,37 @@ We provide an extra layer of security if you enable Two-factor authentication (T
 7. Enter the 6-digit code that was generated.
 8. Once you have activated your TFA and saved your recovery codes, you will receive a confirmation email from `letsconnect@bitrise.io`.
 
-We recommend that you check your connected accounts (GitHub, Bitbucket, GitLab and Xamarin) and enable TFAs if you haven't already.
+{% include message_box.html type="note" title="TFA on connected accounts" content=" We recommend that you check your connected accounts (GitHub, Bitbucket, GitLab and Xamarin) and enable TFAs if you haven't already. "%}
 
-## Generate personal access tokens manually
+## Disabling Two-factor authentication
+
+Follow this procedure to disable two-factor authentication if you are already logged into Bitrise.
+
+1. Log in to [bitrise.io](https://www.bitrise.io) and go to your `Profile`.
+2. Click `Account settings`.
+3. Scroll down and click `Security` on the left.
+4. Click on `Disable` under `Two-factor authentication`.
+
+   ![](/img/disable-tfa.png)
+5. Provide your Bitrise login password in the pop-up window.
+
+   ![](/img/provide-password-2fa.jpg)
+
+Now two-factor authentication is disabled.
+
+Please note that if you're not logged into your Bitrise account and request us to disable 2FA on your account, we cannot do that. 2FA protects your account from unwanted login attempts by providing an extra layer of security on top of the usual password and username login process.
+
+If you enabled 2FA on your Bitrise account and lose your authenticator app along with the recovery codes, we will not be able to recover your account. If there has been any third-party service (for example, GitLab, GitHub) connected to your account before, you might try logging in through that. In the absence of a connected third-party account, we recommend you to create a new account on Bitrise.
+
+If you have lost your phone along with the authenticator app and verification code, Bitrise can only disable the activated 2FA on your account, if there is an existing **public** repo on a git account already connected to Bitrise. 
+
+1. Contact our Support team using the email address you provided when registering to Bitrise.
+2. Create a new public repo on your git account with the title: `bitrise_verification`
+3. Send the link of the created repo to our Support team.
+
+Our Support Team will remove 2FA on your account. Please note that if we find removing 2FA risky from your account for any reason, we will not disable it.
+
+## Generating personal access tokens manually
 
 There are two types of personal access tokens in your `Security` tab of your profile:
 
