@@ -36,17 +36,19 @@ Follow this procedure to disable two-factor authentication if you are already lo
 
 Now two-factor authentication is disabled.
 
-Please note that if you're not logged into your Bitrise account and request us to disable 2FA on your account, we cannot do that. 2FA protects your account from unwanted login attempts by providing an extra layer of security on top of the usual password and username login process.
+2FA protects your account from unwanted login attempts by providing an extra security step on top of the usual password+username login. Therefore, if you request us to disable 2FA and provide your password, we will not remove the activated 2FA from your account. If there has been any third-party service (for example, GitLab, GitHub or Bitbucket) connected to your account before, you can try to log in through that. In the absence of a connected third-party account, we recommend you to create a new account on Bitrise.
 
-If you enabled 2FA on your Bitrise account and lose your authenticator app along with the recovery codes, we will not be able to recover your account. If there has been any third-party service (for example, GitLab, GitHub) connected to your account before, you might try logging in through that. In the absence of a connected third-party account, we recommend you to create a new account on Bitrise.
-
-If you have lost your phone along with the authenticator app and verification code, Bitrise can only disable the activated 2FA on your account, if there is an existing **public** repo on a git account already connected to Bitrise. 
+In very special cases, Bitrise can remove 2FA on your account. Let's assume you have lost your phone along with the authenticator app and recovery codes. Bitrise can only disable the activated 2FA on your account, if there is a public repo on a git account **already connected to Bitrise**. 
 
 1. Contact our Support team using the email address you provided when registering to Bitrise.
-2. Create a new public repo on your git account with the title: `bitrise_verification`
+2. Explain why you're requesting us to remove 2FA.
+
+   Our Support Team will ask you to create a new public repo on your git account with the title: `bitrise_verification`
 3. Send the link of the created repo to our Support team.
 
-Our Support Team will remove 2FA on your account. Please note that if we find removing 2FA risky from your account for any reason, we will not disable it.
+Our Support Team will remove 2FA on your account. 
+
+Please note that if we find removing 2FA from your account risky for any reason, we will not disable it.
 
 ## Generating personal access tokens manually
 
