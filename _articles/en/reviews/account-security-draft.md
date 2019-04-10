@@ -42,7 +42,7 @@ Now two-factor authentication is disabled.
 
 However, if there has been any third-party service (for example, GitLab, GitHub or Bitbucket) connected to your account before, you can try to log in through that. In the absence of a connected third-party account, we recommend you to create a new account on Bitrise.
 
-In very special cases, Bitrise can remove 2FA from your account. Please note that Bitrise can only disable the activated 2FA on your account if there is a public repo on your git account **already connected to Bitrise**.
+In very special cases, Bitrise can remove 2FA from your account. Please note that Bitrise can only disable the activated 2FA on your account if there is a public repo on your git **account** **already connected to Bitrise**.
 
 1. Contact our Support Team using the email address you provided when signing up to Bitrise.
 2. Explain why you're requesting us to remove 2FA.
