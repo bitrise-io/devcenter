@@ -82,7 +82,8 @@ module Jekyll
         next if File.directory?(full_path)
 
         # This is the important bit, if `localized` is turned on for the collection skip other locales
-        next if self.metadata['localized'] and !file_path.start_with? "#{lang}/"
+        # Do not skip for Algolia, the JEKYLL_ENV must be set to 'algolia' for this hack to work
+        next if self.metadata['localized'] and !file_path.start_with? "#{lang}/" and Jekyll.env != 'algolia'
         if Utils.has_yaml_header? full_path
           read_document(full_path)
         else
