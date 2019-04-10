@@ -36,13 +36,13 @@ Follow this procedure to disable two-factor authentication if you are already lo
 
 Now two-factor authentication is disabled.
 
-### What to do if you have lost your authenticator and recovery codes 
+### What to do if you have lost your authenticator and recovery codes
 
-2FA protects your account from unwanted login attempts (for example, with a stolen password) by providing an extra security step at the end of the login flow. Therefore, in the case of a lost phone, if you request us to disable 2FA and provide your password, we will not remove the activated 2FA from your account. 
+2FA protects your account from unwanted login attempts (for example, with a stolen password) by providing an extra security step at the end of the login flow. Therefore, in the case of a lost phone, if you request us to disable 2FA and provide your password, we will not remove the activated 2FA from your account.
 
 However, if there has been any third-party service (for example, GitLab, GitHub or Bitbucket) connected to your account before, you can try to log in through that. In the absence of a connected third-party account, we recommend you to create a new account on Bitrise.
 
-In very special cases, Bitrise can remove 2FA from your account. Please note that Bitrise can only disable the activated 2FA on your account, if there is a public repo on your git account **already connected to Bitrise**. 
+In very special cases, Bitrise can remove 2FA from your account. Please note that Bitrise can only disable the activated 2FA on your account if there is a public repo on your git account **already connected to Bitrise**.
 
 1. Contact our Support Team using the email address you provided when signing up to Bitrise.
 2. Explain why you're requesting us to remove 2FA.
@@ -50,7 +50,7 @@ In very special cases, Bitrise can remove 2FA from your account. Please note tha
    Our Support Team will ask you to create a new public repo on your git account with the title: `bitrise_verification`
 3. Send the link of the created repo to our Support Team.
 
-Our Support Team will remove 2FA on your account. 
+Our Support Team will remove 2FA on your account.
 
 Please note that our Support Team can deny your request if they find removing 2FA from the account might pose a security risk.
 
