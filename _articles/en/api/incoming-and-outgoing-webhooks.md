@@ -20,7 +20,7 @@ Incoming webhooks enable users to set up automatic triggers for their apps on Bi
 
 To set up a webhook, you must have connected your Bitrise account to your Git provider account: this allows Bitrise to register the webhook automatically.
 
-Register a webhook with the API by calling the `register-webhook` endpoint with an existing app slug:
+Register a webhook by calling the `register-webhook` endpoint with an existing app slug:
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-webhook'
 
