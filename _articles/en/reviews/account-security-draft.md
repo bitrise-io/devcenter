@@ -36,7 +36,7 @@ Follow this procedure to disable two-factor authentication if you are already lo
 
 Now two-factor authentication is disabled.
 
-### What to do if you have lost your authenticator and recovery codes
+### Have you lost your authenticator and recovery codes?
 
 2FA protects your account from unwanted login attempts (for example, with a stolen password) by providing an extra security step at the end of the login flow. Therefore, in the case of a lost phone, if you request us to disable 2FA and provide your password, we will not remove the activated 2FA from your account.
 
