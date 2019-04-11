@@ -88,6 +88,8 @@ This `bitrise.yml` file does not need its own trigger map: the previously set up
 
    For example, if your wrapper configuration's trigger map triggers a `ci` workflow on code push and a `deploy` workflow on a pull request, you need to have both in your file, with the same name. 
 1. Add all the Steps you want. 
+   
+   Note that at his point your repository's SSH key will have been activated and the repository itself cloned on Bitrise. Do not add these Steps to your workflows as they are unnecessary. 
 1. Commit the file to your repository. 
 
 ## Potential issues of storing the bitrise.yml in the repository
