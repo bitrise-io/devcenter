@@ -20,11 +20,12 @@ In our example, we'll use:
 * A workflow called `run_from_repo` to tell Bitrise to continue the build from the repository.
 * A workflow called `ci` with an `after_run` attribute set to the `run_from_repo` workflow. 
 
+In this example, a code push will trigger the `ci` workflow, which in turn triggers the `run_from_repo` workflow. The `run_from_repo` runs a `Script` Step which runs the `bitrise run ci` command in the repository. Let's do it! 
+
 1. Open your app on [bitrise.io](https://www.bitrise.io).
 2. Open the Workflow Editor and go the `bitrise.yml` tab.
 3. Set up a trigger map that automatically triggers a specific workflow.
 
-       {% raw %}
        ---
        format_version: 1.4.0
        default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -38,18 +39,16 @@ In our example, we'll use:
 
    This workflow must have an `after_run` attribute that points to another workflow. 
 
-       {% raw %}
        ci:
          after_run:
-         - _run_from_repo
+         - run_from_repo
 5. Set up the workflow that is triggered by the `after_run` attribute. 
 
    This workflow must have a `Script` Step with the command `bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}`. 
    
    ```
-   {% raw %}
    workflows:
-      _run_from_repo:
+      run_from_repo:
         steps:
         - activate-ssh-key:
             run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
@@ -64,13 +63,23 @@ In our example, we'll use:
                 
     ```
 
-And that's it! 
 
-1. Create an app on .
-2. Go to the `Workflow` tab to open the Workflow Editor.
-3. In the Workflow Editor, switch to the `bitrise.yml` tab.
-4. Set up a configuration with two workflows.
-5. Save the changes.
+
+Of course, this only works if the `bitrise.yml` file in your repository does have a `ci` workflow. Let's see the details of that!
+
+### Adding a bitrise.yml to your repo
+
+Your `bitrise.yml` must have a workflow that is also defined in the wrapper config. To be more precise, it must contain all the workflows that are defined in the trigger map of the wrapper config, which is stored on bitrise.io. 
+
+This `bitrise.yml` file does not need its own trigger map: the previously set up wrapper configuration will take care of triggering the appropriate workflows. 
+
+1. Create a `bitrise.yml` file. 
+   
+   No need to build it from scratch: you can edit and download your app's `bitrise.yml` configuration on the `bitrise.yml` tab of the Workflow Editor. 
+1. Define all the workflows that are present in the trigger map of the wrapper configuration. 
+
+   For example, if your wrapper configuration's trigger map triggers a `ci` workflow on code push and a `deploy` workflow on a pull request, you need to have both in your file, with the same name. 
+1. Add all the Steps you want. 
 
 ### Trigger Map is better to be managed on bitrise.io
 
