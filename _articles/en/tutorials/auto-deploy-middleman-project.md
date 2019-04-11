@@ -49,7 +49,7 @@ Before you start, make sure you're signed up to Bitrise either via your [git pro
 4. Select the repository you just created.
 5. Next you will get an alert, since the repository you are connecting is not an Xcode project. Select `Configure Manually`, then enter the branch name `master`.
 
-## Preparing your Workflow
+## Preparing your workflow
 
 1. Once you created your project, select it in the [Dashboard](https://www.bitrise.io/dashboard).
 2. Go to Workflow Editor.
