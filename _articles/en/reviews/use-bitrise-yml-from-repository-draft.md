@@ -48,7 +48,9 @@ In this example, a code push will trigger the `ci` workflow, which in turn trigg
          - run_from_repo
 5. Set up the workflow that is triggered by the `after_run` attribute. 
 
-   This workflow must have a `Script` Step with the command `bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}`. 
+   This workflow must have:
+   - A `Git Clone` Step to clone your repository. 
+   - A `Script` Step with the command `bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}`. 
    
    ```
    workflows:
