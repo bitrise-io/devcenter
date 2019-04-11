@@ -2,7 +2,11 @@
 title: Deploying your Middleman website with Bitrise
 menu:
   tutorials:
+<<<<<<< HEAD
+    weight: 8
+=======
     weight: 10
+>>>>>>> 89a87a56003e1d30aabcacf650bb7d9734cb46db
 
 ---
 {% include not_translated_yet.html %}
