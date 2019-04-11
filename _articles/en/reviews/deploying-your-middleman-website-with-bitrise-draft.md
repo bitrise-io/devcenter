@@ -7,7 +7,7 @@ published: false
 ---
 {% include not_translated_yet.html %}
 
-**This tutorial helps you create a basic static website project (for example, a blog) with** [**Middleman**](https://middlemanapp.com/)**, connect and deploy it with Bitrise.**
+This tutorial describes how you can create a basic static website project (for example, a blog) with [Middleman](https://middlemanapp.com/), and how to connect and deploy the project with Bitrise.
 
 ## Creating and cloning a repository on Github
 
