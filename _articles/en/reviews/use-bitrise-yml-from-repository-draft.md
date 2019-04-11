@@ -71,8 +71,6 @@ In this example, a code push will trigger the `ci` workflow, which in turn trigg
                 
     ```
 
-
-
 Of course, this only works if the `bitrise.yml` file in your repository does have a `ci` workflow. Let's see the details of that!
 
 ### Adding a bitrise.yml to your repo
@@ -123,35 +121,4 @@ However, the [offline workflow editor](https://github.com/bitrise-io/bitrise-wor
 
 ### Pull Requests can run builds with any custom configuration
 
-When someone sends a Pull Request they can modify the `bitrise.yml` in your repository any way they like it. A recent trend for example is to send pull requests which run a bitcoin miner, as long as that's possible. This can make _your_ builds to queue, until you abort the related build or it hits the build time limit.
-
-## Template bitrise.yml for your wrapper configuration
-
-    {% raw %}
-    ---
-    format_version: 1.4.0
-    default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-    
-    trigger_map:
-    - push_branch: "*"
-      workflow: ci
-    - pull_request_target_branch: "*"
-      workflow: ci
-    
-    workflows:
-      _run_from_repo:
-        steps:
-        - activate-ssh-key:
-            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-        - git-clone: {}
-        - script:
-            title: continue from repo
-            inputs:
-            - content: |-
-                #!/bin/bash
-                set -ex
-                bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"
-      ci:
-        after_run:
-        - _run_from_repo
-    {% endraw %}
+When someone sends a Pull Request they can modify the `bitrise.yml` in your repository any way they like it. This can force _your_ builds to queue. 
