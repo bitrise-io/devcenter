@@ -11,14 +11,14 @@ It is possible to store the build configuration ( that is, your app's `bitrise.y
 
 The easiest way to use a `bitrise.yml` from your repository is to define a so-called wrapper config. A wrapper config means setting up a `bitrise.yml` configuration on [bitrise.io](https://www.bitrise.io/): this configuration defines how the repository and the actual `bitrise.yml` file you want to use will be retrieved.
 
-The wrapper configuration will contain an automatically triggered workflow, and another one that will tell Bitrise to continue the build from the repository. To make this work, we take advantage of a `Script` Step and the `$BITRISE_TRIGGERED_WORKFLOW_ID` environment variable.
+The wrapper configuration will contain an automatically triggered workflow, and another one that will tell Bitrise to continue the build from the repository. To make this work, we take advantage of a `Script` Step and the `$BITRISE_TRIGGERED_WORKFLOW_ID` environment variable. This environment variable is automatically set to the workflow that triggered the build: if we have a workflow with the same name defined in the `bitrise.yml` file that is stored in the repository, we can run that workflow. 
 
 In our example, we'll use:
 
 * A trigger map where the `ci` workflow is triggered by code push to the `master` branch.
 * 
 * A workflow called `run_from_repo` to tell Bitrise to continue the build from the repository.
-* A workflow called `ci` with an `after_run` attribute: the attribute value is set to the `run_from_repo` workflow. 
+* A workflow called `ci` with an `after_run` attribute set to the `run_from_repo` workflow. 
 
 1. Open your app on [bitrise.io](https://www.bitrise.io).
 2. Open the Workflow Editor and go the `bitrise.yml` tab.
