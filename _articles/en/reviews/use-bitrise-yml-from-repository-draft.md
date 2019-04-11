@@ -7,6 +7,8 @@ published: false
 ---
 It is possible to store the build configuration ( that is, your app's `bitrise.yml` file) in your repository. The approach has its pros and cons; let's go through how to do it and why you'd want to do it!
 
+## Configuring Bitrise to run a bitrise.yml from your repository
+
 You can, of course, simply use the Bitrise CLI to locally run your builds. You just need to set up a `bitrise.yml` file and use `bitrise run` to run the workflow or workflows you want. 
 
 In the following examples, we'll discuss the **other** way: we'll define a "wrapper" configuration which will then run the build on Bitrise, using a `bitrise.yml` stored in your repository. 
@@ -88,6 +90,15 @@ This `bitrise.yml` file does not need its own trigger map: the previously set up
 1. Add all the Steps you want. 
 1. Commit the file to your repository. 
 
+## Potential issues of storing the bitrise.yml in the repository
+
+The approach of storing your `bitrise.yml` file in your repository, and running your builds based on that configuration has its disadvantages. We'll discuss a few potential pitfalls of this.  
+
+- The Trigger Map is better to be managed on bitrise.io.
+- You can't change the build configuration of a specific commit.
+- You can't edit the configuration in the online Workflow Editor. 
+- Any Pull Request can run builds with its own custom configuration. 
+
 ### Trigger Map is better to be managed on bitrise.io
 
 You can of course store the `trigger_map` (or `Triggers` on the web UI) in your repository (in `bitrise.yml`), but if you do that you'll lose the ability to _ignore_ patterns. This is because [bitrise.io](https://www.bitrise.io) have to evaluate the Trigger map **before** the repository would be cloned in order to be able to avoid starting a build based on the Trigger map.
@@ -108,8 +119,7 @@ _The only way to change the configuration_ is to checkout the related branch, ch
 
 The Workflow Editor on [bitrise.io](https://www.bitrise.io) can only be used to visualize and edit the configuration stored on [bitrise.io](https://www.bitrise.io).
 
-The [offline workflow editor](https://github.com/bitrise-io/bitrise-workflow-editor) of course can be used, so this is probably not a huge issue - and we're working on it to make it as streamlined as possible - but might make it harder to get started (as you have to install the Bitrise CLI locally).
-
+The [offline workflow editor](https://github.com/bitrise-io/bitrise-workflow-editor) of course can be used.
 ### Pull Requests can run builds with any custom configuration
 
 When someone sends a Pull Request they can modify the `bitrise.yml` in your repository any way they like it. A recent trend for example is to send pull requests which run a bitcoin miner, as long as that's possible. This can make _your_ builds to queue, until you abort the related build or it hits the build time limit.
@@ -161,73 +171,3 @@ The example here is really simple to setup, should work in most cases (unless yo
         after_run:
         - _run_from_repo
     {% endraw %}
-
-#### How this works:
-
-This setup splits the build configuration into two parts:
-
-1. The "wrapper" config on [bitrise.io](https://www.bitrise.io) which **defines how the repository have to be retrieved** (e.g. through a Git Clone), which workflows are exposed for [bitrise.io](https://www.bitrise.io) builds, and defines the automatic [Trigger mapping](/webhooks/trigger-map/).
-2. Your build configuration (`bitrise.yml`), stored in your repository, which **defines what should happen during the builds.**
-
-[This "wrapper" configuration](#bitriseyml-content-for-bitriseio) defines a common workflow `_run_from_repo`, which will activate an SSH key (if specified), Git Clone the repository, and then switch to use the `bitrise.yml` from the repository by running `bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"`.
-
-This common workflow (`_run_from_repo`) is then used through other workflows, like `ci` and `another-workflow`, using the `after_run` [workflow chaining](/bitrise-cli/workflows/#chaining-workflows-and-reusing-workflows) mechanism. Those workflows do not have any steps, the only thing the `ci` and `another-workflow` workflows do is running the common `_run_from_repo` workflow.
-
-The trick is `bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"`. The `BITRISE_TRIGGERED_WORKFLOW_ID` environment variable is set to the **"entry"** workflow, **the one which started the build.** So, by running the `ci` workflow, the `bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"` command will be the same as `bitrise run "ci"`.
-
-This makes it super simple and quick to expose workflows from your `bitrise.yml` (stored in your repository) to [bitrise.io](https://www.bitrise.io), all you have to do is:
-
-1. Define the workflow in your `bitrise.yml` (in your repository).
-2. Clone the `ci` workflow (or the `another-workflow`) with a name matching the workflow in your `bitrise.yml` (in your repository), or create a new empty workflow with a matching name and add the `_run_from_repo` as an `after_run` workflow. _Note: in the Workflow Editor UI you can quickly clone a workflow by selecting the workflow, then clicking the "add new workflow" (_`_+_`_) button._
-
-### Step by step usage guide of the wrapper config:
-
-For example, to add a new `deploy` workflow and to expose it for [bitrise.io](https://www.bitrise.io) builds, once you [prepared your wrapper config on bitrise.io](#bitriseyml-content-for-bitriseio):
-
-1. Create a `deploy` workflow **in your** `**bitrise.yml**` (in your repository, and don't forget to commit and push the `bitrise.yml` changes!)
-2. Then create a new workflow with the same name (`deploy`) **on** [**bitrise.io**](https://www.bitrise.io)
-3. Make sure that the `deploy` workflow on [bitrise.io](https://www.bitrise.io) has the `_run_from_repo` as an `after_run` workflow.
-4. Define [Triggers](/webhooks/trigger-map/) for the `deploy` workflow **on** [**bitrise.io**](https://www.bitrise.io) if you want to automate the triggering of that workflow.
-
-Following the steps above, for example to run `deploy` for every code push on `master` you should have a configuration like this **on** [**bitrise.io**](https://www.bitrise.io):
-
-    {% raw %}
-    ---
-    format_version: 1.4.0
-    default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-    
-    trigger_map:
-    - push_branch: "master"
-      workflow: deploy
-    - push_branch: "*"
-      workflow: ci
-    - pull_request_target_branch: "*"
-      workflow: ci
-    
-    workflows:
-      _run_from_repo:
-        steps:
-        - activate-ssh-key:
-            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-        - git-clone: {}
-        - script:
-            title: continue from repo
-            inputs:
-            - content: |-
-                #!/bin/bash
-                set -ex
-                bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"
-      deploy:
-        after_run:
-        - _run_from_repo
-    
-      ci:
-        after_run:
-        - _run_from_repo
-    
-      another-workflow:
-        after_run:
-        - _run_from_repo
-    {% endraw %}
-
-This configuration will run the `deploy` workflow _from your repository_ for every code push on the `master` branch, the `ci` workflow _from your repository_ for every code push on other branches as well as for Pull Requests, and it will never run `another-workflow` automatically, but you will be able to start manual builds with `another-workflow`, which will invoke the `another-workflow` workflow _from the_ `_bitrise.yml_` _in your repository_.
