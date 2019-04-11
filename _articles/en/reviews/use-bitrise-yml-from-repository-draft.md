@@ -122,24 +122,12 @@ _The only way to change the configuration_ is to checkout the related branch, ch
 The Workflow Editor on [bitrise.io](https://www.bitrise.io) can only be used to visualize and edit the configuration stored on [bitrise.io](https://www.bitrise.io).
 
 The [offline workflow editor](https://github.com/bitrise-io/bitrise-workflow-editor) of course can be used.
+
 ### Pull Requests can run builds with any custom configuration
 
 When someone sends a Pull Request they can modify the `bitrise.yml` in your repository any way they like it. A recent trend for example is to send pull requests which run a bitcoin miner, as long as that's possible. This can make _your_ builds to queue, until you abort the related build or it hits the build time limit.
 
-## Example to use bitrise.yml from the repository
-
-There are quite a few ways to accomplish this, as all you need is:
-
-1. Define a "wrapper" build config on [bitrise.io](https://www.bitrise.io), which defines how and from where your `bitrise.yml` will be retrieved. E.g. you could store the `bitrise.yml` in a [GitHub Gist](https://gist.github.com) too, not just in your repository. In this example we'll use the configuration from the repository, so the "wrapper" configuration on [bitrise.io](https://www.bitrise.io) will define how the repository should be retrieved. Note: this also allows more customization, for example if the repository have to be accessed through a VPN, you can configure that in the "wrapper" config and it will work.
-2. Run the build configuration (`bitrise.yml`) with the [Bitrise CLI](https://www.bitrise.io/cli). This is the same runner which runs any other build on the [bitrise.io](https://www.bitrise.io) build virtual machines, so it's always preinstalled and ready to be used.
-
-The example here is really simple to setup, should work in most cases (unless you need a VPN for cloning the repository for example), but **it also requires you to maintain the Trigger Map on** [**bitrise.io**](https://www.bitrise.io) instead of in the repository, as that is the recommended solution.
-
-1. 
-
-{% include message_box.html type="note" title="After downloading the original bitrise.yml from bitrise.io" content=" The original `bitrise.yml` you downloaded from [bitrise.io](https://www.bitrise.io) most likely includes the steps to retrieve your repository. These steps will be redundant, as you will define how the repository should be accessed in the wrapper config on [bitrise.io](https://www.bitrise.io), so go ahead and remove the `activate-ssh-key` and `git-clone` steps from it before you would commit it into your repository. "%}
-
-### bitrise.yml content for bitrise.io
+## Template bitrise.yml for your wrapper configuration
 
     {% raw %}
     ---
@@ -166,10 +154,6 @@ The example here is really simple to setup, should work in most cases (unless yo
                 set -ex
                 bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"
       ci:
-        after_run:
-        - _run_from_repo
-    
-      another-workflow:
         after_run:
         - _run_from_repo
     {% endraw %}
