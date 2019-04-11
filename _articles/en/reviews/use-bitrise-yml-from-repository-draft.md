@@ -96,32 +96,30 @@ This `bitrise.yml` file does not need its own trigger map: the previously set up
 
 The approach of storing your `bitrise.yml` file in your repository, and running your builds based on that configuration has its disadvantages. We'll discuss a few potential pitfalls of this.  
 
-- The Trigger Map is better to be managed on bitrise.io.
+- The trigger map is better to be managed on bitrise.io.
 - You can't change the build configuration of a specific commit.
 - You can't edit the configuration in the online Workflow Editor. 
 - Any Pull Request can run builds with its own custom configuration. 
 
-### Trigger Map is better to be managed on bitrise.io
+### The trigger map is better to be managed on bitrise.io
 
-You can of course store the `trigger_map` (or `Triggers` on the web UI) in your repository (in `bitrise.yml`), but if you do that you'll lose the ability to _ignore_ patterns. This is because [bitrise.io](https://www.bitrise.io) have to evaluate the Trigger map **before** the repository would be cloned in order to be able to avoid starting a build based on the Trigger map.
+You can store the trigger map in the `bitrise.yml` your repository - but we don't recommend it. You'll lose the ability to _ignore_ patterns. On [bitrise.io](https://www.bitrise.io), the  trigger map is evaluated **before** the repository is cloned: this way, if you set it to ignore certain patterns in code pushes or pull requests, for example, then Bitrise won't even start a build. 
 
-The source code is never stored on [bitrise.io](https://www.bitrise.io), (see [Code Security - Source code](/getting-started/code-security/#source-code) for more information), so if you store the trigger map in your repository, the only way to check it is to clone it first. Even if you prepare your `trigger_map` in your repository to ignore patterns, [bitrise.io](https://www.bitrise.io) will start a build to clone the repository, before it could abort it.
-
-In contrast, if you specify the Trigger Map on [bitrise.io](https://www.bitrise.io), you can ignore patterns in a way that it won't even start a build.
+However, if you store the trigger map in your repository, the only way to check it is to clone the repository first. Even if you prepare your `trigger_map` in your repository to ignore patterns, [bitrise.io](https://www.bitrise.io) will start a build to clone the repository and then aborts it based on the stored trigger map. 
 
 ### You can't change the build configuration of a commit
 
-If you use the `bitrise.yml` from the repository, that means that when you rebuild a specific commit, it will use the same `bitrise.yml` every time, the one stored in the repository for that git commit.
+Storing the `bitrise.yml` file in your repository has a significant drawback when you want to rebuild a specific commit, it will use the same `bitrise.yml` every time: the one stored in the repository for that git commit.
 
-_The only way to change the configuration_ is to checkout the related branch, change the `bitrise.yml`, commit the changes, push and start a **new** build (rebuild of a commit won't work, that will always get the same `bitrise.yml`, the one stored at the commit).
+To change the configuration, you have to check out the related branch, change the `bitrise.yml`, commit the changes, and then push and start a new build.
 
-**If you store your build configuration on** [**bitrise.io**](https://www.bitrise.io) you can always rebuild any commit with a new build configuration, _the configuration is not tied to the commit / state of the repository_. You can simply change a parameter and hit "rebuild", the new build will use the latest configuration from [bitrise.io](https://www.bitrise.io).
+If you store your build configuration on [bitrise.io](https://www.bitrise.io), you can always rebuild any commit with a new build configuration: the configuration is not tied to the commit or the state of the repository. You can simply change a parameter and hit "rebuild", the new build will use the latest configuration from [bitrise.io](https://www.bitrise.io).
 
 ### You can't edit the configuration in the Workflow Editor on bitrise.io
 
 The Workflow Editor on [bitrise.io](https://www.bitrise.io) can only be used to visualize and edit the configuration stored on [bitrise.io](https://www.bitrise.io).
 
-The [offline workflow editor](https://github.com/bitrise-io/bitrise-workflow-editor) of course can be used.
+However, the [offline workflow editor](https://github.com/bitrise-io/bitrise-workflow-editor) can still be used. 
 
 ### Pull Requests can run builds with any custom configuration
 
