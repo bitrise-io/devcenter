@@ -9,7 +9,7 @@ menu:
 
 This tutorial describes how you can create a basic static website project (for example, a blog) with [Middleman](https://middlemanapp.com/), and how to connect and deploy the project with Bitrise.
 
-## Creating and cloning a repository on Github
+## Creating & cloning a repository on Github
 
 First, you need to sign in with your Github account, or sign up if you don't have one yet.
 
