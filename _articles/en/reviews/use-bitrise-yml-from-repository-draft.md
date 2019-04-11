@@ -7,9 +7,13 @@ published: false
 ---
 It is possible to store the build configuration ( that is, your app's `bitrise.yml` file) in your repository. The approach has its pros and cons; let's go through how to do it and why you'd want to do it!
 
+You can, of course, simply use the Bitrise CLI to locally run your builds. You just need to set up a `bitrise.yml` file and use `bitrise run` to run the workflow or workflows you want. 
+
+In the following examples, we'll discuss the **other** way: we'll define a "wrapper" configuration which will then run the build on Bitrise, using a `bitrise.yml` stored in your repository. 
+
 ### Setting up a wrapper configuration
 
-The easiest way to use a `bitrise.yml` from your repository is to define a so-called wrapper config. A wrapper config means setting up a `bitrise.yml` configuration on [bitrise.io](https://www.bitrise.io/): this configuration defines how the repository and the actual `bitrise.yml` file you want to use will be retrieved.
+A wrapper config means setting up a `bitrise.yml` configuration on [bitrise.io](https://www.bitrise.io/): this configuration defines how the actual `bitrise.yml` file you want to use will be retrieved from the repository. 
 
 The wrapper configuration will contain an automatically triggered workflow, and another one that will tell Bitrise to continue the build from the repository. To make this work, we take advantage of a `Script` Step and the `$BITRISE_TRIGGERED_WORKFLOW_ID` environment variable. This environment variable is automatically set to the workflow that triggered the build: if we have a workflow with the same name defined in the `bitrise.yml` file that is stored in the repository, we can run that workflow. 
 
