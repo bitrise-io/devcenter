@@ -18,7 +18,7 @@ First, you need to sign in with your Github account, or sign up if you don't hav
 
 ## Installing Middleman
 
-Let's see all the tools you need to use Middleman.
+Let's see all the tools you need to install and use Middleman.
 
 Middleman is distributed using the RubyGems package manager. This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman.
 
@@ -62,46 +62,29 @@ Before you start, make sure you're signed up to Bitrise either via your [git pro
    * `Script`
 5. Select the `Script` step and add the following lines:
 
-   \#!/bin/bash
-   set -ex
-   bundle install
-   bundle exec middleman build --verbose
+       #!/bin/bash
+       set -ex
+       bundle install
+       bundle exec middleman build --verbose
 
 The above code installs the dependencies specified in your `Gemfile`, and runs a Middleman build on the virtual machine.
 
-## Deploying to Amazon S3:
+## Deploying to Amazon S3
 
-Add an Amazon S3 bucket sync to your Workflow steps
+Now we are going to add and customize an Amazon S3 bucket sync to the workflow steps.
 
-Now we are going to add and customize an Amazon S3 bucket sync to the Workflow steps.
+1. Go to your workflow.
+2. Click `+` to inject the `Amazon S3 bucket sync` Step from the StepLib to your workflow.
+3. Configure the `Amazon S3 bucket sync` Step:
+   * enter your AWS Access Key, AWS Secret Key and the name for your S3 bucket.
+   * add your local path which should be: `$BITRISE_SOURCE_DIR/build/` (This will select the contents of the build folder in the project source path on the virtual machine. It will be uploaded on every build.)
+   * add `public-read` or `private` to `Access Control`
 
-1. Click on the _Add new Step_ button and select `Amazon S3 bucket sync` from the step list.
-2. Select the step to customize it.
-   * Enter your AWS access key
-   * Your AWS secret key
-   * And enter a name for your S3 bucket.
-   * For your local path, enter the following: `$BITRISE_SOURCE_DIR/build/`
+{% include message_box.html type="note" title="Alternative deploy destinations" content=" You can of course use `Heroku`, GitHub pages or any other service as your deployment target. You can find a more complex setup; deploying to `Heroku` [on our Blog](http://blog.bitrise.io/2016/04/29/hooking-up-a-middleman-project-to-deploy-a-static-site-to-heroku-with-bitrise.html). "%}
 
-This will select the contents of the build folder in the project source path on the virtual machine.
-It will be uploaded on every build.
-
-For access control, enter `public-read` or `private`, as advised.
-
-{% include message_box.html type="note" title="Alternative deploy destinations" content="
-You can of course use `Heroku`, GitHub pages or any other service as your deployment target.
-"%}
-
-You can find a more complex setup, deploying to `Heroku`,
-[on our Blog](http://blog.bitrise.io/2016/04/29/hooking-up-a-middleman-project-to-deploy-a-static-site-to-heroku-with-bitrise.html).
-
-## Running builds manually
+## Running builds 
 
 Once the configuration of your Workflow is complete,
-you can run a build manually by clicking on the `Start/Schedule a build` button on the app's page (where you see the
-`Builds`, `Workflow`, `Team`, ... tabs).
+you can run a build **manually** by clicking on the `Start/Schedule a build` button on the app's page.
 
-## Running builds automatically
-
-If you chose GitHub when adding your repository, each code change (commit) on GitHub will automatically trigger a Bitrise build.
-Otherwise you can find more information about how you can setup a Webhook, to trigger builds
-automatically for code push, pull request and tags [here](/webhooks/).
+If you chose GitHub when adding your repository, each code change (commit) on GitHub will **automatically** trigger a Bitrise build. Otherwise you can find more information about how you can setup a Webhook, to trigger builds automatically for code push, pull request and tags [here](/webhooks/).
