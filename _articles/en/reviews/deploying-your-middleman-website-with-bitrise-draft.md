@@ -20,9 +20,9 @@ First, you need to sign in with your Github account, or sign up if you don't hav
 
 Let's see the tools you need to install and use Middleman.
 
-Middleman is distributed using the RubyGems package manager. This means you will need both the Ruby language runtime installed and RubyGems to begin using Middleman.
+Middleman is distributed using the RubyGems package manager. This means you need both the Ruby language runtime installed and RubyGems to begin using Middleman.
 
-MacOS comes prepackaged with Ruby, however, some of Middleman's dependencies need to be compiled during installation. On macOS that requires Xcode which you can install via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12). Alternatively, you can just install the Xcode Command Line Tools, that should be enough if you don't want to install the full Xcode.app.
+MacOS comes prepackaged with Ruby, however, some of Middleman's dependencies need to be compiled during installation. On macOS that requires Xcode which you can install via the [Mac App Store](http://itunes.apple.com/us/app/xcode/id497799835?ls=1&mt=12). Alternatively, you can just install the Xcode Command Line Tools, that should be enough if you don't want to install the full Xcode app.
 
 Once you have Ruby and Xcode (Command Line Tools), execute the following from the command line:
 
