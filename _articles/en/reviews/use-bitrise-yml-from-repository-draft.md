@@ -5,11 +5,69 @@ date: 2019-04-10 12:22:43 +0000
 published: false
 
 ---
-Storing the build configuration (`bitrise.yml`) in your repository can be a great idea. It has its own PROs and CONs of course, so you have to decide it yourself whether this solution is a good fit for your project or not.
+It is possible to store the build configuration ( that is, your app's `bitrise.yml` file) in your repository. The approach has its pros and cons; let's go through how to do it and why you'd want to do it!
 
-## Things to keep in mind!
+### Setting up a wrapper configuration
 
-You can find a discussion about what are the advantages and disadvantages of this approach [on GitHub](https://github.com/bitrise-io/bitrise.io/issues/41). To highlight a few things to keep in mind if you'd want to store and use the `bitrise.yml` from your repository:
+The easiest way to use a `bitrise.yml` from your repository is to define a so-called wrapper config. A wrapper config means setting up a `bitrise.yml` configuration on [bitrise.io](https://www.bitrise.io/): this configuration defines how the repository and the actual `bitrise.yml` file you want to use will be retrieved.
+
+The wrapper configuration needs to contain at least two workflows and a trigger map. To make this work, we take advantage of a `Script` Step and the `$BITRISE_TRIGGERED_WORKFLOW_ID` environment variable.
+
+* A trigger map defines the workflows that are triggered by certain actions. For example, a `ci` workflow is triggered by code push to the `master` branch.
+* A workflow that, with a `Script` Step, switches to use the `bitrise.yml` file in your repository. For example, a workflow called `run_from_repo`.
+* A workflow with an `after_run` attribute: the attribute value is set to the workflow that contains the `Script` Step. For example, the `ci` workflow should trigger the `run_from_repo` workflow.
+
+1. Open your app on [bitrise.io](https://www.bitrise.io).
+2. Open the Workflow Editor and go the `bitrise.yml` tab.
+3. Set up a trigger map that automatically triggers a specific workflow.
+
+       {% raw %}
+       ---
+       format_version: 1.4.0
+       default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+        
+       trigger_map:
+       - push_branch: "*"
+         workflow: ci
+       - pull_request_target_branch: "*"
+         workflow: ci
+4. Set up the workflow that is triggered by the trigger map.
+
+   This workflow must have an `after_run` attribute that points to another workflow. 
+
+       {% raw %}
+       ci:
+         after_run:
+         - _run_from_repo
+5. Set up the workflow that is triggered by the `after_run` attribute. 
+
+   This workflow must have a `Script` Step with the command `bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}`. 
+   
+   ```
+   {% raw %}
+   workflows:
+      _run_from_repo:
+        steps:
+        - activate-ssh-key:
+            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+        - git-clone: {}
+        - script:
+            title: continue from repo
+            inputs:
+            - content: |-
+                #!/bin/bash
+                set -ex
+                bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"
+                
+    ```
+
+And that's it! 
+
+1. Create an app on .
+2. Go to the `Workflow` tab to open the Workflow Editor.
+3. In the Workflow Editor, switch to the `bitrise.yml` tab.
+4. Set up a configuration with two workflows.
+5. Save the changes.
 
 ### Trigger Map is better to be managed on bitrise.io
 
@@ -46,17 +104,9 @@ There are quite a few ways to accomplish this, as all you need is:
 
 The example here is really simple to setup, should work in most cases (unless you need a VPN for cloning the repository for example), but **it also requires you to maintain the Trigger Map on** [**bitrise.io**](https://www.bitrise.io) instead of in the repository, as that is the recommended solution.
 
-Step by step:
+1. 
 
-1. Create an app on [bitrise.io](https://www.bitrise.io), or if you already have it registered open it.
-2. Go to the `Workflow` tab to open the Workflow Editor.
-3. In the Workflow Editor switch to `bitrise.yml` mode
-4. In the `bitrise.yml` mode:
-   * If you already have a configuration which you want to use, download the `bitrise.yml` first, and save it into the _root_ of your repository. _There's a button to quickly download the current_ `_bitrise.yml_`_._
-   * Once you're ready to replace your configuration on bitrise.io, copy the [bitrise.yml content for bitrise.io](#bitriseyml-content-for-bitriseio) from below and paste it into the editor on [bitrise.io](https://www.bitrise.io) (in `bitrise.yml` mode of the editor)
-5. Save the changes.
-
-{% include message_box.html type="note" title="After downloading the original bitrise.yml from bitrise.io" content=" The original `bitrise.yml` you downloaded from [bitrise.io](https://www.bitrise.io) most likely includes the steps to retrieve your repository. These steps will be redundant, as you will define how the repository should be accessed in the "wrapper" config on [bitrise.io](https://www.bitrise.io), so go ahead and remove the `activate-ssh-key` and `git-clone` steps from it before you would commit it into your repository. "%}
+{% include message_box.html type="note" title="After downloading the original bitrise.yml from bitrise.io" content=" The original `bitrise.yml` you downloaded from [bitrise.io](https://www.bitrise.io) most likely includes the steps to retrieve your repository. These steps will be redundant, as you will define how the repository should be accessed in the wrapper config on [bitrise.io](https://www.bitrise.io), so go ahead and remove the `activate-ssh-key` and `git-clone` steps from it before you would commit it into your repository. "%}
 
 ### bitrise.yml content for bitrise.io
 
