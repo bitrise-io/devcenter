@@ -138,6 +138,7 @@ Adding an outside contributor requires enabling the `Allow Outside Contributors`
  9. Select a role for the user and then click `Grant Access`.
 
     For rights of roles, check out the Role Cheatsheet! 
+    
 	 ![](/img/add-outside-contributor.png)
 
 Bitrise sends an invitation email to the contributor's email address with a link to view the app.
