@@ -47,7 +47,7 @@ A Team of an Organization's app can contain members invited directly or through 
 
 ## Who are the Outside contributors?
 
-[Outside contributors](/team-management/organizations/managing-apps/#adding-outside-contributors-to-an-app) are members of an app's Team with a direct role, invited only to an app of an Organization and not to the Organization itself.
+[Outside contributors](/team-management/organizations/managing-apps/#adding-contributors-to-an-app) are members of an app's Team with a direct role, invited only to an app of an Organization and not to the Organization itself.
 
 ## Can I have multiple Organizations?
 
