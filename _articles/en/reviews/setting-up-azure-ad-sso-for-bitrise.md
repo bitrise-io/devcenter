@@ -53,14 +53,18 @@ Configuring SAML to the app required it supports SAML 2.0.
  5. Click `Single sign-on` on the left menu to set up your SAML connection between Bitrise and Azure AD.
  6. Select `SAML`.
     You will land on the `Set up Single Sign-On with SAML - Preview` page where you can further configure/edit the fields by clicking on the pencil symbols.
- 7. Click the pencil symbol at `Basic SAML Configuration`.
+ 7. Click the pencil symbol at `Basic SAML Configuration`. Leave this window open as is! We will come back to it in a second.
 
     ![](/img/Single-sign-on_-overview.jpg)
- 8. Head back to your organization on Bitrise
- 9. Click the `Copy Link` to copy the `Single Sign-on URL` from your Bitrise organization's Single Sign On tab.
+ 8. Head back to your organization on Bitrise.
+ 9. Go to your organization's page.
+10. Click the Single Sign On tab.
+11. Click the `Copy Link` button to copy the `Single Sign-on URL` from your Bitrise.
 
     ![](https://devcenter.bitrise.io/img/sso-saml-page.jpg)
-10. 
-11. 
-12. 
-13. 
+12. Let's head back to Azure AD.
+13. Paste the URL to the `Identifier` field. ???
+14. 
+15. 
+16. 
+17. 
