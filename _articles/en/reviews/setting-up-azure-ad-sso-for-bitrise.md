@@ -7,7 +7,7 @@ published: false
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on Azure Active Directory (AD).
 
-* loggedinto bitrise
+* logged into bitrise
 * have an azure admin right
 * 
 
