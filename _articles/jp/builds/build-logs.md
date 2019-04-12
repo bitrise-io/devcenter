@@ -1,73 +1,73 @@
 ---
-title: Build logs
+title: ビルドログ
 date: 2018-10-31 10:43:57 +0000
 menu:
   builds:
     weight: 26
 
 ---
-{% include not_translated_yet.html %}
+ビルドログ (Build logs) はビルドの分析、ビルド上で何が成功・失敗したかを確認することができます。Bitriseでは簡単にビルドログにアクセスでき、ウェブサイト上での閲覧やご自身のデバイスへダウンロードすることもできます。
 
-Build logs allow users to analyze their builds and find out what went wrong - and what went right! On Bitrise, build logs are easily accessible, they can be viewed on the website in their entirety or they can be downloaded to view them on your own device.
+### ビルドログを探す
 
-### Finding a build log
+ビルドを走らせる時、ビルドログは自動的に生成されます。すべてのビルドにはそれぞれ固有ビルドログURLを持ったログが存在します。ビルドログURLにはビルドスラッグが含まれます：特定ビルドの16進識別子です。
 
-When you run a build, a build log is generated automatically. Every build has its own log, with its own unique build log URL. The build log URL contains the build slug: a hexadecimal identifier for a specific build.
+{% include message_box.html type="note" title="Bitriseサポートの補助" content="Bitriseサポートからビルドログを求められた場合、ビルドURLを送るのが最善の方法です。"%}
 
-{% include message_box.html type="note" title="Assisting Bitrise Support" content="When Bitrise Support asks for your build logs, the best thing to do is send the build URL."%}
-
-1. Log in to Bitrise and click on your app on the Apps page.
-2. Click the `Builds` tab.
-3. Select the build you want to check out.
-4. Find the log under the `LOGS` tab.
+1. Bitriseにログインし、Appsページのご自身のアプリをクリックします。
+2. `Builds`タブをクリックします。
+3. 確認したいビルドを選択します。
+4. `LOGS`タブ下部にあるログを探してください。
 
    ![](/img/build-logs.png)
 
-{% include message_box.html type="info" title="Opening the full log" content="If you have a longer build log then by default, only the end of the log is displayed. Click the bar on the top of the log to expand."%}
+{% include message_box.html type="info" title="フルのログを開く" content="長いビルドログをお持ちの場合、デフォルトによりログの最後の部分のみが表示されます。そのログの上部分にあるバーをクリックすれば、すべてのログを確認することができます。"%}
 
-### Contents of a build log
+### ビルドログのコンテンツ
 
-All Bitrise build logs have the same basic structure. When opening a full log, under the Bitrise logo you will find:
+All Bitrise build logs have the same basic structure. When opening a full log, under the Bitrise logo you will find:　Bitriseのビルドログはすべて基本的な構造でできています。フルのログを開く場合、Bitriseロゴ下部にて以下の情報を確認することができます：
 
-* the version of the Bitrise CLI that ran the build
-* the name of the workflow that was run (for example, primary)
+* ビルドが走ったBitrise CLIのバージョン情報
+* ビルドが走ったワークフローの名前（例：primary）
 
-Below this basic information, you will see every Step that was ran as part of the build. For each Step, Bitrise displays:
+基本的な情報の下部には、ビルドが走ったすべてのステップを確認することができます。それぞれのステップでは：
 
-* the name and version of the Step
-* the running time of the Step
-* a printout of the Step's commands and their results, including highlighted error messages
-* whether the Step passed or failed
+* ステップの名前とバージョン情報
+* ステップの走行時間
+* ハイライトされたエラーメッセージを含むステップコマンドと結果のリスト
+* ステップが成功または失敗したかどうか
+
+が表示されます。
 
 ![](/img/log-start.png)
 
-Check your build log carefully when a build fails. Error messages are usually highlighted in red on Bitrise. For failed Steps, an exit code is displayed next to their names. This can tell you more about why the particular Step failed.
+ビルドが失敗した場合は注意深くビルドログを確認してください。Bitriseではエラーメッセージはたいてい赤色で示されます。失敗したステップでは、名前の隣にexit code（エグジットコード）が表示されます。exit codeは特定のステップが失敗した原因について知ることができます。
 
-### Downloading a build log
+### ビルドログのダウンロード
 
-If you need to send your build logs to people who do not have access to the app on Bitrise, or you want to store your logs in your own archives, you can simply download the log file from Bitrise.
+Bitriseでアプリのアクセス権がない人にビルドログを送りたい、もしくは自身のアーカイブにログを保管する場合、Bitriseからログファイルのダウンロードを簡単に行うことができます。
 
-{% include message_box.html type="warning" title="Log security" content="Please note that your build log can contain sensitive information! Make sure to check its contents before downloading the log file and sending it out to anyone. We recommend using [Secrets](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/#about-secrets) to make sure nothing sensitive appears in build logs."%}
+{% include message_box.html type="warning" title="ログセキュリティ" content="ビルドログ上では機密情報を含むことができるのでご注意ください。ログファイルのダウンロードを行ったり、誰かに送る前にコンテンツの確認をお願いします。ビルドログ内に機密情報が含まれない[Secrets](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/#about-secrets) 使用することをおすすめします。"%}
 
-1. Log in to Bitrise and click on your app on the Apps page.
-2. Click the `Builds` tab.
-3. Select the build you want to check out.
-4. Find the log under the `LOGS` tab.
-5. Click the `Download Logs` button.
+1. BitriseにログインしAppsページ上にあるアプリをクリックします。
+2. `Builds`タブをクリックします。
+3. 確認したいビルドを選択します。
+4. `LOGS`タブ下部にあるログを確認します。
+5. `Download Logs`ボタンをクリックしてください。
 
-### Deleting a build log
+### ビルドログの削除
 
-If necessary, you can delete the logs of any build on Bitrise. It can be handy if, for example, you do not want new team members to see potentially sensitive information that is displayed in previous logs.
+必要であれば、Bitriseビルドのログを削除することができます。例えば、以前のログに表示されている潜在的な機密情報を新しいチームメンバーに見られたくない場合などにおいて活用できます。
 
-Not all team members are authorized to delete logs: only those with either **Admin** or **Owner** role in the team can do it. 
+すべてのチームメンバーがログの削除を行えるわけではありません：チームの**Admin**（**管理人**）もしくは**Owner**（**オーナー**）のみが可能です。
 
-{% include message_box.html type="info" title="Deletion is final" content="Be aware that you cannot undo deleting a log. Once you delete it, there is no way to recover the log file."%}
+{% include message_box.html type="info" title="削除の際はご注意ください。" content="ログの削除を元に戻すことはできません。一旦削除してしまうと、ログファイルは取り戻せないのでご注意ください。"%}
 
 ![](/img/confirm-delete.png)
 
-1. Log in to Bitrise and click on your app on the Apps page.
-2. Click the `Builds` tab.
-3. Select the build you want to check out.
-4. Find the log under the `LOGS` tab.
-5. Click the `Delete Logs` button.
-6. In the pop-up window, click `Yes`.
+1. BitriseにログインしAppsページ上にあるアプリをクリックします。
+2. `Builds`タブをクリックします。
+3. 確認したいビルドを選択します。
+4. `LOGS`タブ下部にあるログを確認します。
+5. `Delete Logs`ボタンをクリックします。
+6. ポップアップウィンドウが表示されるので、`Yes`をクリックしてください。
