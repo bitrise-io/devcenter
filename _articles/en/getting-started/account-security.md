@@ -55,7 +55,7 @@ Our Support Team will remove 2FA on your account.
 
 Please note that our Support Team can deny your request if they find removing 2FA from the account might pose a security risk on your Bitrise account.
 
-## Generate personal access tokens manually
+## Generating personal access tokens manually
 
 There are two types of personal access tokens in your `Security` tab of your profile:
 
