@@ -33,8 +33,6 @@ pages:
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/秘密と環境設定-secrets-and-env-vars.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドの番号付けとアプリバージョン管理-build-numbering-and-app-versioning.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
-- _articles/en/reviews/Outside contributor/organization-faq.md
-- _articles/en/reviews/Outside contributor/managing-the-apps-of-an-organization-draft.md
 - _articles/en/reviews/managing-files-in-generic-file-storage-with-bitrise.md
 - _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
 - _articles/en/reviews/webhooks-api.md
