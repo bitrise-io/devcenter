@@ -37,7 +37,7 @@ That is why you have the option to require approval for a Pull Request before it
 * **Private apps**: Pull Requests submitted from fork require approval by default if any Secrets are marked to be exposed for Pull Requests.
 * **Public apps**: Pull Requests submitted from fork require approval by default and it cannot be changed. Public apps cannot opt out of this feature.
 
-To set up manual approval, you need to be an admin or an owner on the application's team.
+To set up manual approval, you need to be an **admin** or an **owner** on the application's team.
 
 1. Open the app on Bitrise.
 2. Go to the `Settings` tab.
