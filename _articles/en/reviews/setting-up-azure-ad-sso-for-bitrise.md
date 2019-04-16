@@ -91,7 +91,7 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
     It should look something like this:
 
         -----BEGIN CERTIFICATE-----
-        code
+        AAAAA
         -----END CERTIFICATE-----
 16. Open the certificate file and copy/paste its content into the `Certificate` field of your Bitrise organization.
 17. Hit `Configure SSO` on Bitrise.
