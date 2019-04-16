@@ -68,5 +68,8 @@ Configuring SAML to the app required it supports SAML 2.0.
 13. Paste the URL to the `Identifier` field. ???
 14. 
 15. 
-16. 
-17. 
+16. email from Bitrisr (not user added:)
+17. audience uri ide Bitrise=t kell beirni
+18. hozza kell assingolni eg usert vagy grippot
+19. url to be copied to bitrise and url
+20. email > sign in with sso (authorize), kilepni, belepni
