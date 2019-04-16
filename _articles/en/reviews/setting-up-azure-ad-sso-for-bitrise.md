@@ -47,7 +47,7 @@ By now you should be on the Overview page of the added app where you can further
 
 Let's do this!
 
-### Adding users or groups to the app on Azure AD
+### Adding users/groups to the app on Azure AD
 
 Before setting up SAML to the app, you have to add all the users/groups to the app who will log into Bitrise with SSO connection.
 
@@ -63,27 +63,35 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 
  1. Click `Single sign-on` on the left menu.
  2. Select `SAML`.
-    You will land on the `Set up Single Sign-On with SAML - Preview` page where you can further configure/edit the fields by clicking on the pencil symbols. We will only have to edit two steps: `Basic SAM configuration` and `Set up Bitrise`.
+    You will land on the `Set up Single Sign-On with SAML - Preview` page where you can further configure/edit the fields by clicking on the pencil symbols. We will access three steps: `Basic SAM configuration`, `SAML Signing Certificate` and `Set up Bitrise`.
 
     ![/img/Single-sign-on](https://app.forestry.io/sites/yv69yaruhkt48w/body-media//img/Single-sign-on_-overview.jpg)
- 3. Click the pencil symbol at `Basic SAML Configuration`.
+ 3. Click the pencil symbol at `Basic SAML Configuration to edit two fields`.
  4. Add `Bitrise` as the `Identifier (Entity ID)`.
 
-    Leave this window open as is! We will come back to it in a second.
+    Leave this window open! We will come back to it in a second.
  5. Head back to your organization on Bitrise.
- 6. Go to your organization's page.
- 7. Click the `Single Sign On` tab.
- 8. Click the `Copy Link` button to copy the `Single Sign-on URL` from your Bitrise.
+ 6. Click the `Single Sign On` tab.
+ 7. Click the `Copy Link` button to copy the `Single Sign-on URL` from your Bitrise.
 
     ![](https://devcenter.bitrise.io/img/sso-saml-page.jpg)
- 9. Let's head back to Azure AD.
-10. Paste the URL to the `Reply URL field`.
+ 8. Let's head back to the `Basic SAML Configuration` window of Azure AD.
+ 9. Paste the URL to the `Reply URL field`.
 
     ![](/img/basic-saml-config.jpg)
-11. 
-12. 
-13. email from Bitrisr (not user added:)
-14. audience uri ide Bitrise=t kell beirni
-15. hozza kell assingolni eg usert vagy grippot
-16. url to be copied to bitrise and url
-17. email > sign in with sso (authorize), kilepni, belepni
+10. Click `Save` and close the `Basic SAML Configuration` window.
+11. Scroll down to `Set up Bitrise`.
+12. Copy the `Login URL.`
+13. Paste it to `Identity provider sign-on URL` field on your Bitrise organization account.
+14. Scroll up a bit to `SAML Signing Certificate.`
+15. Click `Download` next to the `Certificate` to download the certificate to your local computer. You will only need the **full** **content** of the file, not the file itself.
+
+    ![](/img/certificate-azure.jpg)
+
+    It should look something like this:
+
+        -----BEGIN CERTIFICATE-----
+        code
+        -----END CERTIFICATE-----
+16. Open the certificate file and copy/paste its content into the `Certificate` field of your Bitrise organization.
+17. Hit `Configure SSO` on Bitrise.
