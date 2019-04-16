@@ -84,14 +84,8 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 12. Copy the `Login URL.`
 13. Paste it to `Identity provider sign-on URL` field on your Bitrise organization account.
 14. Scroll up a bit to `SAML Signing Certificate.`
-15. Click `Download` next to the `Certificate` to download the certificate to your local computer. You will only need the **full** **content** of the file, not the file itself.
+15. Click `Download` next to the `Certificate` to download the certificate to your local computer. You will only need the **full** **content** of the file (starting from ----BEGIN CERTIFICATE----- all the way to -----END CERTIFICATE-----) , but not the file itself.
 
     ![](/img/certificate-azure.jpg)
-
-    It should look something like this:
-
-        -----BEGIN CERTIFICATE-----
-        AAAAA
-        -----END CERTIFICATE-----
 16. Open the certificate file and copy/paste its content into the `Certificate` field of your Bitrise organization.
 17. Hit `Configure SSO` on Bitrise.
