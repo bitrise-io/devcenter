@@ -18,7 +18,7 @@ For more details description, please visit Azure AD's official documentation on 
 
 ## Adding Bitrise to Azure AD
 
-Bitrise is not an integrated application in the Azure portal so to set up SAML SSO with Azure, you'll have to first add Bitrise as a non-gallery app portal.
+Bitrise is not an integrated application in the Microsoft Azure portal so to set up SAML SSO with Azure, you'll have to first add Bitrise as a non-gallery app portal.
 
 1. Log into your Azure AD account.
 2. Click the `Azure Active Directory` on the left menu.
@@ -105,11 +105,11 @@ Now that you have established the connection between Bitrise and Azure AD, all t
 
 ## Enforcing SAML SSO on the organization
 
-To be able to sign into Bitrise exclusively via SAML, you have to enable SAML on the organization. Mind you! You can conly enforce SAML on the org, if all org members have enabled SAML SSO related to the org. 
+To be able to sign into Bitrise exclusively via SAML, you have to enable SAML on the organization. Mind you! You can conly enforce SAML on the org, if all org members have enabled SAML SSO related to the org.
 
-6. Toggle the `Enforce SAML SSO` switch to the right on the `Single Sign On` tab of the org.
-7. Click `Save Changes`.
+1. Toggle the `Enforce SAML SSO` switch to the right on the `Single Sign On` tab of the org.
+2. Click `Save Changes`.
 
 From now on, org members will be only able to log in using SAML SSO.
 
-   ![](/img/enforce-sso.png)
+![](/img/enforce-sso.png)
