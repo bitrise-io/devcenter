@@ -84,8 +84,32 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 12. Copy the `Login URL.`
 13. Paste it to `Identity provider sign-on URL` field on your Bitrise organization account.
 14. Scroll up a bit to `SAML Signing Certificate.`
-15. Click `Download` next to the `Certificate` to download the certificate to your local computer. You will only need the **full** **content** of the file (starting from ----BEGIN CERTIFICATE----- all the way to -----END CERTIFICATE-----) , but not the file itself.
+15. Click `Download` next to the `Certificate` to download the certificate to your local computer.
 
     ![](/img/certificate-azure.jpg)
-16. Open the certificate file and copy/paste its content into the `Certificate` field of your Bitrise organization.
+16. Open the certificate file and copy/paste its content into the `Certificate` field of your Bitrise organization. You will only need the **full** **content** of the file (starting from   `----BEGIN CERTIFICATE-----` all the way to `-----END CERTIFICATE-----`) , but not the file itself.
 17. Hit `Configure SSO` on Bitrise.
+
+## Enabling SAML SSO on Bitrise
+
+Now that you have established the connection between Bitrise and Azure AD, all there is left to do is enable SAML SSO on Bitrise. If you check the `People` tab of your Bitrise organization, you will see that your SAML status is disabled. If you have followed the steps in this guide, you must have received an email from Bitrise.
+
+![](/img/enable-bitrisse-saml-org.jpg)
+
+1. Click `Sign In via SSO`.
+2. On the `Allow "organization name" to sign you in` window, click `Authorize` if you trust the organization.
+
+   You should be landing on your organization's Bitrise Dashboard. You can check on the `Groups` tab who has been added to the org as a SAML user.
+
+   ![](/img/gorups-saml.jpg)
+
+## Enforcing SAML SSO on the organization
+
+To be able to sign into Bitrise exclusively via SAML, you have to enable SAML on the organization. Mind you! You can conly enforce SAML on the org, if all org members have enabled SAML SSO related to the org. 
+
+6. Toggle the `Enforce SAML SSO` switch to the right on the `Single Sign On` tab of the org.
+7. Click `Save Changes`.
+
+From now on, org members will be only able to log in using SAML SSO.
+
+   ![](/img/enforce-sso.png)
