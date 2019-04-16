@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/workflows-in-yaml-draft.md
 - _articles/en/reviews/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/reviews/remote-access-draft.md
 - _articles/en/reviews/use-bitrise-yml-from-repository-draft.md
