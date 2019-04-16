@@ -106,6 +106,6 @@ To be able to sign into Bitrise exclusively via SAML, you have to [enforce SAML 
 1. Toggle the `Enforce SAML SSO` switch to the right on the `Single Sign On` tab of the org.
 2. Click `Save Changes`.
 
-From now on, org members will be only able to log in using SAML SSO.
+From now on, org members will be able to log in exclusively via SAML SSO.
 
 ![](/img/enforce-sso.png)
