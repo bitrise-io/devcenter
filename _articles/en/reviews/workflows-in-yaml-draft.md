@@ -7,20 +7,20 @@ published: false
 ---
 A workflow is a collection of steps, environment variables, and other configurations for a single `bitrise run`.
 
-The only requirement for a workflow is an ID.
+## Declaring a workflow
+
+The only requirement for a workflow is an ID. As an example, in this configuration we declared one workflow with the ID `test`.
 
     format_version: 1.3.1
     workflows:
       test:
 
-In this configuration we declared one workflow, with the ID `test`. You can define as many workflows as you want to, and run a specific workflow with `bitrise run WORKFLOWID`.
+You can define multiple workflows and run a specific workflow with `bitrise run WORKFLOWID`. Below configuration contains two workflows, `first` and `second`, so you can execute both `bitrise run first` and `bitrise run second`.
 
     format_version: 1.3.1
     workflows:
       first:
       second:
-
-This configuration contains two workflows, `first` and `second`, so you can execute both `bitrise run first` and `bitrise run second`.
 
 {% include message_box.html type="note" title="Available workflow list" content=" You can list all the available workflows in a `bitrise.yml` by running `bitrise run` or `bitrise workflows` in the directory of the `bitrise.yml`. "%}
 
