@@ -35,7 +35,6 @@ pages:
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
 - _articles/en/reviews/managing-files-in-generic-file-storage-with-bitrise.md
 - _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
-- _articles/en/reviews/webhooks-api.md
 - _articles/en/reviews/fastlane.md
 - _articles/en/reviews/API/endpoints-and-testing-the-api.md
 - _articles/en/reviews/API/response-and-pagination.md
