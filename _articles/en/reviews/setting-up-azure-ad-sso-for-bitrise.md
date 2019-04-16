@@ -5,16 +5,12 @@ date: 2019-04-12 09:31:39 +0000
 published: false
 
 ---
-This guide provides step-by-step instructions on setting up Bitrise as a SAML application on Azure Active Directory (AD).
+This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Azure Active Directory (AD)](https://azure.microsoft.com/en-us/).
 
-* logged into bitrise
-* have an azure admin right
+Setting up Bitrise as a SAML app on the Azure portal requires:
 
-Configuring SAML to the app requires that your app supports SAML 2.0.
-
-{% include message_box.html type="note" title="Azure AD administrator account" content=" Please note that you must have an Azure AD **administrator** account to add Bitrise as a SAML app. sign in to the Azure portal using your Azure Active Directory administrator account "%}
-
-For more details description, please visit Azure AD's official documentation on setting up [SAML SSO for a non-gallery application](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-single-sign-on-non-gallery-applications).
+* an Azure AD administrator who is logged into Azure AD
+* a Bitrise organization owner who is logged into the his/her Bitrise organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams))
 
 ## Adding Bitrise to Azure AD
 
