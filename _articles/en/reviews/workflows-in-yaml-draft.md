@@ -26,7 +26,7 @@ You can define multiple workflows and run a specific workflow with `bitrise run 
 
 ## Adding steps to a workflow
 
-To add steps to a workflow simply include `steps:` and then the list of steps. For example to run two script steps after each other:
+To add steps to a workflow simply include `steps:` and then add the step(s). For example here is how to run two script steps after each other:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -39,17 +39,17 @@ To add steps to a workflow simply include `steps:` and then the list of steps. F
         - script:
             title: Second step
 
-When you run `bitrise run test`, the Bitrise CLI will run the two script steps one by one, starting with `First step` and then continuing with `Second step`.
+When you run `bitrise run test`, the Bitrise CLI will run the two script steps one by one, starting with the `First step` and then with the `Second step`.
 
-_To learn more about Build Steps, check the_ [_Steps_](/bitrise-cli/steps) _section._
+To learn more about Build Steps, check out the [Steps in YAML](/bitrise-cli/steps/) guide.
 
 ## Defining workflow specific parameters / environment variables
 
-In addition to steps, you can also specify environment variables for every workflow.
+Besides steps you can also specify environment variables for every workflow.
 
-The environment variables you specify for a given workflow will be used when the workflow is executed and will be available for every step in the workflow.
+The environment variables you specify for a given workflow is used when the workflow is executed and is available for every step in the workflow.
 
-An example, defining two environment variables (`ENV_VAR_ONE` and `ENV_VAR_TWO`) for the `test` workflow:
+Here is an example for defining two environment variables (`ENV_VAR_ONE` and `ENV_VAR_TWO`) for the `test` workflow:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -64,7 +64,7 @@ An example, defining two environment variables (`ENV_VAR_ONE` and `ENV_VAR_TWO`)
 
 It's also possible to "chain" workflows, to run one or more workflow before and/or after a specific workflow.
 
-An example:
+Example workflow for chaining five workflows:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -101,7 +101,14 @@ An example:
         after_run:
         - send-notifications
 
-In the above example, if you run:
+Based on the above example, if you run:
+
+|   |   |
+|---|---|
+| `bitrise run send-notifications`  |only the steps of the `send-notifications` workflow will be executed   |
+|   |   |
+|   |   |
+|   |   |
 
 * `bitrise run send-notifications` : only the steps of the `send-notifications` workflow will be executed
 * `bitrise run setup` : only the steps of the `setup` workflow will be executed
