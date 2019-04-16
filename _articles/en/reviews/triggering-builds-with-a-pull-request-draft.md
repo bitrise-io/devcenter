@@ -45,4 +45,4 @@ To set up manual approval, you need to be an admin or an owner on the applicatio
 
    ![](/img/manual-approval.png)
 
-   Please note that you can only change this setting for private apps! 
+   Please note that you can only change this setting for private apps! For public apps, this is ALWAYS enabled. 
