@@ -27,3 +27,7 @@ By default, every new app you add will have a trigger that triggers a build ever
 8. Click `Save` in the top right corner.
 
 And you're done! From now on, if a pull request is opened in your repository, Bitrise will trigger a build with the selected workflow!
+
+### Manual approval for PR builds 
+
+You do not need to 
