@@ -65,7 +65,7 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
  2. Select `SAML`.
     You will land on the `Set up Single Sign-On with SAML - Preview` page where you can further configure/edit the fields by clicking on the pencil symbols. We will access three steps: `Basic SAM configuration`, `SAML Signing Certificate` and `Set up Bitrise`.
 
-    ![/img/Single-sign-on](https://app.forestry.io/sites/yv69yaruhkt48w/body-media//img/Single-sign-on_-overview.jpg)
+    ![](/img/provide-details_back_to_bitrise-2.jpg)
  3. Click the pencil symbol at `Basic SAML Configuration to edit two fields`.
  4. Add `Bitrise` as the `Identifier (Entity ID)`.
 
@@ -92,7 +92,7 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 
 ## Enabling SAML SSO on Bitrise
 
-Now that you have established the connection between Bitrise and Azure AD, all there is left to do is enable SAML SSO on Bitrise. If you check the `People` tab of your Bitrise organization, you will see that your SAML status is disabled. If you have followed the steps in this guide, you must have received an email from Bitrise.
+Now that you have established the connection between Bitrise and Azure AD, all there is left to do is [enable SAML SSO on Bitrise](/team-management/organizations/saml-sso-in-organizations/#enabling-saml-sso). If you check the `People` tab of your Bitrise organization, you will see that your SAML status is disabled. If you have followed the steps in this guide, you must have received an email from Bitrise.
 
 ![](/img/enable-bitrisse-saml-org.jpg)
 
@@ -105,7 +105,7 @@ Now that you have established the connection between Bitrise and Azure AD, all t
 
 ## Enforcing SAML SSO on the organization
 
-To be able to sign into Bitrise exclusively via SAML, you have to enable SAML on the organization. Mind you! You can conly enforce SAML on the org, if all org members have enabled SAML SSO related to the org.
+To be able to sign into Bitrise exclusively via SAML, you have to [enforce SAML on the organization](/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement). Mind you! You can only enforce SAML on the org, if **all org** members have enabled SAML SSO related to the org.
 
 1. Toggle the `Enforce SAML SSO` switch to the right on the `Single Sign On` tab of the org.
 2. Click `Save Changes`.
