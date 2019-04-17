@@ -49,9 +49,9 @@ When you run `bitrise run test`, the Bitrise CLI will run the two script steps o
 
 Besides steps you can also specify environment variables for every workflow.
 
-The environment variables you specify for a given workflow is used when the workflow is executed and is available for every step in the workflow.
+A workflow's environment variables are used when the workflow is executed, and are available for every step in the workflow.
 
-Here is an example for defining two environment variables (`ENV_VAR_ONE` and `ENV_VAR_TWO`) for the `test` workflow:
+Here is an example for defining two environment variables (`ENV_VAR_ONE` and `ENV_VAR_TWO`) in the `test` workflow:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -64,7 +64,7 @@ Here is an example for defining two environment variables (`ENV_VAR_ONE` and `EN
 
 ## Chaining workflows and reusing workflows
 
-It's also possible to chain workflows to run one or more workflow before and/or after a specific workflow.
+You can chain workflows to run one/multiple workflows(s) before and/or after a specific workflow.
 
 Example workflow for chaining five workflows:
 
@@ -105,31 +105,31 @@ Example workflow for chaining five workflows:
 
 Based on the above example, if you run:
 
-* `bitrise run send-notifications` : only the steps of the `send-notifications` workflow will be executed
+* `bitrise run send-notifications`: only the steps of the `send-notifications` workflow will be executed
 * `bitrise run setup` : only the steps of the `setup` workflow will be executed
 * `bitrise run test` : first the steps of the `setup` workflow will be executed, then the steps declared in `test` workflow
-* `bitrise run ci`: will execute the steps of the workflows, in the following order:
+* `bitrise run ci`: will execute the steps of the workflows in the following order:
   1. `setup`
   2. `test`
-  3. `ci` (the `ci` workflow doesn't have any steps, but that's not an issue, it just means that no step will be executed here, the build will continue with the next workflow in the chain)
+  3. `ci` (the `ci` workflow doesn't have any steps, but that's not an issue. It just means that no step will be executed here and the build will continue with the next workflow in the chain.)
   4. `send-notifications`
-* `bitrise run deploy`: will execute the steps of the workflows, in the following order:
+* `bitrise run deploy`: will execute the steps of the workflows in the following order:
   1. `setup`
   2. `test`
   3. `deploy`
   4. `send-notifications`
 
-**This means that you can define what a** `**setup**` **and** `**test**` **should do in your project only once, in the** `**setup**` **and** `**test**` **workflows, and then you can resuse those in other workflows. There's no need to duplicate steps between workflows.**
+This means that you can define what a `setup` and `test` should do in your project in the `setup` and `test` workflows only once, and then you can resuse those in other workflows. There's no need to duplicate steps between workflows.
 
-**When you chain workflows, technically it's the same as if you'd create one workflow which would include all steps from all the workflows chained after each other. This means that, for example, one step's outputs will be available for every other step which is executed after that step during the build, regardless of whether the other step is in the same or in another workflow. If a step is executed after another one during the build, it can access the outputs of the previous steps. Just like if both steps would be in a single workflow.**
+To sum it up, when you chain workflows, technically it's the same as if you'd create one workflow which would include all steps from all the workflows chained after each other. So, for example, one step's outputs will be available for every other step which is executed after that step during the build, (regardless of whether the other step is in the same or in another workflow). If a step is executed after another step during the build, it can access the outputs of the previous steps. Just like if both steps would be in a single workflow.
 
 {% include message_box.html type="info" title="Chaining workflows on the UI" content="
 Learn more about how to[ chain workflows together](/getting-started/getting-started-workflows/#chaining-workflows-together) on the UI.
 "%}
 
-### Note about workflow environment variables
+### About workflow environment variables
 
-Workflow specific environment variables are made accessible **when the workflow is executed**. These environment variables are available for workflows executed **after** that workflow, _but_ **not in the ones executed before** that workflow.
+Workflow specific environment variables are made accessible **when the workflow is executed**. These environment variables are available for workflows executed **after** that workflow, but **not in the ones executed before** that workflow.
 
 For example, if you `bitrise run ci`, the `IS_TEST` environment variable **won't** be available in the `setup` workflow, as that runs _before_ the `test` workflow. `IS_TEST` will be available for the steps in `test`, `ci` and `send-notifications` workflows.
 
@@ -158,23 +158,19 @@ For example:
         after_run:
         - generic-build
 
-As you can see neither `build-alpha` nor `build-beta` workflows have any steps. Instead the steps are defined in `generic-build`, but when you `bitrise run build-alpha` the `BUILD_TYPE` environment variable will be set to `alpha`, while if you `bitrise run build-beta`, the `BUILD_TYPE` environment variable will be set to `beta`.
+As you can see in the above example, neither `build-alpha` nor `build-beta` workflows have any steps. Instead the steps are defined in `generic-build`, but when you `bitrise run build-alpha` the `BUILD_TYPE` environment variable will be set to `alpha`, while if you `bitrise run build-beta`, the `BUILD_TYPE` environment variable will be set to `beta`.
 
-As discussed above workflow defined environment variables are only available in the workflow it defines, and in the ones **executed after** that workflow. In the example above, `generic-build` is included as `after_run` workflow, so the `BUILD_TYPE` environment variable will be available in the steps of `generic-build`. But if you'd use `before_run` instead of `after_run`, that would mean that technically the steps of `generic-build` are processed and executed before processing the `build-alpha` or `build-beta` workflows, so the `BUILD_TYPE` environment variable would not be available in the step of `generic-build`.
+As discussed above, workflow defined environment variables are only available in the workflow it defines, and in the ones **executed after** that workflow. So in our example, `generic-build` is included as `after_run` workflow, therefore, the `BUILD_TYPE` environment variable will be available in the steps of `generic-build`. But if you'd use `before_run` instead of `after_run`, that would mean that technically the steps of `generic-build` are processed and executed before processing the `build-alpha` or `build-beta` workflows, so the `BUILD_TYPE` environment variable would not be available in the step of `generic-build`.
 
 ## Utility workflows
 
 Utility workflows help you organize your workflows more efficiently.
 
-If you chain workflows together, you might quickly end up with tons of small, reusable workflows. Finding the right workflow might get a bit tricky. This is when utility workflows come in handy. The Bitrise CLI supports a small notation, called utility workflows.
+If you chain workflows together, you might quickly end up with tons of small, reusable workflows. Finding the right workflow might get a bit tricky. Utility workflows to the rescue! The Bitrise CLI supports a small notation, called utility workflow: a workflow **whose ID starts with an underscore character**, for example, `_setup`.
 
-A utility workflow is a workflow whose ID starts with an underscore character, for example, `_setup`.
+You can find utility workflows at the end of the workflow list if you run `bitrise run` or `bitrise workflows`. Mind you, **utility workflows can't be executed directly with a** `bitrise run` **command**. These workflows can be referenced in `before_run` and `after_run`.
 
-You can find utility workflows at the end of the workflow list if you run `bitrise run` or `bitrise workflows`, and **utility workflows can't be executed directly with a** `bitrise run` **command**.
-
-These workflows can still be referenced in `before_run`and `after_run`.  and **there's absolutely no other difference compared to a regular workflow**.
-
-Using the above example with five workflows (`ci`, `deploy`, `send-notifications`, `setup` and `test`), if you run `bitrise run`  in the directory of the `bitrise.yml`without specifying a workflow, you'll get list of all five workflows:
+Using the above example with five workflows (`ci`, `deploy`, `send-notifications`, `setup` and `test`), if you run `bitrise run`  in the directory of the `bitrise.yml` without specifying a workflow, you'll get list of all five workflows:
 
     The following workflows are available:
      * ci
