@@ -7,7 +7,7 @@ published: false
 ---
 A workflow is a collection of steps, environment variables, and other configurations for a single `bitrise run`.
 
-## Declaring a workflow
+## Defining a workflow
 
 The only requirement for a workflow is an ID. As an example, in this configuration we declared one workflow with the ID `test`.
 
@@ -28,7 +28,7 @@ You can define multiple workflows and run a specific workflow with `bitrise run 
 
 To add steps to a workflow simply include `steps:` and then add the step(s).
 
-For example here is how to run two script steps after each other:
+For example, here is how to run two script steps after each other:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -41,7 +41,7 @@ For example here is how to run two script steps after each other:
         - script:
             title: Second step
 
-When you run `bitrise run test`, the Bitrise CLI will run the two script steps one by one, starting with the `First step` and then with the `Second step`.
+When you run `bitrise run test`, the Bitrise CLI will run the two script steps one by one, starting with the `First step` and then continuing with the `Second step`.
 
 {% include message_box.html type="info" title="Build steps" content=" To learn more about Build Steps, check out the [Steps in YAML](/bitrise-cli/steps/) guide." %}
 
