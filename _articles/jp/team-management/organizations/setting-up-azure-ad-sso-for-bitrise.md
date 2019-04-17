@@ -7,6 +7,8 @@ menu:
     weight: 20
 
 ---
+{% include not_translated_yet.html %}
+
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Azure Active Directory (AD)](https://azure.microsoft.com/en-us/).
 
 This requires:
