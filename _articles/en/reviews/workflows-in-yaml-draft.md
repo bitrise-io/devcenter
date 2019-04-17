@@ -202,6 +202,5 @@ You most likely don't want to run `setup`, `test` nor `send-notifications` by it
      These workflows can't be triggered directly, but can be used by other workflows
      in the before_run and after_run lists.
 
-{% include message_box.html type="info" title="Full list of available properties" content="
-You can find the complete list of available properties in the [bitrise.yml format specification / reference](https://github.com/bitrise-io/bitrise/blob/master/_docs/bitrise-yml-format-spec.md) docs of the CLI.
+{% include message_box.html type="info" title="Available properties" content=" You can find the complete list of available properties in the [bitrise.yml format specification / reference](https://github.com/bitrise-io/bitrise/blob/master/_docs/bitrise-yml-format-spec.md) docs of the CLI.
 "%}
