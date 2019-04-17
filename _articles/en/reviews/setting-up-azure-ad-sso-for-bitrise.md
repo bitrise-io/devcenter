@@ -44,7 +44,7 @@ Let's do this!
 
 ### Adding users/groups to the app on Azure AD
 
-Before setting up SAML to the app, you have to add **all the users/groups** to the app in Azure AD who will use SAML SSO to log into Bitrise.
+Before setting up SAML to the app, you have to add **all the users/groups** to the app in Azure AD who will use SAML SSO to log into the Bitrise organization. In other words, every Bitrise org member must be added as user in Azure AD.
 
 1. Select `Users and groups` from the left menu.
 2. Select all the users from the list who will access Bitrise via SAML SSO.
