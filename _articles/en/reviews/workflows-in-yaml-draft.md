@@ -162,13 +162,13 @@ As discussed above workflow defined environment variables are only available in 
 
 Utility workflows help you organize your workflows more efficiently.
 
-If you rely on workflow chaining, you might quickly have tons of small, reusable workflows. Finding the right workflow might get tricky. To help with this, the Bitrise CLI supports a small notation called "utility workflows".
+If you chain workflows together, you might quickly end up with tons of small, reusable workflows. Finding the right workflow might get a bit tricky. This is when utility workflows come in handy. The Bitrise CLI supports a small notation, called utility workflows.
 
-A workflow is considered as a utility workflow if it's ID starts with an underscore character (for example, `setup`).
+A utility workflow is a workflow whose ID starts with an underscore character, for example, `_setup`.
 
-Utility workflows are listed at the end of the workflow list if you run `bitrise run` or `bitrise workflows`, and **utility workflows can't be executed directly with a** `bitrise run` **command**.
+You can find utility workflows at the end of the workflow list if you run `bitrise run` or `bitrise workflows`, and **utility workflows can't be executed directly with a** `bitrise run` **command**.
 
-These workflows can still be referenced in `before_run` and `after_run` lists of course, and **there's absolutely no other difference compared to a regular workflow**.
+These workflows can still be referenced in `before_run`and `after_run`.  and **there's absolutely no other difference compared to a regular workflow**.
 
 Using the above example where there were five workflows (`ci`, `deploy`, `send-notifications`, `setup` and `test`), if you run `bitrise run` in the directory of the `bitrise.yml` (just `bitrise run`, without specifying a workflow) you'll get a single list of all five workflows:
 
