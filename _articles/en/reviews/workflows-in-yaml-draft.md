@@ -106,9 +106,12 @@ Based on the above example, if you run:
 |   |   |
 |---|---|
 | `bitrise run send-notifications`  |only the steps of the `send-notifications` workflow will be executed   |
-|   |   |
-|   |   |
-|   |   |
+| `bitrise run setup`  | only the steps of the `setup` workflow will be executed  |
+|  `bitrise run test` |first the steps of the `setup` workflow will be executed, then the steps declared in `test` workflow   |
+| `bitrise run ci`  |will execute the steps of the workflows, in the following order: 
+						1. `setup`
+ 						 2. `test`
+  						3. `ci` (the `ci` workflow doesn't have any steps, but that's not an issue, it just means that no step will be executed here, the build will continue with the next workflow in the chain)  |
 
 * `bitrise run send-notifications` : only the steps of the `send-notifications` workflow will be executed
 * `bitrise run setup` : only the steps of the `setup` workflow will be executed
