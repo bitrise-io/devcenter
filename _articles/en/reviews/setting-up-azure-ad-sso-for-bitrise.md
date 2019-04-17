@@ -2,6 +2,7 @@
 title: Setting up Azure AD SSO for Bitrise - draft
 redirect_from: []
 date: 2019-04-12 09:31:39 +0000
+published: false
 
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Azure Active Directory (AD)](https://azure.microsoft.com/en-us/).
