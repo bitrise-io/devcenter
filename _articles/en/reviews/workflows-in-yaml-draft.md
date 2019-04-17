@@ -64,7 +64,7 @@ Here is an example for defining two environment variables (`ENV_VAR_ONE` and `EN
 
 ## Chaining workflows and reusing workflows
 
-It's also possible to "chain" workflows, to run one or more workflow before and/or after a specific workflow.
+It's also possible to chain workflows to run one or more workflow before and/or after a specific workflow.
 
 Example workflow for chaining five workflows:
 
@@ -123,6 +123,10 @@ Based on the above example, if you run:
 
 **When you chain workflows, technically it's the same as if you'd create one workflow which would include all steps from all the workflows chained after each other. This means that, for example, one step's outputs will be available for every other step which is executed after that step during the build, regardless of whether the other step is in the same or in another workflow. If a step is executed after another one during the build, it can access the outputs of the previous steps. Just like if both steps would be in a single workflow.**
 
+{% include message_box.html type="info" title="Chaining workflows on the UI" content="
+Learn more about how to[ chain workflows together](/getting-started/getting-started-workflows/#chaining-workflows-together) on the UI.
+"%}
+
 ### Note about workflow environment variables
 
 Workflow specific environment variables are made accessible **when the workflow is executed**. These environment variables are available for workflows executed **after** that workflow, _but_ **not in the ones executed before** that workflow.
@@ -168,9 +172,9 @@ A utility workflow is a workflow whose ID starts with an underscore character, f
 
 You can find utility workflows at the end of the workflow list if you run `bitrise run` or `bitrise workflows`, and **utility workflows can't be executed directly with a** `bitrise run` **command**.
 
-These workflows can still be referenced in `before_run `and `after_run`.  and **there's absolutely no other difference compared to a regular workflow**.
+These workflows can still be referenced in `before_run`and `after_run`.  and **there's absolutely no other difference compared to a regular workflow**.
 
-Using the above example with five workflows (`ci`, `deploy`, `send-notifications`, `setup` and `test`), if you run `bitrise run`  in the directory of the `bitrise.yml `without specifying a workflow, you'll get list of all five workflows:
+Using the above example with five workflows (`ci`, `deploy`, `send-notifications`, `setup` and `test`), if you run `bitrise run`  in the directory of the `bitrise.yml`without specifying a workflow, you'll get list of all five workflows:
 
     The following workflows are available:
      * ci
@@ -205,4 +209,3 @@ You most likely don't want to run `setup`, `test` nor `send-notifications` by it
 {% include message_box.html type="info" title="Full list of available properties" content="
 You can find the complete list of available properties in the [bitrise.yml format specification / reference](https://github.com/bitrise-io/bitrise/blob/master/_docs/bitrise-yml-format-spec.md) docs of the CLI.
 "%}
-
