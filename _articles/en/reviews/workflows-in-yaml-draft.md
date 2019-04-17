@@ -168,9 +168,9 @@ A utility workflow is a workflow whose ID starts with an underscore character, f
 
 You can find utility workflows at the end of the workflow list if you run `bitrise run` or `bitrise workflows`, and **utility workflows can't be executed directly with a** `bitrise run` **command**.
 
-These workflows can still be referenced in `before_run`and `after_run`.  and **there's absolutely no other difference compared to a regular workflow**.
+These workflows can still be referenced in `before_run `and `after_run`.  and **there's absolutely no other difference compared to a regular workflow**.
 
-Using the above example where there were five workflows (`ci`, `deploy`, `send-notifications`, `setup` and `test`), if you run `bitrise run` in the directory of the `bitrise.yml` (just `bitrise run`, without specifying a workflow) you'll get a single list of all five workflows:
+Using the above example with five workflows (`ci`, `deploy`, `send-notifications`, `setup` and `test`), if you run `bitrise run`  in the directory of the `bitrise.yml `without specifying a workflow, you'll get list of all five workflows:
 
     The following workflows are available:
      * ci
@@ -182,7 +182,7 @@ Using the above example where there were five workflows (`ci`, `deploy`, `send-n
     You can run a selected workflow with:
     $ bitrise run WORKFLOW-ID
 
-You most likely don't want to run `setup`, `test` nor `send-notifications` by itself, only through `ci` or `deploy`, so if you prefix those with an underscore character to make them utility workflows, the `bitrise run` output will better highlight which workflows are meant to be executed directly:
+You most likely don't want to run `setup`, `test` nor `send-notifications` by itself, only through `ci` or `deploy`. If you prefix those with an underscore character to make them utility workflows, the `bitrise run` output will better highlight which workflows are meant to be executed directly:
 
     The following workflows are available:
      * ci
@@ -202,6 +202,7 @@ You most likely don't want to run `setup`, `test` nor `send-notifications` by it
      These workflows can't be triggered directly, but can be used by other workflows
      in the before_run and after_run lists.
 
-## Full spec / list of available properties
-
+{% include message_box.html type="info" title="Full list of available properties" content="
 You can find the complete list of available properties in the [bitrise.yml format specification / reference](https://github.com/bitrise-io/bitrise/blob/master/_docs/bitrise-yml-format-spec.md) docs of the CLI.
+"%}
+
