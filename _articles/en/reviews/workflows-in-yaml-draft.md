@@ -43,7 +43,7 @@ For example here is how to run two script steps after each other:
 
 When you run `bitrise run test`, the Bitrise CLI will run the two script steps one by one, starting with the `First step` and then with the `Second step`.
 
-To learn more about Build Steps, check out the [Steps in YAML](/bitrise-cli/steps/) guide.
+{% include message_box.html type="info" title="Build steps" content=" To learn more about Build Steps, check out the [Steps in YAML](/bitrise-cli/steps/) guide." %}
 
 ## Defining workflow specific parameters / environment variables
 
