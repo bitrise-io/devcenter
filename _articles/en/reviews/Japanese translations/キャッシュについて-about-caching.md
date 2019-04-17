@@ -7,16 +7,23 @@ published: false
 ---
 The caching will tar all the cached directories and dependencies, and store them securely in Amazon S3.
 
-{% include message_box.html type="info" title="When does the Build Cache gets auto-deleted?" content=" The Build Cache, related to a **specific branch**, expires/is auto-deleted after 7 days, **if there's no new build on that branch in the meantime**. This means that **if you do builds on a specific branch every day** (more frequently than a week), **it'll never expire/won't get deleted automatically**. If you don't start a build on that specific branch for more than 7 days, then the related cache will be removed, and your next build will run like the first time, when there was no cache for that branch yet. "%}
+キャッシュはAmazon S3において、全てのキャッシュされたディレクトリや依存性をtarし、安全に保管します。
 
-## Setup
+{% include message_box.html type="info" title="When does the Build Cache gets auto-deleted?ビルドキャッシュが自動削除されるのはいつですか？" content=" The Build Cache, related to a **specific branch**, expires/is auto-deleted after 7 days, **if there's no new build on that branch in the meantime**. This means that **if you do builds on a specific branch every day** (more frequently than a week), **it'll never expire/won't get deleted automatically**. If you don't start a build on that specific branch for more than 7 days, then the related cache will be removed, and your next build will run like the first time, when there was no cache for that branch yet. 
 
-### Bitrise steps for caching
+ビルドキャッシュは**指定されたブランチ**との関連性があり、**そのブランチ上で新しいビルドが行われなかった場合**、７日後に有効期限が切れます（自動削除されます）。これは**もしその指定されたブランチで毎日**（週一回以上）**ビルドを行えば**、**有効期限が切れる（自動削除される）ことはありません**。７日以上特定のブランチでビルドを開始しなかった場合、関連したキャッシュは削除され、そのブランチにキャッシュがなければ、次のビルドは初期状態で走ることになります。"%}
 
-All you need to get started is adding two steps to your Workflow:
+## Setup　セットアップ
+
+### Bitrise steps for caching　Bitriseのキャッシュステップ
+
+All you need to get started is adding two steps to your Workflow:  
+開始するには、まずワークフローに以下の２つのステップを追加してください。
 
 * `Bitrise.io Cache:Pull` step to download the previous cache (if any)
 * `Bitrise.io Cache:Push` step to check the state of the cache and upload it if required
+* `Bitrise.io Cache:Pull`ステップは以前のキャッシュ（もしあれば）をダウンロードします。
+* `Bitrise.io Cache: Push`ステップはキャッシュの状態をチェックし、必要であればアップロードを行います。
 
 You should add the `Bitrise.io Cache:Pull` (download) step right before you'd use the cache. For example, in the case of an iOS app, you can insert the `Bitrise.io Cache:Pull` step between the `Git Clone Repository` and the dependency installer steps (for example, the `Run CocoaPods install` or `Carthage` steps). You should not put the `Bitrise.io Cache:Push` step BEFORE the `Git Clone Repository` step.
 
@@ -24,9 +31,17 @@ The `Bitrise.io Cache:Push` step should be the very last step in the workflow.
 
 You can find example build cache configurations/guides at our [build-cache discuss page](https://discuss.bitrise.io/tags/build-cache).
 
-### Ignore files/dependencies
+キャッシュを使用する直前に`Bitrise.io Cache:Pull`（ダウンロード）ステップを追加するのをおすすめします。例えば、iOSアプリの場合、`Git Clone Repository`と依存インストーラーステップ（`Run CocoaPods install`や`Carthage`ステップなど）の間に`Bitrise.io Cache:Pull`を挿入します。`Git Clone Repository`ステップの前に`Bitrise.io Cache:Push`ステップの配置は行わないでください。
+
+`Bitrise.io Cache:Push`ステップはワークフローの中でも一番最後辺りのステップになります。
+
+Bitriseの[build-cache discussページ](https://discuss.bitrise.io/tags/build-cache)にてビルドキャッシュの設定例やガイドを確認することができます。
+
+### Ignore files/dependencies　ファイルや依存を無視する
 
 You can set the path to the items you want the cache to **ignore** in the `Ignore Paths from change check` field.
+
+`Ignore Paths from change check`欄にて無視したいキャッシュの項目へパスをセットするkとができます
 
 * Paths must be prefixed with `!` to get ignored from the cache archive. If you don't prefix the path with an `!`, the path will NOT get ignored from the cache archive. If a path is located inside a specified cache path item and the path is NOT prefixed with an `!`, the path will be included in the cache archive, but it will not be checked for changes.
 
