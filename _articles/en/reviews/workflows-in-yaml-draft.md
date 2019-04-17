@@ -5,7 +5,7 @@ date: 2019-04-16 08:55:28 +0000
 published: false
 
 ---
-A workflow is a collection of steps, environment variables, and other configurations for a single `bitrise run`.
+A workflow is a collection of Steps, environment variables, and other configurations for a single `bitrise run`.
 
 ## Defining a workflow
 
@@ -24,11 +24,11 @@ You can define multiple workflows and run a specific workflow with `bitrise run 
 
 {% include message_box.html type="note" title="Available workflow list" content=" You can list all the available workflows in a `bitrise.yml` by running `bitrise run` or `bitrise workflows` in the directory of the `bitrise.yml`. "%}
 
-## Adding steps to a workflow
+## Adding Steps to a workflow
 
-To add steps to a workflow simply include `steps:` and then add the step(s).
+To add Steps to a workflow simply include `steps:` and then add the Step(s).
 
-For example, here is how to run two script steps after each other:
+For example, here is how to run two script Steps after each other:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -41,13 +41,13 @@ For example, here is how to run two script steps after each other:
         - script:
             title: Second step
 
-When you run `bitrise run test`, the Bitrise CLI will run the two script steps one by one, starting with the `First step` and then continuing with the `Second step`.
+When you run `bitrise run test`, the Bitrise CLI will run the two script Steps one by one, starting with the `First step` and then continuing with the `Second step`.
 
-{% include message_box.html type="info" title="Build steps" content=" To learn more about Build Steps, check out the [Steps in YAML](/bitrise-cli/steps/) guide." %}
+{% include message_box.html type="info" title="Build Steps" content=" To learn more about Build Steps, check out the [Steps in YAML](/bitrise-cli/steps/) guide." %}
 
 ## Defining workflow specific parameters / environment variables
 
-Besides steps you can also specify environment variables for every workflow.
+Besides Steps you can also specify environment variables for every workflow.
 
 A workflow's environment variables are used when the workflow is executed, and are available for every step in the workflow.
 
@@ -105,23 +105,23 @@ Example workflow for chaining five workflows:
 
 Based on the above example, if you run:
 
-* `bitrise run send-notifications`: only the steps of the `send-notifications` workflow will be executed
-* `bitrise run setup` : only the steps of the `setup` workflow will be executed
-* `bitrise run test` : first the steps of the `setup` workflow will be executed, then the steps declared in `test` workflow
-* `bitrise run ci`: will execute the steps of the workflows in the following order:
+* `bitrise run send-notifications`: only the Steps of the `send-notifications` workflow will be executed
+* `bitrise run setup` : only the Steps of the `setup` workflow will be executed
+* `bitrise run test` : first the Steps of the `setup` workflow will be executed, then the Steps declared in `test` workflow
+* `bitrise run ci`: will execute the Steps of the workflows in the following order:
   1. `setup`
   2. `test`
-  3. `ci` (the `ci` workflow doesn't have any steps, but that's not an issue. It just means that no step will be executed here and the build will continue with the next workflow in the chain.)
+  3. `ci` (the `ci` workflow doesn't have any Steps, but that's not an issue. It just means that no step will be executed here and the build will continue with the next workflow in the chain.)
   4. `send-notifications`
-* `bitrise run deploy`: will execute the steps of the workflows in the following order:
+* `bitrise run deploy`: will execute the Steps of the workflows in the following order:
   1. `setup`
   2. `test`
   3. `deploy`
   4. `send-notifications`
 
-This means that you can define what a `setup` and `test` should do in your project in the `setup` and `test` workflows only once, and then you can resuse those in other workflows. There's no need to duplicate steps between workflows.
+This means that you can define what a `setup` and `test` should do in your project in the `setup` and `test` workflows only once, and then you can reuse those in other workflows. There's no need to duplicate Steps between workflows.
 
-To sum it up, when you chain workflows, technically it's the same as if you'd create one workflow which would include all steps from all the workflows chained after each other. So, for example, one step's outputs will be available for every other step which is executed after that step during the build, (regardless of whether the other step is in the same or in another workflow). If a step is executed after another step during the build, it can access the outputs of the previous steps. Just like if both steps would be in a single workflow.
+To sum it up, when you chain workflows, it's the same as if you'd create one workflow which would include all Steps from all the workflows chained after each other. So, for example, one Step's outputs will be available for every other Step which is executed after that Step during the build, (regardless of whether the other Step is in the same or in another workflow). If a Step is executed after another Step during the build, it can access the outputs of the previous Steps. 
 
 {% include message_box.html type="info" title="Chaining workflows on the UI" content="
 Learn more about how to[ chain workflows together](/getting-started/getting-started-workflows/#chaining-workflows-together) on the UI.
@@ -133,7 +133,7 @@ Workflow specific environment variables are made accessible **when the workflow 
 
 For example, if you `bitrise run ci`, the `IS_TEST` environment variable **won't** be available in the `setup` workflow, as that runs _before_ the `test` workflow. `IS_TEST` will be available for the steps in `test`, `ci` and `send-notifications` workflows.
 
-This is true even if the workflow doesn't have any steps. This can be utilized if you want to create generic workflows, which can do different things based on environment variables, and you specify those environment variables through a "wrapper" workflow.
+This is true even if the workflow doesn't have any Steps. This can be utilized if you want to create generic workflows, which can do different things based on environment variables, and you specify those environment variables through a "wrapper" workflow.
 
 For example:
 
@@ -158,7 +158,7 @@ For example:
         after_run:
         - generic-build
 
-As you can see in the above example, neither `build-alpha` nor `build-beta` workflows have any steps. Instead the steps are defined in `generic-build`, but when you `bitrise run build-alpha` the `BUILD_TYPE` environment variable will be set to `alpha`, while if you `bitrise run build-beta`, the `BUILD_TYPE` environment variable will be set to `beta`.
+As you can see in the above example, neither `build-alpha` nor `build-beta` workflows have any steps. Instead the Steps are defined in `generic-build`, but when you `bitrise run build-alpha` the `BUILD_TYPE` environment variable will be set to `alpha`, while if you `bitrise run build-beta`, the `BUILD_TYPE` environment variable will be set to `beta`.
 
 As discussed above, workflow defined environment variables are only available in the workflow it defines, and in the ones **executed after** that workflow. So in our example, `generic-build` is included as `after_run` workflow, therefore, the `BUILD_TYPE` environment variable will be available in the steps of `generic-build`. But if you'd use `before_run` instead of `after_run`, that would mean that technically the steps of `generic-build` are processed and executed before processing the `build-alpha` or `build-beta` workflows, so the `BUILD_TYPE` environment variable would not be available in the step of `generic-build`.
 
