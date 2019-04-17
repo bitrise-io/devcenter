@@ -9,7 +9,10 @@
 				<a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
 			{% endif %}
 		{% else %}
-			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">{{ item.title }}</button>
+			{% if page.lang != page.default_lang and item.localized_title != blank %}
+				{% assign localized_menu_title = item.localized_title[page.lang] %}
+			{% endif %}
+			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">{{ localized_menu_title | default: item.title }}</button>
 		{% endif %}
 		{% if item.children %}
 			{% assign menu = item.children %}

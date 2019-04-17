@@ -17,10 +17,12 @@ module Jekyll
   Jekyll::Hooks.register :articles, :pre_render do |article|
     languages = article.site.config['languages']
     current_lang = article.site.config['lang']
+    default_lang = article.site.config['default_lang']
 
     url_without_lang = article.url.gsub(/^\/(#{languages.join('|')}\/?)/, '/')
 
     article.data['lang'] = current_lang
+    article.data['default_lang'] = default_lang
     article.data['url_without_lang'] = url_without_lang
   end ### end articles pre_render
 

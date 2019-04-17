@@ -1,92 +1,148 @@
 ---
 deployment:
 - title: iOS deployment
+  localized_title:
+    jp: JP - iOS deployment
   identifier: ios-deploy
   weight: 2
 - title: Android deployment
+  localized_title:
+    jp: JP - Android deployment
   identifier: android-deploy
   weight: 1
 code-signing:
 - title: Android code signing
+  localized_title:
+    jp: JP - Android code signing
   identifier: android-code-signing
   weight: 1
 - title: iOS code signing
+  localized_title:
+    jp: JP - iOS code signing
   identifier: ios-code-signing
   weight: 2
 tutorials:
 - title: Fastlane
+  localized_title:
+    jp: JP - Fastlane
   identifier: fastlane
   weight: 3
 - title: Deployment Tutorials
+  localized_title:
+    jp: JP - Deployment Tutorials
   identifier: deployment-tutorials
   weight: 2
 - title: Docker
+  localized_title:
+    jp: JP - Docker
   identifier: docker
   weight: 5
 - title: Xamarin
+  localized_title:
+    jp: JP - Xamarin
   identifier: xamarin
   weight: 4
 getting-started:
 - title: Signing up
+  localized_title:
+    jp: JP - Signing up
   identifier: signing-up
   weight: 3
 - title: Adding a new app
+  localized_title:
+    jp: JP - Adding a new app
   identifier: adding-a-new-app
   weight: 4
 team-management:
 - title: Organizations
+  localized_title:
+    jp: JP - Organizations
   identifier: organizations
   weight: 9
 builds:
 - title: Triggering builds
+  localized_title:
+    jp: JP - Triggering builds
   identifier: triggering-builds
   weight: 1
 main:
 - title: API
+  localized_title:
+    jp: JP - API
   identifier: api
   weight: 18
 - title: Tools
+  localized_title:
+    jp: JP - Tools
   identifier: tools
   weight: 17
 - title: Troubleshooting
+  localized_title:
+    jp: JP - Troubleshooting
   identifier: troubleshooting
   weight: 16
 - title: Getting Started
+  localized_title:
+    jp: Getting Started JP
   identifier: getting-started
   weight: 3
 - title: Frequently Asked Questions (FAQ)
+  localized_title:
+    jp: JP - Frequently Asked Questions (FAQ)
   identifier: faq
   weight: 15
 - title: Deployment
+  localized_title:
+    jp: JP - Deployment
   identifier: deployment
   weight: 11
 - title: Caching
+  localized_title:
+    jp: JP - Caching
   identifier: caching
   weight: 9
 - title: Code signing
+  localized_title:
+    jp: JP - Code signing
   identifier: code-signing
   weight: 8
 - title: Webhooks
+  localized_title:
+    jp: JP - Webhooks
   identifier: webhooks
   weight: 6
 - title: Infrastructure
+  localized_title:
+    jp: JP - Infrastructure
   identifier: infrastructure
   weight: 4
 - title: Bitrise CLI and bitrise.yml
+  localized_title:
+    jp: JP - Bitrise CLI and bitrise.yml
   identifier: bitrise-cli
   weight: 12
 - title: Teams and organizations
+  localized_title:
+    jp: JP - Teams and organizations
   identifier: team-management
   weight: 5
 - title: Tutorials
+  localized_title:
+    jp: JP - Tutorials
   identifier: tutorials
   weight: 13
 - title: Testing
+  localized_title:
+    jp: JP - Testing
   identifier: testing
   weight: 10
 - title: Builds
+  localized_title:
+    jp: JP - Builds
   identifier: builds
   weight: 7
 - title: Tips & Tricks
+  localized_title:
+    jp: JP - Tips & Tricks
   identifier: tips-and-tricks
   weight: 14
