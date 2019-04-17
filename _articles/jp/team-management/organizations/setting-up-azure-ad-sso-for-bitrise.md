@@ -14,7 +14,7 @@ This requires:
 
 ## Adding Bitrise to Azure AD
 
-Bitrise is not an integrated application in the Microsoft Azure portal so to set up SAML SSO with Azure, you'll have to first add Bitrise as a non-gallery app portal.
+Bitrise is not an integrated application in the Microsoft Azure portal so to set up SAML SSO with Azure, you will have to first add Bitrise as a non-gallery app portal.
 
 1. Log into your Azure AD account as an administrator.
 2. Click the `Azure Active Directory` on the left menu.
