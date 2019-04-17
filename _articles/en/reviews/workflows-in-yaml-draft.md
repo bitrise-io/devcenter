@@ -26,7 +26,9 @@ You can define multiple workflows and run a specific workflow with `bitrise run 
 
 ## Adding steps to a workflow
 
-To add steps to a workflow simply include `steps:` and then add the step(s). For example here is how to run two script steps after each other:
+To add steps to a workflow simply include `steps:` and then add the step(s).
+
+For example here is how to run two script steps after each other:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -103,16 +105,6 @@ Example workflow for chaining five workflows:
 
 Based on the above example, if you run:
 
-|   |   |
-|---|---|
-| `bitrise run send-notifications`  |only the steps of the `send-notifications` workflow will be executed   |
-| `bitrise run setup`  | only the steps of the `setup` workflow will be executed  |
-|  `bitrise run test` |first the steps of the `setup` workflow will be executed, then the steps declared in `test` workflow   |
-| `bitrise run ci`  |will execute the steps of the workflows, in the following order: 
-						1. `setup`
- 						 2. `test`
-  						3. `ci` (the `ci` workflow doesn't have any steps, but that's not an issue, it just means that no step will be executed here, the build will continue with the next workflow in the chain)  |
-
 * `bitrise run send-notifications` : only the steps of the `send-notifications` workflow will be executed
 * `bitrise run setup` : only the steps of the `setup` workflow will be executed
 * `bitrise run test` : first the steps of the `setup` workflow will be executed, then the steps declared in `test` workflow
@@ -127,19 +119,19 @@ Based on the above example, if you run:
   3. `deploy`
   4. `send-notifications`
 
-This means that you can define what a `setup` and `test` should do in your project only once, in the `setup` and `test` workflows, and then you can resuse those in other workflows. There's no need to duplicate steps between workflows.
+**This means that you can define what a** `**setup**` **and** `**test**` **should do in your project only once, in the** `**setup**` **and** `**test**` **workflows, and then you can resuse those in other workflows. There's no need to duplicate steps between workflows.**
 
-When you chain workflows, technically it's the same as if you'd create one workflow which would include all steps from all the workflows chained after each other. This means that, for example, one step's outputs will be available for every other step which is executed after that step during the build, regardless of whether the other step is in the same or in another workflow; if a step is executed after another one during the build, it can access the outputs of the previous steps. Just like if both steps would be in a single workflow.
+**When you chain workflows, technically it's the same as if you'd create one workflow which would include all steps from all the workflows chained after each other. This means that, for example, one step's outputs will be available for every other step which is executed after that step during the build, regardless of whether the other step is in the same or in another workflow. If a step is executed after another one during the build, it can access the outputs of the previous steps. Just like if both steps would be in a single workflow.**
 
 ### Note about workflow environment variables
 
-Workflow specific environment variables are made accessible **when the workflow is executed**, and are available for workflows executed _after_ that workflow, _but not in the ones executed before_ that workflow.
+Workflow specific environment variables are made accessible **when the workflow is executed**. These environment variables are available for workflows executed **after** that workflow, _but_ **not in the ones executed before** that workflow.
 
-Using the example above, if you `bitrise run ci`, the `IS_TEST` environment variable **won't** be available in the `setup` workflow, as that runs _before_ the `test` workflow, but the environment variable **will** be available for the steps in `test`, `ci` and `send-notifications` workflows.
+For example, if you `bitrise run ci`, the `IS_TEST` environment variable **won't** be available in the `setup` workflow, as that runs _before_ the `test` workflow. `IS_TEST` will be available for the steps in `test`, `ci` and `send-notifications` workflows.
 
 This is true even if the workflow doesn't have any steps. This can be utilized if you want to create generic workflows, which can do different things based on environment variables, and you specify those environment variables through a "wrapper" workflow.
 
-Example:
+For example:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -162,17 +154,15 @@ Example:
         after_run:
         - generic-build
 
-`build-alpha` nor `build-beta` has any steps, the steps are defined in `generic-build`, but when you `bitrise run build-alpha` the `BUILD_TYPE` environment variable will be set to `alpha`, while if you `bitrise run build-beta`  the `BUILD_TYPE` environment variable will be set to `beta`.
+As you can see neither `build-alpha` nor `build-beta` workflows have any steps. Instead the steps are defined in `generic-build`, but when you `bitrise run build-alpha` the `BUILD_TYPE` environment variable will be set to `alpha`, while if you `bitrise run build-beta`, the `BUILD_TYPE` environment variable will be set to `beta`.
 
-**Important:** as noted above, workflow defined environment variables are only available in the workflow it defines, and the ones **executed after** that workflow. In the example above `generic-build` is included as `after_run` workflow, so the `BUILD_TYPE` environment variable will be available in the steps of `generic-build`. But if you'd use `before_run` instead of `after_run`, that would mean that technically the steps of `generic-build` are processed and executed before processing the `build-alpha` or `build-beta` workflows, so the `BUILD_TYPE` environment variable would not be available in the step of `generic-build`.
+As discussed above workflow defined environment variables are only available in the workflow it defines, and in the ones **executed after** that workflow. In the example above, `generic-build` is included as `after_run` workflow, so the `BUILD_TYPE` environment variable will be available in the steps of `generic-build`. But if you'd use `before_run` instead of `after_run`, that would mean that technically the steps of `generic-build` are processed and executed before processing the `build-alpha` or `build-beta` workflows, so the `BUILD_TYPE` environment variable would not be available in the step of `generic-build`.
 
 ## Utility workflows
 
-Utility workflows are just a small trick to help you organize your workflows.
+Utility workflows help you organize your workflows more efficiently.
 
-If you rely on workflow chaining, you might quickly have tons of small, reusable workflows. Finding the right workflow might get tricky.
-
-To help with this, the Bitrise CLI supports a small notation called "utility workflows".
+If you rely on workflow chaining, you might quickly have tons of small, reusable workflows. Finding the right workflow might get tricky. To help with this, the Bitrise CLI supports a small notation called "utility workflows".
 
 A workflow is considered as a utility workflow if it's ID starts with an underscore character (for example, `setup`).
 
