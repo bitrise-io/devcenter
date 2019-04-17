@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
 - _articles/en/reviews/triggering-builds-with-a-pull-request-draft.md
 - _articles/en/reviews/workflows-in-yaml-draft.md
