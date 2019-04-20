@@ -8,16 +8,15 @@ menu:
 ---
 **Bitrise**はモバイルアプリ開発（`iOS`, `Android`, `Xamarin`, ...）における[継続的インテグレーション](https://en.wikipedia.org/wiki/Continuous_integration)・[デリバリー](https://en.wikipedia.org/wiki/Continuous_delivery)（CI/CD） プラットフォームをサービス（PaaS）として提供しています。ソフトウェアプロジェクトの開発・自動化を手助けするためのツール・サービスの集合体です。
 
-\**  
-数回のクリックであなたのアプリのテストやデプロイ作業を自動化しましょう！**
+**数回のクリックであなたのアプリのテストやデプロイ作業を自動化しましょう！**
 
 ## bitrise.io**でビルドを走らせましょう。**
 
-* `Workflow` を定義することによってBitrise上のアプリを走らせます。`Workflow`には1つ以上の`Step`が含まれています（[open source Bitrise CLI](https://www.bitrise.io/cli)を実行してソースGitレポジトリを開いてください）。
+* Bitrise の `Workflow` を定義することによって、アプリのビルドが行えます。`Workflow` は1つ以上の`ステップ`によって構成されています（[open source Bitrise CLI](https://www.bitrise.io/cli)を実行してソースGitレポジトリを開いてください）。
 * [あなた自身のビルドステップを作成してシェアしてください。](https://github.com/bitrise-steplib/step-template)
 * 同一アプリにより多くのワークフローがあること、ワークフローがどのトリガーによって実行されるのかを確認してください。
 
-command line scripts/programs によって実行されていれば、以下のStepが可能です；
+コマンドライン上で実行できるものであればどの様なこともステップによって実行可能になります。以下はできることの一部です。
 
 * Eメールの送信
 * [テキストメッセージの送信](https://github.com/bitrise-io/steps-sms-text-message)
@@ -37,15 +36,15 @@ Virtual Machinesはアプリのビルドに必要なツールが全て備わっ�
 
 ### Bitrise CLI - オープンソース・オフライン・オートメーションランナー
 
-`bitrise`ビルドをあなたのマシンで走らせる場合、[open source runner](https://www.bitrise.io/cli)をインストールしてください。その上で、`bitrise`コマンドを使いワークフローを実行してください。_bitrise.ioアカウントはBitrise CLIを使用する場合必要ありません。_
+`bitrise`ビルドをあなたのマシンで走らせる場合、[open source runner](https://www.bitrise.io/cli)をインストールしてください。その上で、`bitrise`コマンドを使いワークフローを実行してください。_Bitrise CLIを使用する場合, bitrise.io のアカウントは必要ありません。_
 
-新しいStepの開発、ビルドのデバギング（誤作動・不具合の修正）を皆様にお手伝いいただけると非常に助かります。
+Bitriseはビルドの作成やデバッグ、その他様々なプロセスの自動化において非常に役に立ちます。
 
 オフラインでビルドを走らせる方法についてはDev Centerの[Bitrise CLI and bitrise.yml](/bitrise-cli/index/)を参照してください。
 
 ## Bitrise API
 
-Go言語でのビルドは、BitriseのAPIで簡単にアクセスができ、使うことができます。ユーザー認証のためのPersonal Access Tokenを取得していれば問題なく使うことができます。
+BitriseのAPIはGo言語で実装されており、簡単にアクセスして使うことができます。ユーザー認証のためのPersonal Access Tokenを取得していれば問題なく使うことができます。
 
 {% include message_box.html type="info" title="API documentation" content="
 
