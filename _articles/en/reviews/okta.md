@@ -35,8 +35,6 @@ Bitrise has been successfully added to okta as an app.
 
 ## Configuring Bitrise as a SAML app
 
-nhh
-
 1. Click the `Assignments` tab of your Bitrise app.
 
    Here you can assign Bitrise to all individual people or groups as well. Make sure you assign Bitrise to all who will access Bitrise org through SAML.
