@@ -10,7 +10,7 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML ap
 This requires:
 
 * an okta administrator who is logged into okta
-* a Bitrise organization owner who is logged into the his/her Bitrise organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams))
+* a Bitrise organization owner who is logged into his/her Bitrise organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams))
 
 ## Adding Bitrise to okta
 
@@ -30,7 +30,7 @@ Bitrise is not integrated to okta as an application so first you have to add it 
  4. Select `SAML 2.0` option at `Sing on method` and click `Create`.
 
     ![](/img/okta-create-new-app-pop-up.png)
- 5. At `General Settings` type Bitrise into the `App name` field. (Optionally, you can add an app logo if you wish.) Click `Next`.
+ 5. At `General Settings` step, type Bitrise into the `App name` field. (Optionally, you can add an app logo if you wish.) Click `Next`.
 
     ![](/img/okta-general-settings.png)
  6. Head over to your Bitrise organization and click the `Single Sign On` tab on the left menu.
@@ -62,17 +62,20 @@ Congrats! Bitrise has been successfully added to okta as an app.
 
    ![](/img/configure-bitrise-okta.jpg)
 3. Copy the `Identity Provider Single Sign-On URL` and paste it in your Bitrise org's `Identity provider sign-on URL`.
-4. If you haven't inserted the Certificate yet into the respective field of your Bitrise org, you can copy the certificate and paste it the respective field of your Bitrise org.
-5. Click `Configure SSO`.
+
+   If you haven't pasted the Certificate into the respective field of your Bitrise org yet, you can do so now as it is displayed on this page.
+4. Click `Configure SSO` on your Bitrise org.
 
 ## Enabling SAML SSO on Bitrise
 
-To enable your own SAML SSO connection to the Bitrise org / org where saml has been setup.
+Once SAML SSO has been set up between the app and the identity provider, org members (including the org owner) must enable their SAML SSO connection to the respective org to use SAML SSO as a secure login method.
 
-1. Check your mailbox (one associated with your Bitrise account) for an email notification from Bitrise (sent by `letsconnect@bitrise.io`).
-2. Click `Sign In via SSO`. This will take you to an authorization page where you have to click `Authorize` if you trust the organization.
+1. Check your mailbox (one associated with your Bitrise account) for an email notification sent by Bitrise (`letsconnect@bitrise.io`).
+2. Click `Sign In via SSO`. This link will take you to an authorization page where you have to click `Authorize` if you trust the organization.
 
-If all went well, you should be on your Dashboard. If you go to the `Groups` tab the organization, you can see that you are automatically added as a SAML user. All org members, who enable SAML SSO, will appear here automatically.
+If all went well, you should be landing on your Bitrise Dashboard. If you go to the `Groups` tab the organization, you can see that you are automatically added as a SAML user. All org members, who enable SAML SSO, will appear here automatically.
+
+![](/img/groups-saml-enabled.png)
 
 Please note that at this stage, SAML SSO has not been enforced as the only gateway to the Bitrise organization. You can only enforce it if all org members have completed the enablement steps. You can check each org [member's status](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) (enabled or disabled) if you click the `Review Users` button on the org's `Single Sign-On` tab.
 
