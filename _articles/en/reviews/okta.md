@@ -1,24 +1,24 @@
 ---
-title: Setting up okta SSO for Bitrise
+title: Setting up Okta SSO for Bitrise
 redirect_from: []
 date: 2019-04-23 08:56:13 +0000
 published: false
 
 ---
-This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [okta](https://www.okta.com/).
+This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Okta](https://www.okta.com/).
 
 This requires:
 
-* an okta administrator who is logged into okta
+* an Okta administrator who is logged into okta
 * a Bitrise organization owner who is logged into his/her Bitrise organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams))
 
-## Adding Bitrise to okta
+## Adding Bitrise to Okta
 
-Bitrise is not an integrated app in okta. You have to add Bitrise manually to okta first, then you can configure SAML SSO on it.
+Bitrise is not an integrated app in Okta. You have to add Bitrise manually to okta first, then you can configure SAML SSO on it.
 
-We will be jumping back and forth from the Bitrise organization account to the okta so make sure both pages are available. In practice what this means is the organization owner should be logged into Bitrise and the okta admin should be logged into okta.
+We will be jumping back and forth from the Bitrise organization account to the Okta so make sure both pages are available. In practice what this means is the organization owner should be logged into Bitrise and the Okta admin should be logged into Okta.
 
- 1. Log into okta and click `Admin`.
+ 1. Log into Okta and click `Admin`.
 
     ![](/img/add-apps-okta.png)
  2. On your Dashboard click `Add Applications` under `Shortcuts`.
@@ -39,7 +39,7 @@ We will be jumping back and forth from the Bitrise organization account to the o
  7. Click the `Copy Link` button to copy the Single Sign-On URL.
 
     ![](/img/okta-bitrise-config.png)
- 8. Head back to okta's `SAML Settings` and paste the copied URL to the `Single sign on URL` input field.
+ 8. Head back to Okta's `SAML Settings` and paste the copied URL to the `Single sign on URL` input field.
  9. Type Bitrise at the `Audience URI (SP Entity ID)`.
 
     You can download the Okta certificate file now and paste its content in the `Certificate` field on your Bitrise org's `Single Sign On` page. Even easier if you leave it for a later as you will need the `Identity provider sign-on URL` from okta anyway. You will fetch this while configuring Bitrise as a SAML app.
@@ -48,7 +48,7 @@ We will be jumping back and forth from the Bitrise organization account to the o
 10. Click `Next`.
 11. Select the answer at Feedback as best it suits your organization. Hit `Finish`.
 
-Congrats! Bitrise has been successfully added to okta as an app.
+Congrats! Bitrise has been successfully added to Okta as an app.
 
 ## Configuring Bitrise as a SAML app
 
@@ -60,7 +60,7 @@ Congrats! Bitrise has been successfully added to okta as an app.
 2. Click the `Sign-On` tab of your Bitrise app. You will see that SAML setup is not completed yet. Click `View Setup Instructions`.
 
    ![](/img/view-setup-instructions.png)
-   The `How to Configure SAML 2.0 for Bitrise application` page is displayed. It summarizes all the information you need to set up the SAML connection between Bitrise and okta.
+   The `How to Configure SAML 2.0 for Bitrise application` page is displayed. It summarizes all the information you need to set up the SAML connection between Bitrise and Okta.
 
    ![](/img/configure-bitrise-okta.jpg)
 3. Copy the `Identity Provider Single Sign-On URL` and paste it in your Bitrise org's `Identity provider sign-on URL`.
