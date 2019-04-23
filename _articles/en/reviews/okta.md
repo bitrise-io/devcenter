@@ -74,7 +74,7 @@ To enable your own SAML SSO connection to the Bitrise org / org where saml has b
 
 If all went well, you should be on your Dashboard. If you go to the `Groups` tab the organization, you can see that you are automatically added as a SAML user. All org members, who enable SAML SSO, will appear here automatically.
 
-Please note that at this stage, SAML SSO has not been enforced as the sole gateway to the organization. You can only enforce it if all org members have completed the enablement steps. You can check each org member's status (enabled or disabled) if you click the `Review Users` button on the org's `Single Sign-On` tab.
+Please note that at this stage, SAML SSO has not been enforced as the only gateway to the Bitrise organization. You can only enforce it if all org members have completed the enablement steps. You can check each org [member's status](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) (enabled or disabled) if you click the `Review Users` button on the org's `Single Sign-On` tab.
 
 ## Enforcing SAML SSO on the organization
 
