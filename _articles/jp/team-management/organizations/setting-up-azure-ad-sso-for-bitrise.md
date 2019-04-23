@@ -14,7 +14,7 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML ap
 This requires:
 
 * an Azure AD administrator who is logged into Azure AD
-* a Bitrise organization owner who is logged into the his/her Bitrise organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams))
+* a Bitrise organization owner who is logged into his/her Bitrise organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams))
 
 ## Adding Bitrise to Azure AD
 
