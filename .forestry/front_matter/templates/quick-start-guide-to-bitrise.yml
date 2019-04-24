@@ -17,7 +17,6 @@ pages:
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/reviews/triggering-builds-with-a-pull-request-draft.md
-- _articles/en/reviews/okta.md
 - _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
