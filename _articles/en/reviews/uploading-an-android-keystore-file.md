@@ -5,13 +5,11 @@ date: 2019-04-24 06:44:20 +0000
 published: false
 
 ---
-You can easily upload your keystore file to your Android project with Bitrise API.
-
-**Note that this call uses the deprecated** `app.bitrise.io` **URL and the app’s build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.** "%}
+You can easily upload your keystore file to an app with Bitrise API.
 
 ## Creating and uploading a keystore file
 
-The first step is to create a pre-signed "upload" URL. This URL is a temporary link which you will use to upload the keystore file to its destination.The required parameters are:
+The first step is to create a pre-signed upload URL. This URL is a temporary link which you will use to upload the keystore file to its destination.The required parameters are:
 
 * app slug
 * Android keystore file parameters:
@@ -19,7 +17,7 @@ The first step is to create a pre-signed "upload" URL. This URL is a temporary l
   * keystore alias
   * private key password
   * name of your file
-  * file size of your keystore
+  * keystore file size
 
 Example `curl` request
 
@@ -31,20 +29,23 @@ Example response
 
     {
       "data": {
-        "download_url": "string",
-        "exposed_meta_datastore": "string",
+        "upload_file_name": "my-release-key.keystore",
+        "upload_file_size": 2218,
+        "slug": "01D97K0KHPEVW12392BAWV146Z",
+        "processed": false,
         "is_expose": true,
-        "is_protected": true,
-        "processed": true,
-        "slug": "string",
-        "upload_file_name": "string",
-        "upload_file_size": 0,
-        "upload_url": "string",
-        "user_env_key": "string"
+        "is_protected": false,
+        "upload_url": "https://concrete-userfiles-production.s3.us-west-2.amazonaws.com/project_file_storage_documents/uploads/25091/original/my-release-key.keystore?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIV2YZWMVCNWNR2HA%2F20190424%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20190424T115207Z&X-Amz-Expires=600&X-Amz-SignedHeaders=content-length%3Bhost&X-Amz-Signature=3265f62cf37f9315a7b35ea8a63580e3b11bbc276a8c26f326c6b7426b0f7511",
+        "user_env_key": "ANDROID_KEYSTORE",
+        "exposed_meta_datastore": {
+          "password": "Mypassword1",
+          "alias": "key1",
+          "private_key_password": "Mypassword1"
+        }
       }
     }
 
-As you can see from the example response above, the file name, its size, slug and pre-signed upload url are retrieved (along with some attributes that you can modify). **_download url?_**
+As you can see from the example response above, the file name and size, the app slug, attributes and pre-signed upload url are retrieved. **_download url?_**
 
 Using the generated pre-signed upload URL and the keystore file name, upload your file to AWS with a simple `curl` request.
 
@@ -64,52 +65,3 @@ Example `curl` request:
     curl -X POST -H 'Authorization: THE-ACCESS-TOKEN'/v0.1/apps/{app-slug}/android-keystore-files/{generic-project-file-slug}/uploaded
 
 Now your keystore file is uploaded in the `ANDROID KEYSTORE FILE` section of the `Code Signing` tab.
-
-## Updating an uploaded keystore file
-
-You can perform minor updates to an uploaded keystore file with the [relevant Bitrise API](https://api-docs.bitrise.io/) using the `PATCH` method. If you've uploaded your file to [Bitrise](https://www.bitrise.io), you can visually check any changes to it on our `Code Signing` tab.
-
-The required parameters are:
-
-* app slug
-* keystore file slug
-
-For example, to make a keystore file protected, you can set the `is_protected` flag of your keystore file to `true`.
-
-    curl -X PATCH -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/keystore-file/KEYSTORE-FILE-SLUG -d '{"is_protected":true}'
-
-* **_replacing with another one?_**
-* **_changing attributes? expose for pull requests, make it protected, delete, download_**
-
-{% include message_box.html type="warning" title="Careful with those attributes!" content="
-
-In the case of iOS code signing files, you can set the `is_protected`, `is_exposed` and `processed` attributes of the document:
-
-* Once the `is_protected` flag is set to `true,` it cannot be changed anymore.
-* When the value of `is_protected` is true, then the `is_expose` flag cannot be set to another value.
-* Once the `processed` flag is set to true, then its value cannot be changed anymore.
-
-  Violating these constraints the response will be Bad Request.
-
-  Note that the previous `/apps/{APP-SLUG}/provisioning-profiles/{PROVISIONING-PROFILE-SLUG}/uploaded` endpoint will have the same effect as this one with the request body `processed:true`. "%}
-
-## Deleting a keystore file
-
-You can delete your uploaded keystore file with using the `DELETE` method.
-
-The required parameters are:
-
-* app slug
-* keystore file slug
-
-Example curl request:
-
-    curl -X DELETE 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/keystore-file'
-
-## Downloading an keystore file
-
-If you’d like to download the actual file from AWS, you can do so with the following `curl` requests:
-
-    curl -X POST -H 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/keystore-file/KEYSTORE-FILE-SLUG'
-
-The response will contain a pre-signed, expiring AWS URL for the file.
