@@ -14,7 +14,7 @@ The first step is to create a pre-signed upload URL. This URL is a temporary lin
 * app slug
 * Android keystore file parameters: keystore password, keystore alias, private key password, name of your keystore file, keystore file size
 
-Example `curl` request
+Example `curl` request:
 
       curl -X POST "https://api.bitrise.io/v0.1/apps/APP-SLUG/android-keystore-files" -H "accept: application/json" -H "Authorization: " -H "Content-Type: application/json" -d "{ "alias": "", "password": "", "private_key_password": "", "upload_file_name": "", "upload_file_size": }"
 
