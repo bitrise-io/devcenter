@@ -2,7 +2,6 @@
 title: Setting up Okta SSO for Bitrise
 redirect_from: []
 date: 2019-04-24 07:13:35 +0000
-published: false
 
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Okta](https://www.okta.com/).
