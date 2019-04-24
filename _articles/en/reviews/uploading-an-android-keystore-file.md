@@ -51,17 +51,4 @@ Using the generated pre-signed upload URL and the keystore file name, upload you
 
     curl -T' keystore.file 'upload url'
 
-## Confirming the keystore file upload
-
-To complete the uploading process, you have to confirm the upload with another `POST` request:
-
-The required parameters are:
-
-* app slug
-* **_generic project file slug_**
-
-Example `curl` request:
-
-    curl -X POST -H 'Authorization: THE-ACCESS-TOKEN'/v0.1/apps/{app-slug}/android-keystore-files/{generic-project-file-slug}/uploaded
-
-Now your keystore file is uploaded in the `ANDROID KEYSTORE FILE` section of the `Code Signing` tab.
+You have to continue with confirming the file upload with the `/apps/{app-slug}/android-keystore-files/{android-keystore-file-slug}/uploaded` endpoint.
