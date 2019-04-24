@@ -17,13 +17,12 @@ pages:
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/reviews/triggering-builds-with-a-pull-request-draft.md
+- _articles/en/reviews/okta.md
 - _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
-- _articles/en/reviews/workflows-in-yaml-draft.md
-- _articles/en/reviews/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/reviews/remote-access-draft.md
 - _articles/en/reviews/use-bitrise-yml-from-repository-draft.md
 - _articles/jp/api/incoming-and-outgoing-webhooks.md
@@ -42,7 +41,6 @@ pages:
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/秘密と環境設定-secrets-and-env-vars.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドの番号付けとアプリバージョン管理-build-numbering-and-app-versioning.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
-- _articles/en/reviews/managing-files-in-generic-file-storage-with-bitrise.md
 - _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
 - _articles/en/reviews/fastlane.md
 - _articles/en/reviews/API/endpoints-and-testing-the-api.md
