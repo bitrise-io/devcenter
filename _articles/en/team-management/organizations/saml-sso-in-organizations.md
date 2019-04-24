@@ -12,7 +12,6 @@ Organization members can log into or sign up to Bitrise using their own SAML SSO
 {% include message_box.html type="note" title="SAML SSO with Org Elite subscription" content="
 
 Please note that SAML SSO is only available for organizations with [Org Elite subscription](https://www.bitrise.io/pricing/teams). If you try to set up SAML SSO to an organization that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), `Single Sign On` will appear on the left menu bar in your Account Settings but you won't be able to use it. Click `Upgrade to Org Elite` in the pop-up window to use SAML SSO in your organization.
-
 ![](/img/limited-sso-elite.png)
 
 "%}
