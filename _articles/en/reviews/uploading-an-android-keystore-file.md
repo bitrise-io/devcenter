@@ -42,4 +42,4 @@ As you can see from the example response above, the pre-signed upload is display
 
     curl -T' keystore.file 'upload url'
 
-To complete the upload process, you have to confirm the file upload with the `/apps/{app-slug}/android-keystore-files/{android-keystore-file-slug}/uploaded` endpoint.
+To complete the upload process and display your keystore file on the Code Signing tab, you have to confirm the file upload with the `/apps/{app-slug}/android-keystore-files/{android-keystore-file-slug}/uploaded` endpoint. 
