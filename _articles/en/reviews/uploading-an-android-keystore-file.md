@@ -38,10 +38,10 @@ Example response
       }
     }
 
-As you can see from the example response above, the file name and size, the app slug, attributes and pre-signed upload url are retrieved. **_download url?_**
+As you can see from the example response above, the file name and size, the app slug, attributes and pre-signed upload url are retrieved.
 
 Using the generated pre-signed upload URL and the keystore file name, upload your file to AWS with a simple `curl` request.
 
     curl -T' keystore.file 'upload url'
 
-You have to continue with confirming the file upload with the `/apps/{app-slug}/android-keystore-files/{android-keystore-file-slug}/uploaded` endpoint.
+You have to continue with confirming the file upload with the `/apps/{app-slug}/android-keystore-files/{android-keystore-file-slug}/uploaded` endpoint to.....
