@@ -7,7 +7,7 @@ published: false
 ---
 The caching will tar all the cached directories and dependencies, and store them securely in Amazon S3.
 
-キャッシュはAmazon S3において、全てのキャッシュされたディレクトリや依存性をtarし、安全に保管します。
+キャッシュはAmazon S3において、全てのキャッシュされたディレクトリや依存性をtarし、安全に保存します。
 
 {% include message_box.html type="info" title="When does the Build Cache gets auto-deleted?ビルドキャッシュが自動削除されるのはいつですか？" content=" The Build Cache, related to a **specific branch**, expires/is auto-deleted after 7 days, **if there's no new build on that branch in the meantime**. This means that **if you do builds on a specific branch every day** (more frequently than a week), **it'll never expire/won't get deleted automatically**. If you don't start a build on that specific branch for more than 7 days, then the related cache will be removed, and your next build will run like the first time, when there was no cache for that branch yet.
 
@@ -65,14 +65,15 @@ You **can**, however, **ignore paths INSIDE a cache path**. For example, if your
 
 しかし、**キャッシュパス内部でのパスの無視は行なえます**。例えば、`a/path/to/cache`があなたのパスであれば、ファイル内部に`a/path/to/cache`だけでない限り、`a/path/to/cache/.ignore-me`を無視することができます。"%}
 
-## Download and delete caches  
+## Download and delete caches
+
 キャッシュのダウンロードとキャッシュ
 
 You can download and delete caches for every branch which generated a cache in the `Manage Build Caches` section of your app's `Settings` tab.
 
 アプリの`Settings`タブの`Manage Build Caches`セクションにある、キャッシュを生成したブランチ毎にキャッシュのダウンロードと削除が行なえます。
 
-{% include message_box.html type="warning" title="Delete a single branch's cache単一ブランチのキャッシュを削除する" content=" If you only want to delete the cache which is related to a single branch, you should also delete the default branch's cache too! For more details, see the [If a build runs on a branch which doesn't have a cache yet, it'll get the main/default Branch's cache](#if-a-build-runs-on-a-branch-which-doesnt-have-a-cache-yet-itll-get-the-maindefault-branchs-cache) section. 
+{% include message_box.html type="warning" title="Delete a single branch's cache単一ブランチのキャッシュを削除する" content=" If you only want to delete the cache which is related to a single branch, you should also delete the default branch's cache too! For more details, see the [If a build runs on a branch which doesn't have a cache yet, it'll get the main/default Branch's cache](#if-a-build-runs-on-a-branch-which-doesnt-have-a-cache-yet-itll-get-the-maindefault-branchs-cache) section.
 
 単一ブランチに関連性があるキャッシュのみを削除したい場合、デフォルトブランチのキャッシュも削除しなければなりません！詳細については、[If a build runs on a branch which doesn't have a cache yet, it'll get the main/default Branch's cache](#if-a-build-runs-on-a-branch-which-doesnt-have-a-cache-yet-itll-get-the-maindefault-branchs-cache) をご覧ください。"%}
 
@@ -94,31 +95,49 @@ The `Build Cache API` is a simple API, with only one responsibility: you can req
 
 The Steps are the place where the "magic" happens. The whole logic of comparing caches (to see if there was any relevant change) and creating the cache archives is done by the Steps. This also means that you can write your own Steps and implement your own comparison and compression logic. The Step just has to use the Build Cache API to get download and upload URLs, there's no restriction on the cache file format or on its content.
 
-`Steps`は”魔法”がかかる場所でもあります。キャッシュの比較（関連した変更がある場合）やキャッシュアーカイブの作成の全てのロジックがステップによって行われます。また、これは自分自身のステップを書いたり、自分でロジックの比較や圧縮を実行する事ができるという意味もあります。ステップはビルドキャッシュAPIを使ってURLのダウンロード・アップロードを行うためだけに
+`Steps`は”魔法”がかかる場所でもあります。キャッシュの比較（関連した変更がある場合）やキャッシュアーカイブの作成の全てのロジックがステップによって行われます。また、これは自分自身でステップを書いたり、自分でロジックの比較や圧縮を実行する事ができるという意味でもあります。ビルドキャッシュAPIを使ってURLのダウンロード・アップロードを行うためだけのステップなので、キャッシュファイルフォーマットやその内容に関する制限はありません。
 
-A couple more handy tips:
+A couple more handy tips:  
+お手軽なtips
 
 * You can create your own Cache steps
 * You can create and use your own Build Cache server and API
+* 自分自身のキャッシュステップの作成が可能
+* 自分自身のビルドキャッシュサーバーとAPIの作成・使用が可能
 
-### The cache might or might not be available
+### The cache might or might not be available　
 
 You should write your code in a way that it won't fail if the cache can't be accessed.
 
-### The cache is downloaded over the internet
+もしキャッシュが接続されなければ、正しい手順で失敗しないコード作成をしてください。
+
+### The cache is downloaded over the internet　インターネットでキャッシュがダウンロードされる
 
 This means that if you store files which are downloaded from a CDN/cloud storage, you might not see any speed improvement, as downloading it from the Bitrise Build Cache storage will probably take about the same time as downloading it from its canonical CDN/cloud storage location.
 
-{% include message_box.html type="important" title="When to store a dependency in Bitrise Build Cache?" content=" Storing a dependency in Bitrise Build Cache might help if you have **reliability** issues with the resource's/dependency's canonical download location. Popular tools/dependencies might get rate limited (for example, [PhantomJS](https://github.com/Medium/phantomjs/issues/501)). CDN servers might have availability issues, like jCenter/Bintray. Here are a few examples: [#1](http://status.bitrise.io/incidents/gcx1qn5lj7yt), [#2](http://status.bitrise.io/incidents/3ztgwxvwq7rm), and [#3](http://status.bitrise.io/incidents/dqpby9m1n274). If that's the case, storing the dependency in Bitrise Build Cache might help you. It might not improve the build time but **it definitely can improve the reliability**. "%}
+これはCDN/cloudストレージからダウンロードされたファイルを保存している場合、スピードの向上は見られません。それは、キャッシュをBitriseビルドキャッシュストレージからダウンロードするのは、標準的なCDN/cloudストレージ場所からダウンロードするのとほぼ同じくらいの時間がかかるからです。
 
-### The cache is stored as one archive file
+{% include message_box.html type="important" title="When to store a dependency in Bitrise Build Cache?どのタイミングでBitriseビルドキャッシュ内の依存関係を保存するべきですか？" content=" Storing a dependency in Bitrise Build Cache might help if you have **reliability** issues with the resource's/dependency's canonical download location. Popular tools/dependencies might get rate limited (for example, [PhantomJS](https://github.com/Medium/phantomjs/issues/501)). CDN servers might have availability issues, like jCenter/Bintray. Here are a few examples: [#1](http://status.bitrise.io/incidents/gcx1qn5lj7yt), [#2](http://status.bitrise.io/incidents/3ztgwxvwq7rm), and [#3](http://status.bitrise.io/incidents/dqpby9m1n274). If that's the case, storing the dependency in Bitrise Build Cache might help you. It might not improve the build time but **it definitely can improve the reliability**.
+
+Bitriseビルドキャッシュ内で依存関係を保存することは、リソース・依存関係の標準的なダウンロード場所での信頼性に関する問題がある場合、役に立ちます。[PhantomJS](https://github.com/Medium/phantomjs/issues/501)のような人気のあるツール・依存関係におけるレートは制限される可能性もあります。CDNサーバーには、jCenterやBintrayのような利用状況の問題に直面する可能性もあります。例 [#1](http://status.bitrise.io/incidents/gcx1qn5lj7yt), [#2](http://status.bitrise.io/incidents/3ztgwxvwq7rm), [#3](http://status.bitrise.io/incidents/dqpby9m1n274)をご覧ください。これらのケースの場合、Bitriseビルドキャッシュに依存関係を保存することは役に立ちます。ビルド時間の向上は見られないかもしれませんが、信頼度については必ず向上します。"%}
+
+### The cache is stored as one archive file　単一アーカイブファイル内にキャッシュが保存されている
 
 So if you have multiple paths you want to cache and any of the paths gets updated, **it'll update the whole cache archive**, including all the paths you cache.
 
-### If a build runs on a branch which doesn't have a cache yet, it'll get the cache of the main/default branch
+キャッシュしたい複数のパスをお持ちで、パスのどれかがアップデートされていると、キャッシュを行う全てのパスを含む、**全てのキャッシュアーカイブをアップデートします**。
+
+### If a build runs on a branch which doesn't have a cache yet, it'll get the cache of the main/default branch  
+キャッシュがまだないブランチでビルドを実行する場合、メインもしくはデフォルトのブランチからキャッシュを入手します
 
 The build on a non-default branch, to speed things up, can access (read-only) the cache of the `primary` branch, until a successful build is found on the new branch. Once a build on the new branch pushes a cache, new builds on that branch will get the cache of the branch. _Caches are stored and available for every branch separately._
 
+デフォルトではないブランチでのビルドは、新ブランチで成功したブランチが見つかるまで`primary`ブランチのキャッシュに接続します（読み取り専用）。一旦新ブランチ上でのビルドがキャッシュをプッシュしたら、そのブランチ上での新しいビルドがブランチのキャッシュを入手します。_キャッシュは別々にブランチ毎で保存され、利用可能です。_
+
 You can see which is your **default branch** if you click the `Settings` tab of your app.
 
+アプリの`Settings`タブをクリックすればどれが自身の**デフォルトブランチ**であるか確認することができます。
+
 If a build was started with a code push, the cache will be available on the push branch and will be pulled from the same push branch. If you start a Pull Request (PR), the cache of the PR source branch will be pulled and pushed to the same source branch. In the case of a tag event, there is no code change so there is nothing to cache.
+
+コードプッシュによってビルドが開始された場合、キャッシュはプッシュブランチで利用可能で、その同じプッシュブランチからキャッシュがプルされます。プルリクエストを開始する場合、そのPRソースブランチのキャッシュはプルされ、同じソースブランチにプッシュされます。タグイベントの場合、コード変更はないので、キャッシュする必要はありません。
