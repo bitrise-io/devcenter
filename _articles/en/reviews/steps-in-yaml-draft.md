@@ -20,9 +20,7 @@ The _step interface definition_ is defined in the `step.yml` file for every Step
 * The title and description of the Step. 
 * Properties such as the issue tracker or support URL, or certain filter properties.
 
-From a configuration perspective all you have to know about Bitrise Steps is how you can include and configure them in your build configuration (`bitrise.yml`).
-
-To include a Step you have to reference it by a [Step reference ID](#step-referenceid-format) in the `steps:` list of a Workflow.
+To include a Step in your `bitrise.yml` configuration, you have to reference it by a [Step reference ID](#step-referenceid-format) in the `steps:` list of a Workflow.
 
 An example, with a single `script` step, which will be executed when you run `bitrise run test`:
 
