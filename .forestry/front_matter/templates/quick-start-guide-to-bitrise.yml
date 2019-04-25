@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/should-i-commit-my-dependencies-into-my-repository.md
 - _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
