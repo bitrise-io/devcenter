@@ -13,7 +13,12 @@ For example the `Git Clone` Step performs a `git clone` of the specified reposit
 
 From a technical perspective, a Step is a semver **versioned** repository which includes the _code_ of the Step and the _interface_ definition of the Step.
 
-The _step interface definition_ (`step.yml`) includes information like the dependencies of the step, the inputs and outputs of the step, the title and description of the step; and other properties like the issue tracker / support URL, or the filter properties which define when the step should be performed or skipped and whether a failed step should mark the build as failed.
+The _step interface definition_ is defined in the `step.yml` file for every Step. It includes:
+
+* The dependencies of the Step. 
+* The inputs and outputs of the Step. 
+* The title and description of the Step. 
+* Properties such as the issue tracker or support URL, or certain filter properties.
 
 From a configuration perspective all you have to know about Bitrise Steps is how you can include and configure them in your build configuration (`bitrise.yml`).
 
