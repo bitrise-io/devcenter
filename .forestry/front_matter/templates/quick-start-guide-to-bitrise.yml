@@ -13,7 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
-- _articles/en/reviews/should-i-commit-my-dependencies-into-my-repository.md
+- _articles/en/reviews/steps-in-yaml-draft.md
 - _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
@@ -24,7 +24,6 @@ pages:
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
 - _articles/en/reviews/remote-access-draft.md
-- _articles/en/reviews/use-bitrise-yml-from-repository-draft.md
 - _articles/jp/api/incoming-and-outgoing-webhooks.md
 - _articles/en/api/incoming-and-outgoing-webhooks.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/keystoreファイルのダウンロード-downloading-a-keystore-file.md
