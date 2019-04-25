@@ -17,8 +17,8 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/faq/organization-faq.md
 - _articles/en/faq/should-i-commit-my-dependencies-into-my-repository.md
+- _articles/en/faq/organization-faq.md
 - _articles/en/faq/no-builds-are-triggered-automatically.md
 - _articles/en/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
 - _articles/en/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
