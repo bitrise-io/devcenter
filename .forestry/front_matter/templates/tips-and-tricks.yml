@@ -17,9 +17,9 @@ fields:
       name: weight
       label: weight
 pages:
+- _articles/en/tips-and-tricks/optimize-your-build-times.md
 - _articles/jp/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
 - _articles/en/tips-and-tricks/use-bitrise-yml-from-repository.md
-- _articles/en/tips-and-tricks/optimize-your-build-times.md
 - _articles/en/tips-and-tricks/install-additional-tools.md
 - _articles/en/tips-and-tricks/disable-a-step-by-condition.md
 - _articles/en/tips-and-tricks/dont-mark-build-failed-if-step-fails.md
