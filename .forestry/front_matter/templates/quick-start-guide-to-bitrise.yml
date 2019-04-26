@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
 - _articles/en/reviews/steps-in-yaml-draft.md
 - _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
@@ -70,7 +71,6 @@ pages:
 - _articles/en/reviews/Japanese translations/webhooks/webhook-トラブルシューティング-webhook-troubleshooting.md
 - _articles/en/reviews/Japanese translations/webhooks/outgoing-webhook-の追加-adding-outgoing-webhooks.md
 - _articles/en/reviews/Japanese translations/webhooks/slack-webhookの追加-adding-a-slack-webhook.md
-- _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
 - _articles/jp/team-management/teams-vs-organizations.md
 - _articles/en/team-management/teams-vs-organizations.md
 - _articles/en/reviews/Japanese translations/webhooks/webhookの追加-adding-webhooks.md
