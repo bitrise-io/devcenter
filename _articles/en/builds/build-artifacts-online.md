@@ -30,7 +30,7 @@ With the `Run if previous Step failed` toggle enabled, you can access your build
 
 ### Who can access build artifacts?
 
-The artifacts at `APPS & Artifacts` are accessible for everyone who are owner, admin, developer, tester/QA of the app. Besides these roles, if you keep the default config of the `Enable public page for the App` feature, then anyone who receives the URL, will be able to access your app and its artifacts. For more information, check out [Public App install page](https://devcenter.bitrise.io/tutorials/deploy/bitrise-app-deployment/#public-app-install-page).
+The artifacts at `APPS & Artifacts` are accessible for everyone who is the owner, admin, developer, tester/QA of the app. Besides these roles, if you keep the default config of the `Enable public page for the App` feature, then anyone who receives the URL, will be able to access your app and its artifacts. For more information, check out [Public App install page](https://devcenter.bitrise.io/tutorials/deploy/bitrise-app-deployment/#public-app-install-page).
 
 ## File types & limitations
 
