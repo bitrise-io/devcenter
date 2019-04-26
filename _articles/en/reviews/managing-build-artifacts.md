@@ -7,13 +7,51 @@ published: false
 ---
 You can list all 
 
-Build artifacts are generated if you added our `Deploy to bitrise.io` Step to [your workflow](/builds/build-artifacts-online/). You can view, share or download them in the `APPS & ARTIFACTS` tab of your Build's page. You can list, update, view and delete build artifacts with the Bitrise API.
+Build artifacts are generated if you added our `Deploy to bitrise.io` Step to [your workflow](/builds/build-artifacts-online/). You can view, share or download them in the `APPS & ARTIFACTS` tab of your Build's page. 
+
+You can list, update, view and delete build artifacts with the Bitrise API.
 
 Table
 
 ## Listing build artifacts
 
-You can list all build artifacts of 
+You can list all build artifacts that have been generated and exported during the build. To be able to use other build artifact endpoints, you have to start with this one to get the build artifact slugs...
+
+The required parameters are:
+
+* app slug
+* build slug
+
+Example `curl` request:
+
+    curl -X GET "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts" -H "accept: application/json" -H "Authorization: awBg1s2u2LU7RM8-lth1ihu839rDcYCODi3F3kwLybzIp8nTTKhNZYCD-UGpIVmP_FOhnLwRhoCvl_Y-7712qQ"
+
+Example response:
+
+    {
+      "data": [
+        {
+          "title": "another_app-debug.apk",
+          "artifact_type": "android-apk",
+          "is_public_page_enabled": true,
+          "slug": "92e0b6ecae87b832",
+          "file_size_bytes": 1574799
+        },
+        {
+          "title": "app-debug.apk",
+          "artifact_type": "android-apk",
+          "is_public_page_enabled": true,
+          "slug": "54ae701761c4f956",
+          "file_size_bytes": 1574793
+        }
+      ],
+      "paging": {
+        "total_item_count": 2,
+        "page_item_limit": 50
+      }
+    }
+
+As you can see from the above response, when calling this endpoint, build artifact slugs get generated which you can use for updating, deleting or viewing a specific build artifact of an app's build.
 
 ### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts
 
