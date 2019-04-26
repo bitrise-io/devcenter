@@ -15,7 +15,7 @@ Table
 
 ## Listing build artifacts
 
-You can list all build artifacts that have been generated and exported during the build. To be able to use other build artifact endpoints, you have to start with this one to get the build artifact slugs...
+You can list all build artifacts that have been generated and exported during the build. To be able to use other build artifact endpoints, you have to start with [this endpoint](https://api-docs.bitrise.io/#/build-artifact/artifact-list) to get the build artifact slugs...
 
 The required parameters are:
 
@@ -52,6 +52,34 @@ Example response:
     }
 
 As you can see from the above response, when calling this endpoint, build artifact slugs get generated which you can use for updating, deleting or viewing a specific build artifact of an app's build.
+
+Let's have a look at a specific build artifact!
+
+## Retrieving a specific build artifact's data
+
+Now that all the build artifact slugs are at hand, pick one and get more details on the artifact.
+
+Example `curl` request:
+
+    
+
+Example response:
+
+    {
+      "data": {
+        "title": "another_app-debug.apk",
+        "artifact_type": "android-apk",
+        "expiring_download_url": "https://bitrise-prod-build-storage.s3.amazonaws.com/builds/b234f959745082e0/artifacts/7626902/another_app-debug.apk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIV2YZWMVCNWNR2HA%2F20190426%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20190426T131627Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=9f1af26787f34b5cf0cbc18b2372313607b1e3c0203a9ce7e42da884a6ddf70f",
+        "is_public_page_enabled": true,
+        "slug": "92e0b6ecae87b832",
+        "public_install_page_url": "https://www.bitrise.io/artifact/7626902/p/8e5b2c62abe28fecef09b271de767920",
+        "file_size_bytes": 1574799
+      }
+    }
+
+what to do with the download url
+
+Would you like to update this build artifact? 
 
 ### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts
 
