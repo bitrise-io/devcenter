@@ -73,7 +73,7 @@ Now we are going to add and customize an Amazon S3 bucket sync to the workflow s
 1. Go to your workflow.
 2. Click `+` to inject the `Amazon S3 bucket sync` Step from the StepLib to your workflow.
 3. Configure the `Amazon S3 bucket sync` Step:
-   * enter your AWS Access Key, AWS Secret Key and the name for your S3 bucket.
+   * enter your AWS Access Key, AWS Secret Key and the name for your S3 bucket
    * add your local path which should be: `$BITRISE_SOURCE_DIR/build/` (This will select the contents of the build folder in the project source path on the virtual machine. It will be uploaded on every build.)
    * add `public-read` or `private` to `Access Control`
 

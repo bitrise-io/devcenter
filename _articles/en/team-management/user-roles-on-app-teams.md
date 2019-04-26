@@ -7,6 +7,8 @@ menu:
     weight: 6
 
 ---
+If the owner of an app is an Organization,
+
 Roles are very important on Bitrise. They limit what you can and cannot do with an application.
 
 Roles work on an application basis: the same user can have different roles on different applications. As such, organizations have no inherent "roles", apart from that of the organization owners: organizations have groups and different groups can be assigned different roles.
@@ -81,6 +83,6 @@ Users who have **owner** or **admin** rights to the applications can invite new 
 
    ![](/img/add-users.png)
 
-   Note that [the process is the same if the app is owned by an organization](/team-management/organizations/managing-apps/#adding-outside-contributors-to-an-app) except you will see `Add outside contributors to this app` above the box where you enter the username or email.
+   Note that [the process is the same if the app is owned by an organization](/team-management/organizations/managing-apps/#adding-contributors-to-an-app) except you will see `Add contributors to this app` above the box where you enter the username or email.
 4. Select the role you want to assign.
 5. Click `Grant Access`.

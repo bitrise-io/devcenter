@@ -1,5 +1,5 @@
 ---
-title: Accessing the bitrise.yml file online
+title: bitrise.ymlファイルへのオンラインアクセス
 redirect_from:
 - "/bitrise-cli/bitrise-yml-online/"
 - "/bitrise-cli/bitrise-yml-online"
@@ -8,67 +8,63 @@ menu:
     weight: 21
 
 ---
-{% include not_translated_yet.html %}
+すべてのbitrise.ymlファイルはビルド用に[bitrise.io](https://www.bitrise.io)に保存されます。特定のビルドを実行したときの設定を確認したいときに便利です。また、オンライン`Workflow Editor`か、ビルドのオンラインbitrise.ymlファイルを使用することができ、オンラインbitrise.ymlファイルを選択した場合、変更を比較し、現在のビルドを元のバージョンに復元し、設定を編集して、ファイルをMac / PCにダウンロードすることができます。
 
-Every bitrise.yml file is stored for your builds on [bitrise.io](https://www.bitrise.io). They come in handy when you'd like to check the configuration with which a specific build has run. To do that, you can either use the online `Workflow Editor` or your build's online bitrise.yml file. If you choose the latter, you can compare changes, restore the current build to the original version, edit the config, and download the file to your Mac/PC.
+{% include message_box.html type="note" title="ビルドボードでフィルターを使用する" content="アプリが[bitrise.io](https://www.bitrise.io)内に複数のビルドを持ち、その中から特定のビルドを選びたい場合、以下のフィルターが役に立ちます。`Dashboard`でアプリをクリックし、次のフィールドを使用します：
 
-{% include message_box.html type="note" title="Using filters on your Builds Board" content="
-If an app has multiple builds on [bitrise.io](https://www.bitrise.io) and you want to pick a specific build out of those, then these filters will help you a lot. Click on your app in your `Dashboard` and use the following fields:
-
-* You can search for a build number or commit message in the`Try build number or commit message` grey field.
-* You can pick which of these triggers was used for your build: `Pushes`, `Pull Requests`, `Tags` or all of these.
-* You can pick which `branch` the build was started on.
-* You can select either the `primary` or the `deploy workflow` of the build."%}
+* `Try build number or commit message`グレーフィールドで、ビルド番号またはコミットメッセージを検索できます。
+* ビルドに使用されたトリガー`Pushes`、`Pull Requests`、 `Tags`、の３つの内からもしくは全て選ぶことができます。
+* ビルドが開始された`branch`を選択できます。
+* ビルドの`primary`または`deploy workflow`のどちらかを選択できます。"%}
 
 ![Screenshot](/img/bitrise-cli-bitrise-yml/build-filters.png)
 
-## Accessing a build's bitrise.yml
+## ビルドのbitrise.ymlにアクセス
 
-1. Select an application on your `Dashboard` and select one of its builds.
+1. `Dashboard`でアプリケーションを選択して、ビルドの1つを選択します。
+2. インラインログの上部または下部にある`Show bitrise.yml`をクリックします。
 
-2. Click the `Show bitrise.yml` button at the top OR at the bottom of your inline log.
+   ビルドのbitrise.ymlコンテンツがaceエディターに表示されるはずですが、編集することはできません。
 
-   You should see your build's bitrise.yml content displayed in ace editor but it's not editable here. See where you can [edit the bitrise.yml online](#editing-and-downloading-bitriseyml-online).
+   [bitrise.ymlをオンラインで編集](#editing-and-downloading-bitriseyml-online)を確認してください。
 
-## Checking changes in bitrise.yml online
+## 変更をbitrise.ymlオンラインで確認
 
-Once you've clicked `Show bitrise.yml`, you will see the `BUILD'S BITRISE YML` pop-up window displaying your builds' configuration details. If the `build's bitrise.yml` content differs from the `current build's bitrise.yml`, you will see two editors displayed side-by-side in the `BITRISE.YML CHANGES` pop-up window. The differences between the builds are highlighted in the following colors:
+`Show bitrise.yml`をクリックすると、ビルド設定の詳細を表示した`BUILD'S BITRISE YML`ポップアップウィンドウが表示されます。`build's bitrise.yml`の内容が`current build's bitrise.yml`と異なる場合は、`BITRISE.YML CHANGES`ポップアップウィンドウに2つのエディタが並べて表示されます。ビルド間の違いは、以下の色で表示されています：
 
-* green means added content
-* blue means modified content
-* orange means deleted content
+* 緑色=追加コンテンツ
+* 青=変更されたコンテンツ
+* オレンジ=削除されたコンテンツ
 
 ![Screenshot](/img/bitrise-cli-bitrise-yml/bitrise-yml-changes.png)
 
-## Restoring and undoing changes in bitrise.yml online
+## bitrise.ymlオンラインでの変更の復元と取り消し
 
-If you don't like the changes made to your _current_ bitrise.yml, you can easily restore it to the build's original bitrise.yml.
+現在のbitrise.ymlの変更が気に入らない場合、元のbitrise.ymlに簡単に復元できます.
 
-1. Click the `Show bitrise.yml` button at the top OR at the bottom of your inline log on [bitrise.io](https://www.bitrise.io/).
-2. In the `BITRISE.YML CHANGES` pop-up window, click the orange `Restore` button.
-3. Hit `OK` in the `Are you sure?` pop-up window to confirm and override the current bitrise.yml.
+1. [bitrise.io](https://www.bitrise.io/)のインラインログ上部または下部にある`Show bitrise.yml`をクリックします。
+2. `BITRISE.YML CHANGES`ポップアップウィンドウで、オレンジ色の`Restore`をクリックします。
+3. 現在のbitrise.ymlを確認して上書きするためには`Are you sure?` ポップアップウィンドウの`OK`をクリックします。
 
 ![Screenshot](/img/bitrise-cli-bitrise-yml/confirm-bitrise-yml-changes.png)
 
-## Editing and downloading bitrise.yml online
+## bitrise.ymlをオンラインで編集およびダウンロード
 
-You can **edit** your build config in yml format in the `bitrise.yml editor` if you go to your app's `Workflow Editor` and click the `bitrise.yml` tab.
+アプリの`Workflow Editor`の`bitrise.yml` タブをクリックすると、ビルド設定を`bitrise.yml editor`のyml形式で**編集**できます。
 
-* press `F1` for the full command list
-* fold and unfold with the `-` and `+` signs
-* press `Ctrl`/`Cmd` + `F` for search and replace where you can search with `RegExp`, `Match Whole Word`, case-sensitive, case-insensitive, or to search only in the selected section
-* use the `preview sidebar` on the right for easier navigation
+* 全てのコマンドリストを表示するには、`F1`を押します。
+* `-`と`+`記号でfoldとunfold
+* 検索のために`Ctrl`/`Cmd` + `F`をクリックして、`RegExp`、`Match Whole Word`、大文字と小文字を区別、大文字と小文字を区別しない、で検索できる場所を置き換えるか、選択したセクションのみを検索します。
+* ナビゲーションを容易にするために右側の`preview sidebar`を使用します。
 
-You can **save** or **discard** any changes you have made with the config. If you click `Download currently saved config`, you can **download** this YML version to your own computer and run it with bitrise CLI on your Mac/PC.
+設定で行った変更を**保存**または**破棄**することができます。 `Download currently saved config`をクリックすると、YMLバージョンを自分のコンピュータに**ダウンロード**して、Mac / PCのbitrise CLIで実行できます。
 
-You might want to **clone** this whole YML configuration or just part of it to another app, so that you can use the copied version as a base and extend it with a few extra steps. All you have to do is copy this bitrise.yml content and paste it into the new app's bitrise.yml editor and develop it further.
+コピーしたバージョンをベースとして使用し、いくつかの追加手順で拡張できるように、YML構成の全体またはその一部のみを別のアプリケーションに**複製**することをお勧めします。bitrise.ymlの内容をコピーして新しいアプリのbitrise.ymlエディターに貼り付け、さらに開発してください。
 
-## Deleting a build's bitrise.yml
+## ビルドのbitrise.ymlを削除
 
- If you wish, you can simply delete a build's `bitrise.yml` file. But please note that this action cannot be undone: nobody will be able to view that particular build's `bitrise.yml` file once you delete it.
- 
- 1. Select an application on your `Dashboard` and select one of its builds.
- 
- 1. Click the `Delete bitrise.yml` button.
- 
- 1. In the confirmation window, click `Yes`.
+お望みの場合、ビルドの`bitrise.yml`ファイルを削除することができます。しかし、このアクションを元に戻すことはできず、またそのビルドの`bitrise.yml`ファイルを誰も表示することができなくなります。
+
+1. `Dashboard`でアプリケーションを選択して、ビルドの1つを選択します。
+2. `Delete bitrise.yml`をクリックします。
+3. 確認ウィンドウで、`Yes`をクリックします。

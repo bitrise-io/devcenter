@@ -4,7 +4,7 @@ date: 2018-12-11 10:30:01 +0000
 redirect_from: []
 menu:
   android-code-signing:
-    weight: 5
+    weight: 12
 
 ---
 If the file path of your keystore file is defined in your `build.gradle` file but the keystore file itself is missing from the location where the path points to, you can use one of our file downloading steps to download the keystore file from Bitrise and place it in the defined location.

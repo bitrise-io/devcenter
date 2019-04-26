@@ -2,7 +2,7 @@
 title: Xamarin Android code signing
 menu:
   android-code-signing:
-    weight: 7
+    weight: 10
 
 ---
 ## Configuring code signing in Xamarin Studio
