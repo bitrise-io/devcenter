@@ -5,3 +5,127 @@ date: 2019-04-26 12:38:56 +0000
 published: false
 
 ---
+You can list all 
+
+Build artifacts are generated if you added our `Deploy to bitrise.io` Step to [your workflow](/builds/build-artifacts-online/). You can view, share or download them in the `APPS & ARTIFACTS` tab of your Build's page. You can list, update, view and delete build artifacts with the Bitrise API.
+
+Table
+
+## Listing build artifacts
+
+You can list all build artifacts of 
+
+### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts
+
+Get the artifacts for a specific build.
+
+#### Example `curl` request
+
+``` bash
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts'
+```
+
+#### Example response
+
+``` json
+{
+  "data": [
+    {
+      "artifact_type": "file",
+      "file_size_bytes": 10,
+      "is_public_page_enabled": true,
+      "slug": "0d2277e50b8d32ce",
+      "title": "artifact-1.txt"
+    },
+    {
+      "artifact_type": "file",
+      "file_size_bytes": 11,
+      "is_public_page_enabled": false,
+      "slug": "b69c23de1f13b998",
+      "title": "artifact-2.txt"
+    }
+  ],
+  "paging": {
+    "page_item_limit": 50,
+    "total_item_count": 2
+  }
+}
+```
+
+### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
+
+Get a certain build artifact's data. The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
+
+#### Example `curl` request
+
+``` bash
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG'
+```
+
+#### Example response
+
+``` json
+{
+  "data": {
+    "artifact_type": "file",
+    "expiring_download_url": "https://bitrise-prod-build-storage.s3.amazonaws.com/builds/9fb8eaaa4bdd3763/artifacts/2138393/artifact-1.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Content-Sha256=UNSIGNED-PAYLOAD\u0026X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180718%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180718T145942Z\u0026X-Amz-Expires=600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=8b6b3c01265e78c43ded2069cc926f9832adcc115d3afd63050847bf97f5d6d3",
+    "file_size_bytes": 10,
+    "is_public_page_enabled": true,
+    "public_install_page_url": "https://www.bitrise.io/artifact/2138393/p/6e7dc9c2b99492e6aa997a2e5d3f7413",
+    "slug": "0d2277e50b8d32ce",
+    "title": "artifact-1.txt"
+  }
+}
+```
+
+### PATCH /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
+
+Set the attributes of a build artifact. In the request body have to be sent a JSON with the specified new attribute values.
+
+_Note: at this time only the_ `_is_public_page_enabled_` _attribute can be set through this endpoint call. This attribute can only set for the artifacts with type_ `_android-apk_` _or_ `_ios-ipa_`_._
+
+#### Example `curl` request
+
+``` bash
+curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG' -d '{"is_public_page_enabled":true}'
+```
+
+#### Example response
+
+``` json
+{
+  "data": {
+    "artifact_type": "android-apk",
+    "expiring_download_url": "https://bitrise-prod-build-storage.s3.amazonaws.com/builds/ddf4134555e833d8/artifacts/3205846/app-debug.apk?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Content-Sha256=UNSIGNED-PAYLOAD\u0026X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180718%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180718T145943Z\u0026X-Amz-Expires=600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=3a9bef9f09fdc082d2669deb7e2c760c141c5e8424df21cd96551ec79ca99330",
+    "file_size_bytes": 607185,
+    "is_public_page_enabled": true,
+    "public_install_page_url": "https://www.bitrise.io/artifact/3205846/p/300e0121b50985fd631fe304d549006f",
+    "slug": "5a9f5da8d5f1057c",
+    "title": "app-debug.apk"
+  }
+}
+```
+
+### DELETE /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
+
+Delete a specific artifact.
+
+#### Example `curl` request
+
+``` bash
+curl -X DELETE -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG'
+```
+
+#### Example response
+
+``` json
+{
+  "data": {
+      "artifact_type": "android-apk",
+      "file_size_bytes": 607185,
+      "is_public_page_enabled": true,
+      "slug": "5a9f5da8d5f1057c",
+      "title": "app-debug.apk"
+    }
+}
+```
