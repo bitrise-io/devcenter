@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/triggering-builds-with-a-pull-request-draft.md
 - _articles/en/reviews/managing-build-artifacts.md
 - _articles/en/reviews/Japanese translations/テスト (Testing)/xcodeテストの実行-running-xcode-tests.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
@@ -20,7 +21,6 @@ pages:
 - _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
-- _articles/en/reviews/triggering-builds-with-a-pull-request-draft.md
 - _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md

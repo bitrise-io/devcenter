@@ -26,23 +26,4 @@ By default, every new app you add will have a trigger that triggers a build ever
 7. Select the workflow you wish to trigger (for example, `primary`).
 8. Click `Save` in the top right corner.
 
-And you're done! From now on, if a pull request is opened in your repository, Bitrise will trigger a build with the selected workflow!
-
-### Manual approval for PR builds
-
-Not all Pull Requests need to be built. After all, for most projects, anyone can create a fork of the repository and submit a Pull Request. However, if an app on Bitrise is set up with Secrets that are exposed for Pull Request builds, for example, then you probably don't want just anyone to be able to access those secrets.
-
-That is why you have the option to require approval for a Pull Request before it can trigger a build on Bitrise. This feature works somewhat differently for public and private apps:
-
-* **Private apps**: Pull Requests submitted from fork require approval by default if any Secrets are marked to be exposed for Pull Requests.
-* **Public apps**: Pull Requests submitted from fork require approval by default and it cannot be changed. Public apps cannot opt out of this feature.
-
-To set up manual approval, you need to be an **admin** or an **owner** on the application's team.
-
-1. Open the app on Bitrise.
-2. Go to the `Settings` tab.
-3. Scroll down to `Enable manual approval for builds triggered by pull requests`.
-
-   ![](/img/manual-approval.png)
-
-   Please note that you can only change this setting for private apps! For public apps, this is ALWAYS enabled. 
+And you're done! From now on, if a pull request is opened in your repository, Bitrise will trigger a build with the selected workflow.
