@@ -11,7 +11,7 @@ We'll go through an example of how to do this.
 
 1. Add a `Deploy to Bitrise.io` Step to your workflow.
 
-   If you want to attach a file you generated during the build, add this Step after the Step that generates the file or makes it available. Otherwise it can be at any point
+   If you want to attach a file you generated during the build, add this Step after the Step that generates the file or makes it available. Otherwise it can be at any point.
 2. Change the `Deploy directory or file path` input of the Step to the path of the file you want to deploy.
    An example in yaml format:
 
