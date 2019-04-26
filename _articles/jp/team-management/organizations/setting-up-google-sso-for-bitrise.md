@@ -73,7 +73,7 @@ Now that we have the config information, we will leave Google Admin Console for 
 3. Click `ON` to enable Bitrise 's service status.
 
    ![](/img/service-status.png)
-4. Check your emails. You should receive a confirmation email from us (letsconnect@bitrise.io) containing a `Sign In via SSO` button. For a smoother sign-in flow, make sure you're already logged into Bitrise in another tab before you hit the `Sign In via SSO` button.
+4. Check your emails. You should receive a confirmation email from us (letsconnect@bitrise.io) containing a `Sign In via SSO` button. For a smoother sign-in flow, **make sure you're already logged into Bitrise in another tab before you hit the** `Sign In via SSO` **button.**
 5. Click `Sign In via SSO` to proceed to our Authorization page.
 
    NOTE! Below error message only appears if you've been trying to access the Authorization page in a Safari browser.
