@@ -17,7 +17,7 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML ap
 
 1. Sign into your Google Admin Console.
 2. Select `Apps`.
-3. In the `APPS SETTINGS` page click `SAML apps`.
+3. In the `APPS SETTINGS` page, click `SAML apps`.
 
    You will see a list of the apps with their statuses (either turned on or off). On this page you can add or remove a service and enable/disable it.
 4. Click the `+` mark in the yellow circle on the bottom right corner of the screen to add Bitrise as a SAML application to the list.
