@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/jp/api/managing-android-keystore-files.md
 - _articles/en/api/managing-android-keystore-files.md
 - _articles/en/reviews/steps-in-yaml-draft.md
 - _articles/en/reviews/approving-pull-request-builds.md

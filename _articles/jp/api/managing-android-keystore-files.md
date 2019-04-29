@@ -1,9 +1,11 @@
 ---
 title: Managing Android keystore files
 redirect_from: []
-date: 2019-04-29 08:56:31 +0000
+date: 2019-04-29 08:57:22 +0000
 
 ---
+{% include not_translated_yet.html %}
+  
 You can easily upload your keystore file to your Android project with Bitrise API.
 
 {% include message_box.html type="note" title="Interactive cURL call configurator" content=" You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app’s [bitrise.io](https://www.bitrise.io/) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
