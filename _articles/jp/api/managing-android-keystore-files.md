@@ -2,6 +2,9 @@
 title: Managing Android keystore files
 redirect_from: []
 date: 2019-04-29 08:57:22 +0000
+menu:
+  api:
+    weight: 18
 
 ---
 {% include not_translated_yet.html %}

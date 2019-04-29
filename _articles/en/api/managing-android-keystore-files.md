@@ -2,6 +2,9 @@
 title: Managing Android keystore files
 redirect_from: []
 date: 2019-04-29 08:56:31 +0000
+menu:
+  api:
+    weight: 17
 
 ---
 You can easily upload your keystore file to your Android project with Bitrise API.

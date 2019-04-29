@@ -3,7 +3,7 @@ title: Managing files in Generic File Storage
 date: 2019-04-09 08:17:24 +0000
 menu:
   api:
-    weight: 18
+    weight: 20
 
 ---
 {% include not_translated_yet.html %}
