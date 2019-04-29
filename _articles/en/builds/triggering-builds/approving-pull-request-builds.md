@@ -2,6 +2,9 @@
 title: Approving Pull Request builds
 redirect_from: []
 date: 2019-04-29 12:48:56 +0000
+menu:
+  triggering-builds:
+    weight: 8
 
 ---
 Not all Pull Requests need to be built. After all, for most projects, anyone can create a fork of the repository and submit a Pull Request. However, if an app on Bitrise is set up with Secrets that are exposed for Pull Request builds, for example, then you probably don't want just anyone to be able to access those secrets.
