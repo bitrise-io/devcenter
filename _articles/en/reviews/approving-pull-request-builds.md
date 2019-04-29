@@ -7,7 +7,7 @@ published: false
 ---
 Not all Pull Requests need to be built. After all, for most projects, anyone can create a fork of the repository and submit a Pull Request. However, if an app on Bitrise is set up with Secrets that are exposed for Pull Request builds, for example, then you probably don't want just anyone to be able to access those secrets.
 
-That is why you have the option to require approval for a Pull Request build before it starts. This feature works somewhat differently for public and private apps:
+That is why you have the option to require approval for [a Pull Request build](/builds/triggering-builds/trigger-pull-request/) before it can start. This feature works somewhat differently for public and private apps:
 
 * **Private apps**: By default, Pull Requests submitted from a fork require approval [_if any Secrets are marked to be exposed for Pull Requests_](/builds/env-vars-secret-env-vars/#editing-a-secret-env-var)_._ The setting can be changed. If your secrets are NOT exposed to PRs, the build will run without asking for approval.
 * **Public apps**: Pull Requests submitted from a fork require approval by default and it cannot be changed. Public apps CANNOT opt out of this feature.
@@ -36,4 +36,4 @@ If a Pull Request is submitted from a fork, you will be notified that a PR build
 
 ![](/img/waiting-for-approval-2.png)
 
-To approve and run the build, click the `Approve and Run Build` button. Clicking `Review` opens the forked branch on the website of your git hosting provider.
+To approve and run the build, click the `Approve and Run Build` button. Clicking `Review` opens the Pull Request on the website of your git hosting provider.
