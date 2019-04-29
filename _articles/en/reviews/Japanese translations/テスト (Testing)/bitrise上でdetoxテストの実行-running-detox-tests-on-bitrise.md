@@ -4,37 +4,27 @@ redirect_from: []
 published: false
 
 ---
-Detox is a gray box end-to-end tests and automation library for mobile apps. Currently, it is only supported for iOS apps built with React Native. If you have a React Native app for iOS on Bitrise, you can run Detox tests.
-
-Detoxとはモバイルアプリ用グレー色ボックスのエンドツーエンドテスト、オートメーションライブラリです。現在、React Nativeを使用して開発されたiOSアプリにのみ対応しています。BitriseでiOS用のReact Nativeアプリをお持ちなら、Detoxテストを実行できます。
-
-To see an example configuration, check out [our sample app](https://github.com/bitrise-samples/sample-project-react-native)!
+Detoxとはモバイルアプリ用グレーボックスのエンドツーエンドテストで、オートメーションライブラリのことです。現在、React Nativeを使用して開発されたiOSアプリにのみ対応しています。BitriseでiOS用のReact Nativeアプリをお持ちなら、Detoxテストを実行できます。
 
 構成例を見るには、Bitriseの[サンプルアプリ](https://github.com/bitrise-samples/sample-project-react-native)を参照してください！
 
-Running Detox requires:  
-Detoxを実行するには以下のものが必要です：
+Detoxを実行するには：
 
-* A Mac with a macOS (El Capitan 10.11 or newer version).
-* Xcode 8.3 or newer version with Xcode command line tools.
-* A working React Native app.
-* macOSを使用するMac（El Capitan 10.11かそれ以上のバージョン）
-* Xcode command line toolsを使用するXcode 8.3かそれ以上のバージョン）
+* macOSを使用するMac（El Capitan 10.11かそれ以上の新しいバージョン）
+* Xcode command line toolsを使用するXcode 8.3かそれ以上の新しいバージョン）
 * 動作するReact Nativeアプリ
 
-[Install and set up Detox for your project](https://github.com/wix/detox/blob/master/docs/Introduction.GettingStarted.md#getting-started). You will need to install Homebrew, Node.js and applesimutils, as well as the Detox command line tools. Add Detox to your project and then create and run Detox tests locally.
+が必要になります。
 
-プロジェクト用のDetoxをインストール・セットアップします。Homebrew、Node.js、applesimutil、そしてDetox command line toolsをインストールする必要があります。ご自身のプロジェクトにDetoxを追加してから、ローカルでDetoxテストの作成・実行してください。
+[プロジェクト用にDetoxをインストールとセットアップを行います](https://github.com/wix/detox/blob/master/docs/Introduction.GettingStarted.md#getting-started)。Homebrew、Node.js、applesimutil、ならびにDetox command line toolsをインストールする必要があります。ご自身のプロジェクトにDetoxを追加してから、ローカルでDetoxテストを作成・実行してください。
 
-Once you are done, you can test your Detox-configured project on Bitrise:
+完了すれば、Bitrise上でDetox構成のプロジェクトのテストが行えます：
 
-完了すれば、BitriseでDetoxで構成されたプロジェクトのテストを行えます。
+{% include message_box.html type="important" title="Detoxを使ったビデオ録画" content="Detoxを使ったビデオ録画はBitriseでは**対応しておりません**。[Detoxはハードウェアアクセラレーションが必要です](https://github.com/wix/Detox/blob/master/docs/APIRef.Artifacts.md#video-recording-issues-on-ci)が当社の（ビルドのバーチャルマシンが走る）マシンには物理的なGPUがありません。それゆえハードウェアアクセラレーションを作動させることはできません。"%}
 
-{% include message_box.html type="important" title="Video recording with DetoxDetoxを使ったビデオ録画" content="Video recording with Detox does NOT work on Bitrise. [Detox requires hardware acceleration](https://github.com/wix/Detox/blob/master/docs/APIRef.Artifacts.md#video-recording-issues-on-ci) but our machines - on which your build's virtual machine runs - do not have physical GPUs. Therefore you cannot enable hardware acceleration on them. Detoxを使ったビデオ録画はBitriseでは対応しておりません。Detoxは"%}
+1. `detox`セクションの下にある、`package.json`内でrelease device configurationを作成します。
 
-1. Create a [release device configuration]() inside `package.json` under the `detox` section.
-
-   **Example:**
+   **例：**
 
        "detox": {
         "configurations": {
@@ -51,16 +41,15 @@ Once you are done, you can test your Detox-configured project on Bitrise:
             "name": "iPhone 8"
           }
         },
-2. On [bitrise.io](https://app.bitrise.io/), go to your project and open the Workflow Editor.
-3. Switch to the workflow you want to use.
-4. Add a `Run npm command` Step to your workflow.
-5. Add the Detox install command to the `The npm command with arguments to run` input:
+2. [bitrise.io](https://app.bitrise.io/)にて、ご自身のプロジェクトに進んでWorkflow Editorを開きます。
+3. 使用したいワークフローに切り替えます。
+4. ワークフローに`Run npm command`を追加します。
+5. `The npm command with arguments to run`インプットにDetox install commandを追加します。
 
        install -g detox-cli
-6. Install a test runner.
-
-   For example, [our sample app](https://github.com/bitrise-samples/sample-project-react-native) uses `mocha`, installed with the `yarn` Step. To install yarn dependencies, just set the `The yarn command to run` input's value to `install`.
-7. Add a Script Step to install the necessary utilities and then run Detox.
+6. test runnerをインストールします。  
+   例えば、[Bitriseのサンプルアプリ](https://github.com/bitrise-samples/sample-project-react-native)では`mocha`を使用しており、`yarn`ステップを使ってインストールされます。yarn 依存性をインストールするには、`The yarn command to run`インプットの値を`install`に設定します。
+7. Scriptステップを追加します。必要なutilitiesをインストールしてからDetoxを走らせてください。
 
        #!/bin/bash
        
@@ -72,10 +61,10 @@ Once you are done, you can test your Detox-configured project on Bitrise:
        detox build --configuration ios.sim.release
        detox test --configuration ios.sim.release --cleanup
 
-   You can, of course, put each of these commands in separate Script Steps, for the sake of modularity.
-8. Run a build!
+   モジュール性のために別々のScriptステップにそれぞれのコマンドを配置することも可能です。
+8. ビルドを開始してください！
 
-**If the build fails, check out our example** `bitrise.yml` **file:**
+**ビルドが失敗する場合、Bitriseの**`**bitrise.yml**`**ファイルの例を確認してください。**
 
     ---
     workflows:
