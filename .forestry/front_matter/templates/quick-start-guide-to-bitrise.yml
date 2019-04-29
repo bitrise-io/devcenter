@@ -15,7 +15,6 @@ fields:
 pages:
 - _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/en/builds/triggering-builds/approving-pull-request-builds.md
-- _articles/en/reviews/approving-pull-request-builds.md
 - _articles/en/reviews/steps-in-yaml-draft.md
 - _articles/en/reviews/managing-build-artifacts.md
 - _articles/en/reviews/Japanese translations/テスト (Testing)/xcodeテストの実行-running-xcode-tests.md
