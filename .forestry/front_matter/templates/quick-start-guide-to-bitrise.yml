@@ -66,7 +66,6 @@ pages:
 - _articles/en/api/response-and-pagination.md
 - _articles/en/reviews/Japanese translations/組織の請求書管理-managing-the-invoices-of-your-organizations.md
 - _articles/en/reviews/Japanese translations/組織の請求と購読の管理-managing-billing-and-subscription-for-organizations.md
-- _articles/en/reviews/Japanese translations/組織のアプリ管理-managing-the-apps-of-organizations.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
 - _articles/jp/getting-started/signing-up/logging-in-with-bitrise.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
