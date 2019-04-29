@@ -1,5 +1,5 @@
 ---
-title: Visual Studio App Centerでのテスト走行 (Running tests in the Visual Studio App Center)
+title: Visual Studio App Centerでのテストの実行 (Running tests in the Visual Studio App Center)
 redirect_from: []
 date: 2019-04-29 13:25:23 +0000
 published: false
