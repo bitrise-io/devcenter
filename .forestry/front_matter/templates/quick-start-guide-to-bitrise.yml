@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
 - _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/en/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/en/reviews/steps-in-yaml-draft.md
