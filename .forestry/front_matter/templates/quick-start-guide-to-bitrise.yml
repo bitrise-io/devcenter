@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/en/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/en/reviews/approving-pull-request-builds.md
 - _articles/en/reviews/steps-in-yaml-draft.md
