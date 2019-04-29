@@ -25,9 +25,9 @@ To enable or disable manual approval, you need to be an **admin** or an **owner*
    ![](/img/setting-enable-1.png)
 
    Please note that you can only change this setting for private apps! For public apps, this is ALWAYS enabled.
-4. Toggle the setting to enable or disable it. 
+4. Toggle the setting to enable or disable it.
 
-   By default, it is set to enabled. 
+   By default, it is set to enabled.
 
 ### Approving the PR build
 
@@ -35,7 +35,7 @@ To enable or disable manual approval, you need to be an **admin** or an **owner*
 
 If a Pull Request is submitted from a fork, you will be notified that a PR build is waiting for approval:
 
-* A notification email will be sent with the app and links to the repository itself and to the app's `Builds` page on Bitrise.
+* A notification email will be sent with the name of the app, as well as links to the repository itself and to the app's `Builds` page on Bitrise.
 * On the git hosting provider, the status of the CI check will show `Pending - Waiting for approval`.
 * On the `Builds` page of the app, a confirmation box will be displayed.
 
