@@ -5,21 +5,21 @@ date: '2019-04-26T12:38:56+00:00'
 published: false
 
 ---
-You can list all 
+You can list all
 
-You can generate build artifacts and deploy them if you add the `Deploy to bitrise.io` Step to [your workflow](/builds/build-artifacts-online/). You can view, share or download them in the `APPS & ARTIFACTS` tab of your Build's page. 
+You can generate build artifacts and deploy them if you add the `Deploy to bitrise.io` Step to [your workflow](/builds/build-artifacts-online/). You can view, share or download them in the `APPS & ARTIFACTS` tab of your Build's page.
 
 You can list, update, view and delete build artifacts with the Bitrise API.
 
 Let's see how!
 
-To be able to use build artifact endpoints, you have to first list them. In the response, you can grab each artifacts' slug which you will need later.
+To be able to use build artifact endpoints, you have to first [list them](/api-docs.bitrise.io/#/build-artifact/artifact-list). The response will list all artifacts along with their slug which you will need later.
 
 Table
 
 ## Listing build artifacts
 
-You can list all build artifacts that have been generated and exported during the build. To be able to use other endpoints related to build artifacts, you have to start with [this endpoint](https://api-docs.bitrise.io/#/build-artifact/artifact-list) to get the build artifact slugs...
+You can list all build artifacts that have been generated and exported during the build.  The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
 
 The required parameters are:
 
@@ -61,11 +61,11 @@ Let's have a look at a specific build artifact!
 
 ## Retrieving a specific build artifact's data
 
-Now that all the build artifact slugs are at hand, pick one and get more details on the artifact.
+Now that all the build artifact slugs are at hand, you can pick one and get more details on the artifact.
 
 Example `curl` request:
 
-    
+    curl -X GET "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts/92e0b6ecae87b832" -H "accept: application/json" -H "Authorization: awBg1s2u2LU7RM8-lth1ihu839rDcYCODi3F3kwLybzIp8nTTKhNZYCD-UGpIVmP_FOhnLwRhoCvl_Y-7712qQ"
 
 Example response:
 
@@ -83,11 +83,11 @@ Example response:
 
 what to do with the download url
 
-Would you like to update this build artifact? 
+Would you like to update this build artifact?
 
 ### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts
 
-Get the artifacts for a specific build.
+You can get the artifacts for a specific build.
 
 #### Example `curl` request
 
