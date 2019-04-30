@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイ-deploying-android-apps.md
 - _articles/en/reviews/Japanese translations/テスト (Testing)/bitrise上でdetoxテストの実行-running-detox-tests-on-bitrise.md
 - _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
 - _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
