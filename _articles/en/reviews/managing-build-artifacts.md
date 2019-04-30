@@ -1,21 +1,25 @@
 ---
 title: Managing build artifacts
 redirect_from: []
-date: 2019-04-26 12:38:56 +0000
+date: '2019-04-26T12:38:56+00:00'
 published: false
 
 ---
 You can list all 
 
-Build artifacts are generated if you added our `Deploy to bitrise.io` Step to [your workflow](/builds/build-artifacts-online/). You can view, share or download them in the `APPS & ARTIFACTS` tab of your Build's page. 
+You can generate build artifacts and deploy them if you add the `Deploy to bitrise.io` Step to [your workflow](/builds/build-artifacts-online/). You can view, share or download them in the `APPS & ARTIFACTS` tab of your Build's page. 
 
 You can list, update, view and delete build artifacts with the Bitrise API.
+
+Let's see how!
+
+To be able to use build artifact endpoints, you have to first list them. In the response, you can grab each artifacts' slug which you will need later.
 
 Table
 
 ## Listing build artifacts
 
-You can list all build artifacts that have been generated and exported during the build. To be able to use other build artifact endpoints, you have to start with [this endpoint](https://api-docs.bitrise.io/#/build-artifact/artifact-list) to get the build artifact slugs...
+You can list all build artifacts that have been generated and exported during the build. To be able to use other endpoints related to build artifacts, you have to start with [this endpoint](https://api-docs.bitrise.io/#/build-artifact/artifact-list) to get the build artifact slugs...
 
 The required parameters are:
 
