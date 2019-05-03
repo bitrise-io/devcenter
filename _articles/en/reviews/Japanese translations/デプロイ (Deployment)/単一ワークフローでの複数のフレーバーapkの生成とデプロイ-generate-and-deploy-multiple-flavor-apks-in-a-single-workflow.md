@@ -5,38 +5,28 @@ redirect_from: []
 published: false
 
 ---
-You can generate, code sign and deploy multiple flavor (multi-flavor) APKs in one workflow using our `Gradle Runner` Step. Flavor means enhancing an app's core code with features resulting in different versions of the same app (just to mention the most common examples: free/paid, demo/full). Check out the official Android Studio guide on [build types, flavors and build variants](https://developer.android.com/studio/build/build-variants) for more info! In this tutorial, you will need to do some settings to `Sign APK` and `Google Play Deploy` Steps - so keep your eyes peeled!
+Bitriseの`Gradle Runner`ステップを使って、単一ワークフロー内で複数のフレーバー（マルチフレーバー）APKの生成、コード署名、ならびにデプロイを行うことができます。フレーバーとは、アプリのコアコードを機能拡張して同じアプリを異なるバージョンにすることを意味します（標準的な例：free/paid、demo/full）。詳しい情報は公式Android Studioガイドにある[build types, flavors and build variants](https://developer.android.com/studio/build/build-variants)を参照してください。このチュートリアルでは、`Sign APK`や`Google Play Deploy`ステップでの設定方法を紹介します。
 
-Bitriseの`Gradle Runner`ステップを使って単一ワークフローで複数のフレーバーAPKの生成、コード署名、ならびにデプロイを行うことができます。フレーバーとは同じアプリで異なるバージョンにする機能を持ったアプリのコアコードを強化します（標準的な例：free/paid、demo/full）。詳しい情報は公式Android Studioガイドにある[build types, flavors and build variants](https://developer.android.com/studio/build/build-variants)を参照してください。このチュートリアルでは、`Sign APK`や`Google Play Deploy`ステップでの設定方法を紹介します。
+## マルチフレーバーAPKの生成
 
-## Generating multi-flavor APKs  
-複数フレーバーAPKの生成
+Androidデプロイワークフローをお持ちであれば、次のことを行ってください：
 
-If you have an Android deploy workflow at hand, do the following:
+1. Androidテストステップの後に`Gradle Runner`ステップを挿入します。`Android Build`ステップは一つのバリアントのみのビルドを行うので、このステップがあなたのワークフローの一部である場合、Bitriseの`Gradle Runner`ステップに変更することをおすすめします。
+2. ステップの`Config`セクションをクリックします。
+3. `assemble`[Gradleタスク](/tips-and-tricks/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project/)を明記します。ビルドバリアントのタスク名を`Gradle task to run`ステップの入力欄に追加してください（単一ワークフローでビルドを行いたいビルドバリアントの数と同様の数のタスク名である必要があります）。タスク名それぞれがAndroid Studioの`Build Variant`ウィンドウでリストアップした**全く同じビルドバリアント名**であることを確認してください。スペースを使ってそれらを分けることができます（`,`は要りません）！下のイメージではデプロイワークフローのステップの順番、ならびに、２つのビルドバリアントを使った`Gradle Task to run`ステップインプットを確認できます。
 
-Androidデプロイワークフローをお持ちであれば、以下のことをしてください：
-
-1. Insert `Gradle Runner` Step after the Android testing steps. `Android Build` step can only build one variant so if this Step is part of your workflow, then we advise you to replace it with our `Gradle Runner` Step.  
-   Androidテストステップの後に`Gradle Runner`ステップを挿入します。`Android Build`ステップはバリアント一つのみのビルドを行うので、このステップがあなたのワークフローの一部である場合、Bitriseの`Gradle Runner`ステップに変更することをおすすめします。
-2. Click the `Config` section of the Step.  
-   ステップの`Config`セクションをクリックします。
-3. Specify the `assemble` [Gradle tasks](/tips-and-tricks/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project/) by adding your build variants' task names in the `Gradle task to run` Step input field - as many task names as many build variants you want to build in one workflow. Each task name must be **exactly the same build variant name** what you have listed in the `Build Variant` window of Android Studio! Make sure you separate them only with a space, no need for `,`! In the below image, you can see the order of the Steps for the deploy workflow and the `Gradle Task to run` Step input with two build variants:  
-   ビルドバリアントのタスク名を`Gradle task to run`ステップのインプット欄に追加して`assemble`[Gradleタスク](/tips-and-tricks/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project/)を明記します（単一ワークフローでビルドを行いたいビルドバリアントの数と同様の数のタスク名）。タスク名それぞれの
-
-   `assembleDemo` and `assembleFull`
+   `assembleDemo` ＆ `assembleFull`
 
    ![](/img/multiflavor-1.jpg)
-4. `Gradle Runner` generates a `$BITRISE_APK_PATH_LIST` env var output that contains ALL the build variants you have set in `Gradle task to run` Step above. We will need this output env var later!
+4. `Gradle Runner`は、上の`Gradle task to run`ステップで設定した**全ての**ビルドバリアントを含んだ `$BITRISE_APK_PATH_LIST`環境変数出力を生成します。この環境変数出力は後ほど必要になります！
 
-## Signing and deploying multi-flavor APKs
+## マルチフレーバーAPKの署名とデプロイ
 
-1. Add one `Sign APK` Step AFTER `Gradle Runner` Step if it's missing from your workflow.
-2. Set the `$BITRISE_APK_PATH_LIST` in the `apk path` input field which will make sure all the required APKs will get code signed with the keystore file you uploaded to the `Code Signing` tab. Check out [how you can upload your keystore file to bitrise.io](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#create-a-signed-apk-with-the-sign-apk-step/). The Step will export a `$BITRISE_SIGNED_APK_PATH` env var output which lists all your signed build variants.
-3. Make sure you set the following input fields in the `Sign APK` Step:
-
-* `Keystore url`
-* `Keystore password`
-* `Keystore alias`
-
-1. Add the `Google Play Deploy` Step AFTER the `Sign APK` step.
-2. Set the `$BITRISE_SIGNED_APK_PATH` env var in the `APK or App Bundle file path` Step input field so that `Google Play Deploy` can release all your build variants to the app store.
+1. `Gradle Runner`ステップの後に`Sign APK`ステップを追加します（ワークフローにない場合）
+2. `apk path` 入力欄に`$BITRISE_APK_PATH_LIST`をセットします。これは全ての必要なAPKが、`Code Signing`タブへアップロード済みのkeystoreファイルを伴ったコードの署名を行うことを確実にします。[keystoreファイルをbitrise.ioへのアップロード方法](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#create-a-signed-apk-with-the-sign-apk-step/)をご覧ください。このステップは全ての署名済みビルドバリアントをリストアップした`$BITRISE_SIGNED_APK_PATH` 環境変数出力をエクスポートします。
+3. `Sign APK`ステップで以下の入力欄に記入してください：
+   * `Keystore url`
+   * `Keystore password`
+   * `Keystore alias`
+4. `Sign APK`ステップの後に`Google Play Deploy`ステップを追加します。
+5. `APK or APP Bundle file path`ステップの入力欄に`$BITRISE_SIGNED_APK_PATH` 環境変数を設定します。そうすることにより、`Google Play Deploy` が全てのビルドバリアントをアプリストアへリリースすることができます。
