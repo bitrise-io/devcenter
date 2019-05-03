@@ -6,7 +6,7 @@ published: false
 ---
 You can build and deploy your iOS application to a simulator, to show it off in a browser, for example. On Bitrise, we have [a dedicated Step](https://www.bitrise.io/integrations/steps/xcode-build-for-simulator) to build for a simulator: the `Xcode build for simulator` Step runs the `xcodebuild` command with an iOS simulator destination and generates an .app file.
 
-iOSアプリケーションをブラウザで表示するなど、iOSアプリをシミュレータへビルドやデプロイを行えます。Bitriseでは、シミュレータ用ビルドを行う[専用ステップ](https://www.bitrise.io/integrations/steps/xcode-build-for-simulator)があります：`Xcode build for simulator`ステップはiOS simulator destinationを使った`xcodebuild`コマンドを実行したり、.appファイルの生成を行います。
+iOSアプリケーションをブラウザで表示するなど、あなたのiOSアプリをシミュレータへビルドやデプロイを行えます。Bitriseでは、シミュレータ用ビルドを行う[専用ステップ](https://www.bitrise.io/integrations/steps/xcode-build-for-simulator)があります：`Xcode build for simulator`ステップはiOS simulator destinationを使う`xcodebuild`コマンドを実行したり、.appファイルの生成を行います。
 
 The .app file can be run on any simulator. On Bitrise, we have a Step to upload your app to Appetize.io: the `Appetize.io deploy` Step. With this Step, you can deploy your app so you can run it in a browser.
 
@@ -16,7 +16,8 @@ To build the app for a simulator, you do not need code signing files!
 
 シミュレータ用のアプリのビルドは、コード署名ファイルは必要ありません！
 
-### Building an app for a simulator  
+### Building an app for a simulator
+
 シミュレータ用のアプリのビルド
 
 1. Log in and open the app's Workflow Editor.　  
@@ -45,11 +46,12 @@ To build the app for a simulator, you do not need code signing files!
 The Step will produce the following outputs:  
 このステップは以下のアウトプットを生み出します：
 
-* `BITRISE_APP_DIR_PATH`: the path to the generated .app file.　
+* `BITRISE_APP_DIR_PATH`: the path to the generated .app file.
 * `BITRISE_APP_DIR_PATH_LIST`: the path to the generated .app file and the paths to every dependent target app. The paths are separated with the `|` character.
 * `BITRISE_XCODE_BUILD_RAW_RESULT_TEXT_PATH`: the path to the log file of the raw build results.
 
-### Deploying the app to Appetize.io  
+### Deploying the app to Appetize.io
+
 Appetize.ioへアプリのデプロイ
 
 An .app file built with our `Xcode build for simulator` Step works with just about any simulator. But if you want to easily and quickly integrate it to a simulator that allows you to run your app in a browser, we recommend using the `Appetize.io deploy` Step. It uploads your app to Appetize.io and provides a public URL to use the app in a browser.
@@ -63,7 +65,7 @@ Bitriseの`Xcode build for simulator`ステップを使ってビルドされた.
 
    ![](/img/appetize-deploy.png)
 5. Add the Appetize.io API token to the `Appetize.io token` input.　`Appetize.io token`インプットにAppetize.io APIトークンを追加します。
-6. Enter the path to the .app file to the `Application path` input. The easiest solution is to use the `BITRISE_APP_DIR_PATH_LIST` Environment Variable that is an output of the `Xcode build for simulator` Step. Optionally, you can also enable verbose logging for more efficient debugging.　
+6. Enter the path to the .app file to the `Application path` input. The easiest solution is to use the `BITRISE_APP_DIR_PATH_LIST` Environment Variable that is an output of the `Xcode build for simulator` Step. Optionally, you can also enable verbose logging for more efficient debugging.
 
 The `Appetize.io deploy` Step will produce one output: the `APPETIZE_APP_URL` Environment Variable. it is a public URL where you can access your app. Enjoy showing it off!
 
