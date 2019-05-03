@@ -1,7 +1,7 @@
 ---
 title: Setting up Okta SSO for Bitrise
 redirect_from: []
-date: 2019-04-24 07:13:35 +0000
+date: '2019-04-24T07:13:35+00:00'
 menu:
   organizations:
     weight: 21
@@ -91,6 +91,6 @@ To be able to sign into Bitrise exclusively via SAML SSO, you have to [enforce S
 
 From now on, org members will be able to log in exclusively via SAML SSO.
 
-![](https://devcenter.bitrise.io/img/enforce-sso.png)
+![](/img/enforced-saml-sso.jpg)
 
 {% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you’d like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in organizations](https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/) guide. "%}
