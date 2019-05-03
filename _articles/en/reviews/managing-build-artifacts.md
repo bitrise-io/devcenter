@@ -138,14 +138,12 @@ curl -X DELETE -H 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/a
 
 Example response:
 
-``` json
-{
-  "data": {
-      "artifact_type": "android-apk",
-      "file_size_bytes": 607185,
-      "is_public_page_enabled": true,
-      "slug": "5a9f5da8d5f1057c",
-      "title": "app-debug.apk"
+    {
+    "data": {
+    "artifact_type": "android-apk",
+    "file_size_bytes": 607185,
+    "is_public_page_enabled": true,
+    "slug": "5a9f5da8d5f1057c",
+    "title": "app-debug.apk"
     }
-}
-```
+    }
