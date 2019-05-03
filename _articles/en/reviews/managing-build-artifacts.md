@@ -19,7 +19,7 @@ Table
 
 ## Listing build artifacts
 
-You can list all build artifacts that have been generated and exported during the build.  The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
+You can list all build artifacts that have been exported during the build. 
 
 The required parameters are:
 
@@ -55,13 +55,11 @@ Example response:
       }
     }
 
-As you can see from the above response, when calling this endpoint, build artifact slugs get generated which you can use for updating, deleting or viewing a specific build artifact of an app's build.
-
-Let's have a look at a specific build artifact!
+You can use the generated build artifact slug/s from the response output with other build artifact endpoints where the build artifact slug is a required parameter.
 
 ## Retrieving a specific build artifact's data
 
-Now that all the build artifact slugs are at hand, you can pick one and get more details on the artifact.
+Now that the build artifact slugs are at hand, you can pick one and get more details on the artifact.
 
 Example `curl` request:
 
@@ -80,6 +78,8 @@ Example response:
         "file_size_bytes": 1574799
       }
     }
+
+The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
 
 what to do with the download url
 
