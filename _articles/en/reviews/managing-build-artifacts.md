@@ -9,12 +9,12 @@ If you add the `Deploy to bitrise.io` step to your workflow, once the build has 
 
 Let's see how!
 
-|Endpoint   |Function |
-|---|---|
-|[GET/apps/{app-slug}/builds/{build-slug}/artifacts](https://api-docs.bitrise.io/#/build-artifact/artifact-list)   |Listing build artifacts  |
-|[GET/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-show)   |Retrieving data of a specific build artifact  |
-|[PATCH/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-update)  |Updating a build artifact |
-|[DELETE/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-delete)   |Deleting a build artifact|
+| Endpoint | Function |
+| --- | --- |
+| GET/apps/{app-slug}/builds/{build-slug}/artifacts | Listing build artifacts |
+| GET/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug} | Retrieving data of a specific build artifact |
+| PATCH/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug} | Updating a build artifact |
+| DELETE/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug} | Deleting a build artifact |
 
 ## Listing build artifacts
 
@@ -139,11 +139,11 @@ curl -X DELETE -H 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/a
 Example response:
 
     {
-    "data": {
-    "artifact_type": "android-apk",
-    "file_size_bytes": 607185,
-    "is_public_page_enabled": true,
-    "slug": "5a9f5da8d5f1057c",
-    "title": "app-debug.apk"
-    }
+      "data": {
+          "artifact_type": "android-apk",
+          "file_size_bytes": 607185,
+          "is_public_page_enabled": true,
+          "slug": "5a9f5da8d5f1057c",
+          "title": "app-debug.apk"
+        }
     }
