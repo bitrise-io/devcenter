@@ -88,7 +88,7 @@ By default, the value of the `is_public_page_enabled` input is set to `true`. Th
 
 ## Updating a build artifact
 
-You can update the `is_public_page_enabled` parameter of the android-apk and ios-ipa build artifacts. Please note this parameter's value is set to `true` by default so you can only disable it with this endpoint.
+You can update the `is_public_page_enabled` parameter of your APK and IPA files. Please note this parameter's value is set to `true` by default so you can only disable it with this endpoint.
 
 The required parameters are:
 
