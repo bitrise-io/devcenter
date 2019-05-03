@@ -89,13 +89,36 @@ By default, the value of the `Enable public page for the App?` input is set to `
 
 ## Updating a build artifact
 
-You can update the `is_public_page_enabled` attribute of a specific build artifact. Please note that by default this value is  set to `true` to enable viewing 
-
+You can update the `is_public_page_enabled` parameter of the android-apk and ios-ipa build artifacts. Please note this parameter's value is set to `true` by default so you can only disable it with this endpoint.
 The required parameters are:
 
 * app slug
 * build slug
 * artifact slug
+
+Example curl request
+
+``` bash
+curl -X PATCH "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts/54ae701761c4f956" -H "accept: application/json" -H "Authorization: 6YxXMxS90RleB57QnU7jt9orzGmSEy_RFFsq30tBJt2QHbedIKWzidS2c6o9sqhQbVwYHBU2xwtJr2NQFLqYjQ" -H "Content-Type: application/json" -d "{ \"is_public_page_enabled\": false}"
+```
+
+Example response
+
+    {
+      "data": {
+        "title": "app-debug.apk",
+        "artifact_type": "android-apk",
+        "expiring_download_url": "https://bitrise-prod-build-storage.s3.amazonaws.com/builds/b234f959745082e0/artifacts/7626904/app-debug.apk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIV2YZWMVCNWNR2HA%2F20190503%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20190503T082800Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=7251fcbc0574ffac60b3f1d4a8c398658e49f0b86fb3cfec1500bde125738abc",
+        "is_public_page_enabled": false,
+        "slug": "54ae701761c4f956",
+        "public_install_page_url": "",
+        "file_size_bytes": 1574793
+      }
+    }
+
+If you check the build's `APPS & ARTIFACTS` tab, you will see that the `Public install page` toggle is disabled.
+
+![](/img/public-install-page-disabled.png)
 
 ### PATCH /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
 
