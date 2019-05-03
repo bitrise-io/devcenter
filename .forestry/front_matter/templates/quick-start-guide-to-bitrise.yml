@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/itunes-connectへiosアプリのデプロイ.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/外部テスト用アプリのデプロイ-deploying-an-ios-app-for-external-testing.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/bitrise-ioへiosアプリのデプロイ-deploying-an-ios-app-to-bitrise-io.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/iosアプリのデプロイについて-introduction-to-deploying-ios-apps.md
