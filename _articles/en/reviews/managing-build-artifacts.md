@@ -81,6 +81,8 @@ Example response:
 
 The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
 
+By default, the value of the `Enable public page for the App?` input is set to `true`. This way, once the build runs, a public install page will be available with a long and random URL which can be shared with others who are not registered on Bitrise.
+
 what to do with the download url
 
 Would you like to update this build artifact?
