@@ -9,6 +9,13 @@ If you add the `Deploy to bitrise.io` step to your workflow, once the build has 
 
 Let's see how!
 
+|Endpoint   |Function |
+|---|---|
+|[GET/apps/{app-slug}/builds/{build-slug}/artifacts](https://api-docs.bitrise.io/#/build-artifact/artifact-list)   |Listing build artifacts  |
+|[GET/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-show)   |Retrieving data of a specific build artifact  |
+|[PATCH/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-update)  |Updating a build artifact |
+|[DELETE/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-delete)   |Deleting a build artifact|
+
 ## Listing build artifacts
 
 To be able to use build artifact endpoints, you have to first [list all artifacts](/api-docs.bitrise.io/#/build-artifact/artifact-list) that belong to an app's build. The response will list all artifacts along with their slug which you will need later.
