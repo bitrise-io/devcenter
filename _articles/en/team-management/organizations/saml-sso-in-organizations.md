@@ -75,12 +75,12 @@ If all went well, you should be landing on our Bitrise Dashboard.
 
 ## Checking SAML SSO statuses on Bitrise
 
-Now that the org owner has set up SAML SSO for the organization and all org members (including the owner) have enabled their SAML SSO, everyone in the org can check their SAML SSO statuses. 
+Now that the org owner has set up SAML SSO for the organization and all org members (including the owner) have enabled their SAML SSO, everyone in the org can check their SAML SSO statuses.
 
 The `Single Sign-On` tab is only available for the **org owner**. Let's see what else an org owner can see on the tab!
 
 1. Go to your organization's profile page.
-2. Click `Single Sign On` on the left menu. 
+2. Click `Single Sign On` on the left menu.
 
    You will see the `Review Users` and the `Disable SSO` buttons:
 
@@ -111,7 +111,7 @@ Once all org members have enabled their SAML SSO related to the organization, th
 
 Now org members can only log in via SAML SSO.
 
-![](/img/enforced-saml-sso.png)
+![](/img/enforced-saml-sso.jpg)
 
 ### Can't enforce SAML SSO on your organization?
 
