@@ -4,62 +4,59 @@ redirect_from: []
 published: false
 
 ---
-You can deploy an app to iTunes Connect (rebranded as App Store Connect) to:
+iTunes Connect（App Store Connectにリブランディングされました）へアプリのデプロイを行うことが可能です。以下のことができます：
 
-* Invite testers on Testflight.
-* Release your app on the App Store.
+* Testflightでテスターの招待
+* App Storeでアプリのリリース
 
-On Bitrise, you can either simply just upload your binary to iTunes Connect or you can also submit it for review.
+Bitriseでは、iTunes Connectへバイナリをアップロードする、または、バイナリをレビュー用に提出することができます。
 
-{% include message_box.html type="important" title="Two-factor authentication" content="Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
+{% include message_box.html type="important" title="Two-factor authentication２要素認証" content="２要素認証 (2FA) はすべてのApple Developer Portalアカウントに対して必須となります。万が一、ビルド中にBitriseがあなたのApple Developer Portalアカウントへのアクセスが必要になった場合、2FAを通過する必要があります。  
+これがきちんと機能するよう、[Bitriseへご自身のApple Developer Accountを接続してください](/getting-started/signing-up/connecting-apple-dev-account/)。Bitriseは認証セッションを３０日間再利用するので、毎回マニュアルで2FAを経由する必要はありません。"%}
 
-To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/signing-up/connecting-apple-dev-account/). That allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion."%}
+#### 始める前に
 
-#### Before you start
+* Bitriseにご自身のApple Developer Accountを接続した
+* 最低一回、ご自身のマシン上で、ローカルで.ipaファイルを生成した
+* プロビジョニングプロファイルに含まれた全てのDeveloper証明書をBitriseへアップロードした
+* Bitriseで[マニュアルプロビジョニング](/code-signing/ios-code-signing/ios-manual-provisioning/)を使用したい場合、アプリのDevelopment Provisioning Profileをアップロードした（オートプロビジョニングを使用する場合は、プロファイルのアップロードは必要ありません）
+* アプリのDistribution証明書をアップロードした
+* （マニュアルプロビジョニングを使用したい場合）Ad-hocプロビジョニングプロファイルをアップロードした
 
-Make sure that you have:
+かどうか確認してください。
 
-* Connected your Apple Developer Account to Bitrise.
-* Generated an .ipa file locally, on your own machine, at least once.
-* Uploaded all the Developer certificates that are included in the provisioning profile to Bitrise.
-* Uploaded the app's Development Provisioning Profile if you want to use [manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning/) on Bitrise. If you use [auto-provisioning](), you don't need to upload a profile.
-* Uploaded a Distribution certificate for the app.
-* Uploaded an App Store Provisioning Profile (if you want to use manual provisioning).
+iTunes Connectでアプリの登録をしてください。iTunes Connectにアプリのプッシュを行う度、アプリにユニークビルドとバージョン番号がある必要があります - デプロイ前に[片方もしくは両方増える](/builds/build-numbering-and-app-versioning/)ことになります。
 
-Register the app on iTunes Connect. Keep in mind that every time you want to push an app to iTunes Connect, it **must have a unique build and version number** - [increment either or both](/builds/build-numbering-and-app-versioning/) before deploying.
+#### アプリのデプロイ
 
-#### Deploying the app
-
-To deploy the app to iTunes Connect, we have two Steps:
+iTunes Connectへアプリのデプロイを行うには、２つのステップがBitriseには存在します。
 
 * `Deploy to iTunes Connect`
 * `Deploy to iTunes Connect - Application Loader`
 
-`Deploy to iTunes Connect - Application Loader` is simple: it simply pushes an .ipa or .pkg binary file to iTunes Connect. With this Step, you **cannot** submit the app for review on the App Store, for example.
+`Deploy to iTunes Connect - Application Loader` はシンプルです：このステップはiTunes Connectに.ipaか.pkgバイナリファイルをプッシュします。このステップを使うと、一つの例として、App Storeでレビュー用のアプリを提出することは**できません**。
 
 ![](/img/itunes-connect.png)
 
-With the `Deploy to iTunes Connect` Step, you can:
+`Deploy to iTunes Connect`ステップを使うと、
 
-* submit your app to the App Store for review,
-* you can upload apps of three different platforms (iOS, OS X, AppleTVOS)
-* tell Bitrise whether you want to upload your screenshots and the app's metadata along with the binary
+* レビュー用にApp Storeへアプリを提出すること
+* ３つの異なるプラットフォーム (iOS, OS X, AppleTVOS) のアプリをアップロードすること
+* Bitriseにスクリーンショットと、バイナリと共にアプリのメタデータをアップロードしたいかどうかを報告すること
 
-1. Make sure the `Certificate and profile installer` Step or the `iOS Auto Provision` Step is in your workflow.
+が可能です。
 
-   Do NOT use both!
-2. Make sure the `Xcode Archive & Export for iOS` Step is in your workflow.
-3. Set the `Select method for export` input of the Step to `app-store`.
-
-   The Step will store the path of the exported .ipa file in the $BITRISE_IPA_PATH environment variable.
+1. ワークフローに`Certificate and profile installer`ステップまたは`iOS Auto Provision`ステップがあることを確認してください。両方は使わないでください！
+2. ワークフローに`Xcode Archive & Export for iOS`ステップがあることを確認してください。
+3. `Select method for export`ステップのインプットを`app-store`に設定します。このステップは$BITRISE_IPA_PATH環境変数内のエクスポート済み.ipaファイルのパスを保存します。
 
    ![](/img/app-store-export.png)
-4. Add the `Deploy to iTunes Connect` Step to your workflow.
-5. Fill the required inputs.
-   * **Either the app's Apple ID or its Bundle ID is a required input**. One of the two must be provided.
-   * If you set the `Submit for Review` to `true`, the Step will wait for your submission to be processed on iTunes Connect and then submit the given version of the app for review.
-   * The default value of the `Skip App Version Update` input is `No`. Change it only if you [incremented the app version](/builds/build-numbering-and-app-versioning/) in another way.
-   * If you use an iTunes Connect account that is linked to multiple teams, provide either a **Team ID** or a **Team name**!
-6. Start a build.
+4. ワークフローに`Deploy to Bitrise.io`ステップを追加します。
+5. 必要なインプットを記入してください。
+   * **アプリのApple IDもしくはBundle IDは必要なインプットです。**２つのうち１つを記入してください。
+   * `Submit for Review`を`true`に設定する場合、ステップはあなたの提出物がiTunes Connect上で処理されるのを待ち、その後レビュー用のアプリの一定のバージョンを提出します。
+   * `Skip App Version Update`インプットのデフォルト値は`No`になっています。他の方法で[アプリのバージョンを増加させた](/builds/build-numbering-and-app-versioning/)場合のみ変更してください。
+   * 複数のチームとリンクされたiTunes Connectアカウントを使用する場合は、**チームID**もしくは**チーム名**を入力してください！
+6. ビルドを開始します。
 
-If all goes well, your app will be submitted to iTunes Connect and you can distribute it via Testflight or via the App Store!
+すべてが上手く行けば、アプリはiTunes Connectへ提出され、TestflightまたはApp Store経由で配布することができます！
