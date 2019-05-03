@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/シミュレータ用iosアプリのデプロイ.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/itunes-connectへiosアプリのデプロイ.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/外部テスト用アプリのデプロイ-deploying-an-ios-app-for-external-testing.md
