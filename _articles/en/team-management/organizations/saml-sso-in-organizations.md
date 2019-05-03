@@ -1,6 +1,6 @@
 ---
 title: SAML SSO in organizations
-date: 2019-03-08 09:49:06 +0000
+date: '2019-03-08T09:49:06.000+00:00'
 redirect_from: []
 menu:
   organizations:
@@ -27,7 +27,7 @@ Before connecting SAML SSO to your organization, make sure:
 * [Setting up Azure AD SSO for Bitrise](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/)
 * [Setting up Okta SSO for Bitrise](/team-management/organizations/setting-up-okta-sso-for-bitrise/)
 
-  "%} 
+  "%}
 
 In this guide we cover the following topics:
 
@@ -84,7 +84,7 @@ Now that the org owner has set up SAML SSO for the organization and all org memb
 
    You will see the `Review Users` and the `Disable SSO` buttons:
 
-   ![/img/disable-saml.jpg](https://app.forestry.io/sites/yv69yaruhkt48w/body-media//img/disable-saml.jpg)
+   ![](/img/single-sing-on-url.jpg)
 
    `Disable SSO` disables SAML SSO for all org members. Once disabled, org members will be able to sign in with the regular sign-in procedure. Please note that an individual org member can only be disabled at your own SAML SSO provider's site!
 
