@@ -118,7 +118,9 @@ Once all org members have enabled their SAML SSO related to the organization, th
 2. Toggle the switch to the right to enforce SAML SSO.
 3. Click `Save Changes`.
 
-   ![](/img/enforce-saml-sso-toggle.png)
+Now org members can only log in via SAML SSO.
+
+![](/img/enforced-saml-sso.png)
 
 ### Can't enforce SAML SSO on your organization?
 
