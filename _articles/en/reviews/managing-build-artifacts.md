@@ -19,7 +19,7 @@ Table
 
 ## Listing build artifacts
 
-You can list all build artifacts that have been exported during the build. 
+You can list all build artifacts that have been exported during the build.
 
 The required parameters are:
 
@@ -61,6 +61,12 @@ You can use the generated build artifact slug/s from the response output with ot
 
 Now that the build artifact slugs are at hand, you can pick one and get more details on the artifact.
 
+The required parameters are:
+
+* app slug
+* build slug
+* artifact slug
+
 Example `curl` request:
 
     curl -X GET "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts/92e0b6ecae87b832" -H "accept: application/json" -H "Authorization: awBg1s2u2LU7RM8-lth1ihu839rDcYCODi3F3kwLybzIp8nTTKhNZYCD-UGpIVmP_FOhnLwRhoCvl_Y-7712qQ"
@@ -79,82 +85,23 @@ Example response:
       }
     }
 
-The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
+By default, the value of the `Enable public page for the App?` input is set to `true`. Once the build runs, a public install page will be available with a long and random URL. You can view some basic information about the artifact via this URL. You can also download the artifact using the download URL from the response output.
 
-By default, the value of the `Enable public page for the App?` input is set to `true`. This way, once the build runs, a public install page will be available with a long and random URL which can be shared with others who are not registered on Bitrise.
+## Updating a build artifact
 
-what to do with the download url
+You can update the `is_public_page_enabled` attribute of a specific build artifact. Please note that by default this value is  set to `true` to enable viewing 
 
-Would you like to update this build artifact?
+The required parameters are:
 
-### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts
-
-You can get the artifacts for a specific build.
-
-#### Example `curl` request
-
-``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts'
-```
-
-#### Example response
-
-``` json
-{
-  "data": [
-    {
-      "artifact_type": "file",
-      "file_size_bytes": 10,
-      "is_public_page_enabled": true,
-      "slug": "0d2277e50b8d32ce",
-      "title": "artifact-1.txt"
-    },
-    {
-      "artifact_type": "file",
-      "file_size_bytes": 11,
-      "is_public_page_enabled": false,
-      "slug": "b69c23de1f13b998",
-      "title": "artifact-2.txt"
-    }
-  ],
-  "paging": {
-    "page_item_limit": 50,
-    "total_item_count": 2
-  }
-}
-```
-
-### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
-
-Get a certain build artifact's data. The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
-
-#### Example `curl` request
-
-``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG'
-```
-
-#### Example response
-
-``` json
-{
-  "data": {
-    "artifact_type": "file",
-    "expiring_download_url": "https://bitrise-prod-build-storage.s3.amazonaws.com/builds/9fb8eaaa4bdd3763/artifacts/2138393/artifact-1.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Content-Sha256=UNSIGNED-PAYLOAD\u0026X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180718%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180718T145942Z\u0026X-Amz-Expires=600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=8b6b3c01265e78c43ded2069cc926f9832adcc115d3afd63050847bf97f5d6d3",
-    "file_size_bytes": 10,
-    "is_public_page_enabled": true,
-    "public_install_page_url": "https://www.bitrise.io/artifact/2138393/p/6e7dc9c2b99492e6aa997a2e5d3f7413",
-    "slug": "0d2277e50b8d32ce",
-    "title": "artifact-1.txt"
-  }
-}
-```
+* app slug
+* build slug
+* artifact slug
 
 ### PATCH /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
 
 Set the attributes of a build artifact. In the request body have to be sent a JSON with the specified new attribute values.
 
-_Note: at this time only the_ `_is_public_page_enabled_` _attribute can be set through this endpoint call. This attribute can only set for the artifacts with type_ `_android-apk_` _or_ `_ios-ipa_`_._
+_Note: at this time only the_ `is_public_page_enabled` _attribute can be set through this endpoint call. This attribute can only set for the artifacts with type_ `_android-apk_` _or_ `_ios-ipa_`_._
 
 #### Example `curl` request
 
@@ -201,3 +148,58 @@ curl -X DELETE -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.i
     }
 }
 ```
+
+GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts
+
+You can get the artifacts for a specific build.
+
+Example curl request
+
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts'
+
+Example response
+
+{
+"data": \[
+{
+"artifact_type": "file",
+"file_size_bytes": 10,
+"is_public_page_enabled": true,
+"slug": "0d2277e50b8d32ce",
+"title": "artifact-1.txt"
+},
+{
+"artifact_type": "file",
+"file_size_bytes": 11,
+"is_public_page_enabled": false,
+"slug": "b69c23de1f13b998",
+"title": "artifact-2.txt"
+}
+\],
+"paging": {
+"page_item_limit": 50,
+"total_item_count": 2
+}
+}
+
+GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
+
+Get a certain build artifact's data. The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
+
+Example curl request
+
+curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG'
+
+Example response
+
+{
+"data": {
+"artifact_type": "file",
+"expiring_download_url": "https://bitrise-prod-build-storage.s3.amazonaws.com/builds/9fb8eaaa4bdd3763/artifacts/2138393/artifact-1.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256\\u0026X-Amz-Content-Sha256=UNSIGNED-PAYLOAD\\u0026X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180718%2Fus-east-1%2Fs3%2Faws4_request\\u0026X-Amz-Date=20180718T145942Z\\u0026X-Amz-Expires=600\\u0026X-Amz-SignedHeaders=host\\u0026X-Amz-Signature=8b6b3c01265e78c43ded2069cc926f9832adcc115d3afd63050847bf97f5d6d3",
+"file_size_bytes": 10,
+"is_public_page_enabled": true,
+"public_install_page_url": "https://www.bitrise.io/artifact/2138393/p/6e7dc9c2b99492e6aa997a2e5d3f7413",
+"slug": "0d2277e50b8d32ce",
+"title": "artifact-1.txt"
+}
+}
