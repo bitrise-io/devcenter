@@ -5,21 +5,13 @@ date: '2019-04-26T12:38:56+00:00'
 published: false
 
 ---
-You can list all
-
-You can generate build artifacts and deploy them if you add the `Deploy to bitrise.io` Step to [your workflow](/builds/build-artifacts-online/). You can view, share or download them in the `APPS & ARTIFACTS` tab of your Build's page.
-
-You can list, update, view and delete build artifacts with the Bitrise API.
+If you add the `Deploy to bitrise.io` step to your workflow, once the build has run, you can access the [build's artifacts](/builds/build-artifacts-online/) in the `APPS & ARTIFACTS` tab. You can manage the generated artifacts with our API. The following endpoints can list a build's artifacts, output a specific artifact, update or even delete an artifact.
 
 Let's see how!
 
-To be able to use build artifact endpoints, you have to first [list them](/api-docs.bitrise.io/#/build-artifact/artifact-list). The response will list all artifacts along with their slug which you will need later.
-
-Table
-
 ## Listing build artifacts
 
-You can list all build artifacts that have been exported during the build.
+To be able to use build artifact endpoints, you have to first [list all artifacts](/api-docs.bitrise.io/#/build-artifact/artifact-list) that belong to an app's build. The response will list all artifacts along with their slug which you will need later.
 
 The required parameters are:
 
@@ -85,12 +77,11 @@ Example response:
       }
     }
 
-By default, the value of the `Enable public page for the App?` input is set to `true`. Once the build runs, a public install page will be available with a long and random URL. You can view some basic information about the artifact via this URL. You can also download the artifact using the download URL from the response output.
+By default, the value of the `is_public_page_enabled` input is set to `true`. This way the `public_install_page_url` become available and you can [view some basic information about the artifact via this URL](/tutorials/deploy/bitrise-app-deployment/). You can also download the artifact using the download URL from the response output.
 
 ## Updating a build artifact
 
 You can update the `is_public_page_enabled` parameter of the android-apk and ios-ipa build artifacts. Please note this parameter's value is set to `true` by default so you can only disable it with this endpoint.
-
 
 The required parameters are:
 
@@ -151,5 +142,3 @@ Example response:
     }
 }
 ```
-
-
