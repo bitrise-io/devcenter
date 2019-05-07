@@ -41,7 +41,7 @@ workflows:
 
 A quick walk through of this sample configuration:
 
-
+- `format_version`: declares the minimum Bitrise CLI format version. You can get your Bitrise CLI's supported 							highest format version with: `bitrise version --full`. If you set the `format_version` to `5` 						that means that Bitrise CLI versions which don't support the format version `5` or higher won't 					be able to run the configuration. This is important if you use features which are not available 					in older Bitrise CLI versions.
 
 |Property   |   |
 |---|---|
