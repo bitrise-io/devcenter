@@ -22,9 +22,7 @@ workflows:
 
 This configuration can be executed with `bitrise run test`. The Bitrise CLI won't give you any errors, but of course there's still nothing declared to do.
 
-Let's continue with our example from the previous guide,
-which executes a single Script step when you run it with `bitrise run test`,
-and talk about what's what in the configuration:
+Let's continue with the example from our [Steps in YAML guide](/bitrise-cli/steps/#what-is-a-step), which executes a single Script step when you run it with `bitrise run test`, and talk about what's what in the configuration:
 
 ```yaml
 format_version: 5
@@ -45,6 +43,11 @@ A quick walk through of this sample configuration:
 
 * `format_version` : this property declares the minimum Bitrise CLI format version.
   You can get your Bitrise CLI's supported highest format version with: `bitrise version --full`.
+  {% include message_box.html type="example" title="My message" content="
+  If you set the `format_version` to `5` that means that Bitrise CLI versions which don't support the format version `5` or higher won't be able to run the configuration. This is important if you use features which are not available in older Bitrise CLI versions.
+  "%}
+  
+
   If you set the `format_version` to `5` that means that Bitrise CLI versions which
   don't support the format version `5` or higher won't be able to run the configuration.
   This is important if you use features which are not available in older Bitrise CLI versions.
