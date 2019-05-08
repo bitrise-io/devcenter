@@ -4,6 +4,8 @@ redirect_from: []
 published: false
 
 ---
+The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.
+
 A bare minimal `bitrise.yml` is as simple as:
 
     format_version: 5
