@@ -4,14 +4,12 @@ redirect_from: []
 published: false
 
 ---
-To run your Bitrise build you only need two things:
+To run a Bitrise build locally, you only need two things:
 
-1. The Bitrise CLI - [installation guide](/bitrise-cli/installation/)
-2. A build configuration (`bitrise.yml`)
+1. The Bitrise CLI - here's our [installation guide](/bitrise-cli/installation/).
+2. A build configuration: that is, a `bitrise.yml` file. Read more about it [in our guide](https://devcenter.bitrise.io/bitrise-cli/basics-of-bitrise-yml/). 
 
-Once you have the Bitrise CLI installed (just run `bitrise setup` to validate the installation) you just have to create the `bitrise.yml` build configuration, and you're ready to go!
-
-If you use [bitrise.io](https://www.bitrise.io), you can download your app's `bitrise.yml` right from [bitrise.io](https://www.bitrise.io), and run the build locally. The `bitrise.yml` can be found in the Workflow Editor of the app on [bitrise.io](https://www.bitrise.io), under the `bitrise.yml` section.
+If you use [bitrise.io](https://www.bitrise.io), you can download your app's `bitrise.yml` from there: open the Workflow Editor of the app on [bitrise.io](https://www.bitrise.io), under the `bitrise.yml` section.
 
 If you want to create a `bitrise.yml` yourself, simply create a `bitrise.yml` file in the root of your project. You can use this as the base content of `bitrise.yml`:
 
@@ -29,8 +27,13 @@ If you want to create a `bitrise.yml` yourself, simply create a `bitrise.yml` fi
             inputs:
             - content: echo "Hello ${MY_NAME}!"
 
-To run this build open your Terminal / Command Line, `cd` into the directory where you saved the `bitrise.yml`, and run: `bitrise run test`.
+This defines an Environment Variable with your name and a workflow called `test`. Now let's see how to run this build!
 
-That's all, you just ran your first build with the Bitrise CLI!
+1. Open the Terminal or some other Command Line Interface app. 
+2. Go to the directory where you saved the `bitrise.yml` file. 
+3. Run `bitrise run` with the name of the workflow you defined in the file. 
+   ```
+   bitrise run test
+   ```
 
-Read on to learn more about how the Bitrise CLI and the `bitrise.yml` configuration works, you'll be able to compose and run complex builds in no time!
+That's it! Your first build is running with the Bitrise CLI!
