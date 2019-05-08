@@ -1,5 +1,5 @@
 ---
-title: キャッシュについて (About Caching)
+title: キャッシュについて
 menu:
   caching:
     weight: 1
