@@ -14,7 +14,6 @@ fields:
   default: ''
 pages:
 - _articles/en/reviews/running-your-first-build.md
-- _articles/en/reviews/Basics of bitrise.yml - draft.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/イントロ-intro.md
 - _articles/en/reviews/remote-access-draft.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/シミュレータ用iosアプリのデプロイ.md
