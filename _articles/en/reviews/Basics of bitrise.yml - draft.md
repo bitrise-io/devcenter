@@ -8,7 +8,7 @@ A bare minimal `bitrise.yml` is as simple as:
 
     format_version: 5
 
-This configuration is valid, everything else is optional, but does not include anything to execute, there's nothing to `run`.
+The above configuration is valid but does not include anything to execute with `run`.
 
 A minimal configuration which you can `bitrise run`:
 
@@ -16,9 +16,9 @@ A minimal configuration which you can `bitrise run`:
     workflows:
       test:
 
-This configuration can be executed with `bitrise run test`. The Bitrise CLI won't give you any errors, but of course there's still nothing declared to do.
+The above configuration can be executed with `bitrise run test`. The Bitrise CLI won't give you any errors, but there's still nothing declared to do.
 
-Let's continue with the example from our [Steps in YAML guide](/bitrise-cli/steps/#what-is-a-step), which executes a single Script step when you run it with `bitrise run test`, and talk about what's what in the configuration:
+Let's continue with the example from our [Steps in YAML guide](/bitrise-cli/steps/#what-is-a-step), which executes a single Script step when you run it with `bitrise run test`.
 
     format_version: 5
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -46,10 +46,14 @@ A quick walk through of this sample configuration:
   In our example the only workflow is `test`, which you can perform with `bitrise run test`. If you'd have a second workflow called `main`, you could run both `bitrise run test` and `bitrise run main`.
 * `steps` : lists the [steps](/bitrise-cli/steps/) which should be executed when the workflow is performed.
 
-  In our example the `test` workflow includes only a single `script` step. If multiple steps are declared, they are performed one by one, after each other.
+  In our example the `test` workflow includes only a single `script` step. If multiple steps are declared, they are performed one by one.
 * `script@1.1.5` : a step (reference) to perform. This reference does not have a "StepLib Source" declaration, which means that the `default_step_lib_source` will be used as the StepLib Source. For more information, check out our guide on [Step reference/ID format](/bitrise-cli/steps/#step-referenceid-format).
-* `inputs` : specifies step inputs. NOTE: A step can have many inputs, but you only have to specify those in the `bitrise.yml` which you want to set/overwrite. Check out our [Step input guide](/bitrise-cli/step-inputs/).
-* `content` : the input you wan to set. In our example, we specified the content of the Script step.
+* `inputs` : specifies step inputs. 
+
+  NOTE: A step can have many input. Specify only those input in the bitrise.yml which you want to set or overwrite. Check out our [Step input guide](/bitrise-cli/step-inputs/). 
+* `content` : the input you wan to set. 
+
+  In our example, we specified the content of the Script step.
 * `echo "Hello ${MY_NAME}!"` : this is the **value** we specified for the `content` input.
 
-Find out more on how you can use [multiple workflows](/bitrise-cli/workflows/) and define [multiple steps](/bitrise-cli/steps/). You'll be able to define your perfect automation configuration in no time!
+Find out more on how you can use define [multiple steps](/bitrise-cli/steps/) and use [multiple workflows](/bitrise-cli/workflows/). You'll be able to define your perfect automation configuration in no time!
