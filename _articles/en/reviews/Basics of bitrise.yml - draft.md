@@ -50,12 +50,13 @@ A quick walk through of this sample configuration:
 * `workflows` : is the collection of separate build configurations which you can run with `bitrise run WORKFLOWID`.
 
   In our example the only workflow is `test`, which you can perform with `bitrise run test`. If you'd have a second workflow called `main`, you could run both `bitrise run test` and `bitrise run main`.
-* `steps:` : lists the steps which should be executed when the workflow is performed.
+* `steps` : lists the [steps](/bitrise-cli/steps/) which should be executed when the workflow is performed.
 
   In our example the `test` workflow includes only a single `script` step. If multiple steps are declared, they are performed one by one, after each other.
-* `- script@1.1.5:` : a step (reference) to perform. This reference does not have a "StepLib Source" declaration, which means that the `default_step_lib_source` will be used as the StepLib Source. For more information, check out the [Step reference section of the Steps guide](/bitrise-cli/steps/#step-reference).
-* `inputs:` : the inputs you want to specify for the given step. A step can have many inputs, but _you only have to specify those in the_ `_bitrise.yml_` _which you want to set/overwrite._ For more information see the [Steps documentation](/bitrise-cli/steps).
-* `- content:` : the input we want to set. In this example we only wanted to specify the Content of the Script step, all other inputs are irrelevant.
+* `script@1.1.5` : a step (reference) to perform. This reference does not have a "StepLib Source" declaration, which means that the `default_step_lib_source` will be used as the StepLib Source. For more information, check out our guide on [Step reference/ID format](/bitrise-cli/steps/#step-referenceid-format).
+* `inputs` : specifies step inputs. NOTE: A step can have many inputs, but you only have to specify those in the `bitrise.yml` which you want to set/overwrite. Check out our [Step input guide](/bitrise-cli/step-inputs/).
+* `content` : the input you wan to set. 
+	In our example, we specified the content of the Script step.
 * `echo "Hello ${MY_NAME}!"` : this is the **value** we specified for the `content` input.
 
-Learn more about how you can use [multiple workflows](/bitrise-cli/workflows/), define [multiple steps](/bitrise-cli/steps/) to execute for a given workflow and for more advanced concepts. You'll be able to define your perfect automation configuration in no time!
+Find out more on how you can use [multiple workflows](/bitrise-cli/workflows/) and define [multiple steps](/bitrise-cli/steps/). You'll be able to define your perfect automation configuration in no time!
