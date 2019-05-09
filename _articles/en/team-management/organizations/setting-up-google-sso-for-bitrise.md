@@ -74,11 +74,12 @@ Now that we have the config information, we will leave Google Admin Console for 
 4. Check your emails. You should receive a confirmation email from us (letsconnect@bitrise.io) containing a `Sign In via SSO` button. For a smoother sign-in flow, **make sure you're already logged into Bitrise in another tab before you hit the** `Sign In via SSO` **button**.
 5. Click `Sign In via SSO` to proceed to our Authorization page.
 
-   NOTE! Below error message only appears if you've been trying to access the Authorization page in a Safari browser.
+   NOTE: Below error message only appears if you’ve been trying to access the Authorization page in a **Safari browser**.
 
        Error: The CORS policy for this site does not allow access from the specified Origin....
+       
 
-   We suggest you to copy the URL and paste it in a new tab if using Safari. It will work! For all other browser types, you should be safely landing to the Authorization page.
+   As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the `Authorization` page.
 6. Click `Authorize`.
 
 You should be landing on your Bitrise Dashboard now. If you click `Account settings` and select the `Single Sign-On` tab from the left menu, you should see SAML SSO is enabled for your organization. Once all organization members have enabled their SAML SSO connection, you can [enforce SAML SSO on the whole organization with a simple toggle](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization).
