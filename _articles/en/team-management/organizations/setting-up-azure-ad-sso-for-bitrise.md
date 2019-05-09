@@ -100,6 +100,13 @@ Now that you have established the connection between Bitrise and Azure AD, all t
 You should have received an email from us: ![](/img/enable-bitrisse-saml-org.jpg)
 
 1. Click `Sign In via SSO`.
+
+   NOTE: Below error message only appears if you’ve been trying to access the Authorization page in a **Safari browser**.
+
+       Error: The CORS policy for this site does not allow access from the specified Origin....
+       
+
+   As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the Authorization page.
 2. On the `Allow "organization name" to sign you in` window, click `Authorize` if you trust the organization.
 
    You should be landing on your organization's Bitrise Dashboard. You can check on the `Groups` tab who has been added to the org as a SAML user.
