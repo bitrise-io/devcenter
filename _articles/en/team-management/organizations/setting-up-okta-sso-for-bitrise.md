@@ -81,7 +81,7 @@ Once SAML SSO has been set up between the app and the identity provider, all org
        Error: The CORS policy for this site does not allow access from the specified Origin....
        
 
-   I you're using Safari, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the Authorization page.
+   As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the Authorization page.
 
 If all went well, you should be on your Bitrise Dashboard. If you go to the `Groups` tab the organization, you can see that you are automatically added as a SAML user. All org members, who enable SAML SSO, appear here automatically.
 
