@@ -22,6 +22,6 @@ pages:
 - _articles/en/troubleshooting/trigger-doesnt-work.md
 - _articles/en/troubleshooting/known-xcode-issues.md
 - _articles/en/troubleshooting/frequent-ios-issues.md
-- _articles/en/troubleshooting/frequent-android-issues.md
 - _articles/en/troubleshooting/workflow-editor-doesnt-load.md
 - _articles/en/troubleshooting/debugging-your-build-on-your-own-machine.md
+- _articles/en/troubleshooting/frequent-android-issues.md

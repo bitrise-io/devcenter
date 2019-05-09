@@ -76,7 +76,14 @@ Once SAML SSO has been set up between the app and the identity provider, all org
 1. Check your mailbox (one associated with your Bitrise account) for an email notification sent by Bitrise (`letsconnect@bitrise.io`). All org members who have been invited to the Bitrise org receive this email from Bitrise.
 2. Click `Sign In via SSO`. This link will take you to an authorization page where you have to click `Authorize` if you trust the organization.
 
-If all went well, you should be landing on your Bitrise Dashboard. If you go to the `Groups` tab the organization, you can see that you are automatically added as a SAML user. All org members, who enable SAML SSO, appear here automatically.
+   NOTE: Below error message only appears if you’ve been trying to access the Authorization page in a Safari browser.
+
+       Error: The CORS policy for this site does not allow access from the specified Origin....
+       
+
+   I you're using Safari, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the Authorization page.
+
+If all went well, you should be on your Bitrise Dashboard. If you go to the `Groups` tab the organization, you can see that you are automatically added as a SAML user. All org members, who enable SAML SSO, appear here automatically.
 
 ![](/img/groups-saml-enabled.png)
 

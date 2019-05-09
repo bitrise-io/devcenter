@@ -17,6 +17,6 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/tutorials/docker/use-your-own-docker-image.md
-- _articles/en/tutorials/docker/run-your-build-locally-in-docker.md
 - _articles/en/tutorials/docker/index.md
+- _articles/en/tutorials/docker/run-your-build-locally-in-docker.md
+- _articles/en/tutorials/docker/use-your-own-docker-image.md

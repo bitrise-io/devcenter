@@ -18,12 +18,12 @@ fields:
       label: weight
 pages:
 - _articles/en/webhooks/adding-a-bitbucket-webhook.md
-- _articles/en/webhooks/troubleshooting.md
-- _articles/en/webhooks/adding-outgoing-webhooks.md
-- _articles/en/webhooks/adding-assembla-webhook.md
 - _articles/en/webhooks/adding-a-visual-studio-webhook.md
-- _articles/en/webhooks/adding-a-slack-webhook.md
 - _articles/en/webhooks/adding-a-gogs-webhook.md
 - _articles/en/webhooks/adding-a-gitlab-webhook.md
 - _articles/en/webhooks/adding-a-github-webhook.md
 - _articles/en/webhooks/index.md
+- _articles/en/webhooks/adding-a-slack-webhook.md
+- _articles/en/webhooks/troubleshooting.md
+- _articles/en/webhooks/adding-assembla-webhook.md
+- _articles/en/webhooks/adding-outgoing-webhooks.md
