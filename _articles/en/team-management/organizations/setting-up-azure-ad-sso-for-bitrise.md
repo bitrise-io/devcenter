@@ -97,9 +97,9 @@ Now that you have established the connection between Bitrise and Azure AD, all t
 
 1. Check your emails associated with the email address you provided to your Bitrise organization.
 
-You should have received an email from us: ![](/img/enable-bitrisse-saml-org.jpg)
+	You should have received an email from us: ![](/img/enable-bitrisse-saml-org.jpg)
 
-1. Click `Sign In via SSO`.
+2. Click `Sign In via SSO`.
 
    NOTE: Below error message only appears if you’ve been trying to access the Authorization page in a **Safari browser**.
 
@@ -107,7 +107,7 @@ You should have received an email from us: ![](/img/enable-bitrisse-saml-org.jpg
        
 
    As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the `Authorization` page.
-2. On the `Allow "organization name" to sign you in` window, click `Authorize` if you trust the organization.
+3. On the `Allow "organization name" to sign you in` window, click `Authorize` if you trust the organization.
 
    You should be landing on your organization's Bitrise Dashboard. You can check on the `Groups` tab who has been added to the org as a SAML user.
 
