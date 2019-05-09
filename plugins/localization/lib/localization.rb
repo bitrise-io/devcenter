@@ -2,26 +2,33 @@ module Jekyll
   Jekyll::Hooks.register :site, :post_render do |site, payload|
     # Removes all static files that should not be copied to translated sites.
     #===========================================================================
-    default_lang  = payload["site"]["default_lang"]
-    current_lang  = payload["site"]["lang"]
+    skip_localization = site.config['algolia']['skip_localization']
 
-    static_files  = payload["site"]["static_files"]
-    html_pages = payload["site"]["html_pages"]
+    unless skip_localization
+      default_lang  = payload["site"]["default_lang"]
+      current_lang  = payload["site"]["lang"]
 
-    if default_lang != current_lang
-      static_files.delete_if {|x| true }
-      html_pages.delete_if {|x| true }
+      static_files  = payload["site"]["static_files"]
+      html_pages = payload["site"]["html_pages"]
+
+      if default_lang != current_lang
+        static_files.delete_if {|x| true }
+        html_pages.delete_if {|x| true }
+      end
     end
   end ### end site post_render
 
   Jekyll::Hooks.register :articles, :pre_render do |article|
-    languages = article.site.config['languages']
-    current_lang = article.site.config['lang']
+    skip_localization = article.site.config['algolia']['skip_localization']
+    unless skip_localization
+      languages = article.site.config['languages']
+      current_lang = article.site.config['lang']
 
-    url_without_lang = article.url.gsub(/^\/(#{languages.join('|')}\/?)/, '/')
+      url_without_lang = article.url.gsub(/^\/(#{languages.join('|')}\/?)/, '/')
 
-    article.data['lang'] = current_lang
-    article.data['url_without_lang'] = url_without_lang
+      article.data['lang'] = current_lang
+      article.data['url_without_lang'] = url_without_lang
+    end
   end ### end articles pre_render
 
 
