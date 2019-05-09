@@ -1,0 +1,17 @@
+collections:
+  articles:
+    output: true
+    permalink: /:path/
+
+exclude:
+  - 'plugins'
+
+algolia:
+  application_id: HI1538U2K4
+  index_name: devcenter-jp
+  files_to_exclude:
+    - forestry-help*
+    - _articles/jp/reviews/**/*.md
+    - _articles/en/**/*.md
+  nodes_to_index: 'p,h1,h2,h3,h4,h5,h6'
+  skip_localization: true
