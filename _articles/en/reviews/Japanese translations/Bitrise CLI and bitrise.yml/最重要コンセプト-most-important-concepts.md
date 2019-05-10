@@ -75,11 +75,15 @@ Bitrise CLI自体によってさらされた環境変数がいくつかあり、
 
 All other environment variables are "processed" / made available _as the build progresses._
 
-全ての他の環境変数は、
+全ての他の環境変数は、ビルド過程として”処理された”または利用可能な状態になります。
 
 There are two types of environment variables which are processed and made available before the workflow would be executed: [Secrets](/bitrise-cli/secrets/) and `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
 
+ワークフローが実行されるであろう前に処理され利用可能な状態になる環境変数の種類が２つあります：Secretsと`App Env Var` （`app: envs:`はbitrise.yml内にあります）
+
 After these, the processing of the specified Workflow starts, and the [environment variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available. If the workflow has before or after workflows, when a specific workflow is processed (right before the first step of the workflow would run) the workflow's environment variables are processed and made available.
+
+これらの後に、指定されたワークフローの処理が開始され、ワークフローで指定された環境変数が利用可能な状態になります。そのワークフローの前や後にワークフローがある場合で、指定されたワークフローが処理される時（ワークフローの最初のステップの直前に実行する）、そのワークフローの環境変数は処理され利用可能な状態になります。
 
 Step inputs are also environment variables; those are exposed only for the specific step, and right before the Step would start.
 
