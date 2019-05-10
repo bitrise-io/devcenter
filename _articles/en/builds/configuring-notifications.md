@@ -1,7 +1,7 @@
 ---
 title: Configuring notifications
 redirect_from: []
-date: 2019-03-22 11:08:54 +0000
+date: '2019-03-22T11:08:54.000+00:00'
 menu:
   builds:
     weight: 3

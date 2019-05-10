@@ -2,7 +2,7 @@
 title: Cocoapodsのキャッシュ
 menu:
   caching:
-    weight: 2
+    weight: 3
 
 ---
 事前に、ワークフロー内に最新バージョンの`Cocoapods Install`ステップがあることを確認してください。

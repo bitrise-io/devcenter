@@ -4,6 +4,7 @@ redirect_from: []
 menu:
   getting-started:
     weight: 10
+    title: Account security
 
 ---
 ## Enabling Two-factor authentication

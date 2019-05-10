@@ -1,6 +1,6 @@
 ---
 title: Managing files in Generic File Storage
-date: 2019-04-09 08:17:24 +0000
+date: '2019-04-09T08:17:24.000+00:00'
 menu:
   api:
     weight: 18

@@ -1,6 +1,6 @@
 ---
 title: Flutterアプリの開始
-date: 2019-03-08 15:17:45 +0000
+date: '2019-03-08T15:17:45.000+00:00'
 redirect_from: []
 menu:
   getting-started:

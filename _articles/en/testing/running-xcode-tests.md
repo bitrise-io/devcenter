@@ -1,7 +1,7 @@
 ---
 title: Running Xcode tests
 redirect_from: []
-date: 2019-02-22 15:33:24 +0000
+date: '2019-02-22T15:33:24.000+00:00'
 menu:
   testing:
     weight: 2

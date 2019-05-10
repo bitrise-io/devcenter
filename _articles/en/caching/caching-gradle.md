@@ -2,7 +2,7 @@
 title: Caching Gradle
 menu:
   caching:
-    weight: 5
+    weight: 6
 
 ---
 Before you start, make sure you have the latest version of the `Android Build` step in your workflow.

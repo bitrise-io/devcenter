@@ -42,6 +42,9 @@ builds:
   identifier: triggering-builds
   weight: 1
 main:
+- title: Getting started
+  identifier: getting-started
+  weight: 3
 - title: API
   identifier: api
   weight: 18
@@ -51,9 +54,6 @@ main:
 - title: Troubleshooting
   identifier: troubleshooting
   weight: 16
-- title: Getting Started
-  identifier: getting-started
-  weight: 3
 - title: Frequently Asked Questions (FAQ)
   identifier: faq
   weight: 15

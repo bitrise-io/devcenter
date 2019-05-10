@@ -2,7 +2,7 @@
 title: キャッシュについて
 menu:
   caching:
-    weight: 1
+    weight: 2
 
 ---
 キャッシュは全てのキャッシュされたディレクトリや依存性をtarし、Amazon S3内に安全に保存します。
