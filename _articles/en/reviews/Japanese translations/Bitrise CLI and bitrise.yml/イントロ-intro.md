@@ -86,4 +86,4 @@ You have a code which can be updated independently from other parts, and **you c
 
 _We frequently push features as Steps instead of building it into the core tools. This allows faster and versioned iterations, and updating the parts independently. We try to maintain compatibility as much as possible, so older versions can work too, providing a way to upgrade when it's appropriate for you._
 
-Bitriseは
+Bitriseは核となるツールへのビルドを行う代わりに、ステップとして機能のプッシュを頻繁に行っております。これは高速化とイテレーション作業のバージョン管理や、独立的にパーツのアップデートを可能にします。できるだけ多くの互換性を管理することに努めているので、古いバージョンでも動作します。皆様それぞれに適している場合には、アップグレードする方法を提供します。
