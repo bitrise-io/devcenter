@@ -1,7 +1,7 @@
 ---
 title: Setting up Okta SSO for Bitrise
 redirect_from: []
-date: 2019-04-24 07:13:35 +0000
+date: '2019-04-24T07:13:35+00:00'
 menu:
   organizations:
     weight: 21
@@ -76,7 +76,13 @@ Once SAML SSO has been set up between the app and the identity provider, all org
 1. Check your mailbox (one associated with your Bitrise account) for an email notification sent by Bitrise (`letsconnect@bitrise.io`). All org members who have been invited to the Bitrise org receive this email from Bitrise.
 2. Click `Sign In via SSO`. This link will take you to an authorization page where you have to click `Authorize` if you trust the organization.
 
-If all went well, you should be landing on your Bitrise Dashboard. If you go to the `Groups` tab the organization, you can see that you are automatically added as a SAML user. All org members, who enable SAML SSO, appear here automatically.
+   NOTE: Below error message only appears if you’ve been trying to access the Authorization page in a Safari browser.
+
+       Error: The CORS policy for this site does not allow access from the specified Origin....
+
+   As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the `Authorization` page.
+
+If all went well, you should be on your Bitrise Dashboard. If you go to the `Groups` tab the organization, you can see that you are automatically added as a SAML user. All org members, who enable SAML SSO, appear here automatically.
 
 ![](/img/groups-saml-enabled.png)
 
@@ -91,6 +97,6 @@ To be able to sign into Bitrise exclusively via SAML SSO, you have to [enforce S
 
 From now on, org members will be able to log in exclusively via SAML SSO.
 
-![](https://devcenter.bitrise.io/img/enforce-sso.png)
+![](/img/enforced-saml-sso.jpg)
 
 {% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you’d like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in organizations](https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/) guide. "%}

@@ -1,7 +1,7 @@
 ---
 title: Authentication
 redirect_from: []
-date: 2019-03-29 16:55:28 +0000
+date: '2019-03-29T16:55:28.000+00:00'
 menu:
   api:
     weight: 4

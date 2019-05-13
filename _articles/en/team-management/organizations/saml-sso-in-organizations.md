@@ -1,6 +1,6 @@
 ---
 title: SAML SSO in organizations
-date: 2019-03-08 09:49:06 +0000
+date: '2019-03-08T09:49:06.000+00:00'
 redirect_from: []
 menu:
   organizations:
@@ -27,7 +27,7 @@ Before connecting SAML SSO to your organization, make sure:
 * [Setting up Azure AD SSO for Bitrise](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/)
 * [Setting up Okta SSO for Bitrise](/team-management/organizations/setting-up-okta-sso-for-bitrise/)
 
-  "%} 
+  "%}
 
 In this guide we cover the following topics:
 
@@ -75,36 +75,27 @@ If all went well, you should be landing on our Bitrise Dashboard.
 
 ## Checking SAML SSO statuses on Bitrise
 
-Now that the org owner has set up SAML SSO for the organization and all org members (including the owner) have enabled their SAML SSO, everyone in the org can check their SAML SSO statuses. There are some extra features that only the org owner can access so we will show what org members and the org owner can see separately.
+Now that the org owner has set up SAML SSO for the organization and all org members (including the owner) have enabled their SAML SSO, everyone in the org can check their SAML SSO statuses.
 
-### Organization owner
+The `Single Sign-On` tab is only available for the **org owner**. Let's see what else an org owner can see on the tab!
 
 1. Go to your organization's profile page.
-2. Click `Single Sign On` on the left menu. This `Single Sign On` tab is **only available for the org owner**!
+2. Click `Single Sign On` on the left menu.
 
    You will see the `Review Users` and the `Disable SSO` buttons:
 
-   ![/img/disable-saml.jpg](https://app.forestry.io/sites/yv69yaruhkt48w/body-media//img/disable-saml.jpg)
+   ![](/img/single-sing-on-url.jpg)
 
    `Disable SSO` disables SAML SSO for all org members. Once disabled, org members will be able to sign in with the regular sign-in procedure. Please note that an individual org member can only be disabled at your own SAML SSO provider's site!
 
    `Review Users` takes you from the `Single Sign On` tab to the `People` tab where you can check the org member's SAML SSO status.
 
-   ![](/img/peopletab-org-owner.png)
+   ![](/img/saml-sso-people-tab.png)
 
 * `SAML SSO IS ENABLED`: Login via SAML SSO is enabled.
 * `SAML SSO IS DISABLED`: The org member has not enabled SSO connection through the `Sign in via SSO` button. To enable it, the org member has to follow the instructions in the verification email from Bitrise.
 
-### Organization members
-
-1. Go to your organization's profile page.
-2. Click `People` on the left menu.
-3. Check your (or other organization members') SAML SSO status under `Members`.
-
-   ![](/img/people-org-members.jpg)
-
-* `SAML SSO IS ENABLED`: Login via SAML SSO is enabled
-* `SAML SSO IS DISABLED`: The org member has not enabled SSO connection through the `Sign in via SSO` button. To enable it, the org member has to follow the instructions in the verification email from Bitrise.
+**Organization members** cannot access the `Single Sign-On` tab, but they can check their and other org members' SAML SSO status under `Members` on the `People` tab.
 
 ## About SAML SSO enforcement
 
@@ -118,7 +109,9 @@ Once all org members have enabled their SAML SSO related to the organization, th
 2. Toggle the switch to the right to enforce SAML SSO.
 3. Click `Save Changes`.
 
-   ![](/img/enforce-saml-sso-toggle.png)
+Now org members can only log in via SAML SSO.
+
+![](/img/enforced-saml-sso.jpg)
 
 ### Can't enforce SAML SSO on your organization?
 

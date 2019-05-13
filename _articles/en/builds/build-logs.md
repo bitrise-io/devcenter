@@ -1,6 +1,6 @@
 ---
 title: Build logs
-date: 2018-10-31 10:43:57 +0000
+date: 2018-10-31T10:43:57.000+00:00
 menu:
   builds:
     weight: 27

@@ -1,7 +1,7 @@
 ---
 title: Setting up Azure AD SSO for Bitrise
 redirect_from: []
-date: 2019-04-17 11:13:00 +0000
+date: '2019-04-17T11:13:00.000+00:00'
 menu:
   organizations:
     weight: 19
@@ -97,10 +97,17 @@ Now that you have established the connection between Bitrise and Azure AD, all t
 
 1. Check your emails associated with the email address you provided to your Bitrise organization.
 
-You should have received an email from us: ![](/img/enable-bitrisse-saml-org.jpg)
+	You should have received an email from us: ![](/img/enable-bitrisse-saml-org.jpg)
 
-1. Click `Sign In via SSO`.
-2. On the `Allow "organization name" to sign you in` window, click `Authorize` if you trust the organization.
+2. Click `Sign In via SSO`.
+
+   NOTE: Below error message only appears if you’ve been trying to access the Authorization page in a **Safari browser**.
+
+       Error: The CORS policy for this site does not allow access from the specified Origin....
+       
+
+   As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the `Authorization` page.
+3. On the `Allow "organization name" to sign you in` window, click `Authorize` if you trust the organization.
 
    You should be landing on your organization's Bitrise Dashboard. You can check on the `Groups` tab who has been added to the org as a SAML user.
 
@@ -117,6 +124,6 @@ To be able to sign into Bitrise exclusively via SAML SSO, you have to [enforce S
 
 From now on, org members will be able to log in exclusively via SAML SSO.
 
-![](/img/enforce-sso.png)
+![](/img/enforced-saml-sso.jpg)
 
 {% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you'd like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in organizations](/team-management/organizations/saml-sso-in-organizations/) guide."%}

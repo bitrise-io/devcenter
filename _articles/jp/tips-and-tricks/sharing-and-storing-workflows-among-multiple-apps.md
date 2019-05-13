@@ -1,6 +1,6 @@
 ---
 title: Sharing and storing workflows among multiple apps
-date: 2019-03-01 14:39:55 +0000
+date: '2019-03-01T14:39:55.000+00:00'
 menu:
   tips-and-tricks:
     weight: 24

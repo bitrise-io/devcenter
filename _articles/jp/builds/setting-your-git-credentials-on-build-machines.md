@@ -1,7 +1,7 @@
 ---
 title: ビルドマシンでGitの認証情報を設定
 redirect_from: []
-date: 2019-02-21 15:27:32 +0000
+date: 2019-02-21T15:27:32.000+00:00
 menu:
   builds:
     weight: 23

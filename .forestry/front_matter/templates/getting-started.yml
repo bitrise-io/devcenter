@@ -17,17 +17,17 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/getting-started/getting-started-with-macos-apps.md
-- _articles/en/getting-started/getting-started-with-ionic-cordova-apps.md
-- _articles/en/getting-started/getting-started-with-xamarin-apps.md
-- _articles/en/getting-started/getting-started-with-flutter-apps.md
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
+- _articles/en/getting-started/getting-started-with-flutter-apps.md
+- _articles/en/getting-started/getting-started-with-ionic-cordova-apps.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
-- _articles/en/getting-started/getting-started-with-ios-apps.md
 - _articles/en/getting-started/managing-files-on-bitrise.md
-- _articles/en/getting-started/getting-started-steps.md
-- _articles/en/getting-started/getting-started-workflows.md
 - _articles/en/getting-started/account-security.md
+- _articles/en/getting-started/getting-started-steps.md
 - _articles/en/getting-started/code-security.md
-- _articles/en/getting-started/builds-and-workflows.md
 - _articles/en/getting-started/index.md
+- _articles/en/getting-started/getting-started-with-xamarin-apps.md
+- _articles/en/getting-started/getting-started-with-macos-apps.md
+- _articles/en/getting-started/builds-and-workflows.md
+- _articles/en/getting-started/getting-started-with-ios-apps.md
+- _articles/en/getting-started/getting-started-workflows.md

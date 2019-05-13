@@ -1,7 +1,7 @@
 ---
 title: Endpoints and testing the API
 redirect_from: []
-date: 2019-03-29 16:53:56 +0000
+date: 2019-03-29T16:53:56.000+00:00
 menu:
   api:
     weight: 7

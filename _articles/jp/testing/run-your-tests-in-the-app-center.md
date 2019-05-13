@@ -1,5 +1,5 @@
 ---
-title: Running tests in the Visual Studio App Center
+title: Visual Studio App Centerでのテストの実行
 redirect_from:
 - "/xamarin/run-your-tests-in-the-app-center"
 menu:
@@ -7,9 +7,7 @@ menu:
     weight: 5
 
 ---
-{% include not_translated_yet.html %}
-
-Upload and schedule tests on the Visual Studio App Center for your projects. The following testing frameworks are available:
+プロジェクト用にテストのアップロードやスケジューリングをVisual Studio App Centerで行うことができます。以下のテストフレームワークが利用可能です：
 
 * Appium
 * Espresso
@@ -17,23 +15,23 @@ Upload and schedule tests on the Visual Studio App Center for your projects. The
 * Xamarin.UITest
 * XCUITest
 
-1. In the Workflow Editor, [add](/getting-started/getting-started-workflows/) the `App Center upload and schedule tests` step to your workflow.
-
-   The step has multiple required inputs. You can find the value of these inputs by setting up your test on the Visual Studio App Center.
-2. Log in to the App Center. 
-3. [Prepare your test for upload](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/).
-4. Create an [App Center](https://appcenter.ms/apps) project.
-5. Navigate to `Test runs` tab and start a `New test run`:
-   * Select the devices you want to test your app on.
-   * Configure the test run:  choose a test series, a system language and a test framework.
-   * **On the** `Submit` **tab you will find every required input for the step in the** `Upload and schedule test` **section**.
-   * Click on `Done`.
-6. On Bitrise, open the Workflow Editor and fill in the required inputs of the Step. You will need to:
-   * get an API token
-   * set a target app 
-   * set a test framework - you can see the available options 
-   * add the device selection slug
-   * add the name of the test series
-   * set the system locale (for example, _en_US_) for the test run
-   * set the path to an application file, either .ipa or .apk
-   * set the path to a test directory. Use the appropriate directory for the chosen test framework.
+1. Workflow Editorにて、ご自身のワークフローに`App Center upload and schedule tests`ステップを[追加します](/getting-started/getting-started-workflows/)。  
+   このステップには複数の必要なインプットが存在します。そのインプットの値はVisual Studio App Center上のテストをセットアップすることにより確認する事ができます。
+2. App Centerにログインします。
+3. [アップロード用のテストを準備します](https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/)。
+4. [App Center](https://appcenter.ms/apps)プロジェクトを作成します。
+5. `Test runs`タブへ進み`New test run`を開始します：
+   * アプリのテストを行うデバイスを選択します。
+   * テスト走行の設定：テストシリーズ、システム言語、テストフレームワークを選択します。
+   * `Upload and schedule test`**セクションの**`Submit`**タブにて、ステップに必要な全てのインプットが確認できます。**
+   * `Done`をクリックします。
+6. On Bitrise, open the Workflow Editor and fill in the required inputs of the Step. You will need to:  
+   Bitrise上では、Workflow Editorを開いてステップに必要なインプットを入力します。以下の項目を行ってください：
+   * APIトークンの入手
+   * ターゲットアプリの設定
+   * テストフレームワークの設定（利用可能なオプションが確認できます）
+   * device selection slugの追加
+   * テストシリーズ名の追加
+   * テスト走行用のシステムLocale (例：_en_US_) の設定
+   * アプリケーションファイルへのパスの設定（.ipaもしくは.apk）
+   * テストディレクトリへのパスの設定（選択したテストフレームワーク用の適切なディレクトリを使用してください）

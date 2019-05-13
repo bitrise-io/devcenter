@@ -1,7 +1,7 @@
 ---
 title: 通知設定
 redirect_from: []
-date: 2019-03-22 11:09:35 +0000
+date: '2019-03-22T11:09:35.000+00:00'
 menu:
   builds:
     weight: 2

@@ -1,6 +1,6 @@
 ---
 title: Creating your own Bitrise project scanner
-date: 2018-12-13 11:31:09 +0000
+date: 2018-12-13T11:31:09.000+00:00
 redirect_from: []
 menu:
   bitrise-cli:

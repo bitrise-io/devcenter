@@ -1,7 +1,7 @@
 ---
 title: Getting started with Flutter apps
 redirect_from: []
-date: 2019-01-25 13:26:58 +0000
+date: '2019-01-25T13:26:58.000+00:00'
 menu:
   getting-started:
     weight: 25
@@ -69,11 +69,13 @@ To build and deploy a Flutter app, a workflow must contain these Flutter Steps:
 
 If you have platforms specified in your repository, a `deploy` workflow will be automatically generated when adding the app on Bitrise. The content of this workflow depends on the platforms: for example, if your app contains only an iOS project, the workflow will contain the `Certificate and profile installer` and the `Xcode Archive & Export for iOS` Steps.
 
-You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. **You can set this in the** `Platform` **input of the** `**Flutter Build**` **Step any time**. By default, the Step is configured according to the platform or platforms that the scanner detected when adding the app on Bitrise.
+You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. **You can set this in the** `Platform` **input of the** `Flutter Build` **Step any time**. By default, the Step is configured according to the platform or platforms that the scanner detected when adding the app on Bitrise.
 
 Here's an example workflow we'll use in this configuration, with all the necessary Steps:
 
-![](/img/flutter-workflow.png)We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
+![](/img/flutter-workflow.png)
+
+We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
 
 {% include message_box.html type="note" title="Packages and libraries" content="We also support building Flutter packages and libraries. Unlike in the case of apps, there is no artifact to build so there is no need for a `Flutter Build` Step in your workflow."%}
 
@@ -92,10 +94,26 @@ To deploy your iOS Flutter project to the App Store, you'll need to build the ap
 
 Unlike testing, this requires code signing files:
 
-* an iOS Distribution Certificate (a .p12 file)
-* an App Store Provisioning Profile
+* An iOS Distribution Certificate (a .p12 file).
+* An App Store Provisioning Profile.
+
+For Flutter applications, code signing requires setting a Team ID in the project settings in Xcode.
 
 Read more about iOS code signing on Bitrise in [our detailed guides](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing/)!
+
+#### Configuring Team ID for Flutter apps
+
+Once you created your iOS project locally, you will need to review the project settings for it in Xcode. More specifically, you need to set a valid Team ID: without that, your build will fail on Bitrise.
+
+1. In Xcode, open `Runner.xcworkspace` in your app’s `ios` folder.
+2. To view your app’s settings, select the `Runner` project in the Xcode project navigator. Then, in the main view sidebar, select the `Runner` target.
+3. Select the `General` tab.
+4. In the `Signing` section, find the `Team` menu and set it to the team associated with your registered Apple Developer account.
+5. Commit the change to your repository!
+
+   This is very important: if you only set the Team ID locally, your build will still fail on Bitrise!
+
+#### Configuring deployment on Bitrise
 
  1. Make sure you have the `Certificate and profile installer` Step in your workflow.
  2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise.

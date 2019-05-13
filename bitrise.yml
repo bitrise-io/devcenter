@@ -12,7 +12,7 @@ workflows:
         - content: |-
             #!/bin/bash
             set -ex
-            jekyll build
+            bundle exec jekyll build
   deploy-to-github-pages:
     envs:
     - GOOGLE_ANALYTICS_KEY: 'UA-53276411-1'

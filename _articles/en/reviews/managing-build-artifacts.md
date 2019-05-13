@@ -1,21 +1,24 @@
 ---
 title: Managing build artifacts
 redirect_from: []
-date: 2019-04-26 12:38:56 +0000
+date: '2019-04-26T12:38:56+00:00'
 published: false
 
 ---
-You can list all 
+If you add the `Deploy to bitrise.io` step to your workflow, once the build has run, you can access the [build's artifacts](/builds/build-artifacts-online/) in the `APPS & ARTIFACTS` tab. You can manage the generated artifacts with our API. The following endpoints can list a build's artifacts, output a specific artifact, update or even delete an artifact.
 
-Build artifacts are generated if you added our `Deploy to bitrise.io` Step to [your workflow](/builds/build-artifacts-online/). You can view, share or download them in the `APPS & ARTIFACTS` tab of your Build's page. 
+Let's see how!
 
-You can list, update, view and delete build artifacts with the Bitrise API.
-
-Table
+|Endpoint   |Function |
+|---|---|
+|[GET/apps/{app-slug}/builds/{build-slug}/artifacts](https://api-docs.bitrise.io/#/build-artifact/artifact-list)   |Listing build artifacts  |
+|[GET/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-show)   |Retrieving data of a specific build artifact  |
+|[PATCH/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-update)  |Updating a build artifact |
+|[DELETE/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-delete)   |Deleting a build artifact|
 
 ## Listing build artifacts
 
-You can list all build artifacts that have been generated and exported during the build. To be able to use other build artifact endpoints, you have to start with [this endpoint](https://api-docs.bitrise.io/#/build-artifact/artifact-list) to get the build artifact slugs...
+To be able to use build artifact endpoints, you have to first [list all artifacts](/api-docs.bitrise.io/#/build-artifact/artifact-list) that belong to an app's build. The response will list all artifacts along with their slug which you will need later.
 
 The required parameters are:
 
@@ -51,17 +54,21 @@ Example response:
       }
     }
 
-As you can see from the above response, when calling this endpoint, build artifact slugs get generated which you can use for updating, deleting or viewing a specific build artifact of an app's build.
-
-Let's have a look at a specific build artifact!
+You can use the generated build artifact slug/s from the response output with other build artifact endpoints where the build artifact slug is a required parameter.
 
 ## Retrieving a specific build artifact's data
 
-Now that all the build artifact slugs are at hand, pick one and get more details on the artifact.
+Now that the build artifact slugs are at hand, you can pick one and get more details on the artifact.
+
+The required parameters are:
+
+* app slug
+* build slug
+* artifact slug
 
 Example `curl` request:
 
-    
+    curl -X GET "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts/92e0b6ecae87b832" -H "accept: application/json" -H "Authorization: awBg1s2u2LU7RM8-lth1ihu839rDcYCODi3F3kwLybzIp8nTTKhNZYCD-UGpIVmP_FOhnLwRhoCvl_Y-7712qQ"
 
 Example response:
 
@@ -77,121 +84,66 @@ Example response:
       }
     }
 
-what to do with the download url
+By default, the value of the `is_public_page_enabled` input is set to `true`. This way the `public_install_page_url` become available and you can [view some basic information about the artifact via this URL](/tutorials/deploy/bitrise-app-deployment/). You can also download the artifact using the download URL from the response output.
 
-Would you like to update this build artifact? 
+## Updating a build artifact
 
-### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts
+You can update the `is_public_page_enabled` parameter of your APK and IPA files. Please note this parameter's value is set to `true` by default so you can only disable it with this endpoint.
 
-Get the artifacts for a specific build.
+The required parameters are:
 
-#### Example `curl` request
+* app slug
+* build slug
+* artifact slug
+
+Example curl request:
 
 ``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts'
+curl -X PATCH "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts/54ae701761c4f956" -H "accept: application/json" -H "Authorization: 6YxXMxS90RleB57QnU7jt9orzGmSEy_RFFsq30tBJt2QHbedIKWzidS2c6o9sqhQbVwYHBU2xwtJr2NQFLqYjQ" -H "Content-Type: application/json" -d "{ \"is_public_page_enabled\": false}"
 ```
 
-#### Example response
+Example response:
 
-``` json
-{
-  "data": [
     {
-      "artifact_type": "file",
-      "file_size_bytes": 10,
-      "is_public_page_enabled": true,
-      "slug": "0d2277e50b8d32ce",
-      "title": "artifact-1.txt"
-    },
+      "data": {
+        "title": "app-debug.apk",
+        "artifact_type": "android-apk",
+        "expiring_download_url": "https://bitrise-prod-build-storage.s3.amazonaws.com/builds/b234f959745082e0/artifacts/7626904/app-debug.apk?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAIV2YZWMVCNWNR2HA%2F20190503%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20190503T082800Z&X-Amz-Expires=600&X-Amz-SignedHeaders=host&X-Amz-Signature=7251fcbc0574ffac60b3f1d4a8c398658e49f0b86fb3cfec1500bde125738abc",
+        "is_public_page_enabled": false,
+        "slug": "54ae701761c4f956",
+        "public_install_page_url": "",
+        "file_size_bytes": 1574793
+      }
+    }
+
+If you check the build's `APPS & ARTIFACTS` tab, you will see that the `Public install page` toggle is disabled.
+
+![](/img/public-install-page-disabled.png)
+
+## Deleting a build artifact
+
+You can delete an app's specific build artifact.
+
+The required parameters are:
+
+* app slug
+* build slug
+* artifact slug
+
+Example `curl` request
+
+``` bash
+curl -X DELETE -H 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG'
+```
+
+Example response:
+
     {
-      "artifact_type": "file",
-      "file_size_bytes": 11,
-      "is_public_page_enabled": false,
-      "slug": "b69c23de1f13b998",
-      "title": "artifact-2.txt"
+      "data": {
+          "artifact_type": "android-apk",
+          "file_size_bytes": 607185,
+          "is_public_page_enabled": true,
+          "slug": "5a9f5da8d5f1057c",
+          "title": "app-debug.apk"
+        }
     }
-  ],
-  "paging": {
-    "page_item_limit": 50,
-    "total_item_count": 2
-  }
-}
-```
-
-### GET /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
-
-Get a certain build artifact's data. The provided download URL is a presigned Amazon S3 URL which is valid for 10 minutes and then it expires.
-
-#### Example `curl` request
-
-``` bash
-curl -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG'
-```
-
-#### Example response
-
-``` json
-{
-  "data": {
-    "artifact_type": "file",
-    "expiring_download_url": "https://bitrise-prod-build-storage.s3.amazonaws.com/builds/9fb8eaaa4bdd3763/artifacts/2138393/artifact-1.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Content-Sha256=UNSIGNED-PAYLOAD\u0026X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180718%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180718T145942Z\u0026X-Amz-Expires=600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=8b6b3c01265e78c43ded2069cc926f9832adcc115d3afd63050847bf97f5d6d3",
-    "file_size_bytes": 10,
-    "is_public_page_enabled": true,
-    "public_install_page_url": "https://www.bitrise.io/artifact/2138393/p/6e7dc9c2b99492e6aa997a2e5d3f7413",
-    "slug": "0d2277e50b8d32ce",
-    "title": "artifact-1.txt"
-  }
-}
-```
-
-### PATCH /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
-
-Set the attributes of a build artifact. In the request body have to be sent a JSON with the specified new attribute values.
-
-_Note: at this time only the_ `_is_public_page_enabled_` _attribute can be set through this endpoint call. This attribute can only set for the artifacts with type_ `_android-apk_` _or_ `_ios-ipa_`_._
-
-#### Example `curl` request
-
-``` bash
-curl -X PATCH -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG' -d '{"is_public_page_enabled":true}'
-```
-
-#### Example response
-
-``` json
-{
-  "data": {
-    "artifact_type": "android-apk",
-    "expiring_download_url": "https://bitrise-prod-build-storage.s3.amazonaws.com/builds/ddf4134555e833d8/artifacts/3205846/app-debug.apk?X-Amz-Algorithm=AWS4-HMAC-SHA256\u0026X-Amz-Content-Sha256=UNSIGNED-PAYLOAD\u0026X-Amz-Credential=AKIAIOC7N256G7J2W2TQ%2F20180718%2Fus-east-1%2Fs3%2Faws4_request\u0026X-Amz-Date=20180718T145943Z\u0026X-Amz-Expires=600\u0026X-Amz-SignedHeaders=host\u0026X-Amz-Signature=3a9bef9f09fdc082d2669deb7e2c760c141c5e8424df21cd96551ec79ca99330",
-    "file_size_bytes": 607185,
-    "is_public_page_enabled": true,
-    "public_install_page_url": "https://www.bitrise.io/artifact/3205846/p/300e0121b50985fd631fe304d549006f",
-    "slug": "5a9f5da8d5f1057c",
-    "title": "app-debug.apk"
-  }
-}
-```
-
-### DELETE /apps/{APP-SLUG}/builds/{BUILD-SLUG}/artifacts/{ARTIFACT-SLUG}
-
-Delete a specific artifact.
-
-#### Example `curl` request
-
-``` bash
-curl -X DELETE -H 'Authorization: token THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG'
-```
-
-#### Example response
-
-``` json
-{
-  "data": {
-      "artifact_type": "android-apk",
-      "file_size_bytes": 607185,
-      "is_public_page_enabled": true,
-      "slug": "5a9f5da8d5f1057c",
-      "title": "app-debug.apk"
-    }
-}
-```

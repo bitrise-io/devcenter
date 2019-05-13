@@ -60,7 +60,7 @@ You can access the Public install page's URL, if you head over to your generated
 
 ![](/img/public-install-page-1.png)
 
-If you click `Open Public install page` link, you’ll see a base description of the App (title, version, size, supported devices).
+If you click `Open Public install page` link, you’ll see a basic description of the App (title, version, size, supported devices).
 
 ![](/img/public-install-page-example.png)
 

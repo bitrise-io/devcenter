@@ -1,7 +1,7 @@
 ---
 title: 'Remote access draft '
 redirect_from: []
-date: 2019-04-02 07:09:34 +0000
+date: '2019-04-02T07:09:34.000+00:00'
 published: false
 
 ---
@@ -16,7 +16,7 @@ There are two ways to use remote access on our build machines:
 * **SSH**: this is available for both Linux/Docker based and MacOS machines.
 * **Screenshare**: this is only available for MacOS machines.
 
-With both methods, you can access the build machine remotely during the build and for 10 minutes after the build is finished. 
+With both methods, you can access the build machine remotely during the build and for 10 minutes after the build is finished.
 
 ### Remote access with SSH
 
