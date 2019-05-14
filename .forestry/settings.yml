@@ -4,11 +4,6 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: directory
-  path: en/steps-workflows
-  label: Steps and workflows
-  create: all
-  match: "**/*"
 - type: document
   path: forestry-help.md
   label: Forestry User Guide
@@ -49,6 +44,11 @@ sections:
 - type: directory
   path: _articles/en/webhooks
   label: Webhooks
+  create: all
+  match: "**/*"
+- type: directory
+  path: en/steps-workflows
+  label: Steps and workflows
   create: all
   match: "**/*"
 - type: directory
