@@ -1,5 +1,5 @@
 ---
-title: 独自のワークフローを作成する
+title: 独自のワークフローを作成する
 menu:
   steps-workflows:
     weight: 7
