@@ -19,13 +19,13 @@ menu:
 
 The steps can do anything that can be implemented by command line scripts and/or programs:
 
-* send emails,
-* [send text messages](https://github.com/bitrise-io/steps-sms-text-message),
-* pass values to each other,
-* [create Xcode archives](https://github.com/bitrise-io/steps-xcode-archive),
-* gather system information about the Virtual Machine running the build,
-* notify other users (for example, on Slack)
-* even [publish to iTunes Connect](https://github.com/bitrise-io/steps-deploy-to-itunesconnect-deliver), and many more.
+* Send emails.
+* [Send text messages](https://github.com/bitrise-io/steps-sms-text-message).
+* Pass values to each other.
+* [Create Xcode archives](https://github.com/bitrise-io/steps-xcode-archive).
+* Gather system information about the Virtual Machine running the build.
+* Notify other users (for example, on Slack).
+* [Publish to iTunes Connect](https://github.com/bitrise-io/steps-deploy-to-itunesconnect-deliver).
 
 ### Infrastructure
 
