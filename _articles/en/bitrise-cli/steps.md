@@ -27,13 +27,15 @@ To include a Step in your `bitrise.yml` configuration, you have to reference it 
 
 Let's see an example with a single `script` Step, which will be executed when you run `bitrise run test`:
 
-    format_version: 1.3.1
-    default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+```yaml
+format_version: 1.3.1
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
     
-    workflows:
-      test:
-        steps:
-        - script:
+workflows:
+  test:
+    steps:
+    - script:
+```
 
 {% include message_box.html type="note" title="List of available Steps (Step IDs)" content="
 
@@ -48,12 +50,16 @@ Let's do a simple "Hello World" script, using the `script` Step:
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
     
-    workflows:
-      test:
-        steps:
-        - script@1.1.3:
-            inputs:
-            - content: "echo 'Hello World!'"
+```yaml
+format_version: 1.3.1
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+    
+workflows:
+  test:
+    steps:
+      inputs:
+      - content: "echo 'Hello World!'"
+```
 
 When you run the `test` workflow of this configuration with `bitrise run test` you'll now see that the `script` Step prints the text `Hello World` in its log:
 
@@ -77,16 +83,17 @@ If the Step doesn't have any required inputs you don't have to specify an input.
 
 For example, the `script` Step can run Ruby scripts too, not just Bash scripts. To do this, in addition to specifying the script in the `content` input you also have to specify the "runner" input:
 
-    format_version: 1.3.1
-    default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+```yaml
+format_version: 1.3.1
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
     
-    workflows:
-      test:
-        steps:
-        - script@1.1.3:
-            inputs:
-            - content: "puts 'Hello Ruby!'"
-            - runner_bin: ruby
+workflows:
+  test:
+    steps:
+      inputs:
+      - content: "puts 'Hello Ruby!'"
+      - runner_bin: ruby
+```
 
 Step input values are always **string** / text values, as the input id/key and the value are passed to the Step as environment variables ([more information](/bitrise-cli/most-important-concepts/#every-input-output-and-parameter-is-an-environment-variable)). The value can be multiline too, using the standard YAML multiline format. An example multiline Bash script:
 
