@@ -87,6 +87,9 @@ main:
 - title: Builds
   identifier: builds
   weight: 7
-- title: Tips & Tricks
+- title: Tips and tricks
   identifier: tips-and-tricks
   weight: 14
+- title: Steps and workflows
+  identifier: steps-workflows
+  weight: 6
