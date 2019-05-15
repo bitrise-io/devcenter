@@ -16,7 +16,7 @@ There are two ways to use remote access on our build machines:
 * **SSH**: this is available for both Linux/Docker based and MacOS machines.
 * **Screenshare**: this is only available for MacOS machines.
 
-With both methods, you can access the build machine remotely during the build and for 10 minutes after the build is finished.
+With either method you can access the build machine remotely during the build and for 10 minutes after the build is finished.
 
 ### Remote access with SSH
 
