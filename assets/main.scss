@@ -513,6 +513,7 @@ main.content {
 		}
 
 		ul li {
+      counter-increment: none;
   		margin: 0.1rem;
 			position: relative;
 			border: none;
