@@ -7,7 +7,7 @@ published: false
 ---
 Remote access allows users to connect to their build's virtual machines via SSH or a screenshare app. A failed build can be rebuilt with remote access enabled to make troubleshooting a lot easier - for example, if the build logs don't provide enough information about the error.
 
-To take advantage, all you need to do is rebuild a build with remote access enabled and follow the instructions to access the build machine during the build.
+Rebuild a finished build with remote access enabled and follow the instructions to access the build machine during the build.
 
 {% include message_box.html type="important" title="Authorization" content="Users who have the `Testers/QA` roles on the app are NOT be able to use remote access."%}
 
