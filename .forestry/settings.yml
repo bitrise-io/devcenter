@@ -47,6 +47,11 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: _articles/en/steps-and-workflows
+  label: Steps and workflows
+  create: all
+  match: "**/*"
+- type: directory
   path: _articles/en/builds
   label: Builds
   create: all
