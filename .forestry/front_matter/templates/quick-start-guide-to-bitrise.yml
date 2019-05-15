@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/remote-access-draft.md
 - _articles/jp/getting-started/getting-started-with-flutter-applications.md
 - _articles/en/reviews/Japanese translations/webhooks/webhook-トラブルシューティング-webhook-troubleshooting.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/sensitive-input-in-public-apps.md
@@ -81,7 +82,6 @@ pages:
 - _articles/en/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
-- _articles/en/reviews/remote-access-draft.md
 - _articles/en/reviews/running-your-first-build.md
 - _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/iosアプリのデプロイについて-introduction-to-deploying-ios-apps.md
