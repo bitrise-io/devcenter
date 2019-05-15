@@ -2,7 +2,7 @@
 title: About caching
 menu:
   caching:
-    weight: 1
+    weight: "1"
 
 ---
 The caching will tar all the cached directories and dependencies, and store them securely in Amazon S3.
