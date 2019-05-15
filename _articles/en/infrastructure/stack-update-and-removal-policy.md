@@ -4,7 +4,7 @@ redirect_from: []
 date: '2019-02-05T15:39:10.000+00:00'
 menu:
   infrastructure:
-    weight: "4"
+    weight: 4
 
 ---
 Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week. Check out our Stacks in our [system reports Github site](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports).
