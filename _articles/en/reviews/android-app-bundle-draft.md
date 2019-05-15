@@ -1,7 +1,7 @@
 ---
 title: Android App Bundle-draft
 redirect_from: []
-date: 2019-01-08 09:25:30 +0000
+date: 2019-01-08T09:25:30.000+00:00
 published: false
 
 ---
@@ -13,9 +13,7 @@ Our scanner can detect your code as an Android project and kick your first build
 
 The key to generate an Android app bundle is to specify the right **Gradle task** and modify the **file extensions** in our `Gradle Runner` Step.
 
-Before you start, make sure that:
-
-* you insert the `Gradle Runner` Step in your `deploy` workflow AFTER the `Android Unit Test` and `Android Lint` Steps.
+Before you start, make sure that you insert the `Gradle Runner` Step in your `deploy` workflow AFTER the `Android Unit Test` and `Android Lint` Steps.
 
 1. Click `Gradle Runner` in the workflow.
 2. Click the `Config` section.
@@ -47,7 +45,7 @@ If you have uploaded your keystore file and filled out the required credentials,
 
 ## Deploying your Android app bundle Google Play Store
 
-If you want to check the bundle prior to app store distribution, you can add the `Deploy to bitrise.io` Step after the `Gradle Runner` Step. It uploads the bundle into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page. 
+If you want to check the bundle prior to app store distribution, you can add the `Deploy to bitrise.io` Step after the `Gradle Runner` Step. It uploads the bundle into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page.
 
 Before you start, make sure you are in sync with Google Play Store! Learn how to
 
