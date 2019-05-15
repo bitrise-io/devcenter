@@ -17,8 +17,8 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
-- _articles/en/deploy/ios-deploy/introduction-to-deploying-ios-apps.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
+- _articles/en/deploy/ios-deploy/introduction-to-deploying-ios-apps.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md

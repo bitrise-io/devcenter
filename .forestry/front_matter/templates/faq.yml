@@ -17,14 +17,14 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/faq/should-i-commit-my-dependencies-into-my-repository.md
-- _articles/en/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
-- _articles/en/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
-- _articles/en/faq/how-to-generate-ssh-keypair.md
-- _articles/en/faq/grant-access-to-github-organization.md
-- _articles/en/faq/android-x86-emulator.md
-- _articles/en/faq/adding-projects-with-submodules.md
-- _articles/en/faq/how-to-change-the-owner-of-an-app.md
-- _articles/en/faq/no-builds-are-triggered-automatically.md
-- _articles/en/faq/grant-access-to-bitbucket-team.md
 - _articles/en/faq/organization-faq.md
+- _articles/en/faq/grant-access-to-bitbucket-team.md
+- _articles/en/faq/no-builds-are-triggered-automatically.md
+- _articles/en/faq/how-to-change-the-owner-of-an-app.md
+- _articles/en/faq/adding-projects-with-submodules.md
+- _articles/en/faq/android-x86-emulator.md
+- _articles/en/faq/grant-access-to-github-organization.md
+- _articles/en/faq/how-to-generate-ssh-keypair.md
+- _articles/en/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
+- _articles/en/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
+- _articles/en/faq/should-i-commit-my-dependencies-into-my-repository.md

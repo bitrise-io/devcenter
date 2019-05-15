@@ -13,80 +13,80 @@ fields:
   hidden: false
   default: ''
 pages:
-- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
-- _articles/en/reviews/uploading-an-android-keystore-file.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/シミュレータ用iosアプリのデプロイ.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/外部テスト用アプリのデプロイ-deploying-an-ios-app-for-external-testing.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/bitrise-ioへiosアプリのデプロイ-deploying-an-ios-app-to-bitrise-io.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/iosアプリのデプロイについて-introduction-to-deploying-ios-apps.md
-- _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
-- _articles/en/reviews/running-your-first-build.md
-- _articles/en/reviews/remote-access-draft.md
-- _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
-- _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
-- _articles/en/builds/triggering-builds/approving-pull-request-builds.md
-- _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
-- _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
-- _articles/en/api/incoming-and-outgoing-webhooks.md
-- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/keystoreファイルのダウンロード-downloading-a-keystore-file.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
-- _articles/en/api/managing-ios-code-signing-files.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/setting-your-git-credentials-on-build-machines.md
-- _articles/en/reviews/getting-started-with-flutter-apps-draft.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
-- _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
-- _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
-- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
-- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/itunes-connectへiosアプリのデプロイ.md
-- _articles/en/reviews/steps-in-yaml-draft.md
-- _articles/en/reviews/fastlane.md
-- _articles/en/reviews/API/endpoints-and-testing-the-api.md
-- _articles/en/reviews/API/response-and-pagination.md
-- _articles/en/reviews/Japanese translations/webhooks/gogs-webhookの追加-adding-a-gogs-webhook.md
-- _articles/en/reviews/Japanese translations/webhooks/assembla-webhookの追加-adding-an-assembla-webhook.md
-- _articles/en/reviews/Japanese translations/webhooks/gitlab-webhookの追加-adding-a-gitlab-webhook.md
-- _articles/en/reviews/Japanese translations/webhooks/deveo-webhookの追加-adding-a-deveo-webhook.md
-- _articles/en/reviews/Japanese translations/webhooks/visual-studio-webhookの追加-adding-a-visual-studio-webhook.md
-- _articles/en/reviews/Japanese translations/webhooks/github-webhookの追加-adding-a-github-webhook.md
-- _articles/en/reviews/apple-2fa.md
-- _articles/jp/api/authentication.md
-- _articles/en/api/authentication.md
-- _articles/en/api/endpoints.md
-- _articles/jp/api/response-and-pagination.md
-- _articles/en/api/response-and-pagination.md
-- _articles/jp/getting-started/signing-up/logging-in-with-bitrise.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
-- _articles/en/getting-started/signing-up/logging-in-to-bitrise.md
-- _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md
-- _articles/en/reviews/Japanese translations/webhooks/outgoing-webhook-の追加-adding-outgoing-webhooks.md
-- _articles/en/reviews/Japanese translations/webhooks/slack-webhookの追加-adding-a-slack-webhook.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイ-deploying-android-apps.md
-- _articles/en/team-management/teams-vs-organizations.md
-- _articles/jp/team-management/teams-vs-organizations.md
-- _articles/en/team-management/organizations/saml-sso-in-organizations.md
-- _articles/en/reviews/API/authentication.md
-- _articles/en/reviews/Japanese translations/webhooks/webhookの追加-adding-webhooks.md
-- _articles/en/reviews/API/introduction-to-the-bitrise-api.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/bitrise-ymlファイルへのオンラインアクセス-accessing-the-bitrise-yml-file-online.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/build-artifacts-online.md
-- _articles/en/api/adding-and-managing-apps.md
-- _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
-- _articles/en/testing/running-detox-tests-on-bitrise.md
-- _articles/en/builds/configuring-notifications.md
-- _articles/jp/builds/configuring-notifications.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/秘密と環境設定-secrets-and-env-vars.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドの番号付けとアプリバージョン管理-build-numbering-and-app-versioning.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/イントロ-intro.md
-- _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/単一ワークフローでの複数のフレーバーapkの生成とデプロイ-generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
-- _articles/en/reviews/Japanese translations/テスト (Testing)/bitrise上でdetoxテストの実行-running-detox-tests-on-bitrise.md
-- _articles/en/reviews/managing-build-artifacts.md
-- _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
-- _articles/jp/api/incoming-and-outgoing-webhooks.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/利用可能な環境変数-available-environment-variables.md
-- _articles/en/api/managing-files-in-generic-file-storage.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/sensitive-input-in-public-apps.md
-- _articles/en/reviews/Japanese translations/webhooks/webhook-トラブルシューティング-webhook-troubleshooting.md
 - _articles/jp/getting-started/getting-started-with-flutter-applications.md
+- _articles/en/reviews/Japanese translations/webhooks/webhook-トラブルシューティング-webhook-troubleshooting.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/sensitive-input-in-public-apps.md
+- _articles/en/api/managing-files-in-generic-file-storage.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/利用可能な環境変数-available-environment-variables.md
+- _articles/jp/api/incoming-and-outgoing-webhooks.md
+- _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
+- _articles/en/reviews/managing-build-artifacts.md
+- _articles/en/reviews/Japanese translations/テスト (Testing)/bitrise上でdetoxテストの実行-running-detox-tests-on-bitrise.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/単一ワークフローでの複数のフレーバーapkの生成とデプロイ-generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
+- _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/イントロ-intro.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドの番号付けとアプリバージョン管理-build-numbering-and-app-versioning.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/秘密と環境設定-secrets-and-env-vars.md
+- _articles/jp/builds/configuring-notifications.md
+- _articles/en/builds/configuring-notifications.md
+- _articles/en/testing/running-detox-tests-on-bitrise.md
+- _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
+- _articles/en/api/adding-and-managing-apps.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/build-artifacts-online.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/bitrise-ymlファイルへのオンラインアクセス-accessing-the-bitrise-yml-file-online.md
+- _articles/en/reviews/API/introduction-to-the-bitrise-api.md
+- _articles/en/reviews/Japanese translations/webhooks/webhookの追加-adding-webhooks.md
+- _articles/en/reviews/API/authentication.md
+- _articles/en/team-management/organizations/saml-sso-in-organizations.md
+- _articles/jp/team-management/teams-vs-organizations.md
+- _articles/en/team-management/teams-vs-organizations.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイ-deploying-android-apps.md
+- _articles/en/reviews/Japanese translations/webhooks/slack-webhookの追加-adding-a-slack-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/outgoing-webhook-の追加-adding-outgoing-webhooks.md
+- _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md
+- _articles/en/getting-started/signing-up/logging-in-to-bitrise.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
+- _articles/jp/getting-started/signing-up/logging-in-with-bitrise.md
+- _articles/en/api/response-and-pagination.md
+- _articles/jp/api/response-and-pagination.md
+- _articles/en/api/endpoints.md
+- _articles/en/api/authentication.md
+- _articles/jp/api/authentication.md
+- _articles/en/reviews/apple-2fa.md
+- _articles/en/reviews/Japanese translations/webhooks/github-webhookの追加-adding-a-github-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/visual-studio-webhookの追加-adding-a-visual-studio-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/deveo-webhookの追加-adding-a-deveo-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/gitlab-webhookの追加-adding-a-gitlab-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/assembla-webhookの追加-adding-an-assembla-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/gogs-webhookの追加-adding-a-gogs-webhook.md
+- _articles/en/reviews/API/response-and-pagination.md
+- _articles/en/reviews/API/endpoints-and-testing-the-api.md
+- _articles/en/reviews/fastlane.md
+- _articles/en/reviews/steps-in-yaml-draft.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/itunes-connectへiosアプリのデプロイ.md
+- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
+- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
+- _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
+- _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
+- _articles/en/reviews/getting-started-with-flutter-apps-draft.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/setting-your-git-credentials-on-build-machines.md
+- _articles/en/api/managing-ios-code-signing-files.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
+- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/keystoreファイルのダウンロード-downloading-a-keystore-file.md
+- _articles/en/api/incoming-and-outgoing-webhooks.md
+- _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
+- _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
+- _articles/en/builds/triggering-builds/approving-pull-request-builds.md
+- _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
+- _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
+- _articles/en/reviews/remote-access-draft.md
+- _articles/en/reviews/running-your-first-build.md
+- _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/iosアプリのデプロイについて-introduction-to-deploying-ios-apps.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/bitrise-ioへiosアプリのデプロイ-deploying-an-ios-app-to-bitrise-io.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/外部テスト用アプリのデプロイ-deploying-an-ios-app-for-external-testing.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/シミュレータ用iosアプリのデプロイ.md
+- _articles/en/reviews/uploading-an-android-keystore-file.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md

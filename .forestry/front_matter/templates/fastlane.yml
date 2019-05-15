@@ -17,5 +17,5 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/tutorials/fastlane/how-to-configure-fastlane-match-for-bitrise.md
 - _articles/en/tutorials/fastlane/fastlane-tools-integration.md
+- _articles/en/tutorials/fastlane/how-to-configure-fastlane-match-for-bitrise.md

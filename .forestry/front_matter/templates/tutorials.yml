@@ -17,10 +17,10 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/tutorials/build-with-fake.md
-- _articles/en/tutorials/hipchat-message.md
-- _articles/en/tutorials/vpn-configuration.md
-- _articles/en/tutorials/download-or-replace-project-resources.md
-- _articles/en/tutorials/auto-deploy-middleman-project.md
-- _articles/en/tutorials/community-created.md
 - _articles/en/tutorials/how-to-use-the-generic-file-storage.md
+- _articles/en/tutorials/community-created.md
+- _articles/en/tutorials/auto-deploy-middleman-project.md
+- _articles/en/tutorials/download-or-replace-project-resources.md
+- _articles/en/tutorials/vpn-configuration.md
+- _articles/en/tutorials/hipchat-message.md
+- _articles/en/tutorials/build-with-fake.md

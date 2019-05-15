@@ -17,7 +17,7 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/team-management/index.md
-- _articles/jp/team-management/user-roles-on-app-teams.md
-- _articles/en/team-management/changing-the-owner-of-an-app.md
 - _articles/en/team-management/user-roles-on-app-teams.md
+- _articles/en/team-management/changing-the-owner-of-an-app.md
+- _articles/jp/team-management/user-roles-on-app-teams.md
+- _articles/en/team-management/index.md

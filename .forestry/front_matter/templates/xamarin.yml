@@ -19,7 +19,7 @@ fields:
       config:
         required: true
 pages:
-- _articles/en/tutorials/xamarin/index.md
-- _articles/en/tutorials/xamarin/restore-nuget-packages.md
-- _articles/en/tutorials/xamarin/add-custom-sources-to-nuget.md
 - _articles/en/tutorials/xamarin/deploy-your-xamarin-app.md
+- _articles/en/tutorials/xamarin/add-custom-sources-to-nuget.md
+- _articles/en/tutorials/xamarin/restore-nuget-packages.md
+- _articles/en/tutorials/xamarin/index.md

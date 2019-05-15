@@ -17,9 +17,9 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-procedures.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-procedures.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
+- _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
