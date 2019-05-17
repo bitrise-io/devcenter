@@ -17,11 +17,11 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/en/builds/triggering-builds/triggering-builds.md
-- _articles/en/builds/triggering-builds/trigger-git-tags.md
-- _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
-- _articles/en/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
-- _articles/en/builds/triggering-builds/trigger-map.md
-- _articles/en/builds/triggering-builds/trigger-code-push.md
-- _articles/en/builds/triggering-builds/status-reporting.md
 - _articles/en/builds/triggering-builds/trigger-pull-request.md
+- _articles/en/builds/triggering-builds/status-reporting.md
+- _articles/en/builds/triggering-builds/trigger-code-push.md
+- _articles/en/builds/triggering-builds/trigger-map.md
+- _articles/en/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
+- _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
+- _articles/en/builds/triggering-builds/trigger-git-tags.md
+- _articles/en/builds/triggering-builds/triggering-builds.md

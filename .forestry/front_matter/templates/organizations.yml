@@ -17,5 +17,5 @@ fields:
       name: weight
       label: weight
 pages:
-- _articles/jp/team-management/organizations/saml-sso-in-organizations.md
 - _articles/jp/team-management/organizations/setting-up-google-sso-for-bitrise.md
+- _articles/jp/team-management/organizations/saml-sso-in-organizations.md
