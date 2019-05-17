@@ -1,92 +1,92 @@
 ---
-code-signing:
-- title: iOS code signing
-  identifier: ios-code-signing
-  weight: 2
-- title: Android code signing
-  identifier: android-code-signing
-  weight: 1
 deployment:
+- title: iOS deployment
+  identifier: ios-deploy
+  weight: 2
 - title: Android deployment
   identifier: android-deploy
   weight: 1
-- title: iOS deployment
-  identifier: ios-deploy
+code-signing:
+- title: Android code signing
+  identifier: android-code-signing
+  weight: 1
+- title: iOS code signing
+  identifier: ios-code-signing
   weight: 2
 team-management:
 - title: Organizations
   identifier: organizations
   weight: 9
-main:
-- title: Tips & Tricks
-  identifier: tips-and-tricks
-  weight: 14
-- title: Builds
-  identifier: builds
-  weight: 7
-- title: Testing
-  identifier: testing
-  weight: 10
-- title: Tutorials
-  identifier: tutorials
-  weight: 13
-- title: Teams and organizations
-  identifier: team-management
-  weight: 5
-- title: Bitrise CLI and bitrise.yml
-  identifier: bitrise-cli
-  weight: 12
-- title: Infrastructure
-  identifier: infrastructure
+getting-started:
+- title: Signing up
+  identifier: signing-up
+  weight: 3
+- title: Adding a new app
+  identifier: adding-a-new-app
   weight: 4
-- title: Webhooks
-  identifier: webhooks
-  weight: 6
-- title: Code signing
-  identifier: code-signing
-  weight: 8
-- title: Caching
-  identifier: caching
-  weight: 9
-- title: Deployment
-  identifier: deployment
-  weight: 11
-- title: FAQ
-  identifier: faq
-  weight: 15
-- title: Troubleshooting
-  identifier: troubleshooting
-  weight: 16
-- title: Tools
-  identifier: tools
-  weight: 17
-- title: API
-  identifier: api
-  weight: 18
+main:
 - title: Getting started
   identifier: getting-started
   weight: 3
+- title: API
+  identifier: api
+  weight: 18
+- title: Tools
+  identifier: tools
+  weight: 17
+- title: Troubleshooting
+  identifier: troubleshooting
+  weight: 16
+- title: FAQ
+  identifier: faq
+  weight: 15
+- title: Deployment
+  identifier: deployment
+  weight: 11
+- title: Caching
+  identifier: caching
+  weight: 9
+- title: Code signing
+  identifier: code-signing
+  weight: 8
+- title: Webhooks
+  identifier: webhooks
+  weight: 6
+- title: Infrastructure
+  identifier: infrastructure
+  weight: 4
+- title: Bitrise CLI and bitrise.yml
+  identifier: bitrise-cli
+  weight: 12
+- title: Teams and organizations
+  identifier: team-management
+  weight: 5
+- title: Tutorials
+  identifier: tutorials
+  weight: 13
+- title: Testing
+  identifier: testing
+  weight: 10
+- title: Builds
+  identifier: builds
+  weight: 7
+- title: Tips & Tricks
+  identifier: tips-and-tricks
+  weight: 14
 builds:
 - title: Triggering builds
   identifier: triggering-builds
   weight: 1
-getting-started:
-- title: Adding a new app
-  identifier: adding-a-new-app
-  weight: 4
-- title: Signing up
-  identifier: signing-up
-  weight: 3
 tutorials:
-- title: Xamarin
-  identifier: xamarin
-  weight: 4
-- title: Docker
-  identifier: docker
-  weight: 5
-- title: Deployment Tutorials
-  identifier: deployment-tutorials
-  weight: 2
 - title: Fastlane
   identifier: fastlane
   weight: 3
+- title: Deployment Tutorials
+  identifier: deployment-tutorials
+  weight: 2
+- title: Docker
+  identifier: docker
+  weight: 5
+- title: Xamarin
+  identifier: xamarin
+  weight: 4

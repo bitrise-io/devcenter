@@ -1,13 +1,16 @@
 ---
-title: Managing build artifacts - draft
+title: Managing build artifacts
 redirect_from: []
-date: '2019-04-26T12:38:56+00:00'
-published: false
+menu:
+  api:
+    weight: 21
 
 ---
-If you add the `Deploy to bitrise.io` step to your workflow, once the build has run, you can access the [build's artifacts](/builds/build-artifacts-online/) in the `APPS & ARTIFACTS` tab. You can manage the generated artifacts with our API. The following endpoints can list a build's artifacts, output a specific artifact, update or even delete an artifact.
+If you add the `Deploy to bitrise.io` step to your workflow, once the build has run, you can access the [build’s artifacts](/builds/build-artifacts-online/) in the `APPS & ARTIFACTS` tab. You can manage the generated artifacts with our API. The following endpoints can list a build’s artifacts, output a specific artifact, update or even delete an artifact.
 
-Let's see how!
+Let’s see how!
+
+Endpoint
 
 |Endpoint   |Function |
 |---|---|
@@ -18,7 +21,7 @@ Let's see how!
 
 ## Listing build artifacts
 
-To be able to use build artifact endpoints, you have to first [list all artifacts](/api-docs.bitrise.io/#/build-artifact/artifact-list) that belong to an app's build. The response will list all artifacts along with their slug which you will need later.
+To be able to use build artifact endpoints, you have to first [list all artifacts](https://api-docs.bitrise.io/#/build-artifact/artifact-list) that belong to an app’s build. The response will list all artifacts along with their slug which you will need later.
 
 The required parameters are:
 
@@ -27,7 +30,7 @@ The required parameters are:
 
 Example `curl` request:
 
-    curl -X GET "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts" -H "accept: application/json" -H "Authorization: "
+    curl -X GET "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts" -H "accept: application/json" -H "Authorization: THE-ACCESS-TOKEN"
 
 Example response:
 
@@ -56,9 +59,9 @@ Example response:
 
 You can use the generated build artifact slug/s from the response output with other build artifact endpoints where the build artifact slug is a required parameter.
 
-## Retrieving a specific build artifact's data
+## Retrieving a specific build artifact’s data
 
-Now that the build artifact slugs are at hand, you can pick one and get more details on the artifact.
+Now that the build artifact slugs are at hand, you can pick one and [get more details](https://api-docs.bitrise.io/#/build-artifact/artifact-show) on the artifact.
 
 The required parameters are:
 
@@ -68,7 +71,7 @@ The required parameters are:
 
 Example `curl` request:
 
-    curl -X GET "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts/92e0b6ecae87b832" -H "accept: application/json" -H "Authorization: awBg1s2u2LU7RM8-lth1ihu839rDcYCODi3F3kwLybzIp8nTTKhNZYCD-UGpIVmP_FOhnLwRhoCvl_Y-7712qQ"
+    curl -X GET "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts/92e0b6ecae87b832" -H "accept: application/json" -H "Authorization: THE-ACCESS-TOKEN"
 
 Example response:
 
@@ -84,11 +87,11 @@ Example response:
       }
     }
 
-By default, the value of the `is_public_page_enabled` input is set to `true`. This way the `public_install_page_url` become available and you can [view some basic information about the artifact via this URL](/tutorials/deploy/bitrise-app-deployment/). You can also download the artifact using the download URL from the response output.
+By default, the value of the `is_public_page_enabled` input is set to `true`. This way the `public_install_page_url` becomes available and you can view some basic information about the artifact [via this URL](/tutorials/deploy/bitrise-app-deployment/). You can also download the artifact using the download URL from the response output.
 
 ## Updating a build artifact
 
-You can update the `is_public_page_enabled` parameter of your APK and IPA files. Please note this parameter's value is set to `true` by default so you can only disable it with this endpoint.
+You can [update](https://api-docs.bitrise.io/#/build-artifact/artifact-update) the `is_public_page_enabled` parameter of your APK and IPA files. Please note this parameter’s value is set to `true` by default so you can only disable it with this endpoint.
 
 The required parameters are:
 
@@ -98,9 +101,7 @@ The required parameters are:
 
 Example curl request:
 
-``` bash
-curl -X PATCH "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts/54ae701761c4f956" -H "accept: application/json" -H "Authorization: 6YxXMxS90RleB57QnU7jt9orzGmSEy_RFFsq30tBJt2QHbedIKWzidS2c6o9sqhQbVwYHBU2xwtJr2NQFLqYjQ" -H "Content-Type: application/json" -d "{ \"is_public_page_enabled\": false}"
-```
+    curl -X PATCH "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts/54ae701761c4f956" -H "accept: application/json" -H "Authorization: THE-ACCESS-TOKEN" -H "Content-Type: application/json" -d "{ \"is_public_page_enabled\": false}"
 
 Example response:
 
@@ -116,13 +117,11 @@ Example response:
       }
     }
 
-If you check the build's `APPS & ARTIFACTS` tab, you will see that the `Public install page` toggle is disabled.
-
-![](/img/public-install-page-disabled.png)
+If you check the build’s `APPS & ARTIFACTS` tab, you will see that the `Public install page` toggle is disabled.
 
 ## Deleting a build artifact
 
-You can delete an app's specific build artifact.
+You can [delete](https://api-docs.bitrise.io/#/build-artifact/artifact-delete) an app’s specific build artifact.
 
 The required parameters are:
 
@@ -130,20 +129,20 @@ The required parameters are:
 * build slug
 * artifact slug
 
-Example `curl` request
+Example `curl` request:
 
-``` bash
-curl -X DELETE -H 'https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/artifacts/ARTIFACT-SLUG'
-```
+    curl -X DELETE "https://api.bitrise.io/v0.1/apps/87a5991e180d91a9/builds/b234f959745082e0/artifacts/54ae701761c4f956" -H "accept: application/json" -H "Authorization: THE-ACCESS-TOKEN"
 
 Example response:
 
     {
       "data": {
-          "artifact_type": "android-apk",
-          "file_size_bytes": 607185,
-          "is_public_page_enabled": true,
-          "slug": "5a9f5da8d5f1057c",
-          "title": "app-debug.apk"
-        }
+        "title": "app-debug.apk",
+        "artifact_type": "android-apk",
+        "expiring_download_url": null,
+        "is_public_page_enabled": true,
+        "slug": "54ae701761c4f956",
+        "public_install_page_url": "",
+        "file_size_bytes": 1574793
+      }
     }

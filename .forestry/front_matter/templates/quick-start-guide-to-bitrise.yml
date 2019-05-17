@@ -13,6 +13,8 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/remote-access-draft.md
+- _articles/en/api/Managing build artifacts.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
 - _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/シミュレータ用iosアプリのデプロイ.md
@@ -89,4 +91,3 @@ pages:
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/sensitive-input-in-public-apps.md
 - _articles/en/reviews/Japanese translations/webhooks/webhook-トラブルシューティング-webhook-troubleshooting.md
 - _articles/jp/getting-started/getting-started-with-flutter-applications.md
-- _articles/en/reviews/remote-access-draft.md

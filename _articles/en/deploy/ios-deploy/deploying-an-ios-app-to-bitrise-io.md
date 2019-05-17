@@ -1,6 +1,6 @@
 ---
 title: Deploying an iOS app to Bitrise.io
-date: 2018-10-26 12:37:47 +0000
+date: '2018-10-26T12:37:47.000+00:00'
 redirect_from: []
 menu:
   ios-deploy:
