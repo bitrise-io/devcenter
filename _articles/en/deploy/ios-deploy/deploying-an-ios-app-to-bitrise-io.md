@@ -4,7 +4,7 @@ date: '2018-10-26T12:37:47.000+00:00'
 redirect_from: []
 menu:
   ios-deploy:
-    weight: "2"
+    weight: 2
 
 ---
 Deploy an app to Bitrise to be able to download the .ipa file and install it on devices specified in the app's Development Provisioning Profile. This way, your internal testers can easily test the app.

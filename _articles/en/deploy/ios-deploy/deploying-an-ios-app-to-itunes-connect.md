@@ -4,7 +4,7 @@ date: '2018-10-26T12:41:22.000+00:00'
 redirect_from: []
 menu:
   ios-deploy:
-    weight: "4"
+    weight: 4
 
 ---
 You can deploy an app to iTunes Connect (rebranded as App Store Connect) to:

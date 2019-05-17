@@ -5,7 +5,7 @@ redirect_from:
 - "/webhooks/trigger-map"
 menu:
   triggering-builds:
-    weight: "11"
+    weight: 11
     title: Triggering builds with the Trigger map
 
 ---

@@ -2,7 +2,7 @@
 title: Use your own Docker image
 menu:
   docker:
-    weight: "3"
+    weight: 3
 
 ---
 {% include message_box.html type="note" title="Have a question or suggestion?" content=" Join the discussion on [How to use your own Docker image for your builds](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69). "%}

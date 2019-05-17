@@ -2,7 +2,7 @@
 title: Bitrise tools
 menu:
   tools:
-    weight: "1"
+    weight: 1
 
 ---
 List of Open Source tools maintained by the Bitrise team.
