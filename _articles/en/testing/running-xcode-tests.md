@@ -4,7 +4,7 @@ redirect_from: []
 date: '2019-02-22T15:33:24.000+00:00'
 menu:
   testing:
-    weight: "2"
+    weight: 2
 
 ---
 To run Xcode tests on Bitrise, you need to have test targets defined in your projects. You need two Steps to run Xcode tests and view their results:

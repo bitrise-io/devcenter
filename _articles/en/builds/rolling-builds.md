@@ -2,7 +2,7 @@
 title: Rolling builds
 menu:
   builds:
-    weight: "11"
+    weight: 11
 
 ---
 You can cancel running builds or builds on hold - no need to abort them manually! If you turn on the **Rolling Builds** feature, the previous builds of your app can be automatically aborted once a new one is started.
