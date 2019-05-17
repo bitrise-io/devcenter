@@ -2,7 +2,7 @@
 title: Using the Generic File Storage
 menu:
   tutorials:
-    weight: 6
+    weight: "6"
 
 ---
 ## Uploading files to GENERIC FILE STORAGE on [bitrise.io](https://www.bitrise.io)

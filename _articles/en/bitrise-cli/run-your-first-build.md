@@ -2,7 +2,7 @@
 title: Running your first build
 menu:
   bitrise-cli:
-    weight: 19
+    weight: "19"
 
 ---
 To run your Bitrise build you only need two things:

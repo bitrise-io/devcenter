@@ -2,10 +2,9 @@
 title: Deploying your Middleman website with Bitrise
 menu:
   tutorials:
-    weight: 10
+    weight: "10"
 
 ---
-
 This tutorial describes how you can create a basic static website project (for example, a blog) with [Middleman](https://middlemanapp.com/), and how to connect and deploy the project with Bitrise.
 
 ## Creating & cloning a repository on Github

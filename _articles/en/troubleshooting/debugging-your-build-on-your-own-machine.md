@@ -1,9 +1,9 @@
 ---
 title: Debugging your build on your own machine
-date: 2018-11-19 15:33:56 +0000
+date: '2018-11-19T15:33:56.000+00:00'
 menu:
   troubleshooting:
-    weight: 1
+    weight: "1"
 
 ---
 If your build fails on Bitrise, we often recommend to try and run it locally, on your machine. To do this, do the following:

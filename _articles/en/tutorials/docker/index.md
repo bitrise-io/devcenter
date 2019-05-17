@@ -2,7 +2,7 @@
 title: Docker support on bitrise.io
 menu:
   docker:
-    weight: 1
+    weight: "1"
 
 ---
 [Docker](https://www.docker.com/) is an ideal tool to create, use and share custom environments, as well as to provide a lightweight way to do builds in ephemeral environments (where the environment is destroyed after the build, and a new one is created as the next build starts).

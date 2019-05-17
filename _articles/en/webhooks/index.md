@@ -4,7 +4,7 @@ redirect_from:
 - "/webhooks/"
 menu:
   webhooks:
-    weight: 1
+    weight: "1"
 
 ---
 Most source code hosting service provides a feature to register webhooks. A webhook is basically an URL which will be called on specified events.
