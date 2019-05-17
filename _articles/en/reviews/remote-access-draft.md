@@ -29,7 +29,7 @@ With either method, you can access the build machine remotely during the build a
 
        ssh user:password@access.bitrise.io -p 13377
 
-And done! You should now be able to access the virtual machine where your build is running.
+And done! You should be able to access the virtual machine where your build is running.
 
 ### Remote access with screenshare
 
