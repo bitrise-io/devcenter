@@ -4,7 +4,7 @@ date: '2018-12-13T11:37:13.000+00:00'
 redirect_from: []
 menu:
   bitrise-cli:
-    weight: 6
+    weight: "6"
 
 ---
 When you add a new app to Bitrise, we detect the type of your project and generate a basic `bitrise.yml` file for you, with workflows that are appropriate for your project type.

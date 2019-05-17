@@ -4,7 +4,7 @@ redirect_from: []
 date: '2019-02-18T14:53:53.000+00:00'
 menu:
   team-management:
-    weight: 6
+    weight: "5"
 
 ---
 If the owner of an app is an Organization,

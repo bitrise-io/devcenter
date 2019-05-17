@@ -2,7 +2,7 @@
 title: fastlane tools integration
 menu:
   fastlane:
-    weight: 1
+    weight: "1"
 
 ---
 Having more time to be creative is the key to great inventions.

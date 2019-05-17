@@ -2,7 +2,7 @@
 title: How to configure fastlane match for Bitrise
 menu:
   fastlane:
-    weight: 2
+    weight: "2"
 
 ---
 If you want to use [fastlane match](https://github.com/fastlane/fastlane/tree/master/match)

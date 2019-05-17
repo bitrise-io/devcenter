@@ -4,7 +4,7 @@ redirect_from: []
 date: '2019-02-21T15:27:32.000+00:00'
 menu:
   builds:
-    weight: 22
+    weight: "22"
 
 ---
 The default Git username and user email address on our Stacks are the following:
