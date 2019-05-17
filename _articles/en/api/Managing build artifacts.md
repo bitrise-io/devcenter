@@ -1,19 +1,20 @@
 ---
 title: ''
 redirect_from: []
-published: false
 
 ---
 If you add the `Deploy to bitrise.io` step to your workflow, once the build has run, you can access the [build’s artifacts](/builds/build-artifacts-online/) in the `APPS & ARTIFACTS` tab. You can manage the generated artifacts with our API. The following endpoints can list a build’s artifacts, output a specific artifact, update or even delete an artifact.
 
 Let’s see how!
 
-| --- | --- |
-| Endpoint | Function |
-| GET/apps/{app-slug}/builds/{build-slug}/artifacts | Listing build artifacts |
-| GET/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug} | Retrieving data of a specific build artifact |
-| PATCH/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug} | Updating a build artifact |
-| DELETE/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug} | Deleting a build artifact |
+Endpoint
+
+|Endpoint   |Function |
+|---|---|
+|[GET/apps/{app-slug}/builds/{build-slug}/artifacts](https://api-docs.bitrise.io/#/build-artifact/artifact-list)   |Listing build artifacts  |
+|[GET/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-show)   |Retrieving data of a specific build artifact  |
+|[PATCH/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-update)  |Updating a build artifact |
+|[DELETE/apps/{app-slug}/builds/{build-slug}/artifacts/{artifact-slug}](https://api-docs.bitrise.io/#/build-artifact/artifact-delete)   |Deleting a build artifact|
 
 ## Listing build artifacts
 
