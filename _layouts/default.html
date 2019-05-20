@@ -33,6 +33,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <link rel="stylesheet" href="/assets/main.css" />
     <link rel="stylesheet" href="/assets/search.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/Bitrise_font.css">
   </head>
   <body class="mdc-typography">
     <header class="top-bar">
@@ -40,12 +41,8 @@
         <div class="subgroup">
           <a class="logo" href="/"><img src="/assets/images/logo.svg"/></a>
           <button class="burger material-icon" onclick="toggleSideBar()"></button>
-          <div class="title">
-            {% if current_article %}
-              {{ current_article.title }}
-            {% else %}
-              {{ site.data.basic_info.name }}
-            {% endif %}
+          <div>
+            <label class="title"><a href="/">{{ site.data.basic_info.name }}</a></label>
           </div>
         </div>
         <div class="search-bar">
@@ -67,7 +64,7 @@
     </header>
     <div class="column-parent middle-aligner">
       <nav id="side-menu">
-        <label>{{ site.data.basic_info.name }}</label> {% assign menu = site.menus.main %} {% include menu.html %}
+        {% assign menu = site.menus.main %} {% include menu.html %}
       </nav>
       <main class="content">
         {% if current_article %}

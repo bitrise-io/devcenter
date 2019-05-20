@@ -1,9 +1,6 @@
 ---
 title: What is Bitrise?
 permalink: "/"
-menu:
-  main:
-    weight: 1
 
 ---
 **Bitrise** is a [Continuous Integration](https://en.wikipedia.org/wiki/Continuous_integration) and [Delivery](https://en.wikipedia.org/wiki/Continuous_delivery) (CI/CD) Platform as a Service (PaaS) with a main focus on mobile app development. It is a collection of tools and services to help you with the development and automation of your software projects.

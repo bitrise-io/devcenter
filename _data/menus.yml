@@ -20,73 +20,73 @@ team-management:
 getting-started:
 - title: Signing up
   identifier: signing-up
-  weight: 3
+  weight: 1
 - title: Adding a new app
   identifier: adding-a-new-app
-  weight: 4
+  weight: 2
 main:
-- title: Getting started
-  identifier: getting-started
-  weight: 3
-- title: API
-  identifier: api
-  weight: 18
-- title: Tools
-  identifier: tools
-  weight: 17
-- title: Troubleshooting
-  identifier: troubleshooting
-  weight: 16
-- title: FAQ
-  identifier: faq
-  weight: 15
-- title: Deployment
-  identifier: deployment
-  weight: 11
-- title: Caching
-  identifier: caching
-  weight: 9
-- title: Code signing
-  identifier: code-signing
-  weight: 8
-- title: Webhooks
-  identifier: webhooks
-  weight: 6
-- title: Infrastructure
-  identifier: infrastructure
-  weight: 4
-- title: Bitrise CLI and bitrise.yml
-  identifier: bitrise-cli
-  weight: 12
-- title: Teams and organizations
-  identifier: team-management
-  weight: 5
-- title: Tutorials
-  identifier: tutorials
-  weight: 13
-- title: Testing
-  identifier: testing
-  weight: 10
-- title: Builds
-  identifier: builds
-  weight: 7
 - title: Tips & Tricks
   identifier: tips-and-tricks
+  weight: 13
+- title: Getting started
+  identifier: getting-started
+  weight: 2
+- title: API
+  identifier: api
+  weight: 17
+- title: Tools
+  identifier: tools
+  weight: 16
+- title: Troubleshooting
+  identifier: troubleshooting
+  weight: 15
+- title: FAQ
+  identifier: faq
   weight: 14
+- title: Deployment
+  identifier: deployment
+  weight: 10
+- title: Caching
+  identifier: caching
+  weight: 8
+- title: Code signing
+  identifier: code-signing
+  weight: 7
+- title: Webhooks
+  identifier: webhooks
+  weight: 5
+- title: Infrastructure
+  identifier: infrastructure
+  weight: 3
+- title: Bitrise CLI and bitrise.yml
+  identifier: bitrise-cli
+  weight: 11
+- title: Teams and organizations
+  identifier: team-management
+  weight: 4
+- title: Tutorials
+  identifier: tutorials
+  weight: 12
+- title: Testing
+  identifier: testing
+  weight: 9
+- title: Builds
+  identifier: builds
+  weight: 6
 builds:
 - title: Triggering builds
   identifier: triggering-builds
   weight: 1
 tutorials:
-- title: Fastlane
-  identifier: fastlane
-  weight: 3
-- title: Deployment Tutorials
-  identifier: deployment-tutorials
-  weight: 2
 - title: Docker
   identifier: docker
-  weight: 5
+  weight: 4
 - title: Xamarin
   identifier: xamarin
-  weight: 4
+  weight: 3
+- title: Fastlane
+  identifier: fastlane
+  weight: 2
+- title: Deployment Tutorials
+  identifier: deployment-tutorials
+  weight: 1

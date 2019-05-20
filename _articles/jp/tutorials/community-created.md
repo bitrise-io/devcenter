@@ -2,7 +2,7 @@
 title: Community Created Tutorials
 menu:
   tutorials:
-    weight: 1
+    weight: 5
 
 ---
 {% include not_translated_yet.html %}

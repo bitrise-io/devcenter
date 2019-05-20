@@ -28,7 +28,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	margin: 0;
-	font-family: Roboto, sans-serif;
+	font-family: TTNorms, sans-serif;
+	letter-spacing: 0.2px;
 	-webkit-font-smoothing: antialiased;
 }
 
@@ -101,6 +102,12 @@ header.top-bar {
 				white-space: nowrap;
 				overflow: hidden;
 				text-overflow: ellipsis;
+
+				a {
+					text-decoration: none;
+					color: #ffff;
+					font-weight: bold;
+				}
       }
 		}
 
@@ -246,6 +253,7 @@ nav#side-menu {
 	margin-top: 4.5rem;
 	font-size: 1.4rem;
 	line-height: 1.3;
+	font-family: TTNorms;
 
 	label {
 		display: block;
@@ -275,6 +283,7 @@ nav#side-menu {
 				transition: color .125s;
 				text-overflow: ellipsis;
 				color: inherit;
+				font-family: TTNorms;
 				overflow: hidden;
 
 				&.current {
@@ -292,6 +301,8 @@ nav#side-menu {
 				text-align: left;
 				font-size: inherit;
 				background-color: transparent;
+				font-weight: bold;
+				color: #616161;
 				cursor: pointer;
 
 				&:after {
@@ -300,17 +311,17 @@ nav#side-menu {
 					font-family: Material Icons;
 					font-style: normal;
 					font-variant: normal;
-					font-weight: 400;
+					font-weight: bold;
 					speak: none;
 					direction: ltr;
 				}
 
 				&.open:after {
-					transform: translateY(0.2rem) rotate(-90deg);
+					transform: translateY(0.1rem) rotate(-90deg);
 				}
 
 				&:not(.open):after {
-					transform: translateY(0.2rem) rotate(90deg);
+					transform: translateY(0.1rem) rotate(90deg);
 				}
 			}
 
@@ -331,27 +342,40 @@ main.content {
 	min-width: 0;
 	margin-top: 4.5rem;
 	margin-left: 2rem;
-	font-size: 1.6rem;
-	line-height: 1.6;
+	font-size: 1.5rem;
+	line-height: 1.5;
 	-webkit-print-color-adjust: exact;
 
-	h1, h2 {
-		font-weight: 300;
-		letter-spacing: -.01em;
-	}
+h1, h2, h3, h4 {
+	letter-spacing: 0.2px;
+}
 
-	h1 {
-		margin: 0 0 4rem;
-		color: rgba(0,0,0,.54);
-		font-size: 3.125rem;
-		line-height: 1.3;
-	}
+h1 {
+	margin: 0 0 3rem;
+	color: #683d87;
+	font-size: 3.125rem;
+	font-weight: bold;
+	line-height: 1.3;
+}
 
-	h2 {
-		margin: 4rem 0 1.6rem;
-		font-size: 2.5rem;
-		line-height: 1.4;
-	}
+h2 {
+	margin: 3rem 0 1.6rem;
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #616161;
+	line-height: 1.4;
+}
+
+h3 {
+	font-weight: bold;
+	font-size: 1.8rem;
+	color: #616161;
+}
+
+h4 {
+	font-weight: bold;
+	color: #616161;
+}
 
 	blockquote, ol, p, ol {
 		margin: 1em 0;
@@ -453,6 +477,8 @@ main.content {
 		display: block;
 		max-width: 100%;
 		height: auto;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	.title-with-source-edit {
@@ -494,7 +520,7 @@ main.content {
 	ol {
 		list-style: none;
   	counter-reset: my-awesome-counter;
-		padding-inline-start: 20px;
+		padding-inline-start: 18px;
 
 		li {
 			counter-increment: my-awesome-counter;
@@ -542,6 +568,8 @@ main.content {
 	left: -16.5px;
 	z-index: 0;
 	margin-top: 0;
+	padding: 0.1em 0.3em;
+	transform: translateY(-0.3rem);
 	}
 
 	ul li::before {
@@ -555,9 +583,10 @@ main.content {
 
 		margin-top: 2rem;
 		margin-bottom: 2rem;
-		border-left: .4rem solid;
-		border-radius: .2rem;
-		font-size: 1.28rem;
+		border-left: 0.8rem solid;
+		border-radius: 8px;
+		font-size: 1.4rem;
+		letter-spacing: 0.2px;
 		box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
 
 		.message-title {
@@ -585,6 +614,7 @@ main.content {
 
 			.message-title {
 				background-color: $color-light;
+				color: darken( $color-dark, 10% );
 
 				&:before {
 					content: $icon-character;
@@ -593,13 +623,13 @@ main.content {
 					line-height: 1;
 					font-family: Material Icons;
 					font-size: 2rem;
-					color: $color-dark;
+					color: darken( $color-dark, 10% );
 				}
 			}
 		}
 
 		&.attention, &.warning {
-			@include message_box_styling(rgba(255, 145, 0, .1), #ff9100, "\E002");
+			@include message_box_styling(rgba(255, 33, 88, .1), #ff2158, "\E002");
 		}
 
 		&.done, &.success {
@@ -607,19 +637,19 @@ main.content {
 		}
 
 		&.example {
-			@include message_box_styling(rgba(101, 31, 255, .1), #651fff, "\E242");
+			@include message_box_styling(rgba(118, 15, 195, .1), #760fc3, "\E242");
 		}
 
 		&.important {
-			@include message_box_styling(rgba(0, 191, 165, .1), #00bfa5, "\E80E");
+			@include message_box_styling(rgba(255, 197, 0, .1), #ffc500, "\E80E");
 		}
 
 		&.idea, &.note, &.tip, &.hint {
-			@include message_box_styling(rgba(68, 138, 255, .1), #448aff, "");
+			@include message_box_styling(rgba(13, 131, 205, .1), #0d83cd, "");
 		}
 
 		&.info, &.todo {
-			@include message_box_styling(rgba(0, 184, 212, .1), #00b8d4, "\E88E");
+			@include message_box_styling(rgba(15, 195, 137, .1), #0fc389, "\E88E");
 		}
 	}
 }
@@ -652,6 +682,7 @@ footer {
 @media only screen and (max-width: 50em) {
 
 	header.top-bar {
+		position: relative;
 
 		.middle-aligner {
 
