@@ -20,3 +20,11 @@ Please note that you must have a Google administrator account to add Bitrise as 
 Google administrator account
 
 Please note that you must have a Google administrator account to add Bitrise as a SAML app.
+
+{% include message_box.html type="warning" title="Deletion is final" content="
+Be aware that you cannot undo deleting a log. Once you delete it, there is no way to recover the log file.
+"%}
+
+> Deletion is final
+>
+> Be aware that you cannot undo deleting a log. Once you delete it, there is no way to recover the log file.
