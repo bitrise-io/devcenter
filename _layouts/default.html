@@ -74,6 +74,12 @@
         </div>
         {% endif %} {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
       </main>
+      <nav id="my-toc">
+      {% capture itemClass %}toc-entry.toc-h%level%{% endcapture %}
+        {% if content contains "h2"  %}
+          {% include toc.html html=content class="side-toc" item_class=itemClass h_min=1 h_max=3 %}
+        {% endif %}
+      </nav>
     </div>
     <footer>
       <div class="middle-aligner">
