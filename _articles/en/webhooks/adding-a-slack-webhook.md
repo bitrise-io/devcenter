@@ -2,7 +2,7 @@
 title: Adding a Slack webhook
 menu:
   webhooks:
-    weight: "10"
+    weight: 10
 
 ---
 You can register the `bitrise-webhooks` URL (`.../h/slack/BITRISE-APP-SLUG/BITRISE-APP-API-TOKEN`) as either
