@@ -107,6 +107,9 @@ header.top-bar {
 					text-decoration: none;
 					color: #ffff;
 					font-weight: bold;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
 				}
       }
 		}
@@ -231,8 +234,7 @@ header.top-bar {
 
 .middle-aligner {
 	box-sizing: border-box;
-	max-width: 122rem;
-	width: 100%;
+	max-width: 95%;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -246,8 +248,8 @@ header.top-bar {
 }
 
 nav#side-menu {
-	flex: 0 0 30%;
-	min-width: 15rem;
+	flex: 1 1 0;
+	max-width: 25%;
 	box-sizing: border-box;
 	padding-right: 2rem;
 	margin-top: 4.5rem;
@@ -338,10 +340,10 @@ nav#side-menu {
 
 main.content {
 	flex: 1 1 auto;
-	max-width: 676px;
+	max-width: 50%;
 	min-width: 0;
 	margin-top: 4.5rem;
-	margin-left: 2rem;
+	margin-left: 4rem;
 	font-size: 1.5rem;
 	line-height: 1.5;
 	-webkit-print-color-adjust: exact;
@@ -653,6 +655,65 @@ h4 {
 		}
 	}
 }
+nav#my-toc {
+
+ }
+
+.side-toc {
+	box-sizing: border-box;
+	flex: 1 1 16.66666667%;
+  margin-top: 4.5rem;
+	max-width: 22rem;
+  font-family: TTNorms;
+	padding-left: 2rem;
+	line-height: 1.8;
+	position: fixed;
+	border-left: .1rem solid rgba(0,0,0,.07);
+	margin-left: 8rem;
+	}
+
+	.side-toc:before {
+		font-weight: 600;
+		content: "Contents";
+		padding-bottom: 1rem;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		display: block;
+		font-size: 1.7rem;
+		color: #683d87;
+	}
+
+	li.toc-entry.toc-h2 {
+		list-style-type: none;
+		font-size: 1.4rem;
+	}
+
+	li.toc-entry.toc-h2 a {
+		text-decoration: none;
+		font-weight: normal;
+		color: #000;
+
+		 &.current {
+		 color: #7e57c2;
+	  }
+
+		 &:hover, &:focus {
+		 color: $color-deep_purple_shady;
+	  }
+	}
+
+	li.toc-entry.toc-h3 {
+		list-style-type: none;
+		font-size: 1.3rem;
+		margin-left: -10%;
+	}
+
+	li.toc-entry.toc-h3 a {
+		text-decoration: none;
+		font-weight: normal;
+		color: #616161;
+
+	}
 
 footer {
 	padding-top: $spacing-footer-vertical;
@@ -679,7 +740,18 @@ footer {
 	}
 }
 
+@media only screen and (min-width: 1200pt) {
+
+	.middle-aligner {
+		max-width: 80%;
+	}
+}
+
 @media only screen and (max-width: 50em) {
+
+	main.content {
+		max-width: 100%;
+	}
 
 	header.top-bar {
 		position: relative;
@@ -722,6 +794,13 @@ footer {
 			}
 		}
 	}
+	nav#my-toc {
+		display: none;
+	}
+
+	.side-toc {
+		display: none;
+	}
 
 	.column-parent {
 		position: relative;
@@ -731,7 +810,7 @@ footer {
 			top: 0;
 			left: 0;
 			display: block;
-			width: 50%;
+			max-width: 50%;
 			max-height: none;
 			padding-right: 0;
 			background-color: white;
