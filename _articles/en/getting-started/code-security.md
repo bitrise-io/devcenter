@@ -2,7 +2,7 @@
 title: Code Security
 menu:
   getting-started:
-    weight: 8
+    weight: "8"
     title: Code security
 
 ---
