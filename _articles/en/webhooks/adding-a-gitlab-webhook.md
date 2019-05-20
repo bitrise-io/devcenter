@@ -2,7 +2,7 @@
 title: Adding a Gitlab webhook
 menu:
   webhooks:
-    weight: 6
+    weight: "6"
 
 ---
 You can set up webhooks so that Bitrise automatically triggers a build of your app whenever you perform a specified action, such as a code push or a pull request. For GitLab, all you have to do is register your `bitrise-webhooks` URL as a Webhook in your [GitLab](https://www.gitlab.com) repository.

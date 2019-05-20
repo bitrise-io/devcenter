@@ -5,7 +5,7 @@ redirect_from:
 - "/getting-started/builds-and-workflows/"
 menu:
   getting-started:
-    weight: 6
+    weight: "6"
 
 ---
 ## Builds & Workflows

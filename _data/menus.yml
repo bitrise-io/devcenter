@@ -78,15 +78,15 @@ builds:
   identifier: triggering-builds
   weight: 1
 tutorials:
-- title: Fastlane
-  identifier: fastlane
-  weight: 3
-- title: Deployment Tutorials
-  identifier: deployment-tutorials
-  weight: 2
 - title: Docker
   identifier: docker
-  weight: 5
+  weight: 4
 - title: Xamarin
   identifier: xamarin
-  weight: 4
+  weight: 3
+- title: Fastlane
+  identifier: fastlane
+  weight: 2
+- title: Deployment Tutorials
+  identifier: deployment-tutorials
+  weight: 1

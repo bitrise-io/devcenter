@@ -2,7 +2,7 @@
 title: Secrets and Env Vars
 menu:
   builds:
-    weight: 14
+    weight: "14"
 
 ---
 Every secret environment variable (secret env var) is an env var but not every environment variable (env var) is a secret env var!

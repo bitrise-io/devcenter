@@ -2,7 +2,7 @@
 title: Attaching files as artifacts to a build
 menu:
   tips-and-tricks:
-    weight: 10
+    weight: "10"
 
 ---
 You can attach any file to a build as an artifact with Bitrise, even files that you generate during the build. Deployed Artifacts appear on the Build's page, in the `Artifacts & Apps` section, and anyone who has access to the Build page can download it from there.
