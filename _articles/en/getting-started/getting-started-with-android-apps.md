@@ -7,7 +7,7 @@ redirect_from:
 - "/getting-started/getting-started-with-Android-apps/"
 menu:
   getting-started:
-    weight: "22"
+    weight: 22
 
 ---
 In this guide, we'll walk you through how to add an Android app to Bitrise, what primary and deploy workflows can do, and finally how to test and deploy your app to [bitrise.io](https://www.bitrise.io/) and to the App Store.
