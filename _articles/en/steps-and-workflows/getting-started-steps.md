@@ -16,14 +16,14 @@ Our Steps are defined in YAML format, and written in either bash or Go. [Check o
 
 You can find and check out all our available Steps at any of three locations:
 
-* The Integrations page
-* The Bitrise StepLib
-* The [Workflow Editor](/getting-started/getting-started-workflows)
+* [The Integrations page](https://www.bitrise.io/integrations)
+* [The Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)
+* [The Workflow Editor](/getting-started/getting-started-workflows)
 
-For the purposes of your builds, Steps can be managed directly from the Workflow Editor. You can:
+For the purposes of your builds, Steps can be managed directly from the Workflow Editor. You can rearrange them, set their versions, add or remove Steps at any time. 
 
-* Add and remove Steps in workflows.
-* Rearrange the order of Steps in any workflow.
-* Specify the version of the Step you wish to run in a given workflow.
-* Specify the inputs of the Steps you need.
-* Set a Step to run only if the previous Step succeeded.
+Read on to find out more about working with our Steps!
+
+* [Adding and removing Steps](/steps-and-workflows/adding-removing-steps/)
+* [Step versions and inputs](/steps-and-workflows/step-inputs/)
+* [Skipping Steps](/steps-and-workflows/skipping-steps/) 
