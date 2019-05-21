@@ -13,6 +13,7 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/test-reports.md
 - _articles/en/reviews/remote-access-draft.md
 - _articles/en/api/Managing build artifacts.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
