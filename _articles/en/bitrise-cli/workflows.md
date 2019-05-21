@@ -35,7 +35,7 @@ For example, here is how to run two script Steps after each other:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-    
+
     workflows:
       test:
         steps:
@@ -58,7 +58,7 @@ Here is an example for defining two environment variables (`ENV_VAR_ONE` and `EN
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-    
+
     workflows:
       test:
         envs:
@@ -73,17 +73,17 @@ Example workflow for chaining five workflows:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-    
+
     workflows:
-    
+
       send-notifications:
         steps:
         # send notifications
-    
+
       setup:
         steps:
         # setup steps to run
-    
+
       test:
         before_run:
         - setup
@@ -91,13 +91,13 @@ Example workflow for chaining five workflows:
         - IS_TEST: "true"
         steps:
         # test steps to run
-    
+
       ci:
         before_run:
         - test
         after_run:
         - send-notifications
-    
+
       deploy:
         before_run:
         - test
@@ -112,10 +112,12 @@ Based on the above example, if you run:
 * `bitrise run setup` : only the Steps of the `setup` workflow will be executed
 * `bitrise run test` : first the Steps of the `setup` workflow will be executed, then the Steps declared in `test` workflow
 * `bitrise run ci`: will execute the Steps of the workflows in the following order:
-  1. `setup`
-  2. `test`
-  3. `ci` (the `ci` workflow doesn't have any Steps, but that's not an issue. It just means that no step will be executed here and the build will continue with the next workflow in the chain.)
-  4. `send-notifications`
+
+1. `setup`
+2. `test`
+3. `ci` (the `ci` workflow doesn't have any Steps, but that's not an issue. It just means that no step will be executed here and the build will continue with the next workflow in the chain.)
+4. `send-notifications`
+
 * `bitrise run deploy`: will execute the Steps of the workflows in the following order:
   1. `setup`
   2. `test`
@@ -140,19 +142,19 @@ For example:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-    
+
     workflows:
-    
+
       generic-build:
         steps:
         # steps which depend on `BUILD_TYPE` environment variable
-    
+
       build-alpha:
         envs:
         - BUILD_TYPE: alpha
         after_run:
         - generic-build
-    
+
       build-beta:
         envs:
         - BUILD_TYPE: beta
@@ -179,7 +181,7 @@ Using the above example with five workflows (`ci`, `deploy`, `send-notifications
      * send-notifications
      * setup
      * test
-    
+
     You can run a selected workflow with:
     $ bitrise run WORKFLOW-ID
 
@@ -188,16 +190,16 @@ You most likely don't want to run `setup`, `test` nor `send-notifications` by it
     The following workflows are available:
      * ci
      * deploy
-    
+
     You can run a selected workflow with:
     $ bitrise run WORKFLOW-ID
-    
-    
+
+
     The following utility workflows are defined:
      * _send-notifications
      * _setup
      * _test
-    
+
     Note about utility workflows:
      Utility workflow names start with '_' (example: _my_utility_workflow).
      These workflows can't be triggered directly, but can be used by other workflows

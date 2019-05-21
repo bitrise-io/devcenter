@@ -1,8 +1,8 @@
 ---
 title: Bitrise tools
 menu:
-  tools:
-    weight: 1
+  getting-started:
+    weight: 40
 
 ---
 {% include not_translated_yet.html %}

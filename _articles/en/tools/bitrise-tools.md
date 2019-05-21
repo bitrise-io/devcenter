@@ -1,8 +1,8 @@
 ---
 title: Bitrise tools
 menu:
-  tools:
-    weight: 1
+  getting-started:
+    weight: 39
 
 ---
 List of Open Source tools maintained by the Bitrise team.
