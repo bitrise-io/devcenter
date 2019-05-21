@@ -34,7 +34,7 @@ In this example, a code push will trigger the `ci` workflow, which in turn trigg
        ---
        format_version: 1.4.0
        default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-        
+
        trigger_map:
        - push_branch: "*"
          workflow: ci
@@ -54,6 +54,7 @@ In this example, a code push will trigger the `ci` workflow, which in turn trigg
    * A `Script` Step with the command `bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}`.
 
        ```
+       {% raw %}
        workflows:
           run_from_repo:
             steps:
@@ -67,6 +68,7 @@ In this example, a code push will trigger the `ci` workflow, which in turn trigg
                     #!/bin/bash
                     set -ex
                     bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"
+       {% endraw %}
        ```           
 
 Of course, this only works if the `bitrise.yml` file in your repository does have a `ci` workflow. Let's see the details of that!

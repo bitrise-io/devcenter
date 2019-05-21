@@ -34,9 +34,6 @@ main:
 - title: API
   identifier: api
   weight: 17
-- title: Tools
-  identifier: tools
-  weight: 16
 - title: Troubleshooting
   identifier: troubleshooting
   weight: 15
