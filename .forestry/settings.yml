@@ -2,7 +2,7 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: ''
-webhook_url: 
+webhook_url:
 sections:
 - type: document
   path: forestry-help.md
@@ -46,6 +46,12 @@ sections:
   label: Webhooks
   create: all
   match: "**/*"
+- type: directory
+  path: _articles/en/steps-workflows
+  label: Getting started
+  create: all
+  match: "**/*"
+  new_doc_ext: md
 - type: directory
   path: _articles/en/builds
   label: Builds

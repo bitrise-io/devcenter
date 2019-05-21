@@ -70,6 +70,9 @@ main:
 - title: Builds
   identifier: builds
   weight: 6
+- title: Steps and workflows
+  identifier: steps-workflows
+  weight: 6
 builds:
 - title: Triggering builds
   identifier: triggering-builds
@@ -87,6 +90,3 @@ tutorials:
 - title: Deployment Tutorials
   identifier: deployment-tutorials
   weight: 1
-- title: Steps and workflows
-  identifier: steps-workflows
-  weight: 6
