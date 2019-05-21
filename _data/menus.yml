@@ -87,3 +87,6 @@ tutorials:
 - title: Deployment Tutorials
   identifier: deployment-tutorials
   weight: 1
+- title: Steps and workflows
+  identifier: steps-workflows
+  weight: 6
