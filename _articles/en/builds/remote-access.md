@@ -24,9 +24,9 @@ With either method, you can access the build machine remotely during the build a
 3. Click **Remote Access Instructions**.
 
    ![](/img/remote-access-instructions.png)
-4. Under the `SSH` option, find and copy the command you will need.
+4. Under the **SSH** option, find and copy the command you will need.
 5. Open a command line interface.
-6. Run the command found under `SSH` (the below is an example):
+6. Run the command found under **SSH** (the below is an example):
 
        ssh -o StrictHostKeyChecking=no vagrant@1.tcp.ngrok.io -p 000000
 7. Copy and paste the password from the **Remote Access Instructions** page.
@@ -37,10 +37,10 @@ And done! You should be able to access the virtual machine where your build is r
 
 1. Go to the build page.
 2. Click the **Rebuild with Remote Access** option.
-3. Click `Remote Access Instructions`.
-	
+3. Click **SSH**.
+
    ![](/img/remote-access-instructions.png)
-4. Under the `Screenshare` option, find the required information:
+4. Under the **SSH** option, find the required information:
    * Address
    * Username
    * Password
