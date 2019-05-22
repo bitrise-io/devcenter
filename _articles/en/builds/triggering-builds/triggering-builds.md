@@ -2,7 +2,7 @@
 title: Triggering builds
 menu:
   triggering-builds:
-    weight: "2"
+    weight: 2
 
 ---
 You can trigger builds on Bitrise either by:
