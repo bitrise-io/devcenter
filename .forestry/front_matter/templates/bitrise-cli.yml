@@ -13,7 +13,7 @@ fields:
     name: bitrise-cli
     label: bitrise-cli
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:

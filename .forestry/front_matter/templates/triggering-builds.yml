@@ -13,7 +13,7 @@ fields:
     name: triggering-builds
     label: triggering-builds
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:

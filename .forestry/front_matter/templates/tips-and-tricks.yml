@@ -13,7 +13,7 @@ fields:
     name: tips-and-tricks
     label: tips-and-tricks
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:

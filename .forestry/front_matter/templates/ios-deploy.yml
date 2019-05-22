@@ -13,7 +13,7 @@ fields:
     name: ios-deploy
     label: ios-deploy
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:

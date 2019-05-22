@@ -13,7 +13,7 @@ fields:
     name: android-code-signing
     label: android-code-signing
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:
