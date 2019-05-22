@@ -2,7 +2,7 @@
 title: Bitrise tools
 menu:
   getting-started:
-    weight: 40
+    weight: 32
 
 ---
 {% include not_translated_yet.html %}

@@ -4,7 +4,7 @@ date: '2018-09-12T15:27:42.000+00:00'
 redirect_from: []
 menu:
   getting-started:
-    weight: 20
+    weight: "18"
 
 ---
 Developing for iOS is not always easy - our aim is to make it as simple as possible for you! In this guide, we'll walk you through how to add an iOS app to Bitrise, how to run Xcode tests, manage your code signing files and deploy the app to bitrise.io and to the App Store.

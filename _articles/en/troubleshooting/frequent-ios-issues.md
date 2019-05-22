@@ -6,7 +6,7 @@ redirect_from:
 - "#works-in-local-but-not-on-bitriseio"
 menu:
   troubleshooting:
-    weight: 11
+    weight: "11"
 
 ---
 ## Searching for errors and issues in Xcode generated output

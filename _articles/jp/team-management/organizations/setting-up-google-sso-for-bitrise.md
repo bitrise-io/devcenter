@@ -4,7 +4,7 @@ redirect_from: []
 date: '2019-03-28T11:39:54.000+00:00'
 menu:
   organizations:
-    weight: 18
+    weight: "18"
 
 ---
 {% include not_translated_yet.html %}

@@ -2,10 +2,9 @@
 title: Managing workflows
 menu:
   steps-workflows:
-    weight: 8
+    weight: 15
 
 ---
-
 ## Chaining workflows together
 
 You can set up multiple workflows to run in succession. The order of these workflows can be rearranged, new workflows can be added to the "chain" and existing workflows can be removed from it at any time.

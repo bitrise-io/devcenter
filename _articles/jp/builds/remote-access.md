@@ -1,6 +1,9 @@
 ---
 title: Remote access
 redirect_from: []
+menu:
+  builds:
+    weight: 29
 
 ---
 {% include not_translated_yet.html %}

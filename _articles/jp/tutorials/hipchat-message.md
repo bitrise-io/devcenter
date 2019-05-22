@@ -2,7 +2,7 @@
 title: HipChat message with build status and details
 menu:
   tutorials:
-    weight: 9
+    weight: 10
 
 ---
 {% include not_translated_yet.html %}

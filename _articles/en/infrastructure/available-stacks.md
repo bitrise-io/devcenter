@@ -4,7 +4,7 @@ redirect_from:
 - "/docs/available-stacks"
 menu:
   infrastructure:
-    weight: 1
+    weight: "1"
 
 ---
 The Stack indicates the virtual machine version that we will use to run your build.

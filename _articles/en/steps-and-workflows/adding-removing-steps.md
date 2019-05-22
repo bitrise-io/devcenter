@@ -2,9 +2,9 @@
 title: Adding and removing Steps
 menu:
   steps-workflows:
-    weight: 2
----
+    weight: 3
 
+---
 Steps can be added or removed any time from the Workflow Editor - all it takes is a couple of clicks.
 
 ## Adding a new Step

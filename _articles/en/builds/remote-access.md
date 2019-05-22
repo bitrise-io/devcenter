@@ -1,6 +1,9 @@
 ---
 title: Remote access
 redirect_from: []
+menu:
+  builds:
+    weight: 28
 
 ---
 Remote access allows users to connect to their build's virtual machines via SSH or a screenshare app. A failed build can be rebuilt with remote access enabled to make troubleshooting a lot easier - for example, if the build logs don't provide enough information about the error.

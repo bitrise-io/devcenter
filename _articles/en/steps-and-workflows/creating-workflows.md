@@ -2,10 +2,9 @@
 title: Creating a workflow
 menu:
   steps-workflows:
-    weight: 7
+    weight: 13
 
 ---
-
 It's very simple to create your own workflow with the Workflow Editor. You can create new workflows based on any of the existing ones, or you can simply create an empty workflow and add the steps yourself.
 
 If, for example, you create a workflow based on your `primary` one, it means that it will be created with the exact same Steps as the `primary` workflow.

@@ -2,7 +2,7 @@
 title: Using the Generic File Storage
 menu:
   tutorials:
-    weight: 6
+    weight: 7
 
 ---
 {% include not_translated_yet.html %}
