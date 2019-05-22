@@ -40,7 +40,7 @@ And done! You should be able to access the virtual machine where your build is r
 3. Click **Remote Access Instructions**.
 
    ![](/img/remote-access-instructions.png)
-4. Under the **SSH** option, find the required information:
+4. Under the **Screenshare** option, find the required information:
    * Address
    * Username
    * Password
