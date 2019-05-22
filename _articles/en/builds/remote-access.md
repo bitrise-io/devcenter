@@ -37,7 +37,7 @@ And done! You should be able to access the virtual machine where your build is r
 
 1. Go to the build page.
 2. Click the **Rebuild with Remote Access** option.
-3. Click **SSH**.
+3. Click **Remote Access Instructions**.
 
    ![](/img/remote-access-instructions.png)
 4. Under the **SSH** option, find the required information:
