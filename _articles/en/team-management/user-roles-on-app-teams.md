@@ -1,7 +1,7 @@
 ---
 title: User roles on app teams
 redirect_from: []
-date: '2019-02-18T14:53:53.000+00:00'
+date: 2019-02-18T14:53:53.000+00:00
 menu:
   team-management:
     weight: 5

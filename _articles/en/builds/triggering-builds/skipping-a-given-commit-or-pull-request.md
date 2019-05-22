@@ -2,7 +2,7 @@
 title: Skipping a given commit or Pull Request
 redirect_from:
 - "/tips-and-tricks/skip-a-build/"
-date: '2019-01-18T17:09:42.000+00:00'
+date: 2019-01-18T17:09:42.000+00:00
 menu:
   triggering-builds:
     weight: 15
