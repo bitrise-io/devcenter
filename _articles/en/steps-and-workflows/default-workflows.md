@@ -2,10 +2,9 @@
 title: Default workflows
 menu:
   steps-workflows:
-    weight: 6
+    weight: 11
 
 ---
-
 When you add a new app on [bitrise.io](https://www.bitrise.io), two workflows are created automatically. These are the `primary` and the `deploy` workflows. By default, every code change in your project's repository triggers the `primary` workflow if the required webhook has been set up.
 
 Triggers can be configured so that any other workflow (including `deploy`) is automatically triggered when certain code events happen. For more information, [read some more about build triggers](/builds/triggering-builds/triggering-builds).

@@ -2,9 +2,9 @@
 title: 新しいStepを追加する
 menu:
   steps-workflows:
-    weight: 2
----
+    weight: 4
 
+---
 ## 新しいStepを追加する
 
 どのStepもワークフローに追加することができます、これには何も制約がありません。

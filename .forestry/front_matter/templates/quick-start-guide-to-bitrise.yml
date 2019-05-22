@@ -13,6 +13,8 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/jp/builds/remote-access.md
+- _articles/en/builds/remote-access.md
 - _articles/en/reviews/test-reports.md
 - _articles/en/reviews/remote-access-draft.md
 - _articles/en/api/Managing build artifacts.md

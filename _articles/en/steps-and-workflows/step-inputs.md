@@ -2,10 +2,9 @@
 title: Step versions and inputs
 menu:
   steps-workflows:
-    weight: 3
+    weight: 5
 
 ---
-
 ## Managing Step versions
 
 We regularly update our Steps to make sure they are fully equipped for our users' needs. However, you don't have to use the latest version if you don't want to: if an old version is stable and compatible with your build, feel free to continue using that, or roll back to it any time.

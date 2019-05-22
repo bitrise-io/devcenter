@@ -2,7 +2,7 @@
 title: Skipping Steps
 menu:
   steps-workflows:
-    weight: 4
+    weight: 7
 
 ---
 You can skip certain Steps in your Bitrise build. There is no point in running, for example, a unit test Step if the previous Step failed to build your app.

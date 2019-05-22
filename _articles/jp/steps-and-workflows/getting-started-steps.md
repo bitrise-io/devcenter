@@ -5,7 +5,7 @@ redirect_from:
 - "/getting-started/manage-your-bitrise-workflow/"
 menu:
   steps-workflows:
-    weight: 1
+    weight: 2
 
 ---
 Stepは事前に定義された入力・出力変数があるスクリプト実行のブロックをあらわします。 [Stepをより知りたい場合は、Bitrise CLIのセクションを読んでください](/bitrise-cli/steps)。
