@@ -5,7 +5,7 @@ redirect_from:
 - "/bitrise-cli/bitrise-yml-online"
 menu:
   builds:
-    weight: "20"
+    weight: 20
 
 ---
 Every bitrise.yml file is stored for your builds on [bitrise.io](https://www.bitrise.io). They come in handy when you'd like to check the configuration with which a specific build has run. To do that, you can either use the online `Workflow Editor` or your build's online bitrise.yml file. If you choose the latter, you can compare changes, restore the current build to the original version, edit the config, and download the file to your Mac/PC.
