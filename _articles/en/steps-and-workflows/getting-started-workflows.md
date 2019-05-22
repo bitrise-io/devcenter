@@ -1,7 +1,7 @@
 ---
 title: Introduction to workflows
 redirect_from:
-- "/getting-started/builds-and-workflows/getting-started/getting-started-workflows"
+- "/getting-started/getting-started-workflows"
 - "/getting-started/manage-your-workflow/"
 menu:
   steps-workflows:
