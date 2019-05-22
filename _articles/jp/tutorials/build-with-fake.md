@@ -2,7 +2,7 @@
 title: Building with FAKE (F# Make)
 menu:
   tutorials:
-    weight: 12
+    weight: 18
 
 ---
 {% include not_translated_yet.html %}

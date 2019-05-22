@@ -4,7 +4,7 @@ redirect_from:
 - "/builds/selective-builds/"
 menu:
   builds:
-    weight: 9
+    weight: 8
 
 ---
 Selective Buildsを利用することで、特定のファイルやフォルダが変更された場合にのみビルドを実行することができます。

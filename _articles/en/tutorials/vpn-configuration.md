@@ -2,7 +2,7 @@
 title: Configuring and connecting to your VPN
 menu:
   tutorials:
-    weight: 8
+    weight: 10
 
 ---
 Do you require a VPN connection for your build, to be able to connect to your server, either to `git clone` your repository or to access a private API? If yes, then this tutorial is for you!
