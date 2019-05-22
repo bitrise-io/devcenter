@@ -90,6 +90,5 @@ pages:
 - _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
 - _articles/en/api/Managing build artifacts.md
-- _articles/en/reviews/test-reports.md
 - _articles/jp/builds/remote-access.md
 - _articles/en/builds/remote-access.md
