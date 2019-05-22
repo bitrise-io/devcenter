@@ -820,6 +820,8 @@ footer {
 			padding-right: 0;
 			background-color: white;
 			box-shadow: 0rem 2rem 2rem rgba(0, 0, 0, 0.5);
+			overflow-y: auto;
+			max-height: 100vh;
 
 			label {
 				padding: 1.6rem $spacing-default-horizontal;
@@ -829,7 +831,6 @@ footer {
 
 			ol.menu-list {
 				border-right: .1rem solid rgba(0, 0, 0, .07);
-				overflow-y: auto;
 
 				li.menu-item {
 					border-top: .1rem solid rgba(0, 0, 0, .07);
