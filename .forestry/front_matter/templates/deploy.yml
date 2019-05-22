@@ -13,6 +13,6 @@ fields:
     name: deploy
     label: deploy
     fields:
-    - type: number
+    - type: text
       name: weight
       label: weight

@@ -13,7 +13,7 @@ fields:
     name: faq
     label: faq
     fields:
-    - type: number
+    - type: text
       name: weight
       label: weight
 pages:

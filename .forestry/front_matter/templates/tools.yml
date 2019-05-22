@@ -1,5 +1,5 @@
 ---
-label: android-deploy
+label: tools
 hide_body: false
 fields:
 - type: text
@@ -10,9 +10,11 @@ fields:
   name: menu
   fields:
   - type: field_group
-    name: android-deploy
-    label: android-deploy
+    name: tools
+    label: tools
     fields:
     - type: text
       name: weight
       label: weight
+pages:
+- _articles/en/tools/bitrise-tools.md

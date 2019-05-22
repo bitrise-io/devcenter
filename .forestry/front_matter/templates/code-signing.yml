@@ -13,6 +13,6 @@ fields:
     label: code-signing
     name: code-signing
     fields:
-    - type: number
+    - type: text
       label: weight
       name: weight

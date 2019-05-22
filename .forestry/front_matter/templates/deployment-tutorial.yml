@@ -13,6 +13,6 @@ fields:
     name: docker
     label: docker
     fields:
-    - type: number
+    - type: text
       name: weight
       label: weight

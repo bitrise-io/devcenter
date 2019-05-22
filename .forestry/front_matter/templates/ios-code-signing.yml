@@ -13,7 +13,7 @@ fields:
     name: ios-code-signing
     label: ios-code-signing
     fields:
-    - type: number
+    - type: text
       name: weight
       label: weight
 pages:

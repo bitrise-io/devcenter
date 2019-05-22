@@ -1,0 +1,9 @@
+---
+label: article
+hide_body: false
+fields:
+- type: text
+  name: title
+  config:
+    required: true
+  label: title
