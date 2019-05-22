@@ -4,7 +4,7 @@ date: '2019-03-08T10:46:00.000+00:00'
 redirect_from: []
 menu:
   organizations:
-    weight: 15
+    weight: "15"
 
 ---
 組織のメンバーであれば、ご自身のSAML SSOプロバイダシステムを使ってBitriseへログイン・サインアップすることができます。SAML SSOがあれば、ご自身のBitrise組織へアクセスする際、組織はSAML SSOプロバイダのセキュリティガイドラインを適用することが可能です。
