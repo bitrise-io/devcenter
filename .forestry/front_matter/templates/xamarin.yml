@@ -13,7 +13,7 @@ fields:
     name: xamarin
     label: xamarin
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
       config:

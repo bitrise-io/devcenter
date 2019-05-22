@@ -13,6 +13,6 @@ fields:
     name: android-deploy
     label: android-deploy
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight

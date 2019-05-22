@@ -13,7 +13,7 @@ fields:
     name: caching
     label: caching
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:

@@ -13,7 +13,7 @@ fields:
     name: fastlane
     label: fastlane
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:

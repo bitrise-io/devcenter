@@ -13,7 +13,7 @@ fields:
     name: troubleshooting
     label: troubleshooting
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:

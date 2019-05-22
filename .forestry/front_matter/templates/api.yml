@@ -13,7 +13,7 @@ fields:
     name: api
     label: api
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:

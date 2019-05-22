@@ -13,7 +13,7 @@ fields:
     name: webhooks
     label: webhooks
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:

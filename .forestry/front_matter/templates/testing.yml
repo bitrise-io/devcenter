@@ -13,7 +13,7 @@ fields:
     name: testing
     label: testing
     fields:
-    - type: text
+    - type: number
       name: weight
       label: weight
 pages:
