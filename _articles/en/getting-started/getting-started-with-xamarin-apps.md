@@ -1,6 +1,6 @@
 ---
 title: Getting started with Xamarin apps
-date: '2018-10-19T11:49:28.000+00:00'
+date: 2018-10-19T11:49:28.000+00:00
 menu:
   getting-started:
     weight: 26

@@ -4,7 +4,7 @@ redirect_from:
 - "/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/"
 menu:
   android-code-signing:
-    weight: 3
+    weight: 4
 
 ---
 ## `Sign APK` ステップによるコードの署名

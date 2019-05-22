@@ -1,6 +1,6 @@
 ---
 title: iOS code signing - troubleshooting
-date: '2018-10-11T11:28:48.000+00:00'
+date: 2018-10-11T11:28:48.000+00:00
 menu:
   ios-code-signing:
     weight: 26

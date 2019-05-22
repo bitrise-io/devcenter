@@ -1,7 +1,7 @@
 ---
 title: 'Stack update and removal policy '
 redirect_from: []
-date: '2019-02-05T15:39:10.000+00:00'
+date: 2019-02-05T15:39:10.000+00:00
 menu:
   infrastructure:
     weight: 4
