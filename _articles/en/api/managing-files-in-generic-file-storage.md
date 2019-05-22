@@ -1,7 +1,7 @@
 ---
 title: Managing files in Generic File Storage
 redirect_from: []
-date: '2019-04-09T07:32:06.000+00:00'
+date: 2019-04-09T07:32:06.000+00:00
 menu:
   api:
     weight: 17

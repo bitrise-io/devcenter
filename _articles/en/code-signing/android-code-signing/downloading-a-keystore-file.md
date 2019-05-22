@@ -1,6 +1,6 @@
 ---
 title: Downloading a keystore file
-date: '2018-12-11T10:30:01.000+00:00'
+date: 2018-12-11T10:30:01.000+00:00
 redirect_from: []
 menu:
   android-code-signing:

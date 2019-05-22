@@ -1,7 +1,7 @@
 ---
 title: Logging in to Bitrise
 redirect_from: []
-date: '2019-03-29T15:00:43.000+00:00'
+date: 2019-03-29T15:00:43.000+00:00
 menu:
   signing-up:
     weight: 16

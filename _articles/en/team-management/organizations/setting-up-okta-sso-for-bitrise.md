@@ -1,7 +1,7 @@
 ---
 title: Setting up Okta SSO for Bitrise
 redirect_from: []
-date: '2019-04-24T07:13:35+00:00'
+date: 2019-04-24T07:13:35+00:00
 menu:
   organizations:
     weight: 21

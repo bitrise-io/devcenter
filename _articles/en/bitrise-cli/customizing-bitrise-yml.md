@@ -1,6 +1,6 @@
 ---
 title: Customizing bitrise.yml
-date: '2018-10-31T09:27:26.000+00:00'
+date: 2018-10-31T09:27:26.000+00:00
 redirect_from: []
 menu:
   bitrise-cli:

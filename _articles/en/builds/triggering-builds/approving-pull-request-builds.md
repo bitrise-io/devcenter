@@ -1,7 +1,7 @@
 ---
 title: Approving Pull Request builds
 redirect_from: []
-date: '2019-04-29T12:48:56.000+00:00'
+date: 2019-04-29T12:48:56.000+00:00
 menu:
   triggering-builds:
     weight: 8

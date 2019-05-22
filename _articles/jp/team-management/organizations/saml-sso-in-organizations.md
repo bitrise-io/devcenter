@@ -1,6 +1,6 @@
 ---
 title: 組織内のSAML SSO
-date: '2019-03-08T10:46:00.000+00:00'
+date: 2019-03-08T10:46:00.000+00:00
 redirect_from: []
 menu:
   organizations:

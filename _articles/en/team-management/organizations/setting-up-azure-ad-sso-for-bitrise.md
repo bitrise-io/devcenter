@@ -1,7 +1,7 @@
 ---
 title: Setting up Azure AD SSO for Bitrise
 redirect_from: []
-date: '2019-04-17T11:13:00.000+00:00'
+date: 2019-04-17T11:13:00.000+00:00
 menu:
   organizations:
     weight: 19

@@ -1,7 +1,7 @@
 ---
 title: Getting started with Flutter apps
 redirect_from: []
-date: '2019-01-25T13:26:58.000+00:00'
+date: 2019-01-25T13:26:58.000+00:00
 menu:
   getting-started:
     weight: 23
