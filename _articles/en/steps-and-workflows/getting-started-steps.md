@@ -1,6 +1,8 @@
 ---
 title: Introduction to Steps
 redirect_from:
+- getting-started/getting-started-steps/
+- "/getting-started/getting-started-steps"
 - "/getting-started/builds-and-workflows/getting-started/getting-started-steps"
 - "/getting-started/manage-your-bitrise-workflow/"
 menu:

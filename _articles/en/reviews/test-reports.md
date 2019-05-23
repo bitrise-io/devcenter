@@ -4,9 +4,9 @@ redirect_from: []
 published: false
 
 ---
-Test reports allows you to view all your test results in a convenient way!
+Test reports allows you to view all your test results in a convenient way.
 
-Use our testing Steps - for example, `Xcode Test for iOS`, `Android Unit Test` or `iOS Device Testing` - or your own custom scripts, and all your test results will be deployed to the same directory. From there, Test Reports can read and display them in a way that's easy to read and analyze.
+Use our testing Steps, and all your test results will be deployed to the same directory. From there, Test Reports can read and display them in a way that's easy to read and analyze.
 
 ## Test Reports overview
 
@@ -17,14 +17,26 @@ Test Reports can read and display test results that are in either of two formats
 * plist
 * JUnit XML
 
-To use Test Reports, you have to make sure your test results, in either of these formats, are deployed in the designated deploy directory. From there, the `Deploy to Bitrise.io` Step will do the rest: it can read the results and send it to Test Reports!
+You can use Test Reports with four of our testing Steps:
+
+* **Xcode Test**
+* **Android Unit Test**
+* **iOS Device Testing**
+* **Virtual Device Testing for Android**
+
+These Steps will run the tests defined in your repository and then store the output in an Environment Variable. The **Deploy to Bitrise.io** Step will do the rest: it can read the results and send it to Test Reports.
 
 ## Configuring Test Reports
 
-Test Reports requires no complicated configuration: you just need to opt in and make sure that the testing Steps deploy their output to the correct directory.
+Test Reports doesn't require any sort of complicated configuration. All you need is to have tests in your repository, and two Steps in your Workflow.
 
-1. Add tests to your project.
-2. Add the appropriate testing Steps to your Workflow. For example, if you have an iOS project, you can use the `Xcode Test for iOS` Step to run Xcode tests. You can also use any custom Script Step that runs tests!
+{% include message_box.html type="important" title="Device testing with Firebase" content="We have two Steps that use the Firebase Test Lab for device testing: iOS Device Testing and Virtual Device Testing for Android. These Steps also deploy their test results to Test Reports but you need to opt into using them first: on the Settings tab of your app, go to the Device Testing option and set the toggle to enabled.
+
+Read more about device testing on Bitrise in the [Device testing for iOS](/testing/device-testing-for-ios/) and the [Device testing for Android](/testing/device-testing-for-android/) guides."%} 
+
+1. Add tests to your app's repository.
+2. Add the appropriate testing Steps to your Workflow.
+   For example, if you have an iOS project, you can use the `Xcode Test for iOS` Step to run Xcode tests.
 3. Make sure the Step sends its output - the test results - to the appropriate deploy directory.
 4. Make sure you have the `Deploy to Bitrise.io` Step in your Workflow.
 
@@ -38,9 +50,9 @@ And that's it! Once the build is finished, you will be able to view your test re
 
 ### Checking test results
 
-Test Reports display the most important information about all the tests you ran on the `Test Summary` tab. 
+Test Reports display the most important information about all the tests you ran on the `Test Summary` tab.
 
-To access the results: 
+To access the results:
 
 1. Open the Test Report add-on
 2. On the `Test Summary` tab, find the test you want to check.
@@ -68,7 +80,7 @@ As noted above, this depends on test type, too: for unit tests, you won't see sc
 Every file can be downloaded and saved:
 
 1. Open a test set.
-1. On the left menu, click a tab that contains files. 
+2. On the left menu, click a tab that contains files.
 
    For example, **Test Artifacts**.
-1. 
+3. 
