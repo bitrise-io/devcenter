@@ -19,7 +19,7 @@ For more information about build and code security, see the [Code security](/get
 
 ### Whitelisting build machine IPs
 
-Our stacks are behind a set of static public IPs: this means you can whitelist them if your security policy only allows a limited set of IP addresses to communicate with your servers. 
+Our stacks are behind a set of static public IPs: this means you can whitelist these addresses if necessary. For example, if your security policy only allows a limited set of IP addresses to communicate with your servers. 
 
 For the Android & Docker stacks:
 
