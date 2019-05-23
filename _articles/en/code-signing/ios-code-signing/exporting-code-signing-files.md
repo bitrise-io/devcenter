@@ -5,7 +5,11 @@ menu:
     weight: 22
 
 ---
-### Exporting certificates using Xcode
+## Exporting certificates
+
+You can export certificates manually, or using Xcode.
+
+### Exporting using Xcode
 
 1. Start Xcode
 2. Select Xcode > Preferences from the navigation bar.
@@ -28,6 +32,8 @@ menu:
 6. Keychain Access will export the requested certificate in .p12 format.
 
 ## Exporting Provisioning Profiles
+
+You can export Provisioning Profiles manually, or using Xcode. 
 
 ### Exporting using Xcode
 
