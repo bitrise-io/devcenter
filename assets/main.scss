@@ -319,6 +319,7 @@ nav#side-menu {
 					direction: ltr;
 				}
 
+
 				&.open:after {
 					transform: translateY(0.1rem) rotate(-90deg);
 				}
@@ -348,6 +349,35 @@ main.content {
 	font-size: 1.5rem;
 	line-height: 1.5;
 	-webkit-print-color-adjust: exact;
+
+  .block {
+	  width: 180px;
+	  height: 150px;
+		margin: 3rem 1.5rem;
+	  border-radius: 8px;
+	  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+	  border: solid 1px #ececec;
+	  background-color: #ffffff;
+		display: inline-block;
+		padding: 15px;
+
+		a {
+			font-size: 1.8rem;
+			font-weight: bold;
+			font-style: normal;
+			font-stretch: normal;
+			line-height: 1.4;
+			letter-spacing: normal;
+			color: #683d87;
+			text-decoration: none;
+		}
+	}
+
+	.container  {
+	  text-align: center;
+		width: 100%;
+		border-top: 1px #ececec;
+	}
 
 h1, h2, h3, h4 {
 	letter-spacing: 0.2px;
@@ -627,35 +657,33 @@ h4 {
 					position: absolute;
 					left: $horizontalpadding;
 					line-height: 1;
-					font-family: Material Icons;
 					font-size: 2rem;
-					color: darken( $color-dark, 10% );
 				}
 			}
 		}
 
 		&.attention, &.warning {
-			@include message_box_styling(rgba(255, 33, 88, .1), #ff2158, "\E002");
+			@include message_box_styling(rgba(255, 33, 88, .1), #ff2158, url(/assets/logos/icons/warning.svg));
 		}
 
 		&.done, &.success {
-			@include message_box_styling(rgba(0, 200, 83, .1), #00c853, "\E876");
+			@include message_box_styling(rgba(0, 200, 83, .1), #00c853, url(/assets/logos/icons/tick.svg));
 		}
 
 		&.example {
-			@include message_box_styling(rgba(118, 15, 195, .1), #760fc3, "\E242");
+			@include message_box_styling(rgba(118, 15, 195, .1), #760fc3, url(/assets/logos/icons/lightbulb.svg));
 		}
 
 		&.important {
-			@include message_box_styling(rgba(255, 197, 0, .1), #ffc500, "\E80E");
+			@include message_box_styling(rgba(255, 197, 0, .1), #ffc500, url(/assets/logos/icons/chat-message.svg));
 		}
 
 		&.idea, &.note, &.tip, &.hint {
-			@include message_box_styling(rgba(13, 131, 205, .1), #0d83cd, "");
+			@include message_box_styling(rgba(13, 131, 205, .1), #0d83cd, url(/assets/logos/icons/pencil.svg));
 		}
 
 		&.info, &.todo {
-			@include message_box_styling(rgba(15, 195, 137, .1), #0fc389, "\E88E");
+			@include message_box_styling(rgba(15, 195, 137, .1), #0fc389, url(/assets/logos/icons/info.svg));
 		}
 	}
 }
