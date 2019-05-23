@@ -9,9 +9,11 @@ menu:
 ---
 Organization members can log into or sign up to Bitrise using their own SAML SSO provider's system. With SAML SSO, organizations will be able to apply the security guidelines of their SAML SSO provider when accessing their Bitrise organization.
 
-{% include message_box.html type="note" title="SAML SSO with Org Elite subscription" content="
+{% include message_box.html type="important" title="SAML SSO with Org Elite subscription" content="
 
 Please note that SAML SSO is only available for organizations with [Org Elite subscription](https://www.bitrise.io/pricing/teams). If you try to set up SAML SSO to an organization that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), `Single Sign On` will appear on the left menu bar in your Account Settings but you won't be able to use it. Click `Upgrade to Org Elite` in the pop-up window to use SAML SSO in your organization.
+
+Since the SAML SSO feature is tied to the Org Elite plan, if you decide to downgrade from it, you will lose this feature. All Org members will receive an email about the downgrade and you'll have two weeks to re-upgrade to the Org Elite plan if you wish to use SAML SSO in your Org.
 
 "%}
 
@@ -28,16 +30,6 @@ Before connecting SAML SSO to your organization, make sure:
 * [Setting up Okta SSO for Bitrise](/team-management/organizations/setting-up-okta-sso-for-bitrise/)
 
   "%}
-
-In this guide we cover the following topics:
-
-* [Setting up SAML SSO for a Bitrise organization]()
-* [Enabling SAML SSO](/team-management/organizations/saml-sso-in-organizations/#enabling-saml-sso)
-* [Checking SAML SSO statuses on Bitrise ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)
-* [About SAML SSO enforcement](/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement)
-* [Logging in via SSO with a Bitrise account](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-with-a-bitrise-account)
-* [Logging in via SSO without a Bitrise account](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-without-a-bitrise-account)
-* [Disabling SAML SSO](/team-management/organizations/saml-sso-in-organizations/#disabling-saml-sso)
 
 ## Setting up SAML SSO for a Bitrise organization
 
