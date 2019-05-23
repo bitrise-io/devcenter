@@ -61,7 +61,7 @@ You can specify several different build parameters when triggering a build. The 
 
 ### Setting a branch, commit, or tag to build
 
-You can set Git-specific parameters in your call. The `branch` parameter specifies the source branch to be built. This is either the branch of the git commit or, in the case of a Pull Request build, the source branch of the Pull Request.
+You can set Git-specific parameters in your call. The `branch` parameter specifies the source branch to be built. This is either the branch of the git commit or, in the case of a pull request build, the source branch of the pull request.
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
 
@@ -75,9 +75,11 @@ If you provide a `commit_hash` parameter then both the `tag` and the `branch` pa
 
 The ignored parameters will still be logged. They will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the most specific parameter for checkout."%}
 
-### Setting parameters for Pull Request builds
+### Setting parameters for pull request builds
 
-For a Pull Request build, use the `branch_dest` parameter to set up the destination or target branch of the Pull Request. The PR will be merged into this branch but before that, Bitrise will build your app based on how the code would look like after merging. This is what happens when a PR build is automatically triggered by a webhook, for example.
+For a pull request build, use the `branch_dest` parameter to set up the destination or target branch of the pull request. The PR will be merged into this branch but before that, Bitrise will build your app based on how the code would look like after merging. This is what happens when a PR build is automatically triggered by a webhook, for example.
+
+{% include message_box.html type="warning" title="My message" content="If you do not specify the `branch_repo_owner` and `branch_dest_repo_owner` parameters, the API will assume pull request builds are coming from a fork. As such, they might be put on hold pending manual approval: read our (Approving pull request builds)[/builds/triggering-builds/approving-pull-request-builds/] guide for the details. "%} 
 
 To identify the PR itself, use the `pull_request_id` parameter: it takes an integer; for example, the number of the PR on GitHub.
 
