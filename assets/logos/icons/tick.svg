@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <polygon id="tick-a" points="10.213 13.915 17.234 7 18.723 8.489 10.213 17 5 11.681 6.489 10.191"/>
+  </defs>
+  <use fill="#0b9468" fill-rule="evenodd" xlink:href="#tick-a"/>
+</svg>
