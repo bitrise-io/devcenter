@@ -13,6 +13,8 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/whitelisting-ips-draft.md
+- _articles/en/reviews/transfer-app-security-aspect.md
 - _articles/jp/getting-started/getting-started-with-flutter-applications.md
 - _articles/en/reviews/Japanese translations/webhooks/webhook-トラブルシューティング-webhook-troubleshooting.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/sensitive-input-in-public-apps.md
@@ -63,14 +65,12 @@ pages:
 - _articles/en/reviews/API/response-and-pagination.md
 - _articles/en/reviews/API/endpoints-and-testing-the-api.md
 - _articles/en/reviews/fastlane.md
-- _articles/en/reviews/steps-in-yaml-draft.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/itunes-connectへiosアプリのデプロイ.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
 - _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
 - _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
-- _articles/en/reviews/getting-started-with-flutter-apps-draft.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/setting-your-git-credentials-on-build-machines.md
 - _articles/en/api/managing-ios-code-signing-files.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
@@ -90,6 +90,5 @@ pages:
 - _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
 - _articles/en/api/Managing build artifacts.md
-- _articles/en/reviews/test-reports.md
 - _articles/jp/builds/remote-access.md
 - _articles/en/builds/remote-access.md

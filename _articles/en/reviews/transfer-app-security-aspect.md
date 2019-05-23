@@ -1,8 +1,7 @@
 ---
-title: Managing the apps of organizations
-menu:
-  organizations:
-    weight: 9
+title: Transfer app - security aspect - draft
+redirect_from: []
+published: false
 
 ---
 Organizations can own several apps, with different (or the same, if that's what you need) groups working on different apps. Apps can be transferred between private accounts and organization accounts any time, quickly and easily.
@@ -117,21 +116,7 @@ You can add contributors to any application if you have `Admin` or `Owner` right
 
 This means that if you wish to add an organization member to an app of the organization, all you have to do is add the username/email address of the member under `Add contributors to this app`  on the `Team` page of the app.
 
-Adding an outside contributor requires enabling the `Allow Outside Contributors` switch on the organizations' `People` tab. 
-
-{% include message_box.html type="warning" title="Outside contributors and app transfer" content="
-
-If you wish to transfer an app with outside contributors from _Org A_ to _Org B_, keep these in mind:
-
-* If _Org A_ has the `Allow Outside Contributors` switch turned on, and _Org B_ DOES NOT, then all outside contributors of _Org A_ will be REMOVED as the app is transferred to _Org B_. 
-* If _Org A_ and _Org B_ both have the `Allow Outside Contributors` switch turned on, then all all outside contributors of _Org A_ will be moved to _Org B_ as the app is transferred to _Org B_. 
-
-If you wish to transfer an app with team members to an Org, keep these in mind:
-
-* If the Org has the `Allow Outside Contributors` switch turned on, all app team members will be moved as outside contributors to the Org as the app is transferred to the Org.
-* If the Org has the `Allow Outside Contributors` switch turned off, all team members of the app will be REMOVED from the app as it is transferred to the Org.
-
-"%}
+Adding an outside contributor however requires enabling the `Allow Outside Contributors` switch on the organizations' `People` tab.
 
 Let's see the details!
 
