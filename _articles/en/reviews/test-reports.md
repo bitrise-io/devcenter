@@ -51,7 +51,7 @@ Test Reports doesn't require any sort of complicated configuration. All you need
 
 And that's it! Once the build is finished, you will be able to view your test reports.
 
-### Checking test results
+## Checking test results
 
 Test Reports display the most important information about all the tests you ran on the **Test Summary** tab. You will see all the tests you ran, their duration, and their results. You can also click on the tabs of the individual tests to see their details.
 
