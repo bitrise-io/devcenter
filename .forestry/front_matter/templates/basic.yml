@@ -13,8 +13,8 @@ fields:
   hidden: false
   default: ''
 pages:
-- _articles/en/reviews/whitelisting-ips-draft.md
 - _articles/en/reviews/transfer-app-security-aspect.md
+- _articles/en/reviews/whitelisting-ips-draft.md
 - _articles/jp/getting-started/getting-started-with-flutter-applications.md
 - _articles/en/reviews/Japanese translations/webhooks/webhook-トラブルシューティング-webhook-troubleshooting.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/sensitive-input-in-public-apps.md
