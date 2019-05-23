@@ -29,7 +29,7 @@ Connect your Apple Developer account to Bitrise if:
 4. Provide your credentials in the popup window and click `Store credentials`.
 
    ![](/img/apple-dev.png)
-5. If two-factor authentication is enabled on your Apple Developer account, you will be prompted to provide your verification code. In this case, your authentication will expire in 30 days - Bitrise will prompt you before that happens!
+5. If two-factor authentication is enabled on your Apple Developer account, you will be prompted to provide your verification code. In this case, your authentication will expire in 30 days and you will have to authenticate again!
 
 ### Enabling Apple Developer Portal integration
 
