@@ -9,20 +9,26 @@ On [bitrise.io](https://www.bitrise.io), we have `macOS` and `Linux` virtual mac
 You can select from multiple stacks, each with its own list of preinstalled tool versions.
 Read more about available stacks and stack prepare types in the [Available Stacks docs](/infrastructure/available-stacks/).
 
-The user which is used for the builds is configured with **passwordless sudo** enabled,
-this way you are able to install all the extra things you need for your builds and for other automation.
-If a tool is not preinstalled on your Stack of choice,
-you can install it yourself - see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide.
+The user which is used for the builds is configured with **passwordless sudo** enabled, this way you are able to install all the extra things you need for your builds and for other automation. If a tool is not preinstalled on your Stack of choice, you can install it yourself - see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide.
 
 ## Security
 
-Every build runs in its own virtual machine and the virtual machine is rolled back to a saved state,
-the "base box" state, after the build is finished.
-This way **your builds are always protected** by changes made by others
-and by your previous builds and you can use a **stable environment** to define your build workflow,
-since _no state persists between builds_.
+Every build runs in its own virtual machine and the virtual machine is rolled back to a saved state, the "base box" state, after the build is finished. This way **your builds are always protected** by changes made by others and by your previous builds and you can use a **stable environment** to define your build workflow, since no state persists between builds.
 
-For more information about Build/Code Security, see the [Code Security](/getting-started/code-security/) guide.
+For more information about build and code security, see the [Code security](/getting-started/code-security/) guide.
+
+### Whitelisting build machine IPs
+
+Our stacks are behind a set of static public IPs: this means you can whitelist them if your security policy only allows a limited set of IP addresses to communicate with your servers. 
+
+For the Android & Docker stacks:
+
+* 104.197.15.74
+* 35.237.165.17
+
+For the Xcode and Hybrid stacks:
+
+* 208.52.166.154
 
 ## Customization
 
