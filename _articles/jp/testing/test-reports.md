@@ -1,6 +1,9 @@
 ---
 title: Test Reports
 redirect_from: []
+menu:
+  testing:
+    weight: 2
 
 ---
 {% include not_translated_yet.html %}

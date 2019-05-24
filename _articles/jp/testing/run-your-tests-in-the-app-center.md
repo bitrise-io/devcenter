@@ -4,7 +4,7 @@ redirect_from:
 - "/xamarin/run-your-tests-in-the-app-center"
 menu:
   testing:
-    weight: 5
+    weight: 7
 
 ---
 プロジェクト用にテストのアップロードやスケジューリングをVisual Studio App Centerで行うことができます。以下のテストフレームワークが利用可能です：

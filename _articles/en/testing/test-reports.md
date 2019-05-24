@@ -1,6 +1,9 @@
 ---
 title: Test Reports
 redirect_from: []
+menu:
+  testing:
+    weight: 1
 
 ---
 Test Reports allows you to view all your test results in a convenient way.
