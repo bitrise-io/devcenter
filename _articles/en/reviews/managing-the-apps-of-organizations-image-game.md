@@ -23,7 +23,7 @@ A new app can be added directly to an organization. You can do this either from 
    ![](/img/add-a-new-app-account-page.jpg)
 3. On `Create New App` page, make sure that the organization account is selected in the dropdown menu.
 
-   ![](/img/create-new-app-organization-selected.png)
+   ![](/img/create-new-app.jpg)
 4. Proceed with adding a new app as usual! It will be owned by the organization.
 
 ## Transferring apps to an organization
