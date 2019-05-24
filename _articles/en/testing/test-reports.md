@@ -56,11 +56,7 @@ And that's it! Once the build is finished, you will be able to view your test re
 
 Test Reports display the most important information about all the tests you ran on the **Test Summary** tab. You will see all the tests you ran, their duration, and their results. You can also click on the tabs of the individual tests to see their details.
 
-To filter tests based on their results, open the menu on the top right, which is set to **All** by default.
-
-![](/img/Test_add-on-3.png)
-
-To access the results of a particular test:
+To access the result of a particular test:
 
 1. Open your app's page on Bitrise.
 2. Click the **Builds** tab and select the build that ran the tests.
@@ -70,6 +66,10 @@ To access the results of a particular test:
 4. On the **Test Summary** tab, find the test you want to check.
 
    Alternatively, on the top bar, click the tab of the test set you want to check out.
+
+   To filter tests based on their results, open the menu on the top right, which is set to **All** by default.
+
+   ![](/img/Test_add-on-3.png)
 5. Click **Test cases** to see the details.
 
    UI tests are grouped according to device while unit tests are grouped according to test cases.
