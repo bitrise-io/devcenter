@@ -65,6 +65,8 @@ To access the results of a particular test:
 1. Open your app's page on Bitrise.
 2. Click the **Builds** tab and select the build that ran the tests.
 3. Under the build status, click **See more** next to the **Test reports** label.
+
+   ![](/img/android-test-test_-_build__20__ce39bf96fc9f7668__-_Bitrise.png)
 4. On the **Test Summary** tab, find the test you want to check.
 
    Alternatively, on the top bar, click the tab of the test set you want to check out.
