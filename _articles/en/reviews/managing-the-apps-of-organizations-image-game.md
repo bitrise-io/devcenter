@@ -12,16 +12,16 @@ A new app can be added directly to an organization. You can do this either from 
 
 1. Get to the `Create New App` page.
 
-   ![](/img/full-image.png)
+   ![](/img/cropped-full-image.jpg)
 
    There are three options to get there:
    On the top menu bar, find the `+` symbol and click it, then click the `Add App` option.
    Open the `Dashboard` on [bitrise.io](https://www.bitrise.io), open the dropdown menu above your app list and select your organization. Click the `+ Add new app` button.
 
-     ![](/img/add-new-app-organization.png)
+   ![](/img/add-new-app-organization.png)
    Open the `Account settings` page of your organization, and click the `Apps` option on the menu on the left. Click the `Add new app` button.
 
-     ![](/img/add-new-app-org-settings.jpg)
+   ![](/img/add-new-app-org-settings.jpg)
 2. On `Create New App` page, make sure that the organization account is selected in the dropdown menu.
 
    ![](/img/create-new-app-organization-selected.png)
