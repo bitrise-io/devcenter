@@ -12,7 +12,7 @@ Use our testing Steps, and all your test results will be deployed to the same di
 
 ## Test Reports overview
 
-You can run both UI tests and unit tests on Bitrise and with Test Reports , you can view the results of the different types of tests on the same page.
+You can run both UI tests and unit tests on Bitrise and with Test Reports , you can view the results of the different test types on the same page.
 
 {% include message_box.html type="important" title="Testing Android apps" content="For Android apps, only unit tests can be viewed on Test Reports. UI tests are currently not available.
 
