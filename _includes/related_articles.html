@@ -1,3 +1,6 @@
+---
+
+---
 {% assign maxRelated = 4 %}
 
 {% assign minCommonTags =  1 %}
@@ -25,7 +28,7 @@
         <a href="{{ article.url }}">
           <div class="article-box">
             <label class="related-title">{{ article.title }}</label>
-            <p>{{ article.content | strip_html | truncatewords: 30 }}</p>
+            <p>{{ article.summary | strip_html | truncatewords: 30 }}</p>
           </div>
         </a>
       </div>
