@@ -1,6 +1,12 @@
 ---
 title: Test Reports
 redirect_from: []
+tag:
+- testing
+summary: Test Reports allows you to view all your test results in a convenient way.
+  Use our testing Steps, and all your test results will be deployed to the same directory.
+  From there, Test Reports can process them and display them in a way that's easy
+  to read and analyze.
 menu:
   testing-main:
     weight: 1
