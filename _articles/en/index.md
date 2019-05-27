@@ -9,8 +9,7 @@ permalink: "/"
 
 ## Run your builds on bitrise.io
 
-* Run builds of your app on Bitrise by defining a `Workflow`. A `Workflow` consists of one or more build `Steps` (open source git repositories
-  which can be executed with the [open source Bitrise CLI](https://www.bitrise.io/cli)).
+* Run builds of your app on Bitrise by defining a `Workflow`. A `Workflow` consists of one or more build `Steps` (open source git repositories which can be executed with the [open source Bitrise CLI](https://www.bitrise.io/cli)).
 * [Create and share your own build Steps](https://github.com/bitrise-steplib/step-template).
 * Define more workflows for the same app, and define [triggers](/webhooks/trigger-map) to specify which workflow should be selected for each trigger.
 
@@ -36,13 +35,11 @@ The VMs are equipped with all the tools required to build your app. Bitrise auto
 ## Bitrise CLI - the open source, offline, automation runner
 
 To run a `bitrise` build on your machine, you can install our [open source runner](https://www.bitrise.io/cli)
-and use the `bitrise` command to execute your workflows locally.
-_No_ [_bitrise.io_](https://www.bitrise.io) _account required to use the Bitrise CLI._
+and use the `bitrise` command to execute your workflows locally. No [bitrise.io](https://www.bitrise.io) account required to use the Bitrise CLI.
 
 It's a great help when you're developing Steps, debugging builds, or just want to use Bitrise for _any kind of automation_ on your machines.
 
-You can find more information about the offline runner
-in the [Bitrise CLI and bitrise.yml](/bitrise-cli/index/) section of the DevCenter.
+You can find more information about the offline runner in the [Bitrise CLI and bitrise.yml](/bitrise-cli/index/) section of the DevCenter.
 
 ## Bitrise API
 
