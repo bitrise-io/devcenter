@@ -634,7 +634,6 @@ h4 {
 		margin-bottom: 1rem;
   	border-radius: 8px;
   	border: solid 1px #ececec;
-
 	}
 
 	.title-with-source-edit {
@@ -685,7 +684,6 @@ h4 {
 			border-left: 1px solid #dbc3ed;
 			padding-left: 32px;
 			padding-bottom: 1rem;
-			z-index: 1;
 		}
 
 		li p {
@@ -722,7 +720,6 @@ h4 {
 	font-weight: 500;
 	position: absolute;
 	left: -16.5px;
-	z-index: 0;
 	margin-top: 0;
 	padding: 0.1em 0.3em;
 	transform: translateY(-0.3rem);
@@ -880,14 +877,10 @@ nav#my-toc {
 		letter-spacing: 0.5px;
 		line-height: 1.38;
 		text-transform: uppercase;
+	}
 
-			&.related-articles > p {
-				margin: 0;
-				padding-top: 20px;
-				padding-bottom: 0;
-				padding-left: 0;
-				padding-right: 0;
-		}
+	.article-box, a {
+		display: block;
 	}
 
 	.article-box {
@@ -912,16 +905,10 @@ nav#my-toc {
 		margin-top: 4rem;
 
 		.related-title {
-
-			&.related-title > p {
-				margin-bottom: 0;
-			}
-
-			.related-title, a {
-				font-weight: bold;
-				font-size: 1.5rem;
-				color: #760fc3;
-			}
+			font-weight: bold;
+			font-size: 1.5rem;
+			color: #760fc3;
+			cursor: pointer;
 		}
 	}
 

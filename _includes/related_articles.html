@@ -22,10 +22,12 @@
         <div class="related-articles">Related articles</div>
       {% endif %}
       <div class="container">
-        <div class="article-box">
-          <label class="related-title"><a href="{{ article.url }}">{{ article.title }}</a></label>
-          <p>{{ article.content | strip_html | truncatewords: 30 }}</p>
-        </div>
+        <a href="{{ article.url }}">
+          <div class="article-box">
+            <label class="related-title">{{ article.title }}</label>
+            <p>{{ article.content | strip_html | truncatewords: 30 }}</p>
+          </div>
+        </a>
       </div>
       {% if maxRelatedCounter >= maxRelated %}
         {% break %}
