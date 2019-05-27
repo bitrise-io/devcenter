@@ -104,6 +104,7 @@ pages:
 - _articles/en/api/managing-files-in-generic-file-storage.md
 - _articles/en/api/adding-and-managing-apps.md
 - _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
+- _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/builds/configuring-notifications.md
 - _articles/en/builds/remote-access.md
