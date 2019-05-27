@@ -575,6 +575,7 @@ h4 {
 		text-decoration: none;
 		color: #7e57c2;
 		transition: color .125s;
+    display: normal;
 
 		&:hover, &:focus {
 			color: $color-deep_purple_shady;
