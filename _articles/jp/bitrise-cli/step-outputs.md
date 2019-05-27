@@ -1,7 +1,7 @@
 ---
 title: Step outputs
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 25
 
 ---

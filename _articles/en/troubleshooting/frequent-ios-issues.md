@@ -5,7 +5,7 @@ redirect_from:
 - "/ios/frequent-ios-issues/#works-in-local-but-not-on-bitriseio"
 - "#works-in-local-but-not-on-bitriseio"
 menu:
-  troubleshooting:
+  troubleshooting-main:
     weight: 11
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Build artifacts online
 menu:
-  builds:
+  builds-main:
     weight: 18
 
 ---

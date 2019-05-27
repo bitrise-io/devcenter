@@ -1,7 +1,7 @@
 ---
 title: Registering a test device
 menu:
-  testing:
+  testing-main:
     weight: 5
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: How to change the owner of an app?
 menu:
-  faq:
+  faq-main:
     weight: 1
 
 ---

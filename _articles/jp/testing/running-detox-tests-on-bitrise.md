@@ -2,7 +2,7 @@
 title: Bitrise上でDetoxテストの実行
 date: 2019-03-01T12:50:46.000+00:00
 menu:
-  testing:
+  testing-main:
     weight: 15
 
 ---

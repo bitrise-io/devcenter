@@ -1,7 +1,7 @@
 ---
 title: Skip a Build (skip ci)
 menu:
-  tips-and-tricks:
+  tips-and-tricks-main:
     weight: 5
 
 ---

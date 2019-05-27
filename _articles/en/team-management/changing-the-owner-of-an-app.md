@@ -1,7 +1,7 @@
 ---
 title: Changing the owner of an app
 menu:
-  team-management:
+  team-management-main:
     weight: 7
 
 ---

@@ -4,7 +4,7 @@ redirect_from:
 - "/bitrise-cli/bitrise-yml-online/"
 - "/bitrise-cli/bitrise-yml-online"
 menu:
-  builds:
+  builds-main:
     weight: 21
 
 ---

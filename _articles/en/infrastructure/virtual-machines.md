@@ -1,7 +1,7 @@
 ---
 title: Virtual Machines
 menu:
-  infrastructure:
+  infrastructure-main:
     weight: 6
 
 ---

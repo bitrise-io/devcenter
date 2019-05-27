@@ -1,7 +1,7 @@
 ---
 title: Creating a workflow
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 13
 
 ---

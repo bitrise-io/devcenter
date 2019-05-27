@@ -1,7 +1,7 @@
 ---
 title: Why isn't a build triggered when I push code into the repository?
 menu:
-  faq:
+  faq-main:
     weight: 15
 
 ---

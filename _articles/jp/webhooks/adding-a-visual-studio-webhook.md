@@ -1,7 +1,7 @@
 ---
 title: 'Visual Studio webhookの追加 '
 menu:
-  webhooks:
+  webhooks-main:
     weight: 15
 
 ---

@@ -5,7 +5,7 @@ redirect_from:
 - "/faq/github-pull-request-status-troubleshooting/"
 - "/faq/github-pull-request-status-troubleshooting/#make-sure-to-select-a-service-credential-user-who-has-a-connected-github-account"
 menu:
-  troubleshooting:
+  troubleshooting-main:
     weight: 15
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Step versions and inputs
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 5
 
 ---

@@ -2,7 +2,7 @@
 title: Managing build artifacts
 redirect_from: []
 menu:
-  api:
+  api-main:
     weight: 21
 
 ---

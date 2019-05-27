@@ -2,7 +2,7 @@
 title: Getting started with MacOS apps
 date: 2018-11-16T11:51:09.000+00:00
 menu:
-  getting-started:
+  getting-started-main:
     weight: 30
 
 ---

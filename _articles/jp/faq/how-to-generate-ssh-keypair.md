@@ -1,7 +1,7 @@
 ---
 title: SSHキーペアの生成方法を教えてください。
 menu:
-  faq:
+  faq-main:
     weight: 4
 
 ---

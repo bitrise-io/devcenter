@@ -3,7 +3,7 @@ title: Most important concepts
 redirect_from:
 - "/bitrise-cli/most-important-concepts.md"
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 5
 
 ---

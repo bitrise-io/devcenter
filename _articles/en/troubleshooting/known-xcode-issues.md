@@ -3,7 +3,7 @@ title: List of known Xcode issues
 redirect_from:
 - "/ios/known-xcode-issues/"
 menu:
-  troubleshooting:
+  troubleshooting-main:
     weight: 13
 
 ---

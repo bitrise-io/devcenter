@@ -4,7 +4,7 @@ redirect_from:
 - "/builds/scheduling-builds/"
 - "/builds/scheduling-builds"
 menu:
-  builds:
+  builds-main:
     weight: 7
 
 ---

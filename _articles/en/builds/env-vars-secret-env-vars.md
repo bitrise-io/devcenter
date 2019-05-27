@@ -1,7 +1,7 @@
 ---
 title: Secrets and Env Vars
 menu:
-  builds:
+  builds-main:
     weight: 14
 
 ---

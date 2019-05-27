@@ -1,7 +1,7 @@
 ---
 title: Code Security
 menu:
-  getting-started:
+  getting-started-main:
     weight: 8
     title: Code security
 

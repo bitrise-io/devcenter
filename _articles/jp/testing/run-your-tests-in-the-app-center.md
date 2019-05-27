@@ -3,7 +3,7 @@ title: Visual Studio App Centerでのテストの実行
 redirect_from:
 - "/xamarin/run-your-tests-in-the-app-center"
 menu:
-  testing:
+  testing-main:
     weight: 7
 
 ---

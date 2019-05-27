@@ -1,7 +1,7 @@
 ---
 title: Rolling builds機能
 menu:
-  builds:
+  builds-main:
     weight: 10
 
 ---

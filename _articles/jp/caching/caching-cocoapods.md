@@ -1,7 +1,7 @@
 ---
 title: Cocoapodsのキャッシュ
 menu:
-  caching:
+  caching-main:
     weight: 3
 
 ---

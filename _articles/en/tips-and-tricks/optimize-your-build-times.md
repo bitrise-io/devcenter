@@ -1,7 +1,7 @@
 ---
 title: Optimizing your build times
 menu:
-  tips-and-tricks:
+  tips-and-tricks-main:
     weight: 22
 
 ---

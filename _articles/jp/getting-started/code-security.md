@@ -1,7 +1,7 @@
 ---
 title: コードセキュリティ
 menu:
-  getting-started:
+  getting-started-main:
     weight: 7
 
 ---

@@ -3,7 +3,7 @@ title: 'ビルドの番号付けとアプリバージョン管理 '
 redirect_from:
 - "/builds/build-numbering-and-app-versioning/builds/build-numbering-and-app-versioning"
 menu:
-  builds:
+  builds-main:
     weight: 13
 
 ---

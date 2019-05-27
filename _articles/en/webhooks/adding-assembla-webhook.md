@@ -1,7 +1,7 @@
 ---
 title: Adding an Assembla webhook
 menu:
-  webhooks:
+  webhooks-main:
     weight: 14
 
 ---

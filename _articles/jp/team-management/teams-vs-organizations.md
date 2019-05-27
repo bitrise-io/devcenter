@@ -3,7 +3,7 @@ title: チームと組織の概要
 redirect_from: []
 date: '2019-03-27T15:48:36.000+00:00'
 menu:
-  team-management:
+  team-management-main:
     weight: 2
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: 新しいStepを追加する
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 4
 
 ---

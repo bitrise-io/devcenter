@@ -1,7 +1,7 @@
 ---
 title: About caching
 menu:
-  caching:
+  caching-main:
     weight: 1
 
 ---

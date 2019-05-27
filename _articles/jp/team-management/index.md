@@ -1,7 +1,7 @@
 ---
 title: 新しいチームメンバーの追加
 menu:
-  team-management:
+  team-management-main:
     weight: 4
 
 ---

@@ -8,7 +8,7 @@ function configureSideMenu() {
 		}
 
 		var listOpener = iteratedElement.previousElementSibling;
-		if (listOpener.tagName != "BUTTON" || !listOpener.classList.contains("menu-list-opener")) {
+		if (listOpener.tagName != "BUTTON") {
 			break;
 		}
 

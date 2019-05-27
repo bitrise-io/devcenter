@@ -4,7 +4,7 @@ redirect_from:
 - "/getting-started/getting-started-workflows"
 - "/getting-started/manage-your-workflow/"
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 9
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Androidのユニットテスト
 menu:
-  testing:
+  testing-main:
     weight: 8
 
 ---

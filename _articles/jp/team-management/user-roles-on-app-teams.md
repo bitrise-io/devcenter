@@ -2,7 +2,7 @@
 title: アプリチームのユーザーのロール
 date: 2019-03-01T15:05:34.000+00:00
 menu:
-  team-management:
+  team-management-main:
     weight: 6
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Adding a new team member
 menu:
-  team-management:
+  team-management-main:
     weight: 3
 
 ---

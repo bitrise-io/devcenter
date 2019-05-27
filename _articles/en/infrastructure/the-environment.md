@@ -1,7 +1,7 @@
 ---
 title: The Android/Linux/Docker environment
 menu:
-  infrastructure:
+  infrastructure-main:
     weight: 7
 
 ---

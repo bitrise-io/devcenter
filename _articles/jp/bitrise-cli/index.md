@@ -4,7 +4,7 @@ redirect_from:
 - "/bitrise-cli"
 - "/bitrise-cli/"
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 1
 
 ---

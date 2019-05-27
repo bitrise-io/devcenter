@@ -5,7 +5,7 @@ redirect_from:
 - "/getting-started/create-your-first-app-on-bitrise/"
 - "/getting-started/add-your-first-step-to-your-workflow/"
 menu:
-  getting-started:
+  getting-started-main:
     weight: 3
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: HipChat message with build status and details
 menu:
-  tutorials:
+  tutorials-main:
     weight: 14
 
 ---

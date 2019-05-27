@@ -4,7 +4,7 @@ redirect_from:
 - "/bitrise-cli/steps/"
 - "/bitrise-cli/steps"
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 16
 
 ---

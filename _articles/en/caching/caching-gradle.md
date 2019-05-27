@@ -1,7 +1,7 @@
 ---
 title: Caching Gradle
 menu:
-  caching:
+  caching-main:
     weight: 6
 
 ---

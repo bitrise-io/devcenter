@@ -1,7 +1,7 @@
 ---
 title: Adding a Gitlab webhook
 menu:
-  webhooks:
+  webhooks-main:
     weight: 6
 
 ---

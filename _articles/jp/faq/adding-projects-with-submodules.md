@@ -1,7 +1,7 @@
 ---
 title: Can I add projects with submodules or with private repo dependencies?
 menu:
-  faq:
+  faq-main:
     weight: 2
 
 ---

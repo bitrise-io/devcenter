@@ -1,7 +1,7 @@
 ---
 title: アプリのオーナーを変更する
 menu:
-  team-management:
+  team-management-main:
     weight: 8
 
 ---

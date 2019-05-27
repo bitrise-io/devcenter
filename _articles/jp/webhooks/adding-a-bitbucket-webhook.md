@@ -1,7 +1,7 @@
 ---
 title: Bitbucket webhookの追加
 menu:
-  webhooks:
+  webhooks-main:
     weight: 5
 
 ---

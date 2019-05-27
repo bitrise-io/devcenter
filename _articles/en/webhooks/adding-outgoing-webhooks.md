@@ -1,7 +1,7 @@
 ---
 title: Adding outgoing webhooks
 menu:
-  webhooks:
+  webhooks-main:
     weight: 18
 
 ---

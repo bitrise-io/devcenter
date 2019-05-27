@@ -1,7 +1,7 @@
 ---
 title: Installing and updating the Bitrise CLI
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 3
 
 ---

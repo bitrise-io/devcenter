@@ -1,7 +1,7 @@
 ---
 title: テストデバイスの登録
 menu:
-  testing:
+  testing-main:
     weight: 3
 
 ---

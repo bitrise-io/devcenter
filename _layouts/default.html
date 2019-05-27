@@ -59,11 +59,8 @@
     <header class="top-bar">
       <div class="middle-aligner">
         <div class="subgroup">
-          <a class="logo" href="/"><img src="/assets/images/logo.svg"/></a>
+          <a class="logo" href="/"><img src="/assets/images/bitrise-docs-logo-white.svg"/></a>
           <button class="burger material-icon" onclick="toggleSideBar()"></button>
-          <div class="title">
-            <a class="title" href="/">{{ site.data.basic_info.name }}</a>
-          </div>
         </div>
         <div class="search-bar">
           <div class="input-wrapper">
@@ -73,26 +70,36 @@
           </div>
         </div>
         <div class="lang-selector">
-          <a href="{{ page.url_without_lang }}" {% if page.lang == 'en' %}class="active"{% endif %}>English</a>
-          <a href="/jp{{ page.url_without_lang }}" {% if page.lang == 'jp' %}class="active"{% endif %}>日本語</a>
+              <a href="{{ page.url_without_lang }}" class={% if page.lang == 'en' %}"active"{% endif %}>EN</a>
+              <a href="/jp{{ page.url_without_lang }}" class={% if page.lang == 'jp' %}"active"{% endif %}>日本語</a>
         </div>
         <a class="source-code" href="{{ site.data.basic_info.source_code_url }}" target="_blank">
-          <object type="image/svg+xml" data="/assets/images/logo-github.svg" class="source-host-logo"></object>
+          <object type="image/svg+xml" data="/assets/logos/icons/github.svg" class="source-host-logo"></object>
           <span class="source-host-name">GitHub</span>
         </a>
       </div>
     </header>
     <div class="column-parent middle-aligner">
       <nav id="side-menu">
-        {% assign menu = site.menus.main %} {% include menu.html %}
+        <div class="menu-wrapper">
+          {% assign menu = site.menus.main %} {% include menu.html %}
+        </div>
       </nav>
       <main class="content">
         {% if current_article %}
+        {% assign menu_id = article.item.identifier %}
         <div class="title-with-source-edit">
           <h1>{{ current_article.title }}</h1>
           <a class="material-icon" href="{{ current_article_source_url }}" target="_blank"></a>
         </div>
         {% endif %} {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
+        {% include related_articles.html %}
+        <div class="banner">
+          <img src="/assets/images/banner-bg-888x170.png">
+            <div class="deploy-text">Now you know everything</div>
+            <a href="https://app.bitrise.io/users/sign_up"><button class="button">Try Bitrise now!</button></a>
+          </div>
+        </div>
       </main>
       <nav id="my-toc">
       {% capture itemClass %}toc-entry.toc-h%level%{% endcapture %}

@@ -1,7 +1,7 @@
 ---
 title: 組織についてのFAQ
 menu:
-  faq:
+  faq-main:
     weight: 18
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Community Created Tutorials
 menu:
-  tutorials:
+  tutorials-main:
     weight: 1
 
 ---

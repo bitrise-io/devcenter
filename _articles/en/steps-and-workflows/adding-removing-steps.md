@@ -1,7 +1,7 @@
 ---
 title: Adding and removing Steps
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 3
 
 ---

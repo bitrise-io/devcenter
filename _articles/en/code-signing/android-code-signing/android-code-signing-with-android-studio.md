@@ -5,7 +5,7 @@ menu:
     weight: 5
 
 ---
-You can specify the code signing configuration for your project in [Android Studio](https://developer.android.com/studio/).
+You can specify the code signing configuration for your project in [Android Studio](https://developer.android.com/studio/). You will need a keystore file, a key alias and a key password - have these ready before you start the procedure! 
 
 1. Go to `Project navigator`.
 

@@ -4,7 +4,7 @@ redirect_from:
 - "/bitrise-cli/workflows/"
 - "/bitrise-cli/workflows"
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 14
 
 ---

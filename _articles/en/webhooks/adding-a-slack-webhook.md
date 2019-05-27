@@ -1,7 +1,7 @@
 ---
 title: Adding a Slack webhook
 menu:
-  webhooks:
+  webhooks-main:
     weight: 10
 
 ---

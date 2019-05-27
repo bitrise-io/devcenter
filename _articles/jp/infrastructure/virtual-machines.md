@@ -1,7 +1,7 @@
 ---
 title: 仮想マシン
 menu:
-  infrastructure:
+  infrastructure-main:
     weight: 3
 
 ---

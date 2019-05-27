@@ -1,7 +1,7 @@
 ---
 title: iOSのデバイステスト
 menu:
-  testing:
+  testing-main:
     weight: 10
 
 ---

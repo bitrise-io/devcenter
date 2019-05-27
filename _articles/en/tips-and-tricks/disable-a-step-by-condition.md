@@ -1,7 +1,7 @@
 ---
 title: Enabling or disabling a Step conditionally
 menu:
-  tips-and-tricks:
+  tips-and-tricks-main:
     weight: 16
 
 ---

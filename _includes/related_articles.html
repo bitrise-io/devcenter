@@ -1,0 +1,35 @@
+{% assign maxRelated = 4 %}
+
+{% assign minCommonTags =  1 %}
+
+{% assign maxRelatedCounter = 0 %}
+
+{% for article in site.articles %}
+
+    {% assign sameTagCount = 0 %}
+    {% assign commonTags = '' %}
+
+    {% for tag in article.tags %}
+      {% if article.url != page.url %}
+        {% if page.tags contains tag %}
+          {% assign sameTagCount = sameTagCount | plus: 1 %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% if sameTagCount >= minCommonTags %}
+    {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+      {% if maxRelatedCounter == 1 %}
+        <div class="related-articles">Related articles</div>
+      {% endif %}
+      <div class="container">
+        <div class="article-box">
+          <label class="related-title"><a href="{{ article.url }}">{{ article.title }}</a></label>
+          <p>{{ article.content | strip_html | truncatewords: 30 }}</p>
+        </div>
+      </div>
+      {% if maxRelatedCounter >= maxRelated %}
+        {% break %}
+      {% endif %}
+    {% endif %}
+
+  {% endfor %}

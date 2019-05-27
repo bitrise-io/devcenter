@@ -3,7 +3,7 @@ title: Getting started with iOS apps
 date: 2018-09-12T15:27:42.000+00:00
 redirect_from: []
 menu:
-  getting-started:
+  getting-started-main:
     weight: 18
 
 ---

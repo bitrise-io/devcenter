@@ -1,7 +1,7 @@
 ---
 title: Androidのデバイステスト
 menu:
-  testing:
+  testing-main:
     weight: 12
 
 ---

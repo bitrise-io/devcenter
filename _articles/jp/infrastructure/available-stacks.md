@@ -3,7 +3,7 @@ title: 利用可能なスタック
 redirect_from:
 - "/docs/available-stacks"
 menu:
-  infrastructure:
+  infrastructure-main:
     weight: 2
 
 ---

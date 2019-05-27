@@ -1,7 +1,7 @@
 ---
 title: Using the bitrise.yml from repository
 menu:
-  tips-and-tricks:
+  tips-and-tricks-main:
     weight: 23
 
 ---

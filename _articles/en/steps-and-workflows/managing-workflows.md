@@ -1,7 +1,7 @@
 ---
 title: Managing workflows
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 15
 
 ---

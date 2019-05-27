@@ -1,7 +1,7 @@
 ---
 title: Skipping Steps
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 7
 
 ---

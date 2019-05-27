@@ -1,7 +1,7 @@
 ---
 title: Stepの入力項目
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 6
 
 ---

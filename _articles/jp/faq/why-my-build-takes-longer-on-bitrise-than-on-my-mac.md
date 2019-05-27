@@ -1,7 +1,7 @@
 ---
 title: Why does my build take longer on Bitrise than on my machine?
 menu:
-  faq:
+  faq-main:
     weight: 16
 
 ---

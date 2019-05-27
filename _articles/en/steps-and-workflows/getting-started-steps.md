@@ -6,7 +6,7 @@ redirect_from:
 - "/getting-started/builds-and-workflows/getting-started/getting-started-steps"
 - "/getting-started/manage-your-bitrise-workflow/"
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 1
 
 ---

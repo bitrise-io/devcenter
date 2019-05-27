@@ -3,7 +3,7 @@ title: ワークフロー
 redirect_from:
 - "/getting-started/manage-your-workflow/"
 menu:
-  getting-started:
+  getting-started-main:
     weight: 13
 
 ---

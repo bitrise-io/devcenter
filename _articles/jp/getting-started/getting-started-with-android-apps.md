@@ -5,7 +5,7 @@ redirect_from:
 - "/getting-started/Getting-started-with-android-apps/"
 - "/getting-started/getting-started-with-Android-apps/"
 menu:
-  getting-started:
+  getting-started-main:
     weight: 19
 
 ---

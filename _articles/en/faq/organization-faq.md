@@ -1,7 +1,7 @@
 ---
 title: Organization FAQ
 menu:
-  faq:
+  faq-main:
     weight: 19
 
 ---

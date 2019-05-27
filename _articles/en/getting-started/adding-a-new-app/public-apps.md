@@ -3,7 +3,7 @@ title: Public apps
 redirect_from:
 - "/adding-a-new-app/public-apps/"
 menu:
-  getting-started:
+  getting-started-main:
     weight: 12
 
 ---

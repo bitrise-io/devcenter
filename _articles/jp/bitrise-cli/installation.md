@@ -1,7 +1,7 @@
 ---
 title: Bitrise CLIのインストールと更新
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 2
 
 ---

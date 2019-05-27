@@ -1,7 +1,7 @@
 ---
 title: Should I commit my dependencies into my repository?
 menu:
-  faq:
+  faq-main:
     weight: 17
 
 ---

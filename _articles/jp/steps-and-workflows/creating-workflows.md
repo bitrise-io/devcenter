@@ -1,7 +1,7 @@
 ---
 title: 独自のワークフローを作成する
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 14
 
 ---

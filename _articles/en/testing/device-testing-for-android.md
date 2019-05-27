@@ -3,7 +3,7 @@ title: Device testing for Android
 date: 2018-10-26T08:33:44.000+00:00
 redirect_from: []
 menu:
-  testing:
+  testing-main:
     weight: 13
 
 ---

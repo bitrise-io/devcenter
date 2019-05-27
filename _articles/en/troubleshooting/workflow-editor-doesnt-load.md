@@ -1,7 +1,7 @@
 ---
 title: Workflow Editor doesn't load
 menu:
-  troubleshooting:
+  troubleshooting-main:
     weight: 3
 
 ---

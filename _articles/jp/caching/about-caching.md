@@ -1,7 +1,7 @@
 ---
 title: キャッシュについて
 menu:
-  caching:
+  caching-main:
     weight: 2
 
 ---

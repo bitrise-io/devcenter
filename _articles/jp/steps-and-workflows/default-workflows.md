@@ -1,7 +1,7 @@
 ---
 title: デフォルトワークフロー
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 12
 
 ---

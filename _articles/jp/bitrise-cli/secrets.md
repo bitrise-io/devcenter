@@ -1,7 +1,7 @@
 ---
 title: Secrets
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 29
 
 ---

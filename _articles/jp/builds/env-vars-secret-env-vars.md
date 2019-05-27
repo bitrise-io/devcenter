@@ -1,7 +1,7 @@
 ---
 title: 秘密と環境設定
 menu:
-  builds:
+  builds-main:
     weight: 15
 
 ---

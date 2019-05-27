@@ -2,7 +2,7 @@
 title: Remote access
 redirect_from: []
 menu:
-  builds:
+  builds-main:
     weight: 29
 
 ---

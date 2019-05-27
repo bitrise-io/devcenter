@@ -1,7 +1,7 @@
 ---
 title: How can I generate an SSH key pair?
 menu:
-  faq:
+  faq-main:
     weight: 6
 
 ---

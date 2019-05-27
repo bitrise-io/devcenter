@@ -1,7 +1,7 @@
 ---
 title: Adding a Gogs webhook
 menu:
-  webhooks:
+  webhooks-main:
     weight: 8
 
 ---

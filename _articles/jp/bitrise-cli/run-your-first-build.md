@@ -1,7 +1,7 @@
 ---
 title: 最初のビルドを実行する
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 18
 
 ---

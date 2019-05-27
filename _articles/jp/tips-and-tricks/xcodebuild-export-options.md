@@ -1,7 +1,7 @@
 ---
 title: Xcodeアーカイブ：書き出し
 menu:
-  tips-and-tricks:
+  tips-and-tricks-main:
     weight: 15
 
 ---

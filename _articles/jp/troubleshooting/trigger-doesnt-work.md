@@ -1,7 +1,7 @@
 ---
 title: Build Trigger does not work
 menu:
-  troubleshooting:
+  troubleshooting-main:
     weight: 14
 
 ---

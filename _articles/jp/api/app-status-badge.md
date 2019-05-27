@@ -1,7 +1,7 @@
 ---
 title: App Status Image/Badge API
 menu:
-  api:
+  api-main:
     weight: 20
 
 ---

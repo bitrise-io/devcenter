@@ -1,7 +1,7 @@
 ---
 title: Adding a Visual Studio webhook
 menu:
-  webhooks:
+  webhooks-main:
     weight: 12
 
 ---

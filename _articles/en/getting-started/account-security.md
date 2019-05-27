@@ -2,7 +2,7 @@
 title: Account Security
 redirect_from: []
 menu:
-  getting-started:
+  getting-started-main:
     weight: 10
     title: Account security
 

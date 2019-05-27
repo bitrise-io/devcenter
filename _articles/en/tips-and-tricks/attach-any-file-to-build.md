@@ -1,7 +1,7 @@
 ---
 title: Attaching files as artifacts to a build
 menu:
-  tips-and-tricks:
+  tips-and-tricks-main:
     weight: 10
 
 ---

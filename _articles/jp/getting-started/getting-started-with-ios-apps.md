@@ -1,7 +1,7 @@
 ---
 title: iOSアプリの開始
 menu:
-  getting-started:
+  getting-started-main:
     weight: 17
 
 ---

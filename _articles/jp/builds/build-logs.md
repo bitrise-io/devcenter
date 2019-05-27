@@ -2,7 +2,7 @@
 title: ビルドログ
 date: 2018-10-31T10:43:57.000+00:00
 menu:
-  builds:
+  builds-main:
     weight: 26
 
 ---

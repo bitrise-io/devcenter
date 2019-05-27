@@ -2,7 +2,7 @@
 title: Test Reports
 redirect_from: []
 menu:
-  testing:
+  testing-main:
     weight: 1
 
 ---

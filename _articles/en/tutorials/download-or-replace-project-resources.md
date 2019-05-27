@@ -1,7 +1,7 @@
 ---
 title: Downloading or replacing project resources
 menu:
-  tutorials:
+  tutorials-main:
     weight: 9
 
 ---

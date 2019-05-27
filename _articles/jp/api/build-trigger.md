@@ -1,7 +1,7 @@
 ---
 title: Triggering and aborting builds
 menu:
-  api:
+  api-main:
     weight: 12
 
 ---

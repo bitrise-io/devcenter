@@ -9,7 +9,11 @@
 				<a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
 			{% endif %}
 		{% else %}
-			<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">{{ item.title }}</button>
+			{% if item.identifier contains "main" %}
+				<button class="menu-list-opener-{{ forloop.index }}" onclick="toggleMenuListOpener(event)">{{ item.title }}</button>
+			{% else %}
+				<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">{{ item.title }}</button>
+		  {% endif %}
 		{% endif %}
 		{% if item.children %}
 			{% assign menu = item.children %}

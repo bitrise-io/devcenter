@@ -1,7 +1,7 @@
 ---
 title: Adding a GitHub webhook
 menu:
-  webhooks:
+  webhooks-main:
     weight: 3
 
 ---

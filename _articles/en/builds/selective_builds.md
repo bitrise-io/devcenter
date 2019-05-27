@@ -3,7 +3,7 @@ title: Selective builds
 redirect_from:
 - "/builds/selective-builds/"
 menu:
-  builds:
+  builds-main:
     weight: 8
 
 ---

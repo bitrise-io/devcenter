@@ -3,7 +3,7 @@ title: Initializing a Bitrise project locally
 date: 2018-12-13T11:37:13.000+00:00
 redirect_from: []
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 6
 
 ---

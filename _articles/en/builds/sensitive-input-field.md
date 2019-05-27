@@ -4,7 +4,7 @@ redirect_from:
 - "/sensitive-input-field/"
 - sensitive-input-field/#set-a-sensitive-input-in-a-step/
 menu:
-  builds:
+  builds-main:
     weight: 16
 
 ---

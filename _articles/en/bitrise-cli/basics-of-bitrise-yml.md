@@ -1,7 +1,7 @@
 ---
 title: Basics of bitrise.yml
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 8
 
 ---

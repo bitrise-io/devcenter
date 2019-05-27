@@ -3,7 +3,7 @@ title: Xcodeの問題点のリスト
 redirect_from:
 - "/ios/known-xcode-issues/"
 menu:
-  troubleshooting:
+  troubleshooting-main:
     weight: 12
 
 ---

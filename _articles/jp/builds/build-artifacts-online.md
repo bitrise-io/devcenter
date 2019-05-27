@@ -1,7 +1,7 @@
 ---
 title: オンラインでのビルドアーティファクト
 menu:
-  builds:
+  builds-main:
     weight: 19
 
 ---

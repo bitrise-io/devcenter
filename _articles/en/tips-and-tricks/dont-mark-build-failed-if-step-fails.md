@@ -2,7 +2,7 @@
 title: Don't mark the Build as failed if a given step would fail (ignore the error
   of the Step)
 menu:
-  tips-and-tricks:
+  tips-and-tricks-main:
     weight: 14
 
 ---

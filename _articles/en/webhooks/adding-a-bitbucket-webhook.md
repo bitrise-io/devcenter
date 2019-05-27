@@ -1,7 +1,7 @@
 ---
 title: Adding a Bitbucket webhook
 menu:
-  webhooks:
+  webhooks-main:
     weight: 7
 
 ---

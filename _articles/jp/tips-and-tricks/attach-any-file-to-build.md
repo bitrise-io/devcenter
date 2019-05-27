@@ -1,7 +1,7 @@
 ---
 title: Attach any file as an Artifact to the Build
 menu:
-  tips-and-tricks:
+  tips-and-tricks-main:
     weight: 7
 
 ---

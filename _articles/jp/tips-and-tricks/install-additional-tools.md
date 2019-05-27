@@ -1,7 +1,7 @@
 ---
 title: Installing any additional tools
 menu:
-  tips-and-tricks:
+  tips-and-tricks-main:
     weight: 17
 
 ---

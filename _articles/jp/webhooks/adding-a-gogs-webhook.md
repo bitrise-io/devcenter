@@ -1,7 +1,7 @@
 ---
 title: Gogs webhookの追加
 menu:
-  webhooks:
+  webhooks-main:
     weight: 11
 
 ---

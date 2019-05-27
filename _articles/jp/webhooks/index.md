@@ -3,7 +3,7 @@ title: webhookの追加
 redirect_from:
 - "/webhooks/"
 menu:
-  webhooks:
+  webhooks-main:
     weight: 2
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Adding a Deveo webhook
 menu:
-  webhooks:
+  webhooks-main:
     weight: 16
 
 ---

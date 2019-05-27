@@ -3,7 +3,7 @@ title: Running Detox tests on Bitrise
 redirect_from: []
 date: '2019-03-01T12:43:19.000+00:00'
 menu:
-  testing:
+  testing-main:
     weight: 16
 
 ---

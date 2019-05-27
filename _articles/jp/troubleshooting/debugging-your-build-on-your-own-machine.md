@@ -2,7 +2,7 @@
 title: Debugging your build on your own machine
 date: 2018-11-19T15:33:56.000+00:00
 menu:
-  troubleshooting:
+  troubleshooting-main:
     weight: 1
 
 ---

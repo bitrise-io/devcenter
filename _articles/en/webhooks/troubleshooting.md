@@ -1,7 +1,7 @@
 ---
 title: Webhook Troubleshooting
 menu:
-  webhooks:
+  webhooks-main:
     weight: 20
 
 ---

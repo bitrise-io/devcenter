@@ -1,7 +1,7 @@
 ---
 title: Running your first build
 menu:
-  bitrise-cli:
+  bitrise-cli-main:
     weight: 19
 
 ---

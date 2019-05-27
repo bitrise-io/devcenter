@@ -3,7 +3,7 @@ title: Managing iOS code signing files
 redirect_from: []
 date: '2019-04-08T14:11:49.000+00:00'
 menu:
-  api:
+  api-main:
     weight: 15
 
 ---

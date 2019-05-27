@@ -82,7 +82,7 @@ workflows:
             echo '---
             title: Bitrise.io API v0.1 (Work In Progress)
             menu:
-              api:
+              api-main:
                 weight: 4
                 title: Bitrise.io API v0.1 (Work in Progress)
 

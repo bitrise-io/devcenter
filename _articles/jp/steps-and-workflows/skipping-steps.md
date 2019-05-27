@@ -1,7 +1,7 @@
 ---
 title: Stepをスキップする
 menu:
-  steps-workflows:
+  steps-workflows-main:
     weight: 8
 
 ---

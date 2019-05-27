@@ -3,7 +3,7 @@ title: よくあるAndroid上の問題
 redirect_from:
 - "/android/frequent-android-issues/"
 menu:
-  troubleshooting:
+  troubleshooting-main:
     weight: 6
 
 ---
