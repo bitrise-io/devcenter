@@ -1007,6 +1007,7 @@ footer {
 		max-width: 100%;
 		margin-left: 0;
 		margin-top: 1rem;
+                padding: 0;
 	}
 
 	header.top-bar {
@@ -1050,6 +1051,11 @@ footer {
 			}
 		}
 	}
+
+       .banner {
+         display: none;
+       } 
+
 	nav#my-toc {
 		display: none;
 	}
