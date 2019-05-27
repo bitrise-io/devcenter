@@ -51,6 +51,8 @@ Test Reports doesn't require any sort of complicated configuration. All you need
 
 {% include message_box.html type="important" title="Device testing with Firebase" content="We have two Steps that use the Firebase Test Lab for device testing: iOS Device Testing and Virtual Device Testing for Android. These Steps also deploy their test results to Test Reports but you need [to opt into using them first](/testing/device-testing-for-android/#enabling-device-testing): on the Settings tab of your app, go to the Device Testing option and set the toggle to enabled."%}
 
+{% include message_box.html type="warning" title="Deploy to Bitrise.io version" content="The Deploy to Bitrise.io Step must be of version 1.4.1 or newer - older versions of the Step do NOT support Test Reports."%} 
+
 1. Add tests to your app's repository.
 2. Add the appropriate testing Steps to your Workflow. For example, if you have an iOS project, you can use the **Xcode Test for iOS** Step to run Xcode tests.
 3. Make sure you have the **Deploy to Bitrise.io** Step in your Workflow.
