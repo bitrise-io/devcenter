@@ -135,7 +135,7 @@ header.top-bar {
 					width: 100%;
 					line-height: 3rem;
 					border: none;
-					border-radius: .2rem;
+					border-radius: 8px;
 					padding-left: 4.4rem;
 					padding-right: 4.4rem;
 					background-color: rgba(0, 0, 0, .26);
@@ -490,8 +490,10 @@ main.content {
 	flex: 1 1 auto;
 	max-width: 50%;
 	min-width: 0;
-	margin-top: 4.5rem;
-	margin-left: 4rem;
+	margin-left: 2rem;
+	padding-top: 4.5rem;
+	padding-left: 4rem;
+	padding-right: 4rem;
 	font-size: 1.5rem;
 	color: #222222;
 	line-height: 1.5;
@@ -812,20 +814,19 @@ nav#my-toc {
 .side-toc {
 	box-sizing: border-box;
 	flex: 1 1 16.66666667%;
-  margin-top: 4.5rem;
 	max-width: 22rem;
   font-family: TTNorms;
+	padding-top: 4rem;
 	padding-left: 2rem;
 	line-height: 1.8;
 	position: fixed;
-	border-left: .1rem solid rgba(0,0,0,.07);
-	margin-left: 8rem;
 	}
 
 	.side-toc:before {
 		font-weight: 600;
 		content: "Contents";
-		padding-bottom: 1.1rem;
+		padding-bottom: 1rem;
+		padding-left: 2rem;
 		text-overflow: ellipsis;
 		overflow: hidden;
 		display: block;
@@ -836,6 +837,8 @@ nav#my-toc {
 	li.toc-entry.toc-h2 {
 		list-style-type: none;
 		font-size: 1.4rem;
+		border-left: .1rem solid rgba(0,0,0,.07);
+		padding-left: 2rem;
 	}
 
 	li.toc-entry.toc-h2 a {
@@ -855,7 +858,7 @@ nav#my-toc {
 	li.toc-entry.toc-h3 {
 		list-style-type: none;
 		font-size: 1.3rem;
-		margin-left: -10%;
+		margin-left: -12.5%;
 	}
 
 	li.toc-entry.toc-h3 a {

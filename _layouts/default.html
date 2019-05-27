@@ -92,13 +92,13 @@
           <h1>{{ current_article.title }}</h1>
           <a class="material-icon" href="{{ current_article_source_url }}" target="_blank"></a>
         </div>
-        {% endif %} {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
+        {% endif %}
+        {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
         {% include related_articles.html %}
         <div class="banner">
           <img src="/assets/images/banner-bg-888x170.png">
-            <div class="deploy-text">Now you know everything</div>
-            <a href="https://app.bitrise.io/users/sign_up"><button class="button">Try Bitrise now!</button></a>
-          </div>
+            <div class="deploy-text">Now you know everything!</div>
+            <a href="https://app.bitrise.io/users/sign_up"><button class="button">Try Bitrise now</button></a>
         </div>
       </main>
       <nav id="my-toc">
