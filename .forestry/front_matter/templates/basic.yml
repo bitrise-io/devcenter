@@ -106,6 +106,7 @@ pages:
 - _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
+- _articles/en/testing/running-xcode-tests.md
 - _articles/en/builds/configuring-notifications.md
 - _articles/en/builds/remote-access.md
 - _articles/en/reviews/managing-the-apps-of-organizations-image-game.md

@@ -1,7 +1,12 @@
 ---
 title: Running Xcode tests
 redirect_from: []
-date: 2019-02-22T15:33:24.000+00:00
+date: '2019-02-22T15:33:24.000+00:00'
+tag:
+- testing
+summary: 'Run Xcode tests on Bitrise by using our Xcode Test for iOS Step. Configure
+  the tests in our Workflow Editor with the same options as in Xcode, and generate
+  code coverage files easily. '
 menu:
   testing-main:
     weight: 4
