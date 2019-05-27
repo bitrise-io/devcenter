@@ -13,6 +13,9 @@ fields:
   hidden: false
   default: ''
 pages:
+- _articles/en/reviews/managing-the-apps-of-organizations-image-game.md
+- _articles/jp/testing/test-reports.md
+- _articles/en/testing/test-reports.md
 - _articles/en/builds/remote-access.md
 - _articles/jp/builds/remote-access.md
 - _articles/en/api/Managing build artifacts.md

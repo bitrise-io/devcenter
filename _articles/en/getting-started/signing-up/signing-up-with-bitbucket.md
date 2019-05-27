@@ -21,7 +21,7 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
 Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
 
-![/img/sign-up-bitrise.jpg](https://app.forestry.io/sites/yv69yaruhkt48w/body-media//img/sign-up-bitrise.jpg)
+![/img/sign-up-bitrise.jpg](/img/sign-up-bitrise.jpg)
 
 Select `Bitbucket` for authenticating yourself with this service.
 
