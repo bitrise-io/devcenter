@@ -499,6 +499,38 @@ main.content {
 	line-height: 1.5;
 	-webkit-print-color-adjust: exact;
 
+	.index-container {
+		display: flex;
+		flex: 1 1 auto;
+		margin-top: 2rem;
+		padding: 0;
+	}
+
+	.index-box {
+		padding: 1.5rem;
+		width: 25%;
+		min-height: 100%;
+		margin: 0.825rem auto;
+		border-radius: 8px;
+		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+		border: solid 1px #ececec;
+		background-color: #ffffff;
+		text-align: left;
+		color: #444444;
+		cursor: pointer;
+
+		.index-title {
+			font-weight: bold;
+			font-size: 1.8rem;
+			color: #760fc3;
+			cursor: pointer;
+		}
+
+		.index-box a {
+			display: inline-block;
+		}
+	}
+
 h1, h2, h3, h4 {
 	letter-spacing: 0.2px;
 }
@@ -834,7 +866,7 @@ nav#my-toc {
 	li.toc-entry.toc-h2 {
 		list-style-type: none;
 		font-size: 1.4rem;
-		border-left: .1rem solid rgba(0,0,0,.07);
+		border-left: 2px solid #dbc3ed;;
 		padding-left: 2rem;
 	}
 
