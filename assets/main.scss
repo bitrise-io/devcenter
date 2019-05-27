@@ -912,10 +912,6 @@ nav#my-toc {
 		text-transform: uppercase;
 	}
 
-	.article-box, a {
-		display: block;
-	}
-
 	.article-box {
 		$horizontalpadding: 1.2rem;
 		$verticalpadding: .8rem;
@@ -942,6 +938,10 @@ nav#my-toc {
 			font-size: 1.5rem;
 			color: #760fc3;
 			cursor: pointer;
+		}
+
+		.article-box, a {
+			display: block;
 		}
 	}
 
