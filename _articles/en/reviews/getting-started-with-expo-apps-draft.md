@@ -49,19 +49,19 @@ rn projects falls into two cate (rn guide) two options to make projects: in expo
 {% include message_box.html type="info" title="Settings tab" content="
 These settings can be later modified at the `Settings` page of your app, except for the stack, which you can modify at the `Stack` tab of your Workflow Editor.
 
-You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the `APPS & ARTIFACTS` tab of your Build’s page. testing addon can be disabled so you can check files in apps and artifacts. "%}
+You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the `APPS & ARTIFACTS` tab of your Build’s page."%}
 
 ## Installing dependencies
 
 ### Javascript dependencies
 
-If Bitrise scanner has successfully scanned your app, `Run npm command` or `Run yarn command` steps will be included in your workflow.
+If Bitrise scanner has successfully scanned your app, `Run npm command` or `Run yarn command` steps will be included in your workflow depending on your project configuration.
 
-In the first `Run npm command` Step, `install`  is the **default value?** in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project.
+In the `Run npm command` Step, `install`  is the default in the `npm command with arguments to run` input field so that the Step can add JavaScript dependencies to your project.
 
 ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/run-nmp.png)
 
-`Run yarn command` can install javascript dependencies automatically to your project without having to configure the step manually. if the project was made with yarns in this case npm steps will be dropped and yarn steps used.
+`Run yarn command` can install javascript dependencies automatically to your project without having to configure the step manually.
 
 if project uses expo kit, a cocoapods install step gets into the workflow for ios dependencies.
 
@@ -69,7 +69,7 @@ if project uses expo kit, a cocoapods install step gets into the workflow for io
 
 `Install missing Android SDK components` Step installs the missing native dependencies for your Android project - luckily this steps is by default included in your deploy workflow.
 
-For iOS dependencies, you can add the `Run CocoaPods install` step to your workflow (after the **Certificate and profile installer** Step) as it is not part of your workflow by default.
+If the projects uses the ExpoKit, the `Run CocoaPods install` Step get added to to your deploy workflow.
 
 ## \[Beta\] Expo Eject
 
