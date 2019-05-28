@@ -6,42 +6,42 @@ summary: ''
 published: false
 
 ---
-Adding a React Native project to bitrise.io
+**An Expo app is different from a React Native project in what sense?**
+
+## Adding an Expo app to bitrise.io
 
 ![](/img/ios-development-team-expo.jpg)
 
 ![](/img/expo-password-expo.jpg)
 
 ![](/img/add-expo-username-expo.jpg)
+{% include message_box.html type="info" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
+ 1. Log into [bitrise.io](https://www.bitrise.io/).
+ 2. Click `Add a new app`.
+ 3. Select the privacy setting of your app: **private** and [**public**](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/adding-a-new-app/public-apps/).
+ 4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/adding-a-new-app/connecting-a-repository/).
+ 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
+ 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
+ 7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
+ 8. At `Project build configuration`,
+    * **React Native** get detected automatically. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration).
+    * **Project (or Workspace) path:** ios/bitriseexpokit.xcworkspace (config files) is the Xcode Workspace path of your app which is needed to set up your app on Bitrise
+    * **Scheme name:** bitriseexpokit. The validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
+    * At **Specify iOS Development team**, enter your iOS Development team ID/number and hit Next?
+    * In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
+    * **Module, Variant** - Android specs ?
+    * **Specify Expo username:** add that
+    * Add your Expo password so that Bitrise can access your Expo project without you having to log in?
+    * Confirm your project build configuration.
+ 9. [Upload an app icon](/getting-started/adding-a-new-app/setting-up-configuration/#adding-an-app-icon-with-the-project-scanner).
+10. At **Webhook setup**, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
-Do you have a Bitrise account?
-
-Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider.
-
-In this tutorial, we’re using this [sample app](https://github.com/bitrise-samples/sample-apps-react-native-ios-and-android). Let’s start!
-
-1. Log into [bitrise.io](https://www.bitrise.io/).
-2. Click `Add a new app`.
-3. Select the privacy setting of your app: **private** and [**public**](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/adding-a-new-app/public-apps/).
-4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/adding-a-new-app/connecting-a-repository/).
-5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
-6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
-7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
-8. At `Project build configuration`, select your preferred build configuration.
-   * For React Native projects, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that Android is automatically selected in `The root directory of an Android app`.
-   * If your project consists of only one module, that module will be automatically selected for `Module`. If your project contains more than one module, you can pick a module, but we recommend the main one!
-   * In `Select variant for building` field, select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick `debug` or `release` if you wish to generate an APK or an .ipa file.
-   * Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
-   * `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
-   * In `Select ipa export method`, select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
-9. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
-
-Settings tab
-
+{% include message_box.html type="info" title="Settings tab" content="
 These settings can be later modified at the `Settings` page of your app, except for the stack, which you can modify at the `Stack` tab of your Workflow Editor.
 
 You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the `APPS & ARTIFACTS` tab of your Build’s page.
+"%}
 
 ## Installing dependencies [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#installing-dependencies)
 
