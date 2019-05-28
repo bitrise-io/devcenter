@@ -63,15 +63,19 @@ In the `Run npm command` Step, `install`  is the default in the `npm command wit
 
 `Run yarn command` can install javascript dependencies automatically to your project without having to configure the step manually.
 
-if project uses expo kit, a cocoapods install step gets into the workflow for ios dependencies.
-
 ### Native dependencies
 
 `Install missing Android SDK components` Step installs the missing native dependencies for your Android project - luckily this steps is by default included in your deploy workflow.
 
-If the projects uses the ExpoKit, the `Run CocoaPods install` Step get added to to your deploy workflow.
+If the projects uses the ExpoKit, the `Run CocoaPods install` Step automatically gets added to to your deploy workflow.
 
-## \[Beta\] Expo Eject
+## Testing your project
+
+ You can use React Native’s built in testing method, called `jest` to perform unit tests. Add another `Run nmp command` step to your workflow right after the **Run npm command** Step, and type `test` in the `npm command with arguments to run` input field.
+
+![](https://mpxzvqn7ysfysw.preview.forestry.io/img/test-npm.png)
+
+## Building your project
 
 ![](/img/expo.jpg)
 
@@ -165,12 +169,6 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 Set **Force code signing with Development Team**, **Force code signing with Code Signing Identity**
 
 and **Force code signing with Provisioning Profile** inputs regarding to the uploaded codesigning files
-
-## Testing your project
-
-You can use React Native’s built in testing method, called `jest` to perform unit tests. Add another `Run nmp command` step to your workflow right after the **Run npm command** Step, and type `test` in the `npm command with arguments to run` input field.
-
-![](https://mpxzvqn7ysfysw.preview.forestry.io/img/test-npm.png)
 
 ## Deploying to Bitrise
 
