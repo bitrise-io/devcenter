@@ -6,13 +6,14 @@ summary: ''
 published: false
 
 ---
+Adding a React Native project to bitrise.io
+
 ![](/img/ios-development-team-expo.jpg)
 
 ![](/img/expo-password-expo.jpg)
 
 ![](/img/add-expo-username-expo.jpg)
 
-Adding a React Native project to bitrise.io [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#adding-a-react-native-project-to-bitriseio)
 
 Do you have a Bitrise account?
 
