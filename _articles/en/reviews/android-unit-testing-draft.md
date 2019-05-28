@@ -24,15 +24,8 @@ The `Android Unit Test` step generates and exports unit test reports into the `$
 
 Check out the unit test results on the **Test Reports** page. Results include:
 
-test results xml 
-
-screenshots of test cases 
-
-* Test cases
-* Video
-* Screenshots
-* Logs
-* Files generated
+* Test results xml
+* Screenshots of test cases
 
 To view the test results:
 
