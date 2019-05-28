@@ -8,6 +8,13 @@ published: false
 ---
 **An Expo app is different from a React Native project in what sense?**
 
+Expo projects are a special type of React Native projects and Bitrise project scanner detects them as React Native projects. 
+
+* expo cli: developer tool for creating projects, viewing logs, opening on your device, publishing
+* Expo client: people can access an app through the client
+
+>> Expo toolkit using React Native.
+
 ## Adding an Expo app to bitrise.io
 
 {% include message_box.html type="info" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
@@ -54,7 +61,16 @@ In the first `Run npm command` Step, `install`  is the **default value?** in the
 
 `Install missing Android SDK components` Step installs the missing native dependencies for your Android project - luckily this steps is by default included in your deploy workflow.
 
-For iOS dependencies, you can add the `Run CocoaPods install` step to your workflow (after the **Certificate and profile installer** Step) as it is not part of your workflow by default. 
+For iOS dependencies, you can add the `Run CocoaPods install` step to your workflow (after the **Certificate and profile installer** Step) as it is not part of your workflow by default.
+
+## \[Beta\] Expo Eject
+
+![](/img/expo.jpg)
+
+Creates Xcode and Android Studio projects for your app.
+
+* in deploy workflow after the **Run npm command** Step?
+* what does it do?
 
 ## Code signing
 
@@ -71,13 +87,13 @@ Let’s see how to fill them out!
 
    You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on keystore file, click [here](https://developer.android.com/studio/publish/app-signing). With this information added to your `Code Signing` tab, our `Sign APK step` (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
 
-{% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options! "%} 
+{% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options! "%}
 
 ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/keystore.png)
 
 The Android chunk of code signing is done. Let's continue with iOS!
 
-### Signing and exporting your iOS project for testing 
+### Signing and exporting your iOS project for testing
 
 Code signing your iOS project depends on what you wish to do with the exported .ipa file. In this section, we describe how to code sign your project if you wish to **install and test it on internal testers’ registered devices**. You will need an .ipa file exported with the `development` export method to share your project with testers.
 
@@ -110,7 +126,7 @@ If you uploaded the correct code signing files, the `Certificate and profile ins
 iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)!
 "%}
 
-### Signing and exporting your iOS project for deployment 
+### Signing and exporting your iOS project for deployment
 
 If you set up your code signing files and created an .ipa file for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**.
 
@@ -128,13 +144,13 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
    If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
 
-## Testing your project 
+## Testing your project
 
 You can use React Native’s built in testing method, called `jest` to perform unit tests. Add another `Run nmp command` step to your workflow right after the **Run npm command** Step, and type `test` in the `npm command with arguments to run` input field.
 
 ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/test-npm.png)
 
-## Deploying to Bitrise 
+## Deploying to Bitrise
 
 The `Deploy to bitrise.io` step uploads all the **artifacts related to your build into the** [**APPS & ARTIFACTS**](https://devcenter.bitrise.io/builds/build-artifacts-online/) **tab on your Build’s page. ??**
 
@@ -143,11 +159,11 @@ You can share the generated APK/.ipa file with your team members using the build
 1. Go to the `Deploy to bitrise.io` step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK/.ipa file in the `APPS & ARTIFACTS` tab.
 
-## Deploying to an app store 
+## Deploying to an app store
 
 If you wish to deploy your iOS app, follow the steps in [Code sign your iOS project for deployment](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
 
-### Deploying your iOS app to Testflight and iTunes Connect 
+### Deploying your iOS app to Testflight and iTunes Connect
 
 Have you exported an `app-store` .ipa file yet
 
