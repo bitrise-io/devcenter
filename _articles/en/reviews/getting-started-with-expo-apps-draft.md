@@ -10,11 +10,6 @@ published: false
 
 ## Adding an Expo app to bitrise.io
 
-![](/img/ios-development-team-expo.jpg)
-
-![](/img/expo-password-expo.jpg)
-
-![](/img/add-expo-username-expo.jpg)
 {% include message_box.html type="info" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
  1. Log into [bitrise.io](https://www.bitrise.io/).
