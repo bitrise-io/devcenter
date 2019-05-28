@@ -47,27 +47,27 @@ You have successfully set up your React Native project on [bitrise.io](https://w
 
 ### Javascript dependencies [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#javascript-dependencies)
 
-If Bitrise scanner has successfully scanned your project, `Run npm command` or `Run yarn command` steps will be included in your workflow.
+If Bitrise scanner has successfully scanned your app, `Run npm command` or `Run yarn command` steps will be included in your workflow.
 
-In `Run npm command` Step, type `install` in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project.
+In the first `Run npm command` Step, `install`  is the **default value?** in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project.
 
 ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/run-nmp.png)
 
 `Run yarn command` can install javascript dependencies automatically to your project without having to configure the step manually.
 
-### Native dependencies [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#native-dependencies)
+### Native dependencies
 
 `Install missing Android SDK components` Step installs the missing native dependencies for your Android project - luckily this steps is by default included in your deploy workflow.
 
-For iOS dependencies, you can add the `Run CocoaPods install` step to your workflow as it is not part of the workflow by default.
+For iOS dependencies, you can add the `Run CocoaPods install` step to your workflow as it is not part of your workflow by default.
 
-## Code signing [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#code-signing)
+## Code signing
 
-A React Native app can consists of two projects, an Android and an iOS - both must be properly code signed. If you click on the `Code Signing` tab of your project’s Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
+A Expo app can consists of two projects, an Android and an iOS - both must be properly code signed. If you click on the `Code Signing` tab of your project’s Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
 
-Let’s see the process step by step!
+Let’s see how to fill them out!
 
-### Signing your Android project [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#signing-your-android-project)
+### Signing your Android project
 
 1. Select the `deploy` workflow at the `WORKFLOW` dropdown menu in the top left corner of your apps’ Workflow Editor.
 2. Go to the `Code Signing` tab.
@@ -76,9 +76,7 @@ Let’s see the process step by step!
 
    You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on keystore file, click [here](https://developer.android.com/studio/publish/app-signing). With this information added to your `Code Signing` tab, our `Sign APK step` (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
 
-More information on Android code signing
-
-Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!
+{% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options! "%} 
 
 ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/keystore.png)
 
