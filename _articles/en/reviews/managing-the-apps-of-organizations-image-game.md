@@ -1,6 +1,8 @@
 ---
 title: Managing the apps of organizations - image game
 redirect_from: []
+tag: []
+summary: ''
 published: false
 
 ---
@@ -41,12 +43,10 @@ App ownership can be transferred **from** an organization to another account on 
 
 1. Sign in with an account that is a member of the organization and open the account's profile page.
 2. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
-
-   ![](/img/switch-profile-1.jpg)
 3. On the left, select `Apps` from the menu options.
 4. Click the `Transfer apps` button.
 
-   ![](/img/add-new-app-org-settings.jpg)
+   ![](/img/transfer-app.jpg)
 5. Find the apps you wish to transfer and toggle the switch on the right. Once you're done, click `Done`.
 
 ### Transferring an app from the Team tab
@@ -76,7 +76,7 @@ There are two separate ways to assign one or more groups to an app that is owned
 1. Sign in with an account that is an **owner** of the organization and open its profile page.
 2. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
 
-   ![](/img/switch-profile.jpg)
+   ![](/img/switch-profile-3.jpg)
 3. On the left, select `Groups` from the menu options.
 4. Choose the group you wish to assign, and click the dropdown menu indicated by the `...` symbol.
 5. Click `Assign group to apps`.
