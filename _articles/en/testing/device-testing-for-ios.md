@@ -51,7 +51,7 @@ To use this Step, you will need code signing files for the test app: we recommen
 The **iOS Device Testing** Step takes the path to this .zip file - exported as an Environment Variable - as input to run your tests and export the test results to Bitrise.
 
 1. Check that you [enabled Device Testing](/testing/device-testing-for-ios/#enabling-device-testing) for the app.
-2. Add the **Xcode Build for testing for iOS** Step to your workflow.
+2. Add the **Xcode Build for testing for iOS** Step to your Workflow.
 
    Note that it should come AFTER the **Certificate and profile installer** Step.
 
@@ -62,7 +62,7 @@ The **iOS Device Testing** Step takes the path to this .zip file - exported as a
 4. Set a destination option for `xcodebuild` in the **Device destination** input of the Step.
 
    The default value is `generic/platform=ios`. For the available values, call `man xcodebuild` on your local machine and check the `Destinations` section of the printout.
-5. Add the **iOS Device Testing** Step to the workflow.
+5. Add the **iOS Device Testing** Step to the Workflow.
 
    The Step has to come after the **Xcode Build for testing for iOS** Step.
 
@@ -70,7 +70,9 @@ The **iOS Device Testing** Step takes the path to this .zip file - exported as a
 6. In the **Test devices** input field, specify the devices on which you want to test the app.
 
    Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/ios/available-testing-devices).
-7. Optionally, you can download all the files generated in the test run: under the **Debug** input group, set the `Download files` input to `true`.
+7. Make sure you have the **Deploy to Bitrise.io** Step in your Workflow, with version 1.4.1 or newer. 
+
+   With the older versions of the Step, you won't be able to check your results on the **Test Reports** page!
 8. Start a build!
 
 If all goes well, you should be able to view your results on the Build page.
@@ -85,7 +87,7 @@ Check out the test results of your device tests on the **Test Reports** page. Yo
 * Logs
 * Files generated
 
-To view the test results: 
+To view the test results:
 
 1. Click the **Builds** tab of the app and select the build that ran the tests.
 2. Under the build status, click **See more** next to the **Test reports** label.
