@@ -59,7 +59,7 @@ In the first `Run npm command` Step, `install`  is the **default value?** in the
 
 `Install missing Android SDK components` Step installs the missing native dependencies for your Android project - luckily this steps is by default included in your deploy workflow.
 
-For iOS dependencies, you can add the `Run CocoaPods install` step to your workflow as it is not part of your workflow by default.
+For iOS dependencies, you can add the `Run CocoaPods install` step to your workflow (after the **Certificate and profile installer** Step) as it is not part of your workflow by default. 
 
 ## Code signing
 
@@ -80,9 +80,9 @@ Let’s see how to fill them out!
 
 ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/keystore.png)
 
-The Android chunk of code signing is done!
+The Android chunk of code signing is done. Let's continue with iOS!
 
-### Signing and exporting your iOS project for testing [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#signing-and-exporting-your-ios-project-for-testing)
+### Signing and exporting your iOS project for testing 
 
 Code signing your iOS project depends on what you wish to do with the exported .ipa file. In this section, we describe how to code sign your project if you wish to **install and test it on internal testers’ registered devices**. You will need an .ipa file exported with the `development` export method to share your project with testers.
 
@@ -111,11 +111,11 @@ You will need:
 
 If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa file with the **development export method**. If you have the `Deploy to Bitrise.io`Step in your workflow, you can find the .ipa file on the `APPS & ARTIFACTS` tab of the Build’s page.
 
-About iOS code signing
-
+{% include message_box.html type="info" title="About iOS code signing" content="
 iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)!
+"%}
 
-### Signing and exporting your iOS project for deployment [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#signing-and-exporting-your-ios-project-for-deployment)
+### Signing and exporting your iOS project for deployment 
 
 If you set up your code signing files and created an .ipa file for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**.
 
@@ -133,26 +133,26 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
    If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
 
-## Testing your project [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#testing-your-project)
+## Testing your project 
 
-You can use React Native’s built in testing method, called `jest` to perform unit tests. Add another `Run nmp command` step to your workflow, and type `test` in the `npm command with arguments to run` input field.
+You can use React Native’s built in testing method, called `jest` to perform unit tests. Add another `Run nmp command` step to your workflow right after the **Run npm command** Step, and type `test` in the `npm command with arguments to run` input field.
 
 ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/test-npm.png)
 
-## Deploying to Bitrise [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#deploying-to-bitrise)
+## Deploying to Bitrise 
 
-The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page.
+The `Deploy to bitrise.io` step uploads all the **artifacts related to your build into the** [**APPS & ARTIFACTS**](https://devcenter.bitrise.io/builds/build-artifacts-online/) **tab on your Build’s page. ??**
 
 You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
 1. Go to the `Deploy to bitrise.io` step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK/.ipa file in the `APPS & ARTIFACTS` tab.
 
-## Deploying to an app store [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#deploying-to-an-app-store)
+## Deploying to an app store 
 
 If you wish to deploy your iOS app, follow the steps in [Code sign your iOS project for deployment](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
 
-### Deploying your iOS app to Testflight and iTunes Connect [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#deploying-your-ios-app-to-testflight-and-itunes-connect)
+### Deploying your iOS app to Testflight and iTunes Connect 
 
 Have you exported an `app-store` .ipa file yet
 
@@ -170,7 +170,7 @@ Make sure that you have exported an `app-store` .ipa file before starting the de
 
    If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
 
-### Deploying your Android app to Google Play Store [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#deploying-your-android-app-to-google-play-store)
+### Deploying your Android app to Google Play Store
 
 Android code signing
 
