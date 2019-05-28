@@ -22,19 +22,6 @@ For iOS apps, Firebase Test Lab runs [XCTest](https://developer.apple.com/docume
 
 {% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can contain only one **iOS Device Testing** Step, performing one type of test. This is because Bitrise sends the build slug to Firebase Test Lab. Sending the same build slug results in a `Build already exists` error." %}
 
-## Enabling Device Testing
-
-Before you attempt to use any of our Virtual Device Testing Steps, the feature itself must be enabled for your app.
-
-1. Log in to [bitrise.io](https://app.bitrise.io/).
-2. Select the app on your Dashboard.
-3. Go to the **Settings** tab.
-4. Scroll down to **Device Testing** and toggle **ENABLE UI TESTS ON VIRTUAL DEVICES**.
-
-   ![](/img/enable-ui-test-on-virtual-devices.png)
-
-That's it! You are now ready to start using our Device Testing solution.
-
 ## Running device tests for iOS apps
 
 To run device tests with the Firebase Test Lab solution, you will need to add two Steps to your Workflow:
