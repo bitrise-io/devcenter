@@ -37,14 +37,14 @@ That's it! You are now ready to start using our Device Testing solution.
 
 ## Running device tests for iOS apps
 
-To run device tests with the Firebase Test Lab solution, you will need to add two Steps to your workflow:
+To run device tests with the Firebase Test Lab solution, you will need to add two Steps to your Workflow:
 
 * **Xcode Build for testing for iOS**
 * **iOS Device Testing**
 
 {% include message_box.html type="note" title="Beta status" content="Please note that currently, both Steps are in beta phase. They are already stable and work well but we're working on improving them!"%}
 
-The **Xcode Build for testing for iOS** performs the `xcodebuild` command's `build-for-testing` action: it builds the tests defined in your iOS app's [Xcode scheme](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html). The Step exports a .zip file that contains your test directory (by default, it's _Debug-iphoneos_) and the `xctestrun` file.
+The **Xcode Build for testing for iOS** performs the `xcodebuild` command's `build-for-testing` action: it builds the tests defined in your iOS app's [Xcode scheme](https://developer.apple.com/library/archive/featuredarticles/XcodeConcepts/Concept-Schemes.html). The Step exports a .zip file that contains your test directory (by default, it's `Debug-iphoneos`) and the `xctestrun` file.
 
 To use this Step, you will need code signing files for the test app: we recommend [using codesigndoc to export the necessary files]()!
 
