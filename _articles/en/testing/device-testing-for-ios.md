@@ -58,7 +58,7 @@ The **iOS Device Testing** Step takes the path to this .zip file - exported as a
    ![](/img/xcode-build-for-test.png)
 3. In the **Scheme name** input, set the Xcode Scheme you want to use. By default, the value of the input is the `$BITRISE_SCHEME` [Environment Variable](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/) which is stored when your app is created.
 
-   By default, the scheme defines which configuration - for example, Debug or Release - will be used. In the `Configuration name` input, you can define the configuration type manually.
+   By default, the scheme defines which configuration - for example, Debug or Release - will be used. In the **Configuration name** input, you can define the configuration type manually.
 4. Set a destination option for `xcodebuild` in the **Device destination** input of the Step.
 
    The default value is `generic/platform=ios`. For the available values, call `man xcodebuild` on your local machine and check the `Destinations` section of the printout.
