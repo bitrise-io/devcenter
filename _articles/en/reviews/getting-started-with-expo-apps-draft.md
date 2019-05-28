@@ -6,14 +6,25 @@ summary: ''
 published: false
 
 ---
+**nincs native, build alatt lehuz template projektet es kitolti azokat, es olyan tejplatet huz le amiben sharelve van a schema.**
+
 **An Expo app is different from a React Native project in what sense?**
 
-Expo projects are a special type of React Native projects and Bitrise project scanner detects them as React Native projects. 
+Expo projects are a special type of React Native projects and Bitrise project scanner detects them as React Native projects.
 
 * expo cli: developer tool for creating projects, viewing logs, opening on your device, publishing
 * Expo client: people can access an app through the client
 
->> Expo toolkit using React Native.
+> > Expo toolkit using React Native.
+
+rn projects falls into two cate (rn guide) two options to make projects: in expo cli to generate project or with rn cli (rn init). our scanner in case of expo falls into two pieces: expo gives the cli tool, give a js framework to use in your rn project and if you use these, we create slitghly diff wf than if you didnt use these js: 
+
+* plain react native: no use of expo cli but the rn cli tool to generate
+* exp init comandal generate: in one u use the expo framework and in another case you dont use the framework> separate workflows for these two. our scanner detects automatically
+
+  these are all rn projects but there are more than one tool to create rn projects with additional services> have to build projects differently if the project is made with expo or rn cli.
+* rn melyik quick start-ot kezdte el, nezze meg, link from Krisz.
+* webes oldla nem hasznal native cuccot.
 
 ## Adding an Expo app to bitrise.io
 
@@ -28,13 +39,13 @@ Expo projects are a special type of React Native projects and Bitrise project sc
  7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
  8. At `Project build configuration`,
     * **React Native** get detected automatically. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration).
-    * **Project (or Workspace) path:** ios/bitriseexpokit.xcworkspace (config files) is the Xcode Workspace path of your app which is needed to set up your app on Bitrise
-    * **Scheme name:** bitriseexpokit. The validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
-    * At **Specify iOS Development team**, enter your iOS Development team ID/number and hit Next?
+    * **Project (or Workspace) path:** ios/bitriseexpokit.xcworkspace (config files) is the Xcode Workspace path of your app which is needed to set up your app on Bitrise (not editable) json nev alapjan van kigenerlva.
+    * **Scheme name:** bitriseexpokit. The validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found) app json file alapjan generalodik ki. (expo/name< modisitva adja meg a project es scheme nevet)
+    * At **Specify iOS Development team**, enter your iOS Development team ID hit Next. kell: expo kit eseten native projekt nincs, de ha ios appot akarok az rn projektembol, ehhez az expo egy kommandja letolti a nativ projektet es i azt buildeljuk. az app json alapjan csomo tulajondag kitoltheto de az ios dev id nincs benne.
     * In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
-    * **Module, Variant** - Android specs ?
+    * **Module, Variant** - module by default app selected, variant filled out automatically.(comes from template) can be modified in wf editor by configuring step.
     * **Specify Expo username:** add that
-    * Add your Expo password so that Bitrise can access your Expo project without you having to log in?
+    * Add your Expo password so that Bitrise can access your Expo project without you having to log in? if using expo kit with your project.
     * Confirm your project build configuration.
  9. [Upload an app icon](/getting-started/adding-a-new-app/setting-up-configuration/#adding-an-app-icon-with-the-project-scanner).
 10. At **Webhook setup**, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
@@ -42,12 +53,11 @@ Expo projects are a special type of React Native projects and Bitrise project sc
 {% include message_box.html type="info" title="Settings tab" content="
 These settings can be later modified at the `Settings` page of your app, except for the stack, which you can modify at the `Stack` tab of your Workflow Editor.
 
-You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the `APPS & ARTIFACTS` tab of your Build’s page.
-"%}
+You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the `APPS & ARTIFACTS` tab of your Build’s page. testing addon can be disabled so you can check files in apps and artifacts. "%}
 
-## Installing dependencies [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#installing-dependencies)
+## Installing dependencies 
 
-### Javascript dependencies [⚓](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#javascript-dependencies)
+### Javascript dependencies 
 
 If Bitrise scanner has successfully scanned your app, `Run npm command` or `Run yarn command` steps will be included in your workflow.
 
@@ -55,7 +65,9 @@ In the first `Run npm command` Step, `install`  is the **default value?** in the
 
 ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/run-nmp.png)
 
-`Run yarn command` can install javascript dependencies automatically to your project without having to configure the step manually.
+`Run yarn command` can install javascript dependencies automatically to your project without having to configure the step manually. if the project was made with yarns in this case npm steps will be dropped and yarn steps used.
+
+if project uses expo kit, a cocoapods install step gets into the workflow for ios dependencies.
 
 ### Native dependencies
 
@@ -71,6 +83,8 @@ Creates Xcode and Android Studio projects for your app.
 
 * in deploy workflow after the **Run npm command** Step?
 * what does it do?
+
+in reacts getting started page, if you use expo, no native projects are in your repo. but w/o native you cannot build a project. we cannot use expo build we cannot check user side, solution: generates the andorid and ios native projects and install missing andorid tools read which dependencies are missing, and android build builds the project, same with ios. 
 
 ## Code signing
 
@@ -126,6 +140,8 @@ If you uploaded the correct code signing files, the `Certificate and profile ins
 iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)!
 "%}
 
+nem kell
+
 ### Signing and exporting your iOS project for deployment
 
 If you set up your code signing files and created an .ipa file for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**.
@@ -144,6 +160,16 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
    If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
 
+. Select **Xcode Archive & Export for iOS** step
+
+1\. Open **Force Build Settings** input group
+
+1\. Specify codesign settings
+
+Set **Force code signing with Development Team**, **Force code signing with Code Signing Identity**  
+
+and **Force code signing with Provisioning Profile** inputs regarding to the uploaded codesigning files
+
 ## Testing your project
 
 You can use React Native’s built in testing method, called `jest` to perform unit tests. Add another `Run nmp command` step to your workflow right after the **Run npm command** Step, and type `test` in the `npm command with arguments to run` input field.
@@ -159,6 +185,8 @@ You can share the generated APK/.ipa file with your team members using the build
 1. Go to the `Deploy to bitrise.io` step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK/.ipa file in the `APPS & ARTIFACTS` tab.
 
+code signing- force.
+
 ## Deploying to an app store
 
 If you wish to deploy your iOS app, follow the steps in [Code sign your iOS project for deployment](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
@@ -168,6 +196,9 @@ If you wish to deploy your iOS app, follow the steps in [Code sign your iOS proj
 Have you exported an `app-store` .ipa file yet
 
 Make sure that you have exported an `app-store` .ipa file before starting the deployment procedure to a native marketplace!
+
+1. modify xcode archive step's input fields to the force options.and upload the app store profile and dist certificate **manually**.
+
 
 1. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
 2. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
