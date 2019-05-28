@@ -6,21 +6,21 @@ summary: ''
 published: false
 
 ---
-When you add a new app to Bitrise, we detect the type of your project and generate a basic `bitrise.yml` file for you, with workflows that are appropriate for your project type.
+Bitriseに新たなアプリを追加する場合、Bitriseはプロジェクトの種類を探知しベーシックな`bitrise.yml`ファイルの生成を行うので、その伴ったワークフローは、あなたのプロジェクトの種類に適しています。
 
-With the Bitrise CLI, you can make this work on your own computer. You will need:
+Bitrise CLIを使えば、ご自身のコンピュータ上で行なうことが可能です。必要になるものは以下のとおりです：
 
 * [golang](https://github.com/golang/go)
 * the [**bitrise-init** plugin](https://github.com/bitrise-core/bitrise-init)
 * [Ruby](https://www.ruby-lang.org/en/) version 2.2.2 or higher
 
-{% include message_box.html type="important" title="Go workspace" content="Before you start, make sure that `$GOPATH/bin` is added to `$PATH` on your computer! By default, your Go workspace is at `$HOME/go/bin`."%}
+{% include message_box.html type="important" title="Go workspace" content="始める前に、コンピュータ上の`$PATH`に`$GOPATH/bin`が追加されていることを確認してください！デフォルトでは、Go workspaceは`$HOME/go/bin`にあります。"%}
 
-Once you are ready, open your Terminal/Command Line Interface and go to the folder of your project. Start the plugin:
+準備が整ったら、Terminal/Command Line Interfaceを開いてプロジェクトのフォルダへ進みます。pluginを開始します：
 
     $ bitrise init
 
-The bitrise-init plugin will run all the available scanners to determine the type of the project. These scanners are:
+bitrise-init pluginはプロジェクトの種類を判別するために全ての利用可能なスキャナを実行します。スキャナの一覧は以下のとおりです：
 
 * React Native
 * React Native Expo
@@ -32,7 +32,7 @@ The bitrise-init plugin will run all the available scanners to determine the typ
 * Xamarin
 * fastlane
 
-Depending on the project type, the tool asks for user input: for example, with an iOS project, it asks the user to specify an export method.
+プロジェクトの種類により、そのツールがユーザー入力を要求する場合があります：例えば、iOSプロジェクトを伴う場合、export methodの指定が要求されます。
 
     Select: ipa export method
     Please select from the list:
@@ -42,8 +42,8 @@ Depending on the project type, the tool asks for user input: for example, with a
     [4] : development
     (type in the option's number, then hit Enter) :
 
-Based on the scanner outputs, the plugin generates a Bitrise configuration, with a `bitrise.yml` file. In the automatically generated workflows, every required input will have a valid value.
+スキャナ出力に基づき、pluginは`bitrise.yml`ファイルと共にBitriseの構成を生成します。自動的に生成されたワークフローでは、全ての必要なインプットは有効な値を持っています。
 
-The plugin also generates a `bitrise.secrets.yml` file. You can store [secret Environment Variables](/bitrise-cli/secrets/) in this.
+pluginは`bitrise.secrets.yml`ファイルの生成も行います。[secret環境変数](/bitrise-cli/secrets/)をこの中に保存することが可能です。
 
-Contribute to the bitrise-init project by [creating and submitting your own project type scanner](/bitrise-cli/creating-your-own-bitrise-project-scanner/)!
+[ご自身のproject type scannerを作成・提出](/bitrise-cli/creating-your-own-bitrise-project-scanner/)してbitrise-initプロジェクトに貢献しましょう！
