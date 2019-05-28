@@ -17,7 +17,7 @@ Expo projects are a special type of React Native projects and Bitrise project sc
 
 > > Expo toolkit using React Native.
 
-rn projects falls into two cate (rn guide) two options to make projects: in expo cli to generate project or with rn cli (rn init). our scanner in case of expo falls into two pieces: expo gives the cli tool, give a js framework to use in your rn project and if you use these, we create slitghly diff wf than if you didnt use these js: 
+rn projects falls into two cate (rn guide) two options to make projects: in expo cli to generate project or with rn cli (rn init). our scanner in case of expo falls into two pieces: expo gives the cli tool, give a js framework to use in your rn project and if you use these, we create slitghly diff wf than if you didnt use these js:
 
 * plain react native: no use of expo cli but the rn cli tool to generate
 * exp init comandal generate: in one u use the expo framework and in another case you dont use the framework> separate workflows for these two. our scanner detects automatically
@@ -31,21 +31,17 @@ rn projects falls into two cate (rn guide) two options to make projects: in expo
 {% include message_box.html type="info" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
  1. Log into [bitrise.io](https://www.bitrise.io/).
- 2. Click `Add a new app`.
+ 2. Click **Add a new app**.
  3. Select the privacy setting of your app: **private** and [**public**](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/adding-a-new-app/public-apps/).
- 4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/adding-a-new-app/connecting-a-repository/).
- 5. When prompted to set up repository access, click `No, auto-add SSH key`. Read more about [SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/).
- 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click `Next`.
- 7. At `Validating repository`, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
- 8. At `Project build configuration`,
-    * **React Native** get detected automatically. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration).
-    * **Project (or Workspace) path:** ios/bitriseexpokit.xcworkspace (config files) is the Xcode Workspace path of your app which is needed to set up your app on Bitrise (not editable) json nev alapjan van kigenerlva.
-    * **Scheme name:** bitriseexpokit. The validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found) app json file alapjan generalodik ki. (expo/name< modisitva adja meg a project es scheme nevet)
-    * At **Specify iOS Development team**, enter your iOS Development team ID hit Next. kell: expo kit eseten native projekt nincs, de ha ios appot akarok az rn projektembol, ehhez az expo egy kommandja letolti a nativ projektet es i azt buildeljuk. az app json alapjan csomo tulajondag kitoltheto de az ios dev id nincs benne.
+ 4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
+ 5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
+ 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click **Next**.
+ 7. At **Validating repository**, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
+ 8. At **Project build configuration**, the React Native project type gets automatically selected. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). Bitrise also detects the Module and the Variant type based on your project. Now let's have a look at the fields you manually have to fill out:
+    * If you wish to generate an iOS app from your React Native project, enter your iOS Development team ID at the **Specify iOS Development team** field.
     * In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
-    * **Module, Variant** - module by default app selected, variant filled out automatically.(comes from template) can be modified in wf editor by configuring step.
-    * **Specify Expo username:** add that
-    * Add your Expo password so that Bitrise can access your Expo project without you having to log in? if using expo kit with your project.
+    * In **Specify Expo username** enter your username and hit **Next**.
+    * In **Specify Expo password**, enter your password and hit **Next**. You only need to provide your Expo credentials if you've been using ExpoKit with your project.
     * Confirm your project build configuration.
  9. [Upload an app icon](/getting-started/adding-a-new-app/setting-up-configuration/#adding-an-app-icon-with-the-project-scanner).
 10. At **Webhook setup**, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
@@ -55,9 +51,9 @@ These settings can be later modified at the `Settings` page of your app, except 
 
 You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the `APPS & ARTIFACTS` tab of your Build’s page. testing addon can be disabled so you can check files in apps and artifacts. "%}
 
-## Installing dependencies 
+## Installing dependencies
 
-### Javascript dependencies 
+### Javascript dependencies
 
 If Bitrise scanner has successfully scanned your app, `Run npm command` or `Run yarn command` steps will be included in your workflow.
 
@@ -84,7 +80,7 @@ Creates Xcode and Android Studio projects for your app.
 * in deploy workflow after the **Run npm command** Step?
 * what does it do?
 
-in reacts getting started page, if you use expo, no native projects are in your repo. but w/o native you cannot build a project. we cannot use expo build we cannot check user side, solution: generates the andorid and ios native projects and install missing andorid tools read which dependencies are missing, and android build builds the project, same with ios. 
+in reacts getting started page, if you use expo, no native projects are in your repo. but w/o native you cannot build a project. we cannot use expo build we cannot check user side, solution: generates the andorid and ios native projects and install missing andorid tools read which dependencies are missing, and android build builds the project, same with ios.
 
 ## Code signing
 
@@ -166,7 +162,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
 1\. Specify codesign settings
 
-Set **Force code signing with Development Team**, **Force code signing with Code Signing Identity**  
+Set **Force code signing with Development Team**, **Force code signing with Code Signing Identity**
 
 and **Force code signing with Provisioning Profile** inputs regarding to the uploaded codesigning files
 
@@ -198,17 +194,15 @@ Have you exported an `app-store` .ipa file yet
 Make sure that you have exported an `app-store` .ipa file before starting the deployment procedure to a native marketplace!
 
 1. modify xcode archive step's input fields to the force options.and upload the app store profile and dist certificate **manually**.
-
-
-1. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
-2. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
+2. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
+3. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
 
    The Step will need your:
    * Apple ID
    * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars#about-secrets).
-3. [Start a build](https://mpxzvqn7ysfysw.preview.forestry.io/builds/Starting-builds-manually/).
+4. [Start a build](https://mpxzvqn7ysfysw.preview.forestry.io/builds/Starting-builds-manually/).
 
    If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
 
