@@ -76,12 +76,14 @@ You can use React Native’s built in testing method, called `jest` to perform u
 1. Add another `Run nmp command` step to your workflow right after the first **Run npm command** Step.
 2. Type `test` in the `npm command with arguments to run` input field.
 
-	![](https://mpxzvqn7ysfysw.preview.forestry.io/img/test-npm.png)
+   ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/test-npm.png)
 3. Start a build.
 
 You can view the test artifacts on the [Test reports](/testing/test-reports/) page of your build.
 
 ## Building your project
+
+If you've been using Expo to build your project, there are no native projects in your repo. This Step generated an Android and iOS native projects which are not present in your repo if you've been using Expo. Install Steps will install the missing android or iOS tools and the build steps will build your native projects.
 
 ![](/img/expo.jpg)
 
