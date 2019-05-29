@@ -81,7 +81,6 @@ pages:
 - _articles/en/reviews/API/introduction-to-the-bitrise-api.md
 - _articles/en/reviews/API/endpoints-and-testing-the-api.md
 - _articles/en/reviews/whitelisting-ips-draft.md
-- _articles/en/reviews/managing-build-artifacts.md
 - _articles/en/reviews/API/authentication.md
 - _articles/en/reviews/fastlane.md
 - _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
