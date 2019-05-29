@@ -1021,7 +1021,10 @@ nav#my-toc {
 		font-size: 1.4rem;
 		font-weight: bold;
 		text-transform: uppercase;
+<<<<<<< HEAD
 		color: #616161;
+=======
+>>>>>>> 4e3c226a01d98aca598804f2855c916a0f5b56aa
 	}
 
 	.article-box {

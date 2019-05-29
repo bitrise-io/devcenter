@@ -19,7 +19,7 @@
     {% if sameTagCount >= minCommonTags %}
     {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
       {% if maxRelatedCounter == 1 %}
-        <div class="related-articles">Related articles</div>
+        <div class="related-articles"><span>Related articles</span></div>
       {% endif %}
       <div class="container">
         <a href="{{ article.url }}">
