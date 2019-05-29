@@ -75,20 +75,20 @@ There are two separate ways to assign one or more groups to an app that is owned
 
 1. Sign in with an account that is an **owner** of the organization and open its profile page.
 2. Go to your organization's profile page: click `Switch Profile` on the top left corner and select the organization you need.
-	![](/img/switch-profile-without-border.jpg)
-    
-	![](/img/switch-profile-border.jpg)
+   ![](/img/switch-profile-without-border.jpg)
 
+   ![](/img/switch-profile-border.jpg)
 
-  
-	![](/img/switch-profile-with-arrow.jpg)
-3. mnnbn
+   ![](/img/switch-profile-with-arrow.jpg)
 4. On the left, select `Groups` from the menu options.
 5. Choose the group you wish to assign, and click the dropdown menu indicated by the `...` symbol.
 6. Click `Assign group to apps`.
 
-   ![](/img/assign-group-to-apps.jpg)
-7. Find the app(s) you need and select the appropriate role for the group. You can check out the role cheatsheet on any app's `Team` tab.
+  
+	![](/img/assign-group-to-apps.jpg)
+
+	![](/img/assign-group-to-apps-border.jpg)
+2. Find the app(s) you need and select the appropriate role for the group. You can check out the role cheatsheet on any app's `Team` tab.
 
    ![](/img/popup-assign.png)
 
