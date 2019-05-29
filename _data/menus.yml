@@ -92,10 +92,6 @@ main:
   weight: 5
 android-deploy:
 - weight: 2
-  title: Deploying Android apps
-- weight: 1
-  title: Deploying Android apps
-- weight: 4
   title: Generating and deploying multiple flavor APKs in a single build
 ios-deploy:
 - weight: 2

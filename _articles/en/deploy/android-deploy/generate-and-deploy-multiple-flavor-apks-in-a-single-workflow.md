@@ -4,7 +4,7 @@ date: 2018-10-26T12:56:08.000+00:00
 redirect_from: []
 menu:
   android-deploy:
-    weight: 3
+    weight: 1
     title: Generating and deploying multiple flavor APKs in a single build
 
 ---
