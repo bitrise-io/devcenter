@@ -241,6 +241,7 @@ header.top-bar {
 				line-height: 1.5;
 				width: 150px;
 				text-align: center;
+				margin: auto;
 				cursor: pointer;
 
 				.sign-up {
@@ -1146,13 +1147,17 @@ footer {
 	.middle-aligner {
 		max-width: 80%;
 	}
+
+	.cta {
+		padding-right: 5%;
+	}
 }
 
 @media only screen and (max-width: 50em) {
 
 	main.content {
 		max-width: 100%;
-		margin-left: 0;
+		margin-left: 5%;
 		margin-top: 1rem;
     padding: 0;
 
