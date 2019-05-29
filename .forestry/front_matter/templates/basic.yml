@@ -32,6 +32,7 @@ pages:
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
+- _articles/en/getting-started/builds-and-workflows.md
 - _articles/en/getting-started/signing-up/logging-in-to-bitrise.md
 - _articles/en/getting-started/index.md
 - _articles/en/getting-started/account-security.md
