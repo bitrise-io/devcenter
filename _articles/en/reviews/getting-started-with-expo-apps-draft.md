@@ -8,13 +8,6 @@ published: false
 ---
 [Expo](https://docs.expo.io/versions/v32.0.0/) is a popular toolchain built on React Native which allows you to quickly get a React Native app up and running without having to fiddle with Xcode or Android Studio.
 
-Expo projects are a special type of React Native projects and Bitrise project scanner detects them as React Native projects.
-
-* expo cli: developer tool for creating projects, viewing logs, opening on your device, publishing
-* Expo client: people can access an app through the client
-
-> > Expo toolkit using React Native.
-
 You can generate React Native projects [with the Expo CLI or with the React Native CLI](https://facebook.github.io/react-native/docs/getting-started.html).  If you create a plain React Native project, you will use the React Native CLI. Bitrise project scanner detects if you have used an Expo framework or not and sets up your workflow accordingly.
 
 ## Adding an Expo app to bitrise.io
