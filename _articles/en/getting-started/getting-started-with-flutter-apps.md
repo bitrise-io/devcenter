@@ -1,7 +1,16 @@
 ---
 title: Getting started with Flutter apps
 redirect_from: []
-date: 2019-01-25T13:26:58.000+00:00
+date: '2019-01-25T13:26:58.000+00:00'
+tag:
+- getting-started
+- flutter
+- code-signing
+- testing
+- deploy
+summary: 'Go through the procedure of adding a Flutter app on Bitrise from start to
+  finish, from adding the app to deploying it. Learn about managing dependencies,
+  testing, and code signing. '
 menu:
   getting-started-main:
     weight: 23
