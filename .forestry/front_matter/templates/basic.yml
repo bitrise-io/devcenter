@@ -122,3 +122,4 @@ pages:
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
 - _articles/en/steps-and-workflows/getting-started-steps.md
+- _articles/en/getting-started/code-security.md
