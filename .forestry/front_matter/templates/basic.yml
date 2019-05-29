@@ -118,6 +118,7 @@ pages:
 - _articles/en/code-signing/ios-code-signing/code-signing.md
 - _articles/en/builds/configuring-notifications.md
 - _articles/en/builds/remote-access.md
+- _articles/en/builds/build-logs.md
 - _articles/en/steps-and-workflows/getting-started-workflows.md
 - _articles/en/reviews/managing-the-apps-of-organizations-image-game.md
 - _articles/jp/testing/test-reports.md
