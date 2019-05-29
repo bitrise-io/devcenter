@@ -5,7 +5,7 @@ redirect_from:
 - "/tutorials/deploy/android-deployment/"
 menu:
   android-deploy:
-    weight: 1
+    weight: 2
 
 ---
 {% include not_translated_yet.html %}

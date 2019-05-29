@@ -29,4 +29,4 @@ To set a given Step to be skipped if the previous Step failed:
 
 You can also disable a Step by a given condition, or just set it to never run in a specific workflow. The latter can be useful if, for example, you want to keep a Step's exact configuration but not use the Step itself for a while. 
 
-This can only be done in `yaml` mode: go to the `bitrise.yml` tab in your app's Workflow Editor and edit the file directly. To read about the specific conditions you can set, check out our [Enabling or disabling a Step conditionally](/tips-and-tricks/disable-a-step-by-condition/) guide. 
+This can only be done in `yaml` mode: go to the `bitrise.yml` tab in your app's Workflow Editor and edit the file directly. To read about the specific conditions you can set, check out our [Enabling or disabling a Step conditionally](/tips-and-tricks/disable-a-step-by-condition/) guide.
