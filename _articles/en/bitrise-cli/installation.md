@@ -1,5 +1,11 @@
 ---
 title: Installing and updating the Bitrise CLI
+tag:
+- cli
+- bitrise
+summary: 'The Bitrise CLI allows you to run your builds offline, on your own machine.
+  Install it with curl or homebrew, and update it using itself. '
+redirect_from: []
 menu:
   bitrise-cli-main:
     weight: 3
