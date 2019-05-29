@@ -5,6 +5,13 @@ redirect_from:
 - "/getting-started/getting-started-steps"
 - "/getting-started/builds-and-workflows/getting-started/getting-started-steps"
 - "/getting-started/manage-your-bitrise-workflow/"
+tag:
+- getting-started
+- steps
+- workflows
+summary: 'Steps are the heart of Bitrise. A Step is a build task: for example, the
+  Git Clone Step clones your git repository at the start of a build while the Google
+  Play Deploy Step can deploy your finished app to the Play Store.'
 menu:
   steps-workflows-main:
     weight: 1

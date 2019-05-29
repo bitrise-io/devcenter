@@ -11,18 +11,17 @@ Installing the Bitrise CLI is super simple. It is distributed as a single binary
 
 1. Run the following command in a bash shell:
 
-    ``` bash
-    curl -fL https://github.com/bitrise-io/bitrise/releases/download/1.21.0/bitrise-$(uname -s)-$(uname -m) > /usr/local/bin/bitrise
-    ```
-    You can check the latest release of the Bitrise CLI on its [releases](https://github.com/bitrise-io/bitrise/releases) page.
+   ``` bash
+   curl -fL https://github.com/bitrise-io/bitrise/releases/download/1.21.0/bitrise-$(uname -s)-$(uname -m) > /usr/local/bin/bitrise
+   ```
 
-1. Make the downloaded binary executable:
+   You can check the latest release of the Bitrise CLI on its [releases](https://github.com/bitrise-io/bitrise/releases) page.
+2. Make the downloaded binary executable:
 
-    ``` bash
-    chmod +x /usr/local/bin/bitrise
-    ```
-
-1. Run `bitrise setup`. This will verify if everything that is required for Bitrise to run is installed and available. If you skip this, the CLI will perform the setup anyway the first time you call `bitrise run`.
+   ``` bash
+   chmod +x /usr/local/bin/bitrise
+   ```
+3. Run `bitrise setup`. This will verify if everything that is required for Bitrise to run is installed and available. If you skip this, the CLI will perform the setup anyway the first time you call `bitrise run`.
 
 In any case, `bitrise setup` can be called at any time to validate the installation.
 
@@ -32,11 +31,10 @@ If you have the `Homebrew` package manager installed on your Mac, you can use it
 
 1. Open the `Terminal` app on your Mac and run:
 
-    ``` bash
-    brew update && brew install bitrise
-    ```
-
-1. Run `bitrise setup`. This will verify if everything that is required for Bitrise to run is installed and available. If you skip this, the CLI will perform the setup anyway the first time you call `bitrise run`.
+   ``` bash
+   brew update && brew install bitrise
+   ```
+2. Run `bitrise setup`. This will verify if everything that is required for Bitrise to run is installed and available. If you skip this, the CLI will perform the setup anyway the first time you call `bitrise run`.
 
 ## Updating the Bitrise CLI
 

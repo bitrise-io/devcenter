@@ -33,6 +33,7 @@ pages:
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
 - _articles/en/getting-started/signing-up/logging-in-to-bitrise.md
+- _articles/en/getting-started/index.md
 - _articles/jp/builds/configuring-notifications.md
 - _articles/jp/getting-started/getting-started-with-flutter-applications.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
@@ -110,6 +111,7 @@ pages:
 - _articles/en/testing/device-testing-for-android.md
 - _articles/en/builds/configuring-notifications.md
 - _articles/en/builds/remote-access.md
+- _articles/en/steps-and-workflows/getting-started-workflows.md
 - _articles/en/reviews/managing-the-apps-of-organizations-image-game.md
 - _articles/jp/testing/test-reports.md
 - _articles/en/reviews/getting-started-with-expo-apps-draft.md
@@ -118,3 +120,4 @@ pages:
 - _articles/en/reviews/android-unit-testing-draft.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
+- _articles/en/steps-and-workflows/getting-started-steps.md
