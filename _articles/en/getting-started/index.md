@@ -11,6 +11,8 @@ menu:
 ---
 Bitrise is powerful and complex - but getting started is easy and intuitive! You can kick off your first build within minutes of signing up. Let's go over what you need to do make that happen!
 
+What if I add something?
+
 ## Signing up to Bitrise
 
 First of all, you need a Bitrise account. Choose one of the following to sign up:
