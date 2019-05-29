@@ -1,7 +1,13 @@
 ---
 title: 'Managing files on Bitrise '
-date: 2018-12-03T10:05:49.000+00:00
+date: '2018-12-03T10:05:49.000+00:00'
 redirect_from: []
+tag:
+- getting-started
+- files
+- artifacts
+summary: 'Upload files to use in your build, including code signing files. Download
+  files generated during a build. Use encryption on Bitrise to secure your files. '
 menu:
   getting-started-main:
     weight: 16
