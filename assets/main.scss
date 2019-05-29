@@ -407,7 +407,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/getting-started-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/getting-started.svg#open-filter);
 				}
 			}
 
@@ -418,7 +418,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/cpu-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/cpu.svg#open-filter);
 				}
 			}
 
@@ -429,7 +429,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/dudes-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/dudes.svg#open-filter);
 				}
 			}
 
@@ -440,7 +440,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/webhooks-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/webhooks.svg#open-filter);
 				}
 			}
 
@@ -451,7 +451,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/workflow-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/workflow.svg#open-filter);
 				}
 			}
 
@@ -462,7 +462,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					filter: url(/assets/logos/icons-docs/build.svg#open-filter);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/build.svg#open-filter);
 				}
 			}
 
@@ -473,7 +473,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/code-signing-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/code-signing.svg#open-filter);
 				}
 			}
 
@@ -484,7 +484,7 @@ nav#side-menu {
  				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/cache-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/cache.svg#open-filter);
 				}
  			}
 
@@ -492,6 +492,10 @@ nav#side-menu {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/testing.svg);
+				}
+
+				&.open:before {
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/testing.svg#open-filter);
 				}
 			}
 
@@ -502,7 +506,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/deployment-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/deployment.svg#open-filter);
 				}
 			}
 
@@ -513,7 +517,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/window-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/window.svg#open-filter);
 				}
 			}
 
@@ -524,7 +528,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/info_main-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/info_main.svg#open-filter);
 				}
 			}
 
@@ -535,7 +539,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/lightbuld_main-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/lightbulb_main.svg#open-filter);
 				}
 			}
 
@@ -546,7 +550,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/support-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/support.svg#open-filter);
 				}
 			}
 
@@ -557,7 +561,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/bug-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/bug.svg#open-filter);
 				}
 			}
 
@@ -568,7 +572,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/code-focus.svg);
+					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/code.svg#open-filter);
 				}
 			}
 
