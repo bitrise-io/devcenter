@@ -1,5 +1,12 @@
 ---
 title: Android code signing procedures
+tag:
+- android
+- code-signing
+summary: 'Before you distribute your app through Google Play Store, your APK file
+  must be digitally signed. Find out the different ways of signing your Android app
+  on Bitrise. '
+redirect_from: []
 menu:
   android-code-signing:
     weight: 1
@@ -7,7 +14,7 @@ menu:
 ---
 Before you distribute your app through [Google Play Store](https://play.google.com/store/apps), your APK file must be digitally signed.
 
-You can specify the code signing configuration for your project in Android Studio or manually in your Gradle configuration. You can also use the `Sign ApK` step in your Bitrise Workflow Editor to have your APK signed automatically.
+You can specify the code signing configuration for your project in Android Studio or manually in your Gradle configuration. You can also use the **Sign APK** step in your Bitrise Workflow Editor to have your APK signed automatically.
 
 {% include message_box.html type="info" title="Different Android code signing procedures:" content="
 

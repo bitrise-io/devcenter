@@ -130,3 +130,4 @@ pages:
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
 - _articles/en/steps-and-workflows/getting-started-steps.md
 - _articles/en/getting-started/code-security.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-procedures.md
