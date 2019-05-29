@@ -23,7 +23,6 @@ sections:
 - type: document
   path: deploy.md
   label: DEPLOY
-  match: "**/*"
 - type: heading
   label: DevCenter articles
 - type: directory
