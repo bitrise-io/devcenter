@@ -17,14 +17,7 @@ Expo projects are a special type of React Native projects and Bitrise project sc
 
 > > Expo toolkit using React Native.
 
-rn projects falls into two cate (rn guide) two options to make projects: in expo cli to generate project or with rn cli (rn init). our scanner in case of expo falls into two pieces: expo gives the cli tool, give a js framework to use in your rn project and if you use these, we create slitghly diff wf than if you didnt use these js:
-
-* plain react native: no use of expo cli but the rn cli tool to generate
-* exp init comandal generate: in one u use the expo framework and in another case you dont use the framework> separate workflows for these two. our scanner detects automatically
-
-  these are all rn projects but there are more than one tool to create rn projects with additional services> have to build projects differently if the project is made with expo or rn cli.
-* rn melyik quick start-ot kezdte el, nezze meg, link from Krisz.
-* webes oldla nem hasznal native cuccot.
+You can generate React Native projects [with the Expo CLI or with the React Native CLI](https://facebook.github.io/react-native/docs/getting-started.html).  If you create a plain React Native project, you will use the React Native CLI. Bitrise project scanner detects if you have used an Expo framework or not and sets up your workflow accordingly.
 
 ## Adding an Expo app to bitrise.io
 
