@@ -1,7 +1,14 @@
 ---
 title: Getting started with iOS apps
-date: 2018-09-12T15:27:42.000+00:00
+date: '2018-09-12T15:27:42.000+00:00'
 redirect_from: []
+tag:
+- deploy
+- getting-started
+- ios
+- code-signing
+summary: 'Go through the procedure of adding an iOS app on Bitrise from start to finish,
+  from adding the app to deploying it. Learn about Xcode testing and code signing. '
 menu:
   getting-started-main:
     weight: 18
