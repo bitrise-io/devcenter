@@ -19,6 +19,12 @@ sections:
   create: all
   match: "**/*"
 - type: heading
+  label: Deploying
+- type: document
+  path: deploy.md
+  label: DEPLOY
+  match: "**/*"
+- type: heading
   label: DevCenter articles
 - type: directory
   path: _articles/en
