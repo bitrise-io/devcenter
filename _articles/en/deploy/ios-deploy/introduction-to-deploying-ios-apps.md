@@ -2,9 +2,11 @@
 title: Introduction to deploying iOS apps
 date: '2018-10-26T12:49:32.000+00:00'
 redirect_from: []
-menu:
-  ios-deploy:
-    weight: 1
+tag:
+- ios
+- deploy
+summary: 'Find out the basics about deploying your iOS app using Bitrise: where you
+  can deploy, what files you need, how to configure your app for deployment. '
 
 ---
 Once you built your app and ran unit tests and UI tests on it, it's time to deploy it. 
