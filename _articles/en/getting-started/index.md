@@ -4,6 +4,15 @@ redirect_from:
 - "/getting-started/adding-a-new-app/"
 - "/getting-started/create-your-first-app-on-bitrise/"
 - "/getting-started/add-your-first-step-to-your-workflow/"
+tag:
+- getting-started
+- sign-up
+- add-app
+- webhooks
+- builds
+- workflows
+summary: 'Get started with Bitrise: sign up, add an app, start a build. Find out how
+  to register webhooks, set up organizations, and learn the basics of Steps and Workflows.'
 menu:
   getting-started-main:
     weight: 4
