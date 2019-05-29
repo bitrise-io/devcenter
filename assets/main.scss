@@ -677,12 +677,12 @@ h4 {
 	a {
 		word-break: break-word;
 		text-decoration: none;
-		color: #7e57c2;
+		color: #760fc3;
 		transition: color .125s;
     display: normal;
 
 		&:hover, &:focus {
-			color: $color-deep_purple_shady;
+			color: #683d87;
 		}
 	}
 
@@ -954,18 +954,15 @@ nav#my-toc {
   font-family: TTNorms;
 	padding-top: 4rem;
 	padding-left: 2rem;
-	line-height: 1.8;
 	position: fixed;
 	}
 
 	.side-toc:before {
-		font-weight: 600;
 		content: "Contents";
-		padding-bottom: 1rem;
-		padding-left: 2rem;
-		text-overflow: ellipsis;
-		overflow: hidden;
 		display: block;
+		padding-bottom: 0.825rem;
+		padding-left: 2rem;
+		font-weight: 600;
 		font-size: 1.7rem;
 		color: #683d87;
 	}
@@ -975,7 +972,15 @@ nav#my-toc {
 		font-size: 1.4rem;
 		border-left: 2px solid #dbc3ed;;
 		padding-left: 2rem;
+		line-height: 1.6;
+		padding-bottom: 0.625rem;
+
 	}
+
+	li ul {
+		padding-top: 0.5rem;
+	}
+
 
 	li.toc-entry.toc-h2 a {
 		text-decoration: none;
@@ -983,11 +988,11 @@ nav#my-toc {
 		color: #000;
 
 		 &.current {
-		 color: #7e57c2;
+		 color: #760fc3;
 	  }
 
 		 &:hover, &:focus {
-		 color: $color-deep_purple_shady;
+		 color: #760fc3;
 	  }
 	}
 
@@ -995,6 +1000,8 @@ nav#my-toc {
 		list-style-type: none;
 		font-size: 1.3rem;
 		margin-left: -12.5%;
+		line-height: 1.4;
+		padding-bottom: 0.5rem;
 	}
 
 	li.toc-entry.toc-h3 a {
@@ -1158,7 +1165,7 @@ footer {
 	}
 
 	.cta {
-		padding-right: 5%;
+		padding-right: 3rem;
 	}
 }
 
