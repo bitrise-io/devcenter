@@ -1,23 +1,26 @@
 ---
 title: Deploying Android apps
-date: 2018-10-26T13:00:41.000+00:00
+date: '2018-10-26T13:00:41.000+00:00'
 redirect_from:
 - "/tutorials/deploy/android-deployment/"
-menu:
-  android-deploy:
-    weight: 1
+tag:
+- deploy
+- android
+summary: Find out how you can deploy the APK built from your Android app to both bitrise.io
+  and to the Google Play Store. Learn about Google Play API access and the JSON key
+  file.
 
 ---
 This guide describes how you can add your Android project to [bitrise.io](https://www.bitrise.io) and deploy the APK built from your project to [Google Play Store](https://play.google.com/store). We're using the [sample-apps-android-googleplay](https://github.com/bitrise-samples/sample-apps-android-googleplay) app as an example for this tutorial.
 
 In this guide, you will learn how to:
 
-* create an Android project on [bitrise.io](https://www.bitrise.io)
+* create an Android app on [bitrise.io](https://www.bitrise.io)
 * set up a [Google Play Store](https://play.google.com/store) project
 * set up [Google Play API](https://developers.google.com/android-publisher/getting_started) access
 * [deploy to Google Play Store](#deploy-to-google-play-store-using-bitrise-google-play-deploy-step) using Bitrise's `Google Play Deploy` step
 
-## Creating your Android project on [bitrise.io](https://www.bitrise.io)
+## Adding your Android app on [bitrise.io](https://www.bitrise.io)
 
 * Log into [bitrise.io](htts://www.bitrise.io).
 * Create a [new Bitrise project](getting-started/adding-a-new-app). Bitrise scans your Android project and creates the initial configuration for it.
@@ -26,7 +29,7 @@ In this guide, you will learn how to:
   Do not forget to **upload your keystore file** to [bitrise.io](https://www.bitrise.io).
 
   Once your code signing is completed, your config will look like this:
-      
+
       {% raw %}
       workflows:
       deploy:
@@ -92,7 +95,7 @@ You can notify user groups or individual users that your APK file has been built
    * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
 
 The final configuration looks like this:
-    
+
     {% raw %}
     workflows:
     deploy:

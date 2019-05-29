@@ -113,6 +113,7 @@ pages:
 - _articles/en/api/adding-and-managing-apps.md
 - _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
 - _articles/en/testing/device-testing-for-ios.md
+- _articles/en/deploy/android-deploy/deploying-android-apps.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/testing/device-testing-for-android.md
