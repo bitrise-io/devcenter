@@ -6,9 +6,7 @@ summary: ''
 published: false
 
 ---
-**nincs native, build alatt lehuz template projektet es kitolti azokat, es olyan tejplatet huz le amiben sharelve van a schema.**
-
-**An Expo app is different from a React Native project in what sense?**
+[Expo](https://docs.expo.io/versions/v32.0.0/) is a popular toolchain built on React Native which allows you to quickly get a React Native app up and running without having to fiddle with Xcode or Android Studio.
 
 Expo projects are a special type of React Native projects and Bitrise project scanner detects them as React Native projects.
 
@@ -30,11 +28,13 @@ You can generate React Native projects [with the Expo CLI or with the React Nati
  5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
  6. Type the name of the branch that includes your project’s configuration - master, for example, - then click **Next**.
  7. At **Validating repository**, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
- 8. At **Project build configuration**, the React Native project type gets automatically selected. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). Bitrise also detects the Module and the Variant type based on your project. Now let's have a look at the fields you manually have to fill out:
+ 8. At **Project build configuration**, the React Native project type gets automatically selected. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). Bitrise also detects the Module and the Variant type based on your project.
+
+    Now let's have a look at the fields you manually have to fill out:
     * If you wish to generate an iOS app from your React Native project, enter your iOS Development team ID at the **Specify iOS Development team** field.
     * In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
     * In **Specify Expo username** enter your username and hit **Next**.
-    * In **Specify Expo password**, enter your password and hit **Next**. You only need to provide your Expo credentials if you've been using ExpoKit with your project.
+    * In **Specify Expo password**, enter your password and hit **Next**. You only need to provide your Expo credentials if you've been using [ExpoKit](https://docs.expo.io/versions/v32.0.0/expokit/overview/) with your project.
     * Confirm your project build configuration.
  9. [Upload an app icon](/getting-started/adding-a-new-app/setting-up-configuration/#adding-an-app-icon-with-the-project-scanner).
 10. At **Webhook setup**, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
@@ -44,15 +44,30 @@ These settings can be later modified at the `Settings` page of your app, except 
 
 You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the `APPS & ARTIFACTS` tab of your Build’s page.
 
+## Ejecting your app
+
+React Native apps built with Expo do not come with native modules. If you wish to use one of our build Steps in your deploy workflow, you must first eject your React Native project and add the necessary native modules to it. Then our native dependency installer Steps take care of installing the missing native dependencies so that your project is ready for building and then shipping.
+
+Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps. 
+
+![](/img/expo.jpg)
+
+Creates Xcode and Android Studio projects for your app.
+
+* in deploy workflow after the **Run npm command** Step?
+* what does it do?
+
+in reacts getting started page, if you use expo, no native projects are in your repo. but w/o native you cannot build a project. we cannot use expo build we cannot check user side, solution: generates the andorid and ios native projects and install missing andorid tools read which dependencies are missing, and android build builds the project, same with ios.
+
 ## Installing dependencies
 
 ### Javascript dependencies
 
-If Bitrise scanner has successfully scanned your app, `Run npm command` or `Run yarn command` steps will be included in your workflow depending on your project configuration.
+If Bitrise scanner has successfully scanned your app, depending on your project configuration `Run npm command` or `Run yarn command` Steps will be included in your workflow.
 
-In the `Run npm command` Step, `install`  is the default in the `npm command with arguments to run` input field so that the Step can add JavaScript dependencies to your project.
+In the `Run npm command` Step, `install`  is the default value in the `npm command with arguments to run` input field. This way the Step can add JavaScript dependencies to your project.
 
-![](https://mpxzvqn7ysfysw.preview.forestry.io/img/run-nmp.png)
+![](/img/expo-npm-command.jpg)
 
 `Run yarn command` can install javascript dependencies automatically to your project without having to configure the step manually.
 
@@ -60,9 +75,9 @@ In the `Run npm command` Step, `install`  is the default in the `npm command wit
 
 `Install missing Android SDK components` Step installs the missing native dependencies for your Android project - luckily this steps is by default included in your deploy workflow.
 
-If the projects uses the ExpoKit, the `Run CocoaPods install` Step automatically gets added to to your deploy workflow.
+If you've been using the ExpoKit to develop your app, the `Run CocoaPods install` Step automatically gets added to to your deploy workflow to take care of any missing iOS dependencies.
 
-## Testing your project
+## Testing your app
 
 You can use React Native’s built in testing method, called `jest` to perform unit tests.
 
@@ -74,26 +89,13 @@ You can use React Native’s built in testing method, called `jest` to perform u
 
 You can view the test artifacts on the [Test reports](/testing/test-reports/) page of your build.
 
-## Building your project
-
-If you've been using Expo to build your project, there are no native projects in your repo. This Step generated an Android and iOS native projects which are not present in your repo if you've been using Expo. Install Steps will install the missing android or iOS tools and the build steps will build your native projects.
-
-![](/img/expo.jpg)
-
-Creates Xcode and Android Studio projects for your app.
-
-* in deploy workflow after the **Run npm command** Step?
-* what does it do?
-
-in reacts getting started page, if you use expo, no native projects are in your repo. but w/o native you cannot build a project. we cannot use expo build we cannot check user side, solution: generates the andorid and ios native projects and install missing andorid tools read which dependencies are missing, and android build builds the project, same with ios.
-
 ## Code signing
 
 A Expo app can consists of two projects, an Android and an iOS - both must be properly code signed. If you click on the `Code Signing` tab of your project’s Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
 
 Let’s see how to fill them out!
 
-### Signing your Android project
+### Signing your Android app
 
 1. Select the `deploy` workflow at the `WORKFLOW` dropdown menu in the top left corner of your apps’ Workflow Editor.
 2. Go to the `Code Signing` tab.
@@ -108,7 +110,7 @@ Let’s see how to fill them out!
 
 The Android chunk of code signing is done. Let's continue with iOS!
 
-### Signing and exporting your iOS project for testing
+### Signing and exporting your iOS app for testing
 
 Code signing your iOS project depends on what you wish to do with the exported .ipa file. In this section, we describe how to code sign your project if you wish to **install and test it on internal testers’ registered devices**. You will need an .ipa file exported with the `development` export method to share your project with testers.
 
@@ -143,7 +145,7 @@ iOS code signing is often not this simple - read more about how [iOS code signin
 
 nem kell
 
-### Signing and exporting your iOS project for deployment
+### Signing and exporting your iOS app for deployment
 
 If you set up your code signing files and created an .ipa file for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**.
 
@@ -225,3 +227,5 @@ Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE
    * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
 
 And that’s it! Start a build and release your Android app to the app store of your choice.
+
+Because our application will contain native modules, we will need to [eject to_ExpoKit _](https://docs.expo.io/versions/v30.0.0/expokit/eject)(using the _ExpoKit_ option). Including _ExpoKit_ in the project allows us to continue to use the _Expo_ APIs, over-the-air _JavaScript_ updates, and much of the _Expo_ development process.
