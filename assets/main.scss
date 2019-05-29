@@ -1061,9 +1061,18 @@ nav#my-toc {
 			font-size: 1.5rem;
 			color: #683d87;
 			cursor: pointer;
+			line-height: 1.5;
+			padding: 0.625rem 0;
+			display: flex;
 
 			&:hover, &:focus {
 				color: #760fc3;
+			}
+
+			&:before {
+				content: url(/assets/logos/icons/doc.svg);
+				margin-right: 0.825rem;
+				transform: translateY(-0.2rem);
 			}
 		}
 

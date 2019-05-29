@@ -24,7 +24,7 @@
       <div class="container">
         <a href="{{ article.url }}">
           <div class="article-box">
-            <label class="related-title">{{ article.title }}</label>
+            <span class="related-title">{{ article.title }}</span>
             <p>{{ article.summary | strip_html | truncatewords: 30 }}</p>
           </div>
         </a>
