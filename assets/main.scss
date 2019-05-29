@@ -56,7 +56,7 @@ header.top-bar {
 	padding-bottom: $spacing-header-vertical;
 	font-size: 180%;
 	font-weight: 100;
-	background-color: $color-deep_purple;
+	background-color: #683d87;
 	color: white;
 	position: fixed;
 	z-index: 1000;
@@ -72,9 +72,7 @@ header.top-bar {
 		.subgroup {
 			display: flex;
 			align-items: center;
-			width: 676px;
-			min-width: 0;
-			margin-right: 2rem;
+			width: 30%;
 
 			a.logo {
 				margin: (-$spacing-header-vertical) 2rem (-$spacing-header-vertical) (-$padding-logo-horizontal);
@@ -110,13 +108,14 @@ header.top-bar {
 					white-space: nowrap;
 					overflow: hidden;
 					text-overflow: ellipsis;
-				}
-      }
-		}
-
+			 }
+		 }
+	 }
 		.search-bar {
 			flex: 0 0 30%;
+			max-width: 30%;
 			position: relative;
+			margin: 0;
 
 			.input-wrapper {
 				position: relative;
@@ -127,7 +126,7 @@ header.top-bar {
 					left: 1rem;
 
 					&:before {
-						content: url(/assets/logos/icons/magnifier.svg);
+						content: url(/assets/logos/icons-docs/magnifier.svg);
 					}
 				}
 
@@ -171,16 +170,16 @@ header.top-bar {
 				.search-clear {
 					display: block;
 					position: absolute;
-					top: - 0.4rem;
+					line-height: 1.5;
+					top: -0.5rem;
 					right: 0;
 					border: none;
 					padding: 1rem;
-					font-size: 2rem;
 					background-color: transparent;
 					cursor: pointer;
 
 					&:before {
-						content: url(/assets/logos/icons/close-small.svg);
+						content: url(/assets/logos/icons-docs/close-small.svg);
 					}
 				}
 			}
@@ -229,6 +228,30 @@ header.top-bar {
 				opacity: 0.7;
 			}
 		}
+
+		.cta {
+			margin-left: auto;
+			flex-flow: row-reverse;
+
+			.bitbutton {
+				background-color: #0dd3c5;
+				border: none;
+				border-radius: 4px;
+				padding: 0.625rem 0.625rem;
+				line-height: 1.5;
+				width: 150px;
+				text-align: center;
+				cursor: pointer;
+
+				.sign-up {
+					color: #ffffff;
+					font-weight: 700;
+					font-size: 1.2rem;
+					font-family: TTNorms;
+					text-transform: uppercase;
+				}
+			}
+		}
 	}
 }
 
@@ -251,10 +274,8 @@ nav#side-menu {
 	flex: 1 1 0;
 	max-width: 25%;
 	box-sizing: border-box;
-	padding-right: 4rem;
 	padding-top: 4.5rem;
-	margin-right: 1rem;
-	margin-top: 0;
+	margin: 0;
 	line-height: 1.3;
 	font-family: TTNorms;
 	z-index: 100;
@@ -266,6 +287,20 @@ nav#side-menu {
 		overflow: hidden;
 	}
 
+	div::-webkit-scrollbar {
+		width: 4px;
+		border-radius: 4px;
+	}
+
+	div::-webkit-scrollbar-thumb {
+		background-color: #f8f0ff;
+		border-radius: 4px;
+	}
+
+	div::-webkit-scrollbar-track {
+		display: none;
+	}
+
 	.menu-wrapper {
 		position: fixed;
 		display: block;
@@ -273,8 +308,7 @@ nav#side-menu {
 		width: 20vw;
 		height: 90vh;
 		overflow-y: auto;
-		padding-bottom: 15vh;
-
+		padding-bottom: 5vh;
 	}
 
 	ol.menu-list {
@@ -308,11 +342,12 @@ nav#side-menu {
 				overflow: hidden;
 
 				&.current {
-					color: #7e57c2;
+					color: #760fc3;
+					font-weight: bold;
 				}
 
-				&:hover, &:focus {
-					color: $color-deep_purple_shady;
+				&:hover {
+					color: #760fc3;
 				}
 			}
 
@@ -325,6 +360,7 @@ nav#side-menu {
 				font-family: TTNorms;
 				font-weight: 600;
 				font-size: 1.5rem;
+				line-height: 1.5;
 				color: #616161;
 				cursor: pointer;
 
@@ -334,7 +370,7 @@ nav#side-menu {
 				}
 
 				&.open {
-					color: $color-deep_purple;
+					color: #760fc3;
 				}
 			}
 
@@ -366,112 +402,172 @@ nav#side-menu {
 			button.menu-list-opener-1 {
 
 				&:before {
-					content: url(/assets/logos/icons/getting-started.svg);
+					content: url(/assets/logos/icons-docs/getting-started.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/getting-started-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-2 {
 
 				&:before {
-					content: url(/assets/logos/icons/cpu.svg);
+					content: url(/assets/logos/icons-docs/cpu.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/cpu-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-3 {
 
 				&:before {
-					content: url(/assets/logos/icons/dudes.svg);
+					content: url(/assets/logos/icons-docs/dudes.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/dudes-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-4 {
 
 				&:before {
-					content: url(/assets/logos/icons/webhooks.svg);
+					content: url(/assets/logos/icons-docs/webhooks.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/webhooks-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-5 {
 
 				&:before {
-					content: url(/assets/logos/icons/workflow.svg);
+					content: url(/assets/logos/icons-docs/workflow.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/workflow-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-6 {
 
 				&:before {
-					content: url(/assets/logos/icons/build.svg);
+					content: url(/assets/logos/icons-docs/build.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/build-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-7 {
 
 				&:before {
-					content: url(/assets/logos/icons/code-signing.svg);
+					content: url(/assets/logos/icons-docs/code-signing.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/code-signing-focus.svg);
 				}
 			}
 
  			button.menu-list-opener-8 {
 
  				&:before {
- 					content: url(/assets/logos/icons/cache.svg);
+ 					content: url(/assets/logos/icons-docs/cache.svg);
  				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/cache-focus.svg);
+				}
  			}
 
 			button.menu-list-opener-9 {
 
 				&:before {
-					content: url(/assets/logos/icons/testing.svg);
+					content: url(/assets/logos/icons-docs/testing.svg);
 				}
 			}
 
 			button.menu-list-opener-10 {
 
 				&:before {
-					content: url(/assets/logos/icons/deployment.svg);
+					content: url(/assets/logos/icons-docs/deployment.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/deployment-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-11 {
 
 				&:before {
-					content: url(/assets/logos/icons/window.svg);
+					content: url(/assets/logos/icons-docs/window.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/window-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-12 {
 
 				&:before {
-					content: url(/assets/logos/icons/info_main.svg);
+					content: url(/assets/logos/icons-docs/info_main.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/info_main-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-13 {
 
 				&:before {
-					content: url(/assets/logos/icons/lightbulb_main.svg);
+					content: url(/assets/logos/icons-docs/lightbulb_main.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/lightbuld_main-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-14 {
 
 				&:before {
-					content: url(/assets/logos/icons/support.svg);
+					content: url(/assets/logos/icons-docs/support.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/support-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-15 {
 
 				&:before {
-					content: url(/assets/logos/icons/bug.svg);
+					content: url(/assets/logos/icons-docs/bug.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/bug-focus.svg);
 				}
 			}
 
 			button.menu-list-opener-16 {
 
 				&:before {
-					content: url(/assets/logos/icons/code.svg);
+					content: url(/assets/logos/icons-docs/code.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/code-focus.svg);
 				}
 			}
 
@@ -487,13 +583,12 @@ nav#side-menu {
 }
 
 main.content {
-	flex: 1 1 auto;
+	flex: 0 0 auto;
 	max-width: 50%;
 	min-width: 0;
-	margin-left: 2rem;
 	padding-top: 4.5rem;
-	padding-left: 4rem;
-	padding-right: 4rem;
+	padding-left: 5%;
+	padding-right: 5%;
 	font-size: 1.5rem;
 	color: #222222;
 	line-height: 1.5;
@@ -519,15 +614,19 @@ main.content {
 		color: #444444;
 		cursor: pointer;
 
+		&:focus, &:hover {
+			color: #760fc3;
+		}
+
 		.index-title {
 			font-weight: bold;
 			font-size: 1.8rem;
-			color: #760fc3;
+			color: #683d87;
 			cursor: pointer;
-		}
 
-		.index-box a {
-			display: inline-block;
+			&:focus, &:hover {
+				color: #760fc3;
+			}
 		}
 	}
 
@@ -682,7 +781,7 @@ h4 {
 			font-size: 2.4rem;
 
 			&:before {
-				content: url(/assets/logos/icons/pencil_edit.svg);
+				content: url(/assets/logos/icons-docs/pencil_edit.svg);
 			}
 		}
 	}
@@ -812,27 +911,27 @@ h4 {
 		}
 
 		&.attention, &.warning {
-			@include message_box_styling(rgba(255, 33, 88, .1), #ff2158, url(/assets/logos/icons/warning.svg));
+			@include message_box_styling(rgba(255, 33, 88, .1), #ff2158, url(/assets/logos/icons-docs/warning.svg));
 		}
 
 		&.done, &.success {
-			@include message_box_styling(rgba(0, 200, 83, .1), #00c853, url(/assets/logos/icons/tick.svg));
+			@include message_box_styling(rgba(0, 200, 83, .1), #00c853, url(/assets/logos/icons-docs/tick.svg));
 		}
 
 		&.example {
-			@include message_box_styling(rgba(118, 15, 195, .1), #760fc3, url(/assets/logos/icons/lightbulb.svg));
+			@include message_box_styling(rgba(118, 15, 195, .1), #760fc3, url(/assets/logos/icons-docs/lightbulb.svg));
 		}
 
 		&.important {
-			@include message_box_styling(rgba(255, 197, 0, .1), #ffc500, url(/assets/logos/icons/chat-message.svg));
+			@include message_box_styling(rgba(255, 197, 0, .1), #ffc500, url(/assets/logos/icons-docs/chat-message.svg));
 		}
 
 		&.idea, &.note, &.tip, &.hint {
-			@include message_box_styling(rgba(13, 131, 205, .1), #0d83cd, url(/assets/logos/icons/pencil.svg));
+			@include message_box_styling(rgba(13, 131, 205, .1), #0d83cd, url(/assets/logos/icons-docs/pencil.svg));
 		}
 
 		&.info, &.todo {
-			@include message_box_styling(rgba(15, 195, 137, .1), #0fc389, url(/assets/logos/icons/info.svg));
+			@include message_box_styling(rgba(15, 195, 137, .1), #0fc389, url(/assets/logos/icons-docs/info.svg));
 		}
 	}
 }
@@ -842,8 +941,10 @@ nav#my-toc {
 
 .side-toc {
 	box-sizing: border-box;
-	flex: 1 1 16.66666667%;
-	max-width: 22rem;
+	flex: 0 0 auto;
+	max-width: 15%;
+	margin-left: 0;
+	margin-right: auto;
   font-family: TTNorms;
 	padding-top: 4rem;
 	padding-left: 2rem;
@@ -898,21 +999,23 @@ nav#my-toc {
 	}
 
 	.related-articles {
-		text-align: center;
 		border-top: solid 2px #ececec;
-		margin-top: 4rem;
-		margin-bottom: 4rem;
-		padding-top: 1.2rem;
-		font-size: 1.4rem;
-		font-weight: bold;
-		color: #616161;
-		letter-spacing: 0.5px;
-		line-height: 1.38;
-		text-transform: uppercase;
+		position: relative;
+		text-align: center;
+		margin: 6rem auto 0;
 	}
 
-	.article-box, a {
-		display: block;
+	 .related-articles span {
+		position: relative;
+		display: inline-block;
+		top: -0.7em;
+		background-color: #ffffff;
+		padding: 0 20px;
+		line-height: 1.38;
+		font-size: 1.4rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #616161;
 	}
 
 	.article-box {
@@ -934,13 +1037,29 @@ nav#my-toc {
 		padding-right: $horizontalpadding;
 		padding-top: 1.2rem;
 		padding-bottom: $verticalpadding;
-		margin-top: 4rem;
+		margin-top: 3rem;
+
+		&:hover, &:focus {
+			color: #760fc3;
+		}
 
 		.related-title {
 			font-weight: bold;
 			font-size: 1.5rem;
-			color: #760fc3;
+			color: #683d87;
 			cursor: pointer;
+
+			&:hover, &:focus {
+				color: #760fc3;
+			}
+		}
+
+		.article-box, a {
+			display: block;
+
+			&:hover, &:focus {
+				color: #760fc3;
+			}
 		}
 	}
 
@@ -950,12 +1069,13 @@ nav#my-toc {
 		margin-left: auto;
 		margin-right: auto;
 		margin-top: 6rem;
+		height: auto;
 		position: relative;
 
 		img {
-			width: 100%;
-			height: auto;
-		}
+	 		width: 100%;
+	 		border: none;
+	 	}
 
 		.button {
   		position: absolute;
@@ -964,9 +1084,10 @@ nav#my-toc {
 			background-image: linear-gradient(to bottom, #6c0eb2, #450674 97%);
 			border-radius: 4px;
 			border: none;
-			width: 28%;
-			height: 35%;
+			width: auto;
+			height: auto;
 			color: #f8f8f8;
+			padding: 1rem 1rem;
 			font-family: TTNorms;
 			line-height: 1.5;
 			font-size: 1.4rem;
@@ -977,9 +1098,9 @@ nav#my-toc {
 		.deploy-text {
 		  position: absolute;
 		  top: 10%;
-			margin-left: auto;
-			margin-right: auto;
+			margin: auto;
 			width: 100%;
+			height: auto;
 			text-align: center;
 			color: #ffffff;
 			font-size: 2.2rem;
@@ -1013,6 +1134,13 @@ footer {
 	}
 }
 
+@media only screen and (max-width: 1200pt) {
+
+	.menu-wrapper {
+		max-height: 80vh;
+	}
+}
+
 @media only screen and (min-width: 1200pt) {
 
 	.middle-aligner {
@@ -1026,7 +1154,17 @@ footer {
 		max-width: 100%;
 		margin-left: 0;
 		margin-top: 1rem;
-                padding: 0;
+    padding: 0;
+
+	 .index-container {
+		 flex-direction: column;
+	 }
+
+	 .index-box {
+		 width: 80%;
+		 display: block;
+		 font-size: 1.8rem;
+	  }
 	}
 
 	header.top-bar {
@@ -1035,6 +1173,7 @@ footer {
 		.middle-aligner {
 
 			.subgroup {
+				max-width: 80px;
 
 				a.logo {
 					display: none;
@@ -1052,7 +1191,7 @@ footer {
 					cursor: pointer;
 
 					&:before {
-						content: url(/assets/logos/icons/menu-hamburger.svg);
+						content: url(/assets/logos/icons-docs/menu-hamburger.svg);
 					}
 
 					&:hover, &:focus {
@@ -1063,17 +1202,36 @@ footer {
 
 			.search-bar {
 				flex-basis: 50%;
+				margin: auto;
+				min-width: 200px;
 			}
 
 			.source-code {
 				display: none;
 			}
-		}
+
+			.lang-selector {
+				margin-left: auto;
+				margin-right: 1rem;
+			}
+
+			.cta {
+				margin: auto;
+
+				.bitbutton {
+					margin: auto;
+					max-width: 100px;
+					line-height: 1;
+					max-height: 32px;
+					font-size: 60%;
+				}
+		  }
+	  }
 	}
 
-       .banner {
-         display: none;
-       }
+  .banner {
+    display: none;
+  }
 
 	nav#my-toc {
 		display: none;
@@ -1110,6 +1268,7 @@ footer {
 				position: relative;
 				width: 70vw;
 				padding-top: 0;
+				padding-bottom: 0;
 
 			}
 

@@ -70,14 +70,21 @@
           </div>
         </div>
         <div class="lang-selector">
-              <a href="{{ page.url_without_lang }}" class={% if page.lang == 'en' %}"active"{% endif %}>EN</a>
-              <a href="/jp{{ page.url_without_lang }}" class={% if page.lang == 'jp' %}"active"{% endif %}>日本語</a>
+            <a href="{{ page.url_without_lang }}" class={% if page.lang == 'en' %}"active"{% endif %}>EN</a>
+            <a href="/jp{{ page.url_without_lang }}" class={% if page.lang == 'jp' %}"active"{% endif %}>日本語</a>
         </div>
         <a class="source-code" href="{{ site.data.basic_info.source_code_url }}" target="_blank">
-          <object type="image/svg+xml" data="/assets/logos/icons/github.svg" class="source-host-logo"></object>
+          <object type="image/svg+xml" data="/assets/logos/icons-docs/github.svg" class="source-host-logo"></object>
           <span class="source-host-name">GitHub</span>
         </a>
-      </div>
+        <div class="cta">
+          <a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=top_cta">
+            <button class="bitbutton">
+              <span class="sign-up">Sign up to Bitrise</span>
+            </button>
+          </a>
+         </div>
+       </div>
     </header>
     <div class="column-parent middle-aligner">
       <nav id="side-menu">
@@ -98,17 +105,17 @@
         {% include related_articles.html %}
         <div class="banner">
           {% if page.url == "/404.html" %}
-          <img src="/assets/images/banner-bg-888x170.png">
+          <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
             <div class="deploy-text">You took a wrong turn somewhere...</div>
             <a href="/"><button class="button">Take me home!</button></a>
           {% elsif current_article.url == "/" %}
-          <img src="/assets/images/banner-bg-888x170.png">
+          <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
             <div class="deploy-text">Try Bitrise for free!</div>
-            <a href="https://app.bitrise.io/users/sign_up"><button class="button">Create an account</button></a>
+            <a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Create an account</button></a>
           {% else %}
-          <img src="/assets/images/banner-bg-888x170.png">
+          <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
             <div class="deploy-text">Now you know everything!</div>
-            <a href="https://app.bitrise.io/users/sign_up"><button class="button">Try Bitrise now</button></a>
+            <a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Try Bitrise now</button></a>
           {% endif %}
         </div>
       </main>
