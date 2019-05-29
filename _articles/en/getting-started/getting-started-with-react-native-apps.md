@@ -1,7 +1,16 @@
 ---
 title: Getting started with React Native apps
-date: 2018-10-12T13:16:58.000+00:00
+date: '2018-10-12T13:16:58.000+00:00'
 redirect_from: []
+tag:
+- getting-started
+- react
+- testing
+- deploy
+- code-signing
+summary: 'Go through the procedure of adding a React Native app on Bitrise from start
+  to finish, from adding the app to deploying it. Learn about dependency management,
+  code signing, and testing. '
 menu:
   getting-started-main:
     weight: 21
