@@ -1,5 +1,11 @@
 ---
 title: Triggering builds
+tag:
+- builds
+- webhooks
+summary: 'Trigger builds manually or by setting up automatic triggers. Learn about
+  the different trigger types, as well as about manually starting a new build. '
+redirect_from: []
 menu:
   triggering-builds:
     weight: 2

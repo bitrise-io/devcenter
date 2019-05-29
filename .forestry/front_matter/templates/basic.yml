@@ -134,3 +134,4 @@ pages:
 - _articles/en/code-signing/android-code-signing/android-code-signing-procedures.md
 - _articles/en/deploy/ios-deploy/introduction-to-deploying-ios-apps.md
 - _articles/en/testing/android-run-a-unit-test.md
+- _articles/en/builds/triggering-builds/triggering-builds.md
