@@ -222,5 +222,3 @@ Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE
    * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
 
 And that’s it! Start a build and release your Android app to the app store of your choice.
-
-Because our application will contain native modules, we will need to [eject to_ExpoKit _](https://docs.expo.io/versions/v30.0.0/expokit/eject)(using the _ExpoKit_ option). Including _ExpoKit_ in the project allows us to continue to use the _Expo_ APIs, over-the-air JavaScript updates, and much of the Expo development process.
