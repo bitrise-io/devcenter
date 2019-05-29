@@ -1,6 +1,11 @@
 ---
 title: Remote access
 redirect_from: []
+tag:
+- builds
+- troubleshooting
+summary: Access our build machines remotely when running a failed build again. You
+  can use either SSH or a screenshare app to log in to the build's virtual machine.
 menu:
   builds-main:
     weight: 28
