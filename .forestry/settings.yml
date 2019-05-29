@@ -139,7 +139,8 @@ sections:
   path: _includes
   label: _includes (HTML)
   create: all
-  match: "**/*"
+  match: "**/*.html"
+  new_doc_ext: html
 upload_dir: img
 public_path: "/img"
 front_matter_path: ''

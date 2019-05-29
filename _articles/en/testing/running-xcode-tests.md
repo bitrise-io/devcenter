@@ -4,6 +4,7 @@ redirect_from: []
 date: '2019-02-22T15:33:24.000+00:00'
 tag:
 - testing
+- ios
 summary: 'Run Xcode tests on Bitrise by using our Xcode Test for iOS Step. Configure
   the tests in our Workflow Editor with the same options as in Xcode, and generate
   code coverage files easily. '
@@ -21,12 +22,9 @@ To run Xcode tests on Bitrise, you need to have test targets defined in your pro
 
 The `Xcode Test for iOS` step runs the pre-defined Xcode tests. It has a default configuration that will work if the tests are written correctly. You can find the same configuration options in Xcode, too.
 
-The `Deploy to Bitrise.io` will deploy the following to the `Logs` and [Apps & Artifacts](/builds/build-artifacts-online/) tab of the build:
-
-* your Xcode test results
-* your raw `xcodebuildoutput` log
-
 You can also generate code coverage files, and export the test results as a compressed zip file.
+
+{% include message_box.html type="" title="Test reports" content="Your Xcode test results will be exported to Test Reports: check out our [Test Reports](/testing/test-reports/) guide to find out how to make it work for you."%} 
 
 ### Configuring the Xcode tests on Bitrise
 
@@ -59,6 +57,8 @@ If you run a successful build, code coverage files will be included in your resu
 
 ### Exporting UI test artifacts
 
-You can export the attachments of your UITest into the `BITRISE_DEPLOY_DIR` directory. These attachments include screenshots taken during the UI test, as well as any other artifacts that might have been generated. They are exported as a compressed zip file.
+You can export the attachments of your UITest. These attachments include screenshots taken during the UI test, as well as any other artifacts that might have been generated. They are exported as a compressed zip file.
 
 By default, the `Xcode Test for iOS` Step does not export artifacts of the UITest. If you want to export them, set the `Export UITest Artifacts` input of the `Xcode Test for iOS` Step to `true`.
+
+You can check your test artifacts on the [**Test Reports**](/testing/test-reports/) page, along all additional results. 
