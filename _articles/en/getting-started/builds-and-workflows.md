@@ -3,6 +3,12 @@ title: Builds
 redirect_from:
 - "/getting-started/builds-and-workflows"
 - "/getting-started/builds-and-workflows/"
+tag:
+- builds
+- workflows
+- getting-started
+summary: 'Learn what a build is on Bitrise, how Workflows work, and how you can trigger
+  builds. Find out what concurrencies are, and how you can get more if you need them. '
 menu:
   getting-started-main:
     weight: 6
@@ -12,24 +18,21 @@ menu:
 
 Once you added an app to Bitrise, your first build will be kicked off automatically.
 
-A build is the process specified by the app's [_workflow_](/steps-workflows/getting-started-workflows), which is a collection of [Steps](/steps-workflows/getting-started-steps). The app's build configuration is specified in the [bitrise.yml configuration file](/bitrise-cli/basics-of-bitrise-yml) which you can modify in [bitrise.io](https://www.bitrise.io)'s
-graphical Workflow Editor UI,
-or in a [yaml editor](http://blog.bitrise.io/2016/02/12/edit-your-yaml-files-like-a-boss.html) directly.
+A build is the process specified by the app's [_workflow_](/steps-workflows/getting-started-workflows), which is a collection of [Steps](/steps-workflows/getting-started-steps). The app's build configuration is specified in the [bitrise.yml configuration file](/bitrise-cli/basics-of-bitrise-yml) which you can modify in [bitrise.io](https://www.bitrise.io)'s graphical Workflow Editor UI, or in a [yaml editor](http://blog.bitrise.io/2016/02/12/edit-your-yaml-files-like-a-boss.html) directly.
 
 On the graphical UI of the [Workflow editor](/steps-workflows/getting-started-workflows), you are able to add, remove, and reorder the build steps. Steps represent build tasks, containing their own code and predefined input and output variables. Steps can be written in various languages, like bash, Go, Ruby, [Swift](https://go.bitrise.io/swift), and more.
 
-When a build is running, these scripts will be downloaded and executed in the order you've defined in your workflow,
-with the input parameters you set. They will produce the predefined outputs set as [environment variables](/builds/available-environment-variables).
+When a build is running, these scripts will be downloaded and executed in the order you've defined in your workflow, with the input parameters you set. They will produce the predefined outputs set as [environment variables](/builds/available-environment-variables).
 
 Read more about how the CLI, workflows and steps work "under the hood" in the [Bitrise CLI and bitrise.yml](/bitrise-cli/) section.
 
 ## The build process
 
 1. Trigger builds by:
-   * clicking the `Build` button on the application's page (manual build trigger)
-   * [scheduling with a selected branch and frequency](/builds/scheduling-builds)
-   * [webhooks](/webhooks/) - after each code/tag push or pull request to the given branch
-   * our `Build Trigger API`
+   * Clicking the `Build` button on the application's page (manual build trigger).
+   * [Scheduling with a selected branch and frequency](/builds/scheduling-builds).
+   * [Webhooks](/webhooks/) - after each code/tag push or pull request to the given branch
+   * Our[ API](/api/build-trigger/)
 2. Environment preparation:
    A virtual machine will be provisioned and prepared to run the build.
    Build specific environment variables are preset so you can use these in your steps.

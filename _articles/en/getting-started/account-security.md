@@ -1,10 +1,15 @@
 ---
-title: Account Security
+title: Account security
 redirect_from: []
+tag:
+- getting-started
+- security
+summary: Bitrise supports two-factor authentication for every user, and SAML SSO for
+  organizations. Use Personal Access Tokens to authenticate your account to the Bitrise
+  API.
 menu:
   getting-started-main:
     weight: 10
-    title: Account security
 
 ---
 ## Enabling Two-factor authentication
