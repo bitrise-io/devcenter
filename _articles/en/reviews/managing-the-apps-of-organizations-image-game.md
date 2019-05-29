@@ -168,6 +168,8 @@ If all went well, you should see the invited outside contributor at the `People`
 
 ![](/img/added-outside-contributor.png)
 
+![](/img/allow-outside-contributor-added-member.jpg)
+
 {% include message_box.html type="note" title="Removing outside contributors" content=" You can remove the outside contributor on the `People` tab by clicking the red `x`. Please note that you have to remove all outside contributors if you want to disable the `Outside Contributor` toggle." %}
 
 ## Removing a group from an app
