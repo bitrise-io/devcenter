@@ -97,3 +97,6 @@ android-deploy:
   title: Generating and deploying multiple flavor APKs in a single build
 - weight: 1
   title: Deploying Android apps
+ios-deploy:
+- weight: 2
+  title: Introduction to deploying iOS apps

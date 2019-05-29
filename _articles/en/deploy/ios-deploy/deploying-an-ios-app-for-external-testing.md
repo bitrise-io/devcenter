@@ -4,7 +4,7 @@ date: 2018-10-26T12:39:01.000+00:00
 redirect_from: []
 menu:
   ios-deploy:
-    weight: 3
+    weight: 4
 
 ---
 Before deploying your app to the App Store, you might want to release it to external testers who can test it on their devices outside the development environment. If you do not want to use Testflight, then you can do this by exporting an .ipa file with the **ad-hoc** export method.
