@@ -48,16 +48,18 @@ You have successfully set up your React Native project on [bitrise.io](https://w
 
 React Native apps built with Expo do not come with native modules. If you wish to use one of our build Steps in your deploy workflow, you must first eject your React Native project and add the necessary native modules to it. Then our native dependency installer Steps take care of installing the missing native dependencies so that your project is ready for building and then shipping.
 
-Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps. 
+Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps.
 
-![](/img/expo.jpg)
+![](/img/eject-expo-input-fields.png)
 
-Creates Xcode and Android Studio projects for your app.
+Let's see which fields you have to fill out!
 
-* in deploy workflow after the **Run npm command** Step?
-* what does it do?
+* **Working directory input field:** Provide the path of your project directory.
+* **Expo CLI version:** Provide the Expo CLI version you used for your project.
+* **Username for Expo** and **Password for your Expo account:** Provide your Expo credentials (username and password). If your project uses an Expo SDK, you must provide the username and password for your Expo account. Without the account, the [Expo CLI](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli) will choose the plain `--eject-method` and the Expo SDK imports will stop working.
 
-in reacts getting started page, if you use expo, no native projects are in your repo. but w/o native you cannot build a project. we cannot use expo build we cannot check user side, solution: generates the andorid and ios native projects and install missing andorid tools read which dependencies are missing, and android build builds the project, same with ios.
+  If your project does not use an Expo SDK then you don’t need to do anything.  
+  Just add the step after the `git-clone` step and you are done.
 
 ## Installing dependencies
 
