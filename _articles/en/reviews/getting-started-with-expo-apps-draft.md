@@ -179,6 +179,25 @@ You can share the generated APK/.ipa file with your team members using the build
 
 code signing- force.
 
+1. Open the **Workflow** tab of your project on Bitrise.io
+1. Click on **Code Signing** tab
+1. Find the **PROVISIONING PROFILE** section
+1. Click or drop your file on the upload file field
+1. Find the **CODE SIGNING IDENTITY** section
+1. Click or drop your file on the upload file field
+1. Click on **Workflows** tab
+1. Select deploy workflow
+1. Select **Xcode Archive & Export for iOS** step
+1. Open **Force Build Settings** input group
+1. Specify codesign settings
+Set **Force code signing with Development Team**, **Force code signing with Code Signing Identity**  
+and **Force code signing with Provisioning Profile** inputs regarding to the uploaded codesigning files
+1. Specify manual codesign style
+If the codesigning files, are generated manually on the Apple Developer Portal,  
+you need to explicitly specify to use manual coedsign settings  
+(as ejected rn projects have xcode managed codesigning turned on).  
+To do so, add 'CODE_SIGN_STYLE="Manual"' to 'Additional options for xcodebuild call' input
+
 ## Deploying to an app store
 
 If you wish to deploy your iOS app, follow the steps in [Code sign your iOS project for deployment](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
@@ -203,8 +222,6 @@ Make sure that you have exported an `app-store` .ipa file before starting the de
    If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
 
 ### Deploying your Android app to Google Play Store
-
-Android code signing
 
 Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE` field!
 
