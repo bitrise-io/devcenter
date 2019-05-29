@@ -3,6 +3,9 @@ title: Deploying Android apps
 date: '2018-10-26T13:00:41.000+00:00'
 redirect_from:
 - "/tutorials/deploy/android-deployment/"
+menu:
+  android-deploy:
+    weight: 1
 tag:
 - deploy
 - android

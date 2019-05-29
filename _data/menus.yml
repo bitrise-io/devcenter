@@ -90,9 +90,3 @@ main:
 - title: Steps and workflows
   identifier: steps-workflows-main
   weight: 5
-android-deploy:
-- weight: 2
-  title: Generating and deploying multiple flavor APKs in a single build
-ios-deploy:
-- weight: 2
-  title: Introduction to deploying iOS apps

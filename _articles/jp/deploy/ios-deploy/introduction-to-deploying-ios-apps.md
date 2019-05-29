@@ -4,12 +4,12 @@ date: 2018-10-26T12:49:32.000+00:00
 redirect_from: []
 menu:
   ios-deploy:
-    weight: 1
+    weight: 2
 
 ---
 {% include not_translated_yet.html %}
 
-Once you built your app and ran unit tests and UI tests on it, it's time to deploy it. 
+Once you built your app and ran unit tests and UI tests on it, it's time to deploy it.
 
 To deploy an iOS app to any platform, you need:
 

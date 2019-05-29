@@ -1,6 +1,9 @@
 ---
 title: Deploying Android apps
 date: 2018-10-26T13:00:41.000+00:00
+menu:
+  android-deploy:
+    weight: 2
 redirect_from:
 - "/tutorials/deploy/android-deployment/"
 
@@ -25,7 +28,7 @@ In this guide, you will learn how to:
   Do not forget to **upload your keystore file** to [bitrise.io](https://www.bitrise.io).
 
   Once your code signing is completed, your config will look like this:
-      
+
       {% raw %}
       workflows:
       deploy:
@@ -91,7 +94,7 @@ You can notify user groups or individual users that your APK file has been built
    * `Track`: the track where you want to deploy your APK (alpha/beta/rollout/production)
 
 The final configuration looks like this:
-    
+
     {% raw %}
     workflows:
     deploy:
