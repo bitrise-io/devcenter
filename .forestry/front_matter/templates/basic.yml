@@ -137,3 +137,4 @@ pages:
 - _articles/en/builds/triggering-builds/triggering-builds.md
 - deploy.md
 - _articles/en/bitrise-cli/run-your-first-build.md
+- _articles/en/builds/selective_builds.md
