@@ -237,9 +237,9 @@ header.top-bar {
 				background-color: #0dd3c5;
 				border: none;
 				border-radius: 4px;
-				padding: 0.625rem 0.625rem;
+				padding: 0.825rem 0.825rem;
 				line-height: 1.5;
-				width: 150px;
+				width: 180px;
 				text-align: center;
 				margin: auto;
 				cursor: pointer;
@@ -462,7 +462,7 @@ nav#side-menu {
 				}
 
 				&.open:before {
-					content: url(/assets/logos/icons-docs/build-focus.svg);
+					filter: url(/assets/logos/icons-docs/build.svg#open-filter);
 				}
 			}
 
