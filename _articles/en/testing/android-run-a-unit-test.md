@@ -1,5 +1,12 @@
 ---
 title: Android unit test
+tag:
+- android
+- testing
+summary: Run Android unit tests on Bitrise. Find out how to generate test reports
+  from your unit tests, what Steps you can use. Learn about using custom script content
+  to run tests.
+redirect_from: []
 menu:
   testing-main:
     weight: 11
