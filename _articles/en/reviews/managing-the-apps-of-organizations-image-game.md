@@ -80,15 +80,14 @@ There are two separate ways to assign one or more groups to an app that is owned
    ![](/img/switch-profile-border.jpg)
 
    ![](/img/switch-profile-with-arrow.jpg)
-4. On the left, select `Groups` from the menu options.
-5. Choose the group you wish to assign, and click the dropdown menu indicated by the `...` symbol.
-6. Click `Assign group to apps`.
+3. On the left, select `Groups` from the menu options.
+4. Choose the group you wish to assign, and click the dropdown menu indicated by the `...` symbol.
+5. Click `Assign group to apps`.
 
-  
-	![](/img/assign-group-to-apps.jpg)
+   ![](/img/assign-group-to-apps.jpg)
 
-	![](/img/assign-group-to-apps-border.jpg)
-2. Find the app(s) you need and select the appropriate role for the group. You can check out the role cheatsheet on any app's `Team` tab.
+   ![](/img/assign-group-to-apps-border.jpg)
+6. Find the app(s) you need and select the appropriate role for the group. You can check out the role cheatsheet on any app's `Team` tab.
 
    ![](/img/popup-assign.png)
 
@@ -147,7 +146,7 @@ Let's see the details!
 4. On the left menu bar, select `Apps`.
 5. Search for or click the app you want to add outside contributors to. (In our example, it is the android-multiple-test-results-sample app.)
 
-   ![](/img/switch-to-apps-from-people.jpg)
+   ![](/img/add-apps-to-outside-contributors.jpg)
 
    The `Builds` page appears.
 6. Select the `Team` tab.
