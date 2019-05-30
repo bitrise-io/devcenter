@@ -6,9 +6,9 @@ summary: ''
 published: false
 
 ---
-You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/v32.0.0/) is a toolchain built on React Native which allows you to quickly get a React Native app up and running without having to fiddle with Xcode or Android Studio.
+You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/v32.0.0/) is a toolchain built on React Native. It allows you to quickly get a React Native app up and running without having to fiddle with native code in Xcode or Android Studio.
 
-In this guide we discuss how to set up, test, code sign and deploy your React Native project build with Expo CLI.
+In this guide we discuss how to set up, test, code sign and deploy your React Native project built with the Expo CLI.
 
 Depending on the nature of your React Native project, you can expect two types of workflows once the project scanner has finished scanning your project. If you've been using the [ExpoKit](https://docs.expo.io/versions/v32.0.0/expokit/eject/) to include custom native modules to your pure JavaScript project, then our project scanner will add the necessary native dependency installer Steps before the build Steps. If you have NOT ejected your project to ExpoKit, your workflow will get the JavaScript and native dependency installer Steps along with the **\[BETA\] Expo Eject** Step.
 
@@ -16,7 +16,7 @@ Whether you've been using ExpoKit or not with your project, Bitrise project scan
 
 ## Adding an Expo app to bitrise.io
 
-First, let's see how to add a React Native app build with Expo to [bitrise.io](https://www.bitrise.io/).
+First, let's see how to add a React Native Expo app to [bitrise.io](https://www.bitrise.io/).
 
 {% include message_box.html type="info" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
@@ -44,15 +44,15 @@ You have successfully set up your React Native project on [bitrise.io](https://w
 
 ### Javascript dependencies
 
-If Bitrise scanner has successfully scanned your app, depending on your project configuration Run npm command or Run yarn command Steps will be included in your workflow.
+If Bitrise scanner has successfully scanned your app, depending on your project configuration, **Run npm command** or **Run yarn command** Step will be included in your workflow.
 
-In the Run npm command Step, install  is the default value in the npm command with arguments to run input field. This way the Step can add JavaScript dependencies to your project.
+The default value of the **Run npm command** Step is `install` in the **npm command with arguments to run** input field. This way the Step can add JavaScript dependencies to your project.
 
 ### Ejecting your app
 
-React Native apps built with Expo do not come with native modules. Since our build Steps are platform-specific, Bitrise has to eject your app and add the necessary native libraries Expo does not support. Then our native dependency installer Steps take care of installing any missing native dependencies so that your project is ready for building and shipping.
+React Native apps built with Expo do not come with native modules. Since our build Steps are platform-specific, Bitrise has to eject your app, add and configure the necessary native templates. Then our native dependency installer Steps take care of installing any missing native dependencies so that your project is ready for building and shipping.
 
-Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps.
+Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps in your deploy workflow.
 
 ![](/img/eject-expo-input-fields.png)
 
@@ -67,13 +67,13 @@ Let's see which fields you have to fill out when clicking **\[BETA\] Expo Eject*
 
 ### Native dependencies
 
-Install missing Android SDK components Step installs the missing native dependencies for your Android project - luckily this steps is by default included in your deploy workflow.
+The **Install missing Android SDK components** Step installs the missing native dependencies for your Android project. This Step is by default included in your deploy workflow.
 
-If you've been using the ExpoKit to develop your app, the Run CocoaPods install Step automatically gets added to to your deploy workflow to take care of any missing iOS dependencies.
+If you've been using the ExpoKit to develop your app, the **Run CocoaPods install** Step automatically is added to your deploy workflow to take care of any missing iOS dependencies.
 
 ## Testing your app
 
-You can use React Native’s built in testing method, called jest to perform unit tests.
+You can use React Native’s built in testing method, called jest, to perform unit tests.
 
 1. Add another Run nmp command step to your workflow right after the first **Run npm command** Step.
 2. Type test in the npm command with arguments to run input field.
@@ -81,11 +81,11 @@ You can use React Native’s built in testing method, called jest to perform uni
    ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/test-npm.png)
 3. Start a build.
 
-You can view the test artifacts on the [Test reports](/testing/test-reports/) page of your build.
+You can view the test artifacts on the **APPS & ARTIFACTS** tab of your Build's page.
 
 ## Code signing
 
-A Expo app can consists of two projects, an Android and an iOS - both must be properly code signed. If you click on the Code Signing tab of your project’s Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
+A React Native app consists of two projects; an Android and an iOS - both must be properly code signed. If you click on the Code Signing tab of your project’s Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
 
 Let’s see how to fill them out!
 
@@ -104,58 +104,18 @@ Let’s see how to fill them out!
 
 The Android chunk of code signing is done. Let's continue with iOS!
 
-### Signing and exporting your iOS app for testing
-
-Code signing your iOS project depends on what you wish to do with the exported .ipa file. In this section, we describe how to code sign your project if you wish to **install and test it on internal testers’ registered devices**. You will need an .ipa file exported with the development export method to share your project with testers.
-
-If you wish to upload your .ipa file to an app store, check out [this](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/getting-started-with-react-native-apps/#signing-and-exporting-your-ios-project-for-deployment) section!
-
-Automatic provisioning
-
-The example procedure described here uses manual provisioning, with the Certificate and profile installe Step. However, Bitrise also supports [automatic provisioning](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/) but it is not in the scope of this guide.
-
-You will need:
-
-* the automatically created deploy workflow
-* an iOS **Development** certificate (a .p12 certificate file)
-* a **Development** type Provisioning Profile
-
-1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa file locally.
-2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
-
-   The tool can also upload your code signing files to Bitrise - we recommend doing so! Otherwise, upload them manually: enter the Workflow Editor and select the Code signing tab, then upload the files in their respective fields.
-3. Go to your app’s Workflow Editor, and select the deploy workflow in the WORKFLOW dropdown menu in the top left corner.
-4. Check that you have the `Certificate and profile installer` Step in your workflow. It must be before the `Xcode Archive & Export for iOS` Step (you can have other Steps between the two, like `Xcode Test for iOS`).
-5. Check the `Select method for export` input of the `Xcode Archive & Export for iOS` Step. By default, it should be the `$BITRISE_EXPORT_METHOD` environment variable. This variable stores the export method you selected when creating the app. If you selected `development` back then, you don’t need to change the input. Otherwise, manually set it to `development`.
-
-   ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/export-method.png)
-6. [Start a build](https://devcenter.bitrise.io/builds/starting-builds-manually/).
-
-If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa file with the **development export method**. If you have the `Deploy to Bitrise.io`Step in your workflow, you can find the .ipa file on the `APPS & ARTIFACTS` tab of the Build’s page.
-
-{% include message_box.html type="info" title="About iOS code signing" content="
-iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)!
-"%}
-
-nem kell
-
 ### Signing and exporting your iOS app for deployment
-
-If you set up your code signing files and created an .ipa file for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**.
 
 To deploy to Testflight and to the App Store, you will need more code signing files:
 
 * an iOS **Distribution** Certificate
 * an **App Store** type Provisioning Profile
+* Go to the app’s Workflow Editor and create a [new workflow](https://devcenter.bitrise.io/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
+* Set the `Select method for export` input of the `Xcode Archive & Export for iOS` Step to `app-store`.
 
-1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa file. If this fails locally, it will definitely fail on Bitrise, too!
-2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
-3. Go to the app’s Workflow Editor and create a [new workflow](https://devcenter.bitrise.io/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
-4. Set the `Select method for export` input of the `Xcode Archive & Export for iOS` Step to `app-store`.
+  ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/app-store-export-method-1.png)
 
-   ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/app-store-export-method-1.png)
-
-   If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
+  If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
 
 . Select **Xcode Archive & Export for iOS** step
 
@@ -167,6 +127,23 @@ Set **Force code signing with Development Team**, **Force code signing with Code
 
 and **Force code signing with Provisioning Profile** inputs regarding to the uploaded codesigning files
 
+1. Open the **Workflow** tab of your project on Bitrise.io
+2. Click on **Code Signing** tab.
+3. Click or drag and drop the App Store type provisioning profile in the **PROVISIONING PROFILE** field.
+4. Click or drag and drop the iOS Distribution certificate in the **CODE SIGNING IDENTITY** field.
+5. Click on the **Workflows** tab and select your deploy workflow.
+6. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
+7. Here provide the code signing input in relation to the uploaded provisioning profile and certificate in the following fields:
+   * **Force code signing with Development Team**,
+   * **Force code signing with Code Signing Identity**,
+   * **Force code signing with Provisioning Profile**. 
+8. Specify manual codesign style If the codesigning files, are generated manually on the Apple Developer Portal,  
+   you need to explicitly specify to use manual coedsign settings  
+   (as ejected rn projects have xcode managed codesigning turned on).  
+   To do so, add 'CODE_SIGN_STYLE="Manual"' to 'Additional options for xcodebuild call' input
+
+## 
+
 ## Deploying to Bitrise
 
 The `Deploy to bitrise.io` step uploads all the **artifacts related to your build into the** [**APPS & ARTIFACTS**](https://devcenter.bitrise.io/builds/build-artifacts-online/) **tab on your Build’s page. ??**
@@ -177,25 +154,6 @@ You can share the generated APK/.ipa file with your team members using the build
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK/.ipa file in the `APPS & ARTIFACTS` tab.
 
 code signing- force.
-
- 1. Open the **Workflow** tab of your project on Bitrise.io
- 2. Click on **Code Signing** tab
- 3. Find the **PROVISIONING PROFILE** section
- 4. Click or drop your file on the upload file field
- 5. Find the **CODE SIGNING IDENTITY** section
- 6. Click or drop your file on the upload file field
- 7. Click on **Workflows** tab
- 8. Select deploy workflow
- 9. Select **Xcode Archive & Export for iOS** step
-10. Open **Force Build Settings** input group
-11. Specify codesign settings
-    Set **Force code signing with Development Team**, **Force code signing with Code Signing Identity**  
-    and **Force code signing with Provisioning Profile** inputs regarding to the uploaded codesigning files
-12. Specify manual codesign style
-    If the codesigning files, are generated manually on the Apple Developer Portal,  
-    you need to explicitly specify to use manual coedsign settings  
-    (as ejected rn projects have xcode managed codesigning turned on).  
-    To do so, add 'CODE_SIGN_STYLE="Manual"' to 'Additional options for xcodebuild call' input
 
 ## Deploying to an app store
 
