@@ -3,6 +3,11 @@ title: Scheduling your builds
 redirect_from:
 - "/builds/scheduling-builds/"
 - "/builds/scheduling-builds"
+tag:
+- builds
+- triggers
+summary: You can schedule your builds to run automatically at a specific time of the
+  week so that you can check your logs when it's most convenient for you.
 menu:
   builds-main:
     weight: 7
