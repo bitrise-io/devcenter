@@ -1,10 +1,12 @@
 ---
 title: Running your first build - draft
 redirect_from: []
+tag: []
+summary: ''
 published: false
 
 ---
-To run a Bitrise build locally, you only need two things:
+To run a Bitrise build locally, you need two things:
 
 1. The Bitrise CLI - here's our [installation guide](/bitrise-cli/installation/).
 2. A build configuration: that is, a `bitrise.yml` file. Read more about it [in our guide](https://devcenter.bitrise.io/bitrise-cli/basics-of-bitrise-yml/).
