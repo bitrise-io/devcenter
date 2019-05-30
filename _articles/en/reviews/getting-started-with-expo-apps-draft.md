@@ -111,22 +111,22 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 * an iOS **Distribution** Certificate
 * an **App Store** type Provisioning Profile
 
-  If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
+If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
 
 1. Open the **Workflow** tab of your project on [bitrise.io](https://www.bitrise.io).
 2. Click on **Code Signing** tab.
-3. Click or drag and drop the App Store type provisioning profile in the **PROVISIONING PROFILE** field.
-4. Click or drag and drop the iOS Distribution certificate in the **CODE SIGNING IDENTITY** field.
-5. Click on the **Workflows** tab and select your deploy workflow.
-6. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
-7. Here provide the code signing input with respect to the uploaded provisioning profile and certificate in the following fields:
-   * Add the team ID in the **Force code signing with Development Team**,
-   * Add the Code Signing Identity as full ID (for example `iPhone Developer: Bitrise Bot (VV2J4SV8V4)`) or as a code signing group ( `iPhone Developer` or `iPhone Distribution` ) in the **Force code signing with Code Signing Identity input field**,
-   * Add the provisioning profile's UDID in the **Force code signing with Provisioning Profile** input field.
-8. If the codesigning files are manually generated on the Apple Developer Portal, you have to specify to use manual codesigning settings since ejected React Native projects have Xcode managed codesigning turned on. 
+3. Click or drag and drop the App Store type provisioning profile in the **PROVISIONING PROFILE** field and the iOS Distribution certificate in the **CODE SIGNING IDENTITY** field.
+4. Click on the **Workflows** tab and select your deploy workflow.
+5. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
+6. Fill out the following fields based on your uploaded code signing files:
+   * **Force code signing with Development Team**: Add the team ID.
+   * **Force code signing with Code Signing Identity:** Add the Code Signing Identity as full ID (for example iPhone Developer: Bitrise Bot (VV2J4SV8V4)) or as a code signing group ( iPhone Developer or iPhone Distribution ).
+   * **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID.
 
-   Click the **Debug** input group and add `CODE_SIGN_STYLE="Manual"` to the **Additional options for xcodebuild call input** field.  
- 
+     ![](/img/force-code-signing.jpg)
+7. If the codesigning files are manually generated on the Apple Developer Portal, you have to specify to use manual codesigning settings since ejected React Native projects have Xcode managed codesigning turned on.
+
+   Click the **Debug** input group and add `CODE_SIGN_STYLE="Manual"` to the **Additional options for xcodebuild call input** field.
 
 ## Deploying to Bitrise
 
