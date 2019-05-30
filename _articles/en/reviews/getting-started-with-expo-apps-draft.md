@@ -123,7 +123,7 @@ If you wish to distribute your app to external testers without uploading the app
    * **Force code signing with Code Signing Identity:** Add the Code Signing Identity as full ID (for example iPhone Developer: Bitrise Bot (VV2J4SV8V4)) or as a code signing group ( iPhone Developer or iPhone Distribution ).
    * **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID.
 
-     ![](/img/force-code-signing.jpg)
+     ![](/img/force-code-signing-1.jpg)
 7. If the codesigning files are manually generated on the Apple Developer Portal, you have to specify to use manual codesigning settings since ejected React Native projects have Xcode managed codesigning turned on.
 
    Click the **Debug** input group and add `CODE_SIGN_STYLE="Manual"` to the **Additional options for xcodebuild call input** field.
