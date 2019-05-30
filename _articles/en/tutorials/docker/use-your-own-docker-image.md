@@ -1,8 +1,5 @@
 ---
 title: Use your own Docker image
-menu:
-  docker:
-    weight: 3
 
 ---
 {% include message_box.html type="note" title="Have a question or suggestion?" content=" Join the discussion on [How to use your own Docker image for your builds](http://discuss.bitrise.io/t/how-to-use-your-own-docker-image-for-your-builds/69). "%}
@@ -188,7 +185,7 @@ To base your own image on one of our available images:
 
 {% include message_box.html type="note" title="Quay.io ID" content=" You have to use the **quay.io ID** of the image you want to use as the base image. For example, `quay.io/bitriseio/android`, `quay.io/bitriseio/android-ndk`, `quay.io/bitriseio/android-ndk-lts`, or `quay.io/bitriseio/bitrise-base`. "%}
 
-### Use your own (public) Docker image for your builds [⚓](https://devcenter.bitrise.io/tutorials/docker/use-your-own-docker-image/#use-your-own-public-docker-image-for-your-builds)
+### Use your own (public) Docker image for your builds
 
 If you have your own Docker image and you checked if it can be `docker pull`-ed, you can set its ID this way:
 
