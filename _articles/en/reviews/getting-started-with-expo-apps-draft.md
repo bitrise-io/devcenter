@@ -110,37 +110,22 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
 * an iOS **Distribution** Certificate
 * an **App Store** type Provisioning Profile
-* Go to the app’s Workflow Editor and create a [new workflow](https://devcenter.bitrise.io/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
-* Set the `Select method for export` input of the `Xcode Archive & Export for iOS` Step to `app-store`.
-
-  ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/app-store-export-method-1.png)
 
   If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc`method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
-
-. Select **Xcode Archive & Export for iOS** step
-
-1\. Open **Force Build Settings** input group
-
-1\. Specify codesign settings
-
-Set **Force code signing with Development Team**, **Force code signing with Code Signing Identity**
-
-and **Force code signing with Provisioning Profile** inputs regarding to the uploaded codesigning files
-
-1. Open the **Workflow** tab of your project on Bitrise.io
+1. Open the **Workflow** tab of your project on [bitrise.io](https://www.bitrise.io).
 2. Click on **Code Signing** tab.
 3. Click or drag and drop the App Store type provisioning profile in the **PROVISIONING PROFILE** field.
 4. Click or drag and drop the iOS Distribution certificate in the **CODE SIGNING IDENTITY** field.
 5. Click on the **Workflows** tab and select your deploy workflow.
 6. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
 7. Here provide the code signing input in relation to the uploaded provisioning profile and certificate in the following fields:
-   * **Force code signing with Development Team**,
-   * **Force code signing with Code Signing Identity**,
-   * **Force code signing with Provisioning Profile**. 
+  * **Force code signing with Development Team**,
+  * **Force code signing with Code Signing Identity**,
+  * **Force code signing with Provisioning Profile**. 
 8. Specify manual codesign style If the codesigning files, are generated manually on the Apple Developer Portal,  
-   you need to explicitly specify to use manual coedsign settings  
-   (as ejected rn projects have xcode managed codesigning turned on).  
-   To do so, add 'CODE_SIGN_STYLE="Manual"' to 'Additional options for xcodebuild call' input
+  you need to explicitly specify to use manual coedsign settings  
+  (as ejected rn projects have xcode managed codesigning turned on).  
+  To do so, add 'CODE_SIGN_STYLE="Manual"' to 'Additional options for xcodebuild call' input
 
 ## 
 
