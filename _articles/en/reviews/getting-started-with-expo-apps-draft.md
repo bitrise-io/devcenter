@@ -40,23 +40,6 @@ First, let's see how to add a React Native app build with Expo to [bitrise.io](h
 
 You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the **APPS & ARTIFACTS** tab of your Build’s page.
 
-## Ejecting your app
-
-React Native apps built with Expo do not come with native modules. Since our build Steps are platform-specific, first you'll have to eject your app and add the necessary native libraries Expo does not support. Then our native dependency installer Steps take care of installing the missing native dependencies so that your project is ready for building and shipping.
-
-Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps.
-
-![](/img/eject-expo-input-fields.png)
-
-Let's see which fields you have to fill out!
-
-* **Working directory input field:** Provide the path of your project directory.
-* **Expo CLI version:** Provide the Expo CLI version you used for your project.
-* **Username for Expo** and **Password for your Expo account:** Provide your Expo credentials (username and password). If your project uses an Expo SDK, you must provide the username and password for your Expo account. Without the account, the [Expo CLI](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli) will choose the plain `--eject-method` and the Expo SDK imports will stop working.
-
-  If your project does not use an Expo SDK then you don’t need to do anything.  
-  Just add the step after the `git-clone` step and you are done.
-
 ## Installing dependencies
 
 ### Javascript dependencies
@@ -65,9 +48,22 @@ If Bitrise scanner has successfully scanned your app, depending on your project 
 
 In the Run npm command Step, install  is the default value in the npm command with arguments to run input field. This way the Step can add JavaScript dependencies to your project.
 
-![](/img/expo-npm-command.jpg)
+### Ejecting your app
 
-Run yarn command can install javascript dependencies automatically to your project without having to configure the step manually.
+React Native apps built with Expo do not come with native modules. Since our build Steps are platform-specific, Bitrise has to eject your app and add the necessary native libraries Expo does not support. Then our native dependency installer Steps take care of installing any missing native dependencies so that your project is ready for building and shipping.
+
+Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps.
+
+![](/img/eject-expo-input-fields.png)
+
+Let's see which fields you have to fill out when clicking **\[BETA\] Expo Eject** Step!
+
+* **Working directory input field:** Provide the path of your project directory.
+* **Expo CLI version:** Provide the Expo CLI version you used for your project.
+* **Username for Expo** and **Password for your Expo account:** Provide your Expo credentials (username and password). If your project uses an Expo SDK, you must provide the username and password for your Expo account. Without the account, the [Expo CLI](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli) will choose the plain `--eject-method` and the Expo SDK imports will stop working.
+
+  If your project does not use an Expo SDK then you don’t need to do anything.  
+  Just add the step after the `git-clone` step and you are done.
 
 ### Native dependencies
 
