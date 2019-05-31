@@ -2,6 +2,9 @@
 title: Apple DeveloperアカウントをBitriseと連携させる
 redirect_from:
 - "/signing-up/connecting-apple-dev-account"
+menu:
+  getting-started-main:
+    weight: 8
 
 ---
 BitriseでApple Developer Accountを認証し、Apple Developer PortalとBitriseのプロジェクトを統合することができます。
