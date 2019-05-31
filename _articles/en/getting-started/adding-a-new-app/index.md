@@ -72,7 +72,7 @@ Read more about how to add SSH keys automatically, or manually at [SSH keys](/ad
 
 ## Setting up SSH keys
 
-SSH keys serve the role of secure transfer between services. In the case of Bitrise, it will ask for your permission to be authorized at your git source provider, for example, GitHub. Read more about how to [authorize Bitrise](/getting-started/adding-a-new-app/connecting-a-repository).
+SSH keys serve the role of secure transfer between services. In the case of Bitrise, it will ask for your permission to be authorized at your Git provider, for example, GitHub. Read more about how to [authorize Bitrise](/getting-started/adding-a-new-app/connecting-a-repository).
 
 The reason behind the need for being authorized, is that Bitrise has to have a working SSH connection to your repository to be able to clone it. There are several ways to make it work. Automatically, by adding it manually, or by using your own key.
 
@@ -105,7 +105,7 @@ When the system asks if you need to use an additional private repository, click 
 {% include message_box.html type="note" title="A bot user" content=" A simple workaround is adding a "bot" user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
 "%}
 
-{% include message_box.html type="warning" title=" **Do not** add the key to the repository Deploy Keys!" content=" Add it to the user's account who has access to the repositories. "%}
+{% include message_box.html type="warning" title=" **Do not** add the key to the repository deploy keys!" content=" Add it to the user's account who has access to the repositories. "%}
 
 #### GitHub
 
