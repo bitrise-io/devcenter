@@ -3,6 +3,11 @@ title: Connecting self-hosted GitLab instances
 redirect_from:
 - "/getting-started/adding-a-new-app/self-hosted-gitlab/#connect-a-self-hosted-gitlab-instance-with-bitrise/"
 - "/getting-started/index/getting-started/signing-up/self-hosted-gitlab/"
+tag:
+- git
+- getting-started
+- orgs
+summary: ''
 menu:
   signing-up:
     weight: 12
@@ -14,7 +19,7 @@ Setting up an app that is in a self-hosted GitLab repository is very simple: Bit
 
 ## Connect a self-hosted GitLab instance with Bitrise
 
-**Only Organizations can use privately hosted GitLab instances on Bitrise**. If you are not on an Organization plan, you should not follow this guide.
+{% include message_box.html type="warning" title="Organizations only!" content="Only Organizations can use privately hosted GitLab instances on Bitrise. If you are not on an Organization plan, you should not follow this guide."%}
 
  1. Log in to your GitLab instance with **root** privileges.
     If you connect to Bitrise **without root privileges**, your Organization's other team members will **not have access to the repository on the GitLab instance**.
