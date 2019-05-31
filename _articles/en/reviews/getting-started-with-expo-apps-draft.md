@@ -69,7 +69,7 @@ Let's see which fields you have to fill out when clicking **\[BETA\] Expo Eject*
 
 The **Install missing Android SDK components** Step installs the missing native dependencies for your Android project. This Step is by default included in your deploy workflow.
 
-If you've been using the ExpoKit to develop your app, the **Run CocoaPods install** Step automatically is added to your deploy workflow to take care of any missing iOS dependencies.
+If you've been using the ExpoKit to develop your app, the **Run CocoaPods install** Step is automatically added to your deploy workflow to take care of any missing iOS dependencies.
 
 ## Testing your app
 
@@ -132,24 +132,20 @@ To deploy to Testflight and to the App Store, you will need the following code s
 
 ## Deploying to Bitrise
 
-The `Deploy to bitrise.io` step uploads all the **artifacts related to your build into the** [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) **tab on your Build’s page. ??**
+The **Deploy to bitrise.io** Step uploads all the artifacts related to your build into the [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab on your Build’s page.
 
 You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
 1. Go to the Deploy to bitrise.io step.
-2. In the Notify: User Roles, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under Notifications if you click the eye icon next to your generated APK/.ipa file in the APPS & ARTIFACTS tab.
-
-code signing- force.
+2. In the Notify: User Roles, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under Notifications if you click the eye icon next to your generated APK/.ipa file in the **APPS & ARTIFACTS** tab.
 
 ## Deploying to an app store
 
-If you wish to deploy your iOS app, follow the steps in [Code sign your iOS project for deployment](/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
+If you wish to deploy your iOS app, follow the steps in [Signing and exporting your iOS app for deploymentt](/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
 
 ### Deploying your iOS app to Testflight and iTunes Connect
 
-Have you exported an `app-store` .ipa file yet
-
-Make sure that you have exported an `app-store` .ipa file before starting the deployment procedure to a native marketplace!
+{% include message_box.html type="important" title="Have you exported an app-store .ipa file yet" content=" Make sure that you have exported an app-store .ipa file before starting the deployment procedure to a native marketplace! "%}
 
 1. modify xcode archive step's input fields to the force options.and upload the app store profile and dist certificate **manually**.
 2. Add the Deploy to iTunes Connect - Application Loader Step to your workflow, after the Xcode Archive & Export for iOS Step but preferably before the Deploy to Bitrise.io Step.
@@ -166,7 +162,9 @@ Make sure that you have exported an `app-store` .ipa file before starting the de
 
 ### Deploying your Android app to Google Play Store
 
-Make sure that you have uploaded the keystore file to the ANDROID KEYSTORE FILE field!
+{% include message_box.html type="important" title="Have you uploaded keystore file yet" content="
+Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FILE** field before starting the deployment procedure to a native marketplace!
+"%}
 
 1. Make sure you are in sync with Google Play Store! Learn how to
    * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
