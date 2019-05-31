@@ -3,6 +3,13 @@ title: Accessing the bitrise.yml file online
 redirect_from:
 - "/bitrise-cli/bitrise-yml-online/"
 - "/bitrise-cli/bitrise-yml-online"
+tag:
+- bitrise.yml
+- builds
+summary: Every bitrise.yml file is stored for your builds on bitrise.io. They come
+  in handy when you'd like to check the configuration with which a specific build
+  has run. To do that, you can either use our GUI or your build's online bitrise.yml
+  file.
 menu:
   builds-main:
     weight: 20

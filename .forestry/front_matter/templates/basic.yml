@@ -130,6 +130,7 @@ pages:
 - _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
 - _articles/en/builds/build-logs.md
 - _articles/en/builds/build-numbering-and-app-versioning.md
+- _articles/en/builds/bitrise-yml-online.md
 - _articles/en/steps-and-workflows/managing-workflows.md
 - _articles/en/steps-and-workflows/step-inputs.md
 - _articles/en/steps-and-workflows/default-workflows.md
