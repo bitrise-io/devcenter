@@ -73,13 +73,13 @@ If you've been using the ExpoKit to develop your app, the **Run CocoaPods instal
 
 ## Testing your app
 
-You can use React Native’s built in testing method, called jest, to perform unit tests.
+You can use React Native’s built in testing method, called jest, to perform unit tests on your app.
 
 1. Add another Run nmp command step to your workflow right after the first **Run npm command** Step.
-2. Type test in the npm command with arguments to run input field.
+2. Type `test` in the **npm command with arguments to run** input field.
 
-   ![](https://mpxzvqn7ysfysw.preview.forestry.io/img/test-npm.png)
-3. Start a build.
+   ![](/img/jest-test-react-expo.jpg)
+3. [Start a build](/builds/Starting-builds-manually/).
 
 You can view the test artifacts on the **APPS & ARTIFACTS** tab of your Build's page.
 
