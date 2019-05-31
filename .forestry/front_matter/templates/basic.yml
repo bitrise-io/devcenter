@@ -125,6 +125,7 @@ pages:
 - _articles/en/builds/triggering-builds/trigger-code-push.md
 - _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
 - _articles/en/builds/build-logs.md
+- _articles/en/steps-and-workflows/managing-workflows.md
 - _articles/en/steps-and-workflows/getting-started-workflows.md
 - _articles/en/reviews/managing-the-apps-of-organizations-image-game.md
 - _articles/jp/testing/test-reports.md
