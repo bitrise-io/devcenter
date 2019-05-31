@@ -1,11 +1,18 @@
 ---
 title: Default workflows
+tag:
+- steps
+- workflows
+- deploy
+summary: 'When you add a new app on bitrise.io, two workflows are created automatically.
+  These are the primary and the deploy workflows. '
+redirect_from: []
 menu:
   steps-workflows-main:
     weight: 11
 
 ---
-When you add a new app on [bitrise.io](https://www.bitrise.io), two workflows are created automatically. These are the `primary` and the `deploy` workflows. By default, every code change in your project's repository triggers the `primary` workflow if the required webhook has been set up.
+When you add a new app on [bitrise.io](https://www.bitrise.io), one or two workflows are created automatically, depending on your app. These are the `primary` and the `deploy` workflows. By default, every code change in your project's repository triggers the `primary` workflow if the required webhook has been set up.
 
 Triggers can be configured so that any other workflow (including `deploy`) is automatically triggered when certain code events happen. For more information, [read some more about build triggers](/builds/triggering-builds/triggering-builds).
 
@@ -24,7 +31,7 @@ The `primary` workflow is not the same for every app you create: it contains dif
 
 ## The deploy workflow
 
-The `deploy` workflow is automatically created when adding a new app. It is similar to the [primary workflow](/getting-started/getting-started-workflows#the-primary-workflow) in a number of ways:
+The `deploy` workflow is automatically created when adding a new app if you have tests configured in your app. It is similar to the [primary workflow](/getting-started/getting-started-workflows#the-primary-workflow) in a number of ways:
 
 * it has the same 'basic' steps
 * its specific steps are dependent on the project type
