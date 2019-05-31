@@ -11,7 +11,7 @@ summary: 'Go through the procedure of adding an iOS app on Bitrise from start to
   from adding the app to deploying it. Learn about Xcode testing and code signing. '
 menu:
   getting-started-main:
-    weight: 20
+    weight: 22
 
 ---
 Developing for iOS is not always easy - our aim is to make it as simple as possible for you! In this guide, we'll walk you through how to add an iOS app to Bitrise, how to run Xcode tests, manage your code signing files and deploy the app to bitrise.io and to the App Store.

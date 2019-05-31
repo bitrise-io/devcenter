@@ -27,6 +27,10 @@ tutorials-main:
   identifier: docker
   weight: 5
 getting-started-main:
+- weight: 8
+  title: Connecting your Apple Developer Account to Bitrise
+- weight: 7
+  title: Apple DeveloperアカウントをBitriseと連携させる
 - weight: 6
   title: Connecting your GitHub/GitLab/Bitbucket account to Bitrise
 - weight: 5

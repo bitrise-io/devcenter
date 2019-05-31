@@ -2,7 +2,7 @@
 title: Bitrise tools
 menu:
   getting-started-main:
-    weight: 33
+    weight: 35
 
 ---
 List of Open Source tools maintained by the Bitrise team.
