@@ -17,7 +17,7 @@ You can start builds on Bitrise either by:
 * [Scheduling one for a specific time](/builds/scheduling-builds/).
 * Triggering them automatically by specifying a trigger event.
 
-{% include message_box.html type="important" title="Webhooks" content="To automatically trigger builds, you need to set up an incoming webhook with your git provider. This tells Bitrise that your repository has been updated."%} 
+{% include message_box.html type="important" title="Webhooks" content="To automatically trigger builds, you need to set up an incoming webhook with your git provider. This tells Bitrise that your repository has been updated. Read more in the [Webhooks](/webhooks/index/) section."%} 
 
 You can automatically trigger builds by specifying a trigger event and a workflow. You can specify multiple triggers, and add new triggers or remove existing ones any time you wish.
 
