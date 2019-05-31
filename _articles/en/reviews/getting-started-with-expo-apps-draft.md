@@ -8,7 +8,7 @@ published: false
 ---
 You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/v32.0.0/) is a toolchain that allows you to quickly get a React Native app up and running without having to use native code in Xcode or Android Studio.
 
-In this guide we discuss how to set up, test, code sign and deploy your React Native project built with the Expo CLI.
+In this guide we discuss how to set up, test, code sign and deploy your React Native project built with the [Expo CLI](https://docs.expo.io/versions/latest/introduction/installation/#local-development-tool-expo-cli).
 
 Whether you've been using ExpoKit or not with your project, Bitrise project scanner detects the necessary configuration and adds the **\[BETA\] Expo Eject** Step to your deploy workflow. If you've been using ExpoKit with your React Native app, Bitrise project scanner adds the necessary platform-specific dependency manager Steps to your workflow as well.
 
@@ -36,7 +36,7 @@ First, let's see how to add a React Native Expo app to [bitrise.io](https://www.
  9. [Upload an app icon](/getting-started/adding-a-new-app/setting-up-configuration/#adding-an-app-icon-with-the-project-scanner).
 10. At **Webhook setup**, [register a Webhook](/webhooks/index/) so that Bitrise can automatically start a build every time you push code into your repository.
 
-You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the **APPS & ARTIFACTS** tab of your Build’s page.
+You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the **APPS & ARTIFACTS** tab on your Build’s page.
 
 ## Installing dependencies
 
@@ -58,7 +58,7 @@ Let's see which fields you have to fill out when clicking **\[BETA\] Expo Eject*
 
 * **Working directory input field:** Provide the path of your project directory.
 * **Expo CLI version:** Provide the Expo CLI version you used for your project.
-* **Username for Expo** and **Password for your Expo account:** Provide your Expo credentials (username and password). If your project uses an Expo SDK, you must provide the username and password for your Expo account. Without the account, the [Expo CLI](https://docs.expo.io/versions/latest/introduction/installation#local-development-tool-expo-cli) will choose the plain `--eject-method` and the Expo SDK imports will stop working.
+* **Username for Expo** and **Password for your Expo account:** Provide your Expo credentials (username and password). If your project uses an Expo SDK, you must provide the username and password for your Expo account. Without the account, the Expo CLI will choose the plain `--eject-method` and the Expo SDK imports will stop working.
 
   If your project does not use an Expo SDK then you don’t need to do anything.  
   Just add the step after the `git-clone` step and you are done.
@@ -139,7 +139,7 @@ You can share the generated APK/.ipa file with your team members using the build
 
 ## Deploying to an app store
 
-If you wish to deploy your iOS app, follow the steps in [Signing and exporting your iOS app for deploymentt](/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
+If you wish to deploy your iOS app, follow the steps in [Signing and exporting your iOS app for deployment](/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
 
 ### Deploying your iOS app to Testflight and iTunes Connect
 
