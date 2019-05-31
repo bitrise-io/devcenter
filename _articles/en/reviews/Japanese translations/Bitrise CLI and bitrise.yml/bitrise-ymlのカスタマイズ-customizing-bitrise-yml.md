@@ -50,9 +50,10 @@ Let's see some use cases when you would benefit from customizing `bitrise.yml` t
 
 Of course this use case works only if your customized tool is shared with your team in your company's own intranet or if it's handled by some software.
 
-このユースケースは、ご自身のカスタマイズされたツールが会社独自のイントラネット内のチームと共有されている、または
+このユースケースは、ご自身のカスタマイズされたツールが会社独自のイントラネット内のチームと共有されている、またはソフトウェアによって操作されている場合にのみ適用されます。
 
 * Another use case with `meta` can be if you want to add background color to an env var in your own tool:
+* `meta`を使用した他のユースケース；ご自身のツール内でenv varへ背景色の追加を行う場合：
 
        meta: {
          my_fancy_new_workflow_editor: {
@@ -60,6 +61,7 @@ Of course this use case works only if your customized tool is shared with your t
          }
        }
 * You can see `meta` in action on [bitrise.io](https://www.bitrise.io/) as well. For example, when you select a different stack for your workflow than the default stack. Just click Workflow Editor on the UI and pick another stack type for your workflow/s in the `Stacks` tab. This way you can test (only in the UI) how your workflow runs in the new Stack.
+* [bitrise.io](https://www.bitrise.io/)上で`meta`が動作しているかの確認も行えます。例えば、デフォルトではなく異なるスタックをワークフロー用に選択する際、UI上のWorkflow Editorをクリックして`Stacks`タブ内からワークフロー用の他のstack typeを選択してください。
 
 ![](/img/stack-os.png)
 
