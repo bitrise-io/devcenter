@@ -8,8 +8,9 @@ tag:
 - env vars
 - android
 - ios
-summary: 'All Bitrise builds have a build number. The first build of your app is,
-  by default, number 1, and the build number gets incremented with each build. '
+summary: All Bitrise builds have a build number. The first build of your app is, by
+  default, number 1, and the build number gets incremented with each build. You can
+  also take care of your app's versioning automatically, using Bitrise.
 menu:
   builds-main:
     weight: 12
@@ -17,7 +18,7 @@ menu:
 ---
 All Bitrise builds have a build number. The first build of your app is, by default, number 1, and the build number gets incremented with each build. You can get a build's Bitrise build number on the website, as well as via the `$BITRISE_BUILD_NUMBER` environment variable. This variable can be used in any step or script where you need the Bitrise build number for any reason.
 
-You can also take care of your app's versioning automatically, using Bitrise. We have two steps to do it for you - [read more here!](builds/build-numbering-and-app-versioning#Set-up-app-versioning-automatically-on-Bitrise)
+You can also take care of your app's versioning automatically, using Bitrise. We have two Steps to do it for you - [read more here!](builds/build-numbering-and-app-versioning#Set-up-app-versioning-automatically-on-Bitrise)
 
 ## Change the build number of your build
 
