@@ -5,14 +5,14 @@ date: '2019-02-18T14:53:53.000+00:00'
 tag:
 - teams
 - orgs
-summary: ''
+summary: 'Roles are very important on Bitrise. They limit what you can and cannot
+  do with an application. Roles work on an application basis: the same user can have
+  different roles on different applications.'
 menu:
   team-management-main:
     weight: 5
 
 ---
-If the owner of an app is an Organization,
-
 Roles are very important on Bitrise. They limit what you can and cannot do with an application.
 
 Roles work on an application basis: the same user can have different roles on different applications. As such, organizations have no inherent "roles", apart from that of the organization owners: organizations have groups and different groups can be assigned different roles.
