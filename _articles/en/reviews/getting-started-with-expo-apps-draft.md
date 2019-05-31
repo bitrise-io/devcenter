@@ -119,13 +119,12 @@ If you wish to distribute your app to external testers without uploading the app
 4. Click on the **Workflows** tab and select your deploy workflow.
 5. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
 6. Fill out the following fields based on your uploaded code signing files:
-   * **Force code signing with Development Team**: Add the team ID.
-
-     ![](/img/force-code-signing-development.jpg)
-   * **Force code signing with Code Signing Identity:** Add the Code Signing Identity as full ID (for example iPhone Developer: Bitrise Bot (VV2J4SV8V4)) or as a code signing group ( iPhone Developer or iPhone Distribution ).
+   **Force code signing with Development Team**: Add the team ID.
+   * ![](/img/force-code-signing-development.jpg)
+   **Force code signing with Code Signing Identity:** Add the Code Signing Identity as full ID (for example iPhone Developer: Bitrise Bot (VV2J4SV8V4)) or as a code signing group ( iPhone Developer or iPhone Distribution ).
 
      ![](/img/force-code-signing-code-signing.jpg)
-   * **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID.
+   **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID.
 
      ![](/img/force-code-signing-provisioning-profile.jpg)
 7. If the codesigning files are manually generated on the Apple Developer Portal, you have to specify to use manual codesigning settings since ejected React Native projects have Xcode managed codesigning turned on.
