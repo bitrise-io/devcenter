@@ -29,6 +29,7 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - _articles/en/webhooks/adding-outgoing-webhooks.md
+- _articles/en/webhooks/troubleshooting.md
 - _articles/en/webhooks/index.md
 - _articles/en/team-management/user-roles-on-app-teams.md
 - _articles/en/team-management/organizations/managing-invoices.md
