@@ -45,6 +45,7 @@ pages:
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
 - _articles/en/getting-started/managing-files-on-bitrise.md
+- _articles/en/getting-started/adding-a-new-app/setting-up-ssh-keys.md
 - _articles/jp/builds/configuring-notifications.md
 - _articles/jp/getting-started/getting-started-with-flutter-applications.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md

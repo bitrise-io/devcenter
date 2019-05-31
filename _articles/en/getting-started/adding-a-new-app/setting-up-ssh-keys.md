@@ -2,6 +2,13 @@
 title: Setting up SSH keys
 redirect_from:
 - "/adding-a-new-app/setting-up-ssh-keys/"
+tag:
+- getting-started
+- sign-up
+- ssh
+summary: 'SSH keys serve the role of secure transfer between services. In the case
+  of Bitrise, it will ask for your permission to be authorized at your git source
+  provider, for example, GitHub. '
 menu:
   adding-a-new-app:
     weight: 6
