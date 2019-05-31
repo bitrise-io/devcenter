@@ -37,21 +37,16 @@ To add a new app to Bitrise go to your [Dashboard](https://bitrise.io/dashboard)
 
 In case this is the first application the dashboard will show you the quickstart guide instead of a list of you apps. There you can choose to add your first app right away.
 
-Let's check out how you can [connect a repository](/getting-started/adding-a-new-app/connecting-a-repository)!
-
 ## Connecting a repository
 
-After you've selected adding a new app, you will find yourself on the `Create app` page.
+After you've selected adding a new app, you will find yourself on the **Create app** page.
 
-Select your app's privacy setting: it can be either public or private.
+Select your app's privacy setting: it can be either [public](/getting-started/adding-a-new-app/public-apps/) or private.
 
 * Private apps are only accessible to you, your organization members and those who are invited to work on an app. They require authentication to access the repository of the app.
 * [Public apps](/adding-a-new-app/public-apps) expose their `bitrise.yml` and their build logs to everyone. If you have the build URL of a public app, you can view its build log, to help with troubleshooting, for example. Public apps do not require authentication and they cannot have SSH keys.
 
-Bitrise will give you options to connect any kind of git repository to it. `GitHub`, `GitLab` and `Bitbucket` are supported out of the box.
-
-If you've already authorized Bitrise, for example, with your GitHub,
-you will see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
+Bitrise will give you options to connect any kind of git repository to it. GitHub, GitLab and Bitbucket are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you will see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
 
 {% include message_box.html type="note" title="Connect any git repository to Bitrise" content="
 You can connect any private or public git repository to Bitrise. We will automatically create an SSH key that you can use to setup the connection with your provider.
