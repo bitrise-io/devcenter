@@ -1,5 +1,13 @@
 ---
 title: Managing the invoices of your organizations
+tag:
+- teams
+- orgs
+- billing
+summary: 'Set up an email address so we can send you your invoices: we''ll deliver
+  them straight to your inbox. if you wish to download it manually from the site,
+  you can do that, too.'
+redirect_from: []
 menu:
   organizations:
     weight: 5

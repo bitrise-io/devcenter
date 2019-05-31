@@ -29,6 +29,7 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - _articles/en/team-management/user-roles-on-app-teams.md
+- _articles/en/team-management/organizations/managing-invoices.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
