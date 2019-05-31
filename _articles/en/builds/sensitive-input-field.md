@@ -3,6 +3,14 @@ title: Sensitive input in public apps
 redirect_from:
 - "/sensitive-input-field/"
 - sensitive-input-field/#set-a-sensitive-input-in-a-step/
+tag:
+- public
+- env vars
+- builds
+- secrets
+summary: Hide sensitive inputs with secret Environment Variables  in your public apps,
+  so that those inputs cannot be viewed in build logs or the `bitrise.yml` of your
+  build.
 menu:
   builds-main:
     weight: 16
