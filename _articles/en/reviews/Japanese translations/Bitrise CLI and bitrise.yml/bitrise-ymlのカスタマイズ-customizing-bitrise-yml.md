@@ -30,7 +30,7 @@ published: false
 自分の嗜好に合わせた`bitrise.yml`のカスタマイズをすることによりどのような恩恵が受けられるのか、いくつかのユースケースを見ていきましょう：
 
 * If you decide to take your spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and create your own version of it, first you have to fork it! Then you can use it (for example, by adding it to your website) and customize the environment variables (env vars) in the `bitrise.yml` tab. Let's say you want to keep an eye on one of the env vars: when it was last modified and by who. You can place the following `meta` section in `bitrise.yml` to your own version of Workflow Editor.
-* Bitriseの[open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor)上で開始して自分のバージョンを作成する場合、まず初めに`bitrise.yml`のフォークをする必要があります！その後、使用すること（例：自分のウェブサイトに追加する）ができ、`bitrise.yml`タブ内で環境変数（env vars）のカスタマイズも行えます。ここで、いつ、誰によって環境変数の一つが最後に修正されたのかに注目してみましょう。ご自身独自のWorkflow Editorへ`bitrise.yml`にある以下の`meta`セクションを配置することができます。
+* Bitriseの[open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor)上で開始して自分のバージョンを作成する場合、まず初めに`bitrise.yml`のフォークをする必要があります！その後、使用すること（例：自分のウェブサイトに追加する）ができ、`bitrise.yml`タブ内で環境変数（env vars）のカスタマイズも行えます。ここで、いつ、誰によって環境変数の一つが最後に修正されたのかに注目するとします。ご自身独自のWorkflow Editorへ`bitrise.yml`にある以下の`meta`セクションを配置することができます。
 
        app:
          envs:
