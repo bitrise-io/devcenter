@@ -2,6 +2,14 @@
 title: SAML SSO in organizations
 date: '2019-03-08T09:49:06.000+00:00'
 redirect_from: []
+tag:
+- teams
+- orgs
+- security
+- SSO
+summary: Organization members can log into or sign up to Bitrise using their own SAML
+  SSO provider's system. With SAML SSO, organizations will be able to apply the security
+  guidelines of their SAML SSO provider when accessing their Bitrise organization.
 menu:
   organizations:
     weight: 16
