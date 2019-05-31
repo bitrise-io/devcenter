@@ -124,6 +124,7 @@ pages:
 - _articles/en/builds/Scheduling-Builds.md
 - _articles/en/builds/available-environment-variables.md
 - _articles/en/builds/sensitive-input-field.md
+- _articles/en/builds/build-artifacts-online.md
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
 - _articles/en/builds/triggering-builds/trigger-code-push.md
 - _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
