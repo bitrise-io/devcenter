@@ -3,6 +3,13 @@ title: Adding a new app
 redirect_from:
 - "/tutorials/deploy/android-deployment/getting-started/adding-a-new-app"
 - "/adding-a-new-app/"
+tag:
+- ssh
+- " public"
+- builds
+- getting-started
+summary: 'Add a new app to Bitrise: connect your repository, set up SSH keys, scan
+  and configure your app, and register a webhook. '
 menu:
   adding-a-new-app:
     weight: 2
