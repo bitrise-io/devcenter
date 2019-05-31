@@ -1,11 +1,20 @@
 ---
 title: Step versions and inputs
+tag:
+- steps
+- " workflows"
+- env vars
+summary: You can manually set up what version of a given Step you want to use in your
+  builds. You can use different versions in different Workflows.
+redirect_from: []
 menu:
   steps-workflows-main:
     weight: 5
 
 ---
 ## Managing Step versions
+
+Use any existing version of a Step in your workflows. You can use different versions of the same Step in different workflows. 
 
 We regularly update our Steps to make sure they are fully equipped for our users' needs. However, you don't have to use the latest version if you don't want to: if an old version is stable and compatible with your build, feel free to continue using that, or roll back to it any time.
 
