@@ -2,6 +2,14 @@
 title: Build numbering and app versioning
 redirect_from:
 - "/builds/build-numbering-and-app-versioning/builds/build-numbering-and-app-versioning"
+tag:
+- builds
+- triggers
+- env vars
+- android
+- ios
+summary: 'All Bitrise builds have a build number. The first build of your app is,
+  by default, number 1, and the build number gets incremented with each build. '
 menu:
   builds-main:
     weight: 12
