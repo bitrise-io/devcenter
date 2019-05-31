@@ -2,6 +2,12 @@
 title: Connecting a repository
 redirect_from:
 - "/getting-started/adding-a-new-app/connecting-your-repository"
+tag:
+- getting-started
+- adding-apps
+- git
+summary: 'Create public or private apps, and authorize Bitrise to access your repository
+  at your git provider''s. '
 menu:
   adding-a-new-app:
     weight: 4
