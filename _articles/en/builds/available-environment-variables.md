@@ -3,15 +3,22 @@ title: Available environment variables
 redirect_from:
 - "/faq/available-environment-variables/"
 - "/faq/available-environment-variables/#exposed-by-the-bitrise-cli"
+tag:
+- builds
+- env vars
+- triggers
+summary: 'Environment Variables (Env Vars) consist of a key and a value, as well as
+  optional attributes. They can be defined on the level of apps, Workflows or Steps. '
 menu:
   builds-main:
     weight: 24
 
 ---
+Environment Variables (Env Vars) consist of a key and a value, as well as optional attributes. They can be defined on the level of apps, Workflows or Steps. 
+
 ## Exposed by the Bitrise CLI
 
-These Environment Variables are available everywhere, even if you run the build on your own Mac
-(using the [Bitrise CLI](https://www.bitrise.io/cli)):
+These Environment Variables are available everywhere, even if you run the build on your own Mac (using the [Bitrise CLI](https://www.bitrise.io/cli)):
 
 * `BITRISE_TRIGGERED_WORKFLOW_ID` : the Workflow's ID which was triggered, either with `bitrise run` or `bitrise trigger`
 * `BITRISE_TRIGGERED_WORKFLOW_TITLE` : the Workflow's title (if you provided one) which was triggered,
@@ -24,7 +31,7 @@ These Environment Variables are available everywhere, even if you run the build 
 * `BITRISE_DEPLOY_DIR` : directory to store artifacts / files for deploy.
   It's a temporary directory created by `bitrise` CLI by default, and can be overwritten before starting `bitrise` CLI.
   _The content of this directory can be attached to the_ [_bitrise.io_](https://www.bitrise.io) _build page, as artifacts,_
-  _with the_ _`Deploy to Bitrise.io`_ _step for example._
+  _with the_ `_Deploy to Bitrise.io_` _step for example._
 * `CI` : indicates whether `bitrise` CLI is running in CI (Continuous Integration) mode. Value can be `"true"` or `"false"`.
 * `PR` : indicates whether `bitrise` CLI is running in PR (Pull Request) mode. Value can be `"true"` or `"false"`.
 
@@ -44,7 +51,7 @@ These environments are available for builds running on [bitrise.io](https://www.
 * `BITRISEIO_GIT_BRANCH_DEST` : Used only with builds triggered by Pull Requests - the destination/target branch of the Pull Request that triggered the build
 * `BITRISE_GIT_TAG` : tag which triggered the build (if any)
 * `BITRISE_GIT_COMMIT` : commit hash which triggered the build (if any)
-* `BITRISE_GIT_MESSAGE` : commit message, Pull Request title or the message you specified if you triggered the build manually. This env var is mapped to [`commit message`](https://devcenter.bitrise.io/api/build-trigger/#git-related) in the API.
+* `BITRISE_GIT_MESSAGE` : commit message, Pull Request title or the message you specified if you triggered the build manually. This env var is mapped to `[commit message](https://devcenter.bitrise.io/api/build-trigger/#git-related)` in the API.
 * `BITRISEIO_GIT_REPOSITORY_OWNER` : the owner of the Git repository of the project (for example, `bitrise-team`)
 * `BITRISEIO_GIT_REPOSITORY_SLUG` : the slug of the Git repository of the project (for example, `bitrise-blog`)
 * `BITRISE_PULL_REQUEST` : Pull Request ID, which triggered the build (if any)
