@@ -128,7 +128,6 @@ pages:
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
 - _articles/en/builds/triggering-builds/trigger-code-push.md
 - _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
-- _articles/en/builds/triggering-builds/trigger-pull-request.md
 - _articles/en/builds/build-logs.md
 - _articles/en/builds/build-numbering-and-app-versioning.md
 - _articles/en/builds/bitrise-yml-online.md
@@ -165,3 +164,4 @@ pages:
 - _articles/en/team-management/organizations/org-ownership.md
 - _articles/en/steps-and-workflows/adding-removing-steps.md
 - _articles/en/builds/rolling-builds.md
+- _articles/en/builds/triggering-builds/trigger-pull-request.md
