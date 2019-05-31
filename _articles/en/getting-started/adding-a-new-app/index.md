@@ -31,9 +31,9 @@ When adding your app to **Bitrise**, we will clone your repository to make sure 
 * Ionic
 * React Native "%}
 
-To add a new app to Bitrise go to your [dashboard](https://bitrise.io/dashboard) and press the `Add new app` button.
+To add a new app to Bitrise go to your [Dashboard](https://bitrise.io/dashboard) and press the **Add new App** button.
 
-![Screenshot](/img/adding-a-new-app/add_new_app.png)
+![](/img/add-a-new-app-button.jpg)
 
 In case this is the first application the dashboard will show you the quickstart guide instead of a list of you apps. There you can choose to add your first app right away.
 
@@ -107,7 +107,7 @@ When the system asks if you need to use an additional private repository, click 
 
 ![](/img/manual-steup.png)
 
-{% include message_box.html type="note" title="A bot user" content=" A simple workaround is adding a \"bot\" user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
+{% include message_box.html type="note" title="A bot user" content=" A simple workaround is adding a "bot" user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
 "%}
 
 {% include message_box.html type="warning" title=" **Do not** add the key to the repository Deploy Keys!" content=" Add it to the user's account who has access to the repositories. "%}
@@ -170,7 +170,7 @@ You can select an image that your iOS/Android project already contains, and use 
 
 Please note that the image file size cannot exceed 2 MB and the supported image file extensions are `png`, `bmp`, `tiff`, `jpeg`, `jpg`, `webp`.
 
- When adding your app to Bitrise, our project scanner automatically detects app images and also offers a custom image upload option.
+When adding your app to Bitrise, our project scanner automatically detects app images and also offers a custom image upload option.
 
 1. Click the **+** sign on your Dashboard to  [Add an app](https:///getting-started/adding-a-new-app/index/) to Bitrise.
 
