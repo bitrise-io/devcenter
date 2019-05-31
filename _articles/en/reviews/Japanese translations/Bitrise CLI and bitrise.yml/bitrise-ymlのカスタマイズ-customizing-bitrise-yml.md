@@ -8,7 +8,11 @@ published: false
 ---
 Any tool that can edit `bitrise.yml` can add custom properties to it. This way you can add special properties or notes to your env vars, or even try new configurations of your workflow in `bitrise.yml`. All  you have to add is add a  `meta` field and a namespace label with key and value to the right place.
 
+`bitrise.yml`の編集ができるツールであれば、カスタムプロパティを追加することができます。この方法により、特別なプロパティや環境変数にメモを追加したり、`bitrise.yml`でのワークフローの新しい構成を試すことも可能です。実行するには、`meta`欄とkeyとvalueが付随したnamespace labelを正しい場所に追加してください。
+
 The format you should use is the following:
+
+以下のようなフォーマットを使用してください：
 
     KEY: "VALUE",
     opts: {
@@ -29,7 +33,10 @@ The format you should use is the following:
 
 Let's see some use cases when you would benefit from customizing `bitrise.yml` to your own liking:
 
+自分の嗜好に合わせた`bitrise.yml`のカスタマイズによってどんな恩恵が受けられるのか、いくつかのユースケースを見ていきましょう：
+
 * If you decide to take your spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and create your own version of it, first you have to fork it! Then you can use it (for example, by adding it to your website) and customize the environment variables (env vars) in the `bitrise.yml` tab. Let's say you want to keep an eye on one of the env vars: when it was last modified and by who. You can place the following `meta` section in `bitrise.yml` to your own version of Workflow Editor.
+* Bitriseの[open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor)上で開始して自分のバージョンを作成する場合、まず初めに`bitrise.yml`のフォークをする必要があります！その後、使用すること（例：自分のウェブサイトに追加する）ができ、`bitrise.yml`タブ内で環境変数（env vars）のカスタマイズも行えます。ここで、いつ、誰によって環境変数の一つが最後に修正されたのかに注目してみましょう。ご自身独自のWorkflow Editorへ`bitrise.yml`にある以下の`meta`セクションを配置することができます。
 
        app:
          envs:
@@ -42,6 +49,8 @@ Let's see some use cases when you would benefit from customizing `bitrise.yml` t
                  last_modifier: Jane Doe
 
 Of course this use case works only if your customized tool is shared with your team in your company's own intranet or if it's handled by some software.
+
+このユースケースは、ご自身のカスタマイズされたツールが会社独自のイントラネット内のチームと共有されている、または
 
 * Another use case with `meta` can be if you want to add background color to an env var in your own tool:
 
