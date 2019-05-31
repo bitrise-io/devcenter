@@ -148,15 +148,15 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 {% include message_box.html type="important" title="Have you exported an app-store .ipa file yet" content=" Make sure that you have exported an app-store .ipa file before starting the deployment procedure to a native marketplace! "%}
 
 1. modify xcode archive step's input fields to the force options.and upload the app store profile and dist certificate **manually**.
-2. Add the Deploy to iTunes Connect - Application Loader Step to your workflow, after the Xcode Archive & Export for iOS Step but preferably before the Deploy to Bitrise.io Step.
-3. Provide your Apple credentials in the Deploy to iTunes Connect - Application Loader Step.
+2. Add the **Deploy to iTunes Connect - Application Loader** Step to your workflow, after the **Xcode Archive & Export for iOS** Step but preferably before the Deploy to Bitrise.io Step.
+3. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
    * Apple ID
    * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
-   Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars#about-secrets).
-4. [Start a build](https://mpxzvqn7ysfysw.preview.forestry.io/builds/Starting-builds-manually/).
+   Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
+4. [Start a build](/builds/Starting-builds-manually/).
 
    If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
 
@@ -169,14 +169,14 @@ Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FIL
 1. Make sure you are in sync with Google Play Store! Learn how to
    * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
    * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
-2. In your Bitrise Dashboard, go to Code Signing tab and upload the service account JSON key into the GENERIC FILE STORAGE.
+2. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Add the Google Play Deploy step after the Sign APK step in your deploy workflow.
+4. Add the **Google Play Deploy** Step after the **Sign APK** Step in your deploy workflow.
 5. Fill out the required input fields as follows:
-   * Service Account JSON key file path: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   * Package name: the package name of your Android app
-   * Track: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
+   **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   **Package name**: the package name of your Android app
+   **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
 
 And that’s it! Start a build and release your Android app to the app store of your choice.
