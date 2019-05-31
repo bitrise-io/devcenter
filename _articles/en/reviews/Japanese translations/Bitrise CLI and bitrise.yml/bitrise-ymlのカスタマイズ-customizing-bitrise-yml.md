@@ -6,11 +6,7 @@ summary: ''
 published: false
 
 ---
-Any tool that can edit `bitrise.yml` can add custom properties to it. This way you can add special properties or notes to your env vars, or even try new configurations of your workflow in `bitrise.yml`. All  you have to add is add a  `meta` field and a namespace label with key and value to the right place.
-
-`bitrise.yml`の編集ができるツールであれば、カスタムプロパティを追加することができます。この方法により、特別なプロパティや環境変数にメモを追加したり、`bitrise.yml`でのワークフローの新しい構成を試すことも可能です。実行するには、`meta`欄とkeyとvalueが付随したnamespace labelを正しい場所に追加してください。
-
-The format you should use is the following:
+`bitrise.yml`の編集が可能なツールであれば、カスタムプロパティを追加することができます。この方法により、特別なプロパティや環境変数にメモを追加したり、`bitrise.yml`でワークフローの新しい構成を試すことも可能です。実行するには正しい場所に、`meta`欄と、keyとvalueが付随したnamespace labelを追加してください。
 
 以下のようなフォーマットを使用してください：
 
@@ -31,9 +27,7 @@ The format you should use is the following:
         }
     }
 
-Let's see some use cases when you would benefit from customizing `bitrise.yml` to your own liking:
-
-自分の嗜好に合わせた`bitrise.yml`のカスタマイズによってどんな恩恵が受けられるのか、いくつかのユースケースを見ていきましょう：
+自分の嗜好に合わせた`bitrise.yml`のカスタマイズをすることによりどのような恩恵が受けられるのか、いくつかのユースケースを見ていきましょう：
 
 * If you decide to take your spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and create your own version of it, first you have to fork it! Then you can use it (for example, by adding it to your website) and customize the environment variables (env vars) in the `bitrise.yml` tab. Let's say you want to keep an eye on one of the env vars: when it was last modified and by who. You can place the following `meta` section in `bitrise.yml` to your own version of Workflow Editor.
 * Bitriseの[open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor)上で開始して自分のバージョンを作成する場合、まず初めに`bitrise.yml`のフォークをする必要があります！その後、使用すること（例：自分のウェブサイトに追加する）ができ、`bitrise.yml`タブ内で環境変数（env vars）のカスタマイズも行えます。ここで、いつ、誰によって環境変数の一つが最後に修正されたのかに注目してみましょう。ご自身独自のWorkflow Editorへ`bitrise.yml`にある以下の`meta`セクションを配置することができます。
@@ -66,6 +60,8 @@ Of course this use case works only if your customized tool is shared with your t
 ![](/img/stack-os.png)
 
 If you head back to the `bitrise.yml` tab, a `bitrise.io meta` is added to the deploy workflow:
+
+`bitrise.yml`タブに戻ると、`bitrise.io meta`がデプロイワークフローに追加されます：
 
     {% raw %}
     workflows:
@@ -101,3 +97,5 @@ If you head back to the `bitrise.yml` tab, a `bitrise.io meta` is added to the d
     {% endraw %}
 
 Since this meta is only interpreted on [bitrise.io](https://www.bitrise.io/) and not locally or on Bitrise CLI, it is categorized by a `bitrise.io` namespace (where the stack is the key and `linux-docker-android-lts` is the value). Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process.
+
+このmetaはbitrise.io上でのみ解釈されローカルまたはBitrise CLIでは解釈されないので、metaは`bitrise.io` namespace（stackがkeyで`linux-docker-android-lts`がvalueになっている場所）にカテゴリー化されています。Workflow Editorは常に保存された変数を有効化し、syntaxエラーがみられるとそのエラーを返します。しかし、`meta`が追加されると、Workflow Editorの検証プロセスによりそのコンテンツ（中身）は完全に無視されます。
