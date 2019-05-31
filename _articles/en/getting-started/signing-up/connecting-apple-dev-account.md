@@ -2,9 +2,6 @@
 title: Connecting your Apple Developer Account to Bitrise
 redirect_from:
 - "/signing-up/connecting-apple-dev-account"
-menu:
-  signing-up:
-    weight: 13
 
 ---
 Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.

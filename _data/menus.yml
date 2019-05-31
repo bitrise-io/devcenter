@@ -27,6 +27,10 @@ tutorials-main:
   identifier: docker
   weight: 5
 getting-started-main:
+- weight: 6
+  title: Connecting your GitHub/GitLab/Bitbucket account to Bitrise
+- weight: 5
+  title: GitHub/GitLab/BitbucketアカウントをBitriseと連携させる
 - title: Adding a new app
   identifier: adding-a-new-app
   weight: 2

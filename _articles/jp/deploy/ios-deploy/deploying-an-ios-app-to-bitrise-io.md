@@ -4,7 +4,7 @@ date: 2018-10-26T12:37:47.000+00:00
 redirect_from: []
 menu:
   ios-deploy:
-    weight: 2
+    weight: 3
 
 ---
 {% include not_translated_yet.html %}
