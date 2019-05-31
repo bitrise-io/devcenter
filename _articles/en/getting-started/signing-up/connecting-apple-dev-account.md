@@ -2,6 +2,14 @@
 title: Connecting your Apple Developer Account to Bitrise
 redirect_from:
 - "/signing-up/connecting-apple-dev-account"
+tag:
+- apple
+- " builds"
+- code-signing
+- security
+summary: Connecting your Apple Developer Account allows Bitrise to reuse your authentication
+  sessions for 30 days so you do not have to manually go through 2FA on every iOS
+  build.
 
 ---
 Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
