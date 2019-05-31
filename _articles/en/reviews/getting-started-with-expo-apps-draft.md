@@ -6,13 +6,11 @@ summary: ''
 published: false
 
 ---
-You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/v32.0.0/) is a toolchain built on React Native. It allows you to quickly get a React Native app up and running without having to fiddle with native code in Xcode or Android Studio.
+You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/v32.0.0/) is a toolchain that allows you to quickly get a React Native app up and running without having to use native code in Xcode or Android Studio.
 
 In this guide we discuss how to set up, test, code sign and deploy your React Native project built with the Expo CLI.
 
-Depending on the nature of your React Native project, you can expect two types of workflows once the project scanner has finished scanning your project. If you've been using the [ExpoKit](https://docs.expo.io/versions/v32.0.0/expokit/eject/) to include custom native modules to your pure JavaScript project, then our project scanner will add the necessary native dependency installer Steps before the build Steps. If you have NOT ejected your project to ExpoKit, your workflow will get the JavaScript and native dependency installer Steps along with the **\[BETA\] Expo Eject** Step.
-
-Whether you've been using ExpoKit or not with your project, Bitrise project scanner detects the necessary configuration and adds the **\[BETA\] Expo Eject** Step to your deploy workflow. If you've been using ExpoKit with your React Native app, Bitrise project scanner adds the necessary platform-specific dependency manager Steps to your workflow so that ExpoKit's native iOS and Android dependencies are included in your app.
+Whether you've been using ExpoKit or not with your project, Bitrise project scanner detects the necessary configuration and adds the **\[BETA\] Expo Eject** Step to your deploy workflow. If you've been using ExpoKit with your React Native app, Bitrise project scanner adds the necessary platform-specific dependency manager Steps to your workflow as well.
 
 ## Adding an Expo app to bitrise.io
 
