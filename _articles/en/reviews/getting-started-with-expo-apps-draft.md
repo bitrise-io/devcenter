@@ -1,8 +1,15 @@
 ---
-tag: []
+tag:
+- react
+- getting-started
+- deploy
+- code-signing
+- testing
 title: Getting started with Expo apps - draft
 redirect_from: []
-summary: ''
+summary: You can generate React Native projects with the React Native CLI or with
+  the Expo CLI. Expo is a toolchain that allows you to quickly get a React Native
+  app up and running without having to use native code in Xcode or Android Studio.
 published: false
 
 ---
@@ -50,7 +57,7 @@ The default value of the **Run npm command** Step is `install` in the **npm comm
 
 React Native apps built with Expo do not come with native modules. Since our build Steps are platform-specific, Bitrise has to eject your app, add and configure the necessary native templates. Then our native dependency installer Steps take care of installing any missing native dependencies so that your project is ready for building and shipping.
 
-Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps in your deploy workflow.
+The Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps in your deploy workflow.
 
 ![](/img/eject-expo-input-fields.png)
 
@@ -89,12 +96,12 @@ Let’s see how to fill them out!
 
 ### Signing your Android app
 
-1. Select the deploy workflow at the WORKFLOW dropdown menu in the top left corner of your apps’ Workflow Editor.
-2. Go to the Code Signing tab.
-3. Drag-and-drop your keystore file to the ANDROID KEYSTORE FILE field.
-4. Fill out the Keystore password, Keystore alias, and Private key password fields and click Save metadata.
+1. Select the deploy workflow at the **WORKFLOW** dropdown menu in the top left corner of your apps’ Workflow Editor.
+2. Go to the **Code Signing** tab.
+3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
+4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click Save metadata.
 
-   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on keystore file, click [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our Sign APK step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
+   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on keystore file, click [here](https://developer.android.com/studio/publish/app-signing). With this information added to your **Code Signing** tab, our **Sign APK** step (by default included in your Android **deploy** workflow) will take care of signing your APK so that it’s ready for distribution!
 
 {% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options! "%}
 
@@ -145,8 +152,10 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 
 {% include message_box.html type="important" title="Have you exported an app-store .ipa file yet" content=" Make sure that you have exported an app-store .ipa file before starting the deployment procedure to a native marketplace! "%}
 
-1. modify xcode archive step's input fields to the force options.and upload the app store profile and dist certificate **manually**.
-2. Add the **Deploy to iTunes Connect - Application Loader** Step to your workflow, after the **Xcode Archive & Export for iOS** Step but preferably before the Deploy to Bitrise.io Step.
+1. Modify the **Xcode Archive & Export for iOS** Step's input fields to the force options.and upload the app store profile and dist certificate **manually**.
+2. Add the **Deploy to iTunes Connect - Application Loader** Step to your workflow. 
+
+   Put the Step after the **Xcode Archive & Export for iOS** Step but preferably before the **Deploy to Bitrise.io** Step.
 3. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
