@@ -1,5 +1,12 @@
 ---
 title: Adding a new team member
+tag:
+- teams
+- apps
+summary: |-
+  Once you have your app set up, you can start inviting team members! You can select multiple roles for the new members, like: admin, developer, and qa/tester.
+  Different roles have different permissions that you can read more about below.
+redirect_from: []
 menu:
   team-management-main:
     weight: 3
