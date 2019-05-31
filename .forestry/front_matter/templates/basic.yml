@@ -41,7 +41,6 @@ pages:
 - _articles/en/getting-started/signing-up/connecting-account-bitrise.md
 - _articles/en/getting-started/signing-up/signing-up-with-github.md
 - _articles/en/getting-started/signing-up/signing-up-with-email.md
-- _articles/en/getting-started/signing-up/logging-in-to-bitrise.md
 - _articles/en/getting-started/signing-up/self-hosted-gitlab.md
 - _articles/en/getting-started/index.md
 - _articles/en/getting-started/account-security.md
@@ -178,4 +177,5 @@ pages:
 - _articles/en/getting-started/adding-a-new-app/index.md
 - _articles/en/builds/rolling-builds.md
 - _articles/en/builds/triggering-builds/trigger-pull-request.md
+- _articles/en/getting-started/signing-up/logging-in-to-bitrise.md
 - _articles/en/getting-started/signing-up/connecting-apple-dev-account.md

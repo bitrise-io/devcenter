@@ -2,6 +2,12 @@
 title: Logging in to Bitrise
 redirect_from: []
 date: '2019-03-29T14:06:43.000+00:00'
+tag:
+- troubleshooting
+- getting-started
+- security
+summary: 'You can reset your password via e-mail at any time. If you fail to log in
+  three times in a row, reCAPTCHA will be triggered to check if you are a human. '
 menu:
   signing-up:
     weight: 9
