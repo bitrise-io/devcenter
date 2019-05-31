@@ -85,7 +85,6 @@ pages:
 - _articles/en/reviews/fastlane.md
 - _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
 - _articles/jp/team-management/teams-vs-organizations.md
-- _articles/en/team-management/teams-vs-organizations.md
 - _articles/en/reviews/Japanese translations/webhooks/slack-webhookの追加-adding-a-slack-webhook.md
 - _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md
 - _articles/jp/getting-started/signing-up/logging-in-with-bitrise.md
@@ -144,3 +143,4 @@ pages:
 - _articles/en/bitrise-cli/run-your-first-build.md
 - _articles/en/builds/selective_builds.md
 - _articles/en/team-management/index.md
+- _articles/en/team-management/teams-vs-organizations.md
