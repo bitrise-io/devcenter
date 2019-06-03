@@ -17,7 +17,7 @@ menu:
 ---
 When adding your app to Bitrise, we clone your repository to make sure we can access it. We also run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your Workflow with all the necessary steps to build and deploy your app.
 
-{% include message_box.html type="note" title="Currently we are supporting the following projects out of the box" content="
+Currently we are supporting the following projects out of the box:
 
 * iOS
 * Android
@@ -27,7 +27,7 @@ When adding your app to Bitrise, we clone your repository to make sure we can ac
 * macOS
 * Cordova
 * Ionic
-* React Native "%}
+* React Native
 
 In this guide we describe how you can add a new app to Bitrise, connect your repository, set up SSH keys and configuration and register a webhook.
 
