@@ -108,13 +108,13 @@ When the system asks if you need to use an additional private repository, click 
 
 #### Bitbucket
 
-![Screenshot](/img/adding-a-new-app/ssh-bitbucket.png)
+![](/img/ssh-bitbucket-cropped.jpg)
 
 #### GitLab
 
 ![Screenshot](/img/adding-a-new-app/ssh-gitlab.png)
 
-#### Use your own key
+#### Using your own key
 
 This option can be used if you also have the private key of the given user. You just have to paste the private key and [Bitrise](https://www.bitrise.io) will be able to access the repositories.
 
