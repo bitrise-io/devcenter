@@ -143,20 +143,20 @@ If the validation is successful, Bitrise will scan your repository and give you 
 
 If the validation fails, choose the `Restart scanning without validation` option.
 
-![](/img/validation-failed.png)
+![](/img/restart-scanning-without-validation.jpg)
 
 In this case, you have to configure the project manually. Click `Next`. You will see the `Validating Repository` message again but this time Bitrise only checks that we have access to the specified repository.
 
 Choose the project type (for example, Xamarin) and specify the necessary inputs (for example, the path to the Xamarin Solution file). You can also select the stack on which you wish to run your builds.
 
-![](/img/project-build-config.png)
+![](/img/manual-project-build-config.jpg)
 
 {% include message_box.html type="note" title="Restarting validation" content="
 You can restart validation if you want Bitrise to automatically detect your project type. Once you fixed the issue that caused validation to fail for the first time, go to the `Project build configuration` window and select the `Detected` tab. Choose the `Restart current validation` option. "%}
 
 ### Adding an app icon with the project scanner
 
-You can select an image that your iOS/Android project already contains, and use it as an app icon on Bitrise. If your project doesn't contain any images, you can add a custom image from your local computer too. This way you can personalize your apps and build types.  Let's see how it works!
+You can select an image that your iOS/Android project already contains, and use it as an app icon on Bitrise. If your project doesn't contain any images, you can add a custom image from your local computer too. This way you can personalize your apps and build types. Let's see how it works!
 
 Please note that the image file size cannot exceed 2 MB and the supported image file extensions are `png`, `bmp`, `tiff`, `jpeg`, `jpg`, `webp`.
 
@@ -170,8 +170,6 @@ When adding your app to Bitrise, our project scanner automatically detects app i
    ![](https://files.nuclino.com/files/e7f54815-218d-4496-822a-fad40dd27caa/icon.jpg)
 3. Click **Choose Image and Proceed**.
 4. Continue with setting up a [webhook](https:///webhooks/index/).
-
-Your first personalized build has been kicked off. Check it out on your build's page.
 
 You can always change an app icon if you go to the Settings tab of your app and click the **+** on the **APP ICON**.
 
