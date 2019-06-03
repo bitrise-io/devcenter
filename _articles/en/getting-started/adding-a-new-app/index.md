@@ -15,9 +15,8 @@ menu:
     weight: 2
 
 ---
-## Uploading an app to Bitrise
-
-When adding your app to Bitrise, we will clone your repository to make sure we can access it. We will also run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your workflow with all the necessary steps to build and deploy your app.
+When adding your app to Bitrise, we clone your repository to make sure we can access it. We also run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your 
+Workflow with all the necessary steps to build and deploy your app.
 
 {% include message_box.html type="note" title="Currently we are supporting the following projects out of the box" content="
 
@@ -31,24 +30,26 @@ When adding your app to Bitrise, we will clone your repository to make sure we c
 * Ionic
 * React Native "%}
 
+## Adding a new app to Bitrise
+
 To add a new app to Bitrise go to your [Dashboard](https://bitrise.io/dashboard) and press the **Add new App** button.
 
 ![](/img/add-a-new-app-button.jpg)
 
-In case this is the first application, the Dashboard will show you the quickstart guide instead of a list of you apps. There you can choose to add your first app right away.
+In case this is the first application in Bitrise, the Dashboard shows you the quickstart guide instead of a list of you uploaded apps. There you can choose to add your first app right away.
 
 ## Connecting a repository
 
-After you've selected adding a new app, you will find yourself on the **Create app** page.
+After you've selected adding a new app, you find yourself on the **Create app** page.
 
 Select your app's privacy setting: it can be either [public](/getting-started/adding-a-new-app/public-apps/) or private.
 
 * Private apps are only accessible to you, your organization members and those who are invited to work on an app. They require authentication to access the repository of the app.
 * [Public apps](/adding-a-new-app/public-apps) expose their `bitrise.yml` and their build logs to everyone. If you have a public app's build URL, you can view its build log, to help with troubleshooting, for example. Public apps do not require authentication and they cannot have SSH keys.
 
-Bitrise will give you options to connect any kind of git repository to it. GitHub, GitLab and Bitbucket are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you will see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
+Bitrise gives you options to connect any kind of git repository to it. GitHub, GitLab and Bitbucket are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
 
-{% include message_box.html type="note" title="Connect any Git repository to Bitrise" content=" You can connect any private or public git repository to Bitrise. We will automatically create an SSH key that you can use to setup the connection with your provider. "%}
+{% include message_box.html type="note" title="Connect any Git repository to Bitrise" content=" You can connect any private or public git repository to Bitrise. We automatically create an SSH key that you can use to setup the connection with your provider. "%}
 
 ![](/img/connect-repo.jpg)
 
@@ -56,19 +57,17 @@ If you haven't [authorized Bitrise](/getting-started/adding-a-new-app/connecting
 
 ![](/img/bitbucket-created.jpg)
 
-It will then list your repositories as above. If you'd like to connect git repository hosted by other than GitHub or Bitbucket, select the **Other / Manual** tab.
+It then lists your repositories as above. If you'd like to connect git repository hosted by other than GitHub or Bitbucket, select the **Other / Manual** tab.
 
 ![](/img/other.jpg)
 
-You will have to add the Git URL of the repository you would like to connect.
+You have to add the Git URL of the repository you would like to connect.
 
-{% include message_box.html type="warning" title="Use SSH URLs for private repositories" content=" Please note, that if you are connecting a private repository, Bitrise will try to clone it through SSH, so it's necessary to provide an SSH URL to your repository here. "%}
-
-Bitrise will add an SSH key to your repository at a later step.
+{% include message_box.html type="warning" title="Use SSH URLs for private repositories" content=" Please note, that if you are connecting a private repository, Bitrise  tries to clone it through SSH, so it's necessary to provide an SSH URL to your repository here. "%}
 
 ## Setting up SSH keys
 
-SSH keys serve the role of secure transfer between services. In the case of Bitrise, it will ask for your permission to be authorized at your Git provider, for example, GitHub. Read more about how to [authorize Bitrise](/getting-started/adding-a-new-app/connecting-a-repository).
+SSH keys serve the role of secure transfer between services. In the case of Bitrise, it asks for your permission to be authorized at your Git provider, for example, GitHub. Read more about how to [authorize Bitrise](/getting-started/adding-a-new-app/connecting-a-repository).
 
 Being authorized is important as Bitrise has to have a working SSH connection to your repository to be able to clone it. There are several ways to make it work. Automatically, by adding it manually, or by using your own key.
 
@@ -81,13 +80,13 @@ Public apps cannot have SSH keys. If you set your app's privacy settings to Publ
 
 ### Automatic setup
 
-In the case of GitHub, GitLab and Bitbucket repository setups, Bitrise will generate a public and private SSH key pair and ask whether you like the idea of adding that into your repository automatically as deploy key, or you'd like to add it by hand.
+In the case of GitHub, GitLab and Bitbucket repository setups, Bitrise generates a public and private SSH key pair and ask whether you like the idea of adding that into your repository automatically as deploy key, or you'd like to add it by hand.
 
 ![](/img/repo-access.png)
 
 You need admin rights to the repository to be able to auto-add the key to it. In any other case, copy the public key from here and add it to your repository at your Git provider.
 
-The auto-add option will add the generated key as a read-only [deploy key](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys) to your repository, it's the best for your security.
+The auto-add option adds the generated key as a read-only [deploy key](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys) to your repository, it's the best for your security.
 
 ### Manual setup
 
@@ -120,39 +119,34 @@ This option can be used if you also have the private key of the given user. You 
 
 ## Setting up configuration
 
-After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for
-your project, Bitrise will download your code to make sure it can access the repository
-and will run an automatic repository scanner script to find the best initial configuration for your project.
-Currently Bitrise will detect `iOS`, `Android`, `Xamarin`, `Ionic`, `Cordova`, `Flutter`, `React Native` and `fastlane` projects out of the box.
+After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for your project, Bitrise downloads your code to make sure it can access the repository. It also runs an automatic repository scanner script to find the best initial configuration for your project. Currently Bitrise detect iOS, Android, Xamarin, Ionic, Cordova, Flutter, React Native and fastlane projects out of the box.
 
-You can configure other types of projects too, but that will require manual
-configuration.
+You can configure other types of projects too, but that requires manual configuration.
 
 ### Automatic project configuration
 
-Enter the name of the default branch of your repository where your project is located. This branch should include the configuration of your project. Once you hit `Next`, Bitrise will automatically start the validation of the repository.
+Enter the name of the default branch of your repository where your project is located. This branch should include the configuration of your project. Once you hit **Next**, Bitrise automatically starts the validation of the repository.
 
 ![](/img/choose-branch.png)
 
-During validation Bitrise will make sure it has access to the given branch,
-using the [SSH key](/adding-a-new-app/setting-up-ssh-keys) you set up.
+During validation Bitrise makes sure it has access to the given branch, using the [SSH key](/adding-a-new-app/setting-up-ssh-keys) you set up.
 
-If the validation is successful, Bitrise will scan your repository and give you a default workflow based on the configuration of the project.
+If the validation is successful, Bitrise scans your repository and give you a default Workflow based on the configuration of the project.
 
 ### Manual project configuration
 
-If the validation fails, choose the `Restart scanning without validation` option.
+If the validation fails, choose the **Restart scanning without validation** option.
 
 ![](/img/restart-scanning-without-validation-1.jpg)
 
-In this case, you have to configure the project manually. Click `Next`. You will see the `Validating Repository` message again but this time Bitrise only checks that we have access to the specified repository.
+In this case, you have to configure the project manually. Click **Next**. You see the **Validating Repository** message again but this time Bitrise only checks if it has access to the specified repository.
 
-Choose the project type (for example, Xamarin) and specify the necessary inputs (for example, the path to the Xamarin Solution file). You can also select the stack on which you wish to run your builds.
+Choose the project type and specify the necessary inputs. You can also select the stack on which you wish to run your builds.
 
 ![](/img/manual-project-build-config.jpg)
 
 {% include message_box.html type="note" title="Restarting validation" content="
-You can restart validation if you want Bitrise to automatically detect your project type. Once you fixed the issue that caused validation to fail for the first time, go to the `Project build configuration` window and select the `Detected` tab. Choose the `Restart current validation` option. "%}
+You can restart validation if you want Bitrise to automatically detect your project type. Once you fixed the issue that caused validation to fail for the first time, go to the **Project build configuration** window and select the **Detected** tab. Choose the **Restart current validation** option. "%}
 
 ### Adding an app icon with the project scanner
 
@@ -174,6 +168,6 @@ You can always change an app icon if you go to the Settings tab of your app and 
 
 ### Webhook setup
 
-Once project configuration is finished, Bitrise offers you the chance to immediately register a webhook in your repository. After the webhook is set up, any code change in your repository will trigger the automatically created `primary` workflow by default.
+Once project configuration is finished, Bitrise offers you the chance to immediately register a webhook in your repository. After the webhook is set up, any code change in your repository will trigger the automatically created primary Workflow by default.
 
 Read about webhooks in detail in our [Webhooks](/webhooks) section.
