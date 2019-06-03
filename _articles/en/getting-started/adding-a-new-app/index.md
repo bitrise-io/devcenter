@@ -17,7 +17,7 @@ menu:
 ---
 ## Adding an app to Bitrise
 
-When adding your app to **Bitrise**, we will clone your repository to make sure we can access it. Besides cloning your repository we will run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your workflow with all the necessary steps to build and deploy your app.
+When adding your app to Bitrise, we will clone your repository to make sure we can access it. We will also run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your workflow with all the necessary steps to build and deploy your app.
 
 {% include message_box.html type="note" title="Currently we are supporting the following projects out of the box" content="
 
@@ -35,7 +35,7 @@ To add a new app to Bitrise go to your [Dashboard](https://bitrise.io/dashboard)
 
 ![](/img/add-a-new-app-button.jpg)
 
-In case this is the first application the dashboard will show you the quickstart guide instead of a list of you apps. There you can choose to add your first app right away.
+In case this is the first application, the Dashboard will show you the quickstart guide instead of a list of you apps. There you can choose to add your first app right away.
 
 ## Connecting a repository
 
@@ -44,13 +44,11 @@ After you've selected adding a new app, you will find yourself on the **Create a
 Select your app's privacy setting: it can be either [public](/getting-started/adding-a-new-app/public-apps/) or private.
 
 * Private apps are only accessible to you, your organization members and those who are invited to work on an app. They require authentication to access the repository of the app.
-* [Public apps](/adding-a-new-app/public-apps) expose their `bitrise.yml` and their build logs to everyone. If you have the build URL of a public app, you can view its build log, to help with troubleshooting, for example. Public apps do not require authentication and they cannot have SSH keys.
+* [Public apps](/adding-a-new-app/public-apps) expose their `bitrise.yml` and their build logs to everyone. If you have a public app's build URL, you can view its build log, to help with troubleshooting, for example. Public apps do not require authentication and they cannot have SSH keys.
 
 Bitrise will give you options to connect any kind of git repository to it. GitHub, GitLab and Bitbucket are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you will see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
 
-{% include message_box.html type="note" title="Connect any git repository to Bitrise" content="
-You can connect any private or public git repository to Bitrise. We will automatically create an SSH key that you can use to setup the connection with your provider.
-"%}
+{% include message_box.html type="note" title="Connect any Git repository to Bitrise" content=" You can connect any private or public git repository to Bitrise. We will automatically create an SSH key that you can use to setup the connection with your provider. "%}
 
 ![](/img/connect-repo.jpg)
 
@@ -58,26 +56,23 @@ If you haven't [authorized Bitrise](/getting-started/adding-a-new-app/connecting
 
 ![](/img/bitbucket-created.jpg)
 
-It will then list your repositories as above. If you'd like to connect git repository hosted by other than GitHub or Bitbucket,
-select the `Other / Manual` tab.
+It will then list your repositories as above. If you'd like to connect git repository hosted by other than GitHub or Bitbucket, select the **Other / Manual** tab.
 
 ![](/img/other.jpg)
 
-You will have to add the git url of the repository you would like to connect.
+You will have to add the Git URL of the repository you would like to connect.
 
 {% include message_box.html type="warning" title="Use SSH URLs for private repositories" content=" Please note, that if you are connecting a private repository, Bitrise will try to clone it through SSH, so it's necessary to provide an SSH URL to your repository here. "%}
 
 Bitrise will add an SSH key to your repository at a later step.
-Read more about how to add SSH keys automatically, or manually at [SSH keys](/adding-a-new-app/setting-up-ssh-keys/).
 
 ## Setting up SSH keys
 
 SSH keys serve the role of secure transfer between services. In the case of Bitrise, it will ask for your permission to be authorized at your Git provider, for example, GitHub. Read more about how to [authorize Bitrise](/getting-started/adding-a-new-app/connecting-a-repository).
 
-The reason behind the need for being authorized, is that Bitrise has to have a working SSH connection to your repository to be able to clone it. There are several ways to make it work. Automatically, by adding it manually, or by using your own key.
+Being authorized is important as Bitrise has to have a working SSH connection to your repository to be able to clone it. There are several ways to make it work. Automatically, by adding it manually, or by using your own key.
 
-{% include message_box.html type="warning" title="Use SSH URLs everywhere for private apps" content="
-Most services support SSH key based authentication **only** for SSH URLs (for example, `git@github.com:bitrise-io/bitrise.git`), and **not** for HTTPS URLs (for example, `(https://github.com/bitrise-io/bitrise.git)`)! This means that **every private repository you want to use has to be addressed with the SSH URL**. If you have direct private git repository references in your CocoaPods `Podfile`, you'll have to use the SSH URL there as well! Same applies for `submodules` and every other private git repository URL you want to use with the SSH key you register on [Bitrise.io](https://www.bitrise.io/)!
+{% include message_box.html type="warning" title="Use SSH URLs everywhere for private apps" content=" Most services support SSH key based authentication ONLY for SSH URLs (for example, `git@github.com:bitrise-io/bitrise.git`), and NOT for HTTPS URLs (for example, `(https://github.com/bitrise-io/bitrise.git)`)! This means that every private repository you want to use has to be ADDRESSED with the SSH URL. If you have direct private git repository references in your CocoaPods `Podfile`, you'll have to use the SSH URL there as well! Same applies for `submodules` and every other private git repository URL you want to use with the SSH key you register on [Bitrise.io](https://www.bitrise.io/)!
 "%}
 
 {% include message_box.html type="note" title="Use HTTPS URLs for public apps" content="
@@ -90,22 +85,22 @@ In the case of GitHub, GitLab and Bitbucket repository setups, Bitrise will gene
 
 ![](/img/repo-access.png)
 
-You need admin rights to the repository to be able to auto-add the key to it. In any other case, copy the public key from here and add it to your repository at your provider.
+You need admin rights to the repository to be able to auto-add the key to it. In any other case, copy the public key from here and add it to your repository at your Git provider.
 
 The auto-add option will add the generated key as a read-only [deploy key](https://developer.github.com/guides/managing-deploy-keys/#deploy-keys) to your repository, it's the best for your security.
 
 ### Manual setup
 
-If you have private dependencies or submodules, you have to add the generated SSH key manually to your profile at your provider instead. That's because deploy keys are only valid for one repository.
+If you have private dependencies or submodules, you have to add the generated SSH key manually to your profile at your Git provider instead. That's because deploy keys are only valid for one repository.
 
-When the system asks if you need to use an additional private repository, click `I need to` and copy the key.
+When the system asks if you need to use an additional private repository, click **I need** to and copy the key.
 
 ![](/img/manual-steup.png)
 
-{% include message_box.html type="note" title="A bot user" content=" A simple workaround is adding a bot user with the SSH key to the repositories. **Add the SSH key you would like to use to the user and add the user to the projects**. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
+{% include message_box.html type="note" title="A bot user" content=" A simple workaround is adding a bot user with the SSH key to the repositories. Add the SSH key you would like to use to the user and add the user to the projects. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
 "%}
 
-{% include message_box.html type="warning" title=" **Do not** add the key to the repository deploy keys!" content=" Add it to the user's account who has access to the repositories. "%}
+{% include message_box.html type="warning" title=" DO NOT add the key to the repository deploy keys!" content=" Add it to the user's account who has access to the repositories. "%}
 
 #### GitHub
 
