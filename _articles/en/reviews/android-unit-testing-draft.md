@@ -31,4 +31,3 @@ To view the test results on the **Test Reports** page:
 
 Check out our [Test Reports guide](https://devcenter.bitrise.io/testing/test-reports/) to find out more about using it to analyze your test results.
 
-{% include message_box.html type="note" title="Check your logs in the case of failed builds" content="If your build has failed running, click on **Download logs**. In the last lines of your Step log, you can view the error message and fix the error accordingly. If you're done, commit your changes to your repository, and a new build should start automatically.  "%}
