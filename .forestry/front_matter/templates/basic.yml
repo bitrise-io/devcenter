@@ -153,12 +153,12 @@ pages:
 - _articles/en/steps-and-workflows/creating-workflows.md
 - _articles/en/steps-and-workflows/getting-started-workflows.md
 - _articles/en/reviews/managing-the-apps-of-organizations-image-game.md
+- _articles/en/reviews/android-unit-testing-draft.md
 - _articles/jp/testing/test-reports.md
 - _articles/en/steps-and-workflows/skipping-steps.md
 - _articles/en/reviews/getting-started-with-expo-apps-draft.md
 - _articles/en/testing/test-reports.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
-- _articles/en/reviews/android-unit-testing-draft.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
 - _articles/en/reviews/running-your-first-build.md
