@@ -29,7 +29,7 @@ Currently we are supporting the following projects out of the box:
 * Ionic
 * React Native
 
-In this guide we describe how you can add a new app to Bitrise, connect your repository, set up SSH keys and configuration and register a webhook.
+In this guide we describe how you can add a new app to Bitrise, connect your repository to Bitrise, set up SSH keys and initial configuration, and register a webhook.
 
 ## Adding a new app to Bitrise
 
