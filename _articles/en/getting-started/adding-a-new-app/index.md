@@ -72,7 +72,7 @@ SSH keys serve the role of secure transfer between services. In the case of Bitr
 
 Being authorized is important as Bitrise has to have a working SSH connection to your repository to be able to clone it. There are several ways to make it work. Automatically, by adding it manually, or by using your own key.
 
-{% include message_box.html type="warning" title="Use SSH URLs everywhere for private apps" content=" Most services support SSH key based authentication ONLY for SSH URLs (for example, `git@github.com:bitrise-io/bitrise.git`), and NOT for HTTPS URLs (for example, `(https://github.com/bitrise-io/bitrise.git)`)! This means that every private repository you want to use has to be ADDRESSED with the SSH URL. If you have direct private git repository references in your CocoaPods `Podfile`, you'll have to use the SSH URL there as well! Same applies for `submodules` and every other private git repository URL you want to use with the SSH key you register on [Bitrise.io](https://www.bitrise.io/)!
+{% include message_box.html type="warning" title="Use SSH URLs everywhere for private apps" content=" Most services support SSH key based authentication ONLY for SSH URLs (for example, `git@github.com:bitrise-io/bitrise.git`), and NOT for HTTPS URLs (for example, `(https://github.com/bitrise-io/bitrise.git)`)! This means that every private repository you want to use has to be ADDRESSED with the SSH URL. If you have direct private git repository references in your CocoaPods `Podfile`, you'll have to use the SSH URL there as well! Same applies for `submodules` and every other private git repository URL you want to use with the SSH key you register on [bitrise.io](https://www.bitrise.io/)!
 "%}
 
 {% include message_box.html type="note" title="Use HTTPS URLs for public apps" content="
@@ -157,13 +157,13 @@ Please note that the image file size cannot exceed 2 MB and the supported image 
 
 When adding your app to Bitrise, our project scanner automatically detects app images and also offers a custom image upload option.
 
-1. Click the **+** sign on your Dashboard to  [Add an app](https:///getting-started/adding-a-new-app/index/) to Bitrise.
+1. Click the **+** sign on your Dashboard to add an app to Bitrise.
 
    Once the project scanner has validated your project, you can set up your build configuration from the available options.
 2. At **App icon**, either **Choose an Icon from your App** or **Upload a Custom Image** by clicking the **+** button.
    ![](/img/app-icon-choice.jpg)
 3. Click **Choose Image and Proceed**.
-4. Continue with setting up a [webhook](https:///webhooks/index/).
+4. Continue with setting up a [webhook](/webhooks/index/).
 
 You can always change an app icon if you go to the Settings tab of your app and click the **+** on the **APP ICON**.
 
@@ -171,4 +171,4 @@ You can always change an app icon if you go to the Settings tab of your app and 
 
 Once project configuration is finished, Bitrise offers you the chance to immediately register a webhook in your repository. After the webhook is set up, any code change in your repository will trigger the automatically created primary Workflow by default.
 
-Read about webhooks in detail in our [Webhooks](/webhooks) section.
+Read about webhooks in detail in our [Webhooks](/webhooks/index/) section.
