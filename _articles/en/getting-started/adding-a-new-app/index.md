@@ -143,7 +143,7 @@ If the validation is successful, Bitrise will scan your repository and give you 
 
 If the validation fails, choose the `Restart scanning without validation` option.
 
-![](/img/restart-scanning-without-validation.jpg)
+![](/img/restart-scanning-without-validation-1.jpg)
 
 In this case, you have to configure the project manually. Click `Next`. You will see the `Validating Repository` message again but this time Bitrise only checks that we have access to the specified repository.
 
