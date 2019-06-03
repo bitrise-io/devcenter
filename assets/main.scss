@@ -332,7 +332,7 @@ nav#side-menu {
 				font-size: 1.4rem;
 			}
 
-			button.menu-list-opener, button.menu-list-opener-1, button.menu-list-opener-2, button.menu-list-opener-3, button.menu-list-opener-4, button.menu-list-opener-5, button.menu-list-opener-6, button.menu-list-opener-7, button.menu-list-opener-8, button.menu-list-opener-9, button.menu-list-opener-10, button.menu-list-opener-11, button.menu-list-opener-12, button.menu-list-opener-13, button.menu-list-opener-14, button.menu-list-opener-15, button.menu-list-opener-16, a {
+			[class^="menu-list-opener"], a {
 				display: flex;
 				margin-top: .625em;
 				margin-bottom: .625em;
@@ -352,7 +352,7 @@ nav#side-menu {
 				}
 			}
 
-			 button.menu-list-opener, button.menu-list-opener-1, button.menu-list-opener-2, button.menu-list-opener-3, button.menu-list-opener-4, button.menu-list-opener-5, button.menu-list-opener-6, button.menu-list-opener-7, button.menu-list-opener-8, button.menu-list-opener-9, button.menu-list-opener-10, button.menu-list-opener-11, button.menu-list-opener-12, button.menu-list-opener-13, button.menu-list-opener-14, button.menu-list-opener-15, button.menu-list-opener-16 {
+			[class^="menu-list-opener"] {
 				border: none;
 				padding: 0;
 				text-align: left;
@@ -1316,7 +1316,7 @@ footer {
 					li.menu-item, a {
 					}
 
-					button.menu-list-opener, button.menu-list-opener-1, button.menu-list-opener-2, button.menu-list-opener-3, button.menu-list-opener-4, button.menu-list-opener-5, button.menu-list-opener-6, button.menu-list-opener-7, button.menu-list-opener-8, button.menu-list-opener-9, button.menu-list-opener-10, button.menu-list-opener-11, button.menu-list-opener-12, button.menu-list-opener-13, button.menu-list-opener-14, button.menu-list-opener-15, button.menu-list-opener-16, a {
+					[class^="menu-list-opener"], a {
 						margin-top: 0;
 						margin-bottom: 0;
 						padding: 1.2rem $spacing-default-horizontal;
