@@ -167,7 +167,7 @@ When adding your app to Bitrise, our project scanner automatically detects app i
    Once the project scanner has validated your project, you can set up your build configuration from the available options.
 2. At **App icon**, either **Choose an Icon from your App** or **Upload a Custom Image** by clicking the **+** button.
 
-   ![](https://files.nuclino.com/files/e7f54815-218d-4496-822a-fad40dd27caa/icon.jpg)
+   ![](/img/app-icon-choice.jpg)
 3. Click **Choose Image and Proceed**.
 4. Continue with setting up a [webhook](https:///webhooks/index/).
 
