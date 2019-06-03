@@ -20,7 +20,7 @@ Luckily, your Android primary workflow already contains the **Android Unit Test*
 
 ## Generating and checking test results
 
-You can check your Android unit test results on the **Test Reports** page. The **Android Unit Test** Step generates and exports unit test reports into the `$BITRISE_TEST_DEPLOY_DIR` folder. Then the **Deploy to Bitrise.io** Step exports those reports from the `$BITRISE_TEST_DEPLOY_DIR` folder to the respective build's **Test Reports** tab. You can view or download those reports to your local computer.
+You can check your Android unit test results on the **Test Reports** page. The **Android Unit Test** Step generates and exports unit test reports into the `$BITRISE_TEST_DEPLOY_DIR` folder. Then the **Deploy to Bitrise.io** Step exports those reports from the `$BITRISE_TEST_DEPLOY_DIR` folder to the respective build's **Test Reports** tab where you can view the test results.
 
 {% include message_box.html type="warning" title="Step versions supporting Test Reports" content=" The **Deploy to Bitrise.io** Step must be of version 1.4.1 or newer and the **Android Unit Test** Step must be of version 0.10.0 or newer since older versions of the Steps do NOT support Test Reports. "%}
 
@@ -30,4 +30,3 @@ To view the test results on the **Test Reports** page:
 2. Under the build status, click **See more** next to the **Test reports** label.
 
 Check out our [Test Reports guide](https://devcenter.bitrise.io/testing/test-reports/) to find out more about using it to analyze your test results.
-
