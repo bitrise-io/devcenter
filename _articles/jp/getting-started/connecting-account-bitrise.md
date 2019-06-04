@@ -1,7 +1,8 @@
 ---
 title: GitHub/GitLab/BitbucketアカウントをBitriseと連携させる
 redirect_from:
-- "/getting-started/adding-a-new-app/connecting-account-bitrise"
+- "/jp/getting-started/adding-a-new-app/connecting-account-bitrise"
+- "/jp/getting-started/signing-up/connecting-account-bitrise/"
 menu:
   getting-started-main:
     weight: 6

@@ -1,7 +1,8 @@
 ---
 title: Connecting your GitHub/GitLab/Bitbucket account to Bitrise
 redirect_from:
-- "/getting-started/adding-a-new-app/connecting-account-bitrise"
+- "/getting-started/adding-a-new-app/connecting-account-bitrise/"
+- "/getting-started/signing-up/connecting-account-bitrise/"
 tag:
 - git
 - getting-started

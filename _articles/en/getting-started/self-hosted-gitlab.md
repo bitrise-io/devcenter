@@ -1,8 +1,8 @@
 ---
 title: Connecting self-hosted GitLab instances
 redirect_from:
-- "/getting-started/adding-a-new-app/self-hosted-gitlab/#connect-a-self-hosted-gitlab-instance-with-bitrise/"
-- "/getting-started/index/getting-started/signing-up/self-hosted-gitlab/"
+- "/getting-started/adding-a-new-app/self-hosted-gitlab/"
+- "/getting-started/signing-up/self-hosted-gitlab/"
 tag:
 - git
 - getting-started
@@ -11,8 +11,8 @@ summary: For organizations, Bitrise supports connecting to self-hosted GitLab in
   Connecting is simple, and once it's done, you can add apps to Bitrise from privately
   hosted repositories in the usual way.
 menu:
-  signing-up:
-    weight: 10
+  getting-started-main:
+    weight: 9
 
 ---
 For organizations, Bitrise supports connecting to self-hosted GitLab instances. Connecting is simple, and once it's done, you can add apps to Bitrise from privately hosted repositories [in the usual way](/getting-started/adding-a-new-app). All functions that you got used to with publicly hosted repositories will be available!

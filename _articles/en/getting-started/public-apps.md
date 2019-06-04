@@ -2,6 +2,7 @@
 title: Public apps
 redirect_from:
 - "/adding-a-new-app/public-apps/"
+- "/getting-started/adding-a-new-app/public-apps/"
 tag:
 - getting-started
 - public
