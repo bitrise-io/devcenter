@@ -405,20 +405,12 @@ nav#side-menu {
 				&:before {
 					content: url(/assets/logos/icons-docs/getting-started.svg);
 				}
-
-				&.open:before, &:hover {
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/getting-started.svg#open-filter);
-				}
 			}
 
 			button.menu-list-opener-2 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/cpu.svg);
-				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/cpu.svg#open-filter);
 				}
 			}
 
@@ -427,20 +419,12 @@ nav#side-menu {
 				&:before {
 					content: url(/assets/logos/icons-docs/dudes.svg);
 				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/dudes.svg#open-filter);
-				}
 			}
 
 			button.menu-list-opener-4 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/webhooks.svg);
-				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/webhooks.svg#open-filter);
 				}
 			}
 
@@ -449,20 +433,12 @@ nav#side-menu {
 				&:before {
 					content: url(/assets/logos/icons-docs/workflow.svg);
 				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/workflow.svg#open-filter);
-				}
 			}
 
 			button.menu-list-opener-6 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/build.svg);
-				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/build.svg#open-filter);
 				}
 			}
 
@@ -471,10 +447,6 @@ nav#side-menu {
 				&:before {
 					content: url(/assets/logos/icons-docs/code-signing.svg);
 				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/code-signing.svg#open-filter);
-				}
 			}
 
  			button.menu-list-opener-8 {
@@ -482,20 +454,12 @@ nav#side-menu {
  				&:before {
  					content: url(/assets/logos/icons-docs/cache.svg);
  				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/cache.svg#open-filter);
-				}
  			}
 
 			button.menu-list-opener-9 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/testing.svg);
-				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/testing.svg#open-filter);
 				}
 			}
 
@@ -504,20 +468,12 @@ nav#side-menu {
 				&:before {
 					content: url(/assets/logos/icons-docs/deployment.svg);
 				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/deployment.svg#open-filter);
-				}
 			}
 
 			button.menu-list-opener-11 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/window.svg);
-				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/window.svg#open-filter);
 				}
 			}
 
@@ -526,20 +482,12 @@ nav#side-menu {
 				&:before {
 					content: url(/assets/logos/icons-docs/info_main.svg);
 				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/info_main.svg#open-filter);
-				}
 			}
 
 			button.menu-list-opener-13 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/lightbulb_main.svg);
-				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/lightbulb_main.svg#open-filter);
 				}
 			}
 
@@ -548,10 +496,6 @@ nav#side-menu {
 				&:before {
 					content: url(/assets/logos/icons-docs/support.svg);
 				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/support.svg#open-filter);
-				}
 			}
 
 			button.menu-list-opener-15 {
@@ -559,20 +503,12 @@ nav#side-menu {
 				&:before {
 					content: url(/assets/logos/icons-docs/bug.svg);
 				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/bug.svg#open-filter);
-				}
 			}
 
 			button.menu-list-opener-16 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/code.svg);
-				}
-
-				&.open:before, &:hover{
-					filter: brightness(0%) invert(100%) url(/assets/logos/icons-docs/code.svg#open-filter);
 				}
 			}
 
@@ -609,7 +545,6 @@ main.content {
 	.index-box {
 		padding: 1.5rem;
 		width: 25%;
-		min-height: 100%;
 		margin: 0.825rem auto;
 		border-radius: 8px;
 		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
