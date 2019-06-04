@@ -15,26 +15,28 @@ The key to generate an Android app bundle is to specify the right **Gradle task*
 
 Before you start, make sure that you insert the **Gradle Runner** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps.
 
+android build
+
 1. Click **Gradle Runner** in the workflow.
 2. Click the **Config** section.
-3. In the `Gradle task to run` input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
+3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
 
    ![](/img/bundlerelease.jpg)
 4. Click the **Export config** section.
 5. To copy the Android app bundle file into the Bitrise deploy directory, replace the `.apk` file extension with `.abb` in the **APK file include filter** input field:
 
    ![](/img/include-filter.jpg)
-	
-    This way the Step will generate an Android app bundle instead of an APK even if there is an APK in the Step's output (`$BITRISE_APK_PATH`).
+
+   This way the Step will generate an Android app bundle instead of an APK.
 
 ## Signing an Android app bundle
 
 Signing an Android app bundle file is the same as signing an APK.
 
-Before you start, make sure that:
-
+{% include message_box.html type="important" title="Before you start, make sure" content="
 * you have uploaded your keystore file to the **Code Signing** tab of the Workflow Editor.
 * you have filled out the **Keystore password**, **Keystore alias** and the **Private key password** input fields.
+"%}
 
 1. Add the **Sign APK** Step AFTER the **Gradle Runner** Step in your **deploy** workflow.
 2. Make sure the `Build artifact path` is the same as the output of the `Gradle Runner` Step.
