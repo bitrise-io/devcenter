@@ -9,7 +9,7 @@ Creating an Android app bundle with Bitrise is _almost_ the same as generating a
 
 ## Generating Android app bundle with Gradle Runner Step
 
-Our project scanner detects your code as an Android app and kicks off your first build right away! Select the `deploy` workflow in your Workflow Editor to get a basic workflow. Using our build, code signing and deploy steps you can easily configure your workflow to generate an .aab file instead of an APK file.
+Our project scanner detects your code as an Android app and kicks off your first build right away! Select the deploy workflow in your Workflow Editor to get a basic workflow. Using our build, code signing and deploy steps you can easily configure your workflow to generate an .aab file instead of an APK file.
 
 The key to generate an Android app bundle is to specify the right **Gradle task** and modify the **file extensions** in our **Gradle Runner** Step.
 
@@ -17,7 +17,7 @@ The key to generate an Android app bundle is to specify the right **Gradle task*
 Before you start, make sure that you insert the **Gradle Runner** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps.
 "%}
 
-1. Click **Gradle Runner** in the workflow.
+1. Click **Gradle Runner** in the deploy Workflow.
 2. Click the **Config** section.
 3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
 
@@ -31,9 +31,14 @@ Before you start, make sure that you insert the **Gradle Runner** Step in your *
 
 ## Generating Android App Bundle with Android Build Step
 
-1. **Build type**: Select which build type should the step generate (APK or AAB)
-2. Open **Options**.
-3. **App artifact (.apk, .aab) location pattern**: Will find the APK or AAB files - `depending on the build type input` - with the given pattern.
+You can generate an .aab file for your Android app with our Android Build Step as well.
+
+{% include message_box.html type="important" title="Android Build Step in the deploy workflow" content=" Before you start, make sure that you insert the **Android Build** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps. "%}
+
+1. 
+2. Go to **Build type** and select which build type the Step should generate: APK or aab.
+3. Go to **Options** section.
+4. The **App artifact (.apk, .aab) location pattern** input field will find the APK or AAB files - `depending on the build type input` - with the given pattern.
 
    ![](/img/android-build-aab-config.jpg)
 
