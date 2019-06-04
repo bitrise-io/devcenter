@@ -1,10 +1,10 @@
 ---
 title: Adding a new app
 redirect_from:
+- ''
+- "/getting-started/adding-a-new-app/connecting-a-repository/"
 - "/getting-started/adding-a-new-app/setting-up-configuration/"
 - "/getting-started/adding-a-new-app/setting-up-ssh-keys/"
-- "/getting-started/adding-a-new-app/connecting-a-repository/"
-- "/tutorials/deploy/android-deployment/getting-started/adding-a-new-app"
 - "/adding-a-new-app/"
 tag:
 - ssh
