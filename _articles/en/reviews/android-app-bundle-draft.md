@@ -63,7 +63,7 @@ Before you start, make sure you are in sync with Google Play Store! Learn how to
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 3. Add the **Google Play Deploy** Step AFTER the **Android** **Sign** Step in your deploy workflow.
 4. Fill out the required input fields as follows:
-   * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the env var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the env var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * **Package name**: the package name of your Android app bundle
    * **Track**: the track where you want to deploy your Android app bundle (alpha/beta/rollout/production)
 5. Start a build.
