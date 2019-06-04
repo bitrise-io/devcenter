@@ -62,7 +62,7 @@ Signing an Android app bundle file is the same as signing an APK.
 1. Add the **Android Sign** Step AFTER the **Gradle Runner** Step in your **deploy** workflow.
 2. Make sure the **Build artifact path** is the same as the output of the **Gradle Runner** Step. inherit from build steps.
 
-![](/img/android-sign-aab-apk.jpg)
+	![](/img/android-sign-aab-apk.jpg)
 
 If you have uploaded your keystore file and filled out the required credentials, the **Android** **Sign** Step's **Keystore url**, **Keystore password**, **Keystore alias** and the **Private key password** will get populated automatically!
 
@@ -103,4 +103,4 @@ google play deploy 1.6.0+
 
 apk/aab pass
 
-sign apk 
+sign apk
