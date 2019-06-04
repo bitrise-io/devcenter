@@ -5,7 +5,7 @@ date: 2019-01-08T09:25:30.000+00:00
 published: false
 
 ---
-Creating an Android app bundle with Bitrise is _almost_ the same as generating an APK. All you have to do is tweaking a few step inputs to compile an Android app bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store.
+Creating an Android app bundle with Bitrise is _almost_ the same as generating an APK. All you have to do is tweaking a few Step inputs to compile an Android app bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store.
 
 ## Generating Android app bundle with Gradle Runner Step
 
@@ -34,16 +34,17 @@ android build
 Signing an Android app bundle file is the same as signing an APK.
 
 {% include message_box.html type="important" title="Before you start, make sure" content="
+
 * you have uploaded your keystore file to the **Code Signing** tab of the Workflow Editor.
 * you have filled out the **Keystore password**, **Keystore alias** and the **Private key password** input fields.
-"%}
+  "%}
 
 1. Add the **Sign APK** Step AFTER the **Gradle Runner** Step in your **deploy** workflow.
-2. Make sure the `Build artifact path` is the same as the output of the `Gradle Runner` Step.
+2. Make sure the **Build artifact path** is the same as the output of the **Gradle Runner** Step.
 
 ![](/img/bundle-signing.png)
 
-If you have uploaded your keystore file and filled out the required credentials, the **Sign APK** Step's **Keystore url**, **Keystore password**, **Keystore alias** and the **Private key password** will get populated automatically!
+If you have uploaded your keystore file and filled out the required credentials, the **Android** **Sign** Step's **Keystore url**, **Keystore password**, **Keystore alias** and the **Private key password** will get populated automatically!
 
 {% include message_box.html type="note" title="Can I create an Android App Bundle with Android Build Step?" content=" Since the **Android Build** Step uses the `assemble` Gradle command **exclusively**, you cannot run a `bundle` command with it. Use the **Gradle Runner** Step instead!" %}
 
@@ -60,7 +61,7 @@ Before you start, make sure you are in sync with Google Play Store! Learn how to
 2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Add the **Google Play Deploy** step AFTER the **Sign APK** step in your deploy workflow.
+3. Add the **Google Play Deploy** Step AFTER the **Android** **Sign** Step in your deploy workflow.
 4. Fill out the required input fields as follows:
    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the env var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * **Package name**: the package name of your Android app bundle
