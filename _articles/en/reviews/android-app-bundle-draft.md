@@ -15,8 +15,6 @@ The key to generate an Android app bundle is to specify the right **Gradle task*
 
 Before you start, make sure that you insert the **Gradle Runner** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps.
 
-**Android Build** Step?
-
 1. Click **Gradle Runner** in the workflow.
 2. Click the **Config** section.
 3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
@@ -28,6 +26,14 @@ Before you start, make sure that you insert the **Gradle Runner** Step in your *
    ![](/img/include-filter.jpg)
 
    This way the Step will generate an Android app bundle instead of an APK.
+
+## Generating Android App Bundle with Android Build Step
+
+1. **Build type**: Select which build type should the step generate (APK or AAB)
+2. Open **Options**.
+3. **App artifact (.apk, .aab) location pattern**: Will find the APK or AAB files - `depending on the build type input` - with the given pattern.
+
+   ![](/img/android-build-aab-config.jpg)
 
 ## Signing an Android app bundle
 
