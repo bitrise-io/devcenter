@@ -7,6 +7,16 @@ published: false
 ---
 Creating an Android app bundle with Bitrise is almost the same as generating an APK. All you have to do is tweaking a few Step inputs to compile an Android app bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store. Using our build, code signing and deploy steps you can easily configure your workflow to generate an .aab file instead of an APK file.
 
+{% include message_box.html type="warning" title="My message" content="
+The Deploy to Bitrise.io Step must be of version 1.4.1 or newer - older versions of the Step do NOT support Test Reports.
+android build 0.10.0 or newer
+
+gradle runner 1.9.0 or newer
+
+android sign 1.3.0 or newer
+
+google play deploy 1.6.0 or newer"%}
+
 ## Generating an Android app bundle
 
 You can create an Android app bundle with either **Gradle Runner** or **Android Build** Steps.
@@ -80,17 +90,3 @@ Before you start, make sure you are in sync with Google Play Store! Learn how to
 5. Start a build.
 
 Now you should be able to distribute/customize your Android app bundle in Google Play Store.
-
-**step versions:**
-
-android build 0.10.0+
-
-gradle runner 1.9.0+
-
-android sign 1.3.0+
-
-google play deploy 1.6.0+
-
-apk/aab pass
-
-sign apk
