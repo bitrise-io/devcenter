@@ -2,7 +2,15 @@
 title: Skipping a given commit or Pull Request
 redirect_from:
 - "/tips-and-tricks/skip-a-build/"
-date: 2019-01-18T17:09:42.000+00:00
+date: '2019-01-18T17:09:42.000+00:00'
+tag:
+- git
+- builds
+- pull request
+- triggers
+summary: " If you need to, you can skip a specific commit or pull request. Skipping
+  means, in this context, that a code change will NOT trigger a build on Bitrise,
+  even if the triggers are set up to do so."
 menu:
   triggering-builds:
     weight: 15

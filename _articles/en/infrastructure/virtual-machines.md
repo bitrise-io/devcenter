@@ -1,13 +1,17 @@
 ---
 title: Virtual Machines
+tag:
+- infrastructure
+- security
+summary: On bitrise.io, we run your builds on macOS and Linux virtual machines. You
+  can select from multiple stacks, each with its own list of preinstalled tool versions.
+redirect_from: []
 menu:
   infrastructure-main:
     weight: 6
 
 ---
-On [bitrise.io](https://www.bitrise.io), we have `macOS` and `Linux` virtual machines hosted for your builds.
-You can select from multiple stacks, each with its own list of preinstalled tool versions.
-Read more about available stacks and stack prepare types in the [Available Stacks docs](/infrastructure/available-stacks/).
+On [bitrise.io](https://www.bitrise.io), we have `macOS` and `Linux` virtual machines hosted for your builds. You can select from multiple stacks, each with its own list of preinstalled tool versions. Read more about available stacks and stack prepare types in the [Available Stacks docs](/infrastructure/available-stacks/).
 
 The user which is used for the builds is configured with **passwordless sudo** enabled, this way you are able to install all the extra things you need for your builds and for other automation. If a tool is not preinstalled on your Stack of choice, you can install it yourself - see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide.
 
@@ -19,7 +23,7 @@ For more information about build and code security, see the [Code security](/get
 
 ### Whitelisting build machine IPs
 
-Our stacks are behind a set of static public IPs: this means you can whitelist these addresses if necessary. For example, if your security policy only allows a limited set of IP addresses to communicate with your servers. 
+Our stacks are behind a set of static public IPs: this means you can whitelist these addresses if necessary. For example, if your security policy only allows a limited set of IP addresses to communicate with your servers.
 
 For the Android & Docker stacks:
 

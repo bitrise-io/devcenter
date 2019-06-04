@@ -2,9 +2,12 @@
 title: Connecting a repository
 redirect_from:
 - "/getting-started/adding-a-new-app/connecting-your-repository"
-menu:
-  adding-a-new-app:
-    weight: 4
+tag:
+- getting-started
+- adding-apps
+- git
+summary: 'Create public or private apps, and authorize Bitrise to access your repository
+  at your git provider''s. '
 
 ---
 After you've selected adding a new app, you will find yourself on the `Create app` page.

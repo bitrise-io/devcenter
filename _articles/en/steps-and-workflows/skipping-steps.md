@@ -1,5 +1,12 @@
 ---
 title: Skipping Steps
+tag:
+- steps
+- workflows
+summary: Skip Steps if the previous Step failed or set certain conditions to disable
+  Steps in a given Workflow. You can only do the latter by directly editing a .yml
+  file.
+redirect_from: []
 menu:
   steps-workflows-main:
     weight: 7

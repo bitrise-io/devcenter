@@ -27,9 +27,6 @@ tutorials-main:
   identifier: docker
   weight: 5
 getting-started-main:
-- title: Adding a new app
-  identifier: adding-a-new-app
-  weight: 2
 - title: Signing up
   identifier: signing-up
   weight: 1

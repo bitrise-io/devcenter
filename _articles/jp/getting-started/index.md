@@ -6,7 +6,7 @@ redirect_from:
 - "/getting-started/add-your-first-step-to-your-workflow/"
 menu:
   getting-started-main:
-    weight: 3
+    weight: 2
 
 ---
 Bitriseはパワフルかつ複雑ですが、簡単かつ直感的に利用することができます！数分で終わるサインアップの後、すぐにアプリのビルドを行うことができます。ビルドを行うまでになにが必要なのかみていきましょう！
