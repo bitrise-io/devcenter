@@ -3,7 +3,6 @@ tag: []
 title: Resetting your password
 redirect_from: []
 summary: ''
-published: false
 
 ---
 You can log in to Bitrise in many ways:
