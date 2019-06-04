@@ -23,7 +23,7 @@ Before you start, make sure that you insert the **Gradle Runner** Step in your *
 
    ![](/img/bundlerelease.jpg)
 4. Click the **Export config** section.
-5. To copy the Android app bundle file into the Bitrise deploy directory, replace the `.apk` file extension with `.abb` in the **APK file include filter** input field:
+5. (To copy the Android app bundle file into the Bitrise deploy directory, replace the `.apk` file extension with `.abb` in the **APK file include filter** input field:)
 
    ![](/img/include-filter.jpg)
 
@@ -31,14 +31,17 @@ Before you start, make sure that you insert the **Gradle Runner** Step in your *
 
 ## Generating Android App Bundle with Android Build Step
 
+eddig csak apkt lehet generalni demost van egy tipus valaszto, es az output envek ehhez viszonylnak : aab es apk, es alist vegu envek is ugyanigy mukodnek. output envek: 2 android build step egymas ala ha aabt es apkt is szeretnek.
+
 You can generate an .aab file for your Android app with our Android Build Step as well.
 
-{% include message_box.html type="important" title="Android Build Step in the deploy workflow" content=" Before you start, make sure that you insert the **Android Build** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps. "%}
+{% include message_box.html type="important" title="Android Build Step in the deploy workflow" content=" Before you start, make sure that you insert the **Android Build** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps. to optimze time and save time as building takes long. do not buold anytjong that failes can check with test steps. "%}
 
-1. 
-2. Go to **Build type** and select which build type the Step should generate: APK or aab.
-3. Go to **Options** section.
-4. The **App artifact (.apk, .aab) location pattern** input field will find the APK or AAB files - `depending on the build type input` - with the given pattern.
+1. Go to **Build type** and select which build type the Step should generate: APK or aab.
+2. project location fill out.
+3. module optional.
+4. Go to **Options** section.
+5. The **App artifact (.apk, .aab) location pattern** input field will find the APK or AAB files - `depending on the build type input` - with the given pattern. this is the default value. automatikusan kitoltodik.
 
    ![](/img/android-build-aab-config.jpg)
 
@@ -53,7 +56,7 @@ Signing an Android app bundle file is the same as signing an APK.
   "%}
 
 1. Add the **Android Sign** Step AFTER the **Gradle Runner** Step in your **deploy** workflow.
-2. Make sure the **Build artifact path** is the same as the output of the **Gradle Runner** Step.
+2. Make sure the **Build artifact path** is the same as the output of the **Gradle Runner** Step. inherit from build steps.
 
 ![](/img/android-sign-aab-apk.jpg)
 
@@ -78,7 +81,7 @@ Before you start, make sure you are in sync with Google Play Store! Learn how to
 4. Fill out the required input fields as follows:
    * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the env var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * **Package name**: the package name of your Android app bundle
-   * **App file path:**  ???
+   * **App file path:**  fogad mindket felet, es alapbol be van rakva az apk es az aab path. automatically filled out
    * **Track**: the track where you want to deploy your Android app bundle (alpha/beta/rollout/production)
 5. Start a build.
 
@@ -86,10 +89,14 @@ Now you should be able to distribute/customize your Android app bundle in Google
 
 **step versions:**
 
-android build
+android build 0.10.0+
 
-gradle runner
+gradle runner 1.9.0+
 
-android sign
+android sign 1.3.0+
 
-google play deploy
+google play deploy 1.6.0+
+
+apk/aab pass
+
+sign apk 
