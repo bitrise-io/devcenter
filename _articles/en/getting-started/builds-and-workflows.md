@@ -11,7 +11,7 @@ summary: 'Learn what a build is on Bitrise, how Workflows work, and how you can 
   builds. Find out what concurrencies are, and how you can get more if you need them. '
 menu:
   getting-started-main:
-    weight: 10
+    weight: 11
 
 ---
 ## Builds & Workflows

@@ -4,6 +4,8 @@ redirect_from:
 - "/jp/tutorials/deploy/android-deployment/getting-started/adding-a-new-app"
 - "/jp/adding-a-new-app/"
 menu:
+  getting-started-main:
+    weight: 4
   adding-a-new-app:
     weight: 1
 

@@ -14,6 +14,8 @@ tag:
 summary: 'Add a new app to Bitrise: connect your repository, set up SSH keys, scan
   and configure your app, and register a webhook. '
 menu:
+  getting-started-main:
+    weight: 5
   adding-a-new-app:
     weight: 2
 

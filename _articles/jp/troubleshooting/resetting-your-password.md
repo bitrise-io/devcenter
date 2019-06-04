@@ -5,7 +5,7 @@ redirect_from: []
 summary: ''
 menu:
   troubleshooting-main:
-    weight: 1
+    weight: 2
 
 ---
 {% include not_translated_yet.html %}

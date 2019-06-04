@@ -6,7 +6,7 @@ redirect_from:
 - "/faq/github-pull-request-status-troubleshooting/#make-sure-to-select-a-service-credential-user-who-has-a-connected-github-account"
 menu:
   troubleshooting-main:
-    weight: 11
+    weight: 12
 
 ---
 If your builds do not send status reports to your git hosting provider - GitHub, GitLab or Bitbucket -, you will need to do a little investigating to find out what causes the problem. Let's take a look at the potential issues!
