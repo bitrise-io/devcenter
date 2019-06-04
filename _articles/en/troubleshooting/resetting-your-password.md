@@ -1,8 +1,12 @@
 ---
-tag: []
+tag:
+- troubleshooting
+- " getting-started"
+- " security"
 title: Resetting your password
 redirect_from: []
-summary: ''
+summary: 'You can reset your password via e-mail at any time. If you fail to log in
+  three times in a row, reCAPTCHA will be triggered to check if you are a human. '
 
 ---
 You can log in to Bitrise in many ways:
