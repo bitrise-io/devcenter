@@ -1,11 +1,11 @@
 ---
 title: 自前でホストしたGitlabインスタンスの接続
 redirect_from:
-- "/getting-started/adding-a-new-app/self-hosted-gitlab/#connect-a-self-hosted-gitlab-instance-with-bitrise/"
-- "/getting-started/index/getting-started/signing-up/self-hosted-gitlab/"
+- "/jp/getting-started/adding-a-new-app/self-hosted-gitlab/"
+- "/jp/getting-started/signing-up/self-hosted-gitlab/"
 menu:
-  signing-up:
-    weight: 9
+  getting-started-main:
+    weight: 10
 
 ---
 企業や組織向けに、Bitriseは自前でホストしたGitLabインスタンスへのアクセスをサポートしています。接続はカンタンです、いったんできれば内部的にホストされたリポジトリからBitriseにアプリを追加することができます[普段の使い方](/getting-started/adding-a-new-app)。 いままで使っていたようなすべての機能が内部的にホストされたリポジトリのアプリに対して可能になります！！
