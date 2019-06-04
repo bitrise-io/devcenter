@@ -3,6 +3,9 @@ tag: []
 title: Resetting your password
 redirect_from: []
 summary: ''
+menu:
+  troubleshooting-main:
+    weight: 2
 
 ---
 {% include not_translated_yet.html %}
