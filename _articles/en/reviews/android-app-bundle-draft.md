@@ -9,11 +9,11 @@ Creating an Android app bundle with Bitrise is almost the same as generating an 
 
 ## Generating an Android app bundle
 
-You can create an Android app bundle with either **Gradle Runner** or **Android Build** Steps. 
+You can create an Android app bundle with either **Gradle Runner** or **Android Build** Steps.
 
 ### Gradle Runner Step
 
-Once the Bitrise project scanner detects your code as an Android app, it kicks off your first build right away! Select the deploy workflow in your Workflow Editor to get a basic workflow. 
+Once the Bitrise project scanner detects your code as an Android app, it kicks off your first build right away! Select the deploy workflow in your Workflow Editor to get a basic workflow.
 
 {% include message_box.html type="important" title="Gradle Runner Step in the deploy workflow" content="
 Before you start, make sure that you insert the **Gradle Runner** Step AFTER the **Android Unit Test** and **Android Lint** Steps in your **deploy** since the build Step takes the longest to run. "%}
@@ -26,9 +26,9 @@ Before you start, make sure that you insert the **Gradle Runner** Step AFTER the
 
 This way the Step will generate an Android app bundle instead of an APK.
 
-### Android Build Step
+if aab and apk, duplicate Gradle Runner?
 
-eddig csak apkt lehet generalni demost van egy tipus valaszto, es az output envek ehhez viszonylnak : aab es apk, es alist vegu envek is ugyanigy mukodnek. output envek: 2 android build step egymas ala ha aabt es apkt is szeretnek.
+### Android Build Step
 
 You can generate an .aab file for your Android app with our Android Build Step as well.
 
@@ -41,6 +41,7 @@ You can generate an .aab file for your Android app with our Android Build Step a
 5. The **App artifact (.apk, .aab) location pattern** input field will find the APK or AAB files - `depending on the build type input` - with the given pattern. this is the default value. automatikusan kitoltodik.
 
    ![](/img/android-build-aab-config.jpg)
+If you wish to generate an APK and an .aab as well in one workflow, add two Android Build Steps after each other where you set one set to generate an APK and the other to generate an .aab file.
 
 ## Signing an Android app bundle
 
