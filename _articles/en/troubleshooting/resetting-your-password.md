@@ -25,8 +25,6 @@ If you try to log in but you forgot your password:
 2. Provide your **Email** or **Username** so that we know where to send password recovery link.
 3. Check your inbox for the **Reset password instructions** sent by letsconnect.
 4. Click **Reset Password** or copy the URL into your browser.
-
-   ![](/img/reset-password2.jpg)
 5. Add your new password and hit **Save**.
 6. Once your password has been changed, click **Log in** to access our login page again.
 7. Add your **Username** and new **Password** to log into your Bitrise Dashboard.
