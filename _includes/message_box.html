@@ -1,0 +1,9 @@
+<div class="message-box {{ include.type }}">
+{% if include.title %}<div class="message-title" markdown="1">
+{{ include.title }}
+</div>{% endif %}
+{% if include.content %}
+<div class="message-content" markdown="1">
+{{ include.content }}
+</div>{% endif %}
+</div>

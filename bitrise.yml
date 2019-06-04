@@ -1,0 +1,107 @@
+format_version: 3
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+description: |
+  Official guides: https://jekyllrb.com/
+workflows:
+  ci:
+    before_run:
+    - setup
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+            bundle exec jekyll build
+  deploy-to-github-pages:
+    envs:
+    - GOOGLE_ANALYTICS_KEY: 'UA-53276411-1'
+    before_run:
+    - setup
+    steps:
+    - script:
+        description: |
+          Note: Jekyll builds into `./site/`
+
+          Official GitHub Pages deploy guide: https://help.github.com/articles/creating-project-pages-manually/
+
+          *You can find infos about how to initialize the required `gh-pages` branch
+          in the official guide.*
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+            # Build & Deploy
+
+            if [ ! -z "${BITRISE_GIT_BRANCH}" ] ; then
+              # this is an auto-deploy on bitrise.io
+              # allow it only for the "master" branch
+              if [[ "${BITRISE_GIT_BRANCH}" != "master" ]] ; then
+              echo " [!] BITRISE_GIT_BRANCH != 'master' - REQUIRED"
+                exit 1
+              fi
+              # git checkout, so that we're not on Detached HEAD
+              git checkout "${BITRISE_GIT_BRANCH}"
+            fi
+
+            current_branch="$(git rev-parse --abbrev-ref HEAD)"
+            if [[ "${current_branch}" != "master" ]] ; then
+              echo " [!] You're not on the 'master' branch - REQUIRED"
+              exit 1
+            fi
+
+            git pull
+            git checkout gh-pages
+            git pull
+            git merge master
+            git push
+  generate-api-docs:
+    steps:
+    - script@1.1.4:
+        title: gen api docs
+        deps:
+          brew:
+          - name: go
+          apt_get:
+          - name: golang
+            bin_name: go
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+            # generate gotgen config
+            go run _scripts/gen_api_docs_gotgen_config.go
+            # move it into docs/api
+            api_docs_dir_pth="./_articles/api"
+            mv ./gg.conf.json "${api_docs_dir_pth}/gg.conf.json"
+            # run gotgen there
+            go get -u -v github.com/bitrise-tools/gotgen
+            cd "${api_docs_dir_pth}"
+            gotgen generate
+
+            echo '---
+            title: Bitrise.io API v0.1 (Work In Progress)
+            menu:
+              api-main:
+                weight: 4
+                title: Bitrise.io API v0.1 (Work in Progress)
+
+            ---' | cat - ./v0.1.md > temp && mv temp ./v0.1.md
+  setup:
+    steps:
+    - script:
+        inputs:
+        - content: |
+            #!/bin/bash
+            set -ex
+
+            bundle install
+            npm install
+  up:
+    steps:
+    - script:
+        inputs:
+        - content: |-
+            #!/bin/bash
+            set -ex
+            bundle exec jekyll serve

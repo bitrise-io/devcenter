@@ -1,0 +1,18 @@
+# General
+.DS_Store
+gg.conf.json
+
+# Ignore node_modules
+node_modules
+
+# Environment normalization
+.bundle
+vendor
+
+# Build output
+_site
+
+# Secrets
+.bitrise.secrets.yml
+
+.sass-cache

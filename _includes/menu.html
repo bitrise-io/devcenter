@@ -1,0 +1,25 @@
+{% if menu %}
+<ol class="menu-list">
+{% for item in menu %}
+	<li class="menu-item">
+		{% if item.url %}
+			{% if item.url == current_article.url %}
+				<a href="{{ item.url }}" title="{{ item.title }}" class="current">{{ item.title }}</a>
+			{% else %}
+				<a href="{{ item.url }}" title="{{ item.title }}">{{ item.title }}</a>
+			{% endif %}
+		{% else %}
+			{% if item.identifier contains "main" %}
+				<button class="menu-list-opener-{{ forloop.index }}" onclick="toggleMenuListOpener(event)">{{ item.title }}</button>
+			{% else %}
+				<button class="menu-list-opener" onclick="toggleMenuListOpener(event)">{{ item.title }}</button>
+		  {% endif %}
+		{% endif %}
+		{% if item.children %}
+			{% assign menu = item.children %}
+			{% include menu.html %}
+		{% endif %}
+	</li>
+{% endfor %}
+</ol>
+{% endif %}

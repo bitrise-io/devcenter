@@ -1,0 +1,164 @@
+---
+new_page_extension: md
+auto_deploy: false
+admin_path: ''
+webhook_url: 
+sections:
+- type: document
+  path: forestry-help.md
+  label: Forestry User Guide
+  read_only: true
+- type: directory
+  path: _articles/en/reviews
+  label: For review
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/jp
+  label: Japanese articles
+  create: all
+  match: "**/*"
+- type: heading
+  label: Deploying
+- type: document
+  path: deploy.md
+  label: DEPLOY
+- type: heading
+  label: DevCenter articles
+- type: directory
+  path: _articles/en
+  label: Bitrise Devcenter - What is Bitrise
+  create: all
+  match: index.md
+- type: directory
+  path: _articles/en/getting-started
+  label: Getting started
+  create: all
+  match: "**/*"
+  new_doc_ext: md
+- type: directory
+  path: _articles/en/infrastructure
+  label: Infrastructure
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/team-management
+  label: Teams and organizations
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/webhooks
+  label: Webhooks
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/steps-and-workflows
+  label: Steps and workflows
+  create: all
+  match: "**/*"
+  new_doc_ext: md
+- type: directory
+  path: _articles/en/builds
+  label: Builds
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/code-signing
+  label: Code signing
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/caching
+  label: Caching
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/bitrise-cli
+  label: Bitrise CLI
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/testing
+  label: Testing
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/deploy
+  label: Deployment
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/tutorials
+  label: Tutorials
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/tips-and-tricks
+  label: Tips and tricks
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/faq
+  label: FAQ
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/troubleshooting
+  label: Troubleshooting
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/tools
+  label: Tools
+  create: all
+  match: "**/*"
+- type: directory
+  path: _articles/en/api
+  label: API
+  create: all
+  match: "**/*"
+- type: document
+  path: _articles/en/api/v0.1.md.gg
+  label: API .gg file
+- type: heading
+  label: Data files
+- type: document
+  path: _config.yml
+  label: _config.yml
+- type: directory
+  path: _data
+  label: Forestry data files - MENUS.YML here
+  create: all
+  match: "**/*"
+- type: directory
+  path: ".forestry"
+  label: ".forestry"
+  create: all
+  match: "**/*"
+- type: directory
+  path: _layouts
+  label: _layouts
+  create: all
+  match: "**/*"
+- type: directory
+  path: _includes
+  label: _includes (HTML)
+  create: all
+  match: "**/*.html"
+  new_doc_ext: html
+upload_dir: img
+public_path: "/img"
+front_matter_path: ''
+use_front_matter_path: false
+file_template: ":filename:"
+build:
+  preview_command: bundle exec jekyll build --drafts --unpublished --future -d _site
+  publish_command: bundle exec jekyll build -d _site
+  preview_env:
+  - JEKYLL_ENV=staging
+  publish_env:
+  - JEKYLL_ENV=production
+  preview_output_directory: _site
+  output_directory: _site
+  instant_preview_command: bundle exec jekyll serve --drafts --unpublished --future
+    --port 8080 --host 0.0.0.0 -d _site

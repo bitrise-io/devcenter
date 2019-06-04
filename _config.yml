@@ -1,0 +1,57 @@
+---
+title: Bitrise DevCenter
+email: letsconnect@bitrise.io
+description: Bitrise is a Continuous Integration and Delivery (CI/CD) Platform as
+  a Service (PaaS) with a main focus on mobile app development. It saves developers
+  hours every day by automating tasks that are boring and repetitive from the moment
+  they finish coding till the app lands in an app store.
+baseurl: ''
+url: ''
+twitter_username: jekyllrb
+github_username: jekyll
+markdown: kramdown
+theme: minima
+plugins:
+- jekyll-feed
+- jekyll-sitemap
+- jekyll-menus
+- jekyll-redirect-from
+- localization
+collections:
+  articles:
+    output: true
+    permalink: "/:path/"
+    localized: true
+exclude:
+- deploy.md
+- plugins
+defaults:
+- scope:
+    path: ''
+    type: articles
+  values:
+    layout: default
+- scope:
+    path: ''
+    type: whatever
+  values:
+    layout: default
+sass:
+  load_paths:
+  - _sass
+  - node_modules
+algolia:
+  application_id: HI1538U2K4
+  index_name: devcenter
+  files_to_exclude:
+  - forestry-help*
+  - _articles/en/reviews/**/*.md
+  - _articles/jp/**/*.md
+  nodes_to_index: p,h1,h2,h3,h4,h5,h6
+languages:
+- en
+- jp
+exclude_from_localizations:
+- assets/**/*
+- bitrise.yml
+- apple-touch-icon-*.png
