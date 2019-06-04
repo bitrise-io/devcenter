@@ -7,7 +7,11 @@ published: false
 ---
 Creating an Android app bundle with Bitrise is _almost_ the same as generating an APK. All you have to do is tweaking a few Step inputs to compile an Android app bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store.
 
-## Generating Android app bundle with Gradle Runner Step
+## Generating Android app bundle
+
+You can create an Android app bundle with 
+
+### Gradle Runner Step
 
 Our project scanner detects your code as an Android app and kicks off your first build right away! Select the deploy workflow in your Workflow Editor to get a basic workflow. Using our build, code signing and deploy steps you can easily configure your workflow to generate an .aab file instead of an APK file.
 
@@ -29,7 +33,7 @@ Before you start, make sure that you insert the **Gradle Runner** Step in your *
 
    This way the Step will generate an Android app bundle instead of an APK.
 
-## Generating Android App Bundle with Android Build Step
+### Android Build Step
 
 eddig csak apkt lehet generalni demost van egy tipus valaszto, es az output envek ehhez viszonylnak : aab es apk, es alist vegu envek is ugyanigy mukodnek. output envek: 2 android build step egymas ala ha aabt es apkt is szeretnek.
 
