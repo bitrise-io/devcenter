@@ -182,5 +182,4 @@ pages:
 - _articles/en/getting-started/adding-a-new-app/index.md
 - _articles/en/builds/rolling-builds.md
 - _articles/en/builds/triggering-builds/trigger-pull-request.md
-- _articles/en/getting-started/signing-up/logging-in-to-bitrise.md
 - _articles/en/getting-started/signing-up/connecting-apple-dev-account.md
