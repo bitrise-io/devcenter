@@ -5,33 +5,26 @@ date: 2019-01-08T09:25:30.000+00:00
 published: false
 
 ---
-Creating an Android app bundle with Bitrise is _almost_ the same as generating an APK. All you have to do is tweaking a few Step inputs to compile an Android app bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store.
+Creating an Android app bundle with Bitrise is almost the same as generating an APK. All you have to do is tweaking a few Step inputs to compile an Android app bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store. Using our build, code signing and deploy steps you can easily configure your workflow to generate an .aab file instead of an APK file.
 
 ## Generating an Android app bundle
 
-You can create an Android app bundle with 
+You can create an Android app bundle with either **Gradle Runner** or **Android Build** Steps. 
 
 ### Gradle Runner Step
 
-Our project scanner detects your code as an Android app and kicks off your first build right away! Select the deploy workflow in your Workflow Editor to get a basic workflow. Using our build, code signing and deploy steps you can easily configure your workflow to generate an .aab file instead of an APK file.
-
-The key to generate an Android app bundle is to specify the right **Gradle task** and modify the **file extensions** in our **Gradle Runner** Step.
+Once the Bitrise project scanner detects your code as an Android app, it kicks off your first build right away! Select the deploy workflow in your Workflow Editor to get a basic workflow. 
 
 {% include message_box.html type="important" title="Gradle Runner Step in the deploy workflow" content="
-Before you start, make sure that you insert the **Gradle Runner** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps.
-"%}
+Before you start, make sure that you insert the **Gradle Runner** Step AFTER the **Android Unit Test** and **Android Lint** Steps in your **deploy** since the build Step takes the longest to run. "%}
 
 1. Click **Gradle Runner** in the deploy Workflow.
 2. Click the **Config** section.
 3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
 
    ![](/img/bundlerelease.jpg)
-4. Click the **Export config** section.
-5. (To copy the Android app bundle file into the Bitrise deploy directory, replace the `.apk` file extension with `.abb` in the **APK file include filter** input field:)
 
-   ![](/img/include-filter.jpg)
-
-   This way the Step will generate an Android app bundle instead of an APK.
+This way the Step will generate an Android app bundle instead of an APK.
 
 ### Android Build Step
 
@@ -39,7 +32,7 @@ eddig csak apkt lehet generalni demost van egy tipus valaszto, es az output enve
 
 You can generate an .aab file for your Android app with our Android Build Step as well.
 
-{% include message_box.html type="important" title="Android Build Step in the deploy workflow" content=" Before you start, make sure that you insert the **Android Build** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps. to optimze time and save time as building takes long. do not buold anytjong that failes can check with test steps. "%}
+{% include message_box.html type="important" title="Android Build Step in the deploy workflow" content=" Before you start, make sure that you insert the **Android Build** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps since the build Step takes the longest to run "%}
 
 1. Go to **Build type** and select which build type the Step should generate: APK or aab.
 2. project location fill out.
@@ -62,7 +55,7 @@ Signing an Android app bundle file is the same as signing an APK.
 1. Add the **Android Sign** Step AFTER the **Gradle Runner** Step in your **deploy** workflow.
 2. Make sure the **Build artifact path** is the same as the output of the **Gradle Runner** Step. inherit from build steps.
 
-	![](/img/android-sign-aab-apk.jpg)
+   ![](/img/android-sign-aab-apk.jpg)
 
 If you have uploaded your keystore file and filled out the required credentials, the **Android** **Sign** Step's **Keystore url**, **Keystore password**, **Keystore alias** and the **Private key password** will get populated automatically!
 
