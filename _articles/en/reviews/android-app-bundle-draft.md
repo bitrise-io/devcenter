@@ -9,11 +9,13 @@ Creating an Android app bundle with Bitrise is _almost_ the same as generating a
 
 ## Generating Android app bundle with Gradle Runner Step
 
-Our scanner can detect your code as an Android project and kick your first build off right away! Select the `deploy` workflow in your Workflow Editor to get a basic workflow which you can modify to create an .aab file instead of an APK file.
+Our project scanner detects your code as an Android app and kicks off your first build right away! Select the `deploy` workflow in your Workflow Editor to get a basic workflow. Using our build, code signing and deploy steps you can easily configure your workflow to generate an .aab file instead of an APK file.
 
 The key to generate an Android app bundle is to specify the right **Gradle task** and modify the **file extensions** in our **Gradle Runner** Step.
 
+{% include message_box.html type="important" title="Gradle Runner Step in the deploy workflow" content="
 Before you start, make sure that you insert the **Gradle Runner** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps.
+"%}
 
 1. Click **Gradle Runner** in the workflow.
 2. Click the **Config** section.
