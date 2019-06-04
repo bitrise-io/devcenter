@@ -15,8 +15,7 @@ You can create an Android app bundle with either **Gradle Runner** or **Android 
 
 Once the Bitrise project scanner detects your code as an Android app, it kicks off your first build right away! Select the deploy workflow in your Workflow Editor to get a basic workflow.
 
-{% include message_box.html type="important" title="Gradle Runner Step in the deploy workflow" content="
-Before you start, make sure that you insert the **Gradle Runner** Step AFTER the **Android Unit Test** and **Android Lint** Steps in your **deploy** since the build Step takes the longest to run. "%}
+{% include message_box.html type="important" title="Gradle Runner Step in the deploy workflow" content=" Before you start, make sure that the **Gradle Runner** Step is right AFTER the **Android Unit Test** and **Android Lint** Steps in your **deploy** since the build Step takes the longest to run. "%}
 
 1. Click **Gradle Runner** in the deploy Workflow.
 2. Click the **Config** section.
@@ -32,7 +31,7 @@ if aab and apk, duplicate Gradle Runner?
 
 You can generate an .aab file for your Android app with our Android Build Step as well.
 
-{% include message_box.html type="important" title="Android Build Step in the deploy workflow" content=" Before you start, make sure that you insert the **Android Build** Step in your **deploy** workflow AFTER the **Android Unit Test** and **Android Lint** Steps since the build Step takes the longest to run "%}
+{% include message_box.html type="important" title="Android Build Step in the deploy workflow" content=" Before you start, make sure that the **Android Build** Step is right after the **Android Unit Test** and **Android Lint** Steps in your deploy Workflow since the build Step takes the longest to run "%}
 
 1. Go to **Build type** and select which build type the Step should generate: APK or aab.
 2. project location fill out.
@@ -41,7 +40,7 @@ You can generate an .aab file for your Android app with our Android Build Step a
 5. The **App artifact (.apk, .aab) location pattern** input field will find the APK or AAB files - `depending on the build type input` - with the given pattern. this is the default value. automatikusan kitoltodik.
 
    ![](/img/android-build-aab-config.jpg)
-If you wish to generate an APK and an .aab as well in one workflow, add two Android Build Steps after each other where you set one set to generate an APK and the other to generate an .aab file.
+   If you wish to generate an APK and an .aab as well in one workflow, add two Android Build Steps after each other where you set one set to generate an APK and the other to generate an .aab file.
 
 ## Signing an Android app bundle
 
