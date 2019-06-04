@@ -1,5 +1,5 @@
 ---
-title: Logging in to Bitrise
+title: Resetting your password
 redirect_from: []
 date: '2019-03-29T14:06:43.000+00:00'
 tag:
