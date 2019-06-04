@@ -3,6 +3,7 @@ title: Triggering builds with code push
 tag:
 - builds
 - triggers
+- git
 summary: You can set up triggers so that every time code is pushed to the specified
   branch of your repository, a build is automatically triggered on Bitrise.
 redirect_from: []
@@ -13,7 +14,7 @@ menu:
 ---
 You can set up triggers so that every time code is pushed to the specified branch of your repository, a build is automatically triggered on Bitrise.
 
-Note that this requires an incoming webhook set up with the hosting service of your repository. Read more in the [Webhooks](/webhooks/index) section.
+{% include message_box.html type="important" title="Webhooks for triggering builds" content="Triggering builds automatically requires an incoming webhook set up with the hosting service of your repository. Read more in the [Webhooks](/webhooks) section."%}
 
 By default, every new app you add will have a trigger that triggers a build every time code is pushed to any branch of your repository.
 

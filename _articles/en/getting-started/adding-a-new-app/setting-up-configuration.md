@@ -2,9 +2,13 @@
 title: Setting up configuration
 redirect_from:
 - "/adding-a-new-app/setting-up-configuration"
-menu:
-  adding-a-new-app:
-    weight: 8
+tag:
+- getting-started
+- sign-up
+- webhooks
+summary: After Setting up the SSH key for your project, Bitrise will download your
+  code to make sure it can access the repository and will run an automatic repository
+  scanner script to find the best initial configuration for your project.
 
 ---
 After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for

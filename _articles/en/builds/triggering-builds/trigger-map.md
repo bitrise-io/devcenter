@@ -3,6 +3,14 @@ title: Using the Trigger Map to trigger builds
 redirect_from:
 - "/webhooks/trigger-map/"
 - "/webhooks/trigger-map"
+tag:
+- triggers
+- " builds"
+- git
+- bitrise.yml
+summary: The trigger map defined in the `bitrise.yml` file of your app determines
+  which workflows get triggered by specific events, for example code pushes or pull
+  requests.
 menu:
   triggering-builds:
     weight: 11
@@ -11,11 +19,7 @@ menu:
 ---
 When you register a webhook for an event or for multiple events (for example, for `Code Push` and for `Pull Request` events), your source code hosting service will call the webhook every time the related event happens.
 
-On [bitrise.io](https://www.bitrise.io) these webhooks calls are called _triggers_,
-and can be mapped to different `Workflows`, or not mapped at all.
-If you don't map a trigger to any workflow, then [bitrise.io](https://www.bitrise.io) won't
-start a build. If you map it to a workflow, then a build will be started
-with the selected workflow.
+On [bitrise.io](https://www.bitrise.io) these webhook calls are called _triggers_, and can be mapped to different `Workflows`, or not mapped at all. If you don't map a trigger to any workflow, then [bitrise.io](https://www.bitrise.io) won't start a build. If you map it to a workflow, then a build will be started with the selected workflow.
 
 In the following examples, we'll use a very simple Bitrise configuration (`bitrise.yml`),
 which does nothing else just prints the selected workflow's ID:

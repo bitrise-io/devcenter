@@ -2,9 +2,16 @@
 title: Public apps
 redirect_from:
 - "/adding-a-new-app/public-apps/"
+tag:
+- getting-started
+- public
+- builds
+summary: If your Bitrise app is public, anyone who has the build URL can see the build
+  logs. For example, if the CI status check on GitHub fails on a pull request, anyone
+  can click on the build URL and view the build logs.
 menu:
   getting-started-main:
-    weight: 12
+    weight: 17
 
 ---
 Open source projects are great - we all love them! They can be a pain to maintain, however, especially with CI/CD in the picture. That's why we have introduced the Public Apps feature for Bitrise: to make everyone's life a lot easier!

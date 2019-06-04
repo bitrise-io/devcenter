@@ -24,7 +24,7 @@ The `Xcode Test for iOS` step runs the pre-defined Xcode tests. It has a default
 
 You can also generate code coverage files, and export the test results as a compressed zip file.
 
-{% include message_box.html type="" title="Test reports" content="Your Xcode test results will be exported to Test Reports: check out our [Test Reports](/testing/test-reports/) guide to find out how to make it work for you."%} 
+{% include message_box.html type="info" title="Test reports" content="Your Xcode test results will be exported to Test Reports: check out our [Test Reports](/testing/test-reports/) guide to find out how to make it work for you."%}
 
 ### Configuring the Xcode tests on Bitrise
 

@@ -1,5 +1,12 @@
 ---
 title: Adding and removing Steps
+tag:
+- steps
+- workflows
+summary: 'Steps can be added or removed any time from the Workflow Editor: all it
+  takes is a couple of clicks. You can add any Step to your workflow - there are absolutely
+  no restrictions.'
+redirect_from: []
 menu:
   steps-workflows-main:
     weight: 3

@@ -1,5 +1,13 @@
 ---
 title: Secrets and Env Vars
+tag:
+- secrets
+- env vars
+- builds
+summary: Every Secret Environment Variable (Secret) is an Env Var but not every Environment
+  Variable (Env Var) is a Secret! Secrets hide information in an encrypted format
+  so that your private input is not exposed.
+redirect_from: []
 menu:
   builds-main:
     weight: 14
@@ -22,7 +30,7 @@ You can also replace the variable for a new one in `Env Vars`. Delete the old va
 
 {% include message_box.html type="important" title="Protect your secrets" content=" Contrary to [secret env vars](#about-secrets/), env vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to `Env Vars`. "%}
 
-### Setting an env var in every/in a specific workflow
+### Setting an env var in workflows
 
 Under `App Environmental Variables`, you can set all the env vars you wish to use later on in **all your workflows**.
 
