@@ -1,8 +1,11 @@
 ---
 title: 新しいアプリの追加
 redirect_from:
-- "/jp/tutorials/deploy/android-deployment/getting-started/adding-a-new-app"
+- "/jp/getting-started/adding-a-new-app/connecting-a-repository/"
+- "/jp/getting-started/adding-a-new-app/setting-up-configuration/"
+- "/jp/getting-started/adding-a-new-app/setting-up-ssh-keys/"
 - "/jp/adding-a-new-app/"
+- "/jp/getting-started/adding-a-new-app/index/"
 menu:
   getting-started-main:
     weight: 4

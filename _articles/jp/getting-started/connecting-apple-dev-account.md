@@ -1,7 +1,8 @@
 ---
 title: Apple DeveloperアカウントをBitriseと連携させる
 redirect_from:
-- "/signing-up/connecting-apple-dev-account"
+- "/jp/signing-up/connecting-apple-dev-account"
+- "/jp/getting-started/signing-up/connecting-apple-dev-account"
 menu:
   getting-started-main:
     weight: 8

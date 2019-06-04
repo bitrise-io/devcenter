@@ -2,7 +2,7 @@
 title: コードセキュリティ
 menu:
   getting-started-main:
-    weight: 12
+    weight: 14
 
 ---
 ビルドのセキュリティを保証するために、ビルドには[仮想マシン](/infrastructure/virtual-machines)を使用します。
