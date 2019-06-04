@@ -4,7 +4,7 @@ redirect_from: []
 date: '2019-03-29T15:00:43.000+00:00'
 menu:
   signing-up:
-    weight: 10
+    weight: 9
 
 ---
 You can log in to Bitrise in many ways:
