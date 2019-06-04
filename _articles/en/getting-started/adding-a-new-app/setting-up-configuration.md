@@ -9,9 +9,6 @@ tag:
 summary: After Setting up the SSH key for your project, Bitrise will download your
   code to make sure it can access the repository and will run an automatic repository
   scanner script to find the best initial configuration for your project.
-menu:
-  adding-a-new-app:
-    weight: 8
 
 ---
 After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for

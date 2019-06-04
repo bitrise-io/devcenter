@@ -16,8 +16,6 @@ summary: 'Add a new app to Bitrise: connect your repository, set up SSH keys, sc
 menu:
   getting-started-main:
     weight: 5
-  adding-a-new-app:
-    weight: 2
 
 ---
 When adding your app to Bitrise, we clone your repository to make sure we can access it. We also run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your Workflow with all the necessary steps to build and deploy your app.

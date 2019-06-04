@@ -6,8 +6,6 @@ redirect_from:
 menu:
   getting-started-main:
     weight: 4
-  adding-a-new-app:
-    weight: 1
 
 ---
 Bitriseにあなたのアプリを追加すると、リポジトリをクローンしてアクセス出来ることを確認します。リポジトリのクローンのほかに、サポートされているすべてのアプリケーションを検出しアプリをビルドして配布するのに必要なワークフローを設定するため\[プロジェクトスキャナ\]（https://github.com/bitrise-steplib/steps-project-scanner）を実行します。

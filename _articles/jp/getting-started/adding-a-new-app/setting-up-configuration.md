@@ -2,9 +2,6 @@
 title: プロジェクトの設定
 redirect_from:
 - "/adding-a-new-app/setting-up-configuration"
-menu:
-  adding-a-new-app:
-    weight: 7
 
 ---
 プロジェクトに [SSHキーの設定](/adding-a-new-app/setting-up-ssh-keys) がなされれば、 Bitriseはコードをダウンロードし、レポジトリにアクセスできることを確認します。そして、自動的にコードをスキャンし、もっとも最適なプロジェクトの初期設定を検知しようとします。

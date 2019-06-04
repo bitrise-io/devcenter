@@ -9,9 +9,6 @@ tag:
 summary: 'SSH keys serve the role of secure transfer between services. In the case
   of Bitrise, it will ask for your permission to be authorized at your git source
   provider, for example, GitHub. '
-menu:
-  adding-a-new-app:
-    weight: 6
 
 ---
 SSH keys serve the role of secure transfer between services. In the case of Bitrise, it will ask for your permission to be authorized at your git source provider, for example, GitHub. Read more about how to [authorize Bitrise](/getting-started/adding-a-new-app/connecting-a-repository).

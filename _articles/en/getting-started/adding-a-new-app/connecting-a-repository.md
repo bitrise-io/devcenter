@@ -8,9 +8,6 @@ tag:
 - git
 summary: 'Create public or private apps, and authorize Bitrise to access your repository
   at your git provider''s. '
-menu:
-  adding-a-new-app:
-    weight: 4
 
 ---
 After you've selected adding a new app, you will find yourself on the `Create app` page.
