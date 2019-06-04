@@ -64,7 +64,7 @@ SSHキーはサービス間でのセキュアな情報転送を担います。Bi
 
 認証が必要となる理由は、Bitriseがあなたのリポジトリからクローンする際にSSH通信を行うためです。セットアップはいくつかの方法で行うことができます。自動または手動セットアップ、あるいは自分で生成したSSHキーを使用する方法があります。
 
-{% include message_box.html type="warning" title="プライベートアプリには必ずSSH URLを使用する" content=" SSHキーによる認証を行うサービスの多くはSSH URL(`git@github.com:bitrise-io/bitrise.git`など) **のみ対応**しており、HTTPS URL(`[https://github.com/bitrise-io/bitrise.git](https://github.com/bitrise-io/bitrise.git "https://github.com/bitrise-io/bitrise.git")`など)は**非対応**です！このため、**使用されるすべてのプライベートリポジトリはSSH URLで指定される必要があります**。CocoaPodsの`Podfile`内でプライベートのGitリポジトリを直接参照している場合は、その参照にもSSH URLを使用する必要があります！[Bitrise.io](https://www.bitrise.io/)に登録されたSSHキーを使用する`サブモジュール`やその他のプライベートリポジトリについても、同様に設定を行ってください。 "%}
+{% include message_box.html type="warning" title="プライベートアプリには必ずSSH URLを使用する" content=" SSHキーによる認証を行うサービスの多くはSSH URL(`git@github.com:bitrise-io/bitrise.git`など) **のみ対応**しており、HTTPS URL(`https://github.com/bitrise-io/bitrise.git`など)は**非対応**です！このため、**使用されるすべてのプライベートリポジトリはSSH URLで指定される必要があります**。CocoaPodsの`Podfile`内でプライベートのGitリポジトリを直接参照している場合は、その参照にもSSH URLを使用する必要があります！[Bitrise.io](https://www.bitrise.io/)に登録されたSSHキーを使用する`サブモジュール`やその他のプライベートリポジトリについても、同様に設定を行ってください。 "%}
 
 {% include message_box.html type="note" title="パブリックアプリにはHTTPS URLを使用する" content=" パブリックアプリはSSHキーを持つことはできません。アプリのプライバシー設定をパブリックにした場合、認証は不要になるため、HTTPS URLを使用してください。 "%}
 
