@@ -12,6 +12,7 @@ summary: To take full advantage of all the features Bitrise offers, including au
 menu:
   getting-started-main:
     weight: 7
+    title: Connecting your GitHub/GitLab/Bitbucket account
 
 ---
 To take full advantage of all the features Bitrise offers, including automatic webhook registration, you need to connect your GitHub/GitLab/Bitbucket account to your Bitrise account. This gives Bitrise **write permissions** to the repositories on those accounts. You can connect all three Git provider accounts to your Bitrise account, by one of two methods:
