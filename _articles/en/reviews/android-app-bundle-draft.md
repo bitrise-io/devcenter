@@ -33,14 +33,13 @@ You can generate an .aab file for your Android app with our Android Build Step a
 
 {% include message_box.html type="important" title="Android Build Step in the deploy workflow" content=" Before you start, make sure that the **Android Build** Step is right after the **Android Unit Test** and **Android Lint** Steps in your deploy Workflow since the build Step takes the longest to run "%}
 
-1. Go to **Build type** and select which build type the Step should generate: APK or aab.
-2. project location fill out.
-3. module optional.
-4. Go to **Options** section.
-5. The **App artifact (.apk, .aab) location pattern** input field will find the APK or AAB files - `depending on the build type input` - with the given pattern. this is the default value. automatikusan kitoltodik.
+1. Click **Android Build** Step.
+2. Provide the root directory of your Android project in Project Location.
+3. Go to **Build type** and select `aab` as build type.
 
-   ![](/img/android-build-aab-config.jpg)
-   If you wish to generate an APK and an .aab as well in one workflow, add two Android Build Steps after each other where you set one set to generate an APK and the other to generate an .aab file.
+   ![](/img/android-build-aab-config.jpg) 
+
+   If you wish to generate an APK and an .aab in one workflow, add two Android Build Steps after each other and configure one to build an .aab file and the other to build an APK.
 
 ## Signing an Android app bundle
 
@@ -52,14 +51,12 @@ Signing an Android app bundle file is the same as signing an APK.
 * you have filled out the **Keystore password**, **Keystore alias** and the **Private key password** input fields.
   "%}
 
-1. Add the **Android Sign** Step AFTER the **Gradle Runner** Step in your **deploy** workflow.
-2. Make sure the **Build artifact path** is the same as the output of the **Gradle Runner** Step. inherit from build steps.
+1. Add the **Android Sign** Step AFTER the build Step in your deploy workflow.
+2. Make sure the **APK file path** input field displays the same output env var as the output of the build Step. 
 
    ![](/img/android-sign-aab-apk.jpg)
 
 If you have uploaded your keystore file and filled out the required credentials, the **Android** **Sign** Step's **Keystore url**, **Keystore password**, **Keystore alias** and the **Private key password** will get populated automatically!
-
-{% include message_box.html type="note" title="Can I create an Android App Bundle with Android Build Step?" content=" Since the **Android Build** Step uses the `assemble` Gradle command **exclusively**, you cannot run a `bundle` command with it. Use the **Gradle Runner** Step instead!" %}
 
 ## Deploying your Android app bundle Google Play Store
 
