@@ -5,6 +5,8 @@ redirect_from: []
 summary: ''
 
 ---
+{% include not_translated_yet.html %}
+
 You can log in to Bitrise in many ways:
 
 * with your Bitrise username and password
