@@ -2,7 +2,7 @@
 title: Enabling Bitrise Support user for your app
 menu:
   troubleshooting-main:
-    weight: 6
+    weight: 5
 
 ---
 {% include not_translated_yet.html %}

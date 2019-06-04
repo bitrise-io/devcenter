@@ -2,7 +2,7 @@
 title: Enabling the Bitrise Support user for your app
 menu:
   troubleshooting-main:
-    weight: 4
+    weight: 3
 
 ---
 If you need quick tech support from us, our onsite chat support can look into your project and fix your technical issues in the most efficient way! All you have to do is enable `Bitrise Support user` so that we have access to your project, specifically to your workflow, your build log, your app settings or to your yml.
