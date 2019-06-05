@@ -2,6 +2,11 @@
 title: Response and pagination
 redirect_from: []
 date: '2019-03-29T16:47:01.000+00:00'
+tag:
+- api
+summary: When you call an endpoint that returns a list of items, you might not get
+  the whole list in a single response. You'll have to iterate through the "pages"
+  to retrieve all the items.
 menu:
   api-main:
     weight: 5
