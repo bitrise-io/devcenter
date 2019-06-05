@@ -9,7 +9,7 @@ summary: Bitrise supports two-factor authentication for every user, and SAML SSO
   API.
 menu:
   getting-started-main:
-    weight: 17
+    weight: 15
 
 ---
 ## Enabling Two-factor authentication
