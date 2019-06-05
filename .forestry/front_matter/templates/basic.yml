@@ -127,6 +127,7 @@ pages:
 - _articles/en/troubleshooting/trigger-doesnt-work.md
 - _articles/en/faq/adding-projects-with-submodules.md
 - _articles/en/faq/grant-access-to-bitbucket-team.md
+- _articles/en/faq/organization-faq.md
 - _articles/en/faq/no-builds-are-triggered-automatically.md
 - _articles/en/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
 - _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
