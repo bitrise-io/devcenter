@@ -3,7 +3,7 @@ title: Debugging your build on your own machine
 date: 2018-11-19T15:33:56.000+00:00
 menu:
   troubleshooting-main:
-    weight: 1
+    weight: 2
 
 ---
 If your build fails on Bitrise, we often recommend to try and run it locally, on your machine. To do this, do the following:

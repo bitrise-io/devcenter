@@ -1,11 +1,20 @@
 ---
 title: Collecting and exporting code signing files with codesigndoc
+tag:
+- ios
+- code-signing
+- files
+- xamarin
+- xcode
+summary: 'The open source codesigndoc tool runs a clean Xcode/Xamarin Studio Archive
+  on your Mac, and analyzes the generated archive file. '
+redirect_from: []
 menu:
   ios-code-signing:
     weight: 4
 
 ---
-The open source [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool runs a clean Xcode/Xamarin Studio Archive _on your Mac_, and analyzes the generated archive file. It collects the code signing settings that Xcode or Xamarin Studio used during the archive process, and prints the list of the required code signing files. You can also search for, export and upload these files using `codesigndoc`.
+The open source [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool runs a clean Xcode/Xamarin Studio Archive on your Mac, and analyzes the generated archive file. It collects the code signing settings that Xcode or Xamarin Studio used during the archive process, and prints the list of the required code signing files. You can also search for, export and upload these files using `codesigndoc`.
 
 If your project contains UITest targets,[ codesigndoc can scan for that](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/#scanning-for-uitest-targets), too. It runs the `xcodebuild build-for-testing` action to create a test-Runner.app, and exports the necessary code signing files.
 
@@ -71,7 +80,7 @@ If your project is set up correctly on your machine, you can start scanning!
        bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode-uitests.sh)"
 
    This command runs the `xcodebuild build-for-testing` action to create a UITest runner .app file, and exports the necessary code signing files.
-3. [Upload your files to Bitrise with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/#uploading-the-files-to-bitrise-with-codesigndoc). 
+3. [Upload your files to Bitrise with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/#uploading-the-files-to-bitrise-with-codesigndoc).
 
 #### Troubleshooting the UITest scanner
 
