@@ -1,7 +1,13 @@
 ---
 title: Deploying an iOS app for external testing
-date: 2018-10-26T12:39:01.000+00:00
+date: '2018-10-26T12:39:01.000+00:00'
 redirect_from: []
+tag:
+- ios
+- deploy
+- app-store
+summary: 'Before deploying your app to the App Store, you might want to release it
+  to external testers who can test it on their devices outside the development environment. '
 menu:
   ios-deploy:
     weight: 6
