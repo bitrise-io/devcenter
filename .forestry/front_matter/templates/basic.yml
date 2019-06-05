@@ -118,6 +118,7 @@ pages:
 - _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/deploy/android-deploy/deploying-android-apps.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
