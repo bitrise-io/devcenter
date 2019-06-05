@@ -15,7 +15,7 @@ summary: 'Go through the procedure of adding an Android app on Bitrise from star
   and code signing. '
 menu:
   getting-started-main:
-    weight: 25
+    weight: 27
 
 ---
 In this guide, we'll walk you through how to add an Android app to Bitrise, what primary and deploy workflows can do, and finally how to test and deploy your app to [bitrise.io](https://www.bitrise.io/) and to the App Store.

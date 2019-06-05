@@ -29,7 +29,7 @@ tutorials-main:
 getting-started-main:
 - title: Signing up
   identifier: signing-up
-  weight: 1
+  weight: 3
 team-management-main:
 - title: Organizations
   identifier: organizations
