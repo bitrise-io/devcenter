@@ -2,6 +2,12 @@
 title: List of known Xcode issues
 redirect_from:
 - "/ios/known-xcode-issues/"
+tag:
+- xcode
+- " troubleshooting"
+- ios
+summary: 'Read about Xcode issues: performance problems, test failures, troubles with
+  the Xcode Command Line Tools.'
 menu:
   troubleshooting-main:
     weight: 16
@@ -9,8 +15,7 @@ menu:
 ---
 **Feel free to add your comments to this list.**
 
-[You can do it directly on GitHub, by clicking this link](https://github.com/bitrise-io/devcenter/blob/master/_articles/troubleshooting/known-xcode-issues.md),
-just don't forget to send it as a Pull Request ;)
+[You can do it directly on GitHub, by clicking this link](https://github.com/bitrise-io/devcenter/blob/master/_articles/troubleshooting/known-xcode-issues.md), just don't forget to send it as a Pull Request ;)
 
 ## Performance related
 
@@ -18,12 +23,9 @@ _Note: mainly affects UI tests._
 
 The root cause of the issue is that Xcode / the iOS Simulator has issues
 in performance limited environments. This included Virtual Machines (which is
-how your builds are running on [bitrise.io](https://www.bitrise.io)),
-MacBook Airs, Mac Minis with HDD storage, ...
+how your builds are running on [bitrise.io](https://www.bitrise.io)), MacBook Airs, Mac Minis with HDD storage, ...
 
-It can happen even if you use
-[Apple's Xcode Bots CI server](http://www.openradar.me/23386199) on _non SSD_
-Mac Mini.
+It can happen even if you use [Apple's Xcode Bots CI server](http://www.openradar.me/23386199) on non SSD Mac Mini.
 
 Examples:
 
@@ -51,8 +53,7 @@ Related links & reports:
   leave enough time for Xcode / the iOS Simulator to initialize the Accessibility labels,
   so that UI Tests can properly find the elements by the Accessibility labels. ([Related Apple developer forum discussion](https://forums.developer.apple.com/thread/28732))
   * Related: remove every explicit `app.terminate()` in your `tearDown()` method(s)
-* Try another Simulator device (e.g. instead of running the test in "iPhone 6"
-  try it with "iPhone 6s Plus")
+* Try another Simulator device
 * [Use the Async testing APIs](http://stackoverflow.com/a/32481202/974381)
 * Some users had success with splitting the tests into multiple Schemes,
   and running those separately, with separate Test steps.
@@ -60,46 +61,6 @@ Related links & reports:
     [http://artsy.github.io/blog/2016/04/06/Testing-Schemes](http://artsy.github.io/blog/2016/04/06/Testing-Schemes)
 * [Sometimes it's related to a code which makes Xcode to misbehave](https://github.com/fastlane/fastlane/issues/3874#issuecomment-219991408)
 * Try another Xcode version.
-
-## Flaky UI tests, UI test cases failing randomly
-
-This can happen with a really simple project too. Even something as
-simple as:
-
-    func testAddAnItemGoToDetailsThenDeleteIt() {
-            // Use recording to get started writing UI tests.
-            // Use XCTAssert and related functions to verify your tests produce the correct results.
-    
-    
-            let app = XCUIApplication()
-            let masterNavigationBar = app.navigationBars["Master"]
-            masterNavigationBar.buttons["Add"].tap()
-    
-            let tablesQuery = app.tables
-            let firstElemQuery = tablesQuery.cells.elementBoundByIndex(0)
-            firstElemQuery.tap()
-            app.navigationBars.matchingIdentifier("Detail").buttons["Master"].tap()
-            masterNavigationBar.buttons["Edit"].tap()
-    
-            firstElemQuery.buttons.elementBoundByIndex(0).tap()
-            firstElemQuery.buttons["Delete"].tap()
-    
-            masterNavigationBar.buttons["Done"].tap()
-    
-            XCTAssert(tablesQuery.cells.count == 0)
-        }
-
-can trigger this issue.
-
-### Possible solutions
-
-We could reproduce this issue with the code above, using `Xcode 7.3`.
-The exact same code worked perfectly with `Xcode 7.2.1` while it randomly
-failed with `7.3`. The solution was to use a different iOS Simulator device.
-The test failed _2 out of 3_ on average with the "iPhone 6" simulator device
-using Xcode 7.3, while it worked perfectly with Xcode 7.2.1.
-
-Changing the simulator device to "iPhone 6s Plus" solved the issue with `Xcode 7.3`.
 
 ## Xcode Unit Test fails without any error, with exit code 65
 
@@ -136,7 +97,7 @@ The error is:
 
     clang: error: unable to execute command: Segmentation fault: 11
 
-This is usually due to Xcode version mismatch - that you use a different Xcode on your Mac than the one you use on [bitrise.io](https://www.bitrise.io). Commonly occurs with Xcode 7.2 (if you have the Xcode 7.2 stack selected on bitrise.io), if you're already on a newer version of Xcode locally on your Mac.
+This is usually due to Xcode version mismatch - that you use a different Xcode on your Mac than the one you use on [bitrise.io](https://www.bitrise.io). 
 
 The solution is simple, just make sure that you use the same Xcode version everywhere.
 
@@ -154,7 +115,6 @@ Note: this can happen only on specific iOS Simulators / iOS versions too, e.g. i
 if the output of `xcodebuild ..` is piped / redirected in any way.
 This means that `xcodebuild .. test .. | xcpretty` or even `tee` can be used to reproduce this issue.
 
-* **Affected Xcode versions**: so far it seems to be an `Xcode 8 beta` only issue, and it was fixed in `Xcode 8 beta 4`.
 * Related [radar](http://openradar.appspot.com/26872644) and [xcpretty](https://github.com/supermarin/xcpretty/issues/227) issues.
 * Workaround: use a `Script` step instead of the Xcode Test step,
   and copy paste the `xcodebuild` command from the hanging Xcode Test step's log, without `| xcpretty` etc.
