@@ -222,6 +222,7 @@ pages:
 - _articles/en/infrastructure/available-stacks.md
 - _articles/en/faq/how-to-generate-ssh-keypair.md
 - _articles/en/troubleshooting/enabling-bitrise-support-user.md
+- _articles/en/faq/android-x86-emulator.md
 - _articles/en/team-management/index.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
 - _articles/en/team-management/teams-vs-organizations.md

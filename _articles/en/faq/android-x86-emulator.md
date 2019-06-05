@@ -1,13 +1,19 @@
 ---
 title: Can I run an Android x86 Emulator on Bitrise?
-menu:
-  faq-main:
-    weight: 3
+tag:
+- android
+- faq
+- stack
+- infrastructure
+summary: 'A frequent question is whether it''s possible to run the Android x86 emulator,
+  instead of the ARM emulators. We allow all the required nested virtualization bits
+  for the x86 Android emulators on the Linux/Android stacks. '
+redirect_from: []
 
 ---
 A frequent question is whether it's possible to run the Android x86 emulator, instead of the ARM emulators.
 
-We allow all the required nested virtualization bits for the x86 Android emulators **on the Linux/Android stacks**,. This means that we can use the virtualization that the host machine has for running an emulator with x86 architecture, and we can thus skip the slow emulation. This is still 10-15% slower than when run on a physical machine, but it is still much faster than the armv7-a emulator.
+We allow all the required nested virtualization bits for the x86 Android emulators **on the Linux/Android stacks**. This means that we can use the virtualization that the host machine has for running an emulator with x86 architecture, and we can thus skip the slow emulation. This is still 10-15% slower than when run on a physical machine, but it is still much faster than the armv7-a emulator.
 
 **This feature is only available on the Linux/Android stacks**.
 
