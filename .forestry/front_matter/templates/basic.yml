@@ -216,6 +216,7 @@ pages:
 - _articles/en/bitrise-cli/run-your-first-build.md
 - _articles/en/builds/selective_builds.md
 - _articles/en/infrastructure/available-stacks.md
+- _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/team-management/index.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
 - _articles/en/team-management/teams-vs-organizations.md
