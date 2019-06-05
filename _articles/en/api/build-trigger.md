@@ -1,5 +1,14 @@
 ---
 title: Triggering and aborting builds
+tag:
+- builds
+- api
+- triggers
+- git
+summary: 'You can trigger and abort builds with the Bitrise API. Define parameters
+  for the build: for example, branch, tag or git commit to use. Custom environment
+  variables can be defined as well.'
+redirect_from: []
 menu:
   api-main:
     weight: 11

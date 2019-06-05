@@ -111,6 +111,7 @@ pages:
 - _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
 - _articles/jp/builds/remote-access.md
 - _articles/en/api/managing-ios-code-signing-files.md
+- _articles/en/api/build-trigger.md
 - _articles/en/api/incoming-and-outgoing-webhooks.md
 - _articles/en/api/Managing build artifacts.md
 - _articles/en/api/managing-files-in-generic-file-storage.md
