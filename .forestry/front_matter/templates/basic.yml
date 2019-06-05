@@ -123,10 +123,14 @@ pages:
 - _articles/en/testing/device-testing-for-android.md
 - _articles/en/caching/about-caching.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
+- _articles/en/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
+- _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
 - _articles/en/code-signing/ios-code-signing/code-signing.md
 - _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
 - _articles/en/code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
 - _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
+- _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
+- _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
 - _articles/en/builds/configuring-notifications.md
 - _articles/en/builds/env-vars-secret-env-vars.md
 - _articles/en/builds/remote-access.md

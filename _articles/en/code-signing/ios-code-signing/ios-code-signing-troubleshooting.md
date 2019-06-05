@@ -1,6 +1,14 @@
 ---
 title: iOS code signing - troubleshooting
-date: 2018-10-11T11:28:48.000+00:00
+date: '2018-10-11T11:28:48.000+00:00'
+tag:
+- troubleshooting
+- code-signing
+- xcode
+- ios
+summary: 'If you have issues with iOS code signing, you need to check your code signing
+  files, your export method, your app''s capabilities, and your registered test devices. '
+redirect_from: []
 menu:
   ios-code-signing:
     weight: 26
@@ -8,15 +16,15 @@ menu:
 ---
 To make iOS code signing work on Bitrise, you generally need three things:
 
-* a provisioning profile
-* a .p12 certificate file
-* setting the `Select method for export` input of the `Xcode Archive & Export for iOS` Step
+* A provisioning profile.
+* A .p12 certificate file.
+* Setting the `Select method for export` input of the `Xcode Archive & Export for iOS` Step.
 
 To get your code signing files, you can:
 
-* use our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool
-* [export them with Xcode](https://devcenter.bitrise.io/code-signing/ios-code-signing/exporting-code-signing-files/#exporting-certificates-using-xcode)
-* [export them with the Keychain app](https://devcenter.bitrise.io/code-signing/ios-code-signing/exporting-code-signing-files/#exporting-manually)
+* Use our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool.
+* [Export them with Xcode](https://devcenter.bitrise.io/code-signing/ios-code-signing/exporting-code-signing-files/#exporting-certificates-using-xcode).
+* [Export them with the Keychain app](https://devcenter.bitrise.io/code-signing/ios-code-signing/exporting-code-signing-files/#exporting-manually).
 
 If you suspect an error is related to code signing, there is almost certainly a problem with one of these three. When trying to build an iOS app on Bitrise, we strongly recommend generating an .ipa file of the app locally, on your own machine first. If that fails, the build will certainly fail on Bitrise, too.
 

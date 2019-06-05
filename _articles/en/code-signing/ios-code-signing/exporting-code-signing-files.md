@@ -1,5 +1,13 @@
 ---
 title: Exporting code signing files without codesigndoc
+tag:
+- code-signing
+- files
+- xcode
+- ios
+summary: 'If you don''t want to use codesigndoc, you can export certificates and provisioning
+  profiles manually, or using Xcode. '
+redirect_from: []
 menu:
   ios-code-signing:
     weight: 22

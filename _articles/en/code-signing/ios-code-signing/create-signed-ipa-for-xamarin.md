@@ -1,23 +1,31 @@
 ---
-title: Creating a signed .ipa for Xamarin projects
+title: Creating a signed .ipa for Xamarin apps
+tag:
+- xamarin
+- ios
+- code-signing
+- files
+summary: You can easily create a signed IPA for your Xamarin app with Bitrise. All
+  you need to do is set the relevant inputs of our Xamarin Archive Step!
+redirect_from: []
 menu:
   ios-code-signing:
     weight: 12
 
 ---
-You can easily create a signed IPA for your Xamarin project with Bitrise. All you need to do is set the relevant inputs of our `Xamarin Archive` step!
+You can easily create a signed IPA for your Xamarin app with Bitrise. All you need to do is set the relevant inputs of our `Xamarin Archive` Step!
 
 Before setting up IPA export, make sure that:
 
-* your code signing files have been collected.
-* you have the `Certificate and profile installer` step in your workflow.
+* Your code signing files have been collected.
+* You have the `Certificate and profile installer` step in your workflow.
 
 {% include message_box.html type="important" title="iOS Auto Provision" content="Automatic provisioning with the `iOS Auto Provision` Step is not supported for Xamarin apps!"%}
 
 If you're all set, proceed to setting up IPA export in your workflow:
 
-1. Make sure that you have the `Xamarin Archive` step in the app's Workflow Editor and select it.
-2. Set the `Xamarin solution configuration` input of the step to the Xamarin project Configuration you want to use (for example, `Release`).
+1. Make sure that you have the `Xamarin Archive` Step in the app's Workflow Editor and select it.
+2. Set the `Xamarin solution configuration` input of the Step to the Xamarin project Configuration you want to use (for example, `Release`).
 3. Set the `Xamarin solution platform` input to `iPhone`.
 
    You can control the code signing type in your Xamarin project by setting the
