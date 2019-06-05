@@ -1,7 +1,16 @@
 ---
 title: 'Stack update and removal policy '
 redirect_from: []
-date: 2019-02-05T15:39:10.000+00:00
+date: '2019-02-05T15:39:10.000+00:00'
+tag:
+- infrastructure
+- builds
+- xcode
+- android
+- linux
+summary: Stacks on bitrise.io are generally updated every weekend, but what’s updated
+  depends on the stack. There are stacks where only certain caches are updated and
+  there are stacks which are completely re-built every week.
 menu:
   infrastructure-main:
     weight: 4
