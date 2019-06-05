@@ -20,9 +20,9 @@ You can create an Android App Bundle with either the **Gradle Runner** Step or w
 
 ### Gradle Runner Step
 
-Once the Bitrise project scanner detects your code as an Android app, it kicks off your first build right away! Select the deploy workflow in your Workflow Editor to get a basic workflow.
+Once the Bitrise project scanner detects your code as an Android app, it kicks off your first build right away! Select the workflow you use for deployment in your Workflow Editor.
 
-1. Insert the **Gradle Runner** Step after the **Android Unit Test** and **Android Lint** Steps in your **deploy** (if the build Step is not already there) Workflow.
+1. Insert the **Gradle Runner** Step after the **Android Unit Test** and **Android Lint** Steps in your Workflow (if the build Step is not already there).
 2. Click the **Config** section of **Gradle Runner**.
 3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
 
@@ -38,7 +38,7 @@ If you wish to generate an Android App Bundle and an APK in one workflow, you ca
 
 You can generate an `.aab` file for your Android app with our **Android Build** Step as well:
 
-1. Add the **Android Build** Step after the **Android Unit Test** and **Android Lint** Steps in your **deploy** (if the build Step is not already there).
+1. Add the **Android Build** Step after the **Android Unit Test** and **Android Lint** Steps in your Workflow (if the build Step is not already there).
 2. Provide the root directory of your Android project in the **Project Location** input field.
 3. Go to **Build type** and select `aab` as build type.
 
@@ -53,10 +53,9 @@ Signing an Android App Bundle file is the same as signing an APK.
 {% include message_box.html type="important" title="Before you start, make sure" content="
 
 * You have uploaded your keystore file to the **Code Signing** tab of the Workflow Editor.
-* You have filled out the **Keystore password**, **Keystore alias** and the **Private key password** input fields.
-  "%}
+* You have filled out the **Keystore password**, **Keystore alias** and the **Private key password** input fields. "%}
 
-1. Add the **Android Sign** Step AFTER the build Step in your deploy Workflow.
+1. Add the **Android Sign** Step AFTER the build Step in your Workflow.
 2. Make sure the **APK file path** input field displays the same output env var as the output of the build Step you've been using.
 
    ![](/img/android-sign-aab-apk.jpg)
@@ -76,7 +75,7 @@ Before you start, make sure you are in sync with Google Play Store! Learn how to
 2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Add the **Google Play Deploy** Step AFTER the **Android** **Sign** Step in your deploy workflow.
+3. Add the **Google Play Deploy** Step AFTER the **Android** **Sign** Step in your Workflow.
 4. Fill out the required input fields as follows:
    * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the env var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * **Package name**: the package name of your Android App Bundle.
