@@ -124,6 +124,7 @@ pages:
 - _articles/en/bitrise-cli/basics-of-bitrise-yml.md
 - _articles/en/bitrise-cli/workflows.md
 - _articles/en/bitrise-cli/steps.md
+- _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/bitrise-cli/create-your-own-step.md
 - _articles/en/caching/about-caching.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
