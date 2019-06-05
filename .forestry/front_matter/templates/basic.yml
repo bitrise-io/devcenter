@@ -125,6 +125,7 @@ pages:
 - _articles/en/bitrise-cli/workflows.md
 - _articles/en/bitrise-cli/steps.md
 - _articles/en/bitrise-cli/step-inputs.md
+- _articles/en/bitrise-cli/creating-your-own-bitrise-project-scanner.md
 - _articles/en/bitrise-cli/create-your-own-step.md
 - _articles/en/bitrise-cli/index.md
 - _articles/en/bitrise-cli/step-properties.md
