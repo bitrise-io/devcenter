@@ -156,6 +156,7 @@ pages:
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
+- _articles/en/reviews/increasing-the-size-limit-of-env-vars.md
 - _articles/en/reviews/running-your-first-build.md
 - _articles/en/steps-and-workflows/getting-started-steps.md
 - _articles/en/bitrise-cli/installation.md
