@@ -1,7 +1,14 @@
 ---
 title: Deploying an iOS app to iTunes Connect
-date: 2018-10-26T12:41:22.000+00:00
+date: '2018-10-26T12:41:22.000+00:00'
 redirect_from: []
+tag:
+- itunes-connect
+- app-store
+- ios
+- deploy
+summary: You can deploy an app to iTunes Connect (rebranded as App Store Connect)
+  to invite testers on Testflight or to release your app on the App Store.
 menu:
   ios-deploy:
     weight: 7
