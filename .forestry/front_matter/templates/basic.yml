@@ -173,6 +173,7 @@ pages:
 - _articles/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
 - _articles/en/steps-and-workflows/getting-started-steps.md
 - _articles/en/bitrise-cli/installation.md
+- _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/en/getting-started/code-security.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-procedures.md
 - _articles/en/deploy/ios-deploy/introduction-to-deploying-ios-apps.md
