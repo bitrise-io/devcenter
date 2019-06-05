@@ -5,7 +5,7 @@ tag:
 - secrets
 - env vars
 summary: |-
-  Secrets can be accessed and used in a similar way as App Env Vars,
+  Secrets can be accessed and used in a similar way as app Env Vars,
   the main difference is that secrets are not stored as part of the build configuration.
 redirect_from: []
 menu:
@@ -13,8 +13,7 @@ menu:
     weight: 28
 
 ---
-Secrets can be accessed and used in a similar way as App Env Vars,
-the main difference is that **secrets are not stored as part of the build configuration**.
+Secrets can be accessed and used in a similar way as app Env Vars, the main difference is that **secrets are not stored as part of the build configuration**.
 
 When you run a build locally, with the Bitrise CLI, the secrets are read from
 a `.bitrise.secrets.yml` file, which is expected to be in the same directory
