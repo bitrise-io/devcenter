@@ -1,5 +1,13 @@
 ---
 title: Secrets
+tag:
+- cli
+- secrets
+- env vars
+summary: |-
+  Secrets can be accessed and used in a similar way as App Env Vars,
+  the main difference is that secrets are not stored as part of the build configuration.
+redirect_from: []
 menu:
   bitrise-cli-main:
     weight: 28
