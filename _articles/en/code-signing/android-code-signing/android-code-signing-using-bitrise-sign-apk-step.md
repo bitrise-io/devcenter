@@ -2,6 +2,15 @@
 title: Android code signing using Bitrise Sign APK step
 redirect_from:
 - "/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/"
+tag:
+- android
+- google-play
+- code-signing
+- files
+summary: You can create a signed APK using the Sign APK Step in your Bitrise workflow.
+  This Step is configured to run if you have already uploaded your keystore file to
+  Bitrise. All you have to do is upload your keystore file in the Code signing tab
+  of the Workflow Editor.
 menu:
   android-code-signing:
     weight: 3
