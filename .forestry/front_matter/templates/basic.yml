@@ -182,6 +182,7 @@ pages:
 - _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
 - _articles/en/bitrise-cli/initializing-a-bitrise-project-locally.md
+- _articles/en/bitrise-cli/step-outputs.md
 - _articles/en/getting-started/code-security.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-procedures.md
 - _articles/en/deploy/ios-deploy/introduction-to-deploying-ios-apps.md
