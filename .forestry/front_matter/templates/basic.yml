@@ -127,6 +127,7 @@ pages:
 - _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/bitrise-cli/create-your-own-step.md
 - _articles/en/bitrise-cli/index.md
+- _articles/en/bitrise-cli/step-properties.md
 - _articles/en/caching/about-caching.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
