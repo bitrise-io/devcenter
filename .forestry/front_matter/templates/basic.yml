@@ -121,6 +121,7 @@ pages:
 - _articles/en/api/adding-and-managing-apps.md
 - _articles/en/troubleshooting/github-pull-request-status-troubleshooting.md
 - _articles/en/troubleshooting/debugging-your-build-on-your-own-machine.md
+- _articles/en/troubleshooting/frequent-ios-issues.md
 - _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
