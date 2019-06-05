@@ -2,6 +2,11 @@
 title: Frequent Android issues
 redirect_from:
 - "/android/frequent-android-issues/"
+tag:
+- troubleshooting
+- android
+summary: 'Read about some of the most frequent issues with Android apps, including
+  Android package problems and license errors. '
 menu:
   troubleshooting-main:
     weight: 10
