@@ -6,7 +6,7 @@ summary: ''
 published: false
 
 ---
-You are able to authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Git account when adding repositories hosted by these providers again. You can of course sign up to Bitrise using your email address and log in through your user credentials.
+You can authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Git account when adding repositories hosted by these providers again. You can of course sign up to Bitrise using your email address as well, and log in through your user credentials.
 
 {% include message_box.html type="info" title="Trial after signing up" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
 
@@ -16,30 +16,16 @@ You are able to authenticate yourself with your GitHub, Bitbucket or GitLab user
 
 Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!"%}
 
-## Signing up with GitHub
+## Signing up with a Git provider
 
 1. Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
+2. Select a sign up method for authenticating yourself with these services.
 
-   ![](/img/sign-up-bitrise.jpg)
-2. Select `GitHub` for authenticating yourself with this service.
-
-## Signing up with Bitbucket
-
-Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io).
-
-![/img/sign-up-bitrise.jpg](/img/sign-up-bitrise.jpg)
-
-Select `Bitbucket` for authenticating yourself with this service.
-
-## Signing up with GitLab
-
-Go to the Sign up page by clicking `Sign up!` on the landing page of [bitrise.io](https://bitrise.io/).
-
-![/img/sign-up-bitrise.jpg](https://app.forestry.io/sites/yv69yaruhkt48w/body-media//img/sign-up-bitrise.jpg)
-
-Select `GitLab` for authenticating yourself with this service.
+   ![](/img/sign-up-git-email.jpg)
 
 ### Authorizing Bitrise
+
+#### GitHub
 
 You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
 
@@ -47,13 +33,17 @@ You have to authorize Bitrise before we can establish the connection. This means
 
 If you press the `Authorize application` button, you will be redirected to Bitrise.
 
-### Authorizing Bitrise
-
-You have to authorize Bitrise before we can establish the connection. This means you give permissions to Bitrise to access (read) your repositories.
+#### Bitbucket
 
 ![Screenshot](/img/signing-up/bitrise_authorization.png)
 
 If you press the `Grant access` button, you will be redirected to Bitrise.
+
+#### GitLab
+
+![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/signing-up/gitlab_authorization.png)
+
+If you press the `Authorize` button, you will be redirected to Bitrise.
 
 ### Finishing signup
 
@@ -115,8 +105,6 @@ You will have to pick a username and a password for your Bitrise account. This w
 
 After that, you are ready to roll. Add your first app on your Dashboard!
 
-![](/img/add-your-first-app.jpg)
-
 ## Signing up with email
 
 You can easily sign up to Bitrise in one step with your email address.
@@ -142,8 +130,9 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
    ![](/img/Check-your-inbox.jpg)
 4. Click the `Confirm My Account` button or copy the URL provided in the email.
 
-   ![](/img/confirm-my-account.jpg) Clicking `Confirm My Account` will take you to `Help us help you` page.
-5. On the `Help us help you` page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
-6. Click `Done`. You will be directed to your Bitrise Dashboard.
+   ![](/img/confirm-my-account.jpg)
+5. Clicking `Confirm My Account` will take you to `Help us help you` page.
+6. On the `Help us help you` page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
+7. Click `Done`. You will be directed to your Bitrise Dashboard.
 
 Now you can go ahead and add your first app to your Dashboard.
