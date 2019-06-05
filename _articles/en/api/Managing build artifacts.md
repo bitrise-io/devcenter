@@ -1,6 +1,14 @@
 ---
 title: Managing build artifacts
 redirect_from: []
+tag:
+- files
+- builds
+- api
+- artifacts
+summary: 'If you add the Deploy to bitrise.io step to your workflow, once the build
+  has run, you can access the build’s artifacts in the APPS & ARTIFACTS tab. You can
+  manage the generated artifacts with our API. '
 menu:
   api-main:
     weight: 21
