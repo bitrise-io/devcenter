@@ -1,5 +1,11 @@
 ---
 title: How can I grant Bitrise access to a Bitbucket team?
+tag:
+- git
+- faq
+summary: This guide explains how to grant access for bitrise.io to your Bitbucket
+  team, and to check if you denied access for any reason.
+redirect_from: []
 menu:
   faq-main:
     weight: 7

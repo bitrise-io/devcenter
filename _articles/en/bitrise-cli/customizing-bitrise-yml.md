@@ -1,7 +1,15 @@
 ---
 title: Customizing bitrise.yml
-date: 2018-10-31T09:27:26.000+00:00
+date: '2018-10-31T09:27:26.000+00:00'
 redirect_from: []
+tag:
+- bitrise.yml
+- cli
+- workflows
+- env vars
+summary: 'Any tool that can edit `bitrise.yml` can add custom properties to it. This
+  way you can add special properties or notes to your env vars, or even try new configurations
+  of your workflow in `bitrise.yml`. '
 menu:
   bitrise-cli-main:
     weight: 13

@@ -1,6 +1,14 @@
 ---
 title: Debugging your build on your own machine
-date: 2018-11-19T15:33:56.000+00:00
+date: '2018-11-19T15:33:56.000+00:00'
+tag:
+- troubleshooting
+- git
+- cli
+- builds
+summary: If your build fails on Bitrise, we often recommend to try and run it locally,
+  on your machine. This helps to eliminate some common issues.
+redirect_from: []
 menu:
   troubleshooting-main:
     weight: 3

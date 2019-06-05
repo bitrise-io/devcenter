@@ -1,12 +1,16 @@
 ---
 title: Can I add projects with submodules or with private repo dependencies?
-menu:
-  faq-main:
-    weight: 2
+tag:
+- git
+- faq
+- ssh
+summary: If you have a project with one or more submodules or other private repository
+  dependencies (for example, CocoaPods repositories), you have to grant access to
+  all repositories for a successful build.
+redirect_from: []
 
 ---
-If you have a project with one or more submodules
-or other private repository dependencies (for example, CocoaPods repositories), you have to grant access to all repositories for a successful build.
+If you have a project with one or more submodules or other private repository dependencies (for example, CocoaPods repositories), you have to grant access to all repositories for a successful build.
 
 There are two ways to achieve this:
 
@@ -35,7 +39,7 @@ There is one important detail to keep in mind when you want to give access to al
 
 {% include message_box.html type="info" title="Cloning issues" content="If you encounter issues with git cloning - for example, not all submodules are cloned - try the following command after cloning:
 
-`git submodule update --recursive --remote --merge --force`"%} 
+`git submodule update --recursive --remote --merge --force`"%}
 
 ## Creating SSH keys for a new private app
 

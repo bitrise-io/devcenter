@@ -1,6 +1,15 @@
 ---
 title: Deploying an iOS app for simulators
-date: 2018-11-10T14:34:02.000+00:00
+date: '2018-11-10T14:34:02.000+00:00'
+tag:
+- deploy
+- ios
+- xcode
+- testing
+summary: 'You can build and deploy your iOS application to a simulator, to show it
+  off in a browser, for example. On Bitrise, we have a dedicated Step to build for
+  a simulator: the Xcode build for simulator Step.'
+redirect_from: []
 menu:
   ios-deploy:
     weight: 8

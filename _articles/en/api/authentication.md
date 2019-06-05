@@ -2,6 +2,11 @@
 title: 'Authentication '
 redirect_from: []
 date: '2019-03-29T16:46:07.000+00:00'
+tag:
+- api
+- security
+summary: 'The current API supports only one type of authentication: user generated
+  Personal Access Tokens. Organizations do not have their own access tokens.'
 menu:
   api-main:
     weight: 3

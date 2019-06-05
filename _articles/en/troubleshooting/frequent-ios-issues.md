@@ -4,6 +4,13 @@ redirect_from:
 - "/ios/frequent-ios-issues/"
 - "/ios/frequent-ios-issues/#works-in-local-but-not-on-bitriseio"
 - "#works-in-local-but-not-on-bitriseio"
+tag:
+- ios
+- xcode
+- troubleshooting
+- builds
+summary: Read about some of the most frequent issues with iOS apps, including dependency
+  problems, as well as issues with Xcode Schemes and fastlane exports.
 menu:
   troubleshooting-main:
     weight: 14

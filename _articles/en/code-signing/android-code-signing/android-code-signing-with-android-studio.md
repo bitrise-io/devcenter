@@ -1,5 +1,13 @@
 ---
 title: Android code signing with Android Studio
+tag:
+- android
+- code-signing
+- files
+summary: You can specify the code signing configuration for your project in Android
+  Studio. You will need a keystore file, a key alias and a key password - have these
+  ready before you start the procedure!
+redirect_from: []
 menu:
   android-code-signing:
     weight: 5

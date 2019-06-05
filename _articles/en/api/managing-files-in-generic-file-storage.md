@@ -2,6 +2,13 @@
 title: Managing files in Generic File Storage
 redirect_from: []
 date: '2019-04-09T07:32:06.000+00:00'
+tag:
+- files
+- api
+summary: You can upload, delete, update, and list any project files in the GENERIC
+  FILE STORAGE section of the Code Signing tab with the relevant Bitrise API endpoint.
+  Should you need more information on how to store your project files, check out Using
+  the Generic File Storage.
 menu:
   api-main:
     weight: 17

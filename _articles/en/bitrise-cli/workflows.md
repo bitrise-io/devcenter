@@ -3,6 +3,12 @@ title: Workflows in YAML
 redirect_from:
 - "/bitrise-cli/workflows/"
 - "/bitrise-cli/workflows"
+tag:
+- steps
+- workflows
+- cli
+summary: A Workflow is a collection of steps, environment variables, and other configurations
+  for a single bitrise run.
 menu:
   bitrise-cli-main:
     weight: 14
