@@ -32,22 +32,21 @@ Once the Bitrise project scanner detects your code as an Android app, it kicks o
 
 This way the Step will generate an Android app bundle instead of an APK.
 
-If you wish to generate a .aab file AND an APK in one workflow, you can specify an additional task in the **Gradle task to run** input field:
+If you wish to generate a .aab file and an APK in one workflow, you can specify an additional task in the **Gradle task to run** input field:
 
 ![](/img/assemble-bundle-gradle-runner.jpg)
 
 ### Android Build Step
 
-You can generate an .aab file for your Android app with our Android Build Step as well.
+You can generate an .aab file for your Android app with our **Android Build** Step as well:
 
-1. Add Android Build Step after the **Android Unit Test** and **Android Lint** Steps in your **deploy** (if the build Step is not already there).
-2. Click the **Android Build** Step.
-3. Provide the root directory of your Android project in the **Project Location** input field.
-4. Go to **Build type** and select `aab` as build type.
+1. Add the **Android Build** Step after the **Android Unit Test** and **Android Lint** Steps in your **deploy** (if the build Step is not already there).
+2. Provide the root directory of your Android project in the **Project Location** input field.
+3. Go to **Build type** and select `aab` as build type.
 
    ![](/img/android-build-aab-config.jpg)
 
-If you wish to generate an APK and an .aab in one workflow, add two Android Build Steps after each other and configure one to build an .aab file and the other to build an APK.
+If you wish to generate an APK and an .aab in one workflow, add two **Android Build** Steps after each other and configure one to build an .aab file and the other to build an APK.
 
 ## Signing an Android app bundle
 
@@ -60,7 +59,7 @@ Signing an Android app bundle file is the same as signing an APK.
   "%}
 
 1. Add the **Android Sign** Step AFTER the build Step in your deploy workflow.
-2. Make sure the **APK file path** input field displays the same output env var as the output of the build Step.
+2. Make sure the **APK file path** input field displays the same output env var as the output of the build Step you've been using.
 
    ![](/img/android-sign-aab-apk.jpg)
 
@@ -68,12 +67,12 @@ If you have uploaded your keystore file and filled out the required credentials,
 
 ## Deploying your Android app bundle Google Play Store
 
-If you want to check the bundle prior to app store distribution, you can add the **Deploy to bitrise.io** Step after the **Gradle Runner / Android Build** Step. It uploads the bundle into the [ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page.
+If you want to check the bundle prior to app store distribution, you can add the **Deploy to bitrise.io** Step after the **Gradle Runner / Android Build** Steps. It uploads the bundle into the [ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of your Build’s page.
 
-Before you start, make sure you are in sync with Google Play Store! Learn how to
+Before you start, make sure you are in sync with Google Play Store! Learn how to:
 
-* [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-* set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+* [Register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project).
+* Set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
 
 1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 2. Copy the env key which stores your uploaded file’s url.
@@ -85,6 +84,6 @@ Before you start, make sure you are in sync with Google Play Store! Learn how to
    * **Package name**: the package name of your Android app bundle
    * **App file path:**  fogad mindket felet, es alapbol be van rakva az apk es az aab path. automatically filled out
    * **Track**: the track where you want to deploy your Android app bundle (alpha/beta/rollout/production)
-5. Start a build.
+5. [Start a build]().
 
-Now you should be able to distribute/customize your Android app bundle in Google Play Store.
+Now you should be able to distribute and customize your Android app bundle in Google Play Store.
