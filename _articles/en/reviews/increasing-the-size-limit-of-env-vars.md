@@ -22,7 +22,9 @@ However, if you absolutely must, you can increase the size limit by modifying th
 
 {% include message_box.html type="note" title="Changing the limit locally" content="In the following example, we're showing how to change the size limit on Bitrise: that is, the procedure changes the size limit on the virtual machine that runs your build.
 
-However, you can use the same command to set the size limit on your own machine. By default, the required config file is stored at `~/.envman/configs.json`. If you changed it, add your own path to the command described in the procedure below."%} 
+However, you can use the same command to set the size limit on your own machine. By default, the required config file is stored at `~/.envman/configs.json`. If you changed it, add your own path to the command described in the procedure below."%}
+
+To set the size limit in your build's virtual machines on Bitrise:
 
 1. On [bitrise.io](www.bitrise.io), open your app.
 2. Click on the **Workflow** tab to open the Workflow Editor.
