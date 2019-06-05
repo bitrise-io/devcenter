@@ -132,6 +132,7 @@ pages:
 - _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
 - _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/builds/configuring-notifications.md
 - _articles/en/builds/env-vars-secret-env-vars.md
 - _articles/en/builds/remote-access.md
