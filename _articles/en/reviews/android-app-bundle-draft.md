@@ -22,8 +22,6 @@ You can create an Android app bundle with either the **Gradle Runner** Step or w
 
 Once the Bitrise project scanner detects your code as an Android app, it kicks off your first build right away! Select the deploy workflow in your Workflow Editor to get a basic workflow.
 
-{% include message_box.html type="important" title="Gradle Runner Step in the deploy workflow" content=" Before you start, make sure that the **Gradle Runner** Step is right AFTER the **Android Unit Test** and **Android Lint** Steps in your **deploy** since the build Step takes the longest to run. "%}
-
 1. Insert the **Gradle Runner** Step after the **Android Unit Test** and **Android Lint** Steps in your **deploy** (if the build Step is not already there).
 2. Click the **Config** section of **Gradle Runner**.
 3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
