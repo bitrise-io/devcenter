@@ -122,6 +122,7 @@ pages:
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/testing/device-testing-for-android.md
 - _articles/en/bitrise-cli/basics-of-bitrise-yml.md
+- _articles/en/bitrise-cli/workflows.md
 - _articles/en/caching/about-caching.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
