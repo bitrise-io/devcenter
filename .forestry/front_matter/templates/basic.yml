@@ -40,6 +40,7 @@ pages:
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
 - _articles/en/infrastructure/virtual-machines.md
+- _articles/en/team-management/changing-the-owner-of-an-app.md
 - _articles/en/getting-started/builds-and-workflows.md
 - _articles/en/infrastructure/stack-update-and-removal-policy.md
 - _articles/en/infrastructure/the-environment.md
