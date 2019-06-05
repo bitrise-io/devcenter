@@ -21,9 +21,7 @@ menu:
 
 _Note: mainly affects UI tests._
 
-The root cause of the issue is that Xcode / the iOS Simulator has issues
-in performance limited environments. This included Virtual Machines (which is
-how your builds are running on [bitrise.io](https://www.bitrise.io)), MacBook Airs, Mac Minis with HDD storage, ...
+The root cause of the issue is that Xcode / the iOS Simulator has issues in performance limited environments. This included Virtual Machines (which is how your builds are running on [bitrise.io](https://www.bitrise.io)), MacBook Airs, Mac Minis with HDD storage, ...
 
 It can happen even if you use [Apple's Xcode Bots CI server](http://www.openradar.me/23386199) on non SSD Mac Mini.
 
@@ -44,8 +42,7 @@ Related links & reports:
 
 ### Possible solutions
 
-* As reported [in this StackOverflow answer](http://stackoverflow.com/a/37866825/974381) &
-  [in this Apple dev forum discussion](https://forums.developer.apple.com/thread/4472)
+* As reported [in this StackOverflow answer](http://stackoverflow.com/a/37866825/974381) & [in this Apple dev forum discussion](https://forums.developer.apple.com/thread/4472)
   a possible workaround can be to **not to store** `**XCUIApplication()**` **in a variable**, instead
   reference / use it directly. E.g. instead of: `let app = XCUIApplication() ; ... ; app.launch()`
   do: `XCUIApplication().launch()`
@@ -55,8 +52,7 @@ Related links & reports:
   * Related: remove every explicit `app.terminate()` in your `tearDown()` method(s)
 * Try another Simulator device
 * [Use the Async testing APIs](http://stackoverflow.com/a/32481202/974381)
-* Some users had success with splitting the tests into multiple Schemes,
-  and running those separately, with separate Test steps.
+* Some users had success with splitting the tests into multiple Schemes, and running those separately, with separate Test steps.
   * A great article about splitting tests into multiple Schemes:
     [http://artsy.github.io/blog/2016/04/06/Testing-Schemes](http://artsy.github.io/blog/2016/04/06/Testing-Schemes)
 * [Sometimes it's related to a code which makes Xcode to misbehave](https://github.com/fastlane/fastlane/issues/3874#issuecomment-219991408)
@@ -145,16 +141,10 @@ as simple as `xcodebuild -list`.
 
 ### Simulator reset
 
-As reported [here](https://github.com/bitrise-io/steps-xcode-test/issues/57#event-796203051),
-if you do a simulator reset during the build, e.g. with a pre-action
-Build Phase Script `xcrun simctl erase all`, it can cause Xcode / the Simulator to hang.
+As reported [here](https://github.com/bitrise-io/steps-xcode-test/issues/57#event-796203051), if you do a simulator reset during the build, e.g. with a pre-action Build Phase Script `xcrun simctl erase all`, it can cause Xcode / the Simulator to hang.
 
 ### Other
 
-It might also not be Xcode related, but might be caused by something in your
-project when it runs in an Xcode step (Xcode Test, Xcode Archive, ...).
-For example if you have a Run Phase Script in your Xcode project, that will
-run during Xcode build/test/archive, and that script hangs for some reason
-(e.g. it waits for a user input).
+It might also not be Xcode related, but might be caused by something in your project when it runs in an Xcode step (Xcode Test, Xcode Archive, ...). For example if you have a Run Phase Script in your Xcode project, that will run during Xcode build/test/archive, and that script hangs for some reason (e.g. it waits for a user input).
 
 Check out our guide on [frequent iOS issues](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/) for more information!
