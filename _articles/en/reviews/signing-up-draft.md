@@ -49,7 +49,7 @@ If you press the Authorize button, you will be redirected to Bitrise.
 
 You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service’s availability, you are also able to connect more accounts, GitHub **and** Bitbucket, for example. Last, but not least, you don’t have to stick to your connected account’s username.
 
-1. Pick a username and a password for your Bitrise account on the You are almost there page.
+1. Pick a username and a password for your Bitrise account on the **You are almost there** page.
 
    ![](/img/you-re-almost-there.jpg)
 
@@ -61,11 +61,9 @@ You will have to pick a username and a password for your Bitrise account. This w
    * Can not contain the same character more than 3 times in a row (aaa).
    * Cannot be alphabetical order or reverse order (abcd, dcba).
    * Cannot be numerical order or reverse order (1234, 4321).
-2. On the Help us help you page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
+2. On the **Help us help you page** add your first name, last name, your company name and a few more details if you wish. You can also add those later.
 
 After that, you are ready to roll. Add your first app on your Dashboard!
-
-![](/img/add-your-first-app.jpg)
 
 From now on, you are able to sign in with a click of a button. Choose your favorite!
 
