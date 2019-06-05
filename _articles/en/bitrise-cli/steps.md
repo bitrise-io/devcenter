@@ -3,6 +3,13 @@ title: Steps in YAML
 redirect_from:
 - "/bitrise-cli/steps/"
 - "/bitrise-cli/steps"
+tag:
+- steps
+- workflows
+- bitrise.yml
+- cli
+summary: 'A Step encapsulates a "build task": the code to perform that task, the inputs
+  and parameters you can define for the task, and the outputs the task generates.'
 menu:
   bitrise-cli-main:
     weight: 16
