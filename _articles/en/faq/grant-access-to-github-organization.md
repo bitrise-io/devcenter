@@ -1,5 +1,12 @@
 ---
 title: How to grant Bitrise access to a GitHub Organization?
+tag:
+- faq
+- git
+- troubleshooting
+summary: 'This guide explains how to grant access for bitrise.io to your GitHub Organization.
+  This way Bitrise can access the Organization''s repositories. '
+redirect_from: []
 menu:
   faq-main:
     weight: 5
