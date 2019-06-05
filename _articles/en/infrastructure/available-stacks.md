@@ -2,6 +2,13 @@
 title: Available Stacks
 redirect_from:
 - "/docs/available-stacks"
+tag:
+- stack
+- infrastructure
+- buids
+summary: |-
+  The Stack indicates the virtual machine version that we will use to run your build.
+  After adding your application to Bitrise we will select an appropriate Stack for it.
 menu:
   infrastructure-main:
     weight: 1
