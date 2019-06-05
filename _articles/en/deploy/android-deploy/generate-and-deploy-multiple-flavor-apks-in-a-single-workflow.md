@@ -1,7 +1,14 @@
 ---
 title: Generate and deploy multiple flavor APKs in a single workflow
-date: 2018-10-26T12:56:08.000+00:00
+date: '2018-10-26T12:56:08.000+00:00'
 redirect_from: []
+tag:
+- deploy
+- android
+- gradle
+summary: You can generate, code sign and deploy multiple flavor (multi-flavor) APKs
+  in one workflow using our Gradle Runner Step. Flavor means enhancing an app's core
+  code with features resulting in different versions of the same app.
 menu:
   android-deploy:
     weight: 4
