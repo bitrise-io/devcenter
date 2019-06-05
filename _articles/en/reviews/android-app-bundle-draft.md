@@ -47,7 +47,7 @@ You can generate an .aab file for your Android app with our Android Build Step a
 
    ![](/img/android-build-aab-config.jpg)
 
-   If you wish to generate an APK and an .aab in one workflow, add two Android Build Steps after each other and configure one to build an .aab file and the other to build an APK.
+If you wish to generate an APK and an .aab in one workflow, add two Android Build Steps after each other and configure one to build an .aab file and the other to build an APK.
 
 ## Signing an Android app bundle
 
