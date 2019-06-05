@@ -3,6 +3,14 @@ title: Incoming and outgoing webhooks
 redirect_from:
 - "/api/outgoing-webhooks/"
 date: '2019-04-09T15:10:01.000+00:00'
+tag:
+- webhooks
+- triggers
+- builds
+- api
+summary: Both incoming and outgoing webhooks can be set up with the Bitrise API. They
+  are important for automatic build triggering and the reporting of build events to
+  other services.
 menu:
   api-main:
     weight: 13
