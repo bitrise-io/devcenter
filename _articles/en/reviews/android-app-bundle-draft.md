@@ -5,17 +5,14 @@ date: 2019-01-08T09:25:30.000+00:00
 published: false
 
 ---
-Creating an Android app bundle with Bitrise is almost the same as generating an APK. All you have to do is tweaking a few Step inputs to compile an Android app bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store. Using our build, code signing and deploy steps you can easily configure your workflow to generate an .aab file instead of an APK file.
+Creating an Android app bundle with Bitrise is almost the same as generating an APK. All you have to do is tweaking a few Step inputs to compile an Android app bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store.
 
-{% include message_box.html type="warning" title="My message" content="
-The Deploy to Bitrise.io Step must be of version 1.4.1 or newer - older versions of the Step do NOT support Test Reports.
-android build 0.10.0 or newer
-
-gradle runner 1.9.0 or newer
-
-android sign 1.3.0 or newer
-
-google play deploy 1.6.0 or newer"%}
+{% include message_box.html type="warning" title="Step versions supporting bundle creation" content="
+The following Steps must be of  the indicated version 1.4.1 or newer - older versions of the Step do NOT support Test Reports.
+- Android Build 0.10.0 or newer
+- Gradle Runner 1.9.0 or newer
+- Android Sign 1.3.0 or newer
+- Google Play Deploy 1.6.0 or newer"%}
 
 ## Generating an Android app bundle
 
@@ -47,7 +44,7 @@ You can generate an .aab file for your Android app with our Android Build Step a
 2. Provide the root directory of your Android project in Project Location.
 3. Go to **Build type** and select `aab` as build type.
 
-   ![](/img/android-build-aab-config.jpg) 
+   ![](/img/android-build-aab-config.jpg)
 
    If you wish to generate an APK and an .aab in one workflow, add two Android Build Steps after each other and configure one to build an .aab file and the other to build an APK.
 
@@ -62,7 +59,7 @@ Signing an Android app bundle file is the same as signing an APK.
   "%}
 
 1. Add the **Android Sign** Step AFTER the build Step in your deploy workflow.
-2. Make sure the **APK file path** input field displays the same output env var as the output of the build Step. 
+2. Make sure the **APK file path** input field displays the same output env var as the output of the build Step.
 
    ![](/img/android-sign-aab-apk.jpg)
 
