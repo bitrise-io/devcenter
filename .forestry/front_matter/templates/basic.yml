@@ -131,6 +131,7 @@ pages:
 - _articles/en/bitrise-cli/step-timeout.md
 - _articles/en/bitrise-cli/secrets.md
 - _articles/en/bitrise-cli/most-important-concepts.md
+- _articles/en/bitrise-cli/customizing-bitrise-yml.md
 - _articles/en/bitrise-cli/offline-workflow-editor.md
 - _articles/en/caching/about-caching.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
