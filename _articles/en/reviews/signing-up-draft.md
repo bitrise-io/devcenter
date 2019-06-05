@@ -23,9 +23,7 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
    ![](/img/sign-up-git-email.jpg)
 
-### Authorizing Bitrise
-
-#### GitHub
+### Authorizing Bitrise with GitHub
 
 You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
 
@@ -33,13 +31,13 @@ You have to authorize Bitrise before we can establish the connection. This means
 
 If you press the Authorize application button, you will be redirected to Bitrise.
 
-#### Bitbucket
+### Authorizing Bitrise with Bitbucket
 
 ![Screenshot](/img/signing-up/bitrise_authorization.png)
 
 If you press the Grant access button, you will be redirected to Bitrise.
 
-#### GitLab
+### Authorizing Bitrise with GitLab
 
 ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/signing-up/gitlab_authorization.png)
 
