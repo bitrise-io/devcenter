@@ -19,25 +19,27 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 ## Signing up with a Git provider
 
 1. Go to the Sign up page by clicking Sign up! on the landing page of [bitrise.io](https://bitrise.io).
-2. Select a sign up method for authenticating yourself with these services.
+2. Select a git provider you want to sign up with for authenticating yourself with these services.
 
    ![](/img/sign-up-git-email.jpg)
 
-### Authorizing Bitrise with GitHub
+## Authorizing Bitrise with Git provider 
 
 You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
+
+### GitHub
 
 ![Screenshot](/img/signing-up/github_authorization.png)
 
 If you press the Authorize application button, you will be redirected to Bitrise.
 
-### Authorizing Bitrise with Bitbucket
+### Bitbucket
 
 ![Screenshot](/img/signing-up/bitrise_authorization.png)
 
 If you press the Grant access button, you will be redirected to Bitrise.
 
-### Authorizing Bitrise with GitLab
+### GitLab
 
 ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/signing-up/gitlab_authorization.png)
 
