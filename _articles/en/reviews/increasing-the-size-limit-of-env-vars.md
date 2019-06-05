@@ -9,7 +9,7 @@ published: false
 By default, Environment Variables (Env Vars) have a 20KB per-environment value size limit, and a 120KB total size limit. Hence you getting the following error when you try to add a value larger than 20KB:
 
 ```bash
-ruby -e 'puts "a"*40_000' | bitrise envman add --key TEST2
+$ ruby -e 'puts "a"*40_000' | bitrise envman add --key TEST2
 WARN[07:37:46] environment value too large                  
 WARN[07:37:46] environment value size (39.0634765625 KB) - max allowed size: 20 KB 
 FATA[07:37:46] [ENVMAN] environment value too large - rejected 
@@ -22,7 +22,7 @@ However, if you absolutely must, you can increase the size limit by modifying th
 
 {% include message_box.html type="note" title="Changing the limit locally" content="In the following example, we're showing how to change the size limit on Bitrise: that is, the procedure changes the size limit on the virtual machine that runs your build.
 
-However, you can use the same command to set the size limit on your own machine. By default, the required config file is stored at `~/.envman/configs.json`. If you changed it, add your own path to the command described in the procedure below."%}
+However, you can use the same command to set the size limit on your own machine. By default, the required config file should be stored at `~/.envman/configs.json`. If you changed it, add your own path to the command described in the procedure below."%}
 
 To set the size limit in your build's virtual machines on Bitrise:
 
