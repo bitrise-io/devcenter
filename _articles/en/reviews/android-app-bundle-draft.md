@@ -7,16 +7,16 @@ published: false
 ---
 Creating an Android app bundle with Bitrise is almost the same as generating an APK. All you have to do is tweaking a few Step inputs to compile an Android app bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store.
 
-{% include message_box.html type="warning" title="Step versions supporting bundle creation" content="
-The following Steps must be of  the indicated version 1.4.1 or newer - older versions of the Step do NOT support Test Reports.
-- Android Build 0.10.0 or newer
-- Gradle Runner 1.9.0 or newer
-- Android Sign 1.3.0 or newer
-- Google Play Deploy 1.6.0 or newer"%}
+{% include message_box.html type="warning" title="Step versions supporting bundle creation" content=" The following Steps must be of the indicated version or newer - older versions of the Steps do NOT support bundle creation.
+
+* Android Build 0.10.0 or newer
+* Gradle Runner 1.9.0 or newer
+* Android Sign 1.3.0 or newer
+* Deploy to Google Play 1.6.0 or newer"%}
 
 ## Generating an Android app bundle
 
-You can create an Android app bundle with either **Gradle Runner** or **Android Build** Steps.
+You can create an Android app bundle with either the **Gradle Runner** Step or with the **Android Build** Step.
 
 ### Gradle Runner Step
 
@@ -24,25 +24,26 @@ Once the Bitrise project scanner detects your code as an Android app, it kicks o
 
 {% include message_box.html type="important" title="Gradle Runner Step in the deploy workflow" content=" Before you start, make sure that the **Gradle Runner** Step is right AFTER the **Android Unit Test** and **Android Lint** Steps in your **deploy** since the build Step takes the longest to run. "%}
 
-1. Click **Gradle Runner** in the deploy Workflow.
-2. Click the **Config** section.
+1. Insert the **Gradle Runner** Step after the **Android Unit Test** and **Android Lint** Steps in your **deploy** (if the build Step is not already there).
+2. Click the **Config** section of **Gradle Runner**.
 3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
 
    ![](/img/bundlerelease.jpg)
 
 This way the Step will generate an Android app bundle instead of an APK.
 
-if aab and apk, duplicate Gradle Runner?
+If you wish to generate a .aab file AND an APK in one workflow, you can specify an additional task in the **Gradle task to run** input field:
+
+![](/img/assemble-bundle-gradle-runner.jpg)
 
 ### Android Build Step
 
 You can generate an .aab file for your Android app with our Android Build Step as well.
 
-{% include message_box.html type="important" title="Android Build Step in the deploy workflow" content=" Before you start, make sure that the **Android Build** Step is right after the **Android Unit Test** and **Android Lint** Steps in your deploy Workflow since the build Step takes the longest to run "%}
-
-1. Click **Android Build** Step.
-2. Provide the root directory of your Android project in Project Location.
-3. Go to **Build type** and select `aab` as build type.
+1. Add Android Build Step after the **Android Unit Test** and **Android Lint** Steps in your **deploy** (if the build Step is not already there).
+2. Click the **Android Build** Step.
+3. Provide the root directory of your Android project in the **Project Location** input field.
+4. Go to **Build type** and select `aab` as build type.
 
    ![](/img/android-build-aab-config.jpg)
 
