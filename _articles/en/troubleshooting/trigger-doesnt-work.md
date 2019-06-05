@@ -1,5 +1,12 @@
 ---
 title: Build Trigger does not work
+tag:
+- triggers
+- troubleshooting
+- builds
+summary: 'Unfortunately, it can happen that your build triggers do not trigger a build
+  automatically on Bitrise. There are many potential issues that can stop your builds '
+redirect_from: []
 menu:
   troubleshooting-main:
     weight: 11

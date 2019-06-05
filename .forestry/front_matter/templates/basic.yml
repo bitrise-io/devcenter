@@ -124,6 +124,7 @@ pages:
 - _articles/en/troubleshooting/frequent-ios-issues.md
 - _articles/en/troubleshooting/frequent-android-issues.md
 - _articles/en/troubleshooting/known-xcode-issues.md
+- _articles/en/troubleshooting/trigger-doesnt-work.md
 - _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
