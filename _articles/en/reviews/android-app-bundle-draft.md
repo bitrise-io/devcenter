@@ -36,7 +36,7 @@ If you wish to generate an Android App Bundle and an APK in one workflow, you ca
 
 ### Android Build Step
 
-You can generate an `.aab` file for your Android app with our **Android Build** Step as well:
+You can generate an Android App Bundle for your Android app with our **Android Build** Step as well:
 
 1. Add the **Android Build** Step after the **Android Unit Test** and **Android Lint** Steps in your Workflow (if the build Step is not already there).
 2. Provide the root directory of your Android project in the **Project Location** input field.
@@ -44,7 +44,7 @@ You can generate an `.aab` file for your Android app with our **Android Build** 
 
    ![](/img/android-build-aab-config.jpg)
 
-If you wish to generate an APK and an .aab in one workflow, add two **Android Build** Steps after each other and configure one to build an .aab file and the other to build an APK.
+If you wish to generate an APK and an Android App Bundle in one workflow, add two **Android Build** Steps after each other and configure one to build an Android App Bundle and the other to build an APK.
 
 ## Signing an Android App Bundle
 
