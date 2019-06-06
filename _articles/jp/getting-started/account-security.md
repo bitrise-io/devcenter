@@ -2,7 +2,7 @@
 title: アカウントセキュリティ
 menu:
   getting-started-main:
-    weight: 16
+    weight: 18
 
 ---
 ## 二段階認証の有効化

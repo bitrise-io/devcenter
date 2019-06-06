@@ -13,6 +13,9 @@ summary: 'You can authenticate yourself with your GitHub, Bitbucket or GitLab us
   against Bitrise. It brings some practical benefits, like logging in with one click
   and of course you won''t have to authorize your Git account when adding repositories
   hosted by these providers again. '
+menu:
+  getting-started-main:
+    weight: 4
 published: false
 
 ---
