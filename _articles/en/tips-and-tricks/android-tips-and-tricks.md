@@ -3,6 +3,13 @@ title: Android tips and tricks
 redirect_from:
 - https://devcenter.bitrise.io/android/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project
 - "/android/android-tips-and-tricks/#what-are-gradle-tasks-and-how-can-i-get-the-list-of-available-tasks-in-my-project"
+tag:
+- gradle
+- android
+- docker
+summary: 'Find out the difference between Gradle Runner and Android Build Steps. Learn
+  about installing additional Android SDK packages, as well as about running an Android
+  build locally with Docker. '
 menu:
   tips-and-tricks-main:
     weight: 2

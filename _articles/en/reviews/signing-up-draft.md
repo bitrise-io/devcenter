@@ -19,25 +19,27 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 ## Signing up with a Git provider
 
 1. Go to the Sign up page by clicking Sign up! on the landing page of [bitrise.io](https://bitrise.io).
-2. Select a sign up method for authenticating yourself with these services.
+2. Select a git provider you want to sign up with for authenticating yourself with these services.
 
    ![](/img/sign-up-git-email.jpg)
 
-### Authorizing Bitrise with GitHub
+## Authorizing Bitrise with Git provider 
 
 You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
+
+### GitHub
 
 ![Screenshot](/img/signing-up/github_authorization.png)
 
 If you press the Authorize application button, you will be redirected to Bitrise.
 
-### Authorizing Bitrise with Bitbucket
+### Bitbucket
 
 ![Screenshot](/img/signing-up/bitrise_authorization.png)
 
 If you press the Grant access button, you will be redirected to Bitrise.
 
-### Authorizing Bitrise with GitLab
+### GitLab
 
 ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/signing-up/gitlab_authorization.png)
 
@@ -47,7 +49,7 @@ If you press the Authorize button, you will be redirected to Bitrise.
 
 You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service’s availability, you are also able to connect more accounts, GitHub **and** Bitbucket, for example. Last, but not least, you don’t have to stick to your connected account’s username.
 
-1. Pick a username and a password for your Bitrise account on the You are almost there page.
+1. Pick a username and a password for your Bitrise account on the **You are almost there** page.
 
    ![](/img/you-re-almost-there.jpg)
 
@@ -59,27 +61,15 @@ You will have to pick a username and a password for your Bitrise account. This w
    * Can not contain the same character more than 3 times in a row (aaa).
    * Cannot be alphabetical order or reverse order (abcd, dcba).
    * Cannot be numerical order or reverse order (1234, 4321).
-2. On the Help us help you page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
+2. On the **Help us help you page** add your first name, last name, your company name and a few more details if you wish. You can also add those later.
 
 After that, you are ready to roll. Add your first app on your Dashboard!
-
-![](/img/add-your-first-app.jpg)
 
 From now on, you are able to sign in with a click of a button. Choose your favorite!
 
 ## Signing up with email
 
 You can easily sign up to Bitrise in one step with your email address.
-
-{% include message_box.html type="info" title="Trial after signing up" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
-
-* 45 minutes of build time.
-* 1000 builds a month.
-* A maximum of 100 team members.
-
-Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!"%}
-
-### Signing up
 
 1. Add your Email, Username and Password on our [Sign Up](https://app.bitrise.io/users/sign_up) page.
 
