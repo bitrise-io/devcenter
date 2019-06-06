@@ -3,7 +3,7 @@ tag:
 - git
 - sign-up
 - getting-started
-title: Signing up - draft
+title: Signing up to Bitrise - draft
 redirect_from:
 - "/getting-started/signing-up/signing-up-with-email/"
 - "/getting-started/signing-up/signing-up-with-gitlab/"
