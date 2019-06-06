@@ -26,7 +26,7 @@ This is required to be able to authenticate a Bitrise app to the add-on, as well
 
 {% include message_box.html type="important" title="Provisioning calls" content="Add-ons have 10 seconds to respond to any calls of the `/provision` endpoint. After 10 seconds, the Bitrise system terminates the provisioning, in the same way as if the add-on service returned a non-success HTTP code.
 
-Therefore, delay any potentially time-consuming operations to be done after the service returned a response to the provisioning API call. This includes using the Bitrise API and registering outgoing webhooks: delay using these until after a successful response to the provisioning call."%} 
+Therefore, delay any potentially time-consuming operations to be done after the service returned a response to the provisioning API call. This includes using the Bitrise API and registering outgoing webhooks: delay using these until after a successful response to the provisioning call."%}
 
 ### Authenticating the provision endpoint
 
@@ -40,7 +40,7 @@ All three methods of the `/provision` endpoint require authentication, exclusive
 
 ### Beam - SSO navigation header
 
-Every add-on has to include Bitrise's navigation header on their site when logging into the service via Bitrise. This navbar enables users to quickly navigate back to Bitrise and to important add-on related pages. 
+Every add-on has to include Bitrise's navigation header on their site when logging into the service via Bitrise. This navbar enables users to quickly navigate back to Bitrise and to important add-on related pages.
 
 ## Provisioning an app
 
@@ -89,8 +89,31 @@ If an app's subscription plan is changed, use the PUT method with the app-slug t
 
 ## Deleting an app's provision
 
-Deleting an app's provisioned state means that calls from Bitrise builds to the add-on server will be rejected. 
+Deleting an app's provisioned state means that calls from Bitrise builds to the add-on server will be rejected.
 
 **Method**: `DELETE`
 
 **URL**: `/provision/{app_slug}`
+
+## Testing an add-on
+
+We provide a full testing kit for third party add-ons. It emulates the calls bitrise.io makes and checks if the responses conform to the requirements. For example, if the same provisioning call is posted for the same app multiple times, the response should be the same every time. 
+
+The testing kit is a CLI tool. You can test all the expected functions of the add-on with a single command - or you can test each of them separately. 
+
+To run a comprehensive test, run the following root command in a CLI:
+
+```
+bitrise-addon-test
+``` 
+
+This command runs the following tests:
+
+- Provisioning request (with 2 retries). 
+- Request to change an add-on plan.
+- Login request. 
+- Deprovisioning request (with 2 retries).
+
+You can test each of these functions separately by adding the applicable command to the `bitrise-addon-test` root command. 
+
+For detailed information on all the available commands and flags for `bitrise-addon-test`, please run `bitrise-addon-test --help`. 
