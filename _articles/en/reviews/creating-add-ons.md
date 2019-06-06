@@ -14,6 +14,14 @@ published: false
    Alternatively, an applicable certificate ([SOC 2](https://www.aicpa.org/interestareas/frc/assuranceadvisoryservices/aicpasoc2report.html) and/or [ISO](https://www.iso.org/home.html)) is sufficient.
 3. Each add-on developer must create a Step that defines the integration point with the third party and determines how the services would use Bitrise and the build's data."%}
 
+## Publishing stages 
+
+There are three stages to getting a new add-on published:
+
+1. Alpha: the add-on is only available to developers and to those explicitly granted access. Its Step does not appear in the Step library.
+2. Beta: the add-on is listed in the Bitrise Marketplace with a BETA label, and all Bitrise customers can provision it, on a free plan. Support must be provided. 
+3. General availability (GA): the BETA tag is removed, and you can offer multiple free and paid plans to customers. The plan available in previous stages is disabled. 
+
 ## Getting started
 
 All custom add-ons must be able to handle a `/provision` API endpoint, with three methods:
@@ -97,23 +105,21 @@ Deleting an app's provisioned state means that calls from Bitrise builds to the 
 
 ## Testing an add-on
 
-We provide a full testing kit for third party add-ons. It emulates the calls bitrise.io makes and checks if the responses conform to the requirements. For example, if the same provisioning call is posted for the same app multiple times, the response should be the same every time. 
+We provide a full testing kit for third party add-ons. It emulates the calls bitrise.io makes and checks if the responses conform to the requirements. For example, if the same provisioning call is posted for the same app multiple times, the response should be the same every time.
 
-The testing kit is a CLI tool. You can test all the expected functions of the add-on with a single command - or you can test each of them separately. 
+The testing kit is a CLI tool. You can test all the expected functions of the add-on with a single command - or you can test each of them separately.
 
 To run a comprehensive test, run the following root command in a CLI:
 
-```
-bitrise-addon-test
-``` 
+    bitrise-addon-test
 
 This command runs the following tests:
 
-- Provisioning request (with 2 retries). 
-- Request to change an add-on plan.
-- Login request. 
-- Deprovisioning request (with 2 retries).
+* Provisioning request (with 2 retries).
+* Request to change an add-on plan.
+* Login request.
+* Deprovisioning request (with 2 retries).
 
-You can test each of these functions separately by adding the applicable command to the `bitrise-addon-test` root command. 
+You can test each of these functions separately by adding the applicable command to the `bitrise-addon-test` root command.
 
-For detailed information on all the available commands and flags for `bitrise-addon-test`, please run `bitrise-addon-test --help`. 
+For detailed information on all the available commands and flags for `bitrise-addon-test`, please run `bitrise-addon-test --help`.
