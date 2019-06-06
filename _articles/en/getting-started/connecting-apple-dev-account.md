@@ -28,7 +28,7 @@ Connect your Apple Developer account to Bitrise if:
 
 {% include message_box.html type="warning" title="Custom Script Steps" content="If you use, for example, a custom Script Step to utilise `fastlane` or to upload your app to the App Store, you will not be able to get past Apple 2FA by connecting your Apple Developer account. This solution only works with the official Steps, such as `fastlane`, `iOS Auto Provision` or `Deploy to iTunes Connect`. "%}
 
-### Authenticating your Apple Developer Account on Bitrise
+## Authenticating your Apple Developer Account on Bitrise
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
 2. Click on your profile in the upper-right corner of your `Dashboard` and select `Account settings` from the dropdown menu.
@@ -40,7 +40,7 @@ Connect your Apple Developer account to Bitrise if:
    ![](/img/apple-dev.png)
 5. If two-factor authentication is enabled on your Apple Developer account, you will be prompted to provide your verification code. In this case, your authentication will expire in 30 days and you will have to authenticate again!
 
-### Enabling Apple Developer Portal integration
+## Enabling Apple Developer Portal integration
 
 You can authorize your project to receive Apple Developer Portal data from Bitrise once your Apple Developer Account is connected to your [bitrise.io](https://www.bitrise.io) account.
 
