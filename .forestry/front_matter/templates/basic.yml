@@ -45,8 +45,6 @@ pages:
 - _articles/en/infrastructure/stack-update-and-removal-policy.md
 - _articles/en/infrastructure/the-environment.md
 - _articles/en/getting-started/getting-started-with-ios-apps.md
-- _articles/en/getting-started/signing-up/signing-up-with-github.md
-- _articles/en/getting-started/signing-up/signing-up-with-email.md
 - _articles/en/getting-started/index.md
 - _articles/en/getting-started/account-security.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
@@ -58,7 +56,6 @@ pages:
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/jp/api/incoming-and-outgoing-webhooks.md
-- _articles/en/reviews/transfer-app-security-aspect.md
 - _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/イントロ-intro.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
@@ -191,7 +188,6 @@ pages:
 - _articles/en/steps-and-workflows/default-workflows.md
 - _articles/en/steps-and-workflows/creating-workflows.md
 - _articles/en/steps-and-workflows/getting-started-workflows.md
-- _articles/en/reviews/managing-the-apps-of-organizations-image-game.md
 - _articles/en/reviews/android-unit-testing-draft.md
 - _articles/jp/testing/test-reports.md
 - _articles/en/steps-and-workflows/skipping-steps.md
@@ -202,8 +198,9 @@ pages:
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
+- _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
-- _articles/en/reviews/increasing-the-size-limit-of-env-vars.md
+- _articles/en/getting-started/signing-up-to-bitrise.md
 - _articles/en/reviews/running-your-first-build.md
 - _articles/en/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
 - _articles/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
@@ -232,6 +229,7 @@ pages:
 - _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/faq/android-x86-emulator.md
 - _articles/en/faq/grant-access-to-github-organization.md
+- _articles/en/reviews/creating-add-ons.md
 - _articles/en/team-management/index.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
 - _articles/en/team-management/teams-vs-organizations.md
