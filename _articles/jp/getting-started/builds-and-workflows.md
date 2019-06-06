@@ -5,7 +5,7 @@ redirect_from:
 - "/getting-started/builds-and-workflows/"
 menu:
   getting-started-main:
-    weight: 14
+    weight: 13
 
 ---
 ## ビルドとワークフロー

@@ -9,7 +9,7 @@ summary: 'Bitrise uses virtual machines to run your builds. Every build is run i
 redirect_from: []
 menu:
   getting-started-main:
-    weight: 17
+    weight: 16
 
 ---
 To guarantee the security of your builds we use [virtual machines](/infrastructure/virtual-machines) for builds. Every build runs in its own, clean virtual machine and we discard the whole virtual machine after the build finishes, erasing every file your build uses and every change you make during your build.

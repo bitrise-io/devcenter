@@ -9,9 +9,6 @@ summary: You are able to authenticate yourself with your GitHub user against Bit
   you won't have to authorize your GitHub account when adding repositories hosted
   by these providers again.
 redirect_from: []
-menu:
-  signing-up:
-    weight: 2
 
 ---
 You are able to authenticate yourself with your GitHub user against **Bitrise**. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your GitHub account when adding repositories hosted by these providers again.

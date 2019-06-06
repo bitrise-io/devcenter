@@ -7,9 +7,6 @@ summary: You can easily sign up to Bitrise in one step with your email address. 
   you sign up for a free account, you will automatically be granted a two-week trial
   on our Developer plan.
 redirect_from: []
-menu:
-  signing-up:
-    weight: 8
 
 ---
 You can easily sign up to Bitrise in one step with your email address.

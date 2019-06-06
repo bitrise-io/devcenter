@@ -13,7 +13,7 @@ summary: 'Go through the procedure of adding a React Native app on Bitrise from 
   code signing, and testing. '
 menu:
   getting-started-main:
-    weight: 30
+    weight: 29
 
 ---
 You can easily set up and configure your React Native project on Bitrise - the power is in your hands if you want to deploy both native versions or just one to distribution platforms! Your React Native repo can consists of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project, you will see that first an Android, then an iOS build gets built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously.

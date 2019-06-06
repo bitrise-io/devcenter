@@ -12,7 +12,7 @@ summary: To take full advantage of all the features Bitrise offers, including au
   your Bitrise account.
 menu:
   getting-started-main:
-    weight: 9
+    weight: 8
     title: Connecting your GitHub/GitLab/Bitbucket account
 
 ---

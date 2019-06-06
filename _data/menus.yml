@@ -26,10 +26,6 @@ tutorials-main:
 - title: Docker
   identifier: docker
   weight: 5
-getting-started-main:
-- title: Signing up
-  identifier: signing-up
-  weight: 5
 team-management-main:
 - title: Organizations
   identifier: organizations
