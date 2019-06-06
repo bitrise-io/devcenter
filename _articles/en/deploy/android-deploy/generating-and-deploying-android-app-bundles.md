@@ -1,5 +1,7 @@
 ---
-tag: []
+tag:
+- 'android '
+- gradle
 title: 'Generating and deploying Android app bundles '
 redirect_from: []
 summary: You can compile an Android App Bundle with our Android Build and Gradle Runner
