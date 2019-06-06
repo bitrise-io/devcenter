@@ -1,7 +1,6 @@
 ---
 tag:
 - git
-- sign-up
 - getting-started
 title: Signing up to Bitrise
 redirect_from:
