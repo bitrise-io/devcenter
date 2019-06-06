@@ -1,8 +1,18 @@
 ---
-tag: []
+tag:
+- git
+- sign-up
+- getting-started
 title: Signing up - draft
-redirect_from: []
-summary: ''
+redirect_from:
+- "/getting-started/signing-up/signing-up-with-email/"
+- "/getting-started/signing-up/signing-up-with-gitlab/"
+- "/getting-started/signing-up/signing-up-with-bitbucket/"
+- "/getting-started/signing-up/signing-up-with-github/"
+summary: 'You can authenticate yourself with your GitHub, Bitbucket or GitLab user
+  against Bitrise. It brings some practical benefits, like logging in with one click
+  and of course you won''t have to authorize your Git account when adding repositories
+  hosted by these providers again. '
 published: false
 
 ---
