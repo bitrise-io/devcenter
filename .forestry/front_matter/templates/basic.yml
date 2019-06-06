@@ -198,6 +198,7 @@ pages:
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
+- _articles/en/reviews/creating-add-ons.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
 - _articles/en/getting-started/signing-up-to-bitrise.md
@@ -229,7 +230,6 @@ pages:
 - _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/faq/android-x86-emulator.md
 - _articles/en/faq/grant-access-to-github-organization.md
-- _articles/en/reviews/creating-add-ons.md
 - _articles/en/team-management/index.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
 - _articles/en/team-management/teams-vs-organizations.md

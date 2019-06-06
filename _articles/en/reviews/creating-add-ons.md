@@ -22,6 +22,37 @@ There are three stages to getting a new add-on published:
 2. Beta: the add-on is listed in the Bitrise Marketplace with a BETA label, and all Bitrise customers can provision it, on a free plan. Support must be provided. 
 3. General availability (GA): the BETA tag is removed, and you can offer multiple free and paid plans to customers. The plan available in previous stages is disabled. 
 
+### Alpha stage
+
+All add-ons start their lives in alpha. At this stage, they do not appear in the marketplace or in search results, and have no support requirements or feature requirements. Only developers and explicitly invited users have access to the add-on, using the free Test plan. No other subscription plan is allowed in Alpha stage. 
+
+All add-ons must have a Step that defines the integration point with the third party: this Step does not show up in the Step library. If it is a modified version of an existing Step, only the previous, unmodified version will be available in the Step library during the Alpha stage. 
+
+To proceed to the beta stage, the add-on developer has to:
+
+* Test the add-on with a minimum of 10 alpha users.
+* Provide their company’s details, including business, engineering, and contact information.
+* Provide a name and product icons for the add-on.
+* Prepare screenshots for the add-on’s marketplace listing.
+* Describe the add-on’s benefits and features.
+* Submit a state progression form. 
+
+### Beta stage
+
+Beta add-ons are visible in the marketplace but still only have a single, free plan called Test. Being publicly available means developers can gather larger amounts of data and feedback from users. 
+
+In the beta stage, timely support must be provided for add-ons. Partners are expected to acknowledge and respond to all Bitrise customer tickets related to their add-on within 48 hours. Parters are responsible to handle customer tickets via their own services. 
+
+To proceed from the beta stage to GA, the developers has to:
+
+* Test the add-on with a minimum of 100 active beta users
+* Ensure that your add-on is backed by production-ready infrastructure that can support thousands of paid customers
+* Specify the details of free and paid plans for your add-on by submitting the details via our form
+
+### General availability
+
+When the add-on reaches GA, the BETA tag is removed and partners can offer multiple free and paid plans to Bitrise customers. The old Test plan is disabled and no new instances of it can be provisioned. 
+
 ## Getting started
 
 All custom add-ons must be able to handle a `/provision` API endpoint, with three methods:
@@ -122,4 +153,6 @@ This command runs the following tests:
 
 You can test each of these functions separately by adding the applicable command to the `bitrise-addon-test` root command.
 
-For detailed information on all the available commands and flags for `bitrise-addon-test`, please run `bitrise-addon-test --help`.
+For detailed information on all the available commands and flags for `bitrise-addon-test`, run `bitrise-addon-test --help`.
+
+## Documenting add-ons 
