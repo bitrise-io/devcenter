@@ -69,7 +69,7 @@ Signing an Android App Bundle file is the same as signing an APK.
 
 If you have uploaded your keystore file and filled out the required credentials, the **Android** **Sign** Step's **Keystore url**, **Keystore password**, **Keystore alias** and the **Private key password** will get populated automatically!
 
-## Deploying your Android App Bundle Google Play Store
+## Deploying your Android App Bundle to Google Play Store
 
 If you want to check the bundle prior to app store distribution, you can add the **Deploy to bitrise.io** Step after the **Gradle Runner / Android Build** Steps. It uploads the bundle into the [ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of your Build’s page.
 
