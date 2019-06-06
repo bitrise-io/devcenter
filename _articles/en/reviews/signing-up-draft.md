@@ -1,18 +1,12 @@
 ---
-tag:
-- git
-- sign-up
-- getting-started
+tag: []
 title: Signing up to Bitrise - draft
-redirect_from:
-- "/getting-started/signing-up/signing-up-with-email/"
-- "/getting-started/signing-up/signing-up-with-gitlab/"
-- "/getting-started/signing-up/signing-up-with-bitbucket/"
-- "/getting-started/signing-up/signing-up-with-github/"
+redirect_from: []
 summary: 'You can authenticate yourself with your GitHub, Bitbucket or GitLab user
   against Bitrise. It brings some practical benefits, like logging in with one click
   and of course you won''t have to authorize your Git account when adding repositories
   hosted by these providers again. '
+published: false
 
 ---
 You can authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Git account when adding repositories hosted by these providers again. You can of course sign up to Bitrise using your email address as well, and log in through your user credentials.
@@ -34,7 +28,7 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
 ## Authorizing Bitrise with a Git provider
 
-You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories. 
+You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
 
 ### GitHub
 
