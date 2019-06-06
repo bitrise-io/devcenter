@@ -23,7 +23,7 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
    ![](/img/sign-up-git-email.jpg)
 
-## Authorizing Bitrise with Git provider 
+## Authorizing Bitrise with Git provider
 
 You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
 
@@ -71,20 +71,17 @@ From now on, you are able to sign in with a click of a button. Choose your favor
 
 You can easily sign up to Bitrise in one step with your email address.
 
-1. Add your Email, Username and Password on our [Sign Up](https://app.bitrise.io/users/sign_up) page.
-
-   ![](/img/Sign_up_with_email.jpg)
-2. Click Sign up with email.
+1. Add your email address, username, password and on our [Sign Up](https://app.bitrise.io/users/sign_up) page.
+2. Click the Sign up with Email button on our [Sign Up](https://app.bitrise.io/users/sign_up) page.
 3. Check your inbox for our Confirmation Instructions.
 
-   If you haven't received a confirmation email, click the **Resend confirmation email** button.
+   If you haven't received a confirmation email from us, click the **Resend confirmation email** button.
 
    ![](/img/Check-your-inbox.jpg)
-4. Click the Confirm My Account button or copy the URL provided in the email.
+4. Click the **Confirm My Account** button or copy the URL provided in the email. It will take you to **Help us help you** page.
 
-   ![](/img/confirm-my-account.jpg)
-5. Clicking Confirm My Account will take you to `Help us help you` page.
-6. On the Help us help you page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
-7. Click Done. You will be directed to your Bitrise Dashboard.
+   ![](/img/confirm-my-account.jpg) 
+5. On the **Help us help you**, page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
+6. Click **Done**. You will be directed to your Bitrise Dashboard.
 
 Now you can go ahead and add your first app to your Dashboard.
