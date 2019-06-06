@@ -16,9 +16,10 @@ summary: 'You can authenticate yourself with your GitHub, Bitbucket or GitLab us
 menu:
   getting-started-main:
     weight: 4
-published: false
 
 ---
+{% include not_translated_yet.html %}
+
 You can authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Git account when adding repositories hosted by these providers again. You can of course sign up to Bitrise using your email address as well, and log in through your user credentials.
 
 {% include message_box.html type="info" title="Trial after signing up" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
