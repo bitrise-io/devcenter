@@ -58,7 +58,6 @@ pages:
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/jp/api/incoming-and-outgoing-webhooks.md
-- _articles/en/reviews/transfer-app-security-aspect.md
 - _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/イントロ-intro.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
