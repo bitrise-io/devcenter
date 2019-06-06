@@ -6,7 +6,6 @@ redirect_from:
 tag:
 - gradle
 - android
-- docker
 summary: ''
 menu:
   tips-and-tricks-main:
