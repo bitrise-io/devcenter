@@ -18,8 +18,8 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
 ## Signing up with a Git provider
 
-1. Go to the Sign up page by clicking Sign up! on the landing page of [bitrise.io](https://bitrise.io).
-2. Select a git provider you want to sign up with for authenticating yourself with these services.
+1. Go to the Sign up page by clicking **Sign up** on the landing page of [bitrise.io](https://bitrise.io).
+2. Select a git provider you want to sign up to authenticate yourself with these services.
 
    ![](/img/sign-up-git-email.jpg)
 
@@ -31,23 +31,23 @@ You have to authorize Bitrise before we can establish the connection. This means
 
 ![Screenshot](/img/signing-up/github_authorization.png)
 
-If you press the Authorize application button, you will be redirected to Bitrise.
+If you press the **Authorize application** button, you will be redirected to Bitrise.
 
 ### Bitbucket
 
 ![Screenshot](/img/signing-up/bitrise_authorization.png)
 
-If you press the Grant access button, you will be redirected to Bitrise.
+If you press the **Grant access** button, you will be redirected to Bitrise.
 
 ### GitLab
 
 ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/signing-up/gitlab_authorization.png)
 
-If you press the Authorize button, you will be redirected to Bitrise.
+If you press the **Authorize** button, you will be redirected to Bitrise.
 
 ## Finishing signup
 
-You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service’s availability, you are also able to connect more accounts, GitHub **and** Bitbucket, for example. Last, but not least, you don’t have to stick to your connected account’s username.
+You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service’s availability, you are also able to connect more accounts. Last, but not least, you don’t have to stick to your connected account’s username.
 
 1. Pick a username and a password for your Bitrise account on the **You are almost there** page.
 
@@ -65,7 +65,7 @@ You will have to pick a username and a password for your Bitrise account. This w
 
 After that, you are ready to roll. Add your first app on your Dashboard!
 
-From now on, you are able to sign in with a click of a button. Choose your favorite!
+From now on, you are able to log in with a click of a button. Choose your favorite!
 
 ## Signing up with email
 
@@ -80,7 +80,7 @@ You can easily sign up to Bitrise in one step with your email address.
    ![](/img/Check-your-inbox.jpg)
 4. Click the **Confirm My Account** button or copy the URL provided in the email. It will take you to **Help us help you** page.
 
-   ![](/img/confirm-my-account.jpg) 
+   ![](/img/confirm-my-account.jpg)
 5. On the **Help us help you**, page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
 6. Click **Done**. You will be directed to your Bitrise Dashboard.
 
