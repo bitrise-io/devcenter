@@ -1,7 +1,7 @@
 ---
 tag:
 - git
-- getting started
+- getting-started
 title: Signing up to Bitrise
 redirect_from:
 - "/getting-started/signing-up/signing-up-with-email/"
