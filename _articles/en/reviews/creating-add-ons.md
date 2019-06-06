@@ -116,7 +116,7 @@ You can test each of these functions separately by adding the applicable command
 
 For detailed information on all the available commands and flags for `bitrise-addon-test`, run `bitrise-addon-test --help`.
 
-## Publishing stages 
+## Publishing an add-on
 
 There are three stages to getting a new add-on published:
 
@@ -156,3 +156,16 @@ To proceed from the beta stage to GA, the developers has to:
 When the add-on reaches GA, the BETA tag is removed and partners can offer multiple free and paid plans to Bitrise customers. The old Test plan is disabled and no new instances of it can be provisioned. 
 
 ## Documenting add-ons 
+
+Add-ons must be properly documented before proceeding to the beta stage. This means two main pieces of content:
+
+* A description of the add-on's benefits.
+* A description of the add-on's features. 
+
+### Benefits description
+
+The benefits appear on the add-on's marketplace page. It should describe, in moderate details, what your add-on provides to Bitrise customers, and why it is beneficial for them to use it. 
+
+### Features description
+
+The features description should list every single feature of the add-on that might differ across different subscription plans. The list will be shown next to each plan defined for the add-on. 
