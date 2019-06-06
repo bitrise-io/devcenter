@@ -79,8 +79,6 @@ You can easily sign up to Bitrise in one step with your email address.
 
    ![](/img/Check-your-inbox.jpg)
 4. Click the **Confirm My Account** button or copy the URL provided in the email. It will take you to **Help us help you** page.
-
-   ![](/img/confirm-my-account.jpg)
 5. On the **Help us help you**, page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
 6. Click **Done**. You will be directed to your Bitrise Dashboard.
 
