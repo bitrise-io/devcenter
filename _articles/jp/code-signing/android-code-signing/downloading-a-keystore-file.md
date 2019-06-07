@@ -26,4 +26,4 @@ Bitriseには`Code Signing`タブよりファイルのダウンロードを行�
      (例：`file://$HOME/keystores/project_release.keystore`)
 3. ファイルダウンロードステップの直後に`Gradle Runner`ステップを追加します。
 
-`build.gradle`ファイルで明記した同じロケーションへkeystoreファイルのダウンロードを行うステップの追加が成功した場合、ワークフローへ`Sign APK`ステップの追加は必要ないのでご注意ください。Bitriseの`Gradle Runner`ステップがプロジェクトの署名と収集を行います。
+`build.gradle`ファイルで明記した同じロケーションへkeystoreファイルのダウンロードを行うステップの追加が成功した場合、ワークフローへ`Android Sign`ステップの追加は必要ないのでご注意ください。Bitriseの`Gradle Runner`ステップがプロジェクトの署名と収集を行います。

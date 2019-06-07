@@ -103,14 +103,14 @@ iOSとAndroidによってコード署名の方法は異なります。双方の�
 
 #### **Android**
 
-Android では、APKが必要になり、そのAPKへ署名が必要になります。Bitriseでは`Sign APK` ステップで署名が行なえます。このステップではkeystore ファイル、keystore パスワード、keystore エイリアスが必要です。
+Android では、APKが必要になり、そのAPKへ署名が必要になります。Bitriseでは`Android Sign` ステップで署名が行なえます。このステップではkeystore ファイル、keystore パスワード、keystore エイリアスが必要です。
 
 1. [Visual Studioにてコード署名のアイデンティティを作成](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/signing/?tabs=vswin)します。
 2. Bitriseへkeystoreファイルのアップロードを行います：アプリのWorkflow Editorを開いて`Code Signing` タブに進み、`ANDROID KEYSTORE FILE` セクションにファイルのアップロードを行います。
 3. Keystoreパスワード・keystore エイリアス・private key パスワードをそれぞれ入力します。
-4. `Workflows` タブ上にて、`Xamarin Archive` ステップの**後**に`Sign APK` ステップをワークフローに追加してください。
+4. `Workflows` タブ上にて、`Xamarin Archive` ステップの**後**に`Android Sign` ステップをワークフローに追加してください。
 
-`Sign APK` ステップ使用についての詳細は[ガイド](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/)にてご確認ください。
+`Android Sign` ステップ使用についての詳細は[ガイド](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/)にてご確認ください。
 
 #### **iOS**
 

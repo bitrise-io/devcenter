@@ -60,7 +60,7 @@ menu:
         - cache-push@2.0.5: {}
     {% endraw %}
 
-このワークフローは、あなたのプロジェクトをビルドする `Android Build`ステップも`Sign APK`ステップもありません。
+このワークフローは、あなたのプロジェクトをビルドする `Android Build`ステップも`Android Sign`ステップもありません。
 したがって、このワークフローはコードレベルでプロジェクトをテストするための出発点に過ぎません。
 
 では、どのように**Android deploy ワークフロー**を行うか見てましょう！
@@ -68,7 +68,7 @@ menu:
 1. ワークフローエディタで`deploy`ワークフローを選択します。
 2. `Code Signing`タブに移動します。
 3. キーストアファイルを `ANDROID KEYSTORE FILE`フィールドにドラッグ＆ドロップします。
-4. `Keystore password`、`Keystore alias`、`Private key password`フィールドに情報を入力し`Save metadata`をクリックします。Bitrise にアプリをアップロードする前に Android Studio で生成されたキーストアファイルに含まれているので、これらはすでに手元にあるはずです。キーストアファイルの詳細については、[こちら](https://developer.android.com/studio/publish/app-signing)を参照してください。この情報を`Sign APK step` (Android deploy ワークフローのデフォルトに含まれます)タブに追加すると、デフォルトで Android 配布ワークフローに含まれている「署名 APK ステップ」が apk に署名して配布準備が整います。コード署名オプションの詳細については、[Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/)を参照してください。
+4. `Keystore password`、`Keystore alias`、`Private key password`フィールドに情報を入力し`Save metadata`をクリックします。Bitrise にアプリをアップロードする前に Android Studio で生成されたキーストアファイルに含まれているので、これらはすでに手元にあるはずです。キーストアファイルの詳細については、[こちら](https://developer.android.com/studio/publish/app-signing)を参照してください。この情報を`Android Sign step` (Android deploy ワークフローのデフォルトに含まれます)タブに追加すると、デフォルトで Android 配布ワークフローに含まれている「署名 APK ステップ」が apk に署名して配布準備が整います。コード署名オプションの詳細については、[Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/)を参照してください。
 5. ビルドページに戻り、`Start/Schedule a build`をクリックします。
 6. ポップアップウィンドウの`Build configuration`タブで `deploy`を選択します。
 
@@ -117,7 +117,7 @@ menu:
 - `Do anything with Script`ステップの直後の、`Install missing Android SDK components`はプロジェクトに不足している可能性がある Android SDK コンポーネントをインストールします。
 - `Change Android versionCode and versionName`ステップは、`Android Build`ステップの**前に**挿入する必要があります。これは正しいバージョンコードとバージョン名のビルドをアップロードするためです。
 - ビルド処理を行う前にコードとデバッグをテストするため、 `Android Lint`と`Android Unit Test`ステップは `Android Build`ステップの**前に**挿入する必要があります。
-- `Sign APK`ステップは`Android Build`ステップの**後で**なければなりません。後者はあなたのプロジェクトをビルドします。 承認されたプロジェクトをアップロードできるように、このステップはすべての展開ステップの**前に**あることを確認してください。"%}
+- `Android Sign`ステップは`Android Build`ステップの**後で**なければなりません。後者はあなたのプロジェクトをビルドします。 承認されたプロジェクトをアップロードできるように、このステップはすべての展開ステップの**前に**あることを確認してください。"%}
 
 ## 依存関係
 
@@ -151,7 +151,7 @@ instrumentation を選択した場合は、**Instrumentation Test**グループ�
 
 ### マーケットプレイスへのデプロイ
 
-ワークフロー(`Sign APK`ステップの後)に `Google Play Deploy`ステップを追加すると、署名済み apk があなたの選択したマーケットプレイスにアップロードされます。
+ワークフロー(`Android Sign`ステップの後)に `Google Play Deploy`ステップを追加すると、署名済み apk があなたの選択したマーケットプレイスにアップロードされます。
 
 1. Google Play ストアと同期していることを確認してください。以下を参考にしてください。
    - [register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
