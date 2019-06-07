@@ -14,7 +14,7 @@ summary: 'You can authenticate yourself with your GitHub, Bitbucket or GitLab us
   hosted by these providers again. '
 menu:
   getting-started-main:
-    weight: 1
+    weight: 3
 
 ---
 {% include not_translated_yet.html %}
