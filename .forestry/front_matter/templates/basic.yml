@@ -238,3 +238,4 @@ pages:
 - _articles/en/code-signing/android-code-signing/android-code-signing-procedures.md
 - _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/en/steps-and-workflows/default-workflows.md
+- _articles/en/reviews/using-custom-scripts-for-test-reports.md
