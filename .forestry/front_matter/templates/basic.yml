@@ -198,6 +198,7 @@ pages:
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
+- _articles/en/reviews/creating-add-ons.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
 - _articles/en/getting-started/signing-up-to-bitrise.md
@@ -206,7 +207,6 @@ pages:
 - _articles/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
 - _articles/en/steps-and-workflows/getting-started-steps.md
 - _articles/en/bitrise-cli/installation.md
-- _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
 - _articles/en/reviews/signing-up-draft.md
 - _articles/en/bitrise-cli/initializing-a-bitrise-project-locally.md
@@ -217,7 +217,6 @@ pages:
 - _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
 - _articles/en/tips-and-tricks/android-tips-and-tricks.md
 - _articles/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-procedures.md
 - _articles/en/deploy/ios-deploy/introduction-to-deploying-ios-apps.md
 - _articles/en/testing/android-run-a-unit-test.md
 - _articles/en/builds/triggering-builds/triggering-builds.md
@@ -229,7 +228,6 @@ pages:
 - _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/faq/android-x86-emulator.md
 - _articles/en/faq/grant-access-to-github-organization.md
-- _articles/en/reviews/creating-add-ons.md
 - _articles/en/team-management/index.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
 - _articles/en/team-management/teams-vs-organizations.md
@@ -238,3 +236,5 @@ pages:
 - _articles/en/steps-and-workflows/adding-removing-steps.md
 - _articles/en/builds/rolling-builds.md
 - _articles/en/builds/triggering-builds/trigger-pull-request.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-procedures.md
+- _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md

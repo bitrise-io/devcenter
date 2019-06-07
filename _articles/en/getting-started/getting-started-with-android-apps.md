@@ -69,14 +69,14 @@ An example of an **Android primary workflow**:
         - cache-push@2.0.5: {}
     {% endraw %}
 
-As you can see in this workflow, there is no `Android Build` step that would build your project and our `Sign APK` step is missing as well, hence this workflow is only a jumping off-point for you to test your project on code level.
+As you can see in this workflow, there is no `Android Build` step that would build your project and our `Android Sign` Step is missing as well, hence this workflow is only a jumping off-point for you to test your project on code level.
 
 Let's see how an **Android deploy workflow** looks like!
 
 1. Select the `deploy` workflow in Workflow Editor.
 2. Go to the `Code Signing` tab of your Workflow Editor.
 3. Drag-and-drop your keystore file to the `ANDROID KEYSTORE FILE` field.
-4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and `Save metadata`. You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. More information on the keystore file [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our `Sign APK step` (by default included in your Android deploy workflow) will take care of signing your apk so that it's ready for distribution! Head over to our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!
+4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and `Save metadata`. You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. More information on the keystore file [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our `Android Sign Step` (by default included in your Android deploy workflow) will take care of signing your apk so that it's ready for distribution! Head over to our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!
 5. Go back to your Build's page and click `Start/Schedule a build`.
 6. Select `deploy` in the Basic tab of `Build configuration` pop-up window.
 
@@ -125,7 +125,7 @@ Here is an example of a deploy workflow:
 * Right after our `Do anything with Script` step, the `Install missing Android SDK components` will take care of installing the missing Android SDK components that your project might be lacking.
 * `Change Android versionCode and versionName` step must be inserted BEFORE the `Android Build`step as the former makes sure you will upload the build with the right version code and version name to your app's marketplace.
 * `Android Lint` and `Android Unit Test` steps must be inserted BEFORE the `Android Build` step to test your code and debug before building your build.
-* `Sign APK` step must be AFTER the `Android Build` step as the latter builds your project so that you have an apk ready to be signed with the `Sign APK` step. Make sure that this step is BEFORE any deploy step so that you can upload an authorized project."%}
+* `Android Sign` Step must be AFTER the `Android Build` step as the latter builds your project so that you have an apk ready to be signed with the `Android Sign` Step. Make sure that this step is BEFORE any deploy step so that you can upload an authorized project."%}
 
 ## Dependencies
 
@@ -158,7 +158,7 @@ You can share the generated apk with your team members using the build's URL. Yo
 
 ### Deploying to marketplace
 
-If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step), your signed apk will get uploaded to a marketplace of your choice.
+If you add `Google Play Deploy` step to your workflow (after the `Android Sign` step), your signed apk will get uploaded to a marketplace of your choice.
 
 1. Make sure you are in sync with Google Play Store! Learn how to
    * [register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)

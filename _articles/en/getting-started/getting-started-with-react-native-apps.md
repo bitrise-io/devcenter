@@ -82,7 +82,7 @@ Let's see the process step by step!
 3. Drag-and-drop your keystore file to the `ANDROID KEYSTORE FILE` field.
 4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and click `Save metadata`.
 
-   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on keystore file, click [here](https://developer.android.com/studio/publish/app-signing). With this information added to your `Code Signing` tab, our `Sign APK step` (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
+   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on keystore file, click [here](https://developer.android.com/studio/publish/app-signing). With this information added to your `Code Signing` tab, our `Android Sign step` (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
 
 {% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!"%}
 
@@ -183,7 +183,7 @@ If you wish to deploy your iOS app, follow the steps in [Code sign your iOS proj
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Add the `Google Play Deploy` step after the `Sign APK` step in your deploy workflow.
+4. Add the `Google Play Deploy` step after the `Android Sign` step in your deploy workflow.
 5. Fill out the required input fields as follows:
    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
