@@ -14,7 +14,7 @@ The Step then moves every artifact that is deemed a test result into the Step's 
 
 After each Step run, the Bitrise CLI checks the Steps's test result directory. If the directory is not empty, the CLI adds a metadata file called `step-info.json`. This file describes the Step:
 
-```json
+```
 // TestResultStepInfo ...
 type TestResultStepInfo struct {
 	ID      string `json:"id" yaml:"id"`           // Step ID
@@ -39,3 +39,4 @@ Build Test Result directory
     │   └── test-info.json
     └── step-info.json
 ```
+
