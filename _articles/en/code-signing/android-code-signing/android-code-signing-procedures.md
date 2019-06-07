@@ -20,5 +20,5 @@ You can specify the code signing configuration for your project in Android Studi
 
 * [Android code signing with Android Studio](/code-signing/android-code-signing/android-code-signing-with-android-studio/)
 * [Android code signing in Gradle](/code-signing/android-code-signing/android-code-signing-in-gradle/)
-* [Android code signing using Bitrise Sign APK step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/)
+* [Android code signing using Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/)
   "%}
