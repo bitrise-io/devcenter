@@ -141,11 +141,11 @@ Google Playにアプリをデプロイするには、APKファイルをエクス
 3. ファイルURLがあるenv keyをコピーします。
 
    例:`BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. "`Flutter Build`ステップ後"に、ワークフローに`Sign APK`ステップがあるか確認します。
+4. "`Flutter Build`ステップ後"に、ワークフローに`Android Sign`ステップがあるか確認します。
 5. `Flutter Build`ステップを開き`Android Platform Configs`入力グループを確認します。
 6. `Additional parameters`入力にバリュー`--release`があるかを確認します。
 7. ステップ`Platform`入力の確認:`android`か`both`のどちらかに設定します。
-8. ワークフローへの`Sign APK`ステップ後に、`Google Play Deploy`ステップがあることを確認します
+8. ワークフローへの`Android Sign`ステップ後に、`Google Play Deploy`ステップがあることを確認します
 9. 以下の入力項目に記入します。
    * `Service Account JSON key file path`:この項目はリモートURLを受け入れることができるため、アップロードしたサービスアカウントのJSONキーを含む環境変数を指定する必要があります。例:`$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`:AndroidアプリのPackage name
