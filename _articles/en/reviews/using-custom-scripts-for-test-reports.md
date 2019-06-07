@@ -47,7 +47,7 @@ The separate test runs - for example, against different build variants - should 
 
 As you can see above, the sub-directories for each test run contain a `test-info.json` file. This file has to be created by the Script Step, with the `test-name` node defined in it. The `test-name` value will appear as the name of the test run on the Test Reports page.
 
-    // Test Namme ...
+    // Test Name ...
     { "test-name":"My first test" }
 
 ![](/img/Test_add-on-6.png)
@@ -81,7 +81,7 @@ This means that your test results must contain a test report in a standard JUnit
 
 ## Example scripts
 
-Here's an example script for a single test run, the results of which should be exported to Test Reports. In this example, we create a sub-directory for a specific test run, add the JUnit XML file and the `test-info.json` file. 
+Here's an example script for a single test run, the results of which should be exported to Test Reports. In this example, we create a sub-directory for a specific test run, add the JUnit XML file and the `test-info.json` file.
 
 ```bash
 #!/bin/env bash
@@ -120,4 +120,4 @@ In the above example, we've created the test report JUnit XML file in the script
     # Creating the test-info.json file with the name of the test run defined:
     echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
 
-If all goes well, you should be able to see your test results on the Test Reports page. 
+If all goes well, you should be able to see your test results on the Test Reports page.
