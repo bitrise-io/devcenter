@@ -35,17 +35,14 @@ Bitrise Project Scannerは `Sign APK` ステップが含まれる `deploy workfl
 
 keystore ファイルをダウンロードする為の一例
 
-
-```
-- file-downloader:
-
-   inputs:
-
-   - source: $BITRISEIO_ANDROID_KEYSTORE_URL
-
-   - destination: "$HOME/keystores/my_keystore.jks" #native android#
-
-```
+    - file-downloader:
+    
+       inputs:
+    
+       - source: $BITRISEIO_ANDROID_KEYSTORE_URL
+    
+       - destination: "$HOME/keystores/my_keystore.jks" #native android#
+    
 
 このステップを踏んだ後、 `my_keystore.jks` は `$HOME/keystores/my_keystore.jks` に格納されます。
 
