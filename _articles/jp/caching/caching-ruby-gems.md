@@ -13,13 +13,13 @@ Ruby Gemはデフォルトでは単一のディレクトリへインストール
 2. ワークフローに`Script`ステップを追加します。
 3. `$GEM_HOME`を`Script`ステップで設定します。
 
-- script:
-    title: Set GEM_HOME env var
-    inputs:
-    - content: |-
-        #!/bin/bash
-        set -ev
-        envman add --key GEM_HOME --value "$(gem environment gemdir)"
+        - script:
+            title: Set GEM_HOME env var
+            inputs:
+            - content: |-
+                #!/bin/bash
+                set -ev
+                envman add --key GEM_HOME --value "$(gem environment gemdir)"
 4. `Git Clone`ステップから`Android Build`ステップの間に`Cache:Pull`ステップを挿入します。
 
    **重要**: ステップのバージョンが1.0.0以上であることを確認してください。
