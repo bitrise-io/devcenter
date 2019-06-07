@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Using custom scripts for Test Reports
+title: Exporting to Test Reports from custom scripts
 redirect_from: []
 summary: ''
 published: false
