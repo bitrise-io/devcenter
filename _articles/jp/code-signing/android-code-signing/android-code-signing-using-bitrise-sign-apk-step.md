@@ -11,7 +11,7 @@ menu:
 
 Bitriseの workflow にある `Android Sign` ステップにてAPKファイルに署名することができます。
 
-Bitrise Project Scannerは `Android Sign` ステップが含まれる `deploy workflow` を提供する。 このステップを踏むことによって workflow に沿って APKの署名を行うことができます。すでに Bitrise に keystore ファイルがアップロードされている場合、このステップは自動的に行われます。 `Code signing` タブの Workflow Editor に keystore ファイルをアップロードするだけで大丈夫です。
+Bitrise Project Scannerは `Android Sign` ステップが含まれる `deploy workflow` を提供します。 このステップを踏むことによって workflow に沿って APKの署名を行うことができます。すでに Bitrise に keystore ファイルがアップロードされている場合、このステップは自動的に行われます。 `Code signing` タブの Workflow Editor に keystore ファイルをアップロードするだけで大丈夫です。
 
 このページでは、`android-multiple-test-results-sample` のデモアプリに沿ってコードの署名方法について説明します。
 
@@ -41,7 +41,6 @@ keystore ファイルをダウンロードする為の一例
        - source: $BITRISEIO_ANDROID_KEYSTORE_URL
     
        - destination: "$HOME/keystores/my_keystore.jks" #native android#
-    
 
 このステップを踏んだ後、 `my_keystore.jks` は `$HOME/keystores/my_keystore.jks` に格納されます。
 
