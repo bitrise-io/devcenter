@@ -6,9 +6,9 @@ summary: ''
 published: false
 
 ---
-By default, only four Steps support the Test Reports feature. However, you can export the test results of other Steps to Test Reports via custom Script Steps. Here's what you need to do:
+By default, only four Steps support the Test Reports feature. However, you can export the test results of other Steps to Test Reports via custom Script Steps. Here's what the Script Step needs to do:
 
-1. Deploy the results in the correct directories. 
+1. Deploy the test results in the correct directories. 
 2. Make sure they include a test report in a standard JUnit XML format. 
 3. Make sure every test run has its own `test-info.json` file, with a test name. 
 3. Include a **Deploy to Bitrise.io** Step in your Workflow. 
@@ -31,7 +31,7 @@ type TestResultStepInfo struct {
 }
 ```
 
-The separate test runs - for example, against different build variants - should be placed in different sub-directories within the test results directory of the Step. Unlike the `BITRISE_TEST_RESULT_DIR`, these directories are not created automatically: they must be created by the user. So the directory structure should be something like this:
+The separate test runs - for example, against different build variants - should be placed in different sub-directories within the test results directory of the Step. Unlike the `BITRISE_TEST_RESULT_DIR`, these directories are not created automatically: they must be created during the build. The directory structure should be something like this:
 
 ```
 Build Test Result directory
@@ -45,7 +45,7 @@ Build Test Result directory
     └── step-info.json
 ```
 
-As you can see, the sub-directories for each test run contain a `test-info.json` file. This file has to be created with the Script Step, with the `test-name` node defined in it. The `test-name` value will appear as the name of the test run on the Test Reports page. 
+As you can see, the sub-directories for each test run contain a `test-info.json` file. This file has to be created by the Script Step, with the `test-name` node defined in it. The `test-name` value will appear as the name of the test run on the Test Reports page. 
 
 ```
 // Test Namme ...
@@ -77,18 +77,19 @@ This means that your test results must contain a test report in a standard JUnit
 </testsuites>
 ```
 
-Here's an example script that should work with Test Reports:
+Here's an example script for a single test run, the results of which should be exported to Test Reports:
 
 ```bash
 #!/bin/env bash
 set -ex
 
-# Step Test Run Result Directory
+# Creating the sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
 test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
 mkdir "$test_run_dir"
 
+# Creating the JUnit XML test report:
 echo  '<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" tests="10" skipped="0" failures="0" errors="0" timestamp="2019-05-10T13:47:08" hostname="Krisztians-MBP.localdomain" time="0.002">
+<testsuite name="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" tests="10" skipped="0" failures="0" errors="0" timestamp="2019-05-10T13:47:08" hostname="my-localdomain" time="0.002">
   <properties/>
   <testcase name="correctCase0" classname="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" time="0.001"/>
   <testcase name="correctCase1" classname="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" time="0.0"/>
@@ -96,6 +97,23 @@ echo  '<?xml version="1.0" encoding="UTF-8"?>
   <system-err><![CDATA[]]></system-err>
 </testsuite>' >> "$test_run_dir/UnitTest.xml"
 
-# Test run Metadata
+# Creating the test-info.json file with the name of the test run defined:
 echo '{"test-name":"sample"}' >> "$test_run_dir/test-info.json"
 ```
+
+In the above example, we've created the test report JUnit XML file in the script itself. But of course it is possible to export an already existing file in the same way: 
+
+```
+#!/bin/env bash
+set -ex
+
+# Creating the sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
+test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
+mkdir "$test_run_dir"
+
+# Exporting the JUnit XML test report:
+cp "MY/TEST/REPORT/XML/FILE/PATH.xml" "$test_run_dir/UnitTest.xml"
+
+# Creating the test-info.json file with the name of the test run defined:
+echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
+``` 
