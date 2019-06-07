@@ -36,4 +36,4 @@ The `deploy` workflow is automatically created when adding a new app if you have
 * it has the same 'basic' steps
 * its specific steps are dependent on the project type
 
-The `deploy` workflow, however, also contains the Steps that "build" the project, and, if the build is successful, produces the necessary artifacts for installing the app or deploying it online. For example, an Android project's `deploy` workflow contains the `Android Build` Step that builds your project with Gradle, and the `Sign APK` Step that creates a signed .apk file which can be deployed to Google Play or installed on test devices.
+The `deploy` workflow, however, also contains the Steps that "build" the project, and, if the build is successful, produces the necessary artifacts for installing the app or deploying it online. For example, an Android project's `deploy` workflow contains the `Android Build` Step that builds your project with Gradle, and the `Android Sign` Step that creates a signed .apk file which can be deployed to Google Play or installed on test devices.
