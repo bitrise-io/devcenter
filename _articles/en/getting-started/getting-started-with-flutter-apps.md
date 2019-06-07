@@ -167,13 +167,13 @@ Once that is done, you are ready to configure a workflow to deploy the app.
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Make sure you have the `Sign APK` Step in your workflow.
+4. Make sure you have the `Android Sign` Step in your workflow.
 
    It should be after the `Flutter Build` Step.
 5. Open the `Flutter Build` Step and find the `Android Platform Configs` input group.
 6. Make sure the `Additional parameters` input has the value `--release`.
 7. Check the `Platform` input of the Step: make sure it's set to either `android` or `both`.
-8. Make sure you have the `Google Play Deploy` Step after the `Sign APK` Step to your workflow.
+8. Make sure you have the `Google Play Deploy` Step after the `Android Sign` Step to your workflow.
 9. Fill out the required input fields as follows:
    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
