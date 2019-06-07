@@ -40,3 +40,33 @@ Build Test Result directory
     └── step-info.json
 ```
 
+Once a Step has run and its test results have been placed into the correct directory, the **Deploy to Bitrise.io** Step can collect the results and export them to Test Reports. It does so in a JUnit XML format. 
+
+So, to make sure your test results are exported, you need to:
+
+1. Deploy them in the correct directory. 
+2. Convert them to the correct format. 
+3. Include a **Deploy to Bitrise.io** Step in your Workflow. 
+
+Here's an example script that should work with Test Reports:
+
+```bash
+#!/bin/env bash
+set -ex
+
+# Step Test Run Result Directory
+test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
+mkdir "$test_run_dir"
+
+echo  '<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" tests="10" skipped="0" failures="0" errors="0" timestamp="2019-05-10T13:47:08" hostname="Krisztians-MBP.localdomain" time="0.002">
+  <properties/>
+  <testcase name="correctCase0" classname="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" time="0.001"/>
+  <testcase name="correctCase1" classname="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>' >> "$test_run_dir/UnitTest.xml"
+
+# Test run Metadata
+echo '{"test-name":"sample"}' >> "$test_run_dir/test-info.json"
+```
