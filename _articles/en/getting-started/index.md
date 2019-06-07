@@ -15,7 +15,7 @@ summary: 'Get started with Bitrise: sign up, add an app, start a build. Find out
   to register webhooks, set up organizations, and learn the basics of Steps and Workflows.'
 menu:
   getting-started-main:
-    weight: 4
+    weight: 2
 
 ---
 Bitrise is powerful and complex - but getting started is easy and intuitive! You can kick off your first build within minutes of signing up. Let's go over what you need to do make that happen!

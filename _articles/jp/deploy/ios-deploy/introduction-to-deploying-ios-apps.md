@@ -1,5 +1,5 @@
 ---
-title: Introduction to deploying iOS apps
+title: iOSアプリのデプロイについて
 date: 2018-10-26T12:49:32.000+00:00
 redirect_from: []
 menu:
@@ -7,17 +7,17 @@ menu:
     weight: 2
 
 ---
-{% include not_translated_yet.html %}
+アプリのビルドを開始し、ユニットテストとUIテストをビルド上で実行できたら、次はデプロイ作業に移ります。
 
-Once you built your app and ran unit tests and UI tests on it, it's time to deploy it.
+いかなるプラットフォームへiOSアプリをデプロイするには、
 
-To deploy an iOS app to any platform, you need:
+* [コード署名ファイル](/jp/code-signing/ios-code-signing/code-signing/)
+* [Xcodeプロジェクトのアーカイブと署名済み.ipaファイルのエクスポート](/jp/code-signing/ios-code-signing/create-signed-ipa-for-xcode/)
 
-* [code signing files](/code-signing/ios-code-signing/code-signing/)
-* [to archive your Xcode project and export a signed .ipa file](/code-signing/ios-code-signing/create-signed-ipa-for-xcode/)
+  が必要になります。
 
-Our guides delve into the specifics of these two basic requirements and show how to use our Steps to deploy the app in the exact way you want to!
+Bitriseのガイドでは２つの基本的な必要条件を掘り下げ、アプリのデプロイを正確な方法で行うことができるステップの使い方を紹介しています！
 
-* [Deploying an iOS app to Bitrise.io (for internal testers)](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/)
-* [Deploying an iOS app for external testing](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/)
-* [Deploying an iOS app to iTunes Connect](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/)
+* [Bitrise.ioへiOSアプリのデプロイ（内部テスター用）](/jp/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/)
+* [外部テスト用のiOSアプリのデプロイ](/jp/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/)
+* [iTunes ConnectへiOSアプリのデプロイ](/jp/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/)

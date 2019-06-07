@@ -1,51 +1,49 @@
 ---
-title: Deploying an iOS app for simulators
+title: シミュレータ用iOSアプリのデプロイ
 date: 2018-11-10T14:34:02.000+00:00
 menu:
   ios-deploy:
     weight: 10
 
 ---
-{% include not_translated_yet.html %}
+iOSアプリケーションをブラウザで表示するなど、あなたのiOSアプリをシミュレータへビルドやデプロイを行えます。Bitriseでは、シミュレータ用ビルドを行う[専用ステップ](https://www.bitrise.io/integrations/steps/xcode-build-for-simulator)があります：`Xcode build for simulator`ステップは、iOS simulator destinationを使って`xcodebuild`コマンドを実行したり、.appファイルの生成を行います。
 
-You can build and deploy your iOS application to a simulator, to show it off in a browser, for example. On Bitrise, we have [a dedicated Step](https://www.bitrise.io/integrations/steps/xcode-build-for-simulator) to build for a simulator: the `Xcode build for simulator` Step runs the `xcodebuild` command with an iOS simulator destination and generates an .app file.
+.appファイルはどんなシミュレータにおいても作動します。Bitriseには、Appetize.ioにアプリをアップロードするステップ (`Appetize.io deploy`) があります。このステップを使えば、アプリのデプロイを行えることができ、ブラウザ上で走らせることが可能です。
 
-The .app file can be run on any simulator. On Bitrise, we have a Step to upload your app to Appetize.io: the `Appetize.io deploy` Step. With this Step, you can deploy your app so you can run it in a browser.
+シミュレータ用アプリのビルドは、コード署名ファイルは必要ありません！
 
-To build the app for a simulator, you do not need code signing files!
+### シミュレータ用アプリのビルド
 
-### Building an app for a simulator
+1. アプリのWorkflow Editorにログインして開きます。
+2. ワークフローに`Xcode build for simulator`を追加します。
 
-1. Log in and open the app's Workflow Editor.
-2. Add the `Xcode build for simulator` Step to your workflow.
-
-   The Step should be after the Steps that install dependencies, such as `Run Cocoapods install`.
-3. Fill in the required inputs for the Step.
+   このステップは依存関係のインストールを行うステップ（例：`Run Cocoapods install`）の後に配置してください。
+3. ステップに必要なインプットを記入します。
 
    ![](/img/build-for-simulator.png)
-   * **Project (or Workspace) path**: the path to your project's `.xcodeproj` or `.xworkspace` file. By default, this is stored in an Environment Variable when you add your app to Bitrise.
-   * **Scheme name**: the Xcode scheme of your project. By default, this is stored in an Environment Variable when you add your app to Bitrise.
-   * **Simulator**: the type of device you want to run the app on. Set it exactly as it appears in the device selection menu in Xcode.
-   * **OS version**: the version of device operating system you want to run the app on. The default value is `latest`.
-   * **Platform**: the platform you want to run the app on. The default value is `iOS`. Make sure that the values of the Simulator input and the Platform input are compatible: for example, if you set Simulator to `Apple TV 1080p`, set Platform to `tvOS`.
+   * **Project (or Workspace) path**: プロジェクトの`.xcodeproj`や`.xworkspace` ファイルへのパスを表します。デフォルトでは、Bitriseにアプリを追加する際、環境変数に保存されます。
+   * **Scheme name**: プロジェクトのXcodeスキームを表します。デフォルトでは、Bitriseにアプリを追加する際、環境変数に保存されます。
+   * **Simulator**: アプリを実行したいデバイスの種類を表します。Xcode内のdevice selection menuに表示されるので、それを正確に設定してください。
+   * **OS version**: アプリを実行したいデバイスのオペレーティング・システムのバージョンを表します。デフォルト値は`latest`になっています。
+   * **Platform**: アプリを実行したいプラットフォームを表します。デフォルト値は`iOS`となっています。シミュレータインプットとプラットフォームインプットの値が互換していることを確認してください：例えば、シミュレータを`Apple TV 1080p`とセットするなら、プラットフォームを`tvOS`と設定してください。
 
-The Step will produce the following outputs:
+このステップは以下のアウトプットを生み出します：
 
-* `BITRISE_APP_DIR_PATH`: the path to the generated .app file.
-* `BITRISE_APP_DIR_PATH_LIST`: the path to the generated .app file and the paths to every dependent target app. The paths are separated with the `|` character.
-* `BITRISE_XCODE_BUILD_RAW_RESULT_TEXT_PATH`: the path to the log file of the raw build results.
+* `BITRISE_APP_DIR_PATH`: 生成済みの.appファイルへのパスを表します。
+* `BITRISE_APP_DIR_PATH_LIST`: 生成済みの.appファイルへのパスと全ての依存ターゲットアプリへのパスを表します。パスは`|`の記号で分けられています。
+* `BITRISE_XCODE_BUILD_RAW_RESULT_TEXT_PATH`: ロービルド (Raw build) 結果のログファイルへのパスを表します。
 
-### Deploying the app to Appetize.io
+### Appetize.ioへのアプリのデプロイ
 
-An .app file built with our `Xcode build for simulator` Step works with just about any simulator. But if you want to easily and quickly integrate it to a simulator that allows you to run your app in a browser, we recommend using the `Appetize.io deploy` Step. It uploads your app to Appetize.io and provides a public URL to use the app in a browser.
+Bitriseの`Xcode build for simulator`ステップを使ってビルドされた.appファイルはどんなシミュレータにおいても動作します。けれども、ブラウザでアプリを実行できるシミュレータへ簡単に・素早く統合させたい場合、`Appetize.io deploy`ステップを使用することをおすすめします。このステップはアプリをAppetize.ioにアップロードし、ブラウザでそのアプリを使うことができる公開URLを提供します。
 
-1. Request an Appetize.io API token.
-2. Log in and open the app's Workflow Editor.
-3. Add and configure the `Xcode build for simulator` Step to your workflow.
-4. Add the `Appetize.io deploy` Step to your workflow.
+1. Appetize.ioのAPIトークンをリクエストします。
+2. アプリのWorkflow Editorにログインして開きます。
+3. ワークフローに`Xcode build for simulator`ステップの追加・構成を行います。
+4. ワークフローに`Appetize.io deploy`ステップを追加します。
 
    ![](/img/appetize-deploy.png)
-5. Add the Appetize.io API token to the `Appetize.io token` input.
-6. Enter the path to the .app file to the `Application path` input. The easiest solution is to use the `BITRISE_APP_DIR_PATH_LIST` Environment Variable that is an output of the `Xcode build for simulator` Step. Optionally, you can also enable verbose logging for more efficient debugging.
+5. `Appetize.io token`インプットにAppetize.io APIトークンを追加します。
+6. `Application path`インプットに.appファイルへのパスを入力します。最も簡単な方法として `BITRISE_APP_DIR_PATH_LIST` 環境変数を使用すれば、それが`Xcode build for simulator`ステップのアウトプットになります。任意ですが、より効率的なデバッグとしてverbose loggingを有効にすることもできます。
 
-The `Appetize.io deploy` Step will produce one output: the `APPETIZE_APP_URL` Environment Variable. it is a public URL where you can access your app. Enjoy showing it off!
+`Appetize.io deploy`ステップは一つのアウトプットを生み出します：`APPETIZE_APP_URL` 環境変数です。これは公開URLであり、そこからアプリへアクセスすることができます。
