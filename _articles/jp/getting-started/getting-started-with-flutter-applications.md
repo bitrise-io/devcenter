@@ -2,6 +2,8 @@
 title: Flutterアプリの開始
 date: '2019-03-08T15:17:45.000+00:00'
 redirect_from: []
+tag: []
+summary: ''
 menu:
   getting-started-main:
     weight: 32
@@ -74,7 +76,7 @@ iOS、Androidプロジェクトはworkflowを使い同時、または個々の�
 
 ワークフローの例をこのコンフィグレーションで、必要なステップを踏まえて説明します。
 
-![](/img/flutter-workflow.png)
+![](/img/flutter-getting-started.jpg)
 
 iOSとAndroidの特有の配置手順については、それぞれのセクションで説明します！
 
@@ -100,22 +102,20 @@ iOS FlutterプロジェクトをApp Storeにデプロイするために、アプ
 
 BitriseのiOSコード署名については[our detailed guides](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing/)から！
 
-1. ワークフローに`Certificate and profile installer`ステップがあるか確認します。
-2. [必要なコード署名](/code-signing/ios-code-signing/ios-manual-provisioning/)ファイルをBitriseにアップロードします
-3. `Flutter Build`ステップを開き、`iOS Platform Configs`入力グループを確認してください
-4. `Additional parameters`入力にバリュー`--release`があるかを確認してください
-5. ステップ`Platfor`入力の確認: `iOS`か`both`のどちらかに設定します
-6. " `Flutter Build`ステップ後"に、ワークフローに`Xcode Archive & Export for iOS`ステップがあることを確認します。
-7. ステップの`Select method for export`入力を`app-store`で設定します。
-8. `Deploy to iTunes Connect`ステップをワークフローの最後に追加します。
-9. 個々の入力項目にAppleのアカウント情報（クレデンシャル）が必要です。
-
+ 1. ワークフローに`Certificate and profile installer`ステップがあるか確認します。
+ 2. [必要なコード署名](/code-signing/ios-code-signing/ios-manual-provisioning/)ファイルをBitriseにアップロードします
+ 3. `Flutter Build`ステップを開き、`iOS Platform Configs`入力グループを確認してください
+ 4. `Additional parameters`入力にバリュー`--release`があるかを確認してください
+ 5. ステップ`Platfor`入力の確認: `iOS`か`both`のどちらかに設定します
+ 6. " `Flutter Build`ステップ後"に、ワークフローに`Xcode Archive & Export for iOS`ステップがあることを確認します。
+ 7. ステップの`Select method for export`入力を`app-store`で設定します。
+ 8. `Deploy to iTunes Connect`ステップをワークフローの最後に追加します。
+ 9. 個々の入力項目にAppleのアカウント情報（クレデンシャル）が必要です。
     * Apple ID
     * パスワード、iTunes Connectの二要素認証を使っている場合は申請パスワード
-    
-      パスワードはログやエクスポーズに公開されません-なので[SENSITIVEとマークされています](/builds/env-vars-secret-env-vars#about-secrets)
 
-1. ビルド開始！
+      パスワードはログやエクスポーズに公開されません-なので[SENSITIVEとマークされています](/builds/env-vars-secret-env-vars#about-secrets)
+10. ビルド開始！
 
 順調に進んだ場合、ステップはアプリをApp Store Connectにサブミットします。App Store Connectページから、Testflightを介してアプリを外部のテスターに​​配布するか、App Storeにリリースできます。
 
