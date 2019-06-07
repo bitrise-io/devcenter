@@ -6,7 +6,14 @@ summary: ''
 published: false
 
 ---
-By default, only four Steps support the Test Reports feature. However, you can export the test results of other Steps to Test Reports via custom Script Steps. To do this, we need to delve a bit deeper into how the feature works. 
+By default, only four Steps support the Test Reports feature. However, you can export the test results of other Steps to Test Reports via custom Script Steps. Here's what you need to do:
+
+1. Deploy the results in the correct directories. 
+2. Make sure they include a test report in a standard JUnit XML format. 
+3. Make sure every test run has its own `test-info.json` file, with a test name. 
+3. Include a **Deploy to Bitrise.io** Step in your Workflow. 
+
+To do all this, we need to delve a bit deeper into how the Test Reports feature works. 
 
 The Bitrise CLI creates a root directory for all test results and exposes its path in the `BITRISE_TEST_RESULT_DIR` Environment Variable (Env Var) for the supported Steps. As such, every supported Step sees its own test results directory. 
 
@@ -56,26 +63,19 @@ This means that your test results must contain a test report in a standard JUnit
       <property>    => name/value pair for a single property
       ...
     </properties>
-    <error></error> => optional information, in place of a test case - normally if the tests in the suite could not be found etc.
+    <error></error> => optional information, in place of a test case - for example, if the tests in the suite could not be found for some reason
     <testcase>      => the results from executing a test method
       <system-out>  => data written to System.out during the test run
       <system-err>  => data written to System.err during the test run
-      <skipped/>    => test was skipped
-      <failure>     => test failed
-      <error>       => test encountered an error
+      <skipped/>    => if a test was skipped
+      <failure>     => if a test failed
+      <error>       => if a test encountered an error
     </testcase>
     ...
   </testsuite>
   ...
 </testsuites>
 ```
-
-So, to make sure your test results are exported, you need to:
-
-1. Deploy the results in the correct directory. 
-2. Make sure they are in JUnit XML format. 
-3. Make sure every test run has its own `test-info.json` file, with a test name. 
-3. Include a **Deploy to Bitrise.io** Step in your Workflow. 
 
 Here's an example script that should work with Test Reports:
 
