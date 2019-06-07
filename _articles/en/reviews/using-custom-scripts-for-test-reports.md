@@ -6,51 +6,47 @@ summary: ''
 published: false
 
 ---
-By default, only four Steps support the Test Reports feature. However, you can export the test results of other Steps to Test Reports via custom Script Steps. Here's what the Script Step needs to do:
+By default, only four Steps support the [Test Reports](/testing/test-reports/) feature. However, you can export the test results of other Steps to Test Reports via custom Script Steps. Here's what you need to do:
 
-1. Deploy the test results in the correct directories. 
-2. Make sure they include a test report in a standard JUnit XML format. 
-3. Make sure every test run has its own `test-info.json` file, with a test name. 
-3. Include a **Deploy to Bitrise.io** Step in your Workflow. 
+1. Deploy the test results in the correct directories.
+2. Make sure all directories include a test report in a standard JUnit XML format.
+3. Make sure every test run has its own `test-info.json` file, with a test name.
+4. Include a **Deploy to Bitrise.io** Step in your Workflow.
 
-To do all this, we need to delve a bit deeper into how the Test Reports feature works. 
+To do all this, we need to delve a bit deeper into how the Test Reports feature works.
 
-The Bitrise CLI creates a root directory for all test results and exposes its path in the `BITRISE_TEST_RESULT_DIR` Environment Variable (Env Var) for the supported Steps. As such, every supported Step sees its own test results directory. 
+The Bitrise CLI creates a root directory for all test results and exposes its path in the `BITRISE_TEST_RESULT_DIR` Environment Variable (Env Var) for the supported Steps. As such, every supported Step sees its own test results directory.
 
-The Step then moves every artifact that is deemed a test result into the Step's test result directory: test result files, test attachments, logs, screenshots, and so on. 
+The Step then moves every artifact that is deemed a test result into the Step's test result directory: test result files, test attachments, logs, screenshots, and so on.
 
 After each Step run, the Bitrise CLI checks the Steps's test result directory. If the directory is not empty, the CLI adds a metadata file called `step-info.json`. This file describes the Step:
 
-```
-// TestResultStepInfo ...
-type TestResultStepInfo struct {
-	ID      string `json:"id" yaml:"id"`           // Step ID
-	Version string `json:"version" yaml:"version"` // Step version
-	Title   string `json:"title" yaml:"title"`     // Step title
-	Number  int    `json:"number" yaml:"number"`   // Step number in the workflow
-}
-```
+    // TestResultStepInfo ...
+    type TestResultStepInfo struct {
+    	ID      string `json:"id" yaml:"id"`           // Step ID
+    	Version string `json:"version" yaml:"version"` // Step version
+    	Title   string `json:"title" yaml:"title"`     // Step title
+    	Number  int    `json:"number" yaml:"number"`   // Step number in the workflow
+    }
 
 The separate test runs - for example, against different build variants - should be placed in different sub-directories within the test results directory of the Step. Unlike the `BITRISE_TEST_RESULT_DIR`, these directories are not created automatically: they must be created during the build. The directory structure should be something like this:
 
-```
-Build Test Result directory
-└── Step Test Result directory
-    ├── Step Test Run Result Directory 1
-    │   ├── TEST-com.multipletestresultssample.UnitTest0.xml
-    │   └── test-info.json
-    ├── Step Test Run Result Directory 2
-    │   ├── TEST-com.multipletestresultssample.UnitTest1.xml
-    │   └── test-info.json
-    └── step-info.json
-```
+    Build Test Result directory
+    └── Step Test Result directory
+        ├── Step Test Run Result Directory 1
+        │   ├── TEST-com.multipletestresultssample.UnitTest0.xml
+        │   └── test-info.json
+        ├── Step Test Run Result Directory 2
+        │   ├── TEST-com.multipletestresultssample.UnitTest1.xml
+        │   └── test-info.json
+        └── step-info.json
 
-As you can see, the sub-directories for each test run contain a `test-info.json` file. This file has to be created by the Script Step, with the `test-name` node defined in it. The `test-name` value will appear as the name of the test run on the Test Reports page. 
+As you can see, the sub-directories for each test run contain a `test-info.json` file. This file has to be created by the Script Step, with the `test-name` node defined in it. The `test-name` value will appear as the name of the test run on the Test Reports page.
 
-```
-// Test Namme ...
-{ "test-name":"My first test" }
-```
+    // Test Namme ...
+    { "test-name":"My first test" }
+
+![](/img/Test_add-on-6.png)
 
 Once a Step has run and its test results have been placed into the correct directory, the **Deploy to Bitrise.io** Step can collect the results and export them to Test Reports. It does so in a JUnit XML format.
 
@@ -77,7 +73,7 @@ This means that your test results must contain a test report in a standard JUnit
 </testsuites>
 ```
 
-Here's an example script for a single test run, the results of which should be exported to Test Reports:
+Here's an example script for a single test run, the results of which should be exported to Test Reports. In this example, we create a sub-directory for a specific test run, add the JUnit XML file and the `test-info.json` file. 
 
 ```bash
 #!/bin/env bash
@@ -101,19 +97,19 @@ echo  '<?xml version="1.0" encoding="UTF-8"?>
 echo '{"test-name":"sample"}' >> "$test_run_dir/test-info.json"
 ```
 
-In the above example, we've created the test report JUnit XML file in the script itself. But of course it is possible to export an already existing file in the same way: 
+In the above example, we've created the test report JUnit XML file in the script itself. But of course it is possible to export an already existing file in the same way:
 
-```
-#!/bin/env bash
-set -ex
+    #!/bin/env bash
+    set -ex
+    
+    # Creating the sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
+    test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
+    mkdir "$test_run_dir"
+    
+    # Exporting the JUnit XML test report:
+    cp "MY/TEST/REPORT/XML/FILE/PATH.xml" "$test_run_dir/UnitTest.xml"
+    
+    # Creating the test-info.json file with the name of the test run defined:
+    echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
 
-# Creating the sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
-test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
-mkdir "$test_run_dir"
-
-# Exporting the JUnit XML test report:
-cp "MY/TEST/REPORT/XML/FILE/PATH.xml" "$test_run_dir/UnitTest.xml"
-
-# Creating the test-info.json file with the name of the test run defined:
-echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
-``` 
+If all goes well, you should be able to see your test results on the Test Reports page. 
