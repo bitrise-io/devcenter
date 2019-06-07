@@ -14,6 +14,7 @@ summary: You can create a signed APK using the Android Sign Step in your Bitrise
 menu:
   android-code-signing:
     weight: 3
+    title: Android code signing using Android Sign Step
 
 ---
 ## Creating a signed APK with the Android Sign Step
