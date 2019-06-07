@@ -24,9 +24,7 @@ type TestResultStepInfo struct {
 }
 ```
 
-If the Step's test results directory is empty, the directory is removed once the Step has run. 
-
-The separate test runs - for example, against different build variants - should be placed in different subdirectories within the test results directory of the Step. So you could end up with a structure something like this:
+The separate test runs - for example, against different build variants - should be placed in different sub-directories within the test results directory of the Step. Unlike the `BITRISE_TEST_RESULT_DIR`, these directories are not created automatically: they must be created by the user. So the directory structure should be something like this:
 
 ```
 Build Test Result directory
@@ -40,12 +38,43 @@ Build Test Result directory
     └── step-info.json
 ```
 
-Once a Step has run and its test results have been placed into the correct directory, the **Deploy to Bitrise.io** Step can collect the results and export them to Test Reports. It does so in a JUnit XML format. 
+As you can see, the sub-directories for each test run contain a `test-info.json` file. This file has to be created with the Script Step, with the `test-name` node defined in it. The `test-name` value will appear as the name of the test run on the Test Reports page. 
+
+```
+// Test Namme ...
+{ "test-name":"My first test" }
+```
+
+Once a Step has run and its test results have been placed into the correct directory, the **Deploy to Bitrise.io** Step can collect the results and export them to Test Reports. It does so in a JUnit XML format.
+
+This means that your test results must contain a test report in a standard JUnit XML format, such as this:
+
+```xml
+<testsuites>        => the aggregated result of all junit testfiles
+  <testsuite>       => the output from a single TestSuite
+    <properties>    => the defined properties at test execution
+      <property>    => name/value pair for a single property
+      ...
+    </properties>
+    <error></error> => optional information, in place of a test case - normally if the tests in the suite could not be found etc.
+    <testcase>      => the results from executing a test method
+      <system-out>  => data written to System.out during the test run
+      <system-err>  => data written to System.err during the test run
+      <skipped/>    => test was skipped
+      <failure>     => test failed
+      <error>       => test encountered an error
+    </testcase>
+    ...
+  </testsuite>
+  ...
+</testsuites>
+```
 
 So, to make sure your test results are exported, you need to:
 
-1. Deploy them in the correct directory. 
-2. Convert them to the correct format. 
+1. Deploy the results in the correct directory. 
+2. Make sure they are in JUnit XML format. 
+3. Make sure every test run has its own `test-info.json` file, with a test name. 
 3. Include a **Deploy to Bitrise.io** Step in your Workflow. 
 
 Here's an example script that should work with Test Reports:
