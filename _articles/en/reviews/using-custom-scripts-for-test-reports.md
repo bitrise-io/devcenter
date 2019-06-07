@@ -79,7 +79,7 @@ This means that your test results must contain a test report in a standard JUnit
 </testsuites>
 ```
 
-## Example scripts for exporting to Test Reports
+## Example scripts
 
 Here's an example script for a single test run, the results of which should be exported to Test Reports. In this example, we create a sub-directory for a specific test run, add the JUnit XML file and the `test-info.json` file. 
 
