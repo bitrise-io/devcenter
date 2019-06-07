@@ -15,11 +15,13 @@ By default, only four Steps support the [Test Reports](/testing/test-reports/) f
 
 To do all this, we need to delve a bit deeper into how the Test Reports feature works.
 
+## The test results directory
+
 The Bitrise CLI creates a root directory for all test results and exposes its path in the `BITRISE_TEST_RESULT_DIR` Environment Variable (Env Var) for the supported Steps. As such, every supported Step sees its own test results directory.
 
 The Step then moves every artifact that is deemed a test result into the Step's test result directory: test result files, test attachments, logs, screenshots, and so on.
 
-After each Step run, the Bitrise CLI checks the Steps's test result directory. If the directory is not empty, the CLI adds a metadata file called `step-info.json`. This file describes the Step:
+After each Step, the Bitrise CLI checks the Steps's test result directory. If the directory is not empty, the CLI adds a metadata file called `step-info.json`. This file describes the Step:
 
     // TestResultStepInfo ...
     type TestResultStepInfo struct {
@@ -41,12 +43,16 @@ The separate test runs - for example, against different build variants - should 
         │   └── test-info.json
         └── step-info.json
 
-As you can see, the sub-directories for each test run contain a `test-info.json` file. This file has to be created by the Script Step, with the `test-name` node defined in it. The `test-name` value will appear as the name of the test run on the Test Reports page.
+## The test-info.json file
+
+As you can see above, the sub-directories for each test run contain a `test-info.json` file. This file has to be created by the Script Step, with the `test-name` node defined in it. The `test-name` value will appear as the name of the test run on the Test Reports page.
 
     // Test Namme ...
     { "test-name":"My first test" }
 
 ![](/img/Test_add-on-6.png)
+
+## The test report file
 
 Once a Step has run and its test results have been placed into the correct directory, the **Deploy to Bitrise.io** Step can collect the results and export them to Test Reports. It does so in a JUnit XML format.
 
@@ -72,6 +78,8 @@ This means that your test results must contain a test report in a standard JUnit
   ...
 </testsuites>
 ```
+
+## Example scripts for exporting to Test Reports
 
 Here's an example script for a single test run, the results of which should be exported to Test Reports. In this example, we create a sub-directory for a specific test run, add the JUnit XML file and the `test-info.json` file. 
 
