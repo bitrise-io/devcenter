@@ -69,7 +69,7 @@ React Native アプリは２つのプロジェクト（Android と iOS）で構�
 
    これらの情報は前もって準備しておく必要があります。Bitriseにアプリをアップロードする前に、Android Studioで生成されたKeystoreファイルにそれらの情報が含まれていなければなりません。Keystoreファイルについては、[こちら](https://developer.android.com/studio/publish/app-signing)を参照してください。
 
-   `Code Signing`タブにこれらの情報が追加されてると、Bitriseの`Sign APK step` （Androidデプロイワークフローにデフォルトで含まれています）がAPK署名の処理をするので、これで配布への準備は完了です！
+   `Code Signing`タブにこれらの情報が追加されてると、Bitriseの`Android Sign Step` （Androidデプロイワークフローにデフォルトで含まれています）がAPK署名の処理をするので、これで配布への準備は完了です！
 
 {% include message_box.html type="info" title="Androidコード署名についての詳しい情報" content=" コード署名のオプションについての詳しい情報は[Androidコード署名ガイド](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/)を参照してください。"%}
 
@@ -173,7 +173,7 @@ iOSアプリのデプロイ作業を行う方は、[Code sign your iOS project f
    ・[Google Play APIアクセス](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)のセットアップ
 2. Bitriseの`Dashboard`で、`Code Signing` タブに進み`GENERIC FILE STORAGE` にサービスアカウントのJSONキーをアップロードします。
 3. アップロードしたファイルのURLを保存しているenvキーをコピーします。例：`BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. `Sign APK` ステップがデプロイワークフローにあることを確認したら、`Google Play Deploy` ステップを追加します。
+4. `Android Sign` ステップがデプロイワークフローにあることを確認したら、`Google Play Deploy` ステップを追加します。
 5. 以下に従って必要事項の記入を行ってください：
    * `Service Account JSON key file path`：このフィールドはリモートURLを受け付けるので、アップロードしたサービスアカウントのJSONキーが含まれた環境変数を入力してください。（例） `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name` ：あなたのAndroidアプリのパッケージネーム
