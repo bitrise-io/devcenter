@@ -6,7 +6,7 @@ summary: ''
 published: false
 
 ---
-You can sign up to Bitrise and become a member of an Organization by clicking the Sign up with SSO button.
+You can sign up to a Bitrise Organization via [SAML SSO](/team-management/organizations/saml-sso-in-organizations/). 
 
 1. Go to our [Sign up](https://app.bitrise.io/users/sign_up) page.
 2. Click **Sign up with SSO** button.
@@ -14,12 +14,10 @@ You can sign up to Bitrise and become a member of an Organization by clicking th
    You are directed to the Initiate **Single Sign-On** page.
 
    ![](/img/saml-sso-sign-up.jpg)
-3. Provide the Bitrise Organization name and click **Continue with SSO** so that Bitrise can direct you to the right Organization's login page.
+3. Provide the **Bitrise Organization's Name** and click **Continue with SSO** so that Bitrise can direct you to the right Organization's login page. You will be directed to 
 4. Check your Email and Username on the **Almost there** page.The page displays the Organization you're signing up with.
 
    ![](/img/signup-saml-almost-there-1.jpg)
-
-   If the Organization doesn't exist, Bitrise will throw an error message.
 5. Click **Finish Sign Up**.
 6. Check your mailbox associated with your sign up credentials and follow the instructions sent by letsconnect@bitrise.io
 7. You're directed to the **Help us help you** page where you can share some more details with us or add those later.
