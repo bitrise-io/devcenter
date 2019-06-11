@@ -6,7 +6,7 @@ summary: ''
 published: false
 
 ---
-You can sign up to a Bitrise Organization via [SAML SSO](/team-management/organizations/saml-sso-in-organizations/). 
+You can sign up to a Bitrise Organization that has SAML SSO configured and use the Organization's login flow to 
 
 1. Go to our [Sign up](https://app.bitrise.io/users/sign_up) page.
 2. Click the **Sign up with SSO** button.
