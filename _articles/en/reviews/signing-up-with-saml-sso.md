@@ -26,4 +26,3 @@ You can sign up to Bitrise and become a member of an Organization by clicking th
 
 If all went well, you're landed on your Bitrise Dashboard where you can add your first app with a click of a button! If you go to your Account Settings, you will see the Organization you've just joined.
 
-![](/img/singup-saml-Dashboard.jpg)
