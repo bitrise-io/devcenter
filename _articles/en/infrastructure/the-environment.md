@@ -14,15 +14,6 @@ menu:
     weight: 7
 
 ---
-## Hardware
-
-The current hardware specifications are the following:
-
-* at least 7.5GB RAM
-* at least 2 CPU cores
-* 64 bit CPU
-* at least 10GB free disk space
-
 ## Environment
 
 We use standard [Docker](https://quay.io) images, published on [Quay](https://quay.io/organization/bitriseio), and the related `Dockerfile` which you can find on [GitHub](https://github.com/bitrise-docker).
