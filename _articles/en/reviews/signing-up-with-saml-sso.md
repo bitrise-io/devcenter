@@ -1,5 +1,8 @@
 ---
-tag: []
+tag:
+- git
+- getting-started
+- SSO
 title: Signing up with SAML SSO
 redirect_from: []
 summary: ''
