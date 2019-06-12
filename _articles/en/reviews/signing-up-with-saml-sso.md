@@ -88,7 +88,7 @@ Now you can go ahead and add your first app to your Dashboard.
 
 You can sign up to Bitrise and join a Bitrise Organization using [SAML SSO authentication](/team-management/organizations/saml-sso-in-organizations/).
 
-There is a little preparation needed on both the SAML SSO provider's and the Bitrise Organization's side before you'd sing up.
+There is a little preparation needed on both the SAML SSO provider's and the Bitrise Organization's side before you'd sign up.
 
 {% include message_box.html type="important" title="Before signing up" content="The Organization's SAML SSO provider has to first add you as a user to the Bitrise SAML SSO app's organization. Then you can follow the instructions sent by the SAML SSO provider to your email account to activate your account. To learn which Organization you should join, the Bitrise Organization owner can send you an invitation through the [Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations) of the respective Organization."%}
 
@@ -109,4 +109,4 @@ Now let's see how to sign up to Bitrise.
 7. Check your mailbox and follow the instructions sent by letsconnect@bitrise.io.
 8. You're directed to the **Help us help you** page where you can share some more details with us or add those later.
 
-If all went well, you're landed on your Bitrise Dashboard where you can add your first app with a few clicks! If you go to your **Account Settings**, you will see the Organization you've just joined.
+If all went well, you're landed on your Bitrise Dashboard where you can [add your first app](/getting-started/adding-a-new-app/) with a few clicks! If you go to your **Account Settings**, you will see the [Organization]() you've just joined.
