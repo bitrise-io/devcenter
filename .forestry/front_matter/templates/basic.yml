@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/getting-started-with-react-native-apps-makeover.md
 - _articles/en/reviews/Index files/builds-index.md
 - _articles/en/reviews/signing-up-with-saml-sso.md
 - _articles/en/reviews/using-custom-scripts-for-test-reports.md
