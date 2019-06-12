@@ -122,7 +122,9 @@ You can use React Native's built in testing method, called `jest` to perform uni
 
 The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page.
 
-You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
+You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built. 
+
+Learn how to share the generated APK/.ipa file with your team members and notify user groups or individual users.
 
 /tutorials/deploy/bitrise-app-deployment/
 
@@ -146,21 +148,6 @@ If you wish to deploy your iOS app, follow the steps in [Code sign your iOS proj
 
    If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
 
-### Deploying your Android app to Google Play Store
-
-{% include message_box.html type="important" title="Android code signing" content=" Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE` field!"%}
-
-1. Make sure you are in sync with Google Play Store! Learn how to
-   * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
-2. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-3. Copy the env key which stores your uploaded file’s url.
-
-   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Add the `Google Play Deploy` step after the `Android Sign` step in your deploy workflow.
-5. Fill out the required input fields as follows:
-   * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   * `Package name`: the package name of your Android app
-   * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
+[Deploy your Android app to Google Play Store](/deploy/android-deploy/deploying-android-apps/)
 
 And that’s it! Start a build and release your Android app to the app store of your choice.
