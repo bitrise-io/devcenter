@@ -23,29 +23,29 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
    ![](/img/sign-up-git-email.jpg)
 
-## Authorizing Bitrise with a Git provider
+### Authorizing Bitrise with a Git provider
 
 You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
 
-### GitHub
+#### GitHub
 
 ![Screenshot](/img/signing-up/github_authorization.png)
 
 If you press the **Authorize application** button on GitHub, you will be redirected to Bitrise.
 
-### Bitbucket
+#### Bitbucket
 
 ![Screenshot](/img/signing-up/bitrise_authorization.png)
 
 If you press the **Grant access** button on Bitbucket, you will be redirected to Bitrise.
 
-### GitLab
+#### GitLab
 
 ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/signing-up/gitlab_authorization.png)
 
 If you press the **Authorize** button on Gitlab, you will be redirected to Bitrise.
 
-## Finishing signup
+### Finishing signup
 
 You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service’s availability, and you are also able to connect more accounts. Last, but not least, you don’t have to stick to your connected account’s username.
 
