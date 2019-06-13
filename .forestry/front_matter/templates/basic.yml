@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/jp/testing/exporting-to-test-reports-from-custom-script-steps.md
 - _articles/en/testing/exporting-to-test-reports-from-custom-script-steps.md
 - _articles/en/reviews/using-custom-scripts-for-test-reports.md
 - _articles/en/reviews/Index files/builds-index.md
