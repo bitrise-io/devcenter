@@ -46,9 +46,9 @@ The **Run yarn command** Step can install javascript dependencies automatically 
 
 ### Native dependencies
 
-Install missing Android SDK components Step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your deploy workflow.
+**Install missing Android SDK components** Step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your workflow for deployment.
 
-For iOS dependencies, you can add the Run CocoaPods install step to your workflow as it is not part of the workflow by default.
+For iOS dependencies, you can add the **Run CocoaPods install** Step to your workflow as it is not part of the workflow by default.
 
 ## Code signing
 
