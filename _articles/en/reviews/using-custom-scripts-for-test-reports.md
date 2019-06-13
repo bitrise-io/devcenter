@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Exporting to Test Reports from custom scripts
+title: Exporting to Test Reports from custom Script Steps
 redirect_from: []
 summary: ''
 published: false
@@ -122,4 +122,4 @@ In the above example, we've created the test report JUnit XML file in the script
     # Creating the test-info.json file with the name of the test run defined:
     echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
 
-If all goes well, you should be able to see your test results on the Test Reports page.
+If all goes well, you should be able to see your test results on the [Test Reports](/testing/test-reports/) page.
