@@ -2,9 +2,7 @@
 tag:
 - testing
 - steps
-- ios
-- android
-- firebase
+- test-reports
 title: Exporting to Test Reports from custom Script Steps
 redirect_from: []
 summary: 'Test Reports allows you to view all your test results in a convenient way.
