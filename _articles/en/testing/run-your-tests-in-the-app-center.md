@@ -4,7 +4,7 @@ redirect_from:
 - "/xamarin/run-your-tests-in-the-app-center"
 menu:
   testing-main:
-    weight: 14
+    weight: 16
 
 ---
 Upload and schedule tests on the Visual Studio App Center for your projects. The following testing frameworks are available:

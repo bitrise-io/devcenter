@@ -10,7 +10,7 @@ summary: 'Run Xcode tests on Bitrise by using our Xcode Test for iOS Step. Confi
   code coverage files easily. '
 menu:
   testing-main:
-    weight: 4
+    weight: 6
 
 ---
 To run Xcode tests on Bitrise, you need to have test targets defined in your projects. You need two Steps to run Xcode tests and view their results:

@@ -12,7 +12,7 @@ summary: With Bitrise’s Android virtual device testing solution, you can run U
   on Bitrise.
 menu:
   testing-main:
-    weight: 13
+    weight: 15
 
 ---
 With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices.

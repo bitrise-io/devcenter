@@ -8,6 +8,9 @@ redirect_from: []
 summary: 'Test Reports allows you to view all your test results in a convenient way.
   By default, only four Steps support the Test Reports feature. However, you can export
   the test results of other Steps to Test Reports via custom Script Steps. '
+menu:
+  testing-main:
+    weight: 3
 
 ---
 [Test Reports](/testing/test-reports/) allows you to view all your test results in a convenient way. By default, only four Steps support the Test Reports feature. However, you can export the test results of other Steps to Test Reports via custom Script Steps. Here's what you need to do:
