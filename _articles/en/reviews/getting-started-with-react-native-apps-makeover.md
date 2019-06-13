@@ -19,14 +19,15 @@ You can easily set up and configure your React Native project on Bitrise. Your R
 
 ## Adding a React Native project to Bitrise
 
-1. Add your React Native project as a [new app](/getting-started/adding-a-new-app/) to Bitrise all the way from connecting your repository to webhook setup.
+1. Add your React Native project as a [new app](/getting-started/adding-a-new-app/) to Bitrise.
 
-   At **Project build configuration**, you should see React Native as the selected **project type**. If the scanner fails and the **project type** is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that Android is automatically selected in **The root directory of an Android app**.
-   * If your project consists of only one module, that module will be automatically selected for `Module`. If your project contains more than one module, you can pick a module, but we recommend the main one!
-   * In `Select variant for building` field, select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick `debug` or `release` if you wish to generate an APK or an .ipa file.
-   * Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
-   * `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
-   * In `Select ipa export method`, select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
+   At **Project build configuration**, you should see React Native as the selected **project type**. If the scanner fails and the **project type** is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that **Android** is automatically selected in **The root directory of an Android app**.
+   * If your project consists of only one module, that module will be automatically selected for Module. If your project contains more than one module, you can pick a module, but we recommend the main one!
+
+2. In Select variant for building field, select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick debug or release if you wish to generate an APK or an .ipa file.
+   * Select your Xcode project or Xcode Workspace path in the Project (or Workspace) path field.
+   * Select Scheme name. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
+   * In Select ipa export method, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
 
 You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io)! Your first build gets kicked off automatically. You can check the generated artifacts of the first build on the [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab of your Build's page.
 
