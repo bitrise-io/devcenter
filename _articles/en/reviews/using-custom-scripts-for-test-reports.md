@@ -79,6 +79,8 @@ This means that your test results must contain a test report in a standard JUnit
 </testsuites>
 ```
 
+{% include message_box.html type="note" title="The file format" content="The `<testsuites>` element is not mandatory. You can include multiple test report files separately, even if each of them only contains a `<testsuite>` element: they will be merged together."%} 
+
 ## Example scripts
 
 Here's an example script for a single test run, the results of which should be exported to Test Reports. In this example, we create a sub-directory for a specific test run, add the JUnit XML file and the `test-info.json` file.
