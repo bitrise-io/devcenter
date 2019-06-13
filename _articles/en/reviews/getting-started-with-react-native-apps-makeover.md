@@ -36,19 +36,19 @@ You have successfully set up your React Native project on [bitrise.io](https://w
 
 ### Javascript dependencies
 
-If the Bitrise project scanner has successfully scanned your project, Run npm command or Run yarn command steps will be included in your workflow.
+If the Bitrise project scanner has successfully scanned your project, **Run npm command** or **Run yarn command** Steps will be included in your workflow.
 
-In Run npm command Step, type install in the npm command with arguments to run input field so that it can add javascript dependencies to your project.
+In the **Run npm command** Step, type install in the **npm command with arguments to run** input field so that it can add javascript dependencies to your project.
 
 ![](/img/run-nmp.png)
 
-Run yarn command can install javascript dependencies automatically to your project without having to configure the step manually.
+The **Run yarn command** Step can install javascript dependencies automatically to your project without having to configure the it manually.
 
 ### Native dependencies
 
-`Install missing Android SDK components` Step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your deploy workflow.
+Install missing Android SDK components Step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your deploy workflow.
 
-For iOS dependencies, you can add the `Run CocoaPods install` step to your workflow as it is not part of the workflow by default.
+For iOS dependencies, you can add the Run CocoaPods install step to your workflow as it is not part of the workflow by default.
 
 ## Code signing
 
