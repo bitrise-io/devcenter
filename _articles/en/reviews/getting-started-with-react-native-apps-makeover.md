@@ -80,25 +80,9 @@ Learn how to share the generated APK/.ipa file with your team members and notify
 
 /tutorials/deploy/bitrise-app-deployment/
 
-## Deploying to an app store
-
-If you wish to deploy your iOS app, follow the steps in [Code sign your iOS project for deployment](/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
+[Deploy your iOS app to iTunes Connect](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/)
 
 ### Deploying your iOS app to Testflight and iTunes Connect
-
-{% include message_box.html type="important" title="Have you exported an `app-store` .ipa file yet" content=" Make sure that you have exported an `app-store` .ipa file before starting the deployment procedure to a native marketplace!"%}
-
-1. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
-2. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
-
-   The Step will need your:
-   * Apple ID
-   * password or, if you use two-factor authentication on iTunes Connect, your application password.
-
-   Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars#about-secrets).
-3. [Start a build](/builds/Starting-builds-manually/).
-
-   If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
 
 [Deploy your Android app to Google Play Store](/deploy/android-deploy/deploying-android-apps/)
 
