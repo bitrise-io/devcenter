@@ -50,9 +50,13 @@ For iOS dependencies, you can add the **Run CocoaPods install** Step to your wor
 
 ## Code signing
 
-A React Native app can consists of two projects, an Android and an iOS - both must be properly code signed. If you click on the `Code Signing` tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
+A React Native app can consists of two projects, an Android and an iOS - both must be properly code signed. If you click on the Code Signing tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
 
 Sign your Android project with the [Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/).
+
+[Sign and export your iOS project to Bitrise](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/).
+
+[Sign an export your iOS project for external testing](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/).
 
 ### Signing and exporting your iOS project for testing
 
