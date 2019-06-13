@@ -19,8 +19,6 @@ You can easily set up and configure your React Native project on Bitrise - the p
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
-Let's start!
-
 1. Add your React Native project as a [new app](/getting-started/adding-a-new-app/) to Bitrise all the way from connecting your repository to webhook setup.
 
    At **Project build configuration**, you should see React Native as the selected **project type**. If the scanner fails and the **project type** is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that Android is automatically selected in **The root directory of an Android app**.
