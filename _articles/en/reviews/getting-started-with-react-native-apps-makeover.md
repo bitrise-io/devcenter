@@ -19,33 +19,30 @@ You can easily set up and configure your React Native project on Bitrise - the p
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
- Let's start!
+Let's start!
 
-1. Add your React Native project as a [new app](/getting-started/adding-a-new-app/) to Bitrise.
-2. At Project build configuration, select your preferred build configuration.
-   * For React Native projects, you should see `React Native` as the selected **project type**. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that Android is automatically selected in `The root directory of an Android app`.
+1. Add your React Native project as a [new app](/getting-started/adding-a-new-app/) to Bitrise all the way from connecting your repository to webhook setup.
+
+   At **Project build configuration**, you should see React Native as the selected **project type**. If the scanner fails and the **project type** is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that Android is automatically selected in **The root directory of an Android app**.
    * If your project consists of only one module, that module will be automatically selected for `Module`. If your project contains more than one module, you can pick a module, but we recommend the main one!
    * In `Select variant for building` field, select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick `debug` or `release` if you wish to generate an APK or an .ipa file.
    * Select your Xcode project or Xcode Workspace path in the `Project (or Workspace) path field`.
    * `Select Scheme name`. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
    * In `Select ipa export method`, select the export method of your .ipa file: `ad-hoc`, `app-store`, `development` or `enterprise` method.
-3. At `Webhook setup`, register a Webhook so that Bitrise can automatically start a build every time you push code into your repository.
 
-{% include message_box.html type="note" title="Settings tab" content=" These settings can be later modified at the `Settings` page of your app, except for the stack, which you can modify at the `Stack` tab of your Workflow Editor." %}
-
-You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the `APPS & ARTIFACTS` tab of your Build's page.
+You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io)! Your first build gets kicked off automatically. You can check the generated artifacts of the first build on the [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab of your Build's page.
 
 ## Installing dependencies
 
 ### Javascript dependencies
 
-If Bitrise scanner has successfully scanned your project, `Run npm command` or `Run yarn command` steps will be included in your workflow.
+If the Bitrise project scanner has successfully scanned your project, Run npm command or Run yarn command steps will be included in your workflow.
 
-In `Run npm command` Step, type `install` in the `npm command with arguments to run` input field so that it can add javascript dependencies to your project.
+In Run npm command Step, type install in the npm command with arguments to run input field so that it can add javascript dependencies to your project.
 
 ![](/img/run-nmp.png)
 
-`Run yarn command` can install javascript dependencies automatically to your project without having to configure the step manually.
+Run yarn command can install javascript dependencies automatically to your project without having to configure the step manually.
 
 ### Native dependencies
 
