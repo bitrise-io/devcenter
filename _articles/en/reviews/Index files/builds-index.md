@@ -30,7 +30,7 @@ Read more about triggers in our [Triggering builds](/builds/triggering-builds/in
 ## The build process
 
 1. [Triggering the build](/builds/index/#triggering-builds).
-2. Environment preparation: A virtual machine will be provisioned and prepared to run the build. Build specific Environment Variables are preset so you can use these in your steps. You can find more information about the available stacks in the Workflow Editor, on the `Stack` tab.
+2. Environment preparation: A virtual machine will be provisioned and prepared to run the build. Build specific Environment Variables are preset so you can use these in your steps. You can find more information about the available stacks in the Workflow Editor, on the **Stack** tab.
 3. Workflow execution: Steps in Workflows are executed in the same order as defined in the Workflow Editor of your application, from top to bottom. You can reorder the Steps by dragging them around. The log each Step generates will be displayed on the build’s details page.
 4. Cleanup: After the execution of the build, a build log is created and stored on the Bitrise server. The virtual machine running the build is destroyed so your code/files will never fall into the wrong hands.
 
