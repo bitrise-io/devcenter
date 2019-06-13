@@ -1,12 +1,19 @@
 ---
-tag: []
-title: 'Exporting to Test Reports from custom Script Steps - draft '
+tag:
+- testing
+- steps
+- test-reports
+title: Exporting to Test Reports from custom Script Steps
 redirect_from: []
-summary: ''
-published: false
+summary: 'Test Reports allows you to view all your test results in a convenient way.
+  By default, only four Steps support the Test Reports feature. However, you can export
+  the test results of other Steps to Test Reports via custom Script Steps. '
+menu:
+  testing-main:
+    weight: 3
 
 ---
-By default, only four Steps support the [Test Reports](/testing/test-reports/) feature. However, you can export the test results of other Steps to Test Reports via custom Script Steps. Here's what you need to do:
+[Test Reports](/testing/test-reports/) allows you to view all your test results in a convenient way. By default, only four Steps support the Test Reports feature. However, you can export the test results of other Steps to Test Reports via custom Script Steps. Here's what you need to do:
 
 1. Deploy the test results in the correct directories.
 2. Make sure every test run has its own `test-info.json` file, with a test name.
@@ -58,26 +65,24 @@ Once a Step has run and its test results have been placed into the correct direc
 
 This means that your test results must contain a test report in a standard JUnit XML format, such as this:
 
-```xml
-<testsuites>        => the aggregated result of all junit testfiles
-  <testsuite>       => the output from a single TestSuite
-    <properties>    => the defined properties at test execution
-      <property>    => name/value pair for a single property
+    <testsuites>        => the aggregated result of all junit testfiles
+      <testsuite>       => the output from a single TestSuite
+        <properties>    => the defined properties at test execution
+          <property>    => name/value pair for a single property
+          ...
+        </properties>
+        <error></error> => optional information, in place of a test case - for example, if the tests in the suite could not be found for some reason
+        <testcase>      => the results from executing a test method
+          <system-out>  => data written to System.out during the test run
+          <system-err>  => data written to System.err during the test run
+          <skipped/>    => if a test was skipped
+          <failure>     => if a test failed
+          <error>       => if a test encountered an error
+        </testcase>
+        ...
+      </testsuite>
       ...
-    </properties>
-    <error></error> => optional information, in place of a test case - for example, if the tests in the suite could not be found for some reason
-    <testcase>      => the results from executing a test method
-      <system-out>  => data written to System.out during the test run
-      <system-err>  => data written to System.err during the test run
-      <skipped/>    => if a test was skipped
-      <failure>     => if a test failed
-      <error>       => if a test encountered an error
-    </testcase>
-    ...
-  </testsuite>
-  ...
-</testsuites>
-```
+    </testsuites>
 
 {% include message_box.html type="note" title="The file format" content="The `<testsuites>` element is not mandatory. You can include multiple test report files separately, even if each of them only contains a `<testsuite>` element: they will be merged together."%} 
 
@@ -85,27 +90,25 @@ This means that your test results must contain a test report in a standard JUnit
 
 Here's an example script for a single test run, the results of which should be exported to Test Reports. In this example, we create a sub-directory for a specific test run, add the JUnit XML file and the `test-info.json` file.
 
-```bash
-#!/bin/env bash
-set -ex
-
-# Creating the sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
-test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
-mkdir "$test_run_dir"
-
-# Creating the JUnit XML test report:
-echo  '<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" tests="10" skipped="0" failures="0" errors="0" timestamp="2019-05-10T13:47:08" hostname="my-localdomain" time="0.002">
-  <properties/>
-  <testcase name="correctCase0" classname="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" time="0.001"/>
-  <testcase name="correctCase1" classname="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" time="0.0"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>' >> "$test_run_dir/UnitTest.xml"
-
-# Creating the test-info.json file with the name of the test run defined:
-echo '{"test-name":"sample"}' >> "$test_run_dir/test-info.json"
-```
+    #!/bin/env bash
+    set -ex
+    
+    # Creating the sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
+    test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
+    mkdir "$test_run_dir"
+    
+    # Creating the JUnit XML test report:
+    echo  '<?xml version="1.0" encoding="UTF-8"?>
+    <testsuite name="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" tests="10" skipped="0" failures="0" errors="0" timestamp="2019-05-10T13:47:08" hostname="my-localdomain" time="0.002">
+      <properties/>
+      <testcase name="correctCase0" classname="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" time="0.001"/>
+      <testcase name="correctCase1" classname="sample.results.test.multiple.bitrise.com.multipletestresultssample.UnitTest0" time="0.0"/>
+      <system-out><![CDATA[]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+    </testsuite>' >> "$test_run_dir/UnitTest.xml"
+    
+    # Creating the test-info.json file with the name of the test run defined:
+    echo '{"test-name":"sample"}' >> "$test_run_dir/test-info.json"
 
 In the above example, we've created the test report JUnit XML file in the script itself. But of course it is possible to export an already existing file in the same way:
 

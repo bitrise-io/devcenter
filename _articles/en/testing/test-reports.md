@@ -6,6 +6,7 @@ tag:
 - ios
 - " android"
 - " firebase"
+- test-reports
 summary: Test Reports allows you to view all your test results in a convenient way.
   Use our testing Steps, and all your test results will be deployed to the same directory.
   From there, Test Reports can process them and display them in a way that's easy
@@ -47,6 +48,8 @@ These Steps will run the tests defined in your repository and then store the out
 * [Device testing for Android](/testing/device-testing-for-android/)
 * [Device testing for iOS](/testing/device-testing-for-ios/)
 * [Running Xcode Tests](/testing/running-xcode-tests/) "%}
+
+{% include message_box.html type="important" title="Using custom Script Steps" content="You can use custom Script Steps to export test results to Test Reports. Read the details in our [Exporting from custom Script Steps to Test Reports]() guide."%} 
 
 ## Configuring Test Reports
 
