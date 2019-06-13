@@ -12,18 +12,18 @@ summary: A build is a series of jobs, specified by the app’s Workflow which is
 published: false
 
 ---
-A build is a series of jobs, specified by the app’s Workflow which is a collection of [Steps](https://8629bcmvhs1rvw.preview.forestry.io/steps-workflows/getting-started-steps). The app’s build configuration is specified in the [bitrise.yml configuration file](https://8629bcmvhs1rvw.preview.forestry.io/bitrise-cli/basics-of-bitrise-yml) which you can modify in [bitrise.io](https://www.bitrise.io/)’s graphical Workflow Editor UI, or in a [yaml editor](http://blog.bitrise.io/2016/02/12/edit-your-yaml-files-like-a-boss.html) directly.
+A build is a series of jobs, specified by the app’s Workflow which is a collection of [Steps](/steps-workflows/getting-started-steps). The app’s build configuration is specified in the [bitrise.yml configuration file](8629bcmv/bitrise-cli/basics-of-bitrise-yml) which you can modify in [bitrise.io](https://www.bitrise.io/)’s graphical Workflow Editor. 
 
-When a build is running, these scripts will be downloaded and executed in the order you’ve defined in your Workflow, with the input parameters you set. They will produce the predefined outputs set as [Environment Variables](https://8629bcmvhs1rvw.preview.forestry.io/builds/available-environment-variables).
+When a build is running, these scripts will be downloaded and executed in the order you’ve defined in your Workflow, with the input parameters you set. They will produce the predefined outputs set as [Environment Variables](/builds/available-environment-variables).
 
 ## Triggering builds
 
 Trigger builds by:
 
 * Clicking the `Build` button on the application’s page (manual build trigger).
-* [Scheduling with a selected branch and frequency](https://8629bcmvhs1rvw.preview.forestry.io/builds/scheduling-builds).
-* [Webhooks](https://8629bcmvhs1rvw.preview.forestry.io/webhooks/): automatically trigger a build after each [code/tag push](/builds/triggering-builds/trigger-code-push/) or [pull request](/builds/triggering-builds/trigger-pull-request/) to the given branch.
-* Our[ API](https://8629bcmvhs1rvw.preview.forestry.io/api/build-trigger/).
+* [Scheduling with a selected branch and frequency](/builds/scheduling-builds).
+* [Webhooks](/webhooks/): automatically trigger a build after each [code/tag push](/builds/triggering-builds/trigger-code-push/) or [pull request](/builds/triggering-builds/trigger-pull-request/) to the given branch.
+* Our[ API](/api/build-trigger/).
 
 Read more about triggers in our [Triggering builds](/builds/triggering-builds/index/) guide. 
 
