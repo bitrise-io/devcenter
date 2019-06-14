@@ -38,7 +38,7 @@ You have successfully set up your React Native project on [bitrise.io](https://w
 
 If the Bitrise project scanner has successfully scanned your project, **Run npm command** or **Run yarn command** Steps will be included in your workflow.
 
-In the **Run npm command** Step, type install in the **npm command with arguments to run** input field so that it can add javascript dependencies to your project.
+1. In the **Run npm command** Step, type install in the **npm command with arguments to run** input field so that it can add javascript dependencies to your project.
 
 ![](/img/run-nmp.png)
 
