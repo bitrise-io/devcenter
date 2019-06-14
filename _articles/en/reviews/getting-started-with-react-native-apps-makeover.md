@@ -8,13 +8,6 @@ published: false
 ---
 You can easily set up and configure your React Native project on Bitrise. A React Native repo can consists of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project on Bitrise, you will see that first an Android, then an iOS build gets built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously. The power is in your hands - deploy both native versions of your app or just one to a marketplace!
 
-* [Adding a React Native project to bitrise.io](/getting-started/getting-started-with-react-native-apps/#adding-a-react-native-project-to-bitriseio)
-* [Installing dependencies](/getting-started/getting-started-with-react-native-apps/#installing-dependencies)
-* [Code signing](/getting-started/getting-started-with-react-native-apps/#code-signing)
-* [Testing your project](/getting-started/getting-started-with-react-native-apps/#testing-your-project)
-* [Deploying to Bitrise](/getting-started/getting-started-with-react-native-apps/#deploying-to-bitrise)
-* [Deploying to an app store](/getting-started/getting-started-with-react-native-apps/#deploying-to-an-app-store)
-
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Before you dive in, make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
 ## Adding a React Native project to Bitrise
@@ -72,3 +65,5 @@ The `Deploy to bitrise.io` step uploads all the artifacts related to your build 
 [Deploy your Android app](/deploy/android-deploy/deploying-android-apps/) to Google Play Store.
 
 [Deploy your iOS app](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/) to iTunes Connect. 
+
+Make sure to [start a build](/builds/Starting-builds-manually/) once all deployment-related config is set.
