@@ -42,7 +42,7 @@ If the Bitrise project scanner has successfully scanned your project, **Run npm 
 
 ![](/img/run-nmp.png)
 
-The **Run yarn command** Step can install javascript dependencies automatically to your project without having to configure the it manually.
+The **Run yarn command** Step can install javascript dependencies automatically to your project without having to configure it manually.
 
 ### Native dependencies
 
@@ -52,19 +52,13 @@ For iOS dependencies, you can add the **Run CocoaPods install** Step to your wor
 
 ## Code signing
 
-A React Native app can consists of two projects, an Android and an iOS - both must be properly code signed and both have different signing requirements. If you click on the Code Signing tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you. Let's see how to upload your code signing files and configure our code signing Steps.
+A React Native app can consists of two projects, an Android and an iOS - both have different signing procedures. If you click on the Code Signing tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you. Let's see how to upload your code signing files and configure our code signing Steps.
 
-Sign your Android project with the [Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/).
-
-[Sign and export your iOS project to Bitrise](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/).
-
-[Sign an export your iOS project for external testing](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/). If you set up your code signing files and created an .ipa file for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**.
-
-1. [Start a build](https://devcenter.bitrise.io/builds/starting-builds-manually/).
-
-If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa file with the **development export method**. If you have the `Deploy to Bitrise.io`Step in your workflow, you can find the .ipa file on the `APPS & ARTIFACTS` tab of the Build's page.
-
-{% include message_box.html type="info" title="About iOS code signing" content=" iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)!"%}
+1. Sign your Android project with the [Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/).
+2. Sign and export your iOS project:
+   * [To make it available on Bitrise and share it with your internal testers.](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/)
+   * [To make it available for external testers](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/)
+   * [To deploy it to iTunes Connect (rebranded as App Store Connect)](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/.)
 
 ## Testing your project
 
