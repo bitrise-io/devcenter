@@ -52,10 +52,10 @@ For iOS dependencies, you can add the **Run CocoaPods install** Step to your wor
 
 ## Code signing
 
-A React Native app can consists of two projects, an Android and an iOS - both have different signing procedures. If you click the Code Signing tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
+A React Native app can consists of two projects, an Android and an iOS - both have different signing procedures. If you click the Code Signing tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you. Follow our platform-specific instructions to code sign your apps.
 
-1. Follow the instructions to sign your Android project with the [Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/).
-2. Follow the instructions to sign and export your iOS project and make it available on Bitrise for [internal testers](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/) or for [external ones](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/).
+1. Sign your Android project with the [Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/).
+2. Sign and export your iOS project and make it available on Bitrise for [internal testers](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/) or for [external ones](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/).
 
 ## Testing your project
 
@@ -69,15 +69,6 @@ The `Deploy to bitrise.io` step uploads all the artifacts related to your build 
 
 ## Deploying to Google Play Store and iTunes Connect
 
-### Android
+[Deploy your Android app](/deploy/android-deploy/deploying-android-apps/) to Google Play Store.
 
-Deploying an Android APK to the Google Play Store requires one additional Step to your Workflow: **Google Play Deploy**. Here is a short tutorial on [ how to configure ](/deploy/android-deploy/deploying-android-apps/#deploying-to-the-google-play-store)your workflow.
-
-{% include message_box.html type="important" title="Do you have a Google Play Developer Account?" content="Make sure you are in sync with Google Play Store! Learn how to
-
-* [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-* set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access) "%}
-
-### iOS
-
-If you wish to deploy your iOS app to iTunes Connect and have it available in Testflight as well, follow the steps described in our [detailed iOS deployment guide](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/).
+[Deploy your iOS app](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/) to iTunes Connect. 
