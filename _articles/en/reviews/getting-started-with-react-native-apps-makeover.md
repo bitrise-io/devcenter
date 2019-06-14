@@ -73,7 +73,7 @@ The `Deploy to bitrise.io` step uploads all the artifacts related to your build 
 
 ### Android
 
-Deploying an Android APK to the Google Play Store requires one additional Step to your Workflow: **Google Play Deploy**. Here is a short tutorial on[ how to configure the Step](/deploy/android-deploy/deploying-android-apps/#deploying-to-the-google-play-store).
+Deploying an Android APK to the Google Play Store requires one additional Step to your Workflow: **Google Play Deploy**. Here is a short tutorial on [ how to configure ](/deploy/android-deploy/deploying-android-apps/#deploying-to-the-google-play-store)your workflow.
 
 {% include message_box.html type="important" title="Do you have a Google Play Developer Account?" content="Make sure you are in sync with Google Play Store! Learn how to
 
@@ -82,4 +82,4 @@ Deploying an Android APK to the Google Play Store requires one additional Step t
 
 ### iOS
 
-[https://devcenter.bitrise.io/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/](https://devcenter.bitrise.io/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/ "https://devcenter.bitrise.io/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/")
+If you wish to deploy your iOS app to iTunes Connect and have it available in Testflight as well, follow the steps described in our [detailed iOS deployment guide](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/).
