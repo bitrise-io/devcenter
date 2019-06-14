@@ -30,10 +30,10 @@ You can use codesigndoc for:
 3. Enter the appropriate one-liner command, depending on your project type.
    * For an **Xcode** project:
 
-         bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xcode.sh)"
+         bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-io/codesigndoc/master/_scripts/install_wrap-xcode.sh)"
    * For a **Xamarin** project:
 
-         bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-tools/codesigndoc/master/_scripts/install_wrap-xamarin.sh)"
+         bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-io/codesigndoc/master/_scripts/install_wrap-xamarin.sh)"
 4. The tool will automatically scan your project and look for a `.xcodeproj` or `.xcworkspace` file and do the rest.
 
    If the scanner does not find the files, open your `Finder.app` and drag-and-drop your project's `.xcodeproj` or `.xcworkspace` file into the command line in your Terminal.
