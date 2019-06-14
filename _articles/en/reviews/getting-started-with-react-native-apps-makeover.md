@@ -81,3 +81,5 @@ Deploying an Android APK to the Google Play Store requires one additional Step t
 * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access) "%} 
 
 ### iOS
+
+[https://devcenter.bitrise.io/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/](https://devcenter.bitrise.io/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/ "https://devcenter.bitrise.io/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/")
