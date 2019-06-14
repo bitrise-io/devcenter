@@ -18,12 +18,16 @@ The open source [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool
 
 If your project contains UITest targets,[ codesigndoc can scan for that](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/#scanning-for-uitest-targets), too. It runs the `xcodebuild build-for-testing` action to create a test-Runner.app, and exports the necessary code signing files.
 
-### Collecting the files with codesigndoc
+## Collecting the files with codesigndoc
 
 You can use codesigndoc for:
 
 * Xamarin projects.
 * Xcode projects.
+
+You can install the [latest version of codesigndoc](https://github.com/bitrise-io/codesigndoc/releases) with a simple one-liner or you can manually download and install the specific version you want to use:
+
+In the below example, we'll use the one-liners.
 
 1. Open the `Terminal`.
 2. Go to your project's folder.
@@ -38,7 +42,7 @@ You can use codesigndoc for:
 
    If the scanner does not find the files, open your `Finder.app` and drag-and-drop your project's `.xcodeproj` or `.xcworkspace` file into the command line in your Terminal.
 
-### Uploading the files to Bitrise with codesigndoc
+## Uploading the files to Bitrise with codesigndoc
 
 1. Once the code signing files are collected, `codesigndoc` will ask if you wish to upload the files to Bitrise:
 
@@ -62,7 +66,7 @@ If you wish to use automatic provisioning with our `iOS Auto Provisioning` step,
 
 You can also install and run `codesigndoc` manually. For more information, check out the [tool's Readme](https://github.com/bitrise-tools/codesigndoc)!
 
-### Scanning for UITest targets
+## Scanning for UITest targets
 
 If your Xcode project has UITest targets, you can use codesigndoc to export the necessary code signing files and generate an `.xctestrun` file. You need to do this if you want to run UI tests on real devices with the help of Bitrise - for example, with the \`iOS Device Testing\` Step.
 
@@ -82,7 +86,7 @@ If your project is set up correctly on your machine, you can start scanning!
    This command runs the `xcodebuild build-for-testing` action to create a UITest runner .app file, and exports the necessary code signing files.
 3. [Upload your files to Bitrise with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/#uploading-the-files-to-bitrise-with-codesigndoc).
 
-#### Troubleshooting the UITest scanner
+### Troubleshooting the UITest scanner
 
 If the UITest scanner cannot find the desired scheme, follow these steps:
 
@@ -95,7 +99,37 @@ If the UITest scanner cannot find the desired scheme, follow these steps:
    * Run a build for testing: `⌘ Cmd + ↑ Shift + U`.
 3. Run `codesigndoc` again.
 
-### Best practices
+## Manually installing and using codesigndoc
+
+With manual install, you can specify which version of codesigndoc you want to use. Unlike with the one-liners used above, the manual install does not automatically run the `scan` command in the folder you use it in: it merely installs the tool.
+
+Check out the available versions on the [releases page of the codesigndoc](https://github.com/bitrise-io/codesigndoc/releases) tool.
+
+1. Download the release you want by running a `curl` command.
+
+   Note: replace the VERSIONNUMBER with the actual number of the codesigndoc version you want.
+   ```bash
+   curl -sfL https://github.com/bitrise-io/codesigndoc/releases/download/VERSIONNUMBER/codesigndoc-Darwin-x86_64 > ./codesigndoc
+   ```    
+1. Make the downloaded binary executable:
+   ```bash
+   chmod +x ./codesigndoc
+   ```
+
+Done! You can now run the `scan` command of the tool at any time:
+
+```bash
+## Xcode scanner
+./codesigndoc scan xcode
+
+## Xcode project scanner for UI test targets
+./codesigndoc scan xcodeuitests
+
+## Xamarin project scanner
+./codesigndoc scan xamarin
+```
+
+## Best practices
 
 You get the most accurate result if you run `codesigndoc` on the same state of your repository/code which is available after a clean `git clone`, as that will be the state of the code after the build server checks it out (for example, you might have files on your Mac which are in `.gitignore`, so it exists on your Mac but not in the repository or after a `git clone` on a new Mac).
 
