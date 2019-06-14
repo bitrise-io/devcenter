@@ -56,9 +56,9 @@ A React Native app can consists of two projects, an Android and an iOS - both ha
 
 1. Sign your Android project with the [Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/).
 2. Sign and export your iOS project:
-   * [To make it available on Bitrise and share it with your internal testers.](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/)
-   * [To make it available for external testers](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/)
-   * [To deploy it to iTunes Connect (rebranded as App Store Connect)](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/.)
+   * [To make it available on Bitrise and share it with your internal testers.](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/).
+   * [To make it available for external testers](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/).
+   * [To deploy it to iTunes Connect (rebranded as App Store Connect)](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/.).
 
 ## Testing your project
 
