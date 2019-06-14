@@ -1,24 +1,23 @@
 ---
-title: Docker support on bitrise.io
+title: bitrise.ioのDockerサポート
 menu:
   docker:
     weight: 1
 
 ---
-{% include not_translated_yet.html %}
 
-[Docker](https://www.docker.com/) is an ideal tool to create, use and share custom environments, as well as to provide a lightweight way to do builds in ephemeral environments (where the environment is destroyed after the build, and a new one is created as the next build starts).
+[Docker](https://www.docker.com/)は、カスタム環境を作成、使用、および共有するだけでなく、一時的な環境でビルドを実行するための軽量な方法を提供する理想的なツールです。（ビルド後に環境が削除され、次のビルドの開始時に新しい環境が作成される）
 
-Unfortunately, Docker can only be used to run Linux guest systems right now. Since Windows Server 2016, it’s possible to run Windows docker containers (guest system) but only from Windows Server 2016 and on Windows 10 with Anniversary Update.
+残念ながら、Dockerは今のところLinuxゲストシステムの実行にしか使用できません。 Windows Server 2016以降、Windows Dockerコンテナ（ゲストシステム）を実行できるようになりました。ですが、実行できるのはWindows Server 2016およびAnniversary Updateを搭載したWindows 10のみです。
 
-Docker can be installed on Linux, macOS and Windows, but the environment (container) it runs can only be Linux (and Windows, on Windows Server 2016 and on Windows 10 with Anniversary Update). Linux containers (guest) can run on all platforms where you can install `docker` (Linux, Windows, macOS, …).
+DockerはLinux、macOS、およびWindowsにインストールできますが、それが実行する環境（コンテナ）はLinux（およびWindows Server 2016、およびAnniversary Updateを搭載したWindows 10）のみです。 Linuxコンテナ（ゲスト）は `docker`をインストールできるすべてのプラットフォーム（Linux、Windows、macOSなど）で動作します。
 
-This is why our Android/Linux environment is provided as a docker image, but not our macOS Stacks.
+このため、Android/Linux環境はdockerイメージとして提供されますが、macOSスタックは提供されません。
 
-## Linux/Android stacks
+## Linux/Androidスタック
 
-Our Linux/Android stacks have full `docker` support. This means that you can run any `docker` command during the build. When a build runs on a Linux/Android stack, the build actually runs inside a docker container. For security, however, every Linux/Android build gets its own Virtual Machine too, in which the build runs in a docker container.
+私たちのLinux/Androidスタックは `docker`を完全にサポートしています。 これはビルド中に任意の `docker`コマンドを実行できることを意味します。 ビルドがLinux/Androidスタックで実行されると、そのビルドは実際にはdockerコンテナの中で実行されます。 ただし、セキュリティ上の理由から、すべてのLinux/Androidビルドには独自の仮想マシンも用意されており、ビルドはその仮想マシン内のdockerコンテナで実行されます。
 
-## Setting custom docker images
+## カスタムdockerイメージを設定する
 
-You can [set a custom docker image](/tutorials/docker/use-your-own-docker-image/) for your builds if you select the Linux/Android stack on the `Stack` tab of your app's Workflow Editor. In most cases, however, you should not change this image! Instead, you should run `docker` commands during the build using our a `Script` step.
+アプリのワークフローエディタの `Stack`タブでLinux/Androidのスタックを選択すれば、ビルド用に[カスタムdockerイメージを設定](/tutorials/docker/use-your-own-docker-image/)することができます。 ただし、ほとんどの場合このイメージは変更しないでください。 代わりにビルド中に `script`ステップを使って`docker`コマンドを実行するべきです。
