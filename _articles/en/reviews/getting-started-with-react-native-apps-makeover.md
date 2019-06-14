@@ -58,7 +58,6 @@ A React Native app can consists of two projects, an Android and an iOS - both ha
 2. Sign and export your iOS project:
    * [To make it available on Bitrise and share it with your internal testers.](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/).
    * [To make it available for external testers](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/).
-   * [To deploy it to iTunes Connect (rebranded as App Store Connect)](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/.).
 
 ## Testing your project
 
@@ -68,18 +67,26 @@ You can use React Native's built in testing method, called `jest` to perform uni
 
 ## Deploying to Bitrise
 
-The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page.
+The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. All you have to do is add the Step to your workflow and [configure](/tutorials/deploy/bitrise-app-deployment/) it according to whom and how you want to share the artifacts with. You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
-You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
+## Deploying to Google Play Store and iTunes Connect
 
-Learn how to share the generated APK/.ipa file with your team members and notify user groups or individual users.
+Deploying an Android APK to the Play Store requires one additional Step to your Workflow: Google Play Deploy. Here is a short tutorial on[ how to configure the Step](/deploy/android-deploy/deploying-android-apps/#deploying-to-the-google-play-store).
 
-/tutorials/deploy/bitrise-app-deployment/
+{% include message_box.html type="important" title="Do you have a Google Play Developer Account?" content="Make sure you are in sync with Google Play Store! Learn how to
 
-[Deploy your iOS app to iTunes Connect](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/)
+* [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+* set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access) "%} 
 
-### Deploying your iOS app to Testflight and iTunes Connect
+    
+  In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+* Copy the env key which stores your uploaded file’s url.
 
-[Deploy your Android app to Google Play Store](/deploy/android-deploy/deploying-android-apps/)
+  For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+* Add the `Google Play Deploy` step after the `Android Sign` step in your deploy workflow.
+* Fill out the required input fields as follows:
+  * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+  * `Package name`: the package name of your Android app
+  * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
 
 And that’s it! Start a build and release your Android app to the app store of your choice.
