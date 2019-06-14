@@ -21,10 +21,13 @@ You can easily set up and configure your React Native project on Bitrise. Your R
 
 1. Add your React Native project as a [new app](/getting-started/adding-a-new-app/) to Bitrise.
 
-   At **Project build configuration**, you should see React Native as the selected **project type**. If the scanner fails and the **project type** is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that **Android** is automatically selected in **The root directory of an Android app**.
-   * If your project consists of only one module, that module will be automatically selected for Module. If your project contains more than one module, you can pick a module, but we recommend the main one!
+   This flow will guide you through the process of connecting your repository, setting up your repository access, selecting a branch and validating your project.
 
-2. In Select variant for building field, select a variant that suits your project. Pick `Select All Variants` to build all variants. Pick debug or release if you wish to generate an APK or an .ipa file.
+   At **Project build configuration**, you should see React Native as the selected **project type**. (If the project scanner fails and the **project type** is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration).) You can see that **Android** is automatically selected in **The root directory of an Android app**.
+
+   If your project consists of only one module, that module will be automatically selected for Module. If your project contains more than one module, you can pick a module, but we recommend the main one!
+   
+3. In **Select variant for building** field, select a variant that suits your project. Pick **Select All Variants** to build all variants. Pick **debug** or **release** if you wish to generate an APK or an .ipa file.
    * Select your Xcode project or Xcode Workspace path in the Project (or Workspace) path field.
    * Select Scheme name. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but  if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found).
    * In Select ipa export method, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
