@@ -31,33 +31,48 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
 ## Adding apps
 
-[Adding a new app](/getting-started/adding-a-new-app/index) to Bitrise means that you connect a specific repository to Bitrise, allowing us to clone the repository and then build it. As part of the initial configuration process, you:
+[Adding a new app](/getting-started/adding-a-new-app/) to Bitrise means that you connect a specific repository to Bitrise, allowing us to clone the repository and then build it. 
 
-* 
-* Specify the repository: it can be either a GitHub, GitLab or Bitbucket repository, a manual repository URL, or a self-hosted GitLab repository. 
-* 
+Add a new app any time by clicking the `+` symbol on the top menu bar and then selecting `Add app` from the dropdown menu.
 
 ![Adding a new app](/img/adding-a-new-app/add_new_app.png)
 
-### Validating and configuring the project
+As part of the initial configuration process, you:
 
-After setting up repository access, type the branch of the repository you wish to use and click `Next`.
+* Decide if an app is private or public. Private app data is only available to those who are invited to work on the app. About public apps, read our [Public apps](/getting-started/public-apps/) guide.
+* Specify the repository: it can be either a GitHub, GitLab or Bitbucket repository, a manual repository URL, or a self-hosted GitLab repository.
+* Register an SSH key: this gives Bitrise access to the repository. 
+* Specify the branch that you want to build. 
 
-![](/img/choose-branch.png)
+You can change all this later - and anyway, adding a new app takes a couple of minutes so you can always just do the process from scratch. 
 
-[Bitrise will scan and validate your repository and set up a project configuration](/getting-started/adding-a-new-app/setting-up-configuration) based on the results. If the validation fails, you can set up the project manually.
+As part of the process, Bitrise will scan and validate your repository and set up an app configuration based on the results of the scan. If the validation fails, you can set up the app manually.
 
-### Webhook setup
+Read the details of the process in our [Adding a new app](/getting-started/adding-a-new-app/) guide.
 
-[Register a webhook](/webhooks/index/) immediately so Bitrise can start a build every time you push code into your repository. You can skip webhook setup when creating a new app: you can always set up webhooks later.
+## Webhooks and triggers
+
+You can set up webhooks as part of the process of adding a new app, or at any time later. Webhooks allow Bitrise to communicate with third party services: for example, a Bitrise webhook set up on a GitHub repository allows Bitrise to start a build automatically when code is modified in the repository. 
+
+Once webhooks are set up, configure when to start builds automatically by defining triggers. You can set:
+
+* The event which should trigger the build: for example, code push or a pull request.
+* The branch of your repository that can trigger builds: for example, `master` or `dev`. 
+
+This means that you can, for example, set up a trigger that starts a build when a pull request is opened to the `master` branch. 
+
+Webhooks are required for triggers to work! Read more about webhooks in our [Webhooks ](/webhooks/index/)guide and about triggers in our [Triggering builds](/builds/triggering-builds/triggering-builds/) guide. 
 
 ## Builds and workflows
 
-Once you added an app, your first build will be kicked off automatically. This means running a workflow which is a collection of Steps. Steps represent a block of script execution with predefined input and output variables and they are the heart of Bitrise. You can create new workflows, chain workflows together. You can also modify Step inputs, add and remove Steps to and from workflows.
+Once you added an app, your first build will be kicked off automatically. To view your builds, go to your Dashboard - which is the first page once you log in to Bitrise -, select the app and click on the **Builds** tab to access your builds.
 
-* [The build process](/getting-started/builds-and-workflows)
+A build is a series of jobs, executed in the order defined in the app's Workflow Editor. The jobs are called Steps, which represent blocks of script execution. The Steps can be arranged on the graphical UI of the Workflow Editor and they can do a huge number of things: clone your repository, build your app, run tests, pass values to each other, send notification messages to developers. 
+
 * [Workflows](/getting-started/getting-started-workflows)
 * [Steps](/getting-started/getting-started-steps)
+
+[A build's logs](/builds/build-logs/) can be viewed on the build's page: go to the **Builds** tab and select the build you want. 
 
 ## Teams and organizations
 
