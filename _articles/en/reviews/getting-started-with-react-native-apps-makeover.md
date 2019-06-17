@@ -58,7 +58,7 @@ Let's see the process step by step!
 3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
 4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click **Save metadata**.
 
-   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on the keystore file, head over to [Android Studio's Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores). With this information added to your **Code Signing** tab, our **Android Sign** step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
+   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on the keystore file, head over to [Android Studio's guide on Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores). With this information added to your **Code Signing** tab, our **Android Sign** step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
 
 {% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about different code signing options!"%}
 
