@@ -47,7 +47,7 @@ For iOS dependencies, you can add the **Run CocoaPods install** Step to your wor
 
 A React Native app can consists of two projects, an Android and an iOS - both have different signing procedures. If you click the Code Signing tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you. Follow our platform-specific instructions to code sign your apps.
 
-A React Native app can consists of two projects, an Android and an iOS - both must be properly code signed. If you click on the `Code Signing` tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
+A React Native app can consists of two projects, an Android and an iOS - both must be properly code signed. If you click on the **Code Signing** tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
 
 Let's see the process step by step!
 
@@ -68,30 +68,30 @@ The Android chunk of code signing is done!
 
 ### Signing and exporting your iOS project for testing
 
-Code signing your iOS project depends on what you wish to do with the exported .ipa file. In this section, we describe how to code sign your project if you wish to **install and test it on internal testers' registered devices**. You will need an .ipa file exported with the `development` export method to share your project with testers.
+Code signing your iOS project depends on what you wish to do with the exported .ipa file. In this section, we describe how to code sign your project if you wish to **install and test it on internal testers' registered devices**. You will need an .ipa file exported with the **development** export method to share your project with testers.
 
 If you wish to upload your .ipa file to an app store, check out [this](/getting-started/getting-started-with-react-native-apps/#signing-and-exporting-your-ios-project-for-deployment) section!
 
-{% include message_box.html type="note" title="Automatic provisioning" content=" The example procedure described here uses manual provisioning, with the `Certificate and profile installe` Step. However, Bitrise also supports [automatic provisioning](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/) but it is not in the scope of this guide. "%}
+{% include message_box.html type="note" title="Automatic provisioning" content=" The example procedure described here uses manual provisioning, with the **Certificate and profile installer** Step. However, Bitrise also supports [automatic provisioning](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/) but it is not in the scope of this guide. "%}
 
 You will need:
 
-* the automatically created `deploy` workflow
+* the automatically created **deploy** workflow
 * an iOS **Development** certificate (a .p12 certificate file)
 * a **Development** type Provisioning Profile
 
 1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa file locally.
 2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
 
-   The tool can also upload your code signing files to Bitrise - we recommend doing so! Otherwise, upload them manually: enter the Workflow Editor and select the `Code signing` tab, then upload the files in their respective fields.
-3. Go to your app’s Workflow Editor, and select the `deploy` workflow in the `WORKFLOW` dropdown menu in the top left corner.
-4. Check that you have the `Certificate and profile installer` Step in your workflow. It must be before the `Xcode Archive & Export for iOS` Step (you can have other Steps between the two, like `Xcode Test for iOS`).
-5. Check the `Select method for export` input of the `Xcode Archive & Export for iOS` Step. By default, it should be the `$BITRISE_EXPORT_METHOD` environment variable. This variable stores the export method you selected when creating the app. If you selected `development` back then, you don’t need to change the input. Otherwise, manually set it to `development`.
+   The tool can also upload your code signing files to Bitrise - we recommend doing so! Otherwise, upload them manually: enter the Workflow Editor and select the **Code signing** tab, then upload the files in their respective fields.
+3. Go to your app’s Workflow Editor, and select the **deploy** workflow in the **WORKFLOW** dropdown menu in the top left corner.
+4. Check that you have the **Certificate and profile installer** Step in your workflow. It must be before the **Xcode Archive & Export for iOS** Step (you can have other Steps between the two, like **Xcode Test for iOS**).
+5. Check the **Select method for export** input of the **Xcode Archive & Export for iOS** Step. By default, it should be the `$BITRISE_EXPORT_METHOD` environment variable. This variable stores the export method you selected when creating the app. If you selected **development** back then, you don’t need to change the input. Otherwise, manually set it to **development**.
 
    ![](/img/export-method.png)
 6. [Start a build](https://devcenter.bitrise.io/builds/starting-builds-manually/).
 
-If you uploaded the correct code signing files, the `Certificate and profile installer` Step should install your code signing files and the `Xcode Archive & Export for iOS` Step should export an .ipa file with the **development export method**. If you have the `Deploy to Bitrise.io`Step in your workflow, you can find the .ipa file on the `APPS & ARTIFACTS` tab of the Build's page.
+If you uploaded the correct code signing files, the **Certificate and profile installer** Step should install your code signing files and the **Xcode Archive & Export for iOS** Step should export an .ipa file with the **development export method**. If you have the **Deploy to Bitrise.io** Step in your workflow, you can find the .ipa file on the **APPS & ARTIFACTS** tab of the Build's page.
 
 {% include message_box.html type="info" title="About iOS code signing" content=" iOS code signing is often not this simple - read more about how [iOS code signing works on Bitrise](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)!"%}
 
@@ -106,12 +106,12 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
 1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa file. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
-3. Go to the app’s Workflow Editor and create a [new workflow](https://devcenter.bitrise.io/getting-started/getting-started-workflows/): click the `+ Workflow` button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select `deploy`. This way the new workflow will be a copy of the basic `deploy` workflow.
-4. Set the `Select method for export` input of the `Xcode Archive & Export for iOS` Step to `app-store`.
+3. Go to the app’s Workflow Editor and create a [new workflow](https://devcenter.bitrise.io/getting-started/getting-started-workflows/): click the **+ Workflow** button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select **deploy**. This way the new workflow will be a copy of the basic **deploy** workflow.
+4. Set the **Select method for export** input of the **Xcode Archive & Export for iOS** Step to **app-store**.
 
    ![](/img/app-store-export-method-1.png)
 
-   If you wish to distribute your app to external testers without uploading the app to Testflight, select `ad-hoc` method and make sure you have the `Deploy to Bitrise.io` step in your workflow.
+   If you wish to distribute your app to external testers without uploading the app to Testflight, select **ad-hoc** method and make sure you have the **Deploy to Bitrise.io** step in your workflow.
 
 1. Sign your Android project with the [Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/).
 
@@ -119,13 +119,13 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
 ## Testing your project
 
-You can use React Native's built in testing method, called `jest` to perform unit tests.  Add another `Run nmp command` step to your workflow, and type `test` in the `npm command with arguments to run` input field.
+You can use React Native's built in testing method, called **jest** to perform unit tests.  Add another **Run nmp command** Step to your workflow, and type **test** in the **npm command with arguments to run** input field.
 
 ![](/img/test-npm.png)
 
 ## Deploying to Bitrise
 
-The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. All you have to do is add the Step to your workflow and [configure](/tutorials/deploy/bitrise-app-deployment/) it according to whom and how you want to share the artifacts with. You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
+The **Deploy to bitrise.io** step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. All you have to do is add the Step to your workflow and [configure](/tutorials/deploy/bitrise-app-deployment/) it according to whom and how you want to share the artifacts with. You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
 ## Deploying to Google Play Store and iTunes Connect
 
