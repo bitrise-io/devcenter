@@ -99,10 +99,10 @@ If you uploaded the correct code signing files, the **Certificate and profile i
 
 If you set up your code signing files and created an .ipa file for your internal testers, it is time to **involve external testers and then to publish your iOS app to the App Store**.
 
-To deploy to Testflight and to the App Store, you will need more code signing files:
+{% include message_box.html type="important" title="Deploying to Testflight" content="To deploy to Testflight and to the App Store, you will need more code signing files:
 
 * an iOS **Distribution** Certificate
-* an **App Store** type Provisioning Profile
+* an **App Store** type Provisioning Profile"%} 
 
 1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa file. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
@@ -112,10 +112,8 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
    ![](/img/app-store-export-method-1.png)
 
    If you wish to distribute your app to external testers without uploading the app to Testflight, select **ad-hoc** method and make sure you have the **Deploy to Bitrise.io** step in your workflow.
-
-1. Sign your Android project with the [Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/).
-
-1. Sign and export your iOS project and make it available on Bitrise for [internal testers](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/) or for [external ones](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/).
+5. Sign your Android project with the [Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/).
+6. Sign and export your iOS project and make it available on Bitrise for [internal testers](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/) or for [external ones](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/).
 
 ## Testing your project
 
@@ -128,6 +126,15 @@ You can use React Native's built in testing method, called **jest** to perform u
 The **Deploy to bitrise.io** step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. All you have to do is add the Step to your workflow and [configure](/tutorials/deploy/bitrise-app-deployment/) it according to whom and how you want to share the artifacts with. You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
 ## Deploying to Google Play Store and iTunes Connect
+
+### Deploying to Bitrise
+
+The `Deploy to bitrise.io` step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/)tab on your Build’s page.
+
+You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
+
+1. Go to the `Deploy to bitrise.io` step.
+2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK/.ipa file in the `APPS & ARTIFACTS` tab.
 
 [Deploy your Android app](/deploy/android-deploy/deploying-android-apps/) to Google Play Store.
 
