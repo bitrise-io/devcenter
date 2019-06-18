@@ -145,8 +145,6 @@ Make sure that you have exported an `app-store` .ipa file before starting the de
 
 ### Deploying your Android app to Google Play Store
 
-Android code signing
-
 Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE` field!
 
 1. Make sure you are in sync with Google Play Store! Learn how to
