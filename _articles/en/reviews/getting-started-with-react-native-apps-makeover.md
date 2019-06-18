@@ -75,7 +75,6 @@ You will need:
 * an automatically created workflow for deployment
 * an iOS **Development** certificate (a .p12 certificate file)
 * a **Development** type Provisioning Profile"%}
-  
 
 1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa file locally.
 2. Collect AND upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
@@ -94,7 +93,7 @@ If you uploaded the correct code signing files, the **Certificate and profile i
 
 ### Signing and exporting your iOS project for deployment
 
-If you set up your code signing files and created an .ipa file for your internal testers, it is time to involve external testers and then to publish your iOS app to the App Store.
+If you set up your code signing files and created an .ipa file for your internal testers, it is time to involve external testers and then to [publish your iOS app to the App Store](/getting-started/getting-started-with-react-native-apps/#deploying-your-ios-app-to-testflight-and-itunes-connect).
 
 {% include message_box.html type="important" title="Deploying to Testflight" content="To deploy to Testflight and to the App Store, you will need more code signing files:
 
@@ -107,10 +106,13 @@ If you set up your code signing files and created an .ipa file for your internal
 4. Set the **Select method for export** input of the **Xcode Archive & Export for iOS** Step to **app-store**.
 
    ![](/img/app-store-export-method-1.png)
-
-   If you wish to distribute your app to external testers without uploading the app to Testflight, select **ad-hoc** method and make sure you have the **Deploy to Bitrise.io** step in your workflow.
-5. Sign your Android project with the [Android Sign Step](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/).
-6. Sign and export your iOS project and make it available on Bitrise for [internal testers](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/) or for [external ones](/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/).
+5. Add the `Deploy to iTunes Connect` Step to your workflow.
+6. Fill the required inputs.
+   * **Either the app’s Apple ID or its Bundle ID is a required input**. One of the two must be provided.
+   * If you set the `Submit for Review` to `true`, the Step will wait for your submission to be processed on iTunes Connect and then submit the given version of the app for review.
+   * The default value of the `Skip App Version Update` input is `No`. Change it only if you [incremented the app version](https://devcenter.bitrise.io/builds/build-numbering-and-app-versioning/) in another way.
+   * If you use an iTunes Connect account that is linked to multiple teams, provide either a **Team ID**or a **Team name**!
+7. [Start a build](/builds/Starting-builds-manually/).
 
 ## Testing your project
 
@@ -163,10 +165,4 @@ Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
 
-And that’s it! Start a build and release your Android app to the app store of your choice.
-
-[Deploy your Android app](/deploy/android-deploy/deploying-android-apps/) to Google Play Store.
-
-[Deploy your iOS app](/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/) to iTunes Connect.
-
-Make sure to [start a build](/builds/Starting-builds-manually/) once all deployment-related config is set.
+And that’s it! [Start a build](/builds/Starting-builds-manually/) and release your Android app to the app store of your choice.
