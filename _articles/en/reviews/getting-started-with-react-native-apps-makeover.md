@@ -95,10 +95,10 @@ If you uploaded the correct code signing files, the **Certificate and profile i
 
 If you set up your code signing files and created an .ipa file for your internal testers, it is time to involve external testers and then to [publish your iOS app to the App Store](/getting-started/getting-started-with-react-native-apps/#deploying-your-ios-app-to-testflight-and-itunes-connect).
 
-{% include message_box.html type="important" title="Deploying to Testflight" content="To deploy to Testflight and to the App Store, you will need more code signing files:
+To deploy to Testflight and to the App Store, you will need more code signing files:
 
 * an iOS **Distribution** Certificate
-* an **App Store** type Provisioning Profile"%}
+* an **App Store** type Provisioning Profile
 
 1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa file. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
