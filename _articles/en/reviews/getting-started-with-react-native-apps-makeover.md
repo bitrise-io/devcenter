@@ -70,11 +70,12 @@ If you wish to upload your .ipa file to an app store, check out [Signing and exp
 
 {% include message_box.html type="note" title="Automatic provisioning" content=" The example procedure described here uses manual provisioning, with the **Certificate and profile installer** Step. However, Bitrise also supports [automatic provisioning](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/) but it is not in the scope of this guide. "%}
 
-{% include message_box.html type="important" title="Before you start" content="the automatically created **deploy** workflow
+You will need:
 
+* an automatically created workflow for deployment
 * an iOS **Development** certificate (a .p12 certificate file)
 * a **Development** type Provisioning Profile"%}
-  You will need:
+  
 
 1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa file locally.
 2. Collect AND upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
@@ -82,7 +83,7 @@ If you wish to upload your .ipa file to an app store, check out [Signing and exp
    Otherwise, upload them manually: enter the Workflow Editor and select the **Code signing** tab, then upload the files in their respective fields.
 3. Go to your app’s Workflow Editor, and select the **deploy** workflow in the **WORKFLOW** dropdown menu in the top left corner.
 4. Check that you have the **Certificate and profile installer** Step in your workflow. It must be before the **Xcode Archive & Export for iOS** Step (you can have other Steps between the two, like **Xcode Test for iOS**).
-5. Check the **Select method for export** input of the **Xcode Archive & Export for iOS** Step. By default, it should be the `$BITRISE_EXPORT_METHOD` environment variable. This variable stores the export method you selected when creating the app. If you selected **development** back then, you don’t need to change the input. Otherwise, manually set it to **development**.
+5. Check the **Select method for export** input of the **Xcode Archive & Export for iOS** Step. By default, it should be the `$BITRISE_EXPORT_METHOD` Environment Variable (Env Var). This variable stores the export method you selected when creating the app. If you selected **development** back then, you don’t need to change the input. Otherwise, manually set it to **development**.
 
    ![](/img/export-method.png)
 6. [Start a build](https://devcenter.bitrise.io/builds/starting-builds-manually/).
@@ -158,7 +159,7 @@ Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 3. Add the `Google Play Deploy` step after the `Android Sign` step in your deploy workflow.
 4. Fill out the required input fields as follows:
-   * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the Env Var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
 
