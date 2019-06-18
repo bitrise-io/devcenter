@@ -147,15 +147,17 @@ Make sure that you have exported an `app-store` .ipa file before starting the de
 
 Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE` field!
 
-1. Make sure you are in sync with Google Play Store! Learn how to
-   * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
-2. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-3. Copy the env key which stores your uploaded file’s url.
+{% include message_box.html type="important" title="My message" content="Make sure you are in sync with Google Play Store! Learn how to
+
+* [register to Google Play Store and set up your project](https://play.google.com/store)
+* set up [Google Play API access](https://developers.google.com/android-publisher/getting_started)"%}
+
+1. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Add the `Google Play Deploy` step after the `Android Sign` step in your deploy workflow.
-5. Fill out the required input fields as follows:
+3. Add the `Google Play Deploy` step after the `Android Sign` step in your deploy workflow.
+4. Fill out the required input fields as follows:
    * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
    * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
