@@ -117,14 +117,14 @@ You can use React Native's built in testing method, called **jest** to perform u
 
 The **Deploy to bitrise.io** Step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. All you have to do is add the Step to your workflow and [configure](/tutorials/deploy/bitrise-app-deployment/) it based on with who and how you want to share the artifacts. You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
-## Deploying your iOS app to Testflight and iTunes Connect
+## Deploying your iOS app iTunes Connect
 
 If you wish to deploy your iOS app, follow the instructions in [Code sign your iOS project for deployment](https://devcenter.bitrise.io/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
 
 {% include message_box.html type="important" title="Have you exported an **app-store** .ipa file yet" content="Make sure that you have exported an **app-store** .ipa file before starting the deployment procedure to a native marketplace!"%}
 
 1. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the **Xcode Archive & Export for iOS** Step but preferably before the **Deploy to Bitrise.io** Step.
-2. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
+2. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
    * Apple ID
@@ -133,7 +133,7 @@ If you wish to deploy your iOS app, follow the instructions in [Code sign your i
    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars#about-secrets).
 3. [Start a build](https://devcenter.bitrise.io/builds/Starting-builds-manually/).
 
-   If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
+   If all goes well, your app will be submitted to iTunes Connect and you can distribute it via Testflight or via the App Store!
 
 ## Deploying your Android app to Google Play Store
 
