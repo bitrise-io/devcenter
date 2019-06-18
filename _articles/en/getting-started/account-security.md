@@ -31,7 +31,7 @@ We recommend that you check your connected accounts (GitHub, Bitbucket, GitLab a
 
 Follow this procedure to disable two-factor authentication (2FA) if you are already logged into Bitrise.
 
-1. Log in to [bitrise.io](https://www.bitrise.io) and go to your `Profile`.
+1. Log in to [bitrise.io](https://www.bitrise.io) and go to your **Profile**.
 2. Click **Account settings**.
 3. Scroll down and click **Security** on the left.
 4. Click on **Disable** under **Two-factor authentication**.
