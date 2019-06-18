@@ -124,15 +124,11 @@ You can use React Native's built in testing method, called **jest** to perform u
 
 The **Deploy to bitrise.io** Step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. All you have to do is add the Step to your workflow and [configure](/tutorials/deploy/bitrise-app-deployment/) it based on with who and how you want to share the artifacts. You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
-## Deploying to an app store
+## Deploying your iOS app to Testflight and iTunes Connect
 
 If you wish to deploy your iOS app, follow the instructions in [Code sign your iOS project for deployment](https://devcenter.bitrise.io/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
 
-### Deploying your iOS app to Testflight and iTunes Connect
-
-Have you exported an `app-store` .ipa file yet
-
-Make sure that you have exported an `app-store` .ipa file before starting the deployment procedure to a native marketplace!
+{% include message_box.html type="important" title="Have you exported an `app-store` .ipa file yet" content="Make sure that you have exported an `app-store` .ipa file before starting the deployment procedure to a native marketplace!"%}
 
 1. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the `Xcode Archive & Export for iOS` Step but preferably before the `Deploy to Bitrise.io` Step.
 2. Provide your Apple credentials in the `Deploy to iTunes Connect - Application Loader` Step.
@@ -146,9 +142,7 @@ Make sure that you have exported an `app-store` .ipa file before starting the de
 
    If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
 
-### Deploying your Android app to Google Play Store
-
-Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE` field!
+## Deploying your Android app to Google Play Store
 
 {% include message_box.html type="important" title="Are you in sync with Google Play Store" content="Learn how to:
 
@@ -156,6 +150,8 @@ Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE
 * Set up [Google Play API access](https://developers.google.com/android-publisher/getting_started)."%}
 
 1. In your Bitrise **Dashboard**, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
+
+   Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FILE** field!
 2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
