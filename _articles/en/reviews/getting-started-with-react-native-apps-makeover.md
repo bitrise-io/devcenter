@@ -125,7 +125,7 @@ If you wish to deploy your iOS app, follow the instructions in [Code sign your i
 
 {% include message_box.html type="important" title="Have you exported an **app-store** .ipa file yet?" content="Make sure that you have exported an **app-store** .ipa file before starting the deployment procedure to a native marketplace!"%}
 
-1. Add the `Deploy to iTunes Connect - Application Loader` Step to your workflow, after the **Xcode Archive & Export for iOS** Step but preferably before the **Deploy to Bitrise.io** Step.
+1. Add the **Deploy to iTunes Connect - Application Loader** Step to your workflow, after the **Xcode Archive & Export for iOS** Step but preferably before the **Deploy to Bitrise.io** Step.
 2. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
