@@ -147,10 +147,10 @@ Make sure that you have exported an `app-store` .ipa file before starting the de
 
 Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE` field!
 
-{% include message_box.html type="important" title="My message" content="Make sure you are in sync with Google Play Store! Learn how to
+{% include message_box.html type="important" title="Are you in sync with Google Play Store" content="Learn how to:
 
-* [register to Google Play Store and set up your project](https://play.google.com/store)
-* set up [Google Play API access](https://developers.google.com/android-publisher/getting_started)"%}
+* [Register to Google Play Store and set up your project](https://play.google.com/store).
+* Set up [Google Play API access](https://developers.google.com/android-publisher/getting_started)."%}
 
 1. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
 2. Copy the env key which stores your uploaded file’s url.
