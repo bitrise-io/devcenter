@@ -6,7 +6,7 @@ summary: ''
 published: false
 
 ---
-You can easily set up and configure your React Native project on Bitrise. A React Native repo can consists of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project on Bitrise, you will see that first an Android, then an iOS build gets built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously. The power is in your hands - deploy both native versions of your app or just one to a marketplace!
+You can easily set up and configure your React Native project on Bitrise. A React Native repo can consist of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project on Bitrise, you will see that first an Android, then an iOS build gets built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously.
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Before you dive in, make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
@@ -45,7 +45,7 @@ For iOS dependencies, you can add the **Run CocoaPods install** Step to your wor
 
 ## Code signing
 
-A React Native app can consists of two projects, an Android and an iOS - both have different signing procedures. If you click the Code Signing tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you. Follow our platform-specific instructions to code sign your apps.
+A React Native app can consists of two projects, an Android and an iOS - both have different signing procedures. If you click the Code Signing tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you. Follow our platform-specific instructions to code sign your app for both iOS and Android.
 
 ### Signing your Android project
 
@@ -58,7 +58,7 @@ A React Native app can consists of two projects, an Android and an iOS - both ha
 
 ![](/img/keystore.png)
 
-{% include message_box.html type="info" title="More on Android code signing" content=" You should have the keystore password, keystore alias and the private key password available as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. You can learn more about the keystore file if you head over to [Android Studio's guide on Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores). 
+{% include message_box.html type="info" title="More on Android code signing" content=" You should have the keystore password, keystore alias and the private key password available as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. You can learn more about the keystore file if you head over to [Android Studio's guide on Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores).
 
 You can also check out what other code signing options you have at Bitrise in our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/)."%}
 
@@ -70,11 +70,11 @@ If you wish to upload your .ipa file to an app store, check out [this](/getting-
 
 {% include message_box.html type="note" title="Automatic provisioning" content=" The example procedure described here uses manual provisioning, with the **Certificate and profile installer** Step. However, Bitrise also supports [automatic provisioning](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/) but it is not in the scope of this guide. "%}
 
-You will need:
+{% include message_box.html type="important" title="Before you start" content="the automatically created **deploy** workflow
 
-* the automatically created **deploy** workflow
 * an iOS **Development** certificate (a .p12 certificate file)
-* a **Development** type Provisioning Profile
+* a **Development** type Provisioning Profile"%}
+  You will need:
 
 1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa file locally.
 2. Collect AND upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
