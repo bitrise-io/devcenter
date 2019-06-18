@@ -39,7 +39,7 @@ The **Run yarn command** Step can install javascript dependencies automatically 
 
 ### Native dependencies
 
-**Install missing Android SDK components** Step installs the missing native dependencies  for your Android project - luckily this steps is by default included in your workflow for deployment.
+**Install missing Android SDK components** Step installs the missing native dependencies  for your Android project - luckily this Step is by default included in your workflow for deployment.
 
 For iOS dependencies, you can add the **Run CocoaPods install** Step to your workflow as it is not part of the workflow by default.
 
@@ -54,7 +54,7 @@ A React Native app can consists of two projects, an Android and an iOS - both ha
 3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
 4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click **Save metadata**.
 
-   With this information added to your **Code Signing** tab, our **Android Sign** step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
+   With this information added to your **Code Signing** tab, our **Android Sign** Step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
 
 ![](/img/keystore.png)
 
@@ -111,7 +111,7 @@ If you set up your code signing files and created an .ipa file for your internal
    * **Either the app’s Apple ID or its Bundle ID is a required input**. One of the two must be provided.
    * If you set the `Submit for Review` to `true`, the Step will wait for your submission to be processed on iTunes Connect and then submit the given version of the app for review.
    * The default value of the `Skip App Version Update` input is `No`. Change it only if you [incremented the app version](https://devcenter.bitrise.io/builds/build-numbering-and-app-versioning/) in another way.
-   * If you use an iTunes Connect account that is linked to multiple teams, provide either a **Team ID**or a **Team name**!
+   * If you use an iTunes Connect account that is linked to multiple teams, provide either a **Team ID** or a **Team name**!
 7. [Start a build](/builds/Starting-builds-manually/).
 
 ## Testing your project
@@ -122,11 +122,11 @@ You can use React Native's built in testing method, called **jest** to perform u
 
 ## Deploying to Bitrise
 
-The **Deploy to bitrise.io** step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. All you have to do is add the Step to your workflow and [configure](/tutorials/deploy/bitrise-app-deployment/) it based on with who and how you want to share the artifacts. You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
+The **Deploy to bitrise.io** Step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. All you have to do is add the Step to your workflow and [configure](/tutorials/deploy/bitrise-app-deployment/) it based on with who and how you want to share the artifacts. You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
 ## Deploying to an app store
 
-If you wish to deploy your iOS app, follow the steps in [Code sign your iOS project for deployment](https://devcenter.bitrise.io/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
+If you wish to deploy your iOS app, follow the instructions in [Code sign your iOS project for deployment](https://devcenter.bitrise.io/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
 
 ### Deploying your iOS app to Testflight and iTunes Connect
 
@@ -155,14 +155,14 @@ Make sure that you have uploaded the keystore file to the `ANDROID KEYSTORE FILE
 * [Register to Google Play Store and set up your project](https://play.google.com/store).
 * Set up [Google Play API access](https://developers.google.com/android-publisher/getting_started)."%}
 
-1. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+1. In your Bitrise **Dashboard**, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Add the `Google Play Deploy` step after the `Android Sign` step in your deploy workflow.
+3. Add the **Google Play Deploy** step after the **Android Sign** step in your deploy workflow.
 4. Fill out the required input fields as follows:
-   * `Service Account JSON key file path`: This field can accept a remote URL so you have to provide the Env Var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   * `Package name`: the package name of your Android app
-   * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
+   * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the Env Var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * **Package name**: the package name of your Android app
+   * **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
 
 And that’s it! [Start a build](/builds/Starting-builds-manually/) and release your Android app to the app store of your choice.
