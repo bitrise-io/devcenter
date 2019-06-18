@@ -47,10 +47,6 @@ For iOS dependencies, you can add the **Run CocoaPods install** Step to your wor
 
 A React Native app can consists of two projects, an Android and an iOS - both have different signing procedures. If you click the Code Signing tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you. Follow our platform-specific instructions to code sign your apps.
 
-A React Native app can consists of two projects, an Android and an iOS - both must be properly code signed. If you click on the **Code Signing** tab of your project's Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
-
-Let's see the process step by step!
-
 ### Signing your Android project
 
 1. Select your deployment workflow at the **WORKFLOW** dropdown menu in the top left corner of your apps' Workflow Editor.
@@ -58,11 +54,11 @@ Let's see the process step by step!
 3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
 4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click **Save metadata**.
 
-   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on the keystore file, head over to [Android Studio's guide on Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores). With this information added to your **Code Signing** tab, our **Android Sign** step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
-
-{% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about different code signing options!"%}
+   With this information added to your **Code Signing** tab, our **Android Sign** step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
 
 ![](/img/keystore.png)
+
+{% include message_box.html type="info" title="More information on Android code signing" content=" You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on the keystore file, head over to [Android Studio's guide on Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores). Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about different code signing options!"%}
 
 The Android chunk of code signing is done!
 
@@ -102,7 +98,7 @@ If you set up your code signing files and created an .ipa file for your internal
 {% include message_box.html type="important" title="Deploying to Testflight" content="To deploy to Testflight and to the App Store, you will need more code signing files:
 
 * an iOS **Distribution** Certificate
-* an **App Store** type Provisioning Profile"%} 
+* an **App Store** type Provisioning Profile"%}
 
 1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa file. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
