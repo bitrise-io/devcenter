@@ -58,7 +58,7 @@ A React Native app can consists of two projects, an Android and an iOS - both ha
 
 ![](/img/keystore.png)
 
-{% include message_box.html type="info" title="More information on Android code signing" content=" You should have the keystore password, keystore alias and the private key password available as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. You can learn more about the keystore file if you head over to [Android Studio's guide on Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores). You can also check out what other code signing options you have at Bitrise in our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/)."%}
+{% include message_box.html type="info" title="More on Android code signing" content=" You should have the keystore password, keystore alias and the private key password available as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. You can learn more about the keystore file if you head over to [Android Studio's guide on Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores). You can also check out what other code signing options you have at Bitrise in our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/)."%}
 
 ### Signing and exporting your iOS project for testing
 
