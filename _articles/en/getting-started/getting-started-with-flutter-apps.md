@@ -36,7 +36,7 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
     ![](/img/select_test.png)
  9. If you have an iOS project in your Flutter project, you will have to select an .ipa export method.
 
-    ![undefined](https://cdn.buttercms.com/rOAuKJ2jToSecv2pEs7g)
+    ![undefined](https://cdn.buttercms.com/rOAuKJ2jToSecv2pElocas7g)
 10. Register a [webhook](/webhooks/index/) when prompted.
 
     With a webhook, Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
@@ -63,7 +63,7 @@ You can use our automatically generated **primary** workflow to test your Flutte
    The Step runs the `flutter test` command with the specified flags. To check the available flags, open a command line interface on your own machine and run `flutter test --help`.
 
    ![](/img/flutter_test.png)
-5. Make sure the `Project Location` input of the **Flutter Test** Step is correct.
+5. Make sure the **Project Location** input of the **Flutter Test** Step is correct.
 
    The default value is the the Environment Variable created for your Flutter project's location.
 
@@ -114,10 +114,10 @@ Read more about iOS code signing on Bitrise in [our detailed guides](https://dev
 
 Once you created your iOS project locally, you will need to review the project settings for it in Xcode. More specifically, you need to set a valid Team ID: without that, your build will fail on Bitrise.
 
-1. In Xcode, open `Runner.xcworkspace` in your app’s `ios` folder.
-2. To view your app’s settings, select the `Runner` project in the Xcode project navigator. Then, in the main view sidebar, select the `Runner` target.
-3. Select the `General` tab.
-4. In the `Signing` section, find the `Team` menu and set it to the team associated with your registered Apple Developer account.
+1. In Xcode, open **Runner.xcworkspace** in your app’s **ios** folder.
+2. To view your app’s settings, select the **Runner** project in the Xcode project navigator. Then, in the main view sidebar, select the **Runner** target.
+3. Select the **General** tab.
+4. In the **Signing** section, find the **Team** menu and set it to the team associated with your registered Apple Developer account.
 5. Commit the change to your repository!
 
    This is very important: if you only set the Team ID locally, your build will still fail on Bitrise!
