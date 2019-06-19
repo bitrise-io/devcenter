@@ -54,7 +54,7 @@ Luckily, our **Android Build** Step, which is by default part of your deploy Wor
 
 As you can see in the above Android Workflows, the **Android Lint** and **Android Unit Test** Steps are by default included in your Workflow.
 
-For UI testing, add our **[BETA] Virtual Device Testing for Android** step to run Android UI tests on virtual devices. Available test types - make sure you select one!
+For UI testing, add our **\[BETA\] Virtual Device Testing for Android** step to run Android UI tests on virtual devices. Available test types - make sure you select one!
 
 * instrumentation
 * robo
@@ -62,7 +62,7 @@ For UI testing, add our **[BETA] Virtual Device Testing for Android** step to ru
 
 If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
 
-{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the ***+*** sign on the left side of your Workflow and select another test Step from our collection."%}
+{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the **+** sign on the left side of your Workflow and select another test Step from our collection."%}
 
 ## Signing your Android project
 
