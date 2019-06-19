@@ -27,7 +27,7 @@ Of course, this does not mean anyone can do anything with your public app on Bit
 * download the build logs
 * view the build's `bitrise.yml` file.
 
-{% include message_box.html type="warning" title="Setting an app to public" content=" **You can only set an app to public when adding the app to Bitrise!** Once an app has been added, its privacy settings **CANNOT** be changed again. "%}
+{% include message_box.html type="warning" title="Setting an app to public" content=" You can only set an app to public when adding the app to Bitrise! Once an app has been added, its privacy settings **CANNOT** be changed again. "%}
 
 ### Public app resources
 
@@ -39,12 +39,12 @@ If you need more than 45 minutes build time or more than one concurrency for a p
 
 ### Adding a new app as public
 
-Adding a new app as a public app is incredibly simple: at the start of the process of adding a new app, you will be asked to choose between a private and a public option for the app. Choosing the public option does not change anything about the process itself, it only determines the accessibility of the app.
+Adding a new app as a public app is incredibly simple: at the start of the process of [adding a new app](/getting-started/adding-a-new-app/), you will be asked to choose between a private and a public option for the app. Choosing the public option does not change anything about the process itself, it only determines the accessibility of the app.
 
-1. Click the `+` symbol on the top menu bar.
-2. Click `Add app`.
+1. Click the **+** symbol on the top menu bar.
+2. Click **Add app**.
 3. Choose the account you wish to use for the app.
-4. Set the privacy of the app to `Public`.
+4. Set the privacy of the app to **Public**.
 
 ![](/img/publicapp.png)
 
