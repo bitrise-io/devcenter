@@ -36,7 +36,7 @@ In this guide, we'll walk you through how to add an Android app to Bitrise, what
    * Select a variant for **building** (you can **Select All Variants** which will generate all variants in **APPS & ARTIFACTS**) and select a variant for **testing** too.
 9. Register a [webhook](/webhooks/index/) when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary Workflow - click the message and it will take you to the build page. The first build does not generate an APK yet, however, you can already check out the project's logs on the Build's page.
 
-As you can see in the primary workflow, there is no `Android Build` step that would build your project and our `Android Sign` Step is missing as well, hence this workflow is only a jumping off-point for you to test your project on code level.
+As you can see in the primary workflow, there is no `Android Build` step that would build your project and our `Android Sign` Step is missing as well, which means this workflow is only a jumping off-point for you to test your project on code level.
 
 Let's see how an Android Workflow for deployment looks like!
 
@@ -46,45 +46,6 @@ Let's see how an Android Workflow for deployment looks like!
 4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and `Save metadata`. You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. More information on the keystore file [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our `Android Sign Step` (by default included in your Android deploy workflow) will take care of signing your apk so that it's ready for distribution! Head over to our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!
 5. Go back to your Build's page and click `Start/Schedule a build`.
 6. Select `deploy` in the Basic tab of `Build configuration` pop-up window.
-
-Here is an example of a deploy workflow:
-
-    {% raw %}
-    deploy:
-        - activate-ssh-key@4.0.3:
-            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-        - git-clone@4.0.11: {}
-        - cache-pull@2.0.1: {}
-        - script@1.1.5:
-            title: Do anything with Script step
-        - install-missing-android-tools@2.2.0:
-            inputs:
-            - gradlew_path: "$PROJECT_LOCATION/gradlew"
-        - change-android-versioncode-and-versionname@1.1.1:
-            inputs:
-            - build_gradle_path: "$PROJECT_LOCATION/$MODULE/build.gradle"
-        - android-lint@0.9.4:
-            inputs:
-            - project_location: "$PROJECT_LOCATION"
-            - module: "$MODULE"
-            - variant: "$TEST_VARIANT"
-        - android-unit-test@0.9.3:
-            inputs:
-            - project_location: "$PROJECT_LOCATION"
-            - module: "$MODULE"
-            - variant: "$TEST_VARIANT"
-        - android-build@0.9.5:
-            inputs:
-            - project_location: "$PROJECT_LOCATION"
-            - module: "$MODULE"
-            - variant: "$BUILD_VARIANT"
-        - sign-apk@1.2.3:
-            run_if: '{{getenv "BITRISEIO_ANDROID_KEYSTORE_URL" | ne ""}}'
-        - deploy-to-bitrise-io@1.3.15:
-            inputs:
-            - notify_user_groups: testers
-        - cache-push@2.0.5: {}
-    {% endraw %}
 
 {% include message_box.html type="important" title="Order of the steps matter!" content="
 
