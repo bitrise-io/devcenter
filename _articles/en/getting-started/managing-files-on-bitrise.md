@@ -86,11 +86,11 @@ In this example, we'll show how to do this. We use the **pwgen** password genera
    Optionally, you can encrypt your file(s) in a non-interactive way.
 
        gpg --batch --passphrase <passphrase> -c my_secret_file
-4. Upload `my_secret_file` to the Generic File Storage on Bitrise.
-5. Add the `Decrypt file` Step to your workflow.
+4. Upload `my_secret_file` to the **Generic File Storage** on Bitrise.
+5. Add the **Decrypt file** Step to your workflow.
 6. Add your passphrase as a [secret Environment Variable](/builds/env-vars-secret-env-vars/) and insert it to the relevant Step input.
 7. Add the encrypted file path and the output file path to the relevant Step inputs.
 
-   You can find the Environment Variable for the encrypted file path in the Generic File Storage.
+   You can find the Environment Variable for the encrypted file path in the **Generic File Storage**.
 
 That's it! Once you run the build, the Step will decrypt your file and you can use it for whatever you need it for!
