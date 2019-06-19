@@ -20,7 +20,7 @@ menu:
 ---
 In this guide, we'll walk you through how to add an Android app to Bitrise, what primary and deploy workflows can do, and finally how to test and deploy your app to [bitrise.io](https://www.bitrise.io/) and to the App Store.
 
-## Adding an Android app to bitrise.io
+## Adding an Android app to Bitrise
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
@@ -36,34 +36,25 @@ In this guide, we'll walk you through how to add an Android app to Bitrise, what
    * Select a variant for **building** (you can **Select All Variants** which will generate all variants in **APPS & ARTIFACTS**) and select a variant for **testing** too.
 9. Register a [webhook](/webhooks/index/) when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary Workflow - click the message and it will take you to the build page. The first build does not generate an APK yet, however, you can already check out the project's logs on the Build's page.
 
-As you can see in the primary workflow, there is no `Android Build` step that would build your project and our `Android Sign` Step is missing as well, which means this workflow is only a jumping off-point for you to test your project on code level.
-
-Let's see how an Android Workflow for deployment looks like!
-
-1. Select the `deploy` workflow in Workflow Editor.
-2. Go to the `Code Signing` tab of your Workflow Editor.
-3. Drag-and-drop your keystore file to the `ANDROID KEYSTORE FILE` field.
-4. Fill out the `Keystore password`, `Keystore alias`, and `Private key password` fields and `Save metadata`. You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. More information on the keystore file [here](https://developer.android.com/studio/publish/app-signing). With this information added to your Code Signing tab, our `Android Sign Step` (by default included in your Android deploy workflow) will take care of signing your apk so that it's ready for distribution! Head over to our [Android code signing guide](/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options!
-5. Go back to your Build's page and click `Start/Schedule a build`.
-6. Select `deploy` in the Basic tab of `Build configuration` pop-up window.
+As you can see in the primary workflow, there is no **Android Build** step that would build your project and our **Android Sign** Step is missing as well, which means this workflow is only a jumping off-point for you to test your project on code level.
 
 {% include message_box.html type="important" title="Order of the steps matter!" content="
 
-* To cache Gradle dependencies, keep the `Bitrise.io Cache:Pull` step as the first and the `Bitrise.io Cache:Push` step as the very last step in your workflow!
-* Right after our `Do anything with Script` step, the `Install missing Android SDK components` will take care of installing the missing Android SDK components that your project might be lacking.
-* `Change Android versionCode and versionName` step must be inserted BEFORE the `Android Build`step as the former makes sure you will upload the build with the right version code and version name to your app's marketplace.
-* `Android Lint` and `Android Unit Test` steps must be inserted BEFORE the `Android Build` step to test your code and debug before building your build.
-* `Android Sign` Step must be AFTER the `Android Build` step as the latter builds your project so that you have an apk ready to be signed with the `Android Sign` Step. Make sure that this step is BEFORE any deploy step so that you can upload an authorized project."%}
+* To cache Gradle dependencies, keep the **Bitrise.io Cache:Pull** Step as the first and the **Bitrise.io Cache:Push** Step as the very last step in your Workflow!
+* Right after our **Do anything with Script** Step, the **Install missing Android SDK components** will take care of installing the missing Android SDK components that your project might be lacking.
+* **Change Android versionCode and versionName** Step must be inserted BEFORE the **Android Build** Step as the former makes sure you will upload the build with the right version code and version name to Google Play Store.
+* **Android Lint** and **Android Unit Test** Steps must be inserted BEFORE the **Android Build** Step to test your code and debug before building your build.
+* **Android Sign** Step must be AFTER the **Android Build** Step as the latter builds your project so that you have an APK ready to be signed with the **Android Sign** Step. Make sure that this Step is BEFORE any deploy Step so that you can upload an authorized project."%}
 
 ## Dependencies
 
-Luckily, our `Android Build` step, which is by default part of your deploy workflow, takes care of all the dependencies which you have listed in your `build.gradle` file and installs them for your project.
+Luckily, our **Android Build** Step, which is by default part of your deploy Workflow, takes care of all the dependencies which you have listed in your `build.gradle` file and installs them for your project.
 
 ## Testing your project
 
-As you can see in the above Android workflows, the `Android Lint` and `Android Unit Test` steps are by default included in your workflow.
+As you can see in the above Android Workflows, the **Android Lint** and **Android Unit Test** Steps are by default included in your Workflow.
 
-For UI testing, add our `beta Virtual Device Testing for Android` step to **run Android UI tests on virtual devices**. Available test types - make sure you select one!
+For UI testing, add our **[BETA] Virtual Device Testing for Android** step to run Android UI tests on virtual devices. Available test types - make sure you select one!
 
 * instrumentation
 * robo
@@ -99,7 +90,7 @@ You can share the generated apk with your team members using the build's URL. Yo
 1. Go to the `Deploy to bitrise.io` step.
 2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated apk in the `APPS & ARTIFACTS` tab.
 
-### Deploying to marketplace
+### Deploying to Google Play Store
 
 If you add `Google Play Deploy` step to your workflow (after the `Android Sign` step), your signed apk will get uploaded to a marketplace of your choice.
 
