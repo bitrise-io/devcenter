@@ -18,19 +18,20 @@ Managing files on Bitrise allows you to upload files to use in your builds. You 
 
 ### Uploading files to use in your build
 
-If your build requires any files to make it work, upload them to the **Generic File Storage**. The **Generic File Storage** accepts any file type, all you need to do is provide a unique ID and upload the file. 
+If your build requires any files to make it work, upload them to the **Generic File Storage**. The **Generic File Storage** accepts any file type, all you need to do is provide a unique ID and upload the file.
 
 {% include message_box.html type="important" title="Restrictions on uploading a file to the Generic File Storage" content="
+
 * the file cannot be bigger than 5 MB
-* you can only store a total of 5 different files at the same time. If you want to upload more, you need to delete one of the files in the storage."%} 
+* you can only store a total of 5 different files at the same time. If you want to upload more, you need to delete one of the files in the storage."%}
 
 1. Go to the Dashboard.
 2. Open the app you want to add files to.
 3. Open the Workflow Editor.
-4. Click the `Code Signing` tab.
+4. Click the **Code Signing** tab.
 
    ![](/img/code-signing-tab.png)
-5. Scroll down to the Generic File Storage and provide a unique ID to your file.
+5. Scroll down to the **Generic File Storage** and provide a unique ID to your file.
 
    The unique ID will be part of the generated download URL that Bitrise stores as an Environment Variable.
 6. Upload the file by clicking **Upload file**.
@@ -41,8 +42,8 @@ Now you can use this file in a variety of ways in your build - read more in [the
 
 Once a file is uploaded, it can also be:
 
-* downloaded by anyone who has Admin or Owner role on the app's team on Bitrise, unless [it is protected](/protecting-your-code-signing-files/)
-* exposed to Pull Request builds
+* Downloaded by anyone who has [Admin or Owner role](/team-management/user-roles-on-app-teams/) on the app's team on Bitrise, unless [it is protected](/protecting-your-code-signing-files/).
+* Exposed to pull request builds.
 
 ### Code signing files
 
