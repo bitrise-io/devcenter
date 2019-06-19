@@ -6,7 +6,7 @@ summary: ''
 published: false
 
 ---
-Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week. Check out our Stacks in our [system reports Github site](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports).
+Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week. Check out our stacks in our [system reports Github site](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports).
 
 ## Xcode stacks
 
@@ -15,7 +15,7 @@ We use two types of Xcode stacks; Stable stacks and Edge stacks.
 * Xcode Stable stacks are **built once, and are not updated** at all (except with Bitrise CLI related updates, [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) and with critical fixes). These stacks are designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
 * Xcode "Edge" stack is **re-built every week**. It includes the latest-and-greatest versions of the pre-installed tools and the [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates). The stack uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
 
-### **About dependency manager cache updates**
+### About dependency manager cache updates
 
 All of the macOS stacks receive a dependency manager cache update (brew, cocoapods and bitrise CLI) every week. These cache updates do not change the pre-installed tool versions, they **only update the package manager caches** for faster dependency installs.
 
