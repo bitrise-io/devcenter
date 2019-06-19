@@ -83,30 +83,30 @@ You can also check out what other code signing options you have at Bitrise in ou
 
 ### Deploying to bitrise.io
 
-This step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
+This step uploads all the artifacts related to your build into the [ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
 
-You can share the generated apk with your team members using the build's URL. You can also notify user groups or individual users that your apk has been built.
+You can share the generated apk with your team members using the build's URL. You can also notify user groups or individual users that your APK has been built.
 
-1. Go to the `Deploy to bitrise.io` step.
-2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated apk in the `APPS & ARTIFACTS` tab.
+1. Go to the **Deploy to bitrise.io** Step.
+2. In the **Notify: User Roles**, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret Environment Variables](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated APK in the **APPS & ARTIFACTS** tab.
 
 ### Deploying to Google Play Store
 
-If you add `Google Play Deploy` step to your workflow (after the `Android Sign` step), your signed apk will get uploaded to a marketplace of your choice.
+If you add **Google Play Deploy** step to your workflow (after the **Android Sign** Step), your signed APK will get uploaded to Google Play Store.
 
 1. Make sure you are in sync with Google Play Store! Learn how to
    * [register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
    * set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
-2. In your Bitrise `Dashboard`, go to `Code Signing` and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+2. In your Bitrise Dashboard, go to **Code Signing** and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 3. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Go back to the `Google Play Deploy` step in your Workflow Editor.
+4. Go back to the **Google Play Deploy** Step in your Workflow Editor.
 5. Fill out the required input fields as follows:
-   * `Service Account JSON key file path`:  This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   * `Package name`: the package name of your Android app
-   * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
+   * **Service Account JSON key file path**:  This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
+   * **Package name**: the package name of your Android app.
+   * **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
 
-{% include message_box.html type="info" title="Other deploy steps you can add to your workflow" content="Click the `+` sign on the left side of your Workflow and select another `DEPLOY` step from our collection, for example, `Appetize.io deploy` or `Amazon Device Farm File Directory`, if you wish. "%}
+{% include message_box.html type="info" title="Other deploy steps you can add to your workflow" content="Click the **+** sign on the left side of your Workflow and select another deploy Step from our collection, for example, **Appetize.io deploy** or **Amazon Device Farm File Directory**, if you wish. "%}
 
 That's all! Start or schedule a build and share the URL with external testers or distribute your app on an app store of your choice!
