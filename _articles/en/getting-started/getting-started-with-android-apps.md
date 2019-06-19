@@ -73,6 +73,21 @@ If you selected instrumentation, don't forget to set **Test APK path** under t
 
 {% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow and select another `TEST` step from our collection."%}
 
+## Signing your Android project
+
+1. Select your deployment workflow at the **WORKFLOW** dropdown menu in the top left corner of your apps’ Workflow Editor.
+2. Go to the **Code Signing** tab.
+3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
+4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click **Save metadata**.
+
+   With this information added to your **Code Signing** tab, our **Android Sign**Step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
+
+![](https://devcenter.bitrise.io/img/keystore.png)
+
+{% include message_box.html type="note" title="More on Android code signing" content="You should have the keystore password, keystore alias and the private key password available as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. You can learn more about the keystore file if you head over to [Android Studio’s guide on Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores).
+
+You can also check out what other code signing options you have at Bitrise in our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/)."%}
+
 ## Deploying your project
 
 ### Deploying to bitrise.io
