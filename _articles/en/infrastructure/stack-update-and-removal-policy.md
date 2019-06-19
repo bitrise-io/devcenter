@@ -35,8 +35,8 @@ For more information on what else we use for provisioning the macOS VMs, head ov
 
 The Android / Linux stacks are prepared with `docker`, using multiple separate docker images, built on top of each other. You can find these docker images on [GitHub](https://github.com/bitrise-docker).
 
-* The **Android (Ubuntu 16.04)** stack is a **rolling release stack**, rebuilt automatically from a base Ubuntu image.
-* The **Android LTS (Long Term Support) (Ubuntu 14.04)** image is a “frozen” version of a previous rolling release image, and is not updated at all (except with Bitrise CLI related updates and with critical fixes).
+* The **Android & Docker, on Ubuntu** stack is a **rolling release stack**, rebuilt automatically from a base Ubuntu image.
+* The **Android & Docker, on Ubuntu - LTS Stack** image is a “frozen” version of a previous rolling release image, and is not updated at all (except with Bitrise CLI related updates and with critical fixes).
 
 ## Hybrid (Visual Studio for Mac) stacks
 
