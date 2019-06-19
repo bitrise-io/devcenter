@@ -36,7 +36,7 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
     ![](/img/select_test.png)
  9. If you have an iOS project in your Flutter project, you will have to select an .ipa export method.
 
-    ![undefined](https://cdn.buttercms.com/rOAuKJ2jToSecv2pElocas7g)
+    ![undefined](https://cdn.buttercms.com/rOAuKJ2jToSecv2pEs7g)
 10. Register a [webhook](/webhooks/index/) when prompted.
 
     With a webhook, Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
