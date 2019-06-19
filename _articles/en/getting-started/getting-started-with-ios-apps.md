@@ -40,9 +40,9 @@ Developing for iOS is not always easy - our aim is to make it as simple as possi
 
 ## Running Xcode tests
 
-Once you created your app, the first build will run based on the automatically created **primary** workflow. You can check it out in the app's [Workflow Editor](/getting-started/getting-started-workflows): click the app's name on your Dashboard then click the `Workflow` tab.
+Once you created your app, the first build will run based on the automatically created **primary** workflow. You can check it out in the app's [Workflow Editor](/getting-started/getting-started-workflows): click the app's name on your Dashboard then click the **Workflow** tab.
 
-{% include message_box.html type="important" title="Test targets" content="If your app does not have test targets defined, the primary workflow will be the only automatically created workflow and it will NOT include the `Xcode Test for iOS` Step. "%}
+{% include message_box.html type="important" title="Test targets" content="If your app does not have test targets defined, the primary workflow will be the only automatically created workflow and it will NOT include the **Xcode Test for iOS** Step. "%}
 
 If you have test targets defined, the **primary** workflow of an iOS app includes the two [Steps](/getting-started/getting-started-steps) you need to run your Xcode tests, and view their results on [bitrise.io](https://bitrise.io):
 
