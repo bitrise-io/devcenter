@@ -90,7 +90,7 @@ We'll discuss the Steps specific to iOS and Android deployment in their respecti
 
 ### Deploying a Flutter app to Bitrise
 
-The **Deploy to bitrise.io** Step uploads all the artifacts related to your build into the [**APPS & ARTIFACTS**](/builds/build-artifacts-online/)tab on your Build’s page.
+The **Deploy to bitrise.io** Step uploads all the artifacts related to your build into the [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab on your Build’s page.
 
 You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
