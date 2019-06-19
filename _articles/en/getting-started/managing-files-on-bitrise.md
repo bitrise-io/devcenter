@@ -53,8 +53,7 @@ For Android apps, upload code signing files to the [Generic File Storage]().
 
 For iOS files, you need to use the dedicated menu options for provisioning profiles and code signing identities.
 
-* [Android code signing](/code-signing/android-code-signing/android-code-signing-procedures/)
-* [iOS code signing](/code-signing/ios-code-signing/code-signing/)
+Read more about [Android](/code-signing/android-code-signing/android-code-signing-procedures/) and [iOS code signing](/code-signing/ios-code-signing/code-signing/) in our detailed guides.
 
 {% include message_box.html type="info" title="Password protection for iOS code signing files" content="You can set a password in Xcode to store your code signing certificates securely. This password can be viewed on Bitrise: click on the eye icon next to the certificate file, in the **Password** field."%}
 
@@ -63,7 +62,7 @@ For iOS files, you need to use the dedicated menu options for provisioning profi
 Builds can generate and export files: for example, you can export a binary package file of your app with a Bitrise build. You can easily find these files:
 
 1. Open the build that you ran.
-2. Go to the Apps & Artifacts tab.
+2. Go to the **Apps & Artifacts** tab.
 3. View and download the generated files.
 
 You can read more about [build artifacts](/builds/build-artifacts-online/) in our detailed guide!
@@ -74,7 +73,7 @@ You can use encrypted files on Bitrise, easily and securely. All you need to do 
 
 In this example, we'll show how to do this. We use the **pwgen** password generator tool and **GPG** as the encryption software.
 
-{% include message_box.html type="important" title="GPG" content="Please note that the `Decrypt file` Step only decrypts files encrypted with GPG. If you use other encryption software, you will not be able to decrypt files on Bitrise."%}
+{% include message_box.html type="important" title="GPG" content="Please note that the **Decrypt file** Step only decrypts files encrypted with GPG. If you use other encryption software, you will not be able to decrypt files on Bitrise."%}
 
 1. Open your Terminal/Command Line.
 2. Create a 32 character passphrase for encryption.
