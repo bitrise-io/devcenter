@@ -18,10 +18,11 @@ Managing files on Bitrise allows you to upload files to use in your builds. You 
 
 ### Uploading files to use in your build
 
-If your build requires any files to make it work, upload them to the Generic File Storage. The Generic File Storage accepts any file type, all you need to do is provide a unique ID and upload the file. There are two restrictions:
+If your build requires any files to make it work, upload them to the **Generic File Storage**. The **Generic File Storage** accepts any file type, all you need to do is provide a unique ID and upload the file. 
 
+{% include message_box.html type="important" title="Restrictions on uploading a file to the Generic File Storage" content="
 * the file cannot be bigger than 5 MB
-* you can only store a total of 5 different files at the same time. If you want to upload more, you need to delete one of the files in the storage.
+* you can only store a total of 5 different files at the same time. If you want to upload more, you need to delete one of the files in the storage."%} 
 
 1. Go to the Dashboard.
 2. Open the app you want to add files to.
@@ -72,7 +73,7 @@ You can use encrypted files on Bitrise, easily and securely. All you need to do 
 
 In this example, we'll show how to do this. We use the **pwgen** password generator tool and **GPG** as the encryption software.
 
-{% include message_box.html type="important" title="GPG" content="Please note that the `Decrypt file` Step only decrypts files encrypted with GPG. If you use other encryption software, you will not be able to decrypt files on Bitrise."%} 
+{% include message_box.html type="important" title="GPG" content="Please note that the `Decrypt file` Step only decrypts files encrypted with GPG. If you use other encryption software, you will not be able to decrypt files on Bitrise."%}
 
 1. Open your Terminal/Command Line.
 2. Create a 32 character passphrase for encryption.
@@ -81,18 +82,15 @@ In this example, we'll show how to do this. We use the **pwgen** password genera
 3. Encrypt your file.
 
        gpg -c my_secret_file
-   
+
    Optionally, you can encrypt your file(s) in a non-interactive way.
-   
-   ```
-   gpg --batch --passphrase <passphrase> -c my_secret_file
-   ```
-   
+
+       gpg --batch --passphrase <passphrase> -c my_secret_file
 4. Upload `my_secret_file` to the Generic File Storage on Bitrise.
 5. Add the `Decrypt file` Step to your workflow.
 6. Add your passphrase as a [secret Environment Variable](/builds/env-vars-secret-env-vars/) and insert it to the relevant Step input.
-7. Add the encrypted file path and the output file path to the relevant Step inputs. 
+7. Add the encrypted file path and the output file path to the relevant Step inputs.
 
-   You can find the Environment Variable for the encrypted file path in the Generic File Storage. 
+   You can find the Environment Variable for the encrypted file path in the Generic File Storage.
 
 That's it! Once you run the build, the Step will decrypt your file and you can use it for whatever you need it for!
