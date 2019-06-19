@@ -6,7 +6,7 @@ summary: ''
 published: false
 
 ---
-Bitrise is powerful and complex - but getting started is easy and intuitive! You can kick off your first build within minutes of signing up. Let's go over what you need to do make that happen!
+Bitrise is powerful and complex - but getting started is easy and intuitive! You can kick off your first build within minutes of signing up. Let's go over what you need to do to make that happen!
 
 ## Signing up to Bitrise
 
@@ -90,6 +90,6 @@ You can also [create organizations](/team-management/organizations/creating-org)
 
 ## Testing and deployment
 
-Testing your app and deploying your app are both done with the help of our Steps: we have Steps dedicated to both these functions, based on the platform type. Unit testing, UI testing, and real device testing are all possible on Bitrise. 
+Testing your app and deploying your app are both done with the help of our Steps: we have Steps dedicated to both these functions, based on the platform type. Unit testing, UI testing, and real device testing are all possible on Bitrise.
 
-Once your app is tested, built and ready to go, you can quickly deploy it to the store of your choice. For example, Google Play or the App Store. 
+Once your app is tested, built and ready to go, you can quickly deploy it to the store of your choice, for example, Google Play or the App Store.
