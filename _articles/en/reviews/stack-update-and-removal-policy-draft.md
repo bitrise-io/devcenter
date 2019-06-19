@@ -1,22 +1,12 @@
 ---
-title: 'Stack update and removal policy '
+tag: []
+title: 'Stack update and removal policy - draft '
 redirect_from: []
-date: '2019-02-05T15:39:10.000+00:00'
-tag:
-- infrastructure
-- builds
-- xcode
-- android
-- linux
-summary: Stacks on bitrise.io are generally updated every weekend, but what’s updated
-  depends on the stack. There are stacks where only certain caches are updated and
-  there are stacks which are completely re-built every week.
-menu:
-  infrastructure-main:
-    weight: 4
+summary: ''
+published: false
 
 ---
-Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week. Check out our Stacks in our [system reports Github site](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports).
+Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every weekend, but what’s updated depends on the stack. There are stacks where only certain caches are updated and there are stacks which are completely re-built every week. Check out our stacks in our [system reports Github site](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports).
 
 ## Xcode stacks
 
@@ -25,7 +15,7 @@ We use two types of Xcode stacks; Stable stacks and Edge stacks.
 * Xcode Stable stacks are **built once, and are not updated** at all (except with Bitrise CLI related updates, [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) and with critical fixes). These stacks are designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
 * Xcode "Edge" stack is **re-built every week**. It includes the latest-and-greatest versions of the pre-installed tools and the [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates). The stack uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
 
-### **About dependency manager cache updates**
+### About dependency manager cache updates
 
 All of the macOS stacks receive a dependency manager cache update (brew, cocoapods and bitrise CLI) every week. These cache updates do not change the pre-installed tool versions, they **only update the package manager caches** for faster dependency installs.
 
@@ -92,20 +82,19 @@ When the first **final (non beta) version** of the new major Xcode version is re
 
 This means that the latest patch release version of Xcode is **supported for about 2.5 years**, in sync with Xcode major version releases.
 
-### Hybrid Stacks
+### Visual Studio for Mac stacks
 
-Altogether we have 4 Hybrid stacks:
+We have the following Visual Studio for Mac (vs4mac) stacks:
 
-* The **Hybrid Visual Studio for Mac Stable** and **Hybrid Visual Studio for Mac Beta** Stacks are updated every weekend with the current Visual Studio 4 Mac Stable and Beta releases.
-* The **Hybrid stack, with both Android tools and Xcode 8** is affected by a long term support and deprecation policy, so it only gets the latest Bitrise CLI and critical updates.
-* The **Previous Hybrid stack with Xamarin and vs4mac** is kept on the previous version of Visual Studio for Mac.
+* The **Visual Studio for Mac, Stable** **channel** and **Visual Studio for Mac, Beta channel** Stacks are updated every weekend with the current Visual Studio for Mac Stable and Beta releases.
+* The **Previous Visual Studio for Mac, Stable channel** stack is kept on the previous version of Visual Studio for Mac.
 
 So when a new version of Visual Studio for Mac (vs4mac) comes out:
 
-* the current vs4mac Stable becomes the Previous Hybrid stack with Xamarin and vs4mac and
-* the current Previous Hybrid stack with Xamarin and vs4mac gets deprecated.
+* the current **Visual Studio for Mac Stable** becomes the Previous vs4mac stack
+* the current **Previous Visual Studio for Mac, Stable channel** stack gets deprecated.
 
-This means that the **Hybrid Visual Studio for Mac Stable** is **supported for about 1 year**, in sync with the major Xcode version releases.
+This means that the **Visual Studio for Mac, Stable channel** is supported for about 1 year, in sync with the major Xcode version releases.
 
 ### Android/Linux Stacks
 

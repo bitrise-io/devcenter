@@ -28,6 +28,10 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/stack-update-and-removal-policy-draft.md
+- _articles/en/reviews/android-tools-available-on-xcode-stacks.md
+- _articles/en/getting-started/code-security.md
+- _articles/en/reviews/Index files/quick-start-guide-to-bitrise-update.md
 - _articles/en/reviews/Index files/builds-index.md
 - _articles/jp/testing/exporting-to-test-reports-from-custom-script-steps.md
 - _articles/en/testing/exporting-to-test-reports-from-custom-script-steps.md
@@ -157,7 +161,6 @@ pages:
 - _articles/en/getting-started/getting-started-with-android-apps.md
 - _articles/en/getting-started/getting-started-with-ios-apps.md
 - _articles/en/getting-started/builds-and-workflows.md
-- _articles/en/getting-started/code-security.md
 - _articles/en/getting-started/account-security.md
 - _articles/en/steps-and-workflows/getting-started-workflows.md
 - _articles/en/steps-and-workflows/getting-started-steps.md
