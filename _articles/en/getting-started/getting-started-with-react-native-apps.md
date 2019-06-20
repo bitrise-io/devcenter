@@ -151,8 +151,8 @@ If all goes well, your app will be submitted to iTunes Connect and you can distr
 
 {% include message_box.html type="important" title="Make sure you are in sync with Google Play Store!" content="Learn how to:
 
-* [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#registering-to-google-play-store-and-setting-up-your-first-project)
-* Set up [Google Play API access](/tutorials/deploy/android-deployment/#setting-up-google-play-api-access)"%}
+* [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#registering-to-google-play-store-and-setting-up-your-first-project).
+* Set up [Google Play API access](/tutorials/deploy/android-deployment/#setting-up-google-play-api-access)."%}
 
 1. In your Bitrise **Dashboard**, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 
