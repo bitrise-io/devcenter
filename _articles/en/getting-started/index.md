@@ -62,7 +62,7 @@ Tell Bitrise where the code of your app is stored. You can either:
 
 * [Connect a repository from a connected GitHub/GitLab/Bitbucket account](/getting-started/adding-a-new-app/connecting-a-repository). Bitrise will then automatically display all the available repositories from the selected service, all you need to do is choose one.
 * Manually add the location of the source code: choose the `Other/Manual` option then paste an **HTTPS git clone URL**.
-* You can also use a repository that is on [a self-hosted GitLab instance](getting-started/signing-up/self-hosted-gitlab).
+* You can also use a repository that is on [a self-hosted GitLab instance](getting-started/self-hosted-gitlab/).
 
 **Why does Bitrise need write permissions on Github/Bitbucket/GitLab?** Connecting your GitHub/GitLab/Bitbucket account gives Bitrise write permission to the repositories. There are two things that Bitrise couldn't do without it:
 

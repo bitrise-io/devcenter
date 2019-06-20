@@ -71,7 +71,7 @@ You have to add the Git URL of the repository you would like to connect.
 
 ## Setting up SSH keys
 
-SSH keys serve the role of secure transfer between services. In the case of Bitrise, it asks for your permission to be authorized at your Git provider, for example, GitHub. Read more about how to [authorize Bitrise](/getting-started/adding-a-new-app/connecting-a-repository).
+SSH keys serve the role of secure transfer between services. In the case of Bitrise, it asks for your permission to be authorized at your Git provider, for example, GitHub. 
 
 Being authorized is important as Bitrise has to have a working SSH connection to your repository to be able to clone it. There are several ways to make it work. Automatically, by adding it manually, or by using your own key.
 
@@ -123,7 +123,7 @@ This option can be used if you also have the private key of the given user. You 
 
 ## Setting up configuration
 
-After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for your project, Bitrise downloads your code to make sure it can access the repository. It also runs an automatic repository scanner script to find the best initial configuration for your project. Currently Bitrise detect iOS, Android, Xamarin, Ionic, Cordova, Flutter, React Native and fastlane projects out of the box.
+After [Setting up the SSH key](/getting-started/adding-a-new-app/#setting-up-ssh-keys) for your project, Bitrise downloads your code to make sure it can access the repository. It also runs an automatic repository scanner script to find the best initial configuration for your project. Currently Bitrise detect iOS, Android, Xamarin, Ionic, Cordova, Flutter, React Native and fastlane projects out of the box.
 
 You can configure other types of projects too, but that requires manual configuration.
 

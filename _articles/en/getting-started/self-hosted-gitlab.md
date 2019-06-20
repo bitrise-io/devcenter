@@ -15,7 +15,7 @@ menu:
     weight: 12
 
 ---
-For organizations, Bitrise supports connecting to self-hosted GitLab instances. Connecting is simple, and once it's done, you can add apps to Bitrise from privately hosted repositories [in the usual way](/getting-started/adding-a-new-app). All functions that you got used to with publicly hosted repositories will be available!
+For organizations, Bitrise supports connecting to self-hosted GitLab instances. Connecting is simple, and once it's done, you can add apps to Bitrise from privately hosted repositories [in the usual way](/getting-started/adding-a-new-app/). All functions that you got used to with publicly hosted repositories will be available!
 
 Setting up an app that is in a self-hosted GitLab repository is very simple: Bitrise needs to be authorized as an application for the entire GitLab instance and then the **Application Id** and the **Secret** value belonging to the Bitrise OAuth application must be added to the organization on [bitrise.io](https://www.bitrise.io).
 
@@ -56,4 +56,4 @@ Before you start, make sure you [created an OAuth application](/getting-started/
 4. If you haven't provided your self-hosted GitLab credentials to the organization before, you can do it at this stage.
 5. Click `Connect`.
 
-Once connected, proceed as usual to [setting up your project configuration](/adding-a-new-app/setting-up-configuration).
+Once connected, proceed as usual to [setting up your project configuration](/adding-a-new-app/).
