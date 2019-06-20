@@ -123,7 +123,7 @@ This option can be used if you also have the private key of the given user. You 
 
 ## Setting up configuration
 
-After [Setting up the SSH key](/adding-a-new-app/setting-up-ssh-keys) for your project, Bitrise downloads your code to make sure it can access the repository. It also runs an automatic repository scanner script to find the best initial configuration for your project. Currently Bitrise detect iOS, Android, Xamarin, Ionic, Cordova, Flutter, React Native and fastlane projects out of the box.
+After [Setting up the SSH key](/getting-started/adding-a-new-app/#setting-up-ssh-keys) for your project, Bitrise downloads your code to make sure it can access the repository. It also runs an automatic repository scanner script to find the best initial configuration for your project. Currently Bitrise detect iOS, Android, Xamarin, Ionic, Cordova, Flutter, React Native and fastlane projects out of the box.
 
 You can configure other types of projects too, but that requires manual configuration.
 
