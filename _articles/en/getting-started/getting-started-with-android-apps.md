@@ -96,8 +96,8 @@ If you add **Google Play Deploy** step to your workflow (after the **Android Sig
 
 {% include message_box.html type="important" title="Make sure you are in sync with Google Play Store!" content="Learn how to:
 
-* [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#registering-to-google-play-store-and-setting-up-your-first-project)
-* Set up [Google Play API access](/tutorials/deploy/android-deployment/#setting-up-google-play-api-access)"%}
+* [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#registering-to-google-play-store-and-setting-up-your-first-project).
+* Set up [Google Play API access](/tutorials/deploy/android-deployment/#setting-up-google-play-api-access)."%}
 
 2. In your Bitrise Dashboard, go to **Code Signing** and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 3. Copy the env key which stores your uploaded file’s url.
