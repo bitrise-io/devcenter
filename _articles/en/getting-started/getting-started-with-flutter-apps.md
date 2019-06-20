@@ -33,10 +33,10 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
     We look for your configuration files and set up your app based on them. In the case of Flutter apps, you definitely need a `pubspec.yaml` file in your project.
  8. If your app has tests in the repository, you will be prompted to decide if you want to run them.
 
-    ![](/img/select_test.png)
+    ![](/img/flutter-project-build-config.jpg)
  9. If you have an iOS project in your Flutter project, you will have to select an .ipa export method.
 
-    ![undefined](https://cdn.buttercms.com/rOAuKJ2jToSecv2pEs7g)
+    ![](/img/flutter-select-export-method.jpg)
 10. Register a [webhook](/webhooks/index/) when prompted.
 
     With a webhook, Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
@@ -162,7 +162,6 @@ Once that is done, you are ready to configure a workflow to deploy the app.
 
 * [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#registering-to-google-play-store-and-setting-up-your-first-project).
 * Set up [Google Play API access](/tutorials/deploy/android-deployment/#setting-up-google-play-api-access)."%}
-  
 
 1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
 2. Copy the env key which stores your uploaded file’s url.
