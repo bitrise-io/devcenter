@@ -67,7 +67,7 @@ You can use our automatically generated **primary** workflow to test your Flutte
 
    The default value is the the Environment Variable (Env Var) created for your Flutter project's location.
 
-Run a build! Once it's done, you can find your test results on the [**APPS & ARTIFACTS**](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of the **Build** page of the app.
+Run a build! Once it's done, you can find your test results on the [**APPS & ARTIFACTS**](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of the Build's page of the app.
 
 ## Deploying a Flutter app
 
@@ -94,7 +94,7 @@ The **Deploy to bitrise.io** Step uploads all the artifacts related to your bu
 
 You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
-1. Go to the **Deploy to bitrise.io** step.
+1. Go to the **Deploy to bitrise.io** Step.
 2. In the **Notify: User Roles**, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret Environment Variables](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated APK/.ipa file in the **APPS & ARTIFACTS** tab.
 
 ### Deploying a Flutter app to App Store Connect
@@ -153,28 +153,29 @@ In this guide, we'll walk you through the other option: how to sign your APK fil
 
 1. Open your app's Workflow Editor.
 2. Go to the **Code Signing** tab.
-3. Drag-and-drop your keystore file to the `ANDROID KEYSTORE FILE` field.
+3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
 4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click **Save metadata**.
 
 Once that is done, you are ready to configure a workflow to deploy the app.
 
-1. Make sure you are in sync with Google Play Store!
+{% include message_box.html type="important" title="Make sure you are in sync with Google Play Store!" content="Learn how to:
 
-   Learn how to:
-   * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
-2. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-3. Copy the env key which stores your uploaded file’s url.
+* [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#registering-to-google-play-store-and-setting-up-your-first-project)
+* Set up [Google Play API access](/tutorials/deploy/android-deployment/#setting-up-google-play-api-access)"%}
+  
+
+1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Make sure you have the **Android Sign** Step in your workflow.
+3. Make sure you have the **Android Sign** Step in your workflow.
 
    It should be after the **Flutter Build** Step.
-5. Open the **Flutter Build** Step and find the **Android Platform Configs** input group.
-6. Make sure the **Additional parameters** input has the value `--release`.
-7. Check the **Platform** input of the Step: make sure it's set to either `android` or `both`.
-8. Make sure you have the **Google Play Deploy** Step after the **Android Sign** Step to your workflow.
-9. Fill out the required input fields as follows:
+4. Open the **Flutter Build** Step and find the **Android Platform Configs** input group.
+5. Make sure the **Additional parameters** input has the value `--release`.
+6. Check the **Platform** input of the Step: make sure it's set to either `android` or `both`.
+7. Make sure you have the **Google Play Deploy** Step after the **Android Sign** Step to your workflow.
+8. Fill out the required input fields as follows:
    * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * **Package name**: the package name of your Android app
    * **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
