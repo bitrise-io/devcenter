@@ -129,7 +129,7 @@ The **Deploy to bitrise.io** Step uploads all the artifacts related to your buil
 
 ## Deploying to an app store
 
-## Deploying to your iOS app iTunes Connect
+### Deploying to your iOS app iTunes Connect
 
 If you wish to deploy your iOS app, follow the instructions in [Code sign your iOS project for deployment](https://devcenter.bitrise.io/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
 
@@ -147,12 +147,12 @@ If you wish to deploy your iOS app, follow the instructions in [Code sign your i
 
 If all goes well, your app will be submitted to iTunes Connect and you can distribute it via Testflight or via the App Store!
 
-## Deploying your Android app to Google Play Store
+### Deploying your Android app to Google Play Store
 
-{% include message_box.html type="important" title="Are you in sync with Google Play Store" content="Learn how to:
+{% include message_box.html type="important" title="Make sure you are in sync with Google Play Store!" content="Learn how to:
 
-* [Register to Google Play Store and set up your project](https://play.google.com/store).
-* Set up [Google Play API access](https://developers.google.com/android-publisher/getting_started)."%}
+* [Register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#registering-to-google-play-store-and-setting-up-your-first-project).
+* Set up [Google Play API access](/tutorials/deploy/android-deployment/#setting-up-google-play-api-access)."%}
 
 1. In your Bitrise **Dashboard**, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 
