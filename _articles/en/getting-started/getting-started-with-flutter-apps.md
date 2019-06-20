@@ -45,11 +45,11 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
 
 You can write and run unit-, widget-, and integration tests with Flutter. For more information, check out [Flutter's official documentation](https://flutter.io/docs/testing).
 
-You can use our automatically generated **primary** workflow to test your Flutter app. By default, it will include the **Flutter Analyze** Step which runs static code tests.
+You can use our automatically generated **primary** Workflow to test your Flutter app. By default, it will include the **Flutter Analyze** Step which runs static code tests.
 
-{% include message_box.html type="info" title="Flutter tests" content="If you have tests in your repository, and selected **yes** when prompted, during app creation, whether you want to run these tests, the primary workflow will include the **Flutter Test** Step by default. If you add tests to your app later, add the **Flutter Test** Step to your workflow manually."%}
+{% include message_box.html type="info" title="Flutter tests" content="If you have tests in your repository, and selected **yes** when prompted, during app creation, whether you want to run these tests, the primary Workflow will include the **Flutter Test** Step by default. If you add tests to your app later, add the **Flutter Test** Step to your Workflow manually."%}
 
-1. Open your app's Workflow Editor and open the **primary** workflow.
+1. Open your app's Workflow Editor and open the **primary** Workflow.
 2. In the **Flutter Install** Step, fill in the **Flutter SDK Version** input.
 
    You can specify either tags or branches of the Flutter SDK's git repository. The default value is `stable`. This will use the latest stable branch of Flutter.
@@ -71,22 +71,22 @@ Run a build! Once it's done, you can find your test results on the [**APPS & ART
 
 ## Deploying a Flutter app
 
-To build and deploy a Flutter app, a workflow must contain these Flutter Steps:
+To build and deploy a Flutter app, a Workflow must contain these Flutter Steps:
 
 * **Flutter Install**
 * **Flutter Build**
 
-If you have platforms specified in your repository, a **deploy** workflow will be automatically generated when adding the app on Bitrise. The content of this workflow depends on the platforms: for example, if your app contains only an iOS project, the workflow will contain the **Certificate and profile installer** and the **Xcode Archive & Export for iOS** Steps.
+If you have platforms specified in your repository, a **deploy** Workflow will be automatically generated when adding the app on Bitrise. The content of this Workflow depends on the platforms: for example, if your app contains only an iOS project, the Workflow will contain the **Certificate and profile installer** and the **Xcode Archive & Export for iOS** Steps.
 
-You can build both iOS and Android projects at the same time or you can build them separately, each using their own workflow. You can set this in the **Platform** input of the **Flutter Build** Step any time. By default, the Step is configured according to the platform or platforms that the scanner detected when adding the app on Bitrise.
+You can build both iOS and Android projects at the same time or you can build them separately, each using their own Workflow. You can set this in the **Platform** input of the **Flutter Build** Step any time. By default, the Step is configured according to the platform or platforms that the scanner detected when adding the app on Bitrise.
 
-Here's an example workflow we'll use in this configuration, with all the necessary Steps:
+Here's an example Workflow we'll use in this configuration, with all the necessary Steps:
 
 ![](/img/flutter-getting-started.jpg)
 
 We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
 
-{% include message_box.html type="note" title="Packages and libraries" content="We also support building Flutter packages and libraries. Unlike in the case of apps, there is no artifact to build so there is no need for a **Flutter Build** Step in your workflow."%}
+{% include message_box.html type="note" title="Packages and libraries" content="We also support building Flutter packages and libraries. Unlike in the case of apps, there is no artifact to build so there is no need for a **Flutter Build** Step in your Workflow."%}
 
 ### Deploying a Flutter app to Bitrise
 
@@ -124,16 +124,16 @@ Once you created your iOS project locally, you will need to review the project s
 
 #### Configuring deployment on Bitrise
 
- 1. Make sure you have the **Certificate and profile installer** Step in your workflow.
+ 1. Make sure you have the **Certificate and profile installer** Step in your Workflow.
  2. [Upload the required code signing files](/code-signing/ios-code-signing/ios-manual-provisioning/) to Bitrise.
  3. Open the **Flutter Build** Step and find the **iOS Platform Configs** input group.
  4. Make sure the **Additional parameters** input has the value `--release`.
  5. Check the **Platform** input of the Step: make sure it's set to either `iOS` or `both`.
- 6. Make sure you have the **Xcode Archive & Export for iOS** Step in your workflow.
+ 6. Make sure you have the **Xcode Archive & Export for iOS** Step in your Workflow.
 
     It should be after the **Flutter Build** Step.
  7. Set the **Select method for export** input of the Step to **app-store**.
- 8. Add the **Deploy to iTunes Connect** Step to the end of the workflow.
+ 8. Add the **Deploy to iTunes Connect** Step to the end of the Workflow.
  9. Provide your Apple credentials in the respective input fields.
     * Apple ID
     * password or, if you use two-factor authentication on iTunes Connect, your application password.
@@ -156,7 +156,7 @@ In this guide, we'll walk you through the other option: how to sign your APK fil
 3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
 4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click **Save metadata**.
 
-Once that is done, you are ready to configure a workflow to deploy the app.
+Once that is done, you are ready to configure a Workflow to deploy the app.
 
 {% include message_box.html type="important" title="Make sure you are in sync with Google Play Store!" content="Learn how to:
 
@@ -167,13 +167,13 @@ Once that is done, you are ready to configure a workflow to deploy the app.
 2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Make sure you have the **Android Sign** Step in your workflow.
+3. Make sure you have the **Android Sign** Step in your Workflow.
 
    It should be after the **Flutter Build** Step.
 4. Open the **Flutter Build** Step and find the **Android Platform Configs** input group.
 5. Make sure the **Additional parameters** input has the value `--release`.
 6. Check the **Platform** input of the Step: make sure it's set to either `android` or `both`.
-7. Make sure you have the **Google Play Deploy** Step after the **Android Sign** Step to your workflow.
+7. Make sure you have the **Google Play Deploy** Step after the **Android Sign** Step to your Workflow.
 8. Fill out the required input fields as follows:
    * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the Env Var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * **Package name**: the package name of your Android app
