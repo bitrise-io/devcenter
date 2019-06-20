@@ -53,8 +53,8 @@ You can use our automatically generated **primary** workflow to test your Flutte
 2. In the **Flutter Install** Step, fill in the **Flutter SDK Version** input.
 
    You can specify either tags or branches of the Flutter SDK's git repository. The default value is `stable`. This will use the latest stable branch of Flutter.
-   * To find the available version tags, check: [https://github.com/flutter/flutter/releases](https://github.com/flutter/flutter/releases "https://github.com/flutter/flutter/releases")
-   * To see the the available branches, check: [https://github.com/flutter/flutter/branches](https://github.com/flutter/flutter/branches "https://github.com/flutter/flutter/branches")
+   * To find the available version tags, check: [https://github.com/flutter/flutter/releases](https://github.com/flutter/flutter/releases "https://github.com/flutter/flutter/releases").
+   * To see the the available branches, check: [https://github.com/flutter/flutter/branches](https://github.com/flutter/flutter/branches "https://github.com/flutter/flutter/branches").
 3. To the **Flutter Analyze** Step, add any flags you wish to use to the **Additional parameters** input.
 
    The Step runs the `flutter analyze` command with the specified flags. To check the available flags, open a command line interface on your own machine and run `flutter analyze --help`.
@@ -65,9 +65,9 @@ You can use our automatically generated **primary** workflow to test your Flutte
    ![](/img/flutter_test.png)
 5. Make sure the **Project Location** input of the **Flutter Test** Step is correct.
 
-   The default value is the the Environment Variable created for your Flutter project's location.
+   The default value is the the Environment Variable (Env Var) created for your Flutter project's location.
 
-Run a build! Once it's done, you can find your test results on the **Apps and Artifacts** tab of the **Build** page of the app.
+Run a build! Once it's done, you can find your test results on the [**APPS & ARTIFACTS**](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of the **Build** page of the app.
 
 ## Deploying a Flutter app
 
