@@ -71,7 +71,7 @@ You have to add the Git URL of the repository you would like to connect.
 
 ## Setting up SSH keys
 
-SSH keys serve the role of secure transfer between services. In the case of Bitrise, it asks for your permission to be authorized at your Git provider, for example, GitHub. Read more about how to [authorize Bitrise](/getting-started/adding-a-new-app/connecting-a-repository).
+SSH keys serve the role of secure transfer between services. In the case of Bitrise, it asks for your permission to be authorized at your Git provider, for example, GitHub. 
 
 Being authorized is important as Bitrise has to have a working SSH connection to your repository to be able to clone it. There are several ways to make it work. Automatically, by adding it manually, or by using your own key.
 
