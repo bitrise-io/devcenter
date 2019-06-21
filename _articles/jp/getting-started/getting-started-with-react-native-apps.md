@@ -9,7 +9,7 @@ BitriseではReact Nativeプロジェクトを簡単にセットアップ・構�
 
 ## React Nativeプロジェクトのセットアップ前に
 
-まず[bitrise.io](https://www.bitrise.io)にサインアップしていることを確認し、Bitriseアカウントにアクセスできることを確認してください。もしまだであれば、それを完了するための[４つの方法](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)がございます。
+まず[bitrise.io](https://www.bitrise.io)にサインアップしていることを確認し、Bitriseアカウントにアクセスできることを確認してください。もしまだであれば、それを完了するための[４つの方法](/jp/getting-started/index#signing-up-to-bitrise)がございます。
 
 ## bitrise.ioにReact Nativeプロジェクトを追加する
 
@@ -17,18 +17,18 @@ BitriseではReact Nativeプロジェクトを簡単にセットアップ・構�
 
 1. bitrise.io にログインする
 2. `Add a new app` をクリックします。
-3. アプリのプライバシー設定を行う：**private** もしくは [**public**](/getting-started/adding-a-new-app/public-apps/)
+3. アプリのプライバシー設定を行う：**private** もしくは [**public**](/jp/getting-started/public-apps/)
 4. あなたのレポジトリをホストするGitホスティングサービスを選びます。その後、プロジェクトをホストするご自身のレポジトリを選択してください。詳しくは[レポジトリを接続する](/getting-started/adding-a-new-app/connecting-a-repository/)をお読みください。
 5. レポジトリのアクセス設定が完了したら、`No, auto-add SSH key`をクリックします。詳しくは[SSH keys](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-ssh-keys/)をお読みください。
 6. プロジェクトのコンフィギュレーションに含まれるブランチの名前を入力します（例：master）。選んだら`Next` をクリックします。
 7. `Validating repository` では、自動的にレポスキャナーが発動しプロジェクトの最適なコンフィグをセットアップします。
 8. `Project build configuration` では、お好きなビルド設定を選択してください。
-   * React Native プロジェクトでは、選択した**project type**として`React Native` を確認することができます。スキャンが失敗しproject typeが自動的に選択されていない場合、[手動によるプロジェクト設定](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration)を行えます。Androidが自動的に`The root directory of an Android app` 上で選択されていることが確認できます。
+   * React Native プロジェクトでは、選択した**project type**として`React Native` を確認することができます。スキャンが失敗しproject typeが自動的に選択されていない場合、手動によるプロジェクト設定を行えます。Androidが自動的に`The root directory of an Android app` 上で選択されていることが確認できます。
    * プロジェクトに１つのモジュールだけが含まれている場合、そのモジュールは自動的に`Module`として選択されます。２つ以上のモジュールが含まれるプロジェクトでは、その中から１つモジュールを選択することができます。（一つのメインモジュールをおすすめします）
    * `Select variant for building` のフィールドでは、プロジェクトに合ったバリアントを選択してください。`Select All Variants`は全てのバリアントのビルドを行います。APKや.ipaファイルを生成する場合は、`debug` か `release` を選んでください。
    * `Project (or Workspace) path field` では、あなたのXcode project もしくは Xcode Workspace path を選択してください。
    * `Select Scheme name`  
-     スキャン検証はあなたのプロジェクト内にシェアされたスキームがないと失敗します。手動でXcode scheme をBitriseに追加することもできますが、仮にシェアされている状態であれば、自動的に探知します。詳しくは、[スキームに関する問題](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)をお読みください。
+     スキャン検証はあなたのプロジェクト内にシェアされたスキームがないと失敗します。手動でXcode scheme をBitriseに追加することもできますが、仮にシェアされている状態であれば、自動的に探知します。詳しくは、[スキームに関する問題](/jp/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)をお読みください。
    * `Select ipa export method` では、.ipaファイルのエクスポートする方法を選択します：`ad-hoc`、`app-store`、`development` か`enterprise` のいずれかを選ぶことができます。
 9. `Webhook setup`では、Webhookに登録済であれば、レポジトリにコードがプッシュされると毎回自動的にビルドが開始されます。
 
@@ -71,7 +71,7 @@ React Native アプリは２つのプロジェクト（Android と iOS）で構�
 
    `Code Signing`タブにこれらの情報が追加されてると、Bitriseの`Android Sign Step` （Androidデプロイワークフローにデフォルトで含まれています）がAPK署名の処理をするので、これで配布への準備は完了です！
 
-{% include message_box.html type="info" title="Androidコード署名についての詳しい情報" content=" コード署名のオプションについての詳しい情報は[Androidコード署名ガイド](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/)を参照してください。"%}
+{% include message_box.html type="info" title="Androidコード署名についての詳しい情報" content=" コード署名のオプションについての詳しい情報は[Androidコード署名ガイド](/jp/code-signing/android-code-signing/android-code-signing-procedures/)を参照してください。"%}
 
 ![](/img/android-code-signing-react.png)
 
@@ -81,9 +81,9 @@ React Native アプリは２つのプロジェクト（Android と iOS）で構�
 
 iOSプロジェクトのコード署名はエクスポートされた.ipaファイルの用途により異なります。ここのセクションでは、**内部のテスターによって登録されたデバイスでインストール・テスト**を行う際のコード署名を紹介します。テスター同士でプロジェクトの共有をするには、`development`のエクスポート手段を使用した.ipaファイルが必要です。
 
-.ipaファイルをapp storeへアップロードするには、[ここ](/getting-started-with-reactnative-apps/#sign-and-export-your-ios-project-for-deployment)を確認してください。
+.ipaファイルをapp storeへアップロードするには、ここを確認してください。
 
-{% include message_box.html type="note" title="自動プロビジョニング" content=" `Certificate and profile installe` ステップより手動によるプロビジョニング法についての手順を載せております。Bitriseは[自動プロビジョニング](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/)のサポートもしております。 "%}
+{% include message_box.html type="note" title="自動プロビジョニング" content=" `Certificate and profile installe` ステップより手動によるプロビジョニング法についての手順を載せております。Bitriseは[自動プロビジョニング](/jp/code-signing/ios-code-signing/ios-auto-provisioning/)のサポートもしております。 "%}
 
 必要な情報：
 
@@ -92,7 +92,7 @@ iOSプロジェクトのコード署名はエクスポートされた.ipaファ�
 * **Development**タイプのプロビジョニング・プロファイル
 
 1. あなたのプロジェクト上での、手動もしくは自動（Xcode）のいずれかのコード署名方法を設定します。ローカルで.ipaファイルの生成を行ってください。
-2. [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)を使ってコード署名ファイルの収集とアップロードを行ってください。このツールはBitriseへコード署名ファイルをアップロードすることも可能なので、この機能を使うことをおすすめします！
+2. [the codesigndoc tool](/jp/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)を使ってコード署名ファイルの収集とアップロードを行ってください。このツールはBitriseへコード署名ファイルをアップロードすることも可能なので、この機能を使うことをおすすめします！
 
    手動でアップロードすることもできます：Workflow Editorを開いて、`Code signing` タブを選択してください。その後、各自のフィールドにファイルのアップロードを行ってください。
 3. アプリのWorkflow Editorに進み上部左端にあるドロップダウンメニューの`WORKFLOW`内の`deploy`ワークフローを選択してください。
@@ -101,12 +101,12 @@ iOSプロジェクトのコード署名はエクスポートされた.ipaファ�
 
    となっています。この変数はアプリの作成中に選択したエキスポート手段を保存します。もし以前に`development`を選択していたら、ここではインプットを変更する必要はありません。そうでなければ、`development`にマニュアルでセットしてください。
 
-   _![Export method env var](https://devcenter.bitrise.io/img/export-method-envvar.png)_
-6. [ビルドを開始します](https://devcenter.bitrise.io/builds/starting-builds-manually/)。
+   _![Export method env var](/jp/img/export-method-envvar.png)_
+6. [ビルドを開始します](/jp/builds/starting-builds-manually/)。
 
 正確なコード署名ファイルがアップロードされていると、`Certificate and profile installer` ステップがあなたのコード署名ファイルをインストールし、`Xcode Archive & Export for iOS` ステップが**development export method** を用いて.ipa ファイルのエクスポートを行います。ワークフローに`Deploy to Bitrise.io` ステップがあれば、ビルドページ上の `APPS & ARTIFACTS` タブより.ipaファイルを見つけることができます。
 
-{% include message_box.html type="info" title="iOSコード署名について" content=" iOSコード署名は普通こんなに簡単ではありません。詳しくは[BitriseでiOSコード署名をする方法](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing)をご確認ください。"%}
+{% include message_box.html type="info" title="iOSコード署名について" content=" iOSコード署名は普通こんなに簡単ではありません。詳しくは[BitriseでiOSコード署名をする方法](/jp/code-signing/ios-code-signing/code-signing)をご確認ください。"%}
 
 ### iOSプロジェクトのデプロイ作業のための署名・エクスポート
 
@@ -118,11 +118,11 @@ TestflightとApp Storeへデプロイするためには、他のコード署名�
 * Provisioning Profile（プロビジョニングプロファイル）（App Store）
 
 1. ローカルマシンで、Xcode上でのプロジェクトのApp Storeコード署名をセットアップし、App Storeの.ipaファイルをエクスポートしてください。ローカルマシンで失敗すれば、Bitrise上でも間違いなく失敗しますのでお気をつけください！
-2. [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)を使ってコード署名ファイルの収集とアップロードを行ってください。
-3. アプリのWorkflow Editorより[新しいワークフロー](https://devcenter.bitrise.io/getting-started/getting-started-workflows/)を作成してください：`+ Worlflow` ボタンをクリック、新規のワークフロー名を入力し `deploy` を**BASED ON** ドロップダウンメニューより選択してください。この方法により、新規のワークフローがベーシックの`deploy`ワークフローのコピーになります。
+2. [the codesigndoc tool](/jp/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)を使ってコード署名ファイルの収集とアップロードを行ってください。
+3. アプリのWorkflow Editorより[新しいワークフロー](/jp/getting-started/getting-started-workflows/)を作成してください：`+ Worlflow` ボタンをクリック、新規のワークフロー名を入力し `deploy` を**BASED ON** ドロップダウンメニューより選択してください。この方法により、新規のワークフローがベーシックの`deploy`ワークフローのコピーになります。
 4. `Xcode Archive & Export for iOS` ステップより `Select method for export`のインプットを`app-store`にセットしてください。
 
-   ![App store export](https://devcenter.bitrise.io/img/app-store-export.png)
+   ![App store export](/img/app-store-export.png)
 
    Testflightへアプリのアップロードを行わずに外部のテスターにアプリを配布する場合、`ad-hoc`を選択しあなたのワークフロー上に`Deploy to Bitrise.io`ステップがあることを確認してください。
 
@@ -143,7 +143,7 @@ TestflightとApp Storeへデプロイするためには、他のコード署名�
 
 ## App Storeへのデプロイ
 
-iOSアプリのデプロイ作業を行う方は、[Code sign your iOS project for deployment](/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment)にあるステップに従ってください。
+iOSアプリのデプロイ作業を行う方は、Code sign your iOS project for deploymentにあるステップに従ってください。
 
 ### iOSアプリをTestflightあるいはiTunes Connect にデプロイする
 
@@ -158,7 +158,7 @@ iOSアプリのデプロイ作業を行う方は、[Code sign your iOS project f
    * パスワード、もしくはiTunes Connectの二要素認証を使用している場合はアプリのパスワード
 
    パスワードがログ上で見えたりすることはありませんのでご安心ください。（[それ故SENSITIVEがマークされております](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars#about-secrets)）
-2. [ビルドを開始します](/builds/Starting-builds-manually/)。
+2. [ビルドを開始します](/jp/builds/Starting-builds-manually/)。
 
    全てが成功すれば、アプリをTestflightで確認することができます。そこから、外部テスターへ配布したり、App Storeに出品することも可能です。
 
@@ -168,9 +168,9 @@ iOSアプリのデプロイ作業を行う方は、[Code sign your iOS project f
 
 1. Google Play ストアに同期されていることを確認してください。
 
-   ・[Google Play ストアへの登録・プロジェクトのセットアップ](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+   ・[Google Play ストアへの登録・プロジェクトのセットアップ](/jp/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
 
-   ・[Google Play APIアクセス](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)のセットアップ
+   ・[Google Play APIアクセス](/jp/tutorials/deploy/android-deployment/#set-up-google-play-api-access)のセットアップ
 2. Bitriseの`Dashboard`で、`Code Signing` タブに進み`GENERIC FILE STORAGE` にサービスアカウントのJSONキーをアップロードします。
 3. アップロードしたファイルのURLを保存しているenvキーをコピーします。例：`BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 4. `Android Sign` ステップがデプロイワークフローにあることを確認したら、`Google Play Deploy` ステップを追加します。
