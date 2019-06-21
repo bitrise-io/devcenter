@@ -42,7 +42,7 @@ Now you can use this file in a variety of ways in your build - read more in [the
 
 Once a file is uploaded, it can also be:
 
-* Downloaded by anyone who has [Admin or Owner role](/team-management/user-roles-on-app-teams/) on the app's team on Bitrise, unless [it is protected](/protecting-your-code-signing-files/).
+* Downloaded by anyone who has [Admin or Owner role](/team-management/user-roles-on-app-teams/) on the app's team on Bitrise, unless [it is protected](/code-signing/ios-code-signing/protecting-your-code-signing-files/).
 * Exposed to pull request builds.
 
 ### Code signing files
