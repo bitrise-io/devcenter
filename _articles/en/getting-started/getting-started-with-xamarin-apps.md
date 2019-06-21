@@ -148,7 +148,7 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 1. Go to the **Workflows** tab of the Workflow Editor.
 2. Select the workflow you created for deploying your app.
 3. Check that the code signing Steps and the **Xamarin Archive** Step are included in the workflow.
-4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the **Env Var** tab. You can check out which Env Vars you need to change in the inputs of the **Xamarin Archive** Step.
+4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the **Env Var** tab. You can check out which Env Vars you need to change in the inputs of the **Xamarin Archive** Step.
 5. Add the **Deploy to iTunes Connect - Application Loader** Step to your workflow.
 
    ![](/img/deploy-itunes-connect.jpg)
