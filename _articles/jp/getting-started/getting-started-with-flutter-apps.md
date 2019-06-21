@@ -1,6 +1,6 @@
 ---
 title: Flutterアプリの開始
-date: '2019-03-08T15:17:45.000+00:00'
+date: 2019-03-08T15:17:45.000+00:00
 redirect_from: []
 tag: []
 summary: ''
@@ -16,13 +16,13 @@ FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、
 
 ## Flutterアプリを追加
 
-{% include message_box.html type="note" title="ビットライズのアカウントはありますか？" content=" [bitrise.io](https://www.bitrise.io)でサインアップしているかを確認しBitriseアカウントにアクセスしてください。[4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)をクリックしBitriseアカウントとGit service providerのアカウントとコネクトする方法をチェックしてください。 "%}
+{% include message_box.html type="note" title="ビットライズのアカウントはありますか？" content=" [bitrise.io](https://www.bitrise.io)でサインアップしているかを確認しBitriseアカウントにアクセスしてください。[4 ways](/jp/getting-started/index/)をクリックしBitriseアカウントとGit service providerのアカウントとコネクトする方法をチェックしてください。 "%}
 
  1. トップメニューにある`+`をクリックし`Add app`セレクトします。
  2. `Create New App`ページでアプリに追加したいアカウントを選びます。
- 3. アプリのプライバシーをPrivateまたは[Public](/getting-started/adding-a-new-app/public-apps)に設定します。`Next`をクリックします。
- 4. リポジトをホストするGitホスティングサービスをセレクトし、プロジェクトのリポジトをセレクトします。詳しくは[connecting your repository](/getting-started/adding-a-new-app/connecting-your-repository)へ
- 5. すぐリポジトリアクセスをセットアップするときは、`No, auto-add SSH key`をクリックする。詳しくは [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/)へ
+ 3. アプリのプライバシーをPrivateまたは[Public](/jp/getting-started/public-apps)に設定します。`Next`をクリックします。
+ 4. リポジトをホストするGitホスティングサービスをセレクトし、プロジェクトのリポジトをセレクトします。詳しくは[connecting your repository](/jp/getting-started/adding-a-new-app/)へ
+ 5. すぐリポジトリアクセスをセットアップするときは、`No, auto-add SSH key`をクリックする。詳しくは [SSH keys](/jp/getting-started/adding-a-new-app/)へ
  6. プロジェクトのコンフィグレーションが含まれているブランチの名前(master等）を入力し、`Next`をクリックします。
  7. Bitriseがプロジェクトを有効にするまで待機する。
 
@@ -100,10 +100,10 @@ iOS FlutterプロジェクトをApp Storeにデプロイするために、アプ
 * iOS Distribution Certificate (a .p12 file)
 * App Store Provisioning Profile
 
-BitriseのiOSコード署名については[our detailed guides](https://devcenter.bitrise.io/code-signing/ios-code-signing/code-signing/)から！
+BitriseのiOSコード署名については[our detailed guides](/jp/code-signing/ios-code-signing/code-signing/)から！
 
  1. ワークフローに`Certificate and profile installer`ステップがあるか確認します。
- 2. [必要なコード署名](/code-signing/ios-code-signing/ios-manual-provisioning/)ファイルをBitriseにアップロードします
+ 2. [必要なコード署名](/jp/code-signing/ios-code-signing/ios-manual-provisioning/)ファイルをBitriseにアップロードします
  3. `Flutter Build`ステップを開き、`iOS Platform Configs`入力グループを確認してください
  4. `Additional parameters`入力にバリュー`--release`があるかを確認してください
  5. ステップ`Platfor`入力の確認: `iOS`か`both`のどちらかに設定します
@@ -114,7 +114,7 @@ BitriseのiOSコード署名については[our detailed guides](https://devcent
     * Apple ID
     * パスワード、iTunes Connectの二要素認証を使っている場合は申請パスワード
 
-      パスワードはログやエクスポーズに公開されません-なので[SENSITIVEとマークされています](/builds/env-vars-secret-env-vars#about-secrets)
+      パスワードはログやエクスポーズに公開されません-なので[SENSITIVEとマークされています](/jp/builds/env-vars-secret-env-vars#about-secrets)
 10. ビルド開始！
 
 順調に進んだ場合、ステップはアプリをApp Store Connectにサブミットします。App Store Connectページから、Testflightを介してアプリを外部のテスターに​​配布するか、App Storeにリリースできます。
@@ -135,8 +135,8 @@ Google Playにアプリをデプロイするには、APKファイルをエクス
 完了後、アプリをデプロイするためにワークフローを構成できます。
 
 1. Google Play Storeと同期していることを確認します。
-   * [Google Play Store登録とプロジェクトセットアップ](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   * [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)のセットアップ方法
+   * [Google Play Store登録とプロジェクトセットアップ](/jp/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+   * [Google Play API access](/jp/tutorials/deploy/android-deployment/#set-up-google-play-api-access)のセットアップ方法
 2. Bitrise `Dashboard`から`Code Signing`タブに行きサービスアカウントJSONキーを`GENERIC FILE STORAGE`にアップロードします。
 3. ファイルURLがあるenv keyをコピーします。
 
