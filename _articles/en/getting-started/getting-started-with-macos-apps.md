@@ -14,23 +14,25 @@ In this guide, we'll walk you through how to add a MacOS app to Bitrise, how to 
 
 1. Click the **+** sign on the top menu bar and select **Add app**.
 2. On the **Create new App** page, choose the account you wish to add the app to.
-3. Set the privacy of the app to either Private or [Public](https://app.forestry.io/getting-started/adding-a-new-app/public-apps) and click **Next**.
+3. Set the privacy of the app to either Private or [Public](https://app.forestry.io/getting-started/public-apps/) and click **Next**.
 4. Select the Git hosting service that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/#connecting-a-repository).
 5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/#setting-up-ssh-keys).
 6. Type the name of the branch that includes your project's configuration - master, for example - then click **Next**.
 7. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them.
 
- Note that the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://app.forestry.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
-8. Select the export method. You can modify this later - for now, select `development`.
+Note that the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://app.forestry.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
+8\. Select the export method. You can modify this later - for now, select `development`.
 
-   ![](/img/project-build-config-macos.png)
+![](/img/project-build-config-macos.png)
 
-   Once you clicked it, you should see your:
-   * Project or Workspace path
-   * Scheme name
-   * Export method
-   * MacOS stack
-9. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
+Once you clicked it, you should see your:
+
+* Project or Workspace path
+* Scheme name
+* Export method
+* MacOS stack
+
+1. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
 
 ## Running Xcode tests
 
@@ -43,7 +45,7 @@ If you have test targets defined, the **primary** Workflow of a MacOS app includ
 * Xcode Test for Mac
 * Deploy to Bitrise.io
 
-{% include message_box.html type="note" title="Code signing files" content="Running Xcode tests and deploying their results to Bitrise do not require any code signing files. 
+{% include message_box.html type="note" title="Code signing files" content="Running Xcode tests and deploying their results to Bitrise do not require any code signing files.
 
 There is one exception: if you set a team for your project locally, in Xcode, then Xcode will ask for that team's Developer certificate before running the test."%}
 
@@ -75,9 +77,10 @@ You will need:
 5. Check the **Export method** input under the **app/pkg export configs** input group of the **Xcode Archive for Mac** Step.
 
    If you selected **development** when you added the app to Bitrise, you don't need to change the input. Otherwise, manually set it to **development**.
+6. 
 
-   ![/img/macos-archive.png](https://app.forestry.io/sites/yv69yaruhkt48w/body-media//img/macos-archive.png)
-6. [Start a build](https://app.forestry.io/builds/starting-builds-manually/).
+![](/img/macos-archive.png)
+7\. [Start a build](/builds/starting-builds-manually/).
 
 If you uploaded the correct code signing files, the **Certificate and profile installer** Step should install your code signing files and the **Xcode Archive for Mac** Step should export an .app or .pkg file with the development export method. If you have the **Deploy to Bitrise.io** Step in your workflow, you can find the binary package file on the **APPS & ARTIFACTS** tab of the build page.
 
