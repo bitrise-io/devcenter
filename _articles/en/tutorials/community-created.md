@@ -6,7 +6,7 @@ menu:
 
 ---
 _If you write a tutorial or blog post about Bitrise feel free to_
-[_add it to this list yourself_](https://github.com/bitrise-io/devcenter/edit/master/docs/tutorials/community-created.md)
+[_add it to this list yourself_](https://github.com/bitrise-io/devcenter/edit/master/_articles/en/tutorials/community-created.md)
 _or_ [_contact us_](https://www.bitrise.io/contact) _and we'll add it for you!_
 
 ## English
