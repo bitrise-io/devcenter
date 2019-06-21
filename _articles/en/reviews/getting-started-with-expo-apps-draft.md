@@ -112,9 +112,9 @@ To deploy to Testflight and to the App Store, you will need the following code s
 1. Open the **Workflow** tab of your project on [bitrise.io](https://www.bitrise.io).
 2. Click on **Code Signing** tab.
 3. Click or drag and drop the App Store type provisioning profile in the **PROVISIONING PROFILE** field and the iOS Distribution certificate in the **CODE SIGNING IDENTITY** field.
-4. Click on the **Workflows** tab and select your deploy workflow.
-5. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
-6. Set the **Select method for export** input field of the **Xcode Archive & Export for iOS** Step to **app-store**. If you wish to distribute your app to external testers without uploading the app to Testflight, select **ad-hoc** method and make sure you have the **Deploy to Bitrise.io** Step in your workflow.
+4. Click on the **Workflows** tab and select your deploy Workflow.
+5. Set the **Select method for export** input field of the **Xcode Archive & Export for iOS** Step to **app-store**. If you wish to distribute your app to external testers without uploading the app to Testflight, select **ad-hoc** method and make sure you have the **Deploy to Bitrise.io** Step in your workflow.
+6. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
 7. Fill out the following input fields based on your uploaded code signing files:
 
    **Force code signing with Development Team**: Add the team ID, for example, `1MZX23ABCD4.`
