@@ -1,6 +1,7 @@
 ---
 title: 自前でホストしたGitlabインスタンスの接続
 redirect_from:
+- "/jp/getting-started/index/getting-started/signing-up/self-hosted-gitlab"
 - "/jp/getting-started/adding-a-new-app/self-hosted-gitlab/"
 - "/jp/getting-started/signing-up/self-hosted-gitlab/"
 menu:
