@@ -66,7 +66,7 @@ Unit tests of Xamarin apps can be run with the **NUnit Runner** Step. The Step r
 3. Fill in the required input variables. By default, all the inputs are [Env Vars](/steps-and-workflows/step-inputs/#environment-variables-as-step-inputs). If you want to use a different solution file or solution configuration, click on the **Env Vars** tab in the Workflow Editor to change the value of the Env Var.
    * **Path to Xamarin Solution**: the location of your Xamarin solution file.
    * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
-   * Xamarin platform: the target platform of your solution configuration.
+   * **Xamarin platform**: the target platform of your solution configuration.
 
 {% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running tests."%}
 
