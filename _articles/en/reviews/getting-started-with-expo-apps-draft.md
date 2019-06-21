@@ -163,27 +163,17 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 {% include message_box.html type="important" title="Have you uploaded keystore file yet" content=" Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FILE** field before starting the deployment procedure to a native marketplace! "%}
 
  To use this step:
-1. Upload the first apk manually (using the web interface) on [Google Play Console](https://play.google.com/apps/publish). Go to Google Play Console -> All applications -> CREATE APPLICATION.
+1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 2. [Link your Google Play Developer Console to an API project](https://developers.google.com/android-publisher/getting_started).
- 
- 3. Setup API Access Clients, [using a service account](https://developers.google.com/android-publisher/getting_started):
+3. [Setup API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started):
    Please note when you create your service account on the google developer console, choose json as **Key Type**.
- 4. Grant the necessary rights to the service account:
-   Visit the [Google Play Console](https://play.google.com/apps/publish) -> Settings -> Users & permissions -> Invite new user.
-   Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to that service account:
+ 4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish) (Settings -> Users & permissions -> Invite new user). Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to that service account:
      - ACCESS LEVEL: View app information
      - RELEASE MANAGEMENT: Manage production releases, Manage testing track releases
      - STORE PRESENCE: Edit store listing, pricing & distribution
- 5. OPTIONAL - Add translations for your Store Listing:
- 
-   To allow the step to assign your 'whatsnew' files to the uploaded apk version.
-   Visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s __Add translations for your Store Listing__ section
-
- 
-
-1. Make sure you are in sync with Google Play Store! Learn how to
-   * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+ 5. As an optional ste, you can add translations for your Store Listing.
+To allow the step to assign your 'whatsnew' files to the uploaded apk version. Visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s and add translations for your Store Listing section.
+6. Go back to bitrise.
 2. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 3. Copy the env key which stores your uploaded file’s url.
 
