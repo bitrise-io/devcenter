@@ -1,6 +1,7 @@
 ---
 title: Connecting your Apple Developer Account to Bitrise
 redirect_from:
+- https://devcenter.bitrise.io/getting-started/signing-up/connecting-apple-dev-account/
 - "/signing-up/connecting-apple-dev-account"
 tag:
 - apple
@@ -69,4 +70,4 @@ To authorize the app:
 4. Select the account you want to use from the dropdown menu.
 5. Test the connection to make sure it works. 
 
-If everything goes well, you should be able to use the connected account's Apple Developer credentials in the app's builds. 
+If everything goes well, you should be able to use the connected account's Apple Developer credentials in the app's builds.
