@@ -3,6 +3,7 @@ title: Deploying Android apps
 date: '2018-10-26T13:00:41.000+00:00'
 redirect_from:
 - "/tutorials/deploy/android-deployment/"
+- "/tutorials/deploy/android-deployment/"
 tag:
 - deploy
 - android
