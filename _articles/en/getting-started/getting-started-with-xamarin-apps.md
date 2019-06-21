@@ -65,7 +65,7 @@ Unit tests of Xamarin apps can be run with the **NUnit Runner** Step. The Step r
    This Step should be after the **NuGet restore** Step: you will want to install all your dependencies before running tests on your app.
 3. Fill in the required input variables. By default, all the inputs are [Env Vars](/steps-and-workflows/step-inputs/#environment-variables-as-step-inputs). If you want to use a different solution file or solution configuration, click on the **Env Vars** tab in the Workflow Editor to change the value of the Env Var.
    * **Path to Xamarin Solution**: the location of your Xamarin solution file.
-   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate Env Var if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
    * **Xamarin platform**: the target platform of your solution configuration.
 
 {% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running tests."%}
@@ -138,7 +138,7 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
    ![](/img/xamarin-archive.jpg)
 3. Make sure the required inputs of the Step have appropriate values. By default, all the inputs are [Env Vars](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the **Env Vars** tab in the Workflow Editor to change the value of the Env Var.
    * Path to the Xamarin Solution file: the location of your Xamarin solution file.
-   * Xamarin project configuration: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
+   * Xamarin project configuration: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate Env Var if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
    * Xamarin solution platform: the target platform of your solution configuration.
 
 ### Deploying to the App Store
@@ -148,7 +148,7 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 1. Go to the **Workflows** tab of the Workflow Editor.
 2. Select the Workflow you created for deploying your app.
 3. Check that the code signing Steps and the **Xamarin Archive** Step are included in the Workflow.
-4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the **Env Var** tab. You can check out which Env Vars you need to change in the inputs of the **Xamarin Archive** Step.
+4. If you want to use a different solution configuration, change the values of the relevant Env Var on the **Env Var** tab. You can check out which Env Vars you need to change in the inputs of the **Xamarin Archive** Step.
 5. Add the **Deploy to iTunes Connect - Application Loader** Step to your Workflow.
 
    ![](/img/deploy-itunes-connect.jpg)
@@ -162,7 +162,7 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 1. Go to the **Workflows** tab of the Workflow Editor.
 2. Select the Workflow you created for deploying your app.
 3. Check that the code signing Steps and the **Xamarin Archive** Step are included in the Workflow.
-4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the **Env Var** tab. You can check out which Env Vars you need to change in the inputs of the **Xamarin Archive** Step.
+4. If you want to use a different solution configuration, change the values of the relevant Env Var on the the **Env Var** tab. You can check out which Env Vars you need to change in the inputs of the **Xamarin Archive** Step.
 5. Add the **Google Play Deploy** Step to the Workflow.
 
    The Step needs to be after the **Xamarin Archive** Step.
