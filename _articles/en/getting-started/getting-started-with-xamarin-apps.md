@@ -31,7 +31,7 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
  1. Click the **+** sign on the top menu bar and select **Add app**.
  2. On the **Create new App** page, choose the account you wish to add the app to.
  3. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click **Next**.
- 4. Select the Git hosting service that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-your-repository).
+ 4. Select the Git hosting service that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/#connecting-a-repository).
  5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
  6. Type the name of the branch that includes your project's configuration - master, for example - then click **Next**.
  7. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them. In the case of a Xamarin app, we're looking for the Xamarin Solution file.
@@ -44,10 +44,10 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
 
 ## Installing dependencies
 
-Installing your dependencies with Xamarin apps is taken care of by a dedicated Step: **NuGet restore**. This Step is part of every automatically created [Workflow](/getting-started/getting-started-workflows/) for Xamarin apps and it has one required input: the path to the Xamarin solution file which is stored as an Env Var when you add the app.
+Installing your dependencies with Xamarin apps is taken care of by a dedicated Step: **NuGet restore**. This Step is part of every automatically created [Workflow](/steps-and-workflows/getting-started-workflows/) for Xamarin apps and it has one required input: the path to the Xamarin solution file which is stored as an Env Var when you add the app.
 
 1. Enter the Workflow Editor of your app, and click the **Workflows** tab.
-2. Make sure you have the **NuGet restore** Step in your workflow.
+2. Make sure you have the **NuGet restore** Step in your Workflow.
 
    The Step's single required input is the path to the Xamarin solution file. By default, the input is an [Env Var](/getting-started/getting-started-steps/#environment-variables-as-step-inputs), stored when adding the app to Bitrise. If you want to use a different solution file, click on the **Env Vars** tab in the Workflow Editor to change the value of the Env Var.
 
@@ -60,12 +60,12 @@ You can run **unit tests** and **UI tests** on Bitrise, both with Android and iO
 Unit tests of Xamarin apps can be run with the **NUnit Runner** Step. The Step runs NUnit 2.x and NUnit 3.0 or higher tests with the NUnit Console Runner (nunit3-console.exe).
 
 1. Enter the Workflow Editor of your app, and click the **Workflows** tab.
-2. Add the **NUnit runner** Step to your workflow.
+2. Add the **NUnit runner** Step to your Workflow.
 
    This Step should be after the **NuGet restore** Step: you will want to install all your dependencies before running tests on your app.
-3. Fill in the required input variables. By default, all the inputs are [Env Vars](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). If you want to use a different solution file or solution configuration, click on the **Env Vars** tab in the Workflow Editor to change the value of the Env Var.
-   * Path to Xamarin Solution: the location of your Xamarin solution file.
-   * Xamarin project configuration: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
+3. Fill in the required input variables. By default, all the inputs are [Env Vars](/steps-and-workflows/step-inputs/#environment-variables-as-step-inputs). If you want to use a different solution file or solution configuration, click on the **Env Vars** tab in the Workflow Editor to change the value of the Env Var.
+   * **Path to Xamarin Solution**: the location of your Xamarin solution file.
+   * **Xamarin project configuration**: the solution configuration, set up in Visual Studio, that you want to run on Bitrise. Change the appropriate environment variable if you want to run a different configuration; for example, if you only want to build an iOS project, as opposed to both iOS and Android projects.
    * Xamarin platform: the target platform of your solution configuration.
 
 {% include message_box.html type="note" title="Debug inputs" content="In the Debug input group, you can configure the Step further: set the building tool, set additional flags for the NUnit Console Runner, and configure whether you want to build your test projects before running tests."%}
@@ -74,7 +74,7 @@ Unit tests of Xamarin apps can be run with the **NUnit Runner** Step. The Step r
 
 For UI tests, we strongly recommend using our **App Center upload and schedule tests** Step. You need to set up the tests in the Visual Studio App Center - [read more about it in our guide](/testing/run-your-tests-in-the-app-center/). Let's go through the process in brief.
 
-1. Add the **App Center upload and schedule tests** Step to your workflow.
+1. Add the **App Center upload and schedule tests** Step to your Workflow.
 
    This Step should be after the **NuGet restore** and the **Xamarin Archive** Steps, in order to install all your dependencies and build the app before running tests.
 
@@ -97,7 +97,7 @@ To deploy your app, you need to build, sign and export the application file.
 
 Code signing requires different approaches for iOS and Android projects. We're presenting a brief overview here of code signing for both platforms.
 
-For the purposes of deploying your app, we recommend [creating a new workflow](/getting-started/getting-started-workflows/), based on the automatically created deploy workflow.
+For the purposes of deploying your app, we recommend [creating a new workflow](/steps-and-workflows/getting-started-workflows/), based on the automatically created deploy Workflow.
 
 #### Android
 
@@ -106,7 +106,7 @@ For Android, you need an APK and you need to sign that APK. Bitrise makes that h
 1. [Create a code signing identity in Visual Studio](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/signing/?tabs=vswin).
 2. Upload the keystore file to Bitrise: open the Workflow Editor of your app, go to the **Code Signing** tab and upload the file to the `ANDROID KEYSTORE FILE` section.
 3. Set a keystore password, a keystore alias and a private key password.
-4. On the **Workflows** tab, add the **Android Sign** Step to your workflow, AFTER the **Xamarin Archive** Step.
+4. On the **Workflows** tab, add the **Android Sign** Step to your Workflow, AFTER the **Xamarin Archive** Step.
 
 Read more about using the **Android Sign** Step [in our guide](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/)!
 
@@ -120,7 +120,7 @@ Read more about using the **Android Sign** Step [in our guide](/code-signing/and
    You can also set up custom entitlements in a .plist file.
 3. On your own machine, use our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool to collect the code signing files of your project.
 4. Upload the files - the .p12 certificate and the provisioning profile - to Bitrise: open the Workflow Editor of your app and upload the files on the **Code Signing** tab.
-5. Add the **Certificate and profile installer** Step to your workflow.
+5. Add the **Certificate and profile installer** Step to your Workflow.
 
 Read more about iOS code signing [in our guide](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/)!
 
@@ -133,7 +133,7 @@ For example, if you want to get an .apk file to upload it to Google Play, use a 
 For your iOS project, set up the correct code signing identity in Visual Studio: for example, if you want to upload your app to the App Store, use a Distribution identity with an App Store type provisioning profile.
 
 1. Enter the Workflow Editor of your app, and click the **Workflows** tab.
-2. Make sure you have the **Xamarin Archive** Step in your workflow.
+2. Make sure you have the **Xamarin Archive** Step in your Workflow.
 
    ![](/img/xamarin-archive.jpg)
 3. Make sure the required inputs of the Step have appropriate values. By default, all the inputs are [Env Vars](/getting-started/getting-started-steps/#environment-variables-as-step-inputs). Click on the **Env Vars** tab in the Workflow Editor to change the value of the Env Var.
@@ -146,10 +146,10 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 {% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need to use a Distribution type code signing identity with an App Store provisioning profile. Also, make sure that the Distribution certificate and the provisioning profile are uploaded to Bitrise!"%}
 
 1. Go to the **Workflows** tab of the Workflow Editor.
-2. Select the workflow you created for deploying your app.
-3. Check that the code signing Steps and the **Xamarin Archive** Step are included in the workflow.
+2. Select the Workflow you created for deploying your app.
+3. Check that the code signing Steps and the **Xamarin Archive** Step are included in the Workflow.
 4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the **Env Var** tab. You can check out which Env Vars you need to change in the inputs of the **Xamarin Archive** Step.
-5. Add the **Deploy to iTunes Connect - Application Loader** Step to your workflow.
+5. Add the **Deploy to iTunes Connect - Application Loader** Step to your Workflow.
 
    ![](/img/deploy-itunes-connect.jpg)
 6. Click the **Deploy to iTunes Connect - Application Loader**  Step, and enter your Apple ID and password in the relevant input field.
@@ -160,10 +160,10 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 {% include message_box.html type="note" title="Before you start" content="Make sure that you have the correct solution configuration in Visual Studio! You need a **Release** configuration."%}
 
 1. Go to the **Workflows** tab of the Workflow Editor.
-2. Select the workflow you created for deploying your app.
-3. Check that the code signing Steps and the **Xamarin Archive** Step are included in the workflow.
+2. Select the Workflow you created for deploying your app.
+3. Check that the code signing Steps and the **Xamarin Archive** Step are included in the Workflow.
 4. If you want to use a different solution configuration, change the values of the relevant Environment Variables on the the **Env Var** tab. You can check out which Env Vars you need to change in the inputs of the **Xamarin Archive** Step.
-5. Add the **Google Play Deploy** Step to the workflow.
+5. Add the **Google Play Deploy** Step to the Workflow.
 
    The Step needs to be after the **Xamarin Archive** Step.
 6. Upload the Service Account JSON key file to the **Generic File Storage** on the **Code Signing** tab of the Workflow Editor.
