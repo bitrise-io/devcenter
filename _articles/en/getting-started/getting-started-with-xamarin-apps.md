@@ -12,7 +12,7 @@ menu:
 * Testing the app
 * Deploying the app
 
-You can do the entire procedure in a single workflow but we recommend using at least two: one to test your app and one to deploy it. There is no need to have separate workflows for the different project types, though: you can build both an iOS and an Android version of a Xamarin app within a single workflow.
+You can do the entire procedure in a single Workflow but we recommend using at least two: one to test your app and one to deploy it. There is no need to have separate Workflows for the different project types, though: you can build both an iOS and an Android version of a Xamarin app within a single Workflow.
 
 ## Before you start
 
