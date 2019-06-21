@@ -16,7 +16,7 @@ in your [bitrise.io](https://www.bitrise.io/) build you only have to do three th
    [described in _match_'s docs](https://docs.fastlane.tools/actions/match/#passphrase),
    to specify the `passphrase` you used for `match`.
    On [bitrise.io](https://www.bitrise.io/) you should add this as a `Secret Environment Variable`,
-   in the [Workflow Editor](http://devcenter.bitrise.io/docs/add-your-first-step-to-your-apps-workflow).
+   in the [Workflow Editor](/steps-and-workflows/getting-started-workflows/).
    _Make sure to disable_ the `Replace variables in input?` option of the environment
    variable, to not to cause issues when the value includes the `$` (dollar) sign, which is used
    for environment variable expansion.
