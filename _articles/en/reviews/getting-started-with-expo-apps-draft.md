@@ -151,7 +151,7 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 
    The Step will need your:
    * Apple ID
-   * password or, if you use two-factor authentication on iTunes Connect, your application password.
+   * password or, if you use two-factor authentication on iTunes Connect, your app-specific password.
 
    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
 4. [Start a build](/builds/Starting-builds-manually/).
