@@ -40,7 +40,7 @@ You have successfully set up your React Native project on [bitrise.io](https://w
 
 ## Installing dependencies
 
-### Javascript dependencies
+### JavaScript dependencies
 
 If Bitrise scanner has successfully scanned your app, depending on your project configuration, **Run npm command** or **Run yarn command** Step will be included in your workflow.
 
@@ -89,7 +89,7 @@ Let’s see how to fill them out!
 
 ### Signing your Android app
 
-1. Select the deploy workflow at the **WORKFLOW** dropdown menu in the top left corner of your apps’ Workflow Editor.
+1. Select the deploy workflow at the **WORKFLOW** dropdown menu in the top left corner of your app's Workflow Editor.
 2. Go to the **Code Signing** tab.
 3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
 4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click Save metadata.
