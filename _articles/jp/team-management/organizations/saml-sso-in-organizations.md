@@ -23,7 +23,7 @@ menu:
 
 * Bitriseへ接続が可能なSAML SSOプロバイダ（アイデンティティ・プロバイダ）を持っていること
 * Bitriseのご自身のアカウントに組織があること。組織がない場合、[作成]()してください。SAML SSOのセットアップはBitrise上の**すでに存在する組織や新しい組織**と同じになります。
-* 他の[組織マネジメントアクション](ht/team-management/organizations/members-organizations/)と同じで、組織オーナーだけがBitrise組織へSAML SSOのセットアップが行えます。"%}
+* 他の[組織マネジメントアクション](/jp/team-management/organizations/members-organizations/)と同じで、組織オーナーだけがBitrise組織へSAML SSOのセットアップが行えます。"%}
 
 ## Bitrise組織のSAML SSOのセットアップ
 

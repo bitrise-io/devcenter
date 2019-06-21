@@ -6,7 +6,7 @@ summary: ''
 published: false
 
 ---
-You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/v32.0.0/) is a toolchain that allows you to quickly get a React Native app up and running without having to use native code in Xcode or Android Studio.
+You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/latest/) is a toolchain that allows you to quickly get a React Native app up and running without having to use native code in Xcode or Android Studio.
 
 In this guide we discuss how to set up, test, code sign and deploy your React Native project built with the [Expo CLI](https://docs.expo.io/versions/latest/introduction/installation/#local-development-tool-expo-cli).
 
@@ -40,7 +40,7 @@ You have successfully set up your React Native project on [bitrise.io](https://w
 
 ## Installing dependencies
 
-### Javascript dependencies
+### JavaScript dependencies
 
 If Bitrise scanner has successfully scanned your app, depending on your project configuration, **Run npm command** or **Run yarn command** Step will be included in your workflow.
 
@@ -89,7 +89,7 @@ Let’s see how to fill them out!
 
 ### Signing your Android app
 
-1. Select the deploy workflow at the **WORKFLOW** dropdown menu in the top left corner of your apps’ Workflow Editor.
+1. Select the deploy workflow at the **WORKFLOW** dropdown menu in the top left corner of your app's Workflow Editor.
 2. Go to the **Code Signing** tab.
 3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
 4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click Save metadata.
@@ -112,9 +112,9 @@ To deploy to Testflight and to the App Store, you will need the following code s
 1. Open the **Workflow** tab of your project on [bitrise.io](https://www.bitrise.io).
 2. Click on **Code Signing** tab.
 3. Click or drag and drop the App Store type provisioning profile in the **PROVISIONING PROFILE** field and the iOS Distribution certificate in the **CODE SIGNING IDENTITY** field.
-4. Click on the **Workflows** tab and select your deploy workflow.
-5. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
-6. Set the **Select method for export** input field of the **Xcode Archive & Export for iOS** Step to **app-store**. If you wish to distribute your app to external testers without uploading the app to Testflight, select **ad-hoc** method and make sure you have the **Deploy to Bitrise.io** Step in your workflow.
+4. Click on the **Workflows** tab and select your deploy Workflow.
+5. Set the **Select method for export** input field of the **Xcode Archive & Export for iOS** Step to **app-store**.
+6. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
 7. Fill out the following input fields based on your uploaded code signing files:
 
    **Force code signing with Development Team**: Add the team ID, for example, `1MZX23ABCD4.`
@@ -143,7 +143,7 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 
 {% include message_box.html type="important" title="Have you exported an app-store .ipa file yet" content=" Make sure that you have exported an app-store .ipa file before starting the deployment procedure to a native marketplace! "%}
 
-1. Modify the **Xcode Archive & Export for iOS** Step's input fields to the force options.and upload the app store profile and dist certificate **manually**.
+1. Modify the **Xcode Archive & Export for iOS** Step's input fields to the force options and upload the app store profile and distribution certificate **manually**.
 2. Add the **Deploy to iTunes Connect - Application Loader** Step to your workflow.
 
    Put the Step after the **Xcode Archive & Export for iOS** Step but preferably before the **Deploy to Bitrise.io** Step.
@@ -151,7 +151,7 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 
    The Step will need your:
    * Apple ID
-   * password or, if you use two-factor authentication on iTunes Connect, your application password.
+   * password or, if you use two-factor authentication on iTunes Connect, your app-specific password.
 
    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
 4. [Start a build](/builds/Starting-builds-manually/).
@@ -162,9 +162,18 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 
 {% include message_box.html type="important" title="Have you uploaded keystore file yet" content=" Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FILE** field before starting the deployment procedure to a native marketplace! "%}
 
-1. Make sure you are in sync with Google Play Store! Learn how to
-   * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   * set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+ To use this step:
+1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
+2. [Link your Google Play Developer Console to an API project](https://developers.google.com/android-publisher/getting_started).
+3. [Setup API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started):
+   Please note when you create your service account on the google developer console, choose json as **Key Type**.
+ 4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish) (Settings -> Users & permissions -> Invite new user). Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to that service account:
+     - ACCESS LEVEL: View app information
+     - RELEASE MANAGEMENT: Manage production releases, Manage testing track releases
+     - STORE PRESENCE: Edit store listing, pricing & distribution
+ 5. As an optional ste, you can add translations for your Store Listing.
+To allow the step to assign your 'whatsnew' files to the uploaded apk version. Visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s and add translations for your Store Listing section.
+6. Go back to bitrise.
 2. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 3. Copy the env key which stores your uploaded file’s url.
 

@@ -4,6 +4,7 @@ tag:
 - getting-started
 title: Signing up to Bitrise
 redirect_from:
+- "\t https://devcenter.bitrise.io/jp/getting-started/signing-up/signing-up-with-email"
 - "/jp/getting-started/signing-up/signing-up-with-email/"
 - "/jp/getting-started/signing-up/signing-up-with-gitlab/"
 - "/jp/getting-started/signing-up/signing-up-with-bitbucket/"
