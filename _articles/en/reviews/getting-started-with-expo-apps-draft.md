@@ -174,13 +174,19 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
    * Store presence: Edit store listing, pricing & distribution.
 5. As an optional step, you can add translations for your Store Listing. To allow the step to assign your `whatsnew` files to the uploaded APK version, visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s and add translations for your Store Listing section.
 
- Now tet's head back to Bitrise and add the deploy Step to your respective workflow!
- 
-6. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
-7. Copy the env key which stores your uploaded file’s url.
+Now let's head back to Bitrise and finish off the deploy configuration!
+
+1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
+2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-8. Add the **Google Play Deploy** Step after the **Sign APK** Step in your deploy workflow.
-9. Fill out the required input fields as follows: **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL` **Package name**: the package name of your Android app **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
+3. Add the **Google Play Deploy** Step after the **Sign APK** Step in your deploy workflow.
+4. Fill out the required input fields as follows: 
 
-And that’s it! Start a build and release your Android app to the app store of your choice.
+   **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL` 
+
+   **Package name**: the package name of your Android app.
+
+   **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
+
+And that’s it! Start a build and release your Expo app to the Google Play Store.
