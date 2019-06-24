@@ -124,11 +124,11 @@ To deploy to Testflight and to the App Store, you will need the following code s
 6. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
 7. Fill out the following input fields based on your uploaded code signing files:
 
-   **Force code signing with Development Team**: Add the team ID, for example, `1MZX23ABCD4.`
+   **Force code signing with Development Team**: Add the team ID.
 
-   ![](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity:** Add the Code Signing Identity as full ID, for example, `iPhone Distribution: Bitrise Bot (VV2J4SV8V4)` or as a code signing group, for example, `iPhone Distribution`.
+   ![](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity:** Add the Code Signing Identity as a full ID or as a code signing group.
 
-   ![](/img/force-code-signing-code-signing.jpg) **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID (and not the file name). For example: `c5be4123-1234-4f9d-9843-0d9be985a068`.
+   ![](/img/force-code-signing-code-signing.jpg) **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID (and not the file name). 
 
    ![](/img/force-code-signing-provisioning-profile.jpg)
 8. If the code signing files are manually generated on the Apple Developer Portal, you have to specify to use manual code signing settings since the ejected React Native project have Xcode managed code signing turned on. Click the **Debug** input group and add `CODE_SIGN_STYLE="Manual"` to the **Additional options for xcodebuild call input** field.
