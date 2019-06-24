@@ -3,7 +3,6 @@ tag: []
 title: Getting started with Expo apps
 redirect_from: []
 summary: ''
-published: false
 
 ---
 You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/latest/) is a toolchain that allows you to quickly get a React Native app up and running without having to use native code in Xcode or Android Studio.
