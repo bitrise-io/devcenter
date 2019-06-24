@@ -5,15 +5,22 @@ menu:
     weight: 10
 
 ---
-You can register the `bitrise-webhooks` URL (`.../h/slack/BITRISE-APP-SLUG/BITRISE-APP-API-TOKEN`) as either
-an [Outgoing Webhook](https://my.slack.com/services/new/outgoing-webhook) or
-as a [slash command](https://my.slack.com/services/new/slash-commands) for your Slack team.
+## Getting the webhook URL
 
-Once the URL is registered check the *usage* section below for all the
-accepted and required parameters you can define in the message, and
-for a couple of examples.
+You can register the `bitrise-webhooks` URL as either an [Outgoing Webhook](https://my.slack.com/services/new/outgoing-webhook) or as a [slash command](https://my.slack.com/services/new/slash-commands) for your Slack team.
 
-### Usage - the message format
+1. Go to your app's page on Bitrise.
+2. Go to the **Code** tab.
+3. Scroll down to the **INCOMING WEBHOOKS** section. 
+4. Click **SETUP MANUALLY.**
+
+   ![](/img/slack-webhook.png)
+5. Choose **Slack** from the dropdown menu.
+6. Copy and paste the URL from the **Webhook URL for the selected service** field.
+
+Once the URL is registered, check the usage section for all the accepted and required parameters you can define in the message, and for a couple of examples.
+
+## Usage - the message format
 
 Your message have to be in the format: `key:value|key:value|...`,
 where the supported `keys` are:
