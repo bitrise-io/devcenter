@@ -25,6 +25,7 @@ collections:
 exclude:
 - deploy.md
 - plugins
+- vendor/bundle
 defaults:
 - scope:
     path: ''
