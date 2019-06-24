@@ -119,7 +119,7 @@ To deploy to Testflight and to the App Store, you will need the following code s
 
    **Force code signing with Development Team**: Add the team ID, for example, `1MZX23ABCD4.`
 
-   ![](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity:** Add the Code Signing Identity as full ID, for example, `iPhone Developer: Bitrise Bot (VV2J4SV8V4)` or as a code signing group, for example, `iPhone Developer` or `iPhone Distribution`. `iPhone Distribution: Bitrise Bot (VV2J4SV8V4)` or as a code signing group, for example, `iPhone Distribution`.
+   ![](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity:** Add the Code Signing Identity as full ID, for example, `iPhone Distribution: Bitrise Bot (VV2J4SV8V4)` or as a code signing group, for example, `iPhone Distribution`.
 
    ![](/img/force-code-signing-code-signing.jpg) **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID (and not the file name). For example: `c5be4123-1234-4f9d-9843-0d9be985a068`.
 
