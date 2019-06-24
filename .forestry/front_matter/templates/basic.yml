@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/jp/getting-started/getting-started-with-expo-apps.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
 - _articles/en/reviews/Index files/infrastructure-index.md
 - _articles/en/builds/remote-access.md
