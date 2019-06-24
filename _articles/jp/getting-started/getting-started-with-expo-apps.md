@@ -11,7 +11,6 @@ summary: In this guide we discuss how to set up, test, code sign and deploy your
 menu:
   getting-started-main:
     weight: 40
-published: false
 
 ---
 {% include not_translated_yet.html %}
