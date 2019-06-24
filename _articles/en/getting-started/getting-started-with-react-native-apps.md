@@ -162,7 +162,7 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
    * Store presence: Edit store listing, pricing & distribution.
 5. As an optional step, you can add translations for your Store Listing. To allow the step to assign your `whatsnew` files to the uploaded APK version, visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s and add translations for your Store Listing section.
 
-   Now let's head back to Bitrise and finish off the deploy configuration!
+Now let's head back to Bitrise and finish off the deploy configuration!
 
 
 1. In your Bitrise **Dashboard**, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
