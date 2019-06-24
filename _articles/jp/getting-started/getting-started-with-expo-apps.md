@@ -1,11 +1,18 @@
 ---
-tag: []
+tag:
+- getting-started
+- testing
+- deploy
+- code-signing
 title: Getting started with Expo apps
 redirect_from: []
-summary: ''
+summary: In this guide we discuss how to set up, test, code sign and deploy your React
+  Native project built with the Expo CLI.
 published: false
 
 ---
+{% include not_translated_yet.html %}
+
 You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/latest/) is a toolchain that allows you to quickly get a React Native app up and running without having to use native code in Xcode or Android Studio.
 
 In this guide we discuss how to set up, test, code sign and deploy your React Native project built with the [Expo CLI](https://docs.expo.io/versions/latest/introduction/installation/#local-development-tool-expo-cli).
