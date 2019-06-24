@@ -73,10 +73,18 @@ If you have uploaded your keystore file and filled out the required credentials,
 
 If you want to check the bundle prior to app store distribution, you can add the **Deploy to bitrise.io** Step after the **Gradle Runner / Android Build** Steps. It uploads the bundle into the [ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of your Build’s page.
 
-Before you start, make sure you are in sync with Google Play Store! Learn how to:
+Before you'd use the **Google Play Deploy** Step, make sure you have performed the following tasks:
 
-* [Register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project).
-* Set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
+1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
+2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
+3. [Set up API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started): Please note when you create your service account on the Google Developer Console, you have to choose `json` as **Key Type**.
+4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings** -> **Users & permissions** -> **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
+   * Access level: View app information.
+   * Release management: Manage production releases, manage testing track releases.
+   * Store presence: Edit store listing, pricing & distribution.
+5. As an optional step, you can add translations for your Store Listing. To allow the step to assign your `whatsnew` files to the uploaded APK version, visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s and add translations for your Store Listing section.
+
+Now let's head back to Bitrise and finish off the deploy configuration!
 
 1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 2. Copy the env key which stores your uploaded file’s url.
