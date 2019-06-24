@@ -8,6 +8,9 @@ title: Getting started with Expo apps
 redirect_from: []
 summary: In this guide we discuss how to set up, test, code sign and deploy your React
   Native project built with the Expo CLI.
+menu:
+  getting-started-main:
+    weight: 38
 published: false
 
 ---
