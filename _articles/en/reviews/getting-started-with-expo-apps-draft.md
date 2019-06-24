@@ -28,7 +28,7 @@ First, let's see how to add a React Native Expo app to [bitrise.io](https://www.
  8. At **Project build configuration**, the React Native project type gets automatically selected. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). Bitrise also detects the **Module** and the **Variant** based on your project.
 
     Now let's have a look at the fields you manually have to fill out:
-    * If you wish to generate an iOS app from your React Native project, enter your iOS Development team ID at the **Specify iOS Development team** field.
+    * To generate an iOS app from your React Native project, enter your iOS Development team ID at the **Specify iOS Development team** field.
     * In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
     * In **Specify Expo username** enter your username and hit **Next**.
     * In **Specify Expo password**, enter your password and hit **Next**. You only need to provide your Expo credentials if you've been using [ExpoKit](https://docs.expo.io/versions/v32.0.0/expokit/overview/) with your project.
@@ -119,7 +119,7 @@ To deploy to Testflight and to the App Store, you will need the following code s
 
    **Force code signing with Development Team**: Add the team ID, for example, `1MZX23ABCD4.`
 
-   ![](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity:** Add the Code Signing Identity as full ID, for example, `iPhone Developer: Bitrise Bot (VV2J4SV8V4)` or as a code signing group, for example, `iPhone Developer` or `iPhone Distribution`.
+   ![](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity:** Add the Code Signing Identity as full ID, for example, `iPhone Developer: Bitrise Bot (VV2J4SV8V4)` or as a code signing group, for example, `iPhone Developer` or `iPhone Distribution`. `iPhone Distribution: Bitrise Bot (VV2J4SV8V4)` or as a code signing group, for example, `iPhone Distribution`.
 
    ![](/img/force-code-signing-code-signing.jpg) **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID (and not the file name). For example: `c5be4123-1234-4f9d-9843-0d9be985a068`.
 
