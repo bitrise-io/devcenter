@@ -128,7 +128,7 @@ To deploy to Testflight and to the App Store, you will need the following code s
 
    ![](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity:** Add the Code Signing Identity as a full ID or as a code signing group.
 
-   ![](/img/force-code-signing-code-signing.jpg) **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID (and not the file name). 
+   ![](/img/force-code-signing-code-signing.jpg) **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID (and not the file name).
 
    ![](/img/force-code-signing-provisioning-profile.jpg)
 8. If the code signing files are manually generated on the Apple Developer Portal, you have to specify to use manual code signing settings since the ejected React Native project have Xcode managed code signing turned on. Click the **Debug** input group and add `CODE_SIGN_STYLE="Manual"` to the **Additional options for xcodebuild call input** field.
@@ -167,14 +167,14 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 
 ### Deploying your Android app to Google Play Store
 
-{% include message_box.html type="important" title="Have you uploaded keystore file yet" content=" Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FILE** field before starting the deployment procedure to a native marketplace! "%}
+{% include message_box.html type="important" title="Have you uploaded keystore file yet" content=" Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FILE** field before starting the deployment procedure to the marketplace! "%}
 
 Before you'd use the **Google Play Deploy** Step, make sure you have performed the following tasks:
 
 1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
 3. [Set up API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started): Please note when you create your service account on the Google Developer Console, you have to choose `json` as **Key Type**.
-4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings**  &#8594; **Users & permissions**  &#8594; **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
+4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings**  → **Users & permissions**  → **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
    * Access level: View app information.
    * Release management: Manage production releases, manage testing track releases.
    * Store presence: Edit store listing, pricing & distribution.
