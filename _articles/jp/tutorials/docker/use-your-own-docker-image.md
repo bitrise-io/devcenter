@@ -2,7 +2,7 @@
 title: Use your own Docker image
 menu:
   docker:
-    weight: 3
+    weight: 4
 
 ---
 {% include not_translated_yet.html %}
