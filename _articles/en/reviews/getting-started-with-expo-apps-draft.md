@@ -162,23 +162,30 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 
 {% include message_box.html type="important" title="Have you uploaded keystore file yet" content=" Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FILE** field before starting the deployment procedure to a native marketplace! "%}
 
- To use this step:
+Before you'd use the **Google Play Deploy** Step, make sure you have performed the following tasks:
+
 1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
-2. [Link your Google Play Developer Console to an API project](https://developers.google.com/android-publisher/getting_started).
-3. [Setup API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started):
-   Please note when you create your service account on the google developer console, choose json as **Key Type**.
- 4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish) (Settings -> Users & permissions -> Invite new user). Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to that service account:
-     - ACCESS LEVEL: View app information
-     - RELEASE MANAGEMENT: Manage production releases, Manage testing track releases
-     - STORE PRESENCE: Edit store listing, pricing & distribution
- 5. As an optional ste, you can add translations for your Store Listing.
-To allow the step to assign your 'whatsnew' files to the uploaded apk version. Visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s and add translations for your Store Listing section.
-6. Go back to bitrise.
-2. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
-3. Copy the env key which stores your uploaded file’s url.
+2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
+3. [Set up API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started): Please note when you create your service account on the Google Developer Console, you have to choose `json` as **Key Type**.
+4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings** -> **Users & permissions** -> **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
+   * Access level: View app information.
+   * Release management: Manage production releases, manage testing track releases.
+   * Store presence: Edit store listing, pricing & distribution.
+5. As an optional step, you can add translations for your Store Listing. To allow the step to assign your `whatsnew` files to the uploaded APK version, visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s and add translations for your Store Listing section.
+
+Now let's head back to Bitrise and finish off the deploy configuration!
+
+1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
+2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-4. Add the **Google Play Deploy** Step after the **Sign APK** Step in your deploy workflow.
-5. Fill out the required input fields as follows: **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL` **Package name**: the package name of your Android app **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
+3. Add the **Google Play Deploy** Step after the **Sign APK** Step in your deploy workflow.
+4. Fill out the required input fields as follows:
 
-And that’s it! Start a build and release your Android app to the app store of your choice.
+   **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+
+   **Package name**: the package name of your Android app.
+
+   **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
+
+And that’s it! Start a build and release your app to the Google Play Store.

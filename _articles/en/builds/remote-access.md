@@ -18,7 +18,7 @@ Remote access allows users to connect to their build's virtual machines via SSH 
 There are two ways to use remote access on our build machines:
 
 * **SSH**: this is available for both Linux/Docker based and MacOS machines.
-* **Screenshare**: this is only available for MacOS machines.
+* **Screenshare**: this is only available for MacOS machines. It uses the VNC system.
 
 With either method, you can access the build machine remotely during the build and for 10 minutes after the build is finished.
 
@@ -49,7 +49,9 @@ And done! You should be able to access the virtual machine where your build is r
    * Address
    * Username
    * Password
-5. Open a screenshare application.
+5. Open a VNC screenshare application.
+
+   The simplest option is using the default **Screen Sharing** application on macOS.
 6. Fill out the required fields with the information from under the **Screenshare** option.
 
 And done! You should now be able to access the virtual machine where your build is running.
