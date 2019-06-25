@@ -136,3 +136,14 @@ For UI testing, add our `beta Virtual Device Testing for Android` step to **run 
 If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
 
 {% include message_box.html type="info" title="More testing steps to choose from" content=" Click the `+` sign on the left side of your Workflow and select another `TEST` step from our collection."%}
+
+## Deploying your project
+
+### Deploying to bitrise.io
+
+This step uploads all the artifacts related to your build into the[ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
+
+You can share the generated apk with your team members using the build's URL. You can also notify user groups or individual users that your apk has been built.
+
+1. Go to the `Deploy to bitrise.io` step.
+2. In the `Notify: User Roles`, add the role so that only those get notified who have been granted with this role. Or fill out the `Notify: Emails` field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated apk in the `APPS & ARTIFACTS` tab.
