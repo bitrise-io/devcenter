@@ -16,13 +16,13 @@ menu:
 ---
 The Stack indicates the virtual machine version that we will use to run your build.
 After adding your application to Bitrise we will select an appropriate Stack for it.
-Change it in the `Stacks` tab of the Workflow Editor.
+Change it in the **Stacks** tab of the Workflow Editor.
 
 ![](/img/stack-selector.png)
 
 After selecting the Stack you want to use, you'll see a short description of the stack with an additional link to learn more about that specific Stack (e.g. to see what tools are preinstalled, and which versions, on the selected Stack).
 
-{% include message_box.html type="important" title="Make sure you hit the `Save` button" content=" The Stack won't be used until you click the `Save` button!
+{% include message_box.html type="important" title="Make sure you hit the **Save** button" content=" The Stack won't be used until you click the **Save** button!
 "%}
 
 ## Stack status types
@@ -41,7 +41,7 @@ After selecting the Stack you want to use, you'll see a short description of the
 
 ## What's preinstalled
 
-Every time we create or update a Stack we create a "System Report" for it too.
+Every time we create or update a Stack we create a System Report for it too.
 The System Reports include the list of preinstalled tools and their version on the stack.
 The System Report scripts are also open source, so if you want to run it yourself
 or you want to add another tool / system check, feel free to send us a pull request!
