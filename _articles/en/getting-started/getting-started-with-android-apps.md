@@ -155,4 +155,4 @@ If you add **Google Play Deploy** step to your workflow (after the **Android Sig
 Before you’d use the **Google Play Deploy** Step, make sure you have performed the following tasks:
 
 1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
-2. 
+2. d
