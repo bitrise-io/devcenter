@@ -150,4 +150,4 @@ You can share the generated apk with your team members using the build's URL. Yo
 
 ### Deploying to marketplace
 
-dede
+Start!
