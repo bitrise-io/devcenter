@@ -150,12 +150,3 @@ You can share the generated apk with your team members using the build's URL. Yo
 
 ### Deploying to marketplace
 
-If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step), your signed apk will get uploaded to a marketplace of your choice.
-
-Make sure you are in sync with Google Play Store!
-
-In your Bitrise `Dashboard`, go to `Code Signing` and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-
-Copy the env key which stores your uploded file's URL.
-
-That's all! Start or schedule a buld and schedule the URL
