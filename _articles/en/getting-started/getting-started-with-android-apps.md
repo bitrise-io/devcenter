@@ -153,3 +153,6 @@ You can share the generated apk with your team members using the build's URL. Yo
 If you add **Google Play Deploy** step to your workflow (after the **Android Sign** Step), your signed APK will get uploaded to Google Play Store.
 
 Before you’d use the **Google Play Deploy** Step, make sure you have performed the following tasks:
+
+1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
+2. 
