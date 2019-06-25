@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/Index files/teams-and-organizations-index.md
 - _articles/en/steps-and-workflows/adding-removing-steps.md
 - _articles/en/reviews/Index files/steps-and-workflows-index.md
 - _articles/en/reviews/fastlane.md
