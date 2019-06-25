@@ -1,7 +1,9 @@
 ---
 title: Setting up configuration-draft
 redirect_from: []
-date: 2019-03-19 10:46:51 +0000
+date: '2019-03-19T10:46:51.000+00:00'
+tag: []
+summary: ''
 published: false
 
 ---
@@ -15,7 +17,7 @@ Enter the name of the default branch of your repository where your project is lo
 
 ![](/img/choose-branch.png)
 
-During validation Bitrise will make sure it has access to the given branch, using the [SSH key](/adding-a-new-app/setting-up-ssh-keys) you set up.
+During validation Bitrise will make sure it has access to the given branch, using the [SSH key](/adding-a-new-app/setting-up-ssh-keys) you set up. hehehehehe
 
 If the validation is successful, Bitrise will scan your repository and give you a default workflow based on the configuration of the project.
 
