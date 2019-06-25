@@ -118,3 +118,13 @@ Here is an example of a deploy workflow:
 * `Change Android versionCode and versionName` step must be inserted BEFORE the `Android Build`step as the former makes sure you will upload the build with the right version code and version name to your app's marketplace.
 * `Android Lint` and `Android Unit Test` steps must be inserted BEFORE the `Android Build` step to test your code and debug before building your build.
 * `Sign APK` step must be AFTER the `Android Build` step as the latter builds your project so that you have an apk ready to be signed with the `Sign APK` step. Make sure that this step is BEFORE any deploy step so that you can upload an authorized project."%}
+
+## Dependencies
+
+Luckily, our `Android Build` step, which is by default part of your deploy workflow, takes care of all the dependencies which you have listed in your `build.gradle` file and installs them for your project.
+
+## Testing your project
+
+As you can see in the above Android workflows, the `Android Lint` and `Android Unit Test` steps are by default included in your workflow.
+
+For UI testing, add our `beta Virtual Device Testing for Android` step to **run Android UI tests on virtual devices**. Available test types - make sure you select one!
