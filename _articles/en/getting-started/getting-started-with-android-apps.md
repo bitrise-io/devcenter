@@ -151,3 +151,5 @@ You can share the generated apk with your team members using the build's URL. Yo
 ### Deploying to marketplace
 
 If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step), your signed apk will get uploaded to a marketplace of your choice.
+
+
