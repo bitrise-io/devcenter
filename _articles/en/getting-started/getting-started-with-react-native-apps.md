@@ -16,7 +16,7 @@ menu:
     weight: 29
 
 ---
-You can easily set up and configure your React Native project on Bitrise. A React Native repo can consist of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project on Bitrise, you will see that first an Android, then an iOS build gets built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously.
+You can easily set up and configure your React Native project on Bitrise. A React Native repo can consist of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project on Bitrise, you will see that first an Android, then an iOS build is built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously.
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Before you dive in, make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
@@ -163,7 +163,6 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
 5. As an optional step, you can add translations for your Store Listing. To allow the step to assign your `whatsnew` files to the uploaded APK version, visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s and add translations for your Store Listing section.
 
 Now let's head back to Bitrise and finish off the deploy configuration!
-
 
 1. In your Bitrise **Dashboard**, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 
