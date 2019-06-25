@@ -22,7 +22,7 @@ A build is the process specified by the app's [_workflow_](/steps-and-workflows/
 
 On the graphical UI of the [Workflow editor](/steps-and-workflows/getting-started-workflows/), you are able to add, remove, and reorder the build steps. Steps represent build tasks, containing their own code and predefined input and output variables. Steps can be written in various languages, like bash, Go, Ruby, [Swift](https://go.bitrise.io/swift), and more.
 
-When a build is running, these scripts will be downloaded and executed in the order you've defined in your workflow, with the input parameters you set. They will produce the predefined outputs set as [environment variables](/builds/available-environment-variables).
+When a build is running, these scripts are downloaded and executed in the order you've defined in your workflow, with the input parameters you set. They will produce the predefined outputs set as [environment variables](/builds/available-environment-variables).
 
 Read more about how the CLI, workflows and steps work "under the hood" in the [Bitrise CLI and bitrise.yml](/bitrise-cli/) section.
 
