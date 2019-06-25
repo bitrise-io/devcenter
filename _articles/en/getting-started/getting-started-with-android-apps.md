@@ -71,7 +71,7 @@ If you selected instrumentation, don't forget to set **Test APK path** under t
 3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
 4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click **Save metadata**.
 
-   With this information added to your **Code Signing** tab, our **Android Sign**Step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
+   With this information added to your **Code Signing** tab, our **Android Sign** Step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
 
 ![](https://devcenter.bitrise.io/img/keystore.png)
 
