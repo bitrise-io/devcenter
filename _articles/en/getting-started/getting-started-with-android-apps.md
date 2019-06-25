@@ -103,7 +103,7 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
    * Access level: View app information.
    * Release management: Manage production releases, manage testing track releases.
    * Store presence: Edit store listing, pricing & distribution.
-5. As an optional step, you can add translations for your Store Listing. To allow the step to assign your `whatsnew` files to the uploaded APK version, visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s and add translations for your Store Listing section.
+5. As an optional step, you can add translations for your Store Listing. To allow the **Google Play Deploy** to assign your `whatsnew` files to the uploaded APK version, visit [Translate & localize your](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) and add translations for your Store Listing section.
 
 Now let's head back to Bitrise and finish off the deploy configuration!
 
