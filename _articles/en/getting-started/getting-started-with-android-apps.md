@@ -155,6 +155,6 @@ If you add `Google Play Deploy` step to your workflow (after the `Sign APK` step
 Make sure you are in sync with Google Play Store! 
 
 
-2. In your Bitrise `Dashboard`, go to `Code Signing` and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-3. Copy the env key which stores your uploaded file’s url.
+In your Bitrise `Dashboard`, go to `Code Signing` and upload the service account JSON key into the `GENERIC FILE STORAGE.`
 
+Copy the env key which stores your uploaded file’s url.
