@@ -12,7 +12,7 @@ menu:
     weight: 3
 
 ---
-Steps can be added or removed any time from the Workflow Editor - all it takes is a couple of clicks.
+Steps can be added or removed any time from the Workflow Editor: all it takes is a couple of clicks.
 
 ## Adding a new Step
 
