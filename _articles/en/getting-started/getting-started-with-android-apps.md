@@ -99,7 +99,7 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
 1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
 3. [Set up API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started): Please note when you create your service account on the Google Developer Console, you have to choose `json` as **Key Type**.
-4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings**, then **Users & permissions**, then  **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
+4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings**, then **Users & permissions**, then **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
    * Access level: View app information.
    * Release management: Manage production releases, manage testing track releases.
    * Store presence: Edit store listing, pricing & distribution.
