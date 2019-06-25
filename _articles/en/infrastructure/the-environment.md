@@ -16,7 +16,7 @@ menu:
 ---
 ## Environment
 
-We use standard [Docker](https://quay.io) images, published on [Quay](https://quay.io/organization/bitriseio), and the related `Dockerfile` which you can find on GitHub.
+We use standard [Docker](https://quay.io) images, published on [Quay](https://quay.io/organization/bitriseio), and the related `Dockerfile` which you can find on GitHub (see below).
 
 {% include message_box.html type="note" title="What is a Dockerfile?" content=" The `Dockerfile` is the description file which describes the docker image / environment and is directly used to build the image." %}
 
