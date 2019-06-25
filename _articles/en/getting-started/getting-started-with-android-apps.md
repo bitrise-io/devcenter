@@ -156,3 +156,4 @@ Make sure you are in sync with Google Play Store!
 
 In your Bitrise `Dashboard`, go to `Code Signing` and upload the service account JSON key into the `GENERIC FILE STORAGE.`
 
+Copy the env key which stores your uploded file's URL.
