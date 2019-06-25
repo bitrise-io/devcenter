@@ -158,4 +158,6 @@ In your Bitrise `Dashboard`, go to `Code Signing` and upload the service account
 
 Copy the env key which stores your uploded file's URL.
 
-For example: Go back
+For example: 
+
+Go back
