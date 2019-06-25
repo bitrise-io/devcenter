@@ -156,3 +156,4 @@ Make sure you are in sync with Google Play Store!
 
 Learn how to [register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project) 
 
+set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
