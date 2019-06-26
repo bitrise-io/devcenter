@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/index-files/tutorials-index.md
 - _articles/en/reviews/index-files/triggering-builds-index.md
 - _articles/en/reviews/index-files/deployment-index.md
 - _articles/en/reviews/index-files/android-deployment-index.md
