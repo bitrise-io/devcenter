@@ -24,7 +24,7 @@ Bitrise has the following roles:
 * [Developers](/team-management/user-roles-on-app-teams/#developers)
 * [Testers/QA](/team-management/user-roles-on-app-teams/#testersqa)
 
-### Owners
+## Owners
 
 There are two types of owners: application owners and organization owners.
 
@@ -38,7 +38,7 @@ Owners have unlimited access to applications. Only owners can destroy apps or [t
 
 If an organization owns the app, only the owners of the organization can transfer or destroy the app.
 
-### Admins
+## Admins
 
 Admins can be assigned to applications, either in groups or individually. Organizations do not have admins: organization groups can be assigned to applications as admins.
 
@@ -48,7 +48,7 @@ Here's the role cheatsheet for admins:
 
 So, for example, an admin cannot delete an application but can invite other members to work on the app. The admin can also give admin rights to other users - however, [they cannot transfer ownership](/team-management/changing-the-owner-of-an-app/) of the app!
 
-### Developers
+## Developers
 
 Developers can be assigned to applications, either in groups or individually. Organizations do not have developers: organization groups can be assigned to applications as developers.
 
@@ -60,7 +60,7 @@ So, for example, developers cannot change team member roles, add new team member
 
 They have no access to sensitive data such as payment information, access tokens or even webhooks.
 
-### Testers/QA
+## Testers/QA
 
 Testers can be assigned to applications, either in groups or individually. Organizations do not have testers: organization groups can be assigned to applications as testers.
 
@@ -72,7 +72,7 @@ Testers can only view builds. They cannot access build logs and they cannot modi
 
 They have no access to sensitive data such as payment information, access tokens or even webhooks.
 
-### Assigning roles to users
+## Assigning roles to users
 
 There are two ways to assign roles to users:
 
