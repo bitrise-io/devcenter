@@ -31,17 +31,6 @@ List of Open Source tools maintained by the Bitrise team.
 
 * [codesigndoc](https://github.com/bitrise-tools/codesigndoc) - Your friendly iOS Code Signing Doctor.
 
-## Generic
-
-* [depman](https://github.com/bitrise-tools/depman) - Super Simple Dependency Manager
-* [releaseman](https://github.com/bitrise-tools/releaseman) - Your friendly Release Manager
-
-## Go
-
-Go / golang related tools.
-
-* [gows](https://github.com/bitrise-tools/gows) - Go Workspace / Environment Manager, to easily manage the Go Workspace during development.
-
 ## Server / service
 
 * [bitrise webhooks](https://github.com/bitrise-io/bitrise-webhooks) - Bitrise Webhooks processor. Transforms various incoming webhooks (GitHub, Bitbucket, Slack, ...) to [bitrise.io](https://www.bitrise.io)'s Build Trigger API format, and calls it to start a build.
