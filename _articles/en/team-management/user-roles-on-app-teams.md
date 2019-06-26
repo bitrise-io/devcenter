@@ -26,15 +26,15 @@ Bitrise has the following roles:
 
 ### Owners
 
-There are two types of owners: **application owners** and **organization owners**.
+There are two types of owners: application owners and organization owners.
 
-By the default, the owner of an application is the account that created the application. This can be either an individual user or an organization. **An owner of an organization has owner rights to all the apps owned by the organization.**
+By default, the owner of an application is the account that created the application. This can be either an individual user or an organization. An owner of an organization has owner rights to ALL THE APPS owned by the organization.
 
 Here's the role cheatsheet for owners:
 
 ![](/img/owners.png)
 
-Owners have unlimited access to applications. Only owners can destroy apps or [transfer the ownership of apps](/team-management/changing-the-owner-of-an-app/), and **only they have access to payment information**.
+Owners have unlimited access to applications. Only owners can destroy apps or [transfer the ownership of apps](/team-management/changing-the-owner-of-an-app/), and only they have access to PAYMENT INFORMATION.
 
 If an organization owns the app, only the owners of the organization can transfer or destroy the app.
 
@@ -74,7 +74,7 @@ They have no access to sensitive data such as payment information, access tokens
 
 ### Assigning roles to users
 
-There are three ways to assign roles to users:
+There are two ways to assign roles to users:
 
 * Invite an individual user account to work on the app, and assign it a certain role: we'll cover that in this guide!
 * [Assign a group of the organization that owns the app a certain role](/team-management/organizations/managing-apps/#assigning-groups-to-apps).
@@ -82,11 +82,11 @@ There are three ways to assign roles to users:
 Users who have **owner** or **admin** rights to the applications can invite new team members and assign them roles. Let's see how to assign individual users to apps!
 
 1. Open the app's page on Bitrise.
-2. Click the `Team` tab.
-3. In the `Add users to this app` box, type the username or the email of the user you want to invite.
+2. Click the **Team** tab.
+3. In the **Add users to this app** box, type the username or the email of the user you want to invite.
 
    ![](/img/add-users.png)
 
-   Note that [the process is the same if the app is owned by an organization](/team-management/organizations/managing-apps/#adding-contributors-to-an-app) except you will see `Add contributors to this app` above the box where you enter the username or email.
+   Note that [the process is the same if the app is owned by an organization](/team-management/organizations/managing-apps/#adding-contributors-to-an-app) except you will see **Add contributors to this app** above the box where you enter the username or email.
 4. Select the role you want to assign.
-5. Click `Grant Access`.
+5. Click **Grant Access**.
