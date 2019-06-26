@@ -23,9 +23,10 @@ When signing up to Bitrise, you create an individual user account. Individual us
 
 The most important concepts to managing apps on Bitrise are:
 
-**Teams:** They are based on the applications: all users invited to work on a given app make up the **team** of the application. [Owners and admins can assign roles](/team-management/user-roles-on-app-teams/) on the teams.
+* Teams: They are based on the applications: all users invited to work on a given app which makes up the team of the application. [Owners and admins can assign roles](/team-management/user-roles-on-app-teams/) on the teams.
 
-**Organizations**: [They are created by individual users](/team-management/organizations/creating-org/). Organizations can have an unlimited number of members and can own and control an unlimited amount of apps. Organizations need their own payment plan: even if the organization's creator is already subscribed to Bitrise, a separate payment plan must be set up for the organization itself.
+
+* Organizations: [They are created by individual users](/team-management/organizations/creating-org/). Organizations can have an unlimited number of members and can own and control an unlimited amount of apps. Organizations need their own payment plan: even if the organization's creator is already subscribed to Bitrise, a separate payment plan must be set up for the organization itself.
 
 {% include message_box.html type="important" title="Teams vs groups" content="Teams and groups are not the same! [Groups are the main building blocks of organizations](/team-management/organizations/members-organizations/) but by themselves have no powers: they need to be [assigned to apps](/team-management/organizations/managing-apps/#assigning-groups-to-apps).
 
