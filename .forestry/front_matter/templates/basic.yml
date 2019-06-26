@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/index-files/ios-deployment-index.md
 - _articles/en/reviews/index-files/troubleshooting-index.md
 - _articles/en/reviews/bitrise-tools-draft.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
