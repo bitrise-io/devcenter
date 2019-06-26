@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/Index files/caching-index.md
 - _articles/en/reviews/Index files/bitrise-cli.md
 - _articles/en/reviews/Index files/api-index.md
 - _articles/en/reviews/Index files/android-code-signing-index.md
