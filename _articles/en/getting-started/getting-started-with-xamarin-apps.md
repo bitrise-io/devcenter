@@ -163,7 +163,7 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 2. Select the Workflow you created for deploying your app.
 3. Check that the code signing Steps and the **Xamarin Archive** Step are included in the Workflow.
 4. If you want to use a different solution configuration, change the values of the relevant Env Var on the the **Env Var** tab. You can check out which Env Vars you need to change in the inputs of the **Xamarin Archive** Step.
-5. Add the **Google Play Deploy** Step to the Workflow.
+5. Add the [**Google Play Deploy**](/deploy/android-deploy/deploying-android-apps/#deploying-to-the-google-play-store) Step to the Workflow.
 
    The Step needs to be after the **Xamarin Archive** Step.
 6. Upload the Service Account JSON key file to the **Generic File Storage** on the **Code Signing** tab of the Workflow Editor.

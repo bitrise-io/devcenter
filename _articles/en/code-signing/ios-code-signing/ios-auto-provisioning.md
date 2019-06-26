@@ -25,7 +25,7 @@ Before setting up automatic provisioning in your workflow, make sure that:
 
 * you collected the required files with [codesigndoc](https://github.com/bitrise-tools/codesigndoc). You can also upload the distribution and development certificates with the tool!
 * you have at least **Admin** role in the developer portal team.
-* [your Apple Developer account is connected to bitrise.io](/getting-started/signing-up/connecting-apple-dev-account/).
+* [your Apple Developer account is connected to bitrise.io](/getting-started/connecting-apple-dev-account/).
 * Apple Developer Portal integration to your Bitrise project is enabled.
 
 {% include message_box.html type="important" title="iOS Auto Provision" content="Automatic provisioning with the `iOS Auto Provision` Step is not supported for Xamarin apps!"%}
