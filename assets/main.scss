@@ -377,7 +377,7 @@ nav#side-menu {
 			}
 
 
-			button.menu-list-opener {
+			.menu-list-opener {
 				padding: 0 0 0 1.825rem;
 				font-size: 1.4rem;
 
@@ -393,123 +393,176 @@ nav#side-menu {
 				}
 
 				&.open:after {
-					transform: translateY(0.1rem) rotate(-90deg);
+					transform: rotate(-90deg);
 				}
 
 				&:not(.open):after {
-					transform: translateY(0.1rem) rotate(90deg);
+					transform: rotate(90deg);
 				}
 			}
 
-			button.menu-list-opener-1 {
+			.menu-list-opener-1 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/getting-started.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/getting-started-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-2 {
+			.menu-list-opener-2 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/cpu.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/cpu-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-3 {
+			.menu-list-opener-3 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/dudes.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/dudes-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-4 {
+			.menu-list-opener-4 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/webhooks.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/webhooks-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-5 {
+			.menu-list-opener-5 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/workflow.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/workflow-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-6 {
+			.menu-list-opener-6 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/build.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/build-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-7 {
+			.menu-list-opener-7 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/code-signing.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/code-signing-focus.svg);
+				}
 			}
 
- 			button.menu-list-opener-8 {
-
- 				&:before {
- 					content: url(/assets/logos/icons-docs/cache.svg);
- 				}
- 			}
-
-			button.menu-list-opener-9 {
+			.menu-list-opener-8 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/testing.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/testing-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-10 {
+			.menu-list-opener-9 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/deployment.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/deployment-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-11 {
+			.menu-list-opener-10 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/window.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/window-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-12 {
+			.menu-list-opener-11 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/info_main.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/info_main-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-13 {
+			.menu-list-opener-12 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/lightbulb_main.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/lightbulb_main-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-14 {
+			.menu-list-opener-13 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/support.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/support-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-15 {
+			.menu-list-opener-14 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/bug.svg);
 				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/bug-focus.svg);
+				}
 			}
 
-			button.menu-list-opener-16 {
+			.menu-list-opener-15 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/code.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/code-focus.svg);
 				}
 			}
 
@@ -517,7 +570,7 @@ nav#side-menu {
 				text-decoration: none;
 			}
 
-			button.menu-list-opener:not(.open) + ol.menu-list, button.menu-list-opener-1:not(.open) + ol.menu-list, button.menu-list-opener-2:not(.open) + ol.menu-list, button.menu-list-opener-3:not(.open) + ol.menu-list, button.menu-list-opener-4:not(.open) + ol.menu-list, button.menu-list-opener-5:not(.open) + ol.menu-list, button.menu-list-opener-6:not(.open) + ol.menu-list, button.menu-list-opener-7:not(.open) + ol.menu-list, button.menu-list-opener-8:not(.open) + ol.menu-list, button.menu-list-opener-9:not(.open) + ol.menu-list, button.menu-list-opener-10:not(.open) + ol.menu-list, button.menu-list-opener-11:not(.open) + ol.menu-list, button.menu-list-opener-12:not(.open) + ol.menu-list, button.menu-list-opener-13:not(.open) + ol.menu-list, button.menu-list-opener-14:not(.open) + ol.menu-list, button.menu-list-opener-15:not(.open) + ol.menu-list, button.menu-list-opener-16:not(.open) + ol.menu-list, {
+				[class^="menu-list-opener"]:not(.open) + ol.menu-list, {
 				display: none;
 			}
 		}

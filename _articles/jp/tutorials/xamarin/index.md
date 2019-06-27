@@ -3,8 +3,9 @@ title: Xamarinについて
 redirect_from:
 - "/xamarin/"
 menu:
-  xamarin:
-    weight: 1
+  tutorials-main:
+    identifier: xamarin
+    weight: 3
 
 ---
 [Xamarin](https://xamarin.com) インテグレーションを使えば [Bitrise](https://www.bitrise.io) で iOS と Android の Xamarin アプリをビルドすることができます。

@@ -42,6 +42,9 @@
         {{ site.data.basic_info.name }}
       {% endif %}
     </title>
+    {% if page.forestry_instant_preview_id %}
+      <meta name="forestry:prevID" value="{{ page.forestry_instant_preview_id }} ">
+    {% endif %}
     <meta property="og:title" content="{{ site.data.basic_info.name }}" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="{{ site.data.basic_info.page_url }}" />
@@ -113,9 +116,6 @@
             </div>
           {% endif %}
         {% endif %}
-        {% if page.forestry_preview_id %}
-          <!-- {{ page.forestry_preview_id }} -->
-        {% endif %}
         {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
         {% include related_articles.html %}
         <div class="banner">
@@ -151,6 +151,7 @@
     </footer>
   </body>
   {% include analytics.html %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
   <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
 
