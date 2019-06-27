@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/index-files/docker-index.md
 - _articles/en/reviews/index-files/fastlane-index.md
 - _articles/en/reviews/index-files/tips-and-tricks-index.md
 - _articles/en/reviews/index-files/troubleshooting-index.md
