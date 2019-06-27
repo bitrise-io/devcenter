@@ -1,20 +1,19 @@
 function configureSideMenu() {
-	var activeMenuItem = document.querySelector("#side-menu a.current");
-	var iteratedElement = activeMenuItem;
 
-	while (iteratedElement) {
-		while (iteratedElement.tagName != "OL" && !iteratedElement.classList.contains("menu-list")) {
-			iteratedElement = iteratedElement.parentNode;
-		}
+  var currentPage = window.location.href;
 
-		var listOpener = iteratedElement.previousElementSibling;
-		if (listOpener.tagName != "BUTTON") {
-			break;
-		}
+  $("#side-menu a").each(
+    function() {
+      if (this.href == currentPage && this.href.indexOf("index") != -1) {
+        $(this).addClass("open") && $(this.closest("ol").previousElementSibling).addClass("open");
+      }
 
-		listOpener.classList.add("open");
-		iteratedElement = listOpener;
-	}
+      else if (this.href == currentPage && this.href.indexOf("index") == -1) {
+        var mainMenuItem =  this.closest("div.menu-wrapper > ol > li > ol").previousElementSibling;
+        $(this.closest("ol > li > ol").previousElementSibling).addClass("open") && $(mainMenuItem).addClass("open");
+      }
+    }
+  );
 }
 
 function toggleSideBar() {
