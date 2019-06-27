@@ -1,7 +1,6 @@
 ---
 title: webhookの追加
-redirect_from:
-- "/webhooks/"
+redirect_from: "/jp/jp/webhooks/index/"
 menu:
   webhooks-main:
     weight: 2
@@ -57,22 +56,22 @@ bitrise.ioでアプリを開き、`Code`タブに移動します。
 
 コードタブでセットアップに関する詳細な説明を見つけるか、devcenterの記事をチェックするためにプロバイダを選択することができます。
 
-* [GitHubウェブフックの追加](/webhooks/adding-a-github-webhook)
-* [ Bitbucketウェブフックの追加  ](/webhooks/adding-a-bitbucket-webhook)
+* [GitHubウェブフックの追加](/jp/webhooks/adding-a-github-webhook)
+* [ Bitbucketウェブフックの追加  ](/jp/webhooks/adding-a-bitbucket-webhook)
 * [Gitlab用のWebフックの追加]()
-* [ Visual Studio Online / Visual Studio Team Services用のWebフックの追加](/webhooks/adding-a-visual-studio-webhook)
-* [ Slack用のWebフックの追加  ](/webhooks/adding-a-slack-webhook)
-* [Gogs用のWebフックの追加](/webhooks/adding-a-gogs-webhook)
-* [Deveo用のWebフックの追加](/webhooks/adding-deveo-webhook)
-* [Assembla用のWebフックの追加](/webhooks/adding-assembla-webhook)
+* [ Visual Studio Online / Visual Studio Team Services用のWebフックの追加](/jp/webhooks/adding-a-visual-studio-webhook)
+* [ Slack用のWebフックの追加  ](/jp/webhooks/adding-a-slack-webhook)
+* [Gogs用のWebフックの追加](/jp/webhooks/adding-a-gogs-webhook)
+* [Deveo用のWebフックの追加](/jp/webhooks/adding-deveo-webhook)
+* [Assembla用のWebフックの追加](/jp/webhooks/adding-assembla-webhook)
 
 ## outgoing webhooksを設定
 
-Bitriseに[outgoing webhooks](/webhooks/adding-outgoing-webhooks/)を設定することもでき,また、ビルドイベントについて選択したサービスに通知することができます。ビルドイベントは次のとおりです：
+Bitriseに[outgoing webhooks](/jp/webhooks/adding-outgoing-webhooks/)を設定することもでき,また、ビルドイベントについて選択したサービスに通知することができます。ビルドイベントは次のとおりです：
 
 * ビルドが開始されたとき
 * ビルドが終了したとき
 
 ## トラブルシューティング
 
-Webhook関連のトラブルシューティング/デバッグに関する注意事項については、[Webhook Troubleshooting](/webhooks/troubleshooting)ガイドを参照してください。
+Webhook関連のトラブルシューティング/デバッグに関する注意事項については、[Webhook Troubleshooting](/jp/webhooks/troubleshooting)ガイドを参照してください。

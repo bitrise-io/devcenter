@@ -1,8 +1,10 @@
 ---
-title: Introduction to the Bitrise API
+title: API
+redirect_from: "/jp/api/v0.1/"
 menu:
-  api-main:
-    weight: 1
+  main:
+    identifier: api-main
+    weight: 15
 
 ---
 {% include not_translated_yet.html %}

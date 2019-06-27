@@ -1,10 +1,12 @@
 ---
-title: チームと組織の概要
+title: Teams and organizations
 redirect_from: []
 date: '2019-03-27T15:48:36.000+00:00'
 menu:
-  team-management-main:
-    weight: 2
+  main:
+    identifier: team-management-main
+    weight: 3
+redirect_from: "/jp/team-management/teams-vs-organizations/"
 
 ---
 Bitriseの2種類のアカウント：

@@ -1,11 +1,16 @@
 ---
 title: Bitrise上でのiOSコード署名
 redirect_from:
-- "/ios/code-signing/"
+- "/jp/code-signing/ios-code-signing/code-signing/"
+tag:
+- ios
+- code-signing
+summary: 'Manage iOS code signing on Bitrise: collect and upload your code signing
+  files using our tools, and export your app with the export method you specify. '
 menu:
-  ios-code-signing:
-    weight: 1
-
+  code-signing-main:
+    identifier: ios-code-signing
+    weight: 2
 ---
 Bitrise上でビルドを実行するには、code signingを行うためのファイルを用意する必要があります。iOSのプロジェクトで必要なファイルは以下の通りです:
 
@@ -23,14 +28,14 @@ Bitrise上でビルドを実行するには、code signingを行うためのフ�
 
 基本的なcode signingのフローは非常にシンプルです:
 
-1. [Bitriseが提供している codesigndoc を利用して必要なファイルを取得します](/code-signing/ios-code-signing/collecting-files-with-codesigndoc)
+1. [Bitriseが提供している codesigndoc を利用して必要なファイルを取得します](/jp/code-signing/ios-code-signing/collecting-files-with-codesigndoc)
 2. [bitrise.io](https://www.bitrise.io)にcode signing用のファイルをアップロードします。`codesigndoc` を利用してアップロードするかもしくは、website上から手動でアップロードすることもできます。
 プロビジョニングプロファイルの設定では、以下のオプションが利用できます:
-   * [手動プロビジョニング設定](/code-signing/ios-code-signing/ios-manual-provisioning)
-   * [自動プロビジョニング設定](/code-signing/ios-code-signing/ios-auto-provisioning)
+   * [手動プロビジョニング設定](/jp/code-signing/ios-code-signing/ios-manual-provisioning)
+   * [自動プロビジョニング設定](/jp/code-signing/ios-code-signing/ios-auto-provisioning)
 3. 署名された `.ipa` ファイルを作成するために `Xcode Archive & Export for iOS` もしくは `Xamarin Archive` のStepを設定します:
-   * Xcodeプロジェクト: [Create a signed .ipa for Xcode projects](/code-signing/ios-code-signing/create-signed-ipa-for-xcode)
-   * Xamarinプロジェクト: [Create a signed .ipa for Xamarin projects](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin)
+   * Xcodeプロジェクト: [Create a signed .ipa for Xcode projects](/jp/code-signing/ios-code-signing/create-signed-ipa-for-xcode)
+   * Xamarinプロジェクト: [Create a signed .ipa for Xamarin projects](/jp/code-signing/ios-code-signing/create-signed-ipa-for-xamarin)
 
 
 ## サードパーティツールを用いたcode signing

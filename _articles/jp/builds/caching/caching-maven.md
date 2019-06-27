@@ -1,7 +1,7 @@
 ---
 title: Mavenのキャッシュ
 menu:
-  caching-main:
+  caching:
     weight: 7
 
 ---

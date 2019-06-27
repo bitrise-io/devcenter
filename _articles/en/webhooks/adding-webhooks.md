@@ -1,7 +1,7 @@
 ---
 title: Adding webhooks
 redirect_from:
-- "/webhooks/"
+- "/webhooks/index/"
 tag:
 - triggers
 - webhooks

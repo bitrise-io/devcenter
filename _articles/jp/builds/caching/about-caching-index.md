@@ -1,8 +1,11 @@
 ---
 title: キャッシュについて
+redirect_from: "/jp/caching/about-caching/"
 menu:
-  caching-main:
-    weight: 2
+  builds-main:
+    identifier: caching
+    weight: 1
+redirect_from: "/jp/caching/about-caching/"
 
 ---
 キャッシュは全てのキャッシュされたディレクトリや依存性をtarし、Amazon S3内に安全に保存します。

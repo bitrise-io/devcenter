@@ -1,7 +1,7 @@
 ---
 title: Ruby Gemsのキャッシュ
 menu:
-  caching-main:
+  caching:
     weight: 9
 
 ---

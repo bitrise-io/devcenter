@@ -42,6 +42,9 @@
         {{ site.data.basic_info.name }}
       {% endif %}
     </title>
+    {% if page.forestry_instant_preview_id %}
+      <meta name="forestry:prevID" value="{{ page.forestry_instant_preview_id }} ">
+    {% endif %}
     <meta property="og:title" content="{{ site.data.basic_info.name }}" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="{{ site.data.basic_info.page_url }}" />
@@ -112,9 +115,6 @@
               <a class="material-icon" href="{{ current_article_source_url }}" target="_blank"></a>
             </div>
           {% endif %}
-        {% endif %}
-        {% if page.forestry_preview_id %}
-          <!-- {{ page.forestry_preview_id }} -->
         {% endif %}
         {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
         {% include related_articles.html %}

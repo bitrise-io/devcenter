@@ -6,7 +6,7 @@ tag:
 summary: Many of the features that you are used to on our website and with our CLI
   are available via the API, too. It lets you integrate various systems and services
   with our CI/CD service for an efficient pipeline.
-redirect_from: "/en/api/v0.1/"
+redirect_from: "/api/v0.1/"
 menu:
   main:
     identifier: api-main

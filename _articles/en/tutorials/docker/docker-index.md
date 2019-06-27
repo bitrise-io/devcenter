@@ -1,7 +1,7 @@
 ---
 tag: []
 title: 'Docker'
-redirect_from: []
+redirect_from:  "/tutorials/docker/index/"
 summary: ''
 menu:
   tutorials-main:

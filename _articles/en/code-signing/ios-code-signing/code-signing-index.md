@@ -1,7 +1,7 @@
 ---
 title: iOS code signing
 redirect_from:
-- "/ios/code-signing/"
+- "/code-signing/ios-code-signing/code-signing/"
 tag:
 - ios
 - code-signing

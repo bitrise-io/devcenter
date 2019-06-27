@@ -1,4 +1,5 @@
 ---
+redirect_from: "/getting-started/builds-and-workflows/"
 tag:
 - builds
 - workflows

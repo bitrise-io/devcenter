@@ -1,8 +1,5 @@
 ---
 title: Use your own Docker image
-menu:
-  docker:
-    weight: 5
 
 ---
 {% include not_translated_yet.html %}
@@ -61,7 +58,7 @@ In this example, we're following the official “getting started” guide to run
                 set -e
                 # debug log
                 set -x
-    
+
                 docker run hello-world
 
 ### Building and running a Dockerfile
@@ -91,7 +88,7 @@ Here is a bit more complex example for using your own `Dockerfile` in your rep
                 set -e
                 # debug log
                 set -x
-    
+
                 docker build -t bitrise-minimal-sample .
                 docker run --rm bitrise-minimal-sample
 
@@ -103,7 +100,7 @@ This workflow will:
 If you have a `Dockerfile` like this in the root of the repository:
 
     FROM alpine:3.3
-    
+
     CMD cat /etc/alpine-release
 
 The output will be something like:
@@ -120,7 +117,7 @@ The output will be something like:
     |                                                                              |
     + docker build -t bitrise-minimal-sample .
     Sending build context to Docker daemon 69.12 kB
-    
+
     Step 1 : FROM alpine:3.3
     3.3: Pulling from library/alpine
     985c5f84712b: Pulling fs layer
