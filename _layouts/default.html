@@ -113,6 +113,9 @@
             </div>
           {% endif %}
         {% endif %}
+        {% if page.forestry_preview_id %}
+          <!-- {{ page.forestry_preview_id }} -->
+        {% endif %}
         {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
         {% include related_articles.html %}
         <div class="banner">
