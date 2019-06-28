@@ -1,10 +1,11 @@
 ---
-title: About Xamarin
+title: Xamarin
 redirect_from:
 - "/xamarin/"
 menu:
-  xamarin:
-    weight: 2
+  tutorials-main:
+    identifier: xamarin
+    weight: 3
 
 ---
 With [Xamarin](https://xamarin.com) integration you can now build your

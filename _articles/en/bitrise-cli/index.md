@@ -1,5 +1,5 @@
 ---
-title: Introduction to the CLI
+title: Bitrise CLI
 redirect_from:
 - "/bitrise-cli"
 - "/bitrise-cli/"
@@ -10,6 +10,10 @@ tag:
 summary: The open source Bitrise CLI / runner is responsible for interpreting and
   executing the build configuration. Using the Bitrise CLI you can run the same configuration
   on any compatible Mac/PC, inside and outside of bitrise.io.
+menu:
+  main:
+    identifier: bitrise-cli-main
+    weight: 10
 
 ---
 Bitrise is a [collection of tools](https://devcenter.bitrise.io/tools/bitrise-tools/) and [services](https://www.bitrise.io) to help you with the development and automation of your software projects, with a main focus on mobile apps. This section is dedicated solely to the [open source Bitrise CLI / runner](https://github.com/bitrise-io/bitrise), which is responsible for interpreting and executing the build configuration. Using the Bitrise CLI you can run the same configuration on any compatible Mac/PC, inside and outside of [bitrise.io](https://www.bitrise.io).

@@ -1,11 +1,13 @@
 ---
-title: Intro
+title: Bitrise CLI
 redirect_from:
 - "/bitrise-cli"
 - "/bitrise-cli/"
 menu:
-  bitrise-cli-main:
-    weight: 1
+  main:
+    identifier: bitrise-cli-main
+    weight: 10
+
 
 ---
 {% include not_translated_yet.html %}

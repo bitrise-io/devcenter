@@ -5,26 +5,15 @@ menu:
     weight: 1
 
 ---
-Having more time to be creative is the key to great inventions.
-We believe that giving developers the chance to work without distractions is the most important thing that can lead to extraordinary creations.
-Our mission is to provide a platform that lets you concentrate on the process of creation,
-instead of the administrative tasks that get in the way of it.
-
-That's why we created Bitrise. But we're not alone in this!
-We love how [Felix Krause](https://krausefx.com) sought to solve this problem by
-creating [fastlane](https://fastlane.tools). So by the combined force of earth, water, fire and wind…
-we integrated the whole [fastlane toolkit](https://fastlane.tools) - booyah! How cool is that!
-
-{% include message_box.html type="note" title="Bitrise offline CLI" content=" We have an open source, offline CLI, which can be used in a similar way as _fastlane_. If you're interested, you can find the CLI's website [here](https://www.bitrise.io/cli), and its GitHub repository [here](https://github.com/bitrise-io/bitrise). You can use this CLI to run your bitrise configurations locally, which can include runing _fastlane_ too as part of the build, as described below. ;) "%}
-
 ## What is fastlane?
 
 _fastlane_ lets you define and run your deployment pipelines for different environments.
 It helps you unify and automate your app's release process.
 _fastlane_ connects all `fastlane tools` and third party tools, like CocoaPods and xctool.
 
-_fastlane_ is a collection of ruby gems that cover the most usual tasks required during iOS app development
-and upload or update to the App Store.
+_fastlane_ is a collection of ruby gems that cover the most usual tasks required during iOS app development and upload or update to the App Store.
+
+{% include message_box.html type="note" title="Bitrise offline CLI" content=" We have an open source, offline CLI, which can be used in a similar way as _fastlane_. If you're interested, you can find the CLI's website [here](https://www.bitrise.io/cli), and its GitHub repository [here](https://github.com/bitrise-io/bitrise). You can use this CLI to run your bitrise configurations locally, which can include runing _fastlane_ too as part of the build. "%}
 
 ## How to get started?
 
