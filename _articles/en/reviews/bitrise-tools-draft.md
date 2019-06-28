@@ -27,13 +27,11 @@ The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used 
 
 ## Bitrise CLI plugins
 
-### analytics plugin 
-
-(https://github.com/bitrise-core/bitrise-plugins-analytics)
+The following plugins can be directly run with the Bitrise CLI
 
 ### init
 
-[https://github.com/bitrise-io/bitrise-plugins-init.git](https://github.com/bitrise-io/bitrise-plugins-init.git "https://github.com/bitrise-io/bitrise-plugins-init.git")
+[This plugin](https://github.com/bitrise-io/bitrise-plugins-init.git) runs the scanner to detect the type of your project and generates a Bitrise configuration with a `bitrise.yml`. 
 
 ### step
 
