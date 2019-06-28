@@ -122,7 +122,7 @@ sections:
   label: _config.yml
 - type: directory
   path: _data
-  label: Forestry data files - MENUS.YML here
+  label: Forestry data files
   create: all
   match: "**/*"
 - type: directory
