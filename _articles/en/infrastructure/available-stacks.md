@@ -14,16 +14,13 @@ menu:
     weight: 1
 
 ---
-The Stack indicates the virtual machine version that we will use to run your build.
-After adding your application to Bitrise we will select an appropriate Stack for it.
-Change it in the **Stacks** tab of the Workflow Editor.
+The Stack indicates the virtual machine version that we will use to run your build. After adding your application to Bitrise we will select an appropriate Stack for it. Change it in the `Stacks` tab of the Workflow Editor.
 
 ![](/img/stack-selector.png)
 
 After selecting the Stack you want to use, you'll see a short description of the stack with an additional link to learn more about that specific Stack (e.g. to see what tools are preinstalled, and which versions, on the selected Stack).
 
-{% include message_box.html type="important" title="Make sure you hit the **Save** button" content=" The Stack won't be used until you click the **Save** button!
-"%}
+{% include message_box.html type="important" title="Make sure you hit the `Save` button" content=" The Stack won't be used until you click the `Save` button! "%}
 
 ## Stack status types
 
@@ -41,9 +38,28 @@ After selecting the Stack you want to use, you'll see a short description of the
 
 ## What's preinstalled
 
-Every time we create or update a Stack we create a System Report for it too.
-The System Reports include the list of preinstalled tools and their version on the stack.
-The System Report scripts are also open source, so if you want to run it yourself
-or you want to add another tool / system check, feel free to send us a pull request!
+Every time we create or update a Stack we create a "System Report" for it too. The System Reports include the list of preinstalled tools and their version on the stack. The System Report scripts are also open source, so if you want to run it yourself or you want to add another tool / system check, feel free to send us a pull request!
 
 You can find every available stack's System Report on [GitHub](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports).
+
+## Choosing the right stack
+
+When adding a new app on Bitrise, our project scanner will scan your app, and based on the platform type, it will select a default stack for it. 
+
+However, you can change the stack any time if you wish. 
+
+### Cross-platform apps
+
+Our Xcode stacks are not exclusively for iOS apps: all Xcode stacks include Android tools, too - so you can use our Xcode stack for your cross-platform apps. 
+
+Why should you choose this over the **Visual Studio for Mac** stack? That stack, formerly called the Hybrid stack, includes Xcode - but its version of Xcode is automatically upgraded from time to time. If, however, your cross-platform app requires a specific Xcode version then you should choose that particular Xcode stack. That way an Xcode upgrade will not break anything in your builds.
+
+### Native iOS apps 
+
+For the native iOS apps, it's simple: choose the stack that has the same Xcode version that you use to develop and build your app. 
+
+### Native Android apps
+
+For native Android apps, the recommended stack is still the [Android & Docker stack](/infrastructure/the-environment/) - it will surely serve all your needs. 
+
+However, it is possible to use the Xcode stacks, as they have Android tools installed now.

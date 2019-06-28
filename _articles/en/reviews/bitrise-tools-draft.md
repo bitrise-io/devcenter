@@ -12,13 +12,34 @@ List of Open Source tools maintained by the Bitrise team.
 
 ## Core, Bitrise CLI tools
 
-* [bitrise](https://github.com/bitrise-io/bitrise) - the Bitrise CLI, which is used on [bitrise.io](https://www.bitrise.io) to run the builds, as well as you can install it on your own Mac/Linux and run your the build locally!
-* [stepman](https://github.com/bitrise-io/stepman) - used for managing the Step Library, including downloading and sharing steps.
-* [envman](https://github.com/bitrise-io/envman) - environment variable manager, can be used independently and Bitrise CLI uses it to isolate and manage environment variables during the build.
+### bitrise
+
+The [Bitrise CLI]((https://github.com/bitrise-io/bitrise)), which is used on [bitrise.io](https://www.bitrise.io) to run the builds, as well as you can install it on your own Mac/Linux and run your the build locally!
+Find out more about the Bitrise CLI in our [detailed guide](/bitrise-cli/index/).
+
+### stepman
+
+The [Step Collection Manager]((https://github.com/bitrise-io/stepman)) used for managing the Step Library, including downloading and sharing [Steps](/steps-and-workflows/getting-started-steps/).
+
+### envman
+
+The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used by the Bitrise CLI to isolate and manage [Environment Variables](/builds/available-environment-variables/) during the build. envman can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Environment Variable and the other uses it.
 
 ## Bitrise CLI plugins
 
-* [Analytics plugin](https://github.com/bitrise-core/bitrise-plugins-analytics)
+The following plugins can be directly run with the Bitrise CLI
+
+### init
+
+[This plugin](https://github.com/bitrise-io/bitrise-plugins-init.git) runs the scanner to detect the type of your project and generates a Bitrise configuration with a `bitrise.yml`. 
+
+### step
+
+[https://github.com/bitrise-io/bitrise-plugins-step.git](https://github.com/bitrise-io/bitrise-plugins-step.git "https://github.com/bitrise-io/bitrise-plugins-step.git")
+
+### workflow-editor
+
+[https://github.com/bitrise-io/bitrise-workflow-editor.git](https://github.com/bitrise-io/bitrise-workflow-editor.git "https://github.com/bitrise-io/bitrise-workflow-editor.git")
 
 ## Infrastructure
 
