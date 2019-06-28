@@ -25,10 +25,23 @@ The [Step Collection Manager]((https://github.com/bitrise-io/stepman)) used for 
 
 The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used by the Bitrise CLI to isolate and manage [Environment Variables](/builds/available-environment-variables/) during the build. envman can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Environment Variable and the other uses it.
 
-
 ## Bitrise CLI plugins
 
-* [Analytics plugin](https://github.com/bitrise-core/bitrise-plugins-analytics)
+### analytics plugin 
+
+(https://github.com/bitrise-core/bitrise-plugins-analytics)
+
+### init
+
+[https://github.com/bitrise-io/bitrise-plugins-init.git](https://github.com/bitrise-io/bitrise-plugins-init.git "https://github.com/bitrise-io/bitrise-plugins-init.git")
+
+### step
+
+[https://github.com/bitrise-io/bitrise-plugins-step.git](https://github.com/bitrise-io/bitrise-plugins-step.git "https://github.com/bitrise-io/bitrise-plugins-step.git")
+
+### workflow-editor
+
+[https://github.com/bitrise-io/bitrise-workflow-editor.git](https://github.com/bitrise-io/bitrise-workflow-editor.git "https://github.com/bitrise-io/bitrise-workflow-editor.git")
 
 ## Infrastructure
 
