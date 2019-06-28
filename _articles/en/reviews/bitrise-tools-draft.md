@@ -12,9 +12,9 @@ List of Open Source tools maintained by the Bitrise team.
 
 ## Core, Bitrise CLI tools
 
-* [bitrise](https://github.com/bitrise-io/bitrise) - the Bitrise CLI, which is used on [bitrise.io](https://www.bitrise.io) to run the builds, as well as you can install it on your own Mac/Linux and run your the build locally!
-* [stepman](https://github.com/bitrise-io/stepman) - the Step Collection Manager used for managing the Step Library, including downloading and sharing steps.
-* [envman](https://github.com/bitrise-io/envman) - the Environment Variable Manager used by the Bitrise CLI to isolate and manage Environment Variables during the build. Envman can be used independently of the Bitrise CLI to connect tools; one tool saves the Environment Variable and the other uses it.
+* bitrise(https://github.com/bitrise-io/bitrise) - the Bitrise CLI, which is used on [bitrise.io](https://www.bitrise.io) to run the builds, as well as you can install it on your own Mac/Linux and run your the build locally!
+* stepman(https://github.com/bitrise-io/stepman) - the Step Collection Manager used for managing the Step Library, including downloading and sharing steps.
+* envman(https://github.com/bitrise-io/envman) - the Environment Variable Manager used by the Bitrise CLI to isolate and manage Environment Variables during the build. Envman can be used independently of the Bitrise CLI to connect tools; one tool saves the Environment Variable and the other uses it.
 
 ## Bitrise CLI plugins
 
