@@ -119,3 +119,5 @@ Now let's see how to sign up to Bitrise.
 8. You're directed to the **Help us help you** page where you can share some more details with us or add those later.
 
 If all went well, you're landed on your Bitrise Dashboard where you can view the Organization's apps! If you go to your **Account Settings**, you will see the [Organization]() you've just joined.
+
+
