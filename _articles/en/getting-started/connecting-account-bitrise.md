@@ -60,5 +60,5 @@ And you are done!
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 	<div class="deploy-text">Let's connect my GitHub/GitLab/Bitbucket account to Bitrise!</div>
-	<a target="_blank" href="https://app.bitrise.io/me/profile#"><button class="button">Go to Account settings</button></a>
+	<a target="_blank" href="https://app.bitrise.io/me/profile#"><button class="button">Go to my Account settings</button></a>
 </div>
