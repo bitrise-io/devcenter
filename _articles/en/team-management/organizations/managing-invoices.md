@@ -48,3 +48,10 @@ And that's it! From now on, your invoices will be sent to the new email address.
 5. Select the invoice you need and click the download icon on the right.
 
    ![Screenshot](/img/team-management/organization/past-invoices.png)
+   
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Manage your organization's billing info</div>
+	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your Account settings</button></a>
+</div>   
+   
