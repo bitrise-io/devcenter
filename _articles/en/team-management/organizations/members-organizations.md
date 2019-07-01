@@ -95,3 +95,9 @@ Removing members from the entire organization removes them from all the groups t
 3. On the left, select `Groups` from the menu options.
 4. Choose the group you wish to delete, and click the dropdown menu indicated by the `...` symbol.
 5. Click `Delete group` then click `Yes` in the pop-up window.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Manage your organization members</div>
+	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
+</div>
