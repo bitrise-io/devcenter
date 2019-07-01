@@ -56,5 +56,5 @@ And that's it! You can start inviting people to your organization!
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 	<div class="deploy-text">Let's create an organization on Bitrise </div>
-	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Add organization </button></a>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Add organization </button></a>
 </div>
