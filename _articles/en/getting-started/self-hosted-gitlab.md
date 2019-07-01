@@ -57,3 +57,9 @@ Before you start, make sure you [created an OAuth application](/getting-started/
 5. Click `Connect`.
 
 Once connected, proceed as usual to [setting up your project configuration](/adding-a-new-app/).
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+</div>
