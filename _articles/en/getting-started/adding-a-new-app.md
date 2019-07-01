@@ -25,11 +25,11 @@ Currently we are supporting the following projects out of the box:
 * [iOS](/getting-started/getting-started-with-ios-apps/)
 * [Android](/getting-started/getting-started-with-android-apps/)
 * [Xamarin](/getting-started/getting-started-with-react-native-apps/)
-* Fastlane
+* [Fastlane](/tutorials/fastlane/fastlane-tools-integration/)
 * [Flutter](/getting-started/getting-started-with-flutter-apps/)
 * [macOS](/getting-started/getting-started-with-macos-apps/)
 * [Ionic/Cordova](/getting-started/getting-started-with-ionic-cordova-apps/)
-* React Native
+* [React Native](/getting-started/getting-started-with-react-native-apps/)
 
 In this guide we describe how you can add a new app to Bitrise, connect your repository to Bitrise, set up SSH keys and initial configuration, and register a webhook.
 
