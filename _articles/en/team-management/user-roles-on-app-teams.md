@@ -90,3 +90,9 @@ Users who have **owner** or **admin** rights to the applications can invite new 
    Note that [the process is the same if the app is owned by an organization](/team-management/organizations/managing-apps/#adding-contributors-to-an-app) except you will see **Add contributors to this app** above the box where you enter the username or email.
 4. Select the role you want to assign.
 5. Click **Grant Access**.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+</div>
