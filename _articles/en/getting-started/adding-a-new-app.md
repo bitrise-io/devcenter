@@ -22,14 +22,13 @@ When adding your app to Bitrise, we clone your repository to make sure we can ac
 
 Currently we are supporting the following projects out of the box:
 
-* iOS
-* Android
-* Xamarin
+* [iOS](/getting-started/getting-started-with-ios-apps/)
+* [Android](/getting-started/getting-started-with-android-apps/)
+* [Xamarin](/getting-started/getting-started-with-react-native-apps/)
 * Fastlane
-* Flutter
-* macOS
-* Cordova
-* Ionic
+* [Flutter](/getting-started/getting-started-with-flutter-apps/)
+* [macOS](/getting-started/getting-started-with-macos-apps/)
+* [Ionic/Cordova](/getting-started/getting-started-with-ionic-cordova-apps/)
 * React Native
 
 In this guide we describe how you can add a new app to Bitrise, connect your repository to Bitrise, set up SSH keys and initial configuration, and register a webhook.
@@ -71,7 +70,7 @@ You have to add the Git URL of the repository you would like to connect.
 
 ## Setting up SSH keys
 
-SSH keys serve the role of secure transfer between services. In the case of Bitrise, it asks for your permission to be authorized at your Git provider, for example, GitHub. 
+SSH keys serve the role of secure transfer between services. In the case of Bitrise, it asks for your permission to be authorized at your Git provider, for example, GitHub.
 
 Being authorized is important as Bitrise has to have a working SSH connection to your repository to be able to clone it. There are several ways to make it work. Automatically, by adding it manually, or by using your own key.
 
