@@ -30,7 +30,9 @@ To invite a team member head to the **Team** tab on your application's page. You
 Check out the different roles and permissions in [our guide to the roles on Bitrise](/team-management/user-roles-on-app-teams/).
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Invite a team member to your app's team </div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to my Dashboard</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Invite a team member to your app's team </div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to my Dashboard</button></a>
 </div>
+
+
