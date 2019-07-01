@@ -178,5 +178,5 @@ Read about webhooks in detail in our [Webhooks](/webhooks/index/) section.
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 <div class="deploy-text">Now you know everything</div>
-<a target="_blank" href="https://app.bitrise.io/users/_ign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Let's add an app!</button></a>
+<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Let's add an app!</button></a>
 </div>
