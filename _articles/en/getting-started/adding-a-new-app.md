@@ -174,3 +174,9 @@ You can always change an app icon if you go to the Settings tab of your app and 
 Once project configuration is finished, Bitrise offers you the chance to immediately register a webhook in your repository. After the webhook is set up, any code change in your repository will trigger the automatically created primary Workflow by default.
 
 Read about webhooks in detail in our [Webhooks](/webhooks/index/) section.
+
+<div class="banner">
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/users/_ign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Let's add an app!</button></a>
+</div>
