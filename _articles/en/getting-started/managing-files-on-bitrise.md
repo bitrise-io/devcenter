@@ -94,3 +94,9 @@ In this example, we'll show how to do this. We use the **pwgen** password genera
    You can find the Environment Variable for the encrypted file path in the **Generic File Storage**.
 
 That's it! Once you run the build, the Step will decrypt your file and you can use it for whatever you need it for!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything!</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+</div>
