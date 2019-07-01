@@ -17,9 +17,9 @@ menu:
     title: Connecting your Apple Developer Account
 
 ---
-Connect your Apple Developer Portal account to Bitrise by authenticating your Apple credentials on Bitrise, and allow your apps to use those credentials during the builds. 
+Connect your Apple Developer Portal account to Bitrise by authenticating your Apple credentials on Bitrise, and allow your apps to use those credentials during the builds.
 
-You can go to your account settings right now to set it up: [Apple Developer Connection](https://app.bitrise.io/me/profile#/apple_developer_account). 
+You can go to your account settings right now to set it up: [Apple Developer Connection](https://app.bitrise.io/me/profile#/apple_developer_account).
 
 ## Reasons to connect your account
 
@@ -73,3 +73,9 @@ To authorize the app:
 5. Test the connection to make sure it works.
 
 If everything goes well, you should be able to use the connected account's Apple Developer credentials in the app's builds.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's set up my Apple Developer Connection</div>
+	<a target="_blank" href="https://app.bitrise.io/me/profile#/apple_developer_account"><button class="Go to Account settings">Go to Bitrise now</button></a>
+</div>
