@@ -271,9 +271,14 @@ header.top-bar {
 	padding-bottom: 5rem;
 }
 
+.main-layout-wrapper {
+	position: relative;
+}
+
 nav#side-menu {
-	flex: 1 1 0;
-	max-width: 25%;
+	flex: 0 0 auto;
+	position: fixed;
+	width: 20vw;
 	box-sizing: border-box;
 	padding-top: 4.5rem;
 	margin: 0;
@@ -303,10 +308,8 @@ nav#side-menu {
 	}
 
 	.menu-wrapper {
-		position: fixed;
 		display: block;
 		box-sizing: border-box;
-		width: 20vw;
 		height: 90vh;
 		overflow-y: auto;
 		padding-bottom: 5vh;
@@ -578,9 +581,9 @@ nav#side-menu {
 }
 
 main.content {
-	flex: 0 0 auto;
-	max-width: 50%;
+	flex: 1 1 auto;
 	min-width: 0;
+	margin-left: 20vw;
 	padding-top: 4.5rem;
 	padding-left: 5%;
 	padding-right: 5%;
@@ -588,6 +591,10 @@ main.content {
 	color: #222222;
 	line-height: 1.5;
 	-webkit-print-color-adjust: exact;
+
+	&:not(:last-child) {
+		margin-right: 20vw;
+	}
 
 	.index-container {
 		display: flex;
@@ -931,13 +938,16 @@ h4 {
 	}
 }
 nav#my-toc {
-
+	position: absolute;
+	right: 0;
+	width: 20vw;
+	flex: 0 0 auto;
  }
 
 .side-toc {
 	box-sizing: border-box;
 	flex: 0 0 auto;
-	max-width: 15%;
+	width: 20vw;
 	margin-left: 0;
 	margin-right: auto;
   font-family: TTNorms;
