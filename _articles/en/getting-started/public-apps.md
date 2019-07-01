@@ -51,3 +51,9 @@ Adding a new app as a public app is incredibly simple: at the start of the proce
 After this, proceed as usual to set up the app.
 
 {% include message_box.html type="warning" title="Public app's build logs are available for anyone" content=" Remember: a public app's build logs and `bitrise.yml` file can be seen by anyone - make sure these files do not expose anything you do not want to be seen!"%}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's add a public app to Bitrise!</div>
+	<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Add app</button></a>
+</div>
