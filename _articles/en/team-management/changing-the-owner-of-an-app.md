@@ -26,3 +26,9 @@ For transferring the ownership, select the new user to transfer the app to:
 ![](/img/select-owner.png)
 
 {% include message_box.html type="info" title="Good to know: Do you want to remain the connected services user?" content="If you enable the `Do you want to remain the connected services user?` option in the Transfer popup, then during the transfer you'll be explicitly marked as the connected services user for the app during the transfer."%}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+</div>
