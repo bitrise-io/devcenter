@@ -101,7 +101,7 @@
          </div>
        </div>
     </header>
-    <div class="column-parent middle-aligner">
+    <div class="column-parent middle-aligner main-layout-wrapper">
       <nav id="side-menu">
         <div class="menu-wrapper">
           {% assign menu = site.menus.main %} {% include menu.html %}
@@ -130,12 +130,12 @@
           {% endif %}
         </div>
       </main>
-      <nav id="my-toc">
       {% capture itemClass %}toc-entry.toc-h%level%{% endcapture %}
-        {% if content contains "h2"  %}
+      {% if content contains "h2"  %}
+        <nav id="my-toc">
           {% include toc.html html=content class="side-toc" item_class=itemClass h_min=1 h_max=3 %}
-        {% endif %}
-      </nav>
+        </nav>
+      {% endif %}
     </div>
     <footer>
       <div class="middle-aligner">

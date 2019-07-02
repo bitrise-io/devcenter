@@ -120,3 +120,9 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 {% include message_box.html type="info" title="Other deploy steps you can add to your workflow" content="Click the **+** sign on the left side of your Workflow and select another deploy Step from our collection, for example, **Appetize.io deploy** or **Amazon Device Farm File Directory**, if you wish. "%}
 
 That's all! Start or schedule a build and share the URL with external testers or distribute your app on an app store of your choice!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+</div>

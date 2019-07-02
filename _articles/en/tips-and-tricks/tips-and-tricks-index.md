@@ -2,7 +2,7 @@
 tag:
 - env vars
 - tips-and-tricks
-title: 'Tips and tricks'
+title: Tips and tricks
 redirect_from: []
 summary: 'Our Tips and tricks section includes ideas and suggestions to improve your
   Bitrise builds, save you time or effort, or to use our service in a more advanced
@@ -13,7 +13,7 @@ menu:
     weight: 12
 
 ---
-Our Tips and tricks section includes ideas and suggestions to improve your Bitrise builds, save you time or effort, or to use our service in a more advanced way.
+Our Tips and tricks section includes ideas and suggestions to improve your Bitrise builds, save you time or effort, or to use our service in a more advanced way. Bitrise is simple to set up and get started with - but there's so much you can achieve and configure. And, as always, if you have any suggestions for a guide that other users could benefit from, [contact us](https://www.bitrise.io/contact)! 
 
 Did you know that you can:
 
