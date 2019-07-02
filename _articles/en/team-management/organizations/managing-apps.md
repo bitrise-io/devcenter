@@ -124,14 +124,14 @@ You can add contributors to any application if you have `Admin` or `Owner` right
 
 This means that if you wish to add an organization member to an app of the organization, all you have to do is add the username/email address of the member under `Add contributors to this app`  on the `Team` page of the app.
 
-Adding an outside contributor requires enabling the `Allow Outside Contributors` switch on the organizations' `People` tab. 
+Adding an outside contributor requires enabling the `Allow Outside Contributors` switch on the organizations' `People` tab.
 
 {% include message_box.html type="warning" title="Outside contributors and app transfer" content="
 
 If you wish to transfer an app with outside contributors from _Org A_ to _Org B_, keep these in mind:
 
-* If _Org A_ has the `Allow Outside Contributors` switch turned on, and _Org B_ DOES NOT, then all outside contributors of _Org A_ will be REMOVED as the app is transferred to _Org B_. 
-* If _Org A_ and _Org B_ both have the `Allow Outside Contributors` switch turned on, then all all outside contributors of _Org A_ will be moved to _Org B_ as the app is transferred to _Org B_. 
+* If _Org A_ has the `Allow Outside Contributors` switch turned on, and _Org B_ DOES NOT, then all outside contributors of _Org A_ will be REMOVED as the app is transferred to _Org B_.
+* If _Org A_ and _Org B_ both have the `Allow Outside Contributors` switch turned on, then all all outside contributors of _Org A_ will be moved to _Org B_ as the app is transferred to _Org B_.
 
 If you wish to transfer an app with team members to an Org, keep these in mind:
 
@@ -182,3 +182,9 @@ If all went well, you should see the invited outside contributor at the `People`
 4. Click `REMOVE FROM APP`. Click `Yes` in the pop-up window.
 
    ![](/img/manage-group-change-roles.png)
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+</div>
