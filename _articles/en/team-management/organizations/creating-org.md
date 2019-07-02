@@ -53,8 +53,4 @@ No need for lengthy preparation when you wish to create an organization on Bitri
 
 And that's it! You can start inviting people to your organization!
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's create an organization on Bitrise </div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Add organization </button></a>
-</div>
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's create an organization on Bitrise! </div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Add organization </button></a> </div>
