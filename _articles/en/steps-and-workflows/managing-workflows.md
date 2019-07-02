@@ -49,3 +49,9 @@ Rename your workflows at any time you feel necessary: it's quick and simple.
    ![](/img/rename-workflow.png)
 4. Type the new name then click the check mark to save the new name.
 5. Click `Save` in the top right corner.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Manage your app's workflows</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
