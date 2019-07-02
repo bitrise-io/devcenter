@@ -23,9 +23,9 @@ As such, outside contributors can troubleshoot issues easier, find out why, for 
 
 Of course, this does not mean anyone can do anything with your public app on Bitrise. If the user viewing the logs is not invited to work on the app in some role, they will only be able to:
 
-* view the build logs
-* download the build logs
-* view the build's `bitrise.yml` file.
+* View the build logs.
+* Download the build logs.
+* View the build's `bitrise.yml` file.
 
 {% include message_box.html type="warning" title="Setting an app to public" content=" You can only set an app to public when adding the app to Bitrise! Once an app has been added, its privacy settings **CANNOT** be changed again. "%}
 
@@ -53,7 +53,7 @@ After this, proceed as usual to set up the app.
 {% include message_box.html type="warning" title="Public app's build logs are available for anyone" content=" Remember: a public app's build logs and `bitrise.yml` file can be seen by anyone - make sure these files do not expose anything you do not want to be seen!"%}
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's add a public app to Bitrise!</div>
-	<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Add app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's add a public app to Bitrise!</div>
+<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Add app</button></a>
 </div>
