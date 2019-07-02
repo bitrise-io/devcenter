@@ -82,3 +82,9 @@ You can also set up [outgoing webhooks](/webhooks/adding-outgoing-webhooks/) on 
 
 See the [Webhook Troubleshooting](/webhooks/troubleshooting) guide
 for webhook related troubleshooting / debugging notes.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's add a webhook!</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard</button></a>
+</div>

@@ -84,3 +84,10 @@ and you want to keep the `$` character in the input, instead of
 replacing it with an environment variable.
 
 {% include message_box.html type="important" title="Referencing another environment variable" content=" If you want to reference another environment variable, even if that one's value includes the $ character, you have to **enable** this option, or else your reference won't work. In such a case, **disable this option where you specify the value with $ in it**, and enable the option everywhere else where you reference that environment variable."%}
+
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's manage Steps in your app's Workflow!</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

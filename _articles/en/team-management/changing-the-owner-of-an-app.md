@@ -29,6 +29,6 @@ For transferring the ownership, select the new user to transfer the app to:
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+	<div class="deploy-text">Let's check your organization owners!</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go your profile page</button></a>
 </div>

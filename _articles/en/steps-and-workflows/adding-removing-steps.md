@@ -42,3 +42,9 @@ You can remove a Step at any time. Be aware, however, that if you add it back at
 4. Click the Step you want to remove.
 5. Click the trash bin icon on the right.
 6. Click Save.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's manage Steps in your app's Workflow!</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

@@ -2,6 +2,8 @@
 title: Setting up Google SSO for Bitrise
 redirect_from: []
 date: '2019-03-28T11:18:49.000+00:00'
+tag: []
+summary: ''
 menu:
   organizations:
     weight: 17
@@ -77,9 +79,14 @@ Now that we have the config information, we will leave Google Admin Console for 
    NOTE: Below error message only appears if you’ve been trying to access the Authorization page in a **Safari browser**.
 
        Error: The CORS policy for this site does not allow access from the specified Origin....
-       
 
    As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the `Authorization` page.
 6. Click `Authorize`.
 
 You should be landing on your Bitrise Dashboard now. If you click `Account settings` and select the `Single Sign-On` tab from the left menu, you should see SAML SSO is enabled for your organization. Once all organization members have enabled their SAML SSO connection, you can [enforce SAML SSO on the whole organization with a simple toggle](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization).
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Set up Google SSO for your Bitrise organization!</div>
+	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your organization</button></a>
+</div>
