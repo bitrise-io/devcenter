@@ -13,10 +13,6 @@ tag:
 - workflows
 summary: 'Get started with Bitrise: sign up, add an app, start a build. Find out how
   to register webhooks, set up organizations, and learn the basics of Steps and Workflows.'
-menu:
-  main:
-    identifier: getting-started-main
-    weight: 1
 
 ---
 Bitrise is powerful and complex - but getting started is easy and intuitive! You can kick off your first build within minutes of signing up. Let's go over what you need to do to make that happen!
@@ -106,5 +102,3 @@ You can also [create organizations](/team-management/organizations/creating-org)
 Testing your app and deploying your app are both done with the help of our Steps: we have Steps dedicated to both these functions, based on the platform type. Unit testing, UI testing, and real device testing are all possible on Bitrise.
 
 Once your app is tested, built and ready to go, you can quickly deploy it to the store of your choice, for example, Google Play or the App Store.
-
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Now you know everything</div> <a target="_blank" href="[https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta](https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta "https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta")"><button class="button">Go to Bitrise now</button></a> </div>
