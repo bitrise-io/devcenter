@@ -78,8 +78,4 @@ Follow the steps to create a new token manually!
 
 In your **Security** page, now you can see all your tokens with their expiration date and with the option to **Edit** or **Remove** them.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's secure my account!</div>
-	<a target="_blank" href="https://app.bitrise.io/me/profile#/security"><button class="button">Go to my Security tab</button></a>
-</div>
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's secure your account!</div> <a target="_blank" href="https://app.bitrise.io/me/profile#/security"><button class="button">Go to your Security tab</button></a> </div>
