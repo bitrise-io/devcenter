@@ -89,5 +89,5 @@ replacing it with an environment variable.
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 	<div class="deploy-text">Let's manage Steps in your app's Workflow!</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard</button></a>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
