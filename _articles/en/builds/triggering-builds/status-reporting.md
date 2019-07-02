@@ -28,8 +28,4 @@ To do this, you need to specify a Service Credential User on the `Team` tab of y
    ![](/img/service-credential-user.png)
 4. Click the `Test the git connection` button to make sure the selected user's connection can be used for sending back the build status to the hosting provider.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Set up build status reporting to your app</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Set up build status reporting on your app</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a> </div>
