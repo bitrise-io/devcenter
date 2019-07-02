@@ -40,3 +40,9 @@ You can register a webhook either automatically or manually. This guide walks yo
 1. Select `Pull request` and `Push`. After you are ready press the `Add webhook` button and you are ready to roll!
 
     ![Screenshot](/img/webhooks/github-webhook-6.png)
+
+<div class="banner">
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's add a GitHub webhook!</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard</button></a>
+</div>
