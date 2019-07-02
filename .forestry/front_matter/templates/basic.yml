@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/steps-and-workflows/skipping-steps.md
 - _articles/en/steps-and-workflows/adding-removing-steps.md
 - _articles/en/team-management/organizations/managing-invoices.md
 - _articles/en/reviews/uploading-an-android-keystore-file.md
@@ -137,7 +138,6 @@ pages:
 - _articles/en/steps-and-workflows/creating-workflows.md
 - _articles/en/steps-and-workflows/step-inputs.md
 - _articles/en/steps-and-workflows/managing-workflows.md
-- _articles/en/steps-and-workflows/skipping-steps.md
 - _articles/en/team-management/organizations/org-ownership.md
 - _articles/en/team-management/organizations/managing-apps.md
 - _articles/en/team-management/organizations/members-organizations.md
