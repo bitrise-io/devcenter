@@ -45,4 +45,8 @@ on [visualstudio.com 's documentations site](https://www.visualstudio.com/en-us/
 That's all! The next time you **push code** or **push a new tag**
 a build will be triggered (if you have Trigger mapping defined for the event(s) on Bitrise).
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's add a Visual Studio webhook!</div> <a target="_blank" href="[https://app.bitrise.io/dashboard/builds](https://app.bitrise.io/dashboard/builds "https://app.bitrise.io/dashboard/builds")"><button class="button">Go to your Dashboard</button></a> </div>
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's add a Visual Studio webhook</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard</button></a>
+</div>
