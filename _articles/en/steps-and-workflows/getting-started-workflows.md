@@ -30,3 +30,9 @@ Read on to find out more about working with workflows!
 * [Default workflows](/steps-and-workflows/default-workflows/)
 * [Creating a workflow](/steps-and-workflows/creating-workflows/)
 * [Managing workflows](/steps-and-workflows/managing-workflows/)
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's go to your app's Workflow!</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your Dashboard</button></a>
+</div>
