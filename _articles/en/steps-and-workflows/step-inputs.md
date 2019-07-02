@@ -14,7 +14,7 @@ menu:
 ---
 ## Managing Step versions
 
-Use any existing version of a Step in your workflows. You can use different versions of the same Step in different workflows. 
+Use any existing version of a Step in your workflows. You can use different versions of the same Step in different workflows.
 
 We regularly update our Steps to make sure they are fully equipped for our users' needs. However, you don't have to use the latest version if you don't want to: if an old version is stable and compatible with your build, feel free to continue using that, or roll back to it any time.
 
@@ -85,9 +85,4 @@ replacing it with an environment variable.
 
 {% include message_box.html type="important" title="Referencing another environment variable" content=" If you want to reference another environment variable, even if that one's value includes the $ character, you have to **enable** this option, or else your reference won't work. In such a case, **disable this option where you specify the value with $ in it**, and enable the option everywhere else where you reference that environment variable."%}
 
-
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's manage Steps in your app's Workflow!</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's manage Steps in your build!</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your build</button></a> </div>
