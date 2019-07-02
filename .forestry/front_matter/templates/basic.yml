@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/steps-and-workflows/getting-started-steps.md
 - _articles/en/steps-and-workflows/skipping-steps.md
 - _articles/en/steps-and-workflows/managing-workflows.md
 - _articles/en/steps-and-workflows/adding-removing-steps.md
@@ -161,7 +162,6 @@ pages:
 - _articles/en/getting-started/getting-started-with-ios-apps.md
 - _articles/en/getting-started/account-security.md
 - _articles/en/steps-and-workflows/getting-started-workflows.md
-- _articles/en/steps-and-workflows/getting-started-steps.md
 - _articles/en/getting-started/index.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
