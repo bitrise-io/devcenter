@@ -175,4 +175,4 @@ Once project configuration is finished, Bitrise offers you the chance to immedia
 
 Read about webhooks in detail in our [Webhooks](/webhooks/index/) section.
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's add a new app to Bitrise</div> <a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to your Dashboard!</button></a> </div>
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's add a new app to Bitrise</div> <a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Add app!</button></a> </div>
