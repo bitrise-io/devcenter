@@ -25,3 +25,9 @@ If, for example, you create a workflow based on your `primary` one, it means tha
    ![Add new workflow](/img/getting-started/add-new-workflow.png)
 4. Add the Steps you need to your workflow. Click the `+` symbol between two Steps to insert a Step at that position. Remove Steps you do not need by clicking on the Step and clicking the little trash bin symbol.
 5. Click `Save` in the top right corner.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's create a workflow</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your app</button></a>
+</div>
