@@ -35,3 +35,9 @@ You can also set which types of triggered builds you wish to abort. Let's see ho
 * `Running builds`: will also auto-cancel running builds in addition to on-hold ones
 
 And done! From now on, you don't have to wait for a triggered build to finish if you do not need it!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Turn on Rolling Builds</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
