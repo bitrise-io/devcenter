@@ -53,3 +53,9 @@ Once you are ready, proceed to uploading your files and setting up your workflow
 Optionally, you can set one more input if you use the _Automatically manage signing option_ in Xcode: if the input marked with `Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?` is set to `true` then the step will try to generate a profile. If you use manual code signing in Xcode, this input has no effect.
 
 If `codesigndoc` does not pick up one or more distribution .p12 files, you can export those manually from the `Keychain Access` app, just like you would when you transfer these files between Macs.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Set up automatic provisioning</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
