@@ -2,6 +2,8 @@
 title: Configuring notifications
 redirect_from: []
 date: '2019-03-22T11:08:54.000+00:00'
+tag: []
+summary: ''
 menu:
   builds-main:
     weight: 3
@@ -13,9 +15,9 @@ Notifications are updates about your activity on Bitrise. Usually, they concern 
 
 Our built-in email notification system sends emails about builds to every user who is assigned to work on an application. They are sent when a build is finished.
 
-{% include message_box.html type="info" title="Watching the app" content="To receive automatic email messages, [you need to be watching the app](/builds/configuring-notifications/#watching-an-app). If you turn off watching, you won't receive the automated emails."%} 
+{% include message_box.html type="info" title="Watching the app" content="To receive automatic email messages, [you need to be watching the app](/builds/configuring-notifications/#watching-an-app). If you turn off watching, you won't receive the automated emails."%}
 
-Email notifications are automatically set up for all applications when first creating them. By default, there are different settings for successful builds and failed builds. 
+Email notifications are automatically set up for all applications when first creating them. By default, there are different settings for successful builds and failed builds.
 
 There are three possible settings:
 
@@ -29,9 +31,9 @@ The alternative solution is to send emails via a dedicated Step: this allows for
 
 ### Watching an app
 
-Watching an app means getting email notifications for that app. This is the default setting for every app you create or you are invited to. **Turning off watching the app means you will no longer get automatic notifications.** 
+Watching an app means getting email notifications for that app. This is the default setting for every app you create or you are invited to. **Turning off watching the app means you will no longer get automatic notifications.**
 
-To toggle the feature, go to your Dashboard and open the app you want to watch or "unwatch". On the top right, you will see a button with the label `Watching` if you are watching the app currently. If not, the button will show `Watch`. Toggle it. 
+To toggle the feature, go to your Dashboard and open the app you want to watch or "unwatch". On the top right, you will see a button with the label `Watching` if you are watching the app currently. If not, the button will show `Watch`. Toggle it.
 
 ![](/img/watching.png)
 
@@ -111,3 +113,9 @@ Bitrise supports Slack integration, of course - and it's quite easy to set it up
    Check out all the inputs in the Workflow Editor to see all the ways in which you can customize your Slack messages.
 
 Once you're done, run a build!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Set up notifications on your app</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

@@ -30,3 +30,9 @@ The appropriate Service credential user must be set on your app's `Team` page. T
 
    ![](/img/enable-selective-builds.png)
 4. Add filenames and file paths in the `ADD FILENAME/PATH` window. You can add multiple files or file paths here. A build will be triggered only if these files are changed.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Enable Selective Builds</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

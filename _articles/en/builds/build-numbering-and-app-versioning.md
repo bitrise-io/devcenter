@@ -101,3 +101,9 @@ Let's say you have an app and you are about to run its fifth build on Bitrise. Y
 ```
 
 The value of `$BITRISE_BUILD_NUMBER` (which equals 5 in our example) will be added to the `Build Number Offset` value. As such, `CFBundleShortVersionString` will be set to 1.1 (11), indicating it's the 11th build of the 1.1 version of your app.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Manage build numbering</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

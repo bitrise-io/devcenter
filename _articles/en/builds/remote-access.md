@@ -55,3 +55,9 @@ And done! You should be able to access the virtual machine where your build is r
 6. Fill out the required fields with the information from under the **Screenshare** option.
 
 And done! You should now be able to access the virtual machine where your build is running.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Connect to your build's virtual machine with Remote Access</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your app</button></a>
+</div>
