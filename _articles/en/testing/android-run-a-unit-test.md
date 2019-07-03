@@ -40,5 +40,5 @@ Check out our [Test Reports guide](https://devcenter.bitrise.io/testing/test-rep
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 	<div class="deploy-text">Let's run a unit test!</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">https://app.bitrise.io/dashboard/builds</button></a>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
