@@ -49,7 +49,7 @@ These Steps will run the tests defined in your repository and then store the out
 * [Device testing for iOS](/testing/device-testing-for-ios/)
 * [Running Xcode Tests](/testing/running-xcode-tests/) "%}
 
-{% include message_box.html type="important" title="Using custom Script Steps" content="You can use custom Script Steps to export test results to Test Reports. Read the details in our [Exporting from custom Script Steps to Test Reports](/testing/exporting-to-test-reports-from-custom-script-steps/) guide."%} 
+{% include message_box.html type="important" title="Using custom Script Steps" content="You can use custom Script Steps to export test results to Test Reports. Read the details in our [Exporting from custom Script Steps to Test Reports](/testing/exporting-to-test-reports-from-custom-script-steps/) guide."%}
 
 ## Configuring Test Reports
 
@@ -118,3 +118,9 @@ Every file can be downloaded from Test Reports: that includes screenshots, video
 3. Click **Download** next to the file name.
 
    If you want to download all files available on the tab, click **Download All Files**.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's view your build's Test Reports</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
