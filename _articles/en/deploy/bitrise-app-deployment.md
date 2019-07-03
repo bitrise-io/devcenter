@@ -1,9 +1,6 @@
 ---
 title: Bitrise OTA App Deployment
 redirect_from: "/tutorials/deploy/bitrise-app-deployment/"
-menu:
-  deploy-main:
-    weight: 3
 
 ---
 Bitrise has an integrated app deployment system you can use for app and other build artifact file distribution.
@@ -14,13 +11,13 @@ Here is a short recap on the different build steps per platform. The links under
 
 | Platform | Build step | Deploy step to Bitrise |
 | --- | --- | --- |
-| [iOS](https://devcenter.bitrise.io/getting-started/getting-started-with-ios-apps/) | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Android](https://devcenter.bitrise.io/getting-started/getting-started-with-android-apps/) | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Xamarin](https://devcenter.bitrise.io/getting-started/getting-started-with-xamarin-apps/) | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [React Native](https://devcenter.bitrise.io/getting-started/getting-started-with-react-native-apps/) | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Ionic](https://devcenter.bitrise.io/getting-started/getting-started-with-ionic-cordova-apps/) | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Cordova](https://devcenter.bitrise.io/getting-started/getting-started-with-ionic-cordova-apps/) | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [MacOS](https://devcenter.bitrise.io/getting-started/getting-started-with-macos-apps/) | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Android | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Xamarin | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| React Native | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Ionic | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
 First let's have a look at the required and sensitive fields of the Step:
 
@@ -101,3 +98,9 @@ You can disable this toggle any time:
 * set the step input field to `false` value in the Step
 
 {% include message_box.html type="warning" title="Who can receive the app after disabling?" content=" If you disable this function for the app, then only your app's team members will be able to install the app from Bitrise! Additionally, the `Notify: Emails` option will be ignored and the `Notify: User Roles` users will receive the build's URL instead of the public page's URL! "%}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Distribute your app over the air</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
