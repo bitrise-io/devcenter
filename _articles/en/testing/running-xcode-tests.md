@@ -62,3 +62,9 @@ You can export the attachments of your UITest. These attachments include screens
 By default, the `Xcode Test for iOS` Step does not export artifacts of the UITest. If you want to export them, set the `Export UITest Artifacts` input of the `Xcode Test for iOS` Step to `true`.
 
 You can check your test artifacts on the [**Test Reports**](/testing/test-reports/) page, along all additional results.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's run Xcode tests on Bitrise</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
