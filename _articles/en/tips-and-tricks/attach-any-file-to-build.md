@@ -44,3 +44,9 @@ An example configuration:
 {% include message_box.html type="note" title="Make sure input values are in the correct format!" content="All input values have to be strings. This is why `is_compress`'s value - `true` - is surrounded with quotes."%}
 
 {% include message_box.html type="note" title="Using more than one `Deploy to Bitrise.io` Step" content=" You can use as many `Deploy to Bitrise.io` Steps as you want to, even in a single build or workflow. Alternatively, you can move all the files you want to deploy into a single directory, and deploy that directory with the Step."%}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
