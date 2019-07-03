@@ -7,7 +7,7 @@ menu:
 ---
 You can improve your build times with the following tips.
 
-__Feel free to suggest other ways of optimization!__
+**Feel free to suggest other ways of optimization!**
 
 ## Include your dependencies in your repository
 
@@ -20,14 +20,12 @@ if you include your `Pods` directory **and** the CocoaPods generated `.xcworkspa
 You can read more about the pros & cons of including your dependencies in your repository at:
 [Should I commit my dependencies into my repository?](/faq/should-i-commit-my-dependencies-into-my-repository/)
 
-
 ## Use the Build Cache
 
 In some cases using the [Build Cache](/caching/about-caching/) feature can also help to speed up your builds.
 Note: the efficiency of the Build Cache depends on the size of the files you want to cache,
 as well as on the number of files you want to cache.
 For more information see the [Build Cache documentation](/caching/about-caching/).
-
 
 ## Turn off the "Clean build" option of Xcode steps
 
@@ -41,7 +39,13 @@ but subsequent Xcode steps can use the build cache of the previous Xcode step(s)
 
 ## Other
 
-__Feel free to suggest other ways of optimization!__
+**Feel free to suggest other ways of optimization!**
 
-- [Guarding Against Long Compiles](http://khanlou.com/2016/12/guarding-against-long-compiles/)
-- [Stay updated with Swift compiling tips](https://github.com/fastred/Optimizing-Swift-Build-Times)
+* [Guarding Against Long Compiles](http://khanlou.com/2016/12/guarding-against-long-compiles/)
+* [Stay updated with Swift compiling tips](https://github.com/fastred/Optimizing-Swift-Build-Times)
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
