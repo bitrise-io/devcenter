@@ -58,7 +58,7 @@ The **iOS Device Testing** Step takes the path to this .zip file - exported as a
 6. In the **Test devices** input field, specify the devices on which you want to test the app.
 
    Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/ios/available-testing-devices).
-7. Make sure you have the **Deploy to Bitrise.io** Step in your Workflow, with version 1.4.1 or newer. 
+7. Make sure you have the **Deploy to Bitrise.io** Step in your Workflow, with version 1.4.1 or newer.
 
    With the older versions of the Step, you won't be able to check your results on the **Test Reports** page!
 8. Start a build!
@@ -81,3 +81,9 @@ To view the test results:
 2. Under the build status, click **See more** next to the **Test reports** label.
 
 This takes you to the **Test Reports** page. Check out our [Test Reports guide](/testing/test-reports/) to find out more about using it to analyze your test results.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Test an iOS device with Bitrise</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
