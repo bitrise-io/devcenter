@@ -42,3 +42,9 @@ You can delete the registered device any time if you click on the `x` icon.
 Now you can see your registered test device under [Registered test devices](https://www.bitrise.io/me/profile#/test_devices).
 
 You can remove this registered device any time if you click the orange `x` icon.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Add a device to Bitrise</div>
+	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
+</div>
