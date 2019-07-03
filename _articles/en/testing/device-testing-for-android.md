@@ -17,7 +17,7 @@ menu:
 ---
 With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices.
 
-{% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can contain only one **[BETA] Virtual Device Testing** Step performing one type of test (`instrumentation`, `robo` or `gameloop`. "%}
+{% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can contain only one **\[BETA\] Virtual Device Testing** Step performing one type of test (`instrumentation`, `robo` or `gameloop`. "%}
 
 Our device testing solution is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/). You can find the resulting logs, videos and screenshots on Bitrise.
 
@@ -40,7 +40,7 @@ There is a small difference between configuring your workflow for `robo` and `in
 3. Add the `Debug` task to the **Variant** Step input field. This will prepare an env var containing the APK path of your build. You will need this env var in the next step.
 
    ![](/img/robo-test.png)
-4. Add **[BETA] Virtual Device Testing for Android** Step after the **Android Build** Step.
+4. Add **\[BETA\] Virtual Device Testing for Android** Step after the **Android Build** Step.
 5. Set the `APK path` input field.
 6. Check if `robo` is the selected **Test type**.
 7. Add the type of test device in the **Test devices** input field. If choosing a different device than the default, your input should have the format of `deviceID,version,language,orientation` separated with `,`.
@@ -54,7 +54,7 @@ There is a small difference between configuring your workflow for `robo` and `in
 
 If your app needs specific user interaction for a successful robo test, you can use the **Robo Directives** input field to set those necessary inputs. For example, certain UI elements of the app are only accessible for robo testing if the required user inputs (username and email address) are populated for log in.
 
-1. Click the **[BETA] Virtual Device Testing for Android** Step in your workflow.
+1. Click the **\[BETA\] Virtual Device Testing for Android** Step in your workflow.
 2. Click the **Robo Test** section.
 3. Find the **Robo directives** input field and set your required user input directives.
    * provide a comma-separated list of key-value pairs, where the **key** is the Android resource name of the target UI element, and the **value** is the text string. EditText fields are supported but not text fields in WebView UI elements. For example, you could use the following parameter for custom login:
@@ -89,10 +89,10 @@ Here is a screenshot of a successful robo test, where the robo test got all the 
    ![](/img/android-build-ui-testing.png)
 
    The step outputs will be `BITRISE_APK_PATH` (which is the path of the generated APK after filtering) and `BITRISE_TEST_APK_PATH` (which is the path of the generated test APK after filtering).
-4. Add the **[BETA] Virtual Device Testing** Step right after the **Android Build for UI testing** Step.
+4. Add the **\[BETA\] Virtual Device Testing** Step right after the **Android Build for UI testing** Step.
 5. Set the **Test type** to **instrumentation**.
 
-   Our **Android Build for UI Testing** Step exports an APK and a Test APK and their paths get automatically set in the **APK path** and **Test APK path** input fields of the **[BETA] Virtual Device Testing** Step.
+   Our **Android Build for UI Testing** Step exports an APK and a Test APK and their paths get automatically set in the **APK path** and **Test APK path** input fields of the **\[BETA\] Virtual Device Testing** Step.
 6. Add the type of test device in the **Test devices** input field. If choosing a different device than the default, your input should have the format of  `deviceID,version,language,orientation` separated with `,`.
 
    ![](/img/instrumentation-test-2.png)
@@ -114,3 +114,9 @@ To view the test results:
 2. Under the build status, click **See more** next to the **Test reports** label.
 
 This takes you to the **Test Reports** page. Check out our [Test Reports guide](/testing/test-reports/) to find out more about using it to analyze your test results.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's run some tests!</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
