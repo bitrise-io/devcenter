@@ -7,7 +7,7 @@ menu:
 ---
 ## Register an iOS device using Safari
 
-The most comfortable way to register your iOS test device on [bitrise.io](https://www.bitrise.io) is to open [bitrise.io](https://www.bitrise.io) with Safari so that we can open your device's Settings and create a temporary profile to get your Unique Device Identifier (UDID). This way you don't have to look for it and manually copy/paste it.
+The most comfortable way to register your iOS test device on [bitrise.io](https://www.bitrise.io) is to open [bitrise.io](https://www.bitrise.io) with Safari. This way we can open your device's Settings and create a temporary profile to get your Unique Device Identifier (UDID). This way you don't have to look for it and manually copy/paste it.
 
  1. Open Safari in **non-incognito mode** on your iOS device and log into [bitrise.io](https://www.bitrise.io).
  2. Go to your `Profile`.
