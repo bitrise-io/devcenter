@@ -80,3 +80,9 @@ Assuming the file's `GENERIC FILE STORAGE` url is assigned to `BITRISEIO_MY_FILE
 In subsequent steps, you can refer to the downloaded file's path with_ `$BITRISEIO_MY_FILE_LOCAL_PATH`.
 
 Alternatively, for example, you can set the location as an `App Env Var` and simply download it to that path instead of defining the path inside the Script.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Upload files to Generic File Storage</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
