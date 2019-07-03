@@ -108,10 +108,12 @@ Check out the available versions on the [releases page of the codesigndoc](https
 1. Download the release you want by running a `curl` command.
 
    Note: replace the VERSIONNUMBER with the actual number of the codesigndoc version you want.
+
    ```bash
    curl -sfL https://github.com/bitrise-io/codesigndoc/releases/download/VERSIONNUMBER/codesigndoc-Darwin-x86_64 > ./codesigndoc
-   ```    
-1. Make the downloaded binary executable:
+   ```
+2. Make the downloaded binary executable:
+
    ```bash
    chmod +x ./codesigndoc
    ```
@@ -139,3 +141,9 @@ So, for the best results, we recommend you to:
 2. Run `codesigndoc` in this directory (not in the directory where you usually work on the project).
 
 It's also advised to do a full Archive + Export (until you get a signed `.ipa`) of your project from `Xcode.app` first, and run `codesigndoc` **after that**. The reason is that `Xcode.app` might download or update profiles in the background during the IPA export. If you run `codesigndoc` after you exported an `.ipa` from Xcode, `codesigndoc` will able to collect all the files.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>

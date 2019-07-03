@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
 - _articles/en/builds/rolling-builds.md
 - _articles/en/builds/triggering-builds/status-reporting.md
 - _articles/en/builds/triggering-builds/approving-pull-request-builds.md
@@ -115,7 +116,6 @@ pages:
 - _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
 - _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
-- _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
 - _articles/en/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
 - _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
 - _articles/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars.md

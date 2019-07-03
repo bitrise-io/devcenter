@@ -39,3 +39,9 @@ If you collected all the necessary files with the codesigndoc tool, proceed to u
 If `codesigndoc` does not pick up one or more distribution .p12 files and/or Provisioning Profile(s), you can export those manually (.p12 from `Keychain Access` app, Provisioning Profiles from [Apple Developer Portal](https://developer.apple.com/)), just like you would when you transfer these files between Macs.
 
 But **even if** `**codesigndoc**` **does not find all the files, you should upload all the files collected by** `**codesigndoc**`**!** The base files collected by `codesigndoc` are essential for your project's code signing: without those it's not possible to create a signed IPA for the project!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Set up manual provisioning</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

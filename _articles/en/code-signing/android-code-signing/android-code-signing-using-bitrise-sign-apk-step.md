@@ -74,3 +74,9 @@ You might find these guides helpful as well:
 * [How to use the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/)
 * [Downloading a keystore file](/code-signing/android-code-signing/downloading-a-keystore-file/)
 * [Managing files on Bitrise](/getting-started/managing-files-on-bitrise/)
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Sign your APK with Android Sign Step</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
