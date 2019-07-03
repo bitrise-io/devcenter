@@ -50,7 +50,13 @@ printf "\e[34mExecuting ${fake_build_script}\e[0m\n"
 $(IFS=' '; echo "${command[*]}")
 ```
 
-{% include message_box.html type="important" title="Don't forget!" content=" 
+{% include message_box.html type="important" title="Don't forget!" content="
 
 * You should update the `output_directory` and `fake_build_script` variables for your needs and you are ready to go!
 * You should set the `output_directory` to the same directory where your build script will search for the FAKE dlls." %}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Add support for FAKE build scripts</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
