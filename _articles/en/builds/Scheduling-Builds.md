@@ -41,3 +41,9 @@ If you click on `Show scheduled`, you can edit/delete your schedules, disable bu
 ![Screenshot](/img/scheduling-builds/scheduled-build.png)
 
 That's it! Now you can enjoy the comfort of your automated build!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's schedule a build!</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
