@@ -38,3 +38,9 @@ If you wish to use more than one code signing type (for example, to create both 
 You can `Copy` the existing `Release` configuration in Xamarin Studio, to have an identical base configuration, where you only change the code signing settings. For example, `Copy` the `Release|iPhone` configuration with the name `ReleaseAppStore`, set the code signing to App Store for this `ReleaseAppStore` configuration, and specify this configuration as the `Xamarin solution configuration` input of the `Xamarin Archive` step.
 
 Don't forget to collect and upload the signing files again if you change code signing configurations in your Xamarin project!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Sign an.ipa for your Xamarin</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
