@@ -11,7 +11,6 @@ in your [bitrise.io](https://www.bitrise.io/) build you only have to do three th
 1. Make sure that a single SSH key can be used to `git clone` both your main repository (the one
    you register on [bitrise.io](https://www.bitrise.io/)) and the `match` repository.
    You can find more info [in this guide](/faq/adding-projects-with-submodules/).
-   
 2. Add an environment variable `MATCH_PASSWORD`, as
    [described in _match_'s docs](https://docs.fastlane.tools/actions/match/#passphrase),
    to specify the `passphrase` you used for `match`.
@@ -30,3 +29,9 @@ in your [bitrise.io](https://www.bitrise.io/) build you only have to do three th
    * More info in `match`'s [official readme / docs](https://docs.fastlane.tools/actions/match/)
 
 That's all, you can now enjoy the utility of `match`, automated with [bitrise.io](https://www.bitrise.io/) 🚀
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Use fastlane match in your build</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

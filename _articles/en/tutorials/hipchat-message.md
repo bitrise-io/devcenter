@@ -36,3 +36,9 @@ An example `Message` input:
 That's all. Once you configure your Workflow this way and start a new build,
 you'll be notified about the build and deploy on HipChat,
 including both the build's details url and the app's Public Install Page url.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Send HipChat messages</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

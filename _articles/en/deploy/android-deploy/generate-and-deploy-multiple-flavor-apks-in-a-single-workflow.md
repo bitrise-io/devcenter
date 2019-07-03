@@ -42,3 +42,9 @@ If you have an Android deploy workflow at hand, do the following:
 
 1. Add the `Google Play Deploy` Step AFTER the `Android Sign` Step.
 2. Set the `$BITRISE_SIGNED_APK_PATH` env var in the `APK or App Bundle file path` Step input field so that `Google Play Deploy` can release all your build variants to the app store.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's deploy multi-flavor APKs</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

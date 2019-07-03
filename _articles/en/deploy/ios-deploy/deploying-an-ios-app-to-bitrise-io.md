@@ -51,3 +51,9 @@ Make sure that you have:
    ![](/img/public-install-page.png)
 
 And that's it! The file can now be installed on all the devices included in the app's provisioning profile.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Deploy to bitrise.io</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

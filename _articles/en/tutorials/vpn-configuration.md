@@ -189,3 +189,9 @@ To provide VPN client settings and credentials required for the Step, you can:
 * use the `Command line options` input of the Step. The options specified in this input will take precedence over the configuration file!
 
 For more information on setting up vpnc, check the [vpnc homepage](https://www.unix-ag.uni-kl.de/\~massar/vpnc/) and the [vpnc manual](https://linux.die.net/man/8/vpnc).
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Set up a VPN on Bitrise</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
