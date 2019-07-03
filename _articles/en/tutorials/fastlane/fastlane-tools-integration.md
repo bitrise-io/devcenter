@@ -49,3 +49,9 @@ You can find more information about the Triggers feature in the
 We hope that you are as happy as we are to have this amazing tool inside Bitrise. Go ahead and try it out!
 
 And as always, happy building!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Add fastlane to your workflow</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your apps</button></a>
+</div>
