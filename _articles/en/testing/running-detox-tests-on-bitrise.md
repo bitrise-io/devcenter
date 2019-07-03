@@ -2,6 +2,8 @@
 title: Running Detox tests on Bitrise
 redirect_from: []
 date: '2019-03-01T12:43:19.000+00:00'
+tag: []
+summary: ''
 menu:
   testing-main:
     weight: 18
@@ -95,3 +97,9 @@ Once you are done, you can test your Detox-configured project on Bitrise:
                 detox test --configuration ios.sim.release --cleanup
             title: Detox - Build and Test Release App
         - deploy-to-bitrise-io@1.3.18: {}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's run some Detox tests</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
