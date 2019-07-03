@@ -99,3 +99,9 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
      ![](/img/cordova-archive-2.png)
 7. Set the `Should remove platforms as prepare step?` to `false`. This is crucial: it ensures the step will not remove and re-add the platform of the native projects generated in the `Cordova prepare` or the `Ionic prepare` step.
 8. Run your build!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+</div>
