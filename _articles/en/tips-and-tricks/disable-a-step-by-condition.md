@@ -80,3 +80,9 @@ It is possible to run a Step ONLY if the build failed before it got to that part
         - content: |-
             #!/bin/bash
             echo "Build Failed!"
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
