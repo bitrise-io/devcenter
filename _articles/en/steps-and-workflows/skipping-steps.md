@@ -12,7 +12,7 @@ menu:
     weight: 7
 
 ---
-Skip Steps if the previous Step failed or set certain conditions to disable Steps in a given Workflow. 
+Skip Steps if the previous Step failed or set certain conditions to disable Steps in a given Workflow.
 
 ## Skipping the Step if the previous Step failed
 
@@ -25,7 +25,7 @@ Of course, there are examples when it's better to run a Step even if the previou
 To set a given Step to be skipped if the previous Step failed:
 
 1. Open your app by clicking on the app's name on your [Dashboard](https://app.bitrise.io/dashboard).
-2. Click the **Workflow** tab to enter the Workflow Editor. 
+2. Click the **Workflow** tab to enter the Workflow Editor.
 
    Note that you cannot leave the Workflow Editor without either saving or discarding any changes you made.
 3. Select the workflow you need in the **WORKFLOW** dropdown menu on the top left.
@@ -34,13 +34,8 @@ To set a given Step to be skipped if the previous Step failed:
 
 ## Disabling a Step conditionally
 
-You can also disable a Step by a given condition, or just set it to never run in a specific workflow. The latter can be useful if, for example, you want to keep a Step's exact configuration but not use the Step itself for a while. 
+You can also disable a Step by a given condition, or just set it to never run in a specific workflow. The latter can be useful if, for example, you want to keep a Step's exact configuration but not use the Step itself for a while.
 
 This can only be done in `yaml` mode: go to the `bitrise.yml` tab in your app's Workflow Editor and edit the file directly. To read about the specific conditions you can set, check out our [Enabling or disabling a Step conditionally](/tips-and-tricks/disable-a-step-by-condition/) guide.
 
-
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's manage Steps in your app's Workflow!</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's manage Steps in your build!</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your build</button></a> </div>

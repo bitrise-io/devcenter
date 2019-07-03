@@ -28,8 +28,12 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- _articles/en/steps-and-workflows/getting-started-steps.md
+- _articles/en/builds/triggering-builds/status-reporting.md
+- _articles/en/builds/triggering-builds/approving-pull-request-builds.md
+- _articles/en/builds/triggering-builds/trigger-code-push.md
+- _articles/en/builds/triggering-builds/trigger-pull-request.md
 - _articles/en/steps-and-workflows/skipping-steps.md
+- _articles/en/steps-and-workflows/getting-started-steps.md
 - _articles/en/steps-and-workflows/managing-workflows.md
 - _articles/en/steps-and-workflows/adding-removing-steps.md
 - _articles/en/team-management/organizations/managing-invoices.md
@@ -125,10 +129,8 @@ pages:
 - _articles/en/infrastructure/virtual-machines.md
 - _articles/en/webhooks/troubleshooting.md
 - _articles/en/webhooks/adding-outgoing-webhooks.md
-- _articles/en/builds/triggering-builds/status-reporting.md
 - _articles/en/builds/triggering-builds/trigger-git-tags.md
 - _articles/en/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
-- _articles/en/builds/triggering-builds/trigger-pull-request.md
 - _articles/en/builds/triggering-builds/trigger-map.md
 - _articles/en/builds/bitrise-yml-online.md
 - _articles/en/builds/build-artifacts-online.md
@@ -144,7 +146,6 @@ pages:
 - _articles/en/team-management/organizations/members-organizations.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
 - _articles/en/team-management/user-roles-on-app-teams.md
-- _articles/en/builds/triggering-builds/trigger-code-push.md
 - _articles/en/builds/Scheduling-Builds.md
 - _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
@@ -181,7 +182,6 @@ pages:
 - _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
 - _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
-- _articles/en/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/api/incoming-and-outgoing-webhooks.md
