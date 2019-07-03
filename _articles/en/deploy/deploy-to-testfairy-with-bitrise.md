@@ -1,9 +1,10 @@
 ---
 title: Deploy to TestFairy with Bitrise
+redirect_from: "/tutorials/deploy/deploy-to-testfairy-with-bitrise/"
 menu:
   deploy-main:
     weight: 6
-redirect_from: "/tutorials/deploy/deploy-to-testfairy-with-bitrise/"
+
 ---
 If you are looking for a deployment service that also gives you lots of insights
 about your application, then [TestFairy](https://www.testfairy.com/) is a great service to check out.
@@ -32,3 +33,9 @@ and find the key under your API Key menu.
 
 There's nothing else you need to do,
 simply work on your awesome app and we ensure your app is automatically deployed to TestFairy every time you update your code.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Deploy to TestFairy</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your apps</button></a>
+</div>
