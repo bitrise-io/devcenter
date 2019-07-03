@@ -27,17 +27,17 @@ You can also place the content of your ZIP archive into a specific folder within
 
 ## Using the `File Downloader` Step
 
-If you only want to download a single file, use the `File Downloader` Step. 
+If you only want to download a single file, use the `File Downloader` Step.
 
 1. Add the `File Downloader` Step to your Workflow.
 2. Specify the URL of the file and the destination where the file should be downloaded to.
 
-    ```yaml
-    - file-downloader:
-        inputs:
-        - source: $BITRISEIO_my_file_id_URL
-        - destination: "$BITRISE_SOURCE_DIR/path/to/store/the/file"
-    ```
+   ```yaml
+   - file-downloader:
+       inputs:
+       - source: $BITRISEIO_my_file_id_URL
+       - destination: "$BITRISE_SOURCE_DIR/path/to/store/the/file"
+   ```
 
 ## Using a Script Step
 
@@ -53,3 +53,9 @@ unzip -u "download/path" -d "uncompress/target/path"
 ```
 
 _If you'd need an additional tool to download or uncompress the resources file, please see the_ [_Install Any Additional Tool_](/tips-and-tricks/install-additional-tools/) _guide._
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
