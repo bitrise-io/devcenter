@@ -52,3 +52,9 @@ You can always modify the secret env var registered for a `SENSITIVE` input fiel
 
 * **Do not add private information in the** `Env Var` **tab**! Our `Secrets` tab is designed to hold encrypted inputs as secret env vars which will not be exposed in `bitrise.yml` or in public app PRs.
 * Note that secret env vars can only hide sensitive information **in the build logs of your public app**. If you **attach any other file to your build log** which contains sensitive information but it is not encrypted, then sensitive information will be visible to anyone who has the build URL!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Set a sensitive input in a Step</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your app</button></a>
+</div>
