@@ -34,7 +34,7 @@ In this example, a code push will trigger the `ci` workflow, which in turn trigg
        ---
        format_version: 1.4.0
        default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-
+       
        trigger_map:
        - push_branch: "*"
          workflow: ci
@@ -53,23 +53,21 @@ In this example, a code push will trigger the `ci` workflow, which in turn trigg
    * A `Git Clone` Step to clone your repository.
    * A `Script` Step with the command `bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}`.
 
-       ```
-       {% raw %}
-       workflows:
-          run_from_repo:
-            steps:
-            - activate-ssh-key:
-                run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-            - git-clone: {}
-            - script:
-                title: continue from repo
-                inputs:
-                - content: |-
-                    #!/bin/bash
-                    set -ex
-                    bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"
-       {% endraw %}
-       ```           
+         {% raw %}
+         workflows:
+            run_from_repo:
+              steps:
+              - activate-ssh-key:
+                  run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
+              - git-clone: {}
+              - script:
+                  title: continue from repo
+                  inputs:
+                  - content: |-
+                      #!/bin/bash
+                      set -ex
+                      bitrise run "${BITRISE_TRIGGERED_WORKFLOW_ID}"
+         {% endraw %}
 
 Of course, this only works if the `bitrise.yml` file in your repository does have a `ci` workflow. Let's see the details of that!
 
@@ -122,3 +120,9 @@ However, the [offline workflow editor](https://github.com/bitrise-io/bitrise-wor
 ### Pull Requests can run builds with any custom configuration
 
 When someone sends a Pull Request they can modify the `bitrise.yml` in your repository any way they like it. This can force _your_ builds to queue.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
