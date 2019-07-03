@@ -2,6 +2,8 @@
 title: Sharing and storing workflows among multiple apps
 redirect_from: []
 date: '2019-03-01T14:20:01.000+00:00'
+tag: []
+summary: ''
 menu:
   tips-and-tricks-main:
     weight: 24
@@ -53,3 +55,9 @@ We're recruiting this workflow to perform 2 things: clone your git repo and star
 {% include message_box.html type="info" title="Need Bitrise support for one of your mono-repo project?" content=" If you've been using the above method and need Bitrise support, we recommend you the following: since you have not uploaded your project specific yml to Bitrise, we do not have access to it and our Bitrise UI does not contain the cloned yml either! What we have access to is only the short workflow that contains the `Git Clone Repository` and the `Script` Steps! For easier troubleshooting, we recommend you to provide access to your git repository _or_ share your project specific yml with us!"%}
 
 {% include message_box.html type="note" title="Using Workflow Editor locally" content=" If you use our [Workflow Editor locally](https://github.com/bitrise-io/bitrise-workflow-editor), please note that it only supports .yml files called `bitrise.yml`, and you can store only one `bitrise.yml` per folder." %}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>

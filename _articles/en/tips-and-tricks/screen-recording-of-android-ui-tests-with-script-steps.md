@@ -57,3 +57,9 @@ Here is what to check:
 
 * Check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step. ![](/img/screen-resolution-avd-manager.png)
 * If you're NOT using the `AVD Manager` Step to start the emulator (and use `Script` Step instead), then you can fix the screen size in the `Script content` field of the `Start screen recording` Step by specifying the width and height of the screen: `--size <WIDTHxHEIGHT>`.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Record Android UI tests with Bitrise</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

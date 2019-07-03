@@ -112,3 +112,9 @@ Here is an example workflow which defines an env var, and then runs another work
                 echo "ENV_TYPE: $ENV_TYPE"
 
 If you run the `deploy-alpha` workflow, that will set the `ENV_TYPE` env var to `alpha`, then it will run the `deploy` workflow, which can use that env var. In this example, it will simply print its value (the printed text will be: `ENV_TYPE: alpha`).
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Check out your build's Env Vars</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
