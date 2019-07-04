@@ -31,7 +31,7 @@ The following plugins can be directly run with the Bitrise CLI
 
 ### init
 
-[This plugin](https://github.com/bitrise-io/bitrise-plugins-init.git) runs the scanner to detect the type of your project and generates a Bitrise configuration with a `bitrise.yml`. 
+[This plugin](https://github.com/bitrise-io/bitrise-plugins-init.git) runs the scanner to detect the type of your project and generates a Bitrise configuration with a `bitrise.yml`.
 
 ### step
 
@@ -41,19 +41,14 @@ The following plugins can be directly run with the Bitrise CLI
 
 [https://github.com/bitrise-io/bitrise-workflow-editor.git](https://github.com/bitrise-io/bitrise-workflow-editor.git "https://github.com/bitrise-io/bitrise-workflow-editor.git")
 
-## Infrastructure
-
-* [bitrise-machine](https://github.com/bitrise-tools/bitrise-machine) - Manage bitrise CLI runner hosts (virtual machines). Create, destroy, cleanup based on configuration.
-* [bitrise-bridge](https://github.com/bitrise-tools/bitrise-bridge) - Responsible for "bridging" a Bitrise CLI command from a remote host to the local Bitrise CLI; either directly or by creating a Docker container and running the Bitrise CLI command in it.
-* [cmd-bridge](https://github.com/bitrise-io/cmd-bridge) - Helps bridging an outside (generic) command (e.g. any command, through SSH) into a host. Useful in cases where the command have to be performed in a specific environment, e.g. the iOS Simulator can't be started from an SSH session, it have to be started from a logged in "GUI" user. In this case you start `cmd-bridge`'s server in the environment, and then you can use `cmd-bridge` through SSH or another way to send commands to the running `cmd-bridge` server, which will perform the commands in its context / the environment it is running in.
-* [garden](https://github.com/bitrise-tools/garden) - A tool to manage your template (plan) based directories. You can perform a setup (plant) by running garden grow, which'll create your garden (directories) based on your plans (temlates).
-
 ## iOS
 
-* [codesigndoc](https://github.com/bitrise-tools/codesigndoc) - Your friendly iOS Code Signing Doctor.
+### codesigndoc
+
+Your friendly iOS Code Signing Doctor.
 
 ## Server / service
 
-* [bitrise webhooks](https://github.com/bitrise-io/bitrise-webhooks) - Bitrise Webhooks processor. Transforms various incoming webhooks (GitHub, Bitbucket, Slack, ...) to [bitrise.io](https://www.bitrise.io)'s Build Trigger API format, and calls it to start a build.
-* [DATapi](https://github.com/bitrise-tools/datapi) - A very simple data series storage service. Store and retrieve data series in a quick and simple way, based on timestamp and category of the data.
-  * [DATapi Ruby Client](https://github.com/bitrise-tools/datapi-client)
+### bitrise webhooks
+
+Bitrise Webhooks processor. Transforms various incoming webhooks (GitHub, Bitbucket, Slack, ...) to [bitrise.io](https://www.bitrise.io)'s Build Trigger API format, and calls it to start a build.
