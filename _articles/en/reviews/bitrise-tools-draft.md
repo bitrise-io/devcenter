@@ -48,7 +48,7 @@ The [workflow-editor](https://github.com/bitrise-io/bitrise-workflow-editor.git)
 
 This is your friendly iOS Code Signing Doctor.
 
-{% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its GitHub page and see how it help you to sign your iOS project.
+{% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its [GitHub page](https://github.com/bitrise-io/codesigndoc) and see how it help you to sign your iOS project.
 
 * [Collecting and exporting code signing files with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)
 * [Device testing for iOS]()"%} 
