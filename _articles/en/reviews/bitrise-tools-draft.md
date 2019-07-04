@@ -20,17 +20,12 @@ The Bitrise CLI, which is used on [bitrise.io](https://www.bitrise.io) to run bu
 
 ### stepman
 
-The [Step Collection Manager]((https://github.com/bitrise-io/stepman)) used for managing the Step Library, including downloading and sharing [Steps](/steps-and-workflows/getting-started-steps/).
-https://github.com/bitrise-io/stepman
-/steps-and-workflows/getting-started-steps/
-
-{% include message_box.html type="info" title="My message" content=""%}
+Our [Step Collection Manager](https://github.com/bitrise-io/stepman) used for managing the Step Library, including downloading and sharing [Steps](/steps-and-workflows/getting-started-steps/).
 
 ### envman
 
-The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used by the Bitrise CLI to isolate and manage [Environment Variables](/builds/available-environment-variables/) during the build. envman can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Environment Variable and the other uses it.
-(https://github.com/bitrise-io/envman)
-/builds/available-environment-variables/
+The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used by the Bitrise CLI to isolate and manage [Environment Variables](/builds/available-environment-variables/) during the build. Our envman tool can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Environment Variable and the other uses it.
+
 
 {% include message_box.html type="info" title="My message" content=""%}
 
