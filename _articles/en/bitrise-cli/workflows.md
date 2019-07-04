@@ -41,7 +41,7 @@ For example, here is how to run two script Steps after each other:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-
+    
     workflows:
       test:
         steps:
@@ -64,7 +64,7 @@ Here is an example for defining two environment variables (`ENV_VAR_ONE` and `EN
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-
+    
     workflows:
       test:
         envs:
@@ -79,17 +79,17 @@ Example workflow for chaining five workflows:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-
+    
     workflows:
-
+    
       send-notifications:
         steps:
         # send notifications
-
+    
       setup:
         steps:
         # setup steps to run
-
+    
       test:
         before_run:
         - setup
@@ -97,13 +97,13 @@ Example workflow for chaining five workflows:
         - IS_TEST: "true"
         steps:
         # test steps to run
-
+    
       ci:
         before_run:
         - test
         after_run:
         - send-notifications
-
+    
       deploy:
         before_run:
         - test
@@ -148,19 +148,19 @@ For example:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-
+    
     workflows:
-
+    
       generic-build:
         steps:
         # steps which depend on `BUILD_TYPE` environment variable
-
+    
       build-alpha:
         envs:
         - BUILD_TYPE: alpha
         after_run:
         - generic-build
-
+    
       build-beta:
         envs:
         - BUILD_TYPE: beta
@@ -187,7 +187,7 @@ Using the above example with five workflows (`ci`, `deploy`, `send-notifications
      * send-notifications
      * setup
      * test
-
+    
     You can run a selected workflow with:
     $ bitrise run WORKFLOW-ID
 
@@ -196,16 +196,16 @@ You most likely don't want to run `setup`, `test` nor `send-notifications` by it
     The following workflows are available:
      * ci
      * deploy
-
+    
     You can run a selected workflow with:
     $ bitrise run WORKFLOW-ID
-
-
+    
+    
     The following utility workflows are defined:
      * _send-notifications
      * _setup
      * _test
-
+    
     Note about utility workflows:
      Utility workflow names start with '_' (example: _my_utility_workflow).
      These workflows can't be triggered directly, but can be used by other workflows
@@ -215,6 +215,6 @@ You most likely don't want to run `setup`, `test` nor `send-notifications` by it
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Explore Bitrise from your Terminal</div>
-	<a target="_blank" href="https://app.bitrise.io/cli"><button class="button">Go to Bitrise CLI</button></a>
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
 </div>
