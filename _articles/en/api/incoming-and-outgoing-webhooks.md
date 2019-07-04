@@ -101,3 +101,10 @@ Example response:
 To delete an outgoing webhook, all you need to do is provide the app slug and the webhook slug in your request:
 
     curl -X DELETE "https://api.bitrise.io/v0.1/apps/APP-SLUG/outgoing-webhooks/WEBHOOK-SLUG" -H "accept: application/json" -H "Authorization: ACCESS-TOKEN"
+    
+<div class="banner">
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Try out our API</div>
+<a target="_blank" href="https://api-docs.bitrise.io/#/"><button class="button">Go to Bitrise API</button></a>
+</div>    
+    

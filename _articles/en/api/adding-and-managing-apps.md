@@ -98,7 +98,8 @@ The response to any GET request regarding one or more applications will contain 
 You can also download the existing bitrise.yml file of any app: the response will contain the full YAML configuration.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's see your new app on Bitrise</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Try out our API</div>
+<a target="_blank" href="https://api-docs.bitrise.io/#/"><button class="button">Go to Bitrise API</button></a>
 </div>
+
