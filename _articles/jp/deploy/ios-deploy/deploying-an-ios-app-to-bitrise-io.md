@@ -4,7 +4,7 @@ date: 2018-10-26T12:37:47.000+00:00
 redirect_from: []
 menu:
   ios-deploy:
-    weight: 3
+    weight: 1
 
 ---
 アプリをBitriseへデプロイすることは、.ipaファイルをダウンロードしたり、そのアプリのDevelopment Provisioning Profileに指定されたデバイスでインストールすることができます。この方法により、内部テスターが簡単にアプリのテストを行えます。

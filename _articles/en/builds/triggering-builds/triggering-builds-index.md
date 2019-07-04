@@ -11,7 +11,7 @@ redirect_from: "/builds/triggering-builds/triggering-builds/"
 menu:
   builds-main:
     identifier: triggering-builds
-    weight: 2
+    weight: 3
 
 ---
 You can start builds on Bitrise either by:

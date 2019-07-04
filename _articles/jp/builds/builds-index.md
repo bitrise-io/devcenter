@@ -1,11 +1,11 @@
 ---
-title: 'Builds'
-redirect_from: []
+title: Builds
+redirect_from: "/jp/getting-started/builds-and-workflows/"
 menu:
   main:
     identifier: builds-main
     weight: 6
-redirect_from: "/jp/getting-started/builds-and-workflows/"
+
 ---
 {% include not_translated_yet.html %}
 

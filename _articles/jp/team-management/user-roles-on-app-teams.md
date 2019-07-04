@@ -3,7 +3,7 @@ title: アプリチームのユーザーのロール
 date: 2019-03-01T15:05:34.000+00:00
 menu:
   team-management-main:
-    weight: 6
+    weight: 4
 
 ---
 ロールはBitriseでは非常に重要です。アプリケーションでできることとできないことを決めます。

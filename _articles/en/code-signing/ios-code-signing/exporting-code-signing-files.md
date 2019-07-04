@@ -10,7 +10,7 @@ summary: 'If you don''t want to use codesigndoc, you can export certificates and
 redirect_from: []
 menu:
   ios-code-signing:
-    weight: 22
+    weight: 20
 
 ---
 ## Exporting certificates

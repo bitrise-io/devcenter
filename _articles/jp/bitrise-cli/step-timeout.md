@@ -2,7 +2,7 @@
 title: Setting a time limit for steps
 menu:
   bitrise-cli-main:
-    weight: 27
+    weight: 26
 
 ---
 {% include not_translated_yet.html %}

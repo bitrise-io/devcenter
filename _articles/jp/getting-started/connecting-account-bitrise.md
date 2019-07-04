@@ -5,7 +5,7 @@ redirect_from:
 - "/jp/getting-started/signing-up/connecting-account-bitrise/"
 menu:
   getting-started-main:
-    weight: 7
+    weight: 5
 
 ---
 Bitriseの提供する機能（自動Webhook登録を含む）をすべて活用するには、GitHub/GitLab/BitbucketアカウントをBitriseアカウントと連携する必要があります。連携することで、そのアカウントのリポジトリにBitriseへの **書き込み権限** が付与されます。3つすべてのGitプロバイダのアカウントをBitriseアカウントと次の2つの方法で連携することができます。

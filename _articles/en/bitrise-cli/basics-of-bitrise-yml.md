@@ -10,7 +10,7 @@ summary: The configuration format of the Bitrise CLI is referred to as bitrise.y
 redirect_from: []
 menu:
   bitrise-cli-main:
-    weight: 8
+    weight: 7
 
 ---
 The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.

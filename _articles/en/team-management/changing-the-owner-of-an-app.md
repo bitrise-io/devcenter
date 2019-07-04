@@ -9,7 +9,7 @@ summary: It can happen that you need to transfer an application on Bitrise to an
 redirect_from: []
 menu:
   team-management-main:
-    weight: 7
+    weight: 5
 
 ---
 It can happen that you need to transfer an application on [Bitrise](https://www.bitrise.io) to another user. This can be done in a few seconds by following these quick steps:

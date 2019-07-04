@@ -13,7 +13,7 @@ summary: Both incoming and outgoing webhooks can be set up with the Bitrise API.
   other services.
 menu:
   api-main:
-    weight: 13
+    weight: 11
 
 ---
 Both incoming and outgoing webhooks can be set up with the Bitrise API. They are important for automatic build triggering and the reporting of build events to other services.
@@ -106,5 +106,4 @@ To delete an outgoing webhook, all you need to do is provide the app slug and th
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 <div class="deploy-text">Try out our API</div>
 <a target="_blank" href="https://api-docs.bitrise.io/#/"><button class="button">Go to Bitrise API</button></a>
-</div>    
-    
+</div>

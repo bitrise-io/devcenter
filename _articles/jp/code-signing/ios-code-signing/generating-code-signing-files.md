@@ -2,7 +2,7 @@
 title: コード署名ファイルの生成
 menu:
   ios-code-signing:
-    weight: 19
+    weight: 17
 
 ---
 アプリの署名をするには、証明書（Certificates）とプロビジョニングプロファイルの２種類のファイルが必要になります。

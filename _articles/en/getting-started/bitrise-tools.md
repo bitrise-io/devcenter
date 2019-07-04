@@ -1,9 +1,10 @@
 ---
 title: Bitrise tools
+redirect_from: "/tools/bitrise-tools/"
 menu:
   getting-started-main:
-    weight: 41
-redirect_from: "/tools/bitrise-tools/"
+    weight: 37
+
 ---
 List of Open Source tools maintained by the Bitrise team.
 

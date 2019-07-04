@@ -11,7 +11,7 @@ summary: If you select a build of your app, on the APPS & Artifacts tab you can 
 redirect_from: []
 menu:
   builds-main:
-    weight: 18
+    weight: 21
 
 ---
 If you select a build of your app, on the `APPS & Artifacts` tab you can check out the artifacts (for example, files & reports) which have been generated during the build.

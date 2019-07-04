@@ -9,7 +9,7 @@ summary: 'Set your own username and e-mail address for git commands on Bitrise. 
   can set it globally so all future commits will be made using the provided user information. '
 menu:
   builds-main:
-    weight: 22
+    weight: 25
 
 ---
 The default Git username and user email address on our Stacks are the following:

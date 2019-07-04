@@ -5,7 +5,7 @@ redirect_from:
 - sensitive-input-field/#set-a-sensitive-input-in-a-step/
 menu:
   builds-main:
-    weight: 17
+    weight: 20
 
 ---
 パスワード、ID、APIトークンなどの機密情報は公開アプリのビルドログ・bitrise.ymlで表示されるので、そのアプリのビルドURLを持っている人なら誰でも見ることができてしまいます。こういった場合、**シークレット環境変数（secret env vars）**を使って隠すことができるので、ビルドログ・bitrise.yml内でも秘密にすることができます。BitriseのWorkflow Editor内で機密インプット欄を見やすくするため、機密インプット欄が存在するステップに黄色で`SENSITIVE`ラベルがマークされています。**これらのインプットはenv vars（環境変数）ではなくsecret env vars（シークレット環境変数）のヘルプを使って定義されないといけません。**

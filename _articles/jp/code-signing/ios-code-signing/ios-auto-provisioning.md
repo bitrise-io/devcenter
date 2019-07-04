@@ -2,7 +2,7 @@
 title: iOSコード署名ファイルの管理 - 自動プロビジョニング
 menu:
   ios-code-signing:
-    weight: 5
+    weight: 3
 
 ---
 [bitrise.io](https://www.bitrise.io)でコード署名ファイルを管理しましょう。自動プロビジョニング, 自動ダウンロードを使えばあなたのプロジェクトにとって必要なプロビジョニングプロファイルを自動で生成することができます。

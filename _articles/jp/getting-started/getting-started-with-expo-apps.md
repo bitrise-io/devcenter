@@ -10,7 +10,7 @@ summary: In this guide we discuss how to set up, test, code sign and deploy your
   Native project built with the Expo CLI.
 menu:
   getting-started-main:
-    weight: 40
+    weight: 36
 
 ---
 {% include not_translated_yet.html %}

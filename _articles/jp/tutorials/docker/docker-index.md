@@ -1,12 +1,12 @@
 ---
 title: Docker
+redirect_from: "/jp/tutorials/docker/index/"
 menu:
   tutorials-main:
     identifier: docker
     weight: 1
-redirect_from:  "/jp/tutorials/docker/index/"
----
 
+---
 [Docker](www.docker.com/)は、カスタム環境を作成、使用、および共有するだけでなく、一時的な環境でビルドを実行するための軽量な方法を提供する理想的なツールです。（ビルド後に環境が削除され、次のビルドの開始時に新しい環境が作成される）
 
 残念ながら、Dockerは今のところLinuxゲストシステムの実行にしか使用できません。 Windows Server 2016以降、Windows Dockerコンテナ（ゲストシステム）を実行できるようになりました。ですが、実行できるのはWindows Server 2016およびAnniversary Updateを搭載したWindows 10のみです。

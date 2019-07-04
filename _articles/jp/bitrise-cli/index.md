@@ -8,7 +8,6 @@ menu:
     identifier: bitrise-cli-main
     weight: 10
 
-
 ---
 {% include not_translated_yet.html %}
 

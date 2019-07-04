@@ -9,7 +9,7 @@ summary: 'The current API supports only one type of authentication: user generat
   Personal Access Tokens. Organizations do not have their own access tokens.'
 menu:
   api-main:
-    weight: 3
+    weight: 1
     title: Authentication
 
 ---

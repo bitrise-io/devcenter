@@ -2,7 +2,7 @@
 title: IonicとCordovaプロジェクトのコード署名
 menu:
   ios-code-signing:
-    weight: 15
+    weight: 13
 
 ---
 Bitriseは**Ionic**や**Cordova**でビルドしたiOSアプリのサポートも行っております。しかし、コード署名プロセスは”ネイティブ”Xcodeプロジェクトと比べて、少し違いがあります。

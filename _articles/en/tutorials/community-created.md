@@ -2,7 +2,7 @@
 title: Community Created Tutorials
 menu:
   tutorials-main:
-    weight: 4
+    weight: 5
 
 ---
 _If you write a tutorial or blog post about Bitrise feel free to_

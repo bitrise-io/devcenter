@@ -13,7 +13,7 @@ summary: The trigger map defined in the `bitrise.yml` file of your app determine
   requests.
 menu:
   triggering-builds:
-    weight: 11
+    weight: 9
     title: Triggering builds with the Trigger map
 
 ---

@@ -4,7 +4,7 @@ redirect_from: "/jp/code-signing/android-code-signing/android-code-signing-proce
 menu:
   code-signing-main:
     identifier: android-code-signing
-    weight: 1
+    weight: 2
 
 ---
 [Google Play Store](https://play.google.com/store/apps)でアプリを配布する前に、APKファイルに署名をする必要があります。

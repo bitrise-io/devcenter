@@ -2,7 +2,7 @@
 title: Creating and sharing your own Step
 menu:
   bitrise-cli-main:
-    weight: 31
+    weight: 30
 
 ---
 {% include not_translated_yet.html %}

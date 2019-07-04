@@ -10,7 +10,7 @@ summary: 'Run your first offline build using the Bitrise CLI. You need the CLI i
 redirect_from: []
 menu:
   bitrise-cli-main:
-    weight: 19
+    weight: 18
 
 ---
 To run a Bitrise build locally, you only need two things:

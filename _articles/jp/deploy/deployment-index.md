@@ -1,5 +1,5 @@
 ---
-title: 'Deployment'
+title: Deployment
 redirect_from: []
 menu:
   main:

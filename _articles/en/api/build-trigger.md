@@ -11,7 +11,7 @@ summary: 'You can trigger and abort builds with the Bitrise API. Define paramete
 redirect_from: []
 menu:
   api-main:
-    weight: 11
+    weight: 9
 
 ---
 You can trigger and abort builds with the Bitrise API. Define parameters for the build: for example, branch, tag or git commit to use. Custom environment variables can be defined as well.

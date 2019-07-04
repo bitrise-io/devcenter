@@ -2,7 +2,7 @@
 title: Gradleのキャッシュ
 menu:
   caching:
-    weight: 5
+    weight: 3
 
 ---
 事前に、ワークフロー内に最新バージョンの`Android Build`ステップがあることを確認してください。

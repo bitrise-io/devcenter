@@ -10,7 +10,7 @@ summary: Step properties provide important data of a Step, such as its project t
 redirect_from: []
 menu:
   bitrise-cli-main:
-    weight: 20
+    weight: 19
 
 ---
 ### Step properties

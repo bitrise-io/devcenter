@@ -13,7 +13,7 @@ summary: If the file path of your keystore file is defined in your build.gradle 
   from Bitrise and place it in the defined location.
 menu:
   android-code-signing:
-    weight: 11
+    weight: 9
 
 ---
 If the file path of your keystore file is defined in your `build.gradle` file but the keystore file itself is missing from the location where the path points to, you can use one of our file downloading steps to download the keystore file from Bitrise and place it in the defined location.

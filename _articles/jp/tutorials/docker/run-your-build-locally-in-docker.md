@@ -4,7 +4,7 @@ redirect_from:
 - "/docker/run-your-build-locally-in-docker/"
 menu:
   docker:
-    weight: 4
+    weight: 2
 
 ---
 {% include not_translated_yet.html %}

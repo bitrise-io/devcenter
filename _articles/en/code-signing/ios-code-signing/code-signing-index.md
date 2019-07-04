@@ -10,7 +10,7 @@ summary: 'Manage iOS code signing on Bitrise: collect and upload your code signi
 menu:
   code-signing-main:
     identifier: ios-code-signing
-    weight: 2
+    weight: 3
 
 ---
 To run a build of your iOS app on Bitrise, you will need to provide code signing files in some way. The code signing of iOS projects requires:

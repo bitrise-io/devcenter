@@ -2,7 +2,7 @@
 title: Bitrise CLIのインストールと更新
 menu:
   bitrise-cli-main:
-    weight: 2
+    weight: 1
 
 ---
 Bitrise CLIのインストールは非常に簡単です。これは、いくつかの方法で取得できる単一のバイナリとして配布されます。必要なのはダウンロードして実行可能な状態にするだけです。手順を見ていきましょう！

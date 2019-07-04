@@ -2,7 +2,7 @@
 title: Mavenのキャッシュ
 menu:
   caching:
-    weight: 7
+    weight: 5
 
 ---
 1. アプリの`Workflow Editor`を開きます。

@@ -10,7 +10,7 @@ summary: You can manually specify the code signing configuration in your Gradle 
 redirect_from: []
 menu:
   android-code-signing:
-    weight: 7
+    weight: 5
 
 ---
 ## Configuring manually in Gradle
@@ -78,5 +78,3 @@ When you upload a keystore file in the `Android keystore file` section and you h
 * `BITRISEIO_ANDROID_KEYSTORE_URL`
 
 "%}
-
-

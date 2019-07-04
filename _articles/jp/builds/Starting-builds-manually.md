@@ -5,7 +5,7 @@ redirect_from:
 - "/builds/starting-builds-manually/"
 menu:
   builds-main:
-    weight: 4
+    weight: 7
 
 ---
 Bitrise上での手動ビルドは、全ての設定がデフォルトのままである場合、文字通り2回のクリックで開始できます。もしデフォルトの設定のままにしたくない、または少なくともデフォルトの設定が何であるかを確認したいという場合は、読み進めてください！私たちがその手順をご案内します。

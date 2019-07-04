@@ -4,7 +4,7 @@ redirect_from: []
 date: 2019-02-21T15:27:32.000+00:00
 menu:
   builds-main:
-    weight: 23
+    weight: 26
 
 ---
 スタックのデフォルトGitユーザー名とユーザーのメールアドレスは以下のとおりです：

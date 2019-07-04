@@ -1,6 +1,6 @@
 ---
 tag: []
-title: 'FAQ'
+title: FAQ
 redirect_from: []
 summary: ''
 menu:

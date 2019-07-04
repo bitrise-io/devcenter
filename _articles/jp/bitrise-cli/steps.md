@@ -5,7 +5,7 @@ redirect_from:
 - "/bitrise-cli/steps"
 menu:
   bitrise-cli-main:
-    weight: 17
+    weight: 16
 
 ---
 {% include not_translated_yet.html %}

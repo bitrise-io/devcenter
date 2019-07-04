@@ -2,7 +2,7 @@
 title: 秘密と環境設定
 menu:
   builds-main:
-    weight: 15
+    weight: 18
 
 ---
 すべての秘密環境変数（secret env var）は環境変数ですが、すべての環境変数（env var）が秘密環境変数ではありません。

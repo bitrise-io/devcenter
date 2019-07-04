@@ -62,5 +62,4 @@ Setting up a subscription plan for an organization requires billing information,
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 	<div class="deploy-text">Manage your organization's billing info</div>
 	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
-</div>   
-      
+</div>

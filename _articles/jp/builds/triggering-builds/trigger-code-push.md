@@ -2,7 +2,7 @@
 title: コードプッシュによるビルドのトリガー
 menu:
   triggering-builds:
-    weight: 3
+    weight: 1
 
 ---
 トリガーを設定すると、リポジトリの指定されたブランチにプッシュされるたびにBitrise上でビルドが実行されます。

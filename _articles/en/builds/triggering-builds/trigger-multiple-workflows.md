@@ -9,7 +9,7 @@ summary: 'If you have more than one concurrency, you can run more than one build
 redirect_from: []
 menu:
   triggering-builds:
-    weight: 14
+    weight: 12
 
 ---
 If you have more than one concurrency, you can run more than one build simultaneously. And since we want to make life as easy for you as possible, these builds can be started automatically, with a single trigger. Let's go through how it works!

@@ -1,11 +1,11 @@
 ---
 title: iOSアプリのデプロイについて
-date: '2018-10-26T12:49:32.000+00:00'
+date: 2018-10-26T12:49:32.000+00:00
 redirect_from: "/jp/ios-deploy/introduction-to-deploying-ios-apps/"
 menu:
   deploy-main:
     identifier: ios-deploy
-    weight: 2
+    weight: 3
 
 ---
 アプリのビルドを開始し、ユニットテストとUIテストをビルド上で実行できたら、次はデプロイ作業に移ります。

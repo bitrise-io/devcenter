@@ -12,7 +12,7 @@ summary: To understand Bitrise in depth, there are a few key concepts that must 
   kept in mind. These are immutable and crucial to the way we do things.
 menu:
   bitrise-cli-main:
-    weight: 4
+    weight: 3
 
 ---
 To understand Bitrise in depth, there are a few key concepts that must be kept in mind. These are immutable and crucial to the way we do things.

@@ -3,7 +3,7 @@ title: MacOSのアプリ開始
 date: 2018-11-16T11:51:09.000+00:00
 menu:
   getting-started-main:
-    weight: 37
+    weight: 33
 
 ---
 このガイドでは、BitriseにMacOSアプリを追加、Xcodeテストの実行、コード署名ファイルの管理、アプリを bitrise.ioとApp Storeにデプロイする方法を説明します。

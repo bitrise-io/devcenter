@@ -4,7 +4,7 @@ redirect_from: "/jp/jp/builds/triggering-builds/triggering-builds/"
 menu:
   builds-main:
     identifier: triggering-builds
-    weight: 2
+    weight: 4
 
 ---
 Bitriseのビルドトリガーには以下のいずれかを選択できます。

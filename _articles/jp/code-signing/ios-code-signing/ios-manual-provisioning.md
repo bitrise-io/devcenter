@@ -2,7 +2,7 @@
 title: iOSコード署名ファイルの管理 - 手動プロビジョニング
 menu:
   ios-code-signing:
-    weight: 7
+    weight: 5
 
 ---
 [Bitrise](https://www.bitrise.io)上であなたのコード署名に必要なファイルを管理しましょう。手動でプロビジョニングを行う場合、Provisioning profileと.p12証明書ファイルを[codesigndoc](https://github.com/bitrise-tools/codesigndoc)ツールで収集できます。またこれらのファイルを手動またはツール経由でアップロードしてください。

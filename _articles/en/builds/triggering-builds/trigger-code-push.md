@@ -9,7 +9,7 @@ summary: You can set up triggers so that every time code is pushed to the specif
 redirect_from: []
 menu:
   triggering-builds:
-    weight: 4
+    weight: 2
 
 ---
 You can set up triggers so that every time code is pushed to the specified branch of your repository, a build is automatically triggered on Bitrise.

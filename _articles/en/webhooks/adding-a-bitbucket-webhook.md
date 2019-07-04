@@ -42,4 +42,4 @@ You can register a webhook either automatically or manually. This guide walks yo
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 <div class="deploy-text">Let's add a Bitbucket webhook!</div>
 <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard</button></a>
-</div>   
+</div>

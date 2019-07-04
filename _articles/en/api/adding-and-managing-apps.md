@@ -10,7 +10,7 @@ summary: 'Set up new apps on Bitrise with the API: add the app, generate SSH key
   and set up the app''s initial configuration.'
 menu:
   api-main:
-    weight: 9
+    weight: 7
 
 ---
 Set up new apps on Bitrise with the API: add the app, generate SSH keys, and set up the app's initial configuration.
@@ -102,4 +102,3 @@ You can also download the existing bitrise.yml file of any app: the response wil
 <div class="deploy-text">Try out our API</div>
 <a target="_blank" href="https://api-docs.bitrise.io/#/"><button class="button">Go to Bitrise API</button></a>
 </div>
-

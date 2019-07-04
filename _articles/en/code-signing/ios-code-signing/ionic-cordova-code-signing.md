@@ -11,7 +11,7 @@ summary: Naturally, Bitrise supports iOS applications built with either Ionic or
 redirect_from: []
 menu:
   ios-code-signing:
-    weight: 16
+    weight: 14
 
 ---
 Naturally, Bitrise supports iOS applications built with either **Ionic** or **Cordova**. However, the code signing process is slightly different compared to a "native" Xcode project.

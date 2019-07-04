@@ -6,7 +6,7 @@ tag: []
 summary: ''
 menu:
   builds-main:
-    weight: 3
+    weight: 6
 
 ---
 Notifications are updates about your activity on Bitrise. Usually, they concern the state of your builds but you can receive notifications about a lot of different things.

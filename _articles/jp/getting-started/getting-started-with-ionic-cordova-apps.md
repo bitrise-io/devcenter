@@ -4,7 +4,7 @@ date: 2018-11-16T14:33:48.000+00:00
 redirect_from: []
 menu:
   getting-started-main:
-    weight: 35
+    weight: 31
 
 ---
 Cordova/Ionicフレームワークを使いクロスプラットフォームアプリを開発することができます。iOSやAndroidのアプリをそれぞれの電子市場に迅速に送ることができるように、Bitriseは、テストの自動化、コード署名、デプロイ手順をサポートします。組織に複数の同時実行性がある場合は、Android/iOSビルドを同時に実行することができます。

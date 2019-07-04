@@ -1,6 +1,6 @@
 ---
 tag: []
-title: 'Infrastructure'
+title: Infrastructure
 redirect_from: []
 summary: ''
 menu:
