@@ -133,3 +133,9 @@ We recommend you start with the command `bitrise share`. This will print you a g
 7. Create a Pull Request in the original StepLib repository.
 
 And that's it, you are done! Once your PR is merged, your step will be available to everyone who uses the StepLib repository you chose.
+
+<div class="banner">
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Explore Bitrise from your Terminal</div>
+<a target="_blank" href="https://app.bitrise.io/cli"><button class="button">Go to Bitrise CLI</button></a>
+</div>
