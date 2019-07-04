@@ -76,3 +76,9 @@ If you are an Owner of an Organization, you can remove members and contributors 
 ## Where can I change the avatar for my Organization?
 
 Once you are on your Organization page, click on the avatar, and you'll see a popup to change the color scheme of it. We'll add custom avatar support a bit later.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's go to your Organization</div>
+	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
+</div>
