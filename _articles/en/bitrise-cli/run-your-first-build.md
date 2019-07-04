@@ -45,3 +45,9 @@ This defines an Environment Variable with your name and a workflow called `test`
        bitrise run test
 
 That's it! Your first build is running with the Bitrise CLI!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
