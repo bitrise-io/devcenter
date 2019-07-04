@@ -99,3 +99,9 @@ If you head back to the `bitrise.yml` tab, a `bitrise.io meta` is added to the d
     {% endraw %}
 
 Since this meta is only interpreted on [bitrise.io](https://www.bitrise.io/) and not locally or on Bitrise CLI, it is categorized by a `bitrise.io` namespace (where the stack is the key and `linux-docker-android-lts` is the value). Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Explore Bitrise from your Terminal</div>
+	<a target="_blank" href="https://app.bitrise.io/cli"><button class="button">Go to Bitrise CLI</button></a>
+</div>
