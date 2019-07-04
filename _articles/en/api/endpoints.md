@@ -37,3 +37,9 @@ The API will return:
 * The `curl` command of your request.
 * The request URL.
 * The server response.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
