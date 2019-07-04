@@ -47,3 +47,9 @@ to your [bitrise.io](https://www.bitrise.io) account.
 * **Make sure the repository URL is up to date**.
   Go to the `Settings` tab of your app on [bitrise.io](https://www.bitrise.io)
   and make sure that the `Repository URL` points to the current location of the repository. If, for example, you renamed or transferred your repository elsewhere, the status report can fail.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Check your app's Service credential User</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go your app</button></a>
+</div>

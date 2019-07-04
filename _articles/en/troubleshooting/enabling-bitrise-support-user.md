@@ -33,3 +33,9 @@ The Bitrise Support user has access to your builds and can edit your workflows. 
 ### What the Bitrise Support user can't see if it's enabled
 
 The Bitrise Support user can't see your `Account information` or any `Billing` information. Only the owner of the account has access to this information and has the right to modify any account-related records.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's enable the Bitrise Support User</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>

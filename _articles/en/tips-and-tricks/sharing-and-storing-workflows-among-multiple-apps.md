@@ -4,9 +4,6 @@ redirect_from: []
 date: '2019-03-01T14:20:01.000+00:00'
 tag: []
 summary: ''
-menu:
-  tips-and-tricks-main:
-    weight: 24
 
 ---
 Here are a couple of tricks to share and store a specific workflow among multiple apps instead of building your workflow from scratch every time you add an app to Bitrise.
@@ -58,6 +55,6 @@ We're recruiting this workflow to perform 2 things: clone your git repo and star
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+	<div class="deploy-text">Manage workflows among multiple apps</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Dashboard</button></a>
 </div>

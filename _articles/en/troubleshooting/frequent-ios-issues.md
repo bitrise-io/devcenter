@@ -337,3 +337,9 @@ I resolved this by adding a check in the AppDelegate (where we fire the permissi
     
     askForNotificationPermission()
     }
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's fix your iOS builds</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
