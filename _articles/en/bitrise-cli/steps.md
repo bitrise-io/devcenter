@@ -56,7 +56,7 @@ Let's do a simple "Hello World" script, using the `script` Step:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
-    
+
 ```yaml
 format_version: 1.3.1
 default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -153,7 +153,7 @@ If you want to specify a better, more descriptive title for the Step, you can us
 
 ### Step data in the bitrise.yml file
 
-The Step data and information you specify in the `bitrise.yml` file are the parameters of the step **you want to change**, compared to the Step's default definition. 
+The Step data and information you specify in the `bitrise.yml` file are the parameters of the step **you want to change**, compared to the Step's default definition.
 
 To see the Step's raw interface definition you can check it in the step library. In these examples we always use the [main Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib). The Step interface definitions can be found in the StepLib's [steps directory](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps).
 
@@ -231,7 +231,7 @@ For example:
 `BRANCH-OR-TAG` has to be a branch or tag which does exist in the step's repository. If you develop your own Step and you work on a `soon-to-be-released` branch, you can use that state of the Step with:
 
     - git::https://github.com/bitrise-io/steps-script.git@soon-to-be-released:
-    
+
 #### The path:: source
 
 The second special source is `path::`, which works in a similar way to `git::`, except for **local paths**, and it requires no version information.
@@ -241,7 +241,7 @@ A good example for this is, again, when you create and work on your own Step, yo
 Both absolute and relative (relative to the `bitrise.yml`!) local paths are supported. The relative path is relative to the folder containing the `bitrise.yml` file.
 
     - path::/path/to/my/step:
-
+    
     - path::./relative/path:
 
 During Step development it's a best practice to have a `bitrise.yml` directly in the Step's repository, for unit and ad-hoc testing. In this case the current directory is the Step directory, and the Step can be referenced with:
@@ -251,3 +251,9 @@ During Step development it's a best practice to have a `bitrise.yml` directly in
 This can also be used if you want to include your build Steps in your app's source code. For example, if you store the `script` Step's code in your source code repository, under the `steps/script` directory, you can run the version included in your source code repository with:
 
     - path::./steps/script:
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
