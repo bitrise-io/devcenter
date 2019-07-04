@@ -26,3 +26,9 @@ This is fairly obvious: your builds will be faster if there are no dependencies 
 With the dependencies stored in the repository, you see every single dependency update in your repository and you can review the changes in git. You have full control over whether to upgrade to a newer version of any dependency.
 
 There are no more issues with private submodules or private pods. [Using private submodules](/faq/adding-projects-with-submodules/) can be tricky because granting access requires some sort of workaround to grant access with SSH keys. If you have every dependency in your repository, a single read-only deployment SSH key will be enough.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
