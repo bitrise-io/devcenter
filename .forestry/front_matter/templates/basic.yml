@@ -28,6 +28,11 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/bitrise-cli/offline-workflow-editor.md
+- _articles/en/bitrise-cli/step-properties.md
+- _articles/en/bitrise-cli/step-outputs.md
+- _articles/en/bitrise-cli/run-your-first-build.md
+- _articles/en/api/response-and-pagination.md
 - _articles/en/api/authentication.md
 - _articles/en/troubleshooting/trigger-doesnt-work.md
 - _articles/en/troubleshooting/debugging-your-build-on-your-own-machine.md
@@ -104,9 +109,6 @@ pages:
 - _articles/en/bitrise-cli/most-important-concepts.md
 - _articles/en/bitrise-cli/secrets.md
 - _articles/en/bitrise-cli/step-timeout.md
-- _articles/en/bitrise-cli/offline-workflow-editor.md
-- _articles/en/bitrise-cli/step-properties.md
-- _articles/en/bitrise-cli/step-outputs.md
 - _articles/en/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/bitrise-cli/steps.md
@@ -154,7 +156,6 @@ pages:
 - _articles/en/reviews/running-your-first-build.md
 - _articles/en/builds/selective_builds.md
 - _articles/en/builds/build-logs.md
-- _articles/en/bitrise-cli/run-your-first-build.md
 - _articles/en/bitrise-cli/installation.md
 - deploy.md
 - _articles/en/deploy/android-deploy/deploying-android-apps.md
@@ -208,7 +209,6 @@ pages:
 - _articles/jp/api/authentication.md
 - _articles/en/api/endpoints.md
 - _articles/jp/api/response-and-pagination.md
-- _articles/en/api/response-and-pagination.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
 - _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md

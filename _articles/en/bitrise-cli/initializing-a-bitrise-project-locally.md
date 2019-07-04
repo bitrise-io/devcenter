@@ -54,3 +54,9 @@ Based on the scanner outputs, the plugin generates a Bitrise configuration, with
 The plugin also generates a `bitrise.secrets.yml` file. You can store [secret Environment Variables](/bitrise-cli/secrets/) in this.
 
 Contribute to the bitrise-init project by [creating and submitting your own project type scanner](/bitrise-cli/creating-your-own-bitrise-project-scanner/)!
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Explore Bitrise from your Terminal</div>
+	<a target="_blank" href="https://app.bitrise.io/cli"><button class="button">Go to Bitrise CLI</button></a>
+</div>

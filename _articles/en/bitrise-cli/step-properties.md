@@ -37,8 +37,14 @@ Step properties provide important data of a Step, such as its project type, its 
   and filtering in Step lists.
 * `deps` : specifies the required dependencies of the Step. To declare a dependency, specify a package manager and then the dependency you wish to install.
 
-An example: 
+An example:
 `yaml deps: brew: - name: curl - name: git`
 
 * `inputs` : inputs (Environments) of the Step. For more info, see [Step inputs](/bitrise-cli/step-inputs).
 * `outputs` : outputs (Environments) of the Step. For more info, see [Step outputs](/bitrise-cli/step-outputs).
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>

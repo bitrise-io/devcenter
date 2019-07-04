@@ -231,3 +231,9 @@ The development path for a new scanner starts with your own sample project and e
 7. Update the existing Steps with the new project type if necessary.
 
    The PR for these Steps should link the scanner PR.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>

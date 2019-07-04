@@ -93,3 +93,9 @@ Bitrise CLI automatically filters your secret env vars and prints `[REDACTED]` w
 You can specify an env var you wish to overwrite in your workflow if you click `Start/Schedule a Build` for your build   and select the `Advanced` option in the `Build configuration` pop-up window. Note that any env var you set in `Custom Environment Variables (optional)` section **will not be handled as secret env vars** hence they'll be will be visible in the build logs! You can also check them in `Build parameters` if you click `More details` on your build's page! "%}
 
 For more information on secrets, check out our [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) section.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Explore Bitrise from your Terminal</div>
+	<a target="_blank" href="https://app.bitrise.io/cli"><button class="button">Go to Bitrise CLI</button></a>
+</div>
