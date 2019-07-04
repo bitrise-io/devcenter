@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/troubleshooting/trigger-doesnt-work.md
 - _articles/en/troubleshooting/debugging-your-build-on-your-own-machine.md
 - _articles/en/faq/no-builds-are-triggered-automatically.md
 - _articles/en/faq/grant-access-to-bitbucket-team.md
@@ -82,7 +83,6 @@ pages:
 - _articles/en/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
 - _articles/en/faq/how-to-generate-ssh-keypair.md
 - _articles/en/faq/adding-projects-with-submodules.md
-- _articles/en/troubleshooting/trigger-doesnt-work.md
 - _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/troubleshooting/known-xcode-issues.md
 - _articles/en/troubleshooting/frequent-android-issues.md
