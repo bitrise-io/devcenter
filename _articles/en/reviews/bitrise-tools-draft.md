@@ -48,15 +48,13 @@ The [workflow-editor](https://github.com/bitrise-io/bitrise-workflow-editor.git)
 
 This is your friendly iOS Code Signing Doctor.
 
-{% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its [GitHub page](https://github.com/bitrise-io/codesigndoc) and see how it help you to sign your iOS project.
+{% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its [GitHub page](https://github.com/bitrise-io/codesigndoc) and see how it helps you to sign your iOS project.
 
 * [Collecting and exporting code signing files with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)
 * [Device testing for iOS]()"%} 
 
-## Server / service
+## Server/service
 
 ### bitrise webhooks
 
-Bitrise Webhooks processor. Transforms various incoming webhooks (GitHub, Bitbucket, Slack, ...) to [bitrise.io](https://www.bitrise.io)'s Build Trigger API format, and calls it to start a build.
-
-{% include message_box.html type="info" title="My message" content=""%}
+This [Bitrise Webhooks processor](https://github.com/bitrise-io/bitrise-webhooks) transforms various incoming webhooks (for example, from GitHub, Bitbucket, or Slack) to [bitrise.io](https://www.bitrise.io)'s Build Trigger API format, and calls it to start a build.
