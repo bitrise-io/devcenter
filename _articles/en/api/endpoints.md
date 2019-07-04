@@ -41,5 +41,5 @@ The API will return:
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 	<div class="deploy-text">Try out our API</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+	<a target="_blank" href="https://api-docs.bitrise.io/#/"><button class="button">Go to Bitrise API</button></a>
 </div>
