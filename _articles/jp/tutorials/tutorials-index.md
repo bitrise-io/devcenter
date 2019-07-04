@@ -1,6 +1,6 @@
 ---
 tag: []
-title: 'Tutorials'
+title: Tutorials
 redirect_from: []
 summary: 'In the Tutorials section, we are offering more detailed, in-depth guides,
   often specific to certain platforms or tools. '

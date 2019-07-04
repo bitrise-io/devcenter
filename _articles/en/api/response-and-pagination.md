@@ -9,7 +9,7 @@ summary: When you call an endpoint that returns a list of items, you might not g
   to retrieve all the items.
 menu:
   api-main:
-    weight: 5
+    weight: 3
 
 ---
 ## Response

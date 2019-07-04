@@ -5,7 +5,7 @@ redirect_from:
 - "/bitrise-cli/bitrise-yml-online"
 menu:
   builds-main:
-    weight: 21
+    weight: 24
 
 ---
 すべてのbitrise.ymlファイルはビルド用に[bitrise.io](https://www.bitrise.io)に保存されます。特定のビルドを実行したときの設定を確認したいときに便利です。また、オンライン`Workflow Editor`か、ビルドのオンラインbitrise.ymlファイルを使用することができ、オンラインbitrise.ymlファイルを選択した場合、変更を比較し、現在のビルドを元のバージョンに復元し、設定を編集して、ファイルをMac / PCにダウンロードすることができます。

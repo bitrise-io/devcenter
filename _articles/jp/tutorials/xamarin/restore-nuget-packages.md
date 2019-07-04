@@ -4,7 +4,7 @@ redirect_from:
 - "/xamarin/restore-nuget-packages"
 menu:
   xamarin:
-    weight: 3
+    weight: 1
 
 ---
 [NuGet](https://www.nuget.org/)パッケージを復元するためには、

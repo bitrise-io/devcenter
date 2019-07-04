@@ -13,7 +13,7 @@ summary: 'Go through the procedure of adding a Flutter app on Bitrise from start
   testing, and code signing. '
 menu:
   getting-started-main:
-    weight: 31
+    weight: 27
 
 ---
 Flutter is a mobile app SDK that allows developers to create native apps for both iOS and Android. Bitrise supports Flutter apps: we have dedicated Steps to help you with all your Flutter needs. This guide walks you through setting up, testing, building and deploying a simple Flutter app on Bitrise.

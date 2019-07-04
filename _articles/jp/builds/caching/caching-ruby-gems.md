@@ -2,7 +2,7 @@
 title: Ruby Gemsのキャッシュ
 menu:
   caching:
-    weight: 9
+    weight: 7
 
 ---
 Ruby Gemはデフォルトでは単一のディレクトリへインストールされます。このディレクトリの場所は、`gem enviroment gemdir`で取得できます。このディレクトリを変更したい場合、`$GEM_HOME`環境変数を設定することで変更できます。これは`gem install`によって取得され、`$GEM_HOME`で指定された場所へGemがインストールします。

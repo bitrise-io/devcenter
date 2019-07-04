@@ -4,7 +4,7 @@ redirect_from:
 - "/builds/build-numbering-and-app-versioning/builds/build-numbering-and-app-versioning"
 menu:
   builds-main:
-    weight: 13
+    weight: 16
 
 ---
 全てのBitriseビルドにはビルド番号が存在します。あなたのアプリの最初のビルドの場合、デフォルトで１番となっており、ビルドが行われるにつれ番号も増えていきます。ウェブサイト上でBitriseビルド番号の取得ができ、 `$BITRISE_BUILD_NUMBER` の環境変数からでも取得が可能です。この変数はBitriseビルド番号が必要になるステップやスクリプトで使用されます。

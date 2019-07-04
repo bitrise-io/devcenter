@@ -10,7 +10,7 @@ summary: You can specify the code signing configuration for your project in Andr
 redirect_from: []
 menu:
   android-code-signing:
-    weight: 5
+    weight: 3
 
 ---
 You can specify the code signing configuration for your project in [Android Studio](https://developer.android.com/studio/). You will need a keystore file, a key alias and a key password - have these ready before you start the procedure!

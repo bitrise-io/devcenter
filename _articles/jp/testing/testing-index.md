@@ -1,5 +1,5 @@
 ---
-title: 'Testing'
+title: Testing
 redirect_from: []
 menu:
   main:

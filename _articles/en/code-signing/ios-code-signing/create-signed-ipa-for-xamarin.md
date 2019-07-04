@@ -10,7 +10,7 @@ summary: You can easily create a signed IPA for your Xamarin app with Bitrise. A
 redirect_from: []
 menu:
   ios-code-signing:
-    weight: 12
+    weight: 10
 
 ---
 You can easily create a signed IPA for your Xamarin app with Bitrise. All you need to do is set the relevant inputs of our `Xamarin Archive` Step!

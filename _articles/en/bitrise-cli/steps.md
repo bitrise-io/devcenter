@@ -12,7 +12,7 @@ summary: 'A Step encapsulates a "build task": the code to perform that task, the
   and parameters you can define for the task, and the outputs the task generates.'
 menu:
   bitrise-cli-main:
-    weight: 16
+    weight: 15
 
 ---
 ## What is a Step

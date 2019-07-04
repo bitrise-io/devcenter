@@ -9,7 +9,7 @@ summary: The Bitrise API endpoint reference documentation lists every available 
   and their parameters, along with the possible responses. You can also try them out!
 menu:
   api-main:
-    weight: 8
+    weight: 6
 
 ---
 ## Endpoints

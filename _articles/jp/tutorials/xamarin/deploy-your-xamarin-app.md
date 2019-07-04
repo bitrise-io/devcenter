@@ -5,7 +5,7 @@ redirect_from:
 - "/xamarin/deploy-your-xamarin-app"
 menu:
   xamarin:
-    weight: 7
+    weight: 5
 
 ---
 Xamarinアプリケーションの追加に成功した後に、デフォルトのワークフロー(ビルド設定)を作成します。

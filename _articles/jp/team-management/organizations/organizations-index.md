@@ -1,10 +1,10 @@
 ---
-title: 'Organizations'
+title: Organizations
 redirect_from: []
 menu:
   team-management-main:
     identifier: organizations
-    weight: 10
+    weight: 7
 
 ---
 {% include not_translated_yet.html %}

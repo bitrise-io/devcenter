@@ -8,7 +8,7 @@ summary: Ensure that your builds do not exceed the time limit by setting up step
 redirect_from: []
 menu:
   bitrise-cli-main:
-    weight: 26
+    weight: 25
 
 ---
 Ensure that your builds do not exceed the time limit by setting up step timeout for steps that might cause builds to hang.

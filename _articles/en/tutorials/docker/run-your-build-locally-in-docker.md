@@ -4,7 +4,7 @@ redirect_from:
 - "/docker/run-your-build-locally-in-docker/"
 menu:
   docker:
-    weight: 2
+    weight: 1
 
 ---
 To be able to run your Linux stack builds locally, you'll need [docker](https://www.docker.com/):

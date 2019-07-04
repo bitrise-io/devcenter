@@ -5,7 +5,7 @@ redirect_from:
 - "/faq/available-environment-variables/#exposed-by-the-bitrise-cli"
 menu:
   builds-main:
-    weight: 25
+    weight: 28
 
 ---
 ## Bitrise CLIによる提示

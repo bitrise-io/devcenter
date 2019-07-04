@@ -11,7 +11,7 @@ summary: 'Environment Variables (Env Vars) consist of a key and a value, as well
   optional attributes. They can be defined on the level of apps, Workflows or Steps. '
 menu:
   builds-main:
-    weight: 24
+    weight: 27
 
 ---
 Environment Variables (Env Vars) consist of a key and a value, as well as optional attributes. They can be defined on the level of apps, Workflows or Steps.

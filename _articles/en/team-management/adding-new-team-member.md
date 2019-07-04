@@ -10,7 +10,7 @@ summary: |-
 redirect_from: "/team-management/index/"
 menu:
   team-management-main:
-    weight: 3
+    weight: 1
 
 ---
 Once you have your app set up, you can start inviting team members! You can select multiple roles for the new members, like: **admin**, **developer**, and **qa/tester**.

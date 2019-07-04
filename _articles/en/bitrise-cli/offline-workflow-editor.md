@@ -10,7 +10,7 @@ summary: 'The open source Bitrise Workflow Editor is designed in such a way that
   can run it offline on your Mac/PC without having to log into bitrise.io. '
 menu:
   bitrise-cli-main:
-    weight: 10
+    weight: 9
 
 ---
 Bitrise Workflow Editor is designed in such a way that you can run it offline on your Mac/PC without having to log into [bitrise.io](https://www.bitrise.io/). The Workflow Editor is open source, you can find its repository [here](https://github.com/bitrise-io/bitrise-workflow-editor). You can also join the join the discussion around Workflow Editor [here](https://discuss.bitrise.io/t/workflow-editor-v2-open-source-offline-workflow-editor/39).

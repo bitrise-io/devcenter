@@ -8,7 +8,7 @@ redirect_from: []
 summary: ''
 menu:
   triggering-builds:
-    weight: 10
+    weight: 8
 
 ---
 You can specify a pattern for your Git Tags to trigger a specific workflow. This is a good way to build and deploy your app in a specific state. And it's very easy to set up!

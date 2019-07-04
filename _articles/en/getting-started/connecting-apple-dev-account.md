@@ -13,7 +13,7 @@ summary: Connecting your Apple Developer Account allows Bitrise to reuse your au
   deploy.
 menu:
   getting-started-main:
-    weight: 10
+    weight: 8
     title: Connecting your Apple Developer Account
 
 ---
@@ -79,4 +79,3 @@ If everything goes well, you should be able to use the connected account's Apple
 	<div class="deploy-text">Let's set up your Apple Developer Connection!</div>
 	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your Account settings</button></a>
 </div>
-

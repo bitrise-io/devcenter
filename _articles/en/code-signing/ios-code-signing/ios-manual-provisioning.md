@@ -11,7 +11,7 @@ summary: Manage your code signing files on bitrise.io. With manual provisioning,
 redirect_from: []
 menu:
   ios-code-signing:
-    weight: 8
+    weight: 6
 
 ---
 Manage your code signing files on [bitrise.io](https://www.bitrise.io). With manual provisioning, you can collect your Provisioning Profiles and .p12 certificates with our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool and then upload them manually or by using the tool.

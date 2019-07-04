@@ -11,7 +11,7 @@ summary: 'If you have issues with iOS code signing, you need to check your code 
 redirect_from: []
 menu:
   ios-code-signing:
-    weight: 26
+    weight: 24
 
 ---
 To make iOS code signing work on Bitrise, you generally need three things:

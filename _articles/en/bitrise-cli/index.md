@@ -74,9 +74,3 @@ Same reason why code libraries / dependencies are awesome:
 * **Versioned**: If a new version doesn't work for you, you can always go back to a previous one.
 
 We frequently push features as Steps instead of building it into the core tools. This allows faster and versioned iterations, and updating the parts independently. We try to maintain compatibility as much as possible, so older versions can work too, providing a way to upgrade when it's appropriate for you.
-
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Explore Bitrise from your Terminal</div>
-	<a target="_blank" href="https://app.bitrise.io/cli"><button class="button">Go to Bitrise CLI</button></a>
-</div>

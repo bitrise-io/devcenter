@@ -4,7 +4,7 @@ date: 2018-10-26T12:39:01.000+00:00
 redirect_from: []
 menu:
   ios-deploy:
-    weight: 4
+    weight: 2
 
 ---
 App Storeへアプリのデプロイを行う前に、開発環境外の外部テスターのデバイスへリリースを行いたいですか？Testflightを使用したくない場合、**ad-hoc**エクスポート方法を使用した.ipaファイルのエクスポートを行うことが可能です。

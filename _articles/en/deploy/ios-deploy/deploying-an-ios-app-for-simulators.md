@@ -12,7 +12,7 @@ summary: 'You can build and deploy your iOS application to a simulator, to show 
 redirect_from: []
 menu:
   ios-deploy:
-    weight: 8
+    weight: 6
 
 ---
 You can build and deploy your iOS application to a simulator, to show it off in a browser, for example. On Bitrise, we have [a dedicated Step](https://www.bitrise.io/integrations/steps/xcode-build-for-simulator) to build for a simulator: the `Xcode build for simulator` Step runs the `xcodebuild` command with an iOS simulator destination and generates an .app file.

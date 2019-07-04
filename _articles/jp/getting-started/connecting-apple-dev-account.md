@@ -5,7 +5,7 @@ redirect_from:
 - "/jp/getting-started/signing-up/connecting-apple-dev-account"
 menu:
   getting-started-main:
-    weight: 9
+    weight: 7
 
 ---
 BitriseでApple Developer Accountを認証し、Apple Developer PortalとBitriseのプロジェクトを統合することができます。

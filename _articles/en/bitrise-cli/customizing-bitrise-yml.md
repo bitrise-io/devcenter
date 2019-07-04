@@ -12,7 +12,7 @@ summary: 'Any tool that can edit `bitrise.yml` can add custom properties to it. 
   of your workflow in `bitrise.yml`. '
 menu:
   bitrise-cli-main:
-    weight: 13
+    weight: 12
 
 ---
 Any tool that can edit `bitrise.yml` can add custom properties to it. This way you can add special properties or notes to your env vars, or even try new configurations of your workflow in `bitrise.yml`. All  you have to add is add a  `meta` field and a namespace label with key and value to the right place.

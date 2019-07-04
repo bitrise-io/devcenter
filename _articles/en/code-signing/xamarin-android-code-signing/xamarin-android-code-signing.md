@@ -10,7 +10,7 @@ summary: You can specify the code signing configuration for your Xamarin Android
 redirect_from: []
 menu:
   android-code-signing:
-    weight: 10
+    weight: 8
 
 ---
 ## Configuring code signing in Xamarin Studio

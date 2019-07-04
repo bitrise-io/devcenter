@@ -2,7 +2,7 @@
 title: codesigndocを使わないコード署名ファイルのエクスポート
 menu:
   ios-code-signing:
-    weight: 21
+    weight: 19
 
 ---
 ## Xcodeを使用したエクスポート

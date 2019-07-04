@@ -10,7 +10,8 @@ summary: 'Manage iOS code signing on Bitrise: collect and upload your code signi
 menu:
   code-signing-main:
     identifier: ios-code-signing
-    weight: 2
+    weight: 4
+
 ---
 Bitrise上でビルドを実行するには、code signingを行うためのファイルを用意する必要があります。iOSのプロジェクトで必要なファイルは以下の通りです:
 

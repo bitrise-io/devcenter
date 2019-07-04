@@ -5,7 +5,7 @@ redirect_from:
 menu:
   tutorials-main:
     identifier: xamarin
-    weight: 3
+    weight: 4
 
 ---
 [Xamarin](https://xamarin.com) インテグレーションを使えば [Bitrise](https://www.bitrise.io) で iOS と Android の Xamarin アプリをビルドすることができます。

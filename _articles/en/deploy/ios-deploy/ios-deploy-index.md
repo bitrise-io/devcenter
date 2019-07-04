@@ -1,6 +1,6 @@
 ---
 title: iOS deployment
-date: '2018-10-26T12:49:32.000+00:00'
+date: 2018-10-26T12:49:32.000+00:00
 redirect_from: "/ios-deploy/introduction-to-deploying-ios-apps/"
 tag:
 - ios

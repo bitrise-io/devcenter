@@ -2,7 +2,7 @@
 title: React Nativeアプリの開始
 menu:
   getting-started-main:
-    weight: 30
+    weight: 26
 
 ---
 BitriseではReact Nativeプロジェクトを簡単にセットアップ・構成が行なえます。あなたのReact Nativeレポ内にAndroidとiOSプロジェクトの両方を保存できますので、設定はAndroid、iOSアプリそれぞれの手順で行うことができます。React Nativeプロジェクトでは、初めにAndroid、その次にiOSのビルドが実行されます。組織が２つ以上のコンカレンシーをお持ちの場合は、並行して両方のビルドを走らせることができます。

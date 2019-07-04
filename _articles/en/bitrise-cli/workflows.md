@@ -11,7 +11,7 @@ summary: A Workflow is a collection of steps, environment variables, and other c
   for a single bitrise run.
 menu:
   bitrise-cli-main:
-    weight: 14
+    weight: 13
 
 ---
 A workflow is a collection of steps, environment variables, and other configurations for a single `bitrise run`.

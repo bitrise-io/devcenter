@@ -10,7 +10,7 @@ summary: Every Secret Environment Variable (Secret) is an Env Var but not every 
 redirect_from: []
 menu:
   builds-main:
-    weight: 14
+    weight: 17
 
 ---
 Every secret environment variable (secret env var) is an env var but not every environment variable (env var) is a secret env var!

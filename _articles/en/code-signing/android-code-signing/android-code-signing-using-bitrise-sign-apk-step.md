@@ -13,7 +13,7 @@ summary: You can create a signed APK using the Android Sign Step in your Bitrise
   of the Workflow Editor.
 menu:
   android-code-signing:
-    weight: 3
+    weight: 1
     title: Android code signing using Android Sign Step
 
 ---

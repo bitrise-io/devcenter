@@ -12,7 +12,7 @@ summary: 'You can upload, update, list, and delete iOS code signing files with t
   code signing endpoints. '
 menu:
   api-main:
-    weight: 15
+    weight: 13
 
 ---
 {% include message_box.html type="note" title="iOS code signing with the Bitrise API" content=" This guide describes how to manage your iOS code signing files with the Bitrise API. If you'd like to learn more about how to do the same on the UI, please check out [iOS code signing on Bitrise](/code-signing/ios-code-signing/code-signing/). "%} 

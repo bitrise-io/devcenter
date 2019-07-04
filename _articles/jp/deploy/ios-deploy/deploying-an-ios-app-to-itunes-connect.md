@@ -4,7 +4,7 @@ date: 2018-10-26T12:41:22.000+00:00
 redirect_from: []
 menu:
   ios-deploy:
-    weight: 9
+    weight: 7
 
 ---
 iTunes Connect（App Store Connectにリブランディングされました）へアプリのデプロイを行うことが可能です。以下のことができます：

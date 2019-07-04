@@ -5,7 +5,7 @@ redirect_from:
 - "/xamarin/add-custom-sources-to-nuget"
 menu:
   xamarin:
-    weight: 5
+    weight: 3
 
 ---
 アプリケーション内にNuGetによるサードパーティーパッケージを利用したい場合は,

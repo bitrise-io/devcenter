@@ -3,7 +3,7 @@ title: シミュレータ用iOSアプリのデプロイ
 date: 2018-11-10T14:34:02.000+00:00
 menu:
   ios-deploy:
-    weight: 10
+    weight: 8
 
 ---
 iOSアプリケーションをブラウザで表示するなど、あなたのiOSアプリをシミュレータへビルドやデプロイを行えます。Bitriseでは、シミュレータ用ビルドを行う[専用ステップ](https://www.bitrise.io/integrations/steps/xcode-build-for-simulator)があります：`Xcode build for simulator`ステップは、iOS simulator destinationを使って`xcodebuild`コマンドを実行したり、.appファイルの生成を行います。

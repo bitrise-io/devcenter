@@ -2,7 +2,7 @@
 title: iOSフレームワークのコード署名
 menu:
   ios-code-signing:
-    weight: 23
+    weight: 21
 
 ---
 ## iOSフレームワークの開発

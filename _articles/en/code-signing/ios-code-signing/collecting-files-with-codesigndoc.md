@@ -11,7 +11,7 @@ summary: 'The open source codesigndoc tool runs a clean Xcode/Xamarin Studio Arc
 redirect_from: []
 menu:
   ios-code-signing:
-    weight: 4
+    weight: 2
 
 ---
 The open source [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool runs a clean Xcode/Xamarin Studio Archive on your Mac, and analyzes the generated archive file. It collects the code signing settings that Xcode or Xamarin Studio used during the archive process, and prints the list of the required code signing files. You can also search for, export and upload these files using `codesigndoc`.

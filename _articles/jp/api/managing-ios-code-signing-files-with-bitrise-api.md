@@ -3,7 +3,7 @@ title: Managing iOS code signing files
 date: 2019-04-09T06:36:21.000+00:00
 menu:
   api-main:
-    weight: 16
+    weight: 14
 
 ---
 {% include not_translated_yet.html %}

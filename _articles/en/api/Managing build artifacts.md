@@ -11,7 +11,7 @@ summary: 'If you add the Deploy to bitrise.io step to your workflow, once the bu
   manage the generated artifacts with our API. '
 menu:
   api-main:
-    weight: 21
+    weight: 19
 
 ---
 If you add the `Deploy to bitrise.io` step to your workflow, once the build has run, you can access the [build’s artifacts](/builds/build-artifacts-online/) in the `APPS & ARTIFACTS` tab. You can manage the generated artifacts with our API. The following endpoints can list a build’s artifacts, output a specific artifact, update or even delete an artifact.
@@ -159,4 +159,4 @@ Example response:
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 <div class="deploy-text">Try out our API</div>
 <a target="_blank" href="https://api-docs.bitrise.io/#/"><button class="button">Go to Bitrise API</button></a>
-</div>    
+</div>

@@ -1,5 +1,5 @@
 ---
-title: 'Tips and tricks'
+title: Tips and tricks
 redirect_from: []
 menu:
   main:

@@ -11,7 +11,7 @@ summary: Step outputs are environment items that are the result of running a giv
 redirect_from: []
 menu:
   bitrise-cli-main:
-    weight: 24
+    weight: 23
 
 ---
 Step outputs are environment items that are the result of running a given step. For example, the `deploy-to-bitrise-io` step generates the `$BITRISE_PUBLIC_INSTALL_PAGE_URL` and the `$BITRISE_PUBLIC_INSTALL_PAGE_URL_MAP` output variables by default. You can check out the default outputs of a step in the `Workflow Editor` on [bitrise.io](https://www.bitrise.io) or in the `step.yml` file of the step.

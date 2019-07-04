@@ -11,7 +11,7 @@ summary: Step inputs are environment items that tell the Bitrise CLI how to run 
 redirect_from: []
 menu:
   bitrise-cli-main:
-    weight: 22
+    weight: 21
 
 ---
 Step inputs are environment items that tell the Bitrise CLI how to run a given step. As discussed in the [Steps](/bitrise-cli/steps) section, the default inputs can be found in the `step.yml` file of every step and the user only needs to manually set the inputs they wish to change.

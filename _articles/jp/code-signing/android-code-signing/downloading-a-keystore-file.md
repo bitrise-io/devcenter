@@ -4,7 +4,7 @@ date: 2018-12-11T10:30:01.000+00:00
 redirect_from: []
 menu:
   android-code-signing:
-    weight: 12
+    weight: 10
 
 ---
 `build.gradle`ファイル内にkeystoreファイルのファイルパスが定義されているが、そのkeystoreファイルそのものがパスが指し示す場所にない場合、Bitriseのfile downloadingステップを使うことでBitriseからkeystoreファイルのダウンロード及び定義した場所へ配置することができます。

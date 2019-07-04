@@ -6,7 +6,7 @@ tag: []
 summary: ''
 menu:
   getting-started-main:
-    weight: 32
+    weight: 28
     title: Getting started with Flutter apps
 
 ---

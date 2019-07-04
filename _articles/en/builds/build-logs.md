@@ -11,7 +11,7 @@ summary: 'Build logs allow users to analyze their builds and find out what went 
 redirect_from: []
 menu:
   builds-main:
-    weight: 27
+    weight: 30
 
 ---
 Build logs allow users to analyze their builds and find out what went wrong - and what went right! On Bitrise, build logs are easily accessible: they can be viewed on the website in their entirety or they can be downloaded to view them on your own device.
