@@ -19,17 +19,23 @@ Find out more about the Bitrise CLI in our [detailed guide](/bitrise-cli/index/)
 
 (https://github.com/bitrise-io/bitrise)
 
+{% include message_box.html type="info" title="Find out more on Bitrise CLI" content=" Check out its [GitHub](https://github.com/bitrise-io/bitrise) page or dig deeper in our [Bitrise CLI docs](/bitrise-cli/index/)."%}
+
 ### stepman
 
 The [Step Collection Manager]((https://github.com/bitrise-io/stepman)) used for managing the Step Library, including downloading and sharing [Steps](/steps-and-workflows/getting-started-steps/).
 https://github.com/bitrise-io/stepman
 /steps-and-workflows/getting-started-steps/
 
+{% include message_box.html type="info" title="My message" content=""%}
+
 ### envman
 
 The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used by the Bitrise CLI to isolate and manage [Environment Variables](/builds/available-environment-variables/) during the build. envman can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Environment Variable and the other uses it.
 (https://github.com/bitrise-io/envman)
 /builds/available-environment-variables/
+
+{% include message_box.html type="info" title="My message" content=""%}
 
 ## Bitrise CLI plugins
 
@@ -40,15 +46,21 @@ The following plugins can be directly run with the Bitrise CLI
 [This plugin](https://github.com/bitrise-io/bitrise-plugins-init.git) runs the scanner to detect the type of your project and generates a Bitrise configuration with a `bitrise.yml`.
 https://github.com/bitrise-io/bitrise-plugins-init.git
 
+{% include message_box.html type="info" title="My message" content=""%}
+
 ### step
 
 [https://github.com/bitrise-io/bitrise-plugins-step.git](https://github.com/bitrise-io/bitrise-plugins-step.git "https://github.com/bitrise-io/bitrise-plugins-step.git")
 https://github.com/bitrise-io/bitrise-plugins-step.git
 
+{% include message_box.html type="info" title="My message" content=""%}
+
 ### workflow-editor
 
 [https://github.com/bitrise-io/bitrise-workflow-editor.git](https://github.com/bitrise-io/bitrise-workflow-editor.git "https://github.com/bitrise-io/bitrise-workflow-editor.git")
 https://github.com/bitrise-io/bitrise-workflow-editor.git
+
+{% include message_box.html type="info" title="My message" content=""%}
 
 ## iOS code signing tool
 
@@ -56,8 +68,12 @@ https://github.com/bitrise-io/bitrise-workflow-editor.git
 
 Your friendly iOS Code Signing Doctor.
 
+{% include message_box.html type="info" title="My message" content=""%}
+
 ## Server / service
 
 ### bitrise webhooks
 
 Bitrise Webhooks processor. Transforms various incoming webhooks (GitHub, Bitbucket, Slack, ...) to [bitrise.io](https://www.bitrise.io)'s Build Trigger API format, and calls it to start a build.
+
+{% include message_box.html type="info" title="My message" content=""%}
