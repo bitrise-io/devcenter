@@ -40,3 +40,9 @@ Here is the overall look and feel:
 ## Upgrading Workflow Editor version
 
 You can upgrade to the latest version of the Workflow Editor by running `bitrise plugin update workflow-editor` command.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Explore Bitrise from your Terminal</div>
+	<a target="_blank" href="https://app.bitrise.io/cli"><button class="button">Go to Bitrise CLI</button></a>
+</div>
