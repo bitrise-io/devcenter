@@ -9,8 +9,8 @@ menu:
 2. Insert the `Cache:Pull` step after the `Git Clone` but before the `Android Build` steps.
 
    **IMPORTANT**: Make sure that your step is version 1.0.0 or newer.
-3. Insert the `Cache:Push` step to the very end of your workflow.
-4. In the `Ignore Paths from change check` input of the step, enter `$HOME/.m2`.
+3. Insert the `Bitrise.io Cache:Push` step to the very end of your workflow.
+4. In the `Cache paths` input of the step, enter `$HOME/.m2`.
 
 And you're done!
 
