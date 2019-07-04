@@ -26,41 +26,32 @@ Our [Step Collection Manager](https://github.com/bitrise-io/stepman) used for ma
 
 The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used by the Bitrise CLI to isolate and manage [Environment Variables](/builds/available-environment-variables/) during the build. Our envman tool can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Env Var and the other uses it.
 
-
-{% include message_box.html type="info" title="My message" content=""%}
-
 ## Bitrise CLI plugins
 
-The following plugins can be directly run with the Bitrise CLI
+The following plugins can be directly run with the Bitrise CLI:
 
 ### init
 
-[This plugin](https://github.com/bitrise-io/bitrise-plugins-init.git) runs the scanner to detect the type of your project and generates a Bitrise configuration with a `bitrise.yml`.
-https://github.com/bitrise-io/bitrise-plugins-init.git
-
-{% include message_box.html type="info" title="My message" content=""%}
+The [init plugin](https://github.com/bitrise-io/bitrise-plugins-init.git) runs the scanner to detect the type of your project and generates a Bitrise configuration with a `bitrise.yml`.
 
 ### step
 
-[https://github.com/bitrise-io/bitrise-plugins-step.git](https://github.com/bitrise-io/bitrise-plugins-step.git "https://github.com/bitrise-io/bitrise-plugins-step.git")
-https://github.com/bitrise-io/bitrise-plugins-step.git
-
-{% include message_box.html type="info" title="My message" content=""%}
+The [step plugin](https://github.com/bitrise-io/bitrise-plugins-step.git)
 
 ### workflow-editor
 
-[https://github.com/bitrise-io/bitrise-workflow-editor.git](https://github.com/bitrise-io/bitrise-workflow-editor.git "https://github.com/bitrise-io/bitrise-workflow-editor.git")
-https://github.com/bitrise-io/bitrise-workflow-editor.git
-
-{% include message_box.html type="info" title="My message" content=""%}
+The [workflow-editor](https://github.com/bitrise-io/bitrise-workflow-editor.git)
 
 ## iOS code signing tool
 
 ### codesigndoc
 
-Your friendly iOS Code Signing Doctor.
+This is your friendly iOS Code Signing Doctor.
 
-{% include message_box.html type="info" title="My message" content=""%}
+{% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its GitHub page and see how it help you to sign your iOS project.
+
+* [Collecting and exporting code signing files with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)
+* [Device testing for iOS]()"%} 
 
 ## Server / service
 
