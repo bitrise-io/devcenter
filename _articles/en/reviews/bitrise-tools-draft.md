@@ -14,10 +14,7 @@ List of Open Source tools maintained by the Bitrise team.
 
 ### bitrise
 
-The [Bitrise CLI]((https://github.com/bitrise-io/bitrise)), which is used on [bitrise.io](https://www.bitrise.io) to run the builds, as well as you can install it on your own Mac/Linux and run your the build locally!
-Find out more about the Bitrise CLI in our [detailed guide](/bitrise-cli/index/).
-
-(https://github.com/bitrise-io/bitrise)
+The Bitrise CLI, which is used on [bitrise.io](https://www.bitrise.io) to run builds. You can also install it on your own Mac/Linux and run your builds locally!
 
 {% include message_box.html type="info" title="Find out more on Bitrise CLI" content=" Check out its [GitHub](https://github.com/bitrise-io/bitrise) page or dig deeper in our [Bitrise CLI docs](/bitrise-cli/index/)."%}
 
