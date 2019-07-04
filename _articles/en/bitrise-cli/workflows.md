@@ -212,3 +212,9 @@ You most likely don't want to run `setup`, `test` nor `send-notifications` by it
      in the before_run and after_run lists.
 
 {% include message_box.html type="info" title="Available properties" content=" You can find the complete list of available properties in the [bitrise.yml format specification / reference](https://github.com/bitrise-io/bitrise/blob/master/_docs/bitrise-yml-format-spec.md) docs of the CLI. "%}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Explore Bitrise from your Terminal</div>
+	<a target="_blank" href="https://app.bitrise.io/cli"><button class="button">Go to Bitrise CLI</button></a>
+</div>
