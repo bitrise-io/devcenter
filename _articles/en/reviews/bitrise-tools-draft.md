@@ -41,7 +41,7 @@ The following plugins can be directly run with the Bitrise CLI
 
 [https://github.com/bitrise-io/bitrise-workflow-editor.git](https://github.com/bitrise-io/bitrise-workflow-editor.git "https://github.com/bitrise-io/bitrise-workflow-editor.git")
 
-## iOS
+## iOS code signing
 
 ### codesigndoc
 
