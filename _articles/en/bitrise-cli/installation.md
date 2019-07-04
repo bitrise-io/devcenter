@@ -47,3 +47,9 @@ If you have the `Homebrew` package manager installed on your Mac, you can use it
 Updating the Bitrise CLI is super easy, and it doesn't matter if you installed it with Homebrew or from the GitHub release.
 
 Simply run `bitrise update` - that's it! The CLI checks for updates once every day and notifies you as soon as there is a new version.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Explore Bitrise from your Terminal</div>
+	<a target="_blank" href="https://app.bitrise.io/cli"><button class="button">Go to Bitrise CLI</button></a>
+</div>
