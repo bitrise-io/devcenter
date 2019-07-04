@@ -21,10 +21,10 @@ In addition, you can list all apps belonging, for example, to a single user or t
 
 | Endpoints | Function |
 | --- | --- |
-| [POST /apps/register](https://api-docs.bitrise.io/#/app-setup/app-create) | Add a new app. |
-| [POST /apps/{app-slug}/register-ssh-key](https://api-docs.bitrise.io/#/app-setup/ssh-key-create) | Add an SSH-key to a specific app. |
-| [POST /apps/{app-slug}/finish](https://api-docs.bitrise.io/#/app-setup/app-finish) | Save the application at the end of the application add process. |
-| [POST /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/app-setup/app-config-create) | Upload a new bitrise.yml for your application. |
+| POST /apps/register | Add a new app. |
+| POST /apps/{app-slug}/register-ssh-key | Add an SSH-key to a specific app. |
+| POST /apps/{app-slug}/finish | Save the application at the end of the application add process. |
+| POST /apps/{app-slug}/bitrise.yml | Upload a new bitrise.yml for your application. |
 
 There are three distinct steps to adding an app with the Bitrise API.
 
@@ -64,12 +64,12 @@ By calling this endpoint, you replace the app's current `bitrise.yml` file. You 
 
 | Endpoints | Function |
 | --- | --- |
-| [GET /apps](https://api-docs.bitrise.io/#/application/app-list) | Get list of the apps. |
-| [GET /apps/{app-slug}](https://api-docs.bitrise.io/#/application/app-show) | Get a specific app. |
-| [GET /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/application/app-config-datastore-show) | Get the `bitrise.yml` of a specific app. |
-| [GET /apps/{app-slug}/branches](https://api-docs.bitrise.io/#/application/branch-list) | List the branches of an app's repository. |
-| [GET /organizations/{org-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-organization) | Get list of the apps for an organization. |
-| [GET /users/{user-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-user) | Get list of the apps for a user. |
+| GET /apps | Get list of the apps. |
+| GET /apps/{app-slug} | Get a specific app. |
+| GET /apps/{app-slug}/bitrise.yml | Get the bitrise.yml of a specific app. |
+| GET /apps/{app-slug}/branches | List the branches of an app's repository. |
+| GET /organizations/{org-slug}/apps | Get list of the apps for an organization. |
+| GET /users/{user-slug}/apps | Get list of the apps for a user. |
 
 The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL:
 
@@ -96,3 +96,9 @@ The response to any GET request regarding one or more applications will contain 
         {
 
 You can also download the existing bitrise.yml file of any app: the response will contain the full YAML configuration.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's see your new app on Bitrise</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
