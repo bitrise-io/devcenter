@@ -60,3 +60,9 @@ If your project uses the Android/Linux environment, you can download and use th
 [Follow our guide](/docker/run-your-build-locally-in-docker/) to make it work!
 
 {% include message_box.html type="info" title="Run docker from a clean git clone" content="Ideally, you should first do a **clean git clone** and run `docker` from there, so that files which are in your `.gitignore` won’t affect the build, and the build can run the the same way as on [bitrise.io](https://www.bitrise.io/)."%}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Check your builds on Bitrise</div>
+	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your app</button></a>
+</div>
