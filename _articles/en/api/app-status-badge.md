@@ -46,3 +46,9 @@ where `SIMPLIFIED-STATUS-AS-TEXT` can be:
 If the `APP-ID` and the `STATUS-IMAGE-API-TOKEN` parameters are correct, and they identify an existing app, a **200** HTTP code is returned along with the JSON response, even if the branch parameter points to a non-existing branch (the JSON response in this case will be `{"status": "unknown"}` with a 200 HTTP code).
 
 If the `APP-ID` or the `STATUS-IMAGE-API-TOKEN` (or both) is not correct, you’ll get a HTTP **403** code _with an empty response_ body.
+
+<div class="banner">
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Try out our API</div>
+<a target="_blank" href="https://api-docs.bitrise.io/#/"><button class="button">Go to Bitrise API</button></a>
+</div>
