@@ -154,3 +154,9 @@ Example response:
         "file_size_bytes": 1574793
       }
     }
+    
+<div class="banner">
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Try out our API</div>
+<a target="_blank" href="https://api-docs.bitrise.io/#/"><button class="button">Go to Bitrise API</button></a>
+</div>    
