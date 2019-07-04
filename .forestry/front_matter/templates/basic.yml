@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/api/authentication.md
 - _articles/en/troubleshooting/trigger-doesnt-work.md
 - _articles/en/troubleshooting/debugging-your-build-on-your-own-machine.md
 - _articles/en/faq/no-builds-are-triggered-automatically.md
@@ -205,7 +206,6 @@ pages:
 - _articles/en/reviews/Japanese translations/webhooks/github-webhookの追加-adding-a-github-webhook.md
 - _articles/en/reviews/apple-2fa.md
 - _articles/jp/api/authentication.md
-- _articles/en/api/authentication.md
 - _articles/en/api/endpoints.md
 - _articles/jp/api/response-and-pagination.md
 - _articles/en/api/response-and-pagination.md

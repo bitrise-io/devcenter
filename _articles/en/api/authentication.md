@@ -31,8 +31,14 @@ The current API supports only one type of authentication: user generated **Perso
 
 ### Authenticating with the API
 
-To provide the required access token, you have to add a **HEADER** to your requests, with the key `Authorization` and the value of your token. 
+To provide the required access token, you have to add a **HEADER** to your requests, with the key `Authorization` and the value of your token.
 
-An example API call with auth, using `curl`: 
+An example API call with auth, using `curl`:
 
     curl -H 'Authorization: THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's generate a new token</div>
+	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your Account Settings</button></a>
+</div>
