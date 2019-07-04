@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/api/response-and-pagination.md
 - _articles/en/api/authentication.md
 - _articles/en/troubleshooting/trigger-doesnt-work.md
 - _articles/en/troubleshooting/debugging-your-build-on-your-own-machine.md
@@ -208,7 +209,6 @@ pages:
 - _articles/jp/api/authentication.md
 - _articles/en/api/endpoints.md
 - _articles/jp/api/response-and-pagination.md
-- _articles/en/api/response-and-pagination.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
 - _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md

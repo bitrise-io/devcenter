@@ -62,3 +62,9 @@ Iterating through all your registered apps:
 4. If there's a `next` property inside `paging`, call the endpoint again, with the `next` query parameter
    * Example: `https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
 5. Repeat this until the `paging` object does not include a `next` property, which means that the page you received was the last one.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
