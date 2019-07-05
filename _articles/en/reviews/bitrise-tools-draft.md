@@ -14,7 +14,7 @@ List of Open Source tools maintained by the Bitrise team.
 
 ### bitrise
 
-The Bitrise CLI, which is used on [bitrise.io](https://www.bitrise.io) to run builds. You can also install it on your own Mac/Linux and run your builds locally!
+The Bitrise CLI, which is used on [bitrise.io](https://www.bitrise.io) to run builds. Install it on your own Mac/Linux and run your builds locally!
 
 {% include message_box.html type="info" title="Find out more on Bitrise CLI" content=" Check out its [GitHub](https://github.com/bitrise-io/bitrise) page or dig deeper in our [Bitrise CLI docs](/bitrise-cli/index/)."%}
 
@@ -24,7 +24,7 @@ Our [Step Collection Manager](https://github.com/bitrise-io/stepman) used for ma
 
 ### envman
 
-The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used by the Bitrise CLI to isolate and manage [Environment Variables](/builds/available-environment-variables/) during the build. Our envman tool can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Env Var and the other uses it.
+The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used by the Bitrise CLI to isolate and manage [Environment Variables (Env Vars)](/builds/available-environment-variables/) during the build. Our envman tool can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Env Var and the other uses it.
 
 ## Bitrise CLI core plugins
 
@@ -32,7 +32,9 @@ The following plugins can be directly run with the Bitrise CLI on your computer:
 
 ### init
 
-With this [init plugin](https://github.com/bitrise-io/bitrise-plugins-init.git), the [scanner can detect the type of your project](/bitrise-cli/initializing-a-bitrise-project-locally/) locally and generate a Bitrise configuration with a `bitrise.yml`.
+With this [init plugin](https://github.com/bitrise-io/bitrise-plugins-init.git), the scanner can detect the type of your project locally and generate a Bitrise configuration with a `bitrise.yml` file.
+
+{% include message_box.html type="info" title="bitrise init" content="Learn more about how to [initialize a Bitrise project locally](/bitrise-cli/initializing-a-bitrise-project-locally/)."%}
 
 ### step
 
