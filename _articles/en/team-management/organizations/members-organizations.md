@@ -12,7 +12,7 @@ menu:
     weight: 7
 
 ---
-Organizations can have multiple **Groups**. Groups form the "backbones" of organizations: they contain the members of the organizations, they can be assigned to different applications owned by the organizations, with different roles assigned to the different groups. Being a member of an organization means being a member of one of the groups belonging to the organization.
+Organizations can have multiple **Groups**. Groups form the "backbones" of Organizations: they contain the members of the Organizations, they can be assigned to different applications owned by the Organizations, with different roles assigned to the different groups. Being a member of an organization means being a member of one of the groups belonging to the organization.
 
 For example, let's say the organization called _TestOrg_ owns an app called _TestApp_. _TestOrg_ has the following groups:
 
@@ -20,7 +20,7 @@ For example, let's say the organization called _TestOrg_ owns an app called _Tes
 * **Developers** - they are assigned to _TestApp_ with a **Developer** role. Members of this group can run builds, view build logs and view builds.
 * **Testers** - they are assigned to _TestApp_ with a **Tester / QA** role. They can only view builds.
 
-## Creating groups for organizations
+## Creating groups for Organizations
 
 1. Sign in with an account that is an **owner** of the organization and open its profile page.
 2. Go to your organization's profile page: click **Switch Profile** on the top left corner and select the organization you need.
@@ -32,7 +32,7 @@ For example, let's say the organization called _TestOrg_ owns an app called _Tes
    ![](/img/enter-group-name.jpg)
 5. Enter a group name in the **Enter Group name** window, and click **Create**.
 
-## Adding members to organizations
+## Adding members to Organizations
 
 In practice, adding members to an organization means adding members to a group belonging to an organization. Once you have the groups you need for your organization, adding members to them is very simple.
 
@@ -53,7 +53,7 @@ In practice, adding members to an organization means adding members to a group b
 
    ![](/img/test-group-manage-group.png)
 
-## Removing members from organizations
+## Removing members from Organizations
 
 Members can be removed from the entire organization or from one of the groups belonging to an organization. In practice, this means that a single member can be removed from working on any of the apps belonging to the organization or only from selected apps.
 
@@ -68,7 +68,7 @@ Members can be removed from the entire organization or from one of the groups be
 
    ![](/img/test-group-remove.jpg)
 
-### Removing members from the entire organization
+### Removing members from the entire Organization
 
 Removing members from the entire organization removes them from all the groups they are part of in the organization and they can no longer work on any of the apps unless they are invited back, either as a group member or as an outside contributor.
 
@@ -97,7 +97,7 @@ Removing members from the entire organization removes them from all the groups t
 5. Click **Delete group** then click **Yes** in the pop-up window.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Manage your organization members</div>
-	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Manage your organization members</div>
+<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
 </div>
