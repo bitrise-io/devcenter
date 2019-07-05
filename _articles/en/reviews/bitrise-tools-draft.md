@@ -28,7 +28,7 @@ The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used 
 
 ## Bitrise CLI core plugins
 
-The following plugins can be directly run with the Bitrise CLI on your computer:
+The following plugins can be directly run with the [Bitrise CLI](https://github.com/bitrise-io/bitrise) on your computer:
 
 ### init
 
@@ -38,7 +38,7 @@ With this [init plugin](https://github.com/bitrise-io/bitrise-plugins-init.git),
 
 ### step
 
-You can create Steps with this plugin if you follow our [Steps](/bitrise-cli/create-your-own-step/) guide.
+You can list, retrieve Step information or create Steps with this [plugin](https://github.com/bitrise-io/bitrise-plugins-step), - follow our [Steps](/bitrise-cli/create-your-own-step/) guide.
 
 ### workflow-editor
 
