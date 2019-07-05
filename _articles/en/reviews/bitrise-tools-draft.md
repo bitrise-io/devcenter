@@ -42,17 +42,17 @@ You can create Steps with this plugin if you follow our [Steps](/bitrise-cli/cre
 
 ### workflow-editor
 
-With this [plugin](https://github.com/bitrise-io/bitrise-workflow-editor.git) you can configure your builds' bitrise.yml config locally. 
+With this [plugin](https://github.com/bitrise-io/bitrise-workflow-editor.git) you can configure your builds' `bitrise.yml` config locally.
 
-Learn how to [install and start the offline Workflow Editor]() and [how to download your build's bitrise.yml file to your computer](/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online).
+{% include message_box.html type="info" title="offline Workflow Editor" content="Learn how to [install and start the offline Workflow Editor]() and [how to download your build's bitrise.yml file to your computer](/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online)."%} 
 
 ## iOS code signing tool
 
 ### codesigndoc
 
-This is your friendly iOS Code Signing Doctor.
+Your friendly iOS Code Signing Doctor.
 
-{% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its [GitHub page](https://github.com/bitrise-io/codesigndoc) and see how it helps you to sign your iOS project.
+{% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its [GitHub page](https://github.com/bitrise-io/codesigndoc) and see how it helps you sign your iOS project.
 
 * [Collecting and exporting code signing files with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)
 * [Device testing for iOS]()"%}
