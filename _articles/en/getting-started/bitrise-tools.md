@@ -6,75 +6,57 @@ menu:
     weight: 37
 
 ---
-List of Open Source tools maintained by the Bitrise team.
+Here is a list of our open source tools maintained by the Bitrise team.
 
-{% include message_box.html type="note" title="Where can I find the repositories?" content="
-For historical reasons the core Bitrise CLI tools live in [github.com/bitrise-io](https://github.com/bitrise-io), but most of our tools, and every new tool we create lives in the [github.com/bitrise-tools](https://github.com/bitrise-tools), and the CLI core components (plugins, etc.) in the [github.com/bitrise-core](https://github.com/bitrise-core) GitHub organization. "%}
+## Bitrise CLI tools
 
-## Core, Bitrise CLI tools
+### bitrise
 
-* [bitrise](https://github.com/bitrise-io/bitrise) -
-  the Bitrise CLI, which is used on [bitrise.io](https://www.bitrise.io)
-  to run the builds, as well as you can install it on your own Mac/Linux and run your the build locally!
-* [stepman](https://github.com/bitrise-io/stepman) -
-  used for managing the Step Library, including
-  downloading and sharing steps.
-* [envman](https://github.com/bitrise-io/envman) -
-  environment variable manager, can be used independently
-  and Bitrise CLI uses it to isolate and manage environment variables during the build.
+The Bitrise CLI which is used on [bitrise.io](https://www.bitrise.io) to run builds. Install it on your own Mac/Linux and run your builds locally!
 
-## Bitrise CLI plugins
+{% include message_box.html type="info" title="Find out more on Bitrise CLI" content=" Check out its [GitHub](https://github.com/bitrise-io/bitrise) page or dig deeper in our [Bitrise CLI docs](/bitrise-cli/index/)."%}
 
-* [Analytics plugin](https://github.com/bitrise-core/bitrise-plugins-analytics)
+### stepman
 
-## Infrastructure
+Our [Step Collection Manager](https://github.com/bitrise-io/stepman) used for managing the Step Library, including downloading and sharing [Steps](/steps-and-workflows/getting-started-steps/).
 
-* [bitrise-machine](https://github.com/bitrise-tools/bitrise-machine) -
-  Manage bitrise CLI runner hosts (virtual machines). Create, destroy, cleanup based on configuration.
-* [bitrise-bridge](https://github.com/bitrise-tools/bitrise-bridge) -
-  Responsible for "bridging" a Bitrise CLI command
-  from a remote host to the local Bitrise CLI;
-  either directly or by creating a Docker container and running the Bitrise CLI command in it.
-* [cmd-bridge](https://github.com/bitrise-io/cmd-bridge) -
-  Helps bridging an outside (generic) command (e.g. any command, through SSH) into a host. Useful in cases
-  where the command have to be performed in a specific environment, e.g. the iOS Simulator
-  can't be started from an SSH session, it have to be started from a logged in "GUI" user.
-  In this case you start `cmd-bridge`'s server in the environment, and then
-  you can use `cmd-bridge` through SSH or another way to send commands to the running
-  `cmd-bridge` server, which will perform the commands in its context / the environment
-  it is running in.
-* [garden](https://github.com/bitrise-tools/garden) -
-  A tool to manage your template (plan) based directories.
-  You can perform a setup (plant) by running garden grow,
-  which'll create your garden (directories) based on your plans (temlates).
+### envman
 
-## iOS
+The [Environment Variable Manager](https://github.com/bitrise-io/envman) used by the Bitrise CLI to isolate and manage [Environment Variables (Env Vars)](/builds/available-environment-variables/) during the build. Our envman tool can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Env Var and the other one uses it.
 
-* [codesigndoc](https://github.com/bitrise-tools/codesigndoc) -
-  Your friendly iOS Code Signing Doctor.
+## Bitrise CLI core plugins
 
-## Generic
+The following plugins can be directly run with the [Bitrise CLI](https://github.com/bitrise-io/bitrise) on your computer:
 
-* [depman](https://github.com/bitrise-tools/depman) -
-  Super Simple Dependency Manager
-* [releaseman](https://github.com/bitrise-tools/releaseman) -
-  Your friendly Release Manager
+### init
 
-## Go
+With this [init plugin](https://github.com/bitrise-io/bitrise-plugins-init.git), the scanner can detect the type of your project locally and generate a Bitrise configuration with a [bitrise.yml](/bitrise-cli/index/#bitriseyml---the-configuration-format) file.
 
-Go / golang related tools.
+{% include message_box.html type="info" title="bitrise init" content="Learn more about how to [initialize a Bitrise project locally](/bitrise-cli/initializing-a-bitrise-project-locally/)."%}
 
-* [gows](https://github.com/bitrise-tools/gows) -
-  Go Workspace / Environment Manager, to easily manage the Go Workspace during development.
-* [goinst](https://github.com/bitrise-tools/goinst) -
-  Go Install command line tools in an isolated environment.
+### step
 
-## Server / service
+You can list, retrieve Step information or create Steps with this [plugin](https://github.com/bitrise-io/bitrise-plugins-step), - follow our [Steps](/bitrise-cli/create-your-own-step/) guide.
 
-* [bitrise webhooks](https://github.com/bitrise-io/bitrise-webhooks) -
-  Bitrise Webhooks processor. Transforms various incoming webhooks (GitHub, Bitbucket, Slack, ...)
-  to [bitrise.io](https://www.bitrise.io)'s Build Trigger API format, and calls it to start a build.
-* [DATapi](https://github.com/bitrise-tools/datapi) -
-  A very simple data series storage service.
-  Store and retrieve data series in a quick and simple way, based on timestamp and category of the data.
-  * [DATapi Ruby Client](https://github.com/bitrise-tools/datapi-client)
+### workflow-editor
+
+With this [plugin](https://github.com/bitrise-io/bitrise-workflow-editor.git) you can configure your builds' `bitrise.yml` config locally.
+
+{% include message_box.html type="info" title="offline Workflow Editor" content="Learn how to [install and start the offline Workflow Editor](/bitrise-cli/offline-workflow-editor/) and [how to download your build's bitrise.yml file to your computer](/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online)."%}
+
+## iOS code signing tool
+
+### codesigndoc
+
+Your friendly iOS Code Signing Doctor.
+
+{% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its [GitHub page](https://github.com/bitrise-io/codesigndoc) and see how it helps sign your iOS project.
+
+* [Collecting and exporting code signing files with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)
+* [Device testing for iOS](/testing/device-testing-for-ios/)"%}
+
+## Server/service
+
+### bitrise webhooks
+
+This [Bitrise Webhooks processor](https://github.com/bitrise-io/bitrise-webhooks) transforms various incoming webhooks (for example, from GitHub, Bitbucket, or Slack) to [bitrise.io](https://www.bitrise.io)'s Build Trigger API format, and calls it to start a build.
