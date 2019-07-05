@@ -14,7 +14,7 @@ List of Open Source tools maintained by the Bitrise team.
 
 ### bitrise
 
-The Bitrise CLI, which is used on [bitrise.io](https://www.bitrise.io) to run builds. Install it on your own Mac/Linux and run your builds locally!
+The Bitrise CLI which is used on [bitrise.io](https://www.bitrise.io) to run builds. Install it on your own Mac/Linux and run your builds locally!
 
 {% include message_box.html type="info" title="Find out more on Bitrise CLI" content=" Check out its [GitHub](https://github.com/bitrise-io/bitrise) page or dig deeper in our [Bitrise CLI docs](/bitrise-cli/index/)."%}
 
@@ -52,7 +52,7 @@ With this [plugin](https://github.com/bitrise-io/bitrise-workflow-editor.git) yo
 
 Your friendly iOS Code Signing Doctor.
 
-{% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its [GitHub page](https://github.com/bitrise-io/codesigndoc) and see how it helps you sign your iOS project.
+{% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its [GitHub page](https://github.com/bitrise-io/codesigndoc) and see how it helps sign your iOS project.
 
 * [Collecting and exporting code signing files with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)
 * [Device testing for iOS]()"%}
