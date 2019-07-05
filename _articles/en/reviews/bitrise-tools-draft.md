@@ -32,7 +32,7 @@ The following plugins can be directly run with the Bitrise CLI on your computer:
 
 ### init
 
-With this [init plugin](https://github.com/bitrise-io/bitrise-plugins-init.git), the scanner can detect the type of your project locally and generate a Bitrise configuration with a `bitrise.yml` file.
+With this [init plugin](https://github.com/bitrise-io/bitrise-plugins-init.git), the scanner can detect the type of your project locally and generate a Bitrise configuration with a [bitrise.yml](/bitrise-cli/index/#bitriseyml---the-configuration-format) file.
 
 {% include message_box.html type="info" title="bitrise init" content="Learn more about how to [initialize a Bitrise project locally](/bitrise-cli/initializing-a-bitrise-project-locally/)."%}
 
@@ -42,7 +42,9 @@ You can create Steps with this plugin if you follow our [Steps](/bitrise-cli/cre
 
 ### workflow-editor
 
-As the name suggest with this plugin you can  The [workflow-editor](https://github.com/bitrise-io/bitrise-workflow-editor.git)
+With this [plugin](https://github.com/bitrise-io/bitrise-workflow-editor.git) you can configure your builds' bitrise.yml config locally. 
+
+Learn how to [install and start the offline Workflow Editor]() and [how to download your build's bitrise.yml file to your computer](/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online).
 
 ## iOS code signing tool
 
