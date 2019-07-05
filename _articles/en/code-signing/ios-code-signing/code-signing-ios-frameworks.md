@@ -13,3 +13,9 @@ After distribution the framework will be re-codesigned by the frameworks' consum
 If you attempt to build it without code signing Xcode won't produce a `.framework` file and you will receive the following error:
 
     CodeSign error: code signing is required for product type 'Framework' in SDK 'iOS 10.2'
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
