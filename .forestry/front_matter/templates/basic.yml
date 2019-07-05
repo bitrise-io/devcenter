@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/team-management/organizations/org-ownership.md
 - _articles/en/reviews/bitrise-tools-draft.md
 - _articles/en/api/endpoints.md
@@ -119,7 +120,6 @@ pages:
 - _articles/en/bitrise-cli/basics-of-bitrise-yml.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
 - _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
 - _articles/en/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
