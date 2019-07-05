@@ -28,7 +28,7 @@ Since the SAML SSO feature is tied to the Org Elite plan, if you decide to downg
 Before connecting SAML SSO to your organization, make sure:
 
 * you have a SAML SSO provider (Identity Provider) that you can connect Bitrise to.
-* your account on Bitrise has an Organization. If it doesn't have an Organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new organizations on Bitrise.
+* your account on Bitrise has an Organization. If it doesn't have an Organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Organizations on Bitrise.
 * as with other [Organization management actions](/team-management/organizations/members-organizations/), only the Organization owner can set up SAML SSO to a Bitrise organization.
 
 {% include message_box.html type="info" title="Guides on SAML SSO providers" content=" Check out our guides on how to set up SAML SSO with the following SAML SSO providers:
@@ -181,7 +181,7 @@ Please note if you click the **x** next to an org member's name, you remove that
 ![](/img/disbale-sso-enabled-status.png)
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's configure SAML SSO to your organization!</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your organization</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's configure SAML SSO to your organization!</div>
+<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your organization</button></a>
 </div>
