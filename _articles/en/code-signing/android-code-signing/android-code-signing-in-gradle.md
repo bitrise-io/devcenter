@@ -78,3 +78,9 @@ When you upload a keystore file in the `Android keystore file` section and you h
 * `BITRISEIO_ANDROID_KEYSTORE_URL`
 
 "%}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>

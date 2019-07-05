@@ -26,3 +26,9 @@ You can specify the code signing configuration for your project in [Android Stud
    * store password: ***
 
 Once you filled out the signing information, the `signingConfigs` block will be created in your module's `build.gradle` file.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
