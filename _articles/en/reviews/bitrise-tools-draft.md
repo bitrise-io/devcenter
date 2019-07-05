@@ -26,21 +26,21 @@ Our [Step Collection Manager](https://github.com/bitrise-io/stepman) used for ma
 
 The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used by the Bitrise CLI to isolate and manage [Environment Variables](/builds/available-environment-variables/) during the build. Our envman tool can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Env Var and the other uses it.
 
-## Bitrise CLI plugins
+## Bitrise CLI core plugins
 
-The following plugins can be directly run with the Bitrise CLI:
+The following plugins can be directly run with the Bitrise CLI on your computer:
 
 ### init
 
-The [init plugin](https://github.com/bitrise-io/bitrise-plugins-init.git) runs the scanner to detect the type of your project and generates a Bitrise configuration with a `bitrise.yml`.
+With this [init plugin](https://github.com/bitrise-io/bitrise-plugins-init.git), the [scanner can detect the type of your project](/bitrise-cli/initializing-a-bitrise-project-locally/) locally and generate a Bitrise configuration with a `bitrise.yml`.
 
 ### step
 
-The [step plugin](https://github.com/bitrise-io/bitrise-plugins-step.git)
+You can create Steps with this plugin if you follow our [Steps](/bitrise-cli/create-your-own-step/) guide.
 
 ### workflow-editor
 
-The [workflow-editor](https://github.com/bitrise-io/bitrise-workflow-editor.git)
+As the name suggest with this plugin you can  The [workflow-editor](https://github.com/bitrise-io/bitrise-workflow-editor.git)
 
 ## iOS code signing tool
 
@@ -51,7 +51,7 @@ This is your friendly iOS Code Signing Doctor.
 {% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its [GitHub page](https://github.com/bitrise-io/codesigndoc) and see how it helps you to sign your iOS project.
 
 * [Collecting and exporting code signing files with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)
-* [Device testing for iOS]()"%} 
+* [Device testing for iOS]()"%}
 
 ## Server/service
 
