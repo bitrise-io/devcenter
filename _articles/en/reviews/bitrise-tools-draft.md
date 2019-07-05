@@ -7,7 +7,7 @@ published: false
 
 ---
 
-Here are our open source tools maintained by the Bitrise team
+Here are our open source tools maintained by the Bitrise team.
 
 ## Bitrise CLI tools
 
@@ -23,7 +23,7 @@ Our [Step Collection Manager](https://github.com/bitrise-io/stepman) used for ma
 
 ### envman
 
-The [Environment Variable Manager]((https://github.com/bitrise-io/envman)) used by the Bitrise CLI to isolate and manage [Environment Variables (Env Vars)](/builds/available-environment-variables/) during the build. Our envman tool can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Env Var and the other uses it.
+The [Environment Variable Manager](https://github.com/bitrise-io/envman) used by the Bitrise CLI to isolate and manage [Environment Variables (Env Vars)](/builds/available-environment-variables/) during the build. Our envman tool can be used independently of the Bitrise CLI if you want to connect tools, where one tool saves the Env Var and the other one uses it.
 
 ## Bitrise CLI core plugins
 
@@ -43,7 +43,7 @@ You can list, retrieve Step information or create Steps with this [plugin](https
 
 With this [plugin](https://github.com/bitrise-io/bitrise-workflow-editor.git) you can configure your builds' `bitrise.yml` config locally.
 
-{% include message_box.html type="info" title="offline Workflow Editor" content="Learn how to [install and start the offline Workflow Editor]() and [how to download your build's bitrise.yml file to your computer](/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online)."%} 
+{% include message_box.html type="info" title="offline Workflow Editor" content="Learn how to [install and start the offline Workflow Editor](/bitrise-cli/offline-workflow-editor/) and [how to download your build's bitrise.yml file to your computer](/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online)."%} 
 
 ## iOS code signing tool
 
@@ -54,7 +54,7 @@ Your friendly iOS Code Signing Doctor.
 {% include message_box.html type="info" title="Find out more on codesigndoc" content="Check out its [GitHub page](https://github.com/bitrise-io/codesigndoc) and see how it helps sign your iOS project.
 
 * [Collecting and exporting code signing files with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)
-* [Device testing for iOS]()"%}
+* [Device testing for iOS](/testing/device-testing-for-ios/)"%}
 
 ## Server/service
 
