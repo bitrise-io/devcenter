@@ -12,11 +12,11 @@ menu:
     weight: 9
 
 ---
-Organizations can own several apps, with different (or the same, if that's what you need) groups working on different apps. Apps can be transferred between private accounts and organization accounts any time, quickly and easily.
+Organizations can own several apps, with different (or the same, if that's what you need) groups working on different apps. Apps can be transferred between private accounts and Organization accounts any time, quickly and easily.
 
 ## Adding new apps to an Organization
 
-A new app can be added directly to an organization. You can do this either from the organization's **Account settings** page or from the Dashboard of an account that is a member of the organization.
+A new app can be added directly to an Organization. You can do this either from the organization's **Account settings** page or from the Dashboard of an account that is a member of the Organization.
 
 1. Get to the **Create New App** page.
 
@@ -24,13 +24,13 @@ A new app can be added directly to an organization. You can do this either from 
    * On the top menu bar, find the **+** symbol and click it, then click the **Add App** option.
 
      ![](/img/add-new-app.jpg)
-   * Open the **Dashboard** on [bitrise.io](https://www.bitrise.io), open the dropdown menu above your app list and select your organization. Click the **+ Add new app** button.
+   * Open the **Dashboard** on [bitrise.io](https://www.bitrise.io), open the dropdown menu above your app list and select your Organization. Click the **+ Add new app** button.
 
      ![](/img/add-new-app-organization.png)
-   * Open the **Account settings** page of your organization, and click the **Apps** option on the menu on the left. Click the **Add new app** button.
+   * Open the **Account settings** page of your Organization, and click the **Apps** option on the menu on the left. Click the **Add new app** button.
 
      ![](/img/add-new-app-org-settings.jpg)
-2. On **Create New App** page, make sure that the organization account is selected in the dropdown menu.
+2. On **Create New App** page, make sure that the Organization account is selected in the dropdown menu.
 
    ![](/img/create-new-app-organization-selected.png)
 3. Proceed with adding a new app as usual! It will be owned by the Organization.
@@ -128,15 +128,15 @@ Adding an outside contributor requires enabling the **Allow Outside Contributors
 
 {% include message_box.html type="warning" title="Outside contributors and app transfer" content="
 
-If you wish to transfer an app with outside contributors from _Org A_ to _Org B_, keep these in mind:
+If you wish to transfer an app with outside contributors from _Organization A_ to _Organization B_, keep these in mind:
 
-* If _Org A_ has the **Allow Outside Contributors** switch turned on, and _Org B_ DOES NOT, then all outside contributors of _Org A_ will be REMOVED as the app is transferred to _Org B_.
-* If _Org A_ and _Org B_ both have the **Allow Outside Contributors** switch turned on, then all all outside contributors of _Org A_ will be moved to _Org B_ as the app is transferred to _Org B_.
+* If _Organization A_ has the **Allow Outside Contributors** switch turned on, and _Organization B_ DOES NOT, then all outside contributors of _Organization A_ will be REMOVED as the app is transferred to _Organization B_.
+* If _Organization A_ and _Organization B_ both have the **Allow Outside Contributors** switch turned on, then all all outside contributors of _Organization A_ will be moved to _Organization B_ as the app is transferred to _Organization B_.
 
-If you wish to transfer an app with team members to an Org, keep these in mind:
+If you wish to transfer an app with team members to an Organization, keep these in mind:
 
-* If the Org has the **Allow Outside Contributors** switch turned on, all app team members will be moved as outside contributors to the Org as the app is transferred to the Org.
-* If the Org has the **Allow Outside Contributors** switch turned off, all team members of the app will be REMOVED from the app as it is transferred to the Org.
+* If the _Organization_ has the **Allow Outside Contributors** switch turned on, all app team members will be moved as outside contributors to the _Organization_ as the app is transferred to the Org.
+* If the _Organization_ has the **Allow Outside Contributors** switch turned off, all team members of the app will be REMOVED from the app as it is transferred to the _Organization_.
 
 "%}
 
