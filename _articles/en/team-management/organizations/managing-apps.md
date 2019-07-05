@@ -14,7 +14,7 @@ menu:
 ---
 Organizations can own several apps, with different (or the same, if that's what you need) groups working on different apps. Apps can be transferred between private accounts and organization accounts any time, quickly and easily.
 
-## Adding new apps to an organization
+## Adding new apps to an Organization
 
 A new app can be added directly to an organization. You can do this either from the organization's **Account settings** page or from the Dashboard of an account that is a member of the organization.
 
@@ -33,23 +33,23 @@ A new app can be added directly to an organization. You can do this either from 
 2. On **Create New App** page, make sure that the organization account is selected in the dropdown menu.
 
    ![](/img/create-new-app-organization-selected.png)
-3. Proceed with adding a new app as usual! It will be owned by the organization.
+3. Proceed with adding a new app as usual! It will be owned by the Organization.
 
-## Transferring apps to an organization
+## Transferring apps to an Organization
 
-When you create an organization, you get a prompt for transferring apps from the account that you are logged in with to the organization. However, if you skipped that step, you can do it on our website at any time you wish.
+When you create an Organization, you get a prompt for transferring apps from the account that you are logged in with to the Organization. However, if you skipped that step, you can do it on our website at any time you wish.
 
 You have two options to transfer app ownership.
 
-* Several apps can be transferred at the same time from the organization profile.
+* Several apps can be transferred at the same time from the Organization profile.
 * Any given app can be transferred from the app's **Team** tab.
 
-App ownership can be transferred **from** an organization to another account on the app's **Team** tab. Only organization owners can do this.
+App ownership can be transferred **from** an Organization to another account on the app's **Team** tab. Only Organization owners can do this.
 
-### Transferring apps from the organization profile
+### Transferring apps from the Organization profile
 
-1. Sign in with an account that is a member of the organization and open the account's profile page.
-2. Go to your organization's profile page: click **Switch Profile** on the top left corner and select the organization you need.
+1. Sign in with an account that is a member of the Organization and open the account's profile page.
+2. Go to your Organization's profile page: click **Switch Profile** on the top left corner and select the Organization you need.
 
    ![](/img/switch-profile-1.jpg)
 3. On the left, select **Apps** from the menu options.
@@ -71,19 +71,19 @@ For transferring the ownership, select the new user to transfer the app to:
 
 ![](/img/transfer-ownership-team-tab.jpg)
 
-The new user can either be another private account or an organization.
+The new user can either be another private account or an Organization.
 
 ## Assigning groups to apps
 
-There are two separate ways to assign one or more groups to an app that is owned by an organization.
+There are two separate ways to assign one or more groups to an app that is owned by an Organization.
 
-* Assign a group from the **Groups** menu of the organization's profile page. This way you can add a group to multiple apps simultaneously. Only Organization owners can do this!
+* Assign a group from the **Groups** menu of the Organization's profile page. This way you can add a group to multiple apps simultaneously. Only Organization owners can do this!
 * Assign a group from the **Team** tab of the app. If the groups you need already exist and you only need to assign groups to a single app, this method works perfectly. Organization owners and accounts that have an **admin** role on the app's team can do this.
 
 ### Assigning a group from the Groups menu
 
 1. Sign in with an account that is an **owner** of the Organization and open its profile page.
-2. Go to your Organization's profile page: click **Switch Profile** on the top left corner and select the organization you need.
+2. Go to your Organization's profile page: click **Switch Profile** on the top left corner and select the Organization you need.
 
    ![](/img/switch-profile.jpg)
 3. On the left, select **Groups** from the menu options.
@@ -107,7 +107,7 @@ There are two separate ways to assign one or more groups to an app that is owned
 
 For rights of roles, check out the Role Cheatsheet!
 
-If there are no groups you can assign to the app in this menu, you will see a grey box telling you **No groups to show**. Clicking the link will take you to your organization's `Groups` page where you can create the groups you need, including removing the group from the app.
+If there are no groups you can assign to the app in this menu, you will see a grey box telling you **No groups to show**. Clicking the link will take you to your Organization's `Groups` page where you can create the groups you need, including removing the group from the app.
 
 ![Screenshot](/img/team-management/organization/add-group-from-org.png)
 
@@ -119,12 +119,12 @@ From the **Team** tab you can also access all the functions to manage groups. Yo
 
 You can add contributors to any application if you have **Admin** or **Owner** right to the app. There are two types of contributors at Bitrise:
 
-* Contributors are organization members who can be individually added to an app.
-* Outside contributors are not part of an organization but can be individually invited to an app of an organization.
+* Contributors are Organization members who can be individually added to an app.
+* Outside contributors are not part of an Organization but can be individually invited to an app of an Organization.
 
-This means that if you wish to add an organization member to an app of the organization, all you have to do is add the username/email address of the member under **Add contributors to this app**  on the **Team** page of the app.
+This means that if you wish to add an Organization member to an app of the Organization, all you have to do is add the username/email address of the member under **Add contributors to this app**  on the **Team** page of the app.
 
-Adding an outside contributor requires enabling the **Allow Outside Contributors** switch on the organization's **People** tab.
+Adding an outside contributor requires enabling the **Allow Outside Contributors** switch on the Organization's **People** tab.
 
 {% include message_box.html type="warning" title="Outside contributors and app transfer" content="
 
@@ -142,7 +142,7 @@ If you wish to transfer an app with team members to an Org, keep these in mind:
 
 Let's see the details!
 
-1. Go to your organization's page on [bitrise.io](https://www.bitrise.io).
+1. Go to your Organization's page on [bitrise.io](https://www.bitrise.io).
 2. On the left menu bar, select **People**.
 3. Toggle the **Allow Outside Contributors** switch to the right. Please note that without enabling this function here, you will not be able to add an outside contributor to your app on the **Team** tab!
 
@@ -168,7 +168,7 @@ Bitrise sends an invitation email to the contributor's email address with a link
 
 ![](/img/invitation-email-outside-contributor.jpg)
 
-If all went well, you should see the invited outside contributor at the **People** tab of your organization.
+If all went well, you should see the invited outside contributor at the **People** tab of your Organization.
 
 ![](/img/added-outside-contributor.png)
 
@@ -184,7 +184,7 @@ If all went well, you should see the invited outside contributor at the **People
    ![](/img/manage-group-change-roles.png)
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
 </div>
