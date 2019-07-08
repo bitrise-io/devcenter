@@ -3,6 +3,7 @@ title: Enabling or disabling a Step conditionally
 menu:
   steps-workflows-main:
     weight: 10
+redirect_from: "/jp/tips-and-tricks/disable-a-step-by-condition/"
 
 ---
 {% include not_translated_yet.html %}
