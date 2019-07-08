@@ -1,14 +1,13 @@
 ---
-title: Enable/Disable a step (optionally, based on a condition)
+title: Enabling or disabling a Step conditionally
 menu:
   steps-workflows-main:
     weight: 10
-    title: Enabling or disabling a Step conditionally
 
 ---
 {% include not_translated_yet.html %}
 
-## Disable a Step
+## Disabling a Step
 
 If you don't want to remove the Step from your Workflow and you don't want to duplicate the Workflow either (which is the preferred way if you want to experiment with new things; you can just create a "backup" clone of your original Workflow) then you can simply disable a Step by specifying `run_if: false`.
 
@@ -21,7 +20,7 @@ An example:
             #!/bin/bash
             echo "This will never run, because of run_if:false"
 
-## Run a Step only in CI environment, skip it for local builds
+## Running a Step only in a CI environment
 
 This is quite similar to how you [completely disable a step](#disable-a-step), but instead of specifying `false` as the `run_if` expression, you specify `.IsCI`, which will only be true in CI mode.
 
@@ -36,9 +35,9 @@ step if you want to run it locally too.
 
 {% include message_box.html type="note" title="Enable CI mode" content=" CI mode can be enabled on your own Mac/PC by setting the `CI` environment to `true` (e.g. with `export CI=true` in your Bash Terminal), or by running `bitrise run` with the `--ci` flag: `bitrise --ci run ...`. "%}
 
-## Run a Step only if the Build failed
+## Running a Step only if the Build failed
 
-_To do this you have to switch to `bitrise.yml` mode (open the Workflow Editor on bitrise.io -> left side: click on `bitrise.yml` to switch to the interactive `bitrise.yml` editor)._
+_To do this you have to switch to_ `_bitrise.yml_` _mode (open the Workflow Editor on bitrise.io -> left side: click on_ `_bitrise.yml_` _to switch to the interactive_ `_bitrise.yml_` _editor)._
 
 You have to add two properties to the Step you **only** want to run when
 the Build failed (at that point, when the Step would run):
