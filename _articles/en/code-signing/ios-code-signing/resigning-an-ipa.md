@@ -1,5 +1,5 @@
 ---
-title: Re-signing an .ipa
+title: Signing an .ipa with multiple code signing identities
 tag:
 - code-signing
 - ios
