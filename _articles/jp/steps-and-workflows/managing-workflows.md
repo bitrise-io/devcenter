@@ -2,7 +2,7 @@
 title: ワークフローの連結
 menu:
   steps-workflows-main:
-    weight: 16
+    weight: 18
 
 ---
 ## ワークフローの連結

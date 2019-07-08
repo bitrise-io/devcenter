@@ -3,7 +3,7 @@ title: Don't mark the Build as failed if a given step would fail (ignore the err
   of the Step)
 menu:
   tips-and-tricks-main:
-    weight: 14
+    weight: 13
 
 ---
 _To do this you have to switch to_ `_bitrise.yml_` _mode (open the Workflow Editor on bitrise.io -> left side: click on_ `_bitrise.yml_` _to switch to the interactive_ `_bitrise.yml_` _editor)._

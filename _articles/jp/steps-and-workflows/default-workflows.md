@@ -2,7 +2,7 @@
 title: デフォルトワークフロー
 menu:
   steps-workflows-main:
-    weight: 12
+    weight: 14
 
 ---
 [bitrise.io](https://www.bitrise.io)にアプリを追加すると、2つのワークフローが作成されます。`primary（プライマリ）`ワークフローと`deploy（デプロイ）`ワークフローです。webhookが設定されている場合、デフォルトでは、プロジェクトのコードの変更があるたびに`primary（プライマリ）`ワークフローのトリガーが実行されます。
