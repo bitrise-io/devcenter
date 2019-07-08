@@ -2,7 +2,7 @@
 title: 'Xcode Archive: export options'
 menu:
   tips-and-tricks-main:
-    weight: 18
+    weight: 16
 published: false
 
 ---

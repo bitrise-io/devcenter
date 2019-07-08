@@ -2,7 +2,7 @@
 title: Using the bitrise.yml from repository
 menu:
   tips-and-tricks-main:
-    weight: 23
+    weight: 21
 
 ---
 It is possible to store the build configuration ( that is, your app's `bitrise.yml` file) in your repository. The approach has its pros and cons; let's go through how to do it and why you'd want to do it!

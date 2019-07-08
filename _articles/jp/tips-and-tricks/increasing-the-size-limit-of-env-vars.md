@@ -5,7 +5,7 @@ redirect_from: []
 summary: ''
 menu:
   tips-and-tricks-main:
-    weight: 25
+    weight: 23
 
 ---
 {% include not_translated_yet.html %}

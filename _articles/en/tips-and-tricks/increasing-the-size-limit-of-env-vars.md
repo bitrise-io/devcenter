@@ -8,7 +8,7 @@ summary: 'Increase the size limit of Environment Variable values with a simple c
   - but be aware that some tools cannot handle large variable sizes. '
 menu:
   tips-and-tricks-main:
-    weight: 26
+    weight: 24
 
 ---
 By default, Environment Variables (Env Vars) have a 20KB per-environment value size limit, and a 120KB total size limit. Hence you getting the following error when you try to add a value larger than 20KB:

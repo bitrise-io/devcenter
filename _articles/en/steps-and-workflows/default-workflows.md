@@ -9,7 +9,7 @@ summary: 'When you add a new app on bitrise.io, two workflows are created automa
 redirect_from: []
 menu:
   steps-workflows-main:
-    weight: 11
+    weight: 13
 
 ---
 When you add a new app on [bitrise.io](https://www.bitrise.io), one or two workflows are created automatically, depending on your app. These are the `primary` and the `deploy` workflows. By default, every code change in your project's repository triggers the `primary` workflow if the required webhook has been set up.

@@ -2,7 +2,7 @@
 title: 独自のワークフローを作成する
 menu:
   steps-workflows-main:
-    weight: 14
+    weight: 16
 
 ---
 ワークフローエディターを使って、とても簡単に独自のワークフローを作成できます。

@@ -9,7 +9,7 @@ summary: It's very simple to create your own workflow with the Workflow Editor. 
 redirect_from: []
 menu:
   steps-workflows-main:
-    weight: 13
+    weight: 15
 
 ---
 It's very simple to create your own workflow with the Workflow Editor. You can create new workflows based on any of the existing ones, or you can simply create an empty workflow and add the steps yourself.

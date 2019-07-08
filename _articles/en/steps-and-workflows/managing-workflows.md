@@ -8,7 +8,7 @@ summary: 'You can chain multiple workflows, rearrange the order of workflows in 
 redirect_from: []
 menu:
   steps-workflows-main:
-    weight: 15
+    weight: 17
 
 ---
 You can chain multiple workflows, rearrange the order of workflows in a chain, as well as rename workflows at any time in the Bitrise Workflow Editor.

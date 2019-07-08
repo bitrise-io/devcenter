@@ -1,8 +1,9 @@
 ---
 title: Enable/Disable a step (optionally, based on a condition)
 menu:
-  tips-and-tricks-main:
-    weight: 13
+  steps-workflows-main:
+    weight: 10
+    title: Enabling or disabling a Step conditionally
 
 ---
 {% include not_translated_yet.html %}
