@@ -16,7 +16,7 @@ Bitrise is fully integrated with [Github Checks](https://developer.github.com/v3
 
 ![](/img/bitrise-summary-gh-checks.jpg)
 
-{% include message_box.html type="info" title="Get to your app's page with a click" content="If you click on the summary or on View more details on Bitrise Checks link, you are taken back to your app's page on Bitrise. "%} 
+{% include message_box.html type="info" title="Get to your app's page with a single click" content="If you click on the summary or on View more details on Bitrise Checks link, you are taken back to your app's page on Bitrise. "%} 
 
 ## Enabling & installing Github Checks
 
