@@ -6,8 +6,6 @@ summary: ''
 published: false
 
 ---
-Github Checks allows CI providers to have
-
 Bitrise Checks is a Github app which provides an extended version of the classic status checks Bitrise sends back to GitHub. These checks include a Bitrise build summary and a check status. You can view Bitrise Checks if you click the **Details** link of a pull request on GitHub. It unfolds the detailed build summary and build status Bitrise Checks attaches to your pull request on the **Checks** tab of Github.
 
 ![](/img/all-checks-have-passed.png)
