@@ -26,7 +26,7 @@ Using Bitrise Checks is just a few clicks away. Let's do this!
 2. Select the **Settings** tab of your app.
 3. Click the **install our app to your GitHub repository** link in the **ENABLE GITHUB CHECKS** toggle's description.
 
-   ![](/img/disabled-github-checks.jpg)
+   ![](/img/disabled-toggle-githubchekcs.jpg)
 
    This link will take you to GitHub's **Bitrise Checks** installation page.
 4. On the **Install Bitrise Checks** page, select the user or organization you want to add Bitrise Checks to.
@@ -52,7 +52,7 @@ All there's left to do is enabling GitHub Checks on your app's page on [Bitrise]
 3. Go to the **Settings** tab of the app.
 4. Toggle the **ENABLE GITHUB CHECKS** switch to the right.
 
-   ![/img/enable-toggle-github-checks.jpg](https://app.forestry.io/sites/mpxzvqn7ysfysw/body-media//img/enable-toggle-github-checks.jpg)
+![](/img/enabled-toggle-githubchecks.jpg)
 
 And you're done! Now any pull request you open to your app on GitHub will be validated with Bitrise Checks and a build will get automatically started on Bitrise (if the [pull request trigger](/builds/triggering-builds/trigger-pull-request/) is properly set on Bitrise).
 
