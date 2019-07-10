@@ -24,7 +24,7 @@ Using Bitrise Checks is just a few clicks away. Let's do this!
 
 1. Select your organization's app on your [Dashboard](https://app.bitrise.io/dashboard/builds).
 2. Select the **Settings** tab of your app.
-3. Click the **install our app to your GitHub repository** link in the **ENABLE GITHUB CHECKS** toggle's description.
+3. Click the **install our app to your GitHub repository** LINK in the **ENABLE GITHUB CHECKS** toggle's description. Don't toggle the switch just yet, since you first need to install Bitrise Checks. We will get to enabling it [later](/github-checks/#enabling-github-checks).
 
    ![](/img/disabled-toggle-githubchekcs.jpg)
 
