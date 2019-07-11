@@ -63,7 +63,7 @@ In this guide, you will learn how to:
 ### Setting up Google Play API access
 
 1. Link your API project by `Creating a new API project` or `Using an existing API project`.
-2. Set up `API Access Clients` using a service account and grant `Release manager` role to the service account.
+2. Set up `API Access Clients` using a service account and grant `Deployment manager` role to the service account.
 3. **Save the downloaded JSON key of your service account** now because you will need it later.
 
 Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started) guide if you need more information on the process.
@@ -142,7 +142,7 @@ The final configuration looks like this:
 Your workflow is ready for deploying your app automatically to [Google Play Store](https://play.google.com/store). Once the app is tested and generated, you can upload it to Google Play Store.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's deploy your APK!</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's deploy your APK!</div>
+<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your app</button></a>
 </div>
