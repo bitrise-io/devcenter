@@ -32,23 +32,39 @@ There are three distinct steps to adding an app with the Bitrise API.
 2. Setting up an SSH key.
 3. Finishing the app registration.
 
+{% include message_box.html type="important" title="Apps with HTTPS git URLs" content="The procedure and the examples are aimed at adding a private app with an SSH git URL. If you want to add an app with an HTTPS git URL, you can skip adding an SSH key."%} 
+
 Before you start, generate [an SSH keypair](/faq/how-to-generate-ssh-keypair/):
 
     ssh-keygen -t rsa -b 4096 -P '' -f ./bitrise-ssh -m PEM  
+    
+You will need both the private and public key in full to register an SSH key for your Bitrise app. 
 
-Register the app by calling the `register` endpoint and setting all required parameters. You need to set your git provider, the repository URL, the slug of the repository as it appears at the provider, and the slug of the owner of the repository.
+1. Register the app by calling the `register` endpoint and setting all required parameters. 
 
-    curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/register' -d '{"provider":"github","is_public":false,"repo_url":"git@github.com:api_demo/example-repository.git","type":"git","git_repo_slug":"example-repository","git_owner":"api_demo"}'
+	You need to set your git provider, the repository URL, the slug of the repository as it appears at the provider, and the slug of the owner of the repository.
 
-Once done, call the `register-ssh-key` endpoint to set up the SSH keys you created so that Bitrise can clone your repository when running a build. You can also set whether you want to automatically register the public key at your git provider.
+	    curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/register' -d '{"provider":"github","is_public":false,"repo_url":"git@github.com:api_demo/example-repository.git","type":"git","git_repo_slug":"example-repository","git_owner":"api_demo"}'
 
+1. Once done, call the `register-ssh-key` endpoint to set up the SSH keys you created so that Bitrise can clone your repository when running a build. 
+
+	You need to provide both your private and public SSH key. Please note that if you wish to copy the private key manually, you need to escape all the linebreaks with `\n`. 
+
+	You can also set whether you want to automatically register the public key at your git provider: set the `is_register_key_into_provider_service` parameter to either true or false.
+
+    ```
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-ssh-key' -d '{"auth_ssh_private_key":"your-private-ssh-key","auth_ssh_public_key":"your-public-ssh-key","is_register_key_into_provider_service":false}'
+    ```
 
-Finish the app registration process by calling the `finish` endpoint. This endpoint allows you to configure your applications: set the project type, the stack on which the build will run, and the initial configuration settings.
+1. Finish the app registration process by calling the `finish` endpoint. 
+	
+    This endpoint allows you to configure your applications: set the project type, the stack on which the build will run, and the initial configuration settings.
 
-You can also set environment variables, as well as immediately specify an organization that will be the owner of the application.
+	You can also set environment variables, as well as immediately specify an organization that will be the owner of the application. Please note that the `mode` parameter must be set to the value of `manual`.
 
+	```
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/finish' -d '{"project_type":"ios","stack_id":"osx-vs4mac-stable","config":"default-ios-config","mode":"manual","envs":{"env1":"val1","env2":"val2"},"organization_slug":"e1ec3dea540bcf21"}'
+    ```
 
 You're done! Your new app is ready.
 
