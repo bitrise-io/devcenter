@@ -24,10 +24,6 @@ Use our testing Steps, and all your test results will be deployed to the same di
 
 You can run both UI tests and unit tests on Bitrise and with Test Reports , you can view the results of the different test types on the same page.
 
-{% include message_box.html type="important" title="Testing Android apps" content="For Android apps, only unit tests can be viewed on Test Reports. UI tests are currently not available.
-
-With iOS apps, you can view both unit and UI tests."%}
-
 Test Reports can read and display test results that are in either of two formats:
 
 * plist
@@ -120,7 +116,7 @@ Every file can be downloaded from Test Reports: that includes screenshots, video
    If you want to download all files available on the tab, click **Download All Files**.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's view your build's Test Reports</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's view your build's Test Reports</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
