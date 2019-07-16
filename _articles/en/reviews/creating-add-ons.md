@@ -101,6 +101,21 @@ We provide a full testing kit for third party add-ons. It emulates the calls bit
 
 The testing kit is a CLI tool. You can test all the expected functions of the add-on with a single command - or you can test each of them separately.
 
+### Installing the testing kit
+
+Install the testing kit by downloading the binary and then make it executable.
+
+1. Download the latest version of the binary.
+
+       curl -fL https://github.com/bitrise-io/bitrise-addon-test/releases/download/1.0.1/bitrise-addon-test-$(uname -s)-$(uname -m) > /usr/local/bin/bitrise-addon-test
+
+   This example command downloads version 1.0.1. Make sure to check the latest version on the [release page](https://github.com/bitrise-io/bitrise-addon-test/releases) of the add-on test kit.
+2. Make the binary executable.
+
+       chmod +x /usr/local/bin/bitrise-addon-test
+
+### Using the testing kit
+
 To run a comprehensive test, run the following root command in a CLI:
 
     bitrise-addon-test
@@ -121,14 +136,14 @@ For detailed information on all the available commands and flags for `bitrise-ad
 There are three stages to getting a new add-on published:
 
 1. Alpha: the add-on is only available to developers and to those explicitly granted access. Its Step does not appear in the Step library.
-2. Beta: the add-on is listed in the Bitrise Marketplace with a BETA label, and all Bitrise customers can provision it, on a free plan. Support must be provided. 
-3. General availability (GA): the BETA tag is removed, and you can offer multiple free and paid plans to customers. The plan available in previous stages is disabled. 
+2. Beta: the add-on is listed in the Bitrise Marketplace with a BETA label, and all Bitrise customers can provision it, on a free plan. Support must be provided.
+3. General availability (GA): the BETA tag is removed, and you can offer multiple free and paid plans to customers. The plan available in previous stages is disabled.
 
 ### Alpha stage
 
-All add-ons start their lives in alpha. At this stage, they do not appear in the marketplace or in search results, and have no support requirements or feature requirements. Only developers and explicitly invited users have access to the add-on, using the free Test plan. No other subscription plan is allowed in Alpha stage. 
+All add-ons start their lives in alpha. At this stage, they do not appear in the marketplace or in search results, and have no support requirements or feature requirements. Only developers and explicitly invited users have access to the add-on, using the free Test plan. No other subscription plan is allowed in Alpha stage.
 
-All add-ons must have a Step that defines the integration point with the third party: this Step does not show up in the Step library. If it is a modified version of an existing Step, only the previous, unmodified version will be available in the Step library during the Alpha stage. 
+All add-ons must have a Step that defines the integration point with the third party: this Step does not show up in the Step library. If it is a modified version of an existing Step, only the previous, unmodified version will be available in the Step library during the Alpha stage.
 
 To proceed to the beta stage, the add-on developer has to:
 
@@ -137,13 +152,13 @@ To proceed to the beta stage, the add-on developer has to:
 * Provide a name and product icons for the add-on.
 * Prepare screenshots for the add-on’s marketplace listing.
 * Describe the add-on’s benefits and features.
-* Submit a state progression form. 
+* Submit a state progression form.
 
 ### Beta stage
 
-Beta add-ons are visible in the marketplace but still only have a single, free plan called Test. Being publicly available means developers can gather larger amounts of data and feedback from users. 
+Beta add-ons are visible in the marketplace but still only have a single, free plan called Test. Being publicly available means developers can gather larger amounts of data and feedback from users.
 
-In the beta stage, timely support must be provided for add-ons. Partners are expected to acknowledge and respond to all Bitrise customer tickets related to their add-on within 48 hours. Parters are responsible to handle customer tickets via their own services. 
+In the beta stage, timely support must be provided for add-ons. Partners are expected to acknowledge and respond to all Bitrise customer tickets related to their add-on within 48 hours. Parters are responsible to handle customer tickets via their own services.
 
 To proceed from the beta stage to GA, the developers has to:
 
@@ -153,19 +168,19 @@ To proceed from the beta stage to GA, the developers has to:
 
 ### General availability
 
-When the add-on reaches GA, the BETA tag is removed and partners can offer multiple free and paid plans to Bitrise customers. The old Test plan is disabled and no new instances of it can be provisioned. 
+When the add-on reaches GA, the BETA tag is removed and partners can offer multiple free and paid plans to Bitrise customers. The old Test plan is disabled and no new instances of it can be provisioned.
 
-## Documenting add-ons 
+## Documenting add-ons
 
 Add-ons must be properly documented before proceeding to the beta stage. This means two main pieces of content:
 
 * A description of the add-on's benefits.
-* A description of the add-on's features. 
+* A description of the add-on's features.
 
 ### Benefits description
 
-The benefits appear on the add-on's marketplace page. It should describe, in moderate details, what your add-on provides to Bitrise customers, and why it is beneficial for them to use it. 
+The benefits appear on the add-on's marketplace page. It should describe, in moderate details, what your add-on provides to Bitrise customers, and why it is beneficial for them to use it.
 
 ### Features description
 
-The features description should list every single feature of the add-on that might differ across different subscription plans. The list will be shown next to each plan defined for the add-on. 
+The features description should list every single feature of the add-on that might differ across different subscription plans. The list will be shown next to each plan defined for the add-on.
