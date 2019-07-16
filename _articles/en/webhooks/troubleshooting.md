@@ -24,11 +24,11 @@ If your webhook would still be a `bitrise.io/hooks` URL, please replace it with 
 
 What happens with webhooks related to un-mapped branches?
 
-You can't limit webhooks by branch in most of the source code hosting services. [Bitrise](https://www.bitrise.io) will still receive a webhook call for every code push of other branches, but it won't start a build unless it finds a matching filter in the `trigger_map`, which specifies a `workflow` to be selected for the build. This is also true if you use the **Build Trigger API** directly.
+You can't limit webhooks by branch in most of the source code hosting services. [Bitrise](https://www.bitrise.io) will still receive a webhook call for every code push of other branches, but it won't start a build unless it finds a matching filter in the `trigger_map`, which specifies a `workflow` to be selected for the build. This is also true if you use the Build Trigger API directly.
 
 This means that if you think a given event should have started a build but it did not:
 
-1. You should check your Bitrise `Activity` page to find out why it failed to trigger a build. You can see all the ignored calls on your [Activity page on bitrise.io](http://www.bitrise.io/activity).
+1. You should check your Bitrise **Activity** page to find out why it failed to trigger a build. You can see all the ignored calls on your [Activity page on bitrise.io](http://www.bitrise.io/activity).
 
    An ignored build call entry in the Activity list looks like this:
 
@@ -48,19 +48,19 @@ Note that these detailed responses are only generated if you use the new [hooks.
 
 You can also test which workflow will be selected for a trigger using our [open source, Bitrise CLI](https://www.bitrise.io/cli).
 
-To simulate a **code push**, you can run:
+To simulate a code push, you can run:
 
     bitrise trigger-check --push-branch master
 
-To simulate a **Pull Request**, you can run:
+To simulate a pull request, you can run:
 
     bitrise trigger-check --pr-source-branch=feature/a --pr-target-branch=master
 
-To simulate a **tag push**, you can run:
+To simulate a tag push, you can run:
 
     bitrise trigger-check --tag 1.0.0
 
-For **more information and options,** run:
+For more information and options, run:
 
     bitrise trigger-check --help
 
