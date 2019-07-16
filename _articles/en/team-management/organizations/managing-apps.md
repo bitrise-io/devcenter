@@ -124,7 +124,7 @@ You can add contributors to any application if you have **Admin** or **Owner** r
 
 This means that if you wish to add an Organization member to an app of the Organization, all you have to do is add the username/email address of the member under **Add contributors to this app**  on the **Team** page of the app.
 
-Adding an outside contributor requires enabling the **Allow Outside Contributors** switch on the Organization's **People** tab.
+{% include message_box.html type="important" title="Enabling the Allow Outside Contributor switch" content="Adding an outside contributor requires enabling the **Allow Outside Contributors** switch on the Organization's **People** tab which only the Organization OWNER can do."%} 
 
 {% include message_box.html type="warning" title="Outside contributors and app transfer" content="
 
