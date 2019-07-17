@@ -46,7 +46,7 @@ Every add-on has to include Bitrise's navigation header on their site when loggi
 
 The addon service will generate credentials with the below method:
 
-```Go
+```Golang
 timestamp := time.Now().Unix()
 s := sha1.New()
 s.Write([]byte(fmt.Sprintf("%s:%s:%d", appSlug, addonConfig.SSOSecret, timestamp)))
@@ -120,9 +120,9 @@ If an app's subscription plan is changed, use the PUT method with the app-slug t
         "plan": "developer"
     }
 
-## Deleting an app's provision
+## Deprovisioning an app 
 
-Deleting an app's provisioned state means that calls from Bitrise builds to the add-on server will be rejected.
+Deprovisioning - deleting an app's provisioned state - means that calls from Bitrise builds to the add-on server will be rejected.
 
 **Method**: `DELETE`
 
