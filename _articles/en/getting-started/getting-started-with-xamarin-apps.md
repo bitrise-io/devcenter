@@ -6,17 +6,17 @@ menu:
     weight: 30
 
 ---
-[Xamarin](/tutorials/xamarin/index/) provides a developer with tools that can help them building cross-platform mobile applications. Bitrise supports Xamarin apps, of course: this guide aims to walk you through the procedure of:
+[Xamarin](/tutorials/xamarin/index/) provides a developer with tools that can help them building cross-platform mobile applications. [Bitrise](https://app.bitrise.io/users/sign_in) supports Xamarin apps, of course: this guide aims to walk you through the procedure of:
 
 * Adding a Xamarin app to Bitrise
 * Testing the app
 * Deploying the app
 
-You can do the entire procedure in a single Workflow but we recommend using at least two: one to test your app and one to deploy it. There is no need to have separate Workflows for the different project types, though: you can build both an iOS and an Android version of a Xamarin app within a single Workflow.
+You can do the entire procedure in a single Workflow but we recommend using at least two: one to test your app and one to deploy it. There is no need to have separate Workflows for the different project types, though: you can build both; an iOS and an Android version of a Xamarin app within a single Workflow.
 
 ## Before you start
 
-Before adding a Xamarin app on Bitrise, you need to prepare your Xamarin solution file. Bitrise detects the solution file and all the available [solution configurations](https://docs.microsoft.com/en-us/visualstudio/ide/understanding-build-configurations?view=vs-2017) present in it.
+Before [adding a Xamarin app on Bitrise](https://app.bitrise.io/apps/add), you need to prepare your Xamarin solution file. Bitrise detects the solution file and all the available [solution configurations](https://docs.microsoft.com/en-us/visualstudio/ide/understanding-build-configurations?view=vs-2017) present in it.
 
 A Xamarin solution file can contain multiple projects. Your solution configuration determines which projects (solution items) should be built and what project configuration type (for example, debug or release) the build should use.
 
@@ -26,10 +26,10 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
 
 ## Adding a Xamarin app
 
-{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
+{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](/getting-started/index#signing-up-to-bitrise) on how to connect your [Bitrise account](https://app.bitrise.io/me/profile#/overview) to your account found on a Git service provider. "%}
 
  1. Click the **+** sign on the top menu bar and select **Add app**.
- 2. On the **Create new App** page, choose the account you wish to add the app to.
+ 2. On the [**Create new App**](https://app.bitrise.io/apps/add) page, choose the account you wish to add the app to.
  3. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click **Next**.
  4. Select the Git hosting service that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/#connecting-a-repository).
  5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
@@ -44,12 +44,12 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
 
 ## Installing dependencies
 
-Installing your dependencies with Xamarin apps is taken care of by a dedicated Step: **NuGet restore**. This Step is part of every automatically created [Workflow](/steps-and-workflows/getting-started-workflows/) for Xamarin apps and it has one required input: the path to the Xamarin solution file which is stored as an Env Var when you add the app.
+Installing your dependencies with Xamarin apps is taken care of by a dedicated Step: **NuGet restore**. This Step is part of every automatically created [Workflow](/steps-and-workflows/getting-started-workflows/) for Xamarin apps and it has one required input: the path to the Xamarin solution file which is stored as an Env Var when you [add the app](https://app.bitrise.io/apps/add).
 
 1. Enter the Workflow Editor of your app, and click the **Workflows** tab.
 2. Make sure you have the **NuGet restore** Step in your Workflow.
 
-   The Step's single required input is the path to the Xamarin solution file. By default, the input is an [Env Var](/getting-started/getting-started-steps/#environment-variables-as-step-inputs), stored when adding the app to Bitrise. If you want to use a different solution file, click on the **Env Vars** tab in the Workflow Editor to change the value of the Env Var.
+   The Step's single required input is the path to the Xamarin solution file. By default, the input is an [Env Var](/getting-started/getting-started-steps/#environment-variables-as-step-inputs), stored when [adding the app](https://app.bitrise.io/apps/addhttps://app.bitrise.io/apps/add) to Bitrise. If you want to use a different solution file, click on the **Env Vars** tab in the Workflow Editor to change the value of the Env Var.
 
 ## Testing Xamarin apps
 
@@ -171,12 +171,12 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
    Learn more about [how to access your JSON key file](/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
 7. Create a Secret Env Var to reference the Service Account's JSON key file.
 8. Click the **Google Play Deploy** Step, and add the Service Account's JSON key file path and the package name in the relevant input field.
-9. Start a build!
+9. [Start a build!]()
 
 If the build is successful, congratulations - you've just deployed your Xamarin app!
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="Let's add a Xamarin app"><button class="button">Go to Bitrise now</button></a>
 </div>
