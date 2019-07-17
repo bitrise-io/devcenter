@@ -46,7 +46,7 @@ Every add-on has to include Bitrise's navigation header on their site when loggi
 
 The addon service will generate credentials with the below method:
 
-```
+```Go
 timestamp := time.Now().Unix()
 s := sha1.New()
 s.Write([]byte(fmt.Sprintf("%s:%s:%d", appSlug, addonConfig.SSOSecret, timestamp)))
