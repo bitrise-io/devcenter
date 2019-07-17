@@ -27,7 +27,6 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-menus
   - jekyll-redirect-from
   - localization
@@ -55,7 +54,7 @@ collections:
     permalink: /:path/
     localized: true
 
-exclude: 
+exclude:
   - 'plugins'
 
 defaults:

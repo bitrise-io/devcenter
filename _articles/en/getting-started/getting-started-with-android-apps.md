@@ -18,15 +18,15 @@ menu:
     weight: 24
 
 ---
-In this guide, we'll walk you through how to add an Android app to Bitrise, what the default workflows can do, and finally how to test and deploy your app to [bitrise.io](https://www.bitrise.io/) and to the
+In this guide, we'll walk you through how to add an Android app to Bitrise, what the default workflows can do, and finally how to test and deploy your app to [bitrise.io](https://www.bitrise.io/) and to Google Play Store.
 
 ## Adding an Android app to Bitrise
 
-{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
+{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to [connect your Bitrise account](https://app.bitrise.io/me/profile#/overview) to your account found on a Git service provider. "%}
 
 1. Log into [bitrise.io](https://www.bitrise.io/).
-2. On your Dashboard, click **+ Add new app**.
-3. On **Create new App** page, choose the account you wish to add the app to.
+2. On your [Dashboard](https://app.bitrise.io/dashboard/builds), click **+,** and then **Add new app**.
+3. On [**Create new App**](https://app.bitrise.io/apps/add) page, choose the account you wish to add the app to.
 4. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click **Next**.
 5. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
 6. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
@@ -36,9 +36,9 @@ In this guide, we'll walk you through how to add an Android app to Bitrise, what
    * Select a variant for **building** (you can **Select All Variants** which will generate all variants in **APPS & ARTIFACTS**) and select a variant for **testing** too.
 9. Register a [webhook](/webhooks/index/) when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary Workflow - click the message and it will take you to the build page. The first build does not generate an APK yet, however, you can already check out the project's logs on the Build's page.
 
-As you can see in the primary workflow, there is no **Android Build** step that would build your project and our **Android Sign** Step is missing as well, which means this workflow is only a jumping off-point for you to test your project on code level.
+As you can see in the primary workflow, there is no **Android Build** Step that would build your project and our **Android Sign** Step is missing as well, which means this workflow is only a jumping off-point for you to test your project on code level.
 
-{% include message_box.html type="important" title="Order of the steps matter!" content="
+{% include message_box.html type="important" title="Order of the Steps matter!" content="
 
 * To cache Gradle dependencies, keep the **Bitrise.io Cache:Pull** Step as the first and the **Bitrise.io Cache:Push** Step as the very last step in your Workflow!
 * Right after our **Do anything with Script** Step, the **Install missing Android SDK components** will take care of installing the missing Android SDK components that your project might be lacking.
@@ -52,9 +52,9 @@ Luckily, our **Android Build** Step, which is by default part of your deploy Wor
 
 ## Testing your project
 
-As you can see in the above Android Workflows, the **Android Lint** and **Android Unit Test** Steps are by default included in your Workflow.
+As you can see in the above Android Workflow, the **Android Lint** and **Android Unit Test** Steps are by default included in your Workflow.
 
-For UI testing, add our **\[BETA\] Virtual Device Testing for Android** step to run Android UI tests on virtual devices. Available test types - make sure you select one!
+For UI testing, add our **\[BETA\] Virtual Device Testing for Android** step to run[ Android UI tests on virtual devices](/testing/device-testing-for-android/). These are the available test types:
 
 * instrumentation
 * robo
@@ -62,7 +62,7 @@ For UI testing, add our **\[BETA\] Virtual Device Testing for Android** step to 
 
 If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
 
-{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the **+** sign on the left side of your Workflow and select another test Step from our collection."%}
+{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the **+** sign on the left side of your Workflow and select another test Step from our [Step Library](https://app.bitrise.io/integrations/steps)."%}
 
 ## Signing your Android project
 
@@ -83,9 +83,9 @@ You can also check out what other code signing options you have at Bitrise in ou
 
 ### Deploying to Bitrise
 
-This step uploads all the artifacts related to your build into the [ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
+The **Deploy to bitrise.io** Step uploads all the artifacts related to your build into the [ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
 
-You can share the generated apk with your team members using the build's URL. You can also notify user groups or individual users that your APK has been built.
+You can share the generated APK with your team members using the build's URL. You can also notify user groups or individual users that your APK has been built.
 
 1. Go to the **Deploy to bitrise.io** Step.
 2. In the **Notify: User Roles**, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret Environment Variables](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated APK in the **APPS & ARTIFACTS** tab.
@@ -105,10 +105,10 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
    * Store presence: Edit store listing, pricing & distribution.
 5. As an optional step, you can add translations to your Store Listing. To allow the **Google Play Deploy** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) and add translations to your Store Listing section.
 
-Now let's head back to Bitrise and finish off the deploy configuration!
+Now let's head back to [Bitrise](https://app.bitrise.io/apps/add) and finish off the deploy configuration!
 
-1. In your Bitrise Dashboard, go to **Code Signing** and upload the service account JSON key into the **GENERIC FILE STORAGE**.
-2. Copy the env key which stores your uploaded file’s url.
+1. In your Bitrise [Dashboard](https://app.bitrise.io/apps/add), go to **Code Signing** and upload the service account JSON key into the **GENERIC FILE STORAGE**.
+2. Copy the env key which stores your uploaded file’s URL.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 3. Go back to the **Google Play Deploy** Step in your Workflow Editor.
@@ -122,7 +122,7 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 That's all! Start or schedule a build and share the URL with external testers or distribute your app on an app store of your choice!
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's add an Android app</div>
+<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
 </div>
