@@ -7,15 +7,15 @@ menu:
     weight: 32
 
 ---
-You can use Cordova and Ionic frameworks to develop cross-platform apps. Bitrise can help you with its automated testing, code signing and deploying procedures so that you can ship your iOS and/or Android app/s to the respective marketplace in no time! If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously. Now let us guide you through the process!
+You can use Cordova and Ionic frameworks to develop cross-platform apps. Bitrise can help you with its automated testing, code signing and deployment procedures so that you can ship your iOS and/or Android app/s to the respective marketplace in no time! If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously. Now let us guide you through the process!
 
-{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Before you dive in, make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
+{% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Before you dive in, make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your [Bitrise account](https://app.bitrise.io/me/profile#/overview) to your account found on a Git service provider. "%}
 
 ## Adding an Ionic/Cordova app to Bitrise
 
  1. Log into [bitrise.io](https://www.bitrise.io/).
- 2. On your Dashboard, click **+ Add new app**.
- 3. On **Create new App** page, choose the account you wish to add the app to.
+ 2. On your [Dashboard](https://app.bitrise.io/dashboard), click **+**, then **Add app**.
+ 3. On [**Create new App**](https://app.bitrise.io/apps/add) page, choose the account you wish to add the app to.
  4. Set the privacy of the app to either private or [public](/getting-started/adding-a-new-app/public-apps) and click **Next**.
  5. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
  6. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
@@ -48,7 +48,7 @@ As an example, have a look at a Cordova **primary workflow** containing **Karma 
         - deploy-to-bitrise-io@1.3.15: {}
     {% endraw %}
 
-{% include message_box.html type="info" title="How about using other testing frameworks?" content=" It's worth mentioning that our scanner knows about Jasmin and Karma Jasmine testing solutions. If your project uses another test framework/runner, our  scanner will not be able to generate a test workflow (which would be the primary Workflow), but it will generate a build workflow instead. Since this workflow is the only one generated, it will be called primary Workflow." %}
+{% include message_box.html type="info" title="How about using other testing frameworks?" content=" It's worth mentioning that our scanner knows about Jasmin and Karma Jasmine testing solutions. If your project uses another test framework/runner, our scanner will not be able to generate a test workflow (which would be the primary **Workflow**), but it will generate a build workflow instead. Since this workflow is the only one generated, it will be called primary **Workflow**." %}
 
 ## Dependencies
 
@@ -62,17 +62,17 @@ Leave the input field of **The 'yarn' command to run** empty or set it to **inst
 
 ## Testing Ionic/Cordova apps
 
-Perform unit testing by our **Karma Jasmine Test Runner** or **Jasmine Test Runner** Steps. If your Cordova/Ionic project has Karma Jasmine dependency in its **package.json** file, our Scanner will detect it and automatically insert the respective testing step into your workflow. If this dependency is missing from your project, you can manually insert one of steps to your workflow using our Workflow Editor - just make sure you place it right after **Run nmp command** or **Run yarn command** package manager Step.
+Perform unit testing by our **Karma Jasmine Test Runner** or **Jasmine Test Runner** Steps. If your Cordova/Ionic project has Karma Jasmine dependency in its **package.json** file, our scanner will detect it and automatically insert the respective testing step into your workflow. If this dependency is missing from your project, you can manually insert one of steps to your workflow using our Workflow Editor - just make sure you place it right after **Run nmp command** or **Run yarn command** package manager Step.
 
 ## Code signing
 
-If you want to build an app for iOS or Android you need to upload the platform-specific files into the **Code Signing** tab of the Workflow Editor. You can also generate builds for both platforms which requires uploading all code signing files of the platforms, luckily it's all in one page.
+If you want to build an app for iOS or Android, you need to upload the platform-specific files into the **Code Signing** tab of the Workflow Editor. You can also generate builds for both platforms which requires uploading all code signing files of the platforms, luckily it's all in one page.
 
 ### Signing your iOS project
 
 To sign your iOS project, you have to upload code signing certificates and provisioning profiles depending on the distribution and the code signing type you have set in the **Cordova Archive** and **Ionic Archive** Steps. Let's dive right in!
 
-1. Generate the native Xcode project locally from your Ionic or Cordova project by calling **cordova platform add ios** or **ionic cordova platform add ios**.
+1. Generate the native Xcode project locally from your Ionic or Cordova project by calling `cordova platform add ios` or `ionic cordova platform add ios`.
 2. Use our [codesigndoc](https://github.com/bitrise-io/codesigndoc) tool to [collect the code signing files](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
 3. Upload the files to [bitrise.io](https://www.bitrise.io/).
 
@@ -80,8 +80,8 @@ To sign your iOS project, you have to upload code signing certificates and provi
 
    ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
 4. Make sure you have the **Certificate and profile installer** Step in your Workflow as this Step can download and install the certificates on the virtual machine.
-5. Add the **Generate cordova build configuration** Step to your Workflow. (This step does all the configuration needed for the next step, which is **Cordova Archive** or **Ionic Archive**.) It must come after the **Certificate and profile installer** Step.
-6. Fill in the required input for the step. Please note that both the **Code Signing Identity** and the **Provisioning Profile** are required inputs for iOS apps even though they are not marked as such.
+5. Add the **Generate cordova build configuration** Step to your Workflow. (This Step does all the configuration needed for the next step, which is **Cordova Archive** or **Ionic Archive**.) It must come after the **Certificate and profile installer** Step.
+6. Fill in the required input for the Step. Please note that both the **Code Signing Identity** and the **Provisioning Profile** are required inputs for iOS apps even though they are not marked as such.
    * **Build configuration**: you can set it to either `debug` or `release`.
    * **Code Sign Identity**: enter a Developer or a Distribution identity.
    * **Provisioning Profile**: enter the appropriate Provisioning Profile.
@@ -92,7 +92,7 @@ To sign your iOS project, you have to upload code signing certificates and provi
 ### Signing your Android project
 
 1. For a signed Android project, go to the **Code Signing** tab of your Workflow Editor.
-2. Click or drag-and-drop your keystore file on the `Upload file` field of the `ANDROID KEYSTORE FILE` section.
+2. Click or drag-and-drop your keystore file on the **Upload file** field of the **ANDROID KEYSTORE FILE** section.
 
    ![](/img/keystore-file.png)
 3. Fill out the displayed three input fields:
@@ -101,13 +101,13 @@ To sign your iOS project, you have to upload code signing certificates and provi
    * **private key password**
 
      ![](/img/keystore.png)
-4. Click **Save metadata**. Bitrise uploads your keystore file and assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The step will generate the following env vars which will be used at a later step:
+4. Click **Save metadata**. Bitrise uploads your keystore file and assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The Step will generate the following Env Vars which will be used at a later step:
    * `$BITRISEIO_ANDROID_KEYSTORE_URL`
    * `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
    * `$BITRISEIO_ANDROID_KEYSTORE_ALIAS`
    * `$BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD`
 5. Add the **Generate cordova build configuration** Step to your Workflow if it's not already in it.
-6. The required inputs fields for Android (**Keystore**, **Keystore password**, **Alias** and **Password**) are already filled out for you since you have uploaded your keystore file to the **Code Signing** tab and added the metadata at Step 2 and 3. Based on this information, env vars have been generated which are now conveniently used in **Generate cordova build configuration** Step.
+6. The required inputs fields for Android (**Keystore**, **Keystore password**, **Alias** and **Password**) are already filled out for you since you have uploaded your keystore file to the **Code Signing** tab and added the metadata at Step 2 and 3. Based on this information, Env Vars have been generated which are now conveniently used in **Generate cordova build configuration** Step.
 
 ## Deploying Ionic/Cordova app
 
@@ -115,16 +115,16 @@ There are a few places to deploy your app but the configuration is slightly diff
 
 Before deploying your app to any marketplace you need to generate a codesigned .ipa and/or APK so make sure you perform these steps:
 
-1. Add the **Cordova archive** or the **Ionic archive** step to your workflow. (Note that  if you're building for both iOS and Android in one project, and either of your apps fails, the whole **Cordova Archive/Ionic Archive** Step will fail.)
+1. Add the **Cordova archive** or the **Ionic archive** step to your workflow. (Note that if you're building for both iOS and Android in one project, and either of your apps fails, the whole **Cordova Archive/Ionic Archive** Step will fail.)
 2. Fill in the required inputs.
    * The **Platform** input needs to be set to **device**.
    * The **Build command configuration** input must match the **Build configuration** input of the **Generate cordova build configuration** Step.
 
-   The archive step must come after the **Generate cordova build configuration** step in the workflow.
+   The archive Step must come after the **Generate cordova build configuration** Step in the workflow.
 
 ![](/img/cordova-archive-1.png)
 
-Now that we're ready for deployment, let's see how to publish your iOS and Android projects by adding deployment steps to your workflow!
+Now that we're ready for deployment, let's see how to publish your iOS and Android projects by adding deployment Steps to your workflow!
 
 ### Deploying to App Store Connect
 
@@ -170,10 +170,10 @@ You can share the generated .ipa or APK with your team members using the build�
 1. Go to the **Deploy to bitrise.io - Apps, Logs, Artifacts** Step.
 2. In the **Notify: User Roles**, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated .ipa or APK in the **APPS & ARTIFACTS** tab.
 
-Start a build! If your app is properly configured, you can find it deployed to the marketplace of your choice!
+[Start a build](https://devcenter.bitrise.io/builds/Starting-builds-manually/)! If your app is properly configured, you can find it deployed to the marketplace of your choice!
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's add an Ionic/Cordova app</div>
+<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
 </div>
