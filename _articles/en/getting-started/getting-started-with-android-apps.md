@@ -36,7 +36,7 @@ In this guide, we'll walk you through how to add an Android app to Bitrise, what
    * Select a variant for **building** (you can **Select All Variants** which will generate all variants in **APPS & ARTIFACTS**) and select a variant for **testing** too.
 9. Register a [webhook](/webhooks/index/) when prompted so that Bitrise can start a build automatically when code is pushed to your repository. This also kicks off your first build on the primary Workflow - click the message and it will take you to the build page. The first build does not generate an APK yet, however, you can already check out the project's logs on the Build's page.
 
-As you can see in the primary workflow, there is no **Android Build** step that would build your project and our **Android Sign** Step is missing as well, which means this workflow is only a jumping off-point for you to test your project on code level.
+As you can see in the primary workflow, there is no **Android Build** Step that would build your project and our **Android Sign** Step is missing as well, which means this workflow is only a jumping off-point for you to test your project on code level.
 
 {% include message_box.html type="important" title="Order of the Steps matter!" content="
 
@@ -54,7 +54,7 @@ Luckily, our **Android Build** Step, which is by default part of your deploy Wor
 
 As you can see in the above Android Workflow, the **Android Lint** and **Android Unit Test** Steps are by default included in your Workflow.
 
-For UI testing, add our **\[BETA\] Virtual Device Testing for Android** step to run[ Android UI tests on virtual devices](/testing/device-testing-for-android/). Available test types - make sure you select one!
+For UI testing, add our **\[BETA\] Virtual Device Testing for Android** step to run[ Android UI tests on virtual devices](/testing/device-testing-for-android/). These are the available test types:
 
 * instrumentation
 * robo
