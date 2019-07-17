@@ -84,9 +84,5 @@ You can check if the notifications were successfully sent or not, and you can ch
 5. You can redeliver any delivery. Open the delivery you need and click **Redeliver**.
 
    ![](/img/payload-redelivery.png)
-   
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's add an outgoing webhook!</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard/button></a>
-</div>
+
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's add an outgoing webhook!</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard</button></a> </div>
