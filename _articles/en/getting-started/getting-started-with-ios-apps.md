@@ -14,14 +14,14 @@ menu:
     weight: 22
 
 ---
-Developing for iOS is not always easy - our aim is to make it as simple as possible for you! In this guide, we'll walk you through how to add an iOS app to Bitrise, how to run Xcode tests, manage your code signing files and deploy the app to [bitrise.io](https://www.bitrise.io) and to the App Store.
+Developing for iOS is not always easy - our aim is to make it as simple as possible for you! In this guide, we'll walk you through how to add an iOS app to [Bitrise](https://app.bitrise.io/users/sign_in), how to run Xcode tests, manage your code signing files and deploy the app to [bitrise.io](https://www.bitrise.io) and to the App Store.
 
 ## Adding an iOS app
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git provider. "%}
 
 1. Click the **+** sign on the top menu bar and select **Add app**.
-2. On the **Create new App** page, choose the account you wish to add the app to.
+2. On the [**Create new App**](https://app.bitrise.io/apps/add) page, choose the account you wish to add the app to.
 3. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click **Next**.
 4. Select the Git provider that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository).
 5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
@@ -40,7 +40,7 @@ Developing for iOS is not always easy - our aim is to make it as simple as possi
 
 ## Running Xcode tests
 
-Once you created your app, the first build will run based on the automatically created **primary** workflow. You can check it out in the app's [Workflow Editor](/getting-started/getting-started-workflows): click the app's name on your Dashboard then click the **Workflow** tab.
+Once you created your app, the first build will run based on the automatically created **primary** workflow. You can check it out in the app's [Workflow Editor](/getting-started/getting-started-workflows): click the app's name on your [Dashboard](https://app.bitrise.io/dashboard/builds) then click the **Workflow** tab.
 
 {% include message_box.html type="important" title="Test targets" content="If your app does not have test targets defined, the primary workflow will be the only automatically created workflow and it will NOT include the **Xcode Test for iOS** Step. "%}
 
@@ -74,8 +74,8 @@ You will need:
 1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa locally.
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
 
-   The tool can also upload your code signing files to Bitrise - we recommend doing so! Otherwise, upload them manually: enter the Workflow Editor and select the **Code signing** tab, then upload the files in their respective fields.
-3. Go to your app's Workflow Editor, and select the **deploy** workflow in the **WORKFLOW** dropdown menu in the top left corner.
+   The tool can also upload your code signing files to Bitrise - we recommend doing so! Otherwise, upload them manually: enter the [Workflow Editor](https://app.bitrise.io/dashboard/builds) and select the **Code signing** tab, then upload the files in their respective fields.
+3. Go to your app's [Workflow Editor](https://app.bitrise.io/dashboard/builds), and select the **deploy** workflow in the **WORKFLOW** dropdown menu in the top left corner.
 4. Check that you have the **Certificate and profile installer** Step in your workflow. It must be before the **Xcode Archive & Export for iOS** Step (you can have other Steps between the two, like **Xcode Test for iOS**).
 5. Check the **Select method for export** input of the **Xcode Archive & Export for iOS** Step. By default, it should be the `$BITRISE_EXPORT_METHOD` Environment Variable (Env Var). This Env Var stores the export method you selected when creating the app. If you selected **development** back then, you don't need to change the input. Otherwise, manually set it to **development**.
 
@@ -97,7 +97,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
 1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
-3. Go to the app's Workflow Editor and create a [new workflow](/getting-started/getting-started-workflows/): click the **+ Workflow** button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select **deploy**. This way the new workflow will be a copy of the basic **deploy** workflow.
+3. Go to the app's [Workflow Editor](https://app.bitrise.io/dashboard/builds) and create a [new workflow](/getting-started/getting-started-workflows/): click the **+ Workflow** button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select **deploy**. This way the new workflow will be a copy of the basic **deploy** workflow.
 4. Set the **Select method for export** input of the **Xcode Archive & Export for iOS** Step to **app-store**.
 
    ![](/img/app-store-export-method-1.png)
@@ -112,10 +112,10 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
    Don't worry, the password will not be visible in the logs or exposed - [that's why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
 
-And that's it! Start a build - if everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
+And that's it! [Start a build](/builds/Starting-builds-manually/) - if everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
 </div>
