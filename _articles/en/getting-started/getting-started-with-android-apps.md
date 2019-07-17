@@ -38,7 +38,7 @@ In this guide, we'll walk you through how to add an Android app to Bitrise, what
 
 As you can see in the primary workflow, there is no **Android Build** step that would build your project and our **Android Sign** Step is missing as well, which means this workflow is only a jumping off-point for you to test your project on code level.
 
-{% include message_box.html type="important" title="Order of the steps matter!" content="
+{% include message_box.html type="important" title="Order of the Steps matter!" content="
 
 * To cache Gradle dependencies, keep the **Bitrise.io Cache:Pull** Step as the first and the **Bitrise.io Cache:Push** Step as the very last step in your Workflow!
 * Right after our **Do anything with Script** Step, the **Install missing Android SDK components** will take care of installing the missing Android SDK components that your project might be lacking.
