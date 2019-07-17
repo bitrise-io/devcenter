@@ -123,6 +123,6 @@ That's all! Start or schedule a build and share the URL with external testers or
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Now you know everything</div>
+<div class="deploy-text">Let's add an Android app</div>
 <a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
 </div>
