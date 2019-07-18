@@ -177,7 +177,6 @@ pages:
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/jp/testing/test-reports.md
 - _articles/jp/builds/remote-access.md
-- _articles/en/api/Managing build artifacts.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/シミュレータ用iosアプリのデプロイ.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/外部テスト用アプリのデプロイ-deploying-an-ios-app-for-external-testing.md
