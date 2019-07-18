@@ -23,20 +23,18 @@ In this guide, we'll walk you through how to add a MacOS app to Bitrise, how to 
    Note that the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
 8. Select the export method. You can modify this later - for now, select **development**.
 
-	![](/img/project-build-config-macos.png)
+   ![](/img/project-build-config-macos.png)
 
-	Once you clicked it, you should see your:
-
-	* Project or Workspace path
-	* Scheme name
-	* Export method
-	* MacOS stack
-
+   Once you clicked it, you should see your:
+   * Project or Workspace path
+   * Scheme name
+   * Export method
+   * MacOS stack
 9. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
 
 ## Running Xcode tests
 
-Once you created your app, the first build will run based on the automatically created **primary** workflow. You can check it out in the app's [Workflow Editor](/steps-and-workflows/getting-started-workflows/): click the app's name on your Dashboard then click the **Workflow** tab.
+Once you created your app, the first build will run based on the automatically created **primary** workflow. You can check it out in the app's [Workflow Editor](/steps-and-workflows/getting-started-workflows/): click the app's name on your [Dashboard](https://app.bitrise.io/apps/add) then click the **Workflow** tab.
 
 {% include message_box.html type="important" title="Test targets" content="If your app does not have test targets defined, the primary workflow will be the only automatically created workflow and it will NOT include the **Xcode Test for Mac** Step. "%}
 
@@ -97,7 +95,7 @@ To deploy to the App Store, you will need more code signing files:
 
 1. On your local machine, set up App Store code signing for your project in Xcode, and export an .app or .pkg file. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
-3. Go to the app's Workflow Editor and create a [new workflow](/getting-started/getting-started-workflows/): click the **+ Workflow** button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select **deploy**. This way the new workflow will be a copy of the basic **deploy** workflow.
+3. Go to the [app's](https://app.bitrise.io/apps/add) Workflow Editor and create a [new workflow](/getting-started/getting-started-workflows/): click the **+ Workflow** button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select **deploy**. This way the new workflow will be a copy of the basic **deploy** workflow.
 4. Set the **Export Method** input of the **Xcode Archive for Mac** Step to **app-store**.
 
    You can export multiple binaries with different export methods: use the **Export macOS Xcode archive** Step in your workflow.
@@ -114,6 +112,6 @@ And that's it! Start a build - if everything went well, you should see your app 
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Now you know everything</div>
-<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+<div class="deploy-text">Let's add a MacOS app</div>
+<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
 </div>
