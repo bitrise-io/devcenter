@@ -1,5 +1,6 @@
 ---
-
+sitemap:
+  exclude: 'yes'
 ---
 ### Front matter and menus
 
@@ -42,7 +43,7 @@ Creating a new menu item in Forestry is slightly complicated. Unfortunately, we 
 
        title: Dummy article
        menu:
-         new-menu-item: 
+         new-menu-item:
        	weight: 1
 5. Go to Forestry and you should see your new menu item in the Menus section.
 
