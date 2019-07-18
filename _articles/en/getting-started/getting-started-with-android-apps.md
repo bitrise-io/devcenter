@@ -62,7 +62,7 @@ For UI testing, add our **\[BETA\] Virtual Device Testing for Android** step to 
 
 If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
 
-{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the **+** sign on the left side of your Workflow and select another test Step from our [Step Library](https://app.bitrise.io/integrations/steps)."%}
+{% include message_box.html type="info" title="More testing steps to choose from" content=" Click the **+** sign on the left side of your Workflow and select another test Step from our Step Library."%}
 
 ## Signing your Android project
 
