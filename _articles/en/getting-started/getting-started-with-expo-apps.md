@@ -26,7 +26,7 @@ First, let's see how to add a React Native Expo app to [bitrise.io](https://www.
 {% include message_box.html type="info" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
  1. Log into [bitrise.io](https://www.bitrise.io/).
- 2. Click **Add a new app**.
+ 2. Click the **+** sign on the top menu bar and select **Add app**, which takes you to the [**Create New App**](https://app.bitrise.io/apps/add) page.
  3. Select the privacy setting of your app: **private** and [**public**](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/adding-a-new-app/public-apps/).
  4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
  5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
@@ -37,7 +37,7 @@ First, let's see how to add a React Native Expo app to [bitrise.io](https://www.
     Now let's have a look at the fields you manually have to fill out:
     * To generate an iOS app from your React Native project, enter your iOS Development team ID at the **Specify iOS Development team** field.
     * In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
-    * In **Specify Expo username** enter your username and hit **Next**.
+    * In **Specify Expo username**, enter your username and hit **Next**.
     * In **Specify Expo password**, enter your password and hit **Next**. You only need to provide your Expo credentials if you've been using [ExpoKit](https://docs.expo.io/versions/v32.0.0/expokit/overview/) with your project.
     * Confirm your project build configuration.
  9. [Upload an app icon](/getting-started/adding-a-new-app/setting-up-configuration/#adding-an-app-icon-with-the-project-scanner).
@@ -139,8 +139,8 @@ The **Deploy to bitrise.io** Step uploads all the artifacts related to your buil
 
 You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
-1. Go to the Deploy to bitrise.io step.
-2. In the Notify: User Roles, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under Notifications if you click the eye icon next to your generated APK/.ipa file in the **APPS & ARTIFACTS** tab.
+1. Go to the **Deploy to bitrise.io** Step.
+2. In the **Notify: User Roles** input field, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the eye icon next to your generated APK/.ipa file in the **APPS & ARTIFACTS** tab.
 
 ## Deploying to an app store
 
@@ -198,7 +198,7 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 And that’s it! Start a build and release your app to the Google Play Store.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's add an Expo app</div>
+<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
 </div>
