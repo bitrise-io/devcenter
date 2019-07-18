@@ -14,8 +14,8 @@ You can use Cordova and Ionic frameworks to develop cross-platform apps. Bitrise
 ## Adding an Ionic/Cordova app to Bitrise
 
  1. Log into [bitrise.io](https://www.bitrise.io/).
- 2. On your [Dashboard](https://app.bitrise.io/dashboard), click **+**, then **Add app**.
- 3. On [**Create new App**](https://app.bitrise.io/apps/add) page, choose the account you wish to add the app to.
+ 2. Click the **+** sign on the top menu bar and select **Add app**, which takes you to the [**Create New App**](https://app.bitrise.io/apps/add) page.
+ 3. Choose the account you wish to add the app to.
  4. Set the privacy of the app to either private or [public](/getting-started/adding-a-new-app/public-apps) and click **Next**.
  5. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
  6. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
