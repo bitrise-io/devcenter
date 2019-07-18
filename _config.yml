@@ -26,6 +26,8 @@ exclude:
 - deploy.md
 - plugins
 - vendor/bundle
+- forestry-help-menus.md
+- forestry-help.md
 defaults:
 - scope:
     path: ''
