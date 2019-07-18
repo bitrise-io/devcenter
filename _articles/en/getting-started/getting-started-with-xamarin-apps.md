@@ -28,8 +28,8 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](/getting-started/index#signing-up-to-bitrise) on how to connect your [Bitrise account](https://app.bitrise.io/me/profile#/overview) to your account found on a Git service provider. "%}
 
- 1. Click the **+** sign on the top menu bar and select **Add app**.
- 2. On the [**Create new App**](https://app.bitrise.io/apps/add) page, choose the account you wish to add the app to.
+ 1. Click the **+** sign on the top menu bar and select **Add app**, which takes you to the [**Create New App**](https://app.bitrise.io/apps/add) page.
+ 2. Choose the account you wish to add the app to.
  3. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click **Next**.
  4. Select the Git hosting service that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/#connecting-a-repository).
  5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
@@ -176,7 +176,7 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 If the build is successful, congratulations - you've just deployed your Xamarin app!
 
 <div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Now you know everything</div>
-<a target="_blank" href="Let's add a Xamarin app"><button class="button">Go to Bitrise now</button></a>
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's add a Xamarin app</div>
+	<a target="_blank" href=" [https://app.bitrise.io/apps/add](https://app.bitrise.io/apps/add "https://app.bitrise.io/apps/add") "><button class="button">Go to Bitrise now</button></a>
 </div>
