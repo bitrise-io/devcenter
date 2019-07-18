@@ -42,6 +42,39 @@ All three methods of the `/provision` endpoint require authentication, exclusive
 
 Every add-on has to include Bitrise's navigation header on their site when logging into the service via Bitrise. This navbar enables users to quickly navigate back to Bitrise and to important add-on related pages.
 
+## Implementing SSO login 
+
+The addon service will generate credentials with the below method:
+
+```Golang
+timestamp := time.Now().Unix()
+s := sha1.New()
+s.Write([]byte(fmt.Sprintf("%s:%s:%d", appSlug, addonConfig.SSOSecret, timestamp)))
+token := s.Sum(nil)
+
+c.Response().Header().Add("bitrise-sso-timestamp", fmt.Sprintf("%d", timestamp))
+c.Response().Header().Add("bitrise-sso-token", fmt.Sprintf("%x", token))
+c.Response().Header().Add("bitrise-sso-x-action", fmt.Sprintf("%s", fmt.Sprintf("%s/login", addonConfig.Host)))
+```
+
+The service then responds with header fields that include the required data:
+
+* `bitrise-sso-timestamp`
+* `bitrise-sso-token`
+* `bitrise-sso-x-action`
+
+This response is sent to the Bitrise core service. The core will then send a POST form to the add-on itself:
+
+```
+method: post
+action: bitrise-sso-x-action?build_slug=build_slug
+
+fields
+timestamp: bitrise-sso-timestamp
+token: bitrise-sso-token
+app_slug: example-appslug
+```
+
 ## Provisioning an app
 
 To provision a Bitrise app for your add-on, the add-on server should either create a new record, or update an existing one, to store the provision state of the app. This should contain:
@@ -56,7 +89,7 @@ To provision a Bitrise app for your add-on, the add-on server should either crea
 
     {
         "plan": "free"
-        "app_slug": "abcd1234efgh5678"
+        "app_slug": "example-appslug"
         "api_token": "public-API-token"
     }
 
@@ -87,9 +120,9 @@ If an app's subscription plan is changed, use the PUT method with the app-slug t
         "plan": "developer"
     }
 
-## Deleting an app's provision
+## Deprovisioning an app 
 
-Deleting an app's provisioned state means that calls from Bitrise builds to the add-on server will be rejected.
+Deprovisioning - deleting an app's provisioned state - means that calls from Bitrise builds to the add-on server will be rejected.
 
 **Method**: `DELETE`
 
@@ -130,57 +163,3 @@ This command runs the following tests:
 You can test each of these functions separately by adding the applicable command to the `bitrise-addon-test` root command.
 
 For detailed information on all the available commands and flags for `bitrise-addon-test`, run `bitrise-addon-test --help`.
-
-## Publishing an add-on
-
-There are three stages to getting a new add-on published:
-
-1. Alpha: the add-on is only available to developers and to those explicitly granted access. Its Step does not appear in the Step library.
-2. Beta: the add-on is listed in the Bitrise Marketplace with a BETA label, and all Bitrise customers can provision it, on a free plan. Support must be provided.
-3. General availability (GA): the BETA tag is removed, and you can offer multiple free and paid plans to customers. The plan available in previous stages is disabled.
-
-### Alpha stage
-
-All add-ons start their lives in alpha. At this stage, they do not appear in the marketplace or in search results, and have no support requirements or feature requirements. Only developers and explicitly invited users have access to the add-on, using the free Test plan. No other subscription plan is allowed in Alpha stage.
-
-All add-ons must have a Step that defines the integration point with the third party: this Step does not show up in the Step library. If it is a modified version of an existing Step, only the previous, unmodified version will be available in the Step library during the Alpha stage.
-
-To proceed to the beta stage, the add-on developer has to:
-
-* Test the add-on with a minimum of 10 alpha users.
-* Provide their company’s details, including business, engineering, and contact information.
-* Provide a name and product icons for the add-on.
-* Prepare screenshots for the add-on’s marketplace listing.
-* Describe the add-on’s benefits and features.
-* Submit a state progression form.
-
-### Beta stage
-
-Beta add-ons are visible in the marketplace but still only have a single, free plan called Test. Being publicly available means developers can gather larger amounts of data and feedback from users.
-
-In the beta stage, timely support must be provided for add-ons. Partners are expected to acknowledge and respond to all Bitrise customer tickets related to their add-on within 48 hours. Parters are responsible to handle customer tickets via their own services.
-
-To proceed from the beta stage to GA, the developers has to:
-
-* Test the add-on with a minimum of 100 active beta users
-* Ensure that your add-on is backed by production-ready infrastructure that can support thousands of paid customers
-* Specify the details of free and paid plans for your add-on by submitting the details via our form
-
-### General availability
-
-When the add-on reaches GA, the BETA tag is removed and partners can offer multiple free and paid plans to Bitrise customers. The old Test plan is disabled and no new instances of it can be provisioned.
-
-## Documenting add-ons
-
-Add-ons must be properly documented before proceeding to the beta stage. This means two main pieces of content:
-
-* A description of the add-on's benefits.
-* A description of the add-on's features.
-
-### Benefits description
-
-The benefits appear on the add-on's marketplace page. It should describe, in moderate details, what your add-on provides to Bitrise customers, and why it is beneficial for them to use it.
-
-### Features description
-
-The features description should list every single feature of the add-on that might differ across different subscription plans. The list will be shown next to each plan defined for the add-on.

@@ -16,13 +16,13 @@ menu:
     weight: 25
 
 ---
-You can easily set up and configure your React Native project on Bitrise. A React Native repo can consist of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project on Bitrise, you will see that first an Android, then an iOS build is built. If your organization has more than one concurrency, you can have Android and iOS builds run simultaneously.
+You can easily set up and configure your React Native project on [Bitrise](https://app.bitrise.io/users/sign_in). A React Native repo can consist of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project on Bitrise, you will see that first an Android, then an iOS build gets built. If your [organization](/team-management/organizations/organizations-index/) has more than one concurrency, you can have Android and iOS builds run simultaneously.
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Before you dive in, make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
 ## Adding a React Native project to Bitrise
 
-1. Add your React Native project to Bitrise as a [new app](/getting-started/adding-a-new-app/).
+1. Add your React Native project to Bitrise as a [new app](https://app.bitrise.io/apps/add).
 
    This flow will guide you through the process of connecting your repository, setting up your repository access, selecting a branch and validating your project. Below we highlight some React Native-specific configuration.
 2. Once you get to **Project build configuration**, you should see React Native as the selected **project type**. (If the project scanner fails and the **project type** is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). You can see that **Android** is automatically selected in **The root directory of an Android app** field.
@@ -30,7 +30,7 @@ You can easily set up and configure your React Native project on Bitrise. A Reac
    If your project consists of only one module, that module will be automatically selected for **Module**. If your project contains more than one module, you can pick a module, but we recommend the main one!
 3. In the **Variant** field, select a variant that suits your project. Pick **Select All Variants** to build all variants. Pick **debug** or **release** if you wish to generate an APK or an .ipa file.
 4. In the **Project (or Workspace)** field, select your Xcode project or Xcode Workspace path.
-5. In the **Select Scheme name**, pick a scheme name. The scanner validation will fail if you do not have a SHARED scheme in your  project. You can still point Bitrise manually to your Xcode scheme but if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
+5. In the **Select Scheme name**, pick a scheme name. The scanner validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
 6. In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method. You can read more on the different export methods in our [iOS app deployment guides](/deploy/ios-deploy/introduction-to-deploying-ios-apps/).
 
 You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io)! Your first build gets kicked off automatically. You can check the generated artifacts of the first build on the [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab of your Build's page.
@@ -149,7 +149,7 @@ If all goes well, your app will be submitted to iTunes Connect and you can distr
 
 ### Deploying your Android app to Google Play Store
 
-If you add **Google Play Deploy** step to your workflow (after the **Android Sign** Step), your signed APK will get uploaded to Google Play Store.
+If you add the **Google Play Deploy** Step to your workflow (after the **Android Sign** Step), your signed APK will get uploaded to Google Play Store.
 
 Before you'd use the **Google Play Deploy** Step, make sure you have performed the following tasks:
 
@@ -179,7 +179,8 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 And that’s it! [Start a build](/builds/Starting-builds-manually/) and release your Android app to the app store of your choice.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's add a React Native app</div>
+<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
 </div>
+
