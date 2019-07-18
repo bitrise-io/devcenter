@@ -1,5 +1,6 @@
 ---
-
+sitemap:
+  exclude: 'yes'
 ---
 ***
 
@@ -72,10 +73,10 @@ Jekyll is built on the Liquid templating language and therefore tries to parse a
 
 The workaround is to use the {% raw %} tag to indicate to Jekyll that nothing within the tag needs to be parsed. Like this:
 
-{% raw %} 
+{% raw %}
 
 Please, {{ Jekyll }}, just display everything, brackets and all here.
 
-{% endraw %} 
+{% endraw %}
 
-Of course, this works for any formatting that might be lost otherwise when the site is built. 
+Of course, this works for any formatting that might be lost otherwise when the site is built.

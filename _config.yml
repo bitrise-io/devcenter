@@ -5,7 +5,7 @@ description: Bitrise is a Continuous Integration and Delivery (CI/CD) Platform a
   a Service (PaaS) with a main focus on mobile app development. It saves developers
   hours every day by automating tasks that are boring and repetitive from the moment
   they finish coding till the app lands in an app store.
-baseurl: ''
+baseurl: '/'
 url: 'https://devcenter.bitrise.io'
 twitter_username: jekyllrb
 github_username: jekyll
@@ -13,6 +13,7 @@ markdown: kramdown
 theme: minima
 plugins:
 - jekyll-feed
+- jekyll-sitemap
 - jekyll-menus
 - jekyll-redirect-from
 - localization
