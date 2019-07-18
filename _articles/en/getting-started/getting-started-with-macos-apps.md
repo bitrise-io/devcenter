@@ -23,7 +23,7 @@ In this guide, we'll walk you through how to add a MacOS app to Bitrise, how to 
    Note that the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
 8. Select the export method. You can modify this later - for now, select **development**.
 
-![](/img/project-build-config-macos.png)
+	![](/img/project-build-config-macos.png)
 
 	Once you clicked it, you should see your:
 
