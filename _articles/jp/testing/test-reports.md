@@ -108,5 +108,9 @@ Every file can be downloaded from Test Reports: that includes screenshots, video
 3. Click **Download** next to the file name.
 
    If you want to download all files available on the tab, click **Download All Files**.
-
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's view your build's Test Reports</div> <a target="_blank" href="[https://app.bitrise.io/dashboard/builds](https://app.bitrise.io/dashboard/builds "https://app.bitrise.io/dashboard/builds")"><button class="button">Go to your app</button></a> </div>
+   
+<div class="banner">
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's view your build's Test Reports</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds?utm_source=bottom_cta&utm_medium=banner&utm_campaign=devcenter"><button class="button">Go to your app</button></a>
+</div>
