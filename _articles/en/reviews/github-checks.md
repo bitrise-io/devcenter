@@ -58,7 +58,9 @@ All there's left to do is enabling GitHub Checks on your app's page on [Bitrise]
 {% include message_box.html type="warning" title="**ENABLE GITHUB CHECKS** switch error" content="Learn when **ENABLE GITHUB CHECKS** switch does not work and what you can do:
 
 * You cannot toggle the switch unless you install GitHub Checks FIRST. Once it's done, you can go ahead and toggle the switch to the right to enable it.
-* If you have renamed or moved the GitHub repository of an app which has already been added to Bitrise and you have installed GitHub Checks on it. The repository's GitHub URL has obviously changed. Why bother? **ENABLE GITHUB CHECKS** switch can only work if the URL on Github and on Bitrise full match (no redirect URL is allowed). So in this case, you have to manually update the **REPOSITORY URL** of your app on the **Settings** tab with the new GitHub URL."%}
+* If you have renamed or moved the GitHub repository of an app which has already been added to Bitrise and you have installed GitHub Checks on it. The repository's GitHub URL has obviously changed. Why bother? **ENABLE GITHUB CHECKS** switch can only work if the URL on Github and on Bitrise fully match (no redirect URL is allowed). So in this case, you have to manually update the **REPOSITORY URL** of your app on the **Settings** tab with the new GitHub URL.
+
+	![](/img/repository-url-change.jpg)"%}
 
 And you're done! Now any pull request you open to your app on GitHub will be validated with Bitrise Checks and a build will get automatically started on Bitrise (if the [pull request trigger](/builds/triggering-builds/trigger-pull-request/) is properly set on Bitrise).
 
