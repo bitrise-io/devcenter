@@ -155,11 +155,11 @@ You can restart validation if you want Bitrise to automatically detect your proj
 
 You can select an image that your iOS/Android project already contains, and use it as an app icon on Bitrise. If your project doesn't contain any images, you can add a custom image from your local computer too. This way you can personalize your apps and build types. Let's see how it works!
 
-{% include message_box.html type="important" title="Image limitations" content="Please note that the image file size cannot exceed 2 MB and the supported image file extensions are `png`, `bmp`, `tiff`, `jpeg`, `jpg`, `webp`."%} 
+{% include message_box.html type="important" title="Image limitations" content="Please note that the image file size cannot exceed 2 MB and the supported image file extensions are `png`, `bmp`, `tiff`, `jpeg`, `jpg`, `webp`."%}
 
 When adding your app to Bitrise, our project scanner automatically detects app images and also offers a custom image upload option.
 
-1. Click the **+** sign on your Dashboard to add an app to Bitrise.
+1. Click the **+** sign on your Dashboard to [add an app](https://app.bitrise.io/apps/add) to Bitrise.
 
    Once the project scanner has validated your project, you can set up your build configuration from the available options.
 2. At **App icon**, either **Choose an Icon from your App** or **Upload a Custom Image** by clicking the **+** button.
