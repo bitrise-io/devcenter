@@ -29,15 +29,15 @@ Connecting one Git provider account is not final: you can disconnect an account 
 
 1. Log in to your [bitrise.io](https://www.bitrise.io) account.
 2. Click the **+** symbol on the top menu bar and select **Add app**.
-3. On the Create New App page, select the account and set the app's privacy setting.
+3. On the [Create New App](https://app.bitrise.io/apps/add) page, select the account and set the app's privacy setting.
 4. Choose the git service provider of the app's repository. If no account with that provider has been connected to your Bitrise account, the UI will display the option to connect.
 
    ![](/img/bitbucket-created.jpg)
 5. Click **Connect GitHub/GitLab/Bitbucket**. This will take you to the login page of the Git provider.
 6. Log in to the Git provider account.
-7. You should be prompted to authorize Bitrise.io - do it! If successful, you should be redirected to Bitrise, and a pop-up message should inform you that you successfully linked the account. Click **Okay**.
+7. You should be prompted to authorize bitrise.io - do it! If successful, you should be redirected to Bitrise, and a pop-up message should inform you that you successfully linked the account. Click **Okay**.
 
-And you are done! If everything goes well, you are redirected to the **Create New App** page and you can add your new app.
+And you are done! If everything goes well, you are redirected to the [**Create New App** ](https://app.bitrise.io/apps/add)page and you can add your new app.
 
 ### Connect your GitHub/GitLab/BitBucket account from the Account settings page
 
@@ -47,7 +47,7 @@ And you are done! If everything goes well, you are redirected to the **Create Ne
 
    ![Connect account to Bitrise](/img/signing-up/connect-account.png)
 4. Log in to the Git provider account.
-5. You should be prompted to authorize Bitrise.io - do it! If successful, you should be redirected to Bitrise, and a pop-up message should inform you that you successfully linked the account. Click **Okay**.
+5. You should be prompted to authorize bitrise.io - do it! If successful, you should be redirected to Bitrise, and a pop-up message should inform you that you successfully linked the account. Click **Okay**.
 
 And you are done!
 
