@@ -55,6 +55,12 @@ All there's left to do is enabling GitHub Checks on your app's page on [Bitrise]
 4. Toggle the **ENABLE GITHUB CHECKS** switch to the right.
 
 ![](/img/enabled-toggle-githubchecks.jpg)
+{% include message_box.html type="warning" title="**ENABLE GITHUB CHECKS** switch error" content="Learn when **ENABLE GITHUB CHECKS** switch does not work and what you can do:
+
+* You cannot toggle the switch unless you install Bitrise Checks FIRST. Once it's done, you can go ahead and toggle the switch to the right to enable it.
+* If you have renamed or moved the GitHub repository of an app which has already been added to Bitrise and you have installed Bitrise Checks on it. The repository's GitHub URL has obviously changed. Why bother? **ENABLE GITHUB CHECKS** switch can only work if the URL on Github and on Bitrise fully match (no redirect URL is allowed). So in this case, you have to manually update the **REPOSITORY URL** of your app on the **Settings** tab with the new GitHub URL.
+
+	![](/img/repository-url-change.jpg)"%}
 
 And you're done! Now any pull request you open to your app on GitHub will be validated with Bitrise Checks and a build will get automatically started on Bitrise (if the [pull request trigger](/builds/triggering-builds/trigger-pull-request/) is properly set on Bitrise).
 
@@ -67,3 +73,5 @@ You can easily disable GitHub Checks on Bitrise if you toggle the **ENABLE GITHU
 If you decide to uninstall Bitrise Checks from your GitHub account, you can click the **Uninstall** button on the [Install GitHub Apps](https://github.com/settings/installations/) page.
 
 ![](/img/disable-ghckecks.jpg)
+
+Imagine the following use case. You added an app to Bitrise and have renamed or moved the app on GitHub. You install GitHub Checks app on your Github repository and try to enable the **ENABLE GITHUB CHECKS** switch. The switch will show an error message saying you have to install GitHub Checks. In this case, please

@@ -25,13 +25,13 @@ You can go to your account settings right now to set it up: [Apple Developer Con
 
 Connect your Apple Developer account to Bitrise if:
 
-* You want to use our `iOS Auto Provision` Step to [manage provisioning profiles for an iOS application](/code-signing/ios-code-signing/ios-auto-provisioning/).
-* You want to upload your app to the App Store, using either our `fastlane` or `Deploy to iTunes Connect` Steps.
-* You want to upload metadata, screenshots, or other artifacts using our `fastlane` Step.
+* You want to use our **iOS Auto Provision** Step to [manage provisioning profiles for an iOS application](/code-signing/ios-code-signing/ios-auto-provisioning/).
+* You want to upload your app to the App Store, using either our **fastlane** or **Deploy to iTunes Connect** Steps.
+* You want to upload metadata, screenshots, or other artifacts using our **fastlane** Step.
 
-{% include message_box.html type="warning" title="Custom Script Steps" content="If you use, for example, a custom Script Step to utilise `fastlane` or to upload your app to the App Store, you will not be able to get past Apple 2FA by connecting your Apple Developer account. This solution only works with the official Steps, such as `fastlane`, `iOS Auto Provision` or `Deploy to iTunes Connect`. "%}
+{% include message_box.html type="warning" title="Custom Script Steps" content="If you use, for example, a custom Script Step to utilize **fastlane** or to upload your app to the App Store, you will not be able to get past Apple 2FA by connecting your Apple Developer account. This solution only works with the official Steps, such as **fastlane**, **iOS Auto Provision** or **Deploy to iTunes Connect**. "%}
 
-The above Steps all require two-factor authentication, which is mandatory for all Apple Developer accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
+The above Steps all require two-factor authentication (2FA), which is mandatory for all Apple Developer accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
 
 Connecting your Apple Developer account allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion.
 
@@ -47,11 +47,11 @@ To successfully connect your Apple Developer account, and use your Apple Develop
 ### Authenticating your Apple Developer account
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
-2. Click on your profile in the upper-right corner of your `Dashboard` and select `Account settings` from the dropdown menu.
+2. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
 
    ![](/img/account-settings.jpg)
-3. On the menu bar on the left, select `Apple Developer Account`.
-4. Provide your credentials in the popup window and click `Store credentials`.
+3. On the menu bar on the left, select **Apple Developer Account**.
+4. Provide your credentials in the popup window and click **Store credentials**.
 
    ![](/img/apple-dev.png)
 5. If two-factor authentication is enabled on your Apple Developer account, you will be prompted to provide your verification code. In this case, your authentication will expire in 30 days and you will have to authenticate again!
@@ -65,8 +65,8 @@ As such, any team member's connected account can be used with an app. The app do
 To authorize the app:
 
 1. Open your project's page on [bitrise.io](https://www.bitrise.io).
-2. Select the `Team` tab.
-3. Scroll down to the `Connected Apple Developer Portal Account` section.
+2. Select the **Team** tab.
+3. Scroll down to the **Connected Apple Developer Portal Account** section.
 
    ![](/img/bitrise_test_repo_-_Bitrise-1.png)
 4. Select the account you want to use from the dropdown menu.
@@ -75,7 +75,7 @@ To authorize the app:
 If everything goes well, you should be able to use the connected account's Apple Developer credentials in the app's builds.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's connect your account to Bitrise!</div>
-	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your Account settings</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's connect your account to Bitrise!</div>
+<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your Account settings</button></a>
 </div>

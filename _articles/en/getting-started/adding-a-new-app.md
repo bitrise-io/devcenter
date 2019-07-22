@@ -43,14 +43,14 @@ In case this is the first application in Bitrise, the Dashboard shows you the qu
 
 ## Connecting a repository
 
-After you've selected adding a new app, you find yourself on the **Create app** page.
+After you've selected adding a new app, you find yourself on the [**Create New App**](https://app.bitrise.io/apps/add) page.
 
 Select your app's privacy setting: it can be either [public](/getting-started/adding-a-new-app/public-apps/) or private.
 
 * Private apps are only accessible to you, your organization members and those who are invited to work on an app. They require authentication to access the repository of the app.
 * [Public apps](/adding-a-new-app/public-apps) expose their `bitrise.yml` and their build logs to everyone. If you have a public app's build URL, you can view its build log, to help with troubleshooting, for example. Public apps do not require authentication and they cannot have SSH keys.
 
-Bitrise gives you options to connect any kind of git repository to it. GitHub, GitLab and Bitbucket are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
+Bitrise gives you options to connect any kind of git repository to it. [GitHub, GitLab and Bitbucket](/getting-started/connecting-account-bitrise/) are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
 
 {% include message_box.html type="note" title="Connect any Git repository to Bitrise" content=" You can connect any private or public git repository to Bitrise. We automatically create an SSH key that you can use to setup the connection with your provider. "%}
 
@@ -122,7 +122,7 @@ This option can be used if you also have the private key of the given user. You 
 
 ## Setting up configuration
 
-After [Setting up the SSH key](/getting-started/adding-a-new-app/#setting-up-ssh-keys) for your project, Bitrise downloads your code to make sure it can access the repository. It also runs an automatic repository scanner script to find the best initial configuration for your project. Currently Bitrise detect iOS, Android, Xamarin, Ionic, Cordova, Flutter, React Native and fastlane projects out of the box.
+After [Setting up the SSH key](/getting-started/adding-a-new-app/#setting-up-ssh-keys) for your project, Bitrise downloads your code to make sure it can access the repository. It also runs an automatic repository scanner script to find the best initial configuration for your project. Currently Bitrise detect [iOS](/getting-started/getting-started-with-ios-apps/), [Android](/getting-started/getting-started-with-android-apps/), [Xamarin](/getting-started/getting-started-with-xamarin-apps/), [Ionic / Cordova](/getting-started/getting-started-with-ionic-cordova-apps/), [Flutter](/getting-started/getting-started-with-flutter-apps/), [React Native](/getting-started/getting-started-with-react-native-apps/) and [fastlane](/tutorials/fastlane/fastlane-index/) projects out of the box.
 
 You can configure other types of projects too, but that requires manual configuration.
 
@@ -134,7 +134,7 @@ Enter the name of the default branch of your repository where your project is lo
 
 During validation Bitrise makes sure it has access to the given branch, using the [SSH key](/adding-a-new-app/setting-up-ssh-keys) you set up.
 
-If the validation is successful, Bitrise scans your repository and give you a default Workflow based on the configuration of the project.
+If the validation is successful, Bitrise scans your repository and give you a default [Workflow](/steps-and-workflows/getting-started-workflows/) based on the configuration of the project.
 
 ### Manual project configuration
 
@@ -155,11 +155,11 @@ You can restart validation if you want Bitrise to automatically detect your proj
 
 You can select an image that your iOS/Android project already contains, and use it as an app icon on Bitrise. If your project doesn't contain any images, you can add a custom image from your local computer too. This way you can personalize your apps and build types. Let's see how it works!
 
-Please note that the image file size cannot exceed 2 MB and the supported image file extensions are `png`, `bmp`, `tiff`, `jpeg`, `jpg`, `webp`.
+{% include message_box.html type="important" title="Image limitations" content="Please note that the image file size cannot exceed 2 MB and the supported image file extensions are `png`, `bmp`, `tiff`, `jpeg`, `jpg`, `webp`."%}
 
 When adding your app to Bitrise, our project scanner automatically detects app images and also offers a custom image upload option.
 
-1. Click the **+** sign on your Dashboard to add an app to Bitrise.
+1. Click the **+** sign on your Dashboard to [add an app](https://app.bitrise.io/apps/add) to Bitrise.
 
    Once the project scanner has validated your project, you can set up your build configuration from the available options.
 2. At **App icon**, either **Choose an Icon from your App** or **Upload a Custom Image** by clicking the **+** button.
