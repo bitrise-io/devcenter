@@ -25,11 +25,11 @@ You can go to your account settings right now to set it up: [Apple Developer Con
 
 Connect your Apple Developer account to Bitrise if:
 
-* You want to use our `iOS Auto Provision` Step to [manage provisioning profiles for an iOS application](/code-signing/ios-code-signing/ios-auto-provisioning/).
-* You want to upload your app to the App Store, using either our `fastlane` or `Deploy to iTunes Connect` Steps.
-* You want to upload metadata, screenshots, or other artifacts using our `fastlane` Step.
+* You want to use our **iOS Auto Provision** Step to [manage provisioning profiles for an iOS application](/code-signing/ios-code-signing/ios-auto-provisioning/).
+* You want to upload your app to the App Store, using either our **fastlane** or **Deploy to iTunes Connect** Steps.
+* You want to upload metadata, screenshots, or other artifacts using our **fastlane** Step.
 
-{% include message_box.html type="warning" title="Custom Script Steps" content="If you use, for example, a custom Script Step to utilise `fastlane` or to upload your app to the App Store, you will not be able to get past Apple 2FA by connecting your Apple Developer account. This solution only works with the official Steps, such as `fastlane`, `iOS Auto Provision` or `Deploy to iTunes Connect`. "%}
+{% include message_box.html type="warning" title="Custom Script Steps" content="If you use, for example, a custom Script Step to utilise **fastlane** or to upload your app to the App Store, you will not be able to get past Apple 2FA by connecting your Apple Developer account. This solution only works with the official Steps, such as **fastlane**, **iOS Auto Provision** or **Deploy to iTunes Connect**. "%}
 
 The above Steps all require two-factor authentication, which is mandatory for all Apple Developer accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
 
@@ -47,10 +47,10 @@ To successfully connect your Apple Developer account, and use your Apple Develop
 ### Authenticating your Apple Developer account
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
-2. Click on your profile in the upper-right corner of your `Dashboard` and select `Account settings` from the dropdown menu.
+2. Click on your profile in the upper-right corner of your **Dashboard** and select **Account settings** from the dropdown menu.
 
    ![](/img/account-settings.jpg)
-3. On the menu bar on the left, select `Apple Developer Account`.
+3. On the menu bar on the left, select **Apple Developer Account**.
 4. Provide your credentials in the popup window and click `Store credentials`.
 
    ![](/img/apple-dev.png)
@@ -65,8 +65,8 @@ As such, any team member's connected account can be used with an app. The app do
 To authorize the app:
 
 1. Open your project's page on [bitrise.io](https://www.bitrise.io).
-2. Select the `Team` tab.
-3. Scroll down to the `Connected Apple Developer Portal Account` section.
+2. Select the **Team** tab.
+3. Scroll down to the **Connected Apple Developer Portal Account** section.
 
    ![](/img/bitrise_test_repo_-_Bitrise-1.png)
 4. Select the account you want to use from the dropdown menu.
