@@ -74,8 +74,11 @@ If you decide to uninstall Bitrise Checks from your GitHub account, you can clic
 
 ![](/img/disable-ghckecks.jpg)
 
-Please note you should have administrator rights over the repository to be able to change any settings of the Branches menu. 
-![](/img/checks-pending.png)
+Please note you should have administrator rights over the repository to be able to change any settings of the Branches menu.
+
+If you have required Bitrise Checks on your repository and you're about to merge a PR but find below error next to `ci/bitrise/...`, then you have to manually switch to Bitrise in the Settings. Let's see how!
+
+ ![](/img/checks-pending.png)
 
 1. You have to go the **Settings** tab of your repository.
 2. Click **Branches** on the side menu.
