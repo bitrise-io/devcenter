@@ -1,14 +1,21 @@
 ---
 title: Creating your own Bitrise project scanner
-date: 2018-12-13T11:31:09.000+00:00
+date: '2018-12-13T11:31:09.000+00:00'
 redirect_from: []
+tag:
+- steps
+- workflows
+- cli
+- builds
+- bitrise.yml
+summary: 'The project scanner is a tool that identifies the given project''s type
+  and generates a basic Bitrise configuration. Each supported project type has its
+  own scanner: these scanners are stored as separate packages.'
 menu:
-  bitrise-cli-main:
-    weight: 32
+  contributors-main:
+    weight: 3
 
 ---
-{% include not_translated_yet.html %}
-
 The project scanner is a tool that identifies the given project's type and generates a basic Bitrise configuration. Each supported project type has its own scanner: these scanners are stored as separate packages.
 
 A project type scanner defines at least two workflows: one for testing (`primary`) and one for building (`deploy`). [It includes the minimal amount of Steps to successfully run them](/getting-started/getting-started-workflows/#default-workflows).
@@ -32,7 +39,7 @@ Here is the basic structure of the model, in YAML:
       DETECTED_PLATFORM_1: OptionModel
       DETECTED_PLATFORM_2: OptionModel
       ...
-    
+
     configs:
       DETECTED_PLATFORM_1:
         CONFIG_NAME_1: ConfigModel
@@ -43,7 +50,7 @@ Here is the basic structure of the model, in YAML:
         CONFIG_NAME_2: ConfigModel
         ...
       ...
-    
+
     warnings:
       DETECTED_PLATFORM_1:
       - "warning message 1"
@@ -79,7 +86,7 @@ The OptionModel represents an input option. It looks like this in Go:
     type OptionModel struct {
         Title  string
         EnvKey string
-    
+
         ChildOptionMap map[string]*OptionModel
         Config         string
     }
@@ -167,13 +174,13 @@ Scanners generate the possible `options` chains and the possible workflows for t
     type ScannerInterface interface {
         Name() string
         DetectPlatform(string) (bool, error)
-    
+
         Options() (models.OptionModel, models.Warnings, error)
         Configs() (models.BitriseConfigMap, error)
-    
+
         DefaultOptions() models.OptionModel
         DefaultConfigs() (models.BitriseConfigMap, error)
-    
+
         ExcludedScannerNames() []string
     }
 
@@ -224,3 +231,9 @@ The development path for a new scanner starts with your own sample project and e
 7. Update the existing Steps with the new project type if necessary.
 
    The PR for these Steps should link the scanner PR.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>

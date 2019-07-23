@@ -1,7 +1,7 @@
 ---
 title: Creating your own Bitrise project scanner
 date: '2018-12-13T11:31:09.000+00:00'
-redirect_from: []
+redirect_from: '/bitrise-cli/creating-your-own-bitrise-project-scanner/'
 tag:
 - steps
 - workflows
@@ -12,8 +12,8 @@ summary: 'The project scanner is a tool that identifies the given project''s typ
   and generates a basic Bitrise configuration. Each supported project type has its
   own scanner: these scanners are stored as separate packages.'
 menu:
-  bitrise-cli-main:
-    weight: 31
+  contributors-main:
+    weight: 3
 
 ---
 The project scanner is a tool that identifies the given project's type and generates a basic Bitrise configuration. Each supported project type has its own scanner: these scanners are stored as separate packages.
@@ -39,7 +39,7 @@ Here is the basic structure of the model, in YAML:
       DETECTED_PLATFORM_1: OptionModel
       DETECTED_PLATFORM_2: OptionModel
       ...
-    
+
     configs:
       DETECTED_PLATFORM_1:
         CONFIG_NAME_1: ConfigModel
@@ -50,7 +50,7 @@ Here is the basic structure of the model, in YAML:
         CONFIG_NAME_2: ConfigModel
         ...
       ...
-    
+
     warnings:
       DETECTED_PLATFORM_1:
       - "warning message 1"
@@ -86,7 +86,7 @@ The OptionModel represents an input option. It looks like this in Go:
     type OptionModel struct {
         Title  string
         EnvKey string
-    
+
         ChildOptionMap map[string]*OptionModel
         Config         string
     }
@@ -174,13 +174,13 @@ Scanners generate the possible `options` chains and the possible workflows for t
     type ScannerInterface interface {
         Name() string
         DetectPlatform(string) (bool, error)
-    
+
         Options() (models.OptionModel, models.Warnings, error)
         Configs() (models.BitriseConfigMap, error)
-    
+
         DefaultOptions() models.OptionModel
         DefaultConfigs() (models.BitriseConfigMap, error)
-    
+
         ExcludedScannerNames() []string
     }
 

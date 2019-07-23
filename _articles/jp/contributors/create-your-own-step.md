@@ -10,8 +10,8 @@ summary: Creating your own Step is as simple as running a bitrise CLI (v1.6.1+) 
   or Go toolkits.
 redirect_from: []
 menu:
-  bitrise-cli-main:
-    weight: 29
+  contributors-main:
+    weight: 1
 
 ---
 Creating your own Step is as simple as running a `bitrise` CLI (v1.6.1+) command and following the guide it prints. You can generate Steps using either the Bash or Go toolkits.
@@ -26,10 +26,10 @@ Once the Bitrise CLI is installed, create your own Step with three simple comman
 
     # If this is the very first time you use the CLI / if you just installed the CLI run this:
     bitrise setup
-    
+
     # If you want to update the Step plugin to the latest version:
     bitrise plugin update step
-    
+
     # And to generate a new Step, simply run this command and follow the guide it prints:
     bitrise :step create
 
@@ -117,12 +117,12 @@ We recommend you start with the command `bitrise share`. This will print you a g
 
 1. Make sure your Step is stored in a public git repository.
 2. Fork the StepLib repository you want to have your step in. We recommend using the [The official Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)!
-3. Prepare your forked StepLib locally for sharing: 
+3. Prepare your forked StepLib locally for sharing:
    ```
    $ bitrise share start -c https://github.com/[your-username]/bitrise-steplib.git
    ```
 4. Add the step version tag to your Step's repository.
-5. Add the Step to your forked StepLib repository: 
+5. Add the Step to your forked StepLib repository:
    ```
    $ bitrise share create --tag [step-version-tag] --git [step-git-uri].git --stepid [step-id]
    ```
