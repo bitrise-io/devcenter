@@ -78,8 +78,10 @@ Please note you should have administrator rights over the repository to be able 
 
 If you have required Bitrise Checks on your repository and you're about to merge a PR but find below error next to `ci/bitrise/...`, then you have to manually switch to Bitrise in the Settings. Let's see how!
 
- ![](/img/checks-pending.png)
+![](/img/checks-pending.png)
 
 1. You have to go the **Settings** tab of your repository.
-2. Click **Branches** on the side menu.
-3. Under **Require status checks to pass before merging** select **Bitrise** intead of the old checks system; `ci/bitrise/...`.
+2. Click **Branches** on the side menu. Under **Require status checks to pass before merging**, you can see `ci/bitrise/...` as the selected checks system. **Bitrise** intead of the old checks system; `ci/bitrise/...`.
+
+   ![](/img/require-status-checks.png)
+3. Select **Bitrise** instead of `ci/bitrise/...`.
