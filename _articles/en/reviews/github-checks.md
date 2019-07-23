@@ -60,7 +60,7 @@ All there's left to do is enabling GitHub Checks on your app's page on [Bitrise]
 * You cannot toggle the switch unless you install Bitrise Checks FIRST. Once it's done, you can go ahead and toggle the switch to the right to enable it.
 * If you have renamed or moved the GitHub repository of an app which has already been added to Bitrise and you have installed Bitrise Checks on it. The repository's GitHub URL has obviously changed. Why bother? **ENABLE GITHUB CHECKS** switch can only work if the URL on Github and on Bitrise fully match (no redirect URL is allowed). So in this case, you have to manually update the **REPOSITORY URL** of your app on the **Settings** tab with the new GitHub URL.
 
-	![](/img/repository-url-change.jpg)"%}
+  ![](/img/repository-url-change.jpg)"%}
 
 And you're done! Now any pull request you open to your app on GitHub will be validated with Bitrise Checks and a build will get automatically started on Bitrise (if the [pull request trigger](/builds/triggering-builds/trigger-pull-request/) is properly set on Bitrise).
 
@@ -74,4 +74,9 @@ If you decide to uninstall Bitrise Checks from your GitHub account, you can clic
 
 ![](/img/disable-ghckecks.jpg)
 
-Imagine the following use case. You added an app to Bitrise and have renamed or moved the app on GitHub. You install GitHub Checks app on your Github repository and try to enable the **ENABLE GITHUB CHECKS** switch. The switch will show an error message saying you have to install GitHub Checks. In this case, please
+Please note you should have administrator rights over the repository to be able to change any settings of the Branches menu. 
+![](/img/checks-pending.png)
+
+1. You have to go the **Settings** tab of your repository.
+2. Click **Branches** on the side menu.
+3. Under **Require status checks to pass before merging** select **Bitrise** intead of the old checks system; `ci/bitrise/...`.
