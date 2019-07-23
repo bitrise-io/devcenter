@@ -31,7 +31,7 @@ sections:
   create: all
   match: index.md
 - type: directory
-  path: _articles/en/contributors/**/*
+  path: _articles/en/contributors
   label: For contributors
   create: all
   match: "**/*"
