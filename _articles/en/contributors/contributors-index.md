@@ -12,6 +12,7 @@ summary: 'Contributing to Bitrise is easy: write an open source integration, a g
   scanner.'
 menu:
   main:
+    title: For contributors
     identifier: contributors-main
     weight: 1
 ---
