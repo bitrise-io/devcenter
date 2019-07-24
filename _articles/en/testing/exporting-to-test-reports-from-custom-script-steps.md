@@ -13,7 +13,7 @@ menu:
     weight: 3
 
 ---
-[Test Reports](/testing/test-reports/) allows you to view all your test results in a convenient way. By default, only four Steps support the Test Reports feature. However, there is a limited support for exporting your test results to Test Reports via custom Script Steps. The limitation is that you can only export image files this way - for example, screenshots of UI tests. 
+[Test Reports](/testing/test-reports/) allows you to view all your test results in a convenient way. By default, only four Steps support the Test Reports feature. However, there is a limited support for exporting your test results to Test Reports via custom Script Steps. The limitation is that you can only export image files this way - for example, screenshots of UI tests.
 
 Here's what you need to do:
 
@@ -28,7 +28,9 @@ To do all this, we need to delve a bit deeper into how the Test Reports feature 
 
 The Bitrise CLI creates a root directory for all test results and exposes its path in the `BITRISE_TEST_RESULT_DIR` Environment Variable (Env Var) for the supported Steps. As such, every supported Step sees its own test results directory.
 
-The Step then moves every artifact that is deemed a test result into the Step's test result directory: test result files, test attachments, logs, screenshots, and so on.
+The Step then moves every artifact that is deemed a test result into the Step's test result directory: test result files, test attachments, logs, screenshots, and so on. 
+
+{% include message_box.html type="important" title="Custom Steps" content="Please note that when using custom Script Steps to export your results, only image files are exported to Test Reports."%}
 
 After each Step, the Bitrise CLI checks the Steps's test result directory. If the directory is not empty, the CLI adds a metadata file called `step-info.json`. This file describes the Step:
 
