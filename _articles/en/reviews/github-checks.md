@@ -60,11 +60,26 @@ All there's left to do is enabling GitHub Checks on your app's page on [Bitrise]
 * You cannot toggle the switch unless you install Bitrise Checks FIRST. Once it's done, you can go ahead and toggle the switch to the right to enable it.
 * If you have renamed or moved the GitHub repository of an app which has already been added to Bitrise and you have installed Bitrise Checks on it. The repository's GitHub URL has obviously changed. Why bother? **ENABLE GITHUB CHECKS** switch can only work if the URL on Github and on Bitrise fully match (no redirect URL is allowed). So in this case, you have to manually update the **REPOSITORY URL** of your app on the **Settings** tab with the new GitHub URL.
 
-	![](/img/repository-url-change.jpg)"%}
+  ![](/img/repository-url-change.jpg)"%}
 
 And you're done! Now any pull request you open to your app on GitHub will be validated with Bitrise Checks and a build will get automatically started on Bitrise (if the [pull request trigger](/builds/triggering-builds/trigger-pull-request/) is properly set on Bitrise).
 
-{% include message_box.html type="info" title="Get to your app's page with a single click" content="If you click on the build summary or on **View more details on Bitrise Checks** link on the **Checks** tab, you'll quickly get to your app's Build page on Bitrise. "%}
+You can easily get to your app's page on Bitrise. If you click on the build summary or on **View more details on Bitrise Checks** link on the **Checks** tab, you'll quickly get to your app's Build page.
+
+Another nice-to-have came up, probably for next week, if you required status checks before merging on GitHub, you need to modify it to \`Bitrise\` instead of \`ci/bitrise/…\`, to be able to merge PRs.
+
+### Switching to Bitrise Checks
+
+If you have been using status checks on pull requests prior to merging for a while, it must have been the `ci/bitrise/...` check system. To be able to use Bitrise Checks, you have to manually switch from `ci/bitrise/...` to **Bitrise** to access those detailed checks. Let's see how!
+
+![](/img/checks-pending.png)
+
+1. Go to the **Settings** tab of your repository.
+2. Click **Branches** on the side menu. Under **Require status checks to pass before merging**, you can see `ci/bitrise/...` as the selected checks system.
+
+   ![](/img/require-status-checks.png)
+3. Select **Bitrise** instead of `ci/bitrise/...`.
+4. Merge a pull request.
 
 ## Disabling Github Checks
 
@@ -74,4 +89,4 @@ If you decide to uninstall Bitrise Checks from your GitHub account, you can clic
 
 ![](/img/disable-ghckecks.jpg)
 
-Imagine the following use case. You added an app to Bitrise and have renamed or moved the app on GitHub. You install GitHub Checks app on your Github repository and try to enable the **ENABLE GITHUB CHECKS** switch. The switch will show an error message saying you have to install GitHub Checks. In this case, please
+1. 

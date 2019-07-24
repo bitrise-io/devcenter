@@ -42,7 +42,7 @@ All three methods of the `/provision` endpoint require authentication, exclusive
 
 Every add-on has to include Bitrise's navigation header on their site when logging into the service via Bitrise. This navbar enables users to quickly navigate back to Bitrise and to important add-on related pages.
 
-## Implementing SSO login 
+## Implementing SSO login
 
 The addon service will generate credentials with the below method:
 
@@ -65,23 +65,22 @@ The service then responds with header fields that include the required data:
 
 This response is sent to the Bitrise core service. The core will then send a POST form to the add-on itself:
 
-```
-method: post
-action: bitrise-sso-x-action?build_slug=build_slug
-
-fields
-timestamp: bitrise-sso-timestamp
-token: bitrise-sso-token
-app_slug: example-appslug
-```
+    method: post
+    action: bitrise-sso-x-action?build_slug=build_slug
+    
+    fields
+    timestamp: bitrise-sso-timestamp
+    token: bitrise-sso-token
+    app_slug: example-appslug
 
 ## Provisioning an app
 
 To provision a Bitrise app for your add-on, the add-on server should either create a new record, or update an existing one, to store the provision state of the app. This should contain:
 
 * The[ app slug](https://api-docs.bitrise.io/#/application/app-list) of the Bitrise app.
-* A unique API token to identify the app to the add-on. It will be used for the requests from Bitrise builds to the add-on server.
+* A unique API token used to the authenticate the add-on to the Bitrise API. This enables the add-on to call Bitrise API endpoints: for example, to request build data or app information.
 * The add-on subscription plan of the app.
+* The title of the app.
 
 **Method**: `POST`
 
@@ -91,6 +90,7 @@ To provision a Bitrise app for your add-on, the add-on server should either crea
         "plan": "free"
         "app_slug": "example-appslug"
         "api_token": "public-API-token"
+        "app_title": "Example App"
     }
 
 In response, the add-on server sends back the list of Env Vars that will be exported in all builds of the app on Bitrise. In our example, the two Env Vars are `$MYADDON_HOST_URL` and `$MYADDON_AUTH_SECRET`.
@@ -120,7 +120,7 @@ If an app's subscription plan is changed, use the PUT method with the app-slug t
         "plan": "developer"
     }
 
-## Deprovisioning an app 
+## Deprovisioning an app
 
 Deprovisioning - deleting an app's provisioned state - means that calls from Bitrise builds to the add-on server will be rejected.
 
@@ -146,6 +146,23 @@ Install the testing kit by downloading the binary and then make it executable.
 2. Make the binary executable.
 
        chmod +x /usr/local/bin/bitrise-addon-test
+
+### Configuring the add-on for testing
+
+1. Create a `config.yml` file for your add-on and place it in the directory of the add-on. 
+
+   The testing kit's GitHub repository contains an example configuration file. 
+1. Fill the file with the required values:
+   
+   * The URL of your add-on.
+   * The authentication token. 
+   * The SSO secret. 
+
+	```yaml
+    addon-url: "http://localhost:3000"
+	auth-token: "abc123"
+	sso-secret: "cba321"
+    ```
 
 ### Using the testing kit
 

@@ -407,6 +407,17 @@ nav#side-menu {
 			.menu-list-opener-1 {
 
 				&:before {
+					content: url(/assets/logos/icons-docs/globe.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/globe-focus.svg);
+				}
+			}
+
+			.menu-list-opener-2 {
+
+				&:before {
 					content: url(/assets/logos/icons-docs/getting-started.svg);
 				}
 
@@ -415,7 +426,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-2 {
+			.menu-list-opener-3 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/cpu.svg);
@@ -426,7 +437,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-3 {
+			.menu-list-opener-4 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/dudes.svg);
@@ -437,7 +448,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-4 {
+			.menu-list-opener-5 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/webhooks.svg);
@@ -448,7 +459,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-5 {
+			.menu-list-opener-6 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/workflow.svg);
@@ -459,7 +470,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-6 {
+			.menu-list-opener-7 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/build.svg);
@@ -470,7 +481,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-7 {
+			.menu-list-opener-8 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/code-signing.svg);
@@ -481,7 +492,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-8 {
+			.menu-list-opener-9 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/testing.svg);
@@ -492,7 +503,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-9 {
+			.menu-list-opener-10 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/deployment.svg);
@@ -503,7 +514,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-10 {
+			.menu-list-opener-11 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/window.svg);
@@ -514,7 +525,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-11 {
+			.menu-list-opener-12 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/info_main.svg);
@@ -525,7 +536,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-12 {
+			.menu-list-opener-13 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/lightbulb_main.svg);
@@ -536,7 +547,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-13 {
+			.menu-list-opener-14 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/support.svg);
@@ -547,7 +558,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-14 {
+			.menu-list-opener-15 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/bug.svg);
@@ -558,7 +569,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-15 {
+			.menu-list-opener-16 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/code.svg);
@@ -998,7 +1009,7 @@ nav#my-toc {
 	li.toc-entry.toc-h3 {
 		list-style-type: none;
 		font-size: 1.3rem;
-		margin-left: -12.5%;
+		margin-left: -9.5%;
 		line-height: 1.4;
 		padding-bottom: 0.5rem;
 	}

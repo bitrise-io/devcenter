@@ -58,7 +58,7 @@ no such module '...'
 
 ### 解決方法
 
-多くの場合は、Cocoapods を使っていてワークスペース（`.xcodeproj`）の代わりに Xcode プロジェクトを指定してしまっています。Bitrise上の App の**Workflow タブ**へ行き、**Manage Workflows**、**App Environments**の順にクリックして`BITRISE_PROJECT_PATH`の項目を変更します。これによりすべてのワークフローにおけるデフォルトのプロジェクトパスの設定を変更できます。
+多くの場合は、Cocoapods を使っていてワークスペース（`.xcworkspace`）の代わりに Xcode プロジェクト（`.xcodeproj`）を指定してしまっています。Bitrise上の App の**Workflow タブ**へ行き、**Manage Workflows**、**App Environments**の順にクリックして`BITRISE_PROJECT_PATH`の項目を変更します。これによりすべてのワークフローにおけるデフォルトのプロジェクトパスの設定を変更できます。
 
 **以前動いていた場合**や`BITRISE_PROJECT_PATH`の修正で解決しなかった場合、Appの他の環境設定を確認しましょう。プロジェクトのファイルパスはワークフローの環境変数によって上書きされることがあります。もしくは、関連するXcodeのステップで直接プロジェクトのパスを指定してしまっている可能性もあります。
 
