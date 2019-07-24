@@ -10,7 +10,10 @@ summary: 'Contributing to Bitrise is easy: write an open source integration, a g
   or a blog post, submit it and you''re done! In this section, we''ll be focusing
   on technical contributions: creating a new Step and creating your very own project
   scanner.'
-
+menu:
+  main:
+    identifier: contributors-main
+    weight: 1
 ---
 Contributing to Bitrise is easy: write an open source integration, a guide, or a blog post, submit it and you're done! In this section, we'll be focusing on technical contributions: creating a new Step and creating your very own project scanner.
 
