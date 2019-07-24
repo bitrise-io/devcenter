@@ -4,6 +4,7 @@ redirect_from: []
 menu:
   main:
     identifier: contributors-main
+    title: For contributors
     weight: 1
 ---
 {% include not_translated_yet.html %}
