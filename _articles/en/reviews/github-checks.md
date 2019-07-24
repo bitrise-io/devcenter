@@ -70,7 +70,7 @@ Another nice-to-have came up, probably for next week, if you required status che
 
 ### Switching to Bitrise Checks
 
-If you have been using status checks on pull requests prior to merging them before, it must have been the `ci/bitrise/...` check system. To be able to use Bitrise Checks, you have to manually switch from `ci/bitrise/...` to **Bitrise** to access those detailed checks. Let's see how!
+If you have been using status checks on pull requests prior to merging for a while, it must have been the `ci/bitrise/...` check system. To be able to use Bitrise Checks, you have to manually switch from `ci/bitrise/...` to **Bitrise** to access those detailed checks. Let's see how!
 
 ![](/img/checks-pending.png)
 
