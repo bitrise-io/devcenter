@@ -75,7 +75,7 @@ If you have been using status checks on pull requests prior to merging for a whi
 ![](/img/checks-pending.png)
 
 1. Go to the **Settings** tab of your repository.
-2. Click **Branches** on the side menu. Under **Require status checks to pass before merging**, you can see `ci/bitrise/...` as the selected checks system. 
+2. Click **Branches** on the side menu. Under **Require status checks to pass before merging**, you can see `ci/bitrise/...` as the selected checks system.
 
    ![](/img/require-status-checks.png)
 3. Select **Bitrise** instead of `ci/bitrise/...`.
