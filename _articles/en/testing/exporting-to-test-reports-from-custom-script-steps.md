@@ -28,9 +28,11 @@ To do all this, we need to delve a bit deeper into how the Test Reports feature 
 
 The Bitrise CLI creates a root directory for all test results and exposes its path in the `BITRISE_TEST_RESULT_DIR` Environment Variable (Env Var) for the supported Steps. As such, every supported Step sees its own test results directory.
 
-The Step then moves every artifact that is deemed a test result into the Step's test result directory: test result files, test attachments, logs, screenshots, and so on. 
+The Step then moves every artifact that is deemed a test result into the Step's test result directory: test result files, test attachments, logs, screenshots, and so on.
 
-{% include message_box.html type="important" title="Custom Steps" content="Please note that when using custom Script Steps to export your results, only image files are exported to Test Reports."%}
+{% include message_box.html type="important" title="Custom Steps" content="Please note that when using custom Script Steps to export your results, only image files are exported to Test Reports.
+
+When using the four supported Steps, as described in our [Test Reports guide](/testing/test-reports/), logs, videos, and other files are exported, too."%}
 
 After each Step, the Bitrise CLI checks the Steps's test result directory. If the directory is not empty, the CLI adds a metadata file called `step-info.json`. This file describes the Step:
 
