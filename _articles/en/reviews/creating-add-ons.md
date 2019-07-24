@@ -80,6 +80,7 @@ To provision a Bitrise app for your add-on, the add-on server should either crea
 * The[ app slug](https://api-docs.bitrise.io/#/application/app-list) of the Bitrise app.
 * A unique API token used to the authenticate the add-on to the Bitrise API. This enables the add-on to call Bitrise API endpoints: for example, to request build data or app information.
 * The add-on subscription plan of the app.
+* The title of the app.
 
 **Method**: `POST`
 
@@ -89,6 +90,7 @@ To provision a Bitrise app for your add-on, the add-on server should either crea
         "plan": "free"
         "app_slug": "example-appslug"
         "api_token": "public-API-token"
+        "app_title": "Example App"
     }
 
 In response, the add-on server sends back the list of Env Vars that will be exported in all builds of the app on Bitrise. In our example, the two Env Vars are `$MYADDON_HOST_URL` and `$MYADDON_AUTH_SECRET`.
@@ -144,6 +146,20 @@ Install the testing kit by downloading the binary and then make it executable.
 2. Make the binary executable.
 
        chmod +x /usr/local/bin/bitrise-addon-test
+3. Create a `config.yml` file for your add-on and place it in the directory of the add-on. 
+
+   The testing kit's GitHub repository contains an example configuration file. 
+4. Fill the file with the required values:
+   
+   * The URL of your add-on.
+   * The authentication token. 
+   * The SSO secret. 
+
+	```yaml
+    addon-url: "http://localhost:3000"
+	auth-token: "abc123"
+	sso-secret: "cba321"
+    ```
 
 ### Using the testing kit
 
