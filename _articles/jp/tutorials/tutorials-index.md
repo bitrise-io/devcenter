@@ -7,7 +7,7 @@ summary: 'In the Tutorials section, we are offering more detailed, in-depth guid
 menu:
   main:
     identifier: tutorials-main
-    weight: 11
+    weight: 13
 
 ---
 {% include not_translated_yet.html %}

@@ -4,7 +4,7 @@ redirect_from: "/jp/api/v0.1/"
 menu:
   main:
     identifier: api-main
-    weight: 15
+    weight: 17
 
 ---
 {% include not_translated_yet.html %}

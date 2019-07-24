@@ -1,6 +1,6 @@
 ---
 title: How to contribute to Bitrise
-date: '2018-12-13T11:31:09.000+00:00'
+date: 2018-12-13T11:31:09.000+00:00
 redirect_from: []
 menu:
   main:
@@ -9,7 +9,6 @@ menu:
     weight: 1
 
 ---
-
 Contributing to Bitrise is easy: write an open source integration, a guide, or a blog post, submit it and you're done! In this section, we'll be focusing on "technical" contributions: creating a new Step and creating your very own project scanner.
 
 ## Creating your own Step
