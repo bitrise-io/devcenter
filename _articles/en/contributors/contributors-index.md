@@ -12,7 +12,13 @@ summary: 'Contributing to Bitrise is easy: write an open source integration, a g
   scanner.'
 
 ---
-Contributing to Bitrise is easy: write an open source integration, a guide, or a **blog post**, submit it and you're done! In this section, we'll be focusing on **"**technical**"** contributions: creating a new Step and creating your very own project scanner.
+Contributing to Bitrise is easy: write an open source integration, a guide, or a blog post, submit it and you're done! In this section, we'll be focusing on technical contributions: creating a new Step and creating your very own project scanner.
+
+{% include message_box.html type="info" title="Contributing to content and the community" content="If you wish to contribute to Bitrise content, or take part in the community discussions, we have some links for you:
+
+* [Edit existing articles or submit new ones to our docs](https://github.com/bitrise-io/devcenter/).
+* [Read our blog](https://blog.bitrise.io/), and [contact us](https://www.bitrise.io/contact) if you want to write your own blog post.
+* [Request a feature, submit an issue, or just talk to other members of our community on our forums.](https://discuss.bitrise.io/)"%} 
 
 ## Creating your own Step
 
