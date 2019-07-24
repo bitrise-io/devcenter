@@ -64,7 +64,21 @@ All there's left to do is enabling GitHub Checks on your app's page on [Bitrise]
 
 And you're done! Now any pull request you open to your app on GitHub will be validated with Bitrise Checks and a build will get automatically started on Bitrise (if the [pull request trigger](/builds/triggering-builds/trigger-pull-request/) is properly set on Bitrise).
 
-{% include message_box.html type="info" title="Get to your app's page with a single click" content="If you click on the build summary or on **View more details on Bitrise Checks** link on the **Checks** tab, you'll quickly get to your app's Build page on Bitrise. "%}
+You can easily get to your app's page on Bitrise. If you click on the build summary or on **View more details on Bitrise Checks** link on the **Checks** tab, you'll quickly get to your app's Build page.
+
+Another nice-to-have came up, probably for next week, if you required status checks before merging on GitHub, you need to modify it to \`Bitrise\` instead of \`ci/bitrise/…\`, to be able to merge PRs.
+
+### Switching to Bitrise Checks
+
+If you have been using status checks on pull requests prior to merging them before, it must have been the `ci/bitrise/...` check system. To be able to use Bitrise Checks, you have to manually switch from `ci/bitrise/...` to **Bitrise** to access those detailed checks. Let's see how!
+
+![](/img/checks-pending.png)
+
+1. Go to the **Settings** tab of your repository.
+2. Click **Branches** on the side menu. Under **Require status checks to pass before merging**, you can see `ci/bitrise/...` as the selected checks system. 
+
+   ![](/img/require-status-checks.png)
+3. Select **Bitrise** instead of `ci/bitrise/...`.
 
 ## Disabling Github Checks
 
@@ -74,14 +88,4 @@ If you decide to uninstall Bitrise Checks from your GitHub account, you can clic
 
 ![](/img/disable-ghckecks.jpg)
 
-Please note you should have administrator rights over the repository to be able to change any settings of the Branches menu.
-
-If you have required Bitrise Checks on your repository and you're about to merge a PR but find below error next to `ci/bitrise/...`, then you have to manually switch to Bitrise in the Settings. Let's see how!
-
-![](/img/checks-pending.png)
-
-1. You have to go the **Settings** tab of your repository.
-2. Click **Branches** on the side menu. Under **Require status checks to pass before merging**, you can see `ci/bitrise/...` as the selected checks system. **Bitrise** intead of the old checks system; `ci/bitrise/...`.
-
-   ![](/img/require-status-checks.png)
-3. Select **Bitrise** instead of `ci/bitrise/...`.
+1. 
