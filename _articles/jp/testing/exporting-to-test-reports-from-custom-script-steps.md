@@ -12,7 +12,9 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-[Test Reports](/testing/test-reports/) allows you to view all your test results in a convenient way. By default, only four Steps support the Test Reports feature. However, you can export the test results of other Steps to Test Reports via custom Script Steps. Here's what you need to do:
+[Test Reports](/testing/test-reports/) allows you to view all your test results in a convenient way. By default, only four Steps support the Test Reports feature. However, there is a limited support for exporting your test results to Test Reports via custom Script Steps. The limitation is that you can only export image files this way - for example, screenshots of UI tests.
+
+Here's what you need to do:
 
 1. Deploy the test results in the correct directories.
 2. Make sure every test run has its own `test-info.json` file, with a test name.
@@ -25,7 +27,11 @@ To do all this, we need to delve a bit deeper into how the Test Reports feature 
 
 The Bitrise CLI creates a root directory for all test results and exposes its path in the `BITRISE_TEST_RESULT_DIR` Environment Variable (Env Var) for the supported Steps. As such, every supported Step sees its own test results directory.
 
-The Step then moves every artifact that is deemed a test result into the Step's test result directory: test result files, test attachments, logs, screenshots, and so on.
+The Step then moves every artifact that is deemed a test result into the Step's test result directory: test result files, test attachments, logs, screenshots, and so on. 
+
+{% include message_box.html type="important" title="Custom Steps" content="Please note that when using custom Script Steps to export your results, only image files are exported to Test Reports. 
+
+When using the four supported Steps, as described in our [Test Reports guide](/testing/test-reports/), logs, videos, and other files are exported, too."%}
 
 After each Step, the Bitrise CLI checks the Steps's test result directory. If the directory is not empty, the CLI adds a metadata file called `step-info.json`. This file describes the Step:
 
@@ -125,3 +131,5 @@ In the above example, we've created the test report JUnit XML file in the script
     echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
 
 If all goes well, you should be able to see your test results on the [Test Reports](/testing/test-reports/) page.
+
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Export test results with Script Steps</div> <a target="_blank" href="[https://app.bitrise.io/dashboard/builds](https://app.bitrise.io/dashboard/builds "https://app.bitrise.io/dashboard/builds")"><button class="button">Go to your app</button></a> </div>
