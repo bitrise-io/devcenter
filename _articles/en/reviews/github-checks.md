@@ -79,6 +79,7 @@ If you have been using status checks on pull requests prior to merging them befo
 
    ![](/img/require-status-checks.png)
 3. Select **Bitrise** instead of `ci/bitrise/...`.
+4. Merge a pull request.
 
 ## Disabling Github Checks
 
