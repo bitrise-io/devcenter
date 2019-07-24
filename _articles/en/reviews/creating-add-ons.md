@@ -146,10 +146,13 @@ Install the testing kit by downloading the binary and then make it executable.
 2. Make the binary executable.
 
        chmod +x /usr/local/bin/bitrise-addon-test
-3. Create a `config.yml` file for your add-on and place it in the directory of the add-on. 
+
+### Configuring the add-on for testing
+
+1. Create a `config.yml` file for your add-on and place it in the directory of the add-on. 
 
    The testing kit's GitHub repository contains an example configuration file. 
-4. Fill the file with the required values:
+1. Fill the file with the required values:
    
    * The URL of your add-on.
    * The authentication token. 
