@@ -6,11 +6,11 @@ summary: ''
 published: false
 
 ---
-It’s not related to users at all, it’s related to how you start the build and to how `git` works.
+(It’s not related to users at all, it’s related to how you start the build and to how `git` works.)
 
 If you start a manual build and you **only** specify a **branch**, then **Git Clone** will clone that branch.
 
-But if you use webhooks to automatically trigger builds on code changes, [bitrise.io 5](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and **Git Clone** will “clone” that specific commit.
+But if you use webhooks to automatically trigger builds on code changes, [bitrise.io](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and **Git Clone** will “clone” that specific commit.
 
 You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
 
@@ -28,7 +28,6 @@ You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
       git checkout -b <new-branch-name>
     
     HEAD is now at 6415740... commit message
-    
 
 Now, the thing about the `detached HEAD` state is that you **can’t commit & push directly**, without checking out a branch first. You can create commits, but if you’re not on a branch (`detached HEAD` is not a branch, in this state you’re not on any branch) you won’t be able to push the commit.
 
@@ -41,12 +40,10 @@ You also have to be careful which branch you checkout, e.g. if the build was sta
 In any case, this is how `git` works, so you can test this locally too. A webhook triggered build (when a commit hash is available) is similar to doing a
 
     git checkout COMMITHASH
-    
 
 while if the build is started without a commit hash, only with a branch parameter, that’s similar to
 
     git checkout BRANCH
-    
 
 You can test both on your own Mac and see what you have to do to make the tool you use to work with the `git checkout COMMITHASH` case.
 
