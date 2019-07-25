@@ -53,8 +53,4 @@ while if the build is started without a commit hash, only with a branch paramete
 
 You can test both on your own Mac and see what you have to do to make the tool you use to work with the `git checkout COMMITHASH` case.
 
-{% include message_box.html type="important" title="My message" content="If you push back the generated version bump commit and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI 32](http://devcenter.bitrise.io/tips-and-tricks/skip-a-build/) feature, to skip this auto generated commit."%}
-
-
-
-[https://devcenter.bitrise.io/builds/triggering-builds/skipping-a-given-commit-or-pull-request/](https://devcenter.bitrise.io/builds/triggering-builds/skipping-a-given-commit-or-pull-request/ "https://devcenter.bitrise.io/builds/triggering-builds/skipping-a-given-commit-or-pull-request/")
+{% include message_box.html type="important" title="Skipping a commit" content="If you push back the generated version bump commit and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit) feature and skip this auto generated commit."%}
