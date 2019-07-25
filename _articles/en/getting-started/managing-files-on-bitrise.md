@@ -16,7 +16,7 @@ menu:
 ---
 Managing files on Bitrise allows you to upload files to use in your builds. You are required to upload files for the purposes of code signing. Builds also produce files as outputs. The good news is that this is all very simple!
 
-### Uploading files to use in your build
+## Uploading files to use in your build
 
 If your build requires any files to make it work, upload them to the **Generic File Storage**. The **Generic File Storage** accepts any file type, all you need to do is provide a unique ID and upload the file.
 
@@ -45,7 +45,7 @@ Once a file is uploaded, it can also be:
 * Downloaded by anyone who has [Admin or Owner role](/team-management/user-roles-on-app-teams/) on the app's team on Bitrise, unless [it is protected](/code-signing/ios-code-signing/protecting-your-code-signing-files/).
 * Exposed to pull request builds.
 
-### Code signing files
+## Code signing files
 
 Bitrise can do your code signing for you but we need some files to make it happen.
 
@@ -57,7 +57,7 @@ Read more about [Android](/code-signing/android-code-signing/android-code-signin
 
 {% include message_box.html type="info" title="Password protection for iOS code signing files" content="You can set a password in Xcode to store your code signing certificates securely. This password can be viewed on Bitrise: click on the eye icon next to the certificate file, in the **Password** field."%}
 
-### Output files
+## Output files
 
 Builds can generate and export files: for example, you can export a binary package file of your app with a Bitrise build. You can easily find these files:
 
@@ -67,7 +67,7 @@ Builds can generate and export files: for example, you can export a binary packa
 
 You can read more about [build artifacts](/builds/build-artifacts-online/) in our detailed guide!
 
-### Using encrypted files
+## Using encrypted files
 
 You can use encrypted files on Bitrise, easily and securely. All you need to do is encrypt the file on your computer, upload it to your repo and use a Step to decrypt it when you need it.
 
@@ -96,7 +96,7 @@ In this example, we'll show how to do this. We use the **pwgen** password genera
 That's it! Once you run the build, the Step will decrypt your file and you can use it for whatever you need it for!
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything!</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything!</div>
+<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
 </div>
