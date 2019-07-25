@@ -6,11 +6,11 @@ summary: ''
 published: false
 
 ---
-(It’s not related to users at all, it’s related to how you start the build and to how `git` works.)
+Build failures dependent on how to start a build and how `git` works.
 
-If you start a manual build and you **only** specify a **branch**, then **Git Clone** will clone that branch.
+If you start a build manually and you only specify a branch, then `git-clone` will clone that branch.
 
-But if you use webhooks to automatically trigger builds on code changes, [bitrise.io](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and **Git Clone** will “clone” that specific commit.
+But if you use webhooks to automatically trigger builds on code changes, [bitrise.io](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and **Git Clone** will clone that specific commit.
 
 You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
 
@@ -29,9 +29,15 @@ You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
     
     HEAD is now at 6415740... commit message
 
-Now, the thing about the `detached HEAD` state is that you **can’t commit & push directly**, without checking out a branch first. You can create commits, but if you’re not on a branch (`detached HEAD` is not a branch, in this state you’re not on any branch) you won’t be able to push the commit.
+## About detached HEAD
 
-The git log actually includes the solution for the issue too: you can “get back to a branch” by `git checkout -b BRANCH`. Alternatively you could `git checkout BRANCH` **before** commit & push, to switch to a branch **before** you’d do your changes. **Beware**, if you do this you might commit on a different state of the code than what was build/tested during the build!
+Now the thing about the `detached HEAD` state is that you CAN'T COMMIT AND PUSH directly without checking out a branch first. You can create commits, but if you’re not on a branch (`detached HEAD` is not a branch, in this state you’re not on any branch) you won’t be able to push the commits.
+
+### Solution
+
+The git log actually includes the solution for the issue too: you can get back to a branch by `git checkout -b BRANCH`. 
+
+Alternatively you could `git checkout BRANCH` before committing and pushing changes. This way you can switch to a branch before you’d do your changes. Please note if you do this, you might commit on a different state of the code than what was build/tested during the build!
 
 Imagine this: you push code to `feature/a`, which starts a build on [bitrise.io 5](https://www.bitrise.io/) **with that specific commit**, then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might actually point to the second commit instead of the first one, as `feature/a` now has a new commit! You could possibly fix this by doing `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (`feature/a` in the example).
 
