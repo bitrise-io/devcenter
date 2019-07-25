@@ -39,9 +39,9 @@ The git log actually includes the solution for the issue too. You can get back t
 
 Alternatively you could `git checkout BRANCH` before committing and pushing changes. This way you can switch to a branch before you’d do those changes. Please note if you chose this option, you might commit on a different state of the code than what was build/tested during the build.
 
-{% include message_box.html type="example" title="Example" content="Imagine this: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might actually point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example)."%}
+{% include message_box.html type="example" title="Example" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
 
-You also have to be careful which branch you checkout, e.g. if the build was started by `feature/a` you should checkout that branch and not a hardcoded one (e.g. master)! You can get the build’s branch through the `BITRISE_GIT_BRANCH` env var ([http://devcenter.bitrise.io/faq/available-environment-variables/](http://devcenter.bitrise.io/faq/available-environment-variables/ "http://devcenter.bitrise.io/faq/available-environment-variables/")[ 7](http://devcenter.bitrise.io/faq/available-environment-variables/)).
+You also have to be careful which branch you check out. For example, if the build was started by `feature/a,` you should check out that branch instead of a hardcoded one (for example, a master branch). Learn how to get the build’s branch through the `BITRISE_GIT_BRANCH` [env var](/builds/available-environment-variables/)."%}
 
 In any case, this is how `git` works, so you can test this locally too. A webhook triggered build (when a commit hash is available) is similar to doing a
 
@@ -53,4 +53,8 @@ while if the build is started without a commit hash, only with a branch paramete
 
 You can test both on your own Mac and see what you have to do to make the tool you use to work with the `git checkout COMMITHASH` case.
 
-**One more important note:** if you push back the generated version bump commit and you have a webhook which starts a build on [bitrise.io 5](https://www.bitrise.io/) for code changes, **that push will also start a build**, leading to a potential infinite build cycle! You can fix this by using the [Skip CI 32](http://devcenter.bitrise.io/tips-and-tricks/skip-a-build/) feature, to skip this auto generated commit.
+{% include message_box.html type="important" title="My message" content="If you push back the generated version bump commit and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI 32](http://devcenter.bitrise.io/tips-and-tricks/skip-a-build/) feature, to skip this auto generated commit."%}
+
+
+
+[https://devcenter.bitrise.io/builds/triggering-builds/skipping-a-given-commit-or-pull-request/](https://devcenter.bitrise.io/builds/triggering-builds/skipping-a-given-commit-or-pull-request/ "https://devcenter.bitrise.io/builds/triggering-builds/skipping-a-given-commit-or-pull-request/")
