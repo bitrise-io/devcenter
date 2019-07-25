@@ -31,15 +31,15 @@ You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
 
 ## About detached HEAD
 
-Now the thing about the `detached HEAD` state is that you CAN'T COMMIT AND PUSH directly without checking out a branch first. You can create commits, but if you’re not on a branch (`detached HEAD` is not a branch, in this state you’re not on any branch) you won’t be able to push the commits.
+In the case of the `detached HEAD` state, you CAN'T COMMIT and PUSH directly without checking out a branch first. You can create commits, but if you’re not on a branch (`detached HEAD` is not a branch, in this state you’re not on any branch) you won’t be able to push the commits.
 
 ### Solution
 
-The git log actually includes the solution for the issue too: you can get back to a branch by `git checkout -b BRANCH`. 
+The git log actually includes the solution for the issue too. You can get back to a branch by `git checkout -b BRANCH`. 
 
-Alternatively you could `git checkout BRANCH` before committing and pushing changes. This way you can switch to a branch before you’d do your changes. Please note if you do this, you might commit on a different state of the code than what was build/tested during the build!
+Alternatively you could `git checkout BRANCH` before committing and pushing changes. This way you can switch to a branch before you’d do those changes. Please note if you chose this option, you might commit on a different state of the code than what was build/tested during the build.
 
-Imagine this: you push code to `feature/a`, which starts a build on [bitrise.io 5](https://www.bitrise.io/) **with that specific commit**, then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might actually point to the second commit instead of the first one, as `feature/a` now has a new commit! You could possibly fix this by doing `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (`feature/a` in the example).
+{% include message_box.html type="example" title="My message" content="Imagine this: you push code to `feature/a`, which starts a build on [bitrise.io 5](https://www.bitrise.io/) **with that specific commit**, then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might actually point to the second commit instead of the first one, as `feature/a` now has a new commit! You could possibly fix this by doing `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (`feature/a` in the example)."%}
 
 You also have to be careful which branch you checkout, e.g. if the build was started by `feature/a` you should checkout that branch and not a hardcoded one (e.g. master)! You can get the build’s branch through the `BITRISE_GIT_BRANCH` env var ([http://devcenter.bitrise.io/faq/available-environment-variables/](http://devcenter.bitrise.io/faq/available-environment-variables/ "http://devcenter.bitrise.io/faq/available-environment-variables/")[ 7](http://devcenter.bitrise.io/faq/available-environment-variables/)).
 
