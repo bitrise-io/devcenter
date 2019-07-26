@@ -61,7 +61,7 @@ You can bump the version number manually, treating it just like any other code c
 
 {% include message_box.html type="note" title="Managing version and build numbers" content=" iOS apps have both a version number and a build number info. You can manage the version number manually, and set the build number automatically, to the `BITRISE_BUILD_NUMBER`, for example, with the [Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) Step. "%}
 
-This solution is the easiest to setup and manage, and it’s probably the best for App type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
+This solution is the easiest to setup and manage, and it’s probably the best for app type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
 
 ## Using git tags for versioning
 
