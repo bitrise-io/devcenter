@@ -55,7 +55,9 @@ You can test both on your own Mac and see what you have to do to make the tool y
 
 {% include message_box.html type="important" title="Skipping a commit" content="If you push back the generated version bump commit, and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit) feature and skip the auto-generated commit."%}
 
-## Incrementing the version number manually
+## Incrementing the version number 
+
+### Manually in the code
 
 You can bump the version number manually, treating it just like any other code change (creating a Pull Request too), as we believe version numbers should mean something and are part of the code. In this case we use the `BITRISE_BUILD_NUMBER` as the build number in the app, which does not require committing it into the code and this way you can link every build of the app to the build on [bitrise.io](https://www.bitrise.io).
 
@@ -63,9 +65,9 @@ You can bump the version number manually, treating it just like any other code c
 
 This solution is the easiest to setup and manage, and it’s probably the best for app type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
 
-## Using git tags for versioning
+### Using git tags for versioning
 
-If you don't want to store the version in the code directly, we use git tags for versioning, which does not require a commit to be pushed, only git tag x.x.x && git push origin tags/x.x.x (this is mainly for web projects with continuous deployment, where a version number wouldn’t mean much in the code - but lately we try to switch to including the version number in the project and we use this less frequently, and use the previous solution instead in most cases)
+If you don't want to store the version in the code directly, you can use git tags for versioning, which does not require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x` (this is mainly for web projects with continuous deployment, where a version number wouldn’t mean much in the code.)
 
 ## Auto-generating a commit
 
