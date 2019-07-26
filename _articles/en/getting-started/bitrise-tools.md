@@ -44,6 +44,10 @@ With this [plugin](https://github.com/bitrise-io/bitrise-workflow-editor.git) yo
 
 {% include message_box.html type="info" title="offline Workflow Editor" content="Learn how to [install and start the offline Workflow Editor](/bitrise-cli/offline-workflow-editor/) and [how to download your build's bitrise.yml file to your computer](/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online)."%}
 
+### bitrise-plugin-io
+
+With this [plugin](https://github.com/bitrise-io/bitrise-plugins-io), you can manage your apps on [bitrise.io](https://www.bitrise.io) right from the Terminal or command line.
+
 ## iOS code signing tool
 
 ### codesigndoc
