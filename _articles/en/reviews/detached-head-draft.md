@@ -43,7 +43,7 @@ When it comes to `git checkout` in general, you also have to be careful which br
 
 ### Testing git checkout locally
 
- A webhook triggered build (when a commit hash is available) is similar to doing a
+A webhook triggered build (when a commit hash is available) is similar to doing a
 
     git checkout COMMITHASH
 
@@ -57,9 +57,9 @@ You can test both on your own Mac and see what you have to do to make the tool y
 
 ## Incrementing the version number manually
 
-You can bump the version number manually, treating it just like any other code change (creating a Pull Request too), as we believe version numbers should mean something and are part of the code. In this case we use the \`BITRISE_BUILD_NUMBER\` as the build number in the app, which does not require committing it into the code and this way you can link every build of the app to the build on [bitrise.io](https://www.bitrise.io).
+You can bump the version number manually, treating it just like any other code change (creating a Pull Request too), as we believe version numbers should mean something and are part of the code. In this case we use the `BITRISE_BUILD_NUMBER` as the build number in the app, which does not require committing it into the code and this way you can link every build of the app to the build on [bitrise.io](https://www.bitrise.io).
 
-{% include message_box.html type="note" title="My message" content=" iOS apps have both a version number and a build number info, which is ideal to do this: manage the version number manually, and set the build number automatically, to the `BITRISE_BUILD_NUMBER`, e.g. by using the Set Xcode Project Build Number step. "%}
+{% include message_box.html type="note" title="Managing version and build numbers" content=" iOS apps have both a version number and a build number info. You can manage the version number manually, and set the build number automatically, to the `BITRISE_BUILD_NUMBER`, for example, with the [Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) Step. "%}
 
 This solution is the easiest to setup and manage, and it’s probably the best for App type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
 
