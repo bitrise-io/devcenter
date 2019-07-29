@@ -46,7 +46,7 @@ With this [plugin](https://github.com/bitrise-io/bitrise-workflow-editor.git) yo
 
 ### bitrise-plugin-io
 
-With this [plugin](https://github.com/bitrise-io/bitrise-plugins-io), you can manage your apps on [bitrise.io](https://www.bitrise.io) right from the Terminal or from the command line. Check out the plugin's [How to use](https://github.com/bitrise-io/bitrise-plugins-io#how-to-use) section for more cues.
+With this [plugin](https://github.com/bitrise-io/bitrise-plugins-io), you can manage your apps on [bitrise.io](https://www.bitrise.io) right from the Terminal / command line. Check out the plugin's [How to use](https://github.com/bitrise-io/bitrise-plugins-io#how-to-use) section for details.
 
 ## iOS code signing tool
 
