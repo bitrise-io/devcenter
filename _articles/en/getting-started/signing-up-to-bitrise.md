@@ -119,3 +119,9 @@ Now let's see how to sign up to Bitrise.
 8. You're directed to the **Help us help you** page where you can share some more details with us or add those later.
 
 If all went well, you're landed on your Bitrise Dashboard where you can view the Organization's apps! If you go to your **Account Settings**, you will see the [Organization]() you've just joined.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's sign up to Bitrise</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up"><button class="button">Go to the sign up page</button></a>
+</div>

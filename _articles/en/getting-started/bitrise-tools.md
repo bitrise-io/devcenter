@@ -64,3 +64,9 @@ Your friendly iOS Code Signing Doctor.
 ### bitrise webhooks
 
 This [Bitrise Webhooks processor](https://github.com/bitrise-io/bitrise-webhooks) transforms various incoming webhooks (for example, from GitHub, Bitbucket, or Slack) to [bitrise.io](https://www.bitrise.io)'s Build Trigger API format, and calls it to start a build.
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>
