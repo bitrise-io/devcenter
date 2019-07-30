@@ -17,9 +17,31 @@ You can do a whole lot of things with Ship:
 * Install a given release directly from the Ship page for testing, or share it with a third party.
 * Quickly deploy a given release to all applicable online stores, once you set up publishing.
 
-## Publishing settings 
+## Publishing an app with Ship
 
-On the Settings page, you can configure a number of options for publishing your app. 
+To publish an app using Ship, you need a minimum of two things (other than an app, of course). 
+
+* At least one Workflow's artifacts must be exposed to Ship.
+* All such Workflows must include a **Deploy to Bitrise.io**  Step.
+
+To expose a Workflow's artifacts to Ship:
+
+1. Go to your app's Ship page. 
+2. Click **Settings** in the top right corner. 
+3. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need. 
+
+   Be aware there are TWO such text boxes: one for iOS and one for Android. If your app is cross-platform, fill out both. Separate the different Workflow names with a comma. 
+4. Scroll down to the bottom of the page and click **Save**. 
+
+### Publishing settings 
+
+On the Settings page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define settings separately for the iOS and the Android versions. 
+
+For iOS:
+
+* Choose the provisioning profiles and code signing identities to be used.
+* Set the app specific password. 
+* Set the Apple Developer Account email. 
 
 1. Go to your app's Ship page. 
 2. Click **Settings** in the top right corner. 
