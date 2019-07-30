@@ -35,7 +35,7 @@ To expose a Workflow's artifacts to Ship:
 
 ### Publishing settings 
 
-On the Settings page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define settings separately for the iOS and the Android versions. 
+On the Settings page, you can configure a number of other options for publishing your app. If it's a cross-platform app, you can define settings separately for the iOS and the Android versions. 
 
 For iOS:
 
