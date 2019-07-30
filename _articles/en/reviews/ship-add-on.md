@@ -35,7 +35,7 @@ To expose a Workflow's artifacts to Ship:
 
 ### Publishing settings 
 
-On the Settings page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define settings separately for the iOS and the Android versions. 
+On the **Settings** page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define settings separately for the iOS and the Android versions. 
 
 For iOS:
 
@@ -43,6 +43,14 @@ For iOS:
 * Set the app specific password. 
 * Set the Apple Developer Account email. 
 
+To access the **Settings** page:
+
 1. Go to your app's Ship page. 
 2. Click **Settings** in the top right corner. 
-3. 
+
+### Code signing files
+
+On the **Settings** page, you can choose between different code signing files. You can upload these files - iOS provisioning profiles and certificates, Android keystore files and Service Account JSON files - in the usual way:
+
+* [iOS code signing files](/code-signing/ios-code-signing/code-signing-index/).
+* [Android code signing files.](/code-signing/android-code-signing/android-code-signing-index/)
