@@ -39,6 +39,13 @@ To expose a Workflow's artifacts to Ship:
    Be aware there are TWO such text boxes: one for iOS and one for Android. If your app is cross-platform, fill out both. Separate the different Workflow names with a comma. 
 4. Scroll down to the bottom of the page and click **Save**. 
 
+### Code signing files
+
+On the **Settings** page, you can choose between different code signing files. You can upload these files - iOS provisioning profiles and certificates, Android keystore files and Service Account JSON files - in the usual way:
+
+* [iOS code signing files](/code-signing/ios-code-signing/code-signing-index/).
+* [Android code signing files](/code-signing/android-code-signing/android-code-signing-index/).
+
 ### Publishing an app for iOS
 
 On the **iOS Settings** section of the **Settings page**, you can:
@@ -79,10 +86,3 @@ To configure publishing an app for Android:
 5. Choose the approriate keystore file and the Service Account JSON file. 
 
 When you're done, you can go back to the app's home page in Ship, and click **Publish**.
-
-### Code signing files
-
-On the **Settings** page, you can choose between different code signing files. You can upload these files - iOS provisioning profiles and certificates, Android keystore files and Service Account JSON files - in the usual way:
-
-* [iOS code signing files](/code-signing/ios-code-signing/code-signing-index/).
-* [Android code signing files.](/code-signing/android-code-signing/android-code-signing-index/)
