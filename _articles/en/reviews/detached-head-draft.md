@@ -6,11 +6,13 @@ summary: ''
 published: false
 
 ---
-Build failures can stem from how a build is started and how git works.
+we will shed some light on the 
+
+Builds can fail due to many reasons, and one of those is related to how a build is started and how git works. **In this guide we discuss the error and the solution related to that.**
 
 If you start a build manually and you only specify a branch, then `git-clone` will clone that branch.
 
-But if you use webhooks to automatically trigger builds on code changes, [bitrise.io](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and **Git Clone** will clone that specific commit.
+But if you use webhooks to automatically trigger builds on code changes, [bitrise.io](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and `git-clone` will clone that specific commit. 
 
 You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
 
@@ -28,6 +30,8 @@ You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
       git checkout -b <new-branch-name>
     
     HEAD is now at 6415740... commit message
+
+As you can see from the error message, now you are in a detached Head state which means the Head is not pointing to the tip of the current branch but to your commit object. This means you are not on any branch. What you can do in a detached Head state is: - -   create commits
 
 ## About detached HEAD
 
@@ -55,7 +59,7 @@ You can test both on your own Mac and see what you have to do to make the tool y
 
 {% include message_box.html type="important" title="Skipping a commit" content="If you push back the generated version bump commit, and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit) feature and skip the auto-generated commit."%}
 
-## Incrementing the version number 
+## Incrementing the version number
 
 ### Manually in the code
 
