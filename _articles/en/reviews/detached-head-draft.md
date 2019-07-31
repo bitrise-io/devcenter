@@ -6,13 +6,13 @@ summary: ''
 published: false
 
 ---
-we will shed some light on the 
+we will shed some light on the
 
 Builds can fail due to many reasons, and one of those is related to how a build is started and how git works. **In this guide we discuss the error and the solution related to that.**
 
 If you start a build manually and you only specify a branch, then `git-clone` will clone that branch.
 
-But if you use webhooks to automatically trigger builds on code changes, [bitrise.io](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and `git-clone` will clone that specific commit. 
+But if you use webhooks to automatically trigger builds on code changes, [bitrise.io](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and `git-clone` will clone that specific commit.
 
 You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
 
@@ -31,15 +31,16 @@ You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
     
     HEAD is now at 6415740... commit message
 
-As you can see from the error message, now you are in a detached Head state which means the Head is not pointing to the tip of the current branch but to your commit object. This means you are not on any branch. What you can do in a detached Head state is: - -   create commits
+As you can see from the error message, now you are in a detached Head state which means the Head is not pointing to the tip of the current branch but to your commit object. This means you are not on any branch so you can't push the commits to any branch at this stage. What you can do in a detached Head state is:
 
-## About detached HEAD
+* creating commits
+* checking if tests have successfully run in this code version
 
-In the case of the `detached HEAD` state, you can't commit and push directly without checking out a branch first. As the above log message describes, you can create commits, but if you’re not on a branch (`detached HEAD` is not a branch) you won’t be able to push the commits.
+So to be able to commit and push directly to a branch, you'll have to check out a branch first. 
 
-### Solution
+## Solution
 
-The git log actually includes the solution for the issue too. You can get back to a branch by `git checkout -b BRANCH`. You could also `git checkout BRANCH` before committing and pushing changes. Please bear in mind that if you chose this option, you might commit on a different state of the code than what was built/tested during the build.
+The above error message suggests a solution for getting back to a branch from the detached Head state. You can get back to a branch by `git checkout -b BRANCH`. You could also `git checkout BRANCH` before committing and pushing changes. Please bear in mind that if you chose this option, you might commit on a different state of the code than what was built/tested during the build.
 
 {% include message_box.html type="example" title="Example" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
 
