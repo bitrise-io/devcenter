@@ -24,6 +24,8 @@ To publish an app using Ship, you need a minimum of two things (other than an ap
 * At least one Workflow's artifacts must be exposed to Ship.
 * All such Workflows must include a **Deploy to Bitrise.io**  Step.
 
+Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an .ipa file, you can deploy that file using Ship. 
+
 To expose a Workflow's artifacts to Ship:
 
 1. Go to your app's Ship page. 
@@ -42,6 +44,12 @@ For iOS:
 * Choose the provisioning profiles and code signing identities to be used.
 * Set the app specific password. 
 * Set the Apple Developer Account email. 
+* Set the App SKU.
+
+For Android:
+
+* Choose the Android keystore files and the Service Account JSON file. 
+* Set the track you want to use to release your APK.
 
 To access the **Settings** page:
 
