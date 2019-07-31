@@ -26,6 +26,10 @@ To publish an app using Ship, you need a minimum of two things (other than an ap
 
 Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an .ipa file, you can deploy that file using Ship. 
 
+On the **Settings** page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define settings separately for the iOS and the Android versions. 
+
+### Exposing a Workflow's artifacts to Ship
+
 To expose a Workflow's artifacts to Ship:
 
 1. Go to your app's Ship page. 
@@ -37,8 +41,6 @@ To expose a Workflow's artifacts to Ship:
 
 ### Publishing an app for iOS
 
-On the **Settings** page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define settings separately for the iOS and the Android versions. 
-
 For iOS:
 
 * Choose the provisioning profiles and code signing identities to be used.
@@ -47,6 +49,8 @@ For iOS:
 * Set the App SKU.
 
 ### Publishing an app for Android
+
+On the **Settings** page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define settings separately for the iOS and the Android versions. 
 
 For Android:
 
