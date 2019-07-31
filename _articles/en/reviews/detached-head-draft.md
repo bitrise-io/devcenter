@@ -6,9 +6,7 @@ summary: ''
 published: false
 
 ---
-we will shed some light on the
-
-Builds can fail due to many reasons, and one of those is related to how a build is started and how git works. **In this guide we discuss the error and the solution related to that.**
+Builds can fail due to many reasons, and one of those is related to how a build is started and how Git works.
 
 If you start a build manually and you only specify a branch, then `git-clone` will clone that branch.
 
