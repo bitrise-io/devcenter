@@ -41,26 +41,36 @@ To expose a Workflow's artifacts to Ship:
 
 ### Publishing an app for iOS
 
-For iOS:
+On the **iOS Settings** section of the **Settings page**, you can:
 
 * Choose the provisioning profiles and code signing identities to be used.
 * Set the app specific password. 
 * Set the Apple Developer Account email. 
 * Set the App SKU.
 
+To publish an iOS app:
+
+1. Open your app's Ship page and click **Settings** in the top right corner.
+2. Go to the **iOS Settings** section. 
+3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the .ipa you want to publish. 
+4. Select the [code signing files](/deploy/ship/#code-signing-files) you want to use. 
+
+   Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
+
 ### Publishing an app for Android
 
-On the **Settings** page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define settings separately for the iOS and the Android versions. 
-
-For Android:
+On the **Android Settings** section of the **Settings page**, you can:
 
 * Choose the Android keystore files and the Service Account JSON file. 
 * Set the track you want to use to release your APK.
 
-To access the **Settings** page:
+To publish an Android app:
 
-1. Go to your app's Ship page. 
-2. Click **Settings** in the top right corner. 
+1. Open your app's Ship page and click **Settings** in the top right corner.
+2. Go the **Android Settings** section.
+3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the APK you want to publish. 
+4. Set the [track](https://developers.google.com/android-publisher/tracks) you want to use. 
+5. Choose the approriate keystore file and the Service Account JSON file. 
 
 ### Code signing files
 
