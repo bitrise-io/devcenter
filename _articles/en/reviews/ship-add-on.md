@@ -35,7 +35,7 @@ To expose a Workflow's artifacts to Ship:
    Be aware there are TWO such text boxes: one for iOS and one for Android. If your app is cross-platform, fill out both. Separate the different Workflow names with a comma. 
 4. Scroll down to the bottom of the page and click **Save**. 
 
-### Publishing settings 
+### Publishing an app for iOS
 
 On the **Settings** page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define settings separately for the iOS and the Android versions. 
 
@@ -45,6 +45,8 @@ For iOS:
 * Set the app specific password. 
 * Set the Apple Developer Account email. 
 * Set the App SKU.
+
+### Publishing an app for Android
 
 For Android:
 
