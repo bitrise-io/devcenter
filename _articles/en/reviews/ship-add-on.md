@@ -48,7 +48,9 @@ On the **iOS Settings** section of the **Settings page**, you can:
 * Set the Apple Developer Account email. 
 * Set the App SKU.
 
-To publish an iOS app:
+Once you configured publishing for the app, you do not have to set these options every time, only if you want to change some of them. 
+
+To configure publishing an app for iOS:
 
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go to the **iOS Settings** section. 
@@ -64,7 +66,9 @@ On the **Android Settings** section of the **Settings page**, you can:
 * Choose the Android keystore files and the Service Account JSON file. 
 * Set the track you want to use to release your APK.
 
-To publish an Android app:
+Once you configured publishing for the app, you do not have to set these options every time, only if you want to change some of them. 
+
+To configure publishing an app for Android:
 
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go the **Android Settings** section.
