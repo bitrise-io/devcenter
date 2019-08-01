@@ -87,6 +87,6 @@ You should be landing on your Bitrise Dashboard now. If you click **Account sett
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Set up Google SSO for your Bitrise organization!</div>
+	<div class="deploy-text">Set up Google SSO!</div>
 	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your organization</button></a>
 </div>
