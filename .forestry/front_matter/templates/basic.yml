@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/reviews/ship-add-on.md
 - _articles/en/infrastructure/virtual-machines.md
 - _articles/en/infrastructure/stack-update-and-removal-policy.md
@@ -221,7 +222,6 @@ pages:
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/bitrise-ioへiosアプリのデプロイ-deploying-an-ios-app-to-bitrise-io.md
 - _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
-- _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/keystoreファイルのダウンロード-downloading-a-keystore-file.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
