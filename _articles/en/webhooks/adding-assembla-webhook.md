@@ -26,8 +26,8 @@ You can set up webhooks so that Bitrise automatically triggers a build of your a
 7. Paste the following code to **Content**:
 
        {"assembla": {"space": "%{space}", "action": "%{action}", "object": "%{object}"}, "message": {"title": "%{title}", "body": "%{body}", "author": "%{author}"}, "git": {"repository_suffix": "%{repository_suffix}", "repository_url": "%{repository_url}", "branch": "%{branch}", "commit_id": "%{commit_id}"}}
-8. Select `Code commits` and/or `Git Push` in the `Post updates about:` section.
-9. Click `Add`.
+8. Select **Code commits** and/or **Git Push** in the **Post updates about:** section.
+9. Click **Add**.
 
 That's all! The next time you **push code** a build will be triggered (if you have Trigger mapping defined for the event(s) on Bitrise).
 
