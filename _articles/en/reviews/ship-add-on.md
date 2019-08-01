@@ -87,6 +87,7 @@ To configure publishing an app for iOS:
 4. Select the [code signing files](/deploy/ship/#code-signing-files) you want to use. 
 
    Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
+5. Set the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store. 
 
 When you're done, you can go back to the app's home page in Ship, and click **Publish**.
 
@@ -126,3 +127,12 @@ To add screenshots or feature graphics to your app details page:
 1. Open the **Details** page in Ship of your app's chosen release. 
 2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.
 3. Drag and drop a file OR click **Browse files** and select the ones you wish to upload. 
+4. Once done, click **Save** in the top right corner.  
+
+### Updating the app's descriptions 
+
+Update the app's short and full descriptions in the same way: 
+
+1. Open the **Details** page in Ship of your app's chosen release. 
+2. Go to **Short description** or **Full description**. 
+3. 
