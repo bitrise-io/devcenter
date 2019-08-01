@@ -58,6 +58,13 @@ To install an app on a device, there are three options:
 
 {% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must configure your exposed Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`."%}
 
+{% include message_box.html type="important" title="Binary types" content="The public install page is not available for all type of artifacts.
+
+* For iOS, it's only available if the .ipa file is signed with a Debug, Development or Ad-Hoc type provisioning profile. It's not available if the artifact is an .xcarchive file.
+
+
+* For Android, it's only available if the artifact is a universal APK. For split APKs or AABs, there will be no public install page link."%}
+
 To send the public install page link or the QR code:
 
 1. [Expose the Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the installable file, and run the Workflow on Bitrise. 
