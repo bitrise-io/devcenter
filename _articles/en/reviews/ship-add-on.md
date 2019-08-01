@@ -15,7 +15,7 @@ You can do a whole lot of things with Ship:
 * View all the build versions of your app.
 * View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
 * Install a given build version directly from the Ship page for testing, or share it with a third party.
-* Quickly deploy a given build version to all applicable online stores, once you set up publishing.
+* Deploy a given build version to App Store Connect and/or the Play Store, once you set up publishing.
 
 ## Publishing an app with Ship
 
@@ -77,7 +77,7 @@ To install it directly from Ship:
 
 ### Publishing an app for iOS
 
-To configure publishing an iOS app to the App Store, you can:
+To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you can:
 
 * Choose the provisioning profiles and code signing identities to be used.
 * Set the app specific password.
