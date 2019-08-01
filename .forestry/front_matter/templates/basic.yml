@@ -28,8 +28,8 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- _articles/en/infrastructure/available-stacks.md
 - _articles/en/reviews/ship-add-on.md
+- _articles/en/infrastructure/available-stacks.md
 - _articles/en/reviews/bitrise-tools-draft.md
 - _articles/jp/getting-started/getting-started-with-expo-apps.md
 - _articles/jp/tips-and-tricks/screen-recording-your-ui-tests-with-appium.md

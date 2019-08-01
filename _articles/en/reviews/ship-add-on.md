@@ -22,7 +22,7 @@ You can do a whole lot of things with Ship:
 To publish an app using Ship, you need a minimum of two things (other than an app, of course). 
 
 * At least one Workflow's artifacts must be exposed to Ship.
-* All such Workflows must include a **Deploy to Bitrise.io**  Step.
+* All such Workflows must include a **Deploy to Bitrise.io** Step.
 
 Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an .ipa file, you can deploy that file using Ship. 
 
@@ -45,6 +45,14 @@ On the **Settings** page, you can choose between different code signing files. Y
 
 * [iOS code signing files](/code-signing/ios-code-signing/code-signing-index/).
 * [Android code signing files](/code-signing/android-code-signing/android-code-signing-index/).
+
+### Installing an app on a device
+
+To install an app on a device, there are three options:
+
+* Send the public install page link to all the testers and other stakeholders. 
+* Send the QR code: scanning it takes you to the public install page of the app. 
+* Log in to Ship from the device and install it directly from there. 
 
 ### Publishing an app for iOS
 
