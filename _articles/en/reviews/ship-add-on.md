@@ -135,4 +135,8 @@ Update the app's short and full descriptions in the same way:
 
 1. Open the **Details** page in Ship of your app's chosen release. 
 2. Go to **Short description** or **Full description**. 
-3. 
+3. Click the Edit icon, shaped like a pencil. 
+4. Edit the content.
+
+   Note that the short description can contain a maximum of 80 characters while a full description can contain a maximum of 4000 characters. 
+5. Click **Save** in the top right corner. 
