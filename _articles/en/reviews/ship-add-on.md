@@ -19,8 +19,9 @@ You can do a whole lot of things with Ship:
 
 ## Publishing an app with Ship
 
-To publish an app using Ship, you need a minimum of two things (other than an app, of course).
+To publish an app using Ship, you need a minimum of three things:
 
+* An installable binary file (for example, an APK or an .ipa file).
 * At least one Workflow's artifacts must be exposed to Ship.
 * All such Workflows must include a **Deploy to Bitrise.io** Step.
 
