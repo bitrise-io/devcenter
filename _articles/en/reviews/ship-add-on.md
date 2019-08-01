@@ -54,6 +54,19 @@ To install an app on a device, there are three options:
 * Send the QR code: scanning it takes you to the public install page of the app. 
 * Log in to Ship from the device and install it directly from there. 
 
+{% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must set your exposed Workflow's **Deploy** "%}
+
+To send the public install page link or the QR code:
+
+1. [Expose the Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the installable file, and run the Workflow on Bitrise. 
+2. Open the **Details** page of your app's chosen release. 
+3. On the right, find the Public Install Page link or the QR code. 
+4. Copy the one you need and send it to the stakeholders (by email, for example).
+
+To install it directly from Ship:
+
+1. Log in to Ship from a supported device. 
+
 ### Publishing an app for iOS
 
 On the **iOS Settings** section of the **Settings page**, you can:
@@ -69,7 +82,7 @@ To configure publishing an app for iOS:
 
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go to the **iOS Settings** section. 
-3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the .ipa you want to publish. 
+3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the .ipa you want to publish, and run the Workflow on Bitrise. 
 4. Select the [code signing files](/deploy/ship/#code-signing-files) you want to use. 
 
    Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
