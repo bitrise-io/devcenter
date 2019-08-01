@@ -54,7 +54,7 @@ To install an app on a device, there are three options:
 * Send the QR code: scanning it takes you to the public install page of the app. 
 * Log in to Ship from the device and install it directly from there. 
 
-{% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must set your exposed Workflow's **Deploy** "%}
+{% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must configure your exposed Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`."%}
 
 To send the public install page link or the QR code:
 
@@ -66,6 +66,7 @@ To send the public install page link or the QR code:
 To install it directly from Ship:
 
 1. Log in to Ship from a supported device. 
+2. Under the name of the app, find and click the **Install** button. 
 
 ### Publishing an app for iOS
 
