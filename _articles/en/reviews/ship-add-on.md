@@ -79,7 +79,7 @@ To install it directly from Ship:
 
 ### Publishing an app for iOS
 
-On the **iOS Settings** section of the **Settings page**, you can:
+To configure publishing an iOS app to the App Store, you can: 
 
 * Choose the provisioning profiles and code signing identities to be used.
 * Set the app specific password. 
@@ -102,10 +102,10 @@ When you're done, you can go back to the app's home page in Ship, and click **Pu
 
 ### Publishing an app for Android
 
-On the **Android Settings** section of the **Settings page**, you can:
+To configure publishing an Android app to Play Store, you can:
 
 * Choose the Android keystore files and the Service Account JSON file. 
-* Set the track you want to use to release your APK.
+* Set the track you want to use to release your app.
 
 Once you configured publishing for the app, you do not have to set these options every time, only if you want to change some of them. 
 
@@ -114,7 +114,7 @@ To configure publishing an app for Android:
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go the **Android Settings** section.
 3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the APK you want to publish. 
-4. Set the [track](https://developers.google.com/android-publisher/tracks) you want to use. 
+4. Set the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Play Store. 
 5. Choose the approriate keystore file and the Service Account JSON file. 
 
 When you're done, you can go back to the app's home page in Ship, and click **Publish**.
@@ -126,12 +126,12 @@ The purpose of the app details page is to update the most important information 
 The details include:
 
 * A short and a full description of the app.
-* Screenshots and feature graphics of the app, arranged by the different supported devices. 
+* Screenshots and feature graphics of the app, arranged by the different supported devices.  At least two screenshots are required for an app to be published. 
 * Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. 
 
 ### Adding screenshots or feature graphics
 
-To add screenshots or feature graphics to your app details page:
+At least two screenshots are required for an app to be published. To add screenshots or feature graphics to your app details page:
 
 1. Open the **Details** page in Ship of your app's chosen release. 
 2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.
