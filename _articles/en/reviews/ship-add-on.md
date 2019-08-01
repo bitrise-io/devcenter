@@ -86,3 +86,13 @@ To configure publishing an app for Android:
 5. Choose the approriate keystore file and the Service Account JSON file. 
 
 When you're done, you can go back to the app's home page in Ship, and click **Publish**.
+
+## App details 
+
+The purpose of the app details page is to update the most important information about your app, as you want that information to appear in your online store of choice, for example. 
+
+The details include:
+
+* A short and a full description of the app.
+* Screenshots of the app, arranged by the different supported devices. 
+* Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. 
