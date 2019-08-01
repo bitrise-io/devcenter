@@ -8,14 +8,14 @@ published: false
 ---
 ## Ship overview
 
-With Ship, you can manage Continous Deployment of your app, as well as manage different releases of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
+With Ship, you can manage Continous Deployment of your app, as well as manage different build versions of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
 
 You can do a whole lot of things with Ship:
 
-* View all the releases of your app.
-* View and edit all the details of a given release, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
-* Install a given release directly from the Ship page for testing, or share it with a third party.
-* Quickly deploy a given release to all applicable online stores, once you set up publishing.
+* View all the build versions of your app.
+* View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
+* Install a given build version directly from the Ship page for testing, or share it with a third party.
+* Quickly deploy a given build version to all applicable online stores, once you set up publishing.
 
 ## Publishing an app with Ship
 
@@ -66,7 +66,7 @@ To install an app on a device, there are three options:
 To send the public install page link or the QR code:
 
 1. [Expose the Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the installable file, and run the Workflow on Bitrise.
-2. Open the **Details** page of your app's chosen release.
+2. Open the **Details** page of your app's chosen build version.
 3. On the right, find the Public Install Page link or the QR code.
 4. Copy the one you need and send it to the stakeholders (by email, for example).
 
@@ -131,7 +131,7 @@ The details include:
 
 At least two screenshots are required for an app to be published. To add screenshots or feature graphics to your app details page:
 
-1. Open the **Details** page in Ship of your app's chosen release.
+1. Open the **Details** page in Ship of your app's chosen build version.
 2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.
 3. Drag and drop a file OR click **Browse files** and select the ones you wish to upload.
 4. Once done, click **Save** in the top right corner.
@@ -140,7 +140,7 @@ At least two screenshots are required for an app to be published. To add screens
 
 Update the app's short and full descriptions in the same way:
 
-1. Open the **Details** page in Ship of your app's chosen release.
+1. Open the **Details** page in Ship of your app's chosen build version.
 2. Go to **Short description** or **Full description**.
 3. Click the Edit icon, shaped like a pencil.
 4. Edit the content.
