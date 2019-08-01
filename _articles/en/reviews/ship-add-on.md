@@ -46,6 +46,8 @@ On the **Settings** page, you can choose between different code signing files. Y
 * [iOS code signing files](/code-signing/ios-code-signing/code-signing-index/).
 * [Android code signing files](/code-signing/android-code-signing/android-code-signing-index/).
 
+Code signing files are required to publish an app to any online store, or to install them to test devices. 
+
 ### Installing an app on a test device
 
 To install an app on a device, there are three options:
