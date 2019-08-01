@@ -109,6 +109,6 @@ The details include:
 
 To add screenshots or feature graphics to your app details page:
 
-1. Open the **Details** page in Ship. 
+1. Open the **Details** page in Ship of your app's chosen release. 
 2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.
 3. Drag and drop a file OR click **Browse files** and select the ones you wish to upload. 
