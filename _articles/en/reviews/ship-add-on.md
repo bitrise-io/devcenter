@@ -94,5 +94,13 @@ The purpose of the app details page is to update the most important information 
 The details include:
 
 * A short and a full description of the app.
-* Screenshots of the app, arranged by the different supported devices. 
+* Screenshots and feature graphics of the app, arranged by the different supported devices. 
 * Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. 
+
+### Adding screenshots or feature graphics
+
+To add screenshots or feature graphics to your app details page:
+
+1. Open the **Details** page in Ship. 
+2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.
+3. Drag and drop a file OR click **Browse files** and select the ones you wish to upload. 
