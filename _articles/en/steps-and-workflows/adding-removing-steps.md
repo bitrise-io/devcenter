@@ -41,7 +41,7 @@ You can remove a Step at any time. Be aware, however, that if you add it back at
 3. Select the workflow you need in the **WORKFLOW** dropdown menu on the top left.
 4. Click the Step you want to remove.
 5. Click the trash bin icon on the right.
-6. Click Save.
+6. Click **Save**.
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
