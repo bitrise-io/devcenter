@@ -74,7 +74,7 @@ Since this change is irreversible, a confirmation pop-up window will be displaye
 
 " %}
 
-You can **show** and **hide** the value of an env var with the `eye` icon. This feature is useful if you have a long list of secret env vars in `Secrets` and you wish to check the value of only one secret env var while leaving the other values hidden. If a value is hidden, it's represented with the `crossed out eye` icon.
+You can **show** and **hide** the value of an env var with the **eye** icon. This feature is useful if you have a long list of secret env vars in **Secrets** and you wish to check the value of only one secret env var while leaving the other values hidden. If a value is hidden, it's represented with the **crossed out eye** icon.
 
 ![](/img/eye-icon.png)
 
