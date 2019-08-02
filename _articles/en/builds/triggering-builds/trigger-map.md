@@ -17,7 +17,7 @@ menu:
     title: Triggering builds with the Trigger map
 
 ---
-When you register a webhook for an event or for multiple events (for example, for `Code Push` and for `Pull Request` events), your source code hosting service will call the webhook every time the related event happens.
+When you register a webhook for an event or for multiple events (for example, for `code push` and for `pull request` events), your source code hosting service will call the webhook every time the related event happens.
 
 On [bitrise.io](https://www.bitrise.io) these webhook calls are called triggers, and can be mapped to different **Workflows**, or not mapped at all. If you don't map a trigger to any workflow, then [bitrise.io](https://www.bitrise.io) won't start a build. If you map it to a workflow, then a build will be started with the selected workflow.
 
@@ -174,7 +174,7 @@ trigger_map:
 
 {% include message_box.html type="warning" title="Order of the items matter!" content=" When `bitrise` receives a webhook event (any kind), it'll match it against the app's `trigger_map`. The first item it matches will select the workflow for the build!
 
-This means that if you'd specify the `push_branch: master` after the `push_branch: \"*\"` item, `master` would never be selected as every code push event would match `push_branch: \"*\"` first!
+This means that if you'd specify the `push_branch: master` after the `push_branch: *` item, `master` would never be selected as every code push event would match `push_branch: *` first!
 "%}
 
 ## Don't start two builds for pull requests from the same repository
@@ -291,7 +291,7 @@ trigger_map:
 ```
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Map a trigger to kickstart a build</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Map a trigger to kickstart a build</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
