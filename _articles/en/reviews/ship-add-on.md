@@ -96,8 +96,7 @@ To configure publishing an app for iOS:
 
    Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
 5. Set the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
-
-When you're done, you can go back to the app's home page in Ship, and click **Publish**.
+6. Go back to the app's home page and click **Publish**.
 
 ### Publishing an app for Android
 
@@ -115,8 +114,7 @@ To configure publishing an app for Android:
 3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the APK you want to publish.
 4. Set the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Play Store.
 5. Choose the appropriate keystore file and the Service Account JSON file.
-
-When you're done, you can go back to the app's home page in Ship, and click **Publish**.
+6. Go back to the app's home page and click **Publish**.
 
 ## App details
 
