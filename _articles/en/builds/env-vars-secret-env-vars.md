@@ -61,7 +61,7 @@ Once you've added a new secret Env Var in the **Secrets** tab, you come back to 
 
 1. Click `Edit` next to the value of  your secret env var.
 2. Modify its content if needed.
-3. If you want to hide the value, click `Make it protected`. A lock is shown.
+3. If you want to hide the value, click **Make it protected**. A lock is shown.
 4. `Delete` the secret env var if you do not need it any more. Please note if you hit this button, the whole row will get deleted.
 
 {% include message_box.html type="important" title="Life after **Make it protected** " content=" Please note if you clicked this button, neither you nor anybody with the access to the app can unlock or check the value again.
