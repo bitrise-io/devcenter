@@ -130,6 +130,12 @@ To configure publishing an app for Android:
 
 Your app is now ready for publishing. To publish, go back to the **Details** page and click **Publish**.
 
+### Publishing status and log
+
+Once you clicked **Publish** in Ship, the process starts according to the configured settings. You can view the status of the active publishing process on top of the **Details** page of the app. 
+
+To view the logs of any publishing process, go to the **Activity** tab. From there, you can download the logs to troubleshoot any errors after a failed publish. 
+
 ## App details
 
 The purpose of the app details page is to update the most important information about your app, as you want that information to appear in your online store of choice, for example.
