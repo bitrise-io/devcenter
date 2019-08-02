@@ -22,7 +22,7 @@ You can do a whole lot of things with Ship:
 To publish an app using Ship, you need a minimum of three things:
 
 * At least one Workflow's artifacts must be exposed to Ship.
-* An installable app artifact (for example, an APK). This means that the exposed Workflow must contain the Step that builds the app: for iOS apps, it's the **Xcode Archive & Export for iOS** Step while for Android apps, it's the **Android Build** Step or a **Gradle Runner** Step configured properly. 
+* An installable app artifact (for example, an APK). This means that the exposed Workflows must contain the Step that builds the app: for iOS apps, it's the **Xcode Archive & Export for iOS** Step while for Android apps, it's the **Android Build** Step or a **Gradle Runner** Step configured properly. 
 * All exposed Workflows must include a **Deploy to Bitrise.io** Step.
 
 Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an .ipa file, you can deploy that file using Ship.
@@ -78,6 +78,8 @@ To install it directly from Ship:
 
 ### Publishing an app for iOS
 
+{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. The Workflow must contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step."%}
+
 To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you can:
 
 * Choose the provisioning profiles and code signing identities to be used.
@@ -99,6 +101,8 @@ To configure publishing an app for iOS:
 6. Go back to the app's home page and click **Publish**.
 
 ### Publishing an app for Android
+
+{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. The Workflow must contain an **Android Build** Step (or a **Gradle Runner** Step that is configured to build the APK) and the **Deploy to Bitrise.io** Step."%}
 
 To configure publishing an Android app to Play Store, you can:
 
