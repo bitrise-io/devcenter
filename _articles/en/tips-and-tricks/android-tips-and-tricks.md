@@ -153,7 +153,7 @@ You can specify the amount allowed RAM for the Java Virtual Machine (JVM) by add
 For example:
 
 * `GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'`
-* `JAVA_OPTIONS: "-Xms512m -Xmx1024m"`
+* `JAVA_OPTS: "-Xms512m -Xmx1024m"`
 
 You can limit the allowed RAM the Gradle JVM process uses. This is useful if there's not enough RAM available in the system.
 
@@ -192,7 +192,7 @@ If you need a Java or JDK version which is not preinstalled on the Android stack
 2. Start a new build. This `Script` Step can be the very first step in the Workflow, as it does not depend on anything else.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
 </div>
