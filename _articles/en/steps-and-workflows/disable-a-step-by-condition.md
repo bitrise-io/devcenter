@@ -10,7 +10,7 @@ You can enable or disable a Step in any given workflow, and you can also set con
 
 We mostly use `run_if` expressions to do these things. [Check out the template expressions](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml)!
 
-{% include message_box.html type="info" title="A `run_if` can be any valid Go template" content=" A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, for example `True`, `t`, `yes` or `y` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't. "%}
+{% include message_box.html type="info" title="A `run_if` can be any valid Go template" content=" A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, for example `True`, `t`, `yes` or `y` are all considered to be `true`). If the template evaluates to `true`, the Step will run, otherwise it won't. "%}
 
 An example `run_if` to check a custom Environment Variable:
 
