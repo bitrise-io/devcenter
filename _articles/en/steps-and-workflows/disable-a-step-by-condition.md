@@ -23,7 +23,7 @@ This `run_if` will skip the Step if the value of `CUSTOM_ENV_VAR_KEY` is not `te
 
 ## Disabling a Step
 
-If you do not want to remove a Step from your workflow but you don't want it to run, you can disable it, using a `run_if` expression.
+If you do not want to remove a Step from your Workflow but you don't want it to run, you can disable it, using a `run_if` expression.
 
 1. Open your app's `bitrise.yml` file.
 2. Find the Step that you want to disable.
@@ -38,7 +38,7 @@ Example:
             #!/bin/bash
             echo "This will never run, because of run_if:false"
 
-{% include message_box.html type="note" title="Experimenting with workflows" content="To experiment with different configurations for a workflow, without removing or disabling Steps, we recommend cloning the workflow. You can modify the cloned workflow as much as you wish without changing anything in the original."%}
+{% include message_box.html type="note" title="Experimenting with Workflows" content="To experiment with different configurations for a workflow, without removing or disabling Steps, we recommend cloning the Workflow. You can modify the cloned Workflow as much as you wish without changing anything in the original."%}
 
 ## Running a Step only in a CI environment
 
@@ -72,7 +72,7 @@ It is possible to run a Step ONLY if the build failed before it got to that part
 
    This enables the Step to run even if a previous Step failed.
 
-**Example:**
+Example:
 
     - script:
         is_always_run: true
@@ -83,7 +83,7 @@ It is possible to run a Step ONLY if the build failed before it got to that part
             echo "Build Failed!"
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
 </div>
