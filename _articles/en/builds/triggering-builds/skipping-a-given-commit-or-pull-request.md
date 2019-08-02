@@ -30,22 +30,22 @@ Or:
     
     [ci skip]
 
-{% include message_box.html type="warning" title="Only the head/last commit message is checked!" content="**If you push more than one commit**, only the last (head) commit's message will be checked for the `skip ci` pattern! "%}
+{% include message_box.html type="warning" title="Only the head/last commit message is checked!" content="If you push more than one commit, only the last (head) commit's message will be checked for the `skip ci` pattern! "%}
 
 If you do want to start a build after all, you have two choices:
 
-* rebase the commit (change the commit message)
-* push another commit.
+* Rebase the commit (change the commit message).
+* Push another commit.
 
 {% include message_box.html type="note" title="Push an empty commit" content=" Git allows to create and push empty commits. If you want to build a skipped build you can do `git commit --allow-empty -m \"I decided to run this\"` on the related branch and push the commit."%}
 
 ## Skipping a Pull Request
 
-Pull Requests are treated as (virtual) commits themselves, where the commit message is the title + description of the Pull Request**.** It is not the commit messages of the individual commits that make up the PR!
+Pull Requests are treated as (virtual) commits themselves, where the commit message is the title + description of the pull request. It is not the commit messages of the individual commits that make up the pull request!
 
-If you want to skip a pull request, you have to include the `skip ci` pattern in the Pull Request's title or description, and not in the commit's message!
+If you want to skip a pull request, you have to include the `skip ci` pattern in the pull request's title or description, and not in the commit's message!
 
-**Once you decide to not to skip the Pull Request / more commits in the pull request** you can simply remove the `skip ci` pattern from the Pull Request's title or description. This should automatically trigger a new build with the latest commit, and all future commits of the PR will be built too (unless you add a `skip ci` pattern again).
+Once you decide to not to skip the pull request / more commits in the pull request, you can simply remove the `skip ci` pattern from the pull request's title or description. This should automatically trigger a new build with the latest commit, and all future commits of the pull request will be built too (unless you add a `skip ci` pattern again).
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
