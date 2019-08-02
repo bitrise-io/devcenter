@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
 - _articles/en/builds/triggering-builds/trigger-map.md
 - deploy.md
 - _articles/en/reviews/ship-add-on.md
@@ -159,7 +160,6 @@ pages:
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
 - _articles/en/builds/triggering-builds/trigger-code-push.md
 - _articles/en/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
-- _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
 - _articles/en/builds/triggering-builds/status-reporting.md
 - _articles/en/builds/build-logs.md
 - _articles/en/builds/build-numbering-and-app-versioning.md
