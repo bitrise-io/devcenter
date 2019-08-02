@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/steps-and-workflows/managing-workflows.md
 - _articles/en/reviews/ship-add-on.md
 - _articles/en/steps-and-workflows/default-workflows.md
 - _articles/en/steps-and-workflows/skipping-steps.md
@@ -97,7 +98,6 @@ pages:
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/en/reviews/fastlane.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
-- _articles/en/steps-and-workflows/managing-workflows.md
 - _articles/en/steps-and-workflows/getting-started-steps.md
 - _articles/en/builds/triggering-builds/trigger-pull-request.md
 - _articles/en/builds/triggering-builds/approving-pull-request-builds.md
