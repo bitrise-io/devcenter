@@ -59,7 +59,7 @@ To install an app on a device, there are three options:
 
 {% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must configure your exposed Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`."%}
 
-{% include message_box.html type="important" title="Binary types" content="The public install page is not available for all type of artifacts.
+{% include message_box.html type="important" title="Artifact types" content="The public install page is not available for all type of artifacts.
 
 * For iOS, it's only available if your Workflow builds an .ipa file that is signed with a Debug, Development or Ad-Hoc type provisioning profile.
 * For Android, it's only available if the artifact is an APK, either universal or split. For AABs, there will be no public install page link."%}
@@ -138,7 +138,7 @@ The details include:
 
 * A short and a full description of the app.
 * Screenshots and feature graphics of the app, arranged by the different supported devices.  At least two screenshots are required for an app to be published.
-* Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. This is automatically exported to Ship by the **Deploy to Bitrise.io** Step. 
+* Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. This is automatically exported to Ship by the **Deploy to Bitrise.io** Step.
 
 ### Adding screenshots or feature graphics
 
