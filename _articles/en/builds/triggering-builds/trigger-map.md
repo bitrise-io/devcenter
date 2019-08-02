@@ -101,7 +101,7 @@ If you want to specify filters which should be treated separately, for example, 
     - pull_request_source_branch: "develop"
       workflow: primary
 
-One last note, which is hopefully not surprising after the previous example: You can't mix and match `push_branch`, `tag` and the `pull_request_..` filters in the same item. This would effectively mean that the workflow should be selected if the event is a code push and a pull request (or tag push) event at the same time. This is simply not possible, source code hosting services send separate webhooks for pull request (pre-merge state), tags and for code push events. A single webhook event will never be code push, tag push and pull request at the same time, a single webhook is always related to only one type (code push, tag push or pull request).
+One last note, which is hopefully not surprising after the previous example: You can't mix and match `push_branch`, `tag` and the `pull_request` filters in the same item. This would effectively mean that the workflow should be selected if the event is a code push and a pull request (or tag push) event at the same time. This is simply not possible, source code hosting services send separate webhooks for pull request (pre-merge state), tags and for code push events. A single webhook event will never be code push, tag push and pull request at the same time, a single webhook is always related to only one type (code push, tag push or pull request).
 
 ## One trigger = one build
 
