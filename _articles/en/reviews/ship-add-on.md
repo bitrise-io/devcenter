@@ -22,7 +22,7 @@ You can do a whole lot of things with Ship:
 To publish an app using Ship, you need a minimum of three things:
 
 * At least one Workflow's artifacts must be exposed to Ship.
-* An installable app artifact (for example, an APK). This means that the exposed Workflows must contain the Step that builds the app: for iOS apps, it's the **Xcode Archive & Export for iOS** Step while for Android apps, it's the **Android Build** Step or a **Gradle Runner** Step configured properly. 
+* Either an .xcarchive.zip or an APK file which must be placed in the `$BITRISE_ DEPLOY_DIR`. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, any Step that builds an APK - such as **Android Build** - does it. 
 * All exposed Workflows must include a **Deploy to Bitrise.io** Step.
 
 Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an .ipa file, you can deploy that file using Ship.
@@ -80,12 +80,12 @@ To install it directly from Ship:
 
 {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. The Workflow must contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step."%}
 
-To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you can:
+To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you have to:
 
 * Choose the provisioning profiles and code signing identities to be used.
 * Set the app specific password.
 * Set the Apple Developer Account email.
-* Set the App SKU.
+* Set the [App SKU](https://help.apple.com/app-store-connect/#/dev219b53a88): this is a unique ID you give to your app for internal tracking. It's not visible to customers. 
 
 Once you configured publishing for the app, you do not have to set these options every time, only if you want to change some of them.
 
@@ -97,8 +97,10 @@ To configure publishing an app for iOS:
 4. Select the [code signing files](/deploy/ship/#code-signing-files) you want to use.
 
    Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
-5. Set the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
-6. Go back to the app's home page and click **Publish**.
+5. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
+6. Enter the **App SKU**. 
+
+Your app is now ready for publishing. To publish, go back to the **Details** page and click **Publish**.
 
 ### Publishing an app for Android
 
@@ -116,9 +118,10 @@ To configure publishing an app for Android:
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go the **Android Settings** section.
 3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the APK you want to publish.
-4. Set the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Play Store.
+4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Play Store.
 5. Choose the appropriate keystore file and the Service Account JSON file.
-6. Go back to the app's home page and click **Publish**.
+
+Your app is now ready for publishing. To publish, go back to the **Details** page and click **Publish**.
 
 ## App details
 
