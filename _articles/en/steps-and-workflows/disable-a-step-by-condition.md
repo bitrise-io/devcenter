@@ -6,13 +6,13 @@ menu:
     weight: 9
 
 ---
-You can enable or disable a Step in any given workflow, and you can also set conditions for Steps. You can do it either on your own computer, with the Bitrise CLI or by using the `bitrise.yml` tab of the Workflow Editor.
+You can enable or disable a Step in any given workflow, and you can also set conditions for Steps. You can do it either on your own computer, with the Bitrise CLI or by using the **bitrise.yml** tab of the Workflow Editor.
 
 We mostly use `run_if` expressions to do these things. [Check out the template expressions](https://github.com/bitrise-io/bitrise/blob/master/_examples/experimentals/templates/bitrise.yml)!
 
-{% include message_box.html type="info" title="A **run_if** can be any valid **Go** template" content=" A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, e.g. `\"True\"`, `\"t\"`, `\"yes\"` or `\"y\"` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't. "%}
+{% include message_box.html type="info" title="A `run_if` can be any valid Go template" content=" A `run_if` can be any valid [Go template](https://golang.org/pkg/text/template/), as long as it evaluates to `true` or `false` (or any of the String representation, for example `True`, `t`, `yes` or `y` are all considered to be `true`). If the template evaluates to `true` the Step will run, otherwise it won't. "%}
 
-An example `run_if` to check a **custom environment variable**:
+An example `run_if` to check a custom Environment Variable:
 
     {% raw %}
     run_if: |-
@@ -29,7 +29,7 @@ If you do not want to remove a Step from your workflow but you don't want it to 
 2. Find the Step that you want to disable.
 3. Add `run_if: false` to it.
 
-**Example:**
+Example:
 
     - script:
         run_if: false
@@ -48,7 +48,7 @@ Running a Step only in a CI environment means your build will skip that particul
 2. Find the Step that you want to disable.
 3. Add `run_if: .IsCI` to it.
 
-**Example:**
+Example:
 
     - script:
         run_if: .IsCI
