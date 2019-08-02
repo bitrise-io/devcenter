@@ -19,7 +19,7 @@ menu:
 ---
 When you register a webhook for an event or for multiple events (for example, for `Code Push` and for `Pull Request` events), your source code hosting service will call the webhook every time the related event happens.
 
-On [bitrise.io](https://www.bitrise.io) these webhook calls are called _triggers_, and can be mapped to different `Workflows`, or not mapped at all. If you don't map a trigger to any workflow, then [bitrise.io](https://www.bitrise.io) won't start a build. If you map it to a workflow, then a build will be started with the selected workflow.
+On [bitrise.io](https://www.bitrise.io) these webhook calls are called triggers, and can be mapped to different **Workflows**, or not mapped at all. If you don't map a trigger to any workflow, then [bitrise.io](https://www.bitrise.io) won't start a build. If you map it to a workflow, then a build will be started with the selected workflow.
 
 In the following examples, we'll use a very simple Bitrise configuration (`bitrise.yml`),
 which does nothing else just prints the selected workflow's ID:
@@ -46,14 +46,13 @@ workflows:
             echo "$BITRISE_TRIGGERED_WORKFLOW_ID"
 ```
 
-{% include message_box.html type="info" title="What is `bitrise.yml`" content=" `bitrise.yml` is the representation of your app's configuration. In the workflow editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the workflow editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa).
+{% include message_box.html type="info" title="What is `bitrise.yml`" content=" `bitrise.yml` is the representation of your app's configuration. In the Workflow Editor, you can edit it in a visual way through the web UI, but you can always switch to `bitrise.yml` mode (left side of the Workflow Editor) to see the configuration in a YAML format, as well as you can edit the configuration in YAML format too. It's up to you which solution you prefer, the visual web UI or the YAML (`bitrise.yml`) representation, and you can switch between the two any time (the changes you do in the web UI will be reflected in the `bitrise.yml`, and vice versa).
 "%}
 
-The above example `bitrise.yml` will select the `primary` branch for every Code Push (`push_branch: "*"`), Tag Push (`tag: "*"`)
-and for every Pull Request (`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`).
+The above example `bitrise.yml` will select the **primary** branch for every code push (`push_branch: "*"`), tag push (`tag: "*"`)
+and for every pull request (`pull_request_target_branch: "*"` & `pull_request_source_branch: "*"`).
 
-_If you remove the pull request item_ from the `trigger_map` list, then
-no pull request will trigger a build anymore. Example:
+If you remove the pull request item from the `trigger_map` list, then no pull request will trigger a build anymore. Example:
 
 ```yaml
 trigger_map:
@@ -61,14 +60,14 @@ trigger_map:
   workflow: primary
 ```
 
-This configuration will start a build with the `primary` workflow for every code push, but for nothing else (for example not for pull requests).
+This configuration will start a build with the **primary** Workflow for every code push, but for nothing else (for example not for pull requests).
 
 ## Components of the `trigger_map`
 
-A `trigger_map` is a _list of filters_, and the `workflow` the given
-filters should select in case of a matching trigger.
+A `trigger_map` is a list of filters, and the `workflow` is the given
+filters it should select in case of a matching trigger.
 
-**Every filter item has to include at least one condition!**
+Every filter item has to include at least one condition!
 
 This means that you can't have an item which only specifies the `workflow`,
 at least one filter (`push_branch` / `pull_request_source_branch` / `pull_request_target_branch` / `tag`)
@@ -76,13 +75,13 @@ has to be specified!
 
 ### The available filters:
 
-* `push_branch` : A filter which is matched against Code Push events' "branch" parameter
+* `push_branch` : A filter which is matched against code push events' branch parameter.
 * `pull_request_source_branch` : A filter which is matched against Pull Request events' "source branch"
-  parameter (the branch the pull request was started from)
+  parameter (the branch the pull request was started from).
 * `pull_request_target_branch` : A filter which is matched against Pull Request events' "target branch"
-  parameter - the branch the pull request will be **merged into**
-* `tag` : A filter which is matched against Tag Push events' "tag" (name) parameter
-* `pattern` : **DEPRECATED** - this filter was used for both code push and pull request events,
+  parameter - the branch the pull request will be merged into.
+* `tag` : A filter which is matched against Tag Push events' "tag" (name) parameter.
+* `pattern` : DEPRECATED - this filter was used for both code push and pull request events,
   in combination with `is_pull_request_allowed`. This filter is now deprecated,
   as the new filters allow better control over event mapping.
 
