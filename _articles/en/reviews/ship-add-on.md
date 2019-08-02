@@ -21,9 +21,9 @@ You can do a whole lot of things with Ship:
 
 To publish an app using Ship, you need a minimum of three things:
 
-* An installable app artifact (for example, an APK).
 * At least one Workflow's artifacts must be exposed to Ship.
-* All such Workflows must include a **Deploy to Bitrise.io** Step.
+* An installable app artifact (for example, an APK). This means that the exposed Workflow must contain the Step that builds the app: for iOS apps, it's the **Xcode Archive & Export for iOS** Step while for Android apps, it's the **Android Build** Step or a **Gradle Runner** Step configured properly. 
+* All exposed Workflows must include a **Deploy to Bitrise.io** Step.
 
 Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an .ipa file, you can deploy that file using Ship.
 
