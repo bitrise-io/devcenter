@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/steps-and-workflows/default-workflows.md
 - _articles/en/reviews/ship-add-on.md
 - _articles/en/steps-and-workflows/skipping-steps.md
 - _articles/en/reviews/API/authentication.md
@@ -83,7 +84,6 @@ pages:
 - _articles/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
 - _articles/en/getting-started/signing-up-to-bitrise.md
 - _articles/en/reviews/creating-add-ons.md
-- _articles/en/steps-and-workflows/default-workflows.md
 - _articles/en/reviews/signing-up-with-saml-sso.md
 - _articles/en/reviews/getting-started-with-react-native-apps-makeover.md
 - _articles/en/reviews/using-custom-scripts-for-test-reports.md
