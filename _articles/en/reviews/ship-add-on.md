@@ -25,7 +25,7 @@ To publish an app using Ship, you need a minimum of three things:
 * Either an .xcarchive.zip or an APK file which must be placed in the `$BITRISE_ DEPLOY_DIR`. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, any Step that builds an APK - such as **Android Build** - does it. 
 * All exposed Workflows must include a **Deploy to Bitrise.io** Step.
 
-Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an .ipa file, you can deploy that file using Ship.
+Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship.
 
 On the **Settings** page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define the settings separately for the iOS and the Android versions.
 
@@ -61,7 +61,7 @@ To install an app on a device, there are three options:
 
 {% include message_box.html type="important" title="Binary types" content="The public install page is not available for all type of artifacts.
 
-* For iOS, it's only available if the .ipa file is signed with a Debug, Development or Ad-Hoc type provisioning profile.
+* For iOS, it's only available if your Workflow builds an .ipa file that is signed with a Debug, Development or Ad-Hoc type provisioning profile.
 * For Android, it's only available if the artifact is an APK, either universal or split. For AABs, there will be no public install page link."%}
 
 To send the public install page link or the QR code:
@@ -78,7 +78,7 @@ To install it directly from Ship:
 
 ### Publishing an app for iOS
 
-{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. The Workflow must contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step."%}
+{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. For an iOS app the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step."%}
 
 To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you have to:
 
@@ -104,7 +104,7 @@ Your app is now ready for publishing. To publish, go back to the **Details** pag
 
 ### Publishing an app for Android
 
-{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. The Workflow must contain an **Android Build** Step (or a **Gradle Runner** Step that is configured to build the APK) and the **Deploy to Bitrise.io** Step."%}
+{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. The Workflow must contain a Step that builds an APK (for example, **Android Build**) and the **Deploy to Bitrise.io** Step."%}
 
 To configure publishing an Android app to Play Store, you can:
 
