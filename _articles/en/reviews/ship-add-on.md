@@ -61,8 +61,8 @@ To install an app on a device, there are three options:
 
 {% include message_box.html type="important" title="Binary types" content="The public install page is not available for all type of artifacts.
 
-* For iOS, it's only available if the .ipa file is signed with a Debug, Development or Ad-Hoc type provisioning profile. It's not available if the artifact is an .xcarchive file.
-* For Android, it's only available if the artifact is a universal APK. For split APKs or AABs, there will be no public install page link."%}
+* For iOS, it's only available if the .ipa file is signed with a Debug, Development or Ad-Hoc type provisioning profile.
+* For Android, it's only available if the artifact is an APK, either universal or split. For AABs, there will be no public install page link."%}
 
 To send the public install page link or the QR code:
 
@@ -130,7 +130,9 @@ The details include:
 
 ### Adding screenshots or feature graphics
 
-At least two screenshots are required for an app to be published. To add screenshots or feature graphics to your app details page:
+At least two screenshots are required for an app to be published. Once you added screenshots or graphics to one build version of the app, they are automatically added to all subsequent versions. If you want to display different screenshots, you can modify it, otherwise you can leave it alone. 
+
+To add screenshots or feature graphics to your app details page:
 
 1. Open the **Details** page in Ship of your app's chosen build version.
 2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.
