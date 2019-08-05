@@ -26,7 +26,7 @@ Using Bitrise Checks is just a few clicks away. Let's do this!
 
 1. Select your organization's app on your [Dashboard](https://app.bitrise.io/dashboard/builds).
 2. Select the **Settings** tab of your app.
-3. Click the **install our app to your GitHub repository** LINK in the **ENABLE GITHUB CHECKS** toggle's description. Don't toggle the switch just yet, since you first need to install Bitrise Checks. We will get to enabling it [later](/github-checks/#enabling-github-checks).
+3. Click the **install our app to your GitHub repository** LINK in the **ENABLE GITHUB CHECKS** toggle's description. Don't toggle the switch just yet, since you first need to install Bitrise Checks. We will get to enabling the toggle [later](/github-checks/#enabling-github-checks).
 
    ![](/img/disabled-toggle-githubchekcs.jpg)
 
@@ -55,7 +55,7 @@ All there's left to do is enabling GitHub Checks on your app's page on [Bitrise]
 4. Toggle the **ENABLE GITHUB CHECKS** switch to the right.
 
 ![](/img/enabled-toggle-githubchecks.jpg)
-{% include message_box.html type="warning" title="**ENABLE GITHUB CHECKS** switch error" content="Learn when **ENABLE GITHUB CHECKS** switch does not work and what you can do:
+{% include message_box.html type="warning" title="**ENABLE GITHUB CHECKS** switch error" content="Learn when **ENABLE GITHUB CHECKS** toggle does not work and what you can do:
 
 * You cannot toggle the switch unless you install Bitrise Checks FIRST. Once it's done, you can go ahead and toggle the switch to the right to enable it.
 * If you have renamed or moved the GitHub repository of an app which has already been added to Bitrise and you have installed Bitrise Checks on it. The repository's GitHub URL has obviously changed. Why bother? **ENABLE GITHUB CHECKS** switch can only work if the URL on Github and on Bitrise fully match (no redirect URL is allowed). So in this case, you have to manually update the **REPOSITORY URL** of your app on the **Settings** tab with the new GitHub URL.
@@ -66,11 +66,9 @@ And you're done! Now any pull request you open to your app on GitHub will be val
 
 You can easily get to your app's page on Bitrise. If you click on the build summary or on **View more details on Bitrise Checks** link on the **Checks** tab, you'll quickly get to your app's Build page.
 
-Another nice-to-have came up, probably for next week, if you required status checks before merging on GitHub, you need to modify it to \`Bitrise\` instead of \`ci/bitrise/…\`, to be able to merge PRs.
-
 ### Switching to Bitrise Checks
 
-If you have been using status checks on pull requests prior to merging for a while, it must have been the `ci/bitrise/...` check system. To be able to use Bitrise Checks, you have to manually switch from `ci/bitrise/...` to **Bitrise** to access those detailed checks. Let's see how!
+If you have been already using status checks on pull requests prior to merging, it must have been the `ci/bitrise/...` check system. To be able to use Bitrise Checks, you have to manually switch from `ci/bitrise/...` to **Bitrise** to access those detailed checks. Let's see how!
 
 ![](/img/checks-pending.png)
 

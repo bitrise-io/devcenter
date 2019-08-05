@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/github-checks.md
 - _articles/en/reviews/ship-add-on.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/builds/sensitive-input-field.md
@@ -117,7 +118,6 @@ pages:
 - _articles/en/bitrise-cli/step-outputs.md
 - _articles/en/bitrise-cli/step-properties.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
-- _articles/en/reviews/github-checks.md
 - _articles/en/testing/test-reports.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
 - _articles/en/reviews/detached-head-draft.md
