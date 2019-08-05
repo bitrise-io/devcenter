@@ -86,3 +86,9 @@ You can easily disable GitHub Checks on Bitrise if you toggle the **ENABLE GITHU
 If you decide to uninstall Bitrise Checks from your GitHub account, you can click the **Uninstall** button on the [Install GitHub Apps](https://github.com/settings/installations/) page.
 
 ![](/img/disable-ghckecks.jpg)
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's install Bitrise Checks</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
