@@ -1,5 +1,7 @@
 ---
-tag: []
+tag:
+- builds
+- troubleshooting
 title: Bitrise Checks on GitHub Checks
 redirect_from: []
 summary: Bitrise Checks is a Github app which provides an extended version of the
