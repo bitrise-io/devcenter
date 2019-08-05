@@ -10,7 +10,7 @@ redirect_from: "/api/v0.1/"
 menu:
   main:
     identifier: api-main
-    weight: 15
+    weight: 29
 
 ---
 Welcome to the Bitrise API! Many of the features that you are used to on our website and with our CLI are available via the API, too. It lets you integrate various systems and services with our CI/CD service for an efficient pipeline.

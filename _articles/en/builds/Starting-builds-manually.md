@@ -13,7 +13,7 @@ Starting a build manually on Bitrise takes literally two clicks - if you leave e
 
 1. Log in to Bitrise and go to the [Dashboard](https://app.bitrise.io/dashboard).
 2. Select the app you wish to build.
-3. Click `Start/Schedule a Build`.
+3. Click **Start/Schedule a Build**.
 
    ![](/img/start-schedule-build.png)
 
@@ -22,11 +22,11 @@ At this point, the **Build configuration** window opens and you are presented wi
 * **Basic**
 * **Advanced**
 
-{% include message_box.html type="note" title="Scheduling builds" content="The `Schedule this build` option allows you to configure builds to be triggered at specific times. Read more in [our guide](/builds/scheduling-builds/)."%}
+{% include message_box.html type="note" title="Scheduling builds" content="The **Schedule this build** option allows you to configure builds to be triggered at specific times. Read more in [our guide](/builds/scheduling-builds/)."%}
 
 ### Basic configuration
 
-If you choose `Basic` in the **Build configuration** window, you have three options to configure:
+If you choose **Basic** in the **Build configuration** window, you have three options to configure:
 
 ![](/img/basic-build-config.jpg)
 
@@ -39,13 +39,13 @@ If you choose `Basic` in the **Build configuration** window, you have three opti
 
 ### Advanced configuration
 
-If you choose `Advanced` in the **Build configuration** window, you have all the options available with `Basic`, and a few more:
+If you choose **Advanced** in the **Build configuration** window, you have all the options available with **Basic**, and a few more:
 
 ![](/img/build-config-advanced.jpg)
 
 * **Git Tag**: Builds a particular branch or commit that is tagged with the Tag you enter.
 * **Commit Hash**: Copy a specific commit's hash here to build that particular commit. This option can even send a build status update to your git hosting service.
-* **Custom Environment Variables**: Set up a custom Environment Variable that is used in the build. You can enable the `Replace variables in input?` option: this replaces the Environment Variables in your input with the assigned value. You need to do this if your custom variable references other Environment Variables.
+* **Custom Environment Variables**: Set up a custom Environment Variable that is used in the build. You can enable the **Replace variables in input?** option: this replaces the Environment Variables in your input with the assigned value. You need to do this if your custom variable references other Environment Variables.
 * **Generated cURL command**: Based on the options you set in the Build configuration window, we provide an automatically generated cURL command. This can be copied and pasted, and you can run it on any platform that has cURL installed.
 
 {% include message_box.html type="info" title="Conflicting input" content="If, for example, you specify a commit hash, you will notice that the Git Tag option disappears. This ensures that you cannot enter conflicting input values.

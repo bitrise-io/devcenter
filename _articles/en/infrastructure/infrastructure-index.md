@@ -1,12 +1,12 @@
 ---
 tag: []
-title: 'Infrastructure'
+title: Infrastructure
 redirect_from: []
 summary: ''
 menu:
   main:
     identifier: infrastructure-main
-    weight: 2
+    weight: 4
 
 ---
 Bitrise is a platform, above all: you do not have to download anything to use it, you do not have to run it on your own computer or servers - we take care of all of that.

@@ -9,7 +9,7 @@ menu:
     weight: 18
 
 ---
-Detox is a gray box end-to-end tests and automation library for mobile apps. Currently, it is only supported for iOS apps built with React Native. If you have a React Native app for iOS on Bitrise, you can run Detox tests.
+Detox is a gray box end-to-end tests and automation library for mobile apps built with React Native. It supports both iOS and Android apps. If you have a React Native app on Bitrise, you can run Detox tests.
 
 To see an example configuration, check out [our sample app](https://github.com/bitrise-samples/sample-project-react-native)!
 
@@ -21,11 +21,11 @@ Running Detox requires:
 * Xcode 8.3 or newer version with Xcode command line tools.
 * A working React Native app.
 
-[Install and set up Detox for your project](https://github.com/wix/detox/blob/master/docs/Introduction.GettingStarted.md#getting-started). You will need to install Homebrew, Node.js and applesimutils, as well as the Detox command line tools. Add Detox to your project and then create and run Detox tests locally.
+[Install and set up Detox for your project](https://github.com/wix/detox/blob/master/docs/Introduction.GettingStarted.md#getting-started). You will need to install Homebrew, Node.js and applesimutils, as well as the Detox command line tools. Add Detox to your project and then create and run Detox tests locally. If you have an Android app, go through [this guide](https://github.com/wix/Detox/blob/master/docs/Introduction.Android.md) after the initial setup process.
 
 Once you are done, you can test your Detox-configured project on Bitrise.
 
-## Running a Detox test 
+## Running a Detox test
 
 {% include message_box.html type="important" title="Video recording with Detox" content="Video recording with Detox does NOT work on Bitrise. [Detox requires hardware acceleration](https://github.com/wix/Detox/blob/master/docs/APIRef.Artifacts.md#video-recording-issues-on-ci) but our machines - on which your build's virtual machine runs - do not have physical GPUs. Therefore you cannot enable hardware acceleration on them. "%}
 
@@ -104,7 +104,7 @@ Once you are done, you can test your Detox-configured project on Bitrise.
 
 ## Troubleshooting Detox tests
 
-If you run into issues with using Detox on Bitrise, we recommend trying to rebuild the entire Detox package before running the test. 
+If you run into issues with using Detox on Bitrise, we recommend trying to rebuild the entire Detox package before running the test.
 
 To do so, run the following command in your Bitrise build:
 
@@ -112,7 +112,7 @@ To do so, run the following command in your Bitrise build:
 npm rebuild detox
 ```
 
-If your Detox tests still fail or hang, contact our support! 
+If your Detox tests still fail or hang, contact our support!
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">

@@ -6,7 +6,7 @@ summary: ''
 menu:
   main:
     identifier: faq-main
-    weight: 15
+    weight: 30
 
 ---
 {% include not_translated_yet.html %}

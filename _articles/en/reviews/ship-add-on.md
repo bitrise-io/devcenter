@@ -22,7 +22,7 @@ You can do a whole lot of things with Ship:
 To publish an app using Ship, you need a minimum of three things:
 
 * At least one Workflow's artifacts must be exposed to Ship.
-* Either an .xcarchive.zip or an APK file which must be placed in the `$BITRISE_ DEPLOY_DIR`. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, any Step that builds an APK - such as **Android Build** - does it. 
+* Either an .xcarchive.zip or an APK file which must be placed in the directory stored in the `BITRISE_DEPLOY_DIR` Environment Variable. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, any Step that builds an APK - such as **Android Build** - does it.
 * All exposed Workflows must include a **Deploy to Bitrise.io** Step.
 
 Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship.
@@ -59,7 +59,7 @@ To install an app on a device, there are three options:
 
 {% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must configure your exposed Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`."%}
 
-{% include message_box.html type="important" title="Binary types" content="The public install page is not available for all type of artifacts.
+{% include message_box.html type="important" title="Artifact types" content="The public install page is not available for all type of artifacts.
 
 * For iOS, it's only available if your Workflow builds an .ipa file that is signed with a Debug, Development or Ad-Hoc type provisioning profile.
 * For Android, it's only available if the artifact is an APK, either universal or split. For AABs, there will be no public install page link."%}
@@ -78,14 +78,19 @@ To install it directly from Ship:
 
 ### Publishing an app for iOS
 
-{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. For an iOS app the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step."%}
+{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step."%}
+
+{% include message_box.html type="note" title="The `.xcarchive` file with a custom Step" content="The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:
+
+* There is a Step in your exposed Workflow that exports an `.xcarchive.zip` file of your app. That is, the Step you use needs to create an Xcode Archive and needs to package it in a zip file.
+* This Step exports the `.xcarchive.zip` file into the `BITRISE_DEPLOY_DIR` directory."%}
 
 To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you have to:
 
 * Choose the provisioning profiles and code signing identities to be used.
 * Set the app specific password.
 * Set the Apple Developer Account email.
-* Set the [App SKU](https://help.apple.com/app-store-connect/#/dev219b53a88): this is a unique ID you give to your app for internal tracking. It's not visible to customers. 
+* Set the [App SKU](https://help.apple.com/app-store-connect/#/dev219b53a88): this is a unique ID you give to your app for internal tracking. It's not visible to customers.
 
 Once you configured publishing for the app, you do not have to set these options every time, only if you want to change some of them.
 
@@ -98,13 +103,15 @@ To configure publishing an app for iOS:
 
    Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
 5. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
-6. Enter the **App SKU**. 
+6. Enter the **App SKU**.
 
 Your app is now ready for publishing. To publish, go back to the **Details** page and click **Publish**.
 
 ### Publishing an app for Android
 
-{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. The Workflow must contain a Step that builds an APK (for example, **Android Build**) and the **Deploy to Bitrise.io** Step."%}
+{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. The Workflow must contain a Step that builds an APK (for example, **Android Build**) and the **Deploy to Bitrise.io** Step.
+
+Note that the if you wish to use a custom Script Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory."%}
 
 To configure publishing an Android app to Play Store, you can:
 
@@ -123,6 +130,12 @@ To configure publishing an app for Android:
 
 Your app is now ready for publishing. To publish, go back to the **Details** page and click **Publish**.
 
+### Publishing status and logs
+
+Once you clicked **Publish** in Ship, the process starts according to the configured settings. You can view the status of the active publishing process on top of the **Details** page of the app.
+
+To view the logs of any publishing process, go to the **Activity** tab. From there, you can download the logs to troubleshoot any errors after a failed publish.
+
 ## App details
 
 The purpose of the app details page is to update the most important information about your app, as you want that information to appear in your online store of choice, for example.
@@ -131,11 +144,11 @@ The details include:
 
 * A short and a full description of the app.
 * Screenshots and feature graphics of the app, arranged by the different supported devices.  At least two screenshots are required for an app to be published.
-* Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app.
+* Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. This is automatically exported to Ship by the **Deploy to Bitrise.io** Step.
 
 ### Adding screenshots or feature graphics
 
-At least two screenshots are required for an app to be published. Once you added screenshots or graphics to one build version of the app, they are automatically added to all subsequent versions. If you want to display different screenshots, you can modify it, otherwise you can leave it alone. 
+At least two screenshots are required for an app to be published. Once you added screenshots or graphics to one build version of the app, they are automatically added to all subsequent versions. If you want to display different screenshots, you can modify it, otherwise you can leave it alone.
 
 To add screenshots or feature graphics to your app details page:
 

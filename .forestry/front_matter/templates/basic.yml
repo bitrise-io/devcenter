@@ -29,8 +29,22 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
-- _articles/en/builds/triggering-builds/trigger-map.md
+- _articles/jp/builds/bitrise-checks-on-github-checks.md
+- _articles/en/builds/bitrise-checks-on-github-checks.md
+- _articles/en/reviews/github-checks.md
 - _articles/en/reviews/ship-add-on.md
+- _articles/en/testing/running-detox-tests-on-bitrise.md
+- _articles/en/builds/sensitive-input-field.md
+- _articles/en/builds/env-vars-secret-env-vars.md
+- _articles/en/builds/build-numbering-and-app-versioning.md
+- _articles/en/builds/rolling-builds.md
+- _articles/en/builds/selective_builds.md
+- _articles/en/builds/Scheduling-Builds.md
+- _articles/en/builds/configuring-notifications.md
+- _articles/en/builds/triggering-builds/status-reporting.md
+- _articles/en/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
+- _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
+- _articles/en/builds/triggering-builds/trigger-map.md
 - _articles/en/tips-and-tricks/android-tips-and-tricks.md
 - _articles/en/steps-and-workflows/managing-workflows.md
 - _articles/en/steps-and-workflows/default-workflows.md
@@ -55,13 +69,10 @@ pages:
 - _articles/en/getting-started/index.md
 - _articles/en/getting-started/account-security.md
 - _articles/en/bitrise-cli/installation.md
-- _articles/en/builds/selective_builds.md
-- _articles/en/builds/Scheduling-Builds.md
 - _articles/en/team-management/user-roles-on-app-teams.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
 - _articles/en/team-management/organizations/members-organizations.md
 - _articles/en/team-management/organizations/managing-apps.md
-- _articles/en/builds/sensitive-input-field.md
 - _articles/en/builds/build-artifacts-online.md
 - _articles/en/builds/bitrise-yml-online.md
 - _articles/en/webhooks/adding-outgoing-webhooks.md
@@ -109,7 +120,6 @@ pages:
 - _articles/en/bitrise-cli/step-outputs.md
 - _articles/en/bitrise-cli/step-properties.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
-- _articles/en/reviews/github-checks.md
 - _articles/en/testing/test-reports.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
 - _articles/en/reviews/detached-head-draft.md
@@ -152,17 +162,10 @@ pages:
 - _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
 - _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
-- _articles/en/builds/configuring-notifications.md
-- _articles/en/builds/env-vars-secret-env-vars.md
-- _articles/en/builds/rolling-builds.md
 - _articles/en/builds/available-environment-variables.md
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
 - _articles/en/builds/triggering-builds/trigger-code-push.md
-- _articles/en/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
-- _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
-- _articles/en/builds/triggering-builds/status-reporting.md
 - _articles/en/builds/build-logs.md
-- _articles/en/builds/build-numbering-and-app-versioning.md
 - _articles/en/team-management/organizations/managing-invoices.md
 - _articles/en/team-management/organizations/org-ownership.md
 - _articles/en/team-management/organizations/creating-org.md
@@ -236,5 +239,4 @@ pages:
 - _articles/jp/api/incoming-and-outgoing-webhooks.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/イントロ-intro.md
 - _articles/jp/builds/configuring-notifications.md
-- _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/api/adding-and-managing-apps.md

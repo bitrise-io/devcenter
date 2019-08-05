@@ -2,12 +2,14 @@
 tag:
 - builds
 - troubleshooting
-title: Bitrise Checks on GitHub Checks - draft
+title: Bitrise Checks on GitHub Checks
 redirect_from: []
 summary: Bitrise Checks is a Github app which provides an extended version of the
   classic status checks Bitrise sends back to GitHub pull requests. Bitrise Checks
   include a Bitrise build summary and a check status.
-published: false
+menu:
+  builds-main:
+    weight: 31
 
 ---
 Bitrise Checks is a Github app which provides an extended version of the classic status checks Bitrise sends back to GitHub. Bitrise Checks include a Bitrise build summary and a check status. You can view Bitrise Checks if you click the **Details** link of a pull request on GitHub. It unfolds the detailed build summary and build status Bitrise Checks attaches to your pull request on the **Checks** tab of GitHub.
@@ -56,13 +58,12 @@ All there's left to do is enabling GitHub Checks on your app's page on [Bitrise]
 3. Go to the **Settings** tab of the app.
 4. Toggle the **ENABLE GITHUB CHECKS** switch to the right.
 
-![](/img/enabled-toggle-githubchecks.jpg)
-{% include message_box.html type="warning" title="**ENABLE GITHUB CHECKS** switch error" content="Learn when **ENABLE GITHUB CHECKS** toggle does not work and what you can do:
+![](/img/enabled-toggle-githubchecks.jpg) Why can't you toggle the **ENABLE GITHUB CHECKS** switch?
 
 * You cannot toggle the switch unless you install Bitrise Checks FIRST. Once it's done, you can go ahead and toggle the switch to the right to enable it.
 * If you have renamed or moved the GitHub repository of an app which has already been added to Bitrise and you have installed Bitrise Checks on it. The repository's GitHub URL has obviously changed. Why bother? **ENABLE GITHUB CHECKS** switch can only work if the URL on Github and on Bitrise fully match (no redirect URL is allowed). So in this case, you have to manually update the **REPOSITORY URL** of your app on the **Settings** tab with the new GitHub URL.
 
-  ![](/img/repository-url-change.jpg)"%}
+  ![](/img/repository-url-change.jpg)
 
 And you're done! Now any pull request you open to your app on GitHub will be validated with Bitrise Checks and a build will get automatically started on Bitrise (if the [pull request trigger](/builds/triggering-builds/trigger-pull-request/) is properly set on Bitrise).
 
@@ -90,7 +91,7 @@ If you decide to uninstall Bitrise Checks from your GitHub account, you can clic
 ![](/img/disable-ghckecks.jpg)
 
 <div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's install Bitrise Checks</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Let's install Bitrise Checks</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>

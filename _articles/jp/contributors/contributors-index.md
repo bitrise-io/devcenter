@@ -6,6 +6,7 @@ menu:
     identifier: contributors-main
     title: For contributors
     weight: 1
+
 ---
 {% include not_translated_yet.html %}
 

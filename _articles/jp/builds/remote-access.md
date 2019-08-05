@@ -3,7 +3,7 @@ title: Remote access
 redirect_from: []
 menu:
   builds-main:
-    weight: 32
+    weight: 34
 
 ---
 {% include not_translated_yet.html %}
