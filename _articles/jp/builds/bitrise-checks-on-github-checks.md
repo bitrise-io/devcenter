@@ -7,6 +7,9 @@ redirect_from: []
 summary: Bitrise Checks is a Github app which provides an extended version of the
   classic status checks Bitrise sends back to GitHub pull requests. Bitrise Checks
   include a Bitrise build summary and a check status.
+menu:
+  builds-main:
+    weight: 32
 
 ---
 {% include not_translated_yet.html %}

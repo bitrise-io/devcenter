@@ -1,12 +1,12 @@
 ---
 tag: []
-title: 'FAQ'
+title: FAQ
 redirect_from: []
 summary: ''
 menu:
   main:
     identifier: faq-main
-    weight: 13
+    weight: 25
 
 ---
 Check out some of the questions our users most frequently ask. If you have a question that is not answered in this section, take a look at [our forums](https://discuss.bitrise.io/) or contact Bitrise support.

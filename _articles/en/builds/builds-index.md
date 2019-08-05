@@ -1,11 +1,10 @@
 ---
-redirect_from: "/getting-started/builds-and-workflows/"
+redirect_from: []
 tag:
 - builds
 - workflows
 - triggers
-title: 'Builds'
-redirect_from: []
+title: Builds
 summary: A build is a series of jobs, specified by the app’s Workflow which is a collection
   of Steps. The app’s build configuration is specified in the bitrise.yml configuration
   file which you can modify in bitrise.io’s graphical Workflow Editor UI, or in a
@@ -13,7 +12,7 @@ summary: A build is a series of jobs, specified by the app’s Workflow which is
 menu:
   main:
     identifier: builds-main
-    weight: 6
+    weight: 11
 
 ---
 A build is a series of jobs, specified by the app’s Workflow which is a collection of [Steps](/steps-workflows/getting-started-steps). The app’s build configuration is specified in the [bitrise.yml configuration file](8629bcmv/bitrise-cli/basics-of-bitrise-yml) which you can modify in [bitrise.io](https://www.bitrise.io/)’s graphical Workflow Editor.

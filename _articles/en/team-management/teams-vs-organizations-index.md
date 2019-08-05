@@ -1,7 +1,7 @@
 ---
 title: Teams and organizations
 redirect_from: "/team-management/teams-vs-organizations/"
-date: '2019-03-27T15:41:18.000+00:00'
+date: 2019-03-27T15:41:18.000+00:00
 tag:
 - teams
 - orgs
@@ -10,7 +10,7 @@ summary: 'Teams are based on apps: each app has its own team. Organizations are 
 menu:
   main:
     identifier: team-management-main
-    weight: 3
+    weight: 5
 
 ---
 There are two types of accounts on Bitrise:

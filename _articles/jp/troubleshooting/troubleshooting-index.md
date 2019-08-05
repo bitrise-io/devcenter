@@ -5,7 +5,7 @@ redirect_from: []
 menu:
   main:
     identifier: troubleshooting-main
-    weight: 16
+    weight: 31
 
 ---
 {% include not_translated_yet.html %}

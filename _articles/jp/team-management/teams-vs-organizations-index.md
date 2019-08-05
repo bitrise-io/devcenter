@@ -5,7 +5,7 @@ date: 2019-03-27T15:48:36.000+00:00
 menu:
   main:
     identifier: team-management-main
-    weight: 5
+    weight: 10
 
 ---
 Bitriseの2種類のアカウント：

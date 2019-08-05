@@ -1,6 +1,6 @@
 ---
 tag: []
-title: 'Troubleshooting'
+title: Troubleshooting
 redirect_from: []
 summary: 'In this section, we offer you some ideas for how to debug your Bitrise builds.
   The guides deal with specific issues: take a look at them to check out if any of
@@ -8,7 +8,7 @@ summary: 'In this section, we offer you some ideas for how to debug your Bitrise
 menu:
   main:
     identifier: troubleshooting-main
-    weight: 14
+    weight: 27
 
 ---
 In this section, we offer you some ideas for how to debug your Bitrise builds. The guides deal with specific issues: take a look at them to check out if any of them solves your problem.
