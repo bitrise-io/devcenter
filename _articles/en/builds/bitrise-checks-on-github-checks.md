@@ -20,9 +20,9 @@ Bitrise Checks is a Github app which provides an extended version of the classic
 
 There can be three different check statuses:
 
-* Successful check.
-* Failed check.
-* Action needed check (in the case of manual pull request approval).
+* Success.
+* Failed.
+* Action required (in the case of manual pull request approval).
 
 ## Installing Bitrise Checks
 
@@ -91,7 +91,7 @@ If you decide to uninstall Bitrise Checks from your GitHub account, you can clic
 ![](/img/disable-ghckecks.jpg)
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's install Bitrise Checks</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's install Bitrise Checks</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
