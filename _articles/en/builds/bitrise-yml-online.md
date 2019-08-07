@@ -36,7 +36,7 @@ If an app has multiple builds on [bitrise.io](https://www.bitrise.io) and you wa
 
 ## Checking changes in bitrise.yml online
 
-Once you've clicked **Show bitrise.yml**, you will see the **BUILD'S BITRISE YML** pop-up window displaying your builds' configuration details. If the build's `bitrise.yml` content differs from the current build's `bitrise.yml`, you will see two editors displayed side-by-side in the `BITRISE.YML CHANGES` pop-up window. The differences between the builds are highlighted in the following colors:
+Once you've clicked **Show bitrise.yml**, you will see the **BUILD'S BITRISE YML** pop-up window displaying your builds' configuration details. If the build's `bitrise.yml` content differs from the current build's `bitrise.yml`, you will see two editors displayed side-by-side in the **BITRISE.YML CHANGES** pop-up window. The differences between the builds are highlighted in the following colors:
 
 * green means added content
 * blue means modified content
@@ -46,37 +46,37 @@ Once you've clicked **Show bitrise.yml**, you will see the **BUILD'S BITRISE YML
 
 ## Restoring and undoing changes in bitrise.yml online
 
-If you don't like the changes made to your _current_ bitrise.yml, you can easily restore it to the build's original bitrise.yml.
+If you don't like the changes made to your current `bitrise.yml`, you can easily restore it to the build's original `bitrise.yml`.
 
-1. Click the `Show bitrise.yml` button at the top OR at the bottom of your inline log on [bitrise.io](https://www.bitrise.io/).
-2. In the `BITRISE.YML CHANGES` pop-up window, click the orange `Restore` button.
-3. Hit `OK` in the `Are you sure?` pop-up window to confirm and override the current bitrise.yml.
+1. Click the **Show bitrise.yml** button at the top OR at the bottom of your inline log on [bitrise.io](https://www.bitrise.io/).
+2. In the **BITRISE.YML CHANGES** pop-up window, click the orange **Restore** button.
+3. Hit **OK** in the **Are you sure?** pop-up window to confirm and override the current `bitrise.yml`.
 
 ![](/img/bitrise-yml-changes-are-you-sure.png)
 
 ## Editing and downloading bitrise.yml online
 
-You can **edit** your build config in yml format in the `bitrise.yml editor` if you go to your app's `Workflow Editor` and click the `bitrise.yml` tab.
+You can edit your build config in yml format in the **bitrise.yml editor** if you go to your app's Workflow Editor and click the **bitrise.yml** tab.
 
 ![](/img/bitrise-yml-tab.png)
 
-* press `F1` for the full command list
-* fold and unfold with the `-` and `+` signs
-* press `Ctrl`/`Cmd` + `F` for search and replace where you can search with `RegExp`, `Match Whole Word`, case-sensitive, case-insensitive, or to search only in the selected section
-* use the `preview sidebar` on the right for easier navigation
+* press **F1** for the full command list
+* fold and unfold with the **-** and **+** signs
+* press **Ctrl**/**Cmd** + **F** for search and replace where you can search with `RegExp`, `Match Whole Word`, case-sensitive, case-insensitive, or to search only in the selected section
+* use the **preview sidebar** on the right for easier navigation
 
-You can **save** or **discard** any changes you have made with the config. If you click `Download currently saved config`, you can **download** this YML version to your own computer and run it with bitrise CLI on your Mac/PC.
+You can save or discard any changes you have made with the config. If you click **Download currently saved config**, you can download this YML version to your own computer and run it with bitrise CLI on your Mac/PC.
 
-You might want to **clone** this whole YML configuration or just part of it to another app, so that you can use the copied version as a base and extend it with a few extra steps. All you have to do is copy this bitrise.yml content and paste it into the new app's bitrise.yml editor and develop it further.
+You might want to clone this whole YML configuration or just part of it to another app, so that you can use the copied version as a base and extend it with a few extra steps. All you have to do is copy this `bitrise.yml` content and paste it into the new app's **bitrise.yml editor** and develop it further.
 
 ## Deleting a build's bitrise.yml
 
 If you wish, you can simply delete a build's `bitrise.yml` file. But please note that this action cannot be undone: nobody will be able to view that particular build's `bitrise.yml` file once you delete it.
 
-1. Select an application on your `Dashboard` and select one of its builds.
-2. Click the `Delete bitrise.yml` button.
+1. Select an application on your **Dashboard** and select one of its builds.
+2. Click the **Delete bitrise.yml** button.
 
    ![](/img/delete-bitrise-yml.png)
-3. In the confirmation window, click `Yes`.
+3. In the confirmation window, click **Yes**.
 
 <div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Check out a bitrise.yml file online</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a> </div>
