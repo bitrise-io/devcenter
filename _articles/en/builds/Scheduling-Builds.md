@@ -19,15 +19,15 @@ Follow the steps to see how you can set it up for your next build!
 
 1. Go to your [Dashboard](https://app.bitrise.io/dashboard) and click on the project whose build you want to schedule.
 2. Click on **Start/Schedule a Build**.
-3. In the **Build configuration** pop-up window, toggle the switch to the right to enable `Schedule this build` feature.
+3. In the **Build configuration** pop-up window, toggle the switch to the right to enable **Schedule this build** feature.
 
    ![](/img/basic-build-config-1.jpg)
 4. Set the hour and minute in the `HH/MM` field.
 5. On the timeline, select the day(s) when you want your build to run.
 
    ![](/img/basic-build-config-scheduled-1.jpg)
-6. Check and fill out the rest of the input fields if necessary. You can schedule your build in the advanced version of the `Build configuration` window too.
-7. Click `Schedule Build` at the bottom of the pop-up window.
+6. Check and fill out the rest of the input fields if necessary. You can schedule your build in the advanced version of the **Build configuration** window too.
+7. Click **Schedule Build** at the bottom of the pop-up window.
 
 {% include message_box.html type="info" title="Conflicting input" content="Using the Advanced option, you have access to additional options for your build: you can enter a git tag or a commit hash. If, for example, you specify a commit hash, you will notice that the Git Tag option disappears. This ensures that you cannot enter conflicting input values.
 
