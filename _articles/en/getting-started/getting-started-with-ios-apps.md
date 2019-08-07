@@ -53,7 +53,12 @@ If you have test targets defined, the **primary** workflow of an iOS app include
 
 The **Xcode Test for iOS** Step runs the pre-defined Xcode tests. It has a default configuration that does not need to be modified: if the tests are written correctly, they will work. You can find the same configuration options in Xcode, too.
 
-{% include message_box.html type="note" title="Check your Stack" content="If your simulator test fails with 'Ineligible destinations for the <your-app-scheme> scheme', then make sure the XCode version in the Stack tab is correct"%}
+{% include message_box.html type="note" title="Check your Stack" content="We recommend checking that the stack selected for your app has the same Xcode version you used to build the app.
+
+For example, if your simulator test fails with 'Ineligible destinations for the <your-app-scheme> scheme', then make sure the Xcode version in the Stack tab is correct.
+  
+You can read more about our stacks in the [Available stacks](/infrastructure/available-stacks/) guide.
+"%}
 
 The **Deploy to Bitrise.io** will deploy the following to the **Logs** and [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab of the build:
 
