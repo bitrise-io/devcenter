@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/detached-head-draft.md
 - deploy.md
 - _articles/en/getting-started/getting-started-with-ios-apps.md
 - _articles/en/builds/build-logs.md
@@ -126,7 +127,6 @@ pages:
 - _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/testing/test-reports.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
-- _articles/en/reviews/detached-head-draft.md
 - _articles/en/api/managing-ios-code-signing-files.md
 - _articles/en/api/endpoints.md
 - _articles/en/api/build-trigger.md

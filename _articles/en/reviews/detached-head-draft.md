@@ -10,9 +10,9 @@ Builds can fail due to many reasons, and one of those is related to how a build 
 
 If you start a build manually and you only specify a branch, then `git-clone` will clone that branch.
 
-But if you use webhooks to automatically trigger builds on code changes, [bitrise.io](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and `git-clone` will clone that specific commit.
+But if you use webhooks to automatically trigger builds on code changes, [bitrise.io](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and `git-clone` will clone that specific commit. 
 
-You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
+Let's test this locally with a `git checkout COMMITHASH` - this is what you'll get:
 
     $ git checkout 6415740f2e73d65eb85969324d6d66f9a36bc70f
     
@@ -29,22 +29,22 @@ You can test this locally, if you do `git checkout COMMITHASH` you’ll get:
     
     HEAD is now at 6415740... commit message
 
-As you can see from the error message, now you are in a detached Head state which means the Head is not pointing to the tip of the current branch but to your commit object. This means you are not on any branch so you can't push the commits to any branch at this stage. What you can do in a detached Head state is:
+As you can see from the error message, now you are in a detached Head state so the Head is NOT pointing to the tip of the current branch but to your COMMIT OBJECT. This means you are not on any branch, therefore, you can't push the commits to any branch at this stage. What you can do in a detached Head state is:
 
-* creating commits
-* checking if tests have successfully run in this code version
+* Creating commits
+* Checking if tests have successfully run in this code version
 
-So to be able to commit and push directly to a branch, you'll have to check out a branch first. 
+So to be able to commit and push DIRECTLY TO A BRANCH, you'll have to check out a branch first.
 
 ## Solution
 
-The above error message suggests a solution for getting back to a branch from the detached Head state. You can get back to a branch by `git checkout -b BRANCH`. You could also `git checkout BRANCH` before committing and pushing changes. Please bear in mind that if you chose this option, you might commit on a different state of the code than what was built/tested during the build.
+The above error message suggests a solution for how to get back to a branch from the detached Head state. You can get back to a branch by `git checkout -b BRANCH`. You could also `git checkout BRANCH` before committing and pushing changes. Please bear in mind that if you chose this option, you might commit on a different state of the code than what was built/tested during the build.
 
-{% include message_box.html type="example" title="Example" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
+{% include message_box.html type="example" title="Example" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing first a `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
 
 When it comes to `git checkout` in general, you also have to be careful which branch you check out. For example, if the build was started by `feature/a`, you should check out that branch instead of a hardcoded one (for example, a master branch). Learn how to get the build’s branch through the `BITRISE_GIT_BRANCH` [env var](/builds/available-environment-variables/)."%}
 
-### Testing git checkout locally
+### Testing git checkout locally ?? why is this important??
 
 A webhook triggered build (when a commit hash is available) is similar to doing a
 
@@ -60,7 +60,7 @@ You can test both on your own Mac and see what you have to do to make the tool y
 
 ## Incrementing the version number
 
-### Manually in the code
+### Manually in the code \[in devcenter\]
 
 You can bump the version number manually, treating it just like any other code change (creating a Pull Request too), as we believe version numbers should mean something and are part of the code. In this case we use the `BITRISE_BUILD_NUMBER` as the build number in the app, which does not require committing it into the code and this way you can link every build of the app to the build on [bitrise.io](https://www.bitrise.io).
 
@@ -68,7 +68,7 @@ You can bump the version number manually, treating it just like any other code c
 
 This solution is the easiest to setup and manage, and it’s probably the best for app type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
 
-### Using git tags for versioning
+### Using git tags for versioning \[is this really relevant to the git checkout topic?\]
 
 If you don't want to store the version in the code directly, you can use git tags for versioning, which does not require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x` (this is mainly for web projects with continuous deployment, where a version number wouldn’t mean much in the code.)
 
