@@ -13,7 +13,7 @@ menu:
     weight: 17
 
 ---
-Every secret Environment Variable (secret env var) is an Env Var but not every Environment Variable (Env Var) is a secret Env Var!
+Every secret Environment Variable (Env Var) is an Env Var but not every Env Var is a secret Env Var!
 
 ## About Env Vars
 
@@ -44,7 +44,7 @@ Check out our list of [Available Environment Variables](/builds/available-enviro
 
 Secret Env Vars are special type of Env Vars as they hide information in an encrypted format so that your private input is not exposed in the build logs/bitrise.yml. Secret Env Vars can be set by adding the Env Var key and the variable in the **Secrets** tab of the Workflow Editor.
 
-### Adding a secret env var
+### Adding a secret Env Var
 
 You can add a secret Env Var to your Workflow using our **Secrets** tab.
 
@@ -55,14 +55,14 @@ You can add a secret Env Var to your Workflow using our **Secrets** tab.
 
 You can also add a secret Env Var directly in a [Step's](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/) `SENSITIVE` input.
 
-### Editing a secret env var
+### Editing a secret Env Var
 
 Once you've added a new secret Env Var in the **Secrets** tab, you come back to it any time, modify its content or make it protected from curious eyes!
 
-1. Click `Edit` next to the value of  your secret env var.
+1. Click **Edit** next to the value of  your secret Env Var.
 2. Modify its content if needed.
 3. If you want to hide the value, click **Make it protected**. A lock is shown.
-4. `Delete` the secret env var if you do not need it any more. Please note if you hit this button, the whole row will get deleted.
+4. **Delete** the secret Env Var if you do not need it any more. Please note if you hit this button, the whole row will get deleted.
 
 {% include message_box.html type="important" title="Life after **Make it protected** " content=" Please note if you clicked this button, neither you nor anybody with the access to the app can unlock or check the value again.
 
@@ -74,7 +74,7 @@ Since this change is irreversible, a confirmation pop-up window will be displaye
 
 " %}
 
-You can **show** and **hide** the value of an env var with the **eye** icon. This feature is useful if you have a long list of secret env vars in **Secrets** and you wish to check the value of only one secret env var while leaving the other values hidden. If a value is hidden, it's represented with the **crossed out eye** icon.
+You can **show** and **hide** the value of an Env Var with the **eye** icon. This feature is useful if you have a long list of secret env vars in **Secrets** and you wish to check the value of only one secret env var while leaving the other values hidden. If a value is hidden, it's represented with the **crossed out eye** icon.
 
 ![](/img/eye-icon.png)
 
