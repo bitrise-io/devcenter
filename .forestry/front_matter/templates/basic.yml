@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/builds/build-logs.md
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
 - _articles/en/builds/bitrise-yml-online.md
 - _articles/en/builds/build-artifacts-online.md
@@ -166,7 +167,6 @@ pages:
 - _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
 - _articles/en/builds/available-environment-variables.md
 - _articles/en/builds/triggering-builds/trigger-code-push.md
-- _articles/en/builds/build-logs.md
 - _articles/en/team-management/organizations/managing-invoices.md
 - _articles/en/team-management/organizations/org-ownership.md
 - _articles/en/team-management/organizations/creating-org.md

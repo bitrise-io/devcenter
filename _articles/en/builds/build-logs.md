@@ -23,9 +23,9 @@ When you run a build, a build log is generated automatically. Every build has it
 {% include message_box.html type="note" title="Assisting Bitrise Support" content="When Bitrise Support asks for your build logs, the best thing to do is send the build URL."%}
 
 1. Log in to Bitrise and click on your app on the Apps page.
-2. Click the `Builds` tab.
+2. Click the **Builds** tab.
 3. Select the build you want to check out.
-4. Find the log under the `LOGS` tab.
+4. Find the log under the **LOGS** tab.
 
    ![](/img/logs.jpg)
 
@@ -56,10 +56,10 @@ If you need to send your build logs to people who do not have access to the app 
 {% include message_box.html type="warning" title="Log security" content="Please note that your build log can contain sensitive information! Make sure to check its contents before downloading the log file and sending it out to anyone. We recommend using [Secrets](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/#about-secrets) to make sure nothing sensitive appears in build logs."%}
 
 1. Log in to Bitrise and click on your app on the Apps page.
-2. Click the `Builds` tab.
+2. Click the **Builds** tab.
 3. Select the build you want to check out.
-4. Find the log under the `LOGS` tab.
-5. Click the `Download Logs` button.
+4. Find the log under the **LOGS** tab.
+5. Click the **Download Logs** button.
 
 ### Deleting a build log
 
@@ -72,11 +72,11 @@ Not all team members are authorized to delete logs: only those with either **Adm
 ![](/img/build-logs-are-you-sure-1.png)
 
 1. Log in to Bitrise and click on your app on the Apps page.
-2. Click the `Builds` tab.
+2. Click the **Builds** tab.
 3. Select the build you want to check out.
-4. Find the log under the `LOGS` tab.
-5. Click the `Delete Logs` button.
-6. In the pop-up window, click `Yes`.
+4. Find the log under the **LOGS** tab.
+5. Click the **Delete Logs** button.
+6. In the pop-up window, click **Yes**.
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
