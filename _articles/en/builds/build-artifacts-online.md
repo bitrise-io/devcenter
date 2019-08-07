@@ -14,24 +14,24 @@ menu:
     weight: 21
 
 ---
-If you select a build of your app, on the `APPS & Artifacts` tab you can check out the artifacts (for example, files & reports) which have been generated during the build.
+If you select a build of your app, on the **APPS & Artifacts** tab you can check out the artifacts (for example, files & reports) which have been generated during the build.
 
-All files are destroyed at the end of the build so if you want to view or download any files, insert `Deploy to bitrise.io` Step to your workflow so that it can help you access the artifacts.
+All files are destroyed at the end of the build so if you want to view or download any files, insert **Deploy to bitrise.io** Step to your Workflow so that it can help you access the artifacts.
 
 ## Deploying files into artifacts
 
-Artifacts are deployed into the `APPS & Artifacts` section in your build's page with the help of the `Deploy to Bitrise.io` step. It deploys all the files which have been generated during the build and stores them in the `$BITRISE_DEPLOY_DIR` directory. You can change the target directory path in the `Deploy directory or file path` field under the `Config` section of the step.
+Artifacts are deployed into the **APPS & Artifacts** section in your build's page with the help of the **Deploy to Bitrise.io** Step. It deploys all the files which have been generated during the build and stores them in the `$BITRISE_DEPLOY_DIR` directory. You can change the target directory path in the **Deploy directory or file path** field under the **Config** section of the step.
 
-1. Insert the `Deploy to Bitrise.io` step AFTER the step/s that generate the artifacts or even better if the `Deploy to Bitrise.io` step is **at the very end of your workflow**. For more information, check out our [Attach any file as an Artifact to the Build](https://devcenter.bitrise.io/tips-and-tricks/attach-any-file-to-build/) article.
+1. Insert the **Deploy to Bitrise.io** Step AFTER the Step/s that generate the artifacts or even better if the **Deploy to Bitrise.io** Step is at the very end of your Workflow. For more information, check out our [Attach any file as an Artifact to the Build](https://devcenter.bitrise.io/tips-and-tricks/attach-any-file-to-build/) article.
 
-{% include message_box.html type="important" title="Where to insert Deploy to Bitrise.io" content="
-My message" content=" Add the `Deploy to Bitrise.io` step in the right place. If you insert the step before other steps that generate files during the build, then `Deploy to Bitrise.io` will have nothing to deploy. "%}
+{% include message_box.html type="important" title="Where to insert the **Deploy to Bitrise.io** Step" content="
+My message" content=" Add the **Deploy to Bitrise.io** Step in the right place. If you insert the Step before other Steps that generate files during the build, then **Deploy to Bitrise.io** will have nothing to deploy. "%}
 
-Note that the content of any sub-directories found in the deploy directory will not be displayed in the `APPS and Artifacts` section of your build. You can, however, **compress your artifacts** into a zip file if you modify the default `false` value to `true` in the `Compress the artifacts into one file` field in the `Deploy to Bitrise.io` step. This will compress the whole directory along with its sub-directories and deploy to `APPS & Artifacts`.
+Note that the content of any sub-directories found in the deploy directory will not be displayed in the **APPS & ARTIFACTS` section of your build. You can, however, **compress your artifacts** into a zip file if you modify the default `false` value to `true` in the `Compress the artifacts into one file` field in the `Deploy to Bitrise.io` Step. This will compress the whole directory along with its sub-directories and deploy to `APPS & ARTIFACTS`.
 
 ### Modifying target directory path
 
-You can **modify the target directory path** to another one but make sure you reference the same directory paths in other steps of your workflow to ensure that the generated files get collected to the same directory.
+You can **modify the target directory path** to another one but make sure you reference the same directory paths in other Steps of your Workflow to ensure that the generated files get collected to the same directory.
 
 ### Viewing artifacts if your build has failed
 
@@ -43,10 +43,10 @@ The artifacts at `APPS & Artifacts` are accessible for everyone who is the owner
 
 ## File types & limitations
 
-All file types are supported and will be available in `APPS & Artifacts`.
+All file types are supported and will be available in `APPS & ARTIFACTS`.
 Depending on the type of the file, you can either view your artifacts inline if you click on the `eye` icon or download them to your local computer.
 
-There is no limitation on the NUMBER of files deployed to `APPS & Artifacts` per build. There is a limitation, however, on the file size which is **2GB per file**.
+There is no limitation on the NUMBER of files deployed to `APPS & ARTIFACTS` per build. There is a limitation, however, on the file size which is **2GB per file**.
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
