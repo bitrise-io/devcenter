@@ -28,7 +28,7 @@ Open your app and go to its **Settings** tab.
 
 ![](/img/build-number.png)
 
-Under `YOUR NEXT BUILD NUMBER WILL BE`, the number of your next build will be displayed (unsurprisingly). This number is incremented automatically whenever a new build is triggered but here you can also set it manually.
+Under **YOUR NEXT BUILD NUMBER WILL BE**, the number of your next build will be displayed (unsurprisingly). This number is incremented automatically whenever a new build is triggered but here you can also set it manually.
 
 Please note that the build number must be either 0 or a positive integer. Negative numbers are not accepted. You can, however, set any number you have already used.
 
