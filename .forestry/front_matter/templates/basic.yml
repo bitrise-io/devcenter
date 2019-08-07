@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/builds/bitrise-yml-online.md
 - _articles/en/builds/build-artifacts-online.md
 - _articles/en/builds/env-vars-secret-env-vars.md
 - _articles/en/builds/build-numbering-and-app-versioning.md
@@ -75,7 +76,6 @@ pages:
 - _articles/en/team-management/organizations/managing-billing-sub.md
 - _articles/en/team-management/organizations/members-organizations.md
 - _articles/en/team-management/organizations/managing-apps.md
-- _articles/en/builds/bitrise-yml-online.md
 - _articles/en/webhooks/adding-outgoing-webhooks.md
 - _articles/en/webhooks/troubleshooting.md
 - _articles/jp/troubleshooting/resetting-your-password.md
