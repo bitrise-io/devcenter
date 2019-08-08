@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
 - _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
 - _articles/en/code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
 - _articles/en/reviews/monitoring-add-on.md
@@ -86,7 +87,6 @@ pages:
 - _articles/en/webhooks/troubleshooting.md
 - _articles/jp/troubleshooting/resetting-your-password.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
-- _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
 - _articles/en/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
 - _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
