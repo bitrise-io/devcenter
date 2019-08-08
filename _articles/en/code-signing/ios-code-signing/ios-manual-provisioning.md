@@ -16,9 +16,13 @@ menu:
 ---
 Manage your code signing files on [bitrise.io](https://www.bitrise.io). Collect your provisioning profiles and .p12 certificates with our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool, and then upload them to Bitrise manually or by using the tool.
 
-We support the **Automatically manage signing** option, introduced in Xcode 8, with your app. In this case, create an .ipa of the desired type on your local machine to let Xcode generate the required profiles and then `codesigndoc` can collect these. If your app changes and Xcode re-generates the profiles, you will need to re-upload these profiles to Bitrise as well.
+## Collecting code signing files
 
-If you collected all the necessary files with the `codesigndoc` tool, proceed to uploading them and setting up your Workflow. In this example, we'll be uploading the code signing files manually - however, you can do this with the `codesigndoc` tool, too!
+If you collected all the necessary files with the `codesigndoc` tool, proceed to uploading them and setting up your Workflow. You can upload the files manually or you can do this with the `codesigndoc` tool, too!
+
+{% include message_box.html type="info" title="Xcode managed signing" content="We support the **Automatically manage signing** option, introduced in Xcode 8, with your app. In this case, create an .ipa of the desired type on your local machine to let Xcode generate the required profiles and then `codesigndoc` can collect these. If your app changes and Xcode re-generates the profiles, you will need to re-upload these profiles to Bitrise as well."%}
+
+## Uploading code signing files
 
 {% include message_box.html type="important" title="Development profile and certificate" content="You always need to upload at least a Developer certificate and a Development type provisioning profile! That is necessary for our Xcode Steps to be able to test and build your apps properly."%}
 
