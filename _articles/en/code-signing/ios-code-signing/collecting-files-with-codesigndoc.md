@@ -16,14 +16,16 @@ menu:
 ---
 The open source [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool runs a clean Xcode/Xamarin Studio Archive on your Mac, and analyzes the generated archive file. It collects the code signing settings that Xcode or Xamarin Studio used during the archive process, and prints the list of the required code signing files. You can also search for, export and upload these files using `codesigndoc`.
 
-If your project contains UITest targets,[ codesigndoc can scan for that](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/#scanning-for-uitest-targets), too. It runs the `xcodebuild build-for-testing` action to create a test-Runner.app, and exports the necessary code signing files.
+If your project contains UITest targets, [codesigndoc can scan for that](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/#scanning-for-uitest-targets), too. It runs the `xcodebuild build-for-testing` action to create a test-Runner.app, and exports the necessary code signing files.
 
 ## Collecting the files with codesigndoc
 
-You can use codesigndoc for:
+You can use `codesigndoc` for:
 
 * Xamarin projects.
 * Xcode projects.
+
+The app does not have to be a native iOS app: you can use the tool with an app built with a third-party framework, such as Flutter, if you have an `.xcodeproj` or `.xcworkspace` file.
 
 You can install the [latest version of codesigndoc](https://github.com/bitrise-io/codesigndoc/releases) with a simple one-liner or you can manually download and install the specific version you want to use:
 
@@ -48,7 +50,7 @@ In the below example, we'll use the one-liners.
 
        Do you want to upload the provisioning profiles and certificates to Bitrise? [yes/no] :
 
-   If you wish to upload the files with `codesigndoc`, type `yes` and press `Enter`.
+   If you wish to upload the files with `codesigndoc`, type `yes` and press **Enter**.
 2. Provide your Bitrise access token.
 
        Please copy your personal access token to Bitrise.
@@ -62,7 +64,7 @@ In the below example, we'll use the one-liners.
 
 That's all, you are done!
 
-If you wish to use automatic provisioning with our `iOS Auto Provisioning` step, you only need to collect the certificate file(s). You can run `codesigndoc scan` with the `--certs-only` flag to do that.
+If you wish to use automatic provisioning with our **iOS Auto Provisioning** Step, you only need to collect the certificate file(s). You can run `codesigndoc scan` with the `--certs-only` flag to do that.
 
 You can also install and run `codesigndoc` manually. For more information, check out the [tool's Readme](https://github.com/bitrise-tools/codesigndoc)!
 
@@ -94,7 +96,7 @@ If the UITest scanner cannot find the desired scheme, follow these steps:
 
    It has to contain a UITest target that is enabled to run.
 2. Refresh your project settings:
-   * Select the `Generic iOS Device` target for your scheme in Xcode.
+   * Select the **Generic iOS Device** target for your scheme in Xcode.
    * Clean your project: `⌘ Cmd + ↑ Shift + K`.
    * Run a build for testing: `⌘ Cmd + ↑ Shift + U`.
 3. Run `codesigndoc` again.
@@ -143,7 +145,7 @@ So, for the best results, we recommend you to:
 It's also advised to do a full Archive + Export (until you get a signed `.ipa`) of your project from `Xcode.app` first, and run `codesigndoc` **after that**. The reason is that `Xcode.app` might download or update profiles in the background during the IPA export. If you run `codesigndoc` after you exported an `.ipa` from Xcode, `codesigndoc` will able to collect all the files.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
 </div>
