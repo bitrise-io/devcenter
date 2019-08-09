@@ -120,7 +120,7 @@ You can test both on your own Mac and see what you have to do to make the tool y
 
 ### Manually way
 
-This solution is the easiest to set up and manage, and works best for app type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
+This solution is the easiest to set up and manage, and works best for app type projects and projects where you release periodically (for example, weekly, monthly), but you don’t do multiple daily production deploys.
 
 You can bump the version number manually, treating it just like any other code change. In this case, we use the `BITRISE_BUILD_NUMBER` Env Var as the build number in the app, which does not require committing it into the code and this way you can link every build of the app to the build on [bitrise.io](https://www.bitrise.io).
 
@@ -132,7 +132,9 @@ If you don't want to store the version in the code directly, you can use git tag
 
 ### Auto-generating a commit for production deploys
 
-You cannot push code if you are in detached head state. in this case you can use the auto-generate. with skip cli you can prevent starting a build.
+As discussed above, you cannot push code if you are in detached head state. In this case you can use the auto-generate a commit for version bump method and with our Skip CLI feature you can bump up the version number without starting a build. 
+
+{% include message_box.html type="warning" title="Careful" content="But we only do this after careful configuration, and we usually don’t start with this setup. To do this we also use GitHub’s protected branches feature enabling pretty much every protection feature they have (for example, that every Pull Request have to be up to date with “master” before it could be merged) and carefully configuring the flow (who can push to where, required code reviews, etc.). Once configured this can work really well for continuous delivery (e.g. we use this for the main bitrise.io server), but the configuration takes quite some time and experimenting, to allow your team to deploy frequently and without worrying, while ensuring code consistency."%}
 
 Or when we do auto-generate a commit for the version bump we use Skip CI to stop a build for being triggered. But we only do this after careful configuration, and we usually don’t start with this setup. To do this we also use GitHub’s protected branches feature enabling pretty much every protection feature they have (for example, that every Pull Request have to be up to date with “master” before it could be merged) and carefully configuring the flow (who can push to where, required code reviews, etc.). Once configured this can work really well for continuous delivery (e.g. we use this for the main bitrise.io server), but the configuration takes quite some time and experimenting, to allow your team to deploy frequently and without worrying, while ensuring code consistency.
 
