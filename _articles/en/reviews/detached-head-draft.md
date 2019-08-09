@@ -116,9 +116,7 @@ You can test both on your own Mac and see what you have to do to make the tool y
 
 {% include message_box.html type="important" title="Skipping a commit" content="If you push back the generated version bump commit, and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit) feature and skip the auto-generated commit."%}
 
-## Incrementing the version number
-
-### Manually way
+## Incrementing the version number manually
 
 This solution is the easiest to set up and manage, and works best for app type projects and projects where you release periodically (for example, weekly, monthly), but you don’t do multiple daily production deploys.
 
@@ -126,14 +124,16 @@ You can bump the version number manually, treating it just like any other code c
 
 {% include message_box.html type="note" title="Managing version and build numbers for iOS" content=" iOS apps have both a version number and a build number info. You can manage the version number manually, and [set the build number automatically](/builds/build-numbering-and-app-versioning/#setting-the-cfbundleversion-and-cfbundleshortversionstring-of-an-ios-app), to the `BITRISE_BUILD_NUMBER`, for example, with the [Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) Step. "%}
 
-### Using git tags for versioning for production deploys
+## Using git tags for versioning
 
-If you don't want to store the version in the code directly, you can use git tags for versioning, which does not require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x`. This method suits web projects with continuous deployment the most, where a version number wouldn’t mean much in the code.
+If you don't want to store the version in the code, you can use git tags for versioning. It doesn't require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x`. 
 
-### Auto-generating a commit for production deploys
+This method suits web projects with continuous deployment the most, where a version number wouldn’t mean much in the code.
 
-As discussed above, you cannot push code if you are in detached head state. In this case you can use the auto-generate a commit for version bump method and with our Skip CLI feature you can bump up the version number without starting a build. 
+## Auto-generating a commit
 
-{% include message_box.html type="warning" title="Careful" content="But we only do this after careful configuration, and we usually don’t start with this setup. To do this we also use GitHub’s protected branches feature enabling pretty much every protection feature they have (for example, that every Pull Request have to be up to date with “master” before it could be merged) and carefully configuring the flow (who can push to where, required code reviews, etc.). Once configured this can work really well for continuous delivery (e.g. we use this for the main bitrise.io server), but the configuration takes quite some time and experimenting, to allow your team to deploy frequently and without worrying, while ensuring code consistency."%}
+As discussed above, you cannot push code if you are in detached head state. In this case you can auto-generate a commit to increase the version number AND use our [Skip CLI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/) feature which will prevent a build from being triggered.
+
+{% include message_box.html type="warning" title="Careful with auto-generating a commit" content="We recommend careful configuration before applying this method, such as who can push to where, required code reviews. You can also use GitHub’s protected branches feature enabling every protection feature they have (for example, every Pull Request has to be up to date with the master branch before it could be merged). Once properly configured, this solution can work really well for continuous delivery. On the downside, please note, the configuration takes quite some time and effort while ensuring code consistency."%}
 
 * This or the tag based solution are usually required when you do production deploys multiple times a day, as there you most likely don’t really care about the meaning of the version number, it’s more for identification and less for declaring (external) compatibility (\~SemVer 1), users usually can’t even see this version number. We ensure external compatibility (e.g. the API) through tests, and that does not require SemVer type versioning. We use this type of versioning for our bitrise.io web servers (which we do CI/CD on bitrise.io of course), where it’s quite common to have 10+ daily production releases.
