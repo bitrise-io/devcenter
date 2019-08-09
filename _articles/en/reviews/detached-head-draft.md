@@ -1,6 +1,6 @@
 ---
 tag: []
-title: About detached head
+title: How can I git checkout from a detached head state
 redirect_from: []
 summary: ''
 published: false
