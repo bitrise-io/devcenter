@@ -6,7 +6,7 @@ summary: ''
 published: false
 
 ---
-## How does detached head occurs
+## Build failures due to detached head
 
 Builds can fail due to many reasons, and one of those is related to how a build is started and how Git works.
 
@@ -83,7 +83,7 @@ This is how the build log will look like
      * [new branch]      testing    -> origin/testing
     git "checkout" "4d31f45eb2db037f0143f509872a619f9aac8c09"
 
-If the build is started without a commit hash, only with a branch parameter, that’s similar to
+If the build is started without a commit hash, only with a branch parameter, that’s similar to:
 
     git checkout BRANCH
     
