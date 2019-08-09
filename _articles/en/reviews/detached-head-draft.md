@@ -48,9 +48,7 @@ When it comes to `git checkout` in general, you also have to be careful which br
 
 ### Testing git checkout locally
 
-Let's try all of this out locally
-
-webhook-al triggerelt appnal bevagni a git clone parameter listajat, hogy megvan adva egy commit hash
+Let's try all of this out locally.
 
 A webhook triggered build (when a commit hash is available) is similar to doing a
 
