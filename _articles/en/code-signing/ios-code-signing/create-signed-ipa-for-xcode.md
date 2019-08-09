@@ -27,7 +27,7 @@ Before setting up .ipa export, make sure that:
 
 {% include message_box.html type="important" title="Development profile and certificate" content="You always need to upload at least a Developer certificate and a Development type provisioning profile! That is necessary for our Xcode Steps to be able to test and build your apps properly."%}
 
-If you're all set, proceed to setting up .ipa export in your workflow.
+If you're all set, proceed to setting up .ipa export in your Workflow.
 
 ## Exporting an .ipa
 
