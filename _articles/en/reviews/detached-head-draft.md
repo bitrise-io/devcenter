@@ -118,7 +118,7 @@ You can test both on your own Mac and see what you have to do to make the tool y
 
 ## Incrementing the version number
 
-### Manually for periodic releases
+### Manually way
 
 This solution is the easiest to set up and manage, and works best for app type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
 
