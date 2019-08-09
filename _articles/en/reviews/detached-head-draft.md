@@ -81,10 +81,10 @@ This is how the build log will look like
      * [new branch]      testing    -> origin/testing
     git "checkout" "4d31f45eb2db037f0143f509872a619f9aac8c09"
 
-If the build is started without a commit hash, only with a branch parameter, that’s similar to 
+If the build is started without a commit hash, only with a branch parameter, that’s similar to
 
     git checkout BRANCH
-
+    
     - RepositoryURL: git@github.com:BanyikAnna/sample-apps-react-native-ios-and-android.git
     - CloneIntoDir: /Users/vagrant/git
     - Commit: 
@@ -116,22 +116,22 @@ You can test both on your own Mac and see what you have to do to make the tool y
 
 ## Incrementing the version number
 
-### Manually in the code \[in devcenter\]
+### Manually for periodic releases
 
 You can bump the version number manually, treating it just like any other code change. In this case, we use the `BITRISE_BUILD_NUMBER` Env Var as the build number in the app, which does not require committing it into the code and this way you can link every build of the app to the build on [bitrise.io](https://www.bitrise.io).
 
-{% include message_box.html type="note" title="Managing version and build numbers" content=" iOS apps have both a version number and a build number info. You can [manage the version number manually]( https://devcenter.bitrise.io/builds/build-numbering-and-app-versioning/#setting-the-cfbundleversion-and-cfbundleshortversionstring-of-an-ios-app), and set the build number automatically, to the `BITRISE_BUILD_NUMBER`, for example, with the [Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) Step. "%}
+{% include message_box.html type="note" title="Managing version and build numbers" content=" iOS apps have both a version number and a build number info. You can manage the version number manually, and [set the build number automatically](/builds/build-numbering-and-app-versioning/#setting-the-cfbundleversion-and-cfbundleshortversionstring-of-an-ios-app), to the `BITRISE_BUILD_NUMBER`, for example, with the [Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) Step. "%}
 
-This solution is the easiest to setup and manage, and it’s probably the best for app type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
+This solution is the easiest to set up and manage, and it’s probably the best for app type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
 
-### Using git tags for versioning \[is this really relevant to the git checkout topic?\]
+### Using git tags for versioning for production deploys
 
-If you don't want to store the version in the code directly, you can use git tags for versioning, which does not require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x` (this is mainly for web projects with continuous deployment, where a version number wouldn’t mean much in the code.)
+If you don't want to store the version in the code directly, you can use git tags for versioning, which does not require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x`. This method suits web projects with continuous deployment the most, where a version number wouldn’t mean much in the code.
 
-## Auto-generating a commit
+### Auto-generating a commit for production deploys
 
 You cannot push code if you are in detached head state. in this case you can use the auto-generate. with skip cli you can prevent starting a build.
 
-Or when we do auto-generate a commit for the version bump we use Skip CI to not to trigger another build. But we only do this after careful configuration, and we usually don’t start with this setup. To do this we also use GitHub’s protected branches feature enabling pretty much every protection feature they have (for example, that every Pull Request have to be up to date with “master” before it could be merged) and carefully configuring the flow (who can push to where, required code reviews, etc.). Once configured this can work really well for continuous delivery (e.g. we use this for the main bitrise.io server), but the configuration takes quite some time and experimenting, to allow your team to deploy frequently and without worrying, while ensuring code consistency.
+Or when we do auto-generate a commit for the version bump we use Skip CI to stop a build for being triggered. But we only do this after careful configuration, and we usually don’t start with this setup. To do this we also use GitHub’s protected branches feature enabling pretty much every protection feature they have (for example, that every Pull Request have to be up to date with “master” before it could be merged) and carefully configuring the flow (who can push to where, required code reviews, etc.). Once configured this can work really well for continuous delivery (e.g. we use this for the main bitrise.io server), but the configuration takes quite some time and experimenting, to allow your team to deploy frequently and without worrying, while ensuring code consistency.
 
 * This or the tag based solution are usually required when you do production deploys multiple times a day, as there you most likely don’t really care about the meaning of the version number, it’s more for identification and less for declaring (external) compatibility (\~SemVer 1), users usually can’t even see this version number. We ensure external compatibility (e.g. the API) through tests, and that does not require SemVer type versioning. We use this type of versioning for our bitrise.io web servers (which we do CI/CD on bitrise.io of course), where it’s quite common to have 10+ daily production releases.
