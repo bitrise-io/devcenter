@@ -1,6 +1,6 @@
 ---
 tag: []
-title: detached head draft
+title: About detached head
 redirect_from: []
 summary: ''
 published: false
@@ -10,7 +10,7 @@ Builds can fail due to many reasons, and one of those is related to how a build 
 
 If you start a build manually and you only specify a branch, then `git-clone` will clone that branch.
 
-But if you use webhooks to automatically trigger builds on code changes, [bitrise.io](https://www.bitrise.io/) will send the **commit hash** of the commit which triggered the build and `git-clone` will clone that specific commit. 
+But if you use webhooks to automatically trigger builds on code changes, repo host will send the **commit hash** of the commit which triggered the build webhook and `git-clone` will clone that specific commit . This would put the local git instance into detached head state.
 
 Let's test this locally with a `git checkout COMMITHASH` - this is what you'll get:
 
@@ -40,19 +40,75 @@ So to be able to commit and push DIRECTLY TO A BRANCH, you'll have to check out 
 
 The above error message suggests a solution for how to get back to a branch from the detached Head state. You can get back to a branch by `git checkout -b BRANCH`. You could also `git checkout BRANCH` before committing and pushing changes. Please bear in mind that if you chose this option, you might commit on a different state of the code than what was built/tested during the build.
 
-{% include message_box.html type="example" title="Example" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing first a `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
+{% include message_box.html type="example" title="Quick example" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing first a `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
 
 When it comes to `git checkout` in general, you also have to be careful which branch you check out. For example, if the build was started by `feature/a`, you should check out that branch instead of a hardcoded one (for example, a master branch). Learn how to get the build’s branch through the `BITRISE_GIT_BRANCH` [env var](/builds/available-environment-variables/)."%}
 
-### Testing git checkout locally ?? why is this important??
+### Testing git checkout locally
+
+Let's try all of this out locally
+
+webhook-al triggerelt appnal bevagni a git clone parameter listajat, hogy megvan adva egy commit hash
 
 A webhook triggered build (when a commit hash is available) is similar to doing a
 
     git checkout COMMITHASH
 
-while if the build is started without a commit hash, only with a branch parameter, that’s similar to
+This is how the build log will look like
+
+    - RepositoryURL: git@github.com:zoltan-baba/sample-apps-react-native-ios-and-android.git
+    - CloneIntoDir: /Users/vagrant/git
+    - Commit: 4d31f45eb2db037f0143f509872a619f9aac8c09
+    - Tag: 
+    - Branch: testing
+    - BranchDest: 
+    - PRID: 0
+    - PRRepositoryURL: 
+    - PRMergeBranch: 
+    - ResetRepository: false
+    - CloneDepth: 0
+    - BuildURL: https://app.bitrise.io/build/349008b006272cac
+    - BuildAPIToken: [REDACTED]
+    - UpdateSubmodules: true
+    - ManualMerge: true
+    git "init"
+    Initialized empty Git repository in /Users/vagrant/git/.git/
+    git "remote" "add" "origin" "git@github.com:zoltan-baba/sample-apps-react-native-ios-and-android.git"
+    git "fetch"
+    Warning: Permanently added 'github.com,192.30.253.113' (RSA) to the list of known hosts.
+    From github.com:zoltan-baba/sample-apps-react-native-ios-and-android
+     * [new branch]      master     -> origin/master
+     * [new branch]      testing    -> origin/testing
+    git "checkout" "4d31f45eb2db037f0143f509872a619f9aac8c09"
+
+If the build is started without a commit hash, only with a branch parameter, that’s similar to 
 
     git checkout BRANCH
+
+    - RepositoryURL: git@github.com:BanyikAnna/sample-apps-react-native-ios-and-android.git
+    - CloneIntoDir: /Users/vagrant/git
+    - Commit: 
+    - Tag: 
+    - Branch: master
+    - BranchDest: 
+    - PRID: 0
+    - PRRepositoryURL: 
+    - PRMergeBranch: 
+    - ResetRepository: false
+    - CloneDepth: 0
+    - BuildURL: https://app.bitrise.io/build/0be5f085fb1d8d4d
+    - BuildAPIToken: [REDACTED]
+    - UpdateSubmodules: true
+    - ManualMerge: true
+    git "init"
+    Initialized empty Git repository in /Users/vagrant/git/.git/
+    git "remote" "add" "origin" "git@github.com:BanyikAnna/sample-apps-react-native-ios-and-android.git"
+    git "fetch" "origin" "master"
+    Warning: Permanently added 'github.com,140.82.114.3' (RSA) to the list of known hosts.
+    From github.com:BanyikAnna/sample-apps-react-native-ios-and-android
+     * branch            master     -> FETCH_HEAD
+     * [new branch]      master     -> origin/master
+    git "checkout" "master"
 
 You can test both on your own Mac and see what you have to do to make the tool you use  work with the `git checkout COMMITHASH` case.
 
@@ -73,6 +129,8 @@ This solution is the easiest to setup and manage, and it’s probably the best f
 If you don't want to store the version in the code directly, you can use git tags for versioning, which does not require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x` (this is mainly for web projects with continuous deployment, where a version number wouldn’t mean much in the code.)
 
 ## Auto-generating a commit
+
+You cannot push code if you are in detached head state. in this case you can use the auto-generate. with skip cli you can prevent starting a build.
 
 Or when we do auto-generate a commit for the version bump we use Skip CI to not to trigger another build. But we only do this after careful configuration, and we usually don’t start with this setup. To do this we also use GitHub’s protected branches feature enabling pretty much every protection feature they have (for example, that every Pull Request have to be up to date with “master” before it could be merged) and carefully configuring the flow (who can push to where, required code reviews, etc.). Once configured this can work really well for continuous delivery (e.g. we use this for the main bitrise.io server), but the configuration takes quite some time and experimenting, to allow your team to deploy frequently and without worrying, while ensuring code consistency.
 
