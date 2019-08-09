@@ -6,11 +6,13 @@ summary: ''
 published: false
 
 ---
+## How does detached head occurs
+
 Builds can fail due to many reasons, and one of those is related to how a build is started and how Git works.
 
 If you start a build manually and you only specify a branch, then `git-clone` will clone that branch.
 
-But if you use webhooks to automatically trigger builds on code changes, repo host will send the **commit hash** of the commit which triggered the build webhook and `git-clone` will clone that specific commit . This would put the local git instance into detached head state.
+But if you use webhooks to automatically trigger builds on code changes, repo host will send the **commit hash** of the commit which triggered the build webhook and `git-clone` will clone that specific commit. This would put the local git instance into detached head state.
 
 Let's test this locally with a `git checkout COMMITHASH` - this is what you'll get:
 
