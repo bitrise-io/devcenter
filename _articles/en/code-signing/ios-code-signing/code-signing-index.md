@@ -23,7 +23,7 @@ You can store your code signing files and create a signed .ipa file for your iOS
 
 We also support using Xcode's **Automatically manage signing** option, with both manual and automatic provisioning.
 
-### iOS code signing procedure
+## iOS code signing procedure
 
 The basic workflow of code signing is pretty straightforward:
 
@@ -35,7 +35,7 @@ The basic workflow of code signing is pretty straightforward:
    * Xcode projects (this includes native iOS apps, as well as apps built with React Native, Flutter, or Ionic/Cordova: [Create a signed .ipa for Xcode projects](/code-signing/ios-code-signing/create-signed-ipa-for-xcode)
    * Xamarin projects: [Create a signed .ipa for Xamarin projects](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin)
 
-### iOS code signing with third party tools
+## iOS code signing with third party tools
 
 You can use third party tools to manage code signing on Bitrise, such as [fastlane match](https://github.com/fastlane/fastlane/tree/master/match)
 or [fastlane sigh](https://github.com/fastlane/fastlane/tree/master/sigh). However, we recommend using our own steps and tools.
