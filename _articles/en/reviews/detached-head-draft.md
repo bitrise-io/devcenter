@@ -120,11 +120,11 @@ You can test both on your own Mac and see what you have to do to make the tool y
 
 ### Manually for periodic releases
 
+This solution is the easiest to set up and manage, and it’s probably the best for app type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
+
 You can bump the version number manually, treating it just like any other code change. In this case, we use the `BITRISE_BUILD_NUMBER` Env Var as the build number in the app, which does not require committing it into the code and this way you can link every build of the app to the build on [bitrise.io](https://www.bitrise.io).
 
 {% include message_box.html type="note" title="Managing version and build numbers" content=" iOS apps have both a version number and a build number info. You can manage the version number manually, and [set the build number automatically](/builds/build-numbering-and-app-versioning/#setting-the-cfbundleversion-and-cfbundleshortversionstring-of-an-ios-app), to the `BITRISE_BUILD_NUMBER`, for example, with the [Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) Step. "%}
-
-This solution is the easiest to set up and manage, and it’s probably the best for app type projects and projects where you do periodic releases (weekly, monthly, …), but you don’t do multiple daily production deploys.
 
 ### Using git tags for versioning for production deploys
 
