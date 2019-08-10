@@ -1,0 +1,69 @@
+---
+title: Deploy apps to DeployGate from Bitrise
+redirect_from: "/tutorials/deploy/deploy-apps-to-deploygate-from-bitrise/"
+menu:
+  deploy-main:
+    weight: 5
+
+---
+# What is Applivery?
+
+[**Applivery**](https://www.applivery.com) is a mobile app distribution platform for iOS and Android that provides a powerful **mobile app management and distribution** system to simplify app delivery for both testers and employees, with a focus on an **easy-to-use experience**. 
+
+Applivery has many features to **better manage your in-development and production-ready Apps** that will help speed up your development, get better feedback and develiver better applications.
+
+Some of the features are:
+
+* Single or Multi App **customized App Stores** with a seamless user experience for non-technical users.
+* **Multi-track** and fully customized **App distribution with mutiple security configurations** including SSO, non-registered users, password protected and unlisted Apps.
+* Automatic and forced **in-app updates**.
+* **Feedback and bug reporting**.
+
+Combined with **Bitrise**, you can cover the entire develpment life cycle, from testing and building to delivery and feedback.
+
+
+![App life cycle with Applivery and Bitrise](/img/tutorials/deploy/applivery/fig1.png)
+
+# Deploy your app to Applivery using Bitrise
+
+### Step 1 - Adding Applivery Deploy Step to your workflow
+Add `Applivery iOS Deploy` or `Applivery Android Deploy` step to your bitrise workflow. Make sure you add the step after the app build process.
+
+![Applivery Workflow Step](/img/tutorials/deploy/applivery/tutorial1.png)
+
+### Step 2 - Getting your Applivery App Token
+Now it’s time to link your Bitrise App with your Applivery App. To do so, you’ll need your **Applivery App Token**. ([Read more about how to get your App Token](https://www.applivery.com/docs/rest-api/authentication/))
+
+### Step 3 - Setting up Applivery App Token
+Go to Bitrise  dashboard top menu and select **Secrets** menu option. Click **Add New** button and type `APPLIVERY_APP_TOKEN` in the left side input form. Then paste your **Applivery App Token** captured in the previous step in the right input field and click **Save**.
+
+![Configuring Applivery App Token](/img/tutorials/deploy/applivery/tutorial2.png)
+
+### Step 4 - Configuring the Applivery step
+
+There are many optional parameters that you can customize for a better and deeper integration:
+
+| Input Variables | Type | Description |
+| --- | --- | --- |
+| File path | `File` | App's binary file. By default gets `$BITRISE_IPA_PATH` or `$BITRISE_APK_PATH`. |
+| App Token | `String` | Applivery App token. By default gets `$APPLIVERY_APP_TOKEN` secret var. |
+| Changelog | `String` | Additional build/release notes or changelog attached to the deploy. |
+| Notify Collaborators? | `Boolean` | Automatically notify your project Collaborators vía emai.|
+| Notify Employees? | `Boolean` | Automatically notify your project Employees vía emai. |
+| Notification message | `String` | Notification message to be sent along with the email notification. |
+| Tags | `String` | Comma-separated list of tags to easily identify the build or multitrack App Distribution |
+| Version name | `String` | Human readable version name for a better identification of the build. |
+| Upload Certificates | `Boolean` | Download your code signing files from Bitrise Code Signing Tab and upload them to Applivery. |
+
+# How Distribution works in Applivery?
+
+![Distribution in Applivery](/img/tutorials/deploy/applivery/fig2.png)
+
+Applivery provides multiple different ways for app distribution from **customized App Stores** (public or private) to **Distribution Pages** (public, private, unlisted, or password-protected **shareable installation links**). It also enables **multitrack app delivery** based on the information gathered from your Bitrise workflows, such as **GitHub Branches, Tags or customized labels**. 
+
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Deploy to Applivery from Bitrise</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
