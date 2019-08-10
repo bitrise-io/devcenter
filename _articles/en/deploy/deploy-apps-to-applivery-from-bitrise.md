@@ -1,6 +1,6 @@
 ---
-title: Deploy apps to DeployGate from Bitrise
-redirect_from: "/tutorials/deploy/deploy-apps-to-deploygate-from-bitrise/"
+title: Deploy apps to Applivery from Bitrise
+redirect_from: "/tutorials/deploy/deploy-apps-to-applivery-from-bitrise/"
 menu:
   deploy-main:
     weight: 5
