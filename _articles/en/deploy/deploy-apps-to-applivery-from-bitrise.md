@@ -16,7 +16,7 @@ Some of the features are:
 
 * Single or Multi App customized App Stores with a seamless user experience for non-technical users.
 * Multi-track and fully customized app distribution with mutiple security configurations including SSO, non-registered users, password protected and unlisted apps. 
-* Automatic and forced **in-app updates**.
+* Automatic and forced in-app updates.
 * **Feedback and bug reporting**.
 
 Combined with **Bitrise**, you can cover the entire develpment life cycle, from testing and building to delivery and feedback.
