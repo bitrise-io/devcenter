@@ -26,7 +26,8 @@ Combined with Bitrise, you can cover the entire development life cycle, from tes
 
 ## Deploying your app to Applivery
 
-### Step 1 - Adding Applivery Deploy Step to your workflow
+1. Add the **Applivery iOS Deploy** or the **Applivery Android Deploy** Step to your Workflow.
+   Make sure you add the Step after the after the Steps that build your app.
 Add `Applivery iOS Deploy` or `Applivery Android Deploy` step to your bitrise workflow. Make sure you add the step after the app build process.
 
 ![Applivery Workflow Step](/img/tutorials/deploy/applivery/tutorial1.png)
