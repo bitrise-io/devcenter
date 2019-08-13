@@ -3,6 +3,10 @@ tag: []
 title: Deploy apps to Applivery from Bitrise
 redirect_from: []
 summary: ''
+menu:
+  deploy-main:
+    weight: 6
+    title: Deploying apps to Applivery
 
 ---
 {% include not_translated_yet.html %}
