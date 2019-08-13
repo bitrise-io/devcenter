@@ -15,7 +15,7 @@ Applivery has many features to better manage your in-development and production-
 Some of the features are:
 
 * Single or Multi App **customized App Stores** with a seamless user experience for non-technical users.
-* **Multi-track** and fully customized **App distribution with mutiple security configurations** including SSO, non-registered users, password protected and unlisted Apps.
+* Multi-track and fully customized app distribution with mutiple security configurations including SSO, non-registered users, password protected and unlisted apps. 
 * Automatic and forced **in-app updates**.
 * **Feedback and bug reporting**.
 
