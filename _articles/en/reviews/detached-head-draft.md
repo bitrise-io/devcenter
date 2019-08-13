@@ -1,6 +1,6 @@
 ---
 tag: []
-title: How can I git checkout from a detached head state
+title: How can I git checkout from a detached head state?
 redirect_from: []
 summary: ''
 published: false
@@ -31,16 +31,16 @@ Let's test this locally with a `git checkout COMMITHASH` - this is what you'll g
     
     HEAD is now at 6415740... commit message
 
-As you can see from the error message, now you are in a detached Head state so the Head is NOT pointing to the tip of the current branch but to your COMMIT OBJECT. This means you are not on any branch, therefore, you can't push the commits to any branch at this stage. What you can do in a detached Head state is:
+As you can see from the command's log, now you are in a detached Head state so the Head is NOT pointing to the tip of the current branch but to your COMMIT OBJECT. This means you are not on any branch, therefore, you can't push the commits to any branch at this stage. What you can do in a detached Head state is:
 
-* Creating commits
-* Checking if tests have successfully run in this code version
+* Creating commits.
+* Checking if tests have successfully run in this code version.
 
 So to be able to commit and push DIRECTLY TO A BRANCH, you'll have to check out a branch first.
 
 ## Solution
 
-The above error message suggests a solution for how to get back to a branch from the detached Head state. You can get back to a branch by `git checkout -b BRANCH`. You could also `git checkout BRANCH` before committing and pushing changes. Please bear in mind that if you chose this option, you might commit on a different state of the code than what was built/tested during the build.
+The above error message suggests a solution **for** how to get back to a branch from the detached Head state. You can get back to a branch by `git checkout -b BRANCH`. You could also `git checkout BRANCH` before committing and pushing changes. Please bear in mind that if you chose this option, you might commit on a different state of the code than what was built/tested during the build.
 
 {% include message_box.html type="example" title="Quick example" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing first a `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
 
@@ -48,7 +48,7 @@ When it comes to `git checkout` in general, you also have to be careful which br
 
 ### Testing git checkout locally
 
-Let's try all of this out locally.
+Let's try **all of this out** locally.
 
 A webhook triggered build (when a commit hash is available) is similar to doing a
 
@@ -114,7 +114,11 @@ You can test both on your own Mac and see what you have to do to make the tool y
 
 {% include message_box.html type="important" title="Skipping a commit" content="If you push back the generated version bump commit, and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit) feature and skip the auto-generated commit."%}
 
-## Incrementing the version number manually
+## Version number management
+
+Managing version numbers is important if you'd like to deploy an app to a marketplace. In this section we'll give some tips on how to go about incrementing your build's version number if your branch is on a detached head state.  is If you'd like to upload your app to a marketplace but you are in a detached head state, 
+
+### Incrementing the version number manually
 
 This solution is the easiest to set up and manage, and works best for app type projects and projects where you release periodically (for example, weekly, monthly), but you don’t do multiple daily production deploys.
 
@@ -122,14 +126,16 @@ You can bump the version number manually, treating it just like any other code c
 
 {% include message_box.html type="note" title="Managing version and build numbers for iOS" content=" iOS apps have both a version number and a build number info. You can manage the version number manually, and [set the build number automatically](/builds/build-numbering-and-app-versioning/#setting-the-cfbundleversion-and-cfbundleshortversionstring-of-an-ios-app), to the `BITRISE_BUILD_NUMBER`, for example, with the [Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) Step. "%}
 
-## Using git tags for versioning
+### Using git tags for versioning
 
-If you don't want to store the version in the code, you can use git tags for versioning. It doesn't require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x`. 
+If you don't want to store the version in the code, you can use git tags for versioning. It doesn't require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x`.
 
 This method suits web projects with continuous deployment the most, where a version number wouldn’t mean much in the code.
 
-## Auto-generating a commit
+### Auto-generating a commit
 
-As discussed above, you cannot push code if you are in detached head state. In this case you can auto-generate a commit to increase the version number AND use our [Skip CLI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/) feature which will prevent a build from being triggered.
+As discussed above, you cannot push code if you are in detached head state. In this case you can auto-generate a commit to increase the version number AND use our [Skip C](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/)I feature which will prevent a build from being triggered.
+
+{% include message_box.html type="important" title="Skipping a commit" content="If you push back the generated version bump commit, and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit) feature and skip the auto-generated commit."%}
 
 {% include message_box.html type="warning" title="Careful with auto-generating a commit" content="We recommend careful configuration before applying this method, such as who can push to where, required code reviews. You can also use GitHub’s protected branches feature enabling every protection feature they have (for example, every Pull Request has to be up to date with the master branch before it could be merged). Once properly configured, this solution can work really well for continuous delivery. On the downside, please note, the configuration takes quite some time and effort while ensuring code consistency."%}
