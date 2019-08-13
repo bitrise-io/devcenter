@@ -31,7 +31,7 @@ Let's test this locally with a `git checkout COMMITHASH`.
     
     HEAD is now at 6415740... commit message
 
-As you can see from the command's log, now you are in a detached Head state, meaning the Head is NOT pointing to the tip of the current branch but to your COMMIT OBJECT. This means you are not on any branch, therefore, you can't push commits to any branch either at this stage. What you can do in a detached head state is:
+As you can see from the command's log, now you are in a detached head state, meaning the head is NOT pointing to the tip of the current branch but to your COMMIT OBJECT. This means you are not on any branch, therefore, you can't push commits to any branch either at this stage. What you can do in a detached head state is:
 
 * Creating commits.
 * Checking if tests have successfully run in this code version.
