@@ -1,5 +1,5 @@
 ---
-title: Deploy apps to Applivery from Bitrise
+title: Deploying apps to Applivery
 redirect_from: "/tutorials/deploy/deploy-apps-to-applivery-from-bitrise/"
 menu:
   deploy-main:
