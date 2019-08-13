@@ -10,7 +10,7 @@ menu:
 
 [Applivery](https://www.applivery.com) is a mobile app distribution platform for iOS and Android that provides a powerful mobile app management and distribution system to simplify app delivery for both testers and employees, with a focus on an easy-to-use experience. 
 
-Applivery has many features to **better manage your in-development and production-ready Apps** that will help speed up your development, get better feedback and develiver better applications.
+Applivery has many features to better manage your in-development and production-ready apps that will help speed up your development, get better feedback and deliver better applications.
 
 Some of the features are:
 
