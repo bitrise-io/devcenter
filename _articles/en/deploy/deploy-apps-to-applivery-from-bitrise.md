@@ -33,7 +33,6 @@ Combined with Bitrise, you can cover the entire development life cycle, from tes
 
 2. Get your Applivery App Token to link your Bitrise app with your Applivery app.
    [Read more about how to get your App Token](https://www.applivery.com/docs/rest-api/authentication/).
-Now it’s time to link your Bitrise App with your Applivery App. To do so, you’ll need your **Applivery App Token**. ([Read more about how to get your App Token](https://www.applivery.com/docs/rest-api/authentication/))
 
 ### Step 3 - Setting up Applivery App Token
 Go to Bitrise  dashboard top menu and select **Secrets** menu option. Click **Add New** button and type `APPLIVERY_APP_TOKEN` in the left side input form. Then paste your **Applivery App Token** captured in the previous step in the right input field and click **Save**.
