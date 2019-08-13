@@ -55,7 +55,7 @@ There are many optional parameters that you can customize for a better and deepe
 | Version name | `String` | Human readable version name for a better identification of the build. |
 | Upload Certificates | `Boolean` | Download your code signing files from Bitrise Code Signing Tab and upload them to Applivery. |
 
-# How Distribution works in Applivery?
+## Distribution with Applivery
 
 ![Distribution in Applivery](/img/tutorials/deploy/applivery/fig2.png)
 
