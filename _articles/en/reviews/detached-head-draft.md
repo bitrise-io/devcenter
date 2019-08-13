@@ -137,3 +137,9 @@ As discussed above, you cannot push code if you are in detached head state. In t
 {% include message_box.html type="important" title="Skipping a commit" content="If you push back the generated version bump commit, and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit) feature and skip the auto-generated commit."%}
 
 {% include message_box.html type="warning" title="Careful with auto-generating a commit" content="We recommend careful configuration, for example, who can push to where, required code reviews, before applying this method. You can also use GitHub’s protected branches feature enabling every protection feature they have (for example, every Pull Request has to be up to date with the master branch before it could be merged). Once properly configured, this solution can work really well for continuous delivery. On the downside, please note, the configuration takes quite some time and effort while ensuring code consistency."%}
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+</div>
