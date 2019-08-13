@@ -38,7 +38,6 @@ Combined with Bitrise, you can cover the entire development life cycle, from tes
 4. Go to the **Secrets** tab. 
 5. Click **Add New** and type `APPLIVERY_APP_TOKEN` in the key input field. 
 6. Paste your Applivery App Token in the value input field and click **Save**.
-Go to Bitrise  dashboard top menu and select **Secrets** menu option. Click **Add New** button and type `APPLIVERY_APP_TOKEN` in the left side input form. Then paste your **Applivery App Token** captured in the previous step in the right input field and click **Save**.
 
 ![Configuring Applivery App Token](/img/tutorials/deploy/applivery/tutorial2.png)
 
