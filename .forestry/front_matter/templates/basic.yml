@@ -28,8 +28,9 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- deploy.md
+- _articles/en/api/adding-and-managing-apps.md
 - _articles/jp/deploy/deploy-apps-to-applivery-from-bitrise.md
+- deploy.md
 - _articles/en/reviews/detached-head-draft.md
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
@@ -241,4 +242,3 @@ pages:
 - _articles/jp/api/incoming-and-outgoing-webhooks.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/イントロ-intro.md
 - _articles/jp/builds/configuring-notifications.md
-- _articles/en/api/adding-and-managing-apps.md
