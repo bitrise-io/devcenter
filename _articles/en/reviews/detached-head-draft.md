@@ -10,7 +10,7 @@ published: false
 
 Builds can fail due to many reasons, and one of those is related to how a build is started and how Git works.
 
-If you start a build manually and you only specify a branch, then `git-clone` will clone that branch.
+If you start a build manually and you only specify a branch, then `git clone` will clone that branch.
 
 If, however, you use webhooks to automatically trigger builds on code changes, a repo host will send the commit hash of the commit which triggered the build webhook and `git-clone` will clone that specific commit. This would put the local git instance into detached head state.
 
@@ -44,13 +44,13 @@ The above error message suggests a solution for getting back to a branch from th
 
 {% include message_box.html type="example" title="Quick example" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing first a `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
 
-When it comes to `git checkout` in general, you also have to be careful which branch you check out. For example, if the build was started by `feature/a`, you should check out that branch instead of a hardcoded one (for example, a master branch). Learn how to get the build’s branch through the `BITRISE_GIT_BRANCH` [env var](/builds/available-environment-variables/)."%}
+When it comes to `git checkout` in general, you also have to be careful which branch you check out. For example, if the build was started by `feature/a`, you should check out that branch instead of a hardcoded one (for example, a master branch). Learn how to get the build’s branch through the `BITRISE_GIT_BRANCH` [Env Var](/builds/available-environment-variables/)."%}
 
 ### Testing git checkout locally
 
 Let's try out the above locally.
 
-A webhook triggered build (when a commit hash is available) is similar to doing a
+A build triggered by a webhook (when a commit hash is available) is similar to doing a
 
     git checkout COMMITHASH
 
@@ -110,7 +110,7 @@ If the build is started without a commit hash, only with a branch parameter, tha
      * [new branch]      master     -> origin/master
     git "checkout" "master"
 
-You can test both on your own Mac and see what you have to do to make the tool you use  work with the `git checkout COMMITHASH` case.
+You can test both on your own machine and see what you have to do to make the tool you use  work with the `git checkout COMMITHASH` case.
 
 ## Version number management
 
