@@ -41,7 +41,7 @@ Combined with Bitrise, you can cover the entire development life cycle, from tes
 
 ![Configuring Applivery App Token](/img/tutorials/deploy/applivery/tutorial2.png)
 
-### Step 4 - Configuring the Applivery step
+### Configuring the Applivery Step
 
 There are many optional parameters that you can customize for a better and deeper integration:
 
