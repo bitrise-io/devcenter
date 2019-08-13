@@ -3,6 +3,7 @@ title: Deploy apps to DeployGate from Bitrise
 menu:
   deploy-main:
     weight: 8
+    title: Deploying apps to DeployGate
 
 ---
 {% include not_translated_yet.html %}

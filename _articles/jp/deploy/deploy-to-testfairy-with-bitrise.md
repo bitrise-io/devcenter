@@ -2,7 +2,8 @@
 title: Deploy to TestFairy with Bitrise
 menu:
   deploy-main:
-    weight: 9
+    weight: 12
+    title: Deploying apps to TestFairy
 
 ---
 {% include not_translated_yet.html %}

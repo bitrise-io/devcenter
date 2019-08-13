@@ -3,7 +3,8 @@ title: Deploy to TestFairy with Bitrise
 redirect_from: "/tutorials/deploy/deploy-to-testfairy-with-bitrise/"
 menu:
   deploy-main:
-    weight: 7
+    weight: 11
+    title: Deploying apps to TestFairy
 
 ---
 If you are looking for a deployment service that also gives you lots of insights
