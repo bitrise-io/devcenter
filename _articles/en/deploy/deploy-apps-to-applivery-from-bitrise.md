@@ -19,7 +19,7 @@ Some of the features are:
 * Automatic and forced in-app updates.
 * Feedback and bug reporting.
 
-Combined with **Bitrise**, you can cover the entire develpment life cycle, from testing and building to delivery and feedback.
+Combined with Bitrise, you can cover the entire development life cycle, from testing and building to delivery and feedback.
 
 
 ![App life cycle with Applivery and Bitrise](/img/tutorials/deploy/applivery/fig1.png)
