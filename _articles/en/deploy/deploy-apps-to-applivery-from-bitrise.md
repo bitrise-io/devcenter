@@ -59,7 +59,7 @@ There are many optional parameters that you can customize for a better and deepe
 
 ![Distribution in Applivery](/img/tutorials/deploy/applivery/fig2.png)
 
-Applivery provides multiple different ways for app distribution from **customized App Stores** (public or private) to **Distribution Pages** (public, private, unlisted, or password-protected **shareable installation links**). It also enables **multitrack app delivery** based on the information gathered from your Bitrise workflows, such as **GitHub Branches, Tags or customized labels**. 
+Applivery provides multiple different ways for app distribution from customized App Stores (public or private) to Distribution Pages (public, private, unlisted, or password-protected shareable installation links). It also enables multitrack app delivery based on the information gathered from your Bitrise workflows, such as GitHub Branches, Tags or customized labels. 
 
 
 <div class="banner">
