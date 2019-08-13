@@ -3,7 +3,6 @@ tag: []
 title: Deploy apps to Applivery from Bitrise
 redirect_from: []
 summary: ''
-published: false
 
 ---
 {% include not_translated_yet.html %}
