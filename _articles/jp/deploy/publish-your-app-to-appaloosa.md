@@ -2,7 +2,7 @@
 title: Publish your app to Appaloosa
 menu:
   deploy-main:
-    weight: 10
+    weight: 9
     title: Deploying apps to Appaloosa
 
 ---

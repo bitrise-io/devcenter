@@ -3,7 +3,7 @@ title: Deploy apps to DeployGate from Bitrise
 redirect_from: "/tutorials/deploy/deploy-apps-to-deploygate-from-bitrise/"
 menu:
   deploy-main:
-    weight: 8
+    weight: 7
     title: Deploying apps to DeployGate
 
 ---
