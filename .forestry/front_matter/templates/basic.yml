@@ -28,11 +28,11 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/detached-head-draft.md
 - _articles/en/reviews/bitrise-yml-size-limitation-notes.md
 - deploy.md
 - _articles/en/api/adding-and-managing-apps.md
 - _articles/jp/deploy/deploy-apps-to-applivery-from-bitrise.md
-- _articles/en/reviews/detached-head-draft.md
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
