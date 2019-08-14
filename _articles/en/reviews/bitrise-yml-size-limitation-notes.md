@@ -14,7 +14,7 @@ If you edit your workflow on [bitrise.io](https://www.bitrise.io/) (either in Wo
 
 ![](/img/yml-size-limit.png)
 
-{% include message_box.html type="warning" title=".yml size limitations" content="Please note `bitrise.yml` on cannot exceed 200KB and a `bitrise.secrets.yml` cannot exceed 100KB on the UI."%}
+{% include message_box.html type="warning" title=".yml size limitations" content="Please note `bitrise.yml` cannot exceed 200KB and a `bitrise.secrets.yml` cannot exceed 100KB on the UI."%}
 
 Here are a couple of workarounds to reduce a long `bitrise.yml`:
 
