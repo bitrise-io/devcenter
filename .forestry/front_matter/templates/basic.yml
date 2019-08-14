@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/en/reviews/bitrise-yml-size-limitation-notes.md
 - deploy.md
 - _articles/en/reviews/detached-head-draft.md
