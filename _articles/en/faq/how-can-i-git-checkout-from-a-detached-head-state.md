@@ -8,7 +8,7 @@ summary: If you are in a detached head state, you cannot push changes to a branc
   Learn how to get back to a branch and how to increment version numbers for deployment.
 menu:
   faq-main:
-    weight: 19
+    weight: 20
 
 ---
 ## Build failures due to detached head

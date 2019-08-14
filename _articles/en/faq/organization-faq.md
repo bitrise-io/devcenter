@@ -10,7 +10,7 @@ summary: Organizations are used to seamlessly manage bigger teams and members in
 redirect_from: []
 menu:
   faq-main:
-    weight: 20
+    weight: 21
 
 ---
 ## What is an Organization on Bitrise?
