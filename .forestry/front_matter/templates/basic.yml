@@ -29,6 +29,7 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/builds/build-artifacts-online.md
 - _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/en/bitrise-cli/basics-of-bitrise-yml.md
@@ -51,7 +52,6 @@ pages:
 - _articles/en/builds/build-logs.md
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
 - _articles/en/builds/bitrise-yml-online.md
-- _articles/en/builds/build-artifacts-online.md
 - _articles/en/builds/env-vars-secret-env-vars.md
 - _articles/en/builds/build-numbering-and-app-versioning.md
 - _articles/en/builds/Scheduling-Builds.md

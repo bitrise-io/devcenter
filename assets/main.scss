@@ -1120,30 +1120,30 @@ nav#my-toc {
 			background-image: linear-gradient(to bottom, #6c0eb2, #450674 97%);
 			border-radius: 4px;
 			border: none;
-			width: auto;
-			height: auto;
+			width: 40%;
+			height: 40%;
 			color: #f8f8f8;
-			padding: 1rem 1rem;
-			font-family: TTNorms;
-			line-height: 1.5;
-			font-size: 1.4rem;
-			font-weight: bold;
+			margin-top: 0.8rem;
+			margin-bottom: 0.8rem;
 			cursor: pointer;
+			line-height: 1.4;
+			font-size: 80%;
+			font-family: TTNorms;
+			font-weight: bold;
 		}
 
 		.deploy-text {
-		  position: absolute;
-		  top: 10%;
-			margin: auto;
+			position: absolute;
+			top: 10%;
 			width: 100%;
-			height: auto;
 			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
 			color: #ffffff;
-			font-size: 2.2rem;
+			font-size: 1.8rem;
 			font-weight: bold;
 		}
 	}
-
 footer {
 	padding-top: $spacing-footer-vertical;
 	padding-bottom: $spacing-footer-vertical;
