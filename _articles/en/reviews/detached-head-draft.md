@@ -1,7 +1,5 @@
 ---
-tag:
-- builds
-- trigger
+tag: []
 title: How can I git checkout from a detached head state?- draft
 redirect_from: []
 summary: If you are in a detached head state, you cannot push changes to a branch.

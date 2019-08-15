@@ -1,16 +1,15 @@
 ---
-tag:
-- builds
-- trigger
+tag: []
 title: How can I git checkout from a detached head state?
 redirect_from: []
-summary: If you are in a detached head state, you cannot push changes to a branch.
-  Learn how to get back to a branch and how to increment version numbers for deployment.
+summary: ''
 menu:
   faq-main:
-    weight: 20
+    weight: 19
 
 ---
+{% include not_translated_yet.html %}
+
 ## Build failures due to detached head
 
 Builds can fail due to many reasons, and one of those is related to how a build is started and how Git works.
@@ -146,5 +145,6 @@ As discussed above, you cannot push code if you are in detached head state. In t
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 <div class="deploy-text">Now you know everything</div>
-<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds">
+<button class="button">Go to Bitrise now</button></a>
 </div>
