@@ -3,6 +3,9 @@ tag: []
 title: How can I git checkout from a detached head state?
 redirect_from: []
 summary: ''
+menu:
+  faq-main:
+    weight: 19
 
 ---
 {% include not_translated_yet.html %}
