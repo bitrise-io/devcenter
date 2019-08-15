@@ -166,8 +166,6 @@ You can update the app's description, or all its other textual details - the 'Wh
 1. Open the **Details** page in Ship of your app's chosen build version.
 2. Go to the field you want to edit and click in the content field. 
 3. Edit the content.
-
-   Note that the short description can contain a maximum of 80 characters while a full description can contain a maximum of 4000 characters.
 4. Click **Save** in the top right of the Details tab.
 
 ## Notifications
