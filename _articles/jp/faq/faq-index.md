@@ -20,4 +20,5 @@ Check out some of the questions our users most frequently ask. If you have a que
 * [Why does my build take longer on Bitrise than on my machine?](/jp/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac/)
 * [Should I commit my dependencies into my repository?](/jp/faq/should-i-commit-my-dependencies-into-my-repository/)
 * [Why isn't a build triggered when I push code into the repository?](/jp/faq/no-builds-are-triggered-automatically/)
+* [How can I git checkout from a detached head state?](/jp/faq/how-can-i-git-checkout-from-a-detached-head-state/)
 * [Organization FAQ](/jp/faq/organization-faq/)
