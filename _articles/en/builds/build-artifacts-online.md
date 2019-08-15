@@ -47,8 +47,4 @@ Depending on the type of the file, you can either view your artifacts inline if 
 
 There is no limitation on the NUMBER of files deployed to **APPS & ARTIFACTS** per build. There is a limitation, however, on the file size which is 2GB per file.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's see those artifacts!</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app's build</button></a>
-</div>
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's see those artifacts!</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your  builds</button></a> </div>
