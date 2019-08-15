@@ -29,6 +29,7 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/reviews/ship-add-on.md
 - _articles/en/builds/build-artifacts-online.md
 - _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
@@ -57,7 +58,6 @@ pages:
 - _articles/en/builds/Scheduling-Builds.md
 - _articles/jp/builds/bitrise-checks-on-github-checks.md
 - _articles/en/builds/bitrise-checks-on-github-checks.md
-- _articles/en/reviews/ship-add-on.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/builds/sensitive-input-field.md
 - _articles/en/builds/rolling-builds.md

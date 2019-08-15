@@ -35,10 +35,11 @@ To expose a Workflow's artifacts to Ship:
 
 1. Go to your app's Ship page.
 2. Click **Settings** in the top right corner.
-3. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
+3. Go to the **General** tab.
+4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
 
    Be aware there are TWO such text boxes: one for iOS and one for Android. If your app is cross-platform, fill out both. Separate the different Workflow names with a comma.
-4. Scroll down to the bottom of the page and click **Save**.
+5. Scroll down to the bottom of the page and click **Save**.
 
 ### Code signing files
 
@@ -61,7 +62,7 @@ To install an app on a device, there are three options:
 
 {% include message_box.html type="important" title="Artifact types" content="The public install page is not available for all type of artifacts.
 
-* For iOS, it's only available if your Workflow builds an .ipa file that is signed with a Debug, Development or Ad-Hoc type provisioning profile.
+* For iOS, it's only available if your Workflow builds an .ipa file that is signed with a Debug, Development or Ad-hoc type provisioning profile.
 * For Android, it's only available if the artifact is an APK, either universal or split. For AABs, there will be no public install page link."%}
 
 To send the public install page link or the QR code:
@@ -97,13 +98,14 @@ Once you configured publishing for the app, you do not have to set these options
 To configure publishing an app for iOS:
 
 1. Open your app's Ship page and click **Settings** in the top right corner.
-2. Go to the **iOS Settings** section.
-3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the .ipa you want to publish, and run the Workflow on Bitrise.
-4. Select the [code signing files](/deploy/ship/#code-signing-files) you want to use.
+2. Go to the **General** tab.
+3. Go to the **iOS Settings** section.
+4. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the .ipa you want to publish, and run the Workflow on Bitrise.
+5. Select the [code signing files](/deploy/ship/#code-signing-files) you want to use.
 
    Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
-5. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
-6. Enter the **App SKU**.
+6. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
+7. Enter the **App SKU**.
 
 Your app is now ready for publishing. To publish, go back to the **Details** page and click **Publish**.
 
@@ -142,11 +144,11 @@ The purpose of the app details page is to update the most important information 
 
 The details include:
 
-* A short and a full description of the app.
+* A description of the app.
 * Screenshots and feature graphics of the app, arranged by the different supported devices.  At least two screenshots are required for an app to be published.
 * Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. This is automatically exported to Ship by the **Deploy to Bitrise.io** Step.
 
-### Adding screenshots or feature graphics
+### Adding screenshots
 
 At least two screenshots are required for an app to be published. Once you added screenshots or graphics to one build version of the app, they are automatically added to all subsequent versions. If you want to display different screenshots, you can modify it, otherwise you can leave it alone.
 
@@ -159,12 +161,42 @@ To add screenshots or feature graphics to your app details page:
 
 ### Updating the app's descriptions
 
-Update the app's short and full descriptions in the same way:
+You can update the app's description, or all its other textual details - the 'What's new' section, promotional text, keywords, review notes - in the same way: 
 
 1. Open the **Details** page in Ship of your app's chosen build version.
-2. Go to **Short description** or **Full description**.
-3. Click the Edit icon, shaped like a pencil.
-4. Edit the content.
+2. Go to the field you want to edit and click in the content field. 
+3. Edit the content.
+4. Click **Save** in the top right of the Details tab.
 
-   Note that the short description can contain a maximum of 80 characters while a full description can contain a maximum of 4000 characters.
-5. Click **Save** in the top right corner.
+## Notifications
+
+Ship can send emails about three different events:
+
+* A new build version of an app is available in Ship.
+* Ship successfully published the app.
+* Ship failed to publish the app.
+
+These notifications can be sent to any number of different email addresses. When a new email address is added to the notifications list, Ship sends a confirmation email to the address: after confirmation, notifications should work. 
+
+### Adding a new email address
+
+To add a new email address to the notification list for an app:
+
+1. Open your app's Ship page.
+2. Click **Settings.** 
+3. Go to the **Notifications** tab. 
+4. In the input field under **Email notifications**, type the email address. 
+5. Click **Add**. 
+
+The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications. 
+
+### Configuring notifications 
+
+You can pick and choose the Ship events about which you want to notify different people. For example, it's possible to only send notifications about a failed publishing event if you do not want to be bothered when things go well! And of course you can send different notifications to different email addresses. 
+
+To configure notifications:
+
+1. Open your app's Ship page.
+2. Click **Settings.** 
+3. Go to the **Notifications** tab. 
+4. Use the toggles under the different event types. 
