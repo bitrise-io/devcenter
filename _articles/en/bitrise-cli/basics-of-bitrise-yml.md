@@ -15,7 +15,7 @@ menu:
 ---
 ## bitrise.yml configuration
 
-The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.
+The configuration format of the Bitrise CLI is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.
 
 A bare minimal `bitrise.yml` is as simple as:
 
@@ -57,10 +57,10 @@ A quick walk through of this sample configuration:
 * `workflows` : is the collection of separate build configurations which you can run with `bitrise run WORKFLOWID`.
 
   In our example the only workflow is `test`, which you can perform with `bitrise run test`. If you'd have a second workflow called `main`, you could run both `bitrise run test` and `bitrise run main`.
-* `steps` : lists the [steps](/bitrise-cli/steps/) which should be executed when the workflow is performed.
+* `steps` : lists the [Steps](/bitrise-cli/steps/) which should be executed when the workflow is performed.
 
   In our example the `test` workflow includes only a single `script` Step. If multiple Steps are declared, they are performed one by one.
-* `script@1.1.5` : a Step (reference) to perform. This reference does not have a "StepLib Source" declaration, which means that the `default_step_lib_source` will be used as the StepLib Source. For more information, check out our guide on [Step reference/ID format](/bitrise-cli/steps/#step-referenceid-format).
+* `script@1.1.5` : a Step (reference) to perform. This reference does not have a StepLib Source declaration, which means that the `default_step_lib_source` will be used as the StepLib Source. For more information, check out our guide on [Step reference/ID format](/bitrise-cli/steps/#step-referenceid-format).
 * `inputs` : specifies Step inputs.
 
   NOTE: A Step can have many input. Specify only those input in the bitrise.yml which you want to set or overwrite. Check out our [Step input guide](/bitrise-cli/step-inputs/).
@@ -73,7 +73,7 @@ Find out more on how you can define [multiple Steps](/bitrise-cli/steps/) and us
 
 ## bitrise.yml size limitation
 
-If you edit your Workflow on [bitrise.io](https://www.bitrise.io/) (either in Workflow Editor or on the **bitrise.yml** tab) and your `bitrise.yml` exceeds its size limitation, the UI will display the following warning upon trying to save your changes:
+If you edit your Workflow on [bitrise.io](https://www.bitrise.io/) (either in the Workflow Editor or on the **bitrise.yml** tab) and your `bitrise.yml` exceeds its size limitation, the UI will display the following warning upon trying to save your changes:
 
     Error saving! Error saving app config: Validation failed: App config validation 784: unexpected token at 'Argument list too long - bin/bitrise
 

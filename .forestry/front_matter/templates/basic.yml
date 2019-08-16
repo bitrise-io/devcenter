@@ -28,13 +28,13 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/bitrise-cli/basics-of-bitrise-yml.md
 - _articles/en/getting-started/signing-up-to-bitrise.md
 - deploy.md
 - _articles/en/reviews/ship-add-on.md
 - _articles/en/builds/build-artifacts-online.md
 - _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
-- _articles/en/bitrise-cli/basics-of-bitrise-yml.md
 - _articles/en/reviews/bitrise-yml-size-limitation-notes.md
 - _articles/en/reviews/detached-head-draft.md
 - _articles/en/api/adding-and-managing-apps.md
