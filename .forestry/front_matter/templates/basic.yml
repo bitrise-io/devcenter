@@ -29,11 +29,18 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/bitrise-cli/most-important-concepts.md
+- _articles/en/bitrise-cli/step-timeout.md
+- _articles/en/bitrise-cli/secrets.md
+- _articles/en/bitrise-cli/installation.md
+- _articles/en/bitrise-cli/workflows.md
+- _articles/en/bitrise-cli/steps.md
+- _articles/en/bitrise-cli/basics-of-bitrise-yml.md
+- _articles/en/getting-started/signing-up-to-bitrise.md
 - _articles/en/reviews/ship-add-on.md
 - _articles/en/builds/build-artifacts-online.md
 - _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
-- _articles/en/bitrise-cli/basics-of-bitrise-yml.md
 - _articles/en/reviews/bitrise-yml-size-limitation-notes.md
 - _articles/en/reviews/detached-head-draft.md
 - _articles/en/api/adding-and-managing-apps.md
@@ -90,7 +97,6 @@ pages:
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
 - _articles/en/getting-started/index.md
 - _articles/en/getting-started/account-security.md
-- _articles/en/bitrise-cli/installation.md
 - _articles/en/team-management/user-roles-on-app-teams.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
 - _articles/en/team-management/organizations/members-organizations.md
@@ -101,8 +107,6 @@ pages:
 - _articles/en/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
 - _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
-- _articles/en/bitrise-cli/workflows.md
-- _articles/en/bitrise-cli/step-timeout.md
 - _articles/en/reviews/signing-up-draft.md
 - _articles/en/infrastructure/the-environment.md
 - _articles/en/troubleshooting/workflow-editor-doesnt-load.md
@@ -112,7 +116,6 @@ pages:
 - _articles/en/faq/organization-faq.md
 - _articles/en/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
 - _articles/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
-- _articles/en/getting-started/signing-up-to-bitrise.md
 - _articles/en/reviews/creating-add-ons.md
 - _articles/en/reviews/signing-up-with-saml-sso.md
 - _articles/en/reviews/getting-started-with-react-native-apps-makeover.md
@@ -161,12 +164,9 @@ pages:
 - _articles/en/testing/device-testing-for-android.md
 - _articles/en/bitrise-cli/run-your-first-build.md
 - _articles/en/bitrise-cli/initializing-a-bitrise-project-locally.md
-- _articles/en/bitrise-cli/steps.md
 - _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/bitrise-cli/index.md
 - _articles/en/bitrise-cli/customizing-bitrise-yml.md
-- _articles/en/bitrise-cli/secrets.md
-- _articles/en/bitrise-cli/most-important-concepts.md
 - _articles/en/bitrise-cli/offline-workflow-editor.md
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
 - _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
