@@ -80,7 +80,7 @@ The processing order is this:
 
 ### Why does the processing order matter?
 
-An environment variable is only available after it is processed and made available. You can only reference/use environment variables that are already processed!
+An Environment Variable is only available after it is processed and made available. You can only reference/use Environment Variables that are already processed!
 
 * In the value of a `Secret` Environment Variable, you can use Environment Variables exposed by Bitrise CLI, but you can't use any other Environment Variable (App Env Vars, Workflow Env Vars, and so on), as those are not processed when Secrets are processed.
 * In the value of an `App Env Var`, you can use environment variables from `Secrets` as well as the Bitrise CLI exposed ones, but you can't use Workflow Env Vars or Step inputs.
