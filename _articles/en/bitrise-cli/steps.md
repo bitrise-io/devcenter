@@ -17,11 +17,11 @@ menu:
 ---
 ## What is a Step
 
-A Step encapsulates a "build task": the code to perform that task, the inputs and parameters you can define for the task, and the outputs the task generates.
+A Step encapsulates a build task: the code to perform that task, the inputs and parameters you can define for the task, and the outputs the task generates.
 
 For example the `Git Clone` Step performs a `git clone` of the specified repository, with the specified inputs, such as the branch or the commit to clone.
 
-From a technical perspective, a Step is a semver **versioned** repository which includes the _code_ of the Step and the _interface_ definition of the Step.
+From a technical perspective, a Step is a semver versioned repository which includes the _code_ of the Step and the _interface_ definition of the Step.
 
 The _step interface definition_ is defined in the `step.yml` file for every Step. It includes:
 
@@ -52,7 +52,7 @@ Once you include a Step in your build configuration (`bitrise.yml`), you can spe
 
 For example, to specify a simple script to perform for the `script` Step, you can specify a value for the `script` Step's `content` input. (_Note: you can list all the inputs of a step with_ `bitrise step-info STEP-ID`)
 
-Let's do a simple "Hello World" script, using the `script` Step:
+Let's do a simple Hello World script, using the `script` Step:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -253,7 +253,7 @@ This can also be used if you want to include your build Steps in your app's sour
     - path::./steps/script:
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
 </div>

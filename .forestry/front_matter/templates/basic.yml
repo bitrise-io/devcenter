@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/bitrise-cli/steps.md
 - _articles/en/bitrise-cli/basics-of-bitrise-yml.md
 - _articles/en/getting-started/signing-up-to-bitrise.md
 - deploy.md
@@ -161,7 +162,6 @@ pages:
 - _articles/en/testing/device-testing-for-android.md
 - _articles/en/bitrise-cli/run-your-first-build.md
 - _articles/en/bitrise-cli/initializing-a-bitrise-project-locally.md
-- _articles/en/bitrise-cli/steps.md
 - _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/bitrise-cli/index.md
 - _articles/en/bitrise-cli/customizing-bitrise-yml.md
