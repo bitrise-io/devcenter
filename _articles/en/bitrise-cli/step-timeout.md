@@ -1,19 +1,19 @@
 ---
-title: Setting a time limit for steps
+title: Setting a time limit for Steps
 tag:
 - cli
 - steps
-summary: Ensure that your builds do not exceed the time limit by setting up step timeout
-  for steps that might cause builds to hang.
+summary: Ensure that your builds do not exceed the time limit by setting up Step timeout
+  for Steps that might cause builds to hang.
 redirect_from: []
 menu:
   bitrise-cli-main:
     weight: 25
 
 ---
-Ensure that your builds do not exceed the time limit by setting up step timeout for steps that might cause builds to hang.
+Ensure that your builds do not exceed the time limit by setting up Step timeout for Steps that might cause builds to hang.
 
-A step timeout, defined in seconds, sets a maximum time a step is allowed to run. If the step exceeds that limit, the workflow moves on to the next step. This is useful if, for example, your builds hang for not immediately obvious reasons - you can set timeouts for the step or steps which are suspected to have caused the problem.
+A Step timeout, defined in seconds, sets a maximum time a Step is allowed to run. If the Step exceeds that limit, the Workflow moves on to the next step. This is useful if, for example, your builds hang for not immediately obvious reasons - you can set timeouts for the Step or Steps which are suspected to have caused the problem.
 
 1. Find the step in the `bitrise.yml` file.
 
@@ -30,10 +30,10 @@ A step timeout, defined in seconds, sets a maximum time a step is allowed to run
      - scheme: "$BITRISE_SCHEME"
 ```
 
-And you're done! In our example, the `xcode-test` step will abort after 120 seconds. Check the build logs to see what caused the step to exceed the limit.
+And you're done! In our example, the `xcode-test` Step will abort after 120 seconds. Check the build logs to see what caused the Step to exceed the limit.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
 </div>
