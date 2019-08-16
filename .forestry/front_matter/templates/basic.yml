@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- deploy.md
 - _articles/en/bitrise-cli/most-important-concepts.md
 - _articles/en/bitrise-cli/step-timeout.md
 - _articles/en/bitrise-cli/secrets.md
@@ -36,7 +37,6 @@ pages:
 - _articles/en/bitrise-cli/steps.md
 - _articles/en/bitrise-cli/basics-of-bitrise-yml.md
 - _articles/en/getting-started/signing-up-to-bitrise.md
-- deploy.md
 - _articles/en/reviews/ship-add-on.md
 - _articles/en/builds/build-artifacts-online.md
 - _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
