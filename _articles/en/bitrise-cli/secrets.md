@@ -27,8 +27,8 @@ Example:
 
 ```yaml
 envs:
-- SECRET_ENV_ONE: first secret value
-- SECRET_ENV_TWO: second secret value
+- SECRET_ENV_ONE: first Secret value
+- SECRET_ENV_TWO: second Secret value
 ```
 
 The Environment Variables defined in the Secrets file can be used just like any other Environment Variable, so, if you save the above example into a `.bitrise.secrets.yml` file, and you have a `bitrise.yml` file in the same directory with the content:
