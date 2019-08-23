@@ -50,7 +50,7 @@ In this tutorial, we describe how Organization owners can set up their SAML SSO 
 5. Add the generated SSO credentials to the **Identity provider sign-on URL** and **Certificate** fields on the **Single Sign On** tab.
 6. Click the **Configure SSO** button. 
 
-![](https://devcenter.bitrise.io/img/sso-saml-page.jpg)
+![](/img/enable-single-sign-on.jpg)
 
 If you've completed the steps, you and org members should get a verification email about SAML SSO connected to the respective organization.
 
