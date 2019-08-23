@@ -141,7 +141,7 @@ You can [configure the signing](https://flutter.io/docs/deployment/android#confi
 
 In this guide, we'll walk you through the other option: how to sign your APK file on Bitrise and then deploy the app to Google Play.
 
-{% include message_box.html type="info" title="Signing and App Bundle" content="If you wish to deploy an App Bundle (`.aab`), follow our[ Signing an Android App Bundle](/deploy/android-deploy/generating-and-deploying-android-app-bundles/#signing-an-android-app-bundle) guide."%}
+{% include message_box.html type="info" title="Signing and App Bundle" content="If you wish to deploy an Android App Bundle (`.aab`), follow our[ Signing an Android App Bundle](/deploy/android-deploy/generating-and-deploying-android-app-bundles/#signing-an-android-app-bundle) guide."%}
 
 First, you will need to [create a keystore file](https://flutter.io/docs/deployment/android#create-a-keystore) and then upload it to [Bitrise](https://app.bitrise.io/users/sign_in).
 
