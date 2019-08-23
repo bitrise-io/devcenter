@@ -34,7 +34,7 @@ menu:
 3. ご自身のSAML SSOプロバイダにログインします。
 4. コピーしたSingle Sign-On URLを使ってBitriseを追加します。Bitrise上で必要になるSingle Sign-On（SSO）証明書をここで生成します。
 5. `Single Sign On`タブより、`Identity provider sign-on URL` と`Certificate`の欄に生成されたSSO証明書を追加します。
-6. `Configure SSO` のボタンをクリックします.
+6. `Configure SSO` のボタンをクリックします。
 
 ![](/img/enable-single-sign-on.jpg)
 
