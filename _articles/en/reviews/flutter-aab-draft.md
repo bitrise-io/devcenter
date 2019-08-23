@@ -186,7 +186,3 @@ Now let's head back to [Bitrise](https://app.bitrise.io/dashboard) and finish of
 And that’s it! Start a build and release your Android app to the Google Play Store.
 
 <div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's add an Flutter app</div> <a target="_blank" href="[https://app.bitrise.io/apps/add](https://app.bitrise.io/apps/add "https://app.bitrise.io/apps/add")"><button class="button">Go to Bitrise now</button></a> </div>
-
-10\.0. or above
-
-Link to Signing an Android app build, Deploying an Android app build
