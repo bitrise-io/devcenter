@@ -29,8 +29,8 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
-- _articles/en/team-management/organizations/saml-sso-in-organizations.md
 - _articles/en/reviews/flutter-aab-draft.md
+- _articles/en/team-management/organizations/saml-sso-in-organizations.md
 - _articles/en/bitrise-cli/most-important-concepts.md
 - _articles/en/bitrise-cli/step-timeout.md
 - _articles/en/bitrise-cli/secrets.md
