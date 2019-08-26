@@ -34,4 +34,4 @@ To sign an Android app, you will need a keystore file which requires a Google Pl
 
 **Details:**
 
-* [Android code signing](/code-signing/android-code-signing/index/)
+* [Android code signing](/code-signing/android-code-signing/android-code-signing-index/)
