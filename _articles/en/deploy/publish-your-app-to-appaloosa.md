@@ -1,6 +1,10 @@
 ---
 title: Publish your app to Appaloosa
 redirect_from: "/tutorials/deploy/publish-your-app-to-appaloosa/"
+menu:
+  deploy-main:
+    title: Deploying your apps to Appaloosa
+    weight: 8
 
 ---
 Would you like to **beta test** and **deploy** your app to 1 or thousands of users?
