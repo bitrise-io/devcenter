@@ -44,10 +44,10 @@ If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you sh
    Be aware that this can take quite a bit of time, as this image is over 10 GB. If the download fails or hangs, you can restart it any time by running the same command again.
 7. Download your Bitrise build configuration (`bitrise.yml`) to the root directory of your repository.
 
-   You can download your project's `bitrise.yml` from the `bitrise.yml` tab of your Workflow Editor on [bitrise.io](https://www.bitrise.io).
+   You can [download](/builds/bitrise-yml-online/) your project's `bitrise.yml` from the `bitrise.yml` tab of your Workflow Editor on [bitrise.io](https://www.bitrise.io).
 8. In your Terminal / Command Line go to (`cd`) the root directory of your repository. Check if your `bitrise.yml` is at this location.
 
-**If you try to reproduce an issue, you should** `git clone` **your repository into a new directory**, so that the directory will only contain the files which are committed into the repository! It's a frequent reproducibility issue that you try to run the commands in your normal working directory, where you most likely have files which are not committed into your repository, for example, files which are in `.gitignore`.
+If you try to reproduce an issue, you should `git clone` your repository into a NEW DIRECTORY, so that the directory will only contain the files which are committed into the repository! It's a frequent reproducibility issue that you try to run the commands in your normal working directory, where you most likely have files which are not committed into your repository, for example, files which are in `.gitignore`.
 
 ## Running your builds
 
@@ -68,11 +68,11 @@ Run your build with the following command:
   After this, you can run `bitrise run WORKFLOW`, which will run the workflow inside the container. To exit from the container, just run `exit`.
 * Don't forget to replace `WORKFLOW` with the actual ID of your workflow in your `bitrise.yml`, with something like `primary`!
 
-This command will share the current directory (the directory of your repository) as a shared volume with the docker container, and will make it available **inside** the container at the path `/bitrise/src`.
+This command will share the current directory (the directory of your repository) as a shared volume with the docker container, and will make it available inside the container at the path `/bitrise/src`.
 
 * The `--env CI=false` flag sets the environment variable `CI` to `false` - this will make Bitrise CLI skip certain steps that only make sense to run in a CI environment. For example, our `Git Clone` Step - you already have your code, so there's no need to git clone it again inside the docker container (that's why we shared the code directory as a `--volume`).
 * The `--rm` flag tells docker to discard the container after the `docker run` command finishes. This means that if you run the command again, the only thing which will persist between the `docker run ..` commands are the files stored at the shared `--volume` (in your repository's directory). Every other file that is generated into a temp or any other location will be discarded / won't be kept.
 
-  If you want to debug the container after a failed build, feel free to remove the `--rm` flag, and check out a Docker tutorial about how you can connect to an existing docker container. Please note that simply **running the command again** will not use the same container, but will create a new one!
+  If you want to debug the container after a failed build, feel free to remove the `--rm` flag, and check out a Docker tutorial about how you can connect to an existing docker container. Please note that simply running the command again will not use the same container, but will create a new one!
 * The `--privileged` flag allows access control of the host (!) from the docker container, so you should never use this flag unless you trust the docker image you will use! This flag is required for allowing VPNs to work (to change network configs of the host) for example.
 * The `--volume "/var/run/docker.sock:/var/run/docker.sock"` flag exposes the docker socket from the host for the container - this is required if you want to run other docker containers from within the container, or if you want to run any `docker` command during your build / inside the container.
