@@ -163,11 +163,8 @@ First, you will need to [create a keystore file](https://flutter.io/docs/deploym
 
    Now let's head back to [Bitrise](https://app.bitrise.io/dashboard) and finish off the deploy configuration of your Android app! You can deploy an APK or an App Bundle by building the right output type with the **Flutter Build** Step.
     1. In your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds), go to the **Code Signing** tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-    2. Copy the env key which stores your uploaded file’s url.
-
-       For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+    2. Copy the env key which stores your uploaded file’s url. For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
     3. Make sure you have the **Android Sign** Step in your Workflow.
-
        It should be after the **Flutter Build** Step.
     4. Open the **Flutter Build** Step and check the **Platform** input of the Step: make sure it's set to either `android` or `both`.
     5. Find the **Android Platform Configs** input group.
