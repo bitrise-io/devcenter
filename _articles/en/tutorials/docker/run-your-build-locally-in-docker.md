@@ -9,12 +9,12 @@ menu:
 ---
 To be able to run your Linux stack builds locally, you'll need [docker](https://www.docker.com/):
 
-* For Linux just follow the [official install instructions](https://docs.docker.com/engine/installation/linux/).
-* For Mac you can use [Docker for Mac](https://www.docker.com/products/docker#/mac), which is the easiest way to get started.
+* For Linux, just follow the [official install instructions](https://docs.docker.com/engine/installation/linux/).
+* For Mac, you can use [Docker for Mac](https://www.docker.com/products/docker#/mac), which is the easiest way to get started.
 
-In this guide we'll use [this Bitrise Android sample project](https://github.com/bitrise-samples/sample-apps-android-sdk22).
+In this guide, we'll use [this Bitrise Android sample project](https://github.com/bitrise-samples/sample-apps-android-sdk22).
 
-{% include message_box.html type="warning" title="Large images ahead" content=" The official Bitrise Docker images are quite large because they include a wide variety of preinstalled tools. You'll need at **least** 20-25 GB free disk space! "%}
+{% include message_box.html type="warning" title="Large images ahead" content=" The official Bitrise Docker images are quite large because they include a wide variety of preinstalled tools. You'll need at least 20-25 GB FREE DISC SPACE! "%}
 
 If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you should try that first. You don't have to master the CLI, if you know what `bitrise run WORKFLOW` does, that should be enough for this tutorial.
 
@@ -41,7 +41,7 @@ If you're not familiar with the [Bitrise CLI](https://www.bitrise.io/cli) you sh
 
        docker pull quay.io/bitriseio/android:latest`
 
-   Be aware that this can take quite a bit of time, as this image is over 10 GB. If the 			download fails or hangs, you can restart it any time by running the same command again.
+   Be aware that this can take quite a bit of time, as this image is over 10 GB. If the download fails or hangs, you can restart it any time by running the same command again.
 7. Download your Bitrise build configuration (`bitrise.yml`) to the root directory of your repository.
 
    You can download your project's `bitrise.yml` from the `bitrise.yml` tab of your Workflow Editor on [bitrise.io](https://www.bitrise.io).
