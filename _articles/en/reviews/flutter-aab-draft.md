@@ -172,7 +172,7 @@ It should be after the **Flutter Build** Step.
 5. Find the **Android Platform Configs** input group.
 6. Make sure the **Additional parameters** input has the value `--release`.
 7. In the **Android output artifact type** input field, select either `APK` or `appbundle` depending on your deployment requirements.
-8. Provide the path from which you want to copy the generated APK or App Bundle to get deployed by **Google Play Deploy** Step.
+8. Provide the path from which you want to copy the generated APK or App Bundle to get deployed by the **Google Play Deploy** Step.
 9. Make sure you have the **Google Play Deploy** Step after the **Android Sign** Step to your Workflow.
 10. Fill out the required input fields as follows:
 * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the Env Var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
