@@ -70,6 +70,8 @@ Create a new GitHub user account and generate an SSH keypair for it. You also ne
 
    By default, the invited collaborator's permission is **Write**. You can keep it that way, of course, but a Read permission is enough for Bitrise.
 
+Once you are done, use that SSH key you've added to the machine user when adding a new app to Bitrise. 
+
 ## Git cloning submodules and repository dependencies
 
 There is one important detail to keep in mind when you want to give access to all submodules or private repository dependencies for an app: the app's privacy settings determine what git URL should you use.
