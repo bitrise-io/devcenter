@@ -25,6 +25,51 @@ There are two ways to achieve this:
 On GitLab and Bitbucket it's possible to register a single SSH key
 as a "Deployment key" to multiple repositories, without the need to create a "bot" / "machine" user.
 
+## Using a machine user to access private repositories
+
+[A machine or bot user](https://developer.github.com/v3/guides/managing-deploy-keys/#machine-users) is a GitHub user that is not used by humans, instead it is exclusively used for automation. This is the best way to access a private repository: you create a machine user, add a public SSH key to the user, and then provide the user read access to the repository.
+
+### Creating and configuring the machine user
+
+Create a new GitHub user account and generate an SSH keypair for it. You also need to add the SSH keypair to your SSH agent.
+
+1. Create a new GitHub account that will serve as a machine user.
+2. On your own device, open a command line interface (for example, the Terminal app).
+3. Run the below command, replacing the example email with the machine user's GitHub email address:
+
+       $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+4. When prompted to save the file, press Enter: this saves your new key pair in the current location.
+5. Enter a passphrase when prompted.
+   You can simply leave it empty if you do not want to use a passphrase.
+6. Start the SSH agent.
+
+       eval "$(ssh-agent -s)"
+7. If you're using macOS Sierra 10.12.2 or later, you will need to modify your `~/.ssh/config` file to automatically load keys into the ssh-agent and store passphrases in your keychain.
+   In the example below, the filename of the key is id_rsa. If you created it with a different name, replace the name with the name of your private key file.
+
+       Host *
+         AddKeysToAgent yes
+         UseKeychain yes
+         IdentityFile ~/.ssh/id_rsa
+8. Add your private SSH key to the ssh-agent.
+   In the example below, the filename of the key is id_rsa. If you created it with a different name, replace the name with the name of your private key file.
+
+       ssh-add ~/.ssh/id_rsa
+9. [Add the public SSH key to the machine user's GitHub account](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account). 
+
+### Adding the machine user to your repository
+
+1. Go to your repository on GitHub and select the **Settings** tab.
+2. On the left side menu, select **Collaborators & teams**.
+
+   ![](/img/Collaborators.png)
+3. Scroll down to the **Collaborators** window.
+4. In the search input field, search for the username of your newly created account.
+5. Click **Add Collaborator**.
+6. Change the user permission to **Read**.
+
+   By default, the invited collaborator's permission is **Write**. You can keep it that way, of course, but a Read permission is enough for Bitrise.
+
 ## Git cloning submodules and repository dependencies
 
 There is one important detail to keep in mind when you want to give access to all submodules or private repository dependencies for an app: the app's privacy settings determine what git URL should you use.
