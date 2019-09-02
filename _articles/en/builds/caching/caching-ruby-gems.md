@@ -7,7 +7,7 @@ menu:
 ---
 Ruby gems are not cached by default on the bitrise.io virtual machines. Ruby gems are installed into a location depending on the current `rbenv` version. The version can be checked by running `rbenv version`. 
 
-You can get the location of this directory with `gem environment gemdir`. However, it is not enough to cache this directory as `rbenv` sets up link to ruby version specific gems: the whole ruby version specific directory e.g /Users/vagrant/.rbenv/versions/2.5.3 has to be cached. 
+You can get the location of this directory with `gem environment gemdir`. However, it is not enough to cache this directory as `rbenv` sets up link to ruby version specific gems: the whole ruby version specific directory - for example, `/Users/vagrant/.rbenv/versions/2.5.3` - has to be cached. 
 
 It is not recommended to set the value of the `$GEM_HOME` Enviroment Variable, as this can result in installed gems not being found.
 
