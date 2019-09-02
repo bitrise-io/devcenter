@@ -32,7 +32,7 @@ Make sure that you have:
 * Connected your Apple Developer Account to Bitrise.
 * Generated an .ipa file locally, on your own machine, at least once.
 * Uploaded all the Developer certificates that are included in the provisioning profile to Bitrise.
-* Uploaded the app's Development Provisioning Profile if you want to use [manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning/) on Bitrise. If you use [auto-provisioning](), you don't need to upload a profile.
+* Uploaded the app's Development Provisioning Profile if you want to use [manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning/) on Bitrise. If you use [auto-provisioning](/code-signing/ios-code-signing/ios-auto-provisioning/), you don't need to upload a profile.
 * Uploaded a Distribution certificate for the app.
 * Uploaded an App Store Provisioning Profile (if you want to use manual provisioning).
 
