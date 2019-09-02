@@ -25,11 +25,11 @@ The caching will tar all the cached directories and dependencies, and store them
 
 All you need to get started is adding two steps to your Workflow:
 
-* `Bitrise.io Cache:Pull` step to download the previous cache (if any)
-* `Bitrise.io Cache:Push` step to check the state of the cache and upload it if required
+* `Bitrise.io Cache:Pull` step to download the previous cache (if any).
+* `Bitrise.io Cache:Push` step to check the state of the cache and upload it if required.
 
 You should add the `Bitrise.io Cache:Pull` (download) step right before you'd use the cache.
-For example, in the case of an iOS app, you can insert the `Bitrise.io Cache:Pull` step between the `Git Clone Repository` and the dependency installer steps (for example, the `Run CocoaPods install` or `Carthage` steps). You should not put the `Bitrise.io Cache:Push` step BEFORE the `Git Clone Repository` step.
+For example, in the case of an iOS app, you can insert the `Bitrise.io Cache:Pull` step between the `Git Clone Repository` and the dependency installer steps (for example, the `Run CocoaPods install` or `Carthage` steps). You should not put the `Bitrise.io Cache:Pull` step BEFORE the `Git Clone Repository` step.
 
 The `Bitrise.io Cache:Push` step should be the very last step in the workflow.
 
