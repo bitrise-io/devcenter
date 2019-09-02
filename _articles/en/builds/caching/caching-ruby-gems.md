@@ -5,25 +5,28 @@ menu:
     weight: 8
 
 ---
-Ruby Gems are installed into a single directory by default. You can get the location of this directory with gem environment gemdir. If you want to change this directory, you can set the `$GEM_HOME` environment variable, this will be picked up by gem install and it’ll install the Gems to the location specified by `$GEM_HOME`.
+{% include message_box.html type="info" title="How to reference Environment variables in input fields" content="Ruby gems are not cached by default on the bitrise.io VMs. "%}
 
-{% include message_box.html type="info" title="How to reference Environment variables in input fields" content=" You cannot simply add `gem environment gemdir` to the input of your Cache Steps. You can only reference Environment Variables in the inputs directly, and `$GEM_HOME` is not set by default on the bitrise.io VMs. "%}
+Ruby Gems are installed into a location depending on the current rbenv version (can be checked by running `rbenv version`). You can get the location of this directory with `gem environment gemdir`. However it is not enough to cache this directory as rbenv sets up link to ruby version specific gems: the whole ruby version specific directory e.g /Users/vagrant/.rbenv/versions/2.5.3 has to be cached.
+It is not recommended to set the value of the $GEM_HOME enviroment variable, as this can result in installed gems not being found.
 
 1. Open your app's **Workflow Editor**.
 2. Add a **Script** Step to your workflow.
-3. Set the `$GEM_HOME` Environment Variable in the **Script** step.
+3. Set the `$GEM_CACHE_PATH` Environment Variable in the **Script** step.
 
         - script:
-            title: Set GEM_HOME env var
+            title: Set GEM_CACHE_PATH env var
             inputs:
             - content: |-
                 #!/bin/bash
-                set -ev
-                envman add --key GEM_HOME --value "$(gem environment gemdir)"
-4. Insert the **Cache:Pull** Step after the **Git Clone** but before the **Android Build** Steps.
+                set -ex
+                RBENV_DIR="`cd $(rbenv which ruby)/../..;pwd`"
+                echo "Gem cache directory: $RBENV_DIR"
+                envman add --key GEM_CACHE_PATH --value $RBENV_DIR
 
-   IMPORTANT: Make sure that your Step is version 1.0.0 or newer.
+4. Insert the **Cache:Pull** Step after the **Git Clone** but before the **Android Build** Steps.
 5. Insert the **Cache:Push** Step to the very end of your Workflow.
+6. Open the input `Cache paths` of the step **Cache:Push** and add `$GEM_CACHE_PATH` in a new line as an additional cache dir.
 
 And you're done!
 
