@@ -31,7 +31,7 @@ as a "Deployment key" to multiple repositories, without the need to create a "bo
 
 ### Adding the machine user to your repository
 
-1. Create a new GitHub user account, one that will serve as the machine user. 
+1. Create a new GitHub user account, one that will serve as the machine user.
 2. Go to your repository on GitHub and select the **Settings** tab.
 3. On the left side menu, select **Collaborators & teams**.
 
@@ -45,17 +45,25 @@ as a "Deployment key" to multiple repositories, without the need to create a "bo
 
 ### Adding the SSH key to the machine user
 
-In order for Bitrise to be able to use the machine user to access your repository, you must add the same SSH key to the machine user and the app on Bitrise. 
+In order for Bitrise to be able to use the machine user to access your repository, you must add the same SSH key to the machine user and the app on Bitrise.
 
-1. [Add your app on Bitrise](/getting-started/adding-a-new-app/) if it does not exist yet. 
-2. When prompted to setup repository access, you can choose either **Automatic** or **Add own SSH**: 
+When adding a new app:
+
+1. Start the process of [adding your app on Bitrise](/getting-started/adding-a-new-app/). 
+2. When prompted to setup repository access, you can choose either **Automatic** or **Add own SSH**:
 
    ![](/img/repo-access.png)
-   * If you choose **Add own SSH**, you can [generate your own SSH keypair](https://devcenter.bitrise.io/faq/how-to-generate-ssh-keypair/). Provide the generated SSH key for the app and [add the public key to your GitHub machine user](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account). 
-   * If you choose **Automatic**, click **I need to** when asked if you need to use an additional private repository. Copy the SSH [public key to your GitHub machine user](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account). 
-3. Finish the process. 
+   * If you choose **Add own SSH**, you can [generate your own SSH keypair](https://devcenter.bitrise.io/faq/how-to-generate-ssh-keypair/). Provide the generated SSH key for the app and [add the public key to your GitHub machine user](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
+   * If you choose **Automatic**, click **I need to** when asked if you need to use an additional private repository. Copy the SSH [public key to your GitHub machine user](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
+3. Finish the process.
 
-If your app already exists but, for example, the repository has become private, you can find or change the SSH key on the **Settings** tab. 
+If your app already exists:
+
+1. Open your app on Bitrise.
+2. Go to the **Settings** tab. 
+3. Scroll down to **SSH settings**.
+4. Click the **Click to show SSH public key** button. 
+5. Copy the SSH public key and [add it to your GitHub machine user](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
 
 ## Git cloning submodules and repository dependencies
 
