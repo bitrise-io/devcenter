@@ -5,9 +5,7 @@ menu:
     weight: 8
 
 ---
-{% include message_box.html type="info" title="How to reference Environment variables in input fields" content="Ruby gems are not cached by default on the bitrise.io VMs. "%}
-
-Ruby Gems are installed into a location depending on the current rbenv version (can be checked by running `rbenv version`). You can get the location of this directory with `gem environment gemdir`. However it is not enough to cache this directory as rbenv sets up link to ruby version specific gems: the whole ruby version specific directory e.g /Users/vagrant/.rbenv/versions/2.5.3 has to be cached.
+Ruby gems are not cached by default on the bitrise.io VMs. Ruby Gems are installed into a location depending on the current rbenv version (can be checked by running `rbenv version`). You can get the location of this directory with `gem environment gemdir`. However it is not enough to cache this directory as rbenv sets up link to ruby version specific gems: the whole ruby version specific directory e.g /Users/vagrant/.rbenv/versions/2.5.3 has to be cached.
 It is not recommended to set the value of the $GEM_HOME enviroment variable, as this can result in installed gems not being found.
 
 1. Open your app's **Workflow Editor**.
