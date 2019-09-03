@@ -29,6 +29,7 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/faq/adding-projects-with-submodules.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
 - _articles/en/reviews/flutter-aab-draft.md
@@ -50,7 +51,6 @@ pages:
 - _articles/en/api/adding-and-managing-apps.md
 - _articles/jp/deploy/deploy-apps-to-applivery-from-bitrise.md
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
 - _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
