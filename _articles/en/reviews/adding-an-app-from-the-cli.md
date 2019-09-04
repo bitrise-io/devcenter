@@ -44,7 +44,7 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
    ```
    ? Select account to use
      > Example-person
-     Example-org
+       Example-org
    ```
 5. Select the privacy of the app and press Enter. 
    You can add either a private or a public app.
