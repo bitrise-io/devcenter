@@ -68,8 +68,9 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
     Specify how Bitrise will be able to access the source code: 
     > Automatic
       Add own SSH
+   ```
    You can select either the automatic registration or choose to add your own. 
-   * If you choose automatic, Bitrise will automatically generate a key pair and add the public key to your remote repository.
+   * If you choose automatic, Bitrise will automatically generate a key pair. If you need to use additional private repositories or submodules, choose the `I need to` option when prompted and follow the instructions. If not, select the `No, auto-add SSH key` option: this automatically adds the public key to your repository.
    * If you choose to add your own, you have to provide the file path to both the private and the public key file. ALternatively, you can drag and drop the files to the CLI. 
 6. If the scanner finds a `bitrise.yml` file in your repository, you have the option to use that or use the scanner to generate a new one. 
    ```
