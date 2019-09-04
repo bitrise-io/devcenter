@@ -37,6 +37,33 @@ You can also create a bitrise.yml in advance and add it to the repository. The s
    bitrise-add-new-project --api-token <YOUR PERSONAL ACCESS TOKEN>
    ```
 4. Use the arrow keys to the account that will be the owner of the app and press Enter. 
+   ```
+   ? Select account to use
+   	 > Example-person
+   	   Example-org
+   ```
 5. Select the privacy of the app and press Enter. 
-   You can add either a private or a public app. 
-6. 
+   You can add either a private or a public app.
+   ```
+   ? Select privacy:
+    > Private
+      Public
+   ```
+   Once you are done, the scanner will scan your repository and look for the remote repository's URL. 
+6. If the scanner finds a `bitrise.yml` file in your repository, you have the option to use that or use the scanner to generate a new one. 
+   ```
+   Found vitrise.yml in current directory.
+   
+   ? What bitrise.yml do you want to upload? 
+     > Run the scanner to generate a new bitrise.yml
+   	   Use an already existing bitrise.yml
+   ```
+7. Select the branch you want to use. 
+   The default option is the current active branch. 
+   ```
+   The current branch is: master (tracking: origin master),
+   
+   ? Do you want to run the scanner for this branch?
+     < Yes
+       No
+   ```
