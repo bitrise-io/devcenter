@@ -24,7 +24,7 @@ Bitrise supports Xcode-managed signing as well as manual code signing, and we al
 
 **Details:**
 
-* [iOS code signing](/code-signing/ios-code-signing/index/)
+* [iOS code signing](/code-signing/ios-code-signing/code-signing-index/)
 
 ## Android code signing
 
