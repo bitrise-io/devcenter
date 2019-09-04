@@ -72,14 +72,13 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
    You can select either the automatic registration or choose to add your own. 
    * If you choose automatic, Bitrise will automatically generate a key pair. If you need to use additional private repositories or submodules, choose the `I need to` option when prompted and follow the instructions. If not, select the `No, auto-add SSH key` option: this automatically adds the public key to your repository.
    * If you choose to add your own, you have to provide the file path to both the private and the public key file. ALternatively, you can drag and drop the files to the CLI. 
-6. If the scanner finds a `bitrise.yml` file in your repository, you have the option to use that or use the scanner to generate a new one. 
-   ```
-   Found bitrise.yml in current directory.
-   
+6. Decide what bitrise.yml do you want to upload.
+   ```  
    ? What bitrise.yml do you want to upload? 
      > Run the scanner to generate a new bitrise.yml
        Use an already existing bitrise.yml
    ```
+   If you have an existing `bitrise.yml` file in your repository, the second option tells Bitrise to use that. If you do not have an existing `bitrise.yml`, you can either have the scanner generate one based on your project files or you can provide a file, either by entering its path or dragging and dropping it to the CLI. 
 7. Select the branch you want to use. 
    The default option is the current active branch. 
    ```
