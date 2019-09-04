@@ -52,11 +52,11 @@ You can also create a bitrise.yml in advance and add it to the repository. The s
    Once you are done, the scanner will scan your repository and look for the remote repository's URL. 
 6. If the scanner finds a `bitrise.yml` file in your repository, you have the option to use that or use the scanner to generate a new one. 
    ```
-   Found vitrise.yml in current directory.
+   Found bitrise.yml in current directory.
    
    ? What bitrise.yml do you want to upload? 
      > Run the scanner to generate a new bitrise.yml
-   	   Use an already existing bitrise.yml
+       Use an already existing bitrise.yml
    ```
 7. Select the branch you want to use. 
    The default option is the current active branch. 
@@ -64,6 +64,6 @@ You can also create a bitrise.yml in advance and add it to the repository. The s
    The current branch is: master (tracking: origin master),
    
    ? Do you want to run the scanner for this branch?
-     < Yes
+     > Yes
        No
    ```
