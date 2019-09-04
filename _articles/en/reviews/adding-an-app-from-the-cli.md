@@ -62,7 +62,15 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
    ? Select repository URL::
        https://github.com/example-user/example.git
      > ssh://git@github.com:example-user/example.git
-     
+   ```
+6. Register an SSH key.
+   ```
+    Specify how Bitrise will be able to access the source code: 
+    > Automatic
+      Add own SSH
+   You can select either the automatic registration or choose to add your own. 
+   * If you choose automatic, Bitrise will automatically generate a key pair and add the public key to your remote repository.
+   * If you choose to add your own, you have to provide the file path to both the private and the public key file. ALternatively, you can drag and drop the files to the CLI. 
 6. If the scanner finds a `bitrise.yml` file in your repository, you have the option to use that or use the scanner to generate a new one. 
    ```
    Found bitrise.yml in current directory.
@@ -80,3 +88,4 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
      > Yes
        No
    ```
+ 
