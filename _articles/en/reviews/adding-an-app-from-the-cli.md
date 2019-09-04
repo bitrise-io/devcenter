@@ -23,12 +23,16 @@ Before you try adding a new app to Bitrise via our CLI, make sure a few things a
 
 * You need a Bitrise account, with a connected git provider.
 * You need the Bitrise CLI: check out our [Installing and updating the Bitrise CLI](/bitrise-cli/installation/) guide.
-* Your project must have a local Git repository on your machine and a remote repository at a Git provider.
+* Your project must have a local Git repository on your machine and a remote repository at a Git provider. If you want to use an SSH key to access the repository, [the remote repository URL must be an SSH URL](https://help.github.com/en/articles/which-remote-url-should-i-use)! For example, `git@github.com/example.git`.
 * You need a personal access token: check out our [Generating personal access tokens manually](https://devcenter.bitrise.io/getting-started/account-security/#generating-personal-access-tokens-manually) guide.
 
 You can also create a bitrise.yml in advance and add it to the repository. The scanner will automatically detect it and you can use it for your app. 
 
 ## Adding a new app from the CLI
+
+This procedure guides you through adding an app which Bitrise will access with an SSH key. This requires that the app's remote repository has an SSH URL, such as `git@github.com:example-user/example.git`.
+
+You can, of course, use an HTTPS URL to access your remote repository, too: in that case, you will not set an SSH key for your app. 
 
 1. Open a command line interface.
 2. Go to the location of your project. 
@@ -39,8 +43,8 @@ You can also create a bitrise.yml in advance and add it to the repository. The s
 4. Use the arrow keys to the account that will be the owner of the app and press Enter. 
    ```
    ? Select account to use
-   	 > Example-person
-   	   Example-org
+     > Example-person
+     Example-org
    ```
 5. Select the privacy of the app and press Enter. 
    You can add either a private or a public app.
