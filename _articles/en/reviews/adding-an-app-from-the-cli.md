@@ -32,7 +32,7 @@ You can also create a bitrise.yml in advance and add it to the repository. The s
 
 This procedure guides you through adding an app which Bitrise will access with an SSH key. This requires that the app's remote repository has an SSH URL, such as `git@github.com:example-user/example.git`.
 
-You can, of course, use an HTTPS URL to access your remote repository, too: in that case, you will not set an SSH key for your app. 
+You can, of course, use an HTTPS URL to access your remote repository, too: in that case, you will not set an SSH key for your app. Everything else in the process is the same. 
 
 1. Open a command line interface.
 2. Go to the location of your project. 
