@@ -95,6 +95,6 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
    If the scanner detects your project type, a stack will be automatically recommended but you can change it in the CLI if you want to. If you performed manual configuration as described above, you will have to choose the stack, too. 
 9. Finish the process with setting up webhooks and code signing files. 
    * You can decide to skip webhook registration but it's required to automatically trigger builds on Bitrise. Read more about Webhooks in the [Webhooks section](/webhooks/index/). 
-   * You can upload code signing files: depending on your app's type, you will be asked if you want to upload iOS code signing files and/or an Android keystore file. You can upload these files any time on the website. Read more about code signing in our [Code signing section](/code-signing/index/). 
+   * You can upload code signing files: depending on your app's type, you will be asked if you want to upload iOS code signing files and/or an Android keystore file. You can upload these files any time on the website. Read more about code signing in our [Code signing section](/code-signing/code-signing-index/). 
    
 And that's it! You are done, you can view your new app [on your Dashboard](app.bitrise.io/me/dashboard/). 
