@@ -89,10 +89,12 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
      > Yes
        No
    ```
-   Once the scanner is done, it will either detect your app's type or it will switch to manual configuration. Manual configuration means you have to select the type of your app (iOS, Android, React Native, Flutter, and so on) and you have to provide the path to the relevant configuration file. For example, a config.xml in the case of an Ionic app.
+   Once the scanner is done, it will either detect your app's type or it will switch to manual configuration. Manual configuration means you have to select the type of your app (iOS, Android, React Native, Flutter, and so on) and you have to provide the path to the relevant configuration file. For example, a config.xml in the case of an Ionic app. In this guide, we'll proceed with automatic detection.
 8. Select the stack you want to use. 
    
    If the scanner detects your project type, a stack will be automatically recommended but you can change it in the CLI if you want to. If you performed manual configuration as described above, you will have to choose the stack, too. 
 9. Finish the process with setting up webhooks and code signing files. 
    * You can decide to skip webhook registration but it's required to automatically trigger builds on Bitrise. Read more about Webhooks in the [Webhooks section](/webhooks/index/). 
    * You can upload code signing files: depending on your app's type, you will be asked if you want to upload iOS code signing files and/or an Android keystore file. You can upload these files any time on the website. Read more about code signing in our [Code signing section](/code-signing/index/). 
+   
+And that's it! You are done. 
