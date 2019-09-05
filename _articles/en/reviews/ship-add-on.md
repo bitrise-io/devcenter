@@ -161,10 +161,10 @@ To add screenshots or feature graphics to your app details page:
 
 ### Updating the app's descriptions
 
-You can update the app's description, or all its other textual details - the 'What's new' section, promotional text, keywords, review notes - in the same way: 
+You can update the app's description, or all its other textual details - the 'What's new' section, promotional text, keywords, and review notes - in the same way:
 
 1. Open the **Details** page in Ship of your app's chosen build version.
-2. Go to the field you want to edit and click in the content field. 
+2. Go to the field you want to edit and click in the content field.
 3. Edit the content.
 4. Click **Save** in the top right of the Details tab.
 
@@ -176,27 +176,27 @@ Ship can send emails about three different events:
 * Ship successfully published the app.
 * Ship failed to publish the app.
 
-These notifications can be sent to any number of different email addresses. When a new email address is added to the notifications list, Ship sends a confirmation email to the address: after confirmation, notifications should work. 
+These notifications can be sent to any number of different email addresses. When a new email address is added to the notifications list, Ship sends a confirmation email to the address: after confirmation, notifications should work.
 
 ### Adding a new email address
 
 To add a new email address to the notification list for an app:
 
 1. Open your app's Ship page.
-2. Click **Settings.** 
-3. Go to the **Notifications** tab. 
-4. In the input field under **Email notifications**, type the email address. 
-5. Click **Add**. 
+2. Click **Settings.**
+3. Go to the **Notifications** tab.
+4. In the input field under **Email notifications**, type the email address.
+5. Click **Add**.
 
-The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications. 
+The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications.
 
-### Configuring notifications 
+### Configuring notifications
 
-You can pick and choose the Ship events about which you want to notify different people. For example, it's possible to only send notifications about a failed publishing event if you do not want to be bothered when things go well! And of course you can send different notifications to different email addresses. 
+You can pick and choose the Ship events about which you want to notify different people. For example, it's possible to only send notifications about a failed publishing event if you do not want to be bothered when things go well! And of course you can send different notifications to different email addresses.
 
 To configure notifications:
 
 1. Open your app's Ship page.
-2. Click **Settings.** 
-3. Go to the **Notifications** tab. 
-4. Use the toggles under the different event types. 
+2. Click **Settings.**
+3. Go to the **Notifications** tab.
+4. Use the toggles under the different event types.
