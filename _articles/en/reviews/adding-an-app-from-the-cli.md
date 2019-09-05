@@ -56,7 +56,7 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
    Once you are done, the scanner will scan your repository and look for the remote repository's URL. 
 6. Select the repository URL: choose the SSH option. 
    
-   This step only comes up if your local repository's remote has an SSH URL. If the remote repository has an HTTPS URL, you won't see this prompt. 
+   This prompt only comes up if your local repository's remote has an SSH URL. If the remote repository has an HTTPS URL, you won't see this prompt. 
    ``` 
    Remote URL: git@github.com:example-user/example.git
    
