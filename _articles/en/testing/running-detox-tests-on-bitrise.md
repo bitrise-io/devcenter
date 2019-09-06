@@ -49,15 +49,15 @@ Once you are done, you can test your Detox-configured project on Bitrise.
           }
         },
 2. On [bitrise.io](https://app.bitrise.io/), go to your project and open the Workflow Editor.
-3. Switch to the workflow you want to use.
-4. Add a `Run npm command` Step to your workflow.
-5. Add the Detox install command to the `The npm command with arguments to run` input:
+3. Switch to the Workflow you want to use.
+4. Add a **Run npm command** Step to your Workflow.
+5. Add the Detox install command to the **The npm command with arguments to run** input:
 
        install -g detox-cli
 6. Install a test runner.
 
-   For example, [our sample app](https://github.com/bitrise-samples/sample-project-react-native) uses `mocha`, installed with the `yarn` Step. To install yarn dependencies, just set the `The yarn command to run` input's value to `install`.
-7. Add a Script Step to install the necessary utilities and then run Detox.
+   For example, [our sample app](https://github.com/bitrise-samples/sample-project-react-native) uses `mocha`, installed with the `yarn` Step. To install yarn dependencies, just set the **The yarn command to run** input's value to `install`.
+7. Add a **Script** Step to install the necessary utilities and then run Detox.
 
        #!/bin/bash
        
@@ -72,7 +72,7 @@ Once you are done, you can test your Detox-configured project on Bitrise.
    You can, of course, put each of these commands in separate Script Steps, for the sake of modularity.
 8. Run a build!
 
-**If the build fails, check out our example** `bitrise.yml` **file:**
+If the build fails, check out our example `bitrise.yml` file:
 
     ---
     workflows:

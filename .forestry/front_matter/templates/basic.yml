@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/reviews/adding-an-app-from-the-cli.md
@@ -72,7 +73,6 @@ pages:
 - _articles/en/builds/Scheduling-Builds.md
 - _articles/jp/builds/bitrise-checks-on-github-checks.md
 - _articles/en/builds/bitrise-checks-on-github-checks.md
-- _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/builds/sensitive-input-field.md
 - _articles/en/builds/rolling-builds.md
 - _articles/en/builds/selective_builds.md
