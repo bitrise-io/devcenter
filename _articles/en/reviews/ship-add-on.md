@@ -161,7 +161,7 @@ To add screenshots or feature graphics to your app details page:
 
 ### Updating the app's descriptions
 
-You can update the app's description, or all its other textual details in the same way. The types of text fields that you have available depends on the type of the app. 
+You can update the app's description, or all its other textual details in the same way. The types of text fields that you have available depend on the type of the app. 
 
 1. Open the **Details** page in Ship of your app's chosen build version.
 2. Go to the field you want to edit and click in the content field.
