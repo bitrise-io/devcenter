@@ -28,8 +28,10 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- _articles/en/reviews/ship-add-on.md
+- _articles/en/testing/running-xcode-tests.md
 - _articles/en/reviews/adding-an-app-from-the-cli.md
+- _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
+- _articles/en/reviews/ship-add-on.md
 - deploy.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/faq/adding-projects-with-submodules.md
@@ -54,7 +56,6 @@ pages:
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
 - _articles/en/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
-- _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
 - _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
@@ -96,7 +97,6 @@ pages:
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/シミュレータ用iosアプリのデプロイ.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
 - _articles/jp/testing/test-reports.md
-- _articles/en/testing/running-xcode-tests.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
 - _articles/en/getting-started/index.md
