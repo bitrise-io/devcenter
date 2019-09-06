@@ -148,7 +148,7 @@ The details include:
 * Screenshots and feature graphics of the app, arranged by the different supported devices.  At least two screenshots are required for an app to be published.
 * Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. This is automatically exported to Ship by the **Deploy to Bitrise.io** Step.
 
-### Adding screenshots
+### Adding screenshots or feature graphics
 
 At least two screenshots are required for an app to be published. Once you added screenshots or graphics to one build version of the app, they are automatically added to all subsequent versions. If you want to display different screenshots, you can modify it, otherwise you can leave it alone.
 
