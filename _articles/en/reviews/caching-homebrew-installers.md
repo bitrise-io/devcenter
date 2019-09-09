@@ -8,6 +8,8 @@ published: false
 ---
 The **Brew install** Step supports caching: if the option is enabled, any downloaded brew installers will be cached from the location of `brew --cache`. The cache path is `~/Library/Caches/Homebrew/`.
 
+## Enabling caching
+
 To enable caching of brew installers:
 
 1. Go to the Workflow in which you want to cache brew installs and select the **Brew install** Step.
