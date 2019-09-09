@@ -13,6 +13,8 @@ With Ship, you can manage Continous Deployment of your app, as well as manage di
 You can do a whole lot of things with Ship:
 
 * View all the build versions of your app.
+
+  ![](/img/ship_apphome.png)
 * View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
 * Install a given build version directly from the Ship page for testing, or share it with a third party.
 * Deploy a given build version to App Store Connect and/or the Play Store, once you set up publishing.
@@ -36,6 +38,8 @@ To expose a Workflow's artifacts to Ship:
 1. Go to your app's Ship page.
 2. Click **Settings** in the top right corner.
 3. Go to the **General** tab.
+
+   ![](/img/ship_settings.png)
 4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
 
    Be aware there are TWO such text boxes: one for iOS and one for Android. If your app is cross-platform, fill out both. Separate the different Workflow names with a comma.
@@ -69,6 +73,8 @@ To send the public install page link or the QR code:
 
 1. [Expose the Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the installable file, and run the Workflow on Bitrise.
 2. Open the **Details** page of your app's chosen build version.
+
+   ![](/img/ship-details.png)
 3. On the right, find the Public Install Page link or the QR code.
 4. Copy the one you need and send it to the stakeholders (by email, for example).
 
@@ -161,7 +167,7 @@ To add screenshots or feature graphics to your app details page:
 
 ### Updating the app's descriptions
 
-You can update the app's description, or all its other textual details in the same way. The types of text fields that you have available depend on the type of the app. 
+You can update the app's description, or all its other textual details in the same way. The types of text fields that you have available depend on the type of the app.
 
 1. Open the **Details** page in Ship of your app's chosen build version.
 2. Go to the field you want to edit and click in the content field.
