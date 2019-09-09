@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- deploy.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
 - _articles/en/builds/caching/caching-homebrew-installers.md
 - _articles/en/reviews/ship-add-on.md
@@ -36,7 +37,6 @@ pages:
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
-- deploy.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/faq/adding-projects-with-submodules.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
