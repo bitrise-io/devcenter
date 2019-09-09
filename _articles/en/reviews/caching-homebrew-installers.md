@@ -14,3 +14,4 @@ To enable caching of brew installers:
 2. Set the **Cache** option to `yes`.
 
    ![](/img/brew-install2.png)
+3. As always, click **Save**. 
