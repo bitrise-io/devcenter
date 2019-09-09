@@ -5,7 +5,7 @@ redirect_from: "/jp/ios-deploy/introduction-to-deploying-ios-apps/"
 menu:
   deploy-main:
     identifier: ios-deploy
-    weight: 3
+    weight: 4
 
 ---
 アプリのビルドを開始し、ユニットテストとUIテストをビルド上で実行できたら、次はデプロイ作業に移ります。

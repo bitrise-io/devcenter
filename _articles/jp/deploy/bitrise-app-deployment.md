@@ -2,7 +2,7 @@
 title: Bitrise OTA App Deployment
 menu:
   deploy-main:
-    weight: 4
+    weight: 5
 
 ---
 {% include not_translated_yet.html %}
