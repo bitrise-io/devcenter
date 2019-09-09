@@ -42,7 +42,7 @@ To expose a Workflow's artifacts to Ship:
    ![](/img/ship_settings.png)
 4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
 
-   Be aware there are TWO such text boxes: one for iOS and one for Android. If your app is cross-platform, fill out both. Separate the different Workflow names with a comma.
+   Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma.
 5. Scroll down to the bottom of the page and click **Save**.
 
 ### Code signing files
