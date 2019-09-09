@@ -81,6 +81,8 @@ To send the public install page link or the QR code:
 To install it directly from Ship:
 
 1. Log in to Ship from a supported device.
+
+   Click on the **Devices** tab to find out if a given device is registered. Read [our guide on how to register your devices](/testing/registering-a-test-device/) on Bitrise. 
 2. Under the name of the app, find and click the **Install** button.
 
 ### Publishing an app for iOS
