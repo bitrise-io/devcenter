@@ -14,6 +14,4 @@ To enable caching of brew installers:
 
 1. Go to the Workflow in which you want to cache brew installs and select the **Brew install** Step.
 2. Set the **Cache** option to `yes`.
-
-   ![](/img/brew-install2.png)
-3. As always, click **Save**. 
+3. As always, click **Save**.
