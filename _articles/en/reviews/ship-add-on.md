@@ -8,11 +8,13 @@ published: false
 ---
 ## Ship overview
 
-With Ship, you can manage Continous Deployment of your app, as well as manage different build versions of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
+With Ship, you can manage Continuous Deployment of your app, as well as manage different build versions of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
 
 You can do a whole lot of things with Ship:
 
 * View all the build versions of your app.
+
+  ![](/img/ship_apphome.png)
 * View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
 * Install a given build version directly from the Ship page for testing, or share it with a third party.
 * Deploy a given build version to App Store Connect and/or the Play Store, once you set up publishing.
@@ -36,9 +38,11 @@ To expose a Workflow's artifacts to Ship:
 1. Go to your app's Ship page.
 2. Click **Settings** in the top right corner.
 3. Go to the **General** tab.
+
+   ![](/img/ship_settings.png)
 4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
 
-   Be aware there are TWO such text boxes: one for iOS and one for Android. If your app is cross-platform, fill out both. Separate the different Workflow names with a comma.
+   Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma.
 5. Scroll down to the bottom of the page and click **Save**.
 
 ### Code signing files
@@ -69,12 +73,16 @@ To send the public install page link or the QR code:
 
 1. [Expose the Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the installable file, and run the Workflow on Bitrise.
 2. Open the **Details** page of your app's chosen build version.
+
+   ![](/img/ship-details.png)
 3. On the right, find the Public Install Page link or the QR code.
 4. Copy the one you need and send it to the stakeholders (by email, for example).
 
 To install it directly from Ship:
 
 1. Log in to Ship from a supported device.
+
+   Click on the **Devices** tab to find out if a given device is registered. Read [our guide on how to register your devices](/testing/registering-a-test-device/) on Bitrise. 
 2. Under the name of the app, find and click the **Install** button.
 
 ### Publishing an app for iOS
@@ -148,7 +156,7 @@ The details include:
 * Screenshots and feature graphics of the app, arranged by the different supported devices.  At least two screenshots are required for an app to be published.
 * Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. This is automatically exported to Ship by the **Deploy to Bitrise.io** Step.
 
-### Adding screenshots
+### Adding screenshots or feature graphics
 
 At least two screenshots are required for an app to be published. Once you added screenshots or graphics to one build version of the app, they are automatically added to all subsequent versions. If you want to display different screenshots, you can modify it, otherwise you can leave it alone.
 
@@ -156,15 +164,17 @@ To add screenshots or feature graphics to your app details page:
 
 1. Open the **Details** page in Ship of your app's chosen build version.
 2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.
+
+   ![](/img/ship-screenshots.png)
 3. Drag and drop a file OR click **Browse files** and select the ones you wish to upload.
 4. Once done, click **Save** in the top right corner.
 
 ### Updating the app's descriptions
 
-You can update the app's description, or all its other textual details - the 'What's new' section, promotional text, keywords, review notes - in the same way: 
+You can update the app's description, or all its other textual details in the same way. The types of text fields that you have available depend on the type of the app.
 
 1. Open the **Details** page in Ship of your app's chosen build version.
-2. Go to the field you want to edit and click in the content field. 
+2. Go to the field you want to edit and click in the content field.
 3. Edit the content.
 4. Click **Save** in the top right of the Details tab.
 
@@ -176,27 +186,29 @@ Ship can send emails about three different events:
 * Ship successfully published the app.
 * Ship failed to publish the app.
 
-These notifications can be sent to any number of different email addresses. When a new email address is added to the notifications list, Ship sends a confirmation email to the address: after confirmation, notifications should work. 
+These notifications can be sent to any number of different email addresses. When a new email address is added to the notifications list, Ship sends a confirmation email to the address: after confirmation, notifications should work.
 
 ### Adding a new email address
 
 To add a new email address to the notification list for an app:
 
 1. Open your app's Ship page.
-2. Click **Settings.** 
-3. Go to the **Notifications** tab. 
-4. In the input field under **Email notifications**, type the email address. 
-5. Click **Add**. 
+2. Click **Settings.**
+3. Go to the **Notifications** tab.
+4. In the input field under **Email notifications**, type the email address.
 
-The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications. 
+   ![](/img/ship-notifications.png)
+5. Click **Add**.
 
-### Configuring notifications 
+The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications.
 
-You can pick and choose the Ship events about which you want to notify different people. For example, it's possible to only send notifications about a failed publishing event if you do not want to be bothered when things go well! And of course you can send different notifications to different email addresses. 
+### Configuring notifications
+
+You can pick and choose the Ship events about which you want to notify different people. For example, it's possible to only send notifications about a failed publishing event if you do not want to be bothered when things go well! And of course you can send different notifications to different email addresses.
 
 To configure notifications:
 
 1. Open your app's Ship page.
-2. Click **Settings.** 
-3. Go to the **Notifications** tab. 
-4. Use the toggles under the different event types. 
+2. Click **Settings.**
+3. Go to the **Notifications** tab.
+4. Use the toggles under the different event types.

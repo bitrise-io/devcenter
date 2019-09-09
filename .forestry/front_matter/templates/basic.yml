@@ -29,6 +29,14 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/jp/builds/caching/caching-homebrew-installers.md
+- _articles/en/builds/caching/caching-homebrew-installers.md
+- _articles/en/reviews/ship-add-on.md
+- _articles/en/reviews/adding-an-app-from-the-cli.md
+- _articles/en/testing/running-detox-tests-on-bitrise.md
+- _articles/en/testing/device-testing-for-ios.md
+- _articles/en/testing/running-xcode-tests.md
+- _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/faq/adding-projects-with-submodules.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
@@ -42,7 +50,6 @@ pages:
 - _articles/en/bitrise-cli/steps.md
 - _articles/en/bitrise-cli/basics-of-bitrise-yml.md
 - _articles/en/getting-started/signing-up-to-bitrise.md
-- _articles/en/reviews/ship-add-on.md
 - _articles/en/builds/build-artifacts-online.md
 - _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
@@ -53,7 +60,6 @@ pages:
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
 - _articles/en/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
-- _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
 - _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
@@ -69,7 +75,6 @@ pages:
 - _articles/en/builds/Scheduling-Builds.md
 - _articles/jp/builds/bitrise-checks-on-github-checks.md
 - _articles/en/builds/bitrise-checks-on-github-checks.md
-- _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/builds/sensitive-input-field.md
 - _articles/en/builds/rolling-builds.md
 - _articles/en/builds/selective_builds.md
@@ -95,7 +100,6 @@ pages:
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/シミュレータ用iosアプリのデプロイ.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
 - _articles/jp/testing/test-reports.md
-- _articles/en/testing/running-xcode-tests.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
 - _articles/en/getting-started/index.md
@@ -161,7 +165,6 @@ pages:
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
 - _articles/en/deploy/android-deploy/deploying-android-apps.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
-- _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/device-testing-for-android.md
 - _articles/en/bitrise-cli/run-your-first-build.md
 - _articles/en/bitrise-cli/initializing-a-bitrise-project-locally.md
