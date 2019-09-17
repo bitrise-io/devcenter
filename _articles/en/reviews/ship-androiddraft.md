@@ -119,7 +119,9 @@ Your app is now ready for publishing. To publish, go back to the **Details** pag
 
 ### Publishing an app for Android
 
-{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. The Workflow must contain a Step that builds an APK (for example, **Android Build**) and the **Deploy to Bitrise.io** Step.
+{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if:
+- It's built in a Workflow that is exposed to Ship. The Workflow must contain a Step that builds an APK (for example, **Android Build**) and the **Deploy to Bitrise.io** Step.
+- The build Step should be set to 
 
 Note that the if you wish to use a custom Script Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory."%}
 
@@ -133,12 +135,22 @@ Once you configured publishing for the app, you do not have to set these options
 To configure publishing an app for Android:
 
 1. Open your app's Ship page and click **Settings** in the top right corner.
-2. Go the **Android Settings** section.
+2. Go to the **Android Settings** section.
 3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the APK you want to publish.
 4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Play Store.
 5. Choose the appropriate keystore file and the Service Account JSON file.
 
 Your app is now ready for publishing. To publish, go back to the **Details** page and click **Publish**.
+
+**Module selection**
+
+If your Android app contains more than one module, \[error message\] you'll have to select a module first before Ship could provide detailed information on it. Click **Settings** in the upper right corner and provide the exact module name under **Module**.
+
+![](/img/module-android-settings.png)
+
+All flavors are listed horizontally on the Version page. If you click a flavor box, versions of the selected flavor will be listed under **Version History**.
+
+![](/img/flavor_android_ship.png)
 
 ### Publishing status and logs
 
