@@ -119,10 +119,10 @@ Your app is now ready for publishing. To publish, go back to the **Details** pag
 
 ### Publishing an app for Android
 
-{% include message_box.html type="important" title="Building the app" content="Before you'd publish an app in Ship, make sure:
+{% include message_box.html type="important" title="Building the app" content="Before you'd publish an Android app in Ship, make sure that:
 
-* Your app is built in a Workflow that is [exposed to Ship](/deploy/ship/#exposing-a-workflows-artifacts-to-ship). The Workflow must contain a build Step that builds an APK (such as **Android Build** or **Gradle Runner** Step) and the **Deploy to Bitrise.io** Step.
-* The **Android Build** Step's **Variant** input field contains the `release` build type and the **Gradle Runner** Step's **Gradle task to run** input field contains `release` as part of the defined task. Building a release version of your app is necessary to publish your app in Ship. If it's not set, publishing on the Details page of Ship will be disabled.
+* Your app is built in a Workflow that is [exposed to Ship](/deploy/ship/#exposing-a-workflows-artifacts-to-ship). The Workflow must contain a build Step that builds an APK(s) or an Android App Bundle (such as **Android Build** or **Gradle Runner** Step) and the **Deploy to Bitrise.io** Step.
+* You have built a release version of your app before publishing it in Ship. Please note that without a release version, the **Publish** button on the **Details** page of Ship will be disabled. In this case, check your build Steps: **Android Build** Step's **Variant** input field must contain the `release` word (for example `release` or `demoRelease`) and the **Gradle Runner** Step's **Gradle task to run** input field must contains `Release` (for example, `assembleRelease` or `assembleDemoRelease`). If it's not set, publishing on the Details page of Ship will be disabled.
 
 Note that the if you wish to use a custom **Script** Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory."%}
 
