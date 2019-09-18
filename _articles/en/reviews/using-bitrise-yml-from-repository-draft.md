@@ -97,13 +97,12 @@ The approach of storing your `bitrise.yml` file in your repository, and running 
 * You can't change the build configuration of a specific commit.
 * You can't edit the configuration in the online Workflow Editor.
 * Any Pull Request can run builds with its own custom configuration.
- 
 
 ### The trigger map is better to be managed on bitrise.io
 
-You can store the trigger map in the `bitrise.yml` of your repository - but we don't recommend it. You'll lose the ability to skip builds. On [bitrise.io](https://www.bitrise.io), the trigger map is evaluated **before** the repository is cloned: this way, if you set the patterns correctly in code pushes or pull requests, for example, then Bitrise won't even start those builds which don't match the set patterns.
+You can store the trigger map in the `bitrise.yml` of your repository - but we don't recommend it. You'll lose the ability to SKIP builds. On [bitrise.io](https://www.bitrise.io), the trigger map is evaluated before the repository is cloned: this way, for example, if you set the patterns correctly in code pushes or pull requests, then Bitrise won't even start those builds which don't match the set patterns.
 
-However, if you store the trigger map in your repository, the only way to check it is to clone the repository first. Even if you prepare your `trigger_map` in your repository, [bitrise.io](https://www.bitrise.io) will start a build to clone the repository and you'll have to abort it based on the stored trigger map.
+However, if you store the trigger map in your repository, the only way to check it is to clone the repository first. Even if you prepare your `trigger_map` in your repository, [bitrise.io](https://www.bitrise.io) will start a build to clone the repository and you'll have to manually handle the stored trigger map.
 
 ### You can't change the build configuration of a commit
 
