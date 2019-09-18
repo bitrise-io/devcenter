@@ -119,9 +119,10 @@ Your app is now ready for publishing. To publish, go back to the **Details** pag
 
 ### Publishing an app for Android
 
-{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if:
-- It's built in a Workflow that is exposed to Ship. The Workflow must contain a Step that builds an APK (for example, **Android Build**) and the **Deploy to Bitrise.io** Step.
-- The build Step should be set to 
+{% include message_box.html type="important" title="Building the app" content="Before you'd publish an app in Ship, make sure:
+
+* Your app is built in a Workflow that is exposed to Ship. The Workflow must contain a Step that builds an APK (for example, **Android Build** or **Gradle Runner**) and the **Deploy to Bitrise.io** Step.
+* The **Android Build** Step's **Variant** input field contains the `release` build type and the **Gradle Runner** Step's Gradle task to run input field contains `release` in the defined task.
 
 Note that the if you wish to use a custom Script Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory."%}
 
