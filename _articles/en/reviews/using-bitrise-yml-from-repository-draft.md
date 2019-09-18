@@ -106,8 +106,6 @@ You can store the trigger map in the `bitrise.yml` of your repository - but we d
 
 However, if you store the trigger map in your repository, the only way to check it is to clone the repository first. Even if you prepare your `trigger_map` in your repository to ignore patterns, [bitrise.io](https://www.bitrise.io) will start a build to clone the repository and then aborts it based on the stored trigger map.
 
-trigger map tarolhatod bitrise.io-n, igy be tudod allitani h bizonyos branchekre ha jon ao ush csak bizonyos branchekre fusson le. a repoban tarolt bitrise.yml nem arra valo h skippelt buildet, hanem arra, ha eliditom a buildet, es a build amii fut, az a repohoz tartozo workflowt futtat.ha ignralni akarok patterneket, azt csak a bitrise ion tarolt trigger mappben tud mukodni.
-
 After:
 
 Storing the trigger map on [bitrise.io](https://www.bitrise.io) allows you to ignore certain patterns based on the details you add to your trigger map by editing the **bitrise.yml** tab of the **Workflow Editor.**  Storing the trigger map in a repository can only be used for running the repository's own workflow but not for skipping a build based on ignore patterns.
