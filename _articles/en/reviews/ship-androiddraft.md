@@ -124,10 +124,11 @@ Your app is now ready for publishing. To publish, go back to the **Details** pag
 * Your app is built in a Workflow that is [exposed to Ship](/deploy/ship/#exposing-a-workflows-artifacts-to-ship). The Workflow must contain a build Step that builds an APK (such as **Android Build** or **Gradle Runner** Step) and the **Deploy to Bitrise.io** Step.
 * The **Android Build** Step's **Variant** input field contains the `release` build type and the **Gradle Runner** Step's **Gradle task to run** input field contains `release` as part of the defined task. Building a release version of your app is necessary to publish your app in Ship. If it's not set, publishing on the Details page of Ship will be disabled.
 
-Note that the if you wish to use a custom Script Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory."%}
+Note that the if you wish to use a custom **Script** Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory."%}
 
 To configure publishing an Android app to Play Store, you can:
 
+* Choose the flavor, if having multiple, and its related version on the **Version** page.
 * Choose the Android keystore files and the Service Account JSON file.
 * Set the track you want to use to release your app.
 
@@ -146,12 +147,6 @@ Your app is now ready for publishing. To publish, go back to the **Details** pag
 {% include message_box.html type="info" title="Android app with multiple modules" content="If your Android app contains more than one module, you'll have to select a specific module first. Click **Settings** in the upper right corner in Ship and provide the exact module name under **Module**.
 
 ![](/img/module-android-settings.png)"%}
-
-**Module selection**
-
-If your Android app contains more than one module, \[error message\] you'll have to select a module first before Ship could provide detailed information on it. Click **Settings** in the upper right corner and provide the exact module name under **Module**.
-
-![](/img/module-android-settings.png)
 
 All flavors are listed horizontally on the Version page. If you click a flavor box, versions of the selected flavor will be listed under **Version History**.
 
