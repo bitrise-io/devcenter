@@ -99,9 +99,9 @@ The approach of storing your `bitrise.yml` file in your repository, and running 
 
 ### The trigger map is better to be managed on bitrise.io
 
-You can store the trigger map in the `bitrise.yml` of your repository - but we don't recommend it. You'll lose the ability to _ignore_ patterns. On [bitrise.io](https://www.bitrise.io), the  trigger map is evaluated **before** the repository is cloned: this way, if you set it to ignore certain patterns in code pushes or pull requests, for example, then Bitrise won't even start a build.
+You can store the trigger map in the `bitrise.yml` of your repository - but we don't recommend it. You'll lose the ability to SKIP builds. On [bitrise.io](https://www.bitrise.io), the trigger map is evaluated BEFORE the repository is cloned: this way, for example, if you set the patterns correctly in code pushes or pull requests, then Bitrise won't even start those builds which don't match the set patterns.
 
-However, if you store the trigger map in your repository, the only way to check it is to clone the repository first. Even if you prepare your `trigger_map` in your repository to ignore patterns, [bitrise.io](https://www.bitrise.io) will start a build to clone the repository and then aborts it based on the stored trigger map.
+However, if you store the trigger map in your repository, the only way to check it is to clone the repository first. Even if you prepare your `trigger_map` in your repository, [bitrise.io](https://www.bitrise.io) will start a build to clone the repository and you have to manually handle the stored trigger map.
 
 ### You can't change the build configuration of a commit
 
@@ -122,7 +122,7 @@ However, the [offline workflow editor](https://github.com/bitrise-io/bitrise-wor
 When someone sends a Pull Request they can modify the `bitrise.yml` in your repository any way they like it. This can force _your_ builds to queue.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
 </div>
