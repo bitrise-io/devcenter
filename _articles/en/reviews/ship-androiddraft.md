@@ -166,12 +166,12 @@ The purpose of the app details page is to update the most important information 
 The details include:
 
 * A description of the app.
-* Screenshots and feature graphics of the app, arranged by the different supported devices.  At least two screenshots are required for an app to be published.
+* Screenshots and feature graphics of the app, arranged by the different supported devices.
 * Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. This is automatically exported to Ship by the **Deploy to Bitrise.io** Step.
 
 ### Adding screenshots or feature graphics
 
-At least two screenshots are required for an app to be published. Once you added screenshots or graphics to one build version of the app, they are automatically added to all subsequent versions. If you want to display different screenshots, you can modify it, otherwise you can leave it alone.
+You can add screenshots for an app to be published. Once you added screenshots or graphics to one build version of the app, they are automatically added to all subsequent versions. If you want to display different screenshots, you can modify it, otherwise you can leave it alone.
 
 To add screenshots or feature graphics to your app details page:
 
