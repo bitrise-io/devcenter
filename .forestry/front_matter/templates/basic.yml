@@ -28,10 +28,10 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- deploy.md
 - _articles/en/reviews/using-bitrise-yml-from-repository-draft.md
 - _articles/en/reviews/ship-androiddraft.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
-- deploy.md
 - _articles/en/builds/caching/caching-homebrew-installers.md
 - _articles/en/reviews/ship-add-on.md
 - _articles/en/reviews/adding-an-app-from-the-cli.md
