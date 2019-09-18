@@ -29,6 +29,8 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/reviews/using-bitrise-yml-from-repository-draft.md
+- _articles/en/reviews/ship-androiddraft.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
 - _articles/en/builds/caching/caching-homebrew-installers.md
 - _articles/en/reviews/ship-add-on.md
@@ -54,7 +56,6 @@ pages:
 - _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/en/reviews/bitrise-yml-size-limitation-notes.md
-- _articles/en/reviews/detached-head-draft.md
 - _articles/en/api/adding-and-managing-apps.md
 - _articles/jp/deploy/deploy-apps-to-applivery-from-bitrise.md
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md

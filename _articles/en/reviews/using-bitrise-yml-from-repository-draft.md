@@ -1,8 +1,9 @@
 ---
-title: Using the bitrise.yml from repository
-menu:
-  tips-and-tricks-main:
-    weight: 21
+tag: []
+title: using bitrise.yml from repository - draft
+redirect_from: []
+summary: ''
+published: false
 
 ---
 It is possible to store the build configuration ( that is, your app's `bitrise.yml` file) in your repository. The approach has its pros and cons; let's go through how to do it and why you'd want to do it!
@@ -99,9 +100,9 @@ The approach of storing your `bitrise.yml` file in your repository, and running 
 
 ### The trigger map is better to be managed on bitrise.io
 
-You can store the trigger map in the `bitrise.yml` of your repository - but we don't recommend it. You'll lose the ability to SKIP builds. On [bitrise.io](https://www.bitrise.io), the trigger map is evaluated BEFORE the repository is cloned: this way, for example, if you set the patterns correctly in code pushes or pull requests, then Bitrise won't even start those builds which don't match the set patterns.
+You can store the trigger map in the `bitrise.yml` of your repository - but we don't recommend it. You'll lose the ability to SKIP builds. On [bitrise.io](https://www.bitrise.io), the trigger map is evaluated before the repository is cloned: this way, for example, if you set the patterns correctly in code pushes or pull requests, then Bitrise won't even start those builds which don't match the set patterns.
 
-However, if you store the trigger map in your repository, the only way to check it is to clone the repository first. Even if you prepare your `trigger_map` in your repository, [bitrise.io](https://www.bitrise.io) will start a build to clone the repository and you have to manually handle the stored trigger map.
+However, if you store the trigger map in your repository, the only way to check it is to clone the repository first. Even if you prepare your `trigger_map` in your repository, [bitrise.io](https://www.bitrise.io) will start a build to clone the repository and you'll have to manually handle the stored trigger map.
 
 ### You can't change the build configuration of a commit
 
