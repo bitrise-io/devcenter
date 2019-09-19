@@ -12,12 +12,13 @@ With Ship, you can manage Continuous Deployment of your app, as well as manage d
 
 You can do a whole lot of things with Ship:
 
-* View all the build versions and flavors of your app.
+* View all the build versions of your app.
 
-  ![](/img/ship_apphome.png)
+![](/img/ship_benefits.jpg)
+
 * View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
-* Install a given build version directly from the Ship page for testing, or share it with a third party.
-* Deploy a given build version to App Store Connect and/or the Play Store, once you set up publishing.
+* Use the link of your app's public install page for testing and sharing it with a third party.
+* Deploy a given build version to App Store Connect and/or the Google Play Console, once you set up publishing.
 * Switch between platforms on the **Version History** page in the case of cross-platform projects.
 
 ## Publishing an app with Ship
@@ -128,7 +129,7 @@ Your app is now ready for publishing. To publish, go back to the **Details** pag
 * You have built a release version of your app before publishing it in Ship. Please note that without a release version, the **Publish** button on the **Details** page of Ship will be disabled. In this case, check if the following is set in your build Steps: the **Android Build** Step's **Variant** input field must contain `release` (for example `release` or `demoRelease`) and the **Gradle Runner** Step's **Gradle task to run** input field must contain `Release` (for example, `assembleRelease` or `assembleDemoRelease`).
 * If using a custom **Script** Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory and that the **Deploy to Bitrise.io** Step is included in your [exposed Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship)."%}
 
-To configure publishing an Android app to Play Store, you can:
+To configure publishing an Android app to Google Play Console, you can:
 
 * Choose the Android keystore files and the Service Account JSON file.
 * Set the track you want to use to release your app.
@@ -140,12 +141,12 @@ To configure publishing an app for Android:
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go to the **Android Settings** section.
 3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the APK you want to publish.
-4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Play Store.
+4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Google Play Console.
 5. If your Android app contains multiple modules, enter the exact module under **Module**.
    ![](/img/module-android-settings.png)
 6. Choose the appropriate keystore file and the Service Account JSON file.
 7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing.
-	![](/img/flavorandroid.jpg)
+   ![](/img/flavorandroid.jpg)
 8. Fill out the **Details** page and click **Publish.**
 
 ### Publishing status and logs
