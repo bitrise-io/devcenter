@@ -29,7 +29,6 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - _articles/en/reviews/ship-add-on-beta-version.md
-- _articles/en/reviews/ship-androiddraft.md
 - _articles/en/reviews/using-bitrise-yml-from-repository-draft.md
 - deploy.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
