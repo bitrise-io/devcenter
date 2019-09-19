@@ -18,7 +18,7 @@ You can do a whole lot of things with Ship:
 * View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
 * Install a given build version directly from the Ship page for testing, or share it with a third party.
 * Deploy a given build version to App Store Connect and/or the Play Store, once you set up publishing.
-* Switch between platforms on the Version page in the case of cross-platform projects.
+* Switch between platforms on the **Version History** page in the case of cross-platform projects.
 
 ## Publishing an app with Ship
 
@@ -125,7 +125,7 @@ Your app is now ready for publishing. To publish, go back to the **Details** pag
 {% include message_box.html type="important" title="Building the app" content="Before you'd publish an Android app in Ship, make sure that:
 
 * Your app is built in a Workflow that is [exposed to Ship](/deploy/ship/#exposing-a-workflows-artifacts-to-ship). The Workflow must contain a build Step that builds an APK(s) or an Android App Bundle (such as **Android Build** or **Gradle Runner** Step) and the **Deploy to Bitrise.io** Step.
-* You have built a release version of your app before publishing it in Ship. Please note that without a release version, the **Publish** button on the **Details** page of Ship will be disabled. In this case, check if the following is set in your build Steps: the **Android Build** Step's **Variant** input field must contain `release` (for example `release` or `demoRelease`) and the **Gradle Runner** Step's **Gradle task to run** input field must contain `Release` (for example, `assembleRelease` or `assembleDemoRelease`). If it's not set, publishing on the Details page of Ship will be disabled.
+* You have built a release version of your app before publishing it in Ship. Please note that without a release version, the **Publish** button on the **Details** page of Ship will be disabled. In this case, check if the following is set in your build Steps: the **Android Build** Step's **Variant** input field must contain `release` (for example `release` or `demoRelease`) and the **Gradle Runner** Step's **Gradle task to run** input field must contain `Release` (for example, `assembleRelease` or `assembleDemoRelease`).
 * If using a custom **Script** Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory and that the **Deploy to Bitrise.io** Step is included in your [exposed Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship)."%}
 
 To configure publishing an Android app to Play Store, you can:
