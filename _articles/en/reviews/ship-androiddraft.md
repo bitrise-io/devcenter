@@ -78,8 +78,6 @@ To send the public install page link or the QR code:
 
 1. [Expose the Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the installable file, and run the Workflow on Bitrise.
 2. Open the **Details** page of your app's chosen build version.
-
-   ![](/img/ship-details.png)
 3. On the right, find the Public Install Page link or the QR code.
 4. Copy the one you need and send it to the stakeholders (by email, for example).
 
