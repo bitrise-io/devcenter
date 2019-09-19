@@ -15,13 +15,11 @@ With Ship, you can manage Continuous Deployment of your app, as well as manage d
 You can do a whole lot of things with Ship:
 
 * View all the build versions of your app.
-
-![](/img/ship_benefits.jpg)
-
 * View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
 * Use the link of your app's public install page for testing and sharing it with a third party.
 * Deploy a given build version to App Store Connect and/or the Google Play Console, once you set up publishing.
 * Switch between platforms on the **Version History** page in the case of cross-platform projects.
+![](/img/ship_benefits.jpg)
 
 ## Publishing an app with Ship
 
