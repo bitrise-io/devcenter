@@ -8,7 +8,7 @@ published: false
 ---
 ## Ship overview
 
-With Ship, you can manage Continuous Deployment of your app, as well as manage different build versions and flavors of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
+With Ship, you can manage Continuous Deployment of your app, as well as manage different build versions of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
 
 You can do a whole lot of things with Ship:
 
@@ -23,15 +23,14 @@ You can do a whole lot of things with Ship:
 
 ## Publishing an app with Ship
 
-To publish an app using Ship, you need a minimum of three things:
+To publish an app using Ship, you need a minimum of two things:
 
-* At least one Workflow's artifacts must be exposed to Ship.
 * Either an .xcarchive.zip, an APK or an Android App Bundle which must be placed in the directory stored in the `BITRISE_DEPLOY_DIR` Environment Variable. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, any Step that builds an APK - such as **Android Build** - does it.
 * All exposed Workflows must include a **Deploy to Bitrise.io** Step.
 
-{% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be of version 1.9.0 and the **Xcode Archive & Export for iOS** Step for iOS apps must be of version 2.6.0 - older versions of the Steps do not support Ship."%}
+Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. You don't have to expose a Workflow (or more), but in this case all your app's Workflows that contain **Deploy to Bitrise.io** Step display all those Workflow artifacts. 
 
-Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship.
+{% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be of version 1.9.0 and the **Xcode Archive & Export for iOS** Step for iOS apps must be of version 2.6.0 - older versions of the Steps do not support Ship."%}
 
 On the **Settings** page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define the settings separately for the iOS and the Android versions.
 
@@ -46,7 +45,7 @@ To expose a Workflow's artifacts to Ship:
    ![](/img/ship_settings.png)
 4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
 
-   Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma.
+   Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma (for example, `build, deploy, release_build_android`) .
 5. Scroll down to the bottom of the page and click **Save**.
 
 ### Code signing files
@@ -71,7 +70,7 @@ To install an app on a device, there are three options:
 {% include message_box.html type="important" title="Artifact types" content="The public install page is not available for all type of artifacts.
 
 * For iOS, it's only available if your Workflow builds an .ipa file that is signed with a Debug, Development or Ad-hoc type provisioning profile.
-* For Android, it's only available if the artifact is an APK, either universal or split. For AABs, there will be no public install page link."%}
+* For Android, it's only available if your Workflow builds an APK which is NOT split or if it builds a universal APK which is split. For AABs, there will be no public install page link."%}
 
 To send the public install page link or the QR code:
 
@@ -153,7 +152,9 @@ To configure publishing an app for Android:
 
 Once you clicked **Publish** in Ship, the process starts according to the configured settings. You can view the status of the active publishing process on top of the **Details** page of the app.
 
-To view the logs of any publishing process, go to the **Activity** tab. From there, you can download the logs to troubleshoot any errors after a failed publish.
+To view the logs of any publishing process, go to the **Activity** tab. From there, you can download the logs by clicking **Download Build Log** to troubleshoot any errors after a failed publish.
+
+![](/img/downloadbuildlog.jpg)
 
 ## App details
 
@@ -221,3 +222,4 @@ To configure notifications:
 2. Click **Settings.**
 3. Go to the **Notifications** tab.
 4. Use the toggles under the different event types.
+5. Hit **Save** once all notifications are set.
