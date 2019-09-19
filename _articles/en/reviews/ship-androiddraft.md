@@ -145,6 +145,7 @@ To configure publishing an app for Android:
    ![](/img/module-android-settings.png)
 6. Choose the appropriate keystore file and the Service Account JSON file.
 7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing.
+	![](/img/flavorandroid.jpg)
 8. Fill out the **Details** page and click **Publish.**
 
 ### Publishing status and logs
