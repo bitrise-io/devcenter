@@ -18,7 +18,7 @@ You can do a whole lot of things with Ship:
 * View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
 * Install a given build version directly from the Ship page for testing, or share it with a third party.
 * Deploy a given build version to App Store Connect and/or the Play Store, once you set up publishing.
-* Switch between platforms on the Version page in the case of cross-platform projects. 
+* Switch between platforms on the Version page in the case of cross-platform projects.
 
 ## Publishing an app with Ship
 
@@ -130,7 +130,6 @@ Your app is now ready for publishing. To publish, go back to the **Details** pag
 
 To configure publishing an Android app to Play Store, you can:
 
-* Choose the flavor, if having multiple, and its related version on the **Version** page. all the versions, flavors are displayed on one page
 * Choose the Android keystore files and the Service Account JSON file.
 * Set the track you want to use to release your app.
 
@@ -142,18 +141,11 @@ To configure publishing an app for Android:
 2. Go to the **Android Settings** section.
 3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the APK you want to publish.
 4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Play Store.
-5. If your Android app contains multiple modules, enter the exact module your want 
+5. If your Android app contains multiple modules, enter the exact module under **Module**.
+	![](/img/module-android-settings.png)
 6. Choose the appropriate keystore file and the Service Account JSON file.
-
-Your app is now ready for publishing. To publish, go back to the **Details** page and click **Publish**.
-
-{% include message_box.html type="info" title="Android app with multiple modules" content="If your Android app contains more than one module, you'll have to select a specific module first. Click **Settings** in the upper right corner in Ship and provide the exact module name under **Module**.
-
-![](/img/module-android-settings.png)"%}
-
-All flavors are listed horizontally on the Version page. If you click a flavor box, versions of the selected flavor will be listed under **Version History**.
-
-![](/img/flavor_android_ship.png)
+7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing.
+8. Fill out the **Details** page and click **Publish.**
 
 ### Publishing status and logs
 
