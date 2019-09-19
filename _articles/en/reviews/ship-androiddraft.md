@@ -174,10 +174,9 @@ To add screenshots or feature graphics to your app details page:
 1. Open the **Details** page in Ship of your app's chosen build version.
 2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.
 
-	![](/img/ship-screenshots-1.jpg)
-
-1. Drag and drop a file OR click **Browse files** and select the ones you wish to upload.
-2. Once done, click **Save** in the top right corner.
+   ![](/img/ship-screenshots-1.jpg)
+3. Drag and drop a file OR click **Browse files** and select the ones you wish to upload.
+4. Once done, click **Save** in the top right corner.
 
 ### Updating the app's descriptions
 
@@ -207,7 +206,7 @@ To add a new email address to the notification list for an app:
 3. Go to the **Notifications** tab.
 4. In the input field under **Email notifications**, type the email address.
 
-   ![](/img/ship-notifications.png)
+   ![](/img/ship-notifications.jpg)
 5. Click **Add**.
 
 The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications.
