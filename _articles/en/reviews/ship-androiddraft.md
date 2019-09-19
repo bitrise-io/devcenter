@@ -1,6 +1,6 @@
 ---
 tag: []
-title: ship-androiddraft
+title: Ship add-on Beta
 redirect_from: []
 summary: ''
 published: false
