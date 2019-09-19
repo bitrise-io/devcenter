@@ -8,6 +8,8 @@ published: false
 ---
 ## Ship overview
 
+{% include message_box.html type="info" title="Ship in BETA" content="Please note that this feature is still in BETA version."%}
+
 With Ship, you can manage Continuous Deployment of your app, as well as manage different build versions of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
 
 You can do a whole lot of things with Ship:
@@ -26,7 +28,7 @@ You can do a whole lot of things with Ship:
 To publish an app using Ship, you need a minimum of two things:
 
 * Either an `.xcarchive.zip` file, an APK or an Android App Bundle which must be placed in the directory stored in the `BITRISE_DEPLOY_DIR` Environment Variable. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, the two build Steps will take care of it: **Android Build** or **Gradle Runner**.
-* All exposed Workflows must include a **Deploy to Bitrise.io** Step.
+* All exposed Workflows must include a **Deploy to Bitrise.io** Step where the **Compress the artifacts into one file?** input field is set to `false`.
 
 Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. You don't necessarily have to expose a Workflow (or more). In this case all your app's Workflows that contain **Deploy to Bitrise.io** Step display all artifacts which are related to your app's Workflows.
 
@@ -90,7 +92,7 @@ To install it directly from Ship:
 
 ### Publishing an app for iOS
 
-{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step which exports and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives the project with `Release` configuration."%}
+{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is exposed to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step which exports and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
 
 {% include message_box.html type="note" title="The `.xcarchive.zip` file with a custom Step" content="The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:
 
