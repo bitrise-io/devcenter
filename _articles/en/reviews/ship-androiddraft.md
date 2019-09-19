@@ -75,7 +75,7 @@ To install an app on a device, there are three options:
 
 To send the public install page link or the QR code:
 
-1. [Expose the Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the installable file, and run the Workflow on Bitrise.
+1. Expose the Workflow that creates the installable file, and run the Workflow on Bitrise.
 2. Open the **Details** page of your app's chosen build version.
 3. On the right, find the Public Install Page link or the QR code.
 4. Copy the one you need and send it to the stakeholders (by email, for example).
@@ -110,8 +110,8 @@ To configure publishing an app for iOS:
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go to the **General** tab.
 3. Go to the **iOS Settings** section.
-4. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the .ipa you want to publish, and run the Workflow on Bitrise.
-5. Select the [code signing files](/deploy/ship/#code-signing-files) you want to use.
+4. Expose a Workflow that creates the .ipa you want to publish, and run the Workflow on Bitrise.
+5. Select the code signing files you want to use.
 
    Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
 6. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
@@ -123,9 +123,9 @@ Your app is now ready for publishing. To publish, go back to the **Details** pag
 
 {% include message_box.html type="important" title="Building the app" content="Before you'd publish an Android app in Ship, make sure that:
 
-* Your app is built in a Workflow that is [exposed to Ship](/deploy/ship/#exposing-a-workflows-artifacts-to-ship). The Workflow must contain a build Step that builds an APK(s) or an Android App Bundle (such as **Android Build** or **Gradle Runner** Step) and the **Deploy to Bitrise.io** Step.
+* Your app is built in a Workflow that is exposed to Ship. The Workflow must contain a build Step that builds an APK(s) or an Android App Bundle (such as **Android Build** or **Gradle Runner** Step) and the **Deploy to Bitrise.io** Step.
 * You have built a release version of your app before publishing it in Ship. Please note that without a release version, the **Publish** button on the **Details** page of Ship will be disabled. In this case, check if the following is set in your build Steps: the **Android Build** Step's **Variant** input field must contain `release` (for example `release` or `demoRelease`) and the **Gradle Runner** Step's **Gradle task to run** input field must contain `Release` (for example, `assembleRelease` or `assembleDemoRelease`).
-* If using a custom **Script** Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory and that the **Deploy to Bitrise.io** Step is included in your [exposed Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship)."%}
+* If using a custom **Script** Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory and that the **Deploy to Bitrise.io** Step is included in your exposed Workflow."%}
 
 To configure publishing an Android app to Google Play Console, you can:
 
@@ -138,7 +138,7 @@ To configure publishing an app for Android:
 
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go to the **Android Settings** section.
-3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the APK you want to publish.
+3. Expose a Workflow that creates the APK you want to publish.
 4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Google Play Console.
 5. If your Android app contains multiple modules, enter the exact module under **Module**.
    ![](/img/module-android-settings.png)
