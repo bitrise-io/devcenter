@@ -43,7 +43,7 @@ To expose a Workflow's artifacts to Ship:
 3. Go to the **General** tab.
 
    ![](/img/ship_settings.png)
-4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
+4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need. 
 
    Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma (for example, `build, deploy, release_build_android`) .
 5. Scroll down to the bottom of the page and click **Save**.
