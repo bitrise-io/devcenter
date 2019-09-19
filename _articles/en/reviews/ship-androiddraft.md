@@ -25,7 +25,7 @@ You can do a whole lot of things with Ship:
 
 To publish an app using Ship, you need a minimum of two things:
 
-* Either an `.xcarchive.zip` file, an APK or an Android App Bundle which must be placed in the directory stored in the `BITRISE_DEPLOY_DIR` Environment Variable. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, any Step that builds an APK - such as **Android Build** or **Gradle Runner** - does it.
+* Either an `.xcarchive.zip` file, an APK or an Android App Bundle which must be placed in the directory stored in the `BITRISE_DEPLOY_DIR` Environment Variable. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, the two build Steps will take care of it: **Android Build** or **Gradle Runner**.
 * All exposed Workflows must include a **Deploy to Bitrise.io** Step.
 
 Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. You don't necessarily have to expose a Workflow (or more). In this case all your app's Workflows that contain **Deploy to Bitrise.io** Step display all artifacts which are related to your app's Workflows.
