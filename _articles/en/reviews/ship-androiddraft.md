@@ -19,7 +19,9 @@ You can do a whole lot of things with Ship:
 * Use the link of your app's public install page for testing and sharing it with a third party.
 * Deploy a given build version to App Store Connect and/or the Google Play Console, once you set up publishing.
 * Switch between platforms on the **Version History** page in the case of cross-platform projects.
-![](/img/ship_benefits.jpg)
+
+  
+  ![](/img/ship_benefits.jpg)
 
 ## Publishing an app with Ship
 
