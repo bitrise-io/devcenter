@@ -25,10 +25,10 @@ You can do a whole lot of things with Ship:
 
 To publish an app using Ship, you need a minimum of two things:
 
-* Either an .xcarchive.zip, an APK or an Android App Bundle which must be placed in the directory stored in the `BITRISE_DEPLOY_DIR` Environment Variable. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, any Step that builds an APK - such as **Android Build** - does it.
+* Either an `.xcarchive.zip` file, an APK or an Android App Bundle which must be placed in the directory stored in the `BITRISE_DEPLOY_DIR` Environment Variable. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, any Step that builds an APK - such as **Android Build** or **Gradle Runner** - does it.
 * All exposed Workflows must include a **Deploy to Bitrise.io** Step.
 
-Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. You don't have to expose a Workflow (or more), but in this case all your app's Workflows that contain **Deploy to Bitrise.io** Step display all those Workflow artifacts. 
+Exposing the artifact means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. You don't necessarily have to expose a Workflow (or more). In this case all your app's Workflows that contain **Deploy to Bitrise.io** Step display all artifacts which are related to your app's Workflows.
 
 {% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be of version 1.9.0 and the **Xcode Archive & Export for iOS** Step for iOS apps must be of version 2.6.0 - older versions of the Steps do not support Ship."%}
 
@@ -43,7 +43,7 @@ To expose a Workflow's artifacts to Ship:
 3. Go to the **General** tab.
 
    ![](/img/ship_settings.png)
-4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need. 
+4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
 
    Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma (for example, `build, deploy, release_build_android`) .
 5. Scroll down to the bottom of the page and click **Save**.
