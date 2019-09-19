@@ -8,7 +8,7 @@ published: false
 ---
 ## Ship overview
 
-{% include message_box.html type="info" title="Ship in BETA" content="Please note that this feature is still in BETA version."%}
+{% include message_box.html type="important" title="Ship in BETA" content="Please note that this feature is still in BETA version."%}
 
 With Ship, you can manage Continuous Deployment of your app, as well as manage different build versions of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
 
