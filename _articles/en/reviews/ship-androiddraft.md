@@ -142,7 +142,7 @@ To configure publishing an app for Android:
 3. [Expose a Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) that creates the APK you want to publish.
 4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Play Store.
 5. If your Android app contains multiple modules, enter the exact module under **Module**.
-	![](/img/module-android-settings.png)
+   ![](/img/module-android-settings.png)
 6. Choose the appropriate keystore file and the Service Account JSON file.
 7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing.
 8. Fill out the **Details** page and click **Publish.**
@@ -155,7 +155,7 @@ To view the logs of any publishing process, go to the **Activity** tab. From the
 
 ## App details
 
-The purpose of the app details page is to update the most important information about your app, as you want that information to appear in your online store of choice, for example.
+The purpose of the app **Details** page is to update the most important information about your app, as you want that information to appear in your online store of choice, for example.
 
 The details include:
 
