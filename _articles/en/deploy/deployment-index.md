@@ -20,7 +20,7 @@ Deployment can mean a number of things on Bitrise: you can deploy your app to te
 
 Our Deployment section is divided into two subsections:
 
-* [iOS deployment](/deploy/ios-deploy/index/)
-* [Android deployment](/deploy/android-deploy/index/)
+* [iOS deployment](/deploy/ios-deploy/ios-deploy-index/)
+* [Android deployment](/deploy/android-deploy/android-deployment-index/)
 
 {% include message_box.html type="important" title="Cross-platform apps" content="Don't worry: this does not mean that only native iOS and Android apps can be deployed using Bitrise. The guides are just as useful for deploying cross-platform apps. For the specifics, check out the guide for your platform type in the [Getting started](/getting-started/index/) section."%}
