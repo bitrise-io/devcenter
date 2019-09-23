@@ -7,38 +7,37 @@ menu:
     weight: 20
 
 ---
-{% include not_translated_yet.html %}
 
-Testing your app is obviously a major part of the continuous integration process. Bitrise has a number of dedicated Steps to help you with running your tests, and you can use custom Script Steps if you do not find what you need in our Step Library.
+アプリをテストすることは、継続インテグレーションを行う上で必要不可決です。 Bitriseには、テストを実行するための専用ステップがいくつも用意されています。ステップライブラリに必要なものが見つからない場合は、カスタムスクリプトステップを使用できます。
 
-Check out our testing Steps for iOS, Android, and cross-platform apps: from Xcode tests through Flutter tests to Android Lint, you can review and test your app on Bitrise, regardless of the frameworks and tools you use.
+iOS、Android、およびクロスプラットフォームアプリのテスト手順をご覧ください: XcodeテストからFlutterテスト、Android Lintまで、使用するフレームワークやツールに関係なく、Bitriseでアプリを確認、テストできます。
 
-## Test Reports
+## テストレポート
 
-Use our Test Reports page to view your tests in one convenient location. You can use it with the supported Steps or with your own custom Script Steps.
+テストレポートページでは、一画面ですべてのテストを確認できます。サポートされているステップ、またはカスタムスクリプトステップで使用できます。
 
-**Details:**
+**詳細:**
 
 * [Test Reports](/jp/testing/test-reports/)
 * [Exporting to Test Reports from custom Script Steps](/jp/testing/exporting-to-test-reports-from-custom-script-steps/)
 
-## Device testing
+## デバイステスト
 
-You can register your test devices on Bitrise for simple and convenient testing. Alternatively, you can use the **Device testing for iOS** and **Virtual Device Testing** Steps that utilize Google Firebase to run your tests on real and virtual devices.
+便利で簡単なテストを行うために、テストデバイスをBitriseに登録できます。または、**iOSのデバイステスト** もしくは **仮想デバイスのテスト** をGoogle Firebase上を実行することもできます。
 
-**Details:**
+**詳細:**
 
-* [Registering a test device](/jp/testing/registering-a-test-device/)
-* [Device testing for iOS](/jp/testing/device-testing-for-ios/)
-* [Device testing for Android](/jp/testing/device-testing-for-android/)
+* [テストデバイスの登録](/jp/testing/registering-a-test-device/)
+* [iOSのデバイステスト](/jp/testing/device-testing-for-ios/)
+* [Androidのデバイステスト](/jp/testing/device-testing-for-android/)
 
-## Other testing guides
+## その他のテストガイド
 
-Check out our other testing guides for more information on how to run tests on Bitrise.
+Bitriseでテストを実行する方法の詳細については、他のテストガイドをご覧ください。
 
-**Details:**
+**詳細:**
 
-* [Running Xcode tests](/jp/testing/running-xcode-tests/)
-* [Android unit test](/jp/testing/android-run-a-unit-test/)
-* [Running tests in the Visual Studio App Center](/jp/testing/run-your-tests-in-the-app-center/)
-* [Running Detox tests on Bitrise](/jp/testing/running-detox-tests-on-bitrise/)
+* [Xcodeテストの実行](/jp/testing/running-xcode-tests/)
+* [Androidのユニットテスト](/jp/testing/android-run-a-unit-test/)
+* [Visual Studio App Centerでのテストの実行](/jp/testing/run-your-tests-in-the-app-center/)
+* [Bitrise上でDetoxテストの実行](/jp/testing/running-detox-tests-on-bitrise/)
