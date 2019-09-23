@@ -29,12 +29,13 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/getting-started/getting-started-with-react-native-apps.md
+- _articles/en/reviews/ship-add-on-beta-version.md
+- _articles/en/reviews/adding-an-app-from-the-cli.md
 - _articles/en/reviews/using-bitrise-yml-from-repository-draft.md
-- _articles/en/reviews/ship-androiddraft.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
 - _articles/en/builds/caching/caching-homebrew-installers.md
 - _articles/en/reviews/ship-add-on.md
-- _articles/en/reviews/adding-an-app-from-the-cli.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/running-xcode-tests.md
@@ -134,7 +135,6 @@ pages:
 - _articles/en/builds/remote-access.md
 - _articles/en/reviews/getting-started-with-expo-apps-draft.md
 - _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
-- _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/en/reviews/fastlane.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
 - _articles/en/steps-and-workflows/getting-started-steps.md

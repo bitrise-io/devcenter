@@ -35,7 +35,7 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
 
  1. Go to the Create New App from CLI page.
  2. Set the account that will own the app, and the privacy of the app.
- 3. Copy the `curl` command you find there. 
+ 3. Copy the `curl` command you find there.
  4. Open a command line interface.
  5. Go to your project's directory.
  6. Paste the `curl` command.
@@ -43,13 +43,11 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
 
     This prompt only comes up if your local repository's remote has an SSH URL. If the remote repository has an HTTPS URL, you won't see this prompt.
 
-    ``` 
-    Remote URL: git@github.com:example-user/example.git
-    
-    ? Select repository URL::
-        https://github.com/example-user/example.git
-      > ssh://git@github.com:example-user/example.git
-    ```
+        Remote URL: git@github.com:example-user/example.git
+        
+        ? Select repository URL::
+            https://github.com/example-user/example.git
+          > ssh://git@github.com:example-user/example.git
  8. Register an SSH key.
 
          Specify how Bitrise will be able to access the source code: 
@@ -61,15 +59,12 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
     * If you choose to add your own, you have to provide the file path to both the private and the public key file. Alternatively, you can drag and drop the files to the CLI.
  9. Decide what bitrise.yml do you want to upload.
 
-    ```  
-    ? What bitrise.yml do you want to upload? 
-      > Run the scanner to generate a new bitrise.yml
-        Use an already existing bitrise.yml
-    ```
+        ? What bitrise.yml do you want to upload? 
+          > Run the scanner to generate a new bitrise.yml
+            Use an already existing bitrise.yml
 
     If you have an existing `bitrise.yml` file in your repository, the second option tells Bitrise to use that. If you do not have an existing `bitrise.yml`, you can either have the scanner generate one based on your project files or you can provide a file, either by entering its path or dragging and dropping it to the CLI.
-10. Select the branch you want to use.
-    The default option is the current active branch.
+10. Select the branch you want to use. The default option is the current active branch.
 
         The current branch is: master (tracking: origin master),
         

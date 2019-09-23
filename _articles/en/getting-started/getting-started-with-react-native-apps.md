@@ -84,7 +84,7 @@ You will need:
 
 * an automatically created workflow for deployment
 * an iOS **Development** certificate (a .p12 certificate file)
-* a **Development** type Provisioning Profile"%}
+* a **Development** type Provisioning Profile
 
 1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa file locally.
 2. Collect AND upload the code signing files with [the codesigndoc tool](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
