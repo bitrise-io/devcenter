@@ -5,9 +5,9 @@ menu:
     weight: 5
 
 ---
-_If you write a tutorial or blog post about Bitrise feel free to_
-[_add it to this list yourself_](https://github.com/bitrise-io/devcenter/edit/master/_articles/en/tutorials/community-created.md)
-_or_ [_contact us_](https://www.bitrise.io/contact) _and we'll add it for you!_
+If you write a tutorial or blog post about Bitrise feel free to_
+[add it to this list yourself_](https://github.com/bitrise-io/devcenter/edit/master/_articles/en/tutorials/community-created.md)
+or [contact us](https://www.bitrise.io/contact) and we'll add it for you!
 
 ## English
 
@@ -26,7 +26,7 @@ _or_ [_contact us_](https://www.bitrise.io/contact) _and we'll add it for you!_
 * [Seamless Android Builds With Bitrise. Offload Your System](http://myhexaville.com/2017/10/18/seamless-android-builds-with-bitrise/)
 * [How to automate Android build process on Bitrise CI (part 1)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-71ae3a94362e)
 * [How to automate Android build process on Bitrise CI (part 2)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-part-2-b3f8124c29ee)
-* [How to Connect Physical Devices to Bitrise.io](https://www.thedroidsonroids.com/blog/how-to-connect-physical-devices-to-bitrise-io) - [_Open STF_](https://openstf.io) _integration_
+* [How to Connect Physical Devices to Bitrise.io](https://www.thedroidsonroids.com/blog/how-to-connect-physical-devices-to-bitrise-io) - [_Open STF_](https://openstf.io) integration
 
 ### Xamarin
 
@@ -34,16 +34,16 @@ _or_ [_contact us_](https://www.bitrise.io/contact) _and we'll add it for you!_
   * [Welcome to Bitrise](https://jfarrell.net/2016/09/05/welcome-to-bitrise/)
   * [Getting Started with Bitrise](https://jfarrell.net/2016/09/06/getting-started-with-bitrise/)
   * [Understanding Workflows](https://jfarrell.net/2016/09/11/understanding-workflows/)
-* [Xamarin project setup on Bitrise.io](https://www.youtube.com/watch?v=ChX0TQzOd8c) - _youtube video_
-* [(Xamarin) Continuous Integration and Deployment with Bitrise](http://blog.cayas.de/continuous-integration-and-deployment-with-bitrise) - _getting started guide_
-* [Motz Codes Live: Continuous Integration & Deployment for Xamarin with Bitrise](https://www.youtube.com/watch?v=1UeNajpjIXY) - _youtube video, detailed guide_
+* [Xamarin project setup on Bitrise.io](https://www.youtube.com/watch?v=ChX0TQzOd8c) - youtube video
+* [(Xamarin) Continuous Integration and Deployment with Bitrise](http://blog.cayas.de/continuous-integration-and-deployment-with-bitrise) - getting started guide
+* [Motz Codes Live: Continuous Integration & Deployment for Xamarin with Bitrise](https://www.youtube.com/watch?v=1UeNajpjIXY) - youtube video, detailed guide
 
 ### React Native
 
 * [Testing in React Native — Jest & Detox](https://pillow.codes/testing-in-react-native-jest-detox-d7b3b79a166a)
 * [How to automate your React Native deployment workflow using Bitrise](https://logbook.hanno.co/bitrise-deployment-workflow-react-native/)
 * [Continuous Integration for React Native Apps With Fastlane and Bitrise (iOS)](http://blog.thebakery.io/continuous-integration-for-react-native-applications-with-fastlane-and-bitrise-ios-version/)
-* [Snowflake: React Native app Continuous Integration with Bitrise.io](https://github.com/bartonhammond/snowflake/#continuous-integration) - _detailed setup guide with youtube videos_
+* [Snowflake: React Native app Continuous Integration with Bitrise.io](https://github.com/bartonhammond/snowflake/#continuous-integration) - detailed setup guide with youtube videos
 * [Bitrise + CodePush + React Native = Ideal Mobile CI Setup?](https://medium.com/@mthakkar_/bitrise-codepush-react-native-ideal-mobile-ci-setup-6283b86146c)
 
 ### Cordova
@@ -52,16 +52,16 @@ _or_ [_contact us_](https://www.bitrise.io/contact) _and we'll add it for you!_
 
 ### macOS app
 
-* [Continuous happiness for Mac](https://blog.alltheflow.com/continuous-happiness-for-mac/) - _build your Mac projects on Bitrise_
+* [Continuous happiness for Mac](https://blog.alltheflow.com/continuous-happiness-for-mac/) - build your Mac projects on Bitrise
 
 ### Other
 
 * [Improved Continuous Integration With Bitrise – Rémy Chantenay (Travelex)](https://medium.com/@remy.chantenay/bitrise-travelex-digital-f3388019bae)
 * [I was trying to setup a macOS Server for continuous integration. Now I am a happy Bitrise user.](https://theswiftdev.com/2016/08/29/macos-xcode-build-server-tutorial/)
-* [The Trials of Mobile Automation at InVision](http://engineering.invisionapp.com/post/trials-of-mobile-automation/) - _ChatOps with Slack and Bitrise_
+* [The Trials of Mobile Automation at InVision](http://engineering.invisionapp.com/post/trials-of-mobile-automation/) - ChatOps with Slack and Bitrise
 * [How to send commit changes by email once CI build passes?](https://medium.com/@hesam.kamalan/how-to-send-commit-changes-by-email-once-ci-build-passes-dee13c67c195)
-* [Continuous integration made easy with Bitrise](https://blog.alltheflow.com/continuous-integration-made-easy-with-bitrise/) - _intro to Step development_
-* [How to Create Bitrise Step in Go – Flutter Example](https://www.thedroidsonroids.com/blog/how-to-create-bitrise-step-in-go-flutter-example) - _Step development in Golang_
+* [Continuous integration made easy with Bitrise](https://blog.alltheflow.com/continuous-integration-made-easy-with-bitrise/) - intro to Step development
+* [How to Create Bitrise Step in Go – Flutter Example](https://www.thedroidsonroids.com/blog/how-to-create-bitrise-step-in-go-flutter-example) - Step development in Golang
 
 ## Japanese
 
