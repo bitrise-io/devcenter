@@ -19,7 +19,7 @@ _fastlane_ is a collection of ruby gems that cover the most usual tasks required
 
 Using _fastlane_ for your Workflow is easy as pie. Just add the [Fastlane](https://www.bitrise.io/integrations/steps/fastlane) Step to [your Workflow](/getting-started/manage-your-bitrise-workflow) after the **Git Clone** Step (and any other dependency Step).
 
-{% include message_box.html type="warning" title="Have our Certificate and profile installer Step in your Workflow!" content=" You should also add/keep the **Certificate and profile installer** Step in the Workflow, to download your .p12 certificates and provisioning profiles uploaded to [bitrise.io](https://www.bitrise.io) and to install them. Even if you don't upload your files to [**bitrise.io**](https://www.bitrise.io) and instead you use a fastlane tool to manage your code signing files, you should still keep this step in the Workflow. Read more about [iOS Code Signing using third party tools](/ios/code-signing/#use-a-third-party-tool-to-manage-your-code-signing-files).
+{% include message_box.html type="warning" title="Have our Certificate and profile installer Step in your Workflow!" content=" You should also add/keep the **Certificate and profile installer** Step in the Workflow, to download your .p12 certificates and provisioning profiles uploaded to [bitrise.io](https://www.bitrise.io) and to install them. Even if you don't upload your files to [**bitrise.io**](https://www.bitrise.io) and instead you use a fastlane tool to manage your code signing files, you should still keep this Step in the Workflow. Read more about [iOS Code Signing using third party tools](/ios/code-signing/#use-a-third-party-tool-to-manage-your-code-signing-files).
 "%}
 
 With adding the **fastlane Step** we ensure that you are running on the latest _fastlane_ version, as it is pre-installed on all our VMs. Inside the Step you can set the _fastlane_ action and we will run it automatically every time you push a new code change.
@@ -41,7 +41,7 @@ screenshots and metadata on the App Store and to release the distribution versio
 and a separate lane for the `develop` branch to deploy your test releases
 and all the others to ensure that nobody has broken anything.
 You can simply clone the workflow as many times as you want to,
-and use the `Trigger` feature of [bitrise.io](https://www.bitrise.io) to define
+and use the **Triggers** feature of [bitrise.io](https://www.bitrise.io) to define
 which Workflow to be selected for this branch / tag / pull request.
 You can find more information about the trigger map feature in the
 [Control what to build when with the trigger map](/webhooks/trigger-map/) guide.
@@ -51,7 +51,7 @@ We hope that you are as happy as we are to have this amazing tool inside Bitrise
 And as always, happy building!
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Add fastlane to your workflow</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your apps</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Add fastlane to your workflow</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your apps</button></a>
 </div>
