@@ -65,22 +65,22 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!
 
 ## Japanese
 
-* [Bitrise, GitHub, DeployGateを連携させ、全自動でアプリをビルドして配信するCI/CDシステムを作る](https://qiita.com/kyoro353/items/200d5b34b9f5805dd43a) - _Automated continuous build, test and distribute system with Bitrise and DeployGate_
-* [ReactNative のアプリケーションを Bitrise でビルドする](http://qiita.com/jtakahashi0604/items/5133358aa55a03137fbc) - _Build ReactNative app with Bitrise_
-* [bitrise + deploygateでtitaniumアプリ評価環境を作る](http://qiita.com/imoans/items/aa6dec9392d2ed0b77cd) - _Titanium, Bitrise and DeployGate_
-* [BitriseでiTunesConnectに自動でipaファイルをビルド&iOSリリース手順](http://qiita.com/narukun/items/960d71f6577146550b08) - _Automate the deployment of iOS apps to iTunesConnect_
-* [BitriseのScheduled Buildを使ってキューが詰まる問題を改善する](http://qiita.com/shobyshoby/items/610aaa40b4a49498849c) - _Use Bitrise's Scheduled Build to optimize build times_
-* [BITRISEを用いたAndroidアプリの自動配布](http://qiita.com/sjnya/items/6ac1c800f16a7f24201a) - _Automatic distribution of Android apps using Bitrise_
-* [iOS用のCIサービスBitriseを使ってみた](http://qiita.com/keygx/items/ab6149476f43ec51eb5c) - _Detailed introduction guide_
-* [iOSアプリ用のCI環境を作ろう](http://qiita.com/kou_hon/items/51dda72ad62c0c03a720) - _Using Bitrise to deploy iOS apps to DeployGate_
-* [Androidアプリ開発用のCI環境を作ろう](http://qiita.com/kou_hon/items/fe80072a38dd8aa861af) - _Using Bitrise to deploy Android apps to DeployGate_
-* [BITRISEを使っています](http://www.slideshare.net/kurikazu/bitrise-62409912) - _SlideShare_
-* [CircleCIのiOSビルドが有料プラン化するらしいので、Bitriseの無料プランに乗り換えてみた](http://engineering.otobank.co.jp/entry/ios-build-switch-to-bitrise-from-circleci) - _Migrating a CircleCI configuration to Bitrise_
-* [iOS用のCIサービス「Bitrise」を使ったメモ](http://blog.koogawa.com/entry/2016/01/31/110032) - _Notes about using Bitrise for iOS Continuous Integration_
+* [Bitrise, GitHub, DeployGateを連携させ、全自動でアプリをビルドして配信するCI/CDシステムを作る](https://qiita.com/kyoro353/items/200d5b34b9f5805dd43a) - Automated continuous build, test and distribute system with Bitrise and DeployGate
+* [ReactNative のアプリケーションを Bitrise でビルドする](http://qiita.com/jtakahashi0604/items/5133358aa55a03137fbc) - Build ReactNative app with Bitrise
+* [bitrise + deploygateでtitaniumアプリ評価環境を作る](http://qiita.com/imoans/items/aa6dec9392d2ed0b77cd) - Titanium, Bitrise and DeployGate
+* [BitriseでiTunesConnectに自動でipaファイルをビルド&iOSリリース手順](http://qiita.com/narukun/items/960d71f6577146550b08) - Automate the deployment of iOS apps to iTunesConnect
+* [BitriseのScheduled Buildを使ってキューが詰まる問題を改善する](http://qiita.com/shobyshoby/items/610aaa40b4a49498849c) - Use Bitrise's Scheduled Build to optimize build times
+* [BITRISEを用いたAndroidアプリの自動配布](http://qiita.com/sjnya/items/6ac1c800f16a7f24201a) - Automatic distribution of Android apps using Bitrise
+* [iOS用のCIサービスBitriseを使ってみた](http://qiita.com/keygx/items/ab6149476f43ec51eb5c) - Detailed introduction guide
+* [iOSアプリ用のCI環境を作ろう](http://qiita.com/kou_hon/items/51dda72ad62c0c03a720) - Using Bitrise to deploy iOS apps to DeployGate
+* [Androidアプリ開発用のCI環境を作ろう](http://qiita.com/kou_hon/items/fe80072a38dd8aa861af) - Using Bitrise to deploy Android apps to DeployGate
+* [BITRISEを使っています](http://www.slideshare.net/kurikazu/bitrise-62409912) - SlideShare
+* [CircleCIのiOSビルドが有料プラン化するらしいので、Bitriseの無料プランに乗り換えてみた](http://engineering.otobank.co.jp/entry/ios-build-switch-to-bitrise-from-circleci) - Migrating a CircleCI configuration to Bitrise
+* [iOS用のCIサービス「Bitrise」を使ったメモ](http://blog.koogawa.com/entry/2016/01/31/110032) - Notes about using Bitrise for iOS Continuous Integration
 * [俺的Bitrise活用術](http://yanma.hateblo.jp/entry/2016/03/15/104131)
-* [iOS対応のCIサービス「Bitrise」を使ってみた](http://sssslide.com/www.slideshare.net/koogawa/ioscibitrise) - _SlideShare_
-* [Bitrise,fastlane,CrashlyticsでiOSアプリのテスト配布を自動化する](http://techblog.lclco.com/entry/2016/05/09/192230) - _Bitrise + fastlane, automate testing & deployment (to Crashlytics) of iOS apps_
-* [fastlaneとBitriseでiOSアプリのCI始めました](http://blog.lisb.direct/entry/2017/07/20/100000) - _CI with Bitrise and fastlane_
+* [iOS対応のCIサービス「Bitrise」を使ってみた](http://sssslide.com/www.slideshare.net/koogawa/ioscibitrise) - SlideShare
+* [Bitrise,fastlane,CrashlyticsでiOSアプリのテスト配布を自動化する](http://techblog.lclco.com/entry/2016/05/09/192230) - Bitrise + fastlane, automate testing & deployment (to Crashlytics) of iOS apps
+* [fastlaneとBitriseでiOSアプリのCI始めました](http://blog.lisb.direct/entry/2017/07/20/100000) - CI with Bitrise and fastlane
 
 ## Portuguese
 
@@ -88,7 +88,7 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!
 
 ## Persian
 
-* [فیلم آموزشی – ادغام و تحویل مداوم با استفاده از Bitrise](http://www.kamalan.com/1395/05/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-%D8%A7%D8%AF%D8%BA%D8%A7%D9%85-%D9%88-%D8%AA%D8%AD%D9%88%DB%8C%D9%84-%D9%85%D8%AF%D8%A7%D9%88%D9%85-%D8%A8%D8%A7-%D8%A7%D8%B3%D8%AA/) - _Video tutorial about CI/CD with Bitrise_
+* [فیلم آموزشی – ادغام و تحویل مداوم با استفاده از Bitrise](http://www.kamalan.com/1395/05/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-%D8%A7%D8%AF%D8%BA%D8%A7%D9%85-%D9%88-%D8%AA%D8%AD%D9%88%DB%8C%D9%84-%D9%85%D8%AF%D8%A7%D9%88%D9%85-%D8%A8%D8%A7-%D8%A7%D8%B3%D8%AA/) - Video tutorial about CI/CD with Bitrise
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
