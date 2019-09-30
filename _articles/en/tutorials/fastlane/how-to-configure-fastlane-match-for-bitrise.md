@@ -16,7 +16,7 @@ If you want to use [fastlane match](https://github.com/fastlane/fastlane/tree/ma
    * If you use `match` in your `Fastfile` or `fastlane` config: `match(app_identifier: "my.domain", type: "appstore", readonly: true)`.
    * If you use it as a command line tool: `match development --readonly`.
 
-That's all, you can now enjoy the utility of `match`, automated with [bitrise.io](https://www.bitrise.io/) 🚀
+That's all, you can now enjoy the utility of `match`, automated with [bitrise.io](https://www.bitrise.io/) 🚀.
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
