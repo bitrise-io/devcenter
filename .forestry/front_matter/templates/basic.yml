@@ -28,8 +28,8 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
+- _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/jp/getting-started/bitriseへのサインアップ.md
 - deploy.md
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
