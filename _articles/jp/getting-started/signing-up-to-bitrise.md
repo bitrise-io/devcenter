@@ -18,28 +18,37 @@ menu:
     weight: 1
 
 ---
-{% include not_translated_yet.html %}
-
 You can authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Git account when adding repositories hosted by these providers again. You can of course sign up to Bitrise using your email address as well, and log in through your user credentials.
 
-{% include message_box.html type="info" title="Trial after signing up" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
+BitriseではGitHub、Bitbucket、もしくはGitLabユーザーの認証を行うことができます。ワンクリックでのログインといった実践的な恩恵を受けることができるほか、上記のプロバイダにホストされているレポジトリを追加する際にはGitアカウントを再度許可する必要はありません。
+
+{% include message_box.html type="info" title="サインアップ後のトライアル" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:  
+フリーアカウントへのサインアップが完了すると、自動的にBitrise Developerプランの2週間無料トライアル権が付与されます。プラン内容は以下のとおりです：
 
 * 45 minutes of build time.
+* ビルド時間45分
 * 1000 builds a month.
+* 1000ビルド/月
 * A maximum of 100 team members.
+* 最大100名のチームメンバー
 
-Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!"%}
+Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page! [料金](https://www.bitrise.io/pricing/teams)のページより他のプランも確認することができます。"%}
 
-## Signing up with a Git provider
+## Signing up with a Git provider  
+Gitプロバイダを使用したサインアップ
 
-1. Go to our [**Sign up**](https://app.bitrise.io/users/sign_up) page.
-2. Select a git provider to authenticate yourself with selected service.
+1. Go to our [**Sign up**](https://app.bitrise.io/users/sign_up) page.  
+   [**Sign up**](https://app.bitrise.io/users/sign_up) ページに進みます。
+2. Select a git provider to authenticate yourself with selected service.  
+   使用中のGitプロバイダを選択して、認証を行います。
 
    ![](/img/sign-up-git-email.jpg)
 
-### Authorizing Bitrise with a Git provider
+### Authorizing Bitrise with a Git provider  
+Gitプロバイダを使ってBitriseを許可する
 
-You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
+You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.  
+Gitプロバイダとの接続を確立する前に、Bitriseを許可する必要があります。これはBitriseがレポジトリへアクセスまたは読み取りを行うのを
 
 #### GitHub
 
