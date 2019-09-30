@@ -42,7 +42,7 @@ Assuming the file's `GENERIC FILE STORAGE` URL is assigned to `BITRISEIO_MY_FILE
 
 You can set the location as an `App Env Var` instead of specifying it
 directly for the `destination` input. That way you can refer the file
-through the Environment Variable in other steps, you won't have to
+through the Environment Variable in other Steps, you won't have to
 specify the path every time.
 
 For example, if you specify the `BITRISEIO_MY_FILE_LOCAL_PATH` as an `App Env Var`,
@@ -55,11 +55,11 @@ you can use it as the download destination:
         - destination: "$BITRISEIO_MY_FILE_LOCAL_PATH"
     ...
 
-Then in subsequent steps, you can use the same `$BITRISEIO_MY_FILE_LOCAL_PATH` env var as the file path.
+Then in subsequent Steps, you can use the same `$BITRISEIO_MY_FILE_LOCAL_PATH` Environment Variable as the file path.
 
 ### Downloading a file and exporting the file's path using a `Script` step
 
-Assuming the file's `GENERIC FILE STORAGE` url is assigned to `BITRISEIO_MY_FILE_ID_URL`, the script step would look like this:
+Assuming the file's `GENERIC FILE STORAGE` URL is assigned to `BITRISEIO_MY_FILE_ID_URL`, the **Script** Step would look like this:
 
     - script:
         inputs:
@@ -77,7 +77,7 @@ Assuming the file's `GENERIC FILE STORAGE` url is assigned to `BITRISEIO_MY_FILE
             # OPTIONALLY: export the file's local path, to be able to use it in subsequent steps as an input value
             envman add --key BITRISEIO_MY_FILE_LOCAL_PATH --value "$file_local_path"
 
-In subsequent steps, you can refer to the downloaded file's path with_ `$BITRISEIO_MY_FILE_LOCAL_PATH`.
+In subsequent Steps, you can refer to the downloaded file's path with_ `$BITRISEIO_MY_FILE_LOCAL_PATH`.
 
 Alternatively, for example, you can set the location as an `App Env Var` and simply download it to that path instead of defining the path inside the Script.
 
