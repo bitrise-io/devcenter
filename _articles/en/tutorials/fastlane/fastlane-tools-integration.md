@@ -13,45 +13,45 @@ _fastlane_ connects all `fastlane tools` and third party tools, like CocoaPods a
 
 _fastlane_ is a collection of ruby gems that cover the most usual tasks required during iOS app development and upload or update to the App Store.
 
-{% include message_box.html type="note" title="Bitrise offline CLI" content=" We have an open source, offline CLI, which can be used in a similar way as _fastlane_. If you're interested, you can find the CLI's website [here](https://www.bitrise.io/cli), and its GitHub repository [here](https://github.com/bitrise-io/bitrise). You can use this CLI to run your bitrise configurations locally, which can include runing _fastlane_ too as part of the build. "%}
+{% include message_box.html type="note" title="Bitrise offline CLI" content=" We have an open source, offline CLI, which can be used in a similar way as _fastlane_. If you're interested, you can find the CLI's website [here](https://www.bitrise.io/cli), and its GitHub repository [here](https://github.com/bitrise-io/bitrise). You can use this CLI to run your bitrise configurations locally, which can include running _fastlane_ too as part of the build. "%}
 
 ## How to get started?
 
-Using _fastlane_ for your workflow is easy as pie. Just add the [Fastlane](https://www.bitrise.io/integrations/steps/fastlane) step to [your workflow](/getting-started/manage-your-bitrise-workflow) after the `Git Clone` step (and any other dependency step).
+Using _fastlane_ for your Workflow is as easy as pie. Just add the [Fastlane](https://www.bitrise.io/integrations/steps/fastlane) Step to [your Workflow](/getting-started/manage-your-bitrise-workflow) after the **Git Clone** Step (and any other dependency Step).
 
-{% include message_box.html type="warning" title="Have our Certificate and profile installer step in your workflow!" content=" You should also add/keep the `Certificate and profile installer` step in the workflow, to download your _.p12 Certificates_ and _Provisioning Profiles_ uploaded to [bitrise.io](https://www.bitrise.io) and to install them. **Even if you don't upload your files to** [**bitrise.io**](https://www.bitrise.io) **and instead you use a fastlane tool to manage your code signing files you should still keep this step in the workflow**. Read more about [iOS Code Signing using third party tools](/ios/code-signing/#use-a-third-party-tool-to-manage-your-code-signing-files).
+{% include message_box.html type="warning" title="Have our Certificate and profile installer Step in your Workflow!" content=" You should also add/keep the **Certificate and profile installer** Step in the Workflow, to download your .p12 certificates and provisioning profiles uploaded to [bitrise.io](https://www.bitrise.io) and to install them. Even if you don't upload your files to [**bitrise.io**](https://www.bitrise.io) and instead you use a fastlane tool to manage your code signing files, you should still keep this Step in the Workflow. Read more about [iOS Code Signing using third party tools](/ios/code-signing/#use-a-third-party-tool-to-manage-your-code-signing-files).
 "%}
 
-With adding the _fastlane_ step we ensure that you are running on the latest _fastlane_ version, as it is pre-installed on all our VMs. Inside the step you can set the _fastlane_ action and we will run it automatically every time you push a new code change.
+With adding the **fastlane Step** we ensure that you are running on the latest _fastlane_ version, as it is pre-installed on all our VMs. Inside the Step you can set the _fastlane_ action and we will run it automatically every time you push a new code change.
 
-For more configuration options see the `Fastlane` step's description in the Workflow Editor!
+For more configuration options, see the Fastlane Step's description in the Workflow Editor!
 
 {% include message_box.html type="info" title="iOS code signing guide" content=" If you want to use [bitrise.io](https://www.bitrise.io) to store your code signing files, you should just follow the [iOS Code Signing guide here](/ios/code-signing/). "%}
 
 {% include message_box.html type="important" title="Two-factor authentication" content="Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA. This applies even if you use `fastlane`!
 
-To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/signing-up/connecting-apple-dev-account/). That allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion."%}
+To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/signing-up/connecting-apple-dev-account/). That allows Bitrise to reuse your authentication sessions for 30 days, so you do not have to manually go through 2FA on every single occasion."%}
 
 ## What's next?
 
 _fastlane_'s greatness comes from its ability to define different lanes for your different deployment needs - hence the name.
 You can combine this with Bitrise and run separate lanes for separate branches, automatically.
-For example you can run a lane for every code push onto the `master` branch to update your
+For example, you can run a lane for every code push onto the `master` branch to update your
 screenshots and metadata on the App Store and to release the distribution version,
 and a separate lane for the `develop` branch to deploy your test releases
 and all the others to ensure that nobody has broken anything.
 You can simply clone the workflow as many times as you want to,
-and use the `Trigger` feature of [bitrise.io](https://www.bitrise.io) to define
+and use the **Triggers** feature of [bitrise.io](https://www.bitrise.io) to define
 which Workflow to be selected for this branch / tag / pull request.
-You can find more information about the Triggers feature in the
-[Control what to build when, with the Trigger Map](/webhooks/trigger-map/) guide.
+You can find more information about the trigger map feature in the
+[Control what to build when with the trigger map](/webhooks/trigger-map/) guide.
 
 We hope that you are as happy as we are to have this amazing tool inside Bitrise. Go ahead and try it out!
 
 And as always, happy building!
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Add fastlane to your workflow</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your apps</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Add fastlane to your workflow</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your apps</button></a>
 </div>
