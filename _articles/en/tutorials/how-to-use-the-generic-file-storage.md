@@ -8,12 +8,12 @@ menu:
 ## Uploading files to GENERIC FILE STORAGE on [bitrise.io](https://www.bitrise.io)
 
 1. Open your app on [bitrise.io](https://www.bitrise.io)
-2. Go to **Workflow** tab and open the **Workflow Editor**
+2. Go to the **Workflow** tab to open the **Workflow Editor.**
 3. Click the **Code Signing** tab.
 4. Scroll down to **GENERIC FILE STORAGE**.
 5. Enter your unique ID in the **File Storage ID** field before uploading a file.
 
-{% include message_box.html type="info" title="Env Var for the download URL" content="Bitrise will upload your file and assign an environment variable to the file's download url. A time limited, read only download URL will be set as the value of this Environment Variable for every build. You can use this URL to download the file during a build."%}
+{% include message_box.html type="info" title="Environment Variable for the download URL" content="Bitrise will upload your file and assign an Environment Variable (Env Var) to the file's download URL. A time limited, read only download URL will be set as the value of this Env Var for every build. You can use this URL to download the file during a build."%}
 
 ## Using the files uploaded to GENERIC FILE STORAGE on bitrise.io
 
@@ -82,7 +82,7 @@ In subsequent Steps, you can refer to the downloaded file's path with_ `$BITRISE
 Alternatively, for example, you can set the location as an `App Env Var` and simply download it to that path instead of defining the path inside the Script.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Upload files to Generic File Storage</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Upload files to Generic File Storage</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
