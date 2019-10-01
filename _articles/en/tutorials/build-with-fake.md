@@ -5,12 +5,10 @@ menu:
     weight: 17
 
 ---
-To add support for your [FAKE](http://fsharp.github.io/FAKE/) build scripts,
-open your app's [Workflow Editor on bitrise.io](/getting-started/manage-your-bitrise-workflow/)
-and add a `Script` step to your workflow.
+To add support to your [FAKE](http://fsharp.github.io/FAKE/) build scripts, open your app's [Workflow Editor on bitrise.io](/getting-started/manage-your-bitrise-workflow/)
+and add a **Script** Step to your workflow.
 
-Below you can find an example script content to perform a build with FAKE,
-_make sure you fill out the parameters at the top of the script_!
+Below you can find an example script content to perform a build with FAKE, make sure you FILL OUT THE PARAMETERS at the top of the script!
 
 ```bash
 #!/bin/bash
@@ -56,7 +54,7 @@ $(IFS=' '; echo "${command[*]}")
 * You should set the `output_directory` to the same directory where your build script will search for the FAKE dlls." %}
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Add support for FAKE build scripts</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Add support for FAKE build scripts</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
