@@ -7,7 +7,7 @@ menu:
 ---
 ## Uploading files to GENERIC FILE STORAGE on [bitrise.io](https://www.bitrise.io)
 
-1. Open your app on [bitrise.io](https://www.bitrise.io)
+1. Open your app on [bitrise.io](https://www.bitrise.io).
 2. Go to the **Workflow** tab to open the **Workflow Editor.**
 3. Click the **Code Signing** tab.
 4. Scroll down to **GENERIC FILE STORAGE**.
@@ -17,10 +17,10 @@ menu:
 
 ## Using the files uploaded to GENERIC FILE STORAGE
 
-There are two ways to use the uploaded files.
+There are two ways to use the uploaded files:
 
-* Refer to the read-only download URL with the environment variable you defined when uploading. Some Steps support this option - you can just use the Env Var as an input value directly.
-* Use the **File Downloader** or **Script** Step to download the file and, optionally, export the downloaded file as an Environment Variable. This works with Steps that require local file paths and as such do not support URLs directly as the input value.
+* Referring to the read-only download URL with the Env Var you defined when uploading. Some Steps support this option - you can just use the Env Var as an input value directly.
+* Using the **File Downloader** or **Script** Step to download the file and, optionally, export the downloaded file as an Env Var. This works with Steps that require local file paths and as such do not support URLs directly as the input value.
 
 For example, the **Decrypt file** Step supports using the download URL generated when uploading the file. You just need to insert the variable as the value to the **Encrypted file path** input.
 
@@ -29,7 +29,7 @@ For using the **File Downloader** Step or the **Script** Step, check out our exa
 * [Downloading a file using the File Downloader Step](/tutorials/how-to-use-the-generic-file-storage/#downloading-a-file-using-the-file-downloader-step)
 * [Downloading and exporting a file using a Script Step](/tutorials/how-to-use-the-generic-file-storage/#downloading-and-exporting-a-file-using-a-script-step)
 
-### Downloading a file using the File Downloader step
+### Downloading a file using the File Downloader Step
 
 Assuming the file's `GENERIC FILE STORAGE` URL is assigned to `BITRISEIO_MY_FILE_ID_URL`, the Step would look like:
 
@@ -41,9 +41,7 @@ Assuming the file's `GENERIC FILE STORAGE` URL is assigned to `BITRISEIO_MY_FILE
     ...
 
 You can set the location as an `App Env Var` instead of specifying it
-directly for the `destination` input. That way you can refer the file
-through the Environment Variable in other Steps, you won't have to
-specify the path every time.
+directly for the `destination` input. That way you can refer the file through the Env Var in other Steps, you won't have to specify the path every time.
 
 For example, if you specify the `BITRISEIO_MY_FILE_LOCAL_PATH` as an `App Env Var`,
 you can use it as the download destination:
@@ -55,9 +53,9 @@ you can use it as the download destination:
         - destination: "$BITRISEIO_MY_FILE_LOCAL_PATH"
     ...
 
-Then in subsequent Steps, you can use the same `$BITRISEIO_MY_FILE_LOCAL_PATH` Environment Variable as the file path.
+Then in subsequent Steps, you can use the same `$BITRISEIO_MY_FILE_LOCAL_PATH` Env Var as the file path.
 
-### Downloading a file and exporting the file's path using a `Script` step
+### Downloading a file and exporting the file's path using a Script Step
 
 Assuming the file's `GENERIC FILE STORAGE` URL is assigned to `BITRISEIO_MY_FILE_ID_URL`, the **Script** Step would look like this:
 
@@ -77,7 +75,7 @@ Assuming the file's `GENERIC FILE STORAGE` URL is assigned to `BITRISEIO_MY_FILE
             # OPTIONALLY: export the file's local path, to be able to use it in subsequent steps as an input value
             envman add --key BITRISEIO_MY_FILE_LOCAL_PATH --value "$file_local_path"
 
-In subsequent Steps, you can refer to the downloaded file's path with_ `$BITRISEIO_MY_FILE_LOCAL_PATH`.
+In subsequent Steps, you can refer to the downloaded file's path with `$BITRISEIO_MY_FILE_LOCAL_PATH`.
 
 Alternatively, for example, you can set the location as an `App Env Var` and simply download it to that path instead of defining the path inside the Script.
 
