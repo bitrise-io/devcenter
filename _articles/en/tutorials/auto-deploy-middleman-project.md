@@ -42,21 +42,21 @@ Now that you have installed Middleman, let's create a new Middleman project!
 Before you start, make sure you're signed up to Bitrise either via your [git provider](/getting-started/signing-up/signing-up-with-github/) or [email](/getting-started/signing-up/signing-up-with-email/).
 
 1. Log into [bitrise](https://www.bitrise.io).
-2. Click `+`  on your Dashboard to [add new app](/getting-started/adding-a-new-app/index/).
+2. Click **+**  on your Dashboard to [add a new app](/getting-started/adding-a-new-app/index/).
 3. Connect a [provider](/getting-started/adding-a-new-app/connecting-a-repository/) (in this case, GitHub). You will see a list of all your repositories on GitHub.
 4. Select the repository you just created.
-5. Next you will get an alert, since the repository you are connecting is not an Xcode project. Select `Configure Manually`, then enter the branch name `master`.
+5. Next you will get an alert, since the repository you are connecting is not an Xcode project. Select **Configure Manually**, then enter the branch name `master`.
 
 ## Preparing your workflow
 
 1. Once you created your project, select it in the [Dashboard](https://www.bitrise.io/dashboard).
 2. Go to Workflow Editor.
 3. Delete all the automatically created steps (if any).
-4. Add new steps in below order by clicking the `+` sign.
-   * `Activate SSH key` - unless you used the public, non SSH URL of the repository when adding a new app
-   * `Git Clone Repository`
-   * `Script`
-5. Select the `Script` step and add the following lines:
+4. Add new Steps in the order below by clicking the **+** sign.
+   * **Activate SSH key** - unless you used the public, non SSH URL of the repository when adding a new app
+   * **Git Clone Repository**
+   * **Script**
+5. Select the **Script** Step and add the following lines:
 
        #!/bin/bash
        set -ex
@@ -70,19 +70,19 @@ The above code installs the dependencies specified in your `Gemfile`, and runs a
 Now we are going to add and customize an Amazon S3 bucket sync to the workflow steps.
 
 1. Go to your workflow.
-2. Click `+` to inject the `Amazon S3 bucket sync` Step from the StepLib to your workflow.
-3. Configure the `Amazon S3 bucket sync` Step:
-   * enter your AWS Access Key, AWS Secret Key and the name for your S3 bucket
-   * add your local path which should be: `$BITRISE_SOURCE_DIR/build/` (This will select the contents of the build folder in the project source path on the virtual machine. It will be uploaded on every build.)
-   * add `public-read` or `private` to `Access Control`
+2. Click **+** to inject the **Amazon S3 bucket sync** Step from the StepLib to your workflow.
+3. Configure the **Amazon S3 bucket sync** Step:
+   * Enter your AWS Access Key, AWS Secret Key and the name for your S3 bucket.
+   * Add your local path which should be: `$BITRISE_SOURCE_DIR/build/` (This will select the contents of the build folder in the project source path on the virtual machine. It will be uploaded on every build.)
+   * Add `public-read` or `private` to **Access Control**.
 
 {% include message_box.html type="note" title="Alternative deploy destinations" content=" You can of course use Heroku, GitHub pages or any other service as your deployment target. You can find a more complex setup; deploying to Heroku [on our Blog](http://blog.bitrise.io/2016/04/29/hooking-up-a-middleman-project-to-deploy-a-static-site-to-heroku-with-bitrise.html). "%}
 
 ## Running your builds
 
-Once the configuration of your Workflow is complete, you can run a build **manually** by clicking on the `Start/Schedule a build` button on the app's page.
+Once the configuration of your Workflow is complete, you can run a build manually by clicking on the **Start/Schedule a build** button on the app's page.
 
-If you chose GitHub when adding your repository, each code change (commit) on GitHub will **automatically** trigger a Bitrise build. Otherwise you can find more information about how you can setup a Webhook, to trigger builds automatically for code push, pull request and tags [here](/webhooks/).
+If you chose GitHub when adding your repository, each code change (commit) on GitHub will automatically trigger a Bitrise build. Otherwise you can find more information about how you can setup a Webhook, to trigger builds automatically for code push, pull request and tags [here](/webhooks/).
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
