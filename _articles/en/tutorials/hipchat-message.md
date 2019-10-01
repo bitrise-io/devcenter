@@ -14,8 +14,7 @@ make it the very last step of the Workflow) and with the Public Install Page for
 To do this all you have to do is:
 
 1. Add a **Send HipChat message** Step to your app's Workflow, after the **Deploy to Bitrise.io** Step.
-2. Fill out the required inputs (authentication token, the room's ID you want to send the message to,
-   color of the message).
+2. Fill out the required input fields.
 3. In the **Message** input field you can include Environment Variables (Env Vars).
    defined by Bitrise and by the Steps which run before the HipChat Message Step.
 
@@ -34,7 +33,7 @@ That's all. Once you configure your Workflow this way and start a new build, you
 including both the build's details URL and the app's Public Install Page URL.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Send HipChat messages</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Send HipChat messages</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
