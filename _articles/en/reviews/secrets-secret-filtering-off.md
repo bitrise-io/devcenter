@@ -70,11 +70,11 @@ For more information on Secrets, check out our [Secrets and Env Vars](/builds/en
 
 ### Turning secret filtering off
 
-You can turn secret filtering off and expose all secret Env Vars with their value in your private and/or public apps, we do not recommend switching secret filtering off. If you wish to turn it off.
+You can turn secret filtering off and expose all secret Env Vars with their value in your private and/or public apps, but we do not recommend it as it will show all previously set private input visible.
 
-1. Go to Workflow Editor by clicking the **Workflow** tab of your app on [bitrise.io](https://app.bitrise.io/dashboard/builds). 
+1. Go to Workflow Editor by clicking the **Workflow** tab of your app on [bitrise.io](https://app.bitrise.io/dashboard/builds).
 2. Click the **Secrets** tab.
-3. Click Add new to register the `BITRISE_SECRET_FILTERING` Secret Environment Variable with its `false` value.
+3. Click **Add new** to register the `BITRISE_SECRET_FILTERING` Secret Environment Variable with its `false` value.
 
    ![](/img/secret-filtering-off.jpg)
 4. Click **Save**.
