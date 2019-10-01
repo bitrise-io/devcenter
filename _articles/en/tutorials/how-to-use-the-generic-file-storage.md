@@ -15,7 +15,7 @@ menu:
 
 {% include message_box.html type="info" title="Environment Variable for the download URL" content="Bitrise will upload your file and assign an Environment Variable (Env Var) to the file's download URL. A time limited, read only download URL will be set as the value of this Env Var for every build. You can use this URL to download the file during a build."%}
 
-## Using the files uploaded to GENERIC FILE STORAGE on bitrise.io
+## Using the files uploaded to GENERIC FILE STORAGE
 
 There are two ways to use the uploaded files.
 
