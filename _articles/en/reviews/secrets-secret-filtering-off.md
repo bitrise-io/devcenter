@@ -68,4 +68,15 @@ Bitrise CLI automatically filters your secret env vars and prints `[REDACTED]` w
 
 For more information on Secrets, check out our [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) guide.
 
+### Turning secret filtering off
+
+You can turn secret filtering off and expose all secret Env Vars with their value in your private and/or public apps, we do not recommend switching secret filtering off. If you wish to turn it off.
+
+1. Go to Workflow Editor by clicking the **Workflow** tab of your app on [bitrise.io](https://app.bitrise.io/dashboard/builds). 
+2. Click the **Secrets** tab.
+3. Click Add new to register the `BITRISE_SECRET_FILTERING` Secret Environment Variable with its `false` value.
+
+   ![](/img/secret-filtering-off.jpg)
+4. Click **Save**.
+
 <div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Explore Bitrise from your Terminal</div> <a target="_blank" href="[https://app.bitrise.io/cli](https://app.bitrise.io/cli "https://app.bitrise.io/cli")"><button class="button">Go to Bitrise CLI</button></a> </div>
