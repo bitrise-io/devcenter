@@ -46,15 +46,15 @@ Now you are ready to set up the VPN on Bitrise, in the Workflow Editor of your a
 
    Don't forget to add the Step before any Steps that might require VPN connection.
 3. [Add the previously created Secrets](https://devcenter.bitrise.io/getting-started/getting-started-steps/#environment-variables-as-step-inputs) to their respective inputs:
-   * `Base64 encoded CA Certificate`
-   * `Base64 encoded Client Certificate`
-   * `Base64 encoded Client Private Key`
+   * **Base64 encoded CA Certificate**
+   * **Base64 encoded Client Certificate**
+   * **Base64 encoded Client Private Key**
 
    If you created the Secrets with the recommended keys, you do not have to change the inputs.
 4. Fill in the other required inputs.
-   * `Host`: the Open VPN Server IP or hostname
-   * `Port`: OpenVPN Server Port number
-   * `Protocol`: OpenVPN Server Protocol
+   * **Host**: the Open VPN Server IP or hostname
+   * **Port**: OpenVPN Server Port number
+   * **Protocol**: OpenVPN Server Protocol
 
 ### Strongswan VPN setup
 
