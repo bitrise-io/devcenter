@@ -46,28 +46,46 @@ Once you are done, you should have a `step.yml` and, depending on whether you ch
 * `step.yml`ファイルはStepインターフェースの定義であり、依存・Stepインプット・Stepアウトプットや他のStepのプロパティを含んでいます。
 * `main.go`または`step.sh`にはStepの機能性が含まれています。ですので、**ワーキングディレクトリを変更しないでください！**
 
-The generated Step's README describes:
+The generated Step's README describes:  
+生成されたStepのREADMEは以下の説明が含まれています：
 
 * how you can run your Step locally, before you even commit the code,
 * how you can test and use your Step in any build by using [the ](/bitrise-cli/steps/#special-Step-sources)`[git::](/bitrise-cli/steps/#special-Step-sources)`[ Step reference](/bitrise-cli/steps/#special-Step-sources),
 * how you can share your Step with others through the Bitrise StepLib if you wish to do so.
+* ローカルでStepを動作させる方法（コードをコミットする前も含む）
+* [The ](/bitrise-cli/steps/#special-Step-sources)`[git::](/bitrise-cli/steps/#special-Step-sources)`[ Step reference](/bitrise-cli/steps/#special-Step-sources) を使ってビルドを行う際にStepをテスト・使用する方法
+* Bitrise StepLib (Bitrise ステップライブラリ) 経由で他者にStepをシェアする方法
 
-{% include message_box.html type="important" title="Before proceeding with step configuration" content=" Check out [some important concepts you must be aware of](/bitrise-cli/most-important-concepts/)! "%}
+{% include message_box.html type="important" title="Before proceeding with step configuration Step設定に進む前に" content=" Check out [some important concepts you must be aware of](/bitrise-cli/most-important-concepts/)! 
 
-## Step development guidelines
+[知っておくべき重要ポイント](/bitrise-cli/most-important-concepts/)を確認してください！"%}
+
+## Step development guidelines  
+Step開発ガイドライン
 
 A newly created Step is a 'skeleton': in the `step.yml` file, certain properties are assigned default values and example inputs and outputs are created to show the structure of these.
 
+新しく作成されたStepは'Skelton'と呼ばれます：`step.yml`ファイルでは、特定のプロパティがデフォルト値で割り当てられており、インプットとアウトプットがデフォルト値の構造を示すために作成されます。
+
 Many step properties are automatically generated - for example, when sharing the Step - while other properties should be set manually if they are required. When creating a new Step with the plugin, only the `project_type_tags` property does not get filled with some value by default but of course you can manually modify all properties in the `step.yml` file.
+
+例えばStepをシェアする場合、多くのStepプロパティが自動的に生成されますが、必要に応じて他のプロパティを手動で設定する必要があります。プラグインを使って新規のStepを作成する時、???プロパティのみ、デフォルトではいくつかの値が不足しています。こういった場合、`step.yml`ファイル内で全てのプロパティを手動で修正することができます。
 
 Step inputs and outputs are also Step properties. For more information, see [Step properties](/bitrise-cli/step-properties), [Step inputs](/bitrise-cli/step-inputs), [Step outputs](/bitrise-cli/step-outputs).
 
+StepのインプットならびにアウトプットはStepプロパティでもあります。詳細については、[Step properties](/bitrise-cli/step-properties), [Step inputs](/bitrise-cli/step-inputs), [Step outputs](/bitrise-cli/step-outputs)をご覧ください。
+
 ### Naming conventions: versioning, Step ID, step inputs and outputs
 
-* You should use [semantic versioning](https://semver.org/) (MAJOR.MINOR.PATCH) for your Step. For example, `1.2.3`.
-* For Step IDs, use hyphens as separator if the ID contains multiple words. For example, `set-ios-bundle-identifier`.
-* For inputs, use **lower** case [snake case](https://en.wikipedia.org/wiki/Snake_case) style input IDs. For example, `input_path`.
+* You should use [semantic versioning](https://semver.org/) (MAJOR.MINOR.PATCH) for your Step. For example, `1.2.3`.  
+  Stepには[セマンティック バージョニング](https://semver.org/lang/ja/) (MAJOR.MINOR.PATCH) を使用する必要があります。例：`1.2.3`
+* For Step IDs, use hyphens as separator if the ID contains multiple words. For example, `set-ios-bundle-identifier`.  
+  Step IDについては、単語2つ以上を使用する場合、ハイフンを使って区切る必要があります。例：`set-ios-bundle-identifier`
+* For inputs, use **lower** case [snake case](https://en.wikipedia.org/wiki/Snake_case) style input IDs. For example, `input_path`.  
+  インプットについては、**小文字**で[スネークケース](https://en.wikipedia.org/wiki/Snake_case)スタイルを用いたインプットIDを使用します。例：`input_path`
 * If your step input should accept a list of values, postfix the input ID with `_list` (for example, `input_path_list`). We strongly recommend using the pipe character as a separator (for example, `first value|second value`).
+
+  Stepが値のリストを受け入れる場合、IDの最後に???を
 * For outputs, use **upper** case [snake case](https://en.wikipedia.org/wiki/Snake_case) style output IDs. For example, `OUTPUT_PATH`.
 * If an output should be able to provide a list of values, postfix the input ID with `_LIST` (for example, `OUTPUT_PATH_LIST`). We strongly recommend using the pipe character as a separator (for example, `first value|second value`).
 * Filter out empty items! For example, `first value| |second value` should be treated exactly the same way as `first value|second value`.
