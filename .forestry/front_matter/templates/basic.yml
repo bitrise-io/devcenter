@@ -30,16 +30,15 @@ fields:
 pages:
 - deploy.md
 - _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のstepを作成-シェアする-creating-and-sharing-your-own-step.md
+- _articles/en/reviews/secrets-secret-filtering-off.md
 - _articles/en/reviews/Japanese translations/Getting Started/独自stepの作成とシェア-creating-and-sharing-your-own-step.md
 - _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
-- _articles/en/reviews/secrets-secret-filtering-off.md
 - _articles/en/bitrise-cli/secrets.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/jp/getting-started/bitriseへのサインアップ.md
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/en/reviews/adding-an-app-from-the-cli.md
-- _articles/en/reviews/using-bitrise-yml-from-repository-draft.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
 - _articles/en/builds/caching/caching-homebrew-installers.md
 - _articles/en/reviews/ship-add-on.md
@@ -73,7 +72,6 @@ pages:
 - _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
 - _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
 - _articles/en/code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
-- _articles/en/reviews/monitoring-add-on.md
 - _articles/en/getting-started/getting-started-with-ios-apps.md
 - _articles/en/builds/build-logs.md
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
@@ -95,10 +93,8 @@ pages:
 - _articles/en/steps-and-workflows/managing-workflows.md
 - _articles/en/steps-and-workflows/default-workflows.md
 - _articles/en/steps-and-workflows/skipping-steps.md
-- _articles/en/reviews/API/authentication.md
 - _articles/en/reviews/Japanese translations/webhooks/outgoing-webhook-の追加-adding-outgoing-webhooks.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
-- _articles/en/reviews/apple-2fa.md
 - _articles/en/reviews/Japanese translations/webhooks/github-webhookの追加-adding-a-github-webhook.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/keystoreファイルのダウンロード-downloading-a-keystore-file.md
@@ -122,7 +118,6 @@ pages:
 - _articles/en/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
 - _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
-- _articles/en/reviews/signing-up-draft.md
 - _articles/en/infrastructure/the-environment.md
 - _articles/en/troubleshooting/workflow-editor-doesnt-load.md
 - _articles/en/troubleshooting/frequent-android-issues.md
@@ -133,9 +128,6 @@ pages:
 - _articles/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
 - _articles/en/reviews/creating-add-ons.md
 - _articles/en/reviews/signing-up-with-saml-sso.md
-- _articles/en/reviews/getting-started-with-react-native-apps-makeover.md
-- _articles/en/reviews/android-tools-available-on-xcode-stacks.md
-- _articles/en/reviews/stack-update-and-removal-policy-draft.md
 - _articles/jp/infrastructure/stack-update-and-removal-policy.md
 - _articles/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/en/builds/remote-access.md
@@ -195,7 +187,6 @@ pages:
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/jp/api/response-and-pagination.md
 - _articles/jp/api/authentication.md
-- _articles/en/reviews/running-your-first-build.md
 - _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
@@ -223,9 +214,6 @@ pages:
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/bitrise-ymlファイルへのオンラインアクセス-accessing-the-bitrise-yml-file-online.md
 - _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md
 - _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
-- _articles/en/reviews/API/response-and-pagination.md
-- _articles/en/reviews/API/endpoints-and-testing-the-api.md
-- _articles/en/reviews/API/introduction-to-the-bitrise-api.md
 - _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
 - _articles/en/troubleshooting/resetting-your-password.md
