@@ -121,7 +121,6 @@ pages:
 - _articles/en/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
 - _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
-- _articles/en/reviews/signing-up-draft.md
 - _articles/en/infrastructure/the-environment.md
 - _articles/en/troubleshooting/workflow-editor-doesnt-load.md
 - _articles/en/troubleshooting/frequent-android-issues.md
