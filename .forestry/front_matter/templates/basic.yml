@@ -60,7 +60,6 @@ pages:
 - _articles/en/builds/build-artifacts-online.md
 - _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
-- _articles/en/reviews/bitrise-yml-size-limitation-notes.md
 - _articles/en/api/adding-and-managing-apps.md
 - _articles/jp/deploy/deploy-apps-to-applivery-from-bitrise.md
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
