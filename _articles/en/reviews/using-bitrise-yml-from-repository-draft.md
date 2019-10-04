@@ -72,7 +72,7 @@ In this example, a code push will trigger the `ci` workflow, which in turn trigg
 
 Of course, this only works if the `bitrise.yml` file in your repository does have a `ci` workflow. Let's see the details of that!
 
-### Adding a bitrise.yml to your repo
+### Adding a bitrise.yml to your repository
 
 Your `bitrise.yml` must have a workflow that is also defined in the wrapper config. To be more precise, it must contain all the workflows that are defined in the trigger map of the wrapper config, which is stored on bitrise.io.
 
@@ -100,7 +100,7 @@ The approach of storing your `bitrise.yml` file in your repository, and running 
 
 ### The trigger map is better to be managed on bitrise.io
 
-You can store the trigger map in the `bitrise.yml` of your repository - but we don't recommend it. You'll lose the ability to SKIP builds. On [bitrise.io](https://www.bitrise.io), the trigger map is evaluated before the repository is cloned: this way, for example, if you set the patterns correctly in code pushes or pull requests, then Bitrise won't even start those builds which don't match the set patterns.
+You can store the trigger map in the `bitrise.yml` of your repository - but we don't recommend it. You'll lose the ability to SKIP builds. On [bitrise.io](https://www.bitrise.io), the trigger map is evaluated BEFORE the repository is cloned: this way, for example, if you set the patterns correctly in code pushes or pull requests, then Bitrise won't even start those builds which don't match the set patterns.
 
 However, if you store the trigger map in your repository, the only way to check it is to clone the repository first. Even if you prepare your `trigger_map` in your repository, [bitrise.io](https://www.bitrise.io) will start a build to clone the repository and you'll have to manually handle the stored trigger map.
 
