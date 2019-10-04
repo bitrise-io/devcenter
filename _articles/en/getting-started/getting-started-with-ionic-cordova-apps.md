@@ -77,8 +77,6 @@ To sign your iOS project, you have to upload code signing certificates and provi
 3. Upload the files to [bitrise.io](https://www.bitrise.io/).
 
    You can do this either on the website UI or with the codesigndoc tool itself.
-
-   ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
 4. Make sure you have the **Certificate and profile installer** Step in your Workflow as this Step can download and install the certificates on the virtual machine.
 5. Add the **Generate cordova build configuration** Step to your Workflow. (This Step does all the configuration needed for the next step, which is **Cordova Archive** or **Ionic Archive**.) It must come after the **Certificate and profile installer** Step.
 6. Fill in the required input for the Step. Please note that both the **Code Signing Identity** and the **Provisioning Profile** are required inputs for iOS apps even though they are not marked as such.
