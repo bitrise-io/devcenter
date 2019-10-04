@@ -134,7 +134,6 @@ pages:
 - _articles/en/reviews/creating-add-ons.md
 - _articles/en/reviews/signing-up-with-saml-sso.md
 - _articles/en/reviews/getting-started-with-react-native-apps-makeover.md
-- _articles/en/reviews/stack-update-and-removal-policy-draft.md
 - _articles/jp/infrastructure/stack-update-and-removal-policy.md
 - _articles/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/en/builds/remote-access.md
