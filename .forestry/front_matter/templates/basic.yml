@@ -97,7 +97,6 @@ pages:
 - _articles/en/reviews/API/authentication.md
 - _articles/en/reviews/Japanese translations/webhooks/outgoing-webhook-の追加-adding-outgoing-webhooks.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
-- _articles/en/reviews/apple-2fa.md
 - _articles/en/reviews/Japanese translations/webhooks/github-webhookの追加-adding-a-github-webhook.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/keystoreファイルのダウンロード-downloading-a-keystore-file.md
