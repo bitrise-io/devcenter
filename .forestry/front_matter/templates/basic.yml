@@ -72,7 +72,6 @@ pages:
 - _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
 - _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
 - _articles/en/code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
-- _articles/en/reviews/monitoring-add-on.md
 - _articles/en/getting-started/getting-started-with-ios-apps.md
 - _articles/en/builds/build-logs.md
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
