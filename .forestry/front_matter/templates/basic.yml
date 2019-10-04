@@ -28,9 +28,9 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- deploy.md
 - _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のstepを作成-シェアする-creating-and-sharing-your-own-step.md
 - _articles/en/reviews/secrets-secret-filtering-off.md
-- deploy.md
 - _articles/en/reviews/Japanese translations/Getting Started/独自stepの作成とシェア-creating-and-sharing-your-own-step.md
 - _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
 - _articles/en/bitrise-cli/secrets.md
