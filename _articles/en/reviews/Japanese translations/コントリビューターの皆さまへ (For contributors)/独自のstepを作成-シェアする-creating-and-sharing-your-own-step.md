@@ -56,11 +56,12 @@ The generated Step's README describes:
 * [The ](/bitrise-cli/steps/#special-Step-sources)`[git::](/bitrise-cli/steps/#special-Step-sources)`[ Step reference](/bitrise-cli/steps/#special-Step-sources) を使ってビルドを行う際にStepをテスト・使用する方法
 * Bitrise StepLib (Bitrise ステップライブラリ) 経由で他者にStepをシェアする方法
 
-{% include message_box.html type="important" title="Before proceeding with step configuration Step設定に進む前に" content=" Check out [some important concepts you must be aware of](/bitrise-cli/most-important-concepts/)! 
+{% include message_box.html type="important" title="Before proceeding with step configuration Step設定に進む前に" content=" Check out [some important concepts you must be aware of](/bitrise-cli/most-important-concepts/)!
 
 [知っておくべき重要ポイント](/bitrise-cli/most-important-concepts/)を確認してください！"%}
 
-## Step development guidelines  
+## Step development guidelines
+
 Step開発ガイドライン
 
 A newly created Step is a 'skeleton': in the `step.yml` file, certain properties are assigned default values and example inputs and outputs are created to show the structure of these.
@@ -82,21 +83,33 @@ StepのインプットならびにアウトプットはStepプロパティでも
 * For Step IDs, use hyphens as separator if the ID contains multiple words. For example, `set-ios-bundle-identifier`.  
   Step IDについては、単語2つ以上を使用する場合、ハイフンを使って区切る必要があります。例：`set-ios-bundle-identifier`
 * For inputs, use **lower** case [snake case](https://en.wikipedia.org/wiki/Snake_case) style input IDs. For example, `input_path`.  
-  インプットについては、**小文字**で[スネークケース](https://en.wikipedia.org/wiki/Snake_case)スタイルを用いたインプットIDを使用します。例：`input_path`
+  インプットについては、**小文字**でスネークケース（単語の間をアンダーバーでつなぐ命名規則）を用いたインプットIDを使用します。例：`input_path`
 * If your step input should accept a list of values, postfix the input ID with `_list` (for example, `input_path_list`). We strongly recommend using the pipe character as a separator (for example, `first value|second value`).
 
-  Stepが値のリストを受け入れる場合、IDの最後に???を
+  Stepインプットが値のリストを受け入れる場合、IDの最後に`_list`を追加します（例：`input_path_list`）。区切る場合はバーティカルバーを使用することを強くお勧めします（例：`first value|second value`）。
 * For outputs, use **upper** case [snake case](https://en.wikipedia.org/wiki/Snake_case) style output IDs. For example, `OUTPUT_PATH`.
+
+  アウトプットについては、**大文字**でスネークケースを用いたアウトプットIDを使用します。例：`OUTPUT_PATH`
 * If an output should be able to provide a list of values, postfix the input ID with `_LIST` (for example, `OUTPUT_PATH_LIST`). We strongly recommend using the pipe character as a separator (for example, `first value|second value`).
+
+  アウトプットが値のリストを規定する場合、IDの最後に`_LIST` を追加します（例：`OUTPUT_PATH_LIST` ）。区切る際は、バーティカルバーを使用することを強くお勧めします（例：`first value|second value`）。
 * Filter out empty items! For example, `first value| |second value` should be treated exactly the same way as `first value|second value`.
 
-### Environment variables in Steps
+  空のアイテムは除去しましょう！例：`first value| |second value` は `first value|second value`と同等に扱われます。
+
+### Environment variables in Steps  
+Stepでの環境変数について
 
 **Do not use Environment Variables directly in your Step's code**. Instead, expose every outside variable as an input of your Step and set the default value of that input to the Environment Variable you want to use. You can do this in the `step.yml` file. This way it's easier to test the Step and the user of the Step can easily declare these inputs, without having to scour through code for the required variable.
 
-**Example**:
+**Stepのコードへは直接環境変数を使わないでください。**代わりに、Stepのインプットとして全ての外の変数をエクスポーズして、ご使用になりたい環境変数へインプットのデフォルト値をセットします。このアクションは`step.yml`ファイルにて行うことができます。？この方法により、Stepのテストがより簡単になり、必要な変数用のコードを通じてゴシゴシ洗わなくてもStepのユーザーは簡単にインプットを申告することができます。？
+
+**Example**:  
+例：
 
 The `xcode-archive` Step generates an output Environment Variable `$BITRISE_IPA_PATH`. Create an input for this in your Step:
+
+`xcode-archive`Stepはアウトプット環境変数`$BITRISE_IPA_PATH`を生成します。Step内で以下のようなインプットを作成してください：
 
     inputs:
       - ipa-path: $BITRISE_IPA_PATH
