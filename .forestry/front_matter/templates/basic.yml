@@ -130,7 +130,6 @@ pages:
 - _articles/jp/infrastructure/stack-update-and-removal-policy.md
 - _articles/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/en/builds/remote-access.md
-- _articles/en/reviews/getting-started-with-expo-apps-draft.md
 - _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
 - _articles/en/reviews/fastlane.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
