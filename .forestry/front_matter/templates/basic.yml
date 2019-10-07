@@ -204,7 +204,6 @@ pages:
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/bitrise-ymlファイルへのオンラインアクセス-accessing-the-bitrise-yml-file-online.md
 - _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md
 - _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
-- _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
 - _articles/en/troubleshooting/resetting-your-password.md
 - _articles/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
