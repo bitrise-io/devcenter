@@ -140,11 +140,11 @@ To configure publishing an app for Android:
 2. Go to the **Android Settings** section.
 3. [Expose](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the APK you want to publish.
 4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Google Play Console.
-5. If your Android app contains multiple modules, enter the exact module under **Module**. 
-	![](/img/module-android-settings.png)
+5. If your Android app contains multiple modules, enter the exact module under **Module**.
+   ![](/img/module-android-settings.png)
 6. Choose the appropriate keystore file and the Service Account JSON file.
-7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing. 
-	![](/img/flavorandroid.jpg)
+7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing.
+   ![](/img/flavorandroid.jpg)
 8. Fill out the **Details** page and click **Publish.**
 
 ## Publishing status and logs
@@ -152,8 +152,6 @@ To configure publishing an app for Android:
 Once you clicked **Publish** in Ship, the process starts according to the configured settings. You can view the status of the active publishing process on top of the **Details** page of the app.
 
 To view the logs of any publishing process, go to the **Activity** tab. From there, you can download the logs by clicking **Download Build Log** to troubleshoot any errors after a failed publish.
-
-![](/img/downloadbuildlog.jpg)
 
 ## App details
 
