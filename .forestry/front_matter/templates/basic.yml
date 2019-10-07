@@ -180,7 +180,6 @@ pages:
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/jp/api/response-and-pagination.md
 - _articles/jp/api/authentication.md
-- _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
 - _articles/en/reviews/Japanese translations/webhooks/webhookの追加-adding-webhooks.md
