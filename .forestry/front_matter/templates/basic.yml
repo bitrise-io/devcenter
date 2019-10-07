@@ -39,7 +39,6 @@ pages:
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
 - _articles/en/builds/caching/caching-homebrew-installers.md
-- _articles/en/reviews/ship-add-on.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/running-xcode-tests.md
