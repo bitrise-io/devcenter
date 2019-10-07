@@ -29,19 +29,16 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/steps-and-workflows/adding-removing-steps.md
 - _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のstepを作成-シェアする-creating-and-sharing-your-own-step.md
-- _articles/en/reviews/secrets-secret-filtering-off.md
 - _articles/en/reviews/Japanese translations/Getting Started/独自stepの作成とシェア-creating-and-sharing-your-own-step.md
 - _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
 - _articles/en/bitrise-cli/secrets.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/jp/getting-started/bitriseへのサインアップ.md
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
-- _articles/en/reviews/ship-add-on-beta-version.md
-- _articles/en/reviews/adding-an-app-from-the-cli.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
 - _articles/en/builds/caching/caching-homebrew-installers.md
-- _articles/en/reviews/ship-add-on.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/running-xcode-tests.md
@@ -49,7 +46,6 @@ pages:
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/faq/adding-projects-with-submodules.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
-- _articles/en/reviews/flutter-aab-draft.md
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
 - _articles/en/bitrise-cli/most-important-concepts.md
 - _articles/en/bitrise-cli/step-timeout.md
@@ -61,7 +57,6 @@ pages:
 - _articles/en/builds/build-artifacts-online.md
 - _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
-- _articles/en/reviews/bitrise-yml-size-limitation-notes.md
 - _articles/en/api/adding-and-managing-apps.md
 - _articles/jp/deploy/deploy-apps-to-applivery-from-bitrise.md
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
@@ -126,14 +121,10 @@ pages:
 - _articles/en/faq/organization-faq.md
 - _articles/en/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
 - _articles/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
-- _articles/en/reviews/creating-add-ons.md
-- _articles/en/reviews/signing-up-with-saml-sso.md
 - _articles/jp/infrastructure/stack-update-and-removal-policy.md
 - _articles/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/en/builds/remote-access.md
-- _articles/en/reviews/getting-started-with-expo-apps-draft.md
 - _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
-- _articles/en/reviews/fastlane.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
 - _articles/en/steps-and-workflows/getting-started-steps.md
 - _articles/en/builds/triggering-builds/trigger-pull-request.md
@@ -187,7 +178,6 @@ pages:
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/jp/api/response-and-pagination.md
 - _articles/jp/api/authentication.md
-- _articles/en/reviews/uploading-an-android-keystore-file.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
 - _articles/en/reviews/Japanese translations/webhooks/webhookの追加-adding-webhooks.md
@@ -214,7 +204,6 @@ pages:
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/bitrise-ymlファイルへのオンラインアクセス-accessing-the-bitrise-yml-file-online.md
 - _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md
 - _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
-- _articles/en/reviews/managing-a-keystore-file-with-bitrise-api-draft.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
 - _articles/en/troubleshooting/resetting-your-password.md
 - _articles/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
@@ -222,9 +211,7 @@ pages:
 - _articles/jp/testing/exporting-to-test-reports-from-custom-script-steps.md
 - _articles/jp/tips-and-tricks/screen-recording-your-ui-tests-with-appium.md
 - _articles/jp/getting-started/getting-started-with-expo-apps.md
-- _articles/en/reviews/bitrise-tools-draft.md
 - _articles/en/steps-and-workflows/step-inputs.md
-- _articles/en/steps-and-workflows/adding-removing-steps.md
 - _articles/en/steps-and-workflows/getting-started-workflows.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md

@@ -32,6 +32,23 @@ Clicking the Step will add it to the selected workflow. Don't forget to save the
 
 You can also clone a Step by clicking the **Clone icon** on the right side and then you can **Drag and Drop** it to its place.
 
+## Adding Steps from alternative sources 
+
+Generally, we recommend using Steps that are part of the official Bitrise Step Library. But you can add Steps from other sources, if you want to: you can use either a git URL or a local path. Read more about these in our [Steps in YAML](/bitrise-cli/steps/#special-step-sources) guide. 
+
+On the Bitrise website, the git:: special source is the easiest way to use a Step that is not in the Bitrise Step Library. Let's see how.
+
+1. Open your app by clicking on the app's name on your [Dashboard](https://app.bitrise.io/dashboard).
+2. Click the **Workflow** tab.
+3. Click the **bitrise.yml** tab. 
+4. Add the git URL of the Step you want to use. 
+
+   In this example, we're adding the Script Step from a git source:
+   ```
+   - git::https://github.com/bitrise-io/steps-script.git@1.1.3:
+   ```
+5. Click **Save**.
+
 ## Removing a Step
 
 You can remove a Step at any time. Be aware, however, that if you add it back at a later date, the Step inputs will be set to the default value - any custom configuration will be gone.
@@ -44,7 +61,7 @@ You can remove a Step at any time. Be aware, however, that if you add it back at
 6. Click **Save**.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's manage Steps in your build!</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your build</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's manage Steps in your build!</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your build</button></a>
 </div>

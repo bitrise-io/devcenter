@@ -1,5 +1,5 @@
 ---
-title: Public apps
+title: Public apps for open source projects
 redirect_from:
 - "/adding-a-new-app/public-apps/"
 - "/getting-started/adding-a-new-app/public-apps/"
