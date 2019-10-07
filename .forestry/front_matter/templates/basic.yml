@@ -121,7 +121,6 @@ pages:
 - _articles/en/faq/organization-faq.md
 - _articles/en/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
 - _articles/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
-- _articles/en/reviews/creating-add-ons.md
 - _articles/en/reviews/signing-up-with-saml-sso.md
 - _articles/jp/infrastructure/stack-update-and-removal-policy.md
 - _articles/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
