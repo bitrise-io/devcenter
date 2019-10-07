@@ -124,7 +124,6 @@ pages:
 - _articles/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/en/builds/remote-access.md
 - _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
-- _articles/en/reviews/fastlane.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
 - _articles/en/steps-and-workflows/getting-started-steps.md
 - _articles/en/builds/triggering-builds/trigger-pull-request.md
