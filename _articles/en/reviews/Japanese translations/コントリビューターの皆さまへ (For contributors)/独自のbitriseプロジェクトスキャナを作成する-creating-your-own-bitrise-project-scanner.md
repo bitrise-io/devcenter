@@ -8,6 +8,8 @@ published: false
 ---
 The project scanner is a tool that identifies the given project's type and generates a basic Bitrise configuration. Each supported project type has its own scanner: these scanners are stored as separate packages.
 
+Project Scanner (プロジェクトスキャナ) は与えられたプロジェクトのタイプを鑑定し、ベーシックなBitrise configurationを生成します。サポートされているプロジェクトのタイプには
+
 A project type scanner defines at least two workflows: one for testing (`primary`) and one for building (`deploy`). [It includes the minimal amount of Steps to successfully run them](/getting-started/getting-started-workflows/#default-workflows).
 
 {% include message_box.html type="important" title="Build and test Steps" content="Build Steps and test Steps have specific requirements:
