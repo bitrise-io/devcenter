@@ -87,4 +87,15 @@ Bitrise CLI automatically filters your secret env vars and prints `[REDACTED]` w
 {% include message_box.html type="warning" title="Build configuration custom env vars are exposed" content="
 You can specify an env var you wish to overwrite in your workflow if you click `Start/Schedule a Build` for your build   and select the `Advanced` option in the `Build configuration` pop-up window. Note that any env var you set in `Custom Environment Variables (optional)` section **will not be handled as secret env vars** hence they'll be will be visible in the build logs! You can also check them in `Build parameters` if you click `More details` on your build's page! "%}
 
+### Turning secret filtering off
+
+If you turn secret filtering off and your build log contains any secrets, then those values will be visible in your build log. 
+
+{% include message_box.html type="warning" title="Risk ahead" content="Since this is a potential security risk, we DO NOT RECOMMEND turning secret filtering off. "%}
+
+1. Go to Workflow Editor by clicking the **Workflow** tab of your app on [bitrise.io](https://app.bitrise.io/dashboard/builds).
+2. Click the **Secrets** tab.
+3. Click **Add new** to register the `BITRISE_SECRET_FILTERING` secret Environment Variable with false value.
+4. Click **Save**.
+
 For more information on secrets, check out our [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) section.
