@@ -97,12 +97,13 @@ StepのインプットならびにアウトプットはStepプロパティでも
 
   空のアイテムは除去しましょう！例：`first value| |second value` は `first value|second value`と同等に扱われます。
 
-### Environment variables in Steps  
+### Environment variables in Steps
+
 Stepでの環境変数について
 
 **Do not use Environment Variables directly in your Step's code**. Instead, expose every outside variable as an input of your Step and set the default value of that input to the Environment Variable you want to use. You can do this in the `step.yml` file. This way it's easier to test the Step and the user of the Step can easily declare these inputs, without having to scour through code for the required variable.
 
-**Stepのコードへは直接環境変数を使わないでください。**代わりに、Stepのインプットとして全ての外の変数をエクスポーズして、ご使用になりたい環境変数へインプットのデフォルト値をセットします。このアクションは`step.yml`ファイルにて行うことができます。？この方法により、Stepのテストがより簡単になり、必要な変数用のコードを通じてゴシゴシ洗わなくてもStepのユーザーは簡単にインプットを申告することができます。？
+\**Stepのコードへは直接環境変数を使わないでください。**代わりに、Stepのインプットとして全ての外の変数をエクスポーズして、ご使用になりたい環境変数へインプットのデフォルト値をセットします。このアクションは`step.yml`ファイルにて行うことができます。？この方法により、Stepのテストがより簡単になり、必要な変数用のコードを通じてゴシゴシ洗わなくてもStepのユーザーは簡単にインプットを申告することができます。？
 
 **Example**:  
 例：
@@ -116,13 +117,20 @@ The `xcode-archive` Step generates an output Environment Variable `$BITRISE_IPA_
         opts:
           title: "IPA path"
 
-### Secret environment variables in Steps
+### Secret environment variables in Steps  
+Step内のシークレット環境変数
 
 You can mark Step inputs as **Sensitive** to make sure their values do not get exposed. Sensitive inputs only accept [Secrets](/bitrise-cli/secrets/) - secret environment variables - as values. This ensures they are not visible in build logs.
 
+StepインプットをSensitiveにマークして、valuesが晒されないようにすることができます。Sensitiveインプットは[Secrets](/bitrise-cli/secrets/) (シークレット環境変数) のみ許可します。これでビルドログ内で表示されることはありません。
+
 To mark a Step input as sensitive, use the `is_sensitive` property. It has two values: `true` and `false`.
 
-{% include message_box.html type="important" title="The `is_expand` property" content="If you mark an input as sensitive, the `is_expand` property of the input also must be `true` (which is the default setting)!"%}
+???プロパティを使用してStepインプットをSensitiveにマークします。このプロパティには2つの値が存在します：`true` と `false`
+
+{% include message_box.html type="important" title="`is_expand` プロパティ" content="If you mark an input as sensitive, the `is_expand` property of the input also must be `true` (which is the default setting)!"%}
+
+Sensitiveにマークを入れると、???プロパティのインプットは、`true`である必要があります (デフォルトで設定されています)。
 
     inputs:
       - certificate_urls: $BITRISE_CERTIFICATE_URL
@@ -130,38 +138,61 @@ To mark a Step input as sensitive, use the `is_sensitive` property. It has two v
           title: "Certificate URL"
           is_sensitive: true
 
-### Submodules and dependencies
+### Submodules and dependencies  
+サブモジュールと依存
 
 **Do not use submodules, or require any other resource downloaded on-demand in your Step**. Try to include everything required for your Step in the Step's repository. Otherwise you can run into problems if, say, the Step fails to download a resource because of a network error or some authorization problem.
 
+サブモジュールを使用したり、Step内ではオンデマンドでダウンロードした他リソースを要求しないでください。StepのレポジトリにStepに必要なものを全て収めるようにしてください。ネットワークエラーや認証問題などによりリソースのダウンロードが失敗する可能性があります。
+
 In the case of submodules, you should include the content of the other repository instead of using it as a submodule of your Step's repository.
 
+サブモジュールについては、レポジトリのサブモジュールとして使用するのではなく、他のレポジトリのコンテキストを含めるようにします。
+
 You can, however, declare dependencies that you can fetch from an OS dependency manager, such as `apt-get` or `brew`. For more information on declaring dependencies, see [Step properties](/bitrise-cli/step-properties).
+
+しかし、OSの dependency managerからフェッチが可能な依存を宣言することができます (例：`apt-get` や `brew`)
 
 If you have any questions visit our [community discussion site](https://discuss.bitrise.io/) or [contact us](https://www.bitrise.io/contact)!
 
 **Need some inspiration for a new Step idea?** Look no further, we have a list! [This way please](https://discuss.bitrise.io/search?q=tags%3Acontrib-this-feature%20tag%3AStep) :)
 
-## Sharing a new Step
+他にもご質問がある方は、Bitriseの[community discussion site](https://discuss.bitrise.io/)を覗いてみてください。お問い合わせは[こちら](https://www.bitrise.io/contact)
+
+## Sharing a new Step  
+新Stepのシェア
 
 If you wish to share your newly created Step with the wider world, that's great - and simple!
 
+全世界のユーザーに新しく作成されたStepを共有したいですか？簡単にセットアップができます！
+
 We recommend you start with the command `bitrise share`. This will print you a guide on sharing steps - all you need to do is follow! But we'll summarize the most important things here as well, if you wish to look at the process before even firing up a command line interface.
 
-1. Make sure your Step is stored in a public git repository.
-2. Fork the StepLib repository you want to have your step in. We recommend using the [The official Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)!
-3. Prepare your forked StepLib locally for sharing:
+コマンド `bitrise share`を使って開始するのを推奨します。Stepのシェアについてのガイドがプリントするようになっているので、これを使いましょう！コマンドラインインターフェースを開始する前に確認されたい場合、ここでも重要な情報をまとめます。
+
+1. Make sure your Step is stored in a public git repository.  
+   パブリックgitレポジトリにStepが保管されていることを確認します。
+2. Fork the StepLib repository you want to have your step in. We recommend using the [The official Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)!  
+   Stepを置きたいStepLibレポジトリをフォークします。[BitriseオフィシャルStepLib](https://github.com/bitrise-io/bitrise-steplib)を使用するのをお勧めします！
+3. Prepare your forked StepLib locally for sharing:  
+   シェアするのに、ローカルでフォークされたStepLibを準備します：
 
        $ bitrise share start -c https://github.com/[your-username]/bitrise-steplib.git
-4. Add the step version tag to your Step's repository.
-5. Add the Step to your forked StepLib repository:
+4. Add the step version tag to your Step's repository.  
+   Stepのレポジトリにstep version tagを追加します。
+5. Add the Step to your forked StepLib repository:  
+   フォークされたStepLibレポジトリにStepを追加します：
 
        $ bitrise share create --tag [step-version-tag] --git [step-git-uri].git --stepid [step-id]
-6. Optionally, perform a complete health check on your forked StepLib:
+6. Optionally, perform a complete health check on your forked StepLib:  
+   オプションで、フォークされたStepLib上の完全なヘルスチェックを行うことができます：
 
        $ bitrise audit -c https://github.com/[your-username]/bitrise-steplib.git
-7. Create a Pull Request in the original StepLib repository.
+7. Create a Pull Request in the original StepLib repository.  
+   オリジナルのStepLibレポジトリにプルリクエストを作成します。
 
 And that's it, you are done! Once your PR is merged, your step will be available to everyone who uses the StepLib repository you chose.
+
+これで完了です！いったんプルリクエストがマージされると、選択したStepLibレポジトリを使用する人であれば誰でも使用することができます。
 
 <div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Explore Bitrise from your Terminal</div> <a target="_blank" href="[https://app.bitrise.io/cli](https://app.bitrise.io/cli "https://app.bitrise.io/cli")"><button class="button">Go to Bitrise CLI</button></a> </div>
