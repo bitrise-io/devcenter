@@ -1,25 +1,18 @@
 ---
 tag: []
-title: Bitriseに貢献する方法 (How to contribute Bitrise)
+title: Bitriseへの貢献 (How to contribute Bitrise)
 redirect_from: []
 summary: ''
 published: false
 
 ---
-Contributing to Bitrise is easy: write an open source integration, a guide, or a blog post, submit it and you're done! In this section, we'll be focusing on technical contributions: creating a new Step and creating your very own project scanner.
+Bitriseに寄稿するのは簡単です：オープンソースのインテグレーション、ガイド、ブログ等を書いて投稿すれば完了です！このセクションでは技術的な寄稿方法 (新規のStepと独自のプロジェクトスキャナーの作成) に焦点を当てます。
 
-Bitriseに貢献するのは簡単です：オープンソースのインテグレーション、ガイド、ブログ等を書いて投稿すれば完了です！このセクションでは技術的な貢献方法に焦点を当てます：新規のStepの作成、ならびに独自のプロジェクトスキャナーの作成
+{% include message_box.html type="info" title="コンテンツとコミュニティへの貢献" content="Bitriseのコンテンツ向上に貢献されたい方やコミュニティのディスカッションに参加されたい方は、以下のリンクを参考にしてください：
 
-{% include message_box.html type="info" title="Contributing to content and the community コンテンツとコミュニティへの貢献" content="If you wish to contribute to Bitrise content, or take part in the community discussions, we have some links for you:
-
-Bitriseのコンテンツの向上に貢献されたい方やコミュニティのディスカッションに参加されたい方は、以下のリンクを参考にしてください：
-
-* [Edit existing articles or submit new ones to our docs](https://github.com/bitrise-io/devcenter/).  
-  Bitriseのドキュメンテーション内の既存する記事の編集または新規の記事の投稿
-* [Read our blog](https://blog.bitrise.io/), and [contact us](https://www.bitrise.io/contact) if you want to write your own blog post.  
-  Bitriseのブログを読む、またはご自身でブログを書きたい場合お問い合わせ
-* [Request a feature, submit an issue, or just talk to other members of our community on our forums.](https://discuss.bitrise.io/)  
-  機能のリクエスト、問題点の提出、フォーラム内で他メンバーに相談する"%}
+* [Bitriseのドキュメンテーション内の既存する記事の編集または新規の記事の投稿](https://github.com/bitrise-io/devcenter/)
+* [Bitriseのブログを読む](https://blog.bitrise.io/)、またはご自身でブログを書きたい場合は[お問い合わせ](https://www.bitrise.io/contact)ください。
+* [機能のリクエスト、問題点の提出、フォーラム内で他メンバーに相談する](https://discuss.bitrise.io/)"%}
 
 ## Creating your own Step
 
