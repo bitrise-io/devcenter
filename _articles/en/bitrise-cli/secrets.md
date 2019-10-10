@@ -79,7 +79,7 @@ and Step inputs too.
 Bitrise CLI automatically filters your secret Env Vars and prints `[REDACTED]` with newlines after the key so that the Secret Env Vars are NOT VISIBLE in the build log. This applies to both private and public apps.
 
 {% include message_box.html type="warning" title="Build configuration custom Env Vars are exposed" content="
-You can specify an Env Var you wish to overwrite in your Workflow if you click **Start/Schedule a Build** for your build and select the **Advanced** option in the **Build configuration** pop-up window. Note that any Env Var you set in **Custom Environment Variables (optional)** section will not be handled as Secret Env Vars, and therefore, they will be visible in the build logs! You can also check them in **Build parameters** if you click **More details** on your build's page. "%}
+You can specify an Env Var you wish to overwrite in your Workflow if you click **Start/Schedule a Build** for your build and select the **Advanced** option in the **Build configuration** pop-up window. Note that any Env Var you set in **Custom Environment Variables (optional)** section will not be handled as Secret Env Vars, and therefore, they will be visible in the build logs! You can also check them in **Build parameters** if you click **More details** on your Build's page. "%}
 
 ### Turning secret filtering off
 
