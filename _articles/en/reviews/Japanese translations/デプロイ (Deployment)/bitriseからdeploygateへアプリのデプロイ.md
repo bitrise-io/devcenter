@@ -31,21 +31,21 @@ DeployGateにアプリをアップロードする場合、Bitriseワークフロ
 This step should be added after the app build process to have built binary app file before uploading. You need to set several required params as below:  
 このStepは、アップロード前にバイナリのアプリファイルのビルドを完了させるために、アプリのビルドプロセス後に追加しましょう。以下のような複数の必要なパラメータを設定する必要があります。
 
-| Input Variables | Description |
+| インプット変数 | 解説 |
 | --- | --- |
-| API Key | Set upload user's DeployGate API Key from Account Settings. <br>If you want to upload apps as organization account, please use organization's API Key. Upload account will be shown on the activity timeline. |
-| Owner Name | App owner's account name in DeployGate. <br> You can use username or organization name. |
-| App file path | App's binary file (IPA/APK) to be uploaded.<br>For default setting, use $BITRISE_APK_PATH for Android or $BITRISE_IPA_PATH for iOS |
-| App Visibility | You can list your app name and icon on your DeployGate profile page. This variable effects in just for visibility, not for allowing download or install by anonymous. |
+| API Key <br>(APIキー) | ユーザーのDeployGate APIキーをアカウント設定からセットしてアップロードしてください。 <br>万が一、organization account (組織アカウント) としてアプリのアップロードを行いたい場合、organizationのAPIキーを使用してください。アップロードアカウントはactivity timelineで表示されます。|
+| Owner Name <br>(オーナー名) | アプリオーナーのアカウント名はDeployGateにあります。 <br> ユーザー名か組織名を使用できます。 |
+| App file path <br>(アプリファイルパス) | アプリのバイナリファイル (IPA/APK)がアップロードされます。<br>デフォルトでは、$BITRISE_APK_PATH (Android)または $BITRISE_IPA_PATH (iOS)を使います。 |
+| App Visibility <br>(アプリの可視性) | DeployGateのプロフィールページからアプリ名とアイコンをリスト化できます。<br>この変数は可視性のみに効力を持つようになっており、匿名者によってダウンロードやインストールを可能にするものではありません。 |
 
 You can also set optional variables for using advanced features as below:  
 以下のような先進的な機能を使ってオプションの変数を設定することも可能です。
 
-| Input Variables | Description |
+| インプット変数 | 解説 |
 | --- | --- |
-| Short Message | Summary of update shown on DeployGate.<br>You can use $GIT_CLONE_COMMIT_MESSAGE_SUBJECT if you want to use the same message as git commit |
-| Distribution Key | You can make multiple public install links (we called it Distribution Page) for a different version of app binary in the same app. <br>By specifying the distribution page's hash, that distribution page will be updated simultaneously. The "xxxx" portion of the distributed page's URL like https://deploygate.com/distributions/xxxx |
-| Distribution Name | Specify the name of the updated distribution page. If nothing exists, a new distribution page will be created. Possible usage includes creating distribution pages for each Git branch name. (for example $BITRISE_GIT_BRANCH) |
+| Short Message <br>ショートメッセージ | DeployGateで表示されるアップデートの概要です。<br>gitコミットのような同じメッセージを使いたい場合、$GIT_CLONE_COMMIT_MESSAGE_SUBJECT を使用します。|
+| Distribution Key <br>配布キー | 同一アプリ内のアプリバイナリの異なるバージョン用に、複数のパブリックインストールリンクを作ることができます。 <br>配布ページのハッシュを指定することにより、その配布ページが同時にアップデートされます。配布されたページのURLの"xxxx"の部分はこのように配置されます：https://deploygate.com/distributions/xxxx|
+| Distribution Name <br>配布名 | Specify the name of the updated distribution page. If nothing exists, a new distribution page will be created. Possible usage includes creating distribution pages for each Git branch name. (for example $BITRISE_GIT_BRANCH) |
 | Release Note | Message for the new release in distribution page. This message will be notified to your distribution page's testers |
 | Disable Notify(iOS Only) | There is no DeployGate client app in iOS platform. By default, we use email notifications for release updates. If you don't need email notification, please set this option as true |
 
