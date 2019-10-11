@@ -1,5 +1,5 @@
 ---
-title: Creating and sharing your own Step
+title: 独自のStepを作成・シェアする
 tag: []
 summary: ''
 redirect_from: []
