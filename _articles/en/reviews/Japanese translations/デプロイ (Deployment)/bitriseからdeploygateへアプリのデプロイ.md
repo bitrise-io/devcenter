@@ -6,38 +6,25 @@ summary: ''
 published: false
 
 ---
-# What is DeployGate?  
-DeployGateとは何ですか？
+# DeployGateとは何ですか？
 
-[**DeployGate**](https://deploygate.com?locale=en) is a mobile app distribution platform for iOS and Android, delivering your in-development iOS/Android apps to your dev team, members, employees, QA testing team in your organization or testers outside of your company.
+[**DeployGate**](https://deploygate.com/?)とはiOSとAndroid用のモバイルアプリ配布プラットフォームです。開発者チーム、メンバー、従業員、組織内のQAテストチームや社外のテスターに開発中のiOS/Androidアプリを配布することができます。
 
-DeployGateとはiOSとAndroid用のモバイルアプリ配布プラットフォームです。開発者チーム、メンバー、従業員、組織内のQAテストチームや社外のテスターに開発中のiOS/Androidアプリを送ることができます。
+DeployGateにはアプリ開発サイクルの高速化を実現するたくさんの機能が満載です。そのサイクルには、QAテストや、ベータテスターのフィードバックに基づいたアプリ品質の改良が含まれています。
 
-DeployGate has many features to accelerate your app development cycle including QA testing and app improvement with beta tester's feedbacks.
-
-DeployGateにはQAテストや、ベータテスターのフィードバックに基づいたアプリ品質向上が含まれたアプリ開発サイクルの高速化を実現するたくさんの機能が満載です。
-
-Features:  
 機能：
 
-* Real-time App distribution with automatic version control, even without requiring accounts for testers
-* Flexible user account management with granular access control
-* Git-like multi-track distribution allows individual version/user/device management for the same app
 * テスター用のアカウントがなくても、自動のバージョンコントロールを使ったリアルタイムによるアプリ配布が可能
-* 緻密なアクセスコントロールを使った柔軟なユーザーアカウント管理
-* Gitのようなマルチトラック配布方法が個人の同一アプリのバージョン/ユーザー/デバイス管理を可能にします
+* 緻密なアクセスコントロールを使用した柔軟なユーザーアカウント管理
+* Gitのようなマルチトラック配布方法が個人による同一アプリのバージョン/ユーザー/デバイス管理を可能にします
 
-With DeployGate and Bitrise, you can quickly build a fully automated in-house dogfooding environment for your team. To see more details, please visit [DeployGate Features](https://deploygate.com/features?locale=en).
-
-DeployGateとBitriseがあれば、チームに完全自動なドッグフーディング的社内環境をすぐに構築する事ができます。詳細を見るには[DeployGate社の機能紹介ページ](https://deploygate.com/features?)をご覧ください。
+DeployGateとBitriseがあれば、チームに完全自動化したドッグフーディング的社内環境をすぐに構築する事ができます。詳細を見るには[DeployGate社の機能紹介ページ](https://deploygate.com/features?)をご覧ください。
 
 ![Automated app distribution workflow](/img/tutorials/deploy/deploygate/flow.png)
 
-# Upload your app to DeployGate via Bitrise  
-Bitriseを経由してDeployGateにアプリをアップデート
+# Bitriseを経由してDeployGateにアプリをアップデート
 
-To upload your app to DeployGate, add `DeployGate Upload` step to your bitrise workflow.  
-DeployGateにアプリをアップロードする場合、Bitriseワークフローに`DeployGate Upload`Stepを追加します。
+DeployGateにアプリをアップロードする場合、Bitriseワークフローに`DeployGate Upload`ステップを追加します。
 
 ![DeployGate Workflow Step](/img/tutorials/deploy/deploygate/step.png)
 
@@ -64,7 +51,8 @@ You can also set optional variables for using advanced features as below:
 
 {% include message_box.html type="info" title="More info on DeployGate DeployGate上でのさらなる情報 " content=" These options are based on [**DeloyGate API**](https://docs.deploygate.com/reference). For more details, please read the references at [DeployGate.com](https://deploygate.com?locale=en). これらのオプションは[**DeployGate API**]()に基づいております。詳細を確認するには、[DeployGate.com](https://deploygate.com/?)を参考にしてください。"%}
 
-# How `Distribution Page` works?  
+# How `Distribution Page` works?
+
 `Distribution Page`はどのように機能しますか？
 
 ![Distribution Page](/img/tutorials/deploy/deploygate/distribution_page.png)
