@@ -5,7 +5,7 @@ summary: ''
 redirect_from: []
 menu:
   contributors-main:
-    weight: 1
+    weight: 4
 
 ---
 独自のStepを作成するには、`bitrise` CLI (v1.6.1以上) を用意する必要があります。BashまたはGoツールキットを使用してStepを生成することができます。

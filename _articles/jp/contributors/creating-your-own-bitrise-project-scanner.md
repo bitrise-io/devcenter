@@ -6,7 +6,7 @@ tag: []
 summary: ''
 menu:
   contributors-main:
-    weight: 2
+    weight: 6
 
 ---
 Project Scanner (プロジェクトスキャナ) は与えられたプロジェクトのタイプを検知し、ベーシックなBitrise configurationを生成します。サポートされているプロジェクトのタイプそれぞれにはスキャナが付随しています：それらは個々のパッケージとして保管されています。
