@@ -34,7 +34,6 @@ pages:
 - deploy.md
 - _articles/en/bitrise-cli/secrets.md
 - _articles/en/steps-and-workflows/adding-removing-steps.md
-- _articles/en/reviews/Japanese translations/Getting Started/独自stepの作成とシェア-creating-and-sharing-your-own-step.md
 - _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/jp/getting-started/bitriseへのサインアップ.md
