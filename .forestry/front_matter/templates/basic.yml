@@ -28,8 +28,8 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/bitriseに貢献する方法-how-to-contribute-bitrise.md
 - _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のbitriseプロジェクトスキャナを作成する-creating-your-own-bitrise-project-scanner.md
+- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/bitriseに貢献する方法-how-to-contribute-bitrise.md
 - deploy.md
 - _articles/en/bitrise-cli/secrets.md
 - _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のstepを作成-シェアする-creating-and-sharing-your-own-step.md

@@ -6,15 +6,11 @@ summary: ''
 published: false
 
 ---
-The project scanner is a tool that identifies the given project's type and generates a basic Bitrise configuration. Each supported project type has its own scanner: these scanners are stored as separate packages.
+Project Scanner (プロジェクトスキャナ) は与えられたプロジェクトのタイプを検知し、ベーシックなBitrise configurationを生成します。サポートされているプロジェクトのタイプそれぞれにはスキャナが付随しています：それらは個々のパッケージとして保管されています。
 
-Project Scanner (プロジェクトスキャナ) は与えられたプロジェクトのタイプを鑑定し、ベーシックなBitrise configurationを生成します。サポートされているプロジェクトのタイプそれぞれにはスキャナが付随しています：個々のパッケージとして保管されています。
+一つのプロジェクトタイプスキャナは最低2つのワークフローを定義します：テスト用 (`primary`)とビルド用 (`deploy`)になっています。[実行を成功させるために、最低限の数のStepがすでに含まれております。](/getting-started/getting-started-workflows/#default-workflows)
 
-A project type scanner defines at least two workflows: one for testing (`primary`) and one for building (`deploy`). [It includes the minimal amount of Steps to successfully run them](/getting-started/getting-started-workflows/#default-workflows).
-
-一つのプロジェクトタイプスキャナは最低2つのワークフローを定義します：テスト用 (`primary`)とビルド用 (`deploy`)になっています。
-
-{% include message_box.html type="important" title="Build and test Steps ビルドとテストのStep" content="Build Steps and test Steps have specific requirements:　ビルドStepとテストStepにはそれぞれ異なったものが必要です：
+{% include message_box.html type="important" title="Build and test Steps ビルドとテストのStep" content="ビルドStepとテストStepにはそれぞれ異なったものが必要です：
 
 * a **build** Step must build your app so that it is ready for deployment and it must output an Environment Variable that points to the output file(s). For example, a build Step to build an iOS app must output an .ipa file (not, say, .xcodearchive) and the path to this .ipa file.  
   **ビルド**Stepではアプリのビルドをする必要があるので、デプロイの準備が完了していて、アウトプットファイルへ指し示す環境変数を出力する必要があります。例えば、iOSアプリをビルドするビルドStepは、.ipaファイル (.xcodearchiveではない) とその.ipaファイルへのパスを出力する必要があります。
