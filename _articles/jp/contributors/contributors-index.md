@@ -2,11 +2,9 @@
 title: Bitriseへの貢献
 redirect_from: []
 menu:
-  contributors-main:
-    weight: 2
   main:
     identifier: contributors-main
-    title: For contributors
+    title: Bitriseへの貢献
     weight: 1
 
 ---
