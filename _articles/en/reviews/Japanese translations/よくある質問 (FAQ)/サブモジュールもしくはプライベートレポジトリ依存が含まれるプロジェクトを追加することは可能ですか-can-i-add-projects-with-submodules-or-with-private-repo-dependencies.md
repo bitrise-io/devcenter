@@ -24,36 +24,21 @@ GitLabとBitbucket上では、複数のレポジトリに”Deployment key”と
 
 一つのアプリに全てのサブモジュールやプライベートレポジトリ依存のアクセスを許可したい場合、そのアプリのプライバシー設定がどのgit URLを使用すべきかを決定します。
 
-* If you have a **private** app: **use SSH URLs everywhere!** Most services support SSH key based authentication **only** for SSH URLs (for example, `git@github.com:bitrise-io/bitrise.git`). Therefore **every private repository you want to use have to be addressed with the SSH URL**. If you have direct private git repo references in your CocoaPods `Podfile` you'll have to use the SSH URL there as well! The same applies for submodules and every other private git repository URL you want to use with the SSH key you register on [Bitrise.io](https://www.bitrise.io/)!
-* If you have a **public** app: **use HTTPS URLs everywhere!** SSH URLs require SSH keys even if the repository is public. For security reasons, public apps CANNOT have SSH keys. As HTTPS git clone URLs do not require any authentication in the case of public repositories, they should be used for public Bitrise apps.
-* **private**のアプリをお持ちの場合：**すべての場所でSSH URLを使用してください！**ほとんどのサービスはSSH URL**のみ**の認証に基づいています（URLの例：`git@github.com:bitrise-io/bitrise.git`) 。お使いになりたいすべてのプライベートレポジトリはSSH URLを使ってアドレス指定する必要があります。Cocoapodsの `Podfile` にあるdirect private git repo referencesをお持ちの場合も、SSH URLを使用する必要があります！SSHキーを使って同様に適用されるサブモジュールやすべての他のprivate git repository URL を使用したい場合は、Bitrise.ioにて登録をお願いします！
-* publicアプリをお持ちの場合：HTTPS URLをすべての場所で使用してください！レポジトリがパブリックであっても、SSH URLはSSHキーを必要とします。セキュリティ上の理由により、PublicアプリはSSHキーを保持することはできません。HTTPS git clone URLはパブリックリポジトリの認証を行わないことにより、パブリックのBitriseアプリで使用される必要があります。
+* **Private**のアプリをお持ちの場合：**すべての場所でSSH URLを使用してください！ほとんどのサービスはSSH URL**のみの認証に基づいています（URLの例：`git@github.com:bitrise-io/bitrise.git`) 。**お使いになりたいすべてのプライベートレポジトリはSSH URLを使ってアドレス指定する必要があります。**Cocoapodsの `Podfile` にてdirect private git repo referencesをお持ちの場合も、SSH URLを使用する必要があります！SSHキーを使って同様に適用されるサブモジュールやすべての他のprivate git repository URL を使用したい場合は、[Bitrise.io](https://www.bitrise.io/)にて登録をお願いします！
+* **Public**アプリをお持ちの場合：**HTTPS URLをすべての場所で使用してください！**レポジトリがパブリックであっても、SSH URLはSSHキーを必要とします。セキュリティ上の理由により、PublicアプリはSSHキーを保持することはできません。パブリックリポジトリの場合、HTTPS git clone URLは認証を必要としないので、パブリックのBitriseアプリでHTTPS git clone URLを使用される必要があります。
 
-## Creating SSH keys for a new private app  
-新規のプライベートアプリ用にSSHキーを作成する
+## 新規のプライベートアプリ用にSSHキーを作成する
 
-There are three options to grant [Bitrise](https://www.bitrise.io) access to your repository:
+レポジトリに[Bitrise](https://www.bitrise.io)がアクセスを行えるようにするには、3つのオプションがあります：
 
-レポジトリにBitriseがアクセスを行えるようにするには、3つのオプションが存在します：
+* _SSHキーペアの自動追加_：**サブモジュールを使用される場合は、このオプションは使用しないでください。**このオプションはメインのレポジトリのみにSSHキーを追加します。
+* _SSHキーペアの生成_：[Bitrise](https://www.bitrise.io)のウェブサイト上でキーを生成し、特定のユーザーへ手動でコピーする必要があります。**このオプションは、サブモジュールを使用したい、またはビルド中に複数のレポジトリにアクセスする必要がある際にご使用ください。**
+* _自分のSSHキーペアの使用_：特定のユーザーのプライベートキーも同様にお持ちの場合に使用できます。プライベートキーをペーストするだけで、[Bitrise](https://www.bitrise.io/)がレポジトリにアクセスすることが可能となります。**(注)SSHキーは、パスフレーズを含まないRSAキーである必要があります！**このようなキーを生成する方法の一例は[ここ](https://devcenter.bitrise.io/faq/how-to-generate-ssh-keypair/)で確認することができます。
 
-* _Auto-add SSH keypair_: **Don't use this option if you use submodules.** This option adds the SSH key to the main repository only.
-* _Generate SSH keypair_: this generates a key for you on the [Bitrise](https://www.bitrise.io) website and you will have to copy it manually to the given user. **This is the recommended option if you want to use submodules or have to access multiple repositories during your build.**
-* _Use your own SSH keypair_: can be used if you also have the private key of the given user. You just have to paste the private key and [Bitrise](https://www.bitrise.io) will be able to access the repositories. **Keep in mind that the SSH key has to be an RSA key, without a passphrase!** You can find an example of how you can generate a key like that [here](/faq/how-to-generate-ssh-keypair/).
-* _SSH キーペアのオート追加_：サブモジュールを使用される場合は、このオプションは使用しないでください。これはメインのレポジトリのみにSSHキーを追加します。
-* _SSH キーペアの生成_：Bitriseのウェブサイト上でキーを生成し、任意のユーザーにマニュアルでコピーする必要があります。**この方法はサブモジュールを使用したい、またはビルド中に複数のレポジトリにアクセスする必要がある際にご使用ください。**
-* 自身のSSHキーペアの使用：任意のユーザーのプライベートキーをお持ちの場合に使用されます。プライベートキーをペーストするだけで、[Bitrise](https://www.bitrise.io/)がレポジトリにアクセスすることが可能となります。**(注)SSHキーは、パスフレーズを含まないRSAキーである必要があります。**このようなキーを生成する方法の一例を[ここ](https://devcenter.bitrise.io/faq/how-to-generate-ssh-keypair/)で確認してください。
+## 既存のプライベートアプリのSSHキーを管理する
 
-## Managing SSH keys of an existing private app  
-既存のプライベートアプリのSSHキーを管理する
+[Bitrise](https://www.bitrise.io/)上のアプリにある `Settings` からアプリのパブリックSSHキーを見つけることができます。 `SSH settings` セクションまで下にスクロールして、`Show SSH Public Key`をクリックします。
 
-You can find the public SSH key of the app in the `Settings` of the given app on [Bitrise](https://www.bitrise.io). Scroll down to the `SSH settings` section and click `Show SSH Public Key`.
+特定のユーザーへキーをコピーすれば、ビルドの準備は完了です！
 
-Copy the key to the given user and you are ready to build!
-
-If necessary, update the given app's SSH key by clicking the `Change SSH Keypair` button and choosing one of the three options.
-
-[Bitrise](https://www.bitrise.io/)上のアプリにある Settings からアプリのパブリックSSHキーを見つけることができます。 SSH settings セクションまで下にスクロールして、Show SSH Public Keyをクリックします。
-
-任意のユーザーにキーをコピーすれば、ビルドの準備は完了です！
-
-必要であれば、任意のアプリのSSHキーをアップデートすることが可能です。Change SSH Keypair ボタンをクリックして、３つのオプションの中から１つを選びます。
+必要であれば、特定のアプリのSSHキーをアップデートすることが可能です。`Change SSH Keypair` ボタンをクリックして、３つのオプションの中から１つを選びます。
