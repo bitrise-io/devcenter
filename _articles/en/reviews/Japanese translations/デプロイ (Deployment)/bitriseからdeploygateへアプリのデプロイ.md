@@ -44,10 +44,10 @@ You can also set optional variables for using advanced features as below:
 | インプット変数 | 解説 |
 | --- | --- |
 | Short Message <br>ショートメッセージ | DeployGateで表示されるアップデートの概要です。<br>gitコミットのような同じメッセージを使いたい場合、$GIT_CLONE_COMMIT_MESSAGE_SUBJECT を使用します。|
-| Distribution Key <br>配布キー | 同一アプリ内のアプリバイナリの異なるバージョン用に、複数のパブリックインストールリンクを作ることができます。 <br>配布ページのハッシュを指定することにより、その配布ページが同時にアップデートされます。配布されたページのURLの"xxxx"の部分はこのように配置されます：https://deploygate.com/distributions/xxxx|
-| Distribution Name <br>配布名 | Specify the name of the updated distribution page. If nothing exists, a new distribution page will be created. Possible usage includes creating distribution pages for each Git branch name. (for example $BITRISE_GIT_BRANCH) |
-| Release Note | Message for the new release in distribution page. This message will be notified to your distribution page's testers |
-| Disable Notify(iOS Only) | There is no DeployGate client app in iOS platform. By default, we use email notifications for release updates. If you don't need email notification, please set this option as true |
+| Distribution Key <br>配布キー | 同一アプリ内のアプリバイナリの異なるバージョン用に、複数のパブリックインストールリンク(Bitriseはこれを $Distribution Page と呼んでいます)を作ることができます。 <br>配布ページのハッシュを指定することにより、その配布ページが同時にアップデートされます。配布されたページのURLの"xxxx"の部分はこのように配置されます：https://deploygate.com/distributions/xxxx|
+| Distribution Name <br>配布名 | アップデートされたDistribution Pageの名前を指定します。何も見つからない場合、新しいDistribution Pageが発行されます。各Gitブランチ名用に可能性のある利用法がDistribution Pageに含まれています。 (例：$BITRISE_GIT_BRANCH) |
+| Release Note <br>リリースノート | Distribution Pageでの新リリースのメッセージです。このメッセージはご自身のDistribution Pageのテスターへ通知されます。 |
+| Disable Notify <br>通知の無効化　(iOSのみ) |  iOSプラットフォームにはDeployGateクライアントアプリは存在しません。デフォルトでは、リリースアップデートにはメールによる通知を行います。メールによる通知が不要な場合、このオプションを $true に設定してください。 |
 
 {% include message_box.html type="info" title="More info on DeployGate DeployGate上でのさらなる情報 " content=" These options are based on [**DeloyGate API**](https://docs.deploygate.com/reference). For more details, please read the references at [DeployGate.com](https://deploygate.com?locale=en). これらのオプションは[**DeployGate API**]()に基づいております。詳細を確認するには、[DeployGate.com](https://deploygate.com/?)を参考にしてください。"%}
 
