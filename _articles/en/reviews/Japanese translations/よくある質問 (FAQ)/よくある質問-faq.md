@@ -8,7 +8,7 @@ published: false
 ---
 ユーザーからのよくある質問をここで確認しましょう。知りたい質問と回答がまだここのセクションに掲載されていない場合、Bitriseの[フォーラム](https://discuss.bitrise.io/)、またはBitriseのサポートセンターまでお問い合わせください*。
 
-\*レスポンスが遅延する可能性がありますが、日本語による質問でも大歓迎です。
+\*レスポンスが多少遅れる可能性がありますが、日本語による質問でも大歓迎です！
 
 * [GitHub Organization (組織) へBitriseのアクセスを許可する方法はありますか？](/jp/faq/grant-access-to-github-organization/)
 * [SSHキーペアの精製方法を教えて下さい。](/jp/faq/how-to-generate-ssh-keypair/)
