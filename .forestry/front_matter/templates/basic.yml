@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/サブモジュールもしくはプライベートレポジトリ依存が含まれるプロジェクトを追加することは可能ですか-can-i-add-projects-with-submodules-or-with-private-repo-dependencies.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/bitriseからdeploygateへアプリのデプロイ.md
 - _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/bitriseに貢献する方法-how-to-contribute-bitrise.md
 - _articles/en/reviews/ship-add-on-beta-version.md
