@@ -29,13 +29,20 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
-- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のbitriseプロジェクトスキャナを作成する-creating-your-own-bitrise-project-scanner.md
-- _articles/en/bitrise-cli/secrets.md
-- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のstepを作成-シェアする-creating-and-sharing-your-own-step.md
-- _articles/en/steps-and-workflows/adding-removing-steps.md
-- _articles/en/reviews/Japanese translations/Getting Started/独自stepの作成とシェア-creating-and-sharing-your-own-step.md
-- _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
+- _articles/en/api/build-trigger.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーを変更する方法を教えて下さい-how-to-change-the-owner-of-an-app.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/サブモジュールもしくはプライベートレポジトリ依存が含まれるプロジェクトを追加することは可能ですか-can-i-add-projects-with-submodules-or-with-private-repo-dependencies.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/よくある質問-faq.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/github-organization-組織-へbitriseのアクセスを許可する方法はありますか-how-to-grant-bitrise-access-to-a-github-organization.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/bitriseからdeploygateへアプリのデプロイ.md
+- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/bitriseに貢献する方法-how-to-contribute-bitrise.md
+- _articles/en/reviews/ship-add-on-beta-version.md
+- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のbitriseプロジェクトスキャナを作成する-creating-your-own-bitrise-project-scanner.md
+- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のstepを作成-シェアする-creating-and-sharing-your-own-step.md
+- _articles/en/bitrise-cli/secrets.md
+- _articles/en/steps-and-workflows/adding-removing-steps.md
+- _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
 - _articles/jp/getting-started/bitriseへのサインアップ.md
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
@@ -140,7 +147,6 @@ pages:
 - _articles/en/getting-started/getting-started-with-android-apps.md
 - _articles/en/api/managing-ios-code-signing-files.md
 - _articles/en/api/endpoints.md
-- _articles/en/api/build-trigger.md
 - _articles/en/api/authentication.md
 - _articles/en/api/incoming-and-outgoing-webhooks.md
 - _articles/en/troubleshooting/trigger-doesnt-work.md

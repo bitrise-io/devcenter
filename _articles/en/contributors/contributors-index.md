@@ -7,14 +7,14 @@ tag:
 - cli
 - bitrise.yml
 summary: 'Contributing to Bitrise is easy: write an open source integration, a guide,
-  or a blog post, submit it and you''re done! In this section, we''ll be focusing
+  or a blog post, submit it and you are done! In this section, we will be focusing
   on technical contributions: creating a new Step and creating your very own project
   scanner.'
 menu:
   main:
     title: For contributors
     identifier: contributors-main
-    weight: 2
+    weight: 1
 
 ---
 Contributing to Bitrise is easy: write an open source integration, a guide, or a blog post, submit it and you're done! In this section, we'll be focusing on technical contributions: creating a new Step and creating your very own project scanner.

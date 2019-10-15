@@ -20,7 +20,7 @@ You can trigger and abort builds with the Bitrise API. Define parameters for the
 
 | Endpoints | Function |
 | --- | --- |
-| POST /apps/{app-slug}/builds | Trigger a new build. |
+| [POST /apps/{app-slug}/builds](https://api-docs.bitrise.io/#/builds/build-trigger) | Trigger a new build. |
 
 To trigger a new build with the Bitrise API, call the `/apps/{APP-SLUG}/builds` endpoint. You need to specify an app slug and at least one build parameter in a JSON object:
 
@@ -43,7 +43,9 @@ Here's a minimal sample JSON body which specifies _master_ as the value of the `
 
 And here's an example curl request:
 
-    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
+  ```json
+  curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
+  ```
 
 In the above example, we triggered a build of the app's `master` branch.
 
@@ -144,7 +146,7 @@ Add a `workflow_id` parameter to your `build_params` and specify the workflow yo
 
 | Endpoints | Function |
 | --- | --- |
-| POST /apps/{app-slug}/builds/{build-slug}/abort | Abort a specific build. |
+| [POST /apps/{app-slug}/builds/{build-slug}/abort](https://api-docs.bitrise.io/#/builds/build-abort) | Abort a specific build. |
 
 You can abort running builds, and set the reason for aborting, as well as specify if email notifications should be sent about the build.
 

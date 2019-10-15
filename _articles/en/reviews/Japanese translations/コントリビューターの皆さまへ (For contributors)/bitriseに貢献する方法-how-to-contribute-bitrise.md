@@ -1,11 +1,9 @@
 ---
-title: Bitriseへの貢献
+tag: []
+title: Bitriseへの貢献 (How to contribute Bitrise)
 redirect_from: []
-menu:
-  main:
-    identifier: contributors-main
-    title: Bitriseへの貢献
-    weight: 1
+summary: ''
+published: false
 
 ---
 Bitriseに寄稿するのは簡単です：オープンソースのインテグレーション、ガイド、ブログ等を書いて投稿すれば完了です！このセクションでは技術的な寄稿方法 (新規のStepと独自のプロジェクトスキャナーの作成) に焦点を当てます。
