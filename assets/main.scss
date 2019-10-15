@@ -700,6 +700,7 @@ h4 {
 		font-family: "Source Code Pro", "Courier New", Courier, monospace;
 		font-size: 85%;
 		direction: ltr;
+		word-wrap: break-word;
 	}
 
 	pre {
@@ -748,9 +749,10 @@ h4 {
 	code {
 		margin: 0 .29412em;
 		padding: .07353em 0;
-		border-radius: .2rem;
+		border-radius: .5rem;
 		box-shadow: 0.29412em 0 0 hsla(0, 0%, 93%, .5),  -0.29412em 0 0 hsla(0, 0%, 93%, .5);
 		word-break: break-word;
+		white-space: pre-wrap;
 		-webkit-box-decoration-break: clone;
 		box-decoration-break: clone;
 		background-color: hsla(0, 0%, 93%, .5);

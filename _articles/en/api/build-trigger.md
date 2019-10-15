@@ -32,20 +32,22 @@ The JSON object must also contain a `hook_info` object with a `type` key and `bi
 
 Here's a minimal sample JSON body which specifies _master_ as the value of the `branch` parameter:
 
-    {
-      "hook_info": {
-        "type": "bitrise",
-      },
-      "build_params": {
-        "branch": "master"
-      }
-    }
+```
+{
+  "hook_info": {
+    "type": "bitrise",
+  },
+  "build_params": {
+    "branch": "master"
+  }
+}    
+```
 
 And here's an example curl request:
 
-   ```json
-   curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
-   ```
+```
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
+```
 
 In the above example, we triggered a build of the app's `master` branch.
 
