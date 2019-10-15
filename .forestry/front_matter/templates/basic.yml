@@ -28,8 +28,8 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- _articles/en/api/build-trigger.md
 - deploy.md
+- _articles/en/api/build-trigger.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーを変更する方法を教えて下さい-how-to-change-the-owner-of-an-app.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/サブモジュールもしくはプライベートレポジトリ依存が含まれるプロジェクトを追加することは可能ですか-can-i-add-projects-with-submodules-or-with-private-repo-dependencies.md
