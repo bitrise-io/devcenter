@@ -43,7 +43,9 @@ Here's a minimal sample JSON body which specifies _master_ as the value of the `
 
 And here's an example curl request:
 
-    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
+   ```json
+   curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
+   ```
 
 In the above example, we triggered a build of the app's `master` branch.
 
