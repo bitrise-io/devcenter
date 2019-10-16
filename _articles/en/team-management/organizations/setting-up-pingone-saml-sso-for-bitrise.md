@@ -6,7 +6,6 @@ summary: ''
 published: false
 
 ---
-
 This guide provides step-by-step instructions on setting up Bitrise as a SAML SSO application in [Ping Identity](https://www.pingidentity.com/en/trials.html).
 
 This requires:
@@ -30,7 +29,6 @@ This requires:
     ![](/img/enable-single-signon.jpeg)
     * **Entity ID field**: Type `Bitrise`.
     * **Signing**: Click the **Sign Response** option.
-      
 
       Here is an overview of the above settings:
       ![](/img/appconfig-requiredfields-bitrise.jpg)
@@ -51,7 +49,7 @@ This requires:
       ![](/img/Idp-certificate-bitrise.jpg)
 11. Click **Configure SSO** on Bitrise.
 
-Now you have set up SAML SSO on your Bitrise Organization. All there is left to do is enable it.
+Now you have set up SAML SSO on your Bitrise Organization. All there is left to do is [enable](/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise/#enabling-saml-sso) it.
 
 ## Enabling SAML SSO
 
@@ -66,3 +64,9 @@ Once the Organization owner has set up the connection between the SAML SSO provi
 You should be landing on the Organization’s Dashboard. From now on, you can use the [Log in via SSO](https://app.bitrise.io/initiate-saml-sign-in) function to access your Organization on Bitrise.
 
 You can check which Organization member has switched from the usual login flow to the SAML SSO one if you [check their statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) on the **People** page. Once all in, you can [enforce SAML SSO](/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement) as the only gateway to the Organization.
+
+<div class="banner">
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Set up PingOne SSO</div>
+<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your organization</button></a>
+</div>
