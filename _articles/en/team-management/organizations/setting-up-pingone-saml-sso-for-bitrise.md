@@ -35,21 +35,20 @@ Here is an overview of the above settings:
 
 ![](/img/appconfig-requiredfields-bitrise.jpg)
 
-	Continue to the next step.
+5. Continue to the next step.
+6. At **SSO Attribute Mapping**, you don’t have to change anything, proceed to the next step.
+7. At **Group Access**, add the group/s to your application. These groups will be able to access Bitrise through SAML SSO. Continue to the next step.
+8. At the **Review Setup** page, you can doublecheck the details you provided in the previous steps. Make sure you download the following files from this review page:
 
-1. At **SSO Attribute Mapping**, you don’t have to change anything, proceed to the next step.
-2. At **Group Access**, add the group/s to your application. These groups will be able to access Bitrise through SAML SSO. Continue to the next step.
-3. At the **Review Setup** page, you can doublecheck the details you provided in the previous steps. Make sure you download the following files from this review page:
+	* Click **Download** to get the **Signing Certificate** and **SAML Metadata** files.
 
-* Click **Download** to get the **Signing Certificate** and **SAML Metadata** files.
+9. Click **Finish**.
+10. Let’s open the two files.
 
-1. Click **Finish**.
-2. Let’s open the two files.
+	* Copy the entire content of the **SAML Metadata** file and paste it in the **Certificate** field of your Bitrise **Enable Single Sign-On** page.
+	* Open the **Signing Certificate** file and copy the HTTP-POST SingleSignOnService Location link and paste it in the **Identity provider sign-on URL** field on Bitrise.
 
-* Copy the entire content of the **SAML Metadata** file and paste it in the **Certificate** field of your Bitrise **Enable Single Sign-On** page.
-* Open the **Signing Certificate** file and copy the HTTP-POST SingleSignOnService Location link and paste it in the **Identity provider sign-on URL** field on Bitrise.
-
-1. Click **Configure SSO** on Bitrise.
+11. Click **Configure SSO** on Bitrise.
 
 Now you have set up SAML SSO on your Bitrise Organization. All there is left to do is enable it.
 
