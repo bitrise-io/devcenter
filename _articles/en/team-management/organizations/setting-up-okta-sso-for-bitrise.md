@@ -2,8 +2,13 @@
 title: Setting up Okta SSO for Bitrise
 redirect_from: []
 date: '2019-04-24T07:13:35+00:00'
-tag: []
-summary: ''
+tag:
+- teams
+- " org"
+- security
+- sso
+summary: Learn how to set up Bitrise as a SAML SSO app on Okta, enable SAML SSO and
+  enforce on your Bitrise Organization.
 menu:
   organizations:
     weight: 21
