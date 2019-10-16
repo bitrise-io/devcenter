@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/why-does-my-build-take-longer-on-bitrise-than-on-my-machine.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/なぜadd-new-app-新規のアプリを追加する-ページに私のgithub-organization-組織-repository-レポジトリ-が表示されないのですか-why-can-t-i-see-my-github-organization-repository-on-the-add-new-app-page.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/github-organization-組織-へbitriseのアクセスを許可する方法はありますか-how-to-grant-bitrise-access-to-a-github-organization.md
@@ -38,7 +39,6 @@ pages:
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
-- _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/en/api/build-trigger.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーを変更する方法を教えて下さい-how-to-change-the-owner-of-an-app.md
