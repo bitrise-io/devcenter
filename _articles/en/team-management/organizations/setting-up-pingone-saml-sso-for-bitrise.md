@@ -1,9 +1,12 @@
 ---
-tag: []
-title: Setting up PingOne SAML SSO for Bitrise
+tag:
+- orgs
+- security
+- sso
+title: Setting up Ping Identity SSO for Bitrise
 redirect_from: []
-summary: ''
-published: false
+summary: Learn how to set up Bitrise as a SAML SSO app on Ping Identity, enable SAML
+  SSO and enforce on your Bitrise Organization.
 
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML SSO application in [Ping Identity](https://www.pingidentity.com/en/trials.html).
