@@ -30,6 +30,8 @@ This requires:
     ![](/img/enable-single-signon.jpeg)
     * **Entity ID field**: Type `Bitrise`.
     * **Signing**: Click the **Sign Response** option.
+      
+
       Here is an overview of the above settings:
       ![](/img/appconfig-requiredfields-bitrise.jpg)
  5. Continue to the next step.
