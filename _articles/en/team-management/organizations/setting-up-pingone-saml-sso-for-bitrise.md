@@ -65,6 +65,8 @@ You should be landing on the Organization’s Dashboard. From now on, you can us
 
 You can check which Organization member has switched from the usual login flow to the SAML SSO one if you [check their statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) on the **People** page. Once all in, you can [enforce SAML SSO](/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement) as the only gateway to the Organization.
 
+{% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you’d like to learn more about SAML SSO on Bitrise, check out our SAML SSO in organizations guide. "%}
+
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 <div class="deploy-text">Set up PingOne SSO</div>
