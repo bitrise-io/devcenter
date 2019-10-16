@@ -8,7 +8,7 @@ tag:
 - security
 - sso
 summary: Learn how to set up Bitrise as a SAML SSO app on Okta, enable SAML SSO and
-  enforce on your Bitrise Organization.
+  enforce it on your Bitrise Organization.
 menu:
   organizations:
     weight: 21
