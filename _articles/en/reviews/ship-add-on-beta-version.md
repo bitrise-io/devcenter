@@ -12,6 +12,8 @@ published: false
 
 With Ship, you can manage Continuous Deployment of your app, as well as manage different build versions of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
 
+{% include message_box.html type="info" title="Ship language" content="As of right now, Ship is only available in English."%}
+
 You can do a whole lot of things with Ship:
 
 * View all the build versions of your app.
