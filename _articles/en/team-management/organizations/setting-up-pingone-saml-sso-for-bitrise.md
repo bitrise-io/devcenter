@@ -19,20 +19,23 @@ This requires:
 1. Click **APPLICATIONS** on the top bar of [PingOne](https://admin.pingone.com/web-portal/login).
 2. On **My Applications** tab, make sure **SAML** is selected. Click the **Add Application** drop down and select **New SAML Application**.
 
-	![](/img/new-saml-application-pingone.jpg)
+   ![](/img/new-saml-application-pingone.jpg)
+3. At **Application Details,** fill out the required fields and click **Continue to Next Step**.
 
-1. At **Application Details,** fill out the required fields and click **Continue to Next Step**.
+   ![](/img/appdetailspage-pingone.jpg)
+4. At **Application Configuration**, leave the **I have the SAML configuration** selected. Fill out the following:
 
-	![](/img/appdetailspage-pingone.jpg)
-2. At **Application Configuration**, leave the **I have the SAML configuration** selected. Fill out the following:
+	* **Assertion Consumer Service (ACS)** field: Insert the **Single Sign-On URL** link here from your Bitrise Organization’s **Single Sign-O**n tab.
 
-* **Assertion Consumer Service (ACS)** field: Insert the **Single Sign-On URL** link from your Bitrise Organization’s Single Sign-On tab here.
-* **Entity ID field**: Type Bitrise.
-* **Signing**: Click the **Sign Response** option.
+  	![](/img/enable-single-signon.jpeg)
+	* **Entity ID field**: Type Bitrise.
+	* **Signing**: Click the **Sign Response** option.
 
 Here is an overview of the above settings:
 
-Continue to the next step.
+![](/img/appconfig-requiredfields-bitrise.jpg)
+
+	Continue to the next step.
 
 1. At **SSO Attribute Mapping**, you don’t have to change anything, proceed to the next step.
 2. At **Group Access**, add the group/s to your application. These groups will be able to access Bitrise through SAML SSO. Continue to the next step.
