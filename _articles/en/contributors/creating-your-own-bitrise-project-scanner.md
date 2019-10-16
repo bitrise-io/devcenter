@@ -13,7 +13,7 @@ summary: 'The project scanner is a tool that identifies the given project''s typ
   own scanner: these scanners are stored as separate packages.'
 menu:
   contributors-main:
-    weight: 5
+    weight: 3
 
 ---
 The project scanner is a tool that identifies the given project's type and generates a basic Bitrise configuration. Each supported project type has its own scanner: these scanners are stored as separate packages.

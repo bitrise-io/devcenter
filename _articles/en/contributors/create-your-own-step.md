@@ -11,7 +11,7 @@ summary: Creating your own Step is as simple as running a bitrise CLI (v1.6.1+) 
 redirect_from: "/bitrise-cli/create-your-own-step/"
 menu:
   contributors-main:
-    weight: 3
+    weight: 1
 
 ---
 Creating your own Step is as simple as running a `bitrise` CLI (v1.6.1+) command and following the guide it prints. You can generate Steps using either the Bash or Go toolkits.
