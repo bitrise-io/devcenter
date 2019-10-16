@@ -29,7 +29,6 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
-- _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise-1.md
 - deploy.md
 - _articles/en/api/build-trigger.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
