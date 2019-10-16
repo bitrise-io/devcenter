@@ -6,6 +6,9 @@ summary: ''
 published: false
 
 ---
+
+{% include not_translated_yet.html %}
+
 This guide provides step-by-step instructions on setting up Bitrise as a SAML SSO application in [Ping Identity](https://www.pingidentity.com/en/trials.html).
 
 This requires:
@@ -16,36 +19,36 @@ This requires:
 
 ## Adding Bitrise to Ping Identity
 
-1. Click **APPLICATIONS** on the top bar of [PingOne](https://admin.pingone.com/web-portal/login).
-2. On **My Applications** tab, make sure **SAML** is selected. Click the **Add Application** drop down and select **New SAML Application**.
+ 1. Click **APPLICATIONS** on the top bar of [PingOne](https://admin.pingone.com/web-portal/login).
+ 2. On **My Applications** tab, make sure **SAML** is selected. Click the **Add Application** drop down and select **New SAML Application**.
 
-   ![](/img/new-saml-application-pingone.jpg)
-3. At **Application Details,** fill out the required fields and click **Continue to Next Step**.
+    ![](/img/new-saml-application-pingone.jpg)
+ 3. At **Application Details,** fill out the required fields and click **Continue to Next Step**.
 
-   ![](/img/appdetailspage-pingone.jpg)
-4. At **Application Configuration**, leave the **I have the SAML configuration** selected. Fill out the following:
+    ![](/img/appdetailspage-pingone.jpg)
+ 4. At **Application Configuration**, leave the **I have the SAML configuration** selected. Fill out the following:
+    * **Assertion Consumer Service (ACS)** field: Insert the **Single Sign-On URL** link here from your Bitrise Organization’s **Single Sign-O**n tab.
 
-	* **Assertion Consumer Service (ACS)** field: Insert the **Single Sign-On URL** link here from your Bitrise Organization’s **Single Sign-O**n tab.
+    ![](/img/enable-single-signon.jpeg)
+    * **Entity ID field**: Type Bitrise.
+    * **Signing**: Click the **Sign Response** option.
+      Here is an overview of the above settings:
+      ![](/img/appconfig-requiredfields-bitrise.jpg)
+ 5. Continue to the next step.
+ 6. At **SSO Attribute Mapping**, you don’t have to change anything, proceed to the next step.
+ 7. At **Group Access**, add the group/s to your application. These groups will be able to access Bitrise through SAML SSO. Continue to the next step.
 
-  	![](/img/enable-single-signon.jpeg)
-	* **Entity ID field**: Type Bitrise.
-	* **Signing**: Click the **Sign Response** option.
-    Here is an overview of the above settings:
-	![](/img/appconfig-requiredfields-bitrise.jpg)
+    ![](/img/group-access-pingone.jpg)
+ 8. At the **Review Setup** page, you can doublecheck the details you provided in the previous steps. Make sure you download the following files from this review page:
+    * Click **Download** to get the **Signing Certificate** and **SAML Metadata** files.
 
-5. Continue to the next step.
-6. At **SSO Attribute Mapping**, you don’t have to change anything, proceed to the next step.
-7. At **Group Access**, add the group/s to your application. These groups will be able to access Bitrise through SAML SSO. Continue to the next step.
-8. At the **Review Setup** page, you can doublecheck the details you provided in the previous steps. Make sure you download the following files from this review page:
-
-	* Click **Download** to get the **Signing Certificate** and **SAML Metadata** files.
-
-9. Click **Finish**.
+      ![](/img/review-setup-pingone-downloadsaml.jpg)
+ 9. Click **Finish**.
 10. Let’s open the two files.
+    * Copy the entire content of the **SAML Metadata** file and paste it in the **Certificate** field of your Bitrise **Enable Single Sign-On** page.
+    * Open the **Signing Certificate** file and copy the `HTTP-POST` `SingleSignOnService Location` link and paste it in the **Identity provider sign-on URL** field on Bitrise.
 
-	* Copy the entire content of the **SAML Metadata** file and paste it in the **Certificate** field of your Bitrise **Enable Single Sign-On** page.
-	* Open the **Signing Certificate** file and copy the HTTP-POST SingleSignOnService Location link and paste it in the **Identity provider sign-on URL** field on Bitrise.
-
+      ![](/img/Idp-certificate-bitrise.jpg)
 11. Click **Configure SSO** on Bitrise.
 
 Now you have set up SAML SSO on your Bitrise Organization. All there is left to do is enable it.
@@ -56,6 +59,8 @@ Once the Organization owner has set up the connection between the SAML SSO provi
 
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
 2. Find the email from Bitrise ([letsconnect@bitrise.io](mailto:letsconnect@bitrise.io)). You can click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
+
+   ![](/img/sso-email-bitrise.jpg)
 3. Click **Authorize**.
 
 You should be landing on the Organization’s Dashboard. From now on, you can use the [Log in via SSO](https://app.bitrise.io/initiate-saml-sign-in) function to access your Organization on Bitrise.
