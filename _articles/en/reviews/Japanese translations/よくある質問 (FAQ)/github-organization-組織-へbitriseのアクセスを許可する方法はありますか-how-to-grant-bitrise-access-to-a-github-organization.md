@@ -29,6 +29,4 @@ This guide explains how to grant access for [bitrise.io](https://www.bitrise.io/
 
 [bitrise.io](https://www.bitrise.io)に戻り、アバターをクリックして、`Add new App`を選択し、`Next`を押すと、OrganizationとOrganizationのレポジトリを確認することができます。
 
-{% include message_box.html type="note" title="レポジトリは他のプライベートレポジトリのフォーク (分岐)です" content=" If the repository is a fork of another private repository which belongs to **(another) Organization**, you have to repeat these steps and grant access for Bitrise for the Organization **which owns the original repository**. This is a GitHub limitation: to be able to access a private repository fork you have to grant access for the service (Bitrise) in both repositories; in the fork and in the original repository/Organization too.
-
-もしレポジトリが**(他の)Organization**に属したプライベートレポジトリのフォークである場合、上記で説明した手順を繰り返して、**本来のレポジトリを所持する**Organization用に、Bitriseのアクセスを許可する必要があります。これはGitHubの制限であります：プライベートレポジトリフォークのアクセスを許可させるには、フォークしたレポジトリと本来のレポジトリ/Organizationの両方へサービス (Bitrise)の許可をする必要があります。"%}
+{% include message_box.html type="note" title="レポジトリは他のプライベートレポジトリのフォーク (分岐)です" content=" もしレポジトリが**(他の)Organization**に属したプライベートレポジトリのフォークである場合、上記で説明した手順を繰り返して、**本来のレポジトリを所持する**Organization用に、Bitriseのアクセスを許可する必要があります。これはGitHubが制限しているためです：プライベートレポジトリのフォークのアクセスを許可させるには、フォーク内のレポジトリと本来のレポジトリ/Organizationの両方へサービス (Bitrise)の許可をする必要があります。"%}
