@@ -22,23 +22,29 @@ You can do a whole lot of things with Ship:
 
   ![](/img/ship_benefits.jpg)
 
-## Opening Ship 
+## Opening Ship
 
 You have two options to open Ship:
 
 * On the **Add-ons** tab of the app: this option takes you to Ship’s home page.
-* From the **Builds** page: this option takes you to the build’s Ship page. 
+* From the **Builds** page: this option takes you to the build’s Ship page.
+
+## Getting started with Ship 
+
+When first logging in to Ship, you might not have a single build version available to publish. But don't worry, that can be fixed quickly. 
+
+* In one of your Workflows, you need a Step that builds your app, such as **Xcode Archive & Export for iOS** or **Android Build**. 
+* The same Workflow must have the correct version of the **Deploy to Bitrise.io** Step after the Step that builds your app.
+
+{% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be of version 1.9.0 and the **Xcode Archive & Export for iOS** Step for iOS apps must be of version 2.6.0 - older versions of the Steps do not support Ship."%}
+
+Once you built your app - that is to say, produced an APK or an IPA file -, you will be able to start using Ship. 
 
 ## Publishing an app with Ship
 
-To publish an app using Ship, you need a minimum of two things:
+To publish an app on Ship, you need to build your app with an exposed Workflow. 
 
-* Either an `.xcarchive.zip` file, an APK or an Android App Bundle which must be placed in the directory stored in the `BITRISE_DEPLOY_DIR` Environment Variable. For iOS apps, the **Xcode Archive & Export for iOS** Step does this by default; for Android apps, the two build Steps will take care of it: **Android Build** or **Gradle Runner**.
-* All exposed Workflows must include a **Deploy to Bitrise.io** Step where the **Compress the artifacts into one file?** input field is set to `false`.
-
-[Exposing the artifact](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. You don't necessarily have to expose a Workflow (or more). In this case all your app's Workflows that contain **Deploy to Bitrise.io** Step display all artifacts which are related to your app's Workflows.
-
-{% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be of version 1.9.0 and the **Xcode Archive & Export for iOS** Step for iOS apps must be of version 2.6.0 - older versions of the Steps do not support Ship."%}
+[Exposing the artifact](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. If you don't expose a Workflow, then all Workflows that contain the correct version of the **Deploy to Bitrise.io** Step display all artifacts which are related to your app's Workflows.
 
 On the **Settings** page, you can configure a number of options for publishing your app. If it's a cross-platform app, you can define the settings separately for the iOS and the Android versions.
 
