@@ -7,8 +7,6 @@ published: false
 
 ---
 
-{% include not_translated_yet.html %}
-
 This guide provides step-by-step instructions on setting up Bitrise as a SAML SSO application in [Ping Identity](https://www.pingidentity.com/en/trials.html).
 
 This requires:
@@ -20,7 +18,7 @@ This requires:
 ## Adding Bitrise to Ping Identity
 
  1. Click **APPLICATIONS** on the top bar of [PingOne](https://admin.pingone.com/web-portal/login).
- 2. On **My Applications** tab, make sure **SAML** is selected. Click the **Add Application** drop down and select **New SAML Application**.
+ 2. On **My Applications** tab, make sure **SAML** is selected. Click the **Add Application** drop-down and select **New SAML Application**.
 
     ![](/img/new-saml-application-pingone.jpg)
  3. At **Application Details,** fill out the required fields and click **Continue to Next Step**.
