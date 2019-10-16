@@ -3,6 +3,7 @@ tag:
 - orgs
 - security
 - sso
+- teams
 title: Setting up Ping Identity SSO for Bitrise
 redirect_from: []
 summary: Learn how to set up Bitrise as a SAML SSO app on Ping Identity, enable SAML
