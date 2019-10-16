@@ -7,8 +7,6 @@ summary: ''
 published: false
 
 ---
-This guide explains how to grant access for [bitrise.io](https://www.bitrise.io/) to your GitHub Organization.
-
 このガイドでは、ご自身のGitHub Organization (組織) へ[bitrise.io](https://www.bitrise.io/)のアクセスを許可する方法について説明します。
 
 {% include message_box.html type="note" title=" GitHub上でBitriseを認証しましたか？" content=" このガイドでは、GitHubがすでにBitriseを[認証した状態](https://help.github.com/articles/authorizing-oauth-apps/)であると仮定しています。"%}
