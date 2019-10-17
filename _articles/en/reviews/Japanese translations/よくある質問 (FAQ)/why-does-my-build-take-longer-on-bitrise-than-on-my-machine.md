@@ -9,26 +9,45 @@ published: false
 ---
 If your build takes a lot of time on Bitrise, time for investigating! First, find out which step(s) take a significant time in your build.
 
-* If your dependency steps (for example, CocoaPods Install) take a long time, try using [build caching](/caching/about-caching/) to speed it up. This is also true for any step which might include network communication, addressing 3rd party web services. which might be temporarily unavailable or might be slow due to high demand.
-* If the long build time is related to an Archive or Test step, which only performs calculations on the Virtual Machine and does not access an outside service then read on - we'll explore the possible reasons.
+ビルド時間が思った以上に長くかかってしまう場合、このガイドを参照してください！まず、ビルドでどのステップに時間がかかっているのかを調べます。
 
-## Local build caches
+* If your dependency steps (for example, CocoaPods Install) take a long time, try using [build caching](/caching/about-caching/) to speed it up. This is also true for any step which might include network communication, addressing 3rd party web services. which might be temporarily unavailable or might be slow due to high demand.
+* 依存のステップ (例: Cocoapods Install) に時間がかかっている場合、ビルドキャッシュを使ってスピードアップを図りましょう。また、ネットワーク通信やサードパーティ製ウェブサービスを使用するステップを使っていても同様で、一時的に利用不可になったり、需要が高いがゆえに遅くなる可能性があります。
+* If the long build time is related to an Archive or Test step, which only performs calculations on the Virtual Machine and does not access an outside service then read on - we'll explore the possible reasons.
+* 長いビルド時間が、仮想マシンでのみ計算を実行したり、外部サービスにアクセスしないアーカイブまたはテストステップと関連性がある場合、引き続きこのガイドを読んでください。
+
+## Local build caches  
+ローカルビルドキャッシュ
 
 Most of the tools you use (for example, Xcode) do a lot of local build caching to speed up subsequent builds. These caches help a lot to decrease the build time on your Mac/PC, but these are not available on [bitrise.io](https://www.bitrise.io).
 
-{% include message_box.html type="note" title="Testing local caching on Bitrise" content="You can test how much these caches improve the build time by running the same step (for example, \`Xcode Archive & Export for iOS\`) two times during your build. The second one will be significantly faster than the first one, because of the available local build caches Xcode generates."%}
+ツール (例:Xcode) のほとんどは、次のビルドのスピードアップを実現させるため多くのローカルビルドキャッシュを行います。このようなキャッシュはMac/PC上のビルド時間を削減するのを手助けしますが、Bitriseでは使用になることはできません。
+
+{% include message_box.html type="note" title="Testing local caching on Bitrise　Bitrise上でローカルキャッシュのテスト" content="You can test how much these caches improve the build time by running the same step (for example, \`Xcode Archive & Export for iOS\`) two times during your build. The second one will be significantly faster than the first one, because of the available local build caches Xcode generates.
+
+同じステップ (例: `Xcode Archive & Export for iOS`) をビルド中に2回走らせることで、どのくらいローカルキャッシュでビルド時間が短縮されるのかをテストすることができます。Xcodeが生成する利用可能なローカルビルドキャッシュにより、2回目のほうが1回目よりも格段に速いです。"%}
 
 On [bitrise.io](https://www.bitrise.io) every build runs in a clean Virtual Machine. No file is stored after your build finishes, the whole Virtual Machine is destroyed, and the next build will start in a clean Virtual Machine again.
 
+bitrise.ioでは全てのビルドはクリーンな仮想マシンで動きます。ビルド終了後は、ファイルが保存されることなく、仮想マシンが破壊されます。そして次のビルドが開始されるとまた新たなクリーンな仮想マシンで実行されます。
+
 **The lack of local build caches is important to improve the reliability of your project**, but it slows down the build process. Why it's important? In your local build caches there might be files which are not under version control. This means that if you do a git clone of your project, your build will fail as these files will not be present.
 
+**ローカルビルドキャッシュの不足はプロジェクトの信頼性を向上させます**が、ビルドプロセスが遅くなります。ではなぜそれは重要なのでしょうか。ローカルビルドキャッシュ内にはバージョン管理下にないファイルがあるかもしれません。これは、もしプロジェクトのgit cloneを実行する場合、これらのファイルが存在しないためビルドが失敗するという意味を表します。
+
 This issue is eliminated by using clean virtual machines on [bitrise.io](https://www.bitrise.io), where only the code and dependencies you specify (which are under version control, and are reproducible) are available. If it works there then it'll work on a brand new Mac/PC too - for example, when a new colleague joins your team and starts to work on the project.
+
+この問題は、 (バージョン管理下にあり、複製が可能である) 指定したコードと依存のみが使用可能な[bitrise.io](https://www.bitrise.io)で、クリーンな仮想マシンを使用することで解消されます。もし機能する場合は新品のMac/PCでも実行できます。例えば、新しくチームにメンバーが加わった時、そのメンバーはすぐにプロジェクトを開始することができます。
 
 ## Network Resources
 
 If your project requires dependencies which have to be retrieved from the Internet it'll add time to the build process.
 
+プロジェクトがインターネットから取り出さなければならない依存を必要とする場合、ビルドプロセスに時間を追加します。
+
 For example, when you build your iOS project on your Mac and you use CocoaPods, you usually don't have to run `pod install`, only when your CocoaPods dependency list changes. If you don't commit your Pods into your repository then this process (to download the required dependencies) have to be performed for every build in a clean environment.
+
+例えば、MacでiOSプロジェクトをビルドする上でCocoaPodsを使用する場合、たいてい`pod install`を走らせる必要はありません。
 
 Possible solutions:
 
