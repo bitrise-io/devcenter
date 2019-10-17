@@ -23,9 +23,45 @@ Contributing to Bitrise is easy: write an open source integration, a guide, or a
 
 * [Edit existing articles or submit new ones to our docs](https://github.com/bitrise-io/devcenter/).
 * [Read our blog](https://blog.bitrise.io/), and [contact us](https://www.bitrise.io/contact) if you want to write your own blog post.
-* [Request a feature, submit an issue, or just talk to other members of our community on our forums.](https://discuss.bitrise.io/)"%} 
+* [Request a feature, submit an issue, or just talk to other members of our community on our forums.](https://discuss.bitrise.io/)"%}
 
 ## Creating your own Step
+
+<div><button type="button" class="collapsible"><p>Android procedure</p></button>
+<div class="collapsible-content" markdown="1">
+1. Open your app's page on Bitrise.
+2. Click the **Builds** tab and select the build that ran the tests.
+3. Under the build status, click **See more** next to the **Test reports** label.
+
+   ![](/img/android-test-test_-_build__20__ce39bf96fc9f7668__-_Bitrise.png)
+4. On the **Test Summary** tab, find the test you want to check.
+
+   Alternatively, on the top bar, click the tab of the test set you want to check out.
+
+   To filter tests based on their results, open the menu on the top right, which is set to **All** by default.
+
+   ![](/img/Test_add-on-3.png)
+5. Click **Test cases** to see the details.
+</div>
+</div>
+
+<div><button type="button" class="collapsible"><p>iOS procedure</p></button>
+<div class="collapsible-content" markdown="1">
+1. Open your app's page on Bitrise.
+2. Click the **Builds** tab and select the build that ran the tests.
+3. Under the build status, click **See more** next to the **Test reports** label.
+
+   ![](/img/android-test-test_-_build__20__ce39bf96fc9f7668__-_Bitrise.png)
+4. On the **Test Summary** tab, find the test you want to check.
+
+   Alternatively, on the top bar, click the tab of the test set you want to check out.
+
+   To filter tests based on their results, open the menu on the top right, which is set to **All** by default.
+
+   ![](/img/Test_add-on-3.png)
+5. Click **Test cases** to see the details.
+</div>
+</div>
 
 Bitrise offers well over 200 Steps to our users. We maintain many of them ourselves but our users' community does an outstanding job of contributing to our Step Library (StepLib). Anyone can submit a Step - if approved, it will become part of the official Bitrise StepLib and available to all Bitrise users! Check out how to create your own Step and share it with the world: [Creating your own Step](/contributors/create-your-own-step/).
 
