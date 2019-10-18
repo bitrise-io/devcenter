@@ -52,16 +52,18 @@ iOS and Android apps have their own set of settings on the **Settings** page; fo
 
 ### Exposing a Workflow's artifacts to Ship
 
-Exposing a Workflow's artifacts means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. By default, all Workflows are exposed: if they contain the correct version of the **Deploy to Bitrise.io** Step display all artifacts which are related to your app's Workflows.
+Exposing a Workflow's artifacts means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. By default, all Workflows are exposed if they contain the correct version of the **Deploy to Bitrise.io** Step. If you are happy with that, just leave the field as is. 
+
+If, however, you add a Workflow here, only that Workflow will be exposed.
 
 To expose a Workflow's artifacts to Ship:
 
 1. Go to your app's Ship page.
 2. Click **Settings** in the top right corner.
 3. Go to the **General** tab.
-
-   ![](/img/settings_expose.jpg)
 4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
+
+   ![](/img/Settings___android-test-test.png)
 
    Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma (for example, `build, deploy, release_build_android`) .
 5. Scroll down to the bottom of the page and click **Save**.
@@ -136,8 +138,8 @@ To configure publishing an app for iOS:
 6. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
 7. Enter the **App SKU**.
 8. Go back to the **Details** page and click **Publish**.
-</div>
-</div>
+   </div>
+   </div>
 
 <div><button type="button" class="collapsible"><p>Publishing an app for Android</p></button>
 <div class="collapsible-content" markdown="1">
@@ -166,9 +168,8 @@ To configure publishing an app for Android:
 7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing.
    ![](/img/flavorandroid.jpg)
 8. Fill out the **Details** page and click **Publish.**
-</div>
-</div>
-
+   </div>
+   </div>
 
 ## Publishing status and logs
 
