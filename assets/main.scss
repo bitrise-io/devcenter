@@ -642,6 +642,64 @@ main.content {
 		}
 	}
 
+.collapsible {
+	display: block;
+  cursor: pointer;
+  width: 100%;
+	border-bottom: solid 2px #f8f0ff;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+  text-align: left;
+  outline: none;
+	margin-top: 0;
+
+	p {
+	  color: #683d87;
+		display: inline-block;
+		letter-spacing: 0.2px;
+		font-weight: bold;
+		font-size: 1.8rem;
+		padding-top: 0;
+		padding-bottom: 0;
+		padding-left: 1rem;
+	}
+
+	&:before {
+		content: url(/assets/logos/icons-docs/plus-open.svg);
+		display: inline-block;
+		transform: translateY(0.5rem);
+	}
+}
+
+.active, .collapsible:hover {
+	border-bottom: solid 3px #760fc3;
+
+	p {
+		color: #760fc3;
+	}
+}
+
+.active {
+
+	&:before {
+		content: url(/assets/logos/icons-docs/minus-close.svg);
+		display: inline-block;
+		transform: translateY(0.5rem);
+	}
+}
+
+div.collapsible-content {
+	display: none;
+  overflow: hidden;
+	border-left: solid 2px #f8f0ff;
+	border-right: solid 2px #f8f0ff;
+	border-bottom: solid 2px #f8f0ff;
+	border-top: none;
+	border-radius: 16px;
+	padding: 0 18px;
+}
+
 h1, h2, h3, h4 {
 	letter-spacing: 0.2px;
 }

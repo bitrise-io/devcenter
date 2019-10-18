@@ -23,7 +23,7 @@ Contributing to Bitrise is easy: write an open source integration, a guide, or a
 
 * [Edit existing articles or submit new ones to our docs](https://github.com/bitrise-io/devcenter/).
 * [Read our blog](https://blog.bitrise.io/), and [contact us](https://www.bitrise.io/contact) if you want to write your own blog post.
-* [Request a feature, submit an issue, or just talk to other members of our community on our forums.](https://discuss.bitrise.io/)"%} 
+* [Request a feature, submit an issue, or just talk to other members of our community on our forums.](https://discuss.bitrise.io/)"%}
 
 ## Creating your own Step
 

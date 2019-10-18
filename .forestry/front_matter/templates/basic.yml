@@ -29,14 +29,19 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/reviews/ship-add-on-test.md
+- _articles/en/builds/available-environment-variables.md
+- _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
+- _articles/en/reviews/ship-add-on-beta-version.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/why-does-my-build-take-longer-on-bitrise-than-on-my-machine.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/なぜadd-new-app-新規のアプリを追加する-ページに私のgithub-organization-組織-repository-レポジトリ-が表示されないのですか-why-can-t-i-see-my-github-organization-repository-on-the-add-new-app-page.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/github-organization-組織-へbitriseのアクセスを許可する方法はありますか-how-to-grant-bitrise-access-to-a-github-organization.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/bitbucket-teamへbitriseのアクセスを許可する方法を教えて下さい-how-can-i-grant-bitrise-access-to-a-bitbucket-team.md
 - _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/github-organization-組織-へbitriseのアクセスを許可する方法はありますか-how-to-grant-bitrise-access-to-a-github-organization.md
 - _articles/jp/team-management/organizations/setting-up-ping-identity-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
-- _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/en/api/build-trigger.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーを変更する方法を教えて下さい-how-to-change-the-owner-of-an-app.md
@@ -76,7 +81,6 @@ pages:
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
 - _articles/en/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
-- _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
 - _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
 - _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
@@ -178,7 +182,6 @@ pages:
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
 - _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
-- _articles/en/builds/available-environment-variables.md
 - _articles/en/builds/triggering-builds/trigger-code-push.md
 - _articles/en/team-management/organizations/managing-invoices.md
 - _articles/en/team-management/organizations/org-ownership.md
