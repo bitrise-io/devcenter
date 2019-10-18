@@ -106,8 +106,10 @@ To install it directly from Ship:
    Click on the **Devices** tab to find out if a given device is registered. Read [our guide on how to register your devices](/testing/registering-a-test-device/) on Bitrise.
 2. Under the name of the app, find and click the **Install** button.
 
-### Publishing an app for iOS
+### Publishing an app online
 
+<div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button>
+<div class="collapsible-content" markdown="1">
 {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
 
 {% include message_box.html type="note" title="The `.xcarchive.zip` file with a custom Step" content="The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:
@@ -135,11 +137,12 @@ To configure publishing an app for iOS:
    Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
 6. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
 7. Enter the **App SKU**.
+8. Go back to the **Details** page and click **Publish**.
+</div>
+</div>
 
-Your app is now ready for publishing. To publish, go back to the **Details** page and click **Publish**.
-
-### Publishing an app for Android
-
+<div><button type="button" class="collapsible"><p>Publishing an app for Android</p></button>
+<div class="collapsible-content" markdown="1">
 {% include message_box.html type="important" title="Building the app" content="Before you'd publish an Android app in Ship, make sure that:
 
 * Your app is built in a Workflow that is exposed to Ship. The Workflow must contain a build Step that builds an APK(s) or an Android App Bundle (such as **Android Build** or **Gradle Runner** Step) and the **Deploy to Bitrise.io** Step.
@@ -165,6 +168,9 @@ To configure publishing an app for Android:
 7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing.
    ![](/img/flavorandroid.jpg)
 8. Fill out the **Details** page and click **Publish.**
+</div>
+</div>
+
 
 ## Publishing status and logs
 
