@@ -31,30 +31,30 @@ You have two options to open Ship:
 * On the **Add-ons** tab of the app: this option takes you to Ship’s home page.
 * From the **Builds** page: this option takes you to the build’s Ship page.
 
-## Getting started with Ship 
+## Getting started with Ship
 
-When first logging in to Ship, you might not have a single build version available to publish. But don't worry, that can be fixed quickly. 
+When first logging in to Ship, you might not have a single build version available to publish. But don't worry, that can be fixed quickly.
 
-* In one of your Workflows, you need a Step that builds your app, such as **Xcode Archive & Export for iOS** or **Android Build**. 
+* In one of your Workflows, you need a Step that builds your app, such as **Xcode Archive & Export for iOS** or **Android Build**.
 * The same Workflow must have the correct version of the **Deploy to Bitrise.io** Step after the Step that builds your app.
 
 {% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be of version 1.9.0 and the **Xcode Archive & Export for iOS** Step for iOS apps must be of version 2.6.0 - older versions of the Steps do not support Ship."%}
 
-Once you built your app - that is to say, produced an APK or an IPA file -, you will be able to start using Ship. 
+Once you built your app - that is to say, produced an APK or an IPA file -, you will be able to start using Ship.
 
-## Publishing an app with Ship
+## Configuring and publishing an app with Ship
 
 To publish an app on Ship, you need to:
 
-* Build an app that has at least one [exposed Workflow](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship). 
+* Build an app that has at least one [exposed Workflow](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship).
 * Configure publishing on the **Settings** page.
-* Push the **Publish** button. 
+* Push the **Publish** button.
 
-iOS and Android apps have their own set of settings on the **Settings** page; for cross-platform app, both iOS and Android settings must be configured. 
+iOS and Android apps have their own set of settings on the **Settings** page; for cross-platform app, both iOS and Android settings must be configured.
 
 ### Exposing a Workflow's artifacts to Ship
 
-Exposing a Workflow's artifacts means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. By default, all Workflows are exposed: if they contain the correct version of the **Deploy to Bitrise.io** Step display all artifacts which are related to your app's Workflows. 
+Exposing a Workflow's artifacts means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. By default, all Workflows are exposed: if they contain the correct version of the **Deploy to Bitrise.io** Step display all artifacts which are related to your app's Workflows.
 
 To expose a Workflow's artifacts to Ship:
 
