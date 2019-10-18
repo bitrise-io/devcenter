@@ -28,8 +28,8 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- _articles/en/reviews/ship-add-on-beta-version.md
 - deploy.md
+- _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/en/reviews/ship-add-on-test.md
 - _articles/en/builds/available-environment-variables.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
