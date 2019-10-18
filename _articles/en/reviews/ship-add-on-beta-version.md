@@ -24,16 +24,14 @@ You can do a whole lot of things with Ship:
 
   ![](/img/ship_benefits.jpg)
 
-## Opening Ship
+## Getting started with Ship
 
 You have two options to open Ship:
 
 * On the **Add-ons** tab of the app: this option takes you to Ship’s home page.
 * From the **Builds** page: this option takes you to the build’s Ship page.
 
-## Getting started with Ship
-
-When first logging in to Ship, you might not have a single build version available to publish. But don't worry, that can be fixed quickly.
+When first logging in, you might not have a single build version available to publish. But don't worry, that can be fixed quickly.
 
 * In one of your Workflows, you need a Step that builds your app, such as **Xcode Archive & Export for iOS** or **Android Build**.
 * The same Workflow must have the correct version of the **Deploy to Bitrise.io** Step after the Step that builds your app.
