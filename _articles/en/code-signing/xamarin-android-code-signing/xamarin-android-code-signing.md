@@ -6,21 +6,21 @@ tag:
 - code-signing
 - files
 summary: You can specify the code signing configuration for your Xamarin Android project
-  by creating a signed APK in Xamarin Studio.
+  by creating a signed APK in Visual Studio.
 redirect_from: []
 menu:
   android-code-signing:
     weight: 8
 
 ---
-## Configuring code signing in Xamarin Studio
+## Configuring code signing in Visual Studio
 
-You can specify the code signing configuration for your Xamarin Android project by creating a signed APK in [Xamarin Studio](https://www.visualstudio.com/xamarin/).
+You can specify the code signing configuration for your Xamarin Android project by creating a signed APK in [Visual Studio](https://visualstudio.microsoft.com/).
 
-1. Log into your `Xamarin Studio`.
-2. Double click on your Xamarin Android project to open `Project Option`.
+1. Open your `Visual Studio`.
+2. Double click on your Xamarin Android project to open `Project Options`.
 3. Select the `Android Package Signing` in `Build group`.
-4. Select your platform in the `Configuration - Platform`.
+4. Select your configuration and platform in the `Configuration - Platform`.
 5. Check the `Sign .APK file using the following keystore details`.
 6. Fill out the signing information.
 
