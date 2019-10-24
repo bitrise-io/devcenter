@@ -42,28 +42,48 @@ Let's test this locally with a `git checkout COMMITHASH`.
 
 As you can see from the command's log, now you are in a detached head state, meaning the head is NOT pointing to the tip of the current branch but to your COMMIT OBJECT. This means you are not on any branch, therefore, you can't push commits to any branch either at this stage. What you can do in a detached head state is:
 
+コマンドのログからおわかりのように、今現在Detached HEAD状態であり、これはHEADが現在のブランチのtipではなく、COMMIT OBJECTのtipを指していることを意味します。その上これはどのブランチにもいないという意味でもあるので、この段階ではどのブランチにもコミットをプッシュすることはできません。Detached HEAD状態でできることは：
+
 * Creating commits.
 * Checking if tests have successfully run in this code version.
+* コミットの作成
+* このコードバージョンでテストの実行が成功したかどうかのチェック
 
 So to be able to commit and push DIRECTLY TO A BRANCH, you'll have to check out a branch first. Let's see how!
 
-## Solution
+ブランチへ直接コミットとプッシュをできるようにするには、ブランチをまず確認することから始まります。方法を見ていきましょう！
+
+## Solution解決策
 
 The above error message suggests a solution for getting back to a branch from the detached head state. You can get back to a branch by simply check out that branch with `git checkout -b BRANCH`. You could also check out that branch (`git checkout BRANCH`) before committing and pushing your changes. Please bear in mind that if you chose this option, you might commit on a different state of the code than what was built/tested during the build.
 
-{% include message_box.html type="example" title="Quick example" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing first a `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
+上記のようなエラーメッセージは、Detached HEAD状態からブランチへ戻るための解決策を提案しています。 `git checkout -b BRANCH`.を使用して現在のブランチからチェックアウトするだけで、ブランチへ戻りことが可能です。変更のコミットやプッシュを行う前でも、現在のブランチ (`git checkout BRANCH`)からチェックアウトができます。このオプションを選択すると、ビルド中にビルドやテストしたものとは異なるコードの状態でコミットする可能性があることに注意してください。
 
-When it comes to `git checkout` in general, you also have to be careful which branch you check out. For example, if the build was started by `feature/a`, you should check out that branch instead of a hardcoded one (for example, a master branch). Learn how to get the build’s branch through the `BITRISE_GIT_BRANCH` [Env Var](/builds/available-environment-variables/)."%}
+{% include message_box.html type="example" title="Quick example 簡単な例" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing first a `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
+
+以下のようなケースの場合：コードを、指定したコミットを使ってbitrise.io上でビルドを開始する`feature/a`にプッシュするとします。その後、急いで他のビルドを開始する`feature/a`に他のコミットをプッシュします。もし２回目のコミットが (`git checkout BRANCH`をすることになっている)１回目のビルドより早く終了した場合、`feature/a`に新しいコミットがあるので、`git checkout feture/a`は1番目ではなく2番目のコミットを指す可能性があります。これは、まず `git checkout -b my_temp_bump_branch` し、その後 (この例では`feature/a`だった) ソースブランチへ`my_temp_bump_branch` を `git merge` することで直すことができます。
+
+When it comes to `git checkout` in general, you also have to be careful which branch you check out. For example, if the build was started by `feature/a`, you should check out that branch instead of a hardcoded one (for example, a master branch). Learn how to get the build’s branch through the `BITRISE_GIT_BRANCH` [Env Var](/builds/available-environment-variables/).
+
+一般的に`git checkout`を行う際には、どのブランチをチェックアウトするのか慎重になる必要があります。例えば、ビルドが`feature/a`から始まった場合、ハードコーディングされたもの (例: masterブランチ) ではなくチェックアウトするブランチを確認してください。`BITRISE_GIT_BRANCH`[環境変数](/jp/builds/available-environment-variables/)を通じてビルドのブランチを入手する方法について見ましょう。"%}
 
 ### Testing git checkout locally
 
+ローカルでgitチェックアウトのテスト
+
 Let's try out the above locally.
 
+では、ローカルでも試してみましょう。
+
 A build triggered by a webhook (when a commit hash is available) is similar to doing a
+
+Webhook (commit hashが利用可能である時) によってビルドがトリガーされたら、
 
     git checkout COMMITHASH
 
 This is how the build log will look like
+
+ビルドログは以下のように見えます
 
     - RepositoryURL: git@github.com:zoltan-baba/sample-apps-react-native-ios-and-android.git
     - CloneIntoDir: /Users/vagrant/git
@@ -91,6 +111,8 @@ This is how the build log will look like
     git "checkout" "4d31f45eb2db037f0143f509872a619f9aac8c09"
 
 If the build is started without a commit hash, only with a branch parameter, that’s similar to:
+
+commit hashではなく、branch parameter (ブランチパラメータ) だけを使ってビルドが開始された場合、以下のようなコードになります：
 
     git checkout BRANCH
     
@@ -121,13 +143,20 @@ If the build is started without a commit hash, only with a branch parameter, tha
 
 You can test both on your own machine and see what you have to do to make the tool you use  work with the `git checkout COMMITHASH` case.
 
-## Version number management
+自分のマシンを使用して、両方をテストすることができます。使用するツールを`git checkout COMMITHASH`ケースで動作させるために何をする必要があるかを確認してください。
+
+## Version number management  
+バージョン番号管理
 
 Managing version numbers is important if you'd like to deploy an app to a marketplace. In this section we'll give you some tips on how to go about incrementing your build's version number if your branch is currently on a detached head state.
 
-### Incrementing the version number manually
+マーケットプレイスへアプリをデプロイする際は、バージョン番号の管理は大変重要です。このセクションでは、今現在Detached HEAD状態にある場合にビルドのバージョン番号を増分していくためのコツをお教えいたします。
+
+### Incrementing the version number manually　マニュアルでバージョン番号を増分する
 
 This solution is the easiest to set up and manage, and works best for app type projects and projects where you release periodically (for example, weekly, monthly), but you don’t do multiple daily production deploys.
+
+この方法はセットアップと管理において最も簡単です。アプリタイプのプロジェクトと定期的 (例：週間隔、月間隔) にリリースをするプロジェクトに最適です。しかし、毎日本番デプロイを複数回行わないものとします。
 
 You can bump the version number manually, treating it just like any other code change. In this case, we use the `BITRISE_BUILD_NUMBER` Env Var as the build number in the app, which does not require committing it into the code and this way you can link every build of the app to the build on [bitrise.io](https://www.bitrise.io).
 

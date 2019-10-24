@@ -194,9 +194,9 @@ pages:
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/サブモジュールもしくはプライベートレポジトリ依存が含まれるプロジェクトを追加することは可能ですか-can-i-add-projects-with-submodules-or-with-private-repo-dependencies.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/github-organization-組織-へbitriseのアクセスを許可する方法はありますか-how-to-grant-bitrise-access-to-a-github-organization.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/detached-head状態からgit-checkoutを行うのはどうすればいいですか-how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/レポジトリへ依存性をコミットしたほうがいいですか-should-i-commit-my-dependencies-into-my-repository.md
 - _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/detached-head状態からgit-checkoutを行うのはどうすればいいですか-how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/bitbucket-teamへbitriseのアクセスを許可する方法を教えて下さい-how-can-i-grant-bitrise-access-to-a-bitbucket-team.md
