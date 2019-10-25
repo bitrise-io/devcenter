@@ -1,6 +1,6 @@
 ---
 tag: []
-title: ''
+title: Invitation FAQ
 redirect_from: []
 summary: ''
 published: false
