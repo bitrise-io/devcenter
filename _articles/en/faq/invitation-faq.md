@@ -46,4 +46,4 @@ If an Organization activated SAML SSO on their account, the Organization owner c
 
 ## What to do if an invitation ends up with 404 error?
 
-If you have been invited to an Organization but you can’t access it due to a 404 error message when clicking the Accept invitation button, then contact the Organization owner to revoke your invitation and send it out again. Make sure you get the invitation to the email address that is associated with your existing Bitrise account.
+If you have been invited to an Organization but you can’t access it due to a 404 error message when clicking the **Accept invitation** button, then contact the Organization owner to revoke your invitation and send it out again. Make sure you get the invitation to the email address that is associated with your existing Bitrise account.
