@@ -9,8 +9,6 @@ published: false
 If you are invited to join a Team or an Organization on Bitrise, you will get an invitation email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io).
 
 If you already have a Bitrise account and receive an invitation email, you’ll have to click the **View** button to get to the app's page!
-![](/img/view-invitation-2.jpg)
-
 
 If you don’t have an account yet, and you’re invited to an Organization or a Team, you should click the **Accept invitation** button in the invitation email. This will take you through   registration, and log you into the account. If you attempt to sign up manually, you won’t be able to since your email address is already reserved for the invitation. So we recommend you to check your inbox, look for the invitation email from Bitrise and follow the instructions there.
 
