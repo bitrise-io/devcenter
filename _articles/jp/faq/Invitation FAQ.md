@@ -3,6 +3,10 @@ tag: []
 title: Invitation FAQ
 redirect_from: []
 summary: ''
+menu:
+  faq-main:
+    weight: 23
+    title: Invitation FAQj
 
 ---
 
