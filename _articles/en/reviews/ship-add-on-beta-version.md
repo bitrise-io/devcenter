@@ -233,7 +233,7 @@ To add a new email address to the notification list for an app:
    ![](/img/ship-notifications.jpg)
 5. Click **Add**.
 
-The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications.
+The email address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications.
 
 ### Configuring notifications
 
