@@ -24,7 +24,7 @@ If you have accidentally deleted the invitation email, we recommend following th
 
 ## Can I extend the invitation emails' timeout?
 
-You cannot extend the invitation emails' timeout to a longer time. If an invitation has expired, check out [How can I sign up to Bitrise if my invitation has expired?](/faq/invitation-faq/#how-can-i-sign-up-to-bitrise-if-my-invitation-has-expired).
+You cannot extend the invitation emails' timeout to a longer time. If an invitation has expired, check out the [How can I sign up to Bitrise if my invitation has expired?](/faq/invitation-faq/#how-can-i-sign-up-to-bitrise-if-my-invitation-has-expired) section in this guide.
 
 ## I can’t find the invitation email from Bitrise
 
@@ -36,7 +36,9 @@ Bitrise can process invitations sent to either lowercase or uppercase email addr
 
 ## Signing up with Bitrise invitation and Git provider
 
-If you are invited by an Organization on Bitrise, and before accepting the invitation you're trying to sign up to Bitrise using your Git account (for example, Bitbucket, GitHub or Gitlab), then you will not be able to sign up to Bitrise. What you should do to access the Organization is follow the instructions included in the invitation email and complete your registration. Make sure you [connect your Git provider account to the Bitrise account](/getting-started/connecting-account-bitrise/) that you have just signed up to.
+If you are invited by an Organization on Bitrise, and before accepting the invitation you're trying to sign up to Bitrise using your Git account (for example, Bitbucket, GitHub or Gitlab), then you will not be able to sign up to Bitrise.
+
+What you should do to access the Organization is follow the instructions included in the invitation email and complete your registration. Make sure you [connect your Git provider account to the Bitrise account](/getting-started/connecting-account-bitrise/) that you have just signed up to.
 
 ## Can I be invited to an Organization with SSO?
 
