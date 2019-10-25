@@ -6,6 +6,9 @@ summary: ''
 published: false
 
 ---
+
+{% include not_translated_yet.html %}
+
 If you are invited to join a [Team or an Organization](/team-management/teams-vs-organizations-index/) on Bitrise, you will get an invitation email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io).
 
 If you already have a Bitrise account and receive an invitation email, you’ll have to click the **View** button to get to the app's page!
