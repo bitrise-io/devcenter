@@ -160,18 +160,32 @@ This solution is the easiest to set up and manage, and works best for app type p
 
 You can bump the version number manually, treating it just like any other code change. In this case, we use the `BITRISE_BUILD_NUMBER` Env Var as the build number in the app, which does not require committing it into the code and this way you can link every build of the app to the build on [bitrise.io](https://www.bitrise.io).
 
-{% include message_box.html type="note" title="Managing version and build numbers for iOS" content=" iOS apps have both a VERSION NUMBER and a BUILD NUMBER info. You can manage the version number manually, and [set the build number automatically](/builds/build-numbering-and-app-versioning/#setting-the-cfbundleversion-and-cfbundleshortversionstring-of-an-ios-app), to the `BITRISE_BUILD_NUMBER`, for example, with the [Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) Step. "%}
+手動でバージョン番号をバンプする (あげる)ことが可能で、他のコード変更と同じようにできます。このケースでは、アプリのビルド番号として `BITRISE_BUILD_NUMBER`環境変数を使用します。この環境変数はコードへのコミットは不要で、アプリの全てのビルドを[bitrise.io](https://www.bitrise.io)上のビルドへリンクさせることができます。
 
-### Using git tags for versioning
+{% include message_box.html type="note" title="Managing version and build numbers for iOS　iOS用のバージョンとビルド番号の管理" content=" iOS apps have both a VERSION NUMBER and a BUILD NUMBER info. You can manage the version number manually, and [set the build number automatically](/builds/build-numbering-and-app-versioning/#setting-the-cfbundleversion-and-cfbundleshortversionstring-of-an-ios-app), to the `BITRISE_BUILD_NUMBER`, for example, with the [Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) Step. 
+
+iOSアプリにはVERSION NUMBERとBUILD NUMBERの情報が両方あります。手動によるバージョン番号を管理、[Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) (Xcodeプロジェクトビルド番号) ステップを使った自動によるビルド番号の設定 (例:  `BITRISE_BUILD_NUMBER`) "%}
+
+### Using git tags for versioning　バージョニングにgit tagsを使用する
 
 If you don't want to store the version in the code, you can use git tags for versioning. It doesn't require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x`.
 
 This method suits web projects with continuous deployment the most, where a version number wouldn’t mean much in the code.
 
-### Auto-generating a commit
+コードにバージョンを管理したくない場合、バージョニングにgit tagsを使用することができます。`git tag x.x.x && git push origin tags/x.x.x`だけで、プッシュされるコミットは不要です。
+
+この方法は、ウェブプロジェクトの継続的なデプロイ作業に最適で、コード内ではバージョン番号はあまり意味がありません。
+
+### Auto-generating a commit　コミットの自動生成
 
 As discussed above, you cannot push code if you are in detached head state. In this case you can auto-generate a commit to increase the version number AND use our [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/) feature which will prevent a build from being triggered.
 
-{% include message_box.html type="important" title="Skipping a commit" content="If you push back the generated version bump commit, and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit) feature and skip the auto-generated commit."%}
+すでにお話しましたが、Detached HEAD状態であればコードのプッシュはできません。このケースではコミットを自動生成してバージョン番号を増やします。そして、ビルドがトリガーされるのを防ぐBitriseの[Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/)機能をご利用ください。
 
-{% include message_box.html type="warning" title="Careful with auto-generating a commit" content="We recommend careful configuration, for example, who can push to where, required code reviews, before applying this method. You can also use GitHub’s protected branches feature enabling every protection feature they have (for example, every Pull Request has to be up to date with the master branch before it could be merged). Once properly configured, this solution can work really well for continuous delivery. On the downside, please note, the configuration takes quite some time and effort while ensuring code consistency."%}
+{% include message_box.html type="important" title="Skipping a commit　コミットのスキップ" content="If you push back the generated version bump commit, and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit) feature and skip the auto-generated commit.
+
+生成されたバージョンのバンプコミットをプッシュバックをして、コード変更に[bitrise.io](https://www.bitrise.io/)上でビルドを開始するWebhookがある場合、そのプッシュもビルドを開始して無限のビルドサイクルへ導かれます！これを直すには[Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit)機能を使い自動生成コミットをスキップしてください。"%}
+
+{% include message_box.html type="warning" title="Careful with auto-generating a commit　コミットの自動生成にご注意ください" content="We recommend careful configuration, for example, who can push to where, required code reviews, before applying this method. You can also use GitHub’s protected branches feature enabling every protection feature they have (for example, every Pull Request has to be up to date with the master branch before it could be merged). Once properly configured, this solution can work really well for continuous delivery. On the downside, please note, the configuration takes quite some time and effort while ensuring code consistency.
+
+この方法を適用する前に、誰がどこにプッシュできるのかの確認やコードレビューなど、念入りな構成を推奨します。GitHubが持つ全ての保護機能を有効化するprotected branches機能を使うこともできます (例: 全てのプルリクエストはマージされる前のマスターブランチと最新である必要があります。一旦正確に構成されると、継続的デリバリ (CD) に非常によく機能します。欠点としては、コードの恒常性を確保するので、構成に時間と労力が多少かかってしまいます。"%}
