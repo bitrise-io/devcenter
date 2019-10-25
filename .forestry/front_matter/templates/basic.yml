@@ -203,6 +203,7 @@ pages:
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/why-does-my-build-take-longer-on-bitrise-than-on-my-machine.md
 - _articles/jp/team-management/organizations/setting-up-ping-identity-sso-for-bitrise.md
 - _articles/en/faq/invitation-faq.md
+- _articles/jp/faq/Invitation FAQ.md
 - _articles/en/api/endpoints.md
 - _articles/en/api/build-trigger.md
 - _articles/en/api/incoming-and-outgoing-webhooks.md
