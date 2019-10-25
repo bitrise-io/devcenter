@@ -10,7 +10,7 @@ published: false
 
 {% include message_box.html type="important" title="Ship in BETA" content="Please note that this feature is still in BETA version."%}
 
-With Ship, you can manage Continuous Deployment of your app, as well as manage different build versions of the app in a convenient way. Using Ship to distribute your apps gives you more control and granularity.
+With Ship, you can manage Continuous Deployment of your app, as well as manage different build versions of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
 
 {% include message_box.html type="info" title="Ship language" content="As of right now, Ship is only available in English."%}
 
@@ -138,8 +138,8 @@ To configure publishing an app for iOS:
 6. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
 7. Enter the **App SKU**.
 8. Go back to the **Details** page and click **Publish**.
-   </div>
-   </div>
+</div>
+</div>
 
 <div><button type="button" class="collapsible"><p>Publishing an app for Android</p></button>
 <div class="collapsible-content" markdown="1">
@@ -168,8 +168,8 @@ To configure publishing an app for Android:
 7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing.
    ![](/img/flavorandroid.jpg)
 8. Fill out the **Details** page and click **Publish.**
-   </div>
-   </div>
+</div>
+</div>
 
 ## Publishing status and logs
 
@@ -233,7 +233,7 @@ To add a new email address to the notification list for an app:
    ![](/img/ship-notifications.jpg)
 5. Click **Add**.
 
-The email address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications.
+The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications.
 
 ### Configuring notifications
 
