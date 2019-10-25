@@ -6,7 +6,7 @@ summary: ''
 published: false
 
 ---
-If you are invited to join a Team or an Organization on Bitrise, you will get an invitation email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io).
+If you are invited to join a [Team or an Organization](/team-management/teams-vs-organizations-index/) on Bitrise, you will get an invitation email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io).
 
 If you already have a Bitrise account and receive an invitation email, you’ll have to click the **View** button to get to the app's page!
 
@@ -16,7 +16,7 @@ If you don’t have an account yet, and you’re invited to an Organization or a
 
 ## How can I sign up to Bitrise if my invitation has expired?
 
-The invitation email contains an expiry date which, if elapsed, you won’t be able to register to Bitrise through that link (but through a [regular registration](/getting-started/signing-up-to-bitrise/)).
+The invitation email contains an expiry date which, if elapsed, you won’t be able to register to Bitrise through that link (but through [regular registration](/getting-started/signing-up-to-bitrise/)).
 
 This means the invitation has not been redeemed through the invite link so the registration is still incomplete and the invite link has expired. At this stage, resetting your password is impossible since there is no password and no account associated with your email address. Your invitation status is pending on the **Team** tab. We recommend that you contact the person who invited you to revoke your invitation. Then a new invitation email can be sent out to your email address and you can click the **Accept invitation** button before it expires.
 
