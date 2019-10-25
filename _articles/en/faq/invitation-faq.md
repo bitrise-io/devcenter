@@ -18,8 +18,6 @@ If you don’t have an account yet, and you’re invited to an Organization or a
 
 The invitation email contains an expiry date which, if elapsed, you won’t be able to register to Bitrise through that link (but through a [regular registration](/getting-started/signing-up-to-bitrise/)).
 
-\[pic expired_invitation\]
-
 This means the invitation has not been redeemed through the invite link so the registration is still incomplete and the invite link has expired. At this stage, resetting your password is impossible since there is no password and no account associated with your email address. Your invitation status is pending on the **Team** tab. We recommend that you contact the person who invited you to revoke your invitation. Then a new invitation email can be sent out to your email address and you can click the **Accept invitation** button before it expires.
 
 If you have accidentally deleted the invitation email, we recommend following the same process to access the Organization or the Team.
