@@ -24,7 +24,7 @@ If you have accidentally deleted the invitation email, we recommend following th
 
 ## Can I extend the invitation emails' timeout?
 
-You cannot extend the invitation emails' timeout to a longer time. If an invitation has expired, check out **How can I sign up to Bitrise if my invitation has expired?**.
+You cannot extend the invitation emails' timeout to a longer time. If an invitation has expired, check out [How can I sign up to Bitrise if my invitation has expired?.](/faq/invitation-faq/#how-can-i-sign-up-to-bitrise-if-my-invitation-has-expired).
 
 ## I can’t find the invitation email from Bitrise
 
