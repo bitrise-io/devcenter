@@ -138,7 +138,6 @@ pages:
 - _articles/en/builds/triggering-builds/trigger-map.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
 - _articles/en/builds/triggering-builds/status-reporting.md
-- _articles/en/builds/build-numbering-and-app-versioning.md
 - _articles/en/getting-started/signing-up-to-bitrise.md
 - _articles/en/builds/env-vars-secret-env-vars.md
 - _articles/en/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
@@ -174,6 +173,7 @@ pages:
 - _articles/en/bitrise-cli/step-properties.md
 - _articles/en/api/response-and-pagination.md
 - _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
+- _articles/en/builds/build-numbering-and-app-versioning.md
 - _articles/en/bitrise-cli/basics-of-bitrise-yml.md
 - _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/bitriseに貢献する方法-how-to-contribute-bitrise.md
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
