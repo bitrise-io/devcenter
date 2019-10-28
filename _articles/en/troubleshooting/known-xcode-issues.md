@@ -68,7 +68,7 @@ Some possible solutions:
 * First of all, if you use `xcpretty` to format the output try a build without it
   (if you use the Xcode Test step you can set `xcodebuild` as the "Output Tool" option/input
   to not to format the log produced by `xcodebuild`). The cause is: `xcpretty` sometimes
-  omits the error message in it's output. [Related GitHub issue](https://github.com/bitrise-io/bitrise.io/issues/27).
+  omits the error message in it's output.
 * If you don't use our `Xcode Test` step to run your UI Test you should try to run
   it with our Xcode Test step. We always try to improve the reliability of the step,
   implementing known workarounds for common issues.
@@ -77,15 +77,12 @@ Some possible solutions:
 * Try [another Xcode version](http://devcenter.bitrise.io/docs/available-stacks#section-how-to-switch-to-the-new-beta-stacks),
   there are issues which are present in one Xcode version but not in another one.
 * Make sure your desired [Xcode scheme is shared](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found). Don't forget to commit and push the changes if you just enabled it.
-* It might also be a [project configuration issue in your Xcode project](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-140188658),
-  or a [code issue in your tests](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-160171566),
-  or a [multi threading issue in your code](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-190163069).
+* It might also be a project configuration issue in your Xcode project, a code issue in your tests,or a multi-threading issue in your code.
 * We received reports that this might also be caused by Code Coverage report generation,
   you can disable the `Generate code coverage files?` option of the Xcode Test step
   to not to generate Code Coverage files.
-* If the previous steps did not help, you should check the whole discussion and suggested solutions at: [https://github.com/bitrise-io/bitrise.io/issues/5](https://github.com/bitrise-io/bitrise.io/issues/5)
 
-## `Segmentation fault`
+## Segmentation fault
 
 The error is:
 
