@@ -9,7 +9,7 @@ menu:
 ---
 **自由にこのリストにあなたのコメントを追加してください。**
 
-[このリンクをクリックすることで、GitHub上に直接追加することができます。](https://github.com/bitrise-io/devcenter/blob/master/_articles/troubleshooting/known-xcode-issues.md),
+[このリンクをクリックすることで、GitHub上に直接追加することができます。](https://github.com/bitrise-io/devcenter/blob/master/_articles/jp/troubleshooting/known-xcode-issues.md),
 ただしプルリクエストとしてそれを送ることを忘れないでください ;)
 
 ## パフォーマンス関連
