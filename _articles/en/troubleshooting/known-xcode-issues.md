@@ -15,7 +15,7 @@ menu:
 ---
 **Feel free to add your comments to this list.**
 
-[You can do it directly on GitHub, by clicking this link](https://github.com/bitrise-io/devcenter/blob/master/_articles/troubleshooting/known-xcode-issues.md), just don't forget to send it as a Pull Request ;)
+[You can do it directly on GitHub, by clicking this link](https://github.com/bitrise-io/devcenter/blob/master/_articles/en/troubleshooting/known-xcode-issues.md), just don't forget to send it as a Pull Request ;)
 
 ## Performance related
 

@@ -208,8 +208,8 @@ pages:
 - _articles/en/api/endpoints.md
 - _articles/en/api/build-trigger.md
 - _articles/en/api/incoming-and-outgoing-webhooks.md
-- _articles/en/faq/grant-access-to-bitbucket-team.md
 - _articles/en/troubleshooting/known-xcode-issues.md
+- _articles/en/faq/grant-access-to-bitbucket-team.md
 - _articles/en/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
