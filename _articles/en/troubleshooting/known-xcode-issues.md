@@ -63,9 +63,7 @@ Related links & reports:
 This can be caused by a lot of things, Xcode or some other tool simply
 omits / does not present any error message.
 
-You can find a long discussion, with possible reasons & solutions [here](https://github.com/bitrise-io/bitrise.io/issues/5).
-
-A quick summary:
+Some possible solutions:
 
 * First of all, if you use `xcpretty` to format the output try a build without it
   (if you use the Xcode Test step you can set `xcodebuild` as the "Output Tool" option/input
