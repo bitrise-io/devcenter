@@ -7,7 +7,7 @@ menu:
     title: Deploying apps to DeployGate
 
 ---
-# What is DeployGate?
+## What is DeployGate?
 
 [**DeployGate**](https://deploygate.com?locale=en) is a mobile app distribution platform for iOS and Android, delivering your in-development iOS/Android apps to your dev team, members, employees, QA testing team in your organization or testers outside of your company.
 
@@ -23,7 +23,7 @@ With DeployGate and Bitrise, you can quickly build a fully automated in-house do
 
 ![Automated app distribution workflow](/img/tutorials/deploy/deploygate/flow.png)
 
-# Upload your app to DeployGate via Bitrise
+## Uploading your app to DeployGate via Bitrise
 
 To upload your app to DeployGate, add `DeployGate Upload` step to your bitrise workflow.
 
@@ -52,7 +52,7 @@ You can also set optional variables for using advanced features as below:
 {% include message_box.html type="info" title="More info on DeployGate " content=" These options are based on [**DeloyGate API**](https://docs.deploygate.com/reference). For more details, please read the references at [DeployGate.com](https://deploygate.com?locale=en).
 "%}
 
-# How `Distribution Page` works?
+## How `Distribution Page` works?
 
 ![Distribution Page](/img/tutorials/deploy/deploygate/distribution_page.png)
 
