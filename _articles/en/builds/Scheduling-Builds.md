@@ -15,7 +15,9 @@ menu:
 ---
 You can schedule your builds to run automatically at a specific time of the week so that you can check your logs when it's most convenient for you.
 
-Follow the steps to see how you can set it up for your next build!
+## Scheduling a build
+
+How to schedule a build on Bitrise:
 
 1. Go to your [Dashboard](https://app.bitrise.io/dashboard) and click on the project whose build you want to schedule.
 2. Click on **Start/Schedule a Build**.
@@ -33,13 +35,57 @@ Follow the steps to see how you can set it up for your next build!
 
 If you specify a commit hash and a branch where that commit does not exist (for example, **master**), Bitrise will find the branch that does have the given commit (for example, **testing**) and run a build with that branch. "%}
 
-Now you're back on your **Builds** board and you can see your scheduled build.
-
-If you click on **Show scheduled**, you can edit/delete your schedules, disable build scheduling by toggling the switch to the left, or immediately trigger the build by clicking on the **Trigger now** button.
-
-![Screenshot](/img/scheduling-builds/scheduled-build.png)
-
 That's it! Now you can enjoy the comfort of your automated build!
+
+## Managing a scheduled build
+
+If you have one or more regularly scheduled builds, you can:
+
+* Edit their configuration.
+* Trigger them manually at any time.
+* Temporarily disable them.
+* Permanently delete them. 
+
+{% include collapse.html title="Editing a scheduled build" content="To change the configuration of a regularly scheduled build:
+
+1. Go to the **Builds** tab of your app. 
+2. On the top, you should see a list of your scheduled builds.
+3. Click **Show scheduled**.
+
+   ![](/img/android-test-test_-_Bitrise.png)
+4. Click the little gear icon to open the settings menu.
+5. Click **Edit scheduled build**. 
+6. Make the changes you want and click **Save changes**." %}
+
+{% include collapse.html title="Triggering a scheduled build manually" content="To immediately trigger a scheduled build:
+
+1. Go to the **Builds** tab of your app. 
+2. On the top, you should see a list of your scheduled builds.
+3. Click **Show scheduled**.
+
+   ![](/img/android-test-test_-_Bitrise.png)
+4. Click **Trigger now**." %}
+
+{% include collapse.html title="Disabling a scheduled build" content="To temporarily disable a regularly scheduled build:
+
+1. Go to the **Builds** tab of your app. 
+2. On the top, you should see a list of your scheduled builds.
+3. Click **Show scheduled**.
+
+   ![](/img/android-test-test_-_Bitrise.png)
+4. Toggle the **Enabled** option. 
+
+   The build will not run until you enable it again." %}
+
+{% include collapse.html title="Deleting a scheduled build" content="To permanently delete a regularly scheduled build:
+
+1. Go to the **Builds** tab of your app. 
+2. On the top, you should see a list of your scheduled builds.
+3. Click **Show scheduled**.
+
+   ![](/img/android-test-test_-_Bitrise.png)
+4. Click the little gear icon to open the settings menu.
+5. Click **Delete** and then click **Delete** again when prompted for confirmation." %}
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">

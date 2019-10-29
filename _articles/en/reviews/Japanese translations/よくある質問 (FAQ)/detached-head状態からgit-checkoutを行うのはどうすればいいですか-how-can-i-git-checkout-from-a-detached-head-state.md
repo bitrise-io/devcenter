@@ -7,21 +7,13 @@ summary: ''
 published: false
 
 ---
-## Build failures due to detached head Detached HEADが原因でビルドが失敗してしまう事象
-
-Builds can fail due to many reasons, and one of those is related to how a build is started and how Git works.
-
-If you start a build manually and you only specify a branch, then `git clone` will clone that branch.
+## Detached HEADが原因でビルドが失敗してしまう事象
 
 ビルドが失敗してしまう原因はたくさんありますが、理由としてはどのようにビルドが開始されたのか、そしてどのようにGitが機能しているのかに深い関わりがあります。
 
-マニュアルでビルドを開始し、ブランチの指定のみを行う際は、`git clone`がそのブランチをクローンします。
+マニュアルでビルドを開始し、ブランチの指定のみを行う際は、`git clone`がそのブランチをクローン (複製) します。
 
-If, however, you use webhooks to automatically trigger builds on code changes, a repo host will send the commit hash of the commit which triggered the build webhook and `git-clone` will clone that specific commit. This would put the local git instance into detached head state.
-
-Let's test this locally with a `git checkout COMMITHASH`.
-
-しかし、もしWebhookを使ってコード変更の際に自動的にビルドのトリガーを実行する場合、レポジトリのホストがWebhookのビルドをトリガーしたコミットのcommit hashを送ります。そして指定されたコミットを`git-clone`がクローンします。これはDetached HEAD状態へローカルのgitインスタンスを配置します。
+もしWebhookを使ってコード変更のビルドを自動トリガーで実行する場合であれば、レポジトリのホストがWebhookのビルドをトリガーしたコミットのcommit hashを送信します。そして指定されたコミットを`git-clone`がクローンします。これはローカルのgitインスタンスをDetached HEAD状態へと配置します。
 
 では`git checkout COMMITHASH`を使ってローカルでテストしてみましょう。
 
@@ -40,50 +32,30 @@ Let's test this locally with a `git checkout COMMITHASH`.
     
     HEAD is now at 6415740... commit message
 
-As you can see from the command's log, now you are in a detached head state, meaning the head is NOT pointing to the tip of the current branch but to your COMMIT OBJECT. This means you are not on any branch, therefore, you can't push commits to any branch either at this stage. What you can do in a detached head state is:
+上記のコマンドのログからおわかりのように、今現在Detached HEAD状態であり、これはHEADが現在のブランチのtip**ではなく**、COMMIT OBJECTを指していることを意味します。その上、これはどのブランチにも属していないという意味でもあるので、この段階ではどのブランチにもコミットをプッシュすることはできません。Detached HEAD状態でできることは：
 
-コマンドのログからおわかりのように、今現在Detached HEAD状態であり、これはHEADが現在のブランチのtipではなく、COMMIT OBJECTのtipを指していることを意味します。その上これはどのブランチにもいないという意味でもあるので、この段階ではどのブランチにもコミットをプッシュすることはできません。Detached HEAD状態でできることは：
-
-* Creating commits.
-* Checking if tests have successfully run in this code version.
 * コミットの作成
-* このコードバージョンでテストの実行が成功したかどうかのチェック
+* このコードバージョンでテストの実行が成功したかどうかの確認
 
-So to be able to commit and push DIRECTLY TO A BRANCH, you'll have to check out a branch first. Let's see how!
+**ブランチへ直接**コミットとプッシュをできるようにするには、ブランチをまず確認することから始まります。方法を見ていきましょう！
 
-ブランチへ直接コミットとプッシュをできるようにするには、ブランチをまず確認することから始まります。方法を見ていきましょう！
+## 解決策
 
-## Solution解決策
+上記のようなエラーメッセージは、Detached HEAD状態からブランチへ戻すための解決策を提案します。 `git checkout -b BRANCH`を使用して現在のブランチからチェックアウトするだけで、希望のブランチへ戻すことが可能です。変更のためのコミットやプッシュを行う前でも、現在のブランチ (`git checkout BRANCH`)からチェックアウトができます。このオプションを選択すると、ビルド中にビルドやテストしたものとは異なるコードの状態でコミットする可能性があることに注意してください。
 
-The above error message suggests a solution for getting back to a branch from the detached head state. You can get back to a branch by simply check out that branch with `git checkout -b BRANCH`. You could also check out that branch (`git checkout BRANCH`) before committing and pushing your changes. Please bear in mind that if you chose this option, you might commit on a different state of the code than what was built/tested during the build.
-
-上記のようなエラーメッセージは、Detached HEAD状態からブランチへ戻るための解決策を提案しています。 `git checkout -b BRANCH`.を使用して現在のブランチからチェックアウトするだけで、ブランチへ戻りことが可能です。変更のコミットやプッシュを行う前でも、現在のブランチ (`git checkout BRANCH`)からチェックアウトができます。このオプションを選択すると、ビルド中にビルドやテストしたものとは異なるコードの状態でコミットする可能性があることに注意してください。
-
-{% include message_box.html type="example" title="Quick example 簡単な例" content="Imagine the following use case: you push code to `feature/a`, which starts a build on [bitrise.io](https://www.bitrise.io/) with that specific commit. Then you quickly push another commit to `feature/a` which starts another build. If the second commit lands before the first build would get to do a `git checkout BRANCH`, then `git checkout feature/a` might point to the second commit instead of the first one, as `feature/a` now has a new commit. You can fix this by doing first a `git checkout -b my_temp_bump_branch` and then `git merge` the `my_temp_bump_branch` into the source branch (which was `feature/a` in this example).
-
-以下のようなケースの場合：コードを、指定したコミットを使ってbitrise.io上でビルドを開始する`feature/a`にプッシュするとします。その後、急いで他のビルドを開始する`feature/a`に他のコミットをプッシュします。もし２回目のコミットが (`git checkout BRANCH`をすることになっている)１回目のビルドより早く終了した場合、`feature/a`に新しいコミットがあるので、`git checkout feture/a`は1番目ではなく2番目のコミットを指す可能性があります。これは、まず `git checkout -b my_temp_bump_branch` し、その後 (この例では`feature/a`だった) ソースブランチへ`my_temp_bump_branch` を `git merge` することで直すことができます。
-
-When it comes to `git checkout` in general, you also have to be careful which branch you check out. For example, if the build was started by `feature/a`, you should check out that branch instead of a hardcoded one (for example, a master branch). Learn how to get the build’s branch through the `BITRISE_GIT_BRANCH` [Env Var](/builds/available-environment-variables/).
+{% include message_box.html type="example" title="簡単な例" content="次のようなケースの場合：指定したコミットを使って[bitrise.io](https://www.bitrise.io/)上でビルドを開始する`feature/a`に、コードをプッシュするとします。その後、急いで他のビルドを開始する`feature/a`に他のコミットをプッシュします。もし2回目のコミットが (`git checkout BRANCH`をすることになっている)1回目のビルドより早く終了した場合、`feature/a`に新しいコミットがあるので、`git checkout feture/a`は1番目ではなく2番目のコミットを指す可能性があります。これは、まず `git checkout -b my_temp_bump_branch` してから(この例では`feature/a`だった) ソースブランチへ`my_temp_bump_branch` を `git merge` することで直すことができます。
 
 一般的に`git checkout`を行う際には、どのブランチをチェックアウトするのか慎重になる必要があります。例えば、ビルドが`feature/a`から始まった場合、ハードコーディングされたもの (例: masterブランチ) ではなくチェックアウトするブランチを確認してください。`BITRISE_GIT_BRANCH`[環境変数](/jp/builds/available-environment-variables/)を通じてビルドのブランチを入手する方法について見ましょう。"%}
 
-### Testing git checkout locally
-
-ローカルでgitチェックアウトのテスト
-
-Let's try out the above locally.
+### ローカルでgit checkoutのテスト
 
 では、ローカルでも試してみましょう。
 
-A build triggered by a webhook (when a commit hash is available) is similar to doing a
-
-Webhook (commit hashが利用可能である時) によってビルドがトリガーされたら、
+ (commit hashが利用可能である時に) Webhookによってビルドがトリガーされることは、以下のコードと類似しています：
 
     git checkout COMMITHASH
 
-This is how the build log will look like
-
-ビルドログは以下のように見えます
+ビルドログは以下のように表示されます：
 
     - RepositoryURL: git@github.com:zoltan-baba/sample-apps-react-native-ios-and-android.git
     - CloneIntoDir: /Users/vagrant/git
@@ -112,7 +84,7 @@ This is how the build log will look like
 
 If the build is started without a commit hash, only with a branch parameter, that’s similar to:
 
-commit hashではなく、branch parameter (ブランチパラメータ) だけを使ってビルドが開始された場合、以下のようなコードになります：
+commit hashではなく、branch parameter (ブランチパラメータ) だけを使ってビルドが開始される場合、以下のようなコードになります：
 
     git checkout BRANCH
     
@@ -141,37 +113,30 @@ commit hashではなく、branch parameter (ブランチパラメータ) だけ�
      * [new branch]      master     -> origin/master
     git "checkout" "master"
 
-You can test both on your own machine and see what you have to do to make the tool you use  work with the `git checkout COMMITHASH` case.
+自分のマシンを使用して、以上の両方をテストすることができます。また、使用するツールが`git checkout COMMITHASH`ケースで動作させるために何をする必要があるのかを確認してください。
 
-自分のマシンを使用して、両方をテストすることができます。使用するツールを`git checkout COMMITHASH`ケースで動作させるために何をする必要があるかを確認してください。
+## バージョン番号管理
 
-## Version number management  
-バージョン番号管理
+マーケットプレイスへアプリをデプロイする際は、バージョン番号の管理は大変重要です。このセクションでは、今現在Detached HEAD状態にある場合にビルドのバージョン番号を増分していくためのコツを紹介します。
 
-Managing version numbers is important if you'd like to deploy an app to a marketplace. In this section we'll give you some tips on how to go about incrementing your build's version number if your branch is currently on a detached head state.
+### マニュアルでバージョン番号を増分する
 
-マーケットプレイスへアプリをデプロイする際は、バージョン番号の管理は大変重要です。このセクションでは、今現在Detached HEAD状態にある場合にビルドのバージョン番号を増分していくためのコツをお教えいたします。
+これはセットアップと管理を行うのに最も簡単な方法です。アプリタイプのプロジェクトと定期的 (例：週間隔、月間隔) にリリースをするプロジェクトに最適です。しかし、毎日本番デプロイを複数回行わないものとします。
 
-### Incrementing the version number manually　マニュアルでバージョン番号を増分する
+手動でバージョン番号をバンプする (あげる)ことが可能で、他のコード変更と同じようにできます。このケースでは、アプリのビルド番号として `BITRISE_BUILD_NUMBER`環境変数を使用します。この環境変数はコードへのコミットは不要で、アプリの全てのビルドを[bitrise.io](https://www.bitrise.io)上のビルドへリンクさせることができます。
 
-This solution is the easiest to set up and manage, and works best for app type projects and projects where you release periodically (for example, weekly, monthly), but you don’t do multiple daily production deploys.
+{% include message_box.html type="note" title="iOS用のバージョンとビルド番号の管理" content=" iOSアプリにはVERSION NUMBERとBUILD NUMBERの情報が両方あります。手動によるバージョン番号を管理、[Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) (Xcodeプロジェクトビルド番号) ステップを使った自動によるビルド番号の設定 (例:  `BITRISE_BUILD_NUMBER`) が行えます。"%}
 
-この方法はセットアップと管理において最も簡単です。アプリタイプのプロジェクトと定期的 (例：週間隔、月間隔) にリリースをするプロジェクトに最適です。しかし、毎日本番デプロイを複数回行わないものとします。
+### バージョニングにgit tagを使用する
 
-You can bump the version number manually, treating it just like any other code change. In this case, we use the `BITRISE_BUILD_NUMBER` Env Var as the build number in the app, which does not require committing it into the code and this way you can link every build of the app to the build on [bitrise.io](https://www.bitrise.io).
+コードにバージョンを保管したくない場合、バージョニングにgit tagを使用することができます。`git tag x.x.x && git push origin tags/x.x.x`を行うのみで、プッシュされるコミットは不要です。
 
-{% include message_box.html type="note" title="Managing version and build numbers for iOS" content=" iOS apps have both a VERSION NUMBER and a BUILD NUMBER info. You can manage the version number manually, and [set the build number automatically](/builds/build-numbering-and-app-versioning/#setting-the-cfbundleversion-and-cfbundleshortversionstring-of-an-ios-app), to the `BITRISE_BUILD_NUMBER`, for example, with the [Set Xcode Project Build Number](https://www.bitrise.io/integrations/steps/set-xcode-build-number) Step. "%}
+この方法は、ウェブプロジェクトの継続的なデプロイ作業に最適で、コード内ではバージョン番号はあまり意味がありません。
 
-### Using git tags for versioning
+### コミットの自動生成
 
-If you don't want to store the version in the code, you can use git tags for versioning. It doesn't require a commit to be pushed, only `git tag x.x.x && git push origin tags/x.x.x`.
+すでにお話しましたが、Detached HEAD状態であればコードのプッシュはできません。このケースではコミットを自動生成してバージョン番号を増分します。そして、ビルドがトリガーされるのを防ぐBitriseの[Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/)機能をご利用ください。
 
-This method suits web projects with continuous deployment the most, where a version number wouldn’t mean much in the code.
+{% include message_box.html type="important" title="コミットのスキップ" content="生成されたバージョンのバンプコミットをプッシュバックをして、コード変更を行う際に[bitrise.io](https://www.bitrise.io/)上でビルドを開始するWebhookがある場合、そのプッシュもビルドを開始して無限のビルドサイクルへ導かれます！これを直すには[Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit)機能を使い自動生成コミットをスキップしてください。"%}
 
-### Auto-generating a commit
-
-As discussed above, you cannot push code if you are in detached head state. In this case you can auto-generate a commit to increase the version number AND use our [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/) feature which will prevent a build from being triggered.
-
-{% include message_box.html type="important" title="Skipping a commit" content="If you push back the generated version bump commit, and you have a webhook which starts a build on [bitrise.io](https://www.bitrise.io/) for code changes, that push will also start a build, leading to a potential infinite build cycle! You can fix this by using the [Skip CI](/builds/triggering-builds/skipping-a-given-commit-or-pull-request/#skipping-a-commit) feature and skip the auto-generated commit."%}
-
-{% include message_box.html type="warning" title="Careful with auto-generating a commit" content="We recommend careful configuration, for example, who can push to where, required code reviews, before applying this method. You can also use GitHub’s protected branches feature enabling every protection feature they have (for example, every Pull Request has to be up to date with the master branch before it could be merged). Once properly configured, this solution can work really well for continuous delivery. On the downside, please note, the configuration takes quite some time and effort while ensuring code consistency."%}
+{% include message_box.html type="warning" title="コミットの自動生成にご注意ください" content="この方法を適用する前に、誰がどこにプッシュできるのかの確認や必要なコードレビューなど、念入りな構成を推奨します。GitHubが持つ全ての保護機能を有効化するprotected branches機能を使うこともできます (例: 全てのプルリクエストはマージされる前のマスターブランチと最新である必要があります)。一旦正確に構成されると、この方法は継続的デリバリ (CD) に非常によく機能します。欠点としては、コードの恒常性を確保するので、構成に時間と労力が多少かかってしまいます。"%}

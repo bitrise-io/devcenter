@@ -18,9 +18,9 @@ menu:
 ---
 All Bitrise builds have a build number. The first build of your app is, by default, number 1, and the build number gets incremented with each build. You can get a build's Bitrise build number on the website, as well as via the `$BITRISE_BUILD_NUMBER` environment variable. This variable can be used in any Step or script where you need the Bitrise build number for any reason.
 
-You can also take care of your app's versioning automatically, using Bitrise. We have two Steps to do it for you - [read more here!](builds/build-numbering-and-app-versioning#Set-up-app-versioning-automatically-on-Bitrise)
+You can also take care of your app's versioning automatically, using Bitrise. We have two Steps to do it for you - [read more in the Setting up app versioning automatically section.](/builds/build-numbering-and-app-versioning#Set-up-app-versioning-automatically-on-Bitrise)
 
-## Change the build number of your build
+## Changing the build number of your build
 
 Set the build number manually on the website. This is useful if, for example, you migrated to Bitrise from some other service where your app already had several builds. This way you do not have to start from 1!
 
@@ -32,7 +32,7 @@ Under **YOUR NEXT BUILD NUMBER WILL BE**, the number of your next build will be 
 
 Please note that the build number must be either 0 or a positive integer. Negative numbers are not accepted. You can, however, set any number you have already used.
 
-## Set up app versioning automatically on Bitrise
+## Setting up app versioning automatically on Bitrise
 
 Track the version of your app in its git repository by modifying the file containing the essential information about the app (for example, the `Info.plist` file for iOS apps and the `AndroidManifest.xml` file for Android apps).
 

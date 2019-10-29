@@ -9,7 +9,7 @@ menu:
 ---
 **自由にこのリストにあなたのコメントを追加してください。**
 
-[このリンクをクリックすることで、GitHub上に直接追加することができます。](https://github.com/bitrise-io/devcenter/blob/master/_articles/troubleshooting/known-xcode-issues.md),
+[このリンクをクリックすることで、GitHub上に直接追加することができます。](https://github.com/bitrise-io/devcenter/blob/master/_articles/jp/troubleshooting/known-xcode-issues.md),
 ただしプルリクエストとしてそれを送ることを忘れないでください ;)
 
 ## パフォーマンス関連
@@ -127,7 +127,7 @@ Xcode 7.3を使用する"iPhone 6"のシミュレーターデバイスの場合�
   コードカバレッジファイルを生成しないようにすることができます。
 * 以上の方法で問題が解決しなかった場合、次のリンクから議論全体や推奨されている解決方法を確認しましょう。: [https://github.com/bitrise-io/bitrise.io/issues/5](https://github.com/bitrise-io/bitrise.io/issues/5)
 
-## `Segmentation fault`
+## Segmentation fault
 
 The error is:
 
