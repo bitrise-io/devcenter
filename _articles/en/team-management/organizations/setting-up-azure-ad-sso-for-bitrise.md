@@ -102,16 +102,19 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 
 Now that you have established the connection between Bitrise and Azure AD, all there is left to do is [enable SAML SSO on Bitrise](/team-management/organizations/saml-sso-in-organizations/#enabling-saml-sso). If you check the **People** tab of your Bitrise organization, you will see that your SAML status is disabled.
 
-1. Check your emails associated with the email address you provided to your Bitrise organization.
+1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
 
-	You should have received an email from us: ![](/img/enable-bitrisse-saml-org.jpg)
+2. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
 
+   The email also shows the Organization owner's email address (should you need to contact him/her.)
+
+   ![](/img/saml-invitation-authentication.jpg)
+   
 2. Click **Sign In via SSO**.
 
    NOTE: Below error message only appears if you’ve been trying to access the Authorization page in a Safari browser.
 
        Error: The CORS policy for this site does not allow access from the specified Origin....
-       
 
    As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the `Authorization` page.
 3. On the `Allow "organization name" to sign you in` window, click `Authorize` if you trust the organization.
@@ -136,7 +139,7 @@ From now on, org members will be able to log in exclusively via SAML SSO.
 {% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you'd like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in organizations](/team-management/organizations/saml-sso-in-organizations/) guide."%}
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Set up Azure AD SSO!</div>
-	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your organization</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Set up Azure AD SSO!</div>
+<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your organization</button></a>
 </div>
