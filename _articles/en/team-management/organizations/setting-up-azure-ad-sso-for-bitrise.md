@@ -133,7 +133,7 @@ From now on, Organization members will be able to log in exclusively via SAML SS
 
 ![](/img/enforced-saml-sso.jpg)
 
-{% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you'd like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in organizations](/team-management/organizations/saml-sso-in-organizations/) guide."%}
+{% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you'd like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in Organizations](/team-management/organizations/saml-sso-in-organizations/) guide."%}
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
