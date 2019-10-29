@@ -1,8 +1,12 @@
 ---
 tag: []
-title: Invitation FAQ
+title: Invitations FAQ
 redirect_from: []
 summary: ''
+menu:
+  faq-main:
+    weight: 23
+    title: Invitation FAQ
 
 ---
 {% include not_translated_yet.html %}
