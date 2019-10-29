@@ -48,7 +48,7 @@ In this tutorial, we describe how Organization owners can set up their SAML SSO 
 3. Log into your own SAML SSO provider.
 4. Add Bitrise using the copied Single Sign-On URL. You're generating your Single Sign-On (SSO) credentials here which you will need in a minute on Bitrise.
 5. Add the generated SSO credentials to the **Identity provider sign-on URL** and **Certificate** fields on the **Single Sign On** tab.
-6. Click the **Configure SSO** button. 
+6. Click the **Configure SSO** button.
 
 ![](/img/enable-single-sign-on.jpg)
 
@@ -58,17 +58,20 @@ If you've completed the steps, you and org members should get a verification ema
 
 Now that the Organization owner has set up SAML SSO, everyone in the Organization has to enable SAML SSO before logging into their org via SAML SSO.
 
-1. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
+1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
+2. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
 
-   ![](/img/saml-step-up-enabling-missing.jpg)
+   The email also shows the Organization owner's email address (should you need to contact him/her.) 
 
-   The email also shows the Organization owner's email address (should you need to contact him/her.)
-2. Now you are redirected to your SAML SSO provider's site where you have to provide your email address associated with your Bitrise Organization.
+   Click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
+
+   ![](/img/saml-invitation-authentication.jpg)
+3. Now you are redirected to your SAML SSO provider's site where you have to provide your email address associated with your Bitrise Organization.
 
    If you provide a different Bitrise email address on your SAML SSO provider's site which is not related to that particular Organization, you will get the below error message. Log in with the right email address of the Organization.
 
    ![](/img/no-connected-sso-for-this-email-address.jpg)
-3. You're directed to the **Allow "organization name" to sign you in** page.
+4. You're directed to the **Allow "organization name" to sign you in** page.
 
 * Click **Authorize** if you trust the Organization to control your Bitrise account-sign in process. Note that once you click **Authorize**, you'll only be able authenticate this account via SAML SSO.
 * Click **Don't allow** if the invitation email is from an untrusted source.![](/img/enable-saml.jpg)

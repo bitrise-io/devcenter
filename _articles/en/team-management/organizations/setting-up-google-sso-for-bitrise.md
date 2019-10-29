@@ -29,7 +29,7 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML ap
 5. In the **Enable SSO for SAML Application** window, click **SETUP MY OWN CUSTOM APP**.
 6. In the **Google IdP Information** window, copy the **SSO URL** and click **DOWNLOAD**. ![](/img/Google-idp-information.jpg)
 
-   You will need the SSO URL and the content of the downloaded certificate on the **Single Sign On** tab of your Bitrise organization. Then click **Next** on the bottom right corner.
+   You will need the SSO URL and the content of the downloaded certificate on the **Single Sign On** tab of your Bitrise Organization. Then click **Next** on the bottom right corner.
 
 Now that we have the config information, we will leave Google Admin Console for a minute and fill out the required SAML SSO fields on Bitrise.
 
@@ -37,8 +37,8 @@ Now that we have the config information, we will leave Google Admin Console for 
 
 1. Go back to Bitrise.
 2. Click **Account Settings**.
-3. Click the organization you want to add SAML SSO.
-4. Click the organization's **Single Sign On** button on the left.
+3. Click the Organization you want to add SAML SSO.
+4. Click the Organization's **Single Sign On** button on the left.
 5. Paste the SSO URL to the **Identity provider sign-on URL** field. (Remember, you've copied this URL from the **Google IdP Information** window in your Google Admin Console).
 
    Paste the content of the downloaded certificate to the **Certificate** field.
@@ -74,24 +74,30 @@ Now that we have the config information, we will leave Google Admin Console for 
 1. Click **EDIT SERVICE**.
 
    ![](/img/turn-on-bitrise-in-console.png)
-2. On the **Service Status** page, select your organization unit on the left.
-3. Click **ON** to enable Bitrise 's service status.
+2. On the **Service Status** page, select your Organization unit on the left.
+3. Click **ON** to enable Bitrise's service status.
 
    ![](/img/service-status.png)
-4. Check your emails. You should receive a confirmation email from us (letsconnect@bitrise.io) containing a **Sign In via SSO** button. For a smoother sign-in flow, make sure you're already logged into Bitrise in another tab before you hit the **Sign In via SSO** button.
-5. Click **Sign In via SSO** to proceed to our Authorization page.
+4. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
+5. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
 
-   NOTE: Below error message only appears if you’ve been trying to access the Authorization page in a Safari browser.
+   The email also shows the Organization owner's email address (should you need to contact him/her.) Click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
+
+   ![](/img/saml-invitation-authentication.jpg)
+
+   Below error message only appears if you’ve been trying to access the Authorization page in a Safari browser.
 
        Error: The CORS policy for this site does not allow access from the specified Origin....
 
-   As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the `Authorization` page.
-6. Click **Authorize**.
+   As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the **Authorization** page.
+6. On the **Allow "Organization name" to sign you in** window, click **Authorize** if you trust the Organization.
 
-You should be landing on your Bitrise Dashboard now. If you click **Account settings** and select the **Single Sign-On** tab from the left menu, you should see SAML SSO is enabled for your organization. Once all organization members have enabled their SAML SSO connection, you can [enforce SAML SSO on the whole organization with a simple toggle](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization).
+   You should be landing on your Organization's Bitrise Dashboard. You can check on the **Groups** tab who has been added to the org as a SAML user.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Set up Google SSO!</div>
-	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your organization</button></a>
-</div>
+   ![](/img/gorups-saml.jpg)
+
+Congrats! You have successfully enabled the SAML connection! Since SAML SSO has not been enforced on your org yet, you can log in via SAML SSO or with your Bitrise credentials.
+
+If you click **Account settings** and select the **Single Sign-On** tab from the left menu, you should see SAML SSO is enabled for your Organization. Once all Organization members have enabled their SAML SSO connection, you can [enforce SAML SSO on the whole organization with a simple toggle](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization).
+
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Set up Google SSO!</div> <a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your Organization</button></a> </div>
