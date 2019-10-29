@@ -78,7 +78,8 @@ Congrats! Bitrise has been successfully added to Okta as an app.
 
 ## Enabling SAML SSO on Bitrise
 
-Once SAML SSO has been set up between the app and the identity provider, all org members (including the org owner) must enable their SAML SSO connection to the respective org to use SAML SSO as a login method.
+Once SAML SSO has been set up, all org members (including the org owner) must enable their SAML SSO connection to the respective org to use SAML SSO as a login method.
+
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
 2. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
 
@@ -91,6 +92,7 @@ Once SAML SSO has been set up between the app and the identity provider, all org
        Error: The CORS policy for this site does not allow access from the specified Origin....
 
    As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the **Authorization** page.
+3. On the **Allow “Organization name” to sign you in** window, click **Authorize** if you trust the Organization.
 
 If all went well, you should be on your Bitrise Dashboard. If you go to the **Groups** tab the Organization, you can see that you are automatically added as a SAML user. All org members, who enable SAML SSO, appear here automatically.
 
