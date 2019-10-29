@@ -204,7 +204,6 @@ pages:
 - _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
 - _articles/en/faq/invitation-faq.md
 - _articles/jp/faq/Invitation FAQ.md
-- _articles/en/reviews/private-cloud.md
 - _articles/en/api/endpoints.md
 - _articles/en/api/build-trigger.md
 - _articles/en/api/incoming-and-outgoing-webhooks.md
