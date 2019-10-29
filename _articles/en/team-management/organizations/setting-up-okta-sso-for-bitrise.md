@@ -111,10 +111,10 @@ From now on, org members will be able to log in exclusively via SAML SSO.
 
 ![](/img/enforced-saml-sso.jpg)
 
-{% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you’d like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in organizations](https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/) guide. "%}
+{% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you’d like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in Organizations](https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/) guide. "%}
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 <div class="deploy-text">Set up Okta SSO!</div>
-<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your organization</button></a>
+<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your Organization</button></a>
 </div>
