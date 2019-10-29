@@ -195,13 +195,13 @@ pages:
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/detached-head状態からgit-checkoutを行うのはどうすればいいですか-how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/レポジトリへ依存性をコミットしたほうがいいですか-should-i-commit-my-dependencies-into-my-repository.md
-- _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/bitbucket-teamへbitriseのアクセスを許可する方法を教えて下さい-how-can-i-grant-bitrise-access-to-a-bitbucket-team.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/why-does-my-build-take-longer-on-bitrise-than-on-my-machine.md
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
 - _articles/jp/team-management/organizations/setting-up-ping-identity-sso-for-bitrise.md
+- _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
 - _articles/en/faq/invitation-faq.md
 - _articles/jp/faq/Invitation FAQ.md
 - _articles/en/reviews/private-cloud.md
