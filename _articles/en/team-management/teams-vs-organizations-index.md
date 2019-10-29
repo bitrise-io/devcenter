@@ -15,12 +15,12 @@ menu:
 ---
 There are two types of accounts on Bitrise:
 
-* individual user accounts
-* organization accounts
+* Individual user accounts.
+* Organization accounts.
 
 When signing up to Bitrise, you create an individual user account. Individual users can create their own applications or be invited to work on other applications.
 
-### Teams vs organizations
+## Teams vs organizations
 
 The most important concepts to managing apps on Bitrise are:
 
