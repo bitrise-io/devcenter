@@ -3,12 +3,8 @@ tag: []
 title: Invitation FAQ
 redirect_from: []
 summary: ''
-menu:
-  faq-main:
-    weight: 23
 
 ---
-
 {% include not_translated_yet.html %}
 
 If you are invited to join a [Team or an Organization](/team-management/teams-vs-organizations-index/) on Bitrise, you will get an invitation email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io).
