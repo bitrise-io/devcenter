@@ -83,7 +83,7 @@ Once SAML SSO has been set up, all Organization members (including the org owner
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
 2. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
 
-   The email also shows the Organization owner's email address (should you need to contact him/her.)
+   The email also shows the Organization owner's email address (should you need to contact him/her.) Click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
 
    ![](/img/saml-invitation-authentication.jpg)
 
