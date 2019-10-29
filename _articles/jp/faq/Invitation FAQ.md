@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Invitation FAQ
+title: Invitations FAQ
 redirect_from: []
 summary: ''
 
