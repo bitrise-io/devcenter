@@ -65,23 +65,23 @@ MacBook Airs, HDDストレージのMac Minis, ...
     func testAddAnItemGoToDetailsThenDeleteIt() {
             // Use recording to get started writing UI tests.
             // Use XCTAssert and related functions to verify your tests produce the correct results.
-
-
+    
+    
             let app = XCUIApplication()
             let masterNavigationBar = app.navigationBars["Master"]
             masterNavigationBar.buttons["Add"].tap()
-
+    
             let tablesQuery = app.tables
             let firstElemQuery = tablesQuery.cells.elementBoundByIndex(0)
             firstElemQuery.tap()
             app.navigationBars.matchingIdentifier("Detail").buttons["Master"].tap()
             masterNavigationBar.buttons["Edit"].tap()
-
+    
             firstElemQuery.buttons.elementBoundByIndex(0).tap()
             firstElemQuery.buttons["Delete"].tap()
-
+    
             masterNavigationBar.buttons["Done"].tap()
-
+    
             XCTAssert(tablesQuery.cells.count == 0)
         }
 
@@ -102,14 +102,13 @@ Xcode 7.3を使用する"iPhone 6"のシミュレーターデバイスの場合�
 これは多くのことが原因になりえます。Xcodeやいくつかの他のツールがまったく
 エラーメッセージを省略し/表示しません。
 
-考えられうる理由や解決方法についての長い議論を見ることができます。[ここ](https://github.com/bitrise-io/bitrise.io/issues/5).
+いくつかの解決策：以下
 
 概要:
 
 * まず最初に、`xcpretty`を使ってアウトプットをフォーマットする場合アウトプットなしのビルドを試しましょう
   (Xcode Testステップを使用する場合は"Output Tool"オプション/インプットとして`xcodebuild`を設定することができます。
-  `xcodebuild`により生成されたログをフォーマットしないようにします。)。これの理由: `xcpretty`がときどき
-  アウトプットのなかのエラーメッセージを省略するため。 [関連するGitHubのissue](https://github.com/bitrise-io/bitrise.io/issues/27).
+  `xcodebuild`により生成されたログをフォーマットしないようにします。)。これの理由: `xcpretty`がときどき アウトプットのなかのエラーメッセージを省略するため。 
 * UIテストを実行するために私たちの`Xcode Test`ステップを使用しない場合は、私たちのXcode Testステップを
   使用し実行を試すべきです。私たちは常にステップの信頼性を向上させようとしており、
   一般的な問題の既知の回避策を実装します。
@@ -119,13 +118,10 @@ Xcode 7.3を使用する"iPhone 6"のシミュレーターデバイスの場合�
   一つのXcodeのバージョンでは発生するが、別のバージョンでは発生しない問題があります。
 * 期待どおりに[Xcodeスキームがsharedである](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)が確認してください。
   それを有効にした場合、その変更をコミットしプッシュすることを忘れないでください。
-* または[Xcodeプロジェクトのプロジェクト構成の問題](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-140188658)や、
-  [テストのコードの問題](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-160171566)、
-  [コードのマルチスレッドの問題](https://github.com/bitrise-io/bitrise.io/issues/5#issuecomment-190163069)であるかもしれません。
+* または、Xcodeプロジェクトのプロジェクト構成の問題、テストのコードの問題、またはコードのマルチスレッドの問題である可能性があります。
 * 私たちはコードカバレッジレポート作成によってこの問題が発生しているかもしれないという報告を受けています。
   Xcode Testステップのオプションの`Generate code coverage files?`を無効にすることができ、
   コードカバレッジファイルを生成しないようにすることができます。
-* 以上の方法で問題が解決しなかった場合、次のリンクから議論全体や推奨されている解決方法を確認しましょう。: [https://github.com/bitrise-io/bitrise.io/issues/5](https://github.com/bitrise-io/bitrise.io/issues/5)
 
 ## Segmentation fault
 
