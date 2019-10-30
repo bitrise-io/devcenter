@@ -10,7 +10,9 @@ published: false
 
 {% include message_box.html type="important" title="Ship in BETA" content="Please note that this feature is still in BETA version."%}
 
-With Ship, you can manage Continuous Deployment of your app, as well as manage different build versions of the app in a convenient way. Using Ship to distribute your app gives you more control and granularity.
+Ship is a deployment solution that aims to save users a lot of headache. With Ship, you have complete control over your app's distribution, its version history, and all the important metadata - and you can manage all that in one place. 
+
+Deployment with Ship includes automatic re-sign and artifact generation and we store all the previous versions too. The app’s metadata, all the marketing copy, and screenshots can also be edited on the spot and non-developer people can manage it.
 
 {% include message_box.html type="info" title="Ship language" content="As of right now, Ship is only available in English."%}
 
@@ -23,8 +25,6 @@ You can do a whole lot of things with Ship:
 * Switch between platforms on the **Version History** page in the case of cross-platform projects.
 
   ![](/img/ship_benefits.jpg)
-
-Deployment includes automatic re-sign and artifact generation and we store all the previous versions too. The app’s metadata, all the marketing copy, and screenshots can also be edited on the spot and non-developer people can manage it.
 
 ## Getting started with Ship
 
