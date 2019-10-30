@@ -614,6 +614,13 @@ main.content {
 		padding: 0;
 	}
 
+	.index-title {
+		font-weight: bold;
+		font-size: 1.8rem;
+		color: #683d87;
+		cursor: pointer;
+	}
+
 	.index-box {
 		padding: 1.5rem;
 		width: 25%;
@@ -628,16 +635,12 @@ main.content {
 
 		&:focus, &:hover {
 			color: #760fc3;
-		}
 
-		.index-title {
-			font-weight: bold;
-			font-size: 1.8rem;
-			color: #683d87;
-			cursor: pointer;
-
-			&:focus, &:hover {
+			.index-title {
+				font-weight: bold;
+				font-size: 1.8rem;
 				color: #760fc3;
+				cursor: pointer;
 			}
 		}
 	}
