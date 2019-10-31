@@ -23,7 +23,7 @@ For example, if you trigger a build on the **master** branch of your repository 
 
 You can also set which types of triggered builds you wish to abort. Let's see how!
 
-1. Open your \[Dashboard\](https://app.bitrise.io/dashboard/builds) and select your app.
+1. Open your [Dashboard](https://app.bitrise.io/dashboard/builds) and select your app.
 2. Select the **Settings** tab from the menubar.
 3. Scroll down to the **ENABLE ROLLING BUILDS** option and toggle it.
 4. Select the type(s) of builds you wish to abort when a new build is started.
