@@ -224,8 +224,8 @@ pages:
 - _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/en/code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
 - _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
-- _articles/en/builds/triggering-builds/trigger-git-tags.md
 - _articles/en/builds/rolling-builds.md
+- _articles/en/builds/triggering-builds/trigger-git-tags.md
 - _articles/en/builds/triggering-builds/trigger-code-push.md
 - _articles/en/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/en/steps-and-workflows/creating-workflows.md
