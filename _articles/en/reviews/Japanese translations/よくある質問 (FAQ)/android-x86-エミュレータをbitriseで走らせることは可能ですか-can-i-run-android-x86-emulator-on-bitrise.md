@@ -7,16 +7,16 @@ summary: ''
 published: false
 
 ---
-A frequent question is whether it's possible to run the Android x86 emulator, instead of the ARM emulators.
+ARMエミュレータの代わりに、Android x86 エミュレータを走らせることができるのかという質問がよくあります。
 
-We allow all the required nested virtualization bits for the x86 Android emulators **on the Linux/Android stacks**,. This means that we can use the virtualization that the host machine has for running an emulator with x86 architecture, and we can thus skip the slow emulation. This is still 10-15% slower than when run on a physical machine, but it is still much faster than the armv7-a emulator.
+Bitriseは、**Linux / Androidスタック上の** Android x86エミュレータに必要なすべてのネストされた仮想化ビットを許可します。ホストマシンが持つ仮想化を、x86アーキテクチャを使って走らせることができ、速度の遅いエミュレーションをスキップすることができます。これは、物理マシンよりも10から15%ほど遅くなりますが、armv7-aエミュレータよりはるかに速度が速くなります。
 
-**This feature is only available on the Linux/Android stacks**.
+**この機能はLinux/Androidスタックでのみ使用可能です。**
 
-## Alternatives (for other stacks)
+## 他スタックに関する代案
 
-You can use [Oracle's Ravello](https://www.ravellosystems.com/) if you need a full emulator (with UI), or [robolectric](http://robolectric.org/) for unit tests.
+フルの (UIを持つ) エミュレータが必要な場合、[Oracle製のRavello](https://www.ravellosystems.com/)を使用してください。また、ユニットテストには[robolectric](http://robolectric.org/)を使用します。
 
-Another alternative is to use a service like [AWS Device Farm](https://aws.amazon.com/device-farm/) or [Open STF](https://openstf.io/), where you can run the tests on real devices instead of in an emulator. Bitrise integrations are available for both those services.
+エミュレータではなく実際のデバイス上でテストを行うには、[AWS Device Farm](https://aws.amazon.com/jp/device-farm/)や[Open STF](https://openstf.io/)のようなサービスを使用できます。Bitriseには、それら両方のサービス用で使用可能なインテグレーションがあります。
 
-If you know about any other, [feel free to contact us](https://www.bitrise.io/contact)!
+他に知っていることがあれば、[お気軽にご連絡くださいませ](https://www.bitrise.io/contact)。
