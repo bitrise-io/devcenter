@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/android-x86-エミュレータをbitriseで走らせることは可能ですか-can-i-run-android-x86-emulator-on-bitrise.md
 - deploy.md
 - _articles/en/builds/rolling-builds.md
@@ -181,7 +182,6 @@ pages:
 - _articles/en/testing/device-testing-for-android.md
 - _articles/en/bitrise-cli/run-your-first-build.md
 - _articles/en/bitrise-cli/initializing-a-bitrise-project-locally.md
-- _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/bitrise-cli/index.md
 - _articles/en/bitrise-cli/customizing-bitrise-yml.md
 - _articles/en/bitrise-cli/offline-workflow-editor.md
