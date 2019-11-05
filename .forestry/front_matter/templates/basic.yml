@@ -28,9 +28,9 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- deploy.md
 - _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/android-x86-エミュレータをbitriseで走らせることは可能ですか-can-i-run-android-x86-emulator-on-bitrise.md
-- deploy.md
 - _articles/en/builds/rolling-builds.md
 - _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/jp/faq/Invitation FAQ.md
