@@ -28,11 +28,12 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/bitrise-cli/step-outputs.md
+- _articles/en/reviews/ship-add-on-beta-version.md
 - deploy.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/android-x86-エミュレータをbitriseで走らせることは可能ですか-can-i-run-android-x86-emulator-on-bitrise.md
 - _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/builds/rolling-builds.md
-- _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/jp/faq/Invitation FAQ.md
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
@@ -158,7 +159,6 @@ pages:
 - _articles/en/testing/android-run-a-unit-test.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
 - _articles/en/api/response-and-pagination.md
-- _articles/en/bitrise-cli/step-outputs.md
 - _articles/en/bitrise-cli/step-properties.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/testing/test-reports.md
