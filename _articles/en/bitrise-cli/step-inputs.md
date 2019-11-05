@@ -18,8 +18,6 @@ Step inputs are environment items that tell the Bitrise CLI how to run a given s
 
 Step inputs can be defined in the `step.yml` file of the project by setting the `inputs` property. They have the same syntax as every environment property. It consists of two main parts: a `KEY: value` pair and an `opts` field. The key and the value are required, the `opts` field is optional.
 
-{% include message_box.html type="example" title="Step input example" content="
-
 ```yaml 
 - my_key_for_the_env: my value for the env 
   opts: 
@@ -27,8 +25,6 @@ Step inputs can be defined in the `step.yml` file of the project by setting the 
     is_dont_change_value: false 
     category: example
 ```
-
-"%}
 
 * `my_key_for_the_env`: the key of the environment item (required)
 * `my value for the env`: the value of the item (required)
@@ -63,6 +59,7 @@ Set the `is_template` property in the `step.yml` file of your project to use tem
 **Example:**
 
 ``` Go
+{% raw %}
 - script:
   title: Template example
   inputs:
@@ -74,6 +71,7 @@ Set the `is_template` property in the `step.yml` file of your project to use tem
       {{end}}
     opts:
       is_template: true
+{% endraw %}
 ```
 
 Check out the template utility [on GitHub](https://github.com/bitrise-io/bitrise/blob/master/bitrise/template_util.go#L17)!
