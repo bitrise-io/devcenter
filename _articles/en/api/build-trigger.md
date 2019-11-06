@@ -43,9 +43,17 @@ Here's a minimal sample JSON body which specifies _master_ as the value of the `
 
 And here's an example curl request:
 
-  ```
-  curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
-  ```
+```
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
+  '{
+	"hook_info": {
+		"type": "bitrise"
+	},
+	"build_params": {
+		"branch": "master"
+	}
+   }'
+```
 
 In the above example, we triggered a build of the app's `master` branch.
 
@@ -78,11 +86,30 @@ You can specify several different build parameters when triggering a build. The 
 
 You can set Git-specific parameters in your call. The `branch` parameter specifies the source branch to be built. This is either the branch of the git commit or, in the case of a pull request build, the source branch of the pull request.
 
-    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
+```
+curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
+'{
+	"hook_info": {
+		"type": "bitrise"
+	},
+	"build_params": {
+		"branch": "master"
+	}
+ }'
+```
 
 You can also build a specific git commit or even a git tag: you just need to set either the commit hash or the tag in the `build_params` object. You can also set a commit message for the build with the `commit_message` parameter.
 
-    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"commit_hash":"0000ffffeeeee", "commit_message":"testing"}}'
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
+    '{
+		"hook_info": {
+			"type": "bitrise"
+		},
+		"build_params": {
+			"commit_hash": "0000ffffeeeee",
+			"commit_message": "testing"
+		}
+	 }'
 
 {% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
 
@@ -100,7 +127,18 @@ The `branch_repo_owner` and `branch_dest_repo_owner` parameters are used to iden
 
 To identify the PR itself, use the `pull_request_id` parameter: it takes an integer; for example, the number of the PR on GitHub.
 
-    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133, "commit_hash": "fffff000000eeeeee"}}'
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
+    '{
+		"hook_info": {
+			"type": "bitrise"
+		},
+		"build_params": {
+			"branch": "the-pr-branch",
+			"branch_dest": "master",
+			"pull_request_id": 133,
+			"commit_hash": "fffff000000eeeeee"
+		}
+	  }'
 
 If your git provider supports it, you can also use the `pull_request_merge_branch` parameter to build the pre-merged state of the branch of the PR. Another alternative is the `pull_request_head_branch` parameter: this is a special git ref that should point to the source of the PR.
 
@@ -110,7 +148,18 @@ If you want to trigger a build from a PR opened from a fork of your repository, 
 
 If you have a webhook set up, Bitrise will send status reports to your git provider about your builds. However, this can be disabled via the API: use the `skip_git_status_report` parameter. If it is set to `true`, no build status report will be sent.
 
-    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133, "skip_git_status_report": "true"}}'
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
+    '{
+		"hook_info": {
+			"type": "bitrise"
+		},
+		"build_params": {
+			"branch": "the-pr-branch",
+			"branch_dest": "master",
+			"pull_request_id": 133,
+			"skip_git_status_report": "true"
+		}
+	  }'
 
 ### Specifying Environment Variables
 
@@ -140,7 +189,16 @@ With the API, you can however **overwrite** this selection and specify exactly w
 
 Add a `workflow_id` parameter to your `build_params` and specify the workflow you want to use for that specific build. Here's an example call where we specify the `deploy` workflow:
 
-    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"deploy"}}'
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \ 
+    '{
+		"hook_info": {
+			"type": "bitrise"
+		},
+		"build_params": {
+			"branch": "master",
+			"workflow_id": "deploy"
+		}
+	  }'
 
 ## Aborting a build
 
