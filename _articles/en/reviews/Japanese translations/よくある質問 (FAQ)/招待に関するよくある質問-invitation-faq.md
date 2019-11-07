@@ -6,13 +6,17 @@ summary: ''
 published: false
 
 ---
-{% include not_translated_yet.html %}
-
 If you are invited to join a [Team or an Organization](/team-management/teams-vs-organizations-index/) on Bitrise, you will get an invitation email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io).
 
 If you already have a Bitrise account and receive an invitation email, you’ll have to click the **View** button to get to the app's page!
 
+BitriseでTeam (チーム)もしくはOrganization (組織)に招待された際、letsconnect@bitrise.ioより招待メールが送られます。
+
+すでにBitriseアカウントをお持ちで招待メールを受け取った場合、アプリのページへ移るには**View**ボタンをクリックしましょう！
+
 If you don’t have an account yet, and you’re invited to an Organization or a Team, you should click the **Accept invitation** button in the invitation email. This will take you through   registration, and log you into the account. If you attempt to sign up manually, you won’t be able to since your email address is already reserved for the invitation. So we recommend you to check your inbox, look for the invitation email from Bitrise and follow the instructions there.
+
+まだアカウントをお持ちではなく、組織またはチームに招待された場合、招待メール内の**Accept invitation**ボタンをクリックします。このクリックによって、登録ページに遷移されアカウントにログインします。マニュアルでのサインアップは、すでにメールアドレスが招待されている状態なのでできません。ですので、メールのインボックスを確認し招待メールを確認して、そこから指示に従ってください。
 
 ![](/img/accept-invitation-1.jpg)
 
