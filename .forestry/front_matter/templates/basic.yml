@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/パスワードのリセット-resetting-your-password.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/招待に関するよくある質問-invitation-faq.md
 - _articles/en/reviews/Japanese translations/チュートリアル (Tutorials)/コミュニティによるチュートリアル-community-created-tutorials.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/トラブルシューティング-troubleshooting.md
