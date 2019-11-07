@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/パスワードのリセット-resetting-your-password.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/招待に関するよくある質問-invitation-faq.md
@@ -181,7 +182,6 @@ pages:
 - _articles/en/faq/how-to-generate-ssh-keypair.md
 - _articles/en/faq/how-to-change-the-owner-of-an-app.md
 - _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
 - _articles/en/deploy/android-deploy/deploying-android-apps.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
