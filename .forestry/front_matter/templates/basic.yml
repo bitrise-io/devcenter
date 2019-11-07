@@ -29,10 +29,22 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/パスワードのリセット-resetting-your-password.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/招待に関するよくある質問-invitation-faq.md
+- _articles/en/reviews/Japanese translations/チュートリアル (Tutorials)/コミュニティによるチュートリアル-community-created-tutorials.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/トラブルシューティング-troubleshooting.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーの変更方法を教えて下さい-how-to-change-the-owner-of-an-app.md
+- _articles/en/api/build-trigger.md
+- _articles/en/bitrise-cli/step-outputs.md
+- _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/android-x86-エミュレータをbitriseで走らせることは可能ですか-can-i-run-android-x86-emulator-on-bitrise.md
 - _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/builds/rolling-builds.md
-- _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/jp/faq/Invitation FAQ.md
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
@@ -56,7 +68,6 @@ pages:
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/github-organization-組織-へbitriseのアクセスを許可する方法はありますか-how-to-grant-bitrise-access-to-a-github-organization.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/bitbucket-teamへbitriseのアクセスを許可する方法を教えて下さい-how-can-i-grant-bitrise-access-to-a-bitbucket-team.md
 - _articles/jp/team-management/organizations/setting-up-ping-identity-sso-for-bitrise.md
-- _articles/en/api/build-trigger.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーを変更する方法を教えて下さい-how-to-change-the-owner-of-an-app.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/サブモジュールもしくはプライベートレポジトリ依存が含まれるプロジェクトを追加することは可能ですか-can-i-add-projects-with-submodules-or-with-private-repo-dependencies.md
@@ -76,7 +87,6 @@ pages:
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/faq/adding-projects-with-submodules.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
 - _articles/en/bitrise-cli/most-important-concepts.md
@@ -156,9 +166,7 @@ pages:
 - _articles/en/builds/triggering-builds/trigger-pull-request.md
 - _articles/en/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/en/testing/android-run-a-unit-test.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
 - _articles/en/api/response-and-pagination.md
-- _articles/en/bitrise-cli/step-outputs.md
 - _articles/en/bitrise-cli/step-properties.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/testing/test-reports.md
@@ -175,8 +183,6 @@ pages:
 - _articles/en/faq/how-to-generate-ssh-keypair.md
 - _articles/en/faq/how-to-change-the-owner-of-an-app.md
 - _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
 - _articles/en/deploy/android-deploy/deploying-android-apps.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/en/testing/device-testing-for-android.md

@@ -6,7 +6,7 @@ tag:
 - env vars
 - bitrise.yml
 summary: Step outputs are environment items that are the result of running a given
-  step. For example, the deploy-to-bitrise-io step generates the $BITRISE_PUBLIC_INSTALL_PAGE_URL
+  Step. For example, the deploy-to-bitrise-io Step generates the $BITRISE_PUBLIC_INSTALL_PAGE_URL
   and the $BITRISE_PUBLIC_INSTALL_PAGE_URL_MAP output variables by default.
 redirect_from: []
 menu:
@@ -14,7 +14,7 @@ menu:
     weight: 23
 
 ---
-Step outputs are environment items that are the result of running a given step. For example, the `deploy-to-bitrise-io` step generates the `$BITRISE_PUBLIC_INSTALL_PAGE_URL` and the `$BITRISE_PUBLIC_INSTALL_PAGE_URL_MAP` output variables by default. You can check out the default outputs of a step in the `Workflow Editor` on [bitrise.io](https://www.bitrise.io) or in the `step.yml` file of the step.
+Step outputs are environment items that are the result of running a given Step. For example, the `deploy-to-bitrise-io` Step generates the `$BITRISE_PUBLIC_INSTALL_PAGE_URL` and the `$BITRISE_PUBLIC_INSTALL_PAGE_URL_MAP` output variables by default. You can check out the default outputs of a Step in the `Workflow Editor` on [bitrise.io](https://www.bitrise.io) or in the `step.yml` file of the Step.
 
 Step outputs can be defined in the `step.yml` file of the project by setting the `outputs` attribute. They have the same syntax as every environment property. It consists of two main parts: a `KEY: value` pair and an `opts` field. The key and the value are required, the `opts` field is optional.
 
