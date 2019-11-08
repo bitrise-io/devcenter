@@ -76,9 +76,9 @@ The **Deploy to bitrise.io - Apps, Logs, Artifacts** Step attaches all the gen
 
 You can notify user groups or individual users that your APK file has been built by specifying roles and/or email addresses. You can share the app's public install page with anyone if you set the following input fields:
 
-1. Go to the `Deploy to bitrise.io` step.
-2. In the `Notify: User Roles` input field, add the role (for example, `testers`, `developers`, `admins`) so that only those get notified who have been granted with this particular role.
-3. Or fill out the `Notify: Emails` input field with email addresses of the users you want to send the URL to. Make sure you set those email addresses as [secret env vars](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under `Notifications` if you click the `eye` icon next to your generated APK file in the `APPS & ARTIFACTS` tab. Here you can check the URL by clicking `Open Public install page`.
+1. Go to the **Deploy to bitrise.io** Step.
+2. In the **Notify: User Roles** input field, add the role (for example, `testers`, `developers`, `admins`) so that only those get notified who have been granted with this particular role.
+3. Or fill out the **Notify: Emails** input field with email addresses of the users you want to send the URL to. Make sure you set those email addresses as [secret Environment Variables](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated APK file in the **APPS & ARTIFACTS** tab. Here you can check the URL by clicking **Open Public install page**.
 
 ![](/img/public-install-page.png)
 
@@ -93,7 +93,7 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
    * Access level: View app information.
    * Release management: Manage production releases, manage testing track releases.
    * Store presence: Edit store listing, pricing & distribution.
-5. As an optional step, you can add translations to your Store Listing. To allow the **Google Play Deploy** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
+5. As an optional Step, you can add translations to your Store Listing. To allow the **Google Play Deploy** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
 
 Now let's head back to Bitrise and finish off the deploy configuration!
 
@@ -106,7 +106,7 @@ Now let's head back to Bitrise and finish off the deploy configuration!
    For example:
 
    `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-6. Go back to your `Workflow Editor` and add the `Google Play Deploy` step to the end of your Workflow.
+6. Go back to your `Workflow Editor` and add the `Google Play Deploy` Step to the end of your Workflow.
 7. Fill out the required input fields which are:
    * `Service Account JSON key file path`: This field can accept a remote url so you have to provide the environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * `Package name`: the package name of your Android app
