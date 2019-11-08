@@ -16,22 +16,22 @@ menu:
     weight: 1
 
 ---
-This guide describes how you can add your Android project to [bitrise.io](https://www.bitrise.io) and deploy the APK built from your project to [Google Play Store](https://play.google.com/store). We're using the [sample-apps-android-googleplay](https://github.com/bitrise-samples/sample-apps-android-googleplay) app as an example for this tutorial.
+This guide describes how you can add your Android project to [bitrise.io](https://www.bitrise.io) and deploy the APK built from your project to [Google Play Store](https://play.google.com/store).
 
 In this guide, you will learn how to:
 
-* create an Android app on [bitrise.io](https://www.bitrise.io)
-* set up a [Google Play Store](https://play.google.com/store) project
-* set up [Google Play API](https://developers.google.com/android-publisher/getting_started) access
-* [deploy to Google Play Store](#deploy-to-google-play-store-using-bitrise-google-play-deploy-step) using Bitrise's `Google Play Deploy` step
+* Create an Android app on [bitrise.io](https://www.bitrise.io).
+* Set up a [Google Play Store](https://play.google.com/store) project.
+* Set up [Google Play API](https://developers.google.com/android-publisher/getting_started) access.
+* [Deploy to Google Play Store](#deploy-to-google-play-store-using-bitrise-google-play-deploy-step) using Bitrise's **Google Play Deploy** Step.
 
 ## Adding your Android app on [bitrise.io](https://www.bitrise.io)
 
 * Log into [bitrise.io](htts://www.bitrise.io).
 * Create a [new Bitrise project](getting-started/adding-a-new-app). Bitrise scans your Android project and creates the initial configuration for it.
-* Sign your `APK` file [digitally](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/).
+* Sign your APK file [digitally](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/).
 
-  Do not forget to **upload your keystore file** to [bitrise.io](https://www.bitrise.io).
+  Do not forget to upload your keystore file to [bitrise.io](https://www.bitrise.io).
 
   Once your code signing is completed, your config will look like this:
 
@@ -57,14 +57,14 @@ In this guide, you will learn how to:
 
 ## Setting up your first project
 
-1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/). If you already have a Google Play Developer account, and you have already deployed your app to Google Play Store, skip to [Set up Google Play API access](#set-up-google-play-api-access).
+1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/). If you already have a Google Play Developer account, and have already deployed your app to Google Play Store, skip to [Set up Google Play API access](#set-up-google-play-api-access).
 2. Go through the [Prepare & roll out steps](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
 
 ### Setting up Google Play API access
 
-1. Link your API project by `Creating a new API project` or `Using an existing API project`.
-2. Set up `API Access Clients` using a service account and grant `Deployment manager` role to the service account.
-3. **Save the downloaded JSON key of your service account** now because you will need it later.
+1. Link your API project by **Creating a new API project** or **Using an existing API project**.
+2. Set up **API Access Clients** using a service account and grant **Deployment manager** role to the service account.
+3. Save the downloaded JSON key of your service account now because you will need it later.
 
 Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started) guide if you need more information on the process.
 
@@ -72,7 +72,7 @@ You have successfully prepared your Google Play Console project. A services cred
 
 ## Deploying to bitrise.io
 
-The `Deploy to bitrise.io - Apps, Logs, Artifacts` Step attaches all the generated artifacts to your build and uploads them into the [ APPS & ARTIFACTS](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. By default, the value of the `Enable public page for the App?` input field is set to `true`. This way, once the build runs, a public install page will be available with a long and random URL which can be shared with others who are not registered on Bitrise.
+The **Deploy to bitrise.io - Apps, Logs, Artifacts** Step attaches all the generated artifacts to your build and uploads them into the [ APPS & ARTIFACTS](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. By default, the value of the **Enable public page for the App?** input field is set to `true`. This way, once the build runs, a [public install page](/deploy/bitrise-app-deployment/#accessing-the-public-install-page) will be available with a long and random URL which can be shared with others who are not registered on Bitrise.
 
 You can notify user groups or individual users that your APK file has been built by specifying roles and/or email addresses. You can share the app's public install page with anyone if you set the following input fields:
 
