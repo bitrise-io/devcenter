@@ -19,15 +19,15 @@ menu:
 ---
 ## Creating a signed APK with the Android Sign Step
 
-You can create a signed APK using the `Android Sign Step` in your Bitrise workflow.
+You can create a signed APK using the **Android Sign** Step in your Bitrise workflow.
 
-Bitrise Project Scanner provides a `deploy workflow` which contains the `Android Sign Step`. With this step, you can digitally sign your APK as part of your workflow. This Step is configured to run if you have already uploaded your keystore file to Bitrise. All you have to do is upload your keystore file in the `Code signing` tab of the Workflow Editor.
+Bitrise project scanner provides a `deploy workflow` which contains the **Android Sign Step**. With this Step, you can digitally sign your APK as part of your workflow. This Step is configured to run if you have already uploaded your keystore file to Bitrise. All you have to do is upload your keystore file in the `Code signing` tab of the Workflow Editor.
 
 In this section, we walk you through the code signing steps using our `android-multiple-test-results-sample` demo app.
 
 Before you start:
 
-* Make sure you have the `Android Sign Step` in your deploy workflow right after your build steps but before `Google Play deploy` Step.
+* Make sure you have the `Android Sign Step` in your deploy workflow right after your build Steps but before `Google Play deploy` Step.
 
 1. Log into [bitrise.io](https://www.bitrise.io/) and click on your app.
 2. On your `Dashboard`, click `Workflow`.
@@ -55,7 +55,7 @@ Before you start:
 
 ## Downloading your files
 
-You can download your files from `GENERIC FILE STORAGE` (for example, your keystore file) using the `File-downloader` step:
+You can download your files from `GENERIC FILE STORAGE` (for example, your keystore file) using the `File-downloader` Step:
 
 An example for downloading a keystore file:
 
@@ -67,7 +67,7 @@ An example for downloading a keystore file:
     
        - destination: "$HOME/keystores/my_keystore.jks" #native android#
 
-After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
+After this Step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
 You might find these guides helpful as well:
 
