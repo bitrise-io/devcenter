@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/en/reviews/ship-add-on-beta-version.md
@@ -169,7 +170,6 @@ pages:
 - _articles/en/testing/android-run-a-unit-test.md
 - _articles/en/api/response-and-pagination.md
 - _articles/en/bitrise-cli/step-properties.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/testing/test-reports.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
 - _articles/en/api/managing-ios-code-signing-files.md

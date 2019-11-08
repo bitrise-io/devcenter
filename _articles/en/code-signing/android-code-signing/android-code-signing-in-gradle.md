@@ -33,7 +33,7 @@ You can manually specify the code signing configuration in your Gradle configura
            } 
        } ...
 
-For more information, check out how to [Configure Gradle to sign your app](https://developer.android.com/studio/publish/app-signing).
+For more information, check out how to [configure Gradle to sign your app](https://developer.android.com/studio/publish/app-signing).
 
 ## About environment variables
 
