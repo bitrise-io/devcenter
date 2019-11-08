@@ -70,7 +70,7 @@ You get these Environment Variables when you upload your keystore to the `GENERI
 
 {% include message_box.html type="important" title="Define the used Environment Variables" content=" Do not forget to define the used Environment Variables on [bitrise.io](https://www.bitrise.io) as well.
 
-When you upload a keystore file in the **Android keystore file** section and you have all the fields filled out, Bitrise will export these environment variables automatically.
+When you upload a keystore file in the **Android keystore file** section and you have all the fields filled out, Bitrise will export these Environment Variables automatically.
 
 * `BITRISEIO_ANDROID_KEYSTORE_ALIAS`
 * `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
