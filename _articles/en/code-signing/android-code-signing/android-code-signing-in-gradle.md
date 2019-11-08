@@ -33,11 +33,11 @@ You can manually specify the code signing configuration in your Gradle configura
            } 
        } ...
 
-For more information, check out how to [Configure Gradle to sign your app](https://developer.android.com/studio/publish/app-signing).
+For more information, check out how to [configure Gradle to sign your app](https://developer.android.com/studio/publish/app-signing).
 
 ## About environment variables
 
-You can avoid having the same keystore path locally and on [bitrise.io](https://www.bitrise.io) by using configuration values and environment variables in the keystore path (`storeFile`) and in the keystore password.
+You can avoid having the same keystore path locally and on [bitrise.io](https://www.bitrise.io) by using configuration values and Environment Variables in the keystore path (`storeFile`) and in the keystore password.
 
 If your keystore path is `$HOME/keystores/my_keystore.jks`, then your `build.gradle` file looks like this:
 
@@ -51,9 +51,9 @@ If your keystore path is `$HOME/keystores/my_keystore.jks`, then your `build.gra
            } 
        } ...
 
-You can use the `System.getenv("ENV_KEY")` file to access environment variables in the Gradle config file.
+You can use the `System.getenv("ENV_KEY")` file to access Environment Variables in the Gradle config file.
 
-If you use env vars as `keyPassword` and `storePassword` in the `Code signing` tab, your `build.gradle` will look like this:
+If you use Environment Variables as `keyPassword` and `storePassword` in the **Code signing** tab, your `build.gradle` will look like this:
 
     android {
        signingConfigs {
@@ -66,11 +66,11 @@ If you use env vars as `keyPassword` and `storePassword` in the `Code signing` t
        }
         ...
 
-You get these environment variables when you upload your keystore to the `GENERIC FILE STORAGE` field of the `Code Signing` tab in your Workflow Editor.
+You get these Environment Variables when you upload your keystore to the `GENERIC FILE STORAGE` field of the **Code Signing** tab in your Workflow Editor.
 
-{% include message_box.html type="important" title="Define the used env vars" content=" Do not forget to define the used environment variables on [bitrise.io](https://www.bitrise.io) as well.
+{% include message_box.html type="important" title="Define the used Environment Variables" content=" Do not forget to define the used Environment Variables on [bitrise.io](https://www.bitrise.io) as well.
 
-When you upload a keystore file in the `Android keystore file` section and you have all the fields filled out, Bitrise will export these environment variables automatically.
+When you upload a keystore file in the **Android keystore file** section and you have all the fields filled out, Bitrise will export these Environment Variables automatically.
 
 * `BITRISEIO_ANDROID_KEYSTORE_ALIAS`
 * `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`

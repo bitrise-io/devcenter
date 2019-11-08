@@ -19,43 +19,41 @@ menu:
 ---
 ## Creating a signed APK with the Android Sign Step
 
-You can create a signed APK using the `Android Sign Step` in your Bitrise workflow.
+You can create a signed APK using the **Android Sign** Step in your Bitrise workflow.
 
-Bitrise Project Scanner provides a `deploy workflow` which contains the `Android Sign Step`. With this step, you can digitally sign your APK as part of your workflow. This Step is configured to run if you have already uploaded your keystore file to Bitrise. All you have to do is upload your keystore file in the `Code signing` tab of the Workflow Editor.
-
-In this section, we walk you through the code signing steps using our `android-multiple-test-results-sample` demo app.
+Bitrise project scanner provides a deploy workflow which contains the **Android Sign** Step. With this Step, you can digitally sign your APK as part of your workflow. This Step is configured to run if you have already uploaded your keystore file to Bitrise. All you have to do is upload your keystore file in the `Code signing` tab of the Workflow Editor.
 
 Before you start:
 
-* Make sure you have the `Android Sign Step` in your deploy workflow right after your build steps but before `Google Play deploy` Step.
+* Make sure you have the **Android Sign** Step in your deploy workflow right after your build Steps but before **Google Play deploy** Step.
 
 1. Log into [bitrise.io](https://www.bitrise.io/) and click on your app.
-2. On your `Dashboard`, click `Workflow`.
-3. Click `Code signing`.
-4. Click or drag-and-drop your keystore file on the `Upload file` field of the `ANDROID KEYSTORE FILE` section.
+2. On your **Dashboard**, click **Workflows**.
+3. Click **Code signing**.
+4. Click on or drag-and-drop your keystore file to the **Upload file** field of the **ANDROID KEYSTORE FILE** section.
 
    ![Screenshot](/img/android-code-signing/upload-file.png)
 
-   A keystore URL automatically gets generated once you upload the keystore file. Bitrise assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future.
+   A keystore URL automatically gets generated once you upload the keystore file. Bitrise assigns an Environment Variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future.
 5. Fill out the displayed three input fields with your credentials:
-   * `keystore password`
-   * `keystore alias`
-   * `private key password`
+   * keystore password
+   * keystore alias
+   * private key password
 
    ![](/img/android-keystore-file.png)
-6. Click on `Save metadata`.
+6. Click **Save metadata**.
 
-   When you have successfully uploaded a keystore file in the `ANDROID KEYSTORE FILE` section and you have all the fields filled out, Bitrise will automatically export the following env vars based on your input:
+   When you have successfully uploaded a keystore file to the **ANDROID KEYSTORE FILE** section, Bitrise will automatically export the following Environment Variables based on your input:
    * `$BITRISEIO_ANDROID_KEYSTORE_ALIAS`
    * `$BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
    * `$BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD`
    * `$BITRISEIO_ANDROID_KEYSTORE_URL`
 
-   Bitrise uses the above env vars and sets them as inputs into the respective fields of the `Android Sign Step`. Once the Step runs, it produces a signed APK which will be used as the input value of the `APK or App Bundle file path` field in the `Google Play Deploy` Step.
+   Bitrise uses the above Environment Variables and sets them as inputs into the respective fields of the **Android Sign** Step. Once the Step runs, it produces a signed APK which will be used as the input value of the **APK or App Bundle file path** field in the **Google Play Deploy** Step.
 
 ## Downloading your files
 
-You can download your files from `GENERIC FILE STORAGE` (for example, your keystore file) using the `File-downloader` step:
+You can [download your files](/tutorials/how-to-use-the-generic-file-storage/) from the **GENERIC FILE STORAGE** (for example, your keystore file) using the **File-downloader** Step:
 
 An example for downloading a keystore file:
 
@@ -67,16 +65,10 @@ An example for downloading a keystore file:
     
        - destination: "$HOME/keystores/my_keystore.jks" #native android#
 
-After this step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
-
-You might find these guides helpful as well:
-
-* [How to use the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/)
-* [Downloading a keystore file](/code-signing/android-code-signing/downloading-a-keystore-file/)
-* [Managing files on Bitrise](/getting-started/managing-files-on-bitrise/)
+After this Step, `my_keystore.jks` will be available a `$HOME/keystores/my_keystore.jks`.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Sign your APK with Android Sign Step</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Sign your APK with Android Sign Step</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>

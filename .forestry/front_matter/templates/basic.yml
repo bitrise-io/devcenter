@@ -29,19 +29,26 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
+- _articles/en/deploy/android-deploy/deploying-android-apps.md
+- _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
+- _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
+- _articles/en/reviews/ship-add-on-beta-version.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーの変更方法を教えて下さい-how-to-change-the-owner-of-an-app.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/招待に関するよくある質問-invitation-faq.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/パスワードのリセット-resetting-your-password.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/トラブルシューティング-troubleshooting.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
+- _articles/en/reviews/Japanese translations/チュートリアル (Tutorials)/コミュニティによるチュートリアル-community-created-tutorials.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/パスワードのリセット-resetting-your-password.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/招待に関するよくある質問-invitation-faq.md
-- _articles/en/reviews/Japanese translations/チュートリアル (Tutorials)/コミュニティによるチュートリアル-community-created-tutorials.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/トラブルシューティング-troubleshooting.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーの変更方法を教えて下さい-how-to-change-the-owner-of-an-app.md
 - _articles/en/api/build-trigger.md
 - _articles/en/bitrise-cli/step-outputs.md
-- _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/android-x86-エミュレータをbitriseで走らせることは可能ですか-can-i-run-android-x86-emulator-on-bitrise.md
 - _articles/en/bitrise-cli/step-inputs.md
 - _articles/en/builds/rolling-builds.md
@@ -59,7 +66,6 @@ pages:
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/レポジトリへ依存性をコミットしたほうがいいですか-should-i-commit-my-dependencies-into-my-repository.md
 - _articles/en/faq/invitation-faq.md
 - _articles/en/getting-started/getting-started-with-ios-apps.md
-- _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
 - _articles/en/reviews/ship-add-on-test.md
 - _articles/en/builds/available-environment-variables.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
@@ -148,7 +154,6 @@ pages:
 - _articles/jp/troubleshooting/resetting-your-password.md
 - _articles/en/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
 - _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/en/infrastructure/the-environment.md
 - _articles/en/troubleshooting/workflow-editor-doesnt-load.md
 - _articles/en/troubleshooting/frequent-android-issues.md
@@ -168,7 +173,6 @@ pages:
 - _articles/en/testing/android-run-a-unit-test.md
 - _articles/en/api/response-and-pagination.md
 - _articles/en/bitrise-cli/step-properties.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/testing/test-reports.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
 - _articles/en/api/managing-ios-code-signing-files.md
@@ -183,16 +187,12 @@ pages:
 - _articles/en/faq/how-to-generate-ssh-keypair.md
 - _articles/en/faq/how-to-change-the-owner-of-an-app.md
 - _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
-- _articles/en/deploy/android-deploy/deploying-android-apps.md
-- _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/en/testing/device-testing-for-android.md
 - _articles/en/bitrise-cli/run-your-first-build.md
 - _articles/en/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/en/bitrise-cli/index.md
 - _articles/en/bitrise-cli/customizing-bitrise-yml.md
 - _articles/en/bitrise-cli/offline-workflow-editor.md
-- _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
 - _articles/en/builds/triggering-builds/trigger-code-push.md
 - _articles/en/team-management/organizations/managing-invoices.md
 - _articles/en/team-management/organizations/org-ownership.md

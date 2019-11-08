@@ -14,7 +14,7 @@ published: false
 4. 自身の名前の隣りにある`Transfer ownership`ボタンをクリックします。
 5. ドロップダウンより新オーナーを選択した後、`Transfer ownership to <ユーザー名>`が記された紫色のボタンをクリックすると完了です！
 
-{% include message_box.html type="info" title="知っておくべきポイント：接続済みサービスユーザーをそのまま残しておきますか？"content="  
+{% include message_box.html type="info" title="知っておくべきポイント：接続済みサービスユーザーをそのまま残しておきますか" content="  
 Transfer (移行)ポップアップで`Do you want to remain the connected services user?`オプションを有効化すると、移行中にアプリの接続済みサービスユーザーとして明確にマークされます。"%}
 
 ”接続済みサービス”ユーザーは、Bitriseが別のサービス (GitHub, Bitbucketなど) と通信しようとするときに、Bitriseユーザーに接続済みである、どのチームメンバーのサービス接続 / アカウントを使用するべきかを指定します。例えば、ビルドステータス情報を送り返したり、新しいSSHキーを自動で登録します。
