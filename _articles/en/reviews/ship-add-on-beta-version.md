@@ -14,7 +14,7 @@ Ship is a deployment solution that aims to save users a lot of headache. With Sh
 
 Deployment with Ship includes automatic re-sign and artifact generation and we store all the previous versions too. The app’s metadata, all the marketing copy, and screenshots can also be edited on the spot and non-developer people can manage it.
 
-{% include message_box.html type="info" title="Ship language" content="As of right now, Ship is only available in English."%}
+{% include message_box.html type="info" title="Ship language" content="As of right now, Ship is only available in English locale. No other language submissions are supported."%}
 
 You can do a whole lot of things with Ship:
 
