@@ -20,7 +20,7 @@ You can specify the code signing configuration for your Xamarin Android project 
 1. Open Visual Studio.
 2. Double click on your Xamarin Android project to open **Project Options**.
 3. Select the **Android Package Signing** in **Build group**.
-4. Select your configuration and platform in the **Configuration - Platform**.
+4. Select your configuration and platform in **Configuration - Platform**.
 5. Check the **Sign .APK file using the following keystore details**.
 6. Fill out the signing information.
 
@@ -34,23 +34,23 @@ You can use the same path on your local machine and on [bitrise.io](https://www.
 
 Since your keystore is gitignored, you have to upload your keystore to the **GENERIC FILE STORAGE** of Bitrise and download it to the same location in the build.
 
-1. On the **Dashboard**, select your app.
-2. Click the **Workflow** tab to open the Workflow Editor.
-2. Click **Code signing**.
-3. Scroll down to the **GENERIC FILE STORAGE** field.
-4. Type your Environment Variable name here in the first field.
-   In our example, we use `XAMARIN_KEYSTORE`.
+ 1. On the **Dashboard**, select your app.
+ 2. Click the **Workflow** tab to open the Workflow Editor.
+ 3. Click **Code signing**.
+ 4. Scroll down to the **GENERIC FILE STORAGE** field.
+ 5. Type your Environment Variable name here in the first field.
+    In our example, we use `XAMARIN_KEYSTORE`.
 
-   ![Screenshot](/img/android-code-signing/generic-file-storage-xm.png)
-5. Upload your keystore file in the **Upload file field**.
+    ![Screenshot](/img/android-code-signing/generic-file-storage-xm.png)
+ 6. Upload your keystore file in the **Upload file field**.
 
-   Your Environment Variable (for example, `$BITRISEIO_XAMARIN_KEYSTORE_URL`) will be automatically available with the download URL of your keystore file.
+    Your Environment Variable (for example, `$BITRISEIO_XAMARIN_KEYSTORE_URL`) will be automatically available with the download URL of your keystore file.
 
-   ![Screenshot](/img/android-code-signing/download-url.png)
-6. Navigate back to your workflow.
-7. Insert the **File Downloader** Step before the **Xamarin Archive** Step. The **File Downloader** Step will get a **Download source url** input.
-8. Type your Environment Variable, for example, `$BITRISEIO_XAMARIN_KEYSTORE_URL` in the **Download source url** field.
-9. Set your keystore path in the **Download destination path**.
+    ![Screenshot](/img/android-code-signing/download-url.png)
+ 7. Navigate back to your workflow.
+ 8. Insert the **File Downloader** Step before the **Xamarin Archive** Step. The **File Downloader** Step will get a **Download source url** input.
+ 9. Type your Environment Variable, for example, `$BITRISEIO_XAMARIN_KEYSTORE_URL` in the **Download source url** field.
+10. Set your keystore path in the **Download destination path**.
 
 ![](/img/file-downloader.png)
 
@@ -59,7 +59,7 @@ Ensure that your Bitrise keystore path is the same as your local path relative t
 "%}
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
 </div>
