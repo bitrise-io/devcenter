@@ -98,19 +98,19 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
 Now let's head back to Bitrise and finish off the deploy configuration!
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
-2. Select your project and go to your `Workflow Editor`.
-3. Open the `Code Signing` tab of your `Workflow Editor`.
-4. Upload the service account JSON key into the `GENERIC FILE STORAGE`.
-5. Copy the env key which stores your uploaded file's url.
+2. Select your project and go to Workflow Editor.
+3. Click the `Code Signing` tab.
+4. Upload the service account JSON key into the **GENERIC FILE STORAGE**.
+5. Copy the env key which stores your uploaded file's URL.
 
    For example:
 
    `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-6. Go back to your `Workflow Editor` and add the `Google Play Deploy` Step to the end of your Workflow.
+6. Go back to your Workflow Editor and add the **Google Play Deploy** Step to the end of your Workflow.
 7. Fill out the required input fields which are:
-   * `Service Account JSON key file path`: This field can accept a remote url so you have to provide the environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   * `Package name`: the package name of your Android app
-   * `Track`: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
+   * **Service Account JSON key file path**: This field can accept a remote url so you have to provide the environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
+   * **Package name**: the package name of your Android app.
+   * **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
 
 The final configuration looks like this:
 
