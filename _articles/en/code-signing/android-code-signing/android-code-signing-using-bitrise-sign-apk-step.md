@@ -53,7 +53,7 @@ Before you start:
 
 ## Downloading your files
 
-You can download your files from the **GENERIC FILE STORAGE** (for example, your keystore file) using the **File-downloader** Step:
+You can [download your files](/tutorials/how-to-use-the-generic-file-storage/) from the **GENERIC FILE STORAGE** (for example, your keystore file) using the **File-downloader** Step:
 
 An example for downloading a keystore file:
 
@@ -65,10 +65,10 @@ An example for downloading a keystore file:
     
        - destination: "$HOME/keystores/my_keystore.jks" #native android#
 
-After this Step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
+After this Step, `my_keystore.jks` will be available a `$HOME/keystores/my_keystore.jks`.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Sign your APK with Android Sign Step</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Sign your APK with Android Sign Step</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
