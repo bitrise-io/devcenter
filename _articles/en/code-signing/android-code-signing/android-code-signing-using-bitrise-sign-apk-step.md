@@ -41,19 +41,19 @@ Before you start:
    * private key password
 
    ![](/img/android-keystore-file.png)
-6. Click on `Save metadata`.
+6. Click **Save metadata**.
 
-   When you have successfully uploaded a keystore file in the `ANDROID KEYSTORE FILE` section and you have all the fields filled out, Bitrise will automatically export the following env vars based on your input:
+   When you have successfully uploaded a keystore file to the **ANDROID KEYSTORE FILE** section, Bitrise will automatically export the following Environment Variables based on your input:
    * `$BITRISEIO_ANDROID_KEYSTORE_ALIAS`
    * `$BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
    * `$BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD`
    * `$BITRISEIO_ANDROID_KEYSTORE_URL`
 
-   Bitrise uses the above env vars and sets them as inputs into the respective fields of the `Android Sign Step`. Once the Step runs, it produces a signed APK which will be used as the input value of the `APK or App Bundle file path` field in the `Google Play Deploy` Step.
+   Bitrise uses the above Environment Variables and sets them as inputs into the respective fields of the **Android Sign** Step. Once the Step runs, it produces a signed APK which will be used as the input value of the **APK or App Bundle file path** field in the **Google Play Deploy** Step.
 
 ## Downloading your files
 
-You can download your files from `GENERIC FILE STORAGE` (for example, your keystore file) using the `File-downloader` Step:
+You can download your files from the **GENERIC FILE STORAGE** (for example, your keystore file) using the **File-downloader** Step:
 
 An example for downloading a keystore file:
 
@@ -66,12 +66,6 @@ An example for downloading a keystore file:
        - destination: "$HOME/keystores/my_keystore.jks" #native android#
 
 After this Step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
-
-You might find these guides helpful as well:
-
-* [How to use the Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/)
-* [Downloading a keystore file](/code-signing/android-code-signing/downloading-a-keystore-file/)
-* [Managing files on Bitrise](/getting-started/managing-files-on-bitrise/)
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
