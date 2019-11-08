@@ -28,13 +28,13 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - deploy.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/en/deploy/android-deploy/deploying-android-apps.md
 - _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
 - _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーの変更方法を教えて下さい-how-to-change-the-owner-of-an-app.md
