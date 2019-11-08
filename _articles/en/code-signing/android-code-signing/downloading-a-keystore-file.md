@@ -20,7 +20,7 @@ If the file path of your keystore file is defined in your `build.gradle` file bu
 
 Bitrise has two Steps which download files from the **Code Signing** tab. Which one to use in your workflow depends on where you uploaded your keystore file in the **Code Signing** tab:
 
-* **File Downloader** Step: If you have uploaded your keystore file to the `ANDROID KEYSTORE FILE` section, which is the recommended place for your keystore file, this is the Step you should use. Once the file is uploaded, Bitrise assigns an Environment Variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value.
+* **File Downloader** Step: If you have uploaded your keystore file to the **ANDROID KEYSTORE FILE** section, which is the recommended place for your keystore file, this is the Step you should use. Once the file is uploaded, Bitrise assigns an Environment Variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value.
 
   ![](/img/android-keystore.png)
 * **Generic File Storage** Step: If you have uploaded your keystore file to the **GENERIC FILE STORAGE** section on the **Code Signing** tab, this is the Step you should use. Bitrise assigns an Environment Variable (`$GENERIC_FILE_STORAGE`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. If you use an Environment Variable in your `build.gradle` file, you can use a **Script** Step to overwrite the Environment Variable's value with the destination path defined in the `$GENERIC_FILE_STORAGE` Environment Variable. Make sure you use [envman](/tips-and-tricks/expose-environment-variable/) and not just a simple export.
@@ -33,7 +33,7 @@ Bitrise has two Steps which download files from the **Code Signing** tab. Which 
    * **Download destination path**: Set the location of the keystore file as a relative path. This path should be the same as the keystore path already defined in your `build.gradle` file (for example, `file://$HOME/keystores/project_release.keystore`).
 3. Add the **Gradle Runner** Step right after your file downloading Step.
 
-Note that if you have successfully added the Steps to download your keystore file to the same location that you specified in your `build.gradle` file, you do not need the `Android Sign` Step in your workflow. Our `Gradle Runner` Step will sign and assemble your project.
+Note that if you have successfully added the Steps to download your keystore file to the same location that you specified in your `build.gradle` file, you do not need the **Android Sign** Step in your workflow. Our **Gradle Runner** Step will sign and assemble your project.
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
