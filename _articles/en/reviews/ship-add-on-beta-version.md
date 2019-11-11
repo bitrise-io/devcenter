@@ -20,7 +20,7 @@ You can do a whole lot of things with Ship:
 
 * View all the build versions of your app.
 * View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
-* Send your app directly to testers with a a link to the public install page.
+* Send your app directly to testers with a link to the public install page.
 * Deploy a given build version to App Store Connect and/or the Google Play Console, once you set up publishing.
 * Switch between platforms on the **Version History** page in the case of cross-platform projects.
 
