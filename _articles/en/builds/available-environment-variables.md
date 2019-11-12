@@ -99,7 +99,7 @@ This is only relevant for iOS apps and for cross-platform apps with iOS versions
 
 This is only relevant for iOS apps and for cross-platform apps with iOS versions. "%}
 
-{% include collapse.html title="$BITRISE_IO" content="ndicates that the build is running in a bitrise.io environment. Value is set to `true` by bitrise.io when it starts a build."%}
+{% include collapse.html title="$BITRISE_IO" content="Indicates that the build is running in a bitrise.io environment. Value is set to `true` by bitrise.io when it starts a build."%}
 
 For more information on Env Vars, check out [Secrets and Env Vars](/builds/env-vars-secret-env-vars/).
 
