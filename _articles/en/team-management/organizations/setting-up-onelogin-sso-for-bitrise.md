@@ -34,4 +34,4 @@ This requires:
  9. Go back to the **SSO** page and copy the **SAML 2.0 Endpoint (HTTP)** link. Paste it in the **Identity provider sign-on URL** field on Bitrise.
 10. Go back to Bitrise and click **Configure SSO**.
 
-{% include message_box.html type="note" title="My message" content=""%}
+{% include message_box.html type="note" title="Users on OneLogin and Bitrise" content="Make sure the users in your Bitrise Organization are all added to the Users page on OneLogin. If not, go to Users > New User and add the new user. Don’t forget to send out an invite (More actions > Send Invitation) to a new user so that he/she can activate his/her account on OneLogin. Users must be added to the newly created Bitrise app by clicking Applications under User Info and clicking the + sign. Make sure the added users are all members on the Organization on Bitrise."%}
