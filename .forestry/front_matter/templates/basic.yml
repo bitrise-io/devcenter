@@ -28,8 +28,9 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- _articles/en/testing/test-reports.md
 - _articles/en/team-management/organizations/setting-up-onelogin-sso-for-bitrise.md
+- _articles/en/builds/available-environment-variables.md
+- _articles/en/testing/test-reports.md
 - _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
@@ -69,7 +70,6 @@ pages:
 - _articles/en/faq/invitation-faq.md
 - _articles/en/getting-started/getting-started-with-ios-apps.md
 - _articles/en/reviews/ship-add-on-test.md
-- _articles/en/builds/available-environment-variables.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/why-does-my-build-take-longer-on-bitrise-than-on-my-machine.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/なぜadd-new-app-新規のアプリを追加する-ページに私のgithub-organization-組織-repository-レポジトリ-が表示されないのですか-why-can-t-i-see-my-github-organization-repository-on-the-add-new-app-page.md
