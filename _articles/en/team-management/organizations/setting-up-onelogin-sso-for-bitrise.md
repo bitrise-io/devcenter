@@ -29,6 +29,8 @@ This requires:
 
     ![](/img/add-bitrise-onelogin.jpg)
  6. Click the **Configuration** tab again and paste the **Single Sign-On URL** from your Bitrise Organization’s **Single Sign On** tab to the **Single Sign-On URL** field on OneLogin. Hit **Save**.
+
+    ![](/img/application-details.jpeg)
  7. Select **SSO** on the left sidebar.
  8. Click the **View details** for the X.509 Certificate. Copy the content of the **X.509 Certificate** and paste it to the **Certificate** field on **Enable Single Sign-On**.
  9. Go back to the **SSO** page and copy the **SAML 2.0 Endpoint (HTTP)** link. Paste it in the **Identity provider sign-on URL** field on Bitrise.
