@@ -53,4 +53,4 @@ All Organization members (including the Organization owner) must enable their SA
 
 You should be landing on your Bitrise Dashboard. If you go to the Groups tab the Organization, you can see that you are automatically added as a SAML user. All Organization members, who enable SAML SSO, appear here automatically. Now you can log into your Bitrise Organization with SAML SSO.
 
-{% include message_box.html type="note" title="What’s next?" content="You can track how other Organization members are getting on with enabling their SAML SSO to Bitrise. The Organization owner can enforce SAML SSO on the Organization if all Organization members have have enabled SAML."%}
+{% include message_box.html type="note" title="What’s next?" content="You can [track](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) how other Organization members are getting on with enabling their SAML SSO to Bitrise. The Organization owner can [enforce](/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement) SAML SSO on the Organization if all Organization members have have enabled SAML."%}
