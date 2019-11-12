@@ -55,4 +55,4 @@ You should be landing on your Bitrise Dashboard. If you go to the Groups tab the
 
 {% include message_box.html type="note" title="What’s next?" content="You can [track](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise "/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise") how other Organization members are getting on with enabling their SAML SSO to Bitrise.
 
-The Organization owner can [enforce SAML SSO](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement "/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement") on the Organization if all Organization members have have enabled SAML."%}
+The Organization owner can enforce SAML SSO on the Organization if all Organization members have have enabled SAML."%}
