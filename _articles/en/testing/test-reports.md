@@ -51,7 +51,9 @@ These Steps will run the tests defined in your repository and then store the out
 
 Test Reports doesn't require any sort of complicated configuration. All you need is to have tests in your repository, and two Steps in your Workflow.
 
-{% include message_box.html type="warning" title="Deploy to Bitrise.io version" content="The **Deploy to Bitrise.io** Step must be of version 1.4.1 or newer - older versions of the Step do NOT support Test Reports."%}
+{% include message_box.html type="warning" title="Deploy to Bitrise.io version" content="The **Deploy to Bitrise.io** Step must be of version 1.4.1 or newer - older versions of the Step do NOT support Test Reports.
+
+We recommend using version 1.5.0 or higher for the best experience."%}
 
 1. Add tests to your app's repository.
 2. Add the appropriate testing Steps to your Workflow. For example, if you have an iOS project, you can use the **Xcode Test for iOS** Step to run Xcode tests.
