@@ -20,7 +20,7 @@ menu:
 There are two ways to use the uploaded files:
 
 * Referring to the read-only download URL with the Env Var you defined when uploading. Some Steps support this option - you can just use the Env Var as an input value directly.
-* Using the **File Downloader** or **Script** Step to download the file and, optionally, export the downloaded file as an Env Var. This works with Steps that require local file paths and as such do not support URLs directly as the input value.
+* Using the **File Downloader**, **Generic File Storage** or **Script** Step to download the file and, optionally, export the downloaded file or directory path as an Env Var. This works with Steps that require local file paths and as such do not support URLs directly as the input value.
 
 For example, the **Decrypt file** Step supports using the download URL generated when uploading the file. You just need to insert the variable as the value to the **Encrypted file path** input.
 
