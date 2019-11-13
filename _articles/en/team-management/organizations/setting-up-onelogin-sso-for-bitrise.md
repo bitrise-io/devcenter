@@ -1,8 +1,13 @@
 ---
-tag: []
+tag:
+- teams
+- org
+- security
+- sso
 title: Setting up OneLogin SSO for Bitrise
 redirect_from: []
-summary: ''
+summary: Learn how to set up Bitrise as a SAML SSO app on OneLogin, enable SAML SSO
+  and enforce it on your Bitrise Organization.
 published: false
 
 ---
