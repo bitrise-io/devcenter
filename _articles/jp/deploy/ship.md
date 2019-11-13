@@ -6,7 +6,6 @@ summary: ''
 menu:
   deploy-main:
     weight: 4
-published: false
 
 ---
 {% include not_translated_yet.html %}
