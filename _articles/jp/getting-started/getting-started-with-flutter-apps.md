@@ -12,7 +12,7 @@ menu:
 ---
 このガイドではBitriseでのFlutterアプリのセットアップからテスト、ビルド、デプロイまでの説明します。
 
-FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、モバイルSDKです。BitriseはFlutterアプリをサポートしています:　全てのFlutter needsに応えるべくBitriseには専用のステップがあります。
+FlutterとはAndroidやiOS端末向けアプリケーション開発ツール、モバイルSDKです。BitriseはFlutterアプリをサポートしています:　全てのFlutter needsに応えるべくBitriseには専用のステップがあります。
 
 ## Flutterアプリを追加
 
@@ -21,7 +21,7 @@ FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、
  1. トップメニューにある`+`をクリックし`Add app`セレクトします。
  2. `Create New App`ページでアプリに追加したいアカウントを選びます。
  3. アプリのプライバシーをPrivateまたは[Public](/jp/getting-started/public-apps)に設定します。`Next`をクリックします。
- 4. リポジトをホストするGitホスティングサービスをセレクトし、プロジェクトのリポジトをセレクトします。詳しくは[connecting your repository](/jp/getting-started/adding-a-new-app/)へ
+ 4. リポジトリをホストするGitホスティングサービスをセレクトし、プロジェクトのリポジトリをセレクトします。詳しくは[connecting your repository](/jp/getting-started/adding-a-new-app/)へ
  5. すぐリポジトリアクセスをセットアップするときは、`No, auto-add SSH key`をクリックする。詳しくは [SSH keys](/jp/getting-started/adding-a-new-app/)へ
  6. プロジェクトのコンフィグレーションが含まれているブランチの名前(master等）を入力し、`Next`をクリックします。
  7. Bitriseがプロジェクトを有効にするまで待機する。
@@ -30,10 +30,10 @@ FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、
  8. アプリのリポジトリにテストがある場合は、それらを実行するかどうかを決定するように求められます。
  9. ![](/img/select_test.png)
 
-    FlutteプロジェクトのiOSプロジェクトを使用している場合、an .ipa export methodをセレクトします。
+    FlutterプロジェクトのiOSプロジェクトを使用している場合、ipa export methodをセレクトします。
 10. ![undefined](https://cdn.buttercms.com/rOAuKJ2jToSecv2pEs7g) プロンプトが表示されたらwebhookに登録します
 
-    コードがリポジトリにぷっしゅされた時、もしくはPull Requestが作成されBitriseがビルドを自動的に始めます。初めてのビルドも始められ、メッセージをクリックしてとビルドページへ。
+    コードがリポジトリにプッシュされた時、もしくはPull Requestが作成されBitriseがビルドを自動的に始めます。初めてのビルドも始められ、メッセージをクリックしてとビルドページへ。
 
 ## Flutterアプリのテスト
 
@@ -51,11 +51,15 @@ Flutterアプリをテストするためにbitriseの自動的に作成される
    * 利用可能なブランチを見るには[https://github.com/flutter/flutter/branches](https://github.com/flutter/flutter/branches "https://github.com/flutter/flutter/branches")
 3. `Flutter Analyze`Stepに`Additional parameters`入力に使うフラグを追加します。
 
-Stepが指定されたフラグで`flutter analyze`コマンドを実行します。使用可能なフラグをチェックするにはコマンドラインインターフェイスをマシンで開き`flutter test --help`を実行します。 4. 3.同様`Flutter Test`Stepに`Additional parameters`入力に使うフラグを追加します。
+Stepが指定されたフラグで`flutter analyze`コマンドを実行します。使用可能なフラグをチェックするにはコマンドラインインターフェイスをマシンで開き`flutter test --help`を実行します。
+
+4. 3.同様`Flutter Test`Stepに`Additional parameters`入力に使うフラグを追加します。
 
 Stepが指定されたフラグで`flutter test`コマンドを実行します。使用可能なフラグをチェックするにはコマンドラインインターフェイスをマシンで開き`flutter test --help`を実行します。
 
-![](/img/flutter_test.png) 5. `Flutter Test`ステップの`Project Location`入力が正確であることを確認します。
+![](/img/flutter_test.png) 
+
+5. `Flutter Test`ステップの`Project Location`入力が正確であることを確認します。
 
 デフォルト値はFlutter プロジェクトロケーションのために作成された環境変数です。
 
@@ -72,7 +76,7 @@ Flutterアプリをビルド、デプロイするためworkflowに
 
 リポジトリで指定されたプラットフォームがあれば、アプリをBitriseに追加した際に`deploy`workflowが自動的に作成されます。workflowのコンテントはプラットフォーム次第です。例えば、アプリがiOSプロジェクトのみを含んでいる場合、workflowは`Certificate and profile installer`、`Xcode Archive & Export for iOS`Stepを含みます。
 
-iOS、Androidプロジェクトはworkflowを使い同時、または個々の作成を **Flutter Build** Stepの **Platform** 入力でいつでも設定することが可能です。デフォルトにより、Stepは、Bitriseにアプリを追加する際にスキャナーが検出したプラットフォーム？？？？？に従って構成されます。
+iOS、Androidプロジェクトはworkflowを使い同時、または個々の作成を **Flutter Build** Stepの **Platform** 入力でいつでも設定することが可能です。デフォルトにより、Stepは、Bitriseにアプリを追加する際にスキャナーが検出したプラットフォームに従って構成されます。
 
 ワークフローの例をこのコンフィグレーションで、必要なステップを踏まえて説明します。
 
@@ -93,11 +97,11 @@ iOSとAndroidの特有の配置手順については、それぞれのセクシ�
 
 ### App Store ConnectにFlutterアプリをデプロイ
 
-iOS FlutterプロジェクトをApp Storeにデプロイするために、アプリをビルドし、an .ipaファイルをエクスポート後にApp Storeにサブミットします。
+iOS FlutterプロジェクトをApp Storeにデプロイするために、アプリをビルドし、.ipaファイルをエクスポート後にApp Storeにサブミットします。
 
 テストとは異なり、コード署名ファイルが必要です。
 
-* iOS Distribution Certificate (a .p12 file)
+* iOS Distribution Certificate (.p12 file)
 * App Store Provisioning Profile
 
 BitriseのiOSコード署名については[our detailed guides](/jp/code-signing/ios-code-signing/code-signing/)から！
@@ -106,7 +110,7 @@ BitriseのiOSコード署名については[our detailed guides](/jp/code-signin
  2. [必要なコード署名](/jp/code-signing/ios-code-signing/ios-manual-provisioning/)ファイルをBitriseにアップロードします
  3. `Flutter Build`ステップを開き、`iOS Platform Configs`入力グループを確認してください
  4. `Additional parameters`入力にバリュー`--release`があるかを確認してください
- 5. ステップ`Platfor`入力の確認: `iOS`か`both`のどちらかに設定します
+ 5. ステップ`Platform`入力の確認: `iOS`か`both`のどちらかに設定します
  6. " `Flutter Build`ステップ後"に、ワークフローに`Xcode Archive & Export for iOS`ステップがあることを確認します。
  7. ステップの`Select method for export`入力を`app-store`で設定します。
  8. `Deploy to iTunes Connect`ステップをワークフローの最後に追加します。
@@ -151,4 +155,4 @@ Google Playにアプリをデプロイするには、APKファイルをエクス
    * `Package name`:AndroidアプリのPackage name
    * `Track`:APKを展開するトラック（例: alpha / beta / rollout / productionまたは設定したカスタムトラック）
 
-さあ、App StoreにAndroidアプリをビルド、リリースしましょう！
+さあ、Google Play StoreにAndroidアプリをビルド、リリースしましょう！
