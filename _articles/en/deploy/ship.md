@@ -1,16 +1,24 @@
 ---
-tag: []
-title: Ship add-on beta version
+tag:
+- ship
+- deploy
+- ios
+- android
+title: Deploying with Ship
 redirect_from: []
-summary: ''
-published: false
+summary: Ship is a deployment solution that aims to save users a lot of headache.
+  With Ship, you have complete control over your app's distribution, its version history,
+  and all the important metadata - and you can manage all that in one place.
+menu:
+  deploy-main:
+    weight: 5
 
 ---
 ## Ship overview
 
 {% include message_box.html type="important" title="Ship in BETA" content="Please note that this feature is still in BETA version."%}
 
-Ship is a deployment solution that aims to save users a lot of headache. With Ship, you have complete control over your app's distribution, its version history, and all the important metadata - and you can manage all that in one place. 
+Ship is a deployment solution that aims to save users a lot of headache. With Ship, you have complete control over your app's distribution, its version history, and all the important metadata - and you can manage all that in one place.
 
 Deployment with Ship includes automatic re-sign and artifact generation and we store all the previous versions too. The app’s metadata, all the marketing copy, and screenshots can also be edited on the spot and non-developer people can manage it.
 
@@ -110,9 +118,7 @@ To install it directly from Ship:
 
 ### Publishing an app online
 
-<div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button>
-<div class="collapsible-content" markdown="1">
-{% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
+<div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
 
 {% include message_box.html type="note" title="The `.xcarchive.zip` file with a custom Step" content="The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:
 
@@ -143,9 +149,7 @@ To configure publishing an app for iOS:
 </div>
 </div>
 
-<div><button type="button" class="collapsible"><p>Publishing an app for Android</p></button>
-<div class="collapsible-content" markdown="1">
-{% include message_box.html type="important" title="Building the app" content="Before you'd publish an Android app in Ship, make sure that:
+<div><button type="button" class="collapsible"><p>Publishing an app for Android</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="Before you'd publish an Android app in Ship, make sure that:
 
 * Your app is built in a Workflow that is exposed to Ship. The Workflow must contain a build Step that builds an APK(s) or an Android App Bundle (such as **Android Build** or **Gradle Runner** Step) and the **Deploy to Bitrise.io** Step.
 * You have built a release version of your app before publishing it in Ship. Please note that without a release version, the **Publish** button on the **Details** page of Ship will be disabled. In this case, check if the following is set in your build Steps: the **Android Build** Step's **Variant** input field must contain `release` (for example `release` or `demoRelease`) and the **Gradle Runner** Step's **Gradle task to run** input field must contain `Release` (for example, `assembleRelease` or `assembleDemoRelease`).
@@ -164,13 +168,11 @@ To configure publishing an app for Android:
 2. Go to the **Android Settings** section.
 3. [Expose](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the APK you want to publish.
 4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Google Play Console.
-5. If your Android app contains multiple modules, enter the exact module under **Module**.
-   ![](/img/module-android-settings.png)
+5. If your Android app contains multiple modules, enter the exact module under **Module**. ![](/img/module-android-settings.png)
 6. Choose the appropriate keystore file and the Service Account JSON file.
-7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing.
-   ![](/img/flavorandroid.jpg)
-8. Fill out the **Details** page and click **Publish.**
-</div>
+7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing. ![](/img/flavorandroid.jpg)
+8. Fill out the **Details** page and click **Publish.** 
+</div> 
 </div>
 
 ## Publishing status and logs

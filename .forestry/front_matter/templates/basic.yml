@@ -29,14 +29,22 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/jp/team-management/organizations/setting-up-onelogin-saml-sso-for-bitrise.md
+- _articles/jp/deploy/ship.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
+- _articles/en/deploy/ship.md
+- _articles/en/troubleshooting/enabling-bitrise-support-user.md
+- _articles/en/team-management/organizations/setting-up-onelogin-sso-for-bitrise.md
+- _articles/en/builds/available-environment-variables.md
+- _articles/en/testing/test-reports.md
+- _articles/en/reviews/ship-add-on-beta-version.md
+- _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/en/deploy/android-deploy/deploying-android-apps.md
 - _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
-- _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
-- _articles/en/reviews/ship-add-on-beta-version.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーの変更方法を教えて下さい-how-to-change-the-owner-of-an-app.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/招待に関するよくある質問-invitation-faq.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/パスワードのリセット-resetting-your-password.md
@@ -45,7 +53,6 @@ pages:
 - _articles/en/reviews/Japanese translations/チュートリアル (Tutorials)/コミュニティによるチュートリアル-community-created-tutorials.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
 - _articles/en/api/build-trigger.md
 - _articles/en/bitrise-cli/step-outputs.md
@@ -67,7 +74,6 @@ pages:
 - _articles/en/faq/invitation-faq.md
 - _articles/en/getting-started/getting-started-with-ios-apps.md
 - _articles/en/reviews/ship-add-on-test.md
-- _articles/en/builds/available-environment-variables.md
 - _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/why-does-my-build-take-longer-on-bitrise-than-on-my-machine.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/なぜadd-new-app-新規のアプリを追加する-ページに私のgithub-organization-組織-repository-レポジトリ-が表示されないのですか-why-can-t-i-see-my-github-organization-repository-on-the-add-new-app-page.md
@@ -157,7 +163,6 @@ pages:
 - _articles/en/infrastructure/the-environment.md
 - _articles/en/troubleshooting/workflow-editor-doesnt-load.md
 - _articles/en/troubleshooting/frequent-android-issues.md
-- _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/faq/android-x86-emulator.md
 - _articles/en/faq/organization-faq.md
 - _articles/en/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
@@ -173,7 +178,6 @@ pages:
 - _articles/en/testing/android-run-a-unit-test.md
 - _articles/en/api/response-and-pagination.md
 - _articles/en/bitrise-cli/step-properties.md
-- _articles/en/testing/test-reports.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
 - _articles/en/api/managing-ios-code-signing-files.md
 - _articles/en/api/endpoints.md

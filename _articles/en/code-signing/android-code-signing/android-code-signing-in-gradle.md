@@ -66,7 +66,7 @@ If you use Environment Variables as `keyPassword` and `storePassword` in the **C
        }
         ...
 
-You get these Environment Variables when you upload your keystore to the `GENERIC FILE STORAGE` field of the **Code Signing** tab in your Workflow Editor.
+You get these Environment Variables when you upload your keystore to the **GENERIC FILE STORAGE** field of the **Code Signing** tab in your Workflow Editor.
 
 {% include message_box.html type="important" title="Define the used Environment Variables" content=" Do not forget to define the used Environment Variables on [bitrise.io](https://www.bitrise.io) as well.
 

@@ -72,7 +72,7 @@ Flutterアプリをビルド、デプロイするためworkflowに
 
 リポジトリで指定されたプラットフォームがあれば、アプリをBitriseに追加した際に`deploy`workflowが自動的に作成されます。workflowのコンテントはプラットフォーム次第です。例えば、アプリがiOSプロジェクトのみを含んでいる場合、workflowは`Certificate and profile installer`、`Xcode Archive & Export for iOS`Stepを含みます。
 
-iOS、Androidプロジェクトはworkflowを使い同時、または個々の作成を`__**Flutter Build*__`**Stepの__`**Platform**`**入力でいつでも設定することが可能です**。デフォルトにより、Stepは、Bitriseにアプリを追加する際にスキャナーが検出したプラットフォーム？？？？？に従って構成されます。
+iOS、Androidプロジェクトはworkflowを使い同時、または個々の作成を **Flutter Build** Stepの **Platform** 入力でいつでも設定することが可能です。デフォルトにより、Stepは、Bitriseにアプリを追加する際にスキャナーが検出したプラットフォーム？？？？？に従って構成されます。
 
 ワークフローの例をこのコンフィグレーションで、必要なステップを踏まえて説明します。
 

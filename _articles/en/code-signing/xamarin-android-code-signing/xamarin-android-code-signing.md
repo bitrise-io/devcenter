@@ -34,7 +34,7 @@ You can use the same path on your local machine and on [bitrise.io](https://www.
 
 Since your keystore is gitignored, you have to upload your keystore to the **GENERIC FILE STORAGE** of Bitrise and download it to the same location in the build.
 
- 1. On the **Dashboard**, select your app.
+ 1. On the Dashboard select your app.
  2. Click the **Workflow** tab to open the Workflow Editor.
  3. Click **Code signing**.
  4. Scroll down to the **GENERIC FILE STORAGE** field.
