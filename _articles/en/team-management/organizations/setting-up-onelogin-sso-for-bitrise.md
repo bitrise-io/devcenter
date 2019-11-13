@@ -32,8 +32,8 @@ This requires:
 
     ![](/img/application-details.jpeg)
  7. Select **SSO** on the left sidebar.
- 8. Click the **View details** for the X.509 Certificate. Copy the content of the **X.509 Certificate** and paste it to the **Certificate** field on **Enable Single Sign-On**.
- 9. Go back to the **SSO** page and copy the **SAML 2.0 Endpoint (HTTP)** link. Paste it in the **Identity provider sign-on URL** field on Bitrise.
+ 8. Click the **View details** for the X.509 Certificate. Copy the content of the **X.509 Certificate** and paste it to the **Certificate** field on the **Enable Single Sign-On** page of Bitrise.
+ 9. Go back to the **SSO** page on OneLogin and copy the **SAML 2.0 Endpoint (HTTP)** link. Paste it in the **Identity provider sign-on URL** field on Bitrise.
 10. Go back to Bitrise and click **Configure SSO**.
 
 {% include message_box.html type="note" title="Users on OneLogin and Bitrise" content="Make sure the users in your Bitrise Organization are all added to the **Users** page on OneLogin. If not, go to **Users**, then **New User** and add the new user. Don’t forget to send out an invite (**More actions** drop-down menu, **Send Invitation**) to a new user so that the user can activate their account on OneLogin. Users must be added to the newly created Bitrise app by clicking **Applications** under **User Info** and clicking the **+** sign. Make sure the added users are all Organization members on Bitrise.
@@ -51,7 +51,7 @@ All Organization members (including the Organization owner) must enable their SA
 3. Click **Sign in via SSO** or open the URL in a new tab of the same browser where you are logged in.
 
    ![](/img/email-onelogin.jpg)
-4. On the **Allow “Organization name”** to sign you in window, click **Authorize** if you trust the Organization.
+4. On the **Allow “Organization name”** **to sign you in** window, click **Authorize** if you trust the Organization.
 
 You should be landing on your Bitrise Dashboard. If you go to your Organization's **Groups** tab, you can see that you are automatically added as a SAML user. All Organization members, who enable SAML SSO, appear here automatically. From now on you can log into your Bitrise Organization with SAML SSO.
 
