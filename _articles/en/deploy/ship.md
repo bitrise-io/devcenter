@@ -4,7 +4,7 @@ tag:
 - deploy
 - ios
 - android
-title: Deploying with Ship
+title: Ship
 redirect_from: []
 summary: Ship is a deployment solution that aims to save users a lot of headache.
   With Ship, you have complete control over your app's distribution, its version history,
@@ -12,6 +12,7 @@ summary: Ship is a deployment solution that aims to save users a lot of headache
 menu:
   deploy-main:
     weight: 5
+published: false
 
 ---
 ## Ship overview
