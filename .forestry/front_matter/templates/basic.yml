@@ -28,11 +28,12 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- deploy.md
+- _articles/jp/team-management/organizations/setting-up-onelogin-saml-sso-for-bitrise.md
+- _articles/jp/deploy/ship.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
 - _articles/en/deploy/ship.md
-- _articles/jp/deploy/ship.md
 - _articles/en/troubleshooting/enabling-bitrise-support-user.md
-- _articles/jp/team-management/organizations/setting-up-onelogin-saml-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-onelogin-sso-for-bitrise.md
 - _articles/en/builds/available-environment-variables.md
 - _articles/en/testing/test-reports.md
@@ -40,7 +41,6 @@ pages:
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
 - _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
-- deploy.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/en/deploy/android-deploy/deploying-android-apps.md
 - _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
