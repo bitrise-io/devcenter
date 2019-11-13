@@ -29,6 +29,7 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/getting-started/index.md
 - _articles/en/deploy/ship.md
 - _articles/jp/deploy/ship.md
 - _articles/jp/team-management/organizations/setting-up-onelogin-saml-sso-for-bitrise.md
@@ -149,7 +150,6 @@ pages:
 - _articles/jp/testing/test-reports.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
-- _articles/en/getting-started/index.md
 - _articles/en/getting-started/account-security.md
 - _articles/en/team-management/user-roles-on-app-teams.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
