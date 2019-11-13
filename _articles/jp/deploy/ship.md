@@ -1,12 +1,11 @@
 ---
 tag: []
-title: Ship
+title: Deploying with Ship
 redirect_from: []
 summary: ''
 menu:
   deploy-main:
     weight: 4
-    title: Deploying with Ship
 published: false
 
 ---
