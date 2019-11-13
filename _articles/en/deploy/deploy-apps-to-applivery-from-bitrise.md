@@ -11,7 +11,7 @@ summary: Applivery is a mobile app distribution platform for iOS and Android tha
   delivery for both testers and employees, with a focus on an easy-to-use experience.
 menu:
   deploy-main:
-    weight: 6
+    weight: 7
 
 ---
 ## Introduction to Applivery
