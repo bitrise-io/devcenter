@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Ship
+title: Deploying with Ship
 redirect_from: []
 summary: ''
 published: false
