@@ -12,7 +12,7 @@ menu:
 
 ## Ship overview
 
-{% include message_box.html type="important" title="Ship in BETA" content="Please note that this feature is still in BETA version."
+{% include message_box.html type="important" title="Ship in BETA" content="Please note that this feature is still in BETA version."%}
 
 Ship is a deployment solution that aims to save users a lot of headache. With Ship, you have complete control over your app's distribution, its version history, and all the important metadata - and you can manage all that in one place.
 
