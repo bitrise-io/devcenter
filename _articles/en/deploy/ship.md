@@ -11,7 +11,7 @@ summary: Ship is a deployment solution that aims to save users a lot of headache
   and all the important metadata - and you can manage all that in one place.
 menu:
   deploy-main:
-    weight: 3
+    weight: 5
 published: false
 
 ---

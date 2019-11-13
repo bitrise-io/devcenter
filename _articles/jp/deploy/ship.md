@@ -3,6 +3,10 @@ tag: []
 title: Ship
 redirect_from: []
 summary: ''
+menu:
+  deploy-main:
+    weight: 4
+    title: Deploying with Ship
 published: false
 
 ---
