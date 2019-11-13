@@ -26,7 +26,7 @@ You can also generate code coverage files, and export the test results as a comp
 
 {% include message_box.html type="info" title="Test reports" content="Your Xcode test results will be exported to Test Reports: check out our [Test Reports](/testing/test-reports/) guide to find out how to make it work for you."%}
 
-### Configuring the Xcode tests on Bitrise
+## Configuring the Xcode tests on Bitrise
 
 The default input values of the **Xcode Test for iOS** Step could work if your tests are written correctly. However, we recommend making sure that all the inputs have the value you want so the Step can do what you need!
 
@@ -43,7 +43,7 @@ Check the following required inputs of the **Xcode Test for iOS** Step before ru
 
 {% include message_box.html type="warning" title="Using `xcpretty`" content="The `xcpretty` output tool does not support parallel tests. If parallel tests are enabled in your project, go to the Step's Debug input group and set the **Output tool** input's value to `xcodebuild`."%}
 
-### Generating code coverage files
+## Generating code coverage files
 
 By default, the **Xcode Test for iOS** Step does not generate code coverage files. If you need them, however, it's easy to change: just set the **Generate code coverage files?** to `yes`.
 
@@ -55,7 +55,7 @@ This sets two additional flags to the `xcodebuild` command:
 
 If you run a successful build, code coverage files will be included in your results.
 
-### Exporting UI test artifacts
+## Exporting UI test artifacts
 
 You can export the attachments of your UITest. These attachments include screenshots taken during the UI test, as well as any other artifacts that might have been generated. They are exported as a compressed zip file.
 
@@ -64,7 +64,7 @@ By default, the **Xcode Test for iOS** Step does not export artifacts of the UIT
 You can check your test artifacts on the [**Test Reports**](/testing/test-reports/) page, along all additional results.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's run Xcode tests on Bitrise</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's run Xcode tests on Bitrise</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
