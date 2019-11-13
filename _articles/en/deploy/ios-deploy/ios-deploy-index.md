@@ -16,6 +16,10 @@ menu:
 ---
 Once you built your app and ran unit tests and UI tests on it, it's time to deploy it.
 
+{% include message_box.html type="info" title="Deploying with Ship" content="The deploying guides in this section talk about deploying with the official Bitrise deployment Steps. 
+
+We recommend checking out Ship, our deployment solution that aims to save you a lot of headache in publishing your apps: [Deploying with Ship](/deploy/ship/)."%}
+
 To deploy an iOS app to any platform, you need:
 
 * [Code signing files](/code-signing/ios-code-signing/code-signing/).
