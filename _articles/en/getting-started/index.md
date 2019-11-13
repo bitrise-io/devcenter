@@ -103,6 +103,6 @@ You can also [create organizations](/team-management/organizations/creating-org)
 
 ## Testing and deployment
 
-Testing your app and deploying your app are both done with the help of our Steps: we have Steps dedicated to both these functions, based on the platform type. Unit testing, UI testing, and real device testing are all possible on Bitrise.
+[Testing your app](/testing/testing-index/) and [deploying your app](/deploy/deployment-index/) are both done with the help of our Steps: we have Steps dedicated to both these functions, based on the platform type. Unit testing, UI testing, and real device testing are all possible on Bitrise.
 
-Once your app is tested, built and ready to go, you can quickly deploy it to the store of your choice, for example, Google Play or the App Store.
+Once your app is tested, built and ready to go, you can quickly deploy it to the store of your choice, for example, Google Play or the App Store. Check out Ship, our fast and efficient deployment solution: [Deploying with Ship](/deploy/ship/)
