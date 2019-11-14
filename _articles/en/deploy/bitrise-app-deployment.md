@@ -32,14 +32,14 @@ If the file path of the app (.ipa/APK) is available in the right directory, the�
 
 If you use custom Steps or our **Script** Step to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure:
 
-* you move the generated app into this directory or
-* you set the **Deploy directory or file path** input of the **Deploy to Bitrise.io** Step to point to the location of the app file.
+* You move the generated app into this directory or
+* You set the **Deploy directory or file path** input of the **Deploy to Bitrise.io** Step to point to the location of the app file.
 
 ## Notify: User Roles
 
 You can define who should get notified of the generated build based on your app's user groups. There are a couple of options for you to choose from:
 
-* Leave **everyone** in the input field to notify everyone in the group.
+* Leave everyone in the input field to notify everyone in the group.
 * Notify based on user role: testers, developers, admins, or owner (Select one or more and separate the roles with commas)
 * If you don't want to notify anyone, set it to `none`.
 
@@ -51,7 +51,7 @@ Set one or more email addresses of those who should get notification. This field
 
 ## Enabling Public Page for the App
 
-With this option enabled, you can create a Public install page that comes with a long and random URL. You can share this URL with anyone - yes, even with those who are not registered on Bitrise!
+With this option enabled, you can create a Public install page that comes with a long and random URL. You can share this URL with anyone - yes, even with those who are not registered on Bitrise.
 
 You can enable it directly in the Step's input field or at the generated .ipa/APK in your Build's **APPS & ARTIFACTS** tab.
 
@@ -62,8 +62,6 @@ You can access the Public install page's URL, if you head over to your generated
 ![](/img/public-install-page-1.png)
 
 If you click **Open Public install page** link, you’ll see a basic description of the app (title, version, size, supported devices).
-
-![](/img/public-install-page-example.png)
 
 If you visit your iOS Build's page from an iOS device (which you've registered for your account), you’ll see an **Install** button instead of the **Download** button. With this you can install the app on your device directly from Bitrise.
 
@@ -103,7 +101,7 @@ You can disable this toggle any time:
 {% include message_box.html type="warning" title="Who can receive the app after disabling?" content=" If you disable this function for the app, then only your app's team members will be able to install the app from Bitrise! Additionally, the **Notify: Emails** option will be ignored and the **Notify: User Roles** users will receive the build's URL instead of the public page's URL."%}
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Distribute your app over the air</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Distribute your app over the air</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
