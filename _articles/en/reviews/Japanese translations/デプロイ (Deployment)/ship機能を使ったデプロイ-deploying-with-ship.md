@@ -36,118 +36,190 @@ Shipを使うとたくさんのことができるようになります：
 
   ![](/img/ship_benefits.jpg)
 
-## Getting started with Ship
+## Getting started with Ship　Shipの開始方法
 
-You have two options to open Ship:
+You have two options to open Ship:  
+Shipを開くには２つの方法があります。
 
 * On the **Add-ons** tab of the app: this option takes you to Ship’s home page.
 * From the **Builds** page: this option takes you to the build’s Ship page.
+* アプリの**Add-ons**タブ：クリックすればShipのホームページに遷移されます。
+* **Builds**ページから：ビルドのShipページに遷移されます。
 
-When first logging in, you might not have a single build version available to publish. But don't worry, that can be fixed quickly.
+When first logging in, you might not have a single build version available to publish. But don't worry, that can be fixed quickly.  
+最初のログインの際は、公開するのに利用可能なビルドバージョンがない可能性があります。心配ありません、簡単に修正ができます。
 
 * In one of your Workflows, you need a Step that builds your app, such as **Xcode Archive & Export for iOS** or **Android Build**.
 * The same Workflow must have the correct version of the **Deploy to Bitrise.io** Step after the Step that builds your app.
+* ワークフロー内に、アプリをビルドする**Xcode Archive & Export for iOS**や**Android Build**といったステップを追加します。
+* そのワークフロー内に、適切なバージョンの**Deploy to Bitrise.io**ステップをアプリのビルドを実行するステップの後に追加します。
 
-{% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be of version 1.9.0 and the **Xcode Archive & Export for iOS** Step for iOS apps must be of version 2.6.0 - older versions of the Steps do not support Ship."%}
+{% include message_box.html type="warning" title="Step versions compatible with Ship Shipと互換性のあるバージョン" content="Please note that the **Deploy to Bitrise.io** Step must be of version 1.9.0 and the **Xcode Archive & Export for iOS** Step for iOS apps must be of version 2.6.0 - older versions of the Steps do not support Ship.  
+**Deploy to Bitrise.io**ステップは1.9.0バージョン以上、**Xcode Archive & Export for iOS**ステップは2.6.0バージョン以上であるかどうか確認してください。これらより古いバージョンはShipをサポートしていません。"%}
 
 Once you built your app - that is to say, produced an APK or an IPA file -, you will be able to start using Ship.
 
-## Configuring and publishing an app with Ship
+アプリのビルドが終了し、APKやIPAファイルを作成していれば、Shipを使い始めることができます。
 
-To publish an app on Ship, you need to:
+## Configuring and publishing an app with Ship　Shipを使ったアプリの構成と公開
+
+To publish an app on Ship, you need to:  
+Ship上でアプリを公開するには：
 
 * Build an app that has at least one [exposed Workflow](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship).
 * Configure publishing on the **Settings** page.
 * Push the **Publish** button.
+* エクスポーズ (公開) 済みのワークフローを最低1つ含むアプリをビルドする
+* Settings ページにて公開に関する設定を行う
+* Publishボタンをクリック
 
 iOS and Android apps have their own set of settings on the **Settings** page; for cross-platform app, both iOS and Android settings must be configured.
 
-### Exposing a Workflow's artifacts to Ship
+iOSとAndroidアプリのそれぞれの**Settings**ページには、固有の設定方法があります。これはクロスプラットフォームのアプリ用でありiOSとAndroidの両方の設定を施す必要があります。
+
+### Exposing a Workflow's artifacts to Ship  
+Shipへワークフローのアーティファクトを公開する
 
 Exposing a Workflow's artifacts means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. By default, all Workflows are exposed if they contain the correct version of the **Deploy to Bitrise.io** Step. If you are happy with that, just leave the field as is.
+
+ワークフローのアーティファクトをエクスポーズすれば、そのワークフローのプロダクトはShip内で使用ができます：例えば、ご自身のワークフローがAPKを生成するのであれば、Shipを使って公開することが可能です。デフォルトでは、Deploy to Bitrise.ioステップの適切なバージョンがワークフローに含まれていれば全てのワークフローがエクスポーズされるようになっています。デフォルトの設定で大丈夫であれば、そのままにしておきましょう。
 
 If, however, you add a Workflow here, only that Workflow will be exposed.
 
 To expose a Workflow's artifacts to Ship:
 
-1. Go to your app's Ship page.
+けれども、Shipにワークフローを追加すれば、そのワークフローのみがエクスポーズされます。
+
+Shipにワークフローのアーティファクトをエクスポーズするには：
+
+1. Go to your app's Ship page.  
+   アプリのShipページに進みます。
 2. Click **Settings** in the top right corner.
+
+   右上隅にあるSettingsをクリックします。
 3. Go to the **General** tab.
-4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
+
+   Generalタブに進みます。
+4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.  
+   **Expose Artifacts From the Selected Workflow to Ship**のテキストボックスに、必要なワークフロー全てを追加します。
 
    ![](/img/Settings___android-test-test.png)
 
    Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma (for example, `build, deploy, release_build_android`) .
-5. Scroll down to the bottom of the page and click **Save**.
+5. もしご自身のアプリがクロスプラットフォームであれば、以下のような2つのテキストボックスが表示されます：一方はiOS用、もう一方はAndroid用です。コンマを使ってワークフロー名を別々に分けてください (例： `build, deploy, release_build_android`) 。
+6. Scroll down to the bottom of the page and click **Save**.  
+   ページの一番下までスクロールして**Save**をクリックします。
 
-### Code signing files
+### Code signing files　コード署名ファイル
 
-On the **Settings** page, you can choose between different code signing files. You can upload these files - iOS provisioning profiles and certificates, Android keystore files and Service Account JSON files - in the usual way:
+On the **Settings** page, you can choose between different code signing files. You can upload these files - iOS provisioning profiles and certificates, Android keystore files and Service Account JSON files - in the usual way:  
+Settingsページでは、異なるコード署名ファイルの中から選択することができます。通常の方法でiOSプロビジョニングプロファイルや証明書、Android keystoreファイルやService Account JSON ファイルといったものをアップロードすることができます。
 
-* [iOS code signing files](/code-signing/ios-code-signing/code-signing-index/).
+* [iOS code signing files](/jp/code-signing/ios-code-signing/code-signing-index/).
 * [Android code signing files](/code-signing/android-code-signing/android-code-signing-index/).
+* [iOSコード署名ファイル](/jp/code-signing/ios-code-signing/code-signing-index/)
+* [Androidコード署名ファイル](/jp/code-signing/android-code-signing/android-code-signing-index/)
 
 Code signing files are required to publish an app to any online store, or to install them to test devices.
 
-### Installing an app on a test device
+コード署名ファイルは、全てのオンラインストアでの公開やテストデバイスへインストールするのに必要になります。
 
-To install an app on a device, there are three options:
+### Installing an app on a test device　テストデバイスでアプリをインストールする
+
+To install an app on a device, there are three options:  
+アプリをデバイスでインストールするには、3つの方法があります：
 
 * Send the public install page link to all the testers and other stakeholders.
 * Send the QR code: scanning it takes you to the public install page of the app.
 * Log in to Ship from the device and install it directly from there.
+* 公開済みのインストールページへのリンクをテスター全員と他の関係者へ送信する
+* QRコードを送信する：読み取ることにより公開済みのインストールページに遷移されます。
+* デバイスからShipにログインし、そこから直接インストールする
 
-{% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must configure your [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`."%}
+{% include message_box.html type="important" title="Enabling the public install page 公開済みインストールページを有効化する" content="Be aware that to have a public install page, you must configure your [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`.  
+公開済みインストールページでは、エクスポーズされたワークフローの**Deploy to Bitrise.io**ステップを正確に構成する必要があります：ステップの **Enable public page for the App?**のインプットを`true`に設定してください。"%}
 
-{% include message_box.html type="important" title="Artifact types" content="The public install page is not available for all type of artifacts.
+{% include message_box.html type="important" title="Artifact typesアーティファクトの種類" content="The public install page is not available for all type of artifacts. 公開済みインストールページでは全アーティファクトは利用不可です。
 
 * For iOS, it's only available if your Workflow builds an .ipa file that is signed with a Debug, Development or Ad-hoc type provisioning profile.
-* For Android, it's only available if your Workflow builds an APK which is NOT split or if it builds a universal APK which is split. For AABs, there will be no public install page link."%}
+* For Android, it's only available if your Workflow builds an APK which is NOT split or if it builds a universal APK which is split. For AABs, there will be no public install page link.
+* iOSでは、ワークフローがDebug, DevelopmentもしくはAd-hocタイプのプロビジョニングプロファイルで署名された.ipaファイルをビルドする場合にのみ利用できます。
+* Androidでは、ワークフローがスプリットされていないAPKをビルドする、もしくは、スプリットされたユニバーサルAPKをビルドする場合にのみ利用できます。"%}
 
-To send the public install page link or the QR code:
+To send the public install page link or the QR code:  
+公開済みインストールページまたはQRコードを送信するには：
 
-1. [Expose](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) the Workflow that creates the installable file, and run the Workflow on Bitrise.
-2. Open the **Details** page of your app's chosen build version.
-3. On the right, find the Public Install Page link or the QR code.
-4. Copy the one you need and send it to the stakeholders (by email, for example).
+1. [Expose](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) the Workflow that creates the installable file, and run the Workflow on Bitrise.  
+   インストールが可能なファイルを作成するワークフローをエクスポーズして、Bitriseでワークフローを実行します。
+2. Open the **Details** page of your app's chosen build version.  
+   アプリの選択されたビルドバージョンにある**Details**ページを開きます。
+3. On the right, find the Public Install Page link or the QR code.  
+   右側に公開済みインストールページのリンクまたはQRコードがあることを確認します。
+4. Copy the one you need and send it to the stakeholders (by email, for example).  
+   いずれかをコピーして、(メールなどを使って)関係者に送信します 。
 
-To install it directly from Ship:
+To install it directly from Ship:  
+Shipから直接インストールするには：
 
 1. Log in to Ship from a supported device.
 
-   Click on the **Devices** tab to find out if a given device is registered. Read [our guide on how to register your devices](/testing/registering-a-test-device/) on Bitrise.
-2. Under the name of the app, find and click the **Install** button.
+   Click on the **Devices** tab to find out if a given device is registered. Read [our guide on how to register your devices](/testing/registering-a-test-device/) on Bitrise.  
+   サポート済みのデバイスからShipにログインします。  
+   Devicesタブを開いて特定のデバイスが登録されているかどうか確認します。詳しくは[テストデバイスの登録](/jp/testing/registering-a-test-device/)を参照してください。
+2. Under the name of the app, find and click the **Install** button.  
+   アプリ名の下にある**Install**ボタンをクリックします。
 
-### Publishing an app online
+### Publishing an app online  
+アプリをオンラインで公開する
 
-<div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
+<div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="アプリのビルド" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration.  
+Shipでアプリを公開するには、ワークフローがShipにエクスポーズされている必要があります。iOSアプリでは、ワークフローに**Xcode Archive & Export for iOS**ステップと**Deploy to Bitrise.io**ステップが含まれていなければなりません。**Xcode Archive & Export for iOS**ステップは`Release`構成を使ってプロジェクトのアーカイブとエクスポートを行うことに注意してください。"%}
 
-{% include message_box.html type="note" title="The `.xcarchive.zip` file with a custom Step" content="The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:
+{% include message_box.html type="note" title="The `.xcarchive.zip` file with a custom Step　カスタムステップを使った`.xarchive.zip`ファイル" content="The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:  
+iOSアプリの場合、**Deploy to Bitrise.io**ステップはShipにエクスポートするために、`.xarchive.zip`ファイルを探します。**Xcode Archive & Export for iOS**ステップを万が一使いたくない場合、以下のことに注意する必要があります。
 
 * There is a Step in your exposed Workflow that exports an `.xcarchive.zip` file of your app. That is, the Step you use needs to create an Xcode Archive and needs to package it in a zip file.
-* This Step exports the `.xcarchive.zip` file into the `BITRISE_DEPLOY_DIR` directory."%}
+* This Step exports the `.xcarchive.zip` file into the `BITRISE_DEPLOY_DIR` directory.
+* アプリの`.xarchive.zip`ファイルをエクスポートするエクスポーズ済みのワークフロー内にステップが存在します。
+* このステップは`.xarchive.zip`ファイルを`BITRISE_DEPLOY_DIR`ディレクトリにエクスポートします。"%}
 
-To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you have to:
+To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you have to:  
+App Store Connect (元iTunes Connect) へiOSアプリの公開についての構成を行うには：
 
 * Choose the provisioning profiles and code signing identities to be used.
 * Set the app specific password.
 * Set the Apple Developer Account email.
 * Set the [App SKU](https://help.apple.com/app-store-connect/#/dev219b53a88): this is a unique ID you give to your app for internal tracking. It's not visible to customers.
+* 使用するプロビジョニングプロファイルとコード署名IDを選択します。
+* アプリのパスワードを設定します。
+* Apple Developer Accountのメールを設定します。
+* [App SKU](https://help.apple.com/app-store-connect/#/dev219b53a88)を設定します：これはユニークIDであり、内部トラッキング用にアプリに与えられます。顧客には表示されません。
 
-Once you configured publishing for the app, you do not have to set these options every time, only if you want to change some of them.
+Once you configured publishing for the app, you do not have to set these options every time, only if you want to change some of them.  
+アプリの公開についての設定が一回でも完了すれば、毎回オプションを設定する必要はありません。変更したい場合は、いつでも可能です。
 
-To configure publishing an app for iOS:
+To configure publishing an app for iOS:  
+iOS用アプリの公開を設定するには：
 
-1. Open your app's Ship page and click **Settings** in the top right corner.
-2. Go to the **General** tab.
-3. Go to the **iOS Settings** section.
-4. [Expose](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the .ipa you want to publish, and run the Workflow on Bitrise.
+1. Open your app's Ship page and click **Settings** in the top right corner.  
+   アプリのShipページを開き、右上端のSettingsをクリックします。
+2. Go to the **General** tab.  
+   Generalタブに進みます。
+3. Go to the **iOS Settings** section.  
+   iOS Settingsセクションに進みます。
+4. [Expose](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the .ipa you want to publish, and run the Workflow on Bitrise.  
+   公開したい.ipaを作成するワークフローをエクスポーズして、そのワークフローをBitriseで実行します。
 5. Select the code signing files you want to use.
 
-   Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
-6. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
-7. Enter the **App SKU**.
-8. Go back to the **Details** page and click **Publish**. </div> </div>
+   Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).  
+   使用になりたいコード署名ファイルを選択します。  
+   エクスポート方法に関して、.ipaファイル作成に使用した適切なファイルを選ぶように心がけてください。例えば、`app-store`方法を使って.ipaがエクスポートされた場合、App Storeプロビジョニングプロファイルと配布証明書 (コード署名ID) を選んでください。
+6. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.  
+   Apple Developer AccountのメールアドレスとApp Specific Password (アプリ専用パスワード) を入力してApp Storeで公開できるようにします。
+7. Enter the **App SKU**.  
+   App SKUを入力します。
+8. Go back to the **Details** page and click **Publish**.  
+   **Details**ページに戻り、**Publish**をクリックします。 </div> </div>
 
 <div><button type="button" class="collapsible"><p>Publishing an app for Android</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="Before you'd publish an Android app in Ship, make sure that:
 
