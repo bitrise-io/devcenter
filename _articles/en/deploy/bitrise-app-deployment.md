@@ -63,7 +63,11 @@ You can access the Public install page's URL, if you head over to your generated
 
 If you click **Open Public install page** link, you’ll see a basic description of the app (title, version, size, supported devices).
 
+![](/img/oat-publicinstallpage.png)
+
 If you visit your iOS Build's page from an iOS device (which you've registered for your account), you’ll see an **Install** button instead of the **Download** button. With this you can install the app on your device directly from Bitrise.
+
+![](/img/oat-publicinstallpage-ios.jpg)
 
 {% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store .ipa won't receive a Public install page as it should be uploaded to the app store directly. "%}
 
