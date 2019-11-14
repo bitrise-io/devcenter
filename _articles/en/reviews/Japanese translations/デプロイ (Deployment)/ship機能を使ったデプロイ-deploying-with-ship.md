@@ -8,21 +8,31 @@ published: false
 ---
 ## Ship overview
 
-{% include message_box.html type="important" title="Ship in BETA" content="Please note that this feature is still in BETA version."%}
+{% include message_box.html type="important" title="Shipはベータ版です" content="Please note that this feature is still in BETA version. この機能はまだベータ版であるということに注意してください。"%}
 
 Ship is a deployment solution that aims to save users a lot of headache. With Ship, you have complete control over your app's distribution, its version history, and all the important metadata - and you can manage all that in one place.
 
+Shipはユーザーの悩みを解決することを目指したデプロイソリューションです。Shipがあると、アプリの配布 (バージョン履歴や全ての重要なメタデータ) を一括管理できます。
+
 Deployment with Ship includes automatic re-sign and artifact generation and we store all the previous versions too. The app’s metadata, all the marketing copy, and screenshots can also be edited on the spot and non-developer people can manage it.
 
-{% include message_box.html type="info" title="Ship language" content="As of right now, Ship only supports English locale. No other language submissions are supported."%}
+Shipを使ったデプロイはオートの再署名やアーティファクトの生成を含んでおり、全ての過去のバージョンも保管いたします。全てのマーケティングコピーであるメタデータやスクリーンショットもBitrise内で編集することができるので、開発者でない方でも管理が可能です。
 
-You can do a whole lot of things with Ship:
+{% include message_box.html type="info" title="Ship language Ship言語" content="As of right now, Ship only supports English locale. No other language submissions are supported. 今現在、英語によるロケールのみサポートしております。その他の言語による提出はサポート外です。"%}
+
+You can do a whole lot of things with Ship:  
+Shipを使うとたくさんのことができるようになります：
 
 * View all the build versions of your app.
 * View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
 * Send your app directly to testers with a link to the public install page.
 * Deploy a given build version to App Store Connect and/or the Google Play Console, once you set up publishing.
 * Switch between platforms on the **Version History** page in the case of cross-platform projects.
+* 全てのアプリのビルドバージョンを確認
+* 特定のビルドバージョンの詳細を確認・編集 (解説・スクリーンショットや、アプリのサイズやサポートしているデバイスの種類などの重要なパラメータを含む)
+* 公開インストールページへのリンクを使ってテスターへアプリを直接送信
+* 公開する準備が整えば、App Store Connect / Google Play Consoleへ特定のビルドバージョンをデプロイ
+* クロスプラットフォームプロジェクトの場合、**Version History** ページを確認してプラットフォームを変更
 
   ![](/img/ship_benefits.jpg)
 
