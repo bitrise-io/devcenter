@@ -1,5 +1,5 @@
 ---
-title: Virtual Machines
+title: Virtual machines
 tag:
 - infrastructure
 - security
@@ -25,12 +25,12 @@ For more information about build and code security, see the [Code security](/get
 
 Our stacks are behind a set of static public IPs: this means you can whitelist these addresses if necessary. For example, if your security policy only allows a limited set of IP addresses to communicate with your servers.
 
-For the Android & Docker stacks:
+For the **Android & Docker** stacks:
 
 * 104.197.15.74
 * 35.237.165.17
 
-For the Xcode and Hybrid stacks:
+For the **Xcode** and the **Visual Studio for Mac** stacks:
 
 * 208.52.166.154
 

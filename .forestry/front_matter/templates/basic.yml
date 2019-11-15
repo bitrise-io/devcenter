@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/infrastructure/virtual-machines.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/ship機能を使ったデプロイ-deploying-with-ship.md
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/troubleshooting/enabling-bitrise-support-user.md
@@ -245,7 +246,6 @@ pages:
 - _articles/jp/getting-started/getting-started-with-expo-apps.md
 - _articles/en/steps-and-workflows/step-inputs.md
 - _articles/en/steps-and-workflows/getting-started-workflows.md
-- _articles/en/infrastructure/virtual-machines.md
 - _articles/en/infrastructure/stack-update-and-removal-policy.md
 - _articles/en/infrastructure/available-stacks.md
 - _articles/en/steps-and-workflows/creating-workflows.md
