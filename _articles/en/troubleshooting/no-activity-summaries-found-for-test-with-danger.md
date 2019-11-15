@@ -12,9 +12,13 @@ summary: Xcov, by default, for the results bundle in its default location, not a
 published: false
 
 ---
+## The issue
+
 When running Danger with the xcov plugin, you may get some form of the following error message:
 
     2019/01/01 00:00:00 no activity summaries found for test:
+
+## The solution
 
 This is a consequence of how the **Xcode Test for iOS** Step works: it generates an .xcresult bundle and exports it to the `$BITRISE_XCRESULT_PATH`.
 
