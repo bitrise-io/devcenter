@@ -14,7 +14,6 @@ menu:
     weight: 5
 
 ---
-
 {% include message_box.html type="info" title="Deploying with Ship" content="This guide talks about deploying with the official Bitrise deploy Steps. We recommend checking out Ship, our deployment solution that aims to save you a lot of headache in publishing your apps: [Deploying with Ship](/deploy/ship/)."%}
 
 You can deploy an app to iTunes Connect (rebranded as App Store Connect) to:

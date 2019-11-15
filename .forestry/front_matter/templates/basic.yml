@@ -29,12 +29,17 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/jp/troubleshooting/no-activity-summaries-found-for-test.md
+- _articles/en/troubleshooting/no-activity-summaries-found-for-test-with-danger.md
+- _articles/en/infrastructure/virtual-machines.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/ship機能を使ったデプロイ-deploying-with-ship.md
+- _articles/en/testing/running-xcode-tests.md
+- _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/getting-started/index.md
 - _articles/en/deploy/ship.md
 - _articles/jp/deploy/ship.md
 - _articles/jp/team-management/organizations/setting-up-onelogin-saml-sso-for-bitrise.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
-- _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/team-management/organizations/setting-up-onelogin-sso-for-bitrise.md
 - _articles/en/builds/available-environment-variables.md
 - _articles/en/testing/test-reports.md
@@ -98,7 +103,6 @@ pages:
 - _articles/en/builds/caching/caching-homebrew-installers.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/testing/device-testing-for-ios.md
-- _articles/en/testing/running-xcode-tests.md
 - _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
 - _articles/en/faq/adding-projects-with-submodules.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
@@ -244,7 +248,6 @@ pages:
 - _articles/jp/getting-started/getting-started-with-expo-apps.md
 - _articles/en/steps-and-workflows/step-inputs.md
 - _articles/en/steps-and-workflows/getting-started-workflows.md
-- _articles/en/infrastructure/virtual-machines.md
 - _articles/en/infrastructure/stack-update-and-removal-policy.md
 - _articles/en/infrastructure/available-stacks.md
 - _articles/en/steps-and-workflows/creating-workflows.md

@@ -9,7 +9,6 @@ menu:
     title: Setting up OneLogin SSO for Bitrise
 
 ---
-
 {% include not_translated_yet.html %}
 
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [OneLogin](https://www.onelogin.com/ "https://www.onelogin.com").
