@@ -28,13 +28,13 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- deploy.md
 - _articles/jp/troubleshooting/no-activity-summaries-found-for-test.md
 - _articles/en/troubleshooting/no-activity-summaries-found-for-test-with-danger.md
 - _articles/en/infrastructure/virtual-machines.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/ship機能を使ったデプロイ-deploying-with-ship.md
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/troubleshooting/enabling-bitrise-support-user.md
-- deploy.md
 - _articles/en/getting-started/index.md
 - _articles/en/deploy/ship.md
 - _articles/jp/deploy/ship.md
