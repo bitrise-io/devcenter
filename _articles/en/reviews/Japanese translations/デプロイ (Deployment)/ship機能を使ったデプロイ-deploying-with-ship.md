@@ -6,114 +6,74 @@ summary: ''
 published: false
 
 ---
-## Ship overview　Shipの概要
+## Shipの概要
 
-{% include message_box.html type="important" title="Shipはベータ版です" content="Please note that this feature is still in BETA version. この機能はまだベータ版であるということに注意してください。"%}
+{% include message_box.html type="important" title="Shipはベータ版です" content="この機能はまだベータ版であるということに注意してください。"%}
 
-Ship is a deployment solution that aims to save users a lot of headache. With Ship, you have complete control over your app's distribution, its version history, and all the important metadata - and you can manage all that in one place.
+Shipはユーザーの悩みを解決することを目指したデプロイソリューションです。Shipがあれば、アプリ配布 (バージョン履歴や全ての重要なメタデータ) を一括管理できます。
 
-Shipはユーザーの悩みを解決することを目指したデプロイソリューションです。Shipがあると、アプリの配布 (バージョン履歴や全ての重要なメタデータ) を一括管理できます。
+Shipを使ったデプロイはオートの再署名やアーティファクトの生成を含まれており、全ての過去のバージョンも保管します。全てのマーケティングコピーであるアプリのメタデータやスクリーンショットもBitrise内で編集することができるので、非開発者の方でも管理が可能です。
 
-Deployment with Ship includes automatic re-sign and artifact generation and we store all the previous versions too. The app’s metadata, all the marketing copy, and screenshots can also be edited on the spot and non-developer people can manage it.
+{% include message_box.html type="info" title="Ship言語" content="今現在、英語によるロケールのみサポートしております。その他の言語による提出はサポート外です。"%}
 
-Shipを使ったデプロイはオートの再署名やアーティファクトの生成を含んでおり、全ての過去のバージョンも保管いたします。全てのマーケティングコピーであるメタデータやスクリーンショットもBitrise内で編集することができるので、開発者でない方でも管理が可能です。
+Shipを使うと様々なことが実現します：
 
-{% include message_box.html type="info" title="Ship language Ship言語" content="As of right now, Ship only supports English locale. No other language submissions are supported. 今現在、英語によるロケールのみサポートしております。その他の言語による提出はサポート外です。"%}
-
-You can do a whole lot of things with Ship:  
-Shipを使うとたくさんのことができるようになります：
-
-* View all the build versions of your app.
-* View and edit all the details of a given build version, including a description, screenshots, and the most important parameters, such as the app size or the supported device types.
-* Send your app directly to testers with a link to the public install page.
-* Deploy a given build version to App Store Connect and/or the Google Play Console, once you set up publishing.
-* Switch between platforms on the **Version History** page in the case of cross-platform projects.
-* 全てのアプリのビルドバージョンを確認
-* 特定のビルドバージョンの詳細を確認・編集 (解説・スクリーンショットや、アプリのサイズやサポートしているデバイスの種類などの重要なパラメータを含む)
-* 公開インストールページへのリンクを使ってテスターへアプリを直接送信
+* アプリの全てのビルドバージョンを確認
+* 特定のビルドバージョンの詳細を確認・編集 (説明・スクリーンショットや、アプリのサイズやサポートしているデバイスの種類などの重要なパラメータを含む)
+* 公開インストールページへのリンクを使って、テスターへアプリを直接送信
 * 公開する準備が整えば、App Store Connect / Google Play Consoleへ特定のビルドバージョンをデプロイ
-* クロスプラットフォームプロジェクトの場合、**Version History** ページを確認してプラットフォームを変更
+* クロスプラットフォームプロジェクトの場合、**Version History** ページを確認してプラットフォームを切替
 
   ![](/img/ship_benefits.jpg)
 
-## Getting started with Ship　Shipの開始方法
+## Shipの開始方法
 
-You have two options to open Ship:  
 Shipを開くには２つの方法があります。
 
-* On the **Add-ons** tab of the app: this option takes you to Ship’s home page.
-* From the **Builds** page: this option takes you to the build’s Ship page.
 * アプリの**Add-ons**タブ：クリックすればShipのホームページに遷移されます。
-* **Builds**ページから：ビルドのShipページに遷移されます。
+* **Builds**ページより：ビルドのShipページに遷移されます。
 
-When first logging in, you might not have a single build version available to publish. But don't worry, that can be fixed quickly.  
-最初のログインの際は、公開するのに利用可能なビルドバージョンがない可能性があります。心配ありません、簡単に修正ができます。
+最初のログインの際、公開するのに利用可能な1つのビルドバージョンがない可能性があります。心配ありません、簡単に修正ができます。
 
-* In one of your Workflows, you need a Step that builds your app, such as **Xcode Archive & Export for iOS** or **Android Build**.
-* The same Workflow must have the correct version of the **Deploy to Bitrise.io** Step after the Step that builds your app.
 * ワークフロー内に、アプリをビルドする**Xcode Archive & Export for iOS**や**Android Build**といったステップを追加します。
 * そのワークフロー内に、適切なバージョンの**Deploy to Bitrise.io**ステップをアプリのビルドを実行するステップの後に追加します。
 
-{% include message_box.html type="warning" title="Step versions compatible with Ship Shipと互換性のあるバージョン" content="Please note that the **Deploy to Bitrise.io** Step must be of version 1.9.0 and the **Xcode Archive & Export for iOS** Step for iOS apps must be of version 2.6.0 - older versions of the Steps do not support Ship.  
-**Deploy to Bitrise.io**ステップは1.9.0バージョン以上、**Xcode Archive & Export for iOS**ステップは2.6.0バージョン以上であるかどうか確認してください。これらより古いバージョンはShipをサポートしていません。"%}
+{% include message_box.html type="warning" title="Shipと互換性のあるバージョン" content="**Deploy to Bitrise.io**ステップは1.9.0バージョン以上、**Xcode Archive & Export for iOS**ステップは2.6.0バージョン以上であるかどうか確認してください。これらより古いバージョンはShipをサポートしていません。"%}
 
-Once you built your app - that is to say, produced an APK or an IPA file -, you will be able to start using Ship.
+アプリのビルドがいったん終了し、APKやIPAファイルを作成していれば、Shipを使用できるようになります。
 
-アプリのビルドが終了し、APKやIPAファイルを作成していれば、Shipを使い始めることができます。
+## Shipを使ったアプリの構成と公開
 
-## Configuring and publishing an app with Ship　Shipを使ったアプリの構成と公開
-
-To publish an app on Ship, you need to:  
 Ship上でアプリを公開するには：
 
-* Build an app that has at least one [exposed Workflow](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship).
-* Configure publishing on the **Settings** page.
-* Push the **Publish** button.
-* エクスポーズ (公開) 済みのワークフローを最低1つ含むアプリをビルドする
-* Settings ページにて公開に関する設定を行う
-* Publishボタンをクリック
+* [エクスポーズ済みのワークフロー](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship)を最低1つ含むアプリをビルドする
+* **Settings**ページにて公開に関する設定を行う
+* **Publish**ボタンをクリック
 
-iOS and Android apps have their own set of settings on the **Settings** page; for cross-platform app, both iOS and Android settings must be configured.
+iOSとAndroidアプリの**Settings**ページには、それぞれ固有の設定方法があります。これはクロスプラットフォームアプリ用であり、iOSとAndroidの両方の設定を施す必要があります。
 
-iOSとAndroidアプリのそれぞれの**Settings**ページには、固有の設定方法があります。これはクロスプラットフォームのアプリ用でありiOSとAndroidの両方の設定を施す必要があります。
+### Shipへワークフローのアーティファクトを公開する
 
-### Exposing a Workflow's artifacts to Ship  
-Shipへワークフローのアーティファクトを公開する
+ワークフローのアーティファクトをエクスポーズすれば、そのワークフローのプロダクトはShip内での使用が可能です：例えば、ご自身のワークフローがAPKを生成するのであれば、Shipを使った公開ができます。デフォルトでは、**Deploy to Bitrise.io**ステップの適切なバージョンがワークフローに含まれていれば、全てのワークフローがエクスポーズされるようになっています。デフォルトの設定で大丈夫であれば、そのままにしておきましょう。
 
-Exposing a Workflow's artifacts means that the products of the Workflow will be available in Ship: for example, if your Workflow produces an APK, you can publish that using Ship. By default, all Workflows are exposed if they contain the correct version of the **Deploy to Bitrise.io** Step. If you are happy with that, just leave the field as is.
-
-ワークフローのアーティファクトをエクスポーズすれば、そのワークフローのプロダクトはShip内で使用ができます：例えば、ご自身のワークフローがAPKを生成するのであれば、Shipを使って公開することが可能です。デフォルトでは、Deploy to Bitrise.ioステップの適切なバージョンがワークフローに含まれていれば全てのワークフローがエクスポーズされるようになっています。デフォルトの設定で大丈夫であれば、そのままにしておきましょう。
-
-If, however, you add a Workflow here, only that Workflow will be exposed.
-
-To expose a Workflow's artifacts to Ship:
-
-けれども、Shipにワークフローを追加すれば、そのワークフローのみがエクスポーズされます。
+しかしShipにワークフローを追加すれば、そのワークフローのみがエクスポーズされます。
 
 Shipにワークフローのアーティファクトをエクスポーズするには：
 
-1. Go to your app's Ship page.  
-   アプリのShipページに進みます。
-2. Click **Settings** in the top right corner.
-
-   右上隅にあるSettingsをクリックします。
-3. Go to the **General** tab.
-
-   Generalタブに進みます。
-4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.  
-   **Expose Artifacts From the Selected Workflow to Ship**のテキストボックスに、必要なワークフロー全てを追加します。
+1. アプリのShipページに進みます。
+2. 右上隅にある**Settings**をクリックします。
+3. **General**タブに進みます。
+4. **Expose Artifacts From the Selected Workflow to Ship**のテキストボックスに、必要なワークフロー全てを追加します。
 
    ![](/img/Settings___android-test-test.png)
 
-   Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma (for example, `build, deploy, release_build_android`) .
-5. もしご自身のアプリがクロスプラットフォームであれば、以下のような2つのテキストボックスが表示されます：一方はiOS用、もう一方はAndroid用です。コンマを使ってワークフロー名を別々に分けてください (例： `build, deploy, release_build_android`) 。
-6. Scroll down to the bottom of the page and click **Save**.  
-   ページの一番下までスクロールして**Save**をクリックします。
+   もしご自身のアプリがクロスプラットフォームであれば、以下のような2つのテキストボックスが表示されます：一方はiOS用、もう一方はAndroid用です。コンマを使ってワークフロー名を別々に分けてください (例： `build, deploy, release_build_android`) 。
+5. ページの一番下までスクロールして**Save**をクリックします。
 
-### Code signing files　コード署名ファイル
+### コード署名ファイル
 
 On the **Settings** page, you can choose between different code signing files. You can upload these files - iOS provisioning profiles and certificates, Android keystore files and Service Account JSON files - in the usual way:  
-Settingsページでは、異なるコード署名ファイルの中から選択することができます。通常の方法でiOSプロビジョニングプロファイルや証明書、Android keystoreファイルやService Account JSON ファイルといったものをアップロードすることができます。
+**Setting**sページでは、異なるコード署名ファイルの中から選択することができます。通常の方法でiOSプロビジョニングプロファイルや証明書、Android keystoreファイルやService Account JSON ファイルといったものをアップロードすることができます。
 
 * [iOS code signing files](/jp/code-signing/ios-code-signing/code-signing-index/).
 * [Android code signing files](/code-signing/android-code-signing/android-code-signing-index/).
@@ -374,12 +334,18 @@ The address should appear in the list below, with **Pending** as its status. An 
 
 You can pick and choose the Ship events about which you want to notify different people. For example, it's possible to only send notifications about a failed publishing event if you do not want to be bothered when things go well! And of course you can send different notifications to different email addresses.
 
-通知を送る
+通知を受け取る人をイベント別に分けることが可能です。例えば、公開失敗の通知のみ有効化して、 (問題が一定期間生じていない場合) 不要な成功通知を無効化することができます。さらに、異なる種類のイベント通知を、異なるメールアドレスにグループ化して送信することもできます。
 
-To configure notifications:
+To configure notifications:  
+通知の設定方法：
 
-1. Open your app's Ship page.
-2. Click **Settings.**
-3. Go to the **Notifications** tab.
-4. Use the toggles under the different event types.
-5. Hit **Save** once all notifications are set.
+1. Open your app's Ship page.  
+   アプリのShipページを開きます。
+2. Click **Settings.  
+   Settings**をクリックします。
+3. Go to the **Notifications** tab.  
+   Notifications タブへ進みます。
+4. Use the toggles under the different event types.  
+   イベントタイプの下にあるトグルを使用します。
+5. Hit **Save** once all notifications are set.  
+   全ての通知設定が完了したら、Saveをクリックします。
