@@ -9,6 +9,9 @@ summary: Xcov, by default, for the results bundle in its default location, not a
   `$BITRISE_XCRESULT_PATH`. Because of this your build will fail when using those
   tools. You need to configure them to look for the bundle in the location set by
   the Env Var.
+menu:
+  troubleshooting-main:
+    weight: 19
 published: false
 
 ---
