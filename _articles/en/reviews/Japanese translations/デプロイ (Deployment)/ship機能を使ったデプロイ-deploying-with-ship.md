@@ -72,280 +72,173 @@ Shipにワークフローのアーティファクトをエクスポーズする�
 
 ### コード署名ファイル
 
-On the **Settings** page, you can choose between different code signing files. You can upload these files - iOS provisioning profiles and certificates, Android keystore files and Service Account JSON files - in the usual way:  
-**Setting**sページでは、異なるコード署名ファイルの中から選択することができます。通常の方法でiOSプロビジョニングプロファイルや証明書、Android keystoreファイルやService Account JSON ファイルといったものをアップロードすることができます。
+**Settings**ページでは、異なるコード署名ファイルの中から選択することができます。通常の方法でiOSプロビジョニングプロファイルや証明書、Android keystoreファイルやService Account JSONファイルといったものをアップロードすることができます：
 
-* [iOS code signing files](/jp/code-signing/ios-code-signing/code-signing-index/).
-* [Android code signing files](/code-signing/android-code-signing/android-code-signing-index/).
 * [iOSコード署名ファイル](/jp/code-signing/ios-code-signing/code-signing-index/)
 * [Androidコード署名ファイル](/jp/code-signing/android-code-signing/android-code-signing-index/)
 
-Code signing files are required to publish an app to any online store, or to install them to test devices.
-
 コード署名ファイルは、全てのオンラインストアでの公開やテストデバイスへインストールするのに必要になります。
 
-### Installing an app on a test device　テストデバイスでアプリをインストールする
+### テストデバイスでアプリをインストールする
 
-To install an app on a device, there are three options:  
 アプリをデバイスでインストールするには、3つの方法があります：
 
-* Send the public install page link to all the testers and other stakeholders.
-* Send the QR code: scanning it takes you to the public install page of the app.
-* Log in to Ship from the device and install it directly from there.
-* 公開済みのインストールページへのリンクをテスター全員と他の関係者へ送信する
-* QRコードを送信する：読み取ることにより公開済みのインストールページに遷移されます。
+* パブリックインストールページのリンクをテスター全員と他の関係者へ送信する
+* QRコードを送信する：読み取ることによりパブリックインストールページに遷移されます。
 * デバイスからShipにログインし、そこから直接インストールする
 
-{% include message_box.html type="important" title="Enabling the public install page 公開済みインストールページを有効化する" content="Be aware that to have a public install page, you must configure your [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`.  
-公開済みインストールページでは、エクスポーズされたワークフローの**Deploy to Bitrise.io**ステップを正確に構成する必要があります：ステップの **Enable public page for the App?**のインプットを`true`に設定してください。"%}
+{% include message_box.html type="important" title="パブリックインストールページを有効化する" content="パブリックインストールページでは、エクスポーズされたワークフローの**Deploy to Bitrise.io**ステップを正確に構成する必要があります：ステップの **Enable public page for the App?**のインプットを`true`に設定してください。"%}
 
-{% include message_box.html type="important" title="Artifact typesアーティファクトの種類" content="The public install page is not available for all type of artifacts. 公開済みインストールページでは全アーティファクトは利用不可です。
+{% include message_box.html type="important" title="アーティファクトの種類" content="The public install page is not available for all type of artifacts. パブリックインストールページは全てのアーティファクトに対応しておりません。
 
-* For iOS, it's only available if your Workflow builds an .ipa file that is signed with a Debug, Development or Ad-hoc type provisioning profile.
-* For Android, it's only available if your Workflow builds an APK which is NOT split or if it builds a universal APK which is split. For AABs, there will be no public install page link.
-* iOSでは、ワークフローがDebug, DevelopmentもしくはAd-hocタイプのプロビジョニングプロファイルで署名された.ipaファイルをビルドする場合にのみ利用できます。
-* Androidでは、ワークフローがスプリットされていないAPKをビルドする、もしくは、スプリットされたユニバーサルAPKをビルドする場合にのみ利用できます。"%}
+* **<iOS>** ワークフローがDebug, DevelopmentもしくはAd-hocタイプのプロビジョニングプロファイルで署名された.ipaファイルをビルドする場合にのみアーティファクトは利用できます。
+* **<Android>** ワークフローがスプリットされていないAPKをビルドする、もしくは、スプリットされたユニバーサルAPKをビルドする場合にのみアーティファクトは利用できます。"%}
 
-To send the public install page link or the QR code:  
-公開済みインストールページまたはQRコードを送信するには：
+パブリックインストールページのリンクまたはQRコードを送信するには：
 
-1. [Expose](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) the Workflow that creates the installable file, and run the Workflow on Bitrise.  
-   インストールが可能なファイルを作成するワークフローをエクスポーズして、Bitriseでワークフローを実行します。
-2. Open the **Details** page of your app's chosen build version.  
-   アプリの選択されたビルドバージョンにある**Details**ページを開きます。
-3. On the right, find the Public Install Page link or the QR code.  
-   右側に公開済みインストールページのリンクまたはQRコードがあることを確認します。
-4. Copy the one you need and send it to the stakeholders (by email, for example).  
-   いずれかをコピーして、(メールなどを使って)関係者に送信します 。
+1. インストールが可能なファイルを作成するワークフローを[エクスポーズ](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship)して、Bitriseでワークフローを実行します。
+2. アプリの選択済みビルドバージョンの**Details**ページを開きます。
+3. 右側にパブリックインストールページのリンクまたはQRコードがあることを確認します。
+4. いずれかをコピーして、(メールなどを使って)関係者に送信します 。
 
-To install it directly from Ship:  
 Shipから直接インストールするには：
 
-1. Log in to Ship from a supported device.
+1. サポート済みのデバイスからShipにログインします。  
+   **Devices**タブを開いて特定のデバイスが登録されているかどうか確認します。詳しくは[テストデバイスの登録](/jp/testing/registering-a-test-device/)を参照してください。
+2. アプリ名の下にある**Install**ボタンをクリックします。
 
-   Click on the **Devices** tab to find out if a given device is registered. Read [our guide on how to register your devices](/testing/registering-a-test-device/) on Bitrise.  
-   サポート済みのデバイスからShipにログインします。  
-   Devicesタブを開いて特定のデバイスが登録されているかどうか確認します。詳しくは[テストデバイスの登録](/jp/testing/registering-a-test-device/)を参照してください。
-2. Under the name of the app, find and click the **Install** button.  
-   アプリ名の下にある**Install**ボタンをクリックします。
+### アプリをオンラインで公開する
 
-### Publishing an app online  
-アプリをオンラインで公開する
+<div><button type="button" class="collapsible"><p>iOSアプリを公開する</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="アプリのビルド" content="Shipでアプリを公開するには、ワークフローがShipにエクスポーズされている必要があります。iOSアプリでは、ワークフローに**Xcode Archive & Export for iOS**ステップと**Deploy to Bitrise.io**ステップが含まれていなければなりません。**Xcode Archive & Export for iOS**ステップは`Release`構成を使ってプロジェクトのアーカイブとエクスポートを行うことに注意してください。"%}
 
-<div><button type="button" class="collapsible"><p>Publishing an app for iOS iOSアプリを公開する</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="アプリのビルド" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration.  
-Shipでアプリを公開するには、ワークフローがShipにエクスポーズされている必要があります。iOSアプリでは、ワークフローに**Xcode Archive & Export for iOS**ステップと**Deploy to Bitrise.io**ステップが含まれていなければなりません。**Xcode Archive & Export for iOS**ステップは`Release`構成を使ってプロジェクトのアーカイブとエクスポートを行うことに注意してください。"%}
+{% include message_box.html type="note" title="カスタムステップを使った`.xarchive.zip`ファイル" content="The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:  
+iOSアプリの場合、**Deploy to Bitrise.io**ステップはShipにエクスポートするために、`.xarchive.zip`ファイルを探します。万が一**Xcode Archive & Export for iOS**ステップを使いたくない場合、以下のことに注意する必要があります：
 
-{% include message_box.html type="note" title="The `.xcarchive.zip` file with a custom Step　カスタムステップを使った`.xarchive.zip`ファイル" content="The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:  
-iOSアプリの場合、**Deploy to Bitrise.io**ステップはShipにエクスポートするために、`.xarchive.zip`ファイルを探します。**Xcode Archive & Export for iOS**ステップを万が一使いたくない場合、以下のことに注意する必要があります。
-
-* There is a Step in your exposed Workflow that exports an `.xcarchive.zip` file of your app. That is, the Step you use needs to create an Xcode Archive and needs to package it in a zip file.
-* This Step exports the `.xcarchive.zip` file into the `BITRISE_DEPLOY_DIR` directory.
-* アプリの`.xarchive.zip`ファイルをエクスポートするエクスポーズ済みのワークフロー内にステップが存在します。
+* アプリの`.xarchive.zip`ファイルをエクスポートする、エクスポーズ済みのワークフロー内にステップが存在します。これは、使用するステップがXcode Archiveを作成し、zipファイル内にパッケージする必要があります。
 * このステップは`.xarchive.zip`ファイルを`BITRISE_DEPLOY_DIR`ディレクトリにエクスポートします。"%}
 
-To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you have to:  
-App Store Connect (元iTunes Connect) へiOSアプリの公開についての構成を行うには：
+App Store Connect (旧 iTunes Connect) へiOSアプリの公開についての構成を行うには：
 
-* Choose the provisioning profiles and code signing identities to be used.
-* Set the app specific password.
-* Set the Apple Developer Account email.
-* Set the [App SKU](https://help.apple.com/app-store-connect/#/dev219b53a88): this is a unique ID you give to your app for internal tracking. It's not visible to customers.
 * 使用するプロビジョニングプロファイルとコード署名IDを選択します。
-* アプリのパスワードを設定します。
-* Apple Developer Accountのメールを設定します。
+* アプリ専用のパスワードを設定します。
+* Apple Developer Accountのメールアドレスを設定します。
 * [App SKU](https://help.apple.com/app-store-connect/#/dev219b53a88)を設定します：これはユニークIDであり、内部トラッキング用にアプリに与えられます。顧客には表示されません。
 
-Once you configured publishing for the app, you do not have to set these options every time, only if you want to change some of them.  
-アプリの公開についての設定が一回でも完了すれば、毎回オプションを設定する必要はありません。変更したい場合は、いつでも可能です。
+アプリの公開についての設定がいったん完了すれば、以降は毎回オプションを設定する必要はありません。変更したい場合は、いつでも可能です。
 
-To configure publishing an app for iOS:  
 iOS用アプリの公開を設定するには：
 
-1. Open your app's Ship page and click **Settings** in the top right corner.  
-   アプリのShipページを開き、右上端のSettingsをクリックします。
-2. Go to the **General** tab.  
-   Generalタブに進みます。
-3. Go to the **iOS Settings** section.  
-   iOS Settingsセクションに進みます。
-4. [Expose](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the .ipa you want to publish, and run the Workflow on Bitrise.  
-   公開したい.ipaを作成するワークフローをエクスポーズして、そのワークフローをBitriseで実行します。
-5. Select the code signing files you want to use.
+1. アプリのShipページを開き、右上端の**Settings**をクリックします。
+2. **General**タブに進みます。
+3. **iOS Settings**セクションに進みます。
+4. 公開したい.ipaを作成するワークフローを[エクスポーズ](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship)して、そのワークフローをBitriseで実行します。
+5. 使用になりたいコード署名ファイルを選択します。  
+   エクスポート方法に関して、.ipaファイル作成に使用した適切なファイルを選ぶように心がけてください。例えば、`app-store`方法を使って.ipaがエクスポートされた場合、App Storeプロビジョニングプロファイルと配布用証明書 (コード署名ID) を選んでください。
+6. **Apple Developer Accountのメールアドレス**と**App Specific Password (アプリ専用パスワード)** を入力してApp Storeで公開できるようにします。
+7. **App SKU**を入力します。
+8. **Details**ページに戻り、**Publish**をクリックします。 </div> </div>
 
-   Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).  
-   使用になりたいコード署名ファイルを選択します。  
-   エクスポート方法に関して、.ipaファイル作成に使用した適切なファイルを選ぶように心がけてください。例えば、`app-store`方法を使って.ipaがエクスポートされた場合、App Storeプロビジョニングプロファイルと配布証明書 (コード署名ID) を選んでください。
-6. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.  
-   Apple Developer AccountのメールアドレスとApp Specific Password (アプリ専用パスワード) を入力してApp Storeで公開できるようにします。
-7. Enter the **App SKU**.  
-   App SKUを入力します。
-8. Go back to the **Details** page and click **Publish**.  
-   **Details**ページに戻り、**Publish**をクリックします。 </div> </div>
+<div><button type="button" class="collapsible"><p>Androidアプリを公開する</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="アプリのビルド" content="ShipでAndroidアプリを公開する前に：
 
-<div><button type="button" class="collapsible"><p>Publishing an app for Android Androidアプリを公開する</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app アプリのビルド" content="Before you'd publish an Android app in Ship, make sure that:　ShipでAndroidアプリを公開する前に：
+* アプリはShipにエクスポーズされたワークフローでビルドが行われます。ワークフローには、APKをビルドするステップまたは (**Android Build** / **Gradle Runner** ステップといった) Android App Bundleと、**Deploy to Bitrise.io**ステップが必要になります。
+* Shipで公開する前に、アプリのリリースバージョンをビルドしておく必要があります。リリースバージョンがなければ、**Details**ページの**Publish**ボタンが動作しません。このケースでは、ステップに以下の項目が設定されているか確認してください：
+  * **Android Build**ステップの**Variant**インプット欄に`release` (例: `release`, `demoRelease`)
+  * **Gradle Runner**ステップの**Gradle task to run**インプット欄に `Release` (例: `assembleRelease`, `assembleDemoRelease`)
+* APKをビルドするうえで、カスタムの**Script**ステップまたは他のカスタムステップを使用している場合、ステップが`BITRISE_DEPLOY_DIR`ディレクトリにAPKをエクスポートしている必要があります。また、**Deploy to Bitrise.io**ステップをエクスポーズされたワークフローに含ませてください。"%}
 
-* Your app is built in a Workflow that is exposed to Ship. The Workflow must contain a build Step that builds an APK(s) or an Android App Bundle (such as **Android Build** or **Gradle Runner** Step) and the **Deploy to Bitrise.io** Step.  
-  アプリはShipにエクスポーズされるワークフローでビルドされます。ワークフローには、APKをビルドするステップ、または**Android Build** / **Gradle Runner** ステップといったAndroid App BundleとDeploy to Bitrise.ioステップが必要です。
-* You have built a release version of your app before publishing it in Ship. Please note that without a release version, the **Publish** button on the **Details** page of Ship will be disabled. In this case, check if the following is set in your build Steps: the **Android Build** Step's **Variant** input field must contain `release` (for example `release` or `demoRelease`) and the **Gradle Runner** Step's **Gradle task to run** input field must contain `Release` (for example, `assembleRelease` or `assembleDemoRelease`).  
-  Shipで公開する前に、アプリのリリースバージョンをビルドしておかなければなりません。リリースバージョンがないと、**Details**ページの**Publish**ボタンが動作しなくなります。このケースでは、ステップに以下の項目が設定されているか確認してください：**Android Build**ステップの**Variant**インプット欄に`release` (例: `release`, `demoRelease`) と **Gradle Runner**ステップの**Gradle task to run**インプット欄に `Release` (例: `assembleRelease`, `assembleDemoRelease`)が含まれている必要があります。
-* If using a custom **Script** Step or other custom Step to build your APK, you must make sure that the Step exports the APK to the `BITRISE_DEPLOY_DIR` directory and that the **Deploy to Bitrise.io** Step is included in your exposed Workflow.
-* APKをビルドするのにカスタムの**Script**ステップまたは他のカスタムステップを使用している場合、ステップが`BITRISE_DEPLOY_DIR`ディレクトリにAPKをエクスポートしている必要があります。また、Deploy to Bitrise.ioステップをエクスポーズされたワークフローに含ませてください。"%}
-
-To configure publishing an Android app to Google Play Console, you can:  
 Google Play ConsoleへAndroidアプリの公開を設定するには：
 
-* Choose the Android keystore files and the Service Account JSON file.
-* Set the track you want to use to release your app.
 * Android keystoreファイルとService Account JSONファイルを選択します。
 * アプリのリリースに使用するtrackを設定します。
 
-Once you configured publishing for the app, you do not have to set these options every time, only if you want to change some of them.
-
-アプリの公開設定を一回終えると、毎回オプションを設定する必要はありません。手直しが必要な場合はいつでも可能です。
-
-To configure publishing an app for Android:
+アプリの公開設定をいったん完了すると、以降は毎回オプションを設定する必要はありません。手直しが必要な場合はいつでも可能です。
 
 Andoroidアプリの公開を設定するには：
 
-1. Open your app's Ship page and click **Settings** in the top right corner.  
-   Shipのページを開いて右上端のSettingsをクリックします。
-2. Go to the **Android Settings** section.  
-   Android Settingsセクションへ進みます。
-3. [Expose](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the APK you want to publish.  
-   公開したいAPKを作成するワークフローをエクスポーズします。
-4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Google Play Console.  
-   Google Play Consoleでの公開に使用するtrackを入力します。
-5. If your Android app contains multiple modules, enter the exact module under **Module**. 
-
-   複数のモジュールがAndroidアプリに含んでいる際は、**Module**の空欄に正確なモジュールを入力します。  
+1. Shipのページを開いて右上端の**Settings**をクリックします。
+2. **Android Settings**セクションへ進みます。
+3. 公開したいAPKを作成するワークフローを[エクスポーズ](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship)します。
+4. Google Play Consoleでの公開に使用する[Track](https://developers.google.com/android-publisher/tracks)を入力します。
+5. 複数のモジュールがAndroidアプリに含まれている場合、**Module**の空欄に正確なモジュールを入力します。  
    ![](/img/module-android-settings.png)
-6. Choose the appropriate keystore file and the Service Account JSON file.  
-   適切なkeystoreファイルとService Account JSONファイルを選択します。
-7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing.   
-   Version Historyページに戻り、公開したいバージョンを選択します。アプリに複数のフレーバーがある場合、正しいフレーバーをフィルターにかけることができるので、それを選択します。  
+6. 適切なkeystoreファイルとService Account JSONファイルを選択します。
+7. **Version History**ページに戻り、公開したいバージョンを選択します。アプリに複数のフレーバーがある場合、フィルターにかけて適切なフレーバーを探すことができるので、それを選択します。  
    ![](/img/flavorandroid.jpg)
-8. Fill out the **Details** page and click **Publish.  
-   Details**ページの空欄を埋めて、**Publish**をクリックします。 </div> </div>
+8. **Details**ページの空欄を埋めて、**Publish**をクリックします。 </div> </div>
 
-## Publishing status and logs  
-ステータスとログの公開
-
-Once you clicked **Publish** in Ship, the process starts according to the configured settings. You can view the status of the active publishing process on top of the **Details** page of the app.
-
-To view the logs of any publishing process, go to the **Activity** tab. From there, you can download the logs by clicking **Download Build Log** to troubleshoot any errors after a failed publish.
+## ステータスとログの公開
 
 Shipで**Publish**ボタンをクリックすると、構成済みの設定に基づいてプロセスが開始されます。アプリの**Details**ページ上部でアクティブな公開プロセスのステータスを確認できます。
 
-公開プロセスでのログを表示させるには、**Activity**タブに進みます。そこから、**Download Build Log**をクリックしてログのダウンロードを行い、失敗後にエラーをチェックすることが可能です。
+公開プロセスでログを表示させるには、**Activity**タブに進みます。そこから、**Download Build Log**をクリックしてログのダウンロードを行えるので、失敗後にエラーをチェックすることが可能です。
 
 ![](/img/downloadbuildlog.jpg)
 
-## App details　アプリの詳細
+## アプリの詳細
 
-The purpose of the app **Details** page is to update the most important information about your app, as you want that information to appear in your online store of choice, for example.
+アプリの**Details**ページは、ご自身のアプリの重要な情報のアップデートを行うことを目的としています。主な活用方法としては、その情報をオンラインストアで表示させることができます。
 
-アプリの**Details**ページは、アプリの重要な情報についてアップデートを行いのが目的です。その情報をオンラインストアで表示させたい場合などがその例です。
-
-The details include:  
 Detailsに含まれる項目は以下のとおりです：
 
-* A description of the app.
-* Screenshots and feature graphics of the app, arranged by the different supported devices.
-* Metadata such as version number, size, version code, SDK version, and so on. The exact parameters depend on the type of the app. This is automatically exported to Ship by the **Deploy to Bitrise.io** Step.
 * アプリの説明
 * 異なるサポート済みのデバイスによって配置されたアプリのスクリーンショットならびにフィーチャーグラフィック
 * バージョン番号、サイズ、バージョンコード、SDKバージョンなどのメタデータ  
-  アプリの種類によって正確なパラメータは異なります。これはDeploy to Bitrise.ioステップにより自動でShipにエクスポートされます。
+  アプリの種類によって正確なパラメータは異なります。これは**Deploy to Bitrise.io**ステップにより自動でShipにエクスポートされます。
 
-### Adding screenshots or feature graphics  
-スクリーンショットやフィーチャーグラフィックを追加する
+### スクリーンショットやフィーチャーグラフィックを追加する
 
-You can add screenshots for an app to be published. Once you added screenshots or graphics to one build version of the app, they are automatically added to all subsequent versions. If you want to display different screenshots, you can modify it, otherwise you can leave it alone.
+公開するアプリのスクリーンショットを追加することができます。アプリの1つのバージョンにスクリーンショットやフィーチャーグラフィックを一回追加すれば、その後の全てのバージョンに追加されます。異なるスクリーンショットを表示させたいのであれば、修正することも可能です。
 
-公開用にアプリのスクリーンショットを追加することができます。アプリの1つのバージョンにスクリーンショットやフィーチャーグラフィックを一回追加すると、その後のバージョン全てに追加されます。異なるスクリーンショットを表示させたいのであれば、修正することも可能です。
-
-To add screenshots or feature graphics to your app details page:  
 アプリのDetailsページへスクリーンショットとフィーチャーグラフィックを追加するには：
 
-1. Open the **Details** page in Ship of your app's chosen build version.  
-   ShipのDetailsページを開きます。
-2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.  
-   アップロードを行うスクリーンショットまたはフィーチャーグラフィックへ進みます。
+1. (アプリの選択済みビルドバージョンの) ShipのDetailsページを開きます。
+2. アップロードを行う**Screenshots**または**Feature Graphic**へ進みます。
 
    ![](/img/ship-screenshots-1.jpg)
-3. Drag and drop a file OR click **Browse files** and select the ones you wish to upload.  
-   ファイルのドラッグ&ドロップまたは**Browse files**をクリックしてアップロードを行うファイルを選択します。
-4. Once done, click **Save** in the top right corner.  
-   完了したら、右上端の**Save**をクリックします。
+3. ファイルをドラッグ&ドロップ、または**Browse files**をクリックしてアップロードを行うファイルを選択します。
+4. 完了したら、右上端の**Save**をクリックします。
 
-### Updating the app's descriptions  
-アプリの説明を更新する
+### アプリの説明文を更新する
 
-You can update the app's description, or all its other textual details in the same way. The types of text fields that you have available depend on the type of the app.  
-アプリの説明の更新や、同様に全てのテキスト編集を行う事ができます。使用可能なテキスト欄の種類は、アプリの種類によって異なります。
+アプリの説明文の更新や、同様に他の全てのテキスト編集を行う事ができます。使用可能なテキスト欄の種類は、アプリの種類によって異なります。
 
-1. Open the **Details** page in Ship of your app's chosen build version.  
-   ShipのDetailsページを開きます。
-2. Go to the field you want to edit and click in the content field.  
-   編集したい欄へ進み、コンテンツ欄をクリックします。
-3. Edit the content.  
-   コンテンツを編集します。
-4. Click **Save** in the top right of the Details tab.  
-   Detailsタブの右上にあるSaveをクリックします。
+1. Shipの**Detail**sページを開きます。
+2. 編集を行う欄へ進み、コンテンツ欄をクリックします。
+3. コンテンツを編集します。
+4. Detailsタブの右上にある**Save**をクリックします。
 
-## Notifications　通知
+## 通知
 
-Ship can send emails about three different events:  
-Shipは次の３つの異なるイベントについてメールを送信します：
+Shipは次の３つの異なるイベントの発生時にメールを送信します：
 
-* A new build version of an app is available in Ship.
-* Ship successfully published the app.
-* Ship failed to publish the app.
-* Shipで利用可能な新しいビルドバージョン
+* アプリの新規のビルドバージョンがShipで利用可能になったとき
 * Shipでアプリの公開が成功したとき
 * Shipでアプリの公開が失敗したとき
 
-These notifications can be sent to any number of different email addresses. When a new email address is added to the notifications list, Ship sends a confirmation email to the address: after confirmation, notifications should work.
+これらの通知は登録されたメールアドレス全てに送信することが可能です。新しいメールアドレスが通知リストに追加されたとき、Shipはそのアドレスに確認メールを送信します：確認後、通知が機能するようになります。
 
-これらの通知は登録されたメールアドレス全てに送信されます。新しいメールアドレスが通知リストに追加されたとき、Shipはそのアドレスに確認メールを送信します：確認後、通知が機能するようになります。
+### 新規のメールアドレスを追加する
 
-### Adding a new email address　新規のメールアドレスを追加する
+アプリの通知リストに新規のメールアドレスを追加するには：
 
-To add a new email address to the notification list for an app:  
-アプリの通知を受け取るのに、新規のメールアドレスを追加するには：
-
-1. Open your app's Ship page.  
-   アプリのShipページを開きます。
-2. Click **Settings.  
-   Settings**をクリックします。
-3. Go to the **Notifications** tab.  
-   **Notifications**タブへ進みます。
-4. In the input field under **Email notifications**, type the email address.
-
-   **Email notifications**の下にあるAdd Newのインプット欄にメールアドレスを入力します。
+1. アプリのShipページを開きます。
+2. **Settings**をクリックします。
+3. **Notifications**タブへ進みます。
+4. **Email notifications**の下にあるAdd Newのインプット欄にメールアドレスを入力します。
 
    ![](/img/ship-notifications.jpg)
-5. Click **Add**.  
-   **Add**をクリックします。
+5. **Add**をクリックします。
 
-The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications.  
-これで、リストの最後尾にメールアドレスが表示 (ステータス：Pending (保留)) されます。メールが追加されたアドレスに届きます：受取人はConfirm Notificationsをクリックすれば、通知を受け取ることができるようになります。
+これを行うことにより、リストの最後尾に追加されたメールアドレスが表示 (ステータス：**Pending** (保留)) されます。その後メールが追加されたアドレスの受信ボックスに届きます：受取人は**Confirm Notifications**をクリックして、通知の受け取りを許可してください。
 
-### Configuring notifications　通知を設定する
+### 通知を設定する
 
-You can pick and choose the Ship events about which you want to notify different people. For example, it's possible to only send notifications about a failed publishing event if you do not want to be bothered when things go well! And of course you can send different notifications to different email addresses.
+通知の受取人をイベント別に分けることが可能です。例えば、 (問題が一定期間生じていない場合) 公開失敗の通知のみ有効化して、不要な成功通知を無効化することができます。さらに、異なる種類のイベント発生通知を、異なるメールアドレスにグループ化して送信することもできます。
 
-通知を受け取る人をイベント別に分けることが可能です。例えば、公開失敗の通知のみ有効化して、 (問題が一定期間生じていない場合) 不要な成功通知を無効化することができます。さらに、異なる種類のイベント通知を、異なるメールアドレスにグループ化して送信することもできます。
-
-To configure notifications:  
 通知の設定方法：
 
-1. Open your app's Ship page.  
-   アプリのShipページを開きます。
-2. Click **Settings.  
-   Settings**をクリックします。
-3. Go to the **Notifications** tab.  
-   Notifications タブへ進みます。
-4. Use the toggles under the different event types.  
-   イベントタイプの下にあるトグルを使用します。
-5. Hit **Save** once all notifications are set.  
-   全ての通知設定が完了したら、Saveをクリックします。
+1. アプリのShipページを開きます。
+2. **Settings**をクリックします。
+3. Notifications タブへ進みます。
+4. イベントタイプの下にあるトグルを使用します。
+5. 全ての通知設定が完了したら、**Save**をクリックします。
