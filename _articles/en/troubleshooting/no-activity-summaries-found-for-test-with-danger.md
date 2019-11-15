@@ -12,7 +12,6 @@ summary: Xcov, by default, for the results bundle in its default location, not a
 menu:
   troubleshooting-main:
     weight: 19
-published: false
 
 ---
 ## The issue

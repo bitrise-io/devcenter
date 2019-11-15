@@ -28,8 +28,8 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- _articles/jp/troubleshooting/no-activity-summaries-found-for-test.md
 - _articles/en/troubleshooting/no-activity-summaries-found-for-test-with-danger.md
+- _articles/jp/troubleshooting/no-activity-summaries-found-for-test.md
 - _articles/en/infrastructure/virtual-machines.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/ship機能を使ったデプロイ-deploying-with-ship.md
 - _articles/en/testing/running-xcode-tests.md
