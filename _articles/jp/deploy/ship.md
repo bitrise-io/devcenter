@@ -8,8 +8,6 @@ menu:
     weight: 4
 
 ---
-{% include not_translated_yet.html %}
-
 ## Ship 概要
 
 {% include message_box.html type="important" title="Ship in BETA" content="この機能はまだベータ版であることに注意してください。"%}
