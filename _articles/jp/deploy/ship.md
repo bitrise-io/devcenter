@@ -76,8 +76,8 @@ Ship にワークフローのアーティファクトを公開するには:
 
 **Settings** ページで、さまざまコード署名ファイルを選択できます。これらのファイル（iOS のプロビジョニングプロファイルと証明書、Android のキーストアファイルとサービスアカウント JSON ファイル）は通常の方法でアップロードできます。
 
-* [iOS コード署名ファイル](/code-signing/ios-code-signing/code-signing-index/).
-* [Android コード署名ファイル](/code-signing/android-code-signing/android-code-signing-index/).
+* [iOS コード署名ファイル](/code-signing/ios-code-signing/code-signing-index/)
+* [Android コード署名ファイル](/code-signing/android-code-signing/android-code-signing-index/)
 
 コード署名ファイルはオンラインストアにアプリを公開したり、テストデバイスにインストールするのに要求されます。
 
@@ -185,7 +185,7 @@ Ship で **Publish** をクリックすると、構成された設定にした�
 
 * アプリの説明文
 * さまざまなサポートデバイスによって並べられたアプリのスクリーショットとフィーチャーグラフィック
-* バーション番号やサイズ、バージョンコード、SDK バージョンなどのようなメタデータ。正確なパラメーターはアプリの種類によって異なります。これは **Deploy to Bitrise.io** ステップによって自動的にエクスポートされます。
+* バーション番号やサイズ、バージョンコード、SDK バージョンなどのようなメタデータ。正確なパラメーターはアプリの種類によって異なります。これは **Deploy to Bitrise.io** ステップによって自動的にエクスポートされます。
 
 ### スクリーンショットまたはフィーチャーグラフィックの追加
 
@@ -193,7 +193,7 @@ Ship で **Publish** をクリックすると、構成された設定にした�
 
 アプリの詳細ページにスクリーンショットやフィーチャーグラフィックを追加するには:
 
-1. 選択したビルドバージョンの **Details** ページを開きます。
+1. 選択したビルドバージョンの **Details** ページを開きます。
 2. アップロードしたい内容に応じて **Screenshots** または **Feature Graphic** に移動します。
 
    ![](/img/ship-screenshots-1.jpg)
