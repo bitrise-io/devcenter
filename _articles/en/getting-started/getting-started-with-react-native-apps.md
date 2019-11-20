@@ -149,9 +149,9 @@ If all goes well, your app will be submitted to iTunes Connect and you can distr
 
 ### Deploying your Android app to Google Play Store
 
-If you add the **Google Play Deploy** Step to your workflow (after the **Android Sign** Step), your signed APK will get uploaded to Google Play Store.
+If you add the **Deploy to Google Play** Step to your workflow (after the **Android Sign** Step), your signed APK will get uploaded to Google Play Store.
 
-Before you'd use the **Google Play Deploy** Step, make sure you have performed the following tasks:
+Before you'd use the **Deploy to Google Play** Step, make sure you have performed the following tasks:
 
 1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
@@ -160,7 +160,7 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
    * Access level: View app information.
    * Release management: Manage production releases, manage testing track releases.
    * Store presence: Edit store listing, pricing & distribution.
-5. As an optional step, you can add translations to your Store Listing. To allow the **Google Play Deploy** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
+5. As an optional step, you can add translations to your Store Listing. To allow the **Deploy to Google Play** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
 
 Now let's head back to Bitrise and finish off the deploy configuration!
 
@@ -170,7 +170,7 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Add the **Google Play Deploy** step after the **Android Sign** step in your deploy workflow.
+3. Add the **Deploy to Google Play** step after the **Android Sign** step in your deploy workflow.
 4. Fill out the required input fields as follows:
    * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the Env Var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * **Package name**: the package name of your Android app

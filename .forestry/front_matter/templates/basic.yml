@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
@@ -105,7 +106,6 @@ pages:
 - _articles/en/steps-and-workflows/adding-removing-steps.md
 - _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
 - _articles/jp/getting-started/bitriseへのサインアップ.md
-- _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
 - _articles/en/builds/caching/caching-homebrew-installers.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
