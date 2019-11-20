@@ -1,43 +1,48 @@
 ---
-tag:
-- gradle
-- android
-title: 'Generating and deploying Android app bundles '
+tag: []
+title: Android App Bundleの生成とデプロイ (Generating and deploying Android app bundles)
 redirect_from: []
-summary: You can compile an Android App Bundle with our Android Build and Gradle Runner
-  Steps, easily get it signed with the Android Sign Step and deployed with Google
-  Play Deploy Step.
-menu:
-  android-deploy:
-    weight: 5
+summary: ''
+published: false
 
 ---
 Creating an Android App Bundle with Bitrise is almost the same as generating an APK. All you have to do is tweaking a few Step inputs to compile an Android App Bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store.
 
-{% include message_box.html type="warning" title="Step versions supporting bundle creation" content=" The following Steps must be of the indicated version or newer - older versions of the Steps do NOT support bundle creation.
+Bitriseを使ってAndroid App Bundleを作成する過程は、APKを生成するのとほぼ同じです。ステップのインプットを微調整して自分のコードからAndroid App Bundle (.aab) ファイルをコンパイルします。そしてBundleに署名させてGoogle Play Storeへデプロイさせます。
 
-* Android Build 0.10.0 or newer
-* Gradle Runner 1.9.0 or newer
-* Android Sign 1.3.0 or newer
-* Deploy to Google Play 1.6.0 or newer"%}
+{% include message_box.html type="warning" title="Step versions supporting bundle creation　Bundle作成でサポートしているステップバージョン" content=" The following Steps must be of the indicated version or newer - older versions of the Steps do NOT support bundle creation.　以下のステップでは、表示されているバージョンもしくはそれより新しいバージョンにしておく必要があります。古いバージョンはBundleの作成をサポートしていません。
 
-## Generating an Android App Bundle
+* Android Build 0.10.0 以上
+* Gradle Runner 1.9.0 以上
+* Android Sign 1.3.0 以上
+* Deploy to Google Play 1.6.0 以上"%}
+
+## Generating an Android App Bundle　Android App Bundleの生成
 
 You can create an Android App Bundle with either the **Gradle Runner** Step or with the **Android Build** Step.
 
-### Gradle Runner Step
+**Gradle Runner**ステップまたは**Android Build**ステップのいずれかを使用してAndroid App Bundleを作成することができます。
+
+### Gradle Runner Step　Gradle Runnerステップ
 
 Once the Bitrise project scanner detects your code as an Android app, it kicks off your first build right away! Select the workflow you use for deployment in your Workflow Editor.
 
-1. Insert the **Gradle Runner** Step after the **Android Unit Test** and **Android Lint** Steps in your Workflow (if the build Step is not already there).
-2. Click the **Config** section of **Gradle Runner**.
-3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
+BitriseのプロジェクトスキャナがコードよりAndroidアプリであると検知すると、すぐに最初のビルドが開始されます！Workflow Editorよりデプロイに使用するワークフローを選択します。
+
+1. Insert the **Gradle Runner** Step after the **Android Unit Test** and **Android Lint** Steps in your Workflow (if the build Step is not already there).  
+   (ビルドのステップがまだない場合) ワークフローの**Android Unit Test**と**Android Lint**ステップの後に**Gradle Runner**ステップを挿入します。
+2. Click the **Config** section of **Gradle Runner**.  
+   **Gradle Runner**の**Config**セクションをクリックします。
+3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.  
+   Gradle task to runのインプット欄に、例えば`bundleRelease`または`bundleDebug`をセットしてプロジェクト用のBundleを作成します。
 
    ![](/img/bundlerelease.jpg)
 
 This way the Step will generate an Android App Bundle instead of an APK.
 
 If you wish to generate an Android App Bundle and an APK in one workflow, you can specify an additional task in the **Gradle task to run** input field:
+
+この方法により
 
 ![](/img/assemble-bundle-gradle-runner.jpg)
 
@@ -73,35 +78,21 @@ If you have uploaded your keystore file and filled out the required credentials,
 
 If you want to check the bundle prior to app store distribution, you can add the **Deploy to bitrise.io** Step after the **Gradle Runner / Android Build** Steps. It uploads the bundle into the [ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of your Build’s page.
 
-Before you'd use the **Deploy to Google Play** Step, make sure you have performed the following tasks:
+Before you start, make sure you are in sync with Google Play Store! Learn how to:
 
-1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
-2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
-3. [Set up API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started): Please note when you create your service account on the Google Developer Console, you have to choose `json` as **Key Type**.
-4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings**, then **Users & permissions**, then **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
-   * Access level: View app information.
-   * Release management: Manage production releases, manage testing track releases.
-   * Store presence: Edit store listing, pricing & distribution.
-5. As an optional step, you can add translations to your Store Listing. To allow the **Deploy to Google Play** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
-
-Now let's head back to Bitrise and finish off the deploy configuration!
+* [Register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project).
+* Set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
 
 1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Add the **Deploy to Google Play** Step AFTER the **Android** **Sign** Step in your Workflow.
+3. Add the **Google Play Deploy** Step AFTER the **Android** **Sign** Step in your Workflow.
 4. Fill out the required input fields as follows:
    * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the env var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * **Package name**: the package name of your Android App Bundle.
-   * **App file path:**  automatically gets filled out with the APK or App Bundle file path.
+   * **App file path:**  automatically filled out.
    * **Track**: the track where you want to deploy your Android App Bundle (alpha/beta/rollout/production).
 5. [Start a build]().
 
 Now you should be able to distribute and customize your Android App Bundle in Google Play Store.
-
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's deploy your Android app bundles!</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
