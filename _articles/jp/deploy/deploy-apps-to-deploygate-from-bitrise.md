@@ -6,60 +6,58 @@ menu:
     title: Deploying apps to DeployGate
 
 ---
-{% include not_translated_yet.html %}
+# DeployGate とは何ですか？
 
-# What is DeployGate?
-
-[**DeployGate**](https://deploygate.com?locale=en) is a mobile app distribution platform for iOS and Android, delivering your in-development iOS/Android apps to your dev team, members, employees, QA testing team in your organization or testers outside of your company.
+[**DeployGate**](https://deploygate.com?locale=ja) は iOS と Android 用のモバイルアプリを配布するプラットフォームです。開発中の iOS / Android アプリを組織内の開発チームやメンバー、社員、QA チーム、社外のテスターに配布します。
 
 
-DeployGate has many features to accelerate your app development cycle including QA testing and app improvement with beta tester's feedbacks.
+DeployGate には、QAテストやベータテスターのフィードバックでアプリを改善するなど、アプリの開発サイクルを加速するための多くの機能があります。
 
-Features:
-* Real-time App distribution with automatic version control, even without requiring accounts for testers
-* Flexible user account management with granular access control
-* Git-like multi-track distribution allows individual version/user/device management for the same app
+機能:
+* テスター用のアカウントなしでも自動バージョン管理でリアルタイムアプリ配信
+* きめ細やかなアクセスコントロールで柔軟なユーザーアカウント管理
+* Git のようなマルチトラック配布により、同一アプリで個別のバージョン/ユーザー/デバイス管理が可能
 
 
-With DeployGate and Bitrise, you can quickly build a fully automated in-house dogfooding environment for your team. To see more details, please visit [DeployGate Features](https://deploygate.com/features?locale=en).
+DeployGate と Bitrise を使うと、チーム用に完全に自動化された組織内ドックフーディング環境をすばやく構築できます。詳しくは [DeployGate の機能](https://deploygate.com/features?locale=ja) をご覧ください。
 
 ![Automated app distribution workflow](/img/tutorials/deploy/deploygate/flow.png)
 
-# Upload your app to DeployGate via Bitrise
+# Bitrise 経由で DeployGate にアプリをアップロードする
 
-To upload your app to DeployGate, add `DeployGate Upload` step to your bitrise workflow.
+DeployGate にアプリをアップロードするには、Bitrise のワークフローに `DeployGate Upload` ステップを追加してください。
 
 ![DeployGate Workflow Step](/img/tutorials/deploy/deploygate/step.png)
 
-This step should be added after the app build process to have built binary app file before uploading.
-You need to set several required params as below:
+アップロード前にアプリのバイナリファイルをビルドするため、このステップはアプリのビルドプロセスのあとに追加する必要があります。
+以下のとおりいくつかの必須パラメーターを設定する必要があります。
 
-| Input Variables | Description |
+| 入力変数 | 説明 |
 |-|-|
-|API Key| Set upload user's DeployGate API Key from [Account Settings](https://deploygate.com/settings). <br>If you want to upload apps as organization account, please use organization's API Key. Upload account will be shown on the activity timeline.|
-|Owner Name|App owner's account name in DeployGate. <br> You can use username or organization name. |
-|App file path| App's binary file (IPA/APK) to be uploaded.<br>For default setting, use `$BITRISE_APK_PATH` for Android or `$BITRISE_IPA_PATH` for iOS|
-|App Visibility| You can list your app name and icon on your DeployGate profile page. This variable effects in just for visibility, not for allowing download or install by anonymous. |
+|API Key| [アカウント設定](https://deploygate.com/settings) から アップロードユーザーの DeployGate API キーを設定します。 <br>もしグループのアカウントでアプリをアップロードしたいならグループの API キーを使ってください。アップロードアカウントはアクティビティのタイムラインに表示されます。|
+|Owner Name|DeployGate でのアプリの所有者名。<br> ユーザー名かグループ名を使用できます。 |
+|App file path| アップロードするアプリのバイナリファイル（IPA / APK）。<br>デフォルト設定では、Android 用の `$BITRISE_APK_PATH` または iOS 用の `$BITRISE_IPA_PATH` を使います。 |
+|App Visibility| DeployGate のプロフィールページでアプリ名とアイコンを公開します。この変数は単に可視性に影響するだけで、匿名ユーザーによるダウンロードやインストールの許可ではありません。 |
 
-You can also set optional variables for using advanced features as below:
+以下のとおりアドバンス機能用のオプション設定もできます。
 
-| Input Variables | Description |
+| 入力変数 | 説明 |
 |-|-|
-|Short Message|Summary of update shown on DeployGate.<br>You can use `$GIT_CLONE_COMMIT_MESSAGE_SUBJECT` if you want to use the same message as git commit|
-|Distribution Key|You can make multiple public install links (we called it **`Distribution Page`**) for a different version of app binary in the same app. <br>By specifying the distribution page's hash, that distribution page will be updated simultaneously. The "xxxx" portion of the distributed page's URL like https://deploygate.com/distributions/xxxx|
-|Distribution Name|Specify the name of the updated distribution page. If nothing exists, a new distribution page will be created. Possible usage includes creating distribution pages for each Git branch name. (for example `$BITRISE_GIT_BRANCH`)|
-|Release Note|Message for the new release in distribution page. This message will be notified to your distribution page's testers|
-|Disable Notify(iOS Only)|There is no DeployGate client app in iOS platform. By default, we use email notifications for release updates. If you don't need email notification, please set this option as `true`|
+|Short Message|DeployGate で表示するアップデートの概要。<br>git commit と同じメッセージを使いたい場合は `$GIT_CLONE_COMMIT_MESSAGE_SUBJECT` を使います。|
+|Distribution Key|同一アプリのさまざまなバージョン用のパブリックインストールページを複数作成できます（**`配布ページ`** と呼びます）。<br>配布ページのハッシュを指定することにより、アップロードと同時に配布ページが更新されます。https://deploygate.com/distributions/xxxx のように配布されたページの "xxxx" 部分です。|
+|Distribution Name|更新する配布ページの名前を指定します。もし存在しなければ、新しい配布ページが作成されます。Git ブランチ名ごとに配布ページを作成することもできます。（例: `$BITRISE_GIT_BRANCH`）|
+|Release Note|配布ページの新しいリリース用のメッセージ。このメッセージは配布ページのテスターに通知されます。|
+|Disable Notify（iOS のみ）|iOS プラットフォームには DeployGate クライアントアプリがありません。デフォルトでは、リリース更新をメールで通知します。もしメールでの通知が必要なければ、このオプションを `true` に設定してください。|
 
 
-{% include message_box.html type="info" title="More info on DeployGate " content=" These options are based on [**DeloyGate API**](https://docs.deploygate.com/reference). For more details, please read the references at [DeployGate.com](https://deploygate.com?locale=en).
+{% include message_box.html type="info" title="DeployGate の詳細 " content=" これらのオプションは [**DeloyGate API**](https://docs.deploygate.com/reference) に基づいています。詳しくは [DeployGate.com](https://deploygate.com?locale=ja) のリファレンスを参照してください。
 "%}
 
-# How `Distribution Page` works?
+# `配布ページ` はどのような仕組みですか？
 
 ![Distribution Page](/img/tutorials/deploy/deploygate/distribution_page.png)
 
-**Distribution Page** (Shareable link) is a feature to generate a landing page for the app installation of your app's specific version. When you upload an app to DeployGate, the system automatically assigns a sequential number (we are calling it **`Revision Number`**) for each uploaded build. On Distribution Page, you can choose specific revision of app to distribute for each group of testers.
-This feature is handy for distributing your app to multiple tester groups for different purposes such as QAs, Dog Fooding, or Test Marketing.
+**配布ページ** （共有可能なリンク）は特定バージョンのアプリインストール用のランディングページを作成する機能です。アプリを DeployGate にアップロードすると、アップロードされた各ビルドにシステムが自動的に連番を割り当てます（**`リビジョン番号`** と呼びます）。配布ページで、アプリの特定のリビジョンを選択してテスターの各グループに配布することができます。
+この機能は、QA、ドッグフーディング、テストマーケティングなど、さまざまな目的でアプリを複数のテスターグループに配布する場合に便利です。
 
-You can also generate a distribution page when you upload an app from Bitrise with DeployGate Upload step. Please refer to the optional variables above.
+DeployGate Upload ステップで Bitrise からアプリをアップロードするときには配布ベージを作成することもできます。上記のオプションを参照してください。
