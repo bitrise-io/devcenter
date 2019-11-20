@@ -73,7 +73,7 @@ If you have uploaded your keystore file and filled out the required credentials,
 
 If you want to check the bundle prior to app store distribution, you can add the **Deploy to bitrise.io** Step after the **Gradle Runner / Android Build** Steps. It uploads the bundle into the [ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of your Build’s page.
 
-Before you'd use the **Google Play Deploy** Step, make sure you have performed the following tasks:
+Before you'd use the **Deploy to Google Play** Step, make sure you have performed the following tasks:
 
 1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
@@ -82,7 +82,7 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
    * Access level: View app information.
    * Release management: Manage production releases, manage testing track releases.
    * Store presence: Edit store listing, pricing & distribution.
-5. As an optional step, you can add translations to your Store Listing. To allow the **Google Play Deploy** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
+5. As an optional step, you can add translations to your Store Listing. To allow the **Deploy to Google Play** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
 
 Now let's head back to Bitrise and finish off the deploy configuration!
 
@@ -90,18 +90,18 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 2. Copy the env key which stores your uploaded file’s url.
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Add the **Google Play Deploy** Step AFTER the **Android** **Sign** Step in your Workflow.
+3. Add the **Deploy to Google Play** Step AFTER the **Android** **Sign** Step in your Workflow.
 4. Fill out the required input fields as follows:
    * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the env var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
    * **Package name**: the package name of your Android App Bundle.
-   * **App file path:**  automatically filled out.
+   * **App file path:**  automatically gets filled out with the APK or App Bundle file path.
    * **Track**: the track where you want to deploy your Android App Bundle (alpha/beta/rollout/production).
 5. [Start a build]().
 
 Now you should be able to distribute and customize your Android App Bundle in Google Play Store.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's deploy your Android app bundles!</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's deploy your Android app bundles!</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
