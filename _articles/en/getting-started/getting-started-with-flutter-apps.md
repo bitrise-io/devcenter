@@ -162,7 +162,7 @@ First, you will need to [create a keystore file](https://flutter.io/docs/deploym
 
 Once that is done, you are ready to configure a Workflow to deploy the app.
 
-Before you'd use the **Google Play Deploy** Step, make sure you have performed the following tasks:
+Before you'd use the **Deploy to Google Play** Step, make sure you have performed the following tasks:
 
 1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
@@ -171,20 +171,22 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
    * Access level: View app information.
    * Release management: Manage production releases, manage testing track releases.
    * Store presence: Edit store listing, pricing & distribution.
-5. As an optional step, you can add translations to your Store Listing. To allow the **Google Play Deploy** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
+5. As an optional step, you can add translations to your Store Listing. To allow the **Deploy to Google Play** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
 
 Now let's head back to [Bitrise](https://app.bitrise.io/dashboard) and finish off the deploy configuration of your Android app! You can deploy an APK or an App Bundle by building the right output type with the **Flutter Build** Step.
-1. In your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds), go to the **Code Signing** tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
-2. Copy the env key which stores your uploaded file’s url. For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Make sure you have the **Android Sign** Step in your Workflow.
-It should be after the **Flutter Build** Step.
-4. Open the **Flutter Build** Step and check the **Platform** input of the Step: make sure it's set to either `android` or `both`.
-5. Find the **Android Platform Configs** input group.
-6. Make sure the **Additional parameters** input has the value `--release`.
-7. In the **Android output artifact type** input field, select either `APK` or `appbundle` depending on your deployment requirements.
-8. Provide the path from which you want to copy the generated APK or App Bundle to get deployed by the **Google Play Deploy** Step.
-9. Make sure you have the **Google Play Deploy** Step after the **Android Sign** Step to your Workflow.
+
+ 1. In your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds), go to the **Code Signing** tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
+ 2. Copy the env key which stores your uploaded file’s url. For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+ 3. Make sure you have the **Android Sign** Step in your Workflow.
+    It should be after the **Flutter Build** Step.
+ 4. Open the **Flutter Build** Step and check the **Platform** input of the Step: make sure it's set to either `android` or `both`.
+ 5. Find the **Android Platform Configs** input group.
+ 6. Make sure the **Additional parameters** input has the value `--release`.
+ 7. In the **Android output artifact type** input field, select either `APK` or `appbundle` depending on your deployment requirements.
+ 8. Provide the path from which you want to copy the generated APK or App Bundle to get deployed by the **Deploy to Google Play** Step.
+ 9. Make sure you have the **Deploy to Google Play** Step after the **Android Sign** Step to your Workflow.
 10. Fill out the required input fields as follows:
+
 * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the Env Var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 * **Package name**: the package name of your Android app
 * **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
