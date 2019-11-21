@@ -1,9 +1,9 @@
 ---
-title: Deploy apps to DeployGate from Bitrise
+title: Bitrise から DeployGate へアプリをデプロイする
 menu:
   deploy-main:
     weight: 12
-    title: Deploying apps to DeployGate
+    title: DeployGate へアプリのデプロイ
 
 ---
 # DeployGate とは何ですか？
