@@ -30,7 +30,7 @@ You can also generate code coverage files, and export the test results as a comp
 
 The default input values of the **Xcode Test for iOS** Step could work if your tests are written correctly. However, we recommend making sure that all the inputs have the value you want so the Step can do what you need!
 
-{% include message_box.html type="warning" title="Exporting the generated result" content="The **Xcode Test for iOS** Step generates an .xcresult bundle and exports it to a location set in the Env Var `$BITRISE_XCRESULT_PATH`. 
+{% include message_box.html type="warning" title="Exporting the generated result" content="The **Xcode Test for iOS** Step generates an .xcresult bundle and exports it to a location set in the Env Var `$BITRISE_XCRESULT_PATH`.
 
 Be aware that some tools, like xcov, will look for the results bundle in its default location, not at  `$BITRISE_XCRESULT_PATH`. Because of this your build will fail when using those tools. You need to configure them to look for the bundle in the location set by the Env Var. Here’s an example xcov setup:
 
@@ -41,7 +41,7 @@ Be aware that some tools, like xcov, will look for the results bundle in its def
       include_targets: 'Example.app,ExampleShared.framework,ExampleWidget.appex'
     )
 
- "%}
+"%}
 
 Check the following required inputs of the **Xcode Test for iOS** Step before running a build. These inputs determine the sort of tests the Step will run.
 
@@ -72,4 +72,4 @@ By default, the **Xcode Test for iOS** Step does not export artifacts of the UIT
 
 You can check your test artifacts on the [**Test Reports**](/testing/test-reports/) page, along all additional results.
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's run Xcode tests on Bitrise</div> <a target="_blank" href="[https://app.bitrise.io/dashboard/builds](https://app.bitrise.io/dashboard/builds "https://app.bitrise.io/dashboard/builds")"><button class="button">Go to your app</button></a> </div>
+<div class="banner"><img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's run Xcode tests on Bitrise</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a></div>
