@@ -8,7 +8,6 @@ menu:
     weight: 20
 
 ---
-
 {% include not_translated_yet.html %}
 
 ## The issue

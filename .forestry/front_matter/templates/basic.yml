@@ -29,8 +29,13 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
-- _articles/en/testing/running-xcode-tests.md
+- _articles/en/infrastructure/customisable-enterprise-build-platforms.md
+- _articles/jp/infrastructure/customisable-enterprise-build-platforms.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/ビルドトリガーが動かない-build-trigger-does-not-work.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/workflow-editorがロードしない-workflow-editor-doesn-t-load.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/アプリへのbitrise-support-userを有効化する-enabling-bitrise-support-user-for-your-app.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
+- _articles/en/testing/running-xcode-tests.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/android-app-bundleの生成とデプロイ-generating-and-deploying-android-app-bundles.md
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
