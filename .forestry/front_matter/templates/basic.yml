@@ -28,10 +28,10 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- deploy.md
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/android-app-bundleの生成とデプロイ-generating-and-deploying-android-app-bundles.md
-- deploy.md
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
