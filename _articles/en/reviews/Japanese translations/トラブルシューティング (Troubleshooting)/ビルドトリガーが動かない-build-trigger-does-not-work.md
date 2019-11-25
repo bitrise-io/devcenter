@@ -8,7 +8,7 @@ published: false
 ---
 Unfortunately, it can happen that your build triggers do not trigger a build automatically on Bitrise. There are many potential issues that can stop your builds - let's take a look!
 
-残念ながら、Bitrise上でご自身のビルドトリガーが自動的にビルドのトリガーを行わない現象が発生します。
+Bitrise上でご自身のビルドトリガーが自動的にビルドのトリガーを行わない現象が発生しまう場合も残念ながらございます。ビルドがストップしてしまう潜在的な理由が多数発見されているので、見ていきましょう！
 
 1. Check your webhooks.
 
@@ -18,13 +18,15 @@ Unfortunately, it can happen that your build triggers do not trigger a build aut
 
    Check in your repository's settings if there are any error messages regarding the delivery attempts related to your webhook.
 
-   For more information about potential issues with webhooks, check out [Webhook troubleshooting](/webhooks/troubleshooting)
+   For more information about potential issues with webhooks, check out [Webhook troubleshooting](/jp/webhooks/troubleshooting)
 
-   Webhookを確認します。
+   Webhookをチェックします。
 
-   Webhookを正確に設定しているか確認します。アプリの`Code`タブよりレポジトリのホスティングプロバイダ用のWebhook URLを見つけることができます。レポジトリのSettingsを確認して、合致しているかどうかをチェックしてください。
+   Webhookを正確に設定しているか確認してください。アプリの`Code`タブよりレポジトリのホスティングプロバイダ用のWebhook URLを見つけることができます。レポジトリのSettingsを確認して、合致しているかどうかをチェックしてください。
 
    また、ビルドをトリガーしたい特定のイベントを有効化する必要があります。例えば、GitLabでレポジトリがホストされていて、Git Tagsを使ってビルドをトリガーするには、GitLab webhook内のTag Pushイベントを有効化してください。
+
+   Webhookに関連するデリバリの試みに関したエラーメッセージがあるかどうかレポジトリのSettingsを確認してください。Webhookに関する問題については[Webhookトラブルシューティング](/jp/webhooks/troubleshooting)を参照してください。
 2. Check the branch names and tags you set up with the trigger on bitrise.io.
 
    For example, if you accidentally typed `msater` instead of `master`, no build will be triggered.  
