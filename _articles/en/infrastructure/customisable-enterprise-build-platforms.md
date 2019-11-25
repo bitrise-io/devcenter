@@ -3,14 +3,13 @@ tag:
 - infrastructure
 - stack
 - VPN
-title: Customisable enterprise build platforms
+title: Customizable enterprise build platforms
 redirect_from: []
 summary: Using a custom enterprise build platform means running your Bitrise builds
   on virtual machines (VM) dedicated and specifically configured to your needs.
 menu:
   infrastructure-main:
     weight: 8
-    title: Customizable enterprise build platforms
 
 ---
 Using a custom enterprise build platform means running your Bitrise builds on virtual machines (VM) dedicated and specifically configured to your needs. With a private cloud, you have complete control over how and when your builds run.
