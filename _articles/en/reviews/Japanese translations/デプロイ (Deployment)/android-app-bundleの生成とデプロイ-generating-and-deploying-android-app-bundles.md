@@ -6,93 +6,81 @@ summary: ''
 published: false
 
 ---
-Creating an Android App Bundle with Bitrise is almost the same as generating an APK. All you have to do is tweaking a few Step inputs to compile an Android App Bundle (.aab) file from your code, then get the bundle signed and deployed to Google Play Store.
+Bitriseを使ってAndroid App Bundleを作成するのは、APKを生成するのとほぼ同じ要領でできます。ステップのインプットを微調整して自分のコードからAndroid App Bundle (.aab) ファイルをコンパイルすると、Bundleに署名させてGoogle Play Storeへデプロイさせます。
 
-Bitriseを使ってAndroid App Bundleを作成する過程は、APKを生成するのとほぼ同じです。ステップのインプットを微調整して自分のコードからAndroid App Bundle (.aab) ファイルをコンパイルします。そしてBundleに署名させてGoogle Play Storeへデプロイさせます。
-
-{% include message_box.html type="warning" title="Step versions supporting bundle creation　Bundle作成でサポートしているステップバージョン" content=" The following Steps must be of the indicated version or newer - older versions of the Steps do NOT support bundle creation.　以下のステップでは、表示されているバージョンもしくはそれより新しいバージョンにしておく必要があります。古いバージョンはBundleの作成をサポートしていません。
+{% include message_box.html type="warning" title="バンドルの作成でサポートしているステップバージョン" content=" 以下の各ステップでは、表示されているバージョンもしくはそれより新しいバージョンにしておく必要があります。古いバージョンはバンドルの作成をサポートしていません。
 
 * Android Build 0.10.0 以上
 * Gradle Runner 1.9.0 以上
 * Android Sign 1.3.0 以上
 * Deploy to Google Play 1.6.0 以上"%}
 
-## Generating an Android App Bundle　Android App Bundleの生成
-
-You can create an Android App Bundle with either the **Gradle Runner** Step or with the **Android Build** Step.
+## Android App Bundleの生成
 
 **Gradle Runner**ステップまたは**Android Build**ステップのいずれかを使用してAndroid App Bundleを作成することができます。
 
-### Gradle Runner Step　Gradle Runnerステップ
+### Gradle Runnerステップ
 
-Once the Bitrise project scanner detects your code as an Android app, it kicks off your first build right away! Select the workflow you use for deployment in your Workflow Editor.
+BitriseのプロジェクトスキャナがコードをAndroidアプリであると検知すると、すぐに最初のビルドが開始されます！Workflow Editorよりデプロイに使用するワークフローを選択します。
 
-BitriseのプロジェクトスキャナがコードよりAndroidアプリであると検知すると、すぐに最初のビルドが開始されます！Workflow Editorよりデプロイに使用するワークフローを選択します。
-
-1. Insert the **Gradle Runner** Step after the **Android Unit Test** and **Android Lint** Steps in your Workflow (if the build Step is not already there).  
-   (ビルドのステップがまだない場合) ワークフローの**Android Unit Test**と**Android Lint**ステップの後に**Gradle Runner**ステップを挿入します。
-2. Click the **Config** section of **Gradle Runner**.  
-   **Gradle Runner**の**Config**セクションをクリックします。
-3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.  
-   Gradle task to runのインプット欄に、例えば`bundleRelease`または`bundleDebug`をセットしてプロジェクト用のBundleを作成します。
+1. (ビルドのステップがまだない場合) ワークフローの**Android Unit Test**と**Android Lint**ステップの後ろに**Gradle Runner**ステップを追加します。
+2. **Gradle Runner**の**Config**セクションをクリックします。
+3. **Gradle task to run**のインプット欄に、例えば`bundleRelease`または`bundleDebug`をセットしてプロジェクト用のバンドルを作成します。
 
    ![](/img/bundlerelease.jpg)
 
-This way the Step will generate an Android App Bundle instead of an APK.
+この方法により、ステップはAPKの代わりにAndroid App Bundleを生成するようになります。
 
-If you wish to generate an Android App Bundle and an APK in one workflow, you can specify an additional task in the **Gradle task to run** input field:
-
-この方法により
+Android App BundleとAPKを一つのワークフローで生成したい場合、**Gradle task to run**インプット欄に追加のタスクを指定することができます：
 
 ![](/img/assemble-bundle-gradle-runner.jpg)
 
-### Android Build Step
+### Android Build ステップ
 
-You can generate an Android App Bundle for your Android app with our **Android Build** Step as well:
+**Android Build**ステップを使用してAndroidアプリ用のAndroid App Bundleを生成することもできます：
 
-1. Add the **Android Build** Step after the **Android Unit Test** and **Android Lint** Steps in your Workflow (if the build Step is not already there).
-2. Provide the root directory of your Android project in the **Project Location** input field.
-3. Go to **Build type** and select `aab` as build type.
+1. (ビルドステップがまだ無い場合)ワークフローの**Android Unit Test**ステップと**Android Lint**ステップの後ろに**Android Build**ステップを追加します。
+2. **Project Location**インプット欄では、Androidプロジェクトのルートディレクトリを指定します。
+3. **Build type**へ進み、ビルド種類として`aab`を選択します。
 
    ![](/img/android-build-aab-config.jpg)
 
-If you wish to generate an APK and an Android App Bundle in one workflow, add two **Android Build** Steps after each other and configure one to build an Android App Bundle and the other to build an APK.
+APKとAndroid App Bundleを一つのワークフローで生成したい場合、それぞれ後ろに**Android Build**ステップを追加して (合計2つ)、その追加した2つのステップを構成してください。
 
-## Signing an Android App Bundle
+## Android App Bundleの署名
 
-Signing an Android App Bundle file is the same as signing an APK.
+Android App Bundleファイルの署名は、APKの署名と方法は同様です。
 
-{% include message_box.html type="important" title="Before you start, make sure" content="
+{% include message_box.html type="important" title="始める前に気をつけておくべきポイント" content="
 
-* You have uploaded your keystore file to the **Code Signing** tab of the Workflow Editor.
-* You have filled out the **Keystore password**, **Keystore alias** and the **Private key password** input fields. "%}
+* Workflow Editorの**Code Signing**タブへkeystoreファイルのアップロードは済みましたか？
+* **Keystore password**, **Keystore alias**ならびに**Private key password**のインプット欄は埋まっていますか？ "%}
 
-1. Add the **Android Sign** Step AFTER the build Step in your Workflow.
-2. Make sure the **APK file path** input field displays the same output env var as the output of the build Step you've been using.
+1. ワークフローのビルドステップの後ろに**Android Sign**ステップを追加します。
+2. 使用中であるビルドステップのアウトプットとして表示されているアウトプット環境変数と同じ値が、**APK file path**のインプット欄にも表示されているか確認します。
 
    ![](/img/android-sign-aab-apk.jpg)
 
-If you have uploaded your keystore file and filled out the required credentials, the **Android** **Sign** Step's **Keystore url**, **Keystore password**, **Keystore alias** and the **Private key password** will get populated automatically!
+keystoreファイルのアップロードや必要なクレデンシャル情報の入力が済むと、**Android Sign**ステップの**Keystore url**, **Keystore password**, **Keystore alias**, そして**Private key password**が自動的に入力されるようになります！
 
-## Deploying your Android App Bundle to Google Play Store
+## Google Play StoreへAndroid App Bundleのデプロイ
 
-If you want to check the bundle prior to app store distribution, you can add the **Deploy to bitrise.io** Step after the **Gradle Runner / Android Build** Steps. It uploads the bundle into the [ APPS & ARTIFACTS ](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of your Build’s page.
+アプリストアでの配布の前にバンドルを確認したい場合、**Gradle Runner /** **Andriod Build**ステップの後に**Deploy to Bitrise.io**ステップを追加します。このステップは、ビルドページの[APPS & ARTIFACTS](https://devcenter.bitrise.io/builds/build-artifacts-online/)タブへバンドルのアップロードを行います。
 
-Before you start, make sure you are in sync with Google Play Store! Learn how to:
+始める前に、Google Play Storeと同期済みかどうかを確認してください：
 
-* [Register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project).
-* Set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access).
+* [Google Play Storeに登録し、プロジェクトのセットアップを行ってください](https://devcenter.bitrise.io/jp/deploy/android-deploy/deploying-android-apps/)。
+* [Google Play API access](https://devcenter.bitrise.io/jp/deploy/android-deploy/deploying-android-apps/#google-play-api%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%AE%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97)を設定します。
 
-1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
-2. Copy the env key which stores your uploaded file’s url.
+1. Bitrise Dashboardにある**Code Signing**タブに進み、**GENERIC FILE STORAGE**へサービスアカウントJSONキーをアップロードします。
+2. アップロード済みファイルのURLを保管しているENVキーをコピーします。  
+   例：`BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+3. ワークフローの**Android Sign**ステップの**後ろ**に**Google Play Deploy**ステップを追加します。
+4. 以下の説明に従って、項目を埋めます：
+   * **Service Account JSON key file path**：この欄はリモートURLを受け付けるので、アップロード済みのサービスアカウントJSONキーが含まれた環境変数を入力してください。例：`$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * **Package name**：ご自身のAndroid App Bundleのパッケージ名です。
+   * **App file path**：自動的に入力されます。
+   * **Track**：ご自身のAndroid App Bundle (alpha/beta/rollout/production) をデプロイすることができるtrackです。
+5. ビルドを開始します。
 
-   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Add the **Google Play Deploy** Step AFTER the **Android** **Sign** Step in your Workflow.
-4. Fill out the required input fields as follows:
-   * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the env var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   * **Package name**: the package name of your Android App Bundle.
-   * **App file path:**  automatically filled out.
-   * **Track**: the track where you want to deploy your Android App Bundle (alpha/beta/rollout/production).
-5. [Start a build]().
-
-Now you should be able to distribute and customize your Android App Bundle in Google Play Store.
+これで、Google Play Storeでご自身のAndroid App Bundleを配布・カスタマイズすることができるようになります。

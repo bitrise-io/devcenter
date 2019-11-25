@@ -29,6 +29,9 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/testing/running-xcode-tests.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/android-app-bundleの生成とデプロイ-generating-and-deploying-android-app-bundles.md
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
@@ -36,14 +39,12 @@ pages:
 - _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
 - _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/デプロイ-deployment.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/android-app-bundleの生成とデプロイ-generating-and-deploying-android-app-bundles.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイについて-android-deployment.md
 - _articles/jp/deploy/ship.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/ship機能を使ったデプロイ-deploying-with-ship.md
 - _articles/jp/troubleshooting/no-activity-summaries-found-for-test.md
 - _articles/en/troubleshooting/no-activity-summaries-found-for-test-with-danger.md
 - _articles/en/infrastructure/virtual-machines.md
-- _articles/en/testing/running-xcode-tests.md
 - _articles/en/getting-started/index.md
 - _articles/en/deploy/ship.md
 - _articles/jp/team-management/organizations/setting-up-onelogin-saml-sso-for-bitrise.md
@@ -63,7 +64,6 @@ pages:
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/招待に関するよくある質問-invitation-faq.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/パスワードのリセット-resetting-your-password.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/トラブルシューティング-troubleshooting.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
 - _articles/en/reviews/Japanese translations/チュートリアル (Tutorials)/コミュニティによるチュートリアル-community-created-tutorials.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
 - _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
