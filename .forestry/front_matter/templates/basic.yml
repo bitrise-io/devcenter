@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/アプリへのbitrise-support-userを有効化する-enabling-bitrise-support-user-for-your-app.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
 - deploy.md
 - _articles/en/testing/running-xcode-tests.md
