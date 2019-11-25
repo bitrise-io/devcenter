@@ -3,6 +3,10 @@ tag: []
 title: Enterprise build platforms
 redirect_from: []
 summary: ''
+menu:
+  infrastructure-main:
+    weight: 9
+    title: Customizable enterprise build platforms
 
 ---
 {% include not_translated_yet.html %}
