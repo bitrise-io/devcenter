@@ -48,7 +48,7 @@ Our example organization has three virtual machines, with Xcode 11 and Xcode 10.
 
 For both the dedicated build platform and the private build platform, you can choose the hardware resources available for your VMs.
 
-### For Xcode and Visual Sutdio for Mac stacks
+### For Xcode and Visual Studio for Mac stacks
 
 Our Xcode and Visual Studio for Mac stacks run on machines provided by MacStadium. You need to select the type of Mac Pro machines you need and the number of virtual machines that will run on them.
 
