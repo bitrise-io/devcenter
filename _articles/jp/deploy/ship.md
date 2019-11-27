@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Deploying with Ship
+title: Ship でデプロイ
 redirect_from: []
 summary: ''
 menu:
@@ -10,13 +10,13 @@ menu:
 ---
 ## Ship 概要
 
-{% include message_box.html type="important" title="Ship in BETA" content="この機能はまだベータ版であることに注意してください。"%}
+{% include message_box.html type="important" title="ベータ版のShip" content="この機能はまだベータ版であることに注意してください。"%}
 
 Ship はユーザーの頭痛の種を大幅に軽減することを目的としたデプロイソリューションです。Ship を使えば、配布、バージョン履歴、すべての重要なメタデータを完全にコントロールでき、すべてを1か所で管理できます。
 
 Ship でデプロイすれば自動で再署名、アーティファクトを生成し、以前のバージョンもすべて保存します。アプリのメタデータ、すべてのマーケティングコピーとスクリーンショットもその場で編集することができ、開発者以外の人が管理できます。
 
-{% include message_box.html type="info" title="Ship language" content="現時点では、Ship は英語ロケールのみサポートしています。ほかの言語での提出はサポートしていません。"%}
+{% include message_box.html type="info" title="Ship の言語" content="現時点では、Ship は英語ロケールのみサポートしています。ほかの言語での提出はサポートしていません。"%}
 
 Ship でさまざまなことができます。
 

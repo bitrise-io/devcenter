@@ -3,7 +3,7 @@ title: Bitrise tools
 redirect_from: "/jp/tools/bitrise-tools/"
 menu:
   getting-started-main:
-    weight: 38
+    weight: 39
 
 ---
 {% include not_translated_yet.html %}
