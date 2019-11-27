@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Adding a new app from CLI
+title: Adding a new app from a CLI
 redirect_from: []
 summary: ''
 
