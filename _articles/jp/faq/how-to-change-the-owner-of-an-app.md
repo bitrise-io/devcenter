@@ -5,7 +5,6 @@ menu:
     weight: 1
 
 ---
-
 [Bitrise](https://www.bitrise.io)のアプリケーションを別のユーザーまたは組織に転送する必要がある場合があります。これは、以下の簡単な手順に従ってすぐに実行できます。:
 
 1. [bitrise.io](https://www.bitrise.io)にアプリの現在の所有者でログインします。
