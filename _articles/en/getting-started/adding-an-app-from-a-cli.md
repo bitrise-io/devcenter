@@ -40,18 +40,20 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
 
     This prompt only comes up if your local repository's remote has an SSH URL. If the remote repository has an HTTPS URL, you won't see this prompt.
 
-        Remote URL: git@github.com:example-user/example.git
-        
-         ? Select repository URL::
-           	https://github.com/example-user/example.git
-           > ssh://git@github.com:example-user/example.git
+    ```
+    Remote URL: git@github.com:example-user/example.git
+
+    ? Select repository URL::
+        https://github.com/example-user/example.git
+      > ssh://git@github.com:example-user/example.git
+    ```
  8. Register an SSH key.
 
-        Remote URL: git@github.com:example-user/example.git
-        
-        ? Select repository URL::
-            https://github.com/example-user/example.git
-          > ssh://git@github.com:example-user/example.git
+     ```
+     Specify how Bitrise will be able to access the source code: 
+     > Automatic
+       Add own SSH
+     ```
 
     You can select either the automatic registration or choose to add your own.
     * If you choose automatic, Bitrise will automatically generate a key pair. If you need to use additional private repositories or submodules, choose the I need to option when prompted and follow the instructions. If not, select the No, auto-add SSH key option: this automatically adds the public key to your repository.
