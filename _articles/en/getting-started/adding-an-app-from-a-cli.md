@@ -51,9 +51,11 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
 9. Register an SSH key.
    
    ```
-   Specify how Bitrise will be able to access the source code: 
-   > Automatic
-     Add own SSH
+   Remote URL: git@github.com:example-user/example.git
+
+   ? Select repository URL::
+       https://github.com/example-user/example.git
+     > ssh://git@github.com:example-user/example.git
    ```
    You can select either the automatic registration or choose to add your own.
 
@@ -62,3 +64,39 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
     - If you choose to add your own, you have to provide the path to the SSH key file: either enter it manually, or drag and drop the file, as that will input the path.  
 
 10. Decide what bitrise.yml file you want to upload.
+
+    ```
+    ? What bitrise.yml do you want to upload? 
+  	  > Run the scanner to generate a new bitrise.yml
+        Use the bitrise.yml found in the current directory or specify manually
+    ```
+    
+    You can either have the scanner generate one based on your project files or you can provide a file. If your repository already contains a `bitrise.yml` file, the path to it will be automatically filled in. 
+
+11. Select the branch you want to use. 
+
+    The default option is the current active branch.
+    
+    ```
+    The current branch is: master (tracking: origin master),
+
+	? Do you want to run the scanner for this branch?
+  	  > Yes
+        No
+    ```
+    
+    If you select `No`, you will be prompted to check out the branch you wish to use, and then hit Enter again so the scanner can start.
+	
+    Once the scanner is done, it will either detect your app's type or it will switch to manual configuration. Manual configuration means you have to select the type of your app (iOS, Android, React Native, Flutter, and so on) and you have to provide the path to the relevant configuration file. For example, a config.xml in the case of an Ionic app. In this guide, we'll proceed with automatic detection.
+    
+12. Select the stack you want to use.
+
+    If the scanner detects your project type, a stack will be automatically recommended but you can change it in the CLI if you want to. If you performed manual configuration as described above, you will have to choose the stack, too.
+
+13. Finish the process with setting up webhooks and code signing files.
+
+    - You can decide to skip webhook registration but it's required to automatically trigger builds on Bitrise. Read more about Webhooks in the [Webhooks](/webhooks/index/) section.
+
+    - You can upload code signing files: depending on your app's type, you will be asked if you want to upload iOS code signing files - the tool will run codesigndoc for you - and/or an Android keystore file. You can upload these files any time on the website. Read more about code signing in our [Code signing](/code-signing/code-signing-index/) section.
+
+And that's it! You are done: the URL to your new app will be printed out, and you can also view the app on your Dashboard.
