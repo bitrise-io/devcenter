@@ -112,58 +112,36 @@ Xcode / iOS Simulatorに紐づく問題の根本的な原因は限られた環�
 
 [xcodebuild hangs when a test causes EXC_BAD_ACCESS kernel exception](https://openradar.appspot.com/24222858)
 
-Note: this can happen only on specific iOS Simulators / iOS versions too, e.g. if the app only crashes on iOS 8, but not on iOS 9  
 メモ: この問題は特定のiOSシミュレータまたはiOSバージョンでのみ発生します (アプリはiOS8でのみクラッシュするが、iOS 9では発生しないときなど)。
 
-### Xcode 8 - `xcodebuild .. test` hangs at the very end of the tests
+### Xcode 8 - テストの最後に`xcodebuild .. test`がハングアップする
 
-Xcode 8 - テストの最終段階で`xcodebuild .. test`がハングする
+`xcodebuild ..`のアウトプットが何かしらパイプされる・リダイレクトされる場合、テストの最後に`xcodebuild .. test`が (テストのサマリーをプリントした後) ハングアップします。これは、`xcodebuild .. test .. | xcpretty`や`tee`もこの問題を再現するのに使用されます。
 
-`xcodebuild .. test` hangs at the end of the tests (after it printed the summary of the tests) if the output of `xcodebuild ..` is piped / redirected in any way. This means that `xcodebuild .. test .. | xcpretty` or even `tee` can be used to reproduce this issue.
-
-`xcodebuild ..`のアウトプットが何かしらパイプされる・リダイレクトされる場合、テストの最終段階で`xcodebuild .. test`が (テストのサマリーをプリントした後) ハングします。これは、`xcodebuild .. test .. | xcpretty`や`tee`までもがこの問題を再現するのに使用されます。
-
-* **Affected Xcode versions**: so far it seems to be an `Xcode 8 beta` only issue, and it was fixed in `Xcode 8 beta 4`.
-* 影響を受けるXcodeバージョン: 今のところ`Xcode 8 beta`でのみの問題で、`Xcode 8 beta 4`に固定されました。
-* Related [radar](http://openradar.appspot.com/26872644) and [xcpretty](https://github.com/supermarin/xcpretty/issues/227) issues.
+* **影響を受けるXcodeバージョン**: 今のところ`Xcode 8 beta`でのみの問題で、`Xcode 8 beta 4`に固定されました。
 * [radar](http://openradar.appspot.com/26872644)と[xcpretty](https://github.com/supermarin/xcpretty/issues/227)に関する問題
-* Workaround: use a `Script` step instead of the Xcode Test step, and copy paste the `xcodebuild` command from the hanging Xcode Test step's log, without `| xcpretty` etc. Of course, with this you won't be able to use the built in features the Xcode Test step provides, but the base `xcodebuild` command should be able to run, if the output is not redirected / piped.
-* 回避策: Xcode Test ステップを使う代わりに`Script`ステップを使用して、`| xcpretty`などを使わずに、ハングしているXcode Testステップのログから`xcodebuild`をコピペします。Xcode Testステップが提供する機能を使ってビルドを行うことはできなくなりますが、もしアウトプットがリダイレクトされない・パイプされない場合、基本となる`xcodebuild`コマンドが実行されるようになります。
+* 回避策: Xcode Test ステップを使う代わりに`Script`ステップを使用し、`| xcpretty`などを使わずにハングアップしているXcode Testステップのログから`xcodebuild`をコピペします。これによりXcode Testステップが提供する機能を使ってビルドを行うことはできなくなりますが、もしアウトプットがリダイレクトされない・パイプされない場合、基本となる`xcodebuild`コマンドが実行されるようになります。
 
-#### Every/Any Xcode command hangs
-
-全ての/何らかのXcodeコマンドがハングする
-
-This is a rare issue, caused by running a **non shared Scheme**.
+#### 全ての/何らかのXcodeコマンドがハングアップする
 
 これは非常にまれな問題であり、**未共有のスキーム**を実行していると起こります。
 
-`xcodebuild` can only work with **shared Schemes** and user schemes (auto created by Xcode.app). `xcodebuild`, unlike Xcode.app, **does not** auto create user schemes, it can only work with **shared schemes** and already existing user schemes (Xcode.app creates the user scheme when you open the project in Xcode.app **on the specific Mac machine the first time**, for schemes which are not marked as shared). If you try to run a command on a missing / non shared Scheme it usually manifests in a "scheme not found" error, but we saw projects where it resulted in `xcodebuild` hanging, instead of an error message.
+`xcodebuild`は**shared Schemes (共有済みスキーム)** とuser Schemes (ユーザースキーム; Xcode.appにより自動的に作成されます) を使用すると機能します。`xcodebuild`はXcode.appと違い、ユーザースキームを自動で**作成しない**ので、**共有済みスキーム**と既存するユーザースキーム (sharedとマークされていないスキーム用に、**指定のMacマシンで初めて**Xcode.app内のプロジェクトを開いた時に、Xcode.appはユーザースキームを作成します) を使用して機能するようになっています。不明のスキーム・未共有のスキーム上でコマンドの実行を試みる場合はたいてい"scheme not found" (スキームが見つかりません) のエラーが表示されますが、エラーメッセージが表示される代わりに、`xcodebuild`がハングアップする結果となるプロジェクトも存在します。
 
-`xcodebuild`は**共有済みスキーム**とユーザースキーム (Xcode.appにより自動的に作成されます) を使用すると機能します。`xcodebuild`はXcode.appと違い、ユーザースキームを自動で**作成しない**ので、**共有済みスキーム**と既存するユーザースキームを使用して機能するようになっています。不明のスキーム・未共有のスキーム上でコマンドの実行を試みる場合はたいてい"scheme not found" (スキームが見つかりません) エラーが表示されますが、エラーメッセージの代わりに`xcodebuild`がハングする結果となるプロジェクトも存在します。
-
-If this is the case then any `xcodebuild` command will hang, even something as simple as `xcodebuild -list`.
-
-この場合、`xcodebuild - list`のような単純なものであっても、すべての`xcodebuild`コマンドはハングするようになります。
+この場合、`xcodebuild - list`のような単純なものであっても、すべての`xcodebuild`コマンドはハングアップするようになります。
 
 ##### 解決策
 
 [スキームを共有済みとしてマークしていて、レポジトリへコミット・プッシュしたかどうか確認してください](https://devcenter.bitrise.io/jp/troubleshooting/frequent-ios-issues/#xcode-scheme-%E3%81%8C%E8%A6%8B%E3%81%A4%E3%81%8B%E3%82%89%E3%81%AA%E3%81%84%E5%95%8F%E9%A1%8C)。
 
-## Build hangs　ビルドのハングアップ
+## ビルドのハングアップ
 
-### Simulator reset　シミュレータをリセットする
+### シミュレータをリセットする
 
-As reported [here](https://github.com/bitrise-io/steps-xcode-test/issues/57#event-796203051), if you do a simulator reset during the build, e.g. with a pre-action Build Phase Script `xcrun simctl erase all`, it can cause Xcode / the Simulator to hang.
+[ここ](https://github.com/bitrise-io/steps-xcode-test/issues/57#event-796203051)で伝えられているように、ビルド中にシミュレータをリセットすると  (pre-action Build Phase Scriptの`xcrun simctl erase all`を使うと) Xcode・シミュレータがハングアップします。
 
-ここで伝えられているように、ビルド中にシミュレータをリセットすると  (pre-action Build Phase Scriptの`xcrun simctl erase all`を使うと) Xcode・シミュレータがハングアップします。
+### その他
 
-### Other その他
-
-It might also not be Xcode related, but might be caused by something in your project when it runs in an Xcode step (Xcode Test, Xcode Archive, ...). For example if you have a Run Phase Script in your Xcode project, that will run during Xcode build/test/archive, and that script hangs for some reason (e.g. it waits for a user input).
-
-こちらもXcodeに関する問題ではないかもしれませんが、Xcodeステップ (Xcode Test, Xcode Archiveなど) でプロジェクトが実行される時に何か不具合が生じる場合があります。例えば、ご自身のXcodeプロジェクト内にRun Phase Scriptがある場合、Xcodeのビルド・テスト・アーカイブ中に実行され、何らかの理由 (ユーザーインプットを待ちます) でスクリプトはハングアップします。
-
-Check out our guide on [frequent iOS issues](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/) for more information!
+こちらもXcodeに関する問題ではないかもしれませんが、Xcodeステップ (Xcode Test, Xcode Archiveなど) でプロジェクトを実行する時に何らかの不具合が生じる場合があります。例えば、ご自身のXcodeプロジェクト内にRun Phase Scriptがある場合、Xcodeのビルド・テスト・アーカイブ中に実行され、何らかの理由 (ユーザーインプットを待ちます) によりスクリプトはハングアップします。
 
 より詳しい情報は[よくあるiOS上の問題](https://devcenter.bitrise.io/jp/troubleshooting/frequent-ios-issues/)のガイドを参照してください！
