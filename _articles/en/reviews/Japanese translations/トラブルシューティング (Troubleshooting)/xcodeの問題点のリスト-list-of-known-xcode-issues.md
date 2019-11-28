@@ -96,17 +96,22 @@ Xcode / iOS Simulatorに紐づく問題の根本的な原因は限られた環�
 * または、Xcodeプロジェクトのプロジェクト構成の問題、テストのコードの問題、またはコードのマルチスレッドの問題である可能性があります。
 * 私たちはコードカバレッジレポート作成によってこの問題が発生しているかもしれないという報告を受けています。 Xcode Testステップのオプションの`Generate code coverage files?`を無効にすることができ、 コードカバレッジファイルを生成しないようにすることができます。
 
-## Segmentation fault
+## Segmentation fault (セグメンテーション違反)
 
-The error is:
+The error is:  
+エラーは以下のようになっています：
 
     clang: error: unable to execute command: Segmentation fault: 11
 
 This is usually due to Xcode version mismatch - that you use a different Xcode on your Mac than the one you use on [bitrise.io](https://www.bitrise.io). Commonly occurs with Xcode 7.2 (if you have the Xcode 7.2 stack selected on bitrise.io), if you're already on a newer version of Xcode locally on your Mac.
 
+この問題はたいてい、Xcodeバージョンの不一致 ([bitrise.io](https://www.bitrise.io)で使用しているXcodeのバージョンとMacで使用しているXcodeのバージョンが異なるとき) により生じます。一般的に、bitrise.io上ではXcode 7.2スタックを選択している一方で、Mac上では7.2以上のバージョンを使用していると、この問題が生じてしまいます。
+
 The solution is simple, just make sure that you use the same Xcode version everywhere.
 
-##  (Xcode.appの問題ではなく) Xcode Command Line Tools (`xcodebuild`)で生じる問題
+対処法は簡単です。同一のXcodeバージョンをすべての場所で使うようにしてください。
+
+## (Xcode.appの問題ではなく) Xcode Command Line Tools (`xcodebuild`)で生じる問題
 
 ### xcodebuild hangs when a test causes EXC_BAD_ACCESS kernel exception
 
@@ -117,8 +122,9 @@ The solution is simple, just make sure that you use the same Xcode version every
 Note: this can happen only on specific iOS Simulators / iOS versions too, e.g. if the app only crashes on iOS 8, but not on iOS 9  
 メモ: この問題は特定のiOSシミュレータまたはiOSバージョンでのみ発生します。例: アプリはiOS8でのみクラッシュし、iOS 9では発生しない
 
-### Xcode 8 - `xcodebuild .. test` hangs at the very end of the tests  
-Xcode 8 - 
+### Xcode 8 - `xcodebuild .. test` hangs at the very end of the tests
+
+Xcode 8 -
 
 `xcodebuild .. test` hangs at the end of the tests (after it printed the summary of the tests) if the output of `xcodebuild ..` is piped / redirected in any way. This means that `xcodebuild .. test .. | xcpretty` or even `tee` can be used to reproduce this issue.
 
