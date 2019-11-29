@@ -5,7 +5,7 @@ redirect_from: []
 summary: ''
 menu:
   tutorials-main:
-    weight: 19
+    weight: 5
 published: false
 
 ---
