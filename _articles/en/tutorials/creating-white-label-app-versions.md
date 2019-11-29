@@ -52,6 +52,6 @@ This is what the setup looks like on the **Workflows** tab.
 
 In our simple example, here is the output of the chained workflows:
 
-![](/img/white-label-logview.jpg)
+![](/img/white-label-app-logoverview.jpg)
 
 {% include message_box.html type="note" title="Parallel running workflows" content="If you add the Bitrise Start Build Step to your main workflow, it will run all your workflows parallel, whereas without the Step your workflows will run consecutively."%}
