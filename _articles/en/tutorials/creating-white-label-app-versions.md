@@ -41,15 +41,14 @@ Now that we have a bunch of workflows ready, it’s time to chain them together 
 2. Click **Add Workflow after** and select the version-specific workflow and hit **Done**.
 3. Click **Add Workflow after** again and add the utility workflow right after the version-specific workflow. Keep adding workflows depending on how many versions you’d like to build. In this guide, we’re adding 3 different types of workflows after **allcolor** where each workflow is followed by the same utility workflow.
 
-![](https://downloads.intercomcdn.com/i/o/158483772/2f4fa92ecba6e56f060f85bd/allcolorsetup.png)
+   ![](/img/add-workflow-aftercolor.png)
 
 This is what the setup looks like on the **Workflows** tab.
 
-![](https://downloads.intercomcdn.com/i/o/158480613/78a2478cba53718a8781c79e/whitelabel.jpg)
+![](/img/whitelabel-chained-workflows.jpg)
 
-4\. Go back to your Build’s page and click **Start/Schedule a build**.
-
-5\. In the Build configuration pop-up window, select your main workflow under Workflow. This will kickstart your chained workflows and build the app versions of your white label app.
+1. Go back to your Build’s page and click **Start/Schedule a build**.
+2. In the Build configuration pop-up window, select your main workflow under Workflow. This will kickstart your chained workflows and build the app versions of your white label app.
 
 In our simple example, here is the output of the chained workflows:
 
