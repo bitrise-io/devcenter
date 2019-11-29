@@ -2,7 +2,7 @@
 title: Downloading or replacing project resources
 menu:
   tutorials-main:
-    weight: 10
+    weight: 11
 
 ---
 {% include not_translated_yet.html %}

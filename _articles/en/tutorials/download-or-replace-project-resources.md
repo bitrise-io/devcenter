@@ -2,7 +2,7 @@
 title: Downloading or replacing project resources
 menu:
   tutorials-main:
-    weight: 9
+    weight: 10
 
 ---
 There are multiple ways of downloading or replacing project resources. We'll go through the following examples:

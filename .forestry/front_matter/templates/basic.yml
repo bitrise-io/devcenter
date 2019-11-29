@@ -29,6 +29,13 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/en/tutorials/creating-white-label-app-versions.md
+- _articles/en/steps-and-workflows/creating-workflows.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-cli-bitrise-cli.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/xcodeの問題点のリスト-list-of-known-xcode-issues.md
+- _articles/en/builds/build-numbering-and-app-versioning.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/dangerを使ったテストのactivity-summaryが見つからない-no-activity-summaries-found-for-test-with-danger.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/github-gitlab-bitbucketでビルドステータスが動作しない-build-status-indicator-on-github-gitlab-bitbucket-does-not-work.md
 - _articles/jp/getting-started/adding-a-new-app-from-cli.md
 - _articles/en/getting-started/adding-an-app-from-a-cli.md
 - _articles/jp/deploy/ship.md
@@ -87,7 +94,6 @@ pages:
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
 - _articles/en/builds/Scheduling-Builds.md
-- _articles/en/builds/build-numbering-and-app-versioning.md
 - _articles/en/troubleshooting/known-xcode-issues.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/detached-head状態からgit-checkoutを行うのはどうすればいいですか-how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/en/api/adding-and-managing-apps.md
@@ -260,7 +266,6 @@ pages:
 - _articles/en/steps-and-workflows/getting-started-workflows.md
 - _articles/en/infrastructure/stack-update-and-removal-policy.md
 - _articles/en/infrastructure/available-stacks.md
-- _articles/en/steps-and-workflows/creating-workflows.md
 - _articles/en/builds/triggering-builds/trigger-git-tags.md
 - _articles/en/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
 - _articles/en/faq/grant-access-to-bitbucket-team.md
