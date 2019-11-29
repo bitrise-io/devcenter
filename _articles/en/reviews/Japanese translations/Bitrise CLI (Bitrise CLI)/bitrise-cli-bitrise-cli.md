@@ -6,62 +6,45 @@ summary: ''
 published: false
 
 ---
-Bitrise is a collection of tools and services to help you with the development and automation of your software projects, with a main focus on mobile apps.
-
 Bitriseはモバイルアプリに特化した、ソフトウェアプロジェクトの開発と自動化をサポートするツールとサービスの集合体です。
 
-Most of this DevCenter describes things related to [bitrise.io](https://www.bitrise.io), the hosted automation service, but the heart of Bitrise is the [open source Bitrise CLI / runner](https://github.com/bitrise-io/bitrise), which is responsible for interpreting the build configuration and executing it.
+当DevCenterのほとんどを[bitrise.io](https://www.bitrise.io)やホスト型自動化サービスに関連した記事で占めていますが、Bitriseの心臓部分は[open source Bitrise CLI / runner](https://github.com/bitrise-io/bitrise) でありビルド構成の解釈や実行を担っています。
 
-当DevCenterには、bitrise.ioやホスト型自動化サービスに関連した記事がほとんどですが、Bitriseの心臓部分はopen source Bitrise CLI / runner でありビルド構成の解釈や実行を担っています。
+このオープンソースランナーは`Bitrise CLI`または`Bitrise`と呼ばれ、**ご自身のMac/PC上でインストールと実行が可能なツールとなっています！**
 
-This open source runner is referred to as `Bitrise CLI` or `Bitrise`, and **it's a tool which you can install and run on your own Mac/PC!**
+当セクションでは、ランナー (`Bitrise CLI`) と`bitrise.yml`の構成フォーマットについての詳しい情報が記載されています。**ここで記述されている内容では、**[**bitrise.io**](https://www.bitrise.io)**アカウントを作成する必要はありません**。唯一していただくことは、ご自身のMac/PCに`Bitrise CLI`のインストールです。
 
-このオープンソースランナーは`Bitrise CLI`または`Bitrise`として参照され、ご自身のMac/PCでインストールと実行が可能なツールとなっています！
+{% include message_box.html type="note" title="bitrise.io上でのBitrise CLI" content=" インストール可能なCLIは[bitrise.io](https://www.bitrise.io)で使用されているものと全く同じものです。[bitrise.io](https://www.bitrise.io)でビルドが開始されると、バーチャルマシンがビルド用にプリインストール済みのBitrise CLIを使用して作成されます。バーチャルマシンの準備が整うと、ビルドはBitrise CLI経由で実行されます。"%}
 
-This section of the DevCenter is dedicated to this runner (`Bitrise CLI`) and the `bitrise.yml` configuration format, **the things described here don't even require a** [**bitrise.io**](https://www.bitrise.io) **account**, the only requirement is that you install the `Bitrise CLI` on your Mac/PC.
+## Bitrise CLI -  オープンソースであり、オフラインで使用可能な、オートメーションランナー
 
-当セクションでは、ランナー (`Bitrise CLI`) と`bitrise.yml`の構成フォーマットについての詳しい情報が記載されています。ここで記述されている内容は、bitrise.ioアカウントを作成する必要はなく、ご自身のMac/PCに`Bitrise CLI`をインストールのみを行う必要があります。
+ご自身のマシンでBitriseビルドを開始するには、[open source runner](https://www.bitrise.io/cli)をインストールしてローカルでワークフローを実行する`bitrise`コマンドを使用します。ステップの開発やビルドのデバッグ、もしくは自分のマシンで様々な自動化を行うのにBitriseを使用したい時に、非常に役に立ちます。
 
-{% include message_box.html type="note" title="Bitrise CLI on bitrise.io　bitrise.io上でのBitrise CLI" content=" The CLI you can install is exactly the same as what's used on [bitrise.io](https://www.bitrise.io). When a build starts on [bitrise.io](https://www.bitrise.io), a virtual machine is created for the build with the Bitrise CLI preinstalled, and once the virtual machine is ready, the build is performed through the Bitrise CLI.
-
-インストール可能なCLIはbitrise.ioで使用されているものと全く同じものです。bitrise.ioでビルドが開始されると、バーチャルマシンがビルド用にプリインストール済みのBitrise CLIを使用して作成されます。バーチャルマシンの準備が整うと、ビルドはBitrise CLI経由で実行されます。"%}
-
-## Bitrise CLI - the open source, offline, automation runner  
-Bitrise CLI - オープンソース、オフライン、オートメーションランナー
-
-To run a Bitrise build on your machine, you can install our [open source runner](https://www.bitrise.io/cli) and use the `bitrise` command to execute your _workflows_ locally. It's a great help when you're developing steps, debugging builds, or just want to use Bitrise for _any kind of automation_ on your machine.
-
-ご自身のマシンでBitriseビルドを開始するには、open source runnerをインストールしてローカルで_ワークフロー_を実行する`bitrise`コマンドを使用します。ステップの開発やビルドのデバッグ、もしくは自分のマシンで様々な自動化を行うのにBitriseを使用する際にとても役に立ちます。
-
-## bitrise.yml - the configuration format　bitrise.yml - 構成フォーマット
+## bitrise.yml - 構成フォーマット
 
 The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`, as that's the expected file name the configuration should be saved with.
 
-`Bitrise CLI`の構成フォーマットは`bitrise.yml`と呼ばれます。これは、構成の保存が必要なファイル名です。
+`Bitrise CLI`の構成フォーマットは`bitrise.yml`と呼ばれます。この`bitrise.yml`を使用して構成が保存される必要のある、予期されるファイル名になります。
 
-_Technically the CLI can also accept the configuration in JSON format, and the file name can be changed too, but if you save the configuration into a file named_ `_bitrise.yml_`_, you can simply_ `_bitrise run_` _in that directory, without specifying any configuration path, and the CLI will read the configuration from_ `_bitrise.yml_` _automatically._
+CLIはJSONフォーマットによる構成も同様に受け付け、ファイル名を変更することもできます。しかし、ファイル名`_bitrise.yml_`へ構成を保存すれば、構成パスの指定を行わずにディレクトリで簡単に `_bitrise run_` を行うことができます。そしてCLIは自動的に `_bitrise.yml_` から構成を読み取ります。
 
-CLIはJSONフォーマットによる構成も可能で、ファイル名を変更することもできます。しかし、ファイル名???へ構成を保存すると、構成パスの指定を行わずにディレクトリで簡単に???を行うことができます。そしてCLIは自動的に???から構成を読み取ります。
+## ステップライブラリ (StepLib)
 
-## Step Library (StepLib)
+StepLibとは`bitrise.yml`内で使うことができるビルドステップの集合体です。公式のBitrise StepLibにある全てのステップはオープンソースであり、**自分で独自に書いたり**、他者と共有する事も可能です！詳しくは[step-template](https://github.com/bitrise-steplib/step-template)をご覧ください。
 
-The StepLib is the collection of the build steps you can use in your `bitrise.yml`. The steps in the official [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib) are all open source, **you can write your own** too and then share it with others! See the [step-template](https://github.com/bitrise-steplib/step-template) for more information.
+ご自身専用のStep Libraryを作成することもできますが、他者との共有を望まない場合は、ステップの`git clone`URLを使って直接参照する方法のほうがより簡単です。
 
-StepLibとは`bitrise.yml`内で使うことができるビルドステップの集合体です。公式のBitrise StepLibにある全てのステップはオープンソースで、自分で書くことも他者と共有する事もできます！詳しくはstep-templateをご覧ください。
+{% include message_box.html type="note" title="ツール内のカスタムStepLibサポート" content=" The Bitrise CLI tools can work with custom step libraries, but other tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io) might be limited in functionality for steps not available in the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
 
-You can also create your own Step Library if you want to, but it's usually easier to just reference your steps with their `git clone` URL directly if you don't want to share it with others.
-
-ご自身専用のStep Libraryを作成することもできますが、他者との共有を望まない場合は、ステップの`git clone`URLを直接参照するのがより簡単です。
-
-{% include message_box.html type="note" title="Custom StepLib support in tools　ツール内のCustom StepLibサポート" content=" The Bitrise CLI tools can work with custom step libraries, but other tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io) might be limited in functionality for steps not available in the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
-
-Bitrise CLIのツールはカスタムのStep Libraryで機能しますが、bitrise.ioのVisual Workflow Editor のような他のツールにおいては、メインのBitrise StepLibで使用不可のステップに機能しない可能性があります。"%}
+Bitrise CLIのツールはカスタムのステップライブラリでも機能しますが、[bitrise.io](https://www.bitrise.io)のVisual Workflow Editor のような他ツールは、メインの[Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)において機能が制限される可能性があります。"%}
 
 If possible, you should share your steps in the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib), to help others as well as for the extra reliability the StepLib offers.
 
-_Custom StepLibs can also provide fallbacks (alternative download URLs, caches), automatic and preiodic checks etc. to provide the best reliability, but you get all these for free if you use the main Bitrise StepLib._
+_Custom StepLibs can also provide fallbacks (alternative download URLs, caches), automatic and periodic checks etc. to provide the best reliability, but you get all these for free if you use the main Bitrise StepLib._
 
 できればメインのBitrise StepLibでステップを共有していただき、他ユーザーのみならずStepLibが提供する信頼性の向上にご協力ください。
+
+カスタムのステップライブラリでは代替物 (代わりのダウンロードURLやキャッシュ) や自動で定期的な点検の提供も行います
 
 ### Why to use the StepLib and Steps instead of ad-hoc build scripts?　ad-hoc ビルドスクリプトではなくStepLibとステップを使用するのはなぜですか？
 
