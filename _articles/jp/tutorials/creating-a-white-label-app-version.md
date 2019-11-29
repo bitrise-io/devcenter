@@ -3,6 +3,9 @@ tag: []
 title: Creating a white label app version
 redirect_from: []
 summary: ''
+menu:
+  tutorials-main:
+    weight: 5
 
 ---
 

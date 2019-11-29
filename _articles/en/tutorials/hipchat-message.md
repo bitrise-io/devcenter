@@ -2,7 +2,7 @@
 title: HipChat message with build status and details
 menu:
   tutorials-main:
-    weight: 14
+    weight: 15
 
 ---
 You can send [HipChat](https://www.hipchat.com/) messages during your build.

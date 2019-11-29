@@ -2,7 +2,7 @@
 title: Configuring and connecting to your VPN
 menu:
   tutorials-main:
-    weight: 13
+    weight: 14
 
 ---
 {% include not_translated_yet.html %}
