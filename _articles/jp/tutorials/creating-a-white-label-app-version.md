@@ -8,7 +8,6 @@ menu:
     weight: 5
 
 ---
-
 {% include not_translated_yet.html %}
 
 This guide explains how to create different versions of your white label project and build all or just one version by chaining Workflows and setting differences in [Environment Variables](/builds/env-vars-secret-env-vars/).
