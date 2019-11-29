@@ -29,13 +29,14 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
+- _articles/jp/tutorials/creating-a-white-label-app-version.md
 - _articles/en/tutorials/creating-white-label-app-versions.md
-- _articles/en/steps-and-workflows/creating-workflows.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-cli-bitrise-cli.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/xcodeの問題点のリスト-list-of-known-xcode-issues.md
-- _articles/en/builds/build-numbering-and-app-versioning.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/dangerを使ったテストのactivity-summaryが見つからない-no-activity-summaries-found-for-test-with-danger.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/github-gitlab-bitbucketでビルドステータスが動作しない-build-status-indicator-on-github-gitlab-bitbucket-does-not-work.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/dangerを使ったテストのactivity-summaryが見つからない-no-activity-summaries-found-for-test-with-danger.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/xcodeの問題点のリスト-list-of-known-xcode-issues.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-cli-bitrise-cli.md
+- _articles/en/steps-and-workflows/creating-workflows.md
+- _articles/en/builds/build-numbering-and-app-versioning.md
 - _articles/jp/getting-started/adding-a-new-app-from-cli.md
 - _articles/en/getting-started/adding-an-app-from-a-cli.md
 - _articles/jp/deploy/ship.md

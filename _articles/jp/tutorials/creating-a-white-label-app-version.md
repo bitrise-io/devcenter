@@ -1,13 +1,16 @@
 ---
 tag: []
-title: Creating white label app versions
+title: Creating a white label app version
 redirect_from: []
 summary: ''
 menu:
   tutorials-main:
-    weight: 6
+    weight: 5
 
 ---
+
+{% include not_translated_yet.html %}
+
 This guide explains how to create different versions of your white label project and build all or just one version by chaining Workflows and setting differences in [Environment Variables](/builds/env-vars-secret-env-vars/).
 
 In this article, we’re building three individual versions (red, green, white) of our white label project.
@@ -67,8 +70,4 @@ In our simple example, here is the output of the chained Workflows:
 
 {% include message_box.html type="note" title="Parallel running Workflows" content="If you add the **Bitrise Start Build** Step to your main Workflow, it will run all your Workflows [parallel](/builds/triggering-builds/trigger-multiple-workflows/), whereas without the Step your Workflows will run consecutively."%}
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Now you know everything</div>
-<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
-</div>
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Now you know everything</div> <a target="_blank" href="[https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta](https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta "https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta")"><button class="button">Go to Bitrise now</button></a> </div>
