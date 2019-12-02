@@ -9,7 +9,6 @@ summary: If you have a lot of apps, you might not want to spend time with settin
   up Workflows for each and every one of them separately, especially if there’s little
   difference between the Workflows you want to run for them. If so, the easiest thing
   to do is to simply copy an existing Workflow.
-published: false
 
 ---
 If you have a lot of apps, you might not want to spend time with setting up Workflows for each and every one of them separately, especially if there’s little difference between the Workflows you want to run for them. If so, the easiest thing to do is to simply copy an existing Workflow.
