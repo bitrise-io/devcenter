@@ -74,8 +74,11 @@ You can share this page with anyone, even if they don’t have a Bitrise account
 {% include message_box.html type="note" title="Installing the .ipa file from the Public Install Page" content=" If you visit your iOS apps' Builds page from an iOS device and meet the following requirements, you’ll see an **Install** button instead of the **Download** button. With this you can install the app on your device directly from Bitrise.
 
 * If you visit the **Public Install Page** from mobile Safari.
-* Your device is registered to your Bitrise account and added to the Provisioning Profile. Installing the .ipa file on your device might run into difficulties. Before you hit the **Download anyway** button, consider the yellow message boxes’s recommendations on potential installation issues you might have with various browsers and device types you will use after downloading the app.
-  ![](/img/install-only-available.png)
+* Your device is registered to your Bitrise account and added to the Provisioning Profile. It is also possible that your app can be installed on any device.
+![](/img/install-only-available.png)
+
+Using the Download anyway button can only result in one issue: iOS will simply not allow the .ipa to be installed. There is also a Download anyway button that you can use to download the .ipa file. Keep in mind, that iOS will not allow it to be installed, due to the reason we display on the Public Install Page.
+
   "%}
 
 ### Sending invites and notifications
