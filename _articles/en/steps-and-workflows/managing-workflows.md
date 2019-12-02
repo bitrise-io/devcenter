@@ -9,6 +9,7 @@ redirect_from: []
 menu:
   steps-workflows-main:
     weight: 17
+    title: Managing Workflows
 
 ---
 You can chain multiple workflows, rearrange the order of workflows in a chain, as well as rename workflows at any time in the Bitrise Workflow Editor.
