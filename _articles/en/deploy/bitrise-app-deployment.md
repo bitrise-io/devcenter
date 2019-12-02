@@ -77,7 +77,7 @@ You can install the .ipa file if you meet the following requirements:
 
 * If you visit the **Public Install Page** from mobile Safari.
 * Your device is registered to your Bitrise account or the downloaded app is compatible with any device type.
-	Installing the .ipa file on your device might run into difficulties. Before you hit the **Download anyway** button, consider the yellow message boxes’s recommendations on potential installation issues you might have with various browsers and device types you will use after downloading the app.
+Installing the .ipa file on your device might run into difficulties. Before you hit the **Download anyway** button, consider the yellow message boxes’s recommendations on potential installation issues you might have with various browsers and device types you will use after downloading the app.
 ![](/img/install-only-available.png)
 "%}
 
