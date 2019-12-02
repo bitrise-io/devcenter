@@ -61,17 +61,24 @@ You can access the Public install page's URL, if you head over to your generated
 
 ![](/img/public-install-page-1.png)
 
+Besides the **Public install page** link on the **APPS & ARTIFACTS** tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
+
+![](/img/app-release-unsigned.jpg)
+
 If you click **Open Public install page** link, you’ll see a basic description of the app (title, version, size, supported devices).
 
 ![](/img/oat-publicinstallpage.png)
 
-If you visit your iOS apps' Builds page from an iOS device (which you've registered for your account), you’ll see an **Install** button instead of the **Download** button. With this you can install the app on your device directly from Bitrise.
+You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store `.ipa` won't receive a Public install page as it should be uploaded to the app store directly.
 
-{% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store .ipa won't receive a Public install page as it should be uploaded to the app store directly. "%}
+{% include message_box.html type="note" title="Installing the `.ipa` file from the Public Install Page" content="If you visit your iOS apps' Builds page from an iOS device and meet the following requirements, you’ll see an **Install** button instead of the **Download** button. With this you can install the app on your device directly from Bitrise if:
 
-Now let's head back to your Build's page! Besides the **Public install page** link on the **APPS & ARTIFACTS** tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
+* You visit the **Public Install Page** from mobile Safari.
+* Your device is registered to your Bitrise account and added to the Provisioning Profile. It is also possible that your app can be installed on any device.
 
-![](/img/app-release-unsigned.jpg)
+There is also a **Download anyway** button that you can use to download the `.ipa` file. The yellow message on the page describes the situation if iOS does not allow the `.ipa` file to be installed.
+
+![](/img/install-only-available.png)"%}
 
 ### Sending invites and notifications
 

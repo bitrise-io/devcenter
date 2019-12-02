@@ -29,13 +29,18 @@ fields:
   description: Summary of the article for generating related article links
 pages:
 - deploy.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-cli-bitrise-cli.md
+- _articles/en/steps-and-workflows/default-workflows.md
+- _articles/en/steps-and-workflows/managing-workflows.md
+- _articles/en/steps-and-workflows/getting-started-workflows.md
+- _articles/jp/steps-and-workflows/copying-a-workflow-from-one-app-to-another.md
+- _articles/en/steps-and-workflows/copying-workflows-from-one-app-to-another.md
+- _articles/en/steps-and-workflows/creating-workflows.md
 - _articles/jp/tutorials/creating-a-white-label-app-version.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-cli-bitrise-cli.md
 - _articles/en/tutorials/creating-white-label-app-versions.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/github-gitlab-bitbucketでビルドステータスが動作しない-build-status-indicator-on-github-gitlab-bitbucket-does-not-work.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/dangerを使ったテストのactivity-summaryが見つからない-no-activity-summaries-found-for-test-with-danger.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/xcodeの問題点のリスト-list-of-known-xcode-issues.md
-- _articles/en/steps-and-workflows/creating-workflows.md
 - _articles/en/builds/build-numbering-and-app-versioning.md
 - _articles/jp/getting-started/adding-a-new-app-from-cli.md
 - _articles/en/getting-started/adding-an-app-from-a-cli.md
@@ -158,8 +163,6 @@ pages:
 - _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
 - _articles/en/builds/triggering-builds/trigger-map.md
 - _articles/en/tips-and-tricks/android-tips-and-tricks.md
-- _articles/en/steps-and-workflows/managing-workflows.md
-- _articles/en/steps-and-workflows/default-workflows.md
 - _articles/en/steps-and-workflows/skipping-steps.md
 - _articles/en/reviews/Japanese translations/webhooks/outgoing-webhook-の追加-adding-outgoing-webhooks.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
@@ -264,7 +267,6 @@ pages:
 - _articles/jp/tips-and-tricks/screen-recording-your-ui-tests-with-appium.md
 - _articles/jp/getting-started/getting-started-with-expo-apps.md
 - _articles/en/steps-and-workflows/step-inputs.md
-- _articles/en/steps-and-workflows/getting-started-workflows.md
 - _articles/en/infrastructure/stack-update-and-removal-policy.md
 - _articles/en/infrastructure/available-stacks.md
 - _articles/en/builds/triggering-builds/trigger-git-tags.md
