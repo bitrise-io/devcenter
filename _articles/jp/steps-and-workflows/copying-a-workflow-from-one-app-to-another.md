@@ -1,12 +1,11 @@
 ---
 tag: []
-title: Copying a workflow from one app to another
+title: Copying Workflows from one app to another
 redirect_from: []
 summary: ''
 menu:
   steps-workflows-main:
     weight: 20
-    title: Copying Workflows from one app to another
 
 ---
 {% include not_translated_yet.html %}
