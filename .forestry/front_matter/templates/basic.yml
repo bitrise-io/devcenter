@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/jp/steps-and-workflows/copying-a-workflow-from-one-app-to-another.md
 - _articles/en/steps-and-workflows/copying-workflows-from-one-app-to-another.md
 - _articles/jp/tutorials/creating-a-white-label-app-version.md
 - deploy.md
