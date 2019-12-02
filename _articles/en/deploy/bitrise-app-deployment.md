@@ -75,7 +75,7 @@ If you visit your iOS apps' Builds page from an iOS device (which you've registe
 
 {% include message_box.html type="note" title="Installing the .ipa file from the Public Install Page" content="
 
-You can install the .ipa file + install button:
+You can install the .ipa file if you meet the following requirements:
 
 * If you visit the **Public Install Page** from mobile Safari.
 * Your device is registered to your Bitrise account or the downloaded app is compatible with any device type.
