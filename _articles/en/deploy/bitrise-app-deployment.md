@@ -76,8 +76,7 @@ You can share this page with anyone, even if they don’t have a Bitrise account
 * You visit the **Public Install Page** from mobile Safari.
 * Your device is registered to your Bitrise account and added to the Provisioning Profile. It is also possible that your app can be installed on any device.
 
-There is also a **Download anyway** button that you can use to download the .ipa file. Keep in mind, that iOS will not allow it to be installed, due to the reason we display on the Public Install Page.
-![](/img/install-only-available.png)
+There is also a **Download anyway** button that you can use to download the .ipa file. The yellow message on the page describes the situation if iOS does not allow the .ipa file to be installed.  ![](/img/install-only-available.png)
 "%}
 
 ### Sending invites and notifications
