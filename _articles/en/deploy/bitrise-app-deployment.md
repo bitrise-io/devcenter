@@ -71,15 +71,14 @@ If you click **Open Public install page** link, you’ll see a basic description
 
 You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store .ipa won't receive a Public install page as it should be uploaded to the app store directly.
 
-{% include message_box.html type="note" title="Installing the .ipa file from the Public Install Page" content=" If you visit your iOS apps' Builds page from an iOS device and meet the following requirements, you’ll see an **Install** button instead of the **Download** button. With this you can install the app on your device directly from Bitrise.
+{% include message_box.html type="note" title="Installing the .ipa file from the Public Install Page" content=" If you visit your iOS apps' Builds page from an iOS device and meet the following requirements, you’ll see an **Install** button instead of the **Download** button. With this you can install the app on your device directly from Bitrise if:
 
-* If you visit the **Public Install Page** from mobile Safari.
+* You visit the **Public Install Page** from mobile Safari.
 * Your device is registered to your Bitrise account and added to the Provisioning Profile. It is also possible that your app can be installed on any device.
+
+There is also a **Download anyway** button that you can use to download the .ipa file. Keep in mind, that iOS will not allow it to be installed, due to the reason we display on the Public Install Page.
 ![](/img/install-only-available.png)
-
-Using the Download anyway button can only result in one issue: iOS will simply not allow the .ipa to be installed. There is also a Download anyway button that you can use to download the .ipa file. Keep in mind, that iOS will not allow it to be installed, due to the reason we display on the Public Install Page.
-
-  "%}
+"%}
 
 ### Sending invites and notifications
 
