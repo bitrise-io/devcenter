@@ -9,19 +9,19 @@ menu:
 
 Bitrise has an integrated app deployment system you can use for app and other build artifact file distribution.
 
-With this you can distribute your apps over the air for your app's team members or even for those who don’t have a Bitrise account. You can also use it to archive your app and other build artifact files which will be available on the app's Build page for viewing and downloading.
+With this you can distribute your apps over the air for your app’s team members or even for those who don’t have a Bitrise account. You can also use it to archive your app and other build artifact files which will be available on the app’s Builds page for viewing and downloading.
 
-Here is a short recap on the different build steps per platform. The links under `Platform` point to our Getting started tutorials if you needed more information for each platform (for example, on code signing, packaging or deploying).
+Here is a short recap on the different build steps per platform.
 
 | Platform | Build step | Deploy step to Bitrise |
 | --- | --- | --- |
-| [iOS](https://devcenter.bitrise.io/getting-started/getting-started-with-ios-apps/) | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Android](https://devcenter.bitrise.io/getting-started/getting-started-with-android-apps/) | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Xamarin](https://devcenter.bitrise.io/getting-started/getting-started-with-xamarin-apps/) | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [React Native](https://devcenter.bitrise.io/getting-started/getting-started-with-react-native-apps/) | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Ionic](https://devcenter.bitrise.io/getting-started/getting-started-with-ionic-cordova-apps/) | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [Cordova](https://devcenter.bitrise.io/getting-started/getting-started-with-ionic-cordova-apps/) | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
-| [MacOS](https://devcenter.bitrise.io/getting-started/getting-started-with-macos-apps/) | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Android | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Xamarin | Xamarin Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| React Native | Android Build and/or Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Ionic | Ionic Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
+| MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
 First let's have a look at the required and sensitive fields of the Step:
 
@@ -62,13 +62,23 @@ You can access the Public install page's URL, if you head over to your generated
 
 ![](/img/public-install-page-1.png)
 
-If you click `Open Public install page` link, you’ll see a base description of the App (title, version, size, supported devices).
+Besides the **Public install page** link on the **APPS & ARTIFACTS** tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
-![](/img/public-install-page-example.png)
+![](https://devcenter.bitrise.io/img/app-release-unsigned.jpg)
 
-If you visit your iOS Build's page from an iOS device (which you've registered for your account), you’ll see an `Install` button instead of the `Download` button. With this you **can install** the App on your device directly from Bitrise.
+If you click **Open Public install page** link, you’ll see a basic description of the App (title, version, size, supported devices).
 
-{% include message_box.html type="warning" title="Shared but can't install it?" content=" You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, **you have to add every device identifier (UDID)** to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store .ipa won't receive a Public install page as it should be uploaded to the app store directly. "%}
+![](/img/oat-publicinstallpage.png)
+
+You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store .ipa won’t receive a Public install page as it should be uploaded to the app store directly.
+
+{% include message_box.html type="note" title="Installing the `.ipa` file from the Public Install Page" content="If you visit your iOS apps’ Builds page from an iOS device and meet the following requirements, you’ll see an Install button instead of the Download button. With this you can install the app on your device directly from Bitrise if:
+
+* You visit the Public Install Page from mobile Safari.
+* Your device is registered to your Bitrise account and added to the Provisioning Profile.
+  It is also possible that your app can be installed on any device. There is also a Download anyway button that you can use to download the .ipa file. The yellow message on the page describes the situation if iOS does not allow the .ipa file to be installed.
+
+![](/img/install-only-available.png)"%}
 
 Now let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
