@@ -9,10 +9,9 @@ menu:
 
 Bitrise has an integrated app deployment system you can use for app and other build artifact file distribution.
 
-With this you can distribute your apps over the air for your app's team members or even for those who don’t have a Bitrise account. You can also use it to archive your app and other build artifact files which will be available on the app's Build page for viewing and downloading.
+With this you can distribute your apps over the air for your app’s team members or even for those who don’t have a Bitrise account. You can also use it to archive your app and other build artifact files which will be available on the app’s Builds page for viewing and downloading.
 
-Here is a short recap on the different build steps per platform. The links under `Platform` point to our Getting started tutorials if you needed more information for each platform (for example, on code signing, packaging or deploying).
-
+Here is a short recap on the different build steps per platform.
 | Platform | Build step | Deploy step to Bitrise |
 | --- | --- | --- |
 | iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
