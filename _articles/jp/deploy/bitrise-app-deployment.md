@@ -12,6 +12,7 @@ Bitrise has an integrated app deployment system you can use for app and other bu
 With this you can distribute your apps over the air for your app’s team members or even for those who don’t have a Bitrise account. You can also use it to archive your app and other build artifact files which will be available on the app’s Builds page for viewing and downloading.
 
 Here is a short recap on the different build steps per platform.
+
 | Platform | Build step | Deploy step to Bitrise |
 | --- | --- | --- |
 | iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
@@ -62,6 +63,8 @@ You can access the Public install page's URL, if you head over to your generated
 ![](/img/public-install-page-1.png)
 
 Besides the **Public install page** link on the **APPS & ARTIFACTS** tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
+
+![](https://devcenter.bitrise.io/img/app-release-unsigned.jpg)
 
 If you click **Open Public install page** link, you’ll see a basic description of the App (title, version, size, supported devices).
 
