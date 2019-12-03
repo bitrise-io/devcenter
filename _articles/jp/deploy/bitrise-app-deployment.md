@@ -64,7 +64,7 @@ You can access the Public install page's URL, if you head over to your generated
 
 Besides the **Public install page** link on the **APPS & ARTIFACTS** tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
-If you click `Open Public install page` link, you’ll see a base description of the App (title, version, size, supported devices).
+If you click **Open Public install page** link, you’ll see a basic description of the App (title, version, size, supported devices).
 
 ![](/img/oat-publicinstallpage.png)
 
