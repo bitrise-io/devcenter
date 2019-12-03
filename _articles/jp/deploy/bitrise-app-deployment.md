@@ -66,7 +66,7 @@ Besides the **Public install page** link on the **APPS & ARTIFACTS** tab, you’
 
 If you click `Open Public install page` link, you’ll see a base description of the App (title, version, size, supported devices).
 
-![](/img/public-install-page-example.png)
+![](/img/oat-publicinstallpage.png)
 
 You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store .ipa won’t receive a Public install page as it should be uploaded to the app store directly.
 
@@ -74,7 +74,7 @@ You can share this page with anyone, even if they don’t have a Bitrise account
 
 * You visit the Public Install Page from mobile Safari.
 * Your device is registered to your Bitrise account and added to the Provisioning Profile.
-It is also possible that your app can be installed on any device. There is also a Download anyway button that you can use to download the .ipa file. The yellow message on the page describes the situation if iOS does not allow the .ipa file to be installed."%}
+  It is also possible that your app can be installed on any device. There is also a Download anyway button that you can use to download the .ipa file. The yellow message on the page describes the situation if iOS does not allow the .ipa file to be installed."%}
 
 Now let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
