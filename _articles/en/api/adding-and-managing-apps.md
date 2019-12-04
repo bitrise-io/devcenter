@@ -72,12 +72,12 @@ You will need both the private and public key in full to register an SSH key for
 
    You can also set whether you want to automatically register the public key at your git provider: set the `is_register_key_into_provider_service` parameter to either true or false.
 
-      curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-ssh-key' -d \
-      '{
+       curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-ssh-key' -d \
+       '{
 	       "auth_ssh_private_key": "your-private-ssh-key",
 	       "auth_ssh_public_key": "your-public-ssh-key",
 	       "is_register_key_into_provider_service": false
-       }'
+        }'
 3. Finish the app registration process by calling the `finish` endpoint.
 
    This endpoint allows you to configure your applications: set the project type, the stack on which the build will run, and the initial configuration settings.
