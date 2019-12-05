@@ -6,141 +6,75 @@ summary: ''
 published: false
 
 ---
-## Every input, output and parameter is an Environment Variable
+## 全てのインプット、アウトプット、パラメータは環境変数です
 
-全てのインプット、アウトプット、パラメータは環境変数です
+全てのステップインプット (step input)、ステップアウトプット (step output)、シークレット環境変数 (secret environment variable)、アプリ環境変数 (app environment variable) とワークフロー環境変数 (workflow environment variable) は環境変数です。基本的に全てのインプットと変数はビルド構成内にあります。
 
-Every step input, step output, secret environment variable, app environment variable and workflow environment variable (basically every input and variable in your build config) is an environment variable.
+Bitriseにおける環境変数は、**他の環境変数と同様で、同じルールや制限を持った正規の環境変数となっています。**
 
-全てのステップインプット、ステップアウトプット、シークレット環境変数、アプリ環境変数とワークフロー環境変数 (基本的に全てのインプットと変数がビルド構成にあります) は環境変数です。
+いくつか技術的な詳細について紹介いたします：
 
-There's nothing special about how Bitrise handles environment variables, **these are regular environment variable, with the same rules and restrictions as any other environment variable.**
+### 環境変数の値は文字列のみの使用が可能
 
-他の環境変数のような同じルールや制限を持った正規の環境変数となっています。
+環境変数は`String`(文字列)値のみを保持することができます。環境変数の値として`1`,`true`のような数字やboolをセットしても、全て文字列になります。
 
-To highlight a couple of technical details:
+### 親プロセスは子プロセスによってエクスポーズされた環境変数にアクセスできません
 
-いくつか技術的な詳細について：
-
-### The value of an Environment Variable can only be a String
-
-環境変数の値はString(文字列)のみの使用が可能
-
-Environment Variables can only hold `String` values. Even if you set a number or bool, like `1` or `true` as the value of the Environment Variable, that will be a string.
-
-環境変数は`String`値のみを保持することができます。環境変数の値として`1`,`true`のような数字やboolをセットしても、全てStringになります。
-
-### Parent process can't access  Environment Variables exposed by child processes
-
-親プロセスは子プロセスによってエクスポーズされた環境変数にアクセスできません
-
-Parent process(es) can't access Environment Variables exposed by child processes.
-
-親プロセスは子プロセスによってエクスポーズされた環境変数にアクセスできません。
-
-For example, if you run a `my_bash_script.sh` in your Terminal with `bash my_bash_script.sh`, and `my_bash_script.sh` sets an environment variable with `export MY_VAR=the-value`, you won't be able to access `MY_VAR` in your Terminal after the script is finished, `MY_VAR` will only be available in `my_bash_script.sh` **and** in the processes / scripts started by `my_bash_script.sh`.
+親プロセスは子プロセスによってエクスポーズされた環境変数にアクセスを行うことはできません。
 
 例えば、`bash my_bash_script.sh`を持ったご自身のターミナル内で`my_bash_script.sh`を実行する、または`my_bash_script.sh`が`export MY_VAR=the-value`を持った環境変数をセットする場合、スクリプトが終わった後ターミナル内で`MY_VAR`にアクセスすることができなくなります。`MY_VAR`は`my_bash_script.sh`内**と**`my_bash_script.sh`によって開始されたプロセス/スクリプト内でのみ利用可能です。
 
-In terms of Bitrise CLI this means that if you `export MY_VAR=...` in a Script step, `MY_VAR` won't be available in subsequent steps. This is true for the steps too, regardless of which language the step is written in.
+Bitrise CLIに関しては、もしScriptステップ内で `export MY_VAR=...` をする際、 `MY_VAR` はその後のステップ以降、利用不可になります。ステップが書かれた言語の形式に関わらず、ステップでもこれは同じです。
 
-Bitrise CLIに関しては、これはもしScriptステップ内で???をする際、???はその次のステップ以降、利用不可になります。ステップが書かれた言語に関わらず、その以降のステップでもこれは同じです。
-
-Bitrise CLI includes a mechanism for exposing environment variables from Steps so that subsequent Steps can also access it, through the Bitrise CLI tool called [envman](https://github.com/bitrise-io/envman).
-
-Bitrise CLIはステップから環境変数をエクスポーズするメカニズムを含んでいるので、その後のステップでもBitrise CLIツールの[envman](https://github.com/bitrise-io/envman)を経由してアクセスすることができます。
-
-To set an environment variable in your script or in your step to make that available in other steps too, you have to do that through `envman`.
+Bitrise CLIはステップから環境変数をエクスポーズするメカニズムを含んでいるので、その後のステップでもBitrise CLIツールの[envman](https://github.com/bitrise-io/envman)を経由するとアクセスすることができます。
 
 他のステップでも環境変数を利用可能にしてスクリプト内またはステップ内で環境変数をセットするには、`envman`を経由して行う必要があります。
-
-A simple example:
 
 シンプルな例はこちらです：
 
     envman add --key MY_TEST_ENV_KEY --value 'test value for test key'
 
-You can find more examples in [envman's README](https://github.com/bitrise-io/envman), and in the [Expose an Environment Variable and use it in another Step](/tips-and-tricks/expose-environment-variable) guide.
-
 他の例は[envman's README](https://github.com/bitrise-io/envman)や[環境変数をエクスポーズして他のステップで使用する](/jp/tips-and-tricks/expose-environment-variable)のガイドで確認できます。
 
-## Availability order of environment variables
+## 環境変数の可用性の順番
 
-環境変数の利用可能な順番
+環境変数は、その環境変数の"処理"が完了した**後**、利用可能になります。
 
-Environment variables are available **after** the environment variable is "processed".
+[Bitrise CLIによってエクスポーズされる](/jp/builds/available-environment-variables/#bitrise-cliによる提示)環境変数がいくつかあり、それらは開始時点から利用可能な環境変数となっています (例: `BITRISE_SOURCE_DIR` と `BITRISE_TRIGGERED_WORKFLOW_ID`)。
 
-環境変数は、その環境変数が"processed"した後、利用可能になります。
+全ての他の環境変数は_build progresses (ビルド経過) として_"processed" (処理済み) / 利用可能な状態になります。
 
-There are a few environment variables [exposed by the Bitrise CLI itself](/faq/available-environment-variables/#exposed-by-the-bitrise-cli), those are available from the start (e.g. `BITRISE_SOURCE_DIR` and `BITRISE_TRIGGERED_WORKFLOW_ID`).
+ワークフローが実行される前に処理され利用可能になる環境変数の種類が2つあります：[Secrets](/bitrise-cli/secrets/)と`App Env Vars` ([bitrise.yml](/jp/bitrise-cli/basics-of-bitrise-yml/)にある`app: envs:`)です。
 
-Bitrise CLI本体によってエクスポーズされる環境変数がいくつかあり、それらは開始時点から利用可能な環境変数となっています (例: `BITRISE_SOURCE_DIR` と `BITRISE_TRIGGERED_WORKFLOW_ID`)。
+この後、指定のワークフローの処理が開始され、[そのワークフロー用に指定された環境変数](/jp/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)の利用が可能になります。指定のワークフローが処理される時 (ワークフローが実行されるであろう最初のステップの直前) に、その指定したワークフローの前または後ろにワークフローを持つ場合、環境変数は処理され利用が可能な状態になります。
 
-All other environment variables are "processed" / made available _as the build progresses._
+ステップインプットも環境変数です；指定のステップ用にのみエクスポーズされ、そのステップが開始される直前にもエクスポーズされます。
 
-There are two types of environment variables which are processed and made available before the workflow would be executed: [Secrets](/bitrise-cli/secrets/) and `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
+最後に、ステップアウトプットは指定のステップによりエクスポーズされるので、**ステップの終了後**、その次のステップで利用可能になります。
 
-全ての他の環境変数は"processed"になっており、build progressesとして利用可能になります。
+**環境変数が処理される順番：**
 
-ワークフローが実行される前に処理され利用可能になる環境変数には2つ種類があります：[Secrets](/bitrise-cli/secrets/)と`App Env Vars` ([bitrise.yml](/jp/bitrise-cli/basics-of-bitrise-yml/)にある`app: envs:`)
-
-After these, the processing of the specified Workflow starts, and the [environment variables specified for that Workflow](/jp/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available. If the workflow has before or after workflows, when a specific workflow is processed (right before the first step of the workflow would run) the workflow's environment variables are processed and made available.
-
-この後、指定のワークフローの処理が開始され、[そのワークフロー用に指定された環境変数](/jp/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)の利用が可能になります。指定のワークフローが処理される時 (ワークフローが実行されるであろう最初のステップの直前) に、ワークフローの前または後ろにワークフローを持つ場合、ワークフローの環境変数は処理され利用が可能な状態になります。
-
-Step inputs are also environment variables; those are exposed only for the specific step, and right before the Step would start.
-
-Last but not least Step outputs are exposed by the specific step, so those are available for subsequent steps **after the Step finishes**.
-
-ステップインプットも環境変数です；指定のステップにのみエクスポーズされ、そのステップの直前に開始されます。
-
-もう一つ、ステップアウトプットは指定のステップによりエクスポーズされるので、**ステップの終了後**、その次のステップで利用可能になります。
-
-**The environment variable processing order:**
-
-環境変数の処理される順番：
-
-1. [Bitrise CLI exposed environment variables](/builds/available-environment-variables/#exposed-by-the-bitrise-cli)  
-   [環境変数をエクスポーズしたBitrise CLI](/jp/builds/available-environment-variables/#exposed-by-the-bitrise-cli)
+1. [環境変数をエクスポーズしたBitrise CLI](/jp/builds/available-environment-variables/#exposed-by-the-bitrise-cli)
 2. [Secrets](/jp/bitrise-cli/secrets/)
-3. One-off environment variables specified for the build through the [Build Trigger API](/jp/api/build-trigger/)  
-   [Build Trigger API](/jp/api/build-trigger/)経由でビルド用に指定された一回限りの環境変数
-4. `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/))  
-   `App Env Vars` (bitrise.yml内の`app: envs:`)
-5. [Workflow environment variables](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)  
-   [ワークフロー環境変数](/jp/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
-6. Step inputs  
-   ステップインプット
-7. Step outputs
+3. [Build Trigger API](/jp/api/build-trigger/)経由でビルド用に指定された一回限りの環境変数
+4. `App Env Vars` ([bitrise.yml](/jp/bitrise-cli/basics-of-bitrise-yml/)内の`app: envs:`)
+5. [ワークフロー環境変数](/jp/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
+6. ステップインプット
+7. ステップアウトプット
 
-   ステップアウトプット
+**では、なぜ処理順番が重要なのでしょうか?**
 
-**So, why does the processing order matter?  
-では、なぜ処理順番が大事なのでしょうか?**
+環境変数は、処理後ならびに利用可能な状態になった後、使うことができます。**環境変数を参照または使用する際は、すでに処理されているものだけを利用することができます！**
 
-An environment variable is only available **after** it is processed and made available. **When you reference or use an environment variable, you can only reference/use those which are already processed!**
+例：
 
-環境変数は、処理後ならびに利用可能な状態になった後、使うことができます。環境変数を参照または使用する際は、すでに処理されたものだけ利用することができます！
-
-A couple of examples:
-
-いくつかの例：
-
-* In the value of a `Secret` environment variable, you can use environment variables exposed by Bitrise CLI, but you can't use any other environment variable (App Env Vars, Workflow Env Vars, ...), as those are not processed when secrets are processed.
-* `Secret`環境変数の値には、Bitrise CLIによってエクスポーズされた環境変数を使用できますが、Secretsの処理中にその他の環境変数 (App Env Vars, Workflow Env Varsなど) は処理されないので、使うことはできません。
-* In the value of an `App Env Var`, you can use environment variables from `Secrets` as well as the Bitrise CLI exposed ones, but you can't use Workflow Env Vars, nor Step inputs.
+* `Secret`環境変数の値には、Bitrise CLIによってエクスポーズされた環境変数を使用できますが、Secretsの処理中にその他の環境変数 (アプリ環境変数, ワークフロー環境変数など) は処理されないので、使うことはできません。
 * `App Env Var`の値には、Bitrise CLIがエクスポーズした環境変数ならびに`Secrets`からの環境変数を使用できますが、ワークフロー環境変数やステップインプットは使えません。
-* In a `Workflow environment variable` you can use all the above (`Secrets`, `App Env Vars`, Bitrise CLI exposed env vars).
 * `Workflow environment variable`には、以上のもの全て (`Secrets`, `App Env Vars`, Bitrise CLIがエクスポーズした環境変数) を使用できます。
-* And finally, in step input values, you can use all other environment variables, including the workflow's environment variables, as well as the outputs of steps which run before the specific step.
-* ステップインプット値には、全ての他の環境変数を使用することができ、ワークフロー環境変数から指定のステップの前に実行されるステップのアウトプットも含まれています。
+* ステップインプット値には、全ての他の環境変数を使用することができ、ワークフロー環境変数、指定のステップの前に実行されるステップのアウトプットも含まれています。
 
-### Environment variables of chained workflows　チェーンワークフローの環境変数
+### チェーンワークフローの環境変数
 
-Once an environment variable of a workflow is processed and made available, it is available everywhere else during the build. This means that other workflows of the chain **can** use the environment variables of a workflow which is performed **before** the specific workflow, similar to Step outputs, which are available for every other step **after** the step (which generates the outputs) completes.
+いったんワークフローの環境変数が処理され利用可能な状態にされると、環境変数はビルド実行中どこででも使用することが可能です。これは、チェーンの他ワークフローが指定のステップの**前**に実行されるワークフローの環境変数の使用が**可能である**ということです。ステップアウトプットのように、 (アウトプットを生成する) ステップが完了した**後**、全ての他のステップで利用可能です。
 
-いったんワークフローの環境変数が処理され利用可能な状態にされると、ビルド中どこででも使用することが可能です。これは、チェーンの他ワークフローが指定のステップの前に実行されるワークフローの環境変数を使用するということです。ステップアウトプットのように、 (アウトプットを生成する) ステップが完了した後全ての他のステップで利用可能です。
-
-You can find more information about environment variable availability of Workflow env vars in chained workflows in the [Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#note-about-workflow-environment-variables) documentation.
-
-[ワークフロー：ワークフロー環境変数についてのメモ](/bitrise-cli/workflows/#note-about-workflow-environment-variables)にて、チェーンワークフローにあるWorkflow env varsの環境変数の可用性についての情報をご覧ください。
+[ワークフロー：ワークフロー環境変数についてのメモ](/bitrise-cli/workflows/#note-about-workflow-environment-variables)にて、チェーンワークフローにあるワークフロー環境変数の可用性についての情報をご覧ください。
