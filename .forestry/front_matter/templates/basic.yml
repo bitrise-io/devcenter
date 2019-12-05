@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/最重要コンセプト-most-important-concepts.md
 - _articles/en/api/adding-and-managing-apps.md
 - deploy.md
 - _articles/en/steps-and-workflows/default-workflows.md
