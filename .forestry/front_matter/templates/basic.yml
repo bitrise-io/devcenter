@@ -49,6 +49,7 @@ pages:
 - _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
 - _articles/en/builds/sensitive-input-field.md
 - _articles/en/reviews/Japanese translations/チュートリアル (Tutorials)/コミュニティによるチュートリアル-community-created-tutorials.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
 - _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
 - _articles/jp/testing/test-reports.md
 - _articles/en/builds/remote-access.md
