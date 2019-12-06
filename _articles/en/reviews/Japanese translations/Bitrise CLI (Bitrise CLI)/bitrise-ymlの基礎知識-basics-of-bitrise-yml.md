@@ -72,11 +72,7 @@ published: false
 
 長い`bitrise.yml`を減らすには：
 
-* You could separate your project into two apps.
-* You could keep the `bitrise.yml` file in the project repository and use it with the Bitrise CLI. This way you will not bump into any limitation as the size limitation only affects the `bitrise.yml` modified on the UI.
 * プロジェクトを２つのアプリに分割します。
-* プロジェクトのレポジトリに`bitrise.yml`ファイルを保管し、それをBitrise CLIで使用することができます。この方法でサイズ制限の影響は受けませんが、UI上で修正された`bitrise.yml`にのみ影響を及ぼします。
-* We generally don't recommend using Environment Variables as configuration files. If, however, the Env Var is not a short key - value pair but a long script, we suggest you store it in a file in your project repository or upload it to the [Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/#uploading-files-to-generic-file-storage-on-bitriseio).
-* Move scripts (especially the long ones) into their repository, and use our Script Runner Step to execute the scripts based the defined path.
-* 構成ファイルとして環境変数を使用するのは、一般的に推奨しておりません。仮に環境変数がショートキーではなくロングスクリプトである値のペアである場合、プロジェクトのレポジトリのファイルに保存するか[Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/#uploading-files-to-generic-file-storage-on-bitriseio)へアップロードします。
-* レポジトリへ (特に長い) スクリプトを移して、定義済みパスに基づいたスクリプトを実行するScript Runnerステップを使用します。
+* プロジェクトのレポジトリに`bitrise.yml`ファイルを保管し、それをBitrise CLIで使用することができます。この方法ではサイズ制限の影響は受けませんが、UI上で修正された`bitrise.yml`にのみ影響を及ぼします。
+* 構成ファイルとして環境変数を使用するのは、一般的に推奨しておりません。仮に環境変数がショートキーではなくロングスクリプトである値のペアである場合、プロジェクト用のレポジトリのファイルに保存するか、[Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/#uploading-files-to-generic-file-storage-on-bitriseio)へアップロードします。
+* (特に長い)スクリプトをレポジトリに移して、定義済みパスに基づいたスクリプトを実行するScript Runnerステップを使用します。
