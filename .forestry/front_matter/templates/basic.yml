@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- deploy.md
 - _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
@@ -35,7 +36,6 @@ pages:
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/ローカルでのbitriseプロジェクトの初期設定-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/最重要コンセプト-most-important-concepts.md
 - _articles/en/api/adding-and-managing-apps.md
-- deploy.md
 - _articles/en/steps-and-workflows/default-workflows.md
 - _articles/en/steps-and-workflows/managing-workflows.md
 - _articles/en/steps-and-workflows/getting-started-workflows.md
