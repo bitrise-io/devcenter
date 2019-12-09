@@ -28,6 +28,7 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
+- _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-ymlの基礎知識-basics-of-bitrise-yml.md
@@ -64,7 +65,6 @@ pages:
 - _articles/en/getting-started/getting-started-with-expo-apps.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
 - _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
-- _articles/en/troubleshooting/enabling-bitrise-support-user.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/デプロイ-deployment.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイについて-android-deployment.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/ship機能を使ったデプロイ-deploying-with-ship.md
