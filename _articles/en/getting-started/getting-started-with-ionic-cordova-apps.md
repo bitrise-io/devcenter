@@ -54,15 +54,15 @@ As an example, have a look at a Cordova **primary workflow** containing **Karma 
 
 To install Javascript dependencies listed in your app's **package.json** file, you can use either **Run npm command** or **Run yarn command** Steps.
 
-**Run npm command** Step is by default part of your primary and deploy Workflows. Make sure you have **The nmp command with arguments to run** field set to **install** in **Run npm command** Step.
+**Run npm command** Step is by default part of your primary and deploy Workflows. Make sure you have **The npm command with arguments to run** field set to **install** in **Run npm command** Step.
 
-![](https://devcenter.bitrise.io/img/run-nmp.png)
+![](https://devcenter.bitrise.io/img/run-npm.png)
 
 Leave the input field of **The 'yarn' command to run** empty or set it to **install** - **Run yarn command** Step will install those dependencies either way.
 
 ## Testing Ionic/Cordova apps
 
-Perform unit testing by our **Karma Jasmine Test Runner** or **Jasmine Test Runner** Steps. If your Cordova/Ionic project has Karma Jasmine dependency in its **package.json** file, our scanner will detect it and automatically insert the respective testing step into your workflow. If this dependency is missing from your project, you can manually insert one of steps to your workflow using our Workflow Editor - just make sure you place it right after **Run nmp command** or **Run yarn command** package manager Step.
+Perform unit testing by our **Karma Jasmine Test Runner** or **Jasmine Test Runner** Steps. If your Cordova/Ionic project has Karma Jasmine dependency in its **package.json** file, our scanner will detect it and automatically insert the respective testing step into your workflow. If this dependency is missing from your project, you can manually insert one of steps to your workflow using our Workflow Editor - just make sure you place it right after **Run npm command** or **Run yarn command** package manager Step.
 
 ## Code signing
 

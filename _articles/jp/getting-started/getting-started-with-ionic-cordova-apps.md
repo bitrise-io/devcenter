@@ -65,15 +65,15 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
 
 アプリの`package.json`ファイルに記載されているJavascript dependenciesをインストールするには、`Run npm command`または`Run yarn command`のステップを使用できます。
 
-`Run npm command`ステップは、デフォルトパートのプライマリワークフローとデプロイワークフローによるものです。 `Run npm command`ステップで、`The nmp command with arguments to run`フィールドが`install`に設定されていることを確認します。
+`Run npm command`ステップは、デフォルトパートのプライマリワークフローとデプロイワークフローによるものです。 `Run npm command`ステップで、`The npm command with arguments to run`フィールドが`install`に設定されていることを確認します。
 
-![](https://devcenter.bitrise.io/img/run-nmp.png)
+![](https://devcenter.bitrise.io/img/run-npm.png)
 
 `The 'yarn' command to run`入力フィールドを空のままにするか、または`install`に設定します -  `Run yarn command`ステップはどちらかの方法でdependencies（依存関係）をインストールします。
 
 ## Ionic/Cordovaアプリのテスト
 
-`Karma Jasmine Test Runner`または `Jasmine Test Runner` のステップによるユニットテストを実行します。 Cordova / Ionicプロジェクトの`package.json`ファイルにKarma Jasmineの依存性がある場合は、スキャナーによってそれが検出され、それぞれのテストステップがワークフローに自動的に追加されます。依存性がプロジェクトにない場合は、 Workflow Editor を使用して手動でワークフローにステップの1つを追加できます。`Run nmp command`または`Run yarn command`パッケージマネージャーステップの直後にするようにしてください。
+`Karma Jasmine Test Runner`または `Jasmine Test Runner` のステップによるユニットテストを実行します。 Cordova / Ionicプロジェクトの`package.json`ファイルにKarma Jasmineの依存性がある場合は、スキャナーによってそれが検出され、それぞれのテストステップがワークフローに自動的に追加されます。依存性がプロジェクトにない場合は、 Workflow Editor を使用して手動でワークフローにステップの1つを追加できます。`Run npm command`または`Run yarn command`パッケージマネージャーステップの直後にするようにしてください。
 
 ## コード署名
 
