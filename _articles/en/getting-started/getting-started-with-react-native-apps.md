@@ -43,7 +43,7 @@ If the Bitrise project scanner has successfully scanned your project, **Run npm 
 
 1. In the **Run npm command** Step, type install in the **npm command with arguments to run** input field so that it can add javascript dependencies to your project.
 
-![](/img/run-nmp.png)
+![](/img/run-npm.png)
 
 The **Run yarn command** Step can install javascript dependencies automatically to your project without having to configure it manually.
 
@@ -119,7 +119,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
 ## Testing your project
 
-You can use React Native's built in testing method, called **jest** to perform unit tests.  Add another **Run nmp command** Step to your workflow, and type **test** in the **npm command with arguments to run** input field.
+You can use React Native's built in testing method, called **jest** to perform unit tests.  Add another **Run npm command** Step to your workflow, and type **test** in the **npm command with arguments to run** input field.
 
 ![](/img/test-npm.png)
 
