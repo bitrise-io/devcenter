@@ -5,7 +5,7 @@ redirect_from:
 tag:
 - stack
 - infrastructure
-- buids
+- builds
 summary: |-
   The Stack indicates the virtual machine version that we will use to run your build.
   After adding your application to Bitrise we will select an appropriate Stack for it.
