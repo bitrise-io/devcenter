@@ -6,13 +6,9 @@ summary: ''
 published: false
 
 ---
-Any tool that can edit `bitrise.yml` can add custom properties to it. This way you can add special properties or notes to your env vars, or even try new configurations of your workflow in `bitrise.yml`. All  you have to add is add a  `meta` field and a namespace label with key and value to the right place.
+`bitrise.yml`の編集が可能なツールであれば、そのツールにカスタムプロパティを追加することができます。この方法で環境変数に特別なプロパティやメモを追加したり、`bitrise.yml`ワークフローの新しい構成を試すこともできます。適切な場所へキーと値を用いて`meta`欄とnamespace labelに追加してください。
 
-`bitrise.yml`を編集できるツールであれば、そのツールにカスタムプロパティを追加することができます。この方法で環境変数に特別なプロパティやメモを追加したり、`bitrise.yml`ワークフローの新しい構成を試すこともできます。適切な場所へキーと値を用いて`meta`欄とnamespace labelを追加してください。
-
-The format you should use is the following:
-
-以下のようなフォーマットを使用してください：
+以下のようなフォーマットを使用しましょう：
 
     KEY: "VALUE",
     opts: {
@@ -31,15 +27,9 @@ The format you should use is the following:
         }
     }
 
-Let's see some use cases when you would benefit from customizing `bitrise.yml` to your own liking:
-
 自分好みに`bitrise.yml`をカスタマイズして得られる利点を紹介します：
 
-* 
-
-
-* If you decide to take your spin on our [open-source Workflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor) and create your own version of it, first you have to fork it! Then you can use it (for example, by adding it to your website) and customize the environment variables (env vars) in the `bitrise.yml` tab. Let's say you want to keep an eye on one of the env vars: when it was last modified and by who. You can place the following `meta` section in `bitrise.yml` to your own version of Workflow Editor.
-* Bitriseの[オープンソースWorkflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor)で試すことを決断し自分のバージョンを作成する場合、まずフォークを行ってください！その後使用可能になり (例: ウェブサイトに追加する)、`bitrise.yml`タブで環境変数をカスタマイズすることができます。ある一つの環境変数について (最後に修正したのはいつ・誰などを) 監視するとしましょう。この場合、以下のような`bitrise.yml`内にある`meta`セクションをWorkflow Editorの自分のバージョンへ配置することができます。
+* Bitriseの[オープンソースWorkflow Editor](https://github.com/bitrise-io/bitrise-workflow-editor)で自分のバージョンを作成する場合、まずフォークを行ってください！その後、(例えば、ウェブサイトに追加することで) 使用可能になり、`bitrise.yml`タブで環境変数をカスタマイズすることができます。環境変数の一つについて (最後に修正したのはいつ・誰などを) 監視するとしましょう。この場合、以下のような`bitrise.yml`内にある`meta`セクションをWorkflow Editorの自分のバージョンへ配置することができます。
 
        app:
          envs:
@@ -51,24 +41,18 @@ Let's see some use cases when you would benefit from customizing `bitrise.yml` t
                  last_modified_at: 2018.09.12.
                  last_modifier: Jane Doe
 
-Of course this use case works only if your customized tool is shared with your team in your company's own intranet or if it's handled by some software.
+このユースケースは、カスタマイズ済みのツールがご自身の会社のイントラネットでチームと共有されている時、もしくはそのツールがいくつかのソフトウェアによって扱われている場合にのみ機能します。
 
-このユースケースは、カスタマイズ済みのツールがご自身の会社のイントラネットでチームと共有されている時、もしくはソフトウェアにより扱われている場合にのみ機能します。
-
-* Another use case with `meta` can be if you want to add background color to an env var in your own tool:
-* 自分のツールの環境変数に背景色を追加したい場合の`meta`を使用した他のユースケース
+* 自分のツールの環境変数に背景色を追加したい場合に`meta`を使用した他のユースケース：
 
        meta: {
          my_fancy_new_workflow_editor: {
            env_var_background_color: "red"
          }
        }
-* You can see `meta` in action on [bitrise.io](https://www.bitrise.io/) as well. For example, when you select a different stack for your workflow than the default stack. Just click Workflow Editor on the UI and pick another stack type for your workflow/s in the `Stacks` tab. This way you can test (only in the UI) how your workflow runs in the new Stack.
-* 実行中の`meta`をbitrise.ioでも閲覧が可能です。例えば、デフォルトのスタックではなくワークフロー用に異なるスタックを選択するとします。UI上でWorkflow Editorをクリックし、`Stacks`タブから他のスタックを選択します。これにより、新しいスタックでどのようにワークフローが動くのか (UI上で) テストすることができます。
+* 実行中の`meta`を[bitrise.io](https://www.bitrise.io/)でも閲覧が可能です。例えば、デフォルトのスタックではなくワークフロー用に異なるスタックを選択するとします。UI上でWorkflow Editorをクリックし、`Stacks`タブから他のスタックタイプを選択します。これにより、新しいスタックでどのようにワークフローが動くのか (UIでのみ) テストすることができます。
 
 ![](/img/stack-os.png)
-
-If you head back to the `bitrise.yml` tab, a `bitrise.io meta` is added to the deploy workflow:
 
 `bitrise.yml`タブに戻る場合、デプロイワークフローに`bitrise.io meta`が追加されます。
 
@@ -105,6 +89,4 @@ If you head back to the `bitrise.yml` tab, a `bitrise.io meta` is added to the d
             stack: osx-xcode-10.1.x
     {% endraw %}
 
-Since this meta is only interpreted on [bitrise.io](https://www.bitrise.io/) and not locally or on Bitrise CLI, it is categorized by a `bitrise.io` namespace (where the stack is the key and `linux-docker-android-lts` is the value). Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process.
-
-このmetaが[bitrise.io](https://www.bitrise.io/)上でのみで解釈され、ローカルもしくはBitrise CLIでは解釈されないため (スタックがキーで`linux-docker-android-lts`が値の)`bitrise.io`のネームスペース別に分類されます。Workflow Editorは常に保存済みの変数を有効化し、シンタックスエラーが発生する場合エラーを投げます。また、`meta`が追加されると、コンテンツはWorkflow Editorの有効化プロセスによって完全に無視されます。
+このmetaは[bitrise.io](https://www.bitrise.io/)上でのみで解釈され、ローカルもしくはBitrise CLIでは解釈されないため、(スタックがキーで`linux-docker-android-lts`が値の)`bitrise.io`のnamespace別に分類されます。Workflow Editorは常に保存済みの変数を有効化し、シンタックスエラーが発生する場合エラーを投げます。また、`meta`が追加されると、コンテンツはWorkflow Editorの有効化プロセスによって完全に無視されます。
