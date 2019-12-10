@@ -97,9 +97,10 @@ default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
 workflows:
   test:
     steps:
-      inputs:
-      - content: "puts 'Hello Ruby!'"
-      - runner_bin: ruby
+    - script@1.1.3:
+        inputs:
+        - content: "puts 'Hello Ruby!'"
+        - runner_bin: ruby
 ```
 
 Step input values are always **string** / text values, as the input id/key and the value are passed to the Step as environment variables ([more information](/bitrise-cli/most-important-concepts/#every-input-output-and-parameter-is-an-environment-variable)). The value can be multiline too, using the standard YAML multiline format. An example multiline Bash script:
