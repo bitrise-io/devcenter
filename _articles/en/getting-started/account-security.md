@@ -14,7 +14,7 @@ menu:
 ---
 ## Enabling Two-factor authentication
 
-We provide an extra layer of security to your account if you enable Two-factor authentication (TFA) on your Bitrise account.
+We provide an extra layer of security to your account if you enable Two-factor authentication (2FA) on your Bitrise account.
 
 1. Download and install [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=en) on your phone.
 2. Log in to [bitrise.io](https://www.bitrise.io) and go to your **Profile**.
@@ -23,9 +23,9 @@ We provide an extra layer of security to your account if you enable Two-factor a
 5. Click on **Enable** under **Two-factor authentication**.
 6. Open your Google Authenticator and scan the QR-code that appears on your screen.
 7. Enter the 6-digit code that was generated.
-8. Once you have activated your TFA and saved your recovery codes, you will receive a confirmation email from letsconnect@bitrise.io.
+8. Once you have activated your 2FA and saved your recovery codes, you will receive a confirmation email from letsconnect@bitrise.io.
 
-We recommend that you check your connected accounts (GitHub, Bitbucket, GitLab and Xamarin) and enable TFAs if you haven't already.
+We recommend that you check your connected accounts (GitHub, Bitbucket, GitLab and Xamarin) and enable 2FA if you haven't already.
 
 ## Disabling Two-factor authentication
 
