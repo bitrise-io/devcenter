@@ -56,9 +56,9 @@ As you can see in the above Android Workflow, the **Android Lint** and **Android
 
 For UI testing, add our **\[BETA\] Virtual Device Testing for Android** step to run[ Android UI tests on virtual devices](/testing/device-testing-for-android/). These are the available test types:
 
-* instrumentation
-* robo
-* gameloop
+* instrumentation.
+* robo.
+* gameloop.
 
 If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
 
@@ -110,7 +110,7 @@ Now let's head back to [Bitrise](https://app.bitrise.io/apps/add) and finish off
 1. In your Bitrise [Dashboard](https://app.bitrise.io/apps/add), go to **Code Signing** and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 2. Copy the env key which stores your uploaded file’s URL.
 
-   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
 3. Go back to the **Deploy to Google Play** Step in your Workflow Editor.
 4. Fill out the required input fields as follows:
    * **Service Account JSON key file path**:  This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
