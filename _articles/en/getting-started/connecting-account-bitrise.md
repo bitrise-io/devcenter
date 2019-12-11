@@ -30,7 +30,7 @@ Connecting one Git provider account is not final: you can disconnect an account 
 1. Log in to your [bitrise.io](https://www.bitrise.io) account.
 2. Click the **+** symbol on the top menu bar and select **Add app**.
 3. On the [Create New App](https://app.bitrise.io/apps/add) page, select the account and set the app's privacy setting.
-4. Choose the git service provider of the app's repository. If no account with that provider has been connected to your Bitrise account, the UI will display the option to connect.
+4. Choose the Git service provider of the app's repository. If no account with that provider has been connected to your Bitrise account, the UI will display the option to connect.
 
    ![](/img/bitbucket-created.jpg)
 5. Click **Connect GitHub/GitLab/Bitbucket**. This will take you to the login page of the Git provider.
