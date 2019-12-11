@@ -62,7 +62,7 @@ You can read more about our stacks in the [Available stacks](/infrastructure/ava
 
 The **Deploy to Bitrise.io** will deploy the following to the **Logs** and [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab of the build:
 
-* your Xcode test results
+* your Xcode test results.
 * your raw `xcodebuildoutput` log.
 
 ## Code signing and exporting an .ipa
@@ -74,9 +74,9 @@ To install and test the app on other physical devices, you will need to create a
 
 You will need:
 
-* the automatically created **deploy** workflow
-* an iOS **Development** certificate (a .p12 certificate file)
-* a **Development** type Provisioning Profile
+* the automatically created **deploy** workflow.
+* an iOS **Development** certificate (a .p12 certificate file).
+* a **Development** type Provisioning Profile.
 
 1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate an .ipa locally.
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
@@ -99,8 +99,8 @@ If you set up your code signing files and created an .ipa for your internal test
 
 To deploy to Testflight and to the App Store, you will need more code signing files:
 
-* an iOS **Distribution** Certificate
-* an **App Store** type Provisioning Profile
+* an iOS **Distribution** Certificate.
+* an **App Store** type Provisioning Profile.
 
 1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
@@ -114,7 +114,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 6. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
-   * Apple ID
+   * Apple ID.
    * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
    Don't worry, the password will not be visible in the logs or exposed - [that's why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
