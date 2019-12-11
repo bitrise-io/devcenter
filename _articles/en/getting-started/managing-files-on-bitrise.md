@@ -22,7 +22,7 @@ If your build requires any files to make it work, upload them to the **Generic F
 
 {% include message_box.html type="important" title="Restrictions on uploading a file to the Generic File Storage" content="
 
-* The file cannot be bigger than 5 MB
+* The file cannot be bigger than 5 MB.
 * you can only store a total of 5 different files at the same time. If you want to upload more, you need to delete one of the files in the storage."%}
 
 1. Go to the Dashboard.
