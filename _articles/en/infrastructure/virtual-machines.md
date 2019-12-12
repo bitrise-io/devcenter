@@ -13,7 +13,7 @@ menu:
 ---
 On [bitrise.io](https://www.bitrise.io), we have macOS and Linux virtual machines hosted for your builds. You can select from multiple stacks, each with its own list of preinstalled tool versions. Read more about available stacks and stack prepare types in the [Available Stacks docs](/infrastructure/available-stacks/).
 
-The user which is used for the builds is configured with **passwordless sudo** enabled, this way you are able to install all the extra things you need for your builds and for other automation. If a tool is not preinstalled on your Stack of choice, you can install it yourself - see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide.
+The user account that is used for the buils is configured to have **passwordless sudo** enabled. This way you are able to install all the extra things you need for your builds and for other automation. If a tool is not preinstalled on your Stack of choice, you can install it yourself - see the [Install Any Additional Tool](/tips-and-tricks/install-additional-tools/) guide.
 
 ## Security
 
