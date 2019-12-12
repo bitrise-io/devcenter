@@ -8,9 +8,9 @@ menu:
 ---
 [Xamarin](/tutorials/xamarin/index/) provides a developer with tools that can help them building cross-platform mobile applications. [Bitrise](https://app.bitrise.io/users/sign_in) supports Xamarin apps, of course: this guide aims to walk you through the procedure of:
 
-* Adding a Xamarin app to Bitrise
-* Testing the app
-* Deploying the app
+* Adding a Xamarin app to Bitrise.
+* Testing the app.
+* Deploying the app.
 
 You can do the entire procedure in a single Workflow but we recommend using at least two: one to test your app and one to deploy it. There is no need to have separate Workflows for the different project types, though: you can build both; an iOS and an Android version of a Xamarin app within a single Workflow.
 
@@ -87,9 +87,9 @@ If you're interested in Calabash UI testing on Bitrise, check out this [discuss 
 
 With the help of Bitrise, you can deploy a Xamarin app to:
 
-* Bitrise.io
-* the App Store
-* Google Play
+* Bitrise.io.
+* the App Store.
+* Google Play.
 
 To deploy your app, you need to build, sign and export the application file.
 
@@ -114,8 +114,8 @@ Read more about using the **Android Sign** Step [in our guide](/code-signing/and
 
 1. Set up your code signing identity and provisioning profile [on Visual Studio](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/provisioning/).
 2. In the solution file, find the iOS project you want to build and set up its project options. You need to set:
-   * the signing identity you want to use (for example, Developer)
-   * the provisioning profile
+   * the signing identity you want to use (for example, Developer).
+   * the provisioning profile.
 
    You can also set up custom entitlements in a .plist file.
 3. On your own machine, use our [codesigndoc](https://github.com/bitrise-tools/codesigndoc) tool to collect the code signing files of your project.
