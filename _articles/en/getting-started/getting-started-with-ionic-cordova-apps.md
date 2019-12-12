@@ -16,15 +16,15 @@ You can use Cordova and Ionic frameworks to develop cross-platform apps. Bitrise
  1. Log into [bitrise.io](https://www.bitrise.io/).
  2. Click the **+** sign on the top menu bar and select **Add app**, which takes you to the [**Create New App**](https://app.bitrise.io/apps/add) page.
  3. Choose the account you wish to add the app to.
- 4. Set the privacy of the app to either private or [public](/getting-started/adding-a-new-app/public-apps) and click **Next**.
+ 4. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click **Next**.
  5. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
  6. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
  7. Type the name of the branch that includes your project’s configuration - `master`, for example, - then click **Next**.
  8. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them.
  9. At **Project Build configuration**, you can select which platform to build your app for. You can select:
-    * iOS
-    * Android
-    * iOS and Android (where the Android build gets built first)
+    * iOS.
+    * Android.
+    * iOS and Android (where the Android build gets built first).
 
     ![](/img/project-build-cordova.png)
 
@@ -52,7 +52,7 @@ As an example, have a look at a Cordova **primary workflow** containing **Karma 
 
 ## Dependencies
 
-To install Javascript dependencies listed in your app's **package.json** file, you can use either **Run npm command** or **Run yarn command** Steps.
+To install Javascript dependencies listed in your app's `package.json` file, you can use either **Run npm command** or **Run yarn command** Steps.
 
 **Run npm command** Step is by default part of your primary and deploy Workflows. Make sure you have **The npm command with arguments to run** field set to **install** in **Run npm command** Step.
 
@@ -62,7 +62,7 @@ Leave the input field of **The 'yarn' command to run** empty or set it to **inst
 
 ## Testing Ionic/Cordova apps
 
-Perform unit testing by our **Karma Jasmine Test Runner** or **Jasmine Test Runner** Steps. If your Cordova/Ionic project has Karma Jasmine dependency in its **package.json** file, our scanner will detect it and automatically insert the respective testing step into your workflow. If this dependency is missing from your project, you can manually insert one of steps to your workflow using our Workflow Editor - just make sure you place it right after **Run npm command** or **Run yarn command** package manager Step.
+Perform unit testing by our **Karma Jasmine Test Runner** or **Jasmine Test Runner** Steps. If your Cordova/Ionic project has Karma Jasmine dependency in its `package.json` file, our scanner will detect it and automatically insert the respective testing step into your workflow. If this dependency is missing from your project, you can manually insert one of steps to your workflow using our Workflow Editor - just make sure you place it right after **Run npm command** or **Run yarn command** package manager Step.
 
 ## Code signing
 
@@ -130,7 +130,7 @@ Now that we're ready for deployment, let's see how to publish your iOS and Andro
 2. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
-   * Apple ID
+   * Apple ID.
    * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
@@ -151,13 +151,13 @@ Before you'd use the **Deploy to Google Play** Step, make sure you have performe
 Now let's head back to Bitrise and finish off the deploy configuration!
 
 1. In your Bitrise **Dashboard**, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
-2. Copy the env key which stores your uploaded file’s url. For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+2. Copy the env key which stores your uploaded file’s url. For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
 3. Add the **Deploy to Google Play** Step after **Cordova Archive** or **Ionic Archive** Step in your deploy workflow.
 4. Fill out the required input fields:
 
-* **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-* **Package name**: the package name of your Android app
-* **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
+* **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
+* **Package name**: the package name of your Android app.
+* **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
 
 ### Deploying to Bitrise
 
