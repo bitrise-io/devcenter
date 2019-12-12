@@ -113,8 +113,8 @@ The Android chunk of code signing is done. Let's continue with iOS!
 
 To deploy to Testflight and to the App Store, you will need the following code signing files:
 
-* an iOS **Distribution** Certificate
-* an **App Store** type Provisioning Profile
+* an iOS **Distribution** certificate.
+* an **App Store** type provisioning profile.
 
 1. Open the **Workflow** tab of your project on [bitrise.io](https://www.bitrise.io).
 2. Click on **Code Signing** tab.
@@ -157,7 +157,7 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 3. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
-   * Apple ID
+   * Apple ID.
    * password or, if you use two-factor authentication on iTunes Connect, your app-specific password.
 
    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
@@ -185,11 +185,11 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 2. Copy the env key which stores your uploaded file’s url.
 
-   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
 3. Add the **Deploy to Google Play** Step after the **Sign APK** Step in your deploy workflow.
 4. Fill out the required input fields as follows:
 
-   **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
 
    **Package name**: the package name of your Android app.
 
