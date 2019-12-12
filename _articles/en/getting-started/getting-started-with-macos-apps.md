@@ -26,10 +26,10 @@ In this guide, we'll walk you through how to add a MacOS app to Bitrise, how to 
    ![](/img/project-build-config-macos.png)
 
    Once you clicked it, you should see your:
-   * Project or Workspace path
-   * Scheme name
-   * Export method
-   * MacOS stack
+   * Project or Workspace path.
+   * Scheme name.
+   * Export method.
+   * MacOS stack.
 9. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
 
 ## Running Xcode tests
@@ -40,8 +40,8 @@ Once you created your app, the first build will run based on the automatically c
 
 If you have test targets defined, the **primary** Workflow of a MacOS app includes the two [Steps](/getting-started/getting-started-steps) you need to run your Xcode tests, and view their results on [bitrise.io](https://bitrise.io/):
 
-* Xcode Test for Mac
-* Deploy to Bitrise.io
+* Xcode Test for Mac.
+* Deploy to Bitrise.io.
 
 {% include message_box.html type="note" title="Code signing files" content="Running Xcode tests and deploying their results to Bitrise do not require any code signing files.
 
@@ -51,7 +51,7 @@ The **Xcode Test for Mac** step runs the pre-defined Xcode tests. It has a defau
 
 The **Deploy to Bitrise.io** will deploy the following to the **Logs** and [Apps & Artifacts](/builds/build-artifacts-online/) tab of the build:
 
-* your Xcode test results
+* your Xcode test results.
 * your raw `xcodebuildoutput` log.
 
 ## Code signing and exporting a MacOS app
@@ -62,9 +62,9 @@ To install and test the app on other physical devices, you will need to create a
 
 You will need:
 
-* the automatically created `deploy` workflow
-* a **Development** certificate (a .p12 certificate file)
-* a **Development** type Provisioning Profile. For a MacOS project, the file extension of the provisioning profile is _.provisionprofile_.
+* the automatically created `deploy` workflow.
+* a **Development** certificate (a .p12 certificate file).
+* a **Development** type Provisioning Profile. For a MacOS project, the file extension of the provisioning profile is `.provisionprofile`.
 
 1. Set the code signing type of your project in Xcode to either manual or automatic (Xcode managed), and generate the package file locally.
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
@@ -90,8 +90,8 @@ If you set up your code signing files and created an .app or .pkg file for your 
 
 To deploy to the App Store, you will need more code signing files:
 
-* a **Mac App** **Distribution** Certificate
-* a **Mac** **Installer Distribution** certificate
+* a **Mac App** **Distribution** certificate.
+* a **Mac** **Installer Distribution** certificate.
 
 1. On your local machine, set up App Store code signing for your project in Xcode, and export an .app or .pkg file. If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
@@ -103,7 +103,7 @@ To deploy to the App Store, you will need more code signing files:
 6. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
-   * Apple ID
+   * Apple ID.
    * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
    Don't worry, the password will not be visible in the logs or exposed - [that's why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
