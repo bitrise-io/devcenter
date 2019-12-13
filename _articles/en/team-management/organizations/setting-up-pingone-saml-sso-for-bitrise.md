@@ -18,7 +18,7 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML SS
 This requires:
 
 * A PingOne administrator who is logged into [PingOne](https://admin.pingone.com/web-portal/login).
-* A Bitrise Organization owner who is logged into his/her Bitrise Organization.
+* A Bitrise Organization owner who is logged into their Bitrise Organization.
 * The Bitrise Organization must have an [Org Elite subscription](https://www.bitrise.io/pricing/teams).
 
 ## Adding Bitrise to Ping Identity
@@ -41,7 +41,7 @@ This requires:
       ![](/img/appconfig-requiredfields-bitrise.jpg)
  5. Continue to the next step.
  6. At **SSO Attribute Mapping**, you don’t have to change anything, proceed to the next step.
- 7. At **Group Access**, add the group/s to your application. These groups will be able to access Bitrise through SAML SSO. Continue to the next step.
+ 7. At **Group Access**, add the group(s) to your application. These groups will be able to access Bitrise through SAML SSO. Continue to the next step.
 
     ![](/img/group-access-pingone.jpg)
  8. At the **Review Setup** page, you can doublecheck the details you provided in the previous steps. Make sure you download the following files from this review page:
