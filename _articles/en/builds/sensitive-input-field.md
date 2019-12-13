@@ -16,7 +16,7 @@ menu:
     weight: 19
 
 ---
-Any sensitive information such as passwords, IDs, and API tokens are exposed in the build logs/bitrise.yml of your public apps, hence visible to anyone who has the build URL of the app. You can hide these inputs with secret Environment Variables (Env Vars) so that those are not available in build logs/bitrise.yml. To make the sensitive input fields obvious in our Workflow Editor, we've marked them with a yellow **SENSITIVE** label in Steps holding sensitive input fields. These inputs must be defined with the help of secret Env Vars and not with Env Vars!
+Any sensitive information such as passwords, IDs, and API tokens are exposed in the build logs/bitrise.yml of your public apps, hence visible to anyone who has the build URL of the app. You can hide these inputs with secret Environment Variables (Env Vars) so that those are not available in build logs/`bitrise.yml`. To make the sensitive input fields obvious in our Workflow Editor, we've marked them with a yellow **SENSITIVE** label in Steps holding sensitive input fields. These inputs must be defined with the help of secret Env Vars and not with Env Vars!
 
 You can hide any input of your choice with secret Env Vars even if the field is not labeled **SENSITIVE** but you must use secret Env Vars for fields which are by default marked as **SENSITIVE**.
 
@@ -24,8 +24,8 @@ You can hide any input of your choice with secret Env Vars even if the field is 
 
 There are two ways to define secret Env Vars:
 
-* directly [in the steps](/sensitive-input-field/#set-a-sensitive-input-in-a-step/)
-* in the [Secrets tab](/builds/env-vars-secret-env-vars#about-secrets) of your Workflow Editor and select the secret Env Var in a step input when needed.
+* Directly [in the steps](/sensitive-input-field/#set-a-sensitive-input-in-a-step/).
+* In the [Secrets tab](/builds/env-vars-secret-env-vars#about-secrets) of your Workflow Editor and select the secret Env Var in a step input when needed.
 
 Head over to [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) to find out the difference between Env Vars and Secrets!
 
@@ -45,7 +45,7 @@ The selected or newly created secret env var will get automatically saved into t
 
 ![](/img/select-secret-variable.png)
 
-You can always modify the secret Env Var registered for a **SENSITIVE**8 input field if you click the **Select secret variable** button or head over to the **Secrets** tab where you get a full list of your secret env vars.
+You can always modify the secret Env Var registered for a **SENSITIVE** input field if you click the **Select secret variable** button or head over to the **Secrets** tab where you get a full list of your secret env vars.
 
 {% include message_box.html type="important" title="Select secret variable" content=" Note that you cannot modify the input manually in the input field marked with the **SENSITIVE** label! Instead, click the **Select secret variable** to replace the existing input with another secret Env Var from the list or to create a new one in the **Insert variable** pop-up. "%}
 
