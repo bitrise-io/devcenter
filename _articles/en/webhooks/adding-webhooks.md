@@ -22,8 +22,8 @@ To have Bitrise automatically start a build every time you push code into your r
 
 There are two ways to automatically set up an incoming webhook:
 
-* when adding a new app
-* on the `Code` tab of the app
+* When adding a new app.
+* On the `Code` tab of the app.
 
 {% include message_box.html type="note" title="Automatic webhook registration" content=" Automatic webhook registration is supported for apps hosted on GitHub, GitLab and Bitbucket. "%}
 
@@ -39,8 +39,8 @@ If you select `GitHub`, `GitLab` or `Bitbucket` as the source code provider when
 
 You can automatically register a webhook to the repository on the `Code` tab of the app. This requires:
 
-* that you have admin rights to the repository
-* that the account that hosts the repository is connected to your Bitrise account.
+* That you have admin rights to the repository.
+* That the account that hosts the repository is connected to your Bitrise account.
 
 Open your app on bitrise.io and go to the `Code` tab.
 
@@ -75,8 +75,8 @@ You can find detailed description about the setup on the Code tab or select a pr
 
 You can also set up [outgoing webhooks](/webhooks/adding-outgoing-webhooks/) on Bitrise. With these, Bitrise can notify any selected service about your build events. A build event is:
 
-* when a build is started
-* when a build ends.
+* When a build is started.
+* When a build ends.
 
 ## Troubleshooting
 
