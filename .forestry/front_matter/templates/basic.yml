@@ -28,257 +28,257 @@ fields:
   label: Summary
   description: Summary of the article for generating related article links
 pages:
-- _articles/en/webhooks/troubleshooting.md
-- _articles/en/infrastructure/the-environment.md
-- _articles/en/getting-started/account-security.md
-- _articles/jp/builds/configuring-notifications.md
-- _articles/jp/api/incoming-and-outgoing-webhooks.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
-- _articles/en/reviews/Japanese translations/webhooks/outgoing-webhook-の追加-adding-outgoing-webhooks.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/bitrise-ioへiosアプリのデプロイ-deploying-an-ios-app-to-bitrise-io.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-ymlの基礎知識-basics-of-bitrise-yml.md
-- _articles/jp/infrastructure/stack-update-and-removal-policy.md
-- _articles/en/troubleshooting/frequent-android-issues.md
-- _articles/en/testing/running-detox-tests-on-bitrise.md
-- _articles/en/testing/running-xcode-tests.md
-- _articles/en/reviews/Japanese translations/チュートリアル (Tutorials)/コミュニティによるチュートリアル-community-created-tutorials.md
-- _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
-- _articles/jp/testing/test-reports.md
-- _articles/en/builds/remote-access.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーの変更方法を教えて下さい-how-to-change-the-owner-of-an-app.md
-- _articles/en/infrastructure/stack-update-and-removal-policy.md
-- _articles/jp/getting-started/bitriseへのサインアップ.md
-- _articles/en/steps-and-workflows/step-inputs.md
-- _articles/jp/tips-and-tricks/screen-recording-your-ui-tests-with-appium.md
-- _articles/en/troubleshooting/resetting-your-password.md
-- _articles/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
-- _articles/en/testing/exporting-to-test-reports-from-custom-script-steps.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
-- _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/単一ワークフローでの複数のフレーバーapkの生成とデプロイ-generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
-- _articles/en/reviews/Japanese translations/テスト (Testing)/bitrise上でdetoxテストの実行-running-detox-tests-on-bitrise.md
-- _articles/en/reviews/Japanese translations/webhooks/assembla-webhookの追加-adding-an-assembla-webhook.md
-- _articles/en/reviews/Japanese translations/webhooks/deveo-webhookの追加-adding-a-deveo-webhook.md
-- _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
-- _articles/jp/builds/remote-access.md
-- _articles/en/getting-started/managing-files-on-bitrise.md
-- _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
-- _articles/en/builds/configuring-notifications.md
-- _articles/en/builds/available-environment-variables.md
-- _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
-- _articles/en/bitrise-cli/step-inputs.md
-- _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
-- _articles/en/testing/device-testing-for-ios.md
-- _articles/en/faq/how-to-change-the-owner-of-an-app.md
-- _articles/en/api/managing-ios-code-signing-files.md
-- _articles/en/troubleshooting/trigger-doesnt-work.md
-- _articles/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
-- _articles/jp/troubleshooting/resetting-your-password.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
-- _articles/en/webhooks/adding-outgoing-webhooks.md
-- _articles/en/builds/bitrise-yml-online.md
-- _articles/en/team-management/user-roles-on-app-teams.md
-- _articles/en/builds/Scheduling-Builds.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/シミュレータ用iosアプリのデプロイ.md
-- _articles/en/getting-started/index.md
-- _articles/en/reviews/Japanese translations/webhooks/webhook-トラブルシューティング-webhook-troubleshooting.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
-- _articles/en/getting-started/getting-started-with-expo-apps.md
-- _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
-- _articles/en/builds/triggering-builds/status-reporting.md
-- _articles/en/getting-started/signing-up-to-bitrise.md
-- _articles/en/tips-and-tricks/android-tips-and-tricks.md
-- deploy.md
-- _articles/en/infrastructure/available-stacks.md
-- _articles/en/team-management/organizations/managing-billing-sub.md
-- _articles/en/steps-and-workflows/default-workflows.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/招待に関するよくある質問-invitation-faq.md
-- _articles/en/reviews/ship-add-on-test.md
-- _articles/en/builds/bitrise-checks-on-github-checks.md
-- _articles/jp/builds/bitrise-checks-on-github-checks.md
-- _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
-- _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/ship機能を使ったデプロイ-deploying-with-ship.md
-- _articles/en/steps-and-workflows/adding-removing-steps.md
-- _articles/en/steps-and-workflows/managing-workflows.md
-- _articles/en/builds/triggering-builds/trigger-pull-request.md
-- _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
-- _articles/en/testing/android-run-a-unit-test.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/トラブルシューティング-troubleshooting.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/パスワードのリセット-resetting-your-password.md
-- _articles/en/bitrise-cli/step-outputs.md
-- _articles/en/bitrise-cli/step-properties.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
-- _articles/en/getting-started/adding-an-app-from-a-cli.md
-- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/bitriseに貢献する方法-how-to-contribute-bitrise.md
-- _articles/jp/deploy/deploy-apps-to-applivery-from-bitrise.md
-- _articles/en/getting-started/getting-started-with-react-native-apps.md
-- _articles/en/bitrise-cli/workflows.md
-- _articles/en/bitrise-cli/step-timeout.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイについて-android-deployment.md
-- _articles/jp/builds/caching/caching-homebrew-installers.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/xcodeの問題点のリスト-list-of-known-xcode-issues.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/github-gitlab-bitbucketでビルドステータスが動作しない-build-status-indicator-on-github-gitlab-bitbucket-does-not-work.md
-- _articles/en/deploy/android-deploy/deploying-android-apps.md
-- _articles/en/reviews/ship-add-on-beta-version.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドの番号付けとアプリバージョン管理-build-numbering-and-app-versioning.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/秘密と環境設定-secrets-and-env-vars.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/setting-your-git-credentials-on-build-machines.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/sensitive-input-in-public-apps.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/bitrise-ymlファイルへのオンラインアクセス-accessing-the-bitrise-yml-file-online.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
-- _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md
-- _articles/en/api/response-and-pagination.md
+- _articles/en/api/adding-and-managing-apps.md
 - _articles/en/api/authentication.md
+- _articles/en/api/build-trigger.md
+- _articles/en/api/endpoints.md
 - _articles/en/api/incoming-and-outgoing-webhooks.md
 - _articles/en/api/managing-files-in-generic-file-storage.md
-- _articles/en/api/adding-and-managing-apps.md
-- _articles/en/troubleshooting/workflow-editor-doesnt-load.md
-- _articles/en/troubleshooting/github-pull-request-status-troubleshooting.md
-- _articles/en/troubleshooting/enabling-bitrise-support-user.md
-- _articles/en/troubleshooting/frequent-ios-issues.md
-- _articles/en/troubleshooting/known-xcode-issues.md
-- _articles/en/troubleshooting/debugging-your-build-on-your-own-machine.md
-- _articles/en/faq/grant-access-to-bitbucket-team.md
-- _articles/en/faq/grant-access-to-github-organization.md
-- _articles/en/faq/android-x86-emulator.md
-- _articles/en/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
-- _articles/en/faq/organization-faq.md
-- _articles/en/faq/adding-projects-with-submodules.md
-- _articles/en/faq/how-to-generate-ssh-keypair.md
-- _articles/en/faq/no-builds-are-triggered-automatically.md
-- _articles/en/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
-- _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
-- _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
-- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
-- _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
-- _articles/jp/api/response-and-pagination.md
-- _articles/jp/api/authentication.md
-- _articles/en/bitrise-cli/run-your-first-build.md
+- _articles/en/api/managing-ios-code-signing-files.md
+- _articles/en/api/response-and-pagination.md
+- _articles/en/bitrise-cli/basics-of-bitrise-yml.md
+- _articles/en/bitrise-cli/customizing-bitrise-yml.md
+- _articles/en/bitrise-cli/index.md
 - _articles/en/bitrise-cli/initializing-a-bitrise-project-locally.md
 - _articles/en/bitrise-cli/installation.md
-- _articles/en/bitrise-cli/index.md
-- _articles/en/bitrise-cli/secrets.md
 - _articles/en/bitrise-cli/most-important-concepts.md
 - _articles/en/bitrise-cli/offline-workflow-editor.md
-- _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
-- _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
-- _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
-- _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
-- _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/イントロ-intro.md
-- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/keystoreファイルのダウンロード-downloading-a-keystore-file.md
-- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
-- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
-- _articles/en/reviews/Japanese translations/webhooks/github-webhookの追加-adding-a-github-webhook.md
-- _articles/en/reviews/Japanese translations/webhooks/webhookの追加-adding-webhooks.md
-- _articles/en/reviews/Japanese translations/webhooks/visual-studio-webhookの追加-adding-a-visual-studio-webhook.md
-- _articles/en/reviews/Japanese translations/webhooks/gitlab-webhookの追加-adding-a-gitlab-webhook.md
-- _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
-- _articles/en/builds/env-vars-secret-env-vars.md
+- _articles/en/bitrise-cli/run-your-first-build.md
+- _articles/en/bitrise-cli/secrets.md
+- _articles/en/bitrise-cli/step-inputs.md
+- _articles/en/bitrise-cli/step-outputs.md
+- _articles/en/bitrise-cli/step-properties.md
+- _articles/en/bitrise-cli/step-timeout.md
+- _articles/en/bitrise-cli/steps.md
+- _articles/en/bitrise-cli/workflows.md
+- _articles/en/builds/Scheduling-Builds.md
+- _articles/en/builds/available-environment-variables.md
+- _articles/en/builds/bitrise-checks-on-github-checks.md
+- _articles/en/builds/bitrise-yml-online.md
 - _articles/en/builds/build-artifacts-online.md
+- _articles/en/builds/build-logs.md
+- _articles/en/builds/build-numbering-and-app-versioning.md
+- _articles/en/builds/caching/caching-homebrew-installers.md
+- _articles/en/builds/configuring-notifications.md
+- _articles/en/builds/env-vars-secret-env-vars.md
+- _articles/en/builds/remote-access.md
+- _articles/en/builds/rolling-builds.md
+- _articles/en/builds/selective_builds.md
 - _articles/en/builds/sensitive-input-field.md
 - _articles/en/builds/setting-your-git-credentials-on-build-machines.md
-- _articles/en/reviews/Japanese translations/webhooks/slack-webhookの追加-adding-a-slack-webhook.md
-- _articles/en/reviews/Japanese translations/webhooks/gogs-webhookの追加-adding-a-gogs-webhook.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/外部テスト用アプリのデプロイ-deploying-an-ios-app-for-external-testing.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/iosアプリのデプロイについて-introduction-to-deploying-ios-apps.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/itunes-connectへiosアプリのデプロイ.md
-- _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
-- _articles/en/builds/triggering-builds/trigger-code-push.md
-- _articles/en/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
 - _articles/en/builds/triggering-builds/approving-pull-request-builds.md
+- _articles/en/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
+- _articles/en/builds/triggering-builds/status-reporting.md
+- _articles/en/builds/triggering-builds/trigger-code-push.md
+- _articles/en/builds/triggering-builds/trigger-git-tags.md
 - _articles/en/builds/triggering-builds/trigger-map.md
-- _articles/en/builds/selective_builds.md
-- _articles/en/builds/build-logs.md
-- _articles/en/steps-and-workflows/skipping-steps.md
-- _articles/en/steps-and-workflows/getting-started-workflows.md
-- _articles/en/steps-and-workflows/getting-started-steps.md
-- _articles/en/team-management/organizations/members-organizations.md
-- _articles/en/team-management/organizations/managing-invoices.md
-- _articles/en/team-management/organizations/org-ownership.md
-- _articles/en/team-management/organizations/managing-apps.md
-- _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
-- _articles/en/team-management/organizations/creating-org.md
-- _articles/en/team-management/changing-the-owner-of-an-app.md
-- _articles/en/getting-started/getting-started-with-ios-apps.md
-- _articles/en/getting-started/code-security.md
-- _articles/en/getting-started/getting-started-with-flutter-apps.md
-- _articles/en/getting-started/getting-started-with-android-apps.md
-- _articles/en/builds/build-numbering-and-app-versioning.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
-- _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
-- _articles/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
-- _articles/en/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
-- _articles/en/tutorials/creating-white-label-app-versions.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-cli-bitrise-cli.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/bitriseからdeploygateへアプリのデプロイ.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/よくある質問-faq.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーを変更する方法を教えて下さい-how-to-change-the-owner-of-an-app.md
-- _articles/jp/steps-and-workflows/copying-a-workflow-from-one-app-to-another.md
-- _articles/en/steps-and-workflows/creating-workflows.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/github-organization-組織-へbitriseのアクセスを許可する方法はありますか-how-to-grant-bitrise-access-to-a-github-organization.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/サブモジュールもしくはプライベートレポジトリ依存が含まれるプロジェクトを追加することは可能ですか-can-i-add-projects-with-submodules-or-with-private-repo-dependencies.md
-- _articles/jp/getting-started/signing-up-to-bitrise.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/detached-head状態からgit-checkoutを行うのはどうすればいいですか-how-can-i-git-checkout-from-a-detached-head-state.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/レポジトリへ依存性をコミットしたほうがいいですか-should-i-commit-my-dependencies-into-my-repository.md
-- _articles/en/team-management/organizations/saml-sso-in-organizations.md
-- _articles/en/bitrise-cli/basics-of-bitrise-yml.md
-- _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
-- _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/bitbucket-teamへbitriseのアクセスを許可する方法を教えて下さい-how-can-i-grant-bitrise-access-to-a-bitbucket-team.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/why-does-my-build-take-longer-on-bitrise-than-on-my-machine.md
-- _articles/jp/team-management/organizations/setting-up-ping-identity-sso-for-bitrise.md
-- _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
-- _articles/en/faq/invitation-faq.md
-- _articles/jp/faq/Invitation FAQ.md
-- _articles/en/infrastructure/virtual-machines.md
-- _articles/jp/troubleshooting/no-activity-summaries-found-for-test.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/デプロイ-deployment.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/最重要コンセプト-most-important-concepts.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/アプリへのbitrise-support-userを有効化する-enabling-bitrise-support-user-for-your-app.md
-- _articles/en/infrastructure/customisable-enterprise-build-platforms.md
-- _articles/jp/infrastructure/customisable-enterprise-build-platforms.md
-- _articles/en/testing/test-reports.md
-- _articles/en/team-management/organizations/setting-up-onelogin-sso-for-bitrise.md
-- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/ローカルでのbitriseプロジェクトの初期設定-initializing-a-bitrise-project-locally.md
-- _articles/en/deploy/ship.md
-- _articles/jp/deploy/ship.md
-- _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
-- _articles/en/api/endpoints.md
-- _articles/en/api/build-trigger.md
-- _articles/en/testing/device-testing-for-android.md
-- _articles/en/bitrise-cli/steps.md
-- _articles/en/bitrise-cli/customizing-bitrise-yml.md
+- _articles/en/builds/triggering-builds/trigger-multiple-workflows.md
+- _articles/en/builds/triggering-builds/trigger-pull-request.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-in-gradle.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step.md
+- _articles/en/code-signing/android-code-signing/android-code-signing-with-android-studio.md
+- _articles/en/code-signing/android-code-signing/downloading-a-keystore-file.md
+- _articles/en/code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
+- _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xamarin.md
+- _articles/en/code-signing/ios-code-signing/create-signed-ipa-for-xcode.md
+- _articles/en/code-signing/ios-code-signing/exporting-code-signing-files.md
+- _articles/en/code-signing/ios-code-signing/ionic-cordova-code-signing.md
+- _articles/en/code-signing/ios-code-signing/ios-auto-provisioning.md
 - _articles/en/code-signing/ios-code-signing/ios-code-signing-troubleshooting.md
 - _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
-- _articles/en/code-signing/ios-code-signing/collecting-files-with-codesigndoc.md
-- _articles/en/builds/rolling-builds.md
-- _articles/en/builds/triggering-builds/trigger-git-tags.md
-- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイ-deploying-android-apps.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/build-artifacts-online.md
-- _articles/en/reviews/Japanese translations/ビルド(Builds)/利用可能な環境変数-available-environment-variables.md
-- _articles/jp/testing/exporting-to-test-reports-from-custom-script-steps.md
-- _articles/jp/getting-started/getting-started-with-expo-apps.md
-- _articles/en/builds/caching/caching-homebrew-installers.md
-- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のstepを作成-シェアする-creating-and-sharing-your-own-step.md
-- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のbitriseプロジェクトスキャナを作成する-creating-your-own-bitrise-project-scanner.md
-- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/なぜadd-new-app-新規のアプリを追加する-ページに私のgithub-organization-組織-repository-レポジトリ-が表示されないのですか-why-can-t-i-see-my-github-organization-repository-on-the-add-new-app-page.md
-- _articles/en/troubleshooting/no-activity-summaries-found-for-test-with-danger.md
+- _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
+- _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
+- _articles/en/deploy/android-deploy/deploying-android-apps.md
+- _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
+- _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
+- _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-external-testing.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-for-simulators.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io.md
+- _articles/en/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect.md
+- _articles/en/deploy/ship.md
+- _articles/en/faq/adding-projects-with-submodules.md
+- _articles/en/faq/android-x86-emulator.md
+- _articles/en/faq/grant-access-to-bitbucket-team.md
+- _articles/en/faq/grant-access-to-github-organization.md
+- _articles/en/faq/how-can-i-git-checkout-from-a-detached-head-state.md
+- _articles/en/faq/how-to-change-the-owner-of-an-app.md
+- _articles/en/faq/how-to-generate-ssh-keypair.md
+- _articles/en/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page.md
+- _articles/en/faq/invitation-faq.md
+- _articles/en/faq/no-builds-are-triggered-automatically.md
+- _articles/en/faq/organization-faq.md
+- _articles/en/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
+- _articles/en/getting-started/account-security.md
+- _articles/en/getting-started/adding-an-app-from-a-cli.md
+- _articles/en/getting-started/code-security.md
+- _articles/en/getting-started/getting-started-with-android-apps.md
+- _articles/en/getting-started/getting-started-with-expo-apps.md
+- _articles/en/getting-started/getting-started-with-flutter-apps.md
+- _articles/en/getting-started/getting-started-with-ios-apps.md
+- _articles/en/getting-started/getting-started-with-react-native-apps.md
+- _articles/en/getting-started/index.md
+- _articles/en/getting-started/managing-files-on-bitrise.md
+- _articles/en/getting-started/signing-up-to-bitrise.md
+- _articles/en/infrastructure/available-stacks.md
+- _articles/en/infrastructure/customisable-enterprise-build-platforms.md
+- _articles/en/infrastructure/stack-update-and-removal-policy.md
+- _articles/en/infrastructure/the-environment.md
+- _articles/en/infrastructure/virtual-machines.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-cli-bitrise-cli.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-ymlの基礎知識-basics-of-bitrise-yml.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/ローカルでのbitriseプロジェクトの初期設定-initializing-a-bitrise-project-locally.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/最重要コンセプト-most-important-concepts.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/イントロ-intro.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/ローカルによるbitriseプロジェクトの初期化-initializing-a-bitrise-project-locally.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/最重要コンセプト-most-important-concepts.md
+- _articles/en/reviews/Japanese translations/Getting Started/bitriseへのサインアップ-signing-up-to-bitrise.md
+- _articles/en/reviews/Japanese translations/organization/チームと組織の概要-teams-and-organizations-overview.md
+- _articles/en/reviews/Japanese translations/webhooks/assembla-webhookの追加-adding-an-assembla-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/deveo-webhookの追加-adding-a-deveo-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/github-webhookの追加-adding-a-github-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/gitlab-webhookの追加-adding-a-gitlab-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/gogs-webhookの追加-adding-a-gogs-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/outgoing-webhook-の追加-adding-outgoing-webhooks.md
+- _articles/en/reviews/Japanese translations/webhooks/slack-webhookの追加-adding-a-slack-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/visual-studio-webhookの追加-adding-a-visual-studio-webhook.md
+- _articles/en/reviews/Japanese translations/webhooks/webhook-トラブルシューティング-webhook-troubleshooting.md
+- _articles/en/reviews/Japanese translations/webhooks/webhookの追加-adding-webhooks.md
 - _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/android-x86-エミュレータをbitriseで走らせることは可能ですか-can-i-run-android-x86-emulator-on-bitrise.md
-- _articles/jp/team-management/organizations/setting-up-onelogin-saml-sso-for-bitrise.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/bitbucket-teamへbitriseのアクセスを許可する方法を教えて下さい-how-can-i-grant-bitrise-access-to-a-bitbucket-team.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/detached-head状態からgit-checkoutを行うのはどうすればいいですか-how-can-i-git-checkout-from-a-detached-head-state.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/github-organization-組織-へbitriseのアクセスを許可する方法はありますか-how-to-grant-bitrise-access-to-a-github-organization.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/why-does-my-build-take-longer-on-bitrise-than-on-my-machine.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/なぜadd-new-app-新規のアプリを追加する-ページに私のgithub-organization-組織-repository-レポジトリ-が表示されないのですか-why-can-t-i-see-my-github-organization-repository-on-the-add-new-app-page.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/よくある質問-faq.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーの変更方法を教えて下さい-how-to-change-the-owner-of-an-app.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/アプリのオーナーを変更する方法を教えて下さい-how-to-change-the-owner-of-an-app.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/サブモジュールもしくはプライベートレポジトリ依存が含まれるプロジェクトを追加することは可能ですか-can-i-add-projects-with-submodules-or-with-private-repo-dependencies.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/レポジトリへ依存性をコミットしたほうがいいですか-should-i-commit-my-dependencies-into-my-repository.md
+- _articles/en/reviews/Japanese translations/よくある質問 (FAQ)/招待に関するよくある質問-invitation-faq.md
+- _articles/en/reviews/Japanese translations/キャッシュについて-about-caching.md
+- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/bitriseに貢献する方法-how-to-contribute-bitrise.md
+- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のbitriseプロジェクトスキャナを作成する-creating-your-own-bitrise-project-scanner.md
+- _articles/en/reviews/Japanese translations/コントリビューターの皆さまへ (For contributors)/独自のstepを作成-シェアする-creating-and-sharing-your-own-step.md
+- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/ionicとcordovaプロジェクトのコード署名-code-signing-with-ionic-and-cordova-projects.md
+- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/keystoreファイルのダウンロード-downloading-a-keystore-file.md
+- _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
+- _articles/en/reviews/Japanese translations/チュートリアル (Tutorials)/コミュニティによるチュートリアル-community-created-tutorials.md
+- _articles/en/reviews/Japanese translations/テスト (Testing)/bitrise上でdetoxテストの実行-running-detox-tests-on-bitrise.md
+- _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/android-app-bundleの生成とデプロイ-generating-and-deploying-android-app-bundles.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/workflow-editorがロードしない-workflow-editor-doesn-t-load.md
-- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/ビルドトリガーが動かない-build-trigger-does-not-work.md
-- _articles/jp/tutorials/creating-a-white-label-app-version.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイ-deploying-android-apps.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイについて-android-deployment.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/bitrise-ioへiosアプリのデプロイ-deploying-an-ios-app-to-bitrise-io.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/bitriseからdeploygateへアプリのデプロイ.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/iosアプリのデプロイについて-introduction-to-deploying-ios-apps.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/itunes-connectへiosアプリのデプロイ.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/ship機能を使ったデプロイ-deploying-with-ship.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/シミュレータ用iosアプリのデプロイ.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/デプロイ-deployment.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/単一ワークフローでの複数のフレーバーapkの生成とデプロイ-generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
+- _articles/en/reviews/Japanese translations/デプロイ (Deployment)/外部テスト用アプリのデプロイ-deploying-an-ios-app-for-external-testing.md
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/dangerを使ったテストのactivity-summaryが見つからない-no-activity-summaries-found-for-test-with-danger.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/github-gitlab-bitbucketでビルドステータスが動作しない-build-status-indicator-on-github-gitlab-bitbucket-does-not-work.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/workflow-editorがロードしない-workflow-editor-doesn-t-load.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/xcodeの問題点のリスト-list-of-known-xcode-issues.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/アプリへのbitrise-support-userを有効化する-enabling-bitrise-support-user-for-your-app.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/トラブルシューティング-troubleshooting.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/パスワードのリセット-resetting-your-password.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/ビルドトリガーが動かない-build-trigger-does-not-work.md
+- _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/bitrise-ymlファイルへのオンラインアクセス-accessing-the-bitrise-yml-file-online.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/build-artifacts-online.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/sensitive-input-in-public-apps.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/setting-your-git-credentials-on-build-machines.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドの番号付けとアプリバージョン管理-build-numbering-and-app-versioning.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/利用可能な環境変数-available-environment-variables.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/秘密と環境設定-secrets-and-env-vars.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
+- _articles/en/reviews/ship-add-on-beta-version.md
+- _articles/en/reviews/ship-add-on-test.md
+- _articles/en/steps-and-workflows/adding-removing-steps.md
 - _articles/en/steps-and-workflows/copying-workflows-from-one-app-to-another.md
+- _articles/en/steps-and-workflows/creating-workflows.md
+- _articles/en/steps-and-workflows/default-workflows.md
+- _articles/en/steps-and-workflows/getting-started-steps.md
+- _articles/en/steps-and-workflows/getting-started-workflows.md
+- _articles/en/steps-and-workflows/managing-workflows.md
+- _articles/en/steps-and-workflows/skipping-steps.md
+- _articles/en/steps-and-workflows/step-inputs.md
+- _articles/en/team-management/changing-the-owner-of-an-app.md
+- _articles/en/team-management/organizations/creating-org.md
+- _articles/en/team-management/organizations/managing-apps.md
+- _articles/en/team-management/organizations/managing-billing-sub.md
+- _articles/en/team-management/organizations/managing-invoices.md
+- _articles/en/team-management/organizations/members-organizations.md
+- _articles/en/team-management/organizations/org-ownership.md
+- _articles/en/team-management/organizations/saml-sso-in-organizations.md
+- _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
+- _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
+- _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
+- _articles/en/team-management/organizations/setting-up-onelogin-sso-for-bitrise.md
+- _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
+- _articles/en/team-management/user-roles-on-app-teams.md
+- _articles/en/testing/android-run-a-unit-test.md
+- _articles/en/testing/device-testing-for-android.md
+- _articles/en/testing/device-testing-for-ios.md
+- _articles/en/testing/exporting-to-test-reports-from-custom-script-steps.md
+- _articles/en/testing/running-detox-tests-on-bitrise.md
+- _articles/en/testing/running-xcode-tests.md
+- _articles/en/testing/test-reports.md
+- _articles/en/tips-and-tricks/android-tips-and-tricks.md
+- _articles/en/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
+- _articles/en/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps.md
+- _articles/en/troubleshooting/debugging-your-build-on-your-own-machine.md
+- _articles/en/troubleshooting/enabling-bitrise-support-user.md
+- _articles/en/troubleshooting/frequent-android-issues.md
+- _articles/en/troubleshooting/frequent-ios-issues.md
+- _articles/en/troubleshooting/github-pull-request-status-troubleshooting.md
+- _articles/en/troubleshooting/known-xcode-issues.md
+- _articles/en/troubleshooting/no-activity-summaries-found-for-test-with-danger.md
+- _articles/en/troubleshooting/resetting-your-password.md
+- _articles/en/troubleshooting/trigger-doesnt-work.md
+- _articles/en/troubleshooting/workflow-editor-doesnt-load.md
+- _articles/en/tutorials/creating-white-label-app-versions.md
+- _articles/en/webhooks/adding-outgoing-webhooks.md
+- _articles/en/webhooks/troubleshooting.md
+- _articles/jp/api/authentication.md
+- _articles/jp/api/incoming-and-outgoing-webhooks.md
+- _articles/jp/api/response-and-pagination.md
+- _articles/jp/builds/bitrise-checks-on-github-checks.md
+- _articles/jp/builds/caching/caching-homebrew-installers.md
+- _articles/jp/builds/configuring-notifications.md
+- _articles/jp/builds/remote-access.md
+- _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
+- _articles/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
+- _articles/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
+- _articles/jp/deploy/deploy-apps-to-applivery-from-bitrise.md
+- _articles/jp/deploy/ship.md
+- _articles/jp/faq/Invitation FAQ.md
+- _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
+- _articles/jp/getting-started/bitriseへのサインアップ.md
+- _articles/jp/getting-started/getting-started-with-expo-apps.md
+- _articles/jp/getting-started/signing-up-to-bitrise.md
+- _articles/jp/infrastructure/customisable-enterprise-build-platforms.md
+- _articles/jp/infrastructure/stack-update-and-removal-policy.md
+- _articles/jp/steps-and-workflows/copying-a-workflow-from-one-app-to-another.md
+- _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
+- _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
+- _articles/jp/team-management/organizations/setting-up-onelogin-saml-sso-for-bitrise.md
+- _articles/jp/team-management/organizations/setting-up-ping-identity-sso-for-bitrise.md
+- _articles/jp/testing/exporting-to-test-reports-from-custom-script-steps.md
+- _articles/jp/testing/test-reports.md
+- _articles/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
+- _articles/jp/tips-and-tricks/screen-recording-your-ui-tests-with-appium.md
+- _articles/jp/troubleshooting/no-activity-summaries-found-for-test.md
+- _articles/jp/troubleshooting/resetting-your-password.md
+- _articles/jp/tutorials/creating-a-white-label-app-version.md
+- deploy.md
