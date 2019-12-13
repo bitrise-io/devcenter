@@ -1,28 +1,26 @@
 ---
-title: Build Trigger does not work
+title: ビルドトリガーが機能しない
 menu:
   troubleshooting-main:
     weight: 17
 
 ---
-{% include not_translated_yet.html %}
+残念ながら Bitrise 上でビルドトリガーが自動的にビルドをトリガーしないことがあります。ビルドを止める可能性がある問題がたくさんあります。 - 見てみましょう！
 
-Unfortunately, it can happen that your build triggers do not trigger a build automatically on Bitrise. There are many potential issues that can stop your builds - let's take a look!
+1. Webhook を確認してください。
 
-1. Check your webhooks.
+    Webhook が正しく設定されていることを確認してください。Webhook URL はアプリの `Code` タブにあり、リポジトリのホスティングプロバイダの設定と一致するかどうかを確認できます。
 
-    Check that you have the webhook set up correctly. You can find out the webhook URL for your repository's hosting provider on the `Code` tab of your app and you can check in your repository's settings if they match.
+    また、ビルドをトリガーする特定のイベントを有効にする必要があります。たとえば、リポジトリが GitLab にホストされていて Git タグでビルドをトリガーしたい場合、 GitLab の Webhook でタグプッシュイベントを有効にしなければなりません。
 
-    Also, you have to enable the specific event that you would like to trigger a build. For example, if your repository is hosted at GitLab and you wish to trigger builds with Git Tags, you must enable Tag Push events in your GitLab webhook.
+    Webhook 関連のデリバリーに失敗したエラーメッセージがある場合は、リポジトリの設定を確認してください。
 
-    Check in your repository's settings if there are any error messages regarding the delivery attempts related to your webhook.
+    Webhook の潜在的な問題についての詳細は、 [Webhook トラブルシューティング](/webhooks/troubleshooting) をご覧ください。
 
-    For more information about potential issues with webhooks, check out [Webhook troubleshooting](/webhooks/troubleshooting)
+1. bitrise.io でトリガーに設定したブランチ名とタグを確認してください。
 
-1. Check the branch names and tags you set up with the trigger on bitrise.io.
+    たとえば、`master` ではなく誤って `msater` と入力した場合、ビルドはトリガーされません。
 
-    For example, if you accidentally typed `msater` instead of `master`, no build will be triggered.
+1. 先にアプリの Selective Builds を有効にしたかどうか確認します。このオプションはアプリの `Settings` ページにあります。この機能を使えば、特定のファイルまたはフォルダが変更されたときのみビルドがトリガーされるよう設定できます。
 
-1. Check if you previously enabled Selective Builds for the app. You can find the option on your app's `Settings` page. With this feature, you can set that a build should be triggered only if certain files or folders have been changed.
-
-1. Check the status page of your repository's hosting provider to see if there are any known issues.
+1. リポジトリのホスティングプロバイダのステータスページに、既知の問題があるかどうかを確認してください。
