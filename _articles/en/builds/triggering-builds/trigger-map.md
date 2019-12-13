@@ -91,7 +91,7 @@ For example:
       pull_request_source_branch: "develop"
       workflow: primary
 
-will only select the `primary` workflow if the pull request's source branch is `develop` AND the target branch is `master`.
+This will only select the `primary` workflow if the pull request's source branch is `develop` AND the target branch is `master`.
 
 If you want to specify filters which should be treated separately, for example, to select `primary` for pull requests where the source is `develop`, as well as select for the ones which target `master`:
 
@@ -184,7 +184,7 @@ When you start a pull request from the same repository (not from a fork, just fr
 {% include message_box.html type="important" title="Pull Request build" content=" Although it might seem like both builds are the same, it most likely isn't! The code push event / build builds the code of the branch, without any merging, etc. It builds the exact same state of the code what you have when you checkout that branch. The pull request build on the other hand builds a pre-merged state of the code. This pre-merged state is not the final merged version of the code, it only represents a clone of how the code will look like after you merged the pull request.
 "%}
 
-Whether you want to build both or just one of these in case of a pull request is up to you and depends on your project's requirements, but with `bitrise` you can decide whether you want it or not.
+Whether you want to build both or just one of these in case of a pull request is up to you and depends on your project's requirements, but with Bitrise you can decide whether you want it or not.
 
 {% include message_box.html type="note" title="Pull Request merge is a Code Push" content=" Source code hosting services treat the event of merge as a code push event. For example, if you merge a pull request from `feature/a` into `master`, when you merge the PR it will generate a code push to `master`.
 "%}
@@ -199,7 +199,7 @@ trigger_map:
   workflow: primary
 ```
 
-or if you don't want to start a build for pull requests, only for code push events:
+Or if you don't want to start a build for pull requests, only for code push events:
 
 ```yaml
 trigger_map:
@@ -214,7 +214,7 @@ trigger_map:
 Another common CI/CD pattern is to have three workflows:
 
 * A Test workflow, which will run for every pull request, every code push on `feature/` branches etc.,
-  to test whether the test can be integrated into a release (branch)
+  to test whether the test can be integrated into a release (branch).
 * A Staging deployment workflow, to deploy the app/code to an internal/testing system. Examples:
   * In the case of an iOS app, this can be, for example, an ad hoc signed IPA deployed to HockeyApp, where your tester team can download and test it, or a deploy to iTunes Connect / TestFlight for internal testing.
   * In the case of an Android app, this can be a deploy to Google Play to a beta track.
@@ -246,9 +246,9 @@ trigger_map:
 
 This trigger map configuration will trigger a build:
 
-* with the `deploy-to-production` workflow if a new tag (with the format `v*.*.*`,  `v1.0.0`) is pushed.
-* with the `deploy-to-staging` workflow if a code push happens on the `master` branch (for example, a pull request is merged into the `master` branch).
-* with the `primary` workflow for any other branch and for pull requests.
+* With the `deploy-to-production` workflow if a new tag (with the format `v*.*.*`,  `v1.0.0`) is pushed.
+* With the `deploy-to-staging` workflow if a code push happens on the `master` branch (for example, a pull request is merged into the `master` branch).
+* With the `primary` workflow for any other branch and for pull requests.
 
 ### Using a Branch to trigger the production deployment
 
@@ -266,9 +266,9 @@ trigger_map:
 
 This trigger map configuration will trigger a build:
 
-* with the `deploy-to-production` workflow if a code push happens on the `master` branch (for example, a git flow release branch merged into `master`).
-* with the `deploy-to-staging` workflow if a code push happens on the `develop` branch (for example, a pull request is merged into the `develop` branch).
-* with the `primary` workflow for any other branch and for pull requests.
+* With the `deploy-to-production` workflow if a code push happens on the `master` branch (for example, a git flow release branch merged into `master`).
+* With the `deploy-to-staging` workflow if a code push happens on the `develop` branch (for example, a pull request is merged into the `develop` branch).
+* With the `primary` workflow for any other branch and for pull requests.
 
 ## How to build only pull requests
 
