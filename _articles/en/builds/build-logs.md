@@ -35,15 +35,15 @@ When you run a build, a build log is generated automatically. Every build has it
 
 All Bitrise build logs have the same basic structure. When opening a full log, under the Bitrise logo you will find:
 
-* the version of the Bitrise CLI that ran the build
-* the name of the workflow that was run (for example, primary)
+* The version of the Bitrise CLI that ran the build.
+* The name of the workflow that was run (for example, primary).
 
 Below this basic information, you will see every Step that was ran as part of the build. For each Step, Bitrise displays:
 
-* the name and version of the Step
-* the running time of the Step
-* a printout of the Step's commands and their results, including highlighted error messages
-* whether the Step passed or failed
+* The name and version of the Step.
+* The running time of the Step.
+* A printout of the Step's commands and their results, including highlighted error messages.
+* Whether the Step passed or failed.
 
 ![](/img/log-start.png)
 
