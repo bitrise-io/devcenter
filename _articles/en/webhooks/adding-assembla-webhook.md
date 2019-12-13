@@ -21,7 +21,7 @@ You can set up webhooks so that Bitrise automatically triggers a build of your a
 2. Go to the **Webhooks** section of the space.
 3. Select **Create New Webhook**.
 4. Set **Title** to **BitRise Webhook**.
-5. Specify the `bitrise-webhooks` URL. (`.../h/assembla/BITRISE-APP-SLUG/BITRISE-APP-API-TOKEN`) in the **External url** field
+5. Specify the `bitrise-webhooks` URL. (`.../h/assembla/BITRISE-APP-SLUG/BITRISE-APP-API-TOKEN`) in the **External url** field.
 6. Select `application/json` in the **Content type** field.
 7. Paste the following code to **Content**:
 
