@@ -26,7 +26,7 @@ If you want to push back  (`git push`) any commits to your own repo from Bitrise
        git config --global user.email "email-for-the-commit@domain.com"
 3. [Start a build.](/builds/Starting-builds-manually/)
 
-If all went well, you should see the changes in your repository in your Git provider. The new username and email address will be visible for all future commits you push from your builds to Github.
+If all went well, you should see the changes in your repository in your Git provider. The new username and email address will be visible for all future commits you push from your builds to your Git provider.
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
