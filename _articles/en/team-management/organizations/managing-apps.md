@@ -99,7 +99,7 @@ There are two separate ways to assign one or more groups to an app that is owned
 
 1. Go to the app's page on [bitrise.io](https://www.bitrise.io).
 2. Select the **Team** tab.
-3. Find the **Add a group from <OrgName>** menu.
+3. Find the **Add a group from OrgName** menu.
 
    ![Screenshot](/img/team-management/organization/add-group-org.png)
 4. Find the group you wish to add and click the **+** symbol.
@@ -148,7 +148,7 @@ Let's see the details!
 
    ![](/img/enabled-allow-outside-contributor.jpg)
 4. On the left menu bar, select **Apps**.
-5. Search for or click the app you want to add outside contributors to. (In our example, it is the android-multiple-test-results-sample app.)
+5. Search for or click the app you want to add outside contributors to. (In our example, it is the `android-multiple-test-results-sample` app.)
 
    ![](/img/switch-to-apps-from-people.jpg)
 
