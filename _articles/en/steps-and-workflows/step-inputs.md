@@ -37,8 +37,8 @@ Click on a Step to bring up its input variables on the right of the currently se
 
 Modify a Step input by either:
 
-* clicking into the input field
-* clicking the **CHANGE** option next to the input field
+* Clicking into the input field.
+* Clicking the **CHANGE** option next to the input field.
 
 You can use environment variables as Step inputs for any Step. But make sure that the environment variable in question has a valid value for the given input.
 
@@ -54,8 +54,8 @@ Click this button and you'll get a full list of [available Environment Variables
 
 Under every Step input field you can see one of these two indicators:
 
-* **Environment Variables will be replaced in input**
-* or **Environment Variables won't be replaced in input**
+* **Environment Variables will be replaced in input**,
+* or **Environment Variables won't be replaced in input**.
 
 It's the status of the `is_expand` option of the input.
 You can change this only in YAML mode (**bitrise.yml** tab of the Workflow Editor).
