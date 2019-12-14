@@ -22,6 +22,6 @@ Outgoing Webhooks はウェブサイトか [Bitrise API](/api/incoming-and-outgo
 
 **詳細:**
 
-* [webhookの追加](/webhooks/adding-webhooks/)
-* [Outgoing webhookの追加](/webhooks/adding-outgoing-webhooks/)
-* [Webhook トラブルシューティング](/webhooks/troubleshooting/)
+* [webhookの追加](/jp/webhooks/adding-webhooks/)
+* [Outgoing webhookの追加](/jp/webhooks/adding-outgoing-webhooks/)
+* [Webhook トラブルシューティング](/jp/webhooks/troubleshooting/)
