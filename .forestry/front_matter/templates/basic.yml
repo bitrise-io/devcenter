@@ -168,8 +168,6 @@ pages:
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/keystoreファイルのダウンロード-downloading-a-keystore-file.md
 - _articles/en/reviews/Japanese translations/コード署名 (Code signing)/xamarin-androidコード署名-xamarin-android-code-signing.md
 - _articles/en/reviews/Japanese translations/チュートリアル (Tutorials)/コミュニティによるチュートリアル-community-created-tutorials.md
-- _articles/en/reviews/Japanese translations/テスト (Testing)/bitrise上でdetoxテストの実行-running-detox-tests-on-bitrise.md
-- _articles/en/reviews/Japanese translations/テスト (Testing)/visual-studio-app-centerでのテスト走行-running-tests-in-the-visual-studio-app-center.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/android-app-bundleの生成とデプロイ-generating-and-deploying-android-app-bundles.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイ-deploying-android-apps.md
 - _articles/en/reviews/Japanese translations/デプロイ (Deployment)/androidアプリのデプロイについて-android-deployment.md
