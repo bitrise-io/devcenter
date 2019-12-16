@@ -76,6 +76,10 @@ Specify a service account name. No roles are needed for the service account.
 3. Create a private key (JSON format) and download it now because you will need it later.
 ![](/img/tutorials/deploy/google-play/api-access-setup-7.jpg)
 
+4. Grant the necessary permissions to the service account on the Play Console.
+![](/img/tutorials/deploy/google-play/api-access-setup-12.jpg)
+![](/img/tutorials/deploy/google-play/api-access-setup-13.jpg)
+
 Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started) guide if you need more information on the process.
 
 You have successfully prepared your Google Play Console project. A services credential account has been created which is authorized to manage your releases.
