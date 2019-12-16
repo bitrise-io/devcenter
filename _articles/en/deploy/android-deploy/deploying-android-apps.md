@@ -123,7 +123,7 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 7. Fill out the required input fields which are:
    * **Service Account JSON key file path**: This field can accept a remote url so you have to provide the environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
    * **Package name**: the package name of your Android app.
-   * **Track**: the track where you want to deploy your APK (for example, internal/alpha/beta/production or any custom track you set).
+   * **Track**: the track where you want to deploy your app (for example, internal/alpha/beta/production or any custom track you set).
 
 You can use the Play Console UI to promote apps to other tracks (e.g. an app uploaded to internal testing can be released on alpha track).
 
