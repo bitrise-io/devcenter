@@ -65,7 +65,7 @@ An example for downloading a keystore file:
     
        - destination: "$HOME/keystores/my_keystore.jks" #native android#
 
-After this Step, `my_keystore.jks` will be available a `$HOME/keystores/my_keystore.jks`.
+After this Step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">

@@ -51,7 +51,7 @@ A quick walk through of this sample configuration:
 * `format_version` : declares the minimum Bitrise CLI format version. Get your Bitrise CLI's supported highest format version with `bitrise version --full`.
 
   NOTE: If you set the `format_version` to `5` that means that Bitrise CLI versions which don't support the format version `5` or higher won't be able to run the configuration. This is important if you use features which are not available in older Bitrise CLI versions.
-* `default_step_lib_source` : specifies the source to use when no other source is defined for a Step. Find out more in the `- scrip``_@1.1.5: _`step description below.
+* `default_step_lib_source` : specifies the source to use when no other source is defined for a Step. Find out more in the `script@1.1.5` step description below.
 * `project_type` : defines your source project's type (for example, `android`, `ios`, `xamarin`).
 * `app` - `envs` : specifies the env vars which will be available for every build, workflow and step.
 * `workflows` : is the collection of separate build configurations which you can run with `bitrise run WORKFLOWID`.
