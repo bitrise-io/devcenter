@@ -7,28 +7,28 @@ summary: ''
 published: false
 
 ---
-[Test Reports](/testing/test-reports/) allows you to view all your test results in a convenient way. By default, only four Steps support the Test Reports feature. However, there is a limited support for exporting your test results to Test Reports via custom Script Steps. The limitation is that you can only export image files this way - for example, screenshots of UI tests.
+[Test Reports](/jp/testing/test-reports/)は全てのテスト結果をわかりやすく表示します。デフォルトでは、４つのステップのみがTest Reports機能に対応しています。限定的ですが、カスタムのScriptステップを経由してTest Reportsにテスト結果のエクスポートを行う方法もサポートしています。その制限とは、画像ファイルのみエクスポートが可能です (例: UIテストのスクリーンショット) 。
 
-Here's what you need to do:
+以下のことを行ってください：
 
-1. Deploy the test results in the correct directories.
-2. Make sure every test run has its own `test-info.json` file, with a test name.
-3. Make sure all directories include a test report in a standard JUnit XML format
-4. Include a **Deploy to Bitrise.io** Step in your Workflow.
+1. 適当なディレクトリ内にテスト結果をデプロイします。
+2. テスト実行毎に、テスト名を持つ独自の`test-info.json`ファイルがあることを確認します。
+3. 全てのディレクトリに、標準的なJUnit XMLフォーマットを使用したテストレポートを含んでいることを確認します。
+4. ワークフローに**Deploy to Bitrise.io**ステップを挿入します。
 
-To do all this, we need to delve a bit deeper into how the Test Reports feature works.
+以上を行って、Test Reportsがどのように機能するのかもう少し掘り下げていきましょう。
 
-## The test results directory
+## テスト結果ディレクトリ
 
-The Bitrise CLI creates a root directory for all test results and exposes its path in the `BITRISE_TEST_RESULT_DIR` Environment Variable (Env Var) for the supported Steps. As such, every supported Step sees its own test results directory.
+Bitrise CLIは全てのテスト結果のためにルートディレクトリを作成し、サポート済みのステップ用に`BITRISE_TEST_RESULT_DIR`環境変数にてパスをエクスポーズします。このように、全てのサポート済みステップは独自のテスト結果ディレクトリを表示します。
 
-The Step then moves every artifact that is deemed a test result into the Step's test result directory: test result files, test attachments, logs, screenshots, and so on.
+その後ステップは、テスト結果とみなされる全てのアーティファクトをテスト結果ディレクトリへ移動させます：テスト結果ファイル、テスト添付物、ログ、スクリーンショットなどが含まれます。
 
-{% include message_box.html type="important" title="Custom Steps" content="Please note that when using custom Script Steps to export your results, only image files are exported to Test Reports.
+{% include message_box.html type="important" title="カスタムステップ" content="結果のエクスポートにカスタムのScriptステップを使用する際、画像ファイルのみエクスポートされることにご注意ください。
 
-When using the four supported Steps, as described in our [Test Reports guide](/testing/test-reports/), logs, videos, and other files are exported, too."%}
+[Test Reportsガイド](/jp/testing/test-reports/)で説明されているように、４つのサポート済みステップを使用する場合は、ログや動画、他のファイルなどもエクスポートされます。"%}
 
-After each Step, the Bitrise CLI checks the Steps's test result directory. If the directory is not empty, the CLI adds a metadata file called `step-info.json`. This file describes the Step:
+それぞれのステップの後、Bitrise CLIはステップのテスト結果ディレクトリをチェックします。ディレクトリに空きがない場合、CLIが`step-info.json`と呼ばれるメタデータファイルを追加します。このファイルにはStepが描写されています：
 
     // TestResultStepInfo ...
     type TestResultStepInfo struct {
@@ -38,7 +38,7 @@ After each Step, the Bitrise CLI checks the Steps's test result directory. If th
     	Number  int    `json:"number" yaml:"number"`   // Step number in the workflow
     }
 
-The separate test runs - for example, against different build variants - should be placed in different sub-directories within the test results directory of the Step. Unlike the `BITRISE_TEST_RESULT_DIR`, these directories are not created automatically: they must be created during the build. The directory structure should be something like this:
+個々のテストの実行 (例：異なるビルドバリアント) は、ステップのテスト結果ディレクトリ内の異なるサブディレクトリに配置される必要があります。 `BITRISE_TEST_RESULT_DIR`とは反対に、これらのディレクトリは自動で作成されません：ビルド中に作成されます。そのディレクトリの構造はこのようになっています：
 
     Build Test Result directory
     └── Step Test Result directory
@@ -50,20 +50,20 @@ The separate test runs - for example, against different build variants - should 
         │   └── test-info.json
         └── step-info.json
 
-## The test-info.json file
+## test-info.json ファイル
 
-As you can see above, the sub-directories for each test run contain a `test-info.json` file. This file has to be created by the Script Step, with the `test-name` node defined in it. The `test-name` value will appear as the name of the test run on the Test Reports page.
+以上より、テスト実行毎のサブディレクトリには`test-info.file`が含まれています。このファイルはScriptステップによって作成され、`test-name`のノードが定義されています。`test-name`の値はTest Reportsのページ上でテスト実行名 (name of the test run)として表示されます。
 
     // Test Name ...
     { "test-name":"My first test" }
 
 ![](/img/Test_add-on-6.png)
 
-## The test report file
+## テストレポートファイル
 
-Once a Step has run and its test results have been placed into the correct directory, the **Deploy to Bitrise.io** Step can collect the results and export them to Test Reports. It does so in a JUnit XML format.
+いったんステップが実行され、テスト結果が適切なディレクトリに配置されると、**Deploy to Bitrise.io**ステップが結果を収集しTest Reportsへエクスポートします。これはJUnit XMLフォーマットで行われます。
 
-This means that your test results must contain a test report in a standard JUnit XML format, such as this:
+テスト結果には、標準的なJunitXMLフォーマットで書かれたテストレポートを含む必要があり、以下のようになります：
 
     <testsuites>        => the aggregated result of all junit testfiles
       <testsuite>       => the output from a single TestSuite
@@ -84,11 +84,11 @@ This means that your test results must contain a test report in a standard JUnit
       ...
     </testsuites>
 
-{% include message_box.html type="note" title="The file format" content="The `<testsuites>` element is not mandatory. You can include multiple test report files separately, even if each of them only contains a `<testsuite>` element: they will be merged together."%}
+{% include message_box.html type="note" title="ファイルのフォーマット" content="`<testsuites>`の要素は必須ではありません。ファイルそれぞれが`<testsuite>`の要素のみで構成されていても、別々に複数のテストレポートファイルをことができます：一緒にマージされるようになります。"%}
 
-## Example scripts
+## スクリプトの例
 
-Here's an example script for a single test run, the results of which should be exported to Test Reports. In this example, we create a sub-directory for a specific test run, add the JUnit XML file and the `test-info.json` file.
+単一テストを実行するのに、スクリプトの一例を見ていきましょう。この結果はTest Reportsにエクスポートされる必要があります。この例では、指定のテスト実行用にサブディレクトリを作成し、JUnit XMLファイルと`test-info.json`ファイルを追加します。
 
     #!/bin/env bash
     set -ex
@@ -110,7 +110,7 @@ Here's an example script for a single test run, the results of which should be e
     # Creating the test-info.json file with the name of the test run defined:
     echo '{"test-name":"sample"}' >> "$test_run_dir/test-info.json"
 
-In the above example, we've created the test report JUnit XML file in the script itself. But of course it is possible to export an already existing file in the same way:
+以上の例では、スクリプト本体にテストレポートのJUnit XMLファイルを作成しています。でももちろん、同様の方法で既存のファイルをエクスポートすることもできます：
 
     #!/bin/env bash
     set -ex
@@ -125,6 +125,6 @@ In the above example, we've created the test report JUnit XML file in the script
     # Creating the test-info.json file with the name of the test run defined:
     echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
 
-If all goes well, you should be able to see your test results on the [Test Reports](/testing/test-reports/) page.
+全てがうまくいくと、[Test Reports](/jp/testing/test-reports/)ページにてテスト結果を見ることができます。
 
 <div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Export test results with Script Steps</div> <a target="_blank" href="[https://app.bitrise.io/dashboard/builds](https://app.bitrise.io/dashboard/builds "https://app.bitrise.io/dashboard/builds")"><button class="button">Go to your app</button></a> </div>
