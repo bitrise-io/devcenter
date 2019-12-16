@@ -62,7 +62,7 @@ Leave the input field of **The 'yarn' command to run** empty or set it to **inst
 
 ## Testing Ionic/Cordova apps
 
-Perform unit testing by our **Karma Jasmine Test Runner** or **Jasmine Test Runner** Steps. If your Cordova/Ionic project has Karma Jasmine dependency in its **package.json** file, our scanner will detect it and automatically insert the respective testing step into your workflow. If this dependency is missing from your project, you can manually insert one of steps to your workflow using our Workflow Editor - just make sure you place it right after **Run nmp command** or **Run yarn command** package manager Step.
+Perform unit testing by our **Karma Jasmine Test Runner** or **Jasmine Test Runner** Steps. If your Cordova/Ionic project has Karma Jasmine dependency in its **package.json** file, our scanner will detect it and automatically insert the respective testing step into your workflow. If this dependency is missing from your project, you can manually insert one of our testing steps to your workflow using our Workflow Editor - just make sure you place it right after **Run nmp command** or **Run yarn command** package manager Step.
 
 ## Code signing
 
