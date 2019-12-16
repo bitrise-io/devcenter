@@ -11,7 +11,7 @@ You'll need two kinds of files to sign your app: Certificates and Provisioning P
 
 The certificates - development or distribution - are the guarantee that you, the named developer, built this code, that you are a member of the developer program, and that Apple have issued you with a certificate to do so.
 
-To get a certificate, you need to generate a Certificate Signing Request with Keychain Access and send it to Apple. This will create a public/private key for you if you don't have one already. Apple will then verify the information, and create a certificate for you.
+To get a certificate, you need to generate a Certificate Signing Request with Keychain Access and send it to Apple. This will create a public/private key pair for you if you don't have one already. Apple will then verify the information, and create a certificate for you.
 
 ### Generating a Code Signing Certificate using Xcode
 
@@ -51,7 +51,7 @@ First you have to add your Apple ID to Accounts preferences in Xcode. If you are
 
 ## Generating a provisioning profile
 
-Provisioning is the process of preparing and configuring an app to launch on devices and to use app services. Development provisioning profiles holds the device identifiers ( UUID ) that is eligible to run your app. Distribution provisioning profiles can include App Store profiles that allow you to distribute your app to the App Store. Ad-hoc profiles are good for distributing to your testers.
+Provisioning is the process of preparing and configuring an app to launch on devices and to use app services. Development provisioning profiles holds the device identifiers (UUID) that is eligible to run your app. Distribution provisioning profiles can include App Store profiles that allow you to distribute your app to the App Store. Ad-hoc profiles are good for distributing to your testers.
 
 ### Generating a provisioning profile with Xcode
 
@@ -63,7 +63,7 @@ If you hit any issues you should make sure that the device is eligible, for exam
 
 Also make sure that your app is connected to the correct Team.
 
-1. Select your project file from Xcode's project navigator
+1. Select your project file from Xcode's project navigator.
 2. Go to the **Signing** section and under the **Team** select your correct team.
    ![Team selector](/img/code-signing/ios-code-signing/xcode_team_selector.png)
 
@@ -73,7 +73,7 @@ Also make sure that your app is connected to the correct Team.
 
 ### Downloading a provisioning profile with Xcode
 
-If you have already created the provisioning profile, you can do the following.
+If you have already created the provisioning profile, you can do the following:
 
 1. Start Xcode.
 2. Select **Xcode > Preferences** from the navigation bar.
@@ -96,9 +96,9 @@ If you have already created the provisioning profile, you can do the following.
 #### Generating a provisioning profile
 
  1. Go to [https://developer.apple.com](https://developer.apple.com) and log in.
- 2. Select **Certificates, Identifiers & ** from the left sidebar.
+ 2. Select **Certificates, Identifiers & Profiles** from the left sidebar.
  3. Navigate to **Provisioning Profiles > All**.
- 4. Select the `+` from the top right corner.
+ 4. Select the **+** from the top right corner.
  5. For development select the correct project type under `Development`, or for distribution select the correct one under `Distribution` and click continue.
  6. Select the App ID you would like to use.
  7. Select the certificates you wish to include in the provisioning profile. 
