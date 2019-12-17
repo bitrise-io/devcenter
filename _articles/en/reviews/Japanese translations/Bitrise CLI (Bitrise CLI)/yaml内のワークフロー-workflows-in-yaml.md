@@ -156,21 +156,34 @@ Based on the above example, if you run:
 
 This means that you can define what a `setup` and `test` should do in your project in the `setup` and `test` workflows only once, and then you can reuse those in other workflows. There's no need to duplicate Steps between workflows.
 
-これは
+これは`setup`と`test`のワークフローがそれぞれのワークフローが実行する事を一回自分で定義することで、他のワークフローでも再使用することができます。ワークフロー間でステップを複製する必要はありません。
 
 To sum it up, when you chain workflows, it's the same as if you'd create one workflow which would include all Steps from all the workflows chained after each other. So, for example, one Step's outputs will be available for every other Step which is executed after that Step during the build, (regardless of whether the other Step is in the same or in another workflow). If a Step is executed after another Step during the build, it can access the outputs of the previous Steps.
 
-{% include message_box.html type="info" title="Chaining workflows on the UI" content=" Learn more about how to[ chain workflows together](/getting-started/getting-started-workflows/#chaining-workflows-together) on the UI. "%}
+総括すると、ワークフローをチェーニングするときは一つのワークフローを作成するのと作業は同じです。チェーン化済みのワークフローから全てのステップが含まれるようになります。例えば、(その他のステップが同一または異なるワークフローにあっても) 一つのステップのアウトプットが (ビルド中にそのステップの後に他のステップが開始される) 他のステップにおいても利用可能になります。ビルド中、他のステップの後にあるステップが開始される場合、それ以前のステップのアウトプットにアクセスが可能です。
 
-### About workflow environment variables
+{% include message_box.html type="info" title="Chaining workflows on the UI　UI上でのワークフローのチェーニング" content=" Learn more about how to[ chain workflows together](/getting-started/getting-started-workflows/#chaining-workflows-together) on the UI. 
+
+UI上で[ワークフローをチェーン化する](/jp/getting-started/getting-started-workflows/#chaining-workflows-together)方法はこちらをご覧ください。"%}
+
+### About workflow environment variables  
+ワークフロー環境変数について
 
 Workflow specific environment variables are made accessible **when the workflow is executed**. These environment variables are available for workflows executed **after** that workflow, but **not in the ones executed before** that workflow.
 
+ワークフローの特定の環境変数は、**そのワークフローが開始された時に**アクセス可能になります。環境変数はそのワークフローの**後に**開始されたワークフロー用に利用可能になっており、そのワークフローの**前に開始されたワークフローではありません**。
+
 For example, if you `bitrise run ci`, the `IS_TEST` environment variable **won't** be available in the `setup` workflow, as that runs _before_ the `test` workflow. `IS_TEST` will be available for the steps in `test`, `ci` and `send-notifications` workflows.
+
+例えば、`bitrise run ci`を行う際、 `IS_TEST`環境変数が`setup`ワークフローで使用できないのは、`test`ワークフローの前にその環境変数が実行されるからです。 `IS_TEST`は`test`, `ci`と`send-notifications`ワークフロー内のステップで使用ができます。
 
 This is true even if the workflow doesn't have any Steps. This can be utilized if you want to create generic workflows, which can do different things based on environment variables, and you specify those environment variables through a "wrapper" workflow.
 
+ステップを持たないワークフローでもそれは同じです。環境変数に応じた異なる事柄を行うジェネリックなワークフローを作成して活用することもできます。または、"wrapper"ワークフローを経由してその環境変数を指定することもできます。
+
 For example:
+
+例えば：
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -194,6 +207,8 @@ For example:
         - generic-build
 
 As you can see in the above example, neither `build-alpha` nor `build-beta` workflows have any steps. Instead the Steps are defined in `generic-build`, but when you `bitrise run build-alpha` the `BUILD_TYPE` environment variable will be set to `alpha`, while if you `bitrise run build-beta`, the `BUILD_TYPE` environment variable will be set to `beta`.
+
+上記の例からわかるように、`build-alpha`も`build-beta`の両方ともステップを保持していません。ステップが`generic-build`で定義される代わりに、???環境変数は`beta`にセットされます。
 
 As discussed above, workflow defined environment variables are only available in the workflow it defines, and in the ones **executed after** that workflow. So in our example, `generic-build` is included as `after_run` workflow, therefore, the `BUILD_TYPE` environment variable will be available in the steps of `generic-build`. But if you'd use `before_run` instead of `after_run`, that would mean that technically the steps of `generic-build` are processed and executed before processing the `build-alpha` or `build-beta` workflows, so the `BUILD_TYPE` environment variable would not be available in the step of `generic-build`.
 
