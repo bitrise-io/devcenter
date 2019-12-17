@@ -112,10 +112,11 @@ Now let's head back to [Bitrise](https://app.bitrise.io/apps/add) and finish off
 
    For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 3. Go back to the **Deploy to Google Play** Step in your Workflow Editor.
-4. Fill out the required input fields as follows:
-   * **Service Account JSON key file path**:  This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
-   * **Package name**: the package name of your Android app.
-   * **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
+4. In the **Service Account JSON key file path** input, paste the Environment Variable which was generated when you uploaded the service account JSON key in the **GENERIC FILE STORAGE**. Note that besides the Environment Variable, this field can also accept a remote and a file path URL as well:
+   * For remote JSON key file you can provide any download location, for example, `https://URL/TO/key.json`. 
+   * For local JSON key file you can provide a file path url, for example, `file://PATH/TO/key.json`.
+5. **Package name**: the package name of your Android app.
+6. **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
 
 {% include message_box.html type="info" title="Other deploy steps you can add to your workflow" content="Click the **+** sign on the left side of your Workflow and select another deploy Step from our collection, for example, **Appetize.io deploy** or **Amazon Device Farm File Directory**, if you wish. "%}
 
