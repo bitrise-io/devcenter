@@ -208,19 +208,29 @@ For example:
 
 As you can see in the above example, neither `build-alpha` nor `build-beta` workflows have any steps. Instead the Steps are defined in `generic-build`, but when you `bitrise run build-alpha` the `BUILD_TYPE` environment variable will be set to `alpha`, while if you `bitrise run build-beta`, the `BUILD_TYPE` environment variable will be set to `beta`.
 
-上記の例からわかるように、`build-alpha`も`build-beta`の両方ともステップを保持していません。ステップが`generic-build`で定義される代わりに、???環境変数は`beta`にセットされます。
+上記の例からわかるように、`build-alpha`も`build-beta`の両方ともステップを保持していません。ステップが`generic-build`で定義される代わりに、`bitrise run build-alpha`を行うと`BUILD_TYPE`環境変数は`alpha`にセットされ、`bitrise run build-beta`を実行すると`BUILD_TYPE`環境変数は`beta`にセットされます。
 
 As discussed above, workflow defined environment variables are only available in the workflow it defines, and in the ones **executed after** that workflow. So in our example, `generic-build` is included as `after_run` workflow, therefore, the `BUILD_TYPE` environment variable will be available in the steps of `generic-build`. But if you'd use `before_run` instead of `after_run`, that would mean that technically the steps of `generic-build` are processed and executed before processing the `build-alpha` or `build-beta` workflows, so the `BUILD_TYPE` environment variable would not be available in the step of `generic-build`.
 
-## Utility workflows
+前述したとおり、定義済みワークフローの環境変数は、定義しているワークフロー (そのワークフロー**後に実行されたもの**) でのみの利用が可能です。一例では、`generic-build`が`after_run`ワークフローとして含まれているので、`BUILD_TYPE`環境変数は`generic-build`のステップにて利用できるようになります。`after_run`の代わりに `before_run` を使用される場合、技術的に`generic-build`のステップは`build-alpha`または`build-beta`ワークフローが処理される前に処理・実行されます。ですので、`BUILD_TYPE`環境変数は`generic-build`のステップ内では利用することはできません。
+
+## Utility workflows ユーティリティワークフロー
 
 Utility workflows help you organize your workflows more efficiently.
 
+ユーティリティワークフローはより効率的なワークフローの整理をお手伝いします。
+
 If you chain workflows together, you might quickly end up with tons of small, reusable workflows. Finding the right workflow might get a bit tricky. Utility workflows to the rescue! The Bitrise CLI supports a small notation, called utility workflow: a workflow **whose ID starts with an underscore character**, for example, `_setup`.
+
+チェーンワークフローをまとめると、すぐに小さくて細かい、再利用のできるワークフローを手にすることができます。けれども適切なワークフローを探すのは簡単ではありません。ここでユーティリティワークフローの出番です！Bitrise CLIはユーティリティワークフロー (Utility Workflow)と呼ばれる小さい表記をサポートします (例：`_setup`のようなIDがアンダースコアで始まるワークフロー) 。
 
 You can find utility workflows at the end of the workflow list if you run `bitrise run` or `bitrise workflows`. Mind you, **utility workflows can't be executed directly with a** `bitrise run` **command**. These workflows can be referenced in `before_run` and `after_run`.
 
+`bitrise run`または`bitrise workflows`を実行するとワークフローの最後にユーティリティワークフローを見つけることができます。ここで注意していただきたいのは、**ユーティリティワークフローは`bitrise run`コマンドによって直接実行されることはありません**。これらのワークフローは`before_run`と`after_run`にて参照されます。
+
 Using the above example with five workflows (`ci`, `deploy`, `send-notifications`, `setup` and `test`), if you run `bitrise run`  in the directory of the `bitrise.yml` without specifying a workflow, you'll get list of all five workflows:
+
+上記の一例の５つのワークフロー (`ci`, `deploy`, `send-notifications`, `setup`と`test`) を用いると、もしワークフローを指定せずに`bitrise.yml`のディレクトリ内で`bitrise run`を実行すると５つ全てのワークフローのリストを入手することができます。
 
     The following workflows are available:
      * ci
@@ -233,6 +243,8 @@ Using the above example with five workflows (`ci`, `deploy`, `send-notifications
     $ bitrise run WORKFLOW-ID
 
 You most likely don't want to run `setup`, `test` nor `send-notifications` by itself, only through `ci` or `deploy`. If you prefix those with an underscore character to make them utility workflows, the `bitrise run` output will better highlight which workflows are meant to be executed directly:
+
+`setup`, `test`と`send-notifications`を単体で実行させたくない (`ci`や`deploy`経由でのみ行いたい) ユーザーがほとんどです。アンダースコアをワークフローの前につけると、ユーティリティワークフローになります。これにより`bitrise run`アウトプットは、どのワークフローを
 
     The following workflows are available:
      * ci
