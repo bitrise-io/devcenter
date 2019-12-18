@@ -95,7 +95,7 @@ The solution is simple, just make sure that you use the same Xcode version every
 
 Note: this can happen only on specific iOS Simulators / iOS versions too, e.g. if the app only crashes on iOS 8, but not on iOS 9
 
-### Xcode 8 - `xcodebuild .. test` hangs at the very end of the tests
+### Xcode 8 - xcodebuild .. test hangs at the very end of the tests
 
 `xcodebuild .. test` hangs at the end of the tests (after it printed the summary of the tests)
 if the output of `xcodebuild ..` is piped / redirected in any way.
