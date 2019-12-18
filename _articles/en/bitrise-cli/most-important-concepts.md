@@ -45,7 +45,7 @@ For example, you run a script in your Terminal:
 
 Let's say this script sets a variable called `MY_VAR`:
 
-    export MY_VAR=the-value`
+    export MY_VAR=the-value
 
 Once the script is finished, you won't be able to access `MY_VAR` in your Terminal. It is only available in the script and in the processes or scripts started by the script.
 

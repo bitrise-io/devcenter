@@ -2,7 +2,6 @@
 title: 利用可能な環境変数
 redirect_from:
 - "/faq/available-environment-variables/"
-- "/faq/available-environment-variables/#exposed-by-the-bitrise-cli"
 menu:
   builds-main:
     weight: 28
