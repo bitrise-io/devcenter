@@ -129,11 +129,17 @@ Step input values are always **string** / text values, as the input id/key and t
                 var_to_print='Hello World!'
                 echo "${var_to_print}"
 
-{% include message_box.html type="important" title="Indentation in YAML" content="Indentation in the YAML format is very important! You should use two-spaces indentation, and you can't use tabs to indent!
+{% include message_box.html type="important" title="Indentation in YAML YAMLのインデント" content="Indentation in the YAML format is very important! You should use two-spaces indentation, and you can't use tabs to indent!
 
-If you use a multi line value, like the one above, it's important that you have to _indent the value with two spaces_, compared to the key!"%}
+If you use a multi line value, like the one above, it's important that you have to _indent the value with two spaces_, compared to the key!
+
+YAMLでのインデント (字下げ) はとても重要です！2スペースのインデントを使用する必要があり、タブを使ってのインデントはできません！
+
+上記の例のように、複数のライン値を使用する場合、キーと比較して2つのスペースを用いた値のインデントを行ってください。"%}
 
 You can change other properties of the step too, not just the inputs. For example, if you want to "force" run the step even if a previous step fails, you can set the `is_always_run` property to `true`:
+
+インプットのみならず、ステップの他プロパティを変更することもできます。例えば、前回のステップが失敗したにも関わらずそのステップを”強制的”に実行したい場合、`is_always_run`プロパティを`true`にセットすることで可能になります。
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -149,6 +155,8 @@ You can change other properties of the step too, not just the inputs. For exampl
 
 or if you want to specify a better, more descriptive title for the step, you can use the `title` property:
 
+ステップ用にベターでより叙述的なタイトルを指定したい場合、`title`プロパティを使用します：
+
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
     
@@ -162,7 +170,7 @@ or if you want to specify a better, more descriptive title for the step, you can
             - content: "puts 'Hello Ruby!'"
             - runner_bin: ruby
 
-### The Step data you define in bitrise.yml - your diff!
+### The Step data you define in bitrise.yml - your diff!　
 
 You might already suspect it after the examples above: the step data / infos you specify in the `bitrise.yml` are the parameters of the step **you want to change** / overwrite.
 
