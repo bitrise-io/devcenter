@@ -170,15 +170,23 @@ or if you want to specify a better, more descriptive title for the step, you can
             - content: "puts 'Hello Ruby!'"
             - runner_bin: ruby
 
-### The Step data you define in bitrise.yml - your diff!　
+### The Step data you define in bitrise.yml - your diff!　bitrise.ymlで定義するステップデータはdiffです！
 
 You might already suspect it after the examples above: the step data / infos you specify in the `bitrise.yml` are the parameters of the step **you want to change** / overwrite.
 
+上記の例から気づかれた方もいるかもしれませんが、`bitrise.yml`で指定するステップデータ / 情報は、ご自身が変更 / 上書きを行いたいステップのパラメータになります。
+
 If you don't specify any input or other step property, only the step (reference/iD), that means that the step should run with the default values (defined by the step's developer).
+
+インプットや他のステッププロパティを指定しない場合、ステップ (reference/iD) のみが (そのステップの開発者により設定された) デフォルト値を使用して実行されるようになっています。
 
 You could also think about this as a `diff`. The step defines values for the step interface properties, and in the `bitrise.yml` you define a `diff`, the things you want to change and the values to change to.
 
+これを`diff`として考えることも可能です。ステップは、step interface properties用に値を定義し、`bitrise.yml`内では`diff`を定義します。`diff`とはご自身による変更、または値が
+
 Let's go through the example above:
+
+では例を見ていきましょう：
 
         - script@1.1.3:
             title: Print Hello Ruby
@@ -189,17 +197,29 @@ Let's go through the example above:
 
 The `- script@1.1.3:` line selects the step, and the properties you define after this (with an indentation!) are the things you want to overwrite.
 
+`- script@1.1.3:`の行はステップを選択し、この後に (インデントを使用して) 定義するプロパティは、上書きの必要があれば行ってください。
+
 To see the step's raw interface definition you can check it in the step library. In these examples we always use the [main Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib). The step interface definitions can be found in the StepLib's [steps directory](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps).
+
+ステップのRaw Interface定義を見るには、ステップライブラリを確認します。このような例は、常に[main Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)を参照してください。
 
 The [step.yml file in this directory is the step's interface definition](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml).
 
+[このディレクトリ内のstep.ymlはステップのインターフェース定義となります。]()
+
 You can see all the properties defined for this version of the step. Now, if you check our example above, all we did is to change the `title` property (from `Script` to `Print Hello Ruby`), the `is_always_run` property (from `false` to `true`) and two inputs of the step, `content` (from a default, example script content) and `runner_bin` (from `/bin/bash` to `ruby`).
 
+ステップのバージョン用に定義された全てのプロパティを見ることができます。今までの例ではこのような変更が施されました：`title`プロパティ (`Script`から`Print Hello Ruby`) 、`is_always_run`プロパティ (`false`から`true`) 、２つのステップインプットである`content` (デフォルトからscript contentの例) と `runner_bin` (`/bin/bash`から`ruby`)
+
 All other properties you can see in the step version's `step.yml` will be read from the `step.yml`, you don't have to define those. You only have to define **the things you want to change**, compared to the values specified for the step in the step's interface definition (`step.yml`).
+
+ステップバージョンの`step.yml`で確認ができる全ての他のプロパティは`step.yml`から読み取られるので定義する必要はありません。ステップのインターフェース定義 (`step.yml`)内のステップ用に値を指定するのと比較して、**変更したい場合のみそれらを**定義する必要があります。
 
 ## Step reference/ID format
 
 A step reference from the example `bitrise.yml` above:
+
+上記の`bitrise.yml`の例からのStep reference (ステップリファレンス)は：
 
     - script@1.1.3:
 
