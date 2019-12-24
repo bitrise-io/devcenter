@@ -22,7 +22,7 @@ If you want to push back  (`git push`) any commits to your own repo from Bitrise
 1. Add a **Set Git Credentials** Step as the very first step in your workflow. The Step has to come first before you'd `git commit`. This way you can make sure any changes you make to the current build will be attached to a commit associated with your username and email address.
 2. In the **Git Username** field, set the value to your own user name.
 3. In the **Git Email Address** field, set the value to your own email address.
-3. [Start a build.](/builds/Starting-builds-manually/)
+4. [Start a build.](/builds/Starting-builds-manually/)
 
 If all went well, you should see the changes in your repository in your Git provider. The new username and email address will be visible for all future commits you push from your builds to Github.
 
