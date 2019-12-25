@@ -219,7 +219,7 @@ All other properties you can see in the step version's `step.yml` will be read f
 
 A step reference from the example `bitrise.yml` above:
 
-上記の`bitrise.yml`の例からのStep reference (ステップリファレンス)は：
+上記の`bitrise.yml`の例よりStep reference (ステップリファレンス)は：
 
     - script@1.1.3:
 
@@ -229,13 +229,23 @@ A step reference from the example `bitrise.yml` above:
 
 Step reference format: `- StepLibSource::StepID@StepVersion:`
 
+Step referenceフォーマット: `- StepLibSource::StepID@StepVersion:`
+
 **From the three components only Step ID is required (for example,**`script`**).** This example item could alternatively be written as `-`[`https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3:`](https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3: "https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3:"), to include all three components of the step reference.
+
+上記の３つの要素のうちStep IDのみが必要になります (例: `script`) 。step referenceの３つの要素全てを含ませるために`-`[`https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3:`](https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3: "https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3:")のように、この例で書かれることができます。
 
 If the Version is not defined, the latest version of the step will be used.
 
 If the StepLib Source is not defined, the `default_step_lib_source` will be used.
 
+Versionが定義されていない場合、ステップの最新のバージョンが使用されます。
+
+StepLibが定義されていない場合、`default_step_lib_source`が使用されます。
+
 So, if `default_step_lib_source` is set to [`https://github.com/bitrise-io/bitrise-steplib.git`](https://github.com/bitrise-io/bitrise-steplib.git "https://github.com/bitrise-io/bitrise-steplib.git"), and the latest version of the Script step is `1.1.3`, all the following references will mean the exact same thing:
+
+以上より、???が[`https://github.com/bitrise-io/bitrise-steplib.git`](https://github.com/bitrise-io/bitrise-steplib.git "https://github.com/bitrise-io/bitrise-steplib.git"),にセットされScriptステップの最新バージョンが`1.1.3`である場合、以下のリファレンスの意味は全て同じになります：
 
 * `-`[`https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3:`](https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3: "https://github.com/bitrise-io/bitrise-steplib.git::script@1.1.3:")
 * `- script@1.1.3:`
@@ -243,6 +253,8 @@ So, if `default_step_lib_source` is set to [`https://github.com/bitrise-io/bitri
 * `- script:`
 
 But, if a new version of the `script` step is released (e.g. `2.0.0`) and you don't include the `@1.1.3` version reference component, new builds will use the "latest version at the time". For this reason, it's usually a good idea to specify the version of the step, so that your build does not break accidentally when a breaking change is introduced in a new version of the step.
+
+ただ、`script`ステップの最新バージョンがリリースされ (例 `2.0.0`)、`@1.1.3`バージョンリファレンス要素を含めていない場合、新しく実行されるビルドでは、その時点での最新バージョンが使用されます。この理由としては、ステップのバージョンを指定するのはたいてい重要なので、ステップの新バージョンで導入された
 
 ### Special step sources
 
