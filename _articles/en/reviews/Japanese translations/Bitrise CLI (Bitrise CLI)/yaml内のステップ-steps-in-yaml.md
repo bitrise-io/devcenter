@@ -254,32 +254,48 @@ So, if `default_step_lib_source` is set to [`https://github.com/bitrise-io/bitri
 
 But, if a new version of the `script` step is released (e.g. `2.0.0`) and you don't include the `@1.1.3` version reference component, new builds will use the "latest version at the time". For this reason, it's usually a good idea to specify the version of the step, so that your build does not break accidentally when a breaking change is introduced in a new version of the step.
 
-ただ、`script`ステップの最新バージョンがリリースされ (例 `2.0.0`)、`@1.1.3`バージョンリファレンス要素を含めていない場合、新しく実行されるビルドでは、その時点での最新バージョンが使用されます。この理由としては、ステップのバージョンを指定するのはたいてい重要なので、ステップの新バージョンで導入された
+ただ、`script`ステップの最新バージョンがリリースされ (例 `2.0.0`)、`@1.1.3`バージョンリファレンス要素を含めていない場合、新しく実行されるビルドでは、その時点での最新バージョンが使用されます。この理由としては、ステップのバージョンを指定するのはたいてい重要なので、ステップの新バージョンに重大な変化が導入された時に誤ってビルドが壊れることはありません。
 
-### Special step sources
+### Special step sources　特別なステップソース
 
 There are two special step sources:
 
+2つの特別なステップソースが存在します：
+
 * `git::`
-* and `path::`
+* `path::`
 
 When you use one of these sources, the step won't be identified through a Step Library, but through the ID data you specify.
 
+これらのソースの一つを使用する際、ステップはStep Library経由ではなく、ご自身で指定したIDデータ経由で認証されます。
+
 For example, the `script` step's github is at: [`https://github.com/bitrise-io/steps-script`](https://github.com/bitrise-io/steps-script "https://github.com/bitrise-io/steps-script"). To reference the `script` step directly through a git reference, you can use the `git::` source, the step's git clone URL, and the branch or tag in the repository.
 
+例えば、`script`ステップのGitHubは[`https://github.com/bitrise-io/steps-script`](https://github.com/bitrise-io/steps-script "https://github.com/bitrise-io/steps-script")にあります。git reference経由で`script`ステップを直接参照するには、ステップのsit clone URLである`git::`ソース、そしてレポジトリ内のbranchまたはtagを使用することが可能です。
+
 Example, to reference the `1.1.3` version tag of the script step's repository:
+
+scriptステップのレポジトリの`1.1.3` version tagを参照するには：
 
     - git::https://github.com/bitrise-io/steps-script.git@1.1.3:
 
 In general, **whenever you can use a step version through a Step Library, you should do that**, instead of using the `git::` source type, because features like _local step caching_ or _network caching_ / alternative download URLs are only supported for steps shared in a StepLib.
 
+一般的に、Step Library経由でステップバージョンを使用できる際は、`git::`ソースタイプを使用する代わりに、これを行うことを推奨します。理由としてはlocal step cachingやnetwork caching / alternative download URLsはStepLib内で共有されているステップのみにサポートされているからです。
+
 But this type of referencing allows certain things you can't get through a StepLib. For example the `git::` source type can be used for not-yet-published or work-in-progress states of a step. If you [develop your own Step](/bitrise-cli/create-your-own-step/) you can use this `git::` source type to test your step _before you would publish it_ in a StepLib.
 
+このタイプの参照方法はStepLib経由で入手することができない特定のものを許可します。例えば、`git::`ソースタイプは未公開または作業中状態のステップに使うことができます。独自のステップを開発している場合、StepLibで公開する前にこの`git::`ソースタイプを使ってステップのテストを行うことができます。
+
 Example:
+
+例：
 
     - git::https://github.com/bitrise-io/steps-script.git@BRANCH-OR-TAG:
 
 `BRANCH-OR-TAG` of course have to be a branch or tag which does exist in the step's repository. For example, if you develop your own Step and you work on a `soon-to-be-released` branch, you can use that state of the step with:
+
+`BRANCH-OR-TAG`はステップのレポジトリ内で存在するbranchまたはtagになる必要があります。例えば、独自のステップを開発していて`soon-to-be-released`のbranchで作業をしている場合、ステップの状態を以下のコードを使って使用する事ができます：
 
     - git::https://github.com/bitrise-io/steps-script.git@soon-to-be-released:
 
@@ -287,18 +303,34 @@ The second special source is `path::`, which works in a similar way, except for 
 
 A good example for this is, again, when you create and work on your own Step, you can run the state of the Step (step's code) directly on your Mac/PC, without even pushing it to the step's repository.
 
+2つ目の特別なソースは`path::`であり、これまでと同じように機能します (local pathsを除く)。そしてこれはバージョン情報を必要としません。
+
+いい例としては、独自のステップを作成している時、ステップのレポジトリにプッシュする必要がなく、直接ご自身のMac/PCでステップ状態 (ステップコード) を実行することができます。
+
 Both absolute and relative (relative to the `bitrise.yml`!) local paths are supported, so you can:
+
+absoluteとrelative (`bitrise.yml`に関連しています) のlocal pathsの両方がサポートされているので、
 
     - path::/path/to/my/step:
 
 as well as:
 
+ができるだけでなく：
+
     - path::./relative/path:
 
 During step development it's a best practice to have a `bitrise.yml` directly in the step's repository, for unit and ad hoc testing. In this case _the current directory is the step directory_, and the step can be referenced with:
 
+ステップの開発中、unitテストとad hocテスト用にステップのレポジトリに直接`bitrise.yml`を保持するのはベストプラクティスです。このケースではcurrent directoryはstep directoryで、そのステップは：
+
     - path::./:
+
+を使って参照されます。
 
 _This can also be used if you want to include your build steps in your app's source code._ For example if you store the `script` step's code in your source code repository, under the `steps/script` directory, you can run the version included in your source code repository with:
 
+アプリのソースコードにビルドステップを含ませたい場合も使用する事ができます。例えば、`steps/script`ディレクトリ下にある、ご自身のソースコードレポジトリに`script`ステップコードを保管する場合：
+
     - path::./steps/script:
+
+を使ってソースコードレポジトリ内に含まれているバージョンを実行する事ができます。
