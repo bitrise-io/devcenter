@@ -6,35 +6,21 @@ summary: ''
 published: false
 
 ---
-## What is a Step ステップとは何ですか？
+## ステップとは何ですか？
 
-A Step encapsulates a "build task": the code to perform that task, the inputs/parameters you can define for the task, and the outputs the task generates.
+ステップ (Step) とは"ビルドタスク"をカプセル化します: タスクを実行するコードやタスク用に定義が可能なインプット/パラメータ、タスクが生成するアウトプットなどがあります。
 
-ステップ (Step) は"ビルドタスク"をカプセル化します: タスクを実行するコードやタスク用に定義が可能なインプット/パラメータ、タスクが生成するアウトプットなどがあります。
+例えば、`Git Clone` (id: `git-clone`) ステップは指定したレポジトリの"git clone"を行います。(branch, tag, cloneへのコミット、cloneが発生すべきローカルパスなど) ご自身 (またはシステム)が指定したインプットを使って行われます。
 
-For example the `Git Clone` (id: `git-clone`) step performs a "git clone" of the specified repository, with the inputs you (or the system) specify (e.g. the branch, tag or commit to clone, the local path where the clone should happen, etc.).
+技術的な側面からのステップとは、ステップのコードならびにステップのinterface定義を含む、semver**バージョン化された**レポジトリになります。
 
-例えば、`Git Clone` (id: `git-clone`) ステップは指定のレポジトリの"git clone"を行います。これはブランチやタグ、cloneへのコミット、cloneが発生すべきローカルパスなど、ご自身またはシステムが指定したインプットを使って行われます。
+Step interface definition (`step.yml`) にはステップの依存性やインプット・アウトプット、ステップのタイトルや説明文のような情報が詰め込まれています。また、issue trackerやsupport URLといった他プロパティや、ステップの実行やスキップを行う際に定義をしたり、ビルド失敗時に失敗ステップにマークをするようなフィルタープロパティも含まれています。
 
-From a technical perspective a Step is a semver **versioned** repository which includes the _code_ of the Step and the _interface_ definition of the Step.
+構成の側面から、Bitrise Stepについて知っておく必要があるのは、ご自身のビルド構成 (`bitrise.yml`)にBitriseステップを含める方法とそれを構成する方法の2つになります。
 
-技術的な側面から申し上げると、ステップとはステップのコードならびにステップのインターフェース定義を含むsemverバージョンレポジトリになります。
+ステップを含めるには、`steps:`ワークフローのリスト内にある[Step reference ID](#step-referenceid-format)を使って参照する必要があります。
 
-The _step interface definition_ (`step.yml`) includes information like the dependencies of the step, the inputs and outputs of the step, the title and description of the step; and other properties like the issue tracker / support URL, or the filter properties which define when the step should be performed or skipped and whether a failed step should mark the build as failed.
-
-ステップインターフェース定義 (`step.yml`)にはステップの依存性やインプット・アウトプット、ステップのタイトルと説明のような情報が詰め込まれています。また、issue trackerやsupport URLといった他プロパティ、ステップの実行やスキップする際に定義をしたりビルド失敗時に失敗ステップにマークをするフィルタープロパティも含まれています。
-
-From a configuration perspective all you have to know about Bitrise Steps is how you can include and configure them in your build configuration (`bitrise.yml`).
-
-構成の側面から申し上げると、ご自身のビルド構成 (`bitrise.yml`)にBitriseステップを含める方法や構成する方法を知っておく必要があります。
-
-To include a Step you have to reference it by a [Step reference ID](#step-referenceid-format) in the `steps:` list of a Workflow.
-
-ステップを含めるには`steps:`のワークフローのリスト内の[Step reference ID](#step-referenceid-format)を使って照会する必要があります。
-
-An example, with a single `script` step, which will be executed when you run `bitrise run test`:
-
-例えば、単一の`script`ステップを使うと、`bitrise run test`を実行する時にそのステップが開始されます：
+一例として、単一の`script`ステップを使うと、`bitrise run test`を実行する時にそのステップが開始されます：
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -44,21 +30,13 @@ An example, with a single `script` step, which will be executed when you run `bi
         steps:
         - script:
 
-{% include message_box.html type="note" title="List of available steps (step IDs)　利用可能なステップの一覧" content="
+{% include message_box.html type="note" title="利用可能なステップの一覧 (Step IDs)" content="
 
-You can list all the available steps in the main Bitrise StepLib by running `bitrise step-list`, or by checking [the main Bitrise Steplib repository](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps).
+利用可能なステップの一覧は`bitrise step-list`を実行させるとメインのBitrise StepLib (ステップライブラリ)内で表示されるほか、[メインのBitrise StepLibレポジトリ](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps)からでも確認できます。"%}
 
-全ての利用可能なステップの一覧は`bitrise step-list`を実行させるとメインのBitrise StepLib (ステップライブラリ)内で表示されるほか、[メインのBitrise StepLibレポジトリ](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps)からも確認できます。"%}
+ビルド構成 (`bitrise.yml`) でステップを含めることができたら、そのステップ用に構成を指定することができます。一般的には、ここでステップのインプットへ値の指定を行います。ステップの`inputs:`list propertyを使用したり、インプットのkeyとvalueを定義することにより実行できます。
 
-Once you include a step in your build configuration (`bitrise.yml`), you can specify configurations for the step. The most common thing you'll do is to specify values for the step's inputs. You can do this with the `inputs:` list property of the step, defining the _key_ of the input and the _value_ you want to set.
-
-ビルド構成 (`bitrise.yml`) でステップを含めることができたら、ステップ用の構成を指定することができます。ここで一般的には、ステップのインプットへ値の指定を行います。ステップの`inputs:`リストプロパティ、インプットのキー、設定を施したい値を定義することにより実行できます。
-
-For example, to specify a simple script to perform for the `script` step, you can specify a value for the `script` step's `content` input. (_Note: you can list all the inputs of a step with_ `bitrise step-info STEP-ID`)
-
-例えば、`script`ステップ用に簡単なスクリプトの実行を指定するには、`script`ステップの`content`インプット用に値を指定します。 (メモ：`bitrise step-info STEP-ID`を使って全てのステップインプットをリスト化することができます)
-
-Let's do a simple "Hello World" script, using the `script` step:
+例えば、`script`ステップ用に簡単なスクリプトの実行を指定するには、`script`ステップの`content`インプット用に値を指定します。 _(メモ：_`bitrise step-info STEP-ID`_を使って全てのステップインプットをリスト化することができます)_
 
 `script`ステップを使って簡単な"Hello World"スクリプトを試してみましょう：
 
@@ -71,8 +49,6 @@ Let's do a simple "Hello World" script, using the `script` step:
         - script@1.1.3:
             inputs:
             - content: "echo 'Hello World!'"
-
-When you run the `test` workflow of this configuration with `bitrise run test` you'll now see that the `script` step prints the text `Hello World` in its log:
 
 `bitrise run test`を用いてこの構成の`test`ワークフローを実行する際、ログ内の`Hello World`のテキストが`script`に印字されていることが確認できます。
 
@@ -92,13 +68,9 @@ When you run the `test` workflow of this configuration with `bitrise run test` y
     | ✓ | script@1.1.3                                                  | 0.30 sec |
     +---+---------------------------------------------------------------+----------+
 
-If the step doesn't have any required inputs you don't have to specify an input, and of course you can specify values for as many inputs as you want to.
+ステップに必要なインプットがない場合は、インプットを指定する必要はありません。でももちろん、必要な分だけインプット用に値を指定することが可能です。
 
-インプットを指定する必要がないステップの場合、必要なだけのインプット用に値を指定することが可能です。
-
-For example the `script` step can run Ruby scripts too, not just Bash scripts. To do this, in addition to specifying the script in the `content` input you also have to specify the "runner" input:
-
-例えば、`script`ステップはBashだけでなくRubyスクリプトも実行することができます。これを行うには、`content`インプット内のスクリプトを指定することに加えて"runner"インプットの指定もする必要があります：
+例えば、`script`ステップはBashだけでなくRubyスクリプトも実行することができます。これを行うには、`content`インプット内のスクリプトを指定することに加えて、"runner"インプットの指定も必要です：
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -113,7 +85,7 @@ For example the `script` step can run Ruby scripts too, not just Bash scripts. T
 
 Step input values are always **string** / text values, as the input id/key and the value are passed to the step as environment variables ([more information](/bitrise-cli/most-important-concepts/#全てのインプット、アウトプット、パラメータは環境変数です)), and the value can be multi line too, using the standard YAML multi line format. An example multi line Bash script:
 
-ステップのインプット地は常に文字列 (string) / テキストであり、インプットのID/キーと値は環境変数 ([詳しい情報](/jp/bitrise-cli/most-important-concepts/#全てのインプット、アウトプット、パラメータは環境変数です)) としてステップに渡されます。また、標準的なYAML multi line フォーマットを使うと、値は複数行でも対応します。複数行のBashスクリプトの例:
+ステップのインプット値は常に**文字列 (string)** / テキスト値で、インプットのID/キーと値は環境変数 ([詳しい情報](/jp/bitrise-cli/most-important-concepts/#全てのインプット、アウトプット、パラメータは環境変数です)) としてステップに渡されます。また、標準的なYAML multi line フォーマットを使うと、値は複数行でも対応します。複数行のBashスクリプトの例:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
