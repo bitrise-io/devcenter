@@ -83,9 +83,7 @@ Step interface definition (`step.yml`) にはステップの依存性やイン�
             - content: "puts 'Hello Ruby!'"
             - runner_bin: ruby
 
-Step input values are always **string** / text values, as the input id/key and the value are passed to the step as environment variables ([more information](/bitrise-cli/most-important-concepts/#全てのインプット、アウトプット、パラメータは環境変数です)), and the value can be multi line too, using the standard YAML multi line format. An example multi line Bash script:
-
-ステップのインプット値は常に**文字列 (string)** / テキスト値で、インプットのID/キーと値は環境変数 ([詳しい情報](/jp/bitrise-cli/most-important-concepts/#全てのインプット、アウトプット、パラメータは環境変数です)) としてステップに渡されます。また、標準的なYAML multi line フォーマットを使うと、値は複数行でも対応します。複数行のBashスクリプトの例:
+ステップのインプット値は常に**文字列 (string)** / テキスト (text) 値で、インプットのID/keyと値は環境変数 ([詳しい情報はこちらから](/bitrise-cli/most-important-concepts/#全てのインプット、アウトプット、パラメータは環境変数です)) としてステップに渡されます。また、標準的なYAML multi line フォーマットを使うと、値は複数行にも対応します。複数行のBashスクリプトの例:
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -101,17 +99,11 @@ Step input values are always **string** / text values, as the input id/key and t
                 var_to_print='Hello World!'
                 echo "${var_to_print}"
 
-{% include message_box.html type="important" title="Indentation in YAML YAMLのインデント" content="Indentation in the YAML format is very important! You should use two-spaces indentation, and you can't use tabs to indent!
+{% include message_box.html type="important" title="YAMLのインデント" content="YAMLでのインデント (字下げ) はとても重要です！2スペースのインデントを使用する必要があり、タブを使ってのインデントはできません！
 
-If you use a multi line value, like the one above, it's important that you have to _indent the value with two spaces_, compared to the key!
+上記の例のように、複数行の値を使用する場合、キーと比較して、2スペースを用いた値のインデントを行ってください。"%}
 
-YAMLでのインデント (字下げ) はとても重要です！2スペースのインデントを使用する必要があり、タブを使ってのインデントはできません！
-
-上記の例のように、複数のライン値を使用する場合、キーと比較して2つのスペースを用いた値のインデントを行ってください。"%}
-
-You can change other properties of the step too, not just the inputs. For example, if you want to "force" run the step even if a previous step fails, you can set the `is_always_run` property to `true`:
-
-インプットのみならず、ステップの他プロパティを変更することもできます。例えば、前回のステップが失敗したにも関わらずそのステップを”強制的”に実行したい場合、`is_always_run`プロパティを`true`にセットすることで可能になります。
+インプットのみならず、ステップの他プロパティを変更することもできます。例えば、前回のステップが失敗したにも関わらずそのステップを”強制的”に実行したい場合、`is_always_run`プロパティを`true`にセットすることで可能になります：
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -125,9 +117,7 @@ You can change other properties of the step too, not just the inputs. For exampl
             - content: "puts 'Hello Ruby!'"
             - runner_bin: ruby
 
-or if you want to specify a better, more descriptive title for the step, you can use the `title` property:
-
-ステップ用にベターでより叙述的なタイトルを指定したい場合、`title`プロパティを使用します：
+ステップ用に、より記述的なタイトルを指定したい場合、`title`プロパティを使用します：
 
     format_version: 1.3.1
     default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
@@ -142,19 +132,15 @@ or if you want to specify a better, more descriptive title for the step, you can
             - content: "puts 'Hello Ruby!'"
             - runner_bin: ruby
 
-### The Step data you define in bitrise.yml - your diff!　bitrise.ymlで定義するステップデータはdiffです！
+### bitrise.ymlで定義するステップデータはdiffです！
 
-You might already suspect it after the examples above: the step data / infos you specify in the `bitrise.yml` are the parameters of the step **you want to change** / overwrite.
+上記の例から気づかれた方もいるかもしれませんが、`bitrise.yml`で指定するステップデータや情報は、**ご自身が変更** / 上書き**を行いたい**ステップのパラメータになります。
 
-上記の例から気づかれた方もいるかもしれませんが、`bitrise.yml`で指定するステップデータ / 情報は、ご自身が変更 / 上書きを行いたいステップのパラメータになります。
-
-If you don't specify any input or other step property, only the step (reference/iD), that means that the step should run with the default values (defined by the step's developer).
-
-インプットや他のステッププロパティを指定しない場合、ステップ (reference/iD) のみが (そのステップの開発者により設定された) デフォルト値を使用して実行されるようになっています。
+インプットや他のステッププロパティを指定せず、ステップ (reference/iD) のみを指定する場合、 (そのステップの開発者により設定された)デフォルト値を使用して実行されるようになっています。
 
 You could also think about this as a `diff`. The step defines values for the step interface properties, and in the `bitrise.yml` you define a `diff`, the things you want to change and the values to change to.
 
-これを`diff`として考えることも可能です。ステップは、step interface properties用に値を定義し、`bitrise.yml`内では`diff`を定義します。`diff`とはご自身による変更、または値が
+これを`diff`として考えることもできます。ステップは、step interface properties用に値を定義し、`bitrise.yml`内では`diff`を定義します。`diff`とはご自身による変更、または値が
 
 Let's go through the example above:
 
