@@ -140,9 +140,7 @@ Step interface definition (`step.yml`) にはステップの依存性やイン�
 
 You could also think about this as a `diff`. The step defines values for the step interface properties, and in the `bitrise.yml` you define a `diff`, the things you want to change and the values to change to.
 
-これを`diff`として考えることもできます。ステップは、step interface properties用に値を定義し、`bitrise.yml`内では`diff`を定義します。`diff`とはご自身による変更、または値が
-
-Let's go through the example above:
+これを`diff`として考えることもできます。ステップが step interface properties用に値を定義し、`bitrise.yml`内ではご自身で`diff`、変更を行いたいものと変更する値を定義します。
 
 では例を見ていきましょう：
 
@@ -155,11 +153,11 @@ Let's go through the example above:
 
 The `- script@1.1.3:` line selects the step, and the properties you define after this (with an indentation!) are the things you want to overwrite.
 
-`- script@1.1.3:`の行はステップを選択し、この後に (インデントを使用して) 定義するプロパティは、上書きの必要があれば行ってください。
+`- script@1.1.3:`行はステップを選択します。(インデントを使用して)この行の後に定義したプロパティは、ご自身が上書きを行いたいものとなっています。
 
 To see the step's raw interface definition you can check it in the step library. In these examples we always use the [main Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib). The step interface definitions can be found in the StepLib's [steps directory](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps).
 
-ステップのRaw Interface定義を見るには、ステップライブラリを確認します。このような例は、常に[main Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)を参照してください。
+ステップのRaw Interface定義を見るには、ステップライブラリを確認します。このような例では、常に[main Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)を使用します。Step interface定義はStepLibの[steps directory](https://github.com/bitrise-io/bitrise-steplib/tree/master/steps)で見つけることができます。
 
 The [step.yml file in this directory is the step's interface definition](https://github.com/bitrise-io/bitrise-steplib/blob/master/steps/script/1.1.3/step.yml).
 
