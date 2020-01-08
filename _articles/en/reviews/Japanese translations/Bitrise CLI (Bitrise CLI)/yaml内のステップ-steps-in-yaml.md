@@ -140,7 +140,7 @@ Step interface definition (`step.yml`) にはステップの依存性やイン�
 
 You could also think about this as a `diff`. The step defines values for the step interface properties, and in the `bitrise.yml` you define a `diff`, the things you want to change and the values to change to.
 
-これを`diff`として考えることもできます。ステップが step interface properties用に値を定義し、`bitrise.yml`内ではご自身で`diff`、変更を行いたいものと変更する値を定義します。
+これを`diff`として考えることもできます。ステップが step interface properties用に値を定義して、ご自身で`diff`、変更を行いたいもの、そして変更する値を`bitrise.yml`内で定義します。
 
 では例を見ていきましょう：
 
