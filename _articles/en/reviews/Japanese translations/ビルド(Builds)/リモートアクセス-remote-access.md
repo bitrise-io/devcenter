@@ -6,60 +6,46 @@ summary: ''
 published: false
 
 ---
-Remote access allows users to connect to their build's virtual machines via SSH or a screenshare app. A failed build can be rebuilt with remote access enabled to make troubleshooting a lot easier - for example, if the build logs don't provide enough information about the error.
+リモートアクセスを使って、SSHまたは画面共有アプリを経由しビルドのバーチャルマシンに接続することができます。リモートアクセスを用いた失敗ビルドの再構築により、トラブルシューティングがより簡単になります (ビルドログがエラーについて十分な情報を提供しない場合など) 。
 
-リモートアクセスを使って、SSHまたはスクリーンシェアアプリを経由してビルドのバーチャルマシンに接続することができます。リモートアクセスを用いた失敗ビルドの再構築により、トラブルシューティングが簡単になります。例えば、ビルドログがエラーについて十分な情報を提供しない場合などです。
-
-{% include message_box.html type="important" title="Authorization 権限付与" content="Users who have the **Testers/QA** roles on the app CANNOT use remote access.
-
-アプリで**Testers/QA**のロールをお持ちのユーザーはリモートアクセスを使用することはできません。"%}
-
-There are two ways to use remote access on our build machines:
+{% include message_box.html type="important" title="権限付与" content="アプリ内で**Testers/QA**ロールのユーザーはリモートアクセスを使用することはできません。"%}
 
 Bitriseのビルドマシンでリモートアクセスを使用するには2つの方法があります：
 
-* **SSH**: this is available for both Linux/Docker based and MacOS machines.
-* **Screenshare**: this is only available for MacOS machines.
-* SSH: Linux/Dockerベースの両方とMacOSで利用可能です。
-* Screenshare: MacOSのみで利用可能です。
+* **SSH**: Linux/DockerとMacOSで利用可能です。
+* **Screenshare (画面共有)**: MacOSのみで利用可能です。
 
-With either method, you can access the build machine remotely during the build and for 10 minutes after the build is finished.
+これらの方法で、ビルド実行中、もしくはビルド終了から10分間、遠く離れたところからでもビルドマシンにアクセスすることができます。
 
-これらの方法で、ビルド中、もしくはビルド終了から10分間、遠く離れたところからでもビルドマシンにアクセスすることができます。
+## SSHを使用したリモートアクセス
 
-## Remote access with SSH　SSHを使用したリモートアクセス
-
-1. Go to the build page.  
-   ビルドページに進みます。
-2. Click the **Rebuild with Remote Access** option.
-
-   **Rebuild with Remote Access**のオプションをクリックします。
-3. Click **Remote Access Instructions**.  
-   **Remote Access Instructions**をクリックします。
+1. ビルドページに進みます。
+2. **Rebuild with Remote Access**のオプションをクリックします。
+3. **Remote Access Instructions**をクリックします。
 
    ![](/img/remote-access-instructions.png)
-4. Under the **SSH** option, find and copy the command you will need.  
-   SSHオプションの下にある
-5. Open a command line interface.
-6. Run the command found under **SSH** (the below is an example):
+4. **SSH**オプションの下にある、後ほど必要になるCommandをコピーします。
+5. コマンドラインインターフェイス (CLI) を開きます。
+6. **SSH**の下にあるcommandを実行します (以下は例です)：
 
        ssh -o StrictHostKeyChecking=no vagrant@1.tcp.ngrok.io -p 000000
-7. Copy and paste the password from the **Remote Access Instructions** page.
+7. **Remote Access Instructions**のページのPasswordをコピー＆ペーストします。
 
-And done! You should be able to access the virtual machine where your build is running.
+完了です！これでビルドが回っているバーチャルマシンにアクセスすることができます。
 
-## Remote access with screenshare
+## Remote access with screenshare  
+画面共有アプリを使ったリモートアクセス
 
-1. Go to the build page.
-2. Click the **Rebuild with Remote Access** option.
-3. Click **SSH**.
+1. ビルドページに進みます。
+2. **Rebuild with Remote Access**オプションをクリックします。
+3. **SSH**をクリックします。
 
    ![](/img/remote-access-instructions.png)
-4. Under the **SSH** option, find the required information:
+4. **SSH**オプションの下にある情報を確認します：
    * Address
    * Username
    * Password
-5. Open a screenshare application.
-6. Fill out the required fields with the information from under the **Screenshare** option.
+5. 画面共有アプリを開きます。
+6. **Screenshare**オプションの下にある情報を入力します。
 
-And done! You should now be able to access the virtual machine where your build is running.
+完了です！これでビルドが実行されているバーチャルマシンにアクセスすることができます。
