@@ -196,6 +196,7 @@ pages:
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/bitrise-ymlファイルへのオンラインアクセス-accessing-the-bitrise-yml-file-online.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/build-artifacts-online.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/github-checksでbitrise-checksを行う-bitrise-checks-on-github-checks.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/sensitive-input-in-public-apps.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/setting-your-git-credentials-on-build-machines.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
