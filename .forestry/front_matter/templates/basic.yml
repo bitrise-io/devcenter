@@ -131,6 +131,7 @@ pages:
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/yaml内のステップ-steps-in-yaml.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/yaml内のワークフロー-workflows-in-yaml.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/ステップのプロパティ-step-properties.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/ローカルでのbitriseプロジェクトの初期設定-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/最重要コンセプト-most-important-concepts.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
