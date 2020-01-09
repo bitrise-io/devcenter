@@ -70,7 +70,7 @@ If you want to build an app for iOS or Android, you need to upload the platform-
 
 ### Signing your iOS project
 
-To sign your iOS project, you have to upload code signing certificates and provisioning profiles depending on the distribution and the code signing type you have set in the **Cordova Archive** and **Ionic Archive** Steps. Let's dive right in!
+To sign your iOS project, you have to upload code signing certificates and provisioning profiles depending on the distribution and the code signing type you have set in the **Cordova archive** and **Ionic archive** Steps. Let's dive right in!
 
 1. Generate the native Xcode project locally from your Ionic or Cordova project by calling `cordova platform add ios` or `ionic cordova platform add ios`.
 2. Use our [codesigndoc](https://github.com/bitrise-io/codesigndoc) tool to [collect the code signing files](https://devcenter.bitrise.io/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
@@ -78,7 +78,7 @@ To sign your iOS project, you have to upload code signing certificates and provi
 
    You can do this either on the website UI or with the codesigndoc tool itself.
 4. Make sure you have the **Certificate and profile installer** Step in your Workflow as this Step can download and install the certificates on the virtual machine.
-5. Add the **Generate cordova build configuration** Step to your Workflow. (This Step does all the configuration needed for the next step, which is **Cordova Archive** or **Ionic Archive**.) It must come after the **Certificate and profile installer** Step.
+5. Add the **Generate cordova build configuration** Step to your Workflow. (This Step does all the configuration needed for the next step, which is **Cordova archive** or **Ionic archive**.) It must come after the **Certificate and profile installer** Step.
 6. Fill in the required input for the Step. Please note that both the **Code Signing Identity** and the **Provisioning Profile** are required inputs for iOS apps even though they are not marked as such.
    * **Build configuration**: you can set it to either `debug` or `release`.
    * **Code Sign Identity**: enter a Developer or a Distribution identity.
@@ -113,7 +113,7 @@ There are a few places to deploy your app but the configuration is slightly diff
 
 Before deploying your app to any marketplace you need to generate a codesigned .ipa and/or APK so make sure you perform these steps:
 
-1. Add the **Cordova archive** or the **Ionic archive** step to your workflow. (Note that if you're building for both iOS and Android in one project, and either of your apps fails, the whole **Cordova Archive/Ionic Archive** Step will fail.)
+1. Add the **Cordova archive** or the **Ionic archive** step to your workflow. (Note that if you're building for both iOS and Android in one project, and either of your apps fails, the whole **Cordova archive / Ionic archive** Step will fail.)
 2. Fill in the required inputs.
    * The **Platform** input needs to be set to **device**.
    * The **Build command configuration** input must match the **Build configuration** input of the **Generate cordova build configuration** Step.
@@ -126,7 +126,7 @@ Now that we're ready for deployment, let's see how to publish your iOS and Andro
 
 ### Deploying to App Store Connect
 
-1. Add the **Deploy to iTunes Connect - Application Loader** Step to your workflow, after the **Cordova Archive** or **Ionic Archive** Steps but preferably before the **Deploy to Bitrise.io - Apps, Logs, Artifacts** Step.
+1. Add the **Deploy to iTunes Connect - Application Loader** Step to your workflow, after the **Cordova archive** or **Ionic archive** Steps but preferably before the **Deploy to Bitrise.io - Apps, Logs, Artifacts** Step.
 2. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
@@ -152,7 +152,7 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 
 1. In your Bitrise **Dashboard**, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 2. Copy the env key which stores your uploaded file’s url. For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Add the **Deploy to Google Play** Step after **Cordova Archive** or **Ionic Archive** Step in your deploy workflow.
+3. Add the **Deploy to Google Play** Step after **Cordova archive** or **Ionic archive** Step in your deploy workflow.
 4. Fill out the required input fields:
 
 * **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
