@@ -17,7 +17,7 @@ If you need quick tech support from us, our onsite chat support can look into yo
 
 With the toggle function, you can easily turn the **Bitrise Support user** on and off. No need to add us as a user to your app's Team any more.
 
-{% include message_box.html type="note" title="How long does the Bitrise Support User remain active?" content="Please note that due to security reasons once you turn the Bitrise Support User on, it will remain active for 2 weeks after which it automatically gets deactivated."%}
+{% include message_box.html type="note" title="How long does the Bitrise Support User remain active?" content="Please note that due to security reasons once you turn the Bitrise Support User on, it will remain active for two weeks after which it automatically gets revoked."%}
 
 Let's see how to set it up!
 

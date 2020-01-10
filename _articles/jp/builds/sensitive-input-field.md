@@ -2,7 +2,6 @@
 title: 公開アプリの機密インプット
 redirect_from:
 - "/sensitive-input-field/"
-- sensitive-input-field/#set-a-sensitive-input-in-a-step/
 menu:
   builds-main:
     weight: 20

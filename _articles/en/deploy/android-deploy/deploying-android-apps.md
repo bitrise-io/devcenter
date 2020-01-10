@@ -112,7 +112,7 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
 2. Select your project and go to Workflow Editor.
-3. Click the `Code Signing` tab.
+3. Click the **Code Signing** tab.
 4. Upload the service account JSON key into the **GENERIC FILE STORAGE**.
 5. Copy the env key which stores your uploaded file's URL.
 
@@ -121,11 +121,11 @@ Now let's head back to Bitrise and finish off the deploy configuration!
    `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 6. Go back to your Workflow Editor and add the **Google Play Deploy** Step to the end of your Workflow.
 7. Fill out the required input fields which are:
-   * **Service Account JSON key file path**: This field can accept a remote url so you have to provide the environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
+   * **Service Account JSON key file path**: this field can accept a remote url so you have to provide the environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
    * **Package name**: the package name of your Android app.
    * **Track**: the track where you want to deploy your app (for example, internal/alpha/beta/production or any custom track you set).
 
-You can use the Play Console UI to promote apps to other tracks (e.g. an app uploaded to internal testing can be released on alpha track).
+You can use the Play Console UI to promote apps to other tracks (for example, an app uploaded to internal testing can be released on alpha track).
 
 The final configuration looks like this:
 
@@ -133,25 +133,25 @@ The final configuration looks like this:
     workflows:
     deploy:
       steps:
-      - activate-ssh-key@3.1.1:
+      - activate-ssh-key@4.0.5:
           run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-      - git-clone@4.0.11: {}
+      - git-clone@4.0.17: {}
       - cache-pull@2.0.1: {}
       - script@1.1.5:
           title: Do anything with Script step
-      - install-missing-android-tools@2.1.1: {}
-      - android-build@0.9.4:
+      - install-missing-android-tools@2.3.7: {}
+      - android-build@0.10.0:
           inputs:
           - project_location: $BITRISE_SOURCE_DIR
           - module: "app"
-      - sign-APK@1.2.0: {}
-      - google-play-deploy@1.5.0:
+      - sign-APK@1.4.1: {}
+      - google-play-deploy@3.0.1:
           inputs:
           - package_name: io.bitrise.googleplay
           - service_account_json_key_path: "$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL"
           - track: alpha
-      - deploy-to-bitrise-io@1.3.12: {}
-      - cache-push@2.0.5: {}
+      - deploy-to-bitrise-io@1.9.4: {}
+      - cache-push@2.2.3: {}
     {% endraw %}
 
 Your workflow is ready for deploying your app automatically to [Google Play Store](https://play.google.com/store). Once the app is tested and generated, you can upload it to Google Play Store.
