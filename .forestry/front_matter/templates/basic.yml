@@ -201,6 +201,8 @@ pages:
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/setting-your-git-credentials-on-build-machines.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガーについて (Triggering
+  builds)/プルリクエストビルドの承認-approving-pull-request-builds.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドの番号付けとアプリバージョン管理-build-numbering-and-app-versioning.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/リモートアクセス-remote-access.md
