@@ -40,17 +40,17 @@ To enable or disable manual approval, you need to be an **admin** or an **owner*
 
 ### Approving the PR build
 
-{% include message_box.html type="important" title="Approving the PR build" content="Please note that approval means approval on Bitrise. Approving the Pull Request on your git hosting provider's website is not sufficient to start a build: an admin or an owner has to approve the build on Bitrise."%}
+{% include message_box.html type="important" title="Approving the PR build" content="Please note that approval means approval on Bitrise. Approving the Pull Request on your Git provider's website is not sufficient to start a build: an admin or an owner has to approve the build on Bitrise."%}
 
 If a Pull Request is submitted from a fork, you will be notified that a PR build is waiting for approval:
 
 * A notification email will be sent with the name of the app, as well as links to the repository itself and to the app's `Builds` page on Bitrise.
-* On the git hosting provider, the status of the CI check will show `Pending - Waiting for approval`.
+* On the Git provider, the status of the CI check will show `Pending - Waiting for approval`.
 * On the `Builds` page of the app, a confirmation box will be displayed.
 
 ![](/img/waiting-for-approval-2.png)
 
-To approve and run the build, click the `Approve and Run Build` button. Clicking `Review` opens the Pull Request on the website of your git hosting provider.
+To approve and run the build, click the `Approve and Run Build` button. Clicking `Review` opens the Pull Request on the website of your Git provider.
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">

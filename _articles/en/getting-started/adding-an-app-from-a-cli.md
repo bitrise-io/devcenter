@@ -19,14 +19,14 @@ You can easily register a new Bitrise app from any command line interface: the p
 
 Before you try adding a new app to Bitrise via our CLI, make sure a few things are in order:
 
-* You need a Bitrise account, with a connected git provider.
-* Your project must have a local Git repository on your machine and a remote repository at a Git provider. If you want to use an SSH key to access the repository, [the remote repository URL must be an SSH URL](https://help.github.com/en/articles/which-remote-url-should-i-use)! For example, git@github.com:example-user/example.git.
+* You need a Bitrise account, with a connected Git provider.
+* Your project must have a local Git repository on your machine and a remote repository at a Git provider. If you want to use an SSH key to access the repository, [the remote repository URL must be an SSH URL](https://help.github.com/en/articles/which-remote-url-should-i-use)! For example, `git@github.com:example-user/example.git`.
 
 You can also create a `bitrise.yml` in advance and you will be able to add that to your app during the creation process. This is optional: you can have the scanner generate one for you during the process, just like on our website!
 
 ## Adding a new app from a CLI
 
-This procedure guides you through adding an app which Bitrise will access with an SSH key. This requires that the app's remote repository has an SSH URL, such as git@github.com:example-user/example.git.
+This procedure guides you through adding an app which Bitrise will access with an SSH key. This requires that the app's remote repository has an SSH URL, such as `git@github.com:example-user/example.git`.
 
 You can, of course, use an HTTPS URL to access your remote repository, too: in that case, you will not set an SSH key for your app. We only recommend using HTTPS URLs for public apps (open source projects).
 
@@ -64,7 +64,7 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
     You can select either the automatic registration or choose to add your own.
     * If you choose automatic, Bitrise will automatically generate a key pair. If you need to use additional private repositories or submodules, choose the I need to option when prompted and follow the instructions. If not, select the No, auto-add SSH key option: this automatically adds the public key to your repository.
     * If you choose to add your own, you have to provide the path to the SSH key file: either enter it manually, or drag and drop the file, as that will input the path.
- 9. Decide what bitrise.yml file you want to upload.
+ 9. Decide what `bitrise.yml` file you want to upload.
 
         ? What bitrise.yml do you want to upload? 
           > Run the scanner to generate a new bitrise.yml
@@ -83,7 +83,7 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
 
     If you select `No`, you will be prompted to check out the branch you wish to use, and then hit Enter again so the scanner can start.
 
-    Once the scanner is done, it will either detect your app's type or it will switch to manual configuration. Manual configuration means you have to select the type of your app (iOS, Android, React Native, Flutter, and so on) and you have to provide the path to the relevant configuration file. For example, a config.xml in the case of an Ionic app. In this guide, we'll proceed with automatic detection.
+    Once the scanner is done, it will either detect your app's type or it will switch to manual configuration. Manual configuration means you have to select the type of your app (iOS, Android, React Native, Flutter, and so on) and you have to provide the path to the relevant configuration file. For example, a `config.xml` in the case of an Ionic app. In this guide, we'll proceed with automatic detection.
 11. Select the stack you want to use.
 
     If the scanner detects your project type, a stack will be automatically recommended but you can change it in the CLI if you want to. If you performed manual configuration as described above, you will have to choose the stack, too.

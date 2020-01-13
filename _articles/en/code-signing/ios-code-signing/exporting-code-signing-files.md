@@ -19,7 +19,7 @@ You can export certificates manually, or using Xcode.
 
 ### Exporting using Xcode
 
-1. Start Xcode
+1. Start Xcode.
 2. Select Xcode > Preferences from the navigation bar.
 3. At the top of the window select `Accounts`.
 4. Select your Apple ID and your team from the right side bar, then click on `View Details...`.
@@ -57,8 +57,8 @@ You can export Provisioning Profiles manually, or using Xcode.
 ### Exporting manually
 
 1. Go to [https://developer.apple.com](https://developer.apple.com) and log in.
-2. Select Certificates, Identifiers & Profiles from the left sidebar
-3. Navigate to Provisioning Profiles > All
+2. Select Certificates, Identifiers & Profiles from the left sidebar.
+3. Navigate to Provisioning Profiles > All.
 4. Find the Provisioning Profile you are looking for from the list or use the search to filter.
 5. Click on the selected Provisioning Profile, this will expand the details.
 6. If its status is invalid, you can click on the `Edit` button and save again.

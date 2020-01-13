@@ -22,7 +22,7 @@ You can also take care of your app's versioning automatically, using Bitrise. We
 
 ## Changing the build number of your build
 
-Set the build number manually on the website. This is useful if, for example, you migrated to Bitrise from some other service where your app already had several builds. This way you do not have to start from 1!
+You can set the build number manually on the website. This is useful if, for example, you migrated to Bitrise from some other service where your app already had several builds. This way you do not have to start from 1!
 
 Open your app and go to its **Settings** tab.
 
@@ -34,7 +34,7 @@ Please note that the build number must be either 0 or a positive integer. Negati
 
 ## Setting up app versioning automatically on Bitrise
 
-Track the version of your app in its git repository by modifying the file containing the essential information about the app (for example, the `Info.plist` file for iOS apps and either the `build.gradle` file or the `AndroidManifest.xml` file for Android apps).
+Track the version of your app in its Git repository by modifying the file containing the essential information about the app (for example, the `Info.plist` file for iOS apps and either the `build.gradle` file or the `AndroidManifest.xml` file for Android apps).
 
 Bitrise has two steps to do this for you. These two Steps can insert the Bitrise build number or some other specified number into their respective files:
 

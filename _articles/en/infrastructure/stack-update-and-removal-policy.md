@@ -80,14 +80,14 @@ When the first **beta of the next major Xcode version** is released, we **depr
 
 {% include message_box.html type="example" title="Example for deprecating Xcode stacks when beta Xcode version is released " content=" When Xcode 9 was released, we deprecated
 
-* all the Xcode 8 stacks except the very last one (8.3.x)
+* all the Xcode 8 stacks except the very last one (8.3.x).
 * the oldest major version (Xcode 6.4). "%}
 
 When the first **final (non beta) version** of the new major Xcode version is released, we **remove** the deprecated stacks; the oldest major version as well as the minor versions of the last major version except the latest minor version.
 
 {% include message_box.html type="example" title="Example for removing stacks when final Xcode version is released" content=" For example, when Xcode 9 (final, non beta) was released, we removed:
 
-* the oldest major version (the Xcode 6 (6.4) stack)
+* the oldest major version (the Xcode 6 (6.4) stack).
 * the minor versions of the last major version (Xcode 8.0, 8.1 and 8.2 stacks) except for the latest minor version (Xcode 8.3) "%}
 
 This means that the latest patch release version of Xcode is **supported for about 2.5 years**, in sync with Xcode major version releases.
@@ -102,7 +102,7 @@ Altogether we have 4 Hybrid stacks:
 
 So when a new version of Visual Studio for Mac (vs4mac) comes out:
 
-* the current vs4mac Stable becomes the Previous Hybrid stack with Xamarin and vs4mac and
+* the current vs4mac Stable becomes the Previous Hybrid stack with Xamarin and vs4mac and,
 * the current Previous Hybrid stack with Xamarin and vs4mac gets deprecated.
 
 This means that the **Hybrid Visual Studio for Mac Stable** is **supported for about 1 year**, in sync with the major Xcode version releases.

@@ -15,8 +15,8 @@ menu:
 ---
 To run Xcode tests on Bitrise, you need to have test targets defined in your projects. You need two Steps to run Xcode tests and view their results:
 
-* **Xcode Test for iOS**
-* **Deploy to** [**Bitrise.io**](http://Bitrise.io)
+* **Xcode Test for iOS**.
+* **Deploy to** [**Bitrise.io**](http://Bitrise.io).
 
 {% include message_box.html type="note" title="Code signing files" content="Running Xcode tests and deploying their results to Bitrise do not require any code signing files. So don't worry about them just yet!"%}
 

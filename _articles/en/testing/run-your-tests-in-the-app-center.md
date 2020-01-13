@@ -9,11 +9,11 @@ menu:
 ---
 Upload and schedule tests on the Visual Studio App Center for your apps. The following testing frameworks are available:
 
-* Appium
-* Espresso
-* Calabash
-* Xamarin.UITest
-* XCUITest
+* Appium.
+* Espresso.
+* Calabash.
+* Xamarin.UITest.
+* XCUITest.
 
 1. In the Workflow Editor, [add](/getting-started/getting-started-workflows/) the **App Center upload and schedule tests** Step to your Workflow.
 

@@ -72,7 +72,7 @@ To authorize the app:
 4. Select the account you want to use from the dropdown menu.
 5. Test the connection to make sure it works.
 
-If everything goes well, you should be able to use the connected account's Apple Developer credentials in the app's builds.
+If everything goes well, you should be able to use the connected accounts' Apple Developer credentials in the app's builds.
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">

@@ -13,8 +13,9 @@ redirect_from: []
 menu:
   testing-main:
     weight: 11
-
+    
 ---
+
 With Bitrise's iOS device testing solution, you can run iOS tests on physical devices without having to set up and register your own devices: you just need to use our dedicated Steps and set the device type(s) on which you want to test your app. There are no limits to using the Step, other than your overall build time limit.
 
 Our device testing solution is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/): it uses real, production devices running in a Google data center to test your app. The devices are flashed with updated APIs and have customizable locale settings. You can find the resulting logs, videos and screenshots on Bitrise.
@@ -27,8 +28,8 @@ For iOS apps, Firebase Test Lab runs [XCTest](https://developer.apple.com/docume
 
 To run device tests with the Firebase Test Lab solution, you will need to add two Steps to your Workflow:
 
-* **Xcode Build for testing for iOS**
-* **iOS Device Testing**
+* **Xcode Build for testing for iOS**.
+* **iOS Device Testing**.
 
 {% include message_box.html type="note" title="Beta status" content="Please note that currently, both Steps are in beta phase. They are already stable and work well but we're working on improving them!"%}
 
@@ -69,11 +70,11 @@ If all goes well, you should be able to view your results on the Build page.
 
 Check out the test results of your device tests on the **Test Reports** page. You can view the results of the tests run on each device, and check the details of each test case. This includes:
 
-* Test cases
-* Video
-* Screenshots
-* Logs
-* Files generated
+* Test cases.
+* Video.
+* Screenshots.
+* Logs.
+* Files generated.
 
 To view the test results:
 

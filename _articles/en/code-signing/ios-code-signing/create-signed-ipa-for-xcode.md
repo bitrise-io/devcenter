@@ -37,11 +37,11 @@ If you're all set, proceed to setting up .ipa export in your Workflow.
    ![Select export method for Xcode Archive for iOS](/img/code-signing/ios-code-signing/xcode-archive-export-method.png)
 
    If you use automatic provisioning, make sure it matches the value of the **Distribution type** input of the **iOS Auto Provisioning** Step. The options are:
-   * `auto-detect` - please note that this option is deprecated and will be removed. We do not recommend using it.
-   * `app-store`
-   * `ad-hoc`
-   * `enterprise`
-   * `development`
+   * `auto-detect` - Please note that this option is deprecated and will be removed. We do not recommend using it.
+   * `app-store`.
+   * `ad-hoc`.
+   * `enterprise`.
+   * `development`.
 3. Save the Workflow, and start a new build.
 
 That's all. Xcode will automatically select the right signing files based on your project's Bundle ID and Team ID settings, and the export method you set.

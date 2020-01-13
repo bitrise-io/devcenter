@@ -34,7 +34,7 @@ You can also clone a Step by clicking the **Clone icon** on the right side and t
 
 ## Adding Steps from alternative sources 
 
-Generally, we recommend using Steps that are part of the official Bitrise Step Library. But you can add Steps from other sources, if you want to: you can use either a git URL or a local path. Read more about these in our [Steps in YAML](/bitrise-cli/steps/#special-step-sources) guide. 
+Generally, we recommend using Steps that are part of the official Bitrise Step Library. But you can add Steps from other sources, if you want to: you can use either a Git URL or a local path. Read more about these in our [Steps in YAML](/bitrise-cli/steps/#special-step-sources) guide. 
 
 On the Bitrise website, the git:: special source is the easiest way to use a Step that is not in the Bitrise Step Library. Let's see how.
 

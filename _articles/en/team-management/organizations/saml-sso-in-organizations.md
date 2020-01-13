@@ -27,9 +27,9 @@ Since the SAML SSO feature is tied to the Org Elite plan, if you decide to downg
 
 Before connecting SAML SSO to your Organization, make sure:
 
-* you have a SAML SSO provider (Identity Provider) that you can connect Bitrise to.
-* your account on Bitrise has an Organization. If it doesn't have an Organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Organizations on Bitrise.
-* as with other [Organization management actions](/team-management/organizations/members-organizations/), only the Organization owner can set up SAML SSO to a Bitrise Organization.
+* You have a SAML SSO provider (Identity Provider) that you can connect Bitrise to.
+* Your account on Bitrise has an Organization. If it doesn't have an Organization, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Organizations on Bitrise.
+* As with other [Organization management actions](/team-management/organizations/members-organizations/), only the Organization owner can set up SAML SSO to a Bitrise Organization.
 
 {% include message_box.html type="info" title="Guides on SAML SSO providers" content=" Check out our guides on how to set up SAML SSO with the following SAML SSO providers:
 
@@ -61,7 +61,7 @@ Now that the Organization owner has set up SAML SSO, everyone in the Organizatio
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
 2. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
 
-   The email also shows the Organization owner's email address (should you need to contact him/her.) 
+   The email also shows the Organization owner's email address (should you need to contact them.) 
 
    Click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
 
@@ -122,7 +122,7 @@ Now Organization members can only log in via SAML SSO.
 
 In some cases the Organization owner cannot enforce SAML SSO on the Organization because Organization members have not enabled their SAML SSO connection yet.
 
-* An Organization member fails to enable SAML SSO on his part:
+* An Organization member fails to enable SAML SSO on their part:
 
   The owner can remove the Organization member from the Organization and complete the enforcement process for the rest of the Organization.
 * An Organization member tried to enable SAML SSO with another Organization:
@@ -145,7 +145,7 @@ If SAML SSO connection has been already added to your Organization and you are c
 
 ## Logging in via SSO without a Bitrise account
 
-If you do not have a Bitrise account yet and an Organization owner invites you to his/her Organization via email, you can easily sign up to Bitrise and connect to the respective Organization! Our **Sign In via SSO** email is Organization-specific so you're just a couple of clicks away from accessing the right Bitrise Organization!
+If you do not have a Bitrise account yet and an Organization owner invites you to their Organization via email, you can easily sign up to Bitrise and connect to the respective Organization! Our **Sign In via SSO** email is Organization-specific so you're just a couple of clicks away from accessing the right Bitrise Organization!
 
 1. Find the invitation email you got from Bitrise (letsconnect@bitrise.io) in your mailbox.
 
@@ -161,7 +161,7 @@ If all goes well, you land on our Bitrise Dashboard.
 
 ## Disabling SAML SSO
 
-Organization owners can disable an established SAML SSO for the Organization with a click of a button on the **Single Sign On** tab. Please note that if you delete someone from your IdP, you have to delete that Organization member from Bitrise as well.
+Organization owners can disable an established SAML SSO for the Organization with a click of a button on the **Single Sign On** tab. Please note that if you delete someone from your IDP, you have to delete that Organization member from Bitrise as well.
 
 ### Disabling an Organization's SAML SSO
 
@@ -178,7 +178,7 @@ You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bi
 
 ### Disabling one Organization member's SAML SSO
 
-Please note if you click the **x** next to an Organization member's name, you remove that person from the Organization but his/her SAML SSO is yet to be disabled!
+Please note if you click the **x** next to an Organization member's name, you remove that person from the Organization but their SAML SSO is yet to be disabled!
 
 1. Go to your SAML SSO provider's site.
 2. Disable the Organization member there. Please note that if you fail to do this, the org member will able to re-authenticate again to Bitrise using the IDP connection.

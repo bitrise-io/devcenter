@@ -12,7 +12,7 @@ menu:
     weight: 7
 
 ---
-Organizations can have multiple **Groups**. Groups form the "backbones" of Organizations: they contain the members of the Organizations, they can be assigned to different applications owned by the Organizations, with different roles assigned to the different groups. Being a member of an organization means being a member of one of the groups belonging to the organization.
+Organizations can have multiple **Groups**. Groups are the "backbone" of Organizations: they contain the members of the Organizations, they can be assigned to different applications owned by the Organizations, with different roles assigned to the different groups. Being a member of an organization means being a member of one of the groups belonging to the organization.
 
 For example, let's say the organization called _TestOrg_ owns an app called _TestApp_. _TestOrg_ has the following groups:
 

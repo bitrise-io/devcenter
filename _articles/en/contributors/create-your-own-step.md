@@ -35,7 +35,7 @@ Once the Bitrise CLI is installed, create your own Step with three simple comman
 
 Running `bitrise :step` without any commands will print the plugin's help.
 
-Once you are done, you should have a `step.yml` and, depending on whether you chose Go or Bash, a `main.go` or a `step.sh` file in your new Step's repository.
+Once you are done, you should have a `step.yml` file and, depending on whether you chose Go or Bash, a `main.go` or a `step.sh` file in your new Step's repository.
 
 * The `step.yml` file is the Step interface definition, containing dependencies, Step inputs and Step outputs as well as other step properties.
 * `main.go` or `step.sh` contains the actual functionality of the Step. **DO NOT CHANGE the working directory!**
@@ -113,7 +113,7 @@ If you have any questions visit our [community discussion site](https://discuss.
 
 If you wish to share your newly created Step with the wider world, that's great - and simple!
 
-We recommend you start with the command `bitrise share`. This will print you a guide on sharing steps - all you need to do is follow! But we'll summarize the most important things here as well, if you wish to look at the process before even firing up a command line interface.
+We recommend you start with the command `bitrise share`. This will print you a guide on sharing steps - which all you need to do is follow! But we'll summarize the most important things here as well, if you wish to look at the process before even firing up a command line interface.
 
 1. Make sure your Step is stored in a public git repository.
 2. Fork the StepLib repository you want to have your step in. We recommend using the [The official Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)!

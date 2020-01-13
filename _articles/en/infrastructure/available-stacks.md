@@ -5,7 +5,7 @@ redirect_from:
 tag:
 - stack
 - infrastructure
-- buids
+- builds
 summary: |-
   The Stack indicates the virtual machine version that we will use to run your build.
   After adding your application to Bitrise we will select an appropriate Stack for it.
@@ -18,7 +18,7 @@ The Stack indicates the virtual machine version that we will use to run your bui
 
 ![](/img/stack-selector.png)
 
-After selecting the Stack you want to use, you'll see a short description of the stack with an additional link to learn more about that specific Stack (e.g. to see what tools are preinstalled, and which versions, on the selected Stack).
+After selecting the Stack you want to use, you'll see a short description of the stack with an additional link to learn more about that specific one (e.g. to see what tools are preinstalled, and which versions, on the selected Stack).
 
 {% include message_box.html type="important" title="Make sure you hit the `Save` button" content=" The Stack won't be used until you click the `Save` button! "%}
 
@@ -38,7 +38,7 @@ After selecting the Stack you want to use, you'll see a short description of the
 
 ## What's preinstalled
 
-Every time we create or update a Stack we create a "System Report" for it too. The System Reports include the list of preinstalled tools and their version on the stack. The System Report scripts are also open source, so if you want to run it yourself or you want to add another tool / system check, feel free to send us a pull request!
+Every time we create or update a Stack we publish a "System Report" for it as well. The System Reports include the list of preinstalled tools and their version on the stack. The System Report scripts are also open source, so if you want to run it yourself or you want to add another tool / system check, feel free to send us a pull request!
 
 You can find every available stack's System Report on [GitHub](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports).
 
@@ -62,4 +62,4 @@ For the native iOS apps, it's simple: choose the stack that has the same Xcode v
 
 For native Android apps, the recommended stack is still the [Android & Docker stack](/infrastructure/the-environment/) - it will surely serve all your needs. 
 
-However, it is possible to use the Xcode stacks, as they have Android tools installed now.
+However, it is possible to use the Xcode stacks, as they also have Android tools installed.

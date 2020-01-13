@@ -51,9 +51,9 @@ Select your app's privacy setting: it can be either [public](/getting-started/ad
 * Private apps are only accessible to you, your organization members and those who are invited to work on an app. They require authentication to access the repository of the app.
 * [Public apps](/adding-a-new-app/public-apps) expose their `bitrise.yml` and their build logs to everyone. If you have a public app's build URL, you can view its build log, to help with troubleshooting, for example. Public apps do not require authentication and they cannot have SSH keys.
 
-Bitrise gives you options to connect any kind of git repository to it. [GitHub, GitLab and Bitbucket](/getting-started/connecting-account-bitrise/) are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you see Bitrise automatically listing all your repositories, so you can just click on the one you'd like to connect.
+Bitrise gives you options to connect any kind of Git repository to it. [GitHub, GitLab and Bitbucket](/getting-started/connecting-account-bitrise/) are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you will see Bitrise automatically list all your repositories, so you can just click on the one you'd like to connect.
 
-{% include message_box.html type="note" title="Connect any Git repository to Bitrise" content=" You can connect any private or public git repository to Bitrise. We automatically create an SSH key that you can use to setup the connection with your provider. "%}
+{% include message_box.html type="note" title="Connect any Git repository to Bitrise" content=" You can connect any private or public Git repository to Bitrise. We automatically create an SSH key that you can use to setup the connection with your provider. "%}
 
 ![](/img/connect-repo.jpg)
 
@@ -75,7 +75,7 @@ SSH keys serve the role of secure transfer between services. In the case of Bitr
 
 Being authorized is important as Bitrise has to have a working SSH connection to your repository to be able to clone it. There are several ways to make it work. Automatically, by adding it manually, or by using your own key.
 
-{% include message_box.html type="warning" title="Use SSH URLs everywhere for private apps" content=" Most services support SSH key based authentication ONLY for SSH URLs (for example, `git@github.com:bitrise-io/bitrise.git`), and NOT for HTTPS URLs (for example, `(https://github.com/bitrise-io/bitrise.git)`)! This means that every private repository you want to use has to be addressed with the SSH URL. If you have direct private git repository references in your CocoaPods `Podfile`, you'll have to use the SSH URL there as well! Same applies for `submodules` and every other private git repository URL you want to use with the SSH key you register on [bitrise.io](https://www.bitrise.io/)!
+{% include message_box.html type="warning" title="Use SSH URLs everywhere for private apps" content=" Most services support SSH key based authentication ONLY for SSH URLs (for example, `git@github.com:bitrise-io/bitrise.git`), and NOT for HTTPS URLs (for example, `(https://github.com/bitrise-io/bitrise.git)`)! This means that every private repository you want to use has to be addressed with the SSH URL. If you have direct private Git repository references in your CocoaPods `Podfile`, you'll have to use the SSH URL there as well! Same applies for `submodules` and every other private Git repository URL you want to use with the SSH key you register on [bitrise.io](https://www.bitrise.io/)!
 "%}
 
 {% include message_box.html type="note" title="Use HTTPS URLs for public apps" content="
@@ -125,7 +125,7 @@ This option can be used if you also have the private key of the given user. You 
 
 After [Setting up the SSH key](/getting-started/adding-a-new-app/#setting-up-ssh-keys) for your project, Bitrise downloads your code to make sure it can access the repository. It also runs an automatic repository scanner script to find the best initial configuration for your project. Currently Bitrise detect [iOS](/getting-started/getting-started-with-ios-apps/), [Android](/getting-started/getting-started-with-android-apps/), [Xamarin](/getting-started/getting-started-with-xamarin-apps/), [Ionic / Cordova](/getting-started/getting-started-with-ionic-cordova-apps/), [Flutter](/getting-started/getting-started-with-flutter-apps/), [React Native](/getting-started/getting-started-with-react-native-apps/) and [fastlane](/tutorials/fastlane/fastlane-index/) projects out of the box.
 
-You can configure other types of projects too, but that requires manual configuration.
+You can configure other types of projects too, but that requires a manual configuration.
 
 ### Automatic project configuration
 
@@ -143,7 +143,7 @@ If the validation fails, choose the **Restart scanning without validation** opti
 
 ![](/img/restart-scanning-without-validation-1.jpg)
 
-In this case, you have to configure the project manually. Click **Next**. You see the **Validating Repository** message again but this time Bitrise only checks if it has access to the specified repository.
+In this case, you have to configure the project manually. Click **Next**. You will see the **Validating Repository** message again but this time Bitrise only checks if it has access to the specified repository.
 
 Choose the project type and specify the necessary inputs. You can also select the stack on which you wish to run your builds.
 

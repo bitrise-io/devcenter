@@ -135,7 +135,7 @@ Once you created your iOS project locally, you will need to review the project s
  7. Set the **Select method for export** input of the Step to **app-store**.
  8. Add the **Deploy to iTunes Connect** Step to the end of the Workflow.
  9. Provide your Apple credentials in the respective input fields.
-    * Apple ID
+    * Apple ID.
     * password or, if you use two-factor authentication on iTunes Connect, your application password.
 
     Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
@@ -176,7 +176,7 @@ Before you'd use the **Deploy to Google Play** Step, make sure you have performe
 Now let's head back to [Bitrise](https://app.bitrise.io/dashboard) and finish off the deploy configuration of your Android app! You can deploy an APK or an App Bundle by building the right output type with the **Flutter Build** Step.
 
  1. In your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds), go to the **Code Signing** tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
- 2. Copy the env key which stores your uploaded file’s url. For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+ 2. Copy the env key which stores your uploaded file’s url. For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
  3. Make sure you have the **Android Sign** Step in your Workflow.
     It should be after the **Flutter Build** Step.
  4. Open the **Flutter Build** Step and check the **Platform** input of the Step: make sure it's set to either `android` or `both`.
@@ -187,9 +187,9 @@ Now let's head back to [Bitrise](https://app.bitrise.io/dashboard) and finish of
  9. Make sure you have the **Deploy to Google Play** Step after the **Android Sign** Step to your Workflow.
 10. Fill out the required input fields as follows:
 
-* **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the Env Var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-* **Package name**: the package name of your Android app
-* **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set)
+* **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the Env Var which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
+* **Package name**: the package name of your Android app.
+* **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
 
 And that’s it! Start a build and release your Android app to the Google Play Store.
 

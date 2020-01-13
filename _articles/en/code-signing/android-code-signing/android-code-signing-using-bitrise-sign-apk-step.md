@@ -36,9 +36,9 @@ Before you start:
 
    A keystore URL automatically gets generated once you upload the keystore file. Bitrise assigns an Environment Variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future.
 5. Fill out the displayed three input fields with your credentials:
-   * keystore password
-   * keystore alias
-   * private key password
+   * Keystore password.
+   * Keystore alias.
+   * Private key password.
 
    ![](/img/android-keystore-file.png)
 6. Click **Save metadata**.

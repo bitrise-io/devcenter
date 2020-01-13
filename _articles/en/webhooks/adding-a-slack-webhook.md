@@ -36,7 +36,7 @@ Other, optional parameters:
 * `c` or `commit` - example: `workflow: primary|commit: eee55509f16e7715bdb43308bb55e8736da4e21e`
 * `m` or `message` - example: `branch: master|message: ship it!!`
 
-{% include message_box.html type="note" title="Parameter requirements" content="at least either `branch` or `workflow` has to be specified, and you can specify both if you want to. You're free to specify any number of optional parameters."%}
+{% include message_box.html type="note" title="Parameter requirements" content="At least either `branch` or `workflow` has to be specified, and you can specify both if you want to. You're free to specify any number of optional parameters."%}
 
 You can also send environment variables that will be available in your workflow with the format: `env[KEY1]:value1|ENV[KEY2]:value2`
 

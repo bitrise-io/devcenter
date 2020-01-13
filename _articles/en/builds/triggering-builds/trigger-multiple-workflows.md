@@ -18,14 +18,14 @@ In the example, we have three Workflows of a single app set up to run at the sam
 
 All workflows run on separate, clean Virtual Machines. They can also run on different types of stacks: to choose the stack for any Workflow, go to the **Workflow Editor** of the app and select the **Stack** tab.
 
-If any of the builds fail, the build will be considered a failed build. If the build is triggered by a webhook, Bitrise will send a summarized build result to the Git hosting provider. If any of the parallel builds fail, a failed status will be reported.
+If any of the builds fail, the build will be considered a failed build. If the build is triggered by a webhook, Bitrise will send a summarized build result to your Git provider. If any of the parallel builds fail, a failed status will be reported.
 
 What you need:
 
-* a Personal Access Token
-* a Secret Environment Variable storing the token
-* the **Bitrise Start Build** Step
-* the **Bitrise Wait for Build** Step
+* A Personal Access Token.
+* A Secret Environment Variable storing the token.
+* The **Bitrise Start Build** Step.
+* The **Bitrise Wait for Build** Step.
 
 1. Create a **Personal Access Token** for your user.
 

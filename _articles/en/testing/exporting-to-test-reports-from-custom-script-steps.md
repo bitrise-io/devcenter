@@ -19,7 +19,7 @@ Here's what you need to do:
 
 1. Deploy the test results in the correct directories.
 2. Make sure every test run has its own `test-info.json` file, with a test name.
-3. Make sure all directories include a test report in a standard JUnit XML format
+3. Make sure all directories include a test report in a standard JUnit XML format.
 4. Include a **Deploy to Bitrise.io** Step in your Workflow.
 
 To do all this, we need to delve a bit deeper into how the Test Reports feature works.
