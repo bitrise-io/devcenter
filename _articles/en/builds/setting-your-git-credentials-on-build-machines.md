@@ -17,7 +17,12 @@ The default Git username and user email address on our Stacks are the following:
     git config --global user.email "please-set-your-email@bitrise.io"
     git config --global user.name "J. Doe (https://www.git-tower.com/learn/git/faq/change-author-name-email)"
 
-If you want to push back  (`git push`) any commits to your own repo from Bitrise **while running your build**, you have to **set your own username and the email address**. Here is how to do it!
+If you want to push back  (`git push`) any commits to your own repo from Bitrise **while running your build**, you have to **set your own username and the email address**. There are two ways to achieve this:
+
+- You can use a custom Script Step to set your credentials with the `git config` command.
+- You can use the **Set Git Credentials** Step. 
+
+Let's go through the latter option in detail:
 
 1. Add a **Set Git Credentials** Step as the very first step in your workflow. The Step has to come first before you'd `git commit`. This way you can make sure any changes you make to the current build will be attached to a commit associated with your username and email address.
 2. In the **Git Username** field, set the value to your own user name.
