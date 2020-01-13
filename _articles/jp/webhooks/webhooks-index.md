@@ -9,21 +9,19 @@ menu:
     weight: 12
 
 ---
-{% include not_translated_yet.html %}
+Webhook はリポジトリへのコードプッシュのようなイベントにトリガーされるユーザー定義のコールバックです。Bitrise は Webhook を広く利用しています。
 
-A webhook is a user-defined callback that is triggered by some event, such as pushing code to a repository. Bitrise makes extensive use of webhooks:
+* Git サービスプロバイダに登録された Incoming webhooks は Bitrise でビルドを自動的にトリガーするために使われます。
+* Outgoing webhooks はビルドイベントを Slack のようなほかのサービスに通知するために使われます。
 
-* Incoming webhooks, registered with your Git service provider, are used to automatically trigger builds on Bitrise.
-* Outgoing webhooks are used to send reports of build events to other services, such as Slack.
+アプリを追加したときかそれ以降に Incoming webhook を自動的に追加できます。またサポートされたサービスに Webhook を手動で追加することもできます。
 
-You can add an incoming webhook automatically either when creating an app or later; it's also possible to manually add a webhook to any supported service.
+{% include message_box.html type="important" title="トリガーと Webhook" content="Bitrise でビルドを自動的にトリガーできるようにするには、Git サービスプロバイダに Webhook を登録する必要があります！たとえば、GitHub リポジトリのプルリクエストでビルドをトリガーするには、GitHub で Bitrise の webhook を登録する必要があります。"%}
 
-{% include message_box.html type="important" title="Triggers and webhooks" content="If you want to be able to automatically trigger builds on Bitrise, you need to register a webhook with your git service provider! For example, if you want a pull request made in your GitHub repository to trigger a build, you must register a Bitrise webhook on GitHub."%}
+Outgoing Webhooks はウェブサイトか [Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks/) で追加できます。
 
-Outgoing webhooks can be added either on the website or [via the Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks/).
+**詳細:**
 
-**Details:**
-
-* [Adding incoming webhooks](https://devcenter.bitrise.io/webhooks/adding-webhooks/)
-* [Adding outgoing webhooks](/webhooks/adding-outgoing-webhooks/)
-* [Webhook troubleshooting](/webhooks/troubleshooting/)
+* [webhookの追加](/jp/webhooks/adding-webhooks/)
+* [Outgoing webhookの追加](/jp/webhooks/adding-outgoing-webhooks/)
+* [Webhook トラブルシューティング](/jp/webhooks/troubleshooting/)
