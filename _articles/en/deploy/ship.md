@@ -95,7 +95,7 @@ To install an app on a device, there are three options:
 * Send the QR code: scanning it takes you to the public install page of the app.
 * Log in to Ship from the device and install it directly from there.
 
-{% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must configure your [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`."%}
+{% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must configure your exposed Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`."%}
 
 {% include message_box.html type="important" title="Artifact types" content="The public install page is not available for all type of artifacts.
 
@@ -141,8 +141,8 @@ To configure publishing an app for iOS:
 6. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
 7. Enter the **App SKU**.
 8. Go back to the **Details** page and click **Publish**.
-   </div>
-   </div>
+</div>
+</div>
 
 <div><button type="button" class="collapsible"><p>Publishing an app for Android</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="Before you'd publish an Android app in Ship, make sure that:
 
@@ -167,8 +167,8 @@ To configure publishing an app for Android:
 6. Choose the appropriate keystore file and the Service Account JSON file.
 7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing. ![](/img/flavorandroid.jpg)
 8. Fill out the **Details** page and click **Publish.**
-   </div>
-   </div>
+</div>
+</div>
 
 ## Publishing status and logs
 
