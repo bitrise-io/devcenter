@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Steps and Workflows
+title: ステップとワークフロー
 redirect_from: []
 summary: ''
 menu:
@@ -9,15 +9,13 @@ menu:
     weight: 14
 
 ---
-{% include not_translated_yet.html %}
+ステップとワークフローは Bitrise の仕組みの核心です。Bitrise のビルドはワークフローで定義された一連のステップです。仮想マシン（またはローカル）で Bitrise CLI によって実行されます。
 
-Steps and Workflows are the heart of how Bitrise works. A Bitrise build is simply a series of Steps, defined in a Workflow, executed by the Bitrise CLI on our virtual machines (or on your own).
+ステップにはビルドタスクを実行するコードが含まれます。タスクを定義する入力とパラメーターを設定でき、ステップが生成する出力を表示して再利用できます。
 
-A Step contains the code that performs the build task. You can configure the inputs and parameters that define the task, and view and reuse the outputs a Step generates.
+アプリのビルドが実行されているとき、ステップはワークフローで定義された順に実行されます。
 
-When a build of an app is running, the Steps will be executed in the order that is defined in the workflow.
+ワークフロー内で簡単にステップを動かしたり、さまざまなワークフローをつなげたり、さまざまなワークフローでさまざまなブランチやコードのイベントがビルドをトリガーするように構成したりできます。
 
-You can easily move Steps around in a Workflow, you can chain different Workflows together, and you can configure your app so that different branches or code events trigger builds with different Workflows.
-
-* [Introduction to Steps](/jp/steps-and-workflows/getting-started-steps/)
-* [Introduction to Workflows](/jp/steps-and-workflows/getting-started-workflows/)
+* [ステップの開始](/jp/steps-and-workflows/getting-started-steps/)
+* [ワークフロー](/jp/steps-and-workflows/getting-started-workflows/)

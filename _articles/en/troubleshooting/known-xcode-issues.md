@@ -52,7 +52,7 @@ Related links & reports:
   * Related: remove every explicit `app.terminate()` in your `tearDown()` method(s)
 * Try another Simulator device
 * [Use the Async testing APIs](http://stackoverflow.com/a/32481202/974381)
-* Some users had success with splitting the tests into multiple Schemes, and running those separately, with separate Test steps.
+* Some users had success with splitting the tests into multiple Schemes, and running those separately, with separate Test Steps.
   * A great article about splitting tests into multiple Schemes:
     [http://artsy.github.io/blog/2016/04/06/Testing-Schemes](http://artsy.github.io/blog/2016/04/06/Testing-Schemes)
 * [Sometimes it's related to a code which makes Xcode to misbehave](https://github.com/fastlane/fastlane/issues/3874#issuecomment-219991408)
@@ -65,22 +65,17 @@ omits / does not present any error message.
 
 Some possible solutions:
 
-* First of all, if you use `xcpretty` to format the output try a build without it
-  (if you use the Xcode Test step you can set `xcodebuild` as the "Output Tool" option/input
+* First of all, if you use `xcpretty` to format the output try a build without it (if you use the Xcode Test Step you can set `xcodebuild` as the "Output Tool" option/input
   to not to format the log produced by `xcodebuild`). The cause is: `xcpretty` sometimes
   omits the error message in it's output.
-* If you don't use our `Xcode Test` step to run your UI Test you should try to run
-  it with our Xcode Test step. We always try to improve the reliability of the step,
-  implementing known workarounds for common issues.
-* If you use our Xcode Test step: make sure you use the latest version, as it
-  might include additional workarounds / fixes.
+* If you don't use our **Xcode Test** Step to run your UI Test you should try to run it with our Xcode Test step. We always try to improve the reliability of the step, implementing known workarounds for common issues.
+* If you use our Xcode Test Step: make sure you use the latest version, as it might include additional workarounds / fixes.
 * Try [another Xcode version](http://devcenter.bitrise.io/docs/available-stacks#section-how-to-switch-to-the-new-beta-stacks),
   there are issues which are present in one Xcode version but not in another one.
 * Make sure your desired [Xcode scheme is shared](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found). Don't forget to commit and push the changes if you just enabled it.
 * It might also be a project configuration issue in your Xcode project, a code issue in your tests,or a multi-threading issue in your code.
 * We received reports that this might also be caused by Code Coverage report generation,
-  you can disable the `Generate code coverage files?` option of the Xcode Test step
-  to not to generate Code Coverage files.
+  you can disable the **Generate code coverage files?** option of the Xcode Test Step to not to generate Code Coverage files.
 
 ## Segmentation fault
 
@@ -100,17 +95,14 @@ The solution is simple, just make sure that you use the same Xcode version every
 
 Note: this can happen only on specific iOS Simulators / iOS versions too, e.g. if the app only crashes on iOS 8, but not on iOS 9
 
-### Xcode 8 - `xcodebuild .. test` hangs at the very end of the tests
+### Xcode 8 - xcodebuild .. test hangs at the very end of the tests
 
 `xcodebuild .. test` hangs at the end of the tests (after it printed the summary of the tests)
 if the output of `xcodebuild ..` is piped / redirected in any way.
 This means that `xcodebuild .. test .. | xcpretty` or even `tee` can be used to reproduce this issue.
 
 * Related [radar](http://openradar.appspot.com/26872644) and [xcpretty](https://github.com/supermarin/xcpretty/issues/227) issues.
-* Workaround: use a `Script` step instead of the Xcode Test step,
-  and copy paste the `xcodebuild` command from the hanging Xcode Test step's log, without `| xcpretty` etc.
-  Of course, with this you won't be able to use the built in features the Xcode Test step
-  provides, but the base `xcodebuild` command should be able to run, if the output
+* Workaround: use a **Script** Step instead of the Xcode Test step, and copy paste the `xcodebuild` command from the hanging Xcode Test Step's log, without `| xcpretty` etc. Of course, with this you won't be able to use the built in features the Xcode Test Step provides, but the base `xcodebuild` command should be able to run, if the output
   is not redirected / piped.
 
 #### Every/Any Xcode command hangs
@@ -140,12 +132,12 @@ As reported [here](https://github.com/bitrise-io/steps-xcode-test/issues/57#even
 
 ### Other
 
-It might also not be Xcode related, but might be caused by something in your project when it runs in an Xcode step (Xcode Test, Xcode Archive, ...). For example if you have a Run Phase Script in your Xcode project, that will run during Xcode build/test/archive, and that script hangs for some reason (e.g. it waits for a user input).
+It might also not be Xcode related, but might be caused by something in your project when it runs in an Xcode Step (Xcode Test, Xcode Archive, ...). For example if you have a Run Phase Script in your Xcode project, that will run during Xcode build/test/archive, and that script hangs for some reason (e.g. it waits for a user input).
 
 Check out our guide on [frequent iOS issues](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/) for more information!
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
 </div>

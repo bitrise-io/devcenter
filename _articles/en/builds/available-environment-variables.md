@@ -2,7 +2,6 @@
 title: Available environment variables
 redirect_from:
 - "/faq/available-environment-variables/"
-- "/faq/available-environment-variables/#exposed-by-the-bitrise-cli"
 tag:
 - builds
 - env vars

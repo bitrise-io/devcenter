@@ -63,8 +63,22 @@ In this guide, you will learn how to:
 ### Setting up Google Play API access
 
 1. Link your API project by **Creating a new API project** or **Using an existing API project**.
-2. Set up **API Access Clients** using a service account and grant **Deployment manager** role to the service account.
-3. Save the downloaded JSON key of your service account now because you will need it later.
+![](/img/tutorials/deploy/google-play/api-access-setup-1.jpg)
+
+2. Click on *Create a new service account*. The instructions will redirect to *Google API Console*.
+Specify a service account name. No roles are needed for the service account.
+![](/img/tutorials/deploy/google-play/api-access-setup-2.jpg)
+![](/img/tutorials/deploy/google-play/api-access-setup-3.jpg)
+![](/img/tutorials/deploy/google-play/api-access-setup-4.jpg)
+![](/img/tutorials/deploy/google-play/api-access-setup-5.jpg)
+
+
+3. Create a private key (JSON format) and download it now because you will need it later.
+![](/img/tutorials/deploy/google-play/api-access-setup-7.jpg)
+
+4. Grant the necessary permissions to the service account on the Play Console.
+![](/img/tutorials/deploy/google-play/api-access-setup-12.jpg)
+![](/img/tutorials/deploy/google-play/api-access-setup-13.jpg)
 
 Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started) guide if you need more information on the process.
 
@@ -86,20 +100,19 @@ You can notify user groups or individual users that your APK file has been built
 
 Before you'd use the **Google Play Deploy** Step, make sure you have performed the following tasks:
 
-1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
+1. Upload the first APK or AAB manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
 3. [Set up API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started): Please note when you create your service account on the Google Developer Console, you have to choose `json` as **Key Type**.
 4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings**, then **Users & permissions**, then **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
-   * Access level: View app information.
-   * Release management: Manage production releases, manage testing track releases.
-   * Store presence: Edit store listing, pricing & distribution.
+   * Access level: View app information, Create & edit draft apps.
+   * Release management: Manage production releases, manage testing track releases, Manage testing track configuration.
 5. As an optional Step, you can add translations to your Store Listing. To allow the **Google Play Deploy** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
 
 Now let's head back to Bitrise and finish off the deploy configuration!
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
 2. Select your project and go to Workflow Editor.
-3. Click the `Code Signing` tab.
+3. Click the **Code Signing** tab.
 4. Upload the service account JSON key into the **GENERIC FILE STORAGE**.
 5. Copy the env key which stores your uploaded file's URL.
 
@@ -108,9 +121,11 @@ Now let's head back to Bitrise and finish off the deploy configuration!
    `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 6. Go back to your Workflow Editor and add the **Google Play Deploy** Step to the end of your Workflow.
 7. Fill out the required input fields which are:
-   * **Service Account JSON key file path**: This field can accept a remote url so you have to provide the environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
+   * **Service Account JSON key file path**: this field can accept a remote url so you have to provide the environment which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
    * **Package name**: the package name of your Android app.
-   * **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
+   * **Track**: the track where you want to deploy your app (for example, internal/alpha/beta/production or any custom track you set).
+
+You can use the Play Console UI to promote apps to other tracks (for example, an app uploaded to internal testing can be released on alpha track).
 
 The final configuration looks like this:
 
@@ -118,25 +133,25 @@ The final configuration looks like this:
     workflows:
     deploy:
       steps:
-      - activate-ssh-key@3.1.1:
+      - activate-ssh-key@4.0.5:
           run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-      - git-clone@4.0.11: {}
+      - git-clone@4.0.17: {}
       - cache-pull@2.0.1: {}
       - script@1.1.5:
           title: Do anything with Script step
-      - install-missing-android-tools@2.1.1: {}
-      - android-build@0.9.4:
+      - install-missing-android-tools@2.3.7: {}
+      - android-build@0.10.0:
           inputs:
           - project_location: $BITRISE_SOURCE_DIR
           - module: "app"
-      - sign-APK@1.2.0: {}
-      - google-play-deploy@1.5.0:
+      - sign-APK@1.4.1: {}
+      - google-play-deploy@3.0.1:
           inputs:
           - package_name: io.bitrise.googleplay
           - service_account_json_key_path: "$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL"
           - track: alpha
-      - deploy-to-bitrise-io@1.3.12: {}
-      - cache-push@2.0.5: {}
+      - deploy-to-bitrise-io@1.9.4: {}
+      - cache-push@2.2.3: {}
     {% endraw %}
 
 Your workflow is ready for deploying your app automatically to [Google Play Store](https://play.google.com/store). Once the app is tested and generated, you can upload it to Google Play Store.

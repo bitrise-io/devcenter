@@ -128,7 +128,10 @@ pages:
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-cli-bitrise-cli.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-ymlの基礎知識-basics-of-bitrise-yml.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/yaml内のステップ-steps-in-yaml.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/yaml内のワークフロー-workflows-in-yaml.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/オフラインworkflow-editorのインストールとアップグレード-installing-and-upgrading-the-offline-workflow-editor.md
+- _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/ステップのプロパティ-step-properties.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/ローカルでのbitriseプロジェクトの初期設定-initializing-a-bitrise-project-locally.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/最重要コンセプト-most-important-concepts.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI and bitrise.yml/bitrise-ymlのカスタマイズ-customizing-bitrise-yml.md
@@ -193,12 +196,18 @@ pages:
 - _articles/en/reviews/Japanese translations/トラブルシューティング (Troubleshooting)/自分のマシンでビルドをデバッグする-debugging-your-build-on-your-own-machine.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/bitrise-ymlファイルへのオンラインアクセス-accessing-the-bitrise-yml-file-online.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/build-artifacts-online.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/github-checksでbitrise-checksを行う-bitrise-checks-on-github-checks.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/sensitive-input-in-public-apps.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/setting-your-git-credentials-on-build-machines.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/シングルトリガーで並列ビルドを開始-starting-parallel-builds-with-a-single-trigger.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガーについて (Triggering
+  builds)/プルリクエストビルドの承認-approving-pull-request-builds.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガーについて (Triggering
+  builds)/特定のコミットやプルリクエストをスキップする-skipping-a-given-commit-or-pull-request.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドの番号付けとアプリバージョン管理-build-numbering-and-app-versioning.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/リモートアクセス-remote-access.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/利用可能な環境変数-available-environment-variables.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/秘密と環境設定-secrets-and-env-vars.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
