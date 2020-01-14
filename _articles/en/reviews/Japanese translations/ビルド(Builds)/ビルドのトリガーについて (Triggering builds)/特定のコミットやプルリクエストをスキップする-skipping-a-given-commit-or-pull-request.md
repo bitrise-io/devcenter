@@ -31,8 +31,8 @@ published: false
 
 ## プルリクエストのスキップ
 
-プルリクエストは (仮想) コミットとして扱われます。commit messageにはプルリクエストのtitleとdescriptionが入っています。これはPRを作成する個々のコミットのcommit messageではありません！
+プルリクエストは (仮想) コミットとして扱われます。commit messageにはプルリクエストのtitleとdescriptionが入っています。これはPRを作成するコミットそれぞれのcommit messageではありません！
 
-プルリクエストのスキップを行うには、プルリクエストのtitleまたはdescriptionに`skip ci`パターンを含ませる必要があります。commit messageに含ませないでください！
+プルリクエストのスキップを行うには、プルリクエストのtitleまたはdescriptionに`skip ci`パターンを含ませる必要があります。commit messageには含ませないでください！
 
 **プルリクエストのスキップを行わない / プルリクエストにより多くのコミットを含ませるのであれば**、プルリクエストのtitleまたはdescriptionから`skip ci`パターンを削除してください。これにより最新のコミットで新規のビルドが自動的にトリガーされるようになり、(再度`skip ci`パターンを追加しない限り) 今後全てのPRのコミットがビルドされるようになります。
