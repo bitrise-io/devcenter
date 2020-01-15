@@ -24,14 +24,14 @@ These Environment Variables are available everywhere, even if you run the build 
 {% include collapse.html title="$BITRISE_TRIGGERED_WORKFLOW_TITLE" content="The title of the Workflow that was triggered - if it has a title, which is completely optional. This env var is exposed regardless of whether the Workflow was triggered manually or automatically." %}
 
 {% include collapse.html title="$BITRISE_BUILD_STATUS" content="The current status of the build. The available options are:
-- Not finished (0)
-- Successful (1)
-- Failed (2)
-- Aborted with failure (3)
+- Not finished (0).
+- Successful (1).
+- Failed (2).
+- Aborted with failure (3).
 - Aborted with success (4). "%}
 
 {% include collapse.html title="$BITRISE_SOURCE_DIR" content="Path to the base working directory. By default, it's the directory where Bitrise runs
- (for example, your repository root), unless you provide a different value. Can be overwritten during the build, which will change the working directory for subsequent Steps in the build. "%}
+ (for example, your repository root), unless you provide a different value. This can be overwritten during the build, which will change the working directory for subsequent Steps in the build. "%}
 
 {% include collapse.html title="$BITRISE_DEPLOY_DIR" content="Path to the directory that stores artifacts and files for deployment.
  It's a temporary directory created by the Bitrise CLI by default, and can be overwritten before starting the Bitrise CLI. The **Deploy to Bitrise.io** Step looks for your build artifacts - such as an IPA or APK of the app -, test results, and other files in this directory." %}
@@ -60,7 +60,7 @@ These Environment Variables are available for builds running on [bitrise.io](htt
 
 {% include collapse.html title="$BITRISE_BUILD_SLUG" content="The slug that uniquely identifies a build on [bitrise.io](https://www.bitrise.io). It's part of the build URL, too. "%}
 
-{% include collapse.html title="$BITRISE_BUILD_TRIGGER_TIMESTAMP" content="The time when the build was triggered."%}
+{% include collapse.html title="$BITRISE_BUILD_TRIGGER_TIMESTAMP" content="The date and time when the build was triggered."%}
 
 {% include collapse.html title="$GIT_REPOSITORY_URL" content="The URL of the Git repository that hosts your app. This can be changed in the **Settings** tab of the app. "%}
 
@@ -70,7 +70,7 @@ These Environment Variables are available for builds running on [bitrise.io](htt
 
 {% include collapse.html title="$BITRISE_GIT_TAG" content="You can [use Git Tags to trigger builds](/builds/triggering-builds/trigger-git-tags/) on Bitrise: this Env Var stores the tag used to trigger the build. "%}
 
-{% include collapse.html title="$BITRISE_GIT_COMMIT" content="The commit hash of the git commit that triggered the build, when applicable. There is no commit hash, for example, in the case of a pull request build. "%}
+{% include collapse.html title="$BITRISE_GIT_COMMIT" content="The commit hash of the Git commit that triggered the build, when applicable. There is no commit hash, for example, in the case of a pull request build. "%}
 
 {% include collapse.html title="$BITRISE_GIT_MESSAGE" content="The commit message, pull request title or the message you specified if you triggered the build manually. "%}
 
@@ -98,7 +98,7 @@ This is only relevant for iOS apps and for cross-platform apps with iOS versions
 
 This is only relevant for iOS apps and for cross-platform apps with iOS versions. "%}
 
-{% include collapse.html title="$BITRISE_IO" content="Indicates that the build is running in a bitrise.io environment. Value is set to `true` by bitrise.io when it starts a build."%}
+{% include collapse.html title="$BITRISE_IO" content="Indicates that the build is running in a bitrise.io environment. Value is set to `true` by Bitrise when it starts a build."%}
 
 For more information on Env Vars, check out [Secrets and Env Vars](/builds/env-vars-secret-env-vars/).
 

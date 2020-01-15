@@ -38,7 +38,7 @@ This means that if you think a given event should have started a build but it di
 
    Bitrise returns the reason to the source code hosting service, so if your service has a webhook history, you can see the reason why a given webhook failed to trigger a build!
 
-   Here is an example for a response returned by Bitrise
+   Here is an example for a response returned by Bitrise:
 
        {"success_responses":[],"failed_responses":[{"status":"error","message":"trigger pattern did not match
 

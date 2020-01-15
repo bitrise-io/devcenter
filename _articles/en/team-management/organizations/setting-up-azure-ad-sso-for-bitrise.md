@@ -18,8 +18,8 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML ap
 
 This requires:
 
-* an Azure AD administrator who is logged into Azure AD.
-* a Bitrise Organization owner who is logged into his or her Bitrise Organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams)).
+* An Azure AD administrator who is logged into Azure AD.
+* A Bitrise Organization owner who is logged into their Bitrise Organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams)).
 
 ## Adding Bitrise to Azure AD
 
@@ -105,7 +105,7 @@ Now that you have established the connection between Bitrise and Azure AD, all t
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
 2. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
 
-   The email also shows the Organization owner's email address (should you need to contact him/her.) Click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
+   The email also shows the Organization owner's email address (should you need to contact them.) Click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
 
    ![](/img/saml-invitation-authentication.jpg)
 

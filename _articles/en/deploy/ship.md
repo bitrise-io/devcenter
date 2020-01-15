@@ -95,7 +95,7 @@ To install an app on a device, there are three options:
 * Send the QR code: scanning it takes you to the public install page of the app.
 * Log in to Ship from the device and install it directly from there.
 
-{% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must configure your [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`."%}
+{% include message_box.html type="important" title="Enabling the public install page" content="Be aware that to have a public install page, you must configure your exposed Workflow's **Deploy to Bitrise.io** Step correctly: the **Enable public page for the App?** input of the Step must be set to `true`."%}
 
 {% include message_box.html type="important" title="Artifact types" content="The public install page is not available for all type of artifacts.
 
@@ -119,11 +119,6 @@ To install it directly from Ship:
 ### Publishing an app online
 
 <div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
-
-{% include message_box.html type="note" title="The `.xcarchive.zip` file with a custom Step" content="The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:
-
-* There is a Step in your exposed Workflow that exports an `.xcarchive.zip` file of your app. That is, the Step you use needs to create an Xcode Archive and needs to package it in a zip file.
-* This Step exports the `.xcarchive.zip` file into the `BITRISE_DEPLOY_DIR` directory."%}
 
 To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you have to:
 
@@ -171,8 +166,8 @@ To configure publishing an app for Android:
 5. If your Android app contains multiple modules, enter the exact module under **Module**. ![](/img/module-android-settings.png)
 6. Choose the appropriate keystore file and the Service Account JSON file.
 7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing. ![](/img/flavorandroid.jpg)
-8. Fill out the **Details** page and click **Publish.** 
-</div> 
+8. Fill out the **Details** page and click **Publish.**
+</div>
 </div>
 
 ## Publishing status and logs
@@ -250,3 +245,25 @@ To configure notifications:
 3. Go to the **Notifications** tab.
 4. Use the toggles under the different event types.
 5. Hit **Save** once all notifications are set.
+
+## Using Ship with unsupported Steps
+
+By default, Ship works with the **Android Build, Gradle Runner** and the **Xcode Archive & Export for iOS** Steps. The output of these Steps are automatically exported by the **Deploy to Bitrise.io** Step to Ship. 
+
+However, you can use unsupported Steps - **fastlane**, for example - to build your app and still deploy it with Ship. All you need to do is make sure the app's binary ends up in the right place. 
+
+### Deploying iOS apps built with unsupported Steps 
+
+The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:
+
+* There is a Step in your exposed Workflow that exports an `.xcarchive.zip` file of your app. That is, the Step you use needs to create an Xcode Archive and needs to package it in a zip file.
+* This Step exports the `.xcarchive.zip` file into the `BITRISE_DEPLOY_DIR` directory.
+
+### Deploying Android apps built with unsupported Steps 
+
+The **Deploy to Bitrise.io** Step looks for an APK or an AAB file in the `BITRISE_DEPLOY_DIR` directory. 
+
+If you do not want to use the **Android Build** or the **Gradle Runner** Steps, you just need to make sure that:
+
+* There is a Step in your exposed Workflow that exports an APK or AAB file of your app.
+* This Step exports the APK or AAB file into the `BITRISE_DEPLOY_DIR` directory.

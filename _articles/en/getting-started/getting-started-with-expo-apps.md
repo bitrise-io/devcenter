@@ -80,7 +80,7 @@ If you've been using the ExpoKit to develop your app, the **Run CocoaPods instal
 
 You can use React Native’s built in testing method, called jest, to perform unit tests on your app.
 
-1. Add another Run nmp command step to your workflow right after the first **Run npm command** Step.
+1. Add another Run npm command step to your workflow right after the first **Run npm command** Step.
 2. Type `test` in the **npm command with arguments to run** input field.
 
    ![](/img/jest-test-react-expo.jpg)
@@ -113,8 +113,8 @@ The Android chunk of code signing is done. Let's continue with iOS!
 
 To deploy to Testflight and to the App Store, you will need the following code signing files:
 
-* an iOS **Distribution** Certificate
-* an **App Store** type Provisioning Profile
+* an iOS **Distribution** certificate.
+* an **App Store** type provisioning profile.
 
 1. Open the **Workflow** tab of your project on [bitrise.io](https://www.bitrise.io).
 2. Click on **Code Signing** tab.
@@ -157,7 +157,7 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 3. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
-   * Apple ID
+   * Apple ID.
    * password or, if you use two-factor authentication on iTunes Connect, your app-specific password.
 
    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
@@ -185,7 +185,7 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 2. Copy the env key which stores your uploaded file’s url.
 
-   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
 3. Add the **Deploy to Google Play** Step after the **Sign APK** Step in your deploy workflow.
 4. In the **Service Account JSON key file path** input, paste the Environment Variable which was generated when you uploaded the service account JSON key in the **GENERIC FILE STORAGE**. Note this input is marked as sensitive in the Step, meaning any Env Var you insert here will become a secret and won't be printed out in a build log. Besides the generated Env Var, you can also add a file path right in the Step's input field where the file path can be local or remote too:
    * For remote JSON key file you can provide any download location as value, for example, `https://URL/TO/key.json`.

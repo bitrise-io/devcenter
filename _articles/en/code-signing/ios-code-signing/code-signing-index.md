@@ -29,11 +29,11 @@ The basic workflow of code signing is pretty straightforward:
 
 1. [Collect the required files with our codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc).
 2. Upload your code signing files to [bitrise.io](https://www.bitrise.io). You can upload the files using `codesigndoc` or manually on the website. For provisioning profiles, you can use:
-   * [Manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning)
+   * [Manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning).
    * [Automatic provisioning](/code-signing/ios-code-signing/ios-auto-provisioning).
 3. Use the **Xcode Archive & Export for iOS** or the **Xamarin Archive** Step to create a signed .ipa:
-   * Xcode projects (this includes native iOS apps, as well as apps built with React Native, Flutter, or Ionic/Cordova: [Create a signed .ipa for Xcode projects](/code-signing/ios-code-signing/create-signed-ipa-for-xcode)
-   * Xamarin projects: [Create a signed .ipa for Xamarin projects](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin)
+   * Xcode projects (this includes native iOS apps, as well as apps built with React Native, Flutter, or Ionic/Cordova): [Create a signed .ipa for Xcode projects](/code-signing/ios-code-signing/create-signed-ipa-for-xcode).
+   * Xamarin projects: [Create a signed .ipa for Xamarin projects](/code-signing/ios-code-signing/create-signed-ipa-for-xamarin).
 
 ## iOS code signing with third party tools
 

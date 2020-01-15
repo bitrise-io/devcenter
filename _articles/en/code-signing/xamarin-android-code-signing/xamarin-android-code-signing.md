@@ -26,7 +26,7 @@ You can specify the code signing configuration for your Xamarin Android project 
 
 ## Using the same keystore path locally and on [bitrise.io](https://www.bitrise.io) for Xamarin Android
 
-You cannot use Environment Variables in your keystore path in your Xamarin project! The keystore path has to be relative to the folder of your Xamarin Android project. You can also use an absolute path.
+You can not use Environment Variables in your keystore path in your Xamarin project! The keystore path has to be relative to the folder of your Xamarin Android project. You can also use an absolute path.
 
 You can use the same path on your local machine and on [bitrise.io](https://www.bitrise.io) by putting your keystore into your repository.
 

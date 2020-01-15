@@ -18,42 +18,42 @@ menu:
 
 We use standard [Docker](https://quay.io) images, published on [Quay](https://quay.io/organization/bitriseio), and the related `Dockerfile` which you can find on GitHub (see below).
 
-{% include message_box.html type="note" title="What is a Dockerfile?" content=" The `Dockerfile` is the description file which describes the docker image / environment and is directly used to build the image." %}
+{% include message_box.html type="note" title="What is a Dockerfile?" content=" A `Dockerfile` is a file where you describe the docker image / environment and is directly used to build a Docker image." %}
 
 Right now we have four docker images, built on top of each other:
 
 ### Bitrise Base image ([GitHub](https://github.com/bitrise-docker/bitrise-base) / [Quay](https://quay.io/repository/bitriseio/bitrise-base))
 
-* image name ID: `quay.io/bitriseio/bitrise-base`
-* includes all the non-Android tools and environment setup
-* ideal to be used for non-Android projects as a base image, if you want to use it locally too, as this is the smallest image
-* `Ruby`, `Go`, `Python`, `git` and the [bitrise command line tools](https://www.bitrise.io/cli) are all preinstalled and ready to use
-* OS: `Ubuntu 16.04`, 64 bit
-* check out the related `Dockerfile` [where](https://github.com/bitrise-docker/bitrise-base/blob/master/Dockerfile) you can see what's preinstalled in this image
+* Image name ID: `quay.io/bitriseio/bitrise-base`.
+* Includes all the non-Android tools and environment setup.
+* Ideal to be used for non-Android projects as a base image, if you want to use it locally too, as this is the smallest image.
+* `Ruby`, `Go`, `Python`, `git` and the [bitrise command line tools](https://www.bitrise.io/cli) are all preinstalled and ready to use.
+* OS: `Ubuntu 16.04`, 64 bit.
+* Check out the related `Dockerfile` [where](https://github.com/bitrise-docker/bitrise-base/blob/master/Dockerfile) you can see what's preinstalled in this image.
 
 ### Base Android image ([GitHub](https://github.com/bitrise-docker/android) / [Quay](https://quay.io/repository/bitriseio/android))
 
-* image name ID: `quay.io/bitriseio/android`
-* extends the Bitrise Base image with Android-specific tools and environments
-* multiple Android SDK, build tool and system image versions are preinstalled, as well as `gradle` and `maven`
-* you can use the `$ANDROID_HOME` environment variable to point to the location of the pre-installed Android SDK
-* check out the related `Dockerfile` [where](https://github.com/bitrise-docker/android/blob/master/Dockerfile) you can see what's preinstalled in this image
+* Image name ID: `quay.io/bitriseio/android`.
+* Extends the Bitrise Base image with Android-specific tools and environments.
+* Multiple Android SDK, build tool and system image versions are preinstalled, as well as `gradle` and `maven`.
+* You can use the `$ANDROID_HOME` environment variable to point to the location of the pre-installed Android SDK.
+* Check out the related `Dockerfile` [where](https://github.com/bitrise-docker/android/blob/master/Dockerfile) you can see what's preinstalled in this image.
 
 ### Android NDK image ([GitHub](https://github.com/bitrise-docker/android-ndk) / [Quay](https://quay.io/repository/bitriseio/android-ndk))
 
-* image name ID: `quay.io/bitriseio/android-ndk`
-* built on the Base Android image and extends it with the latest Android NDK
-* you can use the `$ANDROID_NDK_HOME` environment variable to point to the location of the preinstalled Android NDK, and it's also added to `$PATH`
-* check out the related `Dockerfile` [where](https://github.com/bitrise-docker/android-ndk/blob/master/Dockerfile) you can see what's preinstalled in this image
-* You can find the pre-installed tools & System Report of this Stack [here](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/linux-docker-android.log)
+* Image name ID: `quay.io/bitriseio/android-ndk`.
+* Built on the Base Android image and extends it with the latest Android NDK.
+* You can use the `$ANDROID_NDK_HOME` environment variable to point to the location of the preinstalled Android NDK, and it's also added to `$PATH`.
+* Check out the related `Dockerfile` [where](https://github.com/bitrise-docker/android-ndk/blob/master/Dockerfile) you can see what's preinstalled in this image.
+* You can find the pre-installed tools & System Report of this Stack [here](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/linux-docker-android.log).
 
 ### Android NDK LTS image ([GitHub](https://github.com/bitrise-docker/android-ndk-lts) / [Quay](https://quay.io/repository/bitriseio/android-ndk-lts))
 
-* image name ID: `quay.io/bitriseio/android-ndk-lts`
-* it’s always a tagged version of an older Android NDK image
-* you can use the `$ANDROID_NDK_HOME` environment variable to point to the location of the preinstalled Android NDK, and it’s also added to `$PATH`
-* OS: Ubuntu16.04, 64 bit
-* you can find the pre-installed tools & System Report of this Stack [here](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/linux-docker-android-lts.log)
+* Image name ID: `quay.io/bitriseio/android-ndk-lts`.
+* It’s always a tagged version of an older Android NDK image.
+* You can use the `$ANDROID_NDK_HOME` environment variable to point to the location of the preinstalled Android NDK, and it’s also added to `$PATH`.
+* OS: Ubuntu16.04, 64 bit.
+* You can find the pre-installed tools & System Report of this Stack [here](https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/linux-docker-android-lts.log).
 
 ## Docker & Virtual Machines
 

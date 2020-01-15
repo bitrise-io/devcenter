@@ -59,7 +59,7 @@ We offer two different types of Mac Pro machines:
 
 Both versions support hyperthreading so the effective number of cores is 12 and 24, respectively.
 
-The minimum order is two 6-core physical machines (12 effective cores), to ensure there is redundancy: a single hardware failure will
+The minimum order is two 6-core physical machines (12 effective cores), to ensure there is redundancy: a single hardware failure will never prevent users from running builds.
 
 The next step is to decide the virtual machine configuration:
 

@@ -30,7 +30,7 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 ## Signing up with a Git provider
 
 1. Go to our [**Sign up**](https://app.bitrise.io/users/sign_up) page.
-2. Select a git provider to authenticate yourself with selected service.
+2. Select a Git provider to authenticate yourself with selected service.
 
    ![](/img/sign-up-git-email.jpg)
 
@@ -52,7 +52,7 @@ If you press the **Grant access** button on Bitbucket, you will be redirected to
 
 #### GitLab
 
-![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/signing-up/gitlab_authorization.png)
+![Screenshot](img/signing-up/gitlab_authorization.png)
 
 If you press the **Authorize** button on Gitlab, you will be redirected to Bitrise.
 

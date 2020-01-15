@@ -20,7 +20,7 @@ If you have a lot of apps, you might not want to spend time with setting up Work
 
 ## Copying a Workflow on the website
 
-You can copy a Workflow from any bitrise.yml file, including your local files. To copy an existing Workflow from one Bitrise app to another on our website:
+You can copy a Workflow from any `bitrise.yml` file, including your local files. To copy an existing Workflow from one Bitrise app to another on our website:
 
 1. Go to your Dashboard.
 2. Find and open the app from which you want to copy the Workflow.

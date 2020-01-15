@@ -17,7 +17,7 @@ menu:
 ---
 With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices.
 
-{% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can contain only one **\[BETA\] Virtual Device Testing** Step performing one type of test (`instrumentation`, `robo` or `gameloop`. "%}
+{% include message_box.html type="note" title="Limitations" content="You might be limited by your overall build time. Also note that a single build can contain only one **\[BETA\] Virtual Device Testing** Step performing one type of test (`instrumentation`, `robo` or `gameloop`). "%}
 
 Our device testing solution is based on [Firebase Test Lab](https://firebase.google.com/docs/test-lab/). You can find the resulting logs, videos and screenshots on Bitrise.
 
@@ -25,9 +25,9 @@ Our device testing solution is based on [Firebase Test Lab](https://firebase.go
 
 With Bitrise, you can choose from 3 different test types:
 
-* robo (default test type in Bitrise)
-* instrumentation
-* gameloop
+* robo (default test type in Bitrise).
+* instrumentation.
+* gameloop.
 
 If you want to read up on the difference between these test types, take a look at [Firebase's documentation](https://firebase.google.com/docs/test-lab/android/overview).
 
@@ -62,16 +62,16 @@ If your app needs specific user interaction for a successful robo test, you can 
          username_resource,username,ENTER_TEXT
          password_resource,password,ENTER_TEXT
          loginbtn_resource,,SINGLE_CLICK
-   * One directive per line, the parameters are separated with `,` character. For example: `ResourceName,InputText,ActionType`
+   * One directive per line, the parameters are separated with `,` character. For example: `ResourceName,InputText,ActionType`.
 
 ![](/img/robo-directives.png)
 
 Based on the input you provide, you can successfully run a robo test (even on pages that are only accessible with a specific user input) and check the test results on the **Test Reports page**. The test results can be, for example:
 
-* Screenshots
-* Recorded video
-* Logs
-* Files
+* Screenshots.
+* Recorded video.
+* Logs.
+* Files.
 
 Here is a screenshot of a successful robo test, where the robo test got all the way through to **My application** by populating the **email** and **password** fields first with the pre-defined directives from the **Robo directives**.
 
@@ -82,9 +82,9 @@ Here is a screenshot of a successful robo test, where the robo test got all the 
 1. Open the Workflow you want to use in the Workflow Editor.
 2. Add the **Android Build for UI testing** Step to your Workflow.
 3. To export an APK and a Test APK, you have to set the following input fields in the **Android Build for UI testing** Step.
-   * **Project Location**: the root directory of your Android project
-   * **Module**: set the module you wish to build
-   * **Variant**: set the variant you wish to build (usually `debug`)
+   * **Project Location**: the root directory of your Android project.
+   * **Module**: set the module you wish to build.
+   * **Variant**: set the variant you wish to build (usually `debug`).
 
    ![](/img/android-build-ui-testing.png)
 
@@ -102,11 +102,11 @@ Here is a screenshot of a successful robo test, where the robo test got all the 
 
 Check out the test results of your device tests on the **Test Reports** page. You can view the results of the tests run on each device, and check the details of each test case. This includes:
 
-* Test cases
-* Video
-* Screenshots
-* Logs
-* Files generated
+* Test cases.
+* Video.
+* Screenshots.
+* Logs.
+* Files generated.
 
 To view the test results:
 

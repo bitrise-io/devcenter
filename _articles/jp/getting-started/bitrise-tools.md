@@ -4,79 +4,84 @@ redirect_from: "/jp/tools/bitrise-tools/"
 menu:
   getting-started-main:
     weight: 39
-
 ---
-{% include not_translated_yet.html %}
 
-List of Open Source tools maintained by the Bitrise team.
+## Bitrise CLI tools
 
-{% include message_box.html type="note" title="Where can I find the repositories?" content="
-For historical reasons the core Bitrise CLI tools live in [github.com/bitrise-io](https://github.com/bitrise-io), but most of our tools, and every new tool we create lives in the [github.com/bitrise-tools](https://github.com/bitrise-tools), and the CLI core components (plugins, etc.) in the [github.com/bitrise-core](https://github.com/bitrise-core) GitHub organization. "%}
+### [bitrise](https://github.com/bitrise-io/bitrise)
+the Bitrise CLIは、 [bitrise.io](https://www.bitrise.io) でビルドを実行するために使用され、独自のMac / Linuxにインストールしてローカルでビルドを実行できます！
 
-## Core, Bitrise CLI tools
+{% include message_box.html type="info" title="Bitrise CLI についてもっと詳しく" content=" [GitHub](https://github.com/bitrise-io/bitrise) または dig deeper ないの [Bitrise CLI docs](/bitrise-cli/index/) を確認してください。"%}
 
-* [bitrise](https://github.com/bitrise-io/bitrise) -
-  the Bitrise CLI, which is used on [bitrise.io](https://www.bitrise.io)
-  to run the builds, as well as you can install it on your own Mac/Linux and run your the build locally!
-* [stepman](https://github.com/bitrise-io/stepman) -
-  used for managing the Step Library, including
-  downloading and sharing steps.
-* [envman](https://github.com/bitrise-io/envman) -
-  environment variable manager, can be used independently
-  and Bitrise CLI uses it to isolate and manage environment variables during the build.
+### [stepman](https://github.com/bitrise-io/stepman)
+  ステップのダウンロードや共有など、ステップライブラリの管理に使用します。
 
-## Bitrise CLI plugins
+### [envman](https://github.com/bitrise-io/envman)
+  環境変数マネージャーは独立して使用でき、Bitrise CLIはそれを使用してビルド中に環境変数を分離および管理します。
 
-* [Analytics plugin](https://github.com/bitrise-core/bitrise-plugins-analytics)
+## Bitrise CLI プラグイン
+
+### [Analytics plugin](https://github.com/bitrise-core/bitrise-plugins-analytics)
 
 ## Infrastructure
 
-* [bitrise-machine](https://github.com/bitrise-tools/bitrise-machine) -
-  Manage bitrise CLI runner hosts (virtual machines). Create, destroy, cleanup based on configuration.
-* [bitrise-bridge](https://github.com/bitrise-tools/bitrise-bridge) -
-  Responsible for "bridging" a Bitrise CLI command
-  from a remote host to the local Bitrise CLI;
-  either directly or by creating a Docker container and running the Bitrise CLI command in it.
-* [cmd-bridge](https://github.com/bitrise-io/cmd-bridge) -
-  Helps bridging an outside (generic) command (e.g. any command, through SSH) into a host. Useful in cases
-  where the command have to be performed in a specific environment, e.g. the iOS Simulator
-  can't be started from an SSH session, it have to be started from a logged in "GUI" user.
-  In this case you start `cmd-bridge`'s server in the environment, and then
-  you can use `cmd-bridge` through SSH or another way to send commands to the running
-  `cmd-bridge` server, which will perform the commands in its context / the environment
-  it is running in.
-* [garden](https://github.com/bitrise-tools/garden) -
+### [bitrise-machine](https://github.com/bitrise-tools/bitrise-machine)
+Bitrise CLIランナーのホスト（仮想マシン）を管理します。構成ファイルに基づいて作成、破棄、クリーンアップします。
+
+### [bitrise-bridge](https://github.com/bitrise-tools/bitrise-bridge)
+リモートホストからローカルのBitrise CLIへのBitrise CLIコマンドの「ブリッジ」を担います。直接、またはDockerコンテナを作成して、その中でBitrise CLIコマンドを実行します。
+
+### [cmd-bridge](https://github.com/bitrise-io/cmd-bridge)
+外部（汎用）コマンド（たとえば、SSHを介した任意のコマンド）をホストにブリッジするのに役立ちます。
+コマンドを特定の環境で実行する必要がある場合に役立ちます。 iOSシミュレータはSSHセッションから起動できません。ログインした「GUI」ユーザーから起動する必要があります。
+この場合、ホスト環境で`cmd-bridge` のサーバーを起動し、SSHまたは別の方法で`cmd-bridge` を使用して、実行中の`cmd-bridge` のサーバーにコマンドを送信し、実行しています。
+
+### [garden](https://github.com/bitrise-tools/garden)
   A tool to manage your template (plan) based directories.
   You can perform a setup (plant) by running garden grow,
   which'll create your garden (directories) based on your plans (temlates).
 
-## iOS
+テンプレート（plan）ベースのディレクトリを管理するツール。
+garden growを実行することでセットアップ（plant）を実行できます。これにより、計画（テンプレート）に基づいてガーデン（directories）が作成されます。
 
-* [codesigndoc](https://github.com/bitrise-tools/codesigndoc) -
-  Your friendly iOS Code Signing Doctor.
+## iOS code signing tool
+
+### codesigndoc
+使い易いiOSコード署名ツール
+
+{% include message_box.html type="info" title="codesigndoc についてもっと詳しく" content=" [GitHub page](https://github.com/bitrise-io/codesigndoc) をご確認ください。iOSアプリでの署名は以下が参考になります。
+
+* [Collecting and exporting code signing files with codesigndoc](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/)
+* [Device testing for iOS](/testing/device-testing-for-ios/)"%}
+
 
 ## Generic
 
-* [depman](https://github.com/bitrise-tools/depman) -
-  Super Simple Dependency Manager
-* [releaseman](https://github.com/bitrise-tools/releaseman) -
-  Your friendly Release Manager
+### [depman](https://github.com/bitrise-tools/depman)
+超シンプルな依存関係管理ツール。
+
+### [releaseman](https://github.com/bitrise-tools/releaseman)
+親切なリリース管理ツール。
 
 ## Go
 
-Go / golang related tools.
+### [gows](https://github.com/bitrise-tools/gows)
+開発中に 環境毎の切り替えを含んだ Go Workspace を簡単に管理できます。
 
-* [gows](https://github.com/bitrise-tools/gows) -
-  Go Workspace / Environment Manager, to easily manage the Go Workspace during development.
-* [goinst](https://github.com/bitrise-tools/goinst) -
-  Go Install command line tools in an isolated environment.
+### [goinst](https://github.com/bitrise-tools/goinst)
+独立した環境に Go 製のコマンドラインツールをインストールします。
 
-## Server / service
+## Server/service
 
-* [bitrise webhooks](https://github.com/bitrise-io/bitrise-webhooks) -
-  Bitrise Webhooks processor. Transforms various incoming webhooks (GitHub, Bitbucket, Slack, ...)
-  to [bitrise.io](https://www.bitrise.io)'s Build Trigger API format, and calls it to start a build.
-* [DATapi](https://github.com/bitrise-tools/datapi) -
-  A very simple data series storage service.
-  Store and retrieve data series in a quick and simple way, based on timestamp and category of the data.
-  * [DATapi Ruby Client](https://github.com/bitrise-tools/datapi-client)
+### [bitrise webhooks](https://github.com/bitrise-io/bitrise-webhooks)
+さまざまな Webhook（GitHub、Bitbucket、Slackなど）に対応し、[bitrise.io](https://www.bitrise.io)のBuild Trigger API形式に変換し、bitrise.io を呼び出してビルドを開始します。
+
+### [DATapi](https://github.com/bitrise-tools/datapi)
+非常にシンプルなデータシリーズストレージサービス。データのタイムスタンプとカテゴリに基づいて、データシリーズをすばやく簡単に保存および取得します。
+-  [DATapi Ruby Client](https://github.com/bitrise-tools/datapi-client)
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Now you know everything</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+</div>

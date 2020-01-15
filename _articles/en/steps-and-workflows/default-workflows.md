@@ -33,8 +33,8 @@ The **primary** Workflow is not the same for every app you create: it contains d
 
 The **deploy** Workflow is automatically created when adding a new app if you have tests configured in your app. It is similar to the [primary Workflow](/getting-started/getting-started-workflows#the-primary-workflow) in a number of ways:
 
-* it has the same basic steps
-* its specific steps are dependent on the project type
+* It has the same basic steps.
+* Its specific steps are dependent on the project type.
 
 The **deploy** Workflow, however, also contains the Steps that build the project, and, if the build is successful, produces the necessary artifacts for installing the app or deploying it online. For example, an Android project's **deploy** Workflow contains the **Android Build** Step that builds your project with Gradle, and the **Android Sign** Step that creates a signed APK which can be deployed to Google Play or installed on test devices.
 

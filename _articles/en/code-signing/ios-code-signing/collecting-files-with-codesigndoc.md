@@ -34,7 +34,7 @@ In the below example, we'll use the one-liners.
 1. Open the `Terminal`.
 2. Go to your project's folder.
 3. Enter the appropriate one-liner command, depending on your project type.
-   * For an **Xcode** project:
+   * For a **Xcode** project:
 
          bash -l -c "$(curl -sfL https://raw.githubusercontent.com/bitrise-io/codesigndoc/master/_scripts/install_wrap-xcode.sh)"
    * For a **Xamarin** project:
@@ -51,7 +51,7 @@ In the below example, we'll use the one-liners.
        Do you want to upload the provisioning profiles and certificates to Bitrise? [yes/no] :
 
    If you wish to upload the files with `codesigndoc`, type `yes` and press **Enter**.
-2. Provide your Bitrise access token.
+2. Provide your Bitrise access token:
 
        Please copy your personal access token to Bitrise.
        (To acquire a Personal Access Token for your user, sign in with that user on bitrise.io,
@@ -107,7 +107,7 @@ With manual install, you can specify which version of codesigndoc you want to us
 
 Check out the available versions on the [releases page of the codesigndoc](https://github.com/bitrise-io/codesigndoc/releases) tool.
 
-1. Download the release you want by running a `curl` command.
+1. Download the release you want by running a `curl` command:
 
    Note: replace the VERSIONNUMBER with the actual number of the codesigndoc version you want.
 

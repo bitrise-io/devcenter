@@ -13,8 +13,8 @@ menu:
 ---
 You can configure Bitrise to send build event notifications to any service you would like. A build event is:
 
-* when a build is started
-* when a build ends.
+* When a build is started.
+* When a build ends.
 
 You can use this notification to share build statuses with your git provider if we don’t support it yet, notify only the right team about build success or failure, or use it to automate your in-house release pipeline.
 
@@ -42,8 +42,8 @@ You can add extra headers to your outgoing webhooks via the **Code** tab of the 
 
 You can add custom headers either when:
 
-* [creating a new outgoing webhook](/webhooks/adding-outgoing-webhooks#adding-an-outgoing-webhook).
-* modifying an existing outgoing webhook by clicking the **Edit** button next to the URL.
+* [Creating a new outgoing webhook](/webhooks/adding-outgoing-webhooks#adding-an-outgoing-webhook).
+* Modifying an existing outgoing webhook by clicking the **Edit** button next to the URL.
 
 Add the header:
 

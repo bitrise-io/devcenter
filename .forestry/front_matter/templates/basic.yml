@@ -203,6 +203,8 @@ pages:
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガー-triggering-builds.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガーについて (Triggering
   builds)/プルリクエストビルドの承認-approving-pull-request-builds.md
+- _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドのトリガーについて (Triggering
+  builds)/特定のコミットやプルリクエストをスキップする-skipping-a-given-commit-or-pull-request.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドの番号付けとアプリバージョン管理-build-numbering-and-app-versioning.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/ビルドログ-build-logs.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/リモートアクセス-remote-access.md

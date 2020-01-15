@@ -22,19 +22,19 @@ Use our testing Steps, and all your test results will be deployed to the same di
 
 ## Test Reports overview
 
-You can run both UI tests and unit tests on Bitrise and with Test Reports , you can view the results of the different test types on the same page.
+You can run both UI tests and unit tests on Bitrise and with Test Reports, you can view the results of the different test types on the same page.
 
 Test Reports can read and display test results that are in either of two formats:
 
-* plist
-* JUnit XML
+* plist.
+* JUnit XML.
 
 You can use Test Reports with four of our testing Steps:
 
-* **Xcode Test for iOS**
-* **Android Unit Test**
-* **iOS Device Testing**
-* **Virtual Device Testing for Android**
+* **Xcode Test for iOS**.
+* **Android Unit Test**.
+* **iOS Device Testing**.
+* **Virtual Device Testing for Android**.
 
 These Steps will run the tests defined in your repository and then store the output in an Environment Variable. The **Deploy to Bitrise.io** Step will do the rest: it can read the results and send it to Test Reports.
 

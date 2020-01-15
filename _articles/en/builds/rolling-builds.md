@@ -30,11 +30,11 @@ You can also set which types of triggered builds you wish to abort. Let's see ho
 
    ![](/img/enable-rolling-builds.png)
 
-* **Pull Requests**: will cancel all previous builds for Pull Requests and all related Pushes
-* **Pushes**: will cancel all previous builds for Pushes to the same branch
-* **Running builds**: will also auto-cancel running builds in addition to on-hold ones
+* **Pull Requests**: will cancel all previous builds for Pull Requests and all related Pushes.
+* **Pushes**: will cancel all previous builds for Pushes to the same branch.
+* **Running builds**: will also auto-cancel running builds in addition to on-hold ones.
 
-And done! From now on, you don't have to wait for a triggered build to finish if you do not need it!
+All done! From now on, you don't have to wait for a triggered build to finish if you do not need it!
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
