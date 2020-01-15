@@ -8,7 +8,7 @@ published: false
 ---
 Bitrise APIへようこそ！ウェブサイト上やCLIにて使用しているたくさんの機能がAPI経由での使用もできます。効率的なパイプラインを求めるために、BitriseのCI/CDサービスを使って様々なシステムやサービスの統合が可能になります。
 
-{% include message_box.html type="warning" title="The API is work-in-progress　APIは現在作業中です" content=" APIは作業中です：新しいエンドポイントを追加、将来的に既存のエンドポイントをアップデートする予定です。"%}
+{% include message_box.html type="warning" title="APIは現在作業中です" content=" APIは作業中です：新しいエンドポイントを追加、将来的に既存のエンドポイントをアップデートする予定です。"%}
 
 APIの進行過程については追跡することが可能です：[ディスカッション (英) ](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554)にご参加ください！
 
