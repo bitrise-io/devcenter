@@ -96,6 +96,8 @@ By calling this endpoint, you replace the app's current `bitrise.yml` file. You 
 
 The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL:
 
+1つ以上のアプリのGETリクエストへのレスポンスはアプリスラグ、プロジェクトタイプ、gitプロバイダ、レポジトリのオーナーとURLを含みます：
+
     {
       "data": [
         {
@@ -119,3 +121,5 @@ The response to any GET request regarding one or more applications will contain 
         {
 
 You can also download the existing bitrise.yml file of any app: the response will contain the full YAML configuration.
+
+アプリの既存するbitrise.ymlのダウンロードも行うことができます：レスポンスには完全なYAML構成が含まれています。
