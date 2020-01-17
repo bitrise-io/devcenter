@@ -6,15 +6,11 @@ summary: ''
 published: false
 
 ---
-Set up new apps on Bitrise with the API: add the app, generate SSH keys, and set up the app's initial configuration.
-
-In addition, you can list all apps belonging, for example, to a single user or to a specific organization.
-
-APIを使ったBitrise上での新規アプリのセットアップ：アプリの追加、SSHキーの生成とアプリの初期設定のセットアップがあります。
+APIを使ってBitrise上で新規アプリをセットアップしましょう：アプリを追加して、SSHキーの生成とアプリの初期設定のセットアップを行います。
 
 他にも、ユーザーや指定のOrganizationへアプリの所有物のリスト化が可能です。
 
-## Adding a new app　新アプリの追加
+## 新アプリの追加
 
 | エンドポイント | 機能 |
 | --- | --- |
@@ -23,37 +19,25 @@ APIを使ったBitrise上での新規アプリのセットアップ：アプリ�
 | POST /apps/{app-slug}/finish | アプリの追加プロセスの終了時にアプリをセーブします。 |
 | POST /apps/{app-slug}/bitrise.yml | アプリ用に新しいbitrise.ymlをアップロードします。 |
 
-There are three distinct steps to adding an app with the Bitrise API.
-
 Bitrise APIを使ったアプリの追加には3つのステップがあります。
 
-1. Registering the app.  
-   アプリの登録
-2. Setting up an SSH key.  
-   SSHキーの設定
-3. Finishing the app registration.  
-   アプリ登録の完了
+1. アプリの登録
+2. SSHキーの設定
+3. アプリ登録の完了
 
-Before you start, generate [an SSH keypair](/faq/how-to-generate-ssh-keypair/):  
 始める前に、[SSH keypair](/faq/how-to-generate-ssh-keypair/)を生成します：
 
     ssh-keygen -t rsa -b 4096 -P '' -f ./bitrise-ssh -m PEM  
-
-Register the app by calling the `register` endpoint and setting all required parameters. You need to set your git provider, the repository URL, the slug of the repository as it appears at the provider, and the slug of the owner of the repository.
 
 `register`エンドポイントの呼び出しによるアプリの登録を行い、全ての必要なパラメータを設定します。ここでgitプロバイダ、レポジトリURL、プロバイダで表示されるレポジトリのスラグ、そしてレポジトリのオーナーのスラグの設定が必要になります。
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/register' -d '{"provider":"github","is_public":false,"repo_url":"git@github.com:api_demo/example-repository.git","type":"git","git_repo_slug":"example-repository","git_owner":"api_demo"}'
 
-If you want to add an app to an organization, you'll have to include the organization at the end of the curl request:
-
 Organizationにアプリを追加したい場合、curlリクエストの最後にOrganizationを含ませてください。
 
        curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/register' -d '{"provider":"github","is_public":false,"repo_url":"git@github.com:api_demo/example-repository.git","type":"git","git_repo_slug":"example-repository","git_owner":"api_demo","organization_slug":""}'
 
-Once done, call the `register-ssh-key` endpoint to set up the SSH keys you created so that Bitrise can clone your repository when running a build. You can also set whether you want to automatically register the public key at your git provider.
-
-完了すれば、???エンドポイントを呼び出して、作成済みのSSHキーを設定すると、Bitriseはビルド中にレポジトリのcloneができるようになります。
+完了すれば、`register-ssh-key`エンドポイントを呼び出して、作成済みのSSHキーを設定すると、Bitriseはビルド中にレポジトリのcloneができるようになります。
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-ssh-key' -d '{"auth_ssh_private_key":"your-private-ssh-key","auth_ssh_public_key":"your-public-ssh-key","is_register_key_into_provider_service":false}'
 
