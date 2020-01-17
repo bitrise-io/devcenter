@@ -10,14 +10,18 @@ Set up new apps on Bitrise with the API: add the app, generate SSH keys, and set
 
 In addition, you can list all apps belonging, for example, to a single user or to a specific organization.
 
-## Adding a new app
+APIを使ったBitrise上での新規アプリのセットアップ：アプリの追加、SSHキーの生成とアプリの初期設定のセットアップがあります。
 
-| Endpoints | Function |
+他にも、ユーザーや指定のOrganizationへアプリの所有物のリスト化が可能です。
+
+## Adding a new app　新アプリの追加
+
+| エンドポイント | 機能 |
 | --- | --- |
-| POST /apps/register | Add a new app. |
-| POST /apps/{app-slug}/register-ssh-key | Add an SSH-key to a specific app. |
-| POST /apps/{app-slug}/finish | Save the application at the end of the application add process. |
-| POST /apps/{app-slug}/bitrise.yml | Upload a new bitrise.yml for your application. |
+| POST /apps/register | 新しいアプリを追加します。 |
+| POST /apps/{app-slug}/register-ssh-key | 特定のアプリへSSHキーを追加します。|
+| POST /apps/{app-slug}/finish |アプリの追加プロセスの終了時にアプリをセーブします。 |
+| POST /apps/{app-slug}/bitrise.yml | アプリ用に新しいbitrise.ymlをアップロードします。 |
 
 There are three distinct steps to adding an app with the Bitrise API.
 
