@@ -1,0 +1,37 @@
+---
+title: Add App distribution with Bitrise
+menu:
+  tutorials-main:
+    weight: 17
+
+---
+This tutorial describes how you can link Firebase App distribution to Bitrise Workflow 
+
+
+
+First, you need to sign in with your Github account, or sign up if you don't have one yet.
+
+1. Install Firebase CLI ("https://firebase.google.com/docs/cli") for Mac OS || Linux Systeme
+
+```bash 
+curl -sL https://firebase.tools | bash
+```
+2. Once it is installed, fire up following command 
+
+```bash 
+firebase login:ci
+```
+You will have this format 1/sqdqsPdqh454....
+
+3. no need to add Service Credentials File if you dont use it 
+
+4. Add You App Path (Ipa or Apk) 
+PS: sometimes you need to add full Archive path 
+
+5. You need to add your testers group that you addede in App distribution under Firebase 
+
+<div class="banner">
+	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+	<div class="deploy-text">Manage Middleman projects with Bitrise</div>
+	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+</div>
