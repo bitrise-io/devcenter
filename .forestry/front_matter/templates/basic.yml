@@ -126,6 +126,7 @@ pages:
 - _articles/en/infrastructure/the-environment.md
 - _articles/en/infrastructure/virtual-machines.md
 - _articles/en/reviews/Japanese translations/API (API)/api-api.md
+- _articles/en/reviews/Japanese translations/API (API)/apiのエンドポイントとテスト-endpoints-and-testing-the-api.md
 - _articles/en/reviews/Japanese translations/API (API)/レスポンスとページ付け-response-and-pagination.md
 - _articles/en/reviews/Japanese translations/API (API)/認証-authentication.md
 - _articles/en/reviews/Japanese translations/Bitrise CLI (Bitrise CLI)/bitrise-cli-bitrise-cli.md
