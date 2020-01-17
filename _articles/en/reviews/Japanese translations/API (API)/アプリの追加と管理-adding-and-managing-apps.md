@@ -85,14 +85,14 @@ By calling this endpoint, you replace the app's current `bitrise.yml` file. You 
 
 ## Managing an existing app　既存アプリの管理
 
-| Endpoints | Function |
+| エンドポイント | 機能 |
 | --- | --- |
-| GET /apps | Get list of the apps. |
-| GET /apps/{app-slug} | Get a specific app. |
-| GET /apps/{app-slug}/bitrise.yml | Get the bitrise.yml of a specific app. |
-| GET /apps/{app-slug}/branches | List the branches of an app's repository. |
-| GET /organizations/{org-slug}/apps | Get list of the apps for an organization. |
-| GET /users/{user-slug}/apps | Get list of the apps for a user. |
+| GET /apps | アプリのリストを入手します。 |
+| GET /apps/{app-slug} | 指定のアプリを入手します。 |
+| GET /apps/{app-slug}/bitrise.yml | 指定のアプリのbitrise.ymlを入手します。 |
+| GET /apps/{app-slug}/branches | アプリのレポジトリのブランチをリストアップします。 |
+| GET /organizations/{org-slug}/apps | Organization用のアプリのリストを入手します。 |
+| GET /users/{user-slug}/apps | ユーザー用のアプリのリストを入手します。 |
 
 The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL:
 
