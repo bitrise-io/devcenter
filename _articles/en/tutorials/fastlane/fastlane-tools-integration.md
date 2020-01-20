@@ -19,8 +19,7 @@ _fastlane_ is a collection of ruby gems that cover the most usual tasks required
 
 Using _fastlane_ for your Workflow is as easy as pie. Just add the [Fastlane](https://www.bitrise.io/integrations/steps/fastlane) Step to [your Workflow](/getting-started/manage-your-bitrise-workflow) after the **Git Clone** Step (and any other dependency Step).
 
-{% include message_box.html type="warning" title="Have our Certificate and profile installer Step in your Workflow!" content=" You should also add/keep the **Certificate and profile installer** Step in the Workflow, to download your .p12 certificates and provisioning profiles uploaded to [bitrise.io](https://www.bitrise.io) and to install them. Even if you don't upload your files to [**bitrise.io**](https://www.bitrise.io) and instead you use a fastlane tool to manage your code signing files, you should still keep this Step in the Workflow. Read more about [iOS Code Signing using third party tools](/ios/code-signing/#use-a-third-party-tool-to-manage-your-code-signing-files).
-"%}
+{% include message_box.html type="warning" title="Have our Certificate and profile installer Step in your Workflow!" content=" You should also add/keep the **Certificate and profile installer** Step in the Workflow, to download your .p12 certificates and provisioning profiles uploaded to [bitrise.io](https://www.bitrise.io) and to install them. Even if you don't upload your files to [**bitrise.io**](https://www.bitrise.io) and instead you use a fastlane tool to manage your code signing files, you should still keep this Step in the Workflow."%}
 
 With adding the **fastlane Step** we ensure that you are running on the latest _fastlane_ version, as it is pre-installed on all our VMs. Inside the Step you can set the _fastlane_ action and we will run it automatically every time you push a new code change.
 
