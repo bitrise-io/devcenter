@@ -33,6 +33,7 @@ For the **Android & Docker** stacks:
 For the **Xcode** and the **Visual Studio for Mac** stacks:
 
 * 208.52.166.154
+* 207.254.34.148
 
 ## Customization
 
