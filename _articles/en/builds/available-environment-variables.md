@@ -24,16 +24,17 @@ These Environment Variables are available everywhere, even if you run the build 
 {% include collapse.html title="$BITRISE_TRIGGERED_WORKFLOW_TITLE" content="The title of the Workflow that was triggered - if it has a title, which is completely optional. This env var is exposed regardless of whether the Workflow was triggered manually or automatically." %}
 
 {% include collapse.html title="$BITRISE_BUILD_STATUS" content="The current status of the build. The available options are:
-- 0: Successful.
-- 1: Failed. 
 
-A "successful" current status means that none of the previous Steps in the build failed."%}
+* 0: Successful.
+* 1: Failed.
+
+A successful current status means that none of the previous Steps in the build failed."%}
 
 {% include collapse.html title="$BITRISE_SOURCE_DIR" content="Path to the base working directory. By default, it's the directory where Bitrise runs
- (for example, your repository root), unless you provide a different value. This can be overwritten during the build, which will change the working directory for subsequent Steps in the build. "%}
+(for example, your repository root), unless you provide a different value. This can be overwritten during the build, which will change the working directory for subsequent Steps in the build. "%}
 
 {% include collapse.html title="$BITRISE_DEPLOY_DIR" content="Path to the directory that stores artifacts and files for deployment.
- It's a temporary directory created by the Bitrise CLI by default, and can be overwritten before starting the Bitrise CLI. The **Deploy to Bitrise.io** Step looks for your build artifacts - such as an IPA or APK of the app -, test results, and other files in this directory." %}
+It's a temporary directory created by the Bitrise CLI by default, and can be overwritten before starting the Bitrise CLI. The **Deploy to Bitrise.io** Step looks for your build artifacts - such as an IPA or APK of the app -, test results, and other files in this directory." %}
 
 {% include collapse.html title="$CI" content="Indicates whether the Bitrise CLI is running in CI (Continuous Integration) mode. Value can be `true` or `false`. It is false if, for example, your run Bitrise on your own computer." %}
 
@@ -102,7 +103,7 @@ This is only relevant for iOS apps and for cross-platform apps with iOS versions
 For more information on Env Vars, check out [Secrets and Env Vars](/builds/env-vars-secret-env-vars/).
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Now you know everything</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
 </div>
