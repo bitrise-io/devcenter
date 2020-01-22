@@ -24,11 +24,10 @@ These Environment Variables are available everywhere, even if you run the build 
 {% include collapse.html title="$BITRISE_TRIGGERED_WORKFLOW_TITLE" content="The title of the Workflow that was triggered - if it has a title, which is completely optional. This env var is exposed regardless of whether the Workflow was triggered manually or automatically." %}
 
 {% include collapse.html title="$BITRISE_BUILD_STATUS" content="The current status of the build. The available options are:
-- Not finished (0).
-- Successful (1).
-- Failed (2).
-- Aborted with failure (3).
-- Aborted with success (4). "%}
+- 0: Successful.
+- 1: Failed. 
+
+A "successful" current status means that none of the previous Steps in the build failed."%}
 
 {% include collapse.html title="$BITRISE_SOURCE_DIR" content="Path to the base working directory. By default, it's the directory where Bitrise runs
  (for example, your repository root), unless you provide a different value. This can be overwritten during the build, which will change the working directory for subsequent Steps in the build. "%}
