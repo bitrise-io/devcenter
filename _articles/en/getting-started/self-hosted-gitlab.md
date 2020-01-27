@@ -1,6 +1,7 @@
 ---
 title: Connecting self-hosted GitLab instances
 redirect_from:
+- https://devcenter.bitrise.io/adding-a-new-app/self-hosted-gitlab/#connect-a-self-hosted-gitlab-instance-with-bitrise
 - "/getting-started/adding-a-new-app/self-hosted-gitlab/"
 - "/getting-started/signing-up/self-hosted-gitlab/"
 tag:
