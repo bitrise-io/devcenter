@@ -1,5 +1,5 @@
 ---
-title: Available Stacks
+title: Available stacks
 redirect_from:
 - "/docs/available-stacks"
 tag:
