@@ -57,7 +57,9 @@ Once you are ready, proceed to uploading your files and setting up your workflow
    * **The Developer Portal team id** - find this on the [Membership Details page of your Apple Developer Portal account](https://developer.apple.com/account/#/membership)
    * **Distribution type** - make sure its value matches the value of the **Select method for export** input in the **Xcode Archive & Export for iOS step**. Read more about archiving and exporting an .ipa in our [Creating a signed .ipa for Xcode](/code-signing/ios-code-signing/create-signed-ipa-for-xcode/) projects guide.
    * **Scheme** - you can restrict which targets to process.
-8. Make sure your apple develoepr account is connected under Teams Tab even if it is connectes under profile settings 
+8. Make sure your Apple Developer account is connected on the **Teams** tab of your app.
+
+   It is not enough to simply connect the account to your Bitrise account: you need to also connect it to the app itself.
 Optionally, you can set one more input if you use the **Automatically manage signing** option in Xcode: if the input marked with **Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?** is set to `true` then the Step will try to generate a profile. If you use manual code signing in Xcode, this input has no effect.
 
 If `codesigndoc` does not pick up one or more distribution .p12 files, you can export those manually from the **Keychain Access** app, just like you would when you transfer these files between Macs.
