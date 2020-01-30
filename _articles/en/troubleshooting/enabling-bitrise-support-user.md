@@ -34,7 +34,7 @@ The Bitrise Support User, when enabled, has Admin access to your app. That means
 
 Let's see in detail what the support user can do! 
 
-On the **Team**, **Code**, and **Settings** tabs of your app: 
+It can: 
 
 - Add and update webhooks.
 - Add and update SSH keys.
@@ -48,13 +48,13 @@ On the **Team**, **Code**, and **Settings** tabs of your app:
 - Select the service credential user and the connected Apple Developer account.
 - Enable or disable the app.
 
-On the **Builds** page: 
+On the **Builds** page, it can: 
 
 - View builds.
 - View build logs.
 - Start builds.
 
-In the **Workflow Editor**:
+In the **Workflow Editor**, it can:
 
 - Add, update, and delete Workflows.
 - Modify Step inputs.
