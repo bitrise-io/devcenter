@@ -34,7 +34,7 @@ The Bitrise Support User, when enabled, has Admin access to your app. That means
 
 Let's see in detail what the support user can do! 
 
-In app settings: 
+On the **Team**, **Code**, and **Settings** tabs of your app: 
 
 - Add and update webhooks.
 - Add and update SSH keys.
