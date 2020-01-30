@@ -17,14 +17,14 @@ menu:
 
 ### Protecting the uploaded files in GENERIC FILE STORAGE
 
-Once you uploaded a file to **GENERIC FILE STORAGE**, you can decide if you wish to make it protected. This means nooone can view the value of the Environment Variable assigned to the uploaded file. 
+Once you uploaded a file to **GENERIC FILE STORAGE**, you can decide if you wish to make it protected. This means no one can view the value of the Environment Variable assigned to the uploaded file.
 
 1. Click the horizontal ellipsis button and select **Make protected**.
 
    ![](/img/genericfileprotected.jpg)
 2. Click **Make it protected** in the pop-up window.
 
-Note that since this file is now protected, you can only overwrite its value if you delete the file and upload a new one.
+Note that since this is now protected, you can only overwrite its value if you delete the file and upload it again.
 
 ## Using the files uploaded to GENERIC FILE STORAGE
 
