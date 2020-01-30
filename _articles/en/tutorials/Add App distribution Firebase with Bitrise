@@ -28,7 +28,7 @@ You will have this format 1/sqdqsPdqh454....
 4. Add You App Path (Ipa or Apk) 
 PS: sometimes you need to add full Archive path 
 
-5. You need to add your testers group that you addede in App distribution under Firebase 
+5. Add the testers group that you added in App distribution on your Firebase account: 
 
 <div class="banner">
 	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
