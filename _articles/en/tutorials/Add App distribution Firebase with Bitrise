@@ -21,7 +21,7 @@ curl -sL https://firebase.tools | bash
 ```bash 
 firebase login:ci
 ```
-You will have this format 1/sqdqsPdqh454....
+After a successfully running the `login` command for the first time, the CLI provides a token. This token can be used to log in to a CI server. 
 
 3. no need to add Service Credentials File if you dont use it 
 
