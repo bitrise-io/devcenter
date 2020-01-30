@@ -15,6 +15,17 @@ menu:
 
 {% include message_box.html type="info" title="Environment Variable for the download URL" content="Bitrise will upload your file and assign an Environment Variable (Env Var) to the file's download URL. A time limited, read only download URL will be set as the value of this Env Var for every build. You can use this URL to download the file during a build."%}
 
+### Protecting the uploaded files in GENERIC FILE STORAGE
+
+Once you uploaded a file to **GENERIC FILE STORAGE**, you can decide if you wish to make it protected. This means nooone can view the value of the Environment Variable assigned to the uploaded file. 
+
+1. Click the horizontal ellipsis button and select **Make protected**.
+
+   ![](/img/genericfileprotected.jpg)
+2. Click **Make it protected** in the pop-up window.
+
+Note that since this file is now protected, you can only overwrite its value if you delete the file and upload a new one.
+
 ## Using the files uploaded to GENERIC FILE STORAGE
 
 There are two ways to use the uploaded files:
