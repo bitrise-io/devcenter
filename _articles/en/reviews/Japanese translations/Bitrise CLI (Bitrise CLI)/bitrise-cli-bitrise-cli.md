@@ -22,9 +22,7 @@ Bitriseはモバイルアプリに特化した、ソフトウェアプロジェ�
 
 ## bitrise.yml - 構成フォーマット
 
-The configuration format of the `Bitrise CLI` is referred to as `bitrise.yml`, as that's the expected file name the configuration should be saved with.
-
-`Bitrise CLI`の構成フォーマットは`bitrise.yml`と呼ばれます。この`bitrise.yml`を使用して構成が保存される必要のある、予期されるファイル名になります。
+`Bitrise CLI`の構成フォーマットは`bitrise.yml`と呼ばれます。`bitrise.yml`は構成の保存に必要なファイル名です。
 
 CLIはJSONフォーマットによる構成も同様に受け付け、ファイル名を変更することもできます。しかし、ファイル名`_bitrise.yml_`へ構成を保存すれば、構成パスの指定を行わずにディレクトリで簡単に `_bitrise run_` を行うことができます。そしてCLIは自動的に `_bitrise.yml_` から構成を読み取ります。
 
@@ -34,17 +32,11 @@ StepLibとは`bitrise.yml`内で使うことができるビルドステップの
 
 ご自身専用のStep Libraryを作成することもできますが、他者との共有を望まない場合は、ステップの`git clone`URLを使って直接参照する方法のほうがより簡単です。
 
-{% include message_box.html type="note" title="ツール内のカスタムStepLibサポート" content=" The Bitrise CLI tools can work with custom step libraries, but other tools like the Visual Workflow Editor on [bitrise.io](https://www.bitrise.io) might be limited in functionality for steps not available in the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib).
+{% include message_box.html type="note" title="ツール内のカスタムStepLibサポート" content=" Bitrise CLIのツールはカスタムのステップライブラリでも機能しますが、[bitrise.io](https://www.bitrise.io)のVisual Workflow Editor のような他ツールは、メインの[Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)において機能が制限される可能性があります。"%}
 
-Bitrise CLIのツールはカスタムのステップライブラリでも機能しますが、[bitrise.io](https://www.bitrise.io)のVisual Workflow Editor のような他ツールは、メインの[Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)において機能が制限される可能性があります。"%}
+可能であれば、メインの[Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)内にご自身のステップを共有していただき、他ユーザーのみならずStepLibが提供する信頼性の向上にご協力ください。
 
-If possible, you should share your steps in the main [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib), to help others as well as for the extra reliability the StepLib offers.
-
-_Custom StepLibs can also provide fallbacks (alternative download URLs, caches), automatic and periodic checks etc. to provide the best reliability, but you get all these for free if you use the main Bitrise StepLib._
-
-できればメインのBitrise StepLibでステップを共有していただき、他ユーザーのみならずStepLibが提供する信頼性の向上にご協力ください。
-
-カスタムのステップライブラリでは代替物 (代わりのダウンロードURLやキャッシュ) や自動で定期的な点検の提供も行います
+カスタムのステップライブラリでは代替物 (代わりのダウンロードURLやキャッシュ) や自動で定期的な点検の提供も行います。
 
 ### Why to use the StepLib and Steps instead of ad-hoc build scripts?　ad-hoc ビルドスクリプトではなくStepLibとステップを使用するのはなぜですか？
 

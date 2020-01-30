@@ -23,7 +23,7 @@ Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every wee
 We use two types of Xcode stacks; Stable stacks and Edge stacks.
 
 * Xcode Stable stacks are **built once, and are not updated** at all (except with Bitrise CLI related updates, [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) and with critical fixes). These stacks are designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
-* Xcode "Edge" stack is **re-built every week**. It includes the latest-and-greatest versions of the pre-installed tools and the [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates). It does not include any beta versions. The stack uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
+* Xcode "Edge" stack is **re-built every week**. It includes the latest stable release of Xcode, the same pre-installed tools as on the Stable stack, and the [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates). It does not include any Xcode beta version. The stack uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
 
 ### **About dependency manager cache updates**
 
@@ -80,15 +80,15 @@ When the first **beta of the next major Xcode version** is released, we **depr
 
 {% include message_box.html type="example" title="Example for deprecating Xcode stacks when beta Xcode version is released " content=" When Xcode 9 was released, we deprecated
 
-* all the Xcode 8 stacks except the very last one (8.3.x).
-* the oldest major version (Xcode 6.4). "%}
+* All the Xcode 8 stacks except the very last one (8.3.x).
+* The oldest major version (Xcode 6.4). "%}
 
 When the first **final (non beta) version** of the new major Xcode version is released, we **remove** the deprecated stacks; the oldest major version as well as the minor versions of the last major version except the latest minor version.
 
 {% include message_box.html type="example" title="Example for removing stacks when final Xcode version is released" content=" For example, when Xcode 9 (final, non beta) was released, we removed:
 
-* the oldest major version (the Xcode 6 (6.4) stack).
-* the minor versions of the last major version (Xcode 8.0, 8.1 and 8.2 stacks) except for the latest minor version (Xcode 8.3) "%}
+* The oldest major version (the Xcode 6 (6.4) stack).
+* The minor versions of the last major version (Xcode 8.0, 8.1 and 8.2 stacks) except for the latest minor version (Xcode 8.3). "%}
 
 This means that the latest patch release version of Xcode is **supported for about 2.5 years**, in sync with Xcode major version releases.
 
@@ -102,8 +102,8 @@ Altogether we have 4 Hybrid stacks:
 
 So when a new version of Visual Studio for Mac (vs4mac) comes out:
 
-* the current vs4mac Stable becomes the Previous Hybrid stack with Xamarin and vs4mac and,
-* the current Previous Hybrid stack with Xamarin and vs4mac gets deprecated.
+* The current vs4mac Stable becomes the Previous Hybrid stack with Xamarin and vs4mac.
+* The current Previous Hybrid stack with Xamarin and vs4mac gets deprecated.
 
 This means that the **Hybrid Visual Studio for Mac Stable** is **supported for about 1 year**, in sync with the major Xcode version releases.
 
