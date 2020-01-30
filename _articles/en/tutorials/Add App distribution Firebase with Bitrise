@@ -9,7 +9,7 @@ This tutorial describes how you can link Firebase App distribution to Bitrise Wo
 
 
 
-First, you need to sign in with your Github account, or sign up if you don't have one yet.
+Before you start, make sure you are signed in to your Firebase account on your computer. 
 
 1. Install Firebase CLI ("https://firebase.google.com/docs/cli") for Mac OS || Linux Systeme
 
