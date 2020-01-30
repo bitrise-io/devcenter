@@ -17,14 +17,14 @@ menu:
 
 ### Protecting the uploaded files in GENERIC FILE STORAGE
 
-Once you uploaded a file to **GENERIC FILE STORAGE**, you can set your uploaded files to Protected mode. This means that no one can download or reveal the file from your account but your builds can still use them. Once you click Make protected, Bitrise will handle the Env Var attached to your uploaded files as [secret Env Var](/builds/env-vars-secret-env-vars/). The only way to overwrite it is to delete the file and upload a new one.
+Once you uploaded a file to **GENERIC FILE STORAGE**, you can set your uploaded files to Protected mode. This means that no one can download or reveal the file from your account but your builds can still use them. Once you click Make protected, Bitrise will handle the Env Var attached to your uploaded files as [secret Env Var](/builds/env-vars-secret-env-vars/).
 
 1. Click the horizontal ellipsis button and select **Make protected**.
 
    ![](/img/genericfileprotected.jpg)
 2. Click **Make it protected** in the pop-up window.
 
-Note that since this is now protected, you can only overwrite its value if you delete the file and upload it again.
+Note that since this is now protected, you can only overwrite it if you delete the file and upload a new one again.
 
 ## Using the files uploaded to GENERIC FILE STORAGE
 
