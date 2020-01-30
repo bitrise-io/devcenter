@@ -16,7 +16,7 @@ Before you start, make sure you are signed in to your Firebase account on your c
 ```bash 
 curl -sL https://firebase.tools | bash
 ```
-2. Once it is installed, fire up following command 
+2. Once the installation is finished, log in to the Firebase CLI: 
 
 ```bash 
 firebase login:ci
