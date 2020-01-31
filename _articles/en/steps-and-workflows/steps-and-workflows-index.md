@@ -25,6 +25,8 @@ You can easily move Steps around in a Workflow, you can chain different Workflow
 
 ## Video tutorials for Steps and Workflows 
 
+Here's a couple of introductory videos for how Steps and Workflows work on Bitrise: one for Android, one for iOS. For the other platforms, check out our [official channel](https://www.youtube.com/channel/UCpPg789a-SRZrcQ0GoH74KA).
+
 ### Configuring Steps and Workflows for Android apps
 
 <div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/H_qhsdSo4I8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
