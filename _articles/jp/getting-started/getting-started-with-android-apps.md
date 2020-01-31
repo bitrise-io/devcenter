@@ -11,12 +11,14 @@ menu:
 ---
 このガイドでは、以下について説明します。
 
-- Bitrise に Android アプリを追加する方法
-- `primary`ワークフローと`deploy`ワークフローでできること
-- アプリのテスト方法
-- [bitrise.io](https://www.bitrise.io/)もしくはマーケットプレイスにデプロイする方法
+* Bitrise に Android アプリを追加する方法
+* `primary`ワークフローと`deploy`ワークフローでできること
+* アプリのテスト方法
+* [bitrise.io](https://www.bitrise.io/)もしくはマーケットプレイスにデプロイする方法
 
 ## bitrise.io に Android アプリを追加する
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0;" width="100%" height="100%" src="[https://www.youtube.com/embed/IcW0rgfiLsw](https://www.youtube.com/embed/IcW0rgfiLsw "https://www.youtube.com/embed/IcW0rgfiLsw")" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 {% include message_box.html type="note" title="既にBitriseアカウントをお持ちですか?" content="[bitrise.io](https://www.bitrise.io)にサインアップして、Bitriseアカウントにアクセスできることを確認してください。 GitホスティングサービスのアカウントにBitriseアカウントを接続する方法は、[4通り](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)あります。"%}
 
@@ -28,8 +30,8 @@ menu:
 6. リポジトリのアクセスを求めるプロンプトが表示されたら、`No, auto-add SSH key`を選択します。詳細は[SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/)を参照してください。
 7. プロジェクトで設定したブランチ名(例えば master など)を入力し、`Next`をクリックします。
 8. Bitrise がプロジェクトを検証するのでしばらくお待ちください。設定ファイルに基づいてアプリのセットアップを行います。
-   - Bitrise Scanner はデフォルトでプロジェクトのモジュールを選択します。 `Module`リストで選択できるモジュールがさらにある場合は、プロジェクトに最適なモジュールを選択してください。
-   - **ビルド**のバリアントを選択します(`APPS & ARTIFACTS`にて生成されるすべてのバリアントを選択可能)。**テスト**のバリアントも同様に選択します。
+   * Bitrise Scanner はデフォルトでプロジェクトのモジュールを選択します。 `Module`リストで選択できるモジュールがさらにある場合は、プロジェクトに最適なモジュールを選択してください。
+   * **ビルド**のバリアントを選択します(`APPS & ARTIFACTS`にて生成されるすべてのバリアントを選択可能)。**テスト**のバリアントも同様に選択します。
 9. プロンプトが表示されたら Webhook を登録して、コードがリポジトリにプッシュされたときに Bitrise が自動的にビルドを開始できるようにします。 これにより、`primary`ワークフローでの最初のビルドが開始されます。メッセージをクリックするとビルドページに移動します。 最初のビルドではまだ apk は作成されませんが、ビルドページでプロジェクトのログを確認することができます。
 
 以下は Android `primary`ワークフローの一例です。
@@ -113,11 +115,11 @@ menu:
 
 {% include message_box.html type="重要" title="ステップの順序！" content="
 
-- Gradle の依存関係をキャッシュするためには、ワークフローの最初のステップを`Bitrise.io Cache:Pull`に、最後のステップを`Bitrise.io Cache:Push`としてください！
-- `Do anything with Script`ステップの直後の、`Install missing Android SDK components`はプロジェクトに不足している可能性がある Android SDK コンポーネントをインストールします。
-- `Change Android versionCode and versionName`ステップは、`Android Build`ステップの**前に**挿入する必要があります。これは正しいバージョンコードとバージョン名のビルドをアップロードするためです。
-- ビルド処理を行う前にコードとデバッグをテストするため、 `Android Lint`と`Android Unit Test`ステップは `Android Build`ステップの**前に**挿入する必要があります。
-- `Android Sign`ステップは`Android Build`ステップの**後で**なければなりません。後者はあなたのプロジェクトをビルドします。 承認されたプロジェクトをアップロードできるように、このステップはすべての展開ステップの**前に**あることを確認してください。"%}
+* Gradle の依存関係をキャッシュするためには、ワークフローの最初のステップを`Bitrise.io Cache:Pull`に、最後のステップを`Bitrise.io Cache:Push`としてください！
+* `Do anything with Script`ステップの直後の、`Install missing Android SDK components`はプロジェクトに不足している可能性がある Android SDK コンポーネントをインストールします。
+* `Change Android versionCode and versionName`ステップは、`Android Build`ステップの**前に**挿入する必要があります。これは正しいバージョンコードとバージョン名のビルドをアップロードするためです。
+* ビルド処理を行う前にコードとデバッグをテストするため、 `Android Lint`と`Android Unit Test`ステップは `Android Build`ステップの**前に**挿入する必要があります。
+* `Android Sign`ステップは`Android Build`ステップの**後で**なければなりません。後者はあなたのプロジェクトをビルドします。 承認されたプロジェクトをアップロードできるように、このステップはすべての展開ステップの**前に**あることを確認してください。"%}
 
 ## 依存関係
 
@@ -130,9 +132,9 @@ menu:
 UI テストを行う場合、**仮想デバイスで Android UI テストを実行するために**、`beta Virtual Device Testing for Android`ステップを追加してください。
 利用可能なテストタイプの中から 1 つを選択してください！
 
-- instrumentation
-- robo
-- gameloop
+* instrumentation
+* robo
+* gameloop
 
 instrumentation を選択した場合は、**Instrumentation Test**グループ下で**Test APK path**を設定することを忘れないでください。
 
@@ -154,16 +156,16 @@ instrumentation を選択した場合は、**Instrumentation Test**グループ�
 ワークフロー(`Android Sign`ステップの後)に `Google Play Deploy`ステップを追加すると、署名済み apk があなたの選択したマーケットプレイスにアップロードされます。
 
 1. Google Play ストアと同期していることを確認してください。以下を参考にしてください。
-   - [register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   - set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+   * [register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
+   * set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
 2. Bitrise のダッシュボードで、`Code Signing`に移動し、サービスアカウントの JSON キーを`GENERIC FILE STORAGE`にアップロードします。
 3. アップロードしたファイルの URL を格納する env キーをコピーします。
-   - 例: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * 例: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 4. ワークフローエディタにて `Google Play Deploy`ステップに戻ります。
 5. 次のように必要な入力フィールドを入力します。
-   - `Service Account JSON key file path`: このフィールドはアップロードされたサービスアカウントの JSON キーを含む環境変数を指定する必要があります。リモート URL を受け付けます。 例：`$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-   - `Package name`: あなたの Android アプリのパッケージ名
-   - `Track`: APK を展開するトラック(alpha/beta/rollout/production)
+   * `Service Account JSON key file path`: このフィールドはアップロードされたサービスアカウントの JSON キーを含む環境変数を指定する必要があります。リモート URL を受け付けます。 例：`$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+   * `Package name`: あなたの Android アプリのパッケージ名
+   * `Track`: APK を展開するトラック(alpha/beta/rollout/production)
 
 {% include message_box.html type="情報" title="ワークフローに追加できる他のdeployステップ" content="ワークフローの左側にある`+`記号をクリックし、コレクションから別の`DEPLOY`ステップを選択します。例えば`Appetize.io deploy`や`Amazon Device Farm File Directory`です。"%}
 
