@@ -14,6 +14,8 @@ iOS の開発は時に複雑です。我々の目的は開発する上での負�
 
 ## Bitrise に iOS アプリを追加する
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0;" width="100%" height="100%" src="https://www.youtube.com/embed/xa4kUQtT2NU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 1. [bitrise.io](https://www.bitrise.io/)にログインします。
 
 2. ダッシュボードで`+ Add new app`をクリックします。

@@ -22,6 +22,8 @@ In this guide, we'll walk you through how to add an Android app to Bitrise, what
 
 ## Adding an Android app to Bitrise
 
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0;" width="100%" height="100%" src="https://www.youtube.com/embed/IcW0rgfiLsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to [connect your Bitrise account](https://app.bitrise.io/me/profile#/overview) to your account found on a Git service provider. "%}
 
 1. Go to your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds).
