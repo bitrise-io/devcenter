@@ -18,7 +18,7 @@ Developing for iOS is not always easy - our aim is to make it as simple as possi
 
 ## Adding an iOS app
 
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"><iframe style="position: absolute; top: 0; left: 0;" width="100%" height="100%" src="https://www.youtube.com/embed/xa4kUQtT2NU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/xa4kUQtT2NU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git provider. "%}
 
@@ -58,7 +58,7 @@ The **Xcode Test for iOS** Step runs the pre-defined Xcode tests. It has a defau
 {% include message_box.html type="note" title="Check your Stack" content="We recommend checking that the stack selected for your app has the same Xcode version you used to build the app.
 
 For example, if your simulator test fails with 'Ineligible destinations for the <your-app-scheme> scheme', then make sure the Xcode version in the Stack tab is correct.
-  
+
 You can read more about our stacks in the [Available stacks](/infrastructure/available-stacks/) guide.
 "%}
 
