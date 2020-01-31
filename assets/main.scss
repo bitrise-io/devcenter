@@ -767,6 +767,19 @@ main.content {
 	padding: 0 18px;
 }
 
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+	height: 0;
+	overflow: hidden;
+}
+
+.video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
 h1, h2, h3, h4 {
 	letter-spacing: 0.2px;
 }
