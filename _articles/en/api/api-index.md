@@ -3,9 +3,7 @@ title: API
 tag:
 - api
 - cli
-summary: Many of the features that you are used to on our website and with our CLI
-  are available via the API, too. It lets you integrate various systems and services
-  with our CI/CD service for an efficient pipeline.
+summary: The Bitrise API allows you to build deep, custom integrations with your internal tools and processes to create even more efficient development pipelines. 
 redirect_from: "/api/v0.1/"
 menu:
   main:
@@ -13,7 +11,10 @@ menu:
     weight: 29
 
 ---
-Welcome to the Bitrise API! Many of the features that you are used to on our website and with our CLI are available via the API, too. It lets you integrate various systems and services with our CI/CD service for an efficient pipeline.
+
+The Bitrise API allows you to build deep, custom integrations with your preferred tools and processes to create even more efficient development pipelines. 
+
+The API provides you with control of - and access to - the features and data available through the Bitrise website and CLI. By using the API, you gain the ability to fully customize Bitrise’s functionality to fit your process.
 
 {% include message_box.html type="warning" title="The API is work-in-progress" content=" The API is work-in-progress: we will add new endpoints and possibly update the existing ones in the future. "%}
 

@@ -103,6 +103,18 @@ When you use the **iOS Auto Provision** Step, using Xcode managed signing is an 
 
 If you uncheck Xcode managed signing, the **iOS Auto Provision** step generates a new provisioning profile on the Apple Developer portal for the project when running a build. This profile will be up to date with all of the capabilities and developer devices.
 
+## Have you exceeded the file count limit of the provisioning profiles?
+
+The maximum number of provisioning profiles you can upload to the Code Signing tab is 50. If you’ve already reached this limit and wish to use even more, then here are a few tips on how to use even more provisioning profiles:
+
+* Use the **iOS Auto Provision** Step. This only requires the code signing identities (certificates with .p12 extension) to be uploaded to Bitrise. You can download the provisioning profiles from the Apple Developer portal on-the-fly during the build if you have [connected your Apple Developer account to Bitrise](https://bitrise.atlassian.net/connecting-apple-dev-account/#enabling-apple-developer-portal-integration "/connecting-apple-dev-account/#enabling-apple-developer-portal-integration").
+
+
+* You can create a .zip file containing the required certificates/profiles. In this case, you don't need to upload any certificates/profiles on Bitrise. During the build you can download the .zip file and update the certificate/profile related inputs of the **Certificate and Profile Installer** Step to match the path to the certificate/profile on the build machine. Note that the **Certificate and Profile Installer** Step supports local paths and URLs for certificates and profiles.
+* You can host the profiles and certificates yourself, and only add an URL that is pointing to a given certificate/profile to the workflow.
+
+Also note that multiple URLs can be specified for both the certificate and profile inputs. Make sure you separate them with a pipe (`|`) character.
+
 ## The iOS Auto Provision Step fails
 
 The **iOS Auto Provision** Step manages your provisioning profiles for you: it downloads the profiles from the Apple Developer portal and installs them for you. Here's what you can do if this Step fails:
@@ -143,7 +155,7 @@ To install iOS apps on a given device, you have to either:
 2. Check the logs to see if the **Xcode Archive & Export for iOS** Step used the provisioning profile with the device's UDID in it.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's check out your iOS app</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's check out your iOS app</div>
+<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your app</button></a>
 </div>
