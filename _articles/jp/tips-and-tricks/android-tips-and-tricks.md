@@ -112,8 +112,6 @@ For example, you can use the `GRADLE_OPTS` and `JAVA_OPTS` Env Vars by setting t
 
 You can use use both, only one of them or neither if your project’s default configuration meets your heap capacity needs. Please note that these Env Vars with the `-Xms` and `-Xmx` parameters might get overridden based on your configuration.
 
-Limiting the allowed heap size the JVM processes use (for example, Gradle) is useful if there’s not enough heap capacity available in the system and you wish to avoid paging/swapping. This helps to maintain steady performance for the running programs.
-
 ## Emulators
 
 You can find and use our Android emulator steps to create & boot emulators:
