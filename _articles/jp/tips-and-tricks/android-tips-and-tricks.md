@@ -24,19 +24,19 @@ Android アプリのディレクトリで `gradle tasks` を実行すること�
 `gradle tasks` を実行すると、利用可能な Gradle タスクの一覧を次のようなフォーマットで取得できます:
 
     $ gradle task
-
+    
     :tasks
-
+    
     ------------------------------------------------------------
     All tasks runnable from root project
     ------------------------------------------------------------
-
+    
     Android tasks
     -------------
     androidDependencies - Displays the Android dependencies of the project.
     signingReport - Displays the signing info for each variant.
     sourceSets - Prints out all the source sets defined in this project.
-
+    
     Build tasks
     -----------
     assemble - Assembles all variants of all applications and secondary packages.
@@ -77,7 +77,7 @@ with the following content:
     set -e
     # debug log
     set -x
-
+    
     # write your script here
     sdkmanager "platforms;android-18"
     sdkmanager "build-tools;18.0.1"
@@ -101,16 +101,16 @@ You can run your build on your Mac/PC, inside the same `docker` container you us
 to fully test your build in an identical environment! You can find the detailed guide here:
 [How to run your build locally in Docker](/docker/run-your-build-locally-in-docker/)
 
-## Memory (RAM) limit
+## Heap size
 
-You can specify the amount allowed RAM for the JVM by adding two **Environment Variables** to your Workflow,
-e.g. as `App Env Var`s:
+There are several options to adjust the heap size for the Java Virtual Machine (JVM). One option is adding Environment Variables (Env Vars) to your workflow where you specify the `-Xms` and `-Xmx` parameters. These determine heap size: the `-Xms` parameter sets the initial Java heap size and the `-Xmx` parameter sets the maximum Java heap size.
+
+For example, you can use the `GRADLE_OPTS` and `JAVA_OPTS` Env Vars by setting them in the **Env Vars** tab.
 
 * `GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'`
-* `_JAVA_OPTIONS: "-Xms512m -Xmx1024m"`
+* `JAVA_OPTS: "-Xms512m -Xmx1024m"`
 
-This method can be used to limit the allowed RAM the Gradle JVM process can use,
-which can be useful in case there's not enough RAM available in the system.
+You can use use both, only one of them or neither if your project’s default configuration meets your heap capacity needs. Please note that these Env Vars with the `-Xms` and `-Xmx` parameters might get overridden based on your configuration.
 
 ## Emulators
 
@@ -137,8 +137,8 @@ The script above creates an emulator with SDK version 21, which should work prop
 
 _There are possible workarounds for newer versions
 (see _[_1_](http://stackoverflow.com/questions/34329363/app-wont-run-unless-you-update-google-play-services-with-google-maps-api-andr)
-_and_ [_2_](http://stackoverflow.com/questions/33114112/app-wont-run-unless-you-update-google-play-services)_),
-but that requires some customization in your project._
+_and_ [_2_](http://stackoverflow.com/questions/33114112/app-wont-run-unless-you-update-google-play-services)),
+but that requires some customization in your project.
 
 ## Installing / Using Java version X
 
@@ -152,7 +152,7 @@ If your build requires JDK 8, you can install and activate it with a `Script` st
 
     #!/bin/bash
     set -ex
-
+    
     add-apt-repository -y ppa:openjdk-r/ppa
     apt-get update -qq
     apt-get install -y openjdk-8-jdk

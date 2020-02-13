@@ -152,13 +152,9 @@ There are several options to adjust the heap size for the Java Virtual Machine (
 For example, you can use the `GRADLE_OPTS` and `JAVA_OPTS` Env Vars by setting them in the **Env Vars** tab.
 
 * `GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'`
-
-
 * `JAVA_OPTS: "-Xms512m -Xmx1024m"`
 
 You can use use both, only one of them or neither if your project’s default configuration meets your heap capacity needs. Please note that these Env Vars with the `-Xms` and `-Xmx` parameters might get overridden based on your configuration.
-
-Limiting the allowed heap size the JVM processes use (for example, Gradle) is useful if there’s not enough heap capacity available in the system and you wish to avoid paging/swapping. This helps to maintain steady performance for the running programs.
 
 ## Emulators
 
