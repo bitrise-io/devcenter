@@ -18,6 +18,27 @@ You can configure and connect a VPN anywhere in your Workflow - BEFORE you would
 
 {% include message_box.html type="important" title="SSH sessions" content="When you choose your VPN tool and do the setup/configuration, you have to be careful NOT TO RESTART OR ABORT existing SSH sessions! The [bitrise.io](https://www.bitrise.io) workers will abort the build if the SSH connection between the build's Control/Master machine and the build virtual machine terminates!"%}
 
+## Accessing a repository via VPN
+
+If the repository of your application can be only accessed via VPN, you have two things to keep in mind above all:
+
+* During builds, the VPN connection must be established before cloning the repository to our virtual machines: in practice, this means the Step establishing the connection must be placed before the **Git Clone** Step in your Workflow.
+* When adding a new app, you need a workaround: use a dummy repository that can be accessed without a VPN during the process of adding the app.
+
+Let’s go through this workaround!
+
+1. Create an empty repository that is accessible without a VPN connection.
+2. Add a new app, using this repository as the source. Make sure it is a private app! There is no need to register a webhook.
+3. When done, go to the **Settings** tab of your app.
+
+   ![](/img/ionic-sample-app_-_Bitrise.png)
+4. In the **REPOSITORY URL** field, replace the URL with the URL of the actual repository you want to use.
+5. Click **Save changes**.
+6. Go to the **Workflows** tab to open the Workflow Editor.
+7. Place the Step or Steps establishing the VPN connection before any Steps that have to access your repository in your Workflow.
+
+And you’re done. For the different methods of establishing a VPN connection, take a look at our Example configurations.
+
 ## Example configurations
 
 ### Using the Connect to OpenVPN Server Step
