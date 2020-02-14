@@ -14,9 +14,9 @@ menu:
 
 [Environment Variables](/builds/env-vars-secret-env-vars/) normally contain a single value. However, it is possible to set up an Env Var that includes other Env Vars as values. You can also use values that are normally treated as Env Vars: that is, values including the `$` character.
 
-## Using an Env Var as a value of an Env Var
+## Setting up an embedded Env Var
 
-You can, at any time, use another Environment Variable in the value of an Env Var. For example, the value of an Env Var called $BITRISE_IDENTITIES can be a list containing a username, a password, and an API key. The password and the API key would be set as Env Vars:
+You can, at any time, use another Environment Variable in the value of an Env Var - embedding the Env Var, so to speak.  For example, the value of an Env Var called $BITRISE_IDENTITIES can be a list containing a username, a password, and an API key. The password and the API key would be set as Env Vars:
 
 ```
 username: bitrise_user 
