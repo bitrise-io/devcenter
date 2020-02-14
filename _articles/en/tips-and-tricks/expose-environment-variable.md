@@ -5,11 +5,16 @@ menu:
     weight: 12
 
 ---
-In this guide we show you how to expose Environment Variables (Env Vars) and use them, then how to copy Env Vars to another key and finally how to overwrite env vars.
+In this guide we show you:
+
+* How to expose Environment Variables (Env Vars) and use them.
+* How to copy Env Vars to another key.
+* How to overwrite Env Vars.
+* How to embed Env Vars in other Env Vars.
 
 ## Exposing Environment Variables with envman
 
-You can expose env vars from one Step and make it available for every other Step performed after the Step during the build. You can use [envman](https://github.com/bitrise-io/envman/) to manage Env Vars.
+You can expose Env Vars from one Step and make it available for every other Step performed after the Step during the build. You can use [envman](https://github.com/bitrise-io/envman/) to manage Env Vars.
 
 Here is a simple example:
 
