@@ -109,7 +109,7 @@ One trigger can only select a single workflow / can only start a single build. T
 
 If you want to run more than one workflow, you can [chain workflows](/bitrise-cli/workflows/#chaining-workflows-and-reusing-workflows) after each other. The workflows chained this way won't run in parallel, but the full chain of workflows will be executed, in the order you chain them.
 
-The order of the items also matter: if you'd specify a `push_branch: mast` item after a `push_branch: "*"` item, the `push_branch: master` would never be selected as every code push event would match `push_branch: "*"` first, and the first item which matches the trigger will select the workflow for the build!
+The order of the items also matter: if you'd specify a `push_branch: master` item after a `push_branch: "*"` item, the `push_branch: master` would never be selected as every code push event would match `push_branch: "*"` first, and the first item which matches the trigger will select the workflow for the build!
 
 ## How to build only a single branch
 
