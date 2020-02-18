@@ -8,11 +8,17 @@ published: false
 ---
 Bitrise has an integrated app deployment system you can use for app and other build artifact file distribution.
 
+Bitriseにはアプリやその他のアーティファクトファイルの配布に使用が可能なデプロイシステムが存在します。
+
 With this you can distribute your apps over the air for your app’s team members or even for those who don’t have a Bitrise account. You can also use it to archive your app and other build artifact files which will be available on the app’s Builds page for viewing and downloading.
 
 Here is a short recap on the different build steps per platform.
 
-| Platform | Build step | Deploy step to Bitrise |
+このシステムによりアプリ開発チーム内のメンバーやBitriseアカウントをお持ちでない人ともOTAでアプリの配布ができるようになります。アプリのBuildページでviewやdownloadが行えるビルドアーティファクトファイルやアプリのアーカイブも行えます。
+
+プラットフォーム別に
+
+| プラットフォーム | ビルドステップ | Bitriseへのデプロイステップ |
 | --- | --- | --- |
 | iOS | Xcode Archive & Export for iOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 | Android | Gradle Runner or Android Build | Deploy to Bitrise.io - Apps, Logs, Artifacts |
@@ -24,52 +30,84 @@ Here is a short recap on the different build steps per platform.
 
 First let's have a look at the required and sensitive fields of the Step:
 
+まずステップの必須欄ならびにセンシティブ欄について見ていきましょう：
+
 ![](/img/deploy-to-bitrise.png)
 
-## Deploying directory or file path
+## Deploying directory or file path  
+ディレクトリやファイルパスのデプロイ
 
 If the file path of the app (.ipa/APK) is available in the right directory, the `Deploy to Bitrise.io` Step will upload the file for the Build and **the file will be listed on the Build’s page**.
 
+アプリのファイルパス (.ipa/APK) が適切なディレクトリで利用可能であれば、`Deploy to Bitrise.io`ステップがビルド用にファイルをアップロードし、**ビルドページにファイルがリスト化されます。**
+
 If you use custom steps or our `Do anything with Script step` to deploy apps from the `$BITRISE_DEPLOY_DIR` directory, make sure:
+
+カスタムステップや`Do anything with Script step`を使って???ディレクトリからアプリのデプロイを行う際、以下のことを確認してください：
 
 * you move the generated app into this directory or
 * you set the `Deploy directory or file path` input of the `Deploy to Bitrise.io step` to point to the location of the app file.
+* 生成済みのアプリをこのディレクトリに移している、もしくは、
+* アプリファイルの位置を指す`Deploy to Bitrise.io step`の`Deploy directory or file path`インプットをセットしている
 
-## Notify: User Roles
+## Notify: User Roles　通知：ユーザーロール
 
 You can define who should get notified of the generated build based on your app's user groups. There are a couple of options for you to choose from:
+
+アプリのユーザーグループに基づいて生成されたビルドの通知を受け取る人を定義することができます。選択元はいくつかのオプションがあります：
 
 * leave `everyone` in the input field to notify everyone in the group.
 * notify based on user role: `testers`, `developers`, `admins`, or `owner` (Select one or more and separate the roles with commas)
 * if you don't want to notify anyone, set it to `none`.
+* インプット欄に`everyone`を残すとグループ全員に通知が行くようになります。
+* ユーザーロールに基づいた通知：`testers`, `developers`, `admins`や`owner` (一つまたはそれ以上を選択し、コンマを使ってロールを分けてください)
+* 通知を行わない場合、`none`とセットします。
 
 The default input value here is `everyone`.
 
-## Notify: Emails
+ここでのデフォルト値は`everyone`になっています。
+
+## Notify: Emails　通知：メール
 
 Set one or more email addresses of those who should get notification. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in our `Secrets` tab.
 
-## Enabling Public Page for the App
+通知を受け取る方のメールアドレスを１つ以上設定します。ここの欄は[センシティブ](/builds/env-vars-secret-env-vars/)になっているので、`Secrets`タブ内でメールアドレスの登録を行ってください。
+
+## Enabling Public Page for the App  
+アプリ用のPublic Pageを有効化する
 
 With this option enabled, you can create a Public install page that comes with a long and random URL. You can share this URL with anyone - yes, even with those who are not registered on Bitrise!
 
 You can enable it directly in the Step's input field or at the generated .ipa/APK in your Build's `APPS & ARTIFACTS` tab.
 
-### Accessing the Public install page
+このオプションが有効化されると、長くランダムなURLからなるPublicのインストールページを作成することができます。このURLはBitriseに登録されていない人など誰とでも共有することが可能です。
+
+ステップのインプット欄内で直接行うか、ビルドの`APPS & ARTIFACTS`タブ内の.ipa/APKで有効化することもできます。
+
+### Accessing the Public install page  
+Publicインストールページへのアクセス
 
 You can access the Public install page's URL, if you head over to your generated build's `APPS & ARTIFACTS` tab and find the .ipa/APK file.
+
+PublicインストールページのURLへアクセスするには、生成済みビルドの`APPS & ARTIFACTS`タブに移動して.ipa/APKファイルを見つけます。
 
 ![](/img/public-install-page-1.png)
 
 Besides the **Public install page** link on the **APPS & ARTIFACTS** tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
+APPS & ARTIFACTSタブのPublicインストールページでは、デプロイ済みアプリについてのその他の情報の確認も行うことができます。例えば、アプリの詳細 (アプリ名、バンドルID、バージョン、サイズなど) の確認やローカルコンピュータへのファイルのダウンロードが行えます。
+
 ![](https://devcenter.bitrise.io/img/app-release-unsigned.jpg)
 
 If you click **Open Public install page** link, you’ll see a basic description of the App (title, version, size, supported devices).
 
+**Open Public install page**のリンクをクリックすればアプリの基本情報 (タイトル、バージョン、サイズ、サポート済みデバイス) を確認できます。
+
 ![](/img/oat-publicinstallpage.png)
 
 You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store .ipa won’t receive a Public install page as it should be uploaded to the app store directly.
+
+Bitriseアカウントをお持ちでない方へも当ページを共有することができます。また、当ページよりアプリのインストールも可能になるので、ご注意ください。アプリのビルドにEnterprise Provisioning Profileを使用していない場合、プロビジョニングプロファイルにすべてのデバイス識別子 (UDID) を追加する必要があります。ビルドが署名されたプロビジョニングプロファイル内に含まれているデバイス
 
 {% include message_box.html type="note" title="Installing the `.ipa` file from the Public Install Page" content="If you visit your iOS apps’ Builds page from an iOS device and meet the following requirements, you’ll see an Install button instead of the Download button. With this you can install the app on your device directly from Bitrise if:
 
