@@ -82,7 +82,9 @@ From now on, you are able to log in with a click of a button. Choose your favori
 
 You can easily sign up to Bitrise in one step with your email address.
 
-1. Add your email address, username, password and on our [Sign Up](https://app.bitrise.io/users/sign_up) page.
+1. Add your email address, username, and password on our [Sign Up](https://app.bitrise.io/users/sign_up) page. Make sure you provide a strong password. If your password is not secure, you will get a **Your password is not safe** message with [instructions](https://haveibeenpwned.com/Passwords) on how to proceed.
+
+   ![](/img/password.jpg)
 2. Click the **Sign up with Email** button.
 3. Check your inbox for our **Confirmation Instructions**.
 
