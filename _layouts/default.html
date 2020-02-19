@@ -85,8 +85,8 @@
           </div>
         </div>
         <div class="lang-selector">
-            <a href="{{ page.url_without_lang }}" class={% if page.lang == 'en' %}"active"{% endif %}>EN</a>
-            <a href="/jp{{ page.url_without_lang }}" class={% if page.lang == 'jp' %}"active"{% endif %}>日本語</a>
+            <a href="{{ page.url_without_lang }}" class={% if page.lang == 'en' %}"active"{% endif %} hreflang="en">EN</a>
+            <a href="/jp{{ page.url_without_lang }}" class={% if page.lang == 'jp' %}"active"{% endif %} hreflang="ja">日本語</a>
         </div>
         <a class="source-code" href="{{ site.data.basic_info.source_code_url }}" target="_blank">
           <object type="image/svg+xml" data="/assets/logos/icons-docs/github.svg" class="source-host-logo"></object>
