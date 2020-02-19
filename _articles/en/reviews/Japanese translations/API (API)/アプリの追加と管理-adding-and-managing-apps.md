@@ -41,33 +41,23 @@ Organizationにアプリを追加したい場合、curlリクエストの最後�
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-ssh-key' -d '{"auth_ssh_private_key":"your-private-ssh-key","auth_ssh_public_key":"your-public-ssh-key","is_register_key_into_provider_service":false}'
 
-Finish the app registration process by calling the `finish` endpoint. This endpoint allows you to configure your applications: set the project type, the stack on which the build will run, and the initial configuration settings.
-
-You can also set environment variables, as well as immediately specify an organization that will be the owner of the application.
-
-`finish`エンドポイントを呼び出してアプリ登録処理を完了しましょう。このエンドポイントはアプリの構成を許可します：プロジェクトタイプの設定、ビルドを実行するスタックや初期設定を行うことができます。
+`finish`エンドポイントを呼び出してアプリ登録処理を完了しましょう。このエンドポイントはアプリの構成を許可します：プロジェクトタイプの設定、ビルドを実行するスタックや初期構成の設定を行うことができます。
 
 環境変数を設定したり、Organizationの指定をすぐに行うことでアプリのオーナーになることができます。
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/finish' -d '{"project_type":"ios","stack_id":"osx-vs4mac-stable","config":"default-ios-config","mode":"manual","envs":{"env1":"val1","env2":"val2"},"organization_slug":"e1ec3dea540bcf21"}'
 
-You're done! Your new app is ready.
-
 完了です！これでアプリの準備は整いました。
 
-### Uploading a new bitrise.yml file　新しいbitrise.ymlファイルのアップロード
+### 新しいbitrise.ymlファイルのアップロード
 
-The `bitrise.yml` file contains the configuration of your builds. You can modify the current one via the API by posting a full YAML configuration. The below example shows a basic `.yml` configuration.
-
-`bitrise.yml`ファイルはビルドの構成を含んでいます。完全なYAML構成を投稿を行えば、API経由で現在のファイルを修正することができます。下の例では、基本的な`.yml`構成を表示しています。
+`bitrise.yml`ファイルはビルドの構成を含んでいます。完全なYAML構成を配置すれば、API経由で現在のファイルを修正することができます。下の例では、基本的な`.yml`構成を表示しています。
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/bitrise.yml' -d '{"app_config_datastore_yaml":"app:\n  envs:\n  - BITRISE_PROJECT_PATH: build.gradle\n    opts:\n      is_expand: false\ndefault_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git\nformat_version: 1.1.9"}'
 
-By calling this endpoint, you replace the app's current `bitrise.yml` file. You can, of course, modify this uploaded `bitrise.yml` either via the API or on the website itself.
+このエンドポイントを呼び出すことにより、現在のアプリ`bitrise.yml`ファイルが置き換えられます。アップロードされた`bitrise.yml`は、API経由もしくはウェブサイト上で修正を行えます。
 
-このエンドポイントを呼び出すことにより、現在のアプリ`bitrise.yml`ファイルが変更されます。アップロードされた`bitrise.yml`は、API経由もしくはウェブサイト上で修正を行えます。
-
-## Managing an existing app　既存アプリの管理
+## 既存アプリの管理
 
 | エンドポイント | 機能 |
 | --- | --- |
@@ -78,9 +68,7 @@ By calling this endpoint, you replace the app's current `bitrise.yml` file. You 
 | GET /organizations/{org-slug}/apps | Organization用のアプリのリストを入手します。 |
 | GET /users/{user-slug}/apps | ユーザー用のアプリのリストを入手します。 |
 
-The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL:
-
-1つ以上のアプリのGETリクエストへのレスポンスはアプリスラグ、プロジェクトタイプ、gitプロバイダ、レポジトリのオーナーとURLを含みます：
+1つ以上のアプリに関するGETリクエストへのレスポンスは、アプリスラグ、プロジェクトタイプ、gitプロバイダ、レポジトリのオーナーとURLを含みます：
 
     {
       "data": [
@@ -106,4 +94,4 @@ The response to any GET request regarding one or more applications will contain 
 
 You can also download the existing bitrise.yml file of any app: the response will contain the full YAML configuration.
 
-アプリの既存するbitrise.ymlのダウンロードも行うことができます：レスポンスには完全なYAML構成が含まれています。
+アプリの既存するbitrise.ymlファイルのダウンロードも行うことができます：レスポンスには完全なYAML構成が含まれています。
