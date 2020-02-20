@@ -3,15 +3,13 @@ tag:
 - env vars
 - builds
 - secrets
-title: Using Env Vars as a value of an Env Var
+title: Using Env Vars in the value of an Env Var
 redirect_from: []
-summary: 'Environment Variables normally contain a single value. However, it is possible to set up an Env Var that includes other Env Vars as values. You can also use values that are normally treated as Env Vars: that is, values including the `$` character. '
-menu:
-  tips-and-tricks-main:
-    weight: 24
+summary: 'Environment Variables normally contain a single value. However, it is possible
+  to set up an Env Var that includes other Env Vars as values. You can also use values
+  that are normally treated as Env Vars: that is, values including the `$` character. '
 
 ---
-
 [Environment Variables](/builds/env-vars-secret-env-vars/) normally contain a single value. However, it is possible to set up an Env Var that includes other Env Vars as values. You can also use values that are normally treated as Env Vars: that is, values including the `$` character.
 
 ## Setting up an embedded Env Var

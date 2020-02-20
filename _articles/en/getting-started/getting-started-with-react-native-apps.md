@@ -20,7 +20,9 @@ You can easily set up and configure your React Native project on [Bitrise](https
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Before you dive in, make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
-## Adding a React Native project to Bitrise
+## Adding a React Native app to Bitrise
+
+<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/dG5I9qWDbQE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 This flow will guide you through the process of adding your app to Bitrise, connecting your repository, setting up your repository access, selecting a branch and validating your project. Below we highlight some React Native-specific configuration as well.
 

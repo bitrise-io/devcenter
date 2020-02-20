@@ -24,6 +24,8 @@ You may want to use this setting if:
 
 The appropriate Service credential user must be set on your app's **Team** page. This user must have an admin right for the GitHub repository of the project. [Read more about setting up the Service credential user](/troubleshooting/github-pull-request-status-troubleshooting/#make-sure-to-select-a-service-credential-user-who-has-a-connected-github-account).
 
+## Setting up Selective builds
+
 1. Click on your app on your **Dashboard**.
 2. Click **Settings** in the top navigation bar.
 3. Find the **ENABLE SELECTIVE BUILDS** option and toggle the switch on the right.
@@ -31,8 +33,20 @@ The appropriate Service credential user must be set on your app's **Team** page.
    ![](/img/enable-selective-builds.png)
 4. Add filenames and file paths in the **ADD FILENAME/PATH** window. You can add multiple files or file paths here. A build will be triggered only if these files are changed.
 
+### Patterns in the file name or file path
+
+You do not need to set an exact file name or file path for the Selective builds feature: you can set patterns. Using regular expressions is not supported but the pattern may contain certain metacharacters:
+
+* `*`: Matches all files.
+* `*a`: Matches all files beginning with a.
+* `a*`: Matches all files containing an a.
+* `**`: Matches directories recursively.
+* `?`: Matches any one character.
+* `\`: Escapes the next metacharacter.
+* `[set]`: Matches any one character in set.
+
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Enable Selective Builds</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Enable Selective Builds</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
