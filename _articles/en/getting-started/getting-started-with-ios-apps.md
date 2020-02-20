@@ -117,7 +117,7 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 
    The Step will need your:
    * Apple ID.
-   * password or, if you use two-factor authentication on iTunes Connect, your application password.
+   * Password or, if you use two-factor authentication on iTunes Connect, your application password.
 
    Don't worry, the password will not be visible in the logs or exposed - [that's why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
 
