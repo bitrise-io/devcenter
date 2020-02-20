@@ -37,13 +37,13 @@ The appropriate Service credential user must be set on your app's **Team** page.
 
 You do not need to set an exact file name or file path for the Selective builds feature: you can set patterns. Using regular expressions is not supported but the pattern may contain certain metacharacters:
 
-* * : Matches all files.
-* \*a\* : Matches all files beginning with a.
-* a* : Matches all files containing an a.
-* ** : Matches directories recursively.
-* ? : Matches any one character.
-* \\ : Escapes the next metacharacter.
-* \[set\] : Matches any one character in set.
+* `*`: Matches all files.
+* `*a`: Matches all files beginning with a.
+* `a*`: Matches all files containing an a.
+* `**`: Matches directories recursively.
+* `?`: Matches any one character.
+* `\`: Escapes the next metacharacter.
+* `[set]`: Matches any one character in set.
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
