@@ -175,8 +175,4 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 
 If the build is successful, congratulations - you've just deployed your Xamarin app!
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's add a Xamarin app</div>
-<a target="_blank" href=" [https://app.bitrise.io/apps/add](https://app.bitrise.io/apps/add "https://app.bitrise.io/apps/add") "><button class="button">Go to Bitrise now</button></a>
-</div>
+<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's add a Xamarin app</div> <a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a> </div>
