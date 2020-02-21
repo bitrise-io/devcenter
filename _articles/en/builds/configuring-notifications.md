@@ -3,7 +3,7 @@ title: Configuring notifications
 redirect_from: []
 date: '2019-03-22T11:08:54.000+00:00'
 tag: []
-summary: ''
+description: ''
 menu:
   builds-main:
     weight: 6

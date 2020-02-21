@@ -5,7 +5,7 @@ tag:
 - builds
 - triggers
 redirect_from: []
-summary: ''
+description: ''
 menu:
   triggering-builds:
     weight: 8

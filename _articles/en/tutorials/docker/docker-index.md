@@ -2,7 +2,7 @@
 tag: []
 title: Docker
 redirect_from: "/tutorials/docker/index/"
-summary: ''
+description: ''
 menu:
   tutorials-main:
     identifier: docker

@@ -2,7 +2,7 @@
 tag: []
 title: Ship add-on test
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

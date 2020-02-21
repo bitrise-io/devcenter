@@ -4,7 +4,7 @@ tag:
 - android
 title: 'Generating and deploying Android app bundles '
 redirect_from: []
-summary: You can compile an Android App Bundle with our Android Build and Gradle Runner
+description: You can compile an Android App Bundle with our Android Build and Gradle Runner
   Steps, easily get it signed with the Android Sign Step and deployed with Google
   Play Deploy Step.
 menu:

@@ -3,7 +3,7 @@ tag: []
 title: カスタムのScriptステップからテストレポートへのエクスポート (Exporting to Test Reports from custom Script
   Steps) (
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

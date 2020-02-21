@@ -5,7 +5,7 @@ tag:
 - files
 - xcode
 - ios
-summary: 'If you don''t want to use codesigndoc, you can export certificates and provisioning
+description: 'If you don''t want to use codesigndoc, you can export certificates and provisioning
   profiles manually, or using Xcode. '
 redirect_from: []
 menu:

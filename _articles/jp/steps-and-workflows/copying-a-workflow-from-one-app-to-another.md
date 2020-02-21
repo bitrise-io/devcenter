@@ -2,7 +2,7 @@
 tag: []
 title: あるアプリから別のアプリへのワークフローのコピー
 redirect_from: []
-summary: ''
+description: ''
 menu:
   steps-workflows-main:
     weight: 20

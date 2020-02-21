@@ -2,7 +2,7 @@
 tag: []
 title: Setting up Ping Identity SSO for Bitrise
 redirect_from: []
-summary: ''
+description: ''
 
 ---
 

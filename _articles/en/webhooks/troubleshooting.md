@@ -4,7 +4,7 @@ tag:
 - troubleshooting
 - webhooks
 - triggers
-summary: 'Troubleshoot why your webhooks aren''t working: check the webhook URL, your
+description: 'Troubleshoot why your webhooks aren''t working: check the webhook URL, your
   Bitrise activity page, or test your triggers with the CLI.'
 redirect_from: []
 menu:

@@ -5,7 +5,7 @@ redirect_from:
 tag:
 - ios
 - code-signing
-summary: 'Manage iOS code signing on Bitrise: collect and upload your code signing
+description: 'Manage iOS code signing on Bitrise: collect and upload your code signing
   files using our tools, and export your app with the export method you specify.'
 menu:
   code-signing-main:

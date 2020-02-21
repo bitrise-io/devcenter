@@ -4,7 +4,7 @@ tag:
 - team-management
 title: Organizations
 redirect_from: []
-summary: The purpose of organizations is to make it easier to manage several people
+description: The purpose of organizations is to make it easier to manage several people
   working on different apps on Bitrise. Organizations can own an unlimited number
   of apps, and Organization owners can assign Organization members to work on different
   apps as they see fit.

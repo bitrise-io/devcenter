@@ -7,7 +7,7 @@ tag:
 - firebase
 title: Testing
 redirect_from: []
-summary: 'Testing your app is obviously a major part of the continuous integration
+description: 'Testing your app is obviously a major part of the continuous integration
   process. Bitrise has a number of dedicated Steps to help you with running your tests,
   and you can use custom Script Steps if you do not find what you need in our Step
   Library. '

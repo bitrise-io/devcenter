@@ -2,7 +2,7 @@
 tag: []
 title: FAQ
 redirect_from: []
-summary: ''
+description: ''
 menu:
   main:
     identifier: faq-main

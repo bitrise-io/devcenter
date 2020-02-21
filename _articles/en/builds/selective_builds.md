@@ -5,7 +5,7 @@ redirect_from:
 tag:
 - builds
 - triggers
-summary: The Selective Builds setting provides change detection for your builds. Enabling
+description: The Selective Builds setting provides change detection for your builds. Enabling
   it allows you to only trigger a build of an app if certain files or folders have
   been modified.
 menu:

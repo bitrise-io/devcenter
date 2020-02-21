@@ -7,7 +7,7 @@ tag:
 - orgs
 - security
 - SSO
-summary: Organization members can log into or sign up to Bitrise using their own SAML
+description: Organization members can log into or sign up to Bitrise using their own SAML
   SSO provider's system. With SAML SSO, organizations will be able to apply the security
   guidelines of their SAML SSO provider when accessing their Bitrise organization.
 menu:

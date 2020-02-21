@@ -2,7 +2,7 @@
 tag: []
 title: "ビルドのトリガーとアボート\t(Triggering and aborting builds)"
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

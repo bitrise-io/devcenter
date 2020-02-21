@@ -2,7 +2,7 @@
 tag: []
 title: プルリクエストビルドの承認 (Approving Pull Request builds)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

@@ -5,7 +5,7 @@ tag:
 - " workflows"
 - env vars
 - bitrise.yml
-summary: Step outputs are environment items that are the result of running a given
+description: Step outputs are environment items that are the result of running a given
   Step. For example, the deploy-to-bitrise-io Step generates the $BITRISE_PUBLIC_INSTALL_PAGE_URL
   and the $BITRISE_PUBLIC_INSTALL_PAGE_URL_MAP output variables by default.
 redirect_from: []

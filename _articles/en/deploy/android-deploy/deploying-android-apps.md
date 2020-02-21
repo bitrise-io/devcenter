@@ -8,7 +8,7 @@ tag:
 - deploy
 - android
 - google play
-summary: Find out how you can deploy the APK built from your Android app to both bitrise.io
+description: Find out how you can deploy the APK built from your Android app to both bitrise.io
   and to the Google Play Store. Learn about Google Play API access and the JSON key
   file.
 menu:

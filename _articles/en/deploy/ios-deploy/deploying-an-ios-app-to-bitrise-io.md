@@ -7,7 +7,7 @@ tag:
 - ios
 - code-signing
 - testing
-summary: Deploy an app to Bitrise to be able to download the .ipa file and install
+description: Deploy an app to Bitrise to be able to download the .ipa file and install
   it on devices specified in the app's Development Provisioning Profile. This way,
   your internal testers can easily test the app.
 menu:

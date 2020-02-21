@@ -4,7 +4,7 @@ tag:
 - triggers
 - git
 - builds
-summary: You can set up a trigger so that every time a pull request is opened from
+description: You can set up a trigger so that every time a pull request is opened from
   a specified source branch to a specified target branch of your repository, a build
   is automatically triggered on Bitrise.
 redirect_from: []

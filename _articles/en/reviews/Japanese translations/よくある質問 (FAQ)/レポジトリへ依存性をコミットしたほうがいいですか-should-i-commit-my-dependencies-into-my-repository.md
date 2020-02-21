@@ -2,7 +2,7 @@
 tag: []
 title: レポジトリへ依存性をコミットしたほうがいいですか？(Should I commit my dependencies into my repository?)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

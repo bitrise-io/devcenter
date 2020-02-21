@@ -5,7 +5,7 @@ tag:
 - bitrise.yml
 - steps
 - workflows
-summary: The configuration format of the Bitrise CLI is referred to as bitrise.yml.
+description: The configuration format of the Bitrise CLI is referred to as bitrise.yml.
   This is the expected file name the configuration should be saved with.
 redirect_from: []
 menu:

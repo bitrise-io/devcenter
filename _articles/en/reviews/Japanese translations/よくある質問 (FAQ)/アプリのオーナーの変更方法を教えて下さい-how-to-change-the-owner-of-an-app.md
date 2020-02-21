@@ -2,7 +2,7 @@
 tag: []
 title: アプリのオーナーの変更方法を教えて下さい。(How to change the owner of an app?)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

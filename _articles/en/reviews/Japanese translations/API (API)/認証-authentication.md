@@ -2,7 +2,7 @@
 tag: []
 title: 認証 (Authentication)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

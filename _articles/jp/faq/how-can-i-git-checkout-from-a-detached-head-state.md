@@ -2,7 +2,7 @@
 tag: []
 title: How can I git checkout from a detached head state?
 redirect_from: []
-summary: ''
+description: ''
 menu:
   faq-main:
     weight: 18

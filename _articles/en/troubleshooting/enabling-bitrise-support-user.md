@@ -4,7 +4,7 @@ tag:
 - troubleshooting
 - " apps"
 - builds
-summary: If you need quick tech support from us, our onsite chat support can look
+description: If you need quick tech support from us, our onsite chat support can look
   into your project and fix your technical issues in the most efficient way! All you
   have to do is enable Bitrise Support user so that we have access to your app.
 redirect_from: []

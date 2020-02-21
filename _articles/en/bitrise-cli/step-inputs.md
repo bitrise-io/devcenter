@@ -4,7 +4,7 @@ tag:
 - steps
 - env vars
 - cli
-summary: Step inputs are environment items that tell the Bitrise CLI how to run a
+description: Step inputs are environment items that tell the Bitrise CLI how to run a
   given step. As discussed in the Steps section, the default inputs can be found in
   the step.yml file of every step and the user only needs to manually set the inputs
   they wish to change.

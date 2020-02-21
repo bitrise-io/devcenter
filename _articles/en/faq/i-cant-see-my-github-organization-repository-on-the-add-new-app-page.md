@@ -4,7 +4,7 @@ tag:
 - git
 - faq
 - apps
-summary: You probably did not grant access to bitrise.io when you authenticated with
+description: You probably did not grant access to bitrise.io when you authenticated with
   GitHub to access the organization (or a repository owned by the organization).
 redirect_from: []
 menu:

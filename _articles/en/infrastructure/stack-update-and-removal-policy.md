@@ -8,7 +8,7 @@ tag:
 - xcode
 - android
 - linux
-summary: Stacks on bitrise.io are generally updated every weekend, but what’s updated
+description: Stacks on bitrise.io are generally updated every weekend, but what’s updated
   depends on the stack. There are stacks where only certain caches are updated and
   there are stacks which are completely re-built every week.
 menu:

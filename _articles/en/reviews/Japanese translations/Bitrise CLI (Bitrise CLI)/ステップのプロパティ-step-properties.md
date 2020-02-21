@@ -2,7 +2,7 @@
 tag: []
 title: ステップのプロパティ (Step properties)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

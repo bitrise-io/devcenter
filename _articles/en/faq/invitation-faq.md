@@ -2,7 +2,7 @@
 tag: []
 title: Invitation FAQ
 redirect_from: []
-summary: ''
+description: ''
 menu:
   faq-main:
     weight: 22

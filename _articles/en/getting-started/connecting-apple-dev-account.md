@@ -8,7 +8,7 @@ tag:
 - " builds"
 - code-signing
 - security
-summary: Connecting your Apple Developer Account allows Bitrise to reuse your authentication
+description: Connecting your Apple Developer Account allows Bitrise to reuse your authentication
   sessions for 30 days so you do not have to manually go through 2FA on every iOS
   deploy.
 menu:

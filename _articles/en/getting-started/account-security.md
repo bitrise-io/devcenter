@@ -4,7 +4,7 @@ redirect_from: []
 tag:
 - getting-started
 - security
-summary: Bitrise supports two-factor authentication for every user, and SAML SSO for
+description: Bitrise supports two-factor authentication for every user, and SAML SSO for
   organizations. Use Personal Access Tokens to authenticate your account to the Bitrise
   API.
 menu:

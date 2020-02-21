@@ -3,7 +3,7 @@ tag: []
 title: オフラインWorkflow Editorのインストールとアップグレード (Installing and upgrading the offline Workflow
   Editor)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

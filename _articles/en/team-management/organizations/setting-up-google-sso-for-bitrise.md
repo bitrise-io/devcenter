@@ -7,7 +7,7 @@ tag:
 - org
 - security
 - sso
-summary: Learn how to set up Bitrise as a SAML SSO app on Google, enable SAML SSO
+description: Learn how to set up Bitrise as a SAML SSO app on Google, enable SAML SSO
   and enforce it on your Bitrise Organization.
 menu:
   organizations:

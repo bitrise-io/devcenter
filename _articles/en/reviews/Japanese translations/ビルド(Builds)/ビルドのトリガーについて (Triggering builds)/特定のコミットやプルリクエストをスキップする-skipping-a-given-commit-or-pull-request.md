@@ -2,7 +2,7 @@
 tag: []
 title: 特定のコミットやプルリクエストをスキップする (Skipping a given commit or pull request)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

@@ -17,6 +17,7 @@ plugins:
 - jekyll-menus
 - jekyll-redirect-from
 - localization
+- jekyll-seo-tag
 collections:
   articles:
     output: true

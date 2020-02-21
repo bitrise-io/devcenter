@@ -4,7 +4,7 @@ tag:
 - faq
 - git
 - troubleshooting
-summary: 'This guide explains how to grant access for bitrise.io to your GitHub Organization.
+description: 'This guide explains how to grant access for bitrise.io to your GitHub Organization.
   This way Bitrise can access the Organization''s repositories. '
 redirect_from: []
 menu:

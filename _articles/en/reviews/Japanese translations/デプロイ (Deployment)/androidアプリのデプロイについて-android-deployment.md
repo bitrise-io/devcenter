@@ -2,7 +2,7 @@
 tag: []
 title: Androidアプリのデプロイについて (Android Deployment)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

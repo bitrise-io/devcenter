@@ -3,7 +3,7 @@ tag: []
 title: Dangerを使ったテストのactivity summaryが見つからない (No activity summaries found for test
   with Danger)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

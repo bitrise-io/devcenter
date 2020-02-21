@@ -2,7 +2,7 @@
 tag: []
 title: GitHub ChecksでBitrise Checksを行う (Bitrise Checks on GitHub Checks)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

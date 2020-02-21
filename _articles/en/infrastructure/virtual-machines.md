@@ -3,7 +3,7 @@ title: Virtual machines
 tag:
 - infrastructure
 - security
-summary: On bitrise.io, we run your builds on macOS and Linux virtual machines. You
+description: On bitrise.io, we run your builds on macOS and Linux virtual machines. You
   can select from multiple stacks, each with its own list of preinstalled tool versions.
 redirect_from: []
 menu:

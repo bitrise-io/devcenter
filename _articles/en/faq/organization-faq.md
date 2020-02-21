@@ -4,7 +4,7 @@ tag:
 - orgs
 - " faq"
 - teams
-summary: Organizations are used to seamlessly manage bigger teams and members inside
+description: Organizations are used to seamlessly manage bigger teams and members inside
   a company. It is a place to gather all the people working on each of your company's
   apps and delegate them through creating different groups.
 redirect_from: []

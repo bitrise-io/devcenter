@@ -2,7 +2,7 @@
 tag: []
 title: Code signing
 redirect_from: []
-summary: ''
+description: ''
 menu:
   main:
     identifier: code-signing-main

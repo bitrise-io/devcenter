@@ -2,7 +2,7 @@
 tag: []
 title: Bitriseへのサインアップ
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

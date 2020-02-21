@@ -2,7 +2,7 @@
 tag: []
 title: Deploying apps to Applivery
 redirect_from: []
-summary: ''
+description: ''
 menu:
   deploy-main:
     weight: 9

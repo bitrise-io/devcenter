@@ -3,7 +3,7 @@ tag: []
 title: Bitbucket TeamへBitriseのアクセスを許可する方法を教えて下さい。(How can I grant Bitrise access to
   a Bitbucket team?)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

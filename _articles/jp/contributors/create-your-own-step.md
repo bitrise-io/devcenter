@@ -1,7 +1,7 @@
 ---
 title: 独自のStepを作成・シェアする
 tag: []
-summary: ''
+description: ''
 redirect_from: []
 menu:
   contributors-main:

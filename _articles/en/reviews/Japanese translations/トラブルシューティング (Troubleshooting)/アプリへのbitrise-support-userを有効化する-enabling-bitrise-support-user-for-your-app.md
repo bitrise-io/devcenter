@@ -2,7 +2,7 @@
 tag: []
 title: アプリへのBitrise Support userを有効化する (Enabling Bitrise Support user for your app)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

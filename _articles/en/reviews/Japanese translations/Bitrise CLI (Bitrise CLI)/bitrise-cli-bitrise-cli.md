@@ -2,7 +2,7 @@
 tag: []
 title: Bitrise CLI (Bitrise CLI)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

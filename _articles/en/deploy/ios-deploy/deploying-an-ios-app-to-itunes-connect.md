@@ -7,7 +7,7 @@ tag:
 - app-store
 - ios
 - deploy
-summary: You can deploy an app to iTunes Connect (rebranded as App Store Connect)
+description: You can deploy an app to iTunes Connect (rebranded as App Store Connect)
   to invite testers on Testflight or to release your app on the App Store.
 menu:
   ios-deploy:

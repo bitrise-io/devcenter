@@ -4,7 +4,7 @@ tag:
 - secrets
 - env vars
 - builds
-summary: Every Secret Environment Variable (Secret) is an Env Var but not every Environment
+description: Every Secret Environment Variable (Secret) is an Env Var but not every Environment
   Variable (Env Var) is a Secret! Secrets hide information in an encrypted format
   so that your private input is not exposed.
 redirect_from: []

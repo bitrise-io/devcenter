@@ -4,7 +4,7 @@ tag:
 - builds
 title: Increasing the size limit of Env Vars
 redirect_from: []
-summary: 'Increase the size limit of Environment Variable values with a simple command
+description: 'Increase the size limit of Environment Variable values with a simple command
   - but be aware that some tools cannot handle large variable sizes. '
 menu:
   tips-and-tricks-main:

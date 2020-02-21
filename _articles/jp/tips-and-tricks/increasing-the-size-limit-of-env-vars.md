@@ -2,7 +2,7 @@
 tag: []
 title: Increasing the size limit of Env Vars
 redirect_from: []
-summary: ''
+description: ''
 menu:
   tips-and-tricks-main:
     weight: 23
