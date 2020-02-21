@@ -8,7 +8,7 @@ tag:
 - getting-started
 - steps
 - workflows
-summary: A Bitrise Workflow is a collection of Steps. When a build of an app is running,
+description: A Bitrise Workflow is a collection of Steps. When a build of an app is running,
   the Steps will be executed in the order that is defined in the Workflow. Workflows
   can be created, defined and modified in the Workflow Editor.
 menu:

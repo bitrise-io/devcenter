@@ -4,7 +4,7 @@ tag:
 - ssh
 - faq
 - git
-summary: If you want to do manual SSH key configuration on bitrise.io, you can generate
+description: If you want to do manual SSH key configuration on bitrise.io, you can generate
   an appropriate SSH keypair with a simple Command Line / Terminal command.
 redirect_from: []
 menu:

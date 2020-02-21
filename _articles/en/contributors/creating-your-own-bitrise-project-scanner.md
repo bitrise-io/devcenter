@@ -8,7 +8,7 @@ tag:
 - cli
 - builds
 - bitrise.yml
-summary: 'The project scanner is a tool that identifies the given project''s type
+description: 'The project scanner is a tool that identifies the given project''s type
   and generates a basic Bitrise configuration. Each supported project type has its
   own scanner: these scanners are stored as separate packages.'
 menu:

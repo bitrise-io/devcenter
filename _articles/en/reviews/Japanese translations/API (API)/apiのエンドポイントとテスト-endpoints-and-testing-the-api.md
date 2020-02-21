@@ -2,7 +2,7 @@
 tag: []
 title: APIのエンドポイントとテスト (Endpoints and testing the API)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

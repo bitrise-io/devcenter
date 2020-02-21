@@ -8,7 +8,7 @@ tag:
 - " builds"
 - git
 - bitrise.yml
-summary: The trigger map defined in the `bitrise.yml` file of your app determines
+description: The trigger map defined in the `bitrise.yml` file of your app determines
   which workflows get triggered by specific events, for example code pushes or pull
   requests.
 menu:

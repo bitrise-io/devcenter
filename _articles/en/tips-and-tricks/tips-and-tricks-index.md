@@ -4,7 +4,7 @@ tag:
 - tips-and-tricks
 title: Tips and tricks
 redirect_from: []
-summary: 'Our Tips and tricks section includes ideas and suggestions to improve your
+description: 'Our Tips and tricks section includes ideas and suggestions to improve your
   Bitrise builds, save you time or effort, or to use our service in a more advanced
   way. '
 menu:

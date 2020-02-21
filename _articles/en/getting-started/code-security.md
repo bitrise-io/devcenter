@@ -3,7 +3,7 @@ title: Code security
 tag:
 - getting-started
 - security
-summary: 'Bitrise uses virtual machines to run your builds. Every build is run in
+description: 'Bitrise uses virtual machines to run your builds. Every build is run in
   a clean VM: we discard the whole machine when the build finishes. We do not store
   your source code. '
 redirect_from: []

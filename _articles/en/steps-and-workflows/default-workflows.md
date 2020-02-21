@@ -4,7 +4,7 @@ tag:
 - steps
 - workflows
 - deploy
-summary: 'When you add a new app on bitrise.io, two Workflows are created automatically.
+description: 'When you add a new app on bitrise.io, two Workflows are created automatically.
   These are the primary and the deploy Workflows. '
 redirect_from: []
 menu:

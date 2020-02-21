@@ -5,7 +5,7 @@ date: '2019-03-29T16:48:02.000+00:00'
 tag:
 - api
 - testing
-summary: The Bitrise API endpoint reference documentation lists every available endpoint
+description: The Bitrise API endpoint reference documentation lists every available endpoint
   and their parameters, along with the possible responses. You can also try them out!
 menu:
   api-main:

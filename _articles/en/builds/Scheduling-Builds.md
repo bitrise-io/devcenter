@@ -6,7 +6,7 @@ redirect_from:
 tag:
 - builds
 - triggers
-summary: You can schedule your builds to run automatically at a specific time of the
+description: You can schedule your builds to run automatically at a specific time of the
   week so that you can check your logs when it's most convenient for you.
 menu:
   builds-main:

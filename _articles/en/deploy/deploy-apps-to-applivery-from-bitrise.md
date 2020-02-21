@@ -6,7 +6,7 @@ tag:
 - deploy
 - ios
 - android
-summary: Applivery is a mobile app distribution platform for iOS and Android that
+description: Applivery is a mobile app distribution platform for iOS and Android that
   provides a powerful mobile app management and distribution system to simplify app
   delivery for both testers and employees, with a focus on an easy-to-use experience.
 menu:

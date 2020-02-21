@@ -7,7 +7,7 @@ tag:
 - xcode
 - troubleshooting
 - builds
-summary: Read about some of the most frequent issues with iOS apps, including dependency
+description: Read about some of the most frequent issues with iOS apps, including dependency
   problems, as well as issues with Xcode Schemes and fastlane exports.
 menu:
   troubleshooting-main:

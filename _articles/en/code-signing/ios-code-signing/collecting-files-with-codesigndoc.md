@@ -6,7 +6,7 @@ tag:
 - files
 - xamarin
 - xcode
-summary: 'The open source codesigndoc tool runs a clean Xcode/Xamarin Studio Archive
+description: 'The open source codesigndoc tool runs a clean Xcode/Xamarin Studio Archive
   on your Mac, and analyzes the generated archive file. '
 redirect_from: []
 menu:

@@ -2,7 +2,7 @@
 tag: []
 title: ローカルによるBitriseプロジェクトの初期化 (Initializing a Bitrise project locally)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

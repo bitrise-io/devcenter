@@ -3,7 +3,7 @@ title: Managing the apps of organizations
 tag:
 - teams
 - orgs
-summary: Organizations can own several apps, with different (or the same, if that's
+description: Organizations can own several apps, with different (or the same, if that's
   what you need) groups working on different apps. Apps can be transferred between
   private accounts and organization accounts any time, quickly and easily.
 redirect_from: []

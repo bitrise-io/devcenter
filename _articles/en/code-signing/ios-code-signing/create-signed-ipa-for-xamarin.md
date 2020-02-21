@@ -5,7 +5,7 @@ tag:
 - ios
 - code-signing
 - files
-summary: You can easily create a signed IPA for your Xamarin app with Bitrise. All
+description: You can easily create a signed IPA for your Xamarin app with Bitrise. All
   you need to do is set the relevant inputs of our Xamarin Archive Step!
 redirect_from: []
 menu:

@@ -7,7 +7,7 @@ tag:
 - getting-started
 - public
 - builds
-summary: If your Bitrise app is public, anyone who has the build URL can see the build
+description: If your Bitrise app is public, anyone who has the build URL can see the build
   logs. For example, if the CI status check on GitHub fails on a pull request, anyone
   can click on the build URL and view the build logs.
 menu:

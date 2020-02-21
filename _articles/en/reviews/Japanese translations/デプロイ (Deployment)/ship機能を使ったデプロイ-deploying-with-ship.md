@@ -2,7 +2,7 @@
 tag: []
 title: Ship機能を使ったデプロイ (Deploying with Ship)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

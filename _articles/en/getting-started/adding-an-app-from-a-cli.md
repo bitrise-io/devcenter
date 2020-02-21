@@ -4,7 +4,7 @@ tag:
 - getting-started
 title: Adding a new app from a CLI
 redirect_from: []
-summary: 'You can easily register a new Bitrise app from any command line interface:
+description: 'You can easily register a new Bitrise app from any command line interface:
   the process is guided and simple to follow. And it’s fast!'
 menu:
   getting-started-main:

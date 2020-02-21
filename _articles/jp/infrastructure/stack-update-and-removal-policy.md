@@ -2,7 +2,7 @@
 tag: []
 title: 'Stack update and removal policy '
 redirect_from: []
-summary: ''
+description: ''
 
 ---
 {% include not_translated_yet.html %}

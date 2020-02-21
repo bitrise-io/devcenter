@@ -3,7 +3,7 @@ tag: []
 title: Android x86 エミュレータをBitriseで走らせることは可能ですか？ (Can I run Android x86 Emulator on
   Bitrise?)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

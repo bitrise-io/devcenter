@@ -6,7 +6,7 @@ tag:
 - apps
 - api
 - ssh
-summary: 'Set up new apps on Bitrise with the API: add the app, generate SSH keys,
+description: 'Set up new apps on Bitrise with the API: add the app, generate SSH keys,
   and set up the app''s initial configuration.'
 menu:
   api-main:

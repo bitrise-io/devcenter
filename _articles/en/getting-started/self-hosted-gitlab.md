@@ -8,7 +8,7 @@ tag:
 - git
 - getting-started
 - orgs
-summary: For organizations, Bitrise supports connecting to self-hosted GitLab instances.
+description: For organizations, Bitrise supports connecting to self-hosted GitLab instances.
   Connecting is simple, and once it's done, you can add apps to Bitrise from privately
   hosted repositories in the usual way.
 menu:

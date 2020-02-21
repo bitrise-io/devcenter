@@ -6,7 +6,7 @@ tag:
 - getting-started
 - files
 - artifacts
-summary: 'Upload files to use in your build, including code signing files. Download
+description: 'Upload files to use in your build, including code signing files. Download
   files generated during a build. Use encryption on Bitrise to secure your files. '
 menu:
   getting-started-main:

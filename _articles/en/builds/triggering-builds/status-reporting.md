@@ -4,7 +4,7 @@ tag:
 - triggers
 - git
 - builds
-summary: 'Bitrise can push back build status reports to your Git hosting provider
+description: 'Bitrise can push back build status reports to your Git hosting provider
   (GitHub/GitLab/Bitbucket). You only need to authenticate Bitrise to communicate
   towards the Git hosting service. '
 redirect_from: []

@@ -2,7 +2,7 @@
 tag: []
 title: Infrastructure
 redirect_from: []
-summary: ''
+description: ''
 menu:
   main:
     identifier: infrastructure-main

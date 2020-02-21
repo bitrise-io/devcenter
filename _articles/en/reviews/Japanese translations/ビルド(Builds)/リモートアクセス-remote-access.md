@@ -2,7 +2,7 @@
 tag: []
 title: リモートアクセス (Remote access)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

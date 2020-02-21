@@ -5,7 +5,7 @@ tag:
 - linux
 - docker
 - infrastructure
-summary: We use standard Docker images, published on Quay, and the related Dockerfile
+description: We use standard Docker images, published on Quay, and the related Dockerfile
   which you can find on GitHub. Right now we have four docker images, built on top
   of each other.
 redirect_from: []

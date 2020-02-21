@@ -5,7 +5,7 @@ tag:
 - webhooks
 - triggers
 - git
-summary: 'Trigger builds manually or by setting up automatic triggers. Learn about
+description: 'Trigger builds manually or by setting up automatic triggers. Learn about
   the different trigger types, as well as about manually starting a new build. '
 redirect_from: "/builds/triggering-builds/triggering-builds/"
 menu:

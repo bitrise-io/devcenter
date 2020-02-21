@@ -8,7 +8,7 @@ tag:
 - secrets
 - cli
 - bitrise.yml
-summary: To understand Bitrise in depth, there are a few key concepts that must be
+description: To understand Bitrise in depth, there are a few key concepts that must be
   kept in mind. These are immutable and crucial to the way we do things.
 menu:
   bitrise-cli-main:

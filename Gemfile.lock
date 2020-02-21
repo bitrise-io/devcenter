@@ -105,6 +105,7 @@ DEPENDENCIES
   jekyll-feed (~> 0.6)
   jekyll-menus
   jekyll-redirect-from
+  jekyll-seo-tag
   jekyll-sitemap
   localization!
   minima (~> 2.0)

@@ -2,7 +2,7 @@
 tag: []
 title: Skipping a given commit or pull request
 redirect_from: []
-summary: ''
+description: ''
 
 ---
 {% include not_translated_yet.html %}

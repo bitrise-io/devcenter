@@ -5,7 +5,7 @@ tag:
 - android
 - code-signing
 - files
-summary: You can specify the code signing configuration for your Xamarin Android project
+description: You can specify the code signing configuration for your Xamarin Android project
   by creating a signed APK in Visual Studio.
 redirect_from: []
 menu:

@@ -3,7 +3,7 @@ title: Android code signing
 tag:
 - android
 - code-signing
-summary: 'Before you distribute your app through Google Play Store, your APK file
+description: 'Before you distribute your app through Google Play Store, your APK file
   must be digitally signed. Find out the different ways of signing your Android app
   on Bitrise. '
 redirect_from: "/code-signing/android-code-signing/android-code-signing-procedures/"

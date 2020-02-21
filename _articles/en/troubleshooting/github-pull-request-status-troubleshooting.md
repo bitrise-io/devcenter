@@ -7,7 +7,7 @@ tag:
 - 'git '
 - troubleshooting
 - builds
-summary: 'If your builds do not send status reports to your git hosting provider -
+description: 'If your builds do not send status reports to your git hosting provider -
   GitHub, GitLab or Bitbucket -, you will need to do a little investigating to find
   out what causes the problem. '
 menu:

@@ -2,7 +2,7 @@
 tag: []
 title: Screen recording your UI tests with Appium
 redirect_from: []
-summary: ''
+description: ''
 
 ---
 {% include not_translated_yet.html %}

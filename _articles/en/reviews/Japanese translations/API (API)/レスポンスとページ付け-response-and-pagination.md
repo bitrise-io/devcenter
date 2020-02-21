@@ -2,7 +2,7 @@
 tag: []
 title: レスポンスとページ付け (Response and pagination)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

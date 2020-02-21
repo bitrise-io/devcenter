@@ -5,7 +5,7 @@ tag:
 - deploy
 - files
 - artifacts
-summary: If you select a build of your app, on the APPS & Artifacts tab you can check
+description: If you select a build of your app, on the APPS & Artifacts tab you can check
   out the artifacts (for example, files and reports) which have been generated during
   the build.
 redirect_from: []

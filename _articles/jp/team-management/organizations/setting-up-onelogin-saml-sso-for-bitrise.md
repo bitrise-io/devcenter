@@ -2,7 +2,7 @@
 tag: []
 title: Setting up OneLogin SAML SSO for Bitrise
 redirect_from: []
-summary: ''
+description: ''
 menu:
   organizations:
     weight: 25

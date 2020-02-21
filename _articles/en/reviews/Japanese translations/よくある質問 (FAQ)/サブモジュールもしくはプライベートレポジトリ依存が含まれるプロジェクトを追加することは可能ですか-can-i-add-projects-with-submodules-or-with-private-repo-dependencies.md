@@ -3,7 +3,7 @@ tag: []
 title: 'サブモジュールもしくはプライベートレポジトリ依存が含まれるプロジェクトを追加することは可能ですか？ (Can I add projects with
   submodules or with private repo dependencies?) '
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

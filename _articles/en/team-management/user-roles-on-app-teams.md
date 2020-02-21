@@ -5,7 +5,7 @@ date: '2019-02-18T14:53:53.000+00:00'
 tag:
 - teams
 - orgs
-summary: 'Roles are very important on Bitrise. They limit what you can and cannot
+description: 'Roles are very important on Bitrise. They limit what you can and cannot
   do with an application. Roles work on an application basis: the same user can have
   different roles on different applications.'
 menu:

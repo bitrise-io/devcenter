@@ -7,7 +7,7 @@ tag:
 - code-signing
 - files
 redirect_from: []
-summary: Manage your code signing files on bitrise.io. You can use iOS automatic provisioning
+description: Manage your code signing files on bitrise.io. You can use iOS automatic provisioning
   to automatically download or generate the required provisioning profiles for your
   project.
 menu:

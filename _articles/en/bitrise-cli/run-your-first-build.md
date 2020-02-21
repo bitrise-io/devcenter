@@ -4,7 +4,7 @@ tag:
 - cli
 - builds
 - bitrise
-summary: 'Run your first offline build using the Bitrise CLI. You need the CLI itself
+description: 'Run your first offline build using the Bitrise CLI. You need the CLI itself
   and a `bitrise.yml` file that contains a valid configuration. You can download the
   file or create it yourself. '
 redirect_from: []

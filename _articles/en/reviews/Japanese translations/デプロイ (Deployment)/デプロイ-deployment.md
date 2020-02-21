@@ -2,7 +2,7 @@
 tag: []
 title: デプロイ (Deployment)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

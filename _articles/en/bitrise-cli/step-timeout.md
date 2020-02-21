@@ -3,7 +3,7 @@ title: Setting a time limit for Steps
 tag:
 - cli
 - steps
-summary: Ensure that your builds do not exceed the time limit by setting up Step timeout
+description: Ensure that your builds do not exceed the time limit by setting up Step timeout
   for Steps that might cause builds to hang.
 redirect_from: []
 menu:

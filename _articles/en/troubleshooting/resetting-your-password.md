@@ -7,7 +7,7 @@ title: Resetting your password
 redirect_from:
 - "/getting-started/signing-up/logging-in-to-bitrise/"
 - ''
-summary: 'You can reset your password via e-mail at any time. If you fail to log in
+description: 'You can reset your password via e-mail at any time. If you fail to log in
   three times in a row, reCAPTCHA will be triggered to check if you are a human. '
 menu:
   troubleshooting-main:

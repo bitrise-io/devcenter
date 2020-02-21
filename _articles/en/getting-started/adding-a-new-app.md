@@ -11,7 +11,7 @@ tag:
 - " public"
 - builds
 - getting-started
-summary: 'Add a new app to Bitrise: connect your repository, set up SSH keys, scan
+description: 'Add a new app to Bitrise: connect your repository, set up SSH keys, scan
   and configure your app, and register a webhook. '
 menu:
   getting-started-main:

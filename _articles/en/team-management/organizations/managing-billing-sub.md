@@ -4,7 +4,7 @@ tag:
 - billing
 - teams
 - orgs
-summary: It's very simple to set up a subscription plan for your organization even
+description: It's very simple to set up a subscription plan for your organization even
   if you skipped that step when creating the organization. You can also modify your
   plan and your billing information at any time if you are the owner of the organization.
 redirect_from: []

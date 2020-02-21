@@ -6,7 +6,7 @@ tag:
 - ios
 - deploy
 - app store
-summary: 'Find out the basics about deploying your iOS app using Bitrise: where you
+description: 'Find out the basics about deploying your iOS app using Bitrise: where you
   can deploy, what files you need, how to configure your app for deployment. '
 menu:
   deploy-main:

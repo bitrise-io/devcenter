@@ -6,7 +6,7 @@ tag:
 - xcode
 - " troubleshooting"
 - ios
-summary: 'Read about Xcode issues: performance problems, test failures, troubles with
+description: 'Read about Xcode issues: performance problems, test failures, troubles with
   the Xcode Command Line Tools.'
 menu:
   troubleshooting-main:

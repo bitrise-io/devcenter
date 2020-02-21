@@ -5,7 +5,7 @@ tag:
 - orgs
 - faq
 - apps
-summary: It can happen that you need to transfer an Application on Bitrise to another
+description: It can happen that you need to transfer an Application on Bitrise to another
   User or to an Organization. This can be done in a few seconds via a few quick steps.
 redirect_from: []
 

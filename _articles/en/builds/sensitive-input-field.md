@@ -7,7 +7,7 @@ tag:
 - env vars
 - builds
 - secrets
-summary: Hide sensitive inputs with secret Environment Variables  in your public apps,
+description: Hide sensitive inputs with secret Environment Variables  in your public apps,
   so that those inputs cannot be viewed in build logs or the `bitrise.yml` of your
   build.
 menu:
