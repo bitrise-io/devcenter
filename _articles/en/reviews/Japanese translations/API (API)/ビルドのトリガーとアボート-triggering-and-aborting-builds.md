@@ -73,7 +73,9 @@ Here's a jQuery example using the `payload` parameter:
 
 例ではこのJSON payloadをstringとして渡しました：正確には、JSONオブジェクトはstringへシリアライズ化されます。
 
-これをオブジェクトとして渡すこともできます (例：JavaScriptから呼び出したい場合)。それを行うには、root `payload` elementを含ませる、または、JSONオブジェクトを`payload`POSTパラメータの値として
+これをオブジェクトとして渡すこともできます (例：JavaScriptから呼び出したい場合)。それを行うには、root `payload` elementを含ませる、あるいは、JSONオブジェクトを`payload`POSTパラメータの値として設定します。
+
+`payload`パラメータを使ったjQueryの一例：
 
     $.post("https://api.bitrise.io/app/APP-SLUG/builds/", {
         "payload":{
@@ -88,25 +90,39 @@ Here's a jQuery example using the `payload` parameter:
 
 You can specify several different build parameters when triggering a build. The parameters should be set in the `build_params` object: let's go through some of the possible configurations!
 
-### Setting a branch, commit, or tag to build
+ビルドをトリガーするときに複数の異なるビルドパラメータを指定することができます。パラメータは???オブジェクト内で設定する必要があります：いくつかのよくある構成を見ていきましょう！
+
+### Setting a branch, commit, or tag to build　ビルドへbranch, commit, またはtagを設定する
 
 You can set Git-specific parameters in your call. The `branch` parameter specifies the source branch to be built. This is either the branch of the git commit or, in the case of a pull request build, the source branch of the pull request.
+
+コールからGitに特化したパラメータを設定することができます。`branch`パラメータはビルドが行われるsource branchを指定します。これはgit commitまたはプルリクエストのビルドの一方です。プルリクエストのビルドであれば、それはsource branchのプルリクエストです。
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
 
 You can also build a specific git commit or even a git tag: you just need to set either the commit hash or the tag in the `build_params` object. You can also set a commit message for the build with the `commit_message` parameter.
 
+指定のgit commitやgit tagのビルドも可能です：???オブジェクトにcommit hashまたはtagを設定してください。また、???パラメータを使ってビルド用にcommit messageを設定することもできます。
+
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"commit_hash":"0000ffffeeeee", "commit_message":"testing"}}'
 
-{% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
+{% include message_box.html type="note" title="Git Clone - parameter priority Git Cloneのパラメータの優先順位" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
 
 If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored.
 
-The ignored parameters will still be logged. They will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the most specific parameter for checkout."%}
+The ignored parameters will still be logged. They will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the most specific parameter for checkout.
 
-### Setting parameters for pull request builds
+`tag`を定める場合、`branch`パラメータは`Git Clone`ステップにより無視されます。
+
+???パラメータを定める場合は、`tag`と`branch`パラメータが無視されるようになります。
+
+無視されたパラメータはログされ続けます。ステップで使用することや、Buildの詳細ページでも確認することができますが、`Git Clone`ステップはチェックアウト用に特定のパラメータを使用します。"%}
+
+### Setting parameters for pull request builds　プルリクエストのビルド用にパラメータを設定
 
 For a pull request build, use the `branch_dest` parameter to set up the destination or target branch of the pull request. The PR will be merged into this branch but before that, Bitrise will build your app based on how the code would look like after merging. This is what happens when a PR build is automatically triggered by a webhook, for example.
+
+プルリクエストビルドには、???パラメータを使ってプルリクエストの行先やターゲットブランチを設定します。PRはブランチにマージされますが、その前にBitriseはマージ後にコードがどの様になるかを
 
 The `branch_repo_owner` and `branch_dest_repo_owner` parameters are used to identify the owners of the repositories, to unambiguously identify the branches involved in the pull request.
 
