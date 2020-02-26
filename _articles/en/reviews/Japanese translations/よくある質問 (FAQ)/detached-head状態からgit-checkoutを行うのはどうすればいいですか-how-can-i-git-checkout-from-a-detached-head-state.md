@@ -3,7 +3,7 @@ tag: []
 title: Detached HEAD状態からgit checkoutを行うのはどうすればいいですか？(How can I git checkout from a
   detached head state?)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

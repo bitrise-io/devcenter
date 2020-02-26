@@ -3,9 +3,11 @@ title: Virtual machines
 tag:
 - infrastructure
 - security
-summary: On bitrise.io, we run your builds on macOS and Linux virtual machines. You
-  can select from multiple stacks, each with its own list of preinstalled tool versions.
+description: On bitrise.io, we run your builds on macOS and Linux virtual machines.
+  You can select from multiple stacks, each with its own list of preinstalled tool
+  versions.
 redirect_from: []
+summary: ''
 menu:
   infrastructure-main:
     weight: 6
@@ -34,6 +36,9 @@ For the **Xcode** and the **Visual Studio for Mac** stacks:
 
 * 208.52.166.154
 * 207.254.34.148
+* 207.254.0.248/29
+
+{% include message_box.html type="important" title="IP subnet" content="Please note that the last entry in the list of Xcode stacks is an IP subnet. The entire subnet has to be whitelisted in order to be able to guarantee a seamless build experience!"%}
 
 ## Customization
 

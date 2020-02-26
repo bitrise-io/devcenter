@@ -5,7 +5,7 @@ tag:
 - ios
 - xcode
 - app-store
-summary: During the development of your iOS app you will need multiple types of distributions
+description: During the development of your iOS app you will need multiple types of distributions
   for different purposes, such as internal testing or deployment to the App Store.
   The good news is that this does not require setting up two separate workflows on
   bitrise.io.

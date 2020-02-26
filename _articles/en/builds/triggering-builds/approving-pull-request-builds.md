@@ -8,7 +8,7 @@ tag:
 - triggers
 - pull request
 - public
-summary: 'You have the option to require approval for a Pull Request build before
+description: 'You have the option to require approval for a Pull Request build before
   it can start. For public apps, this is mandatory; for private apps, it is turned
   on by default. '
 menu:

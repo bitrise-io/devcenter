@@ -4,7 +4,7 @@ tag:
 - cli
 - secrets
 - env vars
-summary: |-
+description: |-
   Secrets can be accessed and used in a similar way as app Env Vars,
   the main difference is that secrets are not stored as part of the build configuration.
 redirect_from: []

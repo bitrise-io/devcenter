@@ -10,7 +10,7 @@ tag:
 - android
 - deploy
 - testing
-summary: 'Go through the procedure of adding an Android app on Bitrise from start
+description: 'Go through the procedure of adding an Android app on Bitrise from start
   to finish, from adding the app to deploying it. Learn about unit and UI testing
   and code signing. '
 menu:

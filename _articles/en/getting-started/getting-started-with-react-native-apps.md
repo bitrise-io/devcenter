@@ -8,7 +8,7 @@ tag:
 - testing
 - deploy
 - code-signing
-summary: 'Go through the procedure of adding a React Native app on Bitrise from start
+description: 'Go through the procedure of adding a React Native app on Bitrise from start
   to finish, from adding the app to deploying it. Learn about dependency management,
   code signing, and testing. '
 menu:

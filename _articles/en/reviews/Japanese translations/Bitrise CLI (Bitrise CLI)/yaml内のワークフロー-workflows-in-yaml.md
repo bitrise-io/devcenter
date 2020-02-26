@@ -2,7 +2,7 @@
 tag: []
 title: YAML内のワークフロー (Workflows in YAML)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

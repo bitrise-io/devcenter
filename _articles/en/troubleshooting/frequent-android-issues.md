@@ -5,7 +5,7 @@ redirect_from:
 tag:
 - troubleshooting
 - android
-summary: 'Read about some of the most frequent issues with Android apps, including
+description: 'Read about some of the most frequent issues with Android apps, including
   Android package problems and license errors. '
 menu:
   troubleshooting-main:

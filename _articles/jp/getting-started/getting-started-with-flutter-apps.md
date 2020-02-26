@@ -3,7 +3,7 @@ title: Flutterアプリの開始
 date: 2019-03-08T15:17:45.000+00:00
 redirect_from: []
 tag: []
-summary: ''
+description: ''
 menu:
   getting-started-main:
     weight: 29

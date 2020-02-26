@@ -2,7 +2,7 @@
 tag:
 title: Using Env Vars as a value of an Env Var
 redirect_from: []
-summary:
+description:
 menu:
   tips-and-tricks-main:
     weight: 24

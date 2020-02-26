@@ -2,7 +2,7 @@
 tag: []
 title: bitrise.ymlのカスタマイズ (Customizing bitrise.yml)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

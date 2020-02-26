@@ -11,7 +11,7 @@ tag:
 - webhooks
 - builds
 - workflows
-summary: 'Get started with Bitrise: sign up, add an app, start a build. Find out how
+description: 'Get started with Bitrise: sign up, add an app, start a build. Find out how
   to register webhooks, set up organizations, and learn the basics of Steps and Workflows.'
 menu:
   main:

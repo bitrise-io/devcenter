@@ -5,7 +5,7 @@ tag:
 - android
 - gradle
 - files
-summary: You can manually specify the code signing configuration in your Gradle configuration
+description: You can manually specify the code signing configuration in your Gradle configuration
   so that your app gets signed during the build process.
 redirect_from: []
 menu:

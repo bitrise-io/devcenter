@@ -5,7 +5,7 @@ tag:
 - faq
 - stack
 - infrastructure
-summary: 'A frequent question is whether it''s possible to run the Android x86 emulator,
+description: 'A frequent question is whether it''s possible to run the Android x86 emulator,
   instead of the ARM emulators. We allow all the required nested virtualization bits
   for the x86 Android emulators on the Linux/Android stacks. '
 redirect_from: []

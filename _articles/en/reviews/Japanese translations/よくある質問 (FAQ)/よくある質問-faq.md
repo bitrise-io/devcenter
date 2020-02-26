@@ -2,7 +2,7 @@
 tag: []
 title: よくある質問 (FAQ)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

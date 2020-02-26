@@ -7,7 +7,7 @@ redirect_from:
 - "/jp/getting-started/signing-up/signing-up-with-gitlab/"
 - "/jp/getting-started/signing-up/signing-up-with-bitbucket/"
 - "/jp/getting-started/signing-up/signing-up-with-github/"
-summary: ''
+description: ''
 menu:
   getting-started-main:
     weight: 1

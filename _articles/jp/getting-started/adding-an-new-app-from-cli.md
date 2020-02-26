@@ -4,7 +4,7 @@ tag:
 - getting-started
 title: CLI から新しいアプリを追加する
 redirect_from: []
-summary: 'コマンドラインインターフェースから簡単に Bitrise にアプリを追加できる:
+description: 'コマンドラインインターフェースから簡単に Bitrise にアプリを追加できる:
   このプロセスは簡単なガイドと簡易的なフォローで簡単に始められます'
 
 ---

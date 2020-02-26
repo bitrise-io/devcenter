@@ -2,7 +2,7 @@
 tag: []
 title: bitrise.ymlの基礎知識 (Basics of bitrise.yml)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

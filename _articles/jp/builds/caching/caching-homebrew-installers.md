@@ -2,7 +2,7 @@
 tag: []
 title: Caching Homebrew installers
 redirect_from: []
-summary: ''
+description: ''
 menu:
   caching:
     weight: 9

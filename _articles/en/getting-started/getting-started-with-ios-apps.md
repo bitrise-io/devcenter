@@ -7,7 +7,7 @@ tag:
 - getting-started
 - ios
 - code-signing
-summary: 'Go through the procedure of adding an iOS app on Bitrise from start to finish,
+description: 'Go through the procedure of adding an iOS app on Bitrise from start to finish,
   from adding the app to deploying it. Learn about Xcode testing and code signing. '
 menu:
   getting-started-main:

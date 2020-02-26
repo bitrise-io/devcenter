@@ -2,7 +2,7 @@
 tag: []
 title: BitriseからDeployGateへアプリのデプロイ (Deploy apps to DeployGate from Bitrise)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

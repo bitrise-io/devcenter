@@ -4,7 +4,7 @@ tag:
 - 'builds '
 - cache
 - dependencies
-summary: The caching will tar all the cached directories and dependencies, and store
+description: The caching will tar all the cached directories and dependencies, and store
   them securely in Amazon S3. All you need to get started is adding two steps to your
   Workflow.
 redirect_from: "/caching/about-caching/"

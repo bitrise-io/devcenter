@@ -5,7 +5,7 @@ tag:
 - google-play
 title: Android deployment
 redirect_from: []
-summary: 'Deploy Android apps to either bitrise.io, for testing, or to the Google
+description: 'Deploy Android apps to either bitrise.io, for testing, or to the Google
   Play Store, for release. Learn about Google Play API, keystore files and APK flavors. '
 menu:
   deploy-main:

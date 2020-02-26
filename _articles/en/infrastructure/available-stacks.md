@@ -6,7 +6,7 @@ tag:
 - stack
 - infrastructure
 - builds
-summary: |-
+description: |-
   The Stack indicates the virtual machine version that we will use to run your build.
   After adding your application to Bitrise we will select an appropriate Stack for it.
 menu:

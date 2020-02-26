@@ -6,7 +6,7 @@ tag:
 - android
 title: Deploying with Ship
 redirect_from: []
-summary: Ship is a deployment solution that aims to save users a lot of headache.
+description: Ship is a deployment solution that aims to save users a lot of headache.
   With Ship, you have complete control over your app's distribution, its version history,
   and all the important metadata - and you can manage all that in one place.
 menu:

@@ -7,7 +7,7 @@ tag:
 - cli
 - workflows
 - env vars
-summary: 'Any tool that can edit `bitrise.yml` can add custom properties to it. This
+description: 'Any tool that can edit `bitrise.yml` can add custom properties to it. This
   way you can add special properties or notes to your env vars, or even try new configurations
   of your workflow in `bitrise.yml`. '
 menu:

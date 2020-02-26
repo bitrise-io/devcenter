@@ -5,7 +5,7 @@ tag:
 - secrets
 title: Using Env Vars in the value of an Env Var
 redirect_from: []
-summary: 'Environment Variables normally contain a single value. However, it is possible
+description: 'Environment Variables normally contain a single value. However, it is possible
   to set up an Env Var that includes other Env Vars as values. You can also use values
   that are normally treated as Env Vars: that is, values including the `$` character. '
 

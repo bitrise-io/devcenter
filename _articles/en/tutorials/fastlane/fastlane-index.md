@@ -3,7 +3,7 @@ tag:
 - fastlane
 title: Fastlane
 redirect_from: []
-summary: Fastlane lets you define and run your deployment pipelines for different
+description: Fastlane lets you define and run your deployment pipelines for different
   environments. It helps you unify and automate your app’s release process. Fastlane
   connects all fastlane tools and third party tools, like CocoaPods and xctool.
 menu:

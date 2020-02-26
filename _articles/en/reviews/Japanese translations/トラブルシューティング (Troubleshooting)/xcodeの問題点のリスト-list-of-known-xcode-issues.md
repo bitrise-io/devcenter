@@ -2,7 +2,7 @@
 tag: []
 title: Xcodeの問題点のリスト (List of known Xcode issues)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

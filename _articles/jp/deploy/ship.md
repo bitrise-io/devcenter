@@ -2,7 +2,7 @@
 tag: []
 title: Ship でデプロイ
 redirect_from: []
-summary: ''
+description: ''
 menu:
   deploy-main:
     weight: 4

@@ -4,7 +4,7 @@ title: なぜAdd New App (新規のアプリを追加する) ページに私のG
   が表示されないのですか？ (Why can't I see my GitHub organization / repository on the Add New
   App page?)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

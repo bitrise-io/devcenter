@@ -3,7 +3,7 @@ title: Adding outgoing webhooks
 tag:
 - webhooks
 - " triggers"
-summary: You can configure Bitrise to send build event notifications to any service
+description: You can configure Bitrise to send build event notifications to any service
   you would like. A build event is when a build is starts and when a build ends.
 redirect_from: []
 menu:

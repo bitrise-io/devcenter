@@ -2,7 +2,7 @@
 tag: []
 title: Bitriseへの貢献 (How to contribute Bitrise)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

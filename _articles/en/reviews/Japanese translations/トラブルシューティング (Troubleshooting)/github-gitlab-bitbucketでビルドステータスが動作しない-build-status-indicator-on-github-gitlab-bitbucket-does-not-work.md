@@ -3,7 +3,7 @@ tag: []
 title: GitHub/GitLab/Bitbucketでビルドステータスが動作しない (Build status indicator on GitHub/GitLab/Bitbucket
   does not work)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

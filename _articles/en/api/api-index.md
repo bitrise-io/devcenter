@@ -3,7 +3,7 @@ title: API
 tag:
 - api
 - cli
-summary: The Bitrise API allows you to build deep, custom integrations with your internal tools and processes to create even more efficient development pipelines. 
+description: The Bitrise API allows you to build deep, custom integrations with your internal tools and processes to create even more efficient development pipelines. 
 redirect_from: "/api/v0.1/"
 menu:
   main:

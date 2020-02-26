@@ -2,7 +2,7 @@
 tag: []
 title: ビルドトリガーが動かない (Build trigger does not work)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

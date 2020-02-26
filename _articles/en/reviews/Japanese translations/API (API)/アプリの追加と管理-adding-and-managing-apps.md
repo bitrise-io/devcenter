@@ -2,7 +2,7 @@
 tag: []
 title: アプリの追加と管理 (Adding and managing apps)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

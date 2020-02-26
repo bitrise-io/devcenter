@@ -2,7 +2,7 @@
 tag: []
 title: YAML内のステップ (Steps in YAML)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

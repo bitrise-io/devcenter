@@ -6,7 +6,7 @@ tag:
 - sso
 title: Setting up OneLogin SSO for Bitrise
 redirect_from: []
-summary: Learn how to set up Bitrise as a SAML SSO app on OneLogin, enable SAML SSO
+description: Learn how to set up Bitrise as a SAML SSO app on OneLogin, enable SAML SSO
   and enforce it on your Bitrise Organization.
 menu:
   organizations:

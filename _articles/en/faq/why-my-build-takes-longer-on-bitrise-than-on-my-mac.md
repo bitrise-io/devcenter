@@ -5,7 +5,7 @@ tag:
 - cache
 - faq
 - troubleshooting
-summary: If your build takes a lot of time on Bitrise, time for investigating! First,
+description: If your build takes a lot of time on Bitrise, time for investigating! First,
   find out which Step(s) take a significant time in your build.
 redirect_from: []
 menu:

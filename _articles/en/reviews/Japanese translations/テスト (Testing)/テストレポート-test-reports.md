@@ -2,7 +2,7 @@
 tag: []
 title: テストレポート (Test Reports)
 redirect_from: []
-summary: ''
+description: ''
 published: false
 
 ---

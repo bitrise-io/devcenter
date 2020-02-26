@@ -2,7 +2,7 @@
 tag: []
 title: Resetting your password
 redirect_from: []
-summary: ''
+description: ''
 menu:
   troubleshooting-main:
     weight: 1
