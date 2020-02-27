@@ -7,8 +7,10 @@ tag:
 - getting-started
 - ios
 - code-signing
-description: 'Go through the procedure of adding an iOS app on Bitrise from start to finish,
-  from adding the app to deploying it. Learn about Xcode testing and code signing. '
+description: 'Go through the procedure of adding an iOS app on Bitrise from start
+  to finish, from adding the app to deploying it. Learn about Xcode testing and code
+  signing. '
+summary: ''
 menu:
   getting-started-main:
     weight: 23
@@ -26,9 +28,13 @@ Developing for iOS is not always easy - our aim is to make it as simple as possi
 2. Choose the account you wish to add the app to.
 3. Set the privacy of the app to either Private or [Public](/getting-started/adding-a-new-app/public-apps) and click **Next**.
 4. Select the Git provider that hosts your repository, then find and select your repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository).
-5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
+5. When prompted to set up repository access, click **No, auto-add SSH key**. 
+
+   Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
 6. Type the name of the branch that includes your project's configuration - master, for example - then click **Next**.
-7. Wait while Bitrise is validating your project. We look for your configuration files and set up your app based on them. In the case of an iOS app, we're looking for your Xcode Project (`.xcodeproj`) or Xcode Workspace (`.xcworkspace`) path. Note that the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
+7. Wait while Bitrise is validating your project. 
+
+   We look for your configuration files and set up your app based on them. In the case of an iOS app, we're looking for your Xcode Project (`.xcodeproj`) or Xcode Workspace (`.xcworkspace`) path. Note that the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
 8. Select the .ipa export method. You can modify this later - for now, select **development**.
 
    ![](/img/ios-scanner-1.png)
@@ -101,12 +107,16 @@ If you set up your code signing files and created an .ipa for your internal test
 
 To deploy to Testflight and to the App Store, you will need more code signing files:
 
-* an iOS **Distribution** Certificate.
-* an **App Store** type Provisioning Profile.
+* An iOS **Distribution** Certificate.
+* An **App Store** type Provisioning Profile.
 
-1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa. If this fails locally, it will definitely fail on Bitrise, too!
+1. On your local machine, set up App Store code signing for your project in Xcode, and export an App Store .ipa. 
+
+   If this fails locally, it will definitely fail on Bitrise, too!
 2. Collect and upload the code signing files with [the codesigndoc tool](/code-signing/ios-code-signing/collecting-files-with-codesigndoc/).
-3. Go to the [app's](https://app.bitrise.io/dashboard/builds) Workflow Editor and create a [new workflow](/getting-started/getting-started-workflows/): click the **+ Workflow** button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select **deploy**. This way the new workflow will be a copy of the basic **deploy** workflow.
+3. Go to the [app's](https://app.bitrise.io/dashboard/builds) Workflow Editor and create a [new workflow](/getting-started/getting-started-workflows/): click the **+ Workflow** button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select **deploy**. 
+
+   This way the new workflow will be a copy of the basic **deploy** workflow.
 4. Set the **Select method for export** input of the **Xcode Archive & Export for iOS** Step to **app-store**.
 
    ![](/img/app-store-export-method-1.png)

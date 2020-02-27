@@ -10,6 +10,7 @@ tag:
 description: Deploy an app to Bitrise to be able to download the .ipa file and install
   it on devices specified in the app's Development Provisioning Profile. This way,
   your internal testers can easily test the app.
+summary: ''
 menu:
   ios-deploy:
     weight: 3
@@ -24,11 +25,15 @@ Make sure that you have:
 * Generated an .ipa file locally, on your own machine, at least once.
 * Uploaded all the Developer certificates that are included in the provisioning profile to Bitrise.
 * Uploaded the app's Development Provisioning Profile if you want to use [manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning/) on Bitrise.
-* [registered your testers' devices](/testing/registering-a-test-device/) on Bitrise if you want to install the app from Bitrise, or from the notification email we'll send out.
+* [Registered your testers' devices](/testing/registering-a-test-device/) on Bitrise if you want to install the app from Bitrise, or from the notification email we'll send out.
+
+{% include message_box.html type="important" title="Clear the cache" content="When trying to install an app from the public install page, you should clear the cache: click the link appearing in the **If you synced your settings from your old device, you need to clear the cache and register your new device** line. The link redirects to the **Account settings** page where you can follow the procedure described in our guide."%}
 
 {% include message_box.html type="important" title="Developer certificate and Development profile" content="To deploy an iOS app, you will always need a Developer type certificate and a Development type provisioning profile. Even if you want to deploy to the App Store, the these are still required: they are used to create the .xcodearchive file from the provided code in the process of exporting the .ipa file."%}
 
 #### Deploying the app
+
+{% include message_box.html type="important" title="Installing from the public install page" content="To install an app from the public install page, you must use a native Safari browser of the iOS device. You cannot click the installation link if you're browsing from a third-party app."%}
 
 1. Make sure the **Certificate and profile installer** Step or the **iOS Auto Provision** Step is in your Workflow.
 
@@ -50,7 +55,7 @@ Make sure that you have:
 
    ![](/img/public-install-page.png)
 
-And that's it! The file can now be installed on all the devices included in the app's provisioning profile.
+And that's it! The file can now be installed on all the devices included in the app's provisioning profile. Remember: the installation link must be accessed from an iOS device's Safari browser!
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
