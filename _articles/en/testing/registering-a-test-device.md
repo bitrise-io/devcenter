@@ -9,6 +9,10 @@ menu:
 
 The most comfortable way to register your iOS test device on [bitrise.io](https://www.bitrise.io) is to open [bitrise.io](https://www.bitrise.io) with Safari. This way we can open your device's Settings and create a temporary profile to get your Unique Device Identifier (UDID). This way you don't have to look for it and manually copy/paste it.
 
+{% include message_box.html type="important" title="Clear the cache" content="When trying to install an app from the public install page, you should clear the cache: click the link appearing in the **If you synced your settings from your old device, you need to clear the cache and register your new device** line. The link redirects to the **Account settings** page where you can follow the procedure described below.
+
+Read more about installing an app from the public install page in our [Deploying an iOS app to Bitrise.io](/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/) guide."%}
+
  1. Open Safari in **non-incognito mode** on your iOS device and log into [bitrise.io](https://www.bitrise.io).
  2. Go to your `Profile`.
  3. Tap `Account Settings`.
@@ -44,7 +48,7 @@ Now you can see your registered test device under [Registered test devices](http
 You can remove this registered device any time if you click the orange `x` icon.
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Register a device on Bitrise</div>
-	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Register a device on Bitrise</div>
+<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
 </div>
