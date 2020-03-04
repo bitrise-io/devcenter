@@ -88,6 +88,7 @@ pages:
 - _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
+- _articles/en/contributors/sharing-steps-with-all-bitrise-users-1.md
 - _articles/en/contributors/sharing-steps-with-all-bitrise-users.md
 - _articles/en/contributors/testing-and-versioning-your-steps-1.md
 - _articles/en/contributors/testing-and-versioning-your-steps.md
