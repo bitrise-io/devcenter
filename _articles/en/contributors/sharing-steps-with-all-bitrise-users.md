@@ -1,8 +1,14 @@
 ---
-tag: []
+tag:
+- steps
+- " contributors"
+- " bitrise.yml"
+- workflows
 title: Sharing Steps with all Bitrise users
 redirect_from: []
-summary: ''
+summary: If you think your Step can be of use to others, you can share it! You can
+  do it manually, using the bitrise share command. If you created the Step with the
+  Step plugin, you can run the share-this-step Workflow in your Step's directory.
 
 ---
 If you think your Step can be of use to others, you can share it! Before doing so, however, please check that there are no other Steps that solve the same problem. You can check:
@@ -24,7 +30,7 @@ The sharing process is relatively straightforward - but please make sure to go t
 There are two ways to share a Step:
 
 * You can do it manually, using the `bitrise share` command.
-* If you created the Step with the Step plugin, you can ran the `share-this-step` Workflow in your Step's directory.
+* If you created the Step with the Step plugin, you can run the `share-this-step` Workflow in your Step's directory.
 
 ### Before you start
 
