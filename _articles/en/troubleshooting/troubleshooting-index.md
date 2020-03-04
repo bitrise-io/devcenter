@@ -2,9 +2,9 @@
 tag: []
 title: Troubleshooting
 redirect_from: []
-description: 'In this section, we offer you some ideas for how to debug your Bitrise builds.
-  The guides deal with specific issues: take a look at them to check out if any of
-  them solves your problem. '
+description: 'In this section, we offer you some ideas for how to debug your Bitrise
+  builds. The guides deal with specific issues: take a look at them to check out if
+  any of them solves your problem. '
 menu:
   main:
     identifier: troubleshooting-main

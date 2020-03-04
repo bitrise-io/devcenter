@@ -8,8 +8,8 @@ tag:
 - code-signing
 - testing
 - deploy
-description: 'Go through the procedure of adding a Flutter app on Bitrise from start to
-  finish, from adding the app to deploying it. Learn about managing dependencies,
+description: 'Go through the procedure of adding a Flutter app on Bitrise from start
+  to finish, from adding the app to deploying it. Learn about managing dependencies,
   testing, and code signing. '
 menu:
   getting-started-main:

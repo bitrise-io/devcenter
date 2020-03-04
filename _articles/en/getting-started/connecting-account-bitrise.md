@@ -7,9 +7,9 @@ tag:
 - git
 - getting-started
 - triggers
-description: To take full advantage of all the features Bitrise offers, including automatic
-  webhook registration, you need to connect your GitHub/GitLab/Bitbucket account to
-  your Bitrise account.
+description: To take full advantage of all the features Bitrise offers, including
+  automatic webhook registration, you need to connect your GitHub/GitLab/Bitbucket
+  account to your Bitrise account.
 menu:
   getting-started-main:
     weight: 7

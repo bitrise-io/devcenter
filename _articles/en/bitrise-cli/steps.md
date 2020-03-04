@@ -8,8 +8,8 @@ tag:
 - workflows
 - bitrise.yml
 - cli
-description: 'A Step encapsulates a "build task": the code to perform that task, the inputs
-  and parameters you can define for the task, and the outputs the task generates.'
+description: 'A Step encapsulates a "build task": the code to perform that task, the
+  inputs and parameters you can define for the task, and the outputs the task generates.'
 menu:
   bitrise-cli-main:
     weight: 15

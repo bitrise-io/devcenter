@@ -6,8 +6,8 @@ tag:
 - workflows
 - cli
 - bitrise.yml
-description: 'Contributing to Bitrise is easy: write an open source integration, a guide,
-  or a blog post, submit it and you are done! In this section, we will be focusing
+description: 'Contributing to Bitrise is easy: write an open source integration, a
+  guide, or a blog post, submit it and you are done! In this section, we will be focusing
   on technical contributions: creating a new Step and creating your very own project
   scanner.'
 menu:

@@ -5,9 +5,9 @@ tag:
 - cordova
 - code-signing
 - files
-description: Naturally, Bitrise supports iOS applications built with either Ionic or Cordova.
-  However, the code signing process is slightly different compared to a "native" Xcode
-  project.
+description: Naturally, Bitrise supports iOS applications built with either Ionic
+  or Cordova. However, the code signing process is slightly different compared to
+  a "native" Xcode project.
 redirect_from: []
 menu:
   ios-code-signing:

@@ -6,8 +6,9 @@ tag:
 - code-signing
 - xcode
 - ios
-description: 'If you have issues with iOS code signing, you need to check your code signing
-  files, your export method, your app''s capabilities, and your registered test devices. '
+description: 'If you have issues with iOS code signing, you need to check your code
+  signing files, your export method, your app''s capabilities, and your registered
+  test devices. '
 redirect_from: []
 menu:
   ios-code-signing:

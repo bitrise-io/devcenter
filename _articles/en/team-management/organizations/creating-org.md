@@ -3,9 +3,9 @@ title: Creating organizations
 tag:
 - teams
 - orgs
-description: You can create and manage Organizations on bitrise.io to manage entire teams
-  quickly and effectively. You can set up multiple groups within an organization for
-  different apps.
+description: You can create and manage Organizations on bitrise.io to manage entire
+  teams quickly and effectively. You can set up multiple groups within an organization
+  for different apps.
 redirect_from: []
 menu:
   organizations:

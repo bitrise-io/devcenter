@@ -5,8 +5,9 @@ date: '2019-02-21T15:27:32.000+00:00'
 tag:
 - git
 - builds
-description: 'Set your own username and e-mail address for git commands on Bitrise. You
-  can set it globally so all future commits will be made using the provided user information. '
+description: 'Set your own username and e-mail address for git commands on Bitrise.
+  You can set it globally so all future commits will be made using the provided user
+  information. '
 menu:
   builds-main:
     weight: 25

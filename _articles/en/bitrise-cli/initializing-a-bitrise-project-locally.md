@@ -5,9 +5,9 @@ redirect_from: []
 tag:
 - cli
 - bitrise.yml
-description: When you add a new app to Bitrise, we detect the type of your project and
-  generate a basic bitrise.yml file for you, with workflows that are appropriate for
-  your project type.
+description: When you add a new app to Bitrise, we detect the type of your project
+  and generate a basic bitrise.yml file for you, with workflows that are appropriate
+  for your project type.
 menu:
   bitrise-cli-main:
     weight: 5

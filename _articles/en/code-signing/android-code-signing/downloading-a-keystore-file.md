@@ -7,8 +7,8 @@ tag:
 - gradle
 - code-signing
 - files
-description: If the file path of your keystore file is defined in your build.gradle file
-  but the keystore file itself is missing from the location where the path points
+description: If the file path of your keystore file is defined in your build.gradle
+  file but the keystore file itself is missing from the location where the path points
   to, you can use one of our file downloading steps to download the keystore file
   from Bitrise and place it in the defined location.
 menu:
@@ -16,7 +16,6 @@ menu:
     weight: 9
 
 ---
-
 If the file path (where your keystore file is located) that's defined in your `build.gradle` file but the keystore file itself is missing from the path's location, you can use one of our file downloading Steps to download the keystore file from Bitrise and put it in the defined location.
 
 Bitrise has two Steps which download files from the **Code Signing** tab. Which one to use in your workflow depends on where you uploaded your keystore file in the **Code Signing** tab:

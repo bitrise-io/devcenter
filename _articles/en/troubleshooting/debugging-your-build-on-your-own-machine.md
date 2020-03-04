@@ -6,8 +6,8 @@ tag:
 - git
 - cli
 - builds
-description: If your build fails on Bitrise, we often recommend to try and run it locally,
-  on your machine. This helps to eliminate some common issues.
+description: If your build fails on Bitrise, we often recommend to try and run it
+  locally, on your machine. This helps to eliminate some common issues.
 redirect_from: []
 menu:
   troubleshooting-main:

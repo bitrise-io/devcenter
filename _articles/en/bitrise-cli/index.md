@@ -7,9 +7,9 @@ tag:
 - cli
 - bitrise
 - bitrise.yml
-description: The open source Bitrise CLI / runner is responsible for interpreting and
-  executing the build configuration. Using the Bitrise CLI you can run the same configuration
-  on any compatible Mac/PC, inside and outside of bitrise.io.
+description: The open source Bitrise CLI / runner is responsible for interpreting
+  and executing the build configuration. Using the Bitrise CLI you can run the same
+  configuration on any compatible Mac/PC, inside and outside of bitrise.io.
 menu:
   main:
     identifier: bitrise-cli-main

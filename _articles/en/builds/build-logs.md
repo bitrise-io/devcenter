@@ -4,10 +4,10 @@ date: '2018-10-31T10:43:57.000+00:00'
 tag:
 - builds
 - troubleshooting
-description: 'Build logs allow users to analyze their builds and find out what went wrong
-  - and what went right! On Bitrise, build logs are easily accessible: they can be
-  viewed on the website in their entirety or they can be downloaded to view them on
-  your own device.'
+description: 'Build logs allow users to analyze their builds and find out what went
+  wrong - and what went right! On Bitrise, build logs are easily accessible: they
+  can be viewed on the website in their entirety or they can be downloaded to view
+  them on your own device.'
 redirect_from: []
 menu:
   builds-main:

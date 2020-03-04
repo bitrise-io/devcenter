@@ -3,8 +3,8 @@ title: Managing Workflows
 tag:
 - workflows
 - steps
-description: 'You can chain multiple Workflows, rearrange the order of Workflows in a
-  chain, as well as rename Workflows at any time in the Bitrise Workflow Editor. '
+description: 'You can chain multiple Workflows, rearrange the order of Workflows in
+  a chain, as well as rename Workflows at any time in the Bitrise Workflow Editor. '
 redirect_from: []
 menu:
   steps-workflows-main:

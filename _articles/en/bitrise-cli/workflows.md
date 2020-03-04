@@ -7,8 +7,8 @@ tag:
 - steps
 - workflows
 - cli
-description: A Workflow is a collection of steps, environment variables, and other configurations
-  for a single bitrise run.
+description: A Workflow is a collection of steps, environment variables, and other
+  configurations for a single bitrise run.
 menu:
   bitrise-cli-main:
     weight: 13

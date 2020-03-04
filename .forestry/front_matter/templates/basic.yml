@@ -88,6 +88,8 @@ pages:
 - _articles/en/code-signing/ios-code-signing/ios-manual-provisioning.md
 - _articles/en/code-signing/ios-code-signing/resigning-an-ipa.md
 - _articles/en/code-signing/xamarin-android-code-signing/xamarin-android-code-signing.md
+- _articles/en/contributors/sharing-steps-with-all-bitrise-users.md
+- _articles/en/contributors/testing-and-versioning-your-steps.md
 - _articles/en/deploy/android-deploy/deploying-android-apps.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
@@ -218,8 +220,6 @@ pages:
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/利用可能な環境変数-available-environment-variables.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/秘密と環境設定-secrets-and-env-vars.md
 - _articles/en/reviews/Japanese translations/ビルド(Builds)/通知設定 -configuring-notifications.md
-- _articles/en/reviews/ship-add-on-beta-version.md
-- _articles/en/reviews/ship-add-on-test.md
 - _articles/en/steps-and-workflows/adding-removing-steps.md
 - _articles/en/steps-and-workflows/copying-workflows-from-one-app-to-another.md
 - _articles/en/steps-and-workflows/creating-workflows.md
