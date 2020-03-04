@@ -12,6 +12,8 @@ summary: Test your new Steps before submitting them to the Bitrise StepLib. The 
   testing on the Step.
 
 ---
+{% include not_translated_yet.html %}
+
 ## Testing your Steps
 
 Test your new Steps before submitting them to the Bitrise StepLib. We'll talk about how to do end-to-end testing.
