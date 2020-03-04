@@ -96,15 +96,18 @@ We encourage you to share your Step with other Bitrise users. To do so, you firs
 
    If you do not set a version number, the latest version of the Step will be used.
 
-        workflows:
-          primary:
-            steps:
-              - script@0.9.0:
-                  title: "Using default_step_lib_source"
-                  inputs:
-                  - content: |
-                      #/bin/bash
-                      echo "Welcome to Bitrise!"
+   ```yaml
+   workflows:
+     primary:
+        steps:
+        - script@0.9.0:
+             title: "Using default_step_lib_source"
+             inputs:
+             - content: |
+                 #/bin/bash
+                 echo "Welcome to Bitrise!"
+   ```
+
 5. Run a build with bitrise run <workflowname> or on [bitrise.io](http://bitrise.io) to check if your Step worked.
 
 ## Step versioning
