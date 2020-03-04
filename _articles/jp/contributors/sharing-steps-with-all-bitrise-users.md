@@ -11,6 +11,9 @@ summary: If you think your Step can be of use to others, you can share it! You c
   Step plugin, you can run the share-this-step Workflow in your Step's directory.
 
 ---
+
+{% include not_translated_yet.html %}
+
 If you think your Step can be of use to others, you can share it! Before doing so, however, please check that there are no other Steps that solve the same problem. You can check:
 
 * In the list of [released Steps](https://www.bitrise.io/integrations/steps).
