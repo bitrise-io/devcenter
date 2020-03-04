@@ -1,14 +1,13 @@
 ---
-tag:
+tag: 
 title: Using Env Vars as a value of an Env Var
 redirect_from: []
-description:
+description: 
 menu:
   tips-and-tricks-main:
     weight: 24
 
 ---
-
 {% include not_translated_yet.html %}
 
 [Environment Variables](/builds/env-vars-secret-env-vars/) normally contain a single value. However, it is possible to set up an Env Var that includes other Env Vars as values. You can also use values that are normally treated as Env Vars: that is, values including the `$` character.

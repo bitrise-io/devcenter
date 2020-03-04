@@ -9,7 +9,6 @@ menu:
     weight: 9
 
 ---
-
 ## Steps and Workflows overview
 
 Steps and Workflows are the heart of how Bitrise works. A Bitrise build is simply a series of Steps, defined in a Workflow, executed by the Bitrise CLI on our virtual machines (or your own).

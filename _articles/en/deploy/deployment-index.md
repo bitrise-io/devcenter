@@ -7,8 +7,8 @@ tag:
 - google-play
 title: Deployment
 redirect_from: []
-description: 'Deployment can mean a number of things on Bitrise: you can deploy your app
-  to test devices, or to bitrise.io, with a public install page that you can freely
+description: 'Deployment can mean a number of things on Bitrise: you can deploy your
+  app to test devices, or to bitrise.io, with a public install page that you can freely
   distribute so that anyone can test the app'
 menu:
   main:

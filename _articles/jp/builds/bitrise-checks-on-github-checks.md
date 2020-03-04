@@ -4,8 +4,8 @@ tag:
 - troubleshooting
 title: Bitrise Checks on GitHub Checks
 redirect_from: []
-description: Bitrise Checks is a Github app which provides an extended version of the
-  classic status checks Bitrise sends back to GitHub pull requests. Bitrise Checks
+description: Bitrise Checks is a Github app which provides an extended version of
+  the classic status checks Bitrise sends back to GitHub pull requests. Bitrise Checks
   include a Bitrise build summary and a check status.
 menu:
   builds-main:

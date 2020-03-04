@@ -6,8 +6,8 @@ tag:
 - cli
 - " workflows"
 - bitrise.yml
-description: 'The open source Bitrise Workflow Editor is designed in such a way that you
-  can run it offline on your Mac/PC without having to log into bitrise.io. '
+description: 'The open source Bitrise Workflow Editor is designed in such a way that
+  you can run it offline on your Mac/PC without having to log into bitrise.io. '
 menu:
   bitrise-cli-main:
     weight: 9

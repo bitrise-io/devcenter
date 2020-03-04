@@ -8,9 +8,9 @@ tag:
 - triggers
 - builds
 - api
-description: Both incoming and outgoing webhooks can be set up with the Bitrise API. They
-  are important for automatic build triggering and the reporting of build events to
-  other services.
+description: Both incoming and outgoing webhooks can be set up with the Bitrise API.
+  They are important for automatic build triggering and the reporting of build events
+  to other services.
 menu:
   api-main:
     weight: 11

@@ -4,8 +4,9 @@ tag:
 - triggers
 - troubleshooting
 - builds
-description: 'Unfortunately, it can happen that your build triggers do not trigger a build
-  automatically on Bitrise. There are many potential issues that can stop your builds '
+description: 'Unfortunately, it can happen that your build triggers do not trigger
+  a build automatically on Bitrise. There are many potential issues that can stop
+  your builds '
 redirect_from: []
 menu:
   troubleshooting-main:

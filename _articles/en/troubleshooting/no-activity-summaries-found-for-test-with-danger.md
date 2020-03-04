@@ -5,8 +5,8 @@ tag:
 - testing
 title: No activity summaries found for test with Danger
 redirect_from: []
-description: Xcov, by default, for the results bundle in its default location, not at
-  `$BITRISE_XCRESULT_PATH`. Because of this your build will fail when using those
+description: Xcov, by default, for the results bundle in its default location, not
+  at `$BITRISE_XCRESULT_PATH`. Because of this your build will fail when using those
   tools. You need to configure them to look for the bundle in the location set by
   the Env Var.
 menu:

@@ -3,9 +3,9 @@ title: Creating a Workflow
 tag:
 - steps
 - workflows
-description: It's very simple to create your own Workflow with the Workflow Editor. You
-  can create new Workflows based on any of the existing ones, or you can simply create
-  an empty Workflow and add the steps yourself.
+description: It's very simple to create your own Workflow with the Workflow Editor.
+  You can create new Workflows based on any of the existing ones, or you can simply
+  create an empty Workflow and add the steps yourself.
 redirect_from: []
 menu:
   steps-workflows-main:

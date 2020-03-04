@@ -4,9 +4,9 @@ tag:
 - steps
 - env vars
 - cli
-description: Step properties provide important data of a Step, such as its project type,
-  its source code or the dependencies it requires. A Step's inputs and outputs are
-  also defined as step properties.
+description: Step properties provide important data of a Step, such as its project
+  type, its source code or the dependencies it requires. A Step's inputs and outputs
+  are also defined as step properties.
 redirect_from: []
 menu:
   bitrise-cli-main:

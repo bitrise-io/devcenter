@@ -2,9 +2,9 @@
 tag: []
 title: Exporting to Test Reports from custom Script Steps
 redirect_from: []
-description: Test Reports allows you to view all your test results in a convenient way.
-  By default, only four Steps support the Test Reports feature. However, you can export
-  the test results of other Steps to Test Reports via custom Script Steps.
+description: Test Reports allows you to view all your test results in a convenient
+  way. By default, only four Steps support the Test Reports feature. However, you
+  can export the test results of other Steps to Test Reports via custom Script Steps.
 menu:
   testing-main:
     weight: 4

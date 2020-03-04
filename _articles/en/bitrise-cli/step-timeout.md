@@ -3,8 +3,8 @@ title: Setting a time limit for Steps
 tag:
 - cli
 - steps
-description: Ensure that your builds do not exceed the time limit by setting up Step timeout
-  for Steps that might cause builds to hang.
+description: Ensure that your builds do not exceed the time limit by setting up Step
+  timeout for Steps that might cause builds to hang.
 redirect_from: []
 menu:
   bitrise-cli-main:

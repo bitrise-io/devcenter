@@ -10,6 +10,9 @@ redirect_from: []
 summary: Test your new Steps before submitting them to the Bitrise StepLib. The Step's
   bitrise.yml contains a Workflow called test that can be used to perform end-to-end
   testing on the Step.
+menu:
+  contributors-main:
+    weight: 4
 
 ---
 {% include not_translated_yet.html %}

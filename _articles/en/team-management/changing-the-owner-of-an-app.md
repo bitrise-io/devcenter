@@ -4,8 +4,8 @@ tag:
 - teams
 - orgs
 - apps
-description: It can happen that you need to transfer an application on Bitrise to another
-  user. This can be done in a few seconds by following a few quick steps.
+description: It can happen that you need to transfer an application on Bitrise to
+  another user. This can be done in a few seconds by following a few quick steps.
 redirect_from: []
 menu:
   team-management-main:

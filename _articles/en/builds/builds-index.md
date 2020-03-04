@@ -5,10 +5,10 @@ tag:
 - workflows
 - triggers
 title: Builds
-description: A build is a series of jobs, specified by the app’s Workflow which is a collection
-  of Steps. The app’s build configuration is specified in the bitrise.yml configuration
-  file which you can modify in bitrise.io’s graphical Workflow Editor UI, or in a
-  yaml editor directly.
+description: A build is a series of jobs, specified by the app’s Workflow which is
+  a collection of Steps. The app’s build configuration is specified in the bitrise.yml
+  configuration file which you can modify in bitrise.io’s graphical Workflow Editor
+  UI, or in a yaml editor directly.
 menu:
   main:
     identifier: builds-main

@@ -6,9 +6,9 @@ tag:
 - ios
 - xcode
 - testing
-description: 'You can build and deploy your iOS application to a simulator, to show it
-  off in a browser, for example. On Bitrise, we have a dedicated Step to build for
-  a simulator: the Xcode build for simulator Step.'
+description: 'You can build and deploy your iOS application to a simulator, to show
+  it off in a browser, for example. On Bitrise, we have a dedicated Step to build
+  for a simulator: the Xcode build for simulator Step.'
 redirect_from: []
 menu:
   ios-deploy:

@@ -6,8 +6,8 @@ tag:
 - xcode
 - " troubleshooting"
 - ios
-description: 'Read about Xcode issues: performance problems, test failures, troubles with
-  the Xcode Command Line Tools.'
+description: 'Read about Xcode issues: performance problems, test failures, troubles
+  with the Xcode Command Line Tools.'
 menu:
   troubleshooting-main:
     weight: 16

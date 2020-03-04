@@ -6,9 +6,9 @@ tag:
 - builds
 title: Caching Homebrew installers
 redirect_from: []
-description: 'Caching homebrew installers is supported in the Brew install Step. It can
-  speed up your builds significantly, depending on the number of dependencies you
-  have in your app. '
+description: 'Caching homebrew installers is supported in the Brew install Step. It
+  can speed up your builds significantly, depending on the number of dependencies
+  you have in your app. '
 menu:
   caching:
     weight: 10

@@ -9,9 +9,12 @@ redirect_from: []
 summary: If you think your Step can be of use to others, you can share it! You can
   do it manually, using the bitrise share command. If you created the Step with the
   Step plugin, you can run the share-this-step Workflow in your Step's directory.
+menu:
+  contributors-main:
+    weight: 6
+    title: Sharing your Steps with all Bitrise users
 
 ---
-
 {% include not_translated_yet.html %}
 
 If you think your Step can be of use to others, you can share it! Before doing so, however, please check that there are no other Steps that solve the same problem. You can check:

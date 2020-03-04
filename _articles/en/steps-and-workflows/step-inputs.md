@@ -4,8 +4,8 @@ tag:
 - steps
 - " workflows"
 - env vars
-description: You can manually set up what version of a given Step you want to use in your
-  builds. You can use different versions in different Workflows.
+description: You can manually set up what version of a given Step you want to use
+  in your builds. You can use different versions in different Workflows.
 redirect_from: []
 menu:
   steps-workflows-main:
