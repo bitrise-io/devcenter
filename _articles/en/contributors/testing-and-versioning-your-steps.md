@@ -55,7 +55,7 @@ For more information on the bitrise.yml file, see [Basics of bitrise.yml](/bitri
 1. Under the steps property of the Workflow in the bitrise.yml file, add your Step's path as a Step reference, in the following format:
    * To run the Step from a local path, use the path:: source in the Step reference:
    	 
-     ```
+     ```yaml
      format_version: 9
      workflows:
      	primary:
@@ -66,7 +66,7 @@ For more information on the bitrise.yml file, see [Basics of bitrise.yml](/bitri
    In the above example, our **Example Test** Step is the first Step of the primary Workflow. We run the Step from its local path: path::./steps-example.
    * To run the Step from a Git URL:
 
-     ```
+     ```yaml
      format_version: 9
      workflows:
      	primary:
@@ -96,15 +96,18 @@ We encourage you to share your Step with other Bitrise users. To do so, you firs
 
    If you do not set a version number, the latest version of the Step will be used.
 
-        workflows:
-          primary:
-            steps:
-              - script@0.9.0:
-                  title: "Using default_step_lib_source"
-                  inputs:
-                  - content: |
-                      #/bin/bash
-                      echo "Welcome to Bitrise!"
+   ```yaml
+   workflows:
+     primary:
+        steps:
+        - script@0.9.0:
+             title: "Using default_step_lib_source"
+             inputs:
+             - content: |
+                 #/bin/bash
+                 echo "Welcome to Bitrise!"
+   ```
+
 5. Run a build with bitrise run <workflowname> or on [bitrise.io](http://bitrise.io) to check if your Step worked.
 
 ## Step versioning

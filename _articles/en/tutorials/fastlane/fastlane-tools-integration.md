@@ -5,52 +5,33 @@ menu:
     weight: 1
 
 ---
-## What is fastlane?
+Bitrise is a hosted CI/CD solution where you can run your [fastlane](https://docs.fastlane.tools/) lane with the same commands you would use locally. Bitrise’s automated Steps provide extra functionality to your lane and speed up your builds.
 
-_fastlane_ lets you define and run your deployment pipelines for different environments.
-It helps you unify and automate your app's release process.
-_fastlane_ connects all `fastlane tools` and third party tools, like CocoaPods and xctool.
+Here is how you can benefit from integrating fastlane into Bitrise.
 
-_fastlane_ is a collection of ruby gems that cover the most usual tasks required during iOS app development and upload or update to the App Store.
+* Our **Fastlane Match** Step takes care of code signing your project by cloning your private certificate/profile repository and registering the certificates and profiles in the keychain.
+* On Bitrise you can run separate lanes for separate branches automatically. For example, you can run a lane for every code push onto the master branch to update screenshots and metadata on the App Store and to release the distribution version. You can run a separate lane for the develop branch to run your automated tests and deploy your test releases for your QA team. You can simply clone the Workflow multiple times, specify the lane to run for the given Workflow in a Workflow Specific Environment Variable, and use the [Triggers](/builds/triggering-builds/triggering-builds-index/) feature to define which Workflow should be selected for this branch / tag / pull request.
 
-{% include message_box.html type="note" title="Bitrise offline CLI" content=" We have an open source, offline CLI, which can be used in a similar way as _fastlane_. If you're interested, you can find the CLI's website [here](https://www.bitrise.io/cli), and its GitHub repository [here](https://github.com/bitrise-io/bitrise). You can use this CLI to run your bitrise configurations locally, which can include running _fastlane_ too as part of the build. "%}
+{% include message_box.html type="info" title="Before you start:" content="Note that two-factor authentication is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA. This applies even if you use _fastlane_. To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/connecting-apple-dev-account/). This allows Bitrise to reuse your authentication sessions for 30 days, so you do not have to manually go through 2FA on every single occasion.
 
-## How to get started?
+If a `Gemfile` exists in your `work_dir` directory, _fastlane_ will be used by calling `bundle install` then `bundle exec`.
 
-Using _fastlane_ for your Workflow is as easy as pie. Just add the [Fastlane](https://www.bitrise.io/integrations/steps/fastlane) Step to [your Workflow](/getting-started/manage-your-bitrise-workflow) after the **Git Clone** Step (and any other dependency Step).
+`Fastfile` is your configuration file that can be run with _fastlane_. Make sure you have it inside your `./fastlane` directory."%}
 
-{% include message_box.html type="warning" title="Have our Certificate and profile installer Step in your Workflow!" content=" You should also add/keep the **Certificate and profile installer** Step in the Workflow, to download your .p12 certificates and provisioning profiles uploaded to [bitrise.io](https://www.bitrise.io) and to install them. Even if you don't upload your files to [**bitrise.io**](https://www.bitrise.io) and instead you use a fastlane tool to manage your code signing files, you should still keep this Step in the Workflow."%}
+## Setting up fastlane on Bitrise
 
-With adding the **fastlane Step** we ensure that you are running on the latest _fastlane_ version, as it is pre-installed on all our VMs. Inside the Step you can set the _fastlane_ action and we will run it automatically every time you push a new code change.
+Running _fastlane_ on Bitrise is as simple as adding one Step to your Workflow and setting some options. Let’s see how!
 
-For more configuration options, see the Fastlane Step's description in the Workflow Editor!
+1. Add the **Fastlane** Step to your Workflow by clicking the + sign. Make sure it is inserted right after the Git Clone Step. Since fastlane is pre-installed on all Bitrise’s virtual machines, the Fastlane Step ensures that you can always use the required fastlane version.
+2. To code sign your project, you have a couple of options to choose from. Add one of Bitrise’s code signing Steps to your Workflow such as: **Certificate and profile installer**, **iOS Auto Provision**,**Fastlane Match**. Alternatively, use fastlane match inside your fastlane lane instead of a code signing Step. Make sure you either use the **Fastlane Match** Step or set up fastlane match in your lane but don’t try to do both.
+3. Click the **Fastlane Step** to fill out the required fields.
+4. Add your lane in the **fastlane lane** input.
+5. Use **Working directory** field if the _fastlane_ directory is not in your repository's root. The working directory should be the parent directory of your `Fastfile`'s directory. For example, if the Fastfile path is `./here/is/my/fastlane/Fastfile`, then the `Fastfile`'s directory is `./here/is/my/fastlane`, so the **Working Directory** should be `./here/is/my`.
+6. The **Should update fastlane gem before run?** option will be skipped if you have a `Gemfile` in the `work_dir` directory. If you don't have a `Gemfile` and this option is enabled, then the Step tries to use and run the latest _fastlane_ version.
+7. Set the **Enable verbose logging?** to yes if you wish to get more detailed logs on your failed builds.
+8. If the **Enable collecting files to be included in build cache** is set to yes, the Step adds the following cache items (if they exist):
+   * Pods - `Podfile.lock`
+   * Carthage - `Cartfile.resolved`
+   * Android dependencies
 
-{% include message_box.html type="info" title="iOS code signing guide" content=" If you want to use [bitrise.io](https://www.bitrise.io) to store your code signing files, you should just follow the [iOS Code Signing guide here](/ios/code-signing/). "%}
-
-{% include message_box.html type="important" title="Two-factor authentication" content="Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA. This applies even if you use `fastlane`!
-
-To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/signing-up/connecting-apple-dev-account/). That allows Bitrise to reuse your authentication sessions for 30 days, so you do not have to manually go through 2FA on every single occasion."%}
-
-## What's next?
-
-_fastlane_'s greatness comes from its ability to define different lanes for your different deployment needs - hence the name.
-You can combine this with Bitrise and run separate lanes for separate branches, automatically.
-For example, you can run a lane for every code push onto the `master` branch to update your
-screenshots and metadata on the App Store and to release the distribution version,
-and a separate lane for the `develop` branch to deploy your test releases
-and all the others to ensure that nobody has broken anything.
-You can simply clone the workflow as many times as you want to,
-and use the **Triggers** feature of [bitrise.io](https://www.bitrise.io) to define
-which Workflow to be selected for this branch / tag / pull request.
-You can find more information about the trigger map feature in the
-[Control what to build when with the trigger map](/webhooks/trigger-map/) guide.
-
-We hope that you are as happy as we are to have this amazing tool inside Bitrise. Go ahead and try it out!
-
-And as always, happy building!
-
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Add fastlane to your workflow</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your apps</button></a>
-</div>
+That’s it! [Start running your build](/builds/Starting-builds-manually/) so that Bitrise can run your lane.
