@@ -6,11 +6,14 @@ tag:
 - triggers
 redirect_from: []
 description: ''
+summary: ''
 menu:
   triggering-builds:
     weight: 8
 
 ---
+<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/MRQRcoI6uBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 You can specify a pattern for your Git Tags to trigger a specific workflow. This is a good way to build and deploy your app in a specific state. And it's very easy to set up!
 
 {% include message_box.html type="important" title="Webhooks for triggering builds" content="Triggering builds automatically requires an incoming webhook set up with the hosting service of your repository. Read more in the [Webhooks](/webhooks) section."%}
