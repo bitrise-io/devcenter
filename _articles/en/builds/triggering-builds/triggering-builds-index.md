@@ -14,6 +14,8 @@ menu:
     weight: 3
 
 ---
+<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/MRQRcoI6uBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 You can start builds on Bitrise either by:
 
 * [Manually starting one](/builds/triggering-builds/starting-builds-manually/).
