@@ -8,11 +8,14 @@ description: You can set up a trigger so that every time a pull request is opene
   from a specified source branch to a specified target branch of your repository,
   a build is automatically triggered on Bitrise.
 redirect_from: []
+summary: ''
 menu:
   triggering-builds:
     weight: 3
 
 ---
+<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/MRQRcoI6uBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 You can set up a trigger so that every time a pull request is opened from a specified source branch to a specified target branch of your repository, a build is automatically triggered on Bitrise.
 
 {% include message_box.html type="important" title="Webhooks for triggering builds" content="Triggering builds automatically requires an incoming webhook set up with the hosting service of your repository. Read more in the [Webhooks](/webhooks) section."%}
@@ -37,7 +40,7 @@ By default, every new app you add will have a trigger that triggers a build ever
 And you're done! From now on, if a pull request is opened in your repository, Bitrise will trigger a build with the selected workflow!
 
 <div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's set up a trigger</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's set up a trigger</div>
+<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
 </div>
