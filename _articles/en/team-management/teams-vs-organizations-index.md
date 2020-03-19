@@ -13,6 +13,9 @@ menu:
     weight: 5
 
 ---
+
+<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/GkjVrhBbU-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 There are two types of accounts on Bitrise:
 
 * Individual user accounts.
