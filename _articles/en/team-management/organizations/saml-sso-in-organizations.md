@@ -10,11 +10,14 @@ tag:
 description: Organization members can log into or sign up to Bitrise using their own
   SAML SSO provider's system. With SAML SSO, organizations will be able to apply the
   security guidelines of their SAML SSO provider when accessing their Bitrise organization.
+summary: ''
 menu:
   organizations:
     weight: 16
 
 ---
+<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/0LvV5E14Z4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 Organization members can log into or sign up to Bitrise using their own SAML SSO provider's system. With SAML SSO, Organizations will be able to apply the security guidelines of their SAML SSO provider when accessing their Bitrise Organization.
 
 {% include message_box.html type="important" title="SAML SSO with Org Elite subscription" content="
@@ -61,7 +64,7 @@ Now that the Organization owner has set up SAML SSO, everyone in the Organizatio
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
 2. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
 
-   The email also shows the Organization owner's email address (should you need to contact them.) 
+   The email also shows the Organization owner's email address (should you need to contact them.)
 
    Click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
 
