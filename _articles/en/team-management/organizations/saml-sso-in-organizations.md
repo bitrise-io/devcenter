@@ -16,7 +16,7 @@ menu:
     weight: 16
 
 ---
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/0LvV5E14Z4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/0LvV5E14Z4c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 Organization members can log into or sign up to Bitrise using their own SAML SSO provider's system. With SAML SSO, Organizations will be able to apply the security guidelines of their SAML SSO provider when accessing their Bitrise Organization.
 
