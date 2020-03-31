@@ -22,7 +22,7 @@ Here is a short recap on the different build steps per platform.
 | Cordova | Cordova Archive | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 | MacOS | Archive for MacOS and/or Export for MacOS | Deploy to Bitrise.io - Apps, Logs, Artifacts |
 
-First let's have a look at the required and sensitive fields of the Step:
+First let's have a look at the required and sensitive fields of the **Deploy to Bitrise.io** Step:
 
 ![](/img/deploy-to-bitrise.png)
 
@@ -48,6 +48,8 @@ The default input value here is `everyone`.
 ## Notify: Emails
 
 Set one or more email addresses of those who should get notification. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in our **Secrets** tab.
+
+{% include message_box.html type="info" title="How can I get notified?" content="You can get a [notification email](/builds/configuring-notifications/#watching-an-app) about a successful or failed build, if you click the **Watch** icon above the **Start/Schedule a Build** purple button on your Build's page."%}
 
 ## Enabling Public Page for the App
 
