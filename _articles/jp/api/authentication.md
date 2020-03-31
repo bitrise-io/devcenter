@@ -1,5 +1,5 @@
 ---
-title: Authentication
+title: 認証
 redirect_from: []
 date: '2019-03-29T16:55:28.000+00:00'
 menu:
@@ -7,28 +7,27 @@ menu:
     weight: 2
 
 ---
-{% include not_translated_yet.html %}
 
-## Authentication
+## 認証
 
-The current API supports only one type of authentication: user generated **Personal Access Tokens**. Organizations do not have their own access tokens.
+現在のAPIは、1つのタイプの認証のみサポートします。ユーザが生成した **パーソナルアクセストークン** のみです。Organizationは、それ自身のアクセストークンを持っていません。
 
-**Every API endpoint requires authentication**, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io "https://api.bitrise.io")).
+"ルート"URL([https://api.bitrise.io](https://api.bitrise.io "https://api.bitrise.io"))以外の **すべてのエンドポイントは、認証が必要です** 。
 
-### Acquiring a Personal Access Token
+### パーソナルアクセストークンの取得
 
-1. Sign in on [bitrise.io](https://www.bitrise.io).
-2. Go to your **Account Settings** page.
-3. Select the [Security](https://www.bitrise.io/me/profile#/security) tab on the left side.
-4. Click the `Generate new token` button to create a new Personal Access Token.
-5. Save the generated token.
+1. [bitrise.io](https://www.bitrise.io)にログインします。
+2. **Account Settings** に移動します。
+3. 左側にある [Security](https://www.bitrise.io/me/profile#/security) タブを選択します。
+4. `Generate new` ボタンをクリックして、新しいパーソナルアクセストークンを生成します。
+5. 生成したトークンを保存します。
 
-{% include message_box.html type="important" title="Availability of the generated token" content=" The generated token is shown only once: when it's generated. There's no way to see the token value again! You can of course generate as many Access Tokens as you like, and delete the ones you don't need anymore. "%}
+{% include message_box.html type="important" title="生成されたトークンについて" content=" 生成されたトークンは生成されたときに1回だけ表示されます。もう1度そのトークンを見る方法はありません！もちろん好きなだけアクセストークンを生成することは可能ですし、必要なくなれば削除することもできます。 "%}
 
-### Authenticating with the API
+### 認証を使ったAPIコール
 
-To provide the required access token, you have to add a **HEADER** to your requests, with the key `Authorization` and the value of your token.
+必須のアクセストークンをAPIに渡すには、 **リクエストヘッダー** に `Authorization` というキーと、あなたのトークンを連結したものを追加してください。
 
-An example API call with auth, using `curl`:
+`curl` を使って、認証情報をヘッダーに追加してAPIコールする例:
 
     curl -H 'Authorization: THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me
