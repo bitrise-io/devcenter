@@ -30,7 +30,7 @@ Locking a Step to a version means that your Workflow is automatically updated to
 
 Let's see an example!
 
-{% include message_box.html type="Version locking example" title="My message" content="The Example Step’s current version in the Workflow is 2.3.3. A new minor version comes out: 2.4.0. 
+{% include message_box.html type="example" title="Version locking example" content="The Example Step’s current version in the Workflow is 2.3.3. A new minor version comes out: 2.4.0. 
 
 * If the Step is locked to major version 2.x.x, the Step is updated to 2.4.0.
 * If the Step is locked to minor version 2.3.x, the Step is NOT updated to 2.4.0. 
