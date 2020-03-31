@@ -49,7 +49,7 @@ The default input value here is `everyone`.
 
 Set one or more email addresses of those who should get notification. This field is  [sensitive](/builds/env-vars-secret-env-vars/) so make sure you register those email addresses in our **Secrets** tab.
 
-{% include message_box.html type="info" title="How can I get notified?" content="You can get a notification email about a successful or failed build if you click the **Watch** icon above the **Start/Schedule a Build** purple button on your Build's page."%}
+{% include message_box.html type="info" title="How can I get notified?" content="You can get a notification email about a successful or failed build, if you click the **Watch** icon above the **Start/Schedule a Build** purple button on your Build's page."%}
 
 ## Enabling Public Page for the App
 
