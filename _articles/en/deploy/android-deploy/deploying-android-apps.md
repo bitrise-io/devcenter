@@ -93,7 +93,7 @@ You can notify user groups or individual users that your APK file has been built
 
 ![](/img/public-install-page.png)
 
-{% include message_box.html type="info" title="How can I get notified?" content="You can get notified about a successful or failed build to your email address if you click the **Watch** icon above the **Start/Schedule a Build** purple button on your Build's page."%}
+{% include message_box.html type="info" title="How can I get notified?" content="You can get a notification email about a successful or failed build, if you click the **Watch** icon above the **Start/Schedule a Build** purple button on your Build's page."%}
 
 ## Deploying to the Google Play Store
 
