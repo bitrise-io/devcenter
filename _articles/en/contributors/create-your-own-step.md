@@ -158,6 +158,9 @@ Environment Variables must not be used as default values, unless:
 * They are exposed by the [Bitrise CLI or by bitrise.io](/builds/available-environment-variables).
 * They are generated as an output by another Step (for example, $BITRISE_IPA_PATH, $BITRISE_AAB_PATH).
 
+The reason behinde it: the workflow editor highlight required inputs withouth values, to express the step will not work without setting value for the given input. If you set an env var, which does not have automatic value, as default value for an input the workflow editor will think the required input has value set (if if the default env has no value yet).
+Other than that there is no reason suggesting env var names, users might have the same value set in a different env var.
+
 Let's talk about how Step inputs are passed to code and how they are presented.
 
 ## Configuring Step inputs
