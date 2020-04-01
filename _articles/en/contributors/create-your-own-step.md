@@ -146,7 +146,8 @@ Step inputs are visible on the Workflow Editor: they are presented in the order 
 ### Step input keys and values
 
 Use lower case [snake case](https://en.wikipedia.org/wiki/Snake_case) style input keys. For example, project_path.  
-The input key can not be opts, as it is used for the input’s options.
+The input key can not be `opts`, as it is used for the input’s options.  
+There is no need to add domain-specific prefixes to the input keys, as inputs are only exposed for the step run process. This means `project_path` input will not overlap subsequent step's `project_path` inputs.
 
 Step input values are strings: the Bitrise CLI exposes the Step inputs as Environment Variables to the Steps.
 
