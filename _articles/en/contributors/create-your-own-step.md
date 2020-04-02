@@ -192,7 +192,7 @@ A Step input can have a name, a summary, and a description, just like the Step i
 
 Let's take a look at how these should look like!
 
-{% include message_box.html type="info" title="Description, and summary" content="Both description and the summary accept Markdown formatting in its values."%}
+{% include message_box.html type="info" title="Description and summary" content="Both `description` and `summary` accept Markdown formatting in its values."%}
 
 * `title`: It should be a short and descriptive sentence or half sentence: The Xcode project's path. It should not be a CLI flag or API parameter name used internally. This makes Step configuration easier, as no preexisting knowledge will be required about the underlying tool or service interfaces. It's also easier to change the Step's implementation while maintaining backwards compatibility.
 * `summary`:  It is the short version of the description, which provides a quick overview of the input. On the Bitrise Workflow Editor, the summary of the inputs is presented by default when you click on a Step.
@@ -344,7 +344,7 @@ Steps can define dependencies which need to be available on the host machine but
       check_only:
       - name: xcode
 
-Currently, the only supported check_only dependency is xcode.
+Currently, the only supported `check_only` dependency is `xcode`.
 
 Other dependencies need to be installed and checked while the step is running or using other steps.
 
