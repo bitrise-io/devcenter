@@ -29,6 +29,8 @@ Our stacks are behind a set of static public IPs: this means you can whitelist t
 
 For the **Android & Docker** stacks:
 
+* 35.202.121.43
+* 35.231.56.118
 * 104.197.15.74
 * 35.237.165.17
 
