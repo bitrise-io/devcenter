@@ -44,14 +44,14 @@ iOS の開発は時に複雑です。我々の目的は開発する上での負�
 ワークフローの内容は[Workflow Editor](/getting-started/getting-started-workflows)で確認できます。
 ダッシュボード上にあるアプリ名をクリックして、`Workflow`タブを選択してください。
 
-{% include message_box.html type="important" title="Test targets" content="If your app does not have test targets defined, the primary workflow will be the only automatically created workflow and it will NOT include the `Xcode Test for iOS` Step. "%}
+{% include message_box.html type="important" title="Test targets" content="アプリケーションにテストターゲットが定義されていない場合は、`Xcode Test for iOS`のステップを含まないprimaryワークフローが自動生成されます。 "%}
 
 もし、Xcode のテストターゲットが定義されていたら、そのテストを実行、および結果を出力するための下記[ステップ](/getting-started/getting-started-steps) が`primary`ワークフローに追加されます。
 
 * `Xcode Test for iOS`
 * `Deploy to Bitrise.io`
 
-{% include message_box.html type="note" title="Code signing files" content="Running Xcode tests and deploying their results to Bitrise do not require any code signing files. So don't worry about them just yet!"%}
+{% include message_box.html type="note" title="Code signing files" content="Xcodeテストの実行とBitriseへのテスト成果物のデプロイにはcode signingのファイルを必要としません。そのため、今はまだcode signingについて心配する必要はありません！"%}
 
 `Xcode Test for iOS`ステップでは、予め定義された Xcode のテストが走ります。この設定は変更する必要はありません。もしテストが正しく書かれていたら、正常に起動します。Xcode 上でも同じ設定を確認できます。
 
