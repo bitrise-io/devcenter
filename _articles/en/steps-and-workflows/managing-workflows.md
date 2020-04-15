@@ -6,11 +6,14 @@ tag:
 description: 'You can chain multiple Workflows, rearrange the order of Workflows in
   a chain, as well as rename Workflows at any time in the Bitrise Workflow Editor. '
 redirect_from: []
+summary: ''
 menu:
   steps-workflows-main:
     weight: 17
 
 ---
+<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/8_Fi5-p96zg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 You can chain multiple Workflows, rearrange the order of Workflows in a chain, as well as rename Workflows at any time in the Bitrise Workflow Editor.
 
 ## Chaining Workflows together
