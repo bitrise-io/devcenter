@@ -14,7 +14,7 @@ menu:
     weight: 1
 
 ---
-`bitrise.yml` A Step is a build task: for example, the **Git Clone** Step clones your Git repository at the start of a build while the **Google Play Deploy** Step can deploy your finished app to the Play Store.
+A Step is a build task: for example, the **Git Clone** Step clones your Git repository at the start of a build while the **Google Play Deploy** Step can deploy your finished app to the Play Store.
 
 A Step contains the code that performs the build task. You can configure the inputs and parameters that define the task, and view and reuse the outputs a Step generates. Reusing the output means that another Step can use it as the value of one of its inputs.
 
@@ -160,9 +160,9 @@ Environment Variables must not be used as default values, unless:
 * They are exposed by the [Bitrise CLI or by bitrise.io](/builds/available-environment-variables).
 * They are generated as an output by another Step (for example, `$BITRISE_IPA_PATH`, `$BITRISE_AAB_PATH`).
 
-This is because the Workflow Editor highlights required inputs without values to express the Step will not work without setting a valid value for the given input. If you set an Env Var, which does not have an automatically assigned value, as the default value for an input, the Workflow Editor will think the required input in question has a valid value set (even if the default Env Var has no value yet). 
+This is because the Workflow Editor highlights required inputs without values to express the Step will not work without setting a valid value for the given input. If you set an Env Var, which does not have an automatically assigned value, as the default value for an input, the Workflow Editor will think the required input in question has a valid value set (even if the default Env Var has no value yet).
 
-Also, there is no reason to suggest a certain name for an Environment Variable this way: users might have the same value assigned to an Env Var with a different name. 
+Also, there is no reason to suggest a certain name for an Environment Variable this way: users might have the same value assigned to an Env Var with a different name.
 
 Let's talk about how Step inputs are passed to code and how they are presented.
 
