@@ -20,7 +20,7 @@ menu:
     title: Adding a new app on the website
 
 ---
-Adding an app to Bitrise means setting up access to your repository so that you can run builds. We also run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects the platform type of your app - for example, iOS - and generate default Workflows with all the necessary Steps to build and deploy your app.
+Adding an app to Bitrise means setting up access to your repository so that you can run builds. During the process, we also run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects the platform type of your app - for example, iOS - and generate default Workflows with all the necessary Steps to build and deploy your app.
 
 Currently we are supporting the following platforms out of the box:
 
