@@ -20,9 +20,9 @@ menu:
     title: Adding a new app on the website
 
 ---
-When adding your app to Bitrise, we clone your repository to make sure we can access it. We also run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects all the supported apps and instantly configure your Workflow with all the necessary steps to build and deploy your app.
+Adding an app to Bitrise means setting up access to your repository so that you can run builds. We also run our [project scanner](https://github.com/bitrise-steplib/steps-project-scanner) that detects the platform type of your app - for example, iOS - and generate default Workflows with all the necessary Steps to build and deploy your app.
 
-Currently we are supporting the following projects out of the box:
+Currently we are supporting the following platforms out of the box:
 
 * [iOS](/getting-started/getting-started-with-ios-apps/)
 * [Android](/getting-started/getting-started-with-android-apps/)
