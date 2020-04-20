@@ -5,21 +5,132 @@ sitemap:
 ---
 
 <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
+  nav#side-menu {
+    display: none;
   }
+  .container {
+    position: relative;
+    margin: 10px auto;
+    max-width: 800px;
+    text-align: center;
+    right: 25%;
+  }
+
+  ul {
+    list-style-position: inside;
+    padding-left: 0px;
+  }
+
   h1 {
     margin: 30px 0;
     font-size: 4em;
     line-height: 1;
     letter-spacing: -1px;
   }
+
+  .notfound-box {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+		border-radius: 8px;
+  		box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.06);
+  		border-top: solid 1px #ececec;
+		border-bottom: solid 1px #ececec;
+		border-right: solid 4px #ececec;
+		border-left: solid 4px #ececec;
+  		background-color: #ececec;
+		text-align: center;
+		color: #444444;
+		font-weight: bold;
+		font-size: 1.6rem;
+		margin-top: 3rem;
+
+		.notfound-box, a {
+			display: block;
+
+			&:hover, &:focus {
+				color: #760fc3;
+			}
+		}
+
+		.notfound-box, a {
+			display: block;
+    }
+  }
+
+  .notfound-banner {
+		display: block;
+		max-width: 500px;
+		margin-left: auto;
+		margin-right: auto;
+		height: auto;
+		position: relative;
+
+		img {
+	 		width: 100%;
+	 		border: none;
+	 	}
+  }
+  
+  .notfound-button {
+      position: absolute;
+      top: 25%; left: 25%;
+			background-image: linear-gradient(to bottom, #6c0eb2, #450674 97%);
+			border-radius: 4px;
+			border: none;
+			width: 50%;
+			height: 50%;
+			color: #f8f8f8;
+			cursor: pointer;
+			line-height: 1.4;
+			font-size: 100%;
+			font-family: TTNorms;
+			font-weight: bold;
+	}
 </style>
 
 <div class="container">
-  <h1>404</h1>
-
-  <h3>Page not found :(</h3>
+  <h1>404 - Page Not Found</h1>
+  <div class="notfound-box">
+    <p>Sorry, we couldn't find the page you were looking for. Go back to the home page, or check out some of our most popular content!</p>
+    <div class="notfound-banner">
+      <img src="/assets/images/banner-bg-888x170.png">
+        <a href="/"><button class="notfound-button">Take me home!</button></a>
+    </div>
+  </div>
+  <div class="index-container">
+    <a class="index-box" href="/getting-started/index/">
+      <img style="border:none;" src="/assets/logos/icons-docs/getting-started-index.svg" />
+      <label class="index-title">Getting started</label>
+      <p>Sign up to Bitrise, add a new app, and start a build! </p>
+    </a>
+    <a class="index-box" href="/code-signing/ios-code-signing/code-signing/">
+      <img style="border:none;" src="/assets/logos/icons-docs/code-signing-index.svg" />
+      <label class="index-title">iOS code signing</label>
+      <p>Upload your code signing files, and export your app.</p>
+    </a>
+    <a class="index-box" href="/deploy/deployment-index/">
+      <img style="border:none;" src="/assets/logos/icons-docs/ship-index.svg" />
+      <label class="index-title">Deployment</label>
+      <p>Check out Bitrise's fast and efficient deployment solutions!</p>
+    </a>
+  </div>
+  <div class="index-container">
+    <a class="index-box" href="/builds/triggering-builds-index/">
+      <img style="border:none;" src="/assets/logos/icons-docs/trigger-index.svg" />
+      <label class="index-title">Triggering builds</label>
+      <p>Learn about how to trigger builds on Bitrise.</p>
+    </a>
+    <a class="index-box" href="/steps-and-workflows/steps-and-workflows-index/">
+      <img style="border:none;" src="/assets/logos/icons-docs/workflow-index.svg" />
+      <label class="index-title">Steps and Workflows</label>
+      <p>Steps and Workflows are the heart of how Bitrise works.</p>
+    </a>
+    <a class="index-box" href="/testing/testing-index/">
+      <img style="border:none;" src="/assets/logos/icons-docs/testing-index.svg" />
+      <label class="index-title">Testing</label>
+      <p>Run and analyze tests with our Steps and the Test Report add-on.</p>
+    </a>
+  </div>
 </div>
