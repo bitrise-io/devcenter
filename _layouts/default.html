@@ -119,13 +119,6 @@
         {% endif %}
         {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
         {% include related_articles.html %}
-        <div class="banner">
-          {% if current_article.url == "/" %}
-          <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-            <div class="deploy-text">Try Bitrise for free!</div>
-            <a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Create an account</button></a>
-          {% endif %}
-        </div>
       </main>
       {% capture itemClass %}toc-entry.toc-h%level%{% endcapture %}
       {% if content contains "h2"  %}
