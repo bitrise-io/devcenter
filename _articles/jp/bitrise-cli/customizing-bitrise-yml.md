@@ -43,8 +43,7 @@ Let's see some use cases when you would benefit from customizing `bitrise.yml` t
              is_expand: false
              meta:
                audit: # used by the Audited Workflow Editor imagenary tool, that works like WFE but saves the modifier and modification date, and displays it
-                 published_at:
-last_modified_at: 2018.09.12.
+                 last_modified_at: 2018.09.12.
                  last_modifier: Jane Doe
 
 Of course this use case works only if your customized tool is shared with your team in your company's own intranet or if it's handled by some software.
