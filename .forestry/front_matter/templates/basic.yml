@@ -7,6 +7,16 @@ fields:
   type: text
   hidden: false
   default: ''
+- name: last_modified_at
+  type: datetime
+  description: 'Enter the date when you modify a page. This will be displayed at the
+    bottom. '
+  config:
+    required: false
+    date_format: 
+    time_format: 
+    display_utc: false
+  label: Date of the last modification
 - name: redirect_from
   label: Redirect from
   type: list
