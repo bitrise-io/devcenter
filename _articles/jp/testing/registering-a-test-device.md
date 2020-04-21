@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: テストデバイスの登録
 menu:
   testing-main:

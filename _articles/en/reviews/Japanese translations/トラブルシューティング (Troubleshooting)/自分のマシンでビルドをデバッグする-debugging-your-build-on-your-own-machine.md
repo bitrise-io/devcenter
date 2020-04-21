@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: 自分のマシンでビルドをデバッグする (Debugging your build on your own machine)
 redirect_from: []

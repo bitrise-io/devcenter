@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: codesigndocを使わないコード署名ファイルのエクスポート
 menu:
   ios-code-signing:

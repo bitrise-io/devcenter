@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Tips and tricks
 redirect_from: []
 menu:

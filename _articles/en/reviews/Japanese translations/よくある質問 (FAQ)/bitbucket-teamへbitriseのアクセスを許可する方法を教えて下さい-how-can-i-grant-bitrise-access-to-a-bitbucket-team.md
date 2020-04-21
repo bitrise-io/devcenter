@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: Bitbucket TeamへBitriseのアクセスを許可する方法を教えて下さい。(How can I grant Bitrise access to
   a Bitbucket team?)

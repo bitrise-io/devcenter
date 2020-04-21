@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: Android App Bundleの生成とデプロイ (Generating and deploying Android app bundles)
 redirect_from: []

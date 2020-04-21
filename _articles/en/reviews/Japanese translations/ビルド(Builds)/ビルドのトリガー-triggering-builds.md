@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: トリガーマップを使ったビルドのトリガー (Using the Trigger Map to trigger builds)
 redirect_from: []
 date: 2019-03-29 14:40:16 +0000

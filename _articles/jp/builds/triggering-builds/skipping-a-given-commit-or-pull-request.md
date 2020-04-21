@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: Skipping a given commit or pull request
 redirect_from: []

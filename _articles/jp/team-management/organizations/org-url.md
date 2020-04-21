@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 組織のURLの表示
 menu:
   organizations:

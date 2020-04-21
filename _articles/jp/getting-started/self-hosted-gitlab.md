@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 自前でホストしたGitlabインスタンスの接続
 redirect_from:
 - "/jp/getting-started/index/getting-started/signing-up/self-hosted-gitlab"

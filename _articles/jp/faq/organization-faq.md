@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 組織についてのFAQ
 menu:
   faq-main:

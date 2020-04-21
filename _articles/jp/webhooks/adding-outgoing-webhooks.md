@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Outgoing webhookの追加
 menu:
   webhooks-main:

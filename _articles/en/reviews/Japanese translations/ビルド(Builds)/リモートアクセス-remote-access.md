@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: リモートアクセス (Remote access)
 redirect_from: []

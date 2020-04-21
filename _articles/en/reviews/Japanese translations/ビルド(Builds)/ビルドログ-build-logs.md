@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: ビルドログ (Build logs)
 redirect_from: []
 date: 2019-04-09 10:09:27 +0000

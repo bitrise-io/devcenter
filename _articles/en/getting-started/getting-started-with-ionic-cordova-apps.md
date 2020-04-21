@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Getting started with Ionic/Cordova apps
 date: 2018-11-16T14:33:48.000+00:00
 redirect_from: []

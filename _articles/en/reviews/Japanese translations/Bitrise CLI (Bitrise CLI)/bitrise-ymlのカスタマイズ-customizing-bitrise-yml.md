@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: bitrise.ymlのカスタマイズ (Customizing bitrise.yml)
 redirect_from: []
@@ -38,7 +40,8 @@ published: false
              is_expand: false
              meta:
                audit: # used by the Audited Workflow Editor imagenary tool, that works like WFE but saves the modifier and modification date, and displays it
-                 last_modified_at: 2018.09.12.
+                 published_at:
+last_modified_at: 2018.09.12.
                  last_modifier: Jane Doe
 
 このユースケースは、カスタマイズ済みのツールがご自身の会社のイントラネットでチームと共有されている時、もしくはそのツールがいくつかのソフトウェアによって扱われている場合にのみ機能します。

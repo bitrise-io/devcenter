@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Triggering builds with Pull Requests
 tag:
 - triggers

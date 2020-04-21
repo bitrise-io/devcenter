@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: ローカルでのBitriseプロジェクトの初期設定 (Initializing a Bitrise project locally)
 redirect_from: []

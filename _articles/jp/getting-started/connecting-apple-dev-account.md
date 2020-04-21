@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Apple DeveloperアカウントをBitriseと連携させる
 redirect_from:
 - "/jp/signing-up/connecting-apple-dev-account"

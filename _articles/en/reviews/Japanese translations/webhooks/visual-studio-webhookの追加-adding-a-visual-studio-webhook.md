@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Visual Studio webhookの追加 (Adding a Visual Studio webhook)
 redirect_from: []
 date: 2019-03-28 13:58:24 +0000

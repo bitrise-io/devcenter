@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: GitLab webhookの追加 (Adding a GitLab webhook)
 redirect_from: []
 date: 2019-03-27 14:53:58 +0000

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: ビルドの番号付けとアプリバージョン管理 (Build numbering and app versioning)
 redirect_from: []
 date: 2019-04-02 14:40:06 +0000

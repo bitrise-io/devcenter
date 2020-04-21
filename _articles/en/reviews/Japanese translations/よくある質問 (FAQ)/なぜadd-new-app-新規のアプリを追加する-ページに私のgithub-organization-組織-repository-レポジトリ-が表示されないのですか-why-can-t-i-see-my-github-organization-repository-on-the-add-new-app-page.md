@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: なぜAdd New App (新規のアプリを追加する) ページに私のGitHub organization (組織) / repository (レポジトリ)
   が表示されないのですか？ (Why can't I see my GitHub organization / repository on the Add New

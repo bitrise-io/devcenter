@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 'Visual Studio webhookの追加 '
 menu:
   webhooks-main:

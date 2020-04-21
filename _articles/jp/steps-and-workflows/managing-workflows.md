@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: ワークフローの連結
 menu:
   steps-workflows-main:

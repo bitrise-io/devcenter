@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: ビルドトリガーが動かない (Build trigger does not work)
 redirect_from: []

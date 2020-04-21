@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: コードセキュリティ
 menu:
   getting-started-main:

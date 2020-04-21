@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Why does my build take longer on Bitrise than on my machine?
 tag:
 - builds

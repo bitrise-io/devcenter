@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Adding a new app
 redirect_from:
 - https://devcenter.bitrise.io/adding-a-new-app/setting-up-configuration/#skipping-the-scanner-full-manual-configuration

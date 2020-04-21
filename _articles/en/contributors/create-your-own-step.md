@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 'Developing a new Step '
 tag:
 - cli

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Xamarinアプリのデプロイ
 redirect_from:
 - "/xamarin/deploy-your-xamarin-app/"

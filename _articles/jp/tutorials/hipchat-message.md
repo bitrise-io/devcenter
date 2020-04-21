@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: HipChat message with build status and details
 menu:
   tutorials-main:

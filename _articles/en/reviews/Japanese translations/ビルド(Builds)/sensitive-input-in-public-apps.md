@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 公開アプリの機密インプット (Sensitive input in public apps)
 redirect_from:
 - sensitive-input-field/#set-a-sensitive-input-in-a-step/

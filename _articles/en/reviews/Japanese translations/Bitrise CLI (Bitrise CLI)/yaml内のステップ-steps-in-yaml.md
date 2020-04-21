@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: YAML内のステップ (Steps in YAML)
 redirect_from: []

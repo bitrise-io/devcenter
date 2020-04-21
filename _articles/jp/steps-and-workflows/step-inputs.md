@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Stepの入力項目
 menu:
   steps-workflows-main:

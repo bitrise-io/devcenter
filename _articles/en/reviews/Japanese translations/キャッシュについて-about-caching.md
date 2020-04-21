@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: キャッシュについて (About Caching)
 redirect_from: []
 date: 2019-04-17 13:52:08 +0000

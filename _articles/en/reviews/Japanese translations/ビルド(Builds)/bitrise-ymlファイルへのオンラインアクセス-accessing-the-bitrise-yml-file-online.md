@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: bitrise.ymlファイルへのオンラインアクセス（Accessing the bitrise.yml file online）
 redirect_from: []
 date: 2019-04-05 13:52:49 +0000

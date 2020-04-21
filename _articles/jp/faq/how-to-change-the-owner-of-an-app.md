@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: アプリケーションの所有者の変更はどのようにするの?
 menu:
   faq-main:

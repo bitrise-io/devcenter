@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: IPAの再署名
 menu:
   ios-code-signing:
