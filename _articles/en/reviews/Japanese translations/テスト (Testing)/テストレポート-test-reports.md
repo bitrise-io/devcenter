@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: テストレポート (Test Reports)
 redirect_from: []

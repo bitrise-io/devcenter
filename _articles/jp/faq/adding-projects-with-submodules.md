@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Can I add projects with submodules or with private repo dependencies?
 menu:
   faq-main:

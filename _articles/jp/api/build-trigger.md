@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Triggering and aborting builds
 menu:
   api-main:

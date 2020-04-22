@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: プルリクエストビルドの承認 (Approving Pull Request builds)
 redirect_from: []

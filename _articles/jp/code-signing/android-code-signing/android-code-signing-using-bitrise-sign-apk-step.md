@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Android Signステップを使ったAndroidコード署名
 redirect_from:
 - "/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/"

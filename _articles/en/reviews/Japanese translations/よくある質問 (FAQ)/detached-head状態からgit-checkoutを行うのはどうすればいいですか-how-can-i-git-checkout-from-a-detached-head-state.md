@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: Detached HEAD状態からgit checkoutを行うのはどうすればいいですか？(How can I git checkout from a
   detached head state?)

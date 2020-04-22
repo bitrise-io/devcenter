@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: Setting up OneLogin SAML SSO for Bitrise
 redirect_from: []

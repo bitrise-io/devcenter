@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: シングルトリガーで並列ビルドを開始
 menu:
   triggering-builds:

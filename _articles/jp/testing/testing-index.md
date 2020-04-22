@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Testing
 redirect_from: []
 menu:

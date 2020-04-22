@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Adding a new team member
 tag:
 - teams

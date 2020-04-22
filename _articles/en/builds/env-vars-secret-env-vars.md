@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Secrets and Env Vars
 tag:
 - secrets

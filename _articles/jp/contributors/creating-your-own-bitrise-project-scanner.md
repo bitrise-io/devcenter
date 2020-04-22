@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 独自のBitriseプロジェクトスキャナを作成する
 date: 2018-12-13T11:31:09.000+00:00
 redirect_from: []

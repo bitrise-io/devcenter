@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Flutterアプリの開始
 date: 2019-03-08T15:17:45.000+00:00
 redirect_from: []

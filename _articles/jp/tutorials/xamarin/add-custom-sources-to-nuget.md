@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: NuGetへカスタムソースの追加
 redirect_from:
 - "/xamarin/add-custom-sources-to-nuget/"

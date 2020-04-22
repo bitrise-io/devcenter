@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Reporting the build status to your Git hosting provider
 tag:
 - triggers

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Deploying an iOS app to Bitrise.io
 date: '2018-10-26T12:37:47.000+00:00'
 redirect_from: []

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: GitHub ChecksでBitrise Checksを行う (Bitrise Checks on GitHub Checks)
 redirect_from: []

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 最初のビルドを実行する
 menu:
   bitrise-cli-main:

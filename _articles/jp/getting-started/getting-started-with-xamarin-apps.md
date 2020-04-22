@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Xamarinアプリの開始
 date: 2018-10-19T11:49:28.000+00:00
 menu:

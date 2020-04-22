@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Gradle上でのAndroidコード署名
 menu:
   android-code-signing:

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Frequent Android issues
 redirect_from:
 - "/android/frequent-android-issues/"

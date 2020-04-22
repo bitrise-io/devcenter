@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 単一ワークフローでの複数のフレーバーAPKの生成とデプロイ
 date: 2018-10-26T12:56:08.000+00:00
 redirect_from: []

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: Bitrise OTA アプリのデプロイ (Bitrise OTA App Deployment)
 redirect_from: []

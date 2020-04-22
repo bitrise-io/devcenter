@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: オンラインでのビルドアーティファクト
 menu:
   builds-main:

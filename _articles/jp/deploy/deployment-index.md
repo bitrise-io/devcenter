@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Deployment
 redirect_from: []
 menu:

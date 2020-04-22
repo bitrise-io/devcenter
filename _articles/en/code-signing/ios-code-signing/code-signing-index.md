@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: iOS code signing
 redirect_from:
 - "/code-signing/ios-code-signing/code-signing/"

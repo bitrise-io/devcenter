@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: "ビルドのトリガーとアボート\t(Triggering and aborting builds)"
 redirect_from: []

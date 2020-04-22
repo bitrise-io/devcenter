@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: The Android/Linux/Docker environment
 tag:
 - android

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Xcodeテストの実行
 redirect_from: []
 date: 2019-02-22T15:33:24.000+00:00

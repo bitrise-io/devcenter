@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 利用可能なスタック
 redirect_from:
 - "/docs/available-stacks"

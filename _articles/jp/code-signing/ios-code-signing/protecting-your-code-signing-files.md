@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: コード署名ファイルの保護
 menu:
   ios-code-signing:

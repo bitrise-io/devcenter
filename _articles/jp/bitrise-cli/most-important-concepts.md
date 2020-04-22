@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Most important concepts
 redirect_from:
 - "/bitrise-cli/most-important-concepts.md"
