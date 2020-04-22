@@ -9,7 +9,8 @@ fields:
   default: ''
 - name: last_modified_at
   type: datetime
-  description: 'When you update a page, enter the date in a YYYY-MM-DD format. Once deployed, this will be displayed after the title of the page.'
+  description: When you update a page, enter the date in a YYYY-MM-DD format. Once
+    deployed, this will be displayed after the title of the page.
   config:
     required: false
     date_format: 
@@ -18,7 +19,9 @@ fields:
   label: Date of the last modification
 - name: published_at
   type: datetime
-  description: 'When you publish a new page for the first time, enter the date in a YYYY-MM-DD format. Once deployed, this will be displayed after the title of the page, as long as the last_modified_at value in the frontmatter is empty.'
+  description: When you publish a new page for the first time, enter the date in a
+    YYYY-MM-DD format. Once deployed, this will be displayed after the title of the
+    page, as long as the last_modified_at value in the frontmatter is empty.
   config:
     required: false
     date_format: 
