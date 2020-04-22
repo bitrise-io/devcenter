@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 組織の請求と購読の管理
 menu:
   organizations:

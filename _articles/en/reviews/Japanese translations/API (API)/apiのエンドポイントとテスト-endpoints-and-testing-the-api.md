@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: APIのエンドポイントとテスト (Endpoints and testing the API)
 redirect_from: []

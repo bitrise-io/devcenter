@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: デフォルトワークフロー
 menu:
   steps-workflows-main:

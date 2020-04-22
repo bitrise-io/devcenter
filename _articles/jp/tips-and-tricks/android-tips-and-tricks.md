@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Androidに関するヒント
 redirect_from: []
 menu:

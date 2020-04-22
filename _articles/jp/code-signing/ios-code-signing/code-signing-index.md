@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Bitrise上でのiOSコード署名
 redirect_from:
 - "/jp/code-signing/ios-code-signing/code-signing/"

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Xamarin Androidコード署名 (Xamarin Android code signing)
 redirect_from: []
 date: 2019-04-17 08:21:13 +0000

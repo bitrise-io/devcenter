@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Basics of bitrise.yml
 menu:
   bitrise-cli-main:

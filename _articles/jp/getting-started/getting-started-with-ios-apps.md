@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: iOSアプリの開始
 menu:
   getting-started-main:

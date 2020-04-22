@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Xcodeの問題点のリスト
 redirect_from:
 - "/ios/known-xcode-issues/"

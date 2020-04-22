@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: ワークフロー
 redirect_from:
 - "/getting-started/builds-and-workflows/getting-started/getting-started-workflows"

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Androidアプリのデプロイ (Deploying Android apps)
 redirect_from: []
 published: false

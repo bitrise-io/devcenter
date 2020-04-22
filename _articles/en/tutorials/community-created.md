@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Community Created Tutorials
 menu:
   tutorials-main:

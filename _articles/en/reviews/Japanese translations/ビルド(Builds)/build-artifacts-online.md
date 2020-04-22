@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: オンラインでのビルドアーティファクト (Build artifacts online)
 redirect_from: []
 date: 2019-04-05 11:31:23 +0000

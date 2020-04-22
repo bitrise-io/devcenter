@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: keystoreファイルのダウンロード (Downloading a keystore file)
 redirect_from: []
 date: 2019-04-09 10:31:20 +0000

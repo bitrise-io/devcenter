@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Frequent iOS issues
 redirect_from:
 - "/ios/frequent-ios-issues/"

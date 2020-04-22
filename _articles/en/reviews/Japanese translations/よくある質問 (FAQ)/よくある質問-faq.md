@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: よくある質問 (FAQ)
 redirect_from: []

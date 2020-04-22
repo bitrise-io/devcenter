@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Androidアプリの開始
 redirect_from:
 - "/getting-started/Getting-started-with-Android-apps/"

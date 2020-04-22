@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Efficient CI/CD Workflow for iOS development
 menu:
   tips-and-tricks-main:

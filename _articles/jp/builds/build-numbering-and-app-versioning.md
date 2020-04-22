@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 'ビルドの番号付けとアプリバージョン管理 '
 redirect_from:
 - "/builds/build-numbering-and-app-versioning/builds/build-numbering-and-app-versioning"

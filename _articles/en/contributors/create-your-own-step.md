@@ -1,4 +1,6 @@
 ---
+published_at: 2020-03-04
+last_modified_at:
 title: 'Developing a new Step '
 tag:
 - cli

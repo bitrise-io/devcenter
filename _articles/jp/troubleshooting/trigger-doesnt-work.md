@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: ビルドトリガーが機能しない
 menu:
   troubleshooting-main:

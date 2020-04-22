@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: Dangerを使ったテストのactivity summaryが見つからない (No activity summaries found for test
   with Danger)

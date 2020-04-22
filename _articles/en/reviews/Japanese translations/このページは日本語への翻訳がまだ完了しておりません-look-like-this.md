@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: このページは日本語への翻訳がまだ完了しておりません (Look like this)
 date: 2019-03-08 13:48:50 +0000
 published: false

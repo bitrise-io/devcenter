@@ -1,5 +1,7 @@
 ---
-title: 'Authentication '
+published_at: 
+last_modified_at:
+title: 'Authentication'
 redirect_from: []
 date: '2019-03-29T16:46:07.000+00:00'
 tag:
@@ -13,13 +15,12 @@ menu:
     title: Authentication
 
 ---
-## Authentication
 
 The current API supports only one type of authentication: user generated **Personal Access Tokens**. Organizations do not have their own access tokens.
 
 **Every API endpoint requires authentication**, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io "https://api.bitrise.io")).
 
-### Acquiring a Personal Access Token
+## Acquiring a Personal Access Token
 
 1. Sign in on [bitrise.io](https://www.bitrise.io).
 2. Go to your **Account Settings** page.
@@ -29,7 +30,7 @@ The current API supports only one type of authentication: user generated **Perso
 
 {% include message_box.html type="important" title="Availability of the generated token" content=" The generated token is shown only once: when it's generated. There's no way to see the token value again! You can of course generate as many Access Tokens as you like, and delete the ones you don't need anymore. "%}
 
-### Authenticating with the API
+## Authenticating with the API
 
 To provide the required access token, you have to add a **HEADER** to your requests, with the key `Authorization` and the value of your token.
 

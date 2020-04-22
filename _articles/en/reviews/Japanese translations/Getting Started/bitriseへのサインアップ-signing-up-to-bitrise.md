@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: Bitriseへのサインアップ (Signing up to Bitrise)
 redirect_from:

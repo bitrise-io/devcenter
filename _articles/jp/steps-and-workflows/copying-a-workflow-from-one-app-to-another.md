@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: あるアプリから別のアプリへのワークフローのコピー
 redirect_from: []

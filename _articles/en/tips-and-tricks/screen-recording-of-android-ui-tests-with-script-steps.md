@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Screen recording of Android UI tests with Script Steps
 redirect_from: []
 date: 2019-01-30T13:47:29.000+00:00

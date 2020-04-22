@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Visual Studio App Centerでのテストの実行
 redirect_from:
 - "/xamarin/run-your-tests-in-the-app-center"

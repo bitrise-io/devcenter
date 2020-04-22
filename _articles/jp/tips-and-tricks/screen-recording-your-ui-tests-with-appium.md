@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: Screen recording your UI tests with Appium
 redirect_from: []

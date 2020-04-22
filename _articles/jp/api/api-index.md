@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: API
 redirect_from: "/jp/api/v0.1/"
 menu:

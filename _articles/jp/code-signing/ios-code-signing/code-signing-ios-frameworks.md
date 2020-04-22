@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: iOSフレームワークのコード署名
 menu:
   ios-code-signing:

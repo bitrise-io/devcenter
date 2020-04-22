@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Deploy to TestFairy with Bitrise
 menu:
   deploy-main:

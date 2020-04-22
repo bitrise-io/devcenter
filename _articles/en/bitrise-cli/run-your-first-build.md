@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Running your first local build
 tag:
 - cli

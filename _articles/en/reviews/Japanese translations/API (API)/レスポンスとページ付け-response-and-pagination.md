@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: レスポンスとページ付け (Response and pagination)
 redirect_from: []

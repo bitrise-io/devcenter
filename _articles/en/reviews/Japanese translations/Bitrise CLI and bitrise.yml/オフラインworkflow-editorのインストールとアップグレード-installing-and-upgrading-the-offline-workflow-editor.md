@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: オフラインWorkflow Editorのインストールとアップグレード (Installing and upgrading the offline Workflow
   Editor)

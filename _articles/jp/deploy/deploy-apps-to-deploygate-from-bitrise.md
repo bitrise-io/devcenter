@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Bitrise から DeployGate へアプリをデプロイする
 menu:
   deploy-main:

@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Available stacks
 redirect_from:
 - "/docs/available-stacks"

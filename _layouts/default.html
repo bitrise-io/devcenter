@@ -117,6 +117,13 @@
             </div>
           {% endif %}
         {% endif %}
+        {% if current_article.url != "/" %}
+          {% if current_article.last_modified_at %}
+            <div class="last_modified_at">Last updated on {{ current_article.last_modified_at | date: "%Y-%m-%d" }}.</div>
+          {% elsif current_article.published_at %}
+            <div class="last_modified_at">Published on {{ current_article.published_at | date: "%Y-%m-%d" }}.</div>
+          {% endif %}
+        {% endif %}
         {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
         {% include related_articles.html %}
       </main>

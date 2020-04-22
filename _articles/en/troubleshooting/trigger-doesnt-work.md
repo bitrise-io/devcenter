@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Build Trigger does not work
 tag:
 - triggers

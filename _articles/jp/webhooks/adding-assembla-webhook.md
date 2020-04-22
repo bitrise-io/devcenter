@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: Assembla webhookの追加
 menu:
   webhooks-main:

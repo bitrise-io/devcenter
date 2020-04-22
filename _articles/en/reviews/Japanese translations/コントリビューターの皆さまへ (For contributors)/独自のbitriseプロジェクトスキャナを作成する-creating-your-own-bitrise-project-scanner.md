@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 tag: []
 title: 独自のBitriseプロジェクトスキャナを作成する (Creating your own Bitrise project scanner)
 redirect_from: []

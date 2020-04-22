@@ -1,4 +1,6 @@
 ---
+published_at:
+last_modified_at:
 title: 手動でビルドを開始する
 redirect_from:
 - "/builds/triggering-builds/starting-builds-manually/"
