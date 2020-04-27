@@ -69,6 +69,22 @@ Our virtual machines have different amounts of free space to use, depending on t
 | xcode-9.4.x | /dev/disk0s2 | 199 | 55 |
 | xcode-edge | /dev/disk1s5 | 200 | 59 |
 
+Freeing up disk space
+
+If you need additional disk space, you can always delete tools and resources that you do not use. For example, if your app does not need Android SDK tools, you can remove them. Just add a Script Step to your Workflow with the appropriate commands:
+
+```bash
+sudo rm -rf ~/Library/Developer/Xamarin/android-sdk-macosx
+sudo rm -rf /usr/local/share/android-sdk 
+sudo rm -rf /opt/android-ndk`
+```
+
+Similarly, feel free to delete iOS simulators that you do not use:
+
+```bash
+sudo rm -rf /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\\ 10.3.simruntime/
+```
+
 ## Customization
 
 You can find the macOS base box setup guide and automation scripts we use for building our
