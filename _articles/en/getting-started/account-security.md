@@ -1,6 +1,6 @@
 ---
-published_at:
-last_modified_at: 2020.12.12
+published_at: 
+last_modified_at: 2019-08-07 22:00:00 +0000
 title: Account security
 redirect_from: []
 tag:
@@ -9,6 +9,7 @@ tag:
 description: Bitrise supports two-factor authentication for every user, and SAML SSO
   for organizations. Use Personal Access Tokens to authenticate your account to the
   Bitrise API.
+summary: ''
 menu:
   getting-started-main:
     weight: 15
