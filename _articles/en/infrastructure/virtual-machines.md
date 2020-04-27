@@ -1,6 +1,6 @@
 ---
-published_at:
-last_modified_at:
+published_at: 2020-04-26 22:00:00 +0000
+last_modified_at: 2020-04-27 13:00:00 +0000
 title: Virtual machines
 tag:
 - infrastructure
@@ -43,6 +43,47 @@ For the **Xcode** and the **Visual Studio for Mac** stacks:
 * 207.254.0.248/29
 
 {% include message_box.html type="important" title="IP subnet" content="Please note that the last entry in the list of Xcode stacks is an IP subnet. The entire subnet has to be whitelisted in order to be able to guarantee a seamless build experience!"%}
+
+## Storage space
+
+Our virtual machines have different amounts of free space to use, depending on the stack type. The table summarises the data - please keep in mind that these numbers are subject to change, as different versions of pre-installed tools and resources take up a varying amount of space on the machines.
+
+
+| Stack Name | Filesystem | Size (GB) | Free (GB) |  
+| --- | --- | --- | --- |
+| linuxandroidlts | /dev/loop0 | 160 | 113 |
+| linuxandroidlts | /dev/sda1(bitrise) | 194 | 28 |
+| linuxandroid | /dev/loop0 | 160 | 130 |
+| linuxandroid | /dev/sda1(bitrise) | 194 | 28 |
+| vs4mac-beta | /dev/disk1s5 | 200 | 50 |
+| vs4mac-pre | /dev/disk1s1 | 200 | 32 |
+| vs4mac-stable | /dev/disk1s5 | 200 | 51 |
+| xcode-10.1.x | /dev/disk0s2 | 199 | 61 |
+| xcode-10.2.x | /dev/disk1s1 | 200 | 61 |
+| xcode-10.3.x | /dev/disk1s1 | 200 | 60 |
+| xcode-11.0.x | /dev/disk1s1 | 200 | 50 |
+| xcode-11.1.x | /dev/disk1s1 | 200 | 48 |
+| xcode-11.2.x | /dev/disk1s1 | 200 | 23 |
+| xcode-11.3.x | /dev/disk1s1 | 200 | 25 |
+| xcode-11.4.x | /dev/disk1s5 | 200 | 50 |
+| xcode-9.4.x | /dev/disk0s2 | 199 | 55 |
+| xcode-edge | /dev/disk1s5 | 200 | 59 |
+
+### Freeing up disk space
+
+If you need additional disk space, you can always delete tools and resources that you do not use. For example, if your app does not need Android SDK tools, you can remove them. Just add a Script Step to your Workflow with the appropriate commands:
+
+```bash
+sudo rm -rf ~/Library/Developer/Xamarin/android-sdk-macosx
+sudo rm -rf /usr/local/share/android-sdk 
+sudo rm -rf /opt/android-ndk`
+```
+
+Similarly, feel free to delete iOS simulators that you do not use:
+
+```bash
+sudo rm -rf /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\\ 10.3.simruntime/
+```
 
 ## Customization
 
