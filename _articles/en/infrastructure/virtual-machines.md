@@ -1,6 +1,6 @@
 ---
-published_at: 
-last_modified_at: 
+published_at: 2020-04-26 22:00:00 +0000
+last_modified_at: 2020-04-26 22:00:00 +0000
 title: Virtual machines
 tag:
 - infrastructure
