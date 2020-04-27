@@ -46,10 +46,11 @@ For the **Xcode** and the **Visual Studio for Mac** stacks:
 
 ## Storage space
 
-Our virtual machines have different amounts of free space to use, depending on the stack type. The table summarises the data - please keep in mind that these numbers are subject to change, as different versions of pre-installed tools and resources take up a varying amount of space on the machines. 
+Our virtual machines have different amounts of free space to use, depending on the stack type. The table summarises the data - please keep in mind that these numbers are subject to change, as different versions of pre-installed tools and resources take up a varying amount of space on the machines.
 
+
+| Stack Name | Filesystem | Size (GB) | Free (GB) |  
 | --- | --- | --- | --- |
-| Stack Name | Filesystem | Size (GB) | Free (GB) |
 | linuxandroidlts | /dev/loop0 | 160 | 113 |
 | linuxandroidlts | /dev/sda1(bitrise) | 194 | 28 |
 | linuxandroid | /dev/loop0 | 160 | 130 |
