@@ -69,7 +69,7 @@ Our virtual machines have different amounts of free space to use, depending on t
 | xcode-9.4.x | /dev/disk0s2 | 199 | 55 |
 | xcode-edge | /dev/disk1s5 | 200 | 59 |
 
-Freeing up disk space
+### Freeing up disk space
 
 If you need additional disk space, you can always delete tools and resources that you do not use. For example, if your app does not need Android SDK tools, you can remove them. Just add a Script Step to your Workflow with the appropriate commands:
 
