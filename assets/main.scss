@@ -670,9 +670,7 @@ main.content {
 	.changelog-content-container {
 		display: flex;
 		flex-direction: column;
-		border-left: solid 1px #dddddd;
-		border-right: solid 1px #dddddd;
-		border-bottom: solid 1px #dddddd;
+
 	}
 
 	.changelog-content {
@@ -681,6 +679,9 @@ main.content {
 		justify-content: flex-start;
 		padding: 2rem;
 		line-height: 1;
+		border-left: solid 1px #dddddd;
+		border-right: solid 1px #dddddd;
+		border-bottom: solid 1px #dddddd;
 
 		p {
 			color: #767676;
@@ -699,10 +700,30 @@ main.content {
 	}
 
 	.changelog-content-title {
-		display: block;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
 		font-size: 1.6rem;
 		font-weight: bold;
 		color: #767676;
+
+		title {
+			display: block;
+			margin-right: 0.75rem;
+		}
+	}
+
+	.new-article-label {
+		display: inline-flex;
+		align-items: center;
+		border: solid 0.5px #b88adb;
+		border-radius: 12px;
+		background-color: #f8f0ff;
+		color: #683d87;
+		padding: 0.5rem;
+		font-size: 1.1rem;
+		font-weight: bold;
 	}
 
 .dropdown {
@@ -1156,10 +1177,8 @@ h4 {
 	border-left: solid 4px #8c8c8c;
 	border-radius: 8px;
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);
-	padding-left: 8px;
-	padding-right: 8px;
+	padding: 1rem;
 	margin-bottom: 2rem;
-	width: 50%;
 
 	&:before {
 		content: url(/assets/logos/icons-docs/last_updated.svg);
