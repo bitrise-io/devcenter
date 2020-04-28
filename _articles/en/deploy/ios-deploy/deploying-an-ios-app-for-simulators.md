@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Deploying an iOS app for simulators
 date: '2018-11-10T14:34:02.000+00:00'

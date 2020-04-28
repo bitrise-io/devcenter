@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at: 2020-04-25
 title: Reporting the build status to your Git hosting provider
 tag:

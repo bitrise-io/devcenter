@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: GitHub/GitLab/Bitbucketでビルドステータスが動作しない (Build status indicator on GitHub/GitLab/Bitbucket

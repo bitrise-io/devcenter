@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: webhookの追加
 redirect_from: "/jp/jp/webhooks/index/"

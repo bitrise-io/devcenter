@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: Deploying apps to Applivery

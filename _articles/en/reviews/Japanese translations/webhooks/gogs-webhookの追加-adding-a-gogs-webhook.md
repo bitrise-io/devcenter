@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Gogs webhookの追加(Adding a Gogs webhook)
 redirect_from: []

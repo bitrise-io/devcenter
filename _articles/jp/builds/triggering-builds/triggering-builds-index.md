@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: ビルドのトリガー
 redirect_from: "/jp/jp/builds/triggering-builds/triggering-builds/"

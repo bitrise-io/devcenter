@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: 特定のコミットやプルリクエストをスキップする (Skipping a given commit or pull request)

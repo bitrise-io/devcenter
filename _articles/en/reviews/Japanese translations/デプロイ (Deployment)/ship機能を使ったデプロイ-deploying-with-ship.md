@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: Ship機能を使ったデプロイ (Deploying with Ship)

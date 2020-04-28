@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Skipping a given commit or Pull Request
 redirect_from:

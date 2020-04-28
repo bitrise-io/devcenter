@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: 招待に関するよくある質問 (Invitation FAQ)

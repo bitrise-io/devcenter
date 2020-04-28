@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: IonicとCordovaプロジェクトのコード署名 (Code signing with Ionic and Cordova projects)
 redirect_from: []

@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: 最重要コンセプト (Most important concepts)
 redirect_from: []

@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: キャッシュについて (About Caching)
 redirect_from: []

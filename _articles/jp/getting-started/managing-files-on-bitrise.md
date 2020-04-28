@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Bitrise上のファイル管理
 date: 2018-12-03T10:05:49.000+00:00

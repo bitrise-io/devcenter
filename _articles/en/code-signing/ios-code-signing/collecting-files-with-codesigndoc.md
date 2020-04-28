@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Collecting and exporting code signing files with codesigndoc
 tag:

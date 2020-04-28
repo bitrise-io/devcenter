@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: NuGetパッケージの復元
 redirect_from:

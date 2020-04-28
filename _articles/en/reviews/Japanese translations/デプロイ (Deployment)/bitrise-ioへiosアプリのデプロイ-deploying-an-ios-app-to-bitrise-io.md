@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Bitrise.ioへiOSアプリのデプロイ (Deploying an iOS app to Bitrise.io)
 redirect_from: []

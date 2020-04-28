@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: 組織内のSAML SSO
 date: 2019-03-08T10:46:00.000+00:00

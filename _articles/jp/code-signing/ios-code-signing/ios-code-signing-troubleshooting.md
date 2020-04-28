@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: iOSコード署名 - トラブルシューティング
 menu:

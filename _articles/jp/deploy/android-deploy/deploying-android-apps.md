@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Androidアプリのデプロイ
 date: 2018-10-26T13:00:41.000+00:00

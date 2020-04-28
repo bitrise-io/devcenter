@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Builds
 redirect_from: "/jp/getting-started/builds-and-workflows/"

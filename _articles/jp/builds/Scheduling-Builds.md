@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: ビルドをスケジューリングする
 redirect_from:

@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Deploying Android apps
 date: '2018-10-26T13:00:41.000+00:00'

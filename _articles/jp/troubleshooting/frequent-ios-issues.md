@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: よくあるiOS上の問題
 redirect_from:

@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: GitHub Organization (組織) へBitriseのアクセスを許可する方法を教えて下さい。 (How to grant Bitrise

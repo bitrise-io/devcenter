@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Bitrise tools
 redirect_from: "/tools/bitrise-tools/"

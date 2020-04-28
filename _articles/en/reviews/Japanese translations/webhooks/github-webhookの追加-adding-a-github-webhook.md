@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: GitHub webhookの追加(Adding a GitHub webhook)
 redirect_from: []

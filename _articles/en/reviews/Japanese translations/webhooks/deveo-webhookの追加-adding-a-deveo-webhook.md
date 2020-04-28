@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Deveo webhookの追加（Adding a Deveo webhook）
 redirect_from: []

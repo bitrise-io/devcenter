@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Exporting code signing files without codesigndoc
 tag:

@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Webhook トラブルシューティング（Webhook Troubleshooting）
 redirect_from: []

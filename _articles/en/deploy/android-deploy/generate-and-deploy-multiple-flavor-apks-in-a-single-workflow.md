@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Generate and deploy multiple flavor APKs in a single workflow
 date: '2018-10-26T12:56:08.000+00:00'

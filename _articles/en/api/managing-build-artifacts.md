@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Managing build artifacts
 redirect_from: "/api/Managing%20build%20artifacts/"

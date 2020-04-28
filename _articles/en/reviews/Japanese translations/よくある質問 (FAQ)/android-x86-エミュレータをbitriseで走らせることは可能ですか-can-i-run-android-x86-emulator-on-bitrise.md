@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: Android x86 エミュレータをBitriseで走らせることは可能ですか？ (Can I run Android x86 Emulator on

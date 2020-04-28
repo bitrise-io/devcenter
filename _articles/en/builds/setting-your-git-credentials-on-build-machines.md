@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Setting your Git credentials on build machines
 redirect_from: []

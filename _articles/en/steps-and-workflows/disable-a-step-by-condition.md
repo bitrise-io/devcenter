@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Enabling or disabling a Step conditionally
 redirect_from: "/tips-and-tricks/disable-a-step-by-condition/"

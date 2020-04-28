@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: ビルドの番号付けとアプリバージョン管理 (Build numbering and app versioning)
 redirect_from: []

@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Docker
 redirect_from: "/jp/tutorials/docker/index/"

@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: シミュレータ用iOSアプリのデプロイ (Deploying an iOS app for simulators)
 redirect_from: []

@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Getting started with Flutter apps
 redirect_from: []

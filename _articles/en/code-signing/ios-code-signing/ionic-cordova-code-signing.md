@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Code signing with Ionic and Cordova projects
 tag:

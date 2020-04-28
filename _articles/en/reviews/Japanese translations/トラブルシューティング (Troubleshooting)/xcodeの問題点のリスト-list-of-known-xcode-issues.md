@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: Xcodeの問題点のリスト (List of known Xcode issues)

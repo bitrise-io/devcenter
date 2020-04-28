@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: アプリのオーナーを変更する方法を教えて下さい。(How to change the owner of an app?)

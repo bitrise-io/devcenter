@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Visual Studio App Centerでのテストの実行
 redirect_from:

@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Deploying an iOS app to iTunes Connect
 date: '2018-10-26T12:41:22.000+00:00'

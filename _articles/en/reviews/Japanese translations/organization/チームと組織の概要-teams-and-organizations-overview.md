@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: チームと組織の概要(Teams and organizations overview)
 redirect_from: []

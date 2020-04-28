@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: レポジトリへ依存性をコミットしたほうがいいですか？(Should I commit my dependencies into my repository?)

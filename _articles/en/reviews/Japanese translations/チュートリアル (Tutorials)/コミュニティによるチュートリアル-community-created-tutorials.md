@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: コミュニティによるチュートリアル (Community Created Tutorials)

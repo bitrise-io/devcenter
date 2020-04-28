@@ -1,6 +1,5 @@
 ---
 changelog: Detailed data has been added about the amount of free space available on the different types of Bitrise virtual machines. 
-published_at: 
 last_modified_at: 2020-04-27 13:00:00 +0000
 title: Virtual machines
 tag:

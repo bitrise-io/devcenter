@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 title: Deploy to TestFairy with Bitrise
 redirect_from: "/tutorials/deploy/deploy-to-testfairy-with-bitrise/"

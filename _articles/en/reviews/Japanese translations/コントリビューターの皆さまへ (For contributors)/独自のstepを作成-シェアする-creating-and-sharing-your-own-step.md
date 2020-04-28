@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at:
 tag: []
 title: 独自のStepを作成・シェアする (Creating and sharing your own Step)

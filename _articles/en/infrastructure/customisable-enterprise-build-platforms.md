@@ -1,6 +1,5 @@
 ---
 changelog:
-published_at:
 last_modified_at: 2020-04-27
 tag:
 - infrastructure
