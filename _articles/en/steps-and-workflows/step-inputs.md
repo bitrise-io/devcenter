@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: "Read about the new options for version locking: you can lock a Step to either a major or a minor version on the GUI of the Workflow Editor. The Step will be automatically updated to the release of your selected major or minor version."
+last_modified_at: 2020-04-02
 title: Step versions and inputs
 tag:
 - steps

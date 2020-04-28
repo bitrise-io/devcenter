@@ -48,7 +48,7 @@ Shipを開くには２つの方法があります。
 
 Ship上でアプリを公開するには：
 
-* [エクスポーズ済みのワークフロー](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship)を最低1つ含むアプリをビルドする
+* [エクスポーズ済みのワークフロー](/jp/deploy/ship/#ship-にワークフローのアーティファクトを公開)を最低1つ含むアプリをビルドする
 * **Settings**ページにて公開に関する設定を行う
 * **Publish**ボタンをクリック
 
@@ -98,7 +98,7 @@ Shipにワークフローのアーティファクトをエクスポーズする�
 
 パブリックインストールページのリンクまたはQRコードを送信するには：
 
-1. インストールが可能なファイルを作成するワークフローを[エクスポーズ](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship)して、Bitriseでワークフローを実行します。
+1. インストールが可能なファイルを作成するワークフローを[エクスポーズ](/jp/deploy/ship/#exposing-a-workflows-artifacts-to-ship)して、Bitriseでワークフローを実行します。
 2. アプリの選択済みビルドバージョンの**Details**ページを開きます。
 3. 右側にパブリックインストールページのリンクまたはQRコードがあることを確認します。
 4. いずれかをコピーして、(メールなどを使って)関係者に送信します 。
@@ -133,7 +133,7 @@ iOS用アプリの公開を設定するには：
 1. アプリのShipページを開き、右上端の**Settings**をクリックします。
 2. **General**タブに進みます。
 3. **iOS Settings**セクションに進みます。
-4. 公開したい.ipaを作成するワークフローを[エクスポーズ](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship)して、そのワークフローをBitriseで実行します。
+4. 公開したい.ipaを作成するワークフローを[エクスポーズ](/jp/deploy/ship/#exposing-a-workflows-artifacts-to-ship)して、そのワークフローをBitriseで実行します。
 5. 使用になりたいコード署名ファイルを選択します。  
    エクスポート方法に関して、.ipaファイル作成に使用した適切なファイルを選ぶように心がけてください。例えば、`app-store`方法を使って.ipaがエクスポートされた場合、App Storeプロビジョニングプロファイルと配布用証明書 (コード署名ID) を選んでください。
 6. **Apple Developer Accountのメールアドレス**と**App Specific Password (アプリ専用パスワード)** を入力してApp Storeで公開できるようにします。
@@ -159,7 +159,7 @@ Andoroidアプリの公開を設定するには：
 
 1. Shipのページを開いて右上端の**Settings**をクリックします。
 2. **Android Settings**セクションへ進みます。
-3. 公開したいAPKを作成するワークフローを[エクスポーズ](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship)します。
+3. 公開したいAPKを作成するワークフローを[エクスポーズ](/jp/deploy/ship/#exposing-a-workflows-artifacts-to-ship)します。
 4. Google Play Consoleでの公開に使用する[Track](https://developers.google.com/android-publisher/tracks)を入力します。
 5. 複数のモジュールがAndroidアプリに含まれている場合、**Module**の空欄に正確なモジュールを入力します。  
    ![](/img/module-android-settings.png)

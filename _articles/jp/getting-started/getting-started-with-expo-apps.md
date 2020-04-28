@@ -31,7 +31,7 @@ First, let's see how to add a React Native Expo app to [bitrise.io](https://www.
 
  1. Log into [bitrise.io](https://www.bitrise.io/).
  2. Click **Add a new app**.
- 3. Select the privacy setting of your app: **private** and [**public**](https://mpxzvqn7ysfysw.preview.forestry.io/getting-started/adding-a-new-app/public-apps/).
+ 3. Select the privacy setting of your app: **private** and [**public**](/getting-started/adding-a-new-app/public-apps/).
  4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
  5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
  6. Type the name of the branch that includes your project’s configuration - master, for example, - then click **Next**.
@@ -109,7 +109,7 @@ Let’s see how to fill them out!
 
 {% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options! "%}
 
-![](https://mpxzvqn7ysfysw.preview.forestry.io/img/keystore.png)
+![](/img/keystore.png)
 
 The Android chunk of code signing is done. Let's continue with iOS!
 
