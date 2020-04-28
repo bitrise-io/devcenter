@@ -25,8 +25,7 @@ fields:
   label: Date of the last modification
 - name: new_article
   type: toggle
-  description: If the article is new and is being published for the first time, set this value to TRUE.
-  If you modify an existing, already published article, make sure to set this value to FALSE.
+  description: If the article is new and is being published for the first time, set this value to TRUE. If you modify an existing, already published article, make sure to set this value to FALSE.
   label: Is it a new article? 
 - name: redirect_from
   label: Redirect from
