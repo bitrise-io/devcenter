@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: iOSアプリのデプロイについて (Introduction to deploying iOS apps)
 redirect_from: []

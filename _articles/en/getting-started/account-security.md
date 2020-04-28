@@ -1,6 +1,6 @@
 ---
-published_at: 
-last_modified_at: 2019-08-07 22:00:00 +0000
+changelog:
+last_modified_at:
 title: Account security
 redirect_from: []
 tag:

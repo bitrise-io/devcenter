@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at: 2020-02-20
 title: Getting started with iOS apps
 date: '2018-09-12T15:27:42.000+00:00'

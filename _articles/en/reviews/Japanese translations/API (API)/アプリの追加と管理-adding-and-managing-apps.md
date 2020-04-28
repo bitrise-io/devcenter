@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: アプリの追加と管理 (Adding and managing apps)

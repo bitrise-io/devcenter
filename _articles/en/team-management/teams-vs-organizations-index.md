@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Teams and organizations
 redirect_from: "/team-management/teams-vs-organizations/"

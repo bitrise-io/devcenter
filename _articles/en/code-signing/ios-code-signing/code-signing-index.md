@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: iOS code signing
 redirect_from:

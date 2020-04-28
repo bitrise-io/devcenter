@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: List of known Xcode issues
 redirect_from:

@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: "ビルドのトリガーとアボート\t(Triggering and aborting builds)"

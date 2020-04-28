@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: bitrise.ymlファイルへのオンラインアクセス（Accessing the bitrise.yml file online）
 redirect_from: []

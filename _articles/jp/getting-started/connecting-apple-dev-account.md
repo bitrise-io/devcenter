@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Apple DeveloperアカウントをBitriseと連携させる
 redirect_from:

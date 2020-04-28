@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: レスポンスとページ付け (Response and pagination)

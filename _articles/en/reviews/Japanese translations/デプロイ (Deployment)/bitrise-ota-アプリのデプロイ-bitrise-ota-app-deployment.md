@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: Bitrise OTA アプリのデプロイ (Bitrise OTA App Deployment)

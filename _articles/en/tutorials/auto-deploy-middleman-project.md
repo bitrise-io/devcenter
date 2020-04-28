@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Deploying your Middleman website with Bitrise
 menu:

@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: GitHub/GitLab/BitbucketアカウントをBitriseと連携させる
 redirect_from:

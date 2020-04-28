@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: アプリチームのユーザーのロール
 date: 2019-03-01T15:05:34.000+00:00

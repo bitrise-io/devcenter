@@ -1,6 +1,6 @@
 ---
-published_at:
-last_modified_at:
+changelog: "New tutorial video about build caching: learn about using the dedicated Steps and managing your build caches on the website."
+last_modified_at: 2020-04-17
 title: Caching
 tag:
 - 'builds '
@@ -16,6 +16,9 @@ menu:
     weight: 1
 
 ---
+
+<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/o8iiHMUmAws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
 Every single Bitrise build runs on a clean virtual machine. This means that normally, without caching, everything must be done from scratch on the virtual machine, including, for example, installing your dependencies.
 
 With caching, you can preserve the contents of selected files and directories, including installed dependencies. And it’s very easy: you just need to use two Steps in your Workflow. The first, called **Bitrise.io Cache: Push**, stores your content in the build cache; the other, called **Bitrise.io Cache: Pull**, pulls the cache the next time you run a build.

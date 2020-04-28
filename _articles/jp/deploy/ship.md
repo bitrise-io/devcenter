@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: Ship でデプロイ
@@ -50,7 +50,7 @@ Ship を開くには2つのオプションがあります。
 
 Ship でアプリを公開するために必要なこと:
 
-* 少なくとも1つの [公開されたワークフロー](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) を持つアプリをビルドします。
+* 少なくとも1つの [公開されたワークフロー](/jp/deploy/ship/#ship-にワークフローのアーティファクトを公開) を持つアプリをビルドします。
 * **Settings** ページで公開設定をします。
 * **Publish** ボタンを押します。
 
@@ -91,7 +91,7 @@ Ship にワークフローのアーティファクトを公開するには:
 * QR コードを送信します。スキャンするとアプリの公開されたインストールページに移動します。
 * デバイスから Ship にログインして直接インストールします。
 
-{% include message_box.html type="important" title="パブリックインストールページを有効にする" content="インストールページを公開するには、[公開された](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) ワークフローの **Deploy to Bitrise.io** ステップを正しく構成する必要があります。ステップの **Enable public page for the App?** を `true` に設定する必要があります。"%}
+{% include message_box.html type="important" title="パブリックインストールページを有効にする" content="インストールページを公開するには、[公開された](/jp/deploy/ship/#ship-にワークフローのアーティファクトを公開) ワークフローの **Deploy to Bitrise.io** ステップを正しく構成する必要があります。ステップの **Enable public page for the App?** を `true` に設定する必要があります。"%}
 
 {% include message_box.html type="important" title="アーティファクトタイプ" content="パブリックインストールページはすべてのタイプのアーティファクトで利用できるわけではありません。
 
@@ -100,7 +100,7 @@ Ship にワークフローのアーティファクトを公開するには:
 
 パブリックインストールページへのリンクや QR コードを送信するには:
 
-1. インストール可能なファイルを生成するワークフローを [公開](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) し、Bitrise でそのワークフローを実行します。
+1. インストール可能なファイルを生成するワークフローを [公開](/jp/deploy/ship/#ship-にワークフローのアーティファクトを公開) し、Bitrise でそのワークフローを実行します。
 2. アプリの選択されたビルドバージョンの **Details** ページを開きます。
 3. 右側にある Public Install Page link または QR コードを見つけます。
 4. 必要なものをコピーしてステークホルダー送信します（たとえばメールで）。
@@ -114,7 +114,7 @@ Ship から直接アプリをインストールするには:
 
 ### オンラインでアプリを公開
 
-<div><button type="button" class="collapsible"><p>iOS アプリの公開</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="アプリのビルド" content="Ship に [公開された](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) ワークフローでビルドされている場合だけ Ship でアプリを公開することができます。iOS アプリの場合、ワークフローに **Xcode Archive & Export for iOS** ステップと **Deploy to Bitrise.io** ステップが含まれている必要があります。**Xcode Archive & Export for iOS** ステップが `Release` 設定でプロジェクトをアーカイブとエクスポートすることを確認してください。"%}
+<div><button type="button" class="collapsible"><p>iOS アプリの公開</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="アプリのビルド" content="Ship に [公開された](/jp/deploy/ship/#ship-にワークフローのアーティファクトを公開) ワークフローでビルドされている場合だけ Ship でアプリを公開することができます。iOS アプリの場合、ワークフローに **Xcode Archive & Export for iOS** ステップと **Deploy to Bitrise.io** ステップが含まれている必要があります。**Xcode Archive & Export for iOS** ステップが `Release` 設定でプロジェクトをアーカイブとエクスポートすることを確認してください。"%}
 
 {% include message_box.html type="note" title="カスタムステップで `.xcarchive.zip` ファイル" content="iOS アプリの場合、**Deploy to Bitrise.io** ステップは Ship にエクスポートする `.xcarchive.zip` ファイルを探します。**Xcode Archive & Export for iOS** ステップを使いたくない場合は、次のことを確認する必要があります。
 
@@ -135,7 +135,7 @@ iOS アプリ公開の構成をするには:
 1. アプリの Ship ページを開いて右上の **Settings** をクリックします。
 2. **General** タブに移動します。
 3. **iOS Settings** セクションに移動します。
-4. 公開したい .ipa を生成するワークフローを [公開](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) し、Bitrise でワークフローを実行します。
+4. 公開したい .ipa を生成するワークフローを [公開](/jp/deploy/ship/#ship-にワークフローのアーティファクトを公開) し、Bitrise でワークフローを実行します。
 5. 使いたいコード署名ファイルを選択します。
 
    .ipa ファイルを生成するには、適切なエクスポートメソッドを選択してください。たとえば、.ipa ファイルが `app-store` メソッドを使ってエクスポートされた場合、App Store プロビジョニングファイルと配布用証明書を選択します（code signing identity）。
@@ -162,7 +162,7 @@ Google Play Console への Android アプリ公開を構成するためにでき
 
 1. アプリの Ship ページを開いて右上の **Settings** をクリックします。
 2. **Android Settings** セクションに移動します。
-3. 公開したい APK を生成するワークフローを [Expose](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) します。
+3. 公開したい APK を生成するワークフローを [Expose](/jp/deploy/ship/#ship-にワークフローのアーティファクトを公開) します。
 4. Google Play Console に公開するために使用する [track](https://developers.google.com/android-publisher/tracks) を入力します。
 5. Android アプリに複数のモジュールがある場合は、**Module** に正確なモジュール名を入力します。 ![](/img/module-android-settings.png)
 6. 適切なキーストアファイルとサービスアカウント JSON ファイルを選択します。

@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: Bitriseへの貢献 (How to contribute Bitrise)

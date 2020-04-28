@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Bitrise OTA App Deployment
 redirect_from: "/tutorials/deploy/bitrise-app-deployment/"

@@ -1,6 +1,6 @@
 ---
-published_at:
-last_modified_at:
+changelog:
+last_modified_at: 2020-04-23
 title: Adding a new app
 redirect_from:
 - "/getting-started/adding-a-new-app/connecting-a-repository/"

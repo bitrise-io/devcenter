@@ -7,6 +7,12 @@ fields:
   type: text
   hidden: false
   default: ''
+- name: changelog
+  label: Content changelog
+  type: text
+  hidden: false
+  default: ''
+  description: When you update a page, add a maximum of two sentences to indicate what changed in the content. This will appear on the home page of DevCenter. 
 - name: last_modified_at
   type: datetime
   description: When you update a page, enter the date, using the built-in calendar.
@@ -17,17 +23,11 @@ fields:
     time_format: 
     display_utc: false
   label: Date of the last modification
-- name: published_at
-  type: datetime
-  description: When you publish a new page for the first time, enter the date, using
-    the built-in calendar. Once deployed, this will be displayed after the title of
-    the page, as long as the last_modified_at value in the frontmatter is empty.
-  config:
-    required: false
-    date_format: 
-    time_format: 
-    display_utc: false
-  label: Date of the first publication
+- name: new_article
+  type: toggle
+  description: If the article is new and is being published for the first time, set this value to TRUE.
+  If you modify an existing, already published article, make sure to set this value to FALSE.
+  label: Is it a new article? 
 - name: redirect_from
   label: Redirect from
   type: list

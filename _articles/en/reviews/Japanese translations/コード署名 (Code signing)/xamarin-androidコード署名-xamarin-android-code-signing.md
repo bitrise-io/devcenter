@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Xamarin Androidコード署名 (Xamarin Android code signing)
 redirect_from: []

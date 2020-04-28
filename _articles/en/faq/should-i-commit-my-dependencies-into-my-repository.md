@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Should I commit my dependencies into my repository?
 menu:

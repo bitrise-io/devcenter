@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: NuGetへカスタムソースの追加
 redirect_from:

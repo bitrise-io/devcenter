@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Signing an .ipa with multiple code signing identities
 tag:
