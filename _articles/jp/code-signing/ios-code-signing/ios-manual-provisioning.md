@@ -1,4 +1,5 @@
 ---
+changelog:
 published_at:
 last_modified_at:
 title: iOSコード署名ファイルの管理 - 手動プロビジョニング

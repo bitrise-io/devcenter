@@ -1,4 +1,5 @@
 ---
+changelog:
 published_at:
 last_modified_at:
 title: シングルトリガーで並列ビルドを開始（Starting parallel builds with a single trigger）

@@ -1,4 +1,5 @@
 ---
+changelog:
 published_at:
 last_modified_at:
 title: Xcodeの問題点のリスト

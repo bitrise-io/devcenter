@@ -1,4 +1,5 @@
 ---
+changelog:
 published_at:
 last_modified_at:
 title: 手動でビルドを開始する

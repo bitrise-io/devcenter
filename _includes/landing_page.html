@@ -61,3 +61,28 @@
     <p>Check out Bitrise's fast and efficient deployment solution!</p>
   </a>
 </div>
+<div class="changelog-container">
+{% assign maxArticleCounter = 0 %}
+{% assign maxArticles = 8 %}
+{% for article in site.articles %}
+  {% capture nowunix %}{{ 'now' | date: '%s' }}{% endcapture %}
+  {% capture modified %}{{ article.last_modified_at | date: '%s' }}{% endcapture %}
+  {% capture fortnight_ago %}{{ 'now' | date: '%s' | minus: 1209600 }}{% endcapture %}
+  {% if modified > fortnight_ago and article.changelog %}
+  {% assign maxArticleCounter = maxArticleCounter | plus: 1 %}
+  {% if maxArticleCounter == 1 %}
+  <title class="changelog-container-title">Latest changes in the docs</title>
+  {% endif %}
+  <div class="changelog-content-container">
+      <div class="changelog-content">
+        <title class="changelog-content-title">{{article.last_modified_at | date: "%Y-%m-%d" }}: {{ article.title }}</title>
+        <p>{{ article.changelog | strip_html | truncatewords: 30 }}</p>
+        <a href="{{ article.url }}">Read the full article &gt;&gt;</a>
+      </div>
+  </div>
+  {% if maxArticleCounter >= maxArticles %}
+    {% break %}
+  {% endif %}
+  {% endif %}
+{% endfor %}
+</div>

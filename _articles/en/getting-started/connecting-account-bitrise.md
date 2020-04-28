@@ -1,4 +1,5 @@
 ---
+changelog:
 published_at:
 last_modified_at:
 title: Connecting your GitHub/GitLab/Bitbucket account to Bitrise

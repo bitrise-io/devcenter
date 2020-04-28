@@ -1,4 +1,5 @@
 ---
+changelog:
 published_at:
 last_modified_at:
 title: このページは日本語への翻訳がまだ完了しておりません (Look like this)

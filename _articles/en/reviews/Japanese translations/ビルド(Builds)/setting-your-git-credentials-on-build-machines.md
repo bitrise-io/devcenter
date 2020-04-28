@@ -1,4 +1,5 @@
 ---
+changelog:
 published_at:
 last_modified_at:
 title: ビルドマシンでGitの認証情報を設定(Setting your Git credentials on build machines)

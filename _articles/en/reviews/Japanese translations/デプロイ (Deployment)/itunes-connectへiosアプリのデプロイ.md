@@ -1,4 +1,5 @@
 ---
+changelog:
 published_at:
 last_modified_at:
 title: iTunes ConnectへiOSアプリのデプロイ (Deploying an iOS app to iTunes Connect)

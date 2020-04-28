@@ -1,4 +1,5 @@
 ---
+changelog:
 published_at:
 last_modified_at:
 title: Xamarin Androidコード署名 (Xamarin Android code signing)

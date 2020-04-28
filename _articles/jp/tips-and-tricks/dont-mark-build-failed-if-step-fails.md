@@ -1,4 +1,5 @@
 ---
+changelog:
 published_at:
 last_modified_at:
 title: 指定されたステップが失敗してもそのビルドを失敗としてマークしないでください(そのステップのエラーを無視してください)
