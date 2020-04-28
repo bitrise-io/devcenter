@@ -33,7 +33,8 @@ fields:
   type: text
   hidden: false
   default: ''
-  description: When you update a page, add a maximum of two sentences to indicate what changed in the content. This will appear on the home page of DevCenter. 
+  description: When you update a page, add a maximum of two sentences to indicate
+    what changed in the content. This will appear on the home page of DevCenter.
 - name: tag
   type: tag_list
   default: []
