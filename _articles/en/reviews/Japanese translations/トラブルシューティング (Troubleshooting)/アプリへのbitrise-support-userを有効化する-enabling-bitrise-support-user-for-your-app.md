@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: アプリへのBitrise Support userを有効化する (Enabling Bitrise Support user for your app)

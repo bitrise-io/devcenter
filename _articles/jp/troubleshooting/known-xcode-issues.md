@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Xcodeの問題点のリスト
 redirect_from:

@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: ビルドトリガーが動かない (Build trigger does not work)

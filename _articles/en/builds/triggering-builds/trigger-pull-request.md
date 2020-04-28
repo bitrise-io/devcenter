@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at: 2020-03-12
 title: Triggering builds with Pull Requests
 tag:

@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: 'ビルドの番号付けとアプリバージョン管理 '
 redirect_from:

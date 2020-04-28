@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: ビルドマシンでGitの認証情報を設定
 redirect_from: []

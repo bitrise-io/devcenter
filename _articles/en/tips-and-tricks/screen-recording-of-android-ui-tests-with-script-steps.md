@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Screen recording of Android UI tests with Script Steps
 redirect_from: []

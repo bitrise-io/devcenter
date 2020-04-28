@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: シングルトリガーで並列ビルドを開始
 menu:

@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: 通知設定　(Configuring Notifications)
 redirect_from: []

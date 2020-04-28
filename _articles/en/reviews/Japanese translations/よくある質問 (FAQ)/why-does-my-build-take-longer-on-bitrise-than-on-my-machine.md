@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: 私のマシンでのビルドよりBitriseでのビルド時間のほうが長いのはどうしてですか？ (Why does my build take longer on

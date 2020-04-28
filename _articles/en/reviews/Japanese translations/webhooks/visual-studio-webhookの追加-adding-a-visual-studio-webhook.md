@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Visual Studio webhookの追加 (Adding a Visual Studio webhook)
 redirect_from: []

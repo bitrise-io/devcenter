@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: 公開アプリの機密インプット (Sensitive input in public apps)
 redirect_from:

@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: 自前でホストしたGitlabインスタンスの接続
 redirect_from:

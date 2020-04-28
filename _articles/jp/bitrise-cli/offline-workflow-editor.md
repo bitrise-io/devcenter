@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Installing and upgrading the offline Workflow Editor
 date: 2018-11-29T13:46:40.000+00:00

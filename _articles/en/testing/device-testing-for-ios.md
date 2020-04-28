@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Device testing for iOS
 date: '2018-10-17T10:31:27.000+00:00'

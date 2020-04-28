@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: keystoreファイルのダウンロード (Downloading a keystore file)
 redirect_from: []

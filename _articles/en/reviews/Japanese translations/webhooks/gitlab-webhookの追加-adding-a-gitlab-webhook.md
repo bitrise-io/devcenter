@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: GitLab webhookの追加 (Adding a GitLab webhook)
 redirect_from: []

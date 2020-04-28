@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: iOSアプリのデプロイについて
 date: 2018-10-26T12:49:32.000+00:00
