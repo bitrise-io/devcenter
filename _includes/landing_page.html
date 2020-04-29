@@ -27,10 +27,8 @@
 </div>
 <div class="changelog-container" id="changelog-container-id">
 {% assign maxArticleCounter = 0 %}
-{% assign maxArticles = 8 %}
+{% assign maxArticles = 12 %}
 {% for article in site.articles %}
-  {% capture nowunix %}{{ 'now' | date: '%s' }}{% endcapture %}
-  {% capture published %}{{ article.published_at | date: '%s' }}{% endcapture %}
   {% capture modified %}{{ article.last_modified_at | date: '%s' }}{% endcapture %}
   {% capture month_ago %}{{ 'now' | date: '%s' | minus: 2419200 }}{% endcapture %}
   {% if modified > month_ago and article.changelog %}
@@ -41,7 +39,7 @@
       <div class="changelog-content">
         <div class="changelog-content-title"><title>{{article.last_modified_at | date: "%Y-%m-%d" }}: {{ article.title }}</title>{% if article.new_article == true %}<label><span class="new-article-label">NEW</span></label>{% endif %}</div>
         <p>{{ article.changelog | strip_html | truncatewords: 30 }}</p>
-        <a href="{{ article.url }}">Read the full article &gt;&gt;</a>
+        <a href="{{ article.url }}">Read "{{ article.title }}" in full &gt;&gt;</a>
       </div>
   {% if maxArticleCounter >= maxArticles %}
     {% break %}
