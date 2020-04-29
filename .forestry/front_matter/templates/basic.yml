@@ -9,7 +9,7 @@ fields:
   default: ''
 - name: changelog
   label: Content changelog
-  type: text
+  type: textarea
   hidden: false
   default: ''
   description: When you update a page, add a maximum of two sentences to indicate
