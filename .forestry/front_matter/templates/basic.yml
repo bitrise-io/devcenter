@@ -84,6 +84,7 @@ pages:
 - _articles/en/builds/build-artifacts-online.md
 - _articles/en/builds/build-logs.md
 - _articles/en/builds/build-numbering-and-app-versioning.md
+- _articles/en/builds/caching/caching-carthage.md
 - _articles/en/builds/caching/caching-homebrew-installers.md
 - _articles/en/builds/configuring-notifications.md
 - _articles/en/builds/env-vars-secret-env-vars.md

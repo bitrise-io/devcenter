@@ -1,20 +1,19 @@
 ---
-changelog: 
-last_modified_at:
+changelog: 'A new guide about how to Carthage dependencies during Bitrise builds,
+  using our dedicated Steps. '
+last_modified_at: 2020-04-29 22:00:00 +0000
 tag:
 - caching
 - carthage
 - ios
 - builds
-title: Caching Carthage dependencies 
+title: Caching Carthage dependencies
 redirect_from: []
 description: ''
-menu:
-  caching:
-    weight: 12
+new_article: true
+summary: ''
 
 ---
-
 Carthage is a dependency manager for macOS and iOS: builds your dependencies and provides you with binary frameworks. On Bitrise, we have a dedicated Step to handle Carthage dependencies in your build, and of course you can cache these dependencies. 
 
 ## Configuring Carthage caching 
