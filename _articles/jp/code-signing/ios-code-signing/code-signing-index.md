@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Bitrise上でのiOSコード署名
 redirect_from:

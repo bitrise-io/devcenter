@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Screen recording your UI tests with Appium
 redirect_from: []

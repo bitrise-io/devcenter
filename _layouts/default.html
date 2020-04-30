@@ -119,9 +119,11 @@
         {% endif %}
         {% if current_article.url != "/" %}
           {% if current_article.last_modified_at %}
-            <div class="last_modified_at">Last updated on {{ current_article.last_modified_at | date: "%Y-%m-%d" }}.</div>
-          {% elsif current_article.published_at %}
-            <div class="last_modified_at">Published on {{ current_article.published_at | date: "%Y-%m-%d" }}.</div>
+            {% if current_article.new_article == true %}
+            <span class="last_modified_at">Published on {{ current_article.last_modified_at | date: "%Y-%m-%d" }}</span>
+            {% else %}
+            <span class="last_modified_at">Last updated on {{ current_article.last_modified_at | date: "%Y-%m-%d" }}</span>
+            {% endif %}
           {% endif %}
         {% endif %}
         {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
@@ -151,4 +153,5 @@
   <script src="/assets/javascripts/search-input.js"></script>
   <script src="/assets/javascripts/side-menu.js"></script>
   <script src="/assets/javascripts/code-collapse.js"></script>
+  <script src="/assets/javascripts/latest-changes.js"></script>
 </html>

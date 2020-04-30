@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Xcodeプロジェクトでの署名付きIPAの作成
 menu:

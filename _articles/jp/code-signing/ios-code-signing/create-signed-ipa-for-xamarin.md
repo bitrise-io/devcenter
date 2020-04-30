@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Xamarinプロジェクトでの署名付きIPAの作成
 menu:

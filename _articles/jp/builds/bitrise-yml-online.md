@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: bitrise.ymlファイルへのオンラインアクセス
 redirect_from:

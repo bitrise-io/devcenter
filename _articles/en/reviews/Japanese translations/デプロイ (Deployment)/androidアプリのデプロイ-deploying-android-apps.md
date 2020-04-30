@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Androidアプリのデプロイ (Deploying Android apps)
 redirect_from: []

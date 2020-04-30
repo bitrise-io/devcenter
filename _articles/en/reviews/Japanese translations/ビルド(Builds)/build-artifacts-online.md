@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: オンラインでのビルドアーティファクト (Build artifacts online)
 redirect_from: []

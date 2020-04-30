@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Sharing and storing workflows among multiple apps
 redirect_from: []

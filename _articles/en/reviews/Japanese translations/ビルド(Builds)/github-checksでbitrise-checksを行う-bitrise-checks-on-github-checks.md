@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: GitHub ChecksでBitrise Checksを行う (Bitrise Checks on GitHub Checks)

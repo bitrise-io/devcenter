@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Managing iOS code signing files - automatic provisioning
 tag:

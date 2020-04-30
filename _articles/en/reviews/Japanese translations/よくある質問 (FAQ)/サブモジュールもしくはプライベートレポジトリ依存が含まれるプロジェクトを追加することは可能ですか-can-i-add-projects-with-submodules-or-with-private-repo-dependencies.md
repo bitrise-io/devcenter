@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: 'サブモジュールもしくはプライベートレポジトリ依存が含まれるプロジェクトを追加することは可能ですか？ (Can I add projects with

@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Gradle上でのAndroidコード署名
 menu:

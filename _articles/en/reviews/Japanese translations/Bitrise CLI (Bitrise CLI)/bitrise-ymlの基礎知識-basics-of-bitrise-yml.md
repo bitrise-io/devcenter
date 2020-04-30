@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: bitrise.ymlの基礎知識 (Basics of bitrise.yml)

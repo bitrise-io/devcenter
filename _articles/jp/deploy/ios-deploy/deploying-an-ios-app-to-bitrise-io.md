@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Bitrise.ioへiOSアプリのデプロイ
 date: 2018-10-26T12:37:47.000+00:00

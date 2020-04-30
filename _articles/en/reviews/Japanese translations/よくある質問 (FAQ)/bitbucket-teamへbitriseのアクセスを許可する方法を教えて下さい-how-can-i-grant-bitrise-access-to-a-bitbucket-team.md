@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: Bitbucket TeamへBitriseのアクセスを許可する方法を教えて下さい。(How can I grant Bitrise access to

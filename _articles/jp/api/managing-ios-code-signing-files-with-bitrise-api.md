@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Managing iOS code signing files
 date: 2019-04-09T06:36:21.000+00:00

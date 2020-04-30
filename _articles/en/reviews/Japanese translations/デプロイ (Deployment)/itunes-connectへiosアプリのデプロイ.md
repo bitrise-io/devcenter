@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: iTunes ConnectへiOSアプリのデプロイ (Deploying an iOS app to iTunes Connect)
 redirect_from: []

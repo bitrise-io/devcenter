@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: BitriseからDeployGateへアプリのデプロイ (Deploy apps to DeployGate from Bitrise)

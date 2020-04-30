@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: SSHキーペアの生成方法を教えてください。
 menu:

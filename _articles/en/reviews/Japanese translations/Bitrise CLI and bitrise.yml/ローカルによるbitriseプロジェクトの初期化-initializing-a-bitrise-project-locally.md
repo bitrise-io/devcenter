@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 tag: []
 title: ローカルによるBitriseプロジェクトの初期化 (Initializing a Bitrise project locally)

@@ -1,5 +1,5 @@
 ---
-published_at:
+changelog:
 last_modified_at:
 title: Slack webhookの追加（Adding a Slack webhook）
 redirect_from: []
