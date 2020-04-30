@@ -199,7 +199,11 @@ header.top-bar {
 
         &.active {
           font-weight: bold;
-        }
+		}
+		
+		&:hover {
+			opacity: 0.7;
+		}
       }
     }
 
@@ -243,6 +247,10 @@ header.top-bar {
 				text-align: center;
 				margin: auto;
 				cursor: pointer;
+
+				&:hover {
+					background-color: #0fc389;
+				}
 
 				.sign-up {
 					color: #ffffff;
@@ -1417,6 +1425,10 @@ nav#my-toc {
 			font-size: 80%;
 			font-family: TTNorms;
 			font-weight: bold;
+
+			&:hover {
+				background-image: linear-gradient(to bottom, #492f5c, #492f5c 100%);
+			}
 		}
 
 		.deploy-text {
