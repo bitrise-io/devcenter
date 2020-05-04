@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: ''
+last_modified_at: 
 title: Managing billing and subscription for organizations
 tag:
 - billing
@@ -10,6 +10,8 @@ description: It's very simple to set up a subscription plan for your organizatio
   even if you skipped that step when creating the organization. You can also modify
   your plan and your billing information at any time if you are the owner of the organization.
 redirect_from: []
+new_article: false
+summary: ''
 menu:
   organizations:
     weight: 3
@@ -36,7 +38,7 @@ Please note that Organizations is a PREMIUM FEATURE. You need to subscribe to an
 
    ![](/img/add-credit-card.png)
 
-   If you do not want to be billed automatically, you do not need to provide a credit card. In this case, contact our support to set up a different payment method, such as wire transfer. This option is available from 5x concurrency on Standard plans or 3x concurrency on Elite plans but only with ANNUAL BILLING.
+   If you do not want to be billed automatically, you do not need to provide a credit card. In this case, contact our support to set up a different payment method, such as wire transfer. This option is available from 6x concurrency on Standard plans or 3x concurrency on Elite plans but only with ANNUAL BILLING.
 5. Fill out the details.
 
    Note that only the owner(s) of the Organization's has any access to the Organization's billing information.
