@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Configuring and connecting to your VPN
 menu:
   tutorials-main:
@@ -13,8 +13,9 @@ Do you require a VPN connection for your build, to be able to connect to your se
 
 To connect to a VPN, you need to:
 
-1. Install and configure the required VPN components.
-2. Connect to the VPN.
+1. Make sure your local network address space does not clash with the [Bitrise virtual machines' internal address space](/infrastructure/virtual-machines/#external-and-internal-ip-addresses) as this can cause an error with the VPN. 
+2. Install and configure the required VPN components.
+3. Connect to the VPN.
 
 You can configure and connect a VPN anywhere in your Workflow - BEFORE you would use the VPN connection, of course. For example, if you require a VPN connection to access your repository, you have to connect before the **Git Clone** Step.
 
