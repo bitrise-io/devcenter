@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: 組織の請求と購読の管理
 menu:
   organizations:
@@ -24,7 +24,7 @@ menu:
    ![Screenshot](/img/team-management/organization/billing-sidebar-menu.png)
 4. 請求情報を入力しなかった場合は、`Billing information`メニューの右側にある`Add credit card`をクリックします。
 
-   ![Screenshot](/img/team-management/organization/add-credit-card.png) If 自動的に請求されたくない場合クレジットカードを提供する必要はありません。この場合、電信送金などの別の支払い方法を設定するには、弊社サポートまでご連絡ください。このオプションは、標準プランでは5倍の並行性から、Eliteプランでは3倍の並行性から利用できますが、**年間請求のみ**です。
+   ![Screenshot](/img/team-management/organization/add-credit-card.png) 自動請求を希望されない場合、クレジットカード情報を入力する必要はありません。この場合、電子送金など他の方法でお支払いしていただけます。このオプションは、Standard Planであれば6コンカレンシー以上、Elite Planであれば3コンカレンシー以上で利用可能ですが、**年間払い**のみの適用です。
 5. 詳細を記入してください。  組織の請求情報にアクセスできるのは、その**組織のオーナーのみ**です。
 
 ### 組織登録プランの設定
