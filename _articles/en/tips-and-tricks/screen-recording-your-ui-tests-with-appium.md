@@ -38,8 +38,4 @@ Let's put this all together!
 
 If all went well, you should be able to view the generated test results on the `APPS & ARTIFACTS` tab of your Build's page.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Integrate Appium UI tests with Bitrise</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Integrate Appium UI tests with Bitrise" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

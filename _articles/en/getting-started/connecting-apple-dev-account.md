@@ -76,8 +76,4 @@ To authorize the app:
 
 If everything goes well, you should be able to use the connected accounts' Apple Developer credentials in the app's builds.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's connect your account to Bitrise!</div>
-<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to Account settings</button></a>
-</div>
+{% include banner.html banner_text="Let's connect your account to Bitrise!" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to Account settings" %}

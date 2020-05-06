@@ -1,6 +1,7 @@
 ---
-changelog:
-last_modified_at:
+changelog: 'New tutorial video has been published about setting up and using remote
+  access to help you debug your builds. '
+last_modified_at: 2020-05-06 14:00:00 +0000
 title: Remote access
 redirect_from: []
 tag:
@@ -8,11 +9,15 @@ tag:
 - troubleshooting
 description: Access our build machines remotely when running a failed build again.
   You can use either SSH or a screenshare app to log in to the build's virtual machine.
+new_article: false
+summary: ''
 menu:
   builds-main:
     weight: 33
 
 ---
+{% include video.html embed_url="https://www.youtube.com/embed/PbKDilX1gB" %}
+
 Remote access allows users to connect to their build's virtual machines via SSH or a screenshare app. A failed build can be rebuilt with remote access enabled to make troubleshooting a lot easier - for example, if the build logs don't provide enough information about the error.
 
 {% include message_box.html type="important" title="Authorization" content="Users who have the **Testers/QA** roles on the app CANNOT use remote access."%}
@@ -58,8 +63,4 @@ And done! You should be able to access the virtual machine where your build is r
 
 And done! You should now be able to access the virtual machine where your build is running.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Connect to a VM with Remote Access</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Connect to a VM with Remote Access" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your app" %}

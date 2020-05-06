@@ -28,7 +28,7 @@ A Xamarin solution file can contain multiple projects. Your solution configurati
 
 ## Adding a Xamarin app
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/fTJDJN9EDlQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/fTJDJN9EDlQ" %}
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](/getting-started/index#signing-up-to-bitrise) on how to connect your [Bitrise account](https://app.bitrise.io/me/profile#/overview) to your account found on a Git service provider. "%}
 
@@ -179,4 +179,4 @@ For your iOS project, set up the correct code signing identity in Visual Studio:
 
 If the build is successful, congratulations - you've just deployed your Xamarin app!
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's add a Xamarin app</div> <a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a> </div>
+{% include banner.html banner_text="Let's add a Xamarin app" url="https://app.bitrise.io/apps/add" button_text="Go to Bitrise now" %}

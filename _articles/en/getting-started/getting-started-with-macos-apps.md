@@ -112,8 +112,4 @@ To deploy to the App Store, you will need more code signing files:
 
 And that's it! Start a build - if everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's add a MacOS app</div>
-<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Let's add a MacOS app" url="https://app.bitrise.io/apps/add" button_text="Go to Bitrise now" %}

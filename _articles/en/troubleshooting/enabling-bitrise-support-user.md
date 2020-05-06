@@ -74,8 +74,4 @@ The Bitrise Support user can't see your **Account information** or any **Billing
 
 The Support user can't see your other apps where the Support user is not enabled.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's enable the Bitrise Support User</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Let's enable the Bitrise Support User" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

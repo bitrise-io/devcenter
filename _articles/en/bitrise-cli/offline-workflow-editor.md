@@ -43,8 +43,4 @@ Here is the overall look and feel:
 
 You can upgrade to the latest version of the Workflow Editor by running `bitrise plugin update workflow-editor` command.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to Bitrise now" %}

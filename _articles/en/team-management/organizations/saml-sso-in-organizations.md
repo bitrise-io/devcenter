@@ -18,7 +18,7 @@ menu:
     weight: 16
 
 ---
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/0LvV5E14Z4c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/0LvV5E14Z4c" %}
 
 Organization members can log into or sign up to Bitrise using their own SAML SSO provider's system. With SAML SSO, Organizations will be able to apply the security guidelines of their SAML SSO provider when accessing their Bitrise Organization.
 
@@ -190,8 +190,4 @@ Please note if you click the **x** next to an Organization member's name, you re
 
 ![](/img/disbale-sso-enabled-status.png)
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's configure SAML SSO to your organization!</div>
-<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your organization</button></a>
-</div>
+{% include banner.html banner_text="Let's configure SAML SSO to your organization!" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your organization" %}

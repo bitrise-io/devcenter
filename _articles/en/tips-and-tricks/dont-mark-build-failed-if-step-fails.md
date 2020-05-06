@@ -26,8 +26,4 @@ An example `script` step which, although fails, it won't "break" the build:
 
 You can find more examples on [GitHub](https://github.com/bitrise-io/bitrise/blob/fec3772ee2287d6e405d908fb9b42367a5751b43/_examples/tutorials/errors-force-run-and-skippable/bitrise.yml).
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Skip Step errors</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Skip Step errors" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

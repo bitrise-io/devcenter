@@ -102,4 +102,4 @@ Congrats! You have successfully enabled the SAML connection! Since SAML SSO has 
 
 If you click **Account settings** and select the **Single Sign-On** tab from the left menu, you should see SAML SSO is enabled for your Organization. Once all Organization members have enabled their SAML SSO connection, you can [enforce SAML SSO on the whole organization with a simple toggle](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization).
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Set up Google SSO!</div> <a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your Organization</button></a> </div>
+{% include banner.html banner_text="Set up Google SSO!" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your Organization" %}

@@ -25,8 +25,4 @@ You can set your code signing files to **Protected** mode: this means they canno
 
 Once you are done, your only option in the file's dropdown menu will be **Delete**.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Protect your code signing files</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Protect your code signing files" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

@@ -116,8 +116,4 @@ To use our dedicated Step, you need either a [Slack webhook URL](https://api.sla
 
 Once you're done, run a build!
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Set up notifications on your app</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Set up notifications on your app" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

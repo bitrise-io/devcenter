@@ -66,8 +66,4 @@ Optionally, you can set one more input if you use the **Automatically manage sig
 
 If `codesigndoc` does not pick up one or more distribution .p12 files, you can export those manually from the **Keychain Access** app, just like you would when you transfer these files between Macs.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Set up automatic provisioning</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Set up automatic provisioning" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

@@ -102,8 +102,4 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 
 Now you should be able to distribute and customize your Android App Bundle in Google Play Store.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's deploy your Android app bundles!</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Let's deploy your Android app bundles!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

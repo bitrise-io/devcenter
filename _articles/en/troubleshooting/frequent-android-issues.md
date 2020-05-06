@@ -103,8 +103,4 @@ into the system's Android SDK Home path under `licenses` directory.
 
 Please see [this section](/tips-and-tricks/android-tips-and-tricks/#how-to-install-an-additional-android-sdk-package).
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's fix your Android builds</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Let's fix your Android builds" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

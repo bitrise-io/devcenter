@@ -92,8 +92,4 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!
 
 * [فیلم آموزشی – ادغام و تحویل مداوم با استفاده از Bitrise](http://www.kamalan.com/1395/05/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-%D8%A7%D8%AF%D8%BA%D8%A7%D9%85-%D9%88-%D8%AA%D8%AD%D9%88%DB%8C%D9%84-%D9%85%D8%AF%D8%A7%D9%88%D9%85-%D8%A8%D8%A7-%D8%A7%D8%B3%D8%AA/) - Video tutorial about CI/CD with Bitrise
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to Bitrise now" %}

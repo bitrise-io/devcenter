@@ -17,7 +17,7 @@ menu:
 
 ---
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/1bUktsyLB3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/1bUktsyLB3M" %}
 
 Most source code hosting service provides a feature to register webhooks. A webhook is basically an URL which will be called on specified events.
 
@@ -88,8 +88,4 @@ You can also set up [outgoing webhooks](/webhooks/adding-outgoing-webhooks/) on 
 See the [Webhook Troubleshooting](/webhooks/troubleshooting) guide
 for webhook related troubleshooting / debugging notes.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's add a webhook!</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard</button></a>
-</div>
+{% include banner.html banner_text="Let's add a webhook!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your Dashboard" %}

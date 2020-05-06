@@ -30,8 +30,8 @@ Here's a couple of introductory videos for how Steps and Workflows work on Bitri
 
 ### Configuring Steps and Workflows for Android apps
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/H_qhsdSo4I8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/H_qhsdSo4I8" %}
 
 ### Configuring Steps and Workflows for iOS apps 
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/1oR_vjGdAo0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/1oR_vjGdAo0" %}

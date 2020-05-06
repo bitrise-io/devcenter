@@ -40,4 +40,4 @@ The **deploy** Workflow is automatically created when adding a new app if you ha
 
 The **deploy** Workflow, however, also contains the Steps that build the project, and, if the build is successful, produces the necessary artifacts for installing the app or deploying it online. For example, an Android project's **deploy** Workflow contains the **Android Build** Step that builds your project with Gradle, and the **Android Sign** Step that creates a signed APK which can be deployed to Google Play or installed on test devices.
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Check out your app's default workflows!</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard</button></a> </div>
+{% include banner.html banner_text="Check out your app's default workflows!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your Dashboard" %}

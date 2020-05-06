@@ -26,8 +26,4 @@ For more information on code signing for Xamarin projects, see [Xamarin Android 
 
 The next time you start a build, your app will be deployed to the service of your choice!
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Deploy your Xamarin app</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Deploy your Xamarin app" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

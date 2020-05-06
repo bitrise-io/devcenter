@@ -89,8 +89,4 @@ If you have one or more regularly scheduled builds, you can:
 4. Click the little gear icon to open the settings menu.
 5. Click **Delete** and then click **Delete** again when prompted for confirmation." %}
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's schedule a build!</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Let's schedule a build!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

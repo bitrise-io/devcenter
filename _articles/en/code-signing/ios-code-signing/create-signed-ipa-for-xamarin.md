@@ -45,8 +45,4 @@ You can **Copy** the existing **Release** configuration in Xamarin Studio, to ha
 
 Don't forget to collect and upload the signing files again if you change code signing configurations in your Xamarin project!
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Sign an.ipa for your Xamarin</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Sign an.ipa for your Xamarin" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

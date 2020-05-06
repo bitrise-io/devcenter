@@ -14,7 +14,7 @@ menu:
     weight: 8
 
 ---
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/MRQRcoI6uBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/MRQRcoI6uBI" %}
 
 You can specify a pattern for your Git Tags to trigger a specific workflow. This is a good way to build and deploy your app in a specific state. And it's very easy to set up!
 
@@ -35,8 +35,4 @@ Note that certain providers, such as GitLab, require Tag Push events to be speci
 
 And you're done!
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Trigger builds with Git tags</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Trigger builds with Git tags" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

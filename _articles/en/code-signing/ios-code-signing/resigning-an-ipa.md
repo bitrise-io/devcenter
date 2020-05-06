@@ -45,8 +45,4 @@ In this example we'll be setting up a Workflow to create two signed .ipa files: 
 
 And you're done! Feel free to add multiple **Export iOS and tvOS Xcode archive** Steps to your Workflows to create multiple different signed .ipa files if necessary.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Sign multiple .ipa files</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Sign multiple .ipa files" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

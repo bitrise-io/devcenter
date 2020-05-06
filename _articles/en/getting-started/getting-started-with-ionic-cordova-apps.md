@@ -15,7 +15,7 @@ You can use Cordova and Ionic frameworks to develop cross-platform apps. Bitrise
 
 ## Adding an Ionic/Cordova app to Bitrise
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/8_kxeNM8hEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/8_kxeNM8hEw" %}
 
  1. Log intoÂ [bitrise.io](https://www.bitrise.io/).
  2. Click the **+** sign on the top menu bar and select **Add app**, which takes you to the [**Create New App**](https://app.bitrise.io/apps/add) page.
@@ -192,8 +192,4 @@ You can share the generated .ipa or APK with your team members using the buildâ€
 
 If your app is properly configured, you can find it deployed to the marketplace of your choice!
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's add an Ionic/Cordova app</div>
-<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Let's add an Ionic/Cordova app" url="https://app.bitrise.io/apps/add" button_text="Go to Bitrise now" %}

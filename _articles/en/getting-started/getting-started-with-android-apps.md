@@ -24,7 +24,7 @@ In this guide, we'll walk you through how to add an Android app to Bitrise, what
 
 ## Adding an Android app to Bitrise
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/IcW0rgfiLsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/IcW0rgfiLsw" %}
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to [connect your Bitrise account](https://app.bitrise.io/me/profile#/overview) to your account found on a Git service provider. "%}
 
@@ -126,8 +126,4 @@ Now let's head back to [Bitrise](https://app.bitrise.io/apps/add) and finish off
 
 That's all! Start or schedule a build and share the URL with external testers or distribute your app on an app store of your choice!
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's add an Android app</div>
-<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Let's add an Android app" url="https://app.bitrise.io/apps/add" button_text="Go to Bitrise now" %}

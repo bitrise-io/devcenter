@@ -46,8 +46,4 @@ but subsequent Xcode steps can use the build cache of the previous Xcode step(s)
 * [Guarding Against Long Compiles](http://khanlou.com/2016/12/guarding-against-long-compiles/)
 * [Stay updated with Swift compiling tips](https://github.com/fastred/Optimizing-Swift-Build-Times)
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's optimize build times</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Let's optimize build times" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

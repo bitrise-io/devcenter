@@ -51,8 +51,4 @@ And that's it! From now on, your invoices will be sent to the new email address.
 
    ![Screenshot](/img/team-management/organization/past-invoices.png)
    
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Manage your organization's invoices</div>
-	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
-</div>
+{% include banner.html banner_text="Manage your organization's invoices" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your profile page" %}

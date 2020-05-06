@@ -150,4 +150,4 @@ replacing it with an environment variable.
 
 {% include message_box.html type="important" title="Referencing another environment variable" content=" If you want to reference another environment variable, even if that one's value includes the $ character, you have to enable this option, or else your reference won't work. In such a case, disable this option where you specify the value with `$` in it, and enable the option everywhere else where you reference that Environment Variable."%}
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's manage Steps in your build!</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your build</button></a> </div>
+{% include banner.html banner_text="Let's manage Steps in your build!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your build" %}

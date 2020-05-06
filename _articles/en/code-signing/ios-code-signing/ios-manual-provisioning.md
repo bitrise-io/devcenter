@@ -49,8 +49,4 @@ If `codesigndoc` does not pick up one or more distribution .p12 files and/or pro
 
 But even if `codesigndoc` does not find all the files, you should upload all the files collected by `codesigndoc**`! The base files collected by `codesigndoc` are essential for your app's code signing: without those it's not possible to create a signed .ipa of the app!
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Set up manual provisioning</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Set up manual provisioning" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

@@ -135,8 +135,4 @@ In the above example, we've created the test report JUnit XML file in the script
 
 If all goes well, you should be able to see your test results on the [Test Reports](/testing/test-reports/) page.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Export test results with Script Steps</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Export test results with Script Steps" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

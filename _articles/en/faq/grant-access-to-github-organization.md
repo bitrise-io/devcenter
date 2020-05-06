@@ -37,8 +37,4 @@ You can see the Organization and its repositories if you go back to [bitrise.io]
 {% include message_box.html type="note" title="Repository is a fork of another private repository" content="
 If the repository is a fork of another private repository which belongs to **(another) Organization**, you have to repeat these steps and grant access for Bitrise for the Organization **which owns the original repository**. This is a GitHub limitation: to be able to access a private repository fork you have to grant access for the service (Bitrise) in both repositories; in the fork and in the original repository/Organization too. "%}
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to Bitrise now" %}

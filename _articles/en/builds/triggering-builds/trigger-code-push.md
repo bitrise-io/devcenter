@@ -15,7 +15,7 @@ menu:
     weight: 2
 
 ---
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/MRQRcoI6uBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/MRQRcoI6uBI" %}
 
 You can set up triggers so that every time code is pushed to the specified branch of your repository, a build is automatically triggered on Bitrise.
 
@@ -37,8 +37,4 @@ By default, every new app you add will have a trigger that triggers a build ever
 
 You're done! From now on, if code gets pushed to the selected branch of your app's repository, Bitrise will trigger a build with the selected workflow!
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's set up a trigger!</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Let's set up a trigger!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

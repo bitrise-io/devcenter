@@ -15,6 +15,7 @@ menu:
     weight: 7
 
 ---
+
 ## bitrise.yml configuration
 
 The configuration format of the Bitrise CLI is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.
@@ -90,8 +91,4 @@ Here are a few workarounds to reduce a long `bitrise.yml`:
 * We generally don't recommend using Environment Variables as configuration files. If, however, the Env Var is not a short key - value pair but a long script, we suggest you store it in a file in your project repository or upload it to the [Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/#uploading-files-to-generic-file-storage-on-bitriseio).
 * Move scripts (especially the long ones) into their repository, and use our Script Runner Step to execute the scripts based the defined path.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Explore Bitrise from your Terminal</div>
-<a target="_blank" href="https://app.bitrise.io/cli"><button class="button">Go to Bitrise CLI</button></a>
-</div>
+{% include banner.html banner_text="Explore Bitrise from your Terminal" url="https://app.bitrise.io/cli" button_text="Go to Bitrise CLI" %}

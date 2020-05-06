@@ -22,6 +22,6 @@ menu:
 * [ステップの開始](/jp/steps-and-workflows/getting-started-steps/)
 * [ワークフロー](/jp/steps-and-workflows/getting-started-workflows/)
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/H_qhsdSo4I8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/H_qhsdSo4I8" %}
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/1oR_vjGdAo0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/1oR_vjGdAo0" %}

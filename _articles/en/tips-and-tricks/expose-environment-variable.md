@@ -120,8 +120,4 @@ Here is an example Workflow which defines an Env Var, and then runs another Work
 
 If you run the `deploy-alpha` Workflow, that will set the `ENV_TYPE` Env Var to `alpha`, then it will run the `deploy` Workflow, which can use that Env Var. In this example, it will simply print its value (the printed text will be: `ENV_TYPE: alpha`).
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Check out your build's Env Vars</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Check out your build's Env Vars" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

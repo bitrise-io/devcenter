@@ -65,8 +65,4 @@ Iterating through all your registered apps:
    * Example: `https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
 5. Repeat this until the `paging` object does not include a `next` property, which means that the page you received was the last one.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Try out our API</div>
-	<a target="_blank" href="https://api-docs.bitrise.io/#/"><button class="button">Go to Bitrise API</button></a>
-</div>
+{% include banner.html banner_text="Try out our API" url="https://api-docs.bitrise.io/#/" button_text="Go to Bitrise API" %}

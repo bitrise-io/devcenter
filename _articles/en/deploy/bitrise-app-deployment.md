@@ -113,8 +113,4 @@ You can disable this toggle any time:
 
 {% include message_box.html type="warning" title="Who can receive the app after disabling?" content=" If you disable this function for the app, then only your app's team members will be able to install the app from Bitrise! Additionally, the **Notify: Emails** option will be ignored and the **Notify: User Roles** users will receive the build's URL instead of the public page's URL."%}
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Distribute your app over the air</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Distribute your app over the air" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

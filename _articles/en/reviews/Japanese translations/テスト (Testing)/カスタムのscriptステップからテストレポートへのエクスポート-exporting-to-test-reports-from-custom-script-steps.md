@@ -129,4 +129,4 @@ Bitrise CLIは全てのテスト結果のためにルートディレクトリを
 
 全てがうまくいくと、[Test Reports](/jp/testing/test-reports/)ページにてテスト結果を見ることができます。
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Export test results with Script Steps</div> <a target="_blank" href="[https://app.bitrise.io/dashboard/builds](https://app.bitrise.io/dashboard/builds "https://app.bitrise.io/dashboard/builds")"><button class="button">Go to your app</button></a> </div>
+{% include banner.html banner_text="Export test results with Script Steps" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

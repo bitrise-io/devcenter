@@ -34,8 +34,4 @@ A Step timeout, defined in seconds, sets a maximum time a Step is allowed to run
 
 And you're done! In our example, the `xcode-test` Step will abort after 120 seconds. Check the build logs to see what caused the Step to exceed the limit.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Now you know everything</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/dashboard/builds" button_text="Go to Bitrise now" %}

@@ -32,4 +32,4 @@ Unfortunately, it can happen that your build triggers do not trigger a build aut
 3. Check if you previously enabled Selective Builds for the app. You can find the option on your app's `Settings` page. With this feature, you can set that a build should be triggered only if certain files or folders have been changed.
 4. Check the status page of your repository's hosting provider to see if there are any known issues.
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's try these on Bitrise</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Dashboard</button></a> </div>
+{% include banner.html banner_text="Let's try these on Bitrise" url="https://app.bitrise.io/dashboard/builds" button_text="Go to Dashboard" %}

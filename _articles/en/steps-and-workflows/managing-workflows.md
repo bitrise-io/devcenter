@@ -14,7 +14,7 @@ menu:
     weight: 17
 
 ---
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/8_Fi5-p96zg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/8_Fi5-p96zg" %}
 
 You can chain multiple Workflows, rearrange the order of Workflows in a chain, as well as rename Workflows at any time in the Bitrise Workflow Editor.
 
@@ -55,8 +55,4 @@ Rename your Workflows at any time you feel necessary: it's quick and simple.
 4. Type the new name then click the check mark to save the new name.
 5. Click **Save** in the top right corner.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Manage your app's Workflows</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Manage your app's Workflows" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

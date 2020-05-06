@@ -87,4 +87,4 @@ You can check if the notifications were successfully sent or not, and you can ch
 
    ![](/img/payload-redelivery.png)
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's add an outgoing webhook!</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard</button></a> </div>
+{% include banner.html banner_text="Let's add an outgoing webhook!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your Dashboard" %}

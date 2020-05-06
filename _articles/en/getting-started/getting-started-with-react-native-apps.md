@@ -24,7 +24,7 @@ You can easily set up and configure your React Native project on [Bitrise](https
 
 ## Adding a React Native app to Bitrise
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/dG5I9qWDbQE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/dG5I9qWDbQE" %}
 
 This flow will guide you through the process of adding your app to Bitrise, connecting your repository, setting up your repository access, selecting a branch and validating your project. Below we highlight some React Native-specific configuration as well.
 
@@ -182,8 +182,4 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 
 And that’s it! [Start a build](/builds/Starting-builds-manually/) and release your Android app to the app store of your choice.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's add a React Native app</div>
-<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Let's add a React Native app" url="https://app.bitrise.io/apps/add" button_text="Go to Bitrise now" %}

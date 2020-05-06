@@ -104,8 +104,4 @@ This is only relevant for iOS apps and for cross-platform apps with iOS versions
 
 For more information on Env Vars, check out [Secrets and Env Vars](/builds/env-vars-secret-env-vars/).
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Now you know everything</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/dashboard/builds" button_text="Go to Bitrise now" %}

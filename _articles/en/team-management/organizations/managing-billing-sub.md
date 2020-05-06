@@ -62,8 +62,4 @@ Setting up a subscription plan for an Organization requires billing information,
 
    For more information, check our [pricing page](https://www.bitrise.io/pricing).
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Manage your organization's billing info</div>
-<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
-</div>
+{% include banner.html banner_text="Manage your organization's billing info" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your profile page" %}
