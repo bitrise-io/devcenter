@@ -1,6 +1,6 @@
 ---
 changelog: 'New tutorial video has been published about setting up and using remote
-  access. '
+  access to help you debug your builds. '
 last_modified_at: 2020-05-06 14:00:00 +0000
 title: Remote access
 redirect_from: []
