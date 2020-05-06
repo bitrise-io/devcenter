@@ -16,7 +16,7 @@ menu:
 
 ---
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/PGh_RPYA45w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/PGh_RPYA45w" %}
 
 Every secret Environment Variable (Env Var) is an Env Var but not every Env Var is a secret Env Var!
 

@@ -20,7 +20,7 @@ menu:
 
 ## bitrise.io に Android アプリを追加する
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/IcW0rgfiLsw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/IcW0rgfiLsw" %}
 
 {% include message_box.html type="note" title="既にBitriseアカウントをお持ちですか?" content="[bitrise.io](https://www.bitrise.io)にサインアップして、Bitriseアカウントにアクセスできることを確認してください。 GitホスティングサービスのアカウントにBitriseアカウントを接続する方法は、[4通り](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)あります。"%}
 

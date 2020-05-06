@@ -15,7 +15,7 @@ menu:
     weight: 2
 
 ---
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/MRQRcoI6uBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/MRQRcoI6uBI" %}
 
 You can set up triggers so that every time code is pushed to the specified branch of your repository, a build is automatically triggered on Bitrise.
 

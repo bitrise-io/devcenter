@@ -17,7 +17,7 @@ menu:
 
 ---
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/1bUktsyLB3M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/1bUktsyLB3M" %}
 
 Most source code hosting service provides a feature to register webhooks. A webhook is basically an URL which will be called on specified events.
 

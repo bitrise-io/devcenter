@@ -14,7 +14,7 @@ menu:
     weight: 17
 
 ---
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/8_Fi5-p96zg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/8_Fi5-p96zg" %}
 
 You can chain multiple Workflows, rearrange the order of Workflows in a chain, as well as rename Workflows at any time in the Bitrise Workflow Editor.
 

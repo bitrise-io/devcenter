@@ -16,7 +16,7 @@ menu:
 
 ---
 
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/GkjVrhBbU-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/GkjVrhBbU-A" %}
 
 There are two types of accounts on Bitrise:
 

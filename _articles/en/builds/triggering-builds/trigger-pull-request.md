@@ -16,7 +16,7 @@ menu:
     weight: 3
 
 ---
-<div class="video"><iframe width="100%" height="100%" src="https://www.youtube.com/embed/MRQRcoI6uBI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{% include video.html embed_url="https://www.youtube.com/embed/MRQRcoI6uBI" %}
 
 You can set up a trigger so that every time a pull request is opened from a specified source branch to a specified target branch of your repository, a build is automatically triggered on Bitrise.
 
