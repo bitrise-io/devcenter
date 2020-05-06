@@ -42,8 +42,4 @@ If you don't already have an account on Appaloosa, it will be created on the go.
 
 **With Bitrise and Appaloosa, you can focus on your mobile app development and we take care of the rest!**
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Publish to Appaloosa</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Publish to Appaloosa" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

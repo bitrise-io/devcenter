@@ -157,8 +157,4 @@ To install iOS apps on a given device, you have to either:
    * If you use automatic provisioning, and the **Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?** input is set to `yes` in the **iOS Auto Provision** Step: check that the device is registered to the developer team on the Apple Developer portal.
 2. Check the logs to see if the **Xcode Archive & Export for iOS** Step used the provisioning profile with the device's UDID in it.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's check out your iOS app</div>
-<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Let's check out your iOS app" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your app" %}

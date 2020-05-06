@@ -33,4 +33,4 @@ Read on to find out more about working with Workflows!
 * [Creating a Workflow](/steps-and-workflows/creating-workflows/)
 * [Managing Workflows](/steps-and-workflows/managing-workflows/)
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's go to your build!</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your build</button></a> </div>
+{% include banner.html banner_text="Let's go to your build!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your build" %}

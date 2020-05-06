@@ -49,8 +49,4 @@ Now you can see your registered test device under [Registered test devices](http
 
 You can remove this registered device any time if you click the orange `x` icon.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Register a device on Bitrise</div>
-<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your profile page</button></a>
-</div>
+{% include banner.html banner_text="Register a device on Bitrise" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your profile page" %}

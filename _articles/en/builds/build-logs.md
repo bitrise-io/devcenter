@@ -80,8 +80,4 @@ Not all team members are authorized to delete logs: only those with either **Adm
 5. Click the **Delete Logs** button.
 6. In the pop-up window, click **Yes**.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">View your build logs</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="View your build logs" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

@@ -34,8 +34,4 @@ Let's go through the latter option in detail:
 
 If all went well, you should see the changes in your repository in your Git provider. The new username and email address will be visible for all future commits you push from your builds to your Git provider.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Set your Git credentials</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Set your Git credentials" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

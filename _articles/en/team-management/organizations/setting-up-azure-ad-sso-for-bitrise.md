@@ -137,8 +137,4 @@ From now on, Organization members will be able to log in exclusively via SAML SS
 
 {% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you'd like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in Organizations](/team-management/organizations/saml-sso-in-organizations/) guide."%}
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Set up Azure AD SSO!</div>
-<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your organization</button></a>
-</div>
+{% include banner.html banner_text="Set up Azure AD SSO!" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your organization" %}

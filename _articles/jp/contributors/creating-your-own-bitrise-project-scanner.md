@@ -232,4 +232,4 @@ An options chain's last `options` cannot have a `value_map`.
    * 新規プロジェクトタイプのビルドとテスト用のツールをリスト化したデフォルトスタックを推奨します。
 7. 必要であれば、新規プロジェクトタイプを使って既存のStepをアップデートすることができます。それらのStepのプルリクエストはスキャナーのプルリクエストとリンクしている必要があります。
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Now you know everything</div> <a target="_blank" href="[https://app.bitrise.io/dashboard/builds](https://app.bitrise.io/dashboard/builds "https://app.bitrise.io/dashboard/builds")"><button class="button">Go to Bitrise now</button></a> </div>
+{% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/dashboard/builds" button_text="Go to Bitrise now" %}

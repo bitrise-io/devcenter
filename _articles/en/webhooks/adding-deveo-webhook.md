@@ -37,8 +37,4 @@ a [Deveo](https://deveo.com) repository.
 That's all! The next time you **push code** or **push a new tag**
 a build will be triggered (if you have Trigger mapping defined for the event(s) on Bitrise).
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's add a Deveo webhook!</div>
-	<a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="button">Go to your Dashboard!</button></a>
-</div>
+{% include banner.html banner_text="Let's add a Deveo webhook!" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your Dashboard!" %}

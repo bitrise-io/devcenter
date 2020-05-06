@@ -37,8 +37,4 @@ and find the key under your API Key menu.
 There's nothing else you need to do,
 simply work on your awesome app and we ensure your app is automatically deployed to TestFairy every time you update your code.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Deploy to TestFairy</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your apps</button></a>
-</div>
+{% include banner.html banner_text="Deploy to TestFairy" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your apps" %}

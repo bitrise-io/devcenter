@@ -84,8 +84,4 @@ To view the test results:
 
 This takes you to the **Test Reports** page. Check out our [Test Reports guide](/testing/test-reports/) to find out more about using it to analyze your test results.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Test an iOS device with Bitrise</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Test an iOS device with Bitrise" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

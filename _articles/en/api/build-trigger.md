@@ -230,8 +230,4 @@ Depending on your app settings, Bitrise might send an email notification when a 
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"skip_notification": true}'
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Try out our API</div>
-	<a target="_blank" href="https://api-docs.bitrise.io/#/builds/build-trigger"><button class="button">Go to Bitrise API</button></a>
-</div>
+{% include banner.html banner_text="Try out our API" url="https://api-docs.bitrise.io/#/builds/build-trigger" button_text="Go to Bitrise API" %}

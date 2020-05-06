@@ -59,8 +59,4 @@ An .app file built with our **Xcode build for simulator** Step works with just a
 
 The `Appetize.io deploy` Step will produce one output: the `APPETIZE_APP_URL` Environment Variable. it is a public URL where you can access your app. Enjoy showing it off!
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Deploy for simulators</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Deploy for simulators" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

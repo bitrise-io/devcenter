@@ -36,8 +36,4 @@ You can set up webhooks so that Bitrise automatically triggers a build of your a
 
 And you're done! From now on, every code push to your Gogs repository will trigger a build on Bitrise.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's add a Gogs webhook</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your Dashboard</button></a>
-</div>
+{% include banner.html banner_text="Let's add a Gogs webhook" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your Dashboard" %}

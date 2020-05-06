@@ -116,8 +116,4 @@ npm rebuild detox
 
 If your Detox tests still fail or hang, contact our support!
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's run some Detox tests</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Let's run some Detox tests" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

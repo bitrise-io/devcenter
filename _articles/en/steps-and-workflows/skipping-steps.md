@@ -40,4 +40,4 @@ You can also disable a Step by a given condition, or just set it to never run in
 
 This can only be done in `yaml` mode: go to the **bitrise.yml** tab in your app's Workflow Editor and edit the file directly. To read about the specific conditions you can set, check out our [Enabling or disabling a Step conditionally](/tips-and-tricks/disable-a-step-by-condition/) guide.
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's manage Steps in your build!</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your build</button></a> </div>
+{% include banner.html banner_text="Let's manage Steps in your build!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your build" %}

@@ -38,8 +38,4 @@ An example API call with auth, using `curl`:
 
     curl -H 'Authorization: THE-ACCESS-TOKEN' https://api.bitrise.io/v0.1/me
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's generate a new token</div>
-	<a target="_blank" href="https://app.bitrise.io/me/profile#/overview"><button class="button">Go to your Account Settings</button></a>
-</div>
+{% include banner.html banner_text="Let's generate a new token" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your Account Settings" %}

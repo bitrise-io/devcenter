@@ -35,8 +35,4 @@ Note that certain providers, such as GitLab, require Tag Push events to be speci
 
 And you're done!
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Trigger builds with Git tags</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Trigger builds with Git tags" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

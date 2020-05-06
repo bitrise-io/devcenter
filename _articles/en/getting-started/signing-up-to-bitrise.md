@@ -124,8 +124,4 @@ Now let's see how to sign up to Bitrise.
 
 If all went well, you're landed on your Bitrise Dashboard where you can view the Organization's apps! If you go to your **Account Settings**, you will see the [Organization]() you've just joined.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's sign up to Bitrise</div>
-<a target="_blank" href="https://app.bitrise.io/users/sign_up"><button class="button">Create an account</button></a>
-</div>
+{% include banner.html banner_text="Let's sign up to Bitrise" url="https://app.bitrise.io/users/sign_up" button_text="Create an account" %}

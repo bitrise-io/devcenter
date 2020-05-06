@@ -49,8 +49,4 @@ If you want to skip a pull request, you have to include the `skip ci` pattern in
 
 Once you decide to not to skip the pull request / more commits in the pull request, you can simply remove the `skip ci` pattern from the pull request's title or description. This should automatically trigger a new build with the latest commit, and all future commits of the pull request will be built too (unless you add a `skip ci` pattern again).
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Skip a commit or pull request</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Skip a commit or pull request" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

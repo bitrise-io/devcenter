@@ -59,4 +59,4 @@ And you are done!
 2. Click your avatar on the top right corner and select **Account settings**.
 3. On the left menu bar, click the toggle next to the name of the Git provider you wish to disconnect.
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's connect my Git account to Bitrise!</div> <a target="_blank" href="https://app.bitrise.io/me/profile#"><button class="button">Go to your Account settings</button></a> </div>
+{% include banner.html banner_text="Let's connect my Git account to Bitrise!" url="https://app.bitrise.io/me/profile#" button_text="Go to your Account settings" %}

@@ -55,8 +55,4 @@ We're recruiting this workflow to perform 2 things: clone your git repo and star
 
 {% include message_box.html type="note" title="Using Workflow Editor locally" content=" If you use our [Workflow Editor locally](https://github.com/bitrise-io/bitrise-workflow-editor), please note that it only supports .yml files called `bitrise.yml`, and you can store only one `bitrise.yml` per folder." %}
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Manage workflows among multiple apps</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Dashboard</button></a>
-</div>
+{% include banner.html banner_text="Manage workflows among multiple apps" url="https://app.bitrise.io/dashboard/builds" button_text="Go to Dashboard" %}

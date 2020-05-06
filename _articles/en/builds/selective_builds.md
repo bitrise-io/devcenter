@@ -47,8 +47,4 @@ You do not need to set an exact file name or file path for the Selective builds 
 * `\`: Escapes the next metacharacter.
 * `[set]`: Matches any one character in set.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Enable Selective Builds</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Enable Selective Builds" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

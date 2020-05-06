@@ -55,8 +55,4 @@ workflows:
 
 In the example, the value for the `BITRISE_APK_PATH` environment variable will be exported under the `ALIAS_APK_PATH` key.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Check out your build's Steps</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Check out your build's Steps" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

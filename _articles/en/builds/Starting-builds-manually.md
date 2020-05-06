@@ -54,8 +54,4 @@ If you choose **Advanced** in the **Build configuration** window, you have all t
 
 If you specify a commit hash and a branch where that commit does not exist (for example, **master**), Bitrise will find the branch that does have the given commit (for example, **testing**) and run a build with that branch. "%}
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Let's start a build manually</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Let's start a build manually" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

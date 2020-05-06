@@ -59,8 +59,4 @@ What you need:
 
 And you are done! Once you trigger the `Trigger` workflow, the **Bitrise Start Build** Step of the Workflow will trigger two more builds running simultaneously. If those two builds are successful, the **Bitrise Wait for Build** Step lets the first build finish. A single status report is sent to the git hosting provider, regardless whether the build is successful or not.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Set up trigger to start parallel builds</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Set up trigger to start parallel builds" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

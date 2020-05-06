@@ -97,8 +97,4 @@ The **Expose for Pull Request** toggle can be enabled if you want your secrets t
 
 Head over to [Secrets](/bitrise-cli/secrets/) for more information on [secret filtering](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli/).
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Check out Env Vars and Secrets in action</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Check out Env Vars and Secrets in action" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

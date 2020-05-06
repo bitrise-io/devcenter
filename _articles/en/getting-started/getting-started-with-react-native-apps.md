@@ -182,8 +182,4 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 
 And that’s it! [Start a build](/builds/Starting-builds-manually/) and release your Android app to the app store of your choice.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's add a React Native app</div>
-<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Let's add a React Native app" url="https://app.bitrise.io/apps/add" button_text="Go to Bitrise now" %}

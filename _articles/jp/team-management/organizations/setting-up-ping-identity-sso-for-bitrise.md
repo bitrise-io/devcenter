@@ -70,4 +70,4 @@ You can check which Organization member has switched from the usual login flow t
 
 {% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you’d like to learn more about SAML SSO on Bitrise, check out our SAML SSO in organizations guide. "%}
 
-<div class="banner"> <img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Set up PingOne SSO</div> <a target="_blank" href="[https://app.bitrise.io/me/profile#/overview](https://app.bitrise.io/me/profile#/overview "https://app.bitrise.io/me/profile#/overview")"><button class="button">Go to your organization</button></a> </div>
+{% include banner.html banner_text="Set up PingOne SSO" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your organization" %}

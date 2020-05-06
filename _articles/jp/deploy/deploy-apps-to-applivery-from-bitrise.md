@@ -65,8 +65,4 @@ There are many optional parameters that you can customize for a better and deepe
 
 Applivery provides multiple different ways for app distribution from customized App Stores (public or private) to Distribution Pages (public, private, unlisted, or password-protected shareable installation links). It also enables multitrack app delivery based on the information gathered from your Bitrise workflows, such as GitHub Branches, Tags or customized labels.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Deploy to Applivery from Bitrise</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Deploy to Applivery from Bitrise" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

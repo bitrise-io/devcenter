@@ -18,8 +18,4 @@ You probably did not grant access to [bitrise.io](https://www.bitrise.io) when y
 
 To fix this you should follow this guide: [Grant access to a GitHub Organization](/faq/grant-access-to-github-organization).
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to Bitrise now" %}

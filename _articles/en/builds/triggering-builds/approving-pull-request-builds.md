@@ -54,8 +54,4 @@ If a Pull Request is submitted from a fork, you will be notified that a PR build
 
 To approve and run the build, click the `Approve and Run Build` button. Clicking `Review` opens the Pull Request on the website of your Git provider.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Enable manual build approval</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Enable manual build approval" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

@@ -126,8 +126,4 @@ Now let's head back to [Bitrise](https://app.bitrise.io/apps/add) and finish off
 
 That's all! Start or schedule a build and share the URL with external testers or distribute your app on an app store of your choice!
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Let's add an Android app</div>
-<a target="_blank" href="https://app.bitrise.io/apps/add"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Let's add an Android app" url="https://app.bitrise.io/apps/add" button_text="Go to Bitrise now" %}

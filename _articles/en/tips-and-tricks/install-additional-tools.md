@@ -150,8 +150,4 @@ Note that you can use any [available env var](/builds/available-environment-vari
 
 {% include message_box.html type="note" title="Use `run_if` in `bitrise.yml`" content=" If you **don't** want to run any part of the Step/script based on a variable (like `$PR`), you don't have to implement the check in the script. You can use the `run_if` expression in the `bitrise.yml` directly to declare when the Step should run since `run_if` can be added to any step, not just to Script steps. You can find more information about `run_if` expressions in [this guide](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed). " %}
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Install tools with the Script Step</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Install tools with the Script Step" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

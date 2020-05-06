@@ -104,9 +104,5 @@ Bitrise supports both manual and automatic provisioning for Ionic and Cordova ap
    This is crucial: it ensures the Step will not remove and re-add the platform of the native projects generated in the **Cordova prepare** or the **Ionic prepare** Step.
 8. Run your build!
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Now you know everything</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}
 _

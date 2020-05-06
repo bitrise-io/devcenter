@@ -37,8 +37,4 @@ Bitrise has two Steps which download files from the **Code Signing** tab. Which 
 
 With that said, if you have successfully added the Steps to download your keystore file to the same location that you specified in your `build.gradle` file, you do not need the **Android Sign** Step in your workflow. Our **Gradle Runner** Step will sign and assemble your project.
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Download a keystore file from Bitrise</div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Download a keystore file from Bitrise" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

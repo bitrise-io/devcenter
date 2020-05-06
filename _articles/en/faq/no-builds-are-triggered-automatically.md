@@ -23,8 +23,4 @@ You can find the webhook related setup and troubleshooting guides in the [Webhoo
 
 If the webhook is present on the git hosting service, you should check the [Troubleshooting section of the Webhooks docs](/webhooks/troubleshooting).
 
-<div class="banner">
-	<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-	<div class="deploy-text">Now you know everything </div>
-	<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to Bitrise now</button></a>
-</div>
+{% include banner.html banner_text="Now you know everything " url="https://app.bitrise.io/dashboard/builds" button_text="Go to Bitrise now" %}

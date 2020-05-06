@@ -20,8 +20,4 @@ If you want to use [fastlane match](https://github.com/fastlane/fastlane/tree/ma
 
 That's all, you can now enjoy the utility of `match`, automated with [bitrise.io](https://www.bitrise.io/) 🚀.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Use fastlane match in your build</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Use fastlane match in your build" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

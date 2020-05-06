@@ -226,8 +226,4 @@ If you’d like to download the actual file from AWS, you can do so with the fol
 
 The response will contain a pre-signed AWS URL for the file. Please note that this URL is time-limited and expires after 10 minutes.
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Try out our API</div>
-<a target="_blank" href="https://api-docs.bitrise.io/#/"><button class="button">Go to Bitrise API</button></a>
-</div>
+{% include banner.html banner_text="Try out our API" url="https://api-docs.bitrise.io/#/" button_text="Go to Bitrise API" %}

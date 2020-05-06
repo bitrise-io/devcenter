@@ -33,8 +33,4 @@ If you need to set credentials for your NuGet source you can modify the **Script
     
     nuget sources add -Name NAME_FOR_SOURCE -Source SOURCE_URL -UserName NUGET_USERNAME -Password NUGET_PASSWORD
 
-<div class="banner">
-<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-<div class="deploy-text">Add sources to NuGet package sources</div>
-<a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a>
-</div>
+{% include banner.html banner_text="Add sources to NuGet package sources" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}
