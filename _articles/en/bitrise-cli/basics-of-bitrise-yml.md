@@ -15,6 +15,7 @@ menu:
     weight: 7
 
 ---
+
 ## bitrise.yml configuration
 
 The configuration format of the Bitrise CLI is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.
