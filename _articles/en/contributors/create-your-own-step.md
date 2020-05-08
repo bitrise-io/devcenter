@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: 'Developing a new Step '
 tag:
 - cli
@@ -131,6 +131,42 @@ A detailed explanation of the Step. It should include:
 * Troubleshooting information: potential issues and their solutions.
 
 By default, the Step's description is collapsed on the Workflow Editor and the summary is presented.
+
+## Step categories
+
+There is another thing we’d like to know about your Step: what type of Step is it? As you can see on our Integrations page or on the Workflow Editor, Steps are sorted into different categories based on two factors: the platforms for which they are available and their functionality. 
+
+### Platform types
+
+The available platform types are controlled by the project_type_tags attribute. If your Step is available for every platform or project type, do not specify project_type_tags. In any other case, select all platform types for which your Step is available. 
+
+The available values are:
+
+* `ios`
+* `macos`
+* `android`
+* `xamarin`
+* `react-native`
+* `cordova`
+* `ionic`
+* `flutter`
+
+### Function types
+
+Functional categories are controlled by the type_tags attribute in the step.yml. One Step should have only a single type_tag assigned to it. Use utility only if you believe none of the other types fit your Step. 
+
+The available values are: 
+
+* `build`
+* `code-sign`
+* `test`
+* `deploy`
+* `notification`
+* `access-control`
+* `artifact-info`
+* `installer`
+* `dependency`
+* `utility`
 
 ## Step inputs
 
