@@ -24,7 +24,7 @@ Test Reports allows you to view all your test results in a convenient way.
 
 Use our testing Steps, and all your test results will be deployed to the same directory. From there, Test Reports can process and display them in a way that's easy to read and analyze.
 
-{% include video.html embed_url="https://www.youtube.com/embed/_4tcvScaHc" %}
+{% include video.html embed_url="https://www.youtube.com/embed/_4tcvScaHc4" %}
 
 ## Test Reports overview
 
