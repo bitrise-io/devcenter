@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at: 
+changelog: Tutorial video on Test Reports has been added to the guide.
+last_modified_at: 2020-05-07 22:00:00 +0000
 title: Test Reports
 redirect_from: []
 tag:
@@ -14,6 +14,7 @@ description: Test Reports allows you to view all your test results in a convenie
   directory. From there, Test Reports can process them and display them in a way that's
   easy to read and analyze.
 summary: ''
+new_article: false
 menu:
   testing-main:
     weight: 1
@@ -22,6 +23,8 @@ menu:
 Test Reports allows you to view all your test results in a convenient way.
 
 Use our testing Steps, and all your test results will be deployed to the same directory. From there, Test Reports can process and display them in a way that's easy to read and analyze.
+
+{% include video.html embed_url="[https://www.youtube.com/watch?v=_4tcvScaHc4&feature=youtu.be](https://www.youtube.com/watch?v=_4tcvScaHc4&feature=youtu.be "https://www.youtube.com/watch?v=_4tcvScaHc4&feature=youtu.be")" %}
 
 ## Test Reports overview
 
