@@ -1,6 +1,7 @@
 ---
-changelog: ''
-last_modified_at: 
+changelog: 'You can export test results from any Step by using the Export test results
+  to Test Reports add-on Step. Read about the Step and how to use it. '
+last_modified_at: 2020-05-11 08:00:00 +0000
 tag:
 - testing
 - steps
