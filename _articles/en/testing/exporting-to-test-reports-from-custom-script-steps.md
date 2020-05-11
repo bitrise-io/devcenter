@@ -116,27 +116,17 @@ The Step’s purpose is to make sure that the test results end up in the directo
 5. In the **The name of the test** input, set the name you want to be shown in the Test Reports add-on. 
 6. In the **Path where custom test results reside** input, set the path where your test results can be found.   
    You must not leave this input value empty. This input determines where Bitrise will look for your test results. We recommend setting a folder here though you can also set a specific filepath. The default value is the source directory of your app.
+   Example patterns:
+   - If your app's root directory is `app`: `app/build/test-results/testDemoDebugUnitTest/`
+   - If your test results are within an `app` folder but `app` is not the root directory: `./app/build/test-results/testDemoDebugUnitTest/`
 7. In the **Test result search pattern** input, set a pattern that matches your test result file.    
    You must not leave this input value empty. This search pattern is used to search every file and folder of the provided base path which was set in the **Path where custom test results reside** input.   
-   If there is more than one match, the Step will export the first match with a warning in the logs. If you set a specific filepath in the previous input, just set * here.   
+   If there is more than one match, the Step will export the first match with a warning in the logs. If you set a specific filepath in the previous input, just set * here.  
    Example patterns:
-   ```	
-   app/build/test-results/testDemoDebugUnitTest/  
-   ```
-   ``` 
-   ./app/build/test-results/testDemoDebugUnitTest/
-   ```
+   - Matching all files within the base path: `*`  
+   - Matching all files within a given directory of the base path: `*/build/test-results/testDemoDebugUnitTest/*`
 8. In the **Step's test result directory** input, make sure the path is correct.   
    Do NOT modify this input’s value: this is the folder where the **Deploy to Bitrise.io** Step will look for the test results to export them. It should be set to the $BITRISE_TEST_RESULT_DIR Env Var.   
-   Example patterns:
-   ```
-   {% raw %}  
-   // Matching all files within the base path: 
-   *  
-   // Matching all files within a given directory of the base path: 
-   */build/test-results/testDemoDebugUnitTest/*
-   {% endraw %} 
-   ```
 9. Make sure you have a **Deploy to Bitrise.io** Step in your Workflow. 
 
 ### Example scripts for exporting test results
