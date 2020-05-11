@@ -1,6 +1,7 @@
 ---
-changelog: 
-last_modified_at: 
+changelog: 'Updated with information on how to set your Step''s platform type and
+  function type in the step.yml file. '
+last_modified_at: 2020-05-08 12:00:00 +0000
 title: 'Developing a new Step '
 tag:
 - cli
@@ -10,7 +11,10 @@ tag:
 description: Creating your own Step is as simple as running a bitrise CLI command
   and following the guide it prints. You can generate Steps using either the Bash
   or Go toolkits.
-redirect_from: "/bitrise-cli/create-your-own-step/"
+redirect_from:
+- "/bitrise-cli/create-your-own-step/"
+new_article: false
+summary: ''
 menu:
   contributors-main:
     weight: 1
