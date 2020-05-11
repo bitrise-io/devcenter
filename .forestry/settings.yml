@@ -122,12 +122,6 @@ sections:
   label: API .gg file
 - type: heading
   label: Data files
-- type: directory
-  path: assets/javascripts
-  label: Javascripts
-  create: documents
-  match: "**/*"
-  new_doc_ext: ".js"
 - type: document
   path: _config.yml
   label: _config.yml
