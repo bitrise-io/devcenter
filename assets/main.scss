@@ -1527,11 +1527,15 @@ footer {
 
 @media only screen and (max-width: 50em) {
 
+	.column-parent {
+		display: block;
+	}
+
 	main.content {
-		max-width: 100%;
+		width: 100%;
 		margin-left: 0;
-    margin-right: 0;
-    padding: 4rem 0 0;
+    	margin-right: 0;
+    	padding: 4rem 0 0;
 
 	 .index-container {
 		 flex-direction: column;
@@ -1662,7 +1666,8 @@ footer {
 				height: 100%;
 				padding-top: 0;
 				padding-bottom: 0;
-		margin-top: 5.5rem;
+				padding-right: 0;
+				margin-top: 5.5rem;
 				background-color: white;
 				box-shadow: 0rem 0rem 2rem rgba(0, 0, 0, 0.5);
 
@@ -1731,10 +1736,7 @@ footer {
 		}
 	}
 
-	.column-parent {
-
-		nav#side-menu {
-			width: 80%;
-		}
+	.column-parent nav#side-menu .menu-wrapper {
+		width: 80vw;
 	}
 }

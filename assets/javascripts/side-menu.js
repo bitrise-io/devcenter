@@ -1,5 +1,3 @@
-
-
 function configureSideMenu() {
   
   const currentPage = window.location.href;
