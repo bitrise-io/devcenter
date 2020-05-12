@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: ''
+last_modified_at: 
 title: Device testing for iOS
 date: '2018-10-17T10:31:27.000+00:00'
 tag:
@@ -12,6 +12,8 @@ description: 'With Bitrise''s iOS device testing solution, you can run iOS tests
   need to use our dedicated Steps and set the device type(s) on which you want to
   test your app. '
 redirect_from: []
+new_article: false
+summary: ''
 menu:
   testing-main:
     weight: 11
@@ -40,30 +42,29 @@ To use this Step, you will need code signing files for the test app: we recommen
 
 The **iOS Device Testing** Step takes the path to this .zip file - exported as an Environment Variable - as input to run your tests and export the test results to Bitrise.
 
-1. Check that you [enabled Device Testing](/testing/device-testing-for-ios/#enabling-device-testing) for the app.
-2. Add the **Xcode Build for testing for iOS** Step to your Workflow.
+1. Add the **Xcode Build for testing for iOS** Step to your Workflow.
 
    Note that it should come AFTER the **Certificate and profile installer** Step.
 
    ![](/img/xcode-build-for-test.png)
-3. In the **Scheme name** input, set the Xcode Scheme you want to use. By default, the value of the input is the `$BITRISE_SCHEME` [Environment Variable](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/) which is stored when your app is created.
+2. In the **Scheme name** input, set the Xcode Scheme you want to use. By default, the value of the input is the `$BITRISE_SCHEME` [Environment Variable](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/) which is stored when your app is created.
 
    By default, the scheme defines which configuration - for example, Debug or Release - will be used. In the **Configuration name** input, you can define the configuration type manually.
-4. Set a destination option for `xcodebuild` in the **Device destination** input of the Step.
+3. Set a destination option for `xcodebuild` in the **Device destination** input of the Step.
 
    The default value is `generic/platform=ios`. For the available values, call `man xcodebuild` on your local machine and check the `Destinations` section of the printout.
-5. Add the **iOS Device Testing** Step to the Workflow.
+4. Add the **iOS Device Testing** Step to the Workflow.
 
    The Step has to come after the **Xcode Build for testing for iOS** Step.
 
    ![](/img/test-devices-1.png)
-6. In the **Test devices** input field, specify the devices on which you want to test the app.
+5. In the **Test devices** input field, specify the devices on which you want to test the app.
 
    Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/ios/available-testing-devices).
-7. Make sure you have the **Deploy to Bitrise.io** Step in your Workflow, with version 1.4.1 or newer.
+6. Make sure you have the **Deploy to Bitrise.io** Step in your Workflow, with version 1.4.1 or newer.
 
    With the older versions of the Step, you won't be able to check your results on the **Test Reports** page!
-8. Start a build!
+7. Start a build!
 
 If all goes well, you should be able to view your results on the Build page.
 
