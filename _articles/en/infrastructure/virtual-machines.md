@@ -2,7 +2,7 @@
 changelog: 'The internal IP address space of the virtual machines is now available
   here: this information can be valuable if, for example, you''re trying to use a
   VPN with Bitrise.'
-last_modified_at: 2020-05-05 08:30:00 +0000
+last_modified_at: 2020-05-05T08:30:00.000+00:00
 title: Virtual machines
 tag:
 - infrastructure
@@ -48,13 +48,15 @@ You can [connect to Bitrise via VPN](/tutorials/vpn-configuration/ "https://devc
 
 ### External and internal IP addresses
 
-| Stack type              | Public IP        | Build VM internal subnet | Note                                                                    |
-|-------------------------|------------------|--------------------------|-------------------------------------------------------------------------|
-| **Xcode and VS4Mac stacks** | 208.52.166.154   | 10.200.15.0/20           |                                                                         |
-|                         | 207.254.0.248/29 | 100.246.15.0/20          | The public address is a subnet: the entire subnet must be whitelisted!  |
-|                         | 207.254.34.148   | 10.254.228.0/20          |                                                                         |
-| **Linux/Docker stacks**     | 104.197.15.74    | 10.0.0.0/9               |                                                                         |
-|                         | 35.237.165.17    | 10.0.0.0/9               |                                                                         |
+| Stack type                  | Public IP        | Build VM internal subnet | Note                                                                   |
+|-----------------------------|------------------|--------------------------|------------------------------------------------------------------------|
+| **Xcode and VS4Mac stacks** | 208.52.166.154   | 10.200.15.0/20           |                                                                        |
+|                             | 207.254.0.248/29 | 100.246.15.0/20          | The public address is a subnet: the entire subnet must be whitelisted! |
+|                             | 207.254.34.148   | 10.254.228.0/20          |                                                                        |
+| **Linux/Docker stacks**     | 104.197.15.74    | 10.0.0.0/9               |                                                                        |
+|                             | 35.202.121.43    | 10.0.0.0/9               |                                                                        |
+|                             | 35.237.165.17    | 10.0.0.0/9               |                                                                        |
+|                             | 35.231.56.118    | 10.0.0.0/9               |                                                                        |
 
 ## Storage space
 
