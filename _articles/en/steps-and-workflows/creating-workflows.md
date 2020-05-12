@@ -1,6 +1,6 @@
 ---
-changelog: ''
-last_modified_at: 
+changelog: How longer Workflow names are displayed has been added to the guide.
+last_modified_at: 2020-05-11 22:00:00 +0000
 title: Creating a Workflow
 tag:
 - steps
