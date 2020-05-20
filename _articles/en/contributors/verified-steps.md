@@ -5,16 +5,16 @@ tag:
 - " bitrise.yml"
 - " workflows"
 title: Verified Steps
-changelog: ''
-last_modified_at: 
+changelog: Learn how to get a Verified Step badge on your Step once you have shared
+  it in our Bitrise Step Library.
+last_modified_at: 2020-05-19 22:00:00 +0000
 new_article: true
 redirect_from: []
-summary: Learn how to get a Verified Step badge on your Step once you have already
-  shared it in our Bitrise Step Library.
+summary: Learn how to get a Verified Step badge on your Step once you have shared
+  it in our Bitrise Step Library.
 menu:
   contributors-main:
     weight: 7
-published: false
 
 ---
 ## What are Verified Steps?
