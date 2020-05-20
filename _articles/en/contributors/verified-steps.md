@@ -29,9 +29,9 @@ In this guide we explain how to get your Step verified by Bitrise.
 {% include message_box.html type="important" title="Requirements" content="
 
 * Your company must be the owner of the service or tool used by the Step to apply for the Verified badge.
-* Your Step must comply with our [Service Level Agreement](/contributors/verified-steps/#service-level-agreement-for-Verified step-authors).
+* Your Step must comply with our Service Level Agreement.
 
-We strongly recommend that you consult with our [Step development ](/contributors/create-your-own-step/ "https://devcenter.bitrise.io/contributors/create-your-own-step/")guidelines before creating a Step."%}
+We strongly recommend that you consult with our [Step development ](/contributors/create-your-own-step/) guidelines before creating a Step."%}
 
 ## Applying for a Verified badge
 
