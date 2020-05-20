@@ -33,13 +33,15 @@ We strongly recommend that you consult with our [Step development ](https://devc
 ## Applying for a Verified badge
 
 1. Create the Step based on our [Step development guideline](https://devcenter.bitrise.io/contributors/create-your-own-step/ "https://devcenter.bitrise.io/contributors/create-your-own-step/"). The Step’s repository must be on GitHub.
-2. Share your Step in our [bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib).
+2. Share your Step in our [bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib) and fill out the New Pull Request Checklist.
 3. When the **CLAassistant** prompts you, sign our Contributor License Agreement. Until this is not completed, merging is blocked on the PR.
 
    ![](/img/cla.jpg)
-4. If you wish to apply for the verified badge, send an email to [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io) to contact our Partner Management Team. In your email, provide a brief summary on what specific problem your service solves, and how many customer you have on Bitrise. Partner Management coordinate your request, and get back to you once your Step has been updated with the verified badge.
 
-If at any stage of the process you wonder what happens with a Step candidate that is already covered by another Step in our StepLib, head over to How do we go about Step duplications?.
+   ![](/img/checklist.jpg)
+4. If you wish to apply for the verified badge, send an email to [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io) to contact our Partner Management Team. In your email, provide a brief summary on what specific problem your service solves, and how many users you have on Bitrise. Partner Management coordinate your request, and get back to you once your Step has been updated with the verified badge.
+
+If at any stage of the process you wonder what happens with a Step candidate that is already covered by another Step in our StepLib, head over to How do we go about Step duplications?
 
 ## Service-level agreement for Verified Step authors
 
