@@ -29,7 +29,7 @@ In this guide we explain how to get your Step verified by Bitrise.
 {% include message_box.html type="important" title="Requirements" content="
 
 * Your company must be the owner of the service or tool used by the Step to apply for the Verified badge.
-* Your Step must comply with our \[Service Level Agreement (SLA)\](link missing).
+* Your Step must comply with our [Service Level Agreement (SLA)](/contributors/verified-steps/#service-level-agreement-for-Verified step-authors).
 
 We strongly recommend that you consult with our [Step development ](https://devcenter.bitrise.io/contributors/create-your-own-step/ "https://devcenter.bitrise.io/contributors/create-your-own-step/")guidelines before creating a Step."%}
 
@@ -46,7 +46,7 @@ We strongly recommend that you consult with our [Step development ](https://devc
 
 If at any stage of the process you wonder what happens with a Step candidate that is already covered by another Step in our StepLib, head over to How do we go about Step duplications?
 
-## Service-level agreement for Verified Step authors
+## Service level agreement for Verified Step authors
 
 Anyone can contribute to a Verified Step which is already part of our StepLib by creating an issue or a pull request (PR). The Verified Step author has to manage the contribution (for example, issue, PR, or any maintenance such as third-party system changes) from start to finish. Bitrise monitors open issues and PRs created for Verified Steps and contacts the Verified Step authors if those contributions are not handled. If the Verified Step author fails to manage the contribution as described in our Contributor License Agreement and this SLA, Bitrise withdraws the Verified badge from the Step. This is to ensure Verified Steps in our StepLib are always of high quality and meet Bitrise users' expectations.
 
