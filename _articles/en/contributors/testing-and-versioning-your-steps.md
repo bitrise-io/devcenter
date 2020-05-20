@@ -1,5 +1,5 @@
 ---
-changelog: 
+changelog: ''
 last_modified_at: 
 tag:
 - steps
@@ -12,6 +12,7 @@ redirect_from: []
 summary: Test your new Steps before submitting them to the Bitrise StepLib. The Step's
   bitrise.yml contains a Workflow called test that can be used to perform end-to-end
   testing on the Step.
+new_article: false
 menu:
   contributors-main:
     weight: 3
@@ -56,7 +57,7 @@ For more information on the bitrise.yml file, see [Basics of bitrise.yml](/bitri
 
 1. Under the steps property of the Workflow in the bitrise.yml file, add your Step's path as a Step reference, in the following format:
    * To run the Step from a local path, use the path:: source in the Step reference:
-   	 
+
      ```yaml
      format_version: 9
      workflows:
@@ -64,7 +65,8 @@ For more information on the bitrise.yml file, see [Basics of bitrise.yml](/bitri
      	steps:
      	- path::./steps-example:
      	  title: "Example Test"
-      ```
+     ```
+
    In the above example, our **Example Test** Step is the first Step of the primary Workflow. We run the Step from its local path: path::./steps-example.
    * To run the Step from a Git URL:
 
@@ -75,7 +77,7 @@ For more information on the bitrise.yml file, see [Basics of bitrise.yml](/bitri
      	steps:
      	- git::https://github.com/example-repo/example-test.git@master
      	  title: "Example Test"
-      ```
+     ```
 
    In the above example, our **Example Test** Step is the first Step of the primary Workflow, run from a git URL, using the master branch.
 2. Run a build with bitrise run <workflowname> or on [bitrise.io](http://bitrise.io) to check if your Step worked.
@@ -109,7 +111,6 @@ We encourage you to share your Step with other Bitrise users. To do so, you firs
                  #/bin/bash
                  echo "Welcome to Bitrise!"
    ```
-
 5. Run a build with bitrise run <workflowname> or on [bitrise.io](http://bitrise.io) to check if your Step worked.
 
 ## Step versioning
