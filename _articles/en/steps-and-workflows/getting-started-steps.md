@@ -1,6 +1,6 @@
 ---
-changelog: 
-last_modified_at: 
+changelog: Link to the chapter on contributing to Bitrise has been added to this article.
+last_modified_at: 2020-05-19 22:00:00 +0000
 title: Introduction to Steps
 redirect_from:
 - getting-started/getting-started-steps/
@@ -11,15 +11,19 @@ tag:
 - getting-started
 - steps
 - workflows
+- contributors
 description: 'Steps are the heart of Bitrise. A Step is a build task: for example,
   the Git Clone Step clones your git repository at the start of a build while the
   Google Play Deploy Step can deploy your finished app to the Play Store.'
+new_article: false
+summary: Learn the essentials about our Steps and what cool things you can do with
+  them.
 menu:
   steps-workflows-main:
     weight: 1
 
 ---
-Steps are the heart of Bitrise. A Step is a build task: for example, the `Git Clone` Step clones your Git repository at the start of a build while the `Google Play Deploy` Step can deploy your finished app to the Play Store.
+Steps are the heart of Bitrise. A Step is a build task: for example, the **Git Clone** Step clones your Git repository at the start of a build while the **Google Play Deploy** Step can deploy your finished app to the Play Store.
 
 A Step contains the code that performs the build task. You can configure the inputs and parameters that define the task, and view and reuse the outputs a Step generates. Reusing the output means that another Step can use it as the value of one of its inputs.
 
@@ -38,5 +42,7 @@ Read on to find out more about working with our Steps!
 * [Adding and removing Steps](/steps-and-workflows/adding-removing-steps/)
 * [Step versions and inputs](/steps-and-workflows/step-inputs/)
 * [Skipping Steps](/steps-and-workflows/skipping-steps/)
+
+Would you like to contribute to our enormous Step Library with your own Step? Check out our guides at [For Contributors](https://devcenter.b/contributors/contributors-index/).
 
 {% include banner.html banner_text="Let's see your build's Steps" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your build" %}
