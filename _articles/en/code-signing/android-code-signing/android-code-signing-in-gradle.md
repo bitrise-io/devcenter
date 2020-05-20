@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Android code signing in Gradle
 tag:
 - code-signing

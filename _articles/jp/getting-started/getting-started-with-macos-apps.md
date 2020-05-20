@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: MacOSのアプリ開始
 date: 2018-11-16T11:51:09.000+00:00
 menu:

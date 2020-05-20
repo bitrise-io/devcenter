@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Basics of bitrise.yml
 tag:
 - cli
@@ -15,7 +15,6 @@ menu:
     weight: 7
 
 ---
-
 ## bitrise.yml configuration
 
 The configuration format of the Bitrise CLI is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.

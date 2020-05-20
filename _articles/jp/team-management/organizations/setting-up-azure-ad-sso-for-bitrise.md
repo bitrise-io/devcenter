@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Setting up Azure AD SSO for Bitrise
 redirect_from: []
 date: '2019-04-17T11:49:36.000+00:00'

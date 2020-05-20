@@ -6,6 +6,9 @@ last_modified_at:
 new_article: false
 redirect_from: []
 summary: ''
+menu:
+  contributors-main:
+    weight: 7
 published: false
 
 ---

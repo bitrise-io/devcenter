@@ -1,5 +1,5 @@
 ---
-changelog:
+changelog: 
 last_modified_at: 2020-04-27
 title: 'Stack update and removal policy '
 redirect_from: []

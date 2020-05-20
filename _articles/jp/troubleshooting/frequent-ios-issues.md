@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: よくあるiOS上の問題
 redirect_from:
 - "/ios/frequent-ios-issues/"

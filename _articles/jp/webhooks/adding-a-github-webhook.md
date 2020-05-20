@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: GitHub webhookの追加
 menu:
   webhooks-main:

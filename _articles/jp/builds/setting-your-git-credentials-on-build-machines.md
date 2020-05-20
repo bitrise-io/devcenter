@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: ビルドマシンでGitの認証情報を設定
 redirect_from: []
 date: 2019-02-21T15:27:32.000+00:00

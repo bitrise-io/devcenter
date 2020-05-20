@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Restore NuGet packages
 redirect_from:
 - "/xamarin/restore-nuget-packages"

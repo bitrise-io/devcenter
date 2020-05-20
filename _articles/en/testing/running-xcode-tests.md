@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Running Xcode tests
 redirect_from: []
 date: '2019-02-22T15:33:24.000+00:00'

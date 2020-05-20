@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Add custom sources to NuGet
 redirect_from:
 - "/xamarin/add-custom-sources-to-nuget/"

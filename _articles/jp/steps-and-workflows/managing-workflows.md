@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: ワークフローの連結
 menu:
   steps-workflows-main:

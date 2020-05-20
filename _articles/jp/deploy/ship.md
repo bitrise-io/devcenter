@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 tag: []
 title: Ship でデプロイ
 redirect_from: []

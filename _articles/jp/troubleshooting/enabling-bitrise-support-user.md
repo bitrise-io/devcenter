@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Enabling Bitrise Support user for your app
 menu:
   troubleshooting-main:

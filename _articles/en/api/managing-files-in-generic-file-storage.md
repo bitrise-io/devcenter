@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Managing files in Generic File Storage
 redirect_from: []
 date: '2019-04-09T07:32:06.000+00:00'

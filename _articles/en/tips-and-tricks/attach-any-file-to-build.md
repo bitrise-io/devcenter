@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Attaching files as artifacts to a build
 menu:
   tips-and-tricks-main:

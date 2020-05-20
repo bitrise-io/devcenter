@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: 独自のStepを作成・シェアする
 tag: []
 description: ''

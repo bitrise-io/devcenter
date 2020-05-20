@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Endpoints and testing the API
 redirect_from: []
 date: '2019-03-29T16:48:02.000+00:00'

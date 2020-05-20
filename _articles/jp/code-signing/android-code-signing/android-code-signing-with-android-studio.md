@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Android Studioを使ったAndroidコード署名
 menu:
   android-code-signing:

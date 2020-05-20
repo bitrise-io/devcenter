@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Setting a time limit for steps
 menu:
   bitrise-cli-main:

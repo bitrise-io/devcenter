@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Introduction to Workflows
 redirect_from:
 - "/getting-started/getting-started-workflows/"

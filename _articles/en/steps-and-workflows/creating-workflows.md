@@ -1,6 +1,6 @@
 ---
 changelog: How longer Workflow names are displayed has been added to the guide.
-last_modified_at: 2020-05-11 22:00:00 +0000
+last_modified_at: 2020-05-11T22:00:00.000+00:00
 title: Creating a Workflow
 tag:
 - steps

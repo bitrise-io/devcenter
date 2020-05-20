@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Setting up Google SSO for Bitrise
 redirect_from: []
 date: 2019-03-28T11:39:54.000+00:00

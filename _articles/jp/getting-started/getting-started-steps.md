@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: ステップの開始
 redirect_from:
 - "/getting-started/builds-and-workflows/getting-started/getting-started-steps"

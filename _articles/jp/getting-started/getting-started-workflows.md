@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: ワークフロー
 redirect_from:
 - "/getting-started/manage-your-workflow/"

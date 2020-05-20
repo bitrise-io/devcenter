@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: React Nativeアプリの開始
 menu:
   getting-started-main:

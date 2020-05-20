@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: キャッシュについて
 redirect_from: "/jp/caching/about-caching/"
 menu:

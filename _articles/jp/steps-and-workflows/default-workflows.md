@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: デフォルトワークフロー
 menu:
   steps-workflows-main:

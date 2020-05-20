@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Deploying an iOS app for external testing
 date: '2018-10-26T12:39:01.000+00:00'
 redirect_from: []

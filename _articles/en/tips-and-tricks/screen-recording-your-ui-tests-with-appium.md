@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Screen recording your UI tests with Appium
 redirect_from: []
 date: 2019-02-22T15:04:24.000+00:00

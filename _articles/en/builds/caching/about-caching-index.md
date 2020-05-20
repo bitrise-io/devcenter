@@ -1,5 +1,6 @@
 ---
-changelog: "New tutorial video about build caching: learn about using the dedicated Steps and managing your build caches on the website."
+changelog: 'New tutorial video about build caching: learn about using the dedicated
+  Steps and managing your build caches on the website.'
 last_modified_at: 2020-04-17
 title: Caching
 tag:
@@ -16,7 +17,6 @@ menu:
     weight: 1
 
 ---
-
 {% include video.html embed_url="https://www.youtube.com/embed/o8iiHMUmAws" %}
 
 Every single Bitrise build runs on a clean virtual machine. This means that normally, without caching, everything must be done from scratch on the virtual machine, including, for example, installing your dependencies.

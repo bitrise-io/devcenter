@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: コードプッシュによるビルドのトリガー
 menu:
   triggering-builds:

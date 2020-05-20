@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Workflows in YAML
 redirect_from:
 - "/bitrise-cli/workflows/"

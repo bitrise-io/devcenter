@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Why does my build take longer on Bitrise than on my machine?
 menu:
   faq-main:

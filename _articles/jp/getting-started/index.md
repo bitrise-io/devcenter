@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Getting started
 redirect_from:
 - "/jp/getting-started/adding-a-new-app/"
