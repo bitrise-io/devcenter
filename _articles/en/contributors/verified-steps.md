@@ -9,7 +9,8 @@ changelog: ''
 last_modified_at: 
 new_article: true
 redirect_from: []
-summary: ''
+summary: Learn how to get a Verified Step badge on your Step once you have already
+  shared it in our Bitrise Step Library.
 menu:
   contributors-main:
     weight: 7
