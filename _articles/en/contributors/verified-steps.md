@@ -35,7 +35,7 @@ We strongly recommend that you consult with our [Step development ](/contributor
 
 ## Applying for a Verified badge
 
-1. Create the Step based on our [Step development guideline](https://devcenter.bitrise.io/contributors/create-your-own-step/ "https://devcenter.bitrise.io/contributors/create-your-own-step/"). The Step’s repository must be on GitHub.
+1. Create the Step based on our [Step development guideline](https://devcenter.bitrise.io/contributors/create-your-own-step/ "https://devcenter.bitrise.io/contributors/create-your-own-step/"). The Step’s repository MUST be on GitHub.
 2. Share your Step in our [bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib) and fill out the New Pull Request Checklist.
 3. When the **CLAassistant** prompts you, sign our Contributor License Agreement. Until this is not completed, merging is blocked on the PR.
 
