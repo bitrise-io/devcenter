@@ -14,7 +14,7 @@ published: false
 ---
 ## What are Verified Steps?
 
-A Step contains the code that performs a specific build task. Bitrise has over 200 Steps in its Step Library (StepLib) which third party companies can enrich with Steps based on their services/tools. This means they have full power to roll out updates to the Step while Bitrise maintains an overlaying control to ensure service quality and security.
+A Step contains the code that performs a specific build task. Bitrise has over 200 Steps in its [Step Library (StepLib)](https://github.com/bitrise-io/bitrise-steplib) which third party companies can enrich with Steps based on their services/tools. This means they have full power to roll out updates to the Step while Bitrise maintains an overlaying control to ensure service quality and security.
 
 A Verified Step means that the service’s or tool’s owner guarantees secure, maintained, consistent, and high-quality performance for any Bitrise user. Our official Bitrise Steps are maintained by us, whereas our Community Steps are maintained by the community. It’s easy to decide which type a Step falls into on our GUI.
 
@@ -31,7 +31,7 @@ In this guide we explain how to get your Step verified by Bitrise.
 * Your company must be the owner of the service or tool used by the Step to apply for the Verified badge.
 * Your Step must comply with our [Service Level Agreement (SLA)](/contributors/verified-steps/#service-level-agreement-for-Verified step-authors).
 
-We strongly recommend that you consult with our [Step development ](https://devcenter.bitrise.io/contributors/create-your-own-step/ "https://devcenter.bitrise.io/contributors/create-your-own-step/")guidelines before creating a Step."%}
+We strongly recommend that you consult with our [Step development ](/contributors/create-your-own-step/ "https://devcenter.bitrise.io/contributors/create-your-own-step/")guidelines before creating a Step."%}
 
 ## Applying for a Verified badge
 
@@ -42,7 +42,7 @@ We strongly recommend that you consult with our [Step development ](https://devc
    ![](/img/cla.jpg)
 
    ![](/img/checklist.jpg)
-4. If you wish to apply for the verified badge, send an email to [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io) to contact our Partner Management Team. In your email, provide a brief summary on what specific problem your service solves, and how many users you have on Bitrise. Partner Management coordinate your request, and get back to you once your Step has been updated with the verified badge.
+4. If you wish to apply for the verified badge, send an email to [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io) to contact our Partner Management Team. In your email, describe what specific problem your service solves, and how many users you have on Bitrise. Partner Management will coordinate your request within Bitrise, and get back to you once your Step has been updated with the verified badge.
 
 If at any stage of the process you wonder what happens with a Step candidate that is already covered by another Step in our StepLib, head over to How do we go about Step duplications?
 
