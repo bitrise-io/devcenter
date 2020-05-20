@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: 利用可能な環境変数
 redirect_from:
 - "/faq/available-environment-variables/"

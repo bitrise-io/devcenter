@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Public apps for open source projects
 redirect_from:
 - "/adding-a-new-app/public-apps/"

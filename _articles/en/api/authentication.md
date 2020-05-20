@@ -1,7 +1,7 @@
 ---
-changelog:
-last_modified_at:
-title: 'Authentication'
+changelog: 
+last_modified_at: 
+title: Authentication
 redirect_from: []
 date: '2019-03-29T16:46:07.000+00:00'
 tag:
@@ -12,10 +12,8 @@ description: 'The current API supports only one type of authentication: user gen
 menu:
   api-main:
     weight: 1
-    title: Authentication
 
 ---
-
 The current API supports only one type of authentication: user generated **Personal Access Tokens**. Organizations do not have their own access tokens.
 
 **Every API endpoint requires authentication**, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io "https://api.bitrise.io")).

@@ -1,5 +1,6 @@
 ---
-changelog: "New tutorial video about Secrets and Environment Variables: learn what they are used for and how to add them to your apps." 
+changelog: 'New tutorial video about Secrets and Environment Variables: learn what
+  they are used for and how to add them to your apps.'
 last_modified_at: 2020-04-28
 title: Secrets and Env Vars
 tag:
@@ -15,7 +16,6 @@ menu:
     weight: 17
 
 ---
-
 {% include video.html embed_url="https://www.youtube.com/embed/PGh_RPYA45w" %}
 
 Every secret Environment Variable (Env Var) is an Env Var but not every Env Var is a secret Env Var!

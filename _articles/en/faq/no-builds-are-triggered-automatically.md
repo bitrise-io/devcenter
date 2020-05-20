@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Why isn't a build triggered when I push code into the repository?
 tag:
 - triggers

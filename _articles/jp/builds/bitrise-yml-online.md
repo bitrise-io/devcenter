@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: bitrise.ymlファイルへのオンラインアクセス
 redirect_from:
 - "/bitrise-cli/bitrise-yml-online/"

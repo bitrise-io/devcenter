@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: 認証
 redirect_from: []
 date: '2019-03-29T16:55:28.000+00:00'
@@ -9,7 +9,6 @@ menu:
     weight: 2
 
 ---
-
 ## 認証
 
 現在のAPIは、1つのタイプの認証のみサポートします。ユーザが生成した **パーソナルアクセストークン** のみです。Organizationは、それ自身のアクセストークンを持っていません。

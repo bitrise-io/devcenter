@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: API
 redirect_from: "/jp/api/v0.1/"
 menu:

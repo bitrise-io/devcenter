@@ -1,5 +1,5 @@
 ---
-changelog:
+changelog: 
 last_modified_at: 2020-04-17
 title: Available stacks
 redirect_from:

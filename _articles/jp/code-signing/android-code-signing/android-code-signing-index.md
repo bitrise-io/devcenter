@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Androidコード署名手順
 redirect_from: "/jp/code-signing/android-code-signing/android-code-signing-procedures/"
 menu:

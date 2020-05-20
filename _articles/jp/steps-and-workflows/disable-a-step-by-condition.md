@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Enabling or disabling a Step conditionally
 redirect_from: "/jp/tips-and-tricks/disable-a-step-by-condition/"
 menu:

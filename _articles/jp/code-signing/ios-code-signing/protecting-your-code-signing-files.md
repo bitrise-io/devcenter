@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: コード署名ファイルの保護
 menu:
   ios-code-signing:

@@ -1,5 +1,6 @@
 ---
-changelog: "New tutorial video about managing your Workflows: learn how name Workflows, rearrange them, and chain them together."
+changelog: 'New tutorial video about managing your Workflows: learn how name Workflows,
+  rearrange them, and chain them together.'
 last_modified_at: 2020-04-14
 title: Managing Workflows
 tag:

@@ -1,5 +1,5 @@
 ---
-changelog:
+changelog: 
 last_modified_at: 2020-02-20
 title: Getting started with Android apps
 date: '2018-09-21T08:47:45.000+00:00'

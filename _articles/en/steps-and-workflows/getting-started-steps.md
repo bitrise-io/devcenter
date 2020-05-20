@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Introduction to Steps
 redirect_from:
 - getting-started/getting-started-steps/

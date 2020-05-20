@@ -1,5 +1,6 @@
 ---
-changelog: "New tutorial video about webhooks: learn how to register a webhook for your Bitrise builds either automatically or manually." 
+changelog: 'New tutorial video about webhooks: learn how to register a webhook for
+  your Bitrise builds either automatically or manually.'
 last_modified_at: 2020-04-04
 title: Adding webhooks
 redirect_from:
@@ -16,7 +17,6 @@ menu:
     weight: 1
 
 ---
-
 {% include video.html embed_url="https://www.youtube.com/embed/1bUktsyLB3M" %}
 
 Most source code hosting service provides a feature to register webhooks. A webhook is basically an URL which will be called on specified events.

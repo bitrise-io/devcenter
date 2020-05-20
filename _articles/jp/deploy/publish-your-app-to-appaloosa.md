@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Publish your app to Appaloosa
 menu:
   deploy-main:

@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: 外部テスト用アプリのデプロイ
 date: 2018-10-26T12:39:01.000+00:00
 redirect_from: []

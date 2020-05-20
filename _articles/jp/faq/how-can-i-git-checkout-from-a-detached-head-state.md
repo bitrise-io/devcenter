@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 tag: []
 title: How can I git checkout from a detached head state?
 redirect_from: []

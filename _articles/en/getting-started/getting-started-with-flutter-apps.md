@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Getting started with Flutter apps
 redirect_from: []
 date: '2019-01-25T13:26:58.000+00:00'

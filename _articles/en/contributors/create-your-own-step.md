@@ -1,7 +1,7 @@
 ---
 changelog: 'Updated with information on how to set your Step''s platform type and
   function type in the step.yml file. '
-last_modified_at: 2020-05-08 12:00:00 +0000
+last_modified_at: 2020-05-08T12:00:00.000+00:00
 title: 'Developing a new Step '
 tag:
 - cli

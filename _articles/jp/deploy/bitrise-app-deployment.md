@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Bitrise OTA App Deployment
 menu:
   deploy-main:

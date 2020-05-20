@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: iOSコード署名 - トラブルシューティング
 menu:
   ios-code-signing:

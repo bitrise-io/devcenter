@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: 新しいチームメンバーの追加
 redirect_from: "/jp/team-management/index/"
 menu:

@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: codesigndocを使ったコード署名ファイルの収集とエクスポート
 menu:
   ios-code-signing:

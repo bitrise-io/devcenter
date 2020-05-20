@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Configuring notifications
 redirect_from: []
 date: '2019-03-22T11:08:54.000+00:00'

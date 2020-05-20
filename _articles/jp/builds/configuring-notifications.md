@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: 通知設定
 redirect_from: []
 date: '2019-03-22T11:09:35.000+00:00'

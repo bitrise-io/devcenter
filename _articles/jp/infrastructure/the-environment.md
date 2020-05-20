@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Android/Linux/Docker 環境
 menu:
   infrastructure-main:

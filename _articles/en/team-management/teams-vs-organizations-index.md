@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Teams and organizations
 redirect_from: "/team-management/teams-vs-organizations/"
 date: 2019-03-27T15:41:18.000+00:00
@@ -15,7 +15,6 @@ menu:
     weight: 5
 
 ---
-
 {% include video.html embed_url="https://www.youtube.com/embed/GkjVrhBbU-A" %}
 
 There are two types of accounts on Bitrise:

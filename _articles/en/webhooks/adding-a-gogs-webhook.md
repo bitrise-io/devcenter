@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Adding a Gogs webhook
 menu:
   webhooks-main:

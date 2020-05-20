@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Bitrise tools
 redirect_from: "/jp/tools/bitrise-tools/"
 menu:

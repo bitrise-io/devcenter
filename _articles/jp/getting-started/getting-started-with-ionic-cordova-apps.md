@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: Ionic/Cordovaアプリの開始
 date: 2018-11-16T14:33:48.000+00:00
 redirect_from: []

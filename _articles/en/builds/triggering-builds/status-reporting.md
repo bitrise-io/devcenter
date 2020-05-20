@@ -1,5 +1,5 @@
 ---
-changelog:
+changelog: 
 last_modified_at: 2020-04-25
 title: Reporting the build status to your Git hosting provider
 tag:
@@ -9,7 +9,6 @@ tag:
 description: 'Bitrise can push back build status reports to your Git hosting provider
   (GitHub/GitLab/Bitbucket). You only need to authenticate Bitrise to communicate
   towards the Git hosting service. '
-changelog:
 redirect_from: []
 menu:
   triggering-builds:

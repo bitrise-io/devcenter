@@ -1,5 +1,5 @@
 ---
-changelog:
+changelog: 
 last_modified_at: 2020-03-25
 title: SAML SSO in organizations
 date: '2019-03-08T09:49:06.000+00:00'

@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: ビルドをスケジューリングする
 redirect_from:
 - "/builds/scheduling-builds/"

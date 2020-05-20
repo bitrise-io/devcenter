@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: IonicとCordovaプロジェクトのコード署名
 menu:
   ios-code-signing:
