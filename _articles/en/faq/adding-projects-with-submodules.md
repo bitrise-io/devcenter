@@ -111,13 +111,13 @@ git submodule update --recursive --remote --merge --force"%}
 
 There are three options to grant [Bitrise](https://www.bitrise.io) access to your repository:
 
-* _Auto-add SSH keypair_: **Don't use this option if you use submodules.**
+* Auto-add SSH keypair: Don't use this option if you use submodules.
   This option adds the SSH key to the main repository only.
-* _Generate SSH keypair_: this generates a key for you on the [Bitrise](https://www.bitrise.io) website and you will have to copy it manually to the given user.
-  **This is the recommended option if you want to use submodules or have to access multiple repositories during your build.**
-* _Use your own SSH keypair_: can be used if you also have the private key of the given user.
+* Generate SSH keypair: this generates a key for you on the [Bitrise](https://www.bitrise.io) website and you will have to copy it manually to the given user.
+  This is the recommended option if you want to use submodules or have to access multiple repositories during your build.
+* Use your own SSH keypair: can be used if you also have the private key of the given user.
   You just have to paste the private key and [Bitrise](https://www.bitrise.io) will be able to access the repositories.
-  **Keep in mind that the SSH key has to be an RSA key, without a passphrase!**
+  Keep in mind that the SSH key has to be an RSA key, without a passphrase!
   You can find an example of how you can generate a key like that [here](/faq/how-to-generate-ssh-keypair/).
 
 ## Managing SSH keys of an existing private app
