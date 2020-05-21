@@ -11,7 +11,7 @@ description: You probably did not grant access to bitrise.io when you authentica
 redirect_from: []
 menu:
   faq-main:
-    weight: 10
+    weight: 9
 
 ---
 You probably did not grant access to [bitrise.io](https://www.bitrise.io) when you authenticated with GitHub to access the organization (or a repository owned by the organization).

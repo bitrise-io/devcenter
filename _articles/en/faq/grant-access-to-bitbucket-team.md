@@ -10,7 +10,7 @@ description: This guide explains how to grant access for bitrise.io to your Bitb
 redirect_from: []
 menu:
   faq-main:
-    weight: 8
+    weight: 7
 
 ---
 This guide explains how to grant access for [bitrise.io](https://www.bitrise.io/) to your Bitbucket team.

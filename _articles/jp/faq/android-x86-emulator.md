@@ -4,7 +4,7 @@ last_modified_at:
 title: Can I run an Android x86 Emulator on Bitrise?
 menu:
   faq-main:
-    weight: 4
+    weight: 3
 
 ---
 {% include not_translated_yet.html %}

@@ -13,6 +13,10 @@ description: If you have a project with one or more submodules or other private 
 redirect_from: []
 new_article: false
 summary: ''
+menu:
+  faq-main:
+    weight: 24
+    title: Can I add projects with submodules or private repository dependencies?
 
 ---
 

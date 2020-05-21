@@ -7,7 +7,7 @@ redirect_from: []
 description: ''
 menu:
   faq-main:
-    weight: 19
+    weight: 18
 
 ---
 {% include not_translated_yet.html %}

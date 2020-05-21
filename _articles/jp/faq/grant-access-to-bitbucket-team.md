@@ -4,7 +4,7 @@ last_modified_at:
 title: How can I grant Bitrise access to a Bitbucket team?
 menu:
   faq-main:
-    weight: 11
+    weight: 10
 
 ---
 {% include not_translated_yet.html %}

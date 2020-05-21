@@ -7,7 +7,7 @@ redirect_from: []
 description: ''
 menu:
   faq-main:
-    weight: 23
+    weight: 22
 
 ---
 If you are invited to join a [Team or an Organization](/team-management/teams-vs-organizations-index/) on Bitrise, you will get an invitation email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io).

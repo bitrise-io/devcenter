@@ -4,7 +4,7 @@ last_modified_at:
 title: Why can't I see my GitHub organization / repository on the Add New App page?
 menu:
   faq-main:
-    weight: 12
+    weight: 11
 
 ---
 {% include not_translated_yet.html %}

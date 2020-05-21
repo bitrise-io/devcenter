@@ -4,7 +4,7 @@ last_modified_at:
 title: Should I commit my dependencies into my repository?
 menu:
   faq-main:
-    weight: 15
+    weight: 14
 
 ---
 **We recommend including your dependencies inside your repository whenever possible**.

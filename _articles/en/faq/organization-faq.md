@@ -12,7 +12,7 @@ description: Organizations are used to seamlessly manage bigger teams and member
 redirect_from: []
 menu:
   faq-main:
-    weight: 22
+    weight: 21
 
 ---
 ## What is an Organization on Bitrise?

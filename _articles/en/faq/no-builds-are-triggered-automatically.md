@@ -14,7 +14,7 @@ description: |-
 redirect_from: []
 menu:
   faq-main:
-    weight: 16
+    weight: 15
 
 ---
 If no builds are triggered automatically when you push code into your repository, you should **make sure your webhook is properly set on the git hosting service you use (GitHub, Bitbucket, GitLab, ...)**.
