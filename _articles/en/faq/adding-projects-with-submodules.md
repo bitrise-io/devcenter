@@ -15,7 +15,7 @@ new_article: false
 summary: ''
 menu:
   faq-main:
-    weight: 24
+    weight: 3
     title: Can I add projects with submodules or private repository dependencies?
 
 ---

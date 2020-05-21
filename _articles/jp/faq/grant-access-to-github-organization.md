@@ -4,7 +4,7 @@ last_modified_at:
 title: How to grant Bitrise access to a GitHub Organization?
 menu:
   faq-main:
-    weight: 8
+    weight: 9
 
 ---
 {% include not_translated_yet.html %}
