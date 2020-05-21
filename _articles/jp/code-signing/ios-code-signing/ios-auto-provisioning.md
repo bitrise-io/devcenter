@@ -51,6 +51,6 @@ menu:
    * `Distribution type` - `Xcode Archive & Export for iOS step`に入力されている`Select method for export`の値と同じであることを確かめてください。
    * `Scheme` - ビルド対象の処理を制限することができます。
 
-任意項目としてXocdeの _Automatically manage signing_ を使っている場合は`Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?`をtrueにすることでプロファイルを作成しようと試みます。もし手動でコード署名をする設定にしているのであれば特に効果はありません。
+任意項目としてXcdeの _Automatically manage signing_ を使っている場合は`Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?`をtrueにすることでプロファイルを作成しようと試みます。もし手動でコード署名をする設定にしているのであれば特に効果はありません。
 
 もし`codesigndoc`が一つも配布用の.p12ファイルを取り出さないのであれば、これらのファイルを違うMacへ移動させる時と同じように`Keychain Access app`を使って手動で取り出すことができます。
