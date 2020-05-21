@@ -4,7 +4,7 @@ last_modified_at:
 title: 組織についてのFAQ
 menu:
   faq-main:
-    weight: 20
+    weight: 21
 
 ---
 ## Bitriseにおける組織とは何ですか？

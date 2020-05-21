@@ -11,7 +11,7 @@ description: If you want to do manual SSH key configuration on bitrise.io, you c
 redirect_from: []
 menu:
   faq-main:
-    weight: 6
+    weight: 7
 
 ---
 If you want to do manual SSH key configuration on [bitrise.io](https://www.bitrise.io), you can generate an appropriate SSH keypair with a simple Command Line / Terminal command:

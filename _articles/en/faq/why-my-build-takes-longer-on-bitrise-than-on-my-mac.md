@@ -12,7 +12,7 @@ description: If your build takes a lot of time on Bitrise, time for investigatin
 redirect_from: []
 menu:
   faq-main:
-    weight: 12
+    weight: 13
 
 ---
 If your build takes a lot of time on Bitrise, time for investigating! First, find out which step(s) take a significant time in your build.

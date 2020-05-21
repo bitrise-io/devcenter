@@ -1,6 +1,6 @@
 ---
 changelog: Link to the chapter on contributing to Bitrise has been added to this article.
-last_modified_at: 2020-05-19 22:00:00 +0000
+last_modified_at: 2020-05-19T22:00:00.000+00:00
 title: Introduction to Steps
 redirect_from:
 - getting-started/getting-started-steps/
