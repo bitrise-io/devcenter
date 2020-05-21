@@ -1,6 +1,7 @@
 ---
-changelog: ''
-last_modified_at: 
+changelog: 'The guide has been updated with an example setup to explain the methods
+  of accessing multiple repositories in a single build in more detail. '
+last_modified_at: 2020-05-21 13:00:00 +0000
 title: Can I add projects with submodules or with private repo dependencies?
 tag:
 - git
@@ -32,7 +33,7 @@ We’ll go through the other option, using a bot user or machine user - GitHub c
 
 [GitHub itself recommends this method](https://developer.github.com/v3/guides/managing-deploy-keys/#machine-users) for accessing multiple repositories. Let’s quickly go through an example. If you already understand the concept and just need the step-by-step guide to get it done, go to the [Using a machine user to access private repositories](/#using-a-machine-user-to-access-private-repositories) section. 
 
-{% include message_box.html type="example" title="Example multi-repository setup" content="We have a Bitrise app we’ll call MultiBit. It has a main repository and it needs to pull additional data from two other, private repositories during a Bitrise build. Our main user is called BitMan and his GitHub account is linked to his Bitrise account. To access the private repositories during the build, BitMan creates another user, called BitBot. BitBot will be the machine user. 
+{% include message_box.html type="example" title="Example multi-repository setup" content="We have a Bitrise app we’ll call MultiBit. It has a main repository and it needs to pull additional data from two other, private repositories during a Bitrise build. Our main user is called BitMan and his GitHub account is linked to his Bitrise account. To access the private repositories during the build, BitMan creates another user on GitHub, called BitBot. BitBot will be the machine user. 
 
 Now, BitMan goes to the **Settings** tab of his Bitrise app, and copies the public SSH key. BitMan then adds the SSH key to the BitBot user on GitHub and adds BitBot to the two private repositories as a collaborator. Now BitBot has the Bitrise public key and has access to the private repositories as necessary. It’s time to test if BitMan’s setup works.
 
