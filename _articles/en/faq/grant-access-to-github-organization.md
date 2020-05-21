@@ -11,7 +11,7 @@ description: 'This guide explains how to grant access for bitrise.io to your Git
 redirect_from: []
 menu:
   faq-main:
-    weight: 5
+    weight: 6
 
 ---
 This guide explains how to grant access for [bitrise.io](https://www.bitrise.io/) to your GitHub Organization.

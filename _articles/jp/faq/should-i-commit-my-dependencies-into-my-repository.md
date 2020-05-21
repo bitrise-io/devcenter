@@ -4,7 +4,7 @@ last_modified_at:
 title: Should I commit my dependencies into my repository?
 menu:
   faq-main:
-    weight: 17
+    weight: 18
 
 ---
 {% include not_translated_yet.html %}

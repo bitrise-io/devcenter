@@ -4,7 +4,7 @@ last_modified_at:
 title: Can I add projects with submodules or with private repo dependencies?
 menu:
   faq-main:
-    weight: 2
+    weight: 3
 
 ---
 {% include not_translated_yet.html %}
