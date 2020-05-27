@@ -45,7 +45,7 @@ Most of the time, this error means your project is missing either the correct .p
 
 If you manually upload your provisioning profiles and use the **Certificate and profile installer** Step to install your code signing files, read on.
 
-If you use the `iOS Auto Provision` Step, skip to [Automatic provisioning](/code-signing/ios-code-signing/ios-code-signing-troubleshooting/).
+If you use the `iOS Auto Provision` Step, skip to [Automatic provisioning](/code-signing/ios-code-signing/ios-code-signing-troubleshooting/#automatic-provisioning).
 
 1. Check that you have both a .p12 certificate and a provisioning profile uploaded to Bitrise.
 
