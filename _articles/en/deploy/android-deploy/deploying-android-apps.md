@@ -1,6 +1,6 @@
 ---
 changelog: A video on deploying an Android app has been added to the doc.
-last_modified_at: 2020-05-26 22:00:00 +0000
+last_modified_at: 2020-05-26T22:00:00.000+00:00
 title: Deploying Android apps
 date: '2018-10-26T13:00:41.000+00:00'
 redirect_from:
@@ -26,7 +26,7 @@ In this guide, you will learn how to:
 
 * Create an Android app on [bitrise.io](https://www.bitrise.io).
 * Set up a [Google Play Store](https://play.google.com/store) project.
-* Set https://youtu.be/Obp0cTJEETYup [Google Play API](https://developers.google.com/android-publisher/getting_started) access.
+* Set up [Google Play API](https://developers.google.com/android-publisher/getting_started) access.
 * [Deploy to Google Play Store](#deploy-to-google-play-store-using-bitrise-google-play-deploy-step) using Bitrise's **Google Play Deploy** Step.
 
 {% include video.html embed_url="https://www.youtube.com/embed/Obp0cTJEETY" %}
