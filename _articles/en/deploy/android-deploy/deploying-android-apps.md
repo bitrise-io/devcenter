@@ -1,5 +1,5 @@
 ---
-changelog: 
+changelog: ''
 last_modified_at: 
 title: Deploying Android apps
 date: '2018-10-26T13:00:41.000+00:00'
@@ -14,6 +14,7 @@ description: Find out how you can deploy the APK built from your Android app to 
   bitrise.io and to the Google Play Store. Learn about Google Play API access and
   the JSON key file.
 summary: ''
+new_article: false
 menu:
   android-deploy:
     weight: 1
@@ -25,8 +26,10 @@ In this guide, you will learn how to:
 
 * Create an Android app on [bitrise.io](https://www.bitrise.io).
 * Set up a [Google Play Store](https://play.google.com/store) project.
-* Set up [Google Play API](https://developers.google.com/android-publisher/getting_started) access.
+* Set https://youtu.be/Obp0cTJEETYup [Google Play API](https://developers.google.com/android-publisher/getting_started) access.
 * [Deploy to Google Play Store](#deploy-to-google-play-store-using-bitrise-google-play-deploy-step) using Bitrise's **Google Play Deploy** Step.
+
+{% include video.html embed_url="https://www.youtube.com/embed/_Obp0cTJEETY" %}
 
 ## Adding your Android app on [bitrise.io](https://www.bitrise.io)
 
