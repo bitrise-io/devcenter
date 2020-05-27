@@ -1,6 +1,6 @@
 ---
-changelog: ''
-last_modified_at: 
+changelog: A video on deploying an Android app has been added to the doc.
+last_modified_at: 2020-05-26 22:00:00 +0000
 title: Deploying Android apps
 date: '2018-10-26T13:00:41.000+00:00'
 redirect_from:
