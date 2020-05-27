@@ -29,7 +29,7 @@ In this guide, you will learn how to:
 * Set https://youtu.be/Obp0cTJEETYup [Google Play API](https://developers.google.com/android-publisher/getting_started) access.
 * [Deploy to Google Play Store](#deploy-to-google-play-store-using-bitrise-google-play-deploy-step) using Bitrise's **Google Play Deploy** Step.
 
-{% include video.html embed_url="https://www.youtube.com/embed/_Obp0cTJEETY" %}
+{% include video.html embed_url="https://www.youtube.com/embed/Obp0cTJEETY" %}
 
 ## Adding your Android app on [bitrise.io](https://www.bitrise.io)
 
