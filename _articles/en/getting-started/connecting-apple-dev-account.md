@@ -56,8 +56,6 @@ You can use the Apple ID with our deprecated **iOS Auto Provision with Apple ID*
 6. To connect your API key, fill out all required fields: provide a work or personal **Name** of the team, an [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests), a **Key ID** and an **Upload a Private key (.p8)**. If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
 
    ![](/img/appstoreconnectapi-addanaccount.jpg)
-
-   ![](/img/addanaccount-appstoreconnectapi.png)
 7. Continue with [Enabling Developer Portal integration](/getting-started/connecting-apple-dev-account/#enabling-apple-developer-portal-integration).
 
 ### Authenticating your Apple Developer account  with session-based method
