@@ -1,5 +1,5 @@
 ---
-changelog: 
+changelog: ''
 last_modified_at: 
 title: Deploying an iOS app to iTunes Connect
 date: '2018-10-26T12:41:22.000+00:00'
@@ -11,6 +11,8 @@ tag:
 - deploy
 description: You can deploy an app to iTunes Connect (rebranded as App Store Connect)
   to invite testers on Testflight or to release your app on the App Store.
+new_article: false
+summary: ''
 menu:
   ios-deploy:
     weight: 5
@@ -59,7 +61,7 @@ With the **Deploy to iTunes Connect** Step, you can:
 * You can upload apps of three different platforms (iOS, OS X, AppleTVOS).
 * Tell Bitrise whether you want to upload your screenshots and the app's metadata along with the binary.
 
-1. Make sure the **Certificate and profile installer** Step or the **iOS Auto Provision** Step is in your Workflow.
+1. Make sure the **Certificate and profile installer** Step or the **iOS Auto Provision with App Store Connect API** Step is in your Workflow.
 
    Do NOT use both!
 2. Make sure the **Xcode Archive & Export for iOS** Step is in your Workflow.
