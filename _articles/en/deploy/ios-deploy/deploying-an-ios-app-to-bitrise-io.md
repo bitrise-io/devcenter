@@ -38,7 +38,7 @@ Make sure that you have:
 
 {% include message_box.html type="important" title="Installing from the public install page" content="To install an app from the public install page, you must use a native Safari browser of the iOS device. You cannot click the installation link if you're browsing from a third-party app."%}
 
-1. Make sure the **Certificate and profile installer** Step or the **iOS Auto Provision** Step is in your Workflow.
+1. Make sure the **Certificate and profile installer** Step or the **iOS Auto Provision with App Store Connect API** Step is in your Workflow.
 
    Do NOT use both!
 2. Make sure the **Xcode Archive & Export for iOS** Step is in your Workflow.
