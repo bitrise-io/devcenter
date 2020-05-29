@@ -1,5 +1,5 @@
 ---
-changelog: 
+changelog: ''
 last_modified_at: 
 title: Deploying an iOS app for external testing
 date: '2018-10-26T12:39:01.000+00:00'
@@ -11,6 +11,8 @@ tag:
 description: 'Before deploying your app to the App Store, you might want to release
   it to external testers who can test it on their devices outside the development
   environment. '
+new_article: false
+summary: ''
 menu:
   ios-deploy:
     weight: 4
@@ -32,7 +34,7 @@ Make sure that you have:
 
 #### Deploying the app
 
-1. Make sure the **Certificate and profile installer** Step or the **iOS Auto Provision** Step is in your Workflow.
+1. Make sure the **Certificate and profile installer** Step or the **iOS Auto Provision with App Store Connect API** Step is in your Workflow.
 
    Do NOT use both!
 2. Make sure the **Xcode Archive & Export for iOS** Step is in your Workflow.
