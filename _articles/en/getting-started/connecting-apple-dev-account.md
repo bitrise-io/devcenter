@@ -70,7 +70,7 @@ Please note that this method is now deprecated since the official Apple Store Co
    ![](/img/appstoreconnect_sessionbased.jpg)
 5. If two-factor authentication is enabled on your Apple Developer account, you will be prompted to provide your verification code. In this case, your authentication will expire in 30 days and you will have to authenticate again!
 
-### Enabling Apple Developer Portal integration
+## Enabling Apple Developer Portal integration
 
 Authorize your app to receive Apple Developer Portal data from Bitrise once your Apple Developer Account is connected to your [bitrise.io](https://www.bitrise.io/) account.
 
