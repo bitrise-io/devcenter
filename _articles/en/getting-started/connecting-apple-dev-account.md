@@ -28,10 +28,10 @@ You can go to your account settings right now to set it up: [Apple Developer Co
 Connect your Apple Developer account to Bitrise if:
 
 * You want to use our **iOS Auto Provision** Step to [manage provisioning profiles for an iOS application](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/).
-* You want to upload your app to the App Store, using either our **_fastlane_** or **Deploy to iTunes Connect** Steps.
-* You want to upload metadata, screenshots, or other artifacts using our **_fastlane_** Step.
+* You want to upload your app to the App Store, using either our [**_fastlane_**](https://www.bitrise.io/integrations/steps/fastlane) or [**Deploy to iTunes Connect**](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver) Steps.
+* You want to upload metadata, screenshots, or other artifacts using our [**_fastlane_**](https://www.bitrise.io/integrations/steps/fastlane) Step.
 
-You can authenticate in two ways on Bitrise. Use the App Store Connect API (JSON Web Token) solution which is the [official Apple authentication method](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests).  You can also use the deprecated session-based authentication which supports our [**_fastlane_**](https://www.bitrise.io/integrations/steps/fastlane-match) and [**Deploy to Bitrise.io**](https://www.bitrise.io/integrations/steps/deploy-to-bitrise-io) Steps. The session-based authentication allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion. After 30 days, the authentication expires and you’ll have to log in with your Apple ID and password. With JSON Web Token, however, once you connected your account to Bitrise, you will not have to deal with 2FA or re-authenticate after 30 days.
+You can authenticate in two ways on Bitrise. Use the App Store Connect API (JSON Web Token) solution which is the [official Apple authentication method](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests). You can also use the deprecated session-based authentication which supports our [**_fastlane_**](https://www.bitrise.io/integrations/steps/fastlane-match) and [**Deploy to Bitrise.io**](https://www.bitrise.io/integrations/steps/deploy-to-bitrise-io) Steps. The session-based authentication allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion. After 30 days, the authentication expires and you’ll have to log in with your Apple ID and password. With JSON Web Token, however, once you connected your account to Bitrise, you will not have to deal with 2FA or re-authenticate after 30 days.
 
 ## Connecting your account
 
@@ -46,7 +46,7 @@ To successfully connect your Apple Developer account, and use your Apple Develop
 
 Our **iOS Auto Provision with App Store Connect API** Step uses the official App Store Connect API so you can use automatic code signing with Bitrise and don’t have to worry about providing Apple credentials.
 
-You can use the Apple ID with **_fastlane_**, **Deploy to itTunes Connect,** and with our deprecated **iOS Auto Provision with Apple ID** Step.
+You can use the Apple ID with [**_fastlane_**](https://www.bitrise.io/integrations/steps/fastlane), [**Deploy to itTunes Connect**](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver)**,** and with our deprecated **iOS Auto Provision with Apple ID** Step.
 
 1. [Generate a new API key on App Store Connect](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api) under **Users and Access** in [App Store Connect](https://appstoreconnect.apple.com/login).
 2. Log into [bitrise.io](https://www.bitrise.io/).
