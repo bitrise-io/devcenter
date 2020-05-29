@@ -42,7 +42,7 @@ To successfully connect your Apple Developer account, and use your Apple Develop
 
 {% include message_box.html type="important" title="Authorizing the apps" content="It is NOT enough to simply connect your Apple Developer Account to Bitrise. Apps will not be able to automatically use your credentials: you need to authorize each app to do so. For more information, check out [Enabling Apple Developer Portal integration](/getting-started/connecting-apple-dev-account/#enabling-apple-developer-portal-integration)."%}
 
-### Authenticating your Apple Developer account
+### Authenticating your Apple Developer account with App Store Connect API
 
 Our **iOS Auto Provision with App Store Connect API** Step uses the official App Store Connect API so you can use automatic code signing with Bitrise and don’t have to worry about providing Apple credentials.
 
