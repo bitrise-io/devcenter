@@ -23,7 +23,7 @@ Connect your Apple Developer Portal account to Bitrise by authenticating your Ap
 
 You can go to your account settings right now to set it up: [Apple Developer Connection](https://app.bitrise.io/me/profile#/apple_developer_account).
 
-## Reasons to connect your account 
+## Reasons to connect your account
 
 Connect your Apple Developer account to Bitrise if:
 
@@ -44,7 +44,7 @@ To successfully connect your Apple Developer account, and use your Apple Develop
 
 ### Authenticating your Apple Developer account
 
-Our **iOS Auto Provision with App Store Connect API** Step uses the official App Store Connect API so you can use automatic code signing with Bitrise and don’t have to worry about providing Apple credentials. 
+Our **iOS Auto Provision with App Store Connect API** Step uses the official App Store Connect API so you can use automatic code signing with Bitrise and don’t have to worry about providing Apple credentials.
 
 You can use the Apple ID with our deprecated **iOS Auto Provision with Apple ID**, **_fastlane_**, **and Deploy to itTunes Connect** Step.
 
@@ -53,8 +53,12 @@ You can use the Apple ID with our deprecated **iOS Auto Provision with Apple ID*
 3. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
 4. On the menu bar on the left, select **Apple Developer Account**.
 5. Click **Add an Account.**
-6. To connect your API key, fill out all required fields: provide a work or personal **Name** of the team, an [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests), a **Key ID** and an **Upload a Private key (.p8)**. If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.![](/img/addanaccount-appstoreconnectapi.png)
-7.  Continue with [Enabling Developer Portal integration](/getting-started/connecting-apple-dev-account/#enabling-apple-developer-portal-integration).
+6. To connect your API key, fill out all required fields: provide a work or personal **Name** of the team, an [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests), a **Key ID** and an **Upload a Private key (.p8)**. If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
+
+   ![](/img/appstoreconnectapi-addanaccount.jpg)
+
+   ![](/img/addanaccount-appstoreconnectapi.png)
+7. Continue with [Enabling Developer Portal integration](/getting-started/connecting-apple-dev-account/#enabling-apple-developer-portal-integration).
 
 ### Authenticating your Apple Developer account  with session-based method
 
@@ -77,7 +81,7 @@ To authorize the app:
 1. Open your project’s page on [bitrise.io](https://www.bitrise.io/).
 2. Select the **Team** tab.
 3. Scroll down to the **Connected Apple Developer Portal Account** section.
-4. Select an account by the **App Store Connect API** or **Session based authentication (deprecated)** drop downs. You can select both authentication methods if that’s what your Workflow requires. Make sure you test your connection. Please note that only app owner’s and admin’s connected Apple Developer Accounts will appear in the lists. 
+4. Select an account by the **App Store Connect API** or **Session based authentication (deprecated)** drop downs. You can select both authentication methods if that’s what your Workflow requires. Make sure you test your connection. Please note that only app owner’s and admin’s connected Apple Developer Accounts will appear in the lists.
 
    ![](/img/connected-apple-dev-portal.png)
 
