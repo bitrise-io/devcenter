@@ -1,5 +1,4 @@
 ---
-changelog: A video on deploying an Android app has been added to the doc.
 last_modified_at: 2020-05-26T22:00:00.000+00:00
 title: Deploying Android apps
 date: '2018-10-26T13:00:41.000+00:00'

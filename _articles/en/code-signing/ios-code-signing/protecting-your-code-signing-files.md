@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Protecting your code signing files
 menu:

@@ -1,5 +1,4 @@
 ---
-changelog: Number of concurrencies needed for wire transfer updated.
 last_modified_at: 2020-05-03T22:00:00.000+00:00
 title: Managing billing and subscription for organizations
 tag:

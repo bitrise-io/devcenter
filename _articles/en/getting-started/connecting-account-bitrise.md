@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Connecting your GitHub/GitLab/Bitbucket account to Bitrise
 redirect_from:

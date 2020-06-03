@@ -1,5 +1,4 @@
 ---
-changelog: ''
 last_modified_at: 
 title: Device testing for Android
 date: '2018-10-26T08:33:44.000+00:00'

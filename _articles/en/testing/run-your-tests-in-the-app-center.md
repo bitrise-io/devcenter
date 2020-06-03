@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Running tests in the Visual Studio App Center
 redirect_from:

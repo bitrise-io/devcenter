@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: How can I grant Bitrise access to a Bitbucket team?
 tag:

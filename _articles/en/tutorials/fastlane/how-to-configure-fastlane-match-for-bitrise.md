@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: How to configure fastlane match for Bitrise
 menu:
