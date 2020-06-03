@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Deploy your Xamarin app
 redirect_from:

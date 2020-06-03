@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Xamarin Android code signing
 tag:

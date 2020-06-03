@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Adding a Bitbucket webhook
 menu:

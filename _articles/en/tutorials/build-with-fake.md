@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Building with FAKE (F# Make)
 menu:

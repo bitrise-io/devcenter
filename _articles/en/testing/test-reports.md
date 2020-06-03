@@ -1,5 +1,4 @@
 ---
-changelog: Tutorial video on Test Reports has been added to the guide.
 last_modified_at: 2020-05-07T22:00:00.000+00:00
 title: Test Reports
 redirect_from: []

@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Registering a test device
 menu:

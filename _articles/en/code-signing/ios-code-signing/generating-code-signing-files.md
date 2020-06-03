@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Generating code signing files
 menu:

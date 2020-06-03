@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Don't mark the Build as failed if a given step would fail (ignore the error
   of the Step)
