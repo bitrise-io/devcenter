@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Sensitive input in public apps
 redirect_from:

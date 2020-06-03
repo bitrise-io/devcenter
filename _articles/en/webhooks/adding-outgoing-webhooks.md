@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Adding outgoing webhooks
 tag:

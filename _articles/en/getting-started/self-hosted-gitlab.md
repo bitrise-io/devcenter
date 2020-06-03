@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Connecting self-hosted GitLab instances
 redirect_from:

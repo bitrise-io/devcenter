@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Getting started with Xamarin apps
 date: 2018-10-19T11:49:28.000+00:00

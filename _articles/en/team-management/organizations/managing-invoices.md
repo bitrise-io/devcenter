@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Managing the invoices of your organizations
 tag:

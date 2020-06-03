@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Connecting your Apple Developer Account to Bitrise
 redirect_from:

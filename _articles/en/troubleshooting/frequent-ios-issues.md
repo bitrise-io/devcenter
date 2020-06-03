@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Frequent iOS issues
 redirect_from:

@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Android tips and tricks
 redirect_from:

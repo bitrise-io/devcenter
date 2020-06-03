@@ -1,8 +1,11 @@
 ---
-changelog: 
+changelog: ''
 last_modified_at: 
 title: Remote access
 redirect_from: []
+new_article: false
+tag: []
+summary: ''
 menu:
   builds-main:
     weight: 34
@@ -50,5 +53,19 @@ And done! You should be able to access the virtual machine where your build is r
    * Password
 5. Open a screenshare application.
 6. Fill out the required fields with the information from under the **Screenshare** option.
+
+## Extending the availability of remote access
+
+Remote access is available while the build is running and for 10 minutes after the build is finished. If this is not enough, there’s a simple workaround to make sure remote access is available for a longer time.
+
+1. Add a **Script** Step after the Step that causes the build to fail.
+2. Toggle the **Run if previous Step failed** option on to ensure the **Script** Step always runs.
+3. Add a command to let the build “sleep” for a time specified in seconds:
+
+   `1 sleep 5400`
+
+   This example lets the build run for 90 minutes. It should be no more than your build time limit, of course.
+
+That’s it. While the build is still running, you can look around on the virtual machine for the possible issues that caused it to fail.
 
 And done! You should now be able to access the virtual machine where your build is running.

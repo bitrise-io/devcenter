@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Running Detox tests on Bitrise
 redirect_from: []

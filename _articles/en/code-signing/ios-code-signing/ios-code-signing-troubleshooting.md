@@ -1,5 +1,4 @@
 ---
-changelog: ''
 last_modified_at: 
 title: iOS code signing - troubleshooting
 date: '2018-10-11T11:28:48.000+00:00'

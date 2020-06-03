@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Response and pagination
 redirect_from: []

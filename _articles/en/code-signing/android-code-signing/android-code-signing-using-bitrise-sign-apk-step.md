@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Android code signing using Android Sign step
 redirect_from:

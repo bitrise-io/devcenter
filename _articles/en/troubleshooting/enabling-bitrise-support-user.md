@@ -1,5 +1,4 @@
 ---
-changelog: 
 last_modified_at: 
 title: Enabling the Bitrise Support user for your app
 tag:
