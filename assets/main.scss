@@ -766,16 +766,35 @@ main.content {
 		}
 	}
 
-	.new-article-label {
-		display: inline-flex;
-		align-items: center;
-		border: solid 0.5px #b88adb;
+	[class^="article-label"] {
 		border-radius: 12px;
-		background-color: #f8f0ff;
-		color: #683d87;
-		padding: 0.5rem;
+		padding: 0.5rem 0.5rem 0.25rem;
 		font-size: 1.1rem;
 		font-weight: bold;
+	}
+
+	.article-label-new {
+		border: solid 0.5px #b88adb;
+		background-color: #f8f0ff;
+		color: #683d87;
+	}
+
+	.article-label-update {
+		border: solid 0.5px #1375b2;
+		background-color: #e6f2fa;
+		color: #1375b2;
+	}
+
+	.article-label-fix {
+		border: solid 0.5px #ff2158;
+		background-color: #ffe8ee;
+		color: #ff2158;
+	}
+
+	.article-label-video {
+		border: solid 0.5px #ffc500;
+		background-color: rgba(255,197,0,.16);
+		color: #ffc500;
 	}
 
 /* end of homepage styling */

@@ -22,24 +22,32 @@
   </a>
 </div>
 <div class="changelog-container" id="changelog-container-id">
-{% assign maxArticleCounter = 0 %}
+{% assign changeCounter = 0 %}
 {% assign maxArticles = 12 %}
-{% for article in site.articles %}
-  {% capture modified %}{{ article.last_modified_at | date: '%s' }}{% endcapture %}
-  {% capture month_ago %}{{ 'now' | date: '%s' | minus: 2419200 }}{% endcapture %}
-  {% if modified > month_ago and article.changelog %}
-  {% assign maxArticleCounter = maxArticleCounter | plus: 1 %}
-  {% if maxArticleCounter == 1 %}
+{% for change in site.data.changelog %}
+  {% assign changeCounter = changeCounter | plus: 1 %}
+  {% if changeCounter == 1 %}
   <title class="changelog-container-title">Latest changes in the docs</title>
   {% endif %}
       <div class="changelog-content">
-        <div class="changelog-content-title"><title>{{article.last_modified_at | date: "%Y-%m-%d" }}: {{ article.title }}</title>{% if article.new_article == true %}<label><span class="new-article-label">NEW</span></label>{% endif %}</div>
-        <p>{{ article.changelog | strip_html | truncatewords: 30 }}</p>
-        <a href="{{ article.url }}">Read "{{ article.title }}" in full &gt;&gt;</a>
+        <div class="changelog-content-title">
+          <title>
+            {{change.modified | date: "%Y-%m-%d" }}: {{ change.title }}
+          </title>
+          {% if change.type == "new" %}
+          <label class="article-label-new">NEW</label>
+          {% elsif change.type == "update" %}
+          <label class="article-label-update">UPDATE</label>
+          {% elsif change.type == "fix" %}
+          <label class="article-label-fix">FIX</label>
+          {% elsif change.type == "video" %}
+          <label class="article-label-video">VIDEO</label>
+          {% endif %}</div>
+        <p>{{ change.changelog | strip_html | truncatewords: 30 }}</p>
+        <a href="{{ change.url }}">Read "{{ change.title }}" in full &gt;&gt;</a>
       </div>
-  {% if maxArticleCounter >= maxArticles %}
+  {% if changeCounter >= maxArticles %}
     {% break %}
-  {% endif %}
   {% endif %}
 {% endfor %}
 </div>
