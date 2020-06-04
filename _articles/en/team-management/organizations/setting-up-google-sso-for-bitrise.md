@@ -10,6 +10,9 @@ tag:
 - sso
 description: Learn how to set up Bitrise as a SAML SSO app on Google, enable SAML
   SSO and enforce it on your Bitrise Organization.
+changelog: ''
+new_article: false
+summary: ''
 menu:
   organizations:
     weight: 17
@@ -100,5 +103,7 @@ Now that we have the config information, we will leave Google Admin Console for 
 Congrats! You have successfully enabled the SAML connection! Since SAML SSO has not been enforced on your org yet, you can log in via SAML SSO or with your Bitrise credentials.
 
 If you click **Account settings** and select the **Single Sign-On** tab from the left menu, you should see SAML SSO is enabled for your Organization. Once all Organization members have enabled their SAML SSO connection, you can [enforce SAML SSO on the whole organization with a simple toggle](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization).
+
+{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Organization's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/#signing-up-to-bitrise-with-saml-sso). "%}
 
 {% include banner.html banner_text="Set up Google SSO!" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your Organization" %}
