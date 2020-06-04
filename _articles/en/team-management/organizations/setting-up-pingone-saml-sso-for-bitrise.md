@@ -9,6 +9,9 @@ title: Setting up Ping Identity SSO for Bitrise
 redirect_from: []
 description: Learn how to set up Bitrise as a SAML SSO app on Ping Identity, enable
   SAML SSO and enforce it on your Bitrise Organization.
+changelog: ''
+new_article: false
+summary: ''
 menu:
   organizations:
     weight: 23
@@ -73,6 +76,6 @@ You should be landing on the Organization’s Dashboard. From now on, you can us
 
 You can check which Organization member has switched from the usual login flow to the SAML SSO one if you [check their statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) on the **People** page. Once all in, you can [enforce SAML SSO](/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement) as the only gateway to the Organization.
 
-{% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you’d like to learn more about SAML SSO on Bitrise, check out our SAML SSO in organizations guide. "%}
+{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular how to sign up to Bitrise with an Organization's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/#signing-up-to-bitrise-with-saml-sso). "%}
 
 {% include banner.html banner_text="Set up PingOne SSO" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your organization" %}
