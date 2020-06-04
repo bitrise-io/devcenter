@@ -137,7 +137,7 @@
             {% if modifiedCounter == 1 and change.type == "new" %}
             <span class="last_modified_at">Published at {{ change.modified | date: "%Y-%m-%d" }}</span>
             {% elsif modifiedCounter == 1 %}
-            <span class="last_modified_at">Last modified at {{ change.modified | date: "%Y-%m-%d" }}</span>
+            <span class="last_modified_at">Last updated at {{ change.modified | date: "%Y-%m-%d" }}</span>
             {% endif %}
           {% endif %}
         {% endfor %}
