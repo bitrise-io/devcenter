@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: List of known Xcode issues
 redirect_from:
 - "/ios/known-xcode-issues/"

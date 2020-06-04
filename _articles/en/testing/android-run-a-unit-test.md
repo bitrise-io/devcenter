@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Android unit test
 tag:
 - android

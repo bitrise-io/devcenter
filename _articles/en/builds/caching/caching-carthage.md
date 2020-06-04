@@ -10,7 +10,7 @@ tag:
 title: Caching Carthage dependencies
 redirect_from: []
 description: ''
-new_article: true
+
 summary: ''
 
 ---

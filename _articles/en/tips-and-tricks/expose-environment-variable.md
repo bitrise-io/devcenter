@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Exposing Env Vars and using them in another Step
 menu:
   tips-and-tricks-main:

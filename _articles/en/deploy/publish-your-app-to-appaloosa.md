@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Publish your app to Appaloosa
 redirect_from: "/tutorials/deploy/publish-your-app-to-appaloosa/"
 menu:

@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Deploy apps to DeployGate from Bitrise
 redirect_from: "/tutorials/deploy/deploy-apps-to-deploygate-from-bitrise/"
 menu:

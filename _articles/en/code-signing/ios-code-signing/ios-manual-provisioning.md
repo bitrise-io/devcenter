@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Managing iOS code signing files - manual provisioning
 tag:
 - ios

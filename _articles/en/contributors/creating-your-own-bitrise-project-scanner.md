@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Creating your own Bitrise project scanner
 date: 2018-12-13T11:31:09.000+00:00
 redirect_from: "/bitrise-cli/creating-your-own-bitrise-project-scanner/"

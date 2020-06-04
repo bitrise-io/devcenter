@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Configuring and connecting to your VPN
 menu:
   tutorials-main:

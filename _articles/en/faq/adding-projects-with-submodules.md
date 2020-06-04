@@ -11,7 +11,7 @@ description: If you have a project with one or more submodules or other private 
   dependencies (for example, CocoaPods repositories), you have to grant access to
   all repositories for a successful build.
 redirect_from: []
-new_article: false
+
 summary: ''
 menu:
   faq-main:

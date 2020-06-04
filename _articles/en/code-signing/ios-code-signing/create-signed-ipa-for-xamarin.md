@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Creating a signed .ipa for Xamarin apps
 tag:
 - xamarin

@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Deploying an iOS app to Bitrise.io
 date: '2018-10-26T12:37:47.000+00:00'
 redirect_from: []
@@ -12,7 +11,7 @@ description: Deploy an app to Bitrise to be able to download the .ipa file and i
   it on devices specified in the app's Development Provisioning Profile. This way,
   your internal testers can easily test the app.
 summary: ''
-new_article: false
+
 menu:
   ios-deploy:
     weight: 3

@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Using the Trigger Map to trigger builds
 redirect_from:
 - "/webhooks/trigger-map/"

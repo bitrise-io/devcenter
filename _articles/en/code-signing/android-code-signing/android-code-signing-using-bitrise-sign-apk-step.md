@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Android code signing using Android Sign step
 redirect_from:
 - "/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/"

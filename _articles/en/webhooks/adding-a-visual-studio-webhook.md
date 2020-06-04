@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Adding a Visual Studio webhook
 menu:
   webhooks-main:

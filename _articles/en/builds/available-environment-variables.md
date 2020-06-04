@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Available environment variables
 redirect_from:
 - "/faq/available-environment-variables/"
