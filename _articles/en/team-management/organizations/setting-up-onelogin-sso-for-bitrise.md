@@ -9,6 +9,9 @@ title: Setting up OneLogin SSO for Bitrise
 redirect_from: []
 description: Learn how to set up Bitrise as a SAML SSO app on OneLogin, enable SAML
   SSO and enforce it on your Bitrise Organization.
+changelog: ''
+new_article: false
+summary: ''
 menu:
   organizations:
     weight: 24
@@ -63,4 +66,6 @@ All Organization members (including the Organization owner) must enable their SA
 
 You should be landing on your Bitrise Dashboard. If you go to your Organization's **Groups** tab, you can see that you are automatically added as a SAML user. All Organization members, who enable SAML SSO, appear here automatically. From now on you can log into your Bitrise Organization with SAML SSO.
 
-{% include message_box.html type="note" title="What’s next?" content="You can [track](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) how other Organization members are getting on with enabling their SAML SSO to Bitrise. This is important since the Organization owner can only [enforce](/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement) SAML SSO on the Organization if all Organization members have enabled SAML."%}
+{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Organization's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/#signing-up-to-bitrise-with-saml-sso). "%}
+
+What's next? You can [track](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) how other Organization members are getting on with enabling their SAML SSO to Bitrise. This is important since the Organization owner can only [enforce](/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement) SAML SSO on the Organization if all Organization members have enabled SAML.
