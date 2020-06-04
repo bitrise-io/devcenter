@@ -10,6 +10,9 @@ tag:
 - sso
 description: Learn how to set up Bitrise as a SAML SSO app on Azure AD, enable SAML
   SSO and enforce it on your Bitrise Organization.
+changelog: ''
+new_article: false
+summary: ''
 menu:
   organizations:
     weight: 19
@@ -134,6 +137,6 @@ From now on, Organization members will be able to log in exclusively via SAML SS
 
 ![](/img/enforced-saml-sso.jpg)
 
-{% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you'd like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in Organizations](/team-management/organizations/saml-sso-in-organizations/) guide."%}
+{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Organization's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/#signing-up-to-bitrise-with-saml-sso). "%}
 
 {% include banner.html banner_text="Set up Azure AD SSO!" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your organization" %}
