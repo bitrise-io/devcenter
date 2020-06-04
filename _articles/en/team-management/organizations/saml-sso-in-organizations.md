@@ -12,6 +12,8 @@ description: Organization members can log into or sign up to Bitrise using their
   SAML SSO provider's system. With SAML SSO, organizations will be able to apply the
   security guidelines of their SAML SSO provider when accessing their Bitrise organization.
 summary: ''
+changelog: ''
+new_article: false
 menu:
   organizations:
     weight: 16
@@ -147,9 +149,9 @@ If SAML SSO connection has been already added to your Organization and you are c
 
 {% include message_box.html type="info" title="Expired SAML SSO certificate" content=" If your SAML SSO certificate has expired and you cannot log into Bitrise through SAML SSO, we advise you to contact our Support team, who will be happy to assist you "%}
 
-## Logging in via SSO without a Bitrise account
+## Signing up to Bitrise with SAML SSO
 
-If you do not have a Bitrise account yet and an Organization owner invites you to their Organization via email, you can easily sign up to Bitrise and connect to the respective Organization! Our **Sign In via SSO** email is Organization-specific so you're just a couple of clicks away from accessing the right Bitrise Organization!
+If you do not have a Bitrise account yet and an Organization owner invites you to their Organization via email, you can easily sign up to Bitrise and connect to the respective Organization. Our **Sign In via SSO** email is Organization-specific so you're just a couple of clicks away from accessing the right Bitrise Organization!
 
 1. Find the invitation email you got from Bitrise (letsconnect@bitrise.io) in your mailbox.
 
