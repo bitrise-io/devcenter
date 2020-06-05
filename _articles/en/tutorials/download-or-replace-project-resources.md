@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Downloading or replacing project resources
 menu:
   tutorials-main:

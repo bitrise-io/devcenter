@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Finding the URL of your organizations
 menu:
   organizations:

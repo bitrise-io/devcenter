@@ -14,7 +14,7 @@ redirect_from: []
 summary: On bitrise.io, we have macOS and Linux virtual machines hosted for your builds.
   You can select from multiple stacks, each with its own list of preinstalled tool
   versions.
-new_article: false
+
 menu:
   infrastructure-main:
     weight: 6

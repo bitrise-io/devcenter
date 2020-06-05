@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Getting started
 redirect_from:
 - "/getting-started/adding-a-new-app/"

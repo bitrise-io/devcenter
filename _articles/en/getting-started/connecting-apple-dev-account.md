@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Connecting your Apple Developer Account to Bitrise
 redirect_from:
 - https://devcenter.bitrise.io/getting-started/signing-up/connecting-apple-dev-account/

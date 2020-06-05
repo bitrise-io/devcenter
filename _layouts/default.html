@@ -130,15 +130,17 @@
             </div>
           {% endif %}
         {% endif %}
-        {% if current_article.url != "/" %}
-          {% if current_article.last_modified_at %}
-            {% if current_article.new_article == true %}
-            <span class="last_modified_at">Published on {{ current_article.last_modified_at | date: "%Y-%m-%d" }}</span>
-            {% else %}
-            <span class="last_modified_at">Last updated on {{ current_article.last_modified_at | date: "%Y-%m-%d" }}</span>
+        {% assign modifiedCounter = 0 %}
+        {% for change in site.data.changelog %}
+          {% if current_article.title == change.title %}
+            {% assign modifiedCounter = modifiedCounter | plus: 1 %}
+            {% if modifiedCounter == 1 and change.type == "new" %}
+            <span class="last_modified_at">Published at {{ change.modified | date: "%Y-%m-%d" }}</span>
+            {% elsif modifiedCounter == 1 %}
+            <span class="last_modified_at">Last updated at {{ change.modified | date: "%Y-%m-%d" }}</span>
             {% endif %}
           {% endif %}
-        {% endif %}
+        {% endfor %}
         {% include anchor_headings.html html=content anchorBody="⚓" anchorClass="anchor-symbol" %}
         {% include related_articles.html %}
       </main>

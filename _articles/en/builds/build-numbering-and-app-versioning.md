@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Build numbering and app versioning
 redirect_from:
 - "/builds/build-numbering-and-app-versioning/builds/build-numbering-and-app-versioning"

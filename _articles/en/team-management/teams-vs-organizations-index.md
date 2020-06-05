@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Teams and organizations
 redirect_from: "/team-management/teams-vs-organizations/"
 date: 2019-03-27T15:41:18.000+00:00

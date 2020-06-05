@@ -8,7 +8,7 @@ description: It's very simple to create your own Workflow with the Workflow Edit
   You can create new Workflows based on any of the existing ones, or you can simply
   create an empty Workflow and add the steps yourself.
 redirect_from: []
-new_article: false
+
 summary: ''
 menu:
   steps-workflows-main:

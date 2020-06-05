@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Use your own Docker image
 menu:
   docker:

@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Adding a GitHub webhook
 menu:
   webhooks-main:

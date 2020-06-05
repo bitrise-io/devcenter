@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Authentication
 redirect_from: []
 date: '2019-03-29T16:46:07.000+00:00'

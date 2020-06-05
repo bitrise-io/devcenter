@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Getting started with React Native apps
 date: '2018-10-12T13:16:58.000+00:00'
 redirect_from: []

@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: App Status Image/Badge API
 menu:
   api-main:

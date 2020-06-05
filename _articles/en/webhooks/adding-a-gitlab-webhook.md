@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Adding a Gitlab webhook
 menu:
   webhooks-main:

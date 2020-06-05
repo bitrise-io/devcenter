@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Scheduling your builds
 redirect_from:
 - "/builds/scheduling-builds/"

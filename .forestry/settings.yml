@@ -123,6 +123,9 @@ sections:
 - type: heading
   label: Data files
 - type: document
+  path: _data/changelog.yml
+  label: The changelog
+- type: document
   path: _config.yml
   label: _config.yml
 - type: directory

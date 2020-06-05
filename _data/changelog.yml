@@ -1,71 +1,76 @@
-- title: Remote access 
+---
+- title: Device testing for iOS
+  modified: 2020-06-05 16:00:00 +0200
+  changelog: A video on running device tests for iOS apps with Firebase has been added
+    to the doc.
+  type: video
+  url: "/testing/device-testing-for-ios/"
+- title: Remote access
   modified: 2020-06-02
-  changelog: Learn about extending the availability of the remote access feature so that you have more time to troubleshoot build issues on Bitrise.
+  changelog: Learn about extending the availability of the remote access feature so
+    that you have more time to troubleshoot build issues on Bitrise.
   type: update
-  url: /builds/remote-access/
-
+  url: "/builds/remote-access/"
 - title: Deploying Android apps
   modified: 2020-05-26
   changelog: A video on deploying an Android app has been added to the doc.
   type: video
-  url: /deploy/android-deploy/deploying-android-apps/
-
+  url: "/deploy/android-deploy/deploying-android-apps/"
 - title: Adding apps with submodules or private repo dependencies
   modified: 2020-05-21
-  changelog: The guide has been updated with an example setup to explain the methods of accessing multiple repositories in a single build in more detail.
-  type: update 
-  url: /faq/adding-projects-with-submodules/
-
+  changelog: The guide has been updated with an example setup to explain the methods
+    of accessing multiple repositories in a single build in more detail.
+  type: update
+  url: "/faq/adding-projects-with-submodules/"
 - title: Verified Steps
   modified: 2020-05-19
-  changelog: Learn how to get a Verified Step badge on your Step once you have shared it in our Bitrise Step Library.
+  changelog: Learn how to get a Verified Step badge on your Step once you have shared
+    it in our Bitrise Step Library.
   type: new
-  url: /contributors/verified-steps/
-
+  url: "/contributors/verified-steps/"
 - title: Introduction to Steps
   modified: 2020-05-19
-  changelog: Link to the chapter on contributing to Bitrise has been added to this article.
+  changelog: Link to the chapter on contributing to Bitrise has been added to this
+    article.
   type: update
-  url: /steps-and-workflows/getting-started-steps/
-
+  url: "/steps-and-workflows/getting-started-steps/"
 - title: Exporting to Test Reports from any Step
   modified: 2020-05-11
-  changelog: You can export test results from any Step by using the Export test results to Test Reports add-on Step. Read about the Step and how to use it.
+  changelog: You can export test results from any Step by using the Export test results
+    to Test Reports add-on Step. Read about the Step and how to use it.
   type: update
-  url: /testing/exporting-to-test-reports-from-custom-script-steps/
-
+  url: "/testing/exporting-to-test-reports-from-custom-script-steps/"
 - title: Creating a Workflow
   modified: 2020-05-11
   changelog: How longer Workflow names are displayed has been added to the guide.
   type: update
-  url: /steps-and-workflows/creating-workflows/
-
+  url: "/steps-and-workflows/creating-workflows/"
 - title: Developing a new Step
   modified: 2020-05-08
-  changelog: Updated with information on how to set your Step's platform type and function type in the step.yml file.
+  changelog: Updated with information on how to set your Step's platform type and
+    function type in the step.yml file.
   type: update
-  url: /steps-and-workflows/creating-workflows/
-
+  url: "/steps-and-workflows/creating-workflows/"
 - title: Test Reports
   modified: 2020-05-07
   changelog: Tutorial video on Test Reports has been added to the guide.
   type: video
-  url: /testing/test-reports/
-
+  url: "/testing/test-reports/"
 - title: Caching Carthage dependencies
   modified: 2020-04-29
-  changelog: A new guide about how to Carthage dependencies during Bitrise builds, using our dedicated Steps.
+  changelog: A new guide about how to Carthage dependencies during Bitrise builds,
+    using our dedicated Steps.
   type: new
-  url: /builds/caching/caching-carthage-dependencies/
-
+  url: "/builds/caching/caching-carthage-dependencies/"
 - title: Caching
   modified: 2020-04-17
-  changelog: 'New tutorial video about build caching: learn about using the dedicated Steps and managing your build caches on the website.'
+  changelog: 'New tutorial video about build caching: learn about using the dedicated
+    Steps and managing your build caches on the website.'
   type: video
-  url: /builds/caching/about-caching-index/
-
+  url: "/builds/caching/about-caching-index/"
 - title: Deploying with Ship
   modified: 2020-04-01
-  changelog: Clarification added about using Steps that can build a deployable app but do not automatically export it to Ship.
+  changelog: Clarification added about using Steps that can build a deployable app
+    but do not automatically export it to Ship.
   type: fix
-  url: /deploy/ship/
+  url: "/deploy/ship/"

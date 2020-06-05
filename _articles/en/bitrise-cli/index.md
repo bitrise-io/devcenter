@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Bitrise CLI
 redirect_from:
 - "/bitrise-cli"
