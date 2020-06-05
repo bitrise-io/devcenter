@@ -10,7 +10,10 @@ description: 'With Bitrise''s iOS device testing solution, you can run iOS tests
   need to use our dedicated Steps and set the device type(s) on which you want to
   test your app. '
 redirect_from: []
-summary: ''
+summary: 'With Bitrise''s iOS device testing solution, you can run iOS tests on physical
+  devices without having to set up and register your own devices: you just need to
+  use our dedicated Steps and set the device type(s) on which you want to test your
+  app.'
 menu:
   testing-main:
     weight: 11
