@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: How to run your build locally in Docker
 redirect_from:
 - "/docker/run-your-build-locally-in-docker/"

@@ -9,7 +9,7 @@ tag:
 - troubleshooting
 description: Access our build machines remotely when running a failed build again.
   You can use either SSH or a screenshare app to log in to the build's virtual machine.
-new_article: false
+
 summary: Remote access allows users to connect to their build's virtual machines via
   SSH or a screenshare app. A failed build can be rebuilt with remote access enabled
   to make troubleshooting a lot easier.

@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Build status indicator on GitHub/GitLab/Bitbucket does not work
 redirect_from:
 - "/faq/github-pull-request-status-troubleshooting"

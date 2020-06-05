@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Android code signing with Android Studio
 tag:
 - android

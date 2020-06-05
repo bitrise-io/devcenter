@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Installing any additional tools
 menu:
   tips-and-tricks-main:

@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Device testing for iOS
 date: '2018-10-17T10:31:27.000+00:00'
 tag:
@@ -11,7 +10,7 @@ description: 'With Bitrise''s iOS device testing solution, you can run iOS tests
   need to use our dedicated Steps and set the device type(s) on which you want to
   test your app. '
 redirect_from: []
-new_article: false
+
 summary: ''
 menu:
   testing-main:

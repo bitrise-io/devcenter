@@ -13,7 +13,7 @@ description: Organization members can log into or sign up to Bitrise using their
   security guidelines of their SAML SSO provider when accessing their Bitrise organization.
 summary: ''
 changelog: ''
-new_article: false
+
 menu:
   organizations:
     weight: 16

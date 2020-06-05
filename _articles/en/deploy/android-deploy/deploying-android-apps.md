@@ -13,7 +13,7 @@ description: Find out how you can deploy the APK built from your Android app to 
   bitrise.io and to the Google Play Store. Learn about Google Play API access and
   the JSON key file.
 summary: ''
-new_article: false
+
 menu:
   android-deploy:
     weight: 1

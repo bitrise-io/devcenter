@@ -13,7 +13,7 @@ description: Test Reports allows you to view all your test results in a convenie
   directory. From there, Test Reports can process them and display them in a way that's
   easy to read and analyze.
 summary: ''
-new_article: false
+
 menu:
   testing-main:
     weight: 1

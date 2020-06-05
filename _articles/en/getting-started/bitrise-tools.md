@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Bitrise tools
 redirect_from: "/tools/bitrise-tools/"
 menu:

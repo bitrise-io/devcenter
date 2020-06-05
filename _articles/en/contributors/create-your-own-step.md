@@ -13,7 +13,7 @@ description: Creating your own Step is as simple as running a bitrise CLI comman
   or Go toolkits.
 redirect_from:
 - "/bitrise-cli/create-your-own-step/"
-new_article: false
+
 summary: ''
 menu:
   contributors-main:

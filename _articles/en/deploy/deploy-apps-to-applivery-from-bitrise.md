@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Deploying apps to Applivery
 redirect_from:
 - "/tutorials/deploy/deploy-apps-to-applivery-from-bitrise/"

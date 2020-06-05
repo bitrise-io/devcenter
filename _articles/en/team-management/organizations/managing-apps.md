@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Managing the apps of organizations
 tag:
 - teams

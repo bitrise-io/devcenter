@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: How to contribute to Bitrise
 redirect_from: []
 tag:

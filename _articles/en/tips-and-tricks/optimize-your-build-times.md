@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Optimizing your build times
 menu:
   tips-and-tricks-main:

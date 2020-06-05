@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Secrets
 tag:
 - cli

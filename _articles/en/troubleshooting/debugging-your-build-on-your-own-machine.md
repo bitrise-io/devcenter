@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Debugging your build on your own machine
 date: '2018-11-19T15:33:56.000+00:00'
 tag:

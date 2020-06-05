@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: iOS code signing - troubleshooting
 date: '2018-10-11T11:28:48.000+00:00'
 tag:
@@ -11,7 +10,7 @@ description: 'If you have issues with iOS code signing, you need to check your c
   signing files, your export method, your app''s capabilities, and your registered
   test devices. '
 redirect_from: []
-new_article: false
+
 summary: ''
 menu:
   ios-code-signing:

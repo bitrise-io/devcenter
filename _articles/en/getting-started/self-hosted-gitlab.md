@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 title: Connecting self-hosted GitLab instances
 redirect_from:
 - https://devcenter.bitrise.io/adding-a-new-app/self-hosted-gitlab/
