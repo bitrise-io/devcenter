@@ -125,7 +125,6 @@ sections:
 - type: document
   path: _data/changelog.yml
   label: The changelog
-  match: "**/*"
 - type: document
   path: _config.yml
   label: _config.yml
