@@ -1,7 +1,7 @@
 ---
 changelog: 'Updated with information on how to set your Step''s platform type and
   function type in the step.yml file. '
-last_modified_at: 2020-05-08T12:00:00.000+00:00
+last_modified_at: '2020-05-08T12:00:00.000+00:00'
 title: 'Developing a new Step '
 tag:
 - cli
@@ -13,7 +13,6 @@ description: Creating your own Step is as simple as running a bitrise CLI comman
   or Go toolkits.
 redirect_from:
 - "/bitrise-cli/create-your-own-step/"
-
 summary: ''
 menu:
   contributors-main:
@@ -43,7 +42,7 @@ For detailed information on how Steps work, see the following guides:
 
 Before creating a new Step, you will need to install the Bitrise CLI, set it up, and make sure the [Step plugin](https://github.com/bitrise-io/bitrise-plugins-step) is updated to the latest version.
 
-1. [Install the Bitrise CLI](bitrise-cli/installation/).
+1. [Install the Bitrise CLI](/bitrise-cli/installation/).
 2. Run bitrise setup.
 3. Update the Step plugin to the latest version with the following command:
 
