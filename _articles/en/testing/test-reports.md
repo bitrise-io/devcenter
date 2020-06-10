@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2020-05-07T22:00:00.000+00:00
+last_modified_at: '2020-05-07T22:00:00.000+00:00'
 title: Test Reports
 redirect_from: []
 tag:
@@ -13,7 +13,6 @@ description: Test Reports allows you to view all your test results in a convenie
   directory. From there, Test Reports can process them and display them in a way that's
   easy to read and analyze.
 summary: ''
-
 menu:
   testing-main:
     weight: 1

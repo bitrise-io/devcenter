@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2020-05-26T22:00:00.000+00:00
+last_modified_at: '2020-05-26T22:00:00.000+00:00'
 title: Deploying Android apps
 date: '2018-10-26T13:00:41.000+00:00'
 redirect_from:
@@ -13,7 +13,6 @@ description: Find out how you can deploy the APK built from your Android app to 
   bitrise.io and to the Google Play Store. Learn about Google Play API access and
   the JSON key file.
 summary: ''
-
 menu:
   android-deploy:
     weight: 1

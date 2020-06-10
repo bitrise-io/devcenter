@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2020-03-25
+last_modified_at: '2020-03-25'
 title: SAML SSO in organizations
 date: '2019-03-08T09:49:06.000+00:00'
 redirect_from: []
@@ -13,7 +13,6 @@ description: Organization members can log into or sign up to Bitrise using their
   security guidelines of their SAML SSO provider when accessing their Bitrise organization.
 summary: ''
 changelog: ''
-
 menu:
   organizations:
     weight: 16

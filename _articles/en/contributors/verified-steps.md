@@ -7,8 +7,7 @@ tag:
 title: Verified Steps
 changelog: Learn how to get a Verified Step badge on your Step once you have shared
   it in our Bitrise Step Library.
-last_modified_at: 2020-05-19T22:00:00.000+00:00
-
+last_modified_at: '2020-05-19T22:00:00.000+00:00'
 redirect_from: []
 summary: Learn how to get a Verified Step badge on your Step once you have shared
   it in our Bitrise Step Library.

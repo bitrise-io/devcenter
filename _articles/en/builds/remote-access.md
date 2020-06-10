@@ -1,7 +1,7 @@
 ---
 changelog: 'Learn about extending the availability of the remote access feature so
   that you have more time to troubleshoot build issues on Bitrise. '
-last_modified_at: 2020-06-02 08:45:00 +0000
+last_modified_at: '2020-06-02T08:45:00.000+00:00'
 title: Remote access
 redirect_from: []
 tag:
@@ -9,7 +9,6 @@ tag:
 - troubleshooting
 description: Access our build machines remotely when running a failed build again.
   You can use either SSH or a screenshare app to log in to the build's virtual machine.
-
 summary: Remote access allows users to connect to their build's virtual machines via
   SSH or a screenshare app. A failed build can be rebuilt with remote access enabled
   to make troubleshooting a lot easier.

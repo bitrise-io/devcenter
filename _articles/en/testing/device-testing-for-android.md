@@ -10,11 +10,10 @@ description: With Bitrise’s Android virtual device testing solution, you can r
   tests on emulators without having to set up and register your own devices. Our solution
   is based on Firebase Test Lab. You can find the resulting logs, videos and screenshots
   on Bitrise.
-
 summary: ''
 menu:
   testing-main:
-    weight: 15
+    weight: 17
 
 ---
 With Bitrise’s Android virtual device testing solution, you can run UI tests on emulators without having to set up and register your own devices.

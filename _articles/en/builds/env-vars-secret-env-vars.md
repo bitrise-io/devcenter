@@ -1,7 +1,7 @@
 ---
 changelog: 'New tutorial video about Secrets and Environment Variables: learn what
   they are used for and how to add them to your apps.'
-last_modified_at: 2020-04-28
+last_modified_at: '2020-04-28'
 title: Secrets and Env Vars
 tag:
 - secrets

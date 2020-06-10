@@ -16,7 +16,7 @@ summary: 'With Bitrise''s iOS device testing solution, you can run iOS tests on 
   app.'
 menu:
   testing-main:
-    weight: 11
+    weight: 13
 
 ---
 {% include video.html embed_url="https://www.youtube.com/embed/TnrJAGYJ7C8" %}

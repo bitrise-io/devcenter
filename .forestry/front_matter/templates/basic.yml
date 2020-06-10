@@ -246,6 +246,7 @@ pages:
 - _articles/en/team-management/organizations/setting-up-onelogin-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
 - _articles/en/team-management/user-roles-on-app-teams.md
+- _articles/en/testing/Installing an ipa file from the public install page.md
 - _articles/en/testing/android-run-a-unit-test.md
 - _articles/en/testing/device-testing-for-android.md
 - _articles/en/testing/device-testing-for-ios.md
@@ -293,6 +294,7 @@ pages:
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-ping-identity-sso-for-bitrise.md
 - _articles/jp/testing/exporting-to-test-reports-from-custom-script-steps.md
+- _articles/jp/testing/installing-ipa-files-from-the-public-install-page.md
 - _articles/jp/testing/test-reports.md
 - _articles/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
 - _articles/jp/tips-and-tricks/screen-recording-your-ui-tests-with-appium.md

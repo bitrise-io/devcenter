@@ -10,7 +10,6 @@ description: 'If you have issues with iOS code signing, you need to check your c
   signing files, your export method, your app''s capabilities, and your registered
   test devices. '
 redirect_from: []
-
 summary: ''
 menu:
   ios-code-signing:

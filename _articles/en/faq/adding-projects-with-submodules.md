@@ -1,7 +1,7 @@
 ---
 changelog: 'The guide has been updated with an example setup to explain the methods
   of accessing multiple repositories in a single build in more detail. '
-last_modified_at: 2020-05-21 13:00:00 +0000
+last_modified_at: '2020-05-21T13:00:00.000+00:00'
 title: Can I add projects with submodules or with private repo dependencies?
 tag:
 - git
@@ -11,7 +11,6 @@ description: If you have a project with one or more submodules or other private 
   dependencies (for example, CocoaPods repositories), you have to grant access to
   all repositories for a successful build.
 redirect_from: []
-
 summary: ''
 menu:
   faq-main:
@@ -19,7 +18,6 @@ menu:
     title: Can I add projects with submodules or private repository dependencies?
 
 ---
-
 {% include message_box.html type="info" title="" content="The scope of this guide mainly covers private Bitrise apps. The Git cloning submodules and repository dependencies section briefly covers how to access multiple repositories with a public app: the process is much simpler and all you need is to make sure that all repositories have an HTTPS git clone URL. You don’t need to worry about SSH keys with public apps, as they cannot have them."%}
 
 If you have a project with one or more submodules or other private repository dependencies (for example, CocoaPods repositories), Bitrise needs access to all repositories or submodules for a successful build. Bitrise uses SSH to access Git repositories of private apps: to grant access, you need to make sure all the repositories can be accessed with the public SSH key generated for your Bitrise app. 
