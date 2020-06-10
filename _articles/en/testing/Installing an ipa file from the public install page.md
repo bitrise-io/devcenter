@@ -1,12 +1,12 @@
 ---
 tag: []
-title: ''
+title: Installing an ipa file from the public install page
 redirect_from: []
 summary: ''
 published: false
 
 ---
-Public install page is a convenient way of sharing the latest version of your app with team members and any other stakeholders who wish to check it out. The page includes all the important details of the build such as filename, size, version code, minimum SDK version and build number. Anyone, whose email address or Bitrise team role you add before building the app, will receive an email from Bitrise with a link to the public install page. From there they can quickly install the app on their own test device.
+The public install page is a convenient way of sharing the latest version of your app with team members and any other stakeholders who wish to check it out. The page includes all the important details of the build such as filename, size, version code, minimum SDK version, and build number. Anyone, whose email address or Bitrise team role you add before building the app, will receive an email from Bitrise with a link to the public install page. From there they can quickly install the app on their own test device.
 
 The public install page enables you to install .ipa files on provisioned and registered test devices. The allowed device types are: iPhone and iPad.
 
@@ -21,23 +21,19 @@ In this tutorial we’re describing:
 
 Before installing the app on any test device, the app’s developer has to complete a couple of steps to build the app and share it with anyone:
 
-* The device, on which the app will be installed, is registered as a test device at the developer’s Apple account of the iOS application.
+* The device, on which the app will be installed, is registered as a test device at the developer’s Apple account.
 * The device has to be included in the provisioning profile of the app.
 * The device meets the minimum OS requirements of the app.
 
-Please note that if the test device is not registered on Apple Developer portal, the developer has to manually add it to the device list, and re-build the app so that the .ipa file contains the test device/s the app can be installed on. We also recommend you \[register the test device on Bitrise\](/testing/registering-a-test-device/#register-an-ios-device-using-safari) as well.
+Please note that if the test device is not registered on the Apple Developer portal, the developer has to manually add it to the device list, and re-build the app so that the .ipa file contains the test device/s the app can be installed on. We also recommend you **\[register the test device on Bitrise\](/testing/registering-a-test-device/#register-an-ios-device-using-safari/)** as well.
 
-Which browser should I use with the public install page?
-
-Anyone who wishes to install the app on a test device has to make sure that the public install page of the app is opened in a native Safari session with non-incognito mode.
+{% include message_box.html type="info" title="Which browser should I use with the public install page?" content="Anyone who wishes to install the app on a test device has to make sure that the public install page of the app is opened in a native Safari session with non-incognito mode."%}
 
 ## Installing an .ipa file on test devices
 
 During this whole flow, use a native, non-incognito Safari session instead of any other in-app browser type. If you follow the link in the notification email you got from Bitrise, the public install page will automatically open in a native Safari session.
 
-Would you like to rather download the app?
-
-If you only wish to download the app and manually upload it somewhere else, you can find the download button on the **APPS & ARTIFACTS** page of the build. Please note that downloading an app does not mean you can install it on the test device.
+{% include message_box.html type="info" title="Would you rather download the app?" content="If you only wish to download the app and manually upload it somewhere else, you can find the download button on the **APPS & ARTIFACTS** page of the build. Please note that downloading an app does not mean you can install it on the test device."%}
 
 ### Installing an app on a test device without a Bitrise account
 
@@ -88,19 +84,46 @@ Check out the app you’ve successfully installed on your test device.
 
 If you’re accessing the public install page from a test device which displays below message, you’ll have to register the device on Bitrise which is only a few steps different from the above flow.
 
-Please note that you can only add a test device to Bitrise, if you already have a Bitrise account.
+Please note that you can only add a test device to Bitrise if you already have a Bitrise account.
+
+![](/img/3b_-_public_install_page__logged_in_bitrise_user__png.jpg)
 
  1. Tap **Click here** to start the device registration process.
  2. Tap **Allow** to download the configuration profile.
+
+    ![](/img/4b_-_configuration_profile__logged_in_bitrise_user__png.jpg)
  3. When the configuration profile is downloaded, tap **Close**.
+
+    ![](/img/5b_-_configuration_profile_downloaded__logged_in_bitrise_user__png.jpg)
  4. Tap the **Home** button to go to your **Settings** app on your test device’s home screen.
+
+    ![](/img/6_0_home_screen-1.jpg)
  5. Open **Settings**. You can find the downloaded profile at the top of the **Settings**. Tap **Profile Downloaded** menu item on the left to install the profile.
+
+    ![](/img/step6.jpg)
  6. Tap **Install**.
- 7. Type your device’s passcode in the **Enter Passcode** pop-up.
+
+    ![](/img/6_2_-_install_configuration_profile_2_png.jpg)
+ 7. Type your device’s passcode in the **Enter Passcode** pop-up
+
+    ![](/img/6_3_-_install_configuration_profile_3_png.jpg)
  8. Tap **Install** again in the **Install Profile** pop-up.
+
+    ![](/img/6_4_-_install_configuration_profile_4_png.jpg)
  9. Wait until the profile installation is complete. You automatically get redirected to the **Register your test device** page.
+
+    ![](/img/6_5_-_install_configuration_profile_5_png.jpg)
 10. Your device’s name and UDID gets populated automatically. You can only change the device name here. Tap **Register Device**.
+
+    ![](/img/6_6b_-_register_device_png.jpg)
 11. You land on the public install page where the **Install** button is now available. Tap it!
+
+    ![](/img/7_1_-_install_application_1_png.jpg)
 12. Tap **OK** on the prompt.
+
+    ![](/img/tapok.png)
 13. To install the app on your test device, tap on **Install**. Then press the **Home** button to follow the installment of your app.
-    If all went well, you can find the installed app on your test device’s **Home** page.
+
+If all went well, you can find the installed app on your test device’s **Home** page.
+
+![](/img/7_5_install_application_5_png.jpg)
