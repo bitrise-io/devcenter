@@ -64,17 +64,17 @@ If you’re accessing the public install page from a test device which displays 
 
 Please note that you can only add a test device to Bitrise, if you already have a Bitrise account.
 
-1. Tap **Click here** to start the device registration process.
-2. Tap **Allow** to download the configuration profile.
-3. When the configuration profile is downloaded, tap **Close**.
-4. Tap the **Home** button to go to your **Settings** app on your test device’s home screen.
-5. Open **Settings**. You can find the downloaded profile at the top of the **Settings**. Tap **Profile Downloaded** menu item on the left to install the profile.
-6. Tap **Install**.
-7. Type your device’s passcode in the **Enter Passcode** pop-up.
-8. Tap **Install** again in the **Install Profile** pop-up.
-9. Wait until the profile installation is complete. You automatically get redirected to the **Register your test device** page.
+ 1. Tap **Click here** to start the device registration process.
+ 2. Tap **Allow** to download the configuration profile.
+ 3. When the configuration profile is downloaded, tap **Close**.
+ 4. Tap the **Home** button to go to your **Settings** app on your test device’s home screen.
+ 5. Open **Settings**. You can find the downloaded profile at the top of the **Settings**. Tap **Profile Downloaded** menu item on the left to install the profile.
+ 6. Tap **Install**.
+ 7. Type your device’s passcode in the **Enter Passcode** pop-up.
+ 8. Tap **Install** again in the **Install Profile** pop-up.
+ 9. Wait until the profile installation is complete. You automatically get redirected to the **Register your test device** page.
 10. Your device’s name and UDID gets populated automatically. You can only change the device name here. Tap **Register Device**.
 11. You land on the public install page where the **Install** button is now available. Tap it!
 12. Tap **OK** on the prompt.
 13. To install the app on your test device, tap on **Install**. Then press the **Home** button to follow the installment of your app.
-If all went well, you can find the installed app on your test device’s **Home** page.
+    If all went well, you can find the installed app on your test device’s **Home** page.
