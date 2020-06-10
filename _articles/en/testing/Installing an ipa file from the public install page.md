@@ -3,6 +3,9 @@ tag: []
 title: Installing an ipa file from the public install page
 redirect_from: []
 summary: ''
+menu:
+  testing-main:
+    weight: 19
 published: false
 
 ---

@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2020-04-27
+last_modified_at: '2020-04-27'
 tag:
 - infrastructure
 - stack

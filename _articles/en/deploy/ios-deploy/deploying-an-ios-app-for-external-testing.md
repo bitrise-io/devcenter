@@ -9,7 +9,6 @@ tag:
 description: 'Before deploying your app to the App Store, you might want to release
   it to external testers who can test it on their devices outside the development
   environment. '
-
 summary: ''
 menu:
   ios-deploy:

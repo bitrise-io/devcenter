@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2020-05-19T22:00:00.000+00:00
+last_modified_at: '2020-05-19T22:00:00.000+00:00'
 title: Introduction to Steps
 redirect_from:
 - getting-started/getting-started-steps/
@@ -14,7 +14,6 @@ tag:
 description: 'Steps are the heart of Bitrise. A Step is a build task: for example,
   the Git Clone Step clones your git repository at the start of a build while the
   Google Play Deploy Step can deploy your finished app to the Play Store.'
-
 summary: Learn the essentials about our Steps and what cool things you can do with
   them.
 menu:

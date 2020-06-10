@@ -11,7 +11,6 @@ description: Deploy an app to Bitrise to be able to download the .ipa file and i
   it on devices specified in the app's Development Provisioning Profile. This way,
   your internal testers can easily test the app.
 summary: ''
-
 menu:
   ios-deploy:
     weight: 3

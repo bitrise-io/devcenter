@@ -2,7 +2,7 @@
 changelog: 'The internal IP address space of the virtual machines is now available
   here: this information can be valuable if, for example, you''re trying to use a
   VPN with Bitrise.'
-last_modified_at: 2020-05-05T08:30:00.000+00:00
+last_modified_at: '2020-05-05T08:30:00.000+00:00'
 title: Virtual machines
 tag:
 - infrastructure
@@ -14,7 +14,6 @@ redirect_from: []
 summary: On bitrise.io, we have macOS and Linux virtual machines hosted for your builds.
   You can select from multiple stacks, each with its own list of preinstalled tool
   versions.
-
 menu:
   infrastructure-main:
     weight: 6

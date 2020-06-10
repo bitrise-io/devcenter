@@ -10,7 +10,6 @@ tag:
 description: Learn how to set up Bitrise as a SAML SSO app on Azure AD, enable SAML
   SSO and enforce it on your Bitrise Organization.
 changelog: ''
-
 summary: ''
 menu:
   organizations:

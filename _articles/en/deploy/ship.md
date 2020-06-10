@@ -1,7 +1,7 @@
 ---
 changelog: Clarification added about using Steps that can build a deployable app but
   do not automatically export it to Ship.
-last_modified_at: 2020-04-01
+last_modified_at: '2020-04-01'
 tag:
 - ship
 - deploy

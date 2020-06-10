@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2020-05-03T22:00:00.000+00:00
+last_modified_at: '2020-05-03T22:00:00.000+00:00'
 title: Managing billing and subscription for organizations
 tag:
 - billing
@@ -9,7 +9,6 @@ description: It's very simple to set up a subscription plan for your organizatio
   even if you skipped that step when creating the organization. You can also modify
   your plan and your billing information at any time if you are the owner of the organization.
 redirect_from: []
-
 summary: ''
 menu:
   organizations:

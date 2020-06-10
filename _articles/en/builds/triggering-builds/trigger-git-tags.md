@@ -1,5 +1,5 @@
 ---
-last_modified_at: 2020-03-12
+last_modified_at: '2020-03-12'
 title: Triggering builds with Git Tags
 tag:
 - git
