@@ -1,4 +1,10 @@
 ---
+- title: Installing an ipa file from the public install page
+  modified: 2020-06-10 00:00:00 +0200
+  changelog: A new article added to Testing on installing an ipa file from the public
+    install page.
+  type: new
+  url: "/testing/installing-an-ipa-file-from-the-public-install-page/"
 - title: Developing a new Step
   modified: 2020-06-09 00:00:00 +0200
   changelog: Broken link of Installing the Bitrise CLI has been fixed.
