@@ -1,6 +1,11 @@
 ---
+- title: Developing a new Step
+  modified: 2020-06-09 00:00:00 +0200
+  changelog: Broken link of Installing the Bitrise CLI has been fixed.
+  type: fix
+  url: "/contributors/create-your-own-step/"
 - title: Device testing for iOS
-  modified: 2020-06-05 16:00:00 +0200
+  modified: 2020-06-05T16:00:00.000+02:00
   changelog: A video on running device tests for iOS apps with Firebase has been added
     to the doc.
   type: video
