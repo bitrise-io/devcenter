@@ -25,7 +25,7 @@ Before installing the app on any test device, the app’s developer has to compl
 * The device has to be included in the provisioning profile of the app.
 * The device meets the minimum OS requirements of the app.
 
-Please note that if the test device is not registered on Apple Developer portal, the developer has to manually add it to the device list, and re-build the app so that the .ipa file contains the test device/s the app can be installed on. We also recommend you [register the test device on Bitrise](https://bitrise.atlassian.net/testing/registering-a-test-device/#register-an-ios-device-using-safari "/testing/registering-a-test-device/#register-an-ios-device-using-safari") as well.
+Please note that if the test device is not registered on Apple Developer portal, the developer has to manually add it to the device list, and re-build the app so that the .ipa file contains the test device/s the app can be installed on. We also recommend you \[register the test device on Bitrise\](https://bitrise.atlassian.net/testing/registering-a-test-device/#register-an-ios-device-using-safari /testing/registering-a-test-device/#register-an-ios-device-using-safari") as well.
 
 Which browser should I use with the public install page?
 
@@ -43,18 +43,44 @@ If you only wish to download the app and manually upload it somewhere else, you 
 
  1. Long tap on the link you received from Bitrise. To open the link in native Safari, tap **Open Link**. It brings up the public install page in a native Safari session. If you copy the link from the email, make sure you paste it in a native Safari session.
  2. Tap the link in the **Click here to check device compatibility of this device with this app** yellow message box. If you cannot see this message, you are most likely using another browser so switch to Safari.
+
+    ![](/img/3a-public-install-page-not-logged-in-bitrise-user-png.png)
  3. Tap **Allow** on the pop-up to install the configuration profile on your device. This configuration profile makes the device’s UDID available to Bitrise for the compatibility check.
- 4. A pop-up confirms the configuration profile has been downloaded, and it can be installed in the **Settings** app. Hit **Close**.
+
+    ![](/img/4a_-_configuration_profile__not_logged_in_bitrise_user__png.jpg)
+ 4. A pop-up confirms the configuration profile has been downloaded, and it can be installed in the **Settings** app. Tap **Close**.
+
+    ![](/img/5a_-_configuration_profile_downloaded__not_logged_in_bitrise_user__png.jpg)
  5. Tap the **Home** button to go the the home screen.
+
+    ![](/img/6_0_home_screen.jpg)
  6. Open **Settings**. You can find the downloaded profile at the top of the **Settings**. Tap **Profile Downloaded** menu item on the left to install the profile.
+
+    ![](/img/step6.jpg)
  7. Tap **Install**.
+
+    ![](/img/6_2_-_install_configuration_profile_2_png.jpg)
  8. Type your device’s passcode in the **Enter passcode** pop-up.
+
+    ![](/img/6_3_-_install_configuration_profile_3_png.jpg)
  9. Tap **Install** again.
+
+    ![](/img/6_4_-_install_configuration_profile_4_png.jpg)
 10. Wait until the profile is installed.
+
+    ![](/img/6_5_-_install_configuration_profile_5_png.jpg)
 11. Once the profile is installed, you’re directed to the public install page. As you can see, the **Install** button is now available. Tap it!
+
+    ![](/img/7_1_-_install_application_1_png.jpg)
 12. Tap **OK** on the next pop-up.
+
+    ![](/img/tapok.png)
 13. As a final confirmation, tap on **Install** and press the **Home** button. Now you’re installing the app to your test device.
+
+    ![](/img/7_3_-_install_application_3_png.jpg)
 14. Wait till the app installs on your test device’s home screen.
+
+    ![](/img/7_5_install_application_5_png.jpg)
 
 Check out the app you’ve successfully installed on your test device.
 
