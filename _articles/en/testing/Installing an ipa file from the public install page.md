@@ -9,7 +9,7 @@ menu:
 published: false
 
 ---
-The public install page is a convenient way of sharing the latest version of your app with team members and any other stakeholders who wish to check it out. The page includes all the important details of the build such as filename, size, version code, minimum SDK version, and build number. Anyone, whose email address or Bitrise team role you add before building the app, will receive an email from Bitrise with a link to the public install page. From there they can quickly install the app on their own test device.
+The public install page is a convenient way of sharing the latest version of your app with team members and any other stakeholders who wish to check the app out. The page includes all the important details of the build such as filename, size, version code, minimum SDK version, and build number. Anyone, whose email address or Bitrise team role you add before building the app, will receive an email from Bitrise with a link to the public install page. From there they can quickly install the app on their own test device.
 
 The public install page enables you to install .ipa files on provisioned and registered test devices. The allowed device types are: iPhone and iPad.
 
@@ -85,7 +85,7 @@ Check out the app you’ve successfully installed on your test device.
 
 ### Installing an app on a test device not registered to Bitrise
 
-If you’re accessing the public install page from a test device which displays below message, you’ll have to register the device on Bitrise which is only a few steps different from the above flow.
+If you’re accessing the public install page from a test device which displays the below message, you’ll have to register the device on Bitrise which is only a few steps different from the above flow.
 
 Please note that you can only add a test device to Bitrise if you already have a Bitrise account.
 
@@ -107,7 +107,7 @@ Please note that you can only add a test device to Bitrise if you already have a
  6. Tap **Install**.
 
     ![](/img/6_2_-_install_configuration_profile_2_png.jpg)
- 7. Type your device’s passcode in the **Enter Passcode** pop-up
+ 7. Type your device’s passcode in the **Enter Passcode** pop-up.
 
     ![](/img/6_3_-_install_configuration_profile_3_png.jpg)
  8. Tap **Install** again in the **Install Profile** pop-up.
