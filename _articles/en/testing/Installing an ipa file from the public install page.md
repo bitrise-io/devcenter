@@ -1,5 +1,7 @@
 ---
-tag: []
+tag:
+- testing
+- ios
 title: Installing an ipa file from the public install page
 redirect_from: []
 summary: Learn how to install an ipa file from the public install page with or without
