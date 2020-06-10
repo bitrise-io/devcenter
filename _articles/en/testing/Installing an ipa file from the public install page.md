@@ -25,7 +25,7 @@ Before installing the app on any test device, the app’s developer has to compl
 * The device has to be included in the provisioning profile of the app.
 * The device meets the minimum OS requirements of the app.
 
-Please note that if the test device is not registered on Apple Developer portal, the developer has to manually add it to the device list, and re-build the app so that the .ipa file contains the test device/s the app can be installed on. We also recommend you \[register the test device on Bitrise\](https://bitrise.atlassian.net/testing/registering-a-test-device/#register-an-ios-device-using-safari /testing/registering-a-test-device/#register-an-ios-device-using-safari") as well.
+Please note that if the test device is not registered on Apple Developer portal, the developer has to manually add it to the device list, and re-build the app so that the .ipa file contains the test device/s the app can be installed on. We also recommend you \[register the test device on Bitrise\](/testing/registering-a-test-device/#register-an-ios-device-using-safari) as well.
 
 Which browser should I use with the public install page?
 
