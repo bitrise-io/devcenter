@@ -246,11 +246,11 @@ pages:
 - _articles/en/team-management/organizations/setting-up-onelogin-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
 - _articles/en/team-management/user-roles-on-app-teams.md
-- _articles/en/testing/Installing an ipa file from the public install page.md
 - _articles/en/testing/android-run-a-unit-test.md
 - _articles/en/testing/device-testing-for-android.md
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/exporting-to-test-reports-from-custom-script-steps.md
+- _articles/en/testing/installing-an-ipa-file-from-the-public-install-page.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/testing/test-reports.md
