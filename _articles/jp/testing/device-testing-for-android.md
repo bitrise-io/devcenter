@@ -4,7 +4,7 @@ last_modified_at:
 title: Androidのデバイステスト
 menu:
   testing-main:
-    weight: 14
+    weight: 15
 
 ---
 BitriseのAndroidデバイステストソリューションを用いることで、デバイスのセットアップや登録を行うことなく、エミュレータ上でUIテストを実行できます。

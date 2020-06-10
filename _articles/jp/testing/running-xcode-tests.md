@@ -6,7 +6,7 @@ redirect_from: []
 date: 2019-02-22T15:33:24.000+00:00
 menu:
   testing-main:
-    weight: 8
+    weight: 9
 
 ---
 Bitrise上でXcodeテストを実行するには、ご自身のプロジェクト内に定義されたテストターゲットを持つ必要があります。Xcodeテストを実行し、結果を確認するには２つのステップが必要になります。

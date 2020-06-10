@@ -4,7 +4,7 @@ last_modified_at:
 title: Androidのユニットテスト
 menu:
   testing-main:
-    weight: 10
+    weight: 11
 
 ---
 ## ユニットテストの実行

@@ -5,7 +5,7 @@ title: Bitrise上でDetoxテストの実行
 date: 2019-03-01T12:50:46.000+00:00
 menu:
   testing-main:
-    weight: 17
+    weight: 18
 
 ---
 Detoxとはモバイルアプリ用グレーボックスのエンドツーエンドテストで、オートメーションライブラリのことです。現在、React Nativeを使用して開発されたiOS, Androidアプリ両方に対応しています。BitriseでReact Nativeアプリをお持ちなら、Detoxテストを実行できます。
