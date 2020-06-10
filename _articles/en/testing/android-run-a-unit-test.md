@@ -9,7 +9,7 @@ description: Run Android unit tests on Bitrise. Find out how to generate test re
 redirect_from: []
 menu:
   testing-main:
-    weight: 14
+    weight: 15
 
 ---
 ## Running a unit test
