@@ -53,7 +53,7 @@ Once you are ready, proceed to uploading your files and setting up your workflow
 
    Please note that this step must come **AFTER** any dependency installer Step in your Workflow, such as **Run CocoaPods install** or **Carthage**. Make sure that you do NOT modify your Xcode project between the **iOS Auto Provision with App Store Connect API** and the **Xcode Archive & Export for iOS** Steps. For example, do not change the bundle ID after the **iOS Auto Provision with App Store Connect API** Step.
 
-   ![iOS Auto Provisioning in your workflow](/img/code-signing/ios-code-signing/workflow-with-auto-prov.png)
+   ![](/img/iosautoprov.png)
 7. Fill the required inputs of the step:
    * **The Developer Portal team id** - find this on the [Membership Details page of your Apple Developer Portal account](https://developer.apple.com/account/#/membership)
    * **Distribution type** - make sure its value matches the value of the **Select method for export** input in the **Xcode Archive & Export for iOS step**. Read more about archiving and exporting an .ipa in our [Creating a signed .ipa for Xcode](/code-signing/ios-code-signing/create-signed-ipa-for-xcode/) projects guide.
