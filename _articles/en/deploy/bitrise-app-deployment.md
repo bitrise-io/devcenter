@@ -1,5 +1,5 @@
 ---
-title: Bitrise OTA App Deployment
+title: Bitrise OTA app Deployment
 redirect_from: "/tutorials/deploy/bitrise-app-deployment/"
 menu:
   deploy-main:
