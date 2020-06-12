@@ -1,4 +1,9 @@
 ---
+- title: Managing iOS code signing files - automatic provisioning
+  modified: 2020-06-12 00:00:00 +0200
+  changelog: 'Screenshots updated '
+  type: update
+  url: "/code-signing/ios-code-signing/ios-auto-provisioning/#configuring-ios-auto-provisioning"
 - title: Bitrise OTA app deployment
   modified: 2020-06-12 00:00:00 +0200
   changelog: Link added to Enabling Public Page for the App section to describe .ipa
