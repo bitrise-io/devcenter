@@ -107,11 +107,9 @@ If you uncheck Xcode managed signing, the **iOS Auto Provision with App Store Co
 
 ## Have you exceeded the file count limit of the provisioning profiles?
 
-The maximum number of provisioning profiles you can upload to the Code Signing tab is 50. If you’ve already reached this limit and wish to use even more, then here are a few tips on how to use even more provisioning profiles:
+The maximum number of provisioning profiles and .p12 certificates you can upload to the Code Signing tab is 30. If you’ve already reached this limit and wish to use even more, then here are a few tips on how to use even more provisioning profiles:
 
 * Use the **iOS Auto Provision with App Store Connect API** Step. This only requires the code signing identities (certificates with .p12 extension) to be uploaded to Bitrise. You can download the provisioning profiles from the Apple Developer portal on-the-fly during the build if you have [connected your Apple Developer account to Bitrise](https://bitrise.atlassian.net/connecting-apple-dev-account/#enabling-apple-developer-portal-integration "/connecting-apple-dev-account/#enabling-apple-developer-portal-integration").
-
-
 * You can create a .zip file containing the required certificates/profiles. In this case, you don't need to upload any certificates/profiles on Bitrise. During the build you can download the .zip file and update the certificate/profile related inputs of the **Certificate and Profile Installer** Step to match the path to the certificate/profile on the build machine. Note that the **Certificate and Profile Installer** Step supports local paths and URLs for certificates and profiles.
 * You can host the profiles and certificates yourself, and only add an URL that is pointing to a given certificate/profile to the workflow.
 
