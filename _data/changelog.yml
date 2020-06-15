@@ -1,6 +1,12 @@
 ---
+- title: Adding a new team member to an app
+  modified: 2020-06-15 11:00:00 +0200
+  changelog: 'Clarified the process of adding a new team member to an app: you can
+    no longer invite someone by username. You have to use their email address.'
+  type: update
+  url: "/team-management/adding-new-team-member/"
 - title: Starting builds manually
-  modified: 2020-06-12 15:00:00 +0200
+  modified: 2020-06-12T15:00:00.000+02:00
   changelog: 'Added information on how App Environment Variables and custom Environment
     Variables, specified when starting a build manually, behave when they have the
     same key but different values. '
