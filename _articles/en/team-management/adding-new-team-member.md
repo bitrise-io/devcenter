@@ -1,5 +1,5 @@
 ---
-title: Adding a new team member
+title: Adding a new team member to an app
 tag:
 - teams
 - orgs
