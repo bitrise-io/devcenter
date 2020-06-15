@@ -1,8 +1,14 @@
 ---
+- title: 'Have you exceeded the file count limit of the provisioning profiles? '
+  modified: 2020-06-15 00:00:00 +0200
+  changelog: The maximum number of provisioning profiles and .p12 certificates has
+    been updated to 30.
+  type: fix
+  url: "/code-signing/ios-code-signing/ios-code-signing-troubleshooting/#have-you-exceeded-the-file-count-limit-of-the-provisioning-profiles"
 - title: Adding a new team member to an app
   modified: 2020-06-15 11:00:00 +0200
   changelog: 'Clarified the process of adding a new team member to an app: you can
-    no longer invite someone by username. You have to use their email address.'
+    no longer invite someone by username. You have to use  email address.'
   type: update
   url: "/team-management/adding-new-team-member/"
 - title: Starting builds manually
