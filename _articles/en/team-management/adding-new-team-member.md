@@ -14,7 +14,8 @@ menu:
 
 ---
 Once you have your app set up, you can start inviting team members! You can select multiple roles for the new members, like: **admin**, **developer**, and **qa/tester**.
-Different roles have different permissions that you can read more about below.
+
+{% include message_box.html type="note" title="Roles and permissions" content="Check out the different roles and permissions in [our guide to the roles on Bitrise](/team-management/user-roles-on-app-teams/)."%}
 
 To invite a team member:
 
@@ -32,7 +33,5 @@ To invite a team member:
 **Owners** and **admins** can change the roles of other members by clicking **Change role** next to the member's name.
 
 ![](/img/change-role.png)
-
-Check out the different roles and permissions in [our guide to the roles on Bitrise](/team-management/user-roles-on-app-teams/).
 
 {% include banner.html banner_text="Invite a team member to your app's Team " url="https://app.bitrise.io/dashboard/builds" button_text="Go to your Dashboard" %}
