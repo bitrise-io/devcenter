@@ -30,7 +30,7 @@ Bitrise has two Steps which download files from the **Code Signing** tab. Which 
 1. Add either the **File Downloader** or the **Generic File Storage** Step to your workflow. The Step should be added BEFORE the **Gradle Runner** Step.
 2. If you use the **File Downloader** Step, fill out the following 2 input fields:
    * **Download source url**: Set the generated keystore URL you get when you upload your file to the **ANDROID KEYSTORE FILE** section of the **Code Signing** tab).
-   * **Download destination path**: Set the location of the keystore file as a relative path. This path should be the same as the keystore path already defined in your `build.gradle` file (for example, `file://$HOME/keystores/project_release.keystore`).
+   * **Download destination path**: Set the location of the keystore file as a relative path. This path should be the same as the keystore path already defined in your `build.gradle` file (for example, `$HOME/keystores/project_release.keystore`).
 3. Add the **Gradle Runner** Step right after your file downloading Step.
 
 With that said, if you have successfully added the Steps to download your keystore file to the same location that you specified in your `build.gradle` file, you do not need the **Android Sign** Step in your workflow. Our **Gradle Runner** Step will sign and assemble your project.
