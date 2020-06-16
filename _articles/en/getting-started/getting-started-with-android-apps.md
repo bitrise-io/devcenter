@@ -14,6 +14,7 @@ tag:
 description: 'Go through the procedure of adding an Android app on Bitrise from start
   to finish, from adding the app to deploying it. Learn about unit and UI testing
   and code signing. '
+summary: ''
 menu:
   getting-started-main:
     weight: 25
@@ -66,6 +67,8 @@ For UI testing, add our **\[BETA\] Virtual Device Testing for Android** step to 
 If you selected instrumentation, don't forget to set **Test APK path** under the **Instrumentation Test** group as well.
 
 {% include message_box.html type="info" title="More testing steps to choose from" content=" Click the **+** sign on the left side of your Workflow and select another test Step from our Step Library."%}
+
+To export the test results of the **Virtual Device Testing for Android** Step or the **Android Unit Test** Step to the [Test Reports](/testing/test-reports/) add-on, add the **Deploy to Bitrise.io** Step to the end of your Workflow.
 
 ## Signing your Android project
 

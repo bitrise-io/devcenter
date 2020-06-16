@@ -11,6 +11,9 @@ tag:
 description: 'Go through the procedure of adding a Flutter app on Bitrise from start
   to finish, from adding the app to deploying it. Learn about managing dependencies,
   testing, and code signing. '
+summary: 'Flutter is a mobile app SDK that allows developers to create native apps
+  for both iOS and Android. Bitrise supports Flutter apps: we have dedicated Steps
+  to help you with all your Flutter needs.'
 menu:
   getting-started-main:
     weight: 28
@@ -47,9 +50,11 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
 
 You can write and run unit-, widget-, and integration tests with Flutter. For more information, check out [Flutter's official documentation](https://flutter.io/docs/testing).
 
-You can use our automatically generated **primary** Workflow to test your Flutter app. By default, it will include the **Flutter Analyze** Step which runs static code tests.
+You can use our automatically generated **primary** Workflow to test your Flutter app. By default, it will include the **Flutter Analyze** Step which runs static code tests. It can also include the **Flutter Test** Step that runs Flutter tests and can also generate code coverage reports.
 
 {% include message_box.html type="info" title="Flutter tests" content="If you have tests in your repository, and selected **yes** when prompted, during app creation, whether you want to run these tests, the primary Workflow will include the **Flutter Test** Step by default. If you add tests to your app later, add the **Flutter Test** Step to your Workflow manually."%}
+
+{% include message_box.html type="important" title="Test Reports" content="The **Deploy to Bitrise.io** Step exports the results of the **Flutter Test** Step to the [Test Reports](/testing/test-reports/) add-on by default: to check your Flutter test results in the add-on, you just need to add the **Deploy to Bitrise.io** Step at the end of the Workflow."%}
 
 1. Open your app's Workflow Editor and open the **primary** Workflow.
 2. In the **Flutter Install** Step, fill in the **Flutter SDK Version** input.
@@ -68,8 +73,12 @@ You can use our automatically generated **primary** Workflow to test your Flutte
 5. Make sure the **Project Location** input of the **Flutter Test** Step is correct.
 
    The default value is the the Environment Variable (Env Var) created for your Flutter project's location.
+6. If you want to generate code coverage reports, set the **Generate code coverage files?** input to `yes`.  
+   This runs the `flutter test` command with the `--coverage` flag.
+7. To export the test results to the [Test Reports](/testing/test-reports/) add-on, add the **Deploy to Bitrise.io** Step to the end of your Workflow.
+8. Run a build!
 
-Run a build! Once it's done, you can find your test results on the [**APPS & ARTIFACTS**](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of the Build's page of the app.
+Once it's done, you can find your test results on the [**APPS & ARTIFACTS**](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab of the Build's page of the app.
 
 ## Deploying a Flutter app
 
