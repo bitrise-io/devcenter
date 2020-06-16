@@ -33,12 +33,13 @@ Test Reports can read and display test results that are in either of two formats
 * plist.
 * JUnit XML.
 
-You can use Test Reports with four of our testing Steps:
+You can use Test Reports with five of our testing Steps by default:
 
 * **Xcode Test for iOS**.
 * **Android Unit Test**.
 * **iOS Device Testing**.
 * **Virtual Device Testing for Android**.
+* **Flutter Test.**
 
 These Steps will run the tests defined in your repository and then store the output in an Environment Variable. The **Deploy to Bitrise.io** Step will do the rest: it can read the results and send it to Test Reports.
 
@@ -47,9 +48,10 @@ These Steps will run the tests defined in your repository and then store the out
 * [Android unit testing](https://devcenter.bitrise.io/testing/android-run-a-unit-test/)
 * [Device testing for Android](/testing/device-testing-for-android/)
 * [Device testing for iOS](/testing/device-testing-for-ios/)
-* [Running Xcode Tests](/testing/running-xcode-tests/) "%}
+* [Running Xcode Tests](/testing/running-xcode-tests/) 
+* [Testing a Flutter app](/getting-started/getting-started-with-flutter-apps/#testing-a-flutter-app)"%}
 
-{% include message_box.html type="important" title="Using custom Script Steps" content="You can use custom Script Steps to export test results to Test Reports. Read the details in our [Exporting from custom Script Steps to Test Reports](/testing/exporting-to-test-reports-from-custom-script-steps/) guide."%}
+{% include message_box.html type="important" title="Exporting the results from any testing Step" content="You can export the results of any testing Step, using our dedicated Step. Read the details in our [Exporting to Test Reports from any Step](/testing/exporting-to-test-reports-from-custom-script-steps/) guide."%}
 
 ## Configuring Test Reports
 
