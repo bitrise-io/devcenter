@@ -1,12 +1,18 @@
 ---
+- title: Getting started with Flutter apps
+  modified: 2020-06-16 12:00:00 +0200
+  changelog: Added instructions on how to generate code coverage reports with the
+    Flutter Test Step.
+  type: update
+  url: "/getting-started/getting-started-with-flutter-apps/"
 - title: 'Have you exceeded the file count limit of the provisioning profiles? '
-  modified: 2020-06-15 00:00:00 +0200
+  modified: 2020-06-15T00:00:00.000+02:00
   changelog: The maximum number of provisioning profiles and .p12 certificates has
     been updated to 30.
   type: fix
   url: "/code-signing/ios-code-signing/ios-code-signing-troubleshooting/#have-you-exceeded-the-file-count-limit-of-the-provisioning-profiles"
 - title: Adding a new team member to an app
-  modified: 2020-06-15 11:00:00 +0200
+  modified: 2020-06-15T11:00:00.000+02:00
   changelog: 'Clarified the process of adding a new team member to an app: you can
     no longer invite someone by username. You have to use  email address.'
   type: update
