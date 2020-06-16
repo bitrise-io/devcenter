@@ -2,7 +2,8 @@
 - title: Getting started with Flutter apps
   modified: 2020-06-16 12:00:00 +0200
   changelog: Added instructions on how to generate code coverage reports with the
-    Flutter Test Step.
+    Flutter Test Step. In addition, Flutter Test now exports the results to the Test
+    Reports add-on by default.
   type: update
   url: "/getting-started/getting-started-with-flutter-apps/"
 - title: 'Have you exceeded the file count limit of the provisioning profiles? '
