@@ -69,10 +69,12 @@ For example, if your simulator test fails with 'Ineligible destinations for the 
 You can read more about our stacks in the [Available stacks](/infrastructure/available-stacks/) guide.
 "%}
 
-The **Deploy to Bitrise.io** will deploy the following to the **Logs** and [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab of the build:
+The **Deploy to Bitrise.io** Step will deploy the following to the **Logs** and [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab of the build:
 
-* your Xcode test results.
-* your raw `xcodebuildoutput` log.
+* Your Xcode test results.
+* Your raw `xcodebuildoutput` log.
+
+The **Deploy to Bitrise.io** Step also exports the results of the **Xcode Test for iOS** Step to the [Test Reports](/testing/test-reports/) add-on. 
 
 ## Code signing and exporting an .ipa
 
