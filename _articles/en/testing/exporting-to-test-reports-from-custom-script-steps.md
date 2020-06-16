@@ -17,7 +17,7 @@ menu:
     weight: 3
 
 ---
-[Test Reports](/testing/test-reports/) allows you to view all your test results in a convenient way. By default, only four [Steps](/steps-and-workflows/steps-and-workflows-index/) support the Test Reports add-on. However, there is a limited support for exporting the test results of other testing Steps to Test Reports, either via our own **Export test results to the Test reports add-on** Step or via custom Script Steps. 
+[Test Reports](/testing/test-reports/) allows you to view all your test results in a convenient way. By default, only five [Steps](/steps-and-workflows/steps-and-workflows-index/) support the Test Reports add-on. However, there is a limited support for exporting the test results of other testing Steps to Test Reports, either via our own **Export test results to the Test reports add-on** Step or via custom Script Steps.
 
 Here's what you need to do to make sure that your test results are exported to the Test Reports add-on:
 
@@ -99,35 +99,35 @@ This means that your test results must contain a test report in a standard JUnit
 To export the test results of [Steps](/steps-and-workflows/steps-and-workflows-index/) that are not, by default, supported by the Test Reports add-on to the **Deploy to Bitrise.io** Step, you have two options:
 
 * We strongly recommend using our [**Export test results to the Test reports add-on** Step](https://www.bitrise.io/integrations/steps/custom-test-results-export): this Step locates the test results based on your inputs.
-* You can configure your own custom Script Step that creates and exports the necessary files. 
+* You can configure your own custom Script Step that creates and exports the necessary files.
 
 ### Using the Export test results to the Test reports add-on Step
 
-If you run tests via an unsupported testing Step - such as **Flutter Test** -, the easiest way to make sure that your test results end up in the Test Reports add-on is to use the **Export test results to the Test reports add-on** Step in your Workflow. 
+If you run tests via a testing Step that is not supported by default - such as **Jasmine Test Runner** -, the easiest way to make sure that your test results end up in the Test Reports add-on is to use the **Export test results to the Test reports add-on** Step in your Workflow.
 
-The Step’s purpose is to make sure that the test results end up in the directory where the **Deploy to Bitrise.io Step** looks for test results to export to the Test Reports add-on. With the correct configuration, the Step finds the test results in your app’s repository, and puts them in the export directory. 
+The Step’s purpose is to make sure that the test results end up in the directory where the **Deploy to Bitrise.io Step** looks for test results to export to the Test Reports add-on. With the correct configuration, the Step finds the test results in your app’s repository, and puts them in the export directory.
 
 {% include message_box.html type="important" title="Required inputs for exporting your test results" content="Please note that in the **Export test results to the Test reports add-on** Step, you must set BOTH the **Path where custom test results reside** input and the **Test result search pattern** input. The former tells Bitrise where to look for your results, while the latter specifies a search pattern to find your results file."%}
 
-1. Go to your app’s page on [bitrise.io](http://bitrise.io). 
-2. Go to **Workflows** to open the Workflow Editor. 
-3. From the **WORKFLOW** menu, select the Workflow you use to run your tests. 
-4. Add the **Export test results to the Test reports add-on** Step AFTER the testing Step. 
-5. In the **The name of the test** input, set the name you want to be shown in the Test Reports add-on. 
-6. In the **Path where custom test results reside** input, set the path where your test results can be found.   
+1. Go to your app’s page on [bitrise.io](http://bitrise.io).
+2. Go to **Workflows** to open the Workflow Editor.
+3. From the **WORKFLOW** menu, select the Workflow you use to run your tests.
+4. Add the **Export test results to the Test reports add-on** Step AFTER the testing Step.
+5. In the **The name of the test** input, set the name you want to be shown in the Test Reports add-on.
+6. In the **Path where custom test results reside** input, set the path where your test results can be found.  
    You must not leave this input value empty. This input determines where Bitrise will look for your test results. We recommend setting a folder here though you can also set a specific filepath. The default value is the source directory of your app.
    Example patterns:
-   - If your app's root directory is `app`: `app/build/test-results/testDemoDebugUnitTest/`
-   - If your test results are within an `app` folder but `app` is not the root directory: `./app/build/test-results/testDemoDebugUnitTest/`
-7. In the **Test result search pattern** input, set a pattern that matches your test result file.    
-   You must not leave this input value empty. This search pattern is used to search every file and folder of the provided base path which was set in the **Path where custom test results reside** input.   
+   * If your app's root directory is `app`: `app/build/test-results/testDemoDebugUnitTest/`
+   * If your test results are within an `app` folder but `app` is not the root directory: `./app/build/test-results/testDemoDebugUnitTest/`
+7. In the **Test result search pattern** input, set a pattern that matches your test result file.  
+   You must not leave this input value empty. This search pattern is used to search every file and folder of the provided base path which was set in the **Path where custom test results reside** input.  
    If there is more than one match, the Step will export the first match with a warning in the logs. If you set a specific filepath in the previous input, just set * here.  
    Example patterns:
-   - Matching all files within the base path: `*`  
-   - Matching all files within a given directory of the base path: `*/build/test-results/testDemoDebugUnitTest/*`
-8. In the **Step's test result directory** input, make sure the path is correct.   
-   Do NOT modify this input’s value: this is the folder where the **Deploy to Bitrise.io** Step will look for the test results to export them. It should be set to the $BITRISE_TEST_RESULT_DIR Env Var.   
-9. Make sure you have a **Deploy to Bitrise.io** Step in your Workflow. 
+   * Matching all files within the base path: `*`
+   * Matching all files within a given directory of the base path: `*/build/test-results/testDemoDebugUnitTest/*`
+8. In the **Step's test result directory** input, make sure the path is correct.  
+   Do NOT modify this input’s value: this is the folder where the **Deploy to Bitrise.io** Step will look for the test results to export them. It should be set to the $BITRISE_TEST_RESULT_DIR Env Var.
+9. Make sure you have a **Deploy to Bitrise.io** Step in your Workflow.
 
 ### Example scripts for exporting test results
 
