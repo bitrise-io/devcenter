@@ -1,4 +1,10 @@
 ---
+- title: ''
+  modified: 2020-06-16 12:00:00 +0200
+  changelog: 'The test results of the Flutter Test Step are now also exported by the
+    Deploy to Bitrise.io Step. '
+  type: update
+  url: "/testing/test-reports/"
 - title: Getting started with Flutter apps
   modified: 2020-06-16 12:00:00 +0200
   changelog: Added instructions on how to generate code coverage reports with the
