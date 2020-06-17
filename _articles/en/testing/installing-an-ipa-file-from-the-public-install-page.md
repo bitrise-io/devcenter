@@ -11,7 +11,7 @@ menu:
     weight: 8
 
 ---
-The public install page is a convenient way of sharing the latest version of your app with team members and any other stakeholders who wish to check the app out. The page includes all the important details of the build such as filename, size, version code, minimum SDK version, and build number. Anyone, whose email address or Bitrise team role you add before building the app, will receive an email from Bitrise with a link to the public install page. From there they can quickly install the app on their own test device.
+The public install page is a convenient way of sharing the latest version of your app with team members and any other stakeholders who wish to check the app out. The page includes all the important details of the build such as filename, size, version code, minimum SDK version, and build number. Anyone, whose email address or Bitrise team role you add before building the app, will receive an email from Bitrise with a link to the public install page. The public install page's link can be shared with anyone as well. From there they can quickly install the app on their own test device.
 
 The public install page enables you to install .ipa files on provisioned and registered test devices. The allowed device types are: iPhone and iPad.
 
