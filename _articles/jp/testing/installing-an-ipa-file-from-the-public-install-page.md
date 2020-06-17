@@ -24,8 +24,6 @@ In this tutorial we’re describing:
 
 {% include video.html embed_url="https://www.youtube.com/embed/cyHRJdJoP0E" %}
 
-## 
-
 ## Prepping for installation
 
 Before installing the app on any test device, the app’s developer has to complete a couple of steps to build the app and share it with anyone:
