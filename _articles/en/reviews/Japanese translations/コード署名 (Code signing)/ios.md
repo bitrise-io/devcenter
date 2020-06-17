@@ -1,6 +1,6 @@
 ---
 tag: []
-title: iOSコード署名トラブルシューティング（改）(iOS code signing - troubleshooting -)
+title: iOSコード署名 -トラブルシューティング　(iOS code signing - troubleshooting -)
 redirect_from: []
 summary: ''
 published: false
