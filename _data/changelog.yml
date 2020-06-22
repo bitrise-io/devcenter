@@ -1,4 +1,10 @@
 ---
+- title: Basics of bitrise.yml
+  modified: 2020-06-22 13:00:00 +0200
+  changelog: 'New tutorial video about configuring your builds using the bitrise.yml
+    file. '
+  type: video
+  url: "/bitrise-cli/basics-of-bitrise-yml/"
 - title: Test Reports
   modified: 2020-06-16T12:00:00.000+02:00
   changelog: 'The test results of the Flutter Test Step are now also exported by the
