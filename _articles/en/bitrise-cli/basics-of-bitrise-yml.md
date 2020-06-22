@@ -8,11 +8,14 @@ tag:
 description: The configuration format of the Bitrise CLI is referred to as bitrise.yml.
   This is the expected file name the configuration should be saved with.
 redirect_from: []
+summary: ''
 menu:
   bitrise-cli-main:
     weight: 7
 
 ---
+{% include video.html embed_url="https://www.youtube.com/embed/XRnnwv6ruVA" %}
+
 ## bitrise.yml configuration
 
 The configuration format of the Bitrise CLI is referred to as `bitrise.yml`. This is the expected file name the configuration should be saved with.
