@@ -94,8 +94,23 @@
         <div class="search-bar">
           <div class="input-wrapper">
             <label class="search-icon material-icon"></label>
-            <input type="text" id="search-input" placeholder="Search" />
+            <input class="algolia__input js-algolia__input" type="text" name="search-bar" id="search-input" placeholder="Search" onkeypress="handle(event)"/>
             <button class="search-clear material-icon" onclick="clearSearchField()"></button>
+
+            <script>
+              function handle(e){
+                  if(e.keyCode === 13){
+                      e.preventDefault(); 
+
+                      var query = document.getElementsByName("search-bar")[0].value;
+                      if (query != "" && !window.location.href.includes("search")) {
+                        window.location.href = "search/" + "?query=" + query;
+                      } else if (query != "" && window.location.href.includes("search")) {
+                        window.location.href = "?query=" + query;
+                      }
+                  }
+              }
+          </script>
           </div>
         </div>
         <div class="lang-selector">
