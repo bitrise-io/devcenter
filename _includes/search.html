@@ -6,14 +6,7 @@
   document.write("Results for: " + str + ".");
 </script>
 
-<!-- <div id="container" class="container"> -->
-  <div class="">
-    <div class="">
-      <!-- <div id="searchbox"></div> -->
-      <div id="hits"></div>
-    </div>
-  </div>
-<!-- </div> -->
+<div id="hits"></div>
 
 <script>
   var urlParams = new URLSearchParams(window.location.search);
@@ -21,17 +14,15 @@
 
   const hitTemplate = function (hit) {
     let url = `${hit.url}`;
-    const title = hit._highlightResult.title.value;
-
-    // TODO: Sanitize html tags from text.
-    const content = hit._highlightResult.html.value;
+    let title = hit._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "");
+    let content = hit._highlightResult.html.value.replace(/<\/?[^>]+(>|$)/g, "").replace(/(&.*?&gt;)/g, "");
     
     return `
     <div>
     <h2><a href="${url}">${title}</a></h2>    
     <p>${content}</p>
     </div>
-  `;
+    `;
   }
 
   window.addEventListener('load', function () {
@@ -45,10 +36,10 @@
       indexName: indexKey,
       searchClient,
       searchFunction(helper) {
-        const page = helper.getPage(); // Retrieve the current page
+        const page = helper.getPage();
 
-        helper.setQuery(query) // this call resets the page
-          .setPage(page) // we re-apply the previous page
+        helper.setQuery(query)
+          .setPage(page)
           .search();
       }
     });
