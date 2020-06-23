@@ -104,8 +104,10 @@
 
                       let query = document.getElementsByName("search-bar")[0].value;
 
-                      if (query != "") {
+                      if (query != "" && !location.href.includes("jp")) {
                         location.href = window.location.origin + "/search/" + "?query=" + query;
+                      } else if (query != "" && location.href.includes("jp")) {
+                        location.href = window.location.origin + "/jp/search/" + "?query=" + query;
                       }
                   }
               }
