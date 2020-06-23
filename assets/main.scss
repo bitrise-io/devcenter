@@ -1159,7 +1159,7 @@ h4 {
 	font-size: 19px;
 	font-weight: 500;
 	position: absolute;
-	left: -16.5px;
+	left: 0px;
 	margin-top: 0;
 	padding: 0.1em 0.3em;
 	transform: translateY(-0.3rem);
@@ -1171,12 +1171,11 @@ h4 {
 		  .ais-Hits-item {
 			  margin: 0.2rem;
 			  position: relative;
-			  border-left: none;
-			  padding-left: 32px;
+			  border-left: solid 1px #dbc3ed;
 			  padding-bottom: 1rem;
-	
+			
 			  &:before {
-				  content: "";
+				  content: none;
 			  }
 		  }
 	
@@ -1184,6 +1183,7 @@ h4 {
 			  padding-top: 0.25rem;
 			  margin-top: 0;
 			  margin-bottom: 0;
+			  border: 0px;
 		  }
 	}
 
