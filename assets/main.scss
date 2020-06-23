@@ -24,6 +24,7 @@ html {
 	}
 }
 
+
 body {
 	display: flex;
 	flex-direction: column;
@@ -1162,6 +1163,28 @@ h4 {
 	margin-top: 0;
 	padding: 0.1em 0.3em;
 	transform: translateY(-0.3rem);
+	}
+
+	.ais-Hits-list {
+		list-style: none;
+	
+		  .ais-Hits-item {
+			  margin: 0.2rem;
+			  position: relative;
+			  border-left: none;
+			  padding-left: 32px;
+			  padding-bottom: 1rem;
+	
+			  &:before {
+				  content: "";
+			  }
+		  }
+	
+		  li p {
+			  padding-top: 0.25rem;
+			  margin-top: 0;
+			  margin-bottom: 0;
+		  }
 	}
 
 	ul li::before {
