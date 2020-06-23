@@ -1,10 +1,72 @@
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3"></script>
+
 <script>
-    var hello = window.location.search.replace(/%20/g, " ")
-    document.write(hello.split("=").pop());
+  var hello = window.location.search.replace(/%20/g, " ")
+  var str = hello.split("=").pop()
+  document.write("Results for: " + str + ".");
+</script>
+
+<div id="container" class="container">
+  <div class="">
+    <div class="">
+      <!-- <div id="searchbox"></div> -->
+      <div id="hits"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var urlParams = new URLSearchParams(window.location.search);
+  var query = urlParams.get('query');
+
+  const hitTemplate = function (hit) {
+    let url = `${hit.url}`;
+    const title = hit._highlightResult.title.value;
+
+    // TODO: Sanitize html tags from text.
+    const content = hit._highlightResult.html.value;
+    
+    return `
+    <div>
+    <h2><a href="${url}">${title}</a></h2>    
+    ${content}
+    </div>
+  `;
+  }
+
+  window.addEventListener('load', function () {
+    const searchClient = algoliasearch('HI1538U2K4', 'f817c83dbdb923d880c215c9380d1107');
+
+    var langMatch = location.pathname.match(/^\/(\w{2})(?:\/|\z)/);
+    var lang = langMatch && langMatch[1];
+    var indexKey = 'devcenter' + (lang ? '-' + lang : '');
+
+    const search = instantsearch({
+      indexName: indexKey,
+      searchClient,
+      searchFunction(helper) {
+        const page = helper.getPage(); // Retrieve the current page
+
+        helper.setQuery(query) // this call resets the page
+          .setPage(page) // we re-apply the previous page
+          .search();
+      }
+    });
+
+    let hits = instantsearch.widgets.hits({
+      container: '#hits',
+      templates: {
+        item: hitTemplate,
+      },
+    });
+
+    search.addWidget(hits);
+    search.start();
+  })
 </script>
 
 <div class="landing-banner">
   <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
-    <a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button class="landing-button">TRY BITRISE FOR FREE</button></a>
+  <a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button
+      class="landing-button">TRY BITRISE FOR FREE</button></a>
 </div>
-

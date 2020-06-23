@@ -102,11 +102,10 @@
                   if(e.keyCode === 13){
                       e.preventDefault(); 
 
-                      var query = document.getElementsByName("search-bar")[0].value;
+                      let query = document.getElementsByName("search-bar")[0].value;
+
                       if (query != "" && !window.location.href.includes("search")) {
-                        window.location.href = "search/" + "?query=" + query;
-                      } else if (query != "" && window.location.href.includes("search")) {
-                        window.location.href = "?query=" + query;
+                        location.href = window.location.origin + "/search/" + "?query=" + query;
                       }
                   }
               }
