@@ -6,14 +6,14 @@
   document.write("Results for: " + str + ".");
 </script>
 
-<div id="container" class="container">
+<!-- <div id="container" class="container"> -->
   <div class="">
     <div class="">
       <!-- <div id="searchbox"></div> -->
       <div id="hits"></div>
     </div>
   </div>
-</div>
+<!-- </div> -->
 
 <script>
   var urlParams = new URLSearchParams(window.location.search);
@@ -29,7 +29,7 @@
     return `
     <div>
     <h2><a href="${url}">${title}</a></h2>    
-    ${content}
+    <p>${content}</p>
     </div>
   `;
   }

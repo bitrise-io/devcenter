@@ -104,7 +104,7 @@
 
                       let query = document.getElementsByName("search-bar")[0].value;
 
-                      if (query != "" && !window.location.href.includes("search")) {
+                      if (query != "") {
                         location.href = window.location.origin + "/search/" + "?query=" + query;
                       }
                   }
