@@ -1,9 +1,11 @@
 <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3"></script>
 
+<div id="query"></div>
+
 <script>
   var hello = window.location.search.replace(/%20/g, " ")
   var str = hello.split("=").pop()
-  document.write("Search results for: " + str + ".");
+  document.getElementById('query').innerHTML = "<h3>Search results for: </h3>" + "<h4>" + str + "</h4>";
 </script>
 
 <div id="hits"></div>

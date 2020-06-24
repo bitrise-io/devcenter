@@ -1165,14 +1165,41 @@ h4 {
 	transform: translateY(-0.3rem);
 	}
 
+	.ais-Hits {
+
+		h3 {
+			margin-top: 20px;
+			margin-bottom: 10px;
+		}
+
+		p {
+			padding-bottom: 10px;
+		}
+	}
+
+	#query h4 {
+		background-color: #ececec;
+		display: inline-block;
+		padding: 5px;
+		margin-left: 1rem;
+		border-radius: 8px;
+	}
+
+	#query h3 {
+		display: inline-block;
+	}
+
 	.ais-Hits-list {
 		list-style: none;
+		padding-inline-start: 0;
 	
 		  .ais-Hits-item {
 			  margin: 0.2rem;
 			  position: relative;
-			  border-left: solid 1px #dbc3ed;
+			  border-bottom: solid 1px #dbc3ed;
+			  border-left: none;
 			  padding-bottom: 1rem;
+			  padding-left: 0;
 			
 			  &:before {
 				  content: none;
