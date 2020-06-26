@@ -6,7 +6,8 @@ tag:
 description: 'The Bitrise CLI allows you to run your builds offline, on your own machine.
   Install it with curl or homebrew, and update it using itself. '
 redirect_from: []
-summary: ''
+summary: Learn how to install and update the Bitrise CLI on your own machine either
+  using Homebrew or curl.
 menu:
   bitrise-cli-main:
     weight: 2
