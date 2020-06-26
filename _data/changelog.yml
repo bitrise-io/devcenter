@@ -1,6 +1,12 @@
 ---
+- title: Installing and updating the Bitrise CLI
+  modified: 2020-06-26 00:00:00 +0200
+  changelog: A tutorial video on installing and updating the Bitrise CLI locally was
+    added to the article.
+  type: video
+  url: "/bitrise-cli/installation/"
 - title: Basics of bitrise.yml
-  modified: 2020-06-22 13:00:00 +0200
+  modified: 2020-06-22T13:00:00.000+02:00
   changelog: 'New tutorial video about configuring your builds using the bitrise.yml
     file. '
   type: video
