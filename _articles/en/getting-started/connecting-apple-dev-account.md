@@ -77,7 +77,7 @@ Please note that this method is now deprecated since the official Apple Store Co
 
 Authorize your app to receive Apple Developer Portal data from Bitrise once your Apple Developer Account is connected to your [bitrise.io](https://www.bitrise.io/) account.
 
-As such, any team member’s connected account can be used with an app. The app does NOT necessarily have to use the owner’s connected Apple Developer account.
+As such, any owner's or admin’s connected account can be used with an app.
 
 To authorize the app:
 
