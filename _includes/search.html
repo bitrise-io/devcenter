@@ -11,7 +11,7 @@
 <div id="hits"></div>
 
 <script>
-  var urlParams = new URLSearchParams(window.location.search);
+  const urlParams = new URLSearchParams(window.location.search);
   var query = urlParams.get('query');
 
   const hitTemplate = function (hit) {
