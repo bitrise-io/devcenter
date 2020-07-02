@@ -101,8 +101,7 @@
               function handle(e){
                   if(e.keyCode === 13){
                       e.preventDefault(); 
-
-                      let query = document.getElementsByName("search-bar")[0].value;
+                      let query = e.target.value;
 
                       if (query != "" && !location.href.includes("jp")) {
                         location.href = window.location.origin + "/search/" + "?query=" + query;
