@@ -15,7 +15,7 @@
   var query = urlParams.get('query');
 
   const hitTemplate = function (hit) {
-    let url = `${hit.url}`;
+    let url = hit.url;
     let title = hit._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "");
     let content = hit._highlightResult.html.value.replace(/<\/?[^>]+(>|$)/g, "").replace(/(&.*?&gt;)/g, "");
     
