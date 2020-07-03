@@ -1,6 +1,12 @@
 ---
+- title: Build logs
+  modified: 2020-07-03 15:00:00 +0200
+  changelog: 'Added information on how to follow the build log live, as the build
+    is running. '
+  type: update
+  url: "/builds/build-logs/#following-a-build-log-live"
 - title: Installing and updating the Bitrise CLI
-  modified: 2020-06-26 00:00:00 +0200
+  modified: 2020-06-26T00:00:00.000+02:00
   changelog: A tutorial video on installing and updating the Bitrise CLI locally was
     added to the article.
   type: video
