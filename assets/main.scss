@@ -588,6 +588,17 @@ nav#side-menu {
 				}
 			}
 
+			.menu-list-opener-17 {
+
+				&:before {
+					content: url(/assets/logos/icons-docs/trace-add-on.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/trace-add-on-focus.svg);
+				}
+			}
+
 			a {
 				text-decoration: none;
 			}
