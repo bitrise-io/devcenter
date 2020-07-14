@@ -60,8 +60,12 @@ Please note that once you installed Trace, it can take up to an hour for it to s
  7. Open your app in Xcode:
 
         $ open HackerNews.xcworkspace/ 
- 8. Add the bitrise_configuration.plist file to your app by dragging and dropping it to the root of the project. 
+ 8. Add the bitrise_configuration.plist file to your app by dragging and dropping it to the root of the project.
+
+    ![](/img/trace-6.png) 
  9. If prompted to choose from different options for adding the files, choose your project - HackerNews in our example -, and click **Finish**.
+
+    ![](/img/trace-7.png)
 10. Run your app in a simulator or on a device! 
 
 ### Installing Trace on Bitrise 
@@ -82,6 +86,8 @@ If all went well, Trace will track application data. Let’s talk about how to a
 ## Analyzing application performance
 
 The first stop for analyzing performance is the **Performance** page of Trace. The primary purpose of the Performance page is to give you an overview of the performance of your app across the app’s entire install base.
+
+![](/img/Bitrise_-_Trace.png)
 
 You can check the performance of your apps in three distinct categories of metrics on the **Performance** page:
 
@@ -132,6 +138,8 @@ Various session properties are available for filtering, including:
 * Network: The type of network the app is connected from. 
 * Carrier: The cellular carrier for the device.
 
+![](/img/Bitrise_-_Trace-2.png)
+
 You can filter for any and all of these. For example, you can set the **Country** filter to **United States** and the **Device** filter to **iPhone X**. This means that Trace will show the metrics collected from users in the United States who use your app on an iPhone X. 
 
 By default, no filter is active: the metrics of all sessions monitored by Trace are displayed on the **Performance** page. To set a filter:
@@ -142,10 +150,12 @@ By default, no filter is active: the metrics of all sessions monitored by Trace 
 
 You can also group the individual metrics based on the above categories. Grouping means getting a breakdown of the metric based on the selected category. To do so:
 
-1. Find the metric you need; for example, **App Crash Rate**. 
+1. Find the metric you need; for example, **App Error Rate**. 
 2. To the right of the name of the metric, open the dropdown menu.
 3. Choose the category you need.   
-   For example, if you select **Device**, you will see the app crash rate, grouped by device type. 
+   For example, if you select **Device**, you will see the app error rate, grouped by device type. 
+
+![](/img/Bitrise_-_Trace-3.png)
 
 You can also set a date range for the available metrics. To do so:
 
@@ -164,13 +174,17 @@ To check any of the metrics:
 
 The **Performance details** page gives you a full breakdown of any selected metric. You can apply the same filtering and sorting to the sessions as on the **Performance** page, and set a date range the same way.
 
+![](/img/Bitrise_-_Trace-4.png)
+
 At the top of the page, you can see the metric inspector: it is a chart that displays the metric’s data over the specified time period, which you can set in the dropdown menu found in the top right corner.  Apply filters and sorting to narrow down your analysis of any issues. 
 
 Below the metric inspector, you’ll see detailed breakdowns of all session properties, such as app version, country, network carrier, and so on. For each breakdown you can see a plot for each item of that property. To put it in simpler terms: in the **App versions** breakdown of, say, the **Network errors** metric, you will see plots for the network errors of each app version that is tracked by Trace. You can easily create a plot analysis: 
 
 1. Find the breakdown you need (for example, **App versions**). 
-2. Click the specific plot you need (for example, version 2.3).  
+2. Click the specific plot you need (for example, version 2.6.30).  
    This will apply a session filter. It is the same as setting the same filter in the **Session filter** bar at the top of the page. 
+
+![](/img/Bitrise_-_Trace-5.png)
 
 And that’s it: now every breakdown will show data related to only the selected plot (in our example, app version 2.3).
 
