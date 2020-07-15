@@ -25,6 +25,10 @@ With caching, you can preserve the contents of selected files and directories, i
 
 The cache is stored as a single archive file: if the content of the cached paths changes in any way, the entire file gets updated. Every branch of your repository on which you run a build will have its own cache archive.
 
+
+{% include message_box.html type="info" title="The default branch cache is used as fallback" content="If a branch does not yet have a cache saved, the default branch's cache will be used. Cache is not available for PR builds of public Bitrise apps.
+"%}
+
 {% include message_box.html type="info" title="When does the Build Cache gets auto-deleted?" content=" The Build Cache, related to a specific branch, expires after 7 days which means it is automatically deleted - but only if there's no new build on that branch in the meantime. This means that if you do builds on a specific branch more frequently than a week, the cache won't get deleted. If you don't start a build on that specific branch for more than seven days, then the related cache will be deleted, and and your next build will run like the first.
 "%}
 
