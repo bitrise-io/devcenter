@@ -1,12 +1,17 @@
 ---
+- title: Verified Steps
+  modified: 2020-07-15 00:00:00 +0200
+  changelog: Email address to our Partnership Management has been updated.
+  type: update
+  url: "/contributors/verified-steps/"
 - title: Deploying an iOS app to Bitrise.io
-  modified: 2020-07-14 14:00:00 +0200
+  modified: 2020-07-14T14:00:00.000+02:00
   changelog: Added clarification on how to access the toggle to enable the public
     install page.
   type: update
   url: "/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/"
 - title: Build logs
-  modified: 2020-07-03 15:00:00 +0200
+  modified: 2020-07-03T15:00:00.000+02:00
   changelog: 'Added information on how to follow the build log live, as the build
     is running. '
   type: update

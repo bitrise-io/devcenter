@@ -46,7 +46,7 @@ We strongly recommend that you consult with our [Step development ](/contributor
    ![](/img/cla.jpg)
 
    ![](/img/checklist.jpg)
-4. If you wish to apply for the verified badge, send an email to [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io) to contact our Partner Management Team. In your email, describe what specific problem your service solves, and how many users you have on Bitrise. Partner Management will coordinate your request within Bitrise, and get back to you once your Step has been updated with the verified badge.
+4. If you wish to apply for the verified badge, send an email to [partners@bitrise.io](mailto:partners@bitrise.io) to contact our Partner Management Team. In your email, describe what specific problem your service solves, and how many users you have on Bitrise. Partner Management will coordinate your request within Bitrise, and get back to you once your Step has been updated with the verified badge.
 
 If at any stage of the process you wonder what happens with a Step candidate that is already covered by another Step in our StepLib, head over to [How do we go about Step duplications](/contributors/verified-steps/#how-do-we-go-about-step-duplications)?
 
