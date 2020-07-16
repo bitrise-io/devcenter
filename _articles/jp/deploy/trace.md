@@ -1,16 +1,15 @@
 ---
-tag:
-- trace
-- add-ons
-title: Trace
+title: Monitoring your deployed app with Trace
 redirect_from: []
-permalink: /trace/getting-started/
+permalink: /jp/trace/getting-started/
 description: ''
 menu:
-  main:
-    identifier: trace-main
-    weight: 30
+  deploy-main:
+    title: Monitoring your deployed app with Trace
+    weight: 17
 ---
+
+{% include not_translated_yet.html %}
 
 Trace is a Bitrise add-on designed to monitor your applications from the perspective of its end users. It comes with out-of-the-box performance monitoring, giving you insight into how the app is performing across the entire install base. 
 
