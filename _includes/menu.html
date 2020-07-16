@@ -2,7 +2,7 @@
 <ol class="menu-list">
 {% for item in menu %}
 	<li class="menu-item">
-		{% unless item.url contains "index"%}
+		{% unless item.url contains "index" %}
 			{% if item.url == current_article.url %}
 				<a class="menu-link" href="{{ item.url }}" title="{{ item.title }}" class="current" hreflang="{{ locale | strip }}">{{ item.title }}</a>
 			{% else %}
