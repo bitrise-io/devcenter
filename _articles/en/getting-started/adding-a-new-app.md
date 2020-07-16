@@ -7,7 +7,6 @@ redirect_from:
 - "/getting-started/adding-a-new-app/setting-up-ssh-keys/"
 - "/adding-a-new-app/"
 - "/getting-started/adding-a-new-app/index/"
-- "/adding-a-new-app/setting-up-configuration/#skipping-the-scanner-full-manual-configuration/"
 tag:
 - ssh
 - " public"
