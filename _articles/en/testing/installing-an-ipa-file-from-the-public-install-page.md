@@ -22,7 +22,7 @@ In this tutorial we’re describing:
 * How to install an app on a registered test device without a Bitrise account (for anyone who has not subscribed to Bitrise but wishes to check out the current version of the app).
 * How to install an app on a test device which is yet to be registered on Bitrise (for Bitrise users).
 
-{% include video.html embed_url="https://www.youtube.com/embed/cyHRJdJoP0E" %}
+<div class="video"><iframe width="560" height="315" src="https://www.youtube.com/embed/cyHRJdJoP0E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ## Prepping for installation
 
