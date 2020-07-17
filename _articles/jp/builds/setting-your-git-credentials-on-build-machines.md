@@ -22,4 +22,4 @@ menu:
    git config --global user.name "User Name" git config --global user.email "email-for-the-commit@domain.com"
 3. ビルドを開始します。
 
-全て順調に進んだ場合、Gitプロバイダーのリポジトリ変更を確認する必要があります。新しいユーザー名とEメールアドレスは、ビルドからGithubにプッシュする今後すべてのコミットに対して表示されます。
+全て順調に進んだ場合、Gitプロバイダーのリポジトリ変更を確認する必要があります。新しいユーザー名とEメールアドレスは、ビルドからGitHubにプッシュする今後すべてのコミットに対して表示されます。
