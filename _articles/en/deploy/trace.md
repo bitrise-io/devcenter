@@ -59,7 +59,7 @@ Please note that once you installed Trace, it can take up to an hour for it to s
 
         def pods
           pod 'Firebase', '2.5.0' // existing Pod
-          pod 'TraceSDK', :http => 'https://monitoring-sdk.firebaseapp.com/latest/libTrace.a.zip'
+          pod 'BitriseTrace'
         end
  3. Install the SDK by running pod install.  
     If you’ve done everything right, the Pod installation complete! message should appear.
