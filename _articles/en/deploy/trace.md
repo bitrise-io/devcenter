@@ -53,14 +53,15 @@ Please note that once you installed Trace, it can take up to an hour for it to s
 
  1. Clone the app and go to its directory on your machine:
 
-        $ git clone https://github.com/amitburst/HackerNews.git
-        $ cd HackerNews/
+        $ git clone https://github.com/bitrise-io/BookStore-iOS.git
+        $ cd BookStore-iOS/
  2. Open the Podfile of the app and add the Trace SDK to it:
 
-        def pods
-          pod 'Firebase', '2.5.0' // existing Pod
+        # Podfile
+        
+        target 'YOUR_TARGET_NAME' do
           pod 'BitriseTrace'
-        end
+        end 
  3. Install the SDK by running pod install.  
     If you’ve done everything right, the Pod installation complete! message should appear.
  4. Open Trace on Bitrise.
@@ -68,7 +69,7 @@ Please note that once you installed Trace, it can take up to an hour for it to s
  6. Find the **Download Config file** step, and click **Download**.
  7. Open your app in Xcode:
 
-        $ open HackerNews.xcworkspace/ 
+        $ open BookStore.xcworkspace/ 
  8. Add the bitrise_configuration.plist file to your app by dragging and dropping it to the root of the project.
 
     ![](/img/trace-6.png)
