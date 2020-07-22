@@ -65,7 +65,7 @@ Please note that once you installed Trace, it can take up to an hour for it to s
  3. Install the SDK by running pod install.  
     If you’ve done everything right, the Pod installation complete! message should appear.
  4. Open Trace on Bitrise.
- 5. On the sidebar, click **Go back to setup** and then click **Getting started**.
+ 5. In the top-right, click **Getting started**.
  6. Find the **Download Config file** step, and click **Download**.
  7. Open your app in Xcode:
 
@@ -73,7 +73,7 @@ Please note that once you installed Trace, it can take up to an hour for it to s
  8. Add the bitrise_configuration.plist file to your app by dragging and dropping it to the root of the project.
 
     ![](/img/trace-6.png)
- 9. If prompted to choose from different options for adding the files, choose your project - HackerNews in our example -, and click **Finish**.
+ 9. If prompted to choose from different options for adding the files, choose your project - BookStore in our example -, and click **Finish**.
 
     ![](/img/trace-7.png)
 10. Run your app in a simulator or on a device!
