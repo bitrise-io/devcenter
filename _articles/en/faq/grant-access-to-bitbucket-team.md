@@ -7,7 +7,7 @@ description: This guide explains how to grant access for bitrise.io to your Bitb
   team, and to check if you denied access for any reason.
 redirect_from: []
 menu:
-  faq-main:
+  faq:
     weight: 8
 
 ---

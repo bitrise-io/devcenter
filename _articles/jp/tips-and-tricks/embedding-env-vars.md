@@ -6,7 +6,7 @@ title: Using Env Vars as a value of an Env Var
 redirect_from: []
 description: 
 menu:
-  tips-and-tricks-main:
+  tips-and-tricks:
     weight: 24
 
 ---

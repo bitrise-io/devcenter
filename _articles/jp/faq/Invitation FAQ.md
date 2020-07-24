@@ -6,7 +6,7 @@ title: Invitations FAQ
 redirect_from: []
 description: ''
 menu:
-  faq-main:
+  faq:
     weight: 24
     title: Invitation FAQ
 

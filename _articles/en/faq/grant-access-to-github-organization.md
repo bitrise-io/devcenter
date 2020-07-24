@@ -8,7 +8,7 @@ description: 'This guide explains how to grant access for bitrise.io to your Git
   Organization. This way Bitrise can access the Organization''s repositories. '
 redirect_from: []
 menu:
-  faq-main:
+  faq:
     weight: 6
 
 ---

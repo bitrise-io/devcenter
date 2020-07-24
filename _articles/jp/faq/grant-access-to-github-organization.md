@@ -3,7 +3,7 @@ changelog:
 last_modified_at: 
 title: How to grant Bitrise access to a GitHub Organization?
 menu:
-  faq-main:
+  faq:
     weight: 9
 
 ---
