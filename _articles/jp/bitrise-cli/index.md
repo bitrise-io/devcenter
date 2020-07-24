@@ -8,7 +8,7 @@ redirect_from:
 menu:
   main:
     identifier: bitrise-cli-main
-    weight: 24
+    weight: 22
 
 ---
 {% include not_translated_yet.html %}

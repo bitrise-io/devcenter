@@ -8,7 +8,7 @@ description: ''
 menu:
   main:
     identifier: code-signing-main
-    weight: 18
+    weight: 16
 
 ---
 {% include not_translated_yet.html %}

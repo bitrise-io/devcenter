@@ -12,7 +12,7 @@ description: A build is a series of jobs, specified by the app’s Workflow whic
 menu:
   main:
     identifier: builds-main
-    weight: 11
+    weight: 13
 
 ---
 A build is a series of jobs, specified by the app’s Workflow which is a collection of [Steps](/steps-and-workflows/getting-started-steps). The app’s build configuration is specified in the [bitrise.yml configuration file](/bitrise-cli/basics-of-bitrise-yml) which you can modify in [bitrise.io](https://www.bitrise.io/)’s graphical Workflow Editor.

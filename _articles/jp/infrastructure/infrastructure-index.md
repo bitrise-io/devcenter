@@ -8,7 +8,7 @@ description: ''
 menu:
   main:
     identifier: infrastructure-main
-    weight: 8
+    weight: 6
 
 ---
 {% include not_translated_yet.html %}
