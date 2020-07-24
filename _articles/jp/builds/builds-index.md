@@ -6,7 +6,7 @@ redirect_from: "/jp/getting-started/builds-and-workflows/"
 menu:
   main:
     identifier: builds-main
-    weight: 16
+    weight: 14
 
 ---
 {% include not_translated_yet.html %}

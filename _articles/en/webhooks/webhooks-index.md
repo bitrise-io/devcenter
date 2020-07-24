@@ -7,7 +7,7 @@ description: ''
 menu:
   main:
     identifier: webhooks-main
-    weight: 7
+    weight: 9
 
 ---
 A webhook is a user-defined callback that is triggered by some event, such as pushing code to a repository. Bitrise makes extensive use of webhooks:

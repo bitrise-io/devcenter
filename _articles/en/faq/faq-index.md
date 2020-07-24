@@ -7,7 +7,7 @@ description: ''
 menu:
   main:
     identifier: faq-main
-    weight: 25
+    weight: 27
 
 ---
 Check out some of the questions our users most frequently ask. If you have a question that is not answered in this section, take a look at [our forums](https://discuss.bitrise.io/) or contact Bitrise support.

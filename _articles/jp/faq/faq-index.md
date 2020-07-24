@@ -8,7 +8,7 @@ description: ''
 menu:
   main:
     identifier: faq-main
-    weight: 30
+    weight: 28
 
 ---
 {% include not_translated_yet.html %}
