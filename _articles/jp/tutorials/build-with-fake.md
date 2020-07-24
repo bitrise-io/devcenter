@@ -4,7 +4,7 @@ last_modified_at:
 title: Building with FAKE (F# Make)
 menu:
   tutorials-main:
-    weight: 20
+    weight: 22
 
 ---
 {% include not_translated_yet.html %}

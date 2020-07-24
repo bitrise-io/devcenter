@@ -6,7 +6,7 @@ redirect_from:
 - "/ios/known-xcode-issues/"
 menu:
   troubleshooting-main:
-    weight: 15
+    weight: 16
 
 ---
 **自由にこのリストにあなたのコメントを追加してください。**

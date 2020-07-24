@@ -7,7 +7,7 @@ redirect_from: []
 description: 
 menu:
   tips-and-tricks:
-    weight: 24
+    weight: 25
 
 ---
 {% include not_translated_yet.html %}

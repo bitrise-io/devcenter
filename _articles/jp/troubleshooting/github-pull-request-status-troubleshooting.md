@@ -7,7 +7,7 @@ redirect_from:
 - "/faq/github-pull-request-status-troubleshooting/"
 menu:
   troubleshooting-main:
-    weight: 18
+    weight: 19
 
 ---
 {% include not_translated_yet.html %}

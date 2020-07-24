@@ -10,7 +10,7 @@ description: If you need quick tech support from us, our onsite chat support can
 redirect_from: []
 menu:
   troubleshooting-main:
-    weight: 5
+    weight: 6
 
 ---
 If you need quick tech support from us, our onsite chat support can look into your project and fix your technical issues in the most efficient way! All you have to do is enable **Bitrise Support User** so that we have access to your project, specifically your workflow, build log, app settings or your yml.

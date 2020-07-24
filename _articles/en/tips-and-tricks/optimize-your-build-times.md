@@ -2,7 +2,7 @@
 title: Optimizing your build times
 menu:
   tips-and-tricks:
-    weight: 20
+    weight: 21
 
 ---
 You can improve your build times with the following tips.

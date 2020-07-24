@@ -4,7 +4,7 @@ last_modified_at:
 title: ビルドトリガーが機能しない
 menu:
   troubleshooting-main:
-    weight: 17
+    weight: 18
 
 ---
 残念ながら Bitrise 上でビルドトリガーが自動的にビルドをトリガーしないことがあります。ビルドを止める可能性がある問題がたくさんあります。見てみましょう！

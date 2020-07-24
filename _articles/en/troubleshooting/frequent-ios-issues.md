@@ -11,7 +11,7 @@ description: Read about some of the most frequent issues with iOS apps, includin
   dependency problems, as well as issues with Xcode Schemes and fastlane exports.
 menu:
   troubleshooting-main:
-    weight: 14
+    weight: 15
 
 ---
 ## Searching for errors and issues in Xcode generated output

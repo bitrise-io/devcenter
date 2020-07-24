@@ -10,7 +10,7 @@ description: 'Read about Xcode issues: performance problems, test failures, trou
   with the Xcode Command Line Tools.'
 menu:
   troubleshooting-main:
-    weight: 16
+    weight: 17
 
 ---
 **Feel free to add your comments to this list.**

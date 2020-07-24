@@ -4,7 +4,7 @@ redirect_from: []
 description: ''
 menu:
   main:
-    weight: 18
+    weight: 20
     identifier: monitoring-main
     title: Monitoring
 
