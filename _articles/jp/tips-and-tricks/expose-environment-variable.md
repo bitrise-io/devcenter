@@ -3,7 +3,7 @@ changelog:
 last_modified_at: 
 title: Exposing env vars and using them in another step
 menu:
-  tips-and-tricks-main:
+  tips-and-tricks:
     weight: 9
 
 ---

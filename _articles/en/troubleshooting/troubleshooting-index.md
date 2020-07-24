@@ -1,7 +1,7 @@
 ---
 last_modified_at: 
 tag: []
-title: Troubleshooting
+title: Troubleshooting & FAQ
 redirect_from: []
 description: 'In this section, we offer you some ideas for how to debug your Bitrise
   builds. The guides deal with specific issues: take a look at them to check out if

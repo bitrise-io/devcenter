@@ -3,7 +3,7 @@ changelog:
 last_modified_at: 
 title: Attach any file as an Artifact to the Build
 menu:
-  tips-and-tricks-main:
+  tips-and-tricks:
     weight: 7
 
 ---

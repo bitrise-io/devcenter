@@ -3,7 +3,7 @@ changelog:
 last_modified_at: 
 title: Should I commit my dependencies into my repository?
 menu:
-  faq-main:
+  faq:
     weight: 18
 
 ---

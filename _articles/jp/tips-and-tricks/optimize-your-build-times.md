@@ -3,7 +3,7 @@ changelog:
 last_modified_at: 
 title: Optimize your build times
 menu:
-  tips-and-tricks-main:
+  tips-and-tricks:
     weight: 17
 
 ---

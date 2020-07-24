@@ -6,9 +6,9 @@ title: FAQ
 redirect_from: []
 description: ''
 menu:
-  main:
-    identifier: faq-main
-    weight: 30
+  troubleshooting-main:
+    identifier: faq
+    weight: 1
 
 ---
 {% include not_translated_yet.html %}

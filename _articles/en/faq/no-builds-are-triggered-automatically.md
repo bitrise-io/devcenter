@@ -11,7 +11,7 @@ description: |-
   service you use (GitHub, Bitbucket, GitLab, ...).
 redirect_from: []
 menu:
-  faq-main:
+  faq:
     weight: 16
 
 ---

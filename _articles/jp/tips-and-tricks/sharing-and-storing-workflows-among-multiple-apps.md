@@ -4,7 +4,7 @@ last_modified_at:
 title: 複数のアプリ間でのワークフローの共有・保存
 date: 2019-03-01T14:39:55.000+00:00
 menu:
-  tips-and-tricks-main:
+  tips-and-tricks:
     weight: 22
 
 ---

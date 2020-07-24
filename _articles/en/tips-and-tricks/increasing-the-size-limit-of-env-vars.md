@@ -8,7 +8,7 @@ redirect_from: []
 description: 'Increase the size limit of Environment Variable values with a simple
   command - but be aware that some tools cannot handle large variable sizes. '
 menu:
-  tips-and-tricks-main:
+  tips-and-tricks:
     weight: 25
 
 ---

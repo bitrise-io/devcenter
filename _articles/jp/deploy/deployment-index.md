@@ -6,7 +6,7 @@ redirect_from: []
 menu:
   main:
     identifier: deploy-main
-    weight: 22
+    weight: 17
 
 ---
 {% include not_translated_yet.html %}

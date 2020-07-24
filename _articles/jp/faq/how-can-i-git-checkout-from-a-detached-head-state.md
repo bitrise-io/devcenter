@@ -6,7 +6,7 @@ title: How can I git checkout from a detached head state?
 redirect_from: []
 description: ''
 menu:
-  faq-main:
+  faq:
     weight: 19
 
 ---
