@@ -9,7 +9,7 @@ description: 'In this section, we offer you some ideas for how to debug your Bit
 menu:
   main:
     identifier: troubleshooting-main
-    weight: 27
+    weight: 28
 
 ---
 In this section, we offer you some ideas for how to debug your Bitrise builds. The guides deal with specific issues: take a look at them to check out if any of them solves your problem.

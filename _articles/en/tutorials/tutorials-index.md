@@ -8,7 +8,7 @@ description: 'In the Tutorials section, we are offering more detailed, in-depth 
 menu:
   main:
     identifier: tutorials-main
-    weight: 24
+    weight: 25
 
 ---
 Welcome to the Tutorials section! Here we are offering more detailed, in-depth guides, often specific to certain platforms or tools.
