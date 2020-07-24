@@ -9,7 +9,7 @@ redirect_from: "/api/v0.1/"
 menu:
   main:
     identifier: api-main
-    weight: 29
+    weight: 28
 
 ---
 The Bitrise API allows you to build deep, custom integrations with your preferred tools and processes to create even more efficient development pipelines. 

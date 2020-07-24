@@ -9,7 +9,7 @@ description: 'In the Tutorials section, we are offering more detailed, in-depth 
 menu:
   main:
     identifier: tutorials-main
-    weight: 26
+    weight: 25
     title: Tips, tricks, tutorials
 
 ---
