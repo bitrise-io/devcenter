@@ -12,6 +12,7 @@ tag:
 description: Stacks on bitrise.io are generally updated every weekend, but what’s
   updated depends on the stack. There are stacks where only certain caches are updated
   and there are stacks which are completely re-built every week.
+summary: ''
 menu:
   infrastructure-main:
     weight: 4
@@ -24,7 +25,7 @@ Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every wee
 We use two types of Xcode stacks; Stable stacks and Edge stacks.
 
 * Xcode Stable stacks are **built once, and are not updated** at all (except with Bitrise CLI related updates, [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) and with critical fixes). These stacks are designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
-* Xcode "Edge" stack is **re-built every week**. It includes the latest stable release of Xcode, the same pre-installed tools as on the Stable stack, and the [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates). It does not include any Xcode beta version. The stack uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
+* Xcode "Edge" stack is **re-built every week**. It includes the latest stable release of Xcode, the same pre-installed tools as on the Stable stack, and the [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates). The stack uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
 
 ### **About dependency manager cache updates**
 
@@ -77,9 +78,9 @@ We will carry this example through our guide to illustrate stack removal and dep
 
 #### **Deprecating and removing Xcode stacks**
 
-When the first **beta of the next major Xcode version** is released, we **deprecate** all the minor versions of the last major version, except the very last version
+When the first **beta of the next major Xcode version** is released, we **deprecate** all the minor versions of the last major version, except the very last version.
 
-{% include message_box.html type="example" title="Example for deprecating Xcode stacks when beta Xcode version is released " content=" When Xcode 9 was released, we deprecated
+{% include message_box.html type="example" title="Example for deprecating Xcode stacks when beta Xcode version is released" content=" When Xcode 9 was released, we deprecated:
 
 * All the Xcode 8 stacks except the very last one (8.3.x).
 * The oldest major version (Xcode 6.4). "%}
