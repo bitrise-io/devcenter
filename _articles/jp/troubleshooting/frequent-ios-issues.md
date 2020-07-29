@@ -6,7 +6,7 @@ redirect_from:
 - "/ios/frequent-ios-issues/"
 menu:
   troubleshooting-main:
-    weight: 12
+    weight: 13
 
 ---
 ## Xcode の出力からエラーと問題を見つける

@@ -3,8 +3,8 @@ changelog:
 last_modified_at: 
 title: Use bitrise.yml from repository
 menu:
-  tips-and-tricks-main:
-    weight: 19
+  tips-and-tricks:
+    weight: 20
 
 ---
 {% include not_translated_yet.html %}

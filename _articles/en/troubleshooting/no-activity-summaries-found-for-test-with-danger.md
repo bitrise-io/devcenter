@@ -12,7 +12,7 @@ description: Xcov, by default, for the results bundle in its default location, n
   the Env Var.
 menu:
   troubleshooting-main:
-    weight: 19
+    weight: 20
 
 ---
 ## The issue

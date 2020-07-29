@@ -8,7 +8,7 @@ description: If you want to do manual SSH key configuration on bitrise.io, you c
   generate an appropriate SSH keypair with a simple Command Line / Terminal command.
 redirect_from: []
 menu:
-  faq-main:
+  faq:
     weight: 7
 
 ---

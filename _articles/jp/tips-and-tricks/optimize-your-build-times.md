@@ -3,8 +3,8 @@ changelog:
 last_modified_at: 
 title: Optimize your build times
 menu:
-  tips-and-tricks-main:
-    weight: 17
+  tips-and-tricks:
+    weight: 18
 
 ---
 ビルド時間の改善には、以下のような方法が有効です。

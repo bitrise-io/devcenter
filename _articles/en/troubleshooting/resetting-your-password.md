@@ -12,7 +12,7 @@ description: 'You can reset your password via e-mail at any time. If you fail to
   in three times in a row, reCAPTCHA will be triggered to check if you are a human. '
 menu:
   troubleshooting-main:
-    weight: 2
+    weight: 3
 
 ---
 You can log into Bitrise in many ways:

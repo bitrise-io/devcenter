@@ -1,11 +1,12 @@
 ---
 title: Monitoring your deployed app with Trace
 redirect_from: []
-permalink: "/jp/trace/getting-started/"
 description: ''
 menu:
-  deploy-main:
-    weight: 17
+  main:
+    weight: 21
+    identifier: monitoring-main
+    title: Monitoring
 
 ---
 {% include not_translated_yet.html %}

@@ -10,7 +10,7 @@ description: 'Teams are based on apps: each app has its own team. Organizations 
 menu:
   main:
     identifier: team-management-main
-    weight: 5
+    weight: 7
 
 ---
 {% include video.html embed_url="https://www.youtube.com/embed/GkjVrhBbU-A" %}

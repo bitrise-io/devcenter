@@ -10,6 +10,7 @@ menu:
   main:
     identifier: tutorials-main
     weight: 26
+    title: Tips, tricks, tutorials
 
 ---
 {% include not_translated_yet.html %}

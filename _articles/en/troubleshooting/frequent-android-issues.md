@@ -9,7 +9,7 @@ description: 'Read about some of the most frequent issues with Android apps, inc
   Android package problems and license errors. '
 menu:
   troubleshooting-main:
-    weight: 10
+    weight: 11
 
 ---
 ## Could not find an android package or you have not accepted the license agreements

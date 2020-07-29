@@ -14,7 +14,7 @@ description: 'Deployment can mean a number of things on Bitrise: you can deploy 
 menu:
   main:
     identifier: deploy-main
-    weight: 17
+    weight: 19
 
 ---
 Deployment can mean a number of things on Bitrise: you can deploy your app to test devices, or to bitrise.io, with a public install page that you can freely distribute so that anyone can test the app; you can deploy your app to a simulator, to conduct UI testing, for example; and of course you can deploy your apps to online stores, such as the App Store or the Google Play Store.

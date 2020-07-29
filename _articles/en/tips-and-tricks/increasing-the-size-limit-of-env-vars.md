@@ -8,8 +8,8 @@ redirect_from: []
 description: 'Increase the size limit of Environment Variable values with a simple
   command - but be aware that some tools cannot handle large variable sizes. '
 menu:
-  tips-and-tricks-main:
-    weight: 25
+  tips-and-tricks:
+    weight: 26
 
 ---
 By default, Environment Variables (Env Vars) have a 20KB per-environment value size limit, and a 120KB total size limit. Hence you getting the following error when you try to add a value larger than 20KB:

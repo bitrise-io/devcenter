@@ -10,7 +10,7 @@ description: 'Unfortunately, it can happen that your build triggers do not trigg
 redirect_from: []
 menu:
   troubleshooting-main:
-    weight: 11
+    weight: 12
 
 ---
 Unfortunately, it can happen that your build triggers do not trigger a build automatically on Bitrise. There are many potential issues that can stop your builds - let's take a look!

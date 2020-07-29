@@ -5,7 +5,7 @@ redirect_from:
 menu:
   tutorials-main:
     identifier: xamarin
-    weight: 3
+    weight: 5
 
 ---
 With [Xamarin](https://xamarin.com) integration you can now build your

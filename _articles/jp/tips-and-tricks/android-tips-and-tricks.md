@@ -4,7 +4,7 @@ last_modified_at:
 title: Androidに関するヒント
 redirect_from: []
 menu:
-  tips-and-tricks-main:
+  tips-and-tricks:
     weight: 1
 
 ---
