@@ -6,6 +6,9 @@ tag:
 title: Exporting a universal APK from an AAB
 redirect_from: []
 summary: ''
+menu:
+  android-deploy:
+    weight: 7
 
 ---
 You can test an Android app on a test device even if the generated artifact is an App Bundle (`.aab`). With the **Export Universal APK** Step you can export a universal APK from the App Bundle, sign it with a keystore (or debug keystore), and deploy the APK to your test device before releasing the app to the Google Play Store.

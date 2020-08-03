@@ -3,6 +3,9 @@ tag: []
 title: Exporting a universal APK from an AAB
 redirect_from: []
 summary: ''
+menu:
+  android-deploy:
+    weight: 8
 
 ---
 {% include not_translated_yet.html %}
