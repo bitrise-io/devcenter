@@ -2,6 +2,11 @@
 title: Monitoring your deployed app with Trace
 redirect_from: []
 description: ''
+menu:
+  main:
+    weight: 22
+    identifier: monitoring-main
+    title: Monitoring
 
 ---
 {% include not_translated_yet.html %}
