@@ -5,7 +5,7 @@ redirect_from: []
 summary: ''
 menu:
   android-deploy:
-    weight: 8
+    weight: 7
 
 ---
 {% include not_translated_yet.html %}

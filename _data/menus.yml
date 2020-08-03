@@ -1,0 +1,5 @@
+---
+main:
+- identifier: monitoring-main
+  title: Monitoring
+  weight: 20
