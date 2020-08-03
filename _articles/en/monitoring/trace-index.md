@@ -13,9 +13,9 @@ description: Trace is a Bitrise add-on designed to monitor your applications fro
   giving you insight into how the app is performing across the entire install base.
 menu:
   main:
-   identifier: monitoring-main
-   title: Monitoring
-   weight: 20
+    identifier: monitoring-main
+    title: Monitoring
+    weight: 21
 
 ---
 {% include message_box.html type="important" title="Beta feature" content="Please note that this feature is still in beta phase! You can sign up for the beta [here](https://www.bitrise.io/add-ons/trace-mobile-monitoring)!"%}
