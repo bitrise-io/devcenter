@@ -1,6 +1,12 @@
 ---
+- title: How to enable the Bitrise Support user
+  modified: 2020-08-04 00:00:00 +0200
+  changelog: A video tutorial has been added to this doc on enabling the Bitrise Support
+    user.
+  type: video
+  url: "/troubleshooting/enabling-bitrise-support-user/"
 - title: Exporting a universal APK from an AAB
-  modified: 2020-07-30 12:00:00 +0200
+  modified: 2020-07-30T12:00:00.000+02:00
   changelog: You can test an Android app on a test device even if the generated artifact
     is an App Bundle (`.aab`) by exporting a universal APK from it.
   type: new
