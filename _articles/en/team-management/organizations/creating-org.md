@@ -1,10 +1,10 @@
 ---
-title: Creating organizations
+title: Creating Organizations
 tag:
 - teams
 - orgs
 description: You can create and manage Organizations on bitrise.io to manage entire
-  teams quickly and effectively. You can set up multiple groups within an organization
+  teams quickly and effectively. You can set up multiple groups within an Organization
   for different apps.
 redirect_from: []
 menu:
@@ -16,23 +16,23 @@ You can create and manage **Organizations** on [bitrise.io](https://www.bitrise.
 
 To run builds as an Organization, you need to subscribe to an **Organization** plan.
 
-## Creating an organization
+## Creating an Organization
 
-No need for lengthy preparation when you wish to create an organization on Bitrise: all you really need is an existing Bitrise account - this will be the default owner of the organization - and an organization name. You can set up everything else later!
+No need for lengthy preparation when you wish to create an Organization on Bitrise: all you really need is an existing Bitrise account - this will be the default owner of the Organization - and an Organization name. You can set up everything else later!
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
 2. On the top menu bar, find the **+** symbol and click it.
 
    ![Screenshot](/img/team-management/organization/add-org.png)
-3. Choose **Add organization** from the dropdown menu.
+3. Choose **Add Organization** from the dropdown menu.
 
-   Alternatively, you can create a new organization from:
+   Alternatively, you can create a new Organization from:
    * your **Account settings** page: find the **+ New Organization** option under **ORGANIZATION** on the left.
-4. In the pop-up window, enter the name and the billing email of your organization, and click **Create**. By default, your invoices will be sent to the billing email you set here.
+4. In the pop-up window, enter the name and the billing email of your Organization, and click **Create**. By default, your invoices will be sent to the billing email you set here.
 
    ![](/img/create-new-org.png)
 
-   Please note that you will NOT be able to create an organization if the domain part of your email address contains uppercase letters.
+   Please note that you will NOT be able to create an Organization if the domain part of your email address contains uppercase letters.
    * org@example.com will work.
    * org@Example.com will NOT work!
 5. Provide your billing information.

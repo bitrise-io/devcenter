@@ -15,7 +15,7 @@ menu:
 ---
 Roles are very important on Bitrise. They limit what you can and cannot do with an application.
 
-Roles work on an application basis: the same user can have different roles on different applications. As such, organizations have no inherent "roles", apart from that of the organization owners: organizations have groups and different groups can be assigned different roles.
+Roles work on an application basis: the same user can have different roles on different applications. As such, Organizations have no inherent "roles", apart from that of the Organization owners: Organizations have groups and different groups can be assigned different roles.
 
 Bitrise has the following roles:
 
@@ -26,9 +26,9 @@ Bitrise has the following roles:
 
 ## Owners
 
-There are two types of owners: application owners and organization owners.
+There are two types of owners: application owners and Organization owners.
 
-By default, the owner of an application is the account that created the application. This can be either an individual user or an organization. An owner of an organization has owner rights to ALL THE APPS owned by the organization.
+By default, the owner of an application is the account that created the application. This can be either an individual user or an Organization. An owner of an Organization has owner rights to ALL THE APPS owned by the Organization.
 
 Here's the role cheatsheet for owners:
 
@@ -36,11 +36,11 @@ Here's the role cheatsheet for owners:
 
 Owners have unlimited access to applications. Only owners can destroy apps or [transfer the ownership of apps](/team-management/changing-the-owner-of-an-app/), and only they have access to PAYMENT INFORMATION.
 
-If an organization owns the app, only the owners of the organization can transfer or destroy the app.
+If an Organization owns the app, only the owners of the Organization can transfer or destroy the app.
 
 ## Admins
 
-Admins can be assigned to applications, either in groups or individually. Organizations do not have admins: organization groups can be assigned to applications as admins.
+Admins can be assigned to applications, either in groups or individually. Organizations do not have admins: Organization groups can be assigned to applications as admins.
 
 Here's the role cheatsheet for admins:
 
@@ -50,7 +50,7 @@ So, for example, an admin cannot delete an application but can invite other memb
 
 ## Developers
 
-Developers can be assigned to applications, either in groups or individually. Organizations do not have developers: organization groups can be assigned to applications as developers.
+Developers can be assigned to applications, either in groups or individually. Organizations do not have developers: Organization groups can be assigned to applications as developers.
 
 Here's the role cheatsheet for developers:
 
@@ -62,7 +62,7 @@ They have no access to sensitive data such as payment information, access tokens
 
 ## Testers/QA
 
-Testers can be assigned to applications, either in groups or individually. Organizations do not have testers: organization groups can be assigned to applications as testers.
+Testers can be assigned to applications, either in groups or individually. Organizations do not have testers: Organization groups can be assigned to applications as testers.
 
 Here's the role cheatsheet for testers/QA:
 
@@ -77,7 +77,7 @@ They have no access to sensitive data such as payment information, access tokens
 There are two ways to assign roles to users:
 
 * Invite an individual user account to work on the app, and assign it a certain role: we'll cover that in this guide!
-* [Assign a group of the organization that owns the app a certain role](/team-management/organizations/managing-apps/#assigning-groups-to-apps).
+* [Assign a group of the Organization that owns the app a certain role](/team-management/organizations/managing-apps/#assigning-groups-to-apps).
 
 Users who have **owner** or **admin** rights to the applications can invite new team members and assign them roles. Let's see how to assign individual users to apps!
 
@@ -87,7 +87,7 @@ Users who have **owner** or **admin** rights to the applications can invite new 
 
    ![](/img/add-users.png)
 
-   Note that [the process is the same if the app is owned by an organization](/team-management/organizations/managing-apps/#adding-contributors-to-an-app) except you will see **Add contributors to this app** above the box where you enter the username or email.
+   Note that [the process is the same if the app is owned by an Organization](/team-management/organizations/managing-apps/#adding-contributors-to-an-app) except you will see **Add contributors to this app** above the box where you enter the username or email.
 4. Select the role you want to assign.
 5. Click **Grant Access**.
 

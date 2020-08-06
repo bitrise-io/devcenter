@@ -1,11 +1,11 @@
 ---
-title: Managing organization members
+title: Managing Organization members
 tag:
 - teams
 - orgs
 description: 'Organizations can have multiple Groups. Groups form the "backbones"
-  of organizations: they contain the members of the organizations, they can be assigned
-  to different applications owned by the organizations.'
+  of Organizations: they contain the members of the Organizations, they can be assigned
+  to different applications owned by the Organizations.'
 redirect_from: []
 menu:
   organizations:
