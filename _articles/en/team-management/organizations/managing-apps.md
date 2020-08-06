@@ -1,5 +1,5 @@
 ---
-title: Managing the apps of organizations
+title: Managing the apps of Organizations
 tag:
 - teams
 - orgs
@@ -16,7 +16,7 @@ Organizations can own several apps, with different (or the same, if that's what 
 
 ## Adding new apps to an Organization
 
-A new app can be added directly to an Organization. You can do this either from the organization's **Account settings** page or from the Dashboard of an account that is a member of the Organization.
+A new app can be added directly to an Organization. You can do this either from the Organization's **Account settings** page or from the Dashboard of an account that is a member of the Organization.
 
 1. Get to the **Create New App** page.
 

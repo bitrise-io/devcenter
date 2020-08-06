@@ -1,10 +1,10 @@
 ---
-title: Changing the owners of an organization
+title: Changing the owners of an Organization
 tag:
 - orgs
 - " teams"
-description: 'Organization owners can access and delete all apps linked to the organization,
-  can manage the billing details of an organization and can add or remove other owners. '
+description: 'Organization owners can access and delete all apps linked to the Organization,
+  can manage the billing details of an Organization and can add or remove other owners. '
 redirect_from: []
 menu:
   organizations:
