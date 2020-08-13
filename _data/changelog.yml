@@ -1,6 +1,12 @@
 ---
+- title: Verified Steps
+  modified: 2020-08-13 14:00:00 +0200
+  changelog: 'Verified Steps require a Step icon: this requirement has been added
+    to the Verified Steps guide and the Developing a new Step guide. '
+  type: update
+  url: "/contributors/verified-steps/"
 - title: How to enable the Bitrise Support user
-  modified: 2020-08-04 00:00:00 +0200
+  modified: 2020-08-04T00:00:00.000+02:00
   changelog: A video tutorial has been added to this doc on enabling the Bitrise Support
     user.
   type: video
