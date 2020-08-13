@@ -137,11 +137,11 @@ By default, the Step's description is collapsed on the Workflow Editor and the s
 
 ## Step categories
 
-There is another thing we’d like to know about your Step: what type of Step is it? As you can see on our Integrations page or on the Workflow Editor, Steps are sorted into different categories based on two factors: the platforms for which they are available and their functionality. 
+There is another thing we’d like to know about your Step: what type of Step is it? As you can see on our Integrations page or on the Workflow Editor, Steps are sorted into different categories based on two factors: the platforms for which they are available and their functionality.
 
 ### Platform types
 
-The available platform types are controlled by the project_type_tags attribute. If your Step is available for every platform or project type, do not specify project_type_tags. In any other case, select all platform types for which your Step is available. 
+The available platform types are controlled by the project_type_tags attribute. If your Step is available for every platform or project type, do not specify project_type_tags. In any other case, select all platform types for which your Step is available.
 
 The available values are:
 
@@ -156,9 +156,9 @@ The available values are:
 
 ### Function types
 
-Functional categories are controlled by the type_tags attribute in the step.yml. One Step should have only a single type_tag assigned to it. Use utility only if you believe none of the other types fit your Step. 
+Functional categories are controlled by the type_tags attribute in the step.yml. One Step should have only a single type_tag assigned to it. Use utility only if you believe none of the other types fit your Step.
 
-The available values are: 
+The available values are:
 
 * `build`
 * `code-sign`
@@ -391,12 +391,14 @@ Other dependencies need to be installed and checked while the step is running or
 
 ## Adding a Step icon
 
-You can add a beautiful Step icon to your Step if you want - but this is completely optional. If you want to, there are some requirements:
+You can add a Step icon to your Step: you will see it in the Workflow Editor and on our [Integrations](https://www.bitrise.io/integrations/) page. If you want to, there are some requirements:
 
 * Its background color should not be transparent.
 * Size: 256x256 px.
 * Margin: 60 px.
 * Format: SVG.
+
+{% include message_box.html type="important" title="Verified Steps" content="Please note that if you wish to submit a Step for verification so that it becomes a [Verified Step](/contributors/verified-steps/), you must add a Step icon."%}
 
 To submit your Step’s icon:
 
