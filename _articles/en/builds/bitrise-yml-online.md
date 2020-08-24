@@ -36,13 +36,15 @@ To store the file in your repository, you must commit it to your Bitrise app’s
 
 You don’t need to create your own bitrise.yml file in advance to use this solution though: during the process of updating your settings, you will have the chance to download the current file from the website, or copy its full content. Once you commit that file to the appropriate branch, you can change the setting. Let’s see how to do that:
 
-Always make sure that the bitrise.yml file in the repository is valid: a bitrise.yml with incorrect syntax will break your builds!
+{% include message_box.html type="important" title="The bitrise.yml file must be valid!" content="Always make sure that the bitrise.yml file in the repository is valid: a bitrise.yml with incorrect syntax will break your builds!"%}
 
 1. Open the app on Bitrise.
 2. Go to the **Workflows** tab.
 3. In the Workflow Editor, go to the **bitrise.yml** tab.
 4. Click **Store in app repository**.
-5. If you don’t have a bitrise.yml file the repository, you will be prompted to add one.  
+5. If you don’t have a bitrise.yml file the repository, you will be prompted to add one.
+
+   ![](/img/bitrise_workflow_editor-2.png)  
    You can download the current bitrise.yml file from the website, or copy its entire content to the clipboard. Either way, you have to commit the file to the repository to proceed.
 6. Click **Update setting**.
 7. When prompted to make sure your bitrise.yml file is valid, click **Continue**.
@@ -60,7 +62,7 @@ If, however, you changed your storage settings to keep the configuration file in
 3. In the Workflow Editor, go to the **bitrise.yml** tab.
 4. Click **Store on bitrise.io**.
 5. Choose which bitrise.yml file should be used on [bitrise.io](http://bitrise.io/ "http://bitrise.io") from now.  
-   \- You can copy the content of the bitrise.yml file stored in the app’s repository.   
+   \- You can copy the content of the bitrise.yml file stored in the app’s repository.  
    \- You can copy the last version of the bitrise.yml file that you used on [bitrise.io](http://bitrise.io/ "http://bitrise.io").
 6. Click **Update setting**.
 
