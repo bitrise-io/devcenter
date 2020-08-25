@@ -124,8 +124,23 @@
         <div class="search-bar">
           <div class="input-wrapper">
             <label class="search-icon material-icon"></label>
-            <input type="text" id="search-input" placeholder="Search" />
+            <input type="text" name="search-bar" id="search-input" placeholder="Search" onkeypress="handle(event)"/>
             <button class="search-clear material-icon" onclick="clearSearchField()"></button>
+
+            <script>
+              function handle(e){
+                  if(e.keyCode === 13){
+                      e.preventDefault(); 
+                      let query = e.target.value;
+
+                      if (query != "" && !location.href.includes("jp")) {
+                        location.href = window.location.origin + "/search/" + "?query=" + query;
+                      } else if (query != "" && location.href.includes("jp")) {
+                        location.href = window.location.origin + "/jp/search/" + "?query=" + query;
+                      }
+                  }
+              }
+          </script>
           </div>
         </div>
         <div class="lang-selector">

@@ -1,0 +1,65 @@
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@3"></script>
+
+<div id="query"></div>
+
+<script>
+  var hello = window.location.search.replace(/%20/g, " ")
+  var str = hello.split("=").pop()
+  document.getElementById('query').innerHTML = "<h3>Search results for: </h3>" + "<h4>" + str + "</h4>";
+</script>
+
+<div id="hits"></div>
+
+<script>
+  const urlParams = new URLSearchParams(window.location.search);
+  var query = urlParams.get('query');
+
+  const hitTemplate = function (hit) {
+    let url = hit.url;
+    let title = hit._highlightResult.title.value.replace(/<\/?[^>]+(>|$)/g, "");
+    let content = hit._highlightResult.html.value.replace(/<\/?[^>]+(>|$)/g, "").replace(/(&.*?&gt;)/g, "");
+    
+    return `
+    <div>
+    <h3><a href="${url}">${title}</a></h3>    
+    <p>${content}</p>
+    </div>
+    `;
+  }
+
+  window.addEventListener('load', function () {
+    const searchClient = algoliasearch('HI1538U2K4', 'f817c83dbdb923d880c215c9380d1107');
+
+    var langMatch = location.pathname.match(/^\/(\w{2})(?:\/|\z)/);
+    var lang = langMatch && langMatch[1];
+    var indexKey = 'devcenter' + (lang ? '-' + lang : '');
+
+    const search = instantsearch({
+      indexName: indexKey,
+      searchClient,
+      searchFunction(helper) {
+        const page = helper.getPage();
+
+        helper.setQuery(query)
+          .setPage(page)
+          .search();
+      }
+    });
+
+    let hits = instantsearch.widgets.hits({
+      container: '#hits',
+      templates: {
+        item: hitTemplate,
+      },
+    });
+
+    search.addWidget(hits);
+    search.start();
+  })
+</script>
+
+<div class="landing-banner">
+  <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+  <a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta"><button
+      class="landing-button">TRY BITRISE FOR FREE</button></a>
+</div>
