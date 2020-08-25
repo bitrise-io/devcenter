@@ -19,6 +19,6 @@ You can also submit a guide to be included in full in our documentation: if you 
 
 Check out the specific sections within our tutorials:
 
-* [Fastlane](/tutorials/fastlane/index/) - How to configure and use fastlane on Bitrise.
+* [Fastlane](/tutorials/fastlane/fastlane-index/) - How to configure and use fastlane on Bitrise.
 * [Xamarin](/tutorials/xamarin/index/) - We support Xamarin apps out of the box.
 * [Docker](/tutorials/docker/index/) - You can use your own docker image!
