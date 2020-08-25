@@ -1,14 +1,14 @@
 ---
 last_modified_at: 
 tag: []
-title: Tutorials
+title: Tips, tricks, tutorials
 redirect_from: []
 description: 'In the Tutorials section, we are offering more detailed, in-depth guides,
   often specific to certain platforms or tools. '
 menu:
   main:
     identifier: tutorials-main
-    weight: 21
+    weight: 25
 
 ---
 Welcome to the Tutorials section! Here we are offering more detailed, in-depth guides, often specific to certain platforms or tools.

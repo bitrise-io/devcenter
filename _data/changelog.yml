@@ -1,6 +1,62 @@
 ---
+- title: Managing an app's bitrise.yml configuration
+  modified: 2020-08-24 12:00:00 +0200
+  changelog: 'You can store the bitrise.yml configuration file either on bitrise.io
+    or in your own repository. If you store it in your Git repo, you have full control
+    over the maintenance and versioning of the file, and it will be used to run your
+    Bitrise builds. '
+  type: update
+  url: "/builds/bitrise-yml-online/"
+- title: Verified Steps
+  modified: 2020-08-13T14:00:00.000+02:00
+  changelog: 'Verified Steps require a Step icon: this requirement has been added
+    to the Verified Steps guide and the Developing a new Step guide. '
+  type: update
+  url: "/contributors/verified-steps/"
+- title: How to enable the Bitrise Support user
+  modified: 2020-08-04T00:00:00.000+02:00
+  changelog: A video tutorial has been added to this doc on enabling the Bitrise Support
+    user.
+  type: video
+  url: "/troubleshooting/enabling-bitrise-support-user/"
+- title: Exporting a universal APK from an AAB
+  modified: 2020-07-30T12:00:00.000+02:00
+  changelog: You can test an Android app on a test device even if the generated artifact
+    is an App Bundle (`.aab`) by exporting a universal APK from it.
+  type: new
+  url: "/deploy/android-deploy/exporting-a-universal-apk-from-an-aab/"
+- title: Monitoring your deployed apps with Trace
+  modified: 2020-07-16T16:00:00.000+02:00
+  changelog: Trace is a Bitrise add-on designed to monitor your applications from
+    the perspective of its end users. It comes with out-of-the-box performance monitoring,
+    giving you insight into how the app is performing across the entire install base.
+  type: new
+  url: "/trace/getting-started/"
+- title: Verified Steps
+  modified: 2020-07-15T00:00:00.000+02:00
+  changelog: Email address to our Partnership Management has been updated.
+  type: update
+  url: "/contributors/verified-steps/"
+- title: Deploying an iOS app to Bitrise.io
+  modified: 2020-07-14T14:00:00.000+02:00
+  changelog: Added clarification on how to access the toggle to enable the public
+    install page.
+  type: update
+  url: "/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/"
+- title: Build logs
+  modified: 2020-07-03T15:00:00.000+02:00
+  changelog: 'Added information on how to follow the build log live, as the build
+    is running. '
+  type: update
+  url: "/builds/build-logs/#following-a-build-log-live"
+- title: Installing and updating the Bitrise CLI
+  modified: 2020-06-26T00:00:00.000+02:00
+  changelog: A tutorial video on installing and updating the Bitrise CLI locally was
+    added to the article.
+  type: video
+  url: "/bitrise-cli/installation/"
 - title: Basics of bitrise.yml
-  modified: 2020-06-22 13:00:00 +0200
+  modified: 2020-06-22T13:00:00.000+02:00
   changelog: 'New tutorial video about configuring your builds using the bitrise.yml
     file. '
   type: video
@@ -18,7 +74,7 @@
     Reports add-on by default.
   type: update
   url: "/getting-started/getting-started-with-flutter-apps/"
-- title: 'Have you exceeded the file count limit of the provisioning profiles? '
+- title: iOS code signing - troubleshooting
   modified: 2020-06-15T00:00:00.000+02:00
   changelog: The maximum number of provisioning profiles and .p12 certificates has
     been updated to 30.

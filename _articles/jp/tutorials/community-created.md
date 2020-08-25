@@ -4,7 +4,7 @@ last_modified_at:
 title: Community Created Tutorials
 menu:
   tutorials-main:
-    weight: 8
+    weight: 11
 
 ---
 {% include not_translated_yet.html %}

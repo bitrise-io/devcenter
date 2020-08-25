@@ -9,7 +9,7 @@ description: Organizations are used to seamlessly manage bigger teams and member
   company's apps and delegate them through creating different groups.
 redirect_from: []
 menu:
-  faq-main:
+  faq:
     weight: 22
 
 ---

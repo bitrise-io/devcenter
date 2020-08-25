@@ -6,12 +6,16 @@ tag:
 description: 'The Bitrise CLI allows you to run your builds offline, on your own machine.
   Install it with curl or homebrew, and update it using itself. '
 redirect_from: []
+summary: Learn how to install and update the Bitrise CLI on your own machine either
+  using Homebrew or curl.
 menu:
   bitrise-cli-main:
     weight: 2
 
 ---
 Installing the Bitrise CLI is super simple. It is distributed as a single binary for macOS and Linux which you can acquire in several ways. All you need to do is download it and make it executable. Let's see how!
+
+{% include video.html embed_url="https://www.youtube.com/embed/5IrhIRoVVcw" %}
 
 ## Installing the Bitrise CLI with curl
 
@@ -27,7 +31,7 @@ Installing the Bitrise CLI is super simple. It is distributed as a single binary
    ``` bash
    chmod +x /usr/local/bin/bitrise
    ```
-3. Run `bitrise setup`. 
+3. Run `bitrise setup`.
 
    This will verify if everything that is required for Bitrise to run is installed and available. If you skip this, the CLI will perform the setup anyway the first time you call `bitrise run`.
 

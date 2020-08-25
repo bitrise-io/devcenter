@@ -8,7 +8,7 @@ redirect_from: []
 description: If you are in a detached head state, you cannot push changes to a branch.
   Learn how to get back to a branch and how to increment version numbers for deployment.
 menu:
-  faq-main:
+  faq:
     weight: 20
 
 ---

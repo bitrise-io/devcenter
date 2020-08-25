@@ -6,7 +6,7 @@ redirect_from: "/jp/tutorials/docker/index/"
 menu:
   tutorials-main:
     identifier: docker
-    weight: 1
+    weight: 3
 
 ---
 [Docker](www.docker.com/)は、カスタム環境を作成、使用、および共有するだけでなく、一時的な環境でビルドを実行するための軽量な方法を提供する理想的なツールです。（ビルド後に環境が削除され、次のビルドの開始時に新しい環境が作成される）

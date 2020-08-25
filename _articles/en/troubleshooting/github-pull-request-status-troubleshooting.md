@@ -12,7 +12,7 @@ description: 'If your builds do not send status reports to your git hosting prov
   out what causes the problem. '
 menu:
   troubleshooting-main:
-    weight: 13
+    weight: 14
 
 ---
 If your builds do not send status reports to your git hosting provider - GitHub, GitLab or Bitbucket -, you will need to do a little investigating to find out what causes the problem. Let's take a look at the potential issues!

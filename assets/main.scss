@@ -526,6 +526,17 @@ nav#side-menu {
 			.menu-list-opener-11 {
 
 				&:before {
+					content: url(/assets/logos/icons-docs/trace-add-on.svg);
+				}
+
+				&.open:before {
+					content: url(/assets/logos/icons-docs/trace-add-on-focus.svg);
+				}
+			}
+
+			.menu-list-opener-12 {
+
+				&:before {
 					content: url(/assets/logos/icons-docs/window.svg);
 				}
 
@@ -534,7 +545,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-12 {
+			.menu-list-opener-13 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/info_main.svg);
@@ -545,29 +556,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-13 {
-
-				&:before {
-					content: url(/assets/logos/icons-docs/lightbulb_main.svg);
-				}
-
-				&.open:before {
-					content: url(/assets/logos/icons-docs/lightbulb_main-focus.svg);
-				}
-			}
-
 			.menu-list-opener-14 {
-
-				&:before {
-					content: url(/assets/logos/icons-docs/support.svg);
-				}
-
-				&.open:before {
-					content: url(/assets/logos/icons-docs/support-focus.svg);
-				}
-			}
-
-			.menu-list-opener-15 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/bug.svg);
@@ -578,7 +567,7 @@ nav#side-menu {
 				}
 			}
 
-			.menu-list-opener-16 {
+			.menu-list-opener-15 {
 
 				&:before {
 					content: url(/assets/logos/icons-docs/code.svg);

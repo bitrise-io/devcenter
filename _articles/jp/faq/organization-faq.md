@@ -3,7 +3,7 @@ changelog:
 last_modified_at: 
 title: 組織についてのFAQ
 menu:
-  faq-main:
+  faq:
     weight: 21
 
 ---

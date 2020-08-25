@@ -4,7 +4,7 @@ last_modified_at:
 title: Downloading or replacing project resources
 menu:
   tutorials-main:
-    weight: 12
+    weight: 15
 
 ---
 {% include not_translated_yet.html %}

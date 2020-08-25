@@ -1,7 +1,7 @@
 ---
 title: Exposing Env Vars and using them in another Step
 menu:
-  tips-and-tricks-main:
+  tips-and-tricks:
     weight: 12
 
 ---

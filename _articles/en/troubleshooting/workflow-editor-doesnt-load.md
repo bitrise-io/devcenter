@@ -8,7 +8,7 @@ description: If Workflow Editor doesn't load for you, chances are your bitrise.y
 redirect_from: []
 menu:
   troubleshooting-main:
-    weight: 6
+    weight: 7
 
 ---
 If Workflow Editor doesn't load for you, chances are your `bitrise.yml` or a workflow which you have configured crashes the Workflow Editor's UI.

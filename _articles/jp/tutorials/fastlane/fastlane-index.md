@@ -6,7 +6,7 @@ redirect_from: []
 menu:
   tutorials-main:
     identifier: fastlane
-    weight: 2
+    weight: 5
 
 ---
 {% include not_translated_yet.html %}

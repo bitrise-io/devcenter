@@ -10,7 +10,7 @@ description: 'Find out the difference between Gradle Runner and Android Build St
   Learn about installing additional Android SDK packages, as well as about running
   an Android build locally with Docker. '
 menu:
-  tips-and-tricks-main:
+  tips-and-tricks:
     weight: 2
 
 ---

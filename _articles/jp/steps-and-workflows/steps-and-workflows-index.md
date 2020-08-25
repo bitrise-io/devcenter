@@ -8,7 +8,7 @@ description: ''
 menu:
   main:
     identifier: steps-workflows-main
-    weight: 14
+    weight: 12
 
 ---
 ステップとワークフローは Bitrise の仕組みの核心です。Bitrise のビルドはワークフローで定義された一連のステップです。仮想マシン（またはローカル）で Bitrise CLI によって実行されます。

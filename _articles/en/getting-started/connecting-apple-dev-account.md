@@ -26,7 +26,7 @@ You can go to your account settings right now to set it up: [Apple Developer Co
 Connect your Apple Developer account to Bitrise if:
 
 * You want to use one of our **iOS Auto Provision** Step to [manage provisioning profiles for an iOS application](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/). The **iOS Auto Provision with Apple ID** Step requires you to connect your Apple Developer account to Bitrise, while the **iOS Auto Provision with App Store Connect API** Step does not need any account connection or 2FA.
-* You want to upload your app to the App Store, using either our **_fastlane_** or **Deploy to iTunes Connect** Steps.
+* You want to upload your app to the App Store, using either our **_fastlane_** or the **Deploy to iTunes Connect** Step.
 * You want to upload metadata, screenshots, or other artifacts using our **_fastlane_** Step.
 
 ## Which iOS Auto Provision Step to use
@@ -34,7 +34,7 @@ Connect your Apple Developer account to Bitrise if:
 Bitrise has two iOS Auto Provision Steps available in the Step Library:
 
 * The **iOS Auto Provision with App Store Connect API** Step uses the official [App Store Connect API (JSON Web Token)](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests) solution which means that you don’t have to connect your Apple Developer account to Bitrise and 2FA with Apple any more. We keep a close eye on any new App Store Connect API features and update our Step accordingly.
-* The **iOS Auto Provision with Apple ID** Step is our deprecated Step which uses session-based authentication, just like the **_fastlane_** and the **Deploy** **to iTunes Connect** Steps. The session-based authentication allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion. After 30 days, however, the authentication expires and you’ll have to log in with your Apple ID and password. Please note that we do not update the **iOS Auto Provision with Apple ID** Step any more. 
+* The **iOS Auto Provision with Apple ID** Step is our deprecated Step which uses session-based authentication, just like the **_fastlane_** and the **Deploy** **to iTunes Connect** Steps. The session-based authentication allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion. After 30 days, however, the authentication expires and you’ll have to log in with your Apple ID and password. Please note that we do not update the **iOS Auto Provision with Apple ID** Step any more.
 
 ## Connecting your account
 

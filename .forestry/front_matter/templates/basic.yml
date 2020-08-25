@@ -94,6 +94,7 @@ pages:
 - _articles/en/contributors/testing-and-versioning-your-steps.md
 - _articles/en/contributors/verified-steps.md
 - _articles/en/deploy/android-deploy/deploying-android-apps.md
+- _articles/en/deploy/android-deploy/exporting-a-universal-apk-from-an-aab.md
 - _articles/en/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.md
 - _articles/en/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
 - _articles/en/deploy/deploy-apps-to-applivery-from-bitrise.md
@@ -280,6 +281,7 @@ pages:
 - _articles/jp/builds/remote-access.md
 - _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
+- _articles/jp/deploy/android-deploy/exporting-a-universal-apk-from-an-aab.md
 - _articles/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles.md
 - _articles/jp/deploy/deploy-apps-to-applivery-from-bitrise.md
 - _articles/jp/deploy/ship.md

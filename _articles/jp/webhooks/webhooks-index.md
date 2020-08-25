@@ -8,7 +8,7 @@ description: ''
 menu:
   main:
     identifier: webhooks-main
-    weight: 12
+    weight: 10
 
 ---
 Webhook はリポジトリへのコードプッシュのようなイベントにトリガーされるユーザー定義のコールバックです。Bitrise は Webhook を広く利用しています。

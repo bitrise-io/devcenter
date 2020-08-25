@@ -1,10 +1,13 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 tag: []
 title: Screen recording your UI tests with Appium
 redirect_from: []
 description: ''
+menu:
+  tips-and-tricks:
+    weight: 17
 
 ---
 {% include not_translated_yet.html %}

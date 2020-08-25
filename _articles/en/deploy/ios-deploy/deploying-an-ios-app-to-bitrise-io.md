@@ -51,7 +51,7 @@ Make sure that you have:
 6. When the build is finished, go to the app's **Builds** page and click the latest build.
 7. Click the **APPS & ARTIFACTS** tab to find your .ipa file.
 
-   You can also find the public install URL here.
+   You can also find the public install URL here. Click the eye icon next to the .ipa file to reveal the details and to find the toggle for the public install page. Make sure that's toggled on so you're able to send the link to non-Bitrise users. 
 
    ![](/img/public-install-page.png)
 

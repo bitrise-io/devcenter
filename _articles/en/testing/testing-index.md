@@ -15,7 +15,7 @@ description: 'Testing your app is obviously a major part of the continuous integ
 menu:
   main:
     identifier: testing-main
-    weight: 15
+    weight: 17
 
 ---
 Testing your app is obviously a major part of the continuous integration process. Bitrise has a number of dedicated Steps to help you with running your tests, and you can use custom Script Steps if you do not find what you need in our Step Library.

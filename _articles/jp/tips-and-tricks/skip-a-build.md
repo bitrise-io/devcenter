@@ -3,7 +3,7 @@ changelog:
 last_modified_at: 
 title: Skip a Build (skip ci)
 menu:
-  tips-and-tricks-main:
+  tips-and-tricks:
     weight: 5
 
 ---

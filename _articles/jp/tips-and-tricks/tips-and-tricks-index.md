@@ -4,9 +4,9 @@ last_modified_at:
 title: Tips and tricks
 redirect_from: []
 menu:
-  main:
-    identifier: tips-and-tricks-main
-    weight: 28
+  tutorials-main:
+    identifier: tips-and-tricks
+    weight: 1
 
 ---
 {% include not_translated_yet.html %}

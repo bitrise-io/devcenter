@@ -93,6 +93,13 @@ sections:
   create: all
   match: "**/*"
 - type: directory
+  path: _articles/en/monitoring
+  label: Monitoring
+  create: all
+  match: "**/*"
+  templates:
+  - basic
+- type: directory
   path: _articles/en/tutorials
   label: Tutorials
   create: all

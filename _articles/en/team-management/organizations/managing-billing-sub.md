@@ -1,13 +1,13 @@
 ---
 last_modified_at: '2020-05-03T22:00:00.000+00:00'
-title: Managing billing and subscription for organizations
+title: Managing billing and subscription for Organizations
 tag:
 - billing
 - teams
 - orgs
-description: It's very simple to set up a subscription plan for your organization
-  even if you skipped that step when creating the organization. You can also modify
-  your plan and your billing information at any time if you are the owner of the organization.
+description: It's very simple to set up a subscription plan for your Organization
+  even if you skipped that step when creating the Organization. You can also modify
+  your plan and your billing information at any time if you are the owner of the Organization.
 redirect_from: []
 summary: ''
 menu:
@@ -60,4 +60,4 @@ Setting up a subscription plan for an Organization requires billing information,
 
    For more information, check our [pricing page](https://www.bitrise.io/pricing).
 
-{% include banner.html banner_text="Manage your organization's billing info" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your profile page" %}
+{% include banner.html banner_text="Manage your Organization's billing info" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your profile page" %}

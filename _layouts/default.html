@@ -28,8 +28,38 @@
       FRESHPAINT_CUSTOM_LIB_URL:"//perfalytics.com/static/js/freshpaint.js";d=f.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.freshpaint||[]);
       freshpaint.init("fb78fc32-b738-475e-b6e5-26f48c2ec5b1");
       freshpaint.page();
-      </script>
-      <!-- End Fresh Paint -->
+
+      (function () {
+          var cookies = document.cookie.split('; ').reduce(function (result, chunk) {
+            var parts = chunk.split('=')
+            result[parts[0]] = parts[1]
+            return result
+          }, {})
+
+          if (cookies['expiring_api_token'] && cookies['CSRF-TOKEN']) {
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+              if (request.readyState === 4 && request.status === 200) {
+                try {
+                  var resp = JSON.parse(request.responseText)
+
+                  if (resp.data.slug) {
+                    freshpaint.identify(resp.data.slug)
+                  }
+                } catch (ex) {
+                  console.log('Failed to fetch user slug')
+                }
+              }
+            }
+            var URL = 'https://api.bitrise.io/v0.1/me'
+            request.open('GET', URL, true);
+            request.setRequestHeader('Authorization', 'token ' + cookies['expiring_api_token'])
+            request.setRequestHeader('X-CSRF-TOKEN', cookies['CSRF-TOKEN'])
+            request.send(null);
+          }
+        })()
+    </script>
+    <!-- End Fresh Paint -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53276411-1"></script>
     <script>

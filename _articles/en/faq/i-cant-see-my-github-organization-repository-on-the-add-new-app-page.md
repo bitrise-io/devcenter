@@ -8,7 +8,7 @@ description: You probably did not grant access to bitrise.io when you authentica
   with GitHub to access the organization (or a repository owned by the organization).
 redirect_from: []
 menu:
-  faq-main:
+  faq:
     weight: 10
 
 ---

@@ -8,12 +8,16 @@ description: If you need quick tech support from us, our onsite chat support can
   into your project and fix your technical issues in the most efficient way! All you
   have to do is enable Bitrise Support user so that we have access to your app.
 redirect_from: []
+summary: ''
 menu:
   troubleshooting-main:
-    weight: 5
+    weight: 6
 
 ---
 If you need quick tech support from us, our onsite chat support can look into your project and fix your technical issues in the most efficient way! All you have to do is enable **Bitrise Support User** so that we have access to your project, specifically your workflow, build log, app settings or your yml.
+
+
+{% include video.html embed_url="https://www.youtube.com/embed/VcgVDZekcHg" %}
 
 With the toggle function, you can easily turn the **Bitrise Support User** on and off. No need to add us as a user to your app's Team any more.
 
@@ -32,7 +36,7 @@ Let's see how to set it up!
 
 The Bitrise Support User, when enabled, has Admin access to your app. That means it can do anything that a regular user with Admin access rights on an app can do: it has access to your builds and can edit your Workflows, modify the inputs of the **Team**, **Code** and the **Settings** tab.
 
-Let's see in detail what the Support User can do! The list is not exhaustive: these are the most important capabilities of the Bitrise Support User. 
+Let's see in detail what the Support User can do! The list is not exhaustive: these are the most important capabilities of the Bitrise Support User.
 
 It can:
 

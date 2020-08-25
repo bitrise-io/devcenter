@@ -1,5 +1,5 @@
 ---
-title: Managing the invoices of your organizations
+title: Managing the invoices of your Organizations
 tag:
 - teams
 - orgs
@@ -13,9 +13,9 @@ menu:
     weight: 5
 
 ---
-Set up an email address so we can send you your invoices - no need to rummage around the site looking for them, we'll deliver them straight to your inbox. However, if you wish to download it manually from the site, you can do that, too, of course! You can find the past invoices on the organization's **Billing** page - you can read more [here](#downloading-organization-invoices)!
+Set up an email address so we can send you your invoices - no need to rummage around the site looking for them, we'll deliver them straight to your inbox. However, if you wish to download it manually from the site, you can do that, too, of course! You can find the past invoices on the Organization's **Billing** page - you can read more [here](#downloading-organization-invoices)!
 
-### Setting up an email address for organization invoices
+### Setting up an email address for Organization invoices
 
 By default, an Organization's invoices will be sent to the email provided when the Organization was created. However, the owner(s) of the Organization can change it at any time.
 
@@ -33,14 +33,14 @@ By default, an Organization's invoices will be sent to the email provided when t
 
 And that's it! From now on, your invoices will be sent to the new email address.
 
-### Downloading organization invoices
+### Downloading Organization invoices
 
 1. Sign in with an account that is an owner of an Organization and open its profile page.
 2. Go to your Organization's profile page: click **Switch Profile** on the top left corner and select the Organization you need.
 
    ![](/img/switch-profile-2.jpg)
 
-   Be aware that your own billing info and your organization's billing info are SEPARATE. You CANNOT change your organization's billing info and subscription plans in the settings of your own personal profile!
+   Be aware that your own billing info and your Organization's billing info are SEPARATE. You CANNOT change your Organization's billing info and subscription plans in the settings of your own personal profile!
 3. On the left, select **Billing** from the menu options.
 
    ![](/img/billing-selected.jpg)
@@ -49,4 +49,4 @@ And that's it! From now on, your invoices will be sent to the new email address.
 
    ![Screenshot](/img/team-management/organization/past-invoices.png)
    
-{% include banner.html banner_text="Manage your organization's invoices" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your profile page" %}
+{% include banner.html banner_text="Manage your Organization's invoices" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your profile page" %}

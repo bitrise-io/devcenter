@@ -11,7 +11,7 @@ description: If your build fails on Bitrise, we often recommend to try and run i
 redirect_from: []
 menu:
   troubleshooting-main:
-    weight: 3
+    weight: 4
 
 ---
 If your build fails on Bitrise, we often recommend to try and run it locally, on your machine. To do this, do the following:

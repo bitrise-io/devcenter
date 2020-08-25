@@ -1,6 +1,6 @@
 ---
 last_modified_at: '2020-03-25'
-title: SAML SSO in organizations
+title: SAML SSO in Organizations
 date: '2019-03-08T09:49:06.000+00:00'
 redirect_from: []
 tag:
@@ -9,8 +9,8 @@ tag:
 - security
 - SSO
 description: Organization members can log into or sign up to Bitrise using their own
-  SAML SSO provider's system. With SAML SSO, organizations will be able to apply the
-  security guidelines of their SAML SSO provider when accessing their Bitrise organization.
+  SAML SSO provider's system. With SAML SSO, Organizations will be able to apply the
+  security guidelines of their SAML SSO provider when accessing their Bitrise Organization.
 summary: ''
 changelog: ''
 menu:
@@ -24,7 +24,7 @@ Organization members can log into or sign up to Bitrise using their own SAML SSO
 
 {% include message_box.html type="important" title="SAML SSO with Org Elite subscription" content="
 
-Please note that SAML SSO is only available for Organizations with [Org Elite subscription](https://www.bitrise.io/pricing/teams). If you try to set up SAML SSO to an Organization that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), **Single Sign On** will appear on the left menu bar in your **Account Settings** but you won't be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your organization.
+Please note that SAML SSO is only available for Organizations with [Org Elite subscription](https://www.bitrise.io/pricing/teams). If you try to set up SAML SSO to an Organization that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), **Single Sign On** will appear on the left menu bar in your **Account Settings** but you won't be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Organization.
 
 Since the SAML SSO feature is tied to the Org Elite plan, if you decide to downgrade from it, you will lose this feature. All Organization members will receive an email about the downgrade and you'll have two weeks to re-upgrade to the Org Elite plan if you wish to use SAML SSO in your Org.
 
@@ -57,11 +57,11 @@ In this tutorial, we describe how Organization owners can set up their SAML SSO 
 
 ![](/img/enable-single-sign-on.jpg)
 
-If you've completed the steps, you and org members should get a verification email about SAML SSO connected to the respective organization.
+If you've completed the steps, you and Org members should get a verification email about SAML SSO connected to the respective Organization.
 
 ## Enabling SAML SSO
 
-Now that the Organization owner has set up SAML SSO, everyone in the Organization has to enable SAML SSO before logging into their org via SAML SSO.
+Now that the Organization owner has set up SAML SSO, everyone in the Organization has to enable SAML SSO before logging into their Org via SAML SSO.
 
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
 2. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
@@ -76,7 +76,7 @@ Now that the Organization owner has set up SAML SSO, everyone in the Organizatio
    If you provide a different Bitrise email address on your SAML SSO provider's site which is not related to that particular Organization, you will get the below error message. Log in with the right email address of the Organization.
 
    ![](/img/no-connected-sso-for-this-email-address.jpg)
-4. You're directed to the **Allow "organization name" to sign you in** page.
+4. You're directed to the **Allow "Organization name" to sign you in** page.
 
 * Click **Authorize** if you trust the Organization to control your Bitrise account-sign in process. Note that once you click **Authorize**, you'll only be able authenticate this account via SAML SSO.
 * Click **Don't allow** if the invitation email is from an untrusted source.![](/img/enable-saml.jpg)
@@ -85,7 +85,7 @@ If all went well, you should be landing on our Bitrise Dashboard.
 
 ## Checking SAML SSO statuses on Bitrise
 
-Now that the Organization owner has set up SAML SSO for the Organization and all org members (including the owner) have enabled their SAML SSO, everyone in the org can check their SAML SSO statuses.
+Now that the Organization owner has set up SAML SSO for the Organization and all Org members (including the owner) have enabled their SAML SSO, everyone in the Org can check their SAML SSO statuses.
 
 The **Single Sign-On** tab is only available for the Organization owner. Let's see what else an Organization owner can see on the tab!
 
@@ -96,7 +96,7 @@ The **Single Sign-On** tab is only available for the Organization owner. Let's s
 
    ![](/img/single-sing-on-url.jpg)
 
-   **Disable SSO** disables SAML SSO for all Organization members. Once disabled, org members will be able to sign in with the regular sign-in procedure. Please note that an individual org member can only be disabled at your own SAML SSO provider's site!
+   **Disable SSO** disables SAML SSO for all Organization members. Once disabled, Org members will be able to sign in with the regular sign-in procedure. Please note that an individual Org member can only be disabled at your own SAML SSO provider's site!
 
    **Review Users** takes you from the **Single Sign On** tab to the **People** tab where you can check the Organization member's SAML SSO status.
 
@@ -109,7 +109,7 @@ Organization members cannot access the **Single Sign-On** tab, but they can chec
 
 ## About SAML SSO enforcement
 
-Enforcing SAML SSO on your Organization provides an extra layer of security: you can enforce your own security guidelines to your Bitrise Organization (for example, password format requirements, two-factor authentication). This will make SAML SSO the only way for logging in/singing up to the Organization. If you invite more org members to a SAML-enforced Organization, they'll have to enable their SAML SSO connection first to join the Organization.
+Enforcing SAML SSO on your Organization provides an extra layer of security: you can enforce your own security guidelines to your Bitrise Organization (for example, password format requirements, two-factor authentication). This will make SAML SSO the only way for logging in/singing up to the Organization. If you invite more Org members to a SAML-enforced Organization, they'll have to enable their SAML SSO connection first to join the Organization.
 
 ### Enforcing SAML SSO on an Organization
 
@@ -173,7 +173,7 @@ Organization owners can disable an established SAML SSO for the Organization wit
 1. Go to the **Single Sign On** tab of your Organization.
 2. Click **Disable SSO**.
 
-   A confirmation pop-up appears where you can confirm/cancel your action. Please note that by clicking the **Disable SSO** button, you will disable SAML SSO for all Organization members. Once it's done, org members will be able to log in through their normal Bitrise credentials.
+   A confirmation pop-up appears where you can confirm/cancel your action. Please note that by clicking the **Disable SSO** button, you will disable SAML SSO for all Organization members. Once it's done, Org members will be able to log in through their normal Bitrise credentials.
 
 ![](/img/disable-sso.png)
 
@@ -186,8 +186,8 @@ You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bi
 Please note if you click the **x** next to an Organization member's name, you remove that person from the Organization but their SAML SSO is yet to be disabled!
 
 1. Go to your SAML SSO provider's site.
-2. Disable the Organization member there. Please note that if you fail to do this, the org member will able to re-authenticate again to Bitrise using the IDP connection.
+2. Disable the Organization member there. Please note that if you fail to do this, the Org member will able to re-authenticate again to Bitrise using the IDP connection.
 
 ![](/img/disbale-sso-enabled-status.png)
 
-{% include banner.html banner_text="Let's configure SAML SSO to your organization!" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your organization" %}
+{% include banner.html banner_text="Let's configure SAML SSO to your Organization!" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your Organization" %}
