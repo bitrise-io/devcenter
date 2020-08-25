@@ -24,7 +24,6 @@ html {
 	}
 }
 
-
 body {
 	display: flex;
 	flex-direction: column;
@@ -1154,59 +1153,6 @@ h4 {
 	transform: translateY(-0.3rem);
 	}
 
-	.ais-Hits {
-
-		h3 {
-			margin-top: 1.5rem;
-			margin-bottom: 1rem;
-		}
-
-		p {
-			padding-bottom: 1rem;
-		}
-	}
-
-	#query h4 {
-		background-color: #ececec;
-		display: inline-block;
-		padding: 0.5rem;
-		margin-left: 1rem;
-		border-radius: 8px;
-	}
-
-	#query h3 {
-		display: inline-block;
-	}
-
-	.ais-Hits-list {
-		list-style: none;
-		padding-inline-start: 0;
-	
-		  .ais-Hits-item {
-			  margin: 0.2rem;
-			  position: relative;
-			  border-bottom: solid 1px #dbc3ed;
-			  border-left: none;
-			  padding-bottom: 1rem;
-			  padding-left: 0;
-			
-			  &:before {
-				  content: none;
-			  }
-
-			  h3 {
-				  font-size: 2.5rem;
-			  }
-		  }
-	
-		  li p {
-			  padding-top: 0.25rem;
-			  margin-top: 0;
-			  margin-bottom: 0;
-			  border: 0px;
-		  }
-	}
-
 	ul li::before {
 	  content: normal;
 
@@ -1325,7 +1271,7 @@ nav#my-toc {
 	}
 
 	.side-toc:before {
-		content: "On this page";
+		content: "Contents";
 		display: block;
 		padding-bottom: 0.825rem;
 		padding-left: 2rem;
