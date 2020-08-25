@@ -16,7 +16,7 @@ menu:
     weight: 23
 
 ---
-The `bitrise.yml` file is the heart of your Bitrise setup: it stores your build configuration, right down to Step input values, the trigger map, and stack information. When you edit your Workflows in the graphical UI of our Workflow Editor, you actually modify the `bitrise.yml` file.
+The `bitrise.yml` file is the heart of your Bitrise setup: it stores your build configuration, right down to Step input values, the trigger map, and stack information. When you edit your Workflows on the graphical UI of our Workflow Editor, you actually modify the `bitrise.yml` file.
 
 There are two ways to manage the `bitrise.yml` file of your app:
 
