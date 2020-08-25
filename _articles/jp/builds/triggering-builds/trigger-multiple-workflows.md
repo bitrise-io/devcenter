@@ -30,7 +30,7 @@ menu:
 2. アプリの`Workflow Editor`の`Secrets`タブでシークレット環境変数を作成し、トークンをバリューとして追加します。
 
    ![Secret env](/img/getting-started/triggering-builds/secret_token.png)  秘密にしたいキーを自由に使用します。 `$ACCESS_TOKEN`のような単純なものをお勧めします。
-3. `Bitrise Start Build`ステップを`Trigger`ワークフローに追加します。 **重要**：`Bitrise Start Build`ステップは、開始するすべて_ルドに環境変数を設定します_`$SOURCE_BITRISE_BUILD_NUMBER`。この手順で開始したアプリのすべてのビルドは、異なるワークフローで実行しても同じビルド番号になります。
+3. `Bitrise Start Build`ステップを`Trigger`ワークフローに追加します。 **重要**：`Bitrise Start Build`ステップは、開始するすべてのビルドに環境変数を設定します_`$SOURCE_BITRISE_BUILD_NUMBER`。この手順で開始したアプリのすべてのビルドは、異なるワークフローで実行しても同じビルド番号になります。
 4. ステップの`Bitrise Access Token`入力に個人的なaccess tokenを保存しているシークレットenvを追加します：`Insert variable`をクリックして、作成したキーを選択してください。
 
    ![Secret env](/img/getting-started/triggering-builds/access-token-input.png)
