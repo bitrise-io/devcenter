@@ -36,6 +36,17 @@ When you store the `bitrise.yml` configuration file in your repository, the buil
 * You have full control over versioning your configuration file.
 * Every time you make a change to your Workflows or your trigger map, you must commit the changes to the file in the repository.
 
+{% include message_box.html type="important" title="Service credential user" content="In order to be able to use the feature, you must set the Service credential user correctly: it must be a user who has at least `read` access rights to the repository. 
+
+The feature is definitely supported for the following hosting services:
+
+* GitHub
+* BitBucket
+* GitLab
+* Self-hosted GitLab (as long as the repository is NOT on a private network). "%}
+
+{% include message_box.html type="warning" title="Repository access" content="Be aware that if your app uses a repository where the Service credential user integration is not supported - for example, the repository is only accessible under a private IP subnet -, the feature won't work as the website can't grab the `bitrise.yml` due to IP addressing limitations. "%}
+
 To store the file in your repository, you must commit it to the root of your Bitrise app’s default branch. You can check the app’s default branch on [bitrise.io](http://bitrise.io/ "http://bitrise.io"): open the app, and go to the **Settings** tab. Scroll down to the **DEFAULT BRANCH** option to check which branch should contain the `bitrise.yml` file.
 
 You don’t need to create your own `bitrise.yml` file in advance to use this solution though: during the process of updating your settings, you will have the chance to download the current file from the website, or copy its full content. Once you commit that file to the appropriate branch, you can change the setting. Let’s see how to do that:
@@ -49,7 +60,7 @@ You don’t need to create your own `bitrise.yml` file in advance to use this so
 5. If you don’t have a `bitrise.yml` file the repository, you will be prompted to add one.
 
    ![](/img/bitrise_workflow_editor-2.png)  
-   You can download the current `bitrise.yml` file from the website, or copy its entire content to the clipboard. Either way, you have to commit the file to the repository to proceed.
+   You can download the current `bitrise.yml` file from the website, or copy its entire content to the clipboard. Either way, you have to commit the file to the root directory of the repository to proceed.
 6. Click **Update setting**.
 7. When prompted to make sure your `bitrise.yml` file is valid, click **Continue**.
 
