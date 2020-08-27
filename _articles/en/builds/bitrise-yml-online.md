@@ -62,7 +62,7 @@ You don’t need to create your own `bitrise.yml` file in advance to use this so
 5. If you don’t have a `bitrise.yml` file the repository, you will be prompted to add one.
 
    ![](/img/bitrise_workflow_editor-2.png)  
-   You can download the current `bitrise.yml` file from the website, or copy its entire content to the clipboard. Either way, you have to commit the file to the root directory of the repository to proceed.
+   You can download the current `bitrise.yml` file from the website, or copy its entire content to the clipboard. Either way, you have to commit the file to the root directory of the repository to proceed. Remember: you must commit the file to the branch that is set as the default branch on bitrise.io! You can check the default branch under the **Settings** tab on our website. 
 6. Click **Update setting**.
 7. When prompted to make sure your `bitrise.yml` file is valid, click **Continue**.
 
