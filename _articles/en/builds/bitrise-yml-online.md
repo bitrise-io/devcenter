@@ -36,16 +36,18 @@ When you store the `bitrise.yml` configuration file in your repository, the buil
 * You have full control over versioning your configuration file.
 * Every time you make a change to your Workflows or your trigger map, you must commit the changes to the file in the repository.
 
-{% include message_box.html type="important" title="Service credential user" content="In order to be able to use the feature, you must set the Service credential user correctly: it must be a user who has at least `read` access rights to the repository. 
+{% include message_box.html type="important" title="Service credential user" content="In order to be able to use the feature, you must set the Service credential user correctly: it must be a user who has at least `read` access to the repository at your app's hosting service.
+
+To check the Service credential user, go to the **Team** tab of your app, and find the **Service credential User** option. If you need to change it, keep in mind that for security reasons, you can only select your own account as service credential user. If you don't have `read` access to your app's repository at your hosting service, you can't set the appropriate Service credential user. "%}
+
+{% include message_box.html type="warning" title="Repository access" content="Be aware that if your app uses a repository where the Service credential user integration is not supported - for example, the repository is only accessible under a private IP subnet -, the feature won't work as the website can't grab the `bitrise.yml` due to IP addressing limitations. 
 
 The feature is definitely supported for the following hosting services:
 
 * GitHub
 * BitBucket
 * GitLab
-* Self-hosted GitLab (as long as the repository is NOT on a private network). "%}
-
-{% include message_box.html type="warning" title="Repository access" content="Be aware that if your app uses a repository where the Service credential user integration is not supported - for example, the repository is only accessible under a private IP subnet -, the feature won't work as the website can't grab the `bitrise.yml` due to IP addressing limitations. "%}
+* Self-hosted GitLab (as long as the repository is not on a private network)."%}
 
 To store the file in your repository, you must commit it to the root of your Bitrise app’s default branch. You can check the app’s default branch on [bitrise.io](http://bitrise.io/ "http://bitrise.io"): open the app, and go to the **Settings** tab. Scroll down to the **DEFAULT BRANCH** option to check which branch should contain the `bitrise.yml` file.
 
