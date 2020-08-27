@@ -10,13 +10,13 @@ menu:
     weight: 22
 
 ---
+It is possible to store the build configuration ( that is, your app's `bitrise.yml` file) in your repository. The approach has its pros and cons; let's go through how to do it and why you'd want to do it!
+
 {% include message_box.html type="important" title="This workaround is no longer necessary" content="The workaround described in this guide is no longer necessary: Bitrise fully supports storing your app's `bitrise.yml` configuration file in the app's repository.
 
 Read more about it in our relevant guide: [Managing an app's bitrise.yml configuration](/builds/bitrise-yml-online/).
 
 If you wish, you can continue using this workaround but there's no advantage to doing so instead of using the supported solution!" %}
-
-It is possible to store the build configuration ( that is, your app's `bitrise.yml` file) in your repository. The approach has its pros and cons; let's go through how to do it and why you'd want to do it!
 
 ## Configuring Bitrise to run a bitrise.yml from your repository
 
