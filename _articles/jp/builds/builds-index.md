@@ -9,30 +9,29 @@ menu:
     weight: 14
 
 ---
-{% include not_translated_yet.html %}
 
-A build is a series of jobs, specified by the app’s Workflow which is a collection of [Steps](/jp/steps-workflows/getting-started-steps). The app’s build configuration is specified in the [bitrise.yml configuration file](/jp/bitrise-cli/basics-of-bitrise-yml) which you can modify in [bitrise.io](https://www.bitrise.io/)’s graphical Workflow Editor.
+ビルドは、[ステップ](/jp/steps-workflows/getting-started-steps)のコレクションであるアプリのワークフローによって指定される一連のジョブです。アプリのビルド設定は[bitrise.yml](/jp/bitrise-cli/basics-of-bitrise-yml)で指定され、[bitrise.io](https://www.bitrise.io/)のグラフィカルワークフローエディタで変更することができます。
 
-When a build is running, these scripts will be downloaded and executed in the order you’ve defined in your Workflow, with the input parameters you set. They will produce the predefined outputs set as [Environment Variables](/jp/builds/available-environment-variables).
+ビルドが実行されると、これらのスクリプトがダウンロードされ、ワークフローで定義した順序で、設定した入力パラメータで実行されます。これらのスクリプトは、[環境変数](/jp/builds/available-environment-variables)として設定された定義済みの出力を生成します。
 
-## Triggering builds
+## ビルドトリガー
 
-Trigger builds by:
+これらでビルドをトリガーできます。
 
-* Clicking the `Build` button on the application’s page (manual build trigger).
-* [Scheduling with a selected branch and frequency](/jp/builds/scheduling-builds).
-* [Webhooks](/jp/webhooks/): automatically trigger a build after each [code/tag push](/jp/builds/triggering-builds/trigger-code-push/) or [pull request](/jp/builds/triggering-builds/trigger-pull-request/) to the given branch.
-* Our[ API](/jp/api/build-trigger/).
+* アプリケーションのページで `Build` ボタンをクリックする（手動ビルドトリガー）。
+* [ブランチと頻度を選択してスケジューリング](/jp/builds/scheduling-builds)する。
+* [Webhooks](/jp/webhooks/): 指定されたブランチへの[コード/タグのプッシュ](/jp/builds/triggering-builds/trigger-code-push/)や、[プルリクエスト](/jp/builds/triggering-builds/trigger-pull-request/)の後、自動的にビルドを開始します。
+* [Bitrise API](/jp/api/build-trigger/)を使う。
 
-Read more about triggers in our [Triggering builds](/jp/builds/triggering-builds/index/) guide.
+詳細は[ビルドのトリガー](/jp/builds/triggering-builds/triggering-builds-index/)をご覧ください。
 
-## The build process
+## ビルドプロセス
 
-1. [Triggering the build](/jp/builds/index/#triggering-builds).
-2. Environment preparation: A virtual machine will be provisioned and prepared to run the build. Build specific Environment Variables are preset so you can use these in your steps. You can find more information about the available stacks in the Workflow Editor, on the **Stack** tab.
-3. Workflow execution: Steps in Workflows are executed in the same order as defined in the Workflow Editor of your application, from top to bottom. You can reorder the Steps by dragging them around. The log each Step generates will be displayed on the build’s details page.
-4. Cleanup: After the execution of the build, a build log is created and stored on the Bitrise server. The virtual machine running the build is destroyed so your code/files will never fall into the wrong hands.
+1. [トリガー](jp/builds/triggering-builds/triggering-builds-index/)によってビルドが開始されます。
+2. 環境の準備: 仮想マシンがプロビジョニングされ、ビルドを実行するための準備が行われます。ビルド固有の環境変数がプリセットされているので、ステップでこれらを使用することができます。利用可能なスタックの詳細は、ワークフローエディタの**スタック**タブで確認できます。
+3. ワークフローの実行: ワークフローのステップは、アプリケーションのワークフローエディタで定義されているのと同じ順序で、上から下へと実行されます。ステップをドラッグして順番を入れ替えることができます。各ステップが生成するログは、ビルドの詳細ページに表示されます。
+4. クリーンアップ: ビルドの実行後、ビルドログが作成され、Bitriseサーバーに保存されます。ビルドを実行している仮想マシンは破棄されるため、コードやファイルが悪用されることはありません。
 
-## Build concurrency
+## ビルドの同時実行
 
-Build concurrency determines how many builds you can run simultaneously. Builds over your subscription plan’s concurrency count will be marked as on hold. They will start whenever your ongoing builds are finished and you have a free build slot. You can always [purchase additional concurrencies](https://www.bitrise.io/pricing) with the Developer or Organization plans to increase the number of builds you can run at the same time.
+ビルドの同時実行数は、同時に実行できるビルド数を意味します。サブスクリプションプランの同時実行数を超えたビルドは、保留中と表示されます。現在進行中のビルドが終了し、ビルドスロットが空いている場合はいつでも開始されます。開発者プランまたは組織プランでは、同時に実行できるビルド数を増やすために、常に[同時実行数を追加購入](https://www.bitrise.io/pricing)することができます。
