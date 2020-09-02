@@ -4,93 +4,91 @@ last_modified_at:
 tag:
 - builds
 - troubleshooting
-title: Bitrise Checks on GitHub Checks
+title: GitHub ChecksでBitrise Checksを利用する
 redirect_from: []
-description: Bitrise Checks is a Github app which provides an extended version of
-  the classic status checks Bitrise sends back to GitHub pull requests. Bitrise Checks
-  include a Bitrise build summary and a check status.
+description: Bitrise Checks は、Bitrise が GitHub に送り返すステータスチェックを拡張する Github アプリです。
+  Bitrise Checks には、 Bitrise のビルドサマリーとチェックステータスが含まれています。
 menu:
   builds-main:
     weight: 32
 
 ---
-{% include not_translated_yet.html %}
 
-Bitrise Checks is a Github app which provides an extended version of the classic status checks Bitrise sends back to GitHub. Bitrise Checks include a Bitrise build summary and a check status. You can view Bitrise Checks if you click the **Details** link of a pull request on GitHub. It unfolds the detailed build summary and build status Bitrise Checks attaches to your pull request on the **Checks** tab of GitHub.
+Bitrise Checks は、Bitrise が GitHub に送り返すステータスチェックを拡張する Github アプリです。 Bitrise Checks には、 Bitrise のビルドサマリーとチェックステータスが含まれています。 GitHub 上のプルリクエストの **Details** リンクをクリックすると、 Bitrise Checks を見ることができます。これは、 Bitrise Checks がプルリクエストに添付した詳細なビルドサマリーとビルドステータスを GitHub の **Checks** タブに展開します。
 
 ![](/img/all-checks-have-passed.png)
 
 ![](/img/bitrise-summary-gh-checks.jpg)
 
-There can be three different check statuses:
+チェックの状態は3種類あります。
 
-* Success.
-* Failed.
-* Action required (in the case of manual pull request approval).
+* Success
+* Failed
+* Action required (手動でプルリクエストを承認する場合)
 
-## Installing Bitrise Checks
+## Bitrise Checks のインストール
 
-Using Bitrise Checks is just a few clicks away. Let's do this!
+Bitrise Checks は数クリックで利用できます。さあ、やってみましょう。
 
-1. Select your organization's app on your [Dashboard](https://app.bitrise.io/dashboard/builds).
-2. Select the **Settings** tab of your app.
-3. Click the **install our app to your GitHub repository** LINK in the **ENABLE GITHUB CHECKS** toggle's description. Don't toggle the switch just yet, since you first need to install Bitrise Checks. We will get to enabling the toggle [later](/github-checks/#enabling-github-checks).
+1. [Dashboard](https://app.bitrise.io/dashboard/builds) であなたの組織のアプリを選択します。
+2. アプリの **Settings** タブを選択します。
+3. **ENABLE GITHUB CHECKS** の説明にある **install our app to your GitHub repository** リンクをクリックします。 Bitrise Checks をインストールする必要があるので、まだスイッチを有効化しないでください。 有効化については [後ほど](/github-checks/#enabling-github-checks) 説明します。
 
    ![](/img/disabled-toggle-githubchekcs.jpg)
 
-   This link will take you to GitHub's **Bitrise Checks** installation page.
-4. On the **Install Bitrise Checks** page, select the user or organization you want to add Bitrise Checks to.
+   このリンクをクリックすると GitHub の **Bitrise Checks** インストールページに移動します。
+4. **Install Bitrise Checks** ページで、Bitrise Checks を追加するユーザーまたは組織を選択します。
 
    ![](/img/install-bitrise-checks.jpg)
-5. Decide if you wish to install Bitrise Checks to all your repositories or just to a selected few. With this you grant rights to Bitrise Checks to integrate with your repository and use GitHub Checks to display check results.
+5. Bitrise Checks をすべてのリポジトリにインストールするか、一部のリポジトリにのみインストールするかを選択します。これにより、Bitrise Checks があなたのリポジトリに統合され、 GitHub Checks を使用してチェック結果を表示する権限が付与されます。
 
    ![](/img/install-bitrise-checks.jpg.png)
-6. In the GitHub prompt, provide your GitHub password.
+6. GitHub のプロンプトで、 GitHub のパスワードを入力します。
 
-If all goes well, you land on the **Bitrise Checks** page of GitHub. You should see a blue note at the top-left corner of the page that Bitrise Checks has been successfully installed on your GitHub account.
+うまくいけば、GitHub の **Bitrise Checks** ページが表示されます。ページの上部に、Bitrise Checks が GitHub アカウントに正常にインストールされたことを示す青いメモが表示されているはずです。
 
 ![](/img/installed-bitrise-checks.jpg)
 
-## Enabling GitHub Checks
+## GitHub Checksの有効化
 
-All there's left to do is enabling GitHub Checks on your app's page on [Bitrise](https://app.bitrise.io/dashboard/builds).
+あとは [Bitrise](https://app.bitrise.io/dashboard/builds) のアプリのページで GitHub Checks を有効化するだけです。
 
-{% include message_box.html type="important" title="Enabling GitHub Checks is limited" content="Please note that only Organization owners and app admins can enable this toggle on the **Settings** page of the app."%}
+{% include message_box.html type="important" title="Enabling GitHub Checks is limited" content="組織の所有者とアプリの管理者のみが、アプリの **Settings** ページで GitHub Checks を有効化することができます。"%}
 
-1. Go to your organization's [Dashboard](https://app.bitrise.io/dashboard/builds).
-2. Click the app whose GitHub repository you've installed the Bitrise Checks to.
-3. Go to the **Settings** tab of the app.
-4. Toggle the **ENABLE GITHUB CHECKS** switch to the right.
+1. あなたの組織の [Dashboard](https://app.bitrise.io/dashboard/builds) に移動します。
+2. Bitrise Checks をインストールした GitHub リポジトリのアプリをクリックします。
+3. アプリの **Settings** タブを選択します。
+4. **ENABLE GITHUB CHECKS** のスイッチを切り替え有効化します。
 
-![](/img/enabled-toggle-githubchecks.jpg) Why can't you toggle the **ENABLE GITHUB CHECKS** switch?
+![](/img/enabled-toggle-githubchecks.jpg) **ENABLE GITHUB CHECKS** のスイッチが切り替えられない場合、
 
-* You cannot toggle the switch unless you install Bitrise Checks FIRST. Once it's done, you can go ahead and toggle the switch to the right to enable it.
-* If you have renamed or moved the GitHub repository of an app which has already been added to Bitrise and you have installed Bitrise Checks on it. The repository's GitHub URL has obviously changed. Why bother? **ENABLE GITHUB CHECKS** switch can only work if the URL on Github and on Bitrise fully match (no redirect URL is allowed). So in this case, you have to manually update the **REPOSITORY URL** of your app on the **Settings** tab with the new GitHub URL.
+* 先に Bitrise Checks をインストールしないとスイッチを切り替えることはできません。
+* すでに Bitrise に追加されているアプリの GitHub リポジトリの名前を変更または移動し、そのアプリに Bitrise Checks をインストールした場合はスイッチが機能しませんGithub 上のURLと Bitrise 上のURLが完全に一致している場合にのみ、**ENABLE GITHUB CHECKS** スイッチが機能します（リダイレクトURLは許可されていません）。その場合は、**Settings** タブの **REPOSITORY URL** を 新しい GitHub URL に手動で更新する必要があります。
 
   ![](/img/repository-url-change.jpg)
 
-And you're done! Now any pull request you open to your app on GitHub will be validated with Bitrise Checks and a build will get automatically started on Bitrise (if the [pull request trigger](/builds/triggering-builds/trigger-pull-request/) is properly set on Bitrise).
+これで完了です。これで、GitHub 上でアプリに送ったプルリクエストは Bitrise Checks で検証され、Bitrise 上でビルドが自動的に開始されます（Bitrise 上で[プルリクエストのトリガー](/builds/triggering-builds/trigger-pull-request/)が適切に設定されていれば）。
 
-You can easily get to your app's page on Bitrise. If you click on the build summary or on **View more details on Bitrise Checks** link on the **Checks** tab, you'll quickly get to your app's Build page.
+Bitrise では、アプリのページに簡単にアクセスできます。ビルドサマリーをクリックするか、**Checks** タブの **Bitrise Checks** リンクをクリックすると、アプリのビルドページにすぐにアクセスできます。
 
-### Switching to Bitrise Checks
+### Bitrise Checks への切り替え
 
-If you have been already using status checks on pull requests prior to merging, it must have been the `ci/bitrise/...` check system. To be able to use Bitrise Checks, you have to manually switch from `ci/bitrise/...` to **Bitrise** to access those detailed checks. Let's see how!
+マージ前のプルリクエストですでにステータスチェックを使用していた場合は、それが `ci/bitrise/...` チェックシステムであったはずです。Bitrise Checks を使用するには、手動で `ci/bitrise/...` から **Bitrise** に切り替える必要があります。では、その方法を見てみましょう。
 
 ![](/img/checks-pending.png)
 
-1. Go to the **Settings** tab of your repository.
-2. Click **Branches** on the side menu. Under **Require status checks to pass before merging**, you can see `ci/bitrise/...` as the selected checks system.
+1. あなたのリポジトリの **Settings** タブに移動します。
+2. サイドメニューの **Branches** を選択します。 **Require status checks to pass before merging** の下を見ると `ci/bitrise/...` が選択されています。
 
    ![](/img/require-status-checks.png)
-3. Select **Bitrise** instead of `ci/bitrise/...`.
-4. Merge a pull request.
+3. `ci/bitrise/...` の代わりに **Bitrise** を選択します。
+4. プルリクエストをマージします。
 
-## Disabling Github Checks
+## GitHub Checks の無効化
 
-You can easily disable GitHub Checks on Bitrise if you toggle the **ENABLE GITHUB CHECKS** switch to the left on the **Settings** page of the app.
+アプリの **Settings** ページで **ENABLE GITHUB CHECKS** スイッチを左に切り替えれば、Bitrise の GitHub Checks を簡単に無効にすることができます。
 
-If you decide to uninstall Bitrise Checks from your GitHub account, you can click the **Uninstall** button on the [Install GitHub Apps](https://github.com/settings/installations/) page.
+GitHub アカウントから Bitrise Checks をアンインストールする場合は、[Install GitHub Apps](https://github.com/settings/installations/) ページの **Uninstall** ボタンをクリックしてください。
 
 ![](/img/disable-ghckecks.jpg)
 
