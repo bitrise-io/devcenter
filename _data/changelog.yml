@@ -1,6 +1,13 @@
 ---
+- title: Caching
+  modified: 2020-09-02 15:00:00 +0200
+  changelog: 'Updated with additional information about the Cache: Push Step: pull
+    request builds, by default, can''t update the build cache. We strongly recommend
+    not to change this setting! '
+  type: update
+  url: "/builds/caching/about-caching-index/"
 - title: Managing an app's bitrise.yml configuration
-  modified: 2020-08-24 12:00:00 +0200
+  modified: 2020-08-24T12:00:00.000+02:00
   changelog: 'You can store the bitrise.yml configuration file either on bitrise.io
     or in your own repository. If you store it in your Git repo, you have full control
     over the maintenance and versioning of the file, and it will be used to run your

@@ -39,6 +39,13 @@ To get started, add two Steps to your Workflow:
 * **Bitrise.io Cache:Pull** Step to download the previous cache.
 * **Bitrise.io Cache:Push** Step to check the state of the cache and upload it if required.
 
+{% include message_box.html type="warning" title="Pull request builds" content="By default, if you run a build that is triggered by a pull request, the **Bitrise.io Cache:Push** Step won't work: in this case, a pull request build can only read the build cache but can't update it! 
+
+We strongly recommend that you do not change this! From a security perspective, the best practice is to never allow pull request builds to alter anything that can affect other Bitrise builds. 
+
+If you absolutely must change it, you need to use a `run_if` expression in the app's `bitrise.yml` file. Read more about `run_if` expressions in our [/steps-and-workflows/disable-a-step-by-condition/](Enabling or disabling a Step conditionally) guide. 
+"%}
+
 Add the **Bitrise.io Cache:Pull** Step right before you need the cache. For example, in the case of an iOS app, you can insert the **Bitrise.io Cache:Pull** Step between the **Git Clone Repository** and the dependency installer Steps (such as **Run CocoaPods install** or **Carthage** Steps). You should not put the **Bitrise.io Cache:Pull** Step BEFORE the **Git Clone Repository** Step.
 
 The **Bitrise.io Cache:Push** Step should be the very last Step in the Workflow. In the **Cache paths** input, you can set the paths to the content you want to add to the cache archive. The default value is an Environment Variable that collects content that the different Steps cached - for example, the aforementioned **Run CocoaPods install** Step does have a caching function, too.

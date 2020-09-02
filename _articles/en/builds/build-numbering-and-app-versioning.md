@@ -80,7 +80,7 @@ You can also offset your App's build version numbers if you handled version trac
 To offset your version number by your Bitrise build number every time a build is triggered, use the `$BITRISE_BUILD_NUMBER` Environment Variable:
 
 * For Android apps, find the **versionCode Offset** input of the **Change Android versionCode and versionName** Step and set `$BITRISE_BUILD_NUMBER` as its value. The value of the variable will be added to the value specified in the **versionCode** input.
-* For iOS apps, find the find the **Build Number Offset** input of the **Set Xcode Project Build Number** Step and set `$BITRISE_BUILD_NUMBER` as its value. The value of the variable will be added to the value specified in the **Build Number** input.
+* For iOS apps, find the **Build Number Offset** input of the **Set Xcode Project Build Number** Step and set `$BITRISE_BUILD_NUMBER` as its value. The value of the variable will be added to the value specified in the **Build Number** input.
 
 {% include collapse.html title="Android example" content="Let's say you have an app and you are about to run its fifth build on Bitrise. You wish to offset the Build Number by 6 as the app had six builds before starting to use Bitrise. The following configuration is used:
 
