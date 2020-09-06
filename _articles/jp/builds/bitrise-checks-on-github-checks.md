@@ -63,11 +63,11 @@ Bitrise Checks は数クリックで利用できます。さあ、やってみ�
 ![](/img/enabled-toggle-githubchecks.jpg) **ENABLE GITHUB CHECKS** のスイッチが切り替えられない場合、
 
 * 先に Bitrise Checks をインストールしないとスイッチを切り替えることはできません。
-* すでに Bitrise に追加されているアプリの GitHub リポジトリの名前を変更または移動し、そのアプリに Bitrise Checks をインストールした場合はスイッチが機能しませんGithub 上のURLと Bitrise 上のURLが完全に一致している場合にのみ、**ENABLE GITHUB CHECKS** スイッチが機能します（リダイレクトURLは許可されていません）。その場合は、**Settings** タブの **REPOSITORY URL** を 新しい GitHub URL に手動で更新する必要があります。
+* すでに Bitrise に追加されているアプリの GitHub リポジトリの名前を変更または移動し、そのアプリに Bitrise Checks をインストールした場合はスイッチが機能しません。Github 上のURLと Bitrise 上のURLが完全に一致している場合にのみ、**ENABLE GITHUB CHECKS** スイッチが機能します（リダイレクトURLは許可されていません）。その場合は、**Settings** タブの **REPOSITORY URL** を 新しい GitHub URL に手動で更新する必要があります。
 
   ![](/img/repository-url-change.jpg)
 
-これで完了です。これで、GitHub 上でアプリに送ったプルリクエストは Bitrise Checks で検証され、Bitrise 上でビルドが自動的に開始されます（Bitrise 上で[プルリクエストのトリガー](/builds/triggering-builds/trigger-pull-request/)が適切に設定されていれば）。
+これで完了です。GitHub 上でアプリに送ったプルリクエストは Bitrise Checks で検証され、Bitrise 上でビルドが自動的に開始されます（Bitrise 上で[プルリクエストのトリガー](/builds/triggering-builds/trigger-pull-request/)が適切に設定されている必要があります）。
 
 Bitrise では、アプリのページに簡単にアクセスできます。ビルドサマリーをクリックするか、**Checks** タブの **Bitrise Checks** リンクをクリックすると、アプリのビルドページにすぐにアクセスできます。
 
