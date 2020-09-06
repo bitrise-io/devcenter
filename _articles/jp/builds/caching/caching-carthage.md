@@ -6,7 +6,7 @@ tag:
 - carthage
 - ios
 - builds
-title: Caching Carthage dependencies
+title: Carthageの依存をキャッシュ
 redirect_from: []
 description: ''
 menu:
@@ -14,19 +14,21 @@ menu:
     weight: 11
 
 ---
-{% include not_translated_yet.html %}
 
-Carthage is a dependency manager for macOS and iOS: builds your dependencies and provides you with binary frameworks. On Bitrise, we have a dedicated Step to handle Carthage dependencies in your build, and of course you can cache these dependencies. 
+Carthageは、macOSやiOSのための依存関係管理ツールです。
+依存先をビルドし、アプリで利用するためのバイナリフレームワーク作成します。
+Bitriseでは、Carthageを動かすための専用STEPが用意されています。もちろん、Carthageのビルド結果をキャッシュすることが可能です。
 
-## Configuring Carthage caching 
+## Carthageのキャッシュ設定
 
-To cache Carthage dependencies:
+Carthageの依存をキャッシュする手順：
 
-1. Make sure you have the **Bitrise.io Cache:Pull** and **Bitrise.io Cache:Push** Steps in your Workflow.
-1. Set the **Carthage command to run** input of the **Carthage** Step to `bootstrap`. 
-1. Go to the **Bitrise.io Cache:Push** Step and find the **Cache paths** input. 
-1. On a new line, add the path to your `Carthage directory` and indicate that it should be cached if the `Cartfile.resolved` changes: 
+1. アプリの **Workflow Editor** を開きます。
+1. ワークフローに、**Bitrise.io Cache:Pull** ステップと **Bitrise.io Cache:Push** ステップがあることを確認してください。
+1. **Carthage** ステップの中にある **Carthage command to run** 項目に `bootstrap` コマンドを入力します。
+1. **Bitrise.io Cache:Push** ステップの中にある **Cache paths** 項目を開きます。
+1. **Cache paths** には、改行して新しい行を記載します。あなたの `Carthage ディレクトリ` へのパスと、`Cartfile.resolved` が変更された時にキャッシュを更新するための指定を行います。：
 
     `./Carthage -> ./Cartfile.resolved`
 
-{% include message_box.html type="note" title="Carthage directory path" content="If your Carthage directory is not in the root of your repository, specify the path to the Carthage directory and to `Cartfile.resolved` relative to the root of the repository." %}
+{% include message_box.html type="note" title="Carthageディレクトリパス" content="もしCarthageディレクトリがrepositoryのrootに配置されていない場合は、`Carthageディレクトリ` / `Cartfile.resolved` 共に、repositoryのrootからみた相対パスを設定してください。" %}
