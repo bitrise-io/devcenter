@@ -11,26 +11,25 @@ menu:
     weight: 6
 
 ---
-{% include not_translated_yet.html %}
 
-Bitrise is a platform, above all: you do not have to download anything to use it, you do not have to run it on your own computer or servers - we take care of all of that.
+Bitriseはプラットフォームであり、何もダウンロードする必要がなく、自分のコンピュータやサーバーで実行する必要もありません。
 
-That also means you do not have to worry about infrastructure, either: maintenance, tools, virtualization are all our jobs and our concerns.
+つまり、Infrastructureについても心配する必要はありません。メンテナンスやツール、仮想化は私たちの仕事であり、私たちの関心ごとです。
 
-## Virtual machines
+## 仮想マシン
 
-On Bitrise, we use virtual machines (VM) to run your builds: every build runs in a new VM, and each VM is discarded immediately when the build is finished.
+Bitriseでは、仮想マシン(VM)を使用してビルドを実行します。すべてのビルドは新しいVMで実行され、それぞれのVMはビルドが完了するとすぐに破棄されます。
 
-**Details:**
+**詳細**
 
-* [Virtual machines](/jp/infrastructure/virtual-machines/)
+* [仮想マシン](/jp/infrastructure/virtual-machines/)
 
-## Available stacks
+## 利用可能なスタック
 
-A stack is the type of virtual machine we'll use to run your build. For example, for a native iOS app, the best stack is one of our Xcode stacks. Stacks come with all the necessary tools pre-installed, and they are regularly updated to make sure they serve all your needs.
+スタックは、ビルドの実行に使用する仮想マシンの種類です。たとえば、ネイティブiOSアプリにはXcodeスタックが最適です。スタックには必要なすべてのツールがプリインストールされており、定期的に更新され、すべてのニーズに対応できるようになっています。
 
-**Details:**
+**詳細**
 
-* [Available stacks](/jp/infrastructure/available-stacks/)
-* [Stack update and removal policy](/jp/infrastructure/stack-update-and-removal-policy/)
-* [The Android/Linux/Docker environment](/jp/infrastructure/the-environment/)
+* [利用可能なスタック](/jp/infrastructure/available-stacks/)
+* [スタックの更新と削除ポリシー](/jp/infrastructure/stack-update-and-removal-policy/)
+* [Android/Linux/Docker 環境](/jp/infrastructure/the-environment/)
