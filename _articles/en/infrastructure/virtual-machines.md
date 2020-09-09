@@ -33,13 +33,13 @@ For more information about build and code security, see the [Code security](/get
 
 For most users, who host their repositories on cloud-based service providers, there is no need for any network configuration to be able to use Bitrise. All we need is permission to access the repository and for that, an SSH key is enough.
 
-However, your company security policy might not allow unknown and unauthorized IP addresses to communicate with the servers where your code is being stored - either on your own datacenter or in a private cloud. In that case, Bitrise won’t work unless the relevant IP addresses are whitelisted.
+However, your company security policy might not allow unknown and unauthorized IP addresses to communicate with the servers where your code is being stored - either on your own datacenter or in a private cloud. In that case, Bitrise won’t work unless the relevant IP addresses are added to your allow list.
 
-### Whitelisting build machine IPs
+### Adding build machine IPs to your allow list
 
-Our datacenters are behind a set of public static IP addresses, with the virtual machines having their own internal subnets behind these addresses. You need to whitelist the public IP addresses that you can find in [External and internal IP addresses](/infrastructure/virtual-machines/#external-and-internal-ip-addresses "/infrastructure/virtual-machines/#external-and-internal-ip-addresses").
+Our datacenters are behind a set of public static IP addresses, with the virtual machines having their own internal subnets behind these addresses. You need to add the public IP addresses that you can find in [External and internal IP addresses](/infrastructure/virtual-machines/#external-and-internal-ip-addresses "/infrastructure/virtual-machines/#external-and-internal-ip-addresses").
 
-Please note that the different stack types have different public IPs. If, for example, you only use the Xcode stacks, there is no need to whitelist the IPs belonging to the Linux/Docker environments.
+Please note that the different stack types have different public IPs. If, for example, you only use the Xcode stacks, there is no need to add the IPs belonging to the Linux/Docker environments.
 
 ### Configuring your network for VPNs
 
@@ -50,7 +50,7 @@ You can [connect to Bitrise via VPN](/tutorials/vpn-configuration/ "https://devc
 | Stack type                  | Public IP        | Build VM internal subnet | Note                                                                   |
 |-----------------------------|------------------|--------------------------|------------------------------------------------------------------------|
 | **Xcode and VS4Mac stacks** | 208.52.166.154   | 10.200.15.0/20           |                                                                        |
-|                             | 207.254.0.248/29 | 10.246.15.0/20          | The public address is a subnet: the entire subnet must be whitelisted! |
+|                             | 207.254.0.248/29 | 10.246.15.0/20          | The public address is a subnet: the entire subnet must be in the allow list! |
 |                             | 207.254.34.148   | 10.254.228.0/20          |                                                                        |
 | **Linux/Docker stacks**     | 104.197.15.74    | 10.0.0.0/9               |                                                                        |
 |                             | 35.202.121.43    | 10.0.0.0/9               |                                                                        |
