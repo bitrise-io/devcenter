@@ -13,7 +13,7 @@ summary: Learn how to get a Verified Step badge on your Step once you have share
   it in our Bitrise Step Library.
 menu:
   contributors-main:
-    weight: 7
+    weight: 8
 
 ---
 ## What are Verified Steps?

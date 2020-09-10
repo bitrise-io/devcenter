@@ -16,7 +16,6 @@ menu:
     weight: 1
 
 ---
-
 {% include not_translated_yet.html %}
 
 {% include message_box.html type="important" title="Beta feature" content="Please note that this feature is still in beta phase! You can sign up for the beta [here](https://www.bitrise.io/add-ons/trace-mobile-monitoring)!"%}

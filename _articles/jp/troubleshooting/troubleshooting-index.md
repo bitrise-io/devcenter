@@ -7,7 +7,7 @@ redirect_from: []
 menu:
   main:
     identifier: troubleshooting-main
-    weight: 27
+    weight: 26
     title: Troubleshooting & FAQ
 
 ---

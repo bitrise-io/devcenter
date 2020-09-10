@@ -3,6 +3,9 @@ tag: []
 title: Verified Step
 redirect_from: []
 summary: ''
+menu:
+  contributors-main:
+    weight: 7
 
 ---
 ## What are Verified Steps?
