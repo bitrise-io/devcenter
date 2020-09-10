@@ -3,7 +3,6 @@ tag: []
 title: Verified Step
 redirect_from: []
 summary: ''
-published: false
 
 ---
 ## What are Verified Steps?
