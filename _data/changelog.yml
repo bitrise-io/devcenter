@@ -1,6 +1,11 @@
 ---
+- title: Verified Steps
+  modified: 2020-09-10 07:51:13 +0200
+  changelog: Open source teams can apply for the Verified Step badge.
+  type: update
+  url: "/contributors/verified-steps/"
 - title: Caching
-  modified: 2020-09-02 15:00:00 +0200
+  modified: 2020-09-02T15:00:00.000+02:00
   changelog: 'Updated with additional information about the Cache: Push Step: pull
     request builds, by default, can''t update the build cache. We strongly recommend
     not to change this setting! '
