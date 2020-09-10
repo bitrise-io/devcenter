@@ -6,14 +6,13 @@ tag:
 - troubleshooting
 title: GitHub ChecksでBitrise Checksを利用する
 redirect_from: []
-description: Bitrise Checks は、Bitrise が GitHub に送り返すステータスチェックを拡張する Github アプリです。
-  Bitrise Checks には、 Bitrise のビルドサマリーとチェックステータスが含まれています。
+description: Bitrise Checks は、Bitrise が GitHub に送り返すステータスチェックを拡張する Github アプリです。 Bitrise
+  Checks には、 Bitrise のビルドサマリーとチェックステータスが含まれています。
 menu:
   builds-main:
     weight: 32
 
 ---
-
 Bitrise Checks は、Bitrise が GitHub に送り返すステータスチェックを拡張する Github アプリです。 Bitrise Checks には、 Bitrise のビルドサマリーとチェックステータスが含まれています。 GitHub 上のプルリクエストの **Details** リンクをクリックすると、 Bitrise Checks を見ることができます。これは、 Bitrise Checks がプルリクエストに添付した詳細なビルドサマリーとビルドステータスを GitHub の **Checks** タブに展開します。
 
 ![](/img/all-checks-have-passed.png)
