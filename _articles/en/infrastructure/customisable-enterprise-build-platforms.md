@@ -8,6 +8,7 @@ title: Customizable enterprise build platforms
 redirect_from: []
 description: Using a custom enterprise build platform means running your Bitrise builds
   on virtual machines (VM) dedicated and specifically configured to your needs.
+summary: ''
 menu:
   infrastructure-main:
     weight: 8
@@ -95,10 +96,10 @@ You can also decide the amount of storage you need for each VM: it can be either
 
 The table shows the available resources for each VM.
 
-| Storage for each VM | Available resources (Intel Xeon E5 @2.6 GHz with 4 vCPUs) | Available resources (Intel Xeon E5 @2.6 GHz with 8 vCPUs) |
-| --- | --- | --- |
-| 100GB SSD/VM | 4 vCPUs, 15 GB RAM | 8 vCPUs, 30 GB RAM |
-| 200GB SSD/VM | 4 vCPUs, 15 GB RAM | 8 vCPUs, 30 GB RAM |
+| CPU                                 | Storage      | RAM  |
+|-------------------------------------|--------------|------|
+| Intel Xeon E5 @2.6 GHz with 4 vCPUs | 200GB SSD/VM | 15GB |
+| Intel Xeon E5 @2.6 GHz with 8 vCPUs | 200GB SSD/VM | 30GB |
 
 ## Pricing
 
