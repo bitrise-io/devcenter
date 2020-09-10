@@ -18,11 +18,11 @@ menu:
 ---
 ## What are Verified Steps?
 
-A Step contains the code that performs a specific build task. Bitrise has over 200 Steps in its [Step Library (StepLib)](https://github.com/bitrise-io/bitrise-steplib) which third party companies can enrich with Steps based on their services/tools. This means they have full power to roll out updates to the Step while Bitrise maintains an overlaying control to ensure service quality and security.
+A Step contains the code that performs a specific build task. Bitrise has over 200 Steps in its [Step Library (StepLib)](https://github.com/bitrise-io/bitrise-steplib "https://github.com/bitrise-io/bitrise-steplib") which third party companies or open source teams can enrich with Steps based on their services/tools. This means they have full power to roll out updates to the Step while Bitrise maintains an overlaying control to ensure service quality and security.
 
-A Verified Step means that the service’s or tool’s owner guarantees secure, maintained, consistent, and high-quality performance for any Bitrise user. Our official Bitrise Steps are maintained by us, whereas our Community Steps are maintained by the community. It’s easy to decide which type a Step falls into on our GUI.
+A Verified Step means that the owner of a service or tool or an open source team guarantees secure, maintained, consistent, and high-quality performance for any Bitrise user. Our official Bitrise Steps are maintained by us, whereas our Community Steps are maintained by the community. It’s easy to decide which type a Step falls into on our GUI.
 
-* Verified Steps are labeled with a blue badge in [bitrise.io](http://bitrise.io/ "http://bitrise.io").
+* Verified Steps are labeled with a blue badge in [bitrise.io](http://bitrise.io/ "http://bitrise.io/").
 * Official Bitrise Steps are labeled with a green badge.
 * Community created Steps do not have any badge.
 
@@ -32,7 +32,8 @@ In this guide we explain how to get your Step verified by Bitrise.
 
 {% include message_box.html type="important" title="Requirements" content="
 
-* Your company must be the owner of the service or tool used by the Step to apply for the Verified badge.
+* For company owned services and tools: Your company must be the owner of the service or tool used by the Step to apply for the Verified badge.
+* For open-source services or tools: If you are a member of an open source or other informal team, please confirm with the rest of the team that you may sign this for yourself and that it applies to the Steps you are submitting for the team.
 * Your Step must comply with our [Service Level Agreement](/contributors/verified-steps/#service-level-agreement-for-verified-step-authors).
 * Your Step must have its own Step icon.
 
@@ -47,9 +48,9 @@ We strongly recommend that you consult with our [Step development](/contributors
    ![](/img/cla.jpg)
 
    ![](/img/checklist.jpg)
-4. Please fill out our [Partnership Form](https://bitrise.typeform.com/to/YnY8KftK)! 
+4. Please fill out our [Partnership Form](https://bitrise.typeform.com/to/YnY8KftK)!
 
-Once you submitted the form, our Partner Management Team will contact you within 5 business days to discuss the rest of the process. 
+Once you submitted the form, our Partner Management Team will contact you within 5 business days to discuss the rest of the process.
 
 If at any stage of the process you wonder what happens with a Step candidate that is already covered by another Step in our StepLib, head over to [How do we go about Step duplications](/contributors/verified-steps/#how-do-we-go-about-step-duplications)?
 
