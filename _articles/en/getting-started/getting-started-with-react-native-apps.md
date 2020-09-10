@@ -11,6 +11,7 @@ tag:
 description: 'Go through the procedure of adding a React Native app on Bitrise from
   start to finish, from adding the app to deploying it. Learn about dependency management,
   code signing, and testing. '
+summary: ''
 menu:
   getting-started-main:
     weight: 26
@@ -33,7 +34,7 @@ This flow will guide you through the process of adding your app to Bitrise, conn
 3. In the **Variant** field, select a variant that suits your project. Pick **Select All Variants** to build all variants. Pick **debug** or **release** if you wish to generate an APK or an .ipa file.
 4. In the **Project (or Workspace)** field, select your Xcode project or Xcode Workspace path.
 5. In the **Select Scheme name**, pick a scheme name. The scanner validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it’s shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](https://devcenter.bitrise.io/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
-6. In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method. You can read more on the different export methods in our [iOS app deployment guides](/deploy/ios-deploy/introduction-to-deploying-ios-apps/).
+6. In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method. 
 
 You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io)! Your first build gets kicked off automatically. You can check the generated artifacts of the first build on the [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab of your Build's page.
 
