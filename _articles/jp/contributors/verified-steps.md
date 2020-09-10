@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Verified Step
+title: Verified Steps
 redirect_from: []
 summary: ''
 menu:
