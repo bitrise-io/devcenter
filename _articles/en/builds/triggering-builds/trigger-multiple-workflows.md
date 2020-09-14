@@ -42,7 +42,7 @@ What you need:
    Feel free to use any key you wish for the secret. We recommend something simple like `$ACCESS_TOKEN`.
 3. Add the **Bitrise Start Build** Step to the `Trigger` workflow.
 
-   IMPORTANT: The **Bitrise Start Build** Step will set an Environment Variable to all builds it starts: `$SOURCE_BITRISE_BUILD_NUMBER`. This means that all builds of the app started by this step will have the same build number despite running with different workflows.
+   IMPORTANT: The **Bitrise Start Build** Step will set an Environment Variable to all builds it starts: `$SOURCE_BITRISE_BUILD_NUMBER`. This means that all builds of the app started by this tep will have the same build number despite running with different workflows.
 4. Add the secret env storing your personal access token to the **Bitrise Access Token** input of the Step: click the **Select secret variable** button and choose the key you created.
 
    ![](/img/bitrise-access-token-step.png)
@@ -51,7 +51,7 @@ What you need:
    ![](/img/bitrise-start-build.png)
 6. Add the **Bitrise Wait for Build** Step as the last Step of the `Trigger` workflow.
 
-   IMPORTANT: The Step checks statuses of the builds defined in the Step. The builds are defined in the **Build slugs** input: the slugs are the output of the **Bitrise Start Build** Step. As long as the builds defined by the slugs are running, the step will hold the build it is running in. The build will fail if any of the builds included in the Step fail.
+   IMPORTANT: The Step checks statuses of the builds defined in the Step. The builds are defined in the **Build slugs** input: the slugs are the output of the **Bitrise Start Build** Step. As long as the builds defined by the slugs are running, the Step will hold the build it is running in. The build will fail if any of the builds included in the Step fail.
 7. Add the secret env storing your personal access token to the **Bitrise Access Token** input of the Step: click the **Select secret variable** button and choose the key you created.
 
    ![](/img/access-token-select-secret-variable.png)
