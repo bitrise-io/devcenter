@@ -7,6 +7,7 @@ description: 'If you have more than one concurrency, you can run more than one b
   simultaneously. And since we want to make life as easy for you as possible, these
   builds can be started automatically, with a single trigger. '
 redirect_from: []
+summary: ''
 menu:
   triggering-builds:
     weight: 12
@@ -41,7 +42,7 @@ What you need:
    Feel free to use any key you wish for the secret. We recommend something simple like `$ACCESS_TOKEN`.
 3. Add the **Bitrise Start Build** Step to the `Trigger` workflow.
 
-   IMPORTANT: The **Bitrise Start Build** Step will set an Environment Variable to all builds it starts: `$SOURCE_BITRISE_BUILD_NUMBER`. This means that all builds of the app started by this step will have the same build number despite running with different workflows.
+   IMPORTANT: The **Bitrise Start Build** Step will set an Environment Variable to all builds it starts: `$SOURCE_BITRISE_BUILD_NUMBER`. This means that all builds of the app started by this tep will have the same build number despite running with different workflows.
 4. Add the secret env storing your personal access token to the **Bitrise Access Token** input of the Step: click the **Select secret variable** button and choose the key you created.
 
    ![](/img/bitrise-access-token-step.png)
@@ -50,11 +51,13 @@ What you need:
    ![](/img/bitrise-start-build.png)
 6. Add the **Bitrise Wait for Build** Step as the last Step of the `Trigger` workflow.
 
-   IMPORTANT: The Step checks statuses of the builds defined in the Step. The builds are defined in the **Build slugs** input: the slugs are the output of the **Bitrise Start Build** Step. As long as the builds defined by the slugs are running, the step will hold the build it is running in. The build will fail if any of the builds included in the Step fail.
+   IMPORTANT: The Step checks statuses of the builds defined in the Step. The builds are defined in the **Build slugs** input: the slugs are the output of the **Bitrise Start Build** Step. As long as the builds defined by the slugs are running, the Step will hold the build it is running in. The build will fail if any of the builds included in the Step fail.
 7. Add the secret env storing your personal access token to the **Bitrise Access Token** input of the Step: click the **Select secret variable** button and choose the key you created.
 
    ![](/img/access-token-select-secret-variable.png)
 
 And you are done! Once you trigger the `Trigger` workflow, the **Bitrise Start Build** Step of the Workflow will trigger two more builds running simultaneously. If those two builds are successful, the **Bitrise Wait for Build** Step lets the first build finish. A single status report is sent to the git hosting provider, regardless whether the build is successful or not.
+
+{% include message_box.html type="note" title="Bitrise Build Step on the CI" content="Since the **Bitrise Build Start** Step heavily relies on the parameters of the currently running build (for example, the app slug, build slug and the build number) to call the [build API](https://api-docs.bitrise.io/#/builds), you cannot use the **Bitrise Build Start** Step locally."%}
 
 {% include banner.html banner_text="Set up trigger to start parallel builds" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}
