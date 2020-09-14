@@ -7,6 +7,7 @@ description: 'If you have more than one concurrency, you can run more than one b
   simultaneously. And since we want to make life as easy for you as possible, these
   builds can be started automatically, with a single trigger. '
 redirect_from: []
+summary: ''
 menu:
   triggering-builds:
     weight: 12
@@ -56,5 +57,7 @@ What you need:
    ![](/img/access-token-select-secret-variable.png)
 
 And you are done! Once you trigger the `Trigger` workflow, the **Bitrise Start Build** Step of the Workflow will trigger two more builds running simultaneously. If those two builds are successful, the **Bitrise Wait for Build** Step lets the first build finish. A single status report is sent to the git hosting provider, regardless whether the build is successful or not.
+
+{% include message_box.html type="note" title="Bitrise Build Step on the CI" content="Since the **Bitrise Build Start** Step heavily relies on the parameters of the currently running build (for example, the app slug, build slug and the build number) to call the [build API](https://api-docs.bitrise.io/#/builds), you cannot use the **Bitrise Build Start** Step locally."%}
 
 {% include banner.html banner_text="Set up trigger to start parallel builds" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}
