@@ -52,8 +52,12 @@ Use this method to provide authentication data to connect Bitrise to your Apple 
 2. Log into [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
 3. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview "https://app.bitrise.io/me/profile#/overview") from the dropdown menu.
 4. On the menu bar on the left, select **Apple Developer Account**.
-5. Click **Add an Account.**
+5. Click **Add an Account**.
+
+   ![](/img/account-settings-1.jpg)
 6. Fill out all required fields: provide a work or personal **Name** of the team, **an** [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests "https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests"), the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api "https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api"). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
+
+   !\[\](/img/appstoreconnectapi-addanaccount.jpg)
 7. Continue with Assigning an Apple Developer Account for your app.
 
 ### Assigning an Apple Developer Account for your app
@@ -150,7 +154,6 @@ With this Step you can upload binaries (.ipa or .pkg files) to [iTunes Connect]
 
 The **Deploy to iTunes - Application Loader** step is now set to connect to the Apple Developer account.
 
-1. ![](/img/appstoreconnectapi-addanaccount.jpg)
-2. ![](/img/appstoreconnect_sessionbased.jpg)
+1. ![](/img/appstoreconnect_sessionbased.jpg)
 
    ![](/img/connected-apple-dev-portal.png)
