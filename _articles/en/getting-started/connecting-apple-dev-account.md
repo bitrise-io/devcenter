@@ -15,19 +15,27 @@ menu:
   getting-started-main:
     weight: 9
     title: Connecting your Apple Developer Account
+published: false
 
 ---
-Connect your Apple Developer Portal account to Bitrise by authenticating your Apple credentials on Bitrise, and allow your apps to use those credentials during the builds.
+Your Workflow may contain Steps that need information from your Apple Developer account. If so, you need to provide authentication data to allow Bitrise to connect to your Apple Developer account. You may also need to authorize the app to use the data from this account when connected.
 
-You can go to your account settings right now to set it up: [Apple Developer Connection](https://app.bitrise.io/me/profile#/apple_developer_account).
+To determine if you need to connect your Apple Developer account and authorize your app, check out Steps that require connecting to your Apple Developer account \[link\] and allow your app to use this data \[link\].
 
-## Reasons to connect your account
+## Steps that require connecting to your Apple Developer account
 
-Connect your Apple Developer account to Bitrise if:
+The following Steps require connection to your Apple Developer account. If you’re using any of these Steps, make sure you connect your Apple Developer Account with the right connection method.
 
-* You want to use one of our **iOS Auto Provision** Step to [manage provisioning profiles for an iOS application](https://devcenter.bitrise.io/code-signing/ios-code-signing/ios-auto-provisioning/). The **iOS Auto Provision with Apple ID** Step requires you to connect your Apple Developer account to Bitrise, while the **iOS Auto Provision with App Store Connect API** Step does not need any account connection or 2FA.
-* You want to upload your app to the App Store, using either our **_fastlane_** or the **Deploy to iTunes Connect** Step.
-* You want to upload metadata, screenshots, or other artifacts using our **_fastlane_** Step.
+The table below table sums up what you have to do to establish connection between Bitrise and your Apple Developer account.
+
+
+| Steps | How to set up the connection |
+| --- | --- |
+| iOS Auto Provision with App Store Connect API  | 
+1. Provide the connection information to your Apple Developer Account on the Account settings page.
+
+2. Assign the app to your Apple Developer account on the Team tab. |
+| LTS (Long Term Support) | No changes (updates) will be made to the stack, except for absolutely crucial changes (for example which affect security), and Bitrise CLI tool updates. Preinstalled tool versions will remain the same, until the Stack is removed from our collection. |
 
 ## Which iOS Auto Provision Step to use
 
