@@ -30,12 +30,12 @@ The table below table sums up what you have to do to establish connection betwee
 
 | Steps | Connection type |
 | --- | --- |
-| iOS Auto Provision with App Store Connect API |  |
-| iOS Auto Provision with Apple ID Step |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
+| iOS Auto Provision with App Store Connect API |App Store Connect API  |
+| iOS Auto Provision with Apple ID Step |session-based |
+| Fastlane Step|session-based  |
+| Deploy to iTunes Connect Step|session-based  |
+| Deploy to iTunes Connect Step - Application Loader|App Store Connect API or session-based  |
+
 
 The "Steps that require connecting to your Apple Developer account" maybe being reworded a bit to include that there are 2 ways to connect, using a session-based method or using the AppStore Connect API.
 
