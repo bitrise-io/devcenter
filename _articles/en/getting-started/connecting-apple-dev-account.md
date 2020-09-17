@@ -31,7 +31,8 @@ The table below table sums up what you have to do to establish connection betwee
 | Steps | How to set up the connection |
 | --- | --- |
 | iOS Auto Provision with App Store Connect API | 1. Provide the connection information to your Apple Developer Account on the Account settings page. 2. Assign the app to your Apple Developer account on the Team tab. |
-| LTS (Long Term Support) | No changes (updates) will be made to the stack, except for absolutely crucial changes (for example which affect security), and Bitrise CLI tool updates. Preinstalled tool versions will remain the same, until the Stack is removed from our collection. |
+| iOS Auto Provision with Apple ID Step | 1. Provide Apple ID, Password and 2-factor authentication code on the **Account settings** page.
+2. Select the Apple developer account for the app to use under the **Team** tab for the app. |
 
 **iOS Auto Provision with App Store Connect API** Step:
 
