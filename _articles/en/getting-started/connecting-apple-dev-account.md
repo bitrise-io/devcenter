@@ -37,24 +37,6 @@ The table below table sums up what you have to do to establish connection betwee
 | Deploy to iTunes Connect Step - Application Loader|App Store Connect API or session-based  |
 
 
-The "Steps that require connecting to your Apple Developer account" maybe being reworded a bit to include that there are 2 ways to connect, using a session-based method or using the AppStore Connect API.
-
-
-**iOS Auto Provision with App Store Connect API** Step:
-
-1. [Provide the connection information to your Apple Developer Account on the **Account settings** page.]()
-2. [Assign the app to your Apple Developer account on the **Team** tab.](https://mpxzvqn7ysfysw.instant.forestry.io/getting-started/connecting-apple-dev-account/#assigning-an-apple-developer-account-for-your-app)
-
-**iOS Auto Provision with Apple ID** Step:
-
-1. Provide Apple ID, Password and 2-factor authentication code on the **Account settings** page.
-2. Select the Apple developer account for the app to use under the **Team** tab for the app.
-
-**Fastlane** Step:
-
-1. Provide Apple ID, Password and 2-factor authentication code on the **Account settings** page.
-2. Select the Apple developer account for the app to use under the **Team** tab for the app..
-
 ## iOS Auto Provision with App Store Connect API Step
 
 The Step uses the official [App Store Connect API (JSON Web Token)](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests "https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests"). By using your Apple Developer account definition that has been assigned to the app, this Step when executed will:
