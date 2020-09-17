@@ -33,6 +33,21 @@ The table below table sums up what you have to do to establish connection betwee
 | iOS Auto Provision with App Store Connect API | 1. Provide the connection information to your Apple Developer Account on the Account settings page. 2. Assign the app to your Apple Developer account on the Team tab. |
 | LTS (Long Term Support) | No changes (updates) will be made to the stack, except for absolutely crucial changes (for example which affect security), and Bitrise CLI tool updates. Preinstalled tool versions will remain the same, until the Stack is removed from our collection. |
 
+**iOS Auto Provision with App Store Connect API** Step:
+
+1. [Provide the connection information to your Apple Developer Account on the **Account settings** page.]()
+2. [Assign the app to your Apple Developer account on the **Team** tab.](https://mpxzvqn7ysfysw.instant.forestry.io/getting-started/connecting-apple-dev-account/#assigning-an-apple-developer-account-for-your-app)
+
+**iOS Auto Provision with Apple ID** Step:
+
+1. Provide Apple ID, Password and 2-factor authentication code on the **Account settings** page.
+2. Select the Apple developer account for the app to use under the **Team** tab for the app.
+
+**Fastlane** Step:
+
+1. Provide Apple ID, Password and 2-factor authentication code on the **Account settings** page.
+2. Select the Apple developer account for the app to use under the **Team** tab for the app..
+
 ## iOS Auto Provision with App Store Connect API Step
 
 The Step uses the official [App Store Connect API (JSON Web Token)](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests "https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests"). By using your Apple Developer account definition that has been assigned to the app, this Step when executed will:
@@ -148,7 +163,6 @@ With this Step you can upload binaries (.ipa or .pkg files) to [iTunes Connect]
 The **Deploy to iTunes - Application Loader** step is now set to connect to the Apple Developer account.
 
 1. ![](/img/appstoreconnectapi-addanaccount.jpg)
-
-1. ![](/img/appstoreconnect_sessionbased.jpg)
+2. ![](/img/appstoreconnect_sessionbased.jpg)
 
    ![](/img/connected-apple-dev-portal.png)
