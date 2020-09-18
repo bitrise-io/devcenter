@@ -131,7 +131,7 @@ If you wish to use Fastlane Step to deploy to iOS apps to the App Store or uploa
 
 ### Assigning an Apple Developer Account for your app
 
-Once you have defined your Apple Developer account to Bitrise \[link\], you need to select the account for your app to receive data from your Apple Developer account when it runs on Bitrise.
+Once you have defined your Apple Developer account to Bitrise, you need to select the account for your app to receive data from your Apple Developer account when it runs on Bitrise.
 
 1. Open your app’s page on [bitrise.io](https://www.bitrise.io/).
 2. Select the **Team** tab.
@@ -144,9 +144,9 @@ The **Fastlane** Step is now set to connect to the Apple Developer account assig
 
 ## Deploy to iTunes Connect Step
 
-With this Step you can upload screenshots, metadata and binaries to [iTunes Connect](https://itunesconnect.apple.com/) and submit your app for App Store review using the fastlane [deliver](https://docs.fastlane.tools/actions/deliver/) action.
+With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver) you can upload screenshots, metadata and binaries to [iTunes Connect](https://itunesconnect.apple.com/) and submit your app for App Store review using the fastlane [deliver](https://docs.fastlane.tools/actions/deliver/) action.
 
-If you use the **Deploy to iTunes Connect** in your Workflow, you can set up connection to your Apple Developer Account by adding your credentials to the Step’s input fields.
+If you use the **Deploy to iTunes Connect** Step in your Workflow, you can set up connection to your Apple Developer Account by adding your credentials to the Step’s input fields.
 
 1. Add the Step in your Workflow.
 2. Provide your **Apple ID**, **Password**, and the [**Application Specific Password**](https://appleid.apple.com/#!&page=signin) to the respective input fields.
@@ -156,7 +156,7 @@ The **Deploy to iTunes Connect** Step is now set to connect to the Apple Develop
 
 ## Deploy to iTunes Connect - Application Loader Step
 
-With this Step you can upload binaries (.ipa or .pkg files) to [iTunes Connect](https://itunesconnect.apple.com/). The **Deploy to iTunes Connect - Application Loader** Step can connect to your Apple Developer Account either with session-based authentication or with the App Store Connect API. Choose your favorite (but not both) and enter the respective credentials in the Step’s input fields.
+With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader) you can upload binaries (.ipa or .pkg files) to [iTunes Connect](https://itunesconnect.apple.com/). The **Deploy to iTunes Connect - Application Loader** Step can connect to your Apple Developer Account either with session-based authentication or with the App Store Connect API. Choose your favorite (but not both) and enter the respective credentials in the Step’s input fields.
 
 1. Add the Step in your Workflow.
 2. Set up your connection:
