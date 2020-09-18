@@ -4,7 +4,7 @@ last_modified_at:
 title: アカウントセキュリティ
 menu:
   getting-started-main:
-    weight: 13
+    weight: 14
 
 ---
 ## 二段階認証の有効化
