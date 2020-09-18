@@ -168,6 +168,3 @@ With this Step you can upload binaries (.ipa or .pkg files) to [iTunes Connect]
 
 The **Deploy to iTunes - Application Loader** Step is now set to connect to the Apple Developer account.
 
-1. ![](/img/appstoreconnect_sessionbased.jpg)
-
-   ![](/img/connected-apple-dev-portal.png)
