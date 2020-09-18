@@ -11,7 +11,6 @@ redirect_from:
 summary: Connecting your Apple Developer Account allows Bitrise to reuse your authentication
   sessions for 30 days so you do not have to manually go through 2FA on every iOS
   deploy.
-published: false
 
 ---
 Your Workflow may contain Steps that need information from your Apple Developer account. If so, you need to provide authentication data to allow Bitrise to connect to your Apple Developer account. You may also need to authorize the app to use the data from this account when connected.
