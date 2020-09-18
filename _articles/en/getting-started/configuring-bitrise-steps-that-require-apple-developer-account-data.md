@@ -18,7 +18,7 @@ menu:
 ---
 Your Workflow may contain Steps that need information from your Apple Developer account. If so, you need to provide authentication data to allow Bitrise to connect to your Apple Developer account. You may also need to authorize the app to use the data from this account when connected.
 
-To determine if you need to connect your Apple Developer account and authorize your app, check out Steps that require connecting to your Apple Developer account and allow your app to use this data.
+To determine if you need to connect your Apple Developer account and authorize your app, check out [Steps that require connecting to your Apple Developer account](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#steps-that-require-connecting-to-your-apple-developer-account) and allow your app to use this data.
 
 ## Steps that require connecting to your Apple Developer account
 
@@ -28,7 +28,7 @@ The table below table sums up what you have to do to establish connection betwee
 
 | Steps | Connection type |
 | --- | --- |
-| iOS Auto Provision with App Store Connect API | App Store Connect API |
+| [iOS Auto Provision with App Store Connect API](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#ios-auto-provision-with-app-store-connect-api-step) | App Store Connect API |
 | iOS Auto Provision with Apple ID Step | session-based |
 | Fastlane Step | session-based |
 | Deploy to iTunes Connect Step | session-based |
