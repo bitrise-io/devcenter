@@ -13,7 +13,7 @@ description: Connecting your Apple Developer Account allows Bitrise to reuse you
   on every iOS deploy.
 menu:
   getting-started-main:
-    weight: 9
+    weight: 10
     title: Connecting your Apple Developer Account
 published: false
 

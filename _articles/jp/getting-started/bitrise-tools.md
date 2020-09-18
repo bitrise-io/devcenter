@@ -5,7 +5,7 @@ title: Bitrise tools
 redirect_from: "/jp/tools/bitrise-tools/"
 menu:
   getting-started-main:
-    weight: 39
+    weight: 40
 
 ---
 ## Bitrise CLI tools
