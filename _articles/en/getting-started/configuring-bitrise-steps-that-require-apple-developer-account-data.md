@@ -24,7 +24,7 @@ To determine if you need to connect your Apple Developer account and authorize y
 
 The following Steps require connection to your Apple Developer account. If you’re using any of these Steps, make sure you connect your Apple Developer Account with the right connection method.
 
-The table below table sums up what you have to do to establish connection between Bitrise and your Apple Developer account.
+The table below table sums up which authentication method the Step uses.
 
 | Steps | Connection type |
 | --- | --- |
