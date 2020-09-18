@@ -28,7 +28,7 @@ The table below table sums up what you have to do to establish connection betwee
 
 | Steps | Connection type |
 | --- | --- |
-| [iOS Auto Provision with App Store Connect API](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#ios-auto-provision-with-app-store-connect-api-step) | App Store Connect API |
+| iOS Auto Provision with App Store Connect API | App Store Connect API |
 | iOS Auto Provision with Apple ID Step | session-based |
 | Fastlane Step | session-based |
 | Deploy to iTunes Connect Step | session-based |
@@ -56,7 +56,7 @@ Use this method to provide authentication data to connect Bitrise to your Apple 
 6. Fill out all required fields: provide a work or personal **Name** of the team, **an** [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests "https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests"), the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api "https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api"). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
 
    ![](https://devcenter.bitrise.io/img/appstoreconnectapi-addanaccount.jpg)
-7. Continue with Assigning an Apple Developer Account for your app.
+7. Continue with assigning an Apple Developer Account for your app.
 
 ### Assigning an Apple Developer Account for your app
 
@@ -93,7 +93,7 @@ Use this method to provide authentication data to connect to your Apple Develope
 
    ![](/img/2fa.jpg)
 8. Your authentication expires in 30 days and you will have to authenticate again. Go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate (2SA/2FA**) to re-authenticate.
-9. Continue with Assigning an Apple Developer Account for your app \[link\].
+9. Continue with assigning an Apple Developer Account for your app.
 
 ### Assigning an Apple Developer Account for your app
 
@@ -127,7 +127,7 @@ If you wish to use Fastlane Step to deploy to iOS apps to the App Store or uploa
 
    ![](/img/sync-your-account.jpg)
 7. Your authentication expires in 30 days and you will have to authenticate again. Go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate (2SA/2FA**) to re-authenticate.
-8. Continue with Assigning an Apple Developer Account for your app.
+8. Continue with assigning an Apple Developer Account for your app.
 
 ### Assigning an Apple Developer Account for your app
 
