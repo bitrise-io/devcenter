@@ -67,13 +67,13 @@ When using the **iOS Auto Provision with App Store Connect API** Step, you also 
 1. Open your app’s page on [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
 2. Select the **Team** tab.
 3. Scroll down to the **Connected Apple Developer Portal Account** section.
-4. Select the account for the app to use in the **Apple Developer Portal API** dropdown. It displays only the app owner’s connected Apple Developer account.
+4. Select the account for the app to use in the **Apple Developer Portal API** dropdown. It displays only the app owner’s connected Apple Developer account.![](/img/connected-apple-developer-account.jpg)
 
-The **iOS Auto Provision with App Store Connect API** step is now set to connect to the Apple Developer account assigned to the app during your build.
+The **iOS Auto Provision with App Store Connect API** Step is now set to connect to the Apple Developer account assigned to the app during your build.
 
 ## iOS Auto Provision with Apple ID Step
 
-This Step automatically manages your iOS provisioning profiles for your Xcode project. This Step uses session-based authentication to connect to an Apple Developer account. In addition to an Apple ID and password, it also stores the 2 factor authentication code you provide. Please note that the 2FA code is only valid for 30 days. When the 2FA code expires, you will need to re-authenticate to provide a new code.
+[This Step](https://www.bitrise.io/integrations/steps/ios-auto-provision) automatically manages your iOS provisioning profiles for your Xcode project. This Step uses session-based authentication to connect to an Apple Developer account. In addition to an Apple ID and password, it also stores the 2-factor authentication (2FA) code you provide. Please note that the 2FA code is only valid for 30 days. When the 2FA code expires, you will need to re-authenticate to provide a new code.
 
 {% include message_box.html type="note" title="iOS Auto Provision with Apple ID is deprecated" content="This method has been deprecated. We highly recommend that you use the **iOS Auto Provision App Store Connect API** Step instead."%}
 
@@ -100,7 +100,7 @@ When using the **iOS Auto Provision with Apple ID** Step, you also need to sele
 3. Scroll down to the **Connected Apple Developer Portal Account** section.
 4. Select the account for the app to use. Note that the **Session based authentication (deprecated)** dropdown displays the connected Apple Developer accounts belonging to the app owner and other team members with admin authority.
 
-The **iOS Auto Provision with Apple ID** step is now set to connect to the Apple Developer account assigned to the app during your build.
+The **iOS Auto Provision with Apple ID** Step is now set to connect to the Apple Developer account assigned to the app during your build.
 
 ## Fastlane Step
 
@@ -152,7 +152,7 @@ With this Step you can upload binaries (.ipa or .pkg files) to [iTunes Connect]
    * For the App Store Connect API: Provide your **API Key URL** (for example, https://URL/TO/AuthKey_something.p8 or file:///PATH/TO/AuthKey_something.p8) and the **Issuer ID** as Step inputs. Please note that connecting with the App Store Connect API works with XCode 11.0 and above releases.
 3. Save your changes.
 
-The **Deploy to iTunes - Application Loader** step is now set to connect to the Apple Developer account.
+The **Deploy to iTunes - Application Loader** Step is now set to connect to the Apple Developer account.
 
 1. ![](/img/appstoreconnect_sessionbased.jpg)
 
