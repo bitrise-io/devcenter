@@ -6,6 +6,9 @@ redirect_from: []
 description: 'In the Tutorials section, we are offering more detailed, in-depth guides,
   often specific to certain platforms or tools. '
 menu:
+  getting-started-main:
+    weight: 39
+    title: Configuring Bitrise Steps that require Apple Developer account data
   main:
     identifier: tutorials-main
     weight: 24
