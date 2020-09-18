@@ -8,9 +8,9 @@ title: Configuring Bitrise Steps that require Apple Developer account data
 redirect_from:
 - https://devcenter.bitrise.io/getting-started/signing-up/connecting-apple-dev-account/
 - "/signing-up/connecting-apple-dev-account"
-summary: Connecting your Apple Developer Account allows Bitrise to reuse your authentication
-  sessions for 30 days so you do not have to manually go through 2FA on every iOS
-  deploy.
+summary: 'Your Workflow may contain Steps that need information from your Apple Developer
+  account. If so, you need to provide authentication data to allow Bitrise to connect
+  to your Apple Developer account. '
 menu:
   getting-started-main:
     weight: 9
