@@ -73,7 +73,7 @@ The **iOS Auto Provision with App Store Connect API** Step is now set to connect
 
 ## iOS Auto Provision with Apple ID Step
 
-[This Step](https://www.bitrise.io/integrations/steps/ios-auto-provision) automatically manages your iOS provisioning profiles for your Xcode project. This Step uses session-based authentication to connect to an Apple Developer account. In addition to an Apple ID and password, it also stores the 2-factor authentication (2FA) code you provide. Please note that the 2FA code is only valid for 30 days. When the 2FA code expires, you will need to re-authenticate to provide a new code.
+[This Step](https://www.bitrise.io/integrations/steps/ios-auto-provision) automatically manages your iOS provisioning profiles for your Xcode project. The Step uses session-based authentication to connect to an Apple Developer account. In addition to an Apple ID and password, it also stores the 2-factor authentication (2FA) code you provide. Please note that the 2FA code is only valid for 30 days. When the 2FA code expires, you will need to re-authenticate to provide a new code.
 
 {% include message_box.html type="note" title="iOS Auto Provision with Apple ID is deprecated" content="This method has been deprecated. We highly recommend that you use the **iOS Auto Provision App Store Connect API** Step instead."%}
 
