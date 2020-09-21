@@ -115,7 +115,7 @@ With this Step you can run your [_fastlane_](https://fastlane.tools/) lanes on B
 
 ### Defining your Apple Developer Account to Bitrise
 
-If you wish to use Fastlane Step to deploy to iOS apps to the App Store or upload metadata, you’ll have to provide authentication data to connect to your Apple Developer account.
+If you wish to use [Fastlane Step](https://www.bitrise.io/integrations/steps/fastlane) to deploy iOS apps to the App Store or upload metadata, you’ll have to provide authentication data to connect to your Apple Developer account.
 
 1. Log in to [bitrise.io](https://www.bitrise.io/).
 2. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
@@ -147,10 +147,10 @@ The **Fastlane** Step is now set to connect to the Apple Developer account assig
 
 With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver) you can upload screenshots, metadata and binaries to [iTunes Connect](https://itunesconnect.apple.com/) and submit your app for App Store review using the fastlane [deliver](https://docs.fastlane.tools/actions/deliver/) action.
 
-If you use the **Deploy to iTunes Connect** Step in your Workflow, you can set up connection to your Apple Developer Account by adding your credentials to the Step’s input fields.
+If you wish to use the **Deploy to iTunes Connect** Step in your Workflow, you can set up connection to your Apple Developer Account by adding your credentials to the Step’s input fields.
 
 1. Add the Step in your Workflow.
-2. Provide your **Apple ID**, **Password**, and the [**Application Specific Password**](https://appleid.apple.com/#!&page=signin) to the respective input fields.
+2. Provide your **Apple ID**, **Password**, and the **Application Specific Password** to the respective input fields.
 3. Save your changes.
 
 The **Deploy to iTunes Connect** Step is now set to connect to the Apple Developer account.
@@ -161,7 +161,7 @@ With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconne
 
 1. Add the Step in your Workflow.
 2. Set up your connection:
-   * For the session-based method: Provide your **Apple ID,** **Password** and [**Application Specific Password**](https://appleid.apple.com/#!&page=signin) to the respective input fields.
+   * For the session-based method: Provide your **Apple ID,** **Password** and **Application Specific Password** to the respective input fields.
    * For the App Store Connect API: Provide your **API Key URL** (for example, https://URL/TO/AuthKey_something.p8 or file:///PATH/TO/AuthKey_something.p8) and the **Issuer ID** as Step inputs. Please note that connecting with the App Store Connect API works with XCode 11.0 and above releases.
 3. Save your changes.
 
