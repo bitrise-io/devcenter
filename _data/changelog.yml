@@ -1,6 +1,12 @@
 ---
+- title: Configuring Steps that require Apple Developer account data
+  modified: 2020-09-21 00:00:00 +0200
+  changelog: Information on how to configure Bitrise Steps that require Apple Developer
+    account data has been updated.
+  type: update
+  url: "/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/"
 - title: Starting parallel builds with a single trigger
-  modified: 2020-09-14 00:00:00 +0200
+  modified: 2020-09-14T00:00:00.000+02:00
   changelog: A note has been added to the article on why you have to use the Bitrise
     Start Build Step online in parallel builds scenarios.
   type: update
