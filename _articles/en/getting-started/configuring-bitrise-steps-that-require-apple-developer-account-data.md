@@ -145,7 +145,7 @@ The **Fastlane** Step is now set to connect to the Apple Developer account assig
 
 ## Deploy to iTunes Connect Step
 
-With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver) you can upload screenshots, metadata and binaries to [iTunes Connect](https://itunesconnect.apple.com/) and submit your app for App Store review using the fastlane [deliver](https://docs.fastlane.tools/actions/deliver/) action.
+With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver), you can upload screenshots, metadata and binaries to [iTunes Connect](https://itunesconnect.apple.com/) and submit your app for App Store review using the fastlane [deliver](https://docs.fastlane.tools/actions/deliver/) action.
 
 If you wish to use the **Deploy to iTunes Connect** Step in your Workflow, you can set up connection to your Apple Developer Account by adding your credentials to the Step’s input fields.
 
