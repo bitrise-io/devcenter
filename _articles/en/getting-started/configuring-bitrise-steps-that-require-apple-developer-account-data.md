@@ -149,7 +149,7 @@ With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconne
 
 If you wish to use the **Deploy to iTunes Connect** Step in your Workflow, you can set up connection to your Apple Developer Account by adding your credentials to the Step’s input fields.
 
-1. Add the Step in your Workflow.
+1. Add the Step to your Workflow.
 2. Provide your **Apple ID**, **Password**, and the **Application Specific Password** to the respective input fields.
 3. Save your changes.
 
@@ -159,7 +159,7 @@ The **Deploy to iTunes Connect** Step is now set to connect to the Apple Develop
 
 With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader) you can upload binaries (.ipa or .pkg files) to [iTunes Connect](https://itunesconnect.apple.com/). The **Deploy to iTunes Connect - Application Loader** Step can connect to your Apple Developer Account either with session-based authentication or with the App Store Connect API. Choose your favorite (but not both) and enter the respective credentials in the Step’s input fields.
 
-1. Add the Step in your Workflow.
+1. Add the Step to your Workflow.
 2. Set up your connection:
    * For the session-based method: Provide your **Apple ID,** **Password** and **Application Specific Password** to the respective input fields.
    * For the App Store Connect API: Provide your **API Key URL** (for example, https://URL/TO/AuthKey_something.p8 or file:///PATH/TO/AuthKey_something.p8) and the **Issuer ID** as Step inputs. Please note that connecting with the App Store Connect API works with XCode 11.0 and above releases.
