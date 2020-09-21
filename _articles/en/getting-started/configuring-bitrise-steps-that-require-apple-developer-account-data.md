@@ -47,7 +47,7 @@ The [Step](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstore
 
 Use this method to provide authentication data to connect Bitrise to your Apple Developer account when using the [**iOS Auto Provision with App Store Connect API**](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstoreconnect) Step.
 
-1. On [App Store Connect](https://appstoreconnect.apple.com/login "https://appstoreconnect.apple.com/login") [generate a new API key](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api "https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api") under **Users and Access**.
+1. On [App Store Connect](https://appstoreconnect.apple.com/login "https://appstoreconnect.apple.com/login"), [generate a new API key](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api "https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api") under **Users and Access**.
 2. Log into [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
 3. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview "https://app.bitrise.io/me/profile#/overview") from the dropdown menu.
 4. On the menu bar on the left, select **Apple Developer Account**.
@@ -93,7 +93,7 @@ Use this method to provide authentication data to connect to your Apple Develope
 7. You will be prompted to provide your verification code. Please make sure you receive the 6-digit code on a trusted device using iCloud and not via SMS.
 
    ![](/img/2fa.jpg)
-8. Your authentication expires in 30 days and you will have to authenticate again. Go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate (2SA/2FA**) to re-authenticate.
+8. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate (2SA/2FA**) to re-authenticate.
 9. Continue with assigning an Apple Developer Account for your app.
 
 ### Assigning an Apple Developer Account for your app
@@ -127,7 +127,7 @@ If you wish to use Fastlane Step to deploy to iOS apps to the App Store or uploa
 6. Provide your **Apple ID** and **Password** in the popup window and click **Store credentials**.
 
    ![](/img/sync-your-account.jpg)
-7. Your authentication expires in 30 days and you will have to authenticate again. Go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate (2SA/2FA**) to re-authenticate.
+7. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate (2SA/2FA**) to re-authenticate.
 8. Continue with assigning an Apple Developer Account for your app.
 
 ### Assigning an Apple Developer Account for your app
