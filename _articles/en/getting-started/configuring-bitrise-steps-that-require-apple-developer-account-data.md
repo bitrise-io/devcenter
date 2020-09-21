@@ -14,7 +14,6 @@ summary: 'Your Workflow may contain Steps that need information from your Apple 
 menu:
   getting-started-main:
     weight: 9
-published: false
 
 ---
 Your Workflow may contain Steps that need information from your Apple Developer account. If so, you need to provide authentication data to allow Bitrise to connect to your Apple Developer account. You may also need to authorize the app to use the data from this account when connected.
@@ -157,7 +156,7 @@ The **Deploy to iTunes Connect** Step is now set to connect to the Apple Develop
 
 ## Deploy to iTunes Connect - Application Loader Step
 
-With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader) you can upload binaries (.ipa or .pkg files) to [iTunes Connect](https://itunesconnect.apple.com/). The **Deploy to iTunes Connect - Application Loader** Step can connect to your Apple Developer Account either with session-based authentication or with the App Store Connect API. Choose your favorite (but not both) and enter the respective credentials in the Step’s input fields.
+With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader), you can upload binaries (.ipa or .pkg files) to [iTunes Connect](https://itunesconnect.apple.com/). The **Deploy to iTunes Connect - Application Loader** Step can connect to your Apple Developer Account either with session-based authentication or with the App Store Connect API. Choose your favorite (but not both) and enter the respective credentials in the Step’s input fields.
 
 1. Add the Step to your Workflow.
 2. Set up your connection:
