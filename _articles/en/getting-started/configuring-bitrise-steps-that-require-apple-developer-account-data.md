@@ -14,6 +14,7 @@ summary: 'Your Workflow may contain Steps that need information from your Apple 
 menu:
   getting-started-main:
     weight: 9
+published: false
 
 ---
 Your Workflow may contain Steps that need information from your Apple Developer account. If so, you need to provide authentication data to allow Bitrise to connect to your Apple Developer account. You may also need to authorize the app to use the data from this account when connected.
