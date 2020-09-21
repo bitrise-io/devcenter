@@ -66,7 +66,7 @@ When using the **iOS Auto Provision with App Store Connect API** Step, you also 
 1. Open your app’s page on [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
 2. Select the **Team** tab.
 3. Scroll down to the **Connected Apple Developer Portal Account** section.
-4. Select the account for the app to use in the **Apple Developer Portal API** dropdown. It displays only the app owner’s connected Apple Developer account.![](/img/connected-apple-developer-account.jpg)
+4. Select the account for the app to use in the **Apple Developer Portal API** dropdown. It displays only your connected Apple Developer account and no app owner's or app admin's connected account is displayed here.![](/img/connected-apple-developer-account.jpg)
 
 The **iOS Auto Provision with App Store Connect API** Step is now set to connect to the Apple Developer account assigned to the app during your build.
 
