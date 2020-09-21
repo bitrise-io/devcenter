@@ -1,5 +1,4 @@
 ---
-last_modified_at: 
 tag:
 - git
 - getting-started
@@ -9,6 +8,11 @@ redirect_from:
 - "/getting-started/signing-up/signing-up-with-gitlab/"
 - "/getting-started/signing-up/signing-up-with-bitbucket/"
 - "/getting-started/signing-up/signing-up-with-github/"
+summary: 'You can authenticate yourself with your GitHub, Bitbucket or GitLab user
+  against Bitrise. It brings some practical benefits, like logging in with one click
+  and of course you won''t have to authorize your Git account when adding repositories
+  hosted by these providers again. '
+last_modified_at: 
 description: 'You can authenticate yourself with your GitHub, Bitbucket or GitLab
   user against Bitrise. It brings some practical benefits, like logging in with one
   click and of course you won''t have to authorize your Git account when adding repositories
@@ -53,7 +57,7 @@ If you press the **Grant access** button on Bitbucket, you will be redirected to
 
 #### GitLab
 
-![Screenshot](img/signing-up/gitlab_authorization.png)
+![Screenshot](/img/signing-up/gitlab_authorization.png)
 
 If you press the **Authorize** button on Gitlab, you will be redirected to Bitrise.
 
@@ -123,4 +127,8 @@ Now let's see how to sign up to Bitrise.
 
 If all went well, you're landed on your Bitrise Dashboard where you can view the Organization's apps! If you go to your **Account Settings**, you will see the [Organization]() you've just joined.
 
-{% include banner.html banner_text="Let's sign up to Bitrise" url="https://app.bitrise.io/users/sign_up" button_text="Create an account" %}
+<div class="banner">
+<img src="/assets/images/banner-bg-888x170.png" style="border: none;">
+<div class="deploy-text">Let's sign up to Bitrise</div>
+<a target="_blank" href="https://app.bitrise.io/users/sign_up"><button class="button">Create an account</button></a>
+</div>
