@@ -33,7 +33,7 @@ The table below table sums up which authentication method the Step uses.
 | [iOS Auto Provision with Apple ID Step](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#ios-auto-provision-with-apple-id-step) | session-based |
 | [Fastlane Step](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#fastlane-step) | session-based |
 | [Deploy to iTunes Connect Step](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#deploy-to-itunes-connect-step) | session-based |
-| [Deploy to iTunes Connect Step - Application Loader](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#deploy-to-itunes-connect---application-loader-step) | App Store Connect API or session-based |
+| [Deploy to iTunes Connect - Application Loader Step](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#deploy-to-itunes-connect---application-loader-step) | App Store Connect API or session-based |
 
 ## iOS Auto Provision with App Store Connect API Step
 
