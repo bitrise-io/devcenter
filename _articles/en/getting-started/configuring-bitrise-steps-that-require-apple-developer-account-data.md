@@ -4,7 +4,7 @@ tag:
 - builds
 - code-signing
 - security
-title: Configuring Bitrise Steps that require Apple Developer account data
+title: Configuring Steps that require Apple Developer account data
 redirect_from:
 - https://devcenter.bitrise.io/getting-started/signing-up/connecting-apple-dev-account/
 - "/signing-up/connecting-apple-dev-account"
