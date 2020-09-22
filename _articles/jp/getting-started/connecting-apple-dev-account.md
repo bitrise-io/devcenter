@@ -8,6 +8,7 @@ redirect_from:
 menu:
   getting-started-main:
     weight: 8
+published: false
 
 ---
 BitriseでApple Developer Accountを認証し、Apple Developer PortalとBitriseのプロジェクトを統合することができます。
