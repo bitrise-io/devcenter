@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Configuring Steps that require Apple Developer account information
+title: Configuring Steps that require Apple Developer account data
 redirect_from: []
 summary: ''
 
