@@ -75,7 +75,7 @@ For more information on the bitrise.yml file, see [Basics of bitrise.yml](/bitri
      workflows:
      	primary:
      	steps:
-     	- git::https://github.com/example-repo/example-test.git@master
+     	- git::https://github.com/example-repo/example-test.git@master:
      	  title: "Example Test"
       ```
 
