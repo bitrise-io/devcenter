@@ -1,19 +1,8 @@
 ---
-tag:
-- apple
-- builds
-- code-signing
-- security
+tag: []
 title: Configuring Steps that require Apple Developer account data
-redirect_from:
-- https://devcenter.bitrise.io/getting-started/signing-up/connecting-apple-dev-account/
-- "/signing-up/connecting-apple-dev-account"
-summary: 'Your Workflow may contain Steps that need information from your Apple Developer
-  account. If so, you need to provide authentication data to allow Bitrise to connect
-  to your Apple Developer account. '
-menu:
-  getting-started-main:
-    weight: 9
+redirect_from: []
+summary: ''
 
 ---
 Your Workflow may contain Steps that need information from your Apple Developer account. If so, you need to provide authentication data to allow Bitrise to connect to your Apple Developer account. You may also need to authorize the app to use the data from this account when connected.
