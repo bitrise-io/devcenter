@@ -6,6 +6,13 @@ summary: ''
 published: false
 
 ---
+This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Idaptive](https://www.idaptive.com/ "https://www.idaptive.com/").
+
+{% include message_box.html type="note" title="Before you start" content="
+
+* You must be logged into your Admin Portal on [Idaptive](https://www.idaptive.com/ "https://www.idaptive.com/") to set up Bitrise as a SAML SSO app and establish the connection between Bitrise and your Idaptive. If you are using the **User Portal**, Switch to **Admin Portal** by clicking your avatar on Idaptive.![](/img/step1.jpg)
+* You must be one of the owners of the Bitrise Organization to configure SAML SSO on Bitrise."%}
+
 ## Getting configuration information from Idaptive
 
  1. Log into Idaptive as an Admin.
