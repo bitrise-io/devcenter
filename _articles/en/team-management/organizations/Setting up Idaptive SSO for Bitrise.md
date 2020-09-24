@@ -1,6 +1,6 @@
 ---
 tag: []
-title: ''
+title: Setting up Idaptive SSO for Bitrise
 redirect_from: []
 summary: ''
 published: false
