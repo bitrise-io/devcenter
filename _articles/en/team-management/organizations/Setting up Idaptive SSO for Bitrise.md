@@ -20,7 +20,9 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML ap
  3. On the **Custom** tab and select **SAML**, and click **Add**. On the **Add Web App** popup hit **Yes**. **Close** the window. You will be automatically directed to the **Settings** page.
 
     ![](/img/step3.png)
- 4. Add 'Bitrise' to the **Name** and **Application ID** fields on the **Settings** page and click **Save**.
+ 4. Add Bitrise to the **Name** and **Application ID** fields on the **Settings** page and click **Save**.
+
+    ![](/img/step4b.jpg)
  5. Click **Trust** on the left menu bar and select the **Manual configuration** under **Identity Provider Configuration**.
  6. Click the **Signing Certificat**e dropdown and download the certificate. Open it with a text editor so that you can copy the full content of the certificate.
  7. Insert it in the **Certificate** text box on the **Single Sign On page** of Bitrise.
