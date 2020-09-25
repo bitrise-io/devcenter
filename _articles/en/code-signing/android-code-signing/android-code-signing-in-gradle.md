@@ -20,10 +20,12 @@ You can manually specify the code signing configuration in your Gradle configura
 1. Open your module-level `build.gradle` file.
 2. Add the `signingConfigs` codeblock to your code and define the following entries specific to your project:
    `storeFile`, `storePassword`, `keyAlias`, and `keyPassword`.
+3. Attach the signing config to a build type.
 
 **Example signing configuration**:
 
-    android { 
+    android {
+       // Make sure signingConfigs is defined before buildTypes.
        signingConfigs { 
        	   release { 
            	 keyAlias 'MyAndroidKey' 
@@ -31,7 +33,17 @@ You can manually specify the code signing configuration in your Gradle configura
              storeFile file("/path/to/my/keystore.jks") 
              storePassword '***' 
            } 
-       } ...
+       } 
+      
+
+      buildTypes {
+          release {
+              // Use signing config for build type
+              signingConfig signingConfigs.release
+              // ...
+          }
+      }
+      // ...
 
 For more information, check out how to [configure Gradle to sign your app](https://developer.android.com/studio/publish/app-signing).
 
@@ -53,6 +65,17 @@ If your keystore path is `$HOME/keystores/my_keystore.jks`, then your `build.gra
 
 You can use the `System.getenv("ENV_KEY")` file to access Environment Variables in the Gradle config file.
 
+Add the file donwloader step to download the keystore:
+
+    - file-downloader@1:
+        inputs:
+        - destination: "$HOME/keystores/my_keystore.jks"
+        - source: "$BITRISEIO_ANDROID_KEYSTORE_URL"
+    - gradle-runner@1:
+        inputs:
+        - gradle_task: assembleRelease
+        - gradlew_path: "./gradlew"
+
 If you use Environment Variables as `keyPassword` and `storePassword` in the **Code signing** tab, your `build.gradle` will look like this:
 
     android {
@@ -64,7 +87,16 @@ If you use Environment Variables as `keyPassword` and `storePassword` in the **C
              storePassword System.getenv("BITRISEIO_ANDROID_KEYSTORE_PASSWORD")
            }
        }
-        ...
+       
+       buildTypes {
+          release {
+              // Use signing config for build type
+              signingConfig signingConfigs.release
+              // ...
+          }
+       }
+       ...
+ 
 
 You get these Environment Variables when you upload your keystore to the **GENERIC FILE STORAGE** field of the **Code Signing** tab in your Workflow Editor.
 
