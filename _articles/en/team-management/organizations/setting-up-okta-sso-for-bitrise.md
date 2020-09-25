@@ -13,7 +13,7 @@ changelog: ''
 summary: ''
 menu:
   organizations:
-    weight: 21
+    weight: 23
 
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Okta](https://www.okta.com/).
