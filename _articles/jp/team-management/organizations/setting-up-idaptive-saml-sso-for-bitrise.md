@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Setting up Idaptive SSO for Bitrise
+title: Setting up Idaptive SAML SSO for Bitrise
 redirect_from: []
 summary: ''
 menu:
