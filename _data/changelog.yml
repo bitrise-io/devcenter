@@ -1,6 +1,11 @@
 ---
+- title: Setting up Idaptive SAML SSO for Bitrise
+  modified: 2020-09-25 00:00:00 +0200
+  changelog: Step by step guide on how to set up Bitrise as a SAML SSO app on Idaptive.
+  type: new
+  url: "/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/"
 - title: Configuring Steps that require Apple Developer account data
-  modified: 2020-09-21 00:00:00 +0200
+  modified: 2020-09-21T00:00:00.000+02:00
   changelog: Information on how to configure Bitrise Steps that require Apple Developer
     account data has been updated.
   type: update
