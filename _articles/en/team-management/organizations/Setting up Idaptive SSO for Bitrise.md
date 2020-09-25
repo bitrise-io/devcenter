@@ -1,9 +1,12 @@
 ---
-tag: []
+tag:
+- teams
+- org
+- security
+- sso
 title: Setting up Idaptive SAML SSO for Bitrise
 redirect_from: []
 summary: ''
-published: false
 
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Idaptive](https://www.idaptive.com/ "https://www.idaptive.com/").
