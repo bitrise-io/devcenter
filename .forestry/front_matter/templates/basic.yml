@@ -245,6 +245,7 @@ pages:
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
+- _articles/en/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-onelogin-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise.md
@@ -298,6 +299,7 @@ pages:
 - _articles/jp/infrastructure/stack-update-and-removal-policy.md
 - _articles/jp/steps-and-workflows/copying-a-workflow-from-one-app-to-another.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
+- _articles/jp/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-ping-identity-sso-for-bitrise.md
 - _articles/jp/testing/exporting-to-test-reports-from-custom-script-steps.md
