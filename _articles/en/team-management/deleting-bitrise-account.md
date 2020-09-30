@@ -1,5 +1,5 @@
 ---
-title: Deleting your Bitrise account
+title: Editing and deleting your Bitrise account
 tag:
 - teams
 - orgs
@@ -10,9 +10,25 @@ redirect_from: "/team-management/index/"
 menu:
   team-management-main:
     weight: 1
-published: false
 
 ---
+## Updating your account information
+
+On the **Account settings** page, you can easily:
+
+* Change your username and associated email address.
+* Change your password.
+* Update your personal and company information. 
+
+To do so:
+
+1. Log in to your Bitrise account.
+2. In the top right corner, click on BitBot to open the dropdown menu and select **Account settings**.
+3. On the top left, click **Edit profile**.
+4. Update every section you want to and then click **Update** at the bottom. 
+
+## Deleting your account
+
 We’re always sad to see you go but if you wish to delete your Bitrise account, it’s quite simple.
 
 {% include message_box.html type="important" title="Apps and Orgs of the account" content="Before you delete your account, make sure you transfer your existing apps to another account, or delete the apps themselves first.
