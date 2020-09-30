@@ -1,6 +1,12 @@
 ---
+- title: Managing your personal subscription plan
+  modified: 2020-09-30 14:00:00 +0200
+  changelog: Learn about how to change between personal subscription plans, add and
+    update payment information, and canceling your subscription..
+  type: new
+  url: "/team-management/managing-personal-plan/"
 - title: Setting up Idaptive SAML SSO for Bitrise
-  modified: 2020-09-25 00:00:00 +0200
+  modified: 2020-09-25T00:00:00.000+02:00
   changelog: Step by step guide on how to set up Bitrise as a SAML SSO app on Idaptive.
   type: new
   url: "/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/"
