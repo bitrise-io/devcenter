@@ -1,5 +1,5 @@
 ---
-title: Managing your personal subscription plan
+title: Deleting your Bitrise account
 tag:
 - teams
 - orgs
