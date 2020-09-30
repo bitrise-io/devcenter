@@ -7,7 +7,7 @@ menu:
 ---
 To have Bitrise automatically start a build every time you push code into your repository, you can set up a webhook at your code hosting service which will automatically trigger a build on Bitrise with the code you push to your repository.
 
-You can register a webhook either automatically or manually. This guide walks you through the process of manually registering a webhook. [Read more about automatic webhook registration](/webhooks/#setting-up-incoming-webhooks-automatically).
+You can register a webhook either automatically or manually. This guide walks you through the process of manually registering a webhook. [Read more about automatic webhook registration](/webhooks/adding-webhooks/#adding-a-webhook-automatically-on-the-code-tab).
 
 ## Get the webhook URL for Bitbucket
 
