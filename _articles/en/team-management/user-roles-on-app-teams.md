@@ -10,7 +10,7 @@ description: 'Roles are very important on Bitrise. They limit what you can and c
   different roles on different applications.'
 menu:
   team-management-main:
-    weight: 3
+    weight: 5
 
 ---
 Roles are very important on Bitrise. They limit what you can and cannot do with an application.

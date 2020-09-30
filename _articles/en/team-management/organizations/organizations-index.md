@@ -12,7 +12,7 @@ description: The purpose of Organizations is to make it easier to manage several
 menu:
   team-management-main:
     identifier: organizations
-    weight: 8
+    weight: 10
 
 ---
 The purpose of Organizations is to make it easier to manage several people working on different apps on Bitrise. [Organizations can own an unlimited number of apps](/team-management/organizations/managing-apps/), and Organization owners can assign Organization members to work on different apps as they see fit.
