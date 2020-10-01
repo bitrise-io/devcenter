@@ -80,7 +80,7 @@ However, once you did the initial configuration to set up using the `bitrise.yml
 
 Any code push or pull request to `main` triggers a Workflow called `main`. Any code push or pull request to `deploy` triggers a Workflow called `deploy`.
 
-In the repository, there is a `bitrise.yml` file on both the `main` and the `deploy` branch. When making changes to the Workflows, the FantasticApp team commits the modified `bitrise.yml` file to both branches to ensure that their Workflows are up to date on both. "%}
+In the repository, there is a `bitrise.yml` file on both the `main` and the `deploy` branch, containing both Workflows. When making changes to the Workflows, the FantasticApp team commits the modified `bitrise.yml` file to both branches to ensure that their Workflows are up to date on both. "%}
 
 ## Storing the bitrise.yml file on bitrise.io
 
