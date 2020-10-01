@@ -10,7 +10,7 @@ description: With a personal user account, you can use Bitrise as a Hobby user o
 redirect_from: "/team-management/index/"
 menu:
   team-management-main:
-    weight: 1
+    weight: 2
 
 ---
 On Bitrise, there are two subscription types for personal accounts: the Hobby plan and the Developer plan. The Hobby plan is our free plan while the Developer plan is the only premium plan that you can use without creating an Organization.

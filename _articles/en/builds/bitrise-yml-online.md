@@ -40,7 +40,7 @@ When you store the `bitrise.yml` configuration file in your repository, the buil
 
 To check the Service credential user, go to the **Team** tab of your app, and find the **Service credential User** option. If you need to change it, keep in mind that for security reasons, you can only select your own account as service credential user. If you don't have `read` access to your app's repository at your hosting service, you can't set the appropriate Service credential user. "%}
 
-{% include message_box.html type="warning" title="Repository access" content="Be aware that if your app uses a repository where the Service credential user integration is not supported - for example, the repository is only accessible under a private IP subnet -, the feature won't work as the website can't grab the `bitrise.yml` due to IP addressing limitations. 
+{% include message_box.html type="warning" title="Repository access" content="Be aware that if your app uses a repository where the Service credential user integration is not supported - for example, the repository is only accessible under a private IP subnet -, the feature won't work as the website can't grab the `bitrise.yml` due to IP addressing limitations.
 
 The feature is definitely supported for the following hosting services:
 
@@ -62,11 +62,25 @@ You don’t need to create your own `bitrise.yml` file in advance to use this so
 5. If you don’t have a `bitrise.yml` file the repository, you will be prompted to add one.
 
    ![](/img/bitrise_workflow_editor-2.png)  
-   You can download the current `bitrise.yml` file from the website, or copy its entire content to the clipboard. Either way, you have to commit the file to the root directory of the repository to proceed. Remember: you must commit the file to the branch that is set as the default branch on bitrise.io! You can check the default branch under the **Settings** tab on our website. 
+   You can download the current `bitrise.yml` file from the website, or copy its entire content to the clipboard. Either way, you have to commit the file to the root directory of the repository to proceed. Remember: you must commit the file to the branch that is set as the default branch on [bitrise.io](bitrise.io)! You can check the default branch under the **Settings** tab on our website.
 6. Click **Update setting**.
 7. When prompted to make sure your `bitrise.yml` file is valid, click **Continue**.
 
 If all goes well, you should receive confirmation of successfully changing your `bitrise.yml` storage settings.
+
+### Storing the bitrise.yml on multiple branches
+
+When you first add the `bitrise.yml` to your repository, it must be committed to the default branch. You can check out the app's default branch on [bitrise.io](bitrise.io) under the **Settings** tab.
+
+{% include message_box.html type="warning" title="The bitrise.yml file on the default branch" content="If you choose to store the `bitrise.yml` file in the repository, the default branch must have a `bitrise.yml`!"%}
+
+However, once you did the initial configuration to set up using the `bitrise.yml` from your repository, you can store `bitrise.yml` files on other branches and use any of them to run builds. If you want to build a branch of your repository on Bitrise, you need to have a `bitrise.yml` file on that branch. And don't forget that you always need to keep a `bitrise.yml` file on the default branch.
+
+{% include message_box.html type="example" title="Example setup with bitrise.yml on multiple branches" content="Let's say you have an app called FantasticApp. In FantasticApp's Git repository, the default branch is called `main`. There is also a `deploy` branch.
+
+Any code push or pull request to `main` triggers a Workflow called `main`. Any code push or pull request to `deploy` triggers a Workflow called `deploy`.
+
+In the repository, there is a `bitrise.yml` file on both the `main` and the `deploy` branch, containing both Workflows. When making changes to the Workflows, the FantasticApp team commits the modified `bitrise.yml` file to both branches to ensure that their Workflows are up to date on both. "%}
 
 ## Storing the bitrise.yml file on bitrise.io
 
