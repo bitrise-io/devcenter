@@ -68,17 +68,17 @@ You don’t need to create your own `bitrise.yml` file in advance to use this so
 
 If all goes well, you should receive confirmation of successfully changing your `bitrise.yml` storage settings.
 
-### Storing the bitrise.yml on multiple branches 
+### Storing the bitrise.yml on multiple branches
 
-When you first add the `bitrise.yml` to your repository, it must be committed to the default branch. You can check out the app's default branch on [bitrise.io](bitrise.io) under the **Settings** tab. 
+When you first add the `bitrise.yml` to your repository, it must be committed to the default branch. You can check out the app's default branch on [bitrise.io](bitrise.io) under the **Settings** tab.
 
 {% include message_box.html type="warning" title="The bitrise.yml file on the default branch" content="If you choose to store the `bitrise.yml` file in the repository, the default branch must have a `bitrise.yml`!"%}
 
-However, once you did the initial configuration to set up using the `bitrise.yml` from your repository, you can store `bitrise.yml` files on other branches and use any of them to run builds.
+However, once you did the initial configuration to set up using the `bitrise.yml` from your repository, you can store `bitrise.yml` files on other branches and use any of them to run builds. If you want to build a branch of your repository on Bitrise, you need to have a `bitrise.yml` file on that branch. And don't forget that you always need to keep a `bitrise.yml` file on the default branch.
 
-{% include message_box.html type="example" title="Example setup with bitrise.yml on multiple branches" content="Let's say you have an app called FantasticApp. In FantasticApp's Git repository, the default branch is called `main`. There is also a `deploy` branch. 
+{% include message_box.html type="example" title="Example setup with bitrise.yml on multiple branches" content="Let's say you have an app called FantasticApp. In FantasticApp's Git repository, the default branch is called `main`. There is also a `deploy` branch.
 
-Any code push or pull request to `main` triggers a Workflow called `main`. Any code push or pull request to `deploy` triggers a Workflow called `deploy`. 
+Any code push or pull request to `main` triggers a Workflow called `main`. Any code push or pull request to `deploy` triggers a Workflow called `deploy`.
 
 In the repository, there is a `bitrise.yml` file on both the `main` and the `deploy` branch. When making changes to the Workflows, the FantasticApp team commits the modified `bitrise.yml` file to both branches to ensure that their Workflows are up to date on both. "%}
 
