@@ -1,4 +1,11 @@
 ---
+- title: Managing an app's bitrise.yml configuration
+  modified: 2020-10-01 10:00:00 +0200
+  changelog: 'You can store a bitrise.yml file on multiple branches in your repository:
+    if you wish to run builds on separate branches, all the involved branches should
+    have their own bitrise.yml file.'
+  type: update
+  url: "/builds/bitrise-yml-online/#storing-the-bitriseyml-on-multiple-branches"
 - title: Managing your personal subscription plan
   modified: 2020-09-30 14:00:00 +0200
   changelog: Learn about how to change between personal subscription plans, add and
