@@ -28,11 +28,11 @@ The below table contains a summary of the authentication method the Step uses.
 
 | Steps | Connection type |
 | --- | --- |
-| [iOS Auto Provision with App Store Connect API Step](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#ios-auto-provision-with-app-store-connect-api-step) | App Store Connect API |
-| [iOS Auto Provision with Apple ID Step](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#ios-auto-provision-with-apple-id-step) | session-based |
-| [Fastlane Step](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#fastlane-step) | session-based |
-| [Deploy to iTunes Connect Step](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#deploy-to-itunes-connect-step) | session-based |
-| [Deploy to iTunes Connect - Application Loader Step](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#deploy-to-itunes-connect---application-loader-step) | App Store Connect API or session-based |
+| iOS Auto Provision with App Store Connect API Step | App Store Connect API |
+| iOS Auto Provision with Apple ID Step | session-based |
+| Fastlane Step | session-based |
+| Deploy to iTunes Connect Step | session-based |
+| Deploy to iTunes Connect - Application Loader Step | App Store Connect API or session-based |
 
 ## iOS Auto Provision with App Store Connect API Step
 
@@ -92,7 +92,7 @@ Use this method to provide authentication data to connect to your Apple Develope
 7. You will be prompted to provide your verification code. Please make sure you receive the 6-digit code on a trusted device using iCloud and not via SMS.
 
    ![](/img/2fa.jpg)
-8. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate (2SA/2FA**).
+8. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate** (**2SA/2FA**).
 9. Continue with assigning an Apple Developer Account for your app.
 
 ### Assigning an Apple Developer Account for your app

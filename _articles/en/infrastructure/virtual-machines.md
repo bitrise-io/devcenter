@@ -47,15 +47,15 @@ You can [connect to Bitrise via VPN](/tutorials/vpn-configuration/ "https://devc
 
 ### External and internal IP addresses
 
-| Stack type                  | Public IP        | Build VM internal subnet | Note                                                                   |
-|-----------------------------|------------------|--------------------------|------------------------------------------------------------------------|
-| **Xcode and VS4Mac stacks** | 208.52.166.154   | 10.200.15.0/20           |                                                                        |
-|                             | 207.254.0.248/29 | 10.246.15.0/20          | The public address is a subnet: the entire subnet must be in the allow list! |
-|                             | 207.254.34.148   | 10.254.228.0/20          |                                                                        |
-| **Linux/Docker stacks**     | 104.197.15.74    | 10.0.0.0/9               |                                                                        |
-|                             | 35.202.121.43    | 10.0.0.0/9               |                                                                        |
-|                             | 35.237.165.17    | 10.0.0.0/9               |                                                                        |
-|                             | 35.231.56.118    | 10.0.0.0/9               |                                                                        |
+| Stack type | Public IP | Build VM internal subnet | Note |
+| --- | --- | --- | --- |
+| Xcode and VS4Mac stacks | 208.52.166.154 | 10.200.15.0/20 |  |
+|  | 207.254.0.248/29 | 10.246.15.0/20 | The public address is a subnet: the entire subnet must be in the allow list! |
+|  | 207.254.34.148 | 10.254.228.0/20 |  |
+| Linux/Docker stacks | 104.197.15.74 | 10.0.0.0/9 |  |
+|  | 35.202.121.43 | 10.0.0.0/9 |  |
+|  | 35.237.165.17 | 10.0.0.0/9 |  |
+|  | 35.231.56.118 | 10.0.0.0/9 |  |
 
 ## Storage space
 
@@ -131,6 +131,48 @@ These patches do not change any pre-installed tool version, unless it's really n
 
 We test every stack change as much as we can before it is
 released to avoid any changes / updates during the week.
+
+## Managing Java versions
+
+By default, every Bitrise stack comes with Java 8 pre-installed and ready to use. For now, if you do not switch to another version, your build will use Java 8. However, we recommend switching to Java 11: it should give you better performance, and Java 8 will be removed entirely at some point in the future. Use the older version only if you absolutely must: for example, if your app uses an older tool or dependency.
+
+Java 11 is also available on every stack type, though the process of switching to Java 11 is slightly different on our Ubuntu-based stacks compared to the macOS-based stacks.
+
+### Switching to Java 11
+
+Our Android & Docker stacks run on virtual machines with Ubuntu, while our Xcode and Visual Studio for Mac stacks run on macOS. The process is a little different but on all stacks, switching to a different Java version requires three things:
+
+* Setting Java itself and the Java compiler to the selected version.
+* Setting the JAVA_HOME Environment Variable with the `export` command.
+* Storing this Environment Variable with `envman` so it can be accessed by all Steps in your Workflow.
+
+{% include message_box.html type="important" title="Steps and Env Vars" content="You need envman because without that, Steps can’t access each other’s Environment Variables. If you only set the Java environment for one Step, but do not store it with envman, the other Steps will use the default Java environment, Java 8."%}
+
+You can do all of it in one **Script** Step though, so it’s quite simple. To set the Java version to Java 11:
+
+{% include collapse.html title="On macOS-based stacks" content="
+
+1. Add a Script Step to the Workflow before any Step that uses Java in any way.   
+   The simplest way to do it is to place it as the first Step of the Workflow.
+2. Add the following commands to the **Script content** input of the Step:  
+   ```  
+   jenv global system
+   export JAVA_HOME="$(jenv prefix)"
+   envman add --key JAVA_HOME --value "$(jenv prefix)"  
+   ```  
+   "%}
+
+{% include collapse.html title="On Ubuntu-based stacks" content="
+1. Add a Script Step to the Workflow before any Step that uses Java in any way.   
+   The simplest way to do it is to place it as the first Step of the Workflow.
+2. Add the following commands to the **Script content** input of the Step:  
+   ```  
+   sudo update-alternatives --set javac /usr/lib/jvm/java-11-openjdk-amd64/bin/javac
+   sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
+   
+   export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+   envman add --key JAVA_HOME --value "/usr/lib/jvm/java-11-openjdk-amd64  
+   ```  " %}
 
 ## iOS Simulator version & SDK support
 

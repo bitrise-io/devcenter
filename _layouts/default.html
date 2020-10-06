@@ -43,11 +43,11 @@
                 try {
                   var resp = JSON.parse(request.responseText)
 
-                  if (resp.data.slug) {
-                    freshpaint.identify(resp.data.slug)
+                  if (resp.data.data_id) {
+                    freshpaint.identify(resp.data.data_id)
                   }
                 } catch (ex) {
-                  console.log('Failed to fetch user slug')
+                  console.log('Failed to fetch user')
                 }
               }
             }
