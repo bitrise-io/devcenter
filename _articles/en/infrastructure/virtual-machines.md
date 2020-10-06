@@ -161,7 +161,7 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
    export JAVA_HOME='$(jenv prefix)'
    envman add --key JAVA_HOME --value '$(jenv prefix)'
    ```
-
+3. Click **Save** at the top right corner. 
    "%}
 
 {% include collapse.html title="On Ubuntu-based stacks" content="
@@ -176,9 +176,9 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
    
    export JAVA_HOME=1/usr/lib/jvm/java-11-openjdk-amd641
    envman add --key JAVA_HOME --value 1/usr/lib/jvm/java-11-openjdk-amd641
-   ```  " %}
-   
-   ```
+   ``` 
+3. Click **Save** at the top right corner. 
+   " %}
 
 ## iOS Simulator version & SDK support
 
