@@ -1,13 +1,19 @@
 ---
+- title: Virtual machines
+  modified: 2020-10-06 11:00:00 +0200
+  changelog: The default Java version on Bitrise VMs is Java 8 but you can change
+    it to Java 11 with a simple Script Step. Java 11 is available on all stack types.
+  type: update
+  url: "/infrastructure/virtual-machines/"
 - title: Managing an app's bitrise.yml configuration
-  modified: 2020-10-01 10:00:00 +0200
+  modified: 2020-10-01T10:00:00.000+02:00
   changelog: 'You can store a bitrise.yml file on multiple branches in your repository:
     if you wish to run builds on separate branches, all the involved branches should
     have their own bitrise.yml file.'
   type: update
   url: "/builds/bitrise-yml-online/#storing-the-bitriseyml-on-multiple-branches"
 - title: Managing your personal subscription plan
-  modified: 2020-09-30 14:00:00 +0200
+  modified: 2020-09-30T14:00:00.000+02:00
   changelog: Learn about how to change between personal subscription plans, add and
     update payment information, and canceling your subscription..
   type: new
