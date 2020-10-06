@@ -143,7 +143,7 @@ Java 11 is also available on every stack type, though the process of switching t
 Our Android & Docker stacks run on virtual machines with Ubuntu, while our Xcode and Visual Studio for Mac stacks run on macOS. The process is a little different but on all stacks, switching to a different Java version requires three things:
 
 * Setting Java itself and the Java compiler to the selected version.
-* Setting the JAVA_HOME Environment Variable with the `export` command.
+* Setting the `JAVA_HOME` Environment Variable with the `export` command.
 * Storing this Environment Variable with `envman` so it can be accessed by all Steps in your Workflow.
 
 {% include message_box.html type="important" title="Steps and Env Vars" content="You need envman because without that, Steps can’t access each other’s Environment Variables. If you only set the Java environment for one Step, but do not store it with envman, the other Steps will use the default Java environment, Java 8."%}
@@ -152,20 +152,24 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
 
 {% include collapse.html title="On macOS-based stacks" content="
 
-1. Add a Script Step to the Workflow before any Step that uses Java in any way.   
+1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
-2. Add the following commands to the **Script content** input of the Step:  
+2. Add the following commands to the **Script content** input of the Step:
+
    ``` 
    jenv global system
    export JAVA_HOME='$(jenv prefix)'
    envman add --key JAVA_HOME --value '$(jenv prefix)'
-   ```  
+   ```
+
    "%}
 
 {% include collapse.html title="On Ubuntu-based stacks" content="
-1. Add a Script Step to the Workflow before any Step that uses Java in any way.   
+
+1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
-2. Add the following commands to the **Script content** input of the Step:  
+2. Add the following commands to the **Script content** input of the Step:
+
    ``` 
    sudo update-alternatives --set javac /usr/lib/jvm/java-11-openjdk-amd64/bin/javac
    sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
@@ -173,6 +177,8 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
    export JAVA_HOME=1/usr/lib/jvm/java-11-openjdk-amd641
    envman add --key JAVA_HOME --value 1/usr/lib/jvm/java-11-openjdk-amd641
    ```  " %}
+   
+   ```
 
 ## iOS Simulator version & SDK support
 
