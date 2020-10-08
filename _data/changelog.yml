@@ -1,4 +1,10 @@
 ---
+- title: iOS code signing - troubleshooting
+  modified: 2020-10-08 00:00:00 +0200
+  changelog: iOS Auto Provision with Apple ID Step configuration details have been
+    added to the article.
+  type: update
+  url: "/code-signing/ios-code-signing/ios-code-signing-troubleshooting/"
 - title: Managing iOS code signing files - automatic provisioning
   modified: 2020-10-08 00:00:00 +0200
   changelog: iOS Auto Provision with App Store Connect API and iOS Auto Provision
