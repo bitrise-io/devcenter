@@ -31,7 +31,7 @@ If you have two or more Bitrise apps connected to the same repository, you can s
 
 ## Storing the bitrise.yml file in your repository
 
-{% include message_box.html type="warning" title="GitHub Enterprise" content="Unfortunately, this feature is not yet supported for GitHub Enterprise users. "%}
+{% include message_box.html type="warning" title="GitHub Enterprise" content="Unfortunately, this feature is not yet supported for GitHub Enterprise users. If you wish to store the `bitrise.yml` in your repository as a GitHub Enterprise user, we recommend this workaround: [Using the bitrise.yml from repository](/tips-and-tricks/use-bitrise-yml-from-repository/)."%}
 
 When you store the `bitrise.yml` configuration file in your repository, the build process on Bitrise will use that file to run your builds. This means that:
 
