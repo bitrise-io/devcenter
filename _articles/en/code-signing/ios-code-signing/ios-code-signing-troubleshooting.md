@@ -58,9 +58,9 @@ If you use the **iOS Auto Provision with App Store Connect API** Step, skip to [
 4. Check that your uploaded code signing files are valid!
 
    Remember that these files can and do expire or get revoked.
-5. Check the **Select method for export** input of the Step in the Workflow Editor.
+5. Check the **Select method for export** input of the **Xcode Archive & Export for iOS** Step in the Workflow Editor.
 
-   If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
+   If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile. 
 
    ![](/img/export_fail.png)
 6. Check if the capability lists in the **iOS app** and in the **provisioning profile uploaded to the Developer Portal** match.
@@ -85,7 +85,7 @@ With the **iOS Auto Provision with App Store Connect API** Step, you do not need
 2. Check that your uploaded certificate is valid!
 
    Remember that these files can and do expire or get revoked.
-3. Check the **Select method for export** input of the Step in the Workflow Editor.
+3. Check the **Select method for export** input of the **Xcode Archive & Export** Step in the Workflow Editor.
 
    If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file.
 4. Check if the certificate is locked. If it is, check if the password is correct!
@@ -94,7 +94,7 @@ When you use the **iOS Auto Provision with App Store Connect API** Step, using X
 
 #### If Xcode managed signing is enabled in the iOS app
 
-1. Check the value of the **Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?** input in the **iOS Auto Provision with App Store Connect API** Step.
+1. Check the value of the **Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?** input in the **iOS Auto Provision with Apple ID** Step.
    * If it's set to `no`, the Step will look for an Xcode Managed Provisioning Profile on the Apple Developer Portal.
    * If it's set to `yes`, the Step will generate a new manual provisioning profile on the Apple Developer portal for the project.
 2. Check if the capability lists in the iOS app and in the provisioning profile on the Developer Portal match.
@@ -150,8 +150,8 @@ To install iOS apps on a given device, you have to either:
 
 1. Check that the device UDID is included in the app's provisioning profile.
    * If you use manual provisioning, check the provisioning profile you uploaded to Bitrise.
-   * If you use automatic provisioning, **Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?** input is set to `no` in the **iOS Auto Provision with App Store Connect API** step: check the provisioning profile on the Apple Developer Portal.
-   * If you use automatic provisioning, and the **Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?** input is set to `yes` in the **iOS Auto Provision with App Store Connect API** Step: check that the device is registered to the developer team on the Apple Developer portal.
+   * If you use automatic provisioning, **Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?** input is set to `no` in the **iOS Auto Provision with Apple ID** step: check the provisioning profile on the Apple Developer Portal.
+   * If you use automatic provisioning, and the **Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?** input is set to `yes` in the **iOS Auto Provision with Apple ID** Step: check that the device is registered to the developer team on the Apple Developer portal.
 2. Check the logs to see if the **Xcode Archive & Export for iOS** Step used the provisioning profile with the device's UDID in it.
 
 {% include banner.html banner_text="Let's check out your iOS app" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your app" %}
