@@ -1,4 +1,10 @@
 ---
+- title: Managing iOS code signing files - automatic provisioning
+  modified: 2020-10-08 00:00:00 +0200
+  changelog: iOS Auto Provision with App Store Connect API and iOS Auto Provision
+    with Apple ID Step configuration details have been added to the article.
+  type: update
+  url: "/code-signing/ios-code-signing/ios-auto-provisioning/"
 - title: Virtual machines
   modified: 2020-10-06T11:00:00.000+02:00
   changelog: The default Java version on Bitrise VMs is Java 8 but you can change
