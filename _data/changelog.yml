@@ -1,10 +1,10 @@
 ---
 - title: Managing an app's bitrise.yml configuration
-  modified: 2020-10-01 17:00:00 +0200
+  modified: 2020-10-08 17:00:00 +0200
   changelog: Storing the bitrise.yml file in the repository is not directly supported
     for GitHub Enterprise users. If your repo is hosted on GitHub Enterprise, you'll
     need to use the provided workaround.
-  type: ''
+  type: update
   url: "/bitrise-yml-online/#storing-the-bitriseyml-file-on-bitriseio"
 - title: iOS code signing - troubleshooting
   modified: 2020-10-08T00:00:00.000+02:00
