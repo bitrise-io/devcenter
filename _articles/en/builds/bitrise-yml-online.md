@@ -31,6 +31,8 @@ If you have two or more Bitrise apps connected to the same repository, you can s
 
 ## Storing the bitrise.yml file in your repository
 
+{% include message_box.html type="warning" title="GitHub Enterprise" content="Unfortunately, this feature is not yet supported for GitHub Enterprise users. "%}
+
 When you store the `bitrise.yml` configuration file in your repository, the build process on Bitrise will use that file to run your builds. This means that:
 
 * You have full control over versioning your configuration file.
@@ -44,7 +46,7 @@ To check the Service credential user, go to the **Team** tab of your app, and fi
 
 The feature is definitely supported for the following hosting services:
 
-* GitHub
+* GitHub (only GitHub.com accounts; GitHub Enterprise is not supported)
 * BitBucket
 * GitLab
 * Self-hosted GitLab (as long as the repository is not on a private network)."%}
