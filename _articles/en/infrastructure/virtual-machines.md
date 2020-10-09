@@ -157,9 +157,11 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
 2. Add the following commands to the **Script content** input of the Step:
 
    ``` 
+   {% raw %}
    jenv global system
-   export JAVA_HOME=$(jenv prefix)
-   envman add --key JAVA_HOME --value $(jenv prefix)
+   export JAVA_HOME="$(jenv prefix)"
+   envman add --key JAVA_HOME --value "$(jenv prefix)"
+   {% endraw %}
    ```
 3. Click **Save** at the top right corner.
    "%}
