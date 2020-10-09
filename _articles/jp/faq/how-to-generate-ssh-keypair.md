@@ -10,7 +10,7 @@ menu:
 [Bitrise](https://www.bitrise.io)上で手動でSSHキーの設定を行う場合には、コマンドライン/ターミナルで以下のコマンドを実行することでSSHキーペアを生成できます。
 
 ```
-ssh-keygen -t rsa -b 4096 -P '' -f ./bitrise-ssh
+ssh-keygen -t rsa -b 4096 -P '' -f ./bitrise-ssh -m PEM
 ```
 
 これにより、カレントディレクトリ(コマンドを実行したディレクトリ)内に以下の２つのファイルが生成されます。
