@@ -15,9 +15,9 @@ ssh-keygen -t rsa -b 4096 -P '' -f ./bitrise-ssh
 
 これにより、カレントディレクトリ(コマンドを実行したディレクトリ)内に以下の２つのファイルが生成されます。
 
-- `bitrise-ssh` (秘密鍵)
-- `bitrise-ssh.pub` (公開鍵)
+* `bitrise-ssh` (秘密鍵)
+* `bitrise-ssh.pub` (公開鍵)
 
 
-生成された__公開鍵__をGitホスティングサービス(GitHubやBitbucketなど)にコピー＆ペーストしてください。
-また、[Bitrise](https://www.bitrise.io)にアプリを登録する際には、__秘密鍵__を提供する必要があります。
+生成された **公開鍵** をGitホスティングサービス(GitHubやBitbucketなど)にコピー＆ペーストしてください。
+また、[Bitrise](https://www.bitrise.io)にアプリを登録する際には、 **秘密鍵** を提供する必要があります。
