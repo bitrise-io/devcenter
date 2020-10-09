@@ -155,13 +155,12 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
 1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
 2. Add the following commands to the **Script content** input of the Step:
-
    ``` 
    jenv global system
-   export JAVA_HOME='$(jenv prefix)'
-   envman add --key JAVA_HOME --value '$(jenv prefix)'
+   export JAVA_HOME=\"$(jenv prefix)\"
+   envman add --key JAVA_HOME --value \"$(jenv prefix)\"
    ```
-3. Click **Save** at the top right corner. 
+3. Click **Save** at the top right corner.
    "%}
 
 {% include collapse.html title="On Ubuntu-based stacks" content="
@@ -176,8 +175,8 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
    
    export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
    envman add --key JAVA_HOME --value '/usr/lib/jvm/java-11-openjdk-amd64'
-   ``` 
-3. Click **Save** at the top right corner. 
+   ```
+3. Click **Save** at the top right corner.
    " %}
 
 ## iOS Simulator version & SDK support
