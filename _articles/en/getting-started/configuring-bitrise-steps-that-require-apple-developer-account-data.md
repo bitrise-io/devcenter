@@ -36,7 +36,7 @@ The below table contains a summary of the authentication method the Step uses.
 
 ## iOS Auto Provision with App Store Connect API Step
 
-The [Step](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstoreconnect) uses the official [App Store Connect API (JSON Web Token)](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests "https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests"). By using your Apple Developer account definition that has been assigned to the app, this Step, when executed will:
+The [Step](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstoreconnect) uses the official [App Store Connect API (JSON Web Token)](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests). By using your Apple Developer account definition that has been assigned to the app, this Step, when executed will:
 
 * Generate, update and download the provisioning profiles needed for your iOS project.
 * Verify if your project is registered with the App Store Connect.
@@ -46,15 +46,14 @@ The [Step](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstore
 
 Use this method to provide authentication data to connect Bitrise to your Apple Developer account when using the [**iOS Auto Provision with App Store Connect API**](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstoreconnect) Step.
 
-1. On [App Store Connect](https://appstoreconnect.apple.com/login "https://appstoreconnect.apple.com/login"), [generate a new API key](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api "https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api") under **Users and Access**.
-  * Generate an API token with `Admin` access.
-2. Log in to [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
-3. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview "https://app.bitrise.io/me/profile#/overview") from the dropdown menu.
+1. On [App Store Connect](https://appstoreconnect.apple.com/login), [generate a new API key with `Admin` access](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api) under **Users and Access**.
+2. Log in to [bitrise.io](https://www.bitrise.io/).
+3. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
 4. On the menu bar on the left, select **Apple Developer Account**.
 5. Click **Add an Account**.
 
    ![](/img/account-settings-1.jpg)
-6. Fill out all required fields: provide a work or personal **Name** of the team, **an** [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests "https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests"), the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api "https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api"). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
+6. Fill out all required fields: provide a work or personal **Name** of the team, **an** [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests), the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
 
    ![](https://devcenter.bitrise.io/img/appstoreconnectapi-addanaccount.jpg)
 7. Continue with assigning an Apple Developer Account for your app.
@@ -63,7 +62,7 @@ Use this method to provide authentication data to connect Bitrise to your Apple 
 
 When using the **iOS Auto Provision with App Store Connect API** Step, you also need to select the account for your app to receive data from your Apple Developer account when your build runs on Bitrise.
 
-1. Open your app’s page on [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
+1. Open your app’s page on [bitrise.io](https://www.bitrise.io/).
 2. Select the **Team** tab.
 3. Scroll down to the **Connected Apple Developer Portal Account** section.
 4. Select the account for the app to use in the **Apple Developer Portal API** dropdown. It displays only your connected Apple Developer account and no app owner's or app admin's connected account is displayed here.![](/img/connected-apple-developer-account.jpg)
