@@ -31,11 +31,9 @@ However, to actually use Trace and being able to gather data from it, you'll nee
 
 ## Installing Trace
 
-Trace works by installing the Trace SDK to your application during the Bitrise build process. You can do this manually on any device to test it and once you’re ready to automate your process, you can simply use our dedicated Step on Bitrise.
+Trace works by installing the Trace SDK to your application during the Bitrise build process. You can do this manually - using CocoaPods or the Swift Package Manager - on any device to test it, and once you’re ready to automate your process, you can simply use our dedicated Step on Bitrise.
 
-### Installing Trace using Cocoapods
-
-Before adding Trace to your apps on Bitrise, try it out first. We’ll walk you through the process using a sample app - but of course you can use any of your own repositories instead of our sample!
+{% include collapse.html title="Installing Trace using Cocoapods" content="Before adding Trace to your apps on Bitrise, try it out first. We’ll walk you through the process using a sample app - but of course you can use any of your own repositories instead of our sample!
 
 In this example, we’re going to use CocoaPods to install the Trace SDK. Let’s see how!
 
@@ -66,11 +64,9 @@ Please note that once you installed Trace, it can take up to an hour for it to s
  9. If prompted to choose from different options for adding the files, choose your project - BookStore in our example -, and click **Finish**.
 
     ![](/img/trace-7.png)
-10. Run your app in a simulator or on a device!
+10. Run your app in a simulator or on a device!" %}
 
-### Installing Trace on Bitrise
-
-On Bitrise itself, it’s much simpler to install Trace: you simply need to add the **Add Trace SDK** Step to your Workflow. The Step must come before the application’s binary itself is built. For example, if you build an iOS app, the Step must come before the **Xcode Archive & Export for iOS** Step.
+{% include collapse.html title="Installing Trace with a Bitrise Step" content="On Bitrise itself, installing Trace is simple: you only need to add the **Add Trace SDK** Step to your Workflow. The Step must come before the application’s binary itself is built. For example, if you build an iOS app, the Step must come before the **Xcode Archive & Export for iOS** Step.
 
 To install Trace:
 
@@ -81,7 +77,7 @@ To install Trace:
    By default, both values are Environment Variables which are created and stored at the creation of the app.
 5. Run a build!
 
-If all went well, Trace will track application data. Let’s talk about how to analyze that data that Trace provides!
+If all went well, Trace will track application data. Let’s talk about how to analyze that data that Trace provides!"%}
 
 ## Analyzing application performance
 
