@@ -11,12 +11,8 @@ redirect_from: "/trace/getting-started/"
 description: Trace is a Bitrise add-on designed to monitor your applications from
   the perspective of its end users. It comes with out-of-the-box performance monitoring,
   giving you insight into how the app is performing across the entire install base.
-menu:
-  monitoring-main:
-    weight: 1
 
 ---
-
 {% include message_box.html type="important" title="Beta feature" content="Please note that this feature is still in beta phase! You can sign up for the beta [here](https://www.bitrise.io/add-ons/trace-mobile-monitoring)!"%}
 
 Trace is a Bitrise add-on designed to monitor your applications from the perspective of its end users. It comes with out-of-the-box performance monitoring, giving you insight into how the app is performing across the entire install base.
@@ -37,7 +33,7 @@ However, to actually use Trace and being able to gather data from it, you'll nee
 
 Trace works by installing the Trace SDK to your application during the Bitrise build process. You can do this manually on any device to test it and once you’re ready to automate your process, you can simply use our dedicated Step on Bitrise.
 
-### Installing Trace manually
+### Installing Trace using Cocoapods
 
 Before adding Trace to your apps on Bitrise, try it out first. We’ll walk you through the process using a sample app - but of course you can use any of your own repositories instead of our sample!
 
