@@ -12,7 +12,7 @@ description: In order for Trace to provide information on the performance of you
   We collect data related to session properties, as well as metrics and traces.
 menu:
   monitoring-main:
-    weight: 3
+    weight: 4
 
 ---
 {% include message_box.html type="important" title="Beta feature" content="Please note that this feature is still in beta phase! You can sign up for the beta [here](https://www.bitrise.io/add-ons/trace-mobile-monitoring)!"%}
