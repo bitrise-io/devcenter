@@ -92,14 +92,18 @@ To use Trace on Bitrise, you need to have a `bitrise_configuration.plist` file i
 5. Open your app in Xcode.
 6. Add the bitrise_configuration.plist file to the Xcode project by dragging and dropping it to the root of the project.
 
+When done, proceed to initializing the SDK.
+
 #### Initializing the SDK
 
 After [adding the `bitrise_configuration.plist` file to your Xcode project](/monitoring/getting-started-with-trace/#adding-the-config-file-to-your-app), you need to add Trace to the Swift Package Manager.
 
 1. Go to **File** > **Swift Packages** > **Add Package Dependency**.
-2. Enter the repository URL: (https://github.com/bitrise-io/trace-cocoa-sdk.git)\[https://github.com/bitrise-io/trace-cocoa-sdk.git\].
+2. Enter the repository URL: [https://github.com/bitrise-io/trace-cocoa-sdk.git](https://github.com/bitrise-io/trace-cocoa-sdk.git).
 
    ![](/img/choose-package-repository.png)
+
+When done, proceed to adding Other Linker Flags to application target and creating a Trace object in code.
 
 #### Configuring your Xcode project to run Trace
 
@@ -259,3 +263,5 @@ To check out individual sessions:
 4. Set a date range for the sessions you want to see - for example, 24 hours.
 5. Navigate between the different user sessions with the in the top right.
 6. To see a user journey in detail, scroll down to the **User Journey** section, and click **Show All**.
+
+{% include banner.html banner_text="Monitor your apps with Trace" url="https://www.bitrise.io/add-ons/trace-mobile-monitoring?utm_source=devcenter&utm_medium=bottom_cta" button_text="Sign up for the beta" %}
