@@ -99,6 +99,8 @@ After [adding the `bitrise_configuration.plist` file to your Xcode project](/mon
 1. Go to **File** > **Swift Packages** > **Add Package Dependency**.
 2. Enter the repository URL: (https://github.com/bitrise-io/trace-cocoa-sdk.git)\[https://github.com/bitrise-io/trace-cocoa-sdk.git\].
 
+   ![](/img/choose-package-repository.png)
+
 #### Configuring your Xcode project to run Trace
 
 After [adding the `bitrise_configuration.plist` file to your Xcode project](/monitoring/getting-started-with-trace/#adding-the-config-file-to-your-app), and [adding Trace to the Swift Package Manager](/monitoring/getting-started-with-trace/#initializing-the-sdk), you need a couple more things to make Trace work:
