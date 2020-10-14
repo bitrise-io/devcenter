@@ -1,6 +1,13 @@
 ---
+- title: Getting started with Trace
+  modified: 2020-10-14 08:00:00 +0200
+  changelog: 'You can install the Trace add-on, designed to monitor your installed
+    apps on all devices, using the Swift Package Manager, in addition to Cocoapods
+    and our dedicated Step. '
+  type: update
+  url: "/monitoring/getting-started-with-trace/#installing-trace"
 - title: Managing an app's bitrise.yml configuration
-  modified: 2020-10-08 17:00:00 +0200
+  modified: 2020-10-08T17:00:00.000+02:00
   changelog: Storing the bitrise.yml file in the repository is not directly supported
     for GitHub Enterprise users. If your repo is hosted on GitHub Enterprise, you'll
     need to use the provided workaround.
