@@ -71,8 +71,8 @@ Please note that once you installed Trace, it can take up to an hour for it to s
 The installation process has three stages:
 
 1. [Adding the `bitrise_configuration.plist` file to your Xcode project](/monitoring/getting-started-with-trace/#adding-the-config-file-to-your-app).
-2. Initializing the Trace SDK with the SPM.
-3. Configuring your Xcode project to be able to run Trace.
+2. [Initializing the Trace SDK with the SPM](/monitoring/getting-started-with-trace/#initializing-the-sdk).
+3. [Configuring your Xcode project to be able to run Trace](/monitoring/getting-started-with-trace/#configuring-your-xcode-project-to-run-trace).
 
 #### Adding the config file to your app
 
@@ -90,16 +90,16 @@ The installation process has three stages:
 5. Open your app in Xcode.
 6. Add the bitrise_configuration.plist file to the Xcode project by dragging and dropping it to the root of the project.
 
-#### Initialising the SDK
+#### Initializing the SDK
 
-After adding the `bitrise_configuration.plist` file to your Xcode project, you need to add Trace to the Swift Package Manager.
+After [adding the `bitrise_configuration.plist` file to your Xcode project](/monitoring/getting-started-with-trace/#adding-the-config-file-to-your-app), you need to add Trace to the Swift Package Manager.
 
 1. Go to **File** > **Swift Packages** > **Add Package Dependency**.
 2. Enter the repository URL: (https://github.com/bitrise-io/trace-cocoa-sdk.git)\[https://github.com/bitrise-io/trace-cocoa-sdk.git\].
 
 #### Configuring your Xcode project to run Trace
 
-After adding the `bitrise_configuration.plist` file to your Xcode project, and adding Trace to the Swift Package Manager, you need two more steps to make Trace work:
+After [adding the `bitrise_configuration.plist` file to your Xcode project](/monitoring/getting-started-with-trace/#adding-the-config-file-to-your-app), and [adding Trace to the Swift Package Manager](/monitoring/getting-started-with-trace/#initializing-the-sdk), you need two more steps to make Trace work:
 
 * Add Other Linker Flags to application target.
 * Create a Trace object in code.
