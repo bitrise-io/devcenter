@@ -50,21 +50,78 @@ Please note that once you installed Trace, it can take up to an hour for it to s
         target 'YOUR_TARGET_NAME' do
           pod 'BitriseTrace'
         end 
- 3. Install the SDK by running pod install.  
-    If you’ve done everything right, the Pod installation complete! message should appear.
- 4. Open Trace on Bitrise.
+ 3. Install the SDK by running `pod install`.  
+    If you’ve done everything right, the **Pod installation complete!** message should appear.
+ 4. Open Trace on Bitrise: go to your app, click the **Add-ons** tab, find Trace, and click **Go to Add-on**.
  5. In the top-right, click **Getting started**.
  6. Find the **Download Config file** step, and click **Download**.
  7. Open your app in Xcode:
 
         $ open BookStore.xcworkspace/ 
- 8. Add the bitrise_configuration.plist file to your app by dragging and dropping it to the root of the project.
+ 8. Add the `bitrise_configuration.plist` file to your app by dragging and dropping it to the root of the project.
 
     ![](/img/trace-6.png)
  9. If prompted to choose from different options for adding the files, choose your project - BookStore in our example -, and click **Finish**.
 
     ![](/img/trace-7.png)
-10. Run your app in a simulator or on a device!" %}
+10. Build and run the app in a simulator or on a device." %}
+
+{% include collapse.html title="Installing Trace with the Swift Package Manager" content="The Swift Package Manager (SPM) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. You can use the SPM to install the Trace SDK.
+
+The installation process has three stages:
+
+1. [Adding the `bitrise_configuration.plist` file to your Xcode project](/monitoring/getting-started-with-trace/#adding-the-config-file-to-your-app).
+2. Initializing the Trace SDK with the SPM.
+3. Configuring your Xcode project to be able to run Trace.
+
+### Adding the config file to your app
+
+1. On your own machine, clone the repository of your app, and enter its directory.  
+   In this example we’re using a sample app; you can use that, too, to try out Trace, or you can replace it with your own app.
+
+   ```  
+   git clone git@github.com:bitrise-io/iosCCC.git
+   
+   cd iosCCC/  
+   ```
+2. Open Trace on Bitrise: go to your app, click the **Add-ons** tab, find Trace, and click **Go to Add-on**.
+3. In the top-right, click **Getting started**.
+4. Find the **Download Config file** step, and click **Download**.
+5. Open your app in Xcode.
+6. Add the bitrise_configuration.plist file to the Xcode project by dragging and dropping it to the root of the project.
+
+### Initialising the SDK
+
+After adding the `bitrise_configuration.plist` file to your Xcode project, you need to add Trace to the Swift Package Manager.
+
+1. Go to **File** > **Swift Packages** > **Add Package Dependency**.
+2. Enter the repository URL: (https://github.com/bitrise-io/trace-cocoa-sdk.git)\[https://github.com/bitrise-io/trace-cocoa-sdk.git\].
+
+### Configuring your Xcode project to run Trace
+
+After adding the `bitrise_configuration.plist` file to your Xcode project, and adding Trace to the Swift Package Manager, you need two more steps to make Trace work:
+
+* Add Other Linker Flags to application target.
+* Create a Trace object in code.
+
+1. In Xcode, select your project in the **Project Navigator**.
+2. Under the **Targets** heading in the sidebar, select the application target.
+3. In the tab bar at the top of that window, open the **Build Settings** panel.
+4. Search for Other Linker Flags or OTHER_LDFLAGS and enter the following:
+
+       -ObjC -l z -l c++
+5. In the Xcode project, start the SDK by creating a Trace object:
+
+       import SwiftUI
+       import Trace
+       
+       @main
+       struct App: SwiftUI.App {
+         @StateObject var viewModel = AppViewModel()
+         private let trace = Trace.shared
+       }   
+6. Build and run the app in a simulator or on a device.
+   "%}
 
 {% include collapse.html title="Installing Trace with a Bitrise Step" content="On Bitrise itself, installing Trace is simple: you only need to add the **Add Trace SDK** Step to your Workflow. The Step must come before the application’s binary itself is built. For example, if you build an iOS app, the Step must come before the **Xcode Archive & Export for iOS** Step.
 
