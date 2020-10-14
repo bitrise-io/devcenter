@@ -11,6 +11,9 @@ redirect_from: "/trace/getting-started/"
 description: Trace is a Bitrise add-on designed to monitor your applications from
   the perspective of its end users. It comes with out-of-the-box performance monitoring,
   giving you insight into how the app is performing across the entire install base.
+menu:
+  monitoring-main:
+    weight: 2
 
 ---
 {% include message_box.html type="important" title="Beta feature" content="Please note that this feature is still in beta phase! You can sign up for the beta [here](https://www.bitrise.io/add-ons/trace-mobile-monitoring)!"%}
