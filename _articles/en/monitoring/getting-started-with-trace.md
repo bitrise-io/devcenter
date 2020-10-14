@@ -76,6 +76,8 @@ The installation process has three stages:
 
 #### Adding the config file to your app
 
+To use Trace on Bitrise, you need to have a `bitrise_configuration.plist` file in your Xcode project.
+
 1. On your own machine, clone the repository of your app, and enter its directory.  
    In this example we’re using a sample app; you can use that, too, to try out Trace, or you can replace it with your own app.
 
@@ -99,7 +101,7 @@ After [adding the `bitrise_configuration.plist` file to your Xcode project](/mon
 
 #### Configuring your Xcode project to run Trace
 
-After [adding the `bitrise_configuration.plist` file to your Xcode project](/monitoring/getting-started-with-trace/#adding-the-config-file-to-your-app), and [adding Trace to the Swift Package Manager](/monitoring/getting-started-with-trace/#initializing-the-sdk), you need two more steps to make Trace work:
+After [adding the `bitrise_configuration.plist` file to your Xcode project](/monitoring/getting-started-with-trace/#adding-the-config-file-to-your-app), and [adding Trace to the Swift Package Manager](/monitoring/getting-started-with-trace/#initializing-the-sdk), you need a couple more things to make Trace work:
 
 * Add Other Linker Flags to application target.
 * Create a Trace object in code.
