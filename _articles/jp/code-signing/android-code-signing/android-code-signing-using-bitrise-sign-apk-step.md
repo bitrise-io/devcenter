@@ -22,10 +22,10 @@ Bitrise Project Scannerは `Android Sign` ステップが含まれる `deploy wo
 3. `Code signing` を選択する。
 4. `ANDROID KEYWSTORE FILE` の `Upload file` という箇所をクリック、またはファイルをドラッグしてアップロードする。
 
-   ![Screenshot](/img/android-code-signing/upload-file.png)
+   ![{{ page.title }}](/img/android-code-signing/upload-file.png)
 5. 次の3つの入力フォームに記入する: `keystore password`、 `keystore alias` 、及び `private key password`。
 
-   ![Screenshot](/img/android-code-signing/three-fields.png)
+   ![{{ page.title }}](/img/android-code-signing/three-fields.png)
 6. `Save metadata` を選択する。 アップロードされたファイルが `SAndroid Sign Step` に取り込まれる。
 
 上記手段を踏むことで Bitrise に keystore ファイルがアップロードされ、`BITRISEIO_ANDROID_KEYSTORE_URL` の環境変数に一時的に使用できる Read-only のダウンロードURLが設定されます。 このURLから今後のビルドで使用される keystore ファイルがダウンロードできます。workflow の `Android Sign` ステップはこの環境変数をウォッチし、セットされた場合、それが起動されます。

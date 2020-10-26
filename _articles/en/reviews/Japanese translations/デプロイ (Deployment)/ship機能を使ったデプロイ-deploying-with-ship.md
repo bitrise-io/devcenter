@@ -26,7 +26,7 @@ Shipを使うと様々なことが実現します：
 * 公開する準備が整えば、App Store Connect / Google Play Consoleへ特定のビルドバージョンをデプロイ
 * クロスプラットフォームプロジェクトの場合、**Version History** ページを確認してプラットフォームを切替
 
-  ![](/img/ship_benefits.jpg)
+  ![{{ page.title }}](/img/ship_benefits.jpg)
 
 ## Shipの開始方法
 
@@ -67,7 +67,7 @@ Shipにワークフローのアーティファクトをエクスポーズする�
 3. **General**タブに進みます。
 4. **Expose Artifacts From the Selected Workflow to Ship**のテキストボックスに、必要なワークフロー全てを追加します。
 
-   ![](/img/Settings___android-test-test.png)
+   ![{{ page.title }}](/img/Settings___android-test-test.png)
 
    もしご自身のアプリがクロスプラットフォームであれば、以下のような2つのテキストボックスが表示されます：一方はiOS用、もう一方はAndroid用です。コンマを使ってワークフロー名を別々に分けてください (例： `build, deploy, release_build_android`) 。
 5. ページの一番下までスクロールして**Save**をクリックします。
@@ -162,10 +162,10 @@ Andoroidアプリの公開を設定するには：
 3. 公開したいAPKを作成するワークフローを[エクスポーズ](/jp/deploy/ship/#exposing-a-workflows-artifacts-to-ship)します。
 4. Google Play Consoleでの公開に使用する[Track](https://developers.google.com/android-publisher/tracks)を入力します。
 5. 複数のモジュールがAndroidアプリに含まれている場合、**Module**の空欄に正確なモジュールを入力します。  
-   ![](/img/module-android-settings.png)
+   ![{{ page.title }}](/img/module-android-settings.png)
 6. 適切なkeystoreファイルとService Account JSONファイルを選択します。
 7. **Version History**ページに戻り、公開したいバージョンを選択します。アプリに複数のフレーバーがある場合、フィルターにかけて適切なフレーバーを探すことができるので、それを選択します。  
-   ![](/img/flavorandroid.jpg)
+   ![{{ page.title }}](/img/flavorandroid.jpg)
 8. **Details**ページの空欄を埋めて、**Publish**をクリックします。 </div> </div>
 
 ## ステータスとログの公開
@@ -174,7 +174,7 @@ Shipで**Publish**ボタンをクリックすると、構成済みの設定に�
 
 公開プロセスでログを表示させるには、**Activity**タブに進みます。そこから、**Download Build Log**をクリックしてログのダウンロードを行えるので、失敗後にエラーをチェックすることが可能です。
 
-![](/img/downloadbuildlog.jpg)
+![{{ page.title }}](/img/downloadbuildlog.jpg)
 
 ## アプリの詳細
 
@@ -196,7 +196,7 @@ Detailsに含まれる項目は以下のとおりです：
 1. (アプリの選択済みビルドバージョンの) ShipのDetailsページを開きます。
 2. アップロードを行う**Screenshots**または**Feature Graphic**へ進みます。
 
-   ![](/img/ship-screenshots-1.jpg)
+   ![{{ page.title }}](/img/ship-screenshots-1.jpg)
 3. ファイルをドラッグ&ドロップ、または**Browse files**をクリックしてアップロードを行うファイルを選択します。
 4. 完了したら、右上端の**Save**をクリックします。
 
@@ -228,7 +228,7 @@ Shipは次の３つの異なるイベントの発生時にメールを送信し�
 3. **Notifications**タブへ進みます。
 4. **Email notifications**の下にあるAdd Newのインプット欄にメールアドレスを入力します。
 
-   ![](/img/ship-notifications.jpg)
+   ![{{ page.title }}](/img/ship-notifications.jpg)
 5. **Add**をクリックします。
 
 これを行うことにより、リストの最後尾に追加されたメールアドレスが表示 (ステータス：**Pending** (保留)) されます。その後メールが追加されたアドレスの受信ボックスに届きます：受取人は**Confirm Notifications**をクリックして、通知の受け取りを許可してください。

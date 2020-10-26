@@ -14,7 +14,7 @@ You can register the `bitrise-webhooks` URL as either an [Outgoing Webhook](http
 3. Scroll down to the **INCOMING WEBHOOKS** section.
 4. Click **SETUP MANUALLY.**
 
-   ![](/img/slack-webhook.png)
+   ![{{ page.title }}](/img/slack-webhook.png)
 5. Choose **Slack** from the dropdown menu.
 6. Copy and paste the URL from the **Webhook URL for the selected service** field.
 

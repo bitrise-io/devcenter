@@ -21,7 +21,7 @@ Androidデプロイワークフローをお持ちであれば、次のことを�
 
    `assembleDemo` ＆ `assembleFull`
 
-   ![](/img/multiflavor-1.jpg)
+   ![{{ page.title }}](/img/multiflavor-1.jpg)
 4. `Gradle Runner`は、上の`Gradle task to run`ステップで設定した**全ての**ビルドバリアントを含んだ `$BITRISE_APK_PATH_LIST`環境変数出力を生成します。この環境変数出力は後ほど必要になります！
 
 ## マルチフレーバーAPKの署名とデプロイ

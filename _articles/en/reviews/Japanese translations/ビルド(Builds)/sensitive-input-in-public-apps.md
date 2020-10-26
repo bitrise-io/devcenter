@@ -13,7 +13,7 @@ published: false
 
 `SENSITIVE`のラベルがなくてもシークレット環境変数を使ってどのインプットでも隠すことができますが、`SENSITIVE`**とデフォルトでマークされている欄には必ずシークレット環境変数を使用しなければなりません。**
 
-![Screenshot](/img/builds/sensitive-label.png)
+![{{ page.title }}](/img/builds/sensitive-label.png)
 
 シークレット環境変数を定義する２つの方法があります：
 
@@ -27,7 +27,7 @@ published: false
 1. 黄色で`SENSITIVE`とマークされたインプット欄の下にある`Select Secret Variable`をクリックします。
 2. `Insert variable`ポップアップ内で、`Choose Secret Env Var`リストをブラウズするか、`Create New Secret Env Var`セクションで新しいシークレット環境変数（キーと値を追加する）を作成してください。
 
-   ![](/img/insert-variable.png)
+   ![{{ page.title }}](/img/insert-variable.png)
 
    `Value`欄の下にある`Expose for pull request?`トグルはデフォルトで無効になっており、**プルリクエストをする場合に備えて公開アプリの機密情報を保護するため**、公開アプリでは有効化できません。
 3. 新しい環境変数の入力を終えたら、`Add new`をクリックしてください。
@@ -38,7 +38,7 @@ published: false
 
 `Select secret variable`ボタンをクリックする、またはあなたのシークレット環境変数の全リストを確認できる`Secret`タブへ進むことで、`SENSITIVE`インプット欄に登録されたシークレット環境変数をいつでも修正することができます。
 
-![](/img/secrets-email.png)
+![{{ page.title }}](/img/secrets-email.png)
 
 {% include message_box.html type="important" title="`Select secret variable`" content=" `SENSITIVE`ラベルがマークされたインプット欄を手動でインプットを修正することはできません。代わりに`Select secret variable`をクリックすることですでに存在するインプットを他のシークレット環境変数に**変更する**ことができます。`Insert variable`ポップアップ内のリストまたは**新しく作成**してください。"%}
 

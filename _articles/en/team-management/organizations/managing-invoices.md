@@ -25,10 +25,10 @@ By default, an Organization's invoices will be sent to the email provided when t
    Be aware that your own billing info and your Organization's billing info are SEPARATE. You CANNOT change your Organization's information in the settings of your own personal profile.
 3. On the left, select **Billing** from the menu options.
 
-   ![](/img/billing-selected.jpg)
+   ![{{ page.title }}](/img/billing-selected.jpg)
 4. Locate the **Invoice email** menu and click **Change email**.
 
-   ![](/img/invoice-email.png)
+   ![{{ page.title }}](/img/invoice-email.png)
 5. Enter the new email address and click **Save**.
 
 And that's it! From now on, your invoices will be sent to the new email address.
@@ -38,15 +38,15 @@ And that's it! From now on, your invoices will be sent to the new email address.
 1. Sign in with an account that is an owner of an Organization and open its profile page.
 2. Go to your Organization's profile page: click **Switch Profile** on the top left corner and select the Organization you need.
 
-   ![](/img/switch-profile-2.jpg)
+   ![{{ page.title }}](/img/switch-profile-2.jpg)
 
    Be aware that your own billing info and your Organization's billing info are SEPARATE. You CANNOT change your Organization's billing info and subscription plans in the settings of your own personal profile!
 3. On the left, select **Billing** from the menu options.
 
-   ![](/img/billing-selected.jpg)
+   ![{{ page.title }}](/img/billing-selected.jpg)
 4. Locate the **Past statements** menu.
 5. Select the invoice you need and click the download icon on the right.
 
-   ![Screenshot](/img/team-management/organization/past-invoices.png)
+   ![{{ page.title }}](/img/team-management/organization/past-invoices.png)
    
 {% include banner.html banner_text="Manage your Organization's invoices" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your profile page" %}

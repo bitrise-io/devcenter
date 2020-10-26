@@ -35,7 +35,7 @@ You can do a whole lot of things with Ship:
 * Deploy a given build version to App Store Connect and/or the Google Play Console, once you set up publishing.
 * Switch between platforms on the **Version History** page in the case of cross-platform projects.
 
-  ![](/img/ship_benefits.jpg)
+  ![{{ page.title }}](/img/ship_benefits.jpg)
 
 ## Getting started with Ship
 
@@ -76,7 +76,7 @@ To expose a Workflow's artifacts to Ship:
 3. Go to the **General** tab.
 4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
 
-   ![](/img/Settings___android-test-test.png)
+   ![{{ page.title }}](/img/Settings___android-test-test.png)
 
    Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma (for example, `build, deploy, release_build_android`) .
 5. Scroll down to the bottom of the page and click **Save**.
@@ -166,9 +166,9 @@ To configure publishing an app for Android:
 2. Go to the **Android Settings** section.
 3. [Expose](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the APK you want to publish.
 4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Google Play Console.
-5. If your Android app contains multiple modules, enter the exact module under **Module**. ![](/img/module-android-settings.png)
+5. If your Android app contains multiple modules, enter the exact module under **Module**. ![{{ page.title }}](/img/module-android-settings.png)
 6. Choose the appropriate keystore file and the Service Account JSON file.
-7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing. ![](/img/flavorandroid.jpg)
+7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing. ![{{ page.title }}](/img/flavorandroid.jpg)
 8. Fill out the **Details** page and click **Publish.**
 </div>
 </div>
@@ -179,7 +179,7 @@ Once you clicked **Publish** in Ship, the process starts according to the config
 
 To view the logs of any publishing process, go to the **Activity** tab. From there, you can download the logs by clicking **Download Build Log** to troubleshoot any errors after a failed publish.
 
-![](/img/downloadbuildlog.jpg)
+![{{ page.title }}](/img/downloadbuildlog.jpg)
 
 ## App details
 
@@ -200,7 +200,7 @@ To add screenshots or feature graphics to your app details page:
 1. Open the **Details** page in Ship of your app's chosen build version.
 2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.
 
-   ![](/img/ship-screenshots-1.jpg)
+   ![{{ page.title }}](/img/ship-screenshots-1.jpg)
 3. Drag and drop a file OR click **Browse files** and select the ones you wish to upload.
 4. Once done, click **Save** in the top right corner.
 
@@ -232,7 +232,7 @@ To add a new email address to the notification list for an app:
 3. Go to the **Notifications** tab.
 4. In the input field under **Email notifications**, type the email address.
 
-   ![](/img/ship-notifications.jpg)
+   ![{{ page.title }}](/img/ship-notifications.jpg)
 5. Click **Add**.
 
 The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications.

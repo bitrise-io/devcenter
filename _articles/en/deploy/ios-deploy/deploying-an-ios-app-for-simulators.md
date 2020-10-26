@@ -29,7 +29,7 @@ To build the app for a simulator, you do not need code signing files!
    The Step should be after the Steps that install dependencies, such as **Run Cocoapods install**.
 3. Fill in the required inputs for the Step.
 
-   ![](/img/build-for-simulator.png)
+   ![{{ page.title }}](/img/build-for-simulator.png)
    * **Project (or Workspace) path**: the path to your project's `.xcodeproj` or `.xworkspace` file. By default, this is stored in an Environment Variable when you add your app to Bitrise.
    * **Scheme name**: the Xcode scheme of your project. By default, this is stored in an Environment Variable when you add your app to Bitrise.
    * **Simulator**: the type of device you want to run the app on. Set it exactly as it appears in the device selection menu in Xcode.
@@ -51,7 +51,7 @@ An .app file built with our **Xcode build for simulator** Step works with just a
 3. Add and configure the **Xcode build for simulator** Step to your Workflow.
 4. Add the **Appetize.io deploy** Step to your Workflow.
 
-   ![](/img/appetize-deploy.png)
+   ![{{ page.title }}](/img/appetize-deploy.png)
 5. Add the Appetize.io API token to the **Appetize.io token** input.
 6. Enter the path to the .app file to the **Application path** input. The easiest solution is to use the `BITRISE_APP_DIR_PATH_LIST` Environment Variable that is an output of the **Xcode build for simulator** Step. Optionally, you can also enable verbose logging for more efficient debugging.
 

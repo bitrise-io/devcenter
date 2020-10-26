@@ -20,7 +20,7 @@ published: false
 3. 確認したいビルドを選択します。
 4. `LOGS`タブ下部にあるログを探してください。
 
-   ![](/img/build-logs.png)
+   ![{{ page.title }}](/img/build-logs.png)
 
 {% include message_box.html type="info" title="フルのログを開く" content="長いビルドログをお持ちの場合、デフォルトによりログの最後の部分のみが表示されます。そのログの上部分にあるバーをクリックすれば、すべてのログを確認することができます。"%}
 
@@ -40,7 +40,7 @@ All Bitrise build logs have the same basic structure. When opening a full log, u
 
 が表示されます。
 
-![](/img/log-start.png)
+![{{ page.title }}](/img/log-start.png)
 
 ビルドが失敗した場合は注意深くビルドログを確認してください。Bitriseではエラーメッセージはたいてい赤色で示されます。失敗したステップでは、名前の隣にexit code（エグジットコード）が表示されます。exit codeは特定のステップが失敗した原因について知ることができます。
 
@@ -64,7 +64,7 @@ Bitriseでアプリのアクセス権がない人にビルドログを送りた�
 
 {% include message_box.html type="info" title="削除の際はご注意ください。" content="ログの削除を元に戻すことはできません。一旦削除してしまうと、ログファイルは取り戻せないのでご注意ください。"%}
 
-![](/img/confirm-delete.png)
+![{{ page.title }}](/img/confirm-delete.png)
 
 1. BitriseにログインしAppsページ上にあるアプリをクリックします。
 2. `Builds`タブをクリックします。

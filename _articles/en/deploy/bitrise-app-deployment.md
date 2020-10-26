@@ -24,7 +24,7 @@ Here is a short recap on the different build Steps per platform.
 
 First let's have a look at the required and sensitive fields of the **Deploy to Bitrise.io** Step:
 
-![](/img/deploy-to-bitrise.png)
+![{{ page.title }}](/img/deploy-to-bitrise.png)
 
 ## Deploying directory or file path
 
@@ -61,15 +61,15 @@ You can enable it directly in the Step's input field or at the generated .ipa/AP
 
 You can access the Public install page's URL, if you head over to your generated build's **APPS & ARTIFACTS** tab and find the .ipa/APK file.
 
-![](/img/public-install-page-1.png)
+![{{ page.title }}](/img/public-install-page-1.png)
 
 Besides the **Public install page** link on the **APPS & ARTIFACTS** tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
-![](/img/app-release-unsigned.jpg)
+![{{ page.title }}](/img/app-release-unsigned.jpg)
 
 If you click **Open Public install page** link, you’ll see a basic description of the app (title, version, size, supported devices).
 
-![](/img/publicinstallpage.jpg)
+![{{ page.title }}](/img/publicinstallpage.jpg)
 
 You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store `.ipa` won't receive a Public install page as it should be uploaded to the app store directly. Learn how to [install an .ipa file from the Public Install page](/testing/installing-an-ipa-file-from-the-public-install-page/) in our detailed guide. 
 

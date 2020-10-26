@@ -25,11 +25,11 @@ Before you start, make sure that:
 2. Click the `Config` section.
 3. In the `Gradle task to run` input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
 
-   ![](/img/bundlerelease.jpg)
+   ![{{ page.title }}](/img/bundlerelease.jpg)
 4. Click the `Export config` section.
 5. To copy the Android app bundle file into the Bitrise deploy directory, replace the `.apk` file extension with `.abb` in the `APK file include filter` input field:
 
-   ![](/img/include-filter.jpg)This way the Step will generate an Android app bundle instead of an APK even if there is an APK in the Step's output (`$BITRISE_APK_PATH`).
+   ![{{ page.title }}](/img/include-filter.jpg)This way the Step will generate an Android app bundle instead of an APK even if there is an APK in the Step's output (`$BITRISE_APK_PATH`).
 
 ## Signing an Android app bundle
 
@@ -43,7 +43,7 @@ Before you start, make sure that:
 1. Add the `Sign APK` Step AFTER the `Gradle Runner` Step in your `deploy` workflow.
 2. Make sure the `Build artifact path` is the same as the output of the `Gradle Runner` Step.
 
-![](/img/bundle-signing.png)
+![{{ page.title }}](/img/bundle-signing.png)
 
 If you have uploaded your keystore file and filled out the required credentials, the `Sign APK` Step's `Keystore url`, `Keystore password`, `Keystore alias` and the `Private key password` will get populated automatically!
 

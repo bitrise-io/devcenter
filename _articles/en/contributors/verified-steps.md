@@ -26,7 +26,7 @@ A Verified Step means that the owner of a service or tool or an open source team
 * Official Bitrise Steps are labeled with a green badge.
 * Community created Steps do not have any badge.
 
-![](/img/verifiedsteplist.jpg)
+![{{ page.title }}](/img/verifiedsteplist.jpg)
 
 In this guide we explain how to get your Step verified by Bitrise.
 
@@ -45,9 +45,9 @@ We strongly recommend that you consult with our [Step development](/contributors
 2. Share your Step in our [bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib) and fill out the New Pull Request Checklist.
 3. When the **CLAassistant** prompts you, sign our Contributor License Agreement. Until this is not completed, merging is blocked on the PR.
 
-   ![](/img/cla.jpg)
+   ![{{ page.title }}](/img/cla.jpg)
 
-   ![](/img/checklist.jpg)
+   ![{{ page.title }}](/img/checklist.jpg)
 4. Please fill out our [Partnership Form](https://bitrise.typeform.com/to/YnY8KftK)!
 
 Once you submitted the form, our Partner Management Team will contact you within 5 business days to discuss the rest of the process.

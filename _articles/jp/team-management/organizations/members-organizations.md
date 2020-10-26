@@ -20,11 +20,11 @@ menu:
 1. 組織の**オーナー**アカウントでサインインして、そのプロフィールページを開きます。
 2. 組織のプロファイルページに移動し,左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。
 
-   ![Screenshot](/img/team-management/organization/switch-profile-2.png)
+   ![{{ page.title }}](/img/team-management/organization/switch-profile-2.png)
 3. 左側のメニューオプションから`Groups`を選択します。
 4. 上部にある`Create new Group`セクションを見つけます。
 
-   ![Screenshot](/img/team-management/organization/create-new-group.png)
+   ![{{ page.title }}](/img/team-management/organization/create-new-group.png)
 5. `Enter Group name`ウィンドウにグループ名を入力して`Create`をクリックします。
 
 ## メンバーを組織に追加
@@ -34,20 +34,20 @@ menu:
 1. 組織の**オーナー**アカウントでサインインして、そのプロフィールページを開きます。
 2. 組織のプロファイルページに移動し,左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。
 
-   ![Screenshot](/img/team-management/organization/switch-profile-2.png)
+   ![{{ page.title }}](/img/team-management/organization/switch-profile-2.png)
 3. 左側のメニューオプションから`Groups`を選択します。
 4. 必要なグループを見つけて、グループ名の右側にある`+`記号をクリックします。
 
-   ![Screenshot](/img/team-management/organization/group-name.png)
+   ![{{ page.title }}](/img/team-management/organization/group-name.png)
 5. ユーザー名またはメールアドレスを入力します。
    * ユーザー名を入力すると、システムは既存のBitriseユーザーに少なくとも一部にあなたの入力と一致するよう提案します。招待するユーザーをクリックしてください。
    * メールアドレスを入力した場合は、右側にある`Enter`記号をクリックして招待状を送信します。
 
-     ![Screenshot](/img/team-management/organization/add-group-member.png)
+     ![{{ page.title }}](/img/team-management/organization/add-group-member.png)
 
 `Team`タブから、グループを管理するためのすべての機能にアクセスすることもできます。グループメンバーの右側にある`MANAGE GROUP`をクリックして、ポップアップウィンドウで必要な操作をクリックするだけで済みます（アプリからグループを削除するなど）。
 
-![Screenshot](/img/team-management/organization/team-group-popup.png)
+![{{ page.title }}](/img/team-management/organization/team-group-popup.png)
 
 ## 組織からメンバー削除
 
@@ -58,13 +58,13 @@ menu:
 1. 組織の**オーナー**アカウントでサインインして、そのプロフィールページを開きます。
 2. 組織のプロファイルページに移動し,左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。
 
-   ![Screenshot](/img/team-management/organization/switch-profile-2.png)
+   ![{{ page.title }}](/img/team-management/organization/switch-profile-2.png)
 
-   ![Screenshot](/img/team-management/organization/switch-profile-2.png)
+   ![{{ page.title }}](/img/team-management/organization/switch-profile-2.png)
 3. 左側のメニューオプションから`Groups`を選択します。
 4. 探しているグループとグループメンバーを見つけ、ユーザー名の右側にあるオレンジ色の四角の中にある小さな`x`をクリックします。
 
-   ![Screenshot](/img/team-management/organization/remove-from-group.png)
+   ![{{ page.title }}](/img/team-management/organization/remove-from-group.png)
 
 ### 組織全体からメンバーを削除する
 
@@ -73,21 +73,21 @@ menu:
 1. 組織の**オーナー**アカウントでサインインして、そのプロフィールページを開きます。
 2. 組織のプロファイルページに移動し,左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。
 
-   ![Screenshot](/img/team-management/organization/switch-profile-2.png)
+   ![{{ page.title }}](/img/team-management/organization/switch-profile-2.png)
 3. 左側のメニューオプションから`People`を選択します。
 4. 探しているメンバーを見つけて、ユーザー名の右側にあるオレンジ色の四角の中の小さな`x`をクリックします。
 
-   ![Screenshot](/img/team-management/organization/remove-from-org.png)
+   ![{{ page.title }}](/img/team-management/organization/remove-from-org.png)
 5. ポップアップウィンドウで`Yes`をクリックすると組織から自分自身を外すことができ、また組織に対して持っていたすべてのアクセス権を失うことになります。実行することが確実な場合は、ポップアップウィンドウで`Yes`をクリックしてください。
 
-![Screenshot](/img/team-management/organization/org-are-you-sure.png)
+![{{ page.title }}](/img/team-management/organization/org-are-you-sure.png)
 
 ## グループ削除
 
 1. 組織の**オーナー**アカウントでサインインして、そのプロフィールページを開きます。
 2. 組織のプロファイルページに移動し,左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。
 
-   ![Screenshot](/img/team-management/organization/switch-profile-2.png)
+   ![{{ page.title }}](/img/team-management/organization/switch-profile-2.png)
 3. 左側のメニューオプションから`Groups`を選択します。
 4. 削除したいグループを選択し、`...`記号が表示されているドロップダウンメニューをクリックします。
 5. `Delete group`をクリックしてから、ポップアップウィンドウで`Yes`をクリックします。

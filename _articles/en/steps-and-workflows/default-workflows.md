@@ -20,7 +20,7 @@ Triggers can be configured so that any other Workflow (including deploy) is auto
 
 The **primary** Workflow is automatically created when adding a new app. Once the process of adding the app is over, Bitrise triggers the app's first build automatically: this build runs with the **primary** workflow.
 
-![](/img/primarywf.png)
+![{{ page.title }}](/img/primarywf.png)
 
 The **primary** Workflow is not the same for every app you create: it contains different Steps depending on the project type. For example, an Android project's **primary** Workflow will include the **Install missing Android SDK components**, the **Android Lint** and the **Android Unit Test** Steps. But overall, **primary** is a basic Workflow that always performs the following actions:
 

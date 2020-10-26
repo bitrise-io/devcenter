@@ -45,7 +45,7 @@ Xamarin solution fileは複数のプロジェクトを含めることができ�
  7. Bitriseがプロジェクトを確認を行うのでしばらくお待ち下さい。ここではBitriseがconfiguration fileを探して、それに基づいてアプリのセットアップを行います。Xamarinアプリの場合は、Xamarin Solution Fileを探します。
  8. Xamarin solution configuration を選択します。利用可能なオプションはsolution fileに基づいています。これは[環境変数](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)として保存され、あとで変更も可能です。
 
-    ![](/img/xamarin-project-build.png)
+    ![{{ page.title }}](/img/xamarin-project-build.png)
  9. Xamarin solution platformを選択します。これも[環境変数](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)として保存され、あとで変更も可能です。
 10. ビルド設定の最終確認を行ってください。
 11. webhookの登録をしてください。登録後、コードがプッシュされたりプルリクエストが作成されるとBitriseが自動的にビルドを開始します。これで最初のビルドが開始されます。messageをクリックすると、自動的にbuildページに遷移されます。
@@ -82,7 +82,7 @@ UIテストでは、Bitrise製の`App Center upload and schedule tests` ステ�
 
    テストを走らせる前に全ての依存関係をインストールしてアプリをビルドするため、このステップは、`NuGet restore` 、`Xamarin Archive` ステップの後に追加してください。
 
-   ![](/img/ui-testing-xamarin.png)
+   ![{{ page.title }}](/img/ui-testing-xamarin.png)
 2. Stepの必要事項の入力を行います。テスト走行をセットした後App Centerにて全て確認することができます：**Submit**タブを確認してください。
 
 BitriseのCalabash UIテストに興味がありましたら、[discuss guide](https://discuss.bitrise.io/t/how-to-do-calabash-uitesting-on-bitrise/361)をチェックしてください。
@@ -139,7 +139,7 @@ iOSプロジェクトの場合、Visual Studioにて正確なコード署名ア�
 1. アプリのWorkflow Editorに入り、`Workflows` タブをクリックします。
 2. `Xamarin Archive` ステップがワークフローに含まれていることを確認してください。
 
-   ![](/img/xamarin-archive.jpg)
+   ![{{ page.title }}](/img/xamarin-archive.jpg)
 3. ステップに必要なインプットには適切な値が入っています。デフォルトでは全てのインプットは[環境変数](/getting-started/getting-started-steps/#environment-variables-as-step-inputs)になっています。Workflow Editorにある`Env Vars` タブをクリックし、環境変数の値を変更してください。
    * **Path to the Xamarin Solution file**: あなたのXamarin ソリューションファイルの場所を示します。
    * **Xamarin project configuration**: Bitriseであなたが走らせたい、Visual Studioでセットアップされたソリューションコンフィグが表示されます。異なる設定で走らせたい場合は、適切な環境変数に変更してください。
@@ -157,7 +157,7 @@ iOSプロジェクトの場合、Visual Studioにて正確なコード署名ア�
 4. 異なるソリューションコンフィグを使用する場合は、`Env Var` タブ上の関連した環境変数の値を変更してください。どの環境変数を変更するかは、`Xamarin Archive` ステップのインプットを確認してください。
 5. `Deploy to iTunes Connect - Application Loader` ステップをワークフローに追加してください。
 
-   ![](/img/deploy-itunes-connect.jpg)
+   ![{{ page.title }}](/img/deploy-itunes-connect.jpg)
 6. `Deploy to iTunes Connect - Application Loader`  ステップをクリックし、Apple IDとパスワードを関連したインプットフィールドに入力します。
 7. ビルド開始です！
 

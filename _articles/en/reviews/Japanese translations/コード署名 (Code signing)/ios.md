@@ -28,7 +28,7 @@ BitriseでiOSのコード署名を行うためには、基本的に以下の３�
 
 * **Provisioning profileと.p12証明書がいずれもBitriseにアップロードされているかを確認する**。`Workflow Editor`内の`Code Signing`タブから確認できます。`iOS Auto Provision`ステップを使用している場合は、.p12証明書ファイルのみをアップロードしておく必要があります。
 
-![](/img/archive_fail.png)
+![{{ page.title }}](/img/archive_fail.png)
 
 * **プロジェクト内のProvisioning profileと.p12証明書の対応を確認する**。Development用のProvisioning profileには開発用の証明書が必要です。App StoreとAd-hoc、およびEnterprise用のProvisioning profileには配布用の証明書が必要です。
 * **アップロードしたコード署名用のファイルが適切なチームIDのものであるかを確認する**。あわせて、Provisioning profileが適切なApp IDのものであるかも確認してください。
@@ -47,10 +47,10 @@ BitriseでiOSのコード署名を行うためには、基本的に以下の３�
 4. アップロードしたコード証明用のファイルが有効であるかを確認してください！また、これらのファイルは有効期限があり、無効化できることにも注意してください。
 5. **Workflow Editor内で`Select method for export`の設定を確認する**。例えば、 `ad-hoc`または`app-store`に設定している場合、配布用の.p12証明書ファイルとAdHoc用またはApp Store用のProvisioning profileが必要です。
 
-   ![](https://devcenter.bitrise.io/img/export_fail.png)
+   ![{{ page.title }}](https://devcenter.bitrise.io/img/export_fail.png)
 6. **iOS app**と**provisioning profile uploaded to the Developer Portal**内のcapabilitiesリストが対応しているか確認します。
 
-   ![](https://devcenter.bitrise.io/img/capapbilities_xcode.png)
+   ![{{ page.title }}](https://devcenter.bitrise.io/img/capapbilities_xcode.png)
 
 {% include message_box.html type="important" title="Xcodeによって管理された署名" content="Xcodeによって管理されている署名 (Xcode managed signing) を使用する場合、ステップはXcodeによって管理されているprovisioning profileのみを認識します。
 
@@ -104,7 +104,7 @@ Code SigningタブにアップロードできるProvisioning Profileの数は最
 
 **iOS Auto Provision with App Store Connect API**ステップが以下のようなエラーメッセージが表示されて失敗する場合、特定のテストデバイスをBitriseへ二度登録している可能性があります。
 
-![](https://devcenter.bitrise.io/img/device-2.png)
+![{{ page.title }}](https://devcenter.bitrise.io/img/device-2.png)
 
 同じUDIDを２回登録した場合：
 

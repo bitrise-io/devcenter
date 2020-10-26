@@ -34,13 +34,13 @@ Once the Bitrise project scanner detects your code as an Android app, it kicks o
 2. Click the **Config** section of **Gradle Runner**.
 3. In the **Gradle task to run** input field, set, for example, `bundleRelease` or `bundleDebug` to create a bundle of your project.
 
-   ![](/img/bundlerelease.jpg)
+   ![{{ page.title }}](/img/bundlerelease.jpg)
 
 This way the Step will generate an Android App Bundle instead of an APK.
 
 If you wish to generate an Android App Bundle and an APK in one workflow, you can specify an additional task in the **Gradle task to run** input field:
 
-![](/img/assemble-bundle-gradle-runner.jpg)
+![{{ page.title }}](/img/assemble-bundle-gradle-runner.jpg)
 
 ### Android Build Step
 
@@ -50,7 +50,7 @@ You can generate an Android App Bundle for your Android app with our **Android B
 2. Provide the root directory of your Android project in the **Project Location** input field.
 3. Go to **Build type** and select `aab` as build type.
 
-   ![](/img/android-build-aab-config.jpg)
+   ![{{ page.title }}](/img/android-build-aab-config.jpg)
 
 If you wish to generate an APK and an Android App Bundle in one workflow, add two **Android Build** Steps after each other and configure one to build an Android App Bundle and the other to build an APK.
 
@@ -66,7 +66,7 @@ Signing an Android App Bundle file is the same as signing an APK.
 1. Add the **Android Sign** Step AFTER the build Step in your Workflow.
 2. Make sure the **APK file path** input field displays the same output env var as the output of the build Step you've been using.
 
-   ![](/img/android-sign-aab-apk.jpg)
+   ![{{ page.title }}](/img/android-sign-aab-apk.jpg)
 
 If you have uploaded your keystore file and filled out the required credentials, the **Android** **Sign** Step's **Keystore url**, **Keystore password**, **Keystore alias** and the **Private key password** will get populated automatically!
 

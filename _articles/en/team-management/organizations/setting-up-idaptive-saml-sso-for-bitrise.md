@@ -19,44 +19,44 @@ Before you start:
 * You must be one of the owners of the Bitrise Organization to configure SAML SSO on Bitrise.
 * You must be logged into your Admin Portal on [Idaptive](https://www.idaptive.com/) to set up Bitrise as a SAML SSO app and establish the connection between Bitrise and Idaptive. If you are using the **User Portal**, **Switch to** **Admin Portal** by clicking your avatar on Idaptive.
 
-![](/img/step1.jpg)
+![{{ page.title }}](/img/step1.jpg)
 
 ## Getting configuration information from Idaptive
 
  1. Log into Idaptive as an Admin.
- 2. Go to **Apps,** then to **Web Apps**. Click the **Add Web Apps** button on the right.![](/img/step2.png)
+ 2. Go to **Apps,** then to **Web Apps**. Click the **Add Web Apps** button on the right.![{{ page.title }}](/img/step2.png)
  3. On the **Custom** tab and select **SAML**, and click **Add**. On the **Add Web App** popup hit **Yes**. **Close** the window. You will be automatically directed to the **Settings** page.
 
-    ![](/img/step3.png)
+    ![{{ page.title }}](/img/step3.png)
  4. Add Bitrise to the **Name** and **Application ID** fields on the **Settings** page and click **Save**.
 
-    ![](/img/step-name.jpg)
+    ![{{ page.title }}](/img/step-name.jpg)
 
-    ![](/img/step4b.jpg)
+    ![{{ page.title }}](/img/step4b.jpg)
  5. Click **Trust** on the left menu bar and select the **Manual configuration** under **Identity Provider Configuration**.
  6. Click the **Signing Certificate** dropdown and download the certificate. Open it with a text editor so that you can copy the full content of the certificate.
 
-    ![](/img/download.jpg)
+    ![{{ page.title }}](/img/download.jpg)
  7. Insert it in the **Certificate** text box on the **Single Sign On page** of Bitrise.
  8. Copy the **Single Sign On URL** from **Trust** page of Idaptive. Insert it on the **Identity provider sign-on URL** field on the **Single Sign On page** of Bitrise.
  9. While on the **Single Sign On page** of Bitrise, copy the Single Sign-On URL and click **Configure**.
 
-    ![](/img/configure-sso.jpg)
+    ![{{ page.title }}](/img/configure-sso.jpg)
 10. Now let’s head back to Idaptive! Under **Service Provider Configuration** click **Manual Configuration**. Type **Bitrise** in the **SP Entity ID / Issuer / Audience** and paste the **Single Sing-On URL** from Bitrise to the **Assertion Consumer Service (ACS) URL** on Idaptive.
 
-    ![](/img/manual-config.jpg)
+    ![{{ page.title }}](/img/manual-config.jpg)
 11. Scroll down to **NameID Format** and select **emailAddress**. Click **Save**.
 
-    ![](/img/name-id.jpg)
+    ![{{ page.title }}](/img/name-id.jpg)
 12. Go to **Permissions** and click the **Add** button. In the **Select User, Group, or Role** popup, type the user name you want to add to the SAML app. Select it and hit **Add**. Save your changes. This will change the status of your Bitrise SAML app to **Deployed**.
 
-    ![](/img/step10.png)
+    ![{{ page.title }}](/img/step10.png)
 13. Check your inbox for an email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io "mailto:letsconnect@bitrise.io") which describes how to access the Organization via SAML. This email contains a **Sign In via SSO** button and a URL. Click the link or paste the URL to a new window.
 
-    ![](/img/saml-invitation-authentication-1.jpg)
+    ![{{ page.title }}](/img/saml-invitation-authentication-1.jpg)
 14. You’re directed to the **Allow “Organization name” to sign you in** page. Click **Authorize** if you trust the Organization to control your Bitrise account-sign in process. Note that once you click **Authorize**, you’ll only be able authenticate this account via SAML SSO. Click **Don’t allow** if the invitation email is from an untrusted source.
 
-    ![](/img/enable-saml-1.jpg)
+    ![{{ page.title }}](/img/enable-saml-1.jpg)
 15. If all went well, you should be landing on our Bitrise Dashboard.
 
 If you click **Account settings** and select the **Single Sign-On** tab from the left menu, you should see SAML SSO is enabled for your Organization. Once all Organization members have authorized their SAML SSO connection, you can [enforce SAML SSO on the whole organization with a simple toggle](https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization "https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization").

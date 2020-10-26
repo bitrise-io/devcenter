@@ -35,11 +35,11 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
 
     You can reach this page from your [Dashboard](https://app.bitrise.io/dashboard/builds): click the **Add new app** button on the right, and then select **Add New App from CLI**.
 
-    ![](/img/Bitrise_-_Mobile_Continuous_Integration_and_Delivery.png)
+    ![{{ page.title }}](/img/Bitrise_-_Mobile_Continuous_Integration_and_Delivery.png)
  2. Set the account that will own the app, and the privacy of the app.
  3. Copy the curl command you find there.
 
-    ![](/img/Bitrise_-_Mobile_Continuous_Integration_and_Delivery-2.png)
+    ![{{ page.title }}](/img/Bitrise_-_Mobile_Continuous_Integration_and_Delivery-2.png)
  4. Open a command line interface.
  5. Change the directory to your project's location.
  6. Paste the curl command and hit Enter.

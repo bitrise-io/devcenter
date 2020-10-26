@@ -16,11 +16,11 @@ menu:
 1. 組織のオーナーアカウントでサインインして、プロフィールページを開きます。
 2. 組織のプロファイルページに移動し、左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。
 
-   ![Screenshot](/img/team-management/organization/switch-profile-2.png)
+   ![{{ page.title }}](/img/team-management/organization/switch-profile-2.png)
 3. 左側のメニューオプションから`Groups`を選択します。
 4. `Organization owners`グループを見つけます。
 
-   ![Screenshot](/img/team-management/organization/org-owners.png)
+   ![{{ page.title }}](/img/team-management/organization/org-owners.png)
 5. メールアドレスまたはユーザー名を入力してください。そのアカウントが組織のオーナーになります。
 
 ## オーナーを組織から削除

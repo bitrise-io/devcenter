@@ -31,7 +31,7 @@ Bitrise CLI core pluginsの一つとしてWorkflow Editorを含む以下のス�
 
 このような感じになります：
 
-![](/img/offline-workflow-editor.png)
+![{{ page.title }}](/img/offline-workflow-editor.png)
 
 ## **Workflow Editorのバージョンの更新**
 

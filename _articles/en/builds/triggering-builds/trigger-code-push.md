@@ -27,7 +27,7 @@ By default, every new app you add will have a trigger that triggers a build ever
 3. Select the `Triggers` tab.
 4. Select the `PUSH` option.
 
-   ![](/img/trigger.png)
+   ![{{ page.title }}](/img/trigger.png)
 5. In the existing trigger, click the `Push branch` option.
    If you have an existing trigger set up already, click the `+ ADD TRIGGER` option to set up a new one.
 6. Type in the name of the branch (for example, `master`). Make sure there are no spelling errors, otherwise the trigger won't work.

@@ -60,7 +60,7 @@ React Native apps built with Expo do not come with native modules. Since our bui
 
 The Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps in your deploy workflow.
 
-![](/img/eject-expo-input-fields.png)
+![{{ page.title }}](/img/eject-expo-input-fields.png)
 
 Let's see which fields you have to fill out when clicking **\[BETA\] Expo Eject** Step!
 
@@ -84,7 +84,7 @@ You can use React Native’s built in testing method, called jest, to perform un
 1. Add another Run npm command step to your workflow right after the first **Run npm command** Step.
 2. Type `test` in the **npm command with arguments to run** input field.
 
-   ![](/img/jest-test-react-expo.jpg)
+   ![{{ page.title }}](/img/jest-test-react-expo.jpg)
 3. [Start a build](/builds/Starting-builds-manually/).
 
 You can view the test artifacts on the **APPS & ARTIFACTS** tab of your Build's page.
@@ -106,7 +106,7 @@ Let’s see how to fill them out!
 
 {% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options! "%}
 
-![](/img/keystore.png)
+![{{ page.title }}](/img/keystore.png)
 
 The Android chunk of code signing is done. Let's continue with iOS!
 
@@ -127,11 +127,11 @@ To deploy to Testflight and to the App Store, you will need the following code s
 
    **Force code signing with Development Team**: Add the team ID.
 
-   ![](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity:** Add the Code Signing Identity as a full ID or as a code signing group.
+   ![{{ page.title }}](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity:** Add the Code Signing Identity as a full ID or as a code signing group.
 
-   ![](/img/force-code-signing-code-signing.jpg) **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID (and not the file name).
+   ![{{ page.title }}](/img/force-code-signing-code-signing.jpg) **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID (and not the file name).
 
-   ![](/img/force-code-signing-provisioning-profile.jpg)
+   ![{{ page.title }}](/img/force-code-signing-provisioning-profile.jpg)
 8. If the code signing files are manually generated on the Apple Developer Portal, you have to specify to use manual code signing settings since the ejected React Native project have Xcode managed code signing turned on. Click the **Debug** input group and add `CODE_SIGN_STYLE="Manual"` to the **Additional options for xcodebuild call input** field.
 
 ## Deploying to Bitrise

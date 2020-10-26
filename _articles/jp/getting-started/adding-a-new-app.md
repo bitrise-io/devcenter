@@ -47,15 +47,15 @@ Bitriseには、あらゆるGitリポジトリに接続するためのオプシ�
 
 {% include message_box.html type="note" title="任意のGitリポジトリとの接続" content=" 公開・または非公開を問わず、任意のGitリポジトリとBitriseとを接続させることが可能です。Bitriseは自動でSSHキーを生成するため、それを使ってプロバイダとの接続を設定できます。 "%}
 
-![Screenshot](/img/adding-a-new-app/connect-repo.png)
+![{{ page.title }}](/img/adding-a-new-app/connect-repo.png)
 
 あなたのリポジトリをホストしているプロバイダで[Bitriseを認証](/getting-started/adding-a-new-app/connecting-account-bitrise) していない場合、リポジトリは許可を要求します。
 
-![Screenshot](/img/adding-a-new-app/authorize-at-provider.png)
+![{{ page.title }}](/img/adding-a-new-app/authorize-at-provider.png)
 
 上の図のようにリポジトリは一覧で表示されます。もしGitHubやBitbucket以外でホストされているリポジトリに接続したい場合は、`Other / Manual`を選択してください。
 
-![Screenshot](/img/adding-a-new-app/add-other-repo.png)
+![{{ page.title }}](/img/adding-a-new-app/add-other-repo.png)
 
 接続したいリポジトリのGit URLを入力してください。
 
@@ -77,7 +77,7 @@ SSHキーはサービス間でのセキュアな情報転送を担います。Bi
 
 GitHub、GitLabおよびBitbucketのリポジトリをセットアップする場合、BitriseはSSHキーペアを生成します。リポジトリへのSSHキーの登録は、デプロイキーとして自動で行うか、または手動で行うことができます。
 
-![Screenshot](/img/adding-a-new-app/bitrise_auto_add_ssh_key2.png)
+![{{ page.title }}](/img/adding-a-new-app/bitrise_auto_add_ssh_key2.png)
 
 キーを自動で登録するためには、リポジトリの管理者権限が必要です。権限がない場合は、公開鍵をコピーしてリポジトリに登録してください。
 
@@ -97,15 +97,15 @@ GitHub、GitLabおよびBitbucketのリポジトリをセットアップする�
 
 ### GitHub
 
-![Screenshot](/img/adding-a-new-app/ssh-github.png)
+![{{ page.title }}](/img/adding-a-new-app/ssh-github.png)
 
 ### Bitbucket
 
-![Screenshot](/img/adding-a-new-app/ssh-bitbucket.png)
+![{{ page.title }}](/img/adding-a-new-app/ssh-bitbucket.png)
 
 ### GitLab
 
-![Screenshot](/img/adding-a-new-app/ssh-gitlab.png)
+![{{ page.title }}](/img/adding-a-new-app/ssh-gitlab.png)
 
 ### 自分で生成したキーを使用する
 

@@ -46,7 +46,7 @@ If the Bitrise project scanner has successfully scanned your project, **Run npm 
 
 1. In the **Run npm command** Step, type install in the **npm command with arguments to run** input field so that it can add javascript dependencies to your project.
 
-![](/img/run-npm.png)
+![{{ page.title }}](/img/run-npm.png)
 
 The **Run yarn command** Step can install javascript dependencies automatically to your project without having to configure it manually.
 
@@ -69,7 +69,7 @@ A React Native app can consists of two projects, an Android and an iOS - both ha
 
    With this information added to your **Code Signing** tab, our **Android Sign** Step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
 
-![](/img/keystore.png)
+![{{ page.title }}](/img/keystore.png)
 
 {% include message_box.html type="info" title="More on Android code signing" content=" You should have the keystore password, keystore alias and the private key password available as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. You can learn more about the keystore file if you head over to [Android Studio's guide on Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores).
 
@@ -97,7 +97,7 @@ You will need:
 4. Check that you have the **Certificate and profile installer** Step in your workflow. It must be before the **Xcode Archive & Export for iOS** Step (you can have other Steps between the two, like **Xcode Test for iOS**).
 5. Check the **Select method for export** input of the **Xcode Archive & Export for iOS** Step. By default, it should be the `$BITRISE_EXPORT_METHOD` Environment Variable (Env Var). This variable stores the export method you selected when creating the app. If you selected **development** back then, you don’t need to change the input. Otherwise, manually set it to **development**.
 
-   ![](/img/export-method.png)
+   ![{{ page.title }}](/img/export-method.png)
 6. [Start a build](https://devcenter.bitrise.io/builds/starting-builds-manually/).
 
 If you uploaded the correct code signing files, the **Certificate and profile installer** Step should install your code signing files and the **Xcode Archive & Export for iOS** Step should export an .ipa file with the **development export method**. If you have the **Deploy to Bitrise.io** Step in your workflow, you can find the .ipa file on the **APPS & ARTIFACTS** tab of the Build's page.
@@ -118,13 +118,13 @@ To deploy to Testflight and to the App Store, you will need more code signing fi
 3. Go to the app’s Workflow Editor and create a [new workflow](https://devcenter.bitrise.io/getting-started/getting-started-workflows/): click the **+ Workflow** button, enter the name of your new workflow and in the **BASED ON** dropdown menu, select **deploy**. This way the new workflow will be a copy of the basic **deploy** workflow.
 4. Set the **Select method for export** input of the **Xcode Archive & Export for iOS** Step to **app-store**.
 
-   ![](/img/app-store-export-method-1.png)
+   ![{{ page.title }}](/img/app-store-export-method-1.png)
 
 ## Testing your project
 
 You can use React Native's built in testing method, called **jest** to perform unit tests.  Add another **Run npm command** Step to your workflow, and type **test** in the **npm command with arguments to run** input field.
 
-![](/img/test-npm.png)
+![{{ page.title }}](/img/test-npm.png)
 
 ## Deploying to Bitrise
 

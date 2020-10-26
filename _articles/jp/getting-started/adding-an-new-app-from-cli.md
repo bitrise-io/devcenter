@@ -34,11 +34,11 @@ CLIでBitriseに新しいアプリを追加する前に、いくつかのこと�
 
     [ダッシュボード](https://app.bitrise.io/dashboard/builds)からこのページにアクセスできます。右側の**新しいアプリの追加**ボタンをクリックし、**CLIから新しいアプリの追加**を選択します。
 
-    ![](/img/Bitrise_-_Mobile_Continuous_Integration_and_Delivery.png)
+    ![{{ page.title }}](/img/Bitrise_-_Mobile_Continuous_Integration_and_Delivery.png)
  2. アプリを所有するアカウントとアプリのプライバシーを設定します。
  3. 表示されたcurlコマンドをコピーします。
 
-    ![](/img/Bitrise_-_Mobile_Continuous_Integration_and_Delivery-2.png)
+    ![{{ page.title }}](/img/Bitrise_-_Mobile_Continuous_Integration_and_Delivery-2.png)
  4. コマンドラインインターフェイスを開きます。
  5. プロジェクトのディレクトリに異動します。
  6. curlコマンドを貼り付けて、Enterキーを押します。

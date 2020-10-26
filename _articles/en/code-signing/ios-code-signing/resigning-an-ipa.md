@@ -35,11 +35,11 @@ In this example we'll be setting up a Workflow to create two signed .ipa files: 
    Please note that this Step must come AFTER either the **Certificate and profile installer** or the **iOS Auto Provisioning** Step in your Workflow.
 2. In the list of input variables, navigate to **Select method for export** and select **development** from the dropdown menu.
 
-   ![](/img/development-select-method-for-export.png)
+   ![{{ page.title }}](/img/development-select-method-for-export.png)
 3. Add the **Export iOS and tvOS Xcode archive** Step to your Workflow.
 4. In the list of input variables, navigate to **Select method for export** and select **app-store** from the dropdown menu.
 
-   ![](/img/app-store-export-method-2.png)
+   ![{{ page.title }}](/img/app-store-export-method-2.png)
 
 And you're done! Feel free to add multiple **Export iOS and tvOS Xcode archive** Steps to your Workflows to create multiple different signed .ipa files if necessary.
 

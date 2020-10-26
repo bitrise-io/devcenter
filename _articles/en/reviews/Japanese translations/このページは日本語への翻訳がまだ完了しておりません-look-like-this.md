@@ -17,7 +17,7 @@ Every bitrise.yml file is stored for your builds on [bitrise.io](https://www.bit
 * You can pick which `branch` the build was started on.
 * You can select either the `primary` or the `deploy workflow` of the build."%}
 
-![Screenshot](/img/bitrise-cli-bitrise-yml/build-filters.png)
+![{{ page.title }}](/img/bitrise-cli-bitrise-yml/build-filters.png)
 
 ## Accessing a build's bitrise.yml
 
@@ -34,7 +34,7 @@ Once you've clicked `Show bitrise.yml`, you will see the `BUILD'S BITRISE YML` p
 * blue means modified content
 * orange means deleted content
 
-![Screenshot](/img/bitrise-cli-bitrise-yml/bitrise-yml-changes.png)
+![{{ page.title }}](/img/bitrise-cli-bitrise-yml/bitrise-yml-changes.png)
 
 ## Restoring and undoing changes in bitrise.yml online
 
@@ -44,7 +44,7 @@ If you don't like the changes made to your _current_ bitrise.yml, you can easily
 2. In the `BITRISE.YML CHANGES` pop-up window, click the orange `Restore` button.
 3. Hit `OK` in the `Are you sure?` pop-up window to confirm and override the current bitrise.yml.
 
-![Screenshot](/img/bitrise-cli-bitrise-yml/confirm-bitrise-yml-changes.png)
+![{{ page.title }}](/img/bitrise-cli-bitrise-yml/confirm-bitrise-yml-changes.png)
 
 ## Editing and downloading bitrise.yml online
 

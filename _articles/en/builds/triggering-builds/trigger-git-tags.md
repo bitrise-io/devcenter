@@ -26,7 +26,7 @@ Note that certain providers, such as GitLab, require Tag Push events to be speci
 3. Select the `Triggers` tab.
 4. Select the `TAG` option.
 
-   ![](/img/tag-trigger.png)
+   ![{{ page.title }}](/img/tag-trigger.png)
 5. Click `+ ADD TRIGGER`.
 6. In the `TAG` window, add the tag that you wish to trigger a build.
 7. Select the workflow you wish to trigger (for example, `primary`).

@@ -38,10 +38,10 @@ Flutter is a mobile app SDK that allows developers to create native apps for bot
     We look for your configuration files and set up your app based on them. In the case of Flutter apps, you definitely need a `pubspec.yaml` file in your project.
  8. If your app has tests in the repository, you will be prompted to decide if you want to run them.
 
-    ![](/img/flutter-project-build-config.jpg)
+    ![{{ page.title }}](/img/flutter-project-build-config.jpg)
  9. If you have an iOS project in your Flutter project, you will have to select an .ipa export method.
 
-    ![](/img/flutter-select-export-method.jpg)
+    ![{{ page.title }}](/img/flutter-select-export-method.jpg)
 10. Register a [webhook](/webhooks/index/) when prompted.
 
     With a webhook, Bitrise can start a build automatically when code is pushed to your repository, or a pull request is created. This also kicks off your first build - click the message and it will take you to the build page.
@@ -69,7 +69,7 @@ You can use our automatically generated **primary** Workflow to test your Flutte
 
    The Step runs the `flutter test` command with the specified flags. To check the available flags, open a command line interface on your own machine and run `flutter test --help`.
 
-   ![](/img/flutter_test.png)
+   ![{{ page.title }}](/img/flutter_test.png)
 5. Make sure the **Project Location** input of the **Flutter Test** Step is correct.
 
    The default value is the the Environment Variable (Env Var) created for your Flutter project's location.
@@ -93,7 +93,7 @@ You can build both iOS and Android projects at the same time or you can build th
 
 Here's an example Workflow we'll use in this configuration, with all the necessary Steps:
 
-![](/img/flutter-getting-started.jpg)
+![{{ page.title }}](/img/flutter-getting-started.jpg)
 
 We'll discuss the Steps specific to iOS and Android deployment in their respective sections!
 

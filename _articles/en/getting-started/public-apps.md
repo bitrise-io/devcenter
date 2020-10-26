@@ -46,7 +46,7 @@ Adding a new app as a public app is incredibly simple: at the start of the proce
 3. Choose the account you wish to use for the app.
 4. Set the privacy of the app to **Public**.
 
-![](/img/publicapp.png)
+![{{ page.title }}](/img/publicapp.png)
 
 After this, proceed as usual to set up the app.
 

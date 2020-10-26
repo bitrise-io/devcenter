@@ -25,7 +25,7 @@ Bitriseのビルドマシンでリモートアクセスを使用するには2つ
 2. **Rebuild with Remote Access**のオプションをクリックします。
 3. **Remote Access Instructions**をクリックします。
 
-   ![](/img/remote-access-instructions.png)
+   ![{{ page.title }}](/img/remote-access-instructions.png)
 4. **SSH**オプションの下にある、後ほど必要になるCommandをコピーします。
 5. コマンドラインインターフェイス (CLI) を開きます。
 6. **SSH**の下にあるcommandを実行します (以下は例です)：
@@ -42,7 +42,7 @@ Bitriseのビルドマシンでリモートアクセスを使用するには2つ
 2. **Rebuild with Remote Access**オプションをクリックします。
 3. **SSH**をクリックします。
 
-   ![](/img/remote-access-instructions.png)
+   ![{{ page.title }}](/img/remote-access-instructions.png)
 4. **SSH**オプションの下にある情報を確認します：
    * Address
    * Username

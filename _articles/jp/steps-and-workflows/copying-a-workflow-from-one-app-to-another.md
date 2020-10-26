@@ -23,7 +23,7 @@ menu:
 3. **Workflows** タブに移動してから **bitrise.yml** タブに移動します。
 4. 必要なワークフローを選択してコピーします。
 
-   ![](/img/copy-workflow.png)
+   ![{{ page.title }}](/img/copy-workflow.png)
 5. コピー先のアプリを開きます。
 6. **Workflows** タブに移動してから **bitrise.yml** タブに移動します。
 7. \`workflows\` コンポーネントの下にワークフローを貼り付けます。

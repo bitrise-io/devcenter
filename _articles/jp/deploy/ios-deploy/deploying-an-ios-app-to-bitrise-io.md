@@ -30,13 +30,13 @@ menu:
 
    他のエクスポート方法も使うことができますが、Bitriseへのみデプロイを実行し、アプリを内部テスターの指定されたデバイスへインストールを行いたいのであれば、`development`が効率的です。
 
-   ![](/img/code-signing/ios-code-signing/xcode-archive-export-method.png)
+   ![{{ page.title }}](/img/code-signing/ios-code-signing/xcode-archive-export-method.png)
 4. ワークフローに`Deploy to Bitrise.io`ステップがあることを確認してください。デフォルトでは、`Enable public page for the App?`インプットの値が`true`に設定されています。この方法では、一旦ビルドが実行されると、公開インストールページが利用可能になります。長くてランダムなURLなので、Bitriseに登録していない人との共有を行えます。このURLはメールでユーザーに送られます。`Notify: User Roles`と`Notify: Emails` インプットで誰がそのメールを受け取るのか確認できます。
 5. ビルドを開始します。
 6. ビルドが終了したら、アプリの`Builds`ページへ進み直近のビルドをクリックします。
 7. `APPS & ARTIFACTS`タブをクリックして.ipaファイルを探します。  
    ここで公開インストールURLも見つけることができます。
 
-   ![](/img/public-install-page.png)
+   ![{{ page.title }}](/img/public-install-page.png)
 
 完了です！これでファイルがアプリのプロビジョニングプロファイルに含まれるすべてのデバイスにおいてインストールされます。

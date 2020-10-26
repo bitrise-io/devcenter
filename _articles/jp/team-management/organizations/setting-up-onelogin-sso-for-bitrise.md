@@ -25,19 +25,19 @@ This requires:
  1. Log into [OneLogin](https://www.onelogin.com/ "https://www.onelogin.com/") as an Administrator.
  2. Click **Administration** on the top bar.
 
-    ![](/img/OneLogin-administration.png)
+    ![{{ page.title }}](/img/OneLogin-administration.png)
  3. Select **Applications** and click **Add App**. This will take you to the **Find Applications** page.
 
-    ![](/img/onelogin-addapp.png)
+    ![{{ page.title }}](/img/onelogin-addapp.png)
  4. Type `Bitrise` in the search bar and select the **SAML2.0** type from the search results.
 
-    ![](/img/OneLogin-findapp.jpg)
+    ![{{ page.title }}](/img/OneLogin-findapp.jpg)
  5. Click the **Configuration** tab on the left sidebar. You can change the icon and add descriptions if you wish. Make sure **Organization (Bitrise)** is ticked. Hit **Save**.
 
-    ![](/img/add-bitrise-onelogin.jpg)
+    ![{{ page.title }}](/img/add-bitrise-onelogin.jpg)
  6. Click the **Configuration** tab again and paste the **Single Sign-On URL** from your Bitrise Organization’s **Single Sign On** tab to the **Single Sign-On URL** field on OneLogin. Hit **Save**.
 
-    ![](/img/application-details.jpg)
+    ![{{ page.title }}](/img/application-details.jpg)
  7. Select **SSO** on the left sidebar.
  8. Click the **View details** for the X.509 Certificate. Copy the content of the **X.509 Certificate** and paste it to the **Certificate** field on the **Enable Single Sign-On** page of Bitrise.
  9. Go back to the **SSO** page on OneLogin and copy the **SAML 2.0 Endpoint (HTTP)** link. Paste it in the **Identity provider sign-on URL** field on Bitrise.
@@ -57,7 +57,7 @@ All Organization members (including the Organization owner) must enable their SA
 2. Make sure you are already logged into Bitrise in the usual way (using your credentials).
 3. Click **Sign in via SSO** or open the URL in a new tab of the same browser where you are logged in.
 
-   ![](/img/email-onelogin.jpg)
+   ![{{ page.title }}](/img/email-onelogin.jpg)
 4. On the **Allow “Organization name”** **to sign you in** window, click **Authorize** if you trust the Organization.
 
 You should be landing on your Bitrise Dashboard. If you go to your Organization's **Groups** tab, you can see that you are automatically added as a SAML user. All Organization members, who enable SAML SSO, appear here automatically. From now on you can log into your Bitrise Organization with SAML SSO.

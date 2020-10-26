@@ -23,11 +23,11 @@ How to schedule a build on Bitrise:
 2. Click on **Start/Schedule a Build**.
 3. In the **Build configuration** pop-up window, toggle the switch to the right to enable **Schedule this build** feature.
 
-   ![](/img/basic-build-config-1.jpg)
+   ![{{ page.title }}](/img/basic-build-config-1.jpg)
 4. Set the hour and minute in the `HH/MM` field.
 5. On the timeline, select the day(s) when you want your build to run.
 
-   ![](/img/basic-build-config-scheduled-1.jpg)
+   ![{{ page.title }}](/img/basic-build-config-scheduled-1.jpg)
 6. Check and fill out the rest of the input fields if necessary. You can schedule your build in the advanced version of the **Build configuration** window too.
 7. Click **Schedule Build** at the bottom of the pop-up window.
 

@@ -64,7 +64,7 @@ As you can see above, the sub-directories for each test run contain a `test-info
     // Test Name ...
     { "test-name":"My first test" }
 
-![](/img/Test_add-on-6.png)
+![{{ page.title }}](/img/Test_add-on-6.png)
 
 ## The test report file
 

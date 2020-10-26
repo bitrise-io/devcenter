@@ -11,7 +11,7 @@ menu:
 ---
 スタック（Stack）とは、仮想マシンのバージョンを示しておりビルド走行に使用します。アプリをBitriseに追加した後、Bitriseが適切なスタックを自動で選択します。Workflow Editorの`Stacks` タブにて変更ができます。
 
-![](/img/stack-selector.png)  
+![{{ page.title }}](/img/stack-selector.png)  
 使用したいスタックを選んだら、その選んだスタックについての簡単な説明とリンクを見ることができます。（どんなツールがプリインストールされているか、どのバージョンなのかといった情報を見ることができます。）
 
 {% include message_box.html type="important" title="`Save`ボタンを押すのをお忘れなく！" content=" `Save`ボタンが押されるまで、スタックは使用されることはないのでご注意ください。"%}

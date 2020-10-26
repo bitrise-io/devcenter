@@ -39,9 +39,9 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
     * Android
     * iOS と Android (Androidビルドが最初にビルドされる
 
-       ![](https://devcenter.bitrise.io/img/project-build-cordova.png)
+       ![{{ page.title }}](https://devcenter.bitrise.io/img/project-build-cordova.png)
 
-      ![](https://devcenter.bitrise.io/img/project-build-ionic.png)
+      ![{{ page.title }}](https://devcenter.bitrise.io/img/project-build-ionic.png)
 10. コードがリポジトリにプッシュされたときにBitriseが自動的にビルドを開始できるように、Promptedが表示されたらWebフックに登録します。メインのワークフローでの最初のビルドも開始できます。 また、メッセージをクリックするとビルドページに移動します。最初のビルドではAPKと.ipaは作成されませんが、ビルドのページでプロジェクトのログを確認できます。
 
     例として、`Karma Jasmine Test Runner`ステップを含むCordova**主要ワークフロー**を確認してください。
@@ -69,7 +69,7 @@ Cordova/Ionicフレームワークを使いクロスプラットフォームア�
 
 `Run npm command`ステップは、デフォルトパートのプライマリワークフローとデプロイワークフローによるものです。 `Run npm command`ステップで、`The npm command with arguments to run`フィールドが`install`に設定されていることを確認します。
 
-![](https://devcenter.bitrise.io/img/run-npm.png)
+![{{ page.title }}](https://devcenter.bitrise.io/img/run-npm.png)
 
 `The 'yarn' command to run`入力フィールドを空のままにするか、または`install`に設定します -  `Run yarn command`ステップはどちらかの方法でdependencies（依存関係）をインストールします。
 
@@ -91,7 +91,7 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
 
    WebサイトのUIまたは`codesigndoc`ツールのどちらでも実行できます。
 
-   ![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
+   ![{{ page.title }}](https://yv69yaruhkt48w.preview.forestry.io/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
 4. ステップで仮想マシンに証明書をダウンロードしてインストールできるように、ワークフローの`Certificate and profile installer`ステップを確認します。
 5. ワークフローに`Generate cordova build configuration`ステップを追加します。 （このステップでは、次のステップに必要なすべての設定、`Cordova Archive`または`Ionic Archive`を実行します。）`Certificate and profile installer`ステップの後に行います。
 6. ステップに必要な入力を記入してください。`Code Signing Identity`と`Provisioning Profile`はどちらも、**以下のようにマークがされていなくても、**iOSアプリの必須入力です。
@@ -106,13 +106,13 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
 ### Androidプロジェクトに署名
 
 1. 署名済みのAndroidプロジェクトの場合は、Workflow Editorの`Code Signing`タブへ。
-2. `ANDROID KEYSTORE FILE`セクションの`Upload file`項目でkeystoreファイルをクリックまたはドラッグ＆ドロップします。 ![](/img/keystore-file.png)
+2. `ANDROID KEYSTORE FILE`セクションの`Upload file`項目でkeystoreファイルをクリックまたはドラッグ＆ドロップします。 ![{{ page.title }}](/img/keystore-file.png)
 3. 3つの入力項目に記入します:
    * `keystore password`
    * `keystore alias`
    * `private key password`
 
-   ![](/img/keystore.png)
+   ![{{ page.title }}](/img/keystore.png)
 4. `Save metadata`をクリックします。 Bitriseはkeystoreファイルをアップロードし、環境変数(`BITRISEIO_ANDROID_KEYSTORE_URL`)をバリューとしてファイルのダウンロードURL（時間制限のある、読み取り専用のダウンロードURL）に対応させます。このURLを使用して、次のビルド中にkeystoreファイルをダウンロードできます。このステップでは、後のステップで使用される以下のの環境変数が作成されます。
    * `$BITRISEIO_ANDROID_KEYSTORE_URL`
    * `BITRISEIO_ANDROID_KEYSTORE_PASSWORD`
@@ -133,7 +133,7 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
 * `Platform`入力は`device`に設定が必要です。
 * `Build command configuration`入力は、`Generate cordova build configuration`ステップの`Build configuration`入力と一致していなければなりません。  アーカイブステップは、ワークフローの`Generate cordova build configuration`ステップの後にに行う必要があります。
 
-![](/img/cordova-archive-1.png)
+![{{ page.title }}](/img/cordova-archive-1.png)
 
 デプロイの準備が完了！ワークフローにデプロイステップを追加して、iOSおよびAndroidプロジェクトを公開する方法を見てみましょう！
 

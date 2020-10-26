@@ -55,7 +55,7 @@ In this tutorial, we describe how Organization owners can set up their SAML SSO 
 5. Add the generated SSO credentials to the **Identity provider sign-on URL** and **Certificate** fields on the **Single Sign On** tab.
 6. Click the **Configure SSO** button.
 
-![](/img/single-sign-on-page.jpg)
+![{{ page.title }}](/img/single-sign-on-page.jpg)
 
 If you've completed the steps, you and Org members should get a verification email about SAML SSO connected to the respective Organization.
 
@@ -70,16 +70,16 @@ Now that the Organization owner has set up SAML SSO, everyone in the Organizatio
 
    Click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
 
-   ![](/img/saml-invitation-authentication.jpg)
+   ![{{ page.title }}](/img/saml-invitation-authentication.jpg)
 3. Now you are redirected to your SAML SSO provider's site where you have to provide your email address associated with your Bitrise Organization.
 
    If you provide a different Bitrise email address on your SAML SSO provider's site which is not related to that particular Organization, you will get the below error message. Log in with the right email address of the Organization.
 
-   ![](/img/no-connected-sso-for-this-email-address.jpg)
+   ![{{ page.title }}](/img/no-connected-sso-for-this-email-address.jpg)
 4. You're directed to the **Allow "Organization name" to sign you in** page.
 
 * Click **Authorize** if you trust the Organization to control your Bitrise account-sign in process. Note that once you click **Authorize**, you'll only be able authenticate this account via SAML SSO.
-* Click **Don't allow** if the invitation email is from an untrusted source.![](/img/enable-saml.jpg)
+* Click **Don't allow** if the invitation email is from an untrusted source.![{{ page.title }}](/img/enable-saml.jpg)
 
 If all went well, you should be landing on our Bitrise Dashboard.
 
@@ -94,13 +94,13 @@ The **Single Sign-On** tab is only available for the Organization owner. Let's s
 
    You will see the **Review Users** and the **Disable SSO** buttons:
 
-   ![](/img/single-sing-on-url.jpg)
+   ![{{ page.title }}](/img/single-sing-on-url.jpg)
 
    **Disable SSO** disables SAML SSO for all Organization members. Once disabled, Org members will be able to sign in with the regular sign-in procedure. Please note that an individual Org member can only be disabled at your own SAML SSO provider's site!
 
    **Review Users** takes you from the **Single Sign On** tab to the **People** tab where you can check the Organization member's SAML SSO status.
 
-   ![](/img/saml-sso-people-tab.png)
+   ![{{ page.title }}](/img/saml-sso-people-tab.png)
 
 * **SAML SSO IS ENABLED**: Login via SAML SSO is enabled.
 * **SAML SSO IS DISABLED**: The Organization member has not enabled SSO connection through the **Sign in via SSO** button. To enable it, the Organization member has to follow the instructions in the verification email from Bitrise.
@@ -121,7 +121,7 @@ Once all Organization members have enabled their SAML SSO related to the Organiz
 
 Now Organization members can only log in via SAML SSO.
 
-![](/img/enforced-saml-sso.jpg)
+![{{ page.title }}](/img/enforced-saml-sso.jpg)
 
 ### Can't enforce SAML SSO on your Organization?
 
@@ -134,13 +134,13 @@ In some cases the Organization owner cannot enforce SAML SSO on the Organization
 
   The owner can send the login URL to the Organization member who can follow the instructions to enable SAML SSO to the right Organization.
 
-![](/img/cant-enforce-saml-sso.png)
+![{{ page.title }}](/img/cant-enforce-saml-sso.png)
 
 ## Logging in via SSO with a Bitrise account
 
 If SAML SSO connection has been already added to your Organization and you are currently logged out of Bitrise, you can easily log into your Organization.
 
-1. Click **Login via SSO** on our [login page](https://app.bitrise.io/users/sign_in). ![](/img/login-via-sso.jpg)
+1. Click **Login via SSO** on our [login page](https://app.bitrise.io/users/sign_in). ![{{ page.title }}](/img/login-via-sso.jpg)
 2. You will be redirected to the **Initiate Single Sign-on page**.
 3. Provide your Organization name.
 4. Click **Continue to log in**. You will be redirected to your own SSO provider's page.
@@ -175,11 +175,11 @@ Organization owners can disable an established SAML SSO for the Organization wit
 
    A confirmation pop-up appears where you can confirm/cancel your action. Please note that by clicking the **Disable SSO** button, you will disable SAML SSO for all Organization members. Once it's done, Org members will be able to log in through their normal Bitrise credentials.
 
-![](/img/disable-sso.png)
+![{{ page.title }}](/img/disable-sso.png)
 
 You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bitrise.io) which confirms the disabled SAML SSO for the Organization.
 
-![](/img/disabled-sso-email.png)
+![{{ page.title }}](/img/disabled-sso-email.png)
 
 ### Disabling one Organization member's SAML SSO
 
@@ -188,6 +188,6 @@ Please note if you click the **x** next to an Organization member's name, you re
 1. Go to your SAML SSO provider's site.
 2. Disable the Organization member there. Please note that if you fail to do this, the Org member will able to re-authenticate again to Bitrise using the IDP connection.
 
-![](/img/disbale-sso-enabled-status.png)
+![{{ page.title }}](/img/disbale-sso-enabled-status.png)
 
 {% include banner.html banner_text="Let's configure SAML SSO to your Organization!" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your Organization" %}

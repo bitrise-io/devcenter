@@ -63,7 +63,7 @@ You don’t need to create your own `bitrise.yml` file in advance to use this so
 4. Click **Store in app repository**.
 5. If you don’t have a `bitrise.yml` file the repository, you will be prompted to add one.
 
-   ![](/img/bitrise_workflow_editor-2.png)  
+   ![{{ page.title }}](/img/bitrise_workflow_editor-2.png)  
    You can download the current `bitrise.yml` file from the website, or copy its entire content to the clipboard. Either way, you have to commit the file to the root directory of the repository to proceed. Remember: you must commit the file to the branch that is set as the default branch on [bitrise.io](bitrise.io)! You can check the default branch under the **Settings** tab on our website.
 6. Click **Update setting**.
 7. When prompted to make sure your `bitrise.yml` file is valid, click **Continue**.
@@ -113,7 +113,7 @@ If an app has multiple builds on [bitrise.io](https://www.bitrise.io) and you wa
 * You can pick which **branch** the build was started on.
 * You can select either the **primary** or the **deploy workflow** of the build."%}
 
-  ![](/img/builds.png)
+  ![{{ page.title }}](/img/builds.png)
 
 1. Select an application on your **Dashboard** and select one of its builds.
 2. Click the **Show bitrise.yml** button at the top OR at the bottom of your inline log.
@@ -128,7 +128,7 @@ Once you've clicked **Show bitrise.yml**, you will see the **BUILD'S BITRISE YML
 * Blue means modified content.
 * Red means deleted content.
 
-![](/img/bitrise-yml-changes.png)
+![{{ page.title }}](/img/bitrise-yml-changes.png)
 
 ## Restoring and undoing changes in bitrise.yml online
 
@@ -138,13 +138,13 @@ If you don't like the changes made to your current `bitrise.yml`, you can easily
 2. In the **BITRISE.YML CHANGES** pop-up window, click the orange **Restore** button.
 3. Hit **OK** in the **Are you sure?** pop-up window to confirm and override the current `bitrise.yml`.
 
-![](/img/bitrise-yml-changes-are-you-sure.png)
+![{{ page.title }}](/img/bitrise-yml-changes-are-you-sure.png)
 
 ## Editing and downloading bitrise.yml online
 
 You can edit your build config in yml format in the **bitrise.yml editor** if you go to your app's Workflow Editor and click the **bitrise.yml** tab.
 
-![](/img/bitrise-yml-tab.png)
+![{{ page.title }}](/img/bitrise-yml-tab.png)
 
 * Press **F1** for the full command list.
 * Fold and unfold with the **-** and **+** signs.
@@ -162,7 +162,7 @@ If you wish, you can simply delete a build's `bitrise.yml` file. But please note
 1. Select an application on your **Dashboard** and select one of its builds.
 2. Click the **Delete bitrise.yml** button.
 
-   ![](/img/delete-bitrise-yml.png)
+   ![{{ page.title }}](/img/delete-bitrise-yml.png)
 3. In the confirmation window, click **Yes**.
 
 {% include banner.html banner_text="Check out a `bitrise.yml` file online" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

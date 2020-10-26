@@ -41,6 +41,6 @@ If you failed to log in for the third time, [reCAPTCHA](https://developers.googl
 
 If you failed to log in for an excessive amount of attempts, you will automatically get locked out. Check your inbox for our **Unlock Instructions** email!
 
-![](/img/lockedout.png)
+![{{ page.title }}](/img/lockedout.png)
 
 {% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to Bitrise now" %}

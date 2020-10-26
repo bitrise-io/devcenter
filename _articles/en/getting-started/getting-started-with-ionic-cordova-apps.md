@@ -28,9 +28,9 @@ You can use Cordova and Ionic frameworks to develop cross-platform apps. Bitrise
     * Android.
     * iOS and Android (where the Android build gets built first).
 
-    ![](/img/project-build-cordova.png)
+    ![{{ page.title }}](/img/project-build-cordova.png)
 
-    ![](/img/project-build-ionic.png)
+    ![{{ page.title }}](/img/project-build-ionic.png)
 10. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository.
 
     This also kicks off your first build on the primary Workflow - click the message and it will take you to the build page. The first build does not generate an APK and an .ipa yet, however, you can already check out the project’s logs on the build’s page.
@@ -60,7 +60,7 @@ To install Javascript dependencies listed in your app's `package.json` file, you
 
 **Run npm command** Step is by default part of your primary and deploy Workflows. Make sure you have **The npm command with arguments to run** field set to **install** in **Run npm command** Step.
 
-![](https://devcenter.bitrise.io/img/run-npm.png)
+![{{ page.title }}](https://devcenter.bitrise.io/img/run-npm.png)
 
 Leave the input field of **The 'yarn' command to run** empty or set it to **install** - **Run yarn command** Step will install those dependencies either way.
 
@@ -100,13 +100,13 @@ To sign your iOS project, you have to upload code signing certificates and provi
 1. For a signed Android project, go to the **Code Signing** tab of your Workflow Editor.
 2. Click or drag-and-drop your keystore file on the **Upload file** field of the **ANDROID KEYSTORE FILE** section.
 
-   ![](/img/keystore-file.png)
+   ![{{ page.title }}](/img/keystore-file.png)
 3. Fill out the displayed three input fields:
    * **keystore password**
    * **keystore alias**
    * **private key password**
 
-     ![](/img/keystore.png)
+     ![{{ page.title }}](/img/keystore.png)
 4. Click **Save metadata**.
 
    Bitrise uploads your keystore file and assigns an environment variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future. The Step will generate the following Env Vars which will be used at a later step:
@@ -133,7 +133,7 @@ Before deploying your app to any marketplace you need to generate a codesigned .
 
    The archive Step must come after the **Generate cordova build configuration** Step in the Workflow.
 
-![](/img/cordova-archive-1.png)
+![{{ page.title }}](/img/cordova-archive-1.png)
 
 Now that we're ready for deployment, let's see how to publish your iOS and Android apps by adding deployment Steps to your workflow!
 

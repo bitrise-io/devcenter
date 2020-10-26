@@ -17,17 +17,17 @@ BitriseのAndroidデバイステストソリューションを用いることで
 
 1. はじめにアプリの`Settings`タブ上で`Device Testing`をONにします。`Device Testing`の右上隅にあるスイッチを右に切り替えます。
 
-   ![](/img/enable-ui-test-on-virtual-devices.png)
+   ![{{ page.title }}](/img/enable-ui-test-on-virtual-devices.png)
 2. `Settings` ページからアプリの `Build` ページに移動します。
 3. テストを行うビルドをクリックします。
 4. もし`Step 1`でデバイステストを有効にしていれば、`APPS & ARTIFACTS`の次に3番目のタブ`DEVICE TESTS BETA` が出現するのでこれをクリックします。
 
-   ![](/img/builds-device tests.png)
+   ![{{ page.title }}](/img/builds-device tests.png)
 5. `add step to primary workflow`をクリックして、デバイステストに必要な2つのステップを`primary workflow`に追加します。
    * `Android Build` - テストのためにapkを生成するステップ
    * `[BETA] Virtual Device Testing for Android` - テストを実行しテストレポートを生成するステップ
 
-   ![](/img/add-step-to-primary-workflow.png)
+   ![{{ page.title }}](/img/add-step-to-primary-workflow.png)
 
 ## テストの実行
 
@@ -46,13 +46,13 @@ RoboテストとInstrumentationテストでは設定方法に少し違いがあ�
 2. APKをエクスポートするため、`Android Unit Test`ステップの後に`Android Build`ステップを追加します。
 3. `Variant`の入力欄に`Debug`を追加してください。これにより、ビルドのAPKパスを含む環境変数が準備されます。この環境変数は次のステップで必要になります。
 
-   ![](/img/robo-test.png)
+   ![{{ page.title }}](/img/robo-test.png)
 4. `Android Build`ステップの後に`[BETA] Virtual Device Testing for Android`を追加します。
 5. `APK path`の入力欄を設定します。
 6. `Test type`に`robo`が選択されていることを確認してください。
 7. `Test devices`入力欄にテストデバイスのタイプを追加します。デフォルト以外のデバイスを選択する場合、`,`で区切った `deviceID,version,language,orientation`のフォーマットで入力する必要があります。
 
-   ![](/img/robo-test-1.png)
+   ![{{ page.title }}](/img/robo-test-1.png)
    
    利用可能なデバイスの一覧は[こちら](https://firebase.google.com/docs/test-lab/android/available-testing-devices)で確認してください。
 8. ビルドを開始し、[テスト結果を確認](/jp/testing/device-testing-for-android/#テスト結果の確認)します。
@@ -71,7 +71,7 @@ Roboテストを成功させるために、アプリが特定のユーザー操�
          loginbtn_resource,,SINGLE_CLICK
    * 行ごとに1つのディレクティブを定義し、パラメータは`,`で区切ります。例: `ResourceName,InputText,ActionType`
 
-![](/img/robo-directives.png)
+![{{ page.title }}](/img/robo-directives.png)
 
 指定した入力に基づき、(特定のユーザー入力でしかアクセスできないページであっても)正常にRoboテストを実行できます。また、ビルドページの`DEVICE TESTS`タブ内でテスト結果を確認できます。 テスト結果は次のようになります。
 
@@ -82,7 +82,7 @@ Roboテストを成功させるために、アプリが特定のユーザー操�
 
 以下は成功したRoboテストのスクリーンショットです。Roboテストは`Robo directives`によって事前に定義された`email`と`password`のフィールドを注入することで`My application`のテストは通りました。
 
-![](/img/successful-robo-test.jpg)
+![{{ page.title }}](/img/successful-robo-test.jpg)
 
 ### Instrumentationテストの実行
 
@@ -93,7 +93,7 @@ Roboテストを成功させるために、アプリが特定のユーザー操�
    * `Module`: ビルドしたいモジュール
    * `Variant`：ビルドしたいバリアント (通常は`debug`)
 
-   ![](/img/android-build-ui-testing.png)
+   ![{{ page.title }}](/img/android-build-ui-testing.png)
 
    このステップの出力は `BITRISE_APK_PATH`(フィルタリング後に生成されたAPKのパス)と`BITRISE_TEST_APK_PATH`（フィルタリング後に生成されたテストAPKのパス）になります。
 4. `Android Build for UI testing`ステップ直後に`[BETA] Virtual Device Testing`ステップを追加します。
@@ -102,7 +102,7 @@ Roboテストを成功させるために、アプリが特定のユーザー操�
    `Android Build for UI Testing`ステップはAPKとテストAPKを出力し、それらのパスは自動的に`[BETA] Virtual Device Testing`ステップの`APK path`と`Test APK path`入力フィールドに設定されます。
 6. `Test devices`入力欄にテストデバイスのタイプを追加します。デフォルト以外のデバイスを選択する場合、`,`で区切った `deviceID,version,language,orientation`のフォーマットで入力する必要があります。
 
-   ![](/img/instrumentation-test-2.png)
+   ![{{ page.title }}](/img/instrumentation-test-2.png)
 7. ビルドを開始し、[テスト結果を確認](/jp/testing/device-testing-for-android/#テスト結果の確認)します。
 
 ## テスト結果の確認

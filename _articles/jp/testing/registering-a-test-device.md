@@ -29,7 +29,7 @@ iOSテストデバイスを [bitrise.io](https://www.bitrise.io) に登録する
 `Test devices` に戻ると、今登録したデバイスがあります：
 
 
-![Screenshot](/img/adding-a-new-app/ios-device.jpg)
+![{{ page.title }}](/img/adding-a-new-app/ios-device.jpg)
 
 登録したデバイスは、 `x` アイコンでいつでも削除できます。
 

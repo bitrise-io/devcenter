@@ -31,7 +31,7 @@ Bitrise上でXcodeテストを実行するには、ご自身のプロジェク�
 
 ビルドを実行する前に、以下の`Xcode Test for iOS`に必要なインプットを確認してください。これらのインプットはステップが実行するテストの種類を決定します。
 
-![](/img/xcode-test-input.png)
+![{{ page.title }}](/img/xcode-test-input.png)
 
 * **Scheme name**: お使いのスキームは必ずShared in Xcodeとマークされている必要があります。
 * **Device**: Xcodeのデバイス選択のドロップダウンメニューで表示されている値をセットします。

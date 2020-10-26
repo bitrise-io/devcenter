@@ -50,7 +50,7 @@ To deploy the app to iTunes Connect, we have two Steps:
 
 **Deploy to iTunes Connect - Application Loader** is simple: it simply pushes an .ipa or .pkg binary file to iTunes Connect. With this Step, you cannot submit the app for review on the App Store, for example.
 
-![](/img/itunes-connect.png)
+![{{ page.title }}](/img/itunes-connect.png)
 
 With the **Deploy to iTunes Connect** Step, you can:
 
@@ -66,7 +66,7 @@ With the **Deploy to iTunes Connect** Step, you can:
 
    The Step will store the path of the exported .ipa file in the $BITRISE_IPA_PATH Environment Variable.
 
-   ![](/img/app-store-export.png)
+   ![{{ page.title }}](/img/app-store-export.png)
 4. Add the `Deploy to iTunes Connect` Step to your Workflow.
 5. Fill the required inputs.
    * Either the app's Apple ID or its Bundle ID is a required input. One of the two must be provided.

@@ -20,10 +20,10 @@ published: false
 2. [Bitrise API endpoint reference documentation](https://api-docs.bitrise.io)に進みます。
 3. `Authorize`をクリックします。
 
-   ![](/img/authorize.png)
+   ![{{ page.title }}](/img/authorize.png)
 4. `Value`欄にご自身のPersonal Access Tokenを貼り付けます。
 
-   ![](/img/available-auth.png)
+   ![{{ page.title }}](/img/available-auth.png)
 5. 試してみたいエンドポイントをクリックして詳細を開きます。  
    その後、必要なパラメータを入力します。
 6. `Execute`をクリックします。

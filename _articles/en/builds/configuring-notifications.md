@@ -25,7 +25,7 @@ There are three possible settings:
 * **Never send email**.
 * **Send email when build status changes on the same branch**. This is the default setting for successful builds. This means that if build #1 and build #2 both succeeded, you will not get a notification about build #2. However, if build #3 fails and then build #4 succeeds again, you will be notified.
 
-![](/img/email-from-bitrise.png)
+![{{ page.title }}](/img/email-from-bitrise.png)
 
 The alternative solution is to send emails via a dedicated Step: this allows for far more customization regarding the notifications. We'll cover both options in this guide.
 
@@ -35,7 +35,7 @@ Watching an app means getting email notifications for that app. This is the defa
 
 To toggle the feature, go to your Dashboard and open the app you want to watch or unwatch. On the top right, you will see a button with the label **Watching** if you are watching the app currently. If not, the button will show **Watch**. Toggle it.
 
-![](/img/watching.png)
+![{{ page.title }}](/img/watching.png)
 
 ### Configuring email notifications
 
@@ -46,7 +46,7 @@ You can change your email notification settings at any time - you can even compl
 3. Go to the **Settings** tab.
 4. Scroll down to email notifications.
 
-   ![](/img/email-notifications.png)
+   ![{{ page.title }}](/img/email-notifications.png)
 5. Select the settings you need for both successful and failed builds from the appropriate dropdown menu.
 
    For example, if you want to disable receiving notifications, set both options to **Never send email**.
@@ -75,7 +75,7 @@ To use the Step, you need:
 
    You can choose any key you want. The addresses should be separated by a comma.
 
-   ![](/img/email-list-secret.png)
+   ![{{ page.title }}](/img/email-list-secret.png)
 6. Set the email subject, and the two potential email messages: one for a successful build, one for a failed build.
    * You can insert environment variables to any of the inputs (the subject and the messages). In the email, the values of the variables will be displayed.
    * The default messages will send the name of the app, the number of the build and whether the build succeeded or failed.
@@ -96,7 +96,7 @@ To use our dedicated Step, you need either a [Slack webhook URL](https://api.sla
 1. Add the **Send a Slack message** Step to your Workflow.
 2. Find either the **Slack Webhook URL** or the **Slack API token** input. Click on the input and then click **Select secret variable**.
 
-   ![](/img/slack-step.png)
+   ![{{ page.title }}](/img/slack-step.png)
 3. Create a new Secret Environment Variable that stores your webhook URL or your Slack API token.
 
    You can choose any key you want.

@@ -33,7 +33,7 @@ For example, if you click into an input of the third Step of your Workflow, the 
 
 You can also replace the variable for a new one in **Env Vars**. Delete the old value and set the new one. If you toggle the **Replace variables in inputs** to the right, the new value will be used everywhere in your Workflow.
 
-![](/img/env-vars.png)
+![{{ page.title }}](/img/env-vars.png)
 
 {% include message_box.html type="important" title="Protect your secrets" content=" Contrary to [secret Env Vars](#about-secrets/), Env Vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to **Env Vars**. "%}
 
@@ -45,7 +45,7 @@ Under **App Environmental Variables**, you can set all the Env Vars you wish to 
 
 You can set Env Vars for any of your Workflows separately as well. If you wish to set an Env Var with a variable which will be only used in a particular Workflow, then select the respective Workflow from the list and add the Env Var there. The list is comprised of the Workflows you named for your app. (In this example below, the app has a **deploy**, **primary** and **dummy** Workflow.)
 
-![](/img/env-var-workflows.png)
+![{{ page.title }}](/img/env-var-workflows.png)
 
 Check out our list of [Available Environment Variables](/builds/available-environment-variables/) exposed by Bitrise CLI and [bitrise.io](https://www.bitrise.io).
 
@@ -66,7 +66,7 @@ You can add a secret Env Var to your Workflow using our **Secrets** tab.
 1. Click **Add new** on the **Secrets** tab.
 2. Set the **key** and **value** fields.
 
-   ![](/img/secrets-dummy.png)
+   ![{{ page.title }}](/img/secrets-dummy.png)
 
 You can also add a secret Env Var directly in a [Step's](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/) `SENSITIVE` input.
 
@@ -91,7 +91,7 @@ Since this change is irreversible, a confirmation pop-up window will be displaye
 
 You can **show** and **hide** the value of an Env Var with the **eye** icon. This feature is useful if you have a long list of secret env vars in **Secrets** and you wish to check the value of only one secret env var while leaving the other values hidden. If a value is hidden, it's represented with the **crossed out eye** icon.
 
-![](/img/eye-icon.png)
+![{{ page.title }}](/img/eye-icon.png)
 
 If you toggle the **Replace variables in inputs** to the right, the new value will be used everywhere in your Workflow.
 
