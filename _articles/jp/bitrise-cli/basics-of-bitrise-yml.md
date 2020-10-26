@@ -73,7 +73,7 @@ If you edit your Workflow on [bitrise.io](https://www.bitrise.io/) (either in Wo
 
     Error saving! Error saving app config: Validation failed: App config validation 784: unexpected token at 'Argument list too long - bin/bitrise
 
-![](/img/yml-size-limit.png)
+![{{ page.title }}](/img/yml-size-limit.png)
 
 {% include message_box.html type="warning" title=".yml size limitations" content="Please note `bitrise.yml` cannot exceed 200KB and a `bitrise.secrets.yml` cannot exceed 100KB on the UI."%}
 

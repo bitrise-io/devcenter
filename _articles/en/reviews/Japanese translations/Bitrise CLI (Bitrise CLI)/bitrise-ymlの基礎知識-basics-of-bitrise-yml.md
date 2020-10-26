@@ -68,7 +68,7 @@ published: false
 
     Error saving! Error saving app config: Validation failed: App config validation 784: unexpected token at 'Argument list too long - bin/bitrise
 
-![](/img/yml-size-limit.png)
+![{{ page.title }}](/img/yml-size-limit.png)
 
 {% include message_box.html type="warning" title=".ymlサイズ制限" content="`bitrise.yml`では200KBを超過することはできません。また、`bitrise.secrets.yml`は100KBを超過することはできません。"%}
 

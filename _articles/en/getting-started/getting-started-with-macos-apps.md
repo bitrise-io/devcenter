@@ -23,7 +23,7 @@ In this guide, we'll walk you through how to add a MacOS app to Bitrise, how to 
    Note that the validation will fail if you do not have a SHARED scheme in your project. You can still point Bitrise manually to your Xcode scheme but if it's shared, we automatically detect it for you. [Read more about schemes and the possible issues with them!](/troubleshooting/frequent-ios-issues/#xcode-scheme-not-found)
 8. Select the export method. You can modify this later - for now, select **development**.
 
-   ![](/img/project-build-config-macos.png)
+   ![{{ page.title }}](/img/project-build-config-macos.png)
 
    Once you clicked it, you should see your:
    * Project or Workspace path.
@@ -77,7 +77,7 @@ You will need:
    If you selected **development** when you added the app to Bitrise, you don't need to change the input. Otherwise, manually set it to **development**.
 6. 
 
-![](/img/macos-archive.png)
+![{{ page.title }}](/img/macos-archive.png)
 7\. [Start a build](/builds/starting-builds-manually/).
 
 If you uploaded the correct code signing files, the **Certificate and profile installer** Step should install your code signing files and the **Xcode Archive for Mac** Step should export an .app or .pkg file with the development export method. If you have the **Deploy to Bitrise.io** Step in your workflow, you can find the binary package file on the **APPS & ARTIFACTS** tab of the build page.

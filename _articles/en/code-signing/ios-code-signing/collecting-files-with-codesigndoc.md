@@ -74,9 +74,9 @@ If your Xcode project has UITest targets, you can use codesigndoc to export the 
 
 To take advantage of codesigndoc's UI test scanner, you need a scheme that has **a valid UITest target** that is enabled.
 
-![](/img/uitest-target.png)
+![{{ page.title }}](/img/uitest-target.png)
 
-![](/img/uitest-target-enabled.png)
+![{{ page.title }}](/img/uitest-target-enabled.png)
 
 If your project is set up correctly on your machine, you can start scanning!
 

@@ -197,7 +197,7 @@ If you have your own Docker image and you checked if it can be `docker pull`-ed
 2. Click the `Stack` tab.
 3. Copy and paste the ID of your app (for example, `quay.io/bitriseio/bitrise-base`)
 
-   ![](/img/docker-image-to-use.png)
+   ![{{ page.title }}](/img/docker-image-to-use.png)
 4. Click Save in the upper-right corner.
 
 Now you should be able to use your own image to run your builds on [bitrise.io](https://www.bitrise.io).

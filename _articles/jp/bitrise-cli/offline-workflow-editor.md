@@ -1,7 +1,7 @@
 ---
 changelog: 
 last_modified_at: 
-title: Installing and upgrading the offline Workflow Editor
+title: オフラインワークフローエディターのインストールとアップグレード
 date: 2018-11-29T13:46:40.000+00:00
 redirect_from: []
 menu:
@@ -9,32 +9,31 @@ menu:
     weight: 10
 
 ---
-{% include not_translated_yet.html %}
 
-Bitrise Workflow Editor is designed in such a way that you can run it offline on your Mac/PC without having to log into [bitrise.io](https://www.bitrise.io/). The Workflow Editor is open source, you can find its repository [here](https://github.com/bitrise-io/bitrise-workflow-editor). You can also join the join the discussion around Workflow Editor [here](https://discuss.bitrise.io/t/workflow-editor-v2-open-source-offline-workflow-editor/39).
+Bitriseワークフローエディターは、[bitrise.io](https://www.bitrise.io/)にログインしなくてもMac / PCでオフラインで実行できるように設計されています。ワークフローエディタはオープンソースです。リポジトリは[ここ](https://github.com/bitrise-io/bitrise-workflow-editor)にあります。[こちら](https://discuss.bitrise.io/t/workflow-editor-v2-open-source-offline-workflow-editor/39)からワークフローエディターに関するディスカッションに参加することもできます。
 
-## Installing offline Workflow Editor to your Mac/PC
+## Mac / PCへのオフラインワークフローエディタのインストール
 
-Before you start:
+始める前に:
 
-* Make sure you have [Go](https://golang.org/) installed on your local computer.
+* ローカルコンピュータに[Go](https://golang.org/)がインストールされていることを確認してください。
 
-Make sure you perform the following steps to include Workflow Editor as one of the Bitrise CLI core plugins.
+Bitrise CLIコアプラグインの1つとしてワークフローエディターを導入するには、必ず次の手順を実行してください。
 
-1. Install the latest Bitrise CLI as discussed [here](/bitrise-cli/installation/).
-2. Run `bitrise setup` to install offline Workflow Editor as part of the Bitrise Plugins. Running `bitrise setup` also checks if Bitrise Core tools, OS X tools, Bitrise Plugins and Toolkits are installed on your local machine. If not, the command will automatically install them.
+1. [ここ](/bitrise-cli/installation/)で説明されているように、最新のBitriseCLIをインストールします。
+2. `bitrise setup`を実行して、Bitriseプラグインの一部としてオフラインワークフローエディターをインストールします。`bitrise setup`を実行すると、Bitrise Coreツール、OS Xツール、Bitriseプラグイン、およびツールキットがローカルマシンにインストールされているかどうかも確認されます。それらがインストールされていない場合は、自動的にそれらをインストールします。
 
-## Starting offline Workflow Editor
+## オフラインワークフローエディターの開始
 
-If the required tools are installed, all you have to do is start your offline Workflow Editor.
+必要なツールがインストールされたら、オフラインのワークフローエディターを起動するだけです。
 
-1. `cd` into a directory where you have your `bitrise.yml`.
-2. Run `bitrise :workflow-editor` command to start your offline session.
+1. `cd`で`bitrise.yml`があるディレクトリに移動します。
+2. `bitrise :workflow-editor`コマンドを実行して、オフラインセッションを開始します。
 
-Here is the overall look and feel:
+これが全体的な外観と操作感です:
 
-![](/img/offline-workflow-editor.png)
+![{{ page.title }}](/img/offline-workflow-editor.png)
 
-## Upgrading Workflow Editor version
+## ワークフローエディターバージョンのアップグレード
 
-You can upgrade to the latest version of the Workflow Editor by running `bitrise plugin update workflow-editor` command.
+`bitrise plugin update workflow-editor`コマンドを実行して、ワークフローエディターの最新バージョンにアップグレードできます。

@@ -36,7 +36,7 @@ Let's look into what you can do to make sure code signing works!
 
 If the Step fails, check the logs. If you see the message: `Code signing error` then this guide can hopefully help you find the solution!
 
-![](/img/archive_fail.png)
+![{{ page.title }}](/img/archive_fail.png)
 
 Most of the time, this error means your project is missing either the correct .p12 certificate file or the correct provisioning profile - or the **Select method for export** input of the Step is set incorrectly.
 
@@ -62,10 +62,10 @@ If you use the **iOS Auto Provision with App Store Connect API** Step, skip to [
 
    If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile. 
 
-   ![](/img/export_fail.png)
+   ![{{ page.title }}](/img/export_fail.png)
 6. Check if the capability lists in the **iOS app** and in the **provisioning profile uploaded to the Developer Portal** match.
 
-   ![](/img/capapbilities_xcode.png)
+   ![{{ page.title }}](/img/capapbilities_xcode.png)
 
 {% include message_box.html type="info" title="Xcode managed signing" content="If you use Xcode managed signing, the Step only accepts an Xcode managed provisioning profile.
 
@@ -127,7 +127,7 @@ The **iOS Auto Provision with App Store Connect API** Step manages your provisio
 
 If the **iOS Auto Provision with App Store Connect API** Step fails with this error message, it is likely that you registered a specific test device on Bitrise twice.
 
-![](/img/device-2.png)
+![{{ page.title }}](/img/device-2.png)
 
 Check out if the same UDID has been registered twice:
 

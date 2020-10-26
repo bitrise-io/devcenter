@@ -153,7 +153,7 @@ If all went well, Trace will track application data. Let’s talk about how to a
 
 The first stop for analyzing performance is the **Performance** page of Trace. The primary purpose of the Performance page is to give you an overview of the performance of your app across the app’s entire install base.
 
-![](/img/Bitrise_-_Trace.png)
+![{{ page.title }}](/img/Bitrise_-_Trace.png)
 
 You can check the performance of your apps in three distinct categories of metrics on the **Performance** page:
 
@@ -204,7 +204,7 @@ Various session properties are available for filtering, including:
 * Network: The type of network the app is connected from.
 * Carrier: The cellular carrier for the device.
 
-![](/img/Bitrise_-_Trace-2.png)
+![{{ page.title }}](/img/Bitrise_-_Trace-2.png)
 
 You can filter for any and all of these. For example, you can set the **Country** filter to **United States** and the **Device** filter to **iPhone X**. This means that Trace will show the metrics collected from users in the United States who use your app on an iPhone X.
 
@@ -221,7 +221,7 @@ You can also group the individual metrics based on the above categories. Groupin
 3. Choose the category you need.  
    For example, if you select **Device**, you will see the app error rate, grouped by device type.
 
-![](/img/Bitrise_-_Trace-3.png)
+![{{ page.title }}](/img/Bitrise_-_Trace-3.png)
 
 You can also set a date range for the available metrics. To do so:
 
@@ -240,7 +240,7 @@ To check any of the metrics:
 
 The **Performance details** page gives you a full breakdown of any selected metric. You can apply the same filtering and sorting to the sessions as on the **Performance** page, and set a date range the same way.
 
-![](/img/Bitrise_-_Trace-4.png)
+![{{ page.title }}](/img/Bitrise_-_Trace-4.png)
 
 At the top of the page, you can see the metric inspector: it is a chart that displays the metric’s data over the specified time period, which you can set in the dropdown menu found in the top right corner.  Apply filters and sorting to narrow down your analysis of any issues.
 
@@ -250,7 +250,7 @@ Below the metric inspector, you’ll see detailed breakdowns of all session prop
 2. Click the specific plot you need (for example, version 2.6.30).  
    This will apply a session filter. It is the same as setting the same filter in the **Session filter** bar at the top of the page.
 
-![](/img/Bitrise_-_Trace-5.png)
+![{{ page.title }}](/img/Bitrise_-_Trace-5.png)
 
 And that’s it: now every breakdown will show data related to only the selected plot (in our example, app version 2.3).
 

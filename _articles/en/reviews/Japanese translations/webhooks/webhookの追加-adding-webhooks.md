@@ -53,7 +53,7 @@ bitrise.ioでアプリを開き、`Code`タブに移動します。
 
 サポートされているプロバイダは、アプリケーションの `Code`タブにあります。サポートされているプロバイダのいずれかとwebhookを設定するには、`SELECT MANUALLY`オプションを選択します。
 
-![Screenshot](/img/webhook-providers.png)
+![{{ page.title }}](/img/webhook-providers.png)
 
 [webhookプロセッサーはオープンソースです](https://github.com/bitrise-io/bitrise-webhooks)。サポートされていない解決策を探しているなら、GitHubページで問題を作成するか、プルリクエストweを作成することができます。必要に応じて、自身のwebhookプロバイダを自身のファイアウォール内で実行することもできます。
 

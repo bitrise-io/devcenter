@@ -82,7 +82,7 @@ As a minimum input, make sure you fill out the following two input fields:
 1. Specify the task that is available in your task list as the value of the `Gradle task to run` step input.
 2. If you use our scanner to upload your project to [bitrise.io](https://www.bitrise.io/), the `gradlew file path` input field gets automatically filled out with the respective path in the Step. Otherwise make sure you fill it out manually and make sure to add a relative path to the repository root, for example: `./gradlew` or `./sub/dir/gradlew` (if it is a subdirectory).
 
-![](/img/gradle-runner-gradlew.png)
+![{{ page.title }}](/img/gradle-runner-gradlew.png)
 
 #### Android Build Step
 
@@ -101,7 +101,7 @@ We suggest using our `Install missing Android SDK components` Step to install de
 
 1. Provide the required NDK version in the `NDK Revision` input field. Leave this input empty if you are not using NDK in your project.
 
-   ![](/img/install-missing-android-tools.png)
+   ![{{ page.title }}](/img/install-missing-android-tools.png)
 
 The Step runs the `gradlew dependencies` command and prints out a list of dependencies and SDK components that are relevant to your project. Then the Step takes care of installing them.
 
@@ -139,7 +139,7 @@ If you're still lost, you can call `--stacktrace --debug` flags (for example, `g
 
 In most cases `--stacktrace` should be enough, and the `Gradle Runner` Step includes this flag by default.
 
-![](/img/stacktrace.png)
+![{{ page.title }}](/img/stacktrace.png)
 
 ## Running a bitrise Android build on your Mac/PC with Docker
 
@@ -165,12 +165,12 @@ You can use our Android emulator Steps such as `AVD Manager` and `Wait for Emula
 1. Add `AVD manager` Step to your workflow. It can be one of the first steps in your workflow.
 2. Set the following required input fields in the step: `Device Profile`, `Android API level`, and `OS Tag`.
 
-   ![](/img/avd-manager.png)
+   ![{{ page.title }}](/img/avd-manager.png)
 
    The Emulator needs some time to boot up. The earlier you place the Step in your workflow, the more tasks (cloning or caching) you can complete in your workflow before the emulator starts working.
 3. Add the `Wait for Emulator` Step to your workflow. This step acts a shield preventing the `AVD Manager` to kick in. Make sure you add it BEFORE the step with which you want to use the `AVD Manager`. In our example, we are using `Wait for Android emulator` Step to only start the Android Virtual Device FROM the `Gradle Runner - UI test` Step onwards.
 
-   ![](/img/wait-for-android-emu.png)
+   ![{{ page.title }}](/img/wait-for-android-emu.png)
 
 ## Installing / Using Java version X
 

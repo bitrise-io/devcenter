@@ -59,7 +59,7 @@ Bitrise CLIは全てのテスト結果のためにルートディレクトリを
     // Test Name ...
     { "test-name":"My first test" }
 
-![](/img/Test_add-on-6.png)
+![{{ page.title }}](/img/Test_add-on-6.png)
 
 ## テストレポートファイル
 

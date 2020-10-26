@@ -30,7 +30,7 @@ If your build requires any files to make it work, upload them to the **Generic F
 3. Open the Workflow Editor.
 4. Click the **Code Signing** tab.
 
-   ![](/img/code-signing-tab.png)
+   ![{{ page.title }}](/img/code-signing-tab.png)
 5. Scroll down to the **Generic File Storage** and provide a unique ID to your file.
 
    The unique ID will be part of the generated download URL that Bitrise stores as an Environment Variable.

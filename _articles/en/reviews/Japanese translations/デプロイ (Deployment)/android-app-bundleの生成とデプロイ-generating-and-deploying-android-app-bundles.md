@@ -29,13 +29,13 @@ BitriseのプロジェクトスキャナがコードをAndroidアプリである
 2. **Gradle Runner**の**Config**セクションをクリックします。
 3. **Gradle task to run**のインプット欄に、例えば`bundleRelease`または`bundleDebug`をセットしてプロジェクト用のバンドルを作成します。
 
-   ![](/img/bundlerelease.jpg)
+   ![{{ page.title }}](/img/bundlerelease.jpg)
 
 この方法により、ステップはAPKの代わりにAndroid App Bundleを生成するようになります。
 
 Android App BundleとAPKを一つのワークフローで生成したい場合、**Gradle task to run**インプット欄に追加のタスクを指定することができます：
 
-![](/img/assemble-bundle-gradle-runner.jpg)
+![{{ page.title }}](/img/assemble-bundle-gradle-runner.jpg)
 
 ### Android Build ステップ
 
@@ -45,7 +45,7 @@ Android App BundleとAPKを一つのワークフローで生成したい場合�
 2. **Project Location**インプット欄では、Androidプロジェクトのルートディレクトリを指定します。
 3. **Build type**へ進み、ビルド種類として`aab`を選択します。
 
-   ![](/img/android-build-aab-config.jpg)
+   ![{{ page.title }}](/img/android-build-aab-config.jpg)
 
 APKとAndroid App Bundleを一つのワークフローで生成したい場合、それぞれ後ろに**Android Build**ステップを追加して (合計2つ)、その追加した2つのステップを構成してください。
 
@@ -61,7 +61,7 @@ Android App Bundleファイルの署名は、APKの署名と方法は同様で�
 1. ワークフローのビルドステップの後ろに**Android Sign**ステップを追加します。
 2. 使用中であるビルドステップのアウトプットとして表示されているアウトプット環境変数と同じ値が、**APK file path**のインプット欄にも表示されているか確認します。
 
-   ![](/img/android-sign-aab-apk.jpg)
+   ![{{ page.title }}](/img/android-sign-aab-apk.jpg)
 
 keystoreファイルのアップロードや必要なクレデンシャル情報の入力が済むと、**Android Sign**ステップの**Keystore url**, **Keystore password**, **Keystore alias**, そして**Private key password**が自動的に入力されるようになります！
 

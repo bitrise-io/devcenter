@@ -23,7 +23,7 @@ published: false
 2. `Settings`タブに進みます。
 3. `Enable manual build approval option`まで下にスクロールします。
 
-   ![](/img/setting-enable-1.png)
+   ![{{ page.title }}](/img/setting-enable-1.png)
 
    注意：この設定はプライベートアプリでのみ変更が可能です！パブリックアプリでは、**常に**有効化されています。
 4. 設定のトグルを動かして有効化/無効化します。  
@@ -39,6 +39,6 @@ published: false
 * gitホスティングプロバイダでは、CI checkのステータスは`Pending - Waiting for approval`を表示します。
 * アプリの`Builds`ページでは、確認ボックスが表示されます。
 
-![](/img/waiting-for-approval-2.png)
+![{{ page.title }}](/img/waiting-for-approval-2.png)
 
 ビルドの承認と実行を行うには、`Approve and Run Build`ボタンをクリックします。`Review`をクリックすると、gitホスティングプロバイダのウェブサイト上にプルリクエストが開かれます。

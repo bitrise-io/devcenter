@@ -28,7 +28,7 @@ You can copy a Workflow from any `bitrise.yml` file, including your local files.
 3. Go to the **Workflows** tab and then the **bitrise.yml** tab.
 4. Select the Workflow you want and copy it.
 
-   ![](/img/copy-workflow.png)
+   ![{{ page.title }}](/img/copy-workflow.png)
 5. Open the app you want to copy it to.
 6. Go to the **Workflows** tab and then the **bitrise.yml** tab.
 7. Paste the Workflow under the \`workflows\` component.

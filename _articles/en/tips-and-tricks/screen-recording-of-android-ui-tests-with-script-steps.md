@@ -10,7 +10,7 @@ menu:
 ---
 You can run your UI test specific to your Android app and have the whole process screen recorded using one Bitrise workflow. Here is an example workflow containing the steps we will use in this guide:
 
-![](/img/screenrecording-workflow.png)
+![{{ page.title }}](/img/screenrecording-workflow.png)
 
 1. Add the `AVD Manager` Step at the beginning of your workflow to create and run an Android Virtual Device.
 2. Add the `Wait for Android Emulator` Step after the `AVD Manager` Step. This Step makes sure that the Android emulator has finished booting before the screen recording would start.
@@ -55,7 +55,7 @@ If your build fails due to `No such process` (error message below) or an `Encode
 
 Here is what to check:
 
-* Check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step. ![](/img/screen-resolution-avd-manager.png)
+* Check if you have the right resolution set in the `Resolution` field of the `AVD Manager` Step. ![{{ page.title }}](/img/screen-resolution-avd-manager.png)
 * If you're NOT using the `AVD Manager` Step to start the emulator (and use `Script` Step instead), then you can fix the screen size in the `Script content` field of the `Start screen recording` Step by specifying the width and height of the screen: `--size <WIDTHxHEIGHT>`.
 
 {% include banner.html banner_text="Record Android UI tests with Bitrise" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

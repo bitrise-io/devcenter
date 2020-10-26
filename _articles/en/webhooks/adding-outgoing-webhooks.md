@@ -27,7 +27,7 @@ You can set up and configure the webhooks sent by Bitrise on the web UI. Let's s
 1. Go to your app's page on [bitrise.io](https://www.bitrise.io) and open the **Code** tab.
 2. Click **+ Add webhook**.
 
-   ![](/img/outgoing-webhook.png)
+   ![{{ page.title }}](/img/outgoing-webhook.png)
 3. Enter the URL of the service where you wish to send the notification in the **URL** field.
 4. Select either the **Send me everything** or the **Select individual events** option.
    * **Send me everything**: every supported event type will trigger the webhook. Currently, only build events are supported but there will be other options in the future!
@@ -49,7 +49,7 @@ Add the header:
 
 1. Find the **WEBHOOK HEADERS** section.
 
-   ![](/img/webhook-headers.png)
+   ![{{ page.title }}](/img/webhook-headers.png)
 2. Add a key and a value to the header. You need both to be able to save the header.
 3. Click **Add header**.
 4. Click **Create webhook**/**Update webhook**.
@@ -61,7 +61,7 @@ You can check if the notifications were successfully sent or not, and you can ch
 1. Go to the **Recent deliveries** section of the **Outgoing Webhooks** menu.
 2. Click an outgoing webhook.
 
-   ![](/img/response-webhook.png)
+   ![{{ page.title }}](/img/response-webhook.png)
 3. Select the **REQUEST** tab to see and, if you wish, modify the payload that was sent to the specified URL.
 
    An example payload:
@@ -83,6 +83,6 @@ You can check if the notifications were successfully sent or not, and you can ch
 4. Select the **RESPONSE** tab to see the response from the service you sent the notification to.
 5. You can redeliver any delivery. Open the delivery you need and click **Redeliver**.
 
-   ![](/img/payload-redelivery.png)
+   ![{{ page.title }}](/img/payload-redelivery.png)
 
 {% include banner.html banner_text="Let's add an outgoing webhook!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your Dashboard" %}

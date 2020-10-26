@@ -19,7 +19,7 @@ Do you have a workflow that you want to "reuse" multiple times when you onboard 
 3. Copy the yml of the reusable app from the `bitrise.yml editor`.
 4. Paste the yml into the new app's `bitrise.yml`.
 
-   ![](/img/bitrise-yml-tab-2.png)
+   ![{{ page.title }}](/img/bitrise-yml-tab-2.png)
 5. [Start a build](/builds/Starting-builds-manually/).
 
 Please note that the newly added apps have the latest config in this case, but the previously added apps have to be updated manually if needed.

@@ -14,25 +14,25 @@ You can register a webhook either automatically or manually. This guide walks yo
 1. Go to the **Code** tab of your app's page and in the **INCOMING WEBHOOKS** menu, click **SETUP MANUALLY**.
 2. Select **GitHub** from the dropdown menu.
 
-   ![Screenshot](/img/github-webhook-1.png)
+   ![{{ page.title }}](/img/github-webhook-1.png)
 3. Copy the webhook URL for the selected service.
 
 ## Set up webhook on GitHub
 
 1. Navigate to your GitHub repository and select **Settings**.
 
-   ![Screenshot](/img/webhooks/github-webhook-2.png)
+   ![{{ page.title }}](/img/webhooks/github-webhook-2.png)
 2. Select **Add webhook** under **Webhooks**.
 
-   ![Screenshot](/img/webhooks/github-webhook-3.png)
+   ![{{ page.title }}](/img/webhooks/github-webhook-3.png)
 3. Paste the GitHub Webhook URL from Bitrise to the **Payload URL**.
 
-   ![Screenshot](/img/webhooks/github-webhook-4.png)
+   ![{{ page.title }}](/img/webhooks/github-webhook-4.png)
 4. And on the same page, select **Let me select individual events**.
 
-   ![Screenshot](/img/webhooks/github-webhook-5.png)
+   ![{{ page.title }}](/img/webhooks/github-webhook-5.png)
 5. Select **Pull request** and **Push**. After you are ready press the **Add webhook** button and you are ready to roll!
 
-   ![Screenshot](/img/webhooks/github-webhook-6.png)
+   ![{{ page.title }}](/img/webhooks/github-webhook-6.png)
 
 {% include banner.html banner_text="Let's add a GitHub webhook!" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your Dashboard" %}

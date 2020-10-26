@@ -51,7 +51,7 @@ BitMan goes to Bitrise and opens the Workflow Editor. He has the **Activate SSH 
 2. Go to your repository on GitHub and select the **Settings** tab.
 3. On the left side menu, select **Collaborators & teams**.
 
-   ![](/img/Collaborators.png)
+   ![{{ page.title }}](/img/Collaborators.png)
 4. Scroll down to the **Collaborators** window.
 5. In the search input field, search for the username of your newly created account.
 6. Click **Add Collaborator**.
@@ -68,7 +68,7 @@ When adding a new app:
 1. Start the process of [adding your app on Bitrise](/getting-started/adding-a-new-app/).
 2. When prompted to setup repository access, you can choose either **Automatic** or **Add own SSH**:
 
-   ![](/img/repo-access.png)
+   ![{{ page.title }}](/img/repo-access.png)
    * If you choose **Add own SSH**, you can [generate your own SSH keypair](https://devcenter.bitrise.io/faq/how-to-generate-ssh-keypair/). Provide the generated SSH key for the app and [add the public key to your GitHub machine user](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
    * If you choose **Automatic**, click **I need to** when asked if you need to use an additional private repository. Copy the SSH [public key to your GitHub machine user](https://help.github.com/en/articles/adding-a-new-ssh-key-to-your-github-account).
 3. Finish the process.

@@ -39,7 +39,7 @@ In this guide we describe how you can add a new app to Bitrise, connect your rep
 
 To add a new app to Bitrise go to your [Dashboard](https://bitrise.io/dashboard) and press the **Add new App** button.
 
-![](/img/add-a-new-app-button.jpg)
+![{{ page.title }}](/img/add-a-new-app-button.jpg)
 
 In case this is the first application in Bitrise, the Dashboard shows you the quickstart guide instead of a list of your uploaded apps. There you can choose to add your first app right away.
 
@@ -56,15 +56,15 @@ Bitrise gives you options to connect any kind of Git repository to it. [GitHub, 
 
 {% include message_box.html type="note" title="Connect any Git repository to Bitrise" content=" You can connect any private or public Git repository to Bitrise. We automatically create an SSH key that you can use to setup the connection with your provider. "%}
 
-![](/img/connect-repo.jpg)
+![{{ page.title }}](/img/connect-repo.jpg)
 
 If you haven't [authorized Bitrise](/getting-started/adding-a-new-app/connecting-account-bitrise) against the provider hosting your repository, it will ask for permission.
 
-![](/img/bitbucket-created.jpg)
+![{{ page.title }}](/img/bitbucket-created.jpg)
 
 It then lists your repositories as above. If you'd like to connect git repository hosted by other than GitHub or Bitbucket, select the **Other / Manual** tab.
 
-![](/img/other.jpg)
+![{{ page.title }}](/img/other.jpg)
 
 You have to add the Git URL of the repository you would like to connect.
 
@@ -87,7 +87,7 @@ Public apps cannot have SSH keys. If you set your app's privacy settings to Publ
 
 In the case of GitHub, GitLab and Bitbucket repository setups, Bitrise generates a public and private SSH key pair and ask whether you like the idea of adding that into your repository automatically as deploy key, or you'd like to add it by hand.
 
-![](/img/repo-access.png)
+![{{ page.title }}](/img/repo-access.png)
 
 You need admin rights to the repository to be able to auto-add the key to it. In any other case, copy the public key from here and add it to your repository at your Git provider.
 
@@ -99,7 +99,7 @@ If you have private dependencies or submodules, you have to add the generated SS
 
 When the system asks if you need to use an additional private repository, click **I need** to and copy the key.
 
-![](/img/manual-steup.png)
+![{{ page.title }}](/img/manual-steup.png)
 
 {% include message_box.html type="note" title="A bot user" content=" A simple workaround is adding a bot user with the SSH key to the repositories. Add the SSH key you would like to use to the user and add the user to the projects. It is enough to assign read permissions to the bot user. After that you can use the SSH key to clone to the repository or any submodule.
 "%}
@@ -108,15 +108,15 @@ When the system asks if you need to use an additional private repository, click 
 
 #### GitHub
 
-![Screenshot](/img/adding-a-new-app/ssh-github.png)
+![{{ page.title }}](/img/adding-a-new-app/ssh-github.png)
 
 #### Bitbucket
 
-![](/img/ssh-bitbucket-cropped.jpg)
+![{{ page.title }}](/img/ssh-bitbucket-cropped.jpg)
 
 #### GitLab
 
-![Screenshot](/img/adding-a-new-app/ssh-gitlab.png)
+![{{ page.title }}](/img/adding-a-new-app/ssh-gitlab.png)
 
 #### Using your own key
 
@@ -132,7 +132,7 @@ You can configure other types of projects too, but that requires a manual config
 
 Enter the name of the default branch of your repository where your project is located. This branch should include the configuration of your project. Once you hit **Next**, Bitrise automatically starts the validation of the repository.
 
-![](/img/choose-branch.png)
+![{{ page.title }}](/img/choose-branch.png)
 
 During validation Bitrise makes sure it has access to the given branch, using the [SSH key](/adding-a-new-app/setting-up-ssh-keys) you set up.
 
@@ -142,13 +142,13 @@ If the validation is successful, Bitrise scans your repository and give you a de
 
 If the validation fails, choose the **Restart scanning without validation** option.
 
-![](/img/restart-scanning-without-validation-1.jpg)
+![{{ page.title }}](/img/restart-scanning-without-validation-1.jpg)
 
 In this case, you have to configure the project manually. Click **Next**. You will see the **Validating Repository** message again but this time Bitrise only checks if it has access to the specified repository.
 
 Choose the project type and specify the necessary inputs. You can also select the stack on which you wish to run your builds.
 
-![](/img/manual-project-build-config.jpg)
+![{{ page.title }}](/img/manual-project-build-config.jpg)
 
 {% include message_box.html type="note" title="Restarting validation" content="
 You can restart validation if you want Bitrise to automatically detect your project type. Once you fixed the issue that caused validation to fail for the first time, go to the **Project build configuration** window and select the **Detected** tab. Choose the **Restart current validation** option. "%}
@@ -165,7 +165,7 @@ When adding your app to Bitrise, our project scanner automatically detects app i
 
    Once the project scanner has validated your project, you can set up your build configuration from the available options.
 2. At **App icon**, either **Choose an Icon from your App** or **Upload a Custom Image** by clicking the **+** button.
-   ![](/img/app-icon-choice.jpg)
+   ![{{ page.title }}](/img/app-icon-choice.jpg)
 3. Click **Choose Image and Proceed**.
 4. Continue with setting up a [webhook](/webhooks/index/).
 

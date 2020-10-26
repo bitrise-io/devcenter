@@ -27,7 +27,7 @@ menu:
 2. **Rebuild with Remote Access**オプションをクリックします。
 3. **Remote Access Instructions**をクリックします。
 
-   ![](/img/remote-access-instructions.png)
+   ![{{ page.title }}](/img/remote-access-instructions.png)
 4. **SSH**オプションの下から必要なコマンドを探してコピーします。
 5. コマンドラインインターフェースを開きます。
 6. **SSH**の下にあるコマンドを実行します（以下は例です）。
@@ -43,7 +43,7 @@ menu:
 2. **Rebuild with Remote Access**オプションをクリックします。
 3. **Remote Access Instructions**をクリックします。
 
-   ![](/img/remote-access-instructions.png)
+   ![{{ page.title }}](/img/remote-access-instructions.png)
 4. **Screenshare**オプションから以下のような情報を探します。
    * Address
    * Username

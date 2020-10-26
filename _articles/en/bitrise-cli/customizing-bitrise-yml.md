@@ -61,7 +61,7 @@ Of course this use case works only if your customized tool is shared with your t
        }
 * You can see `meta` in action on [bitrise.io](https://www.bitrise.io/) as well. For example, when you select a different stack for your workflow than the default stack. Just click Workflow Editor on the UI and pick another stack type for your workflow/s in the `Stacks` tab. This way you can test (only in the UI) how your workflow runs in the new Stack.
 
-![](/img/stack-os.png)
+![{{ page.title }}](/img/stack-os.png)
 
 If you head back to the `bitrise.yml` tab, a `bitrise.io meta` is added to the deploy workflow:
 

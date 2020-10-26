@@ -34,7 +34,7 @@ What you’ll need for this setup:
 
    As you can see in this image we’re adding Workflow Environment Variables to our **green**, **red** and **white** Workflows but leaving **allcolor** intact.
 
-   ![](/img/workflow-spec-env.jpeg)
+   ![{{ page.title }}](/img/workflow-spec-env.jpeg)
 7. Go back to the **Workflows** tab and click **Workflow** to create your [utility Workflow](/bitrise-cli/workflows/#utility-workflows).
 
    Make sure you give a name that starts with an underscore, for example, **_runner**, otherwise Bitrise CLI will not treat it as a utility Workflow.
@@ -42,7 +42,7 @@ What you’ll need for this setup:
 
    In this example, we’re adding a **Script** Step which will inherit the Environment Variable from the Workflows and print out the value in the build log.
 
-   ![](/img/white-label-script.jpg)
+   ![{{ page.title }}](/img/white-label-script.jpg)
 
 ## Chaining Workflows
 
@@ -54,17 +54,17 @@ Now that we have a bunch of Workflows ready, it’s time to chain them together 
 
    Keep adding Workflows depending on how many versions you’d like to build. In this guide, we’re adding 3 different types of Workflows after **allcolor** where each Workflow is followed by the same utility Workflow.
 
-   ![](/img/add-workflow-aftercolor.png)
+   ![{{ page.title }}](/img/add-workflow-aftercolor.png)
 
    This is what the setup looks like on the **Workflows** tab.
 
-   ![](/img/whitelabel-chained-workflows.jpg)
+   ![{{ page.title }}](/img/whitelabel-chained-workflows.jpg)
 4. Go back to your Build’s page and click **Start/Schedule a build**.
 5. In the **Build configuration** pop-up window, select your main Workflow under **Workflow**. This will kickstart your chained Workflows and build the app versions of your white label app.
 
 In our simple example, here is the output of the chained Workflows:
 
-![](/img/white-label-app-logoverview.jpg)
+![{{ page.title }}](/img/white-label-app-logoverview.jpg)
 
 {% include message_box.html type="note" title="Parallel running Workflows" content="If you add the **Bitrise Start Build** Step to your main Workflow, it will run all your Workflows [parallel](/builds/triggering-builds/trigger-multiple-workflows/), whereas without the Step your Workflows will run consecutively."%}
 

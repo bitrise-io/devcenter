@@ -25,11 +25,11 @@ menu:
 
 `App Environmental Variables`の下に、**全てのワークフロー**で後に使用するすべての環境変数を設定できます。
 
-![Screenshot](/img/builds/app-env-var.png)
+![{{ page.title }}](/img/builds/app-env-var.png)
 
 ワークフローの環境変数を別々に設定することもできます。**特定のワークフロー**でのみ使用される変数で環境変数を設定したい場合は、リストからそれぞれのワークフローを選択して環境変数を追加します。このリストは、アプリに付けたワークフローから構成されています。 （以下のこの例では、アプリには`deploy`、 `primary` 、`dummy`のワークフローがあります。）
 
-![Screenshot](/img/builds/workflow-env-var.png)
+![{{ page.title }}](/img/builds/workflow-env-var.png)
 
 Bitrise CLIとbitrise.ioで公開されている[利用可能な環境変数](/builds/available-environment-variables/)のリストをチェックしてください。
 
@@ -44,7 +44,7 @@ Bitriseの `Secrets`タブを使ってワークフローに秘密の環境変数
 1. `Secrets`タブの`Add new`をクリックします
 2. `key`と`value`フィールドを設定します。
 
-![](/img/locked-secret.png)
+![{{ page.title }}](/img/locked-secret.png)
 
 [ステップ](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/)の`SENSITIVE`入力に秘密の環境変数を直接追加することもできます。
 
@@ -59,15 +59,15 @@ Bitriseの `Secrets`タブを使ってワークフローに秘密の環境変数
 
 {% include message_box.html type="important" title="`Make it protected`後" content=" `Make it protected`クリックした場合、**あなた、またアプリへのアクセス権を持つユーザーもロックを解除したり値を確認したりすることはできません。**
 
-![](/img/make-it-protected2.png)
+![Screenshot](/img/make-it-protected2.png)
 
 この変更は元に戻すことができないため、変更を保存する前に確認のポップアップウィンドウが表示されます。
 
-![](/img/make-it-protected.png)" %}
+![Screenshot](/img/make-it-protected.png)" %}
 
 `eye`アイコンで環境変数の値を**表示**したり**隠し**たりすることができます。この機能は、`Secrets`に秘密環境変数のロングリストがある場合、また、他の値を隠したまま1つの秘密環境変数の値だけをチェックしたい場合に便利です。値が隠されている場合、`crossed out eye`アイコンで表されます。
 
-![](/img/hidden-value-1.png)
+![{{ page.title }}](/img/hidden-value-1.png)
 
 入力の`Replace variables in inputs`を右側に切り替えると、新しい値がワークフローのいたる場所で使用されます。
 

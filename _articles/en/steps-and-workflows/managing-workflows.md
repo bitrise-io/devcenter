@@ -30,7 +30,7 @@ Be aware that if you chain Workflows together as described in this guide, all th
 2. Open the **WORKFLOW** menu on the left and select a Workflow. The default is the **primary** Workflow. You can chain Workflows before and after the selected Workflow.
 3. Click **Add Workflow before** to chain a Workflow before the currently selected one or click **Add Workflow after** to chain a Workflow after the currently selected one.
 
-   ![](/img/chaining.jpg)
+   ![{{ page.title }}](/img/chaining.jpg)
 4. Click **Save** in the top right corner.
 
 ## Rearranging Workflows
@@ -41,7 +41,7 @@ Once you have a chain, you can easily rearrange the order of Workflows in a drag
 2. Open the **WORKFLOW** menu on the left and select a Workflow that is part of a chain.
 3. Click **Rearrange** to bring up a drag-and-drop menu where you can rearrange the Workflows of the chain.
 
-   ![](/img/rearrange.png)
+   ![{{ page.title }}](/img/rearrange.png)
 4. Click **Save** in the top right corner.
 
 ## Renaming Workflows
@@ -52,7 +52,7 @@ Rename your Workflows at any time you feel necessary: it's quick and simple.
 2. Open the **WORKFLOW** menu on the left and select a Workflow.
 3. Click **RENAME** next to the name of the Workflow.
 
-   ![](/img/rename-Workflow.png)
+   ![{{ page.title }}](/img/rename-Workflow.png)
 4. Type the new name then click the check mark to save the new name.
 5. Click **Save** in the top right corner.
 

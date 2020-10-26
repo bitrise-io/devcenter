@@ -32,7 +32,7 @@ By default, the owner of an application is the account that created the applicat
 
 Here's the role cheatsheet for owners:
 
-![](/img/owners.png)
+![{{ page.title }}](/img/owners.png)
 
 Owners have unlimited access to applications. Only owners can destroy apps or [transfer the ownership of apps](/team-management/changing-the-owner-of-an-app/), and only they have access to PAYMENT INFORMATION.
 
@@ -44,7 +44,7 @@ Admins can be assigned to applications, either in groups or individually. Organi
 
 Here's the role cheatsheet for admins:
 
-![](/img/admins.png)
+![{{ page.title }}](/img/admins.png)
 
 So, for example, an admin cannot delete an application but can invite other members to work on the app. The admin can also give admin rights to other users - however, [they cannot transfer ownership](/team-management/changing-the-owner-of-an-app/) of the app!
 
@@ -54,7 +54,7 @@ Developers can be assigned to applications, either in groups or individually. Or
 
 Here's the role cheatsheet for developers:
 
-![](/img/developers.png)
+![{{ page.title }}](/img/developers.png)
 
 So, for example, developers cannot change team member roles, add new team members, remove existing team members or create, edit or delete workflows. They can, however, run builds and view build logs.
 
@@ -66,7 +66,7 @@ Testers can be assigned to applications, either in groups or individually. Organ
 
 Here's the role cheatsheet for testers/QA:
 
-![](/img/testers.png)
+![{{ page.title }}](/img/testers.png)
 
 Testers can only view builds. They cannot access build logs and they cannot modify the app in any way or form.
 
@@ -85,7 +85,7 @@ Users who have **owner** or **admin** rights to the applications can invite new 
 2. Click the **Team** tab.
 3. In the **Add users to this app** box, type the username or the email of the user you want to invite.
 
-   ![](/img/add-users.png)
+   ![{{ page.title }}](/img/add-users.png)
 
    Note that [the process is the same if the app is owned by an Organization](/team-management/organizations/managing-apps/#adding-contributors-to-an-app) except you will see **Add contributors to this app** above the box where you enter the username or email.
 4. Select the role you want to assign.

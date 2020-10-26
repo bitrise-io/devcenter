@@ -25,7 +25,7 @@ iOSアプリの場合、Firebase Test Labは[XCTest](https://developer.apple.com
 
 4. `Device Testing`の項目までスクロールし、 `ENABLE UI TESTS ON VIRTUAL DEVICES`を有効にする。
 
-![](/img/settings-device-testing.png)
+![{{ page.title }}](/img/settings-device-testing.png)
 
 これで完了です！デバイステストソリューションを使うための準備が整いました。
 
@@ -48,7 +48,7 @@ Firebase Test Labでのデバイステストを実行するために、以下の
 
    `Certificate and profile installer`ステップ以降に追加する必要があることに注意してください。
 
-   ![](/img/xcode-build-for-test.png)
+   ![{{ page.title }}](/img/xcode-build-for-test.png)
 
 3. `Scheme name`には、使用したいスキーマ名を入力してください。デフォルトでは、[環境変数](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)の`$BITRISE_SCHEME`に設定されています。 この値は、アプリを作成した際に設定されています。
 
@@ -62,7 +62,7 @@ Firebase Test Labでのデバイステストを実行するために、以下の
 
    このステップは、`Xcode Build for testing for iOS`ステップ以降に追加してください。
 
-   ![](/img/ios-device-testing.png)
+   ![{{ page.title }}](/img/ios-device-testing.png)
 
 6. `Test devices`の入力フィールド内に、アプリをテストしたいデバイスを指定する。
 
@@ -84,7 +84,7 @@ Firebase Test Labでのデバイステストを実行するために、以下の
 * ログ
 * テスト中に生成されたファイル
 
-![](/img/test-results.png)
+![{{ page.title }}](/img/test-results.png)
 
 1. アプリの`Build`タブを表示する。
 

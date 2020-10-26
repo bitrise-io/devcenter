@@ -52,10 +52,10 @@ Use this method to provide authentication data to connect Bitrise to your Apple 
 4. On the menu bar on the left, select **Apple Developer Account**.
 5. Click **Add an Account**.
 
-   ![](/img/account-settings-1.jpg)
+   ![{{ page.title }}](/img/account-settings-1.jpg)
 6. Fill out all required fields: provide a work or personal **Name** of the team, **an** [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests), the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
 
-   ![](https://devcenter.bitrise.io/img/appstoreconnectapi-addanaccount.jpg)
+   ![{{ page.title }}](https://devcenter.bitrise.io/img/appstoreconnectapi-addanaccount.jpg)
 7. Continue with assigning an Apple Developer Account for your app.
 
 ### Assigning an Apple Developer Account for your app
@@ -65,7 +65,7 @@ When using the **iOS Auto Provision with App Store Connect API** Step, you also 
 1. Open your app’s page on [bitrise.io](https://www.bitrise.io/).
 2. Select the **Team** tab.
 3. Scroll down to the **Connected Apple Developer Portal Account** section.
-4. Select the account for the app to use in the **Apple Developer Portal API** dropdown. It displays only your connected Apple Developer account and no app owner's or app admin's connected account is displayed here.![](/img/connected-apple-developer-account.jpg)
+4. Select the account for the app to use in the **Apple Developer Portal API** dropdown. It displays only your connected Apple Developer account and no app owner's or app admin's connected account is displayed here.![{{ page.title }}](/img/connected-apple-developer-account.jpg)
 
 The **iOS Auto Provision with App Store Connect API** Step is now set to connect to the Apple Developer account assigned to the app during your build.
 
@@ -85,13 +85,13 @@ Use this method to provide authentication data to connect to your Apple Develope
 4. Click the **Add an Account** button.
 5. On top of the popup, click the **deprecated, session-based auth** link.
 
-   ![](/img/session-based-auth.jpg)
+   ![{{ page.title }}](/img/session-based-auth.jpg)
 6. Provide your **Apple ID** and **Password** in the popup window and click **Store credentials**.
 
-   ![](/img/sync-your-account.jpg)
+   ![{{ page.title }}](/img/sync-your-account.jpg)
 7. You will be prompted to provide your verification code. Please make sure you receive the 6-digit code on a trusted device using iCloud and not via SMS.
 
-   ![](/img/2fa.jpg)
+   ![{{ page.title }}](/img/2fa.jpg)
 8. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate** (**2SA/2FA**).
 9. Continue with assigning an Apple Developer Account for your app.
 
@@ -104,7 +104,7 @@ When using the **iOS Auto Provision with Apple ID** Step, you also need to sele
 3. Scroll down to the **Connected Apple Developer Portal Account** section.
 4. Select the account for the app to use. Note that the **Session based authentication (deprecated)** dropdown displays the connected Apple Developer accounts belonging to the app owner and other team members with admin authority.
 
-   ![](/img/connected-apple-developer-account-session-based.jpg)
+   ![{{ page.title }}](/img/connected-apple-developer-account-session-based.jpg)
 
 The **iOS Auto Provision with Apple ID** Step is now set to connect to the Apple Developer account assigned to the app during your build.
 
@@ -122,10 +122,10 @@ If you wish to use [Fastlane Step](https://www.bitrise.io/integrations/steps/fas
 4. Click the **Add an Account** button.
 5. On top of the popup, click the **deprecated, session-based auth** link.
 
-   ![](/img/session-based-auth.jpg)
+   ![{{ page.title }}](/img/session-based-auth.jpg)
 6. Provide your **Apple ID** and **Password** in the popup window and click **Store credentials**.
 
-   ![](/img/sync-your-account.jpg)
+   ![{{ page.title }}](/img/sync-your-account.jpg)
 7. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate (2SA/2FA**).
 8. Continue with assigning an Apple Developer Account for your app.
 
@@ -138,7 +138,7 @@ Once you have defined your Apple Developer account to Bitrise, you need to selec
 3. Scroll down to the **Connected Apple Developer Portal Account** section.
 4. Select the account for the app to use. Note that the **Session based authentication (deprecated)** dropdown displays the connected Apple Developer accounts belonging to the app owner and other team members with admin authority.
 
-   ![](/img/connected-apple-developer-account-session-based.jpg)
+   ![{{ page.title }}](/img/connected-apple-developer-account-session-based.jpg)
 
 The **Fastlane** Step is now set to connect to the Apple Developer account assigned to the app during your build.
 

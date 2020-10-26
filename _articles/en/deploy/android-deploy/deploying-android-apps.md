@@ -67,18 +67,18 @@ In this guide, you will learn how to:
 ### Setting up Google Play API access
 
 1. Link your API project by **Creating a new API project** or **Using an existing API project**.
-   ![](/img/tutorials/deploy/google-play/api-access-setup-1.jpg)
+   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-1.jpg)
 2. Click on _Create a new service account_. The instructions will redirect to _Google API Console_.
    Specify a service account name. No roles are needed for the service account.
-   ![](/img/tutorials/deploy/google-play/api-access-setup-2.jpg)
-   ![](/img/tutorials/deploy/google-play/api-access-setup-3.jpg)
-   ![](/img/tutorials/deploy/google-play/api-access-setup-4.jpg)
-   ![](/img/tutorials/deploy/google-play/api-access-setup-5.jpg)
+   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-2.jpg)
+   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-3.jpg)
+   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-4.jpg)
+   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-5.jpg)
 3. Create a private key (JSON format) and download it now because you will need it later.
-   ![](/img/tutorials/deploy/google-play/api-access-setup-7.jpg)
+   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-7.jpg)
 4. Grant the necessary permissions to the service account on the Play Console.
-   ![](/img/tutorials/deploy/google-play/api-access-setup-12.jpg)
-   ![](/img/tutorials/deploy/google-play/api-access-setup-13.jpg)
+   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-12.jpg)
+   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-13.jpg)
 
 Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started) guide if you need more information on the process.
 
@@ -94,7 +94,7 @@ You can notify user groups or individual users that your APK file has been built
 2. In the **Notify: User Roles** input field, add the role (for example, `testers`, `developers`, `admins`) so that only those get notified who have been granted with this particular role.
 3. Or fill out the **Notify: Emails** input field with email addresses of the users you want to send the URL to. Make sure you set those email addresses as [secret Environment Variables](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated APK file in the **APPS & ARTIFACTS** tab. Here you can check the URL by clicking **Open Public install page**.
 
-![](/img/public-install-page.png)
+![{{ page.title }}](/img/public-install-page.png)
 
 {% include message_box.html type="info" title="How can I get notified?" content="You can get a [notification email](/builds/configuring-notifications/#watching-an-app) about a successful or failed build, if you click the **Watch** icon above the **Start/Schedule a Build** purple button on your Build's page."%}
 

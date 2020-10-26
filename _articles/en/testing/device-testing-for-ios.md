@@ -48,7 +48,7 @@ The **iOS Device Testing** Step takes the path to this .zip file - exported as a
 
    Note that it should come AFTER the **Certificate and profile installer** Step.
 
-   ![](/img/xcode-build-for-test.png)
+   ![{{ page.title }}](/img/xcode-build-for-test.png)
 2. In the **Scheme name** input, set the Xcode Scheme you want to use. By default, the value of the input is the `$BITRISE_SCHEME` [Environment Variable](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/) which is stored when your app is created.
 
    By default, the scheme defines which configuration - for example, Debug or Release - will be used. In the **Configuration name** input, you can define the configuration type manually.
@@ -59,7 +59,7 @@ The **iOS Device Testing** Step takes the path to this .zip file - exported as a
 
    The Step has to come after the **Xcode Build for testing for iOS** Step.
 
-   ![](/img/test-devices-1.png)
+   ![{{ page.title }}](/img/test-devices-1.png)
 5. In the **Test devices** input field, specify the devices on which you want to test the app.
 
    Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/ios/available-testing-devices).

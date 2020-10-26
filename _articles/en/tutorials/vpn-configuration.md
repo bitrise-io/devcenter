@@ -32,7 +32,7 @@ Let’s go through this workaround!
 2. Add a new app, using this repository as the source. Make sure it is a private app! There is no need to register a webhook.
 3. When done, go to the **Settings** tab of your app.
 
-   ![](/img/ionic-sample-app_-_Bitrise.png)
+   ![{{ page.title }}](/img/ionic-sample-app_-_Bitrise.png)
 4. In the **REPOSITORY URL** field, replace the URL with the URL of the actual repository you want to use.
 5. Click **Save changes**.
 6. Go to the **Workflows** tab to open the Workflow Editor.

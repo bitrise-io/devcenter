@@ -22,7 +22,7 @@ iOSアプリケーションをブラウザで表示するなど、あなたのiO
    このステップは依存関係のインストールを行うステップ（例：`Run Cocoapods install`）の後に配置してください。
 3. ステップに必要なインプットを記入します。
 
-   ![](/img/build-for-simulator.png)
+   ![{{ page.title }}](/img/build-for-simulator.png)
    * **Project (or Workspace) path**: プロジェクトの`.xcodeproj`や`.xworkspace` ファイルへのパスを表します。デフォルトでは、Bitriseにアプリを追加する際、環境変数に保存されます。
    * **Scheme name**: プロジェクトのXcodeスキームを表します。デフォルトでは、Bitriseにアプリを追加する際、環境変数に保存されます。
    * **Simulator**: アプリを実行したいデバイスの種類を表します。Xcode内のdevice selection menuに表示されるので、それを正確に設定してください。
@@ -44,7 +44,7 @@ Bitriseの`Xcode build for simulator`ステップを使ってビルドされた.
 3. ワークフローに`Xcode build for simulator`ステップの追加・構成を行います。
 4. ワークフローに`Appetize.io deploy`ステップを追加します。
 
-   ![](/img/appetize-deploy.png)
+   ![{{ page.title }}](/img/appetize-deploy.png)
 5. `Appetize.io token`インプットにAppetize.io APIトークンを追加します。
 6. `Application path`インプットに.appファイルへのパスを入力します。最も簡単な方法として `BITRISE_APP_DIR_PATH_LIST` 環境変数を使用すれば、それが`Xcode build for simulator`ステップのアウトプットになります。任意ですが、より効率的なデバッグとしてverbose loggingを有効にすることもできます。
 

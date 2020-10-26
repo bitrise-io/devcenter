@@ -25,7 +25,7 @@ Bitriseのファイル管理はビルド内にファイルをアプロードで�
 3. Workflow Editorを開きます。
 4. `Code Signing`をクリックします。
 
-   ![](/img/code-signing-tab.png)
+   ![{{ page.title }}](/img/code-signing-tab.png)
    * 下にスクロールしてGeneric File Storageを開き固有IDを使ってファイルをあけます。
 
    ＊固有IDはBitriseが環境変数として保存している作成されたダウンロードURLの一部になります。

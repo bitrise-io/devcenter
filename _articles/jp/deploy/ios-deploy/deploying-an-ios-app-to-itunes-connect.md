@@ -41,7 +41,7 @@ iTunes Connectへアプリのデプロイを行うには、２つのステップ
 
 `Deploy to iTunes Connect - Application Loader` はシンプルです：このステップはiTunes Connectに.ipaか.pkgバイナリファイルをプッシュします。このステップを使うと、一つの例として、App Storeでレビュー用のアプリを提出することは**できません**。
 
-![](/img/itunes-connect.png)
+![{{ page.title }}](/img/itunes-connect.png)
 
 `Deploy to iTunes Connect`ステップを使うと、
 
@@ -55,7 +55,7 @@ iTunes Connectへアプリのデプロイを行うには、２つのステップ
 2. ワークフローに`Xcode Archive & Export for iOS`ステップがあることを確認してください。
 3. `Select method for export`ステップのインプットを`app-store`に設定します。このステップは$BITRISE_IPA_PATH環境変数内のエクスポート済み.ipaファイルのパスを保存します。
 
-   ![](/img/app-store-export.png)
+   ![{{ page.title }}](/img/app-store-export.png)
 4. ワークフローに`Deploy to Bitrise.io`ステップを追加します。
 5. 必要なインプットを記入してください。
    * **アプリのApple IDもしくはBundle IDは必要なインプットです。**２つのうち１つを記入してください。

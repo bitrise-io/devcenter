@@ -15,7 +15,7 @@ Starting a build manually on Bitrise takes literally two clicks - if you leave e
 2. Select the app you wish to build.
 3. Click **Start/Schedule a Build**.
 
-   ![](/img/start-schedule-build.png)
+   ![{{ page.title }}](/img/start-schedule-build.png)
 
 At this point, the **Build configuration** window opens and you are presented with two tabs near the top of the window:
 
@@ -28,7 +28,7 @@ At this point, the **Build configuration** window opens and you are presented wi
 
 If you choose **Basic** in the **Build configuration** window, you have three options to configure:
 
-![](/img/basic-build-config.jpg)
+![{{ page.title }}](/img/basic-build-config.jpg)
 
 * **Branch**: The Git branch that you wish to build. Make sure to type the name of the branch correctly, otherwise the build will fail. You can only enter a single branch. If a pull request to your repository is made from a forked branch, type the name of that branch to run a build of the pull request.
 
@@ -41,7 +41,7 @@ If you choose **Basic** in the **Build configuration** window, you have three op
 
 If you choose **Advanced** in the **Build configuration** window, you have all the options available with **Basic**, and a few more:
 
-![](/img/build-config-advanced.jpg)
+![{{ page.title }}](/img/build-config-advanced.jpg)
 
 * **Git Tag**: Builds a particular branch or commit that is tagged with the Tag you enter.
 * **Commit Hash**: Copy a specific commit's hash here to build that particular commit. This option can even send a build status update to your git hosting service.

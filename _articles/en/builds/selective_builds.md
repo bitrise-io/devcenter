@@ -30,7 +30,7 @@ The appropriate Service credential user must be set on your app's **Team** page.
 2. Click **Settings** in the top navigation bar.
 3. Find the **ENABLE SELECTIVE BUILDS** option and toggle the switch on the right.
 
-   ![](/img/enable-selective-builds.png)
+   ![{{ page.title }}](/img/enable-selective-builds.png)
 4. Add filenames and file paths in the **ADD FILENAME/PATH** window. You can add multiple files or file paths here. A build will be triggered only if these files are changed.
 
 ### Patterns in the file name or file path

@@ -79,7 +79,7 @@ To export the test results of the **Virtual Device Testing for Android** Step or
 
    With this information added to your **Code Signing** tab, our **Android Sign** Step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
 
-![](https://devcenter.bitrise.io/img/keystore.png)
+![{{ page.title }}](https://devcenter.bitrise.io/img/keystore.png)
 
 {% include message_box.html type="note" title="More on Android code signing" content="You should have the keystore password, keystore alias and the private key password available as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. You can learn more about the keystore file if you head over to [Android Studio’s guide on Keys, certificates, and keystores](https://developer.android.com/studio/publish/app-signing#certificates-keystores).
 

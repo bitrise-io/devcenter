@@ -22,13 +22,13 @@ menu:
 
 4. `Build configuration` ポップアップウィンドウ内で、 `Schedule this build` のスイッチを右に切り替えて有効化しましょう。
 
-      ![Screenshot](/img/scheduling-builds/disabled-build-scheduling.png)
+      ![{{ page.title }}](/img/scheduling-builds/disabled-build-scheduling.png)
 
 5. `HH/MM` フィールドに日時を入力します。
 
 6. タイムライン上で、ビルドを実行したい曜日をクリックします。
 
-      ![Screenshot](/img/scheduling-builds/selected-builds.png)
+      ![{{ page.title }}](/img/scheduling-builds/selected-builds.png)
 
 7. 必要に応じて、残りのフィールドを確認して入力します。 `Build configuration` ウィンドウの高度な設定からも、ビルドをスケジューリングすることができます。
 
@@ -38,6 +38,6 @@ menu:
 
 `Show scheduled` をクリックすると、スケジューリングを編集/削除することや、スイッチを左に切り替えることでビルドを無効にすること、 `Trigger now` ボタンをクリックすることで直ちにビルドを実行することができます。
 
-![Screenshot](/img/scheduling-builds/scheduled-build.png)
+![{{ page.title }}](/img/scheduling-builds/scheduled-build.png)
 
 以上です！これで自動化されたビルドの便利さを味わうことができます！

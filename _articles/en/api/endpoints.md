@@ -25,10 +25,10 @@ You can try out any endpoint in the reference documentation itself! All you need
 2. Go to the [Bitrise API endpoint reference documentation](https://api-docs.bitrise.io).
 3. Click `Authorize`.
 
-   ![](/img/authorize.png)
+   ![{{ page.title }}](/img/authorize.png)
 4. Paste your Personal Access Token to the `Value` field.
 
-   ![](/img/available-auth.png)
+   ![{{ page.title }}](/img/available-auth.png)
 5. Click on the endpoint you want to try out to open its details.
 6. Fill in the required parameters.
 7. Click `Execute`.

@@ -30,7 +30,7 @@ FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、
 
     BitriseがConfigurationファイルを探し、それらを基にアプリをセットアップします。Flutterアプリの場合はプロジェクトの`pubspec.yaml`ファイルが必要です。
  8. アプリのリポジトリにテストがある場合は、それらを実行するかどうかを決定するように求められます。
- 9. ![](/img/select_test.png)
+ 9. ![{{ page.title }}](/img/select_test.png)
 
     FlutterプロジェクトのiOSプロジェクトを使用している場合、ipa export methodをセレクトします。
 10. ![undefined](https://cdn.buttercms.com/rOAuKJ2jToSecv2pEs7g) プロンプトが表示されたらwebhookに登録します
@@ -59,7 +59,7 @@ Stepが指定されたフラグで`flutter analyze`コマンドを実行しま�
 
 Stepが指定されたフラグで`flutter test`コマンドを実行します。使用可能なフラグをチェックするにはコマンドラインインターフェイスをマシンで開き`flutter test --help`を実行します。
 
-![](/img/flutter_test.png) 
+![{{ page.title }}](/img/flutter_test.png) 
 
 5. `Flutter Test`ステップの`Project Location`入力が正確であることを確認します。
 
@@ -82,7 +82,7 @@ iOS、Androidプロジェクトはworkflowを使い同時、または個々の�
 
 ワークフローの例をこのコンフィグレーションで、必要なステップを踏まえて説明します。
 
-![](/img/flutter-getting-started.jpg)
+![{{ page.title }}](/img/flutter-getting-started.jpg)
 
 iOSとAndroidの特有の配置手順については、それぞれのセクションで説明します！
 

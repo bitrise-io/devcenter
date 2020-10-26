@@ -19,7 +19,7 @@ Once you have a working script, **you can also transform it into a Step** and op
 2. Click the `Workflow` tab to open Workflow Editor.
 3. Select a workflow in the `WORKFLOW` menu.
 
-   ![](/img/workflow-menu.png)
+   ![{{ page.title }}](/img/workflow-menu.png)
 4. Once, you have your workflow, click the `+` sign to insert a Step at that position from our **Step Library**.
 5. In the `Search steps` bar, search for "script" and click on the `Script` Step . This will add the Step to your workflow.
 6. Click the Step in your workflow.

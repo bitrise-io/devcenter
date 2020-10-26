@@ -34,4 +34,4 @@ published: false
 
 一定回数以上ログインを失敗すると、自動的にアカウントはロックされます。メールの受信ボックスに**Unlock Instructions**のメールが届いているか確認して、指示に従ってください。
 
-![](/img/lockedout.png)
+![{{ page.title }}](/img/lockedout.png)

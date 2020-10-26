@@ -18,7 +18,7 @@ Bitriseで組織を作成するために大変な準備は必要ありません�
 1. [Bitrise.io](https://www.bitrise.io) にログインします。
 2. 上部のメニューにある `+` をクリックします。
 
-   ![Screenshot](/img/team-management/organization/add-org.png)
+   ![{{ page.title }}](/img/team-management/organization/add-org.png)
 
 3. `Add organization` をドロップメニューから選択します。
 
@@ -26,11 +26,11 @@ Bitriseで組織を作成するために大変な準備は必要ありません�
    * `Account settings` ページ: 左にある `+ New Organization` オプション
    * `Apps` 画面: アプリの上にあるドロップメニューを開いて、`Create organization` をクリック
 
-   ![Screenshot](/img/team-management/organization/add-org-apps.png)
+   ![{{ page.title }}](/img/team-management/organization/add-org-apps.png)
 
 4. ポップアップに、あなたの組織名と請求先のメールアドレスを入力して、 `Create` をクリックします。 デフォルトでは、ここで設定した請求先のメールアドレスに請求書が送られます。
 
-![Screenshot](/img/team-management/organization/name-email-org.png)
+![{{ page.title }}](/img/team-management/organization/name-email-org.png)
 
 5. 支払い情報を入力してください。
 
@@ -42,12 +42,12 @@ Bitriseで組織を作成するために大変な準備は必要ありません�
 
 このステップはスキップできます。いつでも組織にアプリを移動させたり、新しいアプリを追加することができます。
 
-![Screenshot](/img/team-management/organization/transfer-apps-creation.png)
+![{{ page.title }}](/img/team-management/organization/transfer-apps-creation.png)
 
 7. ポップアップで `Check billing` をクリックすると、購読プランをすぐに設定することができます。ここでも支払い情報を追加することができます。
 
 または、 `OK` をクリックして組織の作成を完了します。
 
-![Screenshot](/img/team-management/organization/no-active-sub-yet.png)
+![{{ page.title }}](/img/team-management/organization/no-active-sub-yet.png)
 
 これで終わりです！組織に人を招待してみましょう！

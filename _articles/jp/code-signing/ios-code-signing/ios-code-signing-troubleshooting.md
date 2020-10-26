@@ -29,7 +29,7 @@ BitriseでiOSのコード署名を行うためには、基本的に以下の３�
 
 * **Provisioning profileと.p12証明書がいずれもBitriseにアップロードされているかを確認する**。`Workflow Editor`内の`Code Signing`タブから確認できます。`iOS Auto Provision`ステップを使用している場合は、.p12証明書ファイルのみをアップロードしておく必要があります。
 
-![](/img/archive_fail.png)
+![{{ page.title }}](/img/archive_fail.png)
 
 * **プロジェクト内のProvisioning profileと.p12証明書の対応を確認する**。Development用のProvisioning profileには開発用の証明書が必要です。App StoreとAd-hoc、およびEnterprise用のProvisioning profileには配布用の証明書が必要です。
 
@@ -39,7 +39,7 @@ BitriseでiOSのコード署名を行うためには、基本的に以下の３�
 
 * **Workflow Editor内で`Select method for export`の設定を確認する**。例えば、 `ad-hoc`または`app-store`に設定している場合、配布用の.p12証明書ファイルとAdHoc用またはApp Store用のProvisioning profileが必要です。
 
-![](/img/export_fail.png)
+![{{ page.title }}](/img/export_fail.png)
 
 * **`iOS Auto Provision`ステップおよび`Certificate and profile installer`ステップの両方がワークフロー内に含まれていないことを確認する**。これら２つのステップを同一のワークフロー内に含めることはできません。この場合、ビルドは必ず失敗します。
 
