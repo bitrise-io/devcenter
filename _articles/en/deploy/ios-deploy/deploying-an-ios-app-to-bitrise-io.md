@@ -41,7 +41,7 @@ Make sure that you have:
 2. Make sure the **Xcode Archive & Export for iOS** Step is in your Workflow.
 3. Set the **Select method for export** input of the Step to `development`.
 
-   ![](/img/xcode-archive-export-method.png)
+   ![{{ page.title }}](/img/xcode-archive-export-method.png)
 
    You can use other export methods, too, but if you only deploy to Bitrise and want to install your app on the specified devices of internal testers, `development` is sufficient.
 4. Make sure the **Deploy to Bitrise.io** Step is in your Workflow.
@@ -53,7 +53,7 @@ Make sure that you have:
 
    You can also find the public install URL here. Click the eye icon next to the .ipa file to reveal the details and to find the toggle for the public install page. Make sure that's toggled on so you're able to send the link to non-Bitrise users. 
 
-   ![](/img/public-install-page.png)
+   ![{{ page.title }}](/img/public-install-page.png)
 
 And that's it! The file can now be installed on all the devices included in the app's provisioning profile. Remember: the installation link must be accessed from an iOS device's Safari browser!
 

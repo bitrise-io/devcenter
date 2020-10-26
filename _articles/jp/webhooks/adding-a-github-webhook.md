@@ -18,22 +18,22 @@ menu:
 1. アプリのページの`Code`タブにいき、`INCOMING WEBHOOKS`メニューの`SETUP MANUALLY`をクリックします。
 2. ドロップダウンメニューから`GitHub`を選択します。
 
-   ![Screenshot](/img/github-webhook-1.png)
+   ![{{ page.title }}](/img/github-webhook-1.png)
 3. 選択したサービスのWebhook URLをコピーします。
 
 ## GitHubでwebhookを設定
 
 1. GitHubリポジトリに移動し`Settings`を選択します。
 
-   ![Screenshot](/img/webhooks/github-webhook-2.png)
+   ![{{ page.title }}](/img/webhooks/github-webhook-2.png)
 2. Webhooksの下の`Add webhook`を選択します。
 
-   ![Screenshot](/img/webhooks/github-webhook-3.png)
+   ![{{ page.title }}](/img/webhooks/github-webhook-3.png)
 3. GitHub Webhook URLをBitriseからPayload URLに貼り付けます。
 
-   ![Screenshot](/img/webhooks/github-webhook-4.png)
+   ![{{ page.title }}](/img/webhooks/github-webhook-4.png)
 4. 同じページの`Let me select individual events`を選択します。
 
-![Screenshot](/img/webhooks/github-webhook-5.png) 5. `Pull request`と`Push`を選択します。準備ができたら、`Add webhook`を押してください。
+![{{ page.title }}](/img/webhooks/github-webhook-5.png) 5. `Pull request`と`Push`を選択します。準備ができたら、`Add webhook`を押してください。
 
-![Screenshot](/img/webhooks/github-webhook-6.png)
+![{{ page.title }}](/img/webhooks/github-webhook-6.png)

@@ -34,7 +34,7 @@ If you're all set, proceed to setting up .ipa export in your Workflow.
 
    You can control the code signing type in your Xamarin project by setting the code signing configurations in Xamarin Studio.
 
-   ![](/img/xamarin-archive-release-iphone.png)
+   ![{{ page.title }}](/img/xamarin-archive-release-iphone.png)
 
 
 If you wish to use more than one code signing type (for example, to create both Ad-hoc and App Store signed apps), create more than one **Release** configuration in Xamarin Studio. Set the separate configurations to the types you want to use.

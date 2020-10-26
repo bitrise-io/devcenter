@@ -24,7 +24,7 @@ in your [bitrise.io](https://www.bitrise.io/) build you only have to do three th
    variable, to not to cause issues when the value includes the `$` (dollar) sign, which is used
    for environment variable expansion.
 
-   ![](/img/matchpassword.png)
+   ![{{ page.title }}](/img/matchpassword.png)
 3. Make sure to use `match`'s `readonly` mode, or else `match` will try to connect
    to the Apple Developer Portal, which requires further authorization (providing additional
    username and password for Apple Dev Portal login)!

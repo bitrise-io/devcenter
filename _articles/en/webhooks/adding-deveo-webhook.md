@@ -13,7 +13,7 @@ a [Deveo](https://deveo.com) repository.
 1. Go to the **Code** tab of your app's page and in the **INCOMING WEBHOOKS** menu, click **SETUP MANUALLY**.
 2. Select **Deveo** from the dropdown menu.
 
-   ![Screenshot](/img/bitrise-deveo-webhook.png)
+   ![{{ page.title }}](/img/bitrise-deveo-webhook.png)
 3. Copy the webhook URL for the selected service.
 
 ## Set up webhook on Deveo
@@ -21,16 +21,16 @@ a [Deveo](https://deveo.com) repository.
 1. Open your repository on [app.deveo.com](https://app.deveo.com).
 2. Go to **Hooks** of the project.
 
-   ![Screenshot](/img/webhooks/deveo-hooks.png)
+   ![{{ page.title }}](/img/webhooks/deveo-hooks.png)
 3. Add a new Repository Hook by clicking the **+** button on the right.
 4. Select your repository and select the **Webhook** service.
 
-   ![Screenshot](/img/webhooks/deveo-add-hooks.png)
+   ![{{ page.title }}](/img/webhooks/deveo-add-hooks.png)
 5. Enter the `bitrise-webhooks` URL (`.../h/deveo/BITRISE-APP-SLUG/BITRISE-APP-API-TOKEN` in the `Url` field).
 6. Type `json` in the **Content type** field.
 7. Click **Save hook**.
 
-   ![Screenshot](/img/webhooks/deveo-save-hook.png)
+   ![{{ page.title }}](/img/webhooks/deveo-save-hook.png)
 
 That's all! The next time you **push code** or **push a new tag**
 a build will be triggered (if you have Trigger mapping defined for the event(s) on Bitrise).

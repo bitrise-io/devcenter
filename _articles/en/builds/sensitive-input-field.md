@@ -19,7 +19,7 @@ Any sensitive information such as passwords, IDs, and API tokens are exposed in 
 
 You can hide any input of your choice with secret Env Vars even if the field is not labeled **SENSITIVE** but you must use secret Env Vars for fields which are by default marked as **SENSITIVE**.
 
-![Screenshot](/img/builds/sensitive-label.png)
+![{{ page.title }}](/img/builds/sensitive-label.png)
 
 There are two ways to define secret Env Vars:
 
@@ -33,7 +33,7 @@ Head over to [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) to find o
 1. Click the **Select Secret Variable** button below the input field which is marked with the yellow **SENSITIVE** label.
 2. In the **Insert variable** pop-up, browse the **Choose Secret Env Var** list or create a new secret env var (add the key and the value) in the **Create New Secret Env Var** section.
 
-   ![](/img/insert-variable-1.png)
+   ![{{ page.title }}](/img/insert-variable-1.png)
 
    The **Expose for pull request?** toggle under the **Value** field is by default disabled and cannot be enabled with public apps to protect the secrets of your public app in the case of pull requests.
 3. If you've entered a new Env Var, hit **Add new**.
@@ -42,7 +42,7 @@ The new secret Env Var will be available in the **Choose Secret Env Var** list o
 
 The selected or newly created secret env var will get automatically saved into the input field of the step.
 
-![](/img/select-secret-variable.png)
+![{{ page.title }}](/img/select-secret-variable.png)
 
 You can always modify the secret Env Var registered for a **SENSITIVE** input field if you click the **Select secret variable** button or head over to the **Secrets** tab where you get a full list of your secret env vars.
 

@@ -17,23 +17,23 @@ Bitriseでアプリをセットアップすると、チームメンバーを招�
 
 `オーナー` と `管理者`はメンバー名の隣にある `Change role`をクリックすることで、他のメンバーの役割を変更できます。
 
-![Screenshot](/img/team-management/add-new-member.png)
+![{{ page.title }}](/img/team-management/add-new-member.png)
 
 
 それぞれの役割で実行可能な権限は以下の通りです。
 
 ## オーナー
 
-![Screenshot](/img/team-management/owners.png)
+![{{ page.title }}](/img/team-management/owners.png)
 
 ## 管理者
 
-![Screenshot](/img/team-management/admins.png)
+![{{ page.title }}](/img/team-management/admins.png)
 
 ## 開発者
 
-![Screenshot](/img/team-management/developers.png)
+![{{ page.title }}](/img/team-management/developers.png)
 
 ## テスター / QA
 
-![Screenshot](/img/team-management/testers-qa.png)
+![{{ page.title }}](/img/team-management/testers-qa.png)

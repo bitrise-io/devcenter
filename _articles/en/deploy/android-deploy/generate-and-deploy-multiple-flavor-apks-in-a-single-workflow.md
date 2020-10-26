@@ -27,7 +27,7 @@ If you have an Android deploy workflow at hand, do the following:
 
    `assembleDemo` and `assembleFull`
 
-   ![](/img/multiflavor-1.jpg)
+   ![{{ page.title }}](/img/multiflavor-1.jpg)
 4. **Gradle Runner** generates a `$BITRISE_APK_PATH_LIST` Environment Variable output that contains ALL the build variants you have set in **Gradle task to run** Step above. We will need this output Environment Variable later.
 
 ## Signing and deploying multi-flavor APKs

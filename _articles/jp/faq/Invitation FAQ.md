@@ -19,7 +19,7 @@ If you already have a Bitrise account and receive an invitation email, you’ll 
 
 If you don’t have an account yet, and you’re invited to an Organization or a Team, you should click the **Accept invitation** button in the invitation email. This will take you through   registration, and log you into the account. If you attempt to sign up manually, you won’t be able to since your email address is already reserved for the invitation. So we recommend you to check your inbox, look for the invitation email from Bitrise and follow the instructions there.
 
-![](/img/accept-invitation-1.jpg)
+![{{ page.title }}](/img/accept-invitation-1.jpg)
 
 ## How can I sign up to Bitrise if my invitation has expired?
 

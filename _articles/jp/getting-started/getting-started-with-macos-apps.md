@@ -30,7 +30,7 @@ menu:
 
   8. エクスポート方法を選択します。後で変更可能なので - `development`を選択します。
 
-![](/img/project-build-config-macos.png)
+![{{ page.title }}](/img/project-build-config-macos.png)
 
 * クリック後に、以下のものをチェックします
 * プロジェクトまたはワークスペース　パス

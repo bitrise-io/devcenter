@@ -28,7 +28,7 @@ Ship でさまざまなことができます。
 * 公開設定をすれば、特定のビルドバージョンを App Store Connect や Google Play Console にデプロイします。
 * クロスプラットフォームプロジェクトの場合は **Version History** ページでプラットフォームを切り替えます。
 
-  ![](/img/ship_benefits.jpg)
+  ![{{ page.title }}](/img/ship_benefits.jpg)
 
 ## Ship の開始
 
@@ -69,7 +69,7 @@ Ship にワークフローのアーティファクトを公開するには:
 3. **General** タブに移動します。
 4. **Expose Artifacts From the Selected Workflow to Ship** に必要なワークフローを追加します。
 
-   ![](/img/Settings___android-test-test.png)
+   ![{{ page.title }}](/img/Settings___android-test-test.png)
 
    アプリがクロスプラットフォームの場合は、テキストボックスが iOS 用と Android 用に2つあることに注意してください。別々のワークフローの名前をコンマで区切ります（例: `build, deploy, release_build_android`）。
 5. ページの下部へスクロールして **Save** をクリックします。
@@ -164,9 +164,9 @@ Google Play Console への Android アプリ公開を構成するためにでき
 2. **Android Settings** セクションに移動します。
 3. 公開したい APK を生成するワークフローを [Expose](/jp/deploy/ship/#ship-にワークフローのアーティファクトを公開) します。
 4. Google Play Console に公開するために使用する [track](https://developers.google.com/android-publisher/tracks) を入力します。
-5. Android アプリに複数のモジュールがある場合は、**Module** に正確なモジュール名を入力します。 ![](/img/module-android-settings.png)
+5. Android アプリに複数のモジュールがある場合は、**Module** に正確なモジュール名を入力します。 ![{{ page.title }}](/img/module-android-settings.png)
 6. 適切なキーストアファイルとサービスアカウント JSON ファイルを選択します。
-7. **Version History** ページに戻って公開したいバージョンを選択します。もし複数のフレーバーがある場合は、公開用に正しいフレーバーをフィルタリングして選択することができます。 ![](/img/flavorandroid.jpg)
+7. **Version History** ページに戻って公開したいバージョンを選択します。もし複数のフレーバーがある場合は、公開用に正しいフレーバーをフィルタリングして選択することができます。 ![{{ page.title }}](/img/flavorandroid.jpg)
 8. **Details** ページを入力して **Publish** をクリックします。
 </div>
 </div>
@@ -177,7 +177,7 @@ Ship で **Publish** をクリックすると、構成された設定にした�
 
 公開プロセスのログを見るには、**Activity** タブへ移動します。公開に失敗したあとのエラーに対処するために **Download Build Log** をクリックしてそこからログをダウンロードできます。
 
-![](/img/downloadbuildlog.jpg)
+![{{ page.title }}](/img/downloadbuildlog.jpg)
 
 ## アプリの詳細
 
@@ -198,7 +198,7 @@ Ship で **Publish** をクリックすると、構成された設定にした�
 1. 選択したビルドバージョンの **Details** ページを開きます。
 2. アップロードしたい内容に応じて **Screenshots** または **Feature Graphic** に移動します。
 
-   ![](/img/ship-screenshots-1.jpg)
+   ![{{ page.title }}](/img/ship-screenshots-1.jpg)
 3. ファイルをドラッグ & ドロップするか、**Browse files** をクリックしてアップロードしたいファイルを選びます。
 4. 完了したら、右上の **Save** をクリックします。
 
@@ -230,7 +230,7 @@ Ship は3つの別々のイベントについてメールを送信すること�
 3. **Notifications** タブに移動します。
 4. **Email notifications** の下の入力欄にメールアドレスを入力します。
 
-   ![](/img/ship-notifications.jpg)
+   ![{{ page.title }}](/img/ship-notifications.jpg)
 5. **Add** をクリックします。
 
 メールアドレスが下のリストに表示され、ステータスが **Pending** になります。メールがそのアドレスに送信されます。受信者が通知を受け取りはじめるにはメールの **Confirm Notifications** をクリックする必要があります。

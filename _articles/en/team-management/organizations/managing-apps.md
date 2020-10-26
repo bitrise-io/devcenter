@@ -23,16 +23,16 @@ A new app can be added directly to an Organization. You can do this either from 
    There are three options to get there:
    * On the top menu bar, find the **+** symbol and click it, then click the **Add App** option.
 
-     ![](/img/add-new-app.jpg)
+     ![{{ page.title }}](/img/add-new-app.jpg)
    * Open the **Dashboard** on [bitrise.io](https://www.bitrise.io), open the dropdown menu above your app list and select your Organization. Click the **+ Add new app** button.
 
-     ![](/img/add-new-app-organization.png)
+     ![{{ page.title }}](/img/add-new-app-organization.png)
    * Open the **Account settings** page of your Organization, and click the **Apps** option on the menu on the left. Click the **Add new app** button.
 
-     ![](/img/add-new-app-org-settings.jpg)
+     ![{{ page.title }}](/img/add-new-app-org-settings.jpg)
 2. On **Create New App** page, make sure that the Organization account is selected in the dropdown menu.
 
-   ![](/img/create-new-app-organization-selected.png)
+   ![{{ page.title }}](/img/create-new-app-organization-selected.png)
 3. Proceed with adding a new app as usual! It will be owned by the Organization.
 
 ## Transferring apps to an Organization
@@ -51,11 +51,11 @@ App ownership can be transferred **from** an Organization to another account on 
 1. Sign in with an account that is a member of the Organization and open the account's profile page.
 2. Go to your Organization's profile page: click **Switch Profile** on the top left corner and select the Organization you need.
 
-   ![](/img/switch-profile-1.jpg)
+   ![{{ page.title }}](/img/switch-profile-1.jpg)
 3. On the left, select **Apps** from the menu options.
 4. Click the **Transfer apps** button.
 
-   ![](/img/add-new-app-org-settings.jpg)
+   ![{{ page.title }}](/img/add-new-app-org-settings.jpg)
 5. Find the apps you wish to transfer and toggle the switch on the right. Once you're done, click **Done**.
 
 ### Transferring an app from the Team tab
@@ -69,7 +69,7 @@ It can happen that you need to transfer an application on [Bitrise](https://www.
 
 For transferring the ownership, select the new user to transfer the app to:
 
-![](/img/transfer-ownership-team-tab.jpg)
+![{{ page.title }}](/img/transfer-ownership-team-tab.jpg)
 
 The new user can either be another private account or an Organization.
 
@@ -85,15 +85,15 @@ There are two separate ways to assign one or more groups to an app that is owned
 1. Sign in with an account that is an **owner** of the Organization and open its profile page.
 2. Go to your Organization's profile page: click **Switch Profile** on the top left corner and select the Organization you need.
 
-   ![](/img/switch-profile.jpg)
+   ![{{ page.title }}](/img/switch-profile.jpg)
 3. On the left, select **Groups** from the menu options.
 4. Choose the group you wish to assign, and click the dropdown menu indicated by the **...** symbol.
 5. Click **Assign group to apps**.
 
-   ![](/img/assign-group-to-apps.jpg)
+   ![{{ page.title }}](/img/assign-group-to-apps.jpg)
 6. Find the app(s) you need and select the appropriate role for the group. You can check out the role cheatsheet on any app's **Team** tab.
 
-   ![](/img/popup-assign.png)
+   ![{{ page.title }}](/img/popup-assign.png)
 
 ### Assigning a group from the `Team` tab.
 
@@ -101,7 +101,7 @@ There are two separate ways to assign one or more groups to an app that is owned
 2. Select the **Team** tab.
 3. Find the **Add a group from OrgName** menu.
 
-   ![Screenshot](/img/team-management/organization/add-group-org.png)
+   ![{{ page.title }}](/img/team-management/organization/add-group-org.png)
 4. Find the group you wish to add and click the **+** symbol.
 5. Select the role for the group.
 
@@ -109,11 +109,11 @@ For rights of roles, check out the Role Cheatsheet!
 
 If there are no groups you can assign to the app in this menu, you will see a grey box telling you **No groups to show**. Clicking the link will take you to your Organization's `Groups` page where you can create the groups you need, including removing the group from the app.
 
-![Screenshot](/img/team-management/organization/add-group-from-org.png)
+![{{ page.title }}](/img/team-management/organization/add-group-from-org.png)
 
 From the **Team** tab you can also access all the functions to manage groups. You have to click **MANAGE GROUP** to the right of the group members, and click the action you need in the pop-up window.
 
-![](/img/manage-group-change-roles.png)
+![{{ page.title }}](/img/manage-group-change-roles.png)
 
 ## Adding contributors to an app
 
@@ -146,11 +146,11 @@ Let's see the details!
 2. On the left menu bar, select **People**.
 3. Toggle the **Allow Outside Contributors** switch to the right. Please note that without enabling this function here, you will not be able to add an outside contributor to your app on the **Team** tab!
 
-   ![](/img/enabled-allow-outside-contributor.jpg)
+   ![{{ page.title }}](/img/enabled-allow-outside-contributor.jpg)
 4. On the left menu bar, select **Apps**.
 5. Search for or click the app you want to add outside contributors to. (In our example, it is the `android-multiple-test-results-sample` app.)
 
-   ![](/img/switch-to-apps-from-people.jpg)
+   ![{{ page.title }}](/img/switch-to-apps-from-people.jpg)
 
    The **Builds** page appears.
 6. Select the **Team** tab.
@@ -162,15 +162,15 @@ Let's see the details!
 
    For rights of roles, check out the Role Cheatsheet linked above **Grant Access**.
 
-   ![](/img/team-management/organization/add-contributors.png)
+   ![{{ page.title }}](/img/team-management/organization/add-contributors.png)
 
 Bitrise sends an invitation email to the contributor's email address with a link to view the app.
 
-![](/img/invitation-email-outside-contributor.jpg)
+![{{ page.title }}](/img/invitation-email-outside-contributor.jpg)
 
 If all went well, you should see the invited outside contributor at the **People** tab of your Organization.
 
-![](/img/added-outside-contributor.png)
+![{{ page.title }}](/img/added-outside-contributor.png)
 
 {% include message_box.html type="note" title="Removing outside contributors" content=" You can remove the outside contributor on the **People** tab by clicking the red **x**. Please note that you have to remove all outside contributors if you want to disable the **Outside Contributor** toggle." %}
 
@@ -181,6 +181,6 @@ If all went well, you should see the invited outside contributor at the **People
 3. Find the group you wish to remove, and click the **MANAGE GROUP** option next to one of the names of the group members.
 4. Click **REMOVE FROM APP**. Click **Yes** in the pop-up window.
 
-   ![](/img/manage-group-change-roles.png)
+   ![{{ page.title }}](/img/manage-group-change-roles.png)
 
 {% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to Bitrise now" %}

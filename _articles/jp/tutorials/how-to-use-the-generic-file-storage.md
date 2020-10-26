@@ -25,7 +25,7 @@ Once you uploaded a file to **GENERIC FILE STORAGE**, you can set your uploaded 
 
 1. Click the horizontal ellipsis button and select **Make protected**.
 
-   ![](/img/genericfileprotected.jpg)
+   ![{{ page.title }}](/img/genericfileprotected.jpg)
 2. Click **Make it protected** in the pop-up window.
 
 Note that since the file is now protected, you can only overwrite it if you delete it and upload a new one again.

@@ -14,7 +14,7 @@ menu:
 1. アプリのページの`Code`タブに移動し、`INCOMING WEBHOOKS`メニューの`SETUP MANUALLY`をクリックします。
 2. ドロップダウンメニューから`Assembla`を選択します。
 
-   ![Screenshot](/img/bitrise-assembla-webhook.png)
+   ![{{ page.title }}](/img/bitrise-assembla-webhook.png)
 3. 選択したサービスのWebhook URLをコピーしてください。
 
 ## Assemblaでwebhook設定

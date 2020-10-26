@@ -28,7 +28,7 @@ When you run a build, a build log is generated automatically. Every build has it
 3. Select the build you want to check out.
 4. Find the log under the **LOGS** tab.
 
-   ![](/img/logs.jpg)
+   ![{{ page.title }}](/img/logs.jpg)
 
 {% include message_box.html type="info" title="Opening the full log" content="If you have a longer build log then by default, only the end of the log is displayed. Click the bar on the top of the log to expand."%}
 
@@ -46,7 +46,7 @@ Below this basic information, you will see every Step that was ran as part of th
 * A printout of the Step's commands and their results, including highlighted error messages.
 * Whether the Step passed or failed.
 
-![](/img/log-start.png)
+![{{ page.title }}](/img/log-start.png)
 
 Check your build log carefully when a build fails. Error messages are usually highlighted in red on Bitrise. For failed Steps, an exit code is displayed next to their names. This can tell you more about why the particular Step failed.
 
@@ -61,7 +61,7 @@ To do so:
 3. Scroll down to the log.
 4. Click **Follow**.
 
-![](/img/ios-multiple-test-results-sample_-_build__34__629950ad554e4cc9__-_bitrise.png)
+![{{ page.title }}](/img/ios-multiple-test-results-sample_-_build__34__629950ad554e4cc9__-_bitrise.png)
 
 To stop following, you just need to manually navigate anywhere within the log. You can restart following any time. 
 
@@ -85,7 +85,7 @@ Not all team members are authorized to delete logs: only those with either **Adm
 
 {% include message_box.html type="info" title="Deletion is final" content="Be aware that you cannot undo deleting a log. Once you delete it, there is no way to recover the log file."%}
 
-![](/img/build-logs-are-you-sure-1.png)
+![{{ page.title }}](/img/build-logs-are-you-sure-1.png)
 
 1. Log in to Bitrise and click on your app on the Apps page.
 2. Click the **Builds** tab.

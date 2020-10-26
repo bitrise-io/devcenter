@@ -28,10 +28,10 @@ To invite a team member:
 {% include message_box.html type="warning" title="Inviting team members" content=" You need to be the app's **owner** or an **admin** to be able to add new team members to your app.
 "%}
 
-![](/img/grant-access.png)
+![{{ page.title }}](/img/grant-access.png)
 
 **Owners** and **admins** can change the roles of other members by clicking **Change role** next to the member's name.
 
-![](/img/change-role.png)
+![{{ page.title }}](/img/change-role.png)
 
 {% include banner.html banner_text="Invite a team member to your app's Team " url="https://app.bitrise.io/dashboard/builds" button_text="Go to your Dashboard" %}

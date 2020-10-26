@@ -16,7 +16,7 @@ webhookのセットアップをすると、コードプッシュやプルリク�
 1. アプリページの`Code`タブに進み、`INCOMING WEBHOOKS`メニューより`SETUP MANUALLY` をクリックします。
 2. ドロップダウンメニューより`GitLab`を選択します。
 
-   ![Screenshot](/img/bitrise-gitlab-webhook.png)
+   ![{{ page.title }}](/img/bitrise-gitlab-webhook.png)
 3. 選択したサービスのwebhook URLをコピーしてください。
 
 ## GitLab上でのwebhookのセットアップ
@@ -25,10 +25,10 @@ webhookのセットアップをすると、コードプッシュやプルリク�
 2. プロジェクトの`Settings`へ進みます。
 3. `Integrations`を選択します。
 
-   ![Screenshot](/img/webhooks/integrations-gitlab.png)
+   ![{{ page.title }}](/img/webhooks/integrations-gitlab.png)
 4. URL欄にbitrise-webhooks URLを入力します。
 
-   ![Screenshot](/img/webhooks/gitlab-webhook-url.png)
+   ![{{ page.title }}](/img/webhooks/gitlab-webhook-url.png)
 5. `Trigger`セクションの：
    * `Push events`
    * `Tag push events`

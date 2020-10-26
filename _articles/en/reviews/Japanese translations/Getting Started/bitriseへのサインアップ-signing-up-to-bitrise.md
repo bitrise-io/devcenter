@@ -24,7 +24,7 @@ Bitriseでは、ご自身でGitHub、Bitbucket、もしくはGitLabユーザー�
 1. [**Sign up**](https://app.bitrise.io/users/sign_up) ページに進みます。
 2. 認証を行うGitプロバイダを選択します。
 
-   ![](/img/sign-up-git-email.jpg)
+   ![{{ page.title }}](/img/sign-up-git-email.jpg)
 
 ### Gitプロバイダを使ってBitriseを許可する
 
@@ -32,19 +32,19 @@ Gitプロバイダとの接続を確立する前に、Bitriseを許可する必�
 
 #### GitHub
 
-![Screenshot](/img/signing-up/github_authorization.png)
+![{{ page.title }}](/img/signing-up/github_authorization.png)
 
 GitHub上の**Authorize application** (アプリの認証) をクリックすると、Bitriseへリダイレクトされます。
 
 #### Bitbucket
 
-![Screenshot](/img/signing-up/bitrise_authorization.png)
+![{{ page.title }}](/img/signing-up/bitrise_authorization.png)
 
 Bitbucket上の**Grant access** (アクセスを許可する) をクリックすると、Bitriseへリダイレクトされます。
 
 #### GitLab
 
-![Screenshot](https://yv69yaruhkt48w.preview.forestry.io/img/signing-up/gitlab_authorization.png)
+![{{ page.title }}](https://yv69yaruhkt48w.preview.forestry.io/img/signing-up/gitlab_authorization.png)
 
 GitLab上の**Authorize** (認証する) をクリックすると、Bitriseへリダイレクトされます。
 
@@ -54,7 +54,7 @@ Bitriseアカウントを作成するには、ユーザーネームとパスワ�
 
 1. **You are almost there**のページにてBitriseアカウント用のユーザーネームとパスワードを設定します。
 
-   ![](/img/you-re-almost-there.jpg)
+   ![{{ page.title }}](/img/you-re-almost-there.jpg)
 
    以下の要求を満たす**強いパスワード**を設定する必要があります。
    * 12字以上であること
@@ -79,7 +79,7 @@ Bitriseアカウントを作成するには、ユーザーネームとパスワ�
 3. Eメールの受信ボックスに**Confirmation Instructions** (確認メール) が届いているかを確認します。万が一届いていない場合は、**Resend confirmation email** (確認メールの再送) ボタンをクリックします。
 4. 届いたメールから、**Confirm My Account** (アカウント承認) ボタンをクリック、もしくはURLをコピーします。**Help us help you** ページへ遷移されます。
 
-   ![](/img/confirmation-instructions.jpg)
+   ![{{ page.title }}](/img/confirmation-instructions.jpg)
 5. **Help us help you**ページにて、名前（名・姓）、会社名、ご希望に応じて他の詳細情報を入力します。後で入力することも可能です。
 6. **Done** (終了) をクリックします。Bitrise Dashboardに遷移されます。
 
@@ -97,12 +97,12 @@ Bitriseへのサインアップ方法を確認していきます。
 2. **Sign up with SSO**ボタンをクリックします。  
    **Initiative Single Sign-On**ページに遷移されます。
 
-   ![](/img/saml-sso-sign-up.jpg)
+   ![{{ page.title }}](/img/saml-sso-sign-up.jpg)
 3. Bitrise Organizationのオーナーから受け取った**Bitrise Organization's Name** (Bitrise Organization名) を入力します。**Continue with SSO** (SSOを使って続ける) をクリックすることで、Organizationの接続されたSAML SSOプロバイダに遷移します。
 4. SAML SSOアカウントと紐付いているクレデンシャルを入力します。
 5. **Almost there**ページでは、SAML SSOアカウントにある登録済みのメールアドレスが自動的に**Email**欄に入力されています。自動生成された**Username** (ユーザーネーム) は変更することも可能です。
 
-   ![](/img/signup-saml-almost-there-1.jpg)
+   ![{{ page.title }}](/img/signup-saml-almost-there-1.jpg)
 6. **Finish Sign Up** (サインアップを終える) をクリックします。
 7. letsconnect@bitrise.ioから送られたEメールを受信ボックスより確認して、指示に従ってください。
 8. **Help us help you**ページに遷移されるので、そこで更に詳細情報を入力することができます（あとからの入力でもOK）。

@@ -27,7 +27,7 @@ Bitriseには以下のロールがあります：
 
 ロールチートシート
 
-![](/img/owners.png)
+![{{ page.title }}](/img/owners.png)
 
 オーナーはアプリケーションに無制限にアクセス、アプリ破棄、[アプリの所有権を譲渡することが](/team-management/changing-the-owner-of-an-app/)でき、また、支払い情報にアクセスできるのもオーナーだけです。
 
@@ -39,7 +39,7 @@ Bitriseには以下のロールがあります：
 
 ロールチートシート
 
-![](/img/admins.png)
+![{{ page.title }}](/img/admins.png)
 
 例えば、管理者はアプリケーションを削除することはできませんが、他のメンバーをそのアプリケーションで作業するように招待することはできます。管理者は他のユーザーに管理者権限を付与することもできます - ただし、アプリの[所有権を譲渡することはできません](/team-management/changing-the-owner-of-an-app/)。
 
@@ -51,7 +51,7 @@ Here's the role cheatsheet for developers:
 
 ロールチートシート
 
-![](/img/developers.png)
+![{{ page.title }}](/img/developers.png)
 
 たとえば、開発者はチームメンバーの役割を変更したり、新しいチームメンバーを追加したり、既存のチームメンバーを削除したり、ワークフローを作成、編集、削除したりすることはできません。ただし、ビルドを実行してビルドログを表示することはできます。
 
@@ -61,7 +61,7 @@ Here's the role cheatsheet for developers:
 
 テスターは、グループまたは個別にアプリケーションに割り当てることができます。組織にテスターはおらず：組織グループをテスターとしてアプリケーションに割り当てることができます。
 
-![](/img/testers.png)
+![{{ page.title }}](/img/testers.png)
 
 テスターはビルドのみを表示できます。ビルドログにアクセスすることはできず、またいかなる方法や形式でもアプリを変更することはできません。
 
@@ -80,7 +80,7 @@ Here's the role cheatsheet for developers:
 2. `Team` タブをクリックします。
 3. `Add users to this app`ボックスに、招待するユーザーのユーザー名または電子メールを入力します。
 
-   ![](/img/add-users.png)
+   ![{{ page.title }}](/img/add-users.png)
 
    [アプリが組織によって所有されている場合]()も、ユーザー名または電子メールを入力するボックスの上に`Add outside contributors to this app`が表示されます。
 4. 割り当てたいロールを選択します。

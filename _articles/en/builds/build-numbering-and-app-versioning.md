@@ -26,7 +26,7 @@ You can set the build number manually on the website. This is useful if, for exa
 
 Open your app and go to its **Settings** tab.
 
-![](/img/build-number.png)
+![{{ page.title }}](/img/build-number.png)
 
 Under **YOUR NEXT BUILD NUMBER WILL BE**, the number of your next build will be displayed (unsurprisingly). This number is incremented automatically whenever a new build is triggered but here you can also set it manually.
 
@@ -54,7 +54,7 @@ For in-depth information about Android versioning, please check out [the Android
 1. Add the **Change Android versionCode and versionName** Step to your Workflow.
 2. Set the the path to your `build.gradle` file in the **Path to the build.gradle file** input.
 
-   ![](/img/versioncode.png)
+   ![{{ page.title }}](/img/versioncode.png)
 3. Add a value in the **New versionCode** input.
 
    The default value is the `$BITRISE_BUILD_NUMBER` Environment Variable.

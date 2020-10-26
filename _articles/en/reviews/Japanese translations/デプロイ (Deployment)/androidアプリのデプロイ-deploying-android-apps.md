@@ -76,7 +76,7 @@ bitrise.ioへデプロイ
 2. `Notify: User Roles`インプット欄にロールを追加（例：`testers`、`developers`、`admins`）することで特定のロールで認可された人のみが通知を受け取る事ができます。
 3. もしくは`Notify: Emails`インプット欄にURLを送付したいユーザーのメールアドレスを入力します。secret env varsとしてメールアドレスをセットしてあるか確認してください。`APPS & ARTIFACTS`タブ内の生成されたAPKファイルの隣りにある`eye`アイコンをクリックすれば、これらの詳細を`Notifications`で修正することができます。`Open Public install page`をクリックしてURLを確認できます。
 
-![](/img/public-install-page.png)
+![{{ page.title }}](/img/public-install-page.png)
 
 ## Google Play Storeへのデプロイ
 

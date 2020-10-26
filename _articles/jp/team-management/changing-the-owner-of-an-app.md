@@ -16,6 +16,6 @@ menu:
 
 所有権を移動させるために、アプリを移動させる新しいユーザーを選択します。
 
-![Screenshot](/img/team-management/transfering-ownership.png)
+![{{ page.title }}](/img/team-management/transfering-ownership.png)
 
 あなたはサービスへの接続を保ったまま切り替えることができます。これはもしあなたが `GitHub` や `Bitbucket` の管理者で、アプリをBitriseで動かすためにあなたの認証情報が必要な時に重要です。

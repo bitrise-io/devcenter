@@ -73,7 +73,7 @@ Once webhooks are set up, configure when to start builds automatically by defini
 * The event which should trigger the build: for example, code push or a pull request.
 * The branch of your repository that can trigger builds: for example, `master` or `dev`.
 
-![](/img/trigger-pull-request.png)
+![{{ page.title }}](/img/trigger-pull-request.png)
 
 This means that you can, for example, set up a trigger that starts a build when a pull request is opened to the `master` branch.
 
@@ -85,7 +85,7 @@ Once you added an app, your first build will be kicked off automatically. To vie
 
 A build is a series of jobs, executed in the order defined in the app's Workflow Editor. The jobs are called Steps, which represent blocks of script execution. The Steps can be arranged on the graphical UI of the Workflow Editor and they can do a huge number of things: clone your repository, build your app, run tests, pass values to each other, send notification messages to developers.
 
-![](/img/rename-workflow.png)
+![{{ page.title }}](/img/rename-workflow.png)
 
 Read more about Workflows and Steps in our relevant guides:
 

@@ -35,7 +35,7 @@ If the required tools are installed, all you have to do is start your offline Wo
 
 Here is the overall look and feel:
 
-![](/img/offline-workflow-editor.png)
+![{{ page.title }}](/img/offline-workflow-editor.png)
 
 ## Upgrading Workflow Editor version
 

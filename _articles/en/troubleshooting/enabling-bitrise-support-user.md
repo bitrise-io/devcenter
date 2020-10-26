@@ -29,7 +29,7 @@ Let's see how to set it up!
 2. Scroll down to the **Enable Bitrise Support User for this app** and toggle the switch to the right to enable it.
    It might take a couple of seconds to work and you might need to refresh your page to see the enabled status.
 
-   ![](/img/bitrise-support-user.png)
+   ![{{ page.title }}](/img/bitrise-support-user.png)
 3. Ping us through our onsite chat and let us know that you have enabled the Bitrise support user for your app.
 
 ## What the Bitrise Support user can do

@@ -32,7 +32,7 @@ Bitrise CLIコアプラグインの1つとしてワークフローエディタ�
 
 これが全体的な外観と操作感です:
 
-![](/img/offline-workflow-editor.png)
+![{{ page.title }}](/img/offline-workflow-editor.png)
 
 ## ワークフローエディターバージョンのアップグレード
 

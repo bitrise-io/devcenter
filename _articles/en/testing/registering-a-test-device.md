@@ -28,7 +28,7 @@ Read more about installing an app from the public install page in our [Deploying
 
 If you go back to `Test devices`, you can see the registered device:
 
-![](/img/registered-test-device.jpg)
+![{{ page.title }}](/img/registered-test-device.jpg)
 
 You can delete the registered device any time if you click on the `x` icon.
 

@@ -78,14 +78,14 @@ To access the result of a particular test:
 2. Click the **Builds** tab and select the build that ran the tests.
 3. Under the build status, click **See more** next to the **Test reports** label.
 
-   ![](/img/android-test-test_-_build__20__ce39bf96fc9f7668__-_Bitrise.png)
+   ![{{ page.title }}](/img/android-test-test_-_build__20__ce39bf96fc9f7668__-_Bitrise.png)
 4. On the **Test Summary** tab, find the test you want to check.
 
    Alternatively, on the top bar, click the tab of the test set you want to check out.
 
    To filter tests based on their results, open the menu on the top right, which is set to **All** by default.
 
-   ![](/img/Test_add-on-3.png)
+   ![{{ page.title }}](/img/Test_add-on-3.png)
 5. Click **Test cases** to see the details.
 
    UI tests are grouped according to device while unit tests are grouped according to test cases.
@@ -96,7 +96,7 @@ You will find:
 * The duration of each individual test (both unit tests and UI tests).
 * In the case of UI tests, the orientation and the locale of the device.
 
-![](/img/Test_add-on-4.png)
+![{{ page.title }}](/img/Test_add-on-4.png)
 
 You can check, depending on the test type:
 
@@ -118,7 +118,7 @@ Every file can be downloaded from Test Reports: that includes screenshots, video
 
    For example, **Test Artifacts**.
 
-   ![](/img/Test_add-on-5.png)
+   ![{{ page.title }}](/img/Test_add-on-5.png)
 3. Click **Download** next to the file name.
 
    If you want to download all files available on the tab, click **Download All Files**.

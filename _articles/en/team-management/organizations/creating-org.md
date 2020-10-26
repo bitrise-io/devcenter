@@ -23,14 +23,14 @@ No need for lengthy preparation when you wish to create an Organization on Bitri
 1. Log in to [bitrise.io](https://www.bitrise.io).
 2. On the top menu bar, find the **+** symbol and click it.
 
-   ![Screenshot](/img/team-management/organization/add-org.png)
+   ![{{ page.title }}](/img/team-management/organization/add-org.png)
 3. Choose **Add Organization** from the dropdown menu.
 
    Alternatively, you can create a new Organization from:
    * your **Account settings** page: find the **+ New Organization** option under **ORGANIZATION** on the left.
 4. In the pop-up window, enter the name and the billing email of your Organization, and click **Create**. By default, your invoices will be sent to the billing email you set here.
 
-   ![](/img/create-new-org.png)
+   ![{{ page.title }}](/img/create-new-org.png)
 
    Please note that you will NOT be able to create an Organization if the domain part of your email address contains uppercase letters.
    * org@example.com will work.
@@ -44,10 +44,10 @@ No need for lengthy preparation when you wish to create an Organization on Bitri
 
    You can skip this step and transfer your apps or add new apps to your Organization at any time.
 
-   ![](/img/transfer-apps-test.png)
+   ![{{ page.title }}](/img/transfer-apps-test.png)
 7. In the pop-up window, click **Check billing** to immediately set up a subscription plan. You can also add your billing information here.
 
-   ![](/img/check-billing.png)
+   ![{{ page.title }}](/img/check-billing.png)
 
    Alternatively, click **OK** to finish creating your Organization.
 

@@ -21,11 +21,11 @@ published: false
    `Bitrise`をクリックします。
 6. `Organization access`まで下にスクロールして`Grant`をクリックすると、BitriseがOrganizationのレポジトリにアクセスができるようになります。
 
-![Screenshot](/img/faq/grant-org-access.jpg)
+![{{ page.title }}](/img/faq/grant-org-access.jpg)
 
 {% include message_box.html type="important" title="`Organization access`においてアプリの隣りに`Grant`ボタンが表示されていない問題" content="`Organization access`で、Organizationの隣りにあるはずの`Grant`ボタンがなく、赤色の☓印だけが表示されている場合があります。これは、**アクセスが以前許可されていたが、後に無効化されたということを意味しています**。左側にある`Organization Setting`にてまずOrganizationを選択し、`Third-party access`をクリックすることによって修正することができます。そうすれば、`Denied`された`Bitrise`へのアクセスが確認できます。その後、鉛筆の形をしたアイコンをクリックして、Bitriseに`Grant access`します。これでBitrise上で`Authorized OAuth Apps`に戻ることができるので、Bitriseをクリックしてください。Organizationの隣りの赤色の☓印が緑色の✓印になっていることが確認できます。"%}
 
-![Screenshot](/img/faq/third-party-access.jpg)
+![{{ page.title }}](/img/faq/third-party-access.jpg)
 
 [bitrise.io](https://www.bitrise.io)に戻り、アバターをクリックして、`Add new App`を選択し、`Next`を押すと、OrganizationとOrganizationのレポジトリを確認することができます。
 

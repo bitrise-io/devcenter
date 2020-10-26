@@ -46,7 +46,7 @@ Bitriseスキャナーがプロジェクトのスキャンに成功すると、`
 
 `Run npm command`では、インプットフィールドの`npm command with arguments to run` に`install` と入力してください。そうすれば、あなたのプロジェクトにJavascript依存関係が追加されます。
 
-![](/img/run-npm.png)
+![{{ page.title }}](/img/run-npm.png)
 
 `Run yarn command` があなたのプロジェクトに自動でJavascript dependenciesをインストールします。ステップを手動で設定する必要はありません。
 
@@ -75,7 +75,7 @@ React Native アプリは２つのプロジェクト（Android と iOS）で構�
 
 {% include message_box.html type="info" title="Androidコード署名についての詳しい情報" content=" コード署名のオプションについての詳しい情報は[Androidコード署名ガイド](/jp/code-signing/android-code-signing/android-code-signing-procedures/)を参照してください。"%}
 
-![](/img/android-code-signing-react.png)
+![{{ page.title }}](/img/android-code-signing-react.png)
 
 これでAndroidのコード署名は完了です！
 
@@ -132,7 +132,7 @@ TestflightとApp Storeへデプロイするためには、他のコード署名�
 
 `jest`と呼ばれる、React Nativeのビルドにおけるテスト方法があります。ワークフローに`Run npm command` ステップを追加し、 `npm command with arguments to run` のフィールドに`test`と入力してください。
 
-![](/img/run-npm-test.png)
+![{{ page.title }}](/img/run-npm-test.png)
 
 ## Bitriseにデプロイする
 

@@ -11,7 +11,7 @@ If you want to use [fastlane match](https://github.com/fastlane/fastlane/tree/ma
    You can find more info [in this guide](/faq/adding-projects-with-submodules/).
 2. Add an environment variable `MATCH_PASSWORD`, as described in [match's docs](https://docs.fastlane.tools/actions/match/#passphrase) to specify the `passphrase` you used for `match`. On [bitrise.io](https://www.bitrise.io/) you should add this as a Secret Environment Variable in the [Workflow Editor](/steps-and-workflows/getting-started-workflows/). Make sure to disable the **Replace variables in input?** option of the environment variable to avoid causing issues when the value includes the `$` (dollar) sign, which is used for environment variable expansion.
 
-   ![](/img/matchpassword.png)
+   ![{{ page.title }}](/img/matchpassword.png)
 3. Make sure to use `match`'s `readonly` mode, or else `match` will try to connect to the Apple Developer Portal, which requires further authorization (providing additional username and password for Apple Dev Portal login)!
    * If you use `match` in your `Fastfile` or `fastlane` config: `match(app_identifier: "my.domain", type: "appstore", readonly: true)`.
    * If you use it as a command line tool: `match development --readonly`.

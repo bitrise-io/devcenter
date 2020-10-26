@@ -28,7 +28,7 @@ You can also set which types of triggered builds you wish to abort. Let's see ho
 3. Scroll down to the **ENABLE ROLLING BUILDS** option and toggle it.
 4. Select the type(s) of builds you wish to abort when a new build is started.
 
-   ![](/img/enable-rolling-builds.png)
+   ![{{ page.title }}](/img/enable-rolling-builds.png)
 
 * **Pull Requests**: will cancel all previous builds for Pull Requests and all related Pushes.
 * **Pushes**: will cancel all previous builds for Pushes to the same branch.

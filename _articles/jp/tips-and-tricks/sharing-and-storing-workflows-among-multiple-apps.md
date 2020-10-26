@@ -19,7 +19,7 @@ Bitriseで他に新しいアプリを導入する際、何度も「再利用」�
 3. アクセス後、`bitrise.yml editor`で表示されたymlをコピーします。
 4. 新しいアプリの`bitrise.yml`に先ほどコピーしたymlをペーストします。
 
-   ![](/img/bitrise-yml-tab-2.png)
+   ![{{ page.title }}](/img/bitrise-yml-tab-2.png)
 5. [ビルドを開始します](/builds/Starting-builds-manually/)。
 
 この場合、新しく追加されたアプリには最新の設定が適用されますが、以前に追加されたアプリは必要に応じて手動で更新する必要があります。

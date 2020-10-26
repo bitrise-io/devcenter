@@ -19,7 +19,7 @@ menu:
 * ビルドが開始された`branch`を選択できます。
 * ビルドの`primary`または`deploy workflow`のどちらかを選択できます。"%}
 
-![Screenshot](/img/bitrise-cli-bitrise-yml/build-filters.png)
+![{{ page.title }}](/img/bitrise-cli-bitrise-yml/build-filters.png)
 
 ## ビルドのbitrise.ymlにアクセス
 
@@ -38,7 +38,7 @@ menu:
 * 青=変更されたコンテンツ
 * オレンジ=削除されたコンテンツ
 
-![Screenshot](/img/bitrise-cli-bitrise-yml/bitrise-yml-changes.png)
+![{{ page.title }}](/img/bitrise-cli-bitrise-yml/bitrise-yml-changes.png)
 
 ## bitrise.ymlオンラインでの変更の復元と取り消し
 
@@ -48,7 +48,7 @@ menu:
 2. `BITRISE.YML CHANGES`ポップアップウィンドウで、オレンジ色の`Restore`をクリックします。
 3. 現在のbitrise.ymlを確認して上書きするためには`Are you sure?` ポップアップウィンドウの`OK`をクリックします。
 
-![Screenshot](/img/bitrise-cli-bitrise-yml/confirm-bitrise-yml-changes.png)
+![{{ page.title }}](/img/bitrise-cli-bitrise-yml/confirm-bitrise-yml-changes.png)
 
 ## bitrise.ymlをオンラインで編集およびダウンロード
 

@@ -37,10 +37,10 @@ Follow this procedure to disable two-factor authentication (2FA) if you are alre
 3. Scroll down and click **Security** on the left.
 4. Click on **Disable** under **Two-factor authentication**.
 
-   ![](/img/disable-tfa.png)
+   ![{{ page.title }}](/img/disable-tfa.png)
 5. Provide your Bitrise login password in the pop-up window.
 
-   ![](/img/provide-password-2fa.jpg)
+   ![{{ page.title }}](/img/provide-password-2fa.jpg)
 
 Now two-factor authentication is disabled.
 

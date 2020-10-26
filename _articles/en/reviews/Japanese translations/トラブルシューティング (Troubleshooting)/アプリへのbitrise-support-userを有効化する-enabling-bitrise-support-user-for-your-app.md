@@ -17,7 +17,7 @@ published: false
 1. プロジェクトの `Settings`タブへ進みます。
 2. `Enable Bitrise Support user for this app`まで下へスクロールし、有効化するにはトグルを右へ動かします。機能するのに数秒かかることもあるので、ステータスを見るには**ページを更新**してください。
 
-   ![Screenshot](/img/troubleshooting/enable-bitrise-support-user.png)
+   ![{{ page.title }}](/img/troubleshooting/enable-bitrise-support-user.png)
 3. サイト上のチャットにて、担当の者にBitrise support userを有効化した旨を伝えていただくと、すぐに問題の解決に移ることができます。
 
 ### Bitrise Support userが有効化されたときに確認できるもの

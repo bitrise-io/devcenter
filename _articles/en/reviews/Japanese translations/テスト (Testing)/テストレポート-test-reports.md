@@ -62,14 +62,14 @@ Test Reportsは**Test Summary**タブにて、実行した全てのテストに�
 2. **Builds**タブをクリックし、テストを実行したビルドを選択します。
 3. ビルドステータスの下にあり**Test reports**のラベル横にある**See more**をクリックします。
 
-   ![](/img/android-test-test_-_build__20__ce39bf96fc9f7668__-_Bitrise.png)
+   ![{{ page.title }}](/img/android-test-test_-_build__20__ce39bf96fc9f7668__-_Bitrise.png)
 4. **Test Summary**タブでテスト結果を見ることができます。
 
    あるいは、それぞれのTest setタブをクリックしてそれぞれのテスト結果を確認することもできます。
 
    結果に基づいてテストをフィルターにかける場合、右上端にあるメニューを開きます。デフォルトでは、フィルターは**All**にセットされています。
 
-   ![](/img/Test_add-on-3.png)
+   ![{{ page.title }}](/img/Test_add-on-3.png)
 5. 詳細を見るには**Test cases**をクリックします。  
    UIテストはデバイス別にグループ分けされている一方で、ユニットテストはテストケースに基づいたグループ分けが施されています。
 
@@ -81,7 +81,7 @@ Test Reportsでは：
 
 を確認することが可能です。
 
-![](/img/Test_add-on-4.png)
+![{{ page.title }}](/img/Test_add-on-4.png)
 
 テストタイプに応じて：
 
@@ -103,7 +103,7 @@ Test Reportsでは：
 1. Test setを開きます。
 2. 左側のメニューより、ファイルが含まれたタブをクリックします (例：**Test Artifacts**) 。
 
-   ![](/img/Test_add-on-5.png)
+   ![{{ page.title }}](/img/Test_add-on-5.png)
 3. ファイル名の隣りにある**Download**をクリックします。
 
    タブにある全て有効なファイルをダウンロードする場合、**Download All Files**をクリックしてください。

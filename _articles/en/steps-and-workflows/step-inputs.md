@@ -51,7 +51,7 @@ To lock a Step to a major or minor version:
 4. Click the Step.
 5. Next to the name of the current version, open the dropdown menu.
 
-   ![](/img/Bitrise_Workflow_editor-1.png)
+   ![{{ page.title }}](/img/Bitrise_Workflow_editor-1.png)
 6. Select the major or minor version you need: for example, 3.x.x sets it to the third major version.
 
 We regularly update our Steps to make sure they are fully equipped for our users’ needs. However, you don’t have to use the latest version if you don’t want to: if an old version is stable and compatible with your build, feel free to continue using that, or roll back to it any time.

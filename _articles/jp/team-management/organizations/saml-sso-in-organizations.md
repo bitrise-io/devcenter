@@ -38,7 +38,7 @@ menu:
 5. `Single Sign On`タブより、`Identity provider sign-on URL` と`Certificate`の欄に生成されたSSO証明書を追加します。
 6. `Configure SSO` のボタンをクリックします。
 
-![](/img/enable-single-sign-on.jpg)
+![{{ page.title }}](/img/enable-single-sign-on.jpg)
 
 以上のステップをクリアすれば、あなたと組織のメンバーへSAML SSOがそれぞれの組織に接続が完了したことをお知らせする確認メールが送信されます。
 
@@ -48,14 +48,14 @@ menu:
 
 1. 全ての組織メンバーへBitriseが**確認メール**を送ります。このEメールには`Sign In via SSO` ボタンとURLが含まれています。組織のメンバーは`Sign In via SSO`ボタンをクリックするか、URLを使ってBitriseへのサインインを行ってください。
 
-   ![](/img/saml-step-up-enabling-missing.jpg)
+   ![{{ page.title }}](/img/saml-step-up-enabling-missing.jpg)
 
    このEメールでは組織オーナーのEメールアドレスも表示されます（オーナーに連絡を取る場合使用してください）。
 2. SAML SSOプロバイダサイトへページが切り替わるので、そこでBitrise組織と連携しているご自身のメールアドレスを入力します。
 
    **SAML SSOプロバイダサイトにおいて、Bitriseで使用していない異なる（特定の組織と関係のない）メールアドレス**を入力された場合、以下のようにエラーメッセージが表示されます。**組織の正確なメールアドレス**を使ってログインしてください。
 
-   ![](/img/no-connected-sso-for-this-email-address.jpg)
+   ![{{ page.title }}](/img/no-connected-sso-for-this-email-address.jpg)
 3. `Allow "organization name" to sign you in` ページへ遷移されます。
 
 * いったん`Authorize`をクリックすると、**SAML SSO経由でこのアカウントのみの認証が可能になる**のでご注意ください。  
@@ -80,7 +80,7 @@ menu:
    `Disable SSO` は全ての組織メンバーのSAML SSOを無効化します。いったん無効化されると、組織メンバーはいつもの方法でサインインができるようになります。組織メンバー個人はご自身のSAML SSOプロバイダサイトでのみ無効化されるのでご注意ください！  
    `Single Sign On` タブから`People` タブへと進むと`Review Users`へ進むことができ、そこでは組織メンバーのSAML SSOステータスを確認することができます。
 
-   ![](/img/peopletab-org-owner.png)
+   ![{{ page.title }}](/img/peopletab-org-owner.png)
 
 * `SAML SSO IS ENABLED`：SAML SSO経由のログインが可能です。
 * `SAML SSO IS DISABLED`：`Sign in via SSO` ボタン経由のSSO接続の有効化が完了していません。有効化する場合、組織メンバーはBitriseから送られてくる確認メールの指示に従ってください。
@@ -91,7 +91,7 @@ menu:
 2. 左側のメニューより`People`をクリックします。
 3. `Members`の下にあるご自身の（もしくは他の組織メンバーの）SAML SSOステータスを確認してください。
 
-   ![](/img/people-org-members.jpg)
+   ![{{ page.title }}](/img/people-org-members.jpg)
 
 * `SAML SSO IS ENABLED`：SAML SSO経由のログインが可能です。
 * `SAML SSO IS DISABLED`：`Sign in via SSO` ボタン経由のSSO接続の有効化が完了していません。有効化する場合、組織メンバーはBitriseから送られてくる確認メールの指示に従ってください。
@@ -108,7 +108,7 @@ menu:
 2. 右側へトグルを動かしSAML SSOを施行します。
 3. `Save Changes`をクリックします。
 
-   ![](/img/enforce-saml-sso-toggle.png)
+   ![{{ page.title }}](/img/enforce-saml-sso-toggle.png)
 
 ### 組織のSAML SSOの施行ができない場合
 
@@ -117,7 +117,7 @@ menu:
 * メンバー個人のパートにおいてSAML SSO有効化ができない場合：オーナーは組織からそのメンバーを外すことができるので、残りの組織の施行プロセスを完了してください。
 * メンバーが他の組織においてSAML SSOを有効化しようとした場合：オーナーはそのメンバーにログインURLを送ることができるので、正しい組織にSAML SSOを有効化するよう指示に従ってください。
 
-![](/img/cant-enforce-saml-sso.png)
+![{{ page.title }}](/img/cant-enforce-saml-sso.png)
 
 ## Bitriseアカウントを使ったSSO経由でのログイン
 
@@ -125,7 +125,7 @@ SAML SSOコネクションがすでに組織へ追加されていて、Bitrise�
 
 1. Bitrise[ログインページ](https://app.bitrise.io/users/sign_in)より`Login via SSO`をクリックします。
 
-   ![](/img/login-via-sso.jpg)
+   ![{{ page.title }}](/img/login-via-sso.jpg)
 2. `Initiate Single Sign-on page`に切り替わります。
 3. 組織名を入力します。
 4. `Continue to log in`をクリックすると、ご自身のSSOプロバイダページに切り替わります。
@@ -159,11 +159,11 @@ SAML SSOコネクションがすでに組織へ追加されていて、Bitrise�
 
    確認のポップアップが出現するので、そこからアクションの承認・キャンセルを行います。`Disable SSO`ボタンをクリックすると、**全ての組織メンバーのSAML SSOが無効化されます**のでご留意ください。完了すると、組織メンバーは普段使いのBitrise証明書を通じてログインすることができます。
 
-![](/img/disable-sso.png)
+![{{ page.title }}](/img/disable-sso.png)
 
 Bitriseより組織のSAML SSOが無効化されたことを確認するEメール（letsconnect@bitrise.io）が送信されます。
 
-![](/img/disabled-sso-email.png)
+![{{ page.title }}](/img/disabled-sso-email.png)
 
 ### 組織メンバーのSAML SSOの無効化
 
@@ -172,4 +172,4 @@ Bitriseより組織のSAML SSOが無効化されたことを確認するEメー�
 1. SAML SSOプロバイダサイトに進みます。
 2. 組織メンバーを無効化します。これをし忘れた場合、その組織メンバーはIDP接続を使うことにより再認証できてしまうのでご注意ください。
 
-![](/img/disbale-sso-enabled-status.png)
+![{{ page.title }}](/img/disbale-sso-enabled-status.png)

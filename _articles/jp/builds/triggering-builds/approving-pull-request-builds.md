@@ -26,7 +26,7 @@ To enable or disable manual approval, you need to be an **admin** or an **owner*
 2. Go to the `Settings` tab.
 3. Scroll down to `Enable manual build approval option`.
 
-   ![](/img/setting-enable-1.png)
+   ![{{ page.title }}](/img/setting-enable-1.png)
 
    Please note that you can only change this setting for private apps! For public apps, this is ALWAYS enabled.
 4. Toggle the setting to enable or disable it.
@@ -43,6 +43,6 @@ If a Pull Request is submitted from a fork, you will be notified that a PR build
 * On the git hosting provider, the status of the CI check will show `Pending - Waiting for approval`.
 * On the `Builds` page of the app, a confirmation box will be displayed.
 
-![](/img/waiting-for-approval-2.png)
+![{{ page.title }}](/img/waiting-for-approval-2.png)
 
 To approve and run the build, click the `Approve and Run Build` button. Clicking `Review` opens the Pull Request on the website of your git hosting provider.

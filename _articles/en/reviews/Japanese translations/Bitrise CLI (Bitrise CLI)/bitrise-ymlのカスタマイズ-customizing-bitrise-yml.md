@@ -55,7 +55,7 @@ last_modified_at: 2018.09.12.
        }
 * 実行中の`meta`を[bitrise.io](https://www.bitrise.io/)でも閲覧が可能です。例えば、デフォルトのスタックではなくワークフロー用に異なるスタックを選択するとします。UI上でWorkflow Editorをクリックし、`Stacks`タブから他のスタックタイプを選択します。これにより、新しいスタックでどのようにワークフローが動くのか (UIでのみ) テストすることができます。
 
-![](/img/stack-os.png)
+![{{ page.title }}](/img/stack-os.png)
 
 `bitrise.yml`タブに戻る場合、デプロイワークフローに`bitrise.io meta`が追加されます。
 

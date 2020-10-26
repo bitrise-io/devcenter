@@ -19,7 +19,7 @@ Let's see how to put together a workflow using 3 `Script` Steps!
        $ANDROID_HOME/platform-tools/adb shell "screenrecord /sdcard/video.mp4" &> $BITRISE_DEPLOY_DIR/logs.txt &
        disown
 
-   ![](/img/empty-script-content.png) This will start recording the screen while UI test is running. But first, let's add our UI testing Step!
+   ![{{ page.title }}](/img/empty-script-content.png) This will start recording the screen while UI test is running. But first, let's add our UI testing Step!
 3. Add the second `Script` Step from the StepLib by clicking the `+` sign after the `Start Screen recording`. We will name it `Run UI test` Step as the Step will perform the UI test that you specify in the `Script content` input field. 
 4. Add the third `Script` Step (called `Stop Screen recording and get file from emulator` Step) from the StepLib by clicking the `+` sign after the `Run UI tests`. This Step stops the screen recoding and gets the recording or the logs from the Emulator. Add the following script to the `Script content` input field.
 

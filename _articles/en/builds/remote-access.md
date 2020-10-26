@@ -36,7 +36,7 @@ With either method, you can access the build machine remotely during the build a
 2. Click the **Rebuild with Remote Access** option.
 3. Click **Remote Access Instructions**.
 
-   ![](/img/remote-access-instructions.png)
+   ![{{ page.title }}](/img/remote-access-instructions.png)
 4. Under the **SSH** option, find and copy the command you will need.
 5. Open a command line interface.
 6. Run the command found under **SSH** (the below is an example):
@@ -52,7 +52,7 @@ And done! You should be able to access the virtual machine where your build is r
 2. Click the **Rebuild with Remote Access** option.
 3. Click **Remote Access Instructions**.
 
-   ![](/img/remote-access-instructions.png)
+   ![{{ page.title }}](/img/remote-access-instructions.png)
 4. Under the **Screenshare** option, find the required information:
    * Address
    * Username

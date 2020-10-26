@@ -33,10 +33,10 @@ keystoreのgitignoreが完了したら、ご自身のkeystoreをBitriseの`GENER
 3. `GENERIC FILE STORAGE`欄までスクロールダウンします。
 4. 最初の欄にご自身の環境変数名を入力します。Bitriseは`XAMARIN_KEYSTORE`を使用しています。
 
-![Screenshot](/img/android-code-signing/generic-file-storage-xm.png) 5. `Upload file field`へご自身のkeystoreファイルをアップロードします。環境変数（例：`$BITRISEIO_XAMARIN_KEYSTORE_URL`）がkeystoreファイルのダウンロードURLを伴って自動的に利用可能になります。
+![{{ page.title }}](/img/android-code-signing/generic-file-storage-xm.png) 5. `Upload file field`へご自身のkeystoreファイルをアップロードします。環境変数（例：`$BITRISEIO_XAMARIN_KEYSTORE_URL`）がkeystoreファイルのダウンロードURLを伴って自動的に利用可能になります。
 
-![Screenshot](/img/android-code-signing/download-url.png) 6. ワークフローに戻ります。 7. `Xamarin Archive`ステップの前に`File Downloader`を挿入します。`File Downloader`ステップは`Download source url`のインプットを入手します。 8. `Download source url`欄に環境変数（例：`$BITRISEIO_XAMARIN_KEYSTORE_URL`）を入力します。 9. `Download destination path`にてkeystoreパスをセットしてください。
+![{{ page.title }}](/img/android-code-signing/download-url.png) 6. ワークフローに戻ります。 7. `Xamarin Archive`ステップの前に`File Downloader`を挿入します。`File Downloader`ステップは`Download source url`のインプットを入手します。 8. `Download source url`欄に環境変数（例：`$BITRISEIO_XAMARIN_KEYSTORE_URL`）を入力します。 9. `Download destination path`にてkeystoreパスをセットしてください。
 
-![Screenshot](/img/android-code-signing/file-downloader.png)
+![{{ page.title }}](/img/android-code-signing/file-downloader.png)
 
 {% include message_box.html type="important" title="Bitrise keystoreパス" content=" Bitriseのkeystoreパスはお使いのプロジェクトルートと関連したローカルパスと同じなのでお確かめください。例えば、プロジェクトのルート内に`keystore.jks`がある場合、あなたのBitrise keystoreパスは `$BITRISE_SOURCE_DIR/keystore.jks`である必要があります。"%}

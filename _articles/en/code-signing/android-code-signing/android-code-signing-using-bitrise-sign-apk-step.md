@@ -32,7 +32,7 @@ Before you start:
 3. Click **Code signing**.
 4. Click on or drag-and-drop your keystore file to the **Upload file** field of the **ANDROID KEYSTORE FILE** section.
 
-   ![Screenshot](/img/android-code-signing/upload-file.png)
+   ![{{ page.title }}](/img/android-code-signing/upload-file.png)
 
    A keystore URL automatically gets generated once you upload the keystore file. Bitrise assigns an Environment Variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. You can use this URL to download the keystore file during a build in the future.
 5. Fill out the displayed three input fields with your credentials:
@@ -40,7 +40,7 @@ Before you start:
    * Keystore alias.
    * Private key password.
 
-   ![](/img/android-keystore-file.png)
+   ![{{ page.title }}](/img/android-keystore-file.png)
 6. Click **Save metadata**.
 
    When you have successfully uploaded a keystore file to the **ANDROID KEYSTORE FILE** section, Bitrise will automatically export the following Environment Variables based on your input:

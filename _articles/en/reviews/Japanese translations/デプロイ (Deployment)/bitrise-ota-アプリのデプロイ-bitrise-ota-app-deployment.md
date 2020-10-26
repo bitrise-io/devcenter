@@ -34,7 +34,7 @@ First let's have a look at the required and sensitive fields of the Step:
 
 まずステップの必須欄ならびにセンシティブ欄について見ていきましょう：
 
-![](/img/deploy-to-bitrise.png)
+![{{ page.title }}](/img/deploy-to-bitrise.png)
 
 ## Deploying directory or file path  
 ディレクトリやファイルパスのデプロイ
@@ -93,19 +93,19 @@ You can access the Public install page's URL, if you head over to your generated
 
 PublicインストールページのURLへアクセスするには、生成済みビルドの`APPS & ARTIFACTS`タブに移動して.ipa/APKファイルを見つけます。
 
-![](/img/public-install-page-1.png)
+![{{ page.title }}](/img/public-install-page-1.png)
 
 Besides the **Public install page** link on the **APPS & ARTIFACTS** tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
 APPS & ARTIFACTSタブのPublicインストールページでは、デプロイ済みアプリについてのその他の情報の確認も行うことができます。例えば、アプリの詳細 (アプリ名、バンドルID、バージョン、サイズなど) の確認やローカルコンピュータへのファイルのダウンロードが行えます。
 
-![](https://devcenter.bitrise.io/img/app-release-unsigned.jpg)
+![{{ page.title }}](https://devcenter.bitrise.io/img/app-release-unsigned.jpg)
 
 If you click **Open Public install page** link, you’ll see a basic description of the App (title, version, size, supported devices).
 
 **Open Public install page**のリンクをクリックすればアプリの基本情報 (タイトル、バージョン、サイズ、サポート済みデバイス) を確認できます。
 
-![](/img/oat-publicinstallpage.png)
+![{{ page.title }}](/img/oat-publicinstallpage.png)
 
 You can share this page with anyone, even if they don’t have a Bitrise account. You have to make sure that they’ll be able to install the app, though. If you don’t use an Enterprise Provisioning Profile to build your app, you have to add every device identifier (UDID) to the Provisioning Profile (just like you do on your Mac). The iOS app can’t be installed on any other device but on the ones which were included in the Provisioning Profile the build was signed with. Also note that an app store .ipa won’t receive a Public install page as it should be uploaded to the app store directly.
 
@@ -116,11 +116,11 @@ Bitriseアカウントをお持ちでない方へも当ページを共有する�
 * You visit the Public Install Page from mobile Safari.
 * Your device is registered to your Bitrise account and added to the Provisioning Profile. It is also possible that your app can be installed on any device. There is also a Download anyway button that you can use to download the .ipa file. The yellow message on the page describes the situation if iOS does not allow the .ipa file to be installed.
 
-![](/img/install-only-available.png)"%}
+![{{ page.title }}](/img/install-only-available.png)"%}
 
 Now let's head back to your Build's page! Besides the `Public install page` link on the `APPS & ARTIFACTS` tab, you’ll see a bunch of other information about the deployed app. For example, you can check the details of the App (such as App title, Bundle ID, Version, Size, etc) or download the file to your local computer as well.
 
-![](/img/app-release-unsigned.jpg)
+![{{ page.title }}](/img/app-release-unsigned.jpg)
 
 ### Sending invites and notifications
 

@@ -32,7 +32,7 @@ Bitrise CLIのコアプラグインの一つとしてWorkflow Editorを含ませ
 
 全体的にこのように表示されます：
 
-![](/img/offline-workflow-editor.png)
+![{{ page.title }}](/img/offline-workflow-editor.png)
 
 ## Workflow Editorバージョンのアップグレード
 

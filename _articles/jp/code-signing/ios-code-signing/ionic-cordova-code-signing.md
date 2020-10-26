@@ -19,12 +19,12 @@ Bitriseは同様にIonicとCordovaアプリのマニュアルとオートプロ�
 
    ウェブUI上で行うか、`codesigndoc`ツールを使って行うことができます。
 
-   ![Screenshot](/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
+   ![{{ page.title }}](/img/code-signing/ios-code-signing/provisioning-and-certificate-upload.png)
 4. ワークフロー内に`Certificate and profile installer`ステップがあることを確認します。
 5. ワークフローへ`Generate cordova build configuration`ステップを追加します。このステップは、`Certificate and profile installer`ステップの後に来る必要があります。
 6. そのステップの必要事項を記入します。`Code Signing Identity`と`Provisioning Profile`の両方がiOSアプリの必要なインプットになるのでご注意ください。
 
-   ![Screenshot](/img/code-signing/ios-code-signing/cordova-config-inputs.png)
+   ![{{ page.title }}](/img/code-signing/ios-code-signing/cordova-config-inputs.png)
    * `Build configuration`: `debug`もしくは`release`のどちらかをセットすることができます。
    * `Code Sign Identity`: Developer IdentityもしくはDistribution Identityを入力します。
    * `Provisioning Profile`: 適切なプロビジョニングプロファイルを入力します。
@@ -81,7 +81,7 @@ Bitriseは同様にIonicとCordovaアプリのマニュアルとオートプロ�
    * `Platform`インプットへ`device`とセットします。
    * `Build command configuration`インプットは`Generate cordova build configuration`ステップの`Build configuration`にマッチしなければなりません。
 
-   ![Screenshot](/img/code-signing/ios-code-signing/cordova-archive-step.png)
+   ![{{ page.title }}](/img/code-signing/ios-code-signing/cordova-archive-step.png)
 7. `Should remove platforms as prepare step?`を`false`にセットします。
 
    ※このステップは、`Cordova prepare`もしくは`Ionic prepare`ステップ内で生成されたネイティブプロジェクトのプラットフォームを消去したり再追加したりするのを防ぎます。

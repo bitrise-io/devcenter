@@ -17,7 +17,7 @@ webhookは自動でも手動でも登録することが可能です。このガ�
 
 1. ドロップダウンメニューから `Bitbucket` を選択してください。
 
-    ![Screenshot](/img/webhooks_bitbucket.png)
+    ![{{ page.title }}](/img/webhooks_bitbucket.png)
 
 1. 選択したサービスのwebhook URLをコピーしてください。
 
@@ -26,24 +26,24 @@ webhookは自動でも手動でも登録することが可能です。このガ�
 
 1. Bitbucketのリポジトリの `Settings` を選択してください。
 
-    ![Screenshot](/img/webhooks/bitbucket_settings.png)
+    ![{{ page.title }}](/img/webhooks/bitbucket_settings.png)
 
 1. 左のメニューから `Webhooks` を選択してください。
 
-    ![Screenshot](/img/webhooks/bitbucket_settings_webhooks.png)
+    ![{{ page.title }}](/img/webhooks/bitbucket_settings_webhooks.png)
 
 1. `Add Webhook` を選択してください。
 
-    ![Screenshot](/img/webhooks/bitbucket_add_webhooks.png)
+    ![{{ page.title }}](/img/webhooks/bitbucket_add_webhooks.png)
 
 1. `URL` にBitriseの設定画面からコピーしたBitbucketのWebhook URLをペーストし、 `Title` を入力してください。
 
-    ![Screenshot](/img/webhooks/bitbucket_webhook_info.png)
+    ![{{ page.title }}](/img/webhooks/bitbucket_webhook_info.png)
 
 1. `Choose from a full list of triggers` を選択してください。
 
-    ![Screenshot](/img/webhooks/bitbucket_webhook_trigger.png)
+    ![{{ page.title }}](/img/webhooks/bitbucket_webhook_trigger.png)
 
 1. リポジトリ `Push` 、プルリクエスト `Created` 、 `Updated` トリガを選択してください。 `Save` ボタンをを押せば準備完了です。
 
-    ![Screenshot](/img/webhooks/bitbucket_webhook_push_and_pr.png)
+    ![{{ page.title }}](/img/webhooks/bitbucket_webhook_push_and_pr.png)
