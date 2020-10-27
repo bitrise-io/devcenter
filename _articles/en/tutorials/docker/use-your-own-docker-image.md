@@ -32,9 +32,11 @@ We provide three examples on how to run Docker commands using our **Script** Ste
 * [Building and running a Dockerfile](/tutorials/docker/use-your-own-docker-image/#building-and-running-a-dockerfile)
 * [Using docker-compose](/tutorials/docker/use-your-own-docker-image/#using-docker-compose)
 
-### Running docker hello-world
+### Running Docker hello-world
 
-In this example, we're following the official getting started guide to run the hello-world docker image. Your Bitrise build configuration .yml can be as simple as:
+{% include message_box.html type="warning" title="Docker Hub authentication" content="The official hello-world Docker image is hosted on Docker Hub. If you wish to use any of the images from Docker Hub, you must authenticate first, as outlined in the [Using a custom Docker image from Docker Hub](/tutorials/docker/use-your-own-docker-image/#using-a-custom-docker-image-from-dockerhub) section."%}
+
+In this example, we’re following the official getting started guide to run the `hello-world` Docker image. In our example `bitrise.yml` file, you can see a simple build configuration that can run the image:
 
     ---
     format_version: 1.3.1
@@ -60,7 +62,8 @@ In this example, we're following the official getting started guide to run the h
                 # debug log
                 set -x
     
-                docker run hello-world
+            	docker login -u $DOCKERHUB_USER -p $DOCKERHUB_TOKEN
+            	docker run hello-world
 
 ### Building and running a Dockerfile
 
@@ -162,11 +165,39 @@ lines with a single `docker-compose` call:
 
 Docker compose will build and run the image automatically, you don’t have to specify a `-t` tag since the `services` name will be used by `docker-compose` to tag the image automatically.
 
+### Using a custom Docker image from Docker Hub
+
+You can use Bitrise with a Docker image pulled from Docker Hub, as you can see in our [Running Docker hello-world](/tutorials/docker/use-your-own-docker-image/#running-docker-hello-world) example. However, on a free plan for anonymous users, Docker Hub only allows a limited number of image pulls. If you set the image in the Workflow Editor, no authentication will be performed: your pull will be a pull by an anonymous user from the IP address of the Bitrise virtual machine. With many of our users going for this option, the Docker Hub rate limit would mean some users wouldn’t be able to start builds.
+
+The workaround is simple: you need to use a Script Step to authenticate yourself with your own Docker Hub account, and use the Step to pull the image from Docker Hub. To do so:
+
+1. [Create a personal access token on Docker Hub. ](https://bitrise.atlassian.net/wiki/spaces/TW/pages/867238476/DockerHub+issue "https://bitrise.atlassian.net/wiki/spaces/TW/pages/867238476/DockerHub+issue")  
+   This will be used to authenticate you instead of your password.
+2. On Bitrise, create two Secret Environment Variables: one for your Docker Hub username and another for the personal access token.  
+   In our examples, we’ll use `DOCKERHUB_USER` for the Docker Hub username and `DOCKERHUB_TOKEN`.
+3. Use the `docker login` command in a **Script** Step to authenticate, with the Secret Env Vars as arguments:
+
+       - script@1.1.3: 
+       	   inputs: 
+           - content: | 
+               docker login -u $DOCKERHUB_USER -p $DOCKERHUB_TOKEN
+4. Use the `docker run` command in the **Script Step** to run your chosen Docker image.
+
+   In our example, it’s Docker’s official `hello-world` image. You can just replace hello-world with any image you want to use from Docker Hub.
+
+       - script@1.1.3: 
+       	   inputs: 
+           - content: | 
+               docker login -u $DOCKERHUB_USER -p $DOCKERHUB_TOKEN
+               docker run hello-world
+
 ## Using bitrise.io custom docker image option
 
 Use a Linux/Android Stack and set the environment docker image for the app on the **Stack** tab.
 
 {% include message_box.html type="important" title="Custom Android docker image" content=" Creating and maintaining your own Android Docker image can be quite time consuming! If you only need to install a couple of additional tools, you should do that, for example, with a **Script** Step instead! For more information, see our [Install Any Additional Tool](https://devcenter.bitrise.io/tips-and-tricks/install-additional-tools/) guide. You should only use your own Android docker image if you really have to! "%}
+
+{% include message_box.html type="warning" title="My message" content="If you wish to use an image hosted on Docker Hub, do not set the image path on the **Stack** tab of the Workflow Editor! Use a **Script** Step instead to authenticate your Docker Hub account and run the selected image. Check out the [Using a custom Docker image from Docker Hub](/tutorials/docker/use-your-own-docker-image/#using-a-custom-docker-image-from-dockerhub) section for the details."%}
 
 If you want to run your build in a custom docker environment, you should base your own docker image on one of our base Docker images. Our base Docker images have every base tool pre-installed, the standard bitrise directories created, the environments (like `$BITRISE_DEPLOY_DIR`) set, and are pre-cached on the build virtual machines. If you decide to create your own Docker image please read this guide, from start to finish!
 
@@ -188,7 +219,7 @@ To base your own image on one of our available images:
 
 {% include message_box.html type="note" title="Quay.io ID" content=" You have to use the quay.io ID of the image you want to use as the base image. For example, `quay.io/bitriseio/android`, `quay.io/bitriseio/android-ndk`, `quay.io/bitriseio/android-ndk-lts`, or `quay.io/bitriseio/bitrise-base`. "%}
 
-### Use your own (public) Docker image for your builds
+### Use your own Docker image for your builds
 
 If you have your own Docker image and you checked if it can be `docker pull`-ed, you can set its ID this way:
 
@@ -196,7 +227,7 @@ If you have your own Docker image and you checked if it can be `docker pull`-ed
 2. Click the **Stack** tab.
 3. Copy and paste the ID of your app (for example, `quay.io/bitriseio/bitrise-base`)
 
-   ![{{ page.title }}](/img/docker-image-to-use.png)
+   ![Set custom Docker image on the Stack tab](/img/docker-image-to-use.png)
 4. Click **Save** in the upper-right corner.
 
 Now you should be able to use your own image to run your builds on [bitrise.io](https://www.bitrise.io).
