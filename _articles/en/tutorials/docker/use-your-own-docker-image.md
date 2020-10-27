@@ -1,5 +1,5 @@
 ---
-title: Use your own Docker image
+title: Using your own Docker image
 menu:
   docker:
     weight: 2
