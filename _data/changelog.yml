@@ -1,6 +1,13 @@
 ---
+- title: Using your own Docker image
+  modified: 2020-10-27 16:00:00 +0100
+  changelog: 'If you wish to use a Docker image that is hosted on Docker Hub, do not
+    set it in the Workflow Editor: use a Script Step to authenticate your Docker Hub
+    account and run the image.'
+  type: update
+  url: "/tutorials/docker/use-your-own-docker-image/#using-a-custom-docker-image-from-dockerhub"
 - title: Initializing a Bitrise project locally
-  modified: 2020-10-19 00:00:00 +0200
+  modified: 2020-10-19T00:00:00.000+02:00
   changelog: Added a tutorial video on how to use the Bitrise CLI to add an app locally.
   type: update
   url: "/bitrise-cli/initializing-a-bitrise-project-locally/"
