@@ -1,9 +1,11 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: 秘密と環境設定(Secrets and Env vars)
 redirect_from: []
-date: 2019-04-02 15:04:24 +0000
+date: '2019-04-02T15:04:24.000+00:00'
+tag: []
+summary: ''
 published: false
 
 ---
@@ -59,7 +61,7 @@ Bitriseの `Secrets`タブを使ってワークフローに秘密の環境変数
 
 {% include message_box.html type="important" title="`Make it protected`後" content=" `Make it protected`クリックした場合、**あなた、またアプリへのアクセス権を持つユーザーもロックを解除したり値を確認したりすることはできません。**
 
-![{{ page.title }}](/img/make-it-protected2.png)
+![](/img/make-it-protected2.png)
 
 この変更は元に戻すことができないため、変更を保存する前に確認のポップアップウィンドウが表示されます。
 
