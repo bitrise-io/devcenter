@@ -1,12 +1,10 @@
 ---
-# jp title missing
 title: Sample apps-draft
-date: 2018-10-30 14:13:21 +0000
+date: 2018-10-30T14:13:21.000+00:00
 redirect_from: []
 published: false
 
 ---
-
 {% include not_translated_yet.html %}
 
 Bitrise maintains a couple of sample apps that you can check to create the best configuration for your workflow. All the sample apps we provide in this guide are monitored by our developers on a weekly basis. The apps are scheduled to run between 4 a.m. - 5 a.m. UTC on every Monday. This way we can check if our VM updates happening on Saturdays have disrupted the sample apps. If so, our developers fix them.
@@ -26,7 +24,7 @@ These workflows don't contain any signing certificates, provisioning profiles or
 
 With every sample app, the primary workflow gets triggered when code is pushed to the Feature branch. If code is pushed to the developer branch, then the deploy workflow gets triggered.
 
-![{{ page.title }}](/img/triggers-sample-app.png)
+![](/img/triggers-sample-app.png)
 
 Learn more about triggering builds [here](/builds/triggering-builds/triggering-builds/).
 
@@ -60,7 +58,7 @@ If your React Native project comes with an Expo framework, it does not contain a
 
 {% include message_box.html type="important" title="Do you have an Expo account?" content=" This step requires your Expo username and password. Head over to Expo to create an account or keep them handy when setting the `[BETA] Expo Eject` Step input fields.
 
-![{{ page.title }}](/img/expo-eject.png)" %}
+![](/img/expo-eject.png)" %}
 
 Follow the steps to fill out the required `[BETA] Expo Eject` Step input fields:
 
@@ -74,7 +72,7 @@ Follow the steps to fill out the required `[BETA] Expo Eject` Step input fields:
 In the case of an iOS project: you need to use SHARED schemes. The `Recreate user schemes` Step generates platform-specific files. To fulfill this requirement, you either generate shared schemes in XCode or leave it to our `Recreate user schemes`. Make sure you add the location of your Xcode project file in the `Project or Workspace path`.
 
 When you run your build, the Step scans your project and lists out the shared schemes, if any, and recreates shared ones if those have been missing from your project (based on your Xcode project file)
-![{{ page.title }}](/img/recreate=schemes.png)
+![](/img/recreate=schemes.png)
 "%}
 
 ### ios-sample-app
