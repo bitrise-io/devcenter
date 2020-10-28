@@ -58,7 +58,7 @@ If your React Native project comes with an Expo framework, it does not contain a
 
 {% include message_box.html type="important" title="Do you have an Expo account?" content=" This step requires your Expo username and password. Head over to Expo to create an account or keep them handy when setting the `[BETA] Expo Eject` Step input fields.
 
-![{{ page.title }}](/img/expo-eject.png)" %}
+![](/img/expo-eject.png)" %}
 
 Follow the steps to fill out the required `[BETA] Expo Eject` Step input fields:
 
@@ -72,7 +72,7 @@ Follow the steps to fill out the required `[BETA] Expo Eject` Step input fields:
 In the case of an iOS project: you need to use SHARED schemes. The `Recreate user schemes` Step generates platform-specific files. To fulfill this requirement, you either generate shared schemes in XCode or leave it to our `Recreate user schemes`. Make sure you add the location of your Xcode project file in the `Project or Workspace path`.
 
 When you run your build, the Step scans your project and lists out the shared schemes, if any, and recreates shared ones if those have been missing from your project (based on your Xcode project file)
-![{{ page.title }}](/img/recreate=schemes.png)
+![](/img/recreate=schemes.png)
 "%}
 
 ### ios-sample-app
