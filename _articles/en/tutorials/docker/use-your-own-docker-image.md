@@ -163,7 +163,7 @@ Docker compose will build and run the image automatically. You don’t have to s
 
 ### Using a custom Docker image from Docker Hub
 
-You can use Bitrise with a Docker image pulled from Docker Hub, as you can see in our [Running Docker hello-world](/tutorials/docker/use-your-own-docker-image/#running-docker-hello-world) example. However, on a free plan for anonymous users, Docker Hub only allows a limited number of image pulls. If you set the image in the Workflow Editor, no authentication will be performed: your pull will be a pull by an anonymous user from the IP address of the Bitrise virtual machine. With many of our users going for this option, the Docker Hub rate limit would mean some users wouldn’t be able to start builds.
+You can use Bitrise with a Docker image pulled from Docker Hub, as you can see in our [Running Docker hello-world](/tutorials/docker/use-your-own-docker-image/#running-docker-hello-world) example. However, on a free plan for anonymous users, Docker Hub only allows a limited number of image pulls. If you set the image in the Workflow Editor, no authentication will be performed: your pull will be a pull by an anonymous user from a Bitrise public IP address. With many of our users going for this option, the Docker Hub rate limit would mean some users wouldn’t be able to start builds.
 
 The workaround is simple: you need to use a Script Step to authenticate yourself with your own Docker Hub account, and use the Step to pull the image from Docker Hub. To do so:
 
@@ -195,26 +195,24 @@ In the Workflow Editor on bitrise.io, you have the option to set a path to a cus
 
 {% include message_box.html type="warning" title="My message" content="If you wish to use an image hosted on Docker Hub, do not set the image path on the **Stack** tab of the Workflow Editor! Use a **Script** Step instead to authenticate your Docker Hub account and run the selected image. Check out the [Using a custom Docker image from Docker Hub](/tutorials/docker/use-your-own-docker-image/#using-a-custom-docker-image-from-dockerhub) section for the details."%}
 
-If you want to run your build in a custom Docker environment, we strongly recommend basing your own Docker image on one of our base Docker images. Our images have every base tool pre-installed, the standard Bitrise directories created, the environments (such as `$BITRISE_DEPLOY_DIR`) set, and are pre-cached on the build virtual machines. 
+If you want to run your build in a custom Docker environment, we strongly recommend basing your own Docker image on one of our base Docker images. Our images have every base tool pre-installed, the standard Bitrise directories created, the environments (such as `$BITRISE_DEPLOY_DIR`) set, and are pre-cached on the build virtual machines.
 
 However, if you decide to create your own Docker image please read this guide, from start to finish.
 
 ### Creating your own image from a Bitrise image
 
-We have four different Docker image types available. You can base your own image on any of these, depending on your needs. 
+We have four different Docker image types available. You can base your own image on any of these, depending on your needs.
 
-| Image type            | Description                                                                     | GitHub link                                                 | quay.io link                                                    |
-|-----------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------------|
-| Bitrise base image    | The bare minimum Bitrise image with no specific tools installed.                | [Github](https://github.com/bitrise-docker/bitrise-base)    | [quay.io](https://quay.io/repository/bitriseio/bitrise-base)    |
-| Android base image    | Bare-minimum base image with Android-specific tools and environment.            | [Github](https://github.com/bitrise-docker/android)         | [quay.io](https://quay.io/repository/bitriseio/android)         |
-| Android NDK image     | Built on the Android base image with pre-installed Android NDK and environment. | [Github](https://github.com/bitrise-docker/android-ndk)     | [quay.io](https://quay.io/repository/bitriseio/android-ndk)     |
-| Android NDK LTS image | LTS "pin" of the Android NDK Docker image.                                      | [Github](https://github.com/bitrise-docker/android-ndk-lts) | [quay.io](https://quay.io/repository/bitriseio/android-ndk-lts) |
+| Image type | Description | GitHub link | quay.io link |
+| --- | --- | --- | --- |
+| Bitrise base image | The bare minimum Bitrise image with no specific tools installed. | Github | quay.io |
+| Android base image | Bare-minimum base image with Android-specific tools and environment. | Github | quay.io |
+| Android NDK image | Built on the Android base image with pre-installed Android NDK and environment. | Github | quay.io |
+| Android NDK LTS image | LTS "pin" of the Android NDK Docker image. | Github | quay.io |
 
 To base your own image on one of our available images, specify your base image at the very top of your `Dockerfile` with a `FROM` instruction and the quay.io ID of the image. In our example, we'll use  the latest version of the Bitrise base image:
 
-```
-FROM quay.io/bitriseio/docker-bitrise-base:latest
-```
+    FROM quay.io/bitriseio/docker-bitrise-base:latest
 
 {% include message_box.html type="note" title="Quay.io ID" content=" You have to use the quay.io ID of the image you want to use as the base image. For example, `quay.io/bitriseio/android`, `quay.io/bitriseio/android-ndk`, `quay.io/bitriseio/android-ndk-lts`, or `quay.io/bitriseio/bitrise-base`. "%}
 
@@ -228,7 +226,7 @@ You can set your own Docker image in the Workflow Editor if the image can be pul
 
 1. Go to your Workflow Editor.
 2. Click the **Stack** tab.
-3. Copy and paste the ID of your app. 
+3. Copy and paste the ID of your app.
    For example, `quay.io/bitriseio/bitrise-base`.
 
    ![Set custom Docker image on the Stack tab](/img/docker-image-to-use.png)
