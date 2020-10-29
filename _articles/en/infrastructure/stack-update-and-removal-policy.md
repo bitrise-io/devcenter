@@ -27,7 +27,11 @@ We use two types of Xcode stacks; Stable stacks and Edge stacks.
 * Xcode Stable stacks are **built once, and are not updated** at all (except with Bitrise CLI related updates, [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) and with critical fixes). These stacks are designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
 * Xcode "Edge" stack is **re-built every week**. It includes the latest release of Xcode, the same pre-installed tools as on the Stable stack, and the [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates). The stack uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
 
-{% include message_box.html type="info" title="Pinning an Xcode version" content="There is no need to pin an Xcode version if you are on one of the Xcode Stable stacks. These stacks are NOT updated when a newer Xcode version comes out: instead we provide the newer version as a separate stack. If your app's current stable stack works well for your needs, you don't have to do anything at all when a newer version comes out: you can keep using the stable stack."%}
+{% include message_box.html type="note" title="Pinning an Xcode version" content="Whenever a new Xcode version comes out, our aim is to provide it to our users as soon as possible. However, that doesn't mean we update existing stacks with a new Xcode version, thus potentially breaking builds: instead, we provide a new stack with the new version, and continuing to maintain the older versions. 
+
+As such, if your app's current stable stack works well for your needs, you don't have to do anything at all when a newer version comes out: you can keep using the previous Xcode version.
+
+The only instance when you're potentially forced to take action is when older Xcode stacks are removed. This does not happen without advance warning; check out our [deprecation and removal policy](/infrastructure/stack-update-and-removal-policy/#deprecating-and-removing-stacks) to be prepared. "%}
 
 ### **About dependency manager cache updates**
 
