@@ -1,4 +1,11 @@
 ---
+- title: Stack update and removal policy
+  modified: 2020-10-29 16:00:00 +0100
+  changelog: 'You never have to worry about pinning an Xcode version on Bitrise: even
+    if a new version is released, you can keep using your previous Xcode stack without
+    any action on your part. '
+  type: update
+  url: "/infrastructure/stack-update-and-removal-policy/#deprecating-and-removing-stacks"
 - title: Using your own Docker image
   modified: 2020-10-27T16:00:00.000+01:00
   changelog: 'If you wish to use a Docker image that is hosted on Docker Hub, do not
