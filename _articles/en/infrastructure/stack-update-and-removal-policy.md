@@ -27,6 +27,8 @@ We use two types of Xcode stacks; Stable stacks and Edge stacks.
 * Xcode Stable stacks are **built once, and are not updated** at all (except with Bitrise CLI related updates, [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) and with critical fixes). These stacks are designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
 * Xcode "Edge" stack is **re-built every week**. It includes the latest release of Xcode, the same pre-installed tools as on the Stable stack, and the [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates). The stack uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
 
+{% include message_box.html type="info" title="Pinning an Xcode version" content="There is no need to pin an Xcode version if you are on one of the Xcode Stable stacks. These stacks are NOT updated when a newer Xcode version comes out: instead we provide the newer version as a separate stack. If your app's current stable stack works well for your needs, you don't have to do anything at all when a newer version comes out: you can keep using the stable stack."%}
+
 ### **About dependency manager cache updates**
 
 All of the macOS stacks receive a dependency manager cache update (brew, cocoapods and bitrise CLI) every week. These cache updates do not change the pre-installed tool versions, they **only update the package manager caches** for faster dependency installs.
