@@ -7,12 +7,13 @@ description: 'Organizations can have multiple Groups. Groups form the "backbones
   of Organizations: they contain the members of the Organizations, they can be assigned
   to different applications owned by the Organizations.'
 redirect_from: []
+summary: ''
 menu:
   organizations:
     weight: 7
 
 ---
-Organizations can have multiple **Groups**. Groups are the "backbone" of Organizations: they contain the members of the Organizations, they can be assigned to different applications owned by the Organizations, with different roles assigned to the different groups. Being a member of an organization means being a member of one of the groups belonging to the organization.
+Organizations can have multiple **Groups**. Groups are the "backbone" of Organizations: they contain the members of the Organizations, they can be assigned to different applications owned by the Organizations, with different roles assigned to the different groups. Being a member of an organization means being a member of one of the groups belonging to the Organization.
 
 For example, let's say the organization called _TestOrg_ owns an app called _TestApp_. _TestOrg_ has the following groups:
 
@@ -22,15 +23,15 @@ For example, let's say the organization called _TestOrg_ owns an app called _Tes
 
 ## Creating groups for Organizations
 
-1. Sign in with an account that is an **owner** of the organization and open its profile page.
+1. Sign in with an account that is an **owner** of the Organization and open its profile page.
 2. Go to your organization's profile page: click **Switch Profile** on the top left corner and select the organization you need.
 
-   ![{{ page.title }}](/img/switch-profile-2.jpg)
+   ![Switching profile to select an Organization](/img/switchprofile.jpg)
 3. On the left, select **Groups** from the menu options.
 4. Find the **Create new Group** section at the top.
 
    ![{{ page.title }}](/img/enter-group-name.jpg)
-5. Enter a group name in the **Enter Group name** window, and click **Create**.
+5. Enter a group name in the **Enter Group name** field, and click **Create**.
 
 ## Adding members to Organizations
 
@@ -39,19 +40,16 @@ In practice, adding members to an organization means adding members to a group b
 1. Sign in with an account that is an **owner** of the organization and open its profile page.
 2. Go to your organization's profile page: click **Switch Profile** on the top left corner and select the organization you need.
 
-   ![{{ page.title }}](/img/switch-profile-2.jpg)
+   ![Switching profile to select an Organization](/img/switchprofile.jpg)
 3. On the left, select **Groups** from the menu options.
 4. Find the group you need and click the **+** sign to the right of the name of the group.
 
-   ![{{ page.title }}](/img/team-management/organization/group-name.png)
+   ![Adding a member to an Org on the Group tab](/img/addinggroupmember.jpg)
 5. Enter a username or an email address.
    * If you enter a username, the system will suggest existing Bitrise users that at least partially match your input. Click the user you wish to invite.
    * If you enter an email address, click the **Enter** symbol on the right to send the invitation.
-
-   ![{{ page.title }}](/img/test-group.jpg)
-6. From the **Team** tab you can also access all the functions to manage groups. You simply have to click **MANAGE GROUP** to the right of the group members, and click the action you need in the pop-up window, including removing the group from the app.
-
-   ![{{ page.title }}](/img/test-group-manage-group.png)
+6. From the **Team** tab you can also access all the functions to manage groups. You simply have to click **MANAGE GROUP** to the right of the group members.![Managing a group from the Team tab](/img/managegroup.jpg)
+7. Click the action you need in the pop-up window, including removing the group from the app.![Managing a group](/img/managegroupmembers.jpg)
 
 ## Removing members from Organizations
 
@@ -60,38 +58,30 @@ Members can be removed from the entire organization or from one of the groups be
 ### Removing group members
 
 1. Sign in with an account that is an **owner** of the organization and open its profile page.
-2. Go to your organization's profile page: click **Switch Profile** on the top left corner and select the organization you need.
-
-   ![{{ page.title }}](/img/switch-profile-2.jpg)
+2. Go to your organization's profile page: click **Switch Profile** on the top left corner and select the Organization you need.![Switching profile to select an Organization](https://app.forestry.io/sites/mpxzvqn7ysfysw/body-media//img/switchprofile.jpg)
 3. On the left, select **Groups** from the menu options.
-4. Find the group and the group member you are looking for, and click the little **x** in the red square on the right of the username of the member.
-
-   ![{{ page.title }}](/img/test-group-remove.jpg)
+4. Find the group and the group member you are looking for, and click the little **x** in the red square on the right of the username of the member.![Removing a group member from an Org](/img/remomember.jpg)
 
 ### Removing members from the entire Organization
 
 Removing members from the entire organization removes them from all the groups they are part of in the organization and they can no longer work on any of the apps unless they are invited back, either as a group member or as an outside contributor.
 
 1. Sign in with an account that is an **owner** of the organization and open its profile page.
-2. Go to your organization's profile page: click **Switch Profile** on the top left corner and select the organization you need.
-
-   ![{{ page.title }}](/img/switch-profile-1.jpg)
+2. Go to your organization's profile page: click **Switch Profile** on the top left corner and select the organization you need.![Switching profile to select an Organization](https://app.forestry.io/sites/mpxzvqn7ysfysw/body-media//img/switchprofile.jpg)
 3. On the left, select **People** from the menu options.
-4. Find the member you are looking for, and click the little **x** in the red square on the right of the username of the member.
-
-   ![{{ page.title }}](/img/organization-remove-owner.jpg)
+4. Find the member you are looking for, and click the little **x** in the red square on the right of the username of the member.![Removing members from an Org](/img/removeorg.jpg)
 5. In the pop-up window, click **Yes**.
 
    This way you can remove yourself from the organization. You will lose all access rights you had to the organization. Only click **Yes** in the pop-up window if you are certain you wish to do this.
 
-   ![{{ page.title }}](/img/are-you-sure-owner-remove.jpg)
+   ![Confirming the removal of an Org member](/img/removegreatmember.jpg)
 
 ## Deleting groups
 
 1. Sign in with an account that is an **owner** of the organization and open its profile page.
 2. Go to your organization's profile page: click **Switch Profile** on the top left corner and select the organization you need.
 
-   ![{{ page.title }}](/img/switch-profile-2.jpg)
+   ![Switching profile to select an Organization](https://app.forestry.io/sites/mpxzvqn7ysfysw/body-media//img/switchprofile.jpg)
 3. On the left, select **Groups** from the menu options.
 4. Choose the group you wish to delete, and click the dropdown menu indicated by the **...** symbol.
 5. Click **Delete group** then click **Yes** in the pop-up window.
