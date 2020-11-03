@@ -1,7 +1,7 @@
 ---
-changelog: 
-last_modified_at: 
-title: Response and pagination
+changelog:
+last_modified_at:
+title: レスポンスとページネーション
 redirect_from: []
 date: '2019-03-29T16:58:12.000+00:00'
 menu:
@@ -11,15 +11,15 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-## Response
+## レスポンス
 
-Every endpoint responds with a JSON formatted response.
+全てのエンドポイントはJSONフォーマットのレスポンスを返します。
 
-### Pagination
+### ページネーション
 
-When you call an endpoint that returns a list of items, you might not get the whole list in a single response. You'll have to iterate through the "pages" to retrieve all the items.
+アイテムのリストを返すエンドポイントをコールした場合、1回のレスポンスで全てのリストを取得できないかもしれません。全てのアイテムを取得するために "ページ" を複数回取得する必要があります。
 
-The response of such endpoints include a `paging` object, with `total_item_count` and `page_item_limit` properties. If there is a "next" page available, it'll also include a `next` "anchor" item. For example, the response will show the app slug of the first app on the next page.
+レスポンスに `paging` を含むエンドポイントは `total_item_count` と `page_item_limit` のプロパティを持っています。もし "次" のページが取得可能であれば、レスポンスは `next` の "アンカー" アイテムも含みます。例えば、そのレスポンスは次のページの最初のアプリのスラッグを持ちます。
 
 **Example**
 
@@ -32,32 +32,33 @@ The response of such endpoints include a `paging` object, with `total_item_count
       }
     }
 
-{% include message_box.html type="note" title="The `next` property of the `paging` object" content=" The `next` property of the `paging` object is only included if there's at least one more page available. If there's no `next` property inside `paging` that means that there's no more page to retrieve. "%}
+{% include message_box.html type="note" title=" `paging` オブジェクトの `next` プロパティについて" content=" `paging` オブジェクトの `next` プロパティは、少なくとも1つ以上のページが存在する場合にのみ含まれます。もし `paging` 内に `next` プロパティがない場合、それ以上取得できるページが存在しないことを意味します。 "%}
 
-#### Limiting response items
+#### レスポンスアイテムの制限
 
-The `page_item_limit` property can be set with the query parameter named `limit` at the GET requests, so you can specify the size of the response pages. The default and also maximum value for this parameter is 50.
+`page_item_limit` プロパティはGETレスポンスの `limit` クエリパラメータで設定することで、レスポンスのページサイズを指定することができます。ページサイズのデフォルト設定および最大値は50です。
 
-**Example**
+**例**
 
-* Calling `https://api.bitrise.io/v0.1/me/apps` will retrieve you the first page of your apps with size of 50.
-* If you call `https://api.bitrise.io/v0.1/me/apps?limit=10`, the response is also the first page of your apps, but it will contain only 10 elements.
+* `https://api.bitrise.io/v0.1/me/apps`をコールすることで、1番目のページを最大リストアイテムサイズ50で、あなたのアプリリストを取得できます。
+* `https://api.bitrise.io/v0.1/me/apps?limit=10` をコールする場合、そのレスポンスは10個のアイテムしか含まないあなたのアプリリストとなります。
 
-#### Iterating through response items
+#### レスポンスアイテムの反復処理
 
-If you want to iterate through all the items, this is what you have to do:
+全てのアイテムを反復して取得したい場合、以下の処理を行う必要があります:
 
-1. Call the endpoint without any pagination parameters.
-2. From the response process the `paging` object.
-3. If the `paging` object includes a `next` item, call the exact same endpoint with an additional `next=` query parameter, and pass the value you got in the response as the value of the `next` parameter.
+1. ページネーションパラメータなしでエンドポイントをコールします。
+2. レスポンスから `paging` オブジェクトを取得します。
+3. `paging` オブジェクトが `next` アイテムを含んでいれば、 `next=` クエリパラメータにレスポンスで取得した `next` パラメータの値を設定して全く同じエンドポイントをコールしてください。
 
-**Example**
+**例**
 
-Iterating through all your registered apps:
+あなたの登録した全てのアプリを反復して取得する:
 
-1. Call `https://api.bitrise.io/v0.1/me/apps`.
-2. Process the items (`data` property).
-3. Check the `paging` (root) property.
-4. If there's a `next` property inside `paging`, call the endpoint again, with the `next` query parameter
+1. `https://api.bitrise.io/v0.1/me/apps` をコール。
+2. アイテム(`data` プロパティ)を処理する。
+3. `paging` (ルート)のプロパティを確認する。
+4. もし `paging` オブジェクトが `next` プロパティを持っていれば、そのエンドポイントを `next` クエリパラメータ付きで再度コールします。
    * Example: `https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE`, where `NEXTVALUE` is the value of the `next` property you got in your previous response.
-5. Repeat this until the `paging` object does not include a `next` property, which means that the page you received was the last one.
+   * 例: `https://api.bitrise.io/v0.1/me/apps?next=NEXTVALUE` この `NEXTVALUE` は前回のレスポンスで受け取った `next` プロパティの値です。
+5. この処理を `paging` オブジェクトが `next` プロパティを含まなくなるまで(最後のページを取得するまで)繰り返します。
