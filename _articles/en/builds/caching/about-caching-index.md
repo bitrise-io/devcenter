@@ -23,8 +23,7 @@ Every single Bitrise build runs on a clean virtual machine. This means that norm
 
 With caching, you can preserve the contents of selected files and directories, including installed dependencies. And it’s very easy: you just need to use two Steps in your Workflow. The first, called **Bitrise.io Cache: Push**, stores your content in the build cache; the other, called **Bitrise.io Cache: Pull**, pulls the cache the next time you run a build.
 
-The cache is stored as a single archive file: if the content of the cached paths changes in any way, the entire file gets updated. Every branch of your repository on which you run a build will have its own cache archive.
-
+The cache is stored as a single archive file: if the content of the cached paths changes in any way, the entire file gets updated. Every branch of your repository on which you run a build will have its own cache archive. Please note that the cache does not get used if you try to use it on another stack then the one it was generated on.
 
 {% include message_box.html type="info" title="The default branch cache is used as fallback" content="If a branch does not yet have a cache saved, the default branch's cache will be used. Cache is not available for PR builds of public Bitrise apps.
 "%}
@@ -39,11 +38,11 @@ To get started, add two Steps to your Workflow:
 * **Bitrise.io Cache:Pull** Step to download the previous cache.
 * **Bitrise.io Cache:Push** Step to check the state of the cache and upload it if required.
 
-{% include message_box.html type="warning" title="Pull request builds" content="By default, if you run a build that is triggered by a pull request, the **Bitrise.io Cache:Push** Step won't work: in this case, a pull request build can only read the build cache but can't update it! 
+{% include message_box.html type="warning" title="Pull request builds" content="By default, if you run a build that is triggered by a pull request, the **Bitrise.io Cache:Push** Step won't work: in this case, a pull request build can only read the build cache but can't update it!
 
-We strongly recommend that you do not change this! From a security perspective, the best practice is to never allow pull request builds to alter anything that can affect other Bitrise builds. 
+We strongly recommend that you do not change this! From a security perspective, the best practice is to never allow pull request builds to alter anything that can affect other Bitrise builds.
 
-If you absolutely must change it, you need to use a `run_if` expression in the app's `bitrise.yml` file. Read more about `run_if` expressions in our [/steps-and-workflows/disable-a-step-by-condition/](Enabling or disabling a Step conditionally) guide. 
+If you absolutely must change it, you need to use a `run_if` expression in the app's `bitrise.yml` file. Read more about `run_if` expressions in our [/steps-and-workflows/disable-a-step-by-condition/](Enabling or disabling a Step conditionally) guide.
 "%}
 
 Add the **Bitrise.io Cache:Pull** Step right before you need the cache. For example, in the case of an iOS app, you can insert the **Bitrise.io Cache:Pull** Step between the **Git Clone Repository** and the dependency installer Steps (such as **Run CocoaPods install** or **Carthage** Steps). You should not put the **Bitrise.io Cache:Pull** Step BEFORE the **Git Clone Repository** Step.
@@ -75,9 +74,9 @@ You can**, however, ignore paths inside a cache path. For example, if your path 
 You can download and delete caches for every branch which generated a cache.
 
 1. Open your app on Bitrise.
-1. Go to the **Settings** tab.
-1. Scroll down to the **Manage Build Caches** section.
-1. Click the **Manage** button.
+2. Go to the **Settings** tab.
+3. Scroll down to the **Manage Build Caches** section.
+4. Click the **Manage** button.
 
 You can see the size of the caches and the last time a given cache was used in the popup window. You can download or delete any of the cache archives, or all of them.
 
@@ -88,8 +87,8 @@ If you only want to delete the cache which is related to a single branch, you sh
 
 The Build Cache feature is split into two parts:
 
-- The Build Cache API.
-- The Steps.
+* The Build Cache API.
+* The Steps.
 
 The Build Cache API is a simple API. It makes sure that you have the required access rights to the resource (the build cache archive), and provides secure - time-limited and expiring - download and upload URLs. It does not process the files.
 
