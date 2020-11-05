@@ -45,23 +45,23 @@ It's a temporary directory created by the Bitrise CLI by default, and can be ove
 
 These Environment Variables are available for builds running on [bitrise.io](https://www.bitrise.io) virtual machines.
 
-{% include collapse.html title="$BITRISE_BUILD_NUMBER" content="Build number of the build on [bitrise.io](https://www.bitrise.io). You can [modify any app's build number](/builds/build-numbering-and-app-versioning/#change-the-build-number-of-your-build) if you want to - for example, if you wish to reset to 1."%}
+{% include collapse.html title="$BITRISE_BUILD_NUMBER" content="`$BITRISE_BUILD_NUMBER`: Build number of the build on [bitrise.io](https://www.bitrise.io). You can [modify any app's build number](/builds/build-numbering-and-app-versioning/#change-the-build-number-of-your-build) if you want to - for example, if you wish to reset to 1."%}
 
-{% include collapse.html title="$BITRISE_APP_TITLE" content="The title of your app on [bitrise.io](https://www.bitrise.io). You can change it any time on the **Settings** tab of the app. "%}
+{% include collapse.html title="$BITRISE_APP_TITLE" content="`$BITRISE_APP_TITLE`: The title of your app on [bitrise.io](https://www.bitrise.io). You can change it any time on the **Settings** tab of the app. "%}
 
-{% include collapse.html title="$BITRISE_APP_URL" content="The URL or your app on [bitrise.io](https://www.bitrise.io). This is not the same as the git repository URL! An app URL has the following format:
+{% include collapse.html title="$BITRISE_APP_URL" content="`$BITRISE_APP_URL`: The URL or your app on [bitrise.io](https://www.bitrise.io). This is not the same as the git repository URL! An app URL has the following format:
 
 `app.bitrise.io/APP-SLUG/`"%}
 
-{% include collapse.html title="$BITRISE_APP_SLUG" content="The slug that uniquely identifies your app on [bitrise.io](https://www.bitrise.io). It's part of the app URL, too. "%}
+{% include collapse.html title="$BITRISE_APP_SLUG" content=`$BITRISE_APP_SLUG`: "The slug that uniquely identifies your app on [bitrise.io](https://www.bitrise.io). It's part of the app URL, too. "%}
 
-{% include collapse.html title="$BITRISE_BUILD_URL" content="The URL of the build on [bitrise.io](https://www.bitrise.io). A build URL has the following format:
+{% include collapse.html title="$BITRISE_BUILD_URL" content="`$BITRISE_BUILD_URL`: The URL of the build on [bitrise.io](https://www.bitrise.io). A build URL has the following format:
 
 `app.bitrise.io/build/BUILD-SLUG`"%}
 
-{% include collapse.html title="$BITRISE_BUILD_SLUG" content="The slug that uniquely identifies a build on [bitrise.io](https://www.bitrise.io). It's part of the build URL, too. "%}
+{% include collapse.html title="$BITRISE_BUILD_SLUG" content="`$BITRISE_BUILD_SLUG`: The slug that uniquely identifies a build on [bitrise.io](https://www.bitrise.io). It's part of the build URL, too. "%}
 
-{% include collapse.html title="$BITRISE_BUILD_TRIGGER_TIMESTAMP" content="The date and time when the build was triggered."%}
+{% include collapse.html title="$BITRISE_BUILD_TRIGGER_TIMESTAMP" content="`$BITRISE_BUILD_TRIGGER_TIMESTAMP`: The date and time when the build was triggered."%}
 
 {% include collapse.html title="$GIT_REPOSITORY_URL" content="The URL of the Git repository that hosts your app. This can be changed in the **Settings** tab of the app. "%}
 
