@@ -43,7 +43,7 @@ You can also set optional variables for using advanced features as below:
 
 | Input Variables | Description |
 | --- | --- |
-| Short Message | Summary of update shown on DeployGate.<br>You can use $GIT_CLONE_COMMIT_MESSAGE_SUBJECT if you want to use the same message as git commit |
+| Short Message | Summary of update shown on DeployGate.<br>You can use $BITRISE_GIT_MESSAGE if you want to use the commit message, the pull request title, or the message you specified when you triggered the build manually. |
 | Distribution Key | You can make multiple public install links (we called it Distribution Page) for a different version of app binary in the same app. <br>By specifying the distribution page's hash, that distribution page will be updated simultaneously. The "xxxx" portion of the distributed page's URL like https://deploygate.com/distributions/xxxx |
 | Distribution Name | Specify the name of the updated distribution page. If nothing exists, a new distribution page will be created. Possible usage includes creating distribution pages for each Git branch name. (for example $BITRISE_GIT_BRANCH) |
 | Release Note | Message for the new release in distribution page. This message will be notified to your distribution page's testers |

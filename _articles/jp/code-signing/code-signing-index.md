@@ -2,7 +2,7 @@
 changelog: 
 last_modified_at: 
 tag: []
-title: Code signing
+title: コード署名
 redirect_from: []
 description: ''
 menu:
@@ -11,31 +11,30 @@ menu:
     weight: 16
 
 ---
-{% include not_translated_yet.html %}
 
-Code signing is the process of digitally signing your app, as a means of guaranteeing that the code has not been altered since signing. It provides security for deployment, and identifies the author.
+コード署名は、アプリへのデジタル署名のプロセスであり、署名を行ってからコードが変更されていないことを保証するものです。コード署名により、デプロイのセキュリティが確保され、また作者を識別することが可能となります。
 
-To deploy mobile apps to an online store, such as Google Play or the App Store, code signing is absolutely crucial. On Bitrise, we tried to make it as easy and convenient as possible.
+Google Play や App Store などのオンラインストアへモバイルアプリをデプロイするためには、コード署名が必ず必要となります。Bitrise でのコード署名は、このプロセスを可能な限り簡単で便利にするものです。
 
-## iOS code signing
+## iOS コード署名
 
-Every iOS app, native or cross-platform, needs code signing. At the minimum, two files are required:
+ネイティブまたはクロスプラットフォームのすべての iOS アプリにはコード署名が必要です。最低でも、以下の 2 つのファイルが要求されます：
 
-* A provisioning profile.
-* A .p12 certificate.
+- プロビジョニングプロファイル
+- .p12 証明書
 
-Bitrise supports Xcode-managed signing as well as manual code signing, and we also offer automatic provisioning: when using that, your provisioning profiles are downloaded directly from your Apple Developer Portal account.
+Bitrise では、手動でのコード署名だけでなく、Xcode によって管理された署名をサポートしています。さらに Bitrise では、自動プロビジョニング機能も提供しています。自動プロビジョニング機能を用いることで、Apple Developer Portal のアカウントから直接プロビジョニングプロファイルがダウンロードされます。
 
-**Details:**
+**詳細:**
 
-* [iOS code signing](/jp/code-signing/ios-code-signing/index/)
+- [iOS コード署名](/jp/code-signing/ios-code-signing/index/)
 
-## Android code signing
+## Android コード署名
 
-Android code signing can be handled via our dedicated Step, via Android Studio, or in your Gradle configuration.
+Android のコード署名は、Bitrise の専用のステップ、Android Studio、または Gradle の設定で行うことが可能です。
 
-To sign an Android app, you will need a keystore file which requires a Google Play Developer account, and Google Play API access.
+Android アプリに署名するには、Google Play Developer アカウントを要求する keystore ファイル、及び Google Play API へのアクセスが必要です。
 
-**Details:**
+**詳細:**
 
-* [Android code signing](/jp/code-signing/android-code-signing/index/)
+- [Android コード署名](/jp/code-signing/android-code-signing/index/)

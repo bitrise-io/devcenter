@@ -9,6 +9,7 @@ tag:
 description: 'Find out the difference between Gradle Runner and Android Build Steps.
   Learn about installing additional Android SDK packages, as well as about running
   an Android build locally with Docker. '
+summary: ''
 menu:
   tips-and-tricks:
     weight: 2
@@ -174,7 +175,7 @@ You can use our Android emulator Steps such as `AVD Manager` and `Wait for Emula
 
 ## Installing / Using Java version X
 
-{% include message_box.html type="note" title="Java 8 is now pre-installed" content=" Java 8 is now the pre-installed Java version on the [bitrise.io](https://www.bitrise.io/) Linux Stack. This section is kept here for future reference, in case you'd need another Java version. "%}
+{% include message_box.html type="note" title="Java 8 is pre-installed" content=" Java 8 is the pre-installed Java version on the [bitrise.io](https://www.bitrise.io/) Linux Stack. This section is kept here for future reference, in case you'd need another Java version. "%}
 
 If you need a Java or JDK version which is not preinstalled on the Android stacks, you can follow this guide to install it. This example will install Java/JDK 8 with a `Do anything with Script step`, feel free to adapt it to the version you need.
 

@@ -45,7 +45,7 @@ DeployGate にアプリをアップロードするには、Bitrise のワーク�
 
 | 入力変数 | 説明 |
 |-|-|
-|Short Message|DeployGate で表示するアップデートの概要。<br>git commit と同じメッセージを使いたい場合は `$GIT_CLONE_COMMIT_MESSAGE_SUBJECT` を使います。|
+|Short Message|DeployGate で表示するアップデートの概要。<br>コミットメッセージ、プルリクエストタイトル、または手動でビルドを起動した場合に指定したメッセージを使いたい場合は `$BITRISE_GIT_MESSAGE` を使います。|
 |Distribution Key|同一アプリのさまざまなバージョン用のパブリックインストールページを複数作成できます（**`配布ページ`** と呼びます）。<br>配布ページのハッシュを指定することにより、アップロードと同時に配布ページが更新されます。https://deploygate.com/distributions/xxxx のように配布されたページの "xxxx" 部分です。|
 |Distribution Name|更新する配布ページの名前を指定します。もし存在しなければ、新しい配布ページが作成されます。Git ブランチ名ごとに配布ページを作成することもできます。（例: `$BITRISE_GIT_BRANCH`）|
 |Release Note|配布ページの新しいリリース用のメッセージ。このメッセージは配布ページのテスターに通知されます。|
