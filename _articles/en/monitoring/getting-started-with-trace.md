@@ -34,6 +34,8 @@ However, to actually use Trace and being able to gather data from it, you'll nee
 
 ## Installing Trace
 
+{% include message_box.html type="important" title="Xcode version requirement" content="To add Trace to your iOS app, you must use Xcode 11.5 or higher! Trace is not compatible with older versions of Xcode. "%}
+
 Trace works by installing the Trace SDK to your application during the Bitrise build process. You can do this manually - using CocoaPods or the Swift Package Manager - on any device to test it, and once you’re ready to automate your process, you can simply use our dedicated Step on Bitrise.
 
 {% include collapse.html title="Installing Trace using Cocoapods" content="Before adding Trace to your apps on Bitrise, try it out first. We’ll walk you through the process using a sample app - but of course you can use any of your own repositories instead of our sample!
