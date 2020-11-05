@@ -8,6 +8,7 @@ tag:
 - triggers
 description: 'Environment Variables (Env Vars) consist of a key and a value, as well
   as optional attributes. They can be defined on the level of apps, Workflows or Steps. '
+summary: ''
 menu:
   builds-main:
     weight: 27
@@ -19,26 +20,26 @@ Environment Variables (Env Vars) consist of a key and a value, as well as option
 
 These Environment Variables are available everywhere, even if you run the build on your own computer, using the [Bitrise CLI](https://www.bitrise.io/cli).
 
-{% include collapse.html title="$BITRISE_TRIGGERED_WORKFLOW_ID" content="The ID of the Workflow that was triggered. This env var is exposed regardless of whether the Workflow was triggered manually or automatically. "%}
+{% include collapse.html title="$BITRISE_TRIGGERED_WORKFLOW_ID" content="`$BITRISE_TRIGGERED_WORKFLOW_ID`: The ID of the Workflow that was triggered. This env var is exposed regardless of whether the Workflow was triggered manually or automatically. "%}
 
-{% include collapse.html title="$BITRISE_TRIGGERED_WORKFLOW_TITLE" content="The title of the Workflow that was triggered - if it has a title, which is completely optional. This env var is exposed regardless of whether the Workflow was triggered manually or automatically." %}
+{% include collapse.html title="$BITRISE_TRIGGERED_WORKFLOW_TITLE" content="`$BITRISE_TRIGGERED_WORKFLOW_TITLE`: The title of the Workflow that was triggered - if it has a title, which is completely optional. This env var is exposed regardless of whether the Workflow was triggered manually or automatically." %}
 
-{% include collapse.html title="$BITRISE_BUILD_STATUS" content="The current status of the build. The available options are:
+{% include collapse.html title="$BITRISE_BUILD_STATUS" content="`$BITRISE_BUILD_STATUS`: The current status of the build. The available options are:
 
 * 0: Successful.
 * 1: Failed.
 
 A successful current status means that none of the previous Steps in the build failed."%}
 
-{% include collapse.html title="$BITRISE_SOURCE_DIR" content="Path to the base working directory. By default, it's the directory where Bitrise runs
+{% include collapse.html title="$BITRISE_SOURCE_DIR" content="`$BITRISE_SOURCE_DIR`: Path to the base working directory. By default, it's the directory where Bitrise runs
 (for example, your repository root), unless you provide a different value. This can be overwritten during the build, which will change the working directory for subsequent Steps in the build. "%}
 
-{% include collapse.html title="$BITRISE_DEPLOY_DIR" content="Path to the directory that stores artifacts and files for deployment.
+{% include collapse.html title="$BITRISE_DEPLOY_DIR" content="`$BITRISE_DEPLOY_DIR`: Path to the directory that stores artifacts and files for deployment.
 It's a temporary directory created by the Bitrise CLI by default, and can be overwritten before starting the Bitrise CLI. The **Deploy to Bitrise.io** Step looks for your build artifacts - such as an IPA or APK of the app -, test results, and other files in this directory." %}
 
-{% include collapse.html title="$CI" content="Indicates whether the Bitrise CLI is running in CI (Continuous Integration) mode. Value can be `true` or `false`. It is false if, for example, your run Bitrise on your own computer." %}
+{% include collapse.html title="$CI" content="`$CI`: Indicates whether the Bitrise CLI is running in CI (Continuous Integration) mode. Value can be `true` or `false`. It is false if, for example, your run Bitrise on your own computer." %}
 
-{% include collapse.html title="$PR" content="Indicates whether the Bitrise CLI is running in PR (Pull Request) mode. Value can be `true` or `false`. Running in Pull Request mode means that Bitrise builds your code in the state as if the Pull Request was already merged. " %}
+{% include collapse.html title="$PR" content="`$CI`: Indicates whether the Bitrise CLI is running in PR (Pull Request) mode. Value can be `true` or `false`. Running in Pull Request mode means that Bitrise builds your code in the state as if the Pull Request was already merged. " %}
 
 ## Exposed by Bitrise.io
 
