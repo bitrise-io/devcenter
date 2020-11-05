@@ -63,43 +63,43 @@ These Environment Variables are available for builds running on [bitrise.io](htt
 
 {% include collapse.html title="$BITRISE_BUILD_TRIGGER_TIMESTAMP" content="`$BITRISE_BUILD_TRIGGER_TIMESTAMP`: The date and time when the build was triggered."%}
 
-{% include collapse.html title="$GIT_REPOSITORY_URL" content="$GIT_REPOSITORY_URL: The URL of the Git repository that hosts your app. This can be changed in the **Settings** tab of the app. "%}
+{% include collapse.html title="$GIT_REPOSITORY_URL" content="`$GIT_REPOSITORY_URL`: The URL of the Git repository that hosts your app. This can be changed in the **Settings** tab of the app. "%}
 
-{% include collapse.html title="$BITRISE_GIT_BRANCH" content="$BITRISE_GIT_BRANCH: The git branch that is built by Bitrise. For example, `master`. "%}
+{% include collapse.html title="$BITRISE_GIT_BRANCH" content="`$BITRISE_GIT_BRANCH`: The git branch that is built by Bitrise. For example, `master`. "%}
 
-{% include collapse.html title="$BITRISEIO_GIT_BRANCH_DEST" content="$BITRISEIO_GIT_BRANCH_DEST: Used only with builds triggered by pull requests: the destination/target branch of the pull request that triggered the build. "%}
+{% include collapse.html title="$BITRISEIO_GIT_BRANCH_DEST" content="`$BITRISEIO_GIT_BRANCH_DEST`: Used only with builds triggered by pull requests: the destination/target branch of the pull request that triggered the build. "%}
 
-{% include collapse.html title="$BITRISE_GIT_TAG" content="$BITRISE_GIT_TAG: You can [use Git Tags to trigger builds](/builds/triggering-builds/trigger-git-tags/) on Bitrise: this Env Var stores the tag used to trigger the build. "%}
+{% include collapse.html title="$BITRISE_GIT_TAG" content="`$BITRISE_GIT_TAG`: You can [use Git Tags to trigger builds](/builds/triggering-builds/trigger-git-tags/) on Bitrise: this Env Var stores the tag used to trigger the build. "%}
 
-{% include collapse.html title="$BITRISE_GIT_COMMIT" content="$BITRISE_GIT_COMMIT: The commit hash of the Git commit that triggered the build, when applicable. There is no commit hash, for example, in the case of a pull request build. "%}
+{% include collapse.html title="$BITRISE_GIT_COMMIT" content="`$BITRISE_GIT_COMMIT`: The commit hash of the Git commit that triggered the build, when applicable. There is no commit hash, for example, in the case of a pull request build. "%}
 
-{% include collapse.html title="$BITRISE_GIT_MESSAGE" content="$BITRISE_GIT_MESSAGE: The commit message, pull request title or the message you specified if you triggered the build manually. "%}
+{% include collapse.html title="$BITRISE_GIT_MESSAGE" content="`$BITRISE_GIT_MESSAGE`: The commit message, pull request title or the message you specified if you triggered the build manually. "%}
 
-{% include collapse.html title="$BITRISEIO_GIT_REPOSITORY_OWNER" content="$BITRISEIO_GIT_REPOSITORY_OWNER: The owner of the Git repository of the app (for example, `bitrise-io`). "%}
+{% include collapse.html title="$BITRISEIO_GIT_REPOSITORY_OWNER" content="`$BITRISEIO_GIT_REPOSITORY_OWNER`: The owner of the Git repository of the app (for example, `bitrise-io`). "%}
 
-{% include collapse.html title="$BITRISEIO_GIT_REPOSITORY_SLUG" content="$BITRISEIO_GIT_REPOSITORY_SLUG_: The slug of the Git repository of the app (for example, `devcenter`). "%}
+{% include collapse.html title="$BITRISEIO_GIT_REPOSITORY_SLUG" content="`$BITRISEIO_GIT_REPOSITORY_SLUG_`: The slug of the Git repository of the app (for example, `devcenter`). "%}
 
-{% include collapse.html title="$BITRISE_PULL_REQUEST" content="$BITRISE_PULL_REQUEST: The ID of the pull request that triggered a build. Not applicable, of course, if the build was not triggered by a pull request."%}
+{% include collapse.html title="$BITRISE_PULL_REQUEST" content="`$BITRISE_PULL_REQUEST`: The ID of the pull request that triggered a build. Not applicable, of course, if the build was not triggered by a pull request."%}
 
-{% include collapse.html title="$BITRISEIO_PULL_REQUEST_REPOSITORY_URL" content="$BITRISEIO_PULL_REQUEST_REPOSITORY_URL: The URL of the repository from where the pull request has been sent."%}
+{% include collapse.html title="$BITRISEIO_PULL_REQUEST_REPOSITORY_URL" content="`$BITRISEIO_PULL_REQUEST_REPOSITORY_URL`: The URL of the repository from where the pull request has been sent."%}
 
-{% include collapse.html title="$BITRISEIO_PULL_REQUEST_MERGE_BRANCH" content="$BITRISEIO_PULL_REQUEST_MERGE_BRANCH: The pre-merge branch - if the Git hosting provider supports and provides the pre-merged state of a pull request on a special merge branch. "%}
+{% include collapse.html title="$BITRISEIO_PULL_REQUEST_MERGE_BRANCH" content="`$BITRISEIO_PULL_REQUEST_MERGE_BRANCH`: The pre-merge branch - if the Git hosting provider supports and provides the pre-merged state of a pull request on a special merge branch. "%}
 
-{% include collapse.html title="$BITRISEIO_PULL_REQUEST_HEAD_BRANCH" content="$BITRISEIO_PULL_REQUEST_HEAD_BRANCH: The pull request head branch, if the Git hosting provider system supports and provides this. This special git ref should point to the source of the pull request. "%}
+{% include collapse.html title="$BITRISEIO_PULL_REQUEST_HEAD_BRANCH" content="`$BITRISEIO_PULL_REQUEST_HEAD_BRANCH`: The pull request head branch, if the Git hosting provider system supports and provides this. This special git ref should point to the source of the pull request. "%}
 
-{% include collapse.html title="$BITRISE_PROVISION_URL" content="$BITRISE_PROVISION_URL: The URL of the Apple provisioning profiles uploaded to [bitrise.io](https://www.bitrise.io). If there is more than one provisioning profile uploaded for your app, a pipe character separates the URLs in the list (`|`).
-
-This is only relevant for iOS apps and for cross-platform apps with iOS versions. "%}
-
-{% include collapse.html title="$BITRISE_CERTIFICATE_URL" content="$BITRISE_CERTIFICATE_URL: The URL of the Apple certificates uploaded to [bitrise.io](https://www.bitrise.io). If there is more than one certificate uploaded for your app, a pipe character separates the URLs in the list (`|`).
+{% include collapse.html title="$BITRISE_PROVISION_URL" content="`$BITRISE_PROVISION_URL`: The URL of the Apple provisioning profiles uploaded to [bitrise.io](https://www.bitrise.io). If there is more than one provisioning profile uploaded for your app, a pipe character separates the URLs in the list (`|`).
 
 This is only relevant for iOS apps and for cross-platform apps with iOS versions. "%}
 
-{% include collapse.html title="$BITRISE_CERTIFICATE_PASSPHRASE" content="$BITRISE_CERTIFICATE_PASSPHRASE: The passphrase you set for the uploaded Apple certificates on the app's **Code Signing** tab. If there is more than one certificate with a passphrase, a pipe character separates the phrases in the list (`|`)
+{% include collapse.html title="$BITRISE_CERTIFICATE_URL" content="`$BITRISE_CERTIFICATE_URL`: The URL of the Apple certificates uploaded to [bitrise.io](https://www.bitrise.io). If there is more than one certificate uploaded for your app, a pipe character separates the URLs in the list (`|`).
 
 This is only relevant for iOS apps and for cross-platform apps with iOS versions. "%}
 
-{% include collapse.html title="$BITRISE_IO" content="$BITRISE_IO: Indicates that the build is running in a bitrise.io environment. Value is set to `true` by Bitrise when it starts a build."%}
+{% include collapse.html title="$BITRISE_CERTIFICATE_PASSPHRASE" content="`$BITRISE_CERTIFICATE_PASSPHRASE`: The passphrase you set for the uploaded Apple certificates on the app's **Code Signing** tab. If there is more than one certificate with a passphrase, a pipe character separates the phrases in the list (`|`)
+
+This is only relevant for iOS apps and for cross-platform apps with iOS versions. "%}
+
+{% include collapse.html title="$BITRISE_IO" content="`$BITRISE_IO`: Indicates that the build is running in a bitrise.io environment. Value is set to `true` by Bitrise when it starts a build."%}
 
 For more information on Env Vars, check out [Secrets and Env Vars](/builds/env-vars-secret-env-vars/).
 
