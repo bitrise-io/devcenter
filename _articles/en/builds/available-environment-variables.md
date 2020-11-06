@@ -53,7 +53,7 @@ These Environment Variables are available for builds running on [bitrise.io](htt
 
 `app.bitrise.io/APP-SLUG/`"%}
 
-{% include collapse.html title="$BITRISE_APP_SLUG" content=`$BITRISE_APP_SLUG`: "The slug that uniquely identifies your app on [bitrise.io](https://www.bitrise.io). It's part of the app URL, too. "%}
+{% include collapse.html title="$BITRISE_APP_SLUG" content="`$BITRISE_APP_SLUG`: The slug that uniquely identifies your app on [bitrise.io](https://www.bitrise.io). It's part of the app URL, too. "%}
 
 {% include collapse.html title="$BITRISE_BUILD_URL" content="`$BITRISE_BUILD_URL`: The URL of the build on [bitrise.io](https://www.bitrise.io). A build URL has the following format:
 
