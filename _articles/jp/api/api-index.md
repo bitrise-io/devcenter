@@ -1,6 +1,6 @@
 ---
-changelog: 
-last_modified_at: 
+changelog:
+last_modified_at:
 title: API
 redirect_from: "/jp/api/v0.1/"
 menu:
@@ -9,26 +9,25 @@ menu:
     weight: 29
 
 ---
-{% include not_translated_yet.html %}
 
-Welcome to the Bitrise API! Many of the features that you are used to on our website and with our CLI are available via the API, too. It lets you integrate various systems and services with our CI/CD service for an efficient pipeline.
+Bitrise APIへようこそ！みなさんが私たちのウェブサイトとCLIでご利用している機能の多くはAPI経由でも使用可能です。私たちのCI/CDサービスとともに効率的なパイプラインを使って、Bitrise APIを様々やシステムやサービスに統合することができます。
 
-{% include message_box.html type="warning" title="The API is work-in-progress" content=" The API is work-in-progress: we will add new endpoints and possibly update the existing ones in the future. "%}
+{% include message_box.html type="warning" title="APIは開発中です" content=" APIは開発中です: 私たちは将来的に、新しいエンドポイントの追加とおそらく既存のエンドポイントの更新を行います。 "%}
 
-You can track the progress of the API: [join the discussion](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554)! Follow it and get notified about new endpoints and changes, we announce those there.
+API開発の進捗を確認するとことができます: [議論に参加しよう](https://discuss.bitrise.io/t/bitrise-api-v0-1-work-in-progress/1554)! フォローすることで、そこで私たちがお知らせしている新しいエンドポイントや変更の通知を受けることができます。
 
-Feel free to contribute! If you want to request a new API feature or a new endpoint, [you can do so!](http://discuss.bitrise.io/t/bitrise-public-api/37)
+気軽に貢献しよう！もし希望する新しいAPI機能や新しいエンドポイントがある場合は、[ここでリクエストできます！](http://discuss.bitrise.io/t/bitrise-public-api/37)
 
-{% include message_box.html type="info" title="Bitrise API endpoint documentation" content="Check out the [Bitrise API endpoint reference documentation](https://api-docs.bitrise.io/) to see all currently available endpoints and their parameters!"%}
+{% include message_box.html type="info" title="Bitrise APIエンドポイントドキュメント" content="[Bitrise APIエンドポイントリファレンス](https://api-docs.bitrise.io/)で、現在利用可能なエンドポイントとそのパラメーターを確認できます！"%}
 
-## API domain/host and versioning
+## APIドメイン/ホストとバージョン管理
 
-The Bitrise API's host is: [https://api.bitrise.io/](https://api.bitrise.io/ "https://api.bitrise.io/")
+Bitrise APIのホストはこちらです: [https://api.bitrise.io/](https://api.bitrise.io/ "https://api.bitrise.io/")
 
-Every endpoint except the root one is versioned. The version has to be included in the URL right after the host.
+ルートを除く全てのエンドポイントはバージョン管理されています。そのバージョンはURLのホストのすぐ後ろに含まれる必要があります。
 
-Example: [https://api.bitrise.io/v0.1/me](https://api.bitrise.io/v0.1/me "https://api.bitrise.io/v0.1/me") (requires authentication)
+例: [https://api.bitrise.io/v0.1/me](https://api.bitrise.io/v0.1/me "https://api.bitrise.io/v0.1/me") (認証必須)
 
-Right now we have only one version, `v0.1`.
+現在は `v0.1` だけが存在します。
 
-There's no long term compatibility promise for `v0.1`, although we try to do our best to not to break anything unless we have to. Once we're happy with `v0.1` we'll "freeze" it as `v1.0`, for which we'll provide long term support.
+`v0.1` は長期間の互換性は保証されませんが、なにかやむを得ない理由がない限り、他に不都合が起きないようベストを尽くします。私たちが `v0.1` に対し満足の行く結果を得ることができれば、それを `v1.0` としてフリーズし、長期間のサポートを提供する予定です。
