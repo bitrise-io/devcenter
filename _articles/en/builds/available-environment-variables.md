@@ -39,7 +39,7 @@ It's a temporary directory created by the Bitrise CLI by default, and can be ove
 
 {% include collapse.html title="$CI" content="`$CI`: Indicates whether the Bitrise CLI is running in CI (Continuous Integration) mode. Value can be `true` or `false`. It is false if, for example, your run Bitrise on your own computer." %}
 
-{% include collapse.html title="$PR" content="`$CI`: Indicates whether the Bitrise CLI is running in PR (Pull Request) mode. Value can be `true` or `false`. Running in Pull Request mode means that Bitrise builds your code in the state as if the Pull Request was already merged. " %}
+{% include collapse.html title="$PR" content="`$PR`: Indicates whether the Bitrise CLI is running in PR (Pull Request) mode. Value can be `true` or `false`. Running in Pull Request mode means that Bitrise builds your code in the state as if the Pull Request was already merged. " %}
 
 ## Exposed by Bitrise.io
 
@@ -77,7 +77,7 @@ These Environment Variables are available for builds running on [bitrise.io](htt
 
 {% include collapse.html title="$BITRISEIO_GIT_REPOSITORY_OWNER" content="`$BITRISEIO_GIT_REPOSITORY_OWNER`: The owner of the Git repository of the app (for example, `bitrise-io`). "%}
 
-{% include collapse.html title="$BITRISEIO_GIT_REPOSITORY_SLUG" content="`$BITRISEIO_GIT_REPOSITORY_SLUG_`: The slug of the Git repository of the app (for example, `devcenter`). "%}
+{% include collapse.html title="$BITRISEIO_GIT_REPOSITORY_SLUG" content="`$BITRISEIO_GIT_REPOSITORY_SLUG`: The slug of the Git repository of the app (for example, `devcenter`). "%}
 
 {% include collapse.html title="$BITRISE_PULL_REQUEST" content="`$BITRISE_PULL_REQUEST`: The ID of the pull request that triggered a build. Not applicable, of course, if the build was not triggered by a pull request."%}
 
