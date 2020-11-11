@@ -188,6 +188,7 @@ If you need a Java or JDK version which is not installed on our Android stacks, 
 
        #!/bin/bash
        set -ex
+       
        add-apt-repository -y ppa:openjdk-r/ppa
        apt-get update -qq
        apt-get install -y openjdk-14-jdk
