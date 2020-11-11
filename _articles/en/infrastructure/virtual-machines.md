@@ -155,6 +155,7 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
 1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
 2. Add the following commands to the **Script content** input of the Step:
+
    ``` 
    jenv global system
    export JAVA_HOME=\"$(jenv prefix)\"
@@ -178,6 +179,22 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
    ```
 3. Click **Save** at the top right corner.
    " %}
+
+### Switching to a Java version not installed on our Android stacks
+
+If you need a Java or JDK version which is not installed on our Android stacks, follow this guide. The example below will install Java/JDK 1.14 with a **Script** Step. You can adapt it to the version of your choice.
+
+1. Add the **Script** Step to your Workflow with the content below and don't forget to replace the version to the version you wish to install:
+
+       #!/bin/bash
+       set -ex
+       
+       add-apt-repository -y ppa:openjdk-r/ppa
+       apt-get update -qq
+       apt-get install -y openjdk-14-jdk
+       update-java-alternatives -s /usr/lib/jvm/java-1.14.0-openjdk-amd64
+       echo "done"
+2. Start a new build. This **Script** Step can be the very first Step in the Workflow, as it does not depend on anything else.
 
 ## iOS Simulator version & SDK support
 

@@ -9,7 +9,6 @@ menu:
     weight: 4
 
 ---
-{% include not_translated_yet.html %}
 
 ## レスポンス
 

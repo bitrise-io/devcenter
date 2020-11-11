@@ -1,6 +1,12 @@
 ---
+- title: Switching to a Java version not installed on our Android stacks
+  modified: 2020-11-11 00:00:00 +0100
+  changelog: Added a short guide on how to install a specific Java/JDK version which
+    is not installed on our Android stacks.
+  type: update
+  url: "/infrastructure/virtual-machines/#managing-java-versions"
 - title: Managing Organization members
-  modified: 2020-10-30 13:41:49 +0100
+  modified: 2020-10-30T13:41:49.000+01:00
   changelog: Updated the article's screenshots
   type: update
   url: "/team-management/organizations/members-organizations/"

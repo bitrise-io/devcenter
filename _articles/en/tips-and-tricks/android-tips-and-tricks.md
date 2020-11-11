@@ -173,22 +173,4 @@ You can use our Android emulator Steps such as `AVD Manager` and `Wait for Emula
 
    ![{{ page.title }}](/img/wait-for-android-emu.png)
 
-## Installing / Using Java version X
-
-{% include message_box.html type="note" title="Java 8 is pre-installed" content=" Java 8 is the pre-installed Java version on the [bitrise.io](https://www.bitrise.io/) Linux Stack. This section is kept here for future reference, in case you'd need another Java version. "%}
-
-If you need a Java or JDK version which is not preinstalled on the Android stacks, you can follow this guide to install it. This example will install Java/JDK 8 with a `Do anything with Script step`, feel free to adapt it to the version you need.
-
-1. Add the `Do anything with Script step` to your workflow with the content below:
-
-       #!/bin/bash
-       set -ex
-       
-       add-apt-repository -y ppa:openjdk-r/ppa
-       apt-get update -qq
-       apt-get install -y openjdk-8-jdk
-       update-java-alternatives -s /usr/lib/jvm/java-1.8.0-openjdk-amd64
-       echo "done"
-2. Start a new build. This `Script` Step can be the very first step in the Workflow, as it does not depend on anything else.
-
 {% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/dashboard/builds" button_text="Go to Bitrise now" %}
