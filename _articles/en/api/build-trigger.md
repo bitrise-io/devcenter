@@ -9,6 +9,7 @@ description: 'You can trigger and abort builds with the Bitrise API. Define para
   for the build: for example, branch, tag or git commit to use. Custom environment
   variables can be defined as well.'
 redirect_from: []
+summary: ''
 menu:
   api-main:
     weight: 9
@@ -20,7 +21,7 @@ You can trigger and abort builds with the Bitrise API. Define parameters for the
 
 | Endpoints | Function |
 | --- | --- |
-| [POST /apps/{app-slug}/builds](https://api-docs.bitrise.io/#/builds/build-trigger) | Trigger a new build. |
+| POST /apps/{app-slug}/builds | Trigger a new build. |
 
 To trigger a new build with the Bitrise API, call the `/apps/{APP-SLUG}/builds` endpoint. You need to specify an app slug and at least one build parameter in a JSON object:
 
@@ -43,17 +44,15 @@ Here's a minimal sample JSON body which specifies _master_ as the value of the `
 
 And here's an example curl request:
 
-```
-curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
-  '{
-	"hook_info": {
-		"type": "bitrise"
-	},
-	"build_params": {
-		"branch": "master"
-	}
-   }'
-```
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
+      '{
+    	"hook_info": {
+    		"type": "bitrise"
+    	},
+    	"build_params": {
+    		"branch": "master"
+    	}
+       }'
 
 In the above example, we triggered a build of the app's `master` branch.
 
@@ -86,30 +85,28 @@ You can specify several different build parameters when triggering a build. The 
 
 You can set Git-specific parameters in your call. The `branch` parameter specifies the source branch to be built. This is either the branch of the git commit or, in the case of a pull request build, the source branch of the pull request.
 
-```
-curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
-'{
-	"hook_info": {
-		"type": "bitrise"
-	},
-	"build_params": {
-		"branch": "master"
-	}
- }'
-```
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
+    '{
+    	"hook_info": {
+    		"type": "bitrise"
+    	},
+    	"build_params": {
+    		"branch": "master"
+    	}
+     }'
 
 You can also build a specific git commit or even a git tag: you just need to set either the commit hash or the tag in the `build_params` object. You can also set a commit message for the build with the `commit_message` parameter.
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
     '{
-		"hook_info": {
-			"type": "bitrise"
-		},
-		"build_params": {
-			"commit_hash": "0000ffffeeeee",
-			"commit_message": "testing"
-		}
-	 }'
+    	"hook_info": {
+    		"type": "bitrise"
+    	},
+    	"build_params": {
+    		"commit_hash": "0000ffffeeeee",
+    		"commit_message": "testing"
+    	}
+     }'
 
 {% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
 
@@ -129,16 +126,16 @@ To identify the PR itself, use the `pull_request_id` parameter: it takes an inte
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
     '{
-		"hook_info": {
-			"type": "bitrise"
-		},
-		"build_params": {
-			"branch": "the-pr-branch",
-			"branch_dest": "master",
-			"pull_request_id": 133,
-			"commit_hash": "fffff000000eeeeee"
-		}
-	  }'
+    	"hook_info": {
+    		"type": "bitrise"
+    	},
+    	"build_params": {
+    		"branch": "the-pr-branch",
+    		"branch_dest": "master",
+    		"pull_request_id": 133,
+    		"commit_hash": "fffff000000eeeeee"
+    	}
+      }'
 
 If your git provider supports it, you can also use the `pull_request_merge_branch` parameter to build the pre-merged state of the branch of the PR. Another alternative is the `pull_request_head_branch` parameter: this is a special git ref that should point to the source of the PR.
 
@@ -150,16 +147,16 @@ If you have a webhook set up, Bitrise will send status reports to your git provi
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \
     '{
-		"hook_info": {
-			"type": "bitrise"
-		},
-		"build_params": {
-			"branch": "the-pr-branch",
-			"branch_dest": "master",
-			"pull_request_id": 133,
-			"skip_git_status_report": "true"
-		}
-	  }'
+    	"hook_info": {
+    		"type": "bitrise"
+    	},
+    	"build_params": {
+    		"branch": "the-pr-branch",
+    		"branch_dest": "master",
+    		"pull_request_id": 133,
+    		"skip_git_status_report": "true"
+    	}
+      }'
 
 ### Specifying Environment Variables
 
@@ -191,20 +188,20 @@ Add a `workflow_id` parameter to your `build_params` and specify the workflow yo
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d \ 
     '{
-		"hook_info": {
-			"type": "bitrise"
-		},
-		"build_params": {
-			"branch": "master",
-			"workflow_id": "deploy"
-		}
-	  }'
+    	"hook_info": {
+    		"type": "bitrise"
+    	},
+    	"build_params": {
+    		"branch": "master",
+    		"workflow_id": "deploy"
+    	}
+      }'
 
 ## Aborting a build
 
 | Endpoints | Function |
 | --- | --- |
-| [POST /apps/{app-slug}/builds/{build-slug}/abort](https://api-docs.bitrise.io/#/builds/build-abort) | Abort a specific build. |
+| POST /apps/{app-slug}/builds/{build-slug}/abort | Abort a specific build. |
 
 You can abort running builds, and set the reason for aborting, as well as specify if email notifications should be sent about the build.
 
@@ -224,8 +221,8 @@ Normally, aborted builds count as failed builds. Use the `abort_with_success` pa
 
 ### Cancelling email notifications
 
-Depending on your app settings, Bitrise might send an email notification when a build is aborted. If you do not want a notification, set the `skip_notification` parameter to `true`.
+Depending on your app settings, Bitrise might send email notifications to team members when a build is aborted. If you do not want notifications, set the `skip_notifications` parameter to `true`.
 
-    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"skip_notification": true}'
+    curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"skip_notifications": true}'
 
 {% include banner.html banner_text="Try out our API" url="https://api-docs.bitrise.io/#/builds/build-trigger" button_text="Go to Bitrise API" %}
