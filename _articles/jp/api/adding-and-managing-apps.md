@@ -1,7 +1,7 @@
 ---
-changelog: 
-last_modified_at: 
-title: Adding and managing apps
+changelog:
+last_modified_at:
+title: アプリの追加と管理
 redirect_from: []
 date: 2019-04-05T13:32:19.000+00:00
 menu:
@@ -9,71 +9,73 @@ menu:
     weight: 8
 
 ---
-{% include not_translated_yet.html %}
 
-Set up new apps on Bitrise with the API: add the app, generate SSH keys, and set up the app's initial configuration.
+新しいアプリを、API経由でBitriseに登録する: アプリを追加するために使用するSSHキーを生成し、そのアプリの初期設定を行います。
 
-In addition, you can list all apps belonging, for example, to a single user or to a specific organization.
+加えて、ユーザが所有、または特定のオーガナイゼーションに所属する全てのアプリをリストアップできます。
 
-## Adding a new app
+## 新しいアプリの追加
 
-| Endpoints | Function |
+| エンドポイント | 機能 |
 | --- | --- |
-| POST /apps/register | Add a new app. |
-| POST /apps/{app-slug}/register-ssh-key | Add an SSH-key to a specific app. |
-| POST /apps/{app-slug}/finish | Save the application at the end of the application add process. |
-| POST /apps/{app-slug}/bitrise.yml | Upload a new bitrise.yml for your application. |
+| POST /apps/register | 新しいアプリの追加。 |
+| POST /apps/{app-slug}/register-ssh-key | 特定のアプリにSSHキーを追加する。 |
+| POST /apps/{app-slug}/finish | アプリの登録処理を完了する。そのアプリはリストの最後に追加されます。 |
+| POST /apps/{app-slug}/bitrise.yml | 特定のアプリに新しい bitrise.yml をアップロードする。 |
 
-There are three distinct steps to adding an app with the Bitrise API.
+Bitrise APIを使ってアプリを追加するには、3つのステップがあります。
 
-1. Registering the app.
-2. Setting up an SSH key.
-3. Finishing the app registration.
+1. アプリを登録する。
+2. SSHキーを設定する。
+3. アプリの登録を完了する。
 
-Before you start, generate [an SSH keypair](/faq/how-to-generate-ssh-keypair/):
+アプリの登録を始める前に、[SSHキーペア](/faq/how-to-generate-ssh-keypair/)を生成します:
 
     ssh-keygen -t rsa -b 4096 -P '' -f ./bitrise-ssh -m PEM  
 
-Register the app by calling the `register` endpoint and setting all required parameters. You need to set your git provider, the repository URL, the slug of the repository as it appears at the provider, and the slug of the owner of the repository.
+必要な全ての必須パラメータとともに`register` エンドポイントをコールしてアプリを登録します。gitプロバイダ、リポジトリのURL、そのgitプロバイダで表示されているリポジトリのスラッグとそのリポジトリの所有者のスラッグを設定する必要があります。
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/register' -d '{"provider":"github","is_public":false,"repo_url":"git@github.com:api_demo/example-repository.git","type":"git","git_repo_slug":"example-repository","git_owner":"api_demo"}'
 
-If you want to add an app to an organization, you'll have to include the organization at the end of the curl request:
+アプリをオーガナイゼーションに追加したい場合、curlリクエストの最後にそのオーガナイゼーションを含む必要があります:
 
        curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/register' -d '{"provider":"github","is_public":false,"repo_url":"git@github.com:api_demo/example-repository.git","type":"git","git_repo_slug":"example-repository","git_owner":"api_demo","organization_slug":""}'
 
-Once done, call the `register-ssh-key` endpoint to set up the SSH keys you created so that Bitrise can clone your repository when running a build. You can also set whether you want to automatically register the public key at your git provider.
+一度アプリの追加ができたら、事前に生成していたSSHキーを設定するために `register-ssh-key` エンドポイントをコールします。それにより、Bitriseはアプリのビルド実行時にあなたのリポジトリをクローンすることが可能になります。公開鍵をあなたのgitプロバイダに自動で登録したいかどうかも設定できます。
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-ssh-key' -d '{"auth_ssh_private_key":"your-private-ssh-key","auth_ssh_public_key":"your-public-ssh-key","is_register_key_into_provider_service":false}'
 
 Finish the app registration process by calling the `finish` endpoint. This endpoint allows you to configure your applications: set the project type, the stack on which the build will run, and the initial configuration settings.
+`finish` エンドポイントをコールすることで、アプリ登録プロセスを完了させます。このエンドポイントを使用して、次のあなたのアプリの設定をすることができます: プロジェクトのタイプ、どのビルドが将来的に実行されるのかのスタック、初期設定。
 
-You can also set environment variables, as well as immediately specify an organization that will be the owner of the application.
+環境変数も設定することができます。それと同様に、そのアプリのオーナーとなるオーガナイゼーションも設定できます。
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/finish' -d '{"project_type":"ios","stack_id":"osx-vs4mac-stable","config":"default-ios-config","mode":"manual","envs":{"env1":"val1","env2":"val2"},"organization_slug":"e1ec3dea540bcf21"}'
 
-You're done! Your new app is ready.
+全て完了です！新しいアプリの準備ができました。
 
-### Uploading a new bitrise.yml file
+### 新しいbitrise.ymlのアップロード
 
 The `bitrise.yml` file contains the configuration of your builds. You can modify the current one via the API by posting a full YAML configuration. The below example shows a basic `.yml` configuration.
+`bitrise.yml` ファイルはあなたのビルドの設定を含んでいます。API経由でYAML形式の設定をポストすることで、現在の設定を変更することができます。以下の例は基本的な `.yml` 設定です。
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/bitrise.yml' -d '{"app_config_datastore_yaml":"app:\n  envs:\n  - BITRISE_PROJECT_PATH: build.gradle\n    opts:\n      is_expand: false\ndefault_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git\nformat_version: 1.1.9"}'
 
 By calling this endpoint, you replace the app's current `bitrise.yml` file. You can, of course, modify this uploaded `bitrise.yml` either via the API or on the website itself.
+このエンドポイントをコールすることで、そのアプリの現在の `bitrise.yml` ファイルを上書きすることができます。もちろんAPI経由またはウェブサイト上のどちらでも `bitrise.yml` を編集することができます。
 
-## Managing an existing app
+## 既存アプリの管理
 
-| Endpoints | Function |
+| エンドポイント | 機能 |
 | --- | --- |
-| GET /apps | Get list of the apps. |
-| GET /apps/{app-slug} | Get a specific app. |
-| GET /apps/{app-slug}/bitrise.yml | Get the bitrise.yml of a specific app. |
-| GET /apps/{app-slug}/branches | List the branches of an app's repository. |
-| GET /organizations/{org-slug}/apps | Get list of the apps for an organization. |
-| GET /users/{user-slug}/apps | Get list of the apps for a user. |
+| GET /apps | アプリのリストを取得します。 |
+| GET /apps/{app-slug} | 特定のアプリを取得します。 |
+| GET /apps/{app-slug}/bitrise.yml | 特定のアプリのbitrise.ymlを取得します。 |
+| GET /apps/{app-slug}/branches | アプリのリポジトリにあるブランチをリストアップします。 |
+| GET /organizations/{org-slug}/apps | オーガナイゼーションに所属するアプリのリストを取得します。 |
+| GET /users/{user-slug}/apps | ユーザが所有するアプリのリストを取得します。 |
 
-The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL:
+1つもしくは複数のアプリに関連するどのGETリクエストのレスポンスでも、そのアプリのスラッグ、プロジェクトタイプ、gitプロバイダ、そのリポジトリのオーナーとURLを含んでいます:
 
     {
       "data": [
@@ -97,4 +99,4 @@ The response to any GET request regarding one or more applications will contain 
         },
         {
 
-You can also download the existing bitrise.yml file of any app: the response will contain the full YAML configuration.
+どのアプリのbitrise.ymlでもダウンロードすることができます: そのレスポンスは、全てのYAML設定を含みます。
