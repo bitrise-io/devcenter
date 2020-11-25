@@ -14,7 +14,7 @@ menu:
 ---
 このガイドではBitriseでのFlutterアプリのセットアップからテスト、ビルド、デプロイまでの説明します。
 
-FlutterとはAndroidやiOs端末向けアプリケーション開発ツール、モバイルSDKです。BitriseはFlutterアプリをサポートしています:　全てのFlutter needsに応えるべくBitriseには専用のステップがあります。
+FlutterとはAndroidやiOS端末向けアプリケーション開発ツール、モバイルSDKです。BitriseはFlutterアプリをサポートしています:　全てのFlutter needsに応えるべくBitriseには専用のステップがあります。
 
 ## Flutterアプリを追加
 
