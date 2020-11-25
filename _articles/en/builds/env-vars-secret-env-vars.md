@@ -95,9 +95,9 @@ You can **show** and **hide** the value of an Env Var with the **eye** icon. Thi
 
 If you toggle the **Replace variables in inputs** to the right, the new value will be used everywhere in your Workflow.
 
-The **Expose for Pull Request** toggle can be enabled if you want your secrets to be exposed in your build logs in pull requests.
+If builds triggered by Pull Requests need to access Secrets' values, then toggle the **Expose for Pull Request** to the right. This will make Secrets' values available for the build machines. In build logs, however, none of your Secrets' values will be available but printed as [REDACTED].
 
-{% include message_box.html type="important" title="About SENSITIVE label" content=" In the case of [public apps](/adding-a-new-app/public-apps/), Step input fields containing sensitive information are marked with a **SENSITIVE** label and only secret Env Vars can be used there! The **Expose for Pull Request** toggle is by default disabled and cannot be enabled since your secrets must be kept hidden in publicly accessible build logs! "%}
+{% include message_box.html type="important" title="About SENSITIVE label" content=" In the case of [public apps](/adding-a-new-app/public-apps/), Step input fields containing sensitive information are marked with a **SENSITIVE** label and only secret Env Vars can be used there! The **Expose for Pull Request** toggle is by default disabled and cannot be enabled. "%}
 
 Head over to [Secrets](/bitrise-cli/secrets/) for more information on [secret filtering](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli/).
 
