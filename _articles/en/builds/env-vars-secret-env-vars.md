@@ -59,6 +59,8 @@ Read about some useful tricks you can do with Environment Variables:
 
 Secret Env Vars are special type of Env Vars as they hide information in an encrypted format so that your private input is not exposed in the build logs/`bitrise.yml`. Secret Env Vars can be set by adding the Env Var key and the variable in the **Secrets** tab of the Workflow Editor.
 
+{% include message_box.html type="warning" title=".yml size limitations" content="Please note that the total, combined size of the `bitrise.yml` and the  `bitrise.secrets.yml` file cannot exceed 200KB."%}
+
 ### Adding a secret Env Var
 
 You can add a secret Env Var to your Workflow using our **Secrets** tab.
@@ -95,7 +97,7 @@ You can **show** and **hide** the value of an Env Var with the **eye** icon. Thi
 
 If you toggle the **Replace variables in inputs** to the right, the new value will be used everywhere in your Workflow.
 
-If builds triggered by Pull Requests need to access Secrets' values, then toggle the **Expose for Pull Request** to the right. This will make Secrets' values available for the build machines. In build logs, however, none of your Secrets' values will be available but printed as [REDACTED].
+If builds triggered by Pull Requests need to access Secrets' values, then toggle the **Expose for Pull Request** to the right. This will make Secrets' values available for the build machines. In build logs, however, none of your Secrets' values will be available but printed as \[REDACTED\].
 
 {% include message_box.html type="important" title="About SENSITIVE label" content=" In the case of [public apps](/adding-a-new-app/public-apps/), Step input fields containing sensitive information are marked with a **SENSITIVE** label and only secret Env Vars can be used there! The **Expose for Pull Request** toggle is by default disabled and cannot be enabled. "%}
 
