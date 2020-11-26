@@ -18,6 +18,8 @@ menu:
 ---
 The `bitrise.yml` file is the heart of your Bitrise setup: it stores your build configuration, right down to Step input values, the trigger map, and stack information. When you edit your Workflows on the graphical UI of our Workflow Editor, you actually modify the `bitrise.yml` file.
 
+{% include message_box.html type="warning" title=".yml size limitations" content="Please note that the total, combined size of the `bitrise.yml` and the  `bitrise.secrets.yml` file cannot exceed 200KB."%}
+
 There are two ways to manage the `bitrise.yml` file of your app:
 
 * Keep the file in your Git repository: with this solution, you have full control over maintaining and versioning the `bitrise.yml` file.
