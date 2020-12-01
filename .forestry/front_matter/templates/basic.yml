@@ -62,6 +62,7 @@ pages:
 - _articles/en/builds/caching/caching-homebrew-installers.md
 - _articles/en/builds/configuring-notifications.md
 - _articles/en/builds/env-vars-secret-env-vars.md
+- _articles/en/builds/monitoring-your-builds-with-meercode.md
 - _articles/en/builds/remote-access.md
 - _articles/en/builds/rolling-builds.md
 - _articles/en/builds/selective_builds.md
