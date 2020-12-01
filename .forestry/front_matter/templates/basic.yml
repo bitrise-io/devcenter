@@ -282,6 +282,7 @@ pages:
 - _articles/jp/builds/bitrise-checks-on-github-checks.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
 - _articles/jp/builds/configuring-notifications.md
+- _articles/jp/builds/monitoring-your-builds-with-meercode.md
 - _articles/jp/builds/remote-access.md
 - _articles/jp/builds/triggering-builds/approving-pull-request-builds.md
 - _articles/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request.md
