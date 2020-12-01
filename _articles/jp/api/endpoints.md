@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: エンドポイントとAPIのテスト
 redirect_from: []
 date: 2019-03-29T16:53:56.000+00:00
@@ -9,7 +9,6 @@ menu:
     weight: 5
 
 ---
-
 ## エンドポイント
 
 [Bitrise APIエンドポイントリファレンス](https://api-docs.bitrise.io) は全ての利用可能なエンドポイントとそのパラメータをレスポンス情報ととともにリストアップしています。そのエンドポイントを試すこともできます！

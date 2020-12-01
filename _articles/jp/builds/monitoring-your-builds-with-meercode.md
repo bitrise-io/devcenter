@@ -3,6 +3,9 @@ tag: []
 title: Monitoring builds with Meercode
 redirect_from: []
 summary: ''
+menu:
+  builds-main:
+    weight: 36
 
 ---
 {% include not_translated_yet.html %}

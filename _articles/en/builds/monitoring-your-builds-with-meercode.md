@@ -7,6 +7,10 @@ redirect_from: []
 summary: Meercode is a real-time build monitoring, dashboarding, and analytics solution
   for CI/CD processes. It integrates with your Bitrise account smoothly to provide
   your team with valuable insights into your build data.
+menu:
+  builds-main:
+    weight: 35
+    title: Monitoring builds with Meercode
 
 ---
 [Meercode](https://meercode.io) is a real-time build monitoring, dashboarding, and analytics solution for CI/CD pipelines. It integrates with your Bitrise account smoothly to provide your team with valuable insights into your build data.

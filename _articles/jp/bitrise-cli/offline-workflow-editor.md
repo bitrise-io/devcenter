@@ -9,7 +9,6 @@ menu:
     weight: 10
 
 ---
-
 Bitriseワークフローエディターは、[bitrise.io](https://www.bitrise.io/)にログインしなくてもMac / PCでオフラインで実行できるように設計されています。ワークフローエディタはオープンソースです。リポジトリは[ここ](https://github.com/bitrise-io/bitrise-workflow-editor)にあります。[こちら](https://discuss.bitrise.io/t/workflow-editor-v2-open-source-offline-workflow-editor/39)からワークフローエディターに関するディスカッションに参加することもできます。
 
 ## Mac / PCへのオフラインワークフローエディタのインストール
