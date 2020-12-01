@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: アプリの追加と管理
 redirect_from: []
 date: 2019-04-05T13:32:19.000+00:00
@@ -9,7 +9,6 @@ menu:
     weight: 8
 
 ---
-
 新しいアプリを、API経由でBitriseに登録する: アプリを追加するために使用するSSHキーを生成し、そのアプリの初期設定を行います。
 
 加えて、ユーザが所有、または特定のオーガナイゼーションに所属する全てのアプリをリストアップできます。

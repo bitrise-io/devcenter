@@ -1,6 +1,6 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: API
 redirect_from: "/jp/api/v0.1/"
 menu:
@@ -9,7 +9,6 @@ menu:
     weight: 29
 
 ---
-
 Bitrise APIへようこそ！みなさんが私たちのウェブサイトとCLIでご利用している機能の多くはAPI経由でも使用可能です。私たちのCI/CDサービスとともに効率的なパイプラインを使って、Bitrise APIを様々やシステムやサービスに統合することができます。
 
 {% include message_box.html type="warning" title="APIは開発中です" content=" APIは開発中です: 私たちは将来的に、新しいエンドポイントの追加とおそらく既存のエンドポイントの更新を行います。 "%}
