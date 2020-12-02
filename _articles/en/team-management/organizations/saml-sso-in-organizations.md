@@ -161,50 +161,35 @@ Now Org members can only log in via SAML SSO.
 
 ### Can’t enforce SAML SSO on your Organization? 
 
-An Org owner cannot enforce SAML SSO on the Org if Org members have not enabled their SAML SSO connection yet or they enabled SAML SSO with another Org already.
+An Org owner cannot enforce SAML SSO on the Org if Org members have not enabled their SAML SSO connection yet or they enabled SAML SSO with another Org.
 
 Please note that you cannot be a member in two SAML SSO Org on Bitrise. 
 
 ## Logging in via SSO with a Bitrise account
 
-If SAML SSO connection has been already added to your Organization and you are currently logged out of Bitrise, you can easily log into your Organization.
+If the SAML SSO connection has been already added to your Org and you have enabled your SAML SSO connection too, you can easily log in to your Org without having to use a password and email address.
 
 1. Click **Login via SSO** on our [login page](https://app.bitrise.io/users/sign_in). ![{{ page.title }}](/img/login-via-sso.jpg)
-2. You will be redirected to the **Initiate Single Sign-on page**.
-3. Provide your Organization name.
-4. Click **Continue to log in**. You will be redirected to your own SSO provider's page.
-5. Provide your email address associated with the Organization in Bitrise and follow your SAML SSO provider's instructions.
+2. You will be redirected to the **Initiate Single Sign-On page**.
+3. Provide your Org name in the **Bitrise Organization’s Name** field.
+4. Click **Continue with SSO** to log in. 
+   1. If you’re logged in on your SSO provider site, you will be automatically landing on your Bitrise Dashboard. 
+   2. If you’re logged out on your SSO provider site, you will be redirected there to log in. After successful login, you will be redirected to your Bitrise dashboard.
 
-{% include message_box.html type="info" title="Expired SAML SSO certificate" content=" If your SAML SSO certificate has expired and you cannot log into Bitrise through SAML SSO, we advise you to contact our Support team, who will be happy to assist you "%}
-
-## Signing up to Bitrise with SAML SSO
-
-If you do not have a Bitrise account yet and an Organization owner invites you to their Organization via email, you can easily sign up to Bitrise and connect to the respective Organization. Our **Sign In via SSO** email is Organization-specific so you're just a couple of clicks away from accessing the right Bitrise Organization!
-
-1. Find the invitation email you got from Bitrise (letsconnect@bitrise.io) in your mailbox.
-
-   (If you received an URL instead of an email from the Organization owner, have no fear! Opening the link in a new tab will take you to the **Almost there...** page. Follow the instructions there. You will receive a confirmation email from Bitrise which will include a link to complete the sign-up procedure.)
-2. Click **Sign In via SSO** or copy the provided URL in a new tab to acknowledge the connection. You will be redirected to your own SAML SSO provider's site.
-3. Provide your email address. (It should be the same email address where you received the invitation.)
-4. Follow your SAML SSO provider's instructions.
-5. You will be redirected to our **Almost there...** page.
-6. Provide a username you wish to use in Bitrise.
-7. Click **Finish Signing Up** to complete your sign up.
-
-If all goes well, you land on our Bitrise Dashboard.
-
-## Disabling SAML SSO
-
-Organization owners can disable an established SAML SSO for the Organization with a click of a button on the **Single Sign On** tab. Please note that if you delete someone from your IDP, you have to delete that Organization member from Bitrise as well.
+{% include message_box.html type="info" title="Expired SAML SSO certificate" content=" If your SAML SSO certificate has expired and you cannot log into Bitrise through SAML SSO, we advise you to contact our Support team, who will be happy to assist you. "%}
 
 ### Disabling an Organization's SAML SSO
 
-1. Go to the **Single Sign On** tab of your Organization.
+The **Single Sign-On** page is available for Org owners only. There you can see the red **Disable SSO** button. If you disable SAML SSO, Org members will be able to sign in with the regular sign-in procedure.
+
+1. Go to the **Single Sign-On** tab of your Org.
 2. Click **Disable SSO**.
 
    A confirmation pop-up appears where you can confirm/cancel your action. Please note that by clicking the **Disable SSO** button, you will disable SAML SSO for all Organization members. Once it's done, Org members will be able to log in through their normal Bitrise credentials.
 
 ![{{ page.title }}](/img/disable-sso.png)
+
+{% include message_box.html type="note" title="How to disable when SAML SSO is enforced?" content="If SAML SSO has been enforced on the Org before, you have to first toggle the **Enforce SAML SSO** toggle to the left and then click the **Disable SSO** button."%}
 
 You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bitrise.io) which confirms the disabled SAML SSO for the Organization.
 
@@ -212,11 +197,12 @@ You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bi
 
 ### Disabling one Organization member's SAML SSO
 
-Please note if you click the **x** next to an Organization member's name, you remove that person from the Organization but their SAML SSO is yet to be disabled!
+If you are on Org owner, you can disable an Org member’s SAML SSO connection to the Org on Bitrise.
 
-1. Go to your SAML SSO provider's site.
-2. Disable the Organization member there. Please note that if you fail to do this, the Org member will able to re-authenticate again to Bitrise using the IDP connection.
+There are three ways for Org owners to disable a member from the SAML SSO Org.
 
-![{{ page.title }}](/img/disbale-sso-enabled-status.png)
+* Remove the user from the SAML users group by clicking the red **x** symbol next to the name on the Groups tab.
+* Remove the user from the Org.
+* Remove the user from the IDP which means the user would not be able to log in with SAML SSO any more.
 
 {% include banner.html banner_text="Let's configure SAML SSO to your Organization!" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your Organization" %}
