@@ -175,8 +175,8 @@ If the SAML SSO connection has been already added to your Org and you have enabl
 2. You will be redirected to the **Initiate Single Sign-On page**.
 3. Provide your Org name in the **Bitrise Organization’s Name** field.![](/img/initiate-single-sign-on.jpg)
 4. Click **Continue with SSO** to log in.
-   1. If you’re logged in on your SSO provider site, you will be automatically landing on your Bitrise Dashboard.
-   2. If you’re logged out on your SSO provider site, you will be redirected there to log in. After successful login, you will be redirected to your Bitrise dashboard.
+   * If you’re logged in on your SSO provider site, you will be automatically landing on your Bitrise Dashboard.
+   * If you’re logged out on your SSO provider site, you will be redirected there to log in. After successful login, you will be redirected to your Bitrise dashboard.
 
 {% include message_box.html type="info" title="Expired SAML SSO certificate" content=" If your SAML SSO certificate has expired and you cannot log into Bitrise through SAML SSO, we advise you to contact our Support team, who will be happy to assist you. "%}
 
