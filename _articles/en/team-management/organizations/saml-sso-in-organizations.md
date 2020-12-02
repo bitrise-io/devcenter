@@ -194,7 +194,7 @@ The **Single Sign-On** page is available for Org owners only. There you can see 
 
 You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bitrise.io) which confirms the disabled SAML SSO for the Organization.
 
-![{{ page.title }}](/img/disabled-sso-email.png)
+![](/img/samlssodisabledemail.png)
 
 ### Disabling one Organization member's SAML SSO
 
