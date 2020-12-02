@@ -1,6 +1,13 @@
 ---
+- title: Monitoring your builds with Meercode
+  modified: 2020-12-01 15:00:00 +0100
+  changelog: Meercode is a real-time build monitoring, dashboarding, and analytics
+    solution for CI/CD processes. It integrates with your Bitrise account smoothly
+    to provide your team with valuable insights into your build data.
+  type: new
+  url: "/builds/monitoring-your-builds-with-meercode/"
 - title: Basics of bitrise.yml
-  modified: 2020-11-26 15:00:00 +0100
+  modified: 2020-11-26T15:00:00.000+01:00
   changelog: 'Corrected a note about the size limit of the bitrise.yml and the bitrise.secrets.yml
     file: their combined size cannot exceed 200 KB.'
   type: fix
