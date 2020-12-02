@@ -56,7 +56,7 @@ To monitor your builds:
   ![](/img/meercode4.jpg)
 * The **Share** button on the top-right corner allows you to create public links to view your dashboard. These secret links can be securely shared with your team members.
 
-# CI Build Insights
+## CI Build Insights
 
 1. Open the **Insights** tab to access reports summarized from your historical build data.  
    ![](/img/meercode5.jpeg)
