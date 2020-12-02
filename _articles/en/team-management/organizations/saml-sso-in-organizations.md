@@ -86,7 +86,7 @@ Now that the Org owner has set up SAML SSO, everyone in the Org has to authorize
 
      Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.![](/img/noconnectedsamlsso.png)
 
-If all went well, you should be landing on our Bitrise Dashboard. As an Org owner, you might want to check how Org members are progressing with their SAML SSO connection \[check Org member’s SAML SSO statuses\](link) or invite new members to the Org.
+If all went well, you should be landing on our Bitrise Dashboard. As an Org owner, you might want to check how Org members are progressing with their SAML SSO connection [check Org member’s SAML SSO statuses ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)or [invite new members to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso).
 
 ## Inviting new Org members with SAML SSO
 
@@ -176,7 +176,7 @@ If the SAML SSO connection has been already added to your Org and you have enabl
 3. Provide your Org name in the **Bitrise Organization’s Name** field.![](/img/initiate-single-sign-on.jpg)
 4. Click **Continue with SSO** to log in.
    * If you’re logged in on your SSO provider site, you will be automatically landing on your Bitrise Dashboard.
-   * If you’re logged out on your SSO provider site, you will be redirected there to log in. After successful login, you will be redirected to your Bitrise dashboard.
+   * If you’re logged out on your SSO provider site, you will be redirected there to log in. After the successful login, you will be redirected to your Bitrise dashboard.
 
 {% include message_box.html type="info" title="Expired SAML SSO certificate" content=" If your SAML SSO certificate has expired and you cannot log into Bitrise through SAML SSO, we advise you to contact our Support team, who will be happy to assist you. "%}
 
@@ -200,10 +200,10 @@ You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bi
 
 If you are on Org owner, you can disable an Org member’s SAML SSO connection to the Org on Bitrise.
 
-There are three ways for Org owners to disable a member from the SAML SSO Org.
+There are three ways for Org owners to disable a member from the SAML SSO Org:
 
 * Remove the user from the SAML users group by clicking the red **x** symbol next to the name on the Groups tab.
 * Remove the user from the Org.
-* Remove the user from the IDP which means the user would not be able to log in with SAML SSO any more.
+* Remove the user from the SAML SSO provider which means the user would not be able to log in with SAML SSO any more.
 
 {% include banner.html banner_text="Let's configure SAML SSO to your Organization!" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your Organization" %}
