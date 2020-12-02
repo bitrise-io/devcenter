@@ -22,7 +22,7 @@ menu:
 
 Organization members can log in to a Bitrise Organization (Org) using their own SAML SSO provider’s system. With SAML SSO, Orgs will be able to apply the security guidelines of their SAML SSO provider when accessing their Bitrise Organization.
 
-{% include message_box.html type="important" title="SAML SSO with Org Elite and Velocity plans" content="Please note that SAML SSO is only available for Org with [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org.
+{% include message_box.html type="important" title="SAML SSO with Org Elite and Velocity plans" content="Please note that SAML SSO is only available for an Org with the [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org.
 
 Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you decide to downgrade, you will lose this feature. All Org members will receive an email about the downgrade and you’ll have two weeks to re-upgrade to the Org Elite plan if you wish to use SAML SSO in your Org again.
 
@@ -33,8 +33,8 @@ Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you d
 Before connecting SAML SSO to your Organization, make sure:
 
 * You have a SAML SSO provider (Identity Provider) that you can connect Bitrise to and the administrator to the SAML SSO provider is at hand.
-* Your account on Bitrise has an Org with [Org Elite or Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
-* As with other [Org management actions](https://devcenter.bitrise.io/team-management/organizations/members-organizations/), only the Org owner can set up SAML SSO to a Bitrise Org.
+* Your account on Bitrise has an Org with [Org Elite or Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
+* As with other [Org management actions](/team-management/organizations/members-organizations/), only the Org owner can set up SAML SSO to a Bitrise Org.
 
 ## Navigating to the Single Sign-On page of Bitrise
 
@@ -44,16 +44,16 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
    ![](/img/account-settings-dropdown.jpg)
 2. The **Overview** page displays all the Org you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enable-single-sign-on-1.jpg)
-4. Continue with setting up SAML SSO for your Org on Bitrise.
+4. Continue with [setting up SAML SSO for your Org on Bitrise](/team-management/organizations/saml-sso-in-organizations/#setting-up-saml-sso-for-a-bitrise-organization).
 
 {% include message_box.html type="info" title="Specific guides about connecting Bitrise and an SAML SSO provider" content="Bitrise can be connected to a bunch of SAML SSO providers. Check out our detailed guides on how to set them up:
 
-* [Setting up Azure AD SSO for Bitrise](https://devcenter.bitrise.io/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/)
-* [Setting up Google SSO for Bitrise](https://devcenter.bitrise.io/team-management/organizations/setting-up-google-sso-for-bitrise/)
-* [Setting up Idaptive SAML SSO for Bitrise](https://devcenter.bitrise.io/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/)
-* [Setting up Okta SSO for Bitrise](https://devcenter.bitrise.io/team-management/organizations/setting-up-okta-sso-for-bitrise/)
-* [Setting up OneLogin SSO for Bitrise](https://devcenter.bitrise.io/team-management/organizations/setting-up-onelogin-sso-for-bitrise/)
-* [Setting up Ping Identity SSO for Bitrise](https://devcenter.bitrise.io/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise/)"%}
+* [Setting up Azure AD SSO for Bitrise](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/)
+* [Setting up Google SSO for Bitrise](/team-management/organizations/setting-up-google-sso-for-bitrise/)
+* [Setting up Idaptive SAML SSO for Bitrise](/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/)
+* [Setting up Okta SSO for Bitrise](/team-management/organizations/setting-up-okta-sso-for-bitrise/)
+* [Setting up OneLogin SSO for Bitrise](/team-management/organizations/setting-up-onelogin-sso-for-bitrise/)
+* [Setting up Ping Identity SSO for Bitrise](/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise/)"%}
 
 ## Setting up SAML SSO for a Bitrise Organization
 
