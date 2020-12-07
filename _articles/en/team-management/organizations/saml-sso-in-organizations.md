@@ -167,7 +167,7 @@ An Org owner cannot enforce SAML SSO on the Org if Org members have not enabled 
 
 Please note that you cannot be a member in two SAML SSO Org on Bitrise.![](/img/cantenforce.png)
 
-## Logging in via SSO with a Bitrise account
+## Logging in via SAML SSO with a Bitrise account
 
 If the SAML SSO connection has been already added to your Org and you have enabled your SAML SSO connection too, you can easily log in to your Org without having to use a password and email address.
 
