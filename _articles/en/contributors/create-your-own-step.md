@@ -357,7 +357,7 @@ There are three properties that define whether a Step is run in a given Workflow
 
 `run_if`: If you want to make Step execution dependent on a certain condition, use the `run_if` property to define the run condition. For example, you can configure a Step so that it only runs in a CI environment. Read more in our [Enabling or disabling a Step conditionally](/steps-and-workflows/disable-a-step-by-condition/) guide about the possible use cases.
 
-## Submodules and step dependencies
+## Submodules and Step dependencies
 
 Do not use submodules, or require any other resource downloaded on-demand in your Step! Try to include everything required for your Step in the Step's repository. Otherwise you can run into problems if, say, the Step fails to download a resource because of a network error or some authorization problem. In the case of submodules, you should include the content of the other repository instead of using it as a submodule of your Step's repository.
 
@@ -387,7 +387,15 @@ Steps can define dependencies which need to be available on the host machine but
 
 Currently, the only supported `check_only` dependency is `xcode`.
 
-Other dependencies need to be installed and checked while the step is running or using other steps.
+Other dependencies need to be installed and checked while the Step is running or using other Steps.
+
+### Accessing files in the Step repo with an Env Var
+
+If you need to keep a binary, assets or anything else required for your Step that should be bundled in the Step repository, then you can include them beside your `step.yml` file and the code of your Step. The Bitrise CLI automatically exports an Environment Variable called `BITRISE_STEP_SOURCE_DIR` that allows you to access these files at any time. 
+
+For example, you can access a `.jar` file in the root of your Step's repository like this:
+
+`$BITRISE_STEP_SOURCE_DIR/mytool.jar`
 
 ## Adding a Step icon
 
