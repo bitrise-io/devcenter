@@ -178,7 +178,7 @@ If the SAML SSO connection has been already added to your Org and you have enabl
    * If you’re logged in on your SSO provider site, you will be automatically landing on your Bitrise Dashboard.
    * If you’re logged out on your SSO provider site, you will be redirected there to log in. After the successful login, you will be redirected to your Bitrise dashboard.
 
-{% include message_box.html type="info" title="Expired SAML SSO certificate" content=" If your SAML SSO certificate has expired and you cannot log into Bitrise through SAML SSO, we advise you to contact our Support team, who will be happy to assist you. "%}
+{% include message_box.html type="info" title="Expired SAML SSO certificate" content=" If your SAML SSO certificate has expired, and you cannot log into Bitrise through SAML SSO, you can contact our Support team to help you log in. "%}
 
 ### Disabling an Organization's SAML SSO
 
