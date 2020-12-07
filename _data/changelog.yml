@@ -1,6 +1,11 @@
 ---
+- title: 'Logging in via SSO with a Bitrise account '
+  modified: 2020-12-07 00:00:00 +0100
+  changelog: Corrected a note about expired certificates in our SAML SSO guide.
+  type: fix
+  url: "/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-with-a-bitrise-account"
 - title: SAML SSO in Organizations
-  modified: 2020-12-02 00:00:00 +0100
+  modified: 2020-12-02T00:00:00.000+01:00
   changelog: Inviting to an Organization via SAML SSO has been added to the article
     along with some general updates.
   type: update
