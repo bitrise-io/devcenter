@@ -21,6 +21,7 @@
     <p>Check out Bitrise's fast and efficient deployment solution!</p>
   </a>
 </div>
+
 <div class="changelog-container" id="changelog-container-id">
 {% assign changeCounter = 0 %}
 {% assign maxArticles = 12 %}
@@ -28,6 +29,7 @@
   {% assign changeCounter = changeCounter | plus: 1 %}
   {% if changeCounter == 1 %}
   <title class="changelog-container-title">Latest changes in the docs</title>
+  <div class="changelog-full-link"><a href="/changelog/" target="_blank">Click here for the full changelog</a></div>
   {% endif %}
       <div class="changelog-content">
         <div class="changelog-content-title">
