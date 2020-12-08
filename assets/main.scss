@@ -708,6 +708,16 @@ main.content {
 		font-size: 2rem;
 		color: #351d48;
 	}
+  
+	.changelog-full-link {
+		display: block;
+		background-color: #ececec;
+		padding-left: 2rem;
+		padding-bottom: 1rem;
+		font-weight: bold;
+		font-size: 1.5rem;
+		color: #351d48;
+	}
 
 	.changelog-content-container {
 		display: flex;
