@@ -51,17 +51,23 @@ These Environment Variables are available for builds running on [bitrise.io](htt
 
 {% include collapse.html title="$BITRISE_APP_URL" content="`$BITRISE_APP_URL`: The URL or your app on [bitrise.io](https://www.bitrise.io). This is not the same as the git repository URL! An app URL has the following format:
 
-`app.bitrise.io/APP-SLUG/`"%}
+`app.bitrise.io/APP-SLUG/`
 
-{% include collapse.html title="$BITRISE_APP_SLUG" content="`$BITRISE_APP_SLUG`: The slug that uniquely identifies your app on [bitrise.io](https://www.bitrise.io). It's part of the app URL, too. "%}
+For example: https://app.bitrise.io/app/31e481ce08e0xfd9". This is not a real app URL, of course: a genuine URL can't contain an x.%}
+
+{% include collapse.html title="$BITRISE_APP_SLUG" content="`$BITRISE_APP_SLUG`: The slug that uniquely identifies your app on [bitrise.io](https://www.bitrise.io). It's part of the app URL, too. 
+
+For example, let's take a look at this app URL: https://app.bitrise.io/app/31e481ce08e0xfd9. The app slug is `31e481ce08e0xfd9` in this example. This is not a real app URL and app slug, of course: a genuine slug can't contain an x."%}
 
 {% include collapse.html title="$BITRISE_BUILD_URL" content="`$BITRISE_BUILD_URL`: The URL of the build on [bitrise.io](https://www.bitrise.io). A build URL has the following format:
 
-`app.bitrise.io/build/BUILD-SLUG`"%}
+`app.bitrise.io/build/BUILD-SLUG`
+
+For example: https://app.bitrise.io/build/d75abbebxfc9ca4e. This is not a real build URL, of course: a genuine URL can't contain an x in the build slug."%}
 
 {% include collapse.html title="$BITRISE_BUILD_SLUG" content="`$BITRISE_BUILD_SLUG`: The slug that uniquely identifies a build on [bitrise.io](https://www.bitrise.io). It's part of the build URL, too. 
 
-For example, let's take a look at this build URL: https://app.bitrise.io/build/d65abbebxfc9ca4e. The build slug is `d65abbebxfc9ca4e` in this example. This is not a real build URL and build slug, of course: a genuine URL can't contain an x."%}
+For example, let's take a look at this build URL: https://app.bitrise.io/build/d75abbebxfc9ca4e. The build slug is `d65abbebxfc9ca4e` in this example. This is not a real build URL and build slug, of course: a genuine URL can't contain an x."%}
 
 {% include collapse.html title="$BITRISE_BUILD_TRIGGER_TIMESTAMP" content="`$BITRISE_BUILD_TRIGGER_TIMESTAMP`: The date and time when the build was triggered."%}
 
