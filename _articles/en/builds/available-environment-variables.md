@@ -22,7 +22,7 @@ These Environment Variables are available everywhere, even if you run the build 
 
 {% include collapse.html title="$BITRISE_TRIGGERED_WORKFLOW_ID" content="`$BITRISE_TRIGGERED_WORKFLOW_ID`: The ID of the Workflow that was triggered. This env var is exposed regardless of whether the Workflow was triggered manually or automatically. "%}
 
-{% include collapse.html title="$BITRISE_TRIGGERED_WORKFLOW_TITLE" content="`$BITRISE_TRIGGERED_WORKFLOW_TITLE`: The title of the Workflow that was triggered - if it has a title, which is completely optional. This env var is exposed regardless of whether the Workflow was triggered manually or automatically." %}
+{% include collapse.html title="$BITRISE_TRIGGERED_WORKFLOW_TITLE" content="`$BITRISE_TRIGGERED_WORKFLOW_TITLE`: The title of the Workflow that was triggered - if it has a title, which is completely optional. This Env Var is exposed regardless of whether the Workflow was triggered manually or automatically." %}
 
 {% include collapse.html title="$BITRISE_BUILD_STATUS" content="`$BITRISE_BUILD_STATUS`: The current status of the build. The available options are:
 
@@ -59,15 +59,19 @@ These Environment Variables are available for builds running on [bitrise.io](htt
 
 `app.bitrise.io/build/BUILD-SLUG`"%}
 
-{% include collapse.html title="$BITRISE_BUILD_SLUG" content="`$BITRISE_BUILD_SLUG`: The slug that uniquely identifies a build on [bitrise.io](https://www.bitrise.io). It's part of the build URL, too. "%}
+{% include collapse.html title="$BITRISE_BUILD_SLUG" content="`$BITRISE_BUILD_SLUG`: The slug that uniquely identifies a build on [bitrise.io](https://www.bitrise.io). It's part of the build URL, too. 
+
+For example, let's take a look at this build URL: https://app.bitrise.io/build/d65abbebxfc9ca4e. The build slug is `d65abbebxfc9ca4e` in this example. This is not a real build URL and build slug, of course: a genuine URL can't contain an x."%}
 
 {% include collapse.html title="$BITRISE_BUILD_TRIGGER_TIMESTAMP" content="`$BITRISE_BUILD_TRIGGER_TIMESTAMP`: The date and time when the build was triggered."%}
 
-{% include collapse.html title="$GIT_REPOSITORY_URL" content="`$GIT_REPOSITORY_URL`: The URL of the Git repository that hosts your app. This can be changed in the **Settings** tab of the app. "%}
+{% include collapse.html title="$GIT_REPOSITORY_URL" content="`$GIT_REPOSITORY_URL`: The URL of the Git repository that hosts your app. This can be changed in the **Settings** tab of the app. It can be in either SSH or HTTPS format."%}
 
 {% include collapse.html title="$BITRISE_GIT_BRANCH" content="`$BITRISE_GIT_BRANCH`: The git branch that is built by Bitrise. For example, `master`. "%}
 
-{% include collapse.html title="$BITRISEIO_GIT_BRANCH_DEST" content="`$BITRISEIO_GIT_BRANCH_DEST`: Used only with builds triggered by pull requests: the destination/target branch of the pull request that triggered the build. "%}
+{% include collapse.html title="$BITRISEIO_GIT_BRANCH_DEST" content="`$BITRISEIO_GIT_BRANCH_DEST`: Used only with builds triggered by pull requests: the destination/target branch of the pull request that triggered the build. 
+
+For example, a pull request wants to merge the content of a branch into the branch `master`. In this case, this Env Var's value is `master`. "%}
 
 {% include collapse.html title="$BITRISE_GIT_TAG" content="`$BITRISE_GIT_TAG`: You can [use Git Tags to trigger builds](/builds/triggering-builds/trigger-git-tags/) on Bitrise: this Env Var stores the tag used to trigger the build. "%}
 
