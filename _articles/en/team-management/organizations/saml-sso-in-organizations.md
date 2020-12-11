@@ -86,7 +86,7 @@ Now that the Org owner has set up SAML SSO, everyone in the Org has to authorize
 
      Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.![](/img/noconnectedsamlsso.png)
 
-If all went well, you should be landing on our Bitrise Dashboard. As an Org owner, you might want to check how Org members are progressing with their SAML SSO connection [check Org member’s SAML SSO statuses ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)or [invite new members to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso).
+If all went well, you should be landing on our Bitrise Dashboard. As an Org owner, you might want to check how Org members are progressing with their SAML SSO connection: [check Org member’s SAML SSO statuses ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)or [invite new members to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso).
 
 ## Inviting new Org members with SAML SSO
 
@@ -180,9 +180,9 @@ If the SAML SSO connection has been already added to your Org and you have enabl
 
 {% include message_box.html type="info" title="Expired SAML SSO certificate" content=" If your SAML SSO certificate has expired, and you cannot log into Bitrise through SAML SSO, you can contact our Support team to help you log in. "%}
 
-### Disabling an Organization's SAML SSO
+## Disabling an Organization's SAML SSO
 
-The **Single Sign-On** page is available for Org owners only. There you can see the red **Disable SSO** button. If you disable SAML SSO, Org members will be able to sign in with the regular sign-in procedure.
+The Single Sign-On page is available for Org owners only. There you can see the red Disable SSO button. If you disable SAML SSO, Org members will be able to sign in with the regular sign-in procedure.
 
 1. Go to the **Single Sign-On** tab of your Org.
 2. Click **Disable SSO**.
