@@ -24,10 +24,22 @@ Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you d
 
 "%}
 
-This requires:
+## Before you start
 
-* An Okta administrator who is logged into Okta
-* A Bitrise Organization owner who is logged into their Bitrise Organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams))
+Before connecting SAML SSO to your Organization, make sure:
+
+* An Okta administrator who is logged into Okta.
+* Your account on Bitrise has an Org with [Org Elite or Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
+* As with other [Org management actions](/team-management/organizations/members-organizations/), only the Org owner can set up SAML SSO to a Bitrise Org.
+
+## Navigating to the Single Sign-On page of Bitrise
+
+If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between Okta and your Bitrise Org.
+
+1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
+2. The **Overview** page displays all the Org you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
+3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enable-single-sign-on-1.jpg)
+4. Continue with[ Adding Bitrise to Okta](/team-management/organizations/setting-up-okta-sso-for-bitrise/#adding-bitrise-to-okta).
 
 ## Adding Bitrise to Okta
 
