@@ -97,7 +97,7 @@ Congrats! Bitrise has been successfully added to Okta as an app.
 4. Click **Configure SSO** on your Bitrise Organization.
 5. Continue with Authorizing SAML SSO.
 
-## Enabling SAML SSO on Bitrise
+## Authorizing SAML SSO
 
 Now that the Org owner has set up SAML SSO, everyone in the Org has to authorize SAML SSO before logging in to their Org via SAML SSO.
 
