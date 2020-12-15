@@ -95,7 +95,7 @@ Congrats! Bitrise has been successfully added to Okta as an app.
 
    If you haven't pasted the Certificate into the respective field of your Bitrise Organization yet, you can do so now as it is displayed on this page.
 4. Click **Configure SSO** on your Bitrise Organization.
-5. Continue with Authorizing SAML SSO.
+5. Continue with [Authorizing SAML SSO](/team-management/organizations/setting-up-okta-sso-for-bitrise/#authorizing-saml-sso).
 
 ## Authorizing SAML SSO
 
@@ -119,8 +119,8 @@ If all went well, you should be landing on our Bitrise Dashboard. As an Org owne
 
 Learn how you can:
 
-* [Check out Org member’s SAML SSO statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up. 
+* [Check out Org member’s SAML SSO statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
 * [Invite new members with SAML SSO.](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso)
-* [Enforce SAML SSO login](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) to the Org once all Org members have authorized their SAML SSO connection to the Org. 
-* [Log into your Org](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account) now that SAML SSO is set up. 
-* Disable SAML SSO on an Org.
+* [Enforce SAML SSO login](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) to the Org once all Org members have authorized their SAML SSO connection to the Org.
+* [Log into your Org](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account) now that SAML SSO is set up.
+* [Disable SAML SSO](/team-management/organizations/saml-sso-in-organizations/#disabling-an-organizations-saml-sso) on an Org.
