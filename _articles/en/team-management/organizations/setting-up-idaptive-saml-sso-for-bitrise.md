@@ -14,7 +14,7 @@ menu:
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Idaptive](https://www.idaptive.com/ "https://www.idaptive.com/").
 
-% include message_box.html type="important" title="SAML SSO with Org Elite and Velocity plans" content="Please note that SAML SSO is only available for an Org with the [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org.
+{% include message_box.html type="important" title="SAML SSO with Org Elite and Velocity plans" content="Please note that SAML SSO is only available for an Org with the [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org.
 
 Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you decide to downgrade, you will lose this feature. All Org members will receive an email about the downgrade and you’ll have two weeks to re-upgrade to the Org Elite plan if you wish to use SAML SSO in your Org again.
 
@@ -36,7 +36,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
 2. The **Overview** page displays all the Org you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enable-single-sign-on-1.jpg)
-4. Continue with Getting configuration information from Idaptive.
+4. Continue with [Getting configuration information from Idaptive](/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/#getting-configuration-information-from-idaptive).
 
 ## Getting configuration information from Idaptive
 
@@ -68,7 +68,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 12. Go to **Permissions** and click the **Add** button. In the **Select User, Group, or Role** popup, type the user name you want to add to the SAML app. Select it and hit **Add**. Save your changes. This will change the status of your Bitrise SAML app to **Deployed**.
 
     ![{{ page.title }}](/img/step10.png)
-13. Continue with Authorizing SAML SSO.
+13. Continue with [Authorizing SAML SSO](/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/#authorizing-saml-sso).
 
 ## Authorizing SAML SSO
 
@@ -96,4 +96,4 @@ Learn how you can:
 * [Invite new members with SAML SSO.](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso)
 * [Enforce SAML SSO login](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) to the Org once all Org members have authorized their SAML SSO connection to the Org.
 * [Log into your Org](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account) now that SAML SSO is set up.
-* Disable SAML SSO on an Org.
+* [Disable SAML SSO on an Org](/team-management/organizations/saml-sso-in-organizations/#disabling-an-organizations-saml-sso).
