@@ -53,9 +53,9 @@ These Environment Variables are available for builds running on [bitrise.io](htt
 
 `app.bitrise.io/APP-SLUG/`
 
-For example: https://app.bitrise.io/app/31e481ce08e0xfd9". This is not a real app URL, of course: a genuine URL can't contain an x.%}
+For example: https://app.bitrise.io/app/31e481ce08e0xfd9. This is not a real app URL, of course: a genuine URL can't contain an x."%}
 
-{% include collapse.html title="$BITRISE_APP_SLUG" content="`$BITRISE_APP_SLUG`: The slug that uniquely identifies your app on [bitrise.io](https://www.bitrise.io). It's part of the app URL, too. 
+{% include collapse.html title="$BITRISE_APP_SLUG" content="`$BITRISE_APP_SLUG`: The slug that uniquely identifies your app on [bitrise.io](https://www.bitrise.io). It's part of the app URL, too.
 
 For example, let's take a look at this app URL: https://app.bitrise.io/app/31e481ce08e0xfd9. The app slug is `31e481ce08e0xfd9` in this example. This is not a real app URL and app slug, of course: a genuine slug can't contain an x."%}
 
@@ -65,7 +65,7 @@ For example, let's take a look at this app URL: https://app.bitrise.io/app/31e48
 
 For example: https://app.bitrise.io/build/d75abbebxfc9ca4e. This is not a real build URL, of course: a genuine URL can't contain an x in the build slug."%}
 
-{% include collapse.html title="$BITRISE_BUILD_SLUG" content="`$BITRISE_BUILD_SLUG`: The slug that uniquely identifies a build on [bitrise.io](https://www.bitrise.io). It's part of the build URL, too. 
+{% include collapse.html title="$BITRISE_BUILD_SLUG" content="`$BITRISE_BUILD_SLUG`: The slug that uniquely identifies a build on [bitrise.io](https://www.bitrise.io). It's part of the build URL, too.
 
 For example, let's take a look at this build URL: https://app.bitrise.io/build/d75abbebxfc9ca4e. The build slug is `d65abbebxfc9ca4e` in this example. This is not a real build URL and build slug, of course: a genuine URL can't contain an x."%}
 
@@ -75,7 +75,7 @@ For example, let's take a look at this build URL: https://app.bitrise.io/build/d
 
 {% include collapse.html title="$BITRISE_GIT_BRANCH" content="`$BITRISE_GIT_BRANCH`: The git branch that is built by Bitrise. For example, `master`. "%}
 
-{% include collapse.html title="$BITRISEIO_GIT_BRANCH_DEST" content="`$BITRISEIO_GIT_BRANCH_DEST`: Used only with builds triggered by pull requests: the destination/target branch of the pull request that triggered the build. 
+{% include collapse.html title="$BITRISEIO_GIT_BRANCH_DEST" content="`$BITRISEIO_GIT_BRANCH_DEST`: Used only with builds triggered by pull requests: the destination/target branch of the pull request that triggered the build.
 
 For example, a pull request wants to merge the content of a branch into the branch `master`. In this case, this Env Var's value is `master`. "%}
 
