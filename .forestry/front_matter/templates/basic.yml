@@ -256,6 +256,7 @@ pages:
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/exporting-to-test-reports-from-custom-script-steps.md
 - _articles/en/testing/installing-an-ipa-file-from-the-public-install-page.md
+- _articles/en/testing/measuring-your-code-coverage-with-codecov.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/testing/test-reports.md
@@ -306,6 +307,7 @@ pages:
 - _articles/jp/team-management/organizations/setting-up-ping-identity-sso-for-bitrise.md
 - _articles/jp/testing/exporting-to-test-reports-from-custom-script-steps.md
 - _articles/jp/testing/installing-an-ipa-file-from-the-public-install-page.md
+- _articles/jp/testing/measuring-your-code-coverage-with-codecov.md
 - _articles/jp/testing/test-reports.md
 - _articles/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars.md
 - _articles/jp/tips-and-tricks/screen-recording-your-ui-tests-with-appium.md

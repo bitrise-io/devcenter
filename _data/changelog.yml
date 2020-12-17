@@ -1,6 +1,12 @@
 ---
+- title: Measuring your code coverage with Codecov on Bitrise
+  modified: 2020-12-17 00:00:00 +0100
+  changelog: " Codecov integrates directly with Bitrise to provide valuable insights
+    on code quality to allow you to ship healthier code with less risk."
+  type: new
+  url: "/testing/measuring-your-code-coverage-with-codecov/"
 - title: 'Logging in via SSO with a Bitrise account '
-  modified: 2020-12-07 00:00:00 +0100
+  modified: 2020-12-07T00:00:00.000+01:00
   changelog: Corrected a note about expired certificates in our SAML SSO guide.
   type: fix
   url: "/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-with-a-bitrise-account"
