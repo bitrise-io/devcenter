@@ -14,7 +14,7 @@ Codecov provides many features that make test coverage more available and action
 
 Some of these features include:
 
-* Coverage changes overlayed with your source code, making it even easier to identify needed test areas.
+* Coverage changes overlaid with your source code, making it even easier to identify needed test areas.
 * [Multi-language](https://about.codecov.io/product/features/#multi-lang-multi-ci-cd) support so you can use Codecov right out of the box.
 * Summary of coverage information directly in your Workflow so that you can add and update tests quickly and effectively.
 * [Status checks](https://docs.codecov.io/docs/commit-status) to block underperforming pull requests from being merged.
