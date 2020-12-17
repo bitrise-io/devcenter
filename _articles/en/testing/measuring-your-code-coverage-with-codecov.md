@@ -3,6 +3,9 @@ tag: []
 title: Measuring your code coverage with Codecov
 redirect_from: []
 summary: ''
+menu:
+  testing-main:
+    weight: 22
 published: false
 
 ---
