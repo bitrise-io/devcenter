@@ -256,6 +256,7 @@ pages:
 - _articles/en/testing/device-testing-for-ios.md
 - _articles/en/testing/exporting-to-test-reports-from-custom-script-steps.md
 - _articles/en/testing/installing-an-ipa-file-from-the-public-install-page.md
+- _articles/en/testing/measuring-your-code-coverage-with-codecov.md
 - _articles/en/testing/running-detox-tests-on-bitrise.md
 - _articles/en/testing/running-xcode-tests.md
 - _articles/en/testing/test-reports.md
