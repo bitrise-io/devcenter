@@ -24,19 +24,19 @@ In order to start using Codecov, you must be generating coverage reports with yo
 
 1. Create an account on [https://codecov.io](https://codecov.io "https://codecov.io").
 2. Go to repository’s **Settings** tab on Codecov and copy the repository upload token.
-   ![](/img/pic1.png)
-3. Add the **Codecov** Step to your Workflow on Bitrise. Make sure you add the Step after the Steps that test and collect coverage.![](/img/pic2.png)
-4. Add the Codecov upload token as a secret variable, **CODECOV_TOKEN**, and click **Add new**.
-   ![](/img/pic3.png)
+
+   ![](/img/pic1.jpg)
+3. Add the **Codecov** Step to your Workflow on Bitrise. Make sure you add the Step after the Steps that test and collect coverage.![](/img/pic2.jpg)
+4. Add the Codecov upload token as a secret variable, `CODECOV_TOKEN`, and click **Add new**.![](/img/pic3.jpg)
 5. Click **Save** and start a new build to get coverage metrics.
 
-{% include message_box.html type="info" title="Additional options" content="The Codecov Step wraps around the Codecov [bash uploader](https://docs.codecov.io/docs/about-the-codecov-bash-uploader). You can add additional options in the Step listed in our [arguments documentation](https://docs.codecov.io/docs/about-the-codecov-bash-uploader#arguments)."%}
+{% include message_box.html type="info" title="Additional options" content="The **Codecov** Step wraps around the Codecov [bash uploader](https://docs.codecov.io/docs/about-the-codecov-bash-uploader). You can add additional options in the Step listed in our [arguments documentation](https://docs.codecov.io/docs/about-the-codecov-bash-uploader#arguments)."%}
 
 ## Viewing your coverage reports on Codecov
 
 To view your coverage on Codecov, you can do the following:
 
-* View the URL supplied on Codecov Step on Bitrise.
+* View the URL supplied on the **Codecov** Step on Bitrise.![](/img/pic4.png)
 * Go to [https://codecov.io](https://codecov.io) and navigate directly to the applicable pull request or commit.
 * Click on the links provided by Codecov that are available on your code host’s status checks or pull request comment.
 
