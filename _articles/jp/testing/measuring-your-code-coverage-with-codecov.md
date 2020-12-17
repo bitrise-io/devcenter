@@ -9,19 +9,18 @@ menu:
 published: false
 
 ---
-
 {% include not_translated_yet.html %}
 
-[Codecov]() is the leading code coverage solution for CI/CD pipelines, delivering coverage metrics right into your workflow. It integrates directly with Bitrise to provide valuable insights on code quality in order to allow users to ship healthier code with less risk.  
+[Codecov](https://about.codecov.io/product/features/) is the leading code coverage solution for CI/CD pipelines, delivering coverage metrics right into your workflow. It integrates directly with Bitrise to provide valuable insights on code quality in order to allow users to ship healthier code with less risk.  
 Codecov provides many features that make test coverage more available and actionable to speed up your development process and to deliver high-quality applications.
 
 Some of these features include:
 
-* Coverage changes overlayed with your source code, making it even easier to identify needed test areas.
+* Coverage changes overlaid with your source code, making it even easier to identify needed test areas.
 * [Multi-language](https://about.codecov.io/product/features/#multi-lang-multi-ci-cd) support so you can use Codecov right out of the box.
 * Summary of coverage information directly in your Workflow so that you can add and update tests quickly and effectively.
-* [Status checks](https://codecov.local/product/features/#status-checks) to block underperforming pull requests from being merged.
-* Seamless coverage [report merging](https://codecov.local/product/features/#report-merging) for Workflows that upload multiple reports across jobs.
+* [Status checks](https://docs.codecov.io/docs/commit-status) to block underperforming pull requests from being merged.
+* Seamless coverage [report merging](https://docs.codecov.io/docs/merging-reports) for Workflows that upload multiple reports across jobs.
 * Custom coverage information based on groupings using [Codecov Flags](https://docs.codecov.io/docs/flags).
 
 ## Integrating Codecov with Bitrise
