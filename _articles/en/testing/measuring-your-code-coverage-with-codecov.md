@@ -6,7 +6,6 @@ summary: ''
 menu:
   testing-main:
     weight: 22
-published: false
 
 ---
 [Codecov](https://about.codecov.io/product/features/) is the leading code coverage solution for CI/CD pipelines, delivering coverage metrics right into your workflow. It integrates directly with Bitrise to provide valuable insights on code quality in order to allow users to ship healthier code with less risk.  
