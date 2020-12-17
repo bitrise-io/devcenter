@@ -1,8 +1,14 @@
 ---
-tag: []
+tag:
+- testing
+- ios
+- android
+- firebase
+- test-reports
 title: Measuring your code coverage with Codecov
 redirect_from: []
-summary: ''
+summary: Codecov provides many features that make test coverage more available and
+  actionable to speed up your development process and to deliver high-quality applications.
 menu:
   testing-main:
     weight: 21
@@ -50,3 +56,5 @@ Now that you have code coverage reports, you can take it to the next level with 
 * Start working towards code coverage by setting status checks to [increase overall coverage](https://docs.codecov.io/docs/common-recipe-list#increase-overall-coverage-on-each-pull-request) on every pull request.
 * Isolate your coverage reports for different types of tests or different parts of your system with [Flags](https://docs.codecov.io/docs/flags) to measure what matters.
 * Already using flags and don’t want to run your entire test suite with every Bitrise CI run? Try out [Carryforward Flags](https://docs.codecov.io/docs/carryforward-flags) to measure only what changes.
+
+{% include banner.html banner_text="Let's generate code coverage reports" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to Bitrise now" %}
