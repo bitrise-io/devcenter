@@ -1,12 +1,11 @@
 ---
 tag: []
-title: Measuring your code coverage with Codecov on Bitrise
+title: Measuring your code coverage with Codecov
 redirect_from: []
 summary: ''
 menu:
   testing-main:
     weight: 22
-    title: Measuring your code coverage with Codecov
 
 ---
 {% include not_translated_yet.html %}
