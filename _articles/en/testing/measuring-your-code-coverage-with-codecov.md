@@ -28,31 +28,24 @@ In order to start using Codecov, you must be generating coverage reports with yo
    ![](/img/pic1.png)
 3. Add the **Codecov** Step to your Workflow on Bitrise. Make sure you add the Step after the Steps that test and collect coverage.![](/img/pic2.png)
 4. Add the Codecov upload token as a secret variable, **CODECOV_TOKEN**, and click **Add new**.
-	![](/img/pic3.png)
+   ![](/img/pic3.png)
 5. Click **Save** and start a new build to get coverage metrics.
 
-**Additional options**
+{% include message_box.html type="info" title="Additional options" content="The Codecov Step wraps around the Codecov [bash uploader](https://docs.codecov.io/docs/about-the-codecov-bash-uploader). You can add additional options in the Step listed in our [arguments documentation](https://docs.codecov.io/docs/about-the-codecov-bash-uploader#arguments)."%}
 
-The Bitrise Codecov step wraps around the Codecov [bash uploader](https://docs.codecov.io/docs/about-the-codecov-bash-uploader). You can add additional options in the Step listed in our [arguments documentation](https://docs.codecov.io/docs/about-the-codecov-bash-uploader#arguments).
-
-**Viewing your coverage reports on Codecov**
+## Viewing your coverage reports on Codecov
 
 To view your coverage on Codecov, you can do the following:
 
-* View the URL supplied on the Bitrise step
+* View the URL supplied on Codecov Step on Bitrise.
 * Go to [https://codecov.io](https://codecov.io "https://codecov.io") and navigate directly to the applicable pull request or commit.
 * Click on the links provided by Codecov that are available on your code host’s status checks or pull request comment.
 
-**What next?**
+## What next?
 
 Now that you have code coverage reports, you can take it to the next level with the following suggestions:
 
-* Set [non-blocking status checks](https://docs.codecov.io/docs/common-recipe-list#set-non-blocking-status-checks) to give your developers in the habit of thinking about code coverage
-
-
+* Set [non-blocking status checks](https://docs.codecov.io/docs/common-recipe-list#set-non-blocking-status-checks) to get your developers in the habit of thinking about code coverage.
 * Start working towards code coverage by setting status checks to[ increase overall coverage](https://docs.codecov.io/docs/common-recipe-list#increase-overall-coverage-on-each-pull-request) on every pull request.
-
-
 * Isolate your coverage reports for different types of tests or different parts of your system with [Flags](https://docs.codecov.io/docs/flags) to measure what matters.
-
-Already using flags and don’t want to run your entire test suite with every Bitrise CI run? Try out [Carryforward Flags](https://docs.codecov.io/docs/carryforward-flags) to measure only what changes.
+* Already using flags and don’t want to run your entire test suite with every Bitrise CI run? Try out [Carryforward Flags](https://docs.codecov.io/docs/carryforward-flags) to measure only what changes.
