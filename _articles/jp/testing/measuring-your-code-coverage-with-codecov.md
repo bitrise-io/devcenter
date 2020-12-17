@@ -5,7 +5,8 @@ redirect_from: []
 summary: ''
 menu:
   testing-main:
-    weight: 21
+    weight: 22
+    title: Measuring your code coverage with Codecov
 
 ---
 {% include not_translated_yet.html %}
