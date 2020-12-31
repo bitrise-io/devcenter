@@ -1,31 +1,30 @@
 ---
-changelog: 
-last_modified_at: 
-title: Triggering and aborting builds
+changelog:
+last_modified_at:
+title: ビルドのトリガー(開始)と中断
 menu:
   api-main:
     weight: 10
 
 ---
-{% include not_translated_yet.html %}
 
-You can trigger and abort builds with the Bitrise API. Define parameters for the build: for example, branch, tag or git commit to use. Custom environment variables can be defined as well.
+Bitrise APIで、アプリのビルド開始と中断を実行することができます。ビルドするためのパラメータを定義できます: 例えば、ブランチ、タグ、またはgitコミット。カスタム環境変数も同様に設定することができます。
 
-## Triggering a new build
+## 新しいビルドのトリガー(開始)
 
-| Endpoints | Function |
+| エンドポイント | 機能 |
 | --- | --- |
-| [POST /apps/{app-slug}/builds](https://api-docs.bitrise.io/#/builds/build-trigger) | Trigger a new build. |
+| [POST /apps/{app-slug}/builds](https://api-docs.bitrise.io/#/builds/build-trigger) | 新しいビルドのトリガー(開始)。 |
 
-To trigger a new build with the Bitrise API, call the `/apps/{APP-SLUG}/builds` endpoint. You need to specify an app slug and at least one build parameter in a JSON object:
+Bitrise APIで新しいビルドを開始するために `/apps/{APP-SLUG}/builds` エンドポイントをコールします。特定のアプリスラッグを指定することと、少なくとも1つのビルドパラメータをJSONオブジェクトに設定する必要があります:
 
-* A git tag or git commit hash
-* A branch
-* A workflow ID
+* gitのタグまたはgitコミットハッシュ
+* ブランチ名
+* ワークフローID
 
-The JSON object must also contain a `hook_info` object with a `type` key and `bitrise` as the value of the key.
+そのJSONオブジェクトは `bitrise` という値を設定した `type` キーを持つ `hook_info` オブジェクトを必ず持つ必要があります。
 
-Here's a minimal sample JSON body which specifies _master_ as the value of the `branch` parameter:
+これが  `branch` パラメータに _master_ という値を設定した、最小構成のJSONボディです。
 
     {
       "hook_info": {
@@ -36,23 +35,23 @@ Here's a minimal sample JSON body which specifies _master_ as the value of the `
       }
     }
 
-And here's an example curl request:
+こちらがcurlリクエストの例です:
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
 
-In the above example, we triggered a build of the app's `master` branch.
+上記の例では、アプリの `master` ブランチのビルドを開始します。
 
-{% include message_box.html type="note" title="Authorization" content="All examples in this guide use the `api.bitrise.io/v0.1/apps/APP-SLUG/builds` endpoint. This endpoint can only be authorized with a Personal Access Token!"%}
+{% include message_box.html type="note" title="認証" content="このガイドが使うすべての例は `api.bitrise.io/v0.1/apps/APP-SLUG/builds` エンドポイントを使用しています。このエンドポイントはパーソナルアクセストークンでのみ認証可能です！"%}
 
-{% include message_box.html type="note" title="Interactive cURL call configurator" content="You can find an interactive cURL call configurator by clicking on the `Start/Schedule a build` button on your app's [bitrise.io](https://www.bitrise.io) page and switching to `Advanced` mode in the popup. At the bottom of the popup you can find a `curl` call, based on the parameters you specify in the popup.
+{% include message_box.html type="note" title="対話型のcURLコールコンフィギュレータ" content="あなたのアプリ [bitrise.io](https://www.bitrise.io) ページにある `Start/Schedule a build` ボタンを押して表示されるポップアップの中にある `Advanced` モードに移行することで、対話型のcURLコールコンフィギュレータを起動できます。ポップアップの下部にあるボタンであなたが指定したパラメータをベースにした `curl` コールを見ることができます。
 
-**Note that this call uses the deprecated** `app.bitrise.io` **URL and the app's build trigger token, as opposed to the personal access token shown in the examples in this guide. All other parameters, however, work the same way.**"%}
+**注意 このAPIコールは非推奨の** `app.bitrise.io` **URLと、そのアプリのビルドトリガートークン(このガイドの使用例で使われているパーソナルアクセストークンとは異なる)を使っています。しかしながら他の全てのパラメータは同じ方式で使用できます。**"%}
 
-In the example, we passed this JSON payload as a string: to be precise, as a JSON object serialized to a string.
+この例ではJSONペイロードを文字列、正確には、文字列にシリアライズされたJSONオブジェクトとして渡しています。
 
-You can also pass it as an object (for example, if you want to call it from JavaScript). To do so, include a root `payload` element or, alternatively, set the JSON object as the value of the `payload` POST parameter.
+それをオブジェクトとして渡すこともできます(例えば、JavaScriptからコールしたい場合)。それを実行するためには、ルートに `payload` 要素を持つか、代わりに そのJSONオブジェクトを `payload` POSTパラメータの値として設定してください。
 
-Here's a jQuery example using the `payload` parameter:
+こちらが `payload` パラメータを使ったjQueryの実装例です:
 
     $.post("https://api.bitrise.io/app/APP-SLUG/builds/", {
         "payload":{
@@ -65,100 +64,100 @@ Here's a jQuery example using the `payload` parameter:
         }
     })
 
-You can specify several different build parameters when triggering a build. The parameters should be set in the `build_params` object: let's go through some of the possible configurations!
+ビルド開始ときに、いろいろな異なるビルドパラメータを設定することができます。そのパラメータは `build_params` オブジェクトに設定される必要があります: いくつかの使用可能な例を見てみましょう！
 
-### Setting a branch, commit, or tag to build
+### ビルドのためのブランチ、コミット、タグの設定
 
-You can set Git-specific parameters in your call. The `branch` parameter specifies the source branch to be built. This is either the branch of the git commit or, in the case of a pull request build, the source branch of the pull request.
+Git固有のパラメータをAPIコールに設定できます。 `branch` パラメータはビルドするソースブランチを指定します。これはGitコミットのブランチ、またはPRビルドの場合はそのPRのソースブランチのいずれかです。
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master"}}'
 
-You can also build a specific git commit or even a git tag: you just need to set either the commit hash or the tag in the `build_params` object. You can also set a commit message for the build with the `commit_message` parameter.
+特定のgitのコミットまたはgitのtagもビルドできます。`build_params` オブジェクトにコミットハッシュまたはtagを設定するだけです。 `commit_message` パラメータを使うことで、コミットメッセージをその特定のビルドに設定することもできます。
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"commit_hash":"0000ffffeeeee", "commit_message":"testing"}}'
 
-{% include message_box.html type="note" title="Git Clone - parameter priority" content=" If you provide a `tag`, the `branch` parameter will be ignored by the `Git Clone` step.
+{% include message_box.html type="note" title="Gitクローン - パラメータの優先順位" content=" `Git Clone` ステップでもし`tag` を使用した場合、 `branch` パラメータは無視されます。
 
-If you provide a `commit_hash` parameter then both the `tag` and the `branch` parameters will be ignored.
+もし `commit_hash` パラメータを使った場合、 `tag` と `branch` パラメータの両方とも無視されます。
 
-The ignored parameters will still be logged. They will be available for steps and they will be visible on the Build's details page but the `Git Clone` Step will use the most specific parameter for checkout."%}
+その無視されたパラメータはログに残されます。それらはステップのために利用可能で、ビルド詳細ページで確認することができますが、 `Git Clone` ステップはcheckoutするものを最も特定できるパラメータを使います。"%}
 
-### Setting parameters for pull request builds
+### PRビルドのためのパラメータ設定
 
-For a pull request build, use the `branch_dest` parameter to set up the destination or target branch of the pull request. The PR will be merged into this branch but before that, Bitrise will build your app based on how the code would look like after merging. This is what happens when a PR build is automatically triggered by a webhook, for example.
+PRビルドのために、そのマージ先、またはターゲットブランチを設定するために `branch_dest` パラメータを使います。そのPRは将来的にはこのブランチにマージされますが、その前に、BitriseはこのPRが未来にどのようにマージされるかの結果をベースにあなたのアプリをビルドします。例えば、これはwebhookにより自動的にPRビルドが開始されたときに何が起こるかということです。
 
-The `branch_repo_owner` and `branch_dest_repo_owner` parameters are used to identify the owners of the repositories, to unambiguously identify the branches involved in the pull request. 
+ `branch_repo_owner` と `branch_dest_repo_owner` パラメータは、そのリポジトリのオーナーを特定するため、またそのPRに関連するブランチを明確に特定するために使われます。
 
-{% include message_box.html type="warning" title="My message" content="If you do not specify the `branch_repo_owner` and `branch_dest_repo_owner` parameters, the API will assume pull request builds are coming from a fork. As such, they might be put on hold pending manual approval: read our (Approving pull request builds)[/builds/triggering-builds/approving-pull-request-builds/] guide for the details. "%} 
+{% include message_box.html type="warning" title="メッセージ" content="`branch_repo_owner` と `branch_dest_repo_owner` パラメータを明確に指定しない場合、APIはPRビルドはフォークされたものと見なします。そのため、手動承認を待つことになるかもしれません: その詳細については、(PRビルドの承認ガイド)[/builds/triggering-builds/approving-pull-request-builds/] を確認してください。 "%}
 
-To identify the PR itself, use the `pull_request_id` parameter: it takes an integer; for example, the number of the PR on GitHub.
+PR自体を特定するため、 `pull_request_id` パラメータを使用してください。そのパラメータは整数型です。(例: GitHub上のPR番号)
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133, "commit_hash": "fffff000000eeeeee"}}'
 
-If your git provider supports it, you can also use the `pull_request_merge_branch` parameter to build the pre-merged state of the branch of the PR. Another alternative is the `pull_request_head_branch` parameter: this is a special git ref that should point to the source of the PR.
+もしgitプロバイダ側でサポートされているならば、 `pull_request_merge_branch` パラメータを使ってそのPRのマージ前の状態のブランチをビルドすることも可能です。その代替としては `pull_request_head_branch` パラメータです。そのパラメータはPRのソースブランチを指す特定のgitリファレンスです。
 
-If you want to trigger a build from a PR opened from a fork of your repository, use the `pull_request_repository_url` parameter. The value should be the URL of the fork.
+もしあなたのリポジトリのフォークから開かれたPRのビルドをトリガー(開始)したい場合、`pull_request_repository_url` パラメータを使用してください。その値はフォークのURLである必要があります。
 
-### Skipping git status report
+### gitステータスレポートのスキップ
 
-If you have a webhook set up, Bitrise will send status reports to your git provider about your builds. However, this can be disabled via the API: use the `skip_git_status_report` parameter. If it is set to `true`, no build status report will be sent.
+もしwebhookの設定をしている場合、Bitriseはあなたのgitプロバイダにビルドのステータスレポートを送ります。しかし `skip_git_status_report` パラメータを使ってAPI経由で無効とすることができます。もしその値が `true` と設定された場合は、ビルドステータスレポートは送信されません。
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch": "the-pr-branch", "branch_dest":"master", "pull_request_id": 133, "skip_git_status_report": "true"}}'
 
-### Specifying Environment Variables
+### 環境変数の設定
 
-You can define additional environment variables for your build.
+あなたのビルドに対し、環境変数を追加で設定できます。
 
-[Be aware that Environment Variables have a priority order!](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables) These additional variables will be handled with priority between `Secrets` and `App Env Vars`, which means that you can not overwrite environment variables defined in your build configuration (for example, App Env Vars), only Secrets.
+[環境変数には優先順位があることに注意してください！](/bitrise-cli/most-important-concepts/#availability-order-of-environment-variables) 追加された変数は `Secrets` と `App Env Vars` の間の優先度に従って管理されます。つまり、あなたのビルド設定(例えばApp Env Vers)で定義された環境変数は上書きすることはできません。Secretsのみ上書きできます。
 
-This parameter must be an **array of objects**, and every item of the array must include at least a `mapped_to` property. This must contain:
+そのパラメータは**オブジェクトの配列**である必要があります。そしてその全ての配列の要素は少なくとも `mapped_to` プロパティを持つ必要があります。その要素は以下を保持します:
 
-* The key of the Environment Variable.
-* The value of the Environment Variable.
+* その環境変数のキー
+* その環境変数の値
 
-{% include message_box.html type="note" title="Replacing Env Var names" content="By default environment variable names inside values will be replaced in triggered build by actual value from the target environment. This behavior can be disabled by setting `is_expand` flag to `false`."%}
+{% include message_box.html type="note" title="環境変数名の変更" content="デフォルト環境変数の値は、トリガーされたビルド内で、ターゲット環境オブジェクト内の実際の値によって置換されます。この振る舞いは `is_expand` フラグを `false` にすることで無効にできます。"%}
 
-Example:
+例:
 
     "environments":[
       {"mapped_to":"API_TEST_ENV","value":"This is the test value","is_expand":true},
       {"mapped_to":"HELP_ENV","value":"$HOME variable contains user's home directory path","is_expand":false},
     ]
 
-### Setting a workflow for the build
+### ビルドのワークフローを設定
 
-By default, the workflow for your build will be selected based on the content of `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically, based on the Trigger Map.
+デフォルトでは、あなたのビルドのためのワークフローは `build_params` の内容と、そのアプリの[実行マップ](/webhooks/trigger-map/)をベースにして選択されます。これは [Webhooks](/webhooks/) が開始マップをベースにして、どのようにワークフローをそのビルドのために自動で選択するかと同様です。
 
-With the API, you can however **overwrite** this selection and specify exactly which workflow you want to use.
+APIを使うことで、 この選択を**上書き**でき、そしてどのワークフローを使いたいかを決定できます。
 
-Add a `workflow_id` parameter to your `build_params` and specify the workflow you want to use for that specific build. Here's an example call where we specify the `deploy` workflow:
+`build_params` に `workflow_id` パラメータを追加し、特定のビルドに使いたいワークフローを選択します。こちらは `deploy` ワークフローを特定するAPIコールの例です。
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds" -d '{"hook_info":{"type":"bitrise"},"build_params":{"branch":"master","workflow_id":"deploy"}}'
 
-## Aborting a build
+## ビルドの中断
 
-| Endpoints | Function |
+| エンドポイント | 機能 |
 | --- | --- |
-| [POST /apps/{app-slug}/builds/{build-slug}/abort](https://api-docs.bitrise.io/#/builds/build-abort) | Abort a specific build. |
+| [POST /apps/{app-slug}/builds/{build-slug}/abort](https://api-docs.bitrise.io/#/builds/build-abort) | 特定のビルドを中断する。 |
 
-You can abort running builds, and set the reason for aborting, as well as specify if email notifications should be sent about the build.
+実行中のビルドを中断することができ、合わせて中断の理由と同様にそのビルドについてのメール通知を設定することができます。
 
-To simply abort the build, call the `/apps/APP-SLUG/builds/BUILD-SLUG/abort` endpoint. The only required parameters are the app slug and the build slug.
+単純にビルドを中断するために `/apps/APP-SLUG/builds/BUILD-SLUG/abort` エンドポイントをコールします。必須パラメータは、アプリスラッグとビルドスラッグのみです。
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort"
 
-### Setting an abort reason
+### 中断理由の設定
 
-You can set a reason for aborting the build by using the `abort_reason` parameter. This parameter takes a string and it will show up on your app's build page.
+`abort_reason` パラメータを使うことで、ビルドの中断理由を設定することができます。このパラメータは文字列として設定することができ、あなたのアプリのビルドページに表示されます。
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_reason": "aborted for a reason"}'
 
-Normally, aborted builds count as failed builds. Use the `abort_with_success` parameter to abort a build but still count it as a successful one. The status report sent to your git provider will show the build as successful though on [bitrise.io](https://www.bitrise.io) it will be displayed as `Cancelled`.
+通常は、中断されたビルド回数は失敗したビルド回数です。 `abort_with_success` パラメータを使うことで、ビルドを中断しかつそれを成功したビルドとしてカウントすることができます。あなたのgitプロバイダに送信されたステータスレポートは[bitrise.io](https://www.bitrise.io)を通して成功したビルド、 `Cancelled` として表示されます。
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"abort_with_success": true}'
 
-### Cancelling email notifications
+### メール通知のキャンセル
 
-Depending on your app settings, Bitrise might send an email notification when a build is aborted. If you do not want a notification, set the `skip_notification` parameter to `true`.
+あなたのアプリ設定に従って、ビルドが中断したときにBitriseはメール通知を送信するかもしれません。もし通知が必要ない場合は `skip_notification` パラメータに `true` を設定してください。
 
     curl -X POST -H "Authorization: ACCESS-TOKEN" "https://api.bitrise.io/v0.1/apps/APP-SLUG/builds/BUILD-SLUG/abort" -d '{"skip_notification": true}'
