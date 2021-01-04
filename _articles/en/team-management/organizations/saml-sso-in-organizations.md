@@ -46,7 +46,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enable-single-sign-on-1.jpg)
 4. Continue with [setting up SAML SSO for your Org on Bitrise](/team-management/organizations/saml-sso-in-organizations/#setting-up-saml-sso-for-a-bitrise-organization).
 
-{% include message_box.html type="info" title="Specific guides about connecting Bitrise and an SAML SSO provider" content="Bitrise can be connected to a bunch of SAML SSO providers. Check out our detailed guides on how to set them up:
+{% include message_box.html type="info" title="Specific guides about connecting Bitrise to a SAML SSO provider" content="Bitrise can be connected to a bunch of SAML SSO providers. Check out our detailed guides on how to set them up:
 
 * [Setting up Azure AD SSO for Bitrise](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/)
 * [Setting up Google SSO for Bitrise](/team-management/organizations/setting-up-google-sso-for-bitrise/)
