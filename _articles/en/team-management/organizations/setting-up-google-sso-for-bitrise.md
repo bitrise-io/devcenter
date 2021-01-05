@@ -58,7 +58,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
     * Paste the **Single Sign-On URL** of Bitrise in the **ACS URL** field on G Suite. (Remember, we got the link at Step 7.)
     * Type Bitrise in the **Entity ID** field. Please note it must be Bitrise as no other format is accepted.
     * Tick the **Signed response** checkbox under **START URL (optional)**.
-    * Click **CONTINUE**.
+    * Click **CONTINUE**.![](/img/serviceproviderdetails.jpg)
 11. On the **Attribute mapping** page click **Finish** - you do not have to configure anything here.
 
 ## Enabling Bitrise app for a group or an organizational unit
@@ -67,7 +67,7 @@ All there is left to do on G Suite is to enable the newly created Bitrise app fo
 
 1. Go to the **Web and mobile apps** page on G Suite and select **Bitrise** from the **Apps** list.
 2. Click **User access** to get to the **Service status** page.
-3. Select **ON for everyone** and hit **Save**.
+3. Select **ON for everyone** and hit **Save**.![](/img/useraccess.jpg)
 
 ## What’s next?
 
