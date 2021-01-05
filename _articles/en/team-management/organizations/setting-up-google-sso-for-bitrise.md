@@ -49,16 +49,16 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
  4. On the **Web and mobile apps** page, click the **Add apps** button, and select the **Add custom SAML app** option from the dropdown.
  5. On the App details page add Bitrise as your app name. Please not it must be Bitrise as other format is accepted. Click **Continue**.
  6. On the **Getting Identity Provider details** page: 
- - Copy the **SSO URL** and paste it on the **Identity Provider Sign-on URL** on Bitrise. 
- - Copy the whole content of the **Certificate** field and paste it in the **Certificate** field of Bitrise.
+	- Copy the **SSO URL** and paste it on the **Identity Provider Sign-on URL** on Bitrise. 
+	- Copy the whole content of the **Certificate** field and paste it in the **Certificate** field of Bitrise.
  7. While you are in Bitrise, click the **Copy Link** button to copy the **Single Sign-On URL**. We will need it on G Suite in a second.
  8. Click the **Configure SSO** button on Bitrise.
  9. Let’s head back to the **Getting Identity Provider details** page of G Suite. Click **Continue**.
 10. On the **Service provider details** page:
-    1. Paste the **Single Sign-On URL** of Bitrise in the **ACS URL** field on G Suite. (Remember, we got the link at Step 7.)
-    2. Type Bitrise in the **Entity ID** field. Please note it must be Bitrise as no other format is accepted.
-    3. Tick the **Signed response** checkbox under **START URL (optional)**.
-    4. Click **CONTINUE**.
+	- Paste the **Single Sign-On URL** of Bitrise in the **ACS URL** field on G Suite. (Remember, we got the link at Step 7.)
+	- Type Bitrise in the **Entity ID** field. Please note it must be Bitrise as no other format is accepted.
+	- Tick the **Signed response** checkbox under **START URL (optional)**.
+	- Click **CONTINUE**.
 11. On the **Attribute mapping** page click **Finish** - you do not have to configure anything here.
 
 ## Configuring SAML SSO on Bitrise
