@@ -16,7 +16,7 @@ menu:
     weight: 17
 
 ---
-This guide provides step-by-step instructions on setting up Bitrise as a SAML application on Google G Suite.
+This guide provides step-by-step instructions on setting up Bitrise as a SAML application on G Suite.
 
 {% include message_box.html type="important" title="SAML SSO with Org Elite and Velocity plans" content="Please note that SAML SSO is only available for an Org with the [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org.
 
@@ -41,20 +41,25 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enable-single-sign-on-1.jpg)
 4. Continue with [Getting configuration information from Google](/team-management/organizations/setting-up-google-sso-for-bitrise/#getting-configuration-information-from-google).
 
-## Getting configuration information from Google
+## Getting configuration information from G Suite and Bitrise
 
-1. Sign into your Google Admin Console.
-2. Select **Apps**.
-3. In the **APPS SETTINGS** page, click **SAML apps**.
-
-   You will see a list of the apps with their statuses (either turned on or off). On this page you can add or remove a service and enable/disable it.
-4. Click the **+** mark in the yellow circle on the bottom right corner of the screen to add Bitrise as a SAML application to the list.
-5. In the **Enable SSO for SAML Application** window, click **SETUP MY OWN CUSTOM APP**.
-6. In the **Google IdP Information** window, copy the **SSO URL** and click **DOWNLOAD**. ![{{ page.title }}](/img/Google-idp-information.jpg)
-
-   You will need the SSO URL and the content of the downloaded certificate on the **Single Sign On** tab of your Bitrise Organization. Then click **Next** on the bottom right corner.
-
-Now that we have the config information, we will leave Google Admin Console for a minute and fill out the required SAML SSO fields on Bitrise.
+ 1. Sign into your Google Admin Console.
+ 2. Select **Apps** on the **Admin Console** page.
+ 3. On the Apps page, click **SAML apps**.
+ 4. On the **Web and mobile apps** page, click the **Add apps** button, and select the **Add custom SAML app** option from the dropdown.
+ 5. On the App details page add Bitrise as your app name. Please not it must be Bitrise as other format is accepted. Click **Continue**.
+ 6. On the **Getting Identity Provider details** page: 
+ - Copy the **SSO URL** and paste it on the **Identity Provider Sign-on URL** on Bitrise. 
+ - Copy the whole content of the **Certificate** field and paste it in the **Certificate** field of Bitrise.
+ 7. While you are in Bitrise, click the **Copy Link** button to copy the **Single Sign-On URL**. We will need it on G Suite in a second.
+ 8. Click the **Configure SSO** button on Bitrise.
+ 9. Let’s head back to the **Getting Identity Provider details** page of G Suite. Click **Continue**.
+10. On the **Service provider details** page:
+    1. Paste the **Single Sign-On URL** of Bitrise in the **ACS URL** field on G Suite. (Remember, we got the link at Step 7.)
+    2. Type Bitrise in the **Entity ID** field. Please note it must be Bitrise as no other format is accepted.
+    3. Tick the **Signed response** checkbox under **START URL (optional)**.
+    4. Click **CONTINUE**.
+11. On the **Attribute mapping** page click **Finish** - you do not have to configure anything here.
 
 ## Configuring SAML SSO on Bitrise
 
