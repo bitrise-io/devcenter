@@ -1,6 +1,12 @@
 ---
+- title: Setting up Google SSO for Bitrise
+  modified: 2021-01-05 00:00:00 +0100
+  changelog: Content and images have been updated on how to set up SAML SSO for Bitrise
+    on G Suite.
+  type: update
+  url: "/team-management/organizations/setting-up-google-sso-for-bitrise/"
 - title: Measuring your code coverage with Codecov on Bitrise
-  modified: 2020-12-17 00:00:00 +0100
+  modified: 2020-12-17T00:00:00.000+01:00
   changelog: " Codecov integrates directly with Bitrise to provide valuable insights
     on code quality to allow you to ship healthier code with less risk."
   type: new
