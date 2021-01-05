@@ -71,12 +71,12 @@ All there is left to do on G Suite is to enable the newly created Bitrise app fo
 
 ## What’s next?
 
-Learn how you can log into your Org now that SAML SSO is set up. \[link\]
+Learn how you can log into your Org now that SAML SSO is set up.
 
-You might wan to check out Org member’s SAML SSO statuses once the connection is up. \[link\]
+You might wan to check out Org member’s SAML SSO statuses once the connection is up. 
 
-You might want to enforce SAML SSO login to the Org once all Org members have authorized their SAML SSO connection to the Org. \[link\]
+You might want to enforce SAML SSO login to the Org once all Org members have authorized their SAML SSO connection to the Org. 
 
-Disabling SAML SSO is very simple - learn how. \[link\]
+Disabling SAML SSO is very simple - learn how. 
 
 {% include banner.html banner_text="Set up Google SSO!" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your Organization" %}
