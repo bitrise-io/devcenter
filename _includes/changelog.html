@@ -4,6 +4,31 @@
   }
 </style>
 <div class="changelog-container" id="changelog-container-id">
+  <title class="changelog-container-title">2021</title>
+  {% for change in site.data.changelog %}
+      {% assign timestamp = change.modified | date: "%s" %}
+      {% if timestamp < "1640995200" and timestamp > "1609459200" %}
+      <div class="changelog-content">
+          <div class="changelog-content-title">
+            <title>
+              {{ change.modified | date: "%Y-%m-%d" }}: {{ change.title }}
+            </title>
+            {% if change.type == "new" %}
+            <label class="article-label-new">NEW</label>
+            {% elsif change.type == "update" %}
+            <label class="article-label-update">UPDATE</label>
+            {% elsif change.type == "fix" %}
+            <label class="article-label-fix">FIX</label>
+            {% elsif change.type == "video" %}
+            <label class="article-label-video">VIDEO</label>
+            {% endif %}</div>
+          <p>{{ change.changelog | strip_html | truncatewords: 30 }}</p>
+          <a href="{{ change.url }}">Read "{{ change.title }}" in full &gt;&gt;</a>
+        </div>
+      {% endif %}
+  {% endfor %}
+</div>
+<div class="changelog-container" id="changelog-container-id">
     <title class="changelog-container-title">2020</title>
     {% for change in site.data.changelog %}
         {% assign timestamp = change.modified | date: "%s" %}
