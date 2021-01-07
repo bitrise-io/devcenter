@@ -51,15 +51,15 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
  6. On the **Getting Identity Provider details** page:
     * Copy the **SSO URL** and paste it on the **Identity Provider Sign-on URL** on Bitrise.
     * Copy the whole content of the **Certificate** field and paste it in the **Certificate** field of Bitrise.![](/img/identityproviderdetails.jpg)![](/img/enable-single-sign-on-2.jpg)
- 7. While you are in Bitrise, click the **Copy Link** button to copy the **Single Sign-On URL**. We will need it on G Suite in a second.
- 8. Click the **Configure SSO** button on Bitrise.
- 9. Let’s head back to the **Getting Identity Provider details** page of G Suite. Click **Continue**.
-10. On the **Service provider details** page:
+ 7. While you are in Bitrise, click the **Copy Link** button to copy the **Single Sign-On URL**. We will need it on G Suite in a second. Let's NOT click the **Configure SSO** button just now!
+ 8. Let’s head back to the **Getting Identity Provider details** page of G Suite. Click **Continue**.
+ 9. On the **Service provider details** page:
     * Paste the **Single Sign-On URL** of Bitrise in the **ACS URL** field on G Suite. (Remember, we got the link at Step 7.)
     * Type `Bitrise` in the **Entity ID** field. Please note it must be `Bitrise` as no other format is accepted.
     * Tick the **Signed response** checkbox under **START URL (optional)**.
     * Click **CONTINUE**.![](/img/serviceproviderdetails.jpg)
-11. On the **Attribute mapping** page click **Finish** - you do not have to configure anything here.
+10. Click the **Configure SSO** button on Bitrise.
+11. On G Suite's **Attribute mapping** page, click **Finish** - you do not have to configure anything here.
 
 ## Enabling Bitrise app for a group or an organizational unit
 
