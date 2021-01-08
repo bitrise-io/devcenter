@@ -7,7 +7,6 @@ menu:
     weight: 4
 
 ---
-{% include not_translated_yet.html %}
 
 [fastlane match](https://github.com/fastlane/fastlane/tree/master/match)を[bitrise.io](https://www.bitrise.io/)で利用するために必要な設定は、以下の3つだけです。
 
