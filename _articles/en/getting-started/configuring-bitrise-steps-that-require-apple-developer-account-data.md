@@ -156,7 +156,7 @@ In addition to setting the Step's input (Step 2.), you need to set up session-ba
 
 ### Defining your Apple Developer Account to Bitrise
 
-If you wish to use [**Deploy to iTunes Connect**]() Step to submit apps for review (in addition t uploading the app and some metadata), you’ll have to provide authentication data to connect to your Apple Developer account.
+If you wish to use [**Deploy to iTunes Connect**](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver) Step to submit apps for review (in addition t uploading the app and some metadata), you’ll have to provide authentication data to connect to your Apple Developer account.
 
 1. Log in to [bitrise.io](https://www.bitrise.io/).
 2. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
