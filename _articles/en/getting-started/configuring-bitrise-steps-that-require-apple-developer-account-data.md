@@ -152,6 +152,39 @@ If you wish to use the **Deploy to iTunes Connect** Step in your Workflow, you c
 2. Provide your **Apple ID**, **Password**, and the **Application Specific Password** to the respective input fields.
 3. Save your changes.
 
+In addition to setting the Step's input (Step 2.), you need to set up session-based authentication to submit the app for review. This allows Bitrise to reuse your authentication sessions for 30 days. This way you do not have to manually go through 2FA on every single occasion. After 30 days, however, the authentication expires and you’ll have to re-authenticate.
+
+### Defining your Apple Developer Account to Bitrise
+
+If you wish to use [**Deploy to iTunes Connect**](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver) Step to submit apps for review (in addition t uploading the app and some metadata), you’ll have to provide authentication data to connect to your Apple Developer account.
+
+1. Log in to [bitrise.io](https://www.bitrise.io/).
+2. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
+3. On the left menu bar, select **Apple Developer Account**.
+4. Click the **Add an Account** button.
+5. On top of the popup, click the **deprecated, session-based auth** link.
+
+   ![{{ page.title }}](/img/session-based-auth.jpg)
+6. Provide your **Apple ID** and **Password** in the popup window and click **Store credentials**.
+
+   ![{{ page.title }}](/img/sync-your-account.jpg)
+7. You will be prompted to provide your verification code. Please make sure you receive the 6-digit code on a trusted device using iCloud and not via SMS.
+
+   ![{{ page.title }}](/img/2fa.jpg)
+8. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Developer Account** of the **Account settings** page, it will automatically ask for the 2FA code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of each, there are 3 dots. Click the dots and select **Re-authenticate** (**2SA/2FA**).
+9. Continue with assigning an Apple Developer Account for your app.
+
+### Assigning an Apple Developer Account for your app
+
+When you have defined your Apple Developer account to Bitrise, you also need to select the account for your app to receive data from your Apple Developer account when it runs on Bitrise.
+
+1. Open your app’s page on [bitrise.io](https://www.bitrise.io/).
+2. Select the **Team** tab.
+3. Scroll down to the **Connected Apple Developer Portal Account** section.
+4. Select the account for the app to use. Note that the **Session based authentication (deprecated)** dropdown displays the connected Apple Developer accounts belonging to the app owner and other team members with admin authority.
+
+   ![{{ page.title }}](/img/connected-apple-developer-account-session-based.jpg)
+
 The **Deploy to iTunes Connect** Step is now set to connect to the Apple Developer account.
 
 ## Deploy to iTunes Connect - Application Loader Step

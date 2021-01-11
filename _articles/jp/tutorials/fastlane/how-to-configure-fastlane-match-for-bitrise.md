@@ -1,35 +1,23 @@
 ---
 changelog: 
 last_modified_at: 
-title: How to configure fastlane match for Bitrise
+title: Bitrise上でのfastlane match設定方法
 menu:
   fastlane:
     weight: 4
 
 ---
-{% include not_translated_yet.html %}
 
-If you want to use [fastlane match](https://github.com/fastlane/fastlane/tree/master/match)
-in your [bitrise.io](https://www.bitrise.io/) build you only have to do three things:
+[fastlane match](https://github.com/fastlane/fastlane/tree/master/match)を[bitrise.io](https://www.bitrise.io/)で利用するために必要な設定は、以下の3つだけです。
 
-1. Make sure that a single SSH key can be used to `git clone` both your main repository (the one
-   you register on [bitrise.io](https://www.bitrise.io/)) and the `match` repository.
-   You can find more info [in this guide](/faq/adding-projects-with-submodules/).
-2. Add an environment variable `MATCH_PASSWORD`, as
-   [described in ](https://github.com/fastlane/fastlane/tree/master/match#encryption-password)`[match](https://github.com/fastlane/fastlane/tree/master/match#encryption-password)`['s docs](https://github.com/fastlane/fastlane/tree/master/match#encryption-password),
-   to specify the `Encryption password` you used for `match`.
-   On [bitrise.io](https://www.bitrise.io/) you should add this as a `Secret Environment Variable`,
-   in the [Workflow Editor](http://devcenter.bitrise.io/docs/add-your-first-step-to-your-apps-workflow).
-   _Make sure to disable_ the `Replace variables in input?` option of the environment
-   variable, to not to cause issues when the value includes the `$` (dollar) sign, which is used
-   for environment variable expansion.
+1. `git clone`の際に利用するSSHキーを、ソースコードリポジトリ([bitrise.io](https://www.bitrise.io/)に登録してあるリポジトリ)と`match`用リポジトリで利用できるよう確認してください。詳しくは[こちらの説明](/faq/adding-projects-with-submodules/)を参照してください。
+2. `[match](https://github.com/fastlane/fastlane/tree/master/match#encryption-password)`の[ドキュメント](https://github.com/fastlane/fastlane/tree/master/match#encryption-password)で[説明されている](https://github.com/fastlane/fastlane/tree/master/match#encryption-password)とおり、環境変数`MATCH_PASSWORD`を追加し、`match`に使用している`Encryption password`を指定してください。
+   [bitrise.io](https://www.bitrise.io/)では、[Workflow Editor](http://devcenter.bitrise.io/docs/add-your-first-step-to-your-apps-workflow)の中でこの環境変数を`Secret Environment Variable`として追加する必要があります。また、環境変数の展開に使用される `$` (ドル) 記号を含む値の場合に問題が発生しないように、`Replace variables in input?`オプションは _必ず無効にしてください_ 。
 
    ![{{ page.title }}](/img/matchpassword.png)
-3. Make sure to use `match`'s `readonly` mode, or else `match` will try to connect
-   to the Apple Developer Portal, which requires further authorization (providing additional
-   username and password for Apple Dev Portal login)!
-   * If you use `match` in your `Fastfile` or `fastlane` config: `match(app_identifier: "my.domain", type: "appstore", readonly: true)`
-   * If you use it as a command line tool: `match development --readonly`
-   * More info in `match`'s [official readme / docs](https://docs.fastlane.tools/actions/match/)
+3. 必ず `match` の `readonly` モードを使用してください。readonlyを指定しない場合、 `match` は Apple Developer Portal への接続を試みるため追加で認証が必要となります(Apple Dev Portalログイン用のユーザー名とパスワードも提供しなければいけません)！
+   * `Fastfile`か`fastlane` configで`match`を使う場合： `match(app_identifier: "my.domain", type: "appstore", readonly: true)`
+   * コマンドラインツールとして使用する場合： `match development --readonly`
+   * より詳しい情報は`match`の [公式ドキュメント](https://docs.fastlane.tools/actions/match/)をご参照ください
 
-That's all, you can now enjoy the utility of `match`, automated with [bitrise.io](https://www.bitrise.io/) 🚀
+以上となります。これで`match`の機能が使えるようになり、[bitrise.io](https://www.bitrise.io/)での自動化は完了です 🚀

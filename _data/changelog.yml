@@ -1,6 +1,12 @@
 ---
+- title: Configuring Steps that require Apple Developer account data
+  modified: 2021-01-11 00:00:00 +0100
+  changelog: Updated the configuration procedure related to Deploy to iTunes Connect
+    Step
+  type: update
+  url: "/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#deploy-to-itunes-connect-step"
 - title: Setting up Google SSO for Bitrise
-  modified: 2021-01-05 00:00:00 +0100
+  modified: 2021-01-05T00:00:00.000+01:00
   changelog: Content and images have been updated on how to set up SAML SSO for Bitrise
     on G Suite.
   type: update
