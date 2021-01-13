@@ -1,6 +1,12 @@
 ---
 - title: Configuring Steps that require Apple Developer account data
-  modified: 2021-01-11 00:00:00 +0100
+  modified: 2021-01-13 00:00:00 +0100
+  changelog: Information on which authentication method to use with the Apple Developer
+    Enterprise Program has been added to the document.
+  type: update
+  url: "/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#steps-that-require-connecting-to-your-apple-developer-account"
+- title: Configuring Steps that require Apple Developer account data
+  modified: 2021-01-11T00:00:00.000+01:00
   changelog: Updated the configuration procedure related to Deploy to iTunes Connect
     Step
   type: update

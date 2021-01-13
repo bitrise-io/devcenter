@@ -34,6 +34,8 @@ The below table contains a summary of the authentication method the Step uses.
 | Deploy to iTunes Connect Step | session-based |
 | Deploy to iTunes Connect - Application Loader Step | App Store Connect API or session-based |
 
+{% include message_box.html type="important" title="Apple Developer Enterprise Program vs Apple Developer Program" content="Please note if you are member of an organization that uses the [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/), you cannot use the App Store Connect API and the Steps related to it. Instead, use the Steps that work with session-based authentication (see table above). If you are using the [Apple Developer Program](https://developer.apple.com/programs/), you can authenticate with the App Store Connect API.![](/img/apple-developer-enterprise-porgram.jpg)"%}
+
 ## iOS Auto Provision with App Store Connect API Step
 
 The [Step](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstoreconnect) uses the official [App Store Connect API (JSON Web Token)](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests). By using your Apple Developer account definition that has been assigned to the app, this Step, when executed will:
