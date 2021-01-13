@@ -154,7 +154,7 @@ If you wish to use the **Deploy to iTunes Connect** Step in your Workflow, you c
 2. Provide your **Apple ID**, **Password**, and the **Application Specific Password** to the respective input fields.
 3. Save your changes.
 
-In addition to setting the Step's input (Step 2.), you need to set up session-based authentication to submit the app for review. This allows Bitrise to reuse your authentication sessions for 30 days. This way you do not have to manually go through 2FA on every single occasion. After 30 days, however, the authentication expires and you’ll have to re-authenticate.
+In addition to setting the Step's input (Step 2.), you need to set up session-based authentication too. This allows Bitrise to reuse your authentication sessions for 30 days. This way you do not have to manually go through 2FA on every single occasion. After 30 days, however, the authentication expires and you’ll have to re-authenticate.
 
 ### Defining your Apple Developer Account to Bitrise
 
