@@ -224,6 +224,8 @@ The above input has the key install_defaults, and its default value is yes.
 
 The `value_options` option defines the possible values: in this case, `yes` and `no`. Its `opts` property contains some information about how the input is presented: in this case, it's just a title option, which is always required. The title is displayed in the Workflow Editor instead of the key of the input.
 
+{% include message_box.html type="warning" title="The `value_options` input" content="The `value_options` input must contain a string. This means that without the quotation marks, as indicated in the example, the validation will fail."%}
+
 ### Naming and describing Step inputs
 
 A Step input can have a name, a summary, and a description, just like the Step itself. To define these:
@@ -391,7 +393,7 @@ Other dependencies need to be installed and checked while the Step is running or
 
 ### Accessing files in the Step repo with an Env Var
 
-If you need to keep a binary, assets or anything else required for your Step that should be bundled in the Step repository, then you can include them beside your `step.yml` file and the code of your Step. The Bitrise CLI automatically exports an Environment Variable called `BITRISE_STEP_SOURCE_DIR` that allows you to access these files at any time. 
+If you need to keep a binary, assets or anything else required for your Step that should be bundled in the Step repository, then you can include them beside your `step.yml` file and the code of your Step. The Bitrise CLI automatically exports an Environment Variable called `BITRISE_STEP_SOURCE_DIR` that allows you to access these files at any time.
 
 For example, you can access a `.jar` file in the root of your Step's repository like this:
 

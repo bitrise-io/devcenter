@@ -1,6 +1,13 @@
 ---
+- title: Developing a new Step
+  modified: 2021-01-14 17:00:00 +0100
+  changelog: 'When creating a new Step input, make sure that any pre-set value options
+    are strings: they must be enclosed in quotation marks, otherwise validation will
+    fail.'
+  type: update
+  url: "/contributors/create-your-own-step/#configuring-step-inputs"
 - title: Configuring Steps that require Apple Developer account data
-  modified: 2021-01-13 00:00:00 +0100
+  modified: 2021-01-13T00:00:00.000+01:00
   changelog: Information on which authentication method to use with the Apple Developer
     Enterprise Program has been added to the document.
   type: update
