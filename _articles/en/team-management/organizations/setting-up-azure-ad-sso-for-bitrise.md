@@ -31,9 +31,7 @@ Bitrise is not an integrated application in the Microsoft Azure portal so to set
 2. Click the **Azure Active Directory** icon on the **Azure services** page.![](/img/azureactivedirstep2.jpg)
 3. Click **Enterprise applications** under **Manage**.![](/img/enterpriseapps.jpg)
 4. Click **New Application** to add Bitrise as a new app to your account.![](/img/newapplication-jpg.jpg)
-5. Click the **Non-gallery application** tile to add Bitrise manually to Azure AD.
-
-   ![{{ page.title }}](/img/non-gallery-application.jpg)
+5. Type **Bitrise** in the **What's the name of your app** field and hit **Create**.![](/img/createyourownapp.jpg) You will find your newly created app listed on the All Applications page.
 6. Type **Bitrise** in the **Name** field under **Add your own application**.
 
    ![{{ page.title }}](/img/bitrise-added-as-an-app.png)
