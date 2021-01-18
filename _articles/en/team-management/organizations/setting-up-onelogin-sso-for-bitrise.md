@@ -38,13 +38,13 @@ This requires:
  5. Click the **Configuration** tab on the left sidebar. You can change the icon and add descriptions if you wish. Make sure **Organization (Bitrise)** is ticked. Hit **Save**.
 
     ![{{ page.title }}](/img/add-bitrise-onelogin.jpg)
- 6. Click the **Configuration** tab again and paste the **Single Sign-On URL** from your Bitrise Organization’s **Single Sign On** tab to the **Single Sign-On URL** field on OneLogin. Hit **Save**.
+ 6. Click the **Configuration** tab again and paste the **Assertion Consumer Service URL (ACS URL)** from your Bitrise Organization’s **Single Sign-On** tab to the **Single Sign-On URL** field on OneLogin. Hit **Save** in **OneLogin**.
 
     ![{{ page.title }}](/img/application-details.jpg)
  7. Select **SSO** on the left sidebar.
- 8. Click the **View details** for the X.509 Certificate. Copy the content of the **X.509 Certificate** and paste it to the **Certificate** field on the **Enable Single Sign-On** page of Bitrise.
- 9. Go back to the **SSO** page on OneLogin and copy the **SAML 2.0 Endpoint (HTTP)** link. Paste it in the **Identity provider sign-on URL** field on Bitrise.
-10. Go back to Bitrise and click **Configure SSO**.
+ 8. Click the **View details** for the X.509 Certificate. Copy the content of the **X.509 Certificate** and paste it to the **SAML SSO provider certificate** field on the **Enable Single Sign-On** page of Bitrise.
+ 9. Go back to the **SSO** page on OneLogin and copy the **SAML 2.0 Endpoint (HTTP)** link. Paste it in the **SAML SSO provider Single Sign-On URL (SSO URL)** field on Bitrise.
+10. Go back to Bitrise and click **Configure SSO**.![](/img/singlesingontab-1.jpg)
 
 {% include message_box.html type="note" title="Users on OneLogin and Bitrise" content="Make sure the users in your Bitrise Organization are all added to the **Users** page on OneLogin. If not, go to **Users**, then **New User** and add the new user. Don’t forget to send out an invite (**More actions** drop-down menu, **Send Invitation**) to a new user so that the user can activate their account on OneLogin. Users must be added to the newly created Bitrise app by clicking **Applications** under **User Info** and clicking the **+** sign. Make sure the added users are all Organization members on Bitrise.
 
