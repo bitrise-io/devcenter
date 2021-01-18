@@ -38,7 +38,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
 2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
-3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enable-single-sign-on-1.jpg)
+3. On the left menu bar, click the **Single Sign-On** tab which will take you to the **Enable Single Sign-On** page.![](/img/singlesingontab-2.jpg)
 4. Continue with [Getting configuration information from Google](/team-management/organizations/setting-up-google-sso-for-bitrise/#getting-configuration-information-from-google).
 
 ## Getting configuration information from G Suite and Bitrise
@@ -50,7 +50,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
  5. On the App details page add `Bitrise` as your app name. Please note it must be `Bitrise` as no other format is accepted. Click **Continue**.![](/img/addappname.jpg)
  6. On the **Getting Identity Provider details** page:
     * Copy the **SSO URL** and paste it on the **Identity Provider Sign-on URL** on Bitrise.
-    * Copy the whole content of the **Certificate** field and paste it in the **Certificate** field of Bitrise.![](/img/identityproviderdetails.jpg)![](/img/enable-single-sign-on-2.jpg)
+    * Copy the whole content of the **Certificate** field and paste it in the **Certificate** field of Bitrise.![](/img/identityproviderdetails.jpg)
  7. While you are in Bitrise, click the **Copy Link** button to copy the **Single Sign-On URL**. We will need it on G Suite in a second. Let's NOT click the **Configure SSO** button just now!
  8. Let’s head back to the **Getting Identity Provider details** page of G Suite. Click **Continue**.
  9. On the **Service provider details** page:
