@@ -35,7 +35,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
 2. The **Overview** page displays all the Org you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
-3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enable-single-sign-on-1.jpg)
+3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/singlesingontab-1.jpg)
 4. Continue with [Getting configuration information from Idaptive](/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/#getting-configuration-information-from-idaptive).
 
 ## Getting configuration information from Idaptive
@@ -54,12 +54,12 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
  6. Click the **Signing Certificate** dropdown and download the certificate. Open it with a text editor so that you can copy the full content of the certificate.
 
     ![{{ page.title }}](/img/download.jpg)
- 7. Insert it in the **Certificate** text box on the **Single Sign On page** of Bitrise.
- 8. Copy the **Single Sign On URL** from **Trust** page of Idaptive. Insert it on the **Identity provider sign-on URL** field on the **Single Sign On page** of Bitrise.
+ 7. Insert it in the **SAML SSO provider certificate** text box on the **Enable Single Sign-On** page of Bitrise.
+ 8. Copy the **Single Sign On URL** from the **Trust** page of Idaptive. Insert it on the **SAML SSO provider Single Sing-On URL (SSO URL)** field on the **Enable Single Sign-On** page of Bitrise.
  9. While on the **Single Sign On page** of Bitrise, copy the Single Sign-On URL and click **Configure SSO**.
 
     ![{{ page.title }}](/img/configure-sso.jpg)
-10. Now let’s head back to Idaptive! Under **Service Provider Configuration** click **Manual Configuration**. Type **Bitrise** in the **SP Entity ID / Issuer / Audience** and paste the **Single Sing-On URL** from Bitrise to the **Assertion Consumer Service (ACS) URL** on Idaptive.
+10. Now let’s head back to Idaptive! Under **Service Provider Configuration** click **Manual Configuration**. Type **Bitrise** in the **SP Entity ID / Issuer / Audience** and paste the **Assertion Consumer Service URL (ACS URL)** from Bitrise to the **Assertion Consumer Service (ACS) URL** on Idaptive.
 
     ![{{ page.title }}](/img/manual-config.jpg)
 11. Scroll down to **NameID Format** and select **emailAddress**. Click **Save**.
