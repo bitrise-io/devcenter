@@ -55,11 +55,11 @@ We will be jumping back and forth from the Bitrise Organization account to Okta 
  4. Select **SAML 2.0** option at **Sing on method** and click **Create**.![](/img/okta-create-new-app-pop-up.jpg)
  5. At **General Settings** step, type Bitrise into the **App name** field. (Optionally, you can add an app logo if you wish.) Click **Next**.![](/img/okta-general-settings.jpg)
  6. Head over to your Bitrise Organization and click the **Single Sign On** tab on the left menu.
- 7. Click the **Copy Link** button to copy the Single Sign-On URL.
+ 7. Click the **Copy Link** button to copy the **Assertion Consumer Service URL (ACS URL)**.
  8. Head back to Okta's **SAML Settings** and paste the copied URL to the **Single sign on URL** input field.
  9. Type Bitrise at the **Audience URI (SP Entity ID)**.
 
-    You can download the Okta certificate file now and paste its content in the **Certificate** field on your Bitrise Organization's **Single Sign On** page. Even easier if you leave it for later as you will need the **Identity provider sign-on URL** from Okta anyway. You will fetch this while configuring Bitrise as a SAML app.![](/img/saml-settings-okta-2.jpg)
+    You can download the Okta certificate file now, and paste its content in the **SAML SSO provider Single Sign-On URL (SSO URL)** field on your Bitrise Organization's **Single Sign-On** page. Even easier if you leave it for later as you will need the **Identity provider sign-on URL** from Okta anyway. You will fetch this while configuring Bitrise as a SAML app.![](/img/saml-settings-okta-2.jpg)
 10. Click **Next**.
 11. Fill out the **Feedback** section. Hit **Finish**.
 
