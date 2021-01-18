@@ -43,7 +43,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown.
    ![](/img/account-settings-dropdown.jpg)
 2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
-3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.
+3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/singlesingontab.jpg)
 4. Continue with [setting up SAML SSO for your Org on Bitrise](/team-management/organizations/saml-sso-in-organizations/#setting-up-saml-sso-for-a-bitrise-organization).
 
 {% include message_box.html type="info" title="Specific guides about connecting Bitrise to a SAML SSO provider" content="Bitrise can be connected to a bunch of SAML SSO providers. Check out our detailed guides on how to set them up:
@@ -64,7 +64,7 @@ In this tutorial, we describe how Org owners can set up their SAML SSO and invit
 3. Log in to your own SAML SSO provider.
 4. Add Bitrise using the copied Single Sign-On URL. You’re generating your Single Sign-On (SSO) credentials here which you will need in a minute on Bitrise.
 5. Add the generated SSO credentials to the **Identity provider sign-on URL** and **Certificate** fields on the **Enable** **Single Sign-On** page.
-6. Click the **Configure SSO** button.
+6. Click the **Configure SSO** button.![](/img/singlesingontab-1.jpg)
 
 If you've completed the steps, you and Org members should get a verification email about SAML SSO connected to the respective Organization.
 
