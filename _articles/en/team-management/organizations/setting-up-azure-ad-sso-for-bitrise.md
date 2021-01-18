@@ -31,13 +31,11 @@ Bitrise is not an integrated application in the Microsoft Azure portal so to set
 2. Click the **Azure Active Directory** icon on the **Azure services** page.![](/img/azureactivedirstep2.jpg)
 3. Click **Enterprise applications** under **Manage**.![](/img/enterpriseapps.jpg)
 4. Click **New Application** to add Bitrise as a new app to your account.![](/img/newapplication-jpg.jpg)
-5. Type **Bitrise** in the **What's the name of your app** field and hit **Create**.![](/img/createyourownapp.jpg) You will find your newly created app listed on the All Applications page.
-6. Type **Bitrise** in the **Name** field under **Add your own application**.
+5. Type **Bitrise** in the **What's the name of your app** field and hit **Create**.![](/img/createyourownapp.jpg) 
 
-   ![{{ page.title }}](/img/bitrise-added-as-an-app.png)
-7. Click the blue **Add** button at the bottom of the page.
-
-You have successfully added Bitrise as an app to Azure AD. Let's continue with configuring it as a the SAML app!
+   You will find your newly created app listed on the **All Applications** page.
+6. Click the **Bitrise** app to go to its **Overview** page.
+7. Continue with Configuring Bitrise as a SAML SSO app.
 
 ## Configuring Bitrise as a SAML app
 
