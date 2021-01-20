@@ -118,17 +118,30 @@ Now that you have established the connection between Bitrise and Azure AD, all t
 
 Congrats! You have successfully enabled the SAML connection! Since SAML SSO has not been enforced on your org yet, you can log in via SAML SSO or with your Bitrise credentials.
 
-## Enforcing SAML SSO on the Organization
+## Authorizing SAML SSO
 
-To be able to sign into Bitrise exclusively via SAML SSO, you have to enforce SAML on the Organization. Mind you! You can only enforce SAML SSO on the org, if all Organization members have enabled their SAML SSO connection.
+Now that the Org owner has set up SAML SSO, everyone in the Org has to authorize SAML SSO before logging in to their Org via SAML SSO.
 
-1. Toggle the **Enforce SAML SSO** switch to the right on the **Single Sign On** tab of the org.
-2. Click **Save Changes**.
+1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
+2. Bitrise sends a verification e-mail to all Org members. By clicking the **Log In via SAML SSO** button or using the provided URL, organization members can authorize themselves for SAML SSO login. The email also shows the Org owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.![](/img/email-samlssso.jpg)
+3. You’re directed to Bitrise to **Allow “Organization name” to sign you in** page.
+   * Click **Authorize** if you trust the Organization to control your Bitrise account sign-in process.  
+     If you’re already logged in to your SAML SSO provider, you’ll be automatically taken to your Bitrise Dashboard.  
+     If you’re not, you’ll be prompted to log in on your SAML SSO provider’s site, and then taken to your Bitrise Dashboard.
+   * Click **Don’t Allow** if the invitation email is from an untrusted source.
 
-From now on, Organization members will be able to log in exclusively via SAML SSO.
+     ![SAML SSO in Organizations](https://devcenter.bitrise.io/img/enable-saml.jpg)
 
-![{{ page.title }}](/img/enforced-saml-sso.jpg)
+     Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.![](/img/noconnectedsamlsso.png)
 
-{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Organization's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/#signing-up-to-bitrise-with-saml-sso). "%}
+If all went well, you should be landing on our Bitrise Dashboard. As an Org owner, you might want to check how Org members are progressing with their SAML SSO connection: [check Org member’s SAML SSO statuses ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)or [invite new members to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso).
 
-{% include banner.html banner_text="Set up Azure AD SSO!" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your organization" %}
+## What’s next?
+
+Learn how you can [log into your Org now that SAML SSO is set up](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account).
+
+You might wan to [check out Org member’s SAML SSO statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
+
+You might want to [enforce SAML SSO login to the Org](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) once all Org members have authorized their SAML SSO connection to the Org.
+
+Disabling SAML SSO is very simple - [learn how.](/team-management/organizations/saml-sso-in-organizations/#disabling-an-organizations-saml-sso)
