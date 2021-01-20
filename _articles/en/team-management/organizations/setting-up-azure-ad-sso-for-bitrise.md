@@ -14,6 +14,7 @@ summary: ''
 menu:
   organizations:
     weight: 19
+published: false
 
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Azure Active Directory (AD)](https://azure.microsoft.com/en-us/).
@@ -31,7 +32,7 @@ Bitrise is not an integrated application in the Microsoft Azure portal so to set
 2. Click the **Azure Active Directory** icon on the **Azure services** page.![](/img/azureactivedirstep2.jpg)
 3. Click **Enterprise applications** under **Manage**.![](/img/enterpriseapps.jpg)
 4. Click **New Application** to add Bitrise as a new app to your account.![](/img/newapplication-jpg.jpg)
-5. Type **Bitrise** in the **What's the name of your app** field and hit **Create**.![](/img/createyourownapp.jpg) 
+5. Type **Bitrise** in the **What's the name of your app** field and hit **Create**.![](/img/createyourownapp.jpg)
 
    You will find your newly created app listed on the **All Applications** page.
 6. Click the **Bitrise** app to go to its **Overview** page.
@@ -50,9 +51,10 @@ Let's do this!
 Before setting up SAML to the app, you have to add all the users/groups to the app in Azure AD who will use SAML SSO to log into the Bitrise Organization. In other words, every Bitrise org member must be added as user in Azure AD.
 
 1. Select **Users and groups** from the left menu.
-2. Select all the users from the list so that Bitrise org members will be able to sign into Bitrise with SAML SSO.
-3. Click **Select** at the bottom of the page.
-4. Click **Assign** at the bottom of the page.
+2. Click **+ Add user/group**. ![](/img/azureuser1.jpg)
+3. On the **Users** page of **Add Assignment**, select all the users from the list and click **Select**. Once it's done, you can select a role for users under the **Select a role** dropdown.![](/img/azureuser2.jpg)
+4. On the **Add Assignment** page, click **Assign** to finish adding users.![](/img/azureuser3b.jpg)
+5. Click **Assign** at the bottom of the page.
 
    You can see the list of added users:
 
