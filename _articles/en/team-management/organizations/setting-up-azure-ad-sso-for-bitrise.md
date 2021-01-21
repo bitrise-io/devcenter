@@ -82,30 +82,6 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 
 You have successfully set up Bitrise as a SAML SSO app on Azure AD. Continue with Enabling SAML SSO on Bitrise.
 
-## Enabling SAML SSO on Bitrise
-
-Now that you have established the connection between Bitrise and Azure AD, all there is left to do is [enable SAML SSO on Bitrise](/team-management/organizations/saml-sso-in-organizations/#enabling-saml-sso). If you check the **People** tab of your Bitrise Organization, you will see that your SAML status is disabled.
-
-1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
-2. Bitrise sends a verification e-mail to all Organization members. This email contains a **Sign In via SSO** button and a URL. Organization members are prompted to sign in to Bitrise by clicking the **Sign In via SSO** button or using the provided URL.
-
-   The email also shows the Organization owner's email address (should you need to contact them.) Click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
-
-   ![{{ page.title }}](/img/saml-invitation-authentication.jpg)
-
-   NOTE: Below error message only appears if you’ve been trying to access the Authorization page in a Safari browser.
-
-       Error: The CORS policy for this site does not allow access from the specified Origin....
-
-   As a workaround, we suggest you to copy the URL and paste it in a new tab. It will work! For all other browser types, you should be safely landing to the **Authorization** page.
-3. On the **Allow "Organization name" to sign you in** window, click **Authorize** if you trust the Organization.
-
-   You should be landing on your Organization's Bitrise Dashboard. You can check on the **Groups** tab who has been added to the org as a SAML user.
-
-   ![{{ page.title }}](/img/gorups-saml.jpg)
-
-Congrats! You have successfully enabled the SAML connection! Since SAML SSO has not been enforced on your org yet, you can log in via SAML SSO or with your Bitrise credentials.
-
 ## Authorizing SAML SSO
 
 Now that the Org owner has set up SAML SSO, everyone in the Org has to authorize SAML SSO before logging in to their Org via SAML SSO.
