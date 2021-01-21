@@ -40,7 +40,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
 2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/singlesingontab.jpg)
-4. Continue with [setting up SAML SSO for your Org on Bitrise](/team-management/organizations/saml-sso-in-organizations/#setting-up-saml-sso-for-a-bitrise-organization).
+4. Continue with .
 
 ## Adding Bitrise to Azure AD
 
@@ -73,7 +73,7 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 3. On the **Users** page of **Add Assignment**, select all the users from the list and click **Select**. Once it's done, you can select a role for users under the **Select a role** dropdown.![](/img/azureuser2.jpg)
 4. On the **Add Assignment** page, click **Assign** to finish adding users.![](/img/azureuser3b.jpg)
 
-### Setting up SAML between the app and Azure AD
+### Setting up SAML SSO between Bitrise and Azure AD
 
  1. Click **Single sign-on** on the left menu.![](/img/sso1.jpg)
  2. Select **SAML**.
