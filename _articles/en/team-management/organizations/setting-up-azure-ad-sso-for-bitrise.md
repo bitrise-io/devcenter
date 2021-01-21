@@ -44,8 +44,6 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 
 ## Adding Bitrise to Azure AD
 
-Bitrise is not an integrated application in the Microsoft Azure portal so to set up SAML SSO with Azure, you'll have to first add Bitrise as a non-gallery app to the portal.
-
 1. Log into [Microsoft Azure](https://azure.microsoft.com/en-us/) as an admin.
 2. Click the **Azure Active Directory** icon on the **Azure services** page.![](/img/azureactivedirstep2.jpg)
 3. Click **Enterprise applications** under **Manage**.![](/img/enterpriseapps.jpg)
