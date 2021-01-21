@@ -54,11 +54,6 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 2. Click **+ Add user/group**. ![](/img/azureuser1.jpg)
 3. On the **Users** page of **Add Assignment**, select all the users from the list and click **Select**. Once it's done, you can select a role for users under the **Select a role** dropdown.![](/img/azureuser2.jpg)
 4. On the **Add Assignment** page, click **Assign** to finish adding users.![](/img/azureuser3b.jpg)
-5. Click **Assign** at the bottom of the page.
-
-   You can see the list of added users:
-
-   ![{{ page.title }}](/img/added-user.png)
 
 ### Setting up SAML between the app and Azure AD
 
@@ -69,7 +64,8 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
  3. Click the pencil symbol at **Basic SAML Configuration** to edit two fields.![](/img/sso2a.jpg)
  4. Add **Bitrise** as the **Identifier (Entity ID)**.
 
-    Leave this window open! We will come back to it with some information from Bitrise in a second.![](/img/sso3-1.jpg)
+    Leave this window open! We will come back to it with some information from Bitrise in a second.
+    ![](/img/sso3-1.jpg)
  5. Head back to your Organization on Bitrise.
  6. Click the **Single Sign On** tab and click the **Copy Link** button to copy the **Single Sign-on URL** from your Bitrise.
  7. Let's head back to the **Basic SAML Configuration** window of Azure AD.
