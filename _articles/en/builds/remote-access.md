@@ -36,7 +36,7 @@ With either method, you can access the build machine remotely during the build a
 2. Click the **Rebuild with Remote Access** option.
 3. Click **Remote Access Instructions**.
 
-   ![{{ page.title }}](/img/remote-access-instructions.png)
+   ![Instructions for remote access with SSH](/img/remote-access-instructions.png)
 4. Under the **SSH** option, find and copy the command you will need.
 5. Open a command line interface.
 6. Run the command found under **SSH** (the below is an example):
@@ -52,7 +52,7 @@ And done! You should be able to access the virtual machine where your build is r
 2. Click the **Rebuild with Remote Access** option.
 3. Click **Remote Access Instructions**.
 
-   ![{{ page.title }}](/img/remote-access-instructions.png)
+   ![Instructions for remote access with screenshare](/img/remote-access-instructions.png)
 4. Under the **Screenshare** option, find the required information:
    * Address
    * Username
@@ -63,6 +63,14 @@ And done! You should be able to access the virtual machine where your build is r
 6. Fill out the required fields with the information from under the **Screenshare** option.
 
 And done! You should now be able to access the virtual machine where your build is running.
+
+## Finding your files on the VM
+
+Once you successfully logged in to the Bitrise virtual machine that ran your build, you can dive into the files themselves to see what’s happening in real time. After Bitrise finished cloning your app on to the VM, you can always access it at the following location:
+
+```
+/Users/Vagrant/git
+```
 
 ## Extending the availability of remote access
 
