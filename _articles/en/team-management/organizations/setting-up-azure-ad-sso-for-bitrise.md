@@ -69,19 +69,18 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
  5. Head back to your Organization on Bitrise.
  6. Click the **Single Sign On** tab and click the **Copy Link** button to copy the **Single Sign-on URL** from your Bitrise.
  7. Let's head back to the **Basic SAML Configuration** window of Azure AD.
- 8. Paste the **Assertion Consumer Service URL** from Bitrise to the **Reply URL field**.
+ 8. Paste the **Assertion Consumer Service URL** from Bitrise to the **Reply URL field on the Basic SAML Configuration** page of Azure AD.
  9. Click **Save** and close the **Basic SAML Configuration** window.![](/img/sso3.jpg)
-10. Scroll down to **Set up Bitrise**.
-11. Copy the **Login URL**.
-12. Paste it to **Identity provider sign-on URL** field on your Bitrise Organization account.
-13. Scroll up a bit to **SAML Signing Certificate**.
-14. Click **Download** next to the **Certificate** to download the certificate to your local computer.
-
-    ![{{ page.title }}](/img/certificate-azure.jpg)
-15. Open the certificate file and copy/paste its content into the **Certificate** field of your Bitrise Organization.
+10. On the **Single sign-on** page of Azure AD, scroll down to the **Set up Bitrise** section.
+11. Copy the **Login URL** and paste it to the **SAML SSO provider Single Sign-On URL** **(SSO URL)** field on Bitrise.
+12. On the **Single sign-on** page of Azure AD, scroll up a bit to the **SAML Signing Certificate** section**.**
+13. Click **Download** next to **Certificate (Base64)** to download the certificate to your local computer.
+14. Open the certificate file and copy/paste its content into the **SAML SSO provider certificate** field of Bitrise.
 
     You will need the full content of the file (starting from   `----BEGIN CERTIFICATE-----` all the way to `-----END CERTIFICATE-----`).
-16. Hit **Configure SSO** on Bitrise.
+15. Hit **Configure SSO** on Bitrise.![](/img/sso4.jpg)
+
+You have successfully set up Bitrise as a SAML SSO app on Azure AD. Continue with Enabling SAML SSO on Bitrise.
 
 ## Enabling SAML SSO on Bitrise
 
