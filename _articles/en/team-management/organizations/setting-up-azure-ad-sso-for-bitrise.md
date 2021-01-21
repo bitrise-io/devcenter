@@ -71,7 +71,7 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 
     Leave this window open! We will come back to it with some information from Bitrise in a second.![](/img/sso3-1.jpg)
  5. Head back to your Organization on Bitrise.
- 6. Click the **Single Sign On** tab and click the **Copy Link** button to copy the **Single Sign-on URL** from your Bitrise.![](/img/singlesingontab1.jpg)
+ 6. Click the **Single Sign On** tab and click the **Copy Link** button to copy the **Single Sign-on URL** from your Bitrise.
  7. Let's head back to the **Basic SAML Configuration** window of Azure AD.
  8. Paste the **Assertion Consumer Service URL** from Bitrise to the **Reply URL field**.
  9. Click **Save** and close the **Basic SAML Configuration** window.![](/img/sso3.jpg)
