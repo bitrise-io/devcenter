@@ -157,6 +157,29 @@ You can save or discard any changes you have made with the config. If you click 
 
 You might want to copy this whole YML configuration or just part of it to another app, so that you can use the copied version as a base and extend it with a few extra steps. All you have to do is copy this `bitrise.yml` content and paste it into the new app's **bitrise.yml editor** and develop it further.
 
+## Editing a bitrise.yml locally
+
+Our yml scheme is shared on [schemastore](http://schemastore.org/json/). This means that syntax highlight and auto-completion is available for the following files if you edit them locally:
+
+* `bitrise.yml`
+* `step.yml`
+* `bitrise.json`
+
+The following editors support the auto-complete feature:
+
+* IntelliJ IDEA
+* PhpStorm
+* PyCharm
+* Rider
+* RubyMine
+* Visual Studio 2013+
+* Visual Studio Code
+* Visual Studio for Mac
+* WebStorm
+* JSONBuddy![](/img/autocomplete.png)
+
+If you store your project’s bitrise.yml on Bitrise, you can download it by clicking the **Download currently saved config** button on the **bitrise.yml** page of the **Workflow Edito**r and enjoy auto-completion in your editor locally.![](/img/bitriseymlonline.jpg)
+
 ## Deleting a build's bitrise.yml
 
 If you wish, you can simply delete a build's `bitrise.yml` file. But please note that this action cannot be undone: nobody will be able to view that particular build's `bitrise.yml` file once you delete it.
