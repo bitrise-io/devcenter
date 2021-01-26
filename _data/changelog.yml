@@ -1,6 +1,12 @@
 ---
+- title: Managing an app's bitrise.yml configuration
+  modified: 2021-01-26 00:00:00 +0100
+  changelog: Auto-complete feature is now available for the bitrise.yml, bitrise.json
+    and step.yml files with a bunch of editors.
+  type: ''
+  url: ''
 - title: Remote access
-  modified: 2021-01-21 13:00:00 +0100
+  modified: 2021-01-21T13:00:00.000+01:00
   changelog: Updated with information about how to find your files on the Bitrise
     virtual machines.
   type: update
