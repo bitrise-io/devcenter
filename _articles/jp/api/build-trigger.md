@@ -1,13 +1,12 @@
 ---
-changelog:
-last_modified_at:
+changelog: 
+last_modified_at: 
 title: ビルドのトリガー(開始)と中断
 menu:
   api-main:
     weight: 10
 
 ---
-
 Bitrise APIで、アプリのビルド開始と中断を実行することができます。ビルドするためのパラメータを定義できます: 例えば、ブランチ、タグ、またはgitコミット。カスタム環境変数も同様に設定することができます。
 
 ## 新しいビルドのトリガー(開始)

@@ -1,6 +1,6 @@
 ---
 last_modified_at: '2020-05-26T22:00:00.000+00:00'
-title: Deploying Android apps
+title: Deploying Android apps to Bitrise and Google Play
 date: '2018-10-26T13:00:41.000+00:00'
 redirect_from:
 - "/tutorials/deploy/android-deployment/"
@@ -12,7 +12,8 @@ tag:
 description: Find out how you can deploy the APK built from your Android app to both
   bitrise.io and to the Google Play Store. Learn about Google Play API access and
   the JSON key file.
-summary: ''
+summary: This guide describes how you can add your Android project to bitrise.io and
+  deploy the APK built from your project to Google Play Store.
 menu:
   android-deploy:
     weight: 1
