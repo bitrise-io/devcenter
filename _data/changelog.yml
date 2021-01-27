@@ -1,6 +1,13 @@
 ---
+- title: Deploying apps to Huawei AppGallery
+  modified: 2021-01-27 12:00:00 +0100
+  changelog: You can deploy your Android apps to Huawei AppGallery via a verified
+    Bitrise Step called Deploy to Huawei App Gallery. The Step can be used to deploy
+    any APK file that you build on Bitrise.
+  type: new
+  url: "/deploy/android-deploy/deploying-apps-to-huawei-appgallery/"
 - title: Managing an app's bitrise.yml configuration
-  modified: 2021-01-26 00:00:00 +0100
+  modified: 2021-01-26T00:00:00.000+01:00
   changelog: Auto-complete feature is now available for the bitrise.yml, bitrise.json
     and step.yml files with a bunch of editors.
   type: update
