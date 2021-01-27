@@ -7,7 +7,6 @@ menu:
     weight: 4
 
 ---
-
 [fastlane match](https://github.com/fastlane/fastlane/tree/master/match)を[bitrise.io](https://www.bitrise.io/)で利用するために必要な設定は、以下の3つだけです。
 
 1. `git clone`の際に利用するSSHキーを、ソースコードリポジトリ([bitrise.io](https://www.bitrise.io/)に登録してあるリポジトリ)と`match`用リポジトリで利用できるよう確認してください。詳しくは[こちらの説明](/faq/adding-projects-with-submodules/)を参照してください。

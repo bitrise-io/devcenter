@@ -9,6 +9,9 @@ redirect_from: []
 summary: You can deploy your Android apps to Huawei AppGallery via a verified Bitrise
   Step called Deploy to Huawei App Gallery. The Step can be used to deploy any APK
   file that you build on Bitrise.
+menu:
+  android-deploy:
+    weight: 9
 
 ---
 You can deploy your Android apps to [Huawei AppGallery ](https://appgallery.huawei.com/)via a verified Bitrise Step called **Deploy to Huawei App Gallery**. The Step can be used to deploy any APK file that you build on Bitrise.

@@ -3,6 +3,10 @@ tag: []
 title: Deploying to Huawei AppGallery
 redirect_from: []
 summary: ''
+menu:
+  android-deploy:
+    weight: 10
+    title: Deploying apps to Huawei AppGallery
 
 ---
 {% include not_translated_yet.html %}
