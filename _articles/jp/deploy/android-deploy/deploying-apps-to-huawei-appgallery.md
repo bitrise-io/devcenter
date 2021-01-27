@@ -5,7 +5,7 @@ redirect_from: []
 summary: ''
 menu:
   android-deploy:
-    weight: 10
+    weight: 3
     title: Deploying apps to Huawei AppGallery
 
 ---

@@ -5,10 +5,6 @@ tag: []
 title: FAQ
 redirect_from: []
 description: ''
-menu:
-  troubleshooting-main:
-    identifier: faq
-    weight: 1
 
 ---
 {% include not_translated_yet.html %}

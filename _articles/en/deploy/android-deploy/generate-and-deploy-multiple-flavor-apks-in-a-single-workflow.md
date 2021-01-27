@@ -11,7 +11,7 @@ description: You can generate, code sign and deploy multiple flavor (multi-flavo
   core code with features resulting in different versions of the same app.
 menu:
   android-deploy:
-    weight: 3
+    weight: 5
     title: Generating and deploying multiple flavor APKs in a single build
 
 ---

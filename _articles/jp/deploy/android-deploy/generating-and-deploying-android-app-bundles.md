@@ -11,7 +11,7 @@ description: You can compile an Android App Bundle with our Android Build and Gr
   Google Play Deploy Step.
 menu:
   android-deploy:
-    weight: 6
+    weight: 8
     title: Generating and deploying Android app bundles
 
 ---

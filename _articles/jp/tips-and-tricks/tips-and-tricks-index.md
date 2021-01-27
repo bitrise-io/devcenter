@@ -3,10 +3,6 @@ changelog:
 last_modified_at: 
 title: Tips and tricks
 redirect_from: []
-menu:
-  tutorials-main:
-    identifier: tips-and-tricks
-    weight: 1
 
 ---
 {% include not_translated_yet.html %}

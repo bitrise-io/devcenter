@@ -6,7 +6,7 @@ date: 2018-10-26T12:56:08.000+00:00
 redirect_from: []
 menu:
   android-deploy:
-    weight: 4
+    weight: 6
 
 ---
 Bitriseの`Gradle Runner`ステップを使って、単一ワークフロー内で複数のフレーバー（マルチフレーバー）APKの生成、コード署名、ならびにデプロイを行うことができます。フレーバーとは、アプリのコアコードを機能拡張して同じアプリを異なるバージョンにすることを意味します（標準的な例：free/paid、demo/full）。詳しい情報は公式Android Studioガイドにある[build types, flavors and build variants](https://developer.android.com/studio/build/build-variants)を参照してください。このチュートリアルでは、`Sign APK`や`Google Play Deploy`ステップでの設定方法を紹介します。
