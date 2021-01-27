@@ -54,7 +54,7 @@ To configure the **Deploy to Huawei App Gallery Step**:
    * **Client ID**: The API client ID generated on AppGallery Connect.
    * **Key**: The key generated with the API client on AppGallery connect.
 
-{% include message_box.html type="example" title="An example configuration with the Step" content="Take a look at the following bitrise.yml file to see an example configuration that uses the **Deploy to Huawei AppGallery** Step to deploy an app.
+Take a look at the following bitrise.yml file to see an example configuration that uses the **Deploy to Huawei AppGallery** Step to deploy an app.
 
     workflows:
       deploy:
@@ -78,25 +78,6 @@ To configure the **Deploy to Huawei App Gallery Step**:
             inputs:
             - huawei_client_id: 'XXX'
             - huawei_client_secret: "$CLIENT_SECRET"
-            - huawei_app_id: 'YYY'   
-     app:
-      envs:
-      - opts:
-          is_expand: false
-        PROJECT_LOCATION: "."
-      - opts:
-          is_expand: false
-        MODULE: app
-      - opts:
-          is_expand: false
-        VARIANT: ''
-      - opts:
-          is_expand: false
-        GRADLE_BUILD_FILE_PATH: build.gradle
-      - opts:
-          is_expand: false
-        GRADLEW_PATH: "./gradlew"
-
-"%}
+            - huawei_app_id: 'YYY'  
 
 Run a build! If all goes well, you should see your app on Huawei AppGallery.
