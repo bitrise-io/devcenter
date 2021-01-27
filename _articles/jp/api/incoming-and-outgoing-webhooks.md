@@ -1,7 +1,7 @@
 ---
-changelog: 
-last_modified_at: 
-title: Incoming and outgoing webhooks
+changelog:
+last_modified_at:
+title: Incoming webhooksとOutgoing webhooks
 redirect_from: []
 date: '2019-04-09T15:10:42.000+00:00'
 menu:
@@ -9,53 +9,51 @@ menu:
     weight: 12
 
 ---
-{% include not_translated_yet.html %}
-
-Both incoming and outgoing webhooks can be set up with the Bitrise API. They are important for automatic build triggering and the reporting of build events to other services.
+Incoming webhooksとOutgoing webhooksの両方とも、Bitrise APIで設定できます。これらは、自動ビルドトリガーとビルドイベントを他のサービスにレポートするために重要です。
 
 ## Incoming webhooks
 
-| Endpoints | Function |
+| エンドポイント | 機能 |
 | --- | --- |
-| [POST /apps/{app-slug}/register-webhook](https://api-docs.bitrise.io/#/app-setup/app-webhook-create) | Register an incoming webhook for a specific application. |
+| [POST /apps/{app-slug}/register-webhook](https://api-docs.bitrise.io/#/app-setup/app-webhook-create) | 特定のアプリにIncoming webhookを登録 |
 
-Incoming webhooks enable users to set up automatic triggers for their apps on Bitrise: for example, a Bitrise webhook registered on GitHub can automatically trigger a build when code is pushed to the GitHub repository.
+Incoming webhooksは、Bitrise上のユーザが登録したアプリに対し、自動トリガーを設定することを可能にします。例えば、GitHubに登録されたBitrise webhookは、コードがGitHubにpushされた時に自動的にトリガー(開始)されます。
 
-To set up a webhook, you must have connected your Bitrise account to your Git provider account: this allows Bitrise to register the webhook automatically.
+webhookを設定するために、あなたのBitriseアカウントをGitプロバイダアカウントに紐付ける必要があります。そうすることで、Bitriseはwebhookを自動で登録することができるようになります。
 
-Register a webhook with the API by calling the `register-webhook` endpoint with an existing app slug:
+ `register-webhook` エンドポイントを存在するアプリスラッグとともにコールすることで、webhookを登録する方法はこちらです。
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/register-webhook'
 
-This will register a webhook to the Git provider of the application. Afterwards, you can set up automatic triggers either on the website or via the Trigger Map in the application's `bitrise.yml` file.
+このAPIコールは、アプリがあるGitプロバイダにwebhookを登録します。その後、ウェブサイトまたはアプリが持つ `bitrise.yml` ファイル内のTrigger Map経由で自動トリガーを設定することができるようになります。
 
 ## Outgoing webhooks
 
-| Endpoints | Function |
+| エンドポイント | 機能 |
 | --- | --- |
-| [GET /apps/{app-slug}/outgoing-webhooks](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-list) | List the outgoing webhooks of an app. |
-| [POST /apps/{app-slug}/outgoing-webhooks](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-create) | Create an outgoing webhook for an app. |
-| [PUT /apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-update) | Update an outgoing webhook of an app. |
-| [DELETE /apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-delete) | Delete an outgoing webhook of an app. |
+| [GET /apps/{app-slug}/outgoing-webhooks](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-list) | アプリのoutgoing webhookリスト取得 |
+| [POST /apps/{app-slug}/outgoing-webhooks](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-create) | アプリのoutgoing webhook作成 |
+| [PUT /apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-update) | アプリのoutgoing webhook更新 |
+| [DELETE /apps/{app-slug}/outgoing-webhooks/{app-webhook-slug}](https://api-docs.bitrise.io/#/outgoing-webhook/outgoing-webhook-delete) | アプリのoutgoing webhook削除 |
 
-Outgoing webhooks enable integration with other services: specifically, they are used to notify other services. Currently, only build event notifications are supported. There are two supported build events: triggering a build and finishing a build.
+Outgoing webhookは他のサービスとの統合を可能にします。特に他のサービスに通知する場合に利用してください。現在は、ビルドイベント通知のみサポートしています。「ビルドのトリガー(開始)」と「ビルドの終了」の2つのビルドイベントがサポートされています。
 
-{% include message_box.html type="info" title="Build status reports" content="Notifying your Git provider about the build status does not require outgoing webhooks."%}
+{% include message_box.html type="info" title="ビルドステータスレポート" content="あなたのGitプロバイダーにビルドステータスを通知する場合、Outgoing webhookは必要ありません。"%}
 
-### Creating outgoing webhooks
+### Outgoing webhooksの作成
 
-To set up an outgoing webhook for an application, you need to specify the app itself and at least two of the creation parameters:
+アプリのためのOutgoing webhookを設定するために、そのアプリ自体と、それ以外に少なくとも2つの作成パラメータを指定する必要があります。
 
-* The webhook URL: you can get this from the service you want to integrate with Bitrise.
-* The events that trigger the webhook. Currently, this takes two possible values: "all" and "build".
+* webhookのURL。Bitriseと統合したいサービス側からこのURLを取得することができます。
+* このwebhookをトリガーするイベント。現在は "all" または "build" の2つの値のみ利用可能です。
 
-You can also set up custom headers by specifying a key/value pair in the request.
+キー/値のペアをリクエストに指定することで、カスタムヘッダーを設定することもできます。
 
-Example request:
+リクエストの例:
 
     curl -X POST "https://api.bitrise.io/v0.1/apps/APP-SLUG/outgoing-webhooks" -H "accept: application/json" -H "Authorization: ACCESS-TOKEN" -H "Content-Type: application/json" -d "{ \"events\": [ \"build\" ], \"url\": \"example.webhook.com\", \"headers\": { \"KEY\": \"value\" }}"
 
-Example response:
+レスポンスの例:
 
     {
       "slug": "01D72ARNH4KR7KMW3DG3NBKXRK",
@@ -70,15 +68,15 @@ Example response:
       "updated_at": "2019-03-28T14:20:22.436825Z"
     }
 
-### Modifying and deleting outgoing webhooks
+### Outgoing webhooksの変更と削除
 
-To modify an existing webhook, you need to specify all the mandatory parameters in your request. In other words, even if you only want to change the URL, the request still has to contain a valid value for the `events` parameter.
+すでに設定済みのwebhookを変更するため、あなたのリクエストに必要な全ての必須パラメータを指定する必要があります。言い換えるなら、もしURLだけを変更したい場合でも、そのリクエストは `events` パラメータに有効な値を保持している必要があります。
 
-Example request:
+リクエストの例:
 
     curl -X PUT "https://api.bitrise.io/v0.1/apps/APP-SLUG/outgoing-webhooks/WEBHOOK-SLUG" -H "accept: application/json" -H "Authorization: ACCESS-TOKEN" -H "Content-Type: application/json" -d "{ \"events\": [ \"all\" ], \"url\": \"example2.webhook.com\"}"
 
-Example response:
+レスポンスの例:
 
     {
       "data": {
@@ -93,6 +91,6 @@ Example response:
       }
     }
 
-To delete an outgoing webhook, all you need to do is provide the app slug and the webhook slug in your request:
+Outgoing webhookを削除するには、アプリスラッグとwebhookスラッグをリクエストに含むだけで行えます。
 
     curl -X DELETE "https://api.bitrise.io/v0.1/apps/APP-SLUG/outgoing-webhooks/WEBHOOK-SLUG" -H "accept: application/json" -H "Authorization: ACCESS-TOKEN"
