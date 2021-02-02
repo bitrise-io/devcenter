@@ -49,7 +49,7 @@ When first logging in, you might not have a single build version available to pu
 
 * In one of your Workflows, you need a Step that builds your app. By default, **Xcode Archive & Export for iOS**, **Gradle Runner** and **Android Build** are automatically supported.
 * The same Workflow must have the correct version of the **Deploy to Bitrise.io** Step after the Step that builds your app.
-* The **Deploy to Bitrise.io** Step must export the relevant file: an APK file for Android apps and the `.xcarchive` file for iOS apps. If you use either one of the **Xcode Archive & Export for iOS**, **Gradle Runner** and **Android Build** Steps, you don't have to change anything in the default configuration of the **Deploy to Bitrise.io** Step to export the relevant files. 
+* The **Deploy to Bitrise.io** Step must export the relevant file: an APK file for Android apps and the `.xcarchive` file for iOS apps. If you use either one of the **Xcode Archive & Export for iOS**, **Gradle Runner** and **Android Build** Steps, you don't have to change anything in the default configuration of the **Deploy to Bitrise.io** Step to export the relevant files.
 
 {% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be version 1.9.0 or higher and the **Xcode Archive & Export for iOS** Step for iOS apps must be version 2.6.0 or higher - older versions of the Steps do not support Ship."%}
 
@@ -128,10 +128,10 @@ To install it directly from Ship:
 ### Publishing an app online
 
 <div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
-  
-{% include message_box.html type="important" title="The `.xcarchive` file" content="Please note that in order to deploy an iOS app with Ship, Ship needs the `.xcarchive` file from the **Deploy to Bitrise.io** Step. Make sure that the archive is deployed by the Step otherwise Ship won't be able to publish your app! 
-  
-To make sure, check the **Deploy to Bitrise.io** Step in your Workflow. It has an input called **Deploy directory or file path**: the path specified here must contain the `xcarchive` file. The default value is the `BITRISE_DEPLOY_DIR` Environment Variable: we recommend that you don't remove this. If this Env Var is included, the file is automatically exported."%}
+
+{% include message_box.html type="important" title="The `.xcarchive` file" content="Please note that in order to deploy an iOS app with Ship, Ship needs the `.xcarchive` file from the **Deploy to Bitrise.io** Step. Make sure that the archive is deployed by the Step, otherwise Ship won't be able to publish your app!
+
+To make sure, check the **Deploy to Bitrise.io** Step in your Workflow. It has an input called **Deploy directory or file path**: the path specified here must contain the `xcarchive` file. The default value is the `BITRISE_DEPLOY_DIR` Environment Variable: we recommend that you don't remove this. If this variable is included, the file is automatically exported."%}
 
 {% include message_box.html type="important" title="Apps built with cross-platform frameworks" content="If you wish to deploy an iOS app that is built using Flutter, React Native, or any other cross-platform framework, you can do so: you just need to make sure that the Step that archives your iOS project exports the `.xcarchive` file for the **Deploy to Bitrise.io** Step. Read more in the [Deploying iOS apps built with cross-platform frameworks](/deploy/ship/#deploying-ios-apps-built-with-cross-platform-frameworks)."%}
 
