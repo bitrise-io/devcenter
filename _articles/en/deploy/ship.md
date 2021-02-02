@@ -131,7 +131,7 @@ To install it directly from Ship:
   
 {% include message_box.html type="important" title="The `.xcarchive` file" content="Please note that in order to deploy an iOS app with Ship, Ship needs the `.xcarchive` file from the **Deploy to Bitrise.io** Step. Make sure that the archive is deployed by the Step otherwise Ship won't be able to publish your app! 
   
-To make sure, check the **Deploy to Bitrise.io** Step in your Workflow. It has an input called **Deploy directory or file path**: the path specified here must contain the `xcarchive` file. The default value is the `BITRISE_DEPLOY_DIR` Environment Variable: we recommend you don't remove this. If this Env Var is included, the file is automatically exported."%}
+To make sure, check the **Deploy to Bitrise.io** Step in your Workflow. It has an input called **Deploy directory or file path**: the path specified here must contain the `xcarchive` file. The default value is the `BITRISE_DEPLOY_DIR` Environment Variable: we recommend that you don't remove this. If this Env Var is included, the file is automatically exported."%}
 
 {% include message_box.html type="important" title="Apps built with cross-platform frameworks" content="If you wish to deploy an iOS app that is built using Flutter, React Native, or any other cross-platform framework, you can do so: you just need to make sure that the Step that archives your iOS project exports the `.xcarchive` file for the **Deploy to Bitrise.io** Step. Read more in the [Deploying iOS apps built with cross-platform frameworks](/deploy/ship/#deploying-ios-apps-built-with-cross-platform-frameworks)."%}
 
