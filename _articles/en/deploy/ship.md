@@ -1,7 +1,4 @@
 ---
-changelog: Clarification added about using Steps that can build a deployable app but
-  do not automatically export it to Ship.
-last_modified_at: '2020-04-01'
 tag:
 - ship
 - deploy
@@ -12,6 +9,10 @@ redirect_from: []
 description: Ship is a deployment solution that aims to save users a lot of headache.
   With Ship, you have complete control over your app's distribution, its version history,
   and all the important metadata - and you can manage all that in one place.
+summary: ''
+changelog: Clarification added about using Steps that can build a deployable app but
+  do not automatically export it to Ship.
+last_modified_at: '2020-04-01'
 menu:
   deploy-main:
     weight: 5
@@ -35,7 +36,7 @@ You can do a whole lot of things with Ship:
 * Deploy a given build version to App Store Connect and/or the Google Play Console, once you set up publishing.
 * Switch between platforms on the **Version History** page in the case of cross-platform projects.
 
-  ![{{ page.title }}](/img/ship_benefits.jpg)
+  ![](/img/ship_benefits.jpg)
 
 ## Getting started with Ship
 
@@ -46,18 +47,23 @@ You have two options to open Ship:
 
 When first logging in, you might not have a single build version available to publish. But don't worry, that can be fixed quickly.
 
-* In one of your Workflows, you need a Step that builds your app, such as **Xcode Archive & Export for iOS** or **Android Build**.
+* In one of your Workflows, you need a Step that builds your app. By default, **Xcode Archive & Export for iOS**, **Gradle Runner** and **Android Build** are automatically supported.
 * The same Workflow must have the correct version of the **Deploy to Bitrise.io** Step after the Step that builds your app.
+* The **Deploy to Bitrise.io** Step must export the relevant file: an APK file for Android apps and the `.xcarchive` file for iOS apps. If you use either one of the **Xcode Archive & Export for iOS**, **Gradle Runner** and **Android Build** Steps, you don't have to change anything in the default configuration of the **Deploy to Bitrise.io** Step to export the relevant files.
 
-{% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be of version 1.9.0 and the **Xcode Archive & Export for iOS** Step for iOS apps must be of version 2.6.0 - older versions of the Steps do not support Ship."%}
+{% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be version 1.9.0 or higher and the **Xcode Archive & Export for iOS** Step for iOS apps must be version 2.6.0 or higher - older versions of the Steps do not support Ship."%}
 
-Once you built your app - that is to say, produced an APK or an IPA file -, you will be able to start using Ship.
+{% include message_box.html type="info" title="Using Ship with different build Steps" content="By default, **Xcode Archive & Export for iOS**, **Gradle Runner**, and **Android Build** are automatically supported with Ship.
+
+If you want to build your app with any other Step, you can do so - please check out the [Using Ship for apps built with cross-platform frameworks](/deploy/ship/#using-ship-for-apps-built-with-cross-platform-frameworks) section."%}
+
+Once you successfully built your app, you will be able to start using Ship.
 
 ## Configuring and publishing an app with Ship
 
 To publish an app on Ship, you need to:
 
-* Build an app that has at least one [exposed Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship).
+* Build an app that has at least one [exposed Workflow](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship).
 * Configure publishing on the **Settings** page.
 * Push the **Publish** button.
 
@@ -76,7 +82,7 @@ To expose a Workflow's artifacts to Ship:
 3. Go to the **General** tab.
 4. In the **Expose Artifacts From the Selected Workflow to Ship** text box, add all the Workflows you need.
 
-   ![{{ page.title }}](/img/Settings___android-test-test.png)
+   ![](/img/Settings___android-test-test.png)
 
    Be aware that if your app is cross-platform, there are TWO such text boxes: one for iOS and one for Android. Separate the different Workflow names with a comma (for example, `build, deploy, release_build_android`) .
 5. Scroll down to the bottom of the page and click **Save**.
@@ -102,12 +108,12 @@ To install an app on a device, there are three options:
 
 {% include message_box.html type="important" title="Artifact types" content="The public install page is not available for all type of artifacts.
 
-* For iOS, it's only available if your Workflow builds an .ipa file that is signed with a Debug, Development or Ad-hoc type provisioning profile.
+* For iOS, it's only available if your app is signed with a Debug, Development or Ad-hoc type provisioning profile.
 * For Android, it's only available if your Workflow builds an APK which is NOT split or if it builds a universal APK which is split. For AABs, there will be no public install page link."%}
 
 To send the public install page link or the QR code:
 
-1. [Expose](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) the Workflow that creates the installable file, and run the Workflow on Bitrise.
+1. [Expose](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) the Workflow that creates the installable file, and run the Workflow on Bitrise.
 2. Open the **Details** page of your app's chosen build version.
 3. On the right, find the Public Install Page link or the QR code.
 4. Copy the one you need and send it to the stakeholders (by email, for example).
@@ -121,7 +127,13 @@ To install it directly from Ship:
 
 ### Publishing an app online
 
-<div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
+<div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
+
+{% include message_box.html type="important" title="The `.xcarchive` file" content="Please note that in order to deploy an iOS app with Ship, Ship needs the `.xcarchive` file. Make sure that the **Deploy to Bitrise.io** Step exports the archive, otherwise Ship won't be able to publish your app!
+
+To make sure, check the **Deploy to Bitrise.io** Step in your Workflow. It has an input called **Deploy directory or file path**: the path specified here must contain the `xcarchive` file. The default value is the `BITRISE_DEPLOY_DIR` Environment Variable: we recommend that you don't remove this. If this variable is included, the file is automatically exported."%}
+
+{% include message_box.html type="important" title="Apps built with cross-platform frameworks" content="If you wish to deploy an iOS app that is built using Flutter, React Native, or any other cross-platform framework, you can do so: you just need to make sure that the Step that archives your iOS project exports the `.xcarchive` file for the **Deploy to Bitrise.io** Step. Read more in the [Deploying iOS apps built with cross-platform frameworks](/deploy/ship/#deploying-ios-apps-built-with-cross-platform-frameworks)."%}
 
 To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you have to:
 
@@ -137,7 +149,7 @@ To configure publishing an app for iOS:
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go to the **General** tab.
 3. Go to the **iOS Settings** section.
-4. [Expose](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the .ipa you want to publish, and run the Workflow on Bitrise.
+4. [Expose](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the .ipa you want to publish, and run the Workflow on Bitrise.
 5. Select the code signing files you want to use.
 
    Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
@@ -147,7 +159,7 @@ To configure publishing an app for iOS:
 </div>
 </div>
 
-<div><button type="button" class="collapsible"><p>Publishing an app for Android</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="Before you'd publish an Android app in Ship, make sure that:
+<div><button type="button" class="collapsible"><p>Publishing an app for Android</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="Before you publish an Android app in Ship, make sure that:
 
 * Your app is built in a Workflow that is exposed to Ship. The Workflow must contain a build Step that builds an APK(s) or an Android App Bundle (such as **Android Build** or **Gradle Runner** Step) and the **Deploy to Bitrise.io** Step.
 * You have built a release version of your app before publishing it in Ship. Please note that without a release version, the **Publish** button on the **Details** page of Ship will be disabled. In this case, check if the following is set in your build Steps: the **Android Build** Step's **Variant** input field must contain `release` (for example `release` or `demoRelease`) and the **Gradle Runner** Step's **Gradle task to run** input field must contain `Release` (for example, `assembleRelease` or `assembleDemoRelease`).
@@ -164,11 +176,11 @@ To configure publishing an app for Android:
 
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go to the **Android Settings** section.
-3. [Expose](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the APK you want to publish.
+3. [Expose](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the APK you want to publish.
 4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Google Play Console.
-5. If your Android app contains multiple modules, enter the exact module under **Module**. ![{{ page.title }}](/img/module-android-settings.png)
+5. If your Android app contains multiple modules, enter the exact module under **Module**. ![](/img/module-android-settings.png)
 6. Choose the appropriate keystore file and the Service Account JSON file.
-7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing. ![{{ page.title }}](/img/flavorandroid.jpg)
+7. Head back to the **Version History** page and select the version you wish to publish. If your app has multiple flavors, you can filter for the right flavor and select it for publishing. ![](/img/flavorandroid.jpg)
 8. Fill out the **Details** page and click **Publish.**
 </div>
 </div>
@@ -179,7 +191,7 @@ Once you clicked **Publish** in Ship, the process starts according to the config
 
 To view the logs of any publishing process, go to the **Activity** tab. From there, you can download the logs by clicking **Download Build Log** to troubleshoot any errors after a failed publish.
 
-![{{ page.title }}](/img/downloadbuildlog.jpg)
+![](/img/downloadbuildlog.jpg)
 
 ## App details
 
@@ -200,7 +212,7 @@ To add screenshots or feature graphics to your app details page:
 1. Open the **Details** page in Ship of your app's chosen build version.
 2. Go to **Screenshots** or **Feature Graphic**, depending on what you want to upload.
 
-   ![{{ page.title }}](/img/ship-screenshots-1.jpg)
+   ![](/img/ship-screenshots-1.jpg)
 3. Drag and drop a file OR click **Browse files** and select the ones you wish to upload.
 4. Once done, click **Save** in the top right corner.
 
@@ -232,7 +244,7 @@ To add a new email address to the notification list for an app:
 3. Go to the **Notifications** tab.
 4. In the input field under **Email notifications**, type the email address.
 
-   ![{{ page.title }}](/img/ship-notifications.jpg)
+   ![](/img/ship-notifications.jpg)
 5. Click **Add**.
 
 The address should appear in the list below, with **Pending** as its status. An email is sent to the address: the recipient must click **Confirm Notifications** in the email to start receiving notifications.
@@ -249,22 +261,22 @@ To configure notifications:
 4. Use the toggles under the different event types.
 5. Hit **Save** once all notifications are set.
 
-## Using Ship with unsupported Steps
+## Using Ship for apps built with cross-platform frameworks
 
-By default, Ship works with the **Android Build, Gradle Runner** and the **Xcode Archive & Export for iOS** Steps. The output of these Steps are automatically exported by the **Deploy to Bitrise.io** Step to Ship. 
+By default, Ship works with the **Android Build, Gradle Runner** and the **Xcode Archive & Export for iOS** Steps. The output of these Steps are automatically exported by the **Deploy to Bitrise.io** Step to Ship.
 
-However, you can use unsupported Steps - **fastlane**, for example - to build your app and still deploy it with Ship. All you need to do is make sure the app's binary ends up in the right place. 
+However, for apps built with cross-platform frameworks, such as React Native or Flutter, you might not use these Steps in your Workflows. But don't worry: you can use Steps that are not supported by default to build your app and still deploy it with Ship. All you need to do is make sure the right files end up in the right place.
 
-### Deploying iOS apps built with unsupported Steps 
+### Deploying iOS apps built with cross-platform frameworks
 
 The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export to Ship in the case of an iOS app. If you do not want to use the **Xcode Archive & Export for iOS** Step, you just need to make sure that:
 
 * There is a Step in your exposed Workflow that exports an `.xcarchive.zip` file of your app. That is, the Step you use needs to create an Xcode Archive and needs to package it in a zip file.
 * This Step exports the `.xcarchive.zip` file into the `BITRISE_DEPLOY_DIR` directory.
 
-### Deploying Android apps built with unsupported Steps 
+### Deploying Android apps built with different Steps
 
-The **Deploy to Bitrise.io** Step looks for an APK or an AAB file in the `BITRISE_DEPLOY_DIR` directory. 
+The **Deploy to Bitrise.io** Step looks for an APK or an AAB file in the `BITRISE_DEPLOY_DIR` directory.
 
 If you do not want to use the **Android Build** or the **Gradle Runner** Steps, you just need to make sure that:
 
