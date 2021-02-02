@@ -128,7 +128,7 @@ To install it directly from Ship:
 
 <div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](https://mpxzvqn7ysfysw.preview.forestry.io/reviews/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
 
-{% include message_box.html type="important" title="" content="If you wish to deploy an iOS app that is built using Flutter, React Native, or any other cross-platform framework, be aware that the **Deploy to Bitrise.io** Step looks for an `.xcarchive` file. You must make sure this file ends up in the correct directory. Read more in the [Deploying iOS apps built with cross-platform frameworks](/deploy/ship/#deploying-ios-apps-built-with-cross-platform-frameworks)."%}
+{% include message_box.html type="important" title="Apps built with cross-platform frameworks" content="If you wish to deploy an iOS app that is built using Flutter, React Native, or any other cross-platform framework, be aware that the **Deploy to Bitrise.io** Step looks for an `.xcarchive` file. You must make sure this file ends up in the correct directory. Read more in the [Deploying iOS apps built with cross-platform frameworks](/deploy/ship/#deploying-ios-apps-built-with-cross-platform-frameworks)."%}
 
 To configure publishing an iOS app to App Store Connect (formerly known as iTunes Connect), you have to:
 
@@ -151,8 +151,8 @@ To configure publishing an app for iOS:
 6. Enter the **Apple Developer Account Email** and the **App Specific Password** to be able to publish to the App Store.
 7. Enter the **App SKU**.
 8. Go back to the **Details** page and click **Publish**.
-   </div>
-   </div>
+</div>
+</div>
 
 <div><button type="button" class="collapsible"><p>Publishing an app for Android</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="Before you publish an Android app in Ship, make sure that:
 
