@@ -21,6 +21,8 @@ For example, let's say the organization called _TestOrg_ owns an app called _Tes
 * **Group Beta** - they are assigned to _TestApp_ with a **Developer** role. Members of this group can run builds, view build logs and view builds.
 * **Group Gamma** - they are assigned to _TestApp_ with a **Tester / QA** role. They can only view builds.
 
+{% include message_box.html type="important" title="Organization groups and roles" content="Please note that Organization groups have no inherent roles at all. A group can have multiple different roles on different apps. Even if an Organization group is called **Admin**, it doesn't have the **Admin** role on any app by default and you can assign them to apps with other roles, too. "%}
+
 ## Creating groups for Organizations
 
 1. Sign in with an account that is an **owner** of the Organization and open its profile page.
