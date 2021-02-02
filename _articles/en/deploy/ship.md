@@ -49,7 +49,7 @@ When first logging in, you might not have a single build version available to pu
 
 * In one of your Workflows, you need a Step that builds your app. By default, **Xcode Archive & Export for iOS**, **Gradle Runner** and **Android Build** are automatically supported.
 * The same Workflow must have the correct version of the **Deploy to Bitrise.io** Step after the Step that builds your app.
-* The **Deploy to Bitrise.io** Step must export the relevant file: an APK file for Android apps and the `.xcarchive` file for iOS apps. By default, you don't have to configure anything for the Step to export these files, it happens automatically. 
+* The **Deploy to Bitrise.io** Step must export the relevant file: an APK file for Android apps and the `.xcarchive` file for iOS apps. If you use either one of the **Xcode Archive & Export for iOS**, **Gradle Runner** and **Android Build** Steps, you don't have to change anything in the default configuration of the **Deploy to Bitrise.io** Step to export the relevant files. 
 
 {% include message_box.html type="warning" title="Step versions compatible with Ship" content="Please note that the **Deploy to Bitrise.io** Step must be version 1.9.0 or higher and the **Xcode Archive & Export for iOS** Step for iOS apps must be version 2.6.0 or higher - older versions of the Steps do not support Ship."%}
 
