@@ -129,7 +129,7 @@ To install it directly from Ship:
 
 <div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
 
-{% include message_box.html type="important" title="The `.xcarchive` file" content="Please note that in order to deploy an iOS app with Ship, Ship needs the `.xcarchive` file from the **Deploy to Bitrise.io** Step. Make sure that the archive is deployed by the Step, otherwise Ship won't be able to publish your app!
+{% include message_box.html type="important" title="The `.xcarchive` file" content="Please note that in order to deploy an iOS app with Ship, Ship needs the `.xcarchive` file. Make sure that the **Deploy to Bitrise.io** Step exports the archive, otherwise Ship won't be able to publish your app!
 
 To make sure, check the **Deploy to Bitrise.io** Step in your Workflow. It has an input called **Deploy directory or file path**: the path specified here must contain the `xcarchive` file. The default value is the `BITRISE_DEPLOY_DIR` Environment Variable: we recommend that you don't remove this. If this variable is included, the file is automatically exported."%}
 
