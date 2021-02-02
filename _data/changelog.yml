@@ -1,6 +1,12 @@
 ---
+- title: Deploying with Ship
+  modified: 2021-02-02 16:00:00 +0100
+  changelog: 'For iOS apps, Ship needs the .xcarchive file. Make sure that the Deploy
+    to Bitrise.io Step exports this file. '
+  type: update
+  url: "/deploy/ship/"
 - title: Deploying apps to Huawei AppGallery
-  modified: 2021-01-27 12:00:00 +0100
+  modified: 2021-01-27T12:00:00.000+01:00
   changelog: You can deploy your Android apps to Huawei AppGallery via a verified
     Bitrise Step called Deploy to Huawei App Gallery. The Step can be used to deploy
     any APK file that you build on Bitrise.
