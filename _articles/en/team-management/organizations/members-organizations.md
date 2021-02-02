@@ -17,9 +17,9 @@ Organizations can have multiple **Groups**. Groups are the "backbone" of Organiz
 
 For example, let's say the organization called _TestOrg_ owns an app called _TestApp_. _TestOrg_ has the following groups:
 
-* **Senior Developers** - they are assigned to _TestApp_ with an **Admin** role. Members of this group can assign other groups to the app or add outside contributors, change app settings, manage roles and workflows.
-* **Developers** - they are assigned to _TestApp_ with a **Developer** role. Members of this group can run builds, view build logs and view builds.
-* **Testers** - they are assigned to _TestApp_ with a **Tester / QA** role. They can only view builds.
+* **Group Alpha** - they are assigned to _TestApp_ with an **Admin** role. Members of this group can assign other groups to the app or add outside contributors, change app settings, manage roles and workflows.
+* **Group Beta** - they are assigned to _TestApp_ with a **Developer** role. Members of this group can run builds, view build logs and view builds.
+* **Group Gamma** - they are assigned to _TestApp_ with a **Tester / QA** role. They can only view builds.
 
 ## Creating groups for Organizations
 
