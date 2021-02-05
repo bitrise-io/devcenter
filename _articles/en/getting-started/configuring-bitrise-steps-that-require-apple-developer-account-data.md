@@ -160,7 +160,8 @@ The [Step](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstore
 * Verify if your project is registered with the App Store Connect.
 * Register the iOS devices connected to your Bitrise account with the App Store Connect.
 
-[Connect to Bitrise with API key.](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#setting-up-connection-to-an-apple-service-with-api-key)
+[Connect to Bitrise with API key.](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#setting-up-connection-to-an-apple-service-with-api-key) 
+
 [Connect to Bitrise with Step inputs.](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#setting-up-connection-with-step-inputs)
 
 ### iOS Auto Provision with Apple ID Step
