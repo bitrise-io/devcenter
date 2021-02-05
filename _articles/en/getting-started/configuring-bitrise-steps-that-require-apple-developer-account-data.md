@@ -94,16 +94,18 @@ Connecting to an Apple service (such as the App Store Connect or the Apple Devel
 
 If you cannot use the API key authentication, we recommend you try this option. Please note that you can only connect one Apple ID to Bitrise.
 
-{% include message_box.html type="important" title="Apple accounts with enabled two-factor authentication" content="Please note that if two-factor authentication is enabled on your Apple account, you will have to provide the App-specific password during this process. Learn [how to generate an app-specific password on the Security section of your Apple ID account page](https://support.apple.com/en-us/HT204397 "https://support.apple.com/en-us/HT204397")."%}
+{% include message_box.html type="important" title="Apple accounts with enabled two-factor authentication" content="Please note that if two-factor authentication is enabled on your Apple account, you will have to provide the App-specific password during this process. Learn [how to generate an app-specific password on the Security section of your Apple ID account page](https://support.apple.com/en-us/HT204397)."%}
+
 ![](/img/appspecificpassword.jpg)
 
 ### Adding Apple ID authentication data on Bitrise
 
-1. Log in to [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
-2. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview "https://app.bitrise.io/me/profile#/overview") from the dropdown menu.
+1. Log in to [bitrise.io](https://www.bitrise.io/).
+2. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
 3. On the left menu bar, select **Apple Service connection**.
 4. Click the **Add connection** button.
-5. Provide your **Apple ID** and **Password** in the popup window. If two-factor authentication (or two-step verification) is enabled on your Apple account, add the **app-specific password** as well. Click **Connect**.![](/img/appleidauthentication.jpg)
+5. Provide your **Apple ID** and **Password** in the popup window. If two-factor authentication (or two-step verification) is enabled on your Apple account, add the **app-specific password** as well. Click **Connect**.
+![](/img/appleidauthentication.jpg)
 6. You will be prompted to provide your verification code.
 7. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Service connection** page, it will automatically ask for the two-factor authentication (2FA) code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of the Apple ID connection, there are 3 dots. Click the dots and select **Re-authenticate** (**2SA/2FA**).
 8. Continue with Assigning an Apple Developer Account for your app.
