@@ -18,11 +18,11 @@ menu:
 ---
 Your Workflow may contain Steps that need information from the Apple service you use, for example, the App Store Connect or the Apple Developer Portal. These two services are supported by the following Steps:
 
-* iOS Auto Provision with App Store Connect API
-* iOS Auto Provision with Apple ID
-* Deploy to iTunes Connect
-* Deploy to iTunes Connect - Application Loader
-* Fastlane
+* [iOS Auto Provision with App Store Connect API](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstoreconnect)
+* [iOS Auto Provision with Apple ID](https://www.bitrise.io/integrations/steps/ios-auto-provision)
+* [Deploy to iTunes Connect](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver)
+* [Deploy to iTunes Connect - Application Loader](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader)
+* [Fastlane](https://www.bitrise.io/integrations/steps/fastlane)
 
 To connect these Steps with the Apple service you wish to use while your build runs on Bitrise, you need to provide authentication data to Bitrise and select the established authentication method for your app.
 
