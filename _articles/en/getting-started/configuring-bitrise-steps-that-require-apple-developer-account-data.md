@@ -60,10 +60,10 @@ Please note that the API key authentication is the recommended way when connecti
 1. On [App Store Connect](https://appstoreconnect.apple.com/login), [generate a new API key with Admin access](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api) under **Users and Access**.![](/img/usersandaccess.jpg)
 2. Log in to [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
 3. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview "https://app.bitrise.io/me/profile#/overview") from the dropdown menu.
-4. On the menu bar select **Apple Service Connection**.
+4. On the menu bar select **Apple Service Connection**.![](/img/appleserviceconnection.jpg)
 5. Click **Add connection**.
-6. Fill out all required fields: provide the **Name**, [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests), and the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
-7. Continue with assigning an \[Apple Developer Account for your app\](link).
+6. Fill out all required fields: provide the **Name**, [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests), and the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.![](/img/apikeyauthentication.jpg)
+7. Continue with assigning an Apple Developer Account for your app.
 
 ### Assigning the established authentication to your app
 
@@ -72,7 +72,7 @@ When you wish to use a Step with the established connection, you also have to se
 1. Open your app’s page on [bitrise.io](https://www.bitrise.io/).
 2. Select the **Team** tab.
 3. Scroll down to the **Apple Service connection** section.
-4. Select the **API key authentication (recommended)** method for the app to use in the dropdown. It displays only your established API key and no app owner’s or app admin’s API key is displayed here.
+4. Select the **API key authentication (recommended)** method for the app to use in the dropdown. It displays only your established API key and no app owner’s or app admin’s API key is displayed here.![](/img/apikeyteam.jpg)
 
 The Step is now able to connect to the App Store Connect or the Apple Developer Portal during your build. Please note that there is no need to modify any Step input fields manually since these are automatically populated once the connection is set up.
 
@@ -82,9 +82,7 @@ Connecting to an Apple service (such as the App Store Connect or the Apple Devel
 
 If you cannot use the API key authentication, we recommend you try this option. Please note that you can only connect one Apple ID to Bitrise.
 
-Apple accounts with enabled two-factor authentication
-
-Please note that if two-factor authentication is enabled on your Apple account, you will have to provide the App-specific password during this process. Learn [how to generate an app-specific password on the Security section of your Apple ID account page](https://support.apple.com/en-us/HT204397 "https://support.apple.com/en-us/HT204397").
+{% include message_box.html type="important" title="Apple accounts with enabled two-factor authentication" content="Please note that if two-factor authentication is enabled on your Apple account, you will have to provide the App-specific password during this process. Learn [how to generate an app-specific password on the Security section of your Apple ID account page](https://support.apple.com/en-us/HT204397 "https://support.apple.com/en-us/HT204397")."%}![](/img/appspecificpassword.jpg)
 
 ### Adding Apple Service authentication data on Bitrise
 
@@ -92,7 +90,7 @@ Please note that if two-factor authentication is enabled on your Apple account, 
 2. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview "https://app.bitrise.io/me/profile#/overview") from the dropdown menu.
 3. On the left menu bar, select **Apple Service connection**.
 4. Click the **Add connection** button.
-5. Provide your **Apple ID** and **Password** in the popup window. If two-factor authentication (or two-step verification) is enabled on your Apple account, add the **app-specific password** as well. Click **Connect**.
+5. Provide your **Apple ID** and **Password** in the popup window. If two-factor authentication (or two-step verification) is enabled on your Apple account, add the **app-specific password** as well. Click **Connect**.![](/img/appleidauthentication.jpg)
 6. You will be prompted to provide your verification code.
 7. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Service connection** page, it will automatically ask for the two-factor authentication (2FA) code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of the Apple ID connection, there are 3 dots. Click the dots and select **Re-authenticate** (**2SA/2FA**).
 8. Continue with Assigning an Apple Developer Account for your app.
@@ -104,7 +102,7 @@ When a Step uses the Apple ID authentication, you also need to select the authen
 1. Open your app’s page on [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
 2. Select the **Team** tab.
 3. Scroll down to the **Apple service connection** section.
-4. Select the **Apple ID authentication** for the app to use. It displays the connection method of the app owner and other team members with admin authority.
+4. Select the **Apple ID authentication** for the app to use. It displays the connection method of the app owner and other team members with admin authority.![](/img/appleidteam.jpg)
 
 The Step is now able to connect to an Apple service during your build. No need to modify any Step input fields manually since these are automatically populated once the connection is set up.
 
