@@ -16,9 +16,16 @@ menu:
     weight: 9
 
 ---
-Your Workflow may contain Steps that need information from your Apple Developer account. If so, you need to provide authentication data to allow Bitrise to connect to your Apple Developer account. You may also need to authorize the app to use the data from this account when connected.
+Your Workflow may contain Steps that need information from the Apple service you use, for example, the App Store Connect or the Apple Developer Portal. These two services are supported by our **iOS Auto Provision with App Store Connect API**, **iOS Auto Provision with Apple ID**, **Deploy to iTunes Connect, Deploy to iTunes Connect - Application Loader**, and **Fastlane** Steps. To connect these Steps with the Apple service you wish to use while your build runs on Bitrise, you need to provide authentication data to Bitrise and select the established authentication method for your app.
 
-To determine if you need to connect your Apple Developer account and authorize your app, check out [Steps that require connecting to your Apple Developer account](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#steps-that-require-connecting-to-your-apple-developer-account) and allow your app to use this data.
+You can authenticate with Apple’s official API key or with Apple ID and password. To determine which authentication to use, check out Steps that require connecting to Apple Services.
+
+{% include message_box.html type="important" title="Apple two-factor authentication requirements" content="  
+Apple’s [two-factor authentication](https://developer.apple.com/support/authentication/ "https://developer.apple.com/support/authentication/") (2FA) provides an extra layer of security on your Apple account.
+
+If you have been authenticating with the API key so far, you are not affected by the two-factor authentication requirement.
+
+If, however, you have been authenticating with an Apple ID and a password, and the [new 2FA requirement](https://developer.apple.com/support/authentication/ "https://developer.apple.com/support/authentication/") affects you, then you’ll have to reconnect your Apple Developer Account on the **Apple Service connection** page of your Bitrise profile. You’ll also have to provide the two-factor authentication/two-step verification code and an app-specific password as well. Please find the official Apple documentation on [how to generate an app-specific password](https://support.apple.com/en-us/HT204397 "https://support.apple.com/en-us/HT204397")."%}
 
 ## Steps that require connecting to your Apple Developer account
 
