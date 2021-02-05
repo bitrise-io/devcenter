@@ -16,13 +16,13 @@ menu:
     weight: 9
 
 ---
-Your Workflow may contain Steps that need information from the Apple service you use, for example, the App Store Connect or the Apple Developer Portal. These two services are supported by the following Steps: 
+Your Workflow may contain Steps that need information from the Apple service you use, for example, the App Store Connect or the Apple Developer Portal. These two services are supported by the following Steps:
 
 * iOS Auto Provision with App Store Connect API
 * iOS Auto Provision with Apple ID
 * Deploy to iTunes Connect
 * Deploy to iTunes Connect - Application Loader
-* Fastlane 
+* Fastlane
 
 To connect these Steps with the Apple service you wish to use while your build runs on Bitrise, you need to provide authentication data to Bitrise and select the established authentication method for your app.
 
@@ -49,17 +49,17 @@ The below table contains a summary of the authentication method the Step uses.
 | Deploy to iTunes Connect Step | API key authentication, Apple ID authentication, API key or Apple ID authentication through Step inputs (Note that if 2FA is required for your Apple ID, you must use Apple ID authentication on the Apple Service page instead of Step inputs.) |
 | Deploy to iTunes Connect - Application Loader Step | API key authentication, Apple ID authentication, API key or Apple ID authentication through Step |
 
-Depending on which authentication you can use in your project, you have the following possibilities:
+Depending on which authentication you can use in your project, you have the following options:
 
 1. API key authentication: If you can, we recommend you use this authentication method. It does not require two-factor authentication. All it takes is connecting to the Apple services by providing **Name**, **Issuer ID**, **Key ID** and upload a **Private Key (.p8)**, then selecting an account under the **Team** tab. The data you give automatically populates the respective fields of the Steps that work with API key authentication.
 2. Apple ID authentication: If you cannot use the API key authentication, you can authenticate with your Apple ID and password. Provide your Apple ID, password, 2FA code and app-specific password then select an account under the **Team** tab. The data you give automatically populates the respective fields of the Steps that work with the Apple ID authentication.
 3. API key or Apple Id authentication through Step inputs: If you wish to deploy to multiple teams or deploy to a team where authentication is different from the connected one you’ve been using, then you can add your preferred authentication into the Step’s inputs. This will override the connection previously set in Bitrise Developer Connection.
 
-In this article we walk you though the three authentication methods first, then break it down for each Step mentioned above.
+In this article we walk you through the three authentication methods first, then break it down for each Step mentioned above.
 
 ## Setting up connection to an Apple service with API key
 
-Connecting to an Apple service (such as the App Store Connect or the Apple Developer Portal) with the API key requires that you first add your Apple service authentication data on our **Apple Services Connection** page, then an API key for your app
+Connecting to an Apple service (such as the App Store Connect or the Apple Developer Portal) with the API key requires that you first add your Apple service authentication data on our **Apple Services Connection** page, then an API key for your app.
 
 Please note that the API key authentication is the recommended way when connecting Bitrise to Apple Services. Please note that you can have 50 API key added to the **Apple Services connection** page but your project can use only one (selected in the **Team** tab).
 
@@ -80,7 +80,8 @@ When you wish to use a Step with the established connection, you also have to se
 1. Open your app’s page on [bitrise.io](https://www.bitrise.io/).
 2. Select the **Team** tab.
 3. Scroll down to the **Apple Service connection** section.
-4. Select the **API key authentication (recommended)** method for the app to use in the dropdown. It displays only your established API key and no app owner’s or app admin’s API key is displayed here.![](/img/apikeyteam.jpg)
+4. Select the **API key authentication (recommended)** method for the app to use in the dropdown.  
+	![](/img/apikeyteam.jpg)
 
 The Step is now able to connect to the App Store Connect or the Apple Developer Portal during your build. Please note that there is no need to modify any Step input fields manually since these are automatically populated once the connection is set up.
 
