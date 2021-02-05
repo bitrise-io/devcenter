@@ -35,7 +35,7 @@ The below table contains a summary of the authentication method the Step uses.
 
 | Steps | Connection type |
 | --- | --- |
-| iOS Auto Provision with App Store Connect API Step | App Store Connect API |
+| iOS Auto Provision with App Store Connect API Step | API key authentication, API key authentication through Step inputs  |
 | iOS Auto Provision with Apple ID Step | session-based |
 | Fastlane Step | session-based |
 | Deploy to iTunes Connect Step | session-based |
