@@ -29,7 +29,7 @@ To connect these Steps with the Apple service you wish to use while your build r
 You can authenticate with Apple’s official API key or with Apple ID and password. To determine which authentication to use, check out Steps that require connecting to Apple Services.
 
 {% include message_box.html type="important" title="Apple two-factor authentication requirements" content="  
-Apple’s [two-factor authentication](https://developer.apple.com/support/authentication/ "https://developer.apple.com/support/authentication/") (2FA) provides an extra layer of security on your Apple account.
+Apple’s [two-factor authentication](https://developer.apple.com/support/authentication/) (2FA) provides an extra layer of security on your Apple account.
 
 If you have been authenticating with the API key so far, you are not affected by the two-factor authentication requirement.
 
