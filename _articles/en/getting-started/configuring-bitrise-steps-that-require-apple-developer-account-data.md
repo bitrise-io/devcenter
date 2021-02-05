@@ -35,11 +35,11 @@ The below table contains a summary of the authentication method the Step uses.
 
 | Steps | Connection type |
 | --- | --- |
-| iOS Auto Provision with App Store Connect API Step | API key authentication, API key authentication through Step inputs  |
+| iOS Auto Provision with App Store Connect API Step | API key authentication, API key authentication through Step inputs |
 | iOS Auto Provision with Apple ID Step | Apple ID authentication |
-| Fastlane Step | API key authentication, Apple ID authentication, API key or Apple ID authentication through Step inputs (Note that if 2FA is required for your Apple ID, you must use Apple ID authentication on the Apple Service page instead of Step inputs.)  |
+| Fastlane Step | API key authentication, Apple ID authentication, API key or Apple ID authentication through Step inputs (Note that if 2FA is required for your Apple ID, you must use Apple ID authentication on the Apple Service page instead of Step inputs.) |
 | Deploy to iTunes Connect Step | API key authentication, Apple ID authentication, API key or Apple ID authentication through Step inputs (Note that if 2FA is required for your Apple ID, you must use Apple ID authentication on the Apple Service page instead of Step inputs.) |
-| Deploy to iTunes Connect - Application Loader Step | API key authentication, Apple ID authentication, API key or Apple ID authentication through Step  |
+| Deploy to iTunes Connect - Application Loader Step | API key authentication, Apple ID authentication, API key or Apple ID authentication through Step |
 
 Depending on which authentication you can use in your project, you have the following possibilities:
 
@@ -55,9 +55,9 @@ Connecting to an Apple service (such as the App Store Connect or the Apple Devel
 
 Please note that the API key authentication is the recommended way when connecting Bitrise to Apple Services. Please note that you can have 50 API key added to the **Apple Services connection** page but your project can use only one (selected in the **Team** tab).
 
-### Adding Apple service authentication data on Bitrise 
+### Adding Apple service authentication data on Bitrise
 
-1. On [App Store Connect](https://appstoreconnect.apple.com/login), [generate a new API key with Admin access](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api) under **Users and Access**.
+1. On [App Store Connect](https://appstoreconnect.apple.com/login), [generate a new API key with Admin access](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api) under **Users and Access**.![](/img/usersandaccess.jpg)
 2. Log in to [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
 3. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview "https://app.bitrise.io/me/profile#/overview") from the dropdown menu.
 4. On the menu bar select **Apple Service Connection**.
