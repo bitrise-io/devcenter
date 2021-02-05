@@ -57,28 +57,22 @@ Please note that the API key authentication is the recommended way when connecti
 
 ### Adding Apple service authentication data on Bitrise 
 
-1. On [App Store Connect](https://appstoreconnect.apple.com/login "https://appstoreconnect.apple.com/login"), [generate a new API key with Admin access](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api) under **Users and Access**.
+1. On [App Store Connect](https://appstoreconnect.apple.com/login), [generate a new API key with Admin access](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api) under **Users and Access**.
 2. Log in to [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
 3. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview "https://app.bitrise.io/me/profile#/overview") from the dropdown menu.
 4. On the menu bar select **Apple Service Connection**.
-
-   ![](blob:https://bitrise.atlassian.net/b2ee47fe-dfe0-4261-a4c9-6406bb6d0a1e#media-blob-url=true&id=1a63b477-8b10-4f4f-8657-05b50427db76&collection=contentId-1161396557&contextId=1161396557&mimeType=image%2Fjpeg&name=appleserviceconnection.jpg&size=57553&width=992&height=440)
 5. Click **Add connection**.
-6. Fill out all required fields: provide the **Name**, [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests "https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests"), and the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api "https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api"). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
-
-   ![](blob:https://bitrise.atlassian.net/14b734b5-7614-4062-9776-971d513dacd5#media-blob-url=true&id=3505c21e-a24e-4b2d-8acd-5a3ccc98f8bf&collection=contentId-1161396557&contextId=1161396557&mimeType=image%2Fjpeg&name=apikeyauthentication.jpg&size=85797&width=645&height=808)
+6. Fill out all required fields: provide the **Name**, [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests), and the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
 7. Continue with assigning an \[Apple Developer Account for your app\](link).
 
-### Assigning the established authentication to your app [⚓](https://devcenter.bitrise.io/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#assigning-an-apple-developer-account-for-your-app "https://devcenter.bitrise.io/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#assigning-an-apple-developer-account-for-your-app")
+### Assigning the established authentication to your app
 
 When you wish to use a Step with the established connection, you also have to select an app for the connection. This way your app can receive data from your Apple Developer account when your build runs on Bitrise.
 
-1. Open your app’s page on [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
+1. Open your app’s page on [bitrise.io](https://www.bitrise.io/).
 2. Select the **Team** tab.
 3. Scroll down to the **Apple Service connection** section.
 4. Select the **API key authentication (recommended)** method for the app to use in the dropdown. It displays only your established API key and no app owner’s or app admin’s API key is displayed here.
-
-   ![](blob:https://bitrise.atlassian.net/71f2acba-bbfd-4982-b043-30e38dd2ac75#media-blob-url=true&id=6dbf0b06-3340-448e-9e8d-a29ce99203da&collection=contentId-1161396557&contextId=1161396557&mimeType=image%2Fjpeg&name=apikeyteam.jpg&size=57781&width=953&height=353)
 
 The Step is now able to connect to the App Store Connect or the Apple Developer Portal during your build. Please note that there is no need to modify any Step input fields manually since these are automatically populated once the connection is set up.
 
@@ -92,8 +86,6 @@ Apple accounts with enabled two-factor authentication
 
 Please note that if two-factor authentication is enabled on your Apple account, you will have to provide the App-specific password during this process. Learn [how to generate an app-specific password on the Security section of your Apple ID account page](https://support.apple.com/en-us/HT204397 "https://support.apple.com/en-us/HT204397").
 
-![](blob:https://bitrise.atlassian.net/d01da27e-003a-449b-a866-8628c4ef9954#media-blob-url=true&id=642bb056-c107-4e6d-ae08-c7069ab636c4&collection=contentId-1161396557&contextId=1161396557&mimeType=image%2Fjpeg&name=appspecificpassword.jpg&size=154943&width=1064&height=345)
-
 ### Adding Apple Service authentication data on Bitrise
 
 1. Log in to [bitrise.io](https://www.bitrise.io/ "https://www.bitrise.io/").
@@ -101,13 +93,11 @@ Please note that if two-factor authentication is enabled on your Apple account, 
 3. On the left menu bar, select **Apple Service connection**.
 4. Click the **Add connection** button.
 5. Provide your **Apple ID** and **Password** in the popup window. If two-factor authentication (or two-step verification) is enabled on your Apple account, add the **app-specific password** as well. Click **Connect**.
-
-   ![](blob:https://bitrise.atlassian.net/a76be0f2-f9fd-4049-bd7b-746cbbaff946#media-blob-url=true&id=e3815854-b8d0-442f-824b-a13e1b5e6fc5&collection=contentId-1161396557&contextId=1161396557&mimeType=image%2Fjpeg&name=appleidauthentication.jpg&size=64117&width=730&height=598)
 6. You will be prompted to provide your verification code.
 7. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Service connection** page, it will automatically ask for the two-factor authentication (2FA) code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of the Apple ID connection, there are 3 dots. Click the dots and select **Re-authenticate** (**2SA/2FA**).
-8. Continue with \[Assigning an Apple Developer Account for your app\](link).
+8. Continue with Assigning an Apple Developer Account for your app.
 
-### Assigning the established authentication to your app [⚓](https://devcenter.bitrise.io/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#assigning-an-apple-developer-account-for-your-app-1 "https://devcenter.bitrise.io/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#assigning-an-apple-developer-account-for-your-app-1")
+### Assigning the established authentication to your app
 
 When a Step uses the Apple ID authentication, you also need to select the authentication method for your app to receive data from your Apple while your build is running.
 
@@ -115,8 +105,6 @@ When a Step uses the Apple ID authentication, you also need to select the authen
 2. Select the **Team** tab.
 3. Scroll down to the **Apple service connection** section.
 4. Select the **Apple ID authentication** for the app to use. It displays the connection method of the app owner and other team members with admin authority.
-
-   ![](blob:https://bitrise.atlassian.net/ad84f7b6-0946-4f87-a894-72be3426dfd3#media-blob-url=true&id=d8f5a4a9-5eca-4c8c-9421-9c271f66828f&collection=contentId-1161396557&contextId=1161396557&mimeType=image%2Fjpeg&name=appleidteam.jpg&size=56884&width=953&height=353)
 
 The Step is now able to connect to an Apple service during your build. No need to modify any Step input fields manually since these are automatically populated once the connection is set up.
 
@@ -154,17 +142,18 @@ In this section we list all the Steps that require authentication and the authen
 
 ### iOS Auto Provision with App Store Connect API Step
 
-The [Step](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstoreconnect "https://www.bitrise.io/integrations/steps/ios-auto-provision-appstoreconnect") uses the official [App Store Connect API (JSON Web Token)](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests "https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests"). By using the established API key that has been assigned to the app, this Step will:
+The [Step](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstoreconnect) uses the official [App Store Connect API (JSON Web Token)](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests). By using the established API key that has been assigned to the app, this Step will:
 
 * Generate, update and download the provisioning profiles needed for your iOS project.
 * Verify if your project is registered with the App Store Connect.
 * Register the iOS devices connected to your Bitrise account with the App Store Connect.
 
-[Connect to Bitrise with API key.](https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-App-Store-Connect-API "https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-App-Store-Connect-API")
+Connect to Bitrise with API key.
+Connect to Bitrise with Step inputs.
 
-### iOS Auto Provision with Apple ID Step [⚓](https://devcenter.bitrise.io/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#ios-auto-provision-with-apple-id-step "https://devcenter.bitrise.io/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#ios-auto-provision-with-apple-id-step")
+### iOS Auto Provision with Apple ID Step
 
-[This Step](https://www.bitrise.io/integrations/steps/ios-auto-provision "https://www.bitrise.io/integrations/steps/ios-auto-provision") automatically manages your iOS provisioning profiles for your Xcode project. The Step uses the Apple ID and password authentication to connect to an Apple service. Once connection is configured, the Step will:
+[This Step](https://www.bitrise.io/integrations/steps/ios-auto-provision) automatically manages your iOS provisioning profiles for your Xcode project. The Step uses the Apple ID and password authentication to connect to an Apple service. Once connection is configured, the Step will:
 
 * Generate, update and download the provisioning profiles needed for your iOS project.
 * Verify if your project is registered with the App Store Connect.
@@ -178,32 +167,32 @@ In addition to an Apple ID and password, it also stores the 2-factor authenticat
 
 With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver "https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver"), you can upload screenshots, metadata and binaries to [iTunes Connect](https://itunesconnect.apple.com/ "https://itunesconnect.apple.com/") and submit your app for App Store review using the fastlane [deliver](https://docs.fastlane.tools/actions/deliver/ "https://docs.fastlane.tools/actions/deliver/") action. The **Deploy to iTunes Connect** Step can connect to your Apple Developer Account either with Apple ID or with the App Store Connect API, or through Step inputs. Please note that in the case of 2FA enabled Apple ID, the **Deploy to iTunes Connect** Step can only work with Apple ID authentication which you can set on the Apple Service page of your profile. The default method is the API key authentication. Choose the connection method that works with your project:
 
-[Connect to Bitrise with API key (recommended).](https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-App-Store-Connect-API "https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-App-Store-Connect-API")
+Connect to Bitrise with API key (recommended).
 
-[Connect to Bitrise with the Apple ID and password.](https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-Apple-ID "https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-Apple-ID")
+Connect to Bitrise with the Apple ID and password.
 
-[Connect to Bitrise with Step inputs.](https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-Step-inputs "https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-Step-inputs")
+Connect to Bitrise with Step inputs.
 
 The **Deploy to iTunes Connect** Step is now set to connect to the Apple Developer account.
 
-### Deploy to iTunes Connect - Application Loader Step [⚓](https://devcenter.bitrise.io/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#deploy-to-itunes-connect---application-loader-step "https://devcenter.bitrise.io/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#deploy-to-itunes-connect---application-loader-step")
+### Deploy to iTunes Connect - Application Loader Step
 
-With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader "https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader"), you can upload binaries (.ipa or .pkg files) to [iTunes Connect](https://itunesconnect.apple.com/ "https://itunesconnect.apple.com/"). The **Deploy to iTunes Connect - Application Loader** Step can connect to your Apple Developer Account either with the App Store Connect API, the Apple ID and password, or through Step inputs. Choose the connection method that works with your project:
+With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader), you can upload binaries (.ipa or .pkg files) to [iTunes Connect](https://itunesconnect.apple.com/). The **Deploy to iTunes Connect - Application Loader** Step can connect to your Apple Developer Account either with the App Store Connect API, the Apple ID and password, or through Step inputs. Choose the connection method that works with your project:
 
-[Connect with the API key](https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-App-Store-Connect-API "https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-App-Store-Connect-API") (recommended).
+Connect with the API key (recommended).
 
-[Connect with the Apple ID and password](https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-Apple-ID "https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-Apple-ID").
+Connect with the Apple ID and password.
 
-[Connect your Apple Services to Bitrise with Step inputs.](https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-Step-inputs "https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-Step-inputs")
+Connect your Apple Services to Bitrise with Step inputs.
 
 ### Fastlane Step
 
-With this Step you can run your [_fastlane_](https://fastlane.tools/ "https://fastlane.tools/") lanes on Bitrise just like you would locally.
+With this Step you can run your [_fastlane_](https://fastlane.tools/) lanes on Bitrise just like you would locally.
 
-[Connect to Bitrise with API key (recommended).](https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-App-Store-Connect-API "https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-App-Store-Connect-API")
+Connect to Bitrise with API key (recommended).
 
-[Connect with Apple ID and password.](https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-Apple-ID-and-password "https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-the-Apple-ID-and-password")
+Connect with Apple ID and password.
 
-[Connect with Step inputs.](https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-Step-inputs "https://bitrise.atlassian.net/wiki/spaces/TW/pages/1161396557/Apple+Service+authentication+changes+-+Configuring+Steps+that+require+Apple+Developer+account+data+-+draft#Setting-up-connection-with-Step-inputs")
+Connect with Step inputs.
 
 The **Fastlane** Step is now set to connect to the Apple Developer account assigned to the app during your build.
