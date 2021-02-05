@@ -36,10 +36,10 @@ The below table contains a summary of the authentication method the Step uses.
 | Steps | Connection type |
 | --- | --- |
 | iOS Auto Provision with App Store Connect API Step | API key authentication, API key authentication through Step inputs  |
-| iOS Auto Provision with Apple ID Step | session-based |
-| Fastlane Step | session-based |
-| Deploy to iTunes Connect Step | session-based |
-| Deploy to iTunes Connect - Application Loader Step | App Store Connect API or session-based |
+| iOS Auto Provision with Apple ID Step | Apple ID authentication |
+| Fastlane Step | API key authentication, Apple ID authentication, API key or Apple ID authentication through Step inputs (Note that if 2FA is required for your Apple ID, you must use Apple ID authentication on the Apple Service page instead of Step inputs.)  |
+| Deploy to iTunes Connect Step | API key authentication, Apple ID authentication, API key or Apple ID authentication through Step inputs (Note that if 2FA is required for your Apple ID, you must use Apple ID authentication on the Apple Service page instead of Step inputs.) |
+| Deploy to iTunes Connect - Application Loader Step | API key authentication, Apple ID authentication, API key or Apple ID authentication through Step  |
 
 Depending on which authentication you can use in your project, you have the following possibilities:
 
