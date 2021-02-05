@@ -72,7 +72,8 @@ Please note that the API key authentication is the recommended way when connecti
 5. Click **Add connection**.
 6. Fill out all required fields: provide the **Name**, [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests), and the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available.
    ![](/img/apikeyauthentication.jpg)
-7. Continue with assigning an Apple Developer Account for your app.
+7. Click **Connect**.
+8. Continue with assigning an Apple Developer Account for your app.
 
 ### Assigning API key authentication to your app
 
@@ -142,7 +143,7 @@ Please note that you can only add one type of authentication into the Step, eith
 3. Set the **Bitrise Apple Developer Connection** input to off.
 4. Save your changes and run a new build.
 
-{% include message_box.html type="important" title="Deploy to iTunes Connect and Fastlane Steps and 2FA" content="Please note that if 2FA is required for your Apple ID, then you must use the Apple ID authentication with the **Deploy to iTunes Connect** Step instead of authenticating through Step inputs."%}
+{% include message_box.html type="important" title="2FA and Apple ID authentication" content="Please note that if 2FA is required for your Apple ID, then you must use the Apple ID authentication with the **Deploy to iTunes Connect** and the **Fastlane** Steps instead of authenticating through Step inputs."%}
 
 ## Steps and their possible authentication methods
 
