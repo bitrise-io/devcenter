@@ -18,11 +18,11 @@ menu:
 ---
 Your Workflow may contain Steps that need information from the Apple service you use, for example, the App Store Connect or the Apple Developer Portal. These two services are supported by the following Steps:
 
-* iOS Auto Provision with App Store Connect API
-* iOS Auto Provision with Apple ID
-* Deploy to iTunes Connect
-* Deploy to iTunes Connect - Application Loader
-* Fastlane
+* [iOS Auto Provision with App Store Connect API](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstoreconnect)
+* [iOS Auto Provision with Apple ID](https://www.bitrise.io/integrations/steps/ios-auto-provision)
+* [Deploy to iTunes Connect](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-deliver)
+* [Deploy to iTunes Connect - Application Loader](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader)
+* [Fastlane](https://www.bitrise.io/integrations/steps/fastlane)
 
 To connect these Steps with the Apple service you wish to use while your build runs on Bitrise, you need to provide authentication data to Bitrise and select the established authentication method for your app.
 
@@ -160,7 +160,8 @@ The [Step](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstore
 * Verify if your project is registered with the App Store Connect.
 * Register the iOS devices connected to your Bitrise account with the App Store Connect.
 
-[Connect to Bitrise with API key.](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#setting-up-connection-to-an-apple-service-with-api-key)
+[Connect to Bitrise with API key.](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#setting-up-connection-to-an-apple-service-with-api-key) 
+
 [Connect to Bitrise with Step inputs.](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#setting-up-connection-with-step-inputs)
 
 ### iOS Auto Provision with Apple ID Step
@@ -201,7 +202,7 @@ With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconne
 
 With this Step you can run your [_fastlane_](https://fastlane.tools/) lanes on Bitrise just like you would locally. Please note that in the case of 2FA enabled Apple ID, the **Fastlane** Step can only work with Apple ID authentication which you can set on the **Apple Service** page of your profile.
 
-[Connect to Bitrise with API key (recommended).]()
+[Connect to Bitrise with API key (recommended).](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#setting-up-connection-to-an-apple-service-with-api-key)
 
 [Connect with Apple ID and password.](/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#setting-up-connection-with-the-apple-id-and-password)
 
