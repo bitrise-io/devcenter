@@ -6,78 +6,75 @@ tag:
 - " contributors"
 - " bitrise.yml"
 - workflows
-title: Sharing Steps with all Bitrise users
+title: 全てのBitriseユーザーにStepを共有する
 redirect_from: []
-summary: If you think your Step can be of use to others, you can share it! You can
-  do it manually, using the bitrise share command. If you created the Step with the
-  Step plugin, you can run the share-this-step Workflow in your Step's directory.
+summary: あなたのステップが他の人に役立つと思うなら、あなたはそれを共有することができます！bitrise shareコマンドを使用して手動で行うことができます。Stepプラグインを使用してStepを作成した場合は、Stepのディレクトリでshare-this-stepワークフローを実行できます。
 menu:
   contributors-main:
     weight: 6
-    title: Sharing your Steps with all Bitrise users
+    title: 全てのBitriseユーザーにStepを共有する
 
 ---
-{% include not_translated_yet.html %}
 
-If you think your Step can be of use to others, you can share it! Before doing so, however, please check that there are no other Steps that solve the same problem. You can check:
+あなたのStepが他の人に役立つと思うなら、あなたはそれを共有することができます！ただし、その前に同じ問題を解決する他の手順がないことを確認してください。こちらで確認できます：
 
-* In the list of [released Steps](https://www.bitrise.io/integrations/steps).
-* In the list of [open pull requests](https://github.com/bitrise-io/bitrise-steplib/pulls) in our StepLib.
-* In the list of [closed pull requests](https://github.com/bitrise-io/bitrise-steplib/pulls?q=is%3Apr+is%3Aclosed) in our StepLib.
+* [リリースされたStepのリスト](https://www.bitrise.io/integrations/steps)。
+* StepLibの [オープンなプルリクエストのリスト](https://github.com/bitrise-io/bitrise-steplib/pulls)。
+* StepLibの[クローズドなプルリクエストのリスト](https://github.com/bitrise-io/bitrise-steplib/pulls?q=is%3Apr+is%3Aclosed)。
 
-If you find a Step which is missing a particular feature, please try to contribute to it before developing or sharing a brand new Step for that feature. You can use our [Integrations page](https://www.bitrise.io/integrations/steps) to search for Steps in the Bitrise StepLib. By clicking the GitHub source button on a given Step's page you will be taken to the Step's repository, where you can submit a feature request or open a pull request.
+特定の機能が不足しているStepを見つけた場合は、その機能の新しいStepを開発または共有する前に、そのStepに貢献してみてください。[インテグレーションページ](https://www.bitrise.io/integrations/steps)で、BitriseのStepLibのStepを検索できます。特定のStepのページでGitHubソースボタンをクリックすると、ステップのリポジトリに移動します。ここで、機能リクエストを送信したり、プルリクエストを開いたりできます。
 
-Also, please keep in mind that shared Steps must be actively maintained and they must be open to contributors.
+また、共有されたStepは積極的にメンテナンスをする必要があり、貢献者に開かれている必要があることに注意してください。
 
-## Sharing a new Step
+## 新しいStepを共有する
 
-The sharing process is relatively straightforward - but please make sure to go through the process carefully when sharing a new Step.
+共有プロセスは比較的わかりやすいですが、新しいステップを共有するときはプロセスを慎重に実行するようにしてください。
 
-{% include message_box.html type="important" title="The bitrise share command" content="During Step development, you can get help anytime by simply running bitrise share. This will print a short guide on sharing."%}
+{% include message_box.html type="important" title="bitrise shareコマンド" content="Step開発中は、bitrise shareコマンドを実行するだけでいつでもヘルプを得ることができます。これにより、共有に関する短いガイドが表示されます。"%}
 
-There are two ways to share a Step:
+Stepを共有する方法は2つあります。
 
-* You can do it manually, using the `bitrise share` command.
-* If you created the Step with the Step plugin, you can run the `share-this-step` Workflow in your Step's directory.
+* `bitrise share` コマンドを使用して、手動で行うことができます。
+* Stepプラグインを使用してStepを作成した場合は、Stepのディレクトリで `share-this-step` ワークフローを実行できます。
 
-### Before you start
+### 始める前に
 
-Before you start, make sure that:
+始める前に、次のことを確認してください。
 
-* Your Step is in a public Git repository.
-* The step.yml file contains a support_url property which points to a valid issue tracker (for example, the **Issues** page of your Step's GitHub repository).
-* The step.yml file contains a source_code_url property which points to the correct Git URL of your repository.
+* あなたのStepはGitリポジトリで公開されています。
+* step.ymlファイルには、有効な課題管理システム（たとえば、StepのGitHubリポジトリの **Issue** ページ）を指すsupport_urlプロパティが含まれています。
+* step.ymlファイルには、あなたのリポジトリの正しいGit URLを表すsource_code_urlプロパティが含まれています。
 
-{% include message_box.html type="important" title="Sharing more than one Step" content="Sharing more than one Step - that is, adding more than one new step.yml file to the Bitrise StepLib - must be done in separate pull requests! You cannot open a pull request that contains more than one new Step!"%}
+{% include message_box.html type="important" title="複数のStepを共有する" content="複数のステップを共有する（つまり、Bitrise StepLibに複数の新しいstep.ymlファイルを追加する）ことは、別々のプルリクエストで行う必要があります！複数の新しいステップを含むプルリクエストを作ることはできません。"%}
 
-If you're ready, go ahead with your preferred sharing process!
+準備ができたら、好みの共有プロセスに進んでください。
 
-### Sharing with the bitrise share command
+### bitrise shareコマンドで共有する
 
-1. Fork the [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib.git) repository.
-2. Prepare your forked StepLib locally for sharing:
+1. [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib.git)リポジトリをフォークします。
+2. 共有のためにForkしたStepLibをローカルに準備します。
 
        $ bitrise share start -c <https://github.com/[your-username]/bitrise-steplib.git>
-3. Add the Step version tag to your Step's repository.
-4. Add the Step to your forked StepLib repository:
+3. Stepバージョンタグをあなたのリポジトリに追加します。
+4. StepをフォークしたStepLibのリポジトリに追加します。
 
        $ bitrise share create --tag [step-version-tag] --git [step-git-uri].git --stepid [step-id]
-5. Optionally, perform a complete health check on your forked StepLib:
+5. 必要に応じて、フォークしたStepLibで仕上げのヘルスチェックを実行します。
 
        $ bitrise share audit -c <https://github.com/[your-username]/bitrise-steplib.git>
-6. Review your Step's step.yml file, and if you're happy with it, finish the share process:
+6. Stepのstep.ymlファイルを確認し、問題がなければ共有プロセスを完了します。
 
        $ bitrise share finish
 
-   This commits and pushes the step.yml file to the forked StepLib repository.
-7. Open a pull request in the official [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib.git) repository.
+   これにより、step.ymlファイルがコミットされてフォークしたStepLibリポジトリにプッシュされます。
+7. 公式の[Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib.git)リポジトリでプルリクエストを開きます。
 
-### Sharing with the share-this-step Workflow
+### share-this-stepワークフローでの共有
 
-The share-this-step Workflow is included in the bitrise.yml file that the Step plugin automatically generates when you create a new Step with it. Using it, sharing a Step is incredibly easy:
+share-this-stepワークフローは、新しいStepを作成するときにStepプラグインが自動的に生成するbitrise.ymlファイルに含まれています。それを使用すると、ステップの共有は非常に簡単です。
 
-1. Fork the [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib.git) repository.
-2. Set the required Workflow Environment Variables as app level Environment Variables in the bitrise.yml file:
+1. [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib.git)リポジトリをフォークします。
+2. 必要なワークフロー環境変数をbitrise.ymlファイルのアプリレベルの環境変数として設定します。
 
        app:
          envs:
@@ -85,32 +82,32 @@ The share-this-step Workflow is included in the bitrise.yml file that the Step p
          - BITRISE_STEP_VERSION:
          - BITRISE_STEP_GIT_CLONE_URL:
          - MY_STEPLIB_REPO_FORK_GIT_URL:
-3. Run the share-this-step Workflow in the Bitrise CLI:
+3. Bitrise CLIでshare-this-stepワークフローを実行します。
 
        $ bitrise run share-this-step
 
-### Fixing issues in a StepLib pull request
+### StepLibプルリクエストのIssueの修正
 
-Once you submitted your Step version to the StepLib, wait for the Bitrise team to review it. If we ask for changes:
+StepバージョンをStepLibに送信したら、Bitriseチームがレビューするのを待ちます。変更を求める場合は下記の手順に従ってください。
 
-1. Close the pull request.
-2. Delete the share branch from your fork of the Bitrise StepLib.
-3. Fix the issues in the Step repository.
-4. Add a new version tag to the commit that contains your fixes in the Step repository.
-5. Run the [share process](/contributors/sharing-steps-with-all-bitrise-users/#sharing-a-new-step) again.
+1. プルリクエストを閉じます。
+2. Bitrise StepLibのフォークから共有ブランチを削除します。
+3. StepリポジトリのIssueを修正します。
+4. Stepリポジトリの修正を含むコミットに新しいバージョンタグを追加します。
+5. [共有プロセス](/jp/contributors/sharing-steps-with-all-bitrise-users/#sharing-a-new-step)を再度実行します。
 
-Hopefully, after fixing the issues, we’ll be able to merge your pull request and release your Step to the public!
+Issueを修正した後、プルリクエストをマージして、Stepを一般に公開できるようになることを願っています。
 
-## Abandoned Steps
+## 放棄されたステップ
 
-If you are a Step maintainer, you should be reachable within a reasonable timeframe if anyone submits an issue or a pull request to your Step. If we try to contact you several times regarding an important fix/update in your Step and you refuse to answer for several weeks we might deprecate, remove or replace your Step in the collection! Abandoned Steps can be a threat for those who use it, please keep this in mind if you decide to share your Step with others!
+あなたがStepのメンテナである場合、誰かがあなたのステップにIssueまたはプルリクエストを提出した場合、あなたは合理的な時間枠内に連絡可能であるはずです。Stepの重要な修正/更新に関して何度か連絡を試み、数週間回答を拒否した場合、私たちはコレクションからあなたのStepを非推奨、削除、または置き換える可能性があります。放棄されたステップは、それを使用する人にとって脅威となる可能性があります。Stepを他の人と共有する場合は、このことに注意してください。
 
-The repository and issue tracker must not be removed, as there are permanent links to it included in the step.yml that is in the Bitrise StepLib. If they are removed, already shared Step versions will continue to function as they are also shared on a Bitrise managed file hosting service during the share process. A new version of the step may be released, managed by Bitrise.
+Bitrise StepLibにあるstep.ymlにリポジトリへのパーマネントリンクが含まれているため、リポジトリと課題管理システムを削除しないでください。それらが削除されたとしても、すでに共有されているStepは、共有プロセス中にBitriseのマネージドファイルホスティングサービスでも共有されるため、引き続き機能します。Stepの新しいバージョンがリリースされ、Bitriseによって管理される可能性もあります。
 
-If you shared a Step but you're no longer able or willing to maintain it, please create a GitHub issue in this repository: [https://github.com/bitrise-io/bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib "https://github.com/bitrise-io/bitrise-steplib")[!](https://github.com/bitrise-io/bitrise-steplib!)
+Stepを共有したが、それを維持することができなくなった、または維持する意思がなくなった場合は、次のリポジトリにIssueを作成してください：[https://github.com/bitrise-io/bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib "https://github.com/bitrise-io/bitrise-steplib")!
 
-## Reporting Step issues
+## Stepの問題の報告
 
-If you're a user of a Step which has critical (security or functionality) issues, please create a ticket in the Step's Issue Tracker. Every Step declares the preferred way of reporting issues with the `support_url` attribute.
+利用しているStepに重大な（セキュリティまたは機能的な）問題がある場合は、Stepの問題管理システムでチケットを作成してください。すべてのStepで、`support_url` 属性を使用して問題を報告するための推奨される方法を宣言しています。
 
-If you don't get a response from the Step's maintainer for an extended period (for more than a couple of weeks) please create a GitHub issue in this repository: [https://github.com/bitrise-io/bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib "https://github.com/bitrise-io/bitrise-steplib")  and we'll try to resolve the issue, following the Abandoned Step policy. Please be patient and keep in mind that everyone who contributes to this collection does so to help you by providing a Step for you to use!
+Stepのメンテナから長期間（数週間以上）応答がない場合は、次のリポジトリにGitHubのIssueを作成してください：[https://github.com/bitrise-io/bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib "https://github.com/bitrise-io/bitrise-steplib")。私達は放棄されたStepのポリシーに従って、問題の解決を試みます。このStepに貢献するすべての人が、あなたが使用するStepを提供することによってあなたの助けになっていることを覚えておいてください！
