@@ -8,7 +8,6 @@ menu:
     weight: 8
 
 ---
-
 {% include not_translated_yet.html %}
 
 Your Workflow may contain Steps that need information from the Apple service you use, for example, the App Store Connect or the Apple Developer Portal. These two services are supported by the following Steps:

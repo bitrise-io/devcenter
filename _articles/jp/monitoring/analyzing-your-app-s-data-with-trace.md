@@ -3,6 +3,10 @@ tag: []
 title: Analyzing your app data with Trace
 redirect_from: []
 summary: ''
+menu:
+  monitoring-main:
+    weight: 4
+    title: Analyzing your app's data with Trace
 
 ---
 {% include not_translated_yet.html %}
