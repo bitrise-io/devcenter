@@ -303,6 +303,7 @@ pages:
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/jp/infrastructure/customisable-enterprise-build-platforms.md
 - _articles/jp/infrastructure/stack-update-and-removal-policy.md
+- _articles/jp/monitoring/analyzing-your-app-s-data-with-trace.md
 - _articles/jp/steps-and-workflows/copying-a-workflow-from-one-app-to-another.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise.md
