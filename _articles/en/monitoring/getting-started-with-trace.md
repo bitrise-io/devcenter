@@ -147,7 +147,7 @@ To install Trace:
 
 If all went well, Trace will track application data."%}
 
-Once you have the SDK installed, all you need to do is deploy the apps for your users, and watch the data coming in. [Let’s talk about how to analyze that data that Trace provides!](/monitoring/analyzing-your-apps-data-with-trace/)
+Once you have the SDK installed, all you need to do is deploy the apps for your users, and watch the data coming in. [Let’s talk about how to analyze that data that Trace provides!](/monitoring/analyzing-your-app-s-data-with-trace/)
 
 ### Installing Trace for Android 
 
@@ -205,6 +205,6 @@ To install Trace:
 If all went well, Trace will track application data.
 "%}
 
-Once you have the SDK installed, all you need to do is deploy the apps for your users, and watch the data coming in. [Let’s talk about how to analyze that data that Trace provides!](/monitoring/analyzing-your-apps-data-with-trace/)
+Once you have the SDK installed, all you need to do is deploy the apps for your users, and watch the data coming in. [Let’s talk about how to analyze that data that Trace provides!](/monitoring/analyzing-your-app-s-data-with-trace/)
 
 {% include banner.html banner_text="Monitor your apps with Trace" url="https://www.bitrise.io/add-ons/trace-mobile-monitoring?utm_source=devcenter&utm_medium=bottom_cta" button_text="Check out Trace now" %}
