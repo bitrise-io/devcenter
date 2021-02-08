@@ -202,7 +202,7 @@ To install Trace:
    By default, both values are Environment Variables which are created and stored at the creation of the app.
 1. Run a build!
 
-If all went well, Trace will track application data. Let’s talk about how to analyze that data that Trace provides!
+If all went well, Trace will track application data. [Let’s talk about how to analyze that data that Trace provides!](/monitoring/analyzing-your-apps-data-with-trace/)
 "%}
 
 {% include banner.html banner_text="Monitor your apps with Trace" url="https://www.bitrise.io/add-ons/trace-mobile-monitoring?utm_source=devcenter&utm_medium=bottom_cta" button_text="Sign up for the beta" %}
