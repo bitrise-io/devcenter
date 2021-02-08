@@ -1,6 +1,12 @@
 ---
+- title: Getting started with Trace
+  modified: 2021-02-08 15:00:00 +0100
+  changelog: 'The Trace SDK is now available for Android: use Bitrise''s real-time
+    monitoring add-on to track the performance of your apps on any platform. '
+  type: update
+  url: "/monitoring/getting-started-with-trace/#installing-trace-for-android"
 - title: Deploying with Ship
-  modified: 2021-02-02 16:00:00 +0100
+  modified: 2021-02-02T16:00:00.000+01:00
   changelog: 'For iOS apps, Ship needs the .xcarchive file. Make sure that the Deploy
     to Bitrise.io Step exports this file. '
   type: update
