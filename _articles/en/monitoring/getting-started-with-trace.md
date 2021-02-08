@@ -16,8 +16,6 @@ menu:
     weight: 2
 
 ---
-{% include message_box.html type="important" title="Beta feature" content="Please note that this feature is still in beta phase! You can sign up for the beta [here](https://www.bitrise.io/add-ons/trace-mobile-monitoring)!"%}
-
 Trace is a Bitrise add-on designed to monitor your applications from the perspective of its end users. It comes with out-of-the-box performance monitoring, giving you insight into how the app is performing across the entire install base.
 
 ## Accessing Trace on Bitrise
@@ -147,7 +145,9 @@ To install Trace:
    By default, both values are Environment Variables which are created and stored at the creation of the app.
 5. Run a build!
 
-If all went well, Trace will track application data. Let’s talk about how to analyze that data that Trace provides!"%}
+If all went well, Trace will track application data."%}
+
+Once you have the SDK installed, all you need to do is deploy the apps for your users, and watch the data coming in. [Let’s talk about how to analyze that data that Trace provides!](/monitoring/analyzing-your-apps-data-with-trace/)
 
 ### Installing Trace for Android 
 
@@ -202,7 +202,9 @@ To install Trace:
    By default, both values are Environment Variables which are created and stored at the creation of the app.
 1. Run a build!
 
-If all went well, Trace will track application data. [Let’s talk about how to analyze that data that Trace provides!](/monitoring/analyzing-your-apps-data-with-trace/)
+If all went well, Trace will track application data.
 "%}
 
-{% include banner.html banner_text="Monitor your apps with Trace" url="https://www.bitrise.io/add-ons/trace-mobile-monitoring?utm_source=devcenter&utm_medium=bottom_cta" button_text="Sign up for the beta" %}
+Once you have the SDK installed, all you need to do is deploy the apps for your users, and watch the data coming in. [Let’s talk about how to analyze that data that Trace provides!](/monitoring/analyzing-your-apps-data-with-trace/)
+
+{% include banner.html banner_text="Monitor your apps with Trace" url="https://www.bitrise.io/add-ons/trace-mobile-monitoring?utm_source=devcenter&utm_medium=bottom_cta" button_text="Check out Trace now" %}
