@@ -20,8 +20,6 @@ menu:
 
 Trace is a Bitrise add-on designed to monitor your applications from the perspective of its end users. It comes with out-of-the-box performance monitoring, giving you insight into how the app is performing across the entire install base.
 
-{% include message_box.html type="important" title="iOS apps only" content="For now, Trace is only supported for iOS apps. "%}
-
 ## Accessing Trace on Bitrise
 
 To access the Trace add-on on Bitrise:
