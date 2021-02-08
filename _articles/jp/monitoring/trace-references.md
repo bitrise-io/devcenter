@@ -17,8 +17,6 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-{% include message_box.html type="important" title="Beta feature" content="Please note that this feature is still in beta phase! You can sign up for the beta [here](https://www.bitrise.io/add-ons/trace-mobile-monitoring)!"%}
-
 ## Trace data collection
 
 In order for Trace to provide information on the performance of your apps, our SDK collects data about the app when running on the end users device. We collect data related to session properties, as well as metrics and traces.
