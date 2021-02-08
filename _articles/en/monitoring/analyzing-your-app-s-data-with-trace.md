@@ -11,7 +11,7 @@ summary: Once you have the Trace SDK installed in your app, Bitrise's Trace add-
   base.
 
 ---
-[Once you have the Trace SDK](/monitoring/getting-started-with-trace/#installing-trace) installed in your app, Bitrise's Trace add-on will provide real time monitoring for your app's performance across its entire install base.
+[Once you have the Trace SDK](/monitoring/getting-started-with-trace/#installing-trace) installed in your app, Bitrise's Trace add-on will provide real time monitoring for your app's performance across its entire install base. You can track a wide variety of different metrics, all from the end users' perspective, to make sure that your app is performing as it should. 
 
 ## Analyzing application performance
 
