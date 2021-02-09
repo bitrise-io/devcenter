@@ -11,9 +11,7 @@ menu:
 
 Step inputs are environment items that tell the Bitrise CLI how to run a given Step. As discussed in the [Steps](/bitrise-cli/steps) section, the default inputs can be found in the `step.yml` file of every step and the user only needs to manually set the inputs they wish to change.
 
-Step inputs can be defined in the `step.yml` file of the project by setting the `inputs` property. They have the same syntax as every environment property. It consists of two main parts: a `KEY: value` pair and an `opts` field. 
-
-{% include message_box.html type="example" title="Step input example" content="
+Step inputs can be defined in the `step.yml` file of the project by setting the `inputs` property. They have the same syntax as every environment property. It consists of two main parts: a `KEY: value` pair and an `opts` field.
 
 ```yaml 
 - my_key_for_the_env: "default value" 
@@ -22,8 +20,6 @@ Step inputs can be defined in the `step.yml` file of the project by setting the 
     is_dont_change_value: false 
     category: example
 ```
-
-"%}
 
 * `my_key_for_the_env`: the key of the environment item (required).
 * `my value for the env`: the default value of the input. You don't always have to provide a default value.
