@@ -25,7 +25,7 @@ Step inputs can be defined in the `step.yml` file of the project by setting the 
 
 "%}
 
-* `my_key_for_the_env`: the key of the environment ite _(required)_
+* `my_key_for_the_env`: the key of the environment item (required).
 * `my value for the env`: the default value of the input. You don't always have to provide a default value. 
 * `opts`: optional properties.
 
