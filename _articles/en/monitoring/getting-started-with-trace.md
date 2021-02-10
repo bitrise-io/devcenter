@@ -93,6 +93,8 @@ To use Trace on Bitrise, you need to have a `bitrise_configuration.plist` file i
 2. Open Trace on Bitrise: go to your app, click the **Add-ons** tab, find Trace, and click **Go to Add-on**.
 3. If it's your first time setting up Trace for an app, you are automatically taken to the **Getting started** page. If it's not your first time, you're taken to the Trace home page: in the top-right, click **Getting started**.
 4. Choose **Swift Package Manager** from the install options.
+
+   ![Swift Package Manager instructions](/img/trace_spm.png)
 5. Open your app in Xcode.
 6. Add the bitrise_configuration.plist file to the Xcode project by dragging and dropping it to the root of the project.
 
@@ -164,8 +166,10 @@ You can install the Trace SDK for Android apps in two ways: you can either do it
 To use Trace on Bitrise, you need to have a `bitrise-addons-configuration.json` file in your Android project.
 
 1. Open Trace on Bitrise: go to your app, click the **Add-ons** tab, find Trace, and click **Go to Add-on**.
-2. In the top-right, click **Getting started**.
-3. Find the Download Config file step, and click **Download**.
+2. If it's your first time setting up Trace for an app, you are automatically taken to the **Getting started** page. If it's not your first time, you're taken to the Trace home page: in the top-right, click **Getting started**.
+3. Choose **Gradle** from the install options.
+
+   ![Gradle instructions](/img/trace_gradle.png)
 4. On your own device, open Android Studio and place the file in the root of your project.
 
 #### Initializing the Trace SDK
