@@ -58,6 +58,8 @@ Please note that once you installed Trace, it can take up to an hour for it to s
  4. Open Trace on Bitrise: go to your app, click the **Add-ons** tab, find Trace, and click **Go to Add-on**.
  5. If it's your first time setting up Trace for an app, you are automatically taken to the **Getting started** page. If it's not your first time, you're taken to the Trace home page: in the top-right, click **Getting started**.
  6. Choose **Cocoapods** from the install options.
+
+    ![](/img/trace_cocoapods.png)
  7. Find the **Download Config file** step, and click **Download**.
  8. Open your app in Xcode:
 
