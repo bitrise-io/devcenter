@@ -4,7 +4,7 @@ tag:
 - trace
 - ios
 - android
-title: Analyzing your app's data with Trace
+title: Analyzing your app's performance with Trace
 redirect_from: []
 summary: Once you have the Trace SDK installed in your app, Bitrise's Trace add-on
   will provide real time monitoring for your app's performance across its entire install
