@@ -30,4 +30,5 @@ Read more about Trace here:
 
 - [Getting started with Trace](/monitoring/getting-started-with-trace/)
 - [Analyzing your app's data with Trace](/monitoring/analyzing-your-app-s-data-with-trace/)
+- [Crash reporting with Trace](/monitoring/crash-reporting-with-trace/)
 - [Trace product references](/monitoring/trace-references/)
