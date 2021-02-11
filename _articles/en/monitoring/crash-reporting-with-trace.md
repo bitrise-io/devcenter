@@ -22,7 +22,7 @@ Trace will group your crash reports based on the exception details, so that you 
 To check a crash report:
 
 1. Go to the **Crashes** page in Trace.  
-   ![](/img/trace-crashes.png)
+   ![The Crashes page in Trace](/img/trace-crashes.png)
 2. Optionally, filter the reports by status (open or closed) or date range to find the relevant crashes easier.
 3. Click on the crash report you need.
 
@@ -38,7 +38,7 @@ The crash details shows you plenty of information about any given crash:
 
 The main body of the page shows the details of an individual instance of a crash report. You can inspect each instance by paging through them using the navigation buttons at the top.
 
-![](/img/trace-crash-details.png)
+![The crash details view in Trace](/img/trace-crash-details.png)
 
 The provided details include:
 
