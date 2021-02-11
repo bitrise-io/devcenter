@@ -3,6 +3,9 @@ tag: []
 title: Crash reporting with Trace
 redirect_from: []
 summary: ''
+menu:
+  monitoring-main:
+    weight: 6
 
 ---
 {% include not_translated_yet.html %}

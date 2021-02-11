@@ -12,7 +12,7 @@ description: In order for Trace to provide information on the performance of you
   We collect data related to session properties, as well as metrics and traces.
 menu:
   monitoring-main:
-    weight: 6
+    weight: 8
 
 ---
 ## Trace data collection
