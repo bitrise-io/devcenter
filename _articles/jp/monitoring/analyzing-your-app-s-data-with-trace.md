@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Analyzing your app data with Trace
+title: Analyzing your app's performance with Trace
 redirect_from: []
 summary: ''
 menu:

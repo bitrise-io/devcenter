@@ -56,18 +56,21 @@ Please note that once you installed Trace, it can take up to an hour for it to s
  3. Install the SDK by running `pod install`.  
     If you’ve done everything right, the **Pod installation complete!** message should appear.
  4. Open Trace on Bitrise: go to your app, click the **Add-ons** tab, find Trace, and click **Go to Add-on**.
- 5. In the top-right, click **Getting started**.
- 6. Find the **Download Config file** step, and click **Download**.
- 7. Open your app in Xcode:
+ 5. If it's your first time setting up Trace for an app, you are automatically taken to the **Getting started** page. If it's not your first time, you're taken to the Trace home page: in the top-right, click **Getting started**.
+ 6. Choose **Cocoapods** from the install options.
+
+    ![](/img/trace_cocoapods.png)
+ 7. Find the **Download Config file** step, and click **Download**.
+ 8. Open your app in Xcode:
 
         $ open BookStore.xcworkspace/ 
- 8. Add the `bitrise_configuration.plist` file to your app by dragging and dropping it to the root of the project.
+ 9. Add the `bitrise_configuration.plist` file to your app by dragging and dropping it to the root of the project.
 
     ![](/img/trace-6.png)
- 9. If prompted to choose from different options for adding the files, choose your project - BookStore in our example -, and click **Finish**.
+10. If prompted to choose from different options for adding the files, choose your project - BookStore in our example -, and click **Finish**.
 
     ![](/img/trace-7.png)
-10. Build and run the app in a simulator or on a device." %}
+11. Build and run the app in a simulator or on a device." %}
 
 {% include collapse.html title="Installing Trace with the Swift Package Manager" content="The Swift Package Manager (SPM) is a tool for managing the distribution of Swift code. It’s integrated with the Swift build system to automate the process of downloading, compiling, and linking dependencies. You can use the SPM to install the Trace SDK.
 
@@ -90,8 +93,10 @@ To use Trace on Bitrise, you need to have a `bitrise_configuration.plist` file i
    cd iosCCC/  
    ```
 2. Open Trace on Bitrise: go to your app, click the **Add-ons** tab, find Trace, and click **Go to Add-on**.
-3. In the top-right, click **Getting started**.
-4. Find the **Download Config file** step, and click **Download**.
+3. If it's your first time setting up Trace for an app, you are automatically taken to the **Getting started** page. If it's not your first time, you're taken to the Trace home page: in the top-right, click **Getting started**.
+4. Choose **Swift Package Manager** from the install options.
+
+   ![Swift Package Manager instructions](/img/trace_spm.png)
 5. Open your app in Xcode.
 6. Add the bitrise_configuration.plist file to the Xcode project by dragging and dropping it to the root of the project.
 
@@ -149,7 +154,7 @@ If all went well, Trace will track application data."%}
 
 Once you have the SDK installed, all you need to do is deploy the apps for your users, and watch the data coming in. [Let’s talk about how to analyze that data that Trace provides!](/monitoring/analyzing-your-app-s-data-with-trace/)
 
-### Installing Trace for Android 
+### Installing Trace for Android
 
 You can install the Trace SDK for Android apps in two ways: you can either do it using Gradle in Android Studio, or simply by adding our dedicated Step to your Workflow.
 
@@ -163,31 +168,31 @@ You can install the Trace SDK for Android apps in two ways: you can either do it
 To use Trace on Bitrise, you need to have a `bitrise-addons-configuration.json` file in your Android project.
 
 1. Open Trace on Bitrise: go to your app, click the **Add-ons** tab, find Trace, and click **Go to Add-on**.
-1. In the top-right, click **Getting started**.
-1. Find the Download Config file step, and click **Download**.
-1. On your own device, open Android Studio and place the file in the root of your project.
+2. If it's your first time setting up Trace for an app, you are automatically taken to the **Getting started** page. If it's not your first time, you're taken to the Trace home page: in the top-right, click **Getting started**.
+3. Choose **Gradle** from the install options.
+
+   ![Gradle instructions](/img/trace_gradle.png)
+4. On your own device, open Android Studio and place the file in the root of your project.
 
 #### Initializing the Trace SDK
 
-To start using the Trace SDK, you need to initialize it in your Gradle project. 
+To start using the Trace SDK, you need to initialize it in your Gradle project.
 
 1. Open the build.gradle file in the root of your project.
-1. Locate the dependencies block inside the buildscript block and add the following:
-   ```
-   classpath 'io.bitrise.trace.plugin:trace-gradle-plugin:[latestVersion]'
-   ```
-   Please note that [latestversion] is used as a placeholder here. Replace it with the version number of latest version of the Trace SDK, for example, 0.0.3. You can find the latest released version here: [Trace SDK](https://repo1.maven.org/maven2/io/bitrise/trace/trace-sdk/).
-1. Open the build.gradle file in your application module.
-1. Add the following after the other apply plugin statements:
-   ```
-   apply plugin: 'io.bitrise.trace.plugin' 
-   ```
-1. Staying in the application module of the build.gradle file, add the following dependency:
-   ```
-   implementation 'io.bitrise.trace:trace-sdk:[latestVersion]'
-   ```
+2. Locate the dependencies block inside the buildscript block and add the following:
 
-That’s it. Now you can run your project in Android Studio. The first build will take several minutes longer than usual because the Trace SDK is applying the plug-in. 
+       classpath 'io.bitrise.trace.plugin:trace-gradle-plugin:[latestVersion]'
+
+   Please note that \[latestversion\] is used as a placeholder here. Replace it with the version number of latest version of the Trace SDK, for example, 0.0.3. You can find the latest released version here: [Trace SDK](https://repo1.maven.org/maven2/io/bitrise/trace/trace-sdk/).
+3. Open the build.gradle file in your application module.
+4. Add the following after the other apply plugin statements:
+
+       apply plugin: 'io.bitrise.trace.plugin' 
+5. Staying in the application module of the build.gradle file, add the following dependency:
+
+       implementation 'io.bitrise.trace:trace-sdk:[latestVersion]'
+
+That’s it. Now you can run your project in Android Studio. The first build will take several minutes longer than usual because the Trace SDK is applying the plug-in.
 
 "%}
 
@@ -196,11 +201,11 @@ That’s it. Now you can run your project in Android Studio. The first build wil
 To install Trace:
 
 1. Open the Workflow Editor of your app.
-1. Open the Workflow you use to build the app.
-1. Add the Add Trace SDK Step before the Step that builds your’s app binary.
-1. Check that the Project (or Workspace) path and the Scheme name input values are both correct.
+2. Open the Workflow you use to build the app.
+3. Add the Add Trace SDK Step before the Step that builds your’s app binary.
+4. Check that the Project (or Workspace) path and the Scheme name input values are both correct.
    By default, both values are Environment Variables which are created and stored at the creation of the app.
-1. Run a build!
+5. Run a build!
 
 If all went well, Trace will track application data.
 "%}

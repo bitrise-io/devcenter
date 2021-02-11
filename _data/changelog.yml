@@ -1,6 +1,13 @@
 ---
+- title: Crash reporting with Trace
+  modified: 2021-02-11 09:00:00 +0100
+  changelog: 'Trace’s crash reporting feature helps you understand and prioritize
+    the issues within your app. Trace provides crash reporting by default: all you
+    need to do to make it work is to install the Trace SDK to your app.'
+  type: new
+  url: "/monitoring/crash-reporting-with-trace/"
 - title: Getting started with Trace
-  modified: 2021-02-08 15:00:00 +0100
+  modified: 2021-02-08T15:00:00.000+01:00
   changelog: 'The Trace SDK is now available for Android: use Bitrise''s real-time
     monitoring add-on to track the performance of your apps on any platform. '
   type: update

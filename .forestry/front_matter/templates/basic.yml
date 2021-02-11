@@ -135,6 +135,7 @@ pages:
 - _articles/en/infrastructure/the-environment.md
 - _articles/en/infrastructure/virtual-machines.md
 - _articles/en/monitoring/analyzing-your-app-s-data-with-trace.md
+- _articles/en/monitoring/crash-reporting-with-trace.md
 - _articles/en/reviews/Japanese translations/API (API)/api-api.md
 - _articles/en/reviews/Japanese translations/API (API)/apiのエンドポイントとテスト-endpoints-and-testing-the-api.md
 - _articles/en/reviews/Japanese translations/API (API)/アプリの追加と管理-adding-and-managing-apps.md
@@ -304,6 +305,7 @@ pages:
 - _articles/jp/infrastructure/customisable-enterprise-build-platforms.md
 - _articles/jp/infrastructure/stack-update-and-removal-policy.md
 - _articles/jp/monitoring/analyzing-your-app-s-data-with-trace.md
+- _articles/jp/monitoring/crash-reporting-with-trace.md
 - _articles/jp/steps-and-workflows/copying-a-workflow-from-one-app-to-another.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise.md
