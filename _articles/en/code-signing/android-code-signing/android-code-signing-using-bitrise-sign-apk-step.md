@@ -22,7 +22,7 @@ You can create a signed APK using the **Android Sign** Step in your Bitrise Work
 
 ## Creating a signed APK with the Android Sign Step
 
-To digitally sign your Android project, use the Android Sign Step. This Step is configured to run if you have already uploaded your keystore file on the **Code signing** tab of the Workflow Editor.
+To digitally sign your Android project, use the **Android Sign** Step. This Step is configured to run if you have already uploaded your keystore file on the **Code signing** tab of the Workflow Editor.
 
 The **Android Sign** Step is not required if signing is configured in your project’s bundle.gradle file. If so, running the **Android Build** Step (or the **Gradle Runner** Step) signs the output (APK or AAB) automatically. Nevertheless, we recommend that you use the **Android Sign** Step to sign your project in an easy and secure way.
 
@@ -52,7 +52,7 @@ Before you start:
 
    Bitrise uses the above Environment Variables and sets them as inputs into the respective fields of the **Android Sign** Step. Once the Step runs, it produces either a signed APK or an AAB. The signed APK or AAB is used in deploy Steps, for example, the **Google Play Deploy** Step or the **Deploy to** [**Bitrise.io**](http://bitrise.io/ "http://Bitrise.io") Step. The latter deploys the APK/AAB on the **APPS & ARTIFACTS** tab. You can also[ use Ship to deploy your app](https://devcenter.bitrise.io/deploy/ship/ "https://devcenter.bitrise.io/deploy/ship/") once you built an APK/AAB file.
 
-## Downloading your files [⚓](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#downloading-your-files "https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#downloading-your-files")
+## Downloading your files 
 
 You can [download your keystore](https://devcenter.bitrise.io/code-signing/android-code-signing/downloading-a-keystore-file/ "https://devcenter.bitrise.io/code-signing/android-code-signing/downloading-a-keystore-file/") to the project directory from the **ANDROID KEYSTORE FILE** section using the **File Downloader** Step:
 
