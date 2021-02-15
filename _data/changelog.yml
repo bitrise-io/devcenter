@@ -1,6 +1,11 @@
 ---
+- title: Android code signing using Android Sign step
+  modified: 2021-02-15 00:00:00 +0100
+  changelog: Information on apksigner and jarsigner has been added to the guide.
+  type: update
+  url: "/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/"
 - title: Crash reporting with Trace
-  modified: 2021-02-11 09:00:00 +0100
+  modified: 2021-02-11T09:00:00.000+01:00
   changelog: 'Trace’s crash reporting feature helps you understand and prioritize
     the issues within your app. Trace provides crash reporting by default: all you
     need to do to make it work is to install the Trace SDK to your app.'
