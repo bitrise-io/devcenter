@@ -115,7 +115,7 @@ The maximum number of provisioning profiles and .p12 certificates you can upload
 
 Also note that multiple URLs can be specified for both the certificate and profile inputs. Make sure you separate them with a pipe (`|`) character.
 
-## The **iOS Auto Provision with App Store Connect API** Step fails
+## The iOS Auto Provision with App Store Connect API Step fails
 
 The **iOS Auto Provision with App Store Connect API** Step manages your provisioning profiles for you: it downloads the profiles from the Apple Developer portal and installs them for you. Here's what you can do if this Step fails:
 
