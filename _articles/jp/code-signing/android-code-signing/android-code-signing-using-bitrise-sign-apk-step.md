@@ -49,6 +49,12 @@ You can [download your keystore](https://devcenter.bitrise.io/code-signing/andro
 
 An example for downloading a keystore file:
 
-`1 2 3 4 5 6 7 8 - file-downloader: inputs: - source: $BITRISEIO_ANDROID_KEYSTORE_URL - destination: "$HOME/keystores/my_keystore.jks" #native android#`
+    - file-downloader:
+    
+       inputs:
+    
+       - source: $BITRISEIO_ANDROID_KEYSTORE_URL
+    
+       - destination: "$HOME/keystores/my_keystore.jks" #native android#
 
 After this Step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
