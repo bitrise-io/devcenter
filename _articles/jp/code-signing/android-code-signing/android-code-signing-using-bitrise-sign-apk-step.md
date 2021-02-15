@@ -9,56 +9,46 @@ menu:
     weight: 2
 
 ---
-## `Android Sign` ステップによるコードの署名
+You can create a signed APK using the **Android Sign** Step in your Bitrise Workflow.
 
-Bitriseの workflow にある `Android Sign` ステップにてAPKファイルに署名することができます。
+## Creating a signed APK with the Android Sign Step
 
-Bitrise Project Scannerは `Android Sign` ステップが含まれる `deploy workflow` を提供します。 このステップを踏むことによって workflow に沿って APKの署名を行うことができます。すでに Bitrise に keystore ファイルがアップロードされている場合、このステップは自動的に行われます。 `Code signing` タブの Workflow Editor に keystore ファイルをアップロードするだけで大丈夫です。
+To digitally sign your Android project, use the **Android Sign** Step. This Step is configured to run if you have already uploaded your keystore file on the **Code signing** tab of the Workflow Editor.
 
-このページでは、`android-multiple-test-results-sample` のデモアプリに沿ってコードの署名方法について説明します。
+The **Android Sign** Step is not required if signing is configured in your project’s bundle.gradle file. If so, running the **Android Build** Step (or the **Gradle Runner** Step) signs the output (APK or AAB) automatically. Nevertheless, we recommend that you use the **Android Sign** Step to sign your project in an easy and secure way.
 
-1. [bitrise.io](https://www.bitrise.io/) にログインして、`your app` をクリックする。
-2. Bitrise `Dashboard` の `Workflow` を選択する。
-3. `Code signing` を選択する。
-4. `ANDROID KEYWSTORE FILE` の `Upload file` という箇所をクリック、またはファイルをドラッグしてアップロードする。
+{% include message_box.html type="info" title="jarsigner and apksigner" content="By default, the **Android Sign** Step uses jarsinger to sign your Android app. If you wish to use [apksigner](https://developer.android.com/studio/command-line/apksigner) to sign your project, then you have to first set the **Enables apksigner** input to true and leave the **APK Signature Scheme** input on automatic. This way apksigner checks your APK's minimum and target SDK versions and chooses the required schemes. It signs your project with V1 scheme if your minimum supported version is low and it also signs with other schemes for newer systems."%}
 
-   ![{{ page.title }}](/img/android-code-signing/upload-file.png)
-5. 次の3つの入力フォームに記入する: `keystore password`、 `keystore alias` 、及び `private key password`。
+Before you start:
 
-   ![{{ page.title }}](/img/android-code-signing/three-fields.png)
-6. `Save metadata` を選択する。 アップロードされたファイルが `SAndroid Sign Step` に取り込まれる。
+* Make sure you have the **Android Sign** Step in your deploy Workflow right after your build Steps but before the **Google Play deploy** Step.
 
-上記手段を踏むことで Bitrise に keystore ファイルがアップロードされ、`BITRISEIO_ANDROID_KEYSTORE_URL` の環境変数に一時的に使用できる Read-only のダウンロードURLが設定されます。 このURLから今後のビルドで使用される keystore ファイルがダウンロードできます。workflow の `Android Sign` ステップはこの環境変数をウォッチし、セットされた場合、それが起動されます。
+1. Log into [bitrise.io](https://www.bitrise.io/) and click on your app.
+2. On the app’s page, click **Workflows**.
+3. Click **Code signing**.
+4. Click on or drag-and-drop your keystore file to the **Upload file** field of the **ANDROID KEYSTORE FILE** section.![Android code signing using Android Sign step](https://devcenter.bitrise.io/img/android-code-signing/upload-file.png)
 
-## ファイルのダウンロード
+   A keystore URL automatically gets generated once you upload the keystore file. Bitrise assigns an Environment Variable (`BITRISEIO_ANDROID_KEYSTORE_URL`) to the download URL (which is a time-limited, read-only download URL) of the file as the value. No need to download it manually as the **Android Sign** Step downloads it automatically.
+5. Fill out the displayed three input fields with your credentials:
+   * Keystore password.
+   * Keystore alias.
+   * Private key password.![Android code signing using Android Sign step](https://devcenter.bitrise.io/img/android-keystore-file.png)
+6. Click **Save metadata**.
 
-`File-downloader` ステップの中にある `GENERIC FILE STORAGE` から keystore ファイル等のダウンロードが行えます。
+   When you have successfully uploaded a keystore file to the **ANDROID KEYSTORE FILE** section, Bitrise will automatically export the following Environment Variables based on your input:
+   * $BITRISEIO_ANDROID_KEYSTORE_ALIAS
+   * $BITRISEIO_ANDROID_KEYSTORE_PASSWORD
+   * $BITRISEIO_ANDROID_KEYSTORE_PRIVATE_KEY_PASSWORD
+   * $BITRISEIO_ANDROID_KEYSTORE_URL
 
-keystore ファイルをダウンロードする為の一例
+   Bitrise uses the above Environment Variables and sets them as inputs into the respective fields of the **Android Sign** Step. Once the Step runs, it produces either a signed APK or an AAB. The signed APK or AAB is used in deploy Steps, for example, the **Google Play Deploy** Step or the **Deploy to** [**Bitrise.io**](http://bitrise.io/ "http://Bitrise.io") Step. The latter deploys the APK/AAB on the **APPS & ARTIFACTS** tab. You can also [use Ship to deploy your app](https://devcenter.bitrise.io/deploy/ship/) once you built an APK/AAB file.
 
-    - file-downloader:
-    
-       inputs:
-    
-       - source: $BITRISEIO_ANDROID_KEYSTORE_URL
-    
-       - destination: "$HOME/keystores/my_keystore.jks" #native android#
+## Downloading your files
 
-このステップを踏んだ後、 `my_keystore.jks` は `$HOME/keystores/my_keystore.jks` に格納されます。
+You can [download your keystore](https://devcenter.bitrise.io/code-signing/android-code-signing/downloading-a-keystore-file/) to the project directory from the **ANDROID KEYSTORE FILE** section using the **File Downloader** Step:
 
-## deploy workflow を起動する
+An example for downloading a keystore file:
 
-workflow は _手動でも_ 起動することができます。
+`1 2 3 4 5 6 7 8 - file-downloader: inputs: - source: $BITRISEIO_ANDROID_KEYSTORE_URL - destination: "$HOME/keystores/my_keystore.jks" #native android#`
 
-1. `Builds` ページにてアプリを開く。
-2. `Start/Schedule a Build` を選択する。
-3. 表示されたポップアップからWorkflow下の `deploy` を選択する。
-4. `Start Build` を選択する。
-
-更に、workflow にトリガーを設定することによって、_GIT event_ から起動させることもできます。
-
-1. `Triggers` タブを選択する。
-2. event (push/tag/pull) を設定し、`deploy` workflow を選択する。
-3. `Done` を選択し、`Save` で保存する。
-
-次にリポジトリが設定されたトリガーに沿って変更された際、`deploy` workflow が開始されます。
+After this Step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
