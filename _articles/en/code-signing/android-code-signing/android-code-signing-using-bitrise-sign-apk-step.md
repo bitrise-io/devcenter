@@ -20,7 +20,7 @@ menu:
 ---
 You can create a signed APK using the **Android Sign** Step in your Bitrise Workflow.
 
-## Creating a signed APK with the Android Sign Step 
+## Creating a signed APK with the Android Sign Step
 
 To digitally sign your Android project, use the Android Sign Step. This Step is configured to run if you have already uploaded your keystore file on the **Code signing** tab of the Workflow Editor.
 
@@ -60,6 +60,6 @@ An example for downloading a keystore file:
 
 `1 2 3 4 5 6 7 8 - file-downloader: inputs: - source: $BITRISEIO_ANDROID_KEYSTORE_URL - destination: "$HOME/keystores/my_keystore.jks" #native android#`
 
-After this Step, `my_keystore.jks` will be available at $HOME/keystores/my_keystore.jks.
+After this Step, `my_keystore.jks` will be available at `$HOME/keystores/my_keystore.jks`.
 
 {% include banner.html banner_text="Sign your APK with Android Sign Step" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}
