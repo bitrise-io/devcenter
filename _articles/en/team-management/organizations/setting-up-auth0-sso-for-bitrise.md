@@ -35,11 +35,11 @@ You first create a regular web application for Bitrise on Auth0, enable it and t
 ### Creating Bitrise as a web application on Auth0
 
 1. Log into [Auth0](https://auth0.com/ "https://auth0.com/") as an admin.
-2. Click **Applications** on the left menu bar and then the **+ Create Application**s button on the right hand side of the **Applications** page.
-3. On the **Create application** window, type Bitrise in the **Name** field. In the **Choose application type** select **Regular Web Applications**, and click the **Create** button.
-4. You are landing on your newly created Bitrise app’s **Quick Start** page. Click the **Addons** tab. Toggle the **SAML2 WEB APP**’s switch to the right. This will take to to the **Addon: SAML2 WEB APP** page automatically.
-5. Copy the **Single Sign-On URL** from Bitrise and paste it into the **Application Callback URL** field on the **Settings** tab of the **Addon: SAML2 WEB APP** page. Scroll down to the bottom of the **Addon: SAML2 WEB APP** page and hit **ENABLE**.
-6. Once your changes are saved, close the page to get back to the **Addons** page where you can see the switch turned on.
+2. Click **Applications** on the left menu bar and then the **+ Create Application**s button on the right hand side of the **Applications** page.![](/img/applications.jpg)
+3. On the **Create application** window, type Bitrise in the **Name** field. In the **Choose application type** select **Regular Web Applications**, and click the **Create** button.![](/img/choose-app-type.jpg)
+4. You are landing on your newly created Bitrise app’s **Quick Start** page. Click the **Addons** tab. Toggle the **SAML2 WEB APP**’s switch to the right. This will take to to the **Addon: SAML2 WEB APP** page automatically.![](/img/addonstab.jpg)
+5. Copy the **Single Sign-On URL** from Bitrise and paste it into the **Application Callback URL** field on the **Settings** tab of the **Addon: SAML2 WEB APP** page. Scroll down to the bottom of the **Addon: SAML2 WEB APP** page and hit **ENABLE**.![](/img/singlesignonurl.jpg)![](/img/addonsurl.jpg)![](/img/clickenable.jpg)
+6. Once your changes are saved, close the page to get back to the **Addons** page where you can see the switch turned on.![](/img/switchturnedon.jpg)
 7. Continue with retrieving SAML SSO information from Auth0 to populate the required fields on the **Single Sign On** page of Bitrise.
 
 ### Retrieving SAML SSO information from Auth0’s
@@ -51,7 +51,7 @@ There are two pages to visit to retrieve SAML SSO information from Auth0: the **
 Once you have enabled Bitrise as a web application on Auth0, it’s time to grab the certificate and the Identity provider’s unique login URL to finish up the SAML configuration on Bitrise.
 
 1. Go to **Application**, then select the **Addons** tab to find your enabled Bitrise app.
-2. Click the **SAML2 WEB APP** web app and select the **Usage** tab. Click on the **Download Auth0 certificate** link next to the **Identity Provider Certificate** label. Open the downloaded certificate file and copy its content into the **Certificate** field of Bitrise. Go back to Auth0 and copy paste the **Identity Provider Login URL** into Bitrise’s **Identity provider sign-on URL**.
+2. Click the **SAML2 WEB APP** web app and select the **Usage** tab. Click on the **Download Auth0 certificate** link next to the **Identity Provider Certificate** label. Open the downloaded certificate file and copy its content into the **Certificate** field of Bitrise. Go back to Auth0 and copy paste the **Identity Provider Login URL** into Bitrise’s **Identity provider sign-on URL**.![](/img/usage.jpg)![](/img/auth0configuresso.jpg)
 3. Click **Configure SSO** button on Bitrise.
 4. Now you can close the dialog on Auth0.
 
@@ -59,11 +59,11 @@ Once you have enabled Bitrise as a web application on Auth0, it’s time to grab
 
 Once you have enabled Bitrise as a web application on Auth0, it’s time to grab the certificate and the Identity provider’s unique login URL to finish up the SAML configuration on Bitrise.
 
-1. Click **Bitrise** as web application on the **Applications** page. You’re automatically taken to the **Settings** page.
-2. Scroll down to the bottom of the page to **Show Advanced Settings** and click it.
-3. Click the **Certificate** tab. You can get the Certificate content in three ways: Copy it from the **Signing Certificate** field, click the **Copy to clipboard** icon in the upper right corner of the field or click the **DOWNLOAD CERTIFICATE** button.
+1. Click **Bitrise** as web application on the **Applications** page. You’re automatically taken to the **Settings** page.![](/img/settingsbitrise.jpg)
+2. Scroll down to the bottom of the page to **Show Advanced Settings** and click it.![](/img/advancedsettings.jpg)
+3. Click the **Certificate** tab. You can get the Certificate content in three ways: Copy it from the **Signing Certificate** field, click the **Copy to clipboard** icon in the upper right corner of the field or click the **DOWNLOAD CERTIFICATE** button.![](/img/certificate.jpg)
 4. Paste the Certificate content into Bitrise’s **Certificate** field.
-5. Click on the **Endpoints** tab of Auth0 and copy or click the **Copy to clipboard** icon and paste the URL in the **Identity provider sing-on URL** field of Bitrise.
+5. Click on the **Endpoints** tab of Auth0 and copy or click the **Copy to clipboard** icon and paste the URL in the **Identity provider sing-on URL** field of Bitrise.![](/img/endpoints.jpg)![](/img/auth0configuresso-1.jpg)
 6. Hit **Configure SSO** on Bitrise.
 
 ## What’s next?
