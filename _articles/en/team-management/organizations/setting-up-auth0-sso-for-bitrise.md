@@ -37,10 +37,10 @@ You first create a regular web application for Bitrise on Auth0, enable it and t
 1. Log into [Auth0](https://auth0.com/ "https://auth0.com/") as an admin.
 2. Click **Applications** on the left menu bar and then the **+ Create Application**s button on the right hand side of the **Applications** page.
 3. On the **Create application** window, type Bitrise in the **Name** field. In the **Choose application type** select **Regular Web Applications**, and click the **Create** button.
-3. You are landing on your newly created Bitrise app’s **Quick Start** page. Click the **Addons** tab. Toggle the **SAML2 WEB APP**’s switch to the right. This will take to to the **Addon: SAML2 WEB APP** page automatically.
-4. Copy the **Single Sign-On URL** from Bitrise and paste it into the **Application Callback URL** field on the **Settings** tab of the **Addon: SAML2 WEB APP** page. Scroll down to the bottom of the **Addon: SAML2 WEB APP** page and hit **ENABLE**.
-5. Once your changes are saved, close the page to get back to the **Addons** page where you can see the switch turned on.
-6. Continue with retrieving \[SAML SSO information from Auth0(link)\] to populate the required fields on the **Single Sign On** page of Bitrise.
+4. You are landing on your newly created Bitrise app’s **Quick Start** page. Click the **Addons** tab. Toggle the **SAML2 WEB APP**’s switch to the right. This will take to to the **Addon: SAML2 WEB APP** page automatically.
+5. Copy the **Single Sign-On URL** from Bitrise and paste it into the **Application Callback URL** field on the **Settings** tab of the **Addon: SAML2 WEB APP** page. Scroll down to the bottom of the **Addon: SAML2 WEB APP** page and hit **ENABLE**.
+6. Once your changes are saved, close the page to get back to the **Addons** page where you can see the switch turned on.
+7. Continue with retrieving SAML SSO information from Auth0 to populate the required fields on the **Single Sign On** page of Bitrise.
 
 ### Retrieving SAML SSO information from Auth0’s
 
@@ -65,3 +65,15 @@ Once you have enabled Bitrise as a web application on Auth0, it’s time to grab
 4. Paste the Certificate content into Bitrise’s **Certificate** field.
 5. Click on the **Endpoints** tab of Auth0 and copy or click the **Copy to clipboard** icon and paste the URL in the **Identity provider sing-on URL** field of Bitrise.
 6. Hit **Configure SSO** on Bitrise.
+
+## What’s next?
+
+Learn how you can [log into your Org now that SAML SSO is set up](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account).
+
+You might wan to [check out Org member’s SAML SSO statuses](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
+
+You might want to [enforce SAML SSO login to the Org](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) once all Org members have authorized their SAML SSO connection to the Org.
+
+Disabling SAML SSO is very simple - [learn how.](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#disabling-an-organizations-saml-sso)
+
+{% include message_box.html type="note" title="SAML SSO on Bitrise" content=" If you'd like to learn more about SAML SSO on Bitrise, check out our [SAML SSO in organizations](/team-management/organizations/saml-sso-in-organizations/) guide."%}
