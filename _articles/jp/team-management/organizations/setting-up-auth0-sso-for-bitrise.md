@@ -6,10 +6,8 @@ summary: ''
 menu:
   organizations:
     weight: 29
-published: false
 
 ---
-
 {% include not_translated_yet.html %}
 
 {% include message_box.html type="important" title="SAML SSO with Org Elite and Velocity plans" content="Please note that SAML SSO is only available for an Org with the [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org.
@@ -40,7 +38,7 @@ You first create a regular web application for Bitrise on Auth0, enable it and t
 
 ### Creating Bitrise as a web application on Auth0
 
-1. Log into [Auth0](https://auth0.com/ "https://auth0.com/") as an admin.
+1. Log into [Auth0](https://auth0.com) as an admin.
 2. Click **Applications** on the left menu bar and then the **+ Create Application**s button on the right hand side of the **Applications** page.![](/img/applications.jpg)
 3. On the **Create application** window, type Bitrise in the **Name** field. In the **Choose application type** select **Regular Web Applications**, and click the **Create** button.![](/img/choose-app-type.jpg)
 4. You are landing on your newly created Bitrise app’s **Quick Start** page. Click the **Addons** tab. Toggle the **SAML2 WEB APP**’s switch to the right. This will take to to the **Addon: SAML2 WEB APP** page automatically.![](/img/addonstab.jpg)
