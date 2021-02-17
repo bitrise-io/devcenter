@@ -3,6 +3,9 @@ tag: []
 title: Setting up Auth0 SAML SSO for Bitrise
 redirect_from: []
 summary: ''
+menu:
+  organizations:
+    weight: 29
 published: false
 
 ---
