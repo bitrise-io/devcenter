@@ -16,7 +16,7 @@ Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you d
 
 Before connecting SAML SSO to your Organization, make sure:
 
-* An Azure AD administrator who is logged into Azure AD is at hand.
+* An Auth0 administrator who is logged into Auth0 is at hand.
 * Your account on Bitrise has an Org with [Org Elite or Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://bitrise.atlassian.net/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
 * As with other [Org management actions](https://bitrise.atlassian.net/team-management/organizations/members-organizations/), only the Org owner can set up SAML SSO to a Bitrise Org.
 
