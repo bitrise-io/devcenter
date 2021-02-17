@@ -86,7 +86,7 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
     You will need the full content of the file (including `----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` as well).
 15. Hit **Configure SSO** on Bitrise.![](/img/sso3bitrise.jpg)
 
-You have successfully set up Bitrise as a SAML SSO app on Azure AD. Continue with Authorizing SAML SSO.
+You have successfully set up Bitrise as a SAML SSO app on Azure AD. Continue with [Authorizing SAML SSO](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/#authorizing-saml-sso).
 
 ## Authorizing SAML SSO
 
