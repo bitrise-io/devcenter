@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Setting up Auth0 SSO for Bitrise
+title: Setting up Auth0 SAML SSO for Bitrise
 redirect_from: []
 summary: ''
 published: false
