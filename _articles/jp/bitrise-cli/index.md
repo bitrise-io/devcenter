@@ -1,7 +1,7 @@
 ---
 changelog: 
 last_modified_at: 
-title: Bitrise CLI
+title: YAML mode & Bitrise CLI
 redirect_from:
 - "/bitrise-cli"
 - "/bitrise-cli/"

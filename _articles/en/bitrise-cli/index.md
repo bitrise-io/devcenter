@@ -1,5 +1,5 @@
 ---
-title: Bitrise CLI
+title: YAML mode & Bitrise CLI
 redirect_from:
 - "/bitrise-cli"
 - "/bitrise-cli/"
@@ -16,7 +16,10 @@ menu:
     weight: 22
 
 ---
-Bitrise is a [collection of tools](https://devcenter.bitrise.io/tools/bitrise-tools/) and [services](https://www.bitrise.io) to help you with the development and automation of your software projects, with a main focus on mobile apps. This section is dedicated solely to the [open source Bitrise CLI / runner](https://github.com/bitrise-io/bitrise), which is responsible for interpreting and executing the build configuration. Using the Bitrise CLI you can run the same configuration on any compatible Mac/PC, inside and outside of [bitrise.io](https://www.bitrise.io).
+Bitrise is a [collection of tools](https://devcenter.bitrise.io/tools/bitrise-tools/) and [services](https://www.bitrise.io) to help you with the development and automation of your software projects, with a main focus on mobile apps. This section is dedicated to:
+
+- Using Bitrise in YAML mode.
+- [The Bitrise CLI](https://github.com/bitrise-io/bitrise), which is responsible for interpreting and executing the build configuration. Using the Bitrise CLI you can run the same configuration on any compatible Mac/PC, inside and outside of [bitrise.io](https://www.bitrise.io).
 
 ## Bitrise CLI - the open source, offline, automation runner
 
