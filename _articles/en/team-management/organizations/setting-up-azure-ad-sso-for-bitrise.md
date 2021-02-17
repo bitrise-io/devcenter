@@ -68,8 +68,8 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 
 ### Setting up SAML SSO between Bitrise and Azure AD
 
- 1. Click **Single sign-on** on the left menu.![](/img/singlesignonazuread.png)
- 2. Select **SAML**. You will land on the **Set up Single Sign-On with SAML** page.![](/img/sso2-1.jpg)
+ 1. Click **Single sign-on** on the left menu. Select **SAML**. ![](/img/singlesignonazuread.png)
+ 2. You will land on the **Set up Single Sign-On with SAML** page.![](/img/sso2-1.jpg)
  3. Click the pencil symbol at **Basic SAML Configuration** to edit two fields.![](/img/sso2a-1.jpg)
  4. Add `Bitrise` as the **Identifier (Entity ID)**. Leave this window open! We will come back to it with some information from Bitrise in a second.![](/img/sso3-2.jpg)
  5. Head back to your Organization on Bitrise.
