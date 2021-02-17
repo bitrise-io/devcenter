@@ -84,7 +84,7 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 14. Open the certificate file and copy/paste its content into the **SAML SSO provider certificate** field of Bitrise.
 
     You will need the full content of the file (including `----BEGIN CERTIFICATE----- and -----END CERTIFICATE-----` as well).
-15. Hit **Configure SSO** on Bitrise.
+15. Hit **Configure SSO** on Bitrise.![](/img/sso3bitrise.jpg)
 
 You have successfully set up Bitrise as a SAML SSO app on Azure AD. Continue with Authorizing SAML SSO.
 
@@ -93,15 +93,18 @@ You have successfully set up Bitrise as a SAML SSO app on Azure AD. Continue wit
 Now that the Org owner has set up SAML SSO, everyone in the Org has to authorize SAML SSO before logging in to their Org via SAML SSO.
 
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
-2. Bitrise sends a verification e-mail to all Org members. By clicking the **Log In via SAML SSO** button or using the provided URL, organization members can authorize themselves for SAML SSO login. The email also shows the Org owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.
+2. Bitrise sends a verification e-mail to all Org members. By clicking the **Log In via SAML SSO** button or using the provided URL, organization members can authorize themselves for SAML SSO login. The email also shows the Org owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.[![](https://devcenter.bitrise.io/img/email-samlssso.jpg)](https://devcenter.bitrise.io/img/email-samlssso.jpg)
 3. You’re directed to Bitrise to **Allow “Organization name” to sign you in** page.
    * Click **Authorize** if you trust the Organization to control your Bitrise account sign-in process.  
-     If you’re already logged in to Azure AD, you’ll be automatically taken to your Bitrise Dashboard.  
-     If you’re not, you’ll be prompted to log into Azure AD, and then taken to your Bitrise Dashboard.
+     If you’re already logged in to your SAML SSO provider, you’ll be automatically taken to your Bitrise Dashboard.  
+     If you’re not, you’ll be prompted to log in on your SAML SSO provider’s site, and then taken to your Bitrise Dashboard.
    * Click **Don’t Allow** if the invitation email is from an untrusted source.
-     Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.
 
-If all went well, you should be landing on our Bitrise Dashboard. As an Org owner, you might want to check how Org members are progressing with their SAML SSO connection: [check Org member’s SAML SSO statuses ](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) or [invite new members to the Org](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso).
+     [![SAML SSO in Organizations](https://devcenter.bitrise.io/img/enable-saml.jpg)](https://devcenter.bitrise.io/img/enable-saml.jpg)
+
+     Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.[![](https://devcenter.bitrise.io/img/noconnectedsamlsso.png)](https://devcenter.bitrise.io/img/noconnectedsamlsso.png)
+
+If all went well, you should be landing on our Bitrise Dashboard. As an Org owner, you might want to check how Org members are progressing with their SAML SSO connection: [check Org member’s SAML SSO statuses ](https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)or [invite new members to the Org](https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso).
 
 ## What’s next?
 
