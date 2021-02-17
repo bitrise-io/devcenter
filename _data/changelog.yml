@@ -1,6 +1,11 @@
 ---
+- title: Setting up Azure AD SSO for Bitrise
+  modified: 2021-02-17 00:00:00 +0100
+  changelog: Content and screenshots has been updated.
+  type: update
+  url: "/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/"
 - title: Android code signing using Android Sign step
-  modified: 2021-02-15 00:00:00 +0100
+  modified: 2021-02-15T00:00:00.000+01:00
   changelog: Information on apksigner and jarsigner has been added to the guide.
   type: update
   url: "/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/"
