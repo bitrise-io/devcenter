@@ -3,6 +3,9 @@ tag: []
 title: Setting up Auth0 SSO for Bitrise
 redirect_from: []
 summary: ''
+menu:
+  organizations:
+    weight: 28
 published: false
 
 ---
