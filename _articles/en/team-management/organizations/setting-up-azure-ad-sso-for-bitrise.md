@@ -34,18 +34,18 @@ Before connecting SAML SSO to your Organization, make sure:
 
 If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between Azure AD provider and your Bitrise Org.
 
-1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown.
-2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.
-3. On the left menu bar, click the **Single Sign-On** tab which will take you to the **Enable Single Sign-On** page.
+1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown.![](/img/ssopage1.png)
+2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview.png)
+3. On the left menu bar, click the **Single Sign-On** tab which will take you to the **Enable Single Sign-On** page.![](/img/sso3.png)
 4. Continue with Adding Bitrise to Azure AD.
 
 ## Adding Bitrise to Azure AD
 
 1. Log into [Microsoft Azure](https://azure.microsoft.com/en-us/) as an admin.
-2. Click the **Azure Active Directory** icon on the **Azure services** page.
-3. Click **Enterprise applications** under **Manage**.
-4. Click **New Application** to add Bitrise as a new app to your account.
-5. Type Bitrise in the **What's the name of your app?** field and. The **Integrate any other application you don’t find in the gallery** button should be automatically selected. Hit **Create**.You will find your newly created app listed on the **All Applications** page.
+2. Click the **Azure Active Directory** icon on the **Azure services** page.![](/img/azureactivedirstep2-1.jpg)
+3. Click **Enterprise applications** under **Manage**.![](/img/enterpriseapps-1.jpg)
+4. Click **New Application** to add Bitrise as a new app to your account.![](/img/newapplication-jpg.jpg)
+5. Type `Bitrise` in the **What's the name of your app?** field. The **Integrate any other application you don’t find in the gallery** button should be automatically selected. Hit **Create**.![](/img/createyourownapp-1.jpg)You will find your newly created app listed on the **All Applications** page.
 6. Click the **Bitrise** app to go to its **Overview** page.
 7. Continue with Configuring Bitrise as a SAML SSO app.
 
@@ -62,9 +62,9 @@ Let's do this!
 Before setting up SAML to the app, you have to add all the users/groups to the app in Azure AD who will use SAML SSO to log into the Bitrise Organization. In other words, every Bitrise org member must be added as user in Azure AD.
 
 1. Select **Users and groups** from the left menu.
-2. Click **+ Add user/group**.
-3. On the Users page of **Add Assignment**, select users from the list and click **Select**. Once it's done, you can select a role for users under the **Select a role** dropdown.
-4. On the **Add Assignment** page, click **Assign** to finish adding users.
+2. Click **+ Add user/group**.![](/img/azureuser1-1.jpg)
+3. On the Users page of **Add Assignment**, select users from the list and click **Select**. Once it's done, you can select a role for users under the **Select a role** dropdown.![](/img/azureuser2-1.jpg)
+4. On the **Add Assignment** page, click **Assign** to finish adding users.![](/img/azureuser3b-1.jpg)
 
 ### Setting up SAML SSO between Bitrise and Azure AD
 
@@ -99,7 +99,7 @@ Now that the Org owner has set up SAML SSO, everyone in the Org has to authorize
      If you’re already logged in to Azure AD, you’ll be automatically taken to your Bitrise Dashboard.  
      If you’re not, you’ll be prompted to log into Azure AD, and then taken to your Bitrise Dashboard.
    * Click **Don’t Allow** if the invitation email is from an untrusted source.
-Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.
+     Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.
 
 If all went well, you should be landing on our Bitrise Dashboard. As an Org owner, you might want to check how Org members are progressing with their SAML SSO connection: [check Org member’s SAML SSO statuses ](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) or [invite new members to the Org](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso).
 
