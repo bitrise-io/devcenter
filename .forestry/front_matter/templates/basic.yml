@@ -247,6 +247,7 @@ pages:
 - _articles/en/team-management/organizations/members-organizations.md
 - _articles/en/team-management/organizations/org-ownership.md
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
+- _articles/en/team-management/organizations/setting-up-auth0-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise.md
