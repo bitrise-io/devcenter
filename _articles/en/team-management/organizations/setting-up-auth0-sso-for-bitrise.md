@@ -6,7 +6,8 @@ tag:
 - sso
 title: Setting up Auth0 SSO for Bitrise
 redirect_from: []
-summary: ''
+summary: With SAML SSO, Orgs can apply the security guidelines of Auth0 when accessing
+  their Bitrise Organization.
 menu:
   organizations:
     weight: 28
