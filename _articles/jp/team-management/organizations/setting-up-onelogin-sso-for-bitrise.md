@@ -7,7 +7,7 @@ redirect_from: []
 description: ''
 menu:
   organizations:
-    weight: 27
+    weight: 28
     title: Setting up OneLogin SSO for Bitrise
 
 ---

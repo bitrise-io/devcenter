@@ -13,7 +13,7 @@ changelog: ''
 summary: ''
 menu:
   organizations:
-    weight: 26
+    weight: 27
 
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [OneLogin](https://www.onelogin.com/ "https://www.onelogin.com").
