@@ -24,23 +24,24 @@ Before connecting SAML SSO to your Organization, make sure:
 
 ## Navigating to the Single Sign-On page of Bitrise
 
-If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between Azure AD provider and your Bitrise Org.
+If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between Auth0 provider and your Bitrise Org.
 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown.![](/img/ssopage1.png)
 2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview.png)
 3. On the left menu bar, click the **Single Sign-On** tab which will take you to the **Enable Single Sign-On** page.![](/img/sso3.png)
+4. Continue with Setting up SAML SSO connection between Auth0 and Bitrise.
 
 ## Setting up SAML SSO connection between Auth0 and Bitrise
 
-You first create a regular web application for Bitrise on Auth0, enable it and then there are two ways to retrieve app specific SAML SSO connection data from Auth0. We will show you both ways!
+You first create a regular web application for Bitrise on Auth0, enable it, then you have to retrieve app specific SAML SSO connection data from Auth0.
 
 ### Creating Bitrise as a web application on Auth0
 
 1. Log into [Auth0](https://auth0.com) as an admin.
-2. Click **Applications** on the left menu bar and then the **+ Create Application** button on the right hand side of the **Applications** page.![](/img/applications.jpg)
+2. Click **Applications** on the left menu bar then click the **+ Create Application** button on the right hand side of the **Applications** page.![](/img/applications.jpg)
 3. On the **Create application** window, type Bitrise in the **Name** field. In the **Choose application type** select **Regular Web Applications**, and click the **Create** button.![](/img/choose-app-type.jpg)
 4. You are landing on your newly created Bitrise app’s **Quick Start** page. Click the **Addons** tab. Toggle the **SAML2 WEB APP**’s switch to the right. This will take to to the **Addon: SAML2 WEB APP** page automatically.![](/img/addonstab.jpg)
-5. Copy the **Single Sign-On URL** from Bitrise and paste it into the **Application Callback URL** field on the **Settings** tab of the **Addon: SAML2 WEB APP** page. Scroll down to the bottom of the **Addon: SAML2 WEB APP** page and hit **ENABLE**.![](/img/singlesignonurl.jpg)![](/img/addonsurl.jpg)![](/img/clickenable.jpg)
+5. Copy the **Single Sign-On URL** from Bitrise and paste it into the **Application Callback URL** field on the **Settings** tab of the **Addon: SAML2 WEB APP** page. Scroll down to the bottom of the **Addon: SAML2 WEB APP** page and hit **ENABLE**.![](/img/addonsurl.jpg)![](/img/clickenable.jpg)
 6. Go back to the **Addons** page where you can see the switch turned on.![](/img/switchturnedon.jpg)
 7. Continue with retrieving SAML SSO information from Auth0 to populate the required fields on the **Single Sign On** page of Bitrise.
 
