@@ -12,10 +12,8 @@ summary: あなたのステップが他の人に役立つと思うなら、あ�
 menu:
   contributors-main:
     weight: 6
-    title: 全てのBitriseユーザーにStepを共有する
 
 ---
-
 あなたのStepが他の人に役立つと思うなら、あなたはそれを共有することができます！ただし、その前に同じ問題を解決する他の手順がないことを確認してください。こちらで確認できます：
 
 * [リリースされたStepのリスト](https://www.bitrise.io/integrations/steps)。

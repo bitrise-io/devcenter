@@ -1,6 +1,12 @@
 ---
+- title: Setting up Auth0 SSO for Bitrise
+  modified: 2021-02-18 00:00:00 +0100
+  changelog: This guide describes how to set up Bitrise as a SAML SSO app on Auth0
+    and establish the connection between Auth0 and your Bitrise Organization.
+  type: new
+  url: "/team-management/organizations/setting-up-auth0-sso-for-bitrise/"
 - title: Setting up Azure AD SSO for Bitrise
-  modified: 2021-02-17 00:00:00 +0100
+  modified: 2021-02-17T00:00:00.000+01:00
   changelog: Content and screenshots has been updated.
   type: update
   url: "/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/"

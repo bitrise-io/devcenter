@@ -247,6 +247,7 @@ pages:
 - _articles/en/team-management/organizations/members-organizations.md
 - _articles/en/team-management/organizations/org-ownership.md
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
+- _articles/en/team-management/organizations/setting-up-auth0-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise.md
@@ -307,6 +308,7 @@ pages:
 - _articles/jp/monitoring/analyzing-your-app-s-data-with-trace.md
 - _articles/jp/monitoring/crash-reporting-with-trace.md
 - _articles/jp/steps-and-workflows/copying-a-workflow-from-one-app-to-another.md
+- _articles/jp/team-management/organizations/setting-up-auth0-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-okta-sso-for-bitrise.md
