@@ -1,5 +1,9 @@
 ---
-tag: []
+tag:
+- teams
+- org
+- security
+- sso
 title: Setting up Auth0 SAML SSO for Bitrise
 redirect_from: []
 summary: ''
