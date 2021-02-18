@@ -3,6 +3,9 @@ tag: []
 title: Setting up AD FS SSO for Bitrise
 redirect_from: []
 summary: ''
+menu:
+  organizations:
+    weight: 30
 published: false
 
 ---
