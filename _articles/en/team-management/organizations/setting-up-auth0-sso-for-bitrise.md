@@ -50,7 +50,7 @@ You first create a regular web application for Bitrise on Auth0, enable it, then
 Once you have enabled Bitrise as a web application on Auth0, it’s time to grab the certificate and the Identity provider’s unique login URL to finish up the SAML configuration on Bitrise.
 
 1. Go to **Application**, then select the **Addons** tab to find your enabled Bitrise app.
-2. Click the **SAML2 WEB APP** web app and select the **Usage** tab. Click on the **Download Auth0 certificate** link next to the **Identity Provider Certificate** label. Open the downloaded certificate file and copy its content into the **Certificate** field of Bitrise. Go back to Auth0 and copy paste the **Identity Provider Login URL** into Bitrise’s **Identity provider sign-on URL**.![](/img/usage.jpg)![](/img/auth0configuresso.jpg)
+2. Click the **SAML2 WEB APP** web app and select the **Usage** tab. Click on the **Download Auth0 certificate** link next to the **Identity Provider Certificate** label. Open the downloaded certificate file and copy its content into the **Certificate** field of Bitrise. Go back to Auth0 and copy paste the **Identity Provider Login URL** into Bitrise’s **Identity provider sign-on URL**.![](/img/usage.jpg)
 3. Click **Configure SSO** button on Bitrise.
 4. Now you can close the dialog on Auth0.
 
