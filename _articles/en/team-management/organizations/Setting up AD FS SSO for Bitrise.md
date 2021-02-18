@@ -33,9 +33,9 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 
 In this tutorial we will be jumping back and forth between Bitrise and AD FS so it is recommended that both tools are available during this process.
 
-1. On the **Enable** **Single Sign-On** page of Bitrise add the **Identity provider sign-on URL**.  
-   For example, a valid value is https://<AD FS URL>.com/adfs/ls.
-2. Continue with exporting a certificate from AD FS.
+1. On the **Enable** **Single Sign-On** page of Bitrise add the **Identity provider sign-on URL from AD FS**. For example, a valid value is `https://<AD FS URL>.com/adfs/ls`.
+
+Continue with exporting a certificate from AD FS.
 
 ## Exporting a certificate
 
