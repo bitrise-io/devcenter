@@ -70,9 +70,9 @@ Once you are finished with exporting the certificate, you can continue with addi
 12. On the **Edit Claim** **Issuance Policy** page, click the **Add Rule** button and hit OK.![](/img/editclaims.jpg)
 13. Create a **Send LDAP Attributes as Claims** claim rule and click **Next**.
 14. On the **Configure Claim Rule** page: 
-    1. Add a rule name, for example Send E-mail, in the **Claim rule name** field. 
-    2. Select an **Attribute Store** which is most likely Active Directory. 
-    3. In the **Mapping of LDAP attributes to outgoing claim types** field select E-mail Addresses.
+- Add a rule name, for example Send E-mail, in the **Claim rule name** field. 
+- Select an **Attribute Store** which is most likely Active Directory. 
+- In the **Mapping of LDAP attributes to outgoing claim types** field select E-mail Addresses.
 15. Click **Finish**.![](/img/configureclaimrule.jpg)
 16. Add another new rule that turns an E-mail to a formatter NameID. To do so, click **Add rule** in the **Edit Claim** **Issuance Policy** page again.
 17. On the **Select Rule Template**, select **Transform an Incoming Claim** option in the **Claim rule template** dropdown. Click **Next**.![](/img/chooseruletype.jpg)
