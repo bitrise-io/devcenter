@@ -6,9 +6,11 @@ summary: ''
 menu:
   organizations:
     weight: 19
-published: false
 
 ---
+
+{% include not_translated_yet.html %}
+
 This guide provides step-by-step instructions on setting up SAML SSO using [Microsoft Active Directory Federation Services](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) (AD FS).
 
 {% include message_box.html type="important" title="SAML SSO with Org Elite and Velocity plans" content="Please note that SAML SSO is only available for an Org with the [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org. Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you decide to downgrade, you will lose this feature. All Org members will receive an email about the downgrade and you’ll have two weeks to re-upgrade to the Org Elite plan if you wish to use SAML SSO in your Org again."%}
@@ -49,23 +51,23 @@ In this tutorial we will be jumping back and forth between Bitrise and AD FS so 
 10. Open the exported certificate by a text editor and copy/paste its content to the **SAML SSO provider certificate** field on the **Enable Single Sign-On** page of Bitrise.
 11. Save the settings by clicking **Configure SSO** on Bitrise.![](/img/configuresso-1.jpg) Let’s continue the SAML SSO configuration on AD FS by adding Bitrise.
 
-### Adding Bitrise as a replying party trust to AD FS
+### Adding Bitrise as a relying party trust to AD FS
 
-Once you are finished with exporting the certificate, you can continue with adding Bitrise as a[ replying party trust to AD FS](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust). The Add Relying Party Trust Wizard guides you through the steps.
+Once you are finished with exporting the certificate, you can continue with adding Bitrise as a[ relying party trust to AD FS](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust). The Add Relying Party Trust Wizard guides you through the steps.
 
- 1. On AD FS, click **Replying Party Trust** on the left menu bar, then click **Relying Party Trust**.
+ 1. On AD FS, click **Relying Party Trust** on the left menu bar, then click **Relying Party Trust**.
  2. Select **Add Relying Party Trust** under **Actions**.![](/img/addreplyingpartytrust.jpg)
  3. On the **Welcome** page, select the **Claims aware** option and hit **Start**.![](/img/claimsaware.jpg)
  4. On the **Select Data Source** page, click the **Enter data about the relying party manually** option on the bottom of the page. Click **Next**.![](/img/selectdatasource.jpg)
  5. On the **Specify Display Name** page, add a **Display name,** for example `MyCorp`. Click **Next**.![](/img/specifydisplayname.jpg)
- 6. Optionally, specifying a token encryption certificate on the **Configure Certificate** page is optional. Click **Next**.![](/img/optionalconfigure.jpg)
- 7. On the **Configure UR**L page, select **Enable support for the SAML 2.0 WebSSO protocol** and copy paste the **Assertion Consumer Service URL (ACS URL)** from Bitrise to the **Replying party SAML 2 0 SSO service URL** field on AD FS. Click **Next**.![](/img/configureurl-1.jpg)
+ 6. Specify a token encryption certificate on the **Configure Certificate** page is optional. Click **Next**.![](/img/optionalconfigure.jpg)
+ 7. On the **Configure UR**L page, select **Enable support for the SAML 2.0 WebSSO protocol** and copy paste the **Assertion Consumer Service URL (ACS URL)** from Bitrise to the **Relying party SAML 2. 0 SSO service URL** field on AD FS. Click **Next**.![](/img/configureurl-1.jpg)
  8. On the **Configure Identifiers** page, add `Bitrise` in the **Relying party trust identifier** field. Click **Add**, then hit **Next**.![](/img/replyingidentifiers2.jpg)
  9. Do not modify the default access control policy on the **Choose Access Control Policy** page so that everyone can access this SAML SSO connection. Click **Next**.![](/img/permiteveryone.jpg)
 10. On the **Ready to Add Trust** page, review the settings and click **Next**.![](/img/readytoaddtrust.jpg)
 11. On the **Finish** page, tick the checkbox to edit claims issuance policy for Bitrise. Click **Close**.![](/img/finish.jpg)
 
-### Configuring claim ruless
+### Configuring claim rules
 
  1. On the **Edit Claim** **Issuance Policy** page, click the **Add Rule** button and hit **OK**.![](/img/editclaims.jpg)
  2. Create a **Send LDAP Attributes as Claims** claim rule and click **Next**.

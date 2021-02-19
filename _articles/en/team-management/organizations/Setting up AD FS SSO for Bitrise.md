@@ -11,7 +11,6 @@ summary: This article explains how to set up Bitrise on AD FS so that you can ap
 menu:
   organizations:
     weight: 20
-published: false
 
 ---
 This guide provides step-by-step instructions on setting up SAML SSO using [Microsoft Active Directory Federation Services](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) (AD FS).
@@ -71,7 +70,7 @@ Once you are finished with exporting the certificate, you can continue with addi
 10. On the **Ready to Add Trust** page, review the settings and click **Next**.![](/img/readytoaddtrust.jpg)
 11. On the **Finish** page, tick the checkbox to edit claims issuance policy for Bitrise. Click **Close**.![](/img/finish.jpg)
 
-### Configuring claim ruless
+### Configuring claim rules
 
  1. On the **Edit Claim** **Issuance Policy** page, click the **Add Rule** button and hit **OK**.![](/img/editclaims.jpg)
  2. Create a **Send LDAP Attributes as Claims** claim rule and click **Next**.
