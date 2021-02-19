@@ -59,7 +59,7 @@ Once you are finished with exporting the certificate, you can continue with addi
  3. On the **Welcome** page, select the **Claims aware** option and hit **Start**.![](/img/claimsaware.jpg)
  4. On the **Select Data Source** page, click the **Enter data about the relying party manually** option on the bottom of the page. Click **Next**.![](/img/selectdatasource.jpg)
  5. On the **Specify Display Name** page, add a **Display name,** for example `MyCorp`. Click **Next**.![](/img/specifydisplayname.jpg)
- 6. Optionally, specifying a token encryption certificate on the **Configure Certificate** page is optional. Click **Next**.![](/img/optionalconfigure.jpg)
+ 6. Specify a token encryption certificate on the **Configure Certificate** page is optional. Click **Next**.![](/img/optionalconfigure.jpg)
  7. On the **Configure UR**L page, select **Enable support for the SAML 2.0 WebSSO protocol** and copy paste the **Assertion Consumer Service URL (ACS URL)** from Bitrise to the **Relying party SAML 2 0 SSO service URL** field on AD FS. Click **Next**.![](/img/configureurl-1.jpg)
  8. On the **Configure Identifiers** page, add `Bitrise` in the **Relying party trust identifier** field. Click **Add**, then hit **Next**.![](/img/replyingidentifiers2.jpg)
  9. Do not modify the default access control policy on the **Choose Access Control Policy** page so that everyone can access this SAML SSO connection. Click **Next**.![](/img/permiteveryone.jpg)
