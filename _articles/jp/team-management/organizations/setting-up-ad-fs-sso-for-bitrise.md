@@ -3,6 +3,9 @@ tag: []
 title: Setting up AD FS SAML SSO for Bitrise
 redirect_from: []
 summary: ''
+menu:
+  organizations:
+    weight: 19
 published: false
 
 ---

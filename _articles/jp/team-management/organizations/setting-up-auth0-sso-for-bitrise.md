@@ -9,7 +9,7 @@ redirect_from: []
 summary: ''
 menu:
   organizations:
-    weight: 29
+    weight: 31
 
 ---
 {% include not_translated_yet.html %}

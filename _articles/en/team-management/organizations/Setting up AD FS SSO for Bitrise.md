@@ -5,7 +5,7 @@ redirect_from: []
 summary: ''
 menu:
   organizations:
-    weight: 30
+    weight: 20
 published: false
 
 ---
