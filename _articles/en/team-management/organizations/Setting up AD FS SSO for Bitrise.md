@@ -1,8 +1,13 @@
 ---
-tag: []
+tag:
+- teams
+- org
+- security
+- sso
 title: Setting up AD FS SSO for Bitrise
 redirect_from: []
-summary: ''
+summary: This article explains how to set up Bitrise on AD FS so that you can apply
+  AD FS's security guidelines on your Bitrise Organization.
 menu:
   organizations:
     weight: 20
