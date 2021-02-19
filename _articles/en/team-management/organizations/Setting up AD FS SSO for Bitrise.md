@@ -50,11 +50,11 @@ In this tutorial we will be jumping back and forth between Bitrise and AD FS so 
 11. Save the settings by clicking **Configure SSO** on Bitrise.![](/img/configuresso-1.jpg)
     Let’s continue the SAML SSO configuration on AD FS by adding Bitrise.
 
-### Adding Bitrise as a replying party trust to AD FS
+### Adding Bitrise as a relying party trust to AD FS
 
 Once you are finished with exporting the certificate, you can continue with adding Bitrise as a[ replying party trust to AD FS](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust). The Add Relying Party Trust Wizard guides you through the steps.
 
- 1. On AD FS, click **Replying Party Trust** on the left menu bar, then click **Relying Party Trust**.
+ 1. On AD FS, click **Relying Party Trust** on the left menu bar, then click **Relying Party Trust**.
  2. Select **Add Relying Party Trust** under **Actions**.![](/img/addreplyingpartytrust.jpg)
  3. On the **Welcome** page, select the **Claims aware** option and hit **Start**.![](/img/claimsaware.jpg)
  4. On the **Select Data Source** page, click the **Enter data about the relying party manually** option on the bottom of the page. Click **Next**.![](/img/selectdatasource.jpg)
