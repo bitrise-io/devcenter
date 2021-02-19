@@ -77,11 +77,10 @@ Once you are finished with exporting the certificate, you can continue with addi
 16. Add another new rule that turns an E-mail to a formatter NameID. To do so, click **Add rule** in the **Edit Claim** **Issuance Policy** page again.
 17. On the **Select Rule Template**, select **Transform an Incoming Claim** option in the **Claim rule template** dropdown. Click **Next**.![](/img/chooseruletype.jpg)
 18. Give a name to the new rule, for example, `Transform E-mail`.
-
-* Select **E-Mail Address** as the **Incoming Claim Type**.
-* Select **NameId** as the **Outgoing claim type.**
-*  Choose **Email** as the **Outgoing name ID format**. 
-* Hit **OK** to finish the process.![](/img/newrule.jpeg)
+19. Select **E-Mail Address** as the **Incoming Claim Type**.
+20. Select **NameId** as the **Outgoing claim type.**
+21. Choose **Email** as the **Outgoing name ID format**. 
+22. Hit **OK** to finish the process.![](/img/newrule.jpeg)
 
 ## What’s next?
 
