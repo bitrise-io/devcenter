@@ -65,21 +65,23 @@ Once you are finished with exporting the certificate, you can continue with addi
  7. On the Configure URL page, select **Enable support for the SAML 2.0 WebSSO protocol** and paste the **Assertion Consumer Service URL (ACS URL)** from Bitrise to the field.![](/img/configureurl-1.jpg)
  8. On the **Configure Identifiers** page, add `Bitrise` in the **Relying party trust identifier** field. Click **Add**, then hit **Next**.![](/img/replyingidentifiers2.jpg)
  9. Do not modify the default access control policy on the **Choose Access Control Policy** page so that everyone can access this SAML SSO connection. Click **Next**.![](/img/permiteveryone.jpg)
-10. On the **Ready to Add Trust** page, review the settings and click **Next**.
-11. On the **Finish** page, tick the checkbox to edit claims issuance policy for _Bitrise_. Click **Close**.
-12. On the **Edit Claim** **Issuance Policy** page, click the **Add Rule** button and hit OK.
-13. Use the claim rule template **Send LDAP Attributes as Claims** and click **Next**.
-14. On the **Configure Claim Rule** page:
-    \-Add a rule name, for example Send E-mail, in the **Claim rule name** field.
-    \-Select an **Attribute Store** which is most likely Active Directory.
-    \-In the **Mapping of LDAP attributes to outgoing claim types** field select E-mail Addresses.
-15. Click **Finish**.
-16. Add a new rule that turns an E-mail to a formatter NameID. Click **Add rule** in the **Edit Claim** **Issuance Policy** page?
-17. On the **Select Rule Template**, select Transform an Incoming Claim option in the **Claim rule template** dropdown. Click **Next**.
-18. Give the rule a name, for example, Transform E-mail.
+10. On the **Ready to Add Trust** page, review the settings and click **Next**.![](/img/readytoaddtrust.jpg)
+11. On the **Finish** page, tick the checkbox to edit claims issuance policy for _Bitrise_. Click **Close**.![](/img/finish.jpg)
+12. On the **Edit Claim** **Issuance Policy** page, click the **Add Rule** button and hit OK.![](/img/editclaims.jpg)
+13. Create a **Send LDAP Attributes as Claims** claim rule and click **Next**.
+14. On the **Configure Claim Rule** page: 
+    1. Add a rule name, for example Send E-mail, in the **Claim rule name** field. 
+    2. Select an **Attribute Store** which is most likely Active Directory. 
+    3. In the **Mapping of LDAP attributes to outgoing claim types** field select E-mail Addresses.
+15. Click **Finish**.![](/img/configureclaimrule.jpg)
+16. Add another new rule that turns an E-mail to a formatter NameID. To do so, click **Add rule** in the **Edit Claim** **Issuance Policy** page again.
+17. On the **Select Rule Template**, select **Transform an Incoming Claim** option in the **Claim rule template** dropdown. Click **Next**.![](/img/chooseruletype.jpg)
+18. Give a name to the new rule, for example, `Transform E-mail`.
 
-* Select **E-Mail Address** as the _Incoming Claim Type_.
-* Select **NameId** as the outgoing claim type/Issued Claims?. Choose **Email** as the Outgoing name ID format. Click Finish.
+* Select **E-Mail Address** as the **Incoming Claim Type**.
+* Select **NameId** as the **Outgoing claim type.**
+*  Choose **Email** as the **Outgoing name ID format**. 
+* Hit **OK** to finish the process.![](/img/newrule.jpeg)
 
 ## What’s next?
 
