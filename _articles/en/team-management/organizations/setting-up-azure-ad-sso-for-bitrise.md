@@ -13,12 +13,10 @@ changelog: ''
 summary: ''
 menu:
   organizations:
-    weight: 19
+    weight: 21
 
 ---
-{% include message_box.html type="important" title="SAML SSO with Org Elite and Velocity plans" content="Please note that SAML SSO is only available for an Org with the [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org.
-
-Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you decide to downgrade, you will lose this feature. All Org members will receive an email about the downgrade and you’ll have two weeks to re-upgrade to the Org Elite plan if you wish to use SAML SSO in your Org again.
+{% include message_box.html type="important" title="SAML SSO with Org Elite and Velocity plans" content="Please note that SAML SSO is only available for an Org with the [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org. Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you decide to downgrade, you will lose this feature. All Org members will receive an email about the downgrade and you’ll have two weeks to re-upgrade to the Org Elite plan if you wish to use SAML SSO in your Org again.
 
 "%}
 
@@ -73,7 +71,7 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
  3. Click the pencil symbol at **Basic SAML Configuration** to edit two fields.![](/img/sso2a-1.jpg)
  4. Add `Bitrise` as the **Identifier (Entity ID)**. Leave this window open! We will come back to it with some information from Bitrise in a second.![](/img/sso3-2.jpg)
  5. Head back to your Organization on Bitrise.
- 6. Click the **Single Sign On** tab and click the **Copy Link** button to copy the **Single Sign-on URL** from your Bitrise.
+ 6. Click the **Single Sign On** tab and click the **Copy Link** button to copy the **Assertion Consumer Service URL (ACS URL)** from Bitrise.
  7. Let's head back to the **Basic SAML Configuration** window of Azure AD.
  8. Paste the **Assertion Consumer Service URL** from Bitrise to the **Reply URL field on the Basic SAML Configuration** page of Azure AD.
  9. Click **Save** and close the **Basic SAML Configuration** window.![/img/sso3-2.jpg](https://app.forestry.io/sites/mpxzvqn7ysfysw/body-media//img/sso3-2.jpg)

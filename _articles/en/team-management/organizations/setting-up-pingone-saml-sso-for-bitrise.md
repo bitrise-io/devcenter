@@ -13,7 +13,7 @@ changelog: ''
 summary: ''
 menu:
   organizations:
-    weight: 26
+    weight: 28
 
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML SSO application in [Ping Identity](https://www.pingidentity.com/en.html).

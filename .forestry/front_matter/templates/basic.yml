@@ -240,6 +240,7 @@ pages:
 - _articles/en/steps-and-workflows/skipping-steps.md
 - _articles/en/steps-and-workflows/step-inputs.md
 - _articles/en/team-management/changing-the-owner-of-an-app.md
+- _articles/en/team-management/organizations/Setting up AD FS SSO for Bitrise.md
 - _articles/en/team-management/organizations/creating-org.md
 - _articles/en/team-management/organizations/managing-apps.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
@@ -308,6 +309,7 @@ pages:
 - _articles/jp/monitoring/analyzing-your-app-s-data-with-trace.md
 - _articles/jp/monitoring/crash-reporting-with-trace.md
 - _articles/jp/steps-and-workflows/copying-a-workflow-from-one-app-to-another.md
+- _articles/jp/team-management/organizations/setting-up-ad-fs-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-auth0-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise.md
