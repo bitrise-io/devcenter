@@ -309,6 +309,7 @@ pages:
 - _articles/jp/monitoring/analyzing-your-app-s-data-with-trace.md
 - _articles/jp/monitoring/crash-reporting-with-trace.md
 - _articles/jp/steps-and-workflows/copying-a-workflow-from-one-app-to-another.md
+- _articles/jp/team-management/organizations/setting-up-ad-fs-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-auth0-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise.md
