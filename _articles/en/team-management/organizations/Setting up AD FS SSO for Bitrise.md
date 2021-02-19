@@ -29,11 +29,11 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview.png)
 3. On the left menu bar, click the **Single Sign-On** tab which will take you to the **Enable Single Sign-On** page.![](/img/sso3.png)
 
-## Configuring SAML SSO on AD FS and Bitrise
+## Configuring SAML SSO on Bitrise and AD FS
 
 In this tutorial we will be jumping back and forth between Bitrise and AD FS so it is recommended that both tools are available during this process.
 
-1.  Add the **Identity provider sign-on URL** from AD FS in the **SAML SSO provider Single Sign-On URL (SSO URL)** field of Bitrise. For example, a valid value is `https://<AD FS URL>.com/adfs/ls`.
+1. Add the **Identity provider sign-on URL** from AD FS in the **SAML SSO provider Single Sign-On URL (SSO URL)** field of Bitrise. For example, a valid value is `https://<AD FS URL>.com/adfs/ls`.
 
 ### Exporting a certificate
 
@@ -68,20 +68,20 @@ Once you are finished with exporting the certificate, you can continue with addi
 
 ### Configuring claim ruless
 
-12. On the **Edit Claim** **Issuance Policy** page, click the **Add Rule** button and hit **OK**.![](/img/editclaims.jpg)
-13. Create a **Send LDAP Attributes as Claims** claim rule and click **Next**.
-14. On the **Configure Claim Rule** page:
-	* Add a rule name, for example Send E-mail, in the **Claim rule name** field.
-	* Select an **Attribute Store** which is most likely the Active Directory.
-	* In the **Mapping of LDAP attributes to outgoing claim types** field select E-mail Addresses.
-1. Click **Finish**.![](/img/configureclaimrule.jpg)
-2. Add another new rule that turns an E-mail to a formatter NameID. To do so, click **Add rule** in the **Edit Claim** **Issuance Policy** page again.
-3. On the **Select Rule Template**, select **Transform an Incoming Claim** option in the **Claim rule template** dropdown. Click **Next**.![](/img/chooseruletype.jpg)
-4. Give a name to the new rule, for example, `Transform E-mail`.
-5. Select **E-Mail Address** as the **Incoming Claim Type**.
-6. Select **NameId** as the **Outgoing claim type.**
-7. Choose **Email** as the **Outgoing name ID format**.
-8. Hit **OK** to finish the process.![](/img/newrule.jpeg)
+ 1. On the **Edit Claim** **Issuance Policy** page, click the **Add Rule** button and hit **OK**.![](/img/editclaims.jpg)
+ 2. Create a **Send LDAP Attributes as Claims** claim rule and click **Next**.
+ 3. On the **Configure Claim Rule** page:
+    * Add a rule name, for example Send E-mail, in the **Claim rule name** field.
+    * Select an **Attribute Store** which is most likely the Active Directory.
+    * In the **Mapping of LDAP attributes to outgoing claim types** field select E-mail Addresses.
+ 4. Click **Finish**.![](/img/configureclaimrule.jpg)
+ 5. Add another new rule that turns an E-mail to a formatter NameID. To do so, click **Add rule** in the **Edit Claim** **Issuance Policy** page again.
+ 6. On the **Select Rule Template**, select **Transform an Incoming Claim** option in the **Claim rule template** dropdown. Click **Next**.![](/img/chooseruletype.jpg)
+ 7. Give a name to the new rule, for example, `Transform E-mail`.
+ 8. Select **E-Mail Address** as the **Incoming Claim Type**.
+ 9. Select **NameId** as the **Outgoing claim type.**
+10. Choose **Email** as the **Outgoing name ID format**.
+11. Hit **OK** to finish the process.![](/img/newrule.jpeg)
 
 ## What’s next?
 
