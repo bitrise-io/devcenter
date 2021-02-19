@@ -65,14 +65,15 @@ Once you are finished with exporting the certificate, you can continue with addi
  9. Do not modify the default access control policy on the **Choose Access Control Policy** page so that everyone can access this SAML SSO connection. Click **Next**.![](/img/permiteveryone.jpg)
 10. On the **Ready to Add Trust** page, review the settings and click **Next**.![](/img/readytoaddtrust.jpg)
 11. On the **Finish** page, tick the checkbox to edit claims issuance policy for Bitrise. Click **Close**.![](/img/finish.jpg)
+
+### Creating claim ruless
+
 12. On the **Edit Claim** **Issuance Policy** page, click the **Add Rule** button and hit **OK**.![](/img/editclaims.jpg)
 13. Create a **Send LDAP Attributes as Claims** claim rule and click **Next**.
 14. On the **Configure Claim Rule** page:
-
-* Add a rule name, for example Send E-mail, in the **Claim rule name** field.
-* Select an **Attribute Store** which is most likely the Active Directory.
-* In the **Mapping of LDAP attributes to outgoing claim types** field select E-mail Addresses.
-
+	* Add a rule name, for example Send E-mail, in the **Claim rule name** field.
+	* Select an **Attribute Store** which is most likely the Active Directory.
+	* In the **Mapping of LDAP attributes to outgoing claim types** field select E-mail Addresses.
 1. Click **Finish**.![](/img/configureclaimrule.jpg)
 2. Add another new rule that turns an E-mail to a formatter NameID. To do so, click **Add rule** in the **Edit Claim** **Issuance Policy** page again.
 3. On the **Select Rule Template**, select **Transform an Incoming Claim** option in the **Claim rule template** dropdown. Click **Next**.![](/img/chooseruletype.jpg)
