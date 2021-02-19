@@ -1,6 +1,12 @@
 ---
+- title: Setting up AD FS SSO for Bitrise
+  modified: 2021-02-19 00:00:00 +0100
+  changelog: Learn how to set up Bitrise on AD FS so that you can log into your Organization
+    with SAML SSO.
+  type: new
+  url: "/team-management/organizations/setting-up-ad-fs-sso-for-bitrise/"
 - title: Setting up Auth0 SSO for Bitrise
-  modified: 2021-02-18 00:00:00 +0100
+  modified: 2021-02-18T00:00:00.000+01:00
   changelog: This guide describes how to set up Bitrise as a SAML SSO app on Auth0
     and establish the connection between Auth0 and your Bitrise Organization.
   type: new
