@@ -56,15 +56,15 @@ Continue with exporting a certificate from AD FS.
 
 Once you are finished with exporting the certificate, you can continue with adding Bitrise as a[ replying party trust to AD FS](https://docs.microsoft.com/en-us/windows-server/identity/ad-fs/operations/create-a-relying-party-trust). The Add Relying Party Trust Wizard guides you through the steps.
 
- 1. On AD FS click **Trust Relationships** on the left menu bar, then **Relying Party Trust**.
- 2. Select **Add Relying Party Trust** under the **Actions**.
- 3. On the **Welcome** page, select the **Claims aware** option and hit **Start**.
- 4. On the **Select Data Source** page, click the **Enter data about the relying party manually** option on the bottom of the page. Click **Next**.
- 5. On the **Specify Display Name** page, type the name of your Bitrise Org in the **Display name** field. Click **Next**.
- 6. Specifying a token encryption certificate on the **Configure Certificate** page is optional. Click **Next**.
- 7. On the Configure URL page, select **Enable support for the SAML 2.0 WebSSO protocol** and paste the **Single Sign-On URL** from Bitrise to the field.
- 8. On the **Configure Identifiers** page, add Bitrise in the **Relying party trust identifier** field. Click **Add**, then hit **Next**.
- 9. Do not modify the default access control policy on the **Choose Access Control Policy** page so that every Org member can access _what_. Click **Next**.
+ 1. On AD FS click **Replying Party Trust** on the left menu bar, then **Relying Party Trust**.
+ 2. Select **Add Relying Party Trust** under **Actions**.![](/img/addreplyingpartytrust.jpg)
+ 3. On the **Welcome** page, select the **Claims aware** option and hit **Start**.![](/img/claimsaware.jpg)
+ 4. On the **Select Data Source** page, click the **Enter data about the relying party manually** option on the bottom of the page. Click **Next**.![](/img/selectdatasource.jpg)
+ 5. On the **Specify Display Name** page, add a **Display name,** for example `MyCorp`. Click **Next**.![](/img/specifydisplayname.jpg)
+ 6. Optionally, specifying a token encryption certificate on the **Configure Certificate** page is optional. Click **Next**.![](/img/optionalconfigure.jpg)
+ 7. On the Configure URL page, select **Enable support for the SAML 2.0 WebSSO protocol** and paste the **Assertion Consumer Service URL (ACS URL)** from Bitrise to the field.![](/img/configureurl-1.jpg)
+ 8. On the **Configure Identifiers** page, add `Bitrise` in the **Relying party trust identifier** field. Click **Add**, then hit **Next**.![](/img/replyingidentifiers2.jpg)
+ 9. Do not modify the default access control policy on the **Choose Access Control Policy** page so that everyone can access this SAML SSO connection. Click **Next**.![](/img/permiteveryone.jpg)
 10. On the **Ready to Add Trust** page, review the settings and click **Next**.
 11. On the **Finish** page, tick the checkbox to edit claims issuance policy for _Bitrise_. Click **Close**.
 12. On the **Edit Claim** **Issuance Policy** page, click the **Add Rule** button and hit OK.
