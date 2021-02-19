@@ -240,7 +240,6 @@ pages:
 - _articles/en/steps-and-workflows/skipping-steps.md
 - _articles/en/steps-and-workflows/step-inputs.md
 - _articles/en/team-management/changing-the-owner-of-an-app.md
-- _articles/en/team-management/organizations/Setting up AD FS SSO for Bitrise.md
 - _articles/en/team-management/organizations/creating-org.md
 - _articles/en/team-management/organizations/managing-apps.md
 - _articles/en/team-management/organizations/managing-billing-sub.md
@@ -248,6 +247,7 @@ pages:
 - _articles/en/team-management/organizations/members-organizations.md
 - _articles/en/team-management/organizations/org-ownership.md
 - _articles/en/team-management/organizations/saml-sso-in-organizations.md
+- _articles/en/team-management/organizations/setting-up-ad-fs-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-auth0-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
 - _articles/en/team-management/organizations/setting-up-google-sso-for-bitrise.md
