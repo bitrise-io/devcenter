@@ -66,7 +66,7 @@ Once you are finished with exporting the certificate, you can continue with addi
 10. On the **Ready to Add Trust** page, review the settings and click **Next**.![](/img/readytoaddtrust.jpg)
 11. On the **Finish** page, tick the checkbox to edit claims issuance policy for Bitrise. Click **Close**.![](/img/finish.jpg)
 
-### Creating claim ruless
+### Configuring claim ruless
 
 12. On the **Edit Claim** **Issuance Policy** page, click the **Add Rule** button and hit **OK**.![](/img/editclaims.jpg)
 13. Create a **Send LDAP Attributes as Claims** claim rule and click **Next**.
