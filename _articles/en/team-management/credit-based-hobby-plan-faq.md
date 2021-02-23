@@ -3,7 +3,6 @@ tag: []
 title: 'Credit-based Hobby plan: FAQ'
 redirect_from: []
 summary: ''
-published: false
 
 ---
 Bitrise currently offers two different types of free subscription plans, called Hobby plans: a credit-based one and a concurrency-based one. Here’s everything you need to know about the credit-based Hobby plan!
