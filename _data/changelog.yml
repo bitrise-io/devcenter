@@ -1,6 +1,11 @@
 ---
+- title: Triggering builds with Pull Request
+  modified: 2021-02-24 00:00:00 +0100
+  changelog: Broken Webhooks link has been fixed.
+  type: fix
+  url: "/builds/triggering-builds/trigger-pull-request/"
 - title: Setting up AD FS SSO for Bitrise
-  modified: 2021-02-19 00:00:00 +0100
+  modified: 2021-02-19T00:00:00.000+01:00
   changelog: Learn how to set up Bitrise on AD FS so that you can log into your Organization
     with SAML SSO.
   type: new
