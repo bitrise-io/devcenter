@@ -19,7 +19,7 @@ menu:
 
 You can set up a trigger so that every time a pull request is opened from a specified source branch to a specified target branch of your repository, a build is automatically triggered on Bitrise.
 
-{% include message_box.html type="important" title="Webhooks for triggering builds" content="Triggering builds automatically requires an incoming webhook set up with the hosting service of your repository. Read more in the [Webhooks](https://devcenter.b/webhooks/webhooks-index/) section."%}
+{% include message_box.html type="important" title="Webhooks for triggering builds" content="Triggering builds automatically requires an incoming webhook set up with the hosting service of your repository. Read more in the [Webhooks](/webhooks/webhooks-index/) section."%}
 
 By default, every new app you add will have a trigger that triggers a build every time any pull request is opened in your repository.
 
