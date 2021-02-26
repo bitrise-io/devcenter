@@ -1,6 +1,11 @@
 ---
+- title: Apple services connection
+  modified: 2021-02-26 00:00:00 +0100
+  changelog: Information on app-specific password has been updated in this guide.
+  type: update
+  url: "/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/"
 - title: Triggering builds with Pull Request
-  modified: 2021-02-24 00:00:00 +0100
+  modified: 2021-02-24T00:00:00.000+01:00
   changelog: Broken Webhooks link has been fixed.
   type: fix
   url: "/builds/triggering-builds/trigger-pull-request/"
