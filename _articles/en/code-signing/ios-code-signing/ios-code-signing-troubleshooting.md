@@ -60,7 +60,7 @@ If you use the **iOS Auto Provision with App Store Connect API** Step, skip to [
    Remember that these files can and do expire or get revoked.
 5. Check the **Select method for export** input of the **Xcode Archive & Export for iOS** Step in the Workflow Editor.
 
-   If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile. 
+   If, for example, it is set to `ad-hoc` or `app-store`, you need a Distribution type .p12 certificate file and either an Ad-hoc or an App Store type provisioning profile.
 
    ![{{ page.title }}](/img/export_fail.png)
 6. Check if the capability lists in the **iOS app** and in the **provisioning profile uploaded to the Developer Portal** match.
@@ -94,12 +94,9 @@ When you use the **iOS Auto Provision with App Store Connect API** Step, using X
 
 #### If Xcode managed signing is enabled in the iOS app
 
-1. Check the value of the **Should the step try to generate Provisioning Profiles even if Xcode managed signing is enabled in the Xcode project?** input in the **iOS Auto Provision with Apple ID** Step.
-   * If it's set to `no`, the Step will look for an Xcode Managed Provisioning Profile on the Apple Developer Portal.
-   * If it's set to `yes`, the Step will generate a new manual provisioning profile on the Apple Developer portal for the project.
-2. Check if the capability lists in the iOS app and in the provisioning profile on the Developer Portal match.
+Check if the capability lists in the iOS app and in the provisioning profile on the Developer Portal match.
 
-   This is only relevant if the **iOS Auto Provision with App Store Connect API** Step is set to NOT generate a profile.
+This is only relevant if the **iOS Auto Provision with App Store Connect API** Step is set to NOT generate a profile.
 
 #### If Xcode managed signing is disabled in the iOS app
 
