@@ -56,7 +56,7 @@ header.top-bar {
 	padding-bottom: $spacing-header-vertical;
 	font-size: 180%;
 	font-weight: 100;
-	background-color: #683d87;
+	background-color: #492f5c;
 	color: white;
 	position: fixed;
 	z-index: 1000;
@@ -120,26 +120,17 @@ header.top-bar {
 			.input-wrapper {
 				position: relative;
 
-				.search-icon {
-					position: absolute;
-					top: 0.4rem;
-					left: 1rem;
-
-					&:before {
-						content: url(/assets/logos/icons-docs/magnifier.svg);
-					}
-				}
-
 				input#search-input {
 					width: 100%;
 					line-height: 3rem;
 					border: none;
 					border-radius: 8px;
-					padding-left: 4.4rem;
+					padding-left: 2rem;
 					padding-right: 4.4rem;
-					background-color: rgba(0, 0, 0, .26);
-					font-size: 1.6rem;
-					font-weight: 200;
+					background-color: hsla(0, 0%, 100%, .12);
+					font-size: 13px;
+					font-weight: bold;
+					letter-spacing: 0.3px;
 					transition: background-color .25s cubic-bezier(.1, .7, .1, 1);
 					color: 	#FFFFFF;
 					font-family: TTNorms;
@@ -167,11 +158,11 @@ header.top-bar {
 					opacity: 0;
 				}
 
-				.search-clear {
+				.search-icon {
 					display: block;
 					position: absolute;
 					line-height: 1.5;
-					top: -0.5rem;
+					top: -0.3rem;
 					right: 0;
 					border: none;
 					padding: 1rem;
@@ -179,7 +170,7 @@ header.top-bar {
 					cursor: pointer;
 
 					&:before {
-						content: url(/assets/logos/icons-docs/close-small.svg);
+						content: url(/assets/logos/icons-docs/magnifier.svg);
 					}
 				}
 			}
@@ -241,9 +232,9 @@ header.top-bar {
 				background-color: #0dd3c5;
 				border: none;
 				border-radius: 4px;
-				padding: 0.625rem 0.825rem;
+				padding: 0.625rem 0.8rem;
 				line-height: 1.5;
-				width: 180px;
+				width: 120px;
 				text-align: center;
 				margin: auto;
 				cursor: pointer;
@@ -254,10 +245,9 @@ header.top-bar {
 
 				.sign-up {
 					color: #ffffff;
-					font-weight: 700;
+					font-weight: bold;
 					font-size: 1.2rem;
 					font-family: TTNorms;
-					text-transform: uppercase;
 				}
 			}
 		}
@@ -371,11 +361,12 @@ nav#side-menu {
 				text-align: left;
 				font-size: inherit;
 				background-color: transparent;
-				font-family: TTNorms;
-				font-weight: 600;
+				font-family: TTNorms-Medium;
+				font-weight: 500;
 				font-size: 1.5rem;
 				line-height: 1.5;
-				color: #616161;
+				letter-spacing: -0.15px;
+				color: #351D48;
 				cursor: pointer;
 
 				&:before {
@@ -385,6 +376,10 @@ nav#side-menu {
 
 				&.open {
 					color: #760fc3;
+
+					span {
+						border-bottom: solid #0fc389 2px;
+					}
 				}
 			}
 

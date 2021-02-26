@@ -4,15 +4,15 @@
 	<li class="menu-item">
 		{% unless item.url contains "index" %}
 			{% if item.url == current_article.url %}
-				<a class="menu-link" href="{{ item.url }}" title="{{ item.title }}" class="current" hreflang="{{ locale | strip }}">{{ item.title }}</a>
+				<a class="menu-link" href="{{ item.url }}" title="{{ item.title }}" class="current" hreflang="{{ locale | strip }}"><span>{{ item.title }}</span></a>
 			{% else %}
-				<a class="menu-link" href="{{ item.url }}" title="{{ item.title }}" hreflang="{{ locale | strip }}">{{ item.title }}</a>
+				<a class="menu-link" href="{{ item.url }}" title="{{ item.title }}" hreflang="{{ locale | strip }}"><span>{{ item.title }}</span></a>
 			{% endif %}
 		{% else %}
 			{% if item.identifier contains "main" %}
-				<a class="menu-list-opener-{{ forloop.index }}" href="{{ item.url }}" hreflang="{{ locale | strip }}">{{ item.title }}</a>
+				<a class="menu-list-opener-{{ forloop.index }}" href="{{ item.url }}" hreflang="{{ locale | strip }}"><span>{{ item.title }}</span></a>
 			{% else %}
-				<a class="menu-list-opener" href="{{ item.url }}" hreflang="{{ locale | strip }}">{{ item.title }}</a>
+				<a class="menu-list-opener" href="{{ item.url }}" hreflang="{{ locale | strip }}"><span>{{ item.title }}</span></a>
 		  {% endif %}
 		{% endunless %}
 		{% if item.children %}
