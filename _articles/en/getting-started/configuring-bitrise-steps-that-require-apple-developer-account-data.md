@@ -104,7 +104,7 @@ If you cannot use the API key authentication, we recommend you try this option. 
  2. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
  3. On the left menu bar, select **Apple Service connection**.
  4. Click the **Add connection** button.
- 5. Provide your **Apple ID** and **Password** in the popup window. ![](/img/appleidauthentication.jpg)
+ 5. Provide your **Apple ID** and **Password** in the popup window. Click **Connect**.![](/img/appleidauthentication.jpg)
  6. Enter your **verification code** in the **Two factor authentication** window. 
  7. Add the **app-specific password**. Click **Verify** to continue.
  8. You will be prompted to provide your verification code.
