@@ -59,10 +59,11 @@ To configure the **Deploy to Huawei App Gallery Step**:
 
 Take a look at the following bitrise.yml file to see an example configuration that uses the **Deploy to Huawei AppGallery** Step to deploy an app.
 
+{% raw %}
     workflows:
       deploy:
         steps:
-         - activate-ssh-key@4:
+        - activate-ssh-key@4:
             run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
         - git-clone@4: {}
         - cache-pull@2: {}
@@ -82,5 +83,6 @@ Take a look at the following bitrise.yml file to see an example configuration th
             - huawei_client_id: 'XXX'
             - huawei_client_secret: "$CLIENT_SECRET"
             - huawei_app_id: 'YYY'  
+{% endraw %}
 
 Run a build! If all goes well, you should see your app on Huawei AppGallery.
