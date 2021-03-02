@@ -50,7 +50,7 @@ Rename your Workflows at any time you feel necessary: it's quick and simple.
 
 1. Click the app's **Workflow** tab. Note that you cannot leave the Workflow Editor without either saving or discarding any changes you made.
 2. Open the **WORKFLOW** menu on the left and select a Workflow.
-3. Click **RENAME** next to the name of the Workflow.
+3. Click **RENAME** next to the name of the Workflow.![](/img/rename-workflows.jpg)
 4. Type the new name then click the check mark to save the new name.
 5. Click **Save** in the top right corner.
 
