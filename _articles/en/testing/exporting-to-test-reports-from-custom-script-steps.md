@@ -67,21 +67,20 @@ You can use your own scripts in a **Script** Step to export your test results. Y
 * Your test results are in a JUnit XML format.
 * You place the results and a `test-info.json` file in the $BITRISE_TEST_RESULT_DIR, which is an Environment Variable pointing to the correct path.
 
-  \#!/bin/env bash
-  set -ex
+```
+#!/bin/env bash
+set -ex
 
-  # Creating a sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
+# Creating a sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
+test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
+mkdir "$test_run_dir"
 
-  test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
-  mkdir "$test_run_dir"
+# Exporting the JUnit XML test report:
+cp "MY/TEST/REPORT/XML/FILE/PATH.xml" "$test_run_dir/UnitTest.xml"
 
-  # Exporting the JUnit XML test report:
-
-  cp "MY/TEST/REPORT/XML/FILE/PATH.xml" "$test_run_dir/UnitTest.xml"
-
-  # Creating the test-info.json file with the name of the test run defined:
-
-  echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
+# Creating the test-info.json file with the name of the test run defined:
+echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
+```
 
 If all goes well, you should be able to see your test results on the [Test Reports](/testing/test-reports/) page.
 
