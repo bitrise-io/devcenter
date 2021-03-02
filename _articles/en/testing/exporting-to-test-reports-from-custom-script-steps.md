@@ -42,13 +42,15 @@ With the correct configuration, the Step finds the test results in your app’s 
 2. Go to **Workflows** to open the Workflow Editor.
 3. From the **WORKFLOW** menu, select the Workflow you use to run your tests.
 4. Add the **Export test results to the Test reports add-on** Step AFTER the testing Step.
-5. In the **The name of the test** input, set the name of the test.   
+5. In the **The name of the test** input, set the name of the test.  
    The test results will be under this name in the Test Reports add-on.
 6. In the **Path where custom test results reside** input, set the path where your test results can be found.  
+   ![](/img/bitrise_workflow_editor-2.png)  
    We recommend setting a folder here, though you can also set a specific filepath. The default value is the source directory of your app. Example patterns:
    * If your app’s root directory is app: `app/build/test-results/testDemoDebugUnitTest/`
    * If your test results are within an app folder but app is not the root directory: ./app/build/test-results/testDemoDebugUnitTest/
-7. In the **Test result search pattern** input, set a pattern that matches your test result file.  
+7. In the **Test result search pattern** input, set a pattern that matches your test result file.
+
    This search pattern is used to search every file and folder of the path that was set in the **Path where custom test results reside** input.  
    If there is more than one match, the Step will export the first match with a warning in the logs. If you set a specific filepath in the previous input, just set * here.  
    Example patterns:
@@ -65,18 +67,21 @@ You can use your own scripts in a **Script** Step to export your test results. Y
 * Your test results are in a JUnit XML format.
 * You place the results and a `test-info.json` file in the $BITRISE_TEST_RESULT_DIR, which is an Environment Variable pointing to the correct path.
 
-    #!/bin/env bash
-    set -ex
-    
-    # Creating a sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
-    test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
-    mkdir "$test_run_dir"
-    
-    # Exporting the JUnit XML test report:
-    cp "MY/TEST/REPORT/XML/FILE/PATH.xml" "$test_run_dir/UnitTest.xml"
-    
-    # Creating the test-info.json file with the name of the test run defined:
-    echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
+  \#!/bin/env bash
+  set -ex
+
+  # Creating a sub-directory for the test run within the BITRISE_TEST_RESULT_DIR:
+
+  test_run_dir="$BITRISE_TEST_RESULT_DIR/result_dir_1"
+  mkdir "$test_run_dir"
+
+  # Exporting the JUnit XML test report:
+
+  cp "MY/TEST/REPORT/XML/FILE/PATH.xml" "$test_run_dir/UnitTest.xml"
+
+  # Creating the test-info.json file with the name of the test run defined:
+
+  echo '{"test-name":"MY TEST RUN NAME"}' >> "$test_run_dir/test-info.json"
 
 If all goes well, you should be able to see your test results on the [Test Reports](/testing/test-reports/) page.
 
