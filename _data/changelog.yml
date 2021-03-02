@@ -1,6 +1,11 @@
 ---
+- title: Managing Workflows
+  modified: 2021-03-02 00:00:00 +0100
+  changelog: Broken screenshot is replaced in the Renaming Workflows section.
+  type: fix
+  url: "/steps-and-workflows/managing-workflows/"
 - title: Apple services connection
-  modified: 2021-02-26 00:00:00 +0100
+  modified: 2021-02-26T00:00:00.000+01:00
   changelog: Information on app-specific password has been updated in this guide.
   type: update
   url: "/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/"
