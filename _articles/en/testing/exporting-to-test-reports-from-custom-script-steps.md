@@ -57,7 +57,7 @@ With the correct configuration, the Step finds the test results in your app’s 
    * Matching all files within the base path: `*`
    * Matching all files within a given directory of the base path: `*/build/test-results/testDemoDebugUnitTest/*`
 8. In the **Step’s test result directory** input, make sure the path is correct.  
-   Do NOT modify this input’s value: this is the folder where the **Deploy to Bitrise.io** Step will look for the test results to export them. It should be set to the $BITRISE_TEST_RESULT_DIR Env Var.
+   Do NOT modify this input’s value: this is the folder where the **Deploy to Bitrise.io** Step will look for the test results to export them. It should be set to the `$BITRISE_TEST_RESULT_DIR` Env Var.
 9. Make sure you have a **Deploy to Bitrise.io** Step in your Workflow.
 
 ## Using custom scripts to export test results
@@ -73,6 +73,8 @@ You can use your own scripts in a **Script** Step to export your test results. Y
     // Test Name ...
     { \"test-name\":\"My first test\" }
  "%}
+
+Here's an example script to export your test results: 
 
 ```
 #!/bin/env bash
