@@ -1,7 +1,7 @@
 ---
 - title: Managing Workflows
   modified: 2021-03-02 00:00:00 +0100
-  changelog: Broken screenshot is replaced in the Renaming Workflows section
+  changelog: Broken screenshot is replaced in the Renaming Workflows section.
   type: fix
   url: "/steps-and-workflows/managing-workflows/"
 - title: Apple services connection
