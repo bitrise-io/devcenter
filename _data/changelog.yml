@@ -1,6 +1,13 @@
 ---
+- title: Exporting to Test Reports from any Step
+  modified: 2021-03-02 17:00:00 +0100
+  changelog: You can use the Export test results to the Test reports add-on Step to
+    make sure your test results appear in the Test Reports add-on, even if you use
+    Steps that don’t automatically export their results.
+  type: update
+  url: "/testing/exporting-to-test-reports-from-custom-script-steps/"
 - title: Managing Workflows
-  modified: 2021-03-02 00:00:00 +0100
+  modified: 2021-03-02T00:00:00.000+01:00
   changelog: Broken screenshot is replaced in the Renaming Workflows section.
   type: fix
   url: "/steps-and-workflows/managing-workflows/"
