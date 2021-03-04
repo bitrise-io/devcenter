@@ -12,7 +12,7 @@ summary: 'Your Workflow may contain Steps that need information from your Apple 
   account. If so, you need to provide authentication data to allow Bitrise to connect
   to your Apple Developer account. '
 menu:
-  getting-started-main:
+  connecting-to-services:
     weight: 9
 
 ---
