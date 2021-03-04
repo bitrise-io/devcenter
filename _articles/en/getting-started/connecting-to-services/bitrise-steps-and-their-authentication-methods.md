@@ -55,10 +55,8 @@ With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconne
 
 With this Step you can run your [_fastlane_](https://fastlane.tools/) lanes on Bitrise just like you would locally. Please note that in the case of 2FA enabled Apple ID, the **Fastlane** Step can only work with Apple ID authentication which you can set on the **Apple Service** page of your profile.
 
-Connect to Bitrise with API key (recommended).
-
-Connect with Apple ID and password.
-
-Connect with Step inputs.
+[Connect to Bitrise with API key (recommended).](/getting-started/connecting-to-services/setting-up-connection-to-an-apple-service-with-api-key/)
+[Connect with Apple ID and password.](/getting-started/connecting-to-services/connecting-to-an-apple-service-with-apple-id/)
+[Connect with Step inputs.](/getting-started/connecting-to-services/connecting-to-an-apple-service-with-step-inputs/)
 
 The **Fastlane** Step is now set to connect to the Apple Developer account assigned to the app during your build.
