@@ -42,4 +42,6 @@ When a Step uses the Apple ID authentication, you also need to select the authen
 3. Scroll down to the **Apple service connection** section.
 4. Select the **Apple ID authentication** for the app to use. It displays the connection method of the app owner and other team members with admin authority. ![](/img/appleidteam.jpg)
 
-The Step is now able to connect to an Apple service during your build. Please note that there is NO NEED TO MODIFY any Step input fields manually since these are automatically populated once the connection is set up.
+The Step is now able to connect to an Apple service during your build. 
+
+{% include message_box.html type="important" title="No Step input modification needed" content="Please note that there is NO NEED TO MODIFY ANY STEP INPUT  fields manually since these are automatically populated once the connection is set up."%}
