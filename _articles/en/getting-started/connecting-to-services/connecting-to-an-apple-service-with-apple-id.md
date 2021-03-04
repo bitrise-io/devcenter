@@ -1,5 +1,9 @@
 ---
-tag: []
+tag:
+- apple
+- builds
+- code-signing
+- security
 title: 'Connecting to an Apple service with Apple ID '
 redirect_from: []
 summary: ''
