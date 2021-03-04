@@ -3,7 +3,6 @@ tag: []
 title: Connecting to an Apple service with API key
 redirect_from: []
 summary: ''
-published: false
 
 ---
 Connecting to an Apple service (such as the App Store Connect or the Apple Developer Portal) with the API key requires that you first add your Apple service authentication data on our **Apple Services Connection** page, then an API key for your app.
@@ -33,4 +32,4 @@ When you wish to use a Step with the established connection, you also have to se
 
 The Step is now able to connect to the App Store Connect or the Apple Developer Portal during your build. Please note that there is NO NEED TO MODIFY ANY STEP INPUT  fields manually since these are automatically populated once the connection is set up.
 
-## 
+##

@@ -3,7 +3,6 @@ tag: []
 title: Bitrise Steps and their authentication methods
 redirect_from: []
 summary: ''
-published: false
 
 ---
 In this guide we list all the Steps that require authentication and the authentication methods that you can choose from depending on your project’s requirement.
