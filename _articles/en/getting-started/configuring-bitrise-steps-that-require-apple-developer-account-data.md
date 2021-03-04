@@ -53,8 +53,8 @@ The below table contains a summary of the authentication method the Step uses.
 Depending on which authentication you can use in your project, you have the following options:
 
 * API key authentication: If you can, we recommend you use this authentication method. It does not require two-factor authentication. All it takes is connecting to the Apple services by providing **Name**, **Issuer ID**, **Key ID** and upload a **Private Key (.p8)**, then selecting an account under the **Team** tab. The data you give automatically populates the respective fields of the Steps that work with API key authentication.
-* Apple ID authentication: If you cannot use the API key authentication, you can authenticate with your Apple ID and password. Provide your Apple ID, password, 2FA code and app-specific password then select an account under the **Team** tab. The data you give automatically populates the respective fields of the Steps that work with the Apple ID authentication.
-* API key or Apple Id authentication through Step inputs: If you wish to deploy to multiple teams or deploy to a team where authentication is different from the connected one you’ve been using, then you can add your preferred authentication into the Step’s inputs. This will override the connection previously set in Bitrise Developer Connection.
+* Apple ID authentication: If you cannot use the API key authentication, you can authenticate with your Apple ID and password. Provide your **Apple ID**, **password**, **2FA code** and **app-specific password** then select an account under the **Team** tab. The data you give automatically populates the respective fields of the Steps that work with the Apple ID authentication.
+* API key or Apple Id authentication through Step inputs: If you wish to deploy to multiple teams or deploy to a team where authentication is different from the connected one you’ve been using, then you can add your preferred authentication into the Step’s inputs. This will override the connection previously set in **Bitrise Developer Connection**.
 
 In this article we walk you through the three authentication methods first, then break it down for each Step mentioned above.
 
@@ -105,7 +105,7 @@ If you cannot use the API key authentication, we recommend you try this option. 
  3. On the left menu bar, select **Apple Service connection**.
  4. Click the **Add connection** button.
  5. Provide your **Apple ID** and **Password** in the popup window. Click **Connect**.![](/img/appleidauthentication.jpg)
- 6. Enter your **verification code** in the **Two factor authentication** window. 
+ 6. Enter your **verification code** in the **Two factor authentication** window.
  7. Add the **app-specific password**. Click **Verify** to continue.
  8. You will be prompted to provide your verification code.
  9. Your authentication expires in 30 days and you will have to authenticate again. When that happens, go to the **Apple Service connection** page, it will automatically ask for the two-factor authentication (2FA) code to authenticate again. There will be a list of the Apple Developer accounts that you have defined. To the far right of the Apple ID connection, there are 3 dots. Click the dots and select **Re-authenticate** (**2SA/2FA**).
