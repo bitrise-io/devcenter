@@ -120,6 +120,7 @@ pages:
 - _articles/en/getting-started/account-security.md
 - _articles/en/getting-started/adding-an-app-from-a-cli.md
 - _articles/en/getting-started/code-security.md
+- _articles/en/getting-started/connecting-to-services/setting-up-connection-to-an-apple-service-with-api-key.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
