@@ -12,7 +12,7 @@ menu:
     weight: 5
 
 ---
-Connecting to an Apple service (such as the App Store Connect or the Apple Developer Portal) with the Apple ID requires that you first add your Apple ID and password on the Apple Service connection page, then select an app to use Apple ID authentication while the build is running.
+Connecting to an Apple service (such as the App Store Connect or the Apple Developer Portal) with the Apple ID requires that you first add your Apple ID and password on the **Apple Service connection** page, then select an app to use Apple ID authentication while the build is running.
 
 If you cannot use the API key authentication, we recommend you try this option. Please note that you can only connect one Apple ID to Bitrise.
 
@@ -42,4 +42,10 @@ When a Step uses the Apple ID authentication, you also need to select the authen
 3. Scroll down to the **Apple service connection** section.
 4. Select the **Apple ID authentication** for the app to use. It displays the connection method of the app owner and other team members with admin authority. ![](/img/appleidteam.jpg)
 
-The Step is now able to connect to an Apple service during your build. Please note that there is NO NEED TO MODIFY any Step input fields manually since these are automatically populated once the connection is set up.
+The Step is now able to connect to an Apple service during your build.
+
+{% include message_box.html type="important" title="No Step input modification needed" content="Please note that there is NO NEED TO MODIFY ANY STEP INPUT  fields manually since these are automatically populated once the connection is set up."%}
+
+### What's next?
+
+Check out the [Steps that use the Apple ID and password authentication](/getting-started/connecting-to-services/connecting-to-an-apple-service-with-apple-id/).

@@ -37,6 +37,10 @@ When you wish to use a Step with the established connection, you also have to se
 4. Select the **API key authentication (recommended)** method for the app to use in the dropdown.  
    ![](/img/apikeyteam.jpg)
 
-The Step is now able to connect to the App Store Connect or the Apple Developer Portal during your build. Please note that there is NO NEED TO MODIFY ANY STEP INPUT  fields manually since these are automatically populated once the connection is set up.
+The Step is now able to connect to the App Store Connect or the Apple Developer Portal during your build.
 
-##
+{% include message_box.html type="important" title="No Step input modification needed" content="Please note that there is NO NEED TO MODIFY ANY STEP INPUT  fields manually since these are automatically populated once the connection is set up."%}
+
+### What's next?
+
+Check out the [Steps that use the official API key authentication](/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/).
