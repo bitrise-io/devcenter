@@ -5,7 +5,7 @@ redirect_from: []
 summary: ''
 menu:
   getting-started-main:
-    identifier: connecting-services
+    identifier: connecting-to-services
     weight: 2
 
 ---

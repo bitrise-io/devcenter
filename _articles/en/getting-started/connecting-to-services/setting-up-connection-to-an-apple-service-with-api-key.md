@@ -1,5 +1,9 @@
 ---
-tag: []
+tag:
+- apple
+- builds
+- code-signing
+- security
 title: Connecting to an Apple service with API key
 redirect_from: []
 summary: ''

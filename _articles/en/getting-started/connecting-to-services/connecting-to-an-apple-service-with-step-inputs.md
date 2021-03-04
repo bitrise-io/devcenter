@@ -1,5 +1,9 @@
 ---
-tag: []
+tag:
+- apple
+- builds
+- code-signing
+- security
 title: Connecting to an Apple Service with Step inputs
 redirect_from: []
 summary: ''
