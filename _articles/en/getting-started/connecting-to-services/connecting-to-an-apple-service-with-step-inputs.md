@@ -13,11 +13,11 @@ menu:
     title: Connecting to an Apple service with Step inputs
 
 ---
-If you wish to deploy to multiple teams or deploy to a team where authentication is different from the connected one you’ve been using, then you can add your preferred authentication into the Step’s inputs. This will override the connection previously set in Bitrise Developer Connection.
+If you wish to deploy to multiple teams or deploy to a team where authentication is different from the connected one you’ve been using, then you can add your preferred authentication into the Step’s inputs. This will override the connection previously set in **Bitrise Developer Connection**.
 
 This way connection is restricted to the given Step where you set up authentication.
 
-Please note that you can only add one type of authentication into the Step, either the API key one or the Apple ID one. In either case, make sure the **Bitrise Apple Developer** **Connection** input is set to off, otherwise the Step will go with the configured authentication method found in **Apple Service connection** (unless you decide to remove the connection on the Teams tab).
+Please note that you can only add one type of authentication into the Step, either the API key one or the Apple ID one. In either case, make sure the Bitrise Apple Developer Connection input is set to `off`, otherwise the Step will go with the configured authentication method found in Apple Service connection (unless you decide to remove the connection on the Teams tab).
 
 ### Authenticating with API key
 
