@@ -121,12 +121,12 @@ pages:
 - _articles/en/getting-started/adding-an-app-from-a-cli.md
 - _articles/en/getting-started/code-security.md
 - _articles/en/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data.md
+- _articles/en/getting-started/connecting-to-services-index.md
 - _articles/en/getting-started/getting-started-with-android-apps.md
 - _articles/en/getting-started/getting-started-with-expo-apps.md
 - _articles/en/getting-started/getting-started-with-flutter-apps.md
 - _articles/en/getting-started/getting-started-with-ios-apps.md
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
-- _articles/en/getting-started/index-1.md
 - _articles/en/getting-started/index.md
 - _articles/en/getting-started/managing-files-on-bitrise.md
 - _articles/en/getting-started/signing-up-to-bitrise.md

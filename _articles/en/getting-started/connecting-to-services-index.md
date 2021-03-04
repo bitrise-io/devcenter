@@ -1,6 +1,6 @@
 ---
 tag: []
-title: index
+title: Connecting to services
 redirect_from: []
 summary: ''
 published: false
