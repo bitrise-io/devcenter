@@ -117,6 +117,7 @@ pages:
 - _articles/en/faq/no-builds-are-triggered-automatically.md
 - _articles/en/faq/organization-faq.md
 - _articles/en/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac.md
+- _articles/en/getting-started/Connecting to services/connecting-to-services.md
 - _articles/en/getting-started/account-security.md
 - _articles/en/getting-started/adding-an-app-from-a-cli.md
 - _articles/en/getting-started/code-security.md
