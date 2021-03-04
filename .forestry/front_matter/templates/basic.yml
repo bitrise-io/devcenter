@@ -120,6 +120,7 @@ pages:
 - _articles/en/getting-started/account-security.md
 - _articles/en/getting-started/adding-an-app-from-a-cli.md
 - _articles/en/getting-started/code-security.md
+- _articles/en/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods.md
 - _articles/en/getting-started/connecting-to-services/connecting-to-an-apple-service-with-apple-id.md
 - _articles/en/getting-started/connecting-to-services/connecting-to-an-apple-service-with-step-inputs.md
 - _articles/en/getting-started/connecting-to-services/setting-up-connection-to-an-apple-service-with-api-key.md
