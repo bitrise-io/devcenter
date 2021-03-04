@@ -12,7 +12,7 @@ menu:
     weight: 5
 
 ---
-Connecting to an Apple service (such as the App Store Connect or the Apple Developer Portal) with the Apple ID requires that you first add your Apple ID and password on the Apple Service connection page, then select an app to use Apple ID authentication while the build is running.
+Connecting to an Apple service (such as the App Store Connect or the Apple Developer Portal) with the Apple ID requires that you first add your Apple ID and password on the **Apple Service connection** page, then select an app to use Apple ID authentication while the build is running.
 
 If you cannot use the API key authentication, we recommend you try this option. Please note that you can only connect one Apple ID to Bitrise.
 
