@@ -41,6 +41,6 @@ The Step is now able to connect to the App Store Connect or the Apple Developer 
 
 {% include message_box.html type="important" title="No Step input modification needed" content="Please note that there is NO NEED TO MODIFY ANY STEP INPUT  fields manually since these are automatically populated once the connection is set up."%}
 
- 
+### What's next?
 
-## 
+Check out the [Steps that use the official API key authentication](/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/).
