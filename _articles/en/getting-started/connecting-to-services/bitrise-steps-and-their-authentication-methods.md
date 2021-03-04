@@ -1,5 +1,9 @@
 ---
-tag: []
+tag:
+- apple
+- builds
+- code-signing
+- security
 title: Steps requiring Apple authentication
 redirect_from: []
 summary: ''
