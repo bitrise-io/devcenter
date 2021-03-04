@@ -3,7 +3,6 @@ tag: []
 title: Connecting to an Apple Service with Step inputs
 redirect_from: []
 summary: ''
-published: false
 
 ---
 If you wish to deploy to multiple teams or deploy to a team where authentication is different from the connected one you’ve been using, then you can add your preferred authentication into the Step’s inputs. This will override the connection previously set in Bitrise Developer Connection.
