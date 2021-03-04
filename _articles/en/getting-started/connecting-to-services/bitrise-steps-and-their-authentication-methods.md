@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Bitrise Steps and their authentication methods
+title: Steps requiring Apple authentication
 redirect_from: []
 summary: ''
 menu:
