@@ -13,7 +13,7 @@ description: For organizations, Bitrise supports connecting to self-hosted GitLa
   from privately hosted repositories in the usual way.
 menu:
   connecting-to-services:
-    weight: 11
+    weight: 3
 
 ---
 For organizations, Bitrise supports connecting to self-hosted GitLab instances. Connecting is simple, and once it's done, you can add apps to Bitrise from privately hosted repositories [in the usual way](/getting-started/adding-a-new-app/). All functions that you got used to with publicly hosted repositories will be available!

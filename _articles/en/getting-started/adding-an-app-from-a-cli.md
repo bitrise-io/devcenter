@@ -9,7 +9,7 @@ description: 'You can easily register a new Bitrise app from any command line in
   the process is guided and simple to follow. And it’s fast!'
 menu:
   getting-started-main:
-    weight: 5
+    weight: 6
 
 ---
 You can easily register a new Bitrise app from any command line interface: the process is guided and simple to follow. And it’s fast: if, for example, you have the `bitrise.yml` file you want to use for the app, you do not have to wait for the scanner to detect the app type and generate your `bitrise.yml` file. Just plug in the existing file and you are good to go!

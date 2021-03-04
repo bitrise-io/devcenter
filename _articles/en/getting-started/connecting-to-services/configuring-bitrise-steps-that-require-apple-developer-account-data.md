@@ -13,7 +13,7 @@ summary: 'Your Workflow may contain Steps that need information from your Apple 
   to your Apple Developer account. '
 menu:
   connecting-to-services:
-    weight: 12
+    weight: 2
 
 ---
 Your Workflow may contain Steps that need information from the Apple service you use, for example, the App Store Connect or the Apple Developer Portal. These two services are supported by the following Steps:
