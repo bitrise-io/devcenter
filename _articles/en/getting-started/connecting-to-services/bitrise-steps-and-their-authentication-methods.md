@@ -19,7 +19,6 @@ The [Step](https://www.bitrise.io/integrations/steps/ios-auto-provision-appstore
 * Register the iOS devices connected to your Bitrise account with the App Store Connect.
 
 [Connect to Bitrise with API key.](/getting-started/connecting-to-services/setting-up-connection-to-an-apple-service-with-api-key/)
-
 [Connect to Bitrise with Step inputs.](/getting-started/connecting-to-services/connecting-to-an-apple-service-with-step-inputs/)
 
 ### iOS Auto Provision with Apple ID Step
@@ -42,18 +41,15 @@ With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconne
 [Connect to Bitrise with the Apple ID and password.](/getting-started/connecting-to-services/connecting-to-an-apple-service-with-apple-id/)
 [Connect to Bitrise with Step inputs.](/getting-started/connecting-to-services/connecting-to-an-apple-service-with-step-inputs/)
 
-
 The **Deploy to iTunes Connect** Step is now set to connect to the Apple Developer account.
 
 ### Deploy to iTunes Connect - Application Loader Step
 
 With [this Step](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader), you can upload binaries (.ipa or .pkg files) to [iTunes Connect](https://itunesconnect.apple.com/). The **Deploy to iTunes Connect - Application Loader** Step can connect to your Apple Developer Account either with the App Store Connect API, the Apple ID and password, or through Step inputs. Choose the connection method that works with your project:
 
-Connect with the API key (recommended).
-
-Connect with the Apple ID and password.
-
-Connect your Apple Services to Bitrise with Step inputs.
+[Connect with the API key (recommended).](/getting-started/connecting-to-services/setting-up-connection-to-an-apple-service-with-api-key/)
+[Connect with the Apple ID and password.](/getting-started/connecting-to-services/connecting-to-an-apple-service-with-apple-id/)
+[Connect your Apple Services to Bitrise with Step inputs.](/getting-started/connecting-to-services/connecting-to-an-apple-service-with-step-inputs/)
 
 ### Fastlane Step
 
