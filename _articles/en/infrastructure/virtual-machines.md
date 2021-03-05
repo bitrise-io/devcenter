@@ -47,15 +47,18 @@ You can [connect to Bitrise via VPN](/tutorials/vpn-configuration/ "https://devc
 
 ### External and internal IP addresses
 
-| Stack type | Public IP | Build VM internal subnet | Note |
-| --- | --- | --- | --- |
-| Xcode and VS4Mac stacks | 208.52.166.154 | 10.200.15.0/20 |  |
-|  | 207.254.0.248/29 | 10.246.15.0/20 | The public address is a subnet: the entire subnet must be in the allow list! |
-|  | 207.254.34.148 | 10.254.228.0/20 |  |
-| Linux/Docker stacks | 104.197.15.74 | 10.0.0.0/9 |  |
-|  | 35.202.121.43 | 10.0.0.0/9 |  |
-|  | 35.237.165.17 | 10.0.0.0/9 |  |
-|  | 35.231.56.118 | 10.0.0.0/9 |  |
+| Stack type              | Public IP         | Build VM internal subnet | Note                                                                                       |
+|-------------------------|-------------------|--------------------------|--------------------------------------------------------------------------------------------|
+| Xcode and VS4Mac stacks | 208.52.166.154    | 10.200.0.0/20            | Please note that if the provided address is a subnet, you need to allow the entire subnet! |
+|                         | 208.52.166.128/28 | 10.246.0.0/20            |                                                                                            |
+|                         | 207.254.0.248/29  | 10.254.224.0/20          |                                                                                            |
+|                         | 207.254.0.208/28  |                          |                                                                                            |
+|                         | 207.254.34.148    |                          |                                                                                            |
+|                         | 207.254.33.176/28 |                          |                                                                                            |
+| Linux/Docker stacks     | 104.197.15.74     | 10.0.0.0/9               |                                                                                            |
+|                         | 35.202.121.43     | 10.0.0.0/9               |                                                                                            |
+|                         | 35.237.165.17     | 10.0.0.0/9               |                                                                                            |
+|                         | 35.231.56.118     | 10.0.0.0/9               |                                                                                            |
 
 ## Storage space
 
