@@ -8,7 +8,6 @@ menu:
     weight: 19
 
 ---
-
 {% include not_translated_yet.html %}
 
 This guide provides step-by-step instructions on setting up SAML SSO using [Microsoft Active Directory Federation Services](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) (AD FS).

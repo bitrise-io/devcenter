@@ -1,6 +1,30 @@
 ---
+- title: Connecting to services
+  modified: 2021-03-04 00:00:00 +0100
+  changelog: The new Connecting to services chapter includes all the articles that
+    describe how to connect your Bitrise account to a Git provider and how to connect
+    to your Apple services
+  type: update
+  url: "/getting-started/connecting-to-services/connecting-to-services-index/"
+- title: Exporting to Test Reports from any Step
+  modified: 2021-03-02T17:00:00.000+01:00
+  changelog: You can use the Export test results to the Test reports add-on Step to
+    make sure your test results appear in the Test Reports add-on, even if you use
+    Steps that don’t automatically export their results.
+  type: update
+  url: "/testing/exporting-to-test-reports-from-custom-script-steps/"
+- title: Managing Workflows
+  modified: 2021-03-02T00:00:00.000+01:00
+  changelog: Broken screenshot is replaced in the Renaming Workflows section.
+  type: fix
+  url: "/steps-and-workflows/managing-workflows/"
+- title: Apple services connection
+  modified: 2021-02-26T00:00:00.000+01:00
+  changelog: Information on app-specific password has been updated in this guide.
+  type: update
+  url: "/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/"
 - title: Triggering builds with Pull Request
-  modified: 2021-02-24 00:00:00 +0100
+  modified: 2021-02-24T00:00:00.000+01:00
   changelog: Broken Webhooks link has been fixed.
   type: fix
   url: "/builds/triggering-builds/trigger-pull-request/"
