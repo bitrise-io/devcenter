@@ -257,8 +257,8 @@ header.top-bar {
 .middle-aligner {
 	box-sizing: border-box;
 	width: 100%;
-	margin-right: 0;
-	margin-left: 0;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .column-parent {
@@ -273,14 +273,13 @@ header.top-bar {
 }
 
 nav#side-menu {
-	flex: 1 1 auto;
+	flex: 0 0 auto;
 	position: fixed;
 	width: 22.5vw;
 	height: 100%;
 	box-sizing: border-box;
-	padding-top: 3.5%;
+	padding-top: 6.5%;
 	padding-left: 3.5%;
-	margin-top: 4rem;
 	border-right: solid 1px #ececec;
 	line-height: 1.3;
 	font-family: TTNorms;
@@ -618,6 +617,7 @@ nav#side-menu {
 
 main.content {
 	flex: 1 1 auto;
+	min-width: 0;
 	margin-left: 20vw;
 	padding-top: 6.5%;
 	padding-bottom: 5%;
@@ -1567,7 +1567,7 @@ footer {
 @media only screen and (min-width: 1200pt) {
 
 	.middle-aligner {
-		max-width: 80%;
+		width: 100%;
 	}
 
 	.cta {
@@ -1582,10 +1582,10 @@ footer {
 	}
 
 	main.content {
-		width: 100%;
-		margin-left: 0;
-    	margin-right: 0;
-    	padding: 8rem 2rem 0;
+		width: 90%;
+		margin-left: auto;
+    	margin-right: auto;
+    	padding: 8rem 2rem 0 2rem;
 
 	 .index-container {
 		 flex-direction: column;
@@ -1750,6 +1750,8 @@ footer {
 @media only screen and (max-width: 30em) {
 
 	header.top-bar {
+		margin-left: auto;
+		margin-right: auto;
 
 		.middle-aligner {
 			flex-direction: row;
