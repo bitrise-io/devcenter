@@ -47,19 +47,21 @@ You can [connect to Bitrise via VPN](/tutorials/vpn-configuration/ "https://devc
 
 ### External and internal IP addresses
 
-| Stack type              | Public IP                            | Build VM internal subnet | Note                                                                                       |
-|-------------------------|--------------------------------------|--------------------------|--------------------------------------------------------------------------------------------|
-| Xcode and VS4Mac stacks | 208.52.166.154<br>208.52.166.128/28  | 10.200.0.0/20            | Please note that if the provided address is a subnet, you need to allow the entire subnet! |
-|                         | 207.254.0.248/29<br>207.254.0.208/28 | 10.246.0.0/20            |                                                                                            |
-|                         | 207.254.34.148<br>207.254.33.176/28  | 10.254.224.0/20          |                                                                                            |
-| Linux/Docker stacks     | 104.197.15.74                        | 10.0.0.0/9               |                                                                                            |
-|                         | 35.202.121.43                        | 10.0.0.0/9               |                                                                                            |
-|                         | 35.237.165.17                        | 10.0.0.0/9               |                                                                                            |
-|                         | 35.231.56.118                        | 10.0.0.0/9               |                                                                                            |                                                                                  |
+If the provided public IP address is a subnet, you need to allow the entire subnet on your network! For example, 208.52.166.128/28 means all IP addresses between 208.52.166.128  and 208.52.166.143 (208.52.166.128, 208.52.166.129, 208.52.166.130, and so on, all the way to and including 208.52.166.143) have to be allow-listed.
+
+| Stack type              | Public IP                                  | Build VM internal subnet |
+|-------------------------|--------------------------------------------|--------------------------|
+| Xcode and VS4Mac stacks | 208.52.166.154/32 and<br>208.52.166.128/28 | 10.200.0.0/20            |
+|                         | 207.254.0.248/29 and<br>207.254.0.208/28   | 10.246.0.0/20            |
+|                         | 207.254.34.148 and<br>207.254.33.176/28    | 10.254.224.0/20          |
+| Linux/Docker stacks     | 104.197.15.74/32                           | 10.0.0.0/9               |
+|                         | 35.202.121.43/32                           | 10.0.0.0/9               |
+|                         | 35.237.165.17/32                           | 10.0.0.0/9               |
+|                         | 35.231.56.118/32                           | 10.0.0.0/9               |
 
 ## Storage space
 
-Our virtual machines have different amounts of free space to use, depending on the stack type. The table summarises the data - please keep in mind that these numbers are subject to change, as different versions of pre-installed tools and resources take up a varying amount of space on the machines.
+{% include message_box.html type="warning" title="Allow-listing entire subnets" content="Our virtual machines have different amounts of free space to use, depending on the stack type. The table summarises the data - please keep in mind that these numbers are subject to change, as different versions of pre-installed tools and resources take up a varying amount of space on the machines."%}
 
 | Stack Name | Filesystem | Size (GB) | Free (GB) |
 | --- | --- | --- | --- |
