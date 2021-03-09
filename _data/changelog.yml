@@ -1,6 +1,12 @@
 ---
+- title: Setting up your first project
+  modified: 2021-03-09 00:00:00 +0100
+  changelog: Android deployment article has been updated on how to to create a new
+    service account.
+  type: update
+  url: "/deploy/android-deploy/deploying-android-apps/#setting-up-your-first-project"
 - title: Virtual machines
-  modified: 2021-03-09 13:00:00 +0100
+  modified: 2021-03-09T13:00:00.000+01:00
   changelog: New IP addresses and IP subnets have been added to the list of addresses
     that need to be allow-listed if your repository is hosted on your own network.
   type: update
