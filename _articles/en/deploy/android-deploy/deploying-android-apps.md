@@ -46,15 +46,15 @@ Link your API project by either creating a new API project or linking an existin
  2. On the **API access** page, scroll down to **Service accounts** and click **Create a new service account**. Follow the instructions to get to Google Cloud Platform.![](/img/createnewserviceaccount.jpg)
  3. On the Google Cloud Platform, click **+ CREATE SERVICE ACCOUNT** on the top menu bar.![](/img/pluscreateserviceaccount.jpg)
  4. A 3-step **Create service account** page comes up, where you have to provide a **Service account name** first. A **Service account ID** is automatically generated based on the **Service account name** you typed.![](/img/serviceaccountdetails.jpg)
- 5. Although the second and third steps of the process are marked optional on Google Cloud Platform, those are essential for Bitrise to be able to use the service account access. At the **Grant this service account access to project** step, select Browser in the **Role** dropdown.![](/img/serviceaccountdetails.png)
+ 5. At the **Grant this service account access to project** step, select Browser in the **Role** dropdown. Although the second and third steps of the process are marked optional on Google Cloud Platform, those are essential for Bitrise to be able to use the service account access. ![](/img/serviceaccountdetails.png)
  6. Fill out the **Service account user role** and **Service account admins role** fields of the **Grant users access to this service account** step. Hit **Done** at the bottom of the page.![](/img/grantuseraccess.jpg)
  7. You land back on the **API Access page** of the Google Play Console where you can create a key to your new service account. Bitrise will use the key to authenticate as the service account. Click the **ellipsis** next to the new service account and select **Manage keys** from the options.![](/img/managekeys.jpg)
  8. You are directed to the **KEYS** page of the **Service accounts**. Click the **ADD KEY** dropdown and select **Create new key** option.![](/img/createnewkey.jpg)
  9. Select **JSON** as your **Key type**. Click **CREATE**. Once you created a key here, it automatically downloads to your local machine and you can upload it to the **Code Signing** tab of Bitrise. You may close your Google Cloud Platform window as we won’t need it any more.![](/img/jsonkey-png.jpg)
 10. You are landing back on the **API access** page of Google Play Console where you can see your new service account under **Service accounts**. Click **Grant access** to link your project to the Google Console. The Google Cloud Platform (GCP) service account will be invited as a user to the Google Play Console, so GCP will have access to your apps in Play Console. Bitrise uses this service account to make changes in the Google Play Console.
-![](/img/grantaccess.jpg)
+    ![](/img/grantaccess.jpg)
 11. In the **Invite user** window, the **Email address** field is pre-filled. Under **Permissions**, the default ones are already selected. You can go with these. Click **Invite user** at the bottom of the page.
-![](/img/permission.jpg)
+    ![](/img/permission.jpg)
 
 Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started "https://developers.google.com/android-publisher/getting_started") guide if you need more information on the process.
 
