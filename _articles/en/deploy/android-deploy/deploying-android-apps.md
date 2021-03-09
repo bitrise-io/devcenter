@@ -53,7 +53,8 @@ Link your API project by either creating a new API project or linking an existin
  9. Select **JSON** as your **Key type**. Click **CREATE**. Once you created a key here, it automatically downloads to your local machine and you can upload it to the **Code Signing** tab of Bitrise. You may close your Google Cloud Platform window as we won’t need it any more.![](/img/jsonkey-png.jpg)
 10. You are landing back on the **API access** page of Google Play Console where you can see your new service account under **Service accounts**. Click **Grant access** to link your project to the Google Console. The Google Cloud Platform (GCP) service account will be invited as a user to the Google Play Console, so GCP will have access to your apps in Play Console. Bitrise uses this service account to make changes in the Google Play Console.
 ![](/img/grantaccess.jpg)
-11. In the **Invite user** window, the **Email address** field is pre-filled. Under **Permissions**, the default ones are already selected. You can go with these. Click **Invite user** at the bottom of the page.![](/img/permission.jpg)
+11. In the **Invite user** window, the **Email address** field is pre-filled. Under **Permissions**, the default ones are already selected. You can go with these. Click **Invite user** at the bottom of the page.
+![](/img/permission.jpg)
 12. Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started "https://developers.google.com/android-publisher/getting_started") guide if you need more information on the process.
 
     You have successfully prepared your Google Play Console project. A service account has been created which is authorized to manage your releases.
