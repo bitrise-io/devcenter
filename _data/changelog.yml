@@ -1,6 +1,12 @@
 ---
+- title: Virtual machines
+  modified: 2021-03-09 13:00:00 +0100
+  changelog: New IP addresses and IP subnets have been added to the list of addresses
+    that need to be allow-listed if your repository is hosted on your own network.
+  type: update
+  url: "/infrastructure/virtual-machines/#external-and-internal-ip-addresses"
 - title: Connecting to services
-  modified: 2021-03-04 00:00:00 +0100
+  modified: 2021-03-04T00:00:00.000+01:00
   changelog: The new Connecting to services chapter includes all the articles that
     describe how to connect your Bitrise account to a Git provider and how to connect
     to your Apple services
