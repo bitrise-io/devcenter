@@ -35,8 +35,8 @@ Make sure you have:
 
 You need a new service account created in the Google Play Console so that Bitrise can authenticate with Google Play Deploy during your build. The new service account has to be invited to Google Play Console as a user with the appropriate permission.
 
-1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/ "https://developer.android.com/distribute/console/"). If you already have a Google Play Developer account, and have already deployed your app to Google Play Store, skip to [Set up Google Play API access](https://devcenter.bitrise.io/deploy/android-deploy/deploying-android-apps/#set-up-google-play-api-access "https://devcenter.bitrise.io/deploy/android-deploy/deploying-android-apps/#set-up-google-play-api-access").
-2. Go through the [Prepare & roll out steps](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en "https://support.google.com/googleplay/android-developer/answer/7159011?hl=en").
+1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/). If you already have a Google Play Developer account, and have already deployed your app to Google Play Store, skip to [Set up Google Play API access](/deploy/android-deploy/deploying-android-apps/#set-up-google-play-api-access/).
+2. Go through the [Prepare & roll out steps](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
 
 ### Setting up Google Play API access
 
@@ -63,13 +63,13 @@ You have successfully prepared your Google Play Console project. A services cred
 
 ## Deploying to bitrise.io
 
-The **Deploy to bitrise.io - Apps, Logs, Artifacts** Step attaches all the generated artifacts to your build and uploads them into the [ APPS & ARTIFACTS](https://devcenter.bitrise.io/builds/build-artifacts-online/) tab on your Build’s page. By default, the value of the **Enable public page for the App?** input field is set to `true`. This way, once the build runs, a [public install page](/deploy/bitrise-app-deployment/#accessing-the-public-install-page) will be available with a long and random URL which can be shared with others who are not registered on Bitrise.
+The **Deploy to bitrise.io - Apps, Logs, Artifacts** Step attaches all the generated artifacts to your build and uploads them into the [ APPS & ARTIFACTS](/builds/build-artifacts-online/) tab on your Build’s page. By default, the value of the **Enable public page for the App?** input field is set to `true`. This way, once the build runs, a [public install page](/deploy/bitrise-app-deployment/#accessing-the-public-install-page) will be available with a long and random URL which can be shared with others who are not registered on Bitrise.
 
 You can notify user groups or individual users that your APK file has been built by specifying roles and/or email addresses. You can share the app's public install page with anyone if you set the following input fields:
 
 1. Go to the **Deploy to bitrise.io** Step.
 2. In the **Notify: User Roles** input field, add the role (for example, `testers`, `developers`, `admins`) so that only those get notified who have been granted with this particular role.
-3. Or fill out the **Notify: Emails** input field with email addresses of the users you want to send the URL to. Make sure you set those email addresses as [secret Environment Variables](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated APK file in the **APPS & ARTIFACTS** tab. Here you can check the URL by clicking **Open Public install page**.
+3. Or fill out the **Notify: Emails** input field with email addresses of the users you want to send the URL to. Make sure you set those email addresses as [secret Environment Variables](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated APK file in the **APPS & ARTIFACTS** tab. Here you can check the URL by clicking **Open Public install page**.
 
 ![{{ page.title }}](/img/public-install-page.png)
 
