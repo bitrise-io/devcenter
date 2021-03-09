@@ -25,9 +25,9 @@ This guide describes how you can add your Android project to [bitrise.io](https:
 
 Make sure you have:
 
-* [Added an Android app to Bitrise](https://devcenter.bitrise.io/getting-started/getting-started-with-android-apps/ "https://devcenter.bitrise.io/getting-started/getting-started-with-android-apps/").
-* Have signed your APK [digitally](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/ "https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/").
-* Uploaded your keystore file to the **Code Signing** tab of the Workflow Editor.
+* [Added an Android app to Bitrise](/getting-started/getting-started-with-android-apps/).
+* Have signed your APK [digitally](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/).
+* [Uploaded your keystore file](/code-signing/android-code-signing/android-code-signing-index/) to the **Code Signing** tab of the Workflow Editor.
 
 {% include video.html embed_url="https://www.youtube.com/embed/Obp0cTJEETY" %}
 
