@@ -21,65 +21,41 @@ menu:
 ---
 This guide describes how you can add your Android project to [bitrise.io](https://www.bitrise.io) and deploy the APK built from your project to [Google Play Store](https://play.google.com/store).
 
-In this guide, you will learn how to:
+## Before you start
 
-* Create an Android app on [bitrise.io](https://www.bitrise.io).
-* Set up a [Google Play Store](https://play.google.com/store) project.
-* Set up [Google Play API](https://developers.google.com/android-publisher/getting_started) access.
-* [Deploy to Google Play Store](#deploy-to-google-play-store-using-bitrise-google-play-deploy-step) using Bitrise's **Google Play Deploy** Step.
+Make sure you have:
+
+* [Added an Android app to Bitrise](https://devcenter.bitrise.io/getting-started/getting-started-with-android-apps/ "https://devcenter.bitrise.io/getting-started/getting-started-with-android-apps/").
+* Have signed your APK [digitally](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/ "https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/").
+* Uploaded your keystore file to the **Code Signing** tab of the Workflow Editor.
 
 {% include video.html embed_url="https://www.youtube.com/embed/Obp0cTJEETY" %}
 
-## Adding your Android app on [bitrise.io](https://www.bitrise.io)
-
-* Log into [bitrise.io](htts://www.bitrise.io).
-* Create a [new Bitrise project](getting-started/adding-a-new-app). Bitrise scans your Android project and creates the initial configuration for it.
-* Sign your APK file [digitally](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/).
-
-  Do not forget to upload your keystore file to [bitrise.io](https://www.bitrise.io).
-
-  Once your code signing is completed, your config will look like this:
-
-      {% raw %}
-      workflows:
-      deploy:
-        steps:
-        - activate-ssh-key@3.1.1:
-            run_if: '{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}'
-        - git-clone@4.0.11: {}
-        - cache-pull@2.0.1: {}
-        - script@1.1.5:
-            title: Do anything with Script step
-        - install-missing-android-tools@2.1.1: {}
-        - android-build@0.9.4:
-            inputs:
-            - project_location: $BITRISE_SOURCE_DIR
-            - module: "app"
-        - sign-APK@1.2.0: {}
-        - deploy-to-bitrise-io@1.3.12: {}
-        - cache-push@2.0.5: {}
-      {% endraw %}
-
 ## Setting up your first project
 
-1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/). If you already have a Google Play Developer account, and have already deployed your app to Google Play Store, skip to [Set up Google Play API access](#set-up-google-play-api-access).
-2. Go through the [Prepare & roll out steps](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
+You need a new service account created in the Google Play Console so that Bitrise can authenticate with Google Play Deploy during your build. The new service account has to be invited to Google Play Console as a user with the appropriate permission.
+
+1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/ "https://developer.android.com/distribute/console/"). If you already have a Google Play Developer account, and have already deployed your app to Google Play Store, skip to [Set up Google Play API access](https://devcenter.bitrise.io/deploy/android-deploy/deploying-android-apps/#set-up-google-play-api-access "https://devcenter.bitrise.io/deploy/android-deploy/deploying-android-apps/#set-up-google-play-api-access").
+2. Go through the [Prepare & roll out steps](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en "https://support.google.com/googleplay/android-developer/answer/7159011?hl=en").
 
 ### Setting up Google Play API access
 
-1. Link your API project by **Creating a new API project** or **Using an existing API project**.
-   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-1.jpg)
-2. Click on _Create a new service account_. The instructions will redirect to _Google API Console_.
-   Specify a service account name. No roles are needed for the service account.
-   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-2.jpg)
-   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-3.jpg)
-   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-4.jpg)
-   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-5.jpg)
-3. Create a private key (JSON format) and download it now because you will need it later.
-   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-7.jpg)
-4. Grant the necessary permissions to the service account on the Play Console.
-   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-12.jpg)
-   ![{{ page.title }}](/img/tutorials/deploy/google-play/api-access-setup-13.jpg)
+Link your API project by either creating a new API project or linking an existing API project. In this tutorial, we’re creating a new one.
+
+ 1. Go to your Google Play Console and click **Settings**. Click **API** **access** on the left menu bar. On the **Linked Google Cloud project** page, select **Create new project** option.
+ 2. On the **API access** page, scroll down to **Service accounts** and click **Create a new service account**. Follow the instructions to get to Google Cloud Platform.
+ 3. On the Google Cloud Platform, click **+ CREATE SERVICE ACCOUNT** on the top menu bar.
+ 4. A 3-step **Create service account** page comes up, where you have to provide a **Service account name** first. A **Service account ID** is automatically generated based on the **Service account name** you typed.
+ 5. Although the second and third steps of the process are marked optional on Google Cloud Platform, those are essential for Bitrise to be able to use the service account access. At the **Grant this service account access to project** step, select Browser in the **Role** dropdown.
+ 6. Fill out the **Service account user role** and **Service account admins role** fields of the **Grant users access to this service account** step. Hit **Done** at the bottom of the page.
+ 7. You land back on the **API Access page** of the Google Play Console where you can create a key to your new service account. Bitrise will use the key to authenticate as the service account. Click the **ellipsis** next to the new service account and select **Manage keys** from the options.
+ 8. You are directed to the **KEYS** page of the **Service accounts**. Click the **ADD KEY** dropdown and select **Create new key** option.
+ 9. Select **JSON** as your **Key type**. Click **CREATE**. Once you created a key here, it automatically downloads to your local machine and you can upload it to the **Code Signing** tab of Bitrise. You may close your Google Cloud Platform window as we won’t need it any more.
+10. You are landing back on the **API access** page of Google Play Console where you can see your new service account under **Service accounts**. Click **Grant access** to link your project to the Google Console. The Google Cloud Platform (GCP) service account will be invited as a user to the Google Play Console, so GCP will have access to your apps in Play Console. Bitrise uses this service account to make changes in the Google Play Console.
+11. In the **Invite user** window, the **Email address** field is pre-filled. Under **Permissions**, the default ones are already selected. You can go with these. Click **Invite user** at the bottom of the page.
+12. Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started "https://developers.google.com/android-publisher/getting_started") guide if you need more information on the process.
+
+    You have successfully prepared your Google Play Console project. A service account has been created which is authorized to manage your releases.
 
 Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started) guide if you need more information on the process.
 
