@@ -21,6 +21,8 @@ menu:
 ---
 This guide describes how you can add your Android project to [bitrise.io](https://www.bitrise.io) and deploy the APK built from your project to [Google Play Store](https://play.google.com/store).
 
+{% include video.html embed_url="[https://www.youtube.com/embed/Obp0cTJEETY](https://www.youtube.com/embed/Obp0cTJEETY "https://www.youtube.com/embed/Obp0cTJEETY")" %}
+
 ## Before you start
 
 Make sure you have:
@@ -28,8 +30,6 @@ Make sure you have:
 * [Added an Android app to Bitrise](/getting-started/getting-started-with-android-apps/).
 * Have signed your APK [digitally](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/).
 * [Uploaded your keystore file](/code-signing/android-code-signing/android-code-signing-index/) to the **Code Signing** tab of the Workflow Editor.
-
-{% include video.html embed_url="https://www.youtube.com/embed/Obp0cTJEETY" %}
 
 ## Setting up your first project
 
@@ -46,8 +46,8 @@ Link your API project by either creating a new API project or linking an existin
  2. On the **API access** page, scroll down to **Service accounts** and click **Create a new service account**. Follow the instructions to get to Google Cloud Platform.![](/img/createnewserviceaccount.jpg)
  3. On the Google Cloud Platform, click **+ CREATE SERVICE ACCOUNT** on the top menu bar.![](/img/pluscreateserviceaccount.jpg)
  4. A 3-step **Create service account** page comes up, where you have to provide a **Service account name** first. A **Service account ID** is automatically generated based on the **Service account name** you typed.![](/img/serviceaccountdetails.jpg)
- 5. At the **Grant this service account access to project** step, select Browser in the **Role** dropdown. Although the second and third steps of the process are marked optional on Google Cloud Platform, those are essential for Bitrise to be able to use the service account access. ![](/img/serviceaccountdetails.png)
- 6. Fill out the **Service account user role** and **Service account admins role** fields of the **Grant users access to this service account** step. Hit **Done** at the bottom of the page.![](/img/grantuseraccess.jpg)
+ 5. At the **Grant this service account access to project** step, select `Browser` in the **Role** dropdown. Although the second and third steps of the process are marked optional on Google Cloud Platform, those are essential for Bitrise to be able to use the service account access. ![](/img/serviceaccountdetails.png)
+ 6. Fill out the **Service account user role** and **Service account admins role** fields of the **Grant users access to this service account** step. Hit **DONE**.![](/img/grantuseraccess.jpg)
  7. You land back on the **API Access page** of the Google Play Console where you can create a key to your new service account. Bitrise will use the key to authenticate as the service account. Click the **ellipsis** next to the new service account and select **Manage keys** from the options.![](/img/managekeys.jpg)
  8. You are directed to the **KEYS** page of the **Service accounts**. Click the **ADD KEY** dropdown and select **Create new key** option.![](/img/createnewkey.jpg)
  9. Select **JSON** as your **Key type**. Click **CREATE**. Once you created a key here, it automatically downloads to your local machine and you can upload it to the **Code Signing** tab of Bitrise. You may close your Google Cloud Platform window as we won’t need it any more.![](/img/jsonkey-png.jpg)
