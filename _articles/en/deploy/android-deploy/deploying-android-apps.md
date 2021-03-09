@@ -21,7 +21,7 @@ menu:
 ---
 This guide describes how you can add your Android project to [bitrise.io](https://www.bitrise.io) and deploy the APK built from your project to [Google Play Store](https://play.google.com/store).
 
-{% include video.html embed_url="[https://www.youtube.com/embed/Obp0cTJEETY](https://www.youtube.com/embed/Obp0cTJEETY)" %}
+{% include video.html embed_url="https://www.youtube.com/embed/Obp0cTJEETY" %}
 
 ## Before you start
 
