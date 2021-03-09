@@ -47,7 +47,7 @@ You can [connect to Bitrise via VPN](/tutorials/vpn-configuration/ "https://devc
 
 ### External and internal IP addresses
 
-If the provided public IP address is a subnet, you need to allow the entire subnet on your network! For example, 208.52.166.128/28 means all IP addresses between 208.52.166.128  and 208.52.166.143 (208.52.166.128, 208.52.166.129, 208.52.166.130, and so on, all the way to and including 208.52.166.143) have to be allow-listed.
+{% include message_box.html type="warning" title="Allow-listing entire subnets" content="If the provided public IP address is a subnet, you need to allow the entire subnet on your network! For example, 208.52.166.128/28 means all IP addresses between 208.52.166.128  and 208.52.166.143 (208.52.166.128, 208.52.166.129, 208.52.166.130, and so on, all the way to and including 208.52.166.143) have to be allow-listed."%}
 
 | Stack type              | Public IP                                  | Build VM internal subnet |
 |-------------------------|--------------------------------------------|--------------------------|
@@ -61,7 +61,7 @@ If the provided public IP address is a subnet, you need to allow the entire subn
 
 ## Storage space
 
-{% include message_box.html type="warning" title="Allow-listing entire subnets" content="Our virtual machines have different amounts of free space to use, depending on the stack type. The table summarises the data - please keep in mind that these numbers are subject to change, as different versions of pre-installed tools and resources take up a varying amount of space on the machines."%}
+Our virtual machines have different amounts of free space to use, depending on the stack type. The table summarises the data - please keep in mind that these numbers are subject to change, as different versions of pre-installed tools and resources take up a varying amount of space on the machines.
 
 | Stack Name | Filesystem | Size (GB) | Free (GB) |
 | --- | --- | --- | --- |
