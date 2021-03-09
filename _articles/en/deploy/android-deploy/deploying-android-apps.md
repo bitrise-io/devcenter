@@ -55,11 +55,8 @@ Link your API project by either creating a new API project or linking an existin
 ![](/img/grantaccess.jpg)
 11. In the **Invite user** window, the **Email address** field is pre-filled. Under **Permissions**, the default ones are already selected. You can go with these. Click **Invite user** at the bottom of the page.
 ![](/img/permission.jpg)
-12. Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started "https://developers.google.com/android-publisher/getting_started") guide if you need more information on the process.
 
-    You have successfully prepared your Google Play Console project. A service account has been created which is authorized to manage your releases.
-
-Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started) guide if you need more information on the process.
+Check out the [Google Play Developer API](https://developers.google.com/android-publisher/getting_started "https://developers.google.com/android-publisher/getting_started") guide if you need more information on the process.
 
 You have successfully prepared your Google Play Console project. A services credential account has been created which is authorized to manage your releases.
 
