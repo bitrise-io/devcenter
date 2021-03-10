@@ -87,7 +87,6 @@ If you edit your Workflow on [bitrise.io](https://www.bitrise.io/) (either in th
 Here are a few workarounds to reduce a long `bitrise.yml`:
 
 * You could separate your project into two apps.
-* You could keep the `bitrise.yml` file in the project repository and use it with the Bitrise CLI. This way you will not bump into any limitation as the size limitation only affects the `bitrise.yml` modified on the UI.
 * We generally don't recommend using Environment Variables as configuration files. If, however, the Env Var is not a short key - value pair but a long script, we suggest you store it in a file in your project repository or upload it to the [Generic File Storage](/tutorials/how-to-use-the-generic-file-storage/#uploading-files-to-generic-file-storage-on-bitriseio).
 * Move scripts (especially the long ones) into their repository, and use our Script Runner Step to execute the scripts based the defined path.
 
