@@ -6,6 +6,7 @@ tag:
 - security
 title: Apple services connection
 redirect_from:
+- "/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/"
 - https://devcenter.bitrise.io/getting-started/signing-up/connecting-apple-dev-account/
 - "/signing-up/connecting-apple-dev-account"
 summary: 'Your Workflow may contain Steps that need information from your Apple Developer
