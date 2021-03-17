@@ -1,6 +1,12 @@
 ---
+- title: Developing a new Step
+  modified: 2021-03-17 11:34:00 +0100
+  changelog: 'Added a warning about duplicate Steps: please make sure your new Step
+    doesn''t perform the same function as an already existing one.'
+  type: update
+  url: "/contributors/create-your-own-step/"
 - title: Setting up your first project
-  modified: 2021-03-09 00:00:00 +0100
+  modified: 2021-03-09T00:00:00.000+01:00
   changelog: Android deployment article has been updated on how to to create a new
     service account.
   type: update
