@@ -19,6 +19,10 @@ menu:
     weight: 1
 
 ---
+{% include message_box.html type="warning" title="Duplicate Steps" content="Before deciding to develop a new Step, please make sure that there's no already existing Step that performs the same function.
+
+You can search for Steps on our [Integrations](https://www.bitrise.io/integrations/steps) page or in the [Step Library](https://github.com/bitrise-io/bitrise-steplib) on GitHub."%}
+
 A Step is a build task: for example, the **Git Clone** Step clones your Git repository at the start of a build while the **Google Play Deploy** Step can deploy your finished app to the Play Store.
 
 A Step contains the code that performs the build task. You can configure the inputs and parameters that define the task, and view and reuse the outputs a Step generates. Reusing the output means that another Step can use it as the value of one of its inputs.
