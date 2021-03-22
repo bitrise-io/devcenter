@@ -14,7 +14,9 @@ menu:
     weight: 6
 
 ---
-If you need quick tech support from us, our onsite chat support can look into your project and fix your technical issues in the most efficient way! All you have to do is enable **Bitrise Support User** so that we have access to your project, specifically your workflow, build log, app settings or your yml.
+If you're stuck with a problem, go to our [Support Center](https://bitrise.zendesk.com/hc/en-us) page and see what helps you the most: you can browse our [Documentation](https://devcenter.bitrise.io/), check out our [Knowledge Base](https://bitrise.zendesk.com/hc/en-us/categories/360000108597-Knowledge-Data-Base-) or our [community page](https://discuss.bitrise.io/)s to find solutions for specific issues. You can also get in touch with our Support team by clicking the **Submit a Request** button.
+
+In this article we describe how you can enable the **Bitrise Support User** so that our Support team can have access to your project, specifically your Workflow, build log, app settings or your yml.
 
 {% include video.html embed_url="https://www.youtube.com/embed/VcgVDZekcHg" %}
 
@@ -27,7 +29,6 @@ Let's see how to set it up!
 1. Go to the **Settings** tab of your app on Bitrise.
 2. Scroll down to the **Enable Bitrise Support User for this app** and toggle the switch to the right to enable it.
    It might take a couple of seconds to work and you might need to refresh your page to see the enabled status.![](/img/enablesupportuser.jpg)
-3. Ping us through our onsite chat and let us know that you have enabled the Bitrise support user for your app.
 
 ## What the Bitrise Support user can do
 
