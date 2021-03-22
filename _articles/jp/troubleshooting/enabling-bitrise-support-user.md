@@ -23,10 +23,46 @@ Let's see how to set it up!
 
    ![{{ page.title }}](/img/bitrise-support-user.png)
 
-### What the Bitrise Support user can see if it's enabled
+### What the Bitrise Support user can do
 
-The **Bitrise Support** user has access to your builds and can edit your workflows. We can also modify the inputs of the **Team**, **Code** and the **Settings** tab. In the case of a failing workflow, our best practice is to create a new and correct version of the failing workflow called `support-testing`. You can compare our `support-testing` with your own and update yours or keep the `support-testing` workflow, rename it as you wish, and develop it further.
+The Bitrise Support User, when enabled, has Admin access to your app. That means it can do anything that a regular user with Admin access rights on an app can do: it has access to your builds and can edit your Workflows, modify the inputs of the **Team**, **Code** and the **Settings** tab.
 
-### What the Bitrise Support user can't see if it's enabled
+Let's see in detail what the Support User can do! The list is not exhaustive: these are the most important capabilities of the Bitrise Support User.
+
+It can:
+
+* Add and update webhooks.
+* Add and update SSH keys.
+* Change notification settings.
+* Enable manual build approval.
+* Manage build cache.
+* Enable rolling and selective builds.
+* Enable GitHub Checks.
+* Update all app data, including title and repository URL.
+* Manage team member roles.
+* Select the service credential user and the connected Apple Developer account.
+* Enable or disable the app.
+
+On the **Builds** page, it can:
+
+* View builds.
+* View build logs.
+* Start builds.
+
+In the **Workflow Editor**, it can:
+
+* Add, update, and delete Workflows.
+* Modify Step inputs.
+* Update the bitrise.yml file.
+* Add, update, and remove code signing files.
+* Add, update, and remove Env Vars and Secrets.
+* Add, update, and remove build triggers.
+* Configure the stack used.
+
+In the case of a failing workflow, our best practice is to create a new and correct version of the failing workflow called `support-testing`. You can compare our `support-testing` with your own and update yours or keep the `support-testing` workflow, rename it as you wish, and develop it further.
+
+## What the Bitrise Support user can't do
 
 The Bitrise Support user can't see your **Account information** or any **Billing** information. Only the owner of the account has access to this information and has the right to modify any account-related records.
+
+The Support user can't see your other apps where the Support user is not enabled.
