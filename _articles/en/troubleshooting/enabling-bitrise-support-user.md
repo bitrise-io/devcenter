@@ -14,7 +14,7 @@ menu:
     weight: 6
 
 ---
-If you're stuck with a problem, go to our [Support Center](https://bitrise.zendesk.com/hc/en-us) page and see what helps you the most: you can browse our Documentation, check out our Knowledge Base or our community pages to find solutions for specific issues. You can also contact our Support team by clicking the Submit a Request button. 
+If you're stuck with a problem, go to our [Support Center](https://bitrise.zendesk.com/hc/en-us) page and see what helps you the most: you can browse our [Documentation](https://devcenter.bitrise.io/), check out our [Knowledge Base](https://bitrise.zendesk.com/hc/en-us/categories/360000108597-Knowledge-Data-Base-) or our [community page](https://discuss.bitrise.io/)s to find solutions for specific issues. You can also get in touch with our Support team by clicking the **Submit a Request** button. 
 
 In this article we describe how you can enable the **Bitrise Support User** so that our Support team can have access to your project, specifically your workflow, build log, app settings or your yml.
 
