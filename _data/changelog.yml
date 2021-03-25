@@ -1,6 +1,12 @@
 ---
+- title: Caching
+  modified: 2021-03-25 17:00:00 +0100
+  changelog: Added some clarification and additional information on how caching works
+    on Bitrise.
+  type: update
+  url: "/builds/caching/about-caching-index/"
 - title: Enabling the Bitrise Support user for your app
-  modified: 2021-03-22 00:00:00 +0100
+  modified: 2021-03-22T00:00:00.000+01:00
   changelog: Updated the article on how to contact our Support team.
   type: update
   url: "/troubleshooting/enabling-bitrise-support-user/"
