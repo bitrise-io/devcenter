@@ -70,13 +70,14 @@ All other Environment Variables are processed and made available as the build pr
 The processing order is this:
 
 1. Environment Variables exposed by the Bitrise CLI.
-2. [Secrets](/bitrise-cli/secrets/) and App Env Vars: both are processed before a Workflow starts.
+2. [Secrets](/bitrise-cli/secrets/): processed before a Workflow starts.
 3. One-off environment variables specified for the build through our API.
-4. Workflow environment variables: when the processing of the specified Workflow starts, the [Environment Variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available.
+4. App Environment Variables
+5. Workflow Environment Variables: when the processing of the specified Workflow starts, the [Environment Variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available.
 
    If the workflow has workflows [chained before or after it](https://devcenter.bitrise.io/getting-started/getting-started-workflows/#chaining-workflows-together), the environment variables of the chained workflows are processed and made available right before the first step of the workflow would run.
-5. Step inputs: they are exposed for each Step, right before the Step would start.
-6. Step outputs: they are exposed by the specific Step, so those are available for subsequent Steps after the Step finishes.
+6. Step inputs: they are exposed for each Step, right before the Step would start.
+7. Step outputs: they are exposed by the specific Step, so those are available for subsequent Steps after the Step finishes.
 
 ### Why does the processing order matter?
 
