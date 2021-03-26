@@ -76,8 +76,8 @@ The processing order is this:
 5. Workflow Environment Variables: when the processing of the specified Workflow starts, the [Environment Variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available.
 
    If the workflow has workflows [chained before or after it](https://devcenter.bitrise.io/getting-started/getting-started-workflows/#chaining-workflows-together), the environment variables of the chained workflows are processed and made available right before the first step of the workflow would run.
-5. Step inputs: they are exposed for each Step, right before the Step would start.
-6. Step outputs: they are exposed by the specific Step, so those are available for subsequent Steps after the Step finishes.
+6. Step inputs: they are exposed for each Step, right before the Step would start.
+7. Step outputs: they are exposed by the specific Step, so those are available for subsequent Steps after the Step finishes.
 
 ### Why does the processing order matter?
 
