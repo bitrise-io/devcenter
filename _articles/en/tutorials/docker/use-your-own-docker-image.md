@@ -203,12 +203,12 @@ However, if you decide to create your own Docker image please read this guide, f
 
 We have four different Docker image types available. You can base your own image on any of these, depending on your needs.
 
-| Image type            | Description                                                                     | GitHub link                                                 | quay.io link                                                    |
-|-----------------------|---------------------------------------------------------------------------------|-------------------------------------------------------------|-----------------------------------------------------------------|
-| Bitrise base image    | The bare minimum Bitrise image with no specific tools installed.                | [Github](https://github.com/bitrise-docker/bitrise-base)    | [quay.io](https://quay.io/repository/bitriseio/bitrise-base)    |
-| Android base image    | Bare-minimum base image with Android-specific tools and environment.            | [Github](https://github.com/bitrise-docker/android)         | [quay.io](https://quay.io/repository/bitriseio/android)         |
-| Android NDK image     | Built on the Android base image with pre-installed Android NDK and environment. | [Github](https://github.com/bitrise-docker/android-ndk)     | [quay.io](https://quay.io/repository/bitriseio/android-ndk)     |
-| Android NDK LTS image | LTS "pin" of the Android NDK Docker image.                                      | [Github](https://github.com/bitrise-docker/android-ndk-lts) | [quay.io](https://quay.io/repository/bitriseio/android-ndk-lts) |
+| Image type | Description | GitHub link | quay.io link |
+| --- | --- | --- | --- |
+| Bitrise base image | The bare minimum Bitrise image with no specific tools installed. | Github | quay.io |
+| Android base image | Bare-minimum base image with Android-specific tools and environment. | Github | quay.io |
+| Android NDK image | Built on the Android base image with pre-installed Android NDK and environment. | Github | quay.io |
+| Android NDK LTS image | LTS "pin" of the Android NDK Docker image. | Github | quay.io |
 
 To base your own image on one of our available images, specify your base image at the very top of your `Dockerfile` with a `FROM` instruction and the quay.io ID of the image. In our example, we'll use  the latest version of the Bitrise base image:
 
@@ -220,7 +220,7 @@ To base your own image on one of our available images, specify your base image a
 
 ### Use your own Docker image for your builds
 
-{% include message_box.html type="warning" title="My message" content="If you wish to use an image hosted on Docker Hub, do not set the image path on the **Stack** tab of the Workflow Editor! Use a **Script** Step instead to authenticate your Docker Hub account and run the selected image. Check out the [Using a custom Docker image from Docker Hub](/tutorials/docker/use-your-own-docker-image/#using-a-custom-docker-image-from-docker-hub) section for the details."%}
+{% include message_box.html type="warning" title="Using an image hosted on Docker Hub" content="If you wish to use an image hosted on Docker Hub, do not set the image path on the **Stack** tab of the Workflow Editor! Use a **Script** Step instead to authenticate your Docker Hub account and run the selected image. Check out the [Using a custom Docker image from Docker Hub](/tutorials/docker/use-your-own-docker-image/#using-a-custom-docker-image-from-docker-hub) section for the details."%}
 
 You can set your own Docker image in the Workflow Editor if the image can be pulled with the [`docker pull` command](https://docs.docker.com/engine/reference/commandline/pull/). To do so:
 
