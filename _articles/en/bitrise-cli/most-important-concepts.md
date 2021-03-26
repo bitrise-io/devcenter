@@ -10,6 +10,7 @@ tag:
 - bitrise.yml
 description: To understand Bitrise in depth, there are a few key concepts that must
   be kept in mind. These are immutable and crucial to the way we do things.
+summary: ''
 menu:
   bitrise-cli-main:
     weight: 3
@@ -71,8 +72,8 @@ The processing order is this:
 
 1. Environment Variables exposed by the Bitrise CLI.
 2. [Secrets](/bitrise-cli/secrets/): processed before a Workflow starts.
-3. One-off environment variables specified for the build through our API.
-4. App Environment Variables
+3. One-off Environment Variables specified for the build through our API.
+4. App Environment Variables.
 5. Workflow Environment Variables: when the processing of the specified Workflow starts, the [Environment Variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available.
 
    If the workflow has workflows [chained before or after it](https://devcenter.bitrise.io/getting-started/getting-started-workflows/#chaining-workflows-together), the environment variables of the chained workflows are processed and made available right before the first step of the workflow would run.
