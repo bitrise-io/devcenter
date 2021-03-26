@@ -32,7 +32,7 @@ With Bitrise, you can choose from 3 different test types:
 * instrumentation.
 * gameloop.
 
-If you want to read up on the difference between these test types, take a look at [Firebase's documentation](https://firebase.google.com/docs/test-lab/android/overview).
+If you want to read up on the difference between these test types, take a look at [Firebase's documentation](https://firebase.google.com/docs/test-lab/android/get-started).
 
 There is a small difference between configuring your workflow for `robo` and `instrumentation` tests, so let's see them separately!
 
