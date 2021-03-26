@@ -53,7 +53,7 @@ RoboテストとInstrumentationテストでは設定方法に少し違いがあ�
 7. `Test devices`入力欄にテストデバイスのタイプを追加します。デフォルト以外のデバイスを選択する場合、`,`で区切った `deviceID,version,language,orientation`のフォーマットで入力する必要があります。
 
    ![{{ page.title }}](/img/robo-test-1.png)
-   
+
    利用可能なデバイスの一覧は[こちら](https://firebase.google.com/docs/test-lab/android/available-testing-devices)で確認してください。
 8. ビルドを開始し、[テスト結果を確認](/jp/testing/device-testing-for-android/#テスト結果の確認)します。
 
