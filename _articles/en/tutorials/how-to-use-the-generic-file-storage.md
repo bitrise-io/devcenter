@@ -68,6 +68,8 @@ Then in subsequent Steps, you can use the same `$BITRISEIO_MY_FILE_LOCAL_PATH` E
 
 ### Downloading a file and exporting the file's path using a Script Step
 
+To download a file, you need to specify a full download path - with the filename at the end - that already exists on the machine. 
+
 Assuming the file's `GENERIC FILE STORAGE` URL is assigned to `BITRISEIO_MY_FILE_ID_URL`, the **Script** Step would look like this:
 
     - script:
@@ -77,7 +79,7 @@ Assuming the file's `GENERIC FILE STORAGE` URL is assigned to `BITRISEIO_MY_FILE
             set -ex
     
             # specify local download path
-            file_local_path=download/path/to/my/file
+            export file_local_path=download/path/to/my/file
     
             # download the file
             wget -O "$file_local_path" "$BITRISEIO_MY_FILE_ID_URL"
