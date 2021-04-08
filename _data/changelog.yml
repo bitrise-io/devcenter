@@ -1,6 +1,12 @@
 ---
+- title: Using the Generic File Storage
+  modified: 2021-04-08 17:00:00 +0200
+  changelog: Corrected the example script for downloading a file from the General
+    File Storage.
+  type: fix
+  url: "/tutorials/how-to-use-the-generic-file-storage/#downloading-a-file-and-exporting-the-files-path-using-a-script-step"
 - title: Device testing for Android
-  modified: 2021-03-26 00:00:00 +0100
+  modified: 2021-03-26T00:00:00.000+01:00
   changelog: Firebase Test Lab link got updated in the document.
   type: fix
   url: "/testing/device-testing-for-android/"
