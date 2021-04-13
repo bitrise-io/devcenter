@@ -150,12 +150,10 @@ You can run your build on your Mac/PC inside the same `docker` container you use
 
 There are several options to adjust the heap size for the Java Virtual Machine (JVM). One option is adding Environment Variables (Env Vars) to your workflow where you specify the `-Xms` and `-Xmx` parameters. These determine heap size: the `-Xms` parameter sets the initial Java heap size and the `-Xmx` parameter sets the maximum Java heap size.
 
-For example, you can use the `GRADLE_OPTS` and `JAVA_OPTS` Env Vars by setting them in the **Env Vars** tab.
+You can use the `GRADLE_OPTS` and `JAVA_OPTS` Env Vars to control JVM parameters by setting them in the **Env Vars** tab. This way the parameters will be applied to every Gradle and Android Step in every Workflow (unless you override them).
 
-* `GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"'`
-* `JAVA_OPTS: "-Xms512m -Xmx1024m"`
-
-You can use use both, only one of them or neither if your project’s default configuration meets your heap capacity needs. Please note that these Env Vars with the `-Xms` and `-Xmx` parameters might get overridden based on your configuration.
+* `GRADLE_OPTS`: `-Dorg.gradle.jvmargs="-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError"`
+* `JAVA_OPTS`: `-Xms512m -Xmx2048m`
 
 ## Emulators
 
