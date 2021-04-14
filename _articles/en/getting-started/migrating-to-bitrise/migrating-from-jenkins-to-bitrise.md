@@ -135,7 +135,7 @@ Learn what else you can do with Steps:
 
 ## Jenkins Pipeline - Bitrise Workflow
 
-A Jenkins Pipeline is equal to a Bitrise [Workflow](/steps-and-workflows/getting-started-workflows/), but the Bitrise Workflows are much easier to manage: you can quickly create new Workflows based on existing ones, chain multiple Workflows together in a single build, or delete Workflows that you no longer need.
+A Jenkins Pipeline is equivalent to a Bitrise [Workflow](/steps-and-workflows/getting-started-workflows/), but the Bitrise Workflows are much easier to manage: you can quickly create new Workflows based on existing ones, chain multiple Workflows together in a single build, or delete Workflows that you no longer need.
 
 A Bitrise **Workflow** is a series of Steps, such as test, code sign, build APK/ ipa and deploy. When you add an app to Bitrise, a primary Workflow, created based on the project scanner’s findings, gets kicked off/triggered automatically.
 
