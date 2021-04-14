@@ -205,7 +205,7 @@ Bitrise add-ons don’t have to be installed and updated like Jenkins plugins - 
 
 ## Jenkinsfile - Bitrise YAML
 
-A Jenkins Pipeline uses groovy code, while Bitrise uses the more highly structured YAML format. All Workflows are defined in the `bitrise.yml` file in YAML format, which you can [edit](https://devcenter.bitrise.io/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online "https://devcenter.bitrise.io/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online") by clicking the **bitrise.yml** tab of the Workflow Editor.
+A Jenkins Pipeline uses groovy code, while Bitrise uses the more highly structured YAML format. All Workflows are defined in the `bitrise.yml` file in YAML format, which you can [edit](https://devcenter.bitrise.io/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online "https://devcenter.bitrise.io/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online") by clicking the **bitrise.yml** tab of the Workflow Editor.![](/img/bitriseyml.png)
 
 You can[ store and manage](https://devcenter.bitrise.io/builds/bitrise-yml-online/#storing-the-bitriseyml-file-in-your-repository "https://devcenter.bitrise.io/builds/bitrise-yml-online/#storing-the-bitriseyml-file-in-your-repository") the `bitrise.yml` file of your app either on [bitrise.io](http://bitrise.io/ "http://bitrise.io") or in your repository. Don’t worry, your secrets (for example, credentials and IDs) are safe with us.
 
