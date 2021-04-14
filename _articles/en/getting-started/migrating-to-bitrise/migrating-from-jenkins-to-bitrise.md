@@ -23,8 +23,9 @@ Bitrise takes care of all of the above. We have a vast array of automatized Step
 Check out the world of automated mobile development with Bitrise!
 
 {% include message_box.html type="info" title="Looking for more evidence on how Bitrise helped other companies switching from Jenkins?" content="
-- Learn how [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins) have switched from Jenkins to Bitrise. 
-- [Mobile CI after Jenkins: 6 Lessons from engineers who made the switch](https://www.bitrise.io/downloads/mobile-ci-after-jenkins-3?utm_source=website&utm_medium=mainpage&utm_campaign=Jenkins2021)"%}
+
+* Learn how [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins) have switched from Jenkins to Bitrise.
+* [Mobile CI after Jenkins: 6 Lessons from engineers who made the switch](https://www.bitrise.io/downloads/mobile-ci-after-jenkins-3?utm_source=website&utm_medium=mainpage&utm_campaign=Jenkins2021)"%}
 
 ## Projects on Jenkins and Bitrise
 
@@ -118,6 +119,8 @@ You can create your own custom Step too and store in a repository, then you can 
 {% include message_box.html type="info" title="A Step jolly joker: our Script Step" content="Do you have a custom script you’d like to run in your Workflow? Select the **Script** Step from the Step Library and add your custom code to the **Script content** input. Learn more about [how to configure the Step and some troubleshooting tips](https://www.bitrise.io/integrations/steps/script)." %}
 
 Discover our Steps on our [Integrations](https://www.bitrise.io/integrations/steps) page or right when editing your Workflow.
+
+![](/img/steps-1.png)
 
 Learn what else you can do with Steps:
 
