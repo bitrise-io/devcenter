@@ -166,7 +166,7 @@ The **LATEST BUILDS** tab on your Bitrise Dashboard displays all recent builds s
 
 On Jenkins, build statuses are listed in the **Build Executor Status** or on the Blue Ocean **Dashboard**. When using Bitrise you get a user-friendly graphical interface right from the start whereas, with Jenkins, you have to install the plugin first. Bitrise build statuses are shown on both the **Dashboard**, and on the **Builds** page of your app.
 
-**Build Queue** on Jenkins is the **Queued Builds** on Bitrise. You can schedule builds to queue them with the **Advanced** option of the [Schedule builds f](https://devcenter.bitrise.io/builds/Scheduling-Builds/#managing-a-scheduled-build "https://devcenter.bitrise.io/builds/Scheduling-Builds/#managing-a-scheduled-build")eature.
+**Build Queue** on Jenkins is the **Queued Builds** on Bitrise. You can schedule builds to queue them with the **Advanced** option of the [Schedule builds feature](/builds/Scheduling-Builds/#managing-a-scheduled-build).
 
 On the right side of the Dashboard, you can see all your apps under **APPS**.
 
