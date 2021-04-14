@@ -20,29 +20,23 @@ Bitrise takes care of all of the above. We have a vast array of automatized Step
 
 Check out the world of automated mobile development with Bitrise!
 
-{% include message_box.html type="info" title="Looking for more evidence on how Bitrise helped other companies switching from Jenkins?" content="Learn how these companies have switched from Jenkins to Bitrise:
-
-*  [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins) "%}
+{% include message_box.html type="info" title="Looking for more evidence on how Bitrise helped other companies switching from Jenkins?" content="Learn how [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins) have switched from Jenkins to Bitrise. "%}
 
 ## Projects on Jenkins and Bitrise
 
-A project on Bitrise is the synonym of an application. When you add an app to Bitrise, you connect your Git repository to Bitrise. Then the Bitrise project scanner detects your project type and crafts a default configuration. Once the process completes, your project is available on Bitrise. From this point on, we call it an app.
+A project on Bitrise is the synonym of an application. When you [add an app to Bitrise](/getting-started/adding-a-new-app/), you connect your Git repository to Bitrise. Then the Bitrise project scanner detects your project type and crafts a default configuration. Once the process completes, your project is available on Bitrise. From this point on, we call it an app.
 
-Most Jenkins users work with Jenkins Pipeline or Freestyle project (besides other available project types). There is no such project difference in Bitrise. Every time you connect an app to Bitrise, we automatically create a basic configuration file, called bitrise.yml, and immediately trigger a build with that configuration. Should you need to modify your project’s repository URL (due to, for example, a repository name or URL change) you can easily change it on your app’s **Settings** page.
+Most Jenkins users work with Jenkins Pipeline or Freestyle project (besides other available project types). There is no such project difference in Bitrise. Every time you connect an app to Bitrise, we automatically create a basic configuration file, called [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/), and immediately trigger a build with that configuration. Should you need to modify your project’s repository URL (due to, for example, a repository name or URL change) you can easily change it on your app’s **Settings** page.
 
 When using Jenkins, you can configure your Pipeline or Freestyle project, through the classic UI, to some extent, or more so through the Blue Ocean plugin or directly through the Jenkinsfile. To get a more enjoyable developer experience, you might lean onto using Blue Ocean, depending on your preference. If using the Blue Ocean plugin, you first have to install it. In Bitrise, there is no need to install anything to enjoy an intuitive, mobile developer friendly UI that visualizes your Workflow with the necessary tools right off the bat at your fingertips.
 
 #### Out-of-box support for platforms
 
-Bitrise supports [native and cross-platform apps](/getting-started/index/) out of the box and detects your project type automatically: iOS, Android, Ionic, Cordova, React Native, Flutter, Xamarin, MacOS, and Expo. No need to painfully select and install machines and plugins to run your preferred app type.
+Bitrise supports [native and cross-platform apps](/getting-started/index/) out of the box and detects your project type automatically: [iOS](/getting-started/getting-started-with-ios-apps/), [Android](/getting-started/getting-started-with-android-apps/), [Ionic / Cordova](/getting-started/getting-started-with-ionic-cordova-apps/), [React Native](/getting-started/getting-started-with-react-native-apps/), [Flutter](/getting-started/getting-started-with-flutter-apps/), [Xamarin](/getting-started/getting-started-with-xamarin-apps/), [MacOS](/getting-started/getting-started-with-macos-apps/), and [Expo](/getting-started/getting-started-with-expo-apps/). No need to painfully select and install machines and plugins to run your preferred app type.
 
 Check out your apps listed under **APPS** on your Dashboard.
 
-Your code is safe with us
-
-To guarantee the security of your builds we use clean [virtual machines](/infrastructure/virtual-machines) for every builds. This means that every build runs in its own, clean virtual machine and we discard the whole virtual machine after the build finishes, erasing every file your build (except for artifacts) uses and every change you make during your build.
-
-Learn more about [code security](/getting-started/code-security/).
+{% include message_box.html type="note" title="Your code is safe with us" content="To guarantee the security of your builds we use clean [virtual machines](/infrastructure/virtual-machines) for every builds. This means that every build runs in its own, clean virtual machine and we discard the whole virtual machine after the build finishes, erasing every file your build (except for artifacts) uses and every change you make during your build. Learn more about [code security](/getting-started/code-security/)."%}
 
 ## Quick Start Guide
 
