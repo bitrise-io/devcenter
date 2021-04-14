@@ -210,21 +210,14 @@ You can also download the current `bitrise.yml` configuration of your app and ru
 
 If you have been using a Jenkinsfile (Pipeline project) in Jenkins and and considering to switch to Bitrise, you can easily match Jenkinsfile stages with Bitrise Steps. If you have been using the old-school free style project, then you have to map your configuration’s settings with a matching Bitrise Step or a Bitrise function. For example, match the **Build** section of your freestyle project with a Bitrise build Step, such as the [Android Build](https://app.bitrise.io/integrations/steps/android-build) Step, or map the **Build Trigger** section of Jenkins with the [**Triggers** function of Bitrise](/builds/triggering-builds/triggering-builds-index/). Make sure you check out our [Step Library](https://www.bitrise.io/integrations/steps "https://www.bitrise.io/integrations/steps") for more inspiration.
 
-### bitrise.yml templates
+### Bitrise sample apps and their bitrise.yml files
 
-Here you can find recommended iOS, Android and cross-platform sample projects that you can use as your jumping off point when crafting your first Bitrise project.
+Here you can find iOS, Android and cross-platform sample projects. Check their bitrise.yml file to understand their setup. We hope you can use them as jumping off points when crafting your first Bitrise project.
 
-#### iOS
-
-#### Android
-
-#### React Native
-
-A simple React Native setup:
-
-#### Flutter
-
-A simple Flutter setup:
+* [iOS sample app](https://github.com/bitrise-io/Bitrise-iOS-Sample)
+* [Android sample app](https://github.com/bitrise-io/Bitrise-Android-Sample)
+* [React Native sample app](https://github.com/bitrise-io/Bitrise-React-Native-Sample)
+* [Flutter sample app](https://github.com/mjones-droid/Bitrise-Flutter-Sample)
 
 ## Master and agent on Jenkins - Bitrise Stacks
 
