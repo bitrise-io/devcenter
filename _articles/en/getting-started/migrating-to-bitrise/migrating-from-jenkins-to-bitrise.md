@@ -53,7 +53,7 @@ This Quick Start Guide helps you start your first build on Bitrise with minimum 
 5. Optimize your Workflows with Steps like [Bitrise.io Cache Pull](https://app.bitrise.io/integrations/steps/cache-pull) and [Bitrise.io Cache Push](https://app.bitrise.io/integrations/steps/cache-push).
 6. Need help? [Contact us](https://support.bitrise.io/hc/en-us).
 
-If you are interested in the main Jenkins-Bitrise differences and how Bitrise enhance your mobile development process, then browse through the guide below.
+If you are interested in the main Jenkins-Bitrise differences and how Bitrise enhance your mobile development process, then continue with the guide below.
 
 ## Managing Builds in Jenkins and Bitrise
 
