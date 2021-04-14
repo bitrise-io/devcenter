@@ -61,43 +61,43 @@ Let’s see what you can do with builds on Bitrise:
 
 In this section we describe how you can trigger builds on Bitrise:
 
-* The **Build Now** function in Jenkins corresponds with [manually triggering builds on Bitrise](https://devcenter.bitrise.io/builds/Starting-builds-manually/ "https://devcenter.bitrise.io/builds/Starting-builds-manually/"): click the **Start/Schedule a Build** button on your builds page and either simply start a new build or tinker away with the [**Advanced** options](https://devcenter.bitrise.io/builds/Starting-builds-manually/#advanced-configuration "https://devcenter.bitrise.io/builds/Starting-builds-manually/#advanced-configuration").
-* The **Build periodically** function of Jenkins is the [**Schedule this build** function on Bitrise](https://devcenter.bitrise.io/builds/Scheduling-Builds/ "https://devcenter.bitrise.io/builds/Scheduling-Builds/"). A big advantage of Bitrise is that you don’t have to set up a [cron](https://en.wikipedia.org/wiki/Cron#CRON_expression "https://en.wikipedia.org/wiki/Cron#CRON_expression") job, like you would in Jenkins, to schedule a specific time. Instead, select a day/s from the timeline and type an hour and month. No confusion over cron expressions any more!
-* Builds on Bitrise can run [parallel](https://devcenter.bitrise.io/builds/triggering-builds/trigger-multiple-workflows/ "https://devcenter.bitrise.io/builds/triggering-builds/trigger-multiple-workflows/") if you/your Org have more than one concurrency. Or switch to our [Velocity plan](https://www.bitrise.io/pricing "https://www.bitrise.io/pricing") to run limitless builds in parallel while having access to the best, fastest compute options available on our public MacOS and Linux cloud.
-* For any Git related events, such as code push, pull requests, and Git tags, or [trigger map](https://devcenter.bitrise.io/builds/triggering-builds/trigger-map/ "https://devcenter.bitrise.io/builds/triggering-builds/trigger-map/"), you can use the [**Triggers**](https://devcenter.bitrise.io/builds/triggering-builds/trigger-map/ "https://devcenter.bitrise.io/builds/triggering-builds/trigger-map/") page on Bitrise.
-* The **Build after other projects** function of Jenkins is equivalent to the [chaining Workflows feature](https://devcenter.bitrise.io/steps-and-workflows/managing-workflows/#chaining-workflows-together "https://devcenter.bitrise.io/steps-and-workflows/managing-workflows/#chaining-workflows-together") on Bitrise where the Workflows run in [succession](https://devcenter.bitrise.io/steps-and-workflows/managing-workflows/#chaining-workflows-together "https://devcenter.bitrise.io/steps-and-workflows/managing-workflows/#chaining-workflows-together"). It’s surprisingly easy to chain Workflows together on Bitrise.
-* You can trigger builds by any other remote system: use our [Webhooks](https://devcenter.bitrise.io/webhooks/webhooks-index/ "https://devcenter.bitrise.io/webhooks/webhooks-index/"). We’re integrated with GitHub, Gitlab, Bitbucket, Gogs, Slack, Visual Studio, Assembla, Develo.
-* You can also [push back build status reports](https://devcenter.bitrise.io/builds/triggering-builds/status-reporting/ "https://devcenter.bitrise.io/builds/triggering-builds/status-reporting/") to your Git provider (GitHub/GitLab/Bitbucket).
+* The **Build Now** function in Jenkins corresponds with [manually triggering builds on Bitrise](/builds/Starting-builds-manually/): click the **Start/Schedule a Build** button on your builds page and either simply start a new build or tinker away with the [**Advanced** options](/builds/Starting-builds-manually/#advanced-configuration).
+* The **Build periodically** function of Jenkins is the [**Schedule this build** function on Bitrise](/builds/Scheduling-Builds/). A big advantage of Bitrise is that you don’t have to set up a [cron](https://en.wikipedia.org/wiki/Cron#CRON_expression) job, like you would in Jenkins, to schedule a specific time. Instead, select a day/s from the timeline and type an hour and month. No confusion over cron expressions any more!
+* Builds on Bitrise can run [parallel](/builds/triggering-builds/trigger-multiple-workflows/) if you/your Org have more than one concurrency. Or switch to our [Velocity plan](https://www.bitrise.io/pricing) to run limitless builds in parallel while having access to the best, fastest compute options available on our public MacOS and Linux cloud.
+* For any Git related events, such as code push, pull requests, and Git tags, or [trigger map](/builds/triggering-builds/trigger-map/), you can use the [**Triggers**](/builds/triggering-builds/trigger-map/) page on Bitrise.
+* The **Build after other projects** function of Jenkins is equivalent to the [chaining Workflows feature](/steps-and-workflows/managing-workflows/#chaining-workflows-together) on Bitrise where the Workflows run in [succession](/steps-and-workflows/managing-workflows/#chaining-workflows-together). It’s surprisingly easy to chain Workflows together on Bitrise.
+* You can trigger builds by any other remote system: use our [Webhooks](/webhooks/webhooks-index/). We’re integrated with GitHub, Gitlab, Bitbucket, Gogs, Slack, Visual Studio, Assembla, Develo.
+* You can also [push back build status reports](/builds/triggering-builds/status-reporting/) to your Git provider (GitHub/GitLab/Bitbucket).
 
 ### Environment Variables and Secrets
 
-Environment Variables (a key and value pair) can be defined on app, Workflow and Steps level. There are certain Env Vars that are [exposed by the Bitrise CLI](https://devcenter.bitrise.io/builds/available-environment-variables/#exposed-by-the-bitrise-cli "https://devcenter.bitrise.io/builds/available-environment-variables/#exposed-by-the-bitrise-cli") and ones which are [only exposed by bitrise.io](https://devcenter.bitrise.io/builds/available-environment-variables/#exposed-by-bitriseio "https://devcenter.bitrise.io/builds/available-environment-variables/#exposed-by-bitriseio").
+Environment Variables (a key and value pair) can be defined on app, Workflow and Steps level. There are certain Env Vars that are [exposed by the Bitrise CLI](/builds/available-environment-variables/#exposed-by-the-bitrise-cli) and ones which are [only exposed by bitrise.io](/builds/available-environment-variables/#exposed-by-bitriseio).
 
-There are a bunch of [cool stuff you can do with Env Vars](https://devcenter.bitrise.io/tips-and-tricks/expose-environment-variable/ "https://devcenter.bitrise.io/tips-and-tricks/expose-environment-variable/"), for example:
+There are a bunch of [cool stuff you can do with Env Vars](/tips-and-tricks/expose-environment-variable/), for example:
 
 * Expose them and reuse them in another Step.
 * Copy an Env Var to another key.
 * Overwrite an Env Var.
-* Parameterize a build by adding a custom Env Vars to a build.link
+* Parameterize a build by adding custom Env Vars to a build.
 * Set up Workflow-specific Env Vars on the **Env Vars** tab to run Workflows with Env Vars that are only available for that particular Workflow.
 
-**Secrets** are a type of Environment Variables but special ones. They hide sensitive information such as in an encrypted format so that your private input is not exposed in the build logs or in the bitrise.yml. Secret Environment Variables, or **Secrets** in short, can be set by adding a key and the variable in the **Secrets** tab of the Workflow Editor. This is again an built-in feature of Bitrise which ensures the following:
+**Secrets** are a type of Environment Variables but special ones. They hide sensitive information in an encrypted format so that your private input is not exposed in the build logs or in the bitrise.yml. Secret Environment Variables, or **Secrets** in short, can be set by adding a key and the variable in the **Secrets** tab of the Workflow Editor. This is again an built-in feature of Bitrise which ensures the following:
 
 * Your secrets are not shown in the bitrise.yml.
 * Your secrets are stored encrypted.
 * You can prevent exposing secrets on the UI by making them protected.
-* Note that anyone might be able to do a workaround and log the value of secrets with a pull request, thus we advise **not to expose secrets in PRs.**
+* Note that anyone might be able to do a workaround and log the value of secrets with a pull request, thus we advise **not to expose secrets in PRs**.
 
 Learn more about Secrets:
 
-* [Sensitive input in public apps](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/ "https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/")
-* [Secrets in depth](https://devcenter.bitrise.io/bitrise-cli/secrets/ "https://devcenter.bitrise.io/bitrise-cli/secrets/")
+* [Sensitive input in public apps](/builds/env-vars-secret-env-vars/)
+* [Secrets in depth](/bitrise-cli/secrets/)
 
 ### Caching
 
-Every build on Bitrise runs on a clean virtual machine but it does not mean you have to do everything from scratch - you can [cache](https://devcenter.bitrise.io/builds/caching/about-caching-index/ "https://devcenter.bitrise.io/builds/caching/about-caching-index/") contents of important files and preserve them between builds.
+Every build on Bitrise runs on a clean virtual machine but it does not mean you have to do everything from scratch - you can [cache](/builds/caching/about-caching-index/) contents of important files and preserve them between builds.
 
-Learn more about [builds](https://devcenter.bitrise.io/builds/builds-index/ "https://devcenter.bitrise.io/builds/builds-index/") in Bitrise.
+Learn more about [builds](/builds/builds-index/) in Bitrise.
 
 ## Jenkins plugins and Bitrise Steps
 
