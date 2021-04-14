@@ -7,10 +7,10 @@ menu:
   getting-started-main:
     identifier: migrating-to-bitrise
     weight: 2
-    
----    
-Learn how you can quickly migrate projects from your old CI/CD solution to Bitrise. 
 
-Need more convincing? Check out our migration guides:
+---
+Our migration guides aim to help you quickly and painlessly migrate your project from your current CI/CD provider to Bitrise.
 
-* Migrating from Jenkins to Bitrise
+Need more convincing? Would you like to learn more about what Bitrise offers in comparison to your current CI/CD solution? Check out our migration guides:
+
+* [Migrating from Jenkins to Bitrise](/getting-started/migrating-to-bitrise/migrating-from-jenkins-to-bitrise/)
