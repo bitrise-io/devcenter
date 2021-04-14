@@ -113,17 +113,17 @@ What’s more: When editing your Workflow in the **Workflow Editor**, you can ea
 
 You can create your own custom Step too and store in a repository, then you can reference it by a URL in your Workflow.
 
-{% include message_box.html type="info" title="A jolly joker Step: Bitrise Script Step" content="Do you have a custom script you’d like to run in your Workflow? Select the **Script** Step from the Step Library and add your custom code to the **Script content** input. Learn more about [configuring the Step and some troubleshooting tips(https://www.bitrise.io/integrations/steps/script)%}.
+{% include message_box.html type="info" title="A jolly joker Step: Bitrise Script Step" content="Do you have a custom script you’d like to run in your Workflow? Select the **Script** Step from the Step Library and add your custom code to the **Script content** input. Learn more about \[configuring the Step and some troubleshooting tips(https://www.bitrise.io/integrations/steps/script)%}.
 
 Discover our Steps on our [Integrations](https://www.bitrise.io/integrations/steps) page or right when editing your Workflow.
 
 Learn what else you can do with Steps:
 
-* [Adding and removing Steps](/steps-and-workflows/adding-removing-steps/) 
+* [Adding and removing Steps](/steps-and-workflows/adding-removing-steps/)
 * [Step versions and inputs](/steps-and-workflows/step-inputs/)
 * [Skipping Steps](/steps-and-workflows/skipping-steps/)
-* [Enabling or disabling a Step conditionally](/steps-and-workflows/disable-a-step-by-condition/) 
-* [Editing a Step in bitrise.yml]() 
+* [Enabling or disabling a Step conditionally](/steps-and-workflows/disable-a-step-by-condition/)
+* [Editing a Step in bitrise.yml]()
 * [For contributors who wish to create and submit a Step to Bitrise ](/contributors/contributors-index/)
 
 {% include message_box.html type="info" title="Using fastlane in Jenkins?" content="You can easily put your fastlane lanes to work on Bitrise too. All you have to do is add a Bitrise’s [**Fastlane**](https://www.bitrise.io/integrations/steps/fastlane) Step to your Workflow and add your lane name into the Step. Start a build and your lane will run on Bitrise."%}
@@ -153,10 +153,10 @@ The Workflow Editor has other powerful features built in to assist you with mobi
 
 There’s a bunch of other Workflow management tasks you can do with Workflow, check them out:
 
-* About default Workflows [https://devcenter.bitrise.io/steps-and-workflows/default-workflows/](https://devcenter.bitrise.io/steps-and-workflows/default-workflows/ "https://devcenter.bitrise.io/steps-and-workflows/default-workflows/")
-* Creating a Workflow [https://devcenter.bitrise.io/steps-and-workflows/creating-workflows/](https://devcenter.bitrise.io/steps-and-workflows/creating-workflows/ "https://devcenter.bitrise.io/steps-and-workflows/creating-workflows/")
-* Managing Workflows [https://devcenter.bitrise.io/steps-and-workflows/managing-workflows/](https://devcenter.bitrise.io/steps-and-workflows/managing-workflows/ "https://devcenter.bitrise.io/steps-and-workflows/managing-workflows/")
-* Copying one Workflow from one app to another [https://devcenter.bitrise.io/steps-and-workflows/copying-workflows-from-one-app-to-another/](https://devcenter.bitrise.io/steps-and-workflows/copying-workflows-from-one-app-to-another/ "https://devcenter.bitrise.io/steps-and-workflows/copying-workflows-from-one-app-to-another/")
+* [About default Workflows](/steps-and-workflows/default-workflows/).
+* [Creating a Workflow](/steps-and-workflows/creating-workflows/).
+* [Managing Workflows](/steps-and-workflows/managing-workflows/).
+* [Copying one Workflow from one app to another](/steps-and-workflows/copying-workflows-from-one-app-to-another/).
 
 ## Dashboards in Jenkins and Bitrise
 
