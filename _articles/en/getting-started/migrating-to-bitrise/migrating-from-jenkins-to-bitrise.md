@@ -40,7 +40,7 @@ Bitrise supports [native and cross-platform apps](/getting-started/index/) out-o
 
 Check out your apps listed under **APPS** on your Dashboard.
 
-{% include message_box.html type="note" title="Your code is safe with us" content="To guarantee the security of your builds we use clean [virtual machines](/infrastructure/virtual-machines) for every builds. This means that every build runs in its own, clean virtual machine and we discard the whole virtual machine after the build finishes, erasing every file your build (except for artifacts) uses and every change you make during your build. Learn more about [code security](/getting-started/code-security/)."%}
+{% include message_box.html type="note" title="Your code is safe with us" content="To guarantee the security of your builds we use clean [virtual machines](/infrastructure/virtual-machines) for every builds. This means that every build runs on its own, clean virtual machine and we discard the whole virtual machine after the build finishes, erasing every file your build (except for artifacts) uses and every change you make during your build. Learn more about [code security](/getting-started/code-security/)."%}
 
 ## Quick Start Guide
 
