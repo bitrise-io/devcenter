@@ -16,13 +16,13 @@ Jenkins is a self-hosted CI server where you have to manually install and mainta
 * No need for any on-premise servers or plugins.
 * No need to worry about infrastructure, tools and virtualization.
 
-Bitrise takes care of all of the above. We have a vast array of automatized Steps, [API](https://devcenter.bitrise.io/api/api-index/ "https://devcenter.bitrise.io/api/api-index/"), [CLI](https://devcenter.bitrise.io/bitrise-cli/index/ "https://devcenter.bitrise.io/bitrise-cli/index/"), [up-to-date Stacks ](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports "https://github.com/bitrise-io/bitrise.io/tree/master/system_reports")and add-ons with a highly intuitive GUI, called Workflow Editor, all available at your fingertips.
+Bitrise takes care of all of the above. We have a vast array of automatized Steps, [API](/api/api-index/), [CLI](/bitrise-cli/index/), [up-to-date Stacks ](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports) and add-ons with a highly intuitive GUI, called Workflow Editor, all available at your fingertips.
 
 Check out the world of automated mobile development with Bitrise!
 
 {% include message_box.html type="info" title="Looking for more evidence on how Bitrise helped other companies switching from Jenkins?" content="Learn how these companies have switched from Jenkins to Bitrise:
 
-*  [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins "https://www.bitrise.io/bitrise-vs-jenkins") "%}
+*  [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins) "%}
 
 ## Projects on Jenkins and Bitrise
 
