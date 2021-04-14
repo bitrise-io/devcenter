@@ -193,22 +193,22 @@ Add-ons are like cherry on the cake. They take Bitrise's functionality to the ne
 
 Bitrise add-ons don’t have to be installed and updated like Jenkins plugins - they are available out of the box and come for free. They have their own page which you can access either from the Dashboard or through your **Builds** page. Let’s have a closer look.
 
-* **Trace**: Monitor your apps from the end users' perspective and get data on performance monitoring and possible issues. Access Trace through your Dashboard or from your build’s **Add-ons** tab. [https://devcenter.bitrise.io/monitoring/trace-index/](https://devcenter.bitrise.io/monitoring/trace-index/ "https://devcenter.bitrise.io/monitoring/trace-index/")
-* **Test Reports**: a neatly organized collection of all your test reports on one place. Access Test Reports from your build’s **Add-ons** tab. [https://devcenter.bitrise.io/testing/test-reports/](https://devcenter.bitrise.io/testing/test-reports/ "https://devcenter.bitrise.io/testing/test-reports/")
-* **Ship**: Manage your app’s distribution, version history and metadata from one place. Access Ship from your build’s Add-ons page. [https://devcenter.bitrise.io/deploy/ship/](https://devcenter.bitrise.io/deploy/ship/ "https://devcenter.bitrise.io/deploy/ship/")
-* **Rolling Builds**: No need for manually aborting a build any more! With Rolling Builds, the previous builds of your app can be automatically aborted once a new one is started. Access Rolling Builds from your build’s Add-ons page. [https://devcenter.bitrise.io/builds/rolling-builds/](https://devcenter.bitrise.io/builds/rolling-builds/ "https://devcenter.bitrise.io/builds/rolling-builds/")
+* [Trace](/monitoring/trace-index/): Monitor your apps from the end users' perspective and get data on performance monitoring and possible issues. Access Trace through your Dashboard or from your build’s **Add-ons** tab.
+* [Test Reports](/testing/test-reports/): a neatly organized collection of all your test reports on one place. Access Test Reports from your build’s **Add-ons** tab.
+* [Ship](/deploy/ship/): Manage your app’s distribution, version history and metadata from one place. Access Ship from your build’s Add-ons page.
+* [Rolling Builds](/builds/rolling-builds/): No need for manually aborting a build any more! With Rolling Builds, the previous builds of your app can be automatically aborted once a new one is started. Access Rolling Builds from your build’s Add-ons page.
 
 ## Jenkinsfile - Bitrise YAML
 
-A Jenkins Pipeline uses groovy code, while Bitrise uses the more highly structured YAML format. All Workflows are defined in the bitrise.yml file in yml format, which you can [edit](https://devcenter.bitrise.io/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online "https://devcenter.bitrise.io/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online") by clicking the bitrise.yml tab of the Workflow Editor.
+A Jenkins Pipeline uses groovy code, while Bitrise uses the more highly structured YAML format. All Workflows are defined in the `bitrise.yml` file in YAML format, which you can [edit](https://devcenter.bitrise.io/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online "https://devcenter.bitrise.io/builds/bitrise-yml-online/#editing-and-downloading-bitriseyml-online") by clicking the `bitrise.yml` tab of the Workflow Editor.
 
-You can[ store and manage](https://devcenter.bitrise.io/builds/bitrise-yml-online/#storing-the-bitriseyml-file-in-your-repository "https://devcenter.bitrise.io/builds/bitrise-yml-online/#storing-the-bitriseyml-file-in-your-repository") the bitrise.yml file of your app either on [bitrise.io](http://bitrise.io/ "http://bitrise.io") or in your repository. Don’t worry, your secrets (for example, credentials and IDs) are safe with us.
+You can[ store and manage](https://devcenter.bitrise.io/builds/bitrise-yml-online/#storing-the-bitriseyml-file-in-your-repository "https://devcenter.bitrise.io/builds/bitrise-yml-online/#storing-the-bitriseyml-file-in-your-repository") the `bitrise.yml` file of your app either on [bitrise.io](http://bitrise.io/ "http://bitrise.io") or in your repository. Don’t worry, your secrets (for example, credentials and IDs) are safe with us.
 
-You can also download the current bitrise.yml configuration of your app and run it locally with the [Bitrise CLI](https://devcenter.bitrise.io/bitrise-cli/index/ "https://devcenter.bitrise.io/bitrise-cli/index/").
+You can also download the current `bitrise.yml` configuration of your app and run it locally with the [Bitrise CLI](https://devcenter.bitrise.io/bitrise-cli/index/ "https://devcenter.bitrise.io/bitrise-cli/index/").
 
 ### Jenkinsfile - Bitrise yml file comparison
 
-If you have been using a Jenkinsfile (Pipeline project) in Jenkins and decided to switch to Bitrise, you can easily match Jenkinsfile stages with Bitrise Steps. If you have been using the old-school free style project, then you have to map your configuration’s settings with a matching Bitrise Step or a Bitrise function. For example, match the **Build** section of your freestyle project with a Bitrise build Step, such as the **Android Build** Step, or map the **Build Trigger** section of Jenkins with the **Triggers** function of Bitrise. Make sure you check out our [Step Library](https://www.bitrise.io/integrations/steps "https://www.bitrise.io/integrations/steps") for more inspiration.
+If you have been using a Jenkinsfile (Pipeline project) in Jenkins and and considering to switch to Bitrise, you can easily match Jenkinsfile stages with Bitrise Steps. If you have been using the old-school free style project, then you have to map your configuration’s settings with a matching Bitrise Step or a Bitrise function. For example, match the **Build** section of your freestyle project with a Bitrise build Step, such as the [Android Build](https://app.bitrise.io/integrations/steps/android-build) Step, or map the **Build Trigger** section of Jenkins with the [**Triggers** function of Bitrise](/builds/triggering-builds/triggering-builds-index/). Make sure you check out our [Step Library](https://www.bitrise.io/integrations/steps "https://www.bitrise.io/integrations/steps") for more inspiration.
 
 ### bitrise.yml templates
 
@@ -232,15 +232,13 @@ A stack is the type of virtual machine we use to run your build. For example, fo
 
 ### How do stacks work on Bitrise?
 
-When you add your app to Bitrise, our project selector automatically detects the type of your project and based on its platform type, adds a default stack to it. Your first build will run on this stack, which is a virtual machine with all the required tools pre-installed on it. Should you wish to use another stack, you can simply select it from the **Default Stack** dropdown menu on the **Stack** tab. If you click the **More information** link, you can see the preinstalled tools with their versions.
+When you add your app to Bitrise, our project selector automatically detects the type of your project and based on its platform type, adds a default stack to it. Your first build will run on this stack, which is a virtual machine with all the required tools pre-installed on it. Should you wish to use another stack, you can simply select it from the **Default Stack** dropdown menu on the **Stack** tab. If you click the **More information** link, you can see the preinstalled tools with their versions.![](/img/stack.png)
 
 We support the latest Xcode version shortly after its official release.
 
-System reports
+{% include message_box.html type="note" title="System reports" content="In our [system reports](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports "https://github.com/bitrise-io/bitrise.io/tree/master/system_reports") you can check the installed tools and their versions on each stack.
 
-In our [system reports](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports "https://github.com/bitrise-io/bitrise.io/tree/master/system_reports") you can check the installed tools and their versions on each stack.
-
-Learn more about our [Stack update and removal policy](https://devcenter.bitrise.io/infrastructure/stack-update-and-removal-policy/ "https://devcenter.bitrise.io/infrastructure/stack-update-and-removal-policy/").
+Learn more about our [Stack update and removal policy](https://devcenter.bitrise.io/infrastructure/stack-update-and-removal-policy/ "https://devcenter.bitrise.io/infrastructure/stack-update-and-removal-policy/")."%}
 
 ## People management in Jenkins and Bitrise
 
