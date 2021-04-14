@@ -146,7 +146,7 @@ The **Workflow Editor** is the main place for configuring your Workflow. Jenkins
 The Workflow Editor has other powerful features built in to assist you with mobile development:
 
 * [Code signing](/code-signing/code-signing-index/): one place to store and manage all your code signing files which then will be used by the Workflow. Again, no need for installing a code signing tool first like in Jenkins. You can store any custom file here too (in the **GENERIC FILE STORAGE** section) which the [Generic File Storage](https://www.bitrise.io/integrations/steps/generic-file-storage) Step can download.
-* [Secrets](/builds/env-vars-secret-env-vars/): check out your app’s secret Environment Variables here or add them.
+* [Secrets](/builds/env-vars-secret-env-vars/): check out your app’s secret Environment Variables or add new ones.
 * [Env Vars](/builds/available-environment-variables/): there is no confusion of secrets and Env Vars in Bitrise. They are neatly organized into separate tabs so that you know where’s what. Add App Env Vars or Workflow specific Env Vars here. You can also reference Secrets as Env Vars with $.
 * [Triggers](/builds/triggering-builds/triggering-builds-index/): You can configure triggers: code push events, pull requests, or tags can all be set up to automatically start builds on Bitrise.
 * [Stack](/infrastructure/available-stacks/): Check out the default stack of your app, select a new one from a dropdown menu or select a specific stack for one of your Workflows.
