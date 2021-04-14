@@ -180,7 +180,7 @@ What **New item** means in Jenkins, is the **adding a new app flow**, either by 
 
 Bitrise makes extensive use of webhooks, which you can enable with a simple click when connecting an app to Bitrise. It all makes sense to add the webhook during the initial setup and not having to search for this functionality when you try to quickly get your app to speed.
 
-In short, there are two types of Webhooks:
+[![Adding a GitHub webhook](https://devcenter.bitrise.io/img/github-webhook-1.png)](https://devcenter.bitrise.io/img/github-webhook-1.png)In short, there are two types of Webhooks:
 
 * Incoming webhooks, registered with your Git service provider, are used to automatically trigger builds on Bitrise.
 * Outgoing webhooks are used to send reports of build events to other services, such as Slack. They can be added either on the website or [via the Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks/).
