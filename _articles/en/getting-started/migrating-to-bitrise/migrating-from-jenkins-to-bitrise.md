@@ -53,7 +53,7 @@ If you are interested in the main Jenkins-Bitrise differences and how Bitrise en
 
 ## Managing Builds in Jenkins and Bitrise
 
-A build on Bitrise is the process specified by the app’s Workflow. It is a series of Steps, defined in a Workflow, executed by the [Bitrise CLI](https://devcenter.bitrise.io/bitrise-cli/index/ "https://devcenter.bitrise.io/bitrise-cli/index/") on a clean virtual machine or locally on your machine. You can check your app’s builds on the Bitrise **Dashboard** or [analyze your builds](https://devcenter.bitrise.io/builds/build-logs/ "https://devcenter.bitrise.io/builds/build-logs/") log on your app’s own **Builds** page. If you’re looking to view or download your artifacts after a successful build run, check out [build artifacts online](https://devcenter.bitrise.io/builds/build-artifacts-online/ "https://devcenter.bitrise.io/builds/build-artifacts-online/").
+A build on Bitrise is the process specified by the app’s [Workflow](/steps-and-workflows/getting-started-workflows/). It is a series of [Steps](/steps-and-workflows/getting-started-steps/), defined in a Workflow, executed by the [Bitrise CLI](/bitrise-cli/index/) on a clean virtual machine or locally on your machine. You can check your app’s builds on the Bitrise **Dashboard** or [analyze your build](/builds/build-logs/) log on your app’s own **Builds** page. If you’re looking to view or download your artifacts after a successful build run, check out [build artifacts online](/builds/build-artifacts-online/).![](/img/buildspage.png)
 
 Let’s see what you can do with builds on Bitrise:
 
