@@ -6,7 +6,6 @@ summary: ''
 menu:
   migrating-to-bitrise:
     weight: 1
-    title: Migrating from Jenkins to Bitrise
 
 ---
 If you have been looking to switch from [Jenkins](https://www.jenkins.io/) to Bitrise to speed up your mobile CI/CD flow and ease dedicated manpower, look no further. This guide introduces the most important Bitrise features and how you can quickly settle into Bitrise from your Jenkins world.
@@ -104,7 +103,7 @@ Learn more about [builds](/builds/builds-index/) in Bitrise.
 
 ## Jenkins plugins and Bitrise Steps
 
-A [Step](https://devcenter.bitrise.io/steps-and-workflows/getting-started-steps/ "https://devcenter.bitrise.io/steps-and-workflows/getting-started-steps/") is a pre-defined task in Bitrise just like the Jenkins Steps, however, a Bitrise Step can be easily configured on our intuitive UI or you can even pull in your own Step from your repository. You can configure the inputs and parameters that define a Step task, and view/reuse the outputs a Step generates. Reusing the output means that another Step in the same Workflow can use it as the value of one of its inputs.![](/img/steps.png)
+A [Step](/steps-and-workflows/getting-started-steps/) is a pre-defined task in Bitrise just like the Jenkins Steps, however, a Bitrise Step can be easily configured on our intuitive UI or you can even pull in your own Step from your repository. You can configure the inputs and parameters that define a Step task, and view/reuse the outputs a Step generates. Reusing the output means that another Step in the same Workflow can use it as the value of one of its inputs.![](/img/steps.png)
 
 ### Advantage of using Bitrise Steps
 
@@ -114,9 +113,9 @@ What’s more: When editing your Workflow in the **Workflow Editor**, you can ea
 
 You can create your own custom Step too and store in a repository, then you can reference it by a URL in your Workflow.
 
-{% include message_box.html type="info" title="A Step jolly joker: Bitrise Script Step" content="Do you have a custom script you’d like to run in your Workflow? Select the **Script** Step from the Step Library and add your custom code to the **Script content** input. Learn more about[ configuring the Step and some troubleshooting tips](https://www.bitrise.io/integrations/steps/script "https://www.bitrise.io/integrations/steps/script")."%}
+{% include message_box.html type="info" title="A Step jolly joker: Bitrise Script Step" content="Do you have a custom script you’d like to run in your Workflow? Select the **Script** Step from the Step Library and add your custom code to the **Script content** input. Learn more about [configuring the Step and some troubleshooting tips(https://www.bitrise.io/integrations/steps/script)%}.
 
-Discover our Steps on our [Integrations](https://www.bitrise.io/integrations/steps "https://www.bitrise.io/integrations/steps") page or right when editing your Workflow.
+Discover our Steps on our [Integrations](https://www.bitrise.io/integrations/steps) page or right when editing your Workflow.
 
 Learn what else you can do with Steps:
 
@@ -127,7 +126,7 @@ Learn what else you can do with Steps:
 * [Editing a Step in bitrise.yml]() 
 * [For contributors who wish to create and submit a Step to Bitrise ](/contributors/contributors-index/)
 
-{% include message_box.html type="info" title="Using fastlane in Jenkins?" content="You can easily put your fastlane lanes to work on Bitrise too. All you have to do is add a Bitrise’s [**Fastlane**](https://www.bitrise.io/integrations/steps/fastlane "https://www.bitrise.io/integrations/steps/fastlane") Step to your Workflow and add your lane name into the Step. Start a build and your lane will run on Bitrise."%}
+{% include message_box.html type="info" title="Using fastlane in Jenkins?" content="You can easily put your fastlane lanes to work on Bitrise too. All you have to do is add a Bitrise’s [**Fastlane**](https://www.bitrise.io/integrations/steps/fastlane) Step to your Workflow and add your lane name into the Step. Start a build and your lane will run on Bitrise."%}
 
 ## Jenkins Pipeline - Bitrise Workflow
 
