@@ -245,21 +245,21 @@ Learn more about our [Stack update and removal policy](/infrastructure/stack-upd
 What you have on the **People** page of Jenkins can be found in two places on Bitrise (depending on if you have a team or an Organization set up).
 
 * You can see your team members on the **Teams** tab of your app.
-* You can see the Organization members if you click the Account Settings, then select and Organization and find the **People** tab on the left.
+* You can see the Organization members if you click **Account Settings**, then select an Organization and find the **People** tab on the left.
 
-The purpose of Organizations is to make it easier to manage several people working on different apps on Bitrise. [Organizations can own an unlimited number of apps](https://devcenter.bitrise.io/team-management/organizations/managing-apps/ "https://devcenter.bitrise.io/team-management/organizations/managing-apps/"), and Organization owners can assign Organization members to work on different apps as they see fit.
+The purpose of Organizations is to make it easier to manage several people working on different apps on Bitrise. [Organizations can own an unlimited number of apps](/team-management/organizations/managing-apps/), and Organization owners can assign Organization members to work on different apps as they see fit.
 
 A **Team** on Bitrise means all the users who work on the same app: they make up the app’s team, and you can manage them on the app’s Teams tab
 
 On the **Groups** tab you can manage Org members such as delete, add a new member to the group, assign a group to apps and rename a group. On the **People** tab you can see who is already added to the Org and, if needed, you can remove a member from all groups of the Organization.
 
-Organizations consist of groups: Organization owners [can create groups and decide which members belong to which groups](https://devcenter.bitrise.io/team-management/organizations/members-organizations/ "https://devcenter.bitrise.io/team-management/organizations/members-organizations/"). A given group can be assigned to work on an app: all members of the same group will have the same level of access to the app.
+Organizations consist of groups: Organization owners [can create groups and decide which members belong to which groups](/team-management/organizations/members-organizations/). A given group can be assigned to work on an app: all members of the same group will have the same level of access to the app.
 
-Learn more about[ Organizations and Teams](https://devcenter.bitrise.io/team-management/teams-vs-organizations-index/ "https://devcenter.bitrise.io/team-management/teams-vs-organizations-index/").
+Learn more about [Organizations and Teams](/team-management/teams-vs-organizations-index/).
 
 ### Integrated SSO management on Bitrise
 
-While in Jenkins you have to install an authorization plugin for SSO management, in Bitrise it comes as an integral part of the[ Org Elite and Velocity plans](https://www.bitrise.io/pricing "https://www.bitrise.io/pricing"). Organization with such plans can set up SAML SSO as their single gateway to their Org on Bitrise. No more remembering usernames and credentials! All the Org owner has to do is set up Bitrise as a SAML SSO app on the SAML SSO provider and invite Org members to the Bitrise Org. We have specific guides to the different SAML SSO providers to guide you through the steps.
+While in Jenkins you have to install an authorization plugin for SSO management, in Bitrise it comes as an integral part of the [Org Elite and Velocity plans](https://www.bitrise.io/pricing "https://www.bitrise.io/pricing"). Organization with such plans can set up SAML SSO as their single gateway to their Org on Bitrise. No more remembering usernames and credentials! All the Org owner has to do is set up Bitrise as a SAML SSO app on the SAML SSO provider and invite Org members to the Bitrise Org. We have specific guides to the different SAML SSO providers to guide you through the steps.
 
 Learn more about SAML SSO setup:
 
