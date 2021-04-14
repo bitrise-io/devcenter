@@ -6,7 +6,7 @@ summary: ''
 menu:
   getting-started-main:
     identifier: migrating-to-bitrise
-    weight: 1
+    weight: 2
     
 ---    
 Learn how you can quickly migrate projects from your old CI/CD solution to Bitrise. 
