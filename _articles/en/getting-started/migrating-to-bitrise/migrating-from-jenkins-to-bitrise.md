@@ -6,7 +6,7 @@ summary: ''
 published: false
 
 ---
-If you have been looking to switch from Jenkins to Bitrise to speed up your mobile CI/CD flow and ease manpower, look no further. This guide introduces the most important Bitrise features and how you can quickly settle into Bitrise from your Jenkins world.
+If you have been looking to switch from [Jenkins](https://www.jenkins.io/) to Bitrise to speed up your mobile CI/CD flow and ease dedicated manpower, look no further. This guide introduces the most important Bitrise features and how you can quickly settle into Bitrise from your Jenkins world.
 
 ## Why bother migrating?
 
@@ -20,10 +20,9 @@ Bitrise takes care of all of the above. We have a vast array of automatized Step
 
 Check out the world of automated mobile development with Bitrise!
 
-Looking for more evidence on how Bitrise helped other companies switching from Jenkins?
+{% include message_box.html type="info" title="Looking for more evidence on how Bitrise helped other companies switching from Jenkins?" content="Learn how these companies have switched from Jenkins to Bitrise:
 
-* Learn how [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins "https://www.bitrise.io/bitrise-vs-jenkins") have switched from Jenkins to Bitrise.
-* Top 5 myths of on-prem CI/CD (article coming -link to be added)
+*  [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins "https://www.bitrise.io/bitrise-vs-jenkins") "%}
 
 ## Projects on Jenkins and Bitrise
 
