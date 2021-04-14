@@ -90,7 +90,7 @@ Secrets are a type of Environment Variables but special ones. They hide sensitiv
 * Your secrets are not shown in the `bitrise.yml`.
 * Your secrets are stored encrypted.
 * You can prevent exposing secrets on the UI by making them protected.
-* Note that anyone might be able to do a workaround and log the value of secrets with a pull request, thus we advise **not to expose secrets in PRs**.
+* Note that anyone might be able to do a workaround and log the value of secrets with a pull request, thus we advise NOT to expose secrets in PRs.
 
 Learn more about Secrets:
 
