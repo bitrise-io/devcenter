@@ -236,9 +236,9 @@ When you add your app to Bitrise, our project selector automatically detects the
 
 We support the latest Xcode version shortly after its official release.
 
-{% include message_box.html type="note" title="System reports" content="In our [system reports](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports "https://github.com/bitrise-io/bitrise.io/tree/master/system_reports") you can check the installed tools and their versions on each stack.
+{% include message_box.html type="note" title="System reports" content="In our [system reports](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports) you can check the installed tools and their versions on each stack.
 
-Learn more about our [Stack update and removal policy](https://devcenter.bitrise.io/infrastructure/stack-update-and-removal-policy/ "https://devcenter.bitrise.io/infrastructure/stack-update-and-removal-policy/")."%}
+Learn more about our [Stack update and removal policy](/infrastructure/stack-update-and-removal-policy/)."%}
 
 ## People management in Jenkins and Bitrise
 
