@@ -34,15 +34,15 @@ When using Jenkins, you can configure your Pipeline or Freestyle project, throug
 
 #### Out-of-box support for platforms
 
-Bitrise supports [native and cross-platform apps](https://devcenter.bitrise.io/getting-started/index/ "https://devcenter.bitrise.io/getting-started/index/") out of the box and detects your project type automatically: iOS, Android, Ionic, Cordova, React Native, Flutter, Xamarin, MacOS, and Expo. No need to painfully select and install machines and plugins to run your preferred app type.
+Bitrise supports [native and cross-platform apps](/getting-started/index/) out of the box and detects your project type automatically: iOS, Android, Ionic, Cordova, React Native, Flutter, Xamarin, MacOS, and Expo. No need to painfully select and install machines and plugins to run your preferred app type.
 
 Check out your apps listed under **APPS** on your Dashboard.
 
 Your code is safe with us
 
-To guarantee the security of your builds we use clean [virtual machines](https://devcenter.bitrise.io/infrastructure/virtual-machines "https://devcenter.bitrise.io/infrastructure/virtual-machines") for every builds. This means that every build runs in its own, clean virtual machine and we discard the whole virtual machine after the build finishes, erasing every file your build (except for artifacts) uses and every change you make during your build.
+To guarantee the security of your builds we use clean [virtual machines](/infrastructure/virtual-machines) for every builds. This means that every build runs in its own, clean virtual machine and we discard the whole virtual machine after the build finishes, erasing every file your build (except for artifacts) uses and every change you make during your build.
 
-Learn more about [code security](https://devcenter.bitrise.io/getting-started/code-security/ "https://devcenter.bitrise.io/getting-started/code-security/").
+Learn more about [code security](/getting-started/code-security/).
 
 ## Quick Start Guide
 
