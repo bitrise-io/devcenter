@@ -169,7 +169,7 @@ This is the main landing page where you find yourself once you start your first 
 
 The **LATEST BUILDS** tab on your Bitrise Dashboard displays all recent builds similarly to the **Build history** feature in Jenkins. You can filter for any status: successful, aborted, failed, and running but each build displays their statuses anyway.
 
-On Jenkins, build statuses are listed in the **Build Executor Status** or on the Blue Ocean **Dashboard**. When using Bitrise you get a user-friendly graphical interface right from the start whereas, with Jenkins, you have to install the plugin first. Bitrise build statuses are shown on both the **Dashboard**, and on the **Builds** page of your app.
+On Jenkins, build statuses are listed in the **Build Executor Status** or on the Blue Ocean **Dashboard**. When using Bitrise you get a user-friendly graphical interface right from the start, whereas, with Jenkins, you have to install the plugin first. Bitrise build statuses are shown on both the **Dashboard**, and on the **Builds** page of your app.
 
 **Build Queue** on Jenkins is the **Queued Builds** on Bitrise. You can schedule builds to queue them with the **Advanced** option of the [Schedule builds feature](/builds/Scheduling-Builds/#managing-a-scheduled-build).
 
@@ -183,14 +183,12 @@ What **New item** means in Jenkins, is the **adding a new app flow**, either by 
 
 ### Webhooks
 
-Bitrise makes extensive use of webhooks, which you can enable with a simple click when connecting an app to Bitrise. It all makes sense to add the webhook during the initial setup and not having to search for this functionality when you try to quickly get your app to speed.
+Bitrise makes extensive use of [webhooks](/webhooks/webhooks-index/), which you can enable with a simple click when connecting an app to Bitrise. It all makes sense to add the webhook during the initial setup and not having to search for this functionality when you try to quickly get your app to speed.
 
 [![Adding a GitHub webhook](https://devcenter.bitrise.io/img/github-webhook-1.png)](https://devcenter.bitrise.io/img/github-webhook-1.png)In short, there are two types of Webhooks:
 
 * Incoming webhooks, registered with your Git service provider, are used to automatically trigger builds on Bitrise.
 * Outgoing webhooks are used to send reports of build events to other services, such as Slack. They can be added either on the website or [via the Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks/).
-
-Learn more about [Webhooks](/webhooks/webhooks-index/).
 
 ## Jenkins plugins - Bitrise Add-ons
 
