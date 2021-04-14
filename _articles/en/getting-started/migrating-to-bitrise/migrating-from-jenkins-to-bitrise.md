@@ -81,7 +81,7 @@ There are a bunch of [cool stuff you can do with Env Vars](/tips-and-tricks/expo
 * Parameterize a build by adding custom Env Vars to a build.
 * Set up Workflow-specific Env Vars on the **Env Vars** tab to run Workflows with Env Vars that are only available for that particular Workflow.
 
-**Secrets** are a type of Environment Variables but special ones. They hide sensitive information in an encrypted format so that your private input is not exposed in the build logs or in the bitrise.yml. Secret Environment Variables, or **Secrets** in short, can be set by adding a key and the variable in the **Secrets** tab of the Workflow Editor. This is again an built-in feature of Bitrise which ensures the following:
+Secrets are a type of Environment Variables but special ones. They hide sensitive information in an encrypted format so that your private input is not exposed in the build logs or in the bitrise.yml. Secret Environment Variables, or Secrets in short, can be set by adding a key and the variable in the Secrets tab of the Workflow Editor. This is again an built-in feature of Bitrise which ensures the following:
 
 * Your secrets are not shown in the bitrise.yml.
 * Your secrets are stored encrypted.
