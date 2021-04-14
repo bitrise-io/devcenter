@@ -17,7 +17,7 @@ description: 'Go through the procedure of adding an Android app on Bitrise from 
 summary: ''
 menu:
   getting-started-main:
-    weight: 23
+    weight: 24
 
 ---
 In this guide, we'll walk you through how to add an Android app to Bitrise, what the default workflows can do, and finally how to test and deploy your app to [bitrise.io](https://www.bitrise.io/) and to Google Play Store.

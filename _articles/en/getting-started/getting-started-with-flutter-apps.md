@@ -16,7 +16,7 @@ summary: 'Flutter is a mobile app SDK that allows developers to create native ap
   to help you with all your Flutter needs.'
 menu:
   getting-started-main:
-    weight: 26
+    weight: 27
 
 ---
 Flutter is a mobile app SDK that allows developers to create native apps for both iOS and Android. [Bitrise](https://app.bitrise.io/users/sign_in) supports Flutter apps: we have dedicated Steps to help you with all your Flutter needs. This guide walks you through setting up, testing, building and deploying a simple Flutter app on Bitrise.

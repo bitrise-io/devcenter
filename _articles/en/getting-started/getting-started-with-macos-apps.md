@@ -3,7 +3,7 @@ title: Getting started with MacOS apps
 date: 2018-11-16T11:51:09.000+00:00
 menu:
   getting-started-main:
-    weight: 33
+    weight: 34
 
 ---
 In this guide, we'll walk you through how to add a MacOS app to Bitrise, how to run Xcode tests, manage your code signing files and deploy the app to bitrise.io and to the App Store.

@@ -10,7 +10,7 @@ description: 'Upload files to use in your build, including code signing files. D
   files generated during a build. Use encryption on Bitrise to secure your files. '
 menu:
   getting-started-main:
-    weight: 19
+    weight: 20
     title: Managing files on Bitrise
 
 ---
