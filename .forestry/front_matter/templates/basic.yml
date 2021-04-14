@@ -131,6 +131,7 @@ pages:
 - _articles/en/getting-started/getting-started-with-react-native-apps.md
 - _articles/en/getting-started/index.md
 - _articles/en/getting-started/managing-files-on-bitrise.md
+- _articles/en/getting-started/migrating-to-bitrise/migrating-to-bitrise.md
 - _articles/en/getting-started/signing-up-to-bitrise.md
 - _articles/en/infrastructure/available-stacks.md
 - _articles/en/infrastructure/customisable-enterprise-build-platforms.md
