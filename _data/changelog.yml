@@ -1,7 +1,8 @@
 ---
 - title: Migrating from Jenkins to Bitrise
-  modified: 2021-04-14 00:00:00 +0200
-  changelog: Learn how you can quickly migrate your project from Jenkins to Bitrise.
+  modified: 2021-04-14T00:00:00.000+02:00
+  changelog: Learn how you can quickly migrate your project from Jenkins to Bitrise
+    and what Bitrise offers in comparison to Jenkins.
   type: new
   url: "/getting-started/migrating-to-bitrise/migrating-from-jenkins-to-bitrise/"
 - title: Using the Generic File Storage
