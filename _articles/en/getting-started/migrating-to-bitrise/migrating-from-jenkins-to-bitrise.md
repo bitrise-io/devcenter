@@ -36,7 +36,7 @@ When using Jenkins, you can configure your Pipeline or Freestyle project, throug
 
 #### Out-of-box support for platforms
 
-Bitrise supports [native and cross-platform apps](/getting-started/index/) out of the box and detects your project type automatically: [iOS](/getting-started/getting-started-with-ios-apps/), [Android](/getting-started/getting-started-with-android-apps/), [Ionic / Cordova](/getting-started/getting-started-with-ionic-cordova-apps/), [React Native](/getting-started/getting-started-with-react-native-apps/), [Flutter](/getting-started/getting-started-with-flutter-apps/), [Xamarin](/getting-started/getting-started-with-xamarin-apps/), [MacOS](/getting-started/getting-started-with-macos-apps/), and [Expo](/getting-started/getting-started-with-expo-apps/). No need to painfully select and install machines and plugins to run your preferred app type.
+Bitrise supports [native and cross-platform apps](/getting-started/index/) out-of-the-box and detects your project type automatically: [iOS](/getting-started/getting-started-with-ios-apps/), [Android](/getting-started/getting-started-with-android-apps/), [Ionic / Cordova](/getting-started/getting-started-with-ionic-cordova-apps/), [React Native](/getting-started/getting-started-with-react-native-apps/), [Flutter](/getting-started/getting-started-with-flutter-apps/), [Xamarin](/getting-started/getting-started-with-xamarin-apps/), [MacOS](/getting-started/getting-started-with-macos-apps/), and [Expo](/getting-started/getting-started-with-expo-apps/). No need to painfully select and install machines and plugins to run your preferred app type.
 
 Check out your apps listed under **APPS** on your Dashboard.
 
