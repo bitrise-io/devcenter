@@ -113,7 +113,7 @@ What’s more: When editing your Workflow in the **Workflow Editor**, you can ea
 
 You can create your own custom Step too and store in a repository, then you can reference it by a URL in your Workflow.
 
-{% include message_box.html type="info" title="A jolly joker Step: Bitrise Script Step" content="Do you have a custom script you’d like to run in your Workflow? Select the **Script** Step from the Step Library and add your custom code to the **Script content** input. Learn more about \[configuring the Step and some troubleshooting tips(https://www.bitrise.io/integrations/steps/script)%}.
+{% include message_box.html type="info" title="A jolly joker Step: Bitrise Script Step" content="Do you have a custom script you’d like to run in your Workflow? Select the **Script** Step from the Step Library and add your custom code to the **Script content** input. Learn more about [how to configure the Step and some troubleshooting tips](https://www.bitrise.io/integrations/steps/script). %}
 
 Discover our Steps on our [Integrations](https://www.bitrise.io/integrations/steps) page or right when editing your Workflow.
 
