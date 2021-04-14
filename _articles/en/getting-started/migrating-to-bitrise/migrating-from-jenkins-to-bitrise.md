@@ -2,7 +2,10 @@
 tag: []
 title: Migrating from Jenkins to Bitrise
 redirect_from: []
-summary: ''
+summary: If you have been looking to switch from Jenkins to Bitrise to speed up your
+  mobile CI/CD flow and ease dedicated manpower, look no further. This guide introduces
+  the most important Bitrise features and how you can quickly settle into Bitrise
+  from your Jenkins world.
 menu:
   migrating-to-bitrise:
     weight: 1
@@ -217,7 +220,7 @@ If you have been using a Jenkinsfile (Pipeline project) in Jenkins and and consi
 
 ### Bitrise sample apps and their bitrise.yml files
 
-Here you can find iOS, Android and cross-platform sample projects. Check their bitrise.yml file to understand their setup. We hope you can use them as jumping off points when crafting your first Bitrise project.
+Here you can find iOS, Android and cross-platform sample projects. Check their `bitrise.yml` file to understand their setup. We hope you can use them as jumping off points when crafting your first Bitrise project.
 
 * [iOS sample app](https://github.com/bitrise-io/Bitrise-iOS-Sample)
 * [Android sample app](https://github.com/bitrise-io/Bitrise-Android-Sample)
@@ -249,7 +252,7 @@ What you have on the **People** page of Jenkins can be found in two places on Bi
 
 The purpose of Organizations is to make it easier to manage several people working on different apps on Bitrise. [Organizations can own an unlimited number of apps](/team-management/organizations/managing-apps/), and Organization owners can assign Organization members to work on different apps as they see fit.
 
-A **Team** on Bitrise means all the users who work on the same app: they make up the app’s team, and you can manage them on the app’s Teams tab
+A **Team** on Bitrise means all the users who work on the same app: they make up the app’s team, and you can manage them on the app’s **Teams** tab.
 
 On the **Groups** tab you can manage Org members such as delete, add a new member to the group, assign a group to apps and rename a group. On the **People** tab you can see who is already added to the Org and, if needed, you can remove a member from all groups of the Organization.
 
