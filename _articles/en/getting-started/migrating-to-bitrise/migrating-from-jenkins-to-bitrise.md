@@ -263,15 +263,15 @@ While in Jenkins you have to install an authorization plugin for SSO management,
 
 Learn more about SAML SSO setup:
 
-* SAML SSO in Organizations [https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/](https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/ "https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/")
-  * Setting up Google SSO for Bitrise [https://devcenter.bitrise.io/team-management/organizations/setting-up-google-sso-for-bitrise/](https://devcenter.bitrise.io/team-management/organizations/setting-up-google-sso-for-bitrise/ "https://devcenter.bitrise.io/team-management/organizations/setting-up-google-sso-for-bitrise/")
-  * Setting up AD FS SSO for Bitrise [https://devcenter.bitrise.io/team-management/organizations/setting-up-ad-fs-sso-for-bitrise/](https://devcenter.bitrise.io/team-management/organizations/setting-up-ad-fs-sso-for-bitrise/ "https://devcenter.bitrise.io/team-management/organizations/setting-up-ad-fs-sso-for-bitrise/")
-  * Setting up Azure AD SSO for Bitrise [https://devcenter.bitrise.io/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/](https://devcenter.bitrise.io/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/ "https://devcenter.bitrise.io/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/")
-  * Setting up Idaptive SAML SSO for Bitrise [https://devcenter.bitrise.io/team-management/organizations/setting-up-auth0-sso-for-bitrise/](https://devcenter.bitrise.io/team-management/organizations/setting-up-auth0-sso-for-bitrise/ "https://devcenter.bitrise.io/team-management/organizations/setting-up-auth0-sso-for-bitrise/")
-  * Setting up Okta SSO for Bitrise [https://devcenter.bitrise.io/team-management/organizations/setting-up-okta-sso-for-bitrise/](https://devcenter.bitrise.io/team-management/organizations/setting-up-okta-sso-for-bitrise/ "https://devcenter.bitrise.io/team-management/organizations/setting-up-okta-sso-for-bitrise/")
-  * Setting up Ping Identity SSO for Bitrise [https://devcenter.bitrise.io/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise/](https://devcenter.bitrise.io/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise/ "https://devcenter.bitrise.io/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise/")
-  * Setting up OneLogin SSO for Bitrise [https://devcenter.bitrise.io/team-management/organizations/setting-up-onelogin-sso-for-bitrise/](https://devcenter.bitrise.io/team-management/organizations/setting-up-onelogin-sso-for-bitrise/ "https://devcenter.bitrise.io/team-management/organizations/setting-up-onelogin-sso-for-bitrise/")
+* [SAML SSO in Organizations](/team-management/organizations/saml-sso-in-organizations/)
+* [Setting up Google SSO for Bitrise](/team-management/organizations/setting-up-google-sso-for-bitrise/)
+* [Setting up AD FS SSO for Bitrise](/team-management/organizations/setting-up-ad-fs-sso-for-bitrise/)
+* [Setting up Azure AD SSO for Bitrise](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/)
+* [Setting up Idaptive SAML SSO for Bitrise](/team-management/organizations/setting-up-auth0-sso-for-bitrise/)
+* [Setting up Okta SSO for Bitrise](/team-management/organizations/setting-up-okta-sso-for-bitrise/)
+* [Setting up Ping Identity SSO for Bitrise](/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise/) 
+* [Setting up OneLogin SSO for Bitrise](/team-management/organizations/setting-up-onelogin-sso-for-bitrise/)
 
 ## Have some tips and tricks?
 
-If you have some tips and tricks on migrating from Jenkins to Bitrise and you believe the rest of the community from benefit from it, leave us a [pull request](https://github.com/bitrise-io/devcenter/ "https://github.com/bitrise-io/devcenter/") and we will be in touch with you.
+If you have some tips and tricks on migrating from Jenkins to Bitrise and you believe the rest of the community from benefit from it, leave us a [pull request](https://github.com/bitrise-io/devcenter/) and we will be in touch with you.
