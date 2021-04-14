@@ -12,7 +12,7 @@ description: If your Bitrise app is public, anyone who has the build URL can see
   anyone can click on the build URL and view the build logs.
 menu:
   getting-started-main:
-    weight: 15
+    weight: 16
 
 ---
 Open source projects are great - we all love them! They can be a pain to maintain, however, especially with CI/CD in the picture. That's why we have introduced the Public Apps feature for Bitrise: to make everyone's life a lot easier!
