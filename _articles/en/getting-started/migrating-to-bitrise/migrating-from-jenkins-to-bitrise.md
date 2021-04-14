@@ -130,13 +130,11 @@ Learn what else you can do with Steps:
 
 ## Jenkins Pipeline - Bitrise Workflow
 
-A Jenkins Pipeline is equal to a Bitrise [Workflow](https://devcenter.bitrise.io/steps-and-workflows/getting-started-workflows/ "https://devcenter.bitrise.io/steps-and-workflows/getting-started-workflows/"), but the Bitrise Workflows are much easier to manage: you can quickly create new Workflows based on existing ones, chain multiple Workflows together in a single build, or delete Workflows that you no longer need
+A Jenkins Pipeline is equal to a Bitrise [Workflow](/steps-and-workflows/getting-started-workflows/), but the Bitrise Workflows are much easier to manage: you can quickly create new Workflows based on existing ones, chain multiple Workflows together in a single build, or delete Workflows that you no longer need.
 
 A Bitrise **Workflow** is a series of Steps, such as test, code sign, build APK/ ipa and deploy. When you add an app to Bitrise, a primary Workflow, created based on the project scanner’s findings, gets kicked off/triggered automatically.
 
-Tips on using Workflows on Bitrise
-
-You can have several Workflows for a certain project based on the for what purpose you’d want to run the Workflow. For example:
+You can have several Workflows for a certain project. For example:
 
 * For any PR events, create a Workflow that, once triggered, runs quickly and only executes basic tests such as smoke tests.
 * For a meatier Workflow, that runs all your test, we recommend creating another Workflow and run it overnight or schedule it on 6/12/24 hour interval.
@@ -147,15 +145,15 @@ The **Workflow Editor** is the main place for configuring your Workflow. Jenkins
 
 The Workflow Editor has other powerful features built in to assist you with mobile development:
 
-* [Code signing](https://devcenter.bitrise.io/code-signing/code-signing-index/ "https://devcenter.bitrise.io/code-signing/code-signing-index/"): one place to store and manage all your code signing files which then will be used by the Workflow. Again, no need for installing a code signing tool first like in Jenkins. You can store any custom file here too (in the **GENERIC FILE STORAGE** section) which the [Generic File Storage](https://www.bitrise.io/integrations/steps/generic-file-storage "https://www.bitrise.io/integrations/steps/generic-file-storage") Step can download.
-* [Secrets](https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/ "https://devcenter.bitrise.io/builds/env-vars-secret-env-vars/"): check out your app’s secret Environment Variables here or add them.
-* [Env Vars](https://devcenter.bitrise.io/builds/available-environment-variables/ "https://devcenter.bitrise.io/builds/available-environment-variables/"): there is no confusion of secrets and Env Vars in Bitrise. They are neatly organized into separate tabs so that you know where’s what. Add App Env Vars or Workflow specific Env Vars here. You can also reference Secrets as Env Vars with $.
-* [Triggers](https://devcenter.bitrise.io/builds/triggering-builds/triggering-builds-index/ "https://devcenter.bitrise.io/builds/triggering-builds/triggering-builds-index/"): You can configure triggers: code push events, pull requests, or tags can all be set up to automatically start builds on Bitrise.
-* [Stack](https://devcenter.bitrise.io/infrastructure/available-stacks/ "https://devcenter.bitrise.io/infrastructure/available-stacks/"): Check out the default stack of your app, select a new one from a dropdown menu or select a specific stack for one of your Workflows.
+* [Code signing](/code-signing/code-signing-index/): one place to store and manage all your code signing files which then will be used by the Workflow. Again, no need for installing a code signing tool first like in Jenkins. You can store any custom file here too (in the **GENERIC FILE STORAGE** section) which the [Generic File Storage](https://www.bitrise.io/integrations/steps/generic-file-storage) Step can download.
+* [Secrets](/builds/env-vars-secret-env-vars/): check out your app’s secret Environment Variables here or add them.
+* [Env Vars](/builds/available-environment-variables/): there is no confusion of secrets and Env Vars in Bitrise. They are neatly organized into separate tabs so that you know where’s what. Add App Env Vars or Workflow specific Env Vars here. You can also reference Secrets as Env Vars with $.
+* [Triggers](/builds/triggering-builds/triggering-builds-index/): You can configure triggers: code push events, pull requests, or tags can all be set up to automatically start builds on Bitrise.
+* [Stack](/infrastructure/available-stacks/): Check out the default stack of your app, select a new one from a dropdown menu or select a specific stack for one of your Workflows.
 
 There’s a bunch of other Workflow management tasks you can do with Workflow, check them out:
 
-* Default Workflows [https://devcenter.bitrise.io/steps-and-workflows/default-workflows/](https://devcenter.bitrise.io/steps-and-workflows/default-workflows/ "https://devcenter.bitrise.io/steps-and-workflows/default-workflows/")
+* About default Workflows [https://devcenter.bitrise.io/steps-and-workflows/default-workflows/](https://devcenter.bitrise.io/steps-and-workflows/default-workflows/ "https://devcenter.bitrise.io/steps-and-workflows/default-workflows/")
 * Creating a Workflow [https://devcenter.bitrise.io/steps-and-workflows/creating-workflows/](https://devcenter.bitrise.io/steps-and-workflows/creating-workflows/ "https://devcenter.bitrise.io/steps-and-workflows/creating-workflows/")
 * Managing Workflows [https://devcenter.bitrise.io/steps-and-workflows/managing-workflows/](https://devcenter.bitrise.io/steps-and-workflows/managing-workflows/ "https://devcenter.bitrise.io/steps-and-workflows/managing-workflows/")
 * Copying one Workflow from one app to another [https://devcenter.bitrise.io/steps-and-workflows/copying-workflows-from-one-app-to-another/](https://devcenter.bitrise.io/steps-and-workflows/copying-workflows-from-one-app-to-another/ "https://devcenter.bitrise.io/steps-and-workflows/copying-workflows-from-one-app-to-another/")
