@@ -46,7 +46,7 @@ This Quick Start Guide helps you start your first build on Bitrise with minimum 
 2. [Connect a repo ](/getting-started/adding-a-new-app/) and run an automatically configured standard Workflow on any project.
 3. Once you’ve looked through the generated YML, make the changes you need: if you’re opting for a custom code, pop it into our [Script Step](https://www.bitrise.io/integrations/steps/script), and run your first build. Or find the Steps in our [Step Library](/getting-started/signing-up-to-bitrise/) to replicate your Jenkinsfile’s behaviors.
 4. After getting to your new Workflow’s first green build, setup other jobs based on, for example, [triggers](/builds/triggering-builds/triggering-builds-index/) and [scheduled builds](/builds/Scheduling-Builds/).
-5. Optimize your Workflows with Steps like Bitrise.io Cache Pull and Bitrise.io Cache Push
+5. Optimize your Workflows with Steps like [Bitrise.io Cache Pull](https://app.bitrise.io/integrations/steps/cache-pull) and [Bitrise.io Cache Push](https://app.bitrise.io/integrations/steps/cache-push).
 6. Need help? [Contact us](https://support.bitrise.io/hc/en-us).
 
 If you are interested in the main Jenkins-Bitrise differences and how Bitrise enhance your mobile development process, then browse through the guide below.
