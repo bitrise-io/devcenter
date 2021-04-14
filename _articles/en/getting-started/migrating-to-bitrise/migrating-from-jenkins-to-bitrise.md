@@ -232,7 +232,7 @@ A stack is the type of virtual machine we use to run your build. For example, fo
 
 ### How do stacks work on Bitrise?
 
-When you add your app to Bitrise, our project selector automatically detects the type of your project and based on its platform type, adds a default stack to it. Your first build will run on this stack, which is a virtual machine with all the required tools pre-installed on it. Should you wish to use another stack, you can simply select it from the **Default Stack** dropdown menu on the **Stack** tab. If you click the **More information** link, you can see the preinstalled tools with their versions.![](/img/stack.png)
+When you add your app to Bitrise, our project selector automatically detects the type of your project and based on its platform type, adds a default stack to it. Your first build will run on this stack, which is a virtual machine with all the required tools pre-installed on it. Should you wish to use another stack, you can simply select it from the **Default Stack** dropdown menu on the **Stack** tab. If you click the **More information** link, you can see the preinstalled tools with their versions.!
 
 We support the latest Xcode version shortly after its official release.
 
