@@ -117,16 +117,14 @@ Discover our Steps on our [Integrations](https://www.bitrise.io/integrations/ste
 
 Learn what else you can do with Steps:
 
-* Adding and removing Steps [https://devcenter.bitrise.io/steps-and-workflows/adding-removing-steps/](https://devcenter.bitrise.io/steps-and-workflows/adding-removing-steps/ "https://devcenter.bitrise.io/steps-and-workflows/adding-removing-steps/")
-* Step versions and inputs [https://devcenter.bitrise.io/steps-and-workflows/step-inputs/](https://devcenter.bitrise.io/steps-and-workflows/step-inputs/ "https://devcenter.bitrise.io/steps-and-workflows/step-inputs/")
-* Skipping Steps [https://devcenter.bitrise.io/steps-and-workflows/skipping-steps/](https://devcenter.bitrise.io/steps-and-workflows/skipping-steps/ "https://devcenter.bitrise.io/steps-and-workflows/skipping-steps/")
-* Enabling or disabling a Step conditionally [https://devcenter.bitrise.io/steps-and-workflows/disable-a-step-by-condition/](https://devcenter.bitrise.io/steps-and-workflows/disable-a-step-by-condition/ "https://devcenter.bitrise.io/steps-and-workflows/disable-a-step-by-condition/")
-* Editing a Step in bitrise.yml [https://devcenter.bitrise.io/bitrise-cli/steps/](https://devcenter.bitrise.io/bitrise-cli/steps/ "https://devcenter.bitrise.io/bitrise-cli/steps/")
-* For contributors who wish to create and submit a Step to Bitrise [https://devcenter.bitrise.io/contributors/contributors-index/](https://devcenter.bitrise.io/contributors/contributors-index/ "https://devcenter.bitrise.io/contributors/contributors-index/")
+* [Adding and removing Steps](/steps-and-workflows/adding-removing-steps/) 
+* [Step versions and inputs](/steps-and-workflows/step-inputs/)
+* [Skipping Steps](/steps-and-workflows/skipping-steps/)
+* [Enabling or disabling a Step conditionally](/steps-and-workflows/disable-a-step-by-condition/) 
+* [Editing a Step in bitrise.yml]() 
+* [For contributors who wish to create and submit a Step to Bitrise ](/contributors/contributors-index/)
 
-Using fastlane in Jenkins?
-
-You can easily put your fastlane lanes to work on Bitrise too. All you have to do is add a Bitrise’s [**Fastlane**](https://www.bitrise.io/integrations/steps/fastlane "https://www.bitrise.io/integrations/steps/fastlane") Step to your Workflow and add your lane name into the Step. Start a build and your lane will run on Bitrise.
+{% include message_box.html type="info" title="Using fastlane in Jenkins?" content="You can easily put your fastlane lanes to work on Bitrise too. All you have to do is add a Bitrise’s [**Fastlane**](https://www.bitrise.io/integrations/steps/fastlane "https://www.bitrise.io/integrations/steps/fastlane") Step to your Workflow and add your lane name into the Step. Start a build and your lane will run on Bitrise."%}
 
 ## Jenkins Pipeline - Bitrise Workflow
 
