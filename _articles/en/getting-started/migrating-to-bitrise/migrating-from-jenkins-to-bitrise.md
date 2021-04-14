@@ -170,9 +170,11 @@ On Jenkins, build statuses are listed in the **Build Executor Status** or on the
 
 On the right side of the Dashboard, you can see all your apps under **APPS**.
 
+![](/img/dashboard.png)
+
 ### Adding a new app to Bitrise
 
-What **New item** means in Jenkins, is the **adding a new app flow**, either by the [web UI](https://devcenter.bitrise.io/getting-started/adding-a-new-app/ "https://devcenter.bitrise.io/getting-started/adding-a-new-app/") or from [any CLI](https://devcenter.bitrise.io/getting-started/adding-an-app-from-a-cli/ "https://devcenter.bitrise.io/getting-started/adding-an-app-from-a-cli/"). This is a highly automated flow where minimal configuration is needed from you and literally within a minute your new build kicks off. Our flow takes you through all the important phases: setting privacy, connecting your repository, setting up repository access, choosing a branch, configuring your app, setting up your build configuration and [setting up a webhook](https://devcenter.bitrise.io/webhooks/adding-webhooks/ "https://devcenter.bitrise.io/webhooks/adding-webhooks/").
+What **New item** means in Jenkins, is the **adding a new app flow**, either by the [web UI](/getting-started/adding-a-new-app/) or from [any CLI](/getting-started/adding-an-app-from-a-cli/) on Bitrise. This is a highly automated flow where minimal configuration is needed from you and literally within a minute your new build starts. Our flow takes you through all the important phases: setting privacy, connecting your repository, setting up repository access, choosing a branch, configuring your app, setting up your build configuration and [setting up a webhook](/webhooks/adding-webhooks/).
 
 ### Webhooks
 
@@ -181,9 +183,9 @@ Bitrise makes extensive use of webhooks, which you can enable with a simple clic
 In short, there are two types of Webhooks:
 
 * Incoming webhooks, registered with your Git service provider, are used to automatically trigger builds on Bitrise.
-* Outgoing webhooks are used to send reports of build events to other services, such as Slack. They can be added either on the website or [via the Bitrise API](https://devcenter.bitrise.io/api/incoming-and-outgoing-webhooks/#outgoing-webhooks/ "https://devcenter.bitrise.io/api/incoming-and-outgoing-webhooks/#outgoing-webhooks/").
+* Outgoing webhooks are used to send reports of build events to other services, such as Slack. They can be added either on the website or [via the Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks/).
 
-Learn more about [Webhooks](https://devcenter.bitrise.io/webhooks/webhooks-index/ "https://devcenter.bitrise.io/webhooks/webhooks-index/").
+Learn more about [Webhooks](/webhooks/webhooks-index/).
 
 ## Jenkins plugins - Bitrise Add-ons
 
