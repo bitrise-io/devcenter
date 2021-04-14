@@ -22,7 +22,9 @@ Bitrise takes care of all of the above. We have a vast array of automatized Step
 
 Check out the world of automated mobile development with Bitrise!
 
-{% include message_box.html type="info" title="Looking for more evidence on how Bitrise helped other companies switching from Jenkins?" content="Learn how [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins) have switched from Jenkins to Bitrise. "%}
+{% include message_box.html type="info" title="Looking for more evidence on how Bitrise helped other companies switching from Jenkins?" content="
+- Learn how [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins) have switched from Jenkins to Bitrise. 
+- [Mobile CI after Jenkins: 6 Lessons from engineers who made the switch](https://www.bitrise.io/downloads/mobile-ci-after-jenkins-3?utm_source=website&utm_medium=mainpage&utm_campaign=Jenkins2021)"%}
 
 ## Projects on Jenkins and Bitrise
 
