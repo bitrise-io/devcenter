@@ -4,7 +4,7 @@ title: Migrating from Jenkins to Bitrise
 redirect_from: []
 summary: ''
 menu:
-  migrating-t-bitrise:
+  migrating-to-bitrise:
     weight: 1
     title: Migrating from Jenkins to Bitrise
 
