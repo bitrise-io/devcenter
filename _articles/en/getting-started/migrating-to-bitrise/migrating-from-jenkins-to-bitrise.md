@@ -32,7 +32,7 @@ A project on Bitrise is the synonym of an application. When you [add an app to B
 
 Most Jenkins users work with Jenkins Pipeline or Freestyle project (besides other available project types). There is no such project difference in Bitrise. Every time you connect an app to Bitrise, we automatically create a basic configuration file, called [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/), and immediately trigger a build with that configuration. Should you need to modify your project’s repository URL (due to, for example, a repository name or URL change) you can easily change it on your app’s **Settings** page.
 
-When using Jenkins, you can configure your Pipeline or Freestyle project, through the classic UI, to some extent, or more so through the Blue Ocean plugin or directly through the Jenkinsfile. To get a more enjoyable developer experience, you might lean onto using Blue Ocean, depending on your preference. If using the Blue Ocean plugin, you first have to install it. In Bitrise, there is no need to install anything to enjoy an intuitive, mobile developer friendly UI that visualizes your Workflow with the necessary tools right off the bat at your fingertips.
+When using Jenkins, you can configure your Pipeline or Freestyle project, through the classic UI, to some extent, or more so through the Blue Ocean plugin or directly through the Jenkinsfile. To get a more enjoyable developer experience, you might lean onto using Blue Ocean, depending on your preference. If using the Blue Ocean plugin, you first have to install it. In Bitrise, there is no need to install anything to enjoy an intuitive, mobile developer friendly UI that visualizes your Workflow with the necessary tools right off the bat.
 
 #### Out-of-box support for platforms
 
