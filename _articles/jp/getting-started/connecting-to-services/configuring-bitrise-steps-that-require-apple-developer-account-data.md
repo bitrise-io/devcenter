@@ -4,7 +4,7 @@ title: Configuring Steps that require Apple Developer account data
 redirect_from: []
 summary: ''
 menu:
-  getting-started-main:
+  connecting-to-services:
     weight: 9
 
 ---
