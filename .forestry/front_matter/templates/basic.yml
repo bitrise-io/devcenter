@@ -309,6 +309,7 @@ pages:
 - _articles/jp/faq/how-can-i-git-checkout-from-a-detached-head-state.md
 - _articles/jp/getting-started/bitriseへのサインアップ.md
 - _articles/jp/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data.md
+- _articles/jp/getting-started/connecting-to-services/connecting-to-services.md
 - _articles/jp/getting-started/getting-started-with-expo-apps.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/jp/infrastructure/customisable-enterprise-build-platforms.md
