@@ -6,7 +6,7 @@ redirect_from:
 - "/jp/getting-started/adding-a-new-app/connecting-account-bitrise"
 - "/jp/getting-started/signing-up/connecting-account-bitrise/"
 menu:
-  getting-started-main:
+  connecting-to-services:
     weight: 8
 
 ---
