@@ -1,4 +1,10 @@
 ---
+- title: 'Enforcing SAML SSO on an Organization '
+  modified: 2021-04-15 00:00:00 +0200
+  changelog: Added a note on how to add a Bitrise user to an Org where SAML SSO is
+    enforced.
+  type: update
+  url: "/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization"
 - title: Migrating from Jenkins to Bitrise
   modified: 2021-04-14T00:00:00.000+02:00
   changelog: Learn how you can quickly migrate your project from Jenkins to Bitrise
