@@ -48,6 +48,7 @@ algolia:
   application_id: HI1538U2K4
   index_name: devcenter
   files_to_exclude:
+  - _articles/en/team-management/teams-plan-trial-faq.md
   - _articles/en/team-management/credit-based-hobby-plan-faq.md
   - forestry-help*
   - _articles/en/reviews/**/*.md
