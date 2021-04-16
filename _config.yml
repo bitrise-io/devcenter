@@ -7,8 +7,8 @@ description: Bitrise is a Continuous Integration and Delivery (CI/CD) Platform a
   they finish coding till the app lands in an app store.
 baseurl: ''
 url: https://devcenter.bitrise.io
-twitter_username: jekyllrb
-github_username: jekyll
+twitter_username: ''
+github_username: ''
 markdown: kramdown
 theme: minima
 plugins:
