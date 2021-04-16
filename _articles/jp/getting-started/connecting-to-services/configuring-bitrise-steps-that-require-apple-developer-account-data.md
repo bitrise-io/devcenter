@@ -18,7 +18,7 @@ Your Workflow may contain Steps that need information from the Apple service you
 * [Deploy to iTunes Connect - Application Loader](https://www.bitrise.io/integrations/steps/deploy-to-itunesconnect-application-loader)
 * [Fastlane](https://www.bitrise.io/integrations/steps/fastlane)
 
-To connect these Steps with the Apple service you'd like to use while your build runs on Bitrise, you need to provide authentication data to Bitrise and select the established authentication method for your app.
+To connect these Steps with the Apple service you wish to use while your build runs on Bitrise, you need to provide authentication data to Bitrise and select the established authentication method for your app.
 
 You can authenticate with Apple’s official API key or with Apple ID and password. To determine which authentication to use, check out Steps that require connecting to Apple Services.
 

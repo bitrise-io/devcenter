@@ -17,7 +17,7 @@ Just trigger a build! Each build will use a certain amount of credits per minute
 
 ## Do unused credits roll over to future months?
 
-Our credits do not roll over month-to-month. You will start every monthly cycle with the same amount of credits.
+The credits do not roll over month-to-month. You will start every monthly cycle with the same amount of credits.
 
 ## What happens if I run out of credits?
 
