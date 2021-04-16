@@ -12,7 +12,7 @@ description: In this guide we discuss how to set up, test, code sign and deploy 
   React Native project built with the Expo CLI.
 menu:
   getting-started-main:
-    weight: 36
+    weight: 34
 
 ---
 {% include not_translated_yet.html %}

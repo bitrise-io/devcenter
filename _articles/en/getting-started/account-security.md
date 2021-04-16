@@ -10,7 +10,7 @@ description: Bitrise supports two-factor authentication for every user, and SAML
 summary: ''
 menu:
   getting-started-main:
-    weight: 14
+    weight: 12
 
 ---
 ## Enabling Two-factor authentication

@@ -8,7 +8,7 @@ tag: []
 description: ''
 menu:
   getting-started-main:
-    weight: 28
+    weight: 26
     title: Flutter アプリの開始
 
 ---
