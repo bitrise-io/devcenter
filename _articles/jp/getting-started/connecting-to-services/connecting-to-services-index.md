@@ -3,6 +3,7 @@ tag: []
 title: Connecting to services
 redirect_from: []
 summary: ''
+menu:
   getting-started-main:
     identifier: connecting-to-services
     weight: 4
