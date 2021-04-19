@@ -1,6 +1,6 @@
 ---
 tag: []
-title: Configuring Steps that require Apple Developer account data
+title: Configuring Bitrise Steps that require Apple Developer account data
 redirect_from: []
 summary: ''
 menu:
