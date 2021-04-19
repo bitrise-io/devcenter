@@ -3,6 +3,9 @@ tag: []
 title: Bitrise Steps requiring Apple authentication
 redirect_from: []
 summary: ''
+menu:
+  connecting-to-services:
+    weight: 
 
 ---
 In this guide we list all the Steps that require authentication and the authentication methods that you can choose from depending on your project’s requirement.
