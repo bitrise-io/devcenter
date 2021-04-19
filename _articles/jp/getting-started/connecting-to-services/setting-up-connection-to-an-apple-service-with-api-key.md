@@ -39,4 +39,4 @@ The Step is now able to connect to the App Store Connect or the Apple Developer 
 
 ### What's next?
 
-Check out the [Steps that use the official API key authentication](/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/).
+Check out [Steps that use the official API key authentication](/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/).
