@@ -5,8 +5,7 @@ redirect_from: []
 summary: ''
 menu:
   connecting-to-services:
-    weight: 9
-    title: Configuring Bitrise Steps that require Apple Developer account data
+    weight: 4
 
 ---
 {% include not_translated_yet.html %}

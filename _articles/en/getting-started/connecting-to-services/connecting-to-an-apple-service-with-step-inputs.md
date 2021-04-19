@@ -9,7 +9,7 @@ redirect_from: []
 summary: ''
 menu:
   connecting-to-services:
-    weight: 6
+    weight: 7
     title: Connecting to an Apple service with Step inputs
 
 ---
