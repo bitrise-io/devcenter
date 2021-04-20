@@ -5,7 +5,7 @@ redirect_from: []
 summary: ''
 menu:
   connecting-to-services:
-    weight: 
+    weight: 6
 
 ---
 

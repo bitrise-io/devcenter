@@ -5,7 +5,7 @@ redirect_from: []
 summary: ''
 menu:
   connecting-to-services:
-    weight: 4
+    weight: 3
 
 ---
 {% include not_translated_yet.html %}
