@@ -8,6 +8,9 @@ menu:
     weight: 
 
 ---
+
+{% include not_translated_yet.html %}
+
 Connecting to an Apple service (such as the App Store Connect or the Apple Developer Portal) with the API key requires that you first add your Apple service authentication data on our **Apple Services Connection** page, then an API key for your app.
 
 Please note that the API key authentication is the recommended way when connecting Bitrise to Apple Services. Please note that you can have 50 API key added to the **Apple Services connection** page but your project can use only one (selected in the **Team** tab).
