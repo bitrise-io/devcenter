@@ -1,6 +1,6 @@
 ---
 tag: []
-title: How to migrate to Bitrise
+title: Migrating from Bitrise
 redirect_from: []
 summary: ''
 menu:
