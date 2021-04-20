@@ -1,11 +1,11 @@
 ---
 tag: []
-title: Configuring Steps that require Apple Developer account data
+title: Apple services connection and Bitrise
 redirect_from: []
 summary: ''
 menu:
   connecting-to-services:
-    weight: 9
+    weight: 4
 
 ---
 {% include not_translated_yet.html %}

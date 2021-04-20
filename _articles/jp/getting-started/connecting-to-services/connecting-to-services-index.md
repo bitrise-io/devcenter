@@ -3,6 +3,10 @@ tag: []
 title: Connecting to services
 redirect_from: []
 summary: ''
+menu:
+  getting-started-main:
+    identifier: connecting-to-services
+    weight: 4
 
 ---
 To use all the features Bitrise offers, you might want to connect to services such as your Git provider or to any of the Apple services you use.

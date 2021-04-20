@@ -1,15 +1,11 @@
 ---
-tag:
-- apple
-- builds
-- code-signing
-- security
-title: Connecting to an Apple service with API key
+tag: []
+title: Connecting to Apple services with API key
 redirect_from: []
 summary: ''
 menu:
   connecting-to-services:
-    weight: 5
+    weight: 
 
 ---
 Connecting to an Apple service (such as the App Store Connect or the Apple Developer Portal) with the API key requires that you first add your Apple service authentication data on our **Apple Services Connection** page, then an API key for your app.
@@ -43,4 +39,4 @@ The Step is now able to connect to the App Store Connect or the Apple Developer 
 
 ### What's next?
 
-Check out the [Steps that use the official API key authentication](/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/).
+Check out [Steps that use the official API key authentication](/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/).
