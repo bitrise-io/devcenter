@@ -314,7 +314,7 @@ pages:
 - _articles/jp/getting-started/connecting-to-services/setting-up-connection-to-an-apple-service-with-api-key.md
 - _articles/jp/getting-started/connecting-to-services/steps-requiring-apple-authentication.md
 - _articles/jp/getting-started/getting-started-with-expo-apps.md
-- _articles/jp/getting-started/migrating-to-bitrise/hmigrating-from-jenkins-to-bitrise.md
+- _articles/jp/getting-started/migrating-to-bitrise/migrating-from-jenkins-to-bitrise.md
 - _articles/jp/getting-started/migrating-to-bitrise/migrating-to-bitrise-index.md
 - _articles/jp/getting-started/signing-up-to-bitrise.md
 - _articles/jp/infrastructure/customisable-enterprise-build-platforms.md
