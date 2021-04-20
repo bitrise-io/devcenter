@@ -5,10 +5,9 @@ redirect_from: []
 summary: ''
 menu:
   connecting-to-services:
-    weight: 5
+    weight: 8
 
 ---
-
 {% include not_translated_yet.html %}
 
 Connecting to an Apple service (such as the App Store Connect or the Apple Developer Portal) with the API key requires that you first add your Apple service authentication data on our **Apple Services Connection** page, then an API key for your app.

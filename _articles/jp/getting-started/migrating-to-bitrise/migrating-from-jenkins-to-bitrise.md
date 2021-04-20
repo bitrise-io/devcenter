@@ -1,14 +1,13 @@
 ---
 tag: []
-title: How to migrate from Jenkins to Bitrise
+title: Migrate from Jenkins to Bitrise
 redirect_from: []
 summary: ''
 menu:
   migrating-to-bitrise:
-    weight: 1
+    weight: 2
 
 ---
-
 {% include not_translated_yet.html %}
 
 If you have been looking to switch from [Jenkins](https://www.jenkins.io/) to Bitrise to speed up your mobile CI/CD flow and ease dedicated manpower, look no further. This guide introduces the most important Bitrise features and how you can quickly settle into Bitrise from your Jenkins world.
