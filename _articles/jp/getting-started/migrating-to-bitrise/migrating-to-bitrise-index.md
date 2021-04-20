@@ -3,7 +3,11 @@ tag: []
 title: How to migrate to Bitrise
 redirect_from: []
 summary: ''
-
+menu:
+  getting-started-main:
+    identifier: migrating-to-bitrise
+    weight: 2
+    
 ---
 Our migration guides aim to help you quickly and painlessly migrate your project from your current CI/CD provider to Bitrise.
 
