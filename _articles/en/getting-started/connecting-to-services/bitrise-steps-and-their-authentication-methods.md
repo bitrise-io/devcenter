@@ -9,7 +9,7 @@ redirect_from: []
 summary: ''
 menu:
   connecting-to-services:
-    weight: 8
+    weight: 13
 
 ---
 In this guide we list all the Steps that require authentication and the authentication methods that you can choose from depending on your project’s requirement.
