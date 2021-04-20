@@ -8,6 +8,9 @@ menu:
     weight: 
 
 ---
+
+{% include not_translated_yet.html %}
+
 In this guide we list all the Steps that require authentication and the authentication methods that you can choose from depending on your project’s requirement.
 
 ### iOS Auto Provision with App Store Connect API Step
