@@ -156,6 +156,8 @@ Once you have the SDK installed, all you need to do is deploy the apps for your 
 
 ### Installing Trace for Android
 
+{% include message_box.html type="important" title="Android version" content="The Trace SDK supports Android 5.0 and higher versions. If your app runs on an older version of Android, consider upgrading it to take full advantage of Trace!"%}
+
 You can install the Trace SDK for Android apps in two ways: you can either do it using Gradle in Android Studio, or simply by adding our dedicated Step to your Workflow.
 
 {% include collapse.html title="Installing Trace with Gradle" content="To install Trace with Gradle, you’ll need to:
