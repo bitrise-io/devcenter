@@ -3,6 +3,9 @@ tag: []
 title: How to migrate from Jenkins to Bitrise
 redirect_from: []
 summary: ''
+menu:
+  migrating-to-bitrise:
+    weight: 1
 
 ---
 
