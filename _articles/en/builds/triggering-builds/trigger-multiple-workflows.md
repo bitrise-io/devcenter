@@ -42,7 +42,7 @@ What you need:
    Feel free to use any key you wish for the secret. We recommend something simple like `$ACCESS_TOKEN`.
 3. Add the **Bitrise Start Build** Step to the `Trigger` workflow.
 
-   IMPORTANT: The **Bitrise Start Build** Step will set an Environment Variable to all builds it starts: `$SOURCE_BITRISE_BUILD_NUMBER`. This means that all builds of the app started by this tep will have the same build number despite running with different workflows.
+   Note that the **Bitrise Start Build** Step will set an Environment Variable to all builds it starts: `$SOURCE_BITRISE_BUILD_NUMBER`. Each build triggered by the Step will have their own build numbers but the source build number will be the same for all of them. 
 4. Add the secret env storing your personal access token to the **Bitrise Access Token** input of the Step: click the **Select secret variable** button and choose the key you created.
 
    ![{{ page.title }}](/img/bitrise-access-token-step.png)
