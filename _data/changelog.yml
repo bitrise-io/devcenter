@@ -1,6 +1,12 @@
 ---
+- title: Starting parallel builds with a single trigger
+  modified: 2021-04-22 16:31:00 +0200
+  changelog: Fixed the note incorrectly stating that all builds started by the Bitrise
+    Start Build Step will have the same build number.
+  type: fix
+  url: "/builds/triggering-builds/trigger-multiple-workflows/"
 - title: Getting started with Trace
-  modified: 2021-04-20 08:02:00 +0200
+  modified: 2021-04-20T08:02:00.000+02:00
   changelog: 'The Trace SDK now supports apps built with Android SDK 5.0 (API level
     21) and higher versions. '
   type: update
