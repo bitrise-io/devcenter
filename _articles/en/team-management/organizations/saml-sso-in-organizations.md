@@ -64,7 +64,7 @@ In this tutorial, we describe how Org owners can set up their SAML SSO and invit
 3. Log in to your own SAML SSO provider.
 4. Add Bitrise using the copied **Assertion Consumer Service URL (ACS URL)**. You’re generating your Single Sign-On (SSO) credentials here which you will need in a minute on Bitrise.
 5. Add the generated SSO credentials to the **SAML SSO provider Single Sign-On URL (SSO URL)** and **SAML SSO provider certificate** fields on the **Enable** **Single Sign-On** page.
-6. Click the **Configure SSO** button.![](/img/singlesingontab-1.jpg)
+6. Click the **Configure SSO** button.
 
 If you've completed the steps, you and Org members should get a verification email about SAML SSO connected to the respective Organization.
 
