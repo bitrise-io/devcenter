@@ -52,7 +52,7 @@ In this tutorial we will be jumping back and forth between Bitrise and AD FS so 
  8. Give it a name in the **File name** field and hit **Save**.![](/img/filenamesave.jpg)
  9. Have a final look at your certificate settings. If you need to modify any of those, click the backward arrow next to **Certificate Export Wizard**. Otherwise, click **Finish**. Make sure you leave the AD FS window open as you will need it in a minute.![](/img/completewizard.jpg)
 10. Open the exported certificate by a text editor and copy/paste its content to the **SAML SSO provider certificate** field or upload the file itself from your local computer.
-11. Save the settings by clicking **Configure SSO** on Bitrise.
+11. Save the settings by clicking **Configure SSO** on Bitrise.![](/img/enablesinglesignon.jpg)
     Let’s continue the SAML SSO configuration on AD FS by adding Bitrise.
 
 ### Adding Bitrise as a relying party trust to AD FS
