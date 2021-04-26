@@ -79,9 +79,9 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 11. Copy the **Login URL** and paste it to the **SAML SSO provider Single Sign-On URL** **(SSO URL)** field on Bitrise.
 12. On the **Single sign-on** page of Azure AD, scroll up a bit to the **SAML Signing Certificate** section.
 13. Click **Download** next to **Certificate (Base64)** to download the certificate to your local computer.![](/img/singlesignonsummary.jpg)
-14. Open the certificate file and copy/paste its content into the **SAML SSO provider certificate** field of Bitrise.
+14. Open the certificate file and copy/paste its content into the **SAML SSO provider certificate** field of Bitrise or you can upload the file itself from your local computer too.
 
-    You will need the full content of the file (including `----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` as well).
+    (If manually adding the content, you will need the full content (including `----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` as well).
 15. Hit **Configure SSO** on Bitrise.![](/img/sso3bitrise.jpg)
 
 You have successfully set up Bitrise as a SAML SSO app on Azure AD. Continue with [Authorizing SAML SSO](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/#authorizing-saml-sso).
