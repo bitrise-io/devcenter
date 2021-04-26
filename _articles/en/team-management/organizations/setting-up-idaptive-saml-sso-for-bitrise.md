@@ -31,11 +31,11 @@ Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you d
 
 ## Navigating to the Single Sign-On page of Bitrise
 
-If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your Idaptive and your Bitrise Org.
+If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Org.
 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
-2. The **Overview** page displays all the Org you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
-3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/singlesingontab-1.jpg)
+2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
+3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignon.jpg)
 4. Continue with [Getting configuration information from Idaptive](/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/#getting-configuration-information-from-idaptive).
 
 ## Getting configuration information from Idaptive
@@ -51,10 +51,10 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 
     ![{{ page.title }}](/img/step4b.jpg)
  5. Click **Trust** on the left menu bar and select the **Manual configuration** under **Identity Provider Configuration**.
- 6. Click the **Signing Certificate** dropdown and download the certificate. Open it with a text editor so that you can copy the full content of the certificate.
+ 6. Click the **Signing Certificate** dropdown and download the certificate. Open it with a text editor so that you can copy the full content of the certificate. You can also upload the file.
 
     ![{{ page.title }}](/img/download.jpg)
- 7. Insert it in the **SAML SSO provider certificate** text box on the **Enable Single Sign-On** page of Bitrise.
+ 7. Insert the content or upload the file itself in the **SAML SSO provider certificate** text box on the **Enable Single Sign-On** page of Bitrise.
  8. Copy the **Single Sign On URL** from the **Trust** page of Idaptive. Insert it on the **SAML SSO provider Single Sing-On URL (SSO URL)** field on the **Enable Single Sign-On** page of Bitrise.
  9. While on the **Single Sign-On page** of Bitrise, copy the **Assertion Consumer Service URL (ACS URL)** URL and click **Configure SSO**.
 10. Now let’s head back to Idaptive! Under **Service Provider Configuration** click **Manual Configuration**. Type **Bitrise** in the **SP Entity ID / Issuer / Audience** and paste the **Assertion Consumer Service URL (ACS URL)** from Bitrise to the **Assertion Consumer Service (ACS) URL** on Idaptive.

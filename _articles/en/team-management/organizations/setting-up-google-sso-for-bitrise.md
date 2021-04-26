@@ -34,11 +34,11 @@ Before connecting SAML SSO to your Organization, make sure:
 
 ## Navigating to the Single Sign-On page of Bitrise
 
-If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between G Suite and your Bitrise Org.
+If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Org.
 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
 2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
-3. On the left menu bar, click the **Single Sign-On** tab which will take you to the **Enable Single Sign-On** page.![](/img/singlesingontab-2.jpg)
+3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignon.jpg)
 4. Continue with [Getting configuration information from Google](/team-management/organizations/setting-up-google-sso-for-bitrise/#getting-configuration-information-from-google).
 
 ## Getting configuration information from G Suite and Bitrise
@@ -50,7 +50,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
  5. On the App details page add `Bitrise` as your app name. Please note it must be `Bitrise` as no other format is accepted. Click **Continue**.![](/img/addappname.jpg)
  6. On the **Getting Identity Provider details** page:
     * Copy the **SSO URL** and paste it on the **SAML SSO provider Single Sing-On URL (SSO URL)** on Bitrise.
-    * Copy the whole content of the **Certificate** field and paste it in the **SAML SSO provider certificate** field of Bitrise.![](/img/identityproviderdetails.jpg)![](/img/singlesingontab-2.jpg)
+    * Copy the whole content of the **Certificate** field and paste it in the **SAML SSO provider certificate** field of Bitrise. You can upload the **Certificate** from your local computer too.![](/img/identityproviderdetails.jpg)![](/img/enablesinglesignon.jpg)
  7. While you are in Bitrise, click the **Copy Link** button to copy the **Assertion Consumer Service URL (ACS URL)**. We will need it on G Suite in a second. Let's NOT click the **Configure SSO** button just now!
  8. Let’s head back to the **Getting Identity Provider details** page of G Suite. Click **Continue**.
  9. On the **Service provider details** page:

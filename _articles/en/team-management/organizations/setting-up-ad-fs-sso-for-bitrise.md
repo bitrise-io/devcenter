@@ -27,11 +27,12 @@ Before connecting SAML SSO to your Organization (Org) on Bitrise, make sure:
 
 ## Navigating to Single Sign On page of Bitrise
 
-If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between Auth0 provider and your Bitrise Org.
+If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Org.
 
-1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown.![](/img/ssopage1.png)
-2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview.png)
-3. On the left menu bar, click the **Single Sign-On** tab which will take you to the **Enable Single Sign-On** page.![](/img/sso3.png)
+1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
+2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
+3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignon.jpg)
+4. Continue with Configuring SAML SSO on Bitrise and AD FS.
 
 ## Configuring SAML SSO on Bitrise and AD FS
 
@@ -50,8 +51,8 @@ In this tutorial we will be jumping back and forth between Bitrise and AD FS so 
  7. Select the **Base-64 encoded X.509 (.CER)** the export file format. Click **Next**.![](/img/baseencoded.jpg)
  8. Give it a name in the **File name** field and hit **Save**.![](/img/filenamesave.jpg)
  9. Have a final look at your certificate settings. If you need to modify any of those, click the backward arrow next to **Certificate Export Wizard**. Otherwise, click **Finish**. Make sure you leave the AD FS window open as you will need it in a minute.![](/img/completewizard.jpg)
-10. Open the exported certificate by a text editor and copy/paste its content to the **SAML SSO provider certificate** field on the **Enable Single Sign-On** page of Bitrise.
-11. Save the settings by clicking **Configure SSO** on Bitrise.![](/img/configuresso-1.jpg)
+10. Open the exported certificate by a text editor and copy/paste its content to the **SAML SSO provider certificate** field or upload the file itself from your local computer.
+11. Save the settings by clicking **Configure SSO** on Bitrise.![](/img/enablesinglesignon.jpg)
     Let’s continue the SAML SSO configuration on AD FS by adding Bitrise.
 
 ### Adding Bitrise as a relying party trust to AD FS

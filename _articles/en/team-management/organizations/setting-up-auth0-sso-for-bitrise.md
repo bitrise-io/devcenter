@@ -25,11 +25,11 @@ Before connecting SAML SSO to your Organization, make sure:
 
 ## Navigating to the Single Sign-On page of Bitrise
 
-If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between Auth0 provider and your Bitrise Org.
+If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Org.
 
-1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown.![](/img/ssopage1.png)
-2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview.png)
-3. On the left menu bar, click the **Single Sign-On** tab which will take you to the **Enable Single Sign-On** page.![](/img/sso3.png)
+1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
+2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
+3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignon.jpg)
 4. Continue with [Setting up SAML SSO connection between Auth0 and Bitrise](/team-management/organizations/setting-up-auth0-sso-for-bitrise/#setting-up-saml-sso-connection-between-auth0-and-bitrise).
 
 ## Setting up SAML SSO connection between Auth0 and Bitrise
@@ -43,7 +43,7 @@ You first create a regular web application for Bitrise on Auth0, enable it, then
 3. On the **Create application** window, type Bitrise in the **Name** field. In the **Choose application type** select **Regular Web Applications**, and click the **Create** button.![](/img/choose-app-type.jpg)
 4. You are landing on your newly created Bitrise app’s **Quick Start** page. Click the **Addons** tab. Toggle the **SAML2 WEB APP**’s switch to the right. This will take to to the **Addon: SAML2 WEB APP** page automatically.![](/img/addonstab.jpg)
 5. Copy the **Assertion Consumer Service URL (ACS URL)** from Bitrise and paste it into the **Application Callback URL** field on the **Settings** tab of the **Addon: SAML2 WEB APP** page. Scroll down to the bottom of the **Addon: SAML2 WEB APP** page and hit **ENABLE**.
-   ![](/img/bitrisesamlpage1.jpg)![](/img/addonsurl.jpg)![](/img/clickenable.jpg)
+   ![](/img/addonsurl.jpg)![](/img/clickenable.jpg)
 6. Go back to the **Addons** page where you can see the switch turned on.![](/img/switchturnedon.jpg)
 7. Continue with [retrieving SAML SSO information from Auth0](/team-management/organizations/setting-up-auth0-sso-for-bitrise/#retrieving-saml-sso-information-from-auth0) to populate the required fields on the **Single Sign On** page of Bitrise.
 
@@ -52,8 +52,10 @@ You first create a regular web application for Bitrise on Auth0, enable it, then
 Once you have enabled Bitrise as a web application on Auth0, it’s time to grab the certificate and the Identity provider’s unique login URL to finish up the SAML configuration on Bitrise.
 
 1. Go to **Application**, then select the **Addons** tab to find your enabled Bitrise app.
-2. Click the **SAML2 WEB APP** web app and select the **Usage** tab. Click on the **Download Auth0 certificate** link next to the **Identity Provider Certificate** label. Open the downloaded certificate file and copy its content into the **SAML SSO provider certificate** field of Bitrise. Go back to Auth0 and copy paste the **Identity Provider Login URL** into Bitrise’s **SAML SSO provider Single Sign-On URL (SSO URL)**.
-   ![](/img/usage.jpg)![](/img/bitrisesamlpage2.jpg)
+2. Click the **SAML2 WEB APP** web app and select the **Usage** tab. Click on the **Download Auth0 certificate** link next to the **Identity Provider Certificate** label. Open the downloaded certificate file and copy its content into the **SAML SSO provider certificate** field of Bitrise or upload the file itself from your local computer. Go back to Auth0 and copy paste the **Identity Provider Login URL** into Bitrise’s **SAML SSO provider Single Sign-On URL (SSO URL)**.
+
+   ![](/img/enablesinglesignon.jpg)
+   ![](/img/usage.jpg)
 3. Click **Configure SSO** button on Bitrise.
 4. Now you can close the dialog on Auth0.
 
