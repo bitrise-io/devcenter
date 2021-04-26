@@ -51,10 +51,10 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 
     ![{{ page.title }}](/img/step4b.jpg)
  5. Click **Trust** on the left menu bar and select the **Manual configuration** under **Identity Provider Configuration**.
- 6. Click the **Signing Certificate** dropdown and download the certificate. Open it with a text editor so that you can copy the full content of the certificate.
+ 6. Click the **Signing Certificate** dropdown and download the certificate. Open it with a text editor so that you can copy the full content of the certificate. You can also upload the file.
 
     ![{{ page.title }}](/img/download.jpg)
- 7. Insert it in the **SAML SSO provider certificate** text box on the **Enable Single Sign-On** page of Bitrise.
+ 7. Insert the content or upload the file itself in the **SAML SSO provider certificate** text box on the **Enable Single Sign-On** page of Bitrise.
  8. Copy the **Single Sign On URL** from the **Trust** page of Idaptive. Insert it on the **SAML SSO provider Single Sing-On URL (SSO URL)** field on the **Enable Single Sign-On** page of Bitrise.
  9. While on the **Single Sign-On page** of Bitrise, copy the **Assertion Consumer Service URL (ACS URL)** URL and click **Configure SSO**.
 10. Now let’s head back to Idaptive! Under **Service Provider Configuration** click **Manual Configuration**. Type **Bitrise** in the **SP Entity ID / Issuer / Audience** and paste the **Assertion Consumer Service URL (ACS URL)** from Bitrise to the **Assertion Consumer Service (ACS) URL** on Idaptive.
