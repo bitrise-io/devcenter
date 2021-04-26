@@ -35,7 +35,7 @@ In order to start using Codecov, you must be generating coverage reports with yo
 
    ![](/img/pic1.jpg)
 3. Add the **Codecov** Step to your Workflow on Bitrise. Make sure you add the Step after the Steps that test and collect coverage.![](/img/pic2.jpg)
-4. Add the Codecov upload token as a secret variable, `CODECOV_TOKEN`, and set `Expose for Pull Requests` to true. Click **Add new**.![](/img/pic3.jpg)
+4. Add the Codecov upload token as a secret variable, `CODECOV_TOKEN`, and set the **Expose for Pull Requests** option to `true`. Click **Add new**.![](/img/pic3.jpg)
 5. Click **Save** and start a new build to get coverage metrics.
 
 {% include message_box.html type="info" title="Additional options" content="The **Codecov** Step wraps around the Codecov [bash uploader](https://docs.codecov.io/docs/about-the-codecov-bash-uploader). You can add additional options in the Step listed in our [arguments documentation](https://docs.codecov.io/docs/about-the-codecov-bash-uploader#arguments)."%}
