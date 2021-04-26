@@ -44,7 +44,7 @@ This requires:
  7. Select **SSO** on the left sidebar.
  8. Click the **View details** for the X.509 Certificate. Copy the content of the **X.509 Certificate** and paste it to the **SAML SSO provider certificate** field on the **Enable Single Sign-On** page of Bitrise.
  9. Go back to the **SSO** page on OneLogin and copy the **SAML 2.0 Endpoint (HTTP)** link. Paste it in the **SAML SSO provider Single Sign-On URL (SSO URL)** field on Bitrise.
-10. Go back to Bitrise and click **Configure SSO**.![](/img/singlesingontab-1.jpg)
+10. Go back to Bitrise and click **Configure SSO**.
 
 {% include message_box.html type="note" title="Users on OneLogin and Bitrise" content="Make sure the users in your Bitrise Organization are all added to the **Users** page on OneLogin. If not, go to **Users**, then **New User** and add the new user. Don’t forget to send out an invite (**More actions** drop-down menu, **Send Invitation**) to a new user so that the user can activate their account on OneLogin. Users must be added to the newly created Bitrise app by clicking **Applications** under **User Info** and clicking the **+** sign. Make sure the added users are all Organization members on Bitrise.
 
