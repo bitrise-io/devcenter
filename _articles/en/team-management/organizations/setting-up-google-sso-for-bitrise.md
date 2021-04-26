@@ -50,7 +50,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
  5. On the App details page add `Bitrise` as your app name. Please note it must be `Bitrise` as no other format is accepted. Click **Continue**.![](/img/addappname.jpg)
  6. On the **Getting Identity Provider details** page:
     * Copy the **SSO URL** and paste it on the **SAML SSO provider Single Sing-On URL (SSO URL)** on Bitrise.
-    * Copy the whole content of the **Certificate** field and paste it in the **SAML SSO provider certificate** field of Bitrise. You can upload the **Certificate** from your local computer too.![](/img/identityproviderdetails.jpg)
+    * Copy the whole content of the **Certificate** field and paste it in the **SAML SSO provider certificate** field of Bitrise. You can upload the **Certificate** from your local computer too.![](/img/identityproviderdetails.jpg)![](/img/enablesinglesignon.jpg)
  7. While you are in Bitrise, click the **Copy Link** button to copy the **Assertion Consumer Service URL (ACS URL)**. We will need it on G Suite in a second. Let's NOT click the **Configure SSO** button just now!
  8. Let’s head back to the **Getting Identity Provider details** page of G Suite. Click **Continue**.
  9. On the **Service provider details** page:
