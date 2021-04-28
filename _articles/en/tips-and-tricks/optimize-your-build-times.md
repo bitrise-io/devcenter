@@ -27,15 +27,13 @@ Note: the efficiency of the Build Cache depends on the size of the files you wan
 as well as on the number of files you want to cache.
 For more information see the [Build Cache documentation](/caching/about-caching/).
 
-## Turn off the "Clean build" option of Xcode steps
+## Turn off the "Clean build" option of Xcode Steps
 
-All of our Xcode steps (Xcode Test, Xcode Archive and Xcode Analyze) have a "Do a clean Xcode build ...?" option.
-You can usually turn off this option without causing any issues.
+All Xcode Steps at Bitrise have an option called **Do a clean Xcode build...?**. With this option, you can tell the Step whether to perform a full, completely clean build of your Xcode project when it runs, or alternatively, to access the cache of previous Xcode Steps in the same Workflow. 
 
-By turning off "clean build" you can speed up subsequent Xcode steps.
-The first one will still have to do a full, clean build, because there's no build cache at the time it runs
-(as every build runs in a brand new, clean Virtual Machine, as descibed in [Code Security](/getting-started/code-security/)),
-but subsequent Xcode steps can use the build cache of the previous Xcode step(s), reducing the compilation time of the step.
+Setting this option to `no` can speed up your build by reducing the compilation time of the Step. However, if you have only one Xcode Step - for example, **Xcode Archive & Export for iOS** - in your Workflow, that one Step will always have to do a clean Xcode build. 
+
+Please note that this option does NOT mean that the Step can access the build cache of different builds. This option is only relevant if you have several Xcode Steps in the same Workflow. 
 
 ## Other
 
