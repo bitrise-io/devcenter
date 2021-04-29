@@ -28,7 +28,7 @@ Step inputs can be defined in the `step.yml` file of the project by setting the 
 ```
 
 * `my_key_for_the_env`: the key of the environment item (required).
-* `my value for the env`: the default value of the input. You don't always have to provide a default value. 
+* `my value for the env`: the default value of the input. You don't always have to provide a default value.
 * `opts`: optional properties.
 
 Of course, a step input can have many more properties - let's take a look at them!
@@ -44,6 +44,7 @@ Of course, a step input can have many more properties - let's take a look at the
 * `is_required` : can be set to `true` or `false`. If set to `true`, the step requires a non-empty value to be set for the input.
 * `is_dont_change_value` : can be set to `true` or `false`. If set to `true`, the value of the input should not be changed and/or should be hidden on UIs. Mainly used for debug inputs and for "**connection**" inputs (set to outputs of other steps, to connect this step with another one).
 * `is_template` : can be set to `true` or `false`. If set to `true` ~~,~~ the input's value will be evaulated as a Go template.
+* `is_sensitive`: marking an input as sensitive means that it will only accept a Secret Environment Variable as its value. It is most frequently used for sensitive information such as passwords, API keys, tokens, but any input can be marked sensitive.
 
 ### Using template expressions for step inputs
 
