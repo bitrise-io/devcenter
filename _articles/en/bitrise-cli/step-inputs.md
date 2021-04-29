@@ -15,7 +15,7 @@ menu:
     weight: 21
 
 ---
-Step inputs are environment items that tell the Bitrise CLI how to run a given step. As discussed in the [Steps](/bitrise-cli/steps) section, the default inputs can be found in the `step.yml` file of every step and the user only needs to manually set the inputs they wish to change.
+Step inputs are environment items that tell the Bitrise CLI how to run a given Step. As discussed in the [Steps](/bitrise-cli/steps) section, the default inputs can be found in the `step.yml` file of every Step and the user only needs to manually set the inputs they wish to change.
 
 Step inputs can be defined in the `step.yml` file of the project by setting the `inputs` property. They have the same syntax as every environment property. It consists of two main parts: a `KEY: value` pair and an `opts` field.
 
@@ -31,7 +31,7 @@ Step inputs can be defined in the `step.yml` file of the project by setting the 
 * `my value for the env`: the default value of the input. You don't always have to provide a default value.
 * `opts`: optional properties.
 
-Of course, a step input can have many more properties - let's take a look at them!
+Of course, a Step input can have many more properties - let's take a look at them!
 
 * `title`, `summary` and `description` : metadata, for comments, tools and GUI.
   _Note: these meta properties can be used for permanent comments. Standard YML comments
@@ -42,21 +42,21 @@ Of course, a step input can have many more properties - let's take a look at the
 * `category` : used to categorize the input. Inputs with the same `category` will appear grouped under one menu on the website UI, for the sake of convenience.
 * `value_options` : list of the available values.
 * `is_required` : can be set to `true` or `false`. If set to `true`, the step requires a non-empty value to be set for the input.
-* `is_dont_change_value` : can be set to `true` or `false`. If set to `true`, the value of the input should not be changed and/or should be hidden on UIs. Mainly used for debug inputs and for "**connection**" inputs (set to outputs of other steps, to connect this step with another one).
+* `is_dont_change_value` : can be set to `true` or `false`. If set to `true`, the value of the input should not be changed and/or should be hidden on UIs. Mainly used for debug inputs and for "**connection**" inputs (set to outputs of other Steps, to connect this Step with another one).
 * `is_template` : can be set to `true` or `false`. If set to `true` ~~,~~ the input's value will be evaulated as a Go template.
 * `is_sensitive`: marking an input as sensitive means that it will only accept a Secret Environment Variable as its value. It is most frequently used for sensitive information such as passwords, API keys, tokens, but any input can be marked sensitive.
 
-## Using template expressions for step inputs
+## Using template expressions for Step inputs
 
-If you need a step to use a certain value only in certain circumstances, use template expressions as step inputs. Template expressions are evaluated before the step uses the input. They are written in Go's template language - you can read more about that [here](https://golang.org/pkg/text/template/).
+If you need a Step to use a certain value only in certain circumstances, use template expressions as Step inputs. Template expressions are evaluated before the Step uses the input. They are written in Go's template language - you can read more about that [here](https://golang.org/pkg/text/template/).
 
 Set the `is_template` property in the `step.yml` file of your project to use template expressions.
 
 1. Open the `step.yml` file of your project.
-2. Find the step in which you wish to use a template expression.
-3. Add an `opts` field to the `content` of the step.
+2. Find the Step in which you wish to use a template expression.
+3. Add an `opts` field to the `content` of the Step.
 4. Add the `is_template` property to `opts` and set its value to `true`.
-5. Add the template expression to the step's `content`.
+5. Add the template expression to the Step's `content`.
 
 **Example:**
 
