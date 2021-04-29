@@ -46,7 +46,7 @@ Of course, a step input can have many more properties - let's take a look at the
 * `is_template` : can be set to `true` or `false`. If set to `true` ~~,~~ the input's value will be evaulated as a Go template.
 * `is_sensitive`: marking an input as sensitive means that it will only accept a Secret Environment Variable as its value. It is most frequently used for sensitive information such as passwords, API keys, tokens, but any input can be marked sensitive.
 
-### Using template expressions for step inputs
+## Using template expressions for step inputs
 
 If you need a step to use a certain value only in certain circumstances, use template expressions as step inputs. Template expressions are evaluated before the step uses the input. They are written in Go's template language - you can read more about that [here](https://golang.org/pkg/text/template/).
 
