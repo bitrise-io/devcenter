@@ -1,6 +1,12 @@
 ---
+- title: Setting up fastlane on Bitrise
+  modified: 2021-05-04 00:00:00 +0200
+  changelog: Added a note to this section referencing our guide on how to connect
+    to Apple services should you use the Fastlane Step in your Workflow.
+  type: update
+  url: "/tutorials/fastlane/fastlane-tools-integration/#setting-up-fastlane-on-bitrise"
 - title: Step inputs
-  modified: 2021-04-29 12:54:37 +0200
+  modified: 2021-04-29T12:54:37.000+02:00
   changelog: Added the is_sensitive Step property to the list of available properties.
   type: update
   url: "/bitrise-cli/step-inputs/"
