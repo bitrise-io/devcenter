@@ -35,6 +35,5 @@ Running _fastlane_ on Bitrise is as simple as adding one Step to your Workflow a
    * Pods - `Podfile.lock`
    * Carthage - `Cartfile.resolved`
    * Android dependencies
-9. 
 
 That’s it! [Start running your build](/builds/Starting-builds-manually/) so that Bitrise can run your lane.
