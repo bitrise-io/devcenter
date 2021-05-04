@@ -22,7 +22,7 @@ If a `Gemfile` exists in your `work_dir` directory, _fastlane_ will be used by c
 
 Running _fastlane_ on Bitrise is as simple as adding one Step to your Workflow and setting some options. Let’s see how!
 
-{% include message_box.html type="important" title="Connect to Apple services" content="Do not forget to connect to Apple services if you use this Step in your Workflow. You can do so by [API key or Apple ID or right through Fastlane Step's input fields](/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/#fastlane-step)."%}
+{% include message_box.html type="important" title="Connect to Apple services" content="Do not forget to connect to Apple services if you use this Step in your Workflow. You can do so using [API key or Apple ID or right through the Fastlane Step's input fields](/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/#fastlane-step)."%}
 
 1. Add the **Fastlane** Step to your Workflow by clicking the **+** sign. Make sure it is inserted right after the **Git Clone** Step. Since _fastlane_ is pre-installed on all Bitrise’s virtual machines, the **Fastlane** Step ensures that you can always use the required _fastlane_ version.
 2. To code sign your project, you have a couple of options to choose from. Add one of Bitrise’s code signing Steps to your Workflow such as: **Certificate and profile installer**, **iOS Auto Provision**, and **Fastlane Match**. Alternatively, use fastlane match inside your fastlane lane instead of a code signing Step. Make sure you either use the **Fastlane Match** Step or set up fastlane match in your lane but don’t try to do both.
