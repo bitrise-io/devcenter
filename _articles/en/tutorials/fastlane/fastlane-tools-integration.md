@@ -22,8 +22,10 @@ If a `Gemfile` exists in your `work_dir` directory, _fastlane_ will be used by c
 
 Running _fastlane_ on Bitrise is as simple as adding one Step to your Workflow and setting some options. Let’s see how!
 
-1. Add the **Fastlane** Step to your Workflow by clicking the + sign. Make sure it is inserted right after the Git Clone Step. Since fastlane is pre-installed on all Bitrise’s virtual machines, the Fastlane Step ensures that you can always use the required fastlane version.
-2. To code sign your project, you have a couple of options to choose from. Add one of Bitrise’s code signing Steps to your Workflow such as: **Certificate and profile installer**, **iOS Auto Provision**,**Fastlane Match**. Alternatively, use fastlane match inside your fastlane lane instead of a code signing Step. Make sure you either use the **Fastlane Match** Step or set up fastlane match in your lane but don’t try to do both.
+{% include message_box.html type="important" title="Connect to Apple services" content="Do not forget to connect to Apple services if you use this Step in your Workflow. You can do so by [API key or Apple ID or right through Fastlane Step's input fields](/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/#fastlane-step)."%}
+
+1. Add the **Fastlane** Step to your Workflow by clicking the **+** sign. Make sure it is inserted right after the **Git Clone** Step. Since _fastlane_ is pre-installed on all Bitrise’s virtual machines, the **Fastlane** Step ensures that you can always use the required _fastlane_ version.
+2. To code sign your project, you have a couple of options to choose from. Add one of Bitrise’s code signing Steps to your Workflow such as: **Certificate and profile installer**, **iOS Auto Provision**, and **Fastlane Match**. Alternatively, use fastlane match inside your fastlane lane instead of a code signing Step. Make sure you either use the **Fastlane Match** Step or set up fastlane match in your lane but don’t try to do both.
 3. Click the **Fastlane Step** to fill out the required fields.
 4. Add your lane in the **fastlane lane** input.
 5. Use **Working directory** field if the _fastlane_ directory is not in your repository's root. The working directory should be the parent directory of your `Fastfile`'s directory. For example, if the Fastfile path is `./here/is/my/fastlane/Fastfile`, then the `Fastfile`'s directory is `./here/is/my/fastlane`, so the **Working Directory** should be `./here/is/my`.
@@ -33,5 +35,6 @@ Running _fastlane_ on Bitrise is as simple as adding one Step to your Workflow a
    * Pods - `Podfile.lock`
    * Carthage - `Cartfile.resolved`
    * Android dependencies
+9. 
 
 That’s it! [Start running your build](/builds/Starting-builds-manually/) so that Bitrise can run your lane.
