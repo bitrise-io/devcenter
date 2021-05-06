@@ -62,9 +62,9 @@ Bitriseのビルドイン電子メール通知システムはビルドについ�
 * [Mailgun APIキー ](https://help.mailgun.com/hc/en-us/articles/203380100-Where-can-I-find-my-API-key-and-SMTP-credentials-)
 * [Mailgunドメイン名](https://help.mailgun.com/hc/en-us/articles/203637190-How-do-I-add-a-domain-)
 
-{% include message_box.html type="important" title="Make sure that the Step runs in every build!" content="If you use the `Send Email with Mailgun` Step in your workflow, make sure that [it is always set to run even if the previous Step failed](/getting-started/getting-started-steps/#skipping-steps)! This is the default setting of the Step. If you change it, you will not receive emails if your builds fail."%}
+{% include message_box.html type="important" title="Make sure that the Step runs in every build!" content="If you use the `Send Email with Mailgun` Step in your workflow, make sure that [it is always set to run even if the previous Step failed](/steps-and-workflows/skipping-steps/)! This is the default setting of the Step. If you change it, you will not receive emails if your builds fail."%}
 
-{% include message_box.html type="important" title="ステップがすべてのビルドで実行されていることを確認してください！" content="ワークフローで`Send Email with Mailgun`ステップを使用する場合は、[前のステップが失敗した場合でも常に\[実行\]に設定されている](/getting-started/getting-started-steps/#skipping-steps)ことを確認してください。これはステップのデフォルト設定であり、変更しても、ビルドに失敗してもEメールは送られません。"%}
+{% include message_box.html type="important" title="ステップがすべてのビルドで実行されていることを確認してください！" content="ワークフローで`Send Email with Mailgun`ステップを使用する場合は、[前のステップが失敗した場合でも常に\[実行\]に設定されている](/steps-and-workflows/skipping-steps/)ことを確認してください。これはステップのデフォルト設定であり、変更しても、ビルドに失敗してもEメールは送られません。"%}
 
 1. Mailgun APIキーを保存するシークレット環境変数を作成します。  キーに`$MAILGUN_API_KEY`という名前を付けることをお勧めします。（ステップの関連入力のデフォルト値です）。
 2. Mailgunドメインを保存するシークレット環境変数を作成します。  キーに`$MAILGUN_DOMAIN`という名前を付けることをお勧めします。（ステップの関連入力のデフォルト値です）。
@@ -88,7 +88,7 @@ BitriseはSlack統合をサポートしており、簡単にセットアップ�
 
 **当社の専用ステップを使用するには、Slackボットユーザー用の**[Slack webhook URL](https://api.slack.com/incoming-webhooks)または[Slack APIトークン](https://api.slack.com/bot-users)が必要です。
 
-{% include message_box.html type="important" title="ステップがすべてのビルドで実行されていることを確認してください！" content="ワークフローで`Send a Slack message`ステップを使用する場合は、[前の]()[ステップが失敗した場合でも常に実行するように設定されていること](/getting-started/getting-started-steps/#skipping-steps)を確認してください。これはステップのデフォルト設定であり、変更した場合、ビルドが失敗してもメッセージは送信されません。"%}
+{% include message_box.html type="important" title="ステップがすべてのビルドで実行されていることを確認してください！" content="ワークフローで`Send a Slack message`ステップを使用する場合は、[前の]()[ステップが失敗した場合でも常に実行するように設定されていること](/steps-and-workflows/skipping-steps/)を確認してください。これはステップのデフォルト設定であり、変更した場合、ビルドが失敗してもメッセージは送信されません。"%}
 
 1. `Send a Slack message`ステップをワークフローに追加します。
 2. `Slack Webhook URL`または`Slack API token`入力をクリックしてから、`Select secret variable`をクリックします。

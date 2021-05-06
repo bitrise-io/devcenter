@@ -18,12 +18,10 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!
 ### iOS
 
 * [Setting up Continuous Integration for iOS apps on Bitrise](https://savvyapps.com/blog/continuous-integration-ios-bitrise)
-* [Let's automate Swift builds with Bitrise](https://medium.com/@erkekin/lets-automate-swift-builds-with-bitrise-47225d547c98)
 * [Bitrise and Carthage - a simple guide about how to use Carthage on Bitrise](http://blog.ricardopereira.eu/2015/07/10/EN-bitrise-and-carthage/)
 
 ### Android
 
-* [Seamless Android Builds With Bitrise. Offload Your System](http://myhexaville.com/2017/10/18/seamless-android-builds-with-bitrise/)
 * [How to automate Android build process on Bitrise CI (part 1)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-71ae3a94362e)
 * [How to automate Android build process on Bitrise CI (part 2)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-part-2-b3f8124c29ee)
 * [How to Connect Physical Devices to Bitrise.io](https://www.thedroidsonroids.com/blog/how-to-connect-physical-devices-to-bitrise-io) - [_Open STF_](https://openstf.io) integration
@@ -40,27 +38,19 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!
 
 ### React Native
 
-* [Testing in React Native — Jest & Detox](https://pillow.codes/testing-in-react-native-jest-detox-d7b3b79a166a)
 * [How to automate your React Native deployment workflow using Bitrise](https://logbook.hanno.co/bitrise-deployment-workflow-react-native/)
 * [Continuous Integration for React Native Apps With Fastlane and Bitrise (iOS)](http://blog.thebakery.io/continuous-integration-for-react-native-applications-with-fastlane-and-bitrise-ios-version/)
 * [Snowflake: React Native app Continuous Integration with Bitrise.io](https://github.com/bartonhammond/snowflake/#continuous-integration) - detailed setup guide with youtube videos
-* [Bitrise + CodePush + React Native = Ideal Mobile CI Setup?](https://medium.com/@mthakkar_/bitrise-codepush-react-native-ideal-mobile-ci-setup-6283b86146c)
 
 ### Cordova
 
 * [How to build Cordova-based Android project on bitrise.io](http://vgaidarji.github.io/blog/2016/02/27/how-to-build-cordova-based-android-project-on-bitrise-io/)
 
-### macOS app
-
-* [Continuous happiness for Mac](https://blog.alltheflow.com/continuous-happiness-for-mac/) - build your Mac projects on Bitrise
-
 ### Other
 
-* [Improved Continuous Integration With Bitrise – Rémy Chantenay (Travelex)](https://medium.com/@remy.chantenay/bitrise-travelex-digital-f3388019bae)
 * [I was trying to setup a macOS Server for continuous integration. Now I am a happy Bitrise user.](https://theswiftdev.com/2016/08/29/macos-xcode-build-server-tutorial/)
 * [The Trials of Mobile Automation at InVision](http://engineering.invisionapp.com/post/trials-of-mobile-automation/) - ChatOps with Slack and Bitrise
 * [How to send commit changes by email once CI build passes?](https://medium.com/@hesam.kamalan/how-to-send-commit-changes-by-email-once-ci-build-passes-dee13c67c195)
-* [Continuous integration made easy with Bitrise](https://blog.alltheflow.com/continuous-integration-made-easy-with-bitrise/) - intro to Step development
 * [How to Create Bitrise Step in Go – Flutter Example](https://www.thedroidsonroids.com/blog/how-to-create-bitrise-step-in-go-flutter-example) - Step development in Golang
 
 ## Japanese
@@ -80,14 +70,9 @@ or [contact us](https://www.bitrise.io/contact) and we'll add it for you!
 * [俺的Bitrise活用術](http://yanma.hateblo.jp/entry/2016/03/15/104131)
 * [iOS対応のCIサービス「Bitrise」を使ってみた](http://sssslide.com/www.slideshare.net/koogawa/ioscibitrise) - SlideShare
 * [Bitrise,fastlane,CrashlyticsでiOSアプリのテスト配布を自動化する](http://techblog.lclco.com/entry/2016/05/09/192230) - Bitrise + fastlane, automate testing & deployment (to Crashlytics) of iOS apps
-* [fastlaneとBitriseでiOSアプリのCI始めました](http://blog.lisb.direct/entry/2017/07/20/100000) - CI with Bitrise and fastlane
 
 ## Portuguese
 
 * [Como implementar mobile continuous integration(CI) e delivery(CD) usando bitrise.io](https://medium.com/@feliperfmarques/como-implementar-mobile-continuous-integration-ci-e-delivery-cd-usando-bitrise-io-c16007263deb)
-
-## Persian
-
-* [فیلم آموزشی – ادغام و تحویل مداوم با استفاده از Bitrise](http://www.kamalan.com/1395/05/%D9%81%DB%8C%D9%84%D9%85-%D8%A2%D9%85%D9%88%D8%B2%D8%B4%DB%8C-%D8%A7%D8%AF%D8%BA%D8%A7%D9%85-%D9%88-%D8%AA%D8%AD%D9%88%DB%8C%D9%84-%D9%85%D8%AF%D8%A7%D9%88%D9%85-%D8%A8%D8%A7-%D8%A7%D8%B3%D8%AA/) - Video tutorial about CI/CD with Bitrise
 
 {% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to Bitrise now" %}

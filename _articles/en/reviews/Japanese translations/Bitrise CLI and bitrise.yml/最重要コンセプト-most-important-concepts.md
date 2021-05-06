@@ -72,7 +72,7 @@ Environment variables are available **after** the environment variable is "proce
 
 環境変数は、その環境変数が”処理された”後に利用可能になります。
 
-There are a few environment variables [exposed by the Bitrise CLI itself](/faq/available-environment-variables/#exposed-by-the-bitrise-cli), those are available from the start (e.g. `BITRISE_SOURCE_DIR` and `BITRISE_TRIGGERED_WORKFLOW_ID`).
+There are a few environment variables [exposed by the Bitrise CLI itself](/builds/available-environment-variables/#exposed-by-the-bitrise-cli), those are available from the start (e.g. `BITRISE_SOURCE_DIR` and `BITRISE_TRIGGERED_WORKFLOW_ID`).
 
 Bitrise CLI自体によってエクスポーズされた環境変数がいくつかあり、それらは開始時点から利用可能です（例：`BITRISE_SOURCE_DIR` や`BITRISE_TRIGGERED_WORKFLOW_ID`）
 
@@ -84,7 +84,7 @@ There are two types of environment variables which are processed and made availa
 
 ワークフローが実行されるであろう前に処理され利用可能な状態になる環境変数の種類が２つあります：Secretsと`App Env Var` （`app: envs:`はbitrise.yml内にあります）
 
-After these, the processing of the specified Workflow starts, and the [environment variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available. If the workflow has before or after workflows, when a specific workflow is processed (right before the first step of the workflow would run) the workflow's environment variables are processed and made available.
+After these, the processing of the specified Workflow starts, and the [environment variables specified for that Workflow](/bitrise-cli/workflows/#defining-workflow-specific-parameters-and-environment-variables) are made available. If the workflow has before or after workflows, when a specific workflow is processed (right before the first step of the workflow would run) the workflow's environment variables are processed and made available.
 
 これらの後に、指定されたワークフローの処理が開始され、ワークフローで指定された環境変数が利用可能な状態になります。そのワークフローの前や後にワークフローがある場合で、指定されたワークフローが処理される時（ワークフローの最初のステップの直前に実行する）、そのワークフローの環境変数は処理され利用可能な状態になります。
 
@@ -108,7 +108,7 @@ Last but not least Step outputs are exposed by the specific step, so those are a
    Build Trigger API経由のビルドに指定された一度限りの環境変数
 4. `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/))  
    `App Env Vars` (bitrise.yml内の`app: envs:`)
-5. [Workflow environment variables](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)  
+5. [Workflow environment variables](/bitrise-cli/workflows/#defining-workflow-specific-parameters-and-environment-variables)  
    ワークフロー環境変数
 6. Step inputs  
    ステップのインプット
@@ -143,6 +143,6 @@ Once an environment variable of a workflow is processed and made available, it i
 
 いったんワークフローの環境変数が処理され利用可能な状態になれば、その環境変数はビルド実行中どこででも利用可能になります。これは、連鎖している他のワークフローが指定されたワークフローの前に実行されたワークフローの環境変数を使用することができるという意味です。またこれはステップアウトプットに類似しており、（アウトプットを生成する）ステップが完了する後どの他のステップでも利用可能になります。
 
-You can find more information about environment variable availability of Workflow env vars in chained workflows in the [Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#note-about-workflow-environment-variables) documentation.
+You can find more information about environment variable availability of Workflow env vars in chained workflows in the [Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#about-workflow-environment-variables) documentation.
 
-[Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#note-about-workflow-environment-variables)のドキュメンテーションにて連鎖式ワークフロー内のワークフロー環境変数の環境変数可用性についての詳細な情報を確認できます。
+[Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#about-workflow-environment-variables)のドキュメンテーションにて連鎖式ワークフロー内のワークフロー環境変数の環境変数可用性についての詳細な情報を確認できます。

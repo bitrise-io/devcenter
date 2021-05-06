@@ -8,7 +8,7 @@ menu:
     weight: 14
 
 ---
-ビルドは、[ステップ](/jp/steps-workflows/getting-started-steps)のコレクションであるアプリのワークフローによって指定される一連のジョブです。アプリのビルド設定は[bitrise.yml](/jp/bitrise-cli/basics-of-bitrise-yml)で指定され、[bitrise.io](https://www.bitrise.io/)のグラフィカルワークフローエディタで変更することができます。
+ビルドは、[ステップ](/jp/steps-and-workflows/getting-started-steps)のコレクションであるアプリのワークフローによって指定される一連のジョブです。アプリのビルド設定は[bitrise.yml](/jp/bitrise-cli/basics-of-bitrise-yml)で指定され、[bitrise.io](https://www.bitrise.io/)のグラフィカルワークフローエディタで変更することができます。
 
 ビルドが実行されると、これらのスクリプトがダウンロードされ、ワークフローで定義した順序で、設定した入力パラメータで実行されます。これらのスクリプトは、[環境変数](/jp/builds/available-environment-variables)として設定された定義済みの出力を生成します。
 

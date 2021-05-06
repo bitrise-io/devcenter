@@ -43,7 +43,7 @@ menu:
 
 ## 自身でホストしたGitLabリポジトリから新しいアプリを追加する
 
-始める前に、自身でホストしたGitLabインスタンスの [created an OAuth application](/getting-started/signing-up/self-hosted-gitlab#connect-a-self-hosted-gitlab-instance-with-bitrise) を確認してください。
+始める前に、自身でホストしたGitLabインスタンスの [created an OAuth application](/getting-started/connecting-to-services/self-hosted-gitlab/#connect-a-self-hosted-gitlab-instance-with-bitrise) を確認してください。
 
 1. [bitrise.io](https://www.bitrise.io)にログインして、上部のメニューバーの`+`をクリックし、オプションから`Add app`を選択してください。
 2. Organizationアカウントを選択してください。

@@ -17,4 +17,4 @@ Organizations consist of groups: Organization owners [can create groups and deci
 
 Organizations can take advantage of [SAML Single Sign-On](/jp/team-management/organizations/saml-sso-in-organizations/): we have guides for setting it up with several major identity providers.
 
-{% include message_box.html type="important" title="Organization pricing" content="Organizations are a premium feature. To learn more about pricing, visit our [Pricing page](www.bitrise.io/pricing/)."%}
+{% include message_box.html type="important" title="Organization pricing" content="Organizations are a premium feature. To learn more about pricing, visit our [Pricing page](https://www.bitrise.io/pricing/)."%}

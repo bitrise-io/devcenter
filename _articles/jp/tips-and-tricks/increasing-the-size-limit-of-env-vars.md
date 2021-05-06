@@ -30,7 +30,7 @@ However, you can use the same command to set the size limit on your own machine.
 
 To set the size limit in your build's virtual machines on Bitrise:
 
-1. On [bitrise.io](www.bitrise.io), open your app.
+1. On [bitrise.io](https://www.bitrise.io), open your app.
 2. Click on the **Workflow** tab to open the Workflow Editor.
 3. Add a **Script** Step to the Workflow(s) you want to run.
 4. Add the following command to the Step's `contents`:

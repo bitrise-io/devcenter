@@ -20,7 +20,7 @@ Webhook はリポジトリへのコードプッシュのようなイベントに
 
 {% include message_box.html type="important" title="トリガーと Webhook" content="Bitrise でビルドを自動的にトリガーできるようにするには、Git サービスプロバイダに Webhook を登録する必要があります！たとえば、GitHub リポジトリのプルリクエストでビルドをトリガーするには、GitHub で Bitrise の webhook を登録する必要があります。"%}
 
-Outgoing Webhooks はウェブサイトか [Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks/) で追加できます。
+Outgoing Webhooks はウェブサイトか [Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks) で追加できます。
 
 **詳細:**
 

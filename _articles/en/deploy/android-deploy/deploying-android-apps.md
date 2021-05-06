@@ -35,7 +35,7 @@ Make sure you have:
 
 You need a new service account created in the Google Play Console so that Bitrise can authenticate with Google Play Deploy during your build. The new service account has to be invited to Google Play Console as a user with the appropriate permission.
 
-1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/). If you already have a Google Play Developer account, and have already deployed your app to Google Play Store, skip to [Set up Google Play API access](/deploy/android-deploy/deploying-android-apps/#set-up-google-play-api-access/).
+1. Register a [Google Play Developer Account](https://developer.android.com/distribute/console/). If you already have a Google Play Developer account, and have already deployed your app to Google Play Store, skip to [Set up Google Play API access](/deploy/android-deploy/deploying-android-apps/#setting-up-google-play-api-access).
 2. Go through the [Prepare & roll out steps](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
 
 ### Setting up Google Play API access

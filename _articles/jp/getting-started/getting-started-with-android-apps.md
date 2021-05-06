@@ -159,7 +159,7 @@ instrumentation を選択した場合は、**Instrumentation Test**グループ�
 
 1. Google Play ストアと同期していることを確認してください。以下を参考にしてください。
    * [register to Google Play Store and set up your project](/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   * set up [Google Play API access](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+   * set up [Google Play API access](/deploy/android-deploy/deploying-android-apps/#setting-up-google-play-api-access)
 2. Bitrise のダッシュボードで、`Code Signing`に移動し、サービスアカウントの JSON キーを`GENERIC FILE STORAGE`にアップロードします。
 3. アップロードしたファイルの URL を格納する env キーをコピーします。
    * 例: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`

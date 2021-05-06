@@ -21,7 +21,7 @@ What you’ll need for this setup:
 
 ## Prepping Workflows of a white label app
 
-1. [Add your app](getting-started/adding-a-new-app/) to Bitrise in the usual way.
+1. [Add your app](/getting-started/adding-a-new-app/) to Bitrise in the usual way.
 2. Click your app on the [Dashboard](https://app.bitrise.io/dashboard/builds) and go to **Workflows**.
 3. Next to **WORKFLOW**, click **+ Workflow** to create your main Workflow.
 4. Add a new Workflow based on an **Empty Workflow**.

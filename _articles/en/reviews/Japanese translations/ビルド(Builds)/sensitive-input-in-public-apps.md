@@ -17,7 +17,7 @@ published: false
 
 シークレット環境変数を定義する２つの方法があります：
 
-* [ステップ内](/sensitive-input-field/#set-a-sensitive-input-in-a-step/)で直接行う
+* [ステップ内](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step)で直接行う
 * Workflow Editorの[Secret Tab]()内にて必要なときにステップインプットのシークレット環境変数を選択する
 
 `Env Vars`と`Secrets`の違いについては[こちら](/builds/env-vars-secret-env-vars/)をお読みください！

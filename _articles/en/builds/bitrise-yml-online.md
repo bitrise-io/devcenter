@@ -66,7 +66,7 @@ You don’t need to create your own `bitrise.yml` file in advance to use this so
 5. If you don’t have a `bitrise.yml` file the repository, you will be prompted to add one.
 
    ![{{ page.title }}](/img/bitrise_workflow_editor-2.png)  
-   You can download the current `bitrise.yml` file from the website, or copy its entire content to the clipboard. Either way, you have to commit the file to the root directory of the repository to proceed. Remember: you must commit the file to the branch that is set as the default branch on [bitrise.io](bitrise.io)! You can check the default branch under the **Settings** tab on our website.
+   You can download the current `bitrise.yml` file from the website, or copy its entire content to the clipboard. Either way, you have to commit the file to the root directory of the repository to proceed. Remember: you must commit the file to the branch that is set as the default branch on [bitrise.io](https://www.bitrise.io)! You can check the default branch under the **Settings** tab on our website.
 6. Click **Update setting**.
 7. When prompted to make sure your `bitrise.yml` file is valid, click **Continue**.
 
@@ -74,7 +74,7 @@ If all goes well, you should receive confirmation of successfully changing your 
 
 ### Storing the bitrise.yml on multiple branches
 
-When you first add the `bitrise.yml` to your repository, it must be committed to the default branch. You can check out the app's default branch on [bitrise.io](bitrise.io) under the **Settings** tab.
+When you first add the `bitrise.yml` to your repository, it must be committed to the default branch. You can check out the app's default branch on [bitrise.io](https://www.bitrise.io) under the **Settings** tab.
 
 {% include message_box.html type="warning" title="The bitrise.yml file on the default branch" content="If you choose to store the `bitrise.yml` file in the repository, the default branch must have a `bitrise.yml`!"%}
 

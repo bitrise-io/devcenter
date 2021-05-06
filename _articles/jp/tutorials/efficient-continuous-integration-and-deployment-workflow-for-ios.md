@@ -53,7 +53,7 @@ With this model you can always see the active tasks (_feature_ branches), the la
 
 Your branches have separate meanings / purposes, which make this branching model a naturally good fit for automation.
 
-So with a branching model like Gitflow and through [webhooks](/webhooks/),
+So with a branching model like Gitflow and through [webhooks](/webhooks/webhooks-index/),
 you can define and automate three main scenarios:
 
 1. Change on a _feature_ branch: while a feature is under active development you mostly
@@ -90,7 +90,7 @@ Bitrise is built specifically to help you with this kind of automation.
 To achieve an automated workflow like the one described in the previous section this is all what you have to do:
 
 1. **Register your App's repository** on [Bitrise](https://www.bitrise.io/)
-   (_Don't forget to setup a_ [_webhook_](/webhooks/)_!_ If you connect your repository through
+   (_Don't forget to setup a_ [_webhook_](/webhooks/webhooks-index/)_!_ If you connect your repository through
    our GitHub or Bitbucket integration options, Bitrise will do this automatically for you).
 2. Prepare your App's **Primary Workflow** to include the _tests_ you would like to run on every code change.
 3. Create a **new Workflow for your develop branch** and add the _deployment_

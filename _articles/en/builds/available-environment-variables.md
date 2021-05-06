@@ -45,7 +45,7 @@ It's a temporary directory created by the Bitrise CLI by default, and can be ove
 
 These Environment Variables are available for builds running on [bitrise.io](https://www.bitrise.io) virtual machines.
 
-{% include collapse.html title="$BITRISE_BUILD_NUMBER" content="`$BITRISE_BUILD_NUMBER`: Build number of the build on [bitrise.io](https://www.bitrise.io). You can [modify any app's build number](/builds/build-numbering-and-app-versioning/#change-the-build-number-of-your-build) if you want to - for example, if you wish to reset to 1."%}
+{% include collapse.html title="$BITRISE_BUILD_NUMBER" content="`$BITRISE_BUILD_NUMBER`: Build number of the build on [bitrise.io](https://www.bitrise.io). You can [modify any app's build number](/builds/build-numbering-and-app-versioning/#changing-the-build-number-of-your-build) if you want to - for example, if you wish to reset to 1."%}
 
 {% include collapse.html title="$BITRISE_APP_TITLE" content="`$BITRISE_APP_TITLE`: The title of your app on [bitrise.io](https://www.bitrise.io). You can change it any time on the **Settings** tab of the app. "%}
 

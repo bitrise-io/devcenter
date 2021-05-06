@@ -180,7 +180,7 @@ Example:
 
 ### Setting a workflow for the build
 
-By default, the workflow for your build will be selected based on the content of `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/) select the workflow for the build automatically, based on the Trigger Map.
+By default, the workflow for your build will be selected based on the content of `build_params` and your app's [Trigger Map](/webhooks/trigger-map/). This is the same as how [Webhooks](/webhooks/webhooks-index/) select the workflow for the build automatically, based on the Trigger Map.
 
 With the API, you can however **overwrite** this selection and specify exactly which workflow you want to use.
 

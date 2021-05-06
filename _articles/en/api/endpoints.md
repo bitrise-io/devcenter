@@ -21,7 +21,7 @@ The [Bitrise API endpoint reference documentation](https://api-docs.bitrise.io) 
 
 You can try out any endpoint in the reference documentation itself! All you need to do is authenticate yourself and provide the required parameters. The API will return the appropriate response based on the call.
 
-1. [Acquire a Personal Access Token](/api/v0.1#acquiring-a-personal-access-token).
+1. [Acquire a Personal Access Token](/api/authentication/#acquiring-a-personal-access-token).
 2. Go to the [Bitrise API endpoint reference documentation](https://api-docs.bitrise.io).
 3. Click `Authorize`.
 

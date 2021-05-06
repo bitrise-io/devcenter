@@ -52,7 +52,7 @@ Select your app's privacy setting: it can be either [public](/getting-started/ad
 * Private apps are only accessible to you, your organization members and those who are invited to work on an app. They require authentication to access the repository of the app.
 * [Public apps](/adding-a-new-app/public-apps) expose their `bitrise.yml` and their build logs to everyone. If you have a public app's build URL, you can view its build log, to help with troubleshooting, for example. Public apps do not require authentication and they cannot have SSH keys.
 
-Bitrise gives you options to connect any kind of Git repository to it. [GitHub, GitLab and Bitbucket](/getting-started/connecting-account-bitrise/) are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you will see Bitrise automatically list all your repositories, so you can just click on the one you'd like to connect.
+Bitrise gives you options to connect any kind of Git repository to it. [GitHub, GitLab and Bitbucket](/getting-started/connecting-to-services/connecting-to-services-index/) are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you will see Bitrise automatically list all your repositories, so you can just click on the one you'd like to connect.
 
 {% include message_box.html type="note" title="Connect any Git repository to Bitrise" content=" You can connect any private or public Git repository to Bitrise. We automatically create an SSH key that you can use to setup the connection with your provider. "%}
 
@@ -134,7 +134,7 @@ Enter the name of the default branch of your repository where your project is lo
 
 ![{{ page.title }}](/img/choose-branch.png)
 
-During validation Bitrise makes sure it has access to the given branch, using the [SSH key](/adding-a-new-app/setting-up-ssh-keys) you set up.
+During validation Bitrise makes sure it has access to the given branch, using the [SSH key](/getting-started/adding-a-new-app/#setting-up-ssh-keys) you set up.
 
 If the validation is successful, Bitrise scans your repository and give you a default [Workflow](/steps-and-workflows/getting-started-workflows/) based on the configuration of the project.
 

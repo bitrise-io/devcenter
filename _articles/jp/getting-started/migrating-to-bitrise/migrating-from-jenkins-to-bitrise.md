@@ -190,7 +190,7 @@ Bitrise makes extensive use of [webhooks](/webhooks/webhooks-index/), which you 
 [![Adding a GitHub webhook](https://devcenter.bitrise.io/img/github-webhook-1.png)](https://devcenter.bitrise.io/img/github-webhook-1.png)In short, there are two types of Webhooks:
 
 * Incoming webhooks, registered with your Git service provider, are used to automatically trigger builds on Bitrise.
-* Outgoing webhooks are used to send reports of build events to other services, such as Slack. They can be added either on the website or [via the Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks/).
+* Outgoing webhooks are used to send reports of build events to other services, such as Slack. They can be added either on the website or [via the Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks).
 
 ## Jenkins plugins - Bitrise Add-ons
 

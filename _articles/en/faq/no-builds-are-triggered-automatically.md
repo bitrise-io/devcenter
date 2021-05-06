@@ -17,7 +17,7 @@ menu:
 ---
 If no builds are triggered automatically when you push code into your repository, you should **make sure your webhook is properly set on the git hosting service you use (GitHub, Bitbucket, GitLab, ...)**.
 
-You can find the webhook related setup and troubleshooting guides in the [Webhooks section of the DevCenter](/webhooks/).
+You can find the webhook related setup and troubleshooting guides in the [Webhooks section of the DevCenter](/webhooks/webhooks-index/).
 
 If the webhook is present on the git hosting service, you should check the [Troubleshooting section of the Webhooks docs](/webhooks/troubleshooting).
 

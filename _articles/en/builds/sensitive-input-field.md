@@ -23,7 +23,7 @@ You can hide any input of your choice with secret Env Vars even if the field is 
 
 There are two ways to define secret Env Vars:
 
-* Directly [in the steps](/sensitive-input-field/#set-a-sensitive-input-in-a-step/).
+* Directly [in the steps](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step).
 * In the [Secrets tab](/builds/env-vars-secret-env-vars#about-secrets) of your Workflow Editor and select the secret Env Var in a step input when needed.
 
 Head over to [Secrets and Env Vars](/builds/env-vars-secret-env-vars/) to find out the difference between Env Vars and Secrets!

@@ -67,9 +67,8 @@ An alternative solution for the `You have not accepted the license agreements of
 error, as printed in the log:
 
     Before building your project, you need to accept the license agreements and complete the installation of the missing components using the Android Studio SDK Manager.
-      Alternatively, to learn how to transfer the license agreements from one workstation to another, go to http://d.android.com/r/studio-ui/export-licenses.html
 
-You can find more info at the link printed in the log ([http://d.android.com/r/studio-ui/export-licenses.html](http://d.android.com/r/studio-ui/export-licenses.html)),
+You can find more info at [Android documentation](https://developer.android.com/studio/intro/update.html#download-with-gradle),
 but in short this can be done by:
 
 **Locate the licenses on your Mac/PC**:

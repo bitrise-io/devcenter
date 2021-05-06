@@ -67,7 +67,7 @@ Now you are ready to set up the VPN on Bitrise, in the Workflow Editor of your a
 2. Add the **Connect to OpenVPN Server** Step to your Workflow.
 
    Don't forget to add the Step before any Steps that might require VPN connection.
-3. [Add the previously created Secrets](https://devcenter.bitrise.io/getting-started/getting-started-steps/#environment-variables-as-step-inputs) to their respective inputs:
+3. [Add the previously created Secrets](https://devcenter.bitrise.io/steps-and-workflows/step-inputs/#environment-variables-as-step-inputs) to their respective inputs:
    * **Base64 encoded CA Certificate**
    * **Base64 encoded Client Certificate**
    * **Base64 encoded Client Private Key**

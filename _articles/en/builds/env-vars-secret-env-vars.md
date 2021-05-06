@@ -35,7 +35,7 @@ You can also replace the variable for a new one in **Env Vars**. Delete the old 
 
 ![{{ page.title }}](/img/env-vars.png)
 
-{% include message_box.html type="important" title="Protect your secrets" content=" Contrary to [secret Env Vars](#about-secrets/), Env Vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to **Env Vars**. "%}
+{% include message_box.html type="important" title="Protect your secrets" content=" Contrary to [secret Env Vars](/builds/env-vars-secret-env-vars/#about-secrets), Env Vars are fully exposed in builds triggered by pull requests so you should not add any sensitive information to **Env Vars**. "%}
 
 ### Setting an Env Var in Workflows
 
@@ -70,7 +70,7 @@ You can add a secret Env Var to your Workflow using our **Secrets** tab.
 
    ![{{ page.title }}](/img/secrets-dummy.png)
 
-You can also add a secret Env Var directly in a [Step's](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/) `SENSITIVE` input.
+You can also add a secret Env Var directly in a [Step's](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step) `SENSITIVE` input.
 
 ### Editing a secret Env Var
 
@@ -101,6 +101,6 @@ If builds triggered by Pull Requests need to access Secrets' values, then toggle
 
 {% include message_box.html type="important" title="About SENSITIVE label" content=" In the case of [public apps](/adding-a-new-app/public-apps/), Step input fields containing sensitive information are marked with a **SENSITIVE** label and only secret Env Vars can be used there! The **Expose for Pull Request** toggle is by default disabled and cannot be enabled. "%}
 
-Head over to [Secrets](/bitrise-cli/secrets/) for more information on [secret filtering](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli/).
+Head over to [Secrets](/bitrise-cli/secrets/) for more information on [secret filtering](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli).
 
 {% include banner.html banner_text="Check out Env Vars and Secrets in action" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

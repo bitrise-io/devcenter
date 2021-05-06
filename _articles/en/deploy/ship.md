@@ -63,7 +63,7 @@ Once you successfully built your app, you will be able to start using Ship.
 
 To publish an app on Ship, you need to:
 
-* Build an app that has at least one [exposed Workflow](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship).
+* Build an app that has at least one [exposed Workflow](/deploy/ship/#exposing-a-workflows-artifacts-to-ship).
 * Configure publishing on the **Settings** page.
 * Push the **Publish** button.
 
@@ -113,7 +113,7 @@ To install an app on a device, there are three options:
 
 To send the public install page link or the QR code:
 
-1. [Expose](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) the Workflow that creates the installable file, and run the Workflow on Bitrise.
+1. [Expose](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) the Workflow that creates the installable file, and run the Workflow on Bitrise.
 2. Open the **Details** page of your app's chosen build version.
 3. On the right, find the Public Install Page link or the QR code.
 4. Copy the one you need and send it to the stakeholders (by email, for example).
@@ -127,7 +127,7 @@ To install it directly from Ship:
 
 ### Publishing an app online
 
-<div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
+<div><button type="button" class="collapsible"><p>Publishing an app for iOS</p></button> <div class="collapsible-content" markdown="1"> {% include message_box.html type="important" title="Building the app" content="You can only publish an app in Ship if it's built in a Workflow that is [exposed](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) to Ship. For an iOS app, the Workflow should contain the **Xcode Archive & Export for iOS** Step and the **Deploy to Bitrise.io** Step. Make sure the **Xcode Archive & Export for iOS** Step archives and exports the project with `Release` configuration."%}
 
 {% include message_box.html type="important" title="The `.xcarchive` file" content="Please note that in order to deploy an iOS app with Ship, Ship needs the `.xcarchive` file. Make sure that the **Deploy to Bitrise.io** Step exports the archive, otherwise Ship won't be able to publish your app!
 
@@ -149,7 +149,7 @@ To configure publishing an app for iOS:
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go to the **General** tab.
 3. Go to the **iOS Settings** section.
-4. [Expose](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the .ipa you want to publish, and run the Workflow on Bitrise.
+4. [Expose](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the .ipa you want to publish, and run the Workflow on Bitrise.
 5. Select the code signing files you want to use.
 
    Make sure you choose the files appropriate for the export method you used to create the .ipa file. For example, if your .ipa was exported using the `app-store` method, choose an App Store provisioning profile and a Distribution certificate (code signing identity).
@@ -176,7 +176,7 @@ To configure publishing an app for Android:
 
 1. Open your app's Ship page and click **Settings** in the top right corner.
 2. Go to the **Android Settings** section.
-3. [Expose](/ship-add-on-beta-version/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the APK you want to publish.
+3. [Expose](/deploy/ship/#exposing-a-workflows-artifacts-to-ship) a Workflow that creates the APK you want to publish.
 4. Enter the [track](https://developers.google.com/android-publisher/tracks) you want to use to publish to the Google Play Console.
 5. If your Android app contains multiple modules, enter the exact module under **Module**. ![](/img/module-android-settings.png)
 6. Choose the appropriate keystore file and the Service Account JSON file.

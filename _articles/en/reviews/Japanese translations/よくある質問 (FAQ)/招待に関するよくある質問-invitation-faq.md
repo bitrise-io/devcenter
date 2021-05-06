@@ -40,7 +40,7 @@ Bitriseは小文字・大文字のどちらか一方のメールアドレスに�
 
 Bitriseで組織に招待を受けていて、招待を承認する前にGitアカウント (例: Bitbucket, GitHubやGitlab) を使ってBitriseへサインアップを試みているのであれば、この場合Bitriseにサインアップすることはできません。
 
-組織へのアクセスを行うには、招待メールに記載されている指示に従い登録を完了してください。そして、サインアップした[BitriseアカウントとGitプロバイダアカウントを連携](/jp/getting-started/connecting-account-bitrise/)してください。
+組織へのアクセスを行うには、招待メールに記載されている指示に従い登録を完了してください。そして、サインアップした[BitriseアカウントとGitプロバイダアカウントを連携](/jp/getting-started/connecting-to-services/connecting-to-services-index/)してください。
 
 ## SSOを使った組織に招待されることは可能ですか。
 

@@ -10,12 +10,12 @@ published: false
 ---
 Project Scanner (プロジェクトスキャナ) は与えられたプロジェクトのタイプを検知し、ベーシックなBitrise configurationを生成します。サポートされているプロジェクトのタイプそれぞれにはスキャナが付随しています：それらは個々のパッケージとして保管されています。
 
-一つのプロジェクトタイプスキャナは最低2つのワークフローを定義します：テスト用 (`primary`)とビルド用 (`deploy`)になっています。[実行を成功させるために、最低限の数のStepがすでに含まれております。](/getting-started/getting-started-workflows/#default-workflows)
+一つのプロジェクトタイプスキャナは最低2つのワークフローを定義します：テスト用 (`primary`)とビルド用 (`deploy`)になっています。[実行を成功させるために、最低限の数のStepがすでに含まれております。](/steps-and-workflows/default-workflows/)
 
 {% include message_box.html type="important" title="Build and test Steps ビルドとテストのStep" content="ビルドStepとテストStepにはそれぞれ異なったものが必要です：
 
 * **ビルド**Stepはアプリのビルドをする必要があります。デプロイの準備が完了している状態で、アウトプットファイルへ環境変数を出力しなければなりません。例えば、iOSアプリをビルドするビルドStepは、.ipaファイル (.xcodearchiveではない) とその.ipaファイルへのパスを出力する必要があります。
-* **テスト**Stepはテスト結果を出力する必要があるので、[bitrise.io](app.bitrise.io)上のビルドページにて確認することができます。"%}
+* **テスト**Stepはテスト結果を出力する必要があるので、[bitrise.io](https://app.bitrise.io)上のビルドページにて確認することができます。"%}
 
 ウェブサイト上で新プロジェクトを追加する際やご自身のマシンでプロジェクトを開始する時、[bitrise-init](https://github.com/bitrise-core/bitrise-init)ツールが全てのスキャナを通じてイテレーション作業を行います。ほかにも、scanner interface methods (スキャナインターフェース方法) をそれぞれに呼び出し、アウトプットを収集します。アウトプットに基づいてベーシックな設定が生成されます。
 
