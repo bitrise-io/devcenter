@@ -32,7 +32,7 @@ The most important concepts to managing apps on Bitrise are:
 
 * Organizations: [They are created by individual users](/team-management/organizations/creating-org/). Organizations can have an unlimited number of members and can own and control an unlimited amount of apps. Organizations need their own payment plan: even if the Organization's creator is already subscribed to Bitrise, a separate payment plan must be set up for the Organization itself.
 
-{% include message_box.html type="important" title="Teams vs groups" content="Teams and groups are not the same! [Groups are the main building blocks of Organizations](/team-management/organizations/members-organizations/) but by themselves have no powers: they need to be [assigned to apps](/team-management/Organizations/managing-apps/#assigning-groups-to-apps).
+{% include message_box.html type="important" title="Teams vs groups" content="Teams and groups are not the same! [Groups are the main building blocks of Organizations](/team-management/organizations/members-organizations/) but by themselves have no powers: they need to be [assigned to apps](/team-management/organizations/managing-apps/#assigning-groups-to-apps).
 
 Organization members can be assigned to applications individually or as a group. The same Organization group can have different roles on different application teams. "%}
 
