@@ -25,7 +25,7 @@ Trigger builds by:
 
 * Clicking the `Build` button on the application’s page (manual build trigger).
 * [Scheduling with a selected branch and frequency](/builds/scheduling-builds).
-* [Webhooks](/webhooks/): automatically trigger a build after each [code/tag push](/builds/triggering-builds/trigger-code-push/) or [pull request](/builds/triggering-builds/trigger-pull-request/) to the given branch.
+* [Webhooks](/webhooks/webhooks-index/): automatically trigger a build after each [code/tag push](/builds/triggering-builds/trigger-code-push/) or [pull request](/builds/triggering-builds/trigger-pull-request/) to the given branch.
 * Our[ API](/api/build-trigger/).
 
 Read more about triggers in our [Triggering builds](/builds/triggering-builds/triggering-builds-index/) guide.

@@ -49,7 +49,7 @@ You are done! Now you are able to access your privately hosted repositories with
 
 ## Add a new app from a self-hosted GitLab repository
 
-Before you start, make sure you [created an OAuth application](/getting-started/signing-up/self-hosted-gitlab#connect-a-self-hosted-gitlab-instance-with-bitrise) in your self-hosted GitLab instance.
+Before you start, make sure you [created an OAuth application](/getting-started/connecting-to-services/self-hosted-gitlab/#connect-a-self-hosted-gitlab-instance-with-bitrise) in your self-hosted GitLab instance.
 
 1. Log in to [bitrise.io](https://www.bitrise.io) and click the **+** symbol on the top menu bar and select **Add app** from the options.
 2. Choose an Organization account.

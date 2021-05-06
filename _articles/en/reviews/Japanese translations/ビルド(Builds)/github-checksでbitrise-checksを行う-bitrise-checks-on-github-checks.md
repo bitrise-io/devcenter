@@ -26,7 +26,7 @@ Bitrise Checksの使用は数クリックでできるようになります。
 
 1. ご自身の[ダッシュボード](https://app.bitrise.io/dashboard/builds)よりOrganizationのアプリを選択します。
 2. アプリの**Settings**タブを選択します。
-3. **ENABLE GITHUB CHECKS**トグルの説明欄にあるリンク**install our app to your GitHub repository**をクリックします。Bitrise Checksをインストールすることが先ですので、この時点ではまだトグルを動かさないでください。[後ほど](/github-checks/#enabling-github-checks)トグルを右に動かします。
+3. **ENABLE GITHUB CHECKS**トグルの説明欄にあるリンク**install our app to your GitHub repository**をクリックします。Bitrise Checksをインストールすることが先ですので、この時点ではまだトグルを動かさないでください。[後ほど](/builds/bitrise-checks-on-github-checks/#enabling-github-checks)トグルを右に動かします。
 
    ![{{ page.title }}](/img/disabled-toggle-githubchekcs.jpg)
 

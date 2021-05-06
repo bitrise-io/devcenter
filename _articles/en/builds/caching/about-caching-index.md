@@ -56,7 +56,7 @@ The Step is not submitting a new cache archive every time, only if the files to 
 
 We strongly recommend that you do not change this! From a security perspective, the best practice is to never allow pull request builds to alter anything that can affect other Bitrise builds.
 
-If you absolutely must change it, you need to use a `run_if` expression in the app's `bitrise.yml` file. Read more about `run_if` expressions in our [/steps-and-workflows/disable-a-step-by-condition/](Enabling or disabling a Step conditionally) guide.
+If you absolutely must change it, you need to use a `run_if` expression in the app's `bitrise.yml` file. Read more about `run_if` expressions in our [Enabling or disabling a Step conditionally](/steps-and-workflows/disable-a-step-by-condition/) guide.
 "%}
 
 ## Using caching in your builds

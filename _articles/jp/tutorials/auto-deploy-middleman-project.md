@@ -86,4 +86,4 @@ Now we are going to add and customize an Amazon S3 bucket sync to the workflow s
 
 Once the configuration of your Workflow is complete, you can run a build **manually** by clicking on the `Start/Schedule a build` button on the app's page.
 
-If you chose GitHub when adding your repository, each code change (commit) on GitHub will **automatically** trigger a Bitrise build. Otherwise you can find more information about how you can setup a Webhook, to trigger builds automatically for code push, pull request and tags [here](/webhooks/).
+If you chose GitHub when adding your repository, each code change (commit) on GitHub will **automatically** trigger a Bitrise build. Otherwise you can find more information about how you can setup a Webhook, to trigger builds automatically for code push, pull request and tags [here](/webhooks/webhooks-index/).

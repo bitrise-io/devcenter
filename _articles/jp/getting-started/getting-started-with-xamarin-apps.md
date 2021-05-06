@@ -28,7 +28,7 @@ BitriseへXamarinアプリを追加する前に、Xamarin solution fileを用意
 
 Xamarin solution fileは複数のプロジェクトを含めることができます。あなたのsolution configurationがどのプロジェクト（solution items）がビルドされるのか測定し、ビルドする際に使用するproject configuration type（例：_debug_ または _release_）も測定します。
 
-[Visual Studioにてsolution configurationsのセットアップを行ってください](https://docs.microsoft.com/en-us/appcenter/build/xamarin/ios/solution-configuration-mappings)。Solution file上にはBitriseでビルドを行う全てのsolution configurationsが含まれていなければなりません。また、一定のsolution platformでビルドを行う場合、そのプラットフォームに互換性があることを確認してください。
+[Visual Studioにてsolution configurationsのセットアップを行ってください](https://docs.microsoft.com/en-us/visualstudio/extensibility/internals/solution-configuration?view=vs-2019)。Solution file上にはBitriseでビルドを行う全てのsolution configurationsが含まれていなければなりません。また、一定のsolution platformでビルドを行う場合、そのプラットフォームに互換性があることを確認してください。
 
 {% include message_box.html type="example" title="Solution configuration" content="例：ソリューションファイルの中にAndroidとiOSのプロジェクトが含まれていて、AndroidプロジェクトのみをBitriseでビルドを行いたい場合、AndroidプロジェクトのみをビルドするVisual Studio上でsolution configurationをセットアップしてからBitriseでそのコンフィギュレーションを使用してください。適切なソリューションプラットフォームを使用することが重要です。（Androidプロジェクトのみのビルドを行う場合、iPhoneをソリューションプラットフォームとして設定しないでください。）"%}
 
@@ -55,7 +55,7 @@ Xamarin solution fileは複数のプロジェクトを含めることができ�
 Xamarinアプリの依存関係のインストールは特定のステップ`NuGet restore`により処理されます。このステップは自動で作成されたXamarinアプリの[ワークフロー](/getting-started/getting-started-workflows/)の一部を担っており、一つ必要なインプットがあります：アプリを追加する際の環境変数として保存されるXamarin solution fileへの進路となります。
 
 1. アプリのWorkflow Editorへ入り、`Workflows`タブをクリックします。
-2. あなたのワークフロー内に`NuGet restore`があることを確認してください。ここのステップで必要なインプットはXamarin solution fileへの進路となります。デフォルトでは、そのインプットは[環境変数](/getting-started/getting-started-steps/#environment-variables-as-step-inputs)となっており、Bitriseにアプリを追加するときに保存されます。異なるsolution fileを使う際は、Workflow Editor内にあるタブ`Env Vars`をクリックして環境変数の値を変更してください。
+2. あなたのワークフロー内に`NuGet restore`があることを確認してください。ここのステップで必要なインプットはXamarin solution fileへの進路となります。デフォルトでは、そのインプットは[環境変数](/steps-and-workflows/step-inputs/#environment-variables-as-step-inputs)となっており、Bitriseにアプリを追加するときに保存されます。異なるsolution fileを使う際は、Workflow Editor内にあるタブ`Env Vars`をクリックして環境変数の値を変更してください。
 
 ## Xamarinアプリのテスト
 
@@ -67,7 +67,7 @@ Xamarinアプリのユニットテストは、`NUnit Runner` ステップにて�
 
 1. アプリのWorkflow Editorに入り、`Workflows`タブをクリックします。
 2. ワークフローに`NUnit runner` ステップを追加します。このステップは`NuGet restore` ステップ後に追加してください：アプリのテストを走らせる前に全ての依存関係をインストールしてください。
-3. 必要なinput variablesを入力します。デフォルトでは、全てのinputは[Environment Variables](/jp/getting-started/getting-started-steps/#environment-variables-as-step-inputs)になっています。異なるsolution fileまたはsolution configuration を使用する場合は、Workflow Editor内のタブ`Env Vars` をクリックし、環境変数の値を変更してください。
+3. 必要なinput variablesを入力します。デフォルトでは、全てのinputは[Environment Variables](/jp/steps-and-workflows/step-inputs/#environment-variables-as-step-inputs)になっています。異なるsolution fileまたはsolution configuration を使用する場合は、Workflow Editor内のタブ`Env Vars` をクリックし、環境変数の値を変更してください。
    * **Path to Xamarin Solution**: あなたのXamarin solution fileの場所を示します。
    * **Xamarin project configuration**: Bitriseであなたが走らせたい、Visual Studioでセットアップされたsolution configurationが表示されます。異なる設定で走らせたい場合は、適切な環境変数に変更してください。
    * **Xamarin platform**: あなたのsolution configurationのターゲットプラットフォームを示します。
@@ -140,7 +140,7 @@ iOSプロジェクトの場合、Visual Studioにて正確なコード署名ア�
 2. `Xamarin Archive` ステップがワークフローに含まれていることを確認してください。
 
    ![{{ page.title }}](/img/xamarin-archive.jpg)
-3. ステップに必要なインプットには適切な値が入っています。デフォルトでは全てのインプットは[環境変数](/getting-started/getting-started-steps/#environment-variables-as-step-inputs)になっています。Workflow Editorにある`Env Vars` タブをクリックし、環境変数の値を変更してください。
+3. ステップに必要なインプットには適切な値が入っています。デフォルトでは全てのインプットは[環境変数](/steps-and-workflows/step-inputs/#environment-variables-as-step-inputs)になっています。Workflow Editorにある`Env Vars` タブをクリックし、環境変数の値を変更してください。
    * **Path to the Xamarin Solution file**: あなたのXamarin ソリューションファイルの場所を示します。
    * **Xamarin project configuration**: Bitriseであなたが走らせたい、Visual Studioでセットアップされたソリューションコンフィグが表示されます。異なる設定で走らせたい場合は、適切な環境変数に変更してください。
 
@@ -170,7 +170,7 @@ iOSプロジェクトの場合、Visual Studioにて正確なコード署名ア�
 3. コード署名ステップと`Xamarin Archive` ステップがワークフローに含まれていることを確認してください。
 4. 異なるソリューションコンフィグを使用する場合は、`Env Var` タブ上の関連した環境変数の値を変更してください。どの環境変数を変更するかは、`Xamarin Archive` ステップのインプットを確認してください。
 5. ワークフローに`Google Play Deploy` ステップを追加してください。このステップは`Xamarin Archive` ステップの後にきます。
-6. Workflow Editor の`Code Signing` タブ上にある**Generic File Storage**へサービスアカウントJSONキーファイルをアップロードしてください。詳しくは[JSONキーファイルのアクセス方法](/tutorials/deploy/android-deployment/#set-up-google-play-api-access)をご確認ください。
+6. Workflow Editor の`Code Signing` タブ上にある**Generic File Storage**へサービスアカウントJSONキーファイルをアップロードしてください。詳しくは[JSONキーファイルのアクセス方法](/deploy/android-deploy/deploying-android-apps/#setting-up-google-play-api-access)をご確認ください。
 7. サービスアカウントのJSONキーファイルを参照するためのシークレット環境変数を作成してください。
 8. `Google Play Deploy`ステップをクリックし、サービスアカウントのJSON key file pathとパッケージ名を関連したインプットフィールドに追加してください。
 9. ビルド開始です！

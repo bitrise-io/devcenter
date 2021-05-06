@@ -156,7 +156,7 @@ iOSプロジェクトに署名するには、`Cordova Archive`と`Ionic Archive`
 開始する前に:
 
 * [Google Play Storeに登録、プロジェクトをセットアップ](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)を確認します。
-* [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)にセットアップしているか確認します。
+* [Google Play API access](https://devcenter.bitrise.io/deploy/android-deploy/deploying-android-apps/#setting-up-google-play-api-access)にセットアップしているか確認します。
 
 1. Bitrise `Dashboard`で、`Code Signing`タブに移動し、サービスアカウントのJSONキーを`GENERIC FILE STORAGE`にアップロードします。
 2. アップロードしたファイルのURLのあるenvキーをコピーします。例えば、`BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`

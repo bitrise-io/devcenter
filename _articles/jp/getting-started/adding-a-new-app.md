@@ -61,7 +61,7 @@ Bitriseには、あらゆるGitリポジトリに接続するためのオプシ�
 
 {% include message_box.html type="warning" title="プライベートリポジトリとの接続にはSSH URLを使用してください" content="プライベートリポジトリに接続する場合、BitriseはSSH経由でクローンを行います。そのため、リポジトリのSSH URLを入力する必要があります。"%}
 
-この後のステップで、BitriseはあなたのリポジトリにSSHキーを追加します。 SSHキーを自動または手動で追加する方法について詳しくは[SSH keys](/adding-a-new-app/setting-up-ssh-keys/)をご覧ください。
+この後のステップで、BitriseはあなたのリポジトリにSSHキーを追加します。 SSHキーを自動または手動で追加する方法について詳しくは[SSH keys](/getting-started/adding-a-new-app/#setting-up-ssh-keys/)をご覧ください。
 
 ## SSHキーの設定
 
@@ -111,7 +111,7 @@ GitHub、GitLabおよびBitbucketのリポジトリをセットアップする�
 
 このオプションは、特定のユーザの秘密鍵を持っている場合に利用できます。秘密鍵をペーストするだけで、[Bitrise](https://www.bitrise.io)はリポジトリにアクセスできるようになります。
 
-プロジェクトに [SSHキーの設定](/adding-a-new-app/setting-up-ssh-keys) がなされれば、 Bitriseはコードをダウンロードし、レポジトリにアクセスできることを確認します。そして、自動的にコードをスキャンし、もっとも最適なプロジェクトの初期設定を検知しようとします。 現時点でBitriseは、`iOS`, `Android`, `Xamarin` および `fastlane` のプロジェクトに対応しています。
+プロジェクトに [SSHキーの設定](/getting-started/adding-a-new-app/#setting-up-ssh-keys) がなされれば、 Bitriseはコードをダウンロードし、レポジトリにアクセスできることを確認します。そして、自動的にコードをスキャンし、もっとも最適なプロジェクトの初期設定を検知しようとします。 現時点でBitriseは、`iOS`, `Android`, `Xamarin` および `fastlane` のプロジェクトに対応しています。
 
 他のプロジェクトの設定も可能ですが、手動での設定が必要になります。
 
@@ -121,7 +121,7 @@ GitHub、GitLabおよびBitbucketのリポジトリをセットアップする�
 
 ![ブランチの選択](/img/adding-a-new-app/choose-branch.png)
 
-検証中に、Bitriseは設定した[SSHキー](/adding-a-new-app/setting-up-ssh-keys)を使って、指定されたブランチへアクセスできることを確認します。
+検証中に、Bitriseは設定した[SSHキー](/getting-started/adding-a-new-app/#setting-up-ssh-keys)を使って、指定されたブランチへアクセスできることを確認します。
 
 検証が成功すると、Bitriseはレポジトリをスキャンし、プロジェクトの設定に基づいたデフォルトワークフローを提示します。
 
@@ -143,4 +143,4 @@ GitHub、GitLabおよびBitbucketのリポジトリをセットアップする�
 
 プロジェクトの設定が完了すれば、すぐにwebhookの登録が可能になります。webhookが設定されていれば、レポジトリ内のコードの変更があれば、自動的に作成された`primary（プライマリ）`ワークフローがデフォルトで起動されます。
 
-webhooksについて詳しくは、[Webhooks](/webhooks)の章をお読みください。
+webhooksについて詳しくは、[Webhooks](/webhooks/webhooks-index/)の章をお読みください。

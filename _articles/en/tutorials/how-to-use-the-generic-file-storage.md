@@ -38,7 +38,7 @@ For example, the **Decrypt file** Step supports using the download URL generated
 For using the **File Downloader** Step or the **Script** Step, check out our examples:
 
 * [Downloading a file using the File Downloader Step](/tutorials/how-to-use-the-generic-file-storage/#downloading-a-file-using-the-file-downloader-step)
-* [Downloading and exporting a file using a Script Step](/tutorials/how-to-use-the-generic-file-storage/#downloading-and-exporting-a-file-using-a-script-step)
+* [Downloading and exporting a file using a Script Step](/tutorials/how-to-use-the-generic-file-storage/#downloading-a-file-and-exporting-the-files-path-using-a-script-step)
 
 ### Downloading a file using the File Downloader Step
 

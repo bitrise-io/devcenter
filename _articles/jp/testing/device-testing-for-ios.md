@@ -42,8 +42,6 @@ Firebase Test Labでのデバイステストを実行するために、以下の
 
 `iOS Device Testing`ステップでテストを実行し、Bitriseに結果を出力するためには、この.zipファイル(環境変数として出力されます)のパスを入力する必要があります。
 
-1. アプリの[デバイステストが許可されているか](/testing/virtual-device-testing-for-ios/#enabling-device-testing)を確認する。
-
 2. ワークフローに`Xcode Build for testing for iOS`ステップを追加する。
 
    `Certificate and profile installer`ステップ以降に追加する必要があることに注意してください。

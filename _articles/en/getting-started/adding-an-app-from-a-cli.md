@@ -92,4 +92,4 @@ You can, of course, use an HTTPS URL to access your remote repository, too: in t
     * You can decide to skip webhook registration but it's required to automatically trigger builds on Bitrise. Read more about Webhooks in the [Webhooks](/webhooks/index/) section.
     * You can upload code signing files: depending on your app's type, you will be asked if you want to upload iOS code signing files - the tool will run codesigndoc for you - and/or an Android keystore file. You can upload these files any time on the website. Read more about code signing in our [Code signing](/code-signing/code-signing-index/) section.
 
-And that's it! You are done: the URL to your new app will be printed out, and you can also view the app on your [Dashboard](app.bitrise.io/dashboard/).
+And that's it! You are done: the URL to your new app will be printed out, and you can also view the app on your [Dashboard](https://app.bitrise.io/dashboard/).

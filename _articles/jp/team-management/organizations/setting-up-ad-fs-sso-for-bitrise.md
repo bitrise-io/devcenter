@@ -85,10 +85,10 @@ Once you are finished with exporting the certificate, you can continue with addi
 
 ## What’s next?
 
-Learn how you can [log into your Org now that SAML SSO is set up](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account).
+Learn how you can [log into your Org now that SAML SSO is set up](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account).
 
-You might wan to [check out Org member’s SAML SSO statuses](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
+You might wan to [check out Org member’s SAML SSO statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
 
-You might want to [enforce SAML SSO login to the Org](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) once all Org members have authorized their SAML SSO connection to the Org.
+You might want to [enforce SAML SSO login to the Org](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) once all Org members have authorized their SAML SSO connection to the Org.
 
-Disabling SAML SSO is very simple - [learn how.](https://bitrise.atlassian.net/team-management/organizations/saml-sso-in-organizations/#disabling-an-organizations-saml-sso)
+Disabling SAML SSO is very simple - [learn how.](/team-management/organizations/saml-sso-in-organizations/#disabling-an-organizations-saml-sso)

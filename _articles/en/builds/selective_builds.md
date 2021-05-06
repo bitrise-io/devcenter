@@ -22,7 +22,7 @@ You may want to use this setting if:
 
 {% include message_box.html type="important" title="Selective Builds with non-Github projects" content=" The current version of our Selective Builds feature only works with GitHub projects. If your repository is hosted by another Git hosting service, the option will not be available."%}
 
-The appropriate Service credential user must be set on your app's **Team** page. This user must have an admin right for the GitHub repository of the project. [Read more about setting up the Service credential user](/troubleshooting/github-pull-request-status-troubleshooting/#make-sure-to-select-a-service-credential-user-who-has-a-connected-github-account).
+The appropriate Service credential user must be set on your app's **Team** page. This user must have an admin right for the GitHub repository of the project. [Read more about setting up the Service credential user](/troubleshooting/github-pull-request-status-troubleshooting/#checking-the-service-credential-user).
 
 ## Setting up Selective builds
 

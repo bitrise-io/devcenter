@@ -175,13 +175,13 @@
   changelog: Information on which authentication method to use with the Apple Developer
     Enterprise Program has been added to the document.
   type: update
-  url: "/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#steps-that-require-connecting-to-your-apple-developer-account"
+  url: "/getting-started/connecting-to-services/configuring-bitrise-steps-that-require-apple-developer-account-data/"
 - title: Configuring Steps that require Apple Developer account data
   modified: 2021-01-11T00:00:00.000+01:00
   changelog: Updated the configuration procedure related to Deploy to iTunes Connect
     Step
   type: update
-  url: "/getting-started/configuring-bitrise-steps-that-require-apple-developer-account-data/#deploy-to-itunes-connect-step"
+  url: "/getting-started/connecting-to-services/configuring-bitrise-steps-that-require-apple-developer-account-data/#steps-that-require-connecting-to-your-apple-developer-account"
 - title: Setting up Google SSO for Bitrise
   modified: 2021-01-05T00:00:00.000+01:00
   changelog: Content and images have been updated on how to set up SAML SSO for Bitrise
@@ -198,7 +198,7 @@
   modified: 2020-12-07T00:00:00.000+01:00
   changelog: Corrected a note about expired certificates in our SAML SSO guide.
   type: fix
-  url: "/team-management/organizations/saml-sso-in-organizations/#logging-in-via-sso-with-a-bitrise-account"
+  url: "/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account"
 - title: SAML SSO in Organizations
   modified: 2020-12-02T00:00:00.000+01:00
   changelog: Inviting to an Organization via SAML SSO has been added to the article
@@ -272,7 +272,7 @@
     for GitHub Enterprise users. If your repo is hosted on GitHub Enterprise, you'll
     need to use the provided workaround.
   type: update
-  url: "/bitrise-yml-online/#storing-the-bitriseyml-file-on-bitriseio"
+  url: "/builds/bitrise-yml-online/"
 - title: iOS code signing - troubleshooting
   modified: 2020-10-08T00:00:00.000+02:00
   changelog: iOS Auto Provision with Apple ID Step configuration details have been
@@ -516,7 +516,7 @@
   changelog: A new guide about how to Carthage dependencies during Bitrise builds,
     using our dedicated Steps.
   type: new
-  url: "/builds/caching/caching-carthage-dependencies/"
+  url: "/builds/caching/about-caching-index/"
 - title: Caching
   modified: 2020-04-17
   changelog: 'New tutorial video about build caching: learn about using the dedicated

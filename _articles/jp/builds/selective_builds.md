@@ -18,7 +18,7 @@ Selective Buildsを利用することで、特定のファイルやフォルダ�
 
 {% include message_box.html type="important" title="GitHubのプロジェクト以外でのSelective Builds" content="Selective buildsは現在、GitHubのプロジェクトのみ動作します。その他のgitホスティングサービスを利用しているリポジトリではこのオプションは利用できません。"%} 
 
-アプリの `Team` のページから適切なService credential userをセットする必要があります。ここでセットするユーザーはGitHubのリポジトリのadminユーザーである必要があります。[Service credential userについての詳しい設定はこちらを参照してください。](/troubleshooting/github-pull-request-status-troubleshooting/#make-sure-to-select-a-service-credential-user-who-has-a-connected-github-account).
+アプリの `Team` のページから適切なService credential userをセットする必要があります。ここでセットするユーザーはGitHubのリポジトリのadminユーザーである必要があります。[Service credential userについての詳しい設定はこちらを参照してください。](/troubleshooting/github-pull-request-status-troubleshooting/#checking-the-service-credential-user).
 
 1. アプリの `Dashboard` をクリックします
 2. 上部ナビゲーションバーの `Settings` をクリックします

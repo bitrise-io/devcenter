@@ -79,7 +79,7 @@ step will print the values specified in the secrets file:
 As Secrets are the first environment variables processed when you execute
 a `bitrise run` command, you can use the environment variables everywhere in
 your `bitrise.yml`, for example in `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)),
-[Workflow environment variables](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
+[Workflow environment variables](/bitrise-cli/workflows/#defining-workflow-specific-parameters-and-environment-variables)
 and Step inputs too.
 
 ## Secret filtering with Bitrise CLI

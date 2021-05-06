@@ -59,7 +59,7 @@ and in the [Expose an Environment Variable and use it in another Step](/tips-and
 Environment variables are available **after** the environment variable
 is "processed".
 
-There are a few environment variables [exposed by the Bitrise CLI itself](/faq/available-environment-variables/#exposed-by-the-bitrise-cli),
+There are a few environment variables [exposed by the Bitrise CLI itself](/builds/available-environment-variables/#exposed-by-the-bitrise-cli),
 those are available from the start (e.g. `BITRISE_SOURCE_DIR` and `BITRISE_TRIGGERED_WORKFLOW_ID`).
 
 All other environment variables are "processed" / made available _as the build progresses._
@@ -69,7 +69,7 @@ made available before the workflow would be executed:
 [Secrets](/bitrise-cli/secrets/) and `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/)).
 
 After these, the processing of the specified Workflow starts, and the
-[environment variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
+[environment variables specified for that Workflow](/bitrise-cli/workflows/#defining-workflow-specific-parameters-and-environment-variables)
 are made available. If the workflow has before or after workflows, when
 a specific workflow is processed (right before the first step of the workflow would run)
 the workflow's environment variables are processed and made available.
@@ -86,7 +86,7 @@ so those are available for subsequent steps **after the Step finishes**.
 2. [Secrets](/bitrise-cli/secrets/)
 3. One-off environment variables specified for the build through the [Build Trigger API](/api/build-trigger)
 4. `App Env Vars` (`app: envs:` in the [bitrise.yml](/bitrise-cli/basics-of-bitrise-yml/))
-5. [Workflow environment variables](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
+5. [Workflow environment variables](/bitrise-cli/workflows/#defining-workflow-specific-parameters-and-environment-variables)
 6. Step inputs
 7. Step outputs
 
@@ -120,5 +120,5 @@ other step **after** the step (which generates the outputs) completes.
 
 You can find more information about environment variable availability
 of Workflow env vars in chained workflows in the
-[Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#note-about-workflow-environment-variables)
+[Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#about-workflow-environment-variables)
 documentation.

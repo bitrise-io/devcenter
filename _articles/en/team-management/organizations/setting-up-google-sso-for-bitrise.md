@@ -39,7 +39,7 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
 2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignon.jpg)
-4. Continue with [Getting configuration information from Google](/team-management/organizations/setting-up-google-sso-for-bitrise/#getting-configuration-information-from-google).
+4. Continue with [Getting configuration information from Google](/team-management/organizations/setting-up-google-sso-for-bitrise/#getting-configuration-information-from-g-suite-and-bitrise).
 
 ## Getting configuration information from G Suite and Bitrise
 

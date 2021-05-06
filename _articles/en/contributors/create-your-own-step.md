@@ -104,7 +104,7 @@ We'll look at the most important configuration options of the `step.yml` file, i
 
 ## Naming and describing a Step
 
-Every Step must have at least a title and a summary defined in the `step.yml` file. These will appear both on the [Integrations](www.bitrise.io/integrations/) page and in the [Workflow Editor](/steps-workflows/). The `description` property is optional but we strongly recommend providing one so that other users better understand how your Step works.
+Every Step must have at least a title and a summary defined in the `step.yml` file. These will appear both on the [Integrations](https://www.bitrise.io/integrations/) page and in the [Workflow Editor](/steps-and-workflows/steps-and-workflows-index/). The `description` property is optional but we strongly recommend providing one so that other users better understand how your Step works.
 
 {% include message_box.html type="info" title="Description and summary" content="Both `description` and `summary` accept Markdown formatting in its values."%}
 
@@ -112,7 +112,7 @@ Every Step must have at least a title and a summary defined in the `step.yml` fi
 
 {% include message_box.html type="important" title="The title property" content="The `title` property is required!"%}
 
-The `title` property sets the name of the Step, as it will appear on [bitrise.io](www.bitrise.io). It should be short and descriptive. Include the name of the service and the function it fulfils, such as **Git Clone**. Here's a few guidelines for your Step titles:
+The `title` property sets the name of the Step, as it will appear on [bitrise.io](https://www.bitrise.io). It should be short and descriptive. Include the name of the service and the function it fulfils, such as **Git Clone**. Here's a few guidelines for your Step titles:
 
 * Do not use the word 'Step'.
 * Use imperative verbs instead of nouns when possible. For example, instead of **Script Runner**, it should be **Run Script**.

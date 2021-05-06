@@ -17,7 +17,7 @@ menu:
 
 そのリファレンスにある全てのエンドポイントを試すことができます！必要なことは、あなた自身を認証することと、求められるパラメータを設定するだけです。APIはそのコールに従って、適切なレスポンスを返します。
 
-1. [パーソナルアクセストークンを取得します](/api/v0.1#acquiring-a-personal-access-token).
+1. [パーソナルアクセストークンを取得します](/api/authentication/#acquiring-a-personal-access-token).
 2. [Bitrise APIエンドポイントリファレンス](https://api-docs.bitrise.io)に移動します。
 3. `Authorize` をクリックします。
 

@@ -19,7 +19,7 @@ menu:
 
 `Env Vars`で変数を新しいものに置き換えることもできます。古い値を削除して新しい値を設定してください。入力の`Replace variables in inputs`を右側に切り替えると、新しい値がワークフローのあらゆる場所で使用されます。
 
-{% include message_box.html type="important" title="秘密を守ります" content="[秘密の環境変数](#about-secrets/)とは反対に、環境変数はプルリクエストによって引き起こされるビルドで公開されているので、どんな機密情報も`Env Vars`に追加しないでください。"%}
+{% include message_box.html type="important" title="秘密を守ります" content="[秘密の環境変数](/builds/env-vars-secret-env-vars/#about-secrets)とは反対に、環境変数はプルリクエストによって引き起こされるビルドで公開されているので、どんな機密情報も`Env Vars`に追加しないでください。"%}
 
 ### 特定のワークフローごとに環境変数を設定
 
@@ -46,7 +46,7 @@ Bitriseの `Secrets`タブを使ってワークフローに秘密の環境変数
 
 ![{{ page.title }}](/img/locked-secret.png)
 
-[ステップ](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step/)の`SENSITIVE`入力に秘密の環境変数を直接追加することもできます。
+[ステップ](/builds/sensitive-input-field/#set-a-sensitive-input-in-a-step)の`SENSITIVE`入力に秘密の環境変数を直接追加することもできます。
 
 ### 秘密の環境変数を編集
 
@@ -75,6 +75,6 @@ PR内のビルドログに秘密を公開する場合は、`Expose for Pull Requ
 
 {% include message_box.html type="important" title=" `SENSITIVE`ラベルについて" content="公開アプリの場合、機密情報を含むステップ入力フィールドは`SENSITIVE`ラベルでマークされているため、秘密環境変数しか使用できません。また`Expose for Pull Request`トグルはデフォルトで無効になっており、公開されているビルドログには秘密を隠したままにしておく必要があるため有効にすることはできません。"%}
 
-Head over to [Secrets](/bitrise-cli/secrets/) for more information on [secret filtering](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli/).
+Head over to [Secrets](/bitrise-cli/secrets/) for more information on [secret filtering](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli).
 
-[シークレットフィルタリング](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli/)詳細については、「[Secrets](/bitrise-cli/secrets/)」から確認してください。
+[シークレットフィルタリング](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli)詳細については、「[Secrets](/bitrise-cli/secrets/)」から確認してください。

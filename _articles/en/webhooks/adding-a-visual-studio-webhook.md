@@ -8,9 +8,6 @@ menu:
 You can set up webhooks so that Bitrise automatically triggers a build of your app whenever you perform a specified action, such as a code push or a pull request. For Visual Studio, all you have to do is register your `bitrise-webhooks` URL for
 a [visualstudio.com](https://visualstudio.com) project as a **Service Hooks** integration.
 
-You can find an official guide
-on [visualstudio.com 's documentations site](https://www.visualstudio.com/en-us/get-started/integrate/service-hooks/webhooks-and-vso-vs).
-
 ## Get the webhook URL for Visual Studio
 
 1. Go to the Code tab of your app's page and in the **INCOMING WEBHOOKS** menu, click **SETUP MANUALLY**.

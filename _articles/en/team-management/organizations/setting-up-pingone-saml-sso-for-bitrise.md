@@ -69,8 +69,8 @@ Once the Organization owner has set up the connection between the SAML SSO provi
 
 You should be landing on the Organization’s Dashboard. From now on, you can use the [Log in via SSO](https://app.bitrise.io/initiate-saml-sign-in) function to access your Organization on Bitrise.
 
-You can check which Organization member has switched from the usual login flow to the SAML SSO one if you [check their statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) on the **People** page. Once all in, you can [enforce SAML SSO](/team-management/organizations/saml-sso-in-organizations/#about-saml-sso-enforcement) as the only gateway to the Organization.
+You can check which Organization member has switched from the usual login flow to the SAML SSO one if you [check their statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) on the **People** page. Once all in, you can [enforce SAML SSO](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) as the only gateway to the Organization.
 
-{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Organization's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/#signing-up-to-bitrise-with-saml-sso). "%}
+{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Organization's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/). "%}
 
 {% include banner.html banner_text="Set up PingOne SSO" url="https://app.bitrise.io/me/profile#/overview" button_text="Go to your organization" %}

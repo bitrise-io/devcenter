@@ -21,7 +21,7 @@ menu:
 
 * [codesigndoc](https://github.com/bitrise-tools/codesigndoc)を使って必要なファイルを集めましょう。このツールを使って配布用と開発用の証明書をアップロードすることもできます。
 * developer portal teamで少なくともAdmin権限を持っている必要があります。
-* [Apple Developerアカウントがbitrise.ioと接続されている必要があります。](/getting-started/connecting-apple-dev-account/)
+* [Apple Developerアカウントがbitrise.ioと接続されている必要があります。](/getting-started/connecting-to-services/configuring-bitrise-steps-that-require-apple-developer-account-data/)
 * Apple Developer Portalの統合機能がプロジェクトで有効になっている必要があります。
 
 ## iOS Auto Provision
