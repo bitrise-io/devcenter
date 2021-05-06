@@ -19,7 +19,7 @@ You can add an incoming webhook automatically either when creating an app or lat
 
 {% include message_box.html type="important" title="Triggers and webhooks" content="If you want to be able to automatically trigger builds on Bitrise, you need to register a webhook with your git service provider! For example, if you want a pull request made in your GitHub repository to trigger a build, you must register a Bitrise webhook on GitHub."%}
 
-Outgoing webhooks can be added either on the website or [via the Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks/).
+Outgoing webhooks can be added either on the website or [via the Bitrise API](/api/incoming-and-outgoing-webhooks/#outgoing-webhooks).
 
 **Details:**
 

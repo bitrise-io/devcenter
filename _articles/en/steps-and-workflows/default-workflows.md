@@ -31,7 +31,7 @@ The **primary** Workflow is not the same for every app you create: it contains d
 
 ## The deploy Workflow
 
-The **deploy** Workflow is automatically created when adding a new app if you have tests configured in your app. It is similar to the [primary Workflow](/getting-started/getting-started-workflows#the-primary-workflow) in a number of ways:
+The **deploy** Workflow is automatically created when adding a new app if you have tests configured in your app. It is similar to the [primary Workflow](/steps-and-workflows/default-workflows/#the-primary-workflow) in a number of ways:
 
 * It has the same basic steps.
 * Its specific steps are dependent on the project type.

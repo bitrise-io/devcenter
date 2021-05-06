@@ -86,7 +86,7 @@ Xcode managed signingのチェックを外している場合、**iOS Auto Provis
 
 Code SigningタブにアップロードできるProvisioning Profileの数は最大50となっています。この制限を超えている、またはより多く使用されたい方のために、いくつかTipsを紹介します：
 
-* **iOS Auto Provision with App Store Connect API** ステップの使用を推奨しています。このステップにより、コード署名IDをBitriseにアップロードするだけなのでシンプルです。[BitriseへApple Developerアカウントを接続済み](https://bitrise.atlassian.net/connecting-apple-dev-account/#enabling-apple-developer-portal-integration)であれば、ビルド中にApple DeveloperポータルよりProvisioning Profileをダウンロードできます。
+* **iOS Auto Provision with App Store Connect API** ステップの使用を推奨しています。このステップにより、コード署名IDをBitriseにアップロードするだけなのでシンプルです。[BitriseへApple Developerアカウントを接続済み]/getting-started/connecting-to-services/configuring-bitrise-steps-that-require-apple-developer-account-data/)であれば、ビルド中にApple DeveloperポータルよりProvisioning Profileをダウンロードできます。
 * 必要な証明書やプロファイルを含む.zipファイルを作成することができます。この場合、Bitriseへ証明書やプロファイルのアップロードは不要です。ビルドマシン上の証明書やプロファイルのパスをマッチさせるため、ビルド中に.zipファイルをダウンロードして、**Certificate and Profile Installer**ステップの証明書やプロファイルのインプットをアップデートすることができます。**Certificate and Profile Installer**ステップはローカルパスと証明書・プロファイルのURLをサポートしています。
 * プロファイルと証明書をご自身でホストすることが可能です。ワークフローへの与えられた証明書・プロファイルへ指し示しているURLを追加するだけです。
 

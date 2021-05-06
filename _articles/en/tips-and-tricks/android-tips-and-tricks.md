@@ -19,7 +19,7 @@ menu:
 
 We'd like to shed light on the major differences between our two Android build steps: `Gradle Runner` and `Android Build` Steps. They are both build steps but they are slightly different in their functions. Let's jump right in!
 
-Our `Gradle Runner` Step is the headquarter for all your `gradle tasks`. It runs a single or multiple Gradle task(s) you specify and then copies the generated APK(s) into the Bitrise Deploy Directory (`$BITRISE_DEPLOY_DIR`). This step runs ANY Gradle task (not just building task) that is available in your project's [task list](/tips-and-tricks/android-tips-and-tricks/#how-to-get-the-list-of-available-gradlew-tasks-in-your-project/). You can run multiple tasks at the same time if you insert the tasks separated with spaces in the `Gradle task to run` input field of the Step.
+Our `Gradle Runner` Step is the headquarter for all your `gradle tasks`. It runs a single or multiple Gradle task(s) you specify and then copies the generated APK(s) into the Bitrise Deploy Directory (`$BITRISE_DEPLOY_DIR`). This step runs ANY Gradle task (not just building task) that is available in your project's [task list](/tips-and-tricks/android-tips-and-tricks/#getting-the-list-of-available-gradlew-tasks-in-your-project). You can run multiple tasks at the same time if you insert the tasks separated with spaces in the `Gradle task to run` input field of the Step.
 
 For example: `assembleDebug` `assembleDebugAndroidTest` where Gradle Runner step will output as many APK paths as many assemble tasks you have set.
 

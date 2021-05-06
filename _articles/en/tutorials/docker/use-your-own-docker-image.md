@@ -167,7 +167,7 @@ You can use Bitrise with a Docker image pulled from Docker Hub, as you can see i
 
 The workaround is simple: you need to use a Script Step to authenticate yourself with your own Docker Hub account, and use the Step to pull the image from Docker Hub. To do so:
 
-1. [Create a personal access token on Docker Hub. ](https://bitrise.atlassian.net/wiki/spaces/TW/pages/867238476/DockerHub+issue "https://bitrise.atlassian.net/wiki/spaces/TW/pages/867238476/DockerHub+issue")  
+1. [Create a personal access token on Docker Hub.](https://docs.docker.com/docker-hub/access-tokens/#create-an-access-token)  
    This will be used to authenticate you instead of your password.
 2. On Bitrise, create two Secret Environment Variables: one for your Docker Hub username and another for the personal access token.  
    In our examples, we’ll use `DOCKERHUB_USER` for the Docker Hub username and `DOCKERHUB_TOKEN`.
@@ -193,7 +193,7 @@ In the Workflow Editor on bitrise.io, you have the option to set a path to a cus
 
 {% include message_box.html type="important" title="Custom Android docker image" content=" Creating and maintaining your own Android Docker image can be quite time consuming! If you only need to install a couple of additional tools, you should do that, for example, with a **Script** Step instead! For more information, see our [Install Any Additional Tool](https://devcenter.bitrise.io/tips-and-tricks/install-additional-tools/) guide. You should only use your own Android docker image if you really have to! "%}
 
-{% include message_box.html type="warning" title="My message" content="If you wish to use an image hosted on Docker Hub, do not set the image path on the **Stack** tab of the Workflow Editor! Use a **Script** Step instead to authenticate your Docker Hub account and run the selected image. Check out the [Using a custom Docker image from Docker Hub](/tutorials/docker/use-your-own-docker-image/#using-a-custom-docker-image-from-dockerhub) section for the details."%}
+{% include message_box.html type="warning" title="My message" content="If you wish to use an image hosted on Docker Hub, do not set the image path on the **Stack** tab of the Workflow Editor! Use a **Script** Step instead to authenticate your Docker Hub account and run the selected image. Check out the [Using a custom Docker image from Docker Hub](/tutorials/docker/use-your-own-docker-image/#using-a-custom-docker-image-from-docker-hub) section for the details."%}
 
 If you want to run your build in a custom Docker environment, we strongly recommend basing your own Docker image on one of our base Docker images. Our images have every base tool pre-installed, the standard Bitrise directories created, the environments (such as `$BITRISE_DEPLOY_DIR`) set, and are pre-cached on the build virtual machines.
 

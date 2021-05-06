@@ -48,7 +48,7 @@ Bitrise CLIはステップから環境変数をエクスポーズするメカニ
 
 ワークフローが実行される前に処理され利用可能になる環境変数の種類が2つあります：[Secrets](/bitrise-cli/secrets/)と`App Env Vars` ([bitrise.yml](/jp/bitrise-cli/basics-of-bitrise-yml/)にある`app: envs:`)です。
 
-この後、指定のワークフローの処理が開始され、[そのワークフロー用に指定された環境変数](/jp/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)の利用が可能になります。指定のワークフローが処理される時 (ワークフローが実行されるであろう最初のステップの直前) に、その指定したワークフローの前または後ろにワークフローを持つ場合、環境変数は処理され利用が可能な状態になります。
+この後、指定のワークフローの処理が開始され、[そのワークフロー用に指定された環境変数](/jp/bitrise-cli/workflows/#defining-workflow-specific-parameters-and-environment-variables)の利用が可能になります。指定のワークフローが処理される時 (ワークフローが実行されるであろう最初のステップの直前) に、その指定したワークフローの前または後ろにワークフローを持つ場合、環境変数は処理され利用が可能な状態になります。
 
 ステップインプットも環境変数です；指定のステップ用にのみエクスポーズされ、そのステップが開始される直前にもエクスポーズされます。
 
@@ -60,7 +60,7 @@ Bitrise CLIはステップから環境変数をエクスポーズするメカニ
 2. [Secrets](/jp/bitrise-cli/secrets/)
 3. [Build Trigger API](/jp/api/build-trigger/)経由でビルド用に指定された一回限りの環境変数
 4. `App Env Vars` ([bitrise.yml](/jp/bitrise-cli/basics-of-bitrise-yml/)内の`app: envs:`)
-5. [ワークフロー環境変数](/jp/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables)
+5. [ワークフロー環境変数](/jp/bitrise-cli/workflows/#defining-workflow-specific-parameters-and-environment-variables)
 6. ステップインプット
 7. ステップアウトプット
 
@@ -79,4 +79,4 @@ Bitrise CLIはステップから環境変数をエクスポーズするメカニ
 
 いったんワークフローの環境変数が処理され利用可能な状態にされると、環境変数はビルド実行中どこででも使用することが可能です。これは、チェーンの他ワークフローが指定のステップの**前**に実行されるワークフローの環境変数の使用が**可能である**ということです。ステップアウトプットのように、 (アウトプットを生成する) ステップが完了した**後**、全ての他のステップで利用可能です。
 
-[ワークフロー：ワークフロー環境変数についてのメモ](/bitrise-cli/workflows/#note-about-workflow-environment-variables)にて、チェーンワークフローにあるワークフロー環境変数の可用性についての情報をご覧ください。
+[ワークフロー：ワークフロー環境変数についてのメモ](/bitrise-cli/workflows/#about-workflow-environment-variables)にて、チェーンワークフローにあるワークフロー環境変数の可用性についての情報をご覧ください。

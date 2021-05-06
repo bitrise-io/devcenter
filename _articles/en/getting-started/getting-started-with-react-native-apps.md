@@ -106,7 +106,7 @@ If you uploaded the correct code signing files, the **Certificate and profile in
 
 ### Signing and exporting your iOS project for deployment
 
-If you set up your code signing files and created an .ipa file for your internal testers, it is time to involve external testers and then to [publish your iOS app to the App Store](/getting-started/getting-started-with-react-native-apps/#deploying-your-ios-app-to-testflight-and-itunes-connect).
+If you set up your code signing files and created an .ipa file for your internal testers, it is time to involve external testers and then to [publish your iOS app to the App Store](/getting-started/getting-started-with-react-native-apps/#deploying-to-your-ios-app-itunes-connect).
 
 To deploy to Testflight and to the App Store, you will need more code signing files:
 
@@ -134,7 +134,7 @@ The **Deploy to bitrise.io** Step uploads all the artifacts related to your buil
 
 ### Deploying to your iOS app iTunes Connect
 
-If you wish to deploy your iOS app, follow the instructions in [Code sign your iOS project for deployment](https://devcenter.bitrise.io/getting-started/getting-started-with-react-native-apps/#sign-and-export-your-ios-project-for-deployment).
+If you wish to deploy your iOS app, follow the instructions in [Code sign your iOS project for deployment](https://devcenter.bitrise.io/getting-started/getting-started-with-react-native-apps/#signing-and-exporting-your-ios-project-for-deployment).
 
 {% include message_box.html type="important" title="Have you exported an **app-store** .ipa file yet?" content="Make sure that you have exported an **app-store** .ipa file before starting the deployment procedure to a native marketplace!"%}
 

@@ -64,7 +64,7 @@ You can find more examples in [envman's README](https://github.com/bitrise-io/en
 
 Environment Variables are available after the environment variable is processed.
 
-There are Environment Variables [exposed by the Bitrise CLI itself](/faq/available-environment-variables/#exposed-by-the-bitrise-cli). These are available from the start: for example, `BITRISE_SOURCE_DIR` and `BITRISE_TRIGGERED_WORKFLOW_ID`.
+There are Environment Variables [exposed by the Bitrise CLI itself](/builds/available-environment-variables/#exposed-by-the-bitrise-cli). These are available from the start: for example, `BITRISE_SOURCE_DIR` and `BITRISE_TRIGGERED_WORKFLOW_ID`.
 
 All other Environment Variables are processed and made available as the build progresses.
 
@@ -74,7 +74,7 @@ The processing order is this:
 2. [Secrets](/bitrise-cli/secrets/): processed before a Workflow starts.
 3. One-off Environment Variables specified for the build through our API.
 4. App Environment Variables.
-5. Workflow Environment Variables: when the processing of the specified Workflow starts, the [Environment Variables specified for that Workflow](/bitrise-cli/workflows/#define-workflow-specific-parameters-environment-variables) are made available.
+5. Workflow Environment Variables: when the processing of the specified Workflow starts, the [Environment Variables specified for that Workflow](/bitrise-cli/workflows/#defining-workflow-specific-parameters-and-environment-variables) are made available.
 
    If the workflow has workflows [chained before or after it](https://devcenter.bitrise.io/getting-started/getting-started-workflows/#chaining-workflows-together), the environment variables of the chained workflows are processed and made available right before the first step of the workflow would run.
 6. Step inputs: they are exposed for each Step, right before the Step would start.
@@ -93,6 +93,6 @@ An Environment Variable is only available after it is processed and made availab
 
 Once an Environment Variable of a Workflow is processed and made available, it is available everywhere else during the build. This means that other Workflows of the chain **can** use the Environment Variables of a Workflow which is performed before the specific Workflow, similar to Step outputs, which are available for every other step after the Step that generates the outputs completes.
 
-You can find more information about Environment Variable availability of Workflow Env Vars in chained Workflows in the [Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#note-about-workflow-environment-variables) documentation.
+You can find more information about Environment Variable availability of Workflow Env Vars in chained Workflows in the [Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#about-workflow-environment-variables) documentation.
 
 {% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/dashboard/builds" button_text="Go to Bitrise now" %}

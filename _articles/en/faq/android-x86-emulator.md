@@ -21,9 +21,7 @@ We allow all the required nested virtualization bits for the x86 Android emulato
 
 ## Alternatives (for other stacks)
 
-You can use [Oracle's Ravello](https://www.ravellosystems.com/) if you need a full emulator (with UI), or [robolectric](http://robolectric.org/) for unit tests.
-
-Another alternative is to use a service like [AWS Device Farm](https://aws.amazon.com/device-farm/) or [Open STF](https://openstf.io/),
+You can use [robolectric](http://robolectric.org/) for unit tests. You can also use a service like [AWS Device Farm](https://aws.amazon.com/device-farm/) or [Open STF](https://openstf.io/),
 where you can run the tests on real devices instead of in an emulator. Bitrise integrations are available for both those services.
 
 If you know about any other, [feel free to contact us](https://www.bitrise.io/contact)!

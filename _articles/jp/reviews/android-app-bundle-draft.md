@@ -56,7 +56,7 @@ If you want to check the bundle prior to app store distribution, you can add the
 Before you start, make sure you are in sync with Google Play Store! Learn how to
 
 * [register to Google Play Store and set up your project](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-* set up [Google Play API access](https://devcenter.bitrise.io/tutorials/deploy/android-deployment/#set-up-google-play-api-access)
+* set up [Google Play API access](https://devcenter.bitrise.io/deploy/android-deploy/deploying-android-apps/#setting-up-google-play-api-access)
 
 1. In your Bitrise `Dashboard`, go to `Code Signing` tab and upload the service account JSON key into the `GENERIC FILE STORAGE.`
 2. Copy the env key which stores your uploaded file’s url.

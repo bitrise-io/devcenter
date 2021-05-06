@@ -146,6 +146,6 @@ Additionally, you can use environment variables (env vars) in your scripts too. 
 
 Note that you can use any [available env var](/builds/available-environment-variables/#exposed-by-the-bitrise-cli), like the ones exposed by previous steps in the Workflow.
 
-{% include message_box.html type="note" title="Use `run_if` in `bitrise.yml`" content=" If you **don't** want to run any part of the Step/script based on a variable (like `$PR`), you don't have to implement the check in the script. You can use the `run_if` expression in the `bitrise.yml` directly to declare when the Step should run since `run_if` can be added to any step, not just to Script steps. You can find more information about `run_if` expressions in [this guide](/tips-and-tricks/disable-a-step-by-condition/#run-a-step-only-if-the-build-failed). " %}
+{% include message_box.html type="note" title="Use `run_if` in `bitrise.yml`" content=" If you **don't** want to run any part of the Step/script based on a variable (like `$PR`), you don't have to implement the check in the script. You can use the `run_if` expression in the `bitrise.yml` directly to declare when the Step should run since `run_if` can be added to any step, not just to Script steps. You can find more information about `run_if` expressions in [this guide](/steps-and-workflows/disable-a-step-by-condition/#running-a-step-only-if-the-build-failed). " %}
 
 {% include banner.html banner_text="Install tools with the Script Step" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

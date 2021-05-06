@@ -13,7 +13,7 @@ published: false
 
 ウェブフックは自動または手動で登録できます。このガイドでは、Webフックを手動で登録するプロセスについて説明します。
 
-[自動Webhook登録について](/webhooks/index#setting-up-incoming-webhooks-automatically/)
+[自動Webhook登録について](/webhooks/adding-webhooks/#adding-a-webhook-automatically-when-adding-an-app)
 
 ## GitHubのwebhook URLを取得
 

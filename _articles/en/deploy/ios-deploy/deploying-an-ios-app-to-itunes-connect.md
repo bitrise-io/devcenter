@@ -26,7 +26,7 @@ On Bitrise, you can either simply just upload your binary to iTunes Connect or y
 
 {% include message_box.html type="important" title="Two-factor authentication" content="Two-factor authentication (2FA) is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA.
 
-To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/connecting-apple-dev-account/). That allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion."%}
+To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/connecting-to-services/configuring-bitrise-steps-that-require-apple-developer-account-data/). That allows Bitrise to reuse your authentication sessions for 30 days so you do not have to manually go through 2FA on every single occasion."%}
 
 #### Before you start
 

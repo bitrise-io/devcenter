@@ -64,7 +64,7 @@ Follow the steps to fill out the required `[BETA] Expo Eject` Step input fields:
 
 1. Specify the `Expo CLI version`.
 2. In the `Username for Expo` input field, if you have a React Native project with Expo Kit library, you have to add your Expo username. Step will run `expo eject --eject-method expoKit` **TO DO WHAT?**
-3. If you have a React Native project with Expo Kit library, you have to add your Expo password in the `Password for Expo account` input field. Note, this is sensitive information, so make sure you set it as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets/).  The Step will run `**expo eject --eject-method expoKit**` **TO DO WHAT?**
+3. If you have a React Native project with Expo Kit library, you have to add your Expo password in the `Password for Expo account` input field. Note, this is sensitive information, so make sure you set it as a [secret env var](/builds/env-vars-secret-env-vars/#about-secrets).  The Step will run `**expo eject --eject-method expoKit**` **TO DO WHAT?**
 4. `Run expo publish after eject?` With this set to `yes` or `no` you can control if the Step should **automatically publish your app on** [Expo.io](https://expo.io/) once it gets ejected.
 5. `React Native version to set in package.json` Here you can add the version if it is missing from your package.json file.
 

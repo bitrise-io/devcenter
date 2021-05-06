@@ -41,6 +41,6 @@ Read on to find out more about working with our Steps!
 * [Step versions and inputs](/steps-and-workflows/step-inputs/)
 * [Skipping Steps](/steps-and-workflows/skipping-steps/)
 
-Would you like to contribute to our enormous Step Library with your own Step? Check out our guides at [For Contributors](https://devcenter.b/contributors/contributors-index/).
+Would you like to contribute to our enormous Step Library with your own Step? Check out our guides at [For Contributors](/contributors/contributors-index/).
 
 {% include banner.html banner_text="Let's see your build's Steps" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your build" %}

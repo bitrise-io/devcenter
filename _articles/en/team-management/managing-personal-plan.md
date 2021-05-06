@@ -13,6 +13,7 @@ menu:
     weight: 2
 
 ---
+
 On Bitrise, there are two subscription types for personal accounts: the Hobby plan and the Developer plan. The Hobby plan is our free plan while the Developer plan is the only premium plan that you can use without creating an Organization.
 
 {% include message_box.html type="important" title="Personal accounts and Org accounts" content="Be aware that personal accounts and Organization accounts are separate! This means that in order to sign up for an Organization plan, you need to create an Organization and then provide valid payment information in the Org's **Billing** section,  Read more about Organizations in the [Organizations section](/team-management/organizations/organizations-index/)." %}

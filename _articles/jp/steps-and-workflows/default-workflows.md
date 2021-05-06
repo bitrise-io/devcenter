@@ -26,7 +26,7 @@ menu:
 
 ## deploy（デプロイ）ワークフロー
 
-`deploy（デプロイ）`ワークフローは、新しいアプリの追加時に自動的に作成されます。いくつかの点で[primaryワークフロー](/getting-started/getting-started-workflows#the-primary-workflow)と似ています。
+`deploy（デプロイ）`ワークフローは、新しいアプリの追加時に自動的に作成されます。いくつかの点で[primaryワークフロー](/steps-and-workflows/default-workflows/#the-primary-workflow)と似ています。
 
 * '基本的な'ステップを含む
 * 実際に含まれるステップはプロジェクトの種類によって異なる

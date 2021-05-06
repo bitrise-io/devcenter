@@ -142,7 +142,7 @@ Google Playにアプリをデプロイするには、APKファイルをエクス
 
 1. Google Play Storeと同期していることを確認します。
    * [Google Play Store登録とプロジェクトセットアップ](/jp/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
-   * [Google Play API access](/jp/tutorials/deploy/android-deployment/#set-up-google-play-api-access)のセットアップ方法
+   * [Google Play API access](/jp/deploy/android-deploy/deploying-android-apps/#setting-up-google-play-api-access)のセットアップ方法
 2. Bitrise `Dashboard`から`Code Signing`タブに行きサービスアカウントJSONキーを`GENERIC FILE STORAGE`にアップロードします。
 3. ファイルURLがあるenv keyをコピーします。
 

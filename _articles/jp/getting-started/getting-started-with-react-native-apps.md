@@ -172,7 +172,7 @@ iOSアプリのデプロイ作業を行う方は、Code sign your iOS project fo
 
    ・[Google Play ストアへの登録・プロジェクトのセットアップ](/jp/tutorials/deploy/android-deployment/#register-to-google-play-store-and-set-up-your-first-project)
 
-   ・[Google Play APIアクセス](/jp/tutorials/deploy/android-deployment/#set-up-google-play-api-access)のセットアップ
+   ・[Google Play APIアクセス](/jp/deploy/android-deploy/deploying-android-apps/#setting-up-google-play-api-access)のセットアップ
 2. Bitriseの`Dashboard`で、`Code Signing` タブに進み`GENERIC FILE STORAGE` にサービスアカウントのJSONキーをアップロードします。
 3. アップロードしたファイルのURLを保存しているenvキーをコピーします。例：`BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
 4. `Android Sign` ステップがデプロイワークフローにあることを確認したら、`Google Play Deploy` ステップを追加します。

@@ -25,6 +25,7 @@ group :jekyll_plugins do
   gem "jekyll-redirect-from"
   gem "jekyll-algolia"
   gem "jekyll-seo-tag"
+  gem "html-proofer"
   # gem "jekyll-multiple-languages-plugin"
   gem "localization", :path => 'plugins/localization'
 end

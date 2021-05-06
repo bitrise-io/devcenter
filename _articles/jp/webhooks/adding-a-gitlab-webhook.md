@@ -9,7 +9,7 @@ menu:
 ---
 webhookのセットアップをすると、コードプッシュやプルリクエストなどといった特定のアクションを実行することによって、Bitriseが自動的にアプリのビルドをトリガーします。GitLabでは、`bitrise-webhooks` URLをご自身の[GitLab](https://www.gitlab.com)レポジトリ内にあるWebhookとして登録する必要があります。
 
-オートまたはマニュアルのどちらかの方法でwebhookの登録が可能です。このガイドではwebhookを**マニュアル（手動）**で登録する方法を説明していきます。[Webhook登録を自動で行うをお読みください](/webhooks/index#setting-up-incoming-webhooks-automatically)。
+オートまたはマニュアルのどちらかの方法でwebhookの登録が可能です。このガイドではwebhookを**マニュアル（手動）**で登録する方法を説明していきます。[Webhook登録を自動で行うをお読みください](/webhooks/adding-webhooks/#adding-a-webhook-automatically-when-adding-an-app)。
 
 ## GitLab webhook URLの取得
 

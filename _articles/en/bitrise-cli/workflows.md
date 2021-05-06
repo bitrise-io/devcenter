@@ -134,7 +134,7 @@ This means that you can define what a `setup` and `test` should do in your proje
 
 To sum it up, when you chain Workflows, it's the same as if you'd create one Workflow which would include all Steps from all the Workflows chained after each other. So, for example, one Step's outputs will be available for every other Step which is executed after that Step during the build, (regardless of whether the other Step is in the same or in another Workflow). If a Step is executed after another Step during the build, it can access the outputs of the previous Steps.
 
-{% include message_box.html type="info" title="Chaining Workflows on the UI" content=" Learn more about how to [chain Workflows together](/steps-and-workflows/getting-started-workflows/#chaining-workflows-together) on the UI. "%}
+{% include message_box.html type="info" title="Chaining Workflows on the UI" content=" Learn more about how to [chain Workflows together](/steps-and-workflows/managing-workflows/#chaining-workflows-together) on the UI. "%}
 
 ### About Workflow Environment Variables
 

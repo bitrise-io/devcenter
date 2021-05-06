@@ -17,7 +17,6 @@ menu:
        > You have not accepted the license agreements of the following SDK components:
          [Google Repository].
          Before building your project, you need to accept the license agreements and complete the installation of the missing components using the Android Studio SDK Manager.
-         Alternatively, to learn how to transfer the license agreements from one workstation to another, go to http://d.android.com/r/studio-ui/export-licenses.html
 
 または
 

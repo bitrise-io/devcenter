@@ -51,7 +51,7 @@ There is a small difference between configuring your workflow for `robo` and `in
    ![{{ page.title }}](/img/robo-test-1.png)
 
    Find the list of the available devices [here](https://firebase.google.com/docs/test-lab/android/available-testing-devices).
-8. Start a build and [check your test results](/testing/device-testing-for-android/#checking-test-results).
+8. Start a build and [check your test results](/testing/device-testing-for-android/#checking-the-test-results).
 
 #### Setting user input with Robo directives for successful robo tests
 
@@ -99,7 +99,7 @@ Here is a screenshot of a successful robo test, where the robo test got all the 
 6. Add the type of test device in the **Test devices** input field. If choosing a different device than the default, your input should have the format of  `deviceID,version,language,orientation` separated with `,`.
 
    ![{{ page.title }}](/img/instrumentation-test-2.png)
-7. Start a build and [check your test results](/testing/device-testing-for-android/#checking-test-results).
+7. Start a build and [check your test results](/testing/device-testing-for-android/#checking-the-test-results).
 
 ## Checking the test results
 

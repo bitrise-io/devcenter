@@ -23,6 +23,6 @@ Workflow Editorがロードしない場合、ご自身の`bitrise.yml`または�
 
 * ご自身の[アカウント上のSecurityタブ](https://www.bitrise.io/me/profile#/security)で生成ができるPersonal Access Tokenをお持ちであるか確認してください。
 
-1. [API call](/api/v0.1/#get-appsapp-slugbitriseyml)を使ってbitrise.ymlをダウンロードします。YMLフォーマットによるレスポンスを取得します。
+1. [API call](/api/adding-and-managing-apps/#managing-an-existing-app)を使ってbitrise.ymlをダウンロードします。YMLフォーマットによるレスポンスを取得します。
 2. ファイルに`bitrise.yml`を保存して、ローカルで修正します。
-3. [ほかのAPI call](/api/v0.1/#post-appsapp-slugbitriseyml)を使って`bitrise.yml`を[bitrise.io](https://www.bitrise.io)へアップロードします。修正した`bitrise.yml`へのパスが正確にセットされているか確認してください。JSONフォーマットによるレスポンスを取得します。
+3. [ほかのAPI call](https://devcenter.bitrise.io/api/adding-and-managing-apps/#adding-a-new-app)を使って`bitrise.yml`を[bitrise.io](https://www.bitrise.io)へアップロードします。修正した`bitrise.yml`へのパスが正確にセットされているか確認してください。JSONフォーマットによるレスポンスを取得します。

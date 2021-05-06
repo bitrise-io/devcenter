@@ -26,7 +26,6 @@ _or_ [_contact us_](https://www.bitrise.io/contact) _and we'll add it for you!_
 
 ### Android
 
-* [Seamless Android Builds With Bitrise. Offload Your System](http://myhexaville.com/2017/10/18/seamless-android-builds-with-bitrise/)
 * [How to automate Android build process on Bitrise CI (part 1)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-71ae3a94362e)
 * [How to automate Android build process on Bitrise CI (part 2)](https://medium.com/@hesam.kamalan/how-to-automate-android-build-process-on-bitrise-ci-part-2-b3f8124c29ee)
 * [How to Connect Physical Devices to Bitrise.io](https://www.thedroidsonroids.com/blog/how-to-connect-physical-devices-to-bitrise-io) - [_Open STF_](https://openstf.io) _integration_
@@ -83,7 +82,6 @@ _or_ [_contact us_](https://www.bitrise.io/contact) _and we'll add it for you!_
 * [俺的Bitrise活用術](http://yanma.hateblo.jp/entry/2016/03/15/104131)
 * [iOS対応のCIサービス「Bitrise」を使ってみた](http://sssslide.com/www.slideshare.net/koogawa/ioscibitrise) - _SlideShare_
 * [Bitrise,fastlane,CrashlyticsでiOSアプリのテスト配布を自動化する](http://techblog.lclco.com/entry/2016/05/09/192230) - _Bitrise + fastlane, automate testing & deployment (to Crashlytics) of iOS apps_
-* [fastlaneとBitriseでiOSアプリのCI始めました](http://blog.lisb.direct/entry/2017/07/20/100000) - _CI with Bitrise and fastlane_
 
 ## Portuguese
 

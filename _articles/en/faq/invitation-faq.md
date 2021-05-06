@@ -41,7 +41,7 @@ Bitrise can process invitations sent to either lowercase or uppercase email addr
 
 If you are invited by an Organization on Bitrise, and before accepting the invitation you're trying to sign up to Bitrise using your Git account (for example, Bitbucket, GitHub or Gitlab), then you will not be able to sign up to Bitrise.
 
-What you should do to access the Organization is follow the instructions included in the invitation email and complete your registration. Make sure you [connect your Git provider account to the Bitrise account](/getting-started/connecting-account-bitrise/) that you have just signed up to.
+What you should do to access the Organization is follow the instructions included in the invitation email and complete your registration. Make sure you [connect your Git provider account to the Bitrise account](/getting-started/connecting-to-services/connecting-to-services-index/) that you have just signed up to.
 
 ## Can I be invited to an Organization with SSO?
 

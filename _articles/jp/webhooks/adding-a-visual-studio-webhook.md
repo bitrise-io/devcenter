@@ -9,8 +9,6 @@ menu:
 ---
 webhookのセットアップをすると、コードプッシュやプルリクエストなどといった特定のアクションを実行することによって、Bitriseが自動的にアプリのビルドをトリガーします。Visual Studioでは、[visualstudio.com](https://visualstudio.com)プロジェクトを`Service Hooks` インテグレーションとして`bitrise-webhooks` URLの登録が必要になります。
 
-[visualstudio.comのドキュメンテーションサイト](https://www.visualstudio.com/en-us/get-started/integrate/service-hooks/webhooks-and-vso-vs)より公式ガイドを確認する事ができます。
-
 ## Visual Studio webhook URLの取得
 
 1. アプリページの`Code`タブに進み、`INCOMING WEBHOOKS`メニューより`SETUP MANUALLY` をクリックします。
