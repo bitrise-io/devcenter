@@ -76,7 +76,7 @@ Now we are going to add and customize an Amazon S3 bucket sync to the workflow s
    * Add your local path which should be: `$BITRISE_SOURCE_DIR/build/` (This will select the contents of the build folder in the project source path on the virtual machine. It will be uploaded on every build.)
    * Add `public-read` or `private` to **Access Control**.
 
-{% include message_box.html type="note" title="Alternative deploy destinations" content=" You can of course use Heroku, GitHub pages or any other service as your deployment target. You can find a more complex setup; deploying to Heroku [on our Blog](http://blog.bitrise.io/2016/04/29/hooking-up-a-middleman-project-to-deploy-a-static-site-to-heroku-with-bitrise.html). "%}
+{% include message_box.html type="note" title="Alternative deploy destinations" content=" You can of course use Heroku, GitHub pages or any other service as your deployment target. "%}
 
 ## Running your builds
 
