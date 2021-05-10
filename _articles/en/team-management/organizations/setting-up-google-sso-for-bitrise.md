@@ -16,7 +16,7 @@ menu:
     weight: 17
 
 ---
-This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [G Suite](https://workspace.google.com/).
+This guide provides step-by-step instructions on setting up Bitrise as a SAML application on G Suite.
 
 {% include message_box.html type="important" title="SAML SSO with Org Elite and Velocity plans" content="Please note that SAML SSO is only available for an Org with the [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org.
 
