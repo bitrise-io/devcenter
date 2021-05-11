@@ -227,6 +227,8 @@ Here you can find iOS, Android and cross-platform sample projects. Check their `
 * [React Native sample app](https://github.com/bitrise-io/Bitrise-React-Native-Sample)
 * [Flutter sample app](https://github.com/mjones-droid/Bitrise-Flutter-Sample)
 
+{% include message_box.html type="info" title="How to migrate your Android app from Jenkins to Bitrise, a step-by-step guide" content="Check out our [blogpost by Moataz Nabil](https://blog.bitrise.io/post/migrate-your-android-app-from-jenkins) on how to migrate your Android project from Jenkins to Bitrise."%}
+
 ## Master and agent on Jenkins - Bitrise Stacks
 
 A stack is the type of virtual machine we use to run your build. For example, for a native iOS app, the best stack is one of our Xcode stacks. Stacks come with all of the necessary tools pre-installed, and are regularly updated to make sure they will serve all of your needs. This way you don’t have to bother with maintaining master and agent instances or adding a node machine to your groovy code to run a build on a certain platform.
