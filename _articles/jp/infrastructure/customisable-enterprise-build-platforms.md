@@ -5,6 +5,7 @@ tag: []
 title: Customizable enterprise build platforms
 redirect_from: []
 description: ''
+summary: ''
 menu:
   infrastructure-main:
     weight: 9
@@ -101,4 +102,4 @@ The table shows the available resources for each VM.
 
 ## Pricing
 
-Private cloud pricing is subject to the required resources and configuration. Our sales team can provide further details.
+Private cloud pricing is subject to the required resources and configuration. Our sales team can provide further details. [Contact us](), should you have more questions.
