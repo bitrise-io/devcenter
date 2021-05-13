@@ -101,4 +101,4 @@ The table shows the available resources for each VM.
 
 ## Pricing
 
-Private cloud pricing is subject to the required resources and configuration. Our sales team can provide further details.
+Private cloud pricing is subject to the required resources and configuration. Our sales team can provide further details. [Contact them](https://www.bitrise.io/contact), should you have more questions.
