@@ -28,7 +28,8 @@ Check out the world of automated mobile development with Bitrise!
 {% include message_box.html type="info" title="Looking for more evidence on how Bitrise helped other companies switching from Jenkins?" content="
 
 * Learn how [EPAM, Nextdoor, Pulselive, Delivery Hero, Signify, and more](https://www.bitrise.io/bitrise-vs-jenkins) have switched from Jenkins to Bitrise.
-* [The 5 main benefits of switching from Jenkins to cloud CI, a report.](https://www.bitrise.io/downloads/5-benefits-switching-from-jenkins)"%}
+* [The 5 main benefits of switching from Jenkins to cloud CI, a report.](https://www.bitrise.io/downloads/5-benefits-switching-from-jenkins)
+* Read our [Case study with PagSeguro: Smart ways to optimize your CI](https://blog.bitrise.io/post/smart-ways-to-optimize-your-ci)."%}
 
 ## Projects on Jenkins and Bitrise
 
