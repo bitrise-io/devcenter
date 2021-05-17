@@ -34,10 +34,8 @@ Read more about the available plans on the [Pricing](https://www.bitrise.io/pric
 
 ## Signing up with a Git provider
 
-1. Go to our [**Sign up**](https://app.bitrise.io/users/sign_up) page.
-2. Select a Git provider to authenticate yourself with selected service.
-
-   ![{{ page.title }}](/img/sign-up-git-email.jpg)
+1. You can sign up to Bitrise through the **Start for free** button in the upper right corner of [Bitrise](https://www.bitrise.io/ "https://www.bitrise.io/").![](/img/startforfree.png)
+2. On the **Sign up** page, scroll down to the **OR SIGN UP WITH** section where you can pick a git provider.![](/img/signuppage.png)
 
 ### Authorizing Bitrise with a Git provider
 
@@ -45,21 +43,21 @@ You have to authorize Bitrise before we can establish the connection. This means
 
 #### GitHub
 
-![{{ page.title }}](/img/signing-up/github_authorization.png)
+![](/img/authorize-github.png)
 
-If you press the **Authorize application** button on GitHub, you will be redirected to Bitrise.
+If you press the **Authorize application** button on GitHub, you will be redirected to Bitrise. You’ll have to specify a username and a password for your account and also add what your current CI/CD tool has been.
 
 #### Bitbucket
 
-![{{ page.title }}](/img/signing-up/bitrise_authorization.png)
+![](/img/authorize-bitbucket.png)
 
-If you press the **Grant access** button on Bitbucket, you will be redirected to Bitrise.
+If you press the **Grant access** button on Bitbucket, you will be redirected to Bitrise. You’ll have to specify a username and a password for your account and also add what your current CI/CD tool has been.
 
-#### GitLab
+**GitLab**
 
-![{{ page.title }}](/img/signing-up/gitlab_authorization.png)
+![](/img/authorize-gitlab.png)
 
-If you press the **Authorize** button on Gitlab, you will be redirected to Bitrise.
+If you press the **Authorize** button on Gitlab, you will be redirected to Bitrise. You’ll have to specify a username and a password for your account and also add what your current CI/CD tool has been.
 
 ### Finishing signup
 
