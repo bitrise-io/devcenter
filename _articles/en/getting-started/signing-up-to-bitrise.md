@@ -63,9 +63,7 @@ If you press the **Authorize** button on Gitlab, you will be redirected to Bitri
 
 You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service’s availability, and you are also able to connect more accounts. Last, but not least, you don’t have to stick to your connected account’s username.
 
-1. Pick a username and a password for your Bitrise account on the **You are almost there** page.
-
-   ![{{ page.title }}](/img/you-re-almost-there.jpg)
+1. Pick a username and a password for your Bitrise account on the **Sign up** page.
 
    Please note that you must provide a **strong password** which fulfills these requirements:
    * It should have at least 12 characters.
@@ -74,12 +72,11 @@ You will have to pick a username and a password for your Bitrise account. This w
    * At least one number.
    * Can not contain the same character more than 3 times in a row (aaa).
    * Cannot be alphabetical order or reverse order (abcd, dcba).
-   * Cannot be numerical order or reverse order (1234, 4321).
-2. On the **Help us help you page** add your first name, last name, your company name and a few more details if you wish. You can also add those later.
+   * Cannot be numerical order or reverse order (1234, 4321).![](/img/signuppage-1.png)
+2. Check your inbox for a confirmation email from Bitrise and follow the instructions there. ![](/img/checkyourinbox.png)
+3. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
 
-After that, you are ready to roll. Add your first app on your Dashboard!
-
-From now on, you are able to log in with a click of a button. Choose your favorite!
+After that, you are ready to roll. Add your first app on your Dashboard!![](/img/firstpage.png)
 
 ## Signing up with email
 
