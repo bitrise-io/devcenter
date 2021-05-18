@@ -10,107 +10,103 @@ redirect_from:
 - "/jp/getting-started/signing-up/signing-up-with-bitbucket/"
 - "/jp/getting-started/signing-up/signing-up-with-github/"
 description: ''
+summary: ''
 menu:
   getting-started-main:
     weight: 1
 
 ---
-Bitriseでは、ご自身でGitHub、Bitbucket、もしくはGitLabユーザーの認証を行うことができます。ワンクリックでのログインなどの実践的な恩恵を受けることができるほか、上記のプロバイダにホストされているレポジトリを追加する際に、Gitアカウントを再度許可する必要もありません。メールアドレスを使用したサインアップももちろん可能ですので、ユーザークレデンシャル経由でログインしてください。
+{% include not_translated_yet.html %}
 
-{% include message_box.html type="info" title="サインアップ後のトライアル" content="フリーアカウントへのサインアップが完了すると、自動的にBitrise Developerプランの2週間無料トライアル権が付与されます。プラン内容は以下のとおりです：
+You can authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Git account when adding repositories hosted by these providers again. You can of course sign up to Bitrise using your email address as well, and log in through your user credentials.
 
-* ビルド時間45分
-* 1000ビルド/月
-* 最大100名までチームメンバーの追加が可能
+{% include message_box.html type="info" title="Trial after signing up" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
 
-[料金](https://www.bitrise.io/pricing/teams)のページより他のプランも確認することができます。"%}
+* 45 minutes of build time.
+* 1000 builds a month.
+* A maximum of 100 team members.
 
-## Gitプロバイダを使用したサインアップ
+Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!"%}
 
-1. [**Sign up**](https://app.bitrise.io/users/sign_up) ページに進みます。
-2. 認証を行うGitプロバイダを選択します。
+## Signing up with a Git provider
 
-   ![{{ page.title }}](/img/sign-up-git-email.jpg)
+1. You can sign up to Bitrise through the **Start for free** button in the upper right corner of [Bitrise](https://www.bitrise.io/ "https://www.bitrise.io/").![](/img/startforfree.png)
+2. On the **Sign up** page, scroll down to the **OR SIGN UP WITH** section where you can pick a git provider.![](/img/signuppage.png)
 
-### Gitプロバイダを使ってBitriseを許可する
+### Authorizing Bitrise with a Git provider
 
-Gitプロバイダとの接続を確立する前に、Bitriseを許可する必要があります。これはBitriseがレポジトリへのアクセスまたは読み取りを行うのを許可するためです。
+You have to authorize Bitrise before we can establish the connection. This means you give permission to Bitrise to access (read) your repositories.
 
 #### GitHub
 
-![{{ page.title }}](/img/signing-up/github_authorization.png)
+![](/img/authorize-github.png)
 
-GitHub上の**Authorize application** (アプリの認証) をクリックすると、Bitriseへリダイレクトされます。
+If you press the **Authorize application** button on GitHub, you will be redirected to Bitrise.
 
 #### Bitbucket
 
-![{{ page.title }}](/img/signing-up/bitrise_authorization.png)
+![](/img/authorize-bitbucket.png)
 
-Bitbucket上の**Grant access** (アクセスを許可する) をクリックすると、Bitriseへリダイレクトされます。
+If you press the **Grant access** button on Bitbucket, you will be redirected to Bitrise.
 
-#### GitLab
+**GitLab**
 
-![{{ page.title }}](https://yv69yaruhkt48w.preview.forestry.io/img/signing-up/gitlab_authorization.png)
+![](/img/authorize-gitlab.png)
 
-GitLab上の**Authorize** (認証する) をクリックすると、Bitriseへリダイレクトされます。
+If you press the **Authorize** button on Gitlab, you will be redirected to Bitrise.
 
-### サインアップを完了する
+### Finishing signup
 
-Bitriseアカウントを作成するには、ユーザーネームとパスワードを用意する必要があります。この方法により一定のサービスのアベイラビリティへの依存から脱却できるだけでなく、より多くのアカウントに接続することができます。接続済みアカウントのユーザーネームと同じにする必要はありません。
+You will have to pick a username and a password for your Bitrise account. This way you are free from relying on the given service’s availability, and you are also able to connect more accounts. Last, but not least, you don’t have to stick to your connected account’s username.
 
-1. **You are almost there**のページにてBitriseアカウント用のユーザーネームとパスワードを設定します。
+1. Pick a username and a password for your Bitrise account on the **Sign up** page.
 
-   ![{{ page.title }}](/img/you-re-almost-there.jpg)
+   Please note that you must provide a **strong password** which fulfills these requirements:
+   * It should have at least 12 characters.
+   * At least one upper case character.
+   * At least one lower case character.
+   * At least one number.
+   * Cannot contain the same character more than 3 times in a row (aaa).
+   * Cannot be alphabetical order or reverse order (abcd, dcba).
+   * Cannot be numerical order or reverse order (1234, 4321).![](/img/signuppage-1.png)
+2. Check your inbox for a confirmation email from Bitrise and follow the instructions ther![](/img/checkyourinbox.png)
+3. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
 
-   以下の要求を満たす**強いパスワード**を設定する必要があります。
-   * 12字以上であること
-   * 最低1字以上の大文字が含まれること
-   * 最低1字以上の小文字が含まれること
-   * 最低1字以上の数字が含まれること
-   * 3回連続で同じ文字・数字の使用不可 (aaa)
-   * アルファベット順（反対も含む）は使用不可 (abcd, dcba)
-   * 番号順（反対も含む）は使用不可 (1234, 4321)
-2. **Help us help you** ページにて、ご自身の名前（名・姓）、会社名、そして任意で詳細情報を入力します。後ほど追加することも可能です。
+After that, you are ready to roll. Add your first app on your Dashboard!![](/img/firstpage.png)
 
-これで完了です。ダッシュボードにアプリを追加してみましょう！
+## Signing up with email
 
-完了後は、一回のクリックだけでログインすることが可能になります。お好きな方法をお選びください。
+You can easily sign up to Bitrise with your email address.
 
-## メールによるサインアップ
+1. Add your email address, username, and password on our [Sign up](https://app.bitrise.io/users/sign_up "https://app.bitrise.io/users/sign_up") page. Make sure you provide a strong password. If it’s been exposed in data breaches, you will get a **Your password is not safe** message with [instructions](https://haveibeenpwned.com/Passwords "https://haveibeenpwned.com/Passwords") on how to provide a secure password.![](/img/signuppage-1.png)
+2. Click the **Sign up** button.
+3. Check your inbox for our **Confirmation Instructions** and follow the instructions there. If you haven’t received a confirmation email from us, click the **Resend confirmation email** button.![](/img/checkyourinbox.png)
+4. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
+5. Click **Done**. You will be directed to your Bitrise Dashboard. Now you can go ahead and add your first app to your Dashboard.
 
-メールアドレスを使って簡単にBitriseへサインアップすることが可能です。
+   ![](/img/firstpage.png)
 
-1. [Sign Up](https://app.bitrise.io/users/sign_up)ページ上でご自身のメールアドレス、ユーザーネーム、パスワードを入力します。
-2. **Sign up with Email** (メールを使ったサインアップ) ボタンをクリックします。
-3. Eメールの受信ボックスに**Confirmation Instructions** (確認メール) が届いているかを確認します。万が一届いていない場合は、**Resend confirmation email** (確認メールの再送) ボタンをクリックします。
-4. 届いたメールから、**Confirm My Account** (アカウント承認) ボタンをクリック、もしくはURLをコピーします。**Help us help you** ページへ遷移されます。
+## Signing up with SSO
 
-   ![{{ page.title }}](/img/confirmation-instructions.jpg)
-5. **Help us help you**ページにて、名前（名・姓）、会社名、ご希望に応じて他の詳細情報を入力します。後で入力することも可能です。
-6. **Done** (終了) をクリックします。Bitrise Dashboardに遷移されます。
+You can sign up to Bitrise and join a Bitrise Organization using the Organization's [SAML SSO](/team-management/organizations/saml-sso-in-organizations/).
 
-これで、アプリをダッシュボードに追加することができます！
+{% include message_box.html type="important" title="Before signing up" content="On the IdP side, the Administrator has to add you as a user to the Bitrise SAML SSO app's organization. To learn which Bitrise Organization you should join through SAML SSO, the Bitrise Organization owner can send you an invitation through the [Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations) of the respective Bitrise Organization."%}
 
-## SSOを使ったサインアップ
+Now let's see how to sign up to Bitrise.
 
-Bitriseにサインアップして、Organizationの[SAML SSO](/team-management/organizations/saml-sso-in-organizations/)を使ってBitrise Organization に加入することができます。
+1. Go to our [Sign up](https://app.bitrise.io/users/sign_up) page.
+2. Click the **SAML** button.
 
-{% include message_box.html type="important" title="サインアップする前に" content="IdP側では、Administrator (管理者)がBitrise SAML SSO アプリのOrganizationへユーザーを追加する必要があります。**Sign up with SSO**経由でどのBitrise Organizationに加入すればいいのかわからない場合、Bitrise Organization内の[Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations)からBitrise Organizationのオーナーによって招待してもらうことができます。"%}
-
-Bitriseへのサインアップ方法を確認していきます。
-
-1. [Sign up](https://app.bitrise.io/users/sign_up)ページに進みます。
-2. **Sign up with SSO**ボタンをクリックします。  
-   **Initiative Single Sign-On**ページに遷移されます。
+   You are directed to the **Initiate** **Single Sign-On** page.
 
    ![{{ page.title }}](/img/saml-sso-sign-up.jpg)
-3. Bitrise Organizationのオーナーから受け取った**Bitrise Organization's Name** (Bitrise Organization名) を入力します。**Continue with SSO** (SSOを使って続ける) をクリックすることで、Organizationの接続されたSAML SSOプロバイダに遷移します。
-4. SAML SSOアカウントと紐付いているクレデンシャルを入力します。
-5. **Almost there**ページでは、SAML SSOアカウントにある登録済みのメールアドレスが自動的に**Email**欄に入力されています。自動生成された**Username** (ユーザーネーム) は変更することも可能です。
+3. Provide the **Bitrise Organization's Name** that you got from the Bitrise Organization owner and click **Continue with SSO** so that Bitrise can direct you to Organization's connected SAML SSO provider.
+4. Provide your credentials associated with your SAML SSO account.
+5. On the **Almost there** page the **Email** field is automatically populated based on your registered email address at your SAML SSO account. You can alter the provided **Username** as you wish.
 
    ![{{ page.title }}](/img/signup-saml-almost-there-1.jpg)
-6. **Finish Sign Up** (サインアップを終える) をクリックします。
-7. letsconnect@bitrise.ioから送られたEメールを受信ボックスより確認して、指示に従ってください。
-8. **Help us help you**ページに遷移されるので、そこで更に詳細情報を入力することができます（あとからの入力でもOK）。
+6. Click **Finish Sign Up**.
+7. Check your mailbox and follow the instructions sent by letsconnect@bitrise.io.
+8. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far on the **Personalize your experience** page.
 
-ここまで順調に行けば、ダッシュボードから組織のアプリを確認することができます。**Account Settings** (アカウント設定) に進むと、加入したOrganizationについて見ることが可能です。
+If all went well, you're landed on your Bitrise Dashboard where you can view the Organization's apps! If you go to your **Account Settings**, you will see the [Organization]() you've just joined.
