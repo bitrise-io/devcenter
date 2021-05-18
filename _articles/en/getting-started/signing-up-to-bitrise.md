@@ -45,19 +45,19 @@ You have to authorize Bitrise before we can establish the connection. This means
 
 ![](/img/authorize-github.png)
 
-If you press the **Authorize application** button on GitHub, you will be redirected to Bitrise. 
+If you press the **Authorize application** button on GitHub, you will be redirected to Bitrise.
 
 #### Bitbucket
 
 ![](/img/authorize-bitbucket.png)
 
-If you press the **Grant access** button on Bitbucket, you will be redirected to Bitrise. 
+If you press the **Grant access** button on Bitbucket, you will be redirected to Bitrise.
 
 **GitLab**
 
 ![](/img/authorize-gitlab.png)
 
-If you press the **Authorize** button on Gitlab, you will be redirected to Bitrise. 
+If you press the **Authorize** button on Gitlab, you will be redirected to Bitrise.
 
 ### Finishing signup
 
@@ -94,12 +94,12 @@ You can easily sign up to Bitrise with your email address.
 
 You can sign up to Bitrise and join a Bitrise Organization using the Organization's [SAML SSO](/team-management/organizations/saml-sso-in-organizations/).
 
-{% include message_box.html type="important" title="Before signing up" content="On the IdP side, the Administrator has to add you as a user to the Bitrise SAML SSO app's organization. To learn which Bitrise Organization you should join through **Sign up with SSO**, the Bitrise Organization owner can send you an invitation through the [Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations) of the respective Bitrise Organization."%}
+{% include message_box.html type="important" title="Before signing up" content="On the IdP side, the Administrator has to add you as a user to the Bitrise SAML SSO app's organization. To learn which Bitrise Organization you should join through SAML SSO, the Bitrise Organization owner can send you an invitation through the [Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations) of the respective Bitrise Organization."%}
 
 Now let's see how to sign up to Bitrise.
 
 1. Go to our [Sign up](https://app.bitrise.io/users/sign_up) page.
-2. Click the **Sign up with SSO** button.
+2. Click the **SAML** button.
 
    You are directed to the **Initiate** **Single Sign-On** page.
 
@@ -111,7 +111,7 @@ Now let's see how to sign up to Bitrise.
    ![{{ page.title }}](/img/signup-saml-almost-there-1.jpg)
 6. Click **Finish Sign Up**.
 7. Check your mailbox and follow the instructions sent by letsconnect@bitrise.io.
-8. You're directed to the **Help us help you** page where you can share some more details with us or add those later.
+8. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far on the **Personalize your experience** page.
 
 If all went well, you're landed on your Bitrise Dashboard where you can view the Organization's apps! If you go to your **Account Settings**, you will see the [Organization]() you've just joined.
 
