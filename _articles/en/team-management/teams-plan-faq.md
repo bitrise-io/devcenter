@@ -48,11 +48,11 @@ On the full Teams plan, you get a certain amount of credits each month, dependin
 5. Choose the new credit tier.
 6. Click **Checkout**.
 
-After that, you'll need to provide payment details. Once the first payment is authorized, your new subscription starts immediately. If you had some unused credits from the previous subscription, don't worry: these roll over and you can use them in the first month of the new subscription! 
+After that, you'll need to provide payment details. Once the first payment is authorized, your new subscription starts immediately. If you had some unused credits from the previous subscription, don't worry: these roll over and you can use them in the first month of the new subscription!
 
 ## How do I use my credits?
 
-Just trigger a build! Each build will use a certain amount of credits per minute, depending on the [type of stack](/team-management/teams-account-faq/#do-the-different-machine-types-have-different-credit-costs) you use.
+Just trigger a build! Each build will use a certain amount of credits per minute, depending on the [type of stack](/team-management/teams-plan-faq/#do-the-different-machine-types-have-different-credit-costs) you use.
 
 ## Will a build be aborted if I run out of credits?
 

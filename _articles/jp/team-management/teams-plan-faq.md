@@ -54,7 +54,7 @@ After that, you'll need to provide payment details. Once the first payment is au
 
 ## How do I use my credits?
 
-Just trigger a build! Each build will use a certain amount of credits per minute, depending on the [type of stack](/team-management/teams-account-faq/#do-the-different-machine-types-have-different-credit-costs) you use.
+Just trigger a build! Each build will use a certain amount of credits per minute, depending on the [type of stack](/jp/team-management/teams-plan-faq/#do-the-different-machine-types-have-different-credit-costs) you use.
 
 ## Will a build be aborted if I run out of credits?
 
