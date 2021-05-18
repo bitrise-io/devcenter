@@ -45,19 +45,19 @@ You have to authorize Bitrise before we can establish the connection. This means
 
 ![](/img/authorize-github.png)
 
-If you press the **Authorize application** button on GitHub, you will be redirected to Bitrise. You’ll have to specify a username and a password for your account and also add what your current CI/CD tool has been.
+If you press the **Authorize application** button on GitHub, you will be redirected to Bitrise. 
 
 #### Bitbucket
 
 ![](/img/authorize-bitbucket.png)
 
-If you press the **Grant access** button on Bitbucket, you will be redirected to Bitrise. You’ll have to specify a username and a password for your account and also add what your current CI/CD tool has been.
+If you press the **Grant access** button on Bitbucket, you will be redirected to Bitrise. 
 
 **GitLab**
 
 ![](/img/authorize-gitlab.png)
 
-If you press the **Authorize** button on Gitlab, you will be redirected to Bitrise. You’ll have to specify a username and a password for your account and also add what your current CI/CD tool has been.
+If you press the **Authorize** button on Gitlab, you will be redirected to Bitrise. 
 
 ### Finishing signup
 
@@ -70,10 +70,10 @@ You will have to pick a username and a password for your Bitrise account. This w
    * At least one upper case character.
    * At least one lower case character.
    * At least one number.
-   * Can not contain the same character more than 3 times in a row (aaa).
+   * Cannot contain the same character more than 3 times in a row (aaa).
    * Cannot be alphabetical order or reverse order (abcd, dcba).
    * Cannot be numerical order or reverse order (1234, 4321).![](/img/signuppage-1.png)
-2. Check your inbox for a confirmation email from Bitrise and follow the instructions there. ![](/img/checkyourinbox.png)
+2. Check your inbox for a confirmation email from Bitrise and follow the instructions ther![](/img/checkyourinbox.png)
 3. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
 
 After that, you are ready to roll. Add your first app on your Dashboard!![](/img/firstpage.png)
@@ -82,11 +82,11 @@ After that, you are ready to roll. Add your first app on your Dashboard!![](/img
 
 You can easily sign up to Bitrise with your email address.
 
-1. Add your email address, username, and password on our [Sign up and deliver amazing mobile apps](https://app.bitrise.io/users/sign_up "https://app.bitrise.io/users/sign_up") page. Make sure you provide a strong password. If it’s been exposed in data breaches, you will get a **Your password is not safe** message with [instructions](https://haveibeenpwned.com/Passwords "https://haveibeenpwned.com/Passwords") on how to provide a secure password.![](/img/signuppage-1.png)
+1. Add your email address, username, and password on our [Sign up](https://app.bitrise.io/users/sign_up "https://app.bitrise.io/users/sign_up") page. Make sure you provide a strong password. If it’s been exposed in data breaches, you will get a **Your password is not safe** message with [instructions](https://haveibeenpwned.com/Passwords "https://haveibeenpwned.com/Passwords") on how to provide a secure password.![](/img/signuppage-1.png)
 2. Click the **Sign up** button.
 3. Check your inbox for our **Confirmation Instructions** and follow the instructions there. If you haven’t received a confirmation email from us, click the **Resend confirmation email** button.![](/img/checkyourinbox.png)
 4. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
-5. Click **Done**. You will be directed to your Bitrise Dashboard.Now you can go ahead and add your first app to your Dashboard.
+5. Click **Done**. You will be directed to your Bitrise Dashboard. Now you can go ahead and add your first app to your Dashboard.
 
    ![](/img/firstpage.png)
 
