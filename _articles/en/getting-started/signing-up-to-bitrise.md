@@ -80,22 +80,15 @@ After that, you are ready to roll. Add your first app on your Dashboard!![](/img
 
 ## Signing up with email
 
-You can easily sign up to Bitrise in one step with your email address.
+You can easily sign up to Bitrise with your email address.
 
-1. Add your email address, username, and password on our [Sign Up](https://app.bitrise.io/users/sign_up) page. Make sure you provide a strong password. If it's been exposed in data breaches, you will get a **Your password is not safe** message with [instructions](https://haveibeenpwned.com/Passwords) on how to provide a secure password.
+1. Add your email address, username, and password on our [Sign up and deliver amazing mobile apps](https://app.bitrise.io/users/sign_up "https://app.bitrise.io/users/sign_up") page. Make sure you provide a strong password. If it’s been exposed in data breaches, you will get a **Your password is not safe** message with [instructions](https://haveibeenpwned.com/Passwords "https://haveibeenpwned.com/Passwords") on how to provide a secure password.![](/img/signuppage-1.png)
+2. Click the **Sign up** button.
+3. Check your inbox for our **Confirmation Instructions** and follow the instructions there. If you haven’t received a confirmation email from us, click the **Resend confirmation email** button.![](/img/checkyourinbox.png)
+4. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
+5. Click **Done**. You will be directed to your Bitrise Dashboard.Now you can go ahead and add your first app to your Dashboard.
 
-   ![{{ page.title }}](/img/password.jpg)
-2. Click the **Sign up with Email** button.
-3. Check your inbox for our **Confirmation Instructions**.
-
-   If you haven't received a confirmation email from us, click the **Resend confirmation email** button.
-4. Click the **Confirm My Account** button or copy the URL provided in the email. It will take you to **Help us help you** page.
-
-   ![{{ page.title }}](/img/confirmation-instructions.jpg)
-5. On the **Help us help you**, page add your first name, last name, your company name and a few more details if you wish. You can also add those later.
-6. Click **Done**. You will be directed to your Bitrise Dashboard.
-
-Now you can go ahead and add your first app to your Dashboard.
+   ![](/img/firstpage.png)
 
 ## Signing up with SSO
 
