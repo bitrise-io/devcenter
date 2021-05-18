@@ -8,7 +8,7 @@ menu:
     weight: 6
 
 ---
-With [Xamarin](https://xamarin.com) integration you can now build your
+With Xamarin integration you can now build your
 iOS and Android Xamarin applications on [Bitrise](https://www.bitrise.io).
 
 We have listed a couple of tutorials to help you get started, but if you get stuck,
