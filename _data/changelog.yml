@@ -1,6 +1,11 @@
 ---
+- title: Signing up to Bitrise
+  modified: 2021-05-18 00:00:00 +0200
+  changelog: The signing up process description has been updated.
+  type: update
+  url: "/getting-started/signing-up-to-bitrise/"
 - title: Pricing
-  modified: 2021-05-13 00:00:00 +0200
+  modified: 2021-05-13T00:00:00.000+02:00
   changelog: Pricing section of the Customizable enterprise build platforms article
     has been updated with a link to our Contact us page.
   type: update
