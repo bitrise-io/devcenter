@@ -40,7 +40,7 @@ First, let's see how to add a React Native Expo app to [bitrise.io](https://www.
     * To generate an iOS app from your React Native project, enter your iOS Development team ID at the **Specify iOS Development team** field.
     * In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
     * In **Specify Expo username**, enter your username and hit **Next**.
-    * In **Specify Expo password**, enter your password and hit **Next**. 
+    * In **Specify Expo password**, enter your password and hit **Next**.
     * Confirm your project build configuration.
  9. [Upload an app icon](/getting-started/adding-a-new-app/#adding-an-app-icon-with-the-project-scanner).
 10. At **Webhook setup**, [register a Webhook](/webhooks/index/) so that Bitrise can automatically start a build every time you push code into your repository.
@@ -74,9 +74,9 @@ If you use the **Expo Eject** Step, let’s see which fields you have to fill ou
 
 The **Expo Eject** Step can be followed by any platform-specific Step, for example, build, sign, or test. For example, you could use the **Xcode Archive & Export for iOS** Step for iOS.
 
-{% include message_box.html type="info" title="Publishing to Expo message" content="The **Deploy to** [**Bitrise.io **](http://bitrise.io/)Step does not use Expo commands. This Step publishes artifacts to Bitrise and is not specific to a particular platform. The artifacts deployed are available on the **APPS & ARTIFACTS** tab on the **Build**’s page of your app and are also available by API. An artifact can be an ipa/APK, a file, a log, test results, or any element from the build.
+{% include message_box.html type="info" title="Publishing to Expo message" content="The **Deploy to Bitrise.io** Step does not use Expo commands. This Step publishes artifacts to Bitrise and is not specific to a particular platform. The artifacts deployed are available on the **APPS & ARTIFACTS** tab on the **Build**’s page of your app and are also available by API. An artifact can be an ipa/APK, a file, a log, test results, or any element from the build.
 
-**Deploy to** [**Bitrise.io **](http://bitrise.io/)Step doesn't publish to [expo.io](https://docs.expo.io/workflow/publishing/). If it is needed, set the **Run expo publish after eject?** input of the **Eject Expo** Step to `yes`. Be aware that in that case you have to provide your username and password for your Expo account to publish to [expo.io.](http://expo.io/)"%}
+**Deploy to Bitrise.io** Step doesn't publish to [expo.io](https://docs.expo.io/workflow/publishing/). If it is needed, set the **Run expo publish after eject?** input of the **Eject Expo** Step to `yes`. Be aware that in that case you have to provide your username and password for your Expo account to publish to [expo.io.](http://expo.io/)"%}
 
 ### Native dependencies
 
