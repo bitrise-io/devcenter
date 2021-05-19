@@ -9,6 +9,7 @@ title: Getting started with Expo apps
 redirect_from: []
 description: In this guide we discuss how to set up, test, code sign and deploy your
   React Native project built with the Expo CLI.
+summary: ''
 menu:
   getting-started-main:
     weight: 33
@@ -18,7 +19,7 @@ You can generate React Native projects [with the React Native CLI or with the Ex
 
 In this guide we discuss how to set up, test, code sign and deploy your React Native project built with the [Expo CLI](https://docs.expo.io/get-started/installation/).
 
-Whether you've been using ExpoKit or not with your project, Bitrise project scanner detects the necessary configuration and adds the **\[BETA\] Expo Eject** Step to your deploy workflow. If you've been using ExpoKit with your React Native app, Bitrise project scanner adds the necessary platform-specific dependency manager Steps to your workflow as well.
+Bitrise project scanner detects the necessary configuration and adds the [**Expo Eject** Step](https://www.bitrise.io/integrations/steps/expo-detach) to your deploy workflow automatically.
 
 ## Adding an Expo app to bitrise.io
 
