@@ -74,9 +74,9 @@ If you use the **Expo Eject** Step, let’s see which fields you have to fill ou
 
 The **Expo Eject** Step can be followed by any platform-specific Step, for example, build, sign, or test. For example, you could use the **Xcode Archive & Export for iOS** Step for iOS.
 
-{% include message_box.html type="info" title="Publishing to Expo message" content="The **Deploy to** [**Bitrise.io **](http://bitrise.io/ "http://Bitrise.io")Step does not use Expo commands. This Step publishes artifacts to Bitrise and is not specific to a particular platform. The artifacts deployed are available on the **APPS & ARTIFACTS** tab on the **Build**’s page of your app and are also available by API. An artifact can be an ipa/APK, a file, a log, test results, or any element from the build.
+{% include message_box.html type="info" title="Publishing to Expo message" content="The **Deploy to** [**Bitrise.io **](http://bitrise.io/)Step does not use Expo commands. This Step publishes artifacts to Bitrise and is not specific to a particular platform. The artifacts deployed are available on the **APPS & ARTIFACTS** tab on the **Build**’s page of your app and are also available by API. An artifact can be an ipa/APK, a file, a log, test results, or any element from the build.
 
-**Deploy to** [**Bitrise.io **](http://bitrise.io/ "http://Bitrise.io")Step doesn't publish to [expo.io](https://docs.expo.io/workflow/publishing/ "https://docs.expo.io/workflow/publishing/"). If it is needed, set the **Run expo publish after eject?** input of the **Eject Expo** Step to `yes`. Be aware that in that case you have to provide your username and password for your Expo account to publish to [expo.io.](http://expo.io/ "http://expo.io/")"%}
+**Deploy to** [**Bitrise.io **](http://bitrise.io/)Step doesn't publish to [expo.io](https://docs.expo.io/workflow/publishing/). If it is needed, set the **Run expo publish after eject?** input of the **Eject Expo** Step to `yes`. Be aware that in that case you have to provide your username and password for your Expo account to publish to [expo.io.](http://expo.io/)"%}
 
 ### Native dependencies
 
