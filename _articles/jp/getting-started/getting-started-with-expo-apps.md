@@ -10,6 +10,7 @@ title: Getting started with Expo apps
 redirect_from: []
 description: In this guide we discuss how to set up, test, code sign and deploy your
   React Native project built with the Expo CLI.
+summary: ''
 menu:
   getting-started-main:
     weight: 34
@@ -21,7 +22,7 @@ You can generate React Native projects [with the React Native CLI or with the Ex
 
 In this guide we discuss how to set up, test, code sign and deploy your React Native project built with the [Expo CLI](https://docs.expo.io/get-started/installation/).
 
-Whether you've been using ExpoKit or not with your project, Bitrise project scanner detects the necessary configuration and adds the **\[BETA\] Expo Eject** Step to your deploy workflow. If you've been using ExpoKit with your React Native app, Bitrise project scanner adds the necessary platform-specific dependency manager Steps to your workflow as well.
+Bitrise project scanner detects the necessary configuration and adds the [**Expo Eject** Step](https://www.bitrise.io/integrations/steps/expo-detach) to your deploy workflow automatically.
 
 ## Adding an Expo app to bitrise.io
 
@@ -30,7 +31,7 @@ First, let's see how to add a React Native Expo app to [bitrise.io](https://www.
 {% include message_box.html type="info" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 
  1. Log into [bitrise.io](https://www.bitrise.io/).
- 2. Click **Add a new app**.
+ 2. Click the **+** sign on the top menu bar and select **Add app**, which takes you to the [**Create New App**](https://app.bitrise.io/apps/add) page.
  3. Select the privacy setting of your app: **private** and [**public**](/getting-started/adding-a-new-app/public-apps/).
  4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
  5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
@@ -41,8 +42,8 @@ First, let's see how to add a React Native Expo app to [bitrise.io](https://www.
     Now let's have a look at the fields you manually have to fill out:
     * To generate an iOS app from your React Native project, enter your iOS Development team ID at the **Specify iOS Development team** field.
     * In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
-    * In **Specify Expo username** enter your username and hit **Next**.
-    * In **Specify Expo password**, enter your password and hit **Next**. You only need to provide your Expo credentials if you've been using ExpoKit with your project.
+    * In **Specify Expo username**, enter your username and hit **Next**.
+    * In **Specify Expo password**, enter your password and hit **Next**.
     * Confirm your project build configuration.
  9. [Upload an app icon](/getting-started/adding-a-new-app/#adding-an-app-icon-with-the-project-scanner).
 10. At **Webhook setup**, [register a Webhook](/webhooks/index/) so that Bitrise can automatically start a build every time you push code into your repository.
@@ -61,24 +62,28 @@ The default value of the **Run npm command** Step is `install` in the **npm comm
 
 React Native apps built with Expo do not come with native modules. Since our build Steps are platform-specific, Bitrise has to eject your app, add and configure the necessary native templates. Then our native dependency installer Steps take care of installing any missing native dependencies so that your project is ready for building and shipping.
 
-The Bitrise project scanner automatically inserts the **\[BETA\] Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps in your deploy workflow.
+The Bitrise project scanner automatically inserts the **Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps in your deploy workflow.
+
+If you do not wish to use the **Expo Eject** Step, you can eject your project locally and commit the native iOS/Android projects as an alternative to using the **Expo Eject** Step in the Workflow.
 
 ![{{ page.title }}](/img/eject-expo-input-fields.png)
 
-Let's see which fields you have to fill out when clicking **\[BETA\] Expo Eject** Step!
+If you use the **Expo Eject** Step, let’s see which fields you have to fill out:
 
 * **Working directory input field:** Provide the path of your project directory.
 * **Expo CLI version:** Provide the Expo CLI version you used for your project.
-* **Username for Expo** and **Password for your Expo account:** Provide your Expo credentials (username and password). If your project uses an Expo SDK, you must provide the username and password for your Expo account. Without the account, the Expo CLI will choose the plain `--eject-method` and the Expo SDK imports will stop working.
+* **Username for Expo** and **Password for your Expo account** inputs**:** If you add the password and username of your Expo account, the Step will execute the `expo login` command before it would do the `expo eject`. You can prevent issues by first logging into your Expo account before ejecting.
+* **Run expo publish after eject?** input: If you wish to run `expo publish`, you have to set this input to `yes`. Please note that to run `expo publish`, you first have to be logged into your Expo account which the Step can do for you if you populate the **Username for Expo** and the **Password for Expo account** inputs as well.
 
-  If your project does not use an Expo SDK then you don’t need to do anything.  
-  Just add the step after the `git-clone` step and you are done.
+The **Expo Eject** Step can be followed by any platform-specific Step, for example, build, sign, or test. For example, you could use the **Xcode Archive & Export for iOS** Step for iOS.
+
+{% include message_box.html type="info" title="Publishing to Expo message" content="The **Deploy to** [**Bitrise.io **](http://bitrise.io/)Step does not use Expo commands. This Step publishes artifacts to Bitrise and is not specific to a particular platform. The artifacts deployed are available on the **APPS & ARTIFACTS** tab on the **Build**’s page of your app and are also available by API. An artifact can be an ipa/APK, a file, a log, test results, or any element from the build.
+
+**Deploy to** [**Bitrise.io **](http://bitrise.io/)Step doesn't publish to [expo.io](https://docs.expo.io/workflow/publishing/). If it is needed, set the **Run expo publish after eject?** input of the **Eject Expo** Step to `yes`. Be aware that in that case you have to provide your username and password for your Expo account to publish to [expo.io.](http://expo.io/)"%}
 
 ### Native dependencies
 
 The **Install missing Android SDK components** Step installs the missing native dependencies for your Android project. This Step is by default included in your deploy workflow.
-
-If you've been using the ExpoKit to develop your app, the **Run CocoaPods install** Step is automatically added to your deploy workflow to take care of any missing iOS dependencies.
 
 ## Testing your app
 
@@ -117,8 +122,8 @@ The Android chunk of code signing is done. Let's continue with iOS!
 
 To deploy to Testflight and to the App Store, you will need the following code signing files:
 
-* an iOS **Distribution** Certificate
-* an **App Store** type Provisioning Profile
+* an iOS **Distribution** certificate.
+* an **App Store** type provisioning profile.
 
 1. Open the **Workflow** tab of your project on [bitrise.io](https://www.bitrise.io).
 2. Click on **Code Signing** tab.
@@ -143,8 +148,8 @@ The **Deploy to bitrise.io** Step uploads all the artifacts related to your buil
 
 You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
-1. Go to the Deploy to bitrise.io step.
-2. In the Notify: User Roles, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under Notifications if you click the eye icon next to your generated APK/.ipa file in the **APPS & ARTIFACTS** tab.
+1. Go to the **Deploy to bitrise.io** Step.
+2. In the **Notify: User Roles** input field, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the eye icon next to your generated APK/.ipa file in the **APPS & ARTIFACTS** tab.
 
 ## Deploying to an app store
 
@@ -161,7 +166,7 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 3. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
 
    The Step will need your:
-   * Apple ID
+   * Apple ID.
    * password or, if you use two-factor authentication on iTunes Connect, your app-specific password.
 
    Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
@@ -171,32 +176,30 @@ If you wish to deploy your iOS app, follow the steps in [Signing and exporting y
 
 ### Deploying your Android app to Google Play Store
 
-{% include message_box.html type="important" title="Have you uploaded keystore file yet" content=" Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FILE** field before starting the deployment procedure to a native marketplace! "%}
+{% include message_box.html type="important" title="Have you uploaded keystore file yet" content=" Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FILE** field before starting the deployment procedure to the marketplace! "%}
 
-Before you'd use the **Google Play Deploy** Step, make sure you have performed the following tasks:
+Before you'd use the **Deploy to Google Play** Step, make sure you have performed the following tasks:
 
 1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
 3. [Set up API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started): Please note when you create your service account on the Google Developer Console, you have to choose `json` as **Key Type**.
-4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings** -> **Users & permissions** -> **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
+4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings**, then **Users & permissions**, then **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
    * Access level: View app information.
    * Release management: Manage production releases, manage testing track releases.
    * Store presence: Edit store listing, pricing & distribution.
-5. As an optional step, you can add translations for your Store Listing. To allow the step to assign your `whatsnew` files to the uploaded APK version, visit [Play Console Help](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)'s and add translations for your Store Listing section.
+5. As an optional step, you can add translations to your Store Listing. To allow the **Deploy to Google Play** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
 
 Now let's head back to Bitrise and finish off the deploy configuration!
 
 1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
 2. Copy the env key which stores your uploaded file’s url.
 
-   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-3. Add the **Google Play Deploy** Step after the **Sign APK** Step in your deploy workflow.
-4. Fill out the required input fields as follows:
-
-   **Service Account JSON key file path**: This field can accept a remote URL so you have to provide the environment variable which contains your uploaded service account JSON key. For example: `$BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
-
-   **Package name**: the package name of your Android app.
-
-   **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
+   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
+3. Add the **Deploy to Google Play** Step after the **Sign APK** Step in your deploy workflow.
+4. In the **Service Account JSON key file path** input, paste the Environment Variable which was generated when you uploaded the service account JSON key in the **GENERIC FILE STORAGE**. Note this input is marked as sensitive in the Step, meaning any Env Var you insert here will become a secret and won't be printed out in a build log. Besides the generated Env Var, you can also add a file path right in the Step's input field where the file path can be local or remote too:
+   * For remote JSON key file you can provide any download location as value, for example, `https://URL/TO/key.json`.
+   * For local JSON key file you can provide a file path url as value, for example, `file://PATH/TO/key.json`.
+5. **Package name**: the package name of your Android app.
+6. **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
 
 And that’s it! Start a build and release your app to the Google Play Store.
