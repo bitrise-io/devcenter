@@ -62,13 +62,12 @@ You will have to pick a username and a password for your Bitrise account. This w
 1. Pick a username and a password for your Bitrise account on the **Sign up** page.
 
    Please note that you must provide a **strong password** which fulfills these requirements:
-   * It should have at least 12 characters.
-   * At least one upper case character.
-   * At least one lower case character.
-   * At least one number.
+   * It should have at least 8 characters.
+   * One upper case character.
+   * One lower case character.
+   * One number.
    * Cannot contain the same character more than 3 times in a row (aaa).
-   * Cannot be alphabetical order or reverse order (abcd, dcba).
-   * Cannot be numerical order or reverse order (1234, 4321).![](/img/signuppage-1.png)
+   * Cannot contain your email or username.![](/img/signuppage-1.png)
 2. Check your inbox for a confirmation email from Bitrise and follow the instructions ther![](/img/checkyourinbox.png)
 3. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
 
