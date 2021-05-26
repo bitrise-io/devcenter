@@ -48,7 +48,7 @@ Workflow Recipes are published on [Bitrise](http://bitrise.io) where our Bitrise
 
 Should you have questions, please turn to our partnership team at [partners@bitrise.io](mailto:partnerships@bitrise.io).
 
-## Promoting your Verified Step
+### Promoting your Verified Step
 
 As part of the Verified Step Program, you must commit to taking part in one or more than one of the following co-marketing activities:
 
