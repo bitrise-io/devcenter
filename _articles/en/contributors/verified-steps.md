@@ -18,11 +18,11 @@ menu:
 ---
 ## What are Verified Steps?
 
-A Step contains the code that performs a specific build task. Bitrise has over 200 Steps in its [Step Library (StepLib)](https://github.com/bitrise-io/bitrise-steplib "https://github.com/bitrise-io/bitrise-steplib") which third party companies or open source teams can enrich with Steps based on their services/tools. This means they have full power to roll out updates to the Step while Bitrise maintains an overlaying control to ensure service quality and security.
+A Step contains the code that performs a specific build task. Bitrise has over 300 Steps in its [Step Library (StepLib)](https://github.com/bitrise-io/bitrise-steplib) which third party companies or open source teams can enrich with Steps based on their services/tools. This means they have full power to roll out updates to the Step while Bitrise maintains an overlaying control to ensure service quality and security.
 
 A Verified Step means that the owner of a service or tool or an open source team guarantees secure, maintained, consistent, and high-quality performance for any Bitrise user. Our official Bitrise Steps are maintained by us, whereas our Community Steps are maintained by the community. It’s easy to decide which type a Step falls into on our GUI.
 
-* Verified Steps are labeled with a blue badge in [bitrise.io](http://bitrise.io/ "http://bitrise.io/").
+* Verified Steps are labeled with a blue badge in [Bitrise](http://bitrise.io/).
 * Official Bitrise Steps are labeled with a green badge.
 * Community created Steps do not have any badge.
 
@@ -36,12 +36,21 @@ In this guide we explain how to get your Step verified by Bitrise.
 * For open-source services or tools: If you are a member of an open source or other informal team, please confirm with the rest of the team that you may sign this for yourself and that it applies to the Steps you are submitting for the team.
 * Your Step must comply with our [Service Level Agreement](/contributors/verified-steps/#service-level-agreement-for-verified-step-authors).
 * Your Step must have its own Step icon.
+* You must include a Workflow Recipe to a Step to become a Verified Step.
 
 We strongly recommend that you consult with our [Step development](/contributors/create-your-own-step/) guidelines before creating a Step."%}
 
+### What is a Workflow Recipe?
+
+A Workflow Recipe is a template that anyone submitting a Step to Bitrise must put together when applying for the Verified Step badge. You can develop a Step and decide not to include a Workflow Recipe, but to turn your Step into a Verified one, you have to submit a Workflow Recipe as well. 
+
+Workflow Recipes are published on [Bitrise](http://bitrise.io) where our Bitrise community can learn how the Verified Step can be used in a specific setup.
+
+Should you have questions, please turn to our partnership team at [partners@bitrise.io](mailto:partnerships@bitrise.io).
+
 ## Applying for a Verified badge
 
-1. Create the Step based on our [Step development guideline](https://devcenter.bitrise.io/contributors/create-your-own-step/ "https://devcenter.bitrise.io/contributors/create-your-own-step/"). The Step’s repository MUST be on GitHub.
+1. Create the Step based on our [Step development guideline](https://devcenter.bitrise.io/contributors/create-your-own-step/). The Step’s repository MUST be on GitHub.
 2. Share your Step in our [bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib) and fill out the New Pull Request Checklist.
 3. When the **CLAassistant** prompts you, sign our Contributor License Agreement. Until this is not completed, merging is blocked on the PR.
 
