@@ -185,7 +185,7 @@ To configure publishing an app for Android:
 </div>
 </div>
 
-## Publishing status and logs
+### Publishing status and logs
 
 Once you clicked **Publish** in Ship, the process starts according to the configured settings. You can view the status of the active publishing process on top of the **Details** page of the app.
 
