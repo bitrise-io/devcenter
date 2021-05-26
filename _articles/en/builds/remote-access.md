@@ -32,35 +32,43 @@ With either method, you can access the build machine remotely during the build a
 
 ## Remote access with SSH
 
-1. Go to the build page.
-2. Click the **Rebuild with Remote Access** option.
-3. Click **Remote Access Instructions**.
+To access a Bitrise build machine with SSH, you will need a command line interface and the correct command and password:
+
+1. Open the app on Bitrise.
+2. Go to the **Builds** tab. 
+3. Find the build you want to re-run with remote access.
+4. Click the **Rebuild with Remote Access** option.
+5. Click **Remote Access Instructions**.
 
    ![Instructions for remote access with SSH](/img/remote-access-instructions.png)
-4. Under the **SSH** option, find and copy the command you will need.
-5. Open a command line interface.
-6. Run the command found under **SSH** (the below is an example):
+6. Under the **SSH** option, find and copy the command you will need.
+7. Open a command line interface.
+8. Run the command found under **SSH** (the below is an example):
 
        ssh -o StrictHostKeyChecking=no vagrant@1.tcp.ngrok.io -p 000000
-7. Copy and paste the password from the **Remote Access Instructions** page.
+9. Copy and paste the password from the **Remote Access Instructions** page.
 
 And done! You should be able to access the virtual machine where your build is running.
 
 ## Remote access with screenshare
 
-1. Go to the build page.
-2. Click the **Rebuild with Remote Access** option.
-3. Click **Remote Access Instructions**.
+To access a Bitrise build machine with a screenshare app, you will need the correct username, password, and address, as well as a VNC screenshare app:
+
+1. Open the app on Bitrise.
+2. Go to the **Builds** tab. 
+3. Find the build you want to re-run with remote access and .
+4. Click the **Rebuild with Remote Access** option.
+5. Click **Remote Access Instructions**.
 
    ![Instructions for remote access with screenshare](/img/remote-access-instructions.png)
-4. Under the **Screenshare** option, find the required information:
+6. Under the **Screenshare** option, find the required information:
    * Address
    * Username
    * Password
-5. Open a VNC screenshare application.
+7. Open a VNC screenshare application.
 
    The simplest option is using the default **Screen Sharing** application on macOS.
-6. Fill out the required fields with the information from under the **Screenshare** option.
+8. Fill out the required fields with the information from under the **Screenshare** option.
 
 And done! You should now be able to access the virtual machine where your build is running.
 
@@ -68,9 +76,7 @@ And done! You should now be able to access the virtual machine where your build 
 
 Once you successfully logged in to the Bitrise virtual machine that ran your build, you can dive into the files themselves to see what’s happening in real time. After Bitrise finished cloning your app on to the VM, you can always access it at the following location:
 
-```
-/Users/Vagrant/git
-```
+    /Users/Vagrant/git
 
 ## Extending the availability of remote access
 
