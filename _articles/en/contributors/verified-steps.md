@@ -42,11 +42,31 @@ We strongly recommend that you consult with our [Step development](/contributors
 
 ### What is a Workflow Recipe?
 
-A Workflow Recipe is a template that anyone submitting a Step to Bitrise must put together when applying for the Verified Step badge. You can develop a Step and decide not to include a Workflow Recipe, but to turn your Step into a Verified one, you have to submit a Workflow Recipe as well. 
+A Workflow Recipe is a template that anyone submitting a Step to Bitrise must put together when applying for the Verified Step badge. You can develop a Step and decide not to include a Workflow Recipe, but to turn your Step into a Verified one, you have to submit a Workflow Recipe as well.
 
 Workflow Recipes are published on [Bitrise](http://bitrise.io) where our Bitrise community can learn how the Verified Step can be used in a specific setup.
 
 Should you have questions, please turn to our partnership team at [partners@bitrise.io](mailto:partnerships@bitrise.io).
+
+## Promoting your Verified Step
+
+As part of the Verified Step Program, you must commit to taking part in one or more than one of the following co-marketing activities:
+
+* In-app messaging.
+* Dedicated co-branded email campaign, or newsletter mention.
+* Blog post content.
+* How-to article, documentation, or help center page.
+* Social media activities.
+* Webinars or virtual events.
+* Podcasts.
+* Events (panels, fireside chats, video testimonials, or sponsorship).
+* Case study/whitepaper/ebook/ (shared research, testimonials, co-writing a chapter, publishing on each others' blogs).
+* Video content posted on our public YouTube channel.
+* Joint PR campaigns.
+
+These co-marketing opportunities enable you to increase your product’s content generation output, grow  go-to-market plans, and help to drive integration adoption.
+
+You can consult with your Bitrise Partner Manager ([partners@bitrise.io](mailto:partnerships@bitrise.io)) to confirm which co-marketing activities you can do, clarifying what level of involvement you will want to do based on your marketing plans. There can be many interested in a single co-marketing event so your involvement is managed on a first-come, first-serve basis.
 
 ## Applying for a Verified badge
 
