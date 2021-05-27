@@ -274,7 +274,7 @@ The **Deploy to Bitrise.io** Step looks for an `.xcarchive.zip` file to export t
 * There is a Step in your exposed Workflow that exports an `.xcarchive.zip` file of your app. That is, the Step you use needs to create an Xcode Archive and needs to package it in a zip file.
 * This Step exports the `.xcarchive.zip` file into the `BITRISE_DEPLOY_DIR` directory.
 
-### Deploying Android apps built with different Steps
+### Deploying Android apps built with cross-platform frameworks
 
 The **Deploy to Bitrise.io** Step looks for an APK or an AAB file in the `BITRISE_DEPLOY_DIR` directory.
 
