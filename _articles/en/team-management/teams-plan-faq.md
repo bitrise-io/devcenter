@@ -48,7 +48,11 @@ On the full Teams plan, you get a certain amount of credits each month, dependin
 5. Choose the new credit tier.
 6. Click **Checkout**.
 
-After that, you'll need to provide payment details. Once the first payment is authorized, your new subscription starts immediately. If you had some unused credits from the previous subscription, don't worry: these roll over and you can use them in the first month of the new subscription!
+After that, you'll need to provide payment details. Once the first payment is authorized, your new subscription starts immediately.
+
+## Will I lose my unused credits if I switch to a different plan?
+
+If you had some unused credits from the previous subscription, don't worry: these roll over and you can use them in the first month of the new subscription!
 
 ## How do I use my credits?
 
@@ -70,14 +74,12 @@ You have a limit of 90 minutes for each build.
 
 Yes. Check out the following table to see the different machine types and their credit cost:
 
-| Gen 1 | Specs | Credit multiplier |
+| Linux machines | Specs | Credit multiplier |
 | --- | --- | --- |
-| macOS Standard | macOS VM, 2vCPU, 4GB RAM @2.7GHz | 2 credits/min |
-| macOS Elite | macOS VM, 4vCPU, 8GB RAM @3.5GHz | 4 credits/min |
 | Linux Standard | Ubuntu VM, 2vCPU, 7.5GB RAM @2.6GHz | 1 credit/min |
 | Linux Elite | Ubuntu VM, 4vCPU, 15GB RAM @2.6GHz | 2 credits/min |
 
-| Gen 2 MacOS | Specs | Credit multiplier |
+| Gen 2 MacOS machines | Specs | Credit multiplier |
 | --- | --- | --- |
 | macOS Standard | 4vCPU @3.2GHz 19 GB RAM | 2 credits/min |
 | macOS Elite | 8vCPU @3.2GHz 35 GB RAM | 4 credits/min |
