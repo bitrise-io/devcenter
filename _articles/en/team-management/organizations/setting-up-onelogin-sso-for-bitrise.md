@@ -23,6 +23,12 @@ This requires:
 * A OneLogin Administrator.
 * A Bitrise Organization owner who is logged into the Organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams "https://www.bitrise.io/pricing/teams")) on [Bitrise](https://www.bitrise.io).
 
+{% include message_box.html type="note" title="Before you start" content="Before connecting SAML SSO to your Organization, make sure:
+
+* You have a SAML SSO provider (Identity Provider) that you can connect Bitrise to and the administrator to the SAML SSO provider is at hand.
+* Your account on Bitrise has an Org with [Org Elite or Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
+* As with other [Org management actions](https://devcenter.bitrise.io/team-management/organizations/members-organizations/), only the Org owner can set up SAML SSO to a Bitrise Org."%}
+
 ## Configuring Bitrise on OneLogin
 
  1. Log into [OneLogin](https://www.onelogin.com/ "https://www.onelogin.com/") as an Administrator.
@@ -60,7 +66,7 @@ All Organization members (including the Organization owner) must enable their SA
 2. Click **Sign in via SSO** or open the URL in a new tab of the same browser where you are logged in.
 3. On the **Almost there** page you can edit your username. Click **Finish Sign Up**.![](/img/almostherepage.png)
 
-You should be landing on the **Welcome** page of Bitrise. Click **Dashboard** to land on your Organization's dashboard.. If you go to your Organization's **Groups** tab, you can see that you are automatically added as a SAML user. All Organization members, who enable SAML SSO, appear here automatically. From now on you can log into your Bitrise Organization with SAML SSO.
+You should be landing on the **Welcome** page of Bitrise. Click **Dashboard** to land on your Organization's dashboard. If you go to your Organization's **Groups** tab, you can see that you are automatically added as a SAML user. All Organization members, who enable SAML SSO, appear here automatically. From now on you can log into your Bitrise Organization with SAML SSO.
 
 {% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Organization's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/). "%}
 
