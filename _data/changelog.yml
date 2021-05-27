@@ -1,6 +1,12 @@
 ---
+- title: Triggering builds with code push
+  modified: 2021-05-27 16:42:24 +0200
+  changelog: Added information on how to use wildcards when specifying branch or tag
+    names in a build trigger configuration.
+  type: update
+  url: "/builds/triggering-builds/trigger-code-push/"
 - title: Verified Steps
-  modified: 2021-05-26 00:00:00 +0200
+  modified: 2021-05-26T00:00:00.000+02:00
   changelog: Co-marketing opportunities and a short description about Workflow Recipes
     have been added to the doc.
   type: update

@@ -1,6 +1,6 @@
 ---
 last_modified_at: '2020-03-12'
-title: Triggering builds with Pull Requests
+title: Triggering builds with pull requests
 tag:
 - triggers
 - git
@@ -37,6 +37,8 @@ By default, every new app you add will have a trigger that triggers a build ever
    You can leave either the source or target branch fields, or both, empty: the trigger will work accordingly. For example, if you leave both empty, as is the default with new apps, every pull request will trigger a build.
 7. Select the workflow you wish to trigger (for example, `primary`).
 8. Click `Save` in the top right corner.
+
+{% include message_box.html type="important" title="Using patterns when specifying a branch or tag" content="The \`*\` symbol can be used in your configured triggers as a wildcard in branch or tag names. It can also be used in patterns. For example, the pattern \`*-dev\` can be used for any branches or tags with the suffix \`-dev\`. Please note that when there are multiple triggers, only the first matching trigger will start a workflow."%}
 
 And you're done! From now on, if a pull request is opened in your repository, Bitrise will trigger a build with the selected workflow!
 
