@@ -23,13 +23,13 @@ This requires:
 * A OneLogin Administrator.
 * A Bitrise Organization owner who is logged into the Organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams "https://www.bitrise.io/pricing/teams")) on [Bitrise](https://www.bitrise.io).
 
-{% include message_box.html type="note" title="Before you start" content="Before connecting SAML SSO to your Organization, make sure:
+## Before you start
+
+Before connecting SAML SSO to your Organization, make sure:
 
 * The administrator to OneLogin is at hand while setting up SAML SSO connection on Bitrise.
 * As with other [Org management actions](https://devcenter.bitrise.io/team-management/organizations/members-organizations/), only the Org owner can set up SAML SSO to a Bitrise Org.
 * Your account on Bitrise has an Org with [Org Elite or Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
-
-  "%}
 
 ## Configuring Bitrise on OneLogin
 
