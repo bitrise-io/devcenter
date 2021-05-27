@@ -72,8 +72,6 @@ Yes. Check out the following table to see the different machine types and their 
 
 | Gen 1 | Specs | Credit multiplier |
 | --- | --- | --- |
-| macOS Standard | macOS VM, 2vCPU, 4GB RAM @2.7GHz | 2 credits/min |
-| macOS Elite | macOS VM, 4vCPU, 8GB RAM @3.5GHz | 4 credits/min |
 | Linux Standard | Ubuntu VM, 2vCPU, 7.5GB RAM @2.6GHz | 1 credit/min |
 | Linux Elite | Ubuntu VM, 4vCPU, 15GB RAM @2.6GHz | 2 credits/min |
 
