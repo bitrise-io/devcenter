@@ -21,7 +21,7 @@ You can set up a trigger so that every time a pull request is opened from a spec
 
 {% include message_box.html type="important" title="Webhooks for triggering builds" content="Triggering builds automatically requires an incoming webhook set up with the hosting service of your repository. Read more in the [Webhooks](/webhooks/webhooks-index/) section."%}
 
-By default, every new app you add will have a trigger that triggers a build every time any pull request is opened in your repository.
+By default, every new app you add has a trigger that triggers a build every time any pull request is opened in your repository.
 
 1. Open your app on [bitrise.io](https://www.bitrise.io).
 2. Open the `Workflow Editor`.
@@ -38,7 +38,7 @@ By default, every new app you add will have a trigger that triggers a build ever
 7. Select the workflow you wish to trigger (for example, `primary`).
 8. Click `Save` in the top right corner.
 
-{% include message_box.html type="important" title="Using patterns when specifying a branch or tag" content="The \`*\` symbol can be used in your configured triggers as a wildcard in branch or tag names. It can also be used in patterns. For example, the pattern \`*-dev\` can be used for any branches or tags with the suffix \`-dev\`. Please note that when there are multiple triggers, only the first matching trigger will start a workflow."%}
+{% include message_box.html type="important" title="Using patterns when specifying a branch or tag" content="The `*` symbol can be used in your configured triggers as a wildcard in branch or tag names. It can also be used in patterns. For example, the pattern `*-dev` can be used for any branches or tags with the suffix `-dev`. Please note that when there are multiple triggers, only the first matching trigger will start a workflow."%}
 
 And you're done! From now on, if a pull request is opened in your repository, Bitrise will trigger a build with the selected workflow!
 
