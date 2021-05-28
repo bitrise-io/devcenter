@@ -32,7 +32,7 @@ Note that certain providers, such as GitLab, require Tag Push events to be speci
 7. Select the workflow you wish to trigger (for example, `primary`).
 8. Click `Save` in the top right corner.
 
-{% include message_box.html type="important" title="Using patterns when specifying a branch or tag" content="The \`*\` symbol can be used in your configured triggers as a wildcard in branch or tag names. It can also be used in patterns. For example, the pattern \`*-dev\` can be used for any branches or tags with the suffix \`-dev\`. Please note that when there are multiple triggers, only the first matching trigger will start a workflow."%}
+{% include message_box.html type="important" title="Using patterns when specifying a branch or tag" content="The `*` symbol can be used in your configured triggers as a wildcard in branch or tag names. It can also be used in patterns. For example, the pattern `*-dev` can be used for any branches or tags with the suffix `-dev`. Please note that when there are multiple triggers, only the first matching trigger will start a workflow."%}
 
 And you're done!
 
