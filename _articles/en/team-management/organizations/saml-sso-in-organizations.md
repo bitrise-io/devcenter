@@ -159,7 +159,7 @@ To enforce SAML SSO on an Org in Bitrise, all Org members have to first enable t
 
 Now Org members can only log in via SAML SSO.![](/img/saml-sso-enforced.jpg)
 
-{% include message_box.html type="note" title="Adding a Bitrise user to an Org with enforced SSO" content="If you wish to add a Bitrise user (who is not a member in your Org) to your Org with enforced SSO, then we recommend that the Org admin turns the enforced SSO off and [invites the user to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso). The invited Bitrise user has to go through the [invitation process and enable SSO connection](/team-management/organizations/saml-sso-in-organizations/#joining-a-saml-sso-org-on-bitrise-as-a-new-member). Once that is done, the Org admin can turn the Enforce SSO switch back on."%}
+{% include message_box.html type="note" title="Adding a Bitrise user to an Org with enforced SSO" content="If you wish to add a Bitrise user (who is not a member in your Org) to your Org with enforced SSO, then we recommend that the Org admin turns the enforced SSO off and [invites the user to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso). The invited Bitrise user has to go through the [invitation process and enable SSO connection](/team-management/organizations/saml-sso-in-organizations/#joining-a-saml-sso-org-on-bitrise-as-a-new-member). Once that is done, the Org admin can turn the **Enforce SSO** switch back on."%}
 
 ### Can’t enforce SAML SSO on your Organization?
 
