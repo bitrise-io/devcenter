@@ -74,15 +74,17 @@ You have a limit of 90 minutes for each build.
 
 Yes. Check out the following table to see the different machine types and their credit cost:
 
+{% include message_box.html type="info" title="Hardware generations" content="Please note that for users on the Teams plan, all MacOS-based stacks now run on our Gen 2 hardware, ensuring the highest possible performance!" %}
+
 | Linux machines | Specs | Credit multiplier |
 | --- | --- | --- |
 | Linux Standard | Ubuntu VM, 2vCPU, 7.5GB RAM @2.6GHz | 1 credit/min |
 | Linux Elite | Ubuntu VM, 4vCPU, 15GB RAM @2.6GHz | 2 credits/min |
 
-| Gen 2 MacOS machines | Specs | Credit multiplier |
+| MacOS machines | Specs | Credit multiplier |
 | --- | --- | --- |
-| macOS Standard | 4vCPU @3.2GHz 19 GB RAM | 2 credits/min |
-| macOS Elite | 8vCPU @3.2GHz 35 GB RAM | 4 credits/min |
+| Gen 2 macOS Standard | 4vCPU @3.2GHz 19 GB RAM | 2 credits/min |
+| Gen 2 macOS Elite | 8vCPU @3.2GHz 35 GB RAM | 4 credits/min |
 
 ## How many builds can I run at the same time?
 
