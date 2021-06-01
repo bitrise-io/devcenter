@@ -28,7 +28,7 @@ After that, you'll need to provide payment details. Once the first payment is au
 
 ## What features does the Teams plan have?
 
-The benefits of the Teams plan include:
+Switching to the Teams plan from our credit-based Hobby plan has numerous benefits, including:
 
 * Unlimited private apps.
 * Unlimited team members and all the team management features.
