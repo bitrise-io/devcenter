@@ -91,7 +91,7 @@ An Environment Variable is only available after it is processed and made availab
 
 ### Environment variables of chained workflows
 
-Once an Environment Variable of a Workflow is processed and made available, it is available everywhere else during the build. This means that other Workflows of the chain **can** use the Environment Variables of a Workflow which is performed before the specific Workflow, similar to Step outputs, which are available for every other step after the Step that generates the outputs completes.
+Once an Environment Variable of a Workflow is processed and made available, it is available everywhere else during the build. This means that other Workflows of the chain CAN use the Environment Variables of a Workflow which is performed before the specific Workflow, similar to Step outputs, which are available for every other step after the Step that generates the outputs completes.
 
 You can find more information about Environment Variable availability of Workflow Env Vars in chained Workflows in the [Workflows: Note about workflow environment variables](/bitrise-cli/workflows/#about-workflow-environment-variables) documentation.
 
