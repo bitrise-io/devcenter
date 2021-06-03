@@ -1,6 +1,12 @@
 ---
+- title: Analyzing your app's performance with Trace
+  modified: 2021-06-03 14:10:00 +0200
+  changelog: 'The Trace dashboard is now live: get a quick overview of your app''s
+    overall performance over a certain period of time'
+  type: update
+  url: "/monitoring/analyzing-your-app-s-data-with-trace/"
 - title: Triggering builds with code push
-  modified: 2021-05-27 16:42:24 +0200
+  modified: 2021-05-27T16:42:24.000+02:00
   changelog: Added information on how to use wildcards when specifying branch or tag
     names in a build trigger configuration.
   type: update
