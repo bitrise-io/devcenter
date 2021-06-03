@@ -26,13 +26,16 @@ The data is displayed in separate widgets, with each widget focusing on a differ
 * **Weekly**: A weekly performance summary of the app over the last 12 weeks.
 * **Monthly**: A monthly performance summary of the app over the last 12 months.
 
+![](/img/trace_dashboard_overview.png)
+
 The available metrics are:
 
 * **Live users**: the number of users/devices that have been using the app in the last five minutes.
 * **Active users**: The total number of users that used the app over the period.
 * **New users:** The proportion of new users that have started using the app.
 * **User events**: The total number of different users events (page loads, network requests, and so on) performed.
-* **Crash-free sessions**: The percentage of crash-free sessions. This is calculated by dividing the number of crashed user sessions with the number of all user sessions over the selected period of time.
+* **Crash-free sessions**: The percentage of crash-free sessions. This is calculated by dividing the number of crashed user sessions with the number of all user sessions over the selected period of time.  
+  ![](/img/trace_crash_free_sessions.png)
 * **Cold start-up latency**: How long it takes for the app to launch on users' devices.
 * **Version adoption**: The percentage of the different versions of the app used during the selected period of time.
 * **Session duration**: The average duration of users' sessions with the app. A metric designed to measure engagement.
