@@ -14,11 +14,32 @@ menu:
     weight: 3
 
 ---
-[Once you have the Trace SDK](/monitoring/getting-started-with-trace/#installing-trace) installed in your app, Bitrise's Trace add-on will provide real time monitoring for your app's performance across its entire install base. You can track a wide variety of different metrics, all from the end users' perspective, to make sure that your app is performing as it should. 
+[Once you have the Trace SDK](/monitoring/getting-started-with-trace/#installing-trace) installed in your app, Bitrise's Trace add-on will provide real time monitoring for your app's performance across its entire install base. You can track a wide variety of different metrics, all from the end users' perspective, to make sure that your app is performing as it should.
 
-## Analyzing application performance
+## Application performance overview
 
-The first stop for analyzing performance is the **Performance** page of Trace. The primary purpose of the Performance page is to give you an overview of the performance of your app across the app’s entire install base.
+On the Trace Overview dashboard, you can periodically check on the performance of your apps over a selected period of time. This serves to give you a view on the shifts and trends in the app’s performance.
+
+The data is displayed in separate widgets, with each widget focusing on a different metric. Depending on how often you wish to check in on your apps, you can select one of the supported digest views:
+
+* **Daily**: The day-to-day performance of the app over the last two weeks.
+* **Weekly**: A weekly performance summary of the app over the last 12 weeks.
+* **Monthly**: A monthly performance summary of the app over the last 12 months.
+
+The available metrics are:
+
+* **Live users**: the number of users/devices that have been using the app in the last five minutes.
+* **Active users**: The total number of users that used the app over the period.
+* **New users:** The proportion of new users that have started using the app.
+* **User events**: The total number of different users events (page loads, network requests, and so on) performed.
+* **Crash-free sessions**: The percentage of crash-free sessions. This is calculated by dividing the number of crashed user sessions with the number of all user sessions over the selected period of time.
+* **Cold start-up latency**: How long it takes for the app to launch on users' devices.
+* **Version adoption**: The percentage of the different versions of the app used during the selected period of time.
+* **Session duration**: The average duration of users' sessions with the app. A metric designed to measure engagement.
+
+## Analyzing application performance in detail
+
+For deeper analysis of your application performance, you need the **Performance** page of Trace. The primary purpose of the Performance page is to give you an overview of the performance of your app across the app’s entire install base.
 
 ![The Trace performance page](/img/Bitrise_-_Trace.png)
 
