@@ -18,7 +18,7 @@ menu:
 
 ## Application performance overview
 
-On the Trace Overview dashboard, you can periodically check on the performance of your apps over a selected period of time. This serves to give you a view on the shifts and trends in the app’s performance.
+Log in to Trace and click **Overview** on the left to get to the Trace dashboard. On this page, you can check the performance of your apps over a selected period of time. This serves to give you a view on the shifts and trends in the app’s performance.
 
 The data is displayed in separate widgets, with each widget focusing on a different metric. Depending on how often you wish to check in on your apps, you can select one of the supported digest views:
 
@@ -30,7 +30,7 @@ The data is displayed in separate widgets, with each widget focusing on a differ
 
 The available metrics are:
 
-* **Live users**: the number of users/devices that have been using the app in the last five minutes.
+* **Live users**: The number of users/devices that have been using the app in the last five minutes.
 * **Active users**: The total number of users that used the app over the period.
 * **New users:** The proportion of new users that have started using the app.
 * **User events**: The total number of different users events (page loads, network requests, and so on) performed.
