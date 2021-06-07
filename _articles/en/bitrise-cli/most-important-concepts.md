@@ -60,7 +60,7 @@ A simple example:
 
 You can find more examples in [envman's README](https://github.com/bitrise-io/envman), and in the [Expose an Environment Variable and use it in another Step](/tips-and-tricks/expose-environment-variable) guide.
 
-## Availability order of environment variables
+## Availability order of Environment Variables
 
 Environment Variables are available after the Environment Variable is processed.
 
