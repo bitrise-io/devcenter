@@ -34,12 +34,38 @@ With Meercode’s analysis and visualization tools:
 
 ## Integrating Meercode with Bitrise
 
-1. Create a [Meercode](https://meercode.io/login) account, if you haven't already done it. You can use Github or Google authentication.
-2. Acquire a Personal Access Token from your Bitrise account. Check out our guide on the subject: [Acquiring a Personal Access Token](https://devcenter.bitrise.io/api/authentication/#acquiring-a-personal-access-token "https://devcenter.bitrise.io/api/authentication/#acquiring-a-personal-access-token")
-3. On the **Integrations** panel, select **Bitrise** and enter your Personal Access Token.
+{% include message_box.html type="important" title="Signing up for the beta" content="For now, the Meercode add-on is in a beta phase. To apply for the beta, [contact our support team](https://support.bitrise.io/hc/en-us) and send them the app slug of your app or apps for which you want the Meercode add-on enabled."%}
 
-   ![](/img/meercode2.png)
-4. After selecting organizations and repositories to monitor, your dashboard and insights tabs will be ready to use.
+To monitor your Bitrise builds with Meercode:
+
+* An admin on the app’s team must enable the Meercode add-on for your app.
+* Once the add-on is enabled, other team members on the app must authorize the add-on on their own account.
+
+{% include message_box.html type="warning" title="Enabling Meercode for an app" content="Please note that only admins can enable the add-on for an app. Read more about user roles [in our guide.](/team-management/user-roles-on-app-teams/)"%}
+
+{% include message_box.html type="warning" title="Integrating Meercode with a Personal Access Token" content="Previously, you could integrate Meercode by using your Bitrise Personal Access Token on Meercode’s own website. This method no longer works! To monitor your builds with Meercode, you need the Meercode add-on."%}
+
+### Enabling the add-on as an admin
+
+To enable the add-on for a specific app:
+
+1. Log in to your Bitrise account.
+2. On the Dashboard, find the app you need.
+3. On the app’s page, go to the **Add-ons** tab.
+4. Next to **Meercode**, click the **Enable add-on** button.
+5. In the pop-up window, you can see what access rights the add-on needs. Click **Enable add-on** to grant these rights.
+
+### Authorizing the add-on as a user
+
+After an admin enables the Meercode add-on, each user on the app’s team must authorize the add-on on their own account.
+
+{% include message_box.html type="important" title="Revoking authorization" content="Please note that during the beta phase, there is no way to revoke this authorization. An admin can disable the add-on for the app at any time; in that case, all users lose access to the add-on."%}
+
+1. Log in to your Bitrise account.
+2. On the Dashboard, find the app you need.
+3. On the app’s page, go to the **Add-ons** tab.
+4. Next to **Meercode**, click the **Go to add-on** button.
+5. On the next page, you can see what access rights the add-on needs. Click **Authorize add-on** to grant these rights.
 
 ## CI build monitoring on Meercode
 
