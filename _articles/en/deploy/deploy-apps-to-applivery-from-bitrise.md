@@ -38,7 +38,7 @@ Combined with Bitrise, you can cover the entire development life cycle, from tes
 	![Applivery Workflow Step](/img/tutorials/deploy/applivery/tutorial1.png)
 
 1. Get your Applivery App Token to link your Bitrise app with your Applivery app.
-   [Read more about how to get your App Token](https://www.applivery.com/docs/rest-api/authentication/).
+   [Read more about how to get your App Token](https://www.applivery.com/docs/api/authentication/).
 2. Open your app on Bitrise and click the **Workflows** tab to open the Workflow Editor.
 3. Go to the **Secrets** tab.
 4. Click **Add New** and type `APPLIVERY_APP_TOKEN` in the key input field.
