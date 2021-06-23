@@ -100,6 +100,6 @@ If you head back to the `bitrise.yml` tab, a `bitrise.io meta` is added to the d
 
 Since this meta is only interpreted on [bitrise.io](https://www.bitrise.io/) and not locally or on Bitrise CLI, it is categorized by a `bitrise.io` namespace (where the stack is the key and `linux-docker-android-lts` is the value). Workflow Editor always validates the saved variable and throws an error if there is a syntax error, but with `meta` added, its content is fully ignored by the Workflow Editor validation process.
 
-More information on the available stacks are available in the [infrastructure section](https://devcenter.bitrise.io/infrastructure/infrastructure-index/#available-stacks). The names of the stacks listed in the [system_reports directory](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports) are the names to use in the `stack` field.
+More information on the available stacks is available in the [infrastructure section](https://devcenter.bitrise.io/infrastructure/infrastructure-index/#available-stacks). The names of the stacks listed in the [system_reports directory](https://github.com/bitrise-io/bitrise.io/tree/master/system_reports) are the names to use in the `stack` field.
 
 {% include banner.html banner_text="Now you know everything" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to Bitrise now" %}
