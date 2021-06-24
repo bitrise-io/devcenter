@@ -67,7 +67,7 @@ Once the Organization owner has set up the connection between the SAML SSO provi
    ![{{ page.title }}](/img/saml-invitation-authentication.jpg)
 3. Click **Authorize**.
 
-You should be landing on the Organization’s Dashboard. From now on, you can use the [Log in via SSO](https://app.bitrise.io/initiate-saml-sign-in) function to access your Organization on Bitrise.
+You should be landing on the Organization’s Dashboard. From now on, you can use the [Log in via SSO](https://app.bitrise.io/users/sign-in/saml) function to access your Organization on Bitrise.
 
 You can check which Organization member has switched from the usual login flow to the SAML SSO one if you [check their statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) on the **People** page. Once all in, you can [enforce SAML SSO](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) as the only gateway to the Organization.
 

@@ -7,45 +7,42 @@ menu:
     weight: 18
 
 ---
-{% include not_translated_yet.html %}
 
-With the `Status Image API token`, you can get an embeddable SVG badge image, a JSON message reflecting the status of the app, or a specific branch of the app.
+`Status Image API token` を用いることで、Appの（指定したブランチの）ステータスを反映した埋め込み可能なSVG形式のバッジ画像やJSONメッセージを取得できます。
 
-1. Open your App on [bitrise.io](https://www.bitrise.io) and click the badge image right next to the app's name.
+1. [bitrise.io](https://www.bitrise.io) 上でAppを開き、App名の右隣のバッジ画像をクリックしてください。
 
    ![Printscreen](/img/api/status-image-api-token.jpg)
-2. In the `Status image` popup, you can optionally set a branch, and get copy-paste-ready `Embed` codes for the SVG image.
+2. `Status image` ポップアップ上で、ステータスを取得したいブランチを任意で設定し、`Embed` 内のSVG画像用のURLをコピー＆ペーストします。
 
-   An example for SVG URL:
-
+   SVG画像URL例:  
    `https://app.bitrise.io/app/APP-ID/status.svg?token=STATUS-IMAGE-API-TOKEN&branch=master`
 
-   To get the JSON equivalent of the status image, simply replace the `.svg` in the `Embed` URL with `.json`.
+   ステータス画像と同等のJSONレスポンスを取得したい場合は、 `Embed` 内のURLの `.svg` を `.json` に書き換えてください。
 
-   An example for JSON URL:
+   JSON URL例:  
    `https://app.bitrise.io/app/APP-ID/status.json?token=STATUS-IMAGE-API-TOKEN&branch=master`
 
-{% include message_box.html type="important" title="`STATUS-IMAGE-API-TOKEN`" content=" The `STATUS-IMAGE-API-TOKEN` is a special token which can only be used for calling this endpoint (you can find this token in the `Status image` popup). No other information can be retrieved with this token, and it's not the same as the `API Token` which you can find on the `Code` tab!
+{% include message_box.html type="important" title="`STATUS-IMAGE-API-TOKEN`" content=" `STATUS-IMAGE-API-TOKEN` は本エンドポイントをリクエストするための特別なトークンです（ `Status image` ポップアップから取得することが可能です）。 このトークンを用いて他の情報を取得することはできません。また、 `Code` タブにある `API Token` とは異なります。
 "%}
 
-## JSON response
 
-The JSON response returns a very simple JSON object:
+## JSONレスポンス
+
+JSONレスポンスはとてもシンプルなJSONオブジェクトを返却します:
 
     {
         "status": "SIMPLIFIED-STATUS-AS-TEXT"
     }
 
-where `SIMPLIFIED-STATUS-AS-TEXT` can be:
+`SIMPLIFIED-STATUS-AS-TEXT` には次の文字列が返却されます:
 
-* `success` : if the last finished build on the specified branch was successful
-* `error` : if the last finished build failed or was aborted on the specified branch
-* `unknown` : in any other case, including if there was no (finished) build on the specified branch
+* `success` : 指定したブランチにおける最後に終了したビルドが成功した場合
+* `error` : 指定したブランチにおける最後に終了したビルドが失敗または中止された場合
+* `unknown` : 指定したブランチにおける（終了した）ビルドがなかった場合を含む、その他の場合
 
-### HTTP Codes and Errors
+### HTTPコードとエラー
 
-If the `APP-ID` and the `STATUS-IMAGE-API-TOKEN` parameters are correct,
-and they identify an existing app, a **200** HTTP code is returned along with the JSON response, even if the branch parameter points to a non-existing branch (the JSON response in this case will be `{"status": "unknown"}` with a 200 HTTP code).
+`branch` パラメーターに存在しないブランチを指定していた場合も、 `APP-ID` と `STATUS-IMAGE-API-TOKEN` パラメーターが正しく、それらによってAppを識別することが可能な場合、HTTPコード **200** がJSONレスポンスとともに返却されます（この場合のJSONレスポンスは、 `{"status": "unknown"}` が返却されます）。
 
-If the `APP-ID` or the `STATUS-IMAGE-API-TOKEN` (or both) is not correct,
-you'll get a HTTP **403** code _with an empty response_ body.
+`APP-ID` や `STATUS-IMAGE-API-TOKEN` （またはそのどちらも）が不正な場合、空のレスポンスボディとともにHTTPコード **403** が返却されます。
