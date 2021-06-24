@@ -2,6 +2,7 @@
 tag: []
 title: Teams plan FAQ
 redirect_from:
+- "/team-management/teams-plan-trial-faq/"
 - "/teams-plan-trial-faq/"
 summary: As part of our efforts to introduce a credit-based model, we’re now offering
   a trial on our upcoming Teams plan. Here’s everything you need to know about it!
