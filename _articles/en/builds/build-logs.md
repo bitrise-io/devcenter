@@ -52,7 +52,7 @@ Check your build log carefully when a build fails. Error messages are usually hi
 
 ## Following a build log live
 
-You can check the log of a build live - that is, while the build is running. What's more, you can even follow the log as the build is happening. That means that as the build progresses, the log will automatically scroll to the new sections as they appear. 
+You can check the log of a build live - that is, while the build is running. What's more, you can even follow the log as the build is happening. That means that as the build progresses, the log will automatically scroll to the new sections as they appear.
 
 To do so:
 
@@ -63,7 +63,19 @@ To do so:
 
 ![{{ page.title }}](/img/ios-multiple-test-results-sample_-_build__34__629950ad554e4cc9__-_bitrise.png)
 
-To stop following, you just need to manually navigate anywhere within the log. You can restart following any time. 
+To stop following, you just need to manually navigate anywhere within the log. You can restart following any time.
+
+## Build log limitations
+
+Bitrise can process a build log up to 32MB.
+
+If your build log exceeds this limit, only the beginning and the end of your build log gets printed out at the end of the completed run while the middle section is cut out with the following message:
+
+    --- !!! --- LOG TOO LONG, middle was removed --- !!! ---
+
+Even if your log is smaller than the 32MB limit (but bigger than 16MB) it might get stripped from the middle. When you have a very long running build (around 3 hours) with a log within this size interval, it will get stripped in the middle.
+
+If you think your build log might exceed this limit, you can consider shortening it by, for example, switching off verbose logging.
 
 ## Downloading a build log
 
