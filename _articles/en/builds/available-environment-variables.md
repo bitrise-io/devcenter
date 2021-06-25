@@ -81,7 +81,7 @@ For example, a pull request wants to merge the content of a branch into the bran
 
 {% include collapse.html title="$BITRISE_GIT_TAG" content="`$BITRISE_GIT_TAG`: You can [use Git Tags to trigger builds](/builds/triggering-builds/trigger-git-tags/) on Bitrise: this Env Var stores the tag used to trigger the build. "%}
 
-{% include collapse.html title="$BITRISE_GIT_COMMIT" content="`$BITRISE_GIT_COMMIT`: The commit hash of the Git commit that triggered the build, when applicable. There is no commit hash, for example, in the case of a pull request build. "%}
+{% include collapse.html title="$BITRISE_GIT_COMMIT" content="`$BITRISE_GIT_COMMIT`: The commit hash of the Git commit that triggered the build, when applicable."%}
 
 {% include collapse.html title="$BITRISE_GIT_MESSAGE" content="`$BITRISE_GIT_MESSAGE`: The commit message, pull request title or the message you specified if you triggered the build manually. "%}
 
