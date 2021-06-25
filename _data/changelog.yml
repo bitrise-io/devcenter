@@ -1,6 +1,12 @@
 ---
-- title: Available environment variables
+- title: External and internal IP addresses
   modified: 2021-06-25 00:00:00 +0200
+  changelog: Two new IP addresses have been added to Linux/Android environments in
+    the External and internal IP address' table in Virtual machines.
+  type: update
+  url: "/infrastructure/virtual-machines/#external-and-internal-ip-addresses"
+- title: Available environment variables
+  modified: 2021-06-25T00:00:00.000+02:00
   changelog: The BITRISE_GIT_COMMIT Env Var's description has been updated.
   type: update
   url: "/builds/available-environment-variables/#exposed-by-bitriseio"
