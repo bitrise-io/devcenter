@@ -1,6 +1,11 @@
 ---
-- title: Build logs
+- title: Available environment variables
   modified: 2021-06-25 00:00:00 +0200
+  changelog: The BITRISE_GIT_COMMIT Env Var's description has been updated.
+  type: update
+  url: "/builds/available-environment-variables/#exposed-by-bitriseio"
+- title: Build logs
+  modified: 2021-06-25T00:00:00.000+02:00
   changelog: Build log limitations has been added to this article.
   type: update
   url: "/builds/build-logs/"
