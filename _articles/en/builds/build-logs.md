@@ -67,7 +67,7 @@ To stop following, you just need to manually navigate anywhere within the log. Y
 
 ## Build log limitations
 
-Bitrise can process up to 32MB build log.
+Bitrise can process a build log up to 32MB.
 
 If your build log exceeds this limit, only the beginning and the end of your build log gets printed out at the end of the completed run while the middle section is cut out with the following message:
 
