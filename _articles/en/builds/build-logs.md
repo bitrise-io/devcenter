@@ -69,7 +69,7 @@ To stop following, you just need to manually navigate anywhere within the log. Y
 
 Bitrise can process a build log up to 32MB.
 
-If your build log exceeds this limit, only the beginning and the end of your build log gets printed out at the end of the completed run while the middle section is cut out with the following message:
+If your build log exceeds this limit, only the beginning and the end of your build log gets printed out at the end of the completed run while the middle section is cut out on the UI and in downloaded build logs too. The following messages indicates where the log got stripped:
 
     --- !!! --- LOG TOO LONG, middle was removed --- !!! ---
 
