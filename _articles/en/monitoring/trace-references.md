@@ -65,8 +65,6 @@ For integrating the iOS SDK the minimum requirements are:
 
 ### Android SDK
 
-{% include message_box.html type="important" title="iOS apps only" content="For now, Trace is only supported for iOS apps. Android support is coming soon."%}
-
 For integrating the Android SDK the minimum requirements are:
 
 * Android 5.1 (API 22)
