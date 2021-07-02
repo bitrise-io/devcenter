@@ -8,6 +8,7 @@ tag:
 description: You can manually specify the code signing configuration in your Gradle
   configuration so that your app gets signed during the build process.
 redirect_from: []
+summary: ''
 menu:
   android-code-signing:
     weight: 5
@@ -35,7 +36,7 @@ You can manually specify the code signing configuration in your Gradle configura
            } 
        } 
       
-
+    
       buildTypes {
           release {
               // Use signing config for build type
@@ -65,7 +66,7 @@ If your keystore path is `$HOME/keystores/my_keystore.jks`, then your `build.gra
 
 You can use the `System.getenv("ENV_KEY")` file to access Environment Variables in the Gradle config file.
 
-Add the file donwloader step to download the keystore:
+Add the file downloader step to download the keystore:
 
     - file-downloader@1:
         inputs:
@@ -96,7 +97,6 @@ If you use Environment Variables as `keyPassword` and `storePassword` in the **C
           }
        }
        ...
- 
 
 You get these Environment Variables when you upload your keystore to the **GENERIC FILE STORAGE** field of the **Code Signing** tab in your Workflow Editor.
 
