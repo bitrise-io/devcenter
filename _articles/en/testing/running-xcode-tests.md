@@ -8,6 +8,7 @@ tag:
 description: 'Run Xcode tests on Bitrise by using our Xcode Test for iOS Step. Configure
   the tests in our Workflow Editor with the same options as in Xcode, and generate
   code coverage files easily. '
+summary: ''
 menu:
   testing-main:
     weight: 6
@@ -54,22 +55,10 @@ Check the following required inputs of the **Xcode Test for iOS** Step before ru
 
 {% include message_box.html type="warning" title="Using xcpretty" content="The xcpretty output tool does not support parallel tests. If parallel tests are enabled in your project, go to the Step's Debug input group and set the **Output tool** input's value to xcodebuild."%}
 
-## Generating code coverage files
+## Rerunning failed tests
 
-By default, the **Xcode Test for iOS** Step does not generate code coverage files. If you need them, however, it's easy to change: just set the **Generate code coverage files?** to yes.
+The **Should retry test on failure?** input in the **Debug** section of the **Xcode Test for iOS** Step allows you to automatically rerun your tests if they fail. If you set the input to `yes`, the Step will run `xcodebuild` with the `-retry-tests-on-failure` flag so that it runs the tests again in case of failure.
 
-This sets two additional flags to the xcodebuild command:
-
-    xcodebuild GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
-
-If you run a successful build, code coverage files will be included in your results.
-
-## Exporting UI test artifacts
-
-You can export the attachments of your UITest. These attachments include screenshots taken during the UI test, as well as any other artifacts that might have been generated. They are exported as a compressed zip file.
-
-By default, the **Xcode Test for iOS** Step does not export artifacts of the UITest. If you want to export them, set the **Export UITest Artifacts** input of the **Xcode Test for iOS** Step to true.
-
-You can check your test artifacts on the [**Test Reports**](/testing/test-reports/) page, along all additional results.
+With Xcode 13 and above, only your failed test cases will be rerun. With older Xcode versions, all test cases will be rerun. You can use this new Xcode feature with the **Xcode Step for iOS** Step from version 2.7.x and above.
 
 <div class="banner"><img src="/assets/images/banner-bg-888x170.png" style="border: none;"> <div class="deploy-text">Let's run Xcode tests on Bitrise</div> <a target="_blank" href="https://app.bitrise.io/dashboard/builds"><button class="button">Go to your app</button></a></div>
