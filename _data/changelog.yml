@@ -1,6 +1,13 @@
 ---
+- title: Running Xcode tests
+  modified: 2021-07-07 13:49:54 +0200
+  changelog: You can now automatically rerun your failed tests with the Xcode Test
+    for iOS Step. If you use Xcode 13 and above, only your failed test cases will
+    be rerun; otherwise all tests will be.
+  type: update
+  url: "/testing/running-xcode-tests/"
 - title: External and internal IP addresses
-  modified: 2021-06-25 00:00:00 +0200
+  modified: 2021-06-25T00:00:00.000+02:00
   changelog: Two new IP addresses have been added to Linux/Android environments in
     the External and internal IP address' table in Virtual machines.
   type: update
