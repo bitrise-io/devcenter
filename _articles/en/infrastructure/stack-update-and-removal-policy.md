@@ -24,8 +24,8 @@ Stacks on [bitrise.io](https://www.bitrise.io) are generally updated every wee
 
 We use two types of Xcode stacks; Stable stacks and Edge stacks.
 
-* Xcode Stable stacks are **built once, and are not updated** at all (except with Bitrise CLI related updates, [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) and with critical fixes). These stacks are designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
-* Xcode "Edge" stack is **re-built every week**. It includes the latest release of Xcode, the same pre-installed tools as on the Stable stack, and the [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates). The stack uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
+* Xcode Stable stacks are built when a new minor version of a major Xcode version comes out. For example, Xcode 12.5.x has its own stable stack. These stacks are only updated with Xcode patch versions, Bitrise CLI related updates, [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates) and with critical fixes. These stacks are designed so that if a build worked on the stack, the same build should run the same way as long as the stack is available.
+* Xcode "Edge" stack is **re-built every week**. It includes the latest stable release of Xcode, the same pre-installed tools as on the Stable stack, and the [dependency manager cache updates](/infrastructure/stack-update-and-removal-policy/#about-dependency-manager-cache-updates). The stack uses the same [scripts](https://github.com/bitrise-io/osx-box-bootstrap) we use for creating new Xcode stacks.
 
 {% include message_box.html type="note" title="Pinning an Xcode version" content="Whenever a new Xcode version comes out, our aim is to provide it to our users as soon as possible. But we do not update existing stable stacks with a new Xcode version as that could potentially break builds: instead, we provide a new stack with the new version, and keep maintaining the older versions.
 
@@ -33,7 +33,7 @@ As such, if your app's current stable stack works well for your needs, you don't
 
 The only instance when you're potentially forced to take action is when older Xcode stacks are removed. This does not happen without advance warning; check out our [deprecation and removal policy](/infrastructure/stack-update-and-removal-policy/#deprecating-and-removing-stacks) to be prepared. "%}
 
-### **About dependency manager cache updates**
+### About dependency manager cache updates
 
 All of the macOS stacks receive a dependency manager cache update (brew, cocoapods and bitrise CLI) every week. These cache updates do not change the pre-installed tool versions, they **only update the package manager caches** for faster dependency installs.
 
@@ -64,19 +64,22 @@ We keep the latest patch version of every minor Xcode version as long as that Xc
 
 In addition, we keep the very last minor+patch version of the previous two major Xcode versions
 
-{% include message_box.html type="example" title="Example for maintaining Xcode stacks" content=" When the latest Xcode version was 8.3.3 we kept:
+{% include message_box.html type="example" title="Example for maintaining Xcode stacks" content=" When the latest Xcode version was 12.5.x, we kept:
 
-All the latest patch releases for every minor version of Xcode 8:
+All the latest patch releases for every minor version of Xcode 12:
 
-* 8.3.x (8.3.3)
-* 8.2.x (8.2.1)
-* 8.1.x (8.1)
-* 8.0.x (8.0)
+* 12.5.x
+* 12.4.x
+* 12.3.x
+* 12.2.x
+* 12.1.x
+* 12.0.x
 
 And the latest versions from the previous two Xcode major versions:
 
-* 7.3.1
-* 6.4
+* 11.7.x
+* 11.6.x
+* 10.3.x
 
 We will carry this example through our guide to illustrate stack removal and deprecation processes below.
 
@@ -86,17 +89,17 @@ We will carry this example through our guide to illustrate stack removal and dep
 
 When the first **beta of the next major Xcode version** is released, we **deprecate** all the minor versions of the last major version, except the very last version.
 
-{% include message_box.html type="example" title="Example for deprecating Xcode stacks when beta Xcode version is released" content=" When Xcode 9 was released, we deprecated:
+{% include message_box.html type="example" title="Example for deprecating Xcode stacks when beta Xcode version is released" content=" When Xcode 12 was released, we deprecated:
 
-* All the Xcode 8 stacks except the very last one (8.3.x).
-* The oldest major version (Xcode 6.4). "%}
+* The oldest major version which was Xcode 9.4.
+* The minor versions of the last major version (Xcode 11 stacks) except for the last couple of minor versions (Xcode 11.6 and 11.7)."%}
 
 When the first **final (non beta) version** of the new major Xcode version is released, we **remove** the deprecated stacks; the oldest major version as well as the minor versions of the last major version except the latest minor version.
 
-{% include message_box.html type="example" title="Example for removing stacks when final Xcode version is released" content=" For example, when Xcode 9 (final, non beta) was released, we removed:
+{% include message_box.html type="example" title="Example for removing stacks when final Xcode version is released" content=" For example, when Xcode 12 (final, non beta) was released, we removed:
 
-* The oldest major version (the Xcode 6 (6.4) stack).
-* The minor versions of the last major version (Xcode 8.0, 8.1 and 8.2 stacks) except for the latest minor version (Xcode 8.3). "%}
+* The oldest major version which was Xcode 9.4.
+* The minor versions of the last major version (Xcode 11 stacks) except for the last couple of minor versions (Xcode 11.6 and 11.7)."%}
 
 This means that the latest patch release version of Xcode is **supported for about 2.5 years**, in sync with Xcode major version releases.
 

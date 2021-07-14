@@ -1,6 +1,12 @@
 ---
+- title: Stack update and removal policy
+  modified: 2021-07-14 17:18:00 +0200
+  changelog: Clarified our policy regarding the maintenance, deprecation, and removal
+    of Xcode stacks.
+  type: fix
+  url: "/infrastructure/stack-update-and-removal-policy/"
 - title: Running Xcode tests
-  modified: 2021-07-07 13:49:54 +0200
+  modified: 2021-07-07T13:49:54.000+02:00
   changelog: You can now automatically rerun your failed tests with the Xcode Test
     for iOS Step. If you use Xcode 13 and above, only your failed test cases will
     be rerun; otherwise all tests will be.
