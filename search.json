@@ -1,0 +1,2075 @@
+[
+  
+    {
+      "title"    : "App Status Image/Badge API",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/api/app-status-badge/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Authentication",
+      "category" : "",
+      "tags"     : "api, security",
+      "url"      : "/api/authentication/",
+      "date"     : "2019-03-29 16:46:07 +0000"
+    } ,
+  
+    {
+      "title"    : "Triggering and aborting builds",
+      "category" : "",
+      "tags"     : "builds, api, triggers, git",
+      "url"      : "/api/build-trigger/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Response and pagination",
+      "category" : "",
+      "tags"     : "api",
+      "url"      : "/api/response-and-pagination/",
+      "date"     : "2019-03-29 16:47:01 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding and managing apps",
+      "category" : "",
+      "tags"     : "apps, api, ssh",
+      "url"      : "/api/adding-and-managing-apps/",
+      "date"     : "2019-04-05 13:31:28 +0000"
+    } ,
+  
+    {
+      "title"    : "API",
+      "category" : "",
+      "tags"     : "api, cli",
+      "url"      : "/api/api-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing build artifacts",
+      "category" : "",
+      "tags"     : "files, builds, api, artifacts",
+      "url"      : "/api/managing-build-artifacts/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing iOS code signing files",
+      "category" : "",
+      "tags"     : "code-signing, ios, api, files",
+      "url"      : "/api/managing-ios-code-signing-files/",
+      "date"     : "2019-04-08 14:11:49 +0000"
+    } ,
+  
+    {
+      "title"    : "Basics of bitrise.yml",
+      "category" : "",
+      "tags"     : "cli, bitrise.yml, steps, workflows",
+      "url"      : "/bitrise-cli/basics-of-bitrise-yml/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Customizing bitrise.yml",
+      "category" : "",
+      "tags"     : "bitrise.yml, cli, workflows, env vars",
+      "url"      : "/bitrise-cli/customizing-bitrise-yml/",
+      "date"     : "2018-10-31 09:27:26 +0000"
+    } ,
+  
+    {
+      "title"    : "Endpoints and testing the API",
+      "category" : "",
+      "tags"     : "api, testing",
+      "url"      : "/api/endpoints/",
+      "date"     : "2019-03-29 16:48:02 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing files in Generic File Storage",
+      "category" : "",
+      "tags"     : "files, api",
+      "url"      : "/api/managing-files-in-generic-file-storage/",
+      "date"     : "2019-04-09 07:32:06 +0000"
+    } ,
+  
+    {
+      "title"    : "Incoming and outgoing webhooks",
+      "category" : "",
+      "tags"     : "webhooks, triggers, builds, api",
+      "url"      : "/api/incoming-and-outgoing-webhooks/",
+      "date"     : "2019-04-09 15:10:01 +0000"
+    } ,
+  
+    {
+      "title"    : "YAML mode &amp; Bitrise CLI",
+      "category" : "",
+      "tags"     : "cli, bitrise, bitrise.yml",
+      "url"      : "/bitrise-cli/index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Initializing a Bitrise project locally",
+      "category" : "",
+      "tags"     : "cli, bitrise.yml",
+      "url"      : "/bitrise-cli/initializing-a-bitrise-project-locally/",
+      "date"     : "2018-12-13 11:37:13 +0000"
+    } ,
+  
+    {
+      "title"    : "Installing and updating the Bitrise CLI",
+      "category" : "",
+      "tags"     : "cli, bitrise",
+      "url"      : "/bitrise-cli/installation/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Most important concepts",
+      "category" : "",
+      "tags"     : "env vars, steps, secrets, cli, bitrise.yml",
+      "url"      : "/bitrise-cli/most-important-concepts/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Installing and upgrading the offline Workflow Editor",
+      "category" : "",
+      "tags"     : "cli,  workflows, bitrise.yml",
+      "url"      : "/bitrise-cli/offline-workflow-editor/",
+      "date"     : "2018-11-29 13:46:40 +0000"
+    } ,
+  
+    {
+      "title"    : "Running your first local build",
+      "category" : "",
+      "tags"     : "cli, builds, bitrise",
+      "url"      : "/bitrise-cli/run-your-first-build/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Secrets",
+      "category" : "",
+      "tags"     : "cli, secrets, env vars",
+      "url"      : "/bitrise-cli/secrets/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Step inputs",
+      "category" : "",
+      "tags"     : "steps, env vars, cli",
+      "url"      : "/bitrise-cli/step-inputs/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Step outputs",
+      "category" : "",
+      "tags"     : "steps,  workflows, env vars, bitrise.yml",
+      "url"      : "/bitrise-cli/step-outputs/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Step properties",
+      "category" : "",
+      "tags"     : "steps, env vars, cli",
+      "url"      : "/bitrise-cli/step-properties/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting a time limit for Steps",
+      "category" : "",
+      "tags"     : "cli, steps",
+      "url"      : "/bitrise-cli/step-timeout/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Steps in YAML",
+      "category" : "",
+      "tags"     : "steps, workflows, bitrise.yml, cli",
+      "url"      : "/bitrise-cli/steps/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Workflows in YAML",
+      "category" : "",
+      "tags"     : "steps, workflows, cli",
+      "url"      : "/bitrise-cli/workflows/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Scheduling your builds",
+      "category" : "",
+      "tags"     : "builds, triggers",
+      "url"      : "/builds/Scheduling-Builds/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Starting builds manually",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/builds/Starting-builds-manually/",
+      "date"     : "2018-09-25 13:58:51 +0000"
+    } ,
+  
+    {
+      "title"    : "Available environment variables",
+      "category" : "",
+      "tags"     : "builds, env vars, triggers",
+      "url"      : "/builds/available-environment-variables/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise Checks on GitHub Checks",
+      "category" : "",
+      "tags"     : "builds, troubleshooting",
+      "url"      : "/builds/bitrise-checks-on-github-checks/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing an app&#39;s bitrise.yml configuration",
+      "category" : "",
+      "tags"     : "bitrise.yml, builds",
+      "url"      : "/builds/bitrise-yml-online/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Build artifacts online",
+      "category" : "",
+      "tags"     : "builds, deploy, files, artifacts",
+      "url"      : "/builds/build-artifacts-online/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Build logs",
+      "category" : "",
+      "tags"     : "builds, troubleshooting",
+      "url"      : "/builds/build-logs/",
+      "date"     : "2018-10-31 10:43:57 +0000"
+    } ,
+  
+    {
+      "title"    : "Build numbering and app versioning",
+      "category" : "",
+      "tags"     : "builds, triggers, env vars, android, ios",
+      "url"      : "/builds/build-numbering-and-app-versioning/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Builds",
+      "category" : "",
+      "tags"     : "builds, workflows, triggers",
+      "url"      : "/builds/builds-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Caching",
+      "category" : "",
+      "tags"     : "builds , cache, dependencies",
+      "url"      : "/builds/caching/about-caching-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Caching Carthage dependencies",
+      "category" : "",
+      "tags"     : "caching, carthage, ios, builds",
+      "url"      : "/builds/caching/caching-carthage/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Caching Cocoapods",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/builds/caching/caching-cocoapods/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Caching Gradle",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/builds/caching/caching-gradle/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Caching Homebrew installers",
+      "category" : "",
+      "tags"     : "caching, homebrew, ios, builds",
+      "url"      : "/builds/caching/caching-homebrew-installers/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Caching Maven",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/builds/caching/caching-maven/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Caching Ruby Gems",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/builds/caching/caching-ruby-gems/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Configuring notifications",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/builds/configuring-notifications/",
+      "date"     : "2019-03-22 11:08:54 +0000"
+    } ,
+  
+    {
+      "title"    : "Secrets and Env Vars",
+      "category" : "",
+      "tags"     : "secrets, env vars, builds",
+      "url"      : "/builds/env-vars-secret-env-vars/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Monitoring your builds with Meercode",
+      "category" : "",
+      "tags"     : "builds, monitoring",
+      "url"      : "/builds/monitoring-your-builds-with-meercode/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Remote access",
+      "category" : "",
+      "tags"     : "builds, troubleshooting",
+      "url"      : "/builds/remote-access/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Rolling builds",
+      "category" : "",
+      "tags"     : "builds, git, triggers",
+      "url"      : "/builds/rolling-builds/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Selective builds",
+      "category" : "",
+      "tags"     : "builds, triggers",
+      "url"      : "/builds/selective_builds/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Sensitive input in public apps",
+      "category" : "",
+      "tags"     : "public, env vars, builds, secrets",
+      "url"      : "/builds/sensitive-input-field/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Skipping a given commit or Pull Request",
+      "category" : "",
+      "tags"     : "git, builds, pull request, triggers",
+      "url"      : "/builds/triggering-builds/skipping-a-given-commit-or-pull-request/",
+      "date"     : "2019-01-18 17:09:42 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting your Git credentials on build machines",
+      "category" : "",
+      "tags"     : "git, builds",
+      "url"      : "/builds/setting-your-git-credentials-on-build-machines/",
+      "date"     : "2019-02-21 15:27:32 +0000"
+    } ,
+  
+    {
+      "title"    : "Approving Pull Request builds",
+      "category" : "",
+      "tags"     : "git, builds, triggers, pull request, public",
+      "url"      : "/builds/triggering-builds/approving-pull-request-builds/",
+      "date"     : "2019-04-29 12:48:56 +0000"
+    } ,
+  
+    {
+      "title"    : "Reporting the build status to your Git hosting provider",
+      "category" : "",
+      "tags"     : "triggers, git, builds",
+      "url"      : "/builds/triggering-builds/status-reporting/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Triggering builds with code push",
+      "category" : "",
+      "tags"     : "builds, triggers, git",
+      "url"      : "/builds/triggering-builds/trigger-code-push/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Triggering builds with Git Tags",
+      "category" : "",
+      "tags"     : "git, builds, triggers",
+      "url"      : "/builds/triggering-builds/trigger-git-tags/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Using the Trigger Map to trigger builds",
+      "category" : "",
+      "tags"     : "triggers,  builds, git, bitrise.yml",
+      "url"      : "/builds/triggering-builds/trigger-map/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Starting parallel builds with a single trigger",
+      "category" : "",
+      "tags"     : "triggers, builds",
+      "url"      : "/builds/triggering-builds/trigger-multiple-workflows/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Triggering builds with pull requests",
+      "category" : "",
+      "tags"     : "triggers, git, builds",
+      "url"      : "/builds/triggering-builds/trigger-pull-request/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Triggering builds",
+      "category" : "",
+      "tags"     : "builds, webhooks, triggers, git",
+      "url"      : "/builds/triggering-builds/triggering-builds-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Changelog",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/changelog/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Android code signing in Gradle",
+      "category" : "",
+      "tags"     : "code-signing, android, gradle, files",
+      "url"      : "/code-signing/android-code-signing/android-code-signing-in-gradle/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Android code signing",
+      "category" : "",
+      "tags"     : "android, code-signing",
+      "url"      : "/code-signing/android-code-signing/android-code-signing-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Android code signing using Android Sign step",
+      "category" : "",
+      "tags"     : "android, google-play, code-signing, files",
+      "url"      : "/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Android code signing with Android Studio",
+      "category" : "",
+      "tags"     : "android, code-signing, files",
+      "url"      : "/code-signing/android-code-signing/android-code-signing-with-android-studio/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Downloading a keystore file",
+      "category" : "",
+      "tags"     : "android, gradle, code-signing, files",
+      "url"      : "/code-signing/android-code-signing/downloading-a-keystore-file/",
+      "date"     : "2018-12-11 10:30:01 +0000"
+    } ,
+  
+    {
+      "title"    : "Code signing",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/code-signing/code-signing-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "iOS code signing",
+      "category" : "",
+      "tags"     : "ios, code-signing",
+      "url"      : "/code-signing/ios-code-signing/code-signing-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Code signing iOS frameworks",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/code-signing/ios-code-signing/code-signing-ios-frameworks/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Collecting and exporting code signing files with codesigndoc",
+      "category" : "",
+      "tags"     : "ios, code-signing, files, xamarin, xcode",
+      "url"      : "/code-signing/ios-code-signing/collecting-files-with-codesigndoc/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Creating a signed .ipa for Xamarin apps",
+      "category" : "",
+      "tags"     : "xamarin, ios, code-signing, files",
+      "url"      : "/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Creating a signed .ipa for Xcode projects",
+      "category" : "",
+      "tags"     : "xcode, ios, code-signing, app-store",
+      "url"      : "/code-signing/ios-code-signing/create-signed-ipa-for-xcode/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Exporting code signing files without codesigndoc",
+      "category" : "",
+      "tags"     : "code-signing, files, xcode, ios",
+      "url"      : "/code-signing/ios-code-signing/exporting-code-signing-files/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Generating code signing files",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/code-signing/ios-code-signing/generating-code-signing-files/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Code signing with Ionic and Cordova projects",
+      "category" : "",
+      "tags"     : "ionic, cordova, code-signing, files",
+      "url"      : "/code-signing/ios-code-signing/ionic-cordova-code-signing/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing iOS code signing files - automatic provisioning",
+      "category" : "",
+      "tags"     : "ios,  app-store, xcode, code-signing, files",
+      "url"      : "/code-signing/ios-code-signing/ios-auto-provisioning/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "iOS code signing - troubleshooting",
+      "category" : "",
+      "tags"     : "troubleshooting, code-signing, xcode, ios",
+      "url"      : "/code-signing/ios-code-signing/ios-code-signing-troubleshooting/",
+      "date"     : "2018-10-11 11:28:48 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing iOS code signing files - manual provisioning",
+      "category" : "",
+      "tags"     : "ios, code-signing, files, xcode",
+      "url"      : "/code-signing/ios-code-signing/ios-manual-provisioning/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Protecting your code signing files",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/code-signing/ios-code-signing/protecting-your-code-signing-files/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Signing an .ipa with multiple code signing identities",
+      "category" : "",
+      "tags"     : "code-signing, ios, xcode, app-store",
+      "url"      : "/code-signing/ios-code-signing/resigning-an-ipa/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Xamarin Android code signing",
+      "category" : "",
+      "tags"     : "xamarin, android, code-signing, files",
+      "url"      : "/code-signing/xamarin-android-code-signing/xamarin-android-code-signing/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "How to contribute to Bitrise",
+      "category" : "",
+      "tags"     : "steps, workflows, cli, bitrise.yml",
+      "url"      : "/contributors/contributors-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Developing a new Step ",
+      "category" : "",
+      "tags"     : "cli, steps, bitrise.yml, workflows",
+      "url"      : "/contributors/create-your-own-step/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Creating your own Bitrise project scanner",
+      "category" : "",
+      "tags"     : "steps, workflows, cli, builds, bitrise.yml",
+      "url"      : "/contributors/creating-your-own-bitrise-project-scanner/",
+      "date"     : "2018-12-13 11:31:09 +0000"
+    } ,
+  
+    {
+      "title"    : "Sharing Steps with all Bitrise users",
+      "category" : "",
+      "tags"     : "steps,  contributors,  bitrise.yml, workflows",
+      "url"      : "/contributors/sharing-steps-with-all-bitrise-users/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Testing and versioning your Steps ",
+      "category" : "",
+      "tags"     : "steps, cli, contributors, workflows, testing",
+      "url"      : "/contributors/testing-and-versioning-your-steps/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Verified Steps",
+      "category" : "",
+      "tags"     : " contributors,  bitrise.yml,  workflows, steps",
+      "url"      : "/contributors/verified-steps/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Android deployment",
+      "category" : "",
+      "tags"     : "android,  deploy, google-play",
+      "url"      : "/deploy/android-deploy/android-deployment-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying Android apps to Bitrise and Google Play",
+      "category" : "",
+      "tags"     : "deploy, android, google play",
+      "url"      : "/deploy/android-deploy/deploying-android-apps/",
+      "date"     : "2018-10-26 13:00:41 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying apps to Huawei AppGallery",
+      "category" : "",
+      "tags"     : "deploy,  android,  huawei, step",
+      "url"      : "/deploy/android-deploy/deploying-apps-to-huawei-appgallery/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Exporting a universal APK from an AAB",
+      "category" : "",
+      "tags"     : "gradle, android, deploy",
+      "url"      : "/deploy/android-deploy/exporting-a-universal-apk-from-an-aab/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Generate and deploy multiple flavor APKs in a single workflow",
+      "category" : "",
+      "tags"     : "deploy, android, gradle",
+      "url"      : "/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow/",
+      "date"     : "2018-10-26 12:56:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Generating and deploying Android app bundles ",
+      "category" : "",
+      "tags"     : "gradle, android",
+      "url"      : "/deploy/android-deploy/generating-and-deploying-android-app-bundles/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise OTA app Deployment",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/deploy/bitrise-app-deployment/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying apps to Applivery",
+      "category" : "",
+      "tags"     : "deploy, ios, android",
+      "url"      : "/deploy/deploy-apps-to-applivery-from-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploy apps to DeployGate from Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/deploy/deploy-apps-to-deploygate-from-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploy to TestFairy with Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/deploy/deploy-to-testfairy-with-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Deployment",
+      "category" : "",
+      "tags"     : "deploy, ios, android, app-store, google-play",
+      "url"      : "/deploy/deployment-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying an iOS app to Bitrise.io",
+      "category" : "",
+      "tags"     : "deploy, ios, code-signing, testing",
+      "url"      : "/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/",
+      "date"     : "2018-10-26 12:37:47 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying an iOS app for external testing",
+      "category" : "",
+      "tags"     : "ios, deploy, app-store",
+      "url"      : "/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/",
+      "date"     : "2018-10-26 12:39:01 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying an iOS app to iTunes Connect",
+      "category" : "",
+      "tags"     : "itunes-connect, app-store, ios, deploy",
+      "url"      : "/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/",
+      "date"     : "2018-10-26 12:41:22 +0000"
+    } ,
+  
+    {
+      "title"    : "iOS deployment",
+      "category" : "",
+      "tags"     : "ios, deploy, app store",
+      "url"      : "/deploy/ios-deploy/ios-deploy-index/",
+      "date"     : "2018-10-26 12:49:32 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying an iOS app for simulators",
+      "category" : "",
+      "tags"     : "deploy, ios, xcode, testing",
+      "url"      : "/deploy/ios-deploy/deploying-an-ios-app-for-simulators/",
+      "date"     : "2018-11-10 14:34:02 +0000"
+    } ,
+  
+    {
+      "title"    : "Publish your app to Appaloosa",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/deploy/publish-your-app-to-appaloosa/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying with Ship",
+      "category" : "",
+      "tags"     : "ship, deploy, ios, android",
+      "url"      : "/deploy/ship/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Can I add projects with submodules or with private repo dependencies?",
+      "category" : "",
+      "tags"     : "git, faq, ssh",
+      "url"      : "/faq/adding-projects-with-submodules/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Can I run an Android x86 Emulator on Bitrise?",
+      "category" : "",
+      "tags"     : "android, faq, stack, infrastructure",
+      "url"      : "/faq/android-x86-emulator/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "FAQ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/faq/faq-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "How can I grant Bitrise access to a Bitbucket team?",
+      "category" : "",
+      "tags"     : "git, faq",
+      "url"      : "/faq/grant-access-to-bitbucket-team/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "How to grant Bitrise access to a GitHub Organization?",
+      "category" : "",
+      "tags"     : "faq, git, troubleshooting",
+      "url"      : "/faq/grant-access-to-github-organization/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "How can I git checkout from a detached head state?",
+      "category" : "",
+      "tags"     : "builds, trigger",
+      "url"      : "/faq/how-can-i-git-checkout-from-a-detached-head-state/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "How to change the owner of an app?",
+      "category" : "",
+      "tags"     : "teams, orgs, faq, apps",
+      "url"      : "/faq/how-to-change-the-owner-of-an-app/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "How can I generate an SSH key pair?",
+      "category" : "",
+      "tags"     : "ssh, faq, git",
+      "url"      : "/faq/how-to-generate-ssh-keypair/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Why can&#39;t I see my GitHub organization / repository on the Add New App page?",
+      "category" : "",
+      "tags"     : "git, faq, apps",
+      "url"      : "/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Invitation FAQ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/faq/invitation-faq/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Why isn&#39;t a build triggered when I push code into the repository?",
+      "category" : "",
+      "tags"     : "triggers, builds, troubleshooting, git",
+      "url"      : "/faq/no-builds-are-triggered-automatically/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Organization FAQ",
+      "category" : "",
+      "tags"     : "orgs,  faq, teams",
+      "url"      : "/faq/organization-faq/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Should I commit my dependencies into my repository?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/faq/should-i-commit-my-dependencies-into-my-repository/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Why does my build take longer on Bitrise than on my machine?",
+      "category" : "",
+      "tags"     : "builds, cache, faq, troubleshooting",
+      "url"      : "/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Account security",
+      "category" : "",
+      "tags"     : "getting-started, security",
+      "url"      : "/getting-started/account-security/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding a new app",
+      "category" : "",
+      "tags"     : "ssh,  public, builds, getting-started",
+      "url"      : "/getting-started/adding-a-new-app/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding a new app from a CLI",
+      "category" : "",
+      "tags"     : "cli, getting-started",
+      "url"      : "/getting-started/adding-an-app-from-a-cli/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise tools",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/getting-started/bitrise-tools/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Code security",
+      "category" : "",
+      "tags"     : "getting-started, security",
+      "url"      : "/getting-started/code-security/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Steps requiring Apple authentication",
+      "category" : "",
+      "tags"     : "apple, builds, code-signing, security",
+      "url"      : "/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Apple services connection",
+      "category" : "",
+      "tags"     : "apple, builds, code-signing, security",
+      "url"      : "/getting-started/connecting-to-services/configuring-bitrise-steps-that-require-apple-developer-account-data/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Connecting your GitHub/GitLab/Bitbucket account to Bitrise",
+      "category" : "",
+      "tags"     : "git, getting-started, triggers",
+      "url"      : "/getting-started/connecting-to-services/connecting-account-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Connecting to an Apple service with Apple ID ",
+      "category" : "",
+      "tags"     : "apple, builds, code-signing, security",
+      "url"      : "/getting-started/connecting-to-services/connecting-to-an-apple-service-with-apple-id/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Connecting to an Apple Service with Step inputs",
+      "category" : "",
+      "tags"     : "apple, builds, code-signing, security",
+      "url"      : "/getting-started/connecting-to-services/connecting-to-an-apple-service-with-step-inputs/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Connecting to services",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/getting-started/connecting-to-services/connecting-to-services-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Connecting self-hosted GitLab instances",
+      "category" : "",
+      "tags"     : "git, getting-started, orgs",
+      "url"      : "/getting-started/connecting-to-services/self-hosted-gitlab/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Connecting to an Apple service with API key",
+      "category" : "",
+      "tags"     : "apple, builds, code-signing, security",
+      "url"      : "/getting-started/connecting-to-services/setting-up-connection-to-an-apple-service-with-api-key/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with Expo apps",
+      "category" : "",
+      "tags"     : "getting-started, testing, deploy, code-signing",
+      "url"      : "/getting-started/getting-started-with-expo-apps/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with iOS apps",
+      "category" : "",
+      "tags"     : "deploy, getting-started, ios, code-signing",
+      "url"      : "/getting-started/getting-started-with-ios-apps/",
+      "date"     : "2018-09-12 15:27:42 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with Android apps",
+      "category" : "",
+      "tags"     : "getting-started, android, deploy, testing",
+      "url"      : "/getting-started/getting-started-with-android-apps/",
+      "date"     : "2018-09-21 08:47:45 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with React Native apps",
+      "category" : "",
+      "tags"     : "getting-started, react, testing, deploy, code-signing",
+      "url"      : "/getting-started/getting-started-with-react-native-apps/",
+      "date"     : "2018-10-12 13:16:58 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with Xamarin apps",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/getting-started/getting-started-with-xamarin-apps/",
+      "date"     : "2018-10-19 11:49:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with MacOS apps",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/getting-started/getting-started-with-macos-apps/",
+      "date"     : "2018-11-16 11:51:09 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with Ionic/Cordova apps",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/getting-started/getting-started-with-ionic-cordova-apps/",
+      "date"     : "2018-11-16 14:33:48 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with Flutter apps",
+      "category" : "",
+      "tags"     : "getting-started, flutter, code-signing, testing, deploy",
+      "url"      : "/getting-started/getting-started-with-flutter-apps/",
+      "date"     : "2019-01-25 13:26:58 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started",
+      "category" : "",
+      "tags"     : "getting-started, sign-up, add-app, webhooks, builds, workflows",
+      "url"      : "/getting-started/index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing files on Bitrise ",
+      "category" : "",
+      "tags"     : "getting-started, files, artifacts",
+      "url"      : "/getting-started/managing-files-on-bitrise/",
+      "date"     : "2018-12-03 10:05:49 +0000"
+    } ,
+  
+    {
+      "title"    : "Migrating from Jenkins to Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/getting-started/migrating-to-bitrise/migrating-from-jenkins-to-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Migrating to Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/getting-started/migrating-to-bitrise/migrating-to-bitrise-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Public apps for open source projects",
+      "category" : "",
+      "tags"     : "getting-started, public, builds",
+      "url"      : "/getting-started/public-apps/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Signing up to Bitrise",
+      "category" : "",
+      "tags"     : "git, getting-started",
+      "url"      : "/getting-started/signing-up-to-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "What is Bitrise?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Available stacks",
+      "category" : "",
+      "tags"     : "stack, infrastructure, builds",
+      "url"      : "/infrastructure/available-stacks/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Customizable enterprise build platforms",
+      "category" : "",
+      "tags"     : "infrastructure, stack, VPN",
+      "url"      : "/infrastructure/customisable-enterprise-build-platforms/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Infrastructure",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/infrastructure/infrastructure-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Analyzing your app&#39;s performance with Trace",
+      "category" : "",
+      "tags"     : "monitoring, trace, ios, android",
+      "url"      : "/monitoring/analyzing-your-app-s-data-with-trace/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Crash reporting with Trace",
+      "category" : "",
+      "tags"     : "trace, ios, android, monitoring",
+      "url"      : "/monitoring/crash-reporting-with-trace/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with Trace",
+      "category" : "",
+      "tags"     : "trace, add-ons, devops, monitoring, deploy, ios",
+      "url"      : "/monitoring/getting-started-with-trace/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Monitoring your deployed app with Trace",
+      "category" : "",
+      "tags"     : "trace, add-ons, devops, monitoring, deploy, ios",
+      "url"      : "/monitoring/trace-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Trace product references",
+      "category" : "",
+      "tags"     : "trace, add-ons, devops, monitoring, deploy, ios",
+      "url"      : "/monitoring/trace-references/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding and removing Steps",
+      "category" : "",
+      "tags"     : "steps, workflows",
+      "url"      : "/steps-and-workflows/adding-removing-steps/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Copying Workflows from one app to another",
+      "category" : "",
+      "tags"     : "workflows, steps, bitrise.yml",
+      "url"      : "/steps-and-workflows/copying-workflows-from-one-app-to-another/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Creating a Workflow",
+      "category" : "",
+      "tags"     : "steps, workflows",
+      "url"      : "/steps-and-workflows/creating-workflows/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Default Workflows",
+      "category" : "",
+      "tags"     : "steps, workflows, deploy",
+      "url"      : "/steps-and-workflows/default-workflows/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Enabling or disabling a Step conditionally",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/steps-and-workflows/disable-a-step-by-condition/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Introduction to Steps",
+      "category" : "",
+      "tags"     : "getting-started, steps, workflows, contributors",
+      "url"      : "/steps-and-workflows/getting-started-steps/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Introduction to Workflows",
+      "category" : "",
+      "tags"     : "getting-started, steps, workflows",
+      "url"      : "/steps-and-workflows/getting-started-workflows/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing Workflows",
+      "category" : "",
+      "tags"     : "workflows, steps",
+      "url"      : "/steps-and-workflows/managing-workflows/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Skipping Steps",
+      "category" : "",
+      "tags"     : "steps, workflows",
+      "url"      : "/steps-and-workflows/skipping-steps/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Step versions and inputs",
+      "category" : "",
+      "tags"     : "steps,  workflows, env vars",
+      "url"      : "/steps-and-workflows/step-inputs/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Steps and Workflows",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/steps-and-workflows/steps-and-workflows-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding a new team member to an app",
+      "category" : "",
+      "tags"     : "teams, orgs, apps",
+      "url"      : "/team-management/adding-new-team-member/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Changing the owner of an app",
+      "category" : "",
+      "tags"     : "teams, orgs, apps",
+      "url"      : "/team-management/changing-the-owner-of-an-app/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Credit-based Hobby plan: FAQ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/team-management/credit-based-hobby-plan-faq/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Editing and deleting your Bitrise account",
+      "category" : "",
+      "tags"     : "teams, orgs, apps",
+      "url"      : "/team-management/deleting-bitrise-account/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing your personal subscription plan",
+      "category" : "",
+      "tags"     : "teams, orgs, apps",
+      "url"      : "/team-management/managing-personal-plan/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Creating Organizations",
+      "category" : "",
+      "tags"     : "teams, orgs",
+      "url"      : "/team-management/organizations/creating-org/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing the apps of Organizations",
+      "category" : "",
+      "tags"     : "teams, orgs",
+      "url"      : "/team-management/organizations/managing-apps/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing billing and subscription for Organizations",
+      "category" : "",
+      "tags"     : "billing, teams, orgs",
+      "url"      : "/team-management/organizations/managing-billing-sub/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing the invoices of your Organizations",
+      "category" : "",
+      "tags"     : "teams, orgs, billing",
+      "url"      : "/team-management/organizations/managing-invoices/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing Organization members",
+      "category" : "",
+      "tags"     : "teams, orgs",
+      "url"      : "/team-management/organizations/members-organizations/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Changing the owners of an Organization",
+      "category" : "",
+      "tags"     : "orgs,  teams",
+      "url"      : "/team-management/organizations/org-ownership/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Finding the URL of your Organizations",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/team-management/organizations/org-url/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Organizations",
+      "category" : "",
+      "tags"     : "orgs, team-management",
+      "url"      : "/team-management/organizations/organizations-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "SAML SSO in Organizations",
+      "category" : "",
+      "tags"     : "teams, orgs, security, SSO",
+      "url"      : "/team-management/organizations/saml-sso-in-organizations/",
+      "date"     : "2019-03-08 09:49:06 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up AD FS SSO for Bitrise",
+      "category" : "",
+      "tags"     : "teams, org, security, sso",
+      "url"      : "/team-management/organizations/setting-up-ad-fs-sso-for-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Auth0 SSO for Bitrise",
+      "category" : "",
+      "tags"     : "teams, org, security, sso",
+      "url"      : "/team-management/organizations/setting-up-auth0-sso-for-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Google SSO for Bitrise",
+      "category" : "",
+      "tags"     : "teams, org, security, sso",
+      "url"      : "/team-management/organizations/setting-up-google-sso-for-bitrise/",
+      "date"     : "2019-03-28 11:18:49 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Azure AD SSO for Bitrise",
+      "category" : "",
+      "tags"     : "teams, org, security, sso",
+      "url"      : "/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/",
+      "date"     : "2019-04-17 11:13:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Idaptive SAML SSO for Bitrise",
+      "category" : "",
+      "tags"     : "teams, org, security, sso",
+      "url"      : "/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Okta SSO for Bitrise",
+      "category" : "",
+      "tags"     : "teams,  org, security, sso",
+      "url"      : "/team-management/organizations/setting-up-okta-sso-for-bitrise/",
+      "date"     : "2019-04-24 07:13:35 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up OneLogin SSO for Bitrise",
+      "category" : "",
+      "tags"     : "teams, org, security, sso",
+      "url"      : "/team-management/organizations/setting-up-onelogin-sso-for-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Ping Identity SSO for Bitrise",
+      "category" : "",
+      "tags"     : "orgs, security, sso, teams",
+      "url"      : "/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Teams plan FAQ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/team-management/teams-plan-faq/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "User roles on app teams",
+      "category" : "",
+      "tags"     : "teams, orgs",
+      "url"      : "/team-management/user-roles-on-app-teams/",
+      "date"     : "2019-02-18 14:53:53 +0000"
+    } ,
+  
+    {
+      "title"    : "Accounts and team management",
+      "category" : "",
+      "tags"     : "teams, orgs",
+      "url"      : "/team-management/teams-vs-organizations-index/",
+      "date"     : "2019-03-27 15:41:18 +0000"
+    } ,
+  
+    {
+      "title"    : "Android unit test",
+      "category" : "",
+      "tags"     : "android, testing",
+      "url"      : "/testing/android-run-a-unit-test/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Device testing for iOS",
+      "category" : "",
+      "tags"     : "testing, ios, firebase",
+      "url"      : "/testing/device-testing-for-ios/",
+      "date"     : "2018-10-17 10:31:27 +0000"
+    } ,
+  
+    {
+      "title"    : "Device testing for Android",
+      "category" : "",
+      "tags"     : "testing, android, firebase",
+      "url"      : "/testing/device-testing-for-android/",
+      "date"     : "2018-10-26 08:33:44 +0000"
+    } ,
+  
+    {
+      "title"    : "Exporting to Test Reports from any Step",
+      "category" : "",
+      "tags"     : "testing, steps, test-reports",
+      "url"      : "/testing/exporting-to-test-reports-from-custom-script-steps/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Installing an ipa file from the public install page",
+      "category" : "",
+      "tags"     : "testing, ios",
+      "url"      : "/testing/installing-an-ipa-file-from-the-public-install-page/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Measuring your code coverage with Codecov",
+      "category" : "",
+      "tags"     : "testing, ios, android, firebase, test-reports",
+      "url"      : "/testing/measuring-your-code-coverage-with-codecov/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Registering a test device",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/testing/registering-a-test-device/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Running tests in the Visual Studio App Center",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/testing/run-your-tests-in-the-app-center/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Android tips and tricks",
+      "category" : "",
+      "tags"     : "gradle, android, docker",
+      "url"      : "/tips-and-tricks/android-tips-and-tricks/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Attaching files as artifacts to a build",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tips-and-tricks/attach-any-file-to-build/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Don&#39;t mark the Build as failed if a given step would fail (ignore the error of the Step)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tips-and-tricks/dont-mark-build-failed-if-step-fails/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Using Env Vars in the value of an Env Var",
+      "category" : "",
+      "tags"     : "env vars, builds, secrets",
+      "url"      : "/tips-and-tricks/embedding-env-vars/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Exposing Env Vars and using them in another Step",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tips-and-tricks/expose-environment-variable/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Increasing the size limit of Env Vars",
+      "category" : "",
+      "tags"     : "env vars, builds",
+      "url"      : "/tips-and-tricks/increasing-the-size-limit-of-env-vars/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Installing any additional tools",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tips-and-tricks/install-additional-tools/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Optimizing your build times",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tips-and-tricks/optimize-your-build-times/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Debugging your build on your own machine",
+      "category" : "",
+      "tags"     : "troubleshooting, git, cli, builds",
+      "url"      : "/troubleshooting/debugging-your-build-on-your-own-machine/",
+      "date"     : "2018-11-19 15:33:56 +0000"
+    } ,
+  
+    {
+      "title"    : "Screen recording of Android UI tests with Script Steps",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tips-and-tricks/screen-recording-of-android-ui-tests-with-script-steps/",
+      "date"     : "2019-01-30 13:47:29 +0000"
+    } ,
+  
+    {
+      "title"    : "Stack update and removal policy ",
+      "category" : "",
+      "tags"     : "infrastructure, builds, xcode, android, linux",
+      "url"      : "/infrastructure/stack-update-and-removal-policy/",
+      "date"     : "2019-02-05 15:39:10 +0000"
+    } ,
+  
+    {
+      "title"    : "The Android/Linux/Docker environment",
+      "category" : "",
+      "tags"     : "android, linux, docker, infrastructure",
+      "url"      : "/infrastructure/the-environment/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Virtual machines",
+      "category" : "",
+      "tags"     : "infrastructure, security",
+      "url"      : "/infrastructure/virtual-machines/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Screen recording your UI tests with Appium",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tips-and-tricks/screen-recording-your-ui-tests-with-appium/",
+      "date"     : "2019-02-22 15:04:24 +0000"
+    } ,
+  
+    {
+      "title"    : "Running Xcode tests",
+      "category" : "",
+      "tags"     : "testing, ios",
+      "url"      : "/testing/running-xcode-tests/",
+      "date"     : "2019-02-22 15:33:24 +0000"
+    } ,
+  
+    {
+      "title"    : "Running Detox tests on Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/testing/running-detox-tests-on-bitrise/",
+      "date"     : "2019-03-01 12:43:19 +0000"
+    } ,
+  
+    {
+      "title"    : "Test Reports",
+      "category" : "",
+      "tags"     : "testing, ios,  android,  firebase, test-reports",
+      "url"      : "/testing/test-reports/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Testing",
+      "category" : "",
+      "tags"     : "testing, ios, android, add-ons, firebase",
+      "url"      : "/testing/testing-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Sharing and storing workflows among multiple apps",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps/",
+      "date"     : "2019-03-01 14:20:01 +0000"
+    } ,
+  
+    {
+      "title"    : "Tips and tricks",
+      "category" : "",
+      "tags"     : "env vars, tips-and-tricks",
+      "url"      : "/tips-and-tricks/tips-and-tricks-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Using the bitrise.yml from repository",
+      "category" : "",
+      "tags"     : "bitrise.yml",
+      "url"      : "/tips-and-tricks/use-bitrise-yml-from-repository/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Enabling the Bitrise Support user for your app",
+      "category" : "",
+      "tags"     : "troubleshooting,  apps, builds",
+      "url"      : "/troubleshooting/enabling-bitrise-support-user/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Frequent Android issues",
+      "category" : "",
+      "tags"     : "troubleshooting, android",
+      "url"      : "/troubleshooting/frequent-android-issues/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Frequent iOS issues",
+      "category" : "",
+      "tags"     : "ios, xcode, troubleshooting, builds",
+      "url"      : "/troubleshooting/frequent-ios-issues/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Build status indicator on GitHub/GitLab/Bitbucket does not work",
+      "category" : "",
+      "tags"     : "git , troubleshooting, builds",
+      "url"      : "/troubleshooting/github-pull-request-status-troubleshooting/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "List of known Xcode issues",
+      "category" : "",
+      "tags"     : "xcode,  troubleshooting, ios",
+      "url"      : "/troubleshooting/known-xcode-issues/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "No activity summaries found for test with Danger",
+      "category" : "",
+      "tags"     : "troubleshooting, xcode, testing",
+      "url"      : "/troubleshooting/no-activity-summaries-found-for-test-with-danger/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Resetting your password",
+      "category" : "",
+      "tags"     : "troubleshooting,  getting-started,  security",
+      "url"      : "/troubleshooting/resetting-your-password/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Build Trigger does not work",
+      "category" : "",
+      "tags"     : "triggers, troubleshooting, builds",
+      "url"      : "/troubleshooting/trigger-doesnt-work/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Troubleshooting &amp; FAQ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/troubleshooting/troubleshooting-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Workflow Editor doesn&#39;t load",
+      "category" : "",
+      "tags"     : "workflows, troubleshooting",
+      "url"      : "/troubleshooting/workflow-editor-doesnt-load/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying your Middleman website with Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/auto-deploy-middleman-project/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Building with FAKE (F# Make)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/build-with-fake/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Community Created Tutorials",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/community-created/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Creating white label app versions",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/creating-white-label-app-versions/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Docker",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/docker/docker-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "How to run your build locally in Docker",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/docker/run-your-build-locally-in-docker/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Using your own Docker image",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/docker/use-your-own-docker-image/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Downloading or replacing project resources",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/download-or-replace-project-resources/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Fastlane",
+      "category" : "",
+      "tags"     : "fastlane",
+      "url"      : "/tutorials/fastlane/fastlane-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "fastlane tools integration",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/fastlane/fastlane-tools-integration/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "How to configure fastlane match for Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/fastlane/how-to-configure-fastlane-match-for-bitrise/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Using the Generic File Storage",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/how-to-use-the-generic-file-storage/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Tips, tricks, tutorials",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/tutorials-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Configuring and connecting to your VPN",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/vpn-configuration/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Add custom sources to NuGet",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/xamarin/add-custom-sources-to-nuget/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploy your Xamarin app",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/xamarin/deploy-your-xamarin-app/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Xamarin",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/xamarin/index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Restore NuGet packages",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/tutorials/xamarin/restore-nuget-packages/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding a Bitbucket webhook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/webhooks/adding-a-bitbucket-webhook/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding a GitHub webhook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/webhooks/adding-a-github-webhook/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding a Gitlab webhook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/webhooks/adding-a-gitlab-webhook/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding a Gogs webhook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/webhooks/adding-a-gogs-webhook/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding a Slack webhook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/webhooks/adding-a-slack-webhook/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding a Visual Studio webhook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/webhooks/adding-a-visual-studio-webhook/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding an Assembla webhook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/webhooks/adding-assembla-webhook/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding a Deveo webhook",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/webhooks/adding-deveo-webhook/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding outgoing webhooks",
+      "category" : "",
+      "tags"     : "webhooks,  triggers",
+      "url"      : "/webhooks/adding-outgoing-webhooks/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Adding webhooks",
+      "category" : "",
+      "tags"     : "triggers, webhooks, git",
+      "url"      : "/webhooks/adding-webhooks/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Webhook troubleshooting",
+      "category" : "",
+      "tags"     : "troubleshooting, webhooks, triggers",
+      "url"      : "/webhooks/troubleshooting/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Webhooks",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/webhooks/webhooks-index/",
+      "date"     : "2021-07-15 14:40:08 +0000"
+    } 
+  
+]

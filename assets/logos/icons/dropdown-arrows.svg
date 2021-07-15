@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <path id="dropdown-arrows-a" d="M15.75,14.25 L12,18 L8.24999997,14.25 L6.74999997,15.75 L12,21 L17.25,15.75 L15.75,14.25 Z M12,5.99999997 L15.75,9.74999999 L17.25,8.24999998 L12,2.99999996 L6.74999997,8.24999998 L8.24999998,9.74999999 L12,5.99999997 Z"/>
+  </defs>
+  <use fill="#492F5C" fill-rule="evenodd" xlink:href="#dropdown-arrows-a"/>
+</svg>

@@ -1,0 +1,5048 @@
+
+
+
+
+<html lang="ja">
+  <!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>組織内のSAML SSO | Bitrise DevCenter</title>
+<meta name="generator" content="Jekyll v3.9.1" />
+<meta property="og:title" content="組織内のSAML SSO" />
+<meta property="og:locale" content="jp" />
+<meta name="description" content="組織のメンバーであれば、ご自身のSAML SSOプロバイダシステムを使ってBitriseへログイン・サインアップすることができます。SAML SSOがあれば、ご自身のBitrise組織へアクセスする際、組織はSAML SSOプロバイダのセキュリティガイドラインを適用することが可能です。" />
+<meta property="og:description" content="組織のメンバーであれば、ご自身のSAML SSOプロバイダシステムを使ってBitriseへログイン・サインアップすることができます。SAML SSOがあれば、ご自身のBitrise組織へアクセスする際、組織はSAML SSOプロバイダのセキュリティガイドラインを適用することが可能です。" />
+<link rel="canonical" href="https://devcenter.bitrise.io/jp/team-management/organizations/saml-sso-in-organizations/" />
+<meta property="og:url" content="https://devcenter.bitrise.io/jp/team-management/organizations/saml-sso-in-organizations/" />
+<meta property="og:site_name" content="Bitrise DevCenter" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-03-08T10:46:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="組織内のSAML SSO" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"https://devcenter.bitrise.io/jp/team-management/organizations/saml-sso-in-organizations/"},"url":"https://devcenter.bitrise.io/jp/team-management/organizations/saml-sso-in-organizations/","@type":"BlogPosting","description":"組織のメンバーであれば、ご自身のSAML SSOプロバイダシステムを使ってBitriseへログイン・サインアップすることができます。SAML SSOがあれば、ご自身のBitrise組織へアクセスする際、組織はSAML SSOプロバイダのセキュリティガイドラインを適用することが可能です。","headline":"組織内のSAML SSO","dateModified":"2019-03-08T10:46:00+00:00","datePublished":"2019-03-08T10:46:00+00:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <head>
+    <!-- Fresh paint -->
+    <script type="text/javascript">
+      (function(f,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,c=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};c&&d(c,"state")&&(j=JSON.parse(decodeURIComponent(d(c,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",c),history.replaceState(j.desiredHash||"",f.title,k.pathname+k.search)))}catch(n){}var l,h;window.freshpaint=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+      0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="freshpaint";e.people=e.people||[];e.toString=function(b){var a="freshpaint";"freshpaint"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove people group page alias ready".split(" ");
+      for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.4;b=f.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof FRESHPAINT_CUSTOM_LIB_URL?
+      FRESHPAINT_CUSTOM_LIB_URL:"//perfalytics.com/static/js/freshpaint.js";d=f.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.freshpaint||[]);
+      freshpaint.init("fb78fc32-b738-475e-b6e5-26f48c2ec5b1");
+      freshpaint.page();
+
+      (function () {
+          var cookies = document.cookie.split('; ').reduce(function (result, chunk) {
+            var parts = chunk.split('=')
+            result[parts[0]] = parts[1]
+            return result
+          }, {})
+
+          if (cookies['expiring_api_token'] && cookies['CSRF-TOKEN']) {
+            var request = new XMLHttpRequest();
+            request.onreadystatechange = function () {
+              if (request.readyState === 4 && request.status === 200) {
+                try {
+                  var resp = JSON.parse(request.responseText)
+
+                  if (resp.data.data_id) {
+                    freshpaint.identify(resp.data.data_id)
+                  }
+                } catch (ex) {
+                  console.log('Failed to fetch user')
+                }
+              }
+            }
+            var URL = 'https://api.bitrise.io/v0.1/me'
+            request.open('GET', URL, true);
+            request.setRequestHeader('Authorization', 'token ' + cookies['expiring_api_token'])
+            request.setRequestHeader('X-CSRF-TOKEN', cookies['CSRF-TOKEN'])
+            request.send(null);
+          }
+        })()
+    </script>
+    <!-- End Fresh Paint -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53276411-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-53276411-1');
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TZK32GR');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+      
+        組織内のSAML SSO - Bitrise Docs
+      
+    </title>
+    
+    <meta property="og:title" content="Bitrise Docs" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:url" content="https://devcenter.bitrise.io/" />
+    <meta property="og:site_name" content="Bitrise Docs" />
+    <meta name="theme-color" content="#7e57c2" />
+    
+      <meta name="google-site-verification" content="402J7rmrVzNsUK7SrR7q6LggswxvyCPME_oc4AIjMLk" />
+    
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="mask-icon" href="/favicon.svg" color="#3bc3a3" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-76x76.png" type="image/png" sizes="76x76" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" type="image/png" sizes="120x120" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon-152x152.png" type="image/png" sizes="152x152" />
+    <link rel="canonical" href="https://devcenter.bitrise.io/" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="/assets/main.css" />
+    <link rel="stylesheet" href="/assets/search.css" />
+    <link rel="stylesheet" href="/assets/lightbox.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/Bitrise_font.css">
+  </head>
+  <body class="mdc-typography">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZK32GR"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="top-bar">
+      <div class="middle-aligner">
+        <div class="subgroup">
+          <a class="logo" href="/"><img src="/assets/images/bitrise-docs-logo-white.svg"/></a>
+          <button class="burger material-icon" onclick="toggleSideBar()"></button>
+        </div>
+        <div class="search-bar">
+          <div class="input-wrapper">
+            <input type="text" id="search-input" placeholder="Search the docs" />
+            <button class="search-icon material-icon"></button>
+          </div>
+        </div>
+        <div class="lang-selector">
+            <a href="/team-management/organizations/saml-sso-in-organizations/" class= hreflang="en">EN</a>
+            <a href="/jp/team-management/organizations/saml-sso-in-organizations/" class="active" hreflang="ja">日本語</a>
+        </div>
+        <a class="source-code" href="https://github.com/bitrise-io/devcenter/" target="_blank">
+          <object type="image/svg+xml" data="/assets/logos/icons-docs/github.svg" class="source-host-logo"></object>
+          <span class="source-host-name">GitHub</span>
+        </a>
+        <div class="cta">
+          <a target="_blank" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=top_cta">
+            <button class="bitbutton">
+              <span class="sign-up">Go to Bitrise</span>
+            </button>
+          </a>
+         </div>
+       </div>
+    </header>
+    <div class="column-parent middle-aligner main-layout-wrapper">
+      <nav id="side-menu">
+        <div class="menu-wrapper">
+           
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-1" href="/jp/contributors/contributors-index/" hreflang="ja"><span>Bitriseへの貢献</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/contributors/create-your-own-step/" title="独自のStepを作成・シェアする" hreflang="ja"><span>独自のStepを作成・シェアする</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/contributors/testing-and-versioning-your-steps/" title="Testing and versioning your Steps " hreflang="ja"><span>Testing and versioning your Steps </span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/contributors/sharing-steps-with-all-bitrise-users/" title="全てのBitriseユーザーにStepを共有する" hreflang="ja"><span>全てのBitriseユーザーにStepを共有する</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/contributors/verified-steps/" title="Verified Steps" hreflang="ja"><span>Verified Steps</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/contributors/creating-your-own-bitrise-project-scanner/" title="独自のBitriseプロジェクトスキャナを作成する" hreflang="ja"><span>独自のBitriseプロジェクトスキャナを作成する</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-2" href="/jp/getting-started/index/" hreflang="ja"><span>Getting started</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/signing-up-to-bitrise/" title="Bitriseへのサインアップ" hreflang="ja"><span>Bitriseへのサインアップ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/getting-started/migrating-to-bitrise/migrating-to-bitrise-index/" hreflang="ja"><span>Migrating from Bitrise</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/migrating-to-bitrise/migrating-from-jenkins-to-bitrise/" title="Migrate from Jenkins to Bitrise" hreflang="ja"><span>Migrate from Jenkins to Bitrise</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/getting-started/connecting-to-services/connecting-to-services-index/" hreflang="ja"><span>Connecting to services</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/connecting-to-services/connecting-account-bitrise/" title="GitHub/GitLab/BitbucketアカウントをBitriseと連携させる" hreflang="ja"><span>GitHub/GitLab/BitbucketアカウントをBitriseと連携させる</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/connecting-to-services/self-hosted-gitlab/" title="自前でホストしたGitlabインスタンスの接続" hreflang="ja"><span>自前でホストしたGitlabインスタンスの接続</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/connecting-to-services/configuring-bitrise-steps-that-require-apple-developer-account-data/" title="Apple services connection and Bitrise" hreflang="ja"><span>Apple services connection and Bitrise</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/connecting-to-services/setting-up-connection-to-an-apple-service-with-api-key/" title="Connecting to Apple services with API key" hreflang="ja"><span>Connecting to Apple services with API key</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/connecting-to-services/connecting-to-an-apple-service-with-apple-id/" title="Connecting to Apple services with Apple ID" hreflang="ja"><span>Connecting to Apple services with Apple ID</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/connecting-to-services/connecting-to-an-apple-service-with-step-inputs/" title="Connecting to Apple services with Step inputs" hreflang="ja"><span>Connecting to Apple services with Step inputs</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/" title="Steps requiring Apple authentication" hreflang="ja"><span>Steps requiring Apple authentication</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/connecting-to-services/steps-requiring-apple-authentication/" title="Bitrise Steps requiring Apple authentication" hreflang="ja"><span>Bitrise Steps requiring Apple authentication</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/adding-a-new-app/" title="新しいアプリの追加" hreflang="ja"><span>新しいアプリの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/code-security/" title="コードセキュリティ" hreflang="ja"><span>コードセキュリティ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/account-security/" title="アカウントセキュリティ" hreflang="ja"><span>アカウントセキュリティ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/public-apps/" title="アプリの公開" hreflang="ja"><span>アプリの公開</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/getting-started-workflows/" title="ワークフロー" hreflang="ja"><span>ワークフロー</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/getting-started-steps/" title="ステップの開始" hreflang="ja"><span>ステップの開始</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/managing-files-on-bitrise/" title="Bitrise上のファイル管理" hreflang="ja"><span>Bitrise上のファイル管理</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/getting-started-with-ios-apps/" title="iOSアプリの開始" hreflang="ja"><span>iOSアプリの開始</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/getting-started-with-android-apps/" title="Androidアプリの開始" hreflang="ja"><span>Androidアプリの開始</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/getting-started-with-react-native-apps/" title="React Nativeアプリの開始" hreflang="ja"><span>React Nativeアプリの開始</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/getting-started-with-flutter-apps/" title="Flutter アプリの開始" hreflang="ja"><span>Flutter アプリの開始</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/getting-started-with-xamarin-apps/" title="Xamarinアプリの開始" hreflang="ja"><span>Xamarinアプリの開始</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/getting-started-with-ionic-cordova-apps/" title="Ionic/Cordovaアプリの開始" hreflang="ja"><span>Ionic/Cordovaアプリの開始</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/getting-started-with-macos-apps/" title="MacOSのアプリ開始" hreflang="ja"><span>MacOSのアプリ開始</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/getting-started-with-expo-apps/" title="Getting started with Expo apps" hreflang="ja"><span>Getting started with Expo apps</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/getting-started/bitrise-tools/" title="Bitrise tools" hreflang="ja"><span>Bitrise tools</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-3" href="/jp/infrastructure/infrastructure-index/" hreflang="ja"><span>Infrastructure</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/infrastructure/available-stacks/" title="利用可能なスタック" hreflang="ja"><span>利用可能なスタック</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/infrastructure/virtual-machines/" title="仮想マシン" hreflang="ja"><span>仮想マシン</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/infrastructure/the-environment/" title="Android/Linux/Docker 環境" hreflang="ja"><span>Android/Linux/Docker 環境</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/infrastructure/customisable-enterprise-build-platforms/" title="Customizable enterprise build platforms" hreflang="ja"><span>Customizable enterprise build platforms</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-4" href="/jp/team-management/teams-vs-organizations-index/" hreflang="ja"><span>Teams and organizations</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/deleting-bitrise-account/" title="Editing and deleting your Bitrise account" hreflang="ja"><span>Editing and deleting your Bitrise account</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/managing-personal-plan/" title="Managing your personal subscription plan" hreflang="ja"><span>Managing your personal subscription plan</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/adding-new-team-member/" title="新しいチームメンバーの追加" hreflang="ja"><span>新しいチームメンバーの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/user-roles-on-app-teams/" title="アプリチームのユーザーのロール" hreflang="ja"><span>アプリチームのユーザーのロール</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/changing-the-owner-of-an-app/" title="アプリのオーナーを変更する" hreflang="ja"><span>アプリのオーナーを変更する</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/team-management/organizations/organizations-index/" hreflang="ja"><span>Organizations</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/creating-org/" title="組織を作成する" hreflang="ja"><span>組織を作成する</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/managing-billing-sub/" title="組織の請求と購読の管理" hreflang="ja"><span>組織の請求と購読の管理</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/managing-invoices/" title="組織の請求書管理" hreflang="ja"><span>組織の請求書管理</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/members-organizations/" title="組織メンバーの管理" hreflang="ja"><span>組織メンバーの管理</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/managing-apps/" title="組織のアプリ管理" hreflang="ja"><span>組織のアプリ管理</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/org-ownership/" title="組織オーナーの変更" hreflang="ja"><span>組織オーナーの変更</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/org-url/" title="組織のURLの表示" hreflang="ja"><span>組織のURLの表示</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/saml-sso-in-organizations/" title="組織内のSAML SSO" class="current" hreflang="ja"><span>組織内のSAML SSO</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/setting-up-google-sso-for-bitrise/" title="Setting up Google SSO for Bitrise" hreflang="ja"><span>Setting up Google SSO for Bitrise</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/setting-up-ad-fs-sso-for-bitrise/" title="Setting up AD FS SAML SSO for Bitrise" hreflang="ja"><span>Setting up AD FS SAML SSO for Bitrise</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/" title="Setting up Azure AD SSO for Bitrise" hreflang="ja"><span>Setting up Azure AD SSO for Bitrise</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/" title="Setting up Idaptive SAML SSO for Bitrise" hreflang="ja"><span>Setting up Idaptive SAML SSO for Bitrise</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/setting-up-okta-sso-for-bitrise/" title="Setting up Okta SSO for Bitrise" hreflang="ja"><span>Setting up Okta SSO for Bitrise</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/setting-up-onelogin-sso-for-bitrise/" title="Setting up OneLogin SSO for Bitrise" hreflang="ja"><span>Setting up OneLogin SSO for Bitrise</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/team-management/organizations/setting-up-auth0-sso-for-bitrise/" title="Setting up Auth0 SAML SSO for Bitrise" hreflang="ja"><span>Setting up Auth0 SAML SSO for Bitrise</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-5" href="/jp/webhooks/webhooks-index/" hreflang="ja"><span>Webhooks</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/adding-webhooks/" title="webhookの追加" hreflang="ja"><span>webhookの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/adding-a-github-webhook/" title="GitHub webhookの追加" hreflang="ja"><span>GitHub webhookの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/adding-a-bitbucket-webhook/" title="Bitbucket webhookの追加" hreflang="ja"><span>Bitbucket webhookの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/adding-a-gitlab-webhook/" title="GitLab webhookの追加" hreflang="ja"><span>GitLab webhookの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/adding-a-gogs-webhook/" title="Gogs webhookの追加" hreflang="ja"><span>Gogs webhookの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/adding-a-slack-webhook/" title="Slack webhookの追加" hreflang="ja"><span>Slack webhookの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/adding-a-visual-studio-webhook/" title="Visual Studio webhookの追加 " hreflang="ja"><span>Visual Studio webhookの追加 </span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/adding-assembla-webhook/" title="Assembla webhookの追加" hreflang="ja"><span>Assembla webhookの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/adding-deveo-webhook/" title="Deveo webhookの追加" hreflang="ja"><span>Deveo webhookの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/adding-outgoing-webhooks/" title="Outgoing webhookの追加" hreflang="ja"><span>Outgoing webhookの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/webhooks/troubleshooting/" title="Webhook トラブルシューティング" hreflang="ja"><span>Webhook トラブルシューティング</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-6" href="/jp/steps-and-workflows/steps-and-workflows-index/" hreflang="ja"><span>ステップとワークフロー</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/steps-and-workflows/getting-started-steps/" title="ステップの開始" hreflang="ja"><span>ステップの開始</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/steps-and-workflows/adding-removing-steps/" title="新しいStepを追加する" hreflang="ja"><span>新しいStepを追加する</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/steps-and-workflows/step-inputs/" title="Stepの入力項目" hreflang="ja"><span>Stepの入力項目</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/steps-and-workflows/skipping-steps/" title="Stepをスキップする" hreflang="ja"><span>Stepをスキップする</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/steps-and-workflows/disable-a-step-by-condition/" title="Enabling or disabling a Step conditionally" hreflang="ja"><span>Enabling or disabling a Step conditionally</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/steps-and-workflows/getting-started-workflows/" title="ワークフロー" hreflang="ja"><span>ワークフロー</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/steps-and-workflows/default-workflows/" title="デフォルトワークフロー" hreflang="ja"><span>デフォルトワークフロー</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/steps-and-workflows/creating-workflows/" title="独自のワークフローを作成する" hreflang="ja"><span>独自のワークフローを作成する</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/steps-and-workflows/managing-workflows/" title="ワークフローの連結" hreflang="ja"><span>ワークフローの連結</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/steps-and-workflows/copying-workflows-from-one-app-to-another/" title="あるアプリから別のアプリへのワークフローのコピー" hreflang="ja"><span>あるアプリから別のアプリへのワークフローのコピー</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-7" href="/jp/builds/builds-index/" hreflang="ja"><span>ビルド</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/builds/caching/about-caching-index/" hreflang="ja"><span>キャッシュについて</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/caching/caching-cocoapods/" title="Cocoapodsのキャッシュ" hreflang="ja"><span>Cocoapodsのキャッシュ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/caching/caching-gradle/" title="Gradleのキャッシュ" hreflang="ja"><span>Gradleのキャッシュ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/caching/caching-maven/" title="Mavenのキャッシュ" hreflang="ja"><span>Mavenのキャッシュ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/caching/caching-ruby-gems/" title="Ruby Gemsのキャッシュ" hreflang="ja"><span>Ruby Gemsのキャッシュ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/caching/caching-homebrew-installers/" title="Caching Homebrew installers" hreflang="ja"><span>Caching Homebrew installers</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/caching/caching-carthage/" title="Carthageの依存をキャッシュ" hreflang="ja"><span>Carthageの依存をキャッシュ</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/builds/triggering-builds/triggering-builds-index/" hreflang="ja"><span>ビルドのトリガー</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/triggering-builds/trigger-code-push/" title="コードプッシュによるビルドのトリガー" hreflang="ja"><span>コードプッシュによるビルドのトリガー</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/triggering-builds/trigger-pull-request/" title="Pull Requestをトリガーにする" hreflang="ja"><span>Pull Requestをトリガーにする</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/triggering-builds/approving-pull-request-builds/" title="Approving Pull Request builds" hreflang="ja"><span>Approving Pull Request builds</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/triggering-builds/trigger-git-tags/" title="Gitのタグをトリガーにビルドする" hreflang="ja"><span>Gitのタグをトリガーにビルドする</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/triggering-builds/trigger-map/" title="Triggering builds with the Trigger map" hreflang="ja"><span>Triggering builds with the Trigger map</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/triggering-builds/trigger-multiple-workflows/" title="シングルトリガーで並列ビルドを開始" hreflang="ja"><span>シングルトリガーで並列ビルドを開始</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/triggering-builds/status-reporting/" title="ビルドステータスをGitホスティングサービスにレポートする" hreflang="ja"><span>ビルドステータスをGitホスティングサービスにレポートする</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/configuring-notifications/" title="Configuring notifications" hreflang="ja"><span>Configuring notifications</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/Starting-builds-manually/" title="手動でビルドを開始する" hreflang="ja"><span>手動でビルドを開始する</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/Scheduling-Builds/" title="ビルドをスケジューリングする" hreflang="ja"><span>ビルドをスケジューリングする</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/selective_builds/" title="Selective builds" hreflang="ja"><span>Selective builds</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/rolling-builds/" title="Rolling builds機能" hreflang="ja"><span>Rolling builds機能</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/build-numbering-and-app-versioning/" title="ビルドの番号付けとアプリバージョン管理 " hreflang="ja"><span>ビルドの番号付けとアプリバージョン管理 </span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/env-vars-secret-env-vars/" title="秘密と環境設定" hreflang="ja"><span>秘密と環境設定</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/sensitive-input-field/" title="公開アプリの機密インプット" hreflang="ja"><span>公開アプリの機密インプット</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/build-artifacts-online/" title="オンラインでのビルドアーティファクト" hreflang="ja"><span>オンラインでのビルドアーティファクト</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/bitrise-yml-online/" title="bitrise.ymlファイルへのオンラインアクセス" hreflang="ja"><span>bitrise.ymlファイルへのオンラインアクセス</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/setting-your-git-credentials-on-build-machines/" title="ビルドマシンでGitの認証情報を設定" hreflang="ja"><span>ビルドマシンでGitの認証情報を設定</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/available-environment-variables/" title="利用可能な環境変数" hreflang="ja"><span>利用可能な環境変数</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/build-logs/" title="ビルドログ" hreflang="ja"><span>ビルドログ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/bitrise-checks-on-github-checks/" title="GitHub ChecksでBitrise Checksを利用する" hreflang="ja"><span>GitHub ChecksでBitrise Checksを利用する</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/remote-access/" title="リモートアクセス" hreflang="ja"><span>リモートアクセス</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/builds/monitoring-your-builds-with-meercode/" title="Monitoring builds with Meercode" hreflang="ja"><span>Monitoring builds with Meercode</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-8" href="/jp/code-signing/code-signing-index/" hreflang="ja"><span>コード署名</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/code-signing/android-code-signing/android-code-signing-index/" hreflang="ja"><span>Androidコード署名手順</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/" title="Android Signステップを使ったAndroidコード署名" hreflang="ja"><span>Android Signステップを使ったAndroidコード署名</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/android-code-signing/android-code-signing-with-android-studio/" title="Android Studioを使ったAndroidコード署名" hreflang="ja"><span>Android Studioを使ったAndroidコード署名</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/android-code-signing/android-code-signing-in-gradle/" title="Gradle上でのAndroidコード署名" hreflang="ja"><span>Gradle上でのAndroidコード署名</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/xamarin-android-code-signing/xamarin-android-code-signing/" title="Xamarin Androidコード署名" hreflang="ja"><span>Xamarin Androidコード署名</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/android-code-signing/downloading-a-keystore-file/" title="keystoreファイルのダウンロード" hreflang="ja"><span>keystoreファイルのダウンロード</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/code-signing/ios-code-signing/code-signing-index/" hreflang="ja"><span>Bitrise上でのiOSコード署名</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/collecting-files-with-codesigndoc/" title="codesigndocを使ったコード署名ファイルの収集とエクスポート" hreflang="ja"><span>codesigndocを使ったコード署名ファイルの収集とエクスポート</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/ios-auto-provisioning/" title="iOSコード署名ファイルの管理 - 自動プロビジョニング" hreflang="ja"><span>iOSコード署名ファイルの管理 - 自動プロビジョニング</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/ios-manual-provisioning/" title="iOSコード署名ファイルの管理 - 手動プロビジョニング" hreflang="ja"><span>iOSコード署名ファイルの管理 - 手動プロビジョニング</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/create-signed-ipa-for-xcode/" title="Xcodeプロジェクトでの署名付きIPAの作成" hreflang="ja"><span>Xcodeプロジェクトでの署名付きIPAの作成</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/" title="Xamarinプロジェクトでの署名付きIPAの作成" hreflang="ja"><span>Xamarinプロジェクトでの署名付きIPAの作成</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/resigning-an-ipa/" title="IPAの再署名" hreflang="ja"><span>IPAの再署名</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/ionic-cordova-code-signing/" title="IonicとCordovaプロジェクトのコード署名" hreflang="ja"><span>IonicとCordovaプロジェクトのコード署名</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/protecting-your-code-signing-files/" title="コード署名ファイルの保護" hreflang="ja"><span>コード署名ファイルの保護</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/generating-code-signing-files/" title="コード署名ファイルの生成" hreflang="ja"><span>コード署名ファイルの生成</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/exporting-code-signing-files/" title="codesigndocを使わないコード署名ファイルのエクスポート" hreflang="ja"><span>codesigndocを使わないコード署名ファイルのエクスポート</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/code-signing-ios-frameworks/" title="iOSフレームワークのコード署名" hreflang="ja"><span>iOSフレームワークのコード署名</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/code-signing/ios-code-signing/ios-code-signing-troubleshooting/" title="iOSコード署名 - トラブルシューティング" hreflang="ja"><span>iOSコード署名 - トラブルシューティング</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-9" href="/jp/testing/testing-index/" hreflang="ja"><span>Testing</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/test-reports/" title="Test Reports" hreflang="ja"><span>Test Reports</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/exporting-to-test-reports-from-custom-script-steps/" title="Exporting to Test Reports from custom Script Steps" hreflang="ja"><span>Exporting to Test Reports from custom Script Steps</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/registering-a-test-device/" title="テストデバイスの登録" hreflang="ja"><span>テストデバイスの登録</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/installing-an-ipa-file-from-the-public-install-page/" title="Installing ipa files from the public install page" hreflang="ja"><span>Installing ipa files from the public install page</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/running-xcode-tests/" title="Xcodeテストの実行" hreflang="ja"><span>Xcodeテストの実行</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/run-your-tests-in-the-app-center/" title="Visual Studio App Centerでのテストの実行" hreflang="ja"><span>Visual Studio App Centerでのテストの実行</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/android-run-a-unit-test/" title="Androidのユニットテスト" hreflang="ja"><span>Androidのユニットテスト</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/device-testing-for-ios/" title="iOSのデバイステスト" hreflang="ja"><span>iOSのデバイステスト</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/device-testing-for-android/" title="Androidのデバイステスト" hreflang="ja"><span>Androidのデバイステスト</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/running-detox-tests-on-bitrise/" title="Bitrise上でDetoxテストの実行" hreflang="ja"><span>Bitrise上でDetoxテストの実行</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/testing/measuring-your-code-coverage-with-codecov/" title="Measuring your code coverage with Codecov" hreflang="ja"><span>Measuring your code coverage with Codecov</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-10" href="/jp/deploy/deployment-index/" hreflang="ja"><span>Deployment</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/deploy/android-deploy/android-deployment-index/" hreflang="ja"><span>Android deployment</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/android-deploy/deploying-android-apps/" title="Androidアプリのデプロイ" hreflang="ja"><span>Androidアプリのデプロイ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/android-deploy/deploying-apps-to-huawei-appgallery/" title="Deploying apps to Huawei AppGallery" hreflang="ja"><span>Deploying apps to Huawei AppGallery</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow/" title="単一ワークフローでの複数のフレーバーAPKの生成とデプロイ" hreflang="ja"><span>単一ワークフローでの複数のフレーバーAPKの生成とデプロイ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles/" title="Generating and deploying Android app bundles" hreflang="ja"><span>Generating and deploying Android app bundles</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/android-deploy/exporting-a-universal-apk-from-an-aab/" title="Exporting a universal APK from an AAB" hreflang="ja"><span>Exporting a universal APK from an AAB</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/deploy/ios-deploy/ios-deploy-index/" hreflang="ja"><span>iOSアプリのデプロイについて</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/" title="Bitrise.ioへiOSアプリのデプロイ" hreflang="ja"><span>Bitrise.ioへiOSアプリのデプロイ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/" title="外部テスト用アプリのデプロイ" hreflang="ja"><span>外部テスト用アプリのデプロイ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/" title="iTunes ConnectへiOSアプリのデプロイ" hreflang="ja"><span>iTunes ConnectへiOSアプリのデプロイ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/ios-deploy/deploying-an-ios-app-for-simulators/" title="シミュレータ用iOSアプリのデプロイ" hreflang="ja"><span>シミュレータ用iOSアプリのデプロイ</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/ship/" title="Ship でデプロイ" hreflang="ja"><span>Ship でデプロイ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/bitrise-app-deployment/" title="Bitrise OTA App Deployment" hreflang="ja"><span>Bitrise OTA App Deployment</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/deploy-apps-to-applivery-from-bitrise/" title="Deploying apps to Applivery" hreflang="ja"><span>Deploying apps to Applivery</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/deploy-apps-to-deploygate-from-bitrise/" title="DeployGate へアプリのデプロイ" hreflang="ja"><span>DeployGate へアプリのデプロイ</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/publish-your-app-to-appaloosa/" title="Deploying apps to Appaloosa" hreflang="ja"><span>Deploying apps to Appaloosa</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/deploy/deploy-to-testfairy-with-bitrise/" title="Deploying apps to TestFairy" hreflang="ja"><span>Deploying apps to TestFairy</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-11" href="/jp/monitoring/trace-index/" hreflang="ja"><span>Monitoring</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/monitoring/getting-started-with-trace/" title="Getting started with Trace" hreflang="ja"><span>Getting started with Trace</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/monitoring/analyzing-your-app-s-data-with-trace/" title="Analyzing your app's data with Trace" hreflang="ja"><span>Analyzing your app's data with Trace</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/monitoring/crash-reporting-with-trace/" title="Crash reporting with Trace" hreflang="ja"><span>Crash reporting with Trace</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/monitoring/trace-references/" title="Trace product references" hreflang="ja"><span>Trace product references</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-12" href="/jp/bitrise-cli/index/" hreflang="ja"><span>YAML mode & Bitrise CLI</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/installation/" title="Bitrise CLIのインストールと更新" hreflang="ja"><span>Bitrise CLIのインストールと更新</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/most-important-concepts/" title="Most important concepts" hreflang="ja"><span>Most important concepts</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/initializing-a-bitrise-project-locally/" title="Initializing a Bitrise project locally" hreflang="ja"><span>Initializing a Bitrise project locally</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/basics-of-bitrise-yml/" title="Basics of bitrise.yml" hreflang="ja"><span>Basics of bitrise.yml</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/offline-workflow-editor/" title="オフラインワークフローエディターのインストールとアップグレード" hreflang="ja"><span>オフラインワークフローエディターのインストールとアップグレード</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/customizing-bitrise-yml/" title="Customizing bitrise.yml" hreflang="ja"><span>Customizing bitrise.yml</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/workflows/" title="Workflows in YAML" hreflang="ja"><span>Workflows in YAML</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/steps/" title="Steps in YAML" hreflang="ja"><span>Steps in YAML</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/run-your-first-build/" title="最初のビルドを実行する" hreflang="ja"><span>最初のビルドを実行する</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/step-properties/" title="Step properties" hreflang="ja"><span>Step properties</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/step-inputs/" title="Step inputs" hreflang="ja"><span>Step inputs</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/step-outputs/" title="Step outputs" hreflang="ja"><span>Step outputs</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/step-timeout/" title="Setting a time limit for steps" hreflang="ja"><span>Setting a time limit for steps</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/bitrise-cli/secrets/" title="Secrets" hreflang="ja"><span>Secrets</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-13" href="/jp/tutorials/tutorials-index/" hreflang="ja"><span>Tips, tricks, tutorials</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/tutorials/docker/docker-index/" hreflang="ja"><span>Docker</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/docker/run-your-build-locally-in-docker/" title="How to run your build locally in Docker" hreflang="ja"><span>How to run your build locally in Docker</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/tutorials/fastlane/fastlane-index/" hreflang="ja"><span>Fastlane</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/fastlane/fastlane-tools-integration/" title="Fastlane tools integration" hreflang="ja"><span>Fastlane tools integration</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/fastlane/how-to-configure-fastlane-match-for-bitrise/" title="Bitrise上でのfastlane match設定方法" hreflang="ja"><span>Bitrise上でのfastlane match設定方法</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener" href="/jp/tutorials/xamarin/index/" hreflang="ja"><span>Xamarinについて</span></a>
+		  
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/xamarin/restore-nuget-packages/" title="NuGetパッケージの復元" hreflang="ja"><span>NuGetパッケージの復元</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/xamarin/add-custom-sources-to-nuget/" title="NuGetへカスタムソースの追加" hreflang="ja"><span>NuGetへカスタムソースの追加</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/xamarin/deploy-your-xamarin-app/" title="Xamarinアプリのデプロイ" hreflang="ja"><span>Xamarinアプリのデプロイ</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/creating-white-label-app-versions/" title="Creating a white label app version" hreflang="ja"><span>Creating a white label app version</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/community-created/" title="Community Created Tutorials" hreflang="ja"><span>Community Created Tutorials</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/how-to-use-the-generic-file-storage/" title="Using the Generic File Storage" hreflang="ja"><span>Using the Generic File Storage</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/download-or-replace-project-resources/" title="Downloading or replacing project resources" hreflang="ja"><span>Downloading or replacing project resources</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/vpn-configuration/" title="Configuring and connecting to your VPN" hreflang="ja"><span>Configuring and connecting to your VPN</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/auto-deploy-middleman-project/" title="Deploying your Middleman website with Bitrise" hreflang="ja"><span>Deploying your Middleman website with Bitrise</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/tutorials/build-with-fake/" title="Building with FAKE (F# Make)" hreflang="ja"><span>Building with FAKE (F# Make)</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-14" href="/jp/troubleshooting/troubleshooting-index/" hreflang="ja"><span>Troubleshooting & FAQ</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/troubleshooting/resetting-your-password/" title="Resetting your password" hreflang="ja"><span>Resetting your password</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/troubleshooting/debugging-your-build-on-your-own-machine/" title="Debugging your build on your own machine" hreflang="ja"><span>Debugging your build on your own machine</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/troubleshooting/enabling-bitrise-support-user/" title="Enabling Bitrise Support user for your app" hreflang="ja"><span>Enabling Bitrise Support user for your app</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/troubleshooting/workflow-editor-doesnt-load/" title="Workflow Editor doesn't load" hreflang="ja"><span>Workflow Editor doesn't load</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/troubleshooting/frequent-android-issues/" title="よくあるAndroid上の問題" hreflang="ja"><span>よくあるAndroid上の問題</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/troubleshooting/frequent-ios-issues/" title="よくあるiOS上の問題" hreflang="ja"><span>よくあるiOS上の問題</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/troubleshooting/known-xcode-issues/" title="Xcodeの問題点のリスト" hreflang="ja"><span>Xcodeの問題点のリスト</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/troubleshooting/trigger-doesnt-work/" title="ビルドトリガーが機能しない" hreflang="ja"><span>ビルドトリガーが機能しない</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/troubleshooting/github-pull-request-status-troubleshooting/" title="Build status indicator on GitHub/GitLab/Bitbucket does not work" hreflang="ja"><span>Build status indicator on GitHub/GitLab/Bitbucket does not work</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/troubleshooting/no-activity-summaries-found-for-test-with-danger/" title="No activity summaries found for test with Danger" hreflang="ja"><span>No activity summaries found for test with Danger</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-list-opener-15" href="/jp/api/api-index/" hreflang="ja"><span>API</span></a>
+			
+		
+		
+			
+			
+<ol class="menu-list">
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/authentication/" title="認証" hreflang="ja"><span>認証</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/response-and-pagination/" title="レスポンスとページネーション" hreflang="ja"><span>レスポンスとページネーション</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/endpoints/" title="エンドポイントとAPIのテスト" hreflang="ja"><span>エンドポイントとAPIのテスト</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/adding-and-managing-apps/" title="アプリの追加と管理" hreflang="ja"><span>アプリの追加と管理</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/build-trigger/" title="ビルドのトリガー(開始)と中断" hreflang="ja"><span>ビルドのトリガー(開始)と中断</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/incoming-and-outgoing-webhooks/" title="Incoming webhooksとOutgoing webhooks" hreflang="ja"><span>Incoming webhooksとOutgoing webhooks</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/managing-ios-code-signing-files/" title="Managing iOS code signing files" hreflang="ja"><span>Managing iOS code signing files</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/managing-ios-code-signing-files-with-bitrise-api/" title="Managing iOS code signing files" hreflang="ja"><span>Managing iOS code signing files</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/managing-files-in-generic-file-storage/" title="Managing files in Generic File Storage" hreflang="ja"><span>Managing files in Generic File Storage</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/app-status-badge/" title="App Status Image/Badge API" hreflang="ja"><span>App Status Image/Badge API</span></a>
+			
+		
+		
+	</li>
+
+	<li class="menu-item">
+		
+			
+				<a class="menu-link" href="/jp/api/managing-build-artifacts/" title="Managing build artifacts" hreflang="ja"><span>Managing build artifacts</span></a>
+			
+		
+		
+	</li>
+
+</ol>
+
+
+		
+	</li>
+
+</ol>
+
+
+        </div>
+      </nav>
+      <main class="content">
+        
+          
+            <div class="title-with-source-edit">
+              <h1>組織内のSAML SSO</h1>
+              <a class="material-icon" href="https://github.com/bitrise-io/devcenter/blob/master/_articles/jp/team-management/organizations/saml-sso-in-organizations.md" target="_blank"></a>
+            </div>
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <p>組織のメンバーであれば、ご自身のSAML SSOプロバイダシステムを使ってBitriseへログイン・サインアップすることができます。SAML SSOがあれば、ご自身のBitrise組織へアクセスする際、組織はSAML SSOプロバイダのセキュリティガイドラインを適用することが可能です。</p>
+
+<p>ここでは以下のトピックについて説明いたします：</p>
+
+<ul>
+  <li>Bitrise組織のSAML SSOのセットアップ</li>
+  <li>SAML SSOの有効化</li>
+  <li>Bitrise上でSAML SSOステータスの確認</li>
+  <li>SAML SSOの施行について</li>
+  <li>Bitriseアカウントを使ったSSO経由でのログイン</li>
+  <li>Bitriseアカウントを使わないSSO経由でのログイン</li>
+  <li>SAML SSOの無効化</li>
+</ul>
+
+<div class="message-box important">
+<div class="message-title">
+    <p>組織にSAML SSOを接続する前に</p>
+  </div>
+
+<div class="message-content">
+    <p>以下の点についてご留意ください：</p>
+
+    <ul>
+      <li>Bitriseへ接続が可能なSAML SSOプロバイダ（アイデンティティ・プロバイダ）を持っていること</li>
+      <li>Bitriseのご自身のアカウントに組織があること。組織がない場合、<a href="">作成</a>してください。SAML SSOのセットアップはBitrise上の<strong>すでに存在する組織や新しい組織</strong>と同じになります。</li>
+      <li>他の<a href="/jp/team-management/organizations/members-organizations/">組織マネジメントアクション</a>と同じで、組織オーナーだけがBitrise組織へSAML SSOのセットアップが行えます。</li>
+    </ul>
+  </div>
+</div>
+
+<h2 id="bitrise組織のsaml-ssoのセットアップ">Bitrise組織のSAML SSOのセットアップ <a href="#bitrise組織のsaml-ssoのセットアップ" class="anchor-symbol">⚓</a></h2>
+
+<p>このチュートリアルでは、組織オーナーによるSAML SSOのセットアップ方法とメンバー個人個人の組織内の接続をセットアップするために必要な組織メンバーを招待する方法を説明します。</p>
+
+<ol>
+  <li><a href="https://www.bitrise.io">bitrise.io</a>上にある組織の<code class="language-plaintext highlighter-rouge">Single Sign On</code> タブに進みます。</li>
+  <li><code class="language-plaintext highlighter-rouge">Single Sign-On URL</code>をコピーします。SAML SSOプロバイダサイトにBitriseを追加するのにこのURLが必要になります。</li>
+  <li>ご自身のSAML SSOプロバイダにログインします。</li>
+  <li>コピーしたSingle Sign-On URLを使ってBitriseを追加します。Bitrise上で必要になるSingle Sign-On（SSO）証明書をここで生成します。</li>
+  <li><code class="language-plaintext highlighter-rouge">Single Sign On</code>タブより、<code class="language-plaintext highlighter-rouge">Identity provider sign-on URL</code> と<code class="language-plaintext highlighter-rouge">Certificate</code>の欄に生成されたSSO証明書を追加します。</li>
+  <li><code class="language-plaintext highlighter-rouge">Configure SSO</code> のボタンをクリックします。</li>
+</ol>
+
+<p><img src="/img/enable-single-sign-on.jpg" alt="組織内のSAML SSO" /></p>
+
+<p>以上のステップをクリアすれば、あなたと組織のメンバーへSAML SSOがそれぞれの組織に接続が完了したことをお知らせする確認メールが送信されます。</p>
+
+<h2 id="saml-sso-の有効化">SAML SSO の有効化 <a href="#saml-sso-の有効化" class="anchor-symbol">⚓</a></h2>
+
+<p>この時点で、組織のオーナーがSAML SSOのセットアップが完了できたら、組織のメンバー全員はSAML SSO経由で組織にログインする前に、SAML SSOを有効化しなければなりません。</p>
+
+<ol>
+  <li>
+    <p>全ての組織メンバーへBitriseが<strong>確認メール</strong>を送ります。このEメールには<code class="language-plaintext highlighter-rouge">Sign In via SSO</code> ボタンとURLが含まれています。組織のメンバーは<code class="language-plaintext highlighter-rouge">Sign In via SSO</code>ボタンをクリックするか、URLを使ってBitriseへのサインインを行ってください。</p>
+
+    <p><img src="/img/saml-step-up-enabling-missing.jpg" alt="組織内のSAML SSO" /></p>
+
+    <p>このEメールでは組織オーナーのEメールアドレスも表示されます（オーナーに連絡を取る場合使用してください）。</p>
+  </li>
+  <li>
+    <p>SAML SSOプロバイダサイトへページが切り替わるので、そこでBitrise組織と連携しているご自身のメールアドレスを入力します。</p>
+
+    <p><strong>SAML SSOプロバイダサイトにおいて、Bitriseで使用していない異なる（特定の組織と関係のない）メールアドレス</strong>を入力された場合、以下のようにエラーメッセージが表示されます。<strong>組織の正確なメールアドレス</strong>を使ってログインしてください。</p>
+
+    <p><img src="/img/no-connected-sso-for-this-email-address.jpg" alt="組織内のSAML SSO" /></p>
+  </li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Allow "organization name" to sign you in</code> ページへ遷移されます。</p>
+  </li>
+</ol>
+
+<ul>
+  <li>いったん<code class="language-plaintext highlighter-rouge">Authorize</code>をクリックすると、<strong>SAML SSO経由でこのアカウントのみの認証が可能になる</strong>のでご注意ください。<br />
+Bitriseアカウントのサインイン過程を操作するのにその組織を信頼するのであれば、<code class="language-plaintext highlighter-rouge">Authorize</code> をクリックしてください。</li>
+  <li>招待メールが信頼していないソースから届いた場合は、<code class="language-plaintext highlighter-rouge">Don't allow</code> をクリックしてください。</li>
+</ul>
+
+<p>以上のステップが完了すると、Bitrise Dashboardへ進むことができます。</p>
+
+<h2 id="bitrise上でsaml-ssoステータスの確認">Bitrise上でSAML SSOステータスの確認 <a href="#bitrise上でsaml-ssoステータスの確認" class="anchor-symbol">⚓</a></h2>
+
+<p>この時点で組織オーナーは組織のSAML SSOのセットアップが完了しました。全ての組織メンバー（オーナーを含む）がSAML SSOの有効化を完了すると、メンバー全員がSAML SSOステータスの確認ができるようになります。組織オーナーのみがアクセスできる他の機能もありますので、ここでは組織メンバーと組織オーナーそれぞれが何を閲覧できるのか説明していきます。</p>
+
+<h3 id="組織オーナー">組織オーナー <a href="#組織オーナー" class="anchor-symbol">⚓</a></h3>
+
+<ol>
+  <li>組織のプロフィールページへ進みます。</li>
+  <li>
+    <p>左側のメニューより<code class="language-plaintext highlighter-rouge">Single Sign On</code> をクリックします。この<code class="language-plaintext highlighter-rouge">Single Sign On</code> タブは<strong>組織オーナーのみが利用可能</strong>です。</p>
+
+    <p><code class="language-plaintext highlighter-rouge">Review Users</code> と <code class="language-plaintext highlighter-rouge">Disable SSO</code> ボタンを確認することができます：</p>
+
+    <p><img src="https://app.forestry.io/sites/yv69yaruhkt48w/body-media//img/disable-saml.jpg" alt="/img/disable-saml.jpg" /></p>
+
+    <p><code class="language-plaintext highlighter-rouge">Disable SSO</code> は全ての組織メンバーのSAML SSOを無効化します。いったん無効化されると、組織メンバーはいつもの方法でサインインができるようになります。組織メンバー個人はご自身のSAML SSOプロバイダサイトでのみ無効化されるのでご注意ください！<br />
+<code class="language-plaintext highlighter-rouge">Single Sign On</code> タブから<code class="language-plaintext highlighter-rouge">People</code> タブへと進むと<code class="language-plaintext highlighter-rouge">Review Users</code>へ進むことができ、そこでは組織メンバーのSAML SSOステータスを確認することができます。</p>
+
+    <p><img src="/img/peopletab-org-owner.png" alt="組織内のSAML SSO" /></p>
+  </li>
+</ol>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SAML SSO IS ENABLED</code>：SAML SSO経由のログインが可能です。</li>
+  <li><code class="language-plaintext highlighter-rouge">SAML SSO IS DISABLED</code>：<code class="language-plaintext highlighter-rouge">Sign in via SSO</code> ボタン経由のSSO接続の有効化が完了していません。有効化する場合、組織メンバーはBitriseから送られてくる確認メールの指示に従ってください。</li>
+</ul>
+
+<h3 id="組織メンバー">組織メンバー <a href="#組織メンバー" class="anchor-symbol">⚓</a></h3>
+
+<ol>
+  <li>組織のプロフィールページへ進みます。</li>
+  <li>左側のメニューより<code class="language-plaintext highlighter-rouge">People</code>をクリックします。</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Members</code>の下にあるご自身の（もしくは他の組織メンバーの）SAML SSOステータスを確認してください。</p>
+
+    <p><img src="/img/people-org-members.jpg" alt="組織内のSAML SSO" /></p>
+  </li>
+</ol>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SAML SSO IS ENABLED</code>：SAML SSO経由のログインが可能です。</li>
+  <li><code class="language-plaintext highlighter-rouge">SAML SSO IS DISABLED</code>：<code class="language-plaintext highlighter-rouge">Sign in via SSO</code> ボタン経由のSSO接続の有効化が完了していません。有効化する場合、組織メンバーはBitriseから送られてくる確認メールの指示に従ってください。</li>
+</ul>
+
+<h2 id="saml-ssoの施行について">SAML SSOの施行について <a href="#saml-ssoの施行について" class="anchor-symbol">⚓</a></h2>
+
+<p>組織でSAML SSOを施行することによって、セキュリティレベルを上げることができます：Bitrise組織にご自身のセキュリティガイドラインを施行する事が可能です（例：パスワードフォーマットの要件、二要素認証など）。これはSAML SSOを組織へログイン・サインアップができる唯一の方法にすることができます。SAMLが施行された組織へ新たな組織メンバーを招待する際、新メンバーはその組織に加わるためにまずSAML SSOコネクションを有効にしなければなりません。</p>
+
+<h3 id="組織上でのsaml-ssoの施行">組織上でのSAML SSOの施行 <a href="#組織上でのsaml-ssoの施行" class="anchor-symbol">⚓</a></h3>
+
+<p>一旦組織メンバー全員が組織に関連するSAML SSOを有効にすると、オーナーはシンプルなトグル操作だけで組織のSAML SSOを施行することができます。</p>
+
+<ol>
+  <li>組織の<code class="language-plaintext highlighter-rouge">Single Sign On</code> タブへ進みます。</li>
+  <li>右側へトグルを動かしSAML SSOを施行します。</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Save Changes</code>をクリックします。</p>
+
+    <p><img src="/img/enforce-saml-sso-toggle.png" alt="組織内のSAML SSO" /></p>
+  </li>
+</ol>
+
+<h3 id="組織のsaml-ssoの施行ができない場合">組織のSAML SSOの施行ができない場合 <a href="#組織のsaml-ssoの施行ができない場合" class="anchor-symbol">⚓</a></h3>
+
+<p>オーナーが組織のSAML SSOを施行できない場合があります。それは、組織メンバーがまだメンバー自身のSAML SSOを有効化していないと発生します。</p>
+
+<ul>
+  <li>メンバー個人のパートにおいてSAML SSO有効化ができない場合：オーナーは組織からそのメンバーを外すことができるので、残りの組織の施行プロセスを完了してください。</li>
+  <li>メンバーが他の組織においてSAML SSOを有効化しようとした場合：オーナーはそのメンバーにログインURLを送ることができるので、正しい組織にSAML SSOを有効化するよう指示に従ってください。</li>
+</ul>
+
+<p><img src="/img/cant-enforce-saml-sso.png" alt="組織内のSAML SSO" /></p>
+
+<h2 id="bitriseアカウントを使ったsso経由でのログイン">Bitriseアカウントを使ったSSO経由でのログイン <a href="#bitriseアカウントを使ったsso経由でのログイン" class="anchor-symbol">⚓</a></h2>
+
+<p>SAML SSOコネクションがすでに組織へ追加されていて、Bitriseからログアウトしている場合、簡単にあなたの組織へログインすることができます。</p>
+
+<ol>
+  <li>
+    <p>Bitrise<a href="https://app.bitrise.io/users/sign_in">ログインページ</a>より<code class="language-plaintext highlighter-rouge">Login via SSO</code>をクリックします。</p>
+
+    <p><img src="/img/login-via-sso.jpg" alt="組織内のSAML SSO" /></p>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">Initiate Single Sign-on page</code>に切り替わります。</li>
+  <li>組織名を入力します。</li>
+  <li><code class="language-plaintext highlighter-rouge">Continue to log in</code>をクリックすると、ご自身のSSOプロバイダページに切り替わります。</li>
+  <li>組織と関連のあるEメールアドレスを入力して、SAML SSOプロバイダの説明に沿ってください。</li>
+</ol>
+
+<div class="message-box info">
+<div class="message-title">
+    <p>有効期限の切れたSAML SSO証明書</p>
+  </div>
+
+<div class="message-content">
+    <p>SAML SSO証明書の有効期限が切れていてSAML SSO経由でBitriseにログインができない場合、Bitriseサポートチームにご一報ください。喜んでお手伝いいたします。</p>
+  </div>
+</div>
+
+<h2 id="bitriseアカウントを使わないsso経由でのログイン">Bitriseアカウントを使わないSSO経由でのログイン <a href="#bitriseアカウントを使わないsso経由でのログイン" class="anchor-symbol">⚓</a></h2>
+
+<p>まだBitriseアカウントを持っておらず、組織オーナーがEメールにて組織への招待をしてきた場合、簡単にBitriseへのサインアップ、そして招待された組織へ入ることができます。Bitriseの<code class="language-plaintext highlighter-rouge">Sign In via SSO</code> Eメールは組織に特化しているので、数回のクリックでBitrise組織にアクセスすることができます！</p>
+
+<ol>
+  <li>メールボックスよりBitriseからの招待メール (letsconnect@bitrise.io)を確認します。<br />
+（組織オーナーからURLが送られてきた場合、新タブでリンクを開いてください。<code class="language-plaintext highlighter-rouge">Almost there...</code>ページへ遷移されるので、指示に従ってください。その後、Bitriseより確認メールが送信されますので、メールに添付されているリンクをクリックしてサインアップを完了してください。）</li>
+  <li><code class="language-plaintext highlighter-rouge">Sign In via SSO</code> をクリックするか、もしくは新タブにて与えられたURLをコピーして接続を承認します。そうするとご自身のSAML SSOプロバイダサイトにページが切り替えられます。</li>
+  <li>ご自身のメールアドレスを入力します。（招待メールを受け取った同じメールアドレスにしてください。）</li>
+  <li>SAML SSOプロバイダの説明に沿ってください。</li>
+  <li>Bitriseの<code class="language-plaintext highlighter-rouge">Almost there...</code> ページに切り替わります。</li>
+  <li>Bitriseで使用したいユーザーネームを入力します。</li>
+  <li><code class="language-plaintext highlighter-rouge">Finish Signing Up</code> をクリックし、サインアップを完了します。</li>
+</ol>
+
+<p>以上のステップが完了すると、Bitrise Dashboardへ進むことができます。</p>
+
+<h2 id="saml-ssoの無効化">SAML SSOの無効化 <a href="#saml-ssoの無効化" class="anchor-symbol">⚓</a></h2>
+
+<p>組織オーナーは<code class="language-plaintext highlighter-rouge">Single Sign On</code> タブをクリックすることにより既成のSAML SSOを無効化することができます。IdPから誰かを削除する場合、Bitriseからも同じようにその組織メンバーの削除を行ってください。</p>
+
+<h3 id="組織のsaml-ssoの無効化">組織のSAML SSOの無効化 <a href="#組織のsaml-ssoの無効化" class="anchor-symbol">⚓</a></h3>
+
+<ol>
+  <li>組織の<code class="language-plaintext highlighter-rouge">Single Sign On</code> タブへ進みます。</li>
+  <li>
+    <p><code class="language-plaintext highlighter-rouge">Disable SSO</code> をクリックします。</p>
+
+    <p>確認のポップアップが出現するので、そこからアクションの承認・キャンセルを行います。<code class="language-plaintext highlighter-rouge">Disable SSO</code>ボタンをクリックすると、<strong>全ての組織メンバーのSAML SSOが無効化されます</strong>のでご留意ください。完了すると、組織メンバーは普段使いのBitrise証明書を通じてログインすることができます。</p>
+  </li>
+</ol>
+
+<p><img src="/img/disable-sso.png" alt="組織内のSAML SSO" /></p>
+
+<p>Bitriseより組織のSAML SSOが無効化されたことを確認するEメール（letsconnect@bitrise.io）が送信されます。</p>
+
+<p><img src="/img/disabled-sso-email.png" alt="組織内のSAML SSO" /></p>
+
+<h3 id="組織メンバーのsaml-ssoの無効化">組織メンバーのSAML SSOの無効化 <a href="#組織メンバーのsaml-ssoの無効化" class="anchor-symbol">⚓</a></h3>
+
+<p>組織メンバーの名前の隣りにある<code class="language-plaintext highlighter-rouge">x</code>をクリックすると、組織からそのメンバーを削除することができます。ただ、そのメンバーのSAML SSOはまだ無効化されていないのでご注意ください。</p>
+
+<ol>
+  <li>SAML SSOプロバイダサイトに進みます。</li>
+  <li>組織メンバーを無効化します。これをし忘れた場合、その組織メンバーはIDP接続を使うことにより再認証できてしまうのでご注意ください。</li>
+</ol>
+
+<p><img src="/img/disbale-sso-enabled-status.png" alt="組織内のSAML SSO" /></p>
+
+        
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+
+
+
+      </main>
+      
+      
+        <nav id="my-toc">
+          <ul class="side-toc">
+  <li class="toc-entry toc-h2"><a href="#bitrise組織のsaml-ssoのセットアップ">Bitrise組織のSAML SSOのセットアップ</a></li>
+  <li class="toc-entry toc-h2"><a href="#saml-sso-の有効化">SAML SSO の有効化</a></li>
+  <li class="toc-entry toc-h2"><a href="#bitrise上でsaml-ssoステータスの確認">Bitrise上でSAML SSOステータスの確認</a>
+    <ul>
+      <li class="toc-entry toc-h3"><a href="#組織オーナー">組織オーナー</a></li>
+      <li class="toc-entry toc-h3"><a href="#組織メンバー">組織メンバー</a></li>
+    </ul>
+  </li>
+  <li class="toc-entry toc-h2"><a href="#saml-ssoの施行について">SAML SSOの施行について</a>
+    <ul>
+      <li class="toc-entry toc-h3"><a href="#組織上でのsaml-ssoの施行">組織上でのSAML SSOの施行</a></li>
+      <li class="toc-entry toc-h3"><a href="#組織のsaml-ssoの施行ができない場合">組織のSAML SSOの施行ができない場合</a></li>
+    </ul>
+  </li>
+  <li class="toc-entry toc-h2"><a href="#bitriseアカウントを使ったsso経由でのログイン">Bitriseアカウントを使ったSSO経由でのログイン</a></li>
+  <li class="toc-entry toc-h2"><a href="#bitriseアカウントを使わないsso経由でのログイン">Bitriseアカウントを使わないSSO経由でのログイン</a></li>
+  <li class="toc-entry toc-h2"><a href="#saml-ssoの無効化">SAML SSOの無効化</a>
+    <ul>
+      <li class="toc-entry toc-h3"><a href="#組織のsaml-ssoの無効化">組織のSAML SSOの無効化</a></li>
+      <li class="toc-entry toc-h3"><a href="#組織メンバーのsaml-ssoの無効化">組織メンバーのSAML SSOの無効化</a></li>
+    </ul>
+  </li>
+</ul>
+
+        </nav>
+      
+    </div>
+    <footer>
+      <div class="middle-aligner">
+        <div class="meta">
+          Copyright © 2014 - 2021 Bitrise Ltd. <br />
+          <em>Powered by <a href="https://jekyllrb.com/">Jekyll</a></em>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-53276411-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/assets/javascripts/image-linkify.js"></script>  
+  <script src="/assets/javascripts/list-collapse.js"></script>
+  <script src="/assets/javascripts/search-input.js"></script>
+  <script src="/assets/javascripts/side-menu.js"></script>
+  <script src="/assets/javascripts/code-collapse.js"></script>
+  <script src="/assets/javascripts/lightbox.js"></script>
+</html>

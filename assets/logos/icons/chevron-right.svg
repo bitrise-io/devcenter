@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <polygon id="chevron-right-a" points="8.471 16.778 12.714 12.536 8.471 8.293 9.886 6.879 15.542 12.536 9.886 18.192"/>
+  </defs>
+  <use fill="#492F5C" fill-rule="evenodd" xlink:href="#chevron-right-a"/>
+</svg>

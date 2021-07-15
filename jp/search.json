@@ -1,0 +1,2131 @@
+[
+  
+    {
+      "title"    : "API",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/api/api-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "App Status Image/Badge API",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/api/app-status-badge/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "認証",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/api/authentication/",
+      "date"     : "2019-03-29 16:55:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ビルドのトリガー(開始)と中断",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/api/build-trigger/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "レスポンスとページネーション",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/api/response-and-pagination/",
+      "date"     : "2019-03-29 16:58:12 +0000"
+    } ,
+  
+    {
+      "title"    : "アプリの追加と管理",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/api/adding-and-managing-apps/",
+      "date"     : "2019-04-05 13:32:19 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing iOS code signing files",
+      "category" : "",
+      "tags"     : "code-signing, ios, api, files",
+      "url"      : "/jp/api/managing-ios-code-signing-files/",
+      "date"     : "2019-04-08 14:11:49 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing iOS code signing files",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/api/managing-ios-code-signing-files-with-bitrise-api/",
+      "date"     : "2019-04-09 06:36:21 +0000"
+    } ,
+  
+    {
+      "title"    : "Basics of bitrise.yml",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/basics-of-bitrise-yml/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Customizing bitrise.yml",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/customizing-bitrise-yml/",
+      "date"     : "2018-10-31 09:27:26 +0000"
+    } ,
+  
+    {
+      "title"    : "エンドポイントとAPIのテスト",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/api/endpoints/",
+      "date"     : "2019-03-29 16:53:56 +0000"
+    } ,
+  
+    {
+      "title"    : "Incoming webhooksとOutgoing webhooks",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/api/incoming-and-outgoing-webhooks/",
+      "date"     : "2019-04-09 15:10:42 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing build artifacts",
+      "category" : "",
+      "tags"     : "files, builds, api, artifacts",
+      "url"      : "/jp/api/managing-build-artifacts/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing files in Generic File Storage",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/api/managing-files-in-generic-file-storage/",
+      "date"     : "2019-04-09 08:17:24 +0000"
+    } ,
+  
+    {
+      "title"    : "YAML mode &amp; Bitrise CLI",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Initializing a Bitrise project locally",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/initializing-a-bitrise-project-locally/",
+      "date"     : "2018-12-13 11:37:13 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise CLIのインストールと更新",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/installation/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Most important concepts",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/most-important-concepts/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "オフラインワークフローエディターのインストールとアップグレード",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/offline-workflow-editor/",
+      "date"     : "2018-11-29 13:46:40 +0000"
+    } ,
+  
+    {
+      "title"    : "最初のビルドを実行する",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/run-your-first-build/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Secrets",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/secrets/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Step inputs",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/step-inputs/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Step outputs",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/step-outputs/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Step properties",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/step-properties/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting a time limit for steps",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/step-timeout/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Steps in YAML",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/steps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Workflows in YAML",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/bitrise-cli/workflows/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ビルドをスケジューリングする",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/Scheduling-Builds/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "手動でビルドを開始する",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/Starting-builds-manually/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "利用可能な環境変数",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/available-environment-variables/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "GitHub ChecksでBitrise Checksを利用する",
+      "category" : "",
+      "tags"     : "builds, troubleshooting",
+      "url"      : "/jp/builds/bitrise-checks-on-github-checks/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "bitrise.ymlファイルへのオンラインアクセス",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/bitrise-yml-online/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "オンラインでのビルドアーティファクト",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/build-artifacts-online/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ビルドログ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/build-logs/",
+      "date"     : "2018-10-31 10:43:57 +0000"
+    } ,
+  
+    {
+      "title"    : "ビルドの番号付けとアプリバージョン管理 ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/build-numbering-and-app-versioning/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ビルド",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/builds-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "キャッシュについて",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/caching/about-caching-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Carthageの依存をキャッシュ",
+      "category" : "",
+      "tags"     : "caching, carthage, ios, builds",
+      "url"      : "/jp/builds/caching/caching-carthage/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Cocoapodsのキャッシュ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/caching/caching-cocoapods/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Gradleのキャッシュ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/caching/caching-gradle/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Caching Homebrew installers",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/caching/caching-homebrew-installers/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Mavenのキャッシュ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/caching/caching-maven/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Ruby Gemsのキャッシュ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/caching/caching-ruby-gems/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "通知設定",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/configuring-notifications/",
+      "date"     : "2019-03-22 11:09:35 +0000"
+    } ,
+  
+    {
+      "title"    : "秘密と環境設定",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/env-vars-secret-env-vars/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Monitoring builds with Meercode",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/monitoring-your-builds-with-meercode/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "リモートアクセス",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/remote-access/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Rolling builds機能",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/rolling-builds/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Selective builds",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/selective_builds/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "公開アプリの機密インプット",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/sensitive-input-field/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ビルドマシンでGitの認証情報を設定",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/setting-your-git-credentials-on-build-machines/",
+      "date"     : "2019-02-21 15:27:32 +0000"
+    } ,
+  
+    {
+      "title"    : "Approving Pull Request builds",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/triggering-builds/approving-pull-request-builds/",
+      "date"     : "2019-04-29 12:49:35 +0000"
+    } ,
+  
+    {
+      "title"    : "Skipping a given commit or pull request",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/triggering-builds/skipping-a-given-commit-or-pull-request/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ビルドステータスをGitホスティングサービスにレポートする",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/triggering-builds/status-reporting/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "コードプッシュによるビルドのトリガー",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/triggering-builds/trigger-code-push/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Gitのタグをトリガーにビルドする",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/triggering-builds/trigger-git-tags/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "トリガーマップを使ったビルドのトリガー",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/triggering-builds/trigger-map/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "シングルトリガーで並列ビルドを開始",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/triggering-builds/trigger-multiple-workflows/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Pull Requestをトリガーにする",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/triggering-builds/trigger-pull-request/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ビルドのトリガー",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/builds/triggering-builds/triggering-builds-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Changelog",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/changelog/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Gradle上でのAndroidコード署名",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/android-code-signing/android-code-signing-in-gradle/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Androidコード署名手順",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/android-code-signing/android-code-signing-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Android Signステップを使ったAndroidコード署名",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Android Studioを使ったAndroidコード署名",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/android-code-signing/android-code-signing-with-android-studio/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "keystoreファイルのダウンロード",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/android-code-signing/downloading-a-keystore-file/",
+      "date"     : "2018-12-11 10:30:01 +0000"
+    } ,
+  
+    {
+      "title"    : "コード署名",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/code-signing-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise上でのiOSコード署名",
+      "category" : "",
+      "tags"     : "ios, code-signing",
+      "url"      : "/jp/code-signing/ios-code-signing/code-signing-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "iOSフレームワークのコード署名",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/code-signing-ios-frameworks/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "codesigndocを使ったコード署名ファイルの収集とエクスポート",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/collecting-files-with-codesigndoc/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Xamarinプロジェクトでの署名付きIPAの作成",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/create-signed-ipa-for-xamarin/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Xcodeプロジェクトでの署名付きIPAの作成",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/create-signed-ipa-for-xcode/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "codesigndocを使わないコード署名ファイルのエクスポート",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/exporting-code-signing-files/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "コード署名ファイルの生成",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/generating-code-signing-files/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "IonicとCordovaプロジェクトのコード署名",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/ionic-cordova-code-signing/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "iOSコード署名ファイルの管理 - 自動プロビジョニング",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/ios-auto-provisioning/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "iOSコード署名 - トラブルシューティング",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/ios-code-signing-troubleshooting/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "iOSコード署名ファイルの管理 - 手動プロビジョニング",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/ios-manual-provisioning/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "コード署名ファイルの保護",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/protecting-your-code-signing-files/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "IPAの再署名",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/ios-code-signing/resigning-an-ipa/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Xamarin Androidコード署名",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/code-signing/xamarin-android-code-signing/xamarin-android-code-signing/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitriseへの貢献",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/contributors/contributors-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "独自のStepを作成・シェアする",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/contributors/create-your-own-step/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "独自のBitriseプロジェクトスキャナを作成する",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/contributors/creating-your-own-bitrise-project-scanner/",
+      "date"     : "2018-12-13 11:31:09 +0000"
+    } ,
+  
+    {
+      "title"    : "全てのBitriseユーザーにStepを共有する",
+      "category" : "",
+      "tags"     : "steps,  contributors,  bitrise.yml, workflows",
+      "url"      : "/jp/contributors/sharing-steps-with-all-bitrise-users/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Testing and versioning your Steps ",
+      "category" : "",
+      "tags"     : "steps, cli, contributors, workflows, testing",
+      "url"      : "/jp/contributors/testing-and-versioning-your-steps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Verified Steps",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/contributors/verified-steps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Android deployment",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/android-deploy/android-deployment-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Androidアプリのデプロイ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/android-deploy/deploying-android-apps/",
+      "date"     : "2018-10-26 13:00:41 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying to Huawei AppGallery",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/android-deploy/deploying-apps-to-huawei-appgallery/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Exporting a universal APK from an AAB",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/android-deploy/exporting-a-universal-apk-from-an-aab/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "単一ワークフローでの複数のフレーバーAPKの生成とデプロイ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/android-deploy/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow/",
+      "date"     : "2018-10-26 12:56:08 +0000"
+    } ,
+  
+    {
+      "title"    : "Generating and deploying Android app bundles ",
+      "category" : "",
+      "tags"     : "android, gradle",
+      "url"      : "/jp/deploy/android-deploy/generating-and-deploying-android-app-bundles/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise OTA App Deployment",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/bitrise-app-deployment/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying apps to Applivery",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/deploy-apps-to-applivery-from-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise から DeployGate へアプリをデプロイする",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/deploy-apps-to-deploygate-from-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploy to TestFairy with Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/deploy-to-testfairy-with-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Deployment",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/deployment-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise.ioへiOSアプリのデプロイ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/ios-deploy/deploying-an-ios-app-to-bitrise-io/",
+      "date"     : "2018-10-26 12:37:47 +0000"
+    } ,
+  
+    {
+      "title"    : "外部テスト用アプリのデプロイ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/ios-deploy/deploying-an-ios-app-for-external-testing/",
+      "date"     : "2018-10-26 12:39:01 +0000"
+    } ,
+  
+    {
+      "title"    : "iTunes ConnectへiOSアプリのデプロイ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/ios-deploy/deploying-an-ios-app-to-itunes-connect/",
+      "date"     : "2018-10-26 12:41:22 +0000"
+    } ,
+  
+    {
+      "title"    : "iOSアプリのデプロイについて",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/ios-deploy/ios-deploy-index/",
+      "date"     : "2018-10-26 12:49:32 +0000"
+    } ,
+  
+    {
+      "title"    : "シミュレータ用iOSアプリのデプロイ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/ios-deploy/deploying-an-ios-app-for-simulators/",
+      "date"     : "2018-11-10 14:34:02 +0000"
+    } ,
+  
+    {
+      "title"    : "Publish your app to Appaloosa",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/publish-your-app-to-appaloosa/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Ship でデプロイ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/deploy/ship/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Can I add projects with submodules or with private repo dependencies?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/adding-projects-with-submodules/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Can I run an Android x86 Emulator on Bitrise?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/android-x86-emulator/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "FAQ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/faq-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "How can I grant Bitrise access to a Bitbucket team?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/grant-access-to-bitbucket-team/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "How to grant Bitrise access to a GitHub Organization?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/grant-access-to-github-organization/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "How can I git checkout from a detached head state?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/how-can-i-git-checkout-from-a-detached-head-state/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "アプリケーションの所有者の変更はどのようにするの?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/how-to-change-the-owner-of-an-app/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "SSHキーペアの生成方法を教えてください。",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/how-to-generate-ssh-keypair/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Why can&#39;t I see my GitHub organization / repository on the Add New App page?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/i-cant-see-my-github-organization-repository-on-the-add-new-app-page/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Invitations FAQ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/invitation-faq/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "リポジトリにコードをプッシュしたのにビルドが実行されないのはなぜですか。",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/no-builds-are-triggered-automatically/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "組織についてのFAQ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/organization-faq/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Should I commit my dependencies into my repository?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/should-i-commit-my-dependencies-into-my-repository/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Why does my build take longer on Bitrise than on my machine?",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/faq/why-my-build-takes-longer-on-bitrise-than-on-my-mac/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "アカウントセキュリティ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/account-security/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "新しいアプリの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/adding-a-new-app/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "CLI から新しいアプリを追加する",
+      "category" : "",
+      "tags"     : "cli, getting-started",
+      "url"      : "/jp/getting-started/adding-an-app-from-a-cli/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise tools",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/bitrise-tools/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "コードセキュリティ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/code-security/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Steps requiring Apple authentication",
+      "category" : "",
+      "tags"     : "apple, builds, code-signing, security",
+      "url"      : "/jp/getting-started/connecting-to-services/bitrise-steps-and-their-authentication-methods/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Apple services connection and Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/connecting-to-services/configuring-bitrise-steps-that-require-apple-developer-account-data/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "GitHub/GitLab/BitbucketアカウントをBitriseと連携させる",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/connecting-to-services/connecting-account-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Connecting to Apple services with Apple ID",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/connecting-to-services/connecting-to-an-apple-service-with-apple-id/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Connecting to Apple services with Step inputs",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/connecting-to-services/connecting-to-an-apple-service-with-step-inputs/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Connecting to services",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/connecting-to-services/connecting-to-services-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "自前でホストしたGitlabインスタンスの接続",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/connecting-to-services/self-hosted-gitlab/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Connecting to Apple services with API key",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/connecting-to-services/setting-up-connection-to-an-apple-service-with-api-key/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise Steps requiring Apple authentication",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/connecting-to-services/steps-requiring-apple-authentication/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ステップの開始",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/getting-started-steps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Androidアプリの開始",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/getting-started-with-android-apps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with Expo apps",
+      "category" : "",
+      "tags"     : "getting-started, testing, deploy, code-signing",
+      "url"      : "/jp/getting-started/getting-started-with-expo-apps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "iOSアプリの開始",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/getting-started-with-ios-apps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Xamarinアプリの開始",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/getting-started-with-xamarin-apps/",
+      "date"     : "2018-10-19 11:49:28 +0000"
+    } ,
+  
+    {
+      "title"    : "MacOSのアプリ開始",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/getting-started-with-macos-apps/",
+      "date"     : "2018-11-16 11:51:09 +0000"
+    } ,
+  
+    {
+      "title"    : "Ionic/Cordovaアプリの開始",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/getting-started-with-ionic-cordova-apps/",
+      "date"     : "2018-11-16 14:33:48 +0000"
+    } ,
+  
+    {
+      "title"    : "Flutterアプリの開始",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/getting-started-with-flutter-apps/",
+      "date"     : "2019-03-08 15:17:45 +0000"
+    } ,
+  
+    {
+      "title"    : "React Nativeアプリの開始",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/getting-started-with-react-native-apps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ワークフロー",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/getting-started-workflows/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise上のファイル管理",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/managing-files-on-bitrise/",
+      "date"     : "2018-12-03 10:05:49 +0000"
+    } ,
+  
+    {
+      "title"    : "Migrate from Jenkins to Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/migrating-to-bitrise/migrating-from-jenkins-to-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Migrating from Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/migrating-to-bitrise/migrating-to-bitrise-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "アプリの公開",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/public-apps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitriseへのサインアップ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/getting-started/signing-up-to-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitriseとは何ですか？",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "利用可能なスタック",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/infrastructure/available-stacks/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Customizable enterprise build platforms",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/infrastructure/customisable-enterprise-build-platforms/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Infrastructure",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/infrastructure/infrastructure-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Stack update and removal policy ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/infrastructure/stack-update-and-removal-policy/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Android/Linux/Docker 環境",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/infrastructure/the-environment/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "仮想マシン",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/infrastructure/virtual-machines/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Analyzing your app&#39;s performance with Trace",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/monitoring/analyzing-your-app-s-data-with-trace/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Crash reporting with Trace",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/monitoring/crash-reporting-with-trace/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Getting started with Trace",
+      "category" : "",
+      "tags"     : "trace, add-ons, devops, monitoring, deploy, ios",
+      "url"      : "/jp/monitoring/getting-started-with-trace/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Monitoring your deployed app with Trace",
+      "category" : "",
+      "tags"     : "trace, add-ons, devops, monitoring, deploy, ios",
+      "url"      : "/jp/monitoring/trace-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Trace product references",
+      "category" : "",
+      "tags"     : "trace, add-ons, devops, monitoring, deploy, ios",
+      "url"      : "/jp/monitoring/trace-references/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "新しいStepを追加する",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/adding-removing-steps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "あるアプリから別のアプリへのワークフローのコピー",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/copying-workflows-from-one-app-to-another/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "独自のワークフローを作成する",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/creating-workflows/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "デフォルトワークフロー",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/default-workflows/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Enabling or disabling a Step conditionally",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/disable-a-step-by-condition/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ステップの開始",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/getting-started-steps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ワークフロー",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/getting-started-workflows/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ワークフローの連結",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/managing-workflows/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Stepをスキップする",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/skipping-steps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Stepの入力項目",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/step-inputs/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ステップとワークフロー",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/steps-and-workflows/steps-and-workflows-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "新しいチームメンバーの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/adding-new-team-member/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "アプリのオーナーを変更する",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/changing-the-owner-of-an-app/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Credit-based Hobby plan: FAQ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/credit-based-hobby-plan-faq/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Editing and deleting your Bitrise account",
+      "category" : "",
+      "tags"     : "teams, orgs, apps",
+      "url"      : "/jp/team-management/deleting-bitrise-account/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Managing your personal subscription plan",
+      "category" : "",
+      "tags"     : "teams, orgs, apps",
+      "url"      : "/jp/team-management/managing-personal-plan/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "組織を作成する",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/creating-org/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "組織のアプリ管理",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/managing-apps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "組織の請求と購読の管理",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/managing-billing-sub/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "組織の請求書管理",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/managing-invoices/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "組織メンバーの管理",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/members-organizations/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "組織オーナーの変更",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/org-ownership/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "組織のURLの表示",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/org-url/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Organizations",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/organizations-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "組織内のSAML SSO",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/saml-sso-in-organizations/",
+      "date"     : "2019-03-08 10:46:00 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up AD FS SAML SSO for Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/setting-up-ad-fs-sso-for-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Auth0 SAML SSO for Bitrise",
+      "category" : "",
+      "tags"     : "teams, org, security, sso",
+      "url"      : "/jp/team-management/organizations/setting-up-auth0-sso-for-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Google SSO for Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/setting-up-google-sso-for-bitrise/",
+      "date"     : "2019-03-28 11:39:54 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Azure AD SSO for Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/",
+      "date"     : "2019-04-17 11:49:36 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Idaptive SAML SSO for Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Okta SSO for Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/setting-up-okta-sso-for-bitrise/",
+      "date"     : "2019-04-24 07:55:01 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up OneLogin SAML SSO for Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/setting-up-onelogin-sso-for-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Setting up Ping Identity SSO for Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Teams plan trial FAQ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/teams-plan-faq/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "アプリチームのユーザーのロール",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/user-roles-on-app-teams/",
+      "date"     : "2019-03-01 15:05:34 +0000"
+    } ,
+  
+    {
+      "title"    : "Teams and organizations",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/team-management/teams-vs-organizations-index/",
+      "date"     : "2019-03-27 15:48:36 +0000"
+    } ,
+  
+    {
+      "title"    : "Androidのユニットテスト",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/android-run-a-unit-test/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Androidのデバイステスト",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/device-testing-for-android/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "iOSのデバイステスト",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/device-testing-for-ios/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Exporting to Test Reports from custom Script Steps",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/exporting-to-test-reports-from-custom-script-steps/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Installing ipa files from the public install page",
+      "category" : "",
+      "tags"     : "testing, ios",
+      "url"      : "/jp/testing/installing-an-ipa-file-from-the-public-install-page/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Measuring your code coverage with Codecov",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/measuring-your-code-coverage-with-codecov/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "テストデバイスの登録",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/registering-a-test-device/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Visual Studio App Centerでのテストの実行",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/run-your-tests-in-the-app-center/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Androidに関するヒント",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/android-tips-and-tricks/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Attach any file as an Artifact to the Build",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/attach-any-file-to-build/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "指定されたステップが失敗してもそのビルドを失敗としてマークしないでください(そのステップのエラーを無視してください)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/dont-mark-build-failed-if-step-fails/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Using Env Vars as a value of an Env Var",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/embedding-env-vars/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Exposing env vars and using them in another step",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/expose-environment-variable/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Increasing the size limit of Env Vars",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/increasing-the-size-limit-of-env-vars/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Installing any additional tools",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/install-additional-tools/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Optimize your build times",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/optimize-your-build-times/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Debugging your build on your own machine",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/debugging-your-build-on-your-own-machine/",
+      "date"     : "2018-11-19 15:33:56 +0000"
+    } ,
+  
+    {
+      "title"    : "Screen recording of Android UI tests with Script Steps",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/screen-recording-of-android-ui-tests-with-script-steps/",
+      "date"     : "2019-01-30 13:47:29 +0000"
+    } ,
+  
+    {
+      "title"    : "Xcodeテストの実行",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/running-xcode-tests/",
+      "date"     : "2019-02-22 15:33:24 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise上でDetoxテストの実行",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/running-detox-tests-on-bitrise/",
+      "date"     : "2019-03-01 12:50:46 +0000"
+    } ,
+  
+    {
+      "title"    : "Test Reports",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/test-reports/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Testing",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/testing/testing-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Screen recording your UI tests with Appium",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/screen-recording-your-ui-tests-with-appium/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "複数のアプリ間でのワークフローの共有・保存",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/sharing-and-storing-workflows-among-multiple-apps/",
+      "date"     : "2019-03-01 14:39:55 +0000"
+    } ,
+  
+    {
+      "title"    : "Skip a Build (skip ci)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/skip-a-build/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Tips and tricks",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/tips-and-tricks-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Use bitrise.yml from repository",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/use-bitrise-yml-from-repository/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Xcodeアーカイブ：書き出し",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tips-and-tricks/xcodebuild-export-options/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Enabling Bitrise Support user for your app",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/enabling-bitrise-support-user/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "よくあるAndroid上の問題",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/frequent-android-issues/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "よくあるiOS上の問題",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/frequent-ios-issues/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Build status indicator on GitHub/GitLab/Bitbucket does not work",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/github-pull-request-status-troubleshooting/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Xcodeの問題点のリスト",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/known-xcode-issues/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "No activity summaries found for test with Danger",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/no-activity-summaries-found-for-test-with-danger/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Resetting your password",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/resetting-your-password/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "ビルドトリガーが機能しない",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/trigger-doesnt-work/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Troubleshooting",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/troubleshooting-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Workflow Editor doesn&#39;t load",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/troubleshooting/workflow-editor-doesnt-load/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Deploying your Middleman website with Bitrise",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/auto-deploy-middleman-project/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Building with FAKE (F# Make)",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/build-with-fake/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Community Created Tutorials",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/community-created/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Creating a white label app version",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/creating-white-label-app-versions/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Docker",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/docker/docker-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "How to run your build locally in Docker",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/docker/run-your-build-locally-in-docker/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Use your own Docker image",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/docker/use-your-own-docker-image/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Downloading or replacing project resources",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/download-or-replace-project-resources/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Efficient CI/CD Workflow for iOS development",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/efficient-continuous-integration-and-deployment-workflow-for-ios/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Fastlane",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/fastlane/fastlane-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "fastlane tools integration",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/fastlane/fastlane-tools-integration/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitrise上でのfastlane match設定方法",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/fastlane/how-to-configure-fastlane-match-for-bitrise/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Using the Generic File Storage",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/how-to-use-the-generic-file-storage/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Tutorials",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/tutorials-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Configuring and connecting to your VPN",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/vpn-configuration/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "NuGetへカスタムソースの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/xamarin/add-custom-sources-to-nuget/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Xamarinアプリのデプロイ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/xamarin/deploy-your-xamarin-app/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Xamarinについて",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/xamarin/index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "NuGetパッケージの復元",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/tutorials/xamarin/restore-nuget-packages/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Bitbucket webhookの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/adding-a-bitbucket-webhook/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "GitHub webhookの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/adding-a-github-webhook/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "GitLab webhookの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/adding-a-gitlab-webhook/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Gogs webhookの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/adding-a-gogs-webhook/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Slack webhookの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/adding-a-slack-webhook/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Visual Studio webhookの追加 ",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/adding-a-visual-studio-webhook/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Assembla webhookの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/adding-assembla-webhook/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Deveo webhookの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/adding-deveo-webhook/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Outgoing webhookの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/adding-outgoing-webhooks/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "webhookの追加",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/adding-webhooks/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Webhook トラブルシューティング",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/troubleshooting/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } ,
+  
+    {
+      "title"    : "Webhooks",
+      "category" : "",
+      "tags"     : "",
+      "url"      : "/jp/webhooks/webhooks-index/",
+      "date"     : "2021-07-15 14:40:28 +0000"
+    } 
+  
+]

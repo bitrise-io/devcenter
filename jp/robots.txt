@@ -1,0 +1,1 @@
+Sitemap: https://devcenter.bitrise.io/jp/sitemap.xml
