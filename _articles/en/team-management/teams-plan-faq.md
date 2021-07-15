@@ -67,10 +67,6 @@ No, running builds will never be aborted. You can always finish a running build.
 
 On the Teams plan trial, you can have as many apps as you want.
 
-## How much build time do I have?
-
-You have a limit of 90 minutes for each build.
-
 ## Do the different machine types have different credit costs?
 
 Yes. Check out the following table to see the different machine types and their credit cost:
