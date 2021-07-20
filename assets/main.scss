@@ -673,10 +673,6 @@ main.content {
 		font-size: 1.7rem;
 	  }
 
-	&:not(:last-child) {
-		margin-right: 20vw;
-	}
-
 	.index-container {
 		display: flex;
 		flex: 1 1 auto;
