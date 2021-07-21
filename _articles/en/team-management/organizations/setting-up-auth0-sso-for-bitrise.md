@@ -40,12 +40,12 @@ You first create a regular web application for Bitrise on Auth0, enable it, then
 ### Creating Bitrise as a web application on Auth0
 
 1. Log into [Auth0](https://auth0.com) as an admin.
-2. Click **Applications** on the left menu bar then click the **+ Create Application** button on the right hand side of the **Applications** page.![](/img/authzero_createapp1.png)![](/img/applications.jpg)
-3. On the **Create application** window, type Bitrise in the **Name** field. In the **Choose application type** select **Regular Web Applications**, and click the **Create** button.![](/img/authzero_addappname2.png)![](/img/choose-app-type.jpg)
-4. You are landing on your newly created Bitrise app’s **Quick Start** page. Click the **Addons** tab. Toggle the **SAML2 WEB APP**’s switch to the right. This will take to to the **Addon: SAML2 WEB APP** page automatically.![](/img/authzero_addon4.png)![](/img/addonstab.jpg)
-5. Copy the **Assertion Consumer Service URL (ACS URL)** from Bitrise and paste it into the **Application Callback URL** field on the **Settings** tab of the **Addon: SAML2 WEB APP** page. Scroll down to the bottom of the **Addon: SAML2 WEB APP** page and hit **ENABLE**.![](/img/authzero_settingsapplicationurl6.png)![](/img/authzero_savesettingstab7.png)
-   ![](/img/addonsurl.jpg)![](/img/clickenable.jpg)
-6. Go back to the **Addons** page where you can see the switch turned on.![](/img/authzero_samlappenabled8.png)![](/img/switchturnedon.jpg)
+2. Click **Applications** on the left menu bar then click the **+ Create Application** button on the right hand side of the **Applications** page.![](/img/authzero_createapp1.png)
+3. On the **Create application** window, type Bitrise in the **Name** field. In the **Choose application type** select **Regular Web Applications**, and click the **Create** button.![](/img/authzero_addappname2.png)
+4. You are landing on your newly created Bitrise app’s **Quick Start** page. Click the **Addons** tab. Toggle the **SAML2 WEB APP**’s switch to the right. This will take to to the **Addon: SAML2 WEB APP** page automatically.![](/img/authzero_addon4.png)
+5. Copy the **Assertion Consumer Service URL (ACS URL)** from Bitrise and paste it into the **Application Callback URL** field on the **Settings** tab of the **Addon: SAML2 WEB APP** page. Scroll down to the bottom of the **Addon: SAML2 WEB APP** page and hit **ENABLE**.![](/img/authzero_settingsapplicationurl6.png)
+   ![](/img/addonsurl.jpg)
+6. Go back to the **Addons** page where you can see the switch turned on.![](/img/authzero_samlappenabled8.png)
 7. Continue with [retrieving SAML SSO information from Auth0](/team-management/organizations/setting-up-auth0-sso-for-bitrise/#retrieving-saml-sso-information-from-auth0) to populate the required fields on the **Single Sign On** page of Bitrise.
 
 ### Retrieving SAML SSO information from Auth0
