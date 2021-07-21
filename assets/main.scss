@@ -673,6 +673,10 @@ main.content {
 		font-size: 1.7rem;
 	  }
 
+ 	&:not(:last-child) {
+		margin-right: 20vw;
+	}
+
 	.index-container {
 		display: flex;
 		flex: 1 1 auto;
@@ -1580,8 +1584,11 @@ footer {
 	main.content {
 		width: 90%;
 		margin-left: auto;
-    	margin-right: auto;
     	padding: 8rem 2rem 0 2rem;
+    
+    &:not(:last-child) {
+      margin-right: auto;
+    }
 
 	 .index-container {
 		 flex-direction: column;
