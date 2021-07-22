@@ -12,12 +12,6 @@ Here is how you can benefit from integrating fastlane into Bitrise.
 * Our **Fastlane Match** Step takes care of code signing your project by cloning your private certificate/profile repository and registering the certificates and profiles in the keychain.
 * On Bitrise you can run separate lanes for separate branches automatically. For example, you can run a lane for every code push onto the master branch to update screenshots and metadata on the App Store and to release the distribution version. You can run a separate lane for the develop branch to run your automated tests and deploy your test releases for your QA team. You can simply clone the Workflow multiple times, specify the lane to run for the given Workflow in a Workflow Specific Environment Variable, and use the [Triggers](/builds/triggering-builds/triggering-builds-index/) feature to define which Workflow should be selected for this branch / tag / pull request.
 
-{% include message_box.html type="info" title="Before you start:" content="Note that two-factor authentication is mandatory for all Apple Developer Portal accounts. If, during your build, Bitrise needs to access your Apple Developer Portal account, it will have to go through 2FA. This applies even if you use _fastlane_. To make this work, [connect your Apple Developer Account to Bitrise](/getting-started/connecting-to-services/configuring-bitrise-steps-that-require-apple-developer-account-data/). This allows Bitrise to reuse your authentication sessions for 30 days, so you do not have to manually go through 2FA on every single occasion.
-
-If a `Gemfile` exists in your `work_dir` directory, _fastlane_ will be used by calling `bundle install` then `bundle exec`.
-
-`Fastfile` is your configuration file that can be run with _fastlane_. Make sure you have it inside your `./fastlane` directory."%}
-
 ## Setting up fastlane on Bitrise
 
 Running _fastlane_ on Bitrise is as simple as adding one Step to your Workflow and setting some options. Let’s see how!
