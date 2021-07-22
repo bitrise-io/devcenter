@@ -60,22 +60,21 @@ Once you have enabled Bitrise as a web application on Auth0, it’s time to grab
 
 ### Setting up a mapping rule for your Bitrise app’s Client ID
 
-Bitrise authenticates SAML SSO users via email address so before you’d test SAML SSO, make sure you create a new mapping rule on Auth0. This way you map Auth0 Client ID to email for successful SAML authentication on Bitrise. 
+Bitrise authenticates SAML SSO users via email address so before you’d test SAML SSO, make sure you create a new mapping rule on Auth0. This way you map Auth0 Client ID to email for successful SAML authentication on Bitrise.
 
 1. Click the **Auth Pipeline** on the left menu bar. Click **Rules**.
 2. Click **+ Create** to set up a new mapping rule.
-3. On the **Pick a rules template** page, click **<> Empty rule**. 
+3. On the **Pick a rules template** page, click **<> Empty rule**.
 4. Add the following codeblock to the **Script** box: You will need your new Bitrise app’s Client ID which you can get on the **Applications**' page.
 
-    function mapSamlAttributes(user, context, callback) {
-     if (context.clientID === '{your app's clientID'}')
-       context.samlConfiguration.mappings = {
-         "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier": "email"
-       }; 
-     }
-     callback(null, user, context);
-    }
-
+       function mapSamlAttributes(user, context, callback) {
+        if (context.clientID === '{your app's clientID'}')
+          context.samlConfiguration.mappings = {
+            "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier": "email"
+          }; 
+        }
+        callback(null, user, context);
+       }
 5. Click **Save changes**.
 
 SAML SSO is now set up on your Bitrise Organization.
