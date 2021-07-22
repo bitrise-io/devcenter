@@ -76,9 +76,7 @@ Bitrise authenticates SAML SSO users via email address so before you’d test SA
      callback(null, user, context);
     }
 
-5\. Click **Save changes**.
-
-## 
+5. Click **Save changes**.
 
 SAML SSO is now set up on your Bitrise Organization.
 
