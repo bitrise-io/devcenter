@@ -24,6 +24,8 @@ Setting up an app that is in a self-hosted GitLab repository is very simple: Bit
 
 {% include message_box.html type="warning" title="Organizations only!" content="Only Organizations can use privately hosted GitLab instances on Bitrise. If you are not on an Organization plan, you should not follow this guide."%}
 
+{% include message_box.html type="warning" title="Public address of the instance" content="Your self-hosted GitLab instance must have a publicly resolvable IP address, otherwise Bitrise won't be able to connect to it."%}
+
  1. Log in to your GitLab instance with **root** privileges.
     If you connect to Bitrise **without root privileges**, your Organization's other team members will **not have access to the repository on the GitLab instance**.
  2. Go to the admin area by clicking the little wrench icon on the top menu bar.
