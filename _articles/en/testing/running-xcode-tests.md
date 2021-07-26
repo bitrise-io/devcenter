@@ -63,7 +63,7 @@ From Xcode 13 and above the **Should retry test on failure? (Not available in Xc
 
 ## Test Repetitions
 
-[Xcode’s test repetition modes](https://developer.apple.com/videos/play/wwdc2021/10296/ "https://developer.apple.com/videos/play/wwdc2021/10296/") are available with the [Xcode Test for iOS Step](https://www.bitrise.io/integrations/steps/xcode-test "https://www.bitrise.io/integrations/steps/xcode-test") on stacks running Xcode 13 and above on Bitrise. With test repetitions, you can run any type of tests multiple times in various ways such as retry on failure, until failure and until max repetitions.
+[Xcode’s test repetition modes](https://developer.apple.com/videos/play/wwdc2021/10296/) are available with the [Xcode Test for iOS Step](https://www.bitrise.io/integrations/steps/xcode-test) on stacks running Xcode 13 and above on Bitrise. With test repetitions, you can run any type of tests multiple times in various ways such as retry on failure, until failure and until max repetitions.
 
 The **Xcode Test for iOS** Step’s **Test Repetitions Mode (Available in Xcode 13+)** input offers the following options:
 
