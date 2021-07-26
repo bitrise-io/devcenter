@@ -1,4 +1,10 @@
 ---
+- title: Running Xcode Tests
+  modified: 2021-07-26 00:00:00 +0200
+  changelog: How to use test repetitions with the Xcode Test for iOS Step has been
+    added to the doc.
+  type: update
+  url: "/testing/running-xcode-tests/"
 - title: Connecting self-hosted GitLab instances
   modified: 2021-07-23 16:26:45 +0200
   changelog: Added a warning about the IP addressing requirements for self-hosted
