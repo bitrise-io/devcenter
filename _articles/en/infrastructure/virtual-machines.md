@@ -67,23 +67,24 @@ Our virtual machines have different amounts of free space to use, depending on t
 
 | Stack Name | Filesystem | Size (GB) | Free (GB) |
 | --- | --- | --- | --- |
-| linuxandroidlts | /dev/loop0 | 160 | 113 |
+| linuxandroidlts | /dev/loop0 | 160 | 104 |
 | linuxandroidlts | /dev/sda1(bitrise) | 194 | 28 |
-| linuxandroid | /dev/loop0 | 160 | 130 |
+| linuxandroid | /dev/loop0 | 160 | 112 |
 | linuxandroid | /dev/sda1(bitrise) | 194 | 28 |
-| vs4mac-beta | /dev/disk1s5 | 200 | 50 |
-| vs4mac-pre | /dev/disk1s1 | 200 | 32 |
-| vs4mac-stable | /dev/disk1s5 | 200 | 51 |
-| xcode-10.1.x | /dev/disk0s2 | 199 | 61 |
-| xcode-10.2.x | /dev/disk1s1 | 200 | 61 |
-| xcode-10.3.x | /dev/disk1s1 | 200 | 60 |
-| xcode-11.0.x | /dev/disk1s1 | 200 | 50 |
-| xcode-11.1.x | /dev/disk1s1 | 200 | 48 |
-| xcode-11.2.x | /dev/disk1s1 | 200 | 23 |
-| xcode-11.3.x | /dev/disk1s1 | 200 | 25 |
-| xcode-11.4.x | /dev/disk1s5 | 200 | 50 |
-| xcode-9.4.x | /dev/disk0s2 | 199 | 55 |
-| xcode-edge | /dev/disk1s5 | 200 | 59 |
+| vs4mac-beta | /dev/disk1s5 | 200 | 43 |
+| vs4mac-pre | /dev/disk1s5 | 200 | 65 |
+| vs4mac-stable | /dev/disk1s5s1 | 200 | 43 |
+| xcode-10.3.x | /dev/disk1s1 | 200 | 96 |
+| xcode-11.7.x | /dev/disk1s5 | 200 | 54 |
+| xcode-11.6.x | /dev/disk1s5 | 200 | 62 |
+| xcode-12.0.x | /dev/disk1s5 | 200 | 70 |
+| xcode-12.1.x | /dev/disk1s5 | 200 | 57 |
+| xcode-12.2.x | /dev/disk1s5 | 200 | 60 |
+| xcode-12.3.x | /dev/disk1s5 | 200 | 35 |
+| xcode-12.4.x | /dev/disk1s5 | 200 | 53 |
+| xcode-12.5.x | /dev/disk1s5s1 | 200 | 39 |
+| xcode-13.0.x | /dev/disk1s5s1 | 200 | 119 |
+| xcode-edge | /dev/disk1s5s1 | 200 | 39 |
 
 ### Freeing up disk space
 

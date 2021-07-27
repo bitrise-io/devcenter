@@ -42,22 +42,25 @@ Bitrise上でXcodeテストを実行するには、ご自身のプロジェク�
 
 {% include message_box.html type="warning" title="`xcpretty`アウトプットツールでは並列テストのサポートを行っておりません。プロジェクト内に並列テストが有効化されている場合、ステップのDebugインプットグループに進み、`Output tool`のインプット値を`xcodebuild`にセットしてください。"%}
 
-### コードカバレッジファイルの生成
+## Rerunning failed tests (Not available in Xcode 13+)
 
-デフォルトでは、`Xcode Test for iOS`ステップはコードカバレッジファイルの生成を行いません。もしそれが必要な場合、簡単に変更ができます：`Generate code coverage files?`を`yes`とセットするだけです。
+The **Should retry test on failure? (Not available in Xcode 13+)** input in the **Debug** section of the **Xcode Test for iOS** Step allows you to automatically rerun ALL your tests, not just the failed ones. If you set this input to `yes`, the Step will run `xcodebuild` one more time in the case of test failure.
 
-これは２つの追加のフラッグを`xcodebuild`コマンドにセットします：
+From Xcode 13 and above the **Should retry test on failure? (Not available in Xcode 13+)** feature is not available anymore. We recommend you use **Test Repetitions Mode (Available in Xcode 13+)** input with the `retry_on_failure` option selected. This allows you to rerun only the failed test/s instead of running all your tests. You can find this test repetition feature with our **Xcode Test for iOS** Step from version 3.0.0 and above.
 
-    xcodebuild GCC_INSTRUMENT_PROGRAM_FLOW_ARCS=YES GCC_GENERATE_TEST_COVERAGE_FILES=YES
+## Test Repetitions
 
-ビルドがうまく実行されたら、コードカバレッジファイルは結果の中に含まれるようになります。
+[Xcode’s test repetition modes](https://developer.apple.com/videos/play/wwdc2021/10296/) are available with the [Xcode Test for iOS Step](https://www.bitrise.io/integrations/steps/xcode-test) on stacks running Xcode 13 and above on Bitrise. With test repetitions, you can run any type of tests multiple times in various ways such as retry on failure, until failure and until max repetitions.
 
-### UIテストアーティファクトのエクスポート
+The **Xcode Test for iOS** Step’s **Test Repetitions Mode (Available in Xcode 13+)** input offers the following options:
 
-You can export the attachments of your UITest into the `BITRISE_DEPLOY_DIR` directory. These attachments include screenshots taken during the UI test, as well as any other artifacts that might have been generated. They are exported as a compressed zip file.
+* `none`: The tests won’t repeat.
+* `until_failure`: Repeats a test until the test fails or until the maximum repetition. The default number of test runs is three.
+* `retry_on_failure`: Failed tests run until they succeed or until the repetition number you specify. The default number of test repetitions is three.
+* `up_until_maximum_repetitions`: Reruns all tests until maximum test repetition is reached regardless of the test outcomes.
 
-By default, the `Xcode Test for iOS` Step does not export artifacts of the UITest. If you want to export them, set the `Export UITest Artifacts` input of the `Xcode Test for iOS` Step to `true`.
+Please note that these options are only available from **Xcode Test for iOS** version 3.0.0 and above.
 
-UIテストの添付物を`BITRISE_DEPLOY_DIR` ディレクトリにエクスポートすることができます。その添付物はUIテスト中に撮影されたスクリーンショットや、生成されたかもしれない他のアーティファクトも含みます。それらは圧縮されたzipファイルとしてエクスポートされます。
+With the **Maximum Test Repetitions (Available in Xcode 13+)** input you can specify the maximum number of test repetitions. Please note that you have to add a greater number than one if the **Test Repetition Mode (Available in Xcode 13+)** input is set to other than `none`.
 
-デフォルトでは、`Xcode Test for iOS`ステップはUIテストのアーティファクトはエクスポートしません。エクスポートしたいのであれば、`Xcode Test for iOS`ステップの`Export UITest Artifacts`インプットを`True`にセットしてください。
+Enable the **Relaunch Tests for Each Repetition (Available in Xcode 13+)** input to launch tests in a completely new process for each repetition.
