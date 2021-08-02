@@ -9,6 +9,8 @@ menu:
 ---
 ## What is DeployGate?
 
+{% include video.html embed_url="https://www.youtube.com/embed/L2nBxNjVFcA" %}
+
 [**DeployGate**](https://deploygate.com?locale=en) is a mobile app distribution platform for iOS and Android, delivering your in-development iOS/Android apps to your dev team, members, employees, QA testing team in your organization or testers outside of your company.
 
 DeployGate has many features to accelerate your app development cycle including QA testing and app improvement with beta tester's feedbacks.
