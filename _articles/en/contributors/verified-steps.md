@@ -18,6 +18,8 @@ menu:
 ---
 ## What are Verified Steps?
 
+{% include video.html embed_url="https://www.youtube.com/embed/mp2iyvJq__Q" %}
+
 A Step contains the code that performs a specific build task. Bitrise has over 300 Steps in its [Step Library (StepLib)](https://github.com/bitrise-io/bitrise-steplib) which third party companies or open source teams can enrich with Steps based on their services/tools. This means they have full power to roll out updates to the Step while Bitrise maintains an overlaying control to ensure service quality and security.
 
 A Verified Step means that the owner of a service or tool or an open source team guarantees secure, maintained, consistent, and high-quality performance for any Bitrise user. Our official Bitrise Steps are maintained by us, whereas our Community Steps are maintained by the community. It’s easy to decide which type a Step falls into on our GUI.
