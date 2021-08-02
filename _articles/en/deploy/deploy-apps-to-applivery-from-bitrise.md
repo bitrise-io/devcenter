@@ -9,6 +9,7 @@ tag:
 description: Applivery is a mobile app distribution platform for iOS and Android that
   provides a powerful mobile app management and distribution system to simplify app
   delivery for both testers and employees, with a focus on an easy-to-use experience.
+summary: ''
 menu:
   deploy-main:
     weight: 8
@@ -29,20 +30,21 @@ Some of the features are:
 
 Combined with Bitrise, you can cover the entire development life cycle, from testing and building to delivery and feedback.
 
+{% include video.html embed_url="https://www.youtube.com/embed/r6B1Kgf_Shk" %}
+
 ![App life cycle with Applivery and Bitrise](/img/tutorials/deploy/applivery/fig1.png)
 
 ## Deploying your app to Applivery
 
 1. Add the **Applivery iOS Deploy** or the **Applivery Android Deploy** Step to your Workflow. Make sure you add the Step after the Steps that build your app.
 
-	![Applivery Workflow Step](/img/tutorials/deploy/applivery/tutorial1.png)
-
-1. Get your Applivery App Token to link your Bitrise app with your Applivery app.
+   ![Applivery Workflow Step](/img/tutorials/deploy/applivery/tutorial1.png)
+2. Get your Applivery App Token to link your Bitrise app with your Applivery app.
    [Read more about how to get your App Token](https://www.applivery.com/docs/api/authentication/).
-2. Open your app on Bitrise and click the **Workflows** tab to open the Workflow Editor.
-3. Go to the **Secrets** tab.
-4. Click **Add New** and type `APPLIVERY_APP_TOKEN` in the key input field.
-5. Paste your Applivery App Token in the value input field and click **Save**.
+3. Open your app on Bitrise and click the **Workflows** tab to open the Workflow Editor.
+4. Go to the **Secrets** tab.
+5. Click **Add New** and type `APPLIVERY_APP_TOKEN` in the key input field.
+6. Paste your Applivery App Token in the value input field and click **Save**.
 
 ![Configuring Applivery App Token](/img/tutorials/deploy/applivery/tutorial2.png)
 

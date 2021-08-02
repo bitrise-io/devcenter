@@ -7,6 +7,8 @@ menu:
     weight: 11
 
 ---
+{% include video.html embed_url="https://www.youtube.com/embed/ts-t1ZzeGdU" %}
+
 Would you like to **beta test** and **deploy** your app to 1 or thousands of users?
 [**Appaloosa**](http://appaloosa.io) helps you distribute your mobile apps privately,
 collect feedback and analyse your deployment's efficiency. [Check it out!](http://appaloosa.io)
