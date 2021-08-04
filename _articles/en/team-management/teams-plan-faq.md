@@ -53,15 +53,29 @@ After that, you'll need to provide payment details. Once the first payment is au
 
 ## Will I lose my unused credits if I switch to a different plan?
 
-If you had some unused credits from the previous subscription, don't worry: these roll over and you can use them in the first month of the new subscription!
+It depends on whether you upgrade to a higher credit tier or downgrade to a lower credit tier.
+
+If you upgrade to a higher tier before the end of your current billing cycle, the upgrade happens immediately and a new billing cycle starts right away. When you pay for the new credit tier, we calculate the cost of the time remaining from your previous billing cycle and subtract it from your first charge. For example, if your previous subscription fee was a 100 USD every 30 days and you decide to upgrade to a higher tier with exactly 15 days remaining in the last billing cycle, you’ll be charged the price of the new subscription minus 50 USD when upgrading.
+
+When downgrading to a lower credit tier, it’s very simple: the downgrade happens at the end of the current billing cycle. Until then, you can use all your remaining credits.
 
 ## How do I use my credits?
 
 Just trigger a build! Each build will use a certain amount of credits per minute, depending on the [type of stack](/team-management/teams-plan-faq/#do-the-different-machine-types-have-different-credit-costs) you use.
 
+## What happens if I run out of credits?
+
+On a trial of the Teams plan, running out of credits means your trial ends. To keep building, subscribe for the full plan!
+
+In Pay-As-You-Go mode, you can keep running builds and we’re counting the Pay-As-You-Go credits you use up. This incurs additional costs on top of your monthly or annual subscription fee: the cost of running builds in Pay-As-You-Go mode is 1.5 times per credit compared to a regular build. You are billed for this fee separately each month, even if you are on annual subscription. Your monthly Pay-As-You-Go limit is half of the credit amount of your monthly bundle. If you exceed this limit, you won’t be able to run builds any more, though running builds will never be aborted.
+
+For example, if you receive 100 credits each month, and each credit costs 1 USD, your monthly fee is 100 USD. Once you use up all 100 credits, you are switched to Pay-As-You-Go mode. In this mode, you can use up 50 more credits, but each credit costs 1.5 USD so if you reach your Pay-As-You-Go limit, your additional Pay-As-You-Go fee will be 75 USD. If, however, your Pay-As-You-Go fee is only 5 USD or less, you won’t be billed.
+
+If you often go into Pay-As-You-Go mode, we recommend upgrading to a higher credit tier!
+
 ## Will a build be aborted if I run out of credits?
 
-No, running builds will never be aborted. You can always finish a running build.
+No, running builds will never be aborted. You can always finish a running build, even if you exceed your Pay-As-You-Go credit limit.
 
 ## How many apps can I have?
 
