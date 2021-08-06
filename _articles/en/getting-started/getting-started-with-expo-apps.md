@@ -74,7 +74,7 @@ If you use the **Expo Eject** Step, let’s see which fields you have to fill ou
 
 The **Expo Eject** Step can be followed by any platform-specific Step, for example, build, sign, or test. For example, you could use the **Xcode Archive & Export for iOS** Step for iOS.
 
-{% include message_box.html type="info" title="Publishing to Expo" content="The **Deploy to Bitrise.io** Step does not use Expo commands. This Step publishes artifacts to Bitrise and is not specific to a particular platform. The artifacts deployed are available on the **APPS & ARTIFACTS** tab on the **Build**’s page of your app and are also available by API. An artifact can be an ipa/APK, a file, a log, test results, or any element from the build.
+{% include message_box.html type="info" title="Publishing to Expo" content="The **Deploy to Bitrise.io** Step does not use Expo commands. This Step publishes artifacts to Bitrise and is not specific to a particular platform. The artifacts deployed are available on the **APPS & ARTIFACTS** tab on the **Build**’s page of your app and are also available by API. An artifact can be an .ipa, .apk, .aab file, a log, test results, or any element from the build.
 
 **Deploy to Bitrise.io** Step doesn't publish to [expo.io](https://docs.expo.io/workflow/publishing/). If it is needed, set the **Run expo publish after eject?** input of the **Eject Expo** Step to `yes`. Be aware that in that case you have to provide your username and password for your Expo account to publish to [expo.io.](http://expo.io/)"%}
 
@@ -107,7 +107,7 @@ Let’s see how to fill them out!
 3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
 4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click Save metadata.
 
-   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on keystore file, click [here](https://developer.android.com/studio/publish/app-signing). With this information added to your **Code Signing** tab, our **Sign APK** step (by default included in your Android **deploy** workflow) will take care of signing your APK so that it’s ready for distribution!
+   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on keystore file, click [here](https://developer.android.com/studio/publish/app-signing). With this information added to your **Code Signing** tab, our **Sign APK** step (by default included in your Android **deploy** workflow) will take care of signing your AAB or APK so that it’s ready for distribution!
 
 {% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options! "%}
 
