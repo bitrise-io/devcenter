@@ -48,7 +48,7 @@ As you can see in the primary workflow, there is no **Android Build** Step that 
 * Right after our **Do anything with Script** Step, the **Install missing Android SDK components** will take care of installing the missing Android SDK components that your project might be lacking.
 * **Change Android versionCode and versionName** Step must be inserted BEFORE the **Android Build** Step as the former makes sure you will upload the build with the right version code and version name to Google Play Store.
 * **Android Lint** and **Android Unit Test** Steps must be inserted BEFORE the **Android Build** Step to test your code and debug before building your build.
-* **Android Sign** Step must be AFTER the **Android Build** Step as the latter builds your project so that you have an APK ready to be signed with the **Android Sign** Step. Make sure that this Step is BEFORE any deploy Step so that you can upload an authorized project."%}
+* **Android Sign** Step must be AFTER the **Android Build** Step as the latter builds your project so that you have an APK/AAB ready to be signed with the **Android Sign** Step. Make sure that this Step is BEFORE any deploy Step so that you can upload an authorized project."%}
 
 ## Dependencies
 
@@ -58,7 +58,7 @@ Luckily, our **Android Build** Step, which is by default part of your deploy Wor
 
 As you can see in the above Android Workflow, the **Android Lint** and **Android Unit Test** Steps are by default included in your Workflow.
 
-For UI testing, add our **\[BETA\] Virtual Device Testing for Android** step to run[ Android UI tests on virtual devices](/testing/device-testing-for-android/). These are the available test types:
+For UI testing, add the **\[BETA\] Virtual Device Testing for Android** Step after the **Android Build for UI Testing** Step to run[ Android UI tests on virtual devices](/testing/device-testing-for-android/). These are the available test types:
 
 * instrumentation.
 * robo.
@@ -77,7 +77,7 @@ To export the test results of the **Virtual Device Testing for Android** Step or
 3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
 4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click **Save metadata**.
 
-   With this information added to your **Code Signing** tab, our **Android Sign** Step (by default included in your Android deploy workflow) will take care of signing your APK so that it’s ready for distribution!
+   With this information added to your **Code Signing** tab, our **Android Sign** Step (by default included in your Android deploy workflow) will take care of signing your APK/AAB so that it’s ready for distribution!
 
 ![{{ page.title }}](https://devcenter.bitrise.io/img/keystore.png)
 
@@ -91,7 +91,7 @@ You can also check out what other code signing options you have at Bitrise in ou
 
 The **Deploy to bitrise.io** Step uploads all the artifacts related to your build into the [ APPS & ARTIFACTS ](/builds/build-artifacts-online/)tab on your Build's page.
 
-You can share the generated APK with your team members using the build's URL. You can also notify user groups or individual users that your APK has been built.
+You can share the generated APK with your team members using the build's URL. You can also notify user groups or individual users that your APK has been built. If your build Step is configured to produce an AAB, you can still deploy an APK using the **Build Universal APK** Step.
 
 1. Go to the **Deploy to bitrise.io** Step.
 2. In the **Notify: User Roles**, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret Environment Variables](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated APK in the **APPS & ARTIFACTS** tab.
@@ -109,7 +109,7 @@ Before you'd use the **Deploy to Google Play** Step, make sure you have performe
    * Access level: View app information.
    * Release management: Manage production releases, manage testing track releases.
    * Store presence: Edit store listing, pricing & distribution.
-5. As an optional step, you can add translations to your Store Listing. To allow the **Deploy to Google Play** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) and add translations to your Store Listing section.
+5. As an optional step, you can add translations to your Store Listing. To allow the **Deploy to Google Play** Step to assign your `whatsnew` files to the uploaded APK/AAB version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) and add translations to your Store Listing section.
 
 Now let's head back to [Bitrise](https://app.bitrise.io/apps/add) and finish off the deploy configuration!
 
