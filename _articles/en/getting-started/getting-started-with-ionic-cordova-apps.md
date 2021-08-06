@@ -33,7 +33,7 @@ You can use Cordova and Ionic frameworks to develop cross-platform apps. Bitrise
     ![{{ page.title }}](/img/project-build-ionic.png)
 10. Register a webhook when prompted so that Bitrise can start a build automatically when code is pushed to your repository.
 
-    This also kicks off your first build on the primary Workflow - click the message and it will take you to the build page. The first build does not generate an APK and an .ipa yet, however, you can already check out the project’s logs on the build’s page.
+    This also kicks off your first build on the primary Workflow - click the message and it will take you to the build page. The first build does not generate an .apk and an .ipa yet, however, you can already check out the project’s logs on the build’s page.
 
 As an example, have a look at a Cordova **primary workflow** containing **Karma Jasmine Test Runner** Step.
 
@@ -122,7 +122,7 @@ To sign your iOS project, you have to upload code signing certificates and provi
 
 There are a few places to deploy your app but the configuration is slightly different for each of them.
 
-Before deploying your app to any marketplace you need to generate a codesigned .ipa and/or APK so make sure you perform these steps:
+Before deploying your app to any marketplace you need to generate a codesigned .ipa and/or .apk so make sure you perform these steps:
 
 1. Add the **Cordova archive** or the **Ionic archive** Step to your Workflow.
 
@@ -152,7 +152,7 @@ Now that we're ready for deployment, let's see how to publish your iOS and Andro
 
 Before you'd use the **Deploy to Google Play** Step, make sure you have performed the following tasks:
 
-1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
+1. Upload the first .apk manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
 2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
 3. [Set up API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started): Please note when you create your service account on the Google Developer Console, you have to choose `json` as **Key Type**.
 4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish):
@@ -180,12 +180,12 @@ Now let's head back to Bitrise and finish off the deploy configuration!
 
 To deploy to Bitrise, you need the **Deploy to Bitrise.io - Apps, Logs, Artifacts** Step to your Workflow. This will upload all your build artifacts into the **APPS & ARTIFACTS** tab of your Build's page.
 
-You can share the generated .ipa or APK with your team members using the build’s URL. You can also notify user groups or individual users that your .ipa or APK has been built.
+You can share the generated .ipa or .apk with your team members using the build’s URL. You can also notify user groups or individual users that your .ipa or .apk has been built.
 
 1. Add the **Deploy to bitrise.io - Apps, Logs, Artifacts** Step to your Workflow.
 2. In the **Notify: User Roles** input of the Step, add a role: only users who are assigned this role on the app will be notified.
 
-   Alternatively, fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated .ipa or APK in the **APPS & ARTIFACTS** tab.
+   Alternatively, fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated .ipa or .apk in the **APPS & ARTIFACTS** tab.
 3. [Start a build](https://devcenter.bitrise.io/builds/Starting-builds-manually/)!
 
 If your app is properly configured, you can find it deployed to the marketplace of your choice!
