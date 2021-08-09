@@ -103,7 +103,7 @@ For the purposes of deploying your app, we recommend [creating a new workflow](/
 
 #### Android
 
-For Android, you need an APK and you need to sign that APK. Bitrise makes that happen with the **Android Sign** Step. The Step requires a keystore file, a keystore password and a keystore alias.
+For Android, you need an APK/AAB and you need to sign that APK/AAB. Bitrise makes that happen with the **Android Sign** Step. The Step requires a keystore file, a keystore password and a keystore alias.
 
 1. [Create a code signing identity in Visual Studio](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/signing/?tabs=vswin).
 2. Upload the keystore file to Bitrise: open the Workflow Editor of your app, go to the **Code Signing** tab and upload the file to the `ANDROID KEYSTORE FILE` section.

@@ -19,7 +19,7 @@ menu:
     weight: 1
 
 ---
-This guide describes how you can add your Android project to [bitrise.io](https://www.bitrise.io) and deploy the APK built from your project to [Google Play Store](https://play.google.com/store).
+This guide describes how you can add your Android project to [bitrise.io](https://www.bitrise.io) and deploy the APK or AAB built from your project to [Google Play Store](https://play.google.com/store).
 
 {% include video.html embed_url="https://www.youtube.com/embed/Obp0cTJEETY" %}
 
@@ -28,7 +28,7 @@ This guide describes how you can add your Android project to [bitrise.io](https:
 Make sure you have:
 
 * [Added an Android app to Bitrise](/getting-started/getting-started-with-android-apps/).
-* Have signed your APK [digitally](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/).
+* Have you set up app signing in your deploy Workflow [digitally](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-APK-step/)?
 * [Uploaded your keystore file](/code-signing/android-code-signing/android-code-signing-index/) to the **Code Signing** tab of the Workflow Editor.
 
 ## Setting up your first project
@@ -84,7 +84,7 @@ Before you'd use the **Google Play Deploy** Step, make sure you have performed t
 4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings**, then **Users & permissions**, then **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
    * Access level: View app information, Create & edit draft apps.
    * Release management: Manage production releases, manage testing track releases, Manage testing track configuration.
-5. As an optional Step, you can add translations to your Store Listing. To allow the **Google Play Deploy** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
+5. As an optional Step, you can add translations to your Store Listing. To allow the **Google Play Deploy** Step to assign your `whatsnew` files to the uploaded APK or AAB version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
 
 Now let's head back to Bitrise and finish off the deploy configuration!
 

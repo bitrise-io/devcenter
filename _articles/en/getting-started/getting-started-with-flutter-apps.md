@@ -103,7 +103,7 @@ We'll discuss the Steps specific to iOS and Android deployment in their respecti
 
 The **Deploy to bitrise.io** Step uploads all the artifacts related to your build into the [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab on your Build’s page.
 
-You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
+You can share the generated app file ( APK or AAB for Android or an .ipa file for iOS) with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
 
 1. Go to the **Deploy to bitrise.io** Step.
 2. In the **Notify: User Roles**, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret Env Vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the **eye** icon next to your generated APK/.ipa file in the **APPS & ARTIFACTS** tab.
