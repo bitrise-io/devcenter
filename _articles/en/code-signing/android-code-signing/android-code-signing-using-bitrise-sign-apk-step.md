@@ -28,7 +28,7 @@ The **Android Sign** Step is not required if signing is configured in your proje
 
 {% include message_box.html type="info" title="jarsigner and apksigner" content="APKs can be signed with either jarsigner or apksigner. For APKs, if you wish to use apksigner to sign your project, then in the **Android Sign** Step you have to first set the Enables apksigner input to true and leave the **APK Signature Scheme** input on automatic. This way apksigner checks your APK’s minimum and target SDK versions and chooses the required schemes. It signs your project with V1 scheme if your minimum supported version is low and it also signs with other schemes for newer systems.
 
-Please note that AABs can only be signed with jarsigner. The step uses jarsigner if it detects a file ending with `.aab` "%}
+Please note that AABs can only be signed with jarsigner. The Step uses jarsigner if it detects a file ending with `.aab` "%}
 
 Before you start:
 
