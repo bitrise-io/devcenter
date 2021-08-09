@@ -34,8 +34,8 @@ If you have an Android deploy workflow at hand, do the following:
 ## Signing and deploying multi-flavor APKs
 
 1. Add one **Android Sign** Step AFTER the **Gradle Runner** Step if it's missing from your workflow.
-2. Set the **App file path** input to `$BITRISE_APK_PATH_LIST` or `$BITRISE_AAB_PATH_LIST` depending on which app format you built in the previous **Gradle Runner** Step. This will make sure all APKs or AABs get code signed with the keystore file you uploaded to the **Code Signing** tab. Check out [how you can upload your keystore file to bitrise.io](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#creating-a-signed-apk-with-the-android-sign-step). The Step will export either the `$BITRISE_SIGNED_APK_PATH_LIST` or the `$BITRISE_SIGNED_AAB_PATH_LIST` Environment Variable output which contains the path of the signed app files for each build variant
-4. Make sure you set the following input fields in the **Android Sign** Step:
+2. Set the **App file path** input to `$BITRISE_APK_PATH_LIST` or `$BITRISE_AAB_PATH_LIST` depending on which app format you built in the previous **Gradle Runner** Step. This will make sure all APKs or AABs get code signed with the keystore file you uploaded to the **Code Signing** tab. Check out [how you can upload your keystore file to bitrise.io](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#creating-a-signed-apk-with-the-android-sign-step). The Step will export either the `$BITRISE_SIGNED_APK_PATH_LIST` or the `$BITRISE_SIGNED_AAB_PATH_LIST` Environment Variable output which contains the path of the signed app files for each build variant.
+3. Make sure you set the following input fields in the **Android Sign** Step:
 
 * **Keystore url**
 * **Keystore password**
