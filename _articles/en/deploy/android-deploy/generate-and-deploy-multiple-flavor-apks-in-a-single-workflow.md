@@ -29,13 +29,13 @@ If you have an Android deploy workflow at hand, do the following:
    `assembleDemo` and `assembleFull` (for APKs) or `bundleDemo` and `bundleFull` (for AABs)
 
    ![{{ page.title }}](/img/multiflavor-1.jpg)
-4. **Gradle Runner** generates a `$BITRISE_APK_PATH_LIST` / `$BITRISE_AAB_PATH_LIST` Environment Variable output that contains ALL the build variants you have set in the **Gradle task to run** Step above. We will need this output Environment Variable later.
+4. **Gradle Runner** generates a `$BITRISE_APK_PATH_LIST` / `$BITRISE_AAB_PATH_LIST` Environment Variable output that contains APKs/AABs built for ALL build variants defined above. We will need this output Environment Variable later.
 
 ## Signing and deploying multi-flavor APKs
 
 1. Add one **Android Sign** Step AFTER the **Gradle Runner** Step if it's missing from your workflow.
-2. Set the `$BITRISE_APK_PATH_LIST` in the `apk path` input field which will make sure all the required APKs will get code signed with the keystore file you uploaded to the **Code Signing** tab. Check out [how you can upload your keystore file to bitrise.io](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#creating-a-signed-apk-with-the-android-sign-step). The Step will export either the `$BITRISE_SIGNED_APK_PATH` or the `$BITRISE_AAB_PATH_LIST` Environment Variable output which lists all your signed build variants.
-3. Make sure you set the following input fields in the **Android Sign** Step:
+2. Set the **App file path** input to `$BITRISE_APK_PATH_LIST` or `$BITRISE_AAB_PATH_LIST` depending on which app format you built in the previous **Gradle Runner** Step. This will make sure all APKs or AABs get code signed with the keystore file you uploaded to the **Code Signing** tab. Check out [how you can upload your keystore file to bitrise.io](/code-signing/android-code-signing/android-code-signing-using-bitrise-sign-apk-step/#creating-a-signed-apk-with-the-android-sign-step). The Step will export either the `$BITRISE_SIGNED_APK_PATH_LIST` or the `$BITRISE_SIGNED_AAB_PATH_LIST` Environment Variable output which contains the path of the signed app files for each build variant
+4. Make sure you set the following input fields in the **Android Sign** Step:
 
 * **Keystore url**
 * **Keystore password**
