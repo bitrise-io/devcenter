@@ -26,9 +26,9 @@ To digitally sign your Android project, use the **Android Sign** Step. This Step
 
 The **Android Sign** Step is not required if signing is configured in your project’s bundle.gradle file. If so, running the **Android Build** Step (or the **Gradle Runner** Step) signs the output (APK or AAB) automatically. Nevertheless, we recommend that you use the **Android Sign** Step to sign your project in an easy and secure way.
 
-{% include message_box.html type="info" title="jarsigner and apksigner" content="APKs can be signed with either jarsigner or apksigner. For APKS, if you wish to use apksigner to sign your project, then in the **Android Sign** Step you have to first set the Enables apksigner input to true and leave the **APK Signature Scheme** input on automatic. This way apksigner checks your APK’s minimum and target SDK versions and chooses the required schemes. It signs your project with V1 scheme if your minimum supported version is low and it also signs with other schemes for newer systems.
+{% include message_box.html type="info" title="jarsigner and apksigner" content="APKs can be signed with either jarsigner or apksigner. For APKs, if you wish to use apksigner to sign your project, then in the **Android Sign** Step you have to first set the Enables apksigner input to true and leave the **APK Signature Scheme** input on automatic. This way apksigner checks your APK’s minimum and target SDK versions and chooses the required schemes. It signs your project with V1 scheme if your minimum supported version is low and it also signs with other schemes for newer systems.
 
-Please note that AABs can only be signed with jarsigner which is the default configuration of the Step."%}
+Please note that AABs can only be signed with jarsigner. The step uses jarsigner if it detects a file ending with `.aab` "%}
 
 Before you start:
 
