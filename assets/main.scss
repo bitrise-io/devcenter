@@ -228,8 +228,7 @@ header.top-bar {
 			margin-left: auto;
 			flex-flow: row-reverse;
 
-			.bitbutton {
-				background-color: #0dd3c5;
+			.bitbutton, .bitbutton-sc {
 				border: none;
 				border-radius: 4px;
 				padding: 0.625rem 0.8rem;
@@ -239,15 +238,34 @@ header.top-bar {
 				margin: auto;
 				cursor: pointer;
 
+				.sign-up {
+					font-weight: bold;
+					font-size: 1.2rem;
+					font-family: TTNorms;
+				}
+			}
+
+			.bitbutton {
+				background-color: #0dd3c5;
+
 				&:hover {
 					background-color: #0fc389;
 				}
 
 				.sign-up {
 					color: #ffffff;
-					font-weight: bold;
-					font-size: 1.2rem;
-					font-family: TTNorms;
+				}
+			}
+			
+			.bitbutton-sc {
+				background-color: #ffff;
+
+				&:hover {
+					background-color: #ececec;
+				}
+
+				.sign-up {
+					color: #351D48;
 				}
 			}
 		}
