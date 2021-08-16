@@ -1,5 +1,5 @@
 ---
-  - title: SAML SSO in Organizations
+- title: SAML SSO in Organizations
   modified: 2021-08-16 10:10:45 +0200
   changelog: Our guides now correctly reflect that custom SAML SSO is only available on the Velocity plan.
   type: fix
