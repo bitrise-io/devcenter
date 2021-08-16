@@ -4,7 +4,7 @@
   changelog: Our guides now correctly reflect that custom SAML SSO is only available on the Velocity plan.
   type: fix
   url: "/team-management/organizations/saml-sso-in-organizations/"
-  - title: Running Xcode Tests
+- title: Running Xcode Tests
   modified: 2021-07-26 00:00:00 +0200
   changelog: How to use test repetitions with the Xcode Test for iOS Step has been
     added to the doc.
