@@ -16,7 +16,7 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML ap
 This requires:
 
 * an Okta administrator who is logged into Okta
-* a Bitrise organization owner who is logged into his/her Bitrise organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams))
+* a Bitrise organization owner who is logged into his/her Bitrise organization (with [Velocity subscription](https://www.bitrise.io/pricing/teams))
 
 ## Adding Bitrise to Okta
 

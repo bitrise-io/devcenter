@@ -16,7 +16,7 @@ This requires:
 
 * A PingOne administrator who is logged into [PingOne](https://admin.pingone.com/web-portal/login).
 * A Bitrise Organization owner who is logged into his/her Bitrise Organization.
-* The Bitrise Organization must have an [Org Elite subscription](https://www.bitrise.io/pricing/teams).
+* The Bitrise Organization must have a [Velocity subscription](https://www.bitrise.io/pricing/teams).
 
 ## Adding Bitrise to Ping Identity
 

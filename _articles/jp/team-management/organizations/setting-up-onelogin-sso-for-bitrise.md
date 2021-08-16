@@ -18,7 +18,7 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML ap
 This requires:
 
 * A OneLogin Administrator.
-* A Bitrise Organization owner who is logged into the Organization (with [Org Elite subscription](https://www.bitrise.io/pricing/teams "https://www.bitrise.io/pricing/teams")) on [Bitrise](https://www.bitrise.io).
+* A Bitrise Organization owner who is logged into the Organization (with [Velocity subscription](https://www.bitrise.io/pricing/teams "https://www.bitrise.io/pricing/teams")) on [Bitrise](https://www.bitrise.io).
 
 ## Configuring Bitrise on OneLogin
 

@@ -13,9 +13,9 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-{% include message_box.html type="important" title="SSAML SSO is only available on the Velocity plan" content="Please note that SAML SSO is only available for an Org with the [Org Elite and Velocity plans](https://www.bitrise.io/pricing). If you try to set up SAML SSO to an Org that has an [Org Standard subscription](https://www.bitrise.io/pricing/teams), the **Single Sign-On** tab will appear on the left menu bar in your **Account Settings** but you won’t be able to use it. Click **Upgrade to Org Elite** in the pop-up window to use SAML SSO in your Org.
+{% include message_box.html type="important" title="SSAML SSO is only available on the Velocity plan" content="Please note that SAML SSO is only available for an Org with the [Velocity plan](https://www.bitrise.io/pricing). 
 
-Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you decide to downgrade, you will lose this feature. All Org members will receive an email about the downgrade and you’ll have two weeks to re-upgrade to the Org Elite plan if you wish to use SAML SSO in your Org again.
+Since the SAML SSO feature is tied to the Velocity plan, if you decide to switch to a different subscription plan, you will lose this feature. All Org members will receive an email about the downgrade and you’ll have two weeks to switch back to the Velocity plan if you wish to use SAML SSO in your Org again.
 
 "%}
 
@@ -24,7 +24,7 @@ Since the SAML SSO feature is tied to the Org Elite and Velocity plans, if you d
 Before connecting SAML SSO to your Organization, make sure:
 
 * An Azure AD administrator who is logged into Azure AD is at hand.
-* Your account on Bitrise has an Org with [Org Elite or Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
+* Your account on Bitrise has an Org with [the Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
 * As with other [Org management actions](/team-management/organizations/members-organizations/), only the Org owner can set up SAML SSO to a Bitrise Org.
 
 ## Navigating to the Single Sign-On page of Bitrise

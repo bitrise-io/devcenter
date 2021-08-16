@@ -265,7 +265,7 @@ Learn more about [Organizations and Teams](/team-management/teams-vs-organizatio
 
 ### Integrated SSO management on Bitrise
 
-While in Jenkins you have to install an authorization plugin for SSO management, in Bitrise it comes as an integral part of the [Org Elite and Velocity plans](https://www.bitrise.io/pricing "https://www.bitrise.io/pricing"). Organization with such plans can set up SAML SSO as their single gateway to their Org on Bitrise. No more remembering usernames and credentials! All the Org owner has to do is set up Bitrise as a SAML SSO app on the SAML SSO provider and invite Org members to the Bitrise Org. We have specific guides to the different SAML SSO providers to guide you through the steps.
+While in Jenkins you have to install an authorization plugin for SSO management, in Bitrise it comes as an integral part of the [the Velocity plan](https://www.bitrise.io/pricing). Organization with such plans can set up SAML SSO as their single gateway to their Org on Bitrise. No more remembering usernames and credentials! All the Org owner has to do is set up Bitrise as a SAML SSO app on the SAML SSO provider and invite Org members to the Bitrise Org. We have specific guides to the different SAML SSO providers to guide you through the steps.
 
 ![](https://devcenter.bitrise.io/img/singlesingontab.jpg)
 
