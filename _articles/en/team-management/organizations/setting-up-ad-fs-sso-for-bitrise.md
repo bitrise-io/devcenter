@@ -25,7 +25,7 @@ Before connecting SAML SSO to your Organization (Org) on Bitrise, make sure:
 
 * The AD FS administrator is at hand during the SAML SSO configuration process.
 * As with other [Organization management actions](https://devcenter.bitrise.io/team-management/organizations/members-organizations/), only the Bitrise Org owner can set up SAML SSO to a Bitrise Organization.
-* Your account on Bitrise has an Org with [Org Elite plan or Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
+* Your account on Bitrise has an Org with a [Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
 
 ## Navigating to Single Sign On page of Bitrise
 
