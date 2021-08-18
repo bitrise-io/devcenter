@@ -59,8 +59,8 @@ Bitriseのビルドイン電子メール通知システムはビルドについ�
 ステップを使用するには、以下が必要:
 
 * Mailgunアカウント
-* [Mailgun APIキー ](https://help.mailgun.com/hc/en-us/articles/203380100-Where-can-I-find-my-API-key-and-SMTP-credentials-)
-* [Mailgunドメイン名](https://help.mailgun.com/hc/en-us/articles/203637190-How-do-I-add-a-domain-)
+* Mailgun APIキー
+* Mailgunドメイン名]
 
 {% include message_box.html type="important" title="Make sure that the Step runs in every build!" content="If you use the `Send Email with Mailgun` Step in your workflow, make sure that [it is always set to run even if the previous Step failed](/steps-and-workflows/skipping-steps/)! This is the default setting of the Step. If you change it, you will not receive emails if your builds fail."%}
 
