@@ -13,7 +13,7 @@ menu:
     weight: 3
 
 ---
-Once you have your app set up, you can start inviting team members! You can select multiple roles for the new members, like: **admin**, **developer**, and **qa/tester**.
+Once you have your app set up, you can start inviting team members! You can select multiple roles for the new members: **admin**, **developer**, and **qa/tester**.
 
 {% include message_box.html type="note" title="Roles and permissions" content="Check out the different roles and permissions in [our guide to the roles on Bitrise](/team-management/user-roles-on-app-teams/)."%}
 
