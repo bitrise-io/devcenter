@@ -205,11 +205,15 @@ header.top-bar {
 			padding: 0.4rem;
 			text-decoration: none;
 			transition: opacity .25s;
+			padding: 0 10px 0 20px;
+			border-left: solid 1px white;
+			border-right: solid 1px white;
 
 			.source-host-logo {
+				transform: translateY(4px);
 				width: 24px;
 				height: 24px;
-				margin-right: 0.6rem;
+				margin-left: 0.6rem;
 				pointer-events: none;
 			}
 
@@ -1691,12 +1695,8 @@ footer {
 			.cta {
 				margin: auto;
 
-				.bitbutton {
-					margin: auto;
-					max-width: 100px;
-					line-height: 1;
-					max-height: 32px;
-					font-size: 60%;
+				.bitbutton, .bitbutton-sc {
+					display: none;
 				}
 		  }
 	  }
@@ -1807,7 +1807,7 @@ footer {
         margin: auto;
 			}
 
-			.bitbutton {
+			.bitbutton, .bitbutton-sc {
 				display: none;
 			}
 		}
