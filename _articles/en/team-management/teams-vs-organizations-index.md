@@ -16,6 +16,8 @@ menu:
 ---
 {% include video.html embed_url="https://www.youtube.com/embed/GkjVrhBbU-A" %}
 
+{% include creditbased.html %}
+
 There are two types of accounts on Bitrise:
 
 * Individual user accounts.

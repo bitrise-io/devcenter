@@ -12,6 +12,8 @@ menu:
     weight: 2
 
 ---
+{% include creditbased.html %}
+
 You can create and manage **Organizations** on [bitrise.io](https://www.bitrise.io) to manage entire teams quickly and effectively. You can set up multiple groups within an Organization for different projects - for example, you can have a _Developer_ group and a _Tester_ group assigned to different apps. You can also set roles for your group: these roles determine the access rights provided to members of the group.
 
 To run builds as an Organization, you need to subscribe to an **Organization** plan.
