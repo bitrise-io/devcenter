@@ -19,8 +19,8 @@ In this article, we’ll go through the most significant differences between the
 | --- | --- | --- |
 | Build timeout | Up to 90 minutes | Up to four hours |
 | Concurrency limitations | 1-20 | 5-80 |
-| Machine type/compute options |  |  |
-| Resource usage monitoring |  |  |
+| Machine type/compute options | The plan defines the machine type | Choose between options on a Workflow level |
+| Resource usage monitoring | No monitoring | Credit overview and detailed usage |
 
 ## Machine type selector
 
