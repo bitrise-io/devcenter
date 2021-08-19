@@ -9,7 +9,7 @@ summary: Credit-based plans offer significant quality-of-life improvements and a
 published: false
 
 ---
-Up until now, almost all Bitrise subscriptions have been concurrency-based. Concurrencies dictate how many builds you can run at the same time on Bitrise: the more concurrencies you have, the more simultaneous builds you can run. To scale up, you had to purchase more concurrencies or risk having time-critical builds being stuck in a queue.
+Up until now, almost all Bitrise subscriptions have been concurrency-based. [Concurrencies](/builds/builds-index/#build-concurrency) dictate how many builds you can run at the same time on Bitrise: the more concurrencies you have, the more simultaneous builds you can run. To scale up, you had to purchase more concurrencies or risk having time-critical builds being stuck in a queue.
 
 As of August 2021, you can no longer sign up for a concurrency-based subscription plan as a new user on Bitrise. All new accounts are credit-based accounts: after signing up, you can run builds using credits. You receive credits every month in credit bundles, the amount depending on your subscription plan.
 
