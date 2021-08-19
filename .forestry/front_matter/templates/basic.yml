@@ -321,6 +321,7 @@ pages:
 - _articles/jp/infrastructure/stack-update-and-removal-policy.md
 - _articles/jp/monitoring/analyzing-your-app-s-data-with-trace.md
 - _articles/jp/monitoring/crash-reporting-with-trace.md
+- _articles/jp/team-management/comparing-credit-based-and-concurrency-based-plans.md
 - _articles/jp/team-management/organizations/setting-up-ad-fs-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-auth0-sso-for-bitrise.md
 - _articles/jp/team-management/organizations/setting-up-azure-ad-sso-for-bitrise.md
