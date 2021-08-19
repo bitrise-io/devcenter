@@ -13,6 +13,11 @@ Up until now, almost all Bitrise subscriptions have been concurrency-based. Conc
 
 As of August 2021, you can no longer sign up for a concurrency-based subscription plan as a new user on Bitrise. All new accounts are credit-based accounts: after signing up, you can run builds using credits. You receive credits every month in credit bundles, the amount depending on your subscription plan.
 
+{% include message_box.html type="info" title="Hobby plan and Teams plan" content="For more information about our Hobby plan and Teams plan, the two latest additions to our credit-based model, check out their relevant FAQs: 
+
+* [Hobby plan FAQ](/team-management/credit-based-hobby-plan-faq/)
+* [Teams plan FAQ](/team-management/teams-plan-faq/)"%}
+
 In this article, we’ll go through the most significant differences between the everyday experience of these different subscription models. First, let’s see a quick comparison - and then dive into the details below!
 
 | Features | Concurrency-based | Credit-based |
