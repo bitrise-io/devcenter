@@ -49,17 +49,17 @@ You can [connect to Bitrise via VPN](/tutorials/vpn-configuration/ "https://devc
 
 {% include message_box.html type="warning" title="Allow-listing entire subnets" content="If the provided public IP address is a subnet, you need to allow the entire subnet on your network! For example, 208.52.166.128/28 means all IP addresses between 208.52.166.128  and 208.52.166.143 (208.52.166.128, 208.52.166.129, 208.52.166.130, and so on, all the way to and including 208.52.166.143) have to be allow-listed."%}
 
-| Stack type              | Public IP                                  | Build VM internal subnet |
-|-------------------------|--------------------------------------------|--------------------------|
-| Xcode and VS4Mac stacks | 208.52.166.154/32 and<br>208.52.166.128/28 | 10.200.0.0/20            |
-|                         | 207.254.0.248/29 and<br>207.254.0.208/28   | 10.246.0.0/20            |
-|                         | 207.254.34.148/32 and<br>207.254.33.176/28    | 10.254.224.0/20          |
-| Linux/Docker stacks     | 104.197.15.74/32                           | 10.0.0.0/9               |
-| 						  | 34.125.50.224/32                           | 10.0.0.0/9               |
-| 						  | 34.125.82.130/32                           | 10.0.0.0/9               |
-|                         | 35.202.121.43/32                           | 10.0.0.0/9               |
-|                         | 35.237.165.17/32                           | 10.0.0.0/9               |
-|                         | 35.231.56.118/32                           | 10.0.0.0/9               |
+| Stack type | Public IP | Build VM internal subnet |
+| --- | --- | --- |
+| Xcode and VS4Mac stacks | 208.52.166.154/32 and<br>208.52.166.128/28 | 10.200.0.0/20 |
+|  | 207.254.0.248/29 and<br>207.254.0.208/28 | 10.246.0.0/20 |
+|  | 207.254.34.148/32 and<br>207.254.33.176/28 | 10.254.224.0/20 |
+| Linux/Docker stacks | 104.197.15.74/32 | 10.0.0.0/9 |
+|  | 34.125.50.224/32 | 10.0.0.0/9 |
+|  | 34.125.82.130/32 | 10.0.0.0/9 |
+|  | 35.202.121.43/32 | 10.0.0.0/9 |
+|  | 35.237.165.17/32 | 10.0.0.0/9 |
+|  | 35.231.56.118/32 | 10.0.0.0/9 |
 
 ## Storage space
 
@@ -139,7 +139,9 @@ released to avoid any changes / updates during the week.
 
 ## Managing Java versions
 
-By default, every Bitrise stack comes with Java 8 pre-installed and ready to use. For now, if you do not switch to another version, your build will use Java 8. However, we recommend switching to Java 11: it should give you better performance, and Java 8 will be removed entirely at some point in the future. Use the older version only if you absolutely must: for example, if your app uses an older tool or dependency.
+By default, every Bitrise stack comes with Java 8 pre-installed and ready to use. For now, if you do not switch to another version, your build will use Java 8. However, we recommend switching to Java 11 as the latest Android tools require it: for example, the Gradle 7.0 plugin will not work with older Java versions.
+
+{% include message_box.html type="warning" title="Java 11 to become the default version" content="From September 6, Java 11 will replace Java 8 as the default Java version on all Bitrise stacks. You will still be able to use Java 8 by switching back to it with a Script Step in your Workflow."%}
 
 Java 11 is also available on every stack type, though the process of switching to Java 11 is slightly different on our Ubuntu-based stacks compared to the macOS-based stacks.
 
