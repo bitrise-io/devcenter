@@ -37,6 +37,8 @@ For example, let's say the organization called _TestOrg_ owns an app called _Tes
 
 ## Adding members to Organizations
 
+{% include message_box.html type="warning" title="Signing up with an email" content="Please note that if you want to sign up for Bitrise with an email address, the address cannot contain the character **+**. Older accounts with such email addresses still exist but they cannot be invited to Orgs using the address. When adding them, use the username instead."%}
+
 In practice, adding members to an organization means adding members to a group belonging to an organization. Once you have the groups you need for your organization, adding members to them is very simple.
 
 1. Sign in with an account that is an **owner** of the organization and open its profile page.
