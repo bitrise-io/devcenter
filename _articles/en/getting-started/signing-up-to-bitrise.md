@@ -2,7 +2,7 @@
 tag:
 - git
 - getting-started
-title: Signing up to Bitrise
+title: Signing up for Bitrise
 redirect_from:
 - "/getting-started/signing-up/signing-up-with-email/"
 - "/getting-started/signing-up/signing-up-with-gitlab/"
@@ -24,13 +24,7 @@ menu:
 ---
 You can authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Git account when adding repositories hosted by these providers again. You can of course sign up to Bitrise using your email address as well, and log in through your user credentials.
 
-{% include message_box.html type="info" title="Trial after signing up" content="If you sign up for a free account, you will automatically be granted a two-week trial on our Developer plan. This includes:
-
-* 45 minutes of build time.
-* 1000 builds a month.
-* A maximum of 100 team members.
-
-Read more about the available plans on the [Pricing](https://www.bitrise.io/pricing/teams) page!"%}
+{% include message_box.html type="warning" title="Signing up with an email" content="Please note that if you want to sign up for Bitrise with an email address, the address cannot contain the character **+**."%}
 
 ## Signing up with a Git provider
 
@@ -79,6 +73,8 @@ You will have to pick a username and a password for your Bitrise account. This w
 After that, you are ready to roll. Add your first app on your Dashboard!![](/img/firstpage.png)
 
 ## Signing up with email
+
+{% include message_box.html type="warning" title="Signing up with an email" content="Please note that if you want to sign up for Bitrise with an email address, the address cannot contain the character **+**."%}
 
 You can easily sign up to Bitrise with your email address.
 
