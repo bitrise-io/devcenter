@@ -1,17 +1,25 @@
 ---
-- title: SAML SSO in Organizations
-  modified: 2021-08-16 10:10:45 +0200
-  changelog: Our guides now correctly reflect that custom SAML SSO is only available on the Velocity plan.
-  type: fix
-  url: "/team-management/organizations/saml-sso-in-organizations/"
+- title: Signing up for Bitrise
+  modified: 2021-08-27 15:51:54 +0200
+  changelog: Email addresses with the + character cannot be used to sign up for Bitrise.
+    Existing accounts with such email addresses need to be located by username when
+    inviting them to an app or Org.
+  type: update
+  url: ''
+- title: Accounts and team management
+  modified: 2021-08-19 11:00:00 +0200
+  changelog: 'All new Bitrise accounts are now credit-based and can''t sign up for
+    the Org Standard and Org Elite subscription plans any more. '
+  type: update
+  url: "/team-management/teams-vs-organizations-index/"
 - title: Running Xcode Tests
-  modified: 2021-07-26 00:00:00 +0200
+  modified: 2021-07-26T00:00:00.000+02:00
   changelog: How to use test repetitions with the Xcode Test for iOS Step has been
     added to the doc.
   type: update
   url: "/testing/running-xcode-tests/"
 - title: Connecting self-hosted GitLab instances
-  modified: 2021-07-23 16:26:45 +0200
+  modified: 2021-07-23T16:26:45.000+02:00
   changelog: Added a warning about the IP addressing requirements for self-hosted
     GitLab instances.
   type: update
