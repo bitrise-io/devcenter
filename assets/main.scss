@@ -233,13 +233,13 @@ header.top-bar {
 			flex-flow: row-reverse;
 
 			.bitbutton, .bitbutton-sc {
+				margin-left: 1em;
 				border: none;
 				border-radius: 4px;
 				padding: 0.625rem 0.8rem;
 				line-height: 1.5;
 				width: 120px;
 				text-align: center;
-				margin: auto;
 				cursor: pointer;
 
 				.sign-up {
