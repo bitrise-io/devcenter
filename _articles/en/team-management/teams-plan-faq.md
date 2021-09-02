@@ -17,9 +17,9 @@ Sign up for Bitrise, and then create a Workspace. To do so:
 1. Log in to Bitrise.
 2. Go to [your profile page](https://app.bitrise.io/me/profile#/).
 3. Scroll down to **Workspaces**.
-4. Click **Create a new Workspace**. 
+4. Click **Start FREE TRIAL**.
 
-Follow the instructions to set up your first Workspace - once you're done, your trial will start. 
+Follow the instructions to set up your first Workspace - once you're done, your trial will start.
 
 ## If I sign up for a trial, when will it end?
 
