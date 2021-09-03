@@ -172,20 +172,18 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
 1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
 2. Add the following commands to the **Script content** input of the Step:  
+   
    To set the global Java version for the build to Java 11:
-
    ``` 
    jenv global 11
    export JAVA_HOME=\"$(jenv prefix)\"
    envman add --key JAVA_HOME --value \"$(jenv prefix)\"
    ```
-
    To set the global Java version for the build to Java 8:
-
    ```   
    jenv global 1.8
-   export JAVA_HOME="$(jenv prefix)"
-   envman add --key JAVA_HOME --value "$(jenv prefix)"
+   export JAVA_HOME=\"$(jenv prefix)\"
+   envman add --key JAVA_HOME --value \"$(jenv prefix)\"
    ```
 3. Click **Save** at the top right corner.
    "%}
@@ -195,8 +193,8 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
 1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
 2. Add the following commands to the **Script content** input of the Step:
+   
    To set the global Java version for the build to Java 11:
-
    ``` 
    sudo update-alternatives --set javac /usr/lib/jvm/java-11-openjdk-amd64/bin/javac
    sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
@@ -204,13 +202,14 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
    export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
    envman add --key JAVA_HOME --value '/usr/lib/jvm/java-11-openjdk-amd64'
    ```
-   1. To set the global Java version for the build to Java 8:
-
-       sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
-       sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+   To set the global Java version for the build to Java 8:
+   ```
+   sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
+   sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
        
-       export JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'
-       envman add --key JAVA_HOME --value '/usr/lib/jvm/java-8-openjdk-amd64'
+   export JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'
+   envman add --key JAVA_HOME --value '/usr/lib/jvm/java-8-openjdk-amd64'
+   ```
 3. Click **Save** at the top right corner.
    " %}
 

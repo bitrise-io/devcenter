@@ -1,4 +1,9 @@
 ---
+- title: Managing Java versions
+  modified: 2021-09-03 15:16:20 +0200
+  changelog: Set the global Java version on the virtual machine running your build with the Set Java version Step, or by using your own Script Step. 
+  type: update
+  url: "/infrastructure/virtual-machines/#managing-java-versions"
 - title: Virtual machines
   modified: 2021-09-02 15:04:37 +0200
   changelog: 'From September 11/12, Java 11 will be the default Java version on all
