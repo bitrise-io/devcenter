@@ -145,9 +145,19 @@ By default, every Bitrise stack comes with Java 8 pre-installed and ready to use
 
 Java 11 is also available on every stack type, though the process of switching to Java 11 is slightly different on our Ubuntu-based stacks compared to the macOS-based stacks.
 
-### Switching to Java 11
+### Setting Java versions with the Set Java version Step
 
-Our Android & Docker stacks run on virtual machines with Ubuntu, while our Xcode and Visual Studio for Mac stacks run on macOS. The process is a little different but on all stacks, switching to a different Java version requires three things:
+You can easily switch between Java 8 and Java 11 with our [**Set Java version** Step](https://www.bitrise.io/integrations/steps/set-java-version). The Step allows you to set the global Java version of the virtual machine that runs your build. 
+
+{% include message_box.html type="important" title="Installing a new Java version" content="This Step cannot install any Java version. It can only switch between the versions that are pre-installed on our stacks. If you want to install a Java version that is not available on our stacks by default, check out the [Using a Java version not installed on our Android stacks](/infrastructure/virtual-machines/#using-a-java-version-not-installed-on-our-android-stacks) section."%}
+
+1. Add the **Set Java version** Step to your Workflow. We recommend setting it as the first Step of the Workflow.
+2. Find the **Java version to be set globally for the build** input.
+3. Set it to the version you need. The accepted input values are 8 and 11.
+
+### Setting Java versions with a Script Step
+
+Our Android & Docker stacks run on virtual machines with Ubuntu, while our Xcode and Visual Studio for Mac stacks run on macOS. The process is a little different for the different stack types but on all stacks, switching to a different Java version requires three things:
 
 * Setting Java itself and the Java compiler to the selected version.
 * Setting the `JAVA_HOME` Environment Variable with the `export` command.
@@ -155,16 +165,23 @@ Our Android & Docker stacks run on virtual machines with Ubuntu, while our Xcode
 
 {% include message_box.html type="important" title="Steps and Env Vars" content="You need envman because without that, Steps can’t access each other’s Environment Variables. If you only set the Java environment for one Step, but do not store it with envman, the other Steps will use the default Java environment, Java 8."%}
 
-You can do all of it in one **Script** Step though, so it’s quite simple. To set the Java version to Java 11:
+You can do all of it in one **Script** Step though, so it’s quite simple. To change the default Java version:
 
 {% include collapse.html title="On macOS-based stacks" content="
 
 1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
-2. Add the following commands to the **Script content** input of the Step:
-
+2. Add the following commands to the **Script content** input of the Step:  
+   
+   To set the global Java version for the build to Java 11:
    ``` 
    jenv global 11
+   export JAVA_HOME=\"$(jenv prefix)\"
+   envman add --key JAVA_HOME --value \"$(jenv prefix)\"
+   ```
+   To set the global Java version for the build to Java 8:
+   ```   
+   jenv global 1.8
    export JAVA_HOME=\"$(jenv prefix)\"
    envman add --key JAVA_HOME --value \"$(jenv prefix)\"
    ```
@@ -176,7 +193,8 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
 1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
 2. Add the following commands to the **Script content** input of the Step:
-
+   
+   To set the global Java version for the build to Java 11:
    ``` 
    sudo update-alternatives --set javac /usr/lib/jvm/java-11-openjdk-amd64/bin/javac
    sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
@@ -184,10 +202,18 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To s
    export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
    envman add --key JAVA_HOME --value '/usr/lib/jvm/java-11-openjdk-amd64'
    ```
+   To set the global Java version for the build to Java 8:
+   ```
+   sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
+   sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+       
+   export JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'
+   envman add --key JAVA_HOME --value '/usr/lib/jvm/java-8-openjdk-amd64'
+   ```
 3. Click **Save** at the top right corner.
    " %}
 
-### Switching to a Java version not installed on our Android stacks
+### Using a Java version not installed on our Android stacks
 
 If you need a Java or JDK version which is not installed on our Android stacks, follow this guide. The example below will install Java/JDK 1.14 with a **Script** Step. You can adapt it to the version of your choice.
 
