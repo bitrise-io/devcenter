@@ -172,7 +172,6 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
 1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
 2. Add the following commands to the **Script content** input of the Step:  
-   
    To set the global Java version for the build to Java 11:
    ``` 
    jenv global 11
@@ -193,7 +192,6 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
 1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
 2. Add the following commands to the **Script content** input of the Step:
-   
    To set the global Java version for the build to Java 11:
    ``` 
    sudo update-alternatives --set javac /usr/lib/jvm/java-11-openjdk-amd64/bin/javac
