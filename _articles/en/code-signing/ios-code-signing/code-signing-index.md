@@ -19,7 +19,9 @@ To run a build of your iOS app on Bitrise, you will need to provide code signing
 * **Provisioning profile** file(s) matching your project (team ID, bundle ID, and so on).
 * A script, tool or step which installs these files in the build environment.
 
-You can store your code signing files and create a signed .ipa file for your iOS project (either native or cross-platform), or a signed .app or .pkg file for your MacOS project on [bitrise.io](https://www.bitrise.io). You can manually upload all the required files (provisoning profiles and .p12 certificate files) or you can use automatic provisioning to automatically generate and manage provisioning profiles from a connected Apple Developer account. We'll show you how to use both options!
+You can store your code signing files and create a signed .ipa file for your iOS project (either native or cross-platform), or a signed .app or .pkg file for your MacOS project on [bitrise.io](https://www.bitrise.io). You can manually upload all the required files (provisoning profiles and .p12 certificate files) or you can use automatic provisioning to automatically generate and manage provisioning profiles from a connected Apple Developer account. We'll show you how to use either option!
+
+{% include message_box.html type="info" title="Manual versus automatic provisioning" content="To avoid confusion, do not mix manual and automatic provisioning steps when you are setting up your project for the first time. With manual provisioning, you are uploading your certificates and provisioning profiles to Bitrise and then they are inserted in the Virtual Machine by a step. With automatic provisioning, you are downloading your certificates and provisioning profiles directly from your Apple account."%}
 
 We also support using Xcode's **Automatically manage signing** option, with both manual and automatic provisioning.
 
