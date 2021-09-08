@@ -27,9 +27,9 @@ A Step is a build task: for example, the **Git Clone** Step clones your Git repo
 
 A Step contains the code that performs the build task. You can configure the inputs and parameters that define the task, and view and reuse the outputs a Step generates. Reusing the output means that another Step can use it as the value of one of its inputs.
 
-Our Steps are written with either bash or Go. Steps are contained in their own Git repositories: that includes the code and the `step.yml` file that defines the configuration of the Step. If you wish to make the Step available to other users, the `step.yml` file needs to be included in the `bitrise-steplib` repository so that other users can find the Step on our website, in the Workflow Editor.
+Our Steps are written in [Go](https://golang.org/) or Bash. Steps are contained in their own Git repositories: that includes the code and the `step.yml` file that defines the configuration of the Step. If you wish to make the Step available to other users, the `step.yml` file needs to be included in the `bitrise-steplib` repository so that other users can find the Step on our website, in the Workflow Editor.
 
-{% include message_box.html type="info" title="Sharing Steps" content="Sharing your custom Steps is not required, of course: a Step with a use case that is specific to a single user will not be much help to others. As you can run a Step from your own machine or from any Git repository, your custom Steps do not have to be part of the Bitrise Step Library.
+{% include message_box.html type="info" title="Sharing Steps" content="Sharing your custom Steps is optional: a Step with a use case that is specific to a single user will not be much help to others. As you can run a Step from your own machine or from any Git repository, your custom Steps do not have to be part of the Bitrise Step Library.
 
 For more info on sharing Steps with other users, check out the [Sharing Steps](/contributors/sharing-steps-with-all-bitrise-users/) guide."%}
 
@@ -56,9 +56,9 @@ Before creating a new Step, you will need to install the Bitrise CLI, set it up,
 
 We will use the Step plugin of the Bitrise CLI to create a new Step. With this, we'll create the basic structure of the Step. Certain properties and inputs will be generated and assigned automatically. You can change anything later so don't worry about it yet.
 
-{% include message_box.html type="info" title="The Step plugin" content="Run bitrise :step in a command line interface to check its commands."%}
+{% include message_box.html type="info" title="The Step plugin" content="Run `bitrise :step` in a command line interface to check its commands."%}
 
-Creating the basic structure of the Step is simple. We'll go over the concepts involved in the process in more detail later; for now, just go through the process to create the Step. At the end of this process, you will have a `step.yml` file, a README.md file and either a main.go or a main.sh file in the repository.
+Creating the basic structure of the Step is simple. We'll go over the concepts involved in the process in more detail later; for now, just go through the process to create the Step. At the end of this process, you will have a `step.yml` file, a `README.md` file and either a `main.go` or a `main.sh` file in the repository.
 
 {% include message_box.html type="important" title="Before you start" content="During the Step creation process, you will be prompted to set a number of options. Note that you can change any of these before submitting your Step to Bitrise for review: the data will be included in the generated `step.yml` file that you can edit at your leisure later. During the initial Step creation process, you can use placeholders if you want to."%}
 
@@ -143,9 +143,9 @@ By default, the Step's description is collapsed on the Workflow Editor and the s
 
 There is another thing we’d like to know about your Step: what type of Step is it? As you can see on our Integrations page or on the Workflow Editor, Steps are sorted into different categories based on two factors: the platforms for which they are available and their functionality.
 
-### Platform types
+### Platforms
 
-The available platform types are controlled by the project_type_tags attribute. If your Step is available for every platform or project type, do not specify project_type_tags. In any other case, select all platform types for which your Step is available.
+The available platform types are controlled by the `project_type_tags` attribute. If your Step is available for every platform or project type, do not specify `project_type_tags`. In any other case, select all platform types for which your Step is available.
 
 The available values are:
 
@@ -158,9 +158,9 @@ The available values are:
 * `ionic`
 * `flutter`
 
-### Function types
+### Category
 
-Functional categories are controlled by the type_tags attribute in the step.yml. One Step should have only a single type_tag assigned to it. Use utility only if you believe none of the other types fit your Step.
+Functional categories are controlled by the `type_tags` attribute in the step.yml. One Step should have only a single type tag assigned to it. Use `utility` only if you believe none of the other types fit your Step.
 
 The available values are:
 
@@ -177,7 +177,7 @@ The available values are:
 
 ## Step inputs
 
-Step inputs are Bitrise [Environment Variables](/builds/env-vars-secret-env-vars/): they consist of a key and value pair that define a configuration function, and, when applicable, the input options. For example, the **Git Clone** Step has an input with the key branch:
+Step inputs are Bitrise [Environment Variables](/builds/env-vars-secret-env-vars/): they consist of a key and value pair that users of the step can set to control the step behavior. For example, the **Git Clone** Step has an input with the key branch:
 
     title: Git Clone Repository
     summary: Clone a repository to the specified path on the VM
