@@ -58,7 +58,7 @@ We will use the Step plugin of the Bitrise CLI to create a new Step. With this, 
 
 {% include message_box.html type="info" title="The Step plugin" content="Run `bitrise :step` in a command line interface to check its commands."%}
 
-Creating the basic structure of the Step is simple. We'll go over the concepts involved in the process in more detail later; for now, just go through the process to create the Step. At the end of this process, you will have a `step.yml` file, a `README.md` file and either a `main.go` or a `main.sh` file in the repository.
+Creating the basic structure of the Step is simple. We'll go over the concepts involved in the process in more detail later; for now, just go through the process to create the Step. At the end of this process, you will have a `step.yml` file, a `README.md` file and either a `main.go` or a `step.sh` file in the repository.
 
 {% include message_box.html type="important" title="Before you start" content="During the Step creation process, you will be prompted to set a number of options. Note that you can change any of these before submitting your Step to Bitrise for review: the data will be included in the generated `step.yml` file that you can edit at your leisure later. During the initial Step creation process, you can use placeholders if you want to."%}
 
