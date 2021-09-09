@@ -1,11 +1,18 @@
 ---
+- title: iOS code signing
+  modified: 2021-09-08 11:22:39 +0200
+  changelog: Updated with clarification regarding the use of the iOS code signing
+    Steps and manual vs automatic code signing.
+  type: update
+  url: "/code-signing/ios-code-signing/code-signing-index/"
 - title: Managing Java versions
-  modified: 2021-09-03 15:16:20 +0200
-  changelog: Set the global Java version on the virtual machine running your build with the Set Java version Step, or by using your own Script Step. 
+  modified: 2021-09-03T15:16:20.000+02:00
+  changelog: Set the global Java version on the virtual machine running your build
+    with the Set Java version Step, or by using your own Script Step.
   type: update
   url: "/infrastructure/virtual-machines/#managing-java-versions"
 - title: Virtual machines
-  modified: 2021-09-02 15:04:37 +0200
+  modified: 2021-09-02T15:04:37.000+02:00
   changelog: 'From September 11/12, Java 11 will be the default Java version on all
     our virtual machines. You can keep using Java 8 if your builds rely on legacy
     features. '
