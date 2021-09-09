@@ -167,7 +167,7 @@ Our Android & Docker stacks run on virtual machines with Ubuntu, while our Xcode
 
 You can do all of it in one **Script** Step though, so it’s quite simple. To change the default Java version:
 
-{% include collapse.html title="On macOS-based stacks" content="
+#### On macOS-based stacks
 
 1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
@@ -185,9 +185,8 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
    envman add --key JAVA_HOME --value \"$(jenv prefix)\"
    ```
 3. Click **Save** at the top right corner.
-   "%}
 
-{% include collapse.html title="On Ubuntu-based stacks" content="
+#### On Ubuntu-based stacks
 
 1. Add a **Script** Step to the Workflow before any Step that uses Java in any way.  
    The simplest way to do it is to place it as the first Step of the Workflow.
@@ -209,7 +208,6 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
    envman add --key JAVA_HOME --value '/usr/lib/jvm/java-8-openjdk-amd64'
    ```
 3. Click **Save** at the top right corner.
-   " %}
 
 ### Using a Java version not installed on our Android stacks
 
