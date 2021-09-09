@@ -141,13 +141,13 @@ released to avoid any changes / updates during the week.
 
 By default, every Bitrise stack comes with Java 8 pre-installed and ready to use. For now, if you do not switch to another version, your build will use Java 8. However, we recommend switching to Java 11 as the latest Android tools require it: for example, the Gradle 7.0 plugin will not work with older Java versions.
 
-{% include message_box.html type="warning" title="Java 11 to become the default version" content="From September 11/12, Java 11 will replace Java 8 as the default Java version on all Bitrise stacks. You will still be able to use Java 8 by switching back to it with a Script Step in your Workflow."%}
+{% include message_box.html type="warning" title="Java 11 to become the default version" content="From September 11/12, Java 11 will replace Java 8 as the default Java version on all Bitrise stacks. You will still be able to use Java 8 by switching back to it with the **Set Java version** Step or by using your own script."%}
 
 Java 11 is also available on every stack type, though the process of switching to Java 11 is slightly different on our Ubuntu-based stacks compared to the macOS-based stacks.
 
 ### Setting Java versions with the Set Java version Step
 
-You can easily switch between Java 8 and Java 11 with our [**Set Java version** Step](https://www.bitrise.io/integrations/steps/set-java-version). The Step allows you to set the global Java version of the virtual machine that runs your build. 
+You can easily switch between Java 8 and Java 11 with our [**Set Java version** Step](https://www.bitrise.io/integrations/steps/set-java-version). The Step allows you to set the global Java version of the virtual machine that runs your build.
 
 {% include message_box.html type="important" title="Installing a new Java version" content="This Step cannot install any Java version. It can only switch between the versions that are pre-installed on our stacks. If you want to install a Java version that is not available on our stacks by default, check out the [Using a Java version not installed on our Android stacks](/infrastructure/virtual-machines/#using-a-java-version-not-installed-on-our-android-stacks) section."%}
 
@@ -173,12 +173,15 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
    The simplest way to do it is to place it as the first Step of the Workflow.
 2. Add the following commands to the **Script content** input of the Step:  
    To set the global Java version for the build to Java 11:
+
    ``` 
    jenv global 11
    export JAVA_HOME=\"$(jenv prefix)\"
    envman add --key JAVA_HOME --value \"$(jenv prefix)\"
    ```
+
    To set the global Java version for the build to Java 8:
+
    ```   
    jenv global 1.8
    export JAVA_HOME=\"$(jenv prefix)\"
@@ -192,6 +195,7 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
    The simplest way to do it is to place it as the first Step of the Workflow.
 2. Add the following commands to the **Script content** input of the Step:
    To set the global Java version for the build to Java 11:
+
    ``` 
    sudo update-alternatives --set javac /usr/lib/jvm/java-11-openjdk-amd64/bin/javac
    sudo update-alternatives --set java /usr/lib/jvm/java-11-openjdk-amd64/bin/java
@@ -199,14 +203,14 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
    export JAVA_HOME='/usr/lib/jvm/java-11-openjdk-amd64'
    envman add --key JAVA_HOME --value '/usr/lib/jvm/java-11-openjdk-amd64'
    ```
+
    To set the global Java version for the build to Java 8:
-   ```
-   sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
-   sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
-       
-   export JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'
-   envman add --key JAVA_HOME --value '/usr/lib/jvm/java-8-openjdk-amd64'
-   ```
+
+       sudo update-alternatives --set javac /usr/lib/jvm/java-8-openjdk-amd64/bin/javac
+       sudo update-alternatives --set java /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+           
+       export JAVA_HOME='/usr/lib/jvm/java-8-openjdk-amd64'
+       envman add --key JAVA_HOME --value '/usr/lib/jvm/java-8-openjdk-amd64'
 3. Click **Save** at the top right corner.
 
 ### Using a Java version not installed on our Android stacks
