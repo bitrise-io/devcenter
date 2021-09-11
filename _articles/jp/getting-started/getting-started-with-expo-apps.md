@@ -6,7 +6,7 @@ tag:
 - testing
 - deploy
 - code-signing
-title: Getting started with Expo apps
+title: Expoアプリの開始
 redirect_from: []
 description: In this guide we discuss how to set up, test, code sign and deploy your
   React Native project built with the Expo CLI.
@@ -18,188 +18,199 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/latest/) is a toolchain that allows you to quickly get a React Native app up and running without having to use native code in Xcode or Android Studio.
+[React Native CLI又はExpo CLI](https://facebook.github.io/react-native/docs/getting-started.html)でReactNativeプロジェクトを生成することができます。[Expo](https://docs.expo.io/versions/latest/)はXcodeやAndroid Studioでネイティブコードを使わなくてもReact Nativeアプリを素早く起動、実行を行うことができるツールチェーンです。
 
-In this guide we discuss how to set up, test, code sign and deploy your React Native project built with the [Expo CLI](https://docs.expo.io/get-started/installation/).
+このガイドでは[Expo CLI](https://docs.expo.io/get-started/installation/)でビルドされたReact Nativeプロジェクトをセットアップ、テスト、コード署名、デプロイする方法について説明します。
 
-Bitrise project scanner detects the necessary configuration and adds the [**Expo Eject** Step](https://www.bitrise.io/integrations/steps/expo-detach) to your deploy workflow automatically.
+Bitriseスキャナーは必要な構成を見つけ出し、自動的にデプロイワークフローに[**Expo Eject** ステップ](https://www.bitrise.io/integrations/steps/expo-detach)を追加します。
 
-## Adding an Expo app to bitrise.io
+## bitrise.ioにExpoアプリを追加
 
-First, let's see how to add a React Native Expo app to [bitrise.io](https://www.bitrise.io/).
+最初に[bitrise.io](https://www.bitrise.io/)にExpo appを追加する方法について見ていきます。
 
-{% include message_box.html type="info" title="Do you have a Bitrise account?" content=" Make sure you have signed up to [bitrise.io](https://www.bitrise.io/) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
+{% include message_box.html type="info" title="Bitriseアカウントを持ってますか？" content=" まず[bitrise.io](https://www.bitrise.io/)にサインアップしていることを確認し、Bitriseアカウントにアクセスできることを確認してください。
+もしまだであれば、それを完了するための４つの方法[４つの方法](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise)がございます。"%}
 
- 1. Log into [bitrise.io](https://www.bitrise.io/).
- 2. Click the **+** sign on the top menu bar and select **Add app**, which takes you to the [**Create New App**](https://app.bitrise.io/apps/add) page.
- 3. Select the privacy setting of your app: **private** and [**public**](/getting-started/adding-a-new-app/public-apps/).
- 4. Select the Git hosting service that hosts your repository, then find and select your own repository that hosts the project. Read more about [connecting your repository](/getting-started/adding-a-new-app/connecting-a-repository/).
- 5. When prompted to set up repository access, click **No, auto-add SSH key**. Read more about [SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/).
- 6. Type the name of the branch that includes your project’s configuration - master, for example, - then click **Next**.
- 7. At **Validating repository**, Bitrise runs an automatic repository scanner to set up the best configuration for your project.
- 8. At **Project build configuration**, the React Native project type gets automatically selected. If the scanner fails and the project type is not selected automatically, you can [configure your project manually](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration). Bitrise also detects the **Module** and the **Variant** based on your project.
+ 1. [bitrise.io](https://www.bitrise.io/)にログインします。
+ 2. 上部のトップメニューバーにある **+** ボタンをクリックし、 **Add app** を選択してください。 [**Create New App**](https://app.bitrise.io/apps/add)ページに移動します。
+ 3. プライバシー設定の**private**と[**public**](/getting-started/adding-a-new-app/public-apps/)を選択します。
+ 4. リポジトリがあるgitホスティングサービスを選択し、ホストしたいリポジトリを見つけて選択してください。 詳しくは[リポジトリを接続する](/getting-started/adding-a-new-app/connecting-a-repository/)をお読みください
+ 5.  レポジトリのアクセス設定が完了したら、**No, auto-add SSH key**をクリックします。詳しくは[SSH keys](/getting-started/adding-a-new-app/setting-up-ssh-keys/)をお読みください。
+ 6.  プロジェクトのコンフィギュレーションに含まれるブランチの名前を入力します（例：master）。選んだら**Next**をクリックします。
+ 7.  **Validating repository**では、自動的にレポスキャナーが発動しプロジェクトの最適な設定をセットアップします。
+ 8. **Project build configuration**では、React Nativeプロジェクトタイプが自動的に選択されます。 もし、スキャナーが失敗しプロジェクトタイプが自動的に選択されない時は[手動でプロジェクトを設定](https://devcenter.bitrise.io/getting-started/adding-a-new-app/setting-up-configuration#manual-project-configuration)できます。 Bitriseはプロジェクトに基づく**Module**と**変数**の両方見つけ出します。
 
-    Now let's have a look at the fields you manually have to fill out:
-    * To generate an iOS app from your React Native project, enter your iOS Development team ID at the **Specify iOS Development team** field.
-    * In **Select ipa export method**, select the export method of your .ipa file: ad-hoc, app-store, development or enterprise method.
-    * In **Specify Expo username**, enter your username and hit **Next**.
-    * In **Specify Expo password**, enter your password and hit **Next**.
-    * Confirm your project build configuration.
- 9. [Upload an app icon](/getting-started/adding-a-new-app/#adding-an-app-icon-with-the-project-scanner).
-10. At **Webhook setup**, [register a Webhook](/webhooks/index/) so that Bitrise can automatically start a build every time you push code into your repository.
+    次に、手動で入力するべきフィールドを見ていきます。
+    * React NativeプロジェクトからiOSアプリを生成するために**Specify iOS Development team**フィールドにiOS Development team IDを入力します。
+    * **Select ipa export method**では、ipaファイルのエクスポートメソッドをad-hoc、app-store、development又はenterpriseメソッドの内の中からどれかを選んでください。
+    * **Select ipa export method**では、ユーザー名を入力し**Next**を押してください。
+    * **Specify Expo password**では、パスワードを入力し**次へ**を押してください。
+    * プロジェクトの設定を確認してください。
+ 9. [appアイコンをアップロードしてください。](/getting-started/adding-a-new-app/#adding-an-app-icon-with-the-project-scanner)
+10. **Webhook setup**では[webhookを登録](/webhooks/index/)してBitriseが自動的にリポジトリのコードをプッシュするたびにビルドを開始できるようにしてください。
 
-You have successfully set up your React Native project on [bitrise.io](https://www.bitrise.io/)! Your first build gets kicked off automatically using the primary workflow. You can check the generated reports of the first build on the **APPS & ARTIFACTS** tab on your Build’s page.
+これで[bitrise.io](https://www.bitrise.io/)上でのReact Nativeプロジェクトのセットアップが完了です！ 最初のビルドはprimary workflowを使用すると自動的に開始されます。 ビルドページ内の**APPS & ARTIFACTS**タブより最初のビルドの生成されたレポートを確認することができます。
 
-## Installing dependencies
+## 依存関係 (dependencies) のインストール
 
-### JavaScript dependencies
+### JavaScriptの依存関係 (dependencies)
 
-If Bitrise scanner has successfully scanned your app, depending on your project configuration, **Run npm command** or **Run yarn command** Step will be included in your workflow.
+もし、Bitriseスキャナーがアプリのスキャンに成功すれば、プロジェクトの構成に応じて、**Run npm command**もしくは**Run yarn command**ステップがワークフローに追加されます。
 
-The default value of the **Run npm command** Step is `install` in the **npm command with arguments to run** input field. This way the Step can add JavaScript dependencies to your project.
+**Run npm command**では、インプットフィールドの**npm command with arguments to run**に`install`と入力してください。そうすれば、あなたのプロジェクトにJavascript依存関係が追加されます。
 
-### Ejecting your app
+### アプリをEjectする
 
-React Native apps built with Expo do not come with native modules. Since our build Steps are platform-specific, Bitrise has to eject your app, add and configure the necessary native templates. Then our native dependency installer Steps take care of installing any missing native dependencies so that your project is ready for building and shipping.
+ExpoでビルドされたReact Nativeアプリにはネイティブモジュールが付属されていません。
+ビルドステップはプラットフォーム特有なので、BitriseではアプリをEjectし必要なネイティブテンプレートを追加して構成する必要があります。
+bitriseのネイティブ依存関係インストーラーステップが不足しているネイティブ依存関係のインストールを行い、プロジェクトのビルドとデプロイの準備が完了します。
 
-The Bitrise project scanner automatically inserts the **Expo Eject** Step right after the **Run npm command** or **Run yarn command** Steps in your deploy workflow.
+Bitriseスキャナーはデプロイワークフローの中の**Run npm command**もしくは**Run yarn command**ステップのすぐ後にExpo Ejectのステップを自動的に挿入します。
 
-If you do not wish to use the **Expo Eject** Step, you can eject your project locally and commit the native iOS/Android projects as an alternative to using the **Expo Eject** Step in the Workflow.
+もし、**Expo Eject**のステップを実行することを望まないのなら、ワークフローの中で**Expo Eject**ステップを実行しない代わりにローカルでプロジェクトをejectしてネイティブのiOS/Androidプロジェクトをコミットすることができます。
 
 ![{{ page.title }}](/img/eject-expo-input-fields.png)
 
-If you use the **Expo Eject** Step, let’s see which fields you have to fill out:
+もし**Expo Eject**ステップを実行するのなら、満たさなければならないフィールドについてみましょう。
 
-* **Working directory input field:** Provide the path of your project directory.
-* **Expo CLI version:** Provide the Expo CLI version you used for your project.
-* **Username for Expo** and **Password for your Expo account** inputs**:** If you add the password and username of your Expo account, the Step will execute the `expo login` command before it would do the `expo eject`. You can prevent issues by first logging into your Expo account before ejecting.
-* **Run expo publish after eject?** input: If you wish to run `expo publish`, you have to set this input to `yes`. Please note that to run `expo publish`, you first have to be logged into your Expo account which the Step can do for you if you populate the **Username for Expo** and the **Password for Expo account** inputs as well.
+* **Working directory input field:** プロジェクトディレクトリのパスを入力してください。
+* **Expo CLI version:**　プロジェクトで使っているExpo CLIのバージョンを入力してください。
+* **Username for Expo** and **Password for your Expo account** inputs**:** もしExpoアカウントのパスワードとユーザー名を加えるなら、`expo eject`を実行する前に`expo login`コマンドを実行します。ejectする前にexpoアカウントにログインすることで問題を防ぐことができます。
+* **Run expo publish after eject?** input: `expo publish` を実行したいなら、この入力を`yes`にする必要があります。`expo publish`を実行するには、expoアカウントにログインする必要があります。 **Expoのユーザー名**と**Expoアカウントのパスワード**も入力した場合にログインできます。
 
-The **Expo Eject** Step can be followed by any platform-specific Step, for example, build, sign, or test. For example, you could use the **Xcode Archive & Export for iOS** Step for iOS.
+**Expo Eject**ステップを実行すればビルド、サイン、テストなどのプラットフォーム固有のステップを実行することができるようになります。
+例えば、iOSのための**Xcode Archive & Export for iOS**ステップを実行することができます。
 
-{% include message_box.html type="info" title="Publishing to Expo message" content="The **Deploy to Bitrise.io** Step does not use Expo commands. This Step publishes artifacts to Bitrise and is not specific to a particular platform. The artifacts deployed are available on the **APPS & ARTIFACTS** tab on the **Build**’s page of your app and are also available by API. An artifact can be an ipa/APK, a file, a log, test results, or any element from the build.
+{% include message_box.html type="info" title="expoメッセージの公開" content="**Deploy to Bitrise.io**ステップはExpoコマンドを使用しません。 **Deploy to Bitrise.io**ステップはアーティファクトをBitriseに公開するもので、特定のプラットフォーム固有のステップではありません。 デプロイされたアーティファクトはアプリの**Build**ページの**APPS & ARTIFACTS**タブの中で利用でき、さらにAPIとしても利用できます。 アーティファクトは.ipa、.apk、.aab file、a log、test results、もしくは何かしらのビルドになります。
 
-**Deploy to Bitrise.io** Step doesn't publish to [expo.io](https://docs.expo.io/workflow/publishing/). If it is needed, set the **Run expo publish after eject?** input of the **Eject Expo** Step to `yes`. Be aware that in that case you have to provide your username and password for your Expo account to publish to [expo.io.](http://expo.io/)"%}
+**Deploy to Bitrise.io**ステップは[expo.io](https://docs.expo.io/workflow/publishing/)には公開されません。
+もし[expo.io](http://expo.io/)に公開する必要があるのなら、**Eject Expo**ステップの**Run expo publish after eject?**で`yes`を入力してください。
+この場合はexpo.ioに公開するためのexpoアカウントのユーザー名とパスワードを入力する必要があります。"%}
 
-### Native dependencies
+### ネイティブの依存関係(dependencies)
 
-The **Install missing Android SDK components** Step installs the missing native dependencies for your Android project. This Step is by default included in your deploy workflow.
+**Install missing Android SDK components**ステップではandroidプロジェクトに足りないネイティブの依存関係をインストールします。 このステップはデプロイワークフローにデフォルトで含まれています。
 
-## Testing your app
+## アプリのテスト
 
-You can use React Native’s built in testing method, called jest, to perform unit tests on your app.
+React Nativeに組み込まれているjestと呼ばれるテスト方法を使用してアプリの単体テストを実行できます。
 
-1. Add another Run npm command step to your workflow right after the first **Run npm command** Step.
-2. Type `test` in the **npm command with arguments to run** input field.
+1. **Run npm command**ステップのすぐ後にワークフローに別のRun npm commandステップを追加できます。
+2. **npm command with arguments to run**フィールドに`test`を入力してください。
 
    ![{{ page.title }}](/img/jest-test-react-expo.jpg)
-3. [Start a build](/builds/Starting-builds-manually/).
+3. [ビルドをスタートします](/builds/Starting-builds-manually/)。
 
-You can view the test artifacts on the **APPS & ARTIFACTS** tab of your Build's page.
+ビルドページの**APPS & ARTIFACTS**タブでテストアーティファクトを確認することができます。
 
-## Code signing
+## コード署名
 
-A React Native app consists of two projects; an Android and an iOS - both must be properly code signed. If you click on the Code Signing tab of your project’s Workflow Editor, all iOS and Android code signing fields are displayed in one page for you.
+react nativeアプリはAndroidとiOSの二つのプロジェクトがあり、どちらもコード署名が必要になります。 ワークフローエディタのCode Signingをクリックすると一ページで全てのiOSとAndroidのコード署名が表示されます。
+これらを入力する方法についてみていきます!
 
-Let’s see how to fill them out!
+### アンドロイドアプリにサインする
 
-### Signing your Android app
+1. ワークフローエディタの左上にある**WORKFLOW**ドロップダウンメニューデdeployワークフローを選択してください。
+2. **Code Signing**タブへ移動してください。
+3. **ANDROID KEYSTORE FILE**フィールドにkeystoreファイルをドラッグアンドドロップします。
+4. **Keystore password**、**Keystore alias**、**Private key password**フィールドを入力し、Save metadataをクリックしてください。
 
-1. Select the deploy workflow at the **WORKFLOW** dropdown menu in the top left corner of your app's Workflow Editor.
-2. Go to the **Code Signing** tab.
-3. Drag-and-drop your keystore file to the **ANDROID KEYSTORE FILE** field.
-4. Fill out the **Keystore password**, **Keystore alias**, and **Private key password** fields and click Save metadata.
+   アプリをBitriseにアップロードする前にAndroid Studioで生成されたkeystoreファイルに含まれているため、既に持っているはずです。
+   keystoreファイルに関しての詳細は[こちら](https://developer.android.com/studio/publish/app-signing)をクリックしてください。
+   この情報が**Code Signing**タブに追加されると**Sign APK**ステップ（Android **deploy**ワークフローにデフォルトで含まれています。）はAABやAPKの署名を行い配布の準備をします。
 
-   You should have these already at hand as these are included in your keystore file which is generated in Android Studio prior to uploading your app to Bitrise. For more information on keystore file, click [here](https://developer.android.com/studio/publish/app-signing). With this information added to your **Code Signing** tab, our **Sign APK** step (by default included in your Android **deploy** workflow) will take care of signing your APK so that it’s ready for distribution!
-
-{% include message_box.html type="info" title="More information on Android code signing" content=" Head over to our [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/) to learn more about your code signing options! "%}
+{% include message_box.html type="info" title="Andoroidコード署名に関しての詳細" content=" コード署名のオプションの詳細については [Android code signing guide](https://devcenter.bitrise.io/code-signing/android-code-signing/android-code-signing-procedures/)をご覧ください。"%}
 
 ![{{ page.title }}](/img/keystore.png)
 
-The Android chunk of code signing is done. Let's continue with iOS!
+アンドロイドのコード署名が完了しました。 続けてiOSを行いましょう！
 
-### Signing and exporting your iOS app for deployment
+### デプロイのためにiOSアプリの署名とエクスポートを行う
 
-To deploy to Testflight and to the App Store, you will need the following code signing files:
+テストフライトとアップストアにデプロイするために以下のコード署名のためのファイルが必要です。:
 
-* an iOS **Distribution** certificate.
-* an **App Store** type provisioning profile.
+* **iOS Distribution**証明書
+* **App Store**タイプのプロビジョニングファイル
 
-1. Open the **Workflow** tab of your project on [bitrise.io](https://www.bitrise.io).
-2. Click on **Code Signing** tab.
-3. Click or drag and drop the App Store type provisioning profile in the **PROVISIONING PROFILE** field and the iOS Distribution certificate in the **CODE SIGNING IDENTITY** field.
-4. Click on the **Workflows** tab and select your deploy Workflow.
-5. Set the **Select method for export** input field of the **Xcode Archive & Export for iOS** Step to **app-store**.
-6. Select **Xcode Archive & Export for iOS** Step and scroll down to the **Force Build Settings** input group.
-7. Fill out the following input fields based on your uploaded code signing files:
+1. [bitrise.io](https://www.bitrise.io)のプロジェクトの**Workflow**タブを開いてください。
+2. **Code Signing**タブをクリックしてください。
+3. **PROVISIONING PROFILE**フィールドにApp Storeタイプのプロビジョニングファイルを**CODE SIGNING IDENTITY**フィールドに iOS Distribution証明署をクリックまたはドラッグアンドドロップしてください。
+4. **Workflows**タブをクリックしてdeployワークフローを選択してください。
+5. **Xcode Archive & Export for iOS**ステップの**Select method for export**フィールドを**app-store**にセットしてください。
+6. **Xcode Archive & Export for iOS**を選択し、**Force Build Settings**入力グループまでスクロールしてください。
+7.  アップロードしたコード署名ファイルを元に以下を入力してください。:
 
-   **Force code signing with Development Team**: Add the team ID.
+   **Force code signing with Development Team**: チームIDを追加してください。
 
-   ![{{ page.title }}](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity:** Add the Code Signing Identity as a full ID or as a code signing group.
+   ![{{ page.title }}](/img/force-code-signing-development.jpg) **Force code signing with Code Signing Identity**: コード署名IDを完全なIDまたはコード署名グループとして追加してください。
 
-   ![{{ page.title }}](/img/force-code-signing-code-signing.jpg) **Force code signing with Provisioning Profile**: Add the provisioning profile's UDID (and not the file name).
+   ![{{ page.title }}](/img/force-code-signing-code-signing.jpg) **Force code signing with Provisioning Profile**: プロビジョニングプロファイルのUUIDを追加してください。(ファイル名ではありません)
 
    ![{{ page.title }}](/img/force-code-signing-provisioning-profile.jpg)
-8. If the code signing files are manually generated on the Apple Developer Portal, you have to specify to use manual code signing settings since the ejected React Native project have Xcode managed code signing turned on. Click the **Debug** input group and add `CODE_SIGN_STYLE="Manual"` to the **Additional options for xcodebuild call input** field.
+8. もし、コード署名ファイルがApple Developer Portalで手動で生成されている場合は、ejectされたReact NativeプロジェクトではXcode管理のコード署名がオンになっているため、手動のコード署名設定を使用する必要があります。 **Debug**入力グループをクリックし**Additional options for xcodebuild call input**フィールドに`CODE_SIGN_STYLE="Manual"`を追加してください。
 
-## Deploying to Bitrise
+## Bitriseにデプロイ
 
-The **Deploy to bitrise.io** Step uploads all the artifacts related to your build into the [**APPS & ARTIFACTS**](/builds/build-artifacts-online/) tab on your Build’s page.
+**Deploy to bitrise.io**ステップはビルドページの[**APPS & ARTIFACTS**](/builds/build-artifacts-online/)タブの中にビルドに関連するすべてのアーティファクトをアップロードします。
 
-You can share the generated APK/.ipa file with your team members using the build’s URL. You can also notify user groups or individual users that your APK/.ipa file has been built.
+ビルドURLを使ってチームメンバーと生成されたAPK/.ipaファイルを共有することができます。
+APK/.ipaファイルがビルドされたことをグループまたは特定のユーザーに通知することもできます。
 
-1. Go to the **Deploy to bitrise.io** Step.
-2. In the **Notify: User Roles** input field, add the role so that only those get notified who have been granted with this role. Or fill out the **Notify: Emails** field with email addresses of the users you want to notify. Make sure you set those email addresses as [secret env vars](/builds/env-vars-secret-env-vars/)! These details can be also modified under **Notifications** if you click the eye icon next to your generated APK/.ipa file in the **APPS & ARTIFACTS** tab.
+1. **Deploy to bitrise.io**ステップに移動してください。
+2. **Notify:User Roles**フィールドにロールを追加して、ロールが付与されている人のみ通知を受け取るようにできます。 もしくは、**Nitify:Emails**フィールドに通知したいユーザーのメールアドレスを入力してください。
+それらのメールアドレスを[secret env vars](/builds/env-vars-secret-env-vars/)として設定していることを確認してください。
+これらの詳細は**APPS & ARTIFACTS**タブの生成されたAPK/.ipaファイルの横にある目のアイコンをクリックし、**Notifications**で修正することもできます。
 
-## Deploying to an app store
+## app storeにデプロイする
 
-If you wish to deploy your iOS app, follow the steps in [Signing and exporting your iOS app for deployment](/getting-started/getting-started-with-react-native-apps/#signing-and-exporting-your-ios-project-for-deployment).
+もしiOSアプリをデプロイしたいなら、 [Signing and exporting your iOS app for deployment](/getting-started/getting-started-with-react-native-apps/#signing-and-exporting-your-ios-project-for-deployment)にあるステップに従ってください。
 
-### Deploying your iOS app to Testflight and iTunes Connect
 
-{% include message_box.html type="important" title="Have you exported an app-store .ipa file yet" content=" Make sure that you have exported an app-store .ipa file before starting the deployment procedure to a native marketplace! "%}
+### TestflightとiTunes ConnectにiOSアプリをデプロイする
 
-1. Modify the **Xcode Archive & Export for iOS** Step's input fields to the force options and upload the app store profile and distribution certificate **manually**.
-2. Add the **Deploy to iTunes Connect - Application Loader** Step to your workflow.
+{% include message_box.html type="important" title="app-store .ipaファイルをエクスポートしましたか？" content="ネイティブのマーケットプレイスへデプロイする手順を始める前に、app-store .ipaファイルをエクスポートしたことを確認してください。"%}
 
-   Put the Step after the **Xcode Archive & Export for iOS** Step but preferably before the **Deploy to Bitrise.io** Step.
-3. Provide your Apple credentials in the **Deploy to iTunes Connect - Application Loader** Step.
+1. **Xcode Archive & Export for iOS**ステップのフィールドをforceオプションに変更し、app store profileとdistribution credentialsを**手動**でアップロードしてください。。
+2. **Deploy to iTunes Connect - Application Loader**ステップをワークフローに追加してください。
 
-   The Step will need your:
+   このステップを**Xcode Archive & Export for iOS**ステップの後に、できれば**Deploy to Bitrise.io**の前に置いてください。
+3. **Deploy to iTunes Connect - Application Loader**ステップでApple credentialsを入力してください。
+
+   このステップでは以下が必要です:
    * Apple ID.
-   * password or, if you use two-factor authentication on iTunes Connect, your app-specific password.
+   * パスワードもしくは、もしiTunes Connectで２要素認証を使用していればapp-specificパスワード
 
-   Don’t worry, the password will not be visible in the logs or exposed - [that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
-4. [Start a build](/builds/Starting-builds-manually/).
+   このパスワードはログに表示されたり公開されることはありません。[that’s why it is marked SENSITIVE](/builds/env-vars-secret-env-vars#about-secrets).
+4. [ビルドを開始します。](/builds/Starting-builds-manually/).
 
-   If everything went well, you should see your app on Testflight. From there, you can distribute it to external testers or release it to the App Store.
+   もし全てがうまくいけば、Testflightでアプリを確認することができます。そこから、外部テスターに公開したりApp Storeに公開したりできます。
 
-### Deploying your Android app to Google Play Store
+### AndroidアプリをGoogle Play Storeにデプロイする
+{% include message_box.html type="important" title="keystoreファイルをアップロードしていますか？" content="マーケットプレイスにデプロイを始める前に**ANDROID KEYSTORE FILE**フィールドにkeystoreファイルがアップロードされていることを確認してください。"%}
 
-{% include message_box.html type="important" title="Have you uploaded keystore file yet" content=" Make sure that you have uploaded the keystore file to the **ANDROID KEYSTORE FILE** field before starting the deployment procedure to the marketplace! "%}
+**Deploy to Google Play**ステップを使用する前に、次のタスクを実行したことを確認してください。
 
-Before you'd use the **Deploy to Google Play** Step, make sure you have performed the following tasks:
-
-1. Upload the first APK manually to Google Play [using the Google Play Console](https://support.google.com/googleplay/android-developer/answer/113469?hl=en).
+1. [Google Play Consoleを使って](https://support.google.com/googleplay/android-developer/answer/113469?hl=en)Google Playに手動で最初のAPKファイルをアップロードする。
 2. [Link](https://developers.google.com/android-publisher/getting_started) your Google Play Developer Console to an API project.
-3. [Set up API Access Clients using a service account](https://developers.google.com/android-publisher/getting_started): Please note when you create your service account on the Google Developer Console, you have to choose `json` as **Key Type**.
-4. Grant the necessary rights to the service account with your [Google Play Console](https://play.google.com/apps/publish). Go to **Settings**, then **Users & permissions**, then **Invite new user**. Due to the way the Google Play Publisher API works, you have to grant at least the following permissions to the service account:
-   * Access level: View app information.
-   * Release management: Manage production releases, manage testing track releases.
-   * Store presence: Edit store listing, pricing & distribution.
-5. As an optional step, you can add translations to your Store Listing. To allow the **Deploy to Google Play** Step to assign your `whatsnew` files to the uploaded APK version, visit the [Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en) guide and add translations to your Store Listing section.
+Google Play Developer ConsoleをAPIプロジェクトをリンクします。
+3. [サービスアカウントを使ってAPIアクセスクライアントを設定する](https://developers.google.com/android-publisher/getting_started): Google Developer Consoleのサービスアカウントを作るときに、**Key Type**で`json`を選ぶことを確認してください。
+4. [Google Play Console](https://play.google.com/apps/publish)でサービスアカウントに必要な権限を与えます。**Settings**、**Users & permissions**、**Invite new user**と移動します。Google Play Publisher APIの動作方法により、サービスアカウントに少なくとも次の権限を付与する必要があります。:
+   * Access level: アプリ情報を見ます。 
+   * Release management: 本番リリースの管理、テストトラックリリースの管理
+   * Store presence: ストアリスティング、料金、配布を修正します。
+5. オプションのステップとして、ストアリストに翻訳を追加できます。**Deploy to Google Play**ステップで`whatsnew`ファイルをアップロードされたAPKバージョンに反映するには、[Translate & localize your app](https://support.google.com/googleplay/android-developer/answer/3125566?hl=en)で記載されているようにストアリスティングセクションに翻訳を追加してください。
 
-Now let's head back to Bitrise and finish off the deploy configuration!
+今から、Bitriseに戻ってデプロイ構成を完了させましょう！
 
-1. In your Bitrise Dashboard, go to **Code Signing** tab and upload the service account JSON key into the **GENERIC FILE STORAGE**.
-2. Copy the env key which stores your uploaded file’s url.
+1. Bitriseのダッシュボードで**Code Signing**タブに移動し**GENERIC FILE STORAGE**にサービスアカウントのJSONキーをアップロードします。
+2. ファイルをアップロードしたurlの環境変数をコピーします。
 
-   For example: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`.
-3. Add the **Deploy to Google Play** Step after the **Sign APK** Step in your deploy workflow.
-4. In the **Service Account JSON key file path** input, paste the Environment Variable which was generated when you uploaded the service account JSON key in the **GENERIC FILE STORAGE**. Note this input is marked as sensitive in the Step, meaning any Env Var you insert here will become a secret and won't be printed out in a build log. Besides the generated Env Var, you can also add a file path right in the Step's input field where the file path can be local or remote too:
-   * For remote JSON key file you can provide any download location as value, for example, `https://URL/TO/key.json`.
-   * For local JSON key file you can provide a file path url as value, for example, `file://PATH/TO/key.json`.
-5. **Package name**: the package name of your Android app.
-6. **Track**: the track where you want to deploy your APK (for example, alpha/beta/rollout/production or any custom track you set).
+   例: `BITRISEIO_SERVICE_ACCOUNT_JSON_KEY_URL`
+3. デプロイワークフローの**Sign APK**ステップの後に**Deploy to Google Play**を追加します。
+4. **Service Account JSON key file path**フィールドに**GENERIC FILE STORAGE**にサービスアカウントJSONキーをアップロードしたときに生成された環境変数をペーストします。このフィールドはステップの中にsensitiveマークがあります。これはここに入力した環境変数がシークレットでビルドログには表示されないことを意味します。生成された環境変数に加え、ファイルパスをローカルにもリモートにもできるステップのフィールドにファイルパスを追加することもできます。
+   * リモートJSONキーファイルの場合、ダウンロードURLを指定することができます。例えば、`https://URL/TO/key.json`
+   * ローカルJSONキーファイルの場合、ファイルパスURLを指定することができます。例えば、`file://PATH/TO/key.json`
+5. **Package name**: androidアプリのパッケージ名
+6. **Track**: APKをデプロイしたいトラック(例:alpha/beta/rollout/productionもしくはセットされたカスタムトラック)
 
-And that’s it! Start a build and release your app to the Google Play Store.
+以上です！アプリをビルドし、Google Play Storeにリリースしましょう。
