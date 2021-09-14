@@ -16,7 +16,6 @@ menu:
     weight: 34
 
 ---
-{% include not_translated_yet.html %}
 
 [React Native CLI又はExpo CLI](https://facebook.github.io/react-native/docs/getting-started.html)でReactNativeプロジェクトを生成することができます。[Expo](https://docs.expo.io/versions/latest/)はXcodeやAndroid Studioでネイティブコードを使わなくてもReact Nativeアプリを素早く起動、実行を行うことができるツールチェーンです。
 
