@@ -141,7 +141,7 @@ released to avoid any changes / updates during the week.
 
 By default, every Bitrise stack comes with Java 8 pre-installed and ready to use. For now, if you do not switch to another version, your build will use Java 8. However, we recommend switching to Java 11 as the latest Android tools require it: for example, the Gradle 7.0 plugin will not work with older Java versions.
 
-{% include message_box.html type="warning" title="Java 11 to become the default version" content="From September 14, Java 11 will replace Java 8 as the default Java version on all Bitrise stacks. You will still be able to use Java 8 by switching back to it with the **Set Java version** Step or by using your own script."%}
+{% include message_box.html type="warning" title="Java 11 to become the default version" content="From September 2021, Java 11 replaces Java 8 as the default Java version on all Bitrise stacks. You will still be able to use Java 8 by switching back to it with the **Set Java version** Step or by using your own script."%}
 
 Java 11 is also available on every stack type, though the process of switching to Java 11 is slightly different on our Ubuntu-based stacks compared to the macOS-based stacks.
 
