@@ -176,16 +176,16 @@ You can do all of it in one **Script** Step though, so it’s quite simple. To c
 
    ``` 
    jenv global 11
-   export JAVA_HOME=\"$(jenv prefix)\"
-   envman add --key JAVA_HOME --value \"$(jenv prefix)\"
+   export JAVA_HOME="$(jenv prefix)"
+   envman add --key JAVA_HOME --value "$(jenv prefix)"
    ```
 
    To set the global Java version for the build to Java 8:
 
    ```   
    jenv global 1.8
-   export JAVA_HOME=\"$(jenv prefix)\"
-   envman add --key JAVA_HOME --value \"$(jenv prefix)\"
+   export JAVA_HOME="$(jenv prefix)"
+   envman add --key JAVA_HOME --value "$(jenv prefix)"
    ```
 3. Click **Save** at the top right corner.
 
