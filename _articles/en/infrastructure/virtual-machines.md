@@ -93,13 +93,13 @@ If you need additional disk space, you can always delete tools and resources tha
 ```bash
 sudo rm -rf ~/Library/Developer/Xamarin/android-sdk-macosx
 sudo rm -rf /usr/local/share/android-sdk 
-sudo rm -rf /opt/android-ndk`
+sudo rm -rf /opt/android-ndk
 ```
 
 Similarly, feel free to delete iOS simulators that you do not use:
 
 ```bash
-sudo rm -rf /Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\\ 10.3.simruntime/
+sudo rm -rf ~/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS\\ 10.3.simruntime/
 ```
 
 ## Customization
