@@ -17,7 +17,7 @@ menu:
 
 ## 自身でホストしたGitLabインスタンスにBitriseから接続する
 
-**自身でホストしたGitLabインスタンスへのアクセスはOrganizationsのみでご利用いただけます**。もしOrganizationプランをご利用でない場合、以下のガイドはご利用いただけません。
+**自身でホストしたGitLabインスタンスへのアクセスはWorkspacesのみでご利用いただけます**。もしWorkspaceプランをご利用でない場合、以下のガイドはご利用いただけません。
 
  1. **ルート** 権限でGitLabインスタンスへログインする
     もし **ルート権限無しで** Bitriseに接続する場合、あなたの組織の他のチームメンバーは **GitLabインスタンス上のリポジトリにはアクセスできません**。
@@ -46,7 +46,7 @@ menu:
 始める前に、自身でホストしたGitLabインスタンスの [created an OAuth application](/getting-started/connecting-to-services/self-hosted-gitlab/#connect-a-self-hosted-gitlab-instance-with-bitrise) を確認してください。
 
 1. [bitrise.io](https://www.bitrise.io)にログインして、上部のメニューバーの`+`をクリックし、オプションから`Add app`を選択してください。
-2. Organizationアカウントを選択してください。
+2. Workspaceアカウントを選択してください。
 3. Gitのプロバイダを選択するように言われたら、GitLabを選択してください。その時`Self-hosted`オプションも選択してください。
 4. もし自身でホストしたGitLabのcredentialsを設定する前なら、このタイミングで入力することもできます。
 5. `Connect`をクリックしてください。

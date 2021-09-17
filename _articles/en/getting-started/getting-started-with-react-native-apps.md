@@ -17,7 +17,7 @@ menu:
     weight: 23
 
 ---
-You can easily set up and configure your React Native project on [Bitrise](https://app.bitrise.io/users/sign_in). A React Native repo can consist of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project on Bitrise, you will see that first an Android, then an iOS build gets built. If your [organization](/team-management/organizations/organizations-index/) has more than one concurrency, you can have Android and iOS builds run simultaneously.
+You can easily set up and configure your React Native project on [Bitrise](https://app.bitrise.io/users/sign_in). A React Native repo can consist of an Android and an iOS project so configurations should be done as you would normally do with Android and iOS apps. When running a React Native project on Bitrise, you will see that first an Android, then an iOS build gets built. If your [Workspace](/team-management/organizations/organizations-index/) has more than one concurrency, you can have Android and iOS builds run simultaneously.
 
 {% include message_box.html type="note" title="Do you have a Bitrise account?" content=" Before you dive in, make sure you have signed up to [bitrise.io](https://www.bitrise.io) and can access your Bitrise account. Here are [4 ways](https://devcenter.bitrise.io/getting-started/index#signing-up-to-bitrise) on how to connect your Bitrise account to your account found on a Git service provider. "%}
 

@@ -1,7 +1,7 @@
 ---
 changelog: 
 last_modified_at: 
-title: Teams and organizations
+title: Teams and Workspaces
 redirect_from: "/jp/team-management/teams-vs-organizations/"
 date: 2019-03-27T15:48:36.000+00:00
 menu:

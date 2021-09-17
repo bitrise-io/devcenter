@@ -72,7 +72,7 @@ In this section we describe how you can trigger builds on Bitrise:
 
 * The **Build Now** function in Jenkins corresponds with [manually triggering builds on Bitrise](/builds/Starting-builds-manually/): click the **Start/Schedule a Build** button on your builds page and either simply start a new build or tinker away with the [**Advanced** options](/builds/Starting-builds-manually/#advanced-configuration).
 * The **Build periodically** function of Jenkins is the [**Schedule this build** function on Bitrise](/builds/Scheduling-Builds/). A big advantage of Bitrise is that you don’t have to set up a [cron](https://en.wikipedia.org/wiki/Cron#CRON_expression) job, like you would in Jenkins, to schedule a specific time. Instead, select a day/s from the timeline and type an hour and month. No confusion over cron expressions any more!
-* Builds on Bitrise can run [parallel](/builds/triggering-builds/trigger-multiple-workflows/) if you/your Org have more than one concurrency. Or switch to our [Velocity plan](https://www.bitrise.io/pricing) to run limitless builds in parallel while having access to the best, fastest compute options available on our public MacOS and Linux cloud.
+* Builds on Bitrise can run [parallel](/builds/triggering-builds/trigger-multiple-workflows/) if you/your Workspacehave more than one concurrency. Or switch to our [Velocity plan](https://www.bitrise.io/pricing) to run limitless builds in parallel while having access to the best, fastest compute options available on our public MacOS and Linux cloud.
 * For any Git related events, such as code push, pull requests, and Git tags, or [trigger map](/builds/triggering-builds/trigger-map/), you can use the [**Triggers**](/builds/triggering-builds/trigger-map/) page on Bitrise.
 * The **Build after other projects** function of Jenkins is equivalent to the [chaining Workflows feature](/steps-and-workflows/managing-workflows/#chaining-workflows-together) on Bitrise where the Workflows run in [succession](/steps-and-workflows/managing-workflows/#chaining-workflows-together). It’s surprisingly easy to chain Workflows together on Bitrise.
 * You can trigger builds by any other remote system: use our [Webhooks](/webhooks/webhooks-index/). We’re integrated with GitHub, Gitlab, Bitbucket, Gogs, Slack, Visual Studio, Assembla, Develo.
@@ -169,7 +169,7 @@ There’s a bunch of other Workflow management tasks you can do with Workflow, c
 
 ## Dashboards in Jenkins and Bitrise
 
-This is the main landing page where you find yourself once you start your first build. If you start using Bitrise more, you will see a list of your latest, queued builds and your installed projects along with your own profile and the Organization/s you are member of - all on one page.
+This is the main landing page where you find yourself once you start your first build. If you start using Bitrise more, you will see a list of your latest, queued builds and your installed projects along with your own profile and the Workspace/s you are member of - all on one page.
 
 The **LATEST BUILDS** tab on your Bitrise Dashboard displays all recent builds similarly to the **Build history** feature in Jenkins. You can filter for any status: successful, aborted, failed, and running but each build displays their statuses anyway.
 
@@ -248,30 +248,30 @@ Learn more about our [Stack update and removal policy](/infrastructure/stack-upd
 
 ## People management in Jenkins and Bitrise
 
-What you have on the **People** page of Jenkins can be found in two places on Bitrise (depending on if you have a team or an Organization set up).
+What you have on the **People** page of Jenkins can be found in two places on Bitrise (depending on if you have a team or a Workspace set up).
 
 * You can see your team members on the **Teams** tab of your app.
-* You can see the Organization members if you click **Account Settings**, then select an Organization and find the **People** tab on the left.
+* You can see the Workspace members if you click **Account Settings**, then select a Workspace and find the **People** tab on the left.
 
-The purpose of Organizations is to make it easier to manage several people working on different apps on Bitrise. [Organizations can own an unlimited number of apps](/team-management/organizations/managing-apps/), and Organization owners can assign Organization members to work on different apps as they see fit.
+The purpose of Workspaces is to make it easier to manage several people working on different apps on Bitrise. [Workspaces can own an unlimited number of apps](/team-management/organizations/managing-apps/), and Workspace owners can assign Workspace members to work on different apps as they see fit.
 
 A **Team** on Bitrise means all the users who work on the same app: they make up the app’s team, and you can manage them on the app’s **Teams** tab.
 
-On the **Groups** tab you can manage Org members such as delete, add a new member to the group, assign a group to apps and rename a group. On the **People** tab you can see who is already added to the Org and, if needed, you can remove a member from all groups of the Organization.
+On the **Groups** tab you can manage Workspace members such as delete, add a new member to the group, assign a group to apps and rename a group. On the **People** tab you can see who is already added to the Workspace and, if needed, you can remove a member from all groups of the Workspace.
 
-Organizations consist of groups: Organization owners [can create groups and decide which members belong to which groups](/team-management/organizations/members-organizations/). A given group can be assigned to work on an app: all members of the same group will have the same level of access to the app.
+Workspaces consist of groups: Workspace owners [can create groups and decide which members belong to which groups](/team-management/organizations/members-organizations/). A given group can be assigned to work on an app: all members of the same group will have the same level of access to the app.
 
-Learn more about [Organizations and Teams](/team-management/teams-vs-organizations-index/).
+Learn more about [Workspaces and Teams](/team-management/teams-vs-organizations-index/).
 
 ### Integrated SSO management on Bitrise
 
-While in Jenkins you have to install an authorization plugin for SSO management, in Bitrise it comes as an integral part of the [the Velocity plan](https://www.bitrise.io/pricing). Organization with such plans can set up SAML SSO as their single gateway to their Org on Bitrise. No more remembering usernames and credentials! All the Org owner has to do is set up Bitrise as a SAML SSO app on the SAML SSO provider and invite Org members to the Bitrise Org. We have specific guides to the different SAML SSO providers to guide you through the steps.
+While in Jenkins you have to install an authorization plugin for SSO management, in Bitrise it comes as an integral part of the [the Velocity plan](https://www.bitrise.io/pricing). Workspace with such plans can set up SAML SSO as their single gateway to their Workspace on Bitrise. No more remembering usernames and credentials! All the Workspace owner has to do is set up Bitrise as a SAML SSO app on the SAML SSO provider and invite Workspace members to the Bitrise Org. We have specific guides to the different SAML SSO providers to guide you through the steps.
 
 ![](https://devcenter.bitrise.io/img/singlesingontab.jpg)
 
 Learn more about SAML SSO setup:
 
-* [SAML SSO in Organizations](/team-management/organizations/saml-sso-in-organizations/)
+* [SAML SSO in Workspaces](/team-management/organizations/saml-sso-in-organizations/)
 * [Setting up Google SSO for Bitrise](/team-management/organizations/setting-up-google-sso-for-bitrise/)
 * [Setting up AD FS SSO for Bitrise](/team-management/organizations/setting-up-ad-fs-sso-for-bitrise/)
 * [Setting up Azure AD SSO for Bitrise](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/)

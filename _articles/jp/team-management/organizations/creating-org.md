@@ -3,13 +3,13 @@ changelog:
 last_modified_at: 
 title: 組織を作成する
 menu:
-  organizations:
+  Workspaces:
     weight: 1
 
 ---
 あなたはBitriseで **組織** を作成して、迅速かつ効果的にチーム全体を管理することができます。あなたは組織内の異なるプロジェクトに複数のグループを設定することができます。例えば、_Developer_ グループと _Tester_ グループを違うアプリに割り当てます。あなたはグループに役割を設定して、グループのメンバーにアクセス権を設定することもできます。
 
-組織としてビルドを実行するには、 **Organization** プランを購読する必要がありあます。
+組織としてビルドを実行するには、 **Workspace** プランを購読する必要がありあます。
 
 ## 組織を作成する
 
@@ -20,11 +20,11 @@ Bitriseで組織を作成するために大変な準備は必要ありません�
 
    ![{{ page.title }}](/img/team-management/organization/add-org.png)
 
-3. `Add organization` をドロップメニューから選択します。
+3. `Add Workspace` をドロップメニューから選択します。
 
    また、次の方法でも新しい組織を作ることができます。
-   * `Profile settings` ページ: 左にある `+ New Organization` オプション
-   * `Apps` 画面: アプリの上にあるドロップメニューを開いて、`Create organization` をクリック
+   * `Profile settings` ページ: 左にある `+ New Workspace` オプション
+   * `Apps` 画面: アプリの上にあるドロップメニューを開いて、`Create Workspace` をクリック
 
    ![{{ page.title }}](/img/team-management/organization/add-org-apps.png)
 
@@ -36,7 +36,7 @@ Bitriseで組織を作成するために大変な準備は必要ありません�
 
 この手順をスキップして、これらの詳細を後で提供することができます。 **組織のオーナーだけが修正することができます。**
 
-ビルドを実行するには、**Organization** プランを購読する必要があります。
+ビルドを実行するには、**Workspace** プランを購読する必要があります。
 
 6. アプリを組織に移動させる
 

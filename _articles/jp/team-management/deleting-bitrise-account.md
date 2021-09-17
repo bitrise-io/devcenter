@@ -5,7 +5,7 @@ tag:
 - orgs
 - apps
 description: You can delete your Bitrise account only once you transferred or deleted
-  all apps on the account, and all Organizations that are owned by the account.
+  all apps on the account, and all Workspaces that are owned by the account.
 redirect_from: "/team-management/index/"
 menu:
   team-management-main:
@@ -35,7 +35,7 @@ We’re always sad to see you go but if you wish to delete your Bitrise account,
 
 {% include message_box.html type="important" title="Apps and Orgs of the account" content="Before you delete your account, make sure you transfer your existing apps to another account, or delete the apps themselves first.
 
-If you are the only confirmed owner of an Organization, you must transfer the ownership of the Org to another account, or delete it before deleting your account."%}
+If you are the only confirmed owner of a Workspace, you must transfer the ownership of the Workspace to another account, or delete it before deleting your account."%}
 
 1. Log in to your Bitrise account.
 2. In the top right corner, click on BitBot to open the dropdown menu and select **Profile settings**.

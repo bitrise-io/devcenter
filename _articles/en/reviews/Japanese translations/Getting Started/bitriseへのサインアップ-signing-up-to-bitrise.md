@@ -87,9 +87,9 @@ Bitriseアカウントを作成するには、ユーザーネームとパスワ�
 
 ## SSOを使ったサインアップ
 
-Bitriseにサインアップして、Organizationの[SAML SSO](/team-management/organizations/saml-sso-in-organizations/)を使ってBitrise Organization に加入することができます。
+Bitriseにサインアップして、Workspaceの[SAML SSO](/team-management/organizations/saml-sso-in-organizations/)を使ってBitrise Workspace に加入することができます。
 
-{% include message_box.html type="important" title="サインアップする前に" content="IdP側では、Administrator (管理者)がBitrise SAML SSO アプリのOrganizationへユーザーを追加する必要があります。**Sign up with SSO**経由でどのBitrise Organizationに加入すればいいのかわからない場合、Bitrise Organization内の[Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations)からBitrise Organizationのオーナーによって招待してもらうことができます。"%}
+{% include message_box.html type="important" title="サインアップする前に" content="IdP側では、Administrator (管理者)がBitrise SAML SSO アプリのWorkspaceへユーザーを追加する必要があります。**Sign up with SSO**経由でどのBitrise Workspaceに加入すればいいのかわからない場合、Bitrise Workspace内の[Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations)からBitrise Workspaceのオーナーによって招待してもらうことができます。"%}
 
 Bitriseへのサインアップ方法を確認していきます。
 
@@ -98,7 +98,7 @@ Bitriseへのサインアップ方法を確認していきます。
    **Initiative Single Sign-On**ページに遷移されます。
 
    ![{{ page.title }}](/img/saml-sso-sign-up.jpg)
-3. Bitrise Organizationのオーナーから受け取った**Bitrise Organization's Name** (Bitrise Organization名) を入力します。**Continue with SSO** (SSOを使って続ける) をクリックすることで、Organizationの接続されたSAML SSOプロバイダに遷移します。
+3. Bitrise Workspaceのオーナーから受け取った**Bitrise Workspace's Name** (Bitrise Workspace名) を入力します。**Continue with SSO** (SSOを使って続ける) をクリックすることで、Workspaceの接続されたSAML SSOプロバイダに遷移します。
 4. SAML SSOアカウントと紐付いているクレデンシャルを入力します。
 5. **Almost there**ページでは、SAML SSOアカウントにある登録済みのメールアドレスが自動的に**Email**欄に入力されています。自動生成された**Username** (ユーザーネーム) は変更することも可能です。
 
@@ -107,4 +107,4 @@ Bitriseへのサインアップ方法を確認していきます。
 7. letsconnect@bitrise.ioから送られたEメールを受信ボックスより確認して、指示に従ってください。
 8. **Help us help you**ページに遷移されるので、そこで更に詳細情報を入力することができます（あとからの入力でもOK）。
 
-ここまで順調に行けば、ダッシュボードから組織のアプリを確認することができます。**Account Settings** (アカウント設定) に進むと、加入したOrganizationについて見ることが可能です。
+ここまで順調に行けば、ダッシュボードから組織のアプリを確認することができます。**Account Settings** (アカウント設定) に進むと、加入したWorkspaceについて見ることが可能です。

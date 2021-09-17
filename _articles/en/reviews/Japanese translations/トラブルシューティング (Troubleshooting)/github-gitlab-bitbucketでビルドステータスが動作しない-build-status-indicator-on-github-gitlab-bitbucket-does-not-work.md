@@ -28,5 +28,5 @@ published: false
 
 ## レポジトリのアクセス許可とレポジトリURLの確認
 
-* **ご自身のOrganization (組織)またはTeam (チーム) へBitriseのアクセスを許可しているかどうか確認してください**。Bitriseへアクセスの許可を認可していない、またはレポジトリを保持するGitHub organizationやBitbucket teamへの**アクセスを拒否している**可能性があります。更に詳しい情報は[GitHub Organizationへアクセスの許可](/jp/faq/grant-access-to-github-organization)と[Bitbucket Teamへアクセスの許可](/jp/faq/grant-access-to-bitbucket-team)のページを参照してください。
+* **ご自身のWorkspace (組織)またはTeam (チーム) へBitriseのアクセスを許可しているかどうか確認してください**。Bitriseへアクセスの許可を認可していない、またはレポジトリを保持するGitHub organizationやBitbucket teamへの**アクセスを拒否している**可能性があります。更に詳しい情報は[GitHub Organizationへアクセスの許可](/jp/faq/grant-access-to-github-organization)と[Bitbucket Teamへアクセスの許可](/jp/faq/grant-access-to-bitbucket-team)のページを参照してください。
 * **レポジトリのURLが最新であることを確認してください**。[bitrise.io](https://www.bitrise.io)のアプリの`Settings`タブへ進み、`Repository URL`がレポジトリの現在のロケーションを指しているかどうかチェックします。例えば、もしご自身のレポジトリをリネームしたり、違う場所へ移動させた場合、ステータスレポートは失敗します。

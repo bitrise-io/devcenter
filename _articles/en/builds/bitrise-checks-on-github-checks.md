@@ -29,14 +29,14 @@ There can be three different check statuses:
 
 Using Bitrise Checks is just a few clicks away. Let's do this!
 
-1. Select your organization's app on your [Dashboard](https://app.bitrise.io/dashboard/builds).
+1. Select your Organization's app on your [Dashboard](https://app.bitrise.io/dashboard/builds).
 2. Select the **Settings** tab of your app.
 3. Click the **install our app to your GitHub repository** LINK in the **ENABLE GITHUB CHECKS** toggle's description. Don't toggle the switch just yet, since you first need to install Bitrise Checks. We will get to enabling the toggle [later](/builds/bitrise-checks-on-github-checks/#enabling-github-checks).
 
    ![{{ page.title }}](/img/disabled-toggle-githubchekcs.jpg)
 
    This link will take you to GitHub's **Bitrise Checks** installation page.
-4. On the **Install Bitrise Checks** page, select the user or organization you want to add Bitrise Checks to.
+4. On the **Install Bitrise Checks** page, select the user or Organization you want to add Bitrise Checks to.
 
    ![{{ page.title }}](/img/install-bitrise-checks.jpg)
 5. Decide if you wish to install Bitrise Checks to all your repositories or just to a selected few. With this you grant rights to Bitrise Checks to integrate with your repository and use GitHub Checks to display check results.
@@ -52,9 +52,9 @@ If all goes well, you land on the **Bitrise Checks** page of GitHub. You should 
 
 All there's left to do is enabling GitHub Checks on your app's page on [Bitrise](https://app.bitrise.io/dashboard/builds).
 
-{% include message_box.html type="important" title="Enabling GitHub Checks is limited" content="Please note that only Organization owners and app admins can enable this toggle on the **Settings** page of the app."%}
+{% include message_box.html type="important" title="Enabling GitHub Checks is limited" content="Please note that only Workspace owners and app admins can enable this toggle on the **Settings** page of the app."%}
 
-1. Go to your organization's [Dashboard](https://app.bitrise.io/dashboard/builds).
+1. Go to your Organization's [Dashboard](https://app.bitrise.io/dashboard/builds).
 2. Click the app whose GitHub repository you've installed the Bitrise Checks to.
 3. Go to the **Settings** tab of the app.
 4. Toggle the **ENABLE GITHUB CHECKS** switch to the right.

@@ -29,7 +29,7 @@ In this article, we’ll go through the most significant differences between the
 
 ## Machine type selector
 
-**Concurrency-based plans**: On the older, concurrency-based plans, you could not select a machine type: the subscription itself defined it. If you were on the Org Elite or the Enterprise plans, your builds used the Elite machines. On any other plan, your builds used the Standard machines.
+**Concurrency-based plans**: On the older, concurrency-based plans, you could not select a machine type: the subscription itself defined it. If you were on the WorkspaceElite or the Enterprise plans, your builds used the Elite machines. On any other plan, your builds used the Standard machines.
 
 **Credit-based plans**: On credit-based plans, you can select the machine type that fits your needs best, even on a Workflow level to manage your builds as cost-effectively as possible. For example, you can use our fastest Gen2 Elite machines for your time-critical builds but opt for the Standard machines for builds with lower priority.
 
@@ -37,13 +37,13 @@ In this article, we’ll go through the most significant differences between the
 
 ## Concurrency limitations
 
-**Concurrency-based plans**: To be able to run multiple builds simultaneously, you had to buy at least the Org Standard subscription, and increasing available concurrencies increased your costs as well. And once your team really starts growing, you will run into a shortage of concurrencies again and again.
+**Concurrency-based plans**: To be able to run multiple builds simultaneously, you had to buy at least the WorkspaceStandard subscription, and increasing available concurrencies increased your costs as well. And once your team really starts growing, you will run into a shortage of concurrencies again and again.
 
 **Credit-based plans**: Even the Hobby plan allows up to 5 concurrent builds. That number goes up to 30 on the Teams plan and as high as 80 on the Velocity plan (on Linux machines). If you have the credits, your builds will never have to wait for another build to finish first.
 
 ## Build timeout
 
-**Concurrency-based plans**: On the old Developer and Org Standard/Elite plans, you had up to 90 minutes of build time, depending on the number of concurrencies.
+**Concurrency-based plans**: On the old Developer and WorkspaceStandard/Elite plans, you had up to 90 minutes of build time, depending on the number of concurrencies.
 
 **Credit-based plans**: Your build times out after 90 minutes… on the Hobby plan! On any paid credit-based plan, you can build for at least three and a half hours, and possibly much more if you choose our Enterprise-level offerings.
 

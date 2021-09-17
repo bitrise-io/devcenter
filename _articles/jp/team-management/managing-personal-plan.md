@@ -15,9 +15,9 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-On Bitrise, there are two subscription types for personal accounts: the Hobby plan and the Developer plan. The Hobby plan is our free plan while the Developer plan is the only premium plan that you can use without creating an Organization.
+On Bitrise, there are two subscription types for personal accounts: the Hobby plan and the Developer plan. The Hobby plan is our free plan while the Developer plan is the only premium plan that you can use without creating a Workspace.
 
-{% include message_box.html type="important" title="Personal accounts and Org accounts" content="Be aware that personal accounts and Organization accounts are separate! This means that in order to sign up for an Organization plan, you need to create an Organization and then provide valid payment information in the Org's **Billing** section,  Read more about Organizations in the [Organizations section](/team-management/organizations/organizations-index/)." %}
+{% include message_box.html type="important" title="Personal accounts and Workspace accounts" content="Be aware that personal accounts and Workspace accounts are separate! This means that in order to sign up for a Workspace plan, you need to create a Workspace and then provide valid payment information in the Org's **Billing** section,  Read more about Workspaces in the [Workspaces section](/team-management/organizations/organizations-index/)." %}
 
 You can switch between the two - upgrade to Developer or downgrade to Hobby - at any time.
 

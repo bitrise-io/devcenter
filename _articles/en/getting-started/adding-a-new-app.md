@@ -49,7 +49,7 @@ After you've selected adding a new app, you find yourself on the [**Create New A
 
 Select your app's privacy setting: it can be either [public](/getting-started/adding-a-new-app/public-apps/) or private.
 
-* Private apps are only accessible to you, your organization members and those who are invited to work on an app. They require authentication to access the repository of the app.
+* Private apps are only accessible to you, your Workspace members and those who are invited to work on an app. They require authentication to access the repository of the app.
 * [Public apps](/adding-a-new-app/public-apps) expose their `bitrise.yml` and their build logs to everyone. If you have a public app's build URL, you can view its build log, to help with troubleshooting, for example. Public apps do not require authentication and they cannot have SSH keys.
 
 Bitrise gives you options to connect any kind of Git repository to it. [GitHub, GitLab and Bitbucket](/getting-started/connecting-to-services/connecting-to-services-index/) are supported out of the box. If you've already authorized Bitrise, for example, with your GitHub, you will see Bitrise automatically list all your repositories, so you can just click on the one you'd like to connect.

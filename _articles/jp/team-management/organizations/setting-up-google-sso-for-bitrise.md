@@ -26,7 +26,7 @@ This guide provides step-by-step instructions on setting up Bitrise as a SAML ap
 5. In the `Enable SSO for SAML Application` window, click `SETUP MY OWN CUSTOM APP`.
 6. In the `Google IdP Information` window, copy the `SSO URL` and click `DOWNLOAD`. ![{{ page.title }}](/img/Google-idp-information.jpg)
 
-   You will need the **SSO URL** and the **content** of the downloaded certificate on the `Single Sign On` tab of your Bitrise organization. Then click `Next` on the bottom right corner.
+   You will need the **SSO URL** and the **content** of the downloaded certificate on the `Single Sign On` tab of your Bitrise Workspace. Then click `Next` on the bottom right corner.
 
 Now that we have the config information, we will leave Google Admin Console for a minute and fill out the required SAML SSO fields on Bitrise.
 
@@ -34,8 +34,8 @@ Now that we have the config information, we will leave Google Admin Console for 
 
 1. Go back to Bitrise.
 2. Click `Account Settings`.
-3. Click the organization you want to add SAML SSO.
-4. Click the organization's `Single Sign On` button on the left.
+3. Click the Workspace you want to add SAML SSO.
+4. Click the Workspace's `Single Sign On` button on the left.
 5. Paste the SSO URL to the `Identity provider sign-on URL` field. (Remember, you've copied this URL from the `Google IdP Information` window in your Google Admin Console).
 
    Paste the **content** of the downloaded certificate to the `Certificate` field.
@@ -85,4 +85,4 @@ Now that we have the config information, we will leave Google Admin Console for 
    We suggest you to copy the URL and paste it in a new tab if using Safari. It will work! For all other browser types, you should be safely landing to the Authorization page.
 6. Click `Authorize`.
 
-You should be landing on your Bitrise Dashboard now. If you click `Profile settings` and select the `Single Sign-On` tab from the left menu, you should see SAML SSO is enabled for your organization. Once all organization members have enabled their SAML SSO connection, you can enforce SAML SSO on the whole organization with a simple toggle.
+You should be landing on your Bitrise Dashboard now. If you click `Profile settings` and select the `Single Sign-On` tab from the left menu, you should see SAML SSO is enabled for your Workspace. Once all Workspace members have enabled their SAML SSO connection, you can enforce SAML SSO on the whole Workspace with a simple toggle.

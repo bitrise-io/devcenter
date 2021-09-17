@@ -70,7 +70,7 @@ You will have to pick a username and a password for your Bitrise account. This w
 2. Check your inbox for a confirmation email from Bitrise and follow the instructions ther![](/img/checkyourinbox.png)
 3. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
 
-After that, you are ready to roll. Add your first app on your Dashboard!![](/img/firstpage.png)
+After that, you are ready to roll. Add your first app on your Dashboard!
 
 ## Signing up with email
 
@@ -84,13 +84,11 @@ You can easily sign up to Bitrise with your email address.
 4. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
 5. Click **Done**. You will be directed to your Bitrise Dashboard. Now you can go ahead and add your first app to your Dashboard.
 
-   ![](/img/firstpage.png)
-
 ## Signing up with SSO
 
-You can sign up to Bitrise and join a Bitrise Organization using the Organization's [SAML SSO](/team-management/organizations/saml-sso-in-organizations/).
+You can sign up to Bitrise and join a Bitrise Workspace using the Workspace's [SAML SSO](/team-management/organizations/saml-sso-in-organizations/).
 
-{% include message_box.html type="important" title="Before signing up" content="On the IdP side, the Administrator has to add you as a user to the Bitrise SAML SSO app's organization. To learn which Bitrise Organization you should join through SAML SSO, the Bitrise Organization owner can send you an invitation through the [Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations) of the respective Bitrise Organization."%}
+{% include message_box.html type="important" title="Before signing up" content="On the IdP side, the Administrator has to add you as a user to the Bitrise SAML SSO app's Workspace. To learn which Bitrise Workspace you should join through SAML SSO, the Bitrise Workspace owner can send you an invitation through the [Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations) of the respective Bitrise Workspace."%}
 
 Now let's see how to sign up to Bitrise.
 
@@ -100,7 +98,7 @@ Now let's see how to sign up to Bitrise.
    You are directed to the **Initiate** **Single Sign-On** page.
 
    ![{{ page.title }}](/img/saml-sso-sign-up.jpg)
-3. Provide the **Bitrise Organization's Name** that you got from the Bitrise Organization owner and click **Continue with SSO** so that Bitrise can direct you to Organization's connected SAML SSO provider.
+3. Provide the **Bitrise Workspace's Name** that you got from the Bitrise Workspace owner and click **Continue with SSO** so that Bitrise can direct you to the Workspace's connected SAML SSO provider.
 4. Provide your credentials associated with your SAML SSO account.
 5. On the **Almost there** page the **Email** field is automatically populated based on your registered email address at your SAML SSO account. You can alter the provided **Username** as you wish.
 
@@ -109,7 +107,7 @@ Now let's see how to sign up to Bitrise.
 7. Check your mailbox and follow the instructions sent by letsconnect@bitrise.io.
 8. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far on the **Personalize your experience** page.
 
-If all went well, you're landed on your Bitrise Dashboard where you can view the Organization's apps! If you go to your **Account Settings**, you will see the [Organization]() you've just joined.
+If all went well, you're landed on your Bitrise Dashboard where you can view the Workspace's apps! If you go to your **Account Settings**, you will see the [Workspace]() you've just joined.
 
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">

@@ -1,7 +1,7 @@
 ---
 changelog:
 last_modified_at:
-title: チームと組織の概要(Teams and organizations overview)
+title: チームと組織の概要(Teams and Workspaces overview)
 redirect_from: []
 date: 2019-03-29 14:15:26 +0000
 published: false

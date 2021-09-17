@@ -11,7 +11,7 @@ menu:
 ---
 To use all the features Bitrise offers, you might want to connect to services such as your Git provider or to any of the Apple services you use. 
 
-Our guides explain how to connect your GitHub/GitLab/Bitbucket account to your Bitrise account (or a self-hosted GitLab instance to your Bitrise account if your Organization uses it). You can connect only one account from a certain Git provider to Bitrise. You can disconnect and connect a new from another Git provider at any time.
+Our guides explain how to connect your GitHub/GitLab/Bitbucket account to your Bitrise account (or a self-hosted GitLab instance to your Bitrise account if your Workspace uses it). You can connect only one account from a certain Git provider to Bitrise. You can disconnect and connect a new from another Git provider at any time.
 
 Check out our guides:
 

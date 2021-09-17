@@ -19,7 +19,7 @@ You can log into Bitrise in many ways:
 
 * with your Bitrise username and password
 * with your Gitlab/Github/Bitbucket account
-* with your Bitrise organization name if [SAML SSO](/team-management/organizations/saml-sso-in-organizations/) has been set up to and enforced on it your Bitrise organization
+* with your Bitrise Workspace name if [SAML SSO](/team-management/organizations/saml-sso-in-organizations/) has been set up to and enforced on it your Bitrise Workspace
 
 ## Resetting your password
 

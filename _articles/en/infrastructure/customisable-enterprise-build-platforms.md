@@ -44,7 +44,7 @@ Check out the most important differences between the dedicated and the private b
 
 If you wish to order more than one type of stack, be aware that at least one virtual machine for each stack must keep running at all times - in idle mode, if there are no builds running. This means that you cannot use all your virtual machines to run builds on the same stack at the same time. Let’s look at an example of how this works in practice:
 
-Our example organization has three virtual machines, with Xcode 11 and Xcode 10.2 stacks. When no builds are running, an Xcode 11 virtual machine and an Xcode 10.2 virtual machine is running in idle mode while the third virtual machine is off. If the organization, however, wants to run three builds on the Xcode 11 stack. They can only run two at the same time because the third virtual machine is in idle mode with the Xcode 10.2 stack.
+Our example Workspace has three virtual machines, with Xcode 11 and Xcode 10.2 stacks. When no builds are running, an Xcode 11 virtual machine and an Xcode 10.2 virtual machine is running in idle mode while the third virtual machine is off. If the Workspace, however, wants to run three builds on the Xcode 11 stack, they can only run two at the same time because the third virtual machine is in idle mode with the Xcode 10.2 stack.
 
 ## Machine setup
 

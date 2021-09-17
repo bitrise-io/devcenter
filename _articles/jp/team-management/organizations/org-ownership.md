@@ -18,7 +18,7 @@ menu:
 
    ![{{ page.title }}](/img/team-management/organization/switch-profile-2.png)
 3. 左側のメニューオプションから`Groups`を選択します。
-4. `Organization owners`グループを見つけます。
+4. `Workspace owners`グループを見つけます。
 
    ![{{ page.title }}](/img/team-management/organization/org-owners.png)
 5. メールアドレスまたはユーザー名を入力してください。そのアカウントが組織のオーナーになります。
@@ -28,7 +28,7 @@ menu:
 1. 組織のオーナーアカウントでサインインして、プロフィールページを開きます。
 2. 組織のプロファイルページに移動し、左上隅にある`Switch Profile`をクリックして、必要な組織を選択します。
 3. 左側のメニューオプションから`Groups`を選択します。
-4. `Organization owners`グループを見つけます。
+4. `Workspace owners`グループを見つけます。
 5. 削除するアカウントを見つけて、右側の小さなチェックマークをクリックします。
 
    **組織には少なくとも1人のオーナーが必要です**。組織の唯一のオーナーを削除しようとしている場合、エラーメッセージが表示されます。
