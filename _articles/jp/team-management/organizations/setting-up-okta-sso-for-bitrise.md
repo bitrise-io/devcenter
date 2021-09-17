@@ -88,7 +88,7 @@ Please note that at this stage, SAML SSO has not been enforced as the only gatew
 
 ## Enforcing SAML SSO on the Workspace
 
-To be able to sign into Bitrise exclusively via SAML SSO, you have to [enforce SAML on the Workspace](https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization). Mind you! You can only enforce SAML SSO on the org, if **all org** members have enabled their SAML SSO connection.
+To be able to sign into Bitrise exclusively via SAML SSO, you have to [enforce SAML on the Workspace](https://devcenter.bitrise.io/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-a-workspace). Mind you! You can only enforce SAML SSO on the org, if **all org** members have enabled their SAML SSO connection.
 
 1. Toggle the `Enforce SAML SSO` switch to the right on the `Single Sign On` tab of the org.
 2. Click `Save Changes`.

@@ -89,7 +89,7 @@ You can easily sign up to Bitrise with your email address.
 
 You can sign up to Bitrise and join a Bitrise Workspace using the Workspace's [SAML SSO](/team-management/organizations/saml-sso-in-organizations/).
 
-{% include message_box.html type="important" title="Before signing up" content="On the IdP side, the Administrator has to add you as a user to the Bitrise SAML SSO app's organization. To learn which Bitrise Workspace you should join through SAML SSO, the Bitrise Workspace owner can send you an invitation through the [Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations) of the respective Bitrise Workspace."%}
+{% include message_box.html type="important" title="Before signing up" content="On the IdP side, the Administrator has to add you as a user to the Bitrise SAML SSO app's organization. To learn which Bitrise Workspace you should join through SAML SSO, the Bitrise Workspace owner can send you an invitation through the [Group menu](/team-management/organizations/members-organizations/#adding-members-to-workspaces) of the respective Bitrise Workspace."%}
 
 Now let's see how to sign up to Bitrise.
 
