@@ -5,7 +5,7 @@ tag:
 - getting-started
 - security
 description: Bitrise supports two-factor authentication for every user, and SAML SSO
-  for organizations. Use Personal Access Tokens to authenticate your account to the
+  for Workspaces. Use Personal Access Tokens to authenticate your account to the
   Bitrise API.
 summary: ''
 menu:
@@ -19,7 +19,7 @@ We provide an extra layer of security to your account if you enable Two-factor a
 
 1. Download and install [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=en) on your phone.
 2. Log in to [bitrise.io](https://www.bitrise.io) and go to your **Profile**.
-3. Click **Account settings**.
+3. Click **Profile settings**.
 4. Scroll down and click **Security** on the left.
 5. Click on **Enable** under **Two-factor authentication**.
 6. Open your Google Authenticator and scan the QR-code that appears on your screen.
@@ -33,7 +33,7 @@ We recommend that you check your connected accounts (GitHub, Bitbucket, GitLab a
 Follow this procedure to disable two-factor authentication (2FA) if you are already logged into Bitrise.
 
 1. Log in to [bitrise.io](https://www.bitrise.io) and go to your **Profile**.
-2. Click **Account settings**.
+2. Click **Profile settings**.
 3. Scroll down and click **Security** on the left.
 4. Click on **Disable** under **Two-factor authentication**.
 

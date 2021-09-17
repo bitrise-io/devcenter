@@ -36,7 +36,7 @@ With Meercode’s analysis and visualization tools:
 3. On the **Integrations** panel, select **Bitrise** and enter your Personal Access Token.
 
    ![](/img/meercode2.png)
-4. After selecting organizations and repositories to monitor, your dashboard and insights tabs will be ready to use.
+4. After selecting Workspaces and repositories to monitor, your dashboard and insights tabs will be ready to use.
 
 ## CI build monitoring on Meercode
 

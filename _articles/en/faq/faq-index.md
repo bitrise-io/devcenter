@@ -20,4 +20,4 @@ Check out some of the questions our users most frequently ask. If you have a que
 * [Should I commit my dependencies into my repository?](/faq/should-i-commit-my-dependencies-into-my-repository/)
 * [Why isn't a build triggered when I push code into the repository?](/faq/no-builds-are-triggered-automatically/)
 * [How can I git checkout from a detached head state?](/faq/how-can-i-git-checkout-from-a-detached-head-state/)
-* [Organization FAQ](/faq/organization-faq/)
+* [Workspace FAQ](/faq/organization-faq/)

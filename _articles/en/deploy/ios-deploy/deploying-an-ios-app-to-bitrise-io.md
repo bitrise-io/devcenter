@@ -27,7 +27,7 @@ Make sure that you have:
 * Uploaded the app's Development Provisioning Profile if you want to use [manual provisioning](/code-signing/ios-code-signing/ios-manual-provisioning/) on Bitrise.
 * [Registered your testers' devices](/testing/registering-a-test-device/) on Bitrise if you want to install the app from Bitrise, or from the notification email we'll send out.
 
-{% include message_box.html type="important" title="Clear the cache" content="When trying to install an app from the public install page, you should clear the cache: click the link appearing in the **If you synced your settings from your old device, you need to clear the cache and register your new device** line. The link redirects to the **Account settings** page where you can follow the procedure described in our guide."%}
+{% include message_box.html type="important" title="Clear the cache" content="When trying to install an app from the public install page, you should clear the cache: click the link appearing in the **If you synced your settings from your old device, you need to clear the cache and register your new device** line. The link redirects to the **Profile settings** page where you can follow the procedure described in our guide."%}
 
 {% include message_box.html type="important" title="Developer certificate and Development profile" content="To deploy an iOS app, you will always need a Developer type certificate and a Development type provisioning profile. Even if you want to deploy to the App Store, these are still required: they are used to create the .xcodearchive file from the provided code in the process of exporting the .ipa file."%}
 

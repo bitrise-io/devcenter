@@ -20,7 +20,7 @@ To do this, you need to specify a Service Credential User on the **Team** tab of
 
 {% include message_box.html type="note" title="Status reports are for automatically triggered builds only" content="Status reports are sent only for automatically triggered builds, such as builds triggered by a code push or a pull request."%}
 
-1. Make sure the account you wish to use is connected to the relevant hosting provider: go to the **Account settings** page of the account and check the **CONNECTED ACCOUNTS** menu on the left side.
+1. Make sure the account you wish to use is connected to the relevant hosting provider: go to the **Profile settings** page of the account and check the **CONNECTED ACCOUNTS** menu on the left side.
 
    ![{{ page.title }}](/img/connected-accounts.png)
 2. Go to the **Team** tab of your app on [bitrise.io](https://www.bitrise.io).

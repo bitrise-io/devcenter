@@ -6,13 +6,13 @@ tag:
 - api
 - security
 description: 'The current API supports only one type of authentication: user generated
-  Personal Access Tokens. Organizations do not have their own access tokens.'
+  Personal Access Tokens. Workspaces do not have their own access tokens.'
 menu:
   api-main:
     weight: 1
 
 ---
-The current API supports only one type of authentication: user generated **Personal Access Tokens**. Organizations do not have their own access tokens.
+The current API supports only one type of authentication: user generated **Personal Access Tokens**. Workspaces do not have their own access tokens.
 
 **Every API endpoint requires authentication**, except the "root" URL ([https://api.bitrise.io](https://api.bitrise.io "https://api.bitrise.io")).
 

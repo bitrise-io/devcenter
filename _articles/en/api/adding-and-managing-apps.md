@@ -15,7 +15,7 @@ menu:
 ---
 Set up new apps on Bitrise with the API: add the app, generate SSH keys, and set up the app's initial configuration.
 
-In addition, you can list all apps belonging, for example, to a single user or to a specific organization.
+In addition, you can list all apps belonging, for example, to a single user or to a specific Organization.
 
 ## Adding a new app
 
@@ -54,7 +54,7 @@ You will need both the private and public key in full to register an SSH key for
 	         "git_owner": "api_demo"
         }'
 
-   If you want to add an app to an organization, you'll have to include the organization at the end of the curl request:
+   If you want to add an app to an Organization, you'll have to include the Organization at the end of the curl request:
 
        curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/register' -d \
        '{
@@ -82,7 +82,7 @@ You will need both the private and public key in full to register an SSH key for
 
    This endpoint allows you to configure your applications: set the project type, the stack on which the build will run, and the initial configuration settings.
 
-   You can also set environment variables, as well as immediately specify an organization that will be the owner of the application. Please note that the `mode` parameter must be set to the value of `manual`.
+   You can also set environment variables, as well as immediately specify an Organization that will be the owner of the application. Please note that the `mode` parameter must be set to the value of `manual`.
 
        curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/finish' -d \
        '{
@@ -123,7 +123,7 @@ By calling this endpoint, you replace the app's current `bitrise.yml` file. You 
 | [GET /apps/{app-slug}](https://api-docs.bitrise.io/#/application/app-show) | Get a specific app. |
 | [GET /apps/{app-slug}/bitrise.yml](https://api-docs.bitrise.io/#/application/app-config-datastore-show) | Get the bitrise.yml of a specific app. |
 | [GET /apps/{app-slug}/branches](https://api-docs.bitrise.io/#/application/branch-list) | List the branches of an app's repository. |
-| [GET /organizations/{org-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-organization) | Get list of the apps for an organization. |
+| [GET /organizations/{org-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-organization) | Get list of the apps for an Organization. |
 | [GET /users/{user-slug}/apps](https://api-docs.bitrise.io/#/application/app-list-by-user) | Get list of the apps for a user. |
 
 The response to any GET request regarding one or more applications will contain the app slug, its project type, the git provider, the repository's owner and URL:

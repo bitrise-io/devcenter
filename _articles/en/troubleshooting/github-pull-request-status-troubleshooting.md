@@ -37,11 +37,11 @@ to your [bitrise.io](https://www.bitrise.io) account.
 
 ## Checking repository permissions and repository URL
 
-* **Make sure that you granted Bitrise access to your organization or team**.
-  It might be that you did not **grant Bitrise access** or denied access to the GitHub organization or Bitbucket team
+* **Make sure that you granted Bitrise access to your Workspace or team**.
+  It might be that you did not **grant Bitrise access** or denied access to the GitHub Workspace or Bitbucket team
   that owns the repository.
   See the
-  [Grant access to a GitHub Organization](/faq/grant-access-to-github-organization) and the
+  [Grant access to a GitHub Workspace](/faq/grant-access-to-github-organization) and the
   [Grant access to a Bitbucket team](/faq/grant-access-to-bitbucket-team) guides for more information.
 * **Make sure the repository URL is up to date**.
   Go to the `Settings` tab of your app on [bitrise.io](https://www.bitrise.io)

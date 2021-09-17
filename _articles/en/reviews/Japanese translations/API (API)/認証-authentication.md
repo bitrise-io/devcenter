@@ -10,7 +10,7 @@ published: false
 ---
 ## 認証
 
-現在のAPIは一種類の認証方法のみサポートしております：ユーザー生成の**Personal Access Tokens**です。Organizationには個別のアクセストークンはありません。
+現在のAPIは一種類の認証方法のみサポートしております：ユーザー生成の**Personal Access Tokens**です。Workspaceには個別のアクセストークンはありません。
 
 "root"URL ([https://api.bitrise.io](https://api.bitrise.io "https://api.bitrise.io")) 以外の**全てのAPIエンドポイントは認証を要求します**。
 

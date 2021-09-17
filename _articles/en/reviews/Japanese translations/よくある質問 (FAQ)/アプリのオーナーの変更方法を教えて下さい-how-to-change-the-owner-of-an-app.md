@@ -8,7 +8,7 @@ description: ''
 published: false
 
 ---
-[Bitrise](https://www.bitrise.io)でアプリを他ユーザー、またはOrganization (組織)に移行する必要がある場合、以下の簡単なステップを参照してください。
+[Bitrise](https://www.bitrise.io)でアプリを他ユーザー、またはWorkspace (組織)に移行する必要がある場合、以下の簡単なステップを参照してください。
 
 1. [bitrise.io](https://www.bitrise.io)で、アプリにおける**現在のオーナー (current Owner)** でログインします。
 2. アプリのページを開いて`Team`タブに進みます。

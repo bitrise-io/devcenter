@@ -14,27 +14,27 @@ menu:
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Idaptive](https://www.idaptive.com/ "https://www.idaptive.com/").
 
-{% include message_box.html type="important" title="SAML SSO is only available on the Velocity plan" content="Please note that SAML SSO is only available for an Org on the [Velocity plan](https://www.bitrise.io/pricing).
+{% include message_box.html type="important" title="SAML SSO is only available on the Velocity plan" content="Please note that SAML SSO is only available for a Workspace on the [Velocity plan](https://www.bitrise.io/pricing).
 
-Since the SAML SSO feature is tied to the Velocity plan, if you decide to switch to a different subscription plan, you will lose this feature. All Org members will receive an email about the downgrade and you’ll have two weeks to switch back to Velocity if you wish to use SAML SSO in your Org again.
+Since the SAML SSO feature is tied to the Velocity plan, if you decide to switch to a different subscription plan, you will lose this feature. All Workspace members will receive an email about the downgrade and you’ll have two weeks to switch back to Velocity if you wish to use SAML SSO in your Workspace again.
 
 "%}
 
 ## Before you start
 
-* As with other [Org management actions](/team-management/organizations/members-organizations/), only the Org owner can set up SAML SSO to a Bitrise Org.
+* As with other [Workspace management actions](/team-management/organizations/members-organizations/), only the Workspace owner can set up SAML SSO to a Bitrise Org.
 * You must be logged into your Admin Portal on [Idaptive](https://www.idaptive.com/) to set up Bitrise as a SAML SSO app and establish the connection between Bitrise and Idaptive. If you are using the **User Portal**, **Switch to** **Admin Portal** by clicking your avatar on Idaptive.
 
 ![{{ page.title }}](/img/step1.jpg)
 
-* Your account on Bitrise has an Org with the [Velocity plan] (https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
+* Your account on Bitrise has a Workspace with the [Velocity plan] (https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
 
 ## Navigating to the Single Sign-On page of Bitrise
 
-If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Org.
+If you are a Workspace owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Org.
 
-1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![](/img/account-settings-dropdown.jpg)
-2. The **Overview** page displays all the Orgs you’re a member of. Select the Org where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
+1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Profile settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![Account selector dropdown](/img/account-settings-dropdown.png)
+2. The **Overview** page displays all the Orgs you’re a member of. Select the Workspace where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignon.jpg)
 4. Continue with [Getting configuration information from Idaptive](/team-management/organizations/setting-up-idaptive-saml-sso-for-bitrise/#getting-configuration-information-from-idaptive).
 
@@ -70,17 +70,17 @@ If you are an Org owner on Bitrise, you will have to use the **Single Sign-On** 
 
 ## Authorizing SAML SSO
 
-Now that the Org owner has set up SAML SSO, everyone in the Org has to authorize SAML SSO before logging in to their Org via SAML SSO.
+Now that the Workspace owner has set up SAML SSO, everyone in the Workspacehas to authorize SAML SSO before logging in to their Workspace via SAML SSO.
 
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
-2. Bitrise sends a verification e-mail to all Org members. By clicking the **Log In via SAML SSO** button or using the provided URL, organization members can authorize themselves for SAML SSO login. The email also shows the Org owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.![](/img/email-samlssso.jpg)
-3. You’re directed to Bitrise to **Allow “Organization name” to sign you in** page.
-   * Click **Authorize** if you trust the Organization to control your Bitrise account sign-in process.  
+2. Bitrise sends a verification e-mail to all Workspace members. By clicking the **Log In via SAML SSO** button or using the provided URL, Workspace members can authorize themselves for SAML SSO login. The email also shows the Workspace owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.![](/img/email-samlssso.jpg)
+3. You’re directed to Bitrise to **Allow “Workspace name” to sign you in** page.
+   * Click **Authorize** if you trust the Workspace to control your Bitrise account sign-in process.  
      If you’re already logged in Idaptive, you’ll be automatically taken to your Bitrise Dashboard.  
      If you’re not, you’ll be prompted to log into Idaptive, and then taken to your Bitrise Dashboard.
    * Click **Don’t Allow** if the invitation email is from an untrusted source.
 
-     ![SAML SSO in Organizations](https://devcenter.bitrise.io/img/enable-saml.jpg)
+     ![SAML SSO in Workspaces](https://devcenter.bitrise.io/img/enable-saml.jpg)
 
      Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.![](/img/noconnectedsamlsso.png)
 
@@ -90,8 +90,8 @@ If all went well, you should be landing on our Bitrise Dashboard.
 
 Learn how you can:
 
-* [Check out Org member’s SAML SSO statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
+* [Check out Workspace member’s SAML SSO statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
 * [Invite new members with SAML SSO.](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso)
-* [Enforce SAML SSO login](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) to the Org once all Org members have authorized their SAML SSO connection to the Org.
+* [Enforce SAML SSO login](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) to the Workspace once all Workspace members have authorized their SAML SSO connection to the Org.
 * [Log into your Org](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account) now that SAML SSO is set up.
 * [Disable SAML SSO on an Org](/team-management/organizations/saml-sso-in-organizations/#disabling-an-organizations-saml-sso).

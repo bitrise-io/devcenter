@@ -10,7 +10,7 @@ published: false
 ---
 APIを使ってBitrise上で新規アプリをセットアップしましょう：アプリを追加して、SSHキーの生成とアプリの初期設定のセットアップを行います。
 
-他にも、ユーザーや指定のOrganizationへアプリの所有物のリスト化が可能です。
+他にも、ユーザーや指定のWorkspaceへアプリの所有物のリスト化が可能です。
 
 ## 新アプリの追加
 
@@ -35,7 +35,7 @@ Bitrise APIを使ったアプリの追加には3つのステップがありま�
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/register' -d '{"provider":"github","is_public":false,"repo_url":"git@github.com:api_demo/example-repository.git","type":"git","git_repo_slug":"example-repository","git_owner":"api_demo"}'
 
-Organizationにアプリを追加したい場合、curlリクエストの最後にOrganizationを含ませてください。
+Workspaceにアプリを追加したい場合、curlリクエストの最後にWorkspaceを含ませてください。
 
        curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/register' -d '{"provider":"github","is_public":false,"repo_url":"git@github.com:api_demo/example-repository.git","type":"git","git_repo_slug":"example-repository","git_owner":"api_demo","organization_slug":""}'
 
@@ -45,7 +45,7 @@ Organizationにアプリを追加したい場合、curlリクエストの最後�
 
 `finish`エンドポイントを呼び出してアプリ登録処理を完了しましょう。このエンドポイントはアプリの構成を許可します：プロジェクトタイプの設定、ビルドを実行するスタックや初期構成の設定を行うことができます。
 
-環境変数を設定したり、Organizationの指定をすぐに行うことでアプリのオーナーになることができます。
+環境変数を設定したり、Workspaceの指定をすぐに行うことでアプリのオーナーになることができます。
 
     curl -X POST -H 'Authorization: ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/finish' -d '{"project_type":"ios","stack_id":"osx-vs4mac-stable","config":"default-ios-config","mode":"manual","envs":{"env1":"val1","env2":"val2"},"organization_slug":"e1ec3dea540bcf21"}'
 
@@ -67,7 +67,7 @@ Organizationにアプリを追加したい場合、curlリクエストの最後�
 | GET /apps/{app-slug} | 指定のアプリを入手します。 |
 | GET /apps/{app-slug}/bitrise.yml | 指定のアプリのbitrise.ymlを入手します。 |
 | GET /apps/{app-slug}/branches | アプリのレポジトリのブランチをリストアップします。 |
-| GET /organizations/{org-slug}/apps | Organization用のアプリのリストを入手します。 |
+| GET /organizations/{org-slug}/apps | Workspace用のアプリのリストを入手します。 |
 | GET /users/{user-slug}/apps | ユーザー用のアプリのリストを入手します。 |
 
 1つ以上のアプリに関するGETリクエストへのレスポンスは、アプリスラグ、プロジェクトタイプ、gitプロバイダ、レポジトリのオーナーとURLを含みます：

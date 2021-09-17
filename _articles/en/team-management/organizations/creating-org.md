@@ -1,10 +1,10 @@
 ---
-title: Creating Organizations
+title: Creating Workspaces
 tag:
 - teams
 - orgs
-description: You can create and manage Organizations on bitrise.io to manage entire
-  teams quickly and effectively. You can set up multiple groups within an Organization
+description: You can create and manage Workspaces on bitrise.io to manage entire
+  teams quickly and effectively. You can set up multiple groups within a Workspace
   for different apps.
 redirect_from: []
 menu:
@@ -14,45 +14,30 @@ menu:
 ---
 {% include creditbased.html %}
 
-You can create and manage **Organizations** on [bitrise.io](https://www.bitrise.io) to manage entire teams quickly and effectively. You can set up multiple groups within an Organization for different projects - for example, you can have a _Developer_ group and a _Tester_ group assigned to different apps. You can also set roles for your group: these roles determine the access rights provided to members of the group.
+A Workspace is an environment that allows you to manage your Bitrise apps and the team members working on the apps. You can create multiple Workspaces, and you can be invited to Workspaces by other Bitrise users. 
 
-To run builds as an Organization, you need to subscribe to an **Organization** plan.
+You must have access to at least one Workspace to be able to use Bitrise. When you create a new account, you can’t add new apps or run builds. To be able to do so, you need to either create a Workspace, or to be invited to an existing one.
 
-## Creating an Organization
+To run builds as a Workspace, you need a paid plan.
 
-No need for lengthy preparation when you wish to create an Organization on Bitrise: all you really need is an existing Bitrise account - this will be the default owner of the Organization - and an Organization name. You can set up everything else later!
+## Creating a Workspace
+
+To create a Workspace, you just need an existing Bitrise account.
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
-2. On the top menu bar, find the **+** symbol and click it.
+2. On the top menu bar, click the **+** symbol. 
+3. Select **Create a Workspace**. This takes you to the **Create a new Workspace** page.
 
    ![{{ page.title }}](/img/team-management/organization/add-org.png)
-3. Choose **Add Organization** from the dropdown menu.
+3. Find the **Workspace name** input field, and add a name.
 
-   Alternatively, you can create a new Organization from:
-   * your **Account settings** page: find the **+ New Organization** option under **ORGANIZATION** on the left.
-4. In the pop-up window, enter the name and the billing email of your Organization, and click **Create**. By default, your invoices will be sent to the billing email you set here.
+   ![{{ page.title }}](/img/team-management/organization/create-new-org.png)
 
-   ![{{ page.title }}](/img/create-new-org.png)
+4. Click **Create**. 
+5. Choose a plan.  
+   You have two options: Teams and Hobby. If you're interested in the details, or you want to find out more about our other plans, check out our [Pricing page](https://www.bitrise.io/pricing/) for more info.
+6. Click either **Subscribe to Teams** or **Subscribe to Hobby**.
 
-   Please note that you will NOT be able to create an Organization if the domain part of your email address contains uppercase letters.
-   * org@example.com will work.
-   * org@Example.com will NOT work!
-5. Provide your billing information.
+And that's it! You can start adding apps and inviting people to your Workspace!
 
-   You can skip this step and provide these details at a later date. Only the owner(s) of an Organization can modify these.
-
-   Note that you need to subscribe to an Organization plan to be able to run builds.
-6. Transfer apps to your Organization.
-
-   You can skip this step and transfer your apps or add new apps to your Organization at any time.
-
-   ![{{ page.title }}](/img/transfer-apps-test.png)
-7. In the pop-up window, click **Check billing** to immediately set up a subscription plan. You can also add your billing information here.
-
-   ![{{ page.title }}](/img/check-billing.png)
-
-   Alternatively, click **OK** to finish creating your Organization.
-
-And that's it! You can start inviting people to your Organization!
-
-{% include banner.html banner_text="Let's create an Organization on Bitrise! " url="https://app.bitrise.io/dashboard/builds" button_text="Add Organization " %}
+{% include banner.html banner_text="Let's create a Workspace on Bitrise! " url="https://app.bitrise.io/dashboard/builds" button_text="Add Workspace " %}

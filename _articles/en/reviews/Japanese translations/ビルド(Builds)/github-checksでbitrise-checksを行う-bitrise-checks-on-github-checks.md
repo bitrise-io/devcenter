@@ -24,7 +24,7 @@ Bitrise Checksは、BitriseがGitHubに送信する従来のステータスチ�
 
 Bitrise Checksの使用は数クリックでできるようになります。
 
-1. ご自身の[ダッシュボード](https://app.bitrise.io/dashboard/builds)よりOrganizationのアプリを選択します。
+1. ご自身の[ダッシュボード](https://app.bitrise.io/dashboard/builds)よりWorkspaceのアプリを選択します。
 2. アプリの**Settings**タブを選択します。
 3. **ENABLE GITHUB CHECKS**トグルの説明欄にあるリンク**install our app to your GitHub repository**をクリックします。Bitrise Checksをインストールすることが先ですので、この時点ではまだトグルを動かさないでください。[後ほど](/builds/bitrise-checks-on-github-checks/#enabling-github-checks)トグルを右に動かします。
 
@@ -47,9 +47,9 @@ Bitrise Checksの使用は数クリックでできるようになります。
 
 次に、[Bitrise](https://app.bitrise.io/dashboard/builds)のアプリページでGitHub Checksを有効化します。
 
-{% include message_box.html type="important" title="GitHub Checksの有効化は制限されています" content="Organizationのオーナーならびにアプリのadminのみが、アプリの**Settings**ページにあるトグルを有効化することができます。"%}
+{% include message_box.html type="important" title="GitHub Checksの有効化は制限されています" content="Workspaceのオーナーならびにアプリのadminのみが、アプリの**Settings**ページにあるトグルを有効化することができます。"%}
 
-1. Organizationの[ダッシュボード](https://app.bitrise.io/dashboard/builds)に進みます。
+1. Workspaceの[ダッシュボード](https://app.bitrise.io/dashboard/builds)に進みます。
 2. Bitrise ChecksをインストールしたGitHubレポジトリのあるアプリをクリックします。
 3. アプリの**Settings**タブへ進みます。
 4. **ENABLE GITHUB CHECKS**のスイッチを右にトグルします。

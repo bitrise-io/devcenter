@@ -13,11 +13,11 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-If you are invited to join a [Team or an Organization](/team-management/teams-vs-organizations-index/) on Bitrise, you will get an invitation email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io).
+If you are invited to join a [Team or a Workspace](/team-management/teams-vs-organizations-index/) on Bitrise, you will get an invitation email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io).
 
 If you already have a Bitrise account and receive an invitation email, you’ll have to click the **View** button to get to the app's page!
 
-If you don’t have an account yet, and you’re invited to an Organization or a Team, you should click the **Accept invitation** button in the invitation email. This will take you through   registration, and log you into the account. If you attempt to sign up manually, you won’t be able to since your email address is already reserved for the invitation. So we recommend you to check your inbox, look for the invitation email from Bitrise and follow the instructions there.
+If you don’t have an account yet, and you’re invited to a Workspace or a Team, you should click the **Accept invitation** button in the invitation email. This will take you through   registration, and log you into the account. If you attempt to sign up manually, you won’t be able to since your email address is already reserved for the invitation. So we recommend you to check your inbox, look for the invitation email from Bitrise and follow the instructions there.
 
 ![{{ page.title }}](/img/accept-invitation-1.jpg)
 
@@ -27,7 +27,7 @@ The invitation email contains an expiry date which, if elapsed, you won’t be a
 
 This means the invitation has not been redeemed through the invite link so the registration is still incomplete and the invite link has expired. At this stage, resetting your password is impossible since there is no password and no account associated with your email address. Your invitation status is pending on the **Team** tab. We recommend that you contact the person who invited you to revoke your invitation. Then a new invitation email can be sent out to your email address and you can click the **Accept invitation** button before it expires.
 
-If you have accidentally deleted the invitation email, we recommend following the same process to access the Organization or the Team.
+If you have accidentally deleted the invitation email, we recommend following the same process to access the Workspace or the Team.
 
 ## Can I extend the invitation emails' timeout?
 
@@ -43,14 +43,14 @@ Bitrise can process invitations sent to either lowercase or uppercase email addr
 
 ## Signing up with Bitrise invitation and Git provider
 
-If you are invited by an Organization on Bitrise, and before accepting the invitation you're trying to sign up to Bitrise using your Git account (for example, Bitbucket, GitHub or Gitlab), then you will not be able to sign up to Bitrise.
+If you are invited by a Workspace on Bitrise, and before accepting the invitation you're trying to sign up to Bitrise using your Git account (for example, Bitbucket, GitHub or Gitlab), then you will not be able to sign up to Bitrise.
 
-What you should do to access the Organization is follow the instructions included in the invitation email and complete your registration. Make sure you [connect your Git provider account to the Bitrise account](/getting-started/connecting-to-services/connecting-to-services-index/) that you have just signed up to.
+What you should do to access the Workspace is follow the instructions included in the invitation email and complete your registration. Make sure you [connect your Git provider account to the Bitrise account](/getting-started/connecting-to-services/connecting-to-services-index/) that you have just signed up to.
 
-## Can I be invited to an Organization with SSO?
+## Can I be invited to a Workspace with SSO?
 
-If an Organization activated SAML SSO on their account, the Organization owner can still invite new members to the Organization. The invited person has to click the **Accept invitation** button in the email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io). If you wish to join an Organization and you haven’t received an invitation yet, you can also sign up to that Organization through the [Sign up with SSO button](/getting-started/signing-up-to-bitrise/#signing-up-with-sso) IF you know the exact name of the Organization.
+If a Workspace activated SAML SSO on their account, the Workspace owner can still invite new members to the Workspace. The invited person has to click the **Accept invitation** button in the email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io). If you wish to join a Workspace and you haven’t received an invitation yet, you can also sign up to that Workspace through the [Sign up with SSO button](/getting-started/signing-up-to-bitrise/#signing-up-with-sso) IF you know the exact name of the Workspace.
 
 ## What to do if an invitation ends up with 404 error?
 
-If you have been invited to an Organization but you can’t access it due to a 404 error message when clicking the **Accept invitation** button, then contact the Organization owner to revoke your invitation and send it out again. Make sure you get the invitation to the email address that is associated with your existing Bitrise account.
+If you have been invited to a Workspace but you can’t access it due to a 404 error message when clicking the **Accept invitation** button, then contact the Workspace owner to revoke your invitation and send it out again. Make sure you get the invitation to the email address that is associated with your existing Bitrise account.

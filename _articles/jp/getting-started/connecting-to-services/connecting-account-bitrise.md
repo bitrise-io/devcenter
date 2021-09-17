@@ -13,7 +13,7 @@ menu:
 Bitriseの提供する機能（自動Webhook登録を含む）をすべて活用するには、GitHub/GitLab/BitbucketアカウントをBitriseアカウントと連携する必要があります。連携することで、そのアカウントのリポジトリにBitriseへの **書き込み権限** が付与されます。3つすべてのGitプロバイダのアカウントをBitriseアカウントと次の2つの方法で連携することができます。
 
 * 新しいアプリを追加したときにアカウントを連携します
-* `Account settings`ページからアカウントを連携します
+* `Profile settings`ページからアカウントを連携します
 
  Bitriseに同じGitプロバイダ（例．2つのGitHubアカウント）から2つのアカウントを連携することはできないことにご注意ください。
 
@@ -36,7 +36,7 @@ Bitriseの提供する機能（自動Webhook登録を含む）をすべて活用
 ### アカウント設定ページからGitHub/GitLab/BitBucketアカウントを連携する
 
 1. [bitrise.io](https://www.bitrise.io)アカウントでログインします。
-2. 右上にあるアバターをクリックし、`Account settings`を選択します。
+2. 右上にあるアバターをクリックし、`Profile settings`を選択します。
 3. 左メニューから、連携したいアカウントのGitプロバイダ名のトグルスイッチをクリックします。
 
    ![Connect account to Bitrise](/img/signing-up/connect-account.png)
@@ -48,5 +48,5 @@ Bitriseの提供する機能（自動Webhook登録を含む）をすべて活用
 ### GitHub/GitLab/BitBucketアカウント連携の解除
 
 1. [bitrise.io](https://www.bitrise.io)アカウントでログインします。
-2. 右上にあるアバターをクリックし、`Account settings`を選択します。
+2. 右上にあるアバターをクリックし、`Profile settings`を選択します。
 3. 左メニューから、連携を解除したいGitプロバイダ名のトグルスイッチをクリックします。

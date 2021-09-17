@@ -8,8 +8,8 @@ tag:
 - faq
 - apps
 description: It can happen that you need to transfer an Application on Bitrise to another
-  User or to an Organization. This can be done in a few seconds via a few quick steps.
+  User or to a Workspace. This can be done in a few seconds via a few quick steps.
 redirect_from: []
 
 ---
-It can happen that you need to transfer an Application on [Bitrise](https://www.bitrise.io) to another User or to an Organization. This can be done in a few seconds: check out our [Changing the owner of an app](/team-management/changing-the-owner-of-an-app/) guide. 
+It can happen that you need to transfer an Application on [Bitrise](https://www.bitrise.io) to another User or to a Workspace. This can be done in a few seconds: check out our [Changing the owner of an app](/team-management/changing-the-owner-of-an-app/) guide. 

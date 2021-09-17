@@ -12,7 +12,7 @@ tag:
 - builds
 - workflows
 description: 'Get started with Bitrise: sign up, add an app, start a build. Find out
-  how to register webhooks, set up organizations, and learn the basics of Steps and
+  how to register webhooks, set up Workspaces, and learn the basics of Steps and
   Workflows.'
 menu:
   main:
@@ -88,11 +88,11 @@ Read more about Workflows and Steps in our relevant guides:
 
 All builds run in clean virtual machines that are discarded after the build is complete. Read more about them in our [Virtual machines](/infrastructure/virtual-machines/) guide.
 
-## Teams and organizations
+## Teams and Workspaces
 
-Once you set up a new app, you can [start inviting team members](/team-management/index). If you have a Developer or an Organization plan, you can have unlimited team members! Only members of an app's team can view a private app, including its logs. For public apps, anyone can view the build logs who has the URL to the build.
+Once you set up a new app, you can [start inviting team members](/team-management/index). If you have a Developer or a Workspace plan, you can have unlimited team members! Only members of an app's team can view a private app, including its logs. For public apps, anyone can view the build logs who has the URL to the build.
 
-You can also [create organizations](/team-management/organizations/creating-org) if you are on one of our Organization plans. Organizations allow you to manage entire teams quickly and effectively.
+You can also [create Workspaces](/team-management/organizations/creating-org). A Workspace is an environment that allows you to manage your Bitrise apps and the team members working on the apps. You can create multiple Workspaces, and you can be invited to Workspaces by other Bitrise users. 
 
 ## Testing and deployment
 

@@ -8,7 +8,7 @@ description: ''
 published: false
 
 ---
-Bitriseで[Team (チーム)もしくはOrganization (組織)](/jp/team-management/teams-vs-organizations-index/)の参加を招待された際、[letsconnect@bitrise.io](mailto:letsconnect@bitrise.io)より招待メールが送信されます。
+Bitriseで[Team (チーム)もしくはWorkspace (組織)](/jp/team-management/teams-vs-organizations-index/)の参加を招待された際、[letsconnect@bitrise.io](mailto:letsconnect@bitrise.io)より招待メールが送信されます。
 
 すでにBitriseアカウントをお持ちのうえで招待メールを受け取った場合は、**View**ボタンをクリックしてアプリのページへ移りましょう！
 
