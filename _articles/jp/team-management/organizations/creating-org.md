@@ -23,7 +23,7 @@ Bitriseで組織を作成するために大変な準備は必要ありません�
 3. `Add organization` をドロップメニューから選択します。
 
    また、次の方法でも新しい組織を作ることができます。
-   * `Account settings` ページ: 左にある `+ New Organization` オプション
+   * `Profile settings` ページ: 左にある `+ New Organization` オプション
    * `Apps` 画面: アプリの上にあるドロップメニューを開いて、`Create organization` をクリック
 
    ![{{ page.title }}](/img/team-management/organization/add-org-apps.png)

@@ -24,7 +24,7 @@ published: false
 
 1. ユーザー用の**Personal Access Token**を作成します。
    
-   `Account settings`に行き、左側の`Security`オプションを選択します。 `Generate new`をクリックします。
+   `Profile settings`に行き、左側の`Security`オプションを選択します。 `Generate new`をクリックします。
 
    ![Access token](/img/getting-started/triggering-builds/generate-token.png) **重要**：コードが作成されたら、必ずコピーしてください。二度見ることはできません！
 2. アプリの`Workflow Editor`の`Secrets`タブでシークレット環境変数を作成し、トークンをバリューとして追加します。

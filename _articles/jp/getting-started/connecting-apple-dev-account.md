@@ -18,7 +18,7 @@ BitriseでApple Developer Accountを認証し、Apple Developer PortalとBitrise
 1. [bitrise.io](https://www.bitrise.io)にログインしてください。
 2. `Dashboard` の右上にあるプロフィールをクリックし、プルダウンメニューから`アカウント設定`を選択します。
 
-   ![Account settings menu](/img/adding-a-new-app/account-settings.png)
+   ![Profile settings menu](![Account selector dropdown](/img/account-settings-dropdown.png))
 3. 左側のメニューバーで、`Apple Developer Account`を選択します。
 4. ポップアップウィンドウでApple Developer Accountの認証情報を入力し、`Store credentials`をクリックします。
 

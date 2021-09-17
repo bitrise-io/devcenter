@@ -39,7 +39,7 @@ Connecting one Git provider account is not final: you can disconnect an account 
 
 And you are done! If everything goes well, you are redirected to the [**Create New App** ](https://app.bitrise.io/apps/add)page and you can add your new app.
 
-### Connect your GitHub/GitLab/BitBucket account from the Account settings page
+### Connect your GitHub/GitLab/BitBucket account from the Profile settings page
 
 1. Log in to your [bitrise.io](https://www.bitrise.io) account.
 2. Click your avatar on the top right corner and select **Profile settings**.
@@ -57,4 +57,4 @@ And you are done!
 2. Click your avatar on the top right corner and select **Profile settings**.
 3. On the left menu bar, click the toggle next to the name of the Git provider you wish to disconnect.
 
-{% include banner.html banner_text="Let's connect my Git account to Bitrise!" url="https://app.bitrise.io/me/profile#" button_text="Go to your Account settings" %}
+{% include banner.html banner_text="Let's connect my Git account to Bitrise!" url="https://app.bitrise.io/me/profile#" button_text="Go to your Profile settings" %}

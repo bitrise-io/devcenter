@@ -13,7 +13,7 @@ Bitriseアカウントの二段階認証(TFA)を有効化すれば、セキュ�
 
 1. 携帯電話に [Google Authenticator](https://support.google.com/accounts/answer/1066447?hl=ja) をダウンロードしてインストールします。
 2. [bitrise.io](https://www.bitrise.io) にログインして、 `Profile` ページに移動します。
-3. `Account settings` をクリックします。
+3. `Profile settings` をクリックします。
 4. スクロールして左側にある `Security` をクリックします。
 5. `Two-factor authentication` の下にある、 `Enable` をクリックします
 6. 表示されるQRコードを、携帯電話にインストールされた Google Authenticator でスキャンします。

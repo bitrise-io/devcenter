@@ -11,7 +11,7 @@ menu:
 
 ## 新しいアプリを組織に追加
 
-新しいアプリは組織に直接追加できます。組織の `Account settings`ページから、または組織のメンバーであるアカウントのダッシュボードから行うことができます。
+新しいアプリは組織に直接追加できます。組織の `Profile settings`ページから、または組織のメンバーであるアカウントのダッシュボードから行うことができます。
 
 1. 新しいアプリの作成ページにアクセスします。
 
@@ -22,7 +22,7 @@ menu:
    * [bitrise.io](https://www.bitrise.io)で `Dashboard`を開き、アプリリストの上にあるドロップダウンメニューを開いて組織を選択します。 `+ Add new app` ボタンをクリックします。
 
      ![{{ page.title }}](/img/team-management/organization/add-new-app-org.png)
-   * 組織の`Account settings`ページを開き、左側のメニューから`Apps`オプションをクリックします。 `Add new app`ボタンをクリックします。
+   * 組織の`Profile settings`ページを開き、左側のメニューから`Apps`オプションをクリックします。 `Add new app`ボタンをクリックします。
 2. `Create New App`ページで、組織アカウントがドロップダウンメニューで選択されていることを確認します。
 
    ![{{ page.title }}](/img/team-management/organization/add-app-screen.png)
