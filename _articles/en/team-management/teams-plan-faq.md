@@ -12,20 +12,17 @@ As part of our efforts to introduce a credit-based model, we’re now offering o
 
 ## How to sign up for the trial?
 
-[Sign up for Bitrise](/getting-started/signing-up-to-bitrise/), and then create a Workspace. To do so:
+[Sign up for Bitrise](/getting-started/signing-up-to-bitrise/), and then create a Workspace. You can only trial the Teams plan on your first Workspace. 
 
-1. Log in to [bitrise.io](https://www.bitrise.io).
-2. On the top menu bar, click the **+** symbol. 
-3. Select **Create a Workspace**. This takes you to the **Create a new Workspace** page.
+If your account doesn't have a Workspace yet, you are automatically taken to the **Create a new Workspace** page when you log in: 
 
-   ![{{ page.title }}](/img/team-management/organization/add-org.png)
-3. Find the **Workspace name** input field, and add a name.
+1. Find the **Workspace name** input field, and add a name.
 
    ![{{ page.title }}](/img/team-management/organization/create-new-org.png)
 
-4. Click **Create Workspace**. 
+1. Click **Create Workspace**. 
 
-Once you're done with setting up the Workspace, your trial will start automatically. You can only trial the Teams plan on your first Workspace. 
+Once you're done with setting up the Workspace, your trial will start automatically. 
 
 ## If I sign up for a trial, when will it end?
 
