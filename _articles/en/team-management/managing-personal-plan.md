@@ -16,15 +16,11 @@ menu:
 
 {% include creditbased.html %}
 
-On Bitrise, there are two subscription types for personal accounts: the Hobby plan and the Developer plan. The Hobby plan is our free plan while the Developer plan is the only premium plan that you can use without creating a Workspace.
-
-{% include message_box.html type="important" title="Personal accounts and Workspace accounts" content="Be aware that personal accounts and Workspace accounts are separate! This means that in order to sign up for a Workspace plan, you need to create a Workspace and then provide valid payment information in the Org's **Billing** section,  Read more about Workspaces in the [Workspaces section](/team-management/organizations/organizations-index/)." %}
-
-You can switch between the two - upgrade to Developer or downgrade to Hobby - at any time.
+{% include legacy_users.html %}
 
 ## Adding and updating payment information
 
-To sign up for a Developer plan, you will need to provide a valid credit card. You can update your credit card number at any time after setting it.
+You can update your credit card number at any time after setting it.
 
 1. Log in to your Bitrise account.
 2. Click BitBot in the top right corner and select **Profile settings** from the dropdown menu.

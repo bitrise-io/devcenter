@@ -25,10 +25,9 @@ For example, let's say the Workspace called _TestOrg_ owns an app called _TestAp
 
 ## Creating groups for Workspaces
 
-1. Sign in with an account that is an **owner** of the Workspace and open its profile page.
-2. Go to your Workspace's profile page: click **Switch Profile** on the top left corner and select the Workspace you need.
-
-   ![Switching profile to select a Workspace](/img/switchprofile.jpg)
+1. Sign in with an account that is an owner of the Workspace.
+1. In the top right corner, open the account selector dropdown menu. 
+1. Find the Workspace you need and click the little gear icon next to its name.
 3. On the left, select **Groups** from the menu options.
 4. Find the **Create new Group** section at the top.
 
@@ -41,10 +40,9 @@ For example, let's say the Workspace called _TestOrg_ owns an app called _TestAp
 
 In practice, adding members to a Workspace means adding members to a group belonging to a Workspace. Once you have the groups you need for your Workspace, adding members to them is very simple.
 
-1. Sign in with an account that is an **owner** of the Workspace and open its profile page.
-2. Go to your Workspace's profile page: click **Switch Profile** on the top left corner and select the Workspace you need.
-
-   ![Switching profile to select a Workspace](/img/switchprofile.jpg)
+1. Sign in with an account that is a member of the Workspace.
+1. In the top right corner, open the account selector dropdown menu. 
+1. Find the Workspace you need and click the little gear icon next to its name.
 3. On the left, select **Groups** from the menu options.
 4. Find the group you need and click the **+** sign to the right of the name of the group.
 
@@ -61,8 +59,9 @@ Members can be removed from the entire Workspace or from one of the groups belon
 
 ### Removing group members
 
-1. Sign in with an account that is an **owner** of the Workspace and open its profile page.
-2. Go to your Workspace's profile page: click **Switch Profile** on the top left corner and select the Workspace you need.![Switching profile to select a Workspace](https://app.forestry.io/sites/mpxzvqn7ysfysw/body-media//img/switchprofile.jpg)
+1. Sign in with an account that is a member of the Workspace.
+1. In the top right corner, open the account selector dropdown menu. 
+1. Find the Workspace you need and click the little gear icon next to its name.
 3. On the left, select **Groups** from the menu options.
 4. Find the group and the group member you are looking for, and click the little **x** in the red square on the right of the username of the member.![Removing a group member from an Org](/img/remomember.jpg)
 
@@ -70,8 +69,9 @@ Members can be removed from the entire Workspace or from one of the groups belon
 
 Removing members from the entire Workspace removes them from all the groups they are part of in the Workspace and they can no longer work on any of the apps unless they are invited back, either as a group member or as an outside contributor.
 
-1. Sign in with an account that is an **owner** of the Workspace and open its profile page.
-2. Go to your Workspace's profile page: click **Switch Profile** on the top left corner and select the Workspace you need.![Switching profile to select a Workspace](https://app.forestry.io/sites/mpxzvqn7ysfysw/body-media//img/switchprofile.jpg)
+1. Sign in with an account that is a member of the Workspace.
+1. In the top right corner, open the account selector dropdown menu. 
+1. Find the Workspace you need and click the little gear icon next to its name.
 3. On the left, select **People** from the menu options.
 4. Find the member you are looking for, and click the little **x** in the red square on the right of the username of the member.![Removing members from an Org](/img/removeorg.jpg)
 5. In the pop-up window, click **Yes**.
@@ -82,10 +82,9 @@ Removing members from the entire Workspace removes them from all the groups they
 
 ## Deleting groups
 
-1. Sign in with an account that is an **owner** of the Workspace and open its profile page.
-2. Go to your Workspace's profile page: click **Switch Profile** on the top left corner and select the Workspace you need.
-
-   ![Switching profile to select a Workspace](https://app.forestry.io/sites/mpxzvqn7ysfysw/body-media//img/switchprofile.jpg)
+1. Sign in with an account that is a member of the Workspace.
+1. In the top right corner, open the account selector dropdown menu. 
+1. Find the Workspace you need and click the little gear icon next to its name.
 3. On the left, select **Groups** from the menu options.
 4. Choose the group you wish to delete, and click the dropdown menu indicated by the **...** symbol.
 5. Click **Delete group** then click **Yes** in the pop-up window.

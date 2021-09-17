@@ -23,12 +23,9 @@ Please note that Workspaces is a PREMIUM FEATURE. You need to subscribe to an **
 
 ### Adding or modifying billing info
 
-1. Sign in with an account that is an owner of a Workspace and open its profile page.
-2. Go to your Workspace's profile page: click **Switch Profile** on the top left corner and select the Workspace you need.
-
-   ![{{ page.title }}](/img/switch-profile-1.jpg)
-
-   Be aware that your own billing info and your Workspace's billing info are SEPARATE. You CANNOT change your Workspace's billing info and subscription plans in the settings of your own personal profile!
+1. Sign in with an account that is a member of the Workspace.
+1. In the top right corner, open the account selector dropdown menu. 
+1. Find the Workspace you need and click the little gear icon next to its name.
 3. On the left, select **Billing** from the menu options.
 
    ![{{ page.title }}](/img/billing.png)
@@ -45,12 +42,9 @@ Please note that Workspaces is a PREMIUM FEATURE. You need to subscribe to an **
 
 Setting up a subscription plan for a Workspace requires billing information, including payment details. You can set up a credit card and we'll bill you automatically; for other payment methods, please contact our support.
 
-1. Sign in with an account that is an owner of a Workspace and open its profile page.
-2. Go to your Workspace's profile page: click **Switch Profile** on the top left corner and select the Workspace you need.
-
-   Be aware that your own billing info and your Workspace's billing info are SEPARATE. You CANNOT change your Workspace's billing info and subscription plans in the settings of your own personal profile!
-
-   ![{{ page.title }}](/img/switch-profile-1.jpg)
+1. Sign in with an account that is a member of the Workspace.
+1. In the top right corner, open the account selector dropdown menu. 
+1. Find the Workspace you need and click the little gear icon next to its name.
 3. On the left, select **Billing** from the menu options.
 
    ![{{ page.title }}](/img/billing.png)
