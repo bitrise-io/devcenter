@@ -5,11 +5,15 @@ redirect_from: []
 summary: ''
 
 ---
-Bitrise currently offers two different types of free subscription plans, called Hobby plans: a credit-based one and a concurrency-based one. Here’s everything you need to know about the credit-based Hobby plan!
+If you have a small hobby project that needs a Continous Integration service, Bitrise's free Hobby plan is your best bet. Here’s everything you need to know about the credit-based Hobby plan!
+
+## How do I  sign up for the free plan?
+
+After [signing up for Bitrise](/getting-started/signing-up-to-bitrise/), create [a new Workspace](/team-management/organizations/creating-org). If it's your first Workspace, you will be automatically granted a [free trial on the Teams plan](/team-management/teams-plan-faq/). Once the trial is over, the Workspace will be placed on the Hobby plan.
 
 ## How do I get credits?
 
-You get a certain amount of credit each month: this is what we call your monthly credit bundle.
+You get a certain amount of credits each month: this is what we call your monthly credit bundle.
 
 ## How do I use my credits?
 
@@ -27,10 +31,6 @@ Build with confidence: a running build will never be aborted. When you’re abou
 
 No, running builds will never be aborted. You can always finish a running build.
 
-## Can I get more credits?
-
-Yes! If you run out of credits, we’ll contact you to get your feedback. You can have a short call with our researcher for 300 credits, or answer a few questions in a survey for 100 credits.
-
 ## How many apps can I have?
 
 On the credit-based Hobby plan, you can have one private app and up to ten public apps.
@@ -46,7 +46,3 @@ Yes. Builds cost 2 credits per minute on our macOS-based stacks and 1 credit per
 ## How many builds can I run at the same time?
 
 You can run 10 builds on macOS stacks and 80 builds on Linux stacks in parallel.
-
-## Can I switch to the concurrency-based Hobby plan, using the same account?
-
-To do that, you need to [delete the existing account](https://devcenter.bitrise.io/team-management/deleting-bitrise-account/#deleting-your-account "https://devcenter.bitrise.io/team-management/deleting-bitrise-account/#deleting-your-account"), and [register again](https://devcenter.bitrise.io/getting-started/signing-up-to-bitrise/ "https://devcenter.bitrise.io/getting-started/signing-up-to-bitrise/") with the same email or Git provider. Note that before you could delete your account, you need to either delete your existing apps, or [transfer them to another account](https://devcenter.bitrise.io/team-management/changing-the-owner-of-an-app/ "https://devcenter.bitrise.io/team-management/changing-the-owner-of-an-app/").

@@ -16,24 +16,7 @@ Workspaces can own several apps, with different (or the same, if that's what you
 
 ## Adding new apps to a Workspace
 
-A new app can be added directly to a Workspace. You can do this either from the Workspace's **Profile settings** page or from the Dashboard of an account that is a member of the Workspace.
-
-1. Get to the **Create New App** page.
-
-   There are three options to get there:
-   * On the top menu bar, find the **+** symbol and click it, then click the **Add App** option.
-
-     ![{{ page.title }}](/img/add-new-app.jpg)
-   * Open the **Dashboard** on [bitrise.io](https://www.bitrise.io), open the dropdown menu above your app list and select your Workspace. Click the **+ Add new app** button.
-
-     ![{{ page.title }}](/img/add-new-app-organization.png)
-   * Open the **Profile settings** page of your Workspace, and click the **Apps** option on the menu on the left. Click the **Add new app** button.
-
-     ![{{ page.title }}](/img/add-new-app-org-settings.jpg)
-2. On **Create New App** page, make sure that the Workspace account is selected in the dropdown menu.
-
-   ![{{ page.title }}](/img/create-new-app-organization-selected.png)
-3. Proceed with adding a new app as usual! It will be owned by the Workspace.
+A new app can be added directly to a Workspace. When [adding a new app](/getting-started/adding-a-new-app/), set the Workspace as its owner at the start of the process. 
 
 ## Transferring apps to a Workspace
 
@@ -48,10 +31,9 @@ App ownership can be transferred **from** a Workspace to another account on the 
 
 ### Transferring apps from the Workspace profile
 
-1. Sign in with an account that is a member of the Workspace and open the account's profile page.
-2. Go to your Workspace's profile page: click **Switch Profile** on the top left corner and select the Workspace you need.
-
-   ![{{ page.title }}](/img/switch-profile-1.jpg)
+1. Sign in with an account that is a member of the Workspace.
+1. In the top right corner, open the account selector dropdown menu. 
+1. Find the Workspace you need and click the little gear icon next to its name.
 3. On the left, select **Apps** from the menu options.
 4. Click the **Transfer apps** button.
 

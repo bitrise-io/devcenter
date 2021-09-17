@@ -12,14 +12,17 @@ As part of our efforts to introduce a credit-based model, we’re now offering o
 
 ## How to sign up for the trial?
 
-Sign up for Bitrise, and then create a Workspace. To do so:
+[Sign up for Bitrise](/getting-started/signing-up-to-bitrise/), and then create a Workspace. You can only trial the Teams plan on your first Workspace. 
 
-1. Log in to Bitrise.
-2. Go to [your profile page](https://app.bitrise.io/me/profile#/).
-3. Scroll down to **Workspaces**.
-4. Click **Start FREE TRIAL**.
+If your account doesn't have a Workspace yet, you are automatically taken to the **Create a new Workspace** page when you log in: 
 
-Follow the instructions to set up your first Workspace - once you're done, your trial will start.
+1. Find the **Workspace name** input field, and add a name.
+
+   ![{{ page.title }}](/img/team-management/organization/create-new-org.png)
+
+1. Click **Create Workspace**. 
+
+Once you're done with setting up the Workspace, your trial will start automatically. 
 
 ## If I sign up for a trial, when will it end?
 
@@ -29,14 +32,13 @@ As of now, Teams plan trials are indefinite, there’s no time limit on using it
 
 Yes, if you are the **owner** of a Workspace. To do so:
 
-1. Go to the [**Profile settings**](https://app.bitrise.io/me/profile#/overview) page.
-2. Click **Switch profile.**
-3. Select the Workspace. This will take you to the overview page where you can see your available credits.
-4. Click the **Subscribe to the Teams plan** button.
-5. Choose your credit tier.
-6. Click **Checkout**.
-
-After that, you'll need to provide payment details. Once the first payment is authorized, your subscription starts immediately.
+1. Log in to Bitrise. 
+1. On the **Dashboard**, find the account selector in the top right corner. 
+1. Open the dropdown menu, and find the Workspace you want to use.
+1. Click the little gear icon next to its name. This will take you to the **Workspace settings** page.
+1. On the left, find the **Billing** tab and click it. This will take you to the Workspace's **Billing** page.
+1. On the **Billing** page, click **Upgrade to Teams plan** and follow the instructions.
+   You'll need to provide payment details. Once the first payment is authorized, your subscription starts immediately.
 
 ## What features does the Teams plan have?
 
@@ -51,16 +53,7 @@ Switching to the Teams plan from our credit-based Hobby plan has numerous benefi
 
 You get 500 credits for the trial. Once you run out, your trial ends.
 
-On the full Teams plan, you get a certain amount of credits each month, depending on your credit tier. If you need more credits, you need to upgrade to a higher credit tier. To do so:
-
-1. Go to the [**Profile settings**](https://app.bitrise.io/me/profile#/overview) page.
-2. Click **Switch profile.**
-3. Select your Workspace. This will take you to the overview page where you can see your available credits.
-4. Click the **Change credit tier** button.
-5. Choose the new credit tier.
-6. Click **Checkout**.
-
-After that, you'll need to provide payment details. Once the first payment is authorized, your new subscription starts immediately.
+On the full Teams plan, you get a certain amount of credits each month, depending on your credit tier. If you need more credits, you need to upgrade to a higher credit tier. You can do that on the **Billing** tab of your Workspace.
 
 ## Will I lose my unused credits if I switch to a different plan?
 

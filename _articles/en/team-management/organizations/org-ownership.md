@@ -17,10 +17,9 @@ Every Workspace must have at least one owner.
 
 ## Adding owners to a Workspace
 
-1. Sign in with an account that is an owner of a Workspace and open its profile page.
-2. Go to your Workspace's profile page: click **Switch Profile** on the top left corner and select the Workspace you need.
-
-   ![{{ page.title }}](/img/switch-profile-2.jpg)
+1. Sign in with an account that is a member of the Workspace.
+1. In the top right corner, open the account selector dropdown menu. 
+1. Find the Workspace you need and click the little gear icon next to its name.
 3. On the left, select **Groups** from the menu options.
 4. Find the **Workspace owners** group.
 

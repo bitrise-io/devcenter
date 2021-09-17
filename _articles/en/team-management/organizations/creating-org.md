@@ -18,11 +18,9 @@ A Workspace is an environment that allows you to manage your Bitrise apps and th
 
 You must have access to at least one Workspace to be able to use Bitrise. When you create a new account, you can’t add new apps or run builds. To be able to do so, you need to either create a Workspace, or to be invited to an existing one.
 
-To run builds as a Workspace, you need a paid plan.
-
 ## Creating a Workspace
 
-To create a Workspace, you just need an existing Bitrise account.
+If you sign up for Bitrise, you are automatically prompted to create a new Workspace. If you skip creating a Workspace, or you want to create additional Workspaces later, you can of course do it:
 
 1. Log in to [bitrise.io](https://www.bitrise.io).
 2. On the top menu bar, click the **+** symbol. 
@@ -33,7 +31,7 @@ To create a Workspace, you just need an existing Bitrise account.
 
    ![{{ page.title }}](/img/team-management/organization/create-new-org.png)
 
-4. Click **Create**. 
+4. Click **Create Workspace**. 
 5. Choose a plan.  
    You have two options: Teams and Hobby. If you're interested in the details, or you want to find out more about our other plans, check out our [Pricing page](https://www.bitrise.io/pricing/) for more info.
 6. Click either **Subscribe to Teams** or **Subscribe to Hobby**.
