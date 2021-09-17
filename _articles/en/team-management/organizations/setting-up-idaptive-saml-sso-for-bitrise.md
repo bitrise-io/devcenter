@@ -91,7 +91,7 @@ If all went well, you should be landing on our Bitrise Dashboard.
 Learn how you can:
 
 * [Check out Workspace member’s SAML SSO statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
-* [Invite new members with SAML SSO.](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso)
-* [Enforce SAML SSO login](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) to the Workspace once all Workspace members have authorized their SAML SSO connection to the Org.
+* [Invite new members with SAML SSO.](/team-management/organizations/saml-sso-in-organizations/#inviting-new-workspace-members-with-saml-sso)
+* [Enforce SAML SSO login](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-a-workspace) to the Workspace once all Workspace members have authorized their SAML SSO connection to the Org.
 * [Log into your Org](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account) now that SAML SSO is set up.
-* [Disable SAML SSO on an Org](/team-management/organizations/saml-sso-in-organizations/#disabling-an-organizations-saml-sso).
+* [Disable SAML SSO on an Org](/team-management/organizations/saml-sso-in-organizations/#disabling-a-workspaces-saml-sso).

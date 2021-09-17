@@ -13,7 +13,7 @@ menu:
     weight: 5
 
 ---
-Set up an email address so we can send you your invoices - no need to rummage around the site looking for them, we'll deliver them straight to your inbox. However, if you wish to download it manually from the site, you can do that, too, of course! You can find the past invoices on the Workspace's **Billing** page - you can read more [here](#downloading-organization-invoices)!
+Set up an email address so we can send you your invoices - no need to rummage around the site looking for them, we'll deliver them straight to your inbox. However, if you wish to download it manually from the site, you can do that, too, of course! You can find the past invoices on the Workspace's **Billing** page - you can read more [here](#downloading-workspace-invoices)!
 
 ### Setting up an email address for Workspace invoices
 

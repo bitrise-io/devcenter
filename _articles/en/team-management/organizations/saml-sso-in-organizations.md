@@ -38,7 +38,7 @@ If you are a Workspace owner on Bitrise, you will have to use the **Single Sign-
    ![Account selector dropdown](/img/account-settings-dropdown.png)
 2. The **Overview** page displays all the Orgs you’re a member of. Select the Workspace where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignon.jpg)
-4. Continue with [setting up SAML SSO for your Workspace on Bitrise](/team-management/organizations/saml-sso-in-organizations/#setting-up-saml-sso-for-a-bitrise-organization).
+4. Continue with [setting up SAML SSO for your Workspace on Bitrise](/team-management/organizations/saml-sso-in-organizations/#setting-up-saml-sso-for-a-bitrise-workspace).
 
 {% include message_box.html type="info" title="Specific guides about connecting Bitrise to a SAML SSO provider" content="Bitrise can be connected to a bunch of SAML SSO providers. Check out our detailed guides on how to set them up:
 
@@ -78,7 +78,7 @@ Now that the Workspace owner has set up SAML SSO, everyone in the Workspacehas t
 
      Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.![](/img/noconnectedsamlsso.png)
 
-If all went well, you should be landing on our Bitrise Dashboard. As a Workspace owner, you might want to check how Workspace members are progressing with their SAML SSO connection: [check Workspace member’s SAML SSO statuses ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)or [invite new members to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso).
+If all went well, you should be landing on our Bitrise Dashboard. As a Workspace owner, you might want to check how Workspace members are progressing with their SAML SSO connection: [check Workspace member’s SAML SSO statuses ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)or [invite new members to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-workspace-members-with-saml-sso).
 
 ## Inviting new Workspace members with SAML SSO
 
@@ -153,7 +153,7 @@ To enforce SAML SSO on a Workspace in Bitrise, all Workspace members have to fir
 
 Now Workspace members can only log in via SAML SSO.![](/img/saml-sso-enforced.jpg)
 
-{% include message_box.html type="note" title="Adding a Bitrise user to a Workspace with enforced SSO" content="If you wish to add a Bitrise user (who is not a member in your Org) to your Workspace with enforced SSO, then we recommend that the Workspace admin turns the enforced SSO off and [invites the user to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-org-members-with-saml-sso). The invited Bitrise user has to go through the [invitation process and enable SSO connection](/team-management/organizations/saml-sso-in-organizations/#joining-a-saml-sso-org-on-bitrise-as-a-new-member). Once that is done, the Workspace admin can turn the **Enforce SSO** switch back on."%}
+{% include message_box.html type="note" title="Adding a Bitrise user to a Workspace with enforced SSO" content="If you wish to add a Bitrise user (who is not a member in your Org) to your Workspace with enforced SSO, then we recommend that the Workspace admin turns the enforced SSO off and [invites the user to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-workspace-members-with-saml-sso). The invited Bitrise user has to go through the [invitation process and enable SSO connection](/team-management/organizations/saml-sso-in-organizations/#joining-a-saml-sso-workspace-on-bitrise-as-a-new-member). Once that is done, the Workspace admin can turn the **Enforce SSO** switch back on."%}
 
 ### Can’t enforce SAML SSO on your Workspace?
 

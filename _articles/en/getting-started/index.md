@@ -90,9 +90,11 @@ All builds run in clean virtual machines that are discarded after the build is c
 
 ## Teams and Workspaces
 
-Once you set up a new app, you can [start inviting team members](/team-management/index). If you have a Developer or a Workspace plan, you can have unlimited team members! Only members of an app's team can view a private app, including its logs. For public apps, anyone can view the build logs who has the URL to the build.
+Once you set up a new app, you can [start inviting team members](/team-management/index). Only members of an app's team can view a private app, including its logs. For public apps, anyone can view the build logs who has the URL to the build.
 
 You can also [create Workspaces](/team-management/organizations/creating-org). A Workspace is an environment that allows you to manage your Bitrise apps and the team members working on the apps. You can create multiple Workspaces, and you can be invited to Workspaces by other Bitrise users. 
+
+To sign up for a paid subscription of your own, you need to [create your own Workspace](/team-management/organizations/creating-org). Check our [Pricing page](https://www.bitrise.io/pricing) for more information.
 
 ## Testing and deployment
 

@@ -22,11 +22,13 @@ When you sign up for Bitrise, you create your own individual user account. By it
 
 - [Create your own Workspace](/team-management/organizations/creating-org/).
 - [Get invited to an existing Workspace](/team-management/organizations/members-organizations/).
-- [Get added as an outside contributor to an app's team](/team-management/organizations/managing-apps#adding-contributors-to-an-app).
+- [Get added as an outside contributor to an app's team](/team-management/organizations/managing-apps/#adding-contributors-to-an-app).
+
+To sign up for a paid subscription of your own, you need to [create your own Workspace](/team-management/organizations/creating-org). 
 
 {% include legacy_users.html %}
 
-In [Teams vs Workspaces](/team-management/teams-vs-organizations-index#teams-vs-workspaces), we discuss the difference between Workspaces and app teams. 
+In [Teams vs Workspaces](/team-management/teams-vs-organizations-index/#teams-vs-workspaces), we discuss the difference between Workspaces and app teams. 
 
 ## Teams vs Workspaces
 

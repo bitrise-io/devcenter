@@ -89,7 +89,7 @@ Bitriseアカウントを作成するには、ユーザーネームとパスワ�
 
 Bitriseにサインアップして、Workspaceの[SAML SSO](/team-management/organizations/saml-sso-in-organizations/)を使ってBitrise Workspace に加入することができます。
 
-{% include message_box.html type="important" title="サインアップする前に" content="IdP側では、Administrator (管理者)がBitrise SAML SSO アプリのWorkspaceへユーザーを追加する必要があります。**Sign up with SSO**経由でどのBitrise Workspaceに加入すればいいのかわからない場合、Bitrise Workspace内の[Group menu](/team-management/organizations/members-organizations/#adding-members-to-organizations)からBitrise Workspaceのオーナーによって招待してもらうことができます。"%}
+{% include message_box.html type="important" title="サインアップする前に" content="IdP側では、Administrator (管理者)がBitrise SAML SSO アプリのWorkspaceへユーザーを追加する必要があります。**Sign up with SSO**経由でどのBitrise Workspaceに加入すればいいのかわからない場合、Bitrise Workspace内の[Group menu](/team-management/organizations/members-organizations/#adding-members-to-workspaces)からBitrise Workspaceのオーナーによって招待してもらうことができます。"%}
 
 Bitriseへのサインアップ方法を確認していきます。
 

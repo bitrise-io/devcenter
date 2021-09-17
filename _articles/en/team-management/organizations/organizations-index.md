@@ -22,7 +22,7 @@ A Workspace is an environment that allows you to manage your Bitrise apps and th
 - [Create your own Workspace](/team-management/organizations/creating-org/).
 - [Get invited to an existing Workspace](/team-management/organizations/members-organizations/).
 
-To be able to add apps and run builds, you either need a Workspace or you need to [get added as an outside contributor to an app's team](/team-management/organizations/managing-apps#adding-contributors-to-an-app).
+To be able to add apps and run builds, you either need a Workspace or you need to [get added as an outside contributor to an app's team](/team-management/organizations/managing-apps/#adding-contributors-to-an-app).
 
 {% include legacy_users.html %}
 
