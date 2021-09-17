@@ -100,13 +100,15 @@ Yes. Check out the following table to see the different machine types and their 
 
 | Linux machines | Specs | Credit multiplier |
 | --- | --- | --- |
-| Linux Standard | Ubuntu VM, 2vCPU, 7.5GB RAM @2.6GHz | 1 credit/min |
-| Linux Elite | Ubuntu VM, 4vCPU, 15GB RAM @2.6GHz | 2 credits/min |
+| Linux Standard | Ubuntu VM, 2vCPU @2.6GHz, 7.5GB RAM | 1 credit/min |
+| Linux Elite | Ubuntu VM, 4vCPU @2.6GHz, 15GB RAM | 2 credits/min |
+| Linux EliteXL (Velocity plan only) | Ubuntu VM 8vCPU @2.6GHz, 30GB RAM | 4 credits/min |
 
 | MacOS machines | Specs | Credit multiplier |
 | --- | --- | --- |
 | Gen 2 macOS Standard | 4vCPU @3.2GHz 19 GB RAM | 2 credits/min |
 | Gen 2 macOS Elite | 8vCPU @3.2GHz 35 GB RAM | 4 credits/min |
+| Gen 2 macOS EliteXL | 12vCPU @3.2GHz 54 GB RAM | 6 credits/min |
 
 ## How many builds can I run at the same time?
 
