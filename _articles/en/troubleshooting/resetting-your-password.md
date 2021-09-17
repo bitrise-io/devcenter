@@ -33,7 +33,7 @@ If you try to log in but you forgot your password:
 6. Once your password has been changed, click **Log in** to access our login page again.
 7. Add your **Username** and new **Password** to log into your Bitrise Dashboard.
 
-Please note that you can always change your password along with other account details in your **Account settings**.
+Please note that you can always change your password along with other account details in your **Profile settings**.
 
 ## Issues with logging in
 

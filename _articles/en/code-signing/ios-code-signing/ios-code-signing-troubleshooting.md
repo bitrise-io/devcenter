@@ -134,7 +134,7 @@ Check out if the same UDID has been registered twice:
 
 The result will be in json format: check if the same UDID appears twice. If so, it has to be removed from the account to which it was registered.
 
-1. Open the top-right menu and click **Account settings**.
+1. Open the top-right menu and click **Profile settings**.
 2. On the left, click **Test devices**.
 3. Remove one of the duplicated devices.
 

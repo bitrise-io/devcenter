@@ -20,7 +20,7 @@ Please note that the API key authentication is the recommended way when connecti
 
 1. On [App Store Connect](https://appstoreconnect.apple.com/login), [generate a new API key with Admin access](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api) under **Users and Access**.![](/img/usersandaccess.jpg)
 2. Log in to [bitrise.io](https://www.bitrise.io/).
-3. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
+3. Click on your profile in the upper-right corner of your **Dashboard** and select [**Profile settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
 4. On the menu bar select **Apple Service Connection**.![](/img/appleserviceconnection.jpg)
 5. Click **Add connection**.
 6. Fill out all required fields: provide the **Name**, [**Issuer ID**](https://developer.apple.com/documentation/appstoreconnectapi/generating_tokens_for_api_requests), and the **Key ID** you generated at Step 1., and [**Upload a Private key (.p8)**](https://developer.apple.com/documentation/appstoreconnectapi/creating_api_keys_for_app_store_connect_api). If one input is missing, the **Connect** and **Upload a Private Key (.p8)** buttons won’t be available. ![](/img/apikeyauthentication.jpg)

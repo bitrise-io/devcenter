@@ -16,7 +16,7 @@ menu:
 
 ## Updating your account information
 
-On the **Account settings** page, you can easily:
+On the **Profile settings** page, you can easily:
 
 * Change your username and associated email address.
 * Change your password.
@@ -25,7 +25,7 @@ On the **Account settings** page, you can easily:
 To do so:
 
 1. Log in to your Bitrise account.
-2. In the top right corner, click on BitBot to open the dropdown menu and select **Account settings**.
+2. In the top right corner, click on BitBot to open the dropdown menu and select **Profile settings**.
 3. On the top left, click **Edit profile**.
 4. Update every section you want to and then click **Update** at the bottom. 
 
@@ -38,6 +38,6 @@ We’re always sad to see you go but if you wish to delete your Bitrise account,
 If you are the only confirmed owner of an Organization, you must transfer the ownership of the Org to another account, or delete it before deleting your account."%}
 
 1. Log in to your Bitrise account.
-2. In the top right corner, click on BitBot to open the dropdown menu and select **Account settings**.
+2. In the top right corner, click on BitBot to open the dropdown menu and select **Profile settings**.
 3. On the top left, click **Edit profile**.
 4. On the bottom of the page, click the **Delete my account** button.

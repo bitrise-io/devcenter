@@ -23,7 +23,7 @@ If you cannot use the API key authentication, we recommend you try this option. 
 ### Adding Apple ID authentication data on Bitrise
 
  1. Log in to [bitrise.io](https://www.bitrise.io/).
- 2. Click on your profile in the upper-right corner of your **Dashboard** and select [**Account settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
+ 2. Click on your profile in the upper-right corner of your **Dashboard** and select [**Profile settings**](https://app.bitrise.io/me/profile#/overview) from the dropdown menu.
  3. On the left menu bar, select **Apple Service connection**.
  4. Click the **Add connection** button.
  5. Provide your **Apple ID** and **Password** in the popup window. Click **Connect**.![](/img/appleidauthentication.jpg)

@@ -29,7 +29,7 @@ No need for lengthy preparation when you wish to create an Organization on Bitri
 3. Choose **Add Organization** from the dropdown menu.
 
    Alternatively, you can create a new Organization from:
-   * your **Account settings** page: find the **+ New Organization** option under **ORGANIZATION** on the left.
+   * your **Profile settings** page: find the **+ New Organization** option under **ORGANIZATION** on the left.
 4. In the pop-up window, enter the name and the billing email of your Organization, and click **Create**. By default, your invoices will be sent to the billing email you set here.
 
    ![{{ page.title }}](/img/create-new-org.png)

@@ -30,7 +30,7 @@ What you need:
 
 1. Create a **Personal Access Token** for your user.
 
-   Go to **Account settings** and select the **Security** option on the left side. Click the **Generate new** button.
+   Go to **Profile settings** and select the **Security** option on the left side. Click the **Generate new** button.
 
    ![{{ page.title }}](/img/generate-access-tokens.png)
 

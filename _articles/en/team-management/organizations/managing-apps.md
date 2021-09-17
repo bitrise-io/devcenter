@@ -16,7 +16,7 @@ Organizations can own several apps, with different (or the same, if that's what 
 
 ## Adding new apps to an Organization
 
-A new app can be added directly to an Organization. You can do this either from the Organization's **Account settings** page or from the Dashboard of an account that is a member of the Organization.
+A new app can be added directly to an Organization. You can do this either from the Organization's **Profile settings** page or from the Dashboard of an account that is a member of the Organization.
 
 1. Get to the **Create New App** page.
 
@@ -27,7 +27,7 @@ A new app can be added directly to an Organization. You can do this either from 
    * Open the **Dashboard** on [bitrise.io](https://www.bitrise.io), open the dropdown menu above your app list and select your Organization. Click the **+ Add new app** button.
 
      ![{{ page.title }}](/img/add-new-app-organization.png)
-   * Open the **Account settings** page of your Organization, and click the **Apps** option on the menu on the left. Click the **Add new app** button.
+   * Open the **Profile settings** page of your Organization, and click the **Apps** option on the menu on the left. Click the **Add new app** button.
 
      ![{{ page.title }}](/img/add-new-app-org-settings.jpg)
 2. On **Create New App** page, make sure that the Organization account is selected in the dropdown menu.

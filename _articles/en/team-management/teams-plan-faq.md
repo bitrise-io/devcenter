@@ -29,7 +29,7 @@ As of now, Teams plan trials are indefinite, there’s no time limit on using it
 
 Yes, if you are the **owner** of a Workspace. To do so:
 
-1. Go to the [**Account settings**](https://app.bitrise.io/me/profile#/overview) page.
+1. Go to the [**Profile settings**](https://app.bitrise.io/me/profile#/overview) page.
 2. Click **Switch profile.**
 3. Select the Workspace. This will take you to the overview page where you can see your available credits.
 4. Click the **Subscribe to the Teams plan** button.
@@ -53,7 +53,7 @@ You get 500 credits for the trial. Once you run out, your trial ends.
 
 On the full Teams plan, you get a certain amount of credits each month, depending on your credit tier. If you need more credits, you need to upgrade to a higher credit tier. To do so:
 
-1. Go to the [**Account settings**](https://app.bitrise.io/me/profile#/overview) page.
+1. Go to the [**Profile settings**](https://app.bitrise.io/me/profile#/overview) page.
 2. Click **Switch profile.**
 3. Select your Workspace. This will take you to the overview page where you can see your available credits.
 4. Click the **Change credit tier** button.
