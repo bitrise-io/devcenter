@@ -12,7 +12,7 @@ description: Learn how to set up Bitrise as a SAML SSO app on Ping Identity, ena
 changelog: ''
 summary: ''
 menu:
-  Workspaces:
+  organizations:
     weight: 28
 
 ---

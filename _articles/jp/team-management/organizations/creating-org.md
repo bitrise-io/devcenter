@@ -3,7 +3,7 @@ changelog:
 last_modified_at: 
 title: 組織を作成する
 menu:
-  Workspaces:
+  organizations:
     weight: 1
 
 ---
