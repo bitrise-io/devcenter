@@ -34,10 +34,10 @@ Before connecting SAML SSO to your Organization, make sure:
 
 ## Navigating to Single Sign On page of Bitrise
 
-If you are an Workspace owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Workspace.
+If you are a Workspace owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Workspace.
 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Account settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown.[![](https://devcenter.bitrise.io/img/account-settings-dropdown.jpg)](https://devcenter.bitrise.io/img/account-settings-dropdown.jpg)
-2. The **Overview** page displays all the Workspaces you’re a member of. Select the Org where you wish to set up the SAML SSO connection.[![](https://devcenter.bitrise.io/img/overview-tab.jpg)](https://devcenter.bitrise.io/img/overview-tab.jpg)
+2. The **Overview** page displays all the Workspaces you’re a member of. Select the Workspace where you wish to set up the SAML SSO connection.[![](https://devcenter.bitrise.io/img/overview-tab.jpg)](https://devcenter.bitrise.io/img/overview-tab.jpg)
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.[![](https://devcenter.bitrise.io/img/enablesinglesignon.jpg)](https://devcenter.bitrise.io/img/enablesinglesignon.jpg)
 4. Continue with [Configuring Bitrise on OneLogin](/team-management/organizations/setting-up-onelogin-sso-for-bitrise/#configuring-bitrise-on-onelogin).
 
@@ -64,11 +64,11 @@ If you are an Workspace owner on Bitrise, you will have to use the **Single Sign
  9. Go back to the **SSO** page on OneLogin and copy the **SAML 2.0 Endpoint (HTTP)** link. Paste it in the **SAML SSO provider Single Sign-On URL (SSO URL)** field on Bitrise.
 10. Go back to Bitrise and click **Configure SSO**.![](/img/enablesinglesignon.jpg)
 
-{% include message_box.html type="note" title="Users on OneLogin and Bitrise" content="Make sure the users in your Bitrise Workspace are all added to the **Users** page on OneLogin. If not, go to **Users**, then **New User** and add the new user. Don’t forget to send out an invite (**More actions** drop-down menu, **Send Invitation**) to a new user so that the user can activate their account on OneLogin. Users must be added to the newly created Bitrise app by clicking **Applications** under **User Info** and clicking the **+** sign. Make sure the added users are all Organization members on Bitrise.
+{% include message_box.html type="note" title="Users on OneLogin and Bitrise" content="Make sure the users in your Bitrise Workspace are all added to the **Users** page on OneLogin. If not, go to **Users**, then **New User** and add the new user. Don’t forget to send out an invite (**More actions** drop-down menu, **Send Invitation**) to a new user so that the user can activate their account on OneLogin. Users must be added to the newly created Bitrise app by clicking **Applications** under **User Info** and clicking the **+** sign. Make sure the added users are all Workspace members on Bitrise.
 
 ![](/img/application-onelogin.jpg)"%}
 
-If you’ve completed setting up Bitrise on OneLogin and connected it with your Bitrise Organization, then all Organization members will get an email from Bitrise which contains a link to activate their SSO connection to the Organization.
+If you’ve completed setting up Bitrise on OneLogin and connected it with your Bitrise Workspace, then all Organization members will get an email from Bitrise which contains a link to activate their SSO connection to the Bitrise Workspace.
 
 ## Enabling SAML SSO on Bitrise
 
