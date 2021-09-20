@@ -18,7 +18,7 @@ menu:
     weight: 16
 
 ---
-Workspace members can log in to a Bitrise Workspace using their own SAML SSO provider’s system. With SAML SSO, Orgs will be able to apply the security guidelines of their SAML SSO provider when accessing their Bitrise Workspace.
+Workspace members can log in to a Bitrise Workspace using their own SAML SSO provider’s system. With SAML SSO, Workspaces will be able to apply the security guidelines of their SAML SSO provider when accessing their Bitrise Workspace.
 
 ## Before you start
 
@@ -51,7 +51,7 @@ If you are a Workspace owner on Bitrise, you will have to use the **Single Sign-
 
 In this tutorial, we describe how Workspace owners can set up their SAML SSO and invite Workspace members to set up their own connections.
 
-1. Go to your Org’s **Enable Single Sign-On** page on [bitrise.io](https://www.bitrise.io/).
+1. Go to your Workspace’s **Enable Single Sign-On** page on [bitrise.io](https://www.bitrise.io/).
 2. Copy the **Assertion Consumer Service URL (ACS URL)** by clicking on the **Copy Link** button. You will need this URL to add Bitrise on your SAML SSO provider’s site.
 3. Log in to your own SAML SSO provider.
 4. Add Bitrise using the copied **Assertion Consumer Service URL (ACS URL)**. You’re generating your Single Sign-On (SSO) credentials here which you will need in a minute on Bitrise.
@@ -76,7 +76,7 @@ Now that the Workspace owner has set up SAML SSO, everyone in the Workspacehas t
 
      Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.![](/img/noconnectedsamlsso.png)
 
-If all went well, you should be landing on our Bitrise Dashboard. As a Workspace owner, you might want to check how Workspace members are progressing with their SAML SSO connection: [check Workspace member’s SAML SSO statuses ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)or [invite new members to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-workspace-members-with-saml-sso).
+If all went well, you should be landing on our Bitrise Dashboard. As a Workspace owner, you might want to check how Workspace members are progressing with their SAML SSO connection: [check Workspace member’s SAML SSO statuses ](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise)or [invite new members to the ](/team-management/organizations/saml-sso-in-organizations/#inviting-new-workspace-members-with-saml-sso)Workspace.
 
 ## Inviting new Workspace members with SAML SSO
 
@@ -105,7 +105,7 @@ If a Bitrise Workspace owner invites you to a Workspace, you should get an email
 
 ## Checking SAML SSO statuses on Bitrise
 
-Now that the Workspace owner has set up SAML SSO for the Org, all Workspace members (including the Workspace owner) can check their other Workspace member’s SAML SSO statuses on the **People** tab.
+Now that the Workspace owner has set up SAML SSO for the Workspace, all Workspace members (including the Workspace owner) can check their other Workspace member’s SAML SSO statuses on the **People** tab.
 
 {% include message_box.html type="note" title="Accessing the **Single Sign-On** tab" content="Please note that the **Single Sign-On** tab is only available for the Workspace owner. "%}
 
@@ -143,7 +143,7 @@ Enforcing SAML SSO on your Workspace provides an extra layer of security: you ca
 
 ### Turning SAML SSO enforcement on
 
-To enforce SAML SSO on a Workspace in Bitrise, all Workspace members have to first enable their SAML SSO related to their Org, then the owner can enforce SAML SSO on the Workspace with a simple toggle.
+To enforce SAML SSO on a Workspace in Bitrise, all Workspace members have to first enable their SAML SSO related to their Workspace, then the owner can enforce SAML SSO on the Workspace with a simple toggle.
 
 1. Go to your Workspace’s **Single Sign-On** tab.
 2. Toggle the switch to the right to enforce SAML SSO.
