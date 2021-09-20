@@ -18,8 +18,6 @@ menu:
     weight: 16
 
 ---
-{% include video.html embed_url="https://www.youtube.com/embed/0LvV5E14Z4c" %}
-
 Workspace members can log in to a Bitrise Workspace using their own SAML SSO provider’s system. With SAML SSO, Orgs will be able to apply the security guidelines of their SAML SSO provider when accessing their Bitrise Workspace.
 
 ## Before you start
@@ -82,7 +80,7 @@ If all went well, you should be landing on our Bitrise Dashboard. As a Workspace
 
 ## Inviting new Workspace members with SAML SSO
 
-Once SAML SSO is set up on an Org, you can invite new members to your Workspace using SAML SSO.
+Once SAML SSO is set up on a Workspace, you can invite new members to your Workspace using SAML SSO.
 
 Before you start:
 
@@ -98,11 +96,11 @@ Until the new member does not go through the invitation process, you will see a 
 
 ### Joining a SAML SSO Workspace on Bitrise as a new member
 
-If a Bitrise Workspace owner invites you to an Org, you should get an email invitation to join the Workspace via SAML SSO. Let’s see how!
+If a Bitrise Workspace owner invites you to a Workspace, you should get an email invitation to join the Workspace via SAML SSO. Let’s see how!
 
 1. Go to your mailbox and find our email titled **Saml invitation instructions**.
 2. Click the **Sign in via SSO** button or copy the provided URL and paste it into a new browser. Our **Almost there** page appears.
-3. Provide a **Username** you would like to use in your Bitrise Org. Please use only letters, numbers, underscores (_), dashes (-) and dots (.) in your username. The **Email** field is non-editable.
+3. Provide a **Username** you would like to use in your Bitrise Workspace. Please use only letters, numbers, underscores (_), dashes (-) and dots (.) in your username. The **Email** field is non-editable.
 4. Click the **Finish Sign** up button. If all went well, you’re landing on Bitrise and can add your first app.![](/img/almostthere.jpeg)
 
 ## Checking SAML SSO statuses on Bitrise
@@ -126,7 +124,7 @@ There are two kinds of SAML SSO statutes on Bitrise.
 
 #### If you are a Workspace owner
 
-1. Go to your Org’s profile page.
+1. Go to your Workspace’s profile page.
 2. Click the **Group** tab on the left menu and look for the SAML users group, where you can check and manage your SAML users.
 3. Alternatively, click the **People** tab on the left menu to check the Workspace member’s SAML SSO status, such as Workspace members can do.  
    You can also navigate to this page from the **Single Sign-On** page by clicking on the **Review Users** buttons.![](/img/org-owner-single-sign-on.jpg)
@@ -135,9 +133,9 @@ Workspace owners have the right to delete a Workspace member from a Workspace by
 
 ## Enforcing SAML SSO on a Workspace
 
-Enforcing SAML SSO on your Workspace provides an extra layer of security: you can enforce your own security guidelines to your Bitrise Workspace(for example, password format requirements, two-factor authentication).
+Enforcing SAML SSO on your Workspace provides an extra layer of security: you can enforce your own security guidelines to your Bitrise Workspace (for example, password format requirements, two-factor authentication).
 
-{% include message_box.html type="warning" title="Enforced SAML SSO" content="Please note that enforcing SAML SSO in your Workspace makes SAML SSO the only way for logging in/signing up to the Org."%}
+{% include message_box.html type="warning" title="Enforced SAML SSO" content="Please note that enforcing SAML SSO in your Workspace makes SAML SSO the only way for logging in/signing up to the Workspace."%}
 
 1. Go to your Workspace's **Single Sign On** tab.
 2. Toggle the switch to the right to enforce SAML SSO.
@@ -147,17 +145,17 @@ Enforcing SAML SSO on your Workspace provides an extra layer of security: you ca
 
 To enforce SAML SSO on a Workspace in Bitrise, all Workspace members have to first enable their SAML SSO related to their Org, then the owner can enforce SAML SSO on the Workspace with a simple toggle.
 
-1. Go to your Org’s **Single Sign-On** tab.
+1. Go to your Workspace’s **Single Sign-On** tab.
 2. Toggle the switch to the right to enforce SAML SSO.
 3. Click **Save Changes**.
 
 Now Workspace members can only log in via SAML SSO.![](/img/saml-sso-enforced.jpg)
 
-{% include message_box.html type="note" title="Adding a Bitrise user to a Workspace with enforced SSO" content="If you wish to add a Bitrise user (who is not a member in your Org) to your Workspace with enforced SSO, then we recommend that the Workspace admin turns the enforced SSO off and [invites the user to the Org](/team-management/organizations/saml-sso-in-organizations/#inviting-new-workspace-members-with-saml-sso). The invited Bitrise user has to go through the [invitation process and enable SSO connection](/team-management/organizations/saml-sso-in-organizations/#joining-a-saml-sso-workspace-on-bitrise-as-a-new-member). Once that is done, the Workspace admin can turn the **Enforce SSO** switch back on."%}
+{% include message_box.html type="note" title="Adding a Bitrise user to a Workspace with enforced SSO" content="If you wish to add a Bitrise user (who is not a member in your Workspace) to your Workspace with enforced SSO, then we recommend that the Workspace admin turns the enforced SSO off and [invites the user to the ](/team-management/organizations/saml-sso-in-organizations/#inviting-new-workspace-members-with-saml-sso)Workspace. The invited Bitrise user has to go through the [invitation process and enable SSO connection](/team-management/organizations/saml-sso-in-organizations/#joining-a-saml-sso-workspace-on-bitrise-as-a-new-member). Once that is done, the Workspace admin can turn the **Enforce SSO** switch back on."%}
 
 ### Can’t enforce SAML SSO on your Workspace?
 
-A Workspace owner cannot enforce SAML SSO on the Workspace if Workspace members have not enabled their SAML SSO connection yet or they enabled SAML SSO with another Org.
+A Workspace owner cannot enforce SAML SSO on the Workspace if Workspace members have not enabled their SAML SSO connection yet or they enabled SAML SSO with another Workspace.
 
 Please note that you cannot be a member in two SAML SSO Workspace on Bitrise.![](/img/cantenforce.png)
 
@@ -167,7 +165,7 @@ If the SAML SSO connection has been already added to your Workspace and you have
 
 1. Click **Login via SSO** on our [login page](https://app.bitrise.io/users/sign_in). ![{{ page.title }}](/img/login-via-sso.jpg)
 2. You will be redirected to the **Initiate Single Sign-On page**.
-3. Provide your Workspacename in the **Bitrise Workspace’s Name** field.![](/img/initiate-single-sign-on.jpg)
+3. Provide your Workspace name in the **Bitrise Workspace’s Name** field.![](/img/initiate-single-sign-on.jpg)
 4. Click **Continue with SSO** to log in.
    * If you’re logged in on your SSO provider site, you will be automatically landing on your Bitrise Dashboard.
    * If you’re logged out on your SSO provider site, you will be redirected there to log in. After the successful login, you will be redirected to your Bitrise dashboard.
@@ -176,9 +174,9 @@ If the SAML SSO connection has been already added to your Workspace and you have
 
 ## Disabling a Workspace's SAML SSO
 
-The Single Sign-On page is available for Workspace owners only. There you can see the red Disable SSO button. If you disable SAML SSO, Workspace members will be able to sign in with the regular sign-in procedure.
+The Single Sign-On page is available for Workspace owners only. There you can see the red **Disable SSO** button. If you disable SAML SSO, Workspace members will be able to sign in with the regular sign-in procedure.
 
-1. Go to the **Single Sign-On** tab of your Org.
+1. Go to the **Single Sign-On** tab of your Workspace.
 2. Click **Disable SSO**.
 
    A confirmation pop-up appears where you can confirm/cancel your action. Please note that by clicking the **Disable SSO** button, you will disable SAML SSO for all Workspace members. Once it's done, Workspace members will be able to log in through their normal Bitrise credentials.![](/img/disable-samlsso.jpg)
@@ -194,10 +192,10 @@ You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bi
 
 If you are on Workspace owner, you can disable a Workspace member’s SAML SSO connection to the Workspace on Bitrise.
 
-There are three ways for Workspace owners to disable a member from the SAML SSO Org:
+There are three ways for Workspace owners to disable a member from SAML SSO on Bitrise:
 
 * Remove the user from the SAML users group by clicking the red **x** symbol next to the name on the Groups tab.
-* Remove the user from the Org.
+* Remove the user from the Workspace.
 * Remove the user from the SAML SSO provider which means the user would not be able to log in with SAML SSO any more.
 
 {% include banner.html banner_text="Let's configure SAML SSO to your Workspace!" url="https://app.bitrise.io/users/sign_up?utm_source=devcenter&utm_medium=bottom_cta" button_text="Go to your Workspace" %}
