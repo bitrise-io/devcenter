@@ -12,7 +12,7 @@ description: Learn how to set up Bitrise as a SAML SSO app on Azure AD, enable S
 changelog: ''
 summary: ''
 menu:
-  Workspaces:
+  organizations:
     weight: 21
 
 ---

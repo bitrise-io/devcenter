@@ -9,7 +9,7 @@ redirect_from: []
 summary: With SAML SSO, Orgs can apply the security guidelines of Auth0 when accessing
   their Bitrise Workspace.
 menu:
-  Workspaces:
+  organizations:
     weight: 23
 
 ---
