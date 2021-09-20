@@ -139,11 +139,9 @@ released to avoid any changes / updates during the week.
 
 ## Managing Java versions
 
-By default, every Bitrise stack comes with Java 8 pre-installed and ready to use. For now, if you do not switch to another version, your build will use Java 8. However, we recommend switching to Java 11 as the latest Android tools require it: for example, the Gradle 7.0 plugin will not work with older Java versions.
+By default, every Bitrise stack comes with Java 11 pre-installed and ready to use. If you do not switch to another version, your build will use Java 11. 
 
-{% include message_box.html type="warning" title="Java 11 to become the default version" content="From September 2021, Java 11 replaces Java 8 as the default Java version on all Bitrise stacks. You will still be able to use Java 8 by switching back to it with the **Set Java version** Step or by using your own script."%}
-
-Java 11 is also available on every stack type, though the process of switching to Java 11 is slightly different on our Ubuntu-based stacks compared to the macOS-based stacks.
+For now, Java 8 is also available on every stack type, though the process of switching to Java 8 is slightly different on our Ubuntu-based stacks compared to the macOS-based stacks.
 
 ### Setting Java versions with the Set Java version Step
 
@@ -163,7 +161,7 @@ Our Android & Docker stacks run on virtual machines with Ubuntu, while our Xcode
 * Setting the `JAVA_HOME` Environment Variable with the `export` command.
 * Storing this Environment Variable with `envman` so it can be accessed by all Steps in your Workflow.
 
-{% include message_box.html type="important" title="Steps and Env Vars" content="You need envman because without that, Steps can’t access each other’s Environment Variables. If you only set the Java environment for one Step, but do not store it with envman, the other Steps will use the default Java environment, Java 8."%}
+{% include message_box.html type="important" title="Steps and Env Vars" content="You need envman because without that, Steps can’t access each other’s Environment Variables. If you only set the Java environment for one Step, but do not store it with envman, the other Steps will use the default Java environment, Java 11."%}
 
 You can do all of it in one **Script** Step though, so it’s quite simple. To change the default Java version:
 
