@@ -78,10 +78,10 @@ All Workspace members (including the Workspace owner) must enable their SAML SSO
 2. Click **Sign in via SSO** or open the URL in a new tab of the same browser where you are logged in.
 3. On the **Almost there** page you can edit your username. Click **Finish Sign Up**.![](/img/almostherepage.png)
 
-You should be landing on the **Welcome** page of Bitrise. Click **Dashboard** to land on your Organization's dashboard. If you go to your Organization's **Groups** tab, you can see that you are automatically added as a SAML user. All Organization members, who enable SAML SSO, appear here automatically. From now on you can log into your Bitrise Organization with SAML SSO.
+You should be landing on the **Welcome** page of Bitrise. Click **Dashboard** to land on your Workspace's dashboard. If you go to your Workspace's **Groups** tab, you can see that you are automatically added as a SAML user. All Workspace members, who enable SAML SSO, appear here automatically. From now on you can log into your Bitrise Workspace with SAML SSO.
 
-{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Organization's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/). "%}
+{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Workspace's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/). "%}
 
 ## What's next?
 
-You can [track](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) how other Organization members are getting on with enabling their SAML SSO to Bitrise. This is important since the Organization owner can only [enforce](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) SAML SSO on the Organization if all Organization members have enabled SAML.
+You can [track](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) how other Workspace members are getting on with enabling their SAML SSO to Bitrise. This is important since the Workspace owner can only [enforce](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) SAML SSO on the Workspace if all Workspace members have enabled SAML.
