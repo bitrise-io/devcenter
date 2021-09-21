@@ -25,7 +25,7 @@ Workspace members can log in to a Bitrise Workspace using their own SAML SSO pro
 Before connecting SAML SSO to your Workspace, make sure:
 
 * You have a SAML SSO provider (Identity Provider) that you can connect Bitrise to and the administrator to the SAML SSO provider is at hand.
-* Your account on Bitrise has a [Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have a Workspace, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Workspaces on Bitrise.
+* Your account on Bitrise has a [Velocity plan](https://www.bitrise.io/pricing) or an Org Elite plan. If it doesn’t have a Workspace, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Workspaces on Bitrise.
 * As with other [Workspace management actions](/team-management/organizations/members-organizations/), only the Workspace owner can set up SAML SSO to a Bitrise Workspace.
 
 ## Navigating to the Single Sign-On page of Bitrise
