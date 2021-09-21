@@ -190,7 +190,7 @@ You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bi
 
 ### Disabling one Workspace member's SAML SSO
 
-If you are on Workspace owner, you can disable a Workspace member’s SAML SSO connection to the Workspace on Bitrise.
+If you are a Workspace owner, you can disable a Workspace member’s SAML SSO connection to the Workspace on Bitrise.
 
 There are three ways for Workspace owners to disable a member from SAML SSO on Bitrise:
 
