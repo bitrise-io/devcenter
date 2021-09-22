@@ -5,7 +5,7 @@ menu:
     weight: 22
 
 ---
-To add support to your [FAKE](http://fsharp.github.io/FAKE/) build scripts, open your app's [Workflow Editor on bitrise.io](/getting-started/manage-your-bitrise-workflow/)
+To add support to your FAKE build scripts, open your app's [Workflow Editor on bitrise.io](/getting-started/manage-your-bitrise-workflow/)
 and add a **Script** Step to your workflow.
 
 Below you can find an example script content to perform a build with FAKE, make sure you FILL OUT THE PARAMETERS at the top of the script!
