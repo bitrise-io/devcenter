@@ -127,7 +127,7 @@ There are two kinds of SAML SSO statutes on Bitrise.
 1. Go to your Workspace’s profile page.
 2. Click the **Group** tab on the left menu and look for the SAML users group, where you can check and manage your SAML users.
 3. Alternatively, click the **People** tab on the left menu to check the Workspace member’s SAML SSO status, such as Workspace members can do.  
-   You can also navigate to this page from the **Single Sign-On** page by clicking the **Review Users** buttons.![](/img/org-owner-single-sign-on.jpg)
+   You can also navigate to this page from the **Single Sign-On** page by clicking the **Review Users** buttons.
 
 Workspace owners have the right to delete a Workspace member from a Workspace by clicking the cross next to the member’s name on the **People** tab.
 
