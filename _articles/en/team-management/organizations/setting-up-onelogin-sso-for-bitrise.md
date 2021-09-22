@@ -84,4 +84,4 @@ You should be landing on the **Welcome** page of Bitrise. Click **Dashboard** to
 
 ## What's next?
 
-You can [track](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) how other Workspace members are getting on with enabling their SAML SSO to Bitrise. This is important since the Workspace owner can only [enforce](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-an-organization) SAML SSO on the Workspace if all Workspace members have enabled SAML.
+You can [track](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) how other Workspace members are getting on with enabling their SAML SSO to Bitrise. This is important since the Workspace owner can only [enforce](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-a-workspace) SAML SSO on the Workspace if all Workspace members have enabled SAML.
