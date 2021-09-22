@@ -149,7 +149,7 @@ To enforce SAML SSO on a Workspace in Bitrise, all Workspace members have to fir
 2. Toggle the switch to the right to enforce SAML SSO.
 3. Click **Save Changes**.
 
-Now Workspace members can only log in via SAML SSO.![](/img/saml-sso-enforced.jpg)
+Now Workspace members can only log in via SAML SSO.
 
 {% include message_box.html type="note" title="Adding a Bitrise user to a Workspace with enforced SSO" content="If you wish to add a Bitrise user (who is not a member in your Workspace) to your Workspace with enforced SSO, then we recommend that the Workspace admin turns the enforced SSO off and [invites the user to the ](/team-management/organizations/saml-sso-in-organizations/#inviting-new-workspace-members-with-saml-sso)Workspace. The invited Bitrise user has to go through the [invitation process and enable SSO connection](/team-management/organizations/saml-sso-in-organizations/#joining-a-saml-sso-workspace-on-bitrise-as-a-new-member). Once that is done, the Workspace admin can turn the **Enforce SSO** switch back on."%}
 
