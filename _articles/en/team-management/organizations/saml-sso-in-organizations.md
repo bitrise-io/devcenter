@@ -165,7 +165,7 @@ If the SAML SSO connection has been already added to your Workspace and you have
 
 1. Click **Login via SSO** on our [login page](https://app.bitrise.io/users/sign_in). ![{{ page.title }}](/img/login-via-sso.jpg)
 2. You will be redirected to the **Initiate Single Sign-On page**.
-3. Provide your Workspace name in the **Bitrise Workspace’s Name** field.![](/img/initiate-single-sign-on.jpg)
+3. Provide your Workspace name in the **Bitrise Workspace’s Name** field.
 4. Click **Continue with SSO** to log in.
    * If you’re logged in on your SSO provider site, you will be automatically landing on your Bitrise Dashboard.
    * If you’re logged out on your SSO provider site, you will be redirected there to log in. After the successful login, you will be redirected to your Bitrise dashboard.
