@@ -18,6 +18,8 @@ menu:
 ---
 The `bitrise.yml` file is the heart of your Bitrise setup: [it stores your build configuration, right down to Step input values, the trigger map, and stack information](/bitrise-cli/basics-of-bitrise-yml/#bitriseyml-configuration). When you edit your Workflows on the graphical UI of our Workflow Editor, you actually modify the `bitrise.yml` file.
 
+{% include message_box.html type="warning" title="Changing the stack type in the bitrise.yml file" content="Currently, you can't set the default stack type for an app's builds directly in the `bitrise.yml` file of the app. You can only set it on the **Stacks** tab of the Workflow Editor."%}
+
 {% include message_box.html type="warning" title=".yml size limitations" content="Please note that the total, combined size of the `bitrise.yml` and the  `bitrise.secrets.yml` file cannot exceed 200KB."%}
 
 There are two ways to manage the `bitrise.yml` file of your app:
