@@ -90,7 +90,7 @@ Before you start:
 1. Go to your SAML SSO Workspace on Bitrise and click the **Groups** tab.
 2. Find the **SAML users** section and click the **+** sign to add a new member.
 3. Enter their email address and click the arrow icon. This will add the member to the SAML user’s list and Bitrise automatically sends out our SAML invitation instructions to the new member.
-4. You can keep adding new users using the same method or finish the addition(s) by clicking the **Done** button.![](/img/addingnewsamlgroup.jpeg)![](/img/email.jpeg)
+4. You can keep adding new users using the same method or finish the addition(s) by clicking the **Done** button.![](/img/addingnewsamlgroup.jpeg)
 
 Until the new member does not go through the invitation process, you will see a **REINVITE** button next to their name on the **Groups** page. If they fail to sign up via SAML SSO and their invitation times out, you can resend the invitation by clicking this button. Once they successfully sign up, the button disappears.
 
@@ -101,7 +101,7 @@ If a Bitrise Workspace owner invites you to a Workspace, you should get an email
 1. Go to your mailbox and find our email titled **Saml invitation instructions**.
 2. Click the **Sign in via SSO** button or copy the provided URL and paste it into a new browser. Our **Almost there** page appears.
 3. Provide a **Username** you would like to use in your Bitrise Workspace. Please use only letters, numbers, underscores (_), dashes (-) and dots (.) in your username. The **Email** field is non-editable.
-4. Click the **Finish Sign** up button. If all went well, you’re landing on Bitrise and can add your first app.![](/img/almostthere.jpeg)
+4. Click the **Finish Sign** up button. If all went well, you’re landing on Bitrise and can add your first app.
 
 ## Checking SAML SSO statuses on Bitrise
 
