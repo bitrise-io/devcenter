@@ -186,8 +186,6 @@ The Single Sign-On page is available for Workspace owners only. There you can se
 
 You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bitrise.io) which confirms the disabled SAML SSO for the Workspace.
 
-![](/img/samlssodisabledemail.png)
-
 ### Disabling one Workspace member's SAML SSO
 
 If you are a Workspace owner, you can disable a Workspace member’s SAML SSO connection to the Workspace on Bitrise.
