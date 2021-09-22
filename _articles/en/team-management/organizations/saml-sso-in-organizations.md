@@ -182,7 +182,6 @@ The Single Sign-On page is available for Workspace owners only. There you can se
    A confirmation pop-up appears where you can confirm/cancel your action. Please note that by clicking the **Disable SSO** button, you will disable SAML SSO for all Workspace members. Once it's done, Workspace members will be able to log in through their normal Bitrise credentials.
 
 {% include message_box.html type="note" title="How to disable when SAML SSO is enforced?" content="If SAML SSO has been enforced on the Workspace before, you have to first toggle the **Enforce SAML SSO** toggle to the left and then click the **Disable SSO** button."%}
-![](/img/saml-sso-enforced-1.jpg)
 
 You will receive an **SSO has been disabled** email from Bitrise (letsconnect@bitrise.io) which confirms the disabled SAML SSO for the Workspace.
 
