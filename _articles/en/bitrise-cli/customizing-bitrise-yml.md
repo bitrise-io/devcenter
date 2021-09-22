@@ -10,6 +10,7 @@ tag:
 description: 'Any tool that can edit `bitrise.yml` can add custom properties to it.
   This way you can add special properties or notes to your env vars, or even try new
   configurations of your workflow in `bitrise.yml`. '
+summary: ''
 menu:
   bitrise-cli-main:
     weight: 12
@@ -62,6 +63,8 @@ Of course this use case works only if your customized tool is shared with your t
 * You can see `meta` in action on [bitrise.io](https://www.bitrise.io/) as well. For example, when you select a different stack for your workflow than the default stack. Just click Workflow Editor on the UI and pick another stack type for your workflow/s in the `Stacks` tab. This way you can test (only in the UI) how your workflow runs in the new Stack.
 
 ![{{ page.title }}](/img/stack-os.png)
+
+{% include message_box.html type="warning" title="Changing the stack type in the bitrise.yml file" content="Currently, you can't set the default stack type for an app's builds directly in the `bitrise.yml` file of the app. You can only set it on the **Stacks** tab of the Workflow Editor."%}
 
 If you head back to the `bitrise.yml` tab, a `bitrise.io meta` is added to the deploy workflow:
 
