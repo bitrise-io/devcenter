@@ -157,7 +157,7 @@ Now Workspace members can only log in via SAML SSO.![](/img/saml-sso-enforced.jp
 
 A Workspace owner cannot enforce SAML SSO on the Workspace if Workspace members have not enabled their SAML SSO connection yet or they enabled SAML SSO with another Workspace.
 
-Please note that you cannot be a member in two SAML SSO Workspace on Bitrise.![](/img/cantenforce.png)
+Please note that you cannot be a member in two SAML SSO Workspace on Bitrise.
 
 ## Logging in via SAML SSO with a Bitrise account
 
