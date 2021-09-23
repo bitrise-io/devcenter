@@ -63,8 +63,6 @@ Once the Workspace owner has set up the connection between the SAML SSO provider
 
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
 2. Find the email from Bitrise ([letsconnect@bitrise.io](mailto:letsconnect@bitrise.io)). You can click the **Sign In via SSO** button or copy-paste the URL to a NEW TAB of the same browser.
-
-   ![{{ page.title }}](/img/saml-invitation-authentication.jpg)
 3. Click **Authorize**.
 
 You should be landing on the Workspace’s Dashboard. From now on, you can use the [Log in via SSO](https://app.bitrise.io/users/sign-in/saml) function to access your Workspace on Bitrise.
