@@ -93,9 +93,9 @@ Yes. Check out the following table to see the different machine types and their 
 
 | Linux machines | Specs | Credit multiplier |
 | --- | --- | --- |
-| Linux Standard | Ubuntu VM, 2vCPU @2.6GHz, 7.5GB RAM | 1 credit/min |
-| Linux Elite | Ubuntu VM, 4vCPU @2.6GHz, 15GB RAM | 2 credits/min |
-| Linux EliteXL (Velocity plan only) | Ubuntu VM 8vCPU @2.6GHz, 30GB RAM | 4 credits/min |
+| Linux Standard | Ubuntu VM, 2vCPU @2.8GHz, 8GB RAM | 1 credit/min |
+| Linux Elite | Ubuntu VM, 4vCPU @2.8GHz, 16GB RAM | 2 credits/min |
+| Linux EliteXL (Velocity plan only) | Ubuntu VM 8vCPU @2.8GHz, 32GB RAM | 4 credits/min |
 
 | MacOS machines | Specs | Credit multiplier |
 | --- | --- | --- |
