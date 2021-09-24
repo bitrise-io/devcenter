@@ -18,7 +18,7 @@ menu:
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [OneLogin](https://www.onelogin.com/).
 
-{% include message_box.html type="important" title="SAML SSO with Velocity plan" content="Please note that SAML SSO is only available for a Workspace with the [Enterprise Build and Velocity plans](https://www.bitrise.io/pricing).
+{% include message_box.html type="important" title="SAML SSO with Velocity and Enterprise Build plan" content="Please note that SAML SSO is only available for a Workspace with the [Enterprise Build and Velocity plans](https://www.bitrise.io/pricing).
 
 Since the SAML SSO feature is tied to the above plans, if you decide to downgrade, you will lose this feature. All Workspace members will receive an email about the downgrade and you’ll have two weeks to re-upgrade if you wish to use SAML SSO in your Workspace again.
 
@@ -30,7 +30,7 @@ Before connecting SAML SSO to your Workspace, make sure:
 
 * The administrator to OneLogin is at hand while setting up SAML SSO connection on Bitrise.
 * As with other [Workspace management actions](/team-management/organizations/members-organizations/), only the Workspace owner can set up SAML SSO to a Bitrise Workspace.
-* Your account on Bitrise has a Workspace with [Enterprise Build or Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Workspace, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Workspaces on Bitrise.
+* Your account on Bitrise has a Workspace with [Enterprise Build or Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have a Workspace, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Workspaces on Bitrise.
 
 ## Navigating to Single Sign On page of Bitrise
 
@@ -76,7 +76,7 @@ All Workspace members (including the Workspace owner) must enable their SAML SSO
 
 1. Find the email from [letsconnect@bitrise.io](mailto:letsconnect@bitrise.io "mailto:letsconnect@bitrise.io") in your inbox.
 2. Click **Sign in via SSO** or open the URL in a new tab of the same browser where you are logged in.
-3. On the **Almost there** page you can edit your username. Click **Finish Sign Up**.![](/img/almostherepage.png)
+3. On the **Almost there** page you can edit your username. Click **Finish Sign Up**.
 
 You should be landing on the **Welcome** page of Bitrise. Click **Dashboard** to land on your Workspace's dashboard. If you go to your Workspace's **Groups** tab, you can see that you are automatically added as a SAML user. All Workspace members, who enable SAML SSO, appear here automatically. From now on you can log into your Bitrise Workspace with SAML SSO.
 
