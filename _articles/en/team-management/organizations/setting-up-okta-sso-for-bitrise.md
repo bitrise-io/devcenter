@@ -69,7 +69,7 @@ Congrats! Bitrise has been successfully added to Okta as an app.
 
 1. Click the **Assignments** tab of your Bitrise app.
 
-   Here you can assign Bitrise to individuals/groups. Make sure you assign Bitrise to all org members who will access the Bitrise Workspace through SAML.![](/img/okta-assign-user.jpg)
+   Here you can assign Bitrise to individuals/groups. Make sure you assign Bitrise to all Workspace members who will access the Bitrise Workspace through SAML.![](/img/okta-assign-user.jpg)
 2. Click the **Sign-On** tab of your Bitrise app. You will see that SAML setup is not completed yet. Click **View Setup Instructions**.![](/img/view-setup-instructions.jpg)
    The **How to Configure SAML 2.0 for Bitrise application** page is displayed. It summarizes all the information you need to set up the SAML connection between Bitrise and Okta.![](/img/configure-bitrise-okta-1.jpg)
 3. Copy the **Identity Provider Single Sign-On URL** and paste it in your Bitrise Workspace's **SAML SSO provider Single Sign-On URL (SSO URL)**.
