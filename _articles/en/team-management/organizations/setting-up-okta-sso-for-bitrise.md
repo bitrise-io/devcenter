@@ -18,9 +18,9 @@ menu:
 ---
 This guide provides step-by-step instructions on setting up Bitrise as a SAML application on [Okta](https://www.okta.com/).
 
-{% include message_box.html type="important" title="SAML SSO is only available on the Velocity plan" content="Please note that SAML SSO is only available for a Workspace on the [Velocity plan](https://www.bitrise.io/pricing).
+{% include message_box.html type="important" title="SAML SSO is only available on the Velocity and Build Enterprise plans" content="Please note that SAML SSO is only available for a Workspace on the [Velocity and Enterprise Build Platform plans](https://www.bitrise.io/pricing).
 
-Since the SAML SSO feature is tied to the Velocity plan, if you decide to switch to a different subscription plan, you will lose this feature. All Workspace members will receive an email about the downgrade and you’ll have two weeks to switch back to Velocity if you wish to use SAML SSO in your Workspace again.
+Since the SAML SSO feature is tied to the Velocity and Enterprise Build Platform plans, if you decide to switch to a different subscription plan, you will lose this feature. All Workspace members will receive an email about the downgrade and you’ll have two weeks to switch back to Velocity/Enterprise Build Platform if you wish to use SAML SSO in your Workspace again.
 
 "%}
 
@@ -29,17 +29,17 @@ Since the SAML SSO feature is tied to the Velocity plan, if you decide to switch
 Before connecting SAML SSO to your Workspace, make sure:
 
 * An Okta administrator who is logged into Okta.
-* Your account on Bitrise has a Workspace with the [Velocity plan] (https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
-* As with other [Workspace management actions](/team-management/organizations/members-organizations/), only the Workspace owner can set up SAML SSO to a Bitrise Org.
+* Your account on Bitrise has a Workspace with the [Velocity/Enterprise Build Platform plans](https://www.bitrise.io/pricing). If it doesn’t have a Workspace, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Workspaces on Bitrise.
+* As with other [Workspace management actions](/team-management/organizations/members-organizations/), only the Workspace owner can set up SAML SSO to a Bitrise Workspace.
 
 ## Navigating to the Single Sign-On page of Bitrise
 
-If you are a Workspace owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Org.
+If you are a Workspace owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Workspace.
 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Profile settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![Account selector dropdown](/img/account-settings-dropdown.png)
-2. The **Overview** page displays all the Orgs you’re a member of. Select the Workspace where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
+2. The **Overview** page displays all the Workspaces you’re a member of. Select the Workspace where you wish to set up the SAML SSO connection.
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignon.jpg)
-4. Continue with adding Bitrise to Okta.
+4. Continue with [adding Bitrise to Okta](/team-management/organizations/setting-up-okta-sso-for-bitrise/#adding-bitrise-to-okta).
 
 ## Adding Bitrise to Okta
 
@@ -69,7 +69,7 @@ Congrats! Bitrise has been successfully added to Okta as an app.
 
 1. Click the **Assignments** tab of your Bitrise app.
 
-   Here you can assign Bitrise to individuals/groups. Make sure you assign Bitrise to all org members who will access the Bitrise Workspace through SAML.![](/img/okta-assign-user.jpg)
+   Here you can assign Bitrise to individuals/groups. Make sure you assign Bitrise to all Workspace members who will access the Bitrise Workspace through SAML.![](/img/okta-assign-user.jpg)
 2. Click the **Sign-On** tab of your Bitrise app. You will see that SAML setup is not completed yet. Click **View Setup Instructions**.![](/img/view-setup-instructions.jpg)
    The **How to Configure SAML 2.0 for Bitrise application** page is displayed. It summarizes all the information you need to set up the SAML connection between Bitrise and Okta.![](/img/configure-bitrise-okta-1.jpg)
 3. Copy the **Identity Provider Single Sign-On URL** and paste it in your Bitrise Workspace's **SAML SSO provider Single Sign-On URL (SSO URL)**.
@@ -80,10 +80,10 @@ Congrats! Bitrise has been successfully added to Okta as an app.
 
 ## Authorizing SAML SSO
 
-Now that the Workspace owner has set up SAML SSO, everyone in the Workspacehas to authorize SAML SSO before logging in to their Workspace via SAML SSO.
+Now that the Workspace owner has set up SAML SSO, everyone in the Workspace has to authorize SAML SSO before logging in to their Workspace via SAML SSO.
 
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
-2. Bitrise sends a verification e-mail to all Workspace members. By clicking the **Log In via SAML SSO** button or using the provided URL, Workspace members can authorize themselves for SAML SSO login. The email also shows the Workspace owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.![](/img/email-samlssso.jpg)
+2. Bitrise sends a verification e-mail to all Workspace members. By clicking the **Log In via SAML SSO** button or using the provided URL, Workspace members can authorize themselves for SAML SSO login. The email also shows the Workspace owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.
 3. You’re directed to Bitrise to **Allow “Workspace name” to sign you in** page.
    * Click **Authorize** if you trust the Workspace to control your Bitrise account sign-in process.  
      If you’re already logged in to your SAML SSO provider, you’ll be automatically taken to your Bitrise Dashboard.  
@@ -94,7 +94,7 @@ Now that the Workspace owner has set up SAML SSO, everyone in the Workspacehas t
 
      Note that if you are using a different non-matching email address, you will get the below error message. Make sure you log in with the right email address both on Bitrise, as well as on your SSO provider site.![](/img/noconnectedsamlsso.png)
 
-If all went well, you should be landing on our Bitrise Dashboard. As a Workspace owner, you might want to check how Workspace members are progressing with their SAML SSO connection check Workspace member’s SAML SSO statuses or invite new members to the Org.
+If all went well, you should be landing on our Bitrise Dashboard. As a Workspace owner, you might want to check how Workspace members are progressing with their SAML SSO connection check Workspace member’s SAML SSO statuses or invite new members to the Workspace.
 
 ## What's next?
 
@@ -102,6 +102,6 @@ Learn how you can:
 
 * [Check out Workspace member’s SAML SSO statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
 * [Invite new members with SAML SSO.](/team-management/organizations/saml-sso-in-organizations/#inviting-new-workspace-members-with-saml-sso)
-* [Enforce SAML SSO login](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-a-workspace) to the Workspace once all Workspace members have authorized their SAML SSO connection to the Org.
-* [Log into your Org](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account) now that SAML SSO is set up.
-* [Disable SAML SSO](/team-management/organizations/saml-sso-in-organizations/#disabling-a-workspaces-saml-sso) on an Org.
+* [Enforce SAML SSO login](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-a-workspace) to the Workspace once all Workspace members have authorized their SAML SSO connection to the Workspace.
+* [Log into your Workspace](/team-management/organizations/saml-sso-in-organizations/#logging-in-via-saml-sso-with-a-bitrise-account) now that SAML SSO is set up.
+* [Disable SAML SSO](/team-management/organizations/saml-sso-in-organizations/#disabling-a-workspaces-saml-sso) on an Workspace.
