@@ -80,10 +80,10 @@ Congrats! Bitrise has been successfully added to Okta as an app.
 
 ## Authorizing SAML SSO
 
-Now that the Workspace owner has set up SAML SSO, everyone in the Workspacehas to authorize SAML SSO before logging in to their Workspace via SAML SSO.
+Now that the Workspace owner has set up SAML SSO, everyone in the Workspace has to authorize SAML SSO before logging in to their Workspace via SAML SSO.
 
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
-2. Bitrise sends a verification e-mail to all Workspace members. By clicking the **Log In via SAML SSO** button or using the provided URL, Workspace members can authorize themselves for SAML SSO login. The email also shows the Workspace owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.![](/img/email-samlssso.jpg)
+2. Bitrise sends a verification e-mail to all Workspace members. By clicking the **Log In via SAML SSO** button or using the provided URL, Workspace members can authorize themselves for SAML SSO login. The email also shows the Workspace owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.
 3. You’re directed to Bitrise to **Allow “Workspace name” to sign you in** page.
    * Click **Authorize** if you trust the Workspace to control your Bitrise account sign-in process.  
      If you’re already logged in to your SAML SSO provider, you’ll be automatically taken to your Bitrise Dashboard.  
