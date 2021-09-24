@@ -96,8 +96,8 @@ The table shows the available resources for each VM.
 
 | CPU | Storage | RAM |
 | --- | --- | --- |
-| Intel Xeon E5 @2.6 GHz with 4 vCPUs | 200GB SSD | 15GB |
-| Intel Xeon E5 @2.6 GHz with 8 vCPUs | 200GB SSD | 30GB |
+| 4vCPU @2.8 GHz | 200GB SSD | 16GB |
+| 8vCPU @2.8 GHz | 200GB SSD | 32GB |
 
 ## Pricing
 
