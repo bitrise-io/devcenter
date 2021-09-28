@@ -55,6 +55,8 @@ The feature is definitely supported for the following hosting services:
 * GitLab
 * Self-hosted GitLab (as long as the repository is not on a private network)."%}
 
+{% include message_box.html type="warning" title="Changing the stack type in the bitrise.yml file" content="Currently, you can't set the default stack type for an app's builds directly in the `bitrise.yml` file of the app. You can only set it on the **Stacks** tab of the Workflow Editor."%}
+
 To store the file in your repository, you must commit it to the root of your Bitrise app’s default branch. You can check the app’s default branch on [bitrise.io](http://bitrise.io/ "http://bitrise.io"): open the app, and go to the **Settings** tab. Scroll down to the **DEFAULT BRANCH** option to check which branch should contain the `bitrise.yml` file.
 
 You don’t need to create your own `bitrise.yml` file in advance to use this solution though: during the process of updating your settings, you will have the chance to download the current file from the website, or copy its full content. Once you commit that file to the appropriate branch, you can change the setting. Let’s see how to do that:
