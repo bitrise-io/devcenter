@@ -68,7 +68,7 @@ If you insert below script command into a **Script** Step, the command will catc
          exit 1
     fi
 
-If you wish to rather run an empty green build super quickly, we recommend that you insert this script \`run_if: '{{enve _"GITHUB_PR_IS_DRAFT" ""}}' to each Step in your Workflow to skip the Steps.
+If you wish to rather run an empty green build super quickly, we recommend that you insert this script `run_if: '{{enve _"GITHUB_PR_IS_DRAFT" ""}}` to each Step in your Workflow to skip the Steps.
 
     workflow1:
         steps:
