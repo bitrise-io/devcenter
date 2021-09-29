@@ -103,4 +103,39 @@ If builds triggered by Pull Requests need to access Secrets' values, then toggle
 
 Head over to [Secrets](/bitrise-cli/secrets/) for more information on [secret filtering](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli).
 
+### Managing Secrets from a central location
+
+By default, all Secrets are handled on the app level. You can reuse Secret keys across multiple Bitrise apps, even if their corresponding values are different for each app.
+
+However, it is possible to set up a Secret that holds the same value for all your apps, and manage that Secret from one location. For example, if all your apps need access to the same API, it makes sense to store the Secret containing the API key in a central location. If the API key ever changes, you only need to change it in that single location and the change applies to all your Bitrise apps.
+
+Setting up such a Secret (or multiple Secrets) requires two things:
+
+* A central vault or database - such as HashiCorp or Doppler - to store the Secrets. It must be accessible via a CLI.
+* A **Script** Step to access the central vault/database, pull the Secret and set it to sensitive on Bitrise.
+
+To create a new Secret and store it in a central location during a build:
+
+1. Add a **Script** Step to ALL Workflows where you want to use the Secrets.
+2. Add the necessary commands to access your vault and pull the Secrets. The exact commands depend on the service you’re using.
+3. Use the `envman` tool to mark the Secrets as sensitive. The envman tool has the following syntax:  
+   `envman add --key KEY --value value --sensitive` .
+4. Make sure the Step doesn’t display the value of the Secret in the build log. To do so, remove `set -x` from the Step’s `content`.
+
+{% include message_box.html type="important" title="Secret filtering" content="Please note that if you have [secret filtering turned off](/bitrise-cli/secrets/#secret-filtering-with-bitrise-cli), your Secrets will not be filtered and thus their value can still be visible in logs."%}
+
+For example, let’s say you have a [HashiCorp Vault](https://www.vaultproject.io/ "https://www.vaultproject.io/") instance called `secret/hello`. You have two Secrets in this vault instance: `foo` with the value `world` and `foo2` with the value `world2`. To use these Secrets in a Bitrise build, you need to:
+
+* Export them from the Vault instance.
+* Iterate over them and mark both of them as sensitive.
+
+You can use this Script to achieve both:
+
+    # Exporting the Secrets
+    vault kv get --format=json secret/hello | jq -r '.data.data | to_entries[] | [.key, .value] | @tsv' | 
+    # Iterating over the Secrets and marking them as sensitive
+    while IFS=$'\t' read -r key value; do
+        envman add --key "$key" --value "$value" --sensitive
+    done
+
 {% include banner.html banner_text="Check out Env Vars and Secrets in action" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}

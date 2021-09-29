@@ -1,6 +1,12 @@
 ---
+- title: Secrets and Env Vars
+  modified: 2021-09-29 08:25:29 +0200
+  changelog: 'You can manage all your Secrets from a central vault: add a Script Step
+    to your Workflows to access your vault and pull the Secrets.'
+  type: new
+  url: "/builds/env-vars-secret-env-vars/#about-secrets"
 - title: Freeing up disk space
-  modified: 2021-09-16 00:00:00 +0200
+  modified: 2021-09-16T00:00:00.000+02:00
   changelog: The commands in this section have been updated
   type: update
   url: "/infrastructure/virtual-machines/#freeing-up-disk-space"
