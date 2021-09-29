@@ -11,6 +11,7 @@ tag:
 description: " If you need to, you can skip a specific commit or pull request. Skipping
   means, in this context, that a code change will NOT trigger a build on Bitrise,
   even if the triggers are set up to do so."
+summary: ''
 menu:
   triggering-builds:
     weight: 13
@@ -46,5 +47,13 @@ Pull Requests are treated as (virtual) commits themselves, where the commit mess
 If you want to skip a pull request, you have to include the `skip ci` pattern in the pull request's title or description, and not in the commit's message!
 
 Once you decide to not to skip the pull request / more commits in the pull request, you can simply remove the `skip ci` pattern from the pull request's title or description. This should automatically trigger a new build with the latest commit, and all future commits of the pull request will be built too (unless you add a `skip ci` pattern again).
+
+## Exiting a build triggered by draft PR
+
+When you use the [draft PR function of GitHub](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests#draft-pull-requests), Bitrise inserts a `GITHUB_PR_IS_DRAFT` Environment Variable into the build Environment Variable list. If this Env Var is available in your build Env Var list, its value is always set to `true`.
+
+You can spot the `GITHUB_PR_IS_DRAFT` Env Var in your build and abort the build immediately to save concurrencies/credits in two ways:
+
+1. If you insert below script command into a **Script** Step, the command will catch the draft PR Env Var if it is defined and the build will fail.
 
 {% include banner.html banner_text="Skip a commit or pull request" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}
