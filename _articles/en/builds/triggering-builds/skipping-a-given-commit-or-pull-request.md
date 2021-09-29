@@ -54,7 +54,7 @@ When you use the [draft PR function of GitHub](https://docs.github.com/en/github
 
 You can spot the `GITHUB_PR_IS_DRAFT` Env Var in your build and abort the build immediately to save concurrencies/credits in two ways:
 
-If you insert below script command into a **Script** Step, the command will catch the draft PR Env Var if it is defined and the build will fail.
+- If you insert below script command into a **Script** Step, the command will catch the draft PR Env Var if it is defined and the build will fail.
 
     #!/usr/bin/env bash
     # fail if any commands fails
@@ -68,7 +68,7 @@ If you insert below script command into a **Script** Step, the command will catc
          exit 1
     fi
 
-If you wish to rather run an empty green build super quickly, we recommend that you insert this script `run_if: '{{enve _"GITHUB_PR_IS_DRAFT" ""}}` to each Step in your Workflow to skip the Steps.
+- If you wish to rather run an empty green build super quickly, we recommend that you insert this script `run_if: '{{enve _"GITHUB_PR_IS_DRAFT" ""}}` to each Step in your Workflow to skip the Steps.
 
     workflow1:
         steps:
