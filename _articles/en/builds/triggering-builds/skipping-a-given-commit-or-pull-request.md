@@ -70,4 +70,16 @@ If you insert below script command into a **Script** Step, the command will catc
 
 If you wish to rather run an empty green build super quickly, we recommend that you insert this script 'run_if: '{{enve _"GITHUB_PR_IS_DRAFT" ""}}' to each Step in your Workflow to skip the Steps.
 
+    workflow1:
+        steps:
+        - script@1:
+            run_if: '{{enveq "GITHUB_PR_IS_DRAFT" ""}}'
+            inputs:
+            - content: |-
+                #!/usr/bin/env bash
+                # fail if any commands fails
+                set -e
+                # debug log
+                set -x
+
 {% include banner.html banner_text="Skip a commit or pull request" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}
