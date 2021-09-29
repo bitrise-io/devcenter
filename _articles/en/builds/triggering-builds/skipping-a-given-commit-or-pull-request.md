@@ -73,7 +73,10 @@ If you wish to rather run an empty green build super quickly, we recommend that 
     workflow1:
         steps:
         - script@1:
-            run_if: '{{enveq "GITHUB_PR_IS_DRAFT" ""}}'
+        	{% raw %}
+            run_if: |-
+ 				{{enveq "CUSTOM_ENV_VAR_KEY" "test value to test against"}}
+             {% endraw %}   
             inputs:
             - content: |-
                 #!/usr/bin/env bash
