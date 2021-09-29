@@ -14,7 +14,7 @@ menu:
     weight: 5
 
 ---
-Trace’s crash reporting feature helps you understand and prioritize the issues within your app. Trace provides crash reporting by default: all you need to do to make it work is to install the Trace SDK to your app. 
+Trace’s crash reporting feature helps you understand and prioritize the issues within your app. Trace provides crash reporting by default: all you need to do to make it work is to install the Trace SDK to your app.
 
 Within Trace itself, the **Crashes** page shows all crashes, the number of affected users, the affected app versions, and the last time these crashes were observed.
 
