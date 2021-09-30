@@ -34,8 +34,6 @@ With Meercode’s analysis and visualization tools:
 
 ## Integrating Meercode with Bitrise
 
-{% include message_box.html type="important" title="Signing up for the beta" content="For now, the Meercode add-on is in a beta phase. To apply for the beta, [contact our support team](https://support.bitrise.io/hc/en-us) and send them the app slug of your app or apps for which you want the Meercode add-on enabled."%}
-
 To monitor your Bitrise builds with Meercode:
 
 * An admin on the app’s team must enable the Meercode add-on for your app.
@@ -59,8 +57,6 @@ To enable the add-on for a specific app:
 ### Authorizing the add-on as a user
 
 After an admin enables the Meercode add-on, each user on the app’s team must authorize the add-on on their own account.
-
-{% include message_box.html type="important" title="Revoking authorization" content="Please note that during the beta phase, there is no way to revoke this authorization. An admin can disable the add-on for the app at any time; in that case, all users lose access to the add-on."%}
 
 1. Log in to your Bitrise account.
 2. On the Dashboard, find the app you need.
