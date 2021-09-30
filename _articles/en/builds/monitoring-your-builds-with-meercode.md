@@ -34,8 +34,6 @@ With Meercode’s analysis and visualization tools:
 
 ## Integrating Meercode with Bitrise
 
-{% include message_box.html type="important" title="Signing up for the beta" content="For now, the Meercode add-on is in a beta phase. To apply for the beta, [contact our support team](https://support.bitrise.io/hc/en-us) and send them the app slug of your app or apps for which you want the Meercode add-on enabled."%}
-
 To monitor your Bitrise builds with Meercode:
 
 * An admin on the app’s team must enable the Meercode add-on for your app.
@@ -60,14 +58,32 @@ To enable the add-on for a specific app:
 
 After an admin enables the Meercode add-on, each user on the app’s team must authorize the add-on on their own account.
 
-{% include message_box.html type="important" title="Revoking authorization" content="Please note that during the beta phase, there is no way to revoke this authorization. An admin can disable the add-on for the app at any time; in that case, all users lose access to the add-on."%}
-
 1. Log in to your Bitrise account.
 2. On the Dashboard, find the app you need.
 3. On the app’s page, go to the **Add-ons** tab.
 4. Next to **Meercode**, click the **Go to add-on** button.
-5. On the next page, you can see what access rights the add-on needs. Click **Authorize add-on** to grant these rights.  
-   ![](/img/authorize-meercode-2.png)
+5. On the next page, you can see what access rights the add-on needs. Click **Authorize add-on** to grant these rights.
+
+### Revoking authorization on Meercode
+
+Every user on an app’s team can revoke their own token to the Meercode add-on of an app.
+
+1. Go to the **Security** tab of your personal account.
+2. Scroll to **Authorized add-ons**.
+3. Click **Revoke** to revoke your access token to Meercode.
+
+   ![](/img/meercode_revoke.png)
+
+Once you’ve revoked you token, you won’t have access to the add-on any more, unless you re-authorize the add-on.
+
+### Disabling Meercode
+
+Only a Workspace admin can disable the Meercode add-on for an app’s members. Here is how:
+
+1. As an admin, go to the **Add-ons** tab of the app.
+2. Click **Disable Add-on** next to Meercode.![](/img/meercode_disable.png)
+
+Once it’s done, nobody can access the add-on any more, unless it is enabled again by an admin.
 
 ## CI build monitoring on Meercode
 
