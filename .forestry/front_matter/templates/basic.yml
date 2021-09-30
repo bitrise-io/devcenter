@@ -56,6 +56,7 @@ pages:
 - _articles/en/builds/bitrise-checks-on-github-checks.md
 - _articles/en/builds/bitrise-yml-online.md
 - _articles/en/builds/build-artifacts-online.md
+- _articles/en/builds/build-insights.md
 - _articles/en/builds/build-logs.md
 - _articles/en/builds/build-numbering-and-app-versioning.md
 - _articles/en/builds/caching/caching-carthage.md
@@ -294,6 +295,7 @@ pages:
 - _articles/jp/api/incoming-and-outgoing-webhooks.md
 - _articles/jp/api/response-and-pagination.md
 - _articles/jp/builds/bitrise-checks-on-github-checks.md
+- _articles/jp/builds/build-insights.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
 - _articles/jp/builds/configuring-notifications.md
 - _articles/jp/builds/monitoring-your-builds-with-meercode.md

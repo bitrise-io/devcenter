@@ -16,7 +16,7 @@ description: 'Add a new app to Bitrise: connect your repository, set up SSH keys
   scan and configure your app, and register a webhook. '
 menu:
   getting-started-main:
-    weight: 7
+    weight: 8
     title: Adding a new app on the website
 
 ---

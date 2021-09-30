@@ -12,7 +12,7 @@ description: In this guide we discuss how to set up, test, code sign and deploy 
 summary: ''
 menu:
   getting-started-main:
-    weight: 33
+    weight: 34
 
 ---
 You can generate React Native projects [with the React Native CLI or with the Expo CLI](https://facebook.github.io/react-native/docs/getting-started.html). [Expo](https://docs.expo.io/versions/latest/) is a toolchain that allows you to quickly get a React Native app up and running without having to use native code in Xcode or Android Studio.

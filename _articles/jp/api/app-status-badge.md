@@ -7,7 +7,6 @@ menu:
     weight: 18
 
 ---
-
 `Status Image API token` を用いることで、Appの（指定したブランチの）ステータスを反映した埋め込み可能なSVG形式のバッジ画像やJSONメッセージを取得できます。
 
 1. [bitrise.io](https://www.bitrise.io) 上でAppを開き、App名の右隣のバッジ画像をクリックしてください。

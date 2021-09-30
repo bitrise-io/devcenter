@@ -6,9 +6,9 @@ tag:
 title: Workspaces
 redirect_from: []
 description: The purpose of Workspaces is to make it easier to manage several people
-  working on different apps on Bitrise. Workspaces can own an unlimited number
-  of apps, and Workspace owners can assign Workspace members to work on different
-  apps as they see fit.
+  working on different apps on Bitrise. Workspaces can own an unlimited number of
+  apps, and Workspace owners can assign Workspace members to work on different apps
+  as they see fit.
 menu:
   team-management-main:
     identifier: organizations

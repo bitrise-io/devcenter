@@ -5,12 +5,12 @@ tag:
 - getting-started
 - security
 description: Bitrise supports two-factor authentication for every user, and SAML SSO
-  for Workspaces. Use Personal Access Tokens to authenticate your account to the
-  Bitrise API.
+  for Workspaces. Use Personal Access Tokens to authenticate your account to the Bitrise
+  API.
 summary: ''
 menu:
   getting-started-main:
-    weight: 12
+    weight: 13
 
 ---
 ## Enabling Two-factor authentication

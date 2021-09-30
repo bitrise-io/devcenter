@@ -13,10 +13,9 @@ description: In this guide we discuss how to set up, test, code sign and deploy 
 summary: ''
 menu:
   getting-started-main:
-    weight: 34
+    weight: 35
 
 ---
-
 [React Native CLI又はExpo CLI](https://facebook.github.io/react-native/docs/getting-started.html)でReactNativeプロジェクトを生成することができます。[Expo](https://docs.expo.io/versions/latest/)はXcodeやAndroid Studioでネイティブコードを使わなくてもReact Nativeアプリを素早く起動、実行を行うことができるツールチェーンです。
 
 このガイドでは[Expo CLI](https://docs.expo.io/get-started/installation/)でビルドされたReact Nativeプロジェクトをセットアップ、テスト、コード署名、デプロイする方法について説明します。

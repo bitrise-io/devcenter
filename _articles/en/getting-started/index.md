@@ -12,8 +12,7 @@ tag:
 - builds
 - workflows
 description: 'Get started with Bitrise: sign up, add an app, start a build. Find out
-  how to register webhooks, set up Workspaces, and learn the basics of Steps and
-  Workflows.'
+  how to register webhooks, set up Workspaces, and learn the basics of Steps and Workflows.'
 menu:
   main:
     identifier: getting-started-main
