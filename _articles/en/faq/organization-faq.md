@@ -4,9 +4,9 @@ tag:
 - orgs
 - " faq"
 - teams
-description: Workspaces are used to seamlessly manage bigger teams and members
-  inside a company. It is a place to gather all the people working on each of your
-  company's apps and delegate them through creating different groups.
+description: Workspaces are used to seamlessly manage bigger teams and members inside
+  a company. It is a place to gather all the people working on each of your company's
+  apps and delegate them through creating different groups.
 redirect_from: []
 menu:
   faq:

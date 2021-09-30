@@ -3,6 +3,10 @@ tag: []
 title: Build Insights JP
 redirect_from: []
 summary: ''
+menu:
+  builds-main:
+    weight: 38
+    title: Build Insights
 
 ---
 {% include not_translated_yet.html %}

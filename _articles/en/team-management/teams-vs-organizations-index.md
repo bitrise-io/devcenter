@@ -5,12 +5,11 @@ date: 2019-03-27T15:41:18.000+00:00
 tag:
 - teams
 - orgs
-description: 'Teams are based on apps: each app has its own team. Workspaces are
-  made up of multiple users, and they can own several different apps. '
+description: 'Teams are based on apps: each app has its own team. Workspaces are made
+  up of multiple users, and they can own several different apps. '
 menu:
   main:
     identifier: team-management-main
-    title: Accounts and Workspaces
     weight: 7
 
 ---

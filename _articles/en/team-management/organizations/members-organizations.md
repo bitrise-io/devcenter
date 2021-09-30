@@ -3,9 +3,9 @@ title: Managing Workspace members
 tag:
 - teams
 - orgs
-description: 'Workspaces can have multiple Groups. Groups form the "backbones"
-  of Workspaces: they contain the members of the Workspaces, they can be assigned
-  to different applications owned by the Workspaces.'
+description: 'Workspaces can have multiple Groups. Groups form the "backbones" of
+  Workspaces: they contain the members of the Workspaces, they can be assigned to
+  different applications owned by the Workspaces.'
 redirect_from: []
 summary: ''
 menu:

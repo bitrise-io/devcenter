@@ -3,9 +3,9 @@ title: Creating Workspaces
 tag:
 - teams
 - orgs
-description: You can create and manage Workspaces on bitrise.io to manage entire
-  teams quickly and effectively. You can set up multiple groups within a Workspace
-  for different apps.
+description: You can create and manage Workspaces on bitrise.io to manage entire teams
+  quickly and effectively. You can set up multiple groups within a Workspace for different
+  apps.
 redirect_from: []
 menu:
   organizations:

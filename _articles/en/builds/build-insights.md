@@ -8,6 +8,9 @@ redirect_from: []
 summary: 'Insights is a monitoring tool that allows you to track metrics detailing
   the performance of your Bitrise builds. Track your metrics on app-, Workflow-, and
   Step-level and use the data to optimize your builds. '
+menu:
+  builds-main:
+    weight: 37
 
 ---
 Build Insights is a monitoring tool that allows you to track metrics detailing the performance of your Bitrise builds. Track your metrics on app-, Workflow-, and Step-level and use the data to optimize your builds. With the Insights tool, we are targeting three main areas:

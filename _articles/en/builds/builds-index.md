@@ -53,4 +53,4 @@ You can always check your build status on the **Builds** page of the app, and yo
 
 ## Build concurrency
 
-Build concurrency determines how many builds you can run simultaneously. Builds over your subscription plan’s concurrency count will be marked as on hold. They will start whenever your ongoing builds are finished and you have a free build slot. 
+Build concurrency determines how many builds you can run simultaneously. Builds over your subscription plan’s concurrency count will be marked as on hold. They will start whenever your ongoing builds are finished and you have a free build slot.
