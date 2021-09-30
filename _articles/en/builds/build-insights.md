@@ -50,8 +50,6 @@ On the Insights dashboard, choose an app to view its metrics.
    2. Scroll down to the **Apps** section and find the app there.
 2. Click the app’s name.
 
-![](/img/bitrise_-_mobile_continuous_integration_and_delivery_-_ios___android_build_automation.png)
-
 ## Viewing data from a specific timeframe
 
 By default, all Insights pages display your metrics on a weekly basis from the last 4 weeks. Modify the basis and timeframe by opening the respective dropdown menu in the top right of the page, and selecting the options you need.
