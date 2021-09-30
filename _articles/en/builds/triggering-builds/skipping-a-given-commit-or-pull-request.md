@@ -82,4 +82,6 @@ If you wish to rather run an empty green build super quickly, we recommend that 
                 # debug log
                 set -x
 
+{% include message_box.html type="note" title="My message" content="If you have previously used the draft PR on a build but now you are ready to merge changes to your code from the same PR, clicking the **Ready for review** button on GitHub won't trigger a new build on Bitrise. The previous builds will also contain the draft PR related Env Vars. In this case, we recommend you manually start a brand new build from the website or trigger the CI with a new commit."%}
+
 {% include banner.html banner_text="Skip a commit or pull request" url="https://app.bitrise.io/dashboard/builds" button_text="Go to your app" %}
