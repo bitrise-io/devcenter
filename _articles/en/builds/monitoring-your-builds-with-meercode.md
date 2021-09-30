@@ -74,14 +74,14 @@ Every user on an app’s team can revoke their own token to the Meercode add-on 
 
    ![](/img/meercode_revoke.png)
 
-Once you’ve revoked you token, you won’t have access to the add-on any more unless you re-authorize the add-on.
+Once you’ve revoked you token, you won’t have access to the add-on any more, unless you re-authorize the add-on.
 
 ### Disabling Meercode
 
 Only a Workspace admin can disable the Meercode add-on for an app’s members. Here is how:
 
-1. As an admin, go to the Add-ons tab of the app.
-2. Click Disable Add-on next to Meercode.
+1. As an admin, go to the **Add-ons** tab of the app.
+2. Click **Disable Add-on** next to Meercode.![](/img/meercode_disable.png)
 
 Once it’s done, nobody can access the add-on any more, unless it is enabled again by an admin.
 
