@@ -30,7 +30,7 @@ To get to your Insights dashboard:
 
 On the dashboard, you can see aggregated build data of the selected Workspace. You have access to two main categories of metrics: build stats and build usage. Both display the aggregated metrics of all the Workspace’s apps for the [selected timeframe](/builds/build-insights/#viewing-data-from-a-specific-timeframe).
 
-![](/img/bitrise_-_mobile_continuous_integration_and_delivery_-_ios___android_build_automation.png)
+![](/img/insights-dashboard.png)
 
 You can switch between Workspaces at any time: in the top right corner, open the account selector dropdown menu and select a Workspace.
 
@@ -47,13 +47,13 @@ On the Insights dashboard, choose an app to view its metrics.
    2. Scroll down to the **Apps** section and find the app there.
 2. Click the app’s name.
 
-![](/img/bitrise_-_mobile_continuous_integration_and_delivery_-_ios___android_build_automation.png)
+![](/img/insights-apps.png)
 
 ## Viewing data from a specific timeframe
 
 By default, all Insights pages display your metrics on a weekly basis from the last 4 weeks. Modify the basis and timeframe by opening the respective dropdown menu in the top right of the page, and selecting the options you need.
 
-![](/img/bitrise_-_mobile_continuous_integration_and_delivery_-_ios___android_build_automation.png)
+![](/img/insights-timeframe-selector.png)
 
 You can choose to view the data on an hourly, daily, weekly, or monthly basis, and you can either select from pre-defined timeframes or set a custom timeframe.
 
@@ -66,7 +66,7 @@ Opening an app’s build monitoring in Insights takes you to the **Overview** pa
 * The **Build usage** section allows you to view credit usage (for credit-based accounts) or build time usage (for concurrency-based accounts). You can choose between viewing the cumulative data, or interval-based data (for example, credit usage per each week throughout the last 8 weeks).
 * The **Latest builds** section displays the latest builds of the app individually, with the colors indicating their final status: green builds are successful, red builds are failed. Click on any individual build to view its build log.
 
-  ![](/img/bitrise_-_mobile_continuous_integration_and_delivery_-_ios___android_build_automation.png)
+  ![](/img/insights-latest-builds.png)
 * In the **Workflows** section, you can find the main build metrics for each Workflow of the app.
 
 For more details and definitions of the metrics shown in the App overview page, see [Available metrics](/builds/build-insights/#available-metrics).
@@ -75,7 +75,7 @@ For more details and definitions of the metrics shown in the App overview page, 
 
 To look at the performance data of each Workflow separately, scroll down to the **Workflows** section and click the Workflow you want to see.
 
-![](/img/bitrise_-_mobile_continuous_integration_and_delivery_-_ios___android_build_automation.png)
+![](/img/insights-workflows.png)
 
 On the Workflow page, you can see the same metrics as on the [App overview](/builds/build-insights/#app-overview) page but filtered for the Workflow in question. You can also get detailed data on all the latest builds of that Workflow, and their aggregated metrics.
 
