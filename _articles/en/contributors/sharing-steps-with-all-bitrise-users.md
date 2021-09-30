@@ -104,7 +104,7 @@ If you are a Step maintainer, you should be reachable within a reasonable timefr
 
 The repository and issue tracker must not be removed, as there are permanent links to it included in the step.yml that is in the Bitrise StepLib. If they are removed, already shared Step versions will continue to function as they are also shared on a Bitrise managed file hosting service during the share process. A new version of the step may be released, managed by Bitrise.
 
-If you shared a Step but you're no longer able or willing to maintain it, please create a GitHub issue in this repository: [https://github.com/bitrise-io/bitrise-steplib](https://github.com/bitrise-io/bitrise-steplib "https://github.com/bitrise-io/bitrise-steplib")[!](https://github.com/bitrise-io/bitrise-steplib!)
+If you shared a Step but you're no longer able or willing to maintain it, please create a GitHub issue in this repository: [Bitrise StepLib](https://github.com/bitrise-io/bitrise-steplib)
 
 ## Reporting Step issues
 
