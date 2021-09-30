@@ -295,6 +295,7 @@ pages:
 - _articles/jp/api/incoming-and-outgoing-webhooks.md
 - _articles/jp/api/response-and-pagination.md
 - _articles/jp/builds/bitrise-checks-on-github-checks.md
+- _articles/jp/builds/build-insights-jp.md
 - _articles/jp/builds/caching/caching-homebrew-installers.md
 - _articles/jp/builds/configuring-notifications.md
 - _articles/jp/builds/monitoring-your-builds-with-meercode.md
