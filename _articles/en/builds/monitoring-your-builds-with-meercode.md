@@ -63,7 +63,6 @@ After an admin enables the Meercode add-on, each user on the app’s team must a
 3. On the app’s page, go to the **Add-ons** tab.
 4. Next to **Meercode**, click the **Go to add-on** button.
 5. On the next page, you can see what access rights the add-on needs. Click **Authorize add-on** to grant these rights.  
-   ![](/img/authorize-meercode-2.png)
 
 ## CI build monitoring on Meercode
 
