@@ -64,6 +64,24 @@ After an admin enables the Meercode add-on, each user on the app’s team must a
 4. Next to **Meercode**, click the **Go to add-on** button.
 5. On the next page, you can see what access rights the add-on needs. Click **Authorize add-on** to grant these rights.  
 
+### Revoking authorization on Meercode
+
+Every user on an app’s team can revoke their own token to the Meercode add-on of an app.
+
+1. Go to the Security tab of your personal account.
+2. Scroll to Authorized add-ons.
+3. Click Revoke to revoke your access token to Meercode.
+Once you’ve revoked you token, you won’t have access to the add-on any more unless you re-authorize the add-on.
+
+### Disabling Meercode
+
+Only a Workspace admin can disable the Meercode add-on for an app’s members. Here is how:
+
+1. As an admin, go to the Add-ons tab of the app.
+2. Click Disable Add-on next to Meercode.
+
+Once it’s done, nobody can access the add-on any more, unless it is enabled again by an admin.
+
 ## CI build monitoring on Meercode
 
 To monitor your builds:
