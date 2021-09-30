@@ -46,8 +46,8 @@ The **Build usage** section allows you to view credit usage (for credit-based ac
 On the Insights dashboard, choose an app to view its metrics.
 
 1. Find the app. You can either:
-   1. Search for the app’s name in the search bar.
-   2. Scroll down to the **Apps** section and find the app there.
+   * Search for the app’s name in the search bar.
+   * Scroll down to the **Apps** section and find the app there.
 2. Click the app’s name.
 
 ![](/img/insights-apps.png)
