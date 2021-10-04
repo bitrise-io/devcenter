@@ -29,7 +29,7 @@ Since the SAML SSO feature is tied to the above plans, if you decide to downgrad
 Before connecting SAML SSO to your Workspace, make sure:
 
 * You have a Google administrator account where you can add Bitrise as a SAML app. The G Suite administrator can help setting up SAML SSO on G Suit.
-* Your account on Bitrise has a Workspace with the \[Velocity plan\] (https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](/team-management/organizations/creating-org/).
+* Your account on Bitrise has a Workspace with the [Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](/team-management/organizations/creating-org/).
 * As with other [Workspace management actions](/team-management/organizations/members-organizations/), only the Workspace owner can set up SAML SSO to a Bitrise Org.
 
 ## Navigating to the Single Sign-On page of Bitrise
