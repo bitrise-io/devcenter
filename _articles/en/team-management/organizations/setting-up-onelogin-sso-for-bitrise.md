@@ -80,7 +80,7 @@ All Workspace members (including the Workspace owner) must enable their SAML SSO
 
 You should be landing on the **Welcome** page of Bitrise. Click **Dashboard** to land on your Workspace's dashboard. If you go to your Workspace's **Groups** tab, you can see that you are automatically added as a SAML user. All Workspace members, who enable SAML SSO, appear here automatically. From now on you can log into your Bitrise Workspace with SAML SSO.
 
-{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Workspace's SAML SSO, check out our [SAML SSO in organizations guide](/team-management/organizations/saml-sso-in-organizations/). "%}
+{% include message_box.html type="note" title="Signing up to Bitrise with SAML SSO" content=" If you’d like to learn more about SAML SSO on Bitrise, in particular, how to sign up to Bitrise with an Workspace's SAML SSO, check out our [SAML SSO in Workspaces guide](/team-management/organizations/saml-sso-in-organizations/). "%}
 
 ## What's next?
 
