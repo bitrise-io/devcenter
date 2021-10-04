@@ -28,7 +28,6 @@ Before connecting SAML SSO to your Workspace on Bitrise, make sure:
 * The AD FS administrator is at hand during the SAML SSO configuration process.
 * As with other [Workspace management actions](https://devcenter.bitrise.io/team-management/organizations/members-organizations/), only the Bitrise Workspace owner can set up SAML SSO to a Bitrise Workspace.
 * Your account on Bitrise has a Workspace with the [Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
-* Your account on Bitrise has a Workspace with a [Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
 
 ## Navigating to Single Sign On page of Bitrise
 
