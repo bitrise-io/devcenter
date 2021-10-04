@@ -15,24 +15,26 @@ menu:
 ---
 This guide provides instructions on setting up SAML SSO using [Auth0](https://auth0.com).
 
-{% include message_box.html type="important" title="SAML SSO is only available on the Velocity plan" content="Please note that SAML SSO is only available for a Workspace on the [Velocity plan](https://www.bitrise.io/pricing).
+{% include message_box.html type="important" title="SAML SSO with Velocity and Enterprise Build plan" content="Please note that SAML SSO is only available for a Workspace with the [Enterprise Build and Velocity plans](https://www.bitrise.io/pricing).
 
-Since the SAML SSO feature is tied to the Velocity plan, if you decide to switch to a different subscription plan, you will lose this feature. All Workspace members will receive an email about the downgrade and you’ll have two weeks to switch back to Velocity if you wish to use SAML SSO in your Workspace again."%}
+Since the SAML SSO feature is tied to the above plans, if you decide to downgrade, you will lose this feature. All Workspace members will receive an email about the downgrade and you’ll have two weeks to re-upgrade if you wish to use SAML SSO in your Workspace again.
+
+"%}
 
 ## Before you start
 
 Before connecting SAML SSO to your Workspace, make sure:
 
 * An Auth0 administrator who is logged into Auth0 is at hand.
-* Your account on Bitrise has a Workspace with the [Velocity plan] (https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
-* As with other [Workspace management actions](/team-management/organizations/members-organizations/), only the Workspace owner can set up SAML SSO to a Bitrise Org.
+* Your account on Bitrise has a Workspace with the [Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have a Workspace, go ahead and [create one](/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
+* As with other [Workspace management actions](/team-management/organizations/members-organizations/), only the Workspace owner can set up SAML SSO to a Bitrise Workspace.
 
 ## Navigating to the Single Sign-On page of Bitrise
 
-If you are a Workspace owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Org.
+If you are a Workspace owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Workspace.
 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Profile settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![Account selector dropdown](/img/account-settings-dropdown.png)
-2. The **Overview** page displays all the Orgs you’re a member of. Select the Workspace where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
+2. The **Overview** page displays all the Workspaces you’re a member of. Select the Workspace where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
 3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignon.jpg)
 4. Continue with [Setting up SAML SSO connection between Auth0 and Bitrise](/team-management/organizations/setting-up-auth0-sso-for-bitrise/#setting-up-saml-sso-connection-between-auth0-and-bitrise).
 
@@ -89,7 +91,7 @@ Learn how you can [log into your Workspacenow that SAML SSO is set up](/team-man
 
 You might wan to [check out Workspace member’s SAML SSO statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
 
-You might want to [enforce SAML SSO login to the Org](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-a-workspace) once all Workspace members have authorized their SAML SSO connection to the Org.
+You might want to [enforce SAML SSO login to the Org](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-a-workspace) once all Workspace members have authorized their SAML SSO connection to the Workspace.
 
 Disabling SAML SSO is very simple - [learn how.](/team-management/organizations/saml-sso-in-organizations/#disabling-a-workspaces-saml-sso)
 
