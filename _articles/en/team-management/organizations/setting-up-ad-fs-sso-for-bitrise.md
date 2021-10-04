@@ -15,9 +15,11 @@ menu:
 ---
 This guide provides step-by-step instructions on setting up SAML SSO using [Microsoft Active Directory Federation Services](https://docs.microsoft.com/en-us/windows-server/identity/active-directory-federation-services) (AD FS).
 
-{% include message_box.html type="important" title="SAML SSO is only available on the Velocity plan" content="Please note that SAML SSO is only available for a Workspace on the [Velocity plan](https://www.bitrise.io/pricing).
+{% include message_box.html type="important" title="SAML SSO with Velocity and Enterprise Build plan" content="Please note that SAML SSO is only available for a Workspace with the [Enterprise Build and Velocity plans](https://www.bitrise.io/pricing).
 
-Since the SAML SSO feature is tied to the Velocity plan, if you decide to switch to a different subscription plan, you will lose this feature. All Workspace members will receive an email about the downgrade and you’ll have two weeks to switch back to Velocity if you wish to use SAML SSO in your Workspace again."%}
+Since the SAML SSO feature is tied to the above plans, if you decide to downgrade, you will lose this feature. All Workspace members will receive an email about the downgrade and you’ll have two weeks to re-upgrade if you wish to use SAML SSO in your Workspace again.
+
+"%}
 
 ## Before you start
 
@@ -25,11 +27,8 @@ Before connecting SAML SSO to your Workspace on Bitrise, make sure:
 
 * The AD FS administrator is at hand during the SAML SSO configuration process.
 * As with other [Workspace management actions](https://devcenter.bitrise.io/team-management/organizations/members-organizations/), only the Bitrise Workspace owner can set up SAML SSO to a Bitrise Workspace.
-<<<<<<< HEAD
 * Your account on Bitrise has a Workspace with the [Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
-=======
 * Your account on Bitrise has a Workspace with a [Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Orgs on Bitrise.
->>>>>>> ac5e8eb0d0e7a87303c98dc7369a6e837e1e6d9d
 
 ## Navigating to Single Sign On page of Bitrise
 
