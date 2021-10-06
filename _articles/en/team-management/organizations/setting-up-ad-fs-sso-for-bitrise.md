@@ -27,7 +27,7 @@ Before connecting SAML SSO to your Workspace on Bitrise, make sure:
 
 * The AD FS administrator is at hand during the SAML SSO configuration process.
 * As with other [Workspace management actions](https://devcenter.bitrise.io/team-management/organizations/members-organizations/), only the Bitrise Workspace owner can set up SAML SSO to a Bitrise Workspace.
-* Your account on Bitrise has a Workspace with the [Velocity plan](https://www.bitrise.io/pricing). If it doesn’t have an Org, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Workspaces on Bitrise.
+* Your account on Bitrise has a Workspace with the [Velocity and Enterprise Build plans](https://www.bitrise.io/pricing). If it doesn’t have an Workspace, go ahead and [create one](https://devcenter.bitrise.io/team-management/organizations/creating-org/). Setting up SAML SSO is the same for existing and brand new Workspaces on Bitrise.
 
 ## Navigating to Single Sign On page of Bitrise
 
@@ -98,7 +98,7 @@ Learn how you can [log into your Workspace now that SAML SSO is set up](/team-ma
 
 You might wan to [check out Workspace member’s SAML SSO statuses](/team-management/organizations/saml-sso-in-organizations/#checking-saml-sso-statuses-on-bitrise) once the connection is up.
 
-You might want to [enforce SAML SSO login to the Workspace](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-a-workspace) once all Workspace members have authorized their SAML SSO connection to the Org.
+You might want to [enforce SAML SSO login to the Workspace](/team-management/organizations/saml-sso-in-organizations/#enforcing-saml-sso-on-a-workspace) once all Workspace members have authorized their SAML SSO connection to the Workspace.
 
 Disabling SAML SSO is very simple - [learn how.](/team-management/organizations/saml-sso-in-organizations/#disabling-a-workspaces-saml-sso)
 
