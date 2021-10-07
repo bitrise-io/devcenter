@@ -35,8 +35,8 @@ Before connecting SAML SSO to your Workspace, make sure:
 If you are a Workspace owner on Bitrise, you will have to use the **Single Sign-On** tab to set up a SAML SSO connection between your SAML SSO provider and your Bitrise Workspace.
 
 1. On your Bitrise [Dashboard](https://app.bitrise.io/dashboard/builds) click your avatar, then click [**Profile settings**](https://app.bitrise.io/me/profile#/overview) in the dropdown. ![Account selector dropdown](/img/account-settings-dropdown.png)
-2. The **Overview** page displays all the Workspaces you’re a member of. Select the Workspace where you wish to set up the SAML SSO connection.![](/img/overview-tab.jpg)
-3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignon.jpg)
+2. The **Overview** page displays all the Workspaces you’re a member of. Select the Workspace where you wish to set up the SAML SSO connection.![](/img/workspaces_overview.png)
+3. On the left menu bar, click the **Single Sign-On** which will take you to the **Enable Single Sign-On** page.![](/img/enablesinglesignonpage.png)
 4. Continue with [Adding Bitrise to Azure AD](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/#adding-bitrise-to-azure-ad).
 
 ## Adding Bitrise to Azure AD
@@ -84,7 +84,7 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 14. Open the certificate file and copy/paste its content into the **SAML SSO provider certificate** field of Bitrise or you can upload the file itself from your local computer too.
 
     (If manually adding the content, you will need the full content (including `----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` as well).
-15. Hit **Configure SSO** on Bitrise.![](/img/enablesinglesignon.jpg)
+15. Hit **Configure SSO** on Bitrise.
 
 You have successfully set up Bitrise as a SAML SSO app on Azure AD. Continue with [Authorizing SAML SSO](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/#authorizing-saml-sso).
 
