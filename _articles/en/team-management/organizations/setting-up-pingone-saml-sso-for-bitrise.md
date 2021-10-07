@@ -34,7 +34,7 @@ This requires:
 
     ![{{ page.title }}](/img/appdetailspage-pingone.jpg)
  4. At **Application Configuration**, leave the **I have the SAML configuration** selected. Fill out the following:
-    * **Assertion Consumer Service (ACS)** field: Insert the **Assertion Consumer Service URL (ACS URL)** link here from your Bitrise Workspace’s **Single Sign-On** tab.![](/img/singlesingontab-1.jpg)
+    * **Assertion Consumer Service (ACS)** field: Insert the **Assertion Consumer Service URL (ACS URL)** link here from your Bitrise Workspace’s **Single Sign-On** tab.![](/img/enablesinglesignonpage.png)
     * **Entity ID field**: Type `Bitrise`.
     * **Signing**: Click the **Sign Response** option.
 
@@ -52,7 +52,7 @@ This requires:
  9. Click **Finish**.
 10. Let’s open the two files.
     * Copy the entire content of the **SAML Metadata** file and paste it in the **SAML SSO provider** **certificate** field of your Bitrise **Single Sign-On** page.
-    * Open the **Signing Certificate** file and copy the `HTTP-POST` `SingleSignOnService Location` link and paste it in the **SAML SSO provider Single Sign-On URL (SSO URL)** field on Bitrise.![](/img/singlesingontab-1.jpg)
+    * Open the **Signing Certificate** file and copy the `HTTP-POST` `SingleSignOnService Location` link and paste it in the **SAML SSO provider Single Sign-On URL (SSO URL)** field on Bitrise.![](/img/enablesinglesignonpage.png)
 11. Click **Configure SSO** on Bitrise.
 
 Now you have set up SAML SSO on your Bitrise Workspace. All there is left to do is [enable](/team-management/organizations/setting-up-pingone-saml-sso-for-bitrise/#enabling-saml-sso) it.
