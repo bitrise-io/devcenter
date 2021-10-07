@@ -84,7 +84,7 @@ Before setting up SAML to the app, you have to add all the users/groups to the a
 14. Open the certificate file and copy/paste its content into the **SAML SSO provider certificate** field of Bitrise or you can upload the file itself from your local computer too.
 
     (If manually adding the content, you will need the full content (including `----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` as well).
-15. Hit **Configure SSO** on Bitrise.
+15. Hit **Configure SSO** on Bitrise.![](/img/enablesinglesignonpage.png)
 
 You have successfully set up Bitrise as a SAML SSO app on Azure AD. Continue with [Authorizing SAML SSO](/team-management/organizations/setting-up-azure-ad-sso-for-bitrise/#authorizing-saml-sso).
 
@@ -93,7 +93,7 @@ You have successfully set up Bitrise as a SAML SSO app on Azure AD. Continue wit
 Now that the Workspace owner has set up SAML SSO, everyone in the Workspacehas to authorize SAML SSO before logging in to their Workspace via SAML SSO.
 
 1. Make sure you’re logged into Bitrise in the usual way. Use the same browser window to continue.
-2. Bitrise sends a verification e-mail to all Workspace members. By clicking the **Log In via SAML SSO** button or using the provided URL, Workspace members can authorize themselves for SAML SSO login. The email also shows the Workspace owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.[![](https://devcenter.bitrise.io/img/email-samlssso.jpg)](https://devcenter.bitrise.io/img/email-samlssso.jpg)
+2. Bitrise sends a verification e-mail to all Workspace members. By clicking the **Log In via SAML SSO** button or using the provided URL, Workspace members can authorize themselves for SAML SSO login. The email also shows the Workspace owner’s email address (in case you would need to contact them.) Click the **Log In via SAML SSO** button or copy-paste the URL to a NEW TAB of the same browser.
 3. You’re directed to Bitrise to **Allow “Workspace name” to sign you in** page.
    * Click **Authorize** if you trust the Workspace to control your Bitrise account sign-in process.  
      If you’re already logged in to your SAML SSO provider, you’ll be automatically taken to your Bitrise Dashboard.  
