@@ -34,7 +34,7 @@ This requires:
 
     ![{{ page.title }}](/img/appdetailspage-pingone.jpg)
  4. At **Application Configuration**, leave the **I have the SAML configuration** selected. Fill out the following:
-    * **Assertion Consumer Service (ACS)** field: Insert the **Assertion Consumer Service URL (ACS URL)** link here from your Bitrise Workspace’s **Single Sign-On** tab.![](/img/singlesingontab-1.jpg)
+    * **Assertion Consumer Service (ACS)** field: Insert the **Assertion Consumer Service URL (ACS URL)** link here from your Bitrise Workspace’s **Single Sign-On** tab.![](/img/enable_sso_inputfields.png)
     * **Entity ID field**: Type `Bitrise`.
     * **Signing**: Click the **Sign Response** option.
 
