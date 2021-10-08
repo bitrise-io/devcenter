@@ -1,6 +1,11 @@
-.highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight .c, .highlight .cd {
+.highlight table td {
+  padding: 5px;
+}
+.highlight table pre {
+  margin: 0;
+}
+.highlight .c,
+.highlight .cd {
   color: #75715e;
   font-style: italic;
 }
@@ -58,7 +63,8 @@
 .highlight .gu {
   color: #aaaaaa;
 }
-.highlight .k, .highlight .kv {
+.highlight .k,
+.highlight .kv {
   color: #66d9ef;
   font-weight: bold;
 }
@@ -109,7 +115,9 @@
 .highlight .mo {
   color: #ae81ff;
 }
-.highlight .m, .highlight .mb, .highlight .mx {
+.highlight .m,
+.highlight .mb,
+.highlight .mx {
   color: #ae81ff;
 }
 .highlight .se {
