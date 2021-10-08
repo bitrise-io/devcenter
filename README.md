@@ -1,6 +1,6 @@
 # Bitrise DevCenter
 
-Welcome to the Bitrise product documentation! 
+Welcome to the Bitrise product documentation ! 
 
 The deployed documentation can be found at [http://devcenter.bitrise.io](http://devcenter.bitrise.io), which is a statically generated site, based on this repository's `/_articles` directory. All links in the content are relative to the `/_articles` directory!
 
