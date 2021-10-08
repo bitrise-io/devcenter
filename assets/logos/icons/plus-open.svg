@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-  <defs>
-    <polygon id="plus-open-a" points="13 11 18 11 18 13 13 13 13 18 11 18 11 13 6 13 6 11 11 11 11 6 13 6"/>
-  </defs>
-  <use fill="#492F5C" fill-rule="evenodd" xlink:href="#plus-open-a"/>
-</svg>
+<svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m13 11h5v2h-5v5h-2v-5h-5v-2h5v-5h2z" fill="#492f5c" fill-rule="evenodd"/></svg>

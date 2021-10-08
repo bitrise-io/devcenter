@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-  <defs>
-    <path id="trash-a" d="M5,5 L19,5 L19,7 L5,7 L5,5 Z M16,19 L8,19 L8,8 L6,8 L6,19 C6,20.1 6.9,21 8,21 L16,21 C17.1,21 18,20.1 18,19 L18,8 L16,8 L16,19 Z M11,2 L13,2 L13,4 L11,4 L11,2 Z"/>
-  </defs>
-  <use fill="#492F5C" fill-rule="evenodd" xlink:href="#trash-a"/>
-</svg>
+<svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m5 5h14v2h-14zm11 14h-8v-11h-2v11c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-11h-2zm-5-17h2v2h-2z" fill="#492f5c" fill-rule="evenodd"/></svg>
