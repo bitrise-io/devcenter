@@ -1,29 +1,29 @@
 function collapseLongCodeBlocks() {
-  var codeBlockCodeElements = document.querySelectorAll('main.content pre code')
+  var codeBlockCodeElements = document.querySelectorAll('main.content pre code');
 
   for (var i = 0; i < codeBlockCodeElements.length; i++) {
-    var codeBlock = codeBlockCodeElements[i].parentNode
+    var codeBlock = codeBlockCodeElements[i].parentNode;
 
     if (codeBlock.clientHeight > 300) {
-      codeBlock.classList.add('collapseable')
-      collapseCodeBlock(codeBlock)
+      codeBlock.classList.add('collapseable');
+      collapseCodeBlock(codeBlock);
     }
   }
 }
 
 function collapseCodeBlock(codeBlock) {
-  var collapserButton = document.createElement('button')
-  collapserButton.classList.add('collapser')
-  collapserButton.setAttribute('onclick', 'toggleCodeBlockCollapsing(event)')
-  codeBlock.appendChild(collapserButton)
-  codeBlock.classList.add('collapsed')
+  var collapserButton = document.createElement('button');
+  collapserButton.classList.add('collapser');
+  collapserButton.setAttribute('onclick', 'toggleCodeBlockCollapsing(event)');
+  codeBlock.appendChild(collapserButton);
+  codeBlock.classList.add('collapsed');
 }
 
 function toggleCodeBlockCollapsing(event) {
-  var collapserButton = event.target
-  var codeBlock = collapserButton.parentNode
+  var collapserButton = event.target;
+  var codeBlock = collapserButton.parentNode;
 
-  codeBlock.classList.toggle('collapsed')
+  codeBlock.classList.toggle('collapsed');
 }
 
-collapseLongCodeBlocks()
+collapseLongCodeBlocks();

@@ -1,53 +1,53 @@
 function configureSideMenu() {
-  var currentPage = window.location.href
-  var menuOpeners = document.querySelectorAll('[class^=menu-list-opener]')
+  var currentPage = window.location.href;
+  var menuOpeners = document.querySelectorAll('[class^=menu-list-opener]');
 
   function menuParent(el) {
     el.parentElement.parentElement.previousElementSibling.classList.toggle(
       'open',
       true
-    )
+    );
   }
 
   function menuListOpener() {
     for (i = 0; i < menuOpeners.length; i++) {
       if (menuOpeners[i].href == currentPage) {
-        menuOpeners[i].classList.toggle('open')
+        menuOpeners[i].classList.toggle('open');
       }
       if (
         menuOpeners[i].href == currentPage &&
         menuOpeners[i].classList.contains('menu-list-opener')
       ) {
-        menuParent(menuOpeners[i])
+        menuParent(menuOpeners[i]);
       }
     }
   }
-  menuListOpener()
+  menuListOpener();
 
   function menuItemOpener() {
-    var menuItems = document.querySelectorAll('.menu-link')
+    var menuItems = document.querySelectorAll('.menu-link');
 
     for (i = 0; i < menuItems.length; i++) {
       var menuItemParent =
-        menuItems[i].parentElement.parentElement.previousElementSibling
+        menuItems[i].parentElement.parentElement.previousElementSibling;
       if (menuItems[i].href == currentPage) {
         if (menuItemParent.classList.contains('menu-list-opener')) {
           menuItems[i].classList.toggle('current', true),
             menuParent(menuItems[i]),
-            menuParent(menuItemParent)
+            menuParent(menuItemParent);
         } else {
           menuItems[i].classList.toggle('current', true),
-            menuParent(menuItems[i])
+            menuParent(menuItems[i]);
         }
       }
     }
   }
-  menuItemOpener()
+  menuItemOpener();
 }
 
 function toggleSideBar() {
-  var sideMenu = document.getElementById('side-menu')
-  sideMenu.classList.toggle('open')
+  var sideMenu = document.getElementById('side-menu');
+  sideMenu.classList.toggle('open');
 }
 
-configureSideMenu()
+configureSideMenu();
