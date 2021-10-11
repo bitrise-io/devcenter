@@ -14,15 +14,14 @@ summary:
   and of course you won't have to authorize your Git account when adding repositories
   hosted by these providers again. "
 last_modified_at:
-description:
-  "You can authenticate yourself with your GitHub, Bitbucket or GitLab
-  user against Bitrise. It brings some practical benefits, like logging in with one
-  click and of course you won't have to authorize your Git account when adding repositories
-  hosted by these providers again. "
 menu:
   getting-started-main:
     weight: 5
----You can authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Git account when adding repositories hosted by these providers again. You can of course sign up to Bitrise using your email address as well, and log in through your user credentials.
+---
+
+You can authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and you won't have to authorize your Git account when adding repositories hosted by these providers again. 
+
+You can sign up to Bitrise using your email address as well, and log in through your user credentials.
 
 {% include message_box.html type="warning" title="Signing up with an email" content="Please note that if you want to sign up for Bitrise with an email address, the address cannot contain the character **+**."%}
 
