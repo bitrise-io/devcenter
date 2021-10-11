@@ -1,0 +1,71 @@
+<script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","{{ site.data.basic_info.google_analytics_key }}","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(e){e.host!=document.location.host&&e.addEventListener("click",function(){var a=e.getAttribute("data-md-action")||"follow";ga("send","event","outbound",a,e.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<!-- OneTrust Cookies Consent Notice start for devcenter.bitrise.io -->
+<style>
+  #onetrust-reject-all-handler {
+    background-color: #351d48 !important;
+    color: #fff !important;
+    border-color: #fff !important;
+  }
+</style>
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/a8f28a53-d138-4cac-a6dc-bdafd1611beb/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js" data-language="en" type="text/javascript" charset="UTF-8" data-domain-script="a8f28a53-d138-4cac-a6dc-bdafd1611beb"></script>
+<script type="text/javascript">
+  function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for devcenter.bitrise.io -->
+<!-- Fresh paint -->
+<script type="text/javascript">
+  (function(f,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,c=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};c&&d(c,"state")&&(j=JSON.parse(decodeURIComponent(d(c,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",c),history.replaceState(j.desiredHash||"",f.title,k.pathname+k.search)))}catch(n){}var l,h;window.freshpaint=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+  0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="freshpaint";e.people=e.people||[];e.toString=function(b){var a="freshpaint";"freshpaint"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove people group page alias ready".split(" ");
+  for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.4;b=f.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof FRESHPAINT_CUSTOM_LIB_URL?
+  FRESHPAINT_CUSTOM_LIB_URL:"https://perfalytics.com/static/js/freshpaint.js";d=f.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.freshpaint||[]);
+  freshpaint.init("fb78fc32-b738-475e-b6e5-26f48c2ec5b1");
+  freshpaint.page();
+
+  (function () {
+      var cookies = document.cookie.split('; ').reduce(function (result, chunk) {
+        var parts = chunk.split('=')
+        result[parts[0]] = parts[1]
+        return result
+      }, {})
+
+      if (cookies['expiring_api_token'] && cookies['CSRF-TOKEN']) {
+        var request = new XMLHttpRequest();
+        request.onreadystatechange = function () {
+          if (request.readyState === 4 && request.status === 200) {
+            try {
+              var resp = JSON.parse(request.responseText)
+
+              if (resp.data.data_id) {
+                freshpaint.identify(resp.data.data_id)
+              }
+            } catch (ex) {
+              console.log('Failed to fetch user')
+            }
+          }
+        }
+        var URL = 'https://api.bitrise.io/v0.1/me'
+        request.open('GET', URL, true);
+        request.setRequestHeader('Authorization', 'token ' + cookies['expiring_api_token'])
+        request.setRequestHeader('X-CSRF-TOKEN', cookies['CSRF-TOKEN'])
+        request.send(null);
+      }
+    })()
+</script>
+<!-- End Fresh Paint -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53276411-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-53276411-1');
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TZK32GR');</script>
+<!-- End Google Tag Manager -->

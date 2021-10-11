@@ -121,7 +121,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  concurrent-ruby (~> 1.1)
   html-proofer
   jekyll (~> 3.9, >= 3.9.0)
   jekyll-algolia
