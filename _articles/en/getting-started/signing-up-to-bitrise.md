@@ -1,34 +1,34 @@
 ---
 tag:
-- git
-- getting-started
+  - git
+  - getting-started
 title: Signing up for Bitrise
 redirect_from:
-- "/getting-started/signing-up/signing-up-with-email/"
-- "/getting-started/signing-up/signing-up-with-gitlab/"
-- "/getting-started/signing-up/signing-up-with-bitbucket/"
-- "/getting-started/signing-up/signing-up-with-github/"
-summary: 'You can authenticate yourself with your GitHub, Bitbucket or GitLab user
+  - '/getting-started/signing-up/signing-up-with-email/'
+  - '/getting-started/signing-up/signing-up-with-gitlab/'
+  - '/getting-started/signing-up/signing-up-with-bitbucket/'
+  - '/getting-started/signing-up/signing-up-with-github/'
+summary:
+  "You can authenticate yourself with your GitHub, Bitbucket or GitLab user
   against Bitrise. It brings some practical benefits, like logging in with one click
-  and of course you won''t have to authorize your Git account when adding repositories
-  hosted by these providers again. '
-last_modified_at: 
-description: 'You can authenticate yourself with your GitHub, Bitbucket or GitLab
+  and of course you won't have to authorize your Git account when adding repositories
+  hosted by these providers again. "
+last_modified_at:
+description:
+  "You can authenticate yourself with your GitHub, Bitbucket or GitLab
   user against Bitrise. It brings some practical benefits, like logging in with one
-  click and of course you won''t have to authorize your Git account when adding repositories
-  hosted by these providers again. '
+  click and of course you won't have to authorize your Git account when adding repositories
+  hosted by these providers again. "
 menu:
   getting-started-main:
     weight: 5
-
----
-You can authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Git account when adding repositories hosted by these providers again. You can of course sign up to Bitrise using your email address as well, and log in through your user credentials.
+---You can authenticate yourself with your GitHub, Bitbucket or GitLab user against Bitrise. It brings some practical benefits, like logging in with one click and of course you won't have to authorize your Git account when adding repositories hosted by these providers again. You can of course sign up to Bitrise using your email address as well, and log in through your user credentials.
 
 {% include message_box.html type="warning" title="Signing up with an email" content="Please note that if you want to sign up for Bitrise with an email address, the address cannot contain the character **+**."%}
 
 ## Signing up with a Git provider
 
-1. You can sign up to Bitrise through the **Start for free** button in the upper right corner of [Bitrise](https://www.bitrise.io/ "https://www.bitrise.io/").![](/img/startforfree.png)
+1. You can sign up to Bitrise through the **Start for free** button in the upper right corner of [Bitrise](https://www.bitrise.io/ 'https://www.bitrise.io/').![](/img/startforfree.png)
 2. On the **Sign up** page, scroll down to the **OR SIGN UP WITH** section where you can pick a git provider.![](/img/signuppage.png)
 
 ### Authorizing Bitrise with a Git provider
@@ -60,13 +60,15 @@ You will have to pick a username and a password for your Bitrise account. This w
 1. Pick a username and a password for your Bitrise account on the **Sign up** page.
 
    Please note that you must provide a **strong password** which fulfills these requirements:
-   * It should have at least 8 characters.
-   * One upper case character.
-   * One lower case character.
-   * One number.
-   * Cannot contain the same character more than 3 times in a row (aaa).
-   * Cannot contain your email or username.  
+
+   - It should have at least 8 characters.
+   - One upper case character.
+   - One lower case character.
+   - One number.
+   - Cannot contain the same character more than 3 times in a row (aaa).
+   - Cannot contain your email or username.
      ![](/img/signuppage-1.png)
+
 2. Check your inbox for a confirmation email from Bitrise and follow the instructions ther![](/img/checkyourinbox.png)
 3. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
 
@@ -78,7 +80,7 @@ After that, you are ready to roll. Add your first app on your Dashboard!
 
 You can easily sign up to Bitrise with your email address.
 
-1. Add your email address, username, and password on our [Sign up](https://app.bitrise.io/users/sign_up "https://app.bitrise.io/users/sign_up") page. Make sure you provide a strong password. If it’s been exposed in data breaches, you will get a **Your password is not safe** message with [instructions](https://haveibeenpwned.com/Passwords "https://haveibeenpwned.com/Passwords") on how to provide a secure password.![](/img/signuppage-1.png)
+1. Add your email address, username, and password on our [Sign up](https://app.bitrise.io/users/sign_up 'https://app.bitrise.io/users/sign_up') page. Make sure you provide a strong password. If it’s been exposed in data breaches, you will get a **Your password is not safe** message with [instructions](https://haveibeenpwned.com/Passwords 'https://haveibeenpwned.com/Passwords') on how to provide a secure password.![](/img/signuppage-1.png)
 2. Click the **Sign up** button.
 3. Check your inbox for our **Confirmation Instructions** and follow the instructions there. If you haven’t received a confirmation email from us, click the **Resend confirmation email** button.![](/img/checkyourinbox.png)
 4. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far.![](/img/personalize.png)
@@ -98,11 +100,13 @@ Now let's see how to sign up to Bitrise.
    You are directed to the **Initiate** **Single Sign-On** page.
 
    ![{{ page.title }}](/img/saml-sso-sign-up.jpg)
+
 3. Provide the **Bitrise Workspace's Name** that you got from the Bitrise Workspace owner and click **Continue with SSO** so that Bitrise can direct you to the Workspace's connected SAML SSO provider.
 4. Provide your credentials associated with your SAML SSO account.
 5. On the **Almost there** page the **Email** field is automatically populated based on your registered email address at your SAML SSO account. You can alter the provided **Username** as you wish.
 
    ![{{ page.title }}](/img/signup-saml-almost-there-1.jpg)
+
 6. Click **Finish Sign Up**.
 7. Check your mailbox and follow the instructions sent by letsconnect@bitrise.io.
 8. We can personalize your onboarding experience if you provide which CI/CD tool you have been using so far on the **Personalize your experience** page.
@@ -112,5 +116,5 @@ If all went well, you're landed on your Bitrise Dashboard where you can view the
 <div class="banner">
 <img src="/assets/images/banner-bg-888x170.png" style="border: none;">
 <div class="deploy-text">Let's sign up to Bitrise</div>
-<a target="_blank" href="https://app.bitrise.io/users/sign_up"><button class="button">Create an account</button></a>
+<a target="_blank" rel="noopener noreferrer" href="https://app.bitrise.io/users/sign_up"><button class="button">Create an account</button></a>
 </div>
