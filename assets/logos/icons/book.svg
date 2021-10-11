@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
-  <defs>
-    <path id="book-a" d="M16,2 L10,2 L8,2 C6.9,2 6,2.945 6,4.1 L6,16.7 C6,17.855 6.9,18.8 8,18.8 L10,18.8 L11,18.8 L11,22.895 L12.9,20.69 L15,23 L15,18.8 L16,18.8 C17.1,18.8 18,17.855 18,16.7 L18,4.1 C18,2.945 17.1,2 16,2 Z M16,17 L10,17 L10,4 L16,4 L16,17 Z M11,7 L15,7 L15,9 L11,9 L11,7 Z"/>
-  </defs>
-  <use fill="#492F5C" fill-rule="evenodd" xlink:href="#book-a"/>
-</svg>
+<svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="m16 2h-6-2c-1.1 0-2 .945-2 2.1v12.6c0 1.155.9 2.1 2 2.1h2 1v4.095l1.9-2.205 2.1 2.31v-4.2h1c1.1 0 2-.945 2-2.1v-12.6c0-1.155-.9-2.1-2-2.1zm0 15h-6v-13h6zm-5-10h4v2h-4z" fill="#492f5c" fill-rule="evenodd"/></svg>

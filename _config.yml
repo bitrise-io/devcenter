@@ -1,7 +1,8 @@
 ---
 title: Bitrise DevCenter
 email: letsconnect@bitrise.io
-description: Bitrise is a Continuous Integration and Delivery (CI/CD) Platform as
+description:
+  Bitrise is a Continuous Integration and Delivery (CI/CD) Platform as
   a Service (PaaS) with a main focus on mobile app development. It saves developers
   hours every day by automating tasks that are boring and repetitive from the moment
   they finish coding till the app lands in an app store.
@@ -12,52 +13,50 @@ github_username: ''
 markdown: kramdown
 theme: minima
 plugins:
-- jekyll-feed
-- jekyll-sitemap
-- jekyll-menus
-- jekyll-redirect-from
-- localization
-- jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-menus
+  - jekyll-redirect-from
+  - localization
+  - jekyll-seo-tag
 collections:
   articles:
     output: true
-    permalink: "/:path/"
+    permalink: '/:path/'
     localized: true
 exclude:
-- deploy.md
-- plugins
-- vendor/bundle
-- forestry-help-menus.md
-- forestry-help.md
+  - deploy.md
+  - plugins
+  - vendor/bundle
+  - forestry-help-menus.md
+  - forestry-help.md
 defaults:
-- scope:
-    path: ''
-    type: articles
-  values:
-    layout: default
-- scope:
-    path: ''
-    type: whatever
-  values:
-    layout: default
+  - scope:
+      path: ''
+      type: articles
+    values:
+      layout: default
+  - scope:
+      path: ''
+      type: whatever
+    values:
+      layout: default
 sass:
-  load_paths:
-  - _sass
-  - node_modules
+  style: compressed
 algolia:
   application_id: HI1538U2K4
   index_name: devcenter
   files_to_exclude:
-  - _articles/en/team-management/teams-plan-trial-faq.md
-  - _articles/en/team-management/credit-based-hobby-plan-faq.md
-  - forestry-help*
-  - _articles/en/reviews/**/*.md
-  - _articles/jp/**/*.md
+    - _articles/en/team-management/teams-plan-trial-faq.md
+    - _articles/en/team-management/credit-based-hobby-plan-faq.md
+    - forestry-help*
+    - _articles/en/reviews/**/*.md
+    - _articles/jp/**/*.md
   nodes_to_index: p,h1,h2,h3,h4,h5,h6
 languages:
-- en
-- jp
+  - en
+  - jp
 exclude_from_localizations:
-- assets/**/*
-- bitrise.yml
-- apple-touch-icon-*.png
+  - assets/**/*
+  - bitrise.yml
+  - apple-touch-icon-*.png
