@@ -238,6 +238,7 @@ header.top-bar {
 
       .bitbutton,
       .bitbutton-sc {
+        display: inline-block;
         margin-left: 1em;
         border: none;
         border-radius: 4px;
@@ -245,40 +246,27 @@ header.top-bar {
         line-height: 1.5;
         width: 120px;
         text-align: center;
-        cursor: pointer;
-
-        a {
-          text-decoration: none;
-        }
-
-        .sign-up {
-          font-weight: bold;
-          font-size: 1.2rem;
-          font-family: TTNorms;
-        }
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.2rem;
+        font-family: TTNorms;
       }
 
       .bitbutton {
+        color: #fff;
         background-color: #0dd3c5;
 
         &:hover {
           background-color: #0fc389;
         }
-
-        .sign-up {
-          color: #fff;
-        }
       }
 
       .bitbutton-sc {
+        color: #351d48;
         background-color: #fff;
 
         &:hover {
           background-color: #ececec;
-        }
-
-        .sign-up {
-          color: #351d48;
         }
       }
     }
@@ -286,7 +274,6 @@ header.top-bar {
 }
 
 .middle-aligner {
-  box-sizing: border-box;
   width: 100%;
   margin-right: auto;
   margin-left: auto;
@@ -295,7 +282,6 @@ header.top-bar {
 .column-parent {
   flex-grow: 1;
   display: flex;
-  box-sizing: border-box;
 }
 
 .main-layout-wrapper {
@@ -308,7 +294,6 @@ nav#side-menu {
   position: fixed;
   width: 22.5vw;
   height: 100%;
-  box-sizing: border-box;
   padding-top: 6em;
   padding-left: 3em;
   border-right: solid 1px #ececec;
@@ -340,8 +325,7 @@ nav#side-menu {
 
   .menu-wrapper {
     display: block;
-    box-sizing: border-box;
-    height: 90vh;
+    height: calc(100vh - 60px);
     overflow-y: auto;
     padding-right: 3rem;
   }
@@ -351,6 +335,7 @@ nav#side-menu {
     margin-bottom: 0;
     padding-left: 0;
     list-style: none;
+    padding-bottom: 72px;
 
     ol.menu-list {
       position: relative;
@@ -627,7 +612,7 @@ main.content {
   padding-left: 7.5%;
   padding-right: 7.5%;
   font-size: 1.5rem;
-  color: #222222;
+  color: #222;
   line-height: 1.5;
   -webkit-print-color-adjust: exact;
   background-color: #fff;
@@ -1195,7 +1180,6 @@ main.content {
     content: counter(my-awesome-counter);
     width: 32px;
     height: 32px;
-    box-sizing: border-box;
     border: solid 1px #dbc3ed;
     background-color: #fdfaff;
     border-radius: 16px;
@@ -1349,7 +1333,6 @@ nav#my-toc {
 }
 
 .side-toc {
-  box-sizing: border-box;
   flex: 0 0 auto;
   width: 20vw;
   height: 100%;
@@ -1614,12 +1597,6 @@ footer {
   }
 }
 
-@media only screen and (max-width: 1200pt) {
-  .menu-wrapper {
-    max-height: 80vh;
-  }
-}
-
 @media only screen and (min-width: 1200pt) {
   .middle-aligner {
     width: 100%;
@@ -1771,7 +1748,7 @@ footer {
       .menu-wrapper {
         position: fixed;
         width: 70vw;
-        height: 100%;
+        height: calc(100% - 132px);
         padding-top: 0;
         padding-bottom: 0;
         padding-right: 0;
@@ -1782,6 +1759,7 @@ footer {
 
       ol.menu-list {
         border-right: 0.1rem solid rgba(0, 0, 0, 0.07);
+        padding-bottom: 0;
 
         li.menu-item {
           border-top: 0.1rem solid rgba(0, 0, 0, 0.07);
@@ -1799,6 +1777,10 @@ footer {
         display: none;
       }
     }
+  }
+
+  footer {
+    z-index: 0;
   }
 }
 
@@ -1844,6 +1826,7 @@ footer {
   }
 
   .column-parent nav#side-menu .menu-wrapper {
-    width: 80vw;
+    width: 100vw;
+    left: 0;
   }
 }
