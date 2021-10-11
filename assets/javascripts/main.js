@@ -22,7 +22,7 @@ var lightboxTriggers = document.querySelectorAll('[data-lightbox]');
 Array.from(lightboxTriggers).forEach(function (link) {
   link.addEventListener('click', function(e) {
     e.preventDefault();
-    var asd = basicLightbox.create('<img src=' + e.currentTarget.href + '/>').show();
+    basicLightbox.create('<img src="' + e.currentTarget.href + '"/>').show();
   });
 });
 
