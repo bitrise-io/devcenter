@@ -39,7 +39,7 @@ Read more about triggers in our [Triggering builds](/builds/triggering-builds/tr
 
 ## Build status 
 
-On the **Builds** page, you can track the current status of all your builds. There are five different build statuses:
+On the **Builds** page, you can track the current status of all your builds. There are six different build statuses:
 
 - **Waiting for worker**: When a build is triggered, Bitrise creates a virtual machine to run it. If computing resources aren't immediately available, the build is placed in a queue and the **Waiting for worker** status is displayed. 
 - **Initializing**: The worker assigned to create the virtual machine is processing the build request.
