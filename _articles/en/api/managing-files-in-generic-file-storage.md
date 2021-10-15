@@ -213,7 +213,7 @@ The required parameters are:
 * app slug
 * generic project file slug
 
-Example curl request:
+The curl request syntax:
 
     curl -X DELETE “https://api.bitrise.io/v0.1/apps/{app-slug}/generic-project-files/{generic-project-file-slug}” -H “Authorization:{Authorization-token}”
 
