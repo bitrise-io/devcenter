@@ -9,6 +9,7 @@ description: You can upload, delete, update, and list any project files in the G
   FILE STORAGE section of the Code Signing tab with the relevant Bitrise API endpoint.
   Should you need more information on how to store your project files, check out Using
   the Generic File Storage.
+summary: ''
 menu:
   api-main:
     weight: 15
@@ -212,9 +213,9 @@ The required parameters are:
 * app slug
 * generic project file slug
 
-Example curl request:
+The curl request syntax:
 
-    curl -X DELETE 'Authorization: THE-ACCESS-TOKEN' 'https://api.bitrise.io/v0.1/apps/APP-SLUG/generic-project-files'
+    curl -X DELETE “https://api.bitrise.io/v0.1/apps/{app-slug}/generic-project-files/{generic-project-file-slug}” -H “Authorization:{Authorization-token}”
 
 ## Downloading a file
 
