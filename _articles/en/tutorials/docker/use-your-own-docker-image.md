@@ -205,10 +205,10 @@ We have four different Docker image types available. You can base your own image
 
 | Image type | Description | GitHub link | quay.io link |
 | --- | --- | --- | --- |
-| Bitrise base image | The bare minimum Bitrise image with no specific tools installed. | Github | quay.io |
-| Android base image | Bare-minimum base image with Android-specific tools and environment. | Github | quay.io |
-| Android NDK image | Built on the Android base image with pre-installed Android NDK and environment. | Github | quay.io |
-| Android NDK LTS image | LTS "pin" of the Android NDK Docker image. | Github | quay.io |
+| Bitrise base image | The bare minimum Bitrise image with no specific tools installed. | Github | https://quay.io/ |
+| Android base image | Bare-minimum base image with Android-specific tools and environment. | Github | https://quay.io/ |
+| Android NDK image | Built on the Android base image with pre-installed Android NDK and environment. | Github | https://quay.io/ |
+| Android NDK LTS image | LTS "pin" of the Android NDK Docker image. | Github | https://quay.io/ |
 
 To base your own image on one of our available images, specify your base image at the very top of your `Dockerfile` with a `FROM` instruction and the quay.io ID of the image. In our example, we'll use  the latest version of the Bitrise base image:
 
