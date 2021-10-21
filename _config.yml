@@ -22,7 +22,7 @@ plugins:
 collections:
   articles:
     output: true
-    permalink: '/:path/'
+    permalink: '/:path'
     localized: true
 exclude:
   - deploy.md
