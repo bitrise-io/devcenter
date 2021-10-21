@@ -1,7 +1,6 @@
 ---
 title: Getting started
 redirect_from:
-- "/getting-started/adding-a-new-app/"
 - "/getting-started/create-your-first-app-on-bitrise/"
 - "/getting-started/add-your-first-step-to-your-workflow/"
 tag:
