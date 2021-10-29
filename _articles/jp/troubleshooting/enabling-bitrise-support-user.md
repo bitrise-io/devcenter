@@ -1,6 +1,6 @@
 ---
-changelog: 
-last_modified_at: 
+changelog:
+last_modified_at:
 title: Enabling Bitrise Support user for your app
 menu:
   troubleshooting-main:
@@ -9,7 +9,7 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-If you're stuck with a problem, go to our [Support Center](https://bitrise.zendesk.com/hc/en-us) page and see what helps you the most: you can browse our [Documentation](https://devcenter.bitrise.io/), check out our [Knowledge Base](https://bitrise.zendesk.com/hc/en-us/categories/360000108597-Knowledge-Data-Base-) or our [community page](https://discuss.bitrise.io/)s to find solutions for specific issues. You can also get in touch with our Support team by clicking the **Submit a Request** button.
+もしBitriseをご利用いただいている際に問題が発生した場合、 [サポートセンター](https://bitrise.zendesk.com/hc/en-us) から解決に必要なリソースを見つける事ができます。:こちらのページから [ドキュメンテーション](https://devcenter.bitrise.io/)、 [ナレッジベース](https://bitrise.zendesk.com/hc/en-us/categories/360000108597-Knowledge-Data-Base-) 、 [コミュニティページ](https://discuss.bitrise.io/) などのリソースから発生している問題の解決策を見つけることができます。もしご希望の場合は **Submit a Request** ボタンをクリックすることでサポートチームにお問い合わせいただくこともできます。
 
 In this article we describe how you can enable the **Bitrise Support User** so that our Support team can have access to your project, specifically your Workflow, build log, app settings or your yml.
 
