@@ -9,7 +9,7 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-もしBitriseをご利用いただいている際に問題が発生した場合、 [サポートセンター](https://bitrise.zendesk.com/hc/en-us) から解決に必要なリソースを見つける事ができます。:こちらのページから [ドキュメンテーション](https://devcenter.bitrise.io/)、 [ナレッジベース](https://bitrise.zendesk.com/hc/en-us/categories/360000108597-Knowledge-Data-Base-) 、 [コミュニティページ](https://discuss.bitrise.io/) などのリソースから発生している問題の解決策を見つけることができます。もしご希望の場合は **Submit a Request** ボタンをクリックすることでサポートチームにお問い合わせいただくこともできます。
+もしBitriseで問題が発生した場合、 [サポートセンター](https://bitrise.zendesk.com/hc/en-us) から解決に必要なリソースを見つける事ができます。:こちらのページから [ドキュメンテーション](https://devcenter.bitrise.io/)、 [ナレッジベース](https://bitrise.zendesk.com/hc/en-us/categories/360000108597-Knowledge-Data-Base-) 、 [コミュニティページ](https://discuss.bitrise.io/) など様々なリソースから発生している問題の解決策を見つけることができます。もしご希望の場合は **Submit a Request** ボタンをクリックすることでサポートチームにお問い合わせいただくこともできます。
 
 In this article we describe how you can enable the **Bitrise Support User** so that our Support team can have access to your project, specifically your Workflow, build log, app settings or your yml.
 
