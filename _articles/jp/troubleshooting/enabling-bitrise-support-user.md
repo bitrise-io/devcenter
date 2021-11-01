@@ -17,39 +17,39 @@ Bitriseで問題が発生した場合、 [サポートセンター](https://bitr
 
 それでは下に具体的な手順をご紹介します。
 
-1. サポートユーザーを有効にしたいプロジェクトの **Settings** タブに推移します.
+1. サポートユーザーを有効にしたいプロジェクトの **Settings** タブに推移します。
 2. 下の画像と同じ、 **Enable Bitrise Support for this app** と書かれている部分までスクロールダウンして頂き右側にあるトグルを有効にします。
-   実際に有効化されるまで数秒かかることがあります。場合によっては有効化されているという表示するために **ページの更新** が必要になることがあります.
+   実際に有効化されるまで数秒かかることがあります。場合によっては有効化されているという表示するために **ページの更新** が必要になることがあります。
 
    ![{{ page.title }}](/img/bitrise-support-user.png)
 
 ### Bitrise Support user のできること
 
-The Bitrise Support User, when enabled, has Admin access to your app. That means it can do anything that a regular user with Admin access rights on an app can do: it has access to your builds and can edit your Workflows, modify the inputs of the **Team**, **Code** and the **Settings** tab.
+Bitrise Support Userが有効化されると該当のアプリに対する管理者権限が付与されます。これは、管理者権限を持つ一般ユーザーと同じ操作が可能となることを意味し、具体的には、ビルドへのアクセス、ワークフローの編集、 **Team**, **Code** および **Settings** タブの設定の変更の操作などが可能となります。
 
-Let's see in detail what the Support User can do! The list is not exhaustive: these are the most important capabilities of the Bitrise Support User.
+下のリストは、 Support User のできる操作の例を列挙したものですが、全てを網羅したものではなく、Bitrise Support Userによって行える操作の特に重要と考えられるものを列挙したものです。
 
-It can:
+Bitrise Support User のできる操作:
 
-* Add and update webhooks.
-* Add and update SSH keys.
-* Change notification settings.
-* Enable manual build approval.
-* Manage build cache.
-* Enable rolling and selective builds.
-* Enable GitHub Checks.
+* webhook の追加およびアップデート
+* SSH keys の追加およびアップデート
+* 通知の設定変更
+* マニュアルでのビルド承認の有効化
+* ビルドキャッシュの管理
+* Enable rolling and selective builds
+* GitHub チェックの有効化
 * Update all app data, including title and repository URL.
-* Manage team member roles.
-* Select the service credential user and the connected Apple Developer account.
-* Enable or disable the app.
+* Manage team member roles
+* Select the service credential user and the connected Apple Developer account
+* Enable or disable the app
 
-On the **Builds** page, it can:
+**Builds** ページでできる操作:
 
-* View builds.
-* View build logs.
-* Start builds.
+* ビルドの閲覧
+* ビルドログの閲覧
+* ビルドの開始
 
-In the **Workflow Editor**, it can:
+**Workflow Editor** ページでできる操作:
 
 * Add, update, and delete Workflows.
 * Modify Step inputs.
