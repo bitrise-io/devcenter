@@ -11,19 +11,19 @@ menu:
 
 もしBitriseで問題が発生した場合、 [サポートセンター](https://bitrise.zendesk.com/hc/en-us) から解決に必要なリソースを見つける事ができます。:こちらのページから [ドキュメンテーション](https://devcenter.bitrise.io/)、 [ナレッジベース](https://bitrise.zendesk.com/hc/en-us/categories/360000108597-Knowledge-Data-Base-) 、 [コミュニティページ](https://discuss.bitrise.io/) など様々なリソースから発生している問題の解決策を見つけることができます。もしご希望の場合は **Submit a Request** ボタンをクリックすることでサポートチームにお問い合わせいただくこともできます。
 
-In this article we describe how you can enable the **Bitrise Support User** so that our Support team can have access to your project, specifically your Workflow, build log, app settings or your yml.
+この記事ではどのように **Bitrise Support User** を有効にするか説明します。Bitrise Support Userを有効にすることでサポートチームがお客様のプロジェクト、ワークフロー、ビルドログ、設定(YAMLファイル)にアクセスすることができるようになり、より効率的に問題の把握および解決が可能になります。
 
-With the toggle function, you can easily turn the **Bitrise Support** user on and off, no need to add us as a user to your app's Team any more.
+ **Bitrise Support** ユーザーは設定ページのトグルから簡単に有効、無効化することができます。もうユーザー管理画面からサポートユーザーの追加や削除を行って頂く必要はありません。
 
-Let's see how to set it up!
+それでは下に具体的な手順をご紹介します。
 
-1. Go to the **Settings** tab of your project.
-2. Scroll down to the **Enable Bitrise Support** user for this app and toggle the switch to the right to enable it.
-   It might take a couple of seconds to work and you might need to **refresh your page** to see the enabled status.
+1. サポートユーザーを有効にしたいプロジェクトの **Settings** タブに推移します.
+2. 下の画像と同じ、 **Enable Bitrise Support for this app** と書かれている部分までスクロールダウンして頂き右側にあるトグルを有効にします。
+   実際に有効化されるまで数秒かかることがあります。場合によっては有効化されているという表示するために **ページの更新** が必要になることがあります.
 
    ![{{ page.title }}](/img/bitrise-support-user.png)
 
-### What the Bitrise Support user can do
+### Bitrise Support user のできること
 
 The Bitrise Support User, when enabled, has Admin access to your app. That means it can do anything that a regular user with Admin access rights on an app can do: it has access to your builds and can edit your Workflows, modify the inputs of the **Team**, **Code** and the **Settings** tab.
 
