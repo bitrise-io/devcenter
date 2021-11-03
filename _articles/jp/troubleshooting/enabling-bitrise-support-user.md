@@ -9,7 +9,7 @@ menu:
 ---
 {% include not_translated_yet.html %}
 
-Bitriseで問題が発生した場合、 [サポートセンター](https://bitrise.zendesk.com/hc/en-us) から解決に必要なリソースを見つける事ができます。: サポートセンターのページから [ドキュメンテーション](https://devcenter.bitrise.io/)、 [ナレッジベース](https://bitrise.zendesk.com/hc/en-us/categories/360000108597-Knowledge-Data-Base-) 、 [コミュニティページ](https://discuss.bitrise.io/) など様々なリソースから発生している問題の解決策を見つけることができます。サポートチームへのお問い合わせをご希望の場合は **Submit a Request** ボタンから承っております。
+Bitriseで問題が発生した場合、 [サポートセンター](https://bitrise.zendesk.com/hc/en-us) から解決に必要なリソースを見つける事ができます。: サポートセンターのページから [ドキュメンテーション](https://devcenter.bitrise.io/)、 [ナレッジベース](https://bitrise.zendesk.com/hc/en-us/categories/360000108597-Knowledge-Data-Base-) 、 [コミュニティページ](https://discuss.bitrise.io/) など様々なリソースから発生している問題の解決策を見つけることができます。サポートチームへのお問い合わせをご希望の場合は **Submit a Request** ボタンから承っています。
 
 この記事ではどのように **Bitrise Support User** を有効にするか説明します。Bitrise Support User を有効にすることで弊社サポートチームがお客様のプロジェクト、ワークフロー、ビルドログ、設定(YAMLファイル)にアクセスすることができるようになり、より効率的に問題の把握および解決が可能になります。
 
