@@ -1,0 +1,13 @@
+.navbar .dropdown-menu li>a:focus, .navbar .dropdown-menu li>a:hover, .navbar.navbar-default .dropdown-menu li>a:focus, .navbar.navbar-default .dropdown-menu li>a:hover {
+    color: #fff;
+    background-color: #26a69a;
+}
+
+.dropdown-menu li a:active, .dropdown-menu li a:focus, .dropdown-menu li a:hover {
+    background-color: #26a69a;
+    color: #fff;
+}
+
+.portal-header-navbar.navbar .navbar-nav>li>a {
+    color: #26a69a;
+}

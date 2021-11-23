@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to Bitrise documentation!</title>
+  <link href="css/font-awesome.css" rel="stylesheet" />
+  <link href="css/roboto.font.css" rel="stylesheet" />
+  <link href="css/sm-core-css.css" rel="stylesheet" type="text/css" />
+  <link href="css/sm-simple.css" rel="stylesheet" type="text/css" />
+  <link href="css/theme2.css?version=20211123" rel="stylesheet" />
+  <link href="css/theme2-colors.css?version=20211123" rel="stylesheet" />
+  <link href="css/content-theme2.css?version=20211123" rel="stylesheet" />
+  <link href="css/html5.algoliasearch.css?version=20211123" rel="stylesheet" />
+  <link href="css/layout-custom-style.css?version=20211123" rel="stylesheet" />
+  <style></style>
+  <script src="js/jquery-3/jquery-3.4.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.smartmenus.js" type="text/javascript"></script>
+  <script src="js/html5-2-mp-common.js?version=20211123"></script>
+  <script src="js/html5-2.js?version=20211123"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CArray.prototype.includes%2CPromise%2CObject.assign%2CObject.entries"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+                                        //TODO: Used to modify path for portal search. Change to get dynamically
+                                        var portalLanguage = 'en';
+                                        var languageTitleMap = {"en":"Welcome to Bitrise documentation!","ja":"Bitrise\u30c9\u30ad\u30e5\u30e1\u30f3\u30c8\u3078\u3088\u3046\u3053\u305d\uff01"};
+                                        
+                                        
+                                        var categoriesShown = 4;
+                                        var shown = 4;
+                                        
+                                        var versionsfile = '';
+
+
+                                        var indexDict = new Array();
+                                        var store = {};
+                                        var enterKey = 'select';
+                                        
+                                        
+                                                var fuse_threshold = 0.3;
+  //]]>
+  </script>
+  <script src="js/html5.algoliasearch.js?version=20211123" type="text/javascript"></script>
+  <script src="js/jquery.mark.min.js" type="text/javascript"></script>
+  <script src="js/html5-2-portal.js"></script>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" /><!--Google Tag Manager-->
+  <script type="text/javascript">
+  //<![CDATA[
+  var containerid = 'GTM-TZK32GR';
+
+                                                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                                })(window,document,'script','dataLayer',containerid);
+  //]]>
+  </script><!--End Google Tag Manager-->
+  <script type="text/javascript">
+  //<![CDATA[
+                                $(document).ready(function () {
+                                $(".mediaobject img").addClass('materialboxed');
+                                //Exclude images with links
+                                $(".mediaobject a img").removeClass('materialboxed');
+                                if (!document.documentMode) {
+                                $('.materialboxed').materialbox();
+                                }});
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var publication_langs_id = {
+  'en' : 'en-UUID-6417de03-03ef-7c79-83a0-26f08db51f10',
+  'ja' : 'ja-UUID-6417de03-03ef-7c79-83a0-26f08db51f10'
+  };
+  var publication_id = 'en-UUID-6417de03-03ef-7c79-83a0-26f08db51f10';
+  var algolia_application_id = 'HI1538U2K4';
+  var algolia_search_only_api_key = 'e1a727481ac4f75db3e93c7763f02c8a';
+  //]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+  <script src="js/layout-custom-script.js?version=20211123" type="text/javascript"></script>
+</head>
+<body>
+  <div class="portal-content theme2" dir="ltr">
+    <header class="portal-header" data-portal-language="en">
+      <nav xmlns="" class="portal-header-navbar navbar navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href=
+              "https://www.bitrise.io" target="_blank" rel="noopener"><img class="logo" src="css/image/portal-logo.svg" alt="Logo" /></a>
+            </div>
+            <div id="navbar" class="navbar-right navbar-collapse collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="top-nav-menu sm sm-simple">
+                <li>
+                  <a href="https://devcenter.bitrise.io" class="external-top-nav-link" target="_blank">EN</a>
+                </li>
+                <li>
+                  <a href="https://devcenter.bitrise.io/ja/index-ja.html" class="external-top-nav-link" target="_blank">日本語</a>
+                </li>
+                <li>
+                  <a href="https://support.bitrise.io/hc/en-us?utm_source=devcenter&amp;utm_medium=top_cta" class="external-top-nav-link" target="_blank">Go to Support</a>
+                </li>
+                <li>
+                  <a href="https://www.bitrise.io/contact?utm_source=website&amp;utm_medium=devcenter&amp;utm_campaign=contact" class="external-top-nav-link" target="_blank">Book a demo</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="inner">
+        <a class="logo-link" href="https://www.bitrise.io" target="_blank" rel="noopener"><img class="logo" src="css/image/portal-logo.svg" alt="Logo" /></a>
+        <h1>How can we help you today?</h1>
+        <form class="portal-search form-inline" autocomplete="off">
+          <input id="aa-search-input" type="search" class="form-control search-field" placeholder="Search" /><button type="submit" class="btn"><i class="fa fa-search"></i></button>
+          <div class="search-page-link">
+            <a href="search.html">Advanced search</a>
+          </div>
+        </form>
+      </div>
+    </header>
+    <div class="portal-body" data-portal-language="en">
+      <div class="portal-body-container">
+        <div class="portal-body-row">
+          <div class="portal-publications">
+            <div class="inner">
+              <div class="inner-row">
+                <div class="portal-single-publication">
+                  <a href="en/getting-started.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-1"></i>
+                  </div>
+                  <h3>Getting started</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/infrastructure.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-2"></i>
+                  </div>
+                  <h3>Infrastructure</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/accounts.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-3"></i>
+                  </div>
+                  <h3>Accounts</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/workspaces.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-4 taxonomy-related-links-taxonomies-workspaces-rel"></i>
+                  </div>
+                  <h3>Workspaces</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/apps.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-5"></i>
+                  </div>
+                  <h3>Apps</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/steps-and-workflows.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-6 taxonomy-configuration-bitrise-yml"></i>
+                  </div>
+                  <h3>Steps and Workflows</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/introduction-to-steps.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-7 taxonomy-configuration-bitrise-yml taxonomy-configuration-steps"></i>
+                  </div>
+                  <h3>Introduction to Steps</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/builds.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-8"></i>
+                  </div>
+                  <h3>Builds</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/code-signing.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-9 taxonomy-actions-code-signing taxonomy-related-links-taxonomies-code-signing-rel"></i>
+                  </div>
+                  <h3>Code signing</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/testing.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-10 taxonomy-actions-testing"></i>
+                  </div>
+                  <h3>Testing</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/deploying.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-11"></i>
+                  </div>
+                  <h3>Deploying</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/monitoring.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-12"></i>
+                  </div>
+                  <h3>Monitoring</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/bitrise-cli.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-13"></i>
+                  </div>
+                  <h3>Bitrise CLI</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/api.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-14"></i>
+                  </div>
+                  <h3>API</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="en/references.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-15"></i>
+                  </div>
+                  <h3>References</h3></a>
+                </div>
+              </div>
+            </div>
+            <div class="show-all-categories">
+              <a class="category-more-toc" href="#"><span class="toggle-label showmore">Show more...</span><span class="toggle-label showless">Show less...</span></a>
+            </div>
+          </div>
+          <h5 class="featured-content-label">Featured content</h5>
+          <div class="portal-contents featured-content">
+            <div class="inner">
+              <div class="publication-contents">
+                <h4 class="featured-title"><span class="toc-count">11</span><a href="en/getting-started.html">Getting started</a></h4>
+                <ul class="featured-subtopics">
+                  <li>
+                    <a href="en/getting-started/migrating-to-bitrise.html">Migrating to Bitrise</a>
+                  </li>
+                  <li>
+                    <a href="en/getting-started/signing-up-for-bitrise.html">Signing up for Bitrise</a>
+                  </li>
+                  <li>
+                    <a href="en/getting-started/creating-your-first-workspace.html">Creating your first Workspace</a>
+                  </li>
+                  <li>
+                    <a href="en/getting-started/adding-your-first-app.html">Adding your first app</a>
+                  </li>
+                  <li>
+                    <a href="en/getting-started/getting-started-with-ios-apps.html">Getting started with iOS apps</a>
+                  </li>
+                  <li>
+                    <a href="en/getting-started/getting-started-with-android-apps.html">Getting started with Android apps</a>
+                  </li>
+                  <li>
+                    <a href="en/getting-started/getting-started-with-react-native-apps.html">Getting started with React Native apps</a>
+                  </li>
+                  <li>
+                    <a href="en/getting-started/getting-started-with-flutter-apps.html">Getting started with Flutter apps</a>
+                  </li>
+                  <li>
+                    <a href="en/getting-started/getting-started-with-ionic-cordova-apps.html">Getting started with Ionic/Cordova apps</a>
+                  </li>
+                  <li>
+                    <a href="en/getting-started/getting-started-with-expo-apps.html">Getting started with Expo apps</a>
+                  </li>
+                </ul><a class="more-toc" href="#"><span class="toggle-label showmore">Show more...</span><span class="toggle-label showless">Show less...</span></a>
+              </div>
+              <div class="publication-contents">
+                <h4 class="featured-title"><span class="toc-count">7</span><a href="en/infrastructure.html">Infrastructure</a></h4>
+                <ul class="featured-subtopics">
+                  <li>
+                    <a href="en/infrastructure/build-machines.html">Build machines</a>
+                  </li>
+                  <li>
+                    <a href="en/infrastructure/build-stacks.html">Build stacks</a>
+                  </li>
+                  <li>
+                    <a href="en/infrastructure/code-security.html">Code security</a>
+                  </li>
+                  <li>
+                    <a href="en/infrastructure/customizable-enterprise-build-platforms.html">Customizable enterprise build platforms</a>
+                  </li>
+                  <li>
+                    <a href="en/infrastructure/using-your-own-docker-image.html">Using your own Docker image</a>
+                  </li>
+                  <li>
+                    <a href="en/infrastructure/running-your-build-locally-in-docker.html">Running your build locally in Docker</a>
+                  </li>
+                </ul><a class="more-toc" href="#"><span class="toggle-label showmore">Show more...</span><span class="toggle-label showless">Show less...</span></a>
+              </div>
+              <div class="publication-contents">
+                <h4 class="featured-title"><span class="toc-count">8</span><a href="en/accounts.html">Accounts</a></h4>
+                <ul class="featured-subtopics">
+                  <li>
+                    <a href="en/accounts/connecting-to-services.html">Connecting to services</a>
+                  </li>
+                  <li>
+                    <a href="en/accounts/saml-sso-on-bitrise.html">SAML SSO on Bitrise</a>
+                  </li>
+                  <li>
+                    <a href="en/accounts/editing-your-profile-settings.html">Editing your profile settings</a>
+                  </li>
+                  <li>
+                    <a href="en/accounts/resetting-your-password.html">Resetting your password</a>
+                  </li>
+                  <li>
+                    <a href="en/accounts/two-factor-authentication.html">Two-factor authentication</a>
+                  </li>
+                  <li>
+                    <a href="en/accounts/personal-access-tokens.html">Personal access tokens</a>
+                  </li>
+                  <li>
+                    <a href="en/accounts/deleting-your-bitrise-account.html">Deleting your Bitrise account</a>
+                  </li>
+                </ul><a class="more-toc" href="#"><span class="toggle-label showmore">Show more...</span><span class="toggle-label showless">Show less...</span></a>
+              </div>
+              <div class="publication-contents">
+                <h4 class="featured-title"><span class="toc-count">5</span><a href="en/workspaces.html">Workspaces</a></h4>
+                <ul class="featured-subtopics">
+                  <li>
+                    <a href="en/workspaces/creating-workspaces.html">Creating Workspaces</a>
+                  </li>
+                  <li>
+                    <a href="en/workspaces/workspace-billing-and-invoicing.html">Workspace billing and invoicing</a>
+                  </li>
+                  <li>
+                    <a href="en/workspaces/adding-other-users-to-workspaces.html">Adding other users to Workspaces</a>
+                  </li>
+                  <li>
+                    <a href="en/workspaces/changing-the-owners-of-a-workspace.html">Changing the owners of a Workspace</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-wrapper" class="portal-search-result">
+          <div class="search-container">
+            <h2>Search results</h2>
+            <ul class="searchresults"></ul>
+            <p class="noresults">No results found</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="portal-footer" data-portal-language="en">
+      <div class="inner row">
+        <div class="copyright col-md-3">
+          © 2021
+        </div>
+        <div class="dropup languages pull-right col-md-2">
+          <button data-toggle="dropdown" class="dropdown-toggle btn btn-default">English <b class="caret"></b></button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="language-item dropdown-item active" lang="en" xml:lang="en">English</a>
+            </li>
+            <li>
+              <a class="language-item dropdown-item" lang="ja" xml:lang="ja">日本語</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <div class="portal-content theme2" dir="ltr">
+    <header class="portal-header" data-portal-language="ja">
+      <nav xmlns="" class="portal-header-navbar navbar navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href=
+              "https://www.bitrise.io" target="_blank" rel="noopener"><img class="logo" src="css/image/portal-logo.svg" alt="Logo" /></a>
+            </div>
+            <div id="navbar" class="navbar-right navbar-collapse collapse">
+              <ul xmlns="http://www.w3.org/1999/xhtml" class="top-nav-menu sm sm-simple">
+                <li>
+                  <a href="https://devcenter.bitrise.io" class="external-top-nav-link" target="_blank">EN</a>
+                </li>
+                <li>
+                  <a href="https://devcenter.bitrise.io/ja/index-ja.html" class="external-top-nav-link" target="_blank">日本語</a>
+                </li>
+                <li>
+                  <a href="https://support.bitrise.io/hc/en-us?utm_source=devcenter&amp;utm_medium=top_cta" class="external-top-nav-link" target="_blank">Go to Support</a>
+                </li>
+                <li>
+                  <a href="https://www.bitrise.io/contact?utm_source=website&amp;utm_medium=devcenter&amp;utm_campaign=contact" class="external-top-nav-link" target="_blank">Book a demo</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="inner">
+        <a class="logo-link" href="https://www.bitrise.io" target="_blank" rel="noopener"><img class="logo" src="css/image/portal-logo.svg" alt="Logo" /></a>
+        <h1></h1>
+        <form class="portal-search form-inline" autocomplete="off">
+          <input id="aa-search-input" type="search" class="form-control search-field" placeholder="" /><button type="submit" class="btn"><i class="fa fa-search"></i></button>
+          <div class="search-page-link">
+            <a href="search.html">Advanced search</a>
+          </div>
+        </form>
+      </div>
+    </header>
+    <div class="portal-body" data-portal-language="ja">
+      <div class="portal-body-container">
+        <div class="portal-body-row">
+          <div class="portal-publications">
+            <div class="inner">
+              <div class="inner-row">
+                <div class="portal-single-publication">
+                  <a href="ja/getting-started.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-1"></i>
+                  </div>
+                  <h3>入門</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/infrastructure.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-2"></i>
+                  </div>
+                  <h3>インフラストラクチャー</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/accounts.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-3"></i>
+                  </div>
+                  <h3>アカウント</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/workspaces.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-4 taxonomy-related-links-taxonomies-workspaces-rel"></i>
+                  </div>
+                  <h3>ワークスペース</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/apps.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-5"></i>
+                  </div>
+                  <h3>アプリ</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/steps-and-workflows.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-6 taxonomy-configuration-bitrise-yml"></i>
+                  </div>
+                  <h3>手順とワークフロー</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/introduction-to-steps.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-7 taxonomy-configuration-bitrise-yml taxonomy-configuration-steps"></i>
+                  </div>
+                  <h3>手順の概要</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/builds.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-8"></i>
+                  </div>
+                  <h3>ビルド</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/code-signing.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-9 taxonomy-actions-code-signing taxonomy-related-links-taxonomies-code-signing-rel"></i>
+                  </div>
+                  <h3>コード署名</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/testing.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-10 taxonomy-actions-testing"></i>
+                  </div>
+                  <h3>テスト</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/deploying.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-11"></i>
+                  </div>
+                  <h3>展開</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/monitoring.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-12"></i>
+                  </div>
+                  <h3>モニタリング</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/bitrise-cli.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-13"></i>
+                  </div>
+                  <h3>Bitrise CLI</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/api.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-14"></i>
+                  </div>
+                  <h3>API</h3></a>
+                </div>
+                <div class="portal-single-publication">
+                  <a href="ja/references.html">
+                  <div class="publication-icon">
+                    <i class="fa cat-panel cat-panel-15"></i>
+                  </div>
+                  <h3>参考文献</h3></a>
+                </div>
+              </div>
+            </div>
+            <div class="show-all-categories">
+              <a class="category-more-toc" href="#"><span class="toggle-label showmore">...</span><span class="toggle-label showless">...</span></a>
+            </div>
+          </div>
+          <h5 class="featured-content-label"></h5>
+          <div class="portal-contents featured-content">
+            <div class="inner">
+              <div class="publication-contents">
+                <h4 class="featured-title"><span class="toc-count">11</span><a href="ja/getting-started.html">入門</a></h4>
+                <ul class="featured-subtopics">
+                  <li>
+                    <a href="ja/getting-started/migrating-to-bitrise.html">Bitriseへの移行</a>
+                  </li>
+                  <li>
+                    <a href="ja/getting-started/signing-up-for-bitrise.html">Bitriseにサインアップする</a>
+                  </li>
+                  <li>
+                    <a href="ja/getting-started/creating-your-first-workspace.html">最初のワークスペースの作成</a>
+                  </li>
+                  <li>
+                    <a href="ja/getting-started/adding-your-first-app.html">最初のアプリを追加する</a>
+                  </li>
+                  <li>
+                    <a href="ja/getting-started/getting-started-with-ios-apps.html">iOSアプリ入門</a>
+                  </li>
+                  <li>
+                    <a href="ja/getting-started/getting-started-with-android-apps.html">Androidアプリ入門</a>
+                  </li>
+                  <li>
+                    <a href="ja/getting-started/getting-started-with-react-native-apps.html">ReactNativeアプリの使用を開始する</a>
+                  </li>
+                  <li>
+                    <a href="ja/getting-started/getting-started-with-flutter-apps.html">Flutterアプリの使用を開始する</a>
+                  </li>
+                  <li>
+                    <a href="ja/getting-started/getting-started-with-ionic-cordova-apps.html">Ionic / Cordovaアプリの使用を開始する</a>
+                  </li>
+                  <li>
+                    <a href="ja/getting-started/getting-started-with-expo-apps.html">Expoアプリの使用を開始する</a>
+                  </li>
+                </ul><a class="more-toc" href="#"><span class="toggle-label showmore">...</span><span class="toggle-label showless">...</span></a>
+              </div>
+              <div class="publication-contents">
+                <h4 class="featured-title"><span class="toc-count">7</span><a href="ja/infrastructure.html">インフラストラクチャー</a></h4>
+                <ul class="featured-subtopics">
+                  <li>
+                    <a href="ja/infrastructure/build-machines.html">マシンを構築する</a>
+                  </li>
+                  <li>
+                    <a href="ja/infrastructure/build-stacks.html">スタックを構築する</a>
+                  </li>
+                  <li>
+                    <a href="ja/infrastructure/code-security.html">コードセキュリティ</a>
+                  </li>
+                  <li>
+                    <a href="ja/infrastructure/customizable-enterprise-build-platforms.html">カスタマイズ可能なエンタープライズビルドプラットフォーム</a>
+                  </li>
+                  <li>
+                    <a href="ja/infrastructure/using-your-own-docker-image.html">独自のDockerイメージを使用する</a>
+                  </li>
+                  <li>
+                    <a href="ja/infrastructure/running-your-build-locally-in-docker.html">Dockerでローカルにビルドを実行する</a>
+                  </li>
+                </ul><a class="more-toc" href="#"><span class="toggle-label showmore">...</span><span class="toggle-label showless">...</span></a>
+              </div>
+              <div class="publication-contents">
+                <h4 class="featured-title"><span class="toc-count">8</span><a href="ja/accounts.html">アカウント</a></h4>
+                <ul class="featured-subtopics">
+                  <li>
+                    <a href="ja/accounts/connecting-to-services.html">サービスへの接続</a>
+                  </li>
+                  <li>
+                    <a href="ja/accounts/saml-sso-on-bitrise.html">BitriseでのSAMLSSO</a>
+                  </li>
+                  <li>
+                    <a href="ja/accounts/editing-your-profile-settings.html">プロファイル設定の編集</a>
+                  </li>
+                  <li>
+                    <a href="ja/accounts/resetting-your-password.html">パスワードのリセット</a>
+                  </li>
+                  <li>
+                    <a href="ja/accounts/two-factor-authentication.html">二要素認証</a>
+                  </li>
+                  <li>
+                    <a href="ja/accounts/personal-access-tokens.html">パーソナルアクセストークン</a>
+                  </li>
+                  <li>
+                    <a href="ja/accounts/deleting-your-bitrise-account.html">Bitriseアカウントを削除する</a>
+                  </li>
+                </ul><a class="more-toc" href="#"><span class="toggle-label showmore">...</span><span class="toggle-label showless">...</span></a>
+              </div>
+              <div class="publication-contents">
+                <h4 class="featured-title"><span class="toc-count">5</span><a href="ja/workspaces.html">ワークスペース</a></h4>
+                <ul class="featured-subtopics">
+                  <li>
+                    <a href="ja/workspaces/creating-workspaces.html">ワークスペースの作成</a>
+                  </li>
+                  <li>
+                    <a href="ja/workspaces/workspace-billing-and-invoicing.html">ワークスペースの請求と請求</a>
+                  </li>
+                  <li>
+                    <a href="ja/workspaces/adding-other-users-to-workspaces.html">他のユーザーをワークスペースに追加する</a>
+                  </li>
+                  <li>
+                    <a href="ja/workspaces/changing-the-owners-of-a-workspace.html">ワークスペースの所有者を変更する</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-wrapper" class="portal-search-result">
+          <div class="search-container">
+            <h2></h2>
+            <ul class="searchresults"></ul>
+            <p class="noresults"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="portal-footer" data-portal-language="ja">
+      <div class="inner row">
+        <div class="copyright col-md-3">
+          © 2021
+        </div>
+        <div class="dropup languages pull-right col-md-2">
+          <button data-toggle="dropdown" class="dropdown-toggle btn btn-default">English <b class="caret"></b></button>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="language-item dropdown-item" lang="en" xml:lang="en">English</a>
+            </li>
+            <li>
+              <a class="language-item dropdown-item active" lang="ja" xml:lang="ja">日本語</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </div><!--Google Tag Manager (noscript)--><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZK32GR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!--End Google Tag Manager (noscript)-->
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta xmlns="http://www.w3.org/1999/xhtml" charset="utf-8">
+  <meta xmlns="http://www.w3.org/1999/xhtml" http-equiv="x-ua-compatible" content="IE=edge">
+  <title>Search</title>
+  <link href="css/roboto.font.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
+  <link href="css/theme2.css" rel="stylesheet">
+  <link href="css/content-theme2.css" rel="stylesheet">
+  <link href="css/html5.algoliasearch.css" rel="stylesheet">
+  <link href="css/layout-custom-style.css" rel="stylesheet">
+</head>
+<body class="theme2 search-page">
+  <header xmlns="http://www.w3.org/1999/xhtml" class="portal-header" data-portal-language="en">
+    <div xmlns="" class="inner">
+      <a class="logo-link" href="https://www.bitrise.io" target="_blank" rel="noopener"><img class="logo" src="css/image/portal-logo.svg" alt="Logo"></a>
+      <div class="portal-search form-inline">
+        <div id="searchbox" class="ais-SearchBox"></div>
+      </div>
+    </div>
+  </header>
+  <div class="portal-body">
+    <div class="portal-body-container">
+      <div class="portal-body-row">
+        <div class="ais-InstantSearch">
+          <div class="filters-panel">
+            <h3 class="filters-title">Filters</h3>
+            <div id="clear-refinements"></div>
+            <h4 class="refinement-title">Platform</h4>
+            <div id="platform-refinement">
+              &nbsp;
+            </div>
+            <h4 class="refinement-title">Configuration</h4>
+            <div id="configuration-refinement">
+              &nbsp;
+            </div>
+            <h4 class="refinement-title">Actions</h4>
+            <div id="actions-refinement">
+              &nbsp;
+            </div>
+            <div id="hierarchical-categories"></div>
+          </div>
+          <div class="search-results-panel">
+            <h3 class="search-results-title">Search results</h3>
+            <div id="hits">
+              &nbsp;
+            </div>
+            <div id="pagination">
+              &nbsp;
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer xmlns="http://www.w3.org/1999/xhtml" class="portal-footer">
+    <div class="inner row"></div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.35.1/dist/algoliasearchLite.min.js" integrity="sha256-5rOQwvvJdM9oDYQYCGzaJuuTy6SUALjma3OtzEGyJM0=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.0.0/dist/instantsearch.production.min.js" integrity="sha256-6S7q0JJs/Kx4kb/fv0oMjS855QTz5Rc2hh9AkIUjUsk=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+
+                            var portalLanguage = 'en';
+                            var lang = getQueryVariable("lang");
+                            if (lang) {
+                            portalLanguage = lang;
+                            }
+                            
+                            function getQueryVariable(variable) {
+                            var query = window.location.search.substring(1);
+                            var vars = query.split("&");
+                            for (var i = 0; i < vars.length; i++) {
+                            var pair = vars[i].split("=");
+                            if (pair[0] == variable) {
+                            return pair[1];
+                            }
+                            }
+                            return (false);
+                            }
+  </script>
+  <script type="text/javascript">
+
+                            var search = instantsearch({
+                            indexName : portalLanguage + '-UUID-6417de03-03ef-7c79-83a0-26f08db51f10',
+  searchClient : algoliasearch('HI1538U2K4', 'eda8ab602a414630fc98dfac94d555bf'),
+
+                            });
+                            
+                            
+                                search.addWidget(
+                                instantsearch.widgets.refinementList({
+                                container: '#platform-refinement',
+                                attribute: 'platform',
+                                sortBy: ['isRefined', 'count:desc', 'name:asc'],
+                                limit: 100,
+                                operator: 'or',
+                                templates: {
+                                header: 'Platform ',
+                                }
+                                })
+                                );
+                            
+                                search.addWidget(
+                                instantsearch.widgets.refinementList({
+                                container: '#configuration-refinement',
+                                attribute: 'configuration',
+                                sortBy: ['isRefined', 'count:desc', 'name:asc'],
+                                limit: 100,
+                                operator: 'or',
+                                templates: {
+                                header: 'Configuration ',
+                                }
+                                })
+                                );
+                            
+                                search.addWidget(
+                                instantsearch.widgets.refinementList({
+                                container: '#actions-refinement',
+                                attribute: 'actions',
+                                sortBy: ['isRefined', 'count:desc', 'name:asc'],
+                                limit: 100,
+                                operator: 'or',
+                                templates: {
+                                header: 'Actions',
+                                }
+                                })
+                                );
+  </script>
+  <script src="js/html5.algoliasearchpage.js"></script>
+  <script type="text/javascript">
+  search.start();
+  </script>
+</body>
+</html>

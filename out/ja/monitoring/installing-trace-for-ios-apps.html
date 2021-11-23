@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta name="search" content="algolia" />
+  <meta name="use.ic" content="no" />
+  <meta name="tocstandalone" content="no" />
+  <meta name="theme" content="2" />
+  <meta name="search.placeholder" content="" />
+  <meta name="search.results" content="" />
+  <meta name="no.search.results" content="" />
+  <title>iOSアプリ用のTraceのインストール</title>
+  <link rel="stylesheet" type="text/css" href="../../css/docbook.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/roboto.font.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2.css?version=20211123" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2-colors.css?version=20211123" />
+  <link rel="stylesheet" type="text/css" href="../../css/content-theme2.css?version=20211123" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-core-css.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-simple.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-print.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-common.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/html5.algoliasearch.css?version=20211123" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-modern-tables.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/graphical-lists.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/layout-custom-style.css?version=20211123" />
+  <meta name="generator" content="Paligo" />
+  <link rel="prev" href="../monitoring.html" title="モニタリング" />
+  <link rel="next" href="installing-trace-for-ios-apps.html#cocoapodsを使用したtraceのインストール" title="Cocoapodsを使用したTraceのインストール" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<body class="theme2 fixed-toolbar colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix="../">
+  <header class="site-header">
+    <nav class="site-header-navbar navbar navbar-fixed-top">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div id="logotype-container" class="pull-left">
+            <a class="navbar-brand" href="https://www.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="top-nav-menu sm sm-simple">
+            <li>
+              <a href="https://devcenter.bitrise.io" class="external-top-nav-link" target="_blank">EN</a>
+            </li>
+            <li>
+              <a href="https://devcenter.bitrise.io/ja/index-ja.html" class="external-top-nav-link" target="_blank">日本語</a>
+            </li>
+            <li>
+              <a href="https://support.bitrise.io/hc/en-us?utm_source=devcenter&amp;utm_medium=top_cta" class="external-top-nav-link" target="_blank">Go to Support</a>
+            </li>
+            <li>
+              <a href="https://www.bitrise.io/contact?utm_source=website&amp;utm_medium=devcenter&amp;utm_campaign=contact" class="external-top-nav-link" target="_blank">Book a demo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="site-body">
+    <div class="site-body-container">
+      <div class="site-body-row">
+        <aside class="site-sidebar">
+          <div class="site-sidebar-header">
+            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://www.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
+            "../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+          <ul class="toc nav nav-site-sidebar">
+            <li>
+              <a href="../getting-started.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-9a2b4c43-179d-565a-f83c-6c5be7ea8e03" data-legacy-id="UUID-696bdecc-038a-8894-3bf2-78c9dd4e1e1a" data-permalink="getting-started.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> 入門</a>
+              <ul>
+                <li>
+                  <a href="../getting-started/migrating-to-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-84d717b2-29a0-3c37-bc73-674022db721b" data-legacy-id="UUID-8879f258-0558-f6ee-98e5-5a2506d82df9" data-permalink="getting-started/migrating-to-bitrise.html" data-topic-level="2" data-relative-prefix=
+                  "../" data-publication-date=""><span class="glyphicon"></span> Bitriseへの移行</a>
+                  <ul>
+                    <li>
+                      <a href="../getting-started/migrating-to-bitrise/migrating-from-jenkins-to-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-a94d0cf8-018a-53cb-6206-1da2bcc4fdf1" data-legacy-id="UUID-faf213f4-7c83-aee3-fab0-5a19cd1a509b" data-permalink=
+                      "getting-started/migrating-to-bitrise/migrating-from-jenkins-to-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">JenkinsからBitriseへの移行</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../getting-started/signing-up-for-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-545a2ebf-0220-d38a-26d6-a1627636e966" data-legacy-id="UUID-9dc60577-d179-a769-7d72-d59b459e13d1" data-permalink="getting-started/signing-up-for-bitrise.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Bitriseにサインアップする</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/creating-your-first-workspace.html" class="topic-link section taxonomy-related-links-taxonomies-workspaces-rel" data-origin-id="UUID-eba05717-4fe7-5ebc-64f9-e689bffff030" data-legacy-id="UUID-d2dc0473-cf38-63d8-804f-9ea086df9756" data-permalink="getting-started/creating-your-first-workspace.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">最初のワークスペースの作成</a>
+                </li>
+                <li>
+                  <a href="../getting-started/adding-your-first-app.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-d0079852-0403-15f4-3828-c0205f0d21ce" data-legacy-id="UUID-bb7c5561-43c7-fce8-d0d1-5b426246c350" data-permalink="getting-started/adding-your-first-app.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">最初のアプリを追加する</a>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-ios-apps.html" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-ios taxonomy-related-links-taxonomies-ios-rel" data-origin-id="UUID-f71aa52b-0097-a692-60ed-94b0e399d2a1" data-legacy-id=
+                  "UUID-81a6851f-9012-17b1-188b-167cce87cfb9" data-permalink="getting-started/getting-started-with-ios-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">iOSアプリ入門</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-android-apps.html" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-android taxonomy-related-links-taxonomies-android-rel original-topic original-topic" data-origin-id=
+                  "UUID-9ecfeed4-c9ce-dbec-45f0-6d7af933d514" data-legacy-id="UUID-a4a3c266-19bb-8741-cd56-40fee645d58b" data-permalink="getting-started/getting-started-with-android-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Androidアプリ入門</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-react-native-apps.html" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-68434c3f-aff3-9666-7817-728bf714b1c4" data-legacy-id=
+                  "UUID-4d21f88e-bcef-8665-7827-4ae0f68faeb2" data-permalink="getting-started/getting-started-with-react-native-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">ReactNativeアプリの使用を開始する</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-flutter-apps.html" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-6eb0b59c-d6d1-1c2f-93ab-3f9141b6213b" data-legacy-id=
+                  "UUID-40b0a17c-5aa4-821c-9d80-17003cdf6c1c" data-permalink="getting-started/getting-started-with-flutter-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Flutterアプリの使用を開始する</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-ionic-cordova-apps.html" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-356bce7f-381d-aa65-4e51-f2d26a4ca4c2" data-legacy-id=
+                  "UUID-9872034d-c75b-ac41-77c9-2be96702439c" data-permalink="getting-started/getting-started-with-ionic-cordova-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Ionic / Cordovaアプリの使用を開始する</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-expo-apps.html" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-f603ea52-367d-eea0-68c2-5d565c27a16b" data-legacy-id=
+                  "UUID-d27d764d-2fde-f7ac-4720-1d02853a67aa" data-permalink="getting-started/getting-started-with-expo-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Expoアプリの使用を開始する</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../infrastructure.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-3eab4c5e-529d-6c7d-833c-cb9969befbad" data-legacy-id="UUID-520baf25-3180-0ceb-91b5-1e0da25382d0" data-permalink="infrastructure.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> インフラストラクチャー</a>
+              <ul>
+                <li>
+                  <a href="../infrastructure/build-machines.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-03e06c05-1450-1415-7613-b6ed7c04c079" data-legacy-id="UUID-9ab7b667-21c5-3904-5a90-5f86a5244657" data-permalink="infrastructure/build-machines.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> マシンを構築する</a>
+                  <ul>
+                    <li>
+                      <a href="../infrastructure/build-machines/configuring-your-network-to-access-our-build-machines.html" class="topic-link section" data-origin-id="UUID-983fde2f-6b1c-3599-20b7-156fe731f12b" data-legacy-id="UUID-fbfef0f2-c6c8-95f7-08bf-4c278d5c589f" data-permalink=
+                      "infrastructure/build-machines/configuring-your-network-to-access-our-build-machines.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ビルドマシンにアクセスするためのネットワークの構成</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-machines/storage-space-on-build-machines.html" class="topic-link section" data-origin-id="UUID-53d69784-75b6-1df5-a99a-1a0cb43788b5" data-legacy-id="UUID-63958978-8e5e-273a-23bb-604f6cf87d19" data-permalink="infrastructure/build-machines/storage-space-on-build-machines.html" data-topic-level=
+                      "3" data-relative-prefix="../../" data-publication-date="">ビルドマシンのストレージスペース</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-machines/freeing-up-storage-space-on-build-machines.html" class="topic-link section" data-origin-id="UUID-b07bf5c3-5e94-94ae-07f4-bd4872287215" data-legacy-id="UUID-5f2d97d7-206d-13b0-00a1-4e418ab70d24" data-permalink=
+                      "infrastructure/build-machines/freeing-up-storage-space-on-build-machines.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ビルドマシンのストレージスペースを解放する</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-machines/customizing-build-machines.html" class="topic-link section" data-origin-id="UUID-0877efd2-d139-ee0a-b0bf-3d0ba1f8900a" data-legacy-id="UUID-444af3f2-6532-b0af-1bd1-3890c7c7d536" data-permalink="infrastructure/build-machines/customizing-build-machines.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">ビルドマシンのカスタマイズ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../infrastructure/build-stacks.html" class="topic-link section taxonomy-configuration-stacks taxonomy-related-links-taxonomies-stacks-rel original-topic original-topic" data-origin-id="UUID-d6a228ed-8c03-64f9-dd96-993adf80523b" data-legacy-id="UUID-c880ed53-1621-1766-4c72-9010310f6227" data-permalink=
+                  "infrastructure/build-stacks.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> スタックを構築する</a>
+                  <ul>
+                    <li>
+                      <a href="../infrastructure/build-stacks/stack-update-policy.html" class="topic-link section taxonomy-configuration-stacks original-topic original-topic" data-origin-id="UUID-295ee35e-1f63-7adc-a05e-35490453f71b" data-legacy-id="UUID-152fa912-5d81-fe75-cb86-03f12bd50f40" data-permalink=
+                      "infrastructure/build-stacks/stack-update-policy.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">スタック更新ポリシー</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-stacks/stack-deprecation-and-removal-policy.html" class="topic-link section taxonomy-configuration-stacks" data-origin-id="UUID-5bac20c1-ade5-dca6-25f5-f54fc5ce7425" data-legacy-id="UUID-9a682973-8466-57ef-a98a-946b2799e616" data-permalink=
+                      "infrastructure/build-stacks/stack-deprecation-and-removal-policy.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">スタックの非推奨と削除のポリシー</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-stacks/preinstalled-tools-on-bitrise-stacks.html" class="topic-link section taxonomy-configuration-stacks" data-origin-id="UUID-47c3c221-c9f4-7940-ef48-5ede8f6c626d" data-legacy-id="UUID-5c6d11d2-5bdc-1c4e-43e3-58c25f7122a9" data-permalink=
+                      "infrastructure/build-stacks/preinstalled-tools-on-bitrise-stacks.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Bitriseスタックにプレインストールされたツール</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-stacks/the-android-linux-docker-environment.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-1a40baf9-7721-2b86-6115-0d13327bd3a4" data-legacy-id="UUID-84990961-9960-b41e-cb22-60f9b5c0aabc" data-permalink=
+                      "infrastructure/build-stacks/the-android-linux-docker-environment.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Android / Linux / Docker環境</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-stacks/managing-java-versions.html" class="topic-link section" data-origin-id="UUID-0272d2fc-5d56-7f2c-e4c3-9da55fb22c8d" data-legacy-id="UUID-aa6c9928-a8b4-45c7-2cc5-52c6b99567ca" data-permalink="infrastructure/build-stacks/managing-java-versions.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Managing Java versions</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../infrastructure/code-security.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-7abef58e-ec4c-809d-54ac-61a591df4c51" data-legacy-id="UUID-ad66469f-0b08-1ea7-3d1b-1f4d52a7c106" data-permalink="infrastructure/code-security.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">コードセキュリティ</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../infrastructure/customizable-enterprise-build-platforms.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-d3272c36-f9e9-0749-c1d9-7e40fe0b24bc" data-legacy-id="UUID-49f916c8-22af-0ba9-036c-e9ebc6ea84a9" data-permalink="infrastructure/customizable-enterprise-build-platforms.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">カスタマイズ可能なエンタープライズビルドプラットフォーム</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../infrastructure/using-your-own-docker-image.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-0ca8f98b-c25f-4ae9-7d48-1778af3ab9db" data-legacy-id="UUID-328bfe61-e2fb-9b6b-6b93-6345a4ba97dd" data-permalink="infrastructure/using-your-own-docker-image.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">独自のDockerイメージを使用する</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../infrastructure/running-your-build-locally-in-docker.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-1c50574c-3c92-c29c-d531-19008eecca68" data-legacy-id="UUID-a1c6c4a9-2bfa-77f5-0299-f1f1ba1deaa9" data-permalink="infrastructure/running-your-build-locally-in-docker.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Dockerでローカルにビルドを実行する</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../accounts.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-28ffb8a6-05b5-ddc0-a390-1d3e2d8f26b2" data-legacy-id="UUID-86714967-7e3d-c756-42f9-9ac1db7edb4a" data-permalink="accounts.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span>
+              アカウント</a>
+              <ul>
+                <li>
+                  <a href="../accounts/connecting-to-services.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-6e5ba70c-bdc9-4aaa-1b01-bd4a75f03a83" data-legacy-id="UUID-4d3ea107-005d-70dd-2a77-359c84e92781" data-permalink="accounts/connecting-to-services.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> サービスへの接続</a>
+                  <ul>
+                    <li>
+                      <a href="../accounts/connecting-to-services/connecting-your-github-gitlab-bitbucket-account-to-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-90a9b34b-1136-b823-ee94-99af39405c36" data-legacy-id="UUID-2203bf28-4f8e-996c-5346-42f51661c965" data-permalink=
+                      "accounts/connecting-to-services/connecting-your-github-gitlab-bitbucket-account-to-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">GitHub / GitLab / BitbucketアカウントをBitriseに接続する</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/connecting-self-hosted-gitlab-instances.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-c6504603-1afb-860b-ec65-37071bb15cd6" data-legacy-id="UUID-52c72363-9d00-d2f7-b5ad-d1b29dbba64e" data-permalink=
+                      "accounts/connecting-to-services/connecting-self-hosted-gitlab-instances.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">セルフホストのGitLabインスタンスを接続する</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/apple-services-connection.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-00110e6f-af8c-b0e8-156e-9ef423e3dab3" data-legacy-id="UUID-39a1db6c-7348-a9d5-cb92-27648e4c5efc" data-permalink=
+                      "accounts/connecting-to-services/apple-services-connection.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Appleサービス接続</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/connecting-to-an-apple-service-with-api-key.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-9efbac46-99cc-7c73-250b-75a37c32783e" data-legacy-id="UUID-020a7e39-882c-f79a-5844-67346e61f075" data-permalink=
+                      "accounts/connecting-to-services/connecting-to-an-apple-service-with-api-key.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">APIキーを使用してAppleサービスに接続する</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/connecting-to-an-apple-service-with-apple-id.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-26bcdf25-8daa-9c14-014d-f08ef9bac83f" data-legacy-id="UUID-32beb308-2689-caff-687f-b3e68afc9c5a" data-permalink=
+                      "accounts/connecting-to-services/connecting-to-an-apple-service-with-apple-id.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">AppleIDを使用してAppleサービスに接続する</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/connecting-to-an-apple-service-with-step-inputs.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-0a53901c-7750-76e6-d4b6-c37b5b35ed17" data-legacy-id="UUID-66be72ab-615d-f0f4-9315-0b6a0cc19d74" data-permalink=
+                      "accounts/connecting-to-services/connecting-to-an-apple-service-with-step-inputs.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ステップ入力でAppleサービスに接続する</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/steps-requiring-apple-authentication.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-55861ef6-a689-7493-a090-16ee69f73ae5" data-legacy-id="UUID-336f0139-fd1b-ec95-f2ef-5ae885d04ba8" data-permalink=
+                      "accounts/connecting-to-services/steps-requiring-apple-authentication.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Apple認証が必要な手順</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../accounts/saml-sso-on-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-bca7875d-ba86-a5f9-a246-738204f83644" data-legacy-id="UUID-aadae04b-8b51-3d8f-0c55-6323223e7b29" data-permalink="accounts/saml-sso-on-bitrise.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> BitriseでのSAMLSSO</a>
+                  <ul>
+                    <li>
+                      <a href="../accounts/saml-sso-on-bitrise/setting-up-google-sso-for-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-c4d5bf0b-e976-489a-8186-cfa441aae510" data-legacy-id="UUID-e6746462-fa46-ffb9-9572-dfc7a4cb0549" data-permalink=
+                      "accounts/saml-sso-on-bitrise/setting-up-google-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Bitrise用のGoogleSSOの設定</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-on-bitrise/setting-up-ad-fs-sso-for-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-557b0daa-88db-9538-918b-611d6434d59d" data-legacy-id="UUID-f4e3854b-0548-5b54-0cec-e289d120ae32" data-permalink=
+                      "accounts/saml-sso-on-bitrise/setting-up-ad-fs-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Bitrise用のADFSSSOの設定</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-on-bitrise/setting-up-azure-ad-sso-for-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-216ae74a-9185-9547-8ca7-f77c3006b873" data-legacy-id="UUID-d0f83097-d01b-250a-4f1c-afe02ef495b8" data-permalink=
+                      "accounts/saml-sso-on-bitrise/setting-up-azure-ad-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Bitrise用のAzureADSSOのセットアップ</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-on-bitrise/setting-up-auth0-sso-for-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-4b441cb7-8dd2-3589-705b-e23a800fd5e0" data-legacy-id="UUID-c162fbf5-8745-ae81-f8ef-198b3e8838d1" data-permalink=
+                      "accounts/saml-sso-on-bitrise/setting-up-auth0-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Bitrise用のAuth0SSOの設定</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-on-bitrise/setting-up-idaptive-saml-sso-for-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-267a6d28-abf3-d722-b848-52ebc983c83a" data-legacy-id="UUID-0003d3ef-fdb1-0e41-cbed-0b336e48f4fe" data-permalink=
+                      "accounts/saml-sso-on-bitrise/setting-up-idaptive-saml-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Bitrise用のIdaptiveSAMLSSOのセットアップ</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-on-bitrise/setting-up-okta-sso-for-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-e773a082-c1cf-dd22-4d98-0fe6ffd63c5f" data-legacy-id="UUID-3edaad0e-5d36-6107-956d-c98532519294" data-permalink=
+                      "accounts/saml-sso-on-bitrise/setting-up-okta-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Bitrise用のOktaSSOのセットアップ</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-on-bitrise/setting-up-ping-identity-sso-for-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-3ff033de-eab6-30d7-cf01-6016fb4e0c87" data-legacy-id="UUID-39b673b2-e890-6e1d-bf48-5e05f68c6194" data-permalink=
+                      "accounts/saml-sso-on-bitrise/setting-up-ping-identity-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Bitrise用のPingIdentitySSOの設定</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-on-bitrise/setting-up-onelogin-sso-for-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-92d5aa9a-09f2-05a4-c093-c7b0939b81ec" data-legacy-id="UUID-48289fbf-3c50-74c0-46d5-1c1c4cbe87c8" data-permalink=
+                      "accounts/saml-sso-on-bitrise/setting-up-onelogin-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Bitrise用のOneLoginSSOのセットアップ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../accounts/editing-your-profile-settings.html" class="topic-link section" data-origin-id="UUID-5e0f29c7-1f97-6817-4b49-3d35767db39f" data-legacy-id="UUID-7fb1877e-7cf1-93c8-e09f-40ed90eedbe4" data-permalink="accounts/editing-your-profile-settings.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">プロファイル設定の編集</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../accounts/resetting-your-password.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-d192d1df-da9e-ff21-8a58-4c2b4e55fa7d" data-legacy-id="UUID-98fae107-f00b-060f-6d1e-8076a6e360b0" data-permalink="accounts/resetting-your-password.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">パスワードのリセット</a>
+                </li>
+                <li>
+                  <a href="../accounts/two-factor-authentication.html" class="topic-link section" data-origin-id="UUID-866a4f96-4583-8512-7fe7-f30e35d773bb" data-legacy-id="UUID-0cd731ce-5173-4a0b-d169-cf7caee9eb7c" data-permalink="accounts/two-factor-authentication.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=
+                  "">二要素認証</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../accounts/personal-access-tokens.html" class="topic-link section" data-origin-id="UUID-700aac93-033a-c35c-aa92-50c6508c19fa" data-legacy-id="UUID-bc4ede62-d9f4-97dc-f34e-09782465c93e" data-permalink="accounts/personal-access-tokens.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=
+                  "">パーソナルアクセストークン</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../accounts/deleting-your-bitrise-account.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-7fc688db-e815-db86-5b75-3db0b85f3555" data-legacy-id="UUID-fa9c37a1-64d0-5c74-f324-b198ad66462d" data-permalink="accounts/deleting-your-bitrise-account.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Bitriseアカウントを削除する</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../workspaces.html" class="topic-link section taxonomy-related-links-taxonomies-workspaces-rel original-topic original-topic" data-origin-id="UUID-45bb61c5-c7f2-5871-ec0a-71f12394ef81" data-legacy-id="UUID-66682ae4-b435-da98-c588-4cb36589e592" data-permalink="workspaces.html" data-topic-level="1" data-relative-prefix=""
+              data-publication-date=""><span class="glyphicon"></span> ワークスペース</a>
+              <ul>
+                <li>
+                  <a href="../workspaces/creating-workspaces.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-94274f32-1936-7a28-bd8d-ed56c00189c3" data-legacy-id="UUID-b2672a81-1e7e-0ab4-55dc-44396d01a5b5" data-permalink="workspaces/creating-workspaces.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">ワークスペースの作成</a>
+                </li>
+                <li>
+                  <a href="../workspaces/workspace-billing-and-invoicing.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-afa1dd04-2a80-3357-82ae-618a85e2f235" data-legacy-id="UUID-b0887572-7a06-ffb9-1d63-1adc4de6bd9c" data-permalink="workspaces/workspace-billing-and-invoicing.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">ワークスペースの請求と請求</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../workspaces/adding-other-users-to-workspaces.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-7a68f566-8e93-124c-439b-3f5c996d5fa7" data-legacy-id="UUID-39752d56-7087-4b7e-67a0-7b4cbeb0bfe0" data-permalink="workspaces/adding-other-users-to-workspaces.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">他のユーザーをワークスペースに追加する</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../workspaces/changing-the-owners-of-a-workspace.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-8ba812cb-8961-904d-7213-e05edffa575b" data-legacy-id="UUID-0e48bb3c-f26a-2076-c9a9-889c3d955549" data-permalink="workspaces/changing-the-owners-of-a-workspace.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">ワークスペースの所有者を変更する</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../apps.html" class="topic-link section" data-origin-id="UUID-675eafcc-4ca9-1439-43d8-fa2abbec5513" data-legacy-id="UUID-c94ad031-477a-dc62-bfb2-be8a740da8c3" data-permalink="apps.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> アプリ</a>
+              <ul>
+                <li>
+                  <a href="../apps/webhooks.html" class="topic-link section taxonomy-configuration-apps taxonomy-related-links-taxonomies-trigger-rel original-topic original-topic" data-origin-id="UUID-5331ef8b-5840-9105-7763-81ca7b8525ac" data-legacy-id="UUID-c98a5e1e-cd0c-42b3-00bf-70ab149c6974" data-permalink="apps/webhooks.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Webhook</a>
+                  <ul>
+                    <li>
+                      <a href="../apps/webhooks/adding-incoming-webhooks.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-a6eaea8e-c52c-28b3-540a-fd7678810798" data-legacy-id="UUID-a4f28644-5827-6e01-4f08-0f8bb2d78fae" data-permalink="apps/webhooks/adding-incoming-webhooks.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">着信Webhookの追加</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-github-webhook.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-f5f767f9-79c8-facf-eba8-4af37624924d" data-legacy-id="UUID-32393458-0d1f-b7ec-5e9e-3870e591bb51" data-permalink="apps/webhooks/adding-a-github-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">GitHubWebhookの追加</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-gitlab-webhook.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-c10c83c9-4b2b-3772-e6bb-bbe94f3e80e2" data-legacy-id="UUID-e1ee974e-fbf2-1800-48ea-283f8606813e" data-permalink="apps/webhooks/adding-a-gitlab-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">GitlabWebhookの追加</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-bitbucket-webhook.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-8412e45f-b884-53e6-1c00-92650404a3c3" data-legacy-id="UUID-40a0e3b9-5167-fe62-1aa4-4f3f481f80b6" data-permalink="apps/webhooks/adding-a-bitbucket-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">BitbucketWebhookを追加する</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-gogs-webhook.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-cb59d5d0-c554-e4ae-715c-14c9ff93b6b7" data-legacy-id="UUID-a4c542d7-dde8-0143-1199-2dece940db5c" data-permalink="apps/webhooks/adding-a-gogs-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">GogsWebhookの追加</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-slack-webhook.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-5001d127-3897-d7d0-f03a-a7a6bd5423a9" data-legacy-id="UUID-29eb8644-3447-d10b-4e2f-1810fba36ae5" data-permalink="apps/webhooks/adding-a-slack-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">SlackWebhookの追加</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-visual-studio-webhook.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-3837c77e-8098-a2a2-1872-e3dd8155642b" data-legacy-id="UUID-47f911de-489f-87e5-2366-f4e0c5d467de" data-permalink="apps/webhooks/adding-a-visual-studio-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Visual StudioWebhookの追加</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-an-assembla-webhook.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-965b0228-485f-608b-de15-e68b9e7b5faf" data-legacy-id="UUID-aadbd29c-7813-7b07-1f45-169029610228" data-permalink="apps/webhooks/adding-an-assembla-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">AssemblaWebhookの追加</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-deveo-webhook.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-f2850b49-0240-fa76-ac7c-c7126b940dd1" data-legacy-id="UUID-a9d9971f-c0f6-6903-38bb-516d69075c6b" data-permalink="apps/webhooks/adding-a-deveo-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">DeveoWebhookの追加</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-outgoing-webhooks.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-5c2b9338-918a-6e37-0bcf-c810acc60be6" data-legacy-id="UUID-137df052-8bfd-beda-0654-501f185129f3" data-permalink="apps/webhooks/adding-outgoing-webhooks.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">発信Webhookの追加</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../apps/configuring-the-repository-url-and-the-default-branch.html" class="topic-link section" data-origin-id="UUID-b5902706-bb7c-f6d0-fee4-eff975bfccdc" data-legacy-id="UUID-66811810-1d10-b6b9-3aa2-3d886f843f08" data-permalink="apps/configuring-the-repository-url-and-the-default-branch.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">リポジトリのURLとデフォルトのブランチを設定する</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../apps/configuring-ssh-keys.html" class="topic-link section taxonomy-configuration-apps" data-origin-id="UUID-579f7434-bcb0-3877-212f-df8bbec96b7c" data-legacy-id="UUID-b567647e-2421-59ae-7fd8-ec3d3e337378" data-permalink="apps/configuring-ssh-keys.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">SSHキーの構成</a>
+                </li>
+                <li>
+                  <a href="../apps/adding-team-members-to-an-app.html" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-d8d1b16d-0e6a-e08a-9949-af3b762614e4" data-legacy-id="UUID-a34567f4-74e4-1f1d-7d8d-96cbffcad04f" data-permalink="apps/adding-team-members-to-an-app.html" data-topic-level=
+                  "2" data-relative-prefix="../" data-publication-date="">アプリへのチームメンバーの追加</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../apps/user-roles-on-app-teams.html" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-f2d36e34-20b0-22b7-8214-d75ca87322f6" data-legacy-id="UUID-a89f6244-90e5-bb75-35b5-730d57a0daf8" data-permalink="apps/user-roles-on-app-teams.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">アプリチームでのユーザーの役割</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../apps/changing-the-owner-of-an-app.html" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-423552f8-7b5f-370e-2deb-03438f0c0303" data-legacy-id="UUID-0a12640a-cf3e-6089-dd61-8f3d5da9ca27" data-permalink="apps/changing-the-owner-of-an-app.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">アプリの所有者を変更する</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../apps/enabling-the-bitrise-support-user-for-your-app.html" class="topic-link section taxonomy-actions-troubleshooting taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-9f206309-7bea-860b-558c-97e4d7bb6c09" data-legacy-id="UUID-4f3d837e-5293-365c-4da6-e69b8795cad3" data-permalink=
+                  "apps/enabling-the-bitrise-support-user-for-your-app.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">アプリのBitriseSupportユーザーを有効にする</a>
+                </li>
+                <li>
+                  <a href="../apps/apps-with-submodules-or-private-repo-dependencies.html" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-e9d90a45-3743-5c70-5890-451857d008cf" data-legacy-id="UUID-7977c15f-d343-5588-763e-34b407ef2d6d" data-permalink=
+                  "apps/apps-with-submodules-or-private-repo-dependencies.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">サブモジュールまたはプライベートリポジトリの依存関係を持つアプリ</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../apps/public-apps.html" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-d8ff76d0-d66b-4191-ef1e-fcf0b4f14e5e" data-legacy-id="UUID-20ad211e-6e31-4fe0-bca8-61358e546ed2" data-permalink="apps/public-apps.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">公開アプリ</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../steps-and-workflows.html" class="topic-link section taxonomy-configuration-bitrise-yml original-topic original-topic" data-origin-id="UUID-45f92eab-49aa-a0d2-6472-a2da060aee88" data-legacy-id="UUID-bf795ad3-7684-a92f-12e3-7f40724cc24c" data-permalink="steps-and-workflows.html" data-topic-level="1" data-relative-prefix=""
+              data-publication-date=""><span class="glyphicon"></span> 手順とワークフロー</a>
+              <ul>
+                <li>
+                  <a href="../steps-and-workflows/adding-steps-to-a-workflow.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-520f8b46-3247-b5e0-3138-b3033ab69d92" data-legacy-id="UUID-efdef6c2-cf0b-4921-7186-79a7db0e9bea" data-permalink="steps-and-workflows/adding-steps-to-a-workflow.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">ワークフローへのステップの追加</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/step-versions.html" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-f59797e7-f966-7727-3853-82bb40bba77f" data-legacy-id="UUID-be3b0e80-c6fd-363e-1b8c-d71e53b9db6c" data-permalink="steps-and-workflows/step-versions.html" data-topic-level=
+                  "2" data-relative-prefix="../" data-publication-date="">ステップバージョン管理</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/step-inputs.html" class="topic-link section taxonomy-configuration-steps" data-origin-id="UUID-b0690127-a271-a392-b3e5-7e71daf207ba" data-legacy-id="UUID-f33fb9b7-70bb-f3f1-e4c5-2ce6bbc59a70" data-permalink="steps-and-workflows/step-inputs.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">ステップ入力</a>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/skipping-steps.html" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-4f3c1c76-3d54-7e79-f543-525de22e6941" data-legacy-id="UUID-9bcaffa9-f602-c3e4-a8cb-1bb7cfe04760" data-permalink="steps-and-workflows/skipping-steps.html" data-topic-level=
+                  "2" data-relative-prefix="../" data-publication-date="">手順をスキップする</a>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/enabling-or-disabling-a-step-conditionally.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-2984dd3d-3e7e-7e53-2987-32fbfc5f0050" data-legacy-id="UUID-2b8c8853-f79a-c077-88d6-35eab62e5bb5" data-permalink=
+                  "steps-and-workflows/enabling-or-disabling-a-step-conditionally.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">ステップを条件付きで有効または無効にする</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/setting-a-time-limit-for-steps.html" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-72c8d204-5d1c-6039-fb7f-2151c6e65c69" data-legacy-id="UUID-dfe4daf8-54d0-28b1-ca8a-c62086d56c06" data-permalink=
+                  "steps-and-workflows/setting-a-time-limit-for-steps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">ステップの制限時間を設定する</a>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/developing-your-own-bitrise-step.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-431581d4-f756-3167-7a10-13f70cd4dba4" data-legacy-id="UUID-45277652-008d-152c-9e3a-00e80a3005be" data-permalink="steps-and-workflows/developing-your-own-bitrise-step.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> 独自のビットライズステップの開発</a>
+                  <ul>
+                    <li>
+                      <a href="../steps-and-workflows/developing-your-own-bitrise-step/developing-a-new-step.html" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-e67f6a64-56f0-20f4-4150-02ff566db8b7" data-legacy-id="UUID-848ffc4a-1c5a-6051-fe67-025ab405f007" data-permalink=
+                      "steps-and-workflows/developing-your-own-bitrise-step/developing-a-new-step.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">新しいステップの開発</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/developing-your-own-bitrise-step/sharing-steps-with-all-bitrise-users.html" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-68dd8146-6228-fa08-2f24-906f7c849313" data-legacy-id="UUID-6ac61bee-57fc-bdfc-e92b-c9c7623c8c35" data-permalink=
+                      "steps-and-workflows/developing-your-own-bitrise-step/sharing-steps-with-all-bitrise-users.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">すべてのBitriseユーザーとステップを共有する</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/developing-your-own-bitrise-step/verified-steps.html" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-c66d6d34-8fb3-b9cb-38fb-aec1b0c97479" data-legacy-id="UUID-4a6edbc8-197c-3bd9-7dbb-6411a6514e84" data-permalink=
+                      "steps-and-workflows/developing-your-own-bitrise-step/verified-steps.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">確認済みの手順</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/developing-your-own-bitrise-step/creating-your-own-bitrise-project-scanner.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-a34926b3-4944-74d2-3cd3-46a8df5881d8" data-legacy-id="UUID-6f7ab4ed-3edb-2f43-3fc1-a492a3eada8c" data-permalink=
+                      "steps-and-workflows/developing-your-own-bitrise-step/creating-your-own-bitrise-project-scanner.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">独自のBitriseプロジェクトスキャナーの作成</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/introduction-to-workflows.html" class="topic-link section taxonomy-configuration-bitrise-yml original-topic original-topic" data-origin-id="UUID-31bf6c77-1059-252e-fb0b-32941af36dd0" data-legacy-id="UUID-86305538-9683-ba62-60cf-d98ccc4f3255" data-permalink=
+                  "steps-and-workflows/introduction-to-workflows.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">ワークフローの概要</a>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/default-workflows.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-ecad7fc7-429f-3659-a7fe-6eaeb453ac51" data-legacy-id="UUID-c30c1c55-0442-47eb-8332-5d12d7f86b03" data-permalink="steps-and-workflows/default-workflows.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">デフォルトのワークフロー</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/creating-a-workflow.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-65dc1d06-fcfe-b8f0-a78a-53b92d6f4a00" data-legacy-id="UUID-4053e094-d35f-04b9-2ddc-82c470cbe0f6" data-permalink="steps-and-workflows/creating-a-workflow.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">ワークフローの作成</a>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/managing-workflows.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-b7677a8d-d8a3-a494-924c-2296184f7023" data-legacy-id="UUID-23564ae8-b234-0635-694e-7272b31f5ab4" data-permalink="steps-and-workflows/managing-workflows.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">ワークフローの管理</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/copying-workflows-from-one-app-to-another.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-3a2d360d-92eb-add6-2cae-e6f3c0298d2b" data-legacy-id="UUID-72c92b04-4c0e-fde0-26ab-122240ad1021" data-permalink=
+                  "steps-and-workflows/copying-workflows-from-one-app-to-another.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">あるアプリから別のアプリへのワークフローのコピー</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../introduction-to-steps.html" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-4e72c2ab-b8a3-ad41-b32d-5e0c08db7a88" data-legacy-id="UUID-922d7042-4d8c-ecaf-aa47-00a99e408e72" data-permalink="introduction-to-steps.html"
+              data-topic-level="1" data-relative-prefix="" data-publication-date="">手順の概要</a>
+            </li>
+            <li>
+              <a href="../builds.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-d1227f29-9b5f-0237-ec0d-cf81c662d61e" data-legacy-id="UUID-40454aa8-e0ff-ee45-7f68-d733d663b05d" data-permalink="builds.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span>
+              ビルド</a>
+              <ul>
+                <li>
+                  <a href="../builds/configuring-build-settings.html" class="topic-link section taxonomy-actions-builds" data-origin-id="UUID-9664acae-1c6a-b44e-2fb6-8d2815834003" data-legacy-id="UUID-3daa70a4-ac48-5727-e5fa-34d46303ecef" data-permalink="builds/configuring-build-settings.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> ビルド設定の構成</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/configuring-build-settings/setting-the-stack-for-your-builds.html" class="topic-link section taxonomy-configuration-stacks taxonomy-related-links-taxonomies-stacks-rel" data-origin-id="UUID-8c7a43db-c7da-ed14-f6d3-5f5f28685b31" data-legacy-id="UUID-aed694b0-cca2-95b9-186f-d340dfc175e4" data-permalink=
+                      "builds/configuring-build-settings/setting-the-stack-for-your-builds.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ビルドのスタックを設定する</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/managing-an-app-s-bitrise-yml-file.html" class="topic-link section taxonomy-actions-builds taxonomy-configuration-bitrise-yml taxonomy-related-links-taxonomies-bitrise-yml-rel original-topic original-topic" data-origin-id="UUID-fa61c122-0d5b-a9c2-1894-19c46053c2d3" data-legacy-id=
+                      "UUID-babdfcf9-c70a-1513-e12e-046beb9f879c" data-permalink="builds/configuring-build-settings/managing-an-app-s-bitrise-yml-file.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">アプリのbitrise.ymlファイルの管理</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/editing-an-app-s-bitrise-yml-file.html" class="topic-link section taxonomy-configuration-bitrise-yml" data-origin-id="UUID-27994b5b-7eef-8e27-211c-3b8d5944ec64" data-legacy-id="UUID-f2dc633f-ad0b-6ab4-7083-1176229ca195" data-permalink=
+                      "builds/configuring-build-settings/editing-an-app-s-bitrise-yml-file.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">アプリのbitrise.ymlファイルを編集する</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/accessing-a-build-s-bitrise-yml-file.html" class="topic-link section taxonomy-actions-builds taxonomy-configuration-bitrise-yml" data-origin-id="UUID-ef139639-ec20-2648-6864-745661a48f54" data-legacy-id="UUID-cbc8672e-bd39-b23e-a3fa-0ebb1af53709" data-permalink=
+                      "builds/configuring-build-settings/accessing-a-build-s-bitrise-yml-file.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ビルドのbitrise.ymlファイルへのアクセス</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/selective-builds.html" class="topic-link section taxonomy-actions-builds taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-7ea21aeb-894c-2fbf-740c-855f7c44468f" data-legacy-id="UUID-c05627e7-6c71-b265-3d09-a95f3b3abc9a" data-permalink=
+                      "builds/configuring-build-settings/selective-builds.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">選択的ビルド</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/rolling-builds.html" class="topic-link section taxonomy-actions-builds taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-b37ee7d4-5345-d0eb-8a90-28a14a7147a0" data-legacy-id="UUID-52681a2a-c690-3def-28cd-16823ba9eb01" data-permalink=
+                      "builds/configuring-build-settings/rolling-builds.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ローリングビルド</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/configuring-email-notifications.html" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-a99f035b-3782-57a3-f1cd-6b5fa90a7119" data-legacy-id="UUID-6bd910f1-50ed-f4bd-04d7-7399c642763d" data-permalink=
+                      "builds/configuring-build-settings/configuring-email-notifications.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">電子メール通知の構成</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/configuring-slack-integration.html" class="topic-link section" data-origin-id="UUID-0b9ffab0-7e83-f821-f700-05800f3e04f4" data-legacy-id="UUID-58499b8a-d97e-d8f7-6645-4e52ddee3faf" data-permalink="builds/configuring-build-settings/configuring-slack-integration.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Slack統合の構成</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/setting-your-git-credentials-on-build-machines.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-24466c62-468b-f760-5cba-57f411ef244b" data-legacy-id="UUID-5dc87a30-7ae6-b137-bbc1-84e44e4fcba0" data-permalink=
+                      "builds/configuring-build-settings/setting-your-git-credentials-on-build-machines.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ビルドマシンでのGitクレデンシャルの設定</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/reporting-the-build-status-to-your-git-hosting-provider.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-89a809e8-c5a5-931a-0cd0-2fad85a2e3d3" data-legacy-id="UUID-32d6af77-db24-16c4-2ccd-6048586d7dff" data-permalink=
+                      "builds/configuring-build-settings/reporting-the-build-status-to-your-git-hosting-provider.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ビルドステータスをGitホスティングプロバイダーに報告する</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../builds/starting-builds.html" class="topic-link section taxonomy-actions-builds taxonomy-configuration-bitrise-yml original-topic original-topic" data-origin-id="UUID-8e0ac4ce-7b16-a294-9ab2-4a313fbb1beb" data-legacy-id="UUID-8749ff03-1d05-9854-489b-c791d9a40463" data-permalink="builds/starting-builds.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> ビルドの開始</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/starting-builds/starting-builds-manually.html" class="topic-link section taxonomy-actions-builds taxonomy-related-links-taxonomies-trigger-rel original-topic original-topic" data-origin-id="UUID-15b65886-09d5-4911-92c5-737b131485e4" data-legacy-id="UUID-c0e16667-2f53-767b-2620-c6f16fca9adf" data-permalink=
+                      "builds/starting-builds/starting-builds-manually.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">手動でビルドを開始する</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/triggering-builds-automatically.html" class="topic-link section taxonomy-related-links-taxonomies-trigger-rel" data-origin-id="UUID-552bb6f5-13fb-66cc-3fd9-fcb9e55f08ad" data-legacy-id="UUID-0f4d95fa-6f3d-1737-be16-6e01572c5ca8" data-permalink=
+                      "builds/starting-builds/triggering-builds-automatically.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ビルドを自動的にトリガーする</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/scheduling-builds.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-befcf35c-25d4-5439-7bb3-f259ab4e9c8e" data-legacy-id="UUID-3d5fb639-5099-b426-b6a8-100e330a5e60" data-permalink="builds/starting-builds/scheduling-builds.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">ビルドのスケジューリング</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/approving-pull-request-builds.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-f6704323-3520-bed6-b9d7-76e2941c8339" data-legacy-id="UUID-0d96d56a-7db6-f2e7-cca4-c15fb9985d51" data-permalink="builds/starting-builds/approving-pull-request-builds.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">プルリクエストビルドの承認</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/using-the-trigger-map-to-trigger-builds.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-5132c5a7-c6f6-02f2-9e2c-352a6f85cf5e" data-legacy-id="UUID-830f242d-c6e7-68d2-6764-8114faf630bd" data-permalink=
+                      "builds/starting-builds/using-the-trigger-map-to-trigger-builds.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">トリガーマップを使用してビルドをトリガーする</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/starting-parallel-builds-with-a-single-trigger.html" class="topic-link section taxonomy-actions-builds taxonomy-configuration-bitrise-yml taxonomy-related-links-taxonomies-trigger-rel original-topic original-topic" data-origin-id="UUID-0471dd25-5a86-78e4-ba04-30b3a15d213a" data-legacy-id=
+                      "UUID-f4296931-bc9d-3b67-263a-e0df6f174346" data-permalink="builds/starting-builds/starting-parallel-builds-with-a-single-trigger.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">単一のトリガーで並列ビルドを開始する</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/skipping-a-given-commit-or-pull-request.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-1e25a28b-a398-ac68-258b-d551610aceff" data-legacy-id="UUID-a88c2bba-396f-0a4d-7b9e-3e107c79d2ce" data-permalink=
+                      "builds/starting-builds/skipping-a-given-commit-or-pull-request.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">特定のコミットまたはプルリクエストをスキップする</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../builds/caching.html" class="topic-link section taxonomy-actions-builds original-topic original-topic" data-origin-id="UUID-d6b033d3-46c5-ccdb-ad09-0e32eecc58d1" data-legacy-id="UUID-e01af56f-e7e8-042a-b224-6d8e895014f7" data-permalink="builds/caching.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> キャッシング</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/caching/using-caching-in-your-builds.html" class="topic-link section" data-origin-id="UUID-bd7ea83f-5029-5c9d-a1b8-49e0fee1ae58" data-legacy-id="UUID-cd2cbd81-5fa3-29d8-4b77-1bedca85a72e" data-permalink="builds/caching/using-caching-in-your-builds.html" data-topic-level="3" data-relative-prefix="../../"
+                      data-publication-date="">ビルドでのキャッシュの使用</a>
+                    </li>
+                    <li>
+                      <a href="../builds/caching/caching-cocoapods.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-e63c69a5-3212-850e-e163-75d79a4b428c" data-legacy-id="UUID-ab15d7d2-5e0c-338c-c2b5-7abdc2ed286b" data-permalink="builds/caching/caching-cocoapods.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">Cocoapodsのキャッシング</a>
+                    </li>
+                    <li>
+                      <a href="../builds/caching/caching-gradle.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-02d4b8d8-d505-fa9d-3894-f9c987bc5f65" data-legacy-id="UUID-04e246f3-5281-c2da-ab1e-9f7944a5a26e" data-permalink="builds/caching/caching-gradle.html" data-topic-level="3" data-relative-prefix="../../"
+                      data-publication-date="">キャッシングGradle</a>
+                    </li>
+                    <li>
+                      <a href="../builds/caching/caching-maven.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-3a7cc027-74dc-7275-40a7-183b14b1a933" data-legacy-id="UUID-f3fe2704-5548-f763-bdbd-fdca3b8da541" data-permalink="builds/caching/caching-maven.html" data-topic-level="3" data-relative-prefix="../../"
+                      data-publication-date="">Mavenのキャッシュ</a>
+                    </li>
+                    <li>
+                      <a href="../builds/caching/caching-ruby-gems.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-8b9f4f15-0700-166a-bb13-74c14a2fd862" data-legacy-id="UUID-b08f1173-8642-6a9f-d0ec-1f9b12a8be53" data-permalink="builds/caching/caching-ruby-gems.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">RubyGemsのキャッシュ</a>
+                    </li>
+                    <li>
+                      <a href="../builds/caching/caching-homebrew-installers.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-67134aea-b72d-eb67-6268-b71ae501455f" data-legacy-id="UUID-b2f04e5b-33bc-c36d-c8ff-f3172de99036" data-permalink="builds/caching/caching-homebrew-installers.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">自作インストーラーのキャッシュ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../builds/managing-build-files.html" class="topic-link section taxonomy-actions-builds original-topic original-topic" data-origin-id="UUID-349c1927-26cf-9a2f-bf23-21a934aa45c2" data-legacy-id="UUID-eec17a30-1fbc-c596-c3ab-b68772616ee3" data-permalink="builds/managing-build-files.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> ビルドファイルの管理</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/managing-build-files/uploading-files-for-your-builds.html" class="topic-link section" data-origin-id="UUID-6b0e6ac6-9657-fd31-16cc-7ae85af61551" data-legacy-id="UUID-058726e8-43e1-0385-f4b7-e2fff934ba79" data-permalink="builds/managing-build-files/uploading-files-for-your-builds.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">ビルド用のファイルのアップロード</a>
+                    </li>
+                    <li>
+                      <a href="../builds/managing-build-files/using-files-in-your-builds.html" class="topic-link section" data-origin-id="UUID-aa7247c0-e9ba-c44f-8e9a-2a9a2df6df86" data-legacy-id="UUID-d72b2dce-1648-8438-0e07-d89c19fca878" data-permalink="builds/managing-build-files/using-files-in-your-builds.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">ビルドでのファイルの使用</a>
+                    </li>
+                    <li>
+                      <a href="../builds/managing-build-files/using-encrypted-files-in-your-builds.html" class="topic-link section" data-origin-id="UUID-946a4987-2a3c-9576-2acb-50f457ff0703" data-legacy-id="UUID-c5b52ba6-4f1b-4e2a-b601-50c247a72e8f" data-permalink="builds/managing-build-files/using-encrypted-files-in-your-builds.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ビルドで暗号化されたファイルを使用する</a>
+                    </li>
+                    <li>
+                      <a href="../builds/managing-build-files/build-artifacts-online.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-9acbfd32-8157-4ce9-2fe4-67bdf8ef3507" data-legacy-id="UUID-008b04a8-f65b-e74b-e254-8bcd5596ce35" data-permalink="builds/managing-build-files/build-artifacts-online.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">オンラインでアーティファクトを作成する</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../builds/environment-variables.html" class="topic-link section taxonomy-configuration-env-vars original-topic original-topic" data-origin-id="UUID-9ff79df6-9953-1bf5-76a5-852420b21ed4" data-legacy-id="UUID-7ee2edb2-aa92-cbc7-e229-4177d416abd0" data-permalink="builds/environment-variables.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">環境変数</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../builds/secrets.html" class="topic-link section taxonomy-configuration-env-vars" data-origin-id="UUID-e6946697-1571-f957-a619-8973cd5cf399" data-legacy-id="UUID-bfc35b35-3895-2edb-471b-ab040993c3bf" data-permalink="builds/secrets.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">秘密</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../builds/build-statuses.html" class="topic-link section taxonomy-actions-builds" data-origin-id="UUID-1c01835f-ecc2-1079-16e8-7660fe017a91" data-legacy-id="UUID-a2d504d0-aa72-895e-5ec6-998fbbe323da" data-permalink="builds/build-statuses.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=
+                  "">ビルドステータス</a>
+                </li>
+                <li>
+                  <a href="../builds/installing-tools-during-a-build.html" class="topic-link section taxonomy-actions-builds taxonomy-configuration-stacks original-topic original-topic" data-origin-id="UUID-aec439b6-736b-333f-6dc0-4cdc46b621e2" data-legacy-id="UUID-4b5b1437-c4e5-7367-e994-b5738e643e14" data-permalink=
+                  "builds/installing-tools-during-a-build.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">ビルド中のツールのインストール</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../builds/connecting-to-a-vpn-during-a-build.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-21a2136d-0e93-1e81-6bd8-c39085d5a543" data-legacy-id="UUID-eaf0f2d1-5761-4afb-ddd6-55587fd7d005" data-permalink="builds/connecting-to-a-vpn-during-a-build.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">ビルド中にVPNに接続する</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../builds/finding-a-specific-build.html" class="topic-link section taxonomy-actions-builds" data-origin-id="UUID-95336313-9e6d-d72e-1a4a-7fe9076f0948" data-legacy-id="UUID-0873b810-755d-fc96-7bc7-c3c5abaeb537" data-permalink="builds/finding-a-specific-build.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">特定のビルドを見つける</a>
+                </li>
+                <li>
+                  <a href="../builds/build-numbering-and-app-versioning.html" class="topic-link section taxonomy-actions-builds original-topic original-topic" data-origin-id="UUID-a7dc4565-2965-aae9-c388-af8889ffe1a3" data-legacy-id="UUID-0d5f20be-06fb-37bc-5603-4310b4c54ca0" data-permalink="builds/build-numbering-and-app-versioning.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">ビルドのナンバリングとアプリのバージョン管理</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../builds/build-data-and-troubleshooting.html" class="topic-link section taxonomy-actions-builds" data-origin-id="UUID-66c5bce9-ccd5-ebc0-2716-f22a20df3dc0" data-legacy-id="UUID-fa640ec3-6a1b-3975-89a3-5ef429bd5db4" data-permalink="builds/build-data-and-troubleshooting.html" data-topic-level="2" data-relative-prefix=
+                  "../" data-publication-date=""><span class="glyphicon"></span> ビルドデータとトラブルシューティング</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/build-logs.html" class="topic-link section taxonomy-actions-builds taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-8e2ac26a-22c2-ce48-bc28-c9188fcbef7b" data-legacy-id="UUID-d54b1ca5-2a01-6e9b-a01b-5402226171d0" data-permalink=
+                      "builds/build-data-and-troubleshooting/build-logs.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ビルドログ</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/remote-access.html" class="topic-link section taxonomy-actions-builds taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-c330b88b-5906-b45d-74fb-2e68d19e9d0b" data-legacy-id="UUID-648c96b3-b37c-193b-abd3-e4c787882909" data-permalink=
+                      "builds/build-data-and-troubleshooting/remote-access.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">リモートアクセス</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/build-insights.html" class="topic-link section taxonomy-actions-builds taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-e0616761-9cb7-7321-e585-c89c5747026d" data-legacy-id="UUID-f98fd069-0d7e-56fa-9ae2-141b5b494a3f" data-permalink=
+                      "builds/build-data-and-troubleshooting/build-insights.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">インサイトを構築する</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/debugging-your-build-on-your-own-machine.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-96d78e2c-40c2-1d53-05ae-658018113300" data-legacy-id="UUID-b6113724-a46c-9f4a-ecc0-40aaee7fa56b" data-permalink=
+                      "builds/build-data-and-troubleshooting/debugging-your-build-on-your-own-machine.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">自分のマシンでビルドをデバッグする</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/bitrise-checks-on-github.html" class="topic-link section taxonomy-actions-builds taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-c2aca2c7-4d07-1b83-aacf-697303551f2d" data-legacy-id="UUID-d96df176-4c67-0c25-4f8e-4c5b1b51419a"
+                      data-permalink="builds/build-data-and-troubleshooting/bitrise-checks-on-github.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">GitHubでのビットライズチェック</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/monitoring-your-builds-with-meercode.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-5066f347-fd45-5f13-7a8c-ddf058ac7922" data-legacy-id="UUID-26aea079-d355-6b12-74ac-d92209f4b91d" data-permalink=
+                      "builds/build-data-and-troubleshooting/monitoring-your-builds-with-meercode.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Meercodeを使用してビルドを監視する</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../code-signing.html" class="topic-link section taxonomy-actions-code-signing taxonomy-related-links-taxonomies-code-signing-rel original-topic original-topic" data-origin-id="UUID-258c2c25-158e-51b1-0b6e-f739cbd5eb0f" data-legacy-id="UUID-3484139f-bf0b-0901-5812-ed6bef2e045a" data-permalink="code-signing.html"
+              data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> コード署名</a>
+              <ul>
+                <li>
+                  <a href="../code-signing/android-code-signing.html" class="topic-link section taxonomy-actions-code-signing taxonomy-platform-android taxonomy-related-links-taxonomies-android-rel original-topic original-topic" data-origin-id="UUID-0ea7b738-1527-6a4d-687a-b3552b3fa0e2" data-legacy-id="UUID-62d463ed-a4fe-d98e-5053-e60799de450a"
+                  data-permalink="code-signing/android-code-signing.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Androidコード署名</a>
+                  <ul>
+                    <li>
+                      <a href="../code-signing/android-code-signing/android-code-signing-using-the-android-sign-step.html" class="topic-link section taxonomy-actions-code-signing taxonomy-platform-android" data-origin-id="UUID-d00c628e-d72b-57d8-f8e6-c0b25e0053bb" data-legacy-id="UUID-2e21aae0-9a1d-3a23-2566-b47b39517386" data-permalink=
+                      "code-signing/android-code-signing/android-code-signing-using-the-android-sign-step.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Androidサインステップを使用したAndroidコード署名</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/android-code-signing/android-code-signing-with-android-studio.html" class="topic-link section taxonomy-actions-code-signing taxonomy-platform-android original-topic original-topic" data-origin-id="UUID-97a3dc89-365c-a4cc-ceb2-a33701d413ad" data-legacy-id="UUID-b9c15f8a-6a28-c2a8-f39f-6a59b3836210"
+                      data-permalink="code-signing/android-code-signing/android-code-signing-with-android-studio.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">AndroidStudioを使用したAndroidコード署名</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/android-code-signing/android-code-signing-in-gradle.html" class="topic-link section taxonomy-actions-code-signing taxonomy-platform-android original-topic original-topic" data-origin-id="UUID-a26fc278-b856-fd5b-b678-feee463f248e" data-legacy-id="UUID-7841a1b6-ed2e-a81f-0f97-021feb1fb3ef"
+                      data-permalink="code-signing/android-code-signing/android-code-signing-in-gradle.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">GradleでのAndroidコード署名</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/android-code-signing/xamarin-android-code-signing.html" class="topic-link section taxonomy-platform-android original-topic original-topic" data-origin-id="UUID-f73e98e4-1b20-456c-f4a6-bb017f8c253a" data-legacy-id="UUID-7d70162a-7aa8-3d35-d2ae-c63428abc1f6" data-permalink=
+                      "code-signing/android-code-signing/xamarin-android-code-signing.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">XamarinAndroidコード署名</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/android-code-signing/downloading-a-keystore-file.html" class="topic-link section taxonomy-actions-code-signing original-topic original-topic" data-origin-id="UUID-441b0774-edef-b033-7a01-c7f77b043c58" data-legacy-id="UUID-722d5ed2-cf59-64e1-9f0c-141b582b4286" data-permalink=
+                      "code-signing/android-code-signing/downloading-a-keystore-file.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">キーストアファイルのダウンロード</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../code-signing/ios-code-signing.html" class="topic-link section taxonomy-platform-ios taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id="UUID-95beece4-a703-8f4d-5793-ee34f765cb76" data-legacy-id="UUID-31ae6f50-5e6c-3854-a3ba-3b0c408f2bcf" data-permalink=
+                  "code-signing/ios-code-signing.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> iOSコード署名</a>
+                  <ul>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/collecting-and-exporting-code-signing-files-with-codesigndoc.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-972cfe0e-c096-da27-7f07-e2b8bf426847" data-legacy-id="UUID-ec7133bc-e7f9-8299-9a3b-278e4d33beff" data-permalink=
+                      "code-signing/ios-code-signing/collecting-and-exporting-code-signing-files-with-codesigndoc.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">codesigndocを使用したコード署名ファイルの収集とエクスポート</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/managing-ios-code-signing-files---automatic-provisioning.html" class="topic-link section taxonomy-actions-code-signing original-topic original-topic" data-origin-id="UUID-5b2a76ce-6ef6-8e63-fba1-3dbb51a06921" data-legacy-id="UUID-a0f5813d-5710-fc06-5bfe-f23e3eae994e" data-permalink=
+                      "code-signing/ios-code-signing/managing-ios-code-signing-files---automatic-provisioning.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">iOSコード署名ファイルの管理-自動プロビジョニング</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/managing-ios-code-signing-files---manual-provisioning.html" class="topic-link section taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-3c74d4ea-423e-cb76-1c1a-aa2f44737a94" data-legacy-id="UUID-d922bd20-547e-46fc-320e-d0b8f0516e91" data-permalink=
+                      "code-signing/ios-code-signing/managing-ios-code-signing-files---manual-provisioning.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">iOSコード署名ファイルの管理-手動プロビジョニング</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/creating-a-signed-ipa-for-xcode-projects.html" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-39fbc767-f894-36b9-67c4-77255dcf2fed" data-legacy-id=
+                      "UUID-e5969215-aa49-6397-94af-4dec8be98576" data-permalink="code-signing/ios-code-signing/creating-a-signed-ipa-for-xcode-projects.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Xcodeプロジェクト用に署名されたIPAを作成する</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/creating-a-signed-ipa-for-xamarin-apps.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-ad86ae74-1dec-2f06-b27a-9761e1ba4a9e" data-legacy-id="UUID-1422c78f-3bbd-02ff-ed39-8fd5097969fa" data-permalink=
+                      "code-signing/ios-code-signing/creating-a-signed-ipa-for-xamarin-apps.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Xamarinアプリ用の署名付きIPAの作成</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/signing-an-ipa-with-multiple-code-signing-identities.html" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying original-topic original-topic" data-origin-id="UUID-d3c66ba4-3ae2-a1e2-3a05-15adce30e2fc" data-legacy-id=
+                      "UUID-85371564-20bc-a4cb-9a8c-9cf56a75246e" data-permalink="code-signing/ios-code-signing/signing-an-ipa-with-multiple-code-signing-identities.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">複数のコード署名IDを使用してIPAに署名する</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/ios-code-signing-for-ionic-and-cordova-projects.html" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-6ae15f90-c4f1-e899-dcf5-f25bf374bfa5" data-legacy-id=
+                      "UUID-4f377ae9-829a-795d-66d2-5474a7bd61aa" data-permalink="code-signing/ios-code-signing/ios-code-signing-for-ionic-and-cordova-projects.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">IonicおよびCordovaプロジェクトのiOSコード署名</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/protecting-your-code-signing-files.html" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-04c7cf5c-55ff-8552-6009-a76c5af7d334" data-legacy-id="UUID-ffcbaa59-7f2e-d445-ebf8-de8bc39fcc18" data-permalink=
+                      "code-signing/ios-code-signing/protecting-your-code-signing-files.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">コード署名ファイルの保護</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/generating-ios-code-signing-files.html" class="topic-link section taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-5da9aa01-42ef-7197-5586-68cac312c5ec" data-legacy-id="UUID-5bfac9f8-1648-11fc-7307-d64b5b1a36ea" data-permalink=
+                      "code-signing/ios-code-signing/generating-ios-code-signing-files.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">iOSコード署名ファイルの生成</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/exporting-ios-code-signing-files-without-codesigndoc.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-04ee983e-4340-c63d-ed02-43de23cae41d" data-legacy-id="UUID-1e375bdd-1e87-ea15-5b8b-726dde983c9e" data-permalink=
+                      "code-signing/ios-code-signing/exporting-ios-code-signing-files-without-codesigndoc.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">codesigndocを使用せずにiOSコード署名ファイルをエクスポートする</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/troubleshooting-ios-code-signing.html" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-03a0d092-2594-d8cf-c2f2-1dc5fab0d47b" data-legacy-id=
+                      "UUID-02c72b35-c191-4bc6-b275-19a796fde2c8" data-permalink="code-signing/ios-code-signing/troubleshooting-ios-code-signing.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">iOSコード署名のトラブルシューティング</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../testing.html" class="topic-link section taxonomy-actions-testing original-topic original-topic" data-origin-id="UUID-16c1dbdf-cbd3-6f01-1d2b-91d812c8ab4f" data-legacy-id="UUID-cbbfa182-5373-5471-9729-9b972ac7465b" data-permalink="testing.html" data-topic-level="1" data-relative-prefix="" data-publication-date=
+              ""><span class="glyphicon"></span> テスト</a>
+              <ul>
+                <li>
+                  <a href="../testing/test-reports.html" class="topic-link section taxonomy-actions-testing taxonomy-actions-troubleshooting taxonomy-platform-android taxonomy-platform-cross-platform taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-42d03dc2-a21c-1daf-e851-a6c46adcde01" data-legacy-id=
+                  "UUID-4e5399ab-e144-4ece-9e5e-b79866bee64b" data-permalink="testing/test-reports.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">テストレポート</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/exporting-to-test-reports-from-any-step.html" class="topic-link section taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-19746872-1371-1bf6-acf1-12d7663fae86" data-legacy-id="UUID-19be1017-9668-f17a-1034-b76f08805e49" data-permalink=
+                  "testing/exporting-to-test-reports-from-any-step.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">任意のステップからのテストレポートへのエクスポート</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/running-xcode-tests.html" class="topic-link section taxonomy-actions-testing taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-43229fb9-7af4-8829-c020-91c6fcdb768f" data-legacy-id="UUID-b81c44d0-a3c5-dd6d-0c67-5439429d0b33" data-permalink="testing/running-xcode-tests.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Xcodeテストの実行</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/installing-an-ipa-file-from-the-public-install-page.html" class="topic-link section taxonomy-actions-testing taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-03a475d5-58a6-b62f-5d0f-8f92454f5491" data-legacy-id="UUID-c8b0f3dc-005c-e07b-3dba-bd992fe4df99" data-permalink=
+                  "testing/installing-an-ipa-file-from-the-public-install-page.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">パブリックインストールページからのipaファイルのインストール</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/registering-a-test-device.html" class="topic-link section taxonomy-actions-testing original-topic original-topic" data-origin-id="UUID-4048bab6-2101-fc89-888f-14aefee6e7ef" data-legacy-id="UUID-f8def6f5-0edf-0478-fe79-a7b56ecf368f" data-permalink="testing/registering-a-test-device.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">テストデバイスの登録</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/device-testing-for-ios.html" class="topic-link section taxonomy-actions-testing taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-a7dd930d-ded0-fb68-9c16-6556dad515c4" data-legacy-id="UUID-eb9315e2-7ece-a2d8-dc0b-df35239335b1" data-permalink="testing/device-testing-for-ios.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">iOSのデバイステスト</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/android-unit-tests.html" class="topic-link section taxonomy-actions-testing taxonomy-platform-android original-topic original-topic" data-origin-id="UUID-766b3bd1-5c47-4d03-91e7-d30eac2eae8a" data-legacy-id="UUID-aef3a46c-6266-9e04-37ea-a33c3bd19a67" data-permalink="testing/android-unit-tests.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Androidユニットテスト</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/device-testing-for-android.html" class="topic-link section taxonomy-actions-testing taxonomy-platform-android original-topic original-topic" data-origin-id="UUID-0900864b-58e4-f571-50a0-377a2624b836" data-legacy-id="UUID-1d5b5ee4-cc81-963f-23c9-7526e4f9a301" data-permalink=
+                  "testing/device-testing-for-android.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Androidのデバイステスト</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/running-tests-in-the-visual-studio-app-center.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-294acb61-4f0c-baf1-9cb6-9a1c93dd9b27" data-legacy-id="UUID-4e1444ac-fffa-efb0-328d-4624390aecfc" data-permalink="testing/running-tests-in-the-visual-studio-app-center.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Visual Studio AppCenterでのテストの実行</a>
+                </li>
+                <li>
+                  <a href="../testing/running-detox-tests-on-bitrise.html" class="topic-link section taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-aa43cb68-94fb-86be-470b-93c9eae82bc1" data-legacy-id="UUID-a1884560-256b-1ed2-8610-c0f75ad7722c" data-permalink=
+                  "testing/running-detox-tests-on-bitrise.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Bitriseでのデトックステストの実行</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/measuring-your-code-coverage-with-codecov.html" class="topic-link section taxonomy-actions-testing original-topic original-topic" data-origin-id="UUID-055cf19b-6d81-7f48-8202-9bd6f37f3aa1" data-legacy-id="UUID-a0825290-23c2-2f73-ee6b-49f79247bb96" data-permalink=
+                  "testing/measuring-your-code-coverage-with-codecov.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Codecovでコードカバレッジを測定する</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../deploying.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-5b1d4326-81f8-90a8-18bc-83bef25a8536" data-legacy-id="UUID-598994c2-fd12-55e0-97e5-c8a6e309c27b" data-permalink="deploying.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> 展開</a>
+              <ul>
+                <li>
+                  <a href="../deploying/android-deployment.html" class="topic-link section taxonomy-related-links-taxonomies-android-rel original-topic original-topic" data-origin-id="UUID-ae57c4fd-3338-1749-3423-301d5554584f" data-legacy-id="UUID-25541ce3-54ac-8236-74ba-60dc65ae3708" data-permalink="deploying/android-deployment.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Androidの展開</a>
+                  <ul>
+                    <li>
+                      <a href="../deploying/android-deployment/deploying-android-apps-to-bitrise-and-google-play.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-5fce7c55-2d78-10fa-6980-7c8fbcdf1248" data-legacy-id="UUID-e15bf8ff-f1db-86ce-70b2-bcffff596ae1" data-permalink=
+                      "deploying/android-deployment/deploying-android-apps-to-bitrise-and-google-play.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">BitriseとGooglePlayへのAndroidアプリのデプロイ</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/android-deployment/deploying-apps-to-huawei-appgallery.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-c4522aa2-80a6-36ca-f716-bf398931d09f" data-legacy-id="UUID-b6b8ba82-f3da-ff8c-e995-e74faf58f79e" data-permalink=
+                      "deploying/android-deployment/deploying-apps-to-huawei-appgallery.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">HuaweiAppGalleryへのアプリのデプロイ</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/android-deployment/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-d856df0e-2c91-4328-af8d-c4cef99def94" data-legacy-id="UUID-e64bff14-2d3b-3a15-6d56-bcc6629eaceb" data-permalink=
+                      "deploying/android-deployment/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">単一のワークフローで複数のフレーバーAPKを生成してデプロイする</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/android-deployment/generating-and-deploying-android-app-bundles.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-bba05c8f-bc65-1e68-6d73-8d701a3ef7dc" data-legacy-id="UUID-ad6a2dee-e494-fe6d-0770-05a99dda37a4" data-permalink=
+                      "deploying/android-deployment/generating-and-deploying-android-app-bundles.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Androidアプリバンドルの生成と展開</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/android-deployment/exporting-a-universal-apk-from-an-aab.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-b2a83029-ee24-4016-f978-5b4531ce186a" data-legacy-id="UUID-f6e9580b-c503-3150-da84-f4fa1c5b65e9" data-permalink=
+                      "deploying/android-deployment/exporting-a-universal-apk-from-an-aab.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">AABからユニバーサルAPKをエクスポートする</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../deploying/ios-deployment.html" class="topic-link section taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id="UUID-f34cbdba-ea23-f773-be03-cf7e28638977" data-legacy-id="UUID-01e36d41-6117-63b8-d37b-7c7d7dac9635" data-permalink="deploying/ios-deployment.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> iOSの展開</a>
+                  <ul>
+                    <li>
+                      <a href="../deploying/ios-deployment/deploying-an-ios-app-to-bitrise-io.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-b1b5b411-2188-cc3e-5857-6749bc2e12f7" data-legacy-id="UUID-3f3405ce-152a-6349-2582-bb0905dd710b" data-permalink=
+                      "deploying/ios-deployment/deploying-an-ios-app-to-bitrise-io.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">iOSアプリをBitrise.ioにデプロイする</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/ios-deployment/deploying-an-ios-app-for-external-testing.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-0c413c05-b60a-9eb0-9e06-8fbcdd6c9cc3" data-legacy-id="UUID-8bafbe64-9d97-01ef-e678-a24c876e2488" data-permalink=
+                      "deploying/ios-deployment/deploying-an-ios-app-for-external-testing.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">外部テスト用のiOSアプリのデプロイ</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/ios-deployment/deploying-an-ios-app-to-itunes-connect.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-da669359-c4bb-5049-ab4a-ad56926dab44" data-legacy-id="UUID-c4e3173e-ba73-81a7-b2af-138a5a985295" data-permalink=
+                      "deploying/ios-deployment/deploying-an-ios-app-to-itunes-connect.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">iOSアプリをiTunesConnectにデプロイする</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/ios-deployment/deploying-an-ios-app-for-simulators.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-b8b67f37-232b-a487-cd68-9401862fdb2e" data-legacy-id="UUID-e5243bc7-3fd7-9448-467d-94103f8cf878" data-permalink=
+                      "deploying/ios-deployment/deploying-an-ios-app-for-simulators.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">シミュレーター用のiOSアプリのデプロイ</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../deploying/deploying-with-ship.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-3c9287e4-770b-f853-30dd-a1cd1849416c" data-legacy-id="UUID-a98fe87f-4567-c925-bb4c-e7305a358f31" data-permalink="deploying/deploying-with-ship.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> 船での展開</a>
+                  <ul>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/getting-started-with-ship.html" class="topic-link section" data-origin-id="UUID-22775316-af19-31b1-bf64-2a4ad579bed5" data-legacy-id="UUID-ad1f4e44-1477-d993-1ce7-92a881c73f1d" data-permalink="deploying/deploying-with-ship/getting-started-with-ship.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Shipの使用を開始する</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/configuring-an-app-for-publishing-with-ship.html" class="topic-link section" data-origin-id="UUID-9d206adc-1e0c-f2b7-76d8-d53636d99b8f" data-legacy-id="UUID-7f7d66d3-e6e0-d90b-8f33-9827da7fd4b6" data-permalink=
+                      "deploying/deploying-with-ship/configuring-an-app-for-publishing-with-ship.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Shipで公開するためのアプリの構成</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/installing-an-app-on-a-test-device-with-ship.html" class="topic-link section" data-origin-id="UUID-f8f70801-5a37-b1ba-f3c4-a57e7b7357de" data-legacy-id="UUID-164f8591-8a45-c54c-5484-6fad35ad8c24" data-permalink=
+                      "deploying/deploying-with-ship/installing-an-app-on-a-test-device-with-ship.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Shipを使用してテストデバイスにアプリをインストールする</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/publishing-an-app-to-a-store-with-ship.html" class="topic-link section" data-origin-id="UUID-f6c01f12-dcb7-5a3a-e005-ff893d474de9" data-legacy-id="UUID-e6a01e43-bf01-2930-b52e-ffda1225d556" data-permalink="deploying/deploying-with-ship/publishing-an-app-to-a-store-with-ship.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Shipを使用してストアにアプリを公開する</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/using-ship-for-apps-built-with-cross-platform-frameworks.html" class="topic-link section" data-origin-id="UUID-75d18344-1afc-0efa-1e3c-8463345c0c9d" data-legacy-id="UUID-33076608-1a04-acdb-229b-2128f7224e0a" data-permalink=
+                      "deploying/deploying-with-ship/using-ship-for-apps-built-with-cross-platform-frameworks.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">クロスプラットフォームフレームワークで構築されたアプリにShipを使用する</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/app-details-in-ship.html" class="topic-link section" data-origin-id="UUID-5f83d763-3d84-0626-3ffe-b72ae661208b" data-legacy-id="UUID-61bd819f-7245-8cb5-91e1-58f0664c3b74" data-permalink="deploying/deploying-with-ship/app-details-in-ship.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">船内のアプリの詳細</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/ship-notifications.html" class="topic-link section" data-origin-id="UUID-42427c87-4755-3022-2521-3dd00c0b3dc5" data-legacy-id="UUID-6651dc00-f111-6b6c-9be0-08dd280f7555" data-permalink="deploying/deploying-with-ship/ship-notifications.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">出荷通知</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../deploying/deploying-apps-to-applivery.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-1adbe843-e24b-907d-480c-cf2cf5f17fba" data-legacy-id="UUID-486f03bc-17cb-3874-60ef-9c72c9cac4fc" data-permalink="deploying/deploying-apps-to-applivery.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Appliveryへのアプリのデプロイ</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../deploying/deploying-apps-to-deploygate-from-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-066787b9-e3c2-8826-acde-b0a0d5d794b9" data-legacy-id="UUID-2cf0f826-fe4d-a23d-a986-f6533dd1ec98" data-permalink="deploying/deploying-apps-to-deploygate-from-bitrise.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">BitriseからDeployGateへのアプリのデプロイ</a>
+                </li>
+                <li>
+                  <a href="../deploying/deploying-your-app-to-appaloosa.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-fc974e4a-6215-4464-82b9-e499900c5791" data-legacy-id="UUID-a4f81ac8-cc20-95c3-78aa-6cfa92259424" data-permalink="deploying/deploying-your-app-to-appaloosa.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">アプリをAppaloosaにデプロイする</a>
+                </li>
+                <li>
+                  <a href="../deploying/deploying-to-testfairy-with-bitrise.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-7f8d8f2a-0c96-b2a2-d22a-848d2f58488a" data-legacy-id="UUID-75b882c9-9b2e-43f0-9a71-bbd1b94c2e77" data-permalink="deploying/deploying-to-testfairy-with-bitrise.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Bitriseを使用したTestFairyへのデプロイ</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../monitoring.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-cf9f52cb-3272-61cb-0128-30de64b16ed7" data-legacy-id="UUID-10a2833d-f1cc-85b5-c303-5baa2ad514ff" data-permalink="monitoring.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> モニタリング</a>
+              <ul>
+                <li>
+                  <a href="../monitoring/installing-trace-for-ios-apps.html" class="topic-link section" data-origin-id="UUID-c791fde2-f2ed-c4af-bffd-623a5e013b1e" data-legacy-id="UUID-edb305da-88a0-4fa5-f989-00c167f4b6a7" data-permalink="monitoring/installing-trace-for-ios-apps.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">iOSアプリ用のTraceのインストール</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../monitoring/installing-trace-for-android-apps.html" class="topic-link section" data-origin-id="UUID-abf111aa-d19b-41e1-86c3-1bc7d145975c" data-legacy-id="UUID-0d933ccf-75b4-c325-f606-fbff92ac8d35" data-permalink="monitoring/installing-trace-for-android-apps.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Androidアプリ用のTraceのインストール</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../monitoring/analyzing-your-app-s-performance-with-trace.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-adb47ba5-bc43-0688-18ca-5807fd923080" data-legacy-id="UUID-977a6cb6-89b2-314c-d3ed-fa09ce763180" data-permalink="monitoring/analyzing-your-app-s-performance-with-trace.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Traceを使用してアプリのパフォーマンスを分析する</a>
+                  <ul>
+                    <li>
+                      <a href="../monitoring/analyzing-your-app-s-performance-with-trace/application-performance-overview.html" class="topic-link section" data-origin-id="UUID-83b58e45-036f-3671-a734-ce5ddb06a627" data-legacy-id="UUID-b4a29ebe-8f26-f336-faf5-713aa6ecb047" data-permalink=
+                      "monitoring/analyzing-your-app-s-performance-with-trace/application-performance-overview.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">アプリケーションパフォーマンスの概要</a>
+                    </li>
+                    <li>
+                      <a href="../monitoring/analyzing-your-app-s-performance-with-trace/app-performance-and-available-metrics.html" class="topic-link section" data-origin-id="UUID-f10bac6a-1e4e-7f20-bf6a-a4292e725671" data-legacy-id="UUID-4ab60c00-d557-efd1-f927-8467aa9a6405" data-permalink=
+                      "monitoring/analyzing-your-app-s-performance-with-trace/app-performance-and-available-metrics.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">アプリのパフォーマンスと利用可能な指標</a>
+                    </li>
+                    <li>
+                      <a href="../monitoring/analyzing-your-app-s-performance-with-trace/filtering-and-sorting-metrics.html" class="topic-link section" data-origin-id="UUID-1c48dcdc-bc50-0470-e6de-ee11539d650c" data-legacy-id="UUID-69b6aa86-20c9-6dea-7071-523ce3ae30bc" data-permalink=
+                      "monitoring/analyzing-your-app-s-performance-with-trace/filtering-and-sorting-metrics.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">メトリックのフィルタリングと並べ替え</a>
+                    </li>
+                    <li>
+                      <a href="../monitoring/analyzing-your-app-s-performance-with-trace/analyzing-performance-details.html" class="topic-link section" data-origin-id="UUID-2938bd60-c4aa-d93c-2b9b-40999307a86a" data-legacy-id="UUID-10ff7e40-7a25-8fa0-efce-1272ecdffa84" data-permalink=
+                      "monitoring/analyzing-your-app-s-performance-with-trace/analyzing-performance-details.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">パフォーマンスの詳細の分析</a>
+                    </li>
+                    <li>
+                      <a href="../monitoring/analyzing-your-app-s-performance-with-trace/analyzing-sessions.html" class="topic-link section" data-origin-id="UUID-1c1548ff-d8d1-d61a-8300-30ea11ed0faa" data-legacy-id="UUID-f831e862-2fcf-a5cf-12ef-c1d552f998ab" data-permalink=
+                      "monitoring/analyzing-your-app-s-performance-with-trace/analyzing-sessions.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">セッションの分析</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../monitoring/crash-reporting-with-trace.html" class="topic-link section taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-02443c4c-71f0-44a4-f1d5-d597e985d0d4" data-legacy-id="UUID-45f9b259-6df1-9a91-9dd1-16d7ed5fd46f" data-permalink="monitoring/crash-reporting-with-trace.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Traceを使用したクラッシュレポート</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../monitoring/trace-product-references.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-57b9a50e-0125-d6f0-323d-e5b8d776b9bc" data-legacy-id="UUID-c26c7ac6-20b3-4153-5f87-eaa6ea30fdef" data-permalink="monitoring/trace-product-references.html" data-topic-level="2" data-relative-prefix=
+                  "../" data-publication-date="">製品リファレンスのトレース</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../bitrise-cli.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-27017f65-ad72-12cd-02b8-7d543d112a63" data-legacy-id="UUID-1e7fdeeb-5e8f-3ce1-777f-a4defadc6e4b" data-permalink="bitrise-cli.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> Bitrise CLI</a>
+              <ul>
+                <li>
+                  <a href="../bitrise-cli/installing-and-updating-the-bitrise-cli.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-d610eedd-c45f-e1a2-8071-2968f86a4af8" data-legacy-id="UUID-372b2639-babb-6390-d1d2-898e39825d4a" data-permalink="bitrise-cli/installing-and-updating-the-bitrise-cli.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">BitriseCLIのインストールと更新</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../bitrise-cli/adding-a-new-app-from-a-cli.html" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-f900869d-cbec-8aa0-6f35-25fec828d88f" data-legacy-id="UUID-65586a1e-a8a7-e642-a281-bb535f60d8f0" data-permalink="bitrise-cli/adding-a-new-app-from-a-cli.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">CLIからの新しいアプリの追加</a>
+                </li>
+                <li>
+                  <a href="../bitrise-cli/initializing-a-bitrise-project-locally.html" class="topic-link section taxonomy-configuration-bitrise-yml original-topic original-topic" data-origin-id="UUID-13ec887e-137f-b3eb-2dc4-f22944dd1d01" data-legacy-id="UUID-7266de66-409c-7a30-aa7b-78fb3b32172b" data-permalink=
+                  "bitrise-cli/initializing-a-bitrise-project-locally.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Bitriseプロジェクトをローカルで初期化する</a>
+                </li>
+                <li>
+                  <a href="../bitrise-cli/installing-and-upgrading-the-offline-workflow-editor.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-0fc16f0c-c014-d02a-e3cf-8c660d7c542b" data-legacy-id="UUID-9c649821-1aaa-ab87-c4ec-925292d424f1" data-permalink=
+                  "bitrise-cli/installing-and-upgrading-the-offline-workflow-editor.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">オフラインワークフローエディターのインストールとアップグレード</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../bitrise-cli/running-your-first-local-build-with-the-cli.html" class="topic-link section taxonomy-actions-builds taxonomy-configuration-bitrise-yml original-topic original-topic" data-origin-id="UUID-c4e3dad2-d242-d8c7-fdce-e87b02b0339b" data-legacy-id="UUID-537e2dfa-a322-df53-a92f-b1f63e99c7d7" data-permalink=
+                  "bitrise-cli/running-your-first-local-build-with-the-cli.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">CLIを使用して最初のローカルビルドを実行する</a>
+                </li>
+                <li>
+                  <a href="../bitrise-cli/managing-secrets-locally.html" class="topic-link section taxonomy-configuration-env-vars original-topic original-topic" data-origin-id="UUID-ac254cae-50e4-fbb0-9dd0-7a4e66a780e3" data-legacy-id="UUID-6ee95b9f-a082-3d77-d20e-25be9969faa9" data-permalink="bitrise-cli/managing-secrets-locally.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">シークレットをローカルで管理する</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../api.html" class="topic-link section" data-origin-id="UUID-cb55b806-0981-0f42-eeff-5e2683d7829a" data-legacy-id="UUID-1f199927-764a-51f2-1222-f5a529750c60" data-permalink="api.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> API</a>
+              <ul>
+                <li>
+                  <a href="../api/authenticating-with-the-bitrise-api.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-b33dbf25-c5e4-11c8-f20c-a619a4616911" data-legacy-id="UUID-c75d8909-8594-0f0d-20ab-fceb36679f84" data-permalink="api/authenticating-with-the-bitrise-api.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">BitriseAPIを使用した認証</a>
+                </li>
+                <li>
+                  <a href="../api/pagination-of-api-calls.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-4d7629da-3db4-6b4d-3ce7-053eb3cb7a46" data-legacy-id="UUID-3897b0dc-2d7a-34a6-3a17-87e0270914dc" data-permalink="api/pagination-of-api-calls.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">API呼び出しのページ付け</a>
+                </li>
+                <li>
+                  <a href="../api/adding-and-managing-apps.html" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-f589566f-87a7-bde7-d6b0-676cd3bbf33f" data-legacy-id="UUID-3aa72056-57cd-3533-d8ed-445ef1584299" data-permalink="api/adding-and-managing-apps.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">アプリの追加と管理</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/triggering-and-aborting-builds.html" class="topic-link section taxonomy-actions-builds original-topic original-topic" data-origin-id="UUID-7f0fe70c-83aa-8955-4153-192fa5308866" data-legacy-id="UUID-c65412f0-db58-2bfc-b10b-c801d887def4" data-permalink="api/triggering-and-aborting-builds.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">ビルドのトリガーと中止</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/incoming-and-outgoing-webhooks.html" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-40445e57-5661-4a26-710b-bfafeb921453" data-legacy-id="UUID-ebbc713e-431e-4f12-ad70-8547c2932347" data-permalink="api/incoming-and-outgoing-webhooks.html" data-topic-level=
+                  "2" data-relative-prefix="../" data-publication-date="">着信および発信Webhook</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/managing-ios-code-signing-files.html" class="topic-link section taxonomy-related-links-taxonomies-code-signing-rel taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id="UUID-dce4d841-fb55-0714-cb04-a4b91884b4d1" data-legacy-id="UUID-eaf0528b-c4fb-869e-aded-bcf6abbe69ba"
+                  data-permalink="api/managing-ios-code-signing-files.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">iOSコード署名ファイルの管理</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/managing-files-in-generic-file-storage.html" class="topic-link section taxonomy-actions-builds taxonomy-configuration-env-vars original-topic original-topic" data-origin-id="UUID-555289d2-cdf2-0a32-114d-626663437bd1" data-legacy-id="UUID-5832d66a-2451-ae69-92c5-53c32cd9e173" data-permalink=
+                  "api/managing-files-in-generic-file-storage.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">汎用ファイルストレージ内のファイルの管理</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/managing-build-artifacts.html" class="topic-link section taxonomy-actions-builds original-topic original-topic" data-origin-id="UUID-80a5c036-577b-12c1-1929-9f32be653983" data-legacy-id="UUID-a67de581-0791-2633-da8a-7f9bcbfe974e" data-permalink="api/managing-build-artifacts.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">ビルドアーティファクトの管理</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/api-reference.html" class="topic-link section swagger-topic swagger-topic" data-origin-id="UUID-3208c6b4-0ebf-fb66-853b-34dc4f4590e1" data-legacy-id="UUID-bea95175-ce19-7eaf-4987-2600317e2d4f" data-permalink="api/api-reference.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=
+                  "">APIリファレンス</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../references.html" class="topic-link section" data-origin-id="UUID-e512a445-f4b3-b030-d8ea-4ac0e2b045f6" data-legacy-id="UUID-8e76b4bd-aa2b-b98d-883d-f885032a7b8e" data-permalink="references.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> 参考文献</a>
+              <ul>
+                <li>
+                  <a href="../references/basics-of-bitrise-yml.html" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-related-links-taxonomies-bitrise-yml-rel original-topic original-topic" data-origin-id="UUID-e2b5d350-3596-52e2-e43b-bbbc8c13e4d7" data-legacy-id="UUID-f7c6b635-3669-d853-b24b-4f8542f59a22" data-permalink=
+                  "references/basics-of-bitrise-yml.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">bitrise.ymlの基本</a>
+                </li>
+                <li>
+                  <a href="../references/customizing-bitrise-yml.html" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-related-links-taxonomies-bitrise-yml-rel original-topic original-topic" data-origin-id="UUID-2e4ed86d-f923-7a38-1158-b021f4c1c44d" data-legacy-id="UUID-18c85a27-556f-bdba-18a4-c07af747b6e5" data-permalink=
+                  "references/customizing-bitrise-yml.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">bitrise.yml設定のカスタマイズ</a>
+                </li>
+                <li>
+                  <a href="../references/workflows-reference.html" class="topic-link section taxonomy-related-links-taxonomies-bitrise-yml-rel original-topic original-topic" data-origin-id="UUID-4c05eb0d-ec75-1f61-34b2-71e39a7d7c97" data-legacy-id="UUID-08e0cf6c-930a-b699-1e99-7d69aebfdd7c" data-permalink="references/workflows-reference.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">ワークフローリファレンス</a>
+                </li>
+                <li>
+                  <a href="../references/steps-reference.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-0ec53551-c5ec-c23a-0bfc-06d3402e2b9e" data-legacy-id="UUID-14e81619-0fe5-7d71-6223-9f5067d57904" data-permalink="references/steps-reference.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> 手順リファレンス</a>
+                  <ul>
+                    <li>
+                      <a href="../references/steps-reference/step-reference-id-format.html" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-configuration-steps" data-origin-id="UUID-5145156c-cbf0-fea5-bc5f-74b144587a22" data-legacy-id="UUID-ee5c654c-a954-fd48-5d69-375ac22c9efa" data-permalink=
+                      "references/steps-reference/step-reference-id-format.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ステップリファレンス/ IDフォーマット</a>
+                    </li>
+                    <li>
+                      <a href="../references/steps-reference/step-data-in-the-bitrise-yml-file.html" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-configuration-steps" data-origin-id="UUID-f403d515-c887-5c34-6fbc-5ec2d34c84c1" data-legacy-id="UUID-b4cb038e-85cc-401e-074c-4111713ed725" data-permalink=
+                      "references/steps-reference/step-data-in-the-bitrise-yml-file.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">bitrise.ymlファイルのステップデータ</a>
+                    </li>
+                    <li>
+                      <a href="../references/steps-reference/step-properties-reference.html" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-b47c2d93-6f1c-2883-2f4c-3f7b74e67870" data-legacy-id="UUID-e1c8c545-ddc7-cc13-8318-1e0492d75254" data-permalink=
+                      "references/steps-reference/step-properties-reference.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ステッププロパティ</a>
+                    </li>
+                    <li>
+                      <a href="../references/steps-reference/step-inputs-reference.html" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-adadfd2d-d409-915c-2a14-a23845d8f930" data-legacy-id="UUID-9f8b9db0-9a1b-deac-271f-75b66adbe270" data-permalink=
+                      "references/steps-reference/step-inputs-reference.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ステップ入力リファレンス</a>
+                    </li>
+                    <li>
+                      <a href="../references/steps-reference/step-outputs-reference.html" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-60e62e69-617d-3d17-40cb-7db191191c11" data-legacy-id="UUID-3a58a1fb-c6af-8695-bfbc-ca242defcddb" data-permalink=
+                      "references/steps-reference/step-outputs-reference.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">ステップ出力リファレンス</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../references/available-environment-variables.html" class="topic-link section taxonomy-configuration-env-vars original-topic original-topic" data-origin-id="UUID-06a76a7c-35cb-ddb5-1c8f-b5eacfcea5ae" data-legacy-id="UUID-732a64c9-4584-db4d-d753-f95122b8a69c" data-permalink=
+                  "references/available-environment-variables.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">利用可能な環境変数</a>
+                </li>
+                <li>
+                  <a href="../references/bitrise-tools.html" class="topic-link section original-topic original-topic" data-origin-id="UUID-dbe33c5c-925b-fbc2-2a2b-e917954c4f4a" data-legacy-id="UUID-e1449112-c102-2151-5ceb-116b55ecfaab" data-permalink="references/bitrise-tools.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Bitriseツール</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+        <div class="site-content">
+          <div class="toolbar top-nav-on">
+            <div class="toolbar-tools">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="top-nav-menu sm sm-simple">
+                  <li>
+                    <a href="https://devcenter.bitrise.io" class="external-top-nav-link" target="_blank">EN</a>
+                  </li>
+                  <li>
+                    <a href="https://devcenter.bitrise.io/ja/index-ja.html" class="external-top-nav-link" target="_blank">日本語</a>
+                  </li>
+                  <li>
+                    <a href="https://support.bitrise.io/hc/en-us?utm_source=devcenter&amp;utm_medium=top_cta" class="external-top-nav-link" target="_blank">Go to Support</a>
+                  </li>
+                  <li>
+                    <a href="https://www.bitrise.io/contact?utm_source=website&amp;utm_medium=devcenter&amp;utm_campaign=contact" class="external-top-nav-link" target="_blank">Book a demo</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tool-print">
+                <i class="fa fa-print" aria-hidden="true">print</i>
+              </div>
+              <div class="tool-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <form class="tool-search-form" autocomplete="off">
+                  <input type="text" class="form-control search-field" placeholder="" id="aa-search-input" />
+                </form>
+              </div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+          </div>
+          <main>
+            <div id="top-pager">
+              <ul class="pager">
+                <li class="previous">
+                  <a accesskey="p" id="header-navigation-prev" class="pull-left prev visible-lg visible-md" href="../monitoring.html">戻る</a>
+                </li>
+                <li class="next">
+                  <a accesskey="n" id="header-navigation-next" class="pull-right next visible-lg visible-md" href="installing-trace-for-ios-apps.html#cocoapods%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9Ftrace%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">次へ</a>
+                </li>
+              </ul>
+            </div>
+            <article class="topic content-container" id="content-wrapper">
+              <div id="topic-content" class="topic-content">
+                <div class="breadcrumb-container">
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-link">&nbsp;<a href="../index-ja.html">Bitriseドキュメントへようこそ！</a>
+                    </li>
+                    <li class="breadcrumb-link">
+                      <a href="../monitoring.html">モニタリング</a>
+                    </li>
+                    <li class="breadcrumb-node">iOSアプリ用のTraceのインストール</li>
+                  </ul>
+                </div>
+                <section xml:lang="ja" lang="ja" dir="ltr" class="section" data-origin-id="UUID-c791fde2-f2ed-c4af-bffd-623a5e013b1e" data-legacy-id="UUID-edb305da-88a0-4fa5-f989-00c167f4b6a7" data-permalink="monitoring/installing-trace-for-ios-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="" id=
+                "iosアプリ用のtraceのインストール">
+                  <div class="titlepage">
+                    <div>
+                      <div class="title">
+                        <h1 class="title" style="clear: both">iOSアプリ用のTraceのインストール</h1>
+                      </div>
+                    </div>
+                  </div>
+                  <p id="UUID-edb305da-88a0-4fa5-f989-00c167f4b6a7_para-idm33272091676370">Traceは、Bitriseビルドプロセス中にTraceSDKをアプリケーションにインストールすることで機能します。これは、任意のデバイスで手動で実行してテストできます。プロセスを自動化する準備ができたら、専用のStep onBitriseを使用するだけです。</p>
+                  <p>iOSアプリにTraceをインストールするには、次の3つの方法があります。</p>
+                  <div class="itemizedlist">
+                    <ul class="itemizedlist" style="list-style-type: disc;">
+                      <li class="listitem">
+                        <p>Cocoapodsを使用します。</p>
+                      </li>
+                      <li class="listitem">
+                        <p>Swiftパッケージマネージャーの使用。</p>
+                      </li>
+                      <li class="listitem">
+                        <p>専用の使用 <span class="bold bold"><strong>TraceSDKを追加する</strong></span> ステップ。</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <div dir="ltr" class="note">
+                    <h3 class="title">Xcodeのバージョン要件</h3>
+                    <p>iOSアプリにTraceを追加するには、Xcode11.5以降を使用する必要があります。 Traceは古いバージョンのXcodeと互換性がありません。</p>
+                  </div>
+                  <section xml:lang="ja" lang="ja" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-edb305da-88a0-4fa5-f989-00c167f4b6a7_UUID-90f01f1b-9dc0-3def-88dc-a0e112586545" data-publication-date="" id="cocoapodsを使用したtraceのインストール">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Cocoapodsを使用したTraceのインストール</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>BitriseのアプリにTraceを追加する前に、まず試してみてください。サンプルアプリを使用してプロセスを順を追って説明しますが、もちろん、サンプルの代わりに独自のリポジトリを使用することもできます。</p>
+                    <p>この例では、CocoaPodsを使用してTraceSDKをインストールします。方法を見てみましょう！</p>
+                    <p>Traceをインストールすると、データの処理が開始されるまでに最大1時間かかる場合があることに注意してください。それまでは、Traceダッシュボードにデータが表示されません。</p>
+                    <div class="procedure">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>アプリのクローンを作成し、マシン上のそのディレクトリに移動します。</p>
+                          <pre class="programlisting">$ git clone https://github.com/bitrise-io/BookStore-iOS.git
+$ cd BookStore-iOS/</pre>
+                        </li>
+                        <li class="step">
+                          <p>アプリのポッドファイルを開き、TraceSDKを追加します。</p>
+                          <pre class="programlisting"># Podfile
+    
+target 'YOUR_TARGET_NAME' do
+  pod 'BitriseTrace'
+end        </pre>
+                        </li>
+                        <li class="step">
+                          <p>を実行してSDKをインストールします <code class="code">pod install</code>。</p>
+                          <p>あなたがすべてを正しくやったなら、 <span class="bold bold"><strong>ポッドのインストールが完了しました。</strong></span> メッセージが表示されます。</p>
+                        </li>
+                        <li class="step">
+                          <p>Bitriseでトレースを開く：アプリに移動し、をクリックします <span class="bold bold"><strong>アドオン</strong></span> タブをクリックし、トレースを見つけて、をクリックします <span class="bold bold"><strong>アドオンに移動</strong></span>。</p>
+                        </li>
+                        <li class="step">
+                          <p>アプリのトレースを初めて設定する場合は、自動的に <span class="bold bold"><strong>入門</strong></span> ページ。初めてではない場合は、Traceホームページに移動します。右上の[]をクリックします。 <span class="bold bold"><strong>入門</strong></span>。</p>
+                        </li>
+                        <li class="step">
+                          <p>選ぶ <span class="bold bold"><strong>ココアポッド</strong></span> インストールオプションから。</p>
+                          <div class="mediaobject"><img src="../image/uuid-775b8ab8-847c-d200-b965-50abad0f7722.png" style="" alt="trace_cocoapods.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>を見つける <span class="bold bold"><strong>設定ファイルをダウンロードする</strong></span> ステップをクリックし、 <span class="bold bold"><strong>ダウンロード</strong></span>。</p>
+                        </li>
+                        <li class="step">
+                          <p>Xcodeでアプリを開きます。</p>
+                          <pre class="programlisting">$ open BookStore.xcworkspace/ </pre>
+                        </li>
+                        <li class="step">
+                          <p>追加します <code class="code">bitrise_configuration.plist</code> プロジェクトのルートにドラッグアンドドロップして、アプリにファイルします。</p>
+                          <div class="mediaobject"><img src="../image/uuid-9c02f61f-edcb-dc40-d020-11e3e5c437c7.png" style="" alt="trace-6.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>ファイルを追加するためのさまざまなオプションから選択するように求められたら、プロジェクト（この例ではBookStore）を選択し、[ <span class="bold bold"><strong>終了</strong></span>。</p>
+                          <div class="mediaobject"><img src="../image/uuid-0917e48f-142f-3392-a099-fc047937ab11.png" style="" alt="trace-7.png" /></div>
+                        </li>
+                        <li class="step">
+                          <p>シミュレーターまたはデバイスでアプリをビルドして実行します。</p>
+                        </li>
+                      </ol>
+                    </div>
+                  </section>
+                  <section xml:lang="ja" lang="ja" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-edb305da-88a0-4fa5-f989-00c167f4b6a7_UUID-cb7baf9a-6c86-d4f4-f2ad-5c691d760a89" data-publication-date="" id="swiftパッケージマネージャーを使用したtraceのインストール">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Swiftパッケージマネージャーを使用したTraceのインストール</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Swift Package Manager（SPM）は、Swiftコードの配布を管理するためのツールです。 Swiftビルドシステムと統合されており、依存関係のダウンロード、コンパイル、リンクのプロセスを自動化します。 SPMを使用してTraceSDKをインストールできます。</p>
+                    <p>インストールプロセスには3つの段階があります。</p>
+                    <div class="procedure">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>追加する <code class="code">bitrise_configuration.plist</code> Xcodeプロジェクトにファイルします。</p>
+                        </li>
+                        <li class="step">
+                          <p>SPMを使用してTraceSDKを初期化します。</p>
+                        </li>
+                        <li class="step">
+                          <p>Traceを実行できるようにXcodeプロジェクトを構成します。</p>
+                        </li>
+                      </ol>
+                    </div>
+                    <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-edb305da-88a0-4fa5-f989-00c167f4b6a7_section-idm4611296058643232720843415434" data-publication-date="" id="設定ファイルをアプリに追加する-64761">
+                      <div class="titlepage">
+                        <div>
+                          <div class="title">
+                            <h3 class="title">設定ファイルをアプリに追加する</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <p>BitriseでTraceを使用するには、 <code class="code">bitrise_configuration.plist</code> Xcodeプロジェクトのファイル。</p>
+                      <div class="procedure">
+                        <ol class="procedure" type="1">
+                          <li class="step">
+                            <p>自分のマシンで、アプリのリポジトリのクローンを作成し、そのディレクトリを入力します。</p>
+                            <p>この例では、サンプルアプリを使用しています。これを使用してTraceを試すことも、独自のアプリに置き換えることもできます。</p>
+                            <pre class="programlisting">git clone git@github.com:bitrise-io/iosCCC.git
+   
+cd iosCCC/  </pre>
+                          </li>
+                          <li class="step">
+                            <p>Bitriseでトレースを開く：アプリに移動し、をクリックします <span class="bold bold"><strong>アドオン</strong></span> タブをクリックし、トレースを見つけて、をクリックします <span class="bold bold"><strong>アドオンに移動</strong></span>。</p>
+                          </li>
+                          <li class="step">
+                            <p>アプリのトレースを初めて設定する場合は、自動的に <span class="bold bold"><strong>入門</strong></span> ページ。初めてではない場合は、Traceホームページに移動します。右上の[]をクリックします。 <span class="bold bold"><strong>入門</strong></span>。</p>
+                          </li>
+                          <li class="step">
+                            <p>選ぶ <span class="bold bold"><strong>Swiftパッケージマネージャー</strong></span> インストールオプションから。</p>
+                            <div class="mediaobject"><img src="../image/uuid-d7f5a4b4-3090-e171-0bc2-cf565fd53f9b.png" style="" alt="Swift Package Manager instructions" /></div>
+                          </li>
+                          <li class="step">
+                            <p>Xcodeでアプリを開きます。</p>
+                          </li>
+                          <li class="step">
+                            <p>追加します <code class="filename">bitrise_configuration.plist</code> プロジェクトのルートにドラッグアンドドロップして、Xcodeプロジェクトにファイルします。</p>
+                          </li>
+                        </ol>
+                      </div>
+                      <p>完了したら、SDKの初期化に進みます。</p>
+                    </section>
+                    <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-edb305da-88a0-4fa5-f989-00c167f4b6a7_section-idm4611295214644832720844961057" data-publication-date="" id="sdkの初期化">
+                      <div class="titlepage">
+                        <div>
+                          <div class="title">
+                            <h3 class="title">SDKの初期化</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <p>追加した後 <code class="code">bitrise_configuration.plist</code> Xcodeプロジェクトにファイルを追加するには、Swift PackageManagerにTraceを追加する必要があります。</p>
+                      <div class="procedure">
+                        <ol class="procedure" type="1">
+                          <li class="step">
+                            <p>に移動 <span class="bold bold"><strong>ファイル</strong></span> &gt;&gt; <span class="bold bold"><strong>Swiftパッケージ</strong></span> &gt;&gt; <span class="bold bold"><strong>パッケージの依存関係を追加する</strong></span>。</p>
+                          </li>
+                          <li class="step">
+                            <p>リポジトリのURLを入力します。 <a class="link" href="https://github.com/bitrise-io/trace-cocoa-sdk.git" target="_blank" rel="noopener">https://github.com/bitrise-io/trace-cocoa-sdk.git</a>。</p>
+                            <div class="mediaobject"><img src="../image/uuid-6d58f701-bc01-2d6c-30bc-8d727f8768ec.png" style="" alt="choose-package-repository.png" /></div>
+                          </li>
+                        </ol>
+                      </div>
+                      <p>完了したら、他のリンカーフラグをアプリケーションターゲットに追加し、コードでTraceオブジェクトを作成します。</p>
+                    </section>
+                    <section dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-edb305da-88a0-4fa5-f989-00c167f4b6a7_section-idm4550287190078432720846014232" data-publication-date="" id="traceを実行するようにxcodeプロジェクトを構成する">
+                      <div class="titlepage">
+                        <div>
+                          <div class="title">
+                            <h3 class="title">Traceを実行するようにXcodeプロジェクトを構成する</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <p>追加した後 <code class="code">bitrise_configuration.plist</code> ファイルをXcodeプロジェクトに追加し、TraceをSwift Package Managerに追加するには、Traceを機能させるためにさらにいくつかのことが必要です。</p>
+                      <div class="itemizedlist">
+                        <ul class="itemizedlist" style="list-style-type: disc;">
+                          <li class="listitem">
+                            <p>他のリンカーフラグをアプリケーションターゲットに追加します。</p>
+                          </li>
+                          <li class="listitem">
+                            <p>コードでTraceオブジェクトを作成します。</p>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="procedure">
+                        <ol class="procedure" type="1">
+                          <li class="step">
+                            <p>Xcodeで、プロジェクトを選択します。 <span class="bold bold"><strong>プロジェクトナビゲーター</strong></span>。</p>
+                          </li>
+                          <li class="step">
+                            <p>下 <span class="bold bold"><strong>ターゲット</strong></span> サイドバーの見出しで、アプリケーションターゲットを選択します。</p>
+                          </li>
+                          <li class="step">
+                            <p>そのウィンドウの上部にあるタブバーで、 <span class="bold bold"><strong>ビルド設定</strong></span> パネル。</p>
+                          </li>
+                          <li class="step">
+                            <p>その他のリンカーフラグまたはOTHER_LDFLAGSを検索し、次のように入力します。</p>
+                            <pre class="programlisting">-ObjC -l z -l c++</pre>
+                          </li>
+                          <li class="step">
+                            <p>Xcodeプロジェクトで、Traceオブジェクトを作成してSDKを起動します。</p>
+                            <pre class="programlisting">import SwiftUI
+import Trace
+   
+@main
+struct App: SwiftUI.App {
+  @StateObject var viewModel = AppViewModel()
+  private let trace = Trace.shared
+}    </pre>
+                          </li>
+                          <li class="step">
+                            <p>シミュレーターまたはデバイスでアプリをビルドして実行します。</p>
+                          </li>
+                        </ol>
+                      </div>
+                    </section>
+                  </section>
+                  <section xml:lang="ja" lang="ja" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-edb305da-88a0-4fa5-f989-00c167f4b6a7_UUID-9af04ba5-28c8-88ab-478d-619b5f1c621b" data-publication-date="" id="ビットライズステップを使用したトレースのインストール">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">ビットライズステップを使用したトレースのインストール</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Bitrise自体では、Traceのインストールは簡単です。追加する必要があるのは <span class="bold bold"><strong>TraceSDKを追加する</strong></span> ワークフローに進みます。ステップは、アプリケーションのバイナリ自体が構築される前に実行する必要があります。たとえば、iOSアプリを作成する場合、ステップは <span class="bold bold"><strong>iOS用のXcodeアーカイブとエクスポート</strong></span> ステップ。</p>
+                    <p>Traceをインストールするには：</p>
+                    <div class="procedure">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>アプリのワークフローエディターを開きます。</p>
+                        </li>
+                        <li class="step">
+                          <p>アプリのビルドに使用するワークフローを開きます。</p>
+                        </li>
+                        <li class="step">
+                          <p>追加します <span class="bold bold"><strong>TraceSDKを追加する</strong></span> アプリのバイナリをビルドするステップの前にステップします。</p>
+                        </li>
+                        <li class="step">
+                          <p>確認してください <span class="bold bold"><strong>プロジェクト（またはワークスペース）パス</strong></span> そしてその <span class="bold bold"><strong>スキーム名</strong></span> 入力値は両方とも正しいです。</p>
+                          <p>デフォルトでは、両方の値はアプリの作成時に作成および保存される環境変数です。</p>
+                        </li>
+                        <li class="step">
+                          <p>ビルドを実行してください！</p>
+                        </li>
+                      </ol>
+                    </div>
+                    <p>すべてがうまくいけば、Traceはアプリケーションデータを追跡します。</p>
+                    <p>SDKをインストールしたら、ユーザー向けにアプリをデプロイし、入ってくるデータを監視するだけです。</p>
+                  </section>
+                </section>
+                <div class="footer-content">
+                  <div class="section-toc section-toc-after">
+                    <div class="section-toc-title">
+                      <span class="section-toc-title-delimiter">:</span>
+                    </div>
+                  </div>
+                  <div class="glossary-definitions"></div>
+                </div>
+                <footer></footer>
+              </div>
+            </article>
+            <aside class="section-nav-container">
+              <ul class="section-nav nav">
+                <li>
+                  <a href="#ios%E3%82%A2%E3%83%97%E3%83%AA%E7%94%A8%E3%81%AEtrace%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">iOSアプリ用のTraceのインストール</a>
+                </li>
+                <li>
+                  <a href="#cocoapods%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9Ftrace%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Cocoapodsを使用したTraceのインストール</a>
+                </li>
+                <li>
+                  <a href="#swift%E3%83%91%E3%83%83%E3%82%B1%E3%83%BC%E3%82%B8%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9Ftrace%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">Swiftパッケージマネージャーを使用したTraceのインストール</a>
+                  <ul class="nav">
+                    <li>
+                      <a href="#%E8%A8%AD%E5%AE%9A%E3%83%95%E3%82%A1%E3%82%A4%E3%83%AB%E3%82%92%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AB%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B-64761">設定ファイルをアプリに追加する</a>
+                    </li>
+                    <li>
+                      <a href="#sdk%E3%81%AE%E5%88%9D%E6%9C%9F%E5%8C%96">SDKの初期化</a>
+                    </li>
+                    <li>
+                      <a href="#trace%E3%82%92%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B%E3%82%88%E3%81%86%E3%81%ABxcode%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E6%A7%8B%E6%88%90%E3%81%99%E3%82%8B">Traceを実行するようにXcodeプロジェクトを構成する</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#%E3%83%93%E3%83%83%E3%83%88%E3%83%A9%E3%82%A4%E3%82%BA%E3%82%B9%E3%83%86%E3%83%83%E3%83%97%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9F%E3%83%88%E3%83%AC%E3%83%BC%E3%82%B9%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">ビットライズステップを使用したトレースのインストール</a>
+                </li>
+              </ul>
+            </aside>
+            <article id="search-result-wrapper">
+              <div class="search-container" style="display: none;">
+                <h2></h2>
+                <ul class="searchresults"></ul>
+                <p class="noresults"></p>
+              </div>
+            </article>
+            <div class="feedback-panel">
+              <div class="voting-title">
+                Was this helpful?
+              </div>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <button id="feedback-yes-btn" class="btn toggle-yes">Yes</button><button id="feedback-no-btn" class="btn">No</button>
+              </div>
+              <div id="email-feedback" class="toggle-feedback">
+                <p><a href=
+                "mailto:letsconnect@bitrise.io?subject=Feedback%20for%20help%20topic%20%22iOS%E3%82%A2%E3%83%97%E3%83%AA%E7%94%A8%E3%81%AETrace%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%22&amp;body=%0A%09%09%09%09%0A%09%09%09%09%0A%09%09%09%09_______________________%0A%09%09%09%09%0A%09%09%09Please%20add%20your%20feedback%20above%20for%20topic%20%22iOS%E3%82%A2%E3%83%97%E3%83%AA%E7%94%A8%E3%81%AETrace%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB%22%20in%20the%20publication%20%22Bitrise%E3%83%89%E3%82%AD%E3%83%A5%E3%83%A1%E3%83%B3%E3%83%88%E3%81%B8%E3%82%88%E3%81%86%E3%81%93%E3%81%9D%EF%BC%81%22.">
+                <i aria-hidden="true" class="fa fa-pencil-square-o feedbackicon voting-feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
+              </div>
+            </div>
+          </main>
+          <div id="bottom-pager">
+            <ul class="pager">
+              <li class="previous">
+                <a accesskey="p" id="header-navigation-prev" class="pull-left prev visible-lg visible-md" href="../monitoring.html">戻る</a>
+              </li>
+              <li class="next">
+                <a accesskey="n" id="header-navigation-next" class="pull-right next visible-lg visible-md" href="installing-trace-for-ios-apps.html#cocoapods%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%9Ftrace%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB">次へ</a>
+              </li>
+            </ul>
+          </div>
+          <footer class="site-footer">
+            <div class="inner">
+              <div class="copyright">
+                © 2021
+              </div>
+              <div class="publication-date">
+                <span class="publication-date-text">発行日</span><span class="pubdate-delimiter">:</span> <span class="formatted-date"></span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //<![CDATA[
+  var theme = '2';
+
+                        
+                        var versionsfile = '';
+
+
+                        var indexDict = new Array();
+                        var store = {};
+                        var portalLanguage = 'ja';
+                        var enterKey = 'select';
+                        
+                        
+                                var fuse_threshold = 0.3;
+                        
+                                        var local_csh = false;
+                                
+                                        var anchoroption = false;
+                                        
+                        
+                        var useanchorlinks = false;
+                        
+                                useanchorlinks = true;
+                                
+                                var clicktocopy = 'Click to copy link';
+                                var linkcopied =  'Link copied!';
+  //]]>
+  </script>
+  <script src="../../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script>
+  <script src="../../js/materialize.min.js" type="text/javascript"></script>
+  <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../js/purl.js" type="text/javascript"></script>
+  <script src="../../js/jquery.smartmenus.js" type="text/javascript"></script>
+  <script src="../../js/html5-2-mp-common.js?version=20211123" type="text/javascript"></script>
+  <script src="../../js/html5-2.js?version=20211123" type="text/javascript"></script>
+  <script src="../../js/checklist.js" type="text/javascript"></script>
+  <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+  <script src="../../js/anchorlinks.js" type="text/javascript"></script>
+  <script src="../../js/html5.algoliasearch.js?version=20211123" type="text/javascript"></script>
+  <script src="../../js/csh.js" type="text/javascript"></script>
+  <script src="../../js/layout-custom-script.js?version=20211123" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var containerid = 'GTM-TZK32GR';
+
+                                                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                                                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                                                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                                })(window,document,'script','dataLayer',containerid);
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+
+                                $(document).ready(function () {
+                                $(".mediaobject img").addClass('materialboxed');
+                                //Exclude images with links
+                                $(".mediaobject a img").removeClass('materialboxed');
+                                if (!document.documentMode) {
+                                $('.materialboxed').materialbox();
+                                }});
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var publication_id = 'ja-UUID-6417de03-03ef-7c79-83a0-26f08db51f10';
+  var algolia_application_id = 'HI1538U2K4';
+  var algolia_search_only_api_key = 'e1a727481ac4f75db3e93c7763f02c8a';
+  //]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script><!--Google Tag Manager (noscript)--><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TZK32GR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!--End Google Tag Manager (noscript)-->
+</body>
+</html>
